@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UUID = OCTET_STRING; // OctetStringType
 
-export const _decode_UUID: $.ASN1Decoder<UUID> = $._decodeOctetString;
+export function _decode_UUID (el: _Element): UUID {
+    const value = $._decodeOctetString(el);
+    if (value.length < 16 || value.length > 16) {
+        throw new ASN1SizeError("UUID violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_UUID: $.ASN1Encoder<UUID> = $._encodeOctetString;
 

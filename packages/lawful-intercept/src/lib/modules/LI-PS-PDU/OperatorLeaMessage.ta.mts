@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OperatorLeaMessagePriority, _decode_OperatorLeaMessagePriority, _encode_OperatorLeaMessagePriority, _enum_for_OperatorLeaMessagePriority } from "../LI-PS-PDU/OperatorLeaMessagePriority.ta.mjs";
@@ -55,6 +56,9 @@ class OperatorLeaMessage {
     ) {
         this.messagePriority = messagePriority;
         this.message = message;
+        if (this.message.length < 1 || this.message.length > 255) {
+            throw new ASN1SizeError("message violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

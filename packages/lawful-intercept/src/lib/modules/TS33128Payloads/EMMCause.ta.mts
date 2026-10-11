@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type EMMCause = INTEGER;
 
-export const _decode_EMMCause: $.ASN1Decoder<EMMCause> = $._decodeInteger;
+export function _decode_EMMCause (el: _Element): EMMCause {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 255n) {
+        throw new ASN1OverflowError("EMMCause violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_EMMCause: $.ASN1Encoder<EMMCause> = $._encodeInteger;
 

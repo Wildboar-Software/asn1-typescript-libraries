@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
@@ -63,6 +64,9 @@ class NRNTNTAIInfo {
     ) {
         this.servingPLMN = servingPLMN;
         this.tACListNRNTN = tACListNRNTN;
+        if (this.tACListNRNTN.length < 1) {
+            throw new ASN1SizeError("tACListNRNTN violates the SIZE constraint");
+        }
         this.uELocationDerivedNTNTAC = uELocationDerivedNTNTAC;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

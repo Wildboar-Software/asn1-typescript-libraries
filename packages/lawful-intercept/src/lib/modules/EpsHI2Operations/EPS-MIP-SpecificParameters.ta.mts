@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -88,11 +90,29 @@ class EPS_MIP_SpecificParameters {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.lifetime = lifetime;
+        if (this.lifetime !== undefined && ((typeof this.lifetime === "bigint" ? this.lifetime : BigInt(this.lifetime)) < 0n || (typeof this.lifetime === "bigint" ? this.lifetime : BigInt(this.lifetime)) > 65535n)) {
+            throw new ASN1OverflowError("lifetime violates the INTEGER range constraint");
+        }
         this.homeAddress = homeAddress;
+        if (this.homeAddress !== undefined && (this.homeAddress.length < 4 || this.homeAddress.length > 4)) {
+            throw new ASN1SizeError("homeAddress violates the SIZE constraint");
+        }
         this.careOfAddress = careOfAddress;
+        if (this.careOfAddress !== undefined && (this.careOfAddress.length < 4 || this.careOfAddress.length > 4)) {
+            throw new ASN1SizeError("careOfAddress violates the SIZE constraint");
+        }
         this.homeAgentAddress = homeAgentAddress;
+        if (this.homeAgentAddress !== undefined && (this.homeAgentAddress.length < 4 || this.homeAgentAddress.length > 4)) {
+            throw new ASN1SizeError("homeAgentAddress violates the SIZE constraint");
+        }
         this.code = code;
+        if (this.code !== undefined && ((typeof this.code === "bigint" ? this.code : BigInt(this.code)) < 0n || (typeof this.code === "bigint" ? this.code : BigInt(this.code)) > 255n)) {
+            throw new ASN1OverflowError("code violates the INTEGER range constraint");
+        }
         this.foreignDomainAddress = foreignDomainAddress;
+        if (this.foreignDomainAddress !== undefined && (this.foreignDomainAddress.length < 4 || this.foreignDomainAddress.length > 4)) {
+            throw new ASN1SizeError("foreignDomainAddress violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

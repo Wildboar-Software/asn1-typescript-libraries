@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdditionalNCGI, _decode_AdditionalNCGI, _encode_AdditionalNCGI } from "../TS33128IdentityAssociation/AdditionalNCGI.ta.mjs";
@@ -44,6 +45,9 @@ class AdditionalCGIs {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.additionalNCGIList = additionalNCGIList;
+        if (this.additionalNCGIList !== undefined && (this.additionalNCGIList.length < 1)) {
+            throw new ASN1SizeError("additionalNCGIList violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

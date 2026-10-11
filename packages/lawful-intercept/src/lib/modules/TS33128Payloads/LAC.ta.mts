@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type LAC = OCTET_STRING; // OctetStringType
 
-export const _decode_LAC: $.ASN1Decoder<LAC> = $._decodeOctetString;
+export function _decode_LAC (el: _Element): LAC {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 2) {
+        throw new ASN1SizeError("LAC violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_LAC: $.ASN1Encoder<LAC> = $._encodeOctetString;
 

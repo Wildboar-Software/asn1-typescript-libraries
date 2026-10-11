@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type FiveQI = INTEGER;
 
-export const _decode_FiveQI: $.ASN1Decoder<FiveQI> = $._decodeInteger;
+export function _decode_FiveQI (el: _Element): FiveQI {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 255n) {
+        throw new ASN1OverflowError("FiveQI violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_FiveQI: $.ASN1Encoder<FiveQI> = $._encodeInteger;
 

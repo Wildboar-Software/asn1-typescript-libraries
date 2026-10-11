@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RAC = OCTET_STRING; // OctetStringType
 
-export const _decode_RAC: $.ASN1Decoder<RAC> = $._decodeOctetString;
+export function _decode_RAC (el: _Element): RAC {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 2) {
+        throw new ASN1SizeError("RAC violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_RAC: $.ASN1Encoder<RAC> = $._encodeOctetString;
 

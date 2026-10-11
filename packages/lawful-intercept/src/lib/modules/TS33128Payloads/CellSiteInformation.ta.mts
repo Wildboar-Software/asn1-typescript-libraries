@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
@@ -63,6 +64,9 @@ class CellSiteInformation {
     ) {
         this.geographicalCoordinates = geographicalCoordinates;
         this.azimuth = azimuth;
+        if (this.azimuth !== undefined && ((typeof this.azimuth === "bigint" ? this.azimuth : BigInt(this.azimuth)) < 0n || (typeof this.azimuth === "bigint" ? this.azimuth : BigInt(this.azimuth)) > 359n)) {
+            throw new ASN1OverflowError("azimuth violates the INTEGER range constraint");
+        }
         this.operatorSpecificInformation = operatorSpecificInformation;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

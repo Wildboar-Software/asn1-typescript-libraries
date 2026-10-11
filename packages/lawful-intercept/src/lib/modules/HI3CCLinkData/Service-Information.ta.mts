@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -66,9 +67,21 @@ class Service_Information {
         teleServiceCode: OPTIONAL<OCTET_STRING>
     ) {
         this.high_layer_capability = high_layer_capability;
+        if (this.high_layer_capability !== undefined && (this.high_layer_capability.length < 1 || this.high_layer_capability.length > 1)) {
+            throw new ASN1SizeError("high_layer_capability violates the SIZE constraint");
+        }
         this.tMR = tMR;
+        if (this.tMR !== undefined && (this.tMR.length < 1 || this.tMR.length > 1)) {
+            throw new ASN1SizeError("tMR violates the SIZE constraint");
+        }
         this.bearerServiceCode = bearerServiceCode;
+        if (this.bearerServiceCode !== undefined && (this.bearerServiceCode.length < 1 || this.bearerServiceCode.length > 1)) {
+            throw new ASN1SizeError("bearerServiceCode violates the SIZE constraint");
+        }
         this.teleServiceCode = teleServiceCode;
+        if (this.teleServiceCode !== undefined && (this.teleServiceCode.length < 1 || this.teleServiceCode.length > 1)) {
+            throw new ASN1SizeError("teleServiceCode violates the SIZE constraint");
+        }
     }
 
     /**

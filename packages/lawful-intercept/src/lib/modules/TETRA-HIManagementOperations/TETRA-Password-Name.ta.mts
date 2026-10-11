@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,7 +54,13 @@ class TETRA_Password_Name {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.password = password;
+        if (this.password.length < 1 || this.password.length > 25) {
+            throw new ASN1SizeError("password violates the SIZE constraint");
+        }
         this.name = name;
+        if (this.name.length < 1 || this.name.length > 25) {
+            throw new ASN1SizeError("name violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

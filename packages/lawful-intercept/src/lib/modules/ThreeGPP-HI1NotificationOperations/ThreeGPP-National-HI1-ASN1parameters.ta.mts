@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OPTIONAL,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -64,6 +65,9 @@ class ThreeGPP_National_HI1_ASN1parameters {
     ) {
         this.domainID = domainID;
         this.countryCode = countryCode;
+        if (this.countryCode.length < 2 || this.countryCode.length > 2) {
+            throw new ASN1SizeError("countryCode violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

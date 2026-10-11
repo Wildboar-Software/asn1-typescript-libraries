@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element,
     OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +27,11 @@ let _cached_decoder_for_LIID: $.ASN1Decoder<LIID> | null = null;
 export
 function _decode_LIID (el: _Element): LIID {
     if (!_cached_decoder_for_LIID) { _cached_decoder_for_LIID = $._decodeOctetString; }
-    return _cached_decoder_for_LIID(el);
+    const value = _cached_decoder_for_LIID(el);
+    if (value.length < 1 || value.length > 25) {
+        throw new ASN1SizeError("LIID violates the SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_LIID: $.ASN1Encoder<LIID> | null = null;

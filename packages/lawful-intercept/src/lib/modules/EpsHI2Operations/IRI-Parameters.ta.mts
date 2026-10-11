@@ -6,7 +6,8 @@ import {
     PrintableString,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -771,6 +772,9 @@ class IRI_Parameters {
         this.initiator = initiator;
         this.locationOfTheTarget = locationOfTheTarget;
         this.partyInformation = partyInformation;
+        if (this.partyInformation !== undefined && (this.partyInformation.length < 1 || this.partyInformation.length > 10)) {
+            throw new ASN1SizeError("partyInformation violates the SIZE constraint");
+        }
         this.serviceCenterAddress = serviceCenterAddress;
         this.sMS = sMS;
         this.national_Parameters = national_Parameters;
@@ -786,7 +790,13 @@ class IRI_Parameters {
         this.iMSevent = iMSevent;
         this.sIPMessage = sIPMessage;
         this.servingSGSN_number = servingSGSN_number;
+        if (this.servingSGSN_number !== undefined && (this.servingSGSN_number.length < 1 || this.servingSGSN_number.length > 20)) {
+            throw new ASN1SizeError("servingSGSN_number violates the SIZE constraint");
+        }
         this.servingSGSN_address = servingSGSN_address;
+        if (this.servingSGSN_address !== undefined && (this.servingSGSN_address.length < 5 || this.servingSGSN_address.length > 17)) {
+            throw new ASN1SizeError("servingSGSN_address violates the SIZE constraint");
+        }
         this.ldiEvent = ldiEvent;
         this.correlation = correlation;
         this.ePS_GTPV2_specificParameters = ePS_GTPV2_specificParameters;
@@ -802,9 +812,15 @@ class IRI_Parameters {
         this.sdpOffer = sdpOffer;
         this.sdpAnswer = sdpAnswer;
         this.uLITimestamp = uLITimestamp;
+        if (this.uLITimestamp !== undefined && (this.uLITimestamp.length < 8 || this.uLITimestamp.length > 8)) {
+            throw new ASN1SizeError("uLITimestamp violates the SIZE constraint");
+        }
         this.packetDataHeaderInformation = packetDataHeaderInformation;
         this.mediaSecFailureIndication = mediaSecFailureIndication;
         this.csgIdentity = csgIdentity;
+        if (this.csgIdentity !== undefined && (this.csgIdentity.length < 4 || this.csgIdentity.length > 4)) {
+            throw new ASN1SizeError("csgIdentity violates the SIZE constraint");
+        }
         this.heNBIdentity = heNBIdentity;
         this.heNBiPAddress = heNBiPAddress;
         this.heNBLocation = heNBLocation;
@@ -822,8 +838,17 @@ class IRI_Parameters {
         this.serving_System_Identifier = serving_System_Identifier;
         this.proSeTargetType = proSeTargetType;
         this.proSeRelayMSISDN = proSeRelayMSISDN;
+        if (this.proSeRelayMSISDN !== undefined && (this.proSeRelayMSISDN.length < 1 || this.proSeRelayMSISDN.length > 9)) {
+            throw new ASN1SizeError("proSeRelayMSISDN violates the SIZE constraint");
+        }
         this.proSeRelayIMSI = proSeRelayIMSI;
+        if (this.proSeRelayIMSI !== undefined && (this.proSeRelayIMSI.length < 3 || this.proSeRelayIMSI.length > 8)) {
+            throw new ASN1SizeError("proSeRelayIMSI violates the SIZE constraint");
+        }
         this.proSeRelayIMEI = proSeRelayIMEI;
+        if (this.proSeRelayIMEI !== undefined && (this.proSeRelayIMEI.length < 8 || this.proSeRelayIMEI.length > 8)) {
+            throw new ASN1SizeError("proSeRelayIMEI violates the SIZE constraint");
+        }
         this.extendedLocParameters = extendedLocParameters;
         this.locationErrorCode = locationErrorCode;
         this.otherIdentities = otherIdentities;

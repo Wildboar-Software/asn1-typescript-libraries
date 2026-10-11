@@ -4,7 +4,9 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../UmtsHI2Operations/MapDatum.ta.mjs";
@@ -74,9 +76,18 @@ class GSMLocation_utmCoordinates {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.utm_East = utm_East;
+        if (this.utm_East.length < 10 || this.utm_East.length > 10) {
+            throw new ASN1SizeError("utm_East violates the SIZE constraint");
+        }
         this.utm_North = utm_North;
+        if (this.utm_North.length < 7 || this.utm_North.length > 7) {
+            throw new ASN1SizeError("utm_North violates the SIZE constraint");
+        }
         this.mapDatum = mapDatum;
         this.azimuth = azimuth;
+        if (this.azimuth !== undefined && ((typeof this.azimuth === "bigint" ? this.azimuth : BigInt(this.azimuth)) < 0n || (typeof this.azimuth === "bigint" ? this.azimuth : BigInt(this.azimuth)) > 359n)) {
+            throw new ASN1OverflowError("azimuth violates the INTEGER range constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

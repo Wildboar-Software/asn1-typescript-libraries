@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -65,6 +66,9 @@ class NWDAFEventsNotification {
     ) {
         this.sUPI = sUPI;
         this.nWDAFNotifiedEventList = nWDAFNotifiedEventList;
+        if (this.nWDAFNotifiedEventList.length < 1) {
+            throw new ASN1SizeError("nWDAFNotifiedEventList violates the SIZE constraint");
+        }
         this.nWDAFEventsNotification = nWDAFEventsNotification;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

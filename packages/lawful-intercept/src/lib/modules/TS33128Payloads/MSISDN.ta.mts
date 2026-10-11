@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    NumericString
+    NumericString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MSISDN = NumericString; // NumericString
 
-export const _decode_MSISDN: $.ASN1Decoder<MSISDN> = $._decodeNumericString;
+export function _decode_MSISDN (el: _Element): MSISDN {
+    const value = $._decodeNumericString(el);
+    if (value.length < 1 || value.length > 15) {
+        throw new ASN1SizeError("MSISDN violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_MSISDN: $.ASN1Encoder<MSISDN> = $._encodeNumericString;
 

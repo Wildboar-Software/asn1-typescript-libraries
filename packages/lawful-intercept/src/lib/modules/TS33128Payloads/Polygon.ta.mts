@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
@@ -44,6 +45,9 @@ class Polygon {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.pointList = pointList;
+        if (this.pointList.length < 3 || this.pointList.length > 15) {
+            throw new ASN1SizeError("pointList violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

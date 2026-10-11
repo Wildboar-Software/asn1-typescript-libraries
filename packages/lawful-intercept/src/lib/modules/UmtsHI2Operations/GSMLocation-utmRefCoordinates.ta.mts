@@ -3,7 +3,8 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../UmtsHI2Operations/MapDatum.ta.mjs";
@@ -55,6 +56,9 @@ class GSMLocation_utmRefCoordinates {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.utmref_string = utmref_string;
+        if (this.utmref_string.length < 13 || this.utmref_string.length > 13) {
+            throw new ASN1SizeError("utmref_string violates the SIZE constraint");
+        }
         this.mapDatum = mapDatum;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

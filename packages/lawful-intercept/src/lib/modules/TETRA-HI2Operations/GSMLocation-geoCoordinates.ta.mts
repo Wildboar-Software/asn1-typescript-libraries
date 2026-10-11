@@ -4,7 +4,9 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum } from "../TETRA-HI2Operations/MapDatum.ta.mjs";
@@ -83,9 +85,18 @@ class GSMLocation_geoCoordinates {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.latitude = latitude;
+        if (this.latitude.length < 7 || this.latitude.length > 10) {
+            throw new ASN1SizeError("latitude violates the SIZE constraint");
+        }
         this.longitude = longitude;
+        if (this.longitude.length < 8 || this.longitude.length > 11) {
+            throw new ASN1SizeError("longitude violates the SIZE constraint");
+        }
         this.mapDatum = mapDatum;
         this.azimuth = azimuth;
+        if (this.azimuth !== undefined && ((typeof this.azimuth === "bigint" ? this.azimuth : BigInt(this.azimuth)) < 0n || (typeof this.azimuth === "bigint" ? this.azimuth : BigInt(this.azimuth)) > 359n)) {
+            throw new ASN1OverflowError("azimuth violates the INTEGER range constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../LI-PS-PDU/LawfulInterceptionIdentifier.ta.mjs";
@@ -144,14 +146,29 @@ class PSHeader {
         this.li_psDomainId = li_psDomainId;
         this.lawfulInterceptionIdentifier = lawfulInterceptionIdentifier;
         this.authorizationCountryCode = authorizationCountryCode;
+        if (this.authorizationCountryCode !== undefined && (this.authorizationCountryCode.length < 2 || this.authorizationCountryCode.length > 2)) {
+            throw new ASN1SizeError("authorizationCountryCode violates the SIZE constraint");
+        }
         this.communicationIdentifier = communicationIdentifier;
         this.sequenceNumber = sequenceNumber;
+        if ((typeof this.sequenceNumber === "bigint" ? this.sequenceNumber : BigInt(this.sequenceNumber)) < 0n || (typeof this.sequenceNumber === "bigint" ? this.sequenceNumber : BigInt(this.sequenceNumber)) > 4294967295n) {
+            throw new ASN1OverflowError("sequenceNumber violates the INTEGER range constraint");
+        }
         this.timeStamp = timeStamp;
         this.interceptionPointID = interceptionPointID;
+        if (this.interceptionPointID !== undefined && (this.interceptionPointID.length < 1 || this.interceptionPointID.length > 8)) {
+            throw new ASN1SizeError("interceptionPointID violates the SIZE constraint");
+        }
         this.microSecondTimeStamp = microSecondTimeStamp;
         this.timeStampQualifier = timeStampQualifier;
         this.extendedInterceptionPointID = extendedInterceptionPointID;
+        if (this.extendedInterceptionPointID !== undefined && (this.extendedInterceptionPointID.length < 1 || this.extendedInterceptionPointID.length > 65535)) {
+            throw new ASN1SizeError("extendedInterceptionPointID violates the SIZE constraint");
+        }
         this.networkFunctionIdentifier = networkFunctionIdentifier;
+        if (this.networkFunctionIdentifier !== undefined && (this.networkFunctionIdentifier.length < 1 || this.networkFunctionIdentifier.length > 65535)) {
+            throw new ASN1SizeError("networkFunctionIdentifier violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

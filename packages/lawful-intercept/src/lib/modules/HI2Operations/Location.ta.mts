@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TetraLocation, _decode_TetraLocation, _encode_TetraLocation } from "../HI2Operations/TetraLocation.ta.mjs";
@@ -147,15 +148,36 @@ class Location {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.e164_Number = e164_Number;
+        if (this.e164_Number !== undefined && (this.e164_Number.length < 1 || this.e164_Number.length > 25)) {
+            throw new ASN1SizeError("e164_Number violates the SIZE constraint");
+        }
         this.globalCellID = globalCellID;
+        if (this.globalCellID !== undefined && (this.globalCellID.length < 5 || this.globalCellID.length > 7)) {
+            throw new ASN1SizeError("globalCellID violates the SIZE constraint");
+        }
         this.tetraLocation = tetraLocation;
         this.rAI = rAI;
+        if (this.rAI !== undefined && (this.rAI.length < 6 || this.rAI.length > 6)) {
+            throw new ASN1SizeError("rAI violates the SIZE constraint");
+        }
         this.gsmLocation = gsmLocation;
         this.umtsLocation = umtsLocation;
         this.sAI = sAI;
+        if (this.sAI !== undefined && (this.sAI.length < 7 || this.sAI.length > 7)) {
+            throw new ASN1SizeError("sAI violates the SIZE constraint");
+        }
         this.oldRAI = oldRAI;
+        if (this.oldRAI !== undefined && (this.oldRAI.length < 6 || this.oldRAI.length > 6)) {
+            throw new ASN1SizeError("oldRAI violates the SIZE constraint");
+        }
         this.tAI = tAI;
+        if (this.tAI !== undefined && (this.tAI.length < 6 || this.tAI.length > 6)) {
+            throw new ASN1SizeError("tAI violates the SIZE constraint");
+        }
         this.eCGI = eCGI;
+        if (this.eCGI !== undefined && (this.eCGI.length < 8 || this.eCGI.length > 8)) {
+            throw new ASN1SizeError("eCGI violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

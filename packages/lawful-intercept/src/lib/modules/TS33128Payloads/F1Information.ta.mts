@@ -4,7 +4,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RANCGI, _decode_RANCGI, _encode_RANCGI } from "../TS33128Payloads/RANCGI.ta.mjs";
@@ -86,9 +88,15 @@ class F1Information {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.gNBDUID = gNBDUID;
+        if ((typeof this.gNBDUID === "bigint" ? this.gNBDUID : BigInt(this.gNBDUID)) < 0n || (typeof this.gNBDUID === "bigint" ? this.gNBDUID : BigInt(this.gNBDUID)) > 68719476735n) {
+            throw new ASN1OverflowError("gNBDUID violates the INTEGER range constraint");
+        }
         this.gNBDUName = gNBDUName;
         this.gNBCUName = gNBCUName;
         this.gNBDUServedCells = gNBDUServedCells;
+        if (this.gNBDUServedCells.length < 1) {
+            throw new ASN1SizeError("gNBDUServedCells violates the SIZE constraint");
+        }
         this.extendedGNBDUName = extendedGNBDUName;
         this.extendedGNBCUName = extendedGNBCUName;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

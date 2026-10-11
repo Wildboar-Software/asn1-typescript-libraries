@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Confidence = INTEGER;
 
-export const _decode_Confidence: $.ASN1Decoder<Confidence> = $._decodeInteger;
+export function _decode_Confidence (el: _Element): Confidence {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 100n) {
+        throw new ASN1OverflowError("Confidence violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_Confidence: $.ASN1Encoder<Confidence> = $._encodeInteger;
 

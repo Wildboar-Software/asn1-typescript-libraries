@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
@@ -110,6 +111,9 @@ class EPSRANHandoverCommand {
         this.eRABsToBeForwarded = eRABsToBeForwarded;
         this.eRABsToRelease = eRABsToRelease;
         this.targetToSourceContainers = targetToSourceContainers;
+        if (this.targetToSourceContainers.length < 1) {
+            throw new ASN1SizeError("targetToSourceContainers violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

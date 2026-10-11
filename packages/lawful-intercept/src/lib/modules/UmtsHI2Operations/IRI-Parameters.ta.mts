@@ -5,7 +5,8 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IRI_Parameters_iRIversion, _decode_IRI_Parameters_iRIversion, _encode_IRI_Parameters_iRIversion, _enum_for_IRI_Parameters_iRIversion } from "../UmtsHI2Operations/IRI-Parameters-iRIversion.ta.mjs";
@@ -567,6 +568,9 @@ class IRI_Parameters {
         this.initiator = initiator;
         this.locationOfTheTarget = locationOfTheTarget;
         this.partyInformation = partyInformation;
+        if (this.partyInformation !== undefined && (this.partyInformation.length < 1 || this.partyInformation.length > 10)) {
+            throw new ASN1SizeError("partyInformation violates the SIZE constraint");
+        }
         this.serviceCenterAddress = serviceCenterAddress;
         this.sMS = sMS;
         this.national_Parameters = national_Parameters;
@@ -582,7 +586,13 @@ class IRI_Parameters {
         this.iMSevent = iMSevent;
         this.sIPMessage = sIPMessage;
         this.servingSGSN_number = servingSGSN_number;
+        if (this.servingSGSN_number !== undefined && (this.servingSGSN_number.length < 1 || this.servingSGSN_number.length > 20)) {
+            throw new ASN1SizeError("servingSGSN_number violates the SIZE constraint");
+        }
         this.servingSGSN_address = servingSGSN_address;
+        if (this.servingSGSN_address !== undefined && (this.servingSGSN_address.length < 5 || this.servingSGSN_address.length > 17)) {
+            throw new ASN1SizeError("servingSGSN_address violates the SIZE constraint");
+        }
         this.ldiEvent = ldiEvent;
         this.correlation = correlation;
         this.mediaDecryption_info = mediaDecryption_info;
@@ -592,6 +602,9 @@ class IRI_Parameters {
         this.sdpOffer = sdpOffer;
         this.sdpAnswer = sdpAnswer;
         this.uLITimestamp = uLITimestamp;
+        if (this.uLITimestamp !== undefined && (this.uLITimestamp.length < 8 || this.uLITimestamp.length > 8)) {
+            throw new ASN1SizeError("uLITimestamp violates the SIZE constraint");
+        }
         this.packetDataHeaderInformation = packetDataHeaderInformation;
         this.mediaSecFailureIndication = mediaSecFailureIndication;
         this.pANI_Header_Info = pANI_Header_Info;

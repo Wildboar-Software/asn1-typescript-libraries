@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type FiveGTMSI = INTEGER;
 
-export const _decode_FiveGTMSI: $.ASN1Decoder<FiveGTMSI> = $._decodeInteger;
+export function _decode_FiveGTMSI (el: _Element): FiveGTMSI {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 4294967295n) {
+        throw new ASN1OverflowError("FiveGTMSI violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_FiveGTMSI: $.ASN1Encoder<FiveGTMSI> = $._encodeInteger;
 

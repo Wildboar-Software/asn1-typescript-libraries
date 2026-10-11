@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -54,7 +55,13 @@ class MicroSecondTimeStamp {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.seconds = seconds;
+        if ((typeof this.seconds === "bigint" ? this.seconds : BigInt(this.seconds)) < 0n || (typeof this.seconds === "bigint" ? this.seconds : BigInt(this.seconds)) > 18446744073709551615n) {
+            throw new ASN1OverflowError("seconds violates the INTEGER range constraint");
+        }
         this.microSeconds = microSeconds;
+        if ((typeof this.microSeconds === "bigint" ? this.microSeconds : BigInt(this.microSeconds)) < 0n || (typeof this.microSeconds === "bigint" ? this.microSeconds : BigInt(this.microSeconds)) > 999999n) {
+            throw new ASN1OverflowError("microSeconds violates the INTEGER range constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

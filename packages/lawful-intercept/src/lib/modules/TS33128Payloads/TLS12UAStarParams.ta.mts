@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLSPRFAlgorithm, _decode_TLSPRFAlgorithm, _encode_TLSPRFAlgorithm, _enum_for_TLSPRFAlgorithm } from "../TS33128Payloads/TLSPRFAlgorithm.ta.mjs";
@@ -196,24 +198,63 @@ class TLS12UAStarParams {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.preMasterSecret = preMasterSecret;
+        if (this.preMasterSecret !== undefined && (this.preMasterSecret.length < 48 || this.preMasterSecret.length > 48)) {
+            throw new ASN1SizeError("preMasterSecret violates the SIZE constraint");
+        }
         this.masterSecret = masterSecret;
+        if (this.masterSecret.length < 48 || this.masterSecret.length > 48) {
+            throw new ASN1SizeError("masterSecret violates the SIZE constraint");
+        }
         this.pRFAlgorithm = pRFAlgorithm;
         this.cipherSuite = cipherSuite;
         this.cipherType = cipherType;
         this.encKeyLength = encKeyLength;
+        if ((typeof this.encKeyLength === "bigint" ? this.encKeyLength : BigInt(this.encKeyLength)) < 0n || (typeof this.encKeyLength === "bigint" ? this.encKeyLength : BigInt(this.encKeyLength)) > 255n) {
+            throw new ASN1OverflowError("encKeyLength violates the INTEGER range constraint");
+        }
         this.blockLength = blockLength;
+        if ((typeof this.blockLength === "bigint" ? this.blockLength : BigInt(this.blockLength)) < 0n || (typeof this.blockLength === "bigint" ? this.blockLength : BigInt(this.blockLength)) > 255n) {
+            throw new ASN1OverflowError("blockLength violates the INTEGER range constraint");
+        }
         this.fixedIVLength = fixedIVLength;
+        if ((typeof this.fixedIVLength === "bigint" ? this.fixedIVLength : BigInt(this.fixedIVLength)) < 0n || (typeof this.fixedIVLength === "bigint" ? this.fixedIVLength : BigInt(this.fixedIVLength)) > 255n) {
+            throw new ASN1OverflowError("fixedIVLength violates the INTEGER range constraint");
+        }
         this.recordIVLength = recordIVLength;
+        if ((typeof this.recordIVLength === "bigint" ? this.recordIVLength : BigInt(this.recordIVLength)) < 0n || (typeof this.recordIVLength === "bigint" ? this.recordIVLength : BigInt(this.recordIVLength)) > 255n) {
+            throw new ASN1OverflowError("recordIVLength violates the INTEGER range constraint");
+        }
         this.macLength = macLength;
+        if ((typeof this.macLength === "bigint" ? this.macLength : BigInt(this.macLength)) < 0n || (typeof this.macLength === "bigint" ? this.macLength : BigInt(this.macLength)) > 255n) {
+            throw new ASN1OverflowError("macLength violates the INTEGER range constraint");
+        }
         this.macKeyLength = macKeyLength;
+        if ((typeof this.macKeyLength === "bigint" ? this.macKeyLength : BigInt(this.macKeyLength)) < 0n || (typeof this.macKeyLength === "bigint" ? this.macKeyLength : BigInt(this.macKeyLength)) > 255n) {
+            throw new ASN1OverflowError("macKeyLength violates the INTEGER range constraint");
+        }
         this.compressionAlgorithm = compressionAlgorithm;
         this.clientRandom = clientRandom;
+        if (this.clientRandom.length < 32 || this.clientRandom.length > 32) {
+            throw new ASN1SizeError("clientRandom violates the SIZE constraint");
+        }
         this.serverRandom = serverRandom;
+        if (this.serverRandom.length < 32 || this.serverRandom.length > 32) {
+            throw new ASN1SizeError("serverRandom violates the SIZE constraint");
+        }
         this.clientSequenceNumber = clientSequenceNumber;
         this.serverSequenceNumber = serverSequenceNumber;
         this.sessionID = sessionID;
+        if (this.sessionID.length < 0 || this.sessionID.length > 32) {
+            throw new ASN1SizeError("sessionID violates the SIZE constraint");
+        }
         this.tLSServerExtensions = tLSServerExtensions;
+        if (this.tLSServerExtensions.length < 0 || this.tLSServerExtensions.length > 65535) {
+            throw new ASN1SizeError("tLSServerExtensions violates the SIZE constraint");
+        }
         this.tLSClientExtensions = tLSClientExtensions;
+        if (this.tLSClientExtensions !== undefined && (this.tLSClientExtensions.length < 0 || this.tLSClientExtensions.length > 65535)) {
+            throw new ASN1SizeError("tLSClientExtensions violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

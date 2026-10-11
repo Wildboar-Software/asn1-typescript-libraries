@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../TS33128Payloads/TraceDepth.ta.mjs";
@@ -82,6 +83,9 @@ class TraceActivationInfo {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.nGRANTraceID = nGRANTraceID;
+        if (this.nGRANTraceID.length < 8 || this.nGRANTraceID.length > 8) {
+            throw new ASN1SizeError("nGRANTraceID violates the SIZE constraint");
+        }
         this.interfacestoTrace = interfacestoTrace;
         this.traceDepth = traceDepth;
         this.traceCollectionEntityIPAddress = traceCollectionEntityIPAddress;

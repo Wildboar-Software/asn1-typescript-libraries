@@ -5,7 +5,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessPolicyType, _decode_AccessPolicyType, _encode_AccessPolicyType } from "../UmtsHI2Operations/AccessPolicyType.ta.mjs";
@@ -646,6 +647,9 @@ class PTC {
         this.talkburstControlSetting = talkburstControlSetting;
         this.targetPresenceStatus = targetPresenceStatus;
         this.port_Number = port_Number;
+        if (this.port_Number !== undefined && ((typeof this.port_Number === "bigint" ? this.port_Number : BigInt(this.port_Number)) < 0n || (typeof this.port_Number === "bigint" ? this.port_Number : BigInt(this.port_Number)) > 65535n)) {
+            throw new ASN1OverflowError("port_Number violates the INTEGER range constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

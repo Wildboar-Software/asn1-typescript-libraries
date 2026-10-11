@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TARGETACTIVITYMONITOR_1, _decode_TARGETACTIVITYMONITOR_1, _encode_TARGETACTIVITYMONITOR_1 } from "../TS101909201/index.mjs";
@@ -513,11 +514,23 @@ class IRI_Parameters {
         this.intercepted_Call_Direct = intercepted_Call_Direct;
         this.intercepted_Call_State = intercepted_Call_State;
         this.ringingDuration = ringingDuration;
+        if (this.ringingDuration !== undefined && (this.ringingDuration.length < 3 || this.ringingDuration.length > 3)) {
+            throw new ASN1SizeError("ringingDuration violates the SIZE constraint");
+        }
         this.conversationDuration = conversationDuration;
+        if (this.conversationDuration !== undefined && (this.conversationDuration.length < 3 || this.conversationDuration.length > 3)) {
+            throw new ASN1SizeError("conversationDuration violates the SIZE constraint");
+        }
         this.locationOfTheTarget = locationOfTheTarget;
         this.partyInformation = partyInformation;
+        if (this.partyInformation !== undefined && (this.partyInformation.length < 1 || this.partyInformation.length > 10)) {
+            throw new ASN1SizeError("partyInformation violates the SIZE constraint");
+        }
         this.callContentLinkInformation = callContentLinkInformation;
         this.release_Reason_Of_Intercepted_Call = release_Reason_Of_Intercepted_Call;
+        if (this.release_Reason_Of_Intercepted_Call !== undefined && (this.release_Reason_Of_Intercepted_Call.length < 2 || this.release_Reason_Of_Intercepted_Call.length > 2)) {
+            throw new ASN1SizeError("release_Reason_Of_Intercepted_Call violates the SIZE constraint");
+        }
         this.nature_Of_The_intercepted_call = nature_Of_The_intercepted_call;
         this.serverCenterAddress = serverCenterAddress;
         this.sMS = sMS;
@@ -535,7 +548,13 @@ class IRI_Parameters {
         this.iMSevent = iMSevent;
         this.sIPMessage = sIPMessage;
         this.servingSGSN_number = servingSGSN_number;
+        if (this.servingSGSN_number !== undefined && (this.servingSGSN_number.length < 1 || this.servingSGSN_number.length > 20)) {
+            throw new ASN1SizeError("servingSGSN_number violates the SIZE constraint");
+        }
         this.servingSGSN_address = servingSGSN_address;
+        if (this.servingSGSN_address !== undefined && (this.servingSGSN_address.length < 5 || this.servingSGSN_address.length > 17)) {
+            throw new ASN1SizeError("servingSGSN_address violates the SIZE constraint");
+        }
         this.tARGETACTIVITYMONITOR = tARGETACTIVITYMONITOR;
         this.ldiEvent = ldiEvent;
         this.correlation = correlation;

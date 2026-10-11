@@ -5,7 +5,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../ProSeHI2Operations/ProSeAppMask.ta.mjs";
@@ -84,6 +85,9 @@ class DirectDiscoveryData {
         this.discoveryPLMNID = discoveryPLMNID;
         this.proseAppIdName = proseAppIdName;
         this.proseAppCode = proseAppCode;
+        if (this.proseAppCode.length < 23 || this.proseAppCode.length > 23) {
+            throw new ASN1SizeError("proseAppCode violates the SIZE constraint");
+        }
         this.proseAppMask = proseAppMask;
         this.timer = timer;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

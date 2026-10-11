@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type LocationErrorCode = INTEGER;
 
-export const _decode_LocationErrorCode: $.ASN1Decoder<LocationErrorCode> = $._decodeInteger;
+export function _decode_LocationErrorCode (el: _Element): LocationErrorCode {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 1n || (typeof value === "bigint" ? value : BigInt(value)) > 699n) {
+        throw new ASN1OverflowError("LocationErrorCode violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_LocationErrorCode: $.ASN1Encoder<LocationErrorCode> = $._encodeInteger;
 

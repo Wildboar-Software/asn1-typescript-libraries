@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Uncertainty = INTEGER;
 
-export const _decode_Uncertainty: $.ASN1Decoder<Uncertainty> = $._decodeInteger;
+export function _decode_Uncertainty (el: _Element): Uncertainty {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 127n) {
+        throw new ASN1OverflowError("Uncertainty violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_Uncertainty: $.ASN1Encoder<Uncertainty> = $._encodeInteger;
 

@@ -5,7 +5,8 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     UTF8String,
-    VisibleString
+    VisibleString,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -68,6 +69,9 @@ class TalkburstControlSetting {
         this.talk_BurstControlProtocol = talk_BurstControlProtocol;
         this.talk_Burst_parameters = talk_Burst_parameters;
         this.tBCP_PortNumber = tBCP_PortNumber;
+        if ((typeof this.tBCP_PortNumber === "bigint" ? this.tBCP_PortNumber : BigInt(this.tBCP_PortNumber)) < 0n || (typeof this.tBCP_PortNumber === "bigint" ? this.tBCP_PortNumber : BigInt(this.tBCP_PortNumber)) > 65535n) {
+            throw new ASN1OverflowError("tBCP_PortNumber violates the INTEGER range constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

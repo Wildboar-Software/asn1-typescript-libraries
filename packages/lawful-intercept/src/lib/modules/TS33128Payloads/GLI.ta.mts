@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type GLI = OCTET_STRING; // OctetStringType
 
-export const _decode_GLI: $.ASN1Decoder<GLI> = $._decodeOctetString;
+export function _decode_GLI (el: _Element): GLI {
+    const value = $._decodeOctetString(el);
+    if (value.length < 0 || value.length > 150) {
+        throw new ASN1SizeError("GLI violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_GLI: $.ASN1Encoder<GLI> = $._encodeOctetString;
 

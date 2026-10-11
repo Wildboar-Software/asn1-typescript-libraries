@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
@@ -108,12 +109,24 @@ class MMEUEServiceAccept {
     ) {
         this.userIdentifiers = userIdentifiers;
         this.serviceType = serviceType;
+        if (this.serviceType !== undefined && (this.serviceType.length < 1 || this.serviceType.length > 1)) {
+            throw new ASN1SizeError("serviceType violates the SIZE constraint");
+        }
         this.mTMSI = mTMSI;
         this.cSFBResponse = cSFBResponse;
+        if (this.cSFBResponse !== undefined && (this.cSFBResponse.length < 1 || this.cSFBResponse.length > 1)) {
+            throw new ASN1SizeError("cSFBResponse violates the SIZE constraint");
+        }
         this.uEEPSBearerContextStatus = uEEPSBearerContextStatus;
+        if (this.uEEPSBearerContextStatus !== undefined && (this.uEEPSBearerContextStatus.length < 2 || this.uEEPSBearerContextStatus.length > 2)) {
+            throw new ASN1SizeError("uEEPSBearerContextStatus violates the SIZE constraint");
+        }
         this.uERequestType = uERequestType;
         this.pagingRestriction = pagingRestriction;
         this.controlPlaneServiceType = controlPlaneServiceType;
+        if (this.controlPlaneServiceType !== undefined && (this.controlPlaneServiceType.length < 1 || this.controlPlaneServiceType.length > 1)) {
+            throw new ASN1SizeError("controlPlaneServiceType violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

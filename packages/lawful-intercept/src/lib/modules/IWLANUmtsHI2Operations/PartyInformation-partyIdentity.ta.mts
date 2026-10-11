@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -67,7 +68,13 @@ class PartyInformation_partyIdentity {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.imsi = imsi;
+        if (this.imsi !== undefined && (this.imsi.length < 3 || this.imsi.length > 8)) {
+            throw new ASN1SizeError("imsi violates the SIZE constraint");
+        }
         this.msISDN = msISDN;
+        if (this.msISDN !== undefined && (this.msISDN.length < 1 || this.msISDN.length > 9)) {
+            throw new ASN1SizeError("msISDN violates the SIZE constraint");
+        }
         this.nai = nai;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

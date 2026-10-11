@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../TETRA-HI2Operations/CallingPartyNumber.ta.mjs";
@@ -127,12 +128,27 @@ class PartyInformation_partyIdentity {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.imei = imei;
+        if (this.imei !== undefined && (this.imei.length < 8 || this.imei.length > 8)) {
+            throw new ASN1SizeError("imei violates the SIZE constraint");
+        }
         this.tei = tei;
+        if (this.tei !== undefined && (this.tei.length < 1 || this.tei.length > 15)) {
+            throw new ASN1SizeError("tei violates the SIZE constraint");
+        }
         this.imsi = imsi;
+        if (this.imsi !== undefined && (this.imsi.length < 3 || this.imsi.length > 8)) {
+            throw new ASN1SizeError("imsi violates the SIZE constraint");
+        }
         this.callingPartyNumber = callingPartyNumber;
         this.calledPartyNumber = calledPartyNumber;
         this.msISDN = msISDN;
+        if (this.msISDN !== undefined && (this.msISDN.length < 1 || this.msISDN.length > 9)) {
+            throw new ASN1SizeError("msISDN violates the SIZE constraint");
+        }
         this.e164_Format = e164_Format;
+        if (this.e164_Format !== undefined && (this.e164_Format.length < 1 || this.e164_Format.length > 25)) {
+            throw new ASN1SizeError("e164_Format violates the SIZE constraint");
+        }
         this.sip_uri = sip_uri;
         this.tel_url = tel_url;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

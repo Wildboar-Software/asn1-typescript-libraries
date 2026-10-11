@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProtConfigOptions, _decode_ProtConfigOptions, _encode_ProtConfigOptions } from "../EpsHI2Operations/ProtConfigOptions.ta.mjs";
@@ -355,12 +356,27 @@ class EPS_GTPV2_SpecificParameters {
     ) {
         this.pDNAddressAllocation = pDNAddressAllocation;
         this.aPN = aPN;
+        if (this.aPN !== undefined && (this.aPN.length < 1 || this.aPN.length > 100)) {
+            throw new ASN1SizeError("aPN violates the SIZE constraint");
+        }
         this.protConfigOptions = protConfigOptions;
         this.attachType = attachType;
+        if (this.attachType !== undefined && (this.attachType.length < 1 || this.attachType.length > 1)) {
+            throw new ASN1SizeError("attachType violates the SIZE constraint");
+        }
         this.ePSBearerIdentity = ePSBearerIdentity;
         this.detachType = detachType;
+        if (this.detachType !== undefined && (this.detachType.length < 1 || this.detachType.length > 1)) {
+            throw new ASN1SizeError("detachType violates the SIZE constraint");
+        }
         this.rATType = rATType;
+        if (this.rATType !== undefined && (this.rATType.length < 1 || this.rATType.length > 1)) {
+            throw new ASN1SizeError("rATType violates the SIZE constraint");
+        }
         this.failedBearerActivationReason = failedBearerActivationReason;
+        if (this.failedBearerActivationReason !== undefined && (this.failedBearerActivationReason.length < 1 || this.failedBearerActivationReason.length > 1)) {
+            throw new ASN1SizeError("failedBearerActivationReason violates the SIZE constraint");
+        }
         this.ePSBearerQoS = ePSBearerQoS;
         this.bearerActivationType = bearerActivationType;
         this.aPN_AMBR = aPN_AMBR;
@@ -369,22 +385,55 @@ class EPS_GTPV2_SpecificParameters {
         this.tFT = tFT;
         this.handoverIndication = handoverIndication;
         this.failedBearerModReason = failedBearerModReason;
+        if (this.failedBearerModReason !== undefined && (this.failedBearerModReason.length < 1 || this.failedBearerModReason.length > 1)) {
+            throw new ASN1SizeError("failedBearerModReason violates the SIZE constraint");
+        }
         this.trafficAggregateDescription = trafficAggregateDescription;
         this.failedTAUReason = failedTAUReason;
+        if (this.failedTAUReason !== undefined && (this.failedTAUReason.length < 1 || this.failedTAUReason.length > 1)) {
+            throw new ASN1SizeError("failedTAUReason violates the SIZE constraint");
+        }
         this.failedEUTRANAttachReason = failedEUTRANAttachReason;
+        if (this.failedEUTRANAttachReason !== undefined && (this.failedEUTRANAttachReason.length < 1 || this.failedEUTRANAttachReason.length > 1)) {
+            throw new ASN1SizeError("failedEUTRANAttachReason violates the SIZE constraint");
+        }
         this.servingMMEaddress = servingMMEaddress;
         this.bearerDeactivationType = bearerDeactivationType;
         this.bearerDeactivationCause = bearerDeactivationCause;
+        if (this.bearerDeactivationCause !== undefined && (this.bearerDeactivationCause.length < 1 || this.bearerDeactivationCause.length > 1)) {
+            throw new ASN1SizeError("bearerDeactivationCause violates the SIZE constraint");
+        }
         this.ePSlocationOfTheTarget = ePSlocationOfTheTarget;
         this.pDNType = pDNType;
+        if (this.pDNType !== undefined && (this.pDNType.length < 1 || this.pDNType.length > 1)) {
+            throw new ASN1SizeError("pDNType violates the SIZE constraint");
+        }
         this.requestType = requestType;
+        if (this.requestType !== undefined && (this.requestType.length < 1 || this.requestType.length > 1)) {
+            throw new ASN1SizeError("requestType violates the SIZE constraint");
+        }
         this.uEReqPDNConnFailReason = uEReqPDNConnFailReason;
+        if (this.uEReqPDNConnFailReason !== undefined && (this.uEReqPDNConnFailReason.length < 1 || this.uEReqPDNConnFailReason.length > 1)) {
+            throw new ASN1SizeError("uEReqPDNConnFailReason violates the SIZE constraint");
+        }
         this.extendedHandoverIndication = extendedHandoverIndication;
+        if (this.extendedHandoverIndication !== undefined && (this.extendedHandoverIndication.length < 1 || this.extendedHandoverIndication.length > 1)) {
+            throw new ASN1SizeError("extendedHandoverIndication violates the SIZE constraint");
+        }
         this.uLITimestamp = uLITimestamp;
+        if (this.uLITimestamp !== undefined && (this.uLITimestamp.length < 8 || this.uLITimestamp.length > 8)) {
+            throw new ASN1SizeError("uLITimestamp violates the SIZE constraint");
+        }
         this.uELocalIPAddress = uELocalIPAddress;
         this.uEUdpPort = uEUdpPort;
+        if (this.uEUdpPort !== undefined && (this.uEUdpPort.length < 2 || this.uEUdpPort.length > 2)) {
+            throw new ASN1SizeError("uEUdpPort violates the SIZE constraint");
+        }
         this.tWANIdentifier = tWANIdentifier;
         this.tWANIdentifierTimestamp = tWANIdentifierTimestamp;
+        if (this.tWANIdentifierTimestamp !== undefined && (this.tWANIdentifierTimestamp.length < 4 || this.tWANIdentifierTimestamp.length > 4)) {
+            throw new ASN1SizeError("tWANIdentifierTimestamp violates the SIZE constraint");
+        }
         this.proSeRemoteUeContextConnected = proSeRemoteUeContextConnected;
         this.proSeRemoteUeContextDisconnected = proSeRemoteUeContextDisconnected;
         this.secondaryRATUsageIndication = secondaryRATUsageIndication;

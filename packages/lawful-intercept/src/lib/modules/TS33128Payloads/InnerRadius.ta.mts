@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type InnerRadius = INTEGER;
 
-export const _decode_InnerRadius: $.ASN1Decoder<InnerRadius> = $._decodeInteger;
+export function _decode_InnerRadius (el: _Element): InnerRadius {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 327675n) {
+        throw new ASN1OverflowError("InnerRadius violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_InnerRadius: $.ASN1Encoder<InnerRadius> = $._encodeInteger;
 

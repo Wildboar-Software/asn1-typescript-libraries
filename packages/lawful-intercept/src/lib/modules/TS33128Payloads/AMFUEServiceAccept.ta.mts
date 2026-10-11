@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
@@ -132,9 +133,18 @@ class AMFUEServiceAccept {
         this.userIdentifiers = userIdentifiers;
         this.serviceMessageIdentity = serviceMessageIdentity;
         this.serviceType = serviceType;
+        if (this.serviceType !== undefined && (this.serviceType.length < 1 || this.serviceType.length > 1)) {
+            throw new ASN1SizeError("serviceType violates the SIZE constraint");
+        }
         this.fiveGTMSI = fiveGTMSI;
         this.uplinkDataStatus = uplinkDataStatus;
+        if (this.uplinkDataStatus !== undefined && (this.uplinkDataStatus.length < 2 || this.uplinkDataStatus.length > 32)) {
+            throw new ASN1SizeError("uplinkDataStatus violates the SIZE constraint");
+        }
         this.pDUSessionStatus = pDUSessionStatus;
+        if (this.pDUSessionStatus !== undefined && (this.pDUSessionStatus.length < 2 || this.pDUSessionStatus.length > 32)) {
+            throw new ASN1SizeError("pDUSessionStatus violates the SIZE constraint");
+        }
         this.deprecatedUERequestType = deprecatedUERequestType;
         this.pagingRestriction = pagingRestriction;
         this.forbiddenTAIList = forbiddenTAIList;

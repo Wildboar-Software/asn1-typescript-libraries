@@ -3,7 +3,8 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -276,6 +277,9 @@ class IRI_Parameters {
         this.lawfulInterceptionIdentifier = lawfulInterceptionIdentifier;
         this.timeStamp = timeStamp;
         this.partyInformation = partyInformation;
+        if (this.partyInformation !== undefined && (this.partyInformation.length < 1 || this.partyInformation.length > 10)) {
+            throw new ASN1SizeError("partyInformation violates the SIZE constraint");
+        }
         this.national_Parameters = national_Parameters;
         this.networkIdentifier = networkIdentifier;
         this.confEvent = confEvent;

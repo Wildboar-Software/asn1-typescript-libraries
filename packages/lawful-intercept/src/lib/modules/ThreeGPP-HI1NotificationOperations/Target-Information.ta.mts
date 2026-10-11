@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
@@ -141,6 +142,9 @@ class Target_Information {
         this.communicationIdentifier = communicationIdentifier;
         this.network_Identifier = network_Identifier;
         this.broadcastArea = broadcastArea;
+        if (this.broadcastArea !== undefined && (this.broadcastArea.length < 1 || this.broadcastArea.length > 256)) {
+            throw new ASN1SizeError("broadcastArea violates the SIZE constraint");
+        }
         this.targetType = targetType;
         this.deliveryInformation = deliveryInformation;
         this.liActivatedTime = liActivatedTime;

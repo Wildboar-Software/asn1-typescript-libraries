@@ -4,7 +4,9 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import * as UmtsHI2Operations from "../UmtsHI2Operations/CorrelationValues.ta.mjs";
@@ -80,7 +82,13 @@ class CommunicationIdentifier {
     ) {
         this.networkIdentifier = networkIdentifier;
         this.communicationIdentityNumber = communicationIdentityNumber;
+        if (this.communicationIdentityNumber !== undefined && ((typeof this.communicationIdentityNumber === "bigint" ? this.communicationIdentityNumber : BigInt(this.communicationIdentityNumber)) < 0n || (typeof this.communicationIdentityNumber === "bigint" ? this.communicationIdentityNumber : BigInt(this.communicationIdentityNumber)) > 4294967295n)) {
+            throw new ASN1OverflowError("communicationIdentityNumber violates the INTEGER range constraint");
+        }
         this.deliveryCountryCode = deliveryCountryCode;
+        if (this.deliveryCountryCode !== undefined && (this.deliveryCountryCode.length < 2 || this.deliveryCountryCode.length > 2)) {
+            throw new ASN1SizeError("deliveryCountryCode violates the SIZE constraint");
+        }
         this.cINExtension = cINExtension;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

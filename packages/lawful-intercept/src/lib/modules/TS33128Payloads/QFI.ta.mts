@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type QFI = INTEGER;
 
-export const _decode_QFI: $.ASN1Decoder<QFI> = $._decodeInteger;
+export function _decode_QFI (el: _Element): QFI {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 63n) {
+        throw new ASN1OverflowError("QFI violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_QFI: $.ASN1Encoder<QFI> = $._encodeInteger;
 

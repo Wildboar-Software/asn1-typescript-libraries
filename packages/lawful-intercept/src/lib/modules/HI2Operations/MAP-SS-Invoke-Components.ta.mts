@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -31,7 +32,11 @@ let _cached_decoder_for_MAP_SS_Invoke_Components: $.ASN1Decoder<MAP_SS_Invoke_Co
 export
 function _decode_MAP_SS_Invoke_Components (el: _Element): MAP_SS_Invoke_Components {
     if (!_cached_decoder_for_MAP_SS_Invoke_Components) { _cached_decoder_for_MAP_SS_Invoke_Components = $._decodeSetOf<OCTET_STRING>(() => $._decodeOctetString); }
-    return _cached_decoder_for_MAP_SS_Invoke_Components(el);
+    const value = _cached_decoder_for_MAP_SS_Invoke_Components(el);
+    if (value.length < 1 || value.length > 256) {
+        throw new ASN1SizeError("MAP_SS_Invoke_Components violates the SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_MAP_SS_Invoke_Components: $.ASN1Encoder<MAP_SS_Invoke_Components> | null = null;

@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CellPortionID = INTEGER;
 
-export const _decode_CellPortionID: $.ASN1Decoder<CellPortionID> = $._decodeInteger;
+export function _decode_CellPortionID (el: _Element): CellPortionID {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 4095n) {
+        throw new ASN1OverflowError("CellPortionID violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_CellPortionID: $.ASN1Encoder<CellPortionID> = $._encodeInteger;
 

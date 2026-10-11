@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -54,6 +55,9 @@ class National_HI2_ASN1parameters {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.countryCode = countryCode;
+        if (this.countryCode.length < 2 || this.countryCode.length > 2) {
+            throw new ASN1SizeError("countryCode violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

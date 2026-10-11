@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -64,8 +65,17 @@ class TetraLocation_ms_Loc {
         ci: OPTIONAL<INTEGER>
     ) {
         this.mcc = mcc;
+        if ((typeof this.mcc === "bigint" ? this.mcc : BigInt(this.mcc)) < 0n || (typeof this.mcc === "bigint" ? this.mcc : BigInt(this.mcc)) > 1023n) {
+            throw new ASN1OverflowError("mcc violates the INTEGER range constraint");
+        }
         this.mnc = mnc;
+        if ((typeof this.mnc === "bigint" ? this.mnc : BigInt(this.mnc)) < 0n || (typeof this.mnc === "bigint" ? this.mnc : BigInt(this.mnc)) > 16383n) {
+            throw new ASN1OverflowError("mnc violates the INTEGER range constraint");
+        }
         this.lai = lai;
+        if ((typeof this.lai === "bigint" ? this.lai : BigInt(this.lai)) < 0n || (typeof this.lai === "bigint" ? this.lai : BigInt(this.lai)) > 65535n) {
+            throw new ASN1OverflowError("lai violates the INTEGER range constraint");
+        }
         this.ci = ci;
     }
 

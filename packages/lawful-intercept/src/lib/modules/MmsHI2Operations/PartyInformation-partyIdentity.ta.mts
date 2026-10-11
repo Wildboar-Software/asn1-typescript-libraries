@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
@@ -128,6 +129,9 @@ class PartyInformation_partyIdentity {
         this.mMSAddressNonLocalID = mMSAddressNonLocalID;
         this.e_Mail = e_Mail;
         this.e164_Format = e164_Format;
+        if (this.e164_Format !== undefined && (this.e164_Format.length < 1 || this.e164_Format.length > 25)) {
+            throw new ASN1SizeError("e164_Format violates the SIZE constraint");
+        }
         this.iPAddress = iPAddress;
         this.alphanum_Shortcode = alphanum_Shortcode;
         this.num_Shortcode = num_Shortcode;

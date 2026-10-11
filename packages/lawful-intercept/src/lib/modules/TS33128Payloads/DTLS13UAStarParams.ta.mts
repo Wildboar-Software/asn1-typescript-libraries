@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13UAStarParams, _decode_TLS13UAStarParams, _encode_TLS13UAStarParams } from "../TS33128Payloads/TLS13UAStarParams.ta.mjs";
@@ -94,8 +95,17 @@ class DTLS13UAStarParams {
         this.clientEpoch = clientEpoch;
         this.serverEpoch = serverEpoch;
         this.clientSnKey = clientSnKey;
+        if (this.clientSnKey !== undefined && (this.clientSnKey.length < 1 || this.clientSnKey.length > 65535)) {
+            throw new ASN1SizeError("clientSnKey violates the SIZE constraint");
+        }
         this.serverSnKey = serverSnKey;
+        if (this.serverSnKey !== undefined && (this.serverSnKey.length < 1 || this.serverSnKey.length > 65535)) {
+            throw new ASN1SizeError("serverSnKey violates the SIZE constraint");
+        }
         this.connectionID = connectionID;
+        if (this.connectionID !== undefined && (this.connectionID.length < 0 || this.connectionID.length > 255)) {
+            throw new ASN1SizeError("connectionID violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

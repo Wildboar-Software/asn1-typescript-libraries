@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -111,6 +112,9 @@ class UUS1_Content {
         this.cC_Link_Identifier = cC_Link_Identifier;
         this.direction_Indication = direction_Indication;
         this.bearer_capability = bearer_capability;
+        if (this.bearer_capability !== undefined && (this.bearer_capability.length < 1 || this.bearer_capability.length > 12)) {
+            throw new ASN1SizeError("bearer_capability violates the SIZE constraint");
+        }
         this.service_Information = service_Information;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

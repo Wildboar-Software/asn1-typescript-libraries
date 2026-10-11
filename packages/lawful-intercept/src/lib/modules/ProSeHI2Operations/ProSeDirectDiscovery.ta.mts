@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProSeDirectDiscoveryEvent, _decode_ProSeDirectDiscoveryEvent, _encode_ProSeDirectDiscoveryEvent, _enum_for_ProSeDirectDiscoveryEvent } from "../ProSeHI2Operations/ProSeDirectDiscoveryEvent.ta.mjs";
@@ -99,10 +100,16 @@ class ProSeDirectDiscovery {
     ) {
         this.proseDirectDiscoveryEvent = proseDirectDiscoveryEvent;
         this.targetImsi = targetImsi;
+        if (this.targetImsi.length < 3 || this.targetImsi.length > 8) {
+            throw new ASN1SizeError("targetImsi violates the SIZE constraint");
+        }
         this.targetRole = targetRole;
         this.directDiscoveryData = directDiscoveryData;
         this.metadata = metadata;
         this.otherUeImsi = otherUeImsi;
+        if (this.otherUeImsi !== undefined && (this.otherUeImsi.length < 3 || this.otherUeImsi.length > 8)) {
+            throw new ASN1SizeError("otherUeImsi violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

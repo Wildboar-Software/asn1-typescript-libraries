@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCServiceIdentity, _decode_MCServiceIdentity, _encode_MCServiceIdentity } from "../TS33128Payloads/MCServiceIdentity.ta.mjs";
@@ -64,6 +65,9 @@ class MCXCMMessage {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.mCServiceIdentities = mCServiceIdentities;
+        if (this.mCServiceIdentities.length < 1) {
+            throw new ASN1SizeError("mCServiceIdentities violates the SIZE constraint");
+        }
         this.mcServiceClient = mcServiceClient;
         this.cMMessage = cMMessage;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

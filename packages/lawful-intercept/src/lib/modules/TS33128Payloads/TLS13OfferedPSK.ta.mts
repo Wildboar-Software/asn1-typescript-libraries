@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13PSKIdentity, _decode_TLS13PSKIdentity, _encode_TLS13PSKIdentity } from "../TS33128Payloads/TLS13PSKIdentity.ta.mjs";
@@ -54,6 +55,9 @@ class TLS13OfferedPSK {
     ) {
         this.identity = identity;
         this.binder = binder;
+        if (this.binder.length < 32 || this.binder.length > 255) {
+            throw new ASN1SizeError("binder violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

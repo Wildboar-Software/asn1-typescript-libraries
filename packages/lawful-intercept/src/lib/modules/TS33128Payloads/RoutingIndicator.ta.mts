@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RoutingIndicator = INTEGER;
 
-export const _decode_RoutingIndicator: $.ASN1Decoder<RoutingIndicator> = $._decodeInteger;
+export function _decode_RoutingIndicator (el: _Element): RoutingIndicator {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 9999n) {
+        throw new ASN1OverflowError("RoutingIndicator violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_RoutingIndicator: $.ASN1Encoder<RoutingIndicator> = $._encodeInteger;
 

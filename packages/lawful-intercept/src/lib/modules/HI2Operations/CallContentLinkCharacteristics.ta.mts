@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CCLink_State, _decode_CCLink_State, _encode_CCLink_State, _enum_for_CCLink_State } from "../HI2Operations/CCLink-State.ta.mjs";
@@ -80,6 +81,9 @@ class CallContentLinkCharacteristics {
         this.cCLink_State = cCLink_State;
         this.release_Time = release_Time;
         this.release_Reason = release_Reason;
+        if (this.release_Reason !== undefined && (this.release_Reason.length < 2 || this.release_Reason.length > 2)) {
+            throw new ASN1SizeError("release_Reason violates the SIZE constraint");
+        }
         this.lEMF_Address = lEMF_Address;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

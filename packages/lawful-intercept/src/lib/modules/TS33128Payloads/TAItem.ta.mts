@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
@@ -65,6 +66,9 @@ class TAItem {
     ) {
         this.tAC = tAC;
         this.broadcastPLMNList = broadcastPLMNList;
+        if (this.broadcastPLMNList.length < 1) {
+            throw new ASN1SizeError("broadcastPLMNList violates the SIZE constraint");
+        }
         this.rATinformation = rATinformation;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ANDSPRule, _decode_ANDSPRule, _encode_ANDSPRule } from "../TS33128Payloads/ANDSPRule.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_ANDSPRules: $.ASN1Decoder<ANDSPRules> | null = null;
 export
 function _decode_ANDSPRules (el: _Element): ANDSPRules {
     if (!_cached_decoder_for_ANDSPRules) { _cached_decoder_for_ANDSPRules = $._decodeSequenceOf<ANDSPRule>(() => _decode_ANDSPRule); }
-    return _cached_decoder_for_ANDSPRules(el);
+    const value = _cached_decoder_for_ANDSPRules(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("ANDSPRules violates the SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ANDSPRules: $.ASN1Encoder<ANDSPRules> | null = null;

@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type UnavailabilityPeriodDuration = OCTET_STRING; // OctetStringType
 
-export const _decode_UnavailabilityPeriodDuration: $.ASN1Decoder<UnavailabilityPeriodDuration> = $._decodeOctetString;
+export function _decode_UnavailabilityPeriodDuration (el: _Element): UnavailabilityPeriodDuration {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 1) {
+        throw new ASN1SizeError("UnavailabilityPeriodDuration violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_UnavailabilityPeriodDuration: $.ASN1Encoder<UnavailabilityPeriodDuration> = $._encodeOctetString;
 

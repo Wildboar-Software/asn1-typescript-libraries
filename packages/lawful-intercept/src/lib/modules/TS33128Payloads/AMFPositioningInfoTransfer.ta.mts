@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -127,6 +128,9 @@ class AMFPositioningInfoTransfer {
         this.nRPPaMessage = nRPPaMessage;
         this.lPPMessage = lPPMessage;
         this.lcsCorrelationId = lcsCorrelationId;
+        if (this.lcsCorrelationId.length < 1 || this.lcsCorrelationId.length > 255) {
+            throw new ASN1SizeError("lcsCorrelationId violates the SIZE constraint");
+        }
         this.additionalUserIdentifiers = additionalUserIdentifiers;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

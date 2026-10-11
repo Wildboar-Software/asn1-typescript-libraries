@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SORTransparentContainer = OCTET_STRING; // OctetStringType
 
-export const _decode_SORTransparentContainer: $.ASN1Decoder<SORTransparentContainer> = $._decodeOctetString;
+export function _decode_SORTransparentContainer (el: _Element): SORTransparentContainer {
+    const value = $._decodeOctetString(el);
+    if (value.length < 17 || value.length > 65535) {
+        throw new ASN1SizeError("SORTransparentContainer violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_SORTransparentContainer: $.ASN1Encoder<SORTransparentContainer> = $._encodeOctetString;
 

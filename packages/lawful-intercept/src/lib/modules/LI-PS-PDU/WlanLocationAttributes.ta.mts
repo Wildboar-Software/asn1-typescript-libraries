@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -46,6 +47,9 @@ class WlanLocationAttributes {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.wlanAPMACAddress = wlanAPMACAddress;
+        if (this.wlanAPMACAddress !== undefined && (this.wlanAPMACAddress.length < 6 || this.wlanAPMACAddress.length > 6)) {
+            throw new ASN1SizeError("wlanAPMACAddress violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

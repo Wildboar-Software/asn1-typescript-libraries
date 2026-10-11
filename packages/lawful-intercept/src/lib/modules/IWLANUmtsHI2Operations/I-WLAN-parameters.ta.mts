@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
@@ -66,6 +67,9 @@ class I_WLAN_parameters {
     ) {
         this.wlan_local_IP_address_of_the_target = wlan_local_IP_address_of_the_target;
         this.w_APN = w_APN;
+        if (this.w_APN !== undefined && (this.w_APN.length < 1 || this.w_APN.length > 100)) {
+            throw new ASN1SizeError("w_APN violates the SIZE constraint");
+        }
         this.wlan_remote_IP_address_of_the_target = wlan_remote_IP_address_of_the_target;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

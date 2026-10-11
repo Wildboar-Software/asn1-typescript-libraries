@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AMFSetID = INTEGER;
 
-export const _decode_AMFSetID: $.ASN1Decoder<AMFSetID> = $._decodeInteger;
+export function _decode_AMFSetID (el: _Element): AMFSetID {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 1023n) {
+        throw new ASN1OverflowError("AMFSetID violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_AMFSetID: $.ASN1Encoder<AMFSetID> = $._encodeInteger;
 

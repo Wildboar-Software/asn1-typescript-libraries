@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../TETRA-HI2Operations/Network-Element-Identifier.ta.mjs";
@@ -56,6 +57,9 @@ class Network_Identifier {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.operator_Identifier = operator_Identifier;
+        if (this.operator_Identifier.length < 1 || this.operator_Identifier.length > 5) {
+            throw new ASN1SizeError("operator_Identifier violates the SIZE constraint");
+        }
         this.network_Element_Identifier = network_Element_Identifier;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

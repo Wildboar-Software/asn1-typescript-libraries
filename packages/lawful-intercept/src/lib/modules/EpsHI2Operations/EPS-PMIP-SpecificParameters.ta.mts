@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2Operations/EPSLocation.ta.mjs";
@@ -154,18 +156,48 @@ class EPS_PMIP_SpecificParameters {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.lifetime = lifetime;
+        if (this.lifetime !== undefined && ((typeof this.lifetime === "bigint" ? this.lifetime : BigInt(this.lifetime)) < 0n || (typeof this.lifetime === "bigint" ? this.lifetime : BigInt(this.lifetime)) > 65535n)) {
+            throw new ASN1OverflowError("lifetime violates the INTEGER range constraint");
+        }
         this.accessTechnologyType = accessTechnologyType;
+        if (this.accessTechnologyType !== undefined && (this.accessTechnologyType.length < 4 || this.accessTechnologyType.length > 4)) {
+            throw new ASN1SizeError("accessTechnologyType violates the SIZE constraint");
+        }
         this.aPN = aPN;
+        if (this.aPN !== undefined && (this.aPN.length < 1 || this.aPN.length > 100)) {
+            throw new ASN1SizeError("aPN violates the SIZE constraint");
+        }
         this.iPv6HomeNetworkPrefix = iPv6HomeNetworkPrefix;
+        if (this.iPv6HomeNetworkPrefix !== undefined && (this.iPv6HomeNetworkPrefix.length < 20 || this.iPv6HomeNetworkPrefix.length > 20)) {
+            throw new ASN1SizeError("iPv6HomeNetworkPrefix violates the SIZE constraint");
+        }
         this.protConfigurationOption = protConfigurationOption;
         this.handoverIndication = handoverIndication;
+        if (this.handoverIndication !== undefined && (this.handoverIndication.length < 4 || this.handoverIndication.length > 4)) {
+            throw new ASN1SizeError("handoverIndication violates the SIZE constraint");
+        }
         this.status = status;
+        if (this.status !== undefined && ((typeof this.status === "bigint" ? this.status : BigInt(this.status)) < 0n || (typeof this.status === "bigint" ? this.status : BigInt(this.status)) > 255n)) {
+            throw new ASN1OverflowError("status violates the INTEGER range constraint");
+        }
         this.revocationTrigger = revocationTrigger;
+        if (this.revocationTrigger !== undefined && ((typeof this.revocationTrigger === "bigint" ? this.revocationTrigger : BigInt(this.revocationTrigger)) < 0n || (typeof this.revocationTrigger === "bigint" ? this.revocationTrigger : BigInt(this.revocationTrigger)) > 255n)) {
+            throw new ASN1OverflowError("revocationTrigger violates the INTEGER range constraint");
+        }
         this.iPv4HomeAddress = iPv4HomeAddress;
+        if (this.iPv4HomeAddress !== undefined && (this.iPv4HomeAddress.length < 4 || this.iPv4HomeAddress.length > 4)) {
+            throw new ASN1SizeError("iPv4HomeAddress violates the SIZE constraint");
+        }
         this.iPv6careOfAddress = iPv6careOfAddress;
         this.iPv4careOfAddress = iPv4careOfAddress;
         this.servingNetwork = servingNetwork;
+        if (this.servingNetwork !== undefined && (this.servingNetwork.length < 3 || this.servingNetwork.length > 3)) {
+            throw new ASN1SizeError("servingNetwork violates the SIZE constraint");
+        }
         this.dHCPv4AddressAllocationInd = dHCPv4AddressAllocationInd;
+        if (this.dHCPv4AddressAllocationInd !== undefined && (this.dHCPv4AddressAllocationInd.length < 1 || this.dHCPv4AddressAllocationInd.length > 1)) {
+            throw new ASN1SizeError("dHCPv4AddressAllocationInd violates the SIZE constraint");
+        }
         this.ePSlocationOfTheTarget = ePSlocationOfTheTarget;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type EPSQOSPriority = INTEGER;
 
-export const _decode_EPSQOSPriority: $.ASN1Decoder<EPSQOSPriority> = $._decodeInteger;
+export function _decode_EPSQOSPriority (el: _Element): EPSQOSPriority {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 1n || (typeof value === "bigint" ? value : BigInt(value)) > 15n) {
+        throw new ASN1OverflowError("EPSQOSPriority violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_EPSQOSPriority: $.ASN1Encoder<EPSQOSPriority> = $._encodeInteger;
 

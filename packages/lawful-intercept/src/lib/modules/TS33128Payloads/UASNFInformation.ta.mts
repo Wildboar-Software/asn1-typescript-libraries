@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UASTargetIdentifier, _decode_UASTargetIdentifier, _encode_UASTargetIdentifier } from "../TS33128Payloads/UASTargetIdentifier.ta.mjs";
@@ -64,6 +65,9 @@ class UASNFInformation {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.uASTargetIdentifiers = uASTargetIdentifiers;
+        if (this.uASTargetIdentifiers.length < 1) {
+            throw new ASN1SizeError("uASTargetIdentifiers violates the SIZE constraint");
+        }
         this.uASNFProcedure = uASNFProcedure;
         this.uASNFUASInformation = uASNFUASInformation;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

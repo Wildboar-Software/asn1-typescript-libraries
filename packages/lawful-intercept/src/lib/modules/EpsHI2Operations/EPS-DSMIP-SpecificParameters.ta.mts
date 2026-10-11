@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -113,12 +115,33 @@ class EPS_DSMIP_SpecificParameters {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.lifetime = lifetime;
+        if (this.lifetime !== undefined && ((typeof this.lifetime === "bigint" ? this.lifetime : BigInt(this.lifetime)) < 0n || (typeof this.lifetime === "bigint" ? this.lifetime : BigInt(this.lifetime)) > 65535n)) {
+            throw new ASN1OverflowError("lifetime violates the INTEGER range constraint");
+        }
         this.requestedIPv6HomePrefix = requestedIPv6HomePrefix;
+        if (this.requestedIPv6HomePrefix !== undefined && (this.requestedIPv6HomePrefix.length < 25 || this.requestedIPv6HomePrefix.length > 25)) {
+            throw new ASN1SizeError("requestedIPv6HomePrefix violates the SIZE constraint");
+        }
         this.homeAddress = homeAddress;
+        if (this.homeAddress !== undefined && (this.homeAddress.length < 8 || this.homeAddress.length > 8)) {
+            throw new ASN1SizeError("homeAddress violates the SIZE constraint");
+        }
         this.iPv4careOfAddress = iPv4careOfAddress;
+        if (this.iPv4careOfAddress !== undefined && (this.iPv4careOfAddress.length < 8 || this.iPv4careOfAddress.length > 8)) {
+            throw new ASN1SizeError("iPv4careOfAddress violates the SIZE constraint");
+        }
         this.iPv6careOfAddress = iPv6careOfAddress;
+        if (this.iPv6careOfAddress !== undefined && (this.iPv6careOfAddress.length < 16 || this.iPv6careOfAddress.length > 16)) {
+            throw new ASN1SizeError("iPv6careOfAddress violates the SIZE constraint");
+        }
         this.aPN = aPN;
+        if (this.aPN !== undefined && (this.aPN.length < 1 || this.aPN.length > 100)) {
+            throw new ASN1SizeError("aPN violates the SIZE constraint");
+        }
         this.status = status;
+        if (this.status !== undefined && ((typeof this.status === "bigint" ? this.status : BigInt(this.status)) < 0n || (typeof this.status === "bigint" ? this.status : BigInt(this.status)) > 255n)) {
+            throw new ASN1OverflowError("status violates the INTEGER range constraint");
+        }
         this.hSS_AAA_address = hSS_AAA_address;
         this.targetPDN_GW_Address = targetPDN_GW_Address;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

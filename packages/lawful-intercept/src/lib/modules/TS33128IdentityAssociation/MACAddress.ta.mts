@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MACAddress = OCTET_STRING; // OctetStringType
 
-export const _decode_MACAddress: $.ASN1Decoder<MACAddress> = $._decodeOctetString;
+export function _decode_MACAddress (el: _Element): MACAddress {
+    const value = $._decodeOctetString(el);
+    if (value.length < 6 || value.length > 6) {
+        throw new ASN1SizeError("MACAddress violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_MACAddress: $.ASN1Encoder<MACAddress> = $._encodeOctetString;
 

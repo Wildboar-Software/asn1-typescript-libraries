@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
@@ -82,6 +83,9 @@ class RCSRegistration {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;
+        if (this.rCSTargetIdentities.length < 1) {
+            throw new ASN1SizeError("rCSTargetIdentities violates the SIZE constraint");
+        }
         this.rCSRegistrationType = rCSRegistrationType;
         this.rCSRegistrationUpdateRequest = rCSRegistrationUpdateRequest;
         this.rCSRegistrationUpdateResponse = rCSRegistrationUpdateResponse;

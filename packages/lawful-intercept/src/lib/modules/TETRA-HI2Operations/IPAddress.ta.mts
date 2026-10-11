@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress_iP_type, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type, _enum_for_IPAddress_iP_type } from "../TETRA-HI2Operations/IPAddress-iP-type.ta.mjs";
@@ -95,6 +96,9 @@ class IPAddress {
         this.iP_value = iP_value;
         this.iP_assignment = iP_assignment;
         this.iPv6PrefixLength = iPv6PrefixLength;
+        if (this.iPv6PrefixLength !== undefined && ((typeof this.iPv6PrefixLength === "bigint" ? this.iPv6PrefixLength : BigInt(this.iPv6PrefixLength)) < 1n || (typeof this.iPv6PrefixLength === "bigint" ? this.iPv6PrefixLength : BigInt(this.iPv6PrefixLength)) > 128n)) {
+            throw new ASN1OverflowError("iPv6PrefixLength violates the INTEGER range constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

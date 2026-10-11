@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -206,6 +207,9 @@ class IRI_Parameters {
         this.timeStamp = timeStamp;
         this.initiator = initiator;
         this.partyInformation = partyInformation;
+        if (this.partyInformation !== undefined && (this.partyInformation.length < 1 || this.partyInformation.length > 10)) {
+            throw new ASN1SizeError("partyInformation violates the SIZE constraint");
+        }
         this.national_Parameters = national_Parameters;
         this.networkIdentifier = networkIdentifier;
         this.i_WLANevent = i_WLANevent;
@@ -215,6 +219,9 @@ class IRI_Parameters {
         this.visitedPLMNID = visitedPLMNID;
         this.national_HI2_ASN1parameters = national_HI2_ASN1parameters;
         this.nSAPI = nSAPI;
+        if (this.nSAPI !== undefined && (this.nSAPI.length < 1 || this.nSAPI.length > 1)) {
+            throw new ASN1SizeError("nSAPI violates the SIZE constraint");
+        }
         this.packetDataHeaderInformation = packetDataHeaderInformation;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

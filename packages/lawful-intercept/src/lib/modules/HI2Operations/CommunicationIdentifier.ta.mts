@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
@@ -62,6 +63,9 @@ class CommunicationIdentifier {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.communication_Identity_Number = communication_Identity_Number;
+        if (this.communication_Identity_Number !== undefined && (this.communication_Identity_Number.length < 1 || this.communication_Identity_Number.length > 8)) {
+            throw new ASN1SizeError("communication_Identity_Number violates the SIZE constraint");
+        }
         this.network_Identifier = network_Identifier;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

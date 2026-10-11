@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExternalChargingASN, _decode_ExternalChargingASN, _encode_ExternalChargingASN } from "../TS33128Payloads/ExternalChargingASN.ta.mjs";
@@ -77,9 +78,21 @@ class TranslatedChargingData {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.releaseID = releaseID;
+        if ((typeof this.releaseID === "bigint" ? this.releaseID : BigInt(this.releaseID)) < 0n || (typeof this.releaseID === "bigint" ? this.releaseID : BigInt(this.releaseID)) > 7n) {
+            throw new ASN1OverflowError("releaseID violates the INTEGER range constraint");
+        }
         this.versonID = versonID;
+        if ((typeof this.versonID === "bigint" ? this.versonID : BigInt(this.versonID)) < 0n || (typeof this.versonID === "bigint" ? this.versonID : BigInt(this.versonID)) > 31n) {
+            throw new ASN1OverflowError("versonID violates the INTEGER range constraint");
+        }
         this.specificationNumber = specificationNumber;
+        if ((typeof this.specificationNumber === "bigint" ? this.specificationNumber : BigInt(this.specificationNumber)) < 0n || (typeof this.specificationNumber === "bigint" ? this.specificationNumber : BigInt(this.specificationNumber)) > 31n) {
+            throw new ASN1OverflowError("specificationNumber violates the INTEGER range constraint");
+        }
         this.releaseIDExtension = releaseIDExtension;
+        if (this.releaseIDExtension !== undefined && ((typeof this.releaseIDExtension === "bigint" ? this.releaseIDExtension : BigInt(this.releaseIDExtension)) < 0n || (typeof this.releaseIDExtension === "bigint" ? this.releaseIDExtension : BigInt(this.releaseIDExtension)) > 255n)) {
+            throw new ASN1OverflowError("releaseIDExtension violates the INTEGER range constraint");
+        }
         this.recordData = recordData;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

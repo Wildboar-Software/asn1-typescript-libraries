@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -107,6 +108,9 @@ class Notification {
         this.timeStamp = timeStamp;
         this.national_HI1_ASN1parameters = national_HI1_ASN1parameters;
         this.target_Information = target_Information;
+        if (this.target_Information !== undefined && (this.target_Information.length < 1 || this.target_Information.length > 256)) {
+            throw new ASN1SizeError("target_Information violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PortNumber = INTEGER;
 
-export const _decode_PortNumber: $.ASN1Decoder<PortNumber> = $._decodeInteger;
+export function _decode_PortNumber (el: _Element): PortNumber {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 65535n) {
+        throw new ASN1OverflowError("PortNumber violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_PortNumber: $.ASN1Encoder<PortNumber> = $._encodeInteger;
 

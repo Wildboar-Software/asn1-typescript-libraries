@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
@@ -127,8 +128,14 @@ class PacketFlowSummary {
     ) {
         this.sourceIPAddress = sourceIPAddress;
         this.sourcePortNumber = sourcePortNumber;
+        if (this.sourcePortNumber !== undefined && ((typeof this.sourcePortNumber === "bigint" ? this.sourcePortNumber : BigInt(this.sourcePortNumber)) < 0n || (typeof this.sourcePortNumber === "bigint" ? this.sourcePortNumber : BigInt(this.sourcePortNumber)) > 65535n)) {
+            throw new ASN1OverflowError("sourcePortNumber violates the INTEGER range constraint");
+        }
         this.destinationIPAddress = destinationIPAddress;
         this.destinationPortNumber = destinationPortNumber;
+        if (this.destinationPortNumber !== undefined && ((typeof this.destinationPortNumber === "bigint" ? this.destinationPortNumber : BigInt(this.destinationPortNumber)) < 0n || (typeof this.destinationPortNumber === "bigint" ? this.destinationPortNumber : BigInt(this.destinationPortNumber)) > 65535n)) {
+            throw new ASN1OverflowError("destinationPortNumber violates the INTEGER range constraint");
+        }
         this.transportProtocol = transportProtocol;
         this.flowLabel = flowLabel;
         this.summaryPeriod = summaryPeriod;

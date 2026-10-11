@@ -3,7 +3,8 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
@@ -67,6 +68,9 @@ class DataNodeIdentifier {
         this.dataNodeAddress = dataNodeAddress;
         this.logicalFunctionType = logicalFunctionType;
         this.dataNodeName = dataNodeName;
+        if (this.dataNodeName !== undefined && (this.dataNodeName.length < 7 || this.dataNodeName.length > 25)) {
+            throw new ASN1SizeError("dataNodeName violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

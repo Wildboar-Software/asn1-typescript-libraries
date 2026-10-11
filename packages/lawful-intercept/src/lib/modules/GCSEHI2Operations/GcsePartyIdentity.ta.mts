@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSIdentity, _decode_IMSIdentity, _encode_IMSIdentity } from "../GCSEHI2Operations/IMSIdentity.ta.mjs";
@@ -99,7 +100,13 @@ class GcsePartyIdentity {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.imei = imei;
+        if (this.imei !== undefined && (this.imei.length < 8 || this.imei.length > 8)) {
+            throw new ASN1SizeError("imei violates the SIZE constraint");
+        }
         this.imsi = imsi;
+        if (this.imsi !== undefined && (this.imsi.length < 3 || this.imsi.length > 8)) {
+            throw new ASN1SizeError("imsi violates the SIZE constraint");
+        }
         this.iMPU = iMPU;
         this.iMPI = iMPI;
         this.proseUEID = proseUEID;

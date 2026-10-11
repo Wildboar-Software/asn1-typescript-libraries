@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSSubscriberIDs, _decode_IMSSubscriberIDs, _encode_IMSSubscriberIDs } from "../TS33128Payloads/IMSSubscriberIDs.ta.mjs";
@@ -86,6 +87,9 @@ class IMSDataChannelApplicationResponse {
         this.callingIdentity = callingIdentity;
         this.applicationUEInformation = applicationUEInformation;
         this.dCStreamID = dCStreamID;
+        if (this.dCStreamID !== undefined && ((typeof this.dCStreamID === "bigint" ? this.dCStreamID : BigInt(this.dCStreamID)) < 0n || (typeof this.dCStreamID === "bigint" ? this.dCStreamID : BigInt(this.dCStreamID)) > 65535n)) {
+            throw new ASN1OverflowError("dCStreamID violates the INTEGER range constraint");
+        }
         this.getApplicationResponse = getApplicationResponse;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

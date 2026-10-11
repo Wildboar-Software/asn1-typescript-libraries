@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -52,7 +53,13 @@ class PortRange {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.portStart = portStart;
+        if ((typeof this.portStart === "bigint" ? this.portStart : BigInt(this.portStart)) < 0n || (typeof this.portStart === "bigint" ? this.portStart : BigInt(this.portStart)) > 65535n) {
+            throw new ASN1OverflowError("portStart violates the INTEGER range constraint");
+        }
         this.portEnd = portEnd;
+        if ((typeof this.portEnd === "bigint" ? this.portEnd : BigInt(this.portEnd)) < 0n || (typeof this.portEnd === "bigint" ? this.portEnd : BigInt(this.portEnd)) > 65535n) {
+            throw new ASN1OverflowError("portEnd violates the INTEGER range constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

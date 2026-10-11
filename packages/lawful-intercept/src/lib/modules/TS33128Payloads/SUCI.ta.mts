@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
@@ -131,6 +132,9 @@ class SUCI {
         this.homeNetworkPublicKeyID = homeNetworkPublicKeyID;
         this.schemeOutput = schemeOutput;
         this.routingIndicatorLength = routingIndicatorLength;
+        if (this.routingIndicatorLength !== undefined && ((typeof this.routingIndicatorLength === "bigint" ? this.routingIndicatorLength : BigInt(this.routingIndicatorLength)) < 1n || (typeof this.routingIndicatorLength === "bigint" ? this.routingIndicatorLength : BigInt(this.routingIndicatorLength)) > 4n)) {
+            throw new ASN1OverflowError("routingIndicatorLength violates the INTEGER range constraint");
+        }
         this.sUPIType = sUPIType;
         this.homeNetworkIdentifier = homeNetworkIdentifier;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

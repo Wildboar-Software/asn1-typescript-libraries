@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TMSI = OCTET_STRING; // OctetStringType
 
-export const _decode_TMSI: $.ASN1Decoder<TMSI> = $._decodeOctetString;
+export function _decode_TMSI (el: _Element): TMSI {
+    const value = $._decodeOctetString(el);
+    if (value.length < 4 || value.length > 4) {
+        throw new ASN1SizeError("TMSI violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_TMSI: $.ASN1Encoder<TMSI> = $._encodeOctetString;
 

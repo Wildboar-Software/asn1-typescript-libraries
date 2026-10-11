@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FlowDescription, _decode_FlowDescription, _encode_FlowDescription } from "../TS33128Payloads/FlowDescription.ta.mjs";
@@ -91,8 +92,17 @@ class FlowInformation {
         this.flowDescription = flowDescription;
         this.ethFlowDescription = ethFlowDescription;
         this.tosTrafficClass = tosTrafficClass;
+        if (this.tosTrafficClass !== undefined && (this.tosTrafficClass.length < 2 || this.tosTrafficClass.length > 2)) {
+            throw new ASN1SizeError("tosTrafficClass violates the SIZE constraint");
+        }
         this.spi = spi;
+        if (this.spi !== undefined && (this.spi.length < 4 || this.spi.length > 4)) {
+            throw new ASN1SizeError("spi violates the SIZE constraint");
+        }
         this.flowLabel = flowLabel;
+        if (this.flowLabel !== undefined && (this.flowLabel.length < 3 || this.flowLabel.length > 3)) {
+            throw new ASN1SizeError("flowLabel violates the SIZE constraint");
+        }
         this.flowDirection = flowDirection;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FiveGSSubscriberID, _decode_FiveGSSubscriberID, _encode_FiveGSSubscriberID } from "../TS33128Payloads/FiveGSSubscriberID.ta.mjs";
@@ -44,6 +45,9 @@ class FiveGSSubscriberIDs {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.fiveGSSubscriberID = fiveGSSubscriberID;
+        if (this.fiveGSSubscriberID.length < 1) {
+            throw new ASN1SizeError("fiveGSSubscriberID violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

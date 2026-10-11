@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCServiceIdentitiesOrGroupID, _decode_MCServiceIdentitiesOrGroupID, _encode_MCServiceIdentitiesOrGroupID } from "../TS33128Payloads/MCServiceIdentitiesOrGroupID.ta.mjs";
@@ -114,6 +115,9 @@ class MCXStartOfInterceptionWithEstablishedSession {
         this.mCServiceOriginatingID = mCServiceOriginatingID;
         this.mCServiceSessionInfo = mCServiceSessionInfo;
         this.mCServiceParticipants = mCServiceParticipants;
+        if (this.mCServiceParticipants !== undefined && (this.mCServiceParticipants.length < 1)) {
+            throw new ASN1SizeError("mCServiceParticipants violates the SIZE constraint");
+        }
         this.location = location;
         this.mCServiceMediaStreamAvailable = mCServiceMediaStreamAvailable;
         this.mCServiceBearerCapability = mCServiceBearerCapability;

@@ -4,7 +4,8 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -120,6 +121,9 @@ class ULIC_header {
         this.correlation_Number = correlation_Number;
         this.timeStamp = timeStamp;
         this.sequence_number = sequence_number;
+        if ((typeof this.sequence_number === "bigint" ? this.sequence_number : BigInt(this.sequence_number)) < 0n || (typeof this.sequence_number === "bigint" ? this.sequence_number : BigInt(this.sequence_number)) > 65535n) {
+            throw new ASN1OverflowError("sequence_number violates the INTEGER range constraint");
+        }
         this.t_PDU_direction = t_PDU_direction;
         this.national_HI3_ASN1parameters = national_HI3_ASN1parameters;
         this.ice_type = ice_type;

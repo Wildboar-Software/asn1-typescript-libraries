@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type FiveGMMCause = INTEGER;
 
-export const _decode_FiveGMMCause: $.ASN1Decoder<FiveGMMCause> = $._decodeInteger;
+export function _decode_FiveGMMCause (el: _Element): FiveGMMCause {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 255n) {
+        throw new ASN1OverflowError("FiveGMMCause violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_FiveGMMCause: $.ASN1Encoder<FiveGMMCause> = $._encodeInteger;
 

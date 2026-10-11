@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -57,7 +58,13 @@ class ProtConfigOptions {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ueToNetwork = ueToNetwork;
+        if (this.ueToNetwork !== undefined && (this.ueToNetwork.length < 1 || this.ueToNetwork.length > 251)) {
+            throw new ASN1SizeError("ueToNetwork violates the SIZE constraint");
+        }
         this.networkToUe = networkToUe;
+        if (this.networkToUe !== undefined && (this.networkToUe.length < 1 || this.networkToUe.length > 251)) {
+            throw new ASN1SizeError("networkToUe violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

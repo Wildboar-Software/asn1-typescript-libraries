@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
@@ -134,15 +135,30 @@ class StartOfInterceptWithEstablisedRCSSession {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.rCSTargetIdentities = rCSTargetIdentities;
+        if (this.rCSTargetIdentities.length < 1) {
+            throw new ASN1SizeError("rCSTargetIdentities violates the SIZE constraint");
+        }
         this.participants = participants;
+        if (this.participants.length < 1) {
+            throw new ASN1SizeError("participants violates the SIZE constraint");
+        }
         this.conversationID = conversationID;
         this.contributionID = contributionID;
         this.rCSSessionType = rCSSessionType;
         this.rCSSessionEndpoints = rCSSessionEndpoints;
         this.rCSSessionLegs = rCSSessionLegs;
+        if (this.rCSSessionLegs !== undefined && (this.rCSSessionLegs.length < 1)) {
+            throw new ASN1SizeError("rCSSessionLegs violates the SIZE constraint");
+        }
         this.rCSSessionInformation = rCSSessionInformation;
+        if (this.rCSSessionInformation.length < 1) {
+            throw new ASN1SizeError("rCSSessionInformation violates the SIZE constraint");
+        }
         this.location = location;
         this.additionalInstanceLocation = additionalInstanceLocation;
+        if (this.additionalInstanceLocation !== undefined && (this.additionalInstanceLocation.length < 1)) {
+            throw new ASN1SizeError("additionalInstanceLocation violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

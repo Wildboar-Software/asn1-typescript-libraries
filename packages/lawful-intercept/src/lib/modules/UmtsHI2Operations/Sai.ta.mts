@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Sai = OCTET_STRING; // OctetStringType
 
-export const _decode_Sai: $.ASN1Decoder<Sai> = $._decodeOctetString;
+export function _decode_Sai (el: _Element): Sai {
+    const value = $._decodeOctetString(el);
+    if (value.length < 7 || value.length > 7) {
+        throw new ASN1SizeError("Sai violates the SIZE constraint");
+    }
+    return value;
+}
 
 export const _encode_Sai: $.ASN1Encoder<Sai> = $._encodeOctetString;
 

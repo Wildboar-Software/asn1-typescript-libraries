@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../EpsHI2Operations/GlobalCellID.ta.mjs";
@@ -150,6 +151,9 @@ class Location {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.e164_Number = e164_Number;
+        if (this.e164_Number !== undefined && (this.e164_Number.length < 1 || this.e164_Number.length > 25)) {
+            throw new ASN1SizeError("e164_Number violates the SIZE constraint");
+        }
         this.globalCellID = globalCellID;
         this.rAI = rAI;
         this.gsmLocation = gsmLocation;

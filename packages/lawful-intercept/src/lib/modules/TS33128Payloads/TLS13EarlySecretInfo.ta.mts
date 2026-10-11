@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,7 +54,13 @@ class TLS13EarlySecretInfo {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.earlySecretValue = earlySecretValue;
+        if (this.earlySecretValue.length < 1 || this.earlySecretValue.length > 65535) {
+            throw new ASN1SizeError("earlySecretValue violates the SIZE constraint");
+        }
         this.transcriptHash = transcriptHash;
+        if (this.transcriptHash.length < 1 || this.transcriptHash.length > 65535) {
+            throw new ASN1SizeError("transcriptHash violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

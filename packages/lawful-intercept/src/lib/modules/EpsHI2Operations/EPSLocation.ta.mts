@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../EpsHI2Operations/GSMLocation.ta.mjs";
@@ -138,12 +139,27 @@ class EPSLocation {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.userLocationInfo = userLocationInfo;
+        if (this.userLocationInfo !== undefined && (this.userLocationInfo.length < 1 || this.userLocationInfo.length > 39)) {
+            throw new ASN1SizeError("userLocationInfo violates the SIZE constraint");
+        }
         this.gsmLocation = gsmLocation;
         this.umtsLocation = umtsLocation;
         this.olduserLocationInfo = olduserLocationInfo;
+        if (this.olduserLocationInfo !== undefined && (this.olduserLocationInfo.length < 1 || this.olduserLocationInfo.length > 39)) {
+            throw new ASN1SizeError("olduserLocationInfo violates the SIZE constraint");
+        }
         this.lastVisitedTAI = lastVisitedTAI;
+        if (this.lastVisitedTAI !== undefined && (this.lastVisitedTAI.length < 1 || this.lastVisitedTAI.length > 5)) {
+            throw new ASN1SizeError("lastVisitedTAI violates the SIZE constraint");
+        }
         this.tAIlist = tAIlist;
+        if (this.tAIlist !== undefined && (this.tAIlist.length < 7 || this.tAIlist.length > 97)) {
+            throw new ASN1SizeError("tAIlist violates the SIZE constraint");
+        }
         this.threeGPP2Bsid = threeGPP2Bsid;
+        if (this.threeGPP2Bsid !== undefined && (this.threeGPP2Bsid.length < 1 || this.threeGPP2Bsid.length > 12)) {
+            throw new ASN1SizeError("threeGPP2Bsid violates the SIZE constraint");
+        }
         this.civicAddress = civicAddress;
         this.operatorSpecificInfo = operatorSpecificInfo;
         this.uELocationTimestamp = uELocationTimestamp;

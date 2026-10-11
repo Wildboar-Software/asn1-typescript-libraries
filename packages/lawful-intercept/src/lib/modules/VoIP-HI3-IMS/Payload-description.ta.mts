@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -70,6 +71,9 @@ class Payload_description {
     ) {
         this.copyOfSDPdescription = copyOfSDPdescription;
         this.mediaFormat = mediaFormat;
+        if (this.mediaFormat !== undefined && ((typeof this.mediaFormat === "bigint" ? this.mediaFormat : BigInt(this.mediaFormat)) < 0n || (typeof this.mediaFormat === "bigint" ? this.mediaFormat : BigInt(this.mediaFormat)) > 127n)) {
+            throw new ASN1OverflowError("mediaFormat violates the INTEGER range constraint");
+        }
         this.mediaAttributes = mediaAttributes;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

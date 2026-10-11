@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -64,7 +65,13 @@ class Password_Name {
     ) {
         this.domainID = domainID;
         this.password = password;
+        if (this.password.length < 1 || this.password.length > 25) {
+            throw new ASN1SizeError("password violates the SIZE constraint");
+        }
         this.name = name;
+        if (this.name.length < 1 || this.name.length > 25) {
+            throw new ASN1SizeError("name violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

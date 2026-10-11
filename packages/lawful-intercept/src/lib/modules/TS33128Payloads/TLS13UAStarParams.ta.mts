@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13OfferedPSK, _decode_TLS13OfferedPSK, _encode_TLS13OfferedPSK } from "../TS33128Payloads/TLS13OfferedPSK.ta.mjs";
@@ -348,6 +350,9 @@ class TLS13UAStarParams {
         this.offeredPSKs = offeredPSKs;
         this.offeredPSKKeyExchangeModes = offeredPSKKeyExchangeModes;
         this.selectedPSKIdentity = selectedPSKIdentity;
+        if ((typeof this.selectedPSKIdentity === "bigint" ? this.selectedPSKIdentity : BigInt(this.selectedPSKIdentity)) < 0n || (typeof this.selectedPSKIdentity === "bigint" ? this.selectedPSKIdentity : BigInt(this.selectedPSKIdentity)) > 65535n) {
+            throw new ASN1OverflowError("selectedPSKIdentity violates the INTEGER range constraint");
+        }
         this.selectedPSK = selectedPSK;
         this.kDFAlgorithm = kDFAlgorithm;
         this.clientSupportedCipherSuites = clientSupportedCipherSuites;
@@ -355,8 +360,17 @@ class TLS13UAStarParams {
         this.clientSequenceNumber = clientSequenceNumber;
         this.serverSequenceNumber = serverSequenceNumber;
         this.clientRandom = clientRandom;
+        if (this.clientRandom.length < 32 || this.clientRandom.length > 32) {
+            throw new ASN1SizeError("clientRandom violates the SIZE constraint");
+        }
         this.serverRandom = serverRandom;
+        if (this.serverRandom.length < 32 || this.serverRandom.length > 32) {
+            throw new ASN1SizeError("serverRandom violates the SIZE constraint");
+        }
         this.legacySessionID = legacySessionID;
+        if (this.legacySessionID.length < 0 || this.legacySessionID.length > 32) {
+            throw new ASN1SizeError("legacySessionID violates the SIZE constraint");
+        }
         this.tLSClientHelloExtensions = tLSClientHelloExtensions;
         this.tLSServerHelloExtensions = tLSServerHelloExtensions;
         this.tLSPlaintextEncryptedExtensions = tLSPlaintextEncryptedExtensions;
@@ -364,17 +378,44 @@ class TLS13UAStarParams {
         this.tLSPlaintextServerCertificate = tLSPlaintextServerCertificate;
         this.earlySecret = earlySecret;
         this.binderKey = binderKey;
+        if (this.binderKey !== undefined && (this.binderKey.length < 1 || this.binderKey.length > 65535)) {
+            throw new ASN1SizeError("binderKey violates the SIZE constraint");
+        }
         this.clientEarlyTrafficSecret = clientEarlyTrafficSecret;
+        if (this.clientEarlyTrafficSecret.length < 1 || this.clientEarlyTrafficSecret.length > 65535) {
+            throw new ASN1SizeError("clientEarlyTrafficSecret violates the SIZE constraint");
+        }
         this.earlyExporterMasterSecret = earlyExporterMasterSecret;
+        if (this.earlyExporterMasterSecret.length < 1 || this.earlyExporterMasterSecret.length > 65535) {
+            throw new ASN1SizeError("earlyExporterMasterSecret violates the SIZE constraint");
+        }
         this.sharedKey = sharedKey;
         this.handshakeSecret = handshakeSecret;
         this.clientHandshakeTrafficSecret = clientHandshakeTrafficSecret;
+        if (this.clientHandshakeTrafficSecret.length < 1 || this.clientHandshakeTrafficSecret.length > 65535) {
+            throw new ASN1SizeError("clientHandshakeTrafficSecret violates the SIZE constraint");
+        }
         this.serverHandshakeTrafficSecret = serverHandshakeTrafficSecret;
+        if (this.serverHandshakeTrafficSecret.length < 1 || this.serverHandshakeTrafficSecret.length > 65535) {
+            throw new ASN1SizeError("serverHandshakeTrafficSecret violates the SIZE constraint");
+        }
         this.masterSecret = masterSecret;
         this.clientApplicationTrafficSecret = clientApplicationTrafficSecret;
+        if (this.clientApplicationTrafficSecret.length < 1 || this.clientApplicationTrafficSecret.length > 65535) {
+            throw new ASN1SizeError("clientApplicationTrafficSecret violates the SIZE constraint");
+        }
         this.serverApplicationTrafficSecret = serverApplicationTrafficSecret;
+        if (this.serverApplicationTrafficSecret.length < 1 || this.serverApplicationTrafficSecret.length > 65535) {
+            throw new ASN1SizeError("serverApplicationTrafficSecret violates the SIZE constraint");
+        }
         this.exporterMasterSecret = exporterMasterSecret;
+        if (this.exporterMasterSecret.length < 1 || this.exporterMasterSecret.length > 65535) {
+            throw new ASN1SizeError("exporterMasterSecret violates the SIZE constraint");
+        }
         this.resumptionMasterSecret = resumptionMasterSecret;
+        if (this.resumptionMasterSecret.length < 1 || this.resumptionMasterSecret.length > 65535) {
+            throw new ASN1SizeError("resumptionMasterSecret violates the SIZE constraint");
+        }
         this.tLSResumptionTickets = tLSResumptionTickets;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

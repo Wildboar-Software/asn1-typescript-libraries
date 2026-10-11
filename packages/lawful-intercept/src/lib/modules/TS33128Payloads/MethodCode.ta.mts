@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MethodCode = INTEGER;
 
-export const _decode_MethodCode: $.ASN1Decoder<MethodCode> = $._decodeInteger;
+export function _decode_MethodCode (el: _Element): MethodCode {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 16n || (typeof value === "bigint" ? value : BigInt(value)) > 31n) {
+        throw new ASN1OverflowError("MethodCode violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_MethodCode: $.ASN1Encoder<MethodCode> = $._encodeInteger;
 

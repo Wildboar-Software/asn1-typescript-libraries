@@ -3,7 +3,8 @@ import {
     BOOLEAN,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UDMInfoRequestType, _decode_UDMInfoRequestType, _encode_UDMInfoRequestType, _enum_for_UDMInfoRequestType } from "../TS33128Payloads/UDMInfoRequestType.ta.mjs";
@@ -104,6 +105,9 @@ class UDMAuthenticationInfoRequest {
     ) {
         this.infoRequestType = infoRequestType;
         this.rGAuthCtx = rGAuthCtx;
+        if (this.rGAuthCtx.length < 1) {
+            throw new ASN1SizeError("rGAuthCtx violates the SIZE constraint");
+        }
         this.authType = authType;
         this.servingNetworkName = servingNetworkName;
         this.aUSFInstanceID = aUSFInstanceID;

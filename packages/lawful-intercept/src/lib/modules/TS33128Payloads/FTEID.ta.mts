@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPv4Address, _decode_IPv4Address, _encode_IPv4Address } from "../TS33128Payloads/IPv4Address.ta.mjs";
@@ -63,6 +64,9 @@ class FTEID {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.tEID = tEID;
+        if ((typeof this.tEID === "bigint" ? this.tEID : BigInt(this.tEID)) < 0n || (typeof this.tEID === "bigint" ? this.tEID : BigInt(this.tEID)) > 4294967295n) {
+            throw new ASN1OverflowError("tEID violates the INTEGER range constraint");
+        }
         this.iPv4Address = iPv4Address;
         this.iPv6Address = iPv6Address;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

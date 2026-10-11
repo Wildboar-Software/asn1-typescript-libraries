@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IRI_Parameters_iRIversion, _decode_IRI_Parameters_iRIversion, _encode_IRI_Parameters_iRIversion, _enum_for_IRI_Parameters_iRIversion } from "../UmtsCS-HI2Operations/IRI-Parameters-iRIversion.ta.mjs";
@@ -388,11 +389,23 @@ class IRI_Parameters {
         this.intercepted_Call_Direct = intercepted_Call_Direct;
         this.intercepted_Call_State = intercepted_Call_State;
         this.ringingDuration = ringingDuration;
+        if (this.ringingDuration !== undefined && (this.ringingDuration.length < 3 || this.ringingDuration.length > 3)) {
+            throw new ASN1SizeError("ringingDuration violates the SIZE constraint");
+        }
         this.conversationDuration = conversationDuration;
+        if (this.conversationDuration !== undefined && (this.conversationDuration.length < 3 || this.conversationDuration.length > 3)) {
+            throw new ASN1SizeError("conversationDuration violates the SIZE constraint");
+        }
         this.locationOfTheTarget = locationOfTheTarget;
         this.partyInformation = partyInformation;
+        if (this.partyInformation !== undefined && (this.partyInformation.length < 1 || this.partyInformation.length > 10)) {
+            throw new ASN1SizeError("partyInformation violates the SIZE constraint");
+        }
         this.callContentLinkInformation = callContentLinkInformation;
         this.release_Reason_Of_Intercepted_Call = release_Reason_Of_Intercepted_Call;
+        if (this.release_Reason_Of_Intercepted_Call !== undefined && (this.release_Reason_Of_Intercepted_Call.length < 2 || this.release_Reason_Of_Intercepted_Call.length > 2)) {
+            throw new ASN1SizeError("release_Reason_Of_Intercepted_Call violates the SIZE constraint");
+        }
         this.nature_Of_The_intercepted_call = nature_Of_The_intercepted_call;
         this.serviceCenterAddress = serviceCenterAddress;
         this.sMS = sMS;

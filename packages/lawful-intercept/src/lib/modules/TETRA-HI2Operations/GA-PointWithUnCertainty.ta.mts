@@ -3,7 +3,8 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TETRA-HI2Operations/GeographicalCoordinates.ta.mjs";
@@ -47,6 +48,9 @@ class GA_PointWithUnCertainty {
     ) {
         this.geographicalCoordinates = geographicalCoordinates;
         this.uncertaintyCode = uncertaintyCode;
+        if ((typeof this.uncertaintyCode === "bigint" ? this.uncertaintyCode : BigInt(this.uncertaintyCode)) < 0n || (typeof this.uncertaintyCode === "bigint" ? this.uncertaintyCode : BigInt(this.uncertaintyCode)) > 127n) {
+            throw new ASN1OverflowError("uncertaintyCode violates the INTEGER range constraint");
+        }
     }
 
     /**

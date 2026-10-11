@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SUPIType = INTEGER;
 
-export const _decode_SUPIType: $.ASN1Decoder<SUPIType> = $._decodeInteger;
+export function _decode_SUPIType (el: _Element): SUPIType {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value : BigInt(value)) < 0n || (typeof value === "bigint" ? value : BigInt(value)) > 7n) {
+        throw new ASN1OverflowError("SUPIType violates the INTEGER range constraint");
+    }
+    return value;
+}
 
 export const _encode_SUPIType: $.ASN1Encoder<SUPIType> = $._encodeInteger;
 

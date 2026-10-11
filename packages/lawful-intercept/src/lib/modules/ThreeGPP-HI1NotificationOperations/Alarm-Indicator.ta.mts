@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
@@ -136,11 +137,17 @@ class Alarm_Indicator {
         this.communicationIdentifier = communicationIdentifier;
         this.timeStamp = timeStamp;
         this.alarm_information = alarm_information;
+        if (this.alarm_information.length < 1 || this.alarm_information.length > 256) {
+            throw new ASN1SizeError("alarm_information violates the SIZE constraint");
+        }
         this.lawfulInterceptionIdentifier = lawfulInterceptionIdentifier;
         this.threeGPP_National_HI1_ASN1parameters = threeGPP_National_HI1_ASN1parameters;
         this.target_Information = target_Information;
         this.network_Identifier = network_Identifier;
         this.network_Element_Information = network_Element_Information;
+        if (this.network_Element_Information !== undefined && (this.network_Element_Information.length < 1 || this.network_Element_Information.length > 256)) {
+            throw new ASN1SizeError("network_Element_Information violates the SIZE constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

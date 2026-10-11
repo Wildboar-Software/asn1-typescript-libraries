@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13Extension, _decode_TLS13Extension, _encode_TLS13Extension } from "../TS33128Payloads/TLS13Extension.ta.mjs";
@@ -78,9 +80,21 @@ class TLS13NewSessionTicket {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.ticketLifeTime = ticketLifeTime;
+        if ((typeof this.ticketLifeTime === "bigint" ? this.ticketLifeTime : BigInt(this.ticketLifeTime)) < 0n || (typeof this.ticketLifeTime === "bigint" ? this.ticketLifeTime : BigInt(this.ticketLifeTime)) > 4294967295n) {
+            throw new ASN1OverflowError("ticketLifeTime violates the INTEGER range constraint");
+        }
         this.ticketAgeAdd = ticketAgeAdd;
+        if ((typeof this.ticketAgeAdd === "bigint" ? this.ticketAgeAdd : BigInt(this.ticketAgeAdd)) < 0n || (typeof this.ticketAgeAdd === "bigint" ? this.ticketAgeAdd : BigInt(this.ticketAgeAdd)) > 4294967295n) {
+            throw new ASN1OverflowError("ticketAgeAdd violates the INTEGER range constraint");
+        }
         this.ticketNonce = ticketNonce;
+        if (this.ticketNonce.length < 0 || this.ticketNonce.length > 255) {
+            throw new ASN1SizeError("ticketNonce violates the SIZE constraint");
+        }
         this.ticket = ticket;
+        if (this.ticket.length < 1 || this.ticket.length > 65535) {
+            throw new ASN1SizeError("ticket violates the SIZE constraint");
+        }
         this.extensions = extensions;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

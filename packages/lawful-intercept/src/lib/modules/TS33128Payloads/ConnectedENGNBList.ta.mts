@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ConnectedENGNB, _decode_ConnectedENGNB, _encode_ConnectedENGNB } from "../TS33128Payloads/ConnectedENGNB.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_ConnectedENGNBList: $.ASN1Decoder<ConnectedENGNBList> | 
 export
 function _decode_ConnectedENGNBList (el: _Element): ConnectedENGNBList {
     if (!_cached_decoder_for_ConnectedENGNBList) { _cached_decoder_for_ConnectedENGNBList = $._decodeSequenceOf<ConnectedENGNB>(() => _decode_ConnectedENGNB); }
-    return _cached_decoder_for_ConnectedENGNBList(el);
+    const value = _cached_decoder_for_ConnectedENGNBList(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("ConnectedENGNBList violates the SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ConnectedENGNBList: $.ASN1Encoder<ConnectedENGNBList> | null = null;

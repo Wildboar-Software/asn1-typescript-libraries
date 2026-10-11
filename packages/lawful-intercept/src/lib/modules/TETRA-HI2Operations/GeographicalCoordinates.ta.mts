@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_GeographicalCoordinates_latitudeSign, _encode_GeographicalCoordinates_latitudeSign, _enum_for_GeographicalCoordinates_latitudeSign, GeographicalCoordinates_latitudeSign } from "../TETRA-HI2Operations/GeographicalCoordinates-latitudeSign.ta.mjs";
@@ -67,7 +68,13 @@ class GeographicalCoordinates {
     ) {
         this.latitudeSign = latitudeSign;
         this.latitude = latitude;
+        if ((typeof this.latitude === "bigint" ? this.latitude : BigInt(this.latitude)) < 0n || (typeof this.latitude === "bigint" ? this.latitude : BigInt(this.latitude)) > 8388607n) {
+            throw new ASN1OverflowError("latitude violates the INTEGER range constraint");
+        }
         this.longitude = longitude;
+        if ((typeof this.longitude === "bigint" ? this.longitude : BigInt(this.longitude)) < -8388608n || (typeof this.longitude === "bigint" ? this.longitude : BigInt(this.longitude)) > 8388607n) {
+            throw new ASN1OverflowError("longitude violates the INTEGER range constraint");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

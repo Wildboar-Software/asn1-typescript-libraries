@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_report_sMS_Contents_sms_initiator, _decode_SMS_report_sMS_Contents_sms_initiator, _encode_SMS_report_sMS_Contents_sms_initiator, _enum_for_SMS_report_sMS_Contents_sms_initiator } from "../UmtsHI2Operations/SMS-report-sMS-Contents-sms-initiator.ta.mjs";
@@ -106,6 +107,9 @@ class SMS_report_sMS_Contents {
         this.transfer_status = transfer_status;
         this.other_message = other_message;
         this.content = content;
+        if (this.content !== undefined && (this.content.length < 1 || this.content.length > 270)) {
+            throw new ASN1SizeError("content violates the SIZE constraint");
+        }
         this.sMSContentRemovedIndicator = sMSContentRemovedIndicator;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

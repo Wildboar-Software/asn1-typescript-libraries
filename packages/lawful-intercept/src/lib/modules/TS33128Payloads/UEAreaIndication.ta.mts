@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     BOOLEAN,
     OPTIONAL,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,6 +54,9 @@ class UEAreaIndication {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.country = country;
+        if (this.country !== undefined && (this.country.length < 2 || this.country.length > 2)) {
+            throw new ASN1SizeError("country violates the SIZE constraint");
+        }
         this.internationalAreaIndication = internationalAreaIndication;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }

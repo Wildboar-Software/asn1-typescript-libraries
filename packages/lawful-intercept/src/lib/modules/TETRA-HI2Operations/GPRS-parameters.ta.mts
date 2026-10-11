@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../TETRA-HI2Operations/DataNodeAddress.ta.mjs";
@@ -82,8 +83,17 @@ class GPRS_parameters {
     ) {
         this.pDP_address_allocated_to_the_target = pDP_address_allocated_to_the_target;
         this.aPN = aPN;
+        if (this.aPN !== undefined && (this.aPN.length < 1 || this.aPN.length > 100)) {
+            throw new ASN1SizeError("aPN violates the SIZE constraint");
+        }
         this.pDP_type = pDP_type;
+        if (this.pDP_type !== undefined && (this.pDP_type.length < 2 || this.pDP_type.length > 2)) {
+            throw new ASN1SizeError("pDP_type violates the SIZE constraint");
+        }
         this.nSAPI = nSAPI;
+        if (this.nSAPI !== undefined && (this.nSAPI.length < 1 || this.nSAPI.length > 1)) {
+            throw new ASN1SizeError("nSAPI violates the SIZE constraint");
+        }
         this.additionalIPaddress = additionalIPaddress;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
