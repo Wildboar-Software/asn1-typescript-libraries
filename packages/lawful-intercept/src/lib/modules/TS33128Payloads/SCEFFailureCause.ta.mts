@@ -178,34 +178,9 @@ const SCEFFailureCause_portNotAssociatedWithSpecifiedApplication: SCEFFailureCau
 export
 const portNotAssociatedWithSpecifiedApplication: SCEFFailureCause = SCEFFailureCause.portNotAssociatedWithSpecifiedApplication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SCEFFailureCause: $.ASN1Decoder<SCEFFailureCause> | null = null;
+export const _decode_SCEFFailureCause: $.ASN1Decoder<SCEFFailureCause> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) SCEFFailureCause
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SCEFFailureCause (el: _Element): SCEFFailureCause {
-    if (!_cached_decoder_for_SCEFFailureCause) { _cached_decoder_for_SCEFFailureCause = $._decodeEnumerated; }
-    return _cached_decoder_for_SCEFFailureCause(el);
-}
-
-let _cached_encoder_for_SCEFFailureCause: $.ASN1Encoder<SCEFFailureCause> | null = null;
-
-/**
- * @summary Encodes a(n) SCEFFailureCause into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SCEFFailureCause, encoded as an ASN.1 Element.
- */
-export
-function _encode_SCEFFailureCause (value: SCEFFailureCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCEFFailureCause) { _cached_encoder_for_SCEFFailureCause = $._encodeEnumerated; }
-    return _cached_encoder_for_SCEFFailureCause(value, elGetter);
-}
+export const _encode_SCEFFailureCause: $.ASN1Encoder<SCEFFailureCause> = $._encodeEnumerated;
 
 
 /* eslint-enable */

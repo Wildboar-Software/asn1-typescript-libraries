@@ -931,34 +931,9 @@ const EPSEvent_scefRequestednonIPPDNDisconnection: EPSEvent = 55; /* LONG_NAMED_
 export
 const scefRequestednonIPPDNDisconnection: EPSEvent = EPSEvent_scefRequestednonIPPDNDisconnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_EPSEvent: $.ASN1Decoder<EPSEvent> | null = null;
+export const _decode_EPSEvent: $.ASN1Decoder<EPSEvent> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) EPSEvent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EPSEvent (el: _Element): EPSEvent {
-    if (!_cached_decoder_for_EPSEvent) { _cached_decoder_for_EPSEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_EPSEvent(el);
-}
-
-let _cached_encoder_for_EPSEvent: $.ASN1Encoder<EPSEvent> | null = null;
-
-/**
- * @summary Encodes a(n) EPSEvent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EPSEvent, encoded as an ASN.1 Element.
- */
-export
-function _encode_EPSEvent (value: EPSEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSEvent) { _cached_encoder_for_EPSEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_EPSEvent(value, elGetter);
-}
+export const _encode_EPSEvent: $.ASN1Encoder<EPSEvent> = $._encodeEnumerated;
 
 
 /* eslint-enable */

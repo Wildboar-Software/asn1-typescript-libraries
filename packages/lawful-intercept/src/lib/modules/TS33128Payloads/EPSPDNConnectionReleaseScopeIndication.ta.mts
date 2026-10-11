@@ -20,34 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type EPSPDNConnectionReleaseScopeIndication = BOOLEAN; // BooleanType
 
-let _cached_decoder_for_EPSPDNConnectionReleaseScopeIndication: $.ASN1Decoder<EPSPDNConnectionReleaseScopeIndication> | null = null;
+export const _decode_EPSPDNConnectionReleaseScopeIndication: $.ASN1Decoder<EPSPDNConnectionReleaseScopeIndication> = $._decodeBoolean;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) EPSPDNConnectionReleaseScopeIndication
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EPSPDNConnectionReleaseScopeIndication (el: _Element): EPSPDNConnectionReleaseScopeIndication {
-    if (!_cached_decoder_for_EPSPDNConnectionReleaseScopeIndication) { _cached_decoder_for_EPSPDNConnectionReleaseScopeIndication = $._decodeBoolean; }
-    return _cached_decoder_for_EPSPDNConnectionReleaseScopeIndication(el);
-}
-
-let _cached_encoder_for_EPSPDNConnectionReleaseScopeIndication: $.ASN1Encoder<EPSPDNConnectionReleaseScopeIndication> | null = null;
-
-/**
- * @summary Encodes a(n) EPSPDNConnectionReleaseScopeIndication into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EPSPDNConnectionReleaseScopeIndication, encoded as an ASN.1 Element.
- */
-export
-function _encode_EPSPDNConnectionReleaseScopeIndication (value: EPSPDNConnectionReleaseScopeIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSPDNConnectionReleaseScopeIndication) { _cached_encoder_for_EPSPDNConnectionReleaseScopeIndication = $._encodeBoolean; }
-    return _cached_encoder_for_EPSPDNConnectionReleaseScopeIndication(value, elGetter);
-}
+export const _encode_EPSPDNConnectionReleaseScopeIndication: $.ASN1Encoder<EPSPDNConnectionReleaseScopeIndication> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -66,34 +66,9 @@ const PresenceType_pTCGroup: PresenceType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const pTCGroup: PresenceType = PresenceType_pTCGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PresenceType: $.ASN1Decoder<PresenceType> | null = null;
+export const _decode_PresenceType: $.ASN1Decoder<PresenceType> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) PresenceType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PresenceType (el: _Element): PresenceType {
-    if (!_cached_decoder_for_PresenceType) { _cached_decoder_for_PresenceType = $._decodeEnumerated; }
-    return _cached_decoder_for_PresenceType(el);
-}
-
-let _cached_encoder_for_PresenceType: $.ASN1Encoder<PresenceType> | null = null;
-
-/**
- * @summary Encodes a(n) PresenceType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PresenceType, encoded as an ASN.1 Element.
- */
-export
-function _encode_PresenceType (value: PresenceType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PresenceType) { _cached_encoder_for_PresenceType = $._encodeEnumerated; }
-    return _cached_encoder_for_PresenceType(value, elGetter);
-}
+export const _encode_PresenceType: $.ASN1Encoder<PresenceType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

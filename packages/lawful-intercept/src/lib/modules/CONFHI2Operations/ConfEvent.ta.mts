@@ -263,34 +263,9 @@ const ConfEvent_confServUpdate: ConfEvent = 13; /* LONG_NAMED_ENUMERATED_VALUE *
 export
 const confServUpdate: ConfEvent = ConfEvent_confServUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ConfEvent: $.ASN1Decoder<ConfEvent> | null = null;
+export const _decode_ConfEvent: $.ASN1Decoder<ConfEvent> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) ConfEvent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ConfEvent (el: _Element): ConfEvent {
-    if (!_cached_decoder_for_ConfEvent) { _cached_decoder_for_ConfEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_ConfEvent(el);
-}
-
-let _cached_encoder_for_ConfEvent: $.ASN1Encoder<ConfEvent> | null = null;
-
-/**
- * @summary Encodes a(n) ConfEvent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ConfEvent, encoded as an ASN.1 Element.
- */
-export
-function _encode_ConfEvent (value: ConfEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConfEvent) { _cached_encoder_for_ConfEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_ConfEvent(value, elGetter);
-}
+export const _encode_ConfEvent: $.ASN1Encoder<ConfEvent> = $._encodeEnumerated;
 
 
 /* eslint-enable */

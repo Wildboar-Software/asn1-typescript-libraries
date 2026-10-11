@@ -83,34 +83,9 @@ const RegistrationRequest_de_register: RegistrationRequest = 3; /* LONG_NAMED_EN
 export
 const de_register: RegistrationRequest = RegistrationRequest_de_register; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_RegistrationRequest: $.ASN1Decoder<RegistrationRequest> | null = null;
+export const _decode_RegistrationRequest: $.ASN1Decoder<RegistrationRequest> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) RegistrationRequest
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RegistrationRequest (el: _Element): RegistrationRequest {
-    if (!_cached_decoder_for_RegistrationRequest) { _cached_decoder_for_RegistrationRequest = $._decodeEnumerated; }
-    return _cached_decoder_for_RegistrationRequest(el);
-}
-
-let _cached_encoder_for_RegistrationRequest: $.ASN1Encoder<RegistrationRequest> | null = null;
-
-/**
- * @summary Encodes a(n) RegistrationRequest into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RegistrationRequest, encoded as an ASN.1 Element.
- */
-export
-function _encode_RegistrationRequest (value: RegistrationRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RegistrationRequest) { _cached_encoder_for_RegistrationRequest = $._encodeEnumerated; }
-    return _cached_encoder_for_RegistrationRequest(value, elGetter);
-}
+export const _encode_RegistrationRequest: $.ASN1Encoder<RegistrationRequest> = $._encodeEnumerated;
 
 
 /* eslint-enable */

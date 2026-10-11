@@ -158,34 +158,9 @@ const UDMDefinedCause_other: UDMDefinedCause = UDMDefinedCause.other; /* LONG_NA
 export
 const other: UDMDefinedCause = UDMDefinedCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UDMDefinedCause: $.ASN1Decoder<UDMDefinedCause> | null = null;
+export const _decode_UDMDefinedCause: $.ASN1Decoder<UDMDefinedCause> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) UDMDefinedCause
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UDMDefinedCause (el: _Element): UDMDefinedCause {
-    if (!_cached_decoder_for_UDMDefinedCause) { _cached_decoder_for_UDMDefinedCause = $._decodeEnumerated; }
-    return _cached_decoder_for_UDMDefinedCause(el);
-}
-
-let _cached_encoder_for_UDMDefinedCause: $.ASN1Encoder<UDMDefinedCause> | null = null;
-
-/**
- * @summary Encodes a(n) UDMDefinedCause into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UDMDefinedCause, encoded as an ASN.1 Element.
- */
-export
-function _encode_UDMDefinedCause (value: UDMDefinedCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UDMDefinedCause) { _cached_encoder_for_UDMDefinedCause = $._encodeEnumerated; }
-    return _cached_encoder_for_UDMDefinedCause(value, elGetter);
-}
+export const _encode_UDMDefinedCause: $.ASN1Encoder<UDMDefinedCause> = $._encodeEnumerated;
 
 
 /* eslint-enable */

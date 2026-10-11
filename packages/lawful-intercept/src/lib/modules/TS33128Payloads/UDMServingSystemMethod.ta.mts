@@ -118,34 +118,9 @@ const UDMServingSystemMethod_unknown: UDMServingSystemMethod = UDMServingSystemM
 export
 const unknown: UDMServingSystemMethod = UDMServingSystemMethod.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_UDMServingSystemMethod: $.ASN1Decoder<UDMServingSystemMethod> | null = null;
+export const _decode_UDMServingSystemMethod: $.ASN1Decoder<UDMServingSystemMethod> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) UDMServingSystemMethod
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UDMServingSystemMethod (el: _Element): UDMServingSystemMethod {
-    if (!_cached_decoder_for_UDMServingSystemMethod) { _cached_decoder_for_UDMServingSystemMethod = $._decodeEnumerated; }
-    return _cached_decoder_for_UDMServingSystemMethod(el);
-}
-
-let _cached_encoder_for_UDMServingSystemMethod: $.ASN1Encoder<UDMServingSystemMethod> | null = null;
-
-/**
- * @summary Encodes a(n) UDMServingSystemMethod into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UDMServingSystemMethod, encoded as an ASN.1 Element.
- */
-export
-function _encode_UDMServingSystemMethod (value: UDMServingSystemMethod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UDMServingSystemMethod) { _cached_encoder_for_UDMServingSystemMethod = $._encodeEnumerated; }
-    return _cached_encoder_for_UDMServingSystemMethod(value, elGetter);
-}
+export const _encode_UDMServingSystemMethod: $.ASN1Encoder<UDMServingSystemMethod> = $._encodeEnumerated;
 
 
 /* eslint-enable */

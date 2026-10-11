@@ -142,7 +142,7 @@ const _root_component_type_list_1_spec_for_Notification: $.ComponentSpec[] = [
     new $.ComponentSpec("lawfulInterceptionIdentifier", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("communicationIdentifier", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("timeStamp", false, $.hasTag(_TagClass.context, 3)),
-    /* FIXME: location COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("location", true, $.hasTag(_TagClass.context, 4))
 ];
 
 /**

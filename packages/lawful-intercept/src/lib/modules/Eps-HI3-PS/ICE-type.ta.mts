@@ -137,34 +137,9 @@ const ICE_type_ePDG: ICE_type = 6; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const ePDG: ICE_type = ICE_type_ePDG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ICE_type: $.ASN1Decoder<ICE_type> | null = null;
+export const _decode_ICE_type: $.ASN1Decoder<ICE_type> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) ICE_type
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ICE_type (el: _Element): ICE_type {
-    if (!_cached_decoder_for_ICE_type) { _cached_decoder_for_ICE_type = $._decodeEnumerated; }
-    return _cached_decoder_for_ICE_type(el);
-}
-
-let _cached_encoder_for_ICE_type: $.ASN1Encoder<ICE_type> | null = null;
-
-/**
- * @summary Encodes a(n) ICE_type into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ICE_type, encoded as an ASN.1 Element.
- */
-export
-function _encode_ICE_type (value: ICE_type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ICE_type) { _cached_encoder_for_ICE_type = $._encodeEnumerated; }
-    return _cached_encoder_for_ICE_type(value, elGetter);
-}
+export const _encode_ICE_type: $.ASN1Encoder<ICE_type> = $._encodeEnumerated;
 
 
 /* eslint-enable */

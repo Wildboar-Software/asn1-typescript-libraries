@@ -352,34 +352,9 @@ const TETRA_LI_Event_dMO: TETRA_LI_Event = 17; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const dMO: TETRA_LI_Event = TETRA_LI_Event_dMO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_TETRA_LI_Event: $.ASN1Decoder<TETRA_LI_Event> | null = null;
+export const _decode_TETRA_LI_Event: $.ASN1Decoder<TETRA_LI_Event> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) TETRA_LI_Event
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TETRA_LI_Event (el: _Element): TETRA_LI_Event {
-    if (!_cached_decoder_for_TETRA_LI_Event) { _cached_decoder_for_TETRA_LI_Event = $._decodeEnumerated; }
-    return _cached_decoder_for_TETRA_LI_Event(el);
-}
-
-let _cached_encoder_for_TETRA_LI_Event: $.ASN1Encoder<TETRA_LI_Event> | null = null;
-
-/**
- * @summary Encodes a(n) TETRA_LI_Event into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TETRA_LI_Event, encoded as an ASN.1 Element.
- */
-export
-function _encode_TETRA_LI_Event (value: TETRA_LI_Event, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TETRA_LI_Event) { _cached_encoder_for_TETRA_LI_Event = $._encodeEnumerated; }
-    return _cached_encoder_for_TETRA_LI_Event(value, elGetter);
-}
+export const _encode_TETRA_LI_Event: $.ASN1Encoder<TETRA_LI_Event> = $._encodeEnumerated;
 
 
 /* eslint-enable */

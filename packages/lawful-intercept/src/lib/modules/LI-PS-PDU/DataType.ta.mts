@@ -83,34 +83,9 @@ const DataType_iLHI: DataType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const iLHI: DataType = DataType_iLHI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_DataType: $.ASN1Decoder<DataType> | null = null;
+export const _decode_DataType: $.ASN1Decoder<DataType> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) DataType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DataType (el: _Element): DataType {
-    if (!_cached_decoder_for_DataType) { _cached_decoder_for_DataType = $._decodeEnumerated; }
-    return _cached_decoder_for_DataType(el);
-}
-
-let _cached_encoder_for_DataType: $.ASN1Encoder<DataType> | null = null;
-
-/**
- * @summary Encodes a(n) DataType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DataType, encoded as an ASN.1 Element.
- */
-export
-function _encode_DataType (value: DataType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DataType) { _cached_encoder_for_DataType = $._encodeEnumerated; }
-    return _cached_encoder_for_DataType(value, elGetter);
-}
+export const _encode_DataType: $.ASN1Encoder<DataType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

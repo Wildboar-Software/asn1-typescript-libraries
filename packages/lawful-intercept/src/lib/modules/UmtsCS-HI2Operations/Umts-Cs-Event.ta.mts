@@ -263,34 +263,9 @@ const Umts_Cs_Event_location_Information_Request: Umts_Cs_Event = 13; /* LONG_NA
 export
 const location_Information_Request: Umts_Cs_Event = Umts_Cs_Event_location_Information_Request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Umts_Cs_Event: $.ASN1Decoder<Umts_Cs_Event> | null = null;
+export const _decode_Umts_Cs_Event: $.ASN1Decoder<Umts_Cs_Event> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) Umts_Cs_Event
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Umts_Cs_Event (el: _Element): Umts_Cs_Event {
-    if (!_cached_decoder_for_Umts_Cs_Event) { _cached_decoder_for_Umts_Cs_Event = $._decodeEnumerated; }
-    return _cached_decoder_for_Umts_Cs_Event(el);
-}
-
-let _cached_encoder_for_Umts_Cs_Event: $.ASN1Encoder<Umts_Cs_Event> | null = null;
-
-/**
- * @summary Encodes a(n) Umts_Cs_Event into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Umts_Cs_Event, encoded as an ASN.1 Element.
- */
-export
-function _encode_Umts_Cs_Event (value: Umts_Cs_Event, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Umts_Cs_Event) { _cached_encoder_for_Umts_Cs_Event = $._encodeEnumerated; }
-    return _cached_encoder_for_Umts_Cs_Event(value, elGetter);
-}
+export const _encode_Umts_Cs_Event: $.ASN1Encoder<Umts_Cs_Event> = $._encodeEnumerated;
 
 
 /* eslint-enable */

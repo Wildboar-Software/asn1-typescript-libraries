@@ -101,34 +101,9 @@ const Priority_Level_listen_only: Priority_Level = 3; /* LONG_NAMED_ENUMERATED_V
 export
 const listen_only: Priority_Level = Priority_Level_listen_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Priority_Level: $.ASN1Decoder<Priority_Level> | null = null;
+export const _decode_Priority_Level: $.ASN1Decoder<Priority_Level> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) Priority_Level
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Priority_Level (el: _Element): Priority_Level {
-    if (!_cached_decoder_for_Priority_Level) { _cached_decoder_for_Priority_Level = $._decodeEnumerated; }
-    return _cached_decoder_for_Priority_Level(el);
-}
-
-let _cached_encoder_for_Priority_Level: $.ASN1Encoder<Priority_Level> | null = null;
-
-/**
- * @summary Encodes a(n) Priority_Level into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Priority_Level, encoded as an ASN.1 Element.
- */
-export
-function _encode_Priority_Level (value: Priority_Level, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Priority_Level) { _cached_encoder_for_Priority_Level = $._encodeEnumerated; }
-    return _cached_encoder_for_Priority_Level(value, elGetter);
-}
+export const _encode_Priority_Level: $.ASN1Encoder<Priority_Level> = $._encodeEnumerated;
 
 
 /* eslint-enable */

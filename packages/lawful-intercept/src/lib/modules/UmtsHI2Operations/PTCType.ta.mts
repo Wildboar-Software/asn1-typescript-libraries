@@ -515,34 +515,9 @@ const PTCType_pTCEncryption: PTCType = 27; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const pTCEncryption: PTCType = PTCType_pTCEncryption; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCType: $.ASN1Decoder<PTCType> | null = null;
+export const _decode_PTCType: $.ASN1Decoder<PTCType> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) PTCType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PTCType (el: _Element): PTCType {
-    if (!_cached_decoder_for_PTCType) { _cached_decoder_for_PTCType = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCType(el);
-}
-
-let _cached_encoder_for_PTCType: $.ASN1Encoder<PTCType> | null = null;
-
-/**
- * @summary Encodes a(n) PTCType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PTCType, encoded as an ASN.1 Element.
- */
-export
-function _encode_PTCType (value: PTCType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCType) { _cached_encoder_for_PTCType = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCType(value, elGetter);
-}
+export const _encode_PTCType: $.ASN1Encoder<PTCType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

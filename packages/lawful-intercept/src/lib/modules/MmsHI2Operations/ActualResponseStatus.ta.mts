@@ -498,34 +498,9 @@ const ActualResponseStatus_errorPermanentLackOfPrepaid: ActualResponseStatus = 2
 export
 const errorPermanentLackOfPrepaid: ActualResponseStatus = ActualResponseStatus_errorPermanentLackOfPrepaid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ActualResponseStatus: $.ASN1Decoder<ActualResponseStatus> | null = null;
+export const _decode_ActualResponseStatus: $.ASN1Decoder<ActualResponseStatus> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) ActualResponseStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ActualResponseStatus (el: _Element): ActualResponseStatus {
-    if (!_cached_decoder_for_ActualResponseStatus) { _cached_decoder_for_ActualResponseStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_ActualResponseStatus(el);
-}
-
-let _cached_encoder_for_ActualResponseStatus: $.ASN1Encoder<ActualResponseStatus> | null = null;
-
-/**
- * @summary Encodes a(n) ActualResponseStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActualResponseStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_ActualResponseStatus (value: ActualResponseStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ActualResponseStatus) { _cached_encoder_for_ActualResponseStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_ActualResponseStatus(value, elGetter);
-}
+export const _encode_ActualResponseStatus: $.ASN1Encoder<ActualResponseStatus> = $._encodeEnumerated;
 
 
 /* eslint-enable */

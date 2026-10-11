@@ -118,34 +118,9 @@ const AccessType_threeGPPandNonThreeGPPAccess: AccessType = AccessType.threeGPPa
 export
 const threeGPPandNonThreeGPPAccess: AccessType = AccessType.threeGPPandNonThreeGPPAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_AccessType: $.ASN1Decoder<AccessType> | null = null;
+export const _decode_AccessType: $.ASN1Decoder<AccessType> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) AccessType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AccessType (el: _Element): AccessType {
-    if (!_cached_decoder_for_AccessType) { _cached_decoder_for_AccessType = $._decodeEnumerated; }
-    return _cached_decoder_for_AccessType(el);
-}
-
-let _cached_encoder_for_AccessType: $.ASN1Encoder<AccessType> | null = null;
-
-/**
- * @summary Encodes a(n) AccessType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccessType, encoded as an ASN.1 Element.
- */
-export
-function _encode_AccessType (value: AccessType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessType) { _cached_encoder_for_AccessType = $._encodeEnumerated; }
-    return _cached_encoder_for_AccessType(value, elGetter);
-}
+export const _encode_AccessType: $.ASN1Encoder<AccessType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -675,13 +675,13 @@ const _extension_additions_list_spec_for_IRI_Parameters: $.ComponentSpec[] = [
     new $.ComponentSpec("sIPMessage", true, $.hasTag(_TagClass.context, 30)),
     new $.ComponentSpec("servingSGSN-number", true, $.hasTag(_TagClass.context, 31)),
     new $.ComponentSpec("servingSGSN-address", true, $.hasTag(_TagClass.context, 32)),
-    /* FIXME: tARGETACTIVITYMONITOR COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("tARGETACTIVITYMONITOR", true, $.hasTag(_TagClass.context, 33)),
     new $.ComponentSpec("ldiEvent", true, $.hasTag(_TagClass.context, 34)),
     new $.ComponentSpec("correlation", true, $.hasTag(_TagClass.context, 35)),
-    /* FIXME: tARGETACTIVITYMONITORind COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: tARGETCOMMSMONITORind COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: tTRAFFICind COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: cTTRAFFICind COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("tARGETACTIVITYMONITORind", true, $.hasTag(_TagClass.context, 36)),
+    new $.ComponentSpec("tARGETCOMMSMONITORind", true, $.hasTag(_TagClass.context, 37)),
+    new $.ComponentSpec("tTRAFFICind", true, $.hasTag(_TagClass.context, 38)),
+    new $.ComponentSpec("cTTRAFFICind", true, $.hasTag(_TagClass.context, 39)),
     new $.ComponentSpec("servingSystem", true, $.hasTag(_TagClass.context, 40)),
     new $.ComponentSpec("national-HI2-ASN1parameters", true, $.hasTag(_TagClass.context, 255))
 ];

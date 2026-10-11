@@ -299,34 +299,9 @@ const MMSEvent_viewConfirm: MMSEvent = 14; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const viewConfirm: MMSEvent = MMSEvent_viewConfirm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMSEvent: $.ASN1Decoder<MMSEvent> | null = null;
+export const _decode_MMSEvent: $.ASN1Decoder<MMSEvent> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) MMSEvent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MMSEvent (el: _Element): MMSEvent {
-    if (!_cached_decoder_for_MMSEvent) { _cached_decoder_for_MMSEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSEvent(el);
-}
-
-let _cached_encoder_for_MMSEvent: $.ASN1Encoder<MMSEvent> | null = null;
-
-/**
- * @summary Encodes a(n) MMSEvent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MMSEvent, encoded as an ASN.1 Element.
- */
-export
-function _encode_MMSEvent (value: MMSEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSEvent) { _cached_encoder_for_MMSEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSEvent(value, elGetter);
-}
+export const _encode_MMSEvent: $.ASN1Encoder<MMSEvent> = $._encodeEnumerated;
 
 
 /* eslint-enable */

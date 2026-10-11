@@ -83,34 +83,9 @@ const PreEstStatus_released: PreEstStatus = 3; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const released: PreEstStatus = PreEstStatus_released; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PreEstStatus: $.ASN1Decoder<PreEstStatus> | null = null;
+export const _decode_PreEstStatus: $.ASN1Decoder<PreEstStatus> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) PreEstStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PreEstStatus (el: _Element): PreEstStatus {
-    if (!_cached_decoder_for_PreEstStatus) { _cached_decoder_for_PreEstStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_PreEstStatus(el);
-}
-
-let _cached_encoder_for_PreEstStatus: $.ASN1Encoder<PreEstStatus> | null = null;
-
-/**
- * @summary Encodes a(n) PreEstStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PreEstStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_PreEstStatus (value: PreEstStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PreEstStatus) { _cached_encoder_for_PreEstStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_PreEstStatus(value, elGetter);
-}
+export const _encode_PreEstStatus: $.ASN1Encoder<PreEstStatus> = $._encodeEnumerated;
 
 
 /* eslint-enable */

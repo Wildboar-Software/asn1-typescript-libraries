@@ -178,34 +178,9 @@ const NEFReleaseCause_unknownCause: NEFReleaseCause = NEFReleaseCause.unknownCau
 export
 const unknownCause: NEFReleaseCause = NEFReleaseCause.unknownCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_NEFReleaseCause: $.ASN1Decoder<NEFReleaseCause> | null = null;
+export const _decode_NEFReleaseCause: $.ASN1Decoder<NEFReleaseCause> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) NEFReleaseCause
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NEFReleaseCause (el: _Element): NEFReleaseCause {
-    if (!_cached_decoder_for_NEFReleaseCause) { _cached_decoder_for_NEFReleaseCause = $._decodeEnumerated; }
-    return _cached_decoder_for_NEFReleaseCause(el);
-}
-
-let _cached_encoder_for_NEFReleaseCause: $.ASN1Encoder<NEFReleaseCause> | null = null;
-
-/**
- * @summary Encodes a(n) NEFReleaseCause into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NEFReleaseCause, encoded as an ASN.1 Element.
- */
-export
-function _encode_NEFReleaseCause (value: NEFReleaseCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NEFReleaseCause) { _cached_encoder_for_NEFReleaseCause = $._encodeEnumerated; }
-    return _cached_encoder_for_NEFReleaseCause(value, elGetter);
-}
+export const _encode_NEFReleaseCause: $.ASN1Encoder<NEFReleaseCause> = $._encodeEnumerated;
 
 
 /* eslint-enable */

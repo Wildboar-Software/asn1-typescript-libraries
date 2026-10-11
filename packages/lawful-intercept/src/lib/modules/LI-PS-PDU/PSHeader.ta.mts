@@ -191,7 +191,7 @@ class PSHeader {
 export
 const _root_component_type_list_1_spec_for_PSHeader: $.ComponentSpec[] = [
     new $.ComponentSpec("li-psDomainId", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: lawfulInterceptionIdentifier COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("lawfulInterceptionIdentifier", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("authorizationCountryCode", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("communicationIdentifier", false, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("sequenceNumber", false, $.hasTag(_TagClass.context, 4)),

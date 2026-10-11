@@ -120,34 +120,9 @@ const MMSState_forwarded: MMSState = 4; /* LONG_NAMED_ENUMERATED_VALUE */
 export
 const forwarded: MMSState = MMSState_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMSState: $.ASN1Decoder<MMSState> | null = null;
+export const _decode_MMSState: $.ASN1Decoder<MMSState> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) MMSState
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MMSState (el: _Element): MMSState {
-    if (!_cached_decoder_for_MMSState) { _cached_decoder_for_MMSState = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSState(el);
-}
-
-let _cached_encoder_for_MMSState: $.ASN1Encoder<MMSState> | null = null;
-
-/**
- * @summary Encodes a(n) MMSState into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MMSState, encoded as an ASN.1 Element.
- */
-export
-function _encode_MMSState (value: MMSState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSState) { _cached_encoder_for_MMSState = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSState(value, elGetter);
-}
+export const _encode_MMSState: $.ASN1Encoder<MMSState> = $._encodeEnumerated;
 
 
 /* eslint-enable */

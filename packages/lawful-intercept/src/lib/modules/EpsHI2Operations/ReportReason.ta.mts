@@ -119,34 +119,9 @@ const ReportReason_otherOrUnknown: ReportReason = 4; /* LONG_NAMED_ENUMERATED_VA
 export
 const otherOrUnknown: ReportReason = ReportReason_otherOrUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ReportReason: $.ASN1Decoder<ReportReason> | null = null;
+export const _decode_ReportReason: $.ASN1Decoder<ReportReason> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) ReportReason
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReportReason (el: _Element): ReportReason {
-    if (!_cached_decoder_for_ReportReason) { _cached_decoder_for_ReportReason = $._decodeEnumerated; }
-    return _cached_decoder_for_ReportReason(el);
-}
-
-let _cached_encoder_for_ReportReason: $.ASN1Encoder<ReportReason> | null = null;
-
-/**
- * @summary Encodes a(n) ReportReason into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReportReason, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReportReason (value: ReportReason, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportReason) { _cached_encoder_for_ReportReason = $._encodeEnumerated; }
-    return _cached_encoder_for_ReportReason(value, elGetter);
-}
+export const _encode_ReportReason: $.ASN1Encoder<ReportReason> = $._encodeEnumerated;
 
 
 /* eslint-enable */

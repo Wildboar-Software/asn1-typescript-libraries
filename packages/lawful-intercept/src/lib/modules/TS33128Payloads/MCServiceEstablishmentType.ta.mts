@@ -98,34 +98,9 @@ const MCServiceEstablishmentType_preEstablished: MCServiceEstablishmentType = MC
 export
 const preEstablished: MCServiceEstablishmentType = MCServiceEstablishmentType.preEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MCServiceEstablishmentType: $.ASN1Decoder<MCServiceEstablishmentType> | null = null;
+export const _decode_MCServiceEstablishmentType: $.ASN1Decoder<MCServiceEstablishmentType> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) MCServiceEstablishmentType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MCServiceEstablishmentType (el: _Element): MCServiceEstablishmentType {
-    if (!_cached_decoder_for_MCServiceEstablishmentType) { _cached_decoder_for_MCServiceEstablishmentType = $._decodeEnumerated; }
-    return _cached_decoder_for_MCServiceEstablishmentType(el);
-}
-
-let _cached_encoder_for_MCServiceEstablishmentType: $.ASN1Encoder<MCServiceEstablishmentType> | null = null;
-
-/**
- * @summary Encodes a(n) MCServiceEstablishmentType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MCServiceEstablishmentType, encoded as an ASN.1 Element.
- */
-export
-function _encode_MCServiceEstablishmentType (value: MCServiceEstablishmentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCServiceEstablishmentType) { _cached_encoder_for_MCServiceEstablishmentType = $._encodeEnumerated; }
-    return _cached_encoder_for_MCServiceEstablishmentType(value, elGetter);
-}
+export const _encode_MCServiceEstablishmentType: $.ASN1Encoder<MCServiceEstablishmentType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -65,34 +65,9 @@ const ProSeTargetType_pRoSeUEtoNwRelay: ProSeTargetType = 2; /* LONG_NAMED_ENUME
 export
 const pRoSeUEtoNwRelay: ProSeTargetType = ProSeTargetType_pRoSeUEtoNwRelay; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_ProSeTargetType: $.ASN1Decoder<ProSeTargetType> | null = null;
+export const _decode_ProSeTargetType: $.ASN1Decoder<ProSeTargetType> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) ProSeTargetType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ProSeTargetType (el: _Element): ProSeTargetType {
-    if (!_cached_decoder_for_ProSeTargetType) { _cached_decoder_for_ProSeTargetType = $._decodeEnumerated; }
-    return _cached_decoder_for_ProSeTargetType(el);
-}
-
-let _cached_encoder_for_ProSeTargetType: $.ASN1Encoder<ProSeTargetType> | null = null;
-
-/**
- * @summary Encodes a(n) ProSeTargetType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProSeTargetType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ProSeTargetType (value: ProSeTargetType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProSeTargetType) { _cached_encoder_for_ProSeTargetType = $._encodeEnumerated; }
-    return _cached_encoder_for_ProSeTargetType(value, elGetter);
-}
+export const _encode_ProSeTargetType: $.ASN1Encoder<ProSeTargetType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

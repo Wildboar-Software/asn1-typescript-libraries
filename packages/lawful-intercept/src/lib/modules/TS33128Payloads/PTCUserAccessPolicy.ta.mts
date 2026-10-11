@@ -138,34 +138,9 @@ const PTCUserAccessPolicy_allowOverrideManualAnswerMode: PTCUserAccessPolicy = P
 export
 const allowOverrideManualAnswerMode: PTCUserAccessPolicy = PTCUserAccessPolicy.allowOverrideManualAnswerMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_PTCUserAccessPolicy: $.ASN1Decoder<PTCUserAccessPolicy> | null = null;
+export const _decode_PTCUserAccessPolicy: $.ASN1Decoder<PTCUserAccessPolicy> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) PTCUserAccessPolicy
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PTCUserAccessPolicy (el: _Element): PTCUserAccessPolicy {
-    if (!_cached_decoder_for_PTCUserAccessPolicy) { _cached_decoder_for_PTCUserAccessPolicy = $._decodeEnumerated; }
-    return _cached_decoder_for_PTCUserAccessPolicy(el);
-}
-
-let _cached_encoder_for_PTCUserAccessPolicy: $.ASN1Encoder<PTCUserAccessPolicy> | null = null;
-
-/**
- * @summary Encodes a(n) PTCUserAccessPolicy into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PTCUserAccessPolicy, encoded as an ASN.1 Element.
- */
-export
-function _encode_PTCUserAccessPolicy (value: PTCUserAccessPolicy, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PTCUserAccessPolicy) { _cached_encoder_for_PTCUserAccessPolicy = $._encodeEnumerated; }
-    return _cached_encoder_for_PTCUserAccessPolicy(value, elGetter);
-}
+export const _encode_PTCUserAccessPolicy: $.ASN1Encoder<PTCUserAccessPolicy> = $._encodeEnumerated;
 
 
 /* eslint-enable */

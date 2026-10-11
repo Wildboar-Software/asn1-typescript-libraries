@@ -138,34 +138,9 @@ const FiveGMSAFErrorCode_unsupportedMediaType415: FiveGMSAFErrorCode = FiveGMSAF
 export
 const unsupportedMediaType415: FiveGMSAFErrorCode = FiveGMSAFErrorCode.unsupportedMediaType415; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_FiveGMSAFErrorCode: $.ASN1Decoder<FiveGMSAFErrorCode> | null = null;
+export const _decode_FiveGMSAFErrorCode: $.ASN1Decoder<FiveGMSAFErrorCode> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) FiveGMSAFErrorCode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FiveGMSAFErrorCode (el: _Element): FiveGMSAFErrorCode {
-    if (!_cached_decoder_for_FiveGMSAFErrorCode) { _cached_decoder_for_FiveGMSAFErrorCode = $._decodeEnumerated; }
-    return _cached_decoder_for_FiveGMSAFErrorCode(el);
-}
-
-let _cached_encoder_for_FiveGMSAFErrorCode: $.ASN1Encoder<FiveGMSAFErrorCode> | null = null;
-
-/**
- * @summary Encodes a(n) FiveGMSAFErrorCode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FiveGMSAFErrorCode, encoded as an ASN.1 Element.
- */
-export
-function _encode_FiveGMSAFErrorCode (value: FiveGMSAFErrorCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FiveGMSAFErrorCode) { _cached_encoder_for_FiveGMSAFErrorCode = $._encodeEnumerated; }
-    return _cached_encoder_for_FiveGMSAFErrorCode(value, elGetter);
-}
+export const _encode_FiveGMSAFErrorCode: $.ASN1Encoder<FiveGMSAFErrorCode> = $._encodeEnumerated;
 
 
 /* eslint-enable */

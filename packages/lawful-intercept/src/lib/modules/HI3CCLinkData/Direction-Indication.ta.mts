@@ -101,34 +101,9 @@ const Direction_Indication_direction_unknown: Direction_Indication = 3; /* LONG_
 export
 const direction_unknown: Direction_Indication = Direction_Indication_direction_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_Direction_Indication: $.ASN1Decoder<Direction_Indication> | null = null;
+export const _decode_Direction_Indication: $.ASN1Decoder<Direction_Indication> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) Direction_Indication
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Direction_Indication (el: _Element): Direction_Indication {
-    if (!_cached_decoder_for_Direction_Indication) { _cached_decoder_for_Direction_Indication = $._decodeEnumerated; }
-    return _cached_decoder_for_Direction_Indication(el);
-}
-
-let _cached_encoder_for_Direction_Indication: $.ASN1Encoder<Direction_Indication> | null = null;
-
-/**
- * @summary Encodes a(n) Direction_Indication into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Direction_Indication, encoded as an ASN.1 Element.
- */
-export
-function _encode_Direction_Indication (value: Direction_Indication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Direction_Indication) { _cached_encoder_for_Direction_Indication = $._encodeEnumerated; }
-    return _cached_encoder_for_Direction_Indication(value, elGetter);
-}
+export const _encode_Direction_Indication: $.ASN1Encoder<Direction_Indication> = $._encodeEnumerated;
 
 
 /* eslint-enable */

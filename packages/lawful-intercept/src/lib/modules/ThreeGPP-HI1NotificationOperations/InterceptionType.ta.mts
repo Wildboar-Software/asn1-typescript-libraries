@@ -136,34 +136,9 @@ const InterceptionType_voiceAndDataIriOnly: InterceptionType = 5; /* LONG_NAMED_
 export
 const voiceAndDataIriOnly: InterceptionType = InterceptionType_voiceAndDataIriOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_InterceptionType: $.ASN1Decoder<InterceptionType> | null = null;
+export const _decode_InterceptionType: $.ASN1Decoder<InterceptionType> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) InterceptionType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InterceptionType (el: _Element): InterceptionType {
-    if (!_cached_decoder_for_InterceptionType) { _cached_decoder_for_InterceptionType = $._decodeEnumerated; }
-    return _cached_decoder_for_InterceptionType(el);
-}
-
-let _cached_encoder_for_InterceptionType: $.ASN1Encoder<InterceptionType> | null = null;
-
-/**
- * @summary Encodes a(n) InterceptionType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InterceptionType, encoded as an ASN.1 Element.
- */
-export
-function _encode_InterceptionType (value: InterceptionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InterceptionType) { _cached_encoder_for_InterceptionType = $._encodeEnumerated; }
-    return _cached_encoder_for_InterceptionType(value, elGetter);
-}
+export const _encode_InterceptionType: $.ASN1Encoder<InterceptionType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

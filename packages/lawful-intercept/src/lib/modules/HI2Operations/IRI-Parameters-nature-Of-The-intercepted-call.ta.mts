@@ -179,34 +179,9 @@ const IRI_Parameters_nature_Of_The_intercepted_call_lTE_circuit_call: IRI_Parame
 export
 const lTE_circuit_call: IRI_Parameters_nature_Of_The_intercepted_call = IRI_Parameters_nature_Of_The_intercepted_call_lTE_circuit_call; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Decoder<IRI_Parameters_nature_Of_The_intercepted_call> | null = null;
+export const _decode_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Decoder<IRI_Parameters_nature_Of_The_intercepted_call> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) IRI_Parameters_nature_Of_The_intercepted_call
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IRI_Parameters_nature_Of_The_intercepted_call (el: _Element): IRI_Parameters_nature_Of_The_intercepted_call {
-    if (!_cached_decoder_for_IRI_Parameters_nature_Of_The_intercepted_call) { _cached_decoder_for_IRI_Parameters_nature_Of_The_intercepted_call = $._decodeEnumerated; }
-    return _cached_decoder_for_IRI_Parameters_nature_Of_The_intercepted_call(el);
-}
-
-let _cached_encoder_for_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Encoder<IRI_Parameters_nature_Of_The_intercepted_call> | null = null;
-
-/**
- * @summary Encodes a(n) IRI_Parameters_nature_Of_The_intercepted_call into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IRI_Parameters_nature_Of_The_intercepted_call, encoded as an ASN.1 Element.
- */
-export
-function _encode_IRI_Parameters_nature_Of_The_intercepted_call (value: IRI_Parameters_nature_Of_The_intercepted_call, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IRI_Parameters_nature_Of_The_intercepted_call) { _cached_encoder_for_IRI_Parameters_nature_Of_The_intercepted_call = $._encodeEnumerated; }
-    return _cached_encoder_for_IRI_Parameters_nature_Of_The_intercepted_call(value, elGetter);
-}
+export const _encode_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Encoder<IRI_Parameters_nature_Of_The_intercepted_call> = $._encodeEnumerated;
 
 
 /* eslint-enable */

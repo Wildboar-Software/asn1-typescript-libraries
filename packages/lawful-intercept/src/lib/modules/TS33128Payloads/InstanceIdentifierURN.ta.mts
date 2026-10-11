@@ -20,34 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type InstanceIdentifierURN = UTF8String; // UTF8String
 
-let _cached_decoder_for_InstanceIdentifierURN: $.ASN1Decoder<InstanceIdentifierURN> | null = null;
+export const _decode_InstanceIdentifierURN: $.ASN1Decoder<InstanceIdentifierURN> = $._decodeUTF8String;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) InstanceIdentifierURN
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InstanceIdentifierURN (el: _Element): InstanceIdentifierURN {
-    if (!_cached_decoder_for_InstanceIdentifierURN) { _cached_decoder_for_InstanceIdentifierURN = $._decodeUTF8String; }
-    return _cached_decoder_for_InstanceIdentifierURN(el);
-}
-
-let _cached_encoder_for_InstanceIdentifierURN: $.ASN1Encoder<InstanceIdentifierURN> | null = null;
-
-/**
- * @summary Encodes a(n) InstanceIdentifierURN into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InstanceIdentifierURN, encoded as an ASN.1 Element.
- */
-export
-function _encode_InstanceIdentifierURN (value: InstanceIdentifierURN, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InstanceIdentifierURN) { _cached_encoder_for_InstanceIdentifierURN = $._encodeUTF8String; }
-    return _cached_encoder_for_InstanceIdentifierURN(value, elGetter);
-}
+export const _encode_InstanceIdentifierURN: $.ASN1Encoder<InstanceIdentifierURN> = $._encodeUTF8String;
 
 
 /* eslint-enable */

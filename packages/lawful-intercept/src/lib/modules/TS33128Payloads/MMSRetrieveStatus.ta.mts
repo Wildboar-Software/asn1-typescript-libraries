@@ -218,34 +218,9 @@ const MMSRetrieveStatus_errorPermanentContentUnsupported: MMSRetrieveStatus = MM
 export
 const errorPermanentContentUnsupported: MMSRetrieveStatus = MMSRetrieveStatus.errorPermanentContentUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMSRetrieveStatus: $.ASN1Decoder<MMSRetrieveStatus> | null = null;
+export const _decode_MMSRetrieveStatus: $.ASN1Decoder<MMSRetrieveStatus> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) MMSRetrieveStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MMSRetrieveStatus (el: _Element): MMSRetrieveStatus {
-    if (!_cached_decoder_for_MMSRetrieveStatus) { _cached_decoder_for_MMSRetrieveStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSRetrieveStatus(el);
-}
-
-let _cached_encoder_for_MMSRetrieveStatus: $.ASN1Encoder<MMSRetrieveStatus> | null = null;
-
-/**
- * @summary Encodes a(n) MMSRetrieveStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MMSRetrieveStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_MMSRetrieveStatus (value: MMSRetrieveStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSRetrieveStatus) { _cached_encoder_for_MMSRetrieveStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSRetrieveStatus(value, elGetter);
-}
+export const _encode_MMSRetrieveStatus: $.ASN1Encoder<MMSRetrieveStatus> = $._encodeEnumerated;
 
 
 /* eslint-enable */

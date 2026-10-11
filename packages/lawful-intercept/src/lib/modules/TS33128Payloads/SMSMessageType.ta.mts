@@ -238,34 +238,9 @@ const SMSMessageType_reserved: SMSMessageType = SMSMessageType.reserved; /* LONG
 export
 const reserved: SMSMessageType = SMSMessageType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_SMSMessageType: $.ASN1Decoder<SMSMessageType> | null = null;
+export const _decode_SMSMessageType: $.ASN1Decoder<SMSMessageType> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) SMSMessageType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SMSMessageType (el: _Element): SMSMessageType {
-    if (!_cached_decoder_for_SMSMessageType) { _cached_decoder_for_SMSMessageType = $._decodeEnumerated; }
-    return _cached_decoder_for_SMSMessageType(el);
-}
-
-let _cached_encoder_for_SMSMessageType: $.ASN1Encoder<SMSMessageType> | null = null;
-
-/**
- * @summary Encodes a(n) SMSMessageType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SMSMessageType, encoded as an ASN.1 Element.
- */
-export
-function _encode_SMSMessageType (value: SMSMessageType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMSMessageType) { _cached_encoder_for_SMSMessageType = $._encodeEnumerated; }
-    return _cached_encoder_for_SMSMessageType(value, elGetter);
-}
+export const _encode_SMSMessageType: $.ASN1Encoder<SMSMessageType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

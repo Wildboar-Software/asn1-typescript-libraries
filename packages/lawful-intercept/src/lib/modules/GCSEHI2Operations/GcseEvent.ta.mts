@@ -155,34 +155,9 @@ const GcseEvent_deactivationOfGcseGroupComms: GcseEvent = 7; /* LONG_NAMED_ENUME
 export
 const deactivationOfGcseGroupComms: GcseEvent = GcseEvent_deactivationOfGcseGroupComms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_GcseEvent: $.ASN1Decoder<GcseEvent> | null = null;
+export const _decode_GcseEvent: $.ASN1Decoder<GcseEvent> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) GcseEvent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_GcseEvent (el: _Element): GcseEvent {
-    if (!_cached_decoder_for_GcseEvent) { _cached_decoder_for_GcseEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_GcseEvent(el);
-}
-
-let _cached_encoder_for_GcseEvent: $.ASN1Encoder<GcseEvent> | null = null;
-
-/**
- * @summary Encodes a(n) GcseEvent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GcseEvent, encoded as an ASN.1 Element.
- */
-export
-function _encode_GcseEvent (value: GcseEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GcseEvent) { _cached_encoder_for_GcseEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_GcseEvent(value, elGetter);
-}
+export const _encode_GcseEvent: $.ASN1Encoder<GcseEvent> = $._encodeEnumerated;
 
 
 /* eslint-enable */

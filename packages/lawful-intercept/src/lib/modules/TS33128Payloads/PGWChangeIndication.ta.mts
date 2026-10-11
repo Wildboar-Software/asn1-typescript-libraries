@@ -20,34 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PGWChangeIndication = BOOLEAN; // BooleanType
 
-let _cached_decoder_for_PGWChangeIndication: $.ASN1Decoder<PGWChangeIndication> | null = null;
+export const _decode_PGWChangeIndication: $.ASN1Decoder<PGWChangeIndication> = $._decodeBoolean;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) PGWChangeIndication
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PGWChangeIndication (el: _Element): PGWChangeIndication {
-    if (!_cached_decoder_for_PGWChangeIndication) { _cached_decoder_for_PGWChangeIndication = $._decodeBoolean; }
-    return _cached_decoder_for_PGWChangeIndication(el);
-}
-
-let _cached_encoder_for_PGWChangeIndication: $.ASN1Encoder<PGWChangeIndication> | null = null;
-
-/**
- * @summary Encodes a(n) PGWChangeIndication into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PGWChangeIndication, encoded as an ASN.1 Element.
- */
-export
-function _encode_PGWChangeIndication (value: PGWChangeIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PGWChangeIndication) { _cached_encoder_for_PGWChangeIndication = $._encodeBoolean; }
-    return _cached_encoder_for_PGWChangeIndication(value, elGetter);
-}
+export const _encode_PGWChangeIndication: $.ASN1Encoder<PGWChangeIndication> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -98,34 +98,9 @@ const MMEDirection_uEInitiated: MMEDirection = MMEDirection.uEInitiated; /* LONG
 export
 const uEInitiated: MMEDirection = MMEDirection.uEInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
-let _cached_decoder_for_MMEDirection: $.ASN1Decoder<MMEDirection> | null = null;
+export const _decode_MMEDirection: $.ASN1Decoder<MMEDirection> = $._decodeEnumerated;
 
-/**
- * @summary Decodes an ASN.1 element into a(n) MMEDirection
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MMEDirection (el: _Element): MMEDirection {
-    if (!_cached_decoder_for_MMEDirection) { _cached_decoder_for_MMEDirection = $._decodeEnumerated; }
-    return _cached_decoder_for_MMEDirection(el);
-}
-
-let _cached_encoder_for_MMEDirection: $.ASN1Encoder<MMEDirection> | null = null;
-
-/**
- * @summary Encodes a(n) MMEDirection into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MMEDirection, encoded as an ASN.1 Element.
- */
-export
-function _encode_MMEDirection (value: MMEDirection, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMEDirection) { _cached_encoder_for_MMEDirection = $._encodeEnumerated; }
-    return _cached_encoder_for_MMEDirection(value, elGetter);
-}
+export const _encode_MMEDirection: $.ASN1Encoder<MMEDirection> = $._encodeEnumerated;
 
 
 /* eslint-enable */
