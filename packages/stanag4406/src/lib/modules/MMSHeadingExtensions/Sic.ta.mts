@@ -1,9 +1,12 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { lb_military_sic } from "../MMSUpperBounds/lb-military-sic.va.mjs";
+import { ub_military_sic } from "../MMSUpperBounds/ub-military-sic.va.mjs";
 
 
 
@@ -31,23 +34,14 @@ let _cached_decoder_for_Sic: $.ASN1Decoder<Sic> | null = null;
 export
 function _decode_Sic (el: _Element): Sic {
     if (!_cached_decoder_for_Sic) { _cached_decoder_for_Sic = $._decodePrintableString; }
-    return _cached_decoder_for_Sic(el);
+    const value = _cached_decoder_for_Sic(el);
+    if (value.length < Number(lb_military_sic) || value.length > Number(ub_military_sic)) {
+        throw new ASN1SizeError("Sic violates SIZE constraint");
+    }
+    return value;
 }
 
-let _cached_encoder_for_Sic: $.ASN1Encoder<Sic> | null = null;
-
-/**
- * @summary Encodes a(n) Sic into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Sic, encoded as an ASN.1 Element.
- */
-export
-function _encode_Sic (value: Sic, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Sic) { _cached_encoder_for_Sic = $._encodePrintableString; }
-    return _cached_encoder_for_Sic(value, elGetter);
-}
+export const _encode_Sic: $.ASN1Encoder<Sic> = $._encodePrintableString;
 
 
 /* eslint-enable */

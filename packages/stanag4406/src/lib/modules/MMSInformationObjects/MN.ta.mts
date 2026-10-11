@@ -1,73 +1,31 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
-    OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
-// export { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
+import {
+    ConversionEITsField,
+    _decode_ConversionEITsField,
+    _encode_ConversionEITsField,
+    IPMIntendedRecipientField,
+    _decode_IPMIntendedRecipientField,
+    _encode_IPMIntendedRecipientField,
+    IPNOriginatorField,
+    _decode_IPNOriginatorField,
+    _encode_IPNOriginatorField,
+    NotificationExtensionsField,
+    _decode_NotificationExtensionsField,
+    _encode_NotificationExtensionsField,
+    SubjectIPMField,
+    _decode_SubjectIPMField,
+    _encode_SubjectIPMField,
+    _extension_additions_list_spec_for_CommonFields,
+    _root_component_type_list_1_spec_for_CommonFields,
+    _root_component_type_list_2_spec_for_CommonFields,
+} from "@wildboar/x400/IPMSInformationObjects";
 
 
 /**
@@ -90,7 +48,36 @@ import { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformati
  */
 export
 class MN {
-    readonly _componentsOf_CommonFields: CommonFields;
+    /**
+     * @summary `subject_ipm`.
+     * @public
+     * @readonly
+     */
+    readonly subject_ipm: SubjectIPMField;
+    /**
+     * @summary `ipn_originator`.
+     * @public
+     * @readonly
+     */
+    readonly ipn_originator: OPTIONAL<IPNOriginatorField>;
+    /**
+     * @summary `ipm_intended_recipient`.
+     * @public
+     * @readonly
+     */
+    readonly ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>;
+    /**
+     * @summary `conversion_eits`.
+     * @public
+     * @readonly
+     */
+    readonly conversion_eits: OPTIONAL<ConversionEITsField>;
+    /**
+     * @summary `notification_extensions`.
+     * @public
+     * @readonly
+     */
+    readonly notification_extensions: OPTIONAL<NotificationExtensionsField>;
     /**
      * @summary `choice`.
      * @public
@@ -99,10 +86,18 @@ class MN {
     readonly choice: MN_choice;
 
     constructor (
-        _componentsOf_CommonFields: CommonFields,
+        subject_ipm: SubjectIPMField,
+        ipn_originator: OPTIONAL<IPNOriginatorField>,
+        ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>,
+        conversion_eits: OPTIONAL<ConversionEITsField>,
+        notification_extensions: OPTIONAL<NotificationExtensionsField>,
         choice: MN_choice
     ) {
-        this._componentsOf_CommonFields = _componentsOf_CommonFields;
+        this.subject_ipm = subject_ipm;
+        this.ipn_originator = ipn_originator;
+        this.ipm_intended_recipient = ipm_intended_recipient;
+        this.conversion_eits = conversion_eits;
+        this.notification_extensions = notification_extensions;
         this.choice = choice;
     }
 
@@ -119,7 +114,14 @@ class MN {
      * @returns {MN}
      */
     public static _from_object (_o: { [_K in keyof (MN)]: (MN)[_K] }): MN {
-        return new MN(_o._componentsOf_CommonFields, _o.choice);
+        return new MN(
+            _o.subject_ipm,
+            _o.ipn_originator,
+            _o.ipm_intended_recipient,
+            _o.conversion_eits,
+            _o.notification_extensions,
+            _o.choice
+        );
     }
 
 
@@ -135,7 +137,7 @@ class MN {
  */
 export
 const _root_component_type_list_1_spec_for_MN: $.ComponentSpec[] = [
-    /* FIXME: COULD_NOT_COMPILE_COMPONENTS_OF DefinedType */,
+    ..._root_component_type_list_1_spec_for_CommonFields,
     new $.ComponentSpec("choice", false, $.hasTag(_TagClass.context, 0))
 ];
 
@@ -149,7 +151,7 @@ const _root_component_type_list_1_spec_for_MN: $.ComponentSpec[] = [
  */
 export
 const _root_component_type_list_2_spec_for_MN: $.ComponentSpec[] = [
-    
+    ..._root_component_type_list_2_spec_for_CommonFields,
 ];
 
 /**
@@ -162,7 +164,7 @@ const _root_component_type_list_2_spec_for_MN: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_MN: $.ComponentSpec[] = [
-    
+    ..._extension_additions_list_spec_for_CommonFields,
 ];
 
 let _cached_decoder_for_MN: $.ASN1Decoder<MN> | null = null;
@@ -176,24 +178,32 @@ let _cached_decoder_for_MN: $.ASN1Decoder<MN> | null = null;
 export
 function _decode_MN (el: _Element): MN {
     if (!_cached_decoder_for_MN) { _cached_decoder_for_MN = function (el: _Element): MN {
-    /* START_OF_SET_COMPONENT_DECLARATIONS */
-    let _componentsOf!: CommonFields;
+    let subject_ipm!: SubjectIPMField;
+    let ipn_originator: OPTIONAL<IPNOriginatorField>;
+    let ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>;
+    let conversion_eits: OPTIONAL<ConversionEITsField>;
+    let notification_extensions: OPTIONAL<NotificationExtensionsField>;
     let choice!: MN_choice;
-    /* END_OF_SET_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
-        /* COULD_NOT_GENERATE_CALLBACK_FOR_COMPONENTS_OF */,
+        "subject-ipm": (_el: _Element): void => { subject_ipm = _decode_SubjectIPMField(_el); },
+        "ipn-originator": (_el: _Element): void => { ipn_originator = $._decode_implicit<IPNOriginatorField>(() => _decode_IPNOriginatorField)(_el); },
+        "ipm-intended-recipient": (_el: _Element): void => { ipm_intended_recipient = $._decode_implicit<IPMIntendedRecipientField>(() => _decode_IPMIntendedRecipientField)(_el); },
+        "conversion-eits": (_el: _Element): void => { conversion_eits = _decode_ConversionEITsField(_el); },
+        "notification-extensions": (_el: _Element): void => { notification_extensions = $._decode_implicit<NotificationExtensionsField>(() => _decode_NotificationExtensionsField)(_el); },
         "choice": (_el: _Element): void => { choice = $._decode_explicit<MN_choice>(() => _decode_MN_choice)(_el); }
     };
-    /* END_OF_CALLBACKS_MAP */
     $._parse_set(el, callbacks,
         _root_component_type_list_1_spec_for_MN,
         _extension_additions_list_spec_for_MN,
         _root_component_type_list_2_spec_for_MN,
         undefined,
     );
-    return new MN( /* SET_CONSTRUCTOR_CALL */
-        _componentsOf,
+    return new MN(
+        subject_ipm,
+        ipn_originator,
+        ipm_intended_recipient,
+        conversion_eits,
+        notification_extensions,
         choice
     );
 }; }
@@ -212,10 +222,22 @@ let _cached_encoder_for_MN: $.ASN1Encoder<MN> | null = null;
 export
 function _encode_MN (value: MN, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_MN) { _cached_encoder_for_MN = function (value: MN, elGetter: $.ASN1Encoder<MN>): _Element {
-    return $._encodeSet([
-        /* FIXME: COULD_NOT_COMPILE_COMPONENTS_OF DefinedType */,
-        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_MN_choice, $.BER)(value.choice, $.BER)
-    ], $.BER);
+    const _components: _Element[] = [];
+    _components.push(/* REQUIRED   */ _encode_SubjectIPMField(value.subject_ipm, $.BER));
+    if (value.ipn_originator !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => _encode_IPNOriginatorField, $.BER)(value.ipn_originator, $.BER));
+    }
+    if (value.ipm_intended_recipient !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_IPMIntendedRecipientField, $.BER)(value.ipm_intended_recipient, $.BER));
+    }
+    if (value.conversion_eits !== undefined) {
+        _components.push(/* IF_ABSENT  */ _encode_ConversionEITsField(value.conversion_eits, $.BER));
+    }
+    if (value.notification_extensions !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_NotificationExtensionsField, $.BER)(value.notification_extensions, $.BER));
+    }
+    _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_MN_choice, $.BER)(value.choice, $.BER));
+    return $._encodeSet(_components, $.BER);
 }; }
     return _cached_encoder_for_MN(value, elGetter);
 }

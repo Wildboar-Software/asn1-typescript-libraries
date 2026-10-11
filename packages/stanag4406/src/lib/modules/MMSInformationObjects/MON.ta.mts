@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
-// export { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
 
 
 /**

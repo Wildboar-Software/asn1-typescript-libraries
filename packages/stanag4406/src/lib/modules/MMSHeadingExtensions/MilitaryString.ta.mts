@@ -1,9 +1,11 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_military_string } from "../MMSUpperBounds/ub-military-string.va.mjs";
 
 
 
@@ -31,23 +33,14 @@ let _cached_decoder_for_MilitaryString: $.ASN1Decoder<MilitaryString> | null = n
 export
 function _decode_MilitaryString (el: _Element): MilitaryString {
     if (!_cached_decoder_for_MilitaryString) { _cached_decoder_for_MilitaryString = $._decodePrintableString; }
-    return _cached_decoder_for_MilitaryString(el);
+    const value = _cached_decoder_for_MilitaryString(el);
+    if (value.length < 1 || value.length > Number(ub_military_string)) {
+        throw new ASN1SizeError("MilitaryString violates SIZE constraint");
+    }
+    return value;
 }
 
-let _cached_encoder_for_MilitaryString: $.ASN1Encoder<MilitaryString> | null = null;
-
-/**
- * @summary Encodes a(n) MilitaryString into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MilitaryString, encoded as an ASN.1 Element.
- */
-export
-function _encode_MilitaryString (value: MilitaryString, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MilitaryString) { _cached_encoder_for_MilitaryString = $._encodePrintableString; }
-    return _cached_encoder_for_MilitaryString(value, elGetter);
-}
+export const _encode_MilitaryString: $.ASN1Encoder<MilitaryString> = $._encodePrintableString;
 
 
 /* eslint-enable */

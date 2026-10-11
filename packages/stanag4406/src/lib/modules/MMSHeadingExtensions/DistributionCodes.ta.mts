@@ -2,13 +2,13 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_military_number_of_sics } from "../MMSUpperBounds/ub-military-number-of-sics.va.mjs";
 import { Sic, _decode_Sic, _encode_Sic } from "../MMSHeadingExtensions/Sic.ta.mjs";
-// export { Sic, _decode_Sic, _encode_Sic } from "../MMSHeadingExtensions/Sic.ta.mjs";
 import { DistributionExtensionField, _decode_DistributionExtensionField, _encode_DistributionExtensionField } from "../MMSHeadingExtensions/DistributionExtensionField.ta.mjs";
-// export { DistributionExtensionField, _decode_DistributionExtensionField, _encode_DistributionExtensionField } from "../MMSHeadingExtensions/DistributionExtensionField.ta.mjs";
 
 
 /**
@@ -125,7 +125,12 @@ function _decode_DistributionCodes (el: _Element): DistributionCodes {
     /* END_OF_SET_COMPONENT_DECLARATIONS */
     /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
-        "sics": (_el: _Element): void => { sics = $._decode_implicit<Sic[]>(() => $._decodeSequenceOf<Sic>(() => _decode_Sic))(_el); },
+        "sics": (_el: _Element): void => {
+            sics = $._decode_implicit<Sic[]>(() => $._decodeSequenceOf<Sic>(() => _decode_Sic))(_el);
+            if (sics.length < 1 || sics.length > Number(ub_military_number_of_sics)) {
+                throw new ASN1SizeError("DistributionCodes.sics violates SIZE constraint");
+            }
+        },
         "dist-Extensions": (_el: _Element): void => { dist_Extensions = $._decode_implicit<DistributionExtensionField[]>(() => $._decodeSequenceOf<DistributionExtensionField>(() => _decode_DistributionExtensionField))(_el); }
     };
     /* END_OF_CALLBACKS_MAP */

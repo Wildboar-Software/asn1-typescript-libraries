@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { MessageDeliveryEnvelope, _decode_MessageDeliveryEnvelope, _encode_MessageDeliveryEnvelope } from "@wildboar/x400/MTSAbstractService";
 import { MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.ta.mjs";
-// export { MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.ta.mjs";
 
 
 /**
@@ -74,7 +74,7 @@ class ReceiveMNRNArgument {
  */
 export
 const _root_component_type_list_1_spec_for_ReceiveMNRNArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
 ];
 

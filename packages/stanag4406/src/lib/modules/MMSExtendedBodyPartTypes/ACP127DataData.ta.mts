@@ -1,9 +1,11 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     IA5String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_data_size } from "../MMSUpperBounds/ub-data-size.va.mjs";
 
 
 
@@ -31,23 +33,14 @@ let _cached_decoder_for_ACP127DataData: $.ASN1Decoder<ACP127DataData> | null = n
 export
 function _decode_ACP127DataData (el: _Element): ACP127DataData {
     if (!_cached_decoder_for_ACP127DataData) { _cached_decoder_for_ACP127DataData = $._decodeIA5String; }
-    return _cached_decoder_for_ACP127DataData(el);
+    const value = _cached_decoder_for_ACP127DataData(el);
+    if (value.length < 1 || value.length > Number(ub_data_size)) {
+        throw new ASN1SizeError("ACP127DataData violates SIZE constraint");
+    }
+    return value;
 }
 
-let _cached_encoder_for_ACP127DataData: $.ASN1Encoder<ACP127DataData> | null = null;
-
-/**
- * @summary Encodes a(n) ACP127DataData into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ACP127DataData, encoded as an ASN.1 Element.
- */
-export
-function _encode_ACP127DataData (value: ACP127DataData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ACP127DataData) { _cached_encoder_for_ACP127DataData = $._encodeIA5String; }
-    return _cached_encoder_for_ACP127DataData(value, elGetter);
-}
+export const _encode_ACP127DataData: $.ASN1Encoder<ACP127DataData> = $._encodeIA5String;
 
 
 /* eslint-enable */

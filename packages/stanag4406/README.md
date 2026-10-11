@@ -1,8 +1,7 @@
-# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
+# STANAG 4406 Military Message Handling System ASN.1 in TypeScript
 
-Data structures from the ASN.1 definitions defined in
-[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
-Telebiometrics Authentication Infrastructure (TAI).
+ASN.1 data structures based on the ASN.1 definitions in NATO STANAG 4406,
+the Military Message Handling System (MMHS).
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -21,5 +20,9 @@ programming languages, or if you have any other questions, please contact us at
 
 ## ESM-Only
 
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from the raw ASN.1 compiler outputs using AI
+(Grok 4.7) on 11 October 2026.
