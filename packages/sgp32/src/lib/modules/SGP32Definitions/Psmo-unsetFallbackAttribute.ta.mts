@@ -121,7 +121,7 @@ let _cached_encoder_for_Psmo_unsetFallbackAttribute: $.ASN1Encoder<Psmo_unsetFal
  */
 export
 function _encode_Psmo_unsetFallbackAttribute (value: Psmo_unsetFallbackAttribute, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Psmo_unsetFallbackAttribute) { _cached_encoder_for_Psmo_unsetFallbackAttribute = function (value: Psmo_unsetFallbackAttribute, elGetter: $.ASN1Encoder<Psmo_unsetFallbackAttribute>): _Element {
+    if (!_cached_encoder_for_Psmo_unsetFallbackAttribute) { _cached_encoder_for_Psmo_unsetFallbackAttribute = function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

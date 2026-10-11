@@ -147,7 +147,7 @@ let _cached_encoder_for_CompactSuccessResult: $.ASN1Encoder<CompactSuccessResult
  */
 export
 function _encode_CompactSuccessResult (value: CompactSuccessResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompactSuccessResult) { _cached_encoder_for_CompactSuccessResult = function (value: CompactSuccessResult, elGetter: $.ASN1Encoder<CompactSuccessResult>): _Element {
+    if (!_cached_encoder_for_CompactSuccessResult) { _cached_encoder_for_CompactSuccessResult = function (value: CompactSuccessResult): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.application, 15, () => $._encodeOctetString, $.BER)(value.compactAid, $.BER),

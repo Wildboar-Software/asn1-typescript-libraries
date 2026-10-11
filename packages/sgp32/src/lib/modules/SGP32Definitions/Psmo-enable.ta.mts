@@ -142,7 +142,7 @@ let _cached_encoder_for_Psmo_enable: $.ASN1Encoder<Psmo_enable> | null = null;
  */
 export
 function _encode_Psmo_enable (value: Psmo_enable, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Psmo_enable) { _cached_encoder_for_Psmo_enable = function (value: Psmo_enable, elGetter: $.ASN1Encoder<Psmo_enable>): _Element {
+    if (!_cached_encoder_for_Psmo_enable) { _cached_encoder_for_Psmo_enable = function (value: Psmo_enable): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.application, 26, () => _encode_Iccid, $.BER)(value.iccid, $.BER),

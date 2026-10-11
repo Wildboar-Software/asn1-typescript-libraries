@@ -121,7 +121,7 @@ let _cached_encoder_for_ProvideEimPackageResultResponse_emptyResponse: $.ASN1Enc
  */
 export
 function _encode_ProvideEimPackageResultResponse_emptyResponse (value: ProvideEimPackageResultResponse_emptyResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProvideEimPackageResultResponse_emptyResponse) { _cached_encoder_for_ProvideEimPackageResultResponse_emptyResponse = function (value: ProvideEimPackageResultResponse_emptyResponse, elGetter: $.ASN1Encoder<ProvideEimPackageResultResponse_emptyResponse>): _Element {
+    if (!_cached_encoder_for_ProvideEimPackageResultResponse_emptyResponse) { _cached_encoder_for_ProvideEimPackageResultResponse_emptyResponse = function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

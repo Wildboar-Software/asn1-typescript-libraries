@@ -131,7 +131,7 @@ let _cached_encoder_for_ProfileDownloadData_contactSmds: $.ASN1Encoder<ProfileDo
  */
 export
 function _encode_ProfileDownloadData_contactSmds (value: ProfileDownloadData_contactSmds, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileDownloadData_contactSmds) { _cached_encoder_for_ProfileDownloadData_contactSmds = function (value: ProfileDownloadData_contactSmds, elGetter: $.ASN1Encoder<ProfileDownloadData_contactSmds>): _Element {
+    if (!_cached_encoder_for_ProfileDownloadData_contactSmds) { _cached_encoder_for_ProfileDownloadData_contactSmds = function (value: ProfileDownloadData_contactSmds): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.smdsAddress === undefined) ? undefined : $._encodeUTF8String(value.smdsAddress, $.BER))

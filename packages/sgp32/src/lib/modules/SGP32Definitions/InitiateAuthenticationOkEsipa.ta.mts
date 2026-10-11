@@ -201,7 +201,7 @@ let _cached_encoder_for_InitiateAuthenticationOkEsipa: $.ASN1Encoder<InitiateAut
  */
 export
 function _encode_InitiateAuthenticationOkEsipa (value: InitiateAuthenticationOkEsipa, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiateAuthenticationOkEsipa) { _cached_encoder_for_InitiateAuthenticationOkEsipa = function (value: InitiateAuthenticationOkEsipa, elGetter: $.ASN1Encoder<InitiateAuthenticationOkEsipa>): _Element {
+    if (!_cached_encoder_for_InitiateAuthenticationOkEsipa) { _cached_encoder_for_InitiateAuthenticationOkEsipa = function (value: InitiateAuthenticationOkEsipa): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.transactionId === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER)),

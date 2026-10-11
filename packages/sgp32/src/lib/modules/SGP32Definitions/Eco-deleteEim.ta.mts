@@ -129,7 +129,7 @@ let _cached_encoder_for_Eco_deleteEim: $.ASN1Encoder<Eco_deleteEim> | null = nul
  */
 export
 function _encode_Eco_deleteEim (value: Eco_deleteEim, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Eco_deleteEim) { _cached_encoder_for_Eco_deleteEim = function (value: Eco_deleteEim, elGetter: $.ASN1Encoder<Eco_deleteEim>): _Element {
+    if (!_cached_encoder_for_Eco_deleteEim) { _cached_encoder_for_Eco_deleteEim = function (value: Eco_deleteEim): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeUTF8String, $.BER)(value.eimId, $.BER)

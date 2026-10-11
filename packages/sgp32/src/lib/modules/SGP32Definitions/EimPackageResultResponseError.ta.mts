@@ -143,7 +143,7 @@ let _cached_encoder_for_EimPackageResultResponseError: $.ASN1Encoder<EimPackageR
  */
 export
 function _encode_EimPackageResultResponseError (value: EimPackageResultResponseError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EimPackageResultResponseError) { _cached_encoder_for_EimPackageResultResponseError = function (value: EimPackageResultResponseError, elGetter: $.ASN1Encoder<EimPackageResultResponseError>): _Element {
+    if (!_cached_encoder_for_EimPackageResultResponseError) { _cached_encoder_for_EimPackageResultResponseError = function (value: EimPackageResultResponseError): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.eimTransactionId === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.eimTransactionId, $.BER)),

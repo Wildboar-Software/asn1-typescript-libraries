@@ -134,7 +134,7 @@ let _cached_encoder_for_EimPackageReceivedWithCid: $.ASN1Encoder<EimPackageRecei
  */
 export
 function _encode_EimPackageReceivedWithCid (value: EimPackageReceivedWithCid, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EimPackageReceivedWithCid) { _cached_encoder_for_EimPackageReceivedWithCid = function (value: EimPackageReceivedWithCid, elGetter: $.ASN1Encoder<EimPackageReceivedWithCid>): _Element {
+    if (!_cached_encoder_for_EimPackageReceivedWithCid) { _cached_encoder_for_EimPackageReceivedWithCid = function (value: EimPackageReceivedWithCid): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.correlationId === undefined) ? undefined : _encode_EimPackageReceivedWithCid_correlationId(value.correlationId, $.BER))

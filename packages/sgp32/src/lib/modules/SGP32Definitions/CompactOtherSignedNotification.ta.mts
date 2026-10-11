@@ -165,7 +165,7 @@ let _cached_encoder_for_CompactOtherSignedNotification: $.ASN1Encoder<CompactOth
  */
 export
 function _encode_CompactOtherSignedNotification (value: CompactOtherSignedNotification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompactOtherSignedNotification) { _cached_encoder_for_CompactOtherSignedNotification = function (value: CompactOtherSignedNotification, elGetter: $.ASN1Encoder<CompactOtherSignedNotification>): _Element {
+    if (!_cached_encoder_for_CompactOtherSignedNotification) { _cached_encoder_for_CompactOtherSignedNotification = function (value: CompactOtherSignedNotification): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.eidValue === undefined) ? undefined : $._encode_implicit(_TagClass.application, 26, () => _encode_Octet16, $.BER)(value.eidValue, $.BER)),

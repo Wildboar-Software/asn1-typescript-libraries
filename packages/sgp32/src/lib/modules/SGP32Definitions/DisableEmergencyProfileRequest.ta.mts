@@ -129,7 +129,7 @@ let _cached_encoder_for_DisableEmergencyProfileRequest: $.ASN1Encoder<DisableEme
  */
 export
 function _encode_DisableEmergencyProfileRequest (value: DisableEmergencyProfileRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DisableEmergencyProfileRequest) { _cached_encoder_for_DisableEmergencyProfileRequest = $._encode_implicit(_TagClass.context, 92, () => function (value: DisableEmergencyProfileRequest, elGetter: $.ASN1Encoder<DisableEmergencyProfileRequest>): _Element {
+    if (!_cached_encoder_for_DisableEmergencyProfileRequest) { _cached_encoder_for_DisableEmergencyProfileRequest = $._encode_implicit(_TagClass.context, 92, () => function (value: DisableEmergencyProfileRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeBoolean(value.refreshFlag, $.BER)

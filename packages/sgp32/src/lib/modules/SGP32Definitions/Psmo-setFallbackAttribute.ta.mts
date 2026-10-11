@@ -128,7 +128,7 @@ let _cached_encoder_for_Psmo_setFallbackAttribute: $.ASN1Encoder<Psmo_setFallbac
  */
 export
 function _encode_Psmo_setFallbackAttribute (value: Psmo_setFallbackAttribute, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Psmo_setFallbackAttribute) { _cached_encoder_for_Psmo_setFallbackAttribute = function (value: Psmo_setFallbackAttribute, elGetter: $.ASN1Encoder<Psmo_setFallbackAttribute>): _Element {
+    if (!_cached_encoder_for_Psmo_setFallbackAttribute) { _cached_encoder_for_Psmo_setFallbackAttribute = function (value: Psmo_setFallbackAttribute): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.application, 26, () => _encode_Iccid, $.BER)(value.iccid, $.BER)

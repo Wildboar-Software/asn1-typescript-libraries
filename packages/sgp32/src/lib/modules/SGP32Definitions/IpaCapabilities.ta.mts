@@ -170,7 +170,7 @@ let _cached_encoder_for_IpaCapabilities: $.ASN1Encoder<IpaCapabilities> | null =
  */
 export
 function _encode_IpaCapabilities (value: IpaCapabilities, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IpaCapabilities) { _cached_encoder_for_IpaCapabilities = function (value: IpaCapabilities, elGetter: $.ASN1Encoder<IpaCapabilities>): _Element {
+    if (!_cached_encoder_for_IpaCapabilities) { _cached_encoder_for_IpaCapabilities = function (value: IpaCapabilities): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_IpaCapabilities_ipaFeatures, $.BER)(value.ipaFeatures, $.BER),

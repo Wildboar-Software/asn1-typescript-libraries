@@ -131,7 +131,7 @@ let _cached_encoder_for_ConnectivityParameters: $.ASN1Encoder<ConnectivityParame
  */
 export
 function _encode_ConnectivityParameters (value: ConnectivityParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ConnectivityParameters) { _cached_encoder_for_ConnectivityParameters = function (value: ConnectivityParameters, elGetter: $.ASN1Encoder<ConnectivityParameters>): _Element {
+    if (!_cached_encoder_for_ConnectivityParameters) { _cached_encoder_for_ConnectivityParameters = function (value: ConnectivityParameters): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.httpParams === undefined) ? undefined : $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.httpParams, $.BER))

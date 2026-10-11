@@ -123,7 +123,7 @@ let _cached_encoder_for_GetConnectivityParametersRequest: $.ASN1Encoder<GetConne
  */
 export
 function _encode_GetConnectivityParametersRequest (value: GetConnectivityParametersRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetConnectivityParametersRequest) { _cached_encoder_for_GetConnectivityParametersRequest = $._encode_implicit(_TagClass.context, 95, () => function (value: GetConnectivityParametersRequest, elGetter: $.ASN1Encoder<GetConnectivityParametersRequest>): _Element {
+    if (!_cached_encoder_for_GetConnectivityParametersRequest) { _cached_encoder_for_GetConnectivityParametersRequest = $._encode_implicit(_TagClass.context, 95, () => function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }, $.BER); }

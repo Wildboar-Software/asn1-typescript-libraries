@@ -121,7 +121,7 @@ let _cached_encoder_for_Eco_listEim: $.ASN1Encoder<Eco_listEim> | null = null;
  */
 export
 function _encode_Eco_listEim (value: Eco_listEim, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Eco_listEim) { _cached_encoder_for_Eco_listEim = function (value: Eco_listEim, elGetter: $.ASN1Encoder<Eco_listEim>): _Element {
+    if (!_cached_encoder_for_Eco_listEim) { _cached_encoder_for_Eco_listEim = function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }

@@ -142,7 +142,7 @@ let _cached_encoder_for_CompactCancelSessionResponseOk: $.ASN1Encoder<CompactCan
  */
 export
 function _encode_CompactCancelSessionResponseOk (value: CompactCancelSessionResponseOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompactCancelSessionResponseOk) { _cached_encoder_for_CompactCancelSessionResponseOk = function (value: CompactCancelSessionResponseOk, elGetter: $.ASN1Encoder<CompactCancelSessionResponseOk>): _Element {
+    if (!_cached_encoder_for_CompactCancelSessionResponseOk) { _cached_encoder_for_CompactCancelSessionResponseOk = function (value: CompactCancelSessionResponseOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CompactEuiccCancelSessionSigned(value.compactEuiccCancelSessionSigned, $.BER),

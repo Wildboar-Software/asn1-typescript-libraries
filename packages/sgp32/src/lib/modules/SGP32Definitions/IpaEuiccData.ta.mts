@@ -264,7 +264,7 @@ let _cached_encoder_for_IpaEuiccData: $.ASN1Encoder<IpaEuiccData> | null = null;
  */
 export
 function _encode_IpaEuiccData (value: IpaEuiccData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IpaEuiccData) { _cached_encoder_for_IpaEuiccData = function (value: IpaEuiccData, elGetter: $.ASN1Encoder<IpaEuiccData>): _Element {
+    if (!_cached_encoder_for_IpaEuiccData) { _cached_encoder_for_IpaEuiccData = function (value: IpaEuiccData): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.notificationsList === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => _encode_PendingNotificationList, $.BER)(value.notificationsList, $.BER)),

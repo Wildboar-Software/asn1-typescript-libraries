@@ -148,7 +148,7 @@ let _cached_encoder_for_EimIdInfo: $.ASN1Encoder<EimIdInfo> | null = null;
  */
 export
 function _encode_EimIdInfo (value: EimIdInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EimIdInfo) { _cached_encoder_for_EimIdInfo = function (value: EimIdInfo, elGetter: $.ASN1Encoder<EimIdInfo>): _Element {
+    if (!_cached_encoder_for_EimIdInfo) { _cached_encoder_for_EimIdInfo = function (value: EimIdInfo): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeUTF8String, $.BER)(value.eimId, $.BER),

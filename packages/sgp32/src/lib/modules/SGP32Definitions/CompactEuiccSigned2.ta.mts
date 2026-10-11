@@ -142,7 +142,7 @@ let _cached_encoder_for_CompactEuiccSigned2: $.ASN1Encoder<CompactEuiccSigned2> 
  */
 export
 function _encode_CompactEuiccSigned2 (value: CompactEuiccSigned2, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompactEuiccSigned2) { _cached_encoder_for_CompactEuiccSigned2 = function (value: CompactEuiccSigned2, elGetter: $.ASN1Encoder<CompactEuiccSigned2>): _Element {
+    if (!_cached_encoder_for_CompactEuiccSigned2) { _cached_encoder_for_CompactEuiccSigned2 = function (value: CompactEuiccSigned2): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.euiccOtpk === undefined) ? undefined : $._encode_implicit(_TagClass.application, 73, () => $._encodeOctetString, $.BER)(value.euiccOtpk, $.BER)),

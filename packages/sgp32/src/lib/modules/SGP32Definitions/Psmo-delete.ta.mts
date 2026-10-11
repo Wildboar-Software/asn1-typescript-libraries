@@ -128,7 +128,7 @@ let _cached_encoder_for_Psmo_delete: $.ASN1Encoder<Psmo_delete> | null = null;
  */
 export
 function _encode_Psmo_delete (value: Psmo_delete, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Psmo_delete) { _cached_encoder_for_Psmo_delete = function (value: Psmo_delete, elGetter: $.ASN1Encoder<Psmo_delete>): _Element {
+    if (!_cached_encoder_for_Psmo_delete) { _cached_encoder_for_Psmo_delete = function (value: Psmo_delete): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.application, 26, () => _encode_Iccid, $.BER)(value.iccid, $.BER)

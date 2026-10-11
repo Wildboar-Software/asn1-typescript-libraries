@@ -172,7 +172,7 @@ let _cached_encoder_for_GetEimPackageRequest: $.ASN1Encoder<GetEimPackageRequest
  */
 export
 function _encode_GetEimPackageRequest (value: GetEimPackageRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetEimPackageRequest) { _cached_encoder_for_GetEimPackageRequest = $._encode_implicit(_TagClass.context, 79, () => function (value: GetEimPackageRequest, elGetter: $.ASN1Encoder<GetEimPackageRequest>): _Element {
+    if (!_cached_encoder_for_GetEimPackageRequest) { _cached_encoder_for_GetEimPackageRequest = $._encode_implicit(_TagClass.context, 79, () => function (value: GetEimPackageRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.application, 26, () => _encode_Octet16, $.BER)(value.eidValue, $.BER),

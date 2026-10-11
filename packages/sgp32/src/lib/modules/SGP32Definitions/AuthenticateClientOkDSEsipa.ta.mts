@@ -143,7 +143,7 @@ let _cached_encoder_for_AuthenticateClientOkDSEsipa: $.ASN1Encoder<AuthenticateC
  */
 export
 function _encode_AuthenticateClientOkDSEsipa (value: AuthenticateClientOkDSEsipa, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateClientOkDSEsipa) { _cached_encoder_for_AuthenticateClientOkDSEsipa = function (value: AuthenticateClientOkDSEsipa, elGetter: $.ASN1Encoder<AuthenticateClientOkDSEsipa>): _Element {
+    if (!_cached_encoder_for_AuthenticateClientOkDSEsipa) { _cached_encoder_for_AuthenticateClientOkDSEsipa = function (value: AuthenticateClientOkDSEsipa): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

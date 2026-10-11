@@ -143,7 +143,7 @@ let _cached_encoder_for_ProvideEimPackageResult: $.ASN1Encoder<ProvideEimPackage
  */
 export
 function _encode_ProvideEimPackageResult (value: ProvideEimPackageResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProvideEimPackageResult) { _cached_encoder_for_ProvideEimPackageResult = $._encode_implicit(_TagClass.context, 80, () => function (value: ProvideEimPackageResult, elGetter: $.ASN1Encoder<ProvideEimPackageResult>): _Element {
+    if (!_cached_encoder_for_ProvideEimPackageResult) { _cached_encoder_for_ProvideEimPackageResult = $._encode_implicit(_TagClass.context, 80, () => function (value: ProvideEimPackageResult): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.eidValue === undefined) ? undefined : $._encode_implicit(_TagClass.application, 26, () => _encode_Octet16, $.BER)(value.eidValue, $.BER)),

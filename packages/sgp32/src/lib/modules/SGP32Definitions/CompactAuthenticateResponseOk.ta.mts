@@ -169,7 +169,7 @@ let _cached_encoder_for_CompactAuthenticateResponseOk: $.ASN1Encoder<CompactAuth
  */
 export
 function _encode_CompactAuthenticateResponseOk (value: CompactAuthenticateResponseOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompactAuthenticateResponseOk) { _cached_encoder_for_CompactAuthenticateResponseOk = function (value: CompactAuthenticateResponseOk, elGetter: $.ASN1Encoder<CompactAuthenticateResponseOk>): _Element {
+    if (!_cached_encoder_for_CompactAuthenticateResponseOk) { _cached_encoder_for_CompactAuthenticateResponseOk = function (value: CompactAuthenticateResponseOk): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_CompactAuthenticateResponseOk_signedData(value.signedData, $.BER),

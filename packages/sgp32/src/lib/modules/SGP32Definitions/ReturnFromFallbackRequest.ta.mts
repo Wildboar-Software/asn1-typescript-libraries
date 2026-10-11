@@ -129,7 +129,7 @@ let _cached_encoder_for_ReturnFromFallbackRequest: $.ASN1Encoder<ReturnFromFallb
  */
 export
 function _encode_ReturnFromFallbackRequest (value: ReturnFromFallbackRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReturnFromFallbackRequest) { _cached_encoder_for_ReturnFromFallbackRequest = $._encode_implicit(_TagClass.context, 94, () => function (value: ReturnFromFallbackRequest, elGetter: $.ASN1Encoder<ReturnFromFallbackRequest>): _Element {
+    if (!_cached_encoder_for_ReturnFromFallbackRequest) { _cached_encoder_for_ReturnFromFallbackRequest = $._encode_implicit(_TagClass.context, 94, () => function (value: ReturnFromFallbackRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeBoolean(value.refreshFlag, $.BER)

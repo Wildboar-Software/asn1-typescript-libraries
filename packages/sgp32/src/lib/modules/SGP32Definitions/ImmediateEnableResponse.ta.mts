@@ -135,7 +135,7 @@ let _cached_encoder_for_ImmediateEnableResponse: $.ASN1Encoder<ImmediateEnableRe
  */
 export
 function _encode_ImmediateEnableResponse (value: ImmediateEnableResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ImmediateEnableResponse) { _cached_encoder_for_ImmediateEnableResponse = $._encode_implicit(_TagClass.context, 90, () => function (value: ImmediateEnableResponse, elGetter: $.ASN1Encoder<ImmediateEnableResponse>): _Element {
+    if (!_cached_encoder_for_ImmediateEnableResponse) { _cached_encoder_for_ImmediateEnableResponse = $._encode_implicit(_TagClass.context, 90, () => function (value: ImmediateEnableResponse): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ImmediateEnableResponse_immediateEnableResult, $.BER)(value.immediateEnableResult, $.BER)

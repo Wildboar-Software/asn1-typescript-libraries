@@ -129,7 +129,7 @@ let _cached_encoder_for_ProfileRollbackRequest: $.ASN1Encoder<ProfileRollbackReq
  */
 export
 function _encode_ProfileRollbackRequest (value: ProfileRollbackRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileRollbackRequest) { _cached_encoder_for_ProfileRollbackRequest = $._encode_implicit(_TagClass.context, 88, () => function (value: ProfileRollbackRequest, elGetter: $.ASN1Encoder<ProfileRollbackRequest>): _Element {
+    if (!_cached_encoder_for_ProfileRollbackRequest) { _cached_encoder_for_ProfileRollbackRequest = $._encode_implicit(_TagClass.context, 88, () => function (value: ProfileRollbackRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeBoolean(value.refreshFlag, $.BER)

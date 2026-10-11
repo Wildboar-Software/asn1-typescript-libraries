@@ -184,7 +184,7 @@ let _cached_encoder_for_EuiccPackageSigned: $.ASN1Encoder<EuiccPackageSigned> | 
  */
 export
 function _encode_EuiccPackageSigned (value: EuiccPackageSigned, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EuiccPackageSigned) { _cached_encoder_for_EuiccPackageSigned = function (value: EuiccPackageSigned, elGetter: $.ASN1Encoder<EuiccPackageSigned>): _Element {
+    if (!_cached_encoder_for_EuiccPackageSigned) { _cached_encoder_for_EuiccPackageSigned = function (value: EuiccPackageSigned): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeUTF8String, $.BER)(value.eimId, $.BER),

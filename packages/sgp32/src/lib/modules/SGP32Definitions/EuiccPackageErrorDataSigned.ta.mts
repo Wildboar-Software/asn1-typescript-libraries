@@ -172,7 +172,7 @@ let _cached_encoder_for_EuiccPackageErrorDataSigned: $.ASN1Encoder<EuiccPackageE
  */
 export
 function _encode_EuiccPackageErrorDataSigned (value: EuiccPackageErrorDataSigned, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EuiccPackageErrorDataSigned) { _cached_encoder_for_EuiccPackageErrorDataSigned = function (value: EuiccPackageErrorDataSigned, elGetter: $.ASN1Encoder<EuiccPackageErrorDataSigned>): _Element {
+    if (!_cached_encoder_for_EuiccPackageErrorDataSigned) { _cached_encoder_for_EuiccPackageErrorDataSigned = function (value: EuiccPackageErrorDataSigned): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeUTF8String, $.BER)(value.eimId, $.BER),

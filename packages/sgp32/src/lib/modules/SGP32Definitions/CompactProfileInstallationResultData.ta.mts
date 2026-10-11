@@ -176,7 +176,7 @@ let _cached_encoder_for_CompactProfileInstallationResultData: $.ASN1Encoder<Comp
  */
 export
 function _encode_CompactProfileInstallationResultData (value: CompactProfileInstallationResultData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompactProfileInstallationResultData) { _cached_encoder_for_CompactProfileInstallationResultData = function (value: CompactProfileInstallationResultData, elGetter: $.ASN1Encoder<CompactProfileInstallationResultData>): _Element {
+    if (!_cached_encoder_for_CompactProfileInstallationResultData) { _cached_encoder_for_CompactProfileInstallationResultData = function (value: CompactProfileInstallationResultData): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TransactionId, $.BER)(value.transactionId, $.BER),

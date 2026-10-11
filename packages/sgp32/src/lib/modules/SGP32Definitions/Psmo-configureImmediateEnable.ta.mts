@@ -155,7 +155,7 @@ let _cached_encoder_for_Psmo_configureImmediateEnable: $.ASN1Encoder<Psmo_config
  */
 export
 function _encode_Psmo_configureImmediateEnable (value: Psmo_configureImmediateEnable, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Psmo_configureImmediateEnable) { _cached_encoder_for_Psmo_configureImmediateEnable = function (value: Psmo_configureImmediateEnable, elGetter: $.ASN1Encoder<Psmo_configureImmediateEnable>): _Element {
+    if (!_cached_encoder_for_Psmo_configureImmediateEnable) { _cached_encoder_for_Psmo_configureImmediateEnable = function (value: Psmo_configureImmediateEnable): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.immediateEnableFlag === undefined) ? undefined : $._encode_implicit(_TagClass.context, 0, () => $._encodeNull, $.BER)(value.immediateEnableFlag, $.BER)),

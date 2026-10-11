@@ -140,7 +140,7 @@ let _cached_encoder_for_GetCertsResponse_certs: $.ASN1Encoder<GetCertsResponse_c
  */
 export
 function _encode_GetCertsResponse_certs (value: GetCertsResponse_certs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetCertsResponse_certs) { _cached_encoder_for_GetCertsResponse_certs = function (value: GetCertsResponse_certs, elGetter: $.ASN1Encoder<GetCertsResponse_certs>): _Element {
+    if (!_cached_encoder_for_GetCertsResponse_certs) { _cached_encoder_for_GetCertsResponse_certs = function (value: GetCertsResponse_certs): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 5, () => _encode_Certificate, $.BER)(value.eumCertificate, $.BER),

@@ -129,7 +129,7 @@ let _cached_encoder_for_ImmediateEnableRequest: $.ASN1Encoder<ImmediateEnableReq
  */
 export
 function _encode_ImmediateEnableRequest (value: ImmediateEnableRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ImmediateEnableRequest) { _cached_encoder_for_ImmediateEnableRequest = $._encode_implicit(_TagClass.context, 90, () => function (value: ImmediateEnableRequest, elGetter: $.ASN1Encoder<ImmediateEnableRequest>): _Element {
+    if (!_cached_encoder_for_ImmediateEnableRequest) { _cached_encoder_for_ImmediateEnableRequest = $._encode_implicit(_TagClass.context, 90, () => function (value: ImmediateEnableRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeBoolean(value.refreshFlag, $.BER)

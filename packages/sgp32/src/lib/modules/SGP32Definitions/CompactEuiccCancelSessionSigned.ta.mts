@@ -130,7 +130,7 @@ let _cached_encoder_for_CompactEuiccCancelSessionSigned: $.ASN1Encoder<CompactEu
  */
 export
 function _encode_CompactEuiccCancelSessionSigned (value: CompactEuiccCancelSessionSigned, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompactEuiccCancelSessionSigned) { _cached_encoder_for_CompactEuiccCancelSessionSigned = function (value: CompactEuiccCancelSessionSigned, elGetter: $.ASN1Encoder<CompactEuiccCancelSessionSigned>): _Element {
+    if (!_cached_encoder_for_CompactEuiccCancelSessionSigned) { _cached_encoder_for_CompactEuiccCancelSessionSigned = function (value: CompactEuiccCancelSessionSigned): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.reason === undefined) ? undefined : _encode_CancelSessionReason(value.reason, $.BER))

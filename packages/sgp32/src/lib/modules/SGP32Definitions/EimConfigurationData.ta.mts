@@ -264,7 +264,7 @@ let _cached_encoder_for_EimConfigurationData: $.ASN1Encoder<EimConfigurationData
  */
 export
 function _encode_EimConfigurationData (value: EimConfigurationData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EimConfigurationData) { _cached_encoder_for_EimConfigurationData = function (value: EimConfigurationData, elGetter: $.ASN1Encoder<EimConfigurationData>): _Element {
+    if (!_cached_encoder_for_EimConfigurationData) { _cached_encoder_for_EimConfigurationData = function (value: EimConfigurationData): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeUTF8String, $.BER)(value.eimId, $.BER),

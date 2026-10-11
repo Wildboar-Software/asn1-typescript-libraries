@@ -132,7 +132,7 @@ let _cached_encoder_for_ISDRProprietaryApplicationTemplateIoT: $.ASN1Encoder<ISD
  */
 export
 function _encode_ISDRProprietaryApplicationTemplateIoT (value: ISDRProprietaryApplicationTemplateIoT, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISDRProprietaryApplicationTemplateIoT) { _cached_encoder_for_ISDRProprietaryApplicationTemplateIoT = $._encode_implicit(_TagClass.private, 1, () => function (value: ISDRProprietaryApplicationTemplateIoT, elGetter: $.ASN1Encoder<ISDRProprietaryApplicationTemplateIoT>): _Element {
+    if (!_cached_encoder_for_ISDRProprietaryApplicationTemplateIoT) { _cached_encoder_for_ISDRProprietaryApplicationTemplateIoT = $._encode_implicit(_TagClass.private, 1, () => function (value: ISDRProprietaryApplicationTemplateIoT): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_ISDRProprietaryApplicationTemplateIoT_euiccConfiguration(value.euiccConfiguration, $.BER)

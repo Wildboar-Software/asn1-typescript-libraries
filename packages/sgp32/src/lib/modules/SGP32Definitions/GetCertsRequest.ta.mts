@@ -130,7 +130,7 @@ let _cached_encoder_for_GetCertsRequest: $.ASN1Encoder<GetCertsRequest> | null =
  */
 export
 function _encode_GetCertsRequest (value: GetCertsRequest, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetCertsRequest) { _cached_encoder_for_GetCertsRequest = $._encode_implicit(_TagClass.context, 86, () => function (value: GetCertsRequest, elGetter: $.ASN1Encoder<GetCertsRequest>): _Element {
+    if (!_cached_encoder_for_GetCertsRequest) { _cached_encoder_for_GetCertsRequest = $._encode_implicit(_TagClass.context, 86, () => function (value: GetCertsRequest): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* IF_ABSENT  */ ((value.euiccCiPKId === undefined) ? undefined : _encode_SubjectKeyIdentifier(value.euiccCiPKId, $.BER))

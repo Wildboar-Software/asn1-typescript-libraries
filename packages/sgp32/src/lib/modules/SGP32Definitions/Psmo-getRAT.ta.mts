@@ -121,7 +121,7 @@ let _cached_encoder_for_Psmo_getRAT: $.ASN1Encoder<Psmo_getRAT> | null = null;
  */
 export
 function _encode_Psmo_getRAT (value: Psmo_getRAT, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Psmo_getRAT) { _cached_encoder_for_Psmo_getRAT = function (value: Psmo_getRAT, elGetter: $.ASN1Encoder<Psmo_getRAT>): _Element {
+    if (!_cached_encoder_for_Psmo_getRAT) { _cached_encoder_for_Psmo_getRAT = function (): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
     ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
 }; }
