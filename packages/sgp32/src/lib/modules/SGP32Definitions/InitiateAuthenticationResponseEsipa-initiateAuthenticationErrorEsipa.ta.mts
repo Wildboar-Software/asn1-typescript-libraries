@@ -131,35 +131,8 @@ const InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa_undef
  */
 export
 const undefinedError: InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa = InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa: $.ASN1Decoder<InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa (el: _Element): InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa {
-    if (!_cached_decoder_for_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa) { _cached_decoder_for_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa = $._decodeInteger; }
-    return _cached_decoder_for_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa(el);
-}
-
-let _cached_encoder_for_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa: $.ASN1Encoder<InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa> | null = null;
-
-/**
- * @summary Encodes a(n) InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa, encoded as an ASN.1 Element.
- */
-export
-function _encode_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa (value: InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa) { _cached_encoder_for_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa = $._encodeInteger; }
-    return _cached_encoder_for_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa(value, elGetter);
-}
+export const _decode_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa: $.ASN1Decoder<InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa> = $._decodeInteger;
+export const _encode_InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa: $.ASN1Encoder<InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa> = $._encodeInteger;
 
 
 /* eslint-enable */

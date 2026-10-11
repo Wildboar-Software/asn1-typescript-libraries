@@ -122,35 +122,8 @@ const UpdateEimResult_undefinedError: UpdateEimResult = 127; /* LONG_NAMED_INTEG
  */
 export
 const undefinedError: UpdateEimResult = UpdateEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_UpdateEimResult: $.ASN1Decoder<UpdateEimResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UpdateEimResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UpdateEimResult (el: _Element): UpdateEimResult {
-    if (!_cached_decoder_for_UpdateEimResult) { _cached_decoder_for_UpdateEimResult = $._decodeInteger; }
-    return _cached_decoder_for_UpdateEimResult(el);
-}
-
-let _cached_encoder_for_UpdateEimResult: $.ASN1Encoder<UpdateEimResult> | null = null;
-
-/**
- * @summary Encodes a(n) UpdateEimResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UpdateEimResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_UpdateEimResult (value: UpdateEimResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UpdateEimResult) { _cached_encoder_for_UpdateEimResult = $._encodeInteger; }
-    return _cached_encoder_for_UpdateEimResult(value, elGetter);
-}
+export const _decode_UpdateEimResult: $.ASN1Decoder<UpdateEimResult> = $._decodeInteger;
+export const _encode_UpdateEimResult: $.ASN1Encoder<UpdateEimResult> = $._encodeInteger;
 
 
 /* eslint-enable */

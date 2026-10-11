@@ -131,35 +131,8 @@ const AddInitialEimResponse_addInitialEimError_undefinedError: AddInitialEimResp
  */
 export
 const undefinedError: AddInitialEimResponse_addInitialEimError = AddInitialEimResponse_addInitialEimError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AddInitialEimResponse_addInitialEimError: $.ASN1Decoder<AddInitialEimResponse_addInitialEimError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AddInitialEimResponse_addInitialEimError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AddInitialEimResponse_addInitialEimError (el: _Element): AddInitialEimResponse_addInitialEimError {
-    if (!_cached_decoder_for_AddInitialEimResponse_addInitialEimError) { _cached_decoder_for_AddInitialEimResponse_addInitialEimError = $._decodeInteger; }
-    return _cached_decoder_for_AddInitialEimResponse_addInitialEimError(el);
-}
-
-let _cached_encoder_for_AddInitialEimResponse_addInitialEimError: $.ASN1Encoder<AddInitialEimResponse_addInitialEimError> | null = null;
-
-/**
- * @summary Encodes a(n) AddInitialEimResponse_addInitialEimError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AddInitialEimResponse_addInitialEimError, encoded as an ASN.1 Element.
- */
-export
-function _encode_AddInitialEimResponse_addInitialEimError (value: AddInitialEimResponse_addInitialEimError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddInitialEimResponse_addInitialEimError) { _cached_encoder_for_AddInitialEimResponse_addInitialEimError = $._encodeInteger; }
-    return _cached_encoder_for_AddInitialEimResponse_addInitialEimError(value, elGetter);
-}
+export const _decode_AddInitialEimResponse_addInitialEimError: $.ASN1Decoder<AddInitialEimResponse_addInitialEimError> = $._decodeInteger;
+export const _encode_AddInitialEimResponse_addInitialEimError: $.ASN1Encoder<AddInitialEimResponse_addInitialEimError> = $._encodeInteger;
 
 
 /* eslint-enable */

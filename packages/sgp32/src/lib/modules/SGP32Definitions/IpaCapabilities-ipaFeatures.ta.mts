@@ -103,35 +103,8 @@ const IpaCapabilities_ipaFeatures_minimizeEsipaBytes: number = 5; /* LONG_NAMED_
  */
 export
 const minimizeEsipaBytes: number = IpaCapabilities_ipaFeatures_minimizeEsipaBytes; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_IpaCapabilities_ipaFeatures: $.ASN1Decoder<IpaCapabilities_ipaFeatures> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IpaCapabilities_ipaFeatures
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IpaCapabilities_ipaFeatures (el: _Element): IpaCapabilities_ipaFeatures {
-    if (!_cached_decoder_for_IpaCapabilities_ipaFeatures) { _cached_decoder_for_IpaCapabilities_ipaFeatures = $._decodeBitString; }
-    return _cached_decoder_for_IpaCapabilities_ipaFeatures(el);
-}
-
-let _cached_encoder_for_IpaCapabilities_ipaFeatures: $.ASN1Encoder<IpaCapabilities_ipaFeatures> | null = null;
-
-/**
- * @summary Encodes a(n) IpaCapabilities_ipaFeatures into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IpaCapabilities_ipaFeatures, encoded as an ASN.1 Element.
- */
-export
-function _encode_IpaCapabilities_ipaFeatures (value: IpaCapabilities_ipaFeatures, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IpaCapabilities_ipaFeatures) { _cached_encoder_for_IpaCapabilities_ipaFeatures = $._encodeBitString; }
-    return _cached_encoder_for_IpaCapabilities_ipaFeatures(value, elGetter);
-}
+export const _decode_IpaCapabilities_ipaFeatures: $.ASN1Decoder<IpaCapabilities_ipaFeatures> = $._decodeBitString;
+export const _encode_IpaCapabilities_ipaFeatures: $.ASN1Encoder<IpaCapabilities_ipaFeatures> = $._encodeBitString;
 
 
 /* eslint-enable */

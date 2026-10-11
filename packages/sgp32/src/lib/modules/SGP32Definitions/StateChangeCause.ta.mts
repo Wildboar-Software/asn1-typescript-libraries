@@ -156,35 +156,8 @@ const StateChangeCause_undefined: StateChangeCause = 127; /* LONG_NAMED_INTEGER_
  */
 export
 const undefined: StateChangeCause = StateChangeCause_undefined; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_StateChangeCause: $.ASN1Decoder<StateChangeCause> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) StateChangeCause
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_StateChangeCause (el: _Element): StateChangeCause {
-    if (!_cached_decoder_for_StateChangeCause) { _cached_decoder_for_StateChangeCause = $._decodeInteger; }
-    return _cached_decoder_for_StateChangeCause(el);
-}
-
-let _cached_encoder_for_StateChangeCause: $.ASN1Encoder<StateChangeCause> | null = null;
-
-/**
- * @summary Encodes a(n) StateChangeCause into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The StateChangeCause, encoded as an ASN.1 Element.
- */
-export
-function _encode_StateChangeCause (value: StateChangeCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StateChangeCause) { _cached_encoder_for_StateChangeCause = $._encodeInteger; }
-    return _cached_encoder_for_StateChangeCause(value, elGetter);
-}
+export const _decode_StateChangeCause: $.ASN1Decoder<StateChangeCause> = $._decodeInteger;
+export const _encode_StateChangeCause: $.ASN1Encoder<StateChangeCause> = $._encodeInteger;
 
 
 /* eslint-enable */

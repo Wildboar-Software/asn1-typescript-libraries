@@ -95,35 +95,8 @@ const EimSupportedProtocol_eimProprietary: number = 4; /* LONG_NAMED_BIT */
  */
 export
 const eimProprietary: number = EimSupportedProtocol_eimProprietary; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_EimSupportedProtocol: $.ASN1Decoder<EimSupportedProtocol> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EimSupportedProtocol
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EimSupportedProtocol (el: _Element): EimSupportedProtocol {
-    if (!_cached_decoder_for_EimSupportedProtocol) { _cached_decoder_for_EimSupportedProtocol = $._decodeBitString; }
-    return _cached_decoder_for_EimSupportedProtocol(el);
-}
-
-let _cached_encoder_for_EimSupportedProtocol: $.ASN1Encoder<EimSupportedProtocol> | null = null;
-
-/**
- * @summary Encodes a(n) EimSupportedProtocol into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EimSupportedProtocol, encoded as an ASN.1 Element.
- */
-export
-function _encode_EimSupportedProtocol (value: EimSupportedProtocol, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EimSupportedProtocol) { _cached_encoder_for_EimSupportedProtocol = $._encodeBitString; }
-    return _cached_encoder_for_EimSupportedProtocol(value, elGetter);
-}
+export const _decode_EimSupportedProtocol: $.ASN1Decoder<EimSupportedProtocol> = $._decodeBitString;
+export const _encode_EimSupportedProtocol: $.ASN1Encoder<EimSupportedProtocol> = $._encodeBitString;
 
 
 /* eslint-enable */

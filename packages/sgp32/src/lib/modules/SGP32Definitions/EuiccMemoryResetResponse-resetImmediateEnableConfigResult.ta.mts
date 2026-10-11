@@ -67,35 +67,8 @@ const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError: 
  */
 export
 const undefinedError: EuiccMemoryResetResponse_resetImmediateEnableConfigResult = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EuiccMemoryResetResponse_resetImmediateEnableConfigResult: $.ASN1Decoder<EuiccMemoryResetResponse_resetImmediateEnableConfigResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EuiccMemoryResetResponse_resetImmediateEnableConfigResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult (el: _Element): EuiccMemoryResetResponse_resetImmediateEnableConfigResult {
-    if (!_cached_decoder_for_EuiccMemoryResetResponse_resetImmediateEnableConfigResult) { _cached_decoder_for_EuiccMemoryResetResponse_resetImmediateEnableConfigResult = $._decodeInteger; }
-    return _cached_decoder_for_EuiccMemoryResetResponse_resetImmediateEnableConfigResult(el);
-}
-
-let _cached_encoder_for_EuiccMemoryResetResponse_resetImmediateEnableConfigResult: $.ASN1Encoder<EuiccMemoryResetResponse_resetImmediateEnableConfigResult> | null = null;
-
-/**
- * @summary Encodes a(n) EuiccMemoryResetResponse_resetImmediateEnableConfigResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EuiccMemoryResetResponse_resetImmediateEnableConfigResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult (value: EuiccMemoryResetResponse_resetImmediateEnableConfigResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EuiccMemoryResetResponse_resetImmediateEnableConfigResult) { _cached_encoder_for_EuiccMemoryResetResponse_resetImmediateEnableConfigResult = $._encodeInteger; }
-    return _cached_encoder_for_EuiccMemoryResetResponse_resetImmediateEnableConfigResult(value, elGetter);
-}
+export const _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult: $.ASN1Decoder<EuiccMemoryResetResponse_resetImmediateEnableConfigResult> = $._decodeInteger;
+export const _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult: $.ASN1Encoder<EuiccMemoryResetResponse_resetImmediateEnableConfigResult> = $._encodeInteger;
 
 
 /* eslint-enable */

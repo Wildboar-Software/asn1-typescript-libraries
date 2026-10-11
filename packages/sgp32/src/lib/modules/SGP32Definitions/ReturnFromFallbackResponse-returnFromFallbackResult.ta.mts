@@ -99,35 +99,8 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError: Return
  */
 export
 const undefinedError: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ReturnFromFallbackResponse_returnFromFallbackResult: $.ASN1Decoder<ReturnFromFallbackResponse_returnFromFallbackResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReturnFromFallbackResponse_returnFromFallbackResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReturnFromFallbackResponse_returnFromFallbackResult (el: _Element): ReturnFromFallbackResponse_returnFromFallbackResult {
-    if (!_cached_decoder_for_ReturnFromFallbackResponse_returnFromFallbackResult) { _cached_decoder_for_ReturnFromFallbackResponse_returnFromFallbackResult = $._decodeInteger; }
-    return _cached_decoder_for_ReturnFromFallbackResponse_returnFromFallbackResult(el);
-}
-
-let _cached_encoder_for_ReturnFromFallbackResponse_returnFromFallbackResult: $.ASN1Encoder<ReturnFromFallbackResponse_returnFromFallbackResult> | null = null;
-
-/**
- * @summary Encodes a(n) ReturnFromFallbackResponse_returnFromFallbackResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReturnFromFallbackResponse_returnFromFallbackResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReturnFromFallbackResponse_returnFromFallbackResult (value: ReturnFromFallbackResponse_returnFromFallbackResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReturnFromFallbackResponse_returnFromFallbackResult) { _cached_encoder_for_ReturnFromFallbackResponse_returnFromFallbackResult = $._encodeInteger; }
-    return _cached_encoder_for_ReturnFromFallbackResponse_returnFromFallbackResult(value, elGetter);
-}
+export const _decode_ReturnFromFallbackResponse_returnFromFallbackResult: $.ASN1Decoder<ReturnFromFallbackResponse_returnFromFallbackResult> = $._decodeInteger;
+export const _encode_ReturnFromFallbackResponse_returnFromFallbackResult: $.ASN1Encoder<ReturnFromFallbackResponse_returnFromFallbackResult> = $._encodeInteger;
 
 
 /* eslint-enable */

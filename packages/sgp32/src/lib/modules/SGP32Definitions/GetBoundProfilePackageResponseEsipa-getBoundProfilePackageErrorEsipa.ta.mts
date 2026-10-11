@@ -163,35 +163,8 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undef
  */
 export
 const undefinedError: GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa = GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa: $.ASN1Decoder<GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa (el: _Element): GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa {
-    if (!_cached_decoder_for_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa) { _cached_decoder_for_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa = $._decodeInteger; }
-    return _cached_decoder_for_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa(el);
-}
-
-let _cached_encoder_for_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa: $.ASN1Encoder<GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa> | null = null;
-
-/**
- * @summary Encodes a(n) GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa, encoded as an ASN.1 Element.
- */
-export
-function _encode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa (value: GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa) { _cached_encoder_for_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa = $._encodeInteger; }
-    return _cached_encoder_for_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa(value, elGetter);
-}
+export const _decode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa: $.ASN1Decoder<GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa> = $._decodeInteger;
+export const _encode_GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa: $.ASN1Encoder<GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa> = $._encodeInteger;
 
 
 /* eslint-enable */

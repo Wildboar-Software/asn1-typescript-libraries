@@ -71,35 +71,8 @@ const EimIdType_eimIdTypeProprietary: EimIdType = 3; /* LONG_NAMED_INTEGER_VALUE
  */
 export
 const eimIdTypeProprietary: EimIdType = EimIdType_eimIdTypeProprietary; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EimIdType: $.ASN1Decoder<EimIdType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EimIdType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EimIdType (el: _Element): EimIdType {
-    if (!_cached_decoder_for_EimIdType) { _cached_decoder_for_EimIdType = $._decodeInteger; }
-    return _cached_decoder_for_EimIdType(el);
-}
-
-let _cached_encoder_for_EimIdType: $.ASN1Encoder<EimIdType> | null = null;
-
-/**
- * @summary Encodes a(n) EimIdType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EimIdType, encoded as an ASN.1 Element.
- */
-export
-function _encode_EimIdType (value: EimIdType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EimIdType) { _cached_encoder_for_EimIdType = $._encodeInteger; }
-    return _cached_encoder_for_EimIdType(value, elGetter);
-}
+export const _decode_EimIdType: $.ASN1Decoder<EimIdType> = $._decodeInteger;
+export const _encode_EimIdType: $.ASN1Encoder<EimIdType> = $._encodeInteger;
 
 
 /* eslint-enable */

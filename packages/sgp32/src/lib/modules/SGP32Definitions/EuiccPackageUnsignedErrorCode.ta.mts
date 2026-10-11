@@ -54,35 +54,8 @@ const EuiccPackageUnsignedErrorCode_undefinedError: EuiccPackageUnsignedErrorCod
  */
 export
 const undefinedError: EuiccPackageUnsignedErrorCode = EuiccPackageUnsignedErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EuiccPackageUnsignedErrorCode: $.ASN1Decoder<EuiccPackageUnsignedErrorCode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EuiccPackageUnsignedErrorCode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EuiccPackageUnsignedErrorCode (el: _Element): EuiccPackageUnsignedErrorCode {
-    if (!_cached_decoder_for_EuiccPackageUnsignedErrorCode) { _cached_decoder_for_EuiccPackageUnsignedErrorCode = $._decodeInteger; }
-    return _cached_decoder_for_EuiccPackageUnsignedErrorCode(el);
-}
-
-let _cached_encoder_for_EuiccPackageUnsignedErrorCode: $.ASN1Encoder<EuiccPackageUnsignedErrorCode> | null = null;
-
-/**
- * @summary Encodes a(n) EuiccPackageUnsignedErrorCode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EuiccPackageUnsignedErrorCode, encoded as an ASN.1 Element.
- */
-export
-function _encode_EuiccPackageUnsignedErrorCode (value: EuiccPackageUnsignedErrorCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EuiccPackageUnsignedErrorCode) { _cached_encoder_for_EuiccPackageUnsignedErrorCode = $._encodeInteger; }
-    return _cached_encoder_for_EuiccPackageUnsignedErrorCode(value, elGetter);
-}
+export const _decode_EuiccPackageUnsignedErrorCode: $.ASN1Decoder<EuiccPackageUnsignedErrorCode> = $._decodeInteger;
+export const _encode_EuiccPackageUnsignedErrorCode: $.ASN1Encoder<EuiccPackageUnsignedErrorCode> = $._encodeInteger;
 
 
 /* eslint-enable */

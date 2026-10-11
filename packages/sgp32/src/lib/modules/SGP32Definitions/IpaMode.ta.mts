@@ -54,35 +54,8 @@ const IpaMode_ipae: IpaMode = 1; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const ipae: IpaMode = IpaMode_ipae; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_IpaMode: $.ASN1Decoder<IpaMode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IpaMode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IpaMode (el: _Element): IpaMode {
-    if (!_cached_decoder_for_IpaMode) { _cached_decoder_for_IpaMode = $._decodeInteger; }
-    return _cached_decoder_for_IpaMode(el);
-}
-
-let _cached_encoder_for_IpaMode: $.ASN1Encoder<IpaMode> | null = null;
-
-/**
- * @summary Encodes a(n) IpaMode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IpaMode, encoded as an ASN.1 Element.
- */
-export
-function _encode_IpaMode (value: IpaMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IpaMode) { _cached_encoder_for_IpaMode = $._encodeInteger; }
-    return _cached_encoder_for_IpaMode(value, elGetter);
-}
+export const _decode_IpaMode: $.ASN1Decoder<IpaMode> = $._decodeInteger;
+export const _encode_IpaMode: $.ASN1Encoder<IpaMode> = $._encodeInteger;
 
 
 /* eslint-enable */

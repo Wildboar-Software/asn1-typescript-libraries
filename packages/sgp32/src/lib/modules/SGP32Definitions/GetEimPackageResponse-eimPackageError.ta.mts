@@ -99,35 +99,8 @@ const GetEimPackageResponse_eimPackageError_undefinedError: GetEimPackageRespons
  */
 export
 const undefinedError: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_eimPackageError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_GetEimPackageResponse_eimPackageError: $.ASN1Decoder<GetEimPackageResponse_eimPackageError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) GetEimPackageResponse_eimPackageError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_GetEimPackageResponse_eimPackageError (el: _Element): GetEimPackageResponse_eimPackageError {
-    if (!_cached_decoder_for_GetEimPackageResponse_eimPackageError) { _cached_decoder_for_GetEimPackageResponse_eimPackageError = $._decodeInteger; }
-    return _cached_decoder_for_GetEimPackageResponse_eimPackageError(el);
-}
-
-let _cached_encoder_for_GetEimPackageResponse_eimPackageError: $.ASN1Encoder<GetEimPackageResponse_eimPackageError> | null = null;
-
-/**
- * @summary Encodes a(n) GetEimPackageResponse_eimPackageError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GetEimPackageResponse_eimPackageError, encoded as an ASN.1 Element.
- */
-export
-function _encode_GetEimPackageResponse_eimPackageError (value: GetEimPackageResponse_eimPackageError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetEimPackageResponse_eimPackageError) { _cached_encoder_for_GetEimPackageResponse_eimPackageError = $._encodeInteger; }
-    return _cached_encoder_for_GetEimPackageResponse_eimPackageError(value, elGetter);
-}
+export const _decode_GetEimPackageResponse_eimPackageError: $.ASN1Decoder<GetEimPackageResponse_eimPackageError> = $._decodeInteger;
+export const _encode_GetEimPackageResponse_eimPackageError: $.ASN1Encoder<GetEimPackageResponse_eimPackageError> = $._encodeInteger;
 
 
 /* eslint-enable */

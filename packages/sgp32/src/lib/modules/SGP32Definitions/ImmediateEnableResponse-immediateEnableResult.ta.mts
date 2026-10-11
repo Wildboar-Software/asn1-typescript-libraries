@@ -99,35 +99,8 @@ const ImmediateEnableResponse_immediateEnableResult_undefinedError: ImmediateEna
  */
 export
 const undefinedError: ImmediateEnableResponse_immediateEnableResult = ImmediateEnableResponse_immediateEnableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ImmediateEnableResponse_immediateEnableResult: $.ASN1Decoder<ImmediateEnableResponse_immediateEnableResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ImmediateEnableResponse_immediateEnableResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ImmediateEnableResponse_immediateEnableResult (el: _Element): ImmediateEnableResponse_immediateEnableResult {
-    if (!_cached_decoder_for_ImmediateEnableResponse_immediateEnableResult) { _cached_decoder_for_ImmediateEnableResponse_immediateEnableResult = $._decodeInteger; }
-    return _cached_decoder_for_ImmediateEnableResponse_immediateEnableResult(el);
-}
-
-let _cached_encoder_for_ImmediateEnableResponse_immediateEnableResult: $.ASN1Encoder<ImmediateEnableResponse_immediateEnableResult> | null = null;
-
-/**
- * @summary Encodes a(n) ImmediateEnableResponse_immediateEnableResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ImmediateEnableResponse_immediateEnableResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_ImmediateEnableResponse_immediateEnableResult (value: ImmediateEnableResponse_immediateEnableResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ImmediateEnableResponse_immediateEnableResult) { _cached_encoder_for_ImmediateEnableResponse_immediateEnableResult = $._encodeInteger; }
-    return _cached_encoder_for_ImmediateEnableResponse_immediateEnableResult(value, elGetter);
-}
+export const _decode_ImmediateEnableResponse_immediateEnableResult: $.ASN1Decoder<ImmediateEnableResponse_immediateEnableResult> = $._decodeInteger;
+export const _encode_ImmediateEnableResponse_immediateEnableResult: $.ASN1Encoder<ImmediateEnableResponse_immediateEnableResult> = $._encodeInteger;
 
 
 /* eslint-enable */

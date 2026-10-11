@@ -88,35 +88,8 @@ const IpaEuiccDataErrorCode_undefinedError: IpaEuiccDataErrorCode = 127; /* LONG
  */
 export
 const undefinedError: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_IpaEuiccDataErrorCode: $.ASN1Decoder<IpaEuiccDataErrorCode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IpaEuiccDataErrorCode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IpaEuiccDataErrorCode (el: _Element): IpaEuiccDataErrorCode {
-    if (!_cached_decoder_for_IpaEuiccDataErrorCode) { _cached_decoder_for_IpaEuiccDataErrorCode = $._decodeInteger; }
-    return _cached_decoder_for_IpaEuiccDataErrorCode(el);
-}
-
-let _cached_encoder_for_IpaEuiccDataErrorCode: $.ASN1Encoder<IpaEuiccDataErrorCode> | null = null;
-
-/**
- * @summary Encodes a(n) IpaEuiccDataErrorCode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IpaEuiccDataErrorCode, encoded as an ASN.1 Element.
- */
-export
-function _encode_IpaEuiccDataErrorCode (value: IpaEuiccDataErrorCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IpaEuiccDataErrorCode) { _cached_encoder_for_IpaEuiccDataErrorCode = $._encodeInteger; }
-    return _cached_encoder_for_IpaEuiccDataErrorCode(value, elGetter);
-}
+export const _decode_IpaEuiccDataErrorCode: $.ASN1Decoder<IpaEuiccDataErrorCode> = $._decodeInteger;
+export const _encode_IpaEuiccDataErrorCode: $.ASN1Encoder<IpaEuiccDataErrorCode> = $._encodeInteger;
 
 
 /* eslint-enable */

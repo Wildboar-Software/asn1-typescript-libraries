@@ -67,35 +67,8 @@ const TransferEimPackageResponse_eimPackageError_undefinedError: TransferEimPack
  */
 export
 const undefinedError: TransferEimPackageResponse_eimPackageError = TransferEimPackageResponse_eimPackageError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_TransferEimPackageResponse_eimPackageError: $.ASN1Decoder<TransferEimPackageResponse_eimPackageError> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TransferEimPackageResponse_eimPackageError
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TransferEimPackageResponse_eimPackageError (el: _Element): TransferEimPackageResponse_eimPackageError {
-    if (!_cached_decoder_for_TransferEimPackageResponse_eimPackageError) { _cached_decoder_for_TransferEimPackageResponse_eimPackageError = $._decodeInteger; }
-    return _cached_decoder_for_TransferEimPackageResponse_eimPackageError(el);
-}
-
-let _cached_encoder_for_TransferEimPackageResponse_eimPackageError: $.ASN1Encoder<TransferEimPackageResponse_eimPackageError> | null = null;
-
-/**
- * @summary Encodes a(n) TransferEimPackageResponse_eimPackageError into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TransferEimPackageResponse_eimPackageError, encoded as an ASN.1 Element.
- */
-export
-function _encode_TransferEimPackageResponse_eimPackageError (value: TransferEimPackageResponse_eimPackageError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransferEimPackageResponse_eimPackageError) { _cached_encoder_for_TransferEimPackageResponse_eimPackageError = $._encodeInteger; }
-    return _cached_encoder_for_TransferEimPackageResponse_eimPackageError(value, elGetter);
-}
+export const _decode_TransferEimPackageResponse_eimPackageError: $.ASN1Decoder<TransferEimPackageResponse_eimPackageError> = $._decodeInteger;
+export const _encode_TransferEimPackageResponse_eimPackageError: $.ASN1Encoder<TransferEimPackageResponse_eimPackageError> = $._encodeInteger;
 
 
 /* eslint-enable */

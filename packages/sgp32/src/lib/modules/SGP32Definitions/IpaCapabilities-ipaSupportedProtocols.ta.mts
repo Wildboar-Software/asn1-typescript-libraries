@@ -89,35 +89,8 @@ const IpaCapabilities_ipaSupportedProtocols_ipaProprietary: number = 4; /* LONG_
  */
 export
 const ipaProprietary: number = IpaCapabilities_ipaSupportedProtocols_ipaProprietary; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_IpaCapabilities_ipaSupportedProtocols: $.ASN1Decoder<IpaCapabilities_ipaSupportedProtocols> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IpaCapabilities_ipaSupportedProtocols
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IpaCapabilities_ipaSupportedProtocols (el: _Element): IpaCapabilities_ipaSupportedProtocols {
-    if (!_cached_decoder_for_IpaCapabilities_ipaSupportedProtocols) { _cached_decoder_for_IpaCapabilities_ipaSupportedProtocols = $._decodeBitString; }
-    return _cached_decoder_for_IpaCapabilities_ipaSupportedProtocols(el);
-}
-
-let _cached_encoder_for_IpaCapabilities_ipaSupportedProtocols: $.ASN1Encoder<IpaCapabilities_ipaSupportedProtocols> | null = null;
-
-/**
- * @summary Encodes a(n) IpaCapabilities_ipaSupportedProtocols into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IpaCapabilities_ipaSupportedProtocols, encoded as an ASN.1 Element.
- */
-export
-function _encode_IpaCapabilities_ipaSupportedProtocols (value: IpaCapabilities_ipaSupportedProtocols, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IpaCapabilities_ipaSupportedProtocols) { _cached_encoder_for_IpaCapabilities_ipaSupportedProtocols = $._encodeBitString; }
-    return _cached_encoder_for_IpaCapabilities_ipaSupportedProtocols(value, elGetter);
-}
+export const _decode_IpaCapabilities_ipaSupportedProtocols: $.ASN1Decoder<IpaCapabilities_ipaSupportedProtocols> = $._decodeBitString;
+export const _encode_IpaCapabilities_ipaSupportedProtocols: $.ASN1Encoder<IpaCapabilities_ipaSupportedProtocols> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -259,35 +259,8 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedErro
  */
 export
 const undefinedError: AuthenticateClientResponseEsipa_authenticateClientErrorEsipa = AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa: $.ASN1Decoder<AuthenticateClientResponseEsipa_authenticateClientErrorEsipa> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AuthenticateClientResponseEsipa_authenticateClientErrorEsipa
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa (el: _Element): AuthenticateClientResponseEsipa_authenticateClientErrorEsipa {
-    if (!_cached_decoder_for_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa) { _cached_decoder_for_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa = $._decodeInteger; }
-    return _cached_decoder_for_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa(el);
-}
-
-let _cached_encoder_for_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa: $.ASN1Encoder<AuthenticateClientResponseEsipa_authenticateClientErrorEsipa> | null = null;
-
-/**
- * @summary Encodes a(n) AuthenticateClientResponseEsipa_authenticateClientErrorEsipa into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, encoded as an ASN.1 Element.
- */
-export
-function _encode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa (value: AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa) { _cached_encoder_for_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa = $._encodeInteger; }
-    return _cached_encoder_for_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa(value, elGetter);
-}
+export const _decode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa: $.ASN1Decoder<AuthenticateClientResponseEsipa_authenticateClientErrorEsipa> = $._decodeInteger;
+export const _encode_AuthenticateClientResponseEsipa_authenticateClientErrorEsipa: $.ASN1Encoder<AuthenticateClientResponseEsipa_authenticateClientErrorEsipa> = $._encodeInteger;
 
 
 /* eslint-enable */

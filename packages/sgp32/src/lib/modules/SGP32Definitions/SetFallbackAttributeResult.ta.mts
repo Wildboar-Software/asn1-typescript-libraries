@@ -105,35 +105,8 @@ const SetFallbackAttributeResult_undefinedError: SetFallbackAttributeResult = 12
  */
 export
 const undefinedError: SetFallbackAttributeResult = SetFallbackAttributeResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_SetFallbackAttributeResult: $.ASN1Decoder<SetFallbackAttributeResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SetFallbackAttributeResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SetFallbackAttributeResult (el: _Element): SetFallbackAttributeResult {
-    if (!_cached_decoder_for_SetFallbackAttributeResult) { _cached_decoder_for_SetFallbackAttributeResult = $._decodeInteger; }
-    return _cached_decoder_for_SetFallbackAttributeResult(el);
-}
-
-let _cached_encoder_for_SetFallbackAttributeResult: $.ASN1Encoder<SetFallbackAttributeResult> | null = null;
-
-/**
- * @summary Encodes a(n) SetFallbackAttributeResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SetFallbackAttributeResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_SetFallbackAttributeResult (value: SetFallbackAttributeResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SetFallbackAttributeResult) { _cached_encoder_for_SetFallbackAttributeResult = $._encodeInteger; }
-    return _cached_encoder_for_SetFallbackAttributeResult(value, elGetter);
-}
+export const _decode_SetFallbackAttributeResult: $.ASN1Decoder<SetFallbackAttributeResult> = $._decodeInteger;
+export const _encode_SetFallbackAttributeResult: $.ASN1Encoder<SetFallbackAttributeResult> = $._encodeInteger;
 
 
 /* eslint-enable */

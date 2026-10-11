@@ -147,35 +147,8 @@ const AddEimResult_addEimResultCode_undefinedError: AddEimResult_addEimResultCod
  */
 export
 const undefinedError: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_AddEimResult_addEimResultCode: $.ASN1Decoder<AddEimResult_addEimResultCode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AddEimResult_addEimResultCode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AddEimResult_addEimResultCode (el: _Element): AddEimResult_addEimResultCode {
-    if (!_cached_decoder_for_AddEimResult_addEimResultCode) { _cached_decoder_for_AddEimResult_addEimResultCode = $._decodeInteger; }
-    return _cached_decoder_for_AddEimResult_addEimResultCode(el);
-}
-
-let _cached_encoder_for_AddEimResult_addEimResultCode: $.ASN1Encoder<AddEimResult_addEimResultCode> | null = null;
-
-/**
- * @summary Encodes a(n) AddEimResult_addEimResultCode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AddEimResult_addEimResultCode, encoded as an ASN.1 Element.
- */
-export
-function _encode_AddEimResult_addEimResultCode (value: AddEimResult_addEimResultCode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddEimResult_addEimResultCode) { _cached_encoder_for_AddEimResult_addEimResultCode = $._encodeInteger; }
-    return _cached_encoder_for_AddEimResult_addEimResultCode(value, elGetter);
-}
+export const _decode_AddEimResult_addEimResultCode: $.ASN1Decoder<AddEimResult_addEimResultCode> = $._decodeInteger;
+export const _encode_AddEimResult_addEimResultCode: $.ASN1Encoder<AddEimResult_addEimResultCode> = $._encodeInteger;
 
 
 /* eslint-enable */

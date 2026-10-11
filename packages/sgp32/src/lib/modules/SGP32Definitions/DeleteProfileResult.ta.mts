@@ -139,35 +139,8 @@ const DeleteProfileResult_undefinedError: DeleteProfileResult = 127; /* LONG_NAM
  */
 export
 const undefinedError: DeleteProfileResult = DeleteProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DeleteProfileResult: $.ASN1Decoder<DeleteProfileResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DeleteProfileResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DeleteProfileResult (el: _Element): DeleteProfileResult {
-    if (!_cached_decoder_for_DeleteProfileResult) { _cached_decoder_for_DeleteProfileResult = $._decodeInteger; }
-    return _cached_decoder_for_DeleteProfileResult(el);
-}
-
-let _cached_encoder_for_DeleteProfileResult: $.ASN1Encoder<DeleteProfileResult> | null = null;
-
-/**
- * @summary Encodes a(n) DeleteProfileResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeleteProfileResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_DeleteProfileResult (value: DeleteProfileResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeleteProfileResult) { _cached_encoder_for_DeleteProfileResult = $._encodeInteger; }
-    return _cached_encoder_for_DeleteProfileResult(value, elGetter);
-}
+export const _decode_DeleteProfileResult: $.ASN1Decoder<DeleteProfileResult> = $._decodeInteger;
+export const _encode_DeleteProfileResult: $.ASN1Encoder<DeleteProfileResult> = $._encodeInteger;
 
 
 /* eslint-enable */

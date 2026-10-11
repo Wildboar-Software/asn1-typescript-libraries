@@ -83,35 +83,8 @@ const EuiccMemoryResetResponse_resetEimResult_undefinedError: EuiccMemoryResetRe
  */
 export
 const undefinedError: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_EuiccMemoryResetResponse_resetEimResult: $.ASN1Decoder<EuiccMemoryResetResponse_resetEimResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EuiccMemoryResetResponse_resetEimResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EuiccMemoryResetResponse_resetEimResult (el: _Element): EuiccMemoryResetResponse_resetEimResult {
-    if (!_cached_decoder_for_EuiccMemoryResetResponse_resetEimResult) { _cached_decoder_for_EuiccMemoryResetResponse_resetEimResult = $._decodeInteger; }
-    return _cached_decoder_for_EuiccMemoryResetResponse_resetEimResult(el);
-}
-
-let _cached_encoder_for_EuiccMemoryResetResponse_resetEimResult: $.ASN1Encoder<EuiccMemoryResetResponse_resetEimResult> | null = null;
-
-/**
- * @summary Encodes a(n) EuiccMemoryResetResponse_resetEimResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EuiccMemoryResetResponse_resetEimResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_EuiccMemoryResetResponse_resetEimResult (value: EuiccMemoryResetResponse_resetEimResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EuiccMemoryResetResponse_resetEimResult) { _cached_encoder_for_EuiccMemoryResetResponse_resetEimResult = $._encodeInteger; }
-    return _cached_encoder_for_EuiccMemoryResetResponse_resetEimResult(value, elGetter);
-}
+export const _decode_EuiccMemoryResetResponse_resetEimResult: $.ASN1Decoder<EuiccMemoryResetResponse_resetEimResult> = $._decodeInteger;
+export const _encode_EuiccMemoryResetResponse_resetEimResult: $.ASN1Encoder<EuiccMemoryResetResponse_resetEimResult> = $._encodeInteger;
 
 
 /* eslint-enable */

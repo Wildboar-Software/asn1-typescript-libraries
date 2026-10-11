@@ -99,35 +99,8 @@ const ProfileRollbackResponse_cmdResult_undefinedError: ProfileRollbackResponse_
  */
 export
 const undefinedError: ProfileRollbackResponse_cmdResult = ProfileRollbackResponse_cmdResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ProfileRollbackResponse_cmdResult: $.ASN1Decoder<ProfileRollbackResponse_cmdResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ProfileRollbackResponse_cmdResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ProfileRollbackResponse_cmdResult (el: _Element): ProfileRollbackResponse_cmdResult {
-    if (!_cached_decoder_for_ProfileRollbackResponse_cmdResult) { _cached_decoder_for_ProfileRollbackResponse_cmdResult = $._decodeInteger; }
-    return _cached_decoder_for_ProfileRollbackResponse_cmdResult(el);
-}
-
-let _cached_encoder_for_ProfileRollbackResponse_cmdResult: $.ASN1Encoder<ProfileRollbackResponse_cmdResult> | null = null;
-
-/**
- * @summary Encodes a(n) ProfileRollbackResponse_cmdResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProfileRollbackResponse_cmdResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_ProfileRollbackResponse_cmdResult (value: ProfileRollbackResponse_cmdResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProfileRollbackResponse_cmdResult) { _cached_encoder_for_ProfileRollbackResponse_cmdResult = $._encodeInteger; }
-    return _cached_encoder_for_ProfileRollbackResponse_cmdResult(value, elGetter);
-}
+export const _decode_ProfileRollbackResponse_cmdResult: $.ASN1Decoder<ProfileRollbackResponse_cmdResult> = $._decodeInteger;
+export const _encode_ProfileRollbackResponse_cmdResult: $.ASN1Encoder<ProfileRollbackResponse_cmdResult> = $._encodeInteger;
 
 
 /* eslint-enable */
