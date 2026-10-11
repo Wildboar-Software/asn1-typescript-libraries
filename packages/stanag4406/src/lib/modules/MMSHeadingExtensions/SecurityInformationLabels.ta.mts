@@ -7,7 +7,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { SecurityLabel, _decode_SecurityLabel, _encode_SecurityLabel } from "@wildboar/x400/MTSAbstractService";
 import { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
-// export { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
 
 
 /**

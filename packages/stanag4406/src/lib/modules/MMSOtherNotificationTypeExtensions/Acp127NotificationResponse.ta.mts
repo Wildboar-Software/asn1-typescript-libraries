@@ -7,13 +7,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ReceiptTimeField, _decode_ReceiptTimeField, _encode_ReceiptTimeField } from "@wildboar/x400/IPMSInformationObjects";
 import { Acp127NotificationType, _decode_Acp127NotificationType, _encode_Acp127NotificationType } from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
-// export { Acp127NotificationType, Acp127NotificationType_acp127_nn /* IMPORTED_LONG_NAMED_BIT */, acp127_nn /* IMPORTED_SHORT_NAMED_BIT */, Acp127NotificationType_acp127_pn /* IMPORTED_LONG_NAMED_BIT */, acp127_pn /* IMPORTED_SHORT_NAMED_BIT */, Acp127NotificationType_acp127_tn /* IMPORTED_LONG_NAMED_BIT */, acp127_tn /* IMPORTED_SHORT_NAMED_BIT */, _decode_Acp127NotificationType, _encode_Acp127NotificationType } from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
 import { AddressListIndicator, _decode_AddressListIndicator, _encode_AddressListIndicator } from "../MMSOtherNotificationTypeExtensions/AddressListIndicator.ta.mjs";
-// export { AddressListIndicator, _decode_AddressListIndicator, _encode_AddressListIndicator } from "../MMSOtherNotificationTypeExtensions/AddressListIndicator.ta.mjs";
 import { Acp127Recipient, _decode_Acp127Recipient, _encode_Acp127Recipient } from "../MMSOtherNotificationTypeExtensions/Acp127Recipient.ta.mjs";
-// export { Acp127Recipient, _decode_Acp127Recipient, _encode_Acp127Recipient } from "../MMSOtherNotificationTypeExtensions/Acp127Recipient.ta.mjs";
 import { Acp127SuppInfo, _decode_Acp127SuppInfo, _encode_Acp127SuppInfo } from "../MMSOtherNotificationTypeExtensions/Acp127SuppInfo.ta.mjs";
-// export { Acp127SuppInfo, _decode_Acp127SuppInfo, _encode_Acp127SuppInfo } from "../MMSOtherNotificationTypeExtensions/Acp127SuppInfo.ta.mjs";
 
 
 /**

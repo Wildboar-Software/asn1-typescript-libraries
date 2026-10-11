@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PilotInformation, _decode_PilotInformation, _encode_PilotInformation } from "../MMSHeadingExtensions/PilotInformation.ta.mjs";
-// export { PilotInformation, _decode_PilotInformation, _encode_PilotInformation } from "../MMSHeadingExtensions/PilotInformation.ta.mjs";
 
 
 /**

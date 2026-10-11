@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TypeMessage, _decode_TypeMessage, _encode_TypeMessage } from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
-// export { TypeMessage, TypeMessage_exercise /* IMPORTED_LONG_NAMED_INTEGER */, exercise /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_operation /* IMPORTED_LONG_NAMED_INTEGER */, operation /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_project /* IMPORTED_LONG_NAMED_INTEGER */, project /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_drill /* IMPORTED_LONG_NAMED_INTEGER */, drill /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TypeMessage, _encode_TypeMessage } from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
 import { MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier } from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
-// export { MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier } from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
 
 
 /**

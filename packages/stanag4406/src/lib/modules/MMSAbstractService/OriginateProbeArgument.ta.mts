@@ -6,7 +6,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ProbeSubmissionEnvelope, _decode_ProbeSubmissionEnvelope, _encode_ProbeSubmissionEnvelope } from "@wildboar/x400/MTSAbstractService";
 import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
-// export { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
 
 
 /**
