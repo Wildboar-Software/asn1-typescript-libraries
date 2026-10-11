@@ -10,7 +10,13 @@ import { id_icao_DeviationList } from "../DeviationList/id-icao-DeviationList.va
 /**
  * @summary id_Deviation_CertOrKey
  * @description
- * 
+ *
+ * Certificate or key deviations. `{id-icao-DeviationList 1}`.
+ *
+ * Section 10.2 assigns no parameter syntax for this object identifier.
+ *
+ * Doc 9303-12, section 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

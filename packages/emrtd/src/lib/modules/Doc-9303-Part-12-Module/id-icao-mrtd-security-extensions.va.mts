@@ -10,7 +10,11 @@ import { id_icao_mrtd_security } from "../LDSSecurityObjectV1/id-icao-mrtd-secur
 /**
  * @summary id_icao_mrtd_security_extensions
  * @description
- * 
+ *
+ * Certificate-extension arc. `{id-icao-mrtd-security 6}` (2.23.136.1.1.6).
+ *
+ * Doc 9303-12, section 7.1.1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,8 +8,9 @@ import {
  * @summary id_icao
  * @description
  *
- * Shared by `LDSSecurityObjectV1` and `DeviationList`. DeviationList writes
- * the same object identifier as `{2 23 136}`.
+ * ICAO arc `{joint-iso-itu-t(2) international(23) icao(136)}`. Part 12,
+ * section 10.2, also writes it `{2 23 136}`. The same value is used by the
+ * LDS security object module and by the deviation list module.
  *
  * ### ASN.1 Definition:
  *

@@ -10,7 +10,13 @@ import { id_PACE_ECDH_GM } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-GM.va.m
 /**
  * @summary id_PACE_ECDH_GM_AES_CBC_CMAC_256
  * @description
- * 
+ *
+ * PACE with elliptic-curve Diffie-Hellman and Generic Mapping. Cipher is AES
+ * with a 256-bit key. Secure messaging is CBC / CMAC. The authentication
+ * token is CMAC.
+ *
+ * Doc 9303-11, section 4.4.3.2, Table 3, and section 9.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

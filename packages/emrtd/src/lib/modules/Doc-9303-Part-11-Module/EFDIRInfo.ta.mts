@@ -15,7 +15,17 @@ import { id_EFDIR } from "../Doc-9303-Part-11-Module/id-EFDIR.va.mjs";
 /**
  * @summary EFDIRInfo
  * @description
- * 
+ *
+ * Full copy of transparent file EF.DIR from the Master File. EF.DIR lists
+ * applications and is mandatory when an LDS2 application is present, but it
+ * is unsigned. This signed copy is therefore required in `SecurityInfos`
+ * whenever an LDS2 application is present, and in EF.CardSecurity when any
+ * application besides the eMRTD application is present.
+ *
+ * `protocol` is `id-EFDIR`. `eFDIR` is the file contents.
+ *
+ * Doc 9303-11, sections 9.2 and 9.2.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +41,14 @@ export
 class EFDIRInfo {
     constructor (
         /**
+         * `id-EFDIR`.
          * @summary `protocol`.
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
+         * Contents of EF.DIR.
          * @summary `eFDIR`.
          * @public
          * @readonly

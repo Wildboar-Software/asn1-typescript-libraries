@@ -10,7 +10,13 @@ import { id_PK } from "../Doc-9303-Part-11-Module/id-PK.va.mjs";
 /**
  * @summary id_PK_ECDH
  * @description
- * 
+ *
+ * `ChipAuthenticationPublicKeyInfo.protocol` value for an elliptic-curve
+ * Diffie-Hellman public key. The X.509 encoding is BSI TR-03111. Only prime
+ * curves and uncompressed points are used.
+ *
+ * Doc 9303-11, sections 9.2.6, 9.2.7, and 9.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

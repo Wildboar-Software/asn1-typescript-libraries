@@ -17,7 +17,11 @@ import { DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc
 /**
  * @summary DocumentTypeListSyntax
  * @description
- * 
+ *
+ * Value of the `documentTypeList` extension.
+ *
+ * Doc 9303-12, section 7.1.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +37,15 @@ export
 class DocumentTypeListSyntax {
     constructor (
         /**
+         * List syntax version. Only `v0` is assigned.
          * @summary `version`.
          * @public
          * @readonly
          */
         readonly version: DocumentTypeListVersion,
         /**
+         * Document types this signer may produce. A one-character value covers
+         * every MRZ document type that starts with that character.
          * @summary `docTypeList`.
          * @public
          * @readonly

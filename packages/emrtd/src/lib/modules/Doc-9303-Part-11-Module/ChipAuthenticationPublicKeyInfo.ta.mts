@@ -17,7 +17,20 @@ import { id_PK_ECDH } from "../Doc-9303-Part-11-Module/id-PK-ECDH.va.mjs";
 /**
  * @summary ChipAuthenticationPublicKeyInfo
  * @description
- * 
+ *
+ * Static Chip Authentication public key, also used for PACE with Chip
+ * Authentication Mapping. `protocol` is `id-PK-DH` or `id-PK-ECDH`.
+ *
+ * The key is a `SubjectPublicKeyInfo`. Diffie- Hellman uses PKCS #3 and
+ * elliptic curves use TR-03111 (section 9.6). Passive Authentication of the
+ * containing security object is what makes the key authentic.
+ *
+ * `keyId` is required when more than one key is present, and when the key is
+ * used for PACE with Chip Authentication Mapping. It then equals
+ * `PACEInfo.parameterId`.
+ *
+ * Doc 9303-11, sections 6.2 and 9.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +47,23 @@ export
 class ChipAuthenticationPublicKeyInfo {
     constructor (
         /**
+         * `id-PK-DH` or `id-PK-ECDH`.
          * @summary `protocol`.
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
+         * Static public key. PKCS #3 for Diffie-Hellman, TR-03111 for elliptic
+         * curves.
          * @summary `chipAuthenticationPublicKey`.
          * @public
          * @readonly
          */
         readonly chipAuthenticationPublicKey: SubjectPublicKeyInfo,
         /**
+         * Local key identifier. Required when more than one key is present, and
+         * when this key is used for PACE with Chip Authentication Mapping.
          * @summary `keyId`.
          * @public
          * @readonly

@@ -14,7 +14,13 @@ import { DeviationDescription, _decode_DeviationDescription, _encode_DeviationDe
 /**
  * @summary Deviation
  * @description
- * 
+ *
+ * One deviation entry: the documents it applies to, and the descriptions of
+ * what is wrong. Document constraints that are present together are combined
+ * with AND.
+ *
+ * Doc 9303-12, section 10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,14 @@ export
 class Deviation {
     constructor (
         /**
+         * Documents this entry applies to.
          * @summary `documents`.
          * @public
          * @readonly
          */
         readonly documents: DeviationDocuments,
         /**
+         * Defects that apply to those documents.
          * @summary `descriptions`.
          * @public
          * @readonly

@@ -10,7 +10,13 @@ import { id_Deviation_MRZ } from "../DeviationList/id-Deviation-MRZ.va.mjs";
 /**
  * @summary id_Deviation_MRZ_WrongData
  * @description
- * 
+ *
+ * MRZ data are wrong. `{id-Deviation-MRZ 1}`.
+ *
+ * Section 10.2 assigns no parameter syntax for this object identifier.
+ *
+ * Doc 9303-12, section 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,12 @@ import { IssuancePeriod, _decode_IssuancePeriod, _encode_IssuancePeriod } from "
 /**
  * @summary DeviationDocuments
  * @description
- * 
+ *
+ * Which documents a `Deviation` applies to. Components that are present
+ * are combined with AND. Section 10 defines no OR.
+ *
+ * Doc 9303-12, sections 10 and 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +42,29 @@ export
 class DeviationDocuments {
     constructor (
         /**
+         * Document type per the MRZ. The ASN.1 comment gives `P` as an example.
+         * The size constraint is two characters.
          * @summary `documentType`.
          * @public
          * @readonly
          */
         readonly documentType: OPTIONAL<PrintableString>,
         /**
+         * Document Signer certificates whose documents are affected.
          * @summary `dscIdentifier`.
          * @public
          * @readonly
          */
         readonly dscIdentifier: OPTIONAL<DocumentSignerIdentifier>,
         /**
+         * Issuance dates of the affected documents.
          * @summary `issuingDate`.
          * @public
          * @readonly
          */
         readonly issuingDate: OPTIONAL<IssuancePeriod>,
         /**
+         * Document numbers of the affected eMRTDs.
          * @summary `documentNumbers`.
          * @public
          * @readonly

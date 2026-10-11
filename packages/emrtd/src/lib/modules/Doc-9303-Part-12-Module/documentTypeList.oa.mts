@@ -9,7 +9,23 @@ import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 /**
  * @summary documentTypeList
  * @description
- * 
+ *
+ * Document types, as written in the MRZ, that a signer may produce. The
+ * extension value is `DocumentTypeListSyntax`.
+ *
+ * Required on a Document Signer certificate, and it must be non-critical. If
+ * it is present, an inspection system should check it against the document
+ * type in Data Group 1 and in the visual MRZ (Doc 9303-11, section 5.1.1).
+ * If it is absent, that section says the inspection system should check that
+ * the certificate's key usage is `digitalSignature` and that it has no
+ * extended key usage.
+ *
+ * Prohibited on an LDS2 Signer certificate: those certificates contain only
+ * the extensions in Table 7. Optional on a Bar Code Signer certificate
+ * (Table 8).
+ *
+ * Doc 9303-12, sections 7.1.1.6, 7.1.2, and 7.1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

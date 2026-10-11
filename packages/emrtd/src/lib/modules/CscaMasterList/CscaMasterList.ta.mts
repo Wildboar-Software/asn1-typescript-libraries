@@ -14,7 +14,24 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "../A
 /**
  * @summary CscaMasterList
  * @description
- * 
+ *
+ * `eContent` of a CSCA Master List. The list is a CMS `ContentInfo`
+ * containing one `SignedData` (RFC 5652), produced in DER. `eContentType` is
+ * `id-icao-cscaMasterList`.
+ *
+ * `SignedData` profile (section 9.1): version `v3`; the Master List Signer
+ * certificate must be in `certificates`, and the CSCA certificate that
+ * verifies `signerInfos` should be; CRLs must be absent; one `SignerInfo` is
+ * recommended; `sid` should be `subjectKeyIdentifier`; `signedAttrs` must
+ * include PKCS #9 signing time and may include other attributes, which a
+ * receiver need not interpret except to verify the signature;
+ * `unsignedAttrs` may be present and may be ignored. A
+ * `DigestAlgorithmIdentifier` should omit a NULL parameter, while the
+ * signature algorithm includes NULL when it has no parameters (RFC 5754).
+ * Accept both forms of digest parameters.
+ *
+ * Doc 9303-12, section 9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +47,16 @@ export
 class CscaMasterList {
     constructor (
         /**
+         * List syntax version. Only `v0` is assigned.
          * @summary `version`.
          * @public
          * @readonly
          */
         readonly version: CscaMasterListVersion,
         /**
+         * CSCA certificates. The signer certificate and the CSCA certificate
+         * that verifies the CMS signature are carried in the enclosing
+         * `SignedData`, not in this set.
          * @summary `certList`.
          * @public
          * @readonly

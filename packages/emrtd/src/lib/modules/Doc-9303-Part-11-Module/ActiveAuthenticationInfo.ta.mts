@@ -15,7 +15,23 @@ import { id_icao_mrtd_security_aaProtocolObject } from "../Doc-9303-Part-11-Modu
 /**
  * @summary ActiveAuthenticationInfo
  * @description
- * 
+ *
+ * Required in the EF.DG14 `SecurityInfos` when Active Authentication uses
+ * ECDSA. Active Authentication signs an inspection-system nonce with a
+ * private key that stays in the chip. EF.DG15 holds the public key, and the
+ * security object authenticates that data group.
+ *
+ * `version` must be 1. `signatureAlgorithm` uses an object identifier from
+ * BSI TR-03111. For ECDSA the plain signature format of TR-03111 is used,
+ * with SHA-224, SHA-256, SHA-384, or SHA-512, on prime curves with
+ * uncompressed points. SHA-1 and RIPEMD-160 are not used.
+ *
+ * The requirement is stated for ECDSA. RSA Active Authentication is
+ * specified separately in section 6.1.2.2 (ISO/IEC 9796-2 scheme 1) and has
+ * no object identifier in this module.
+ *
+ * Doc 9303-11, sections 6.1 and 9.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +48,21 @@ export
 class ActiveAuthenticationInfo {
     constructor (
         /**
+         * `id-icao-mrtd-security-aaProtocolObject`.
          * @summary `protocol`.
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
+         * Protocol version. This specification supports only version 1.
          * @summary `version`.
          * @public
          * @readonly
          */
         readonly version: INTEGER,
         /**
+         * ECDSA object identifier from BSI TR-03111.
          * @summary `signatureAlgorithm`.
          * @public
          * @readonly

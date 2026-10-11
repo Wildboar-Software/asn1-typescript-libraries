@@ -11,7 +11,16 @@ import { _decode_CertificateBodyField, _encode_CertificateBodyField, Certificate
 /**
  * @summary CertField
  * @description
- * 
+ *
+ * Which part of a certificate a coding error affects. A body component uses
+ * `CertificateBodyField`. An extension uses the object identifier of that
+ * extension.
+ *
+ * Section 10.2 defines this type and does not say which deviation object
+ * identifiers carry it in `parameters`.
+ *
+ * Doc 9303-12, section 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

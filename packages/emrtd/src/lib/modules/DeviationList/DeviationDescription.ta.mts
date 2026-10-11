@@ -13,7 +13,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeviationDescription
  * @description
- * 
+ *
+ * One defect on the documents selected by the enclosing `Deviation`.
+ * `deviationType` is one of the deviation object identifiers in section
+ * 10.2.
+ *
+ * That section is headed "Parameter Definitions" but assigns no parameter
+ * syntax to any of those object identifiers. `parameters` therefore has no
+ * specified type in this edition.
+ *
+ * Doc 9303-12, section 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +43,30 @@ export
 class DeviationDescription {
     constructor (
         /**
+         * Optional human-readable text. No length or language is specified.
          * @summary `description`.
          * @public
          * @readonly
          */
         readonly description: OPTIONAL<PrintableString>,
         /**
+         * Which defect this is. One of the deviation object identifiers in
+         * section 10.2.
          * @summary `deviationType`.
          * @public
          * @readonly
          */
         readonly deviationType: OBJECT_IDENTIFIER,
         /**
+         * Open type selected by `deviationType`. This edition assigns no syntax
+         * for any deviation object identifier.
          * @summary `parameters`.
          * @public
          * @readonly
          */
         readonly parameters: OPTIONAL<_Element>,
         /**
+         * For internal State use. Not governed by an ICAO specification.
          * @summary `nationalUse`.
          * @public
          * @readonly

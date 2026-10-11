@@ -11,7 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DocumentType
  * @description
- * 
+ *
+ * Document type as it appears in the MRZ, one or two characters, for example
+ * `P` or `ID`. A single letter denotes every document type that starts with
+ * that letter.
+ *
+ * Doc 9303-12, section 7.1.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

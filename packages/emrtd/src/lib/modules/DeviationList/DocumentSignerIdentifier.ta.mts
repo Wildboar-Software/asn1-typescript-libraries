@@ -15,7 +15,16 @@ import { Digest, _decode_Digest, _encode_Digest } from "../DeviationList/Digest.
 /**
  * @summary DocumentSignerIdentifier
  * @description
- * 
+ *
+ * Which Document Signer certificates are affected.
+ *
+ * `issuerAndSerialNumber` names the signer by issuer and serial number.
+ * `subjectKeyIdentifier` names it by the signer certificate's subject key
+ * identifier. `certificateDigest` is a digest of the signer certificate;
+ * `DeviationList` must then contain `digestAlgorithm`.
+ *
+ * Doc 9303-12, section 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

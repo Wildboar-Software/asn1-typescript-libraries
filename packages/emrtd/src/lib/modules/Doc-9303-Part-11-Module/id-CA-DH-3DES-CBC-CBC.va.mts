@@ -10,7 +10,14 @@ import { id_CA_DH } from "../Doc-9303-Part-11-Module/id-CA-DH.va.mjs";
 /**
  * @summary id_CA_DH_3DES_CBC_CBC
  * @description
- * 
+ *
+ * Chip Authentication with Diffie-Hellman. Cipher is 3DES with
+ * a 112-bit key. Secure messaging is CBC / CBC. The chip command is MSE:Set
+ * KAT (section 6.2.4.1). Section 6.2.3 notes that 3DES may become
+ * deprecated.
+ *
+ * Doc 9303-11, section 6.2.3.1, Table 5, and section 9.2.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

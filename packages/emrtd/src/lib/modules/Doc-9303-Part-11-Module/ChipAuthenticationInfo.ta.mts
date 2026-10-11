@@ -33,7 +33,21 @@ const _permitted_protocols_for_ChipAuthenticationInfo: OBJECT_IDENTIFIER[] = [
 /**
  * @summary ChipAuthenticationInfo
  * @description
- * 
+ *
+ * One Chip Authentication implementation: key agreement, cipher, and MAC.
+ * `version` must be 1. The ASN.1 integer is not constrained to that value.
+ *
+ * `keyId` is required when the chip has more than one Chip Authentication
+ * public key. The same integer appears on the matching
+ * `ChipAuthenticationPublicKeyInfo`.
+ *
+ * 3DES restarts secure messaging with MSE:Set KAT. AES uses MSE:Set AT
+ * followed by GENERAL AUTHENTICATE. Section 6.2.3 notes that 3DES may become
+ * deprecated. Section 8.5 notes that some issued 3DES chips implement
+ * MSE:Set AT and GENERAL AUTHENTICATE but not MSE:Set KAT.
+ *
+ * Doc 9303-11, sections 6.2 and 9.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,18 +73,23 @@ export
 class ChipAuthenticationInfo {
     constructor (
         /**
+         * Key agreement, symmetric cipher, and MAC. One of the cipher-specific
+         * Chip Authentication object identifiers.
          * @summary `protocol`.
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
+         * Protocol version. This specification supports only version 1.
          * @summary `version`.
          * @public
          * @readonly
          */
         readonly version: INTEGER,
         /**
+         * Local key identifier. Required when the chip has more than one Chip
+         * Authentication public key.
          * @summary `keyId`.
          * @public
          * @readonly

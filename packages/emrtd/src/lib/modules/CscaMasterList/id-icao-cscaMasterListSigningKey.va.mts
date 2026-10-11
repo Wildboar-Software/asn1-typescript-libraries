@@ -10,7 +10,13 @@ import { id_icao_mrtd_security } from "../LDSSecurityObjectV1/id-icao-mrtd-secur
 /**
  * @summary id_icao_cscaMasterListSigningKey
  * @description
- * 
+ *
+ * Extended key usage of a Master List Signer certificate.
+ * `{id-icao-mrtd-security 3}` (2.23.136.1.1.3). Section 7.1.1.3 writes the
+ * same value in dotted form.
+ *
+ * Doc 9303-12, sections 7.1.1.3 and 9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

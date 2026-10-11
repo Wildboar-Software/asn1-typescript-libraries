@@ -10,7 +10,13 @@ import { id_icao_mrtd_security } from "../DeviationList/id-icao-mrtd-security.va
 /**
  * @summary id_icao_DeviationListSigningKey
  * @description
- * 
+ *
+ * Extended key usage of a Deviation List Signer certificate.
+ * `{id-icao-mrtd-security 8}` (2.23.136.1.1.8). Section 7.1.1.3 writes the
+ * same value in dotted form.
+ *
+ * Doc 9303-12, sections 7.1.1.3 and 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IssuancePeriod
  * @description
- * 
+ *
+ * Issuance dates of the affected documents. `firstIssued` and `lastIssued`
+ * are `GeneralizedTime`. Section 10 uses a date range as one of the bounds
+ * on a deviation.
+ *
+ * Doc 9303-12, sections 10 and 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,14 @@ export
 class IssuancePeriod {
     constructor (
         /**
+         * Start of the issuance dates, as `GeneralizedTime`.
          * @summary `firstIssued`.
          * @public
          * @readonly
          */
         readonly firstIssued: GeneralizedTime,
         /**
+         * End of the issuance dates, as `GeneralizedTime`.
          * @summary `lastIssued`.
          * @public
          * @readonly

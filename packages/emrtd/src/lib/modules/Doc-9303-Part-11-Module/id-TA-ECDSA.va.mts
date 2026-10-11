@@ -10,7 +10,12 @@ import { id_TA } from "../Doc-9303-Part-11-Module/id-TA.va.mjs";
 /**
  * @summary id_TA_ECDSA
  * @description
- * 
+ *
+ * ECDSA Terminal Authentication arc. Table 8 assigns the signature
+ * algorithms to the hash-specific children, not to this arc.
+ *
+ * Doc 9303-11, sections 7.1.4.2 and 9.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,12 @@ import { id_icao_mrtd_security } from "../LDSSecurityObjectV1/id-icao-mrtd-secur
 /**
  * @summary id_EFDIR
  * @description
- * 
+ *
+ * Identifies `EFDIRInfo`, the secured copy of EF.DIR.
+ * `{id-icao-mrtd-security 13}`.
+ *
+ * Doc 9303-11, section 9.2.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

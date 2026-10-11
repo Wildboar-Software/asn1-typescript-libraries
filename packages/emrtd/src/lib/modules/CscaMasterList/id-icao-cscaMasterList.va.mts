@@ -10,7 +10,12 @@ import { id_icao_mrtd_security } from "../LDSSecurityObjectV1/id-icao-mrtd-secur
 /**
  * @summary id_icao_cscaMasterList
  * @description
- * 
+ *
+ * `eContentType` of a CSCA Master List. `{id-icao-mrtd-security 2}`
+ * (2.23.136.1.1.2).
+ *
+ * Doc 9303-12, section 9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

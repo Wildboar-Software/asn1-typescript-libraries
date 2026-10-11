@@ -10,7 +10,15 @@ import { id_icao_mrtd_security_lds2 } from "../Doc-9303-Part-12-Module/id-icao-m
 /**
  * @summary id_icao_lds2Signer
  * @description
- * 
+ *
+ * Parent of the LDS2 extended-key-usage values. `{id-icao-mrtd-security-lds2
+ * 8}`.
+ *
+ * One signer may hold more than one of the child identifiers when it signs
+ * more than one kind of LDS2 object.
+ *
+ * Doc 9303-12, section 7.1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

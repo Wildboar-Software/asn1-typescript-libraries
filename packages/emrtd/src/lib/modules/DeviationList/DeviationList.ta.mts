@@ -16,7 +16,27 @@ import { Deviation, _decode_Deviation, _encode_Deviation } from "../DeviationLis
 /**
  * @summary DeviationList
  * @description
- * 
+ *
+ * `eContent` of a Deviation List. The list is a CMS `SignedData` (the text
+ * cites RFC 3852), produced in DER. `eContentType` is
+ * `id-icao-DeviationList`.
+ *
+ * `SignedData` profile (section 10.1): version `v3`; the Deviation List
+ * Signer certificate must be in `certificates`, and the CSCA certificate
+ * that verifies `signerInfos` should be; CRLs must be absent; one
+ * `SignerInfo` is recommended; `sid` should be `subjectKeyIdentifier`;
+ * `signedAttrs` must include PKCS #9 signing time; `unsignedAttrs` must be
+ * absent.
+ *
+ * Each `Deviation` bounds the affected documents. Components that are
+ * present together are combined with AND. There is no OR.
+ *
+ * `digestAlgorithm` is required when any `DocumentSignerIdentifier` uses
+ * `certificateDigest`. The specification does not say which digest
+ * algorithms are allowed.
+ *
+ * Doc 9303-12, section 10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +53,23 @@ export
 class DeviationList {
     constructor (
         /**
+         * List syntax version. Only `v0` is assigned.
          * @summary `version`.
          * @public
          * @readonly
          */
         readonly version: DeviationListVersion,
         /**
+         * Algorithm for every `certificateDigest` alternative in this list.
+         * Required when that alternative is used. Omit the field otherwise.
          * @summary `digestAlgorithm`.
          * @public
          * @readonly
          */
         readonly digestAlgorithm: OPTIONAL<AlgorithmIdentifier>,
         /**
+         * Deviation entries. Each entry combines its own document constraints
+         * with AND.
          * @summary `deviations`.
          * @public
          * @readonly

@@ -10,7 +10,12 @@ import { id_icao_DeviationList } from "../DeviationList/id-icao-DeviationList.va
 /**
  * @summary id_Deviation_Chip
  * @description
- * 
+ *
+ * Chip deviation. `{id-icao-DeviationList 4}`. Section 10.2 gives no further
+ * definition and assigns no parameter syntax.
+ *
+ * Doc 9303-12, section 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

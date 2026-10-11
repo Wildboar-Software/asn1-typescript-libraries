@@ -55,7 +55,21 @@ const _permitted_protocols_for_PACEInfo: OBJECT_IDENTIFIER[] = [
 /**
  * @summary PACEInfo
  * @description
- * 
+ *
+ * One PACE implementation: key agreement, mapping, cipher, and MAC. At least
+ * one entry that uses standardized domain parameters must be present when
+ * PACE is supported. Carried in EF.CardAccess.
+ *
+ * `version` must be 2. The ASN.1 integer is not constrained to that value.
+ *
+ * `parameterId` is the domain-parameter id from Table 12 when standardized
+ * parameters are used. It is required when the chip uses standardized
+ * parameters, publishes more than one explicit parameter set, or `protocol`
+ * is a `*-CAM-*` object identifier. For Chip Authentication Mapping it is
+ * also the `keyId` of the `ChipAuthenticationPublicKeyInfo` for that key.
+ *
+ * Doc 9303-11, sections 4.4 and 9.2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -92,18 +106,25 @@ export
 class PACEInfo {
     constructor (
         /**
+         * Key agreement, mapping, symmetric cipher, and MAC. One of the
+         * cipher-specific PACE object identifiers.
          * @summary `protocol`.
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
+         * Protocol version. This specification supports only version 2.
          * @summary `version`.
          * @public
          * @readonly
          */
         readonly version: INTEGER,
         /**
+         * Domain-parameter id (Table 12), or the Chip Authentication `keyId`
+         * when the protocol is Chip Authentication Mapping. Required for
+         * standardized parameters, for multiple explicit parameter sets, and
+         * for every `*-CAM-*` protocol.
          * @summary `parameterId`.
          * @public
          * @readonly

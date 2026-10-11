@@ -9,7 +9,11 @@ import { id_icao_mrtd } from "./id-icao-mrtd.va.mjs";
  * @summary id_icao_mrtd_security
  * @description
  *
- * Shared by `LDSSecurityObjectV1` and `DeviationList`.
+ * Security arc `{id-icao-mrtd 1}` (2.23.136.1.1). Part 11, section 9.2.4,
+ * says this object identifier is defined in Doc 9303-10. Part 12, section
+ * 10.2, repeats the assignment. Child arcs in these two parts include the
+ * master list, deviation list, certificate extensions, LDS2 signers, and the
+ * secured EF.DIR.
  *
  * ### ASN.1 Definition:
  *

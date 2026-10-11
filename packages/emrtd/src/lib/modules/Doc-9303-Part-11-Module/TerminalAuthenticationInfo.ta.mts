@@ -15,7 +15,19 @@ import { id_TA } from "../Doc-9303-Part-11-Module/id-TA.va.mjs";
 /**
  * @summary TerminalAuthenticationInfo
  * @description
- * 
+ *
+ * Announces Terminal Authentication version 1. `protocol` is `id-TA`.
+ * `version` must be 1.
+ *
+ * Section 9.2.8 defines this structure with those two components.
+ * Informative Appendix K, for European Extended Access Control, shows a
+ * third optional component, `efCVCA` of type `FileID`, used when EF.CVCA
+ * cannot keep its default identifier `0x011C` (short file identifier
+ * `0x1C`). This module follows section 9.2.8 and does not include `efCVCA`.
+ * `FileID` is still declared for that appendix.
+ *
+ * Doc 9303-11, sections 7.1, 9.2.8, and Appendix K.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +43,14 @@ export
 class TerminalAuthenticationInfo {
     constructor (
         /**
+         * `id-TA`. The signature algorithm is not selected here.
          * @summary `protocol`.
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
+         * Protocol version. This specification supports only version 1.
          * @summary `version`.
          * @public
          * @readonly

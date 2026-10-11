@@ -9,7 +9,9 @@ import { id_icao } from "./id-icao.va.mjs";
  * @summary id_icao_mrtd
  * @description
  *
- * Shared by `LDSSecurityObjectV1` and `DeviationList`.
+ * MRTD arc `{id-icao 1}` (2.23.136.1). Part 12, section 10.2. The same value
+ * is used by the LDS security object module and by the deviation list
+ * module.
  *
  * ### ASN.1 Definition:
  *

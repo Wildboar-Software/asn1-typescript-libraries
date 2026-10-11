@@ -13,7 +13,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FileID
  * @description
- * 
+ *
+ * Elementary-file identifier from informative Appendix K. `fid` is the
+ * two-octet file identifier. `sfid`, when present, is the
+ * one-octet short file identifier.
+ *
+ * Appendix K uses it as `efCVCA` on a `TerminalAuthenticationInfo` that
+ * section 9.2.8 does not include. If `fid` is given without `sfid`, EF.CVCA
+ * is selected explicitly with that file identifier. The default file
+ * identifier is `0x011C` and the default short identifier is `0x1C`.
+ *
+ * Doc 9303-11, Appendix K.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +40,15 @@ export
 class FileID {
     constructor (
         /**
+         * Two-octet elementary-file identifier.
          * @summary `fid`.
          * @public
          * @readonly
          */
         readonly fid: OCTET_STRING,
         /**
+         * One-octet short file identifier. Absent means the file is selected
+         * explicitly by `fid`.
          * @summary `sfid`.
          * @public
          * @readonly

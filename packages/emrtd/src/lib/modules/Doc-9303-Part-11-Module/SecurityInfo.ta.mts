@@ -12,7 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SecurityInfo
  * @description
- * 
+ *
+ * One announced protocol. `protocol` selects the open types of
+ * `requiredData` and `optionalData`.
+ *
+ * Doc 9303-11, section 9.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +34,22 @@ export
 class SecurityInfo {
     constructor (
         /**
+         * Identifies the supported protocol and selects the open types of
+         * `requiredData` and `optionalData`.
          * @summary `protocol`.
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
+         * Protocol-specific data that must be present.
          * @summary `requiredData`.
          * @public
          * @readonly
          */
         readonly requiredData: _Element,
         /**
+         * Protocol-specific data that may be absent.
          * @summary `optionalData`.
          * @public
          * @readonly

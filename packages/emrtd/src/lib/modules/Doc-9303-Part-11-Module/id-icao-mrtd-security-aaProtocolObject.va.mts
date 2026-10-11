@@ -10,7 +10,13 @@ import { id_icao_mrtd_security } from "../LDSSecurityObjectV1/id-icao-mrtd-secur
 /**
  * @summary id_icao_mrtd_security_aaProtocolObject
  * @description
- * 
+ *
+ * Identifies `ActiveAuthenticationInfo`. Required in EF.DG14 when Active
+ * Authentication uses ECDSA. `{id-icao-mrtd-security 5}`.
+ *
+ * Doc 9303-11, section 9.2.4, which also says `id-icao-mrtd-security` itself
+ * is defined in Doc 9303-10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

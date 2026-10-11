@@ -9,7 +9,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DocumentTypeListVersion
  * @description
- * 
+ *
+ * Version of `DocumentTypeListSyntax`. Only `v0` is assigned.
+ *
+ * Doc 9303-12, section 7.1.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -20,6 +24,7 @@ export
 type DocumentTypeListVersion = INTEGER;
 
 /**
+ * The only version assigned by section 7.1.1.6.
  * @summary DocumentTypeListVersion_v0
  * @constant
  * @type {number}
@@ -28,6 +33,7 @@ export
 const DocumentTypeListVersion_v0: DocumentTypeListVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
+ * Short name for {@link DocumentTypeListVersion_v0}.
  * @summary DocumentTypeListVersion_v0
  * @constant
  * @type {number}

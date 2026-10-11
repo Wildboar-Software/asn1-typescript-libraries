@@ -10,7 +10,13 @@ import { id_Deviation_LDS } from "../DeviationList/id-Deviation-LDS.va.mjs";
 /**
  * @summary id_Deviation_LDS_DGMalformed
  * @description
- * 
+ *
+ * Malformed LDS data group. `{id-Deviation-LDS 1}`.
+ *
+ * Section 10.2 assigns no parameter syntax for this object identifier.
+ *
+ * Doc 9303-12, section 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

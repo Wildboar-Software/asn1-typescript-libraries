@@ -10,7 +10,12 @@ import { id_icao_mrtd_security_extensions } from "../Doc-9303-Part-12-Module/id-
 /**
  * @summary id_icao_mrtd_security_extensions_documentTypeList
  * @description
- * 
+ *
+ * Object identifier of the `documentTypeList` extension.
+ * `{id-icao-mrtd-security-extensions 2}`.
+ *
+ * Doc 9303-12, section 7.1.1.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

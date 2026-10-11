@@ -10,7 +10,13 @@ import { id_Deviation_CertOrKey } from "../DeviationList/id-Deviation-CertOrKey.
 /**
  * @summary id_Deviation_CertOrKey_CSCAEncoding
  * @description
- * 
+ *
+ * Encoding deviation in a CSCA certificate. `{id-Deviation-CertOrKey 3}`.
+ *
+ * Section 10.2 assigns no parameter syntax for this object identifier.
+ *
+ * Doc 9303-12, section 10.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

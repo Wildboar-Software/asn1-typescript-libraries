@@ -28,7 +28,21 @@ const _permitted_protocols_for_PACEDomainParameterInfo: OBJECT_IDENTIFIER[] = [
 /**
  * @summary PACEDomainParameterInfo
  * @description
- * 
+ *
+ * Explicit PACE domain parameters. Required when the chip provides them, and
+ * omitted otherwise. The chip must still support at least one standardized
+ * set (section 9.5.1).
+ *
+ * These parameters are unprotected and may be insecure. Insecure parameters
+ * leak the password. An inspection system must not use them unless it
+ * already knows that set to be secure. Ephemeral public keys are exchanged
+ * as plain public-key values (section 9.4.5).
+ *
+ * `parameterId` is required when the chip publishes more than one explicit
+ * set.
+ *
+ * Doc 9303-11, section 9.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,18 +65,24 @@ export
 class PACEDomainParameterInfo {
     constructor (
         /**
+         * Key agreement and mapping for these parameters: a `PACE` family
+         * object identifier such as `id-PACE-DH-GM`, not a cipher-specific
+         * child.
          * @summary `protocol`.
          * @public
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
         /**
+         * The explicit domain parameters.
          * @summary `domainParameter`.
          * @public
          * @readonly
          */
         readonly domainParameter: AlgorithmIdentifier,
         /**
+         * Local identifier of this parameter set. Required when the chip
+         * publishes more than one explicit set.
          * @summary `parameterId`.
          * @public
          * @readonly

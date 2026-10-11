@@ -10,7 +10,13 @@ import { id_CA } from "../Doc-9303-Part-11-Module/id-CA.va.mjs";
 /**
  * @summary id_CA_ECDH
  * @description
- * 
+ *
+ * Elliptic-curve Chip Authentication arc. A
+ * `ChipAuthenticationInfo.protocol` value is one of the cipher-specific
+ * children, not this arc.
+ *
+ * Doc 9303-11, section 9.2.7 and Table 6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,14 @@ import { id_CA_ECDH } from "../Doc-9303-Part-11-Module/id-CA-ECDH.va.mjs";
 /**
  * @summary id_CA_ECDH_3DES_CBC_CBC
  * @description
- * 
+ *
+ * Chip Authentication with elliptic-curve Diffie-Hellman. Cipher is 3DES
+ * with a 112-bit key. Secure messaging is CBC / CBC. The chip command is
+ * MSE:Set KAT (section 6.2.4.1). Section 6.2.3 notes that 3DES may become
+ * deprecated.
+ *
+ * Doc 9303-11, section 6.2.3.2, Table 6, and section 9.2.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

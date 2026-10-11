@@ -10,7 +10,12 @@ import { id_TA } from "../Doc-9303-Part-11-Module/id-TA.va.mjs";
 /**
  * @summary id_TA_RSA
  * @description
- * 
+ *
+ * RSA Terminal Authentication arc. Table 7 assigns the signature algorithms
+ * to the RSASSA-PSS children, not to this arc.
+ *
+ * Doc 9303-11, sections 7.1.4.1 and 9.2.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

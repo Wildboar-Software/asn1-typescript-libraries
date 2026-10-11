@@ -10,7 +10,13 @@ import { id_PACE } from "../Doc-9303-Part-11-Module/id-PACE.va.mjs";
 /**
  * @summary id_PACE_DH_IM
  * @description
- * 
+ *
+ * Identifies Diffie-Hellman domain parameters for PACE with
+ * Integrated Mapping in `PACEDomainParameterInfo`. Not a `PACEInfo.protocol`
+ * value; the cipher-specific children are.
+ *
+ * Doc 9303-11, sections 9.2.2 and 9.2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

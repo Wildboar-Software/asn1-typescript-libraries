@@ -9,7 +9,16 @@ import {
 /**
  * @summary ecPublicKey
  * @description
- * 
+ *
+ * Explicit elliptic-curve domain parameters in an `AlgorithmIdentifier`. The
+ * parameters must be `ECParameters`. Named curves and implicit parameters
+ * are not permitted. `{iso(1) member-body(2) us(840) ansi-x962(10045)
+ * keyType(2) 1}`.
+ *
+ * Do not use an id reserved for `standardizedDomainParameters`.
+ *
+ * Doc 9303-11, section 9.5.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
