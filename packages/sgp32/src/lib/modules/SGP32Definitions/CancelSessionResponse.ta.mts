@@ -6,9 +6,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CancelSessionResponseOk, _decode_CancelSessionResponseOk, _encode_CancelSessionResponseOk } from "@wildboar/sgp22/RSPDefinitions";
 import { CancelSessionResponse_cancelSessionResponseError, _decode_CancelSessionResponse_cancelSessionResponseError, _encode_CancelSessionResponse_cancelSessionResponseError } from "../SGP32Definitions/CancelSessionResponse-cancelSessionResponseError.ta.mjs";
-// export { CancelSessionResponse_cancelSessionResponseError, CancelSessionResponse_cancelSessionResponseError_invalidTransactionId /* IMPORTED_LONG_NAMED_INTEGER */, invalidTransactionId /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionResponse_cancelSessionResponseError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CancelSessionResponse_cancelSessionResponseError, _encode_CancelSessionResponse_cancelSessionResponseError } from "../SGP32Definitions/CancelSessionResponse-cancelSessionResponseError.ta.mjs";
 import { CompactCancelSessionResponseOk, _decode_CompactCancelSessionResponseOk, _encode_CompactCancelSessionResponseOk } from "../SGP32Definitions/CompactCancelSessionResponseOk.ta.mjs";
-// export { CompactCancelSessionResponseOk, _decode_CompactCancelSessionResponseOk, _encode_CompactCancelSessionResponseOk } from "../SGP32Definitions/CompactCancelSessionResponseOk.ta.mjs";
 
 
 /**

@@ -5,13 +5,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EuiccPackageRequest, _decode_EuiccPackageRequest, _encode_EuiccPackageRequest } from "../SGP32Definitions/EuiccPackageRequest.ta.mjs";
-// export { EuiccPackageRequest, _decode_EuiccPackageRequest, _encode_EuiccPackageRequest } from "../SGP32Definitions/EuiccPackageRequest.ta.mjs";
 import { IpaEuiccDataRequest, _decode_IpaEuiccDataRequest, _encode_IpaEuiccDataRequest } from "../SGP32Definitions/IpaEuiccDataRequest.ta.mjs";
-// export { IpaEuiccDataRequest, _decode_IpaEuiccDataRequest, _encode_IpaEuiccDataRequest } from "../SGP32Definitions/IpaEuiccDataRequest.ta.mjs";
 import { ProfileDownloadTriggerRequest, _decode_ProfileDownloadTriggerRequest, _encode_ProfileDownloadTriggerRequest } from "../SGP32Definitions/ProfileDownloadTriggerRequest.ta.mjs";
-// export { ProfileDownloadTriggerRequest, _decode_ProfileDownloadTriggerRequest, _encode_ProfileDownloadTriggerRequest } from "../SGP32Definitions/ProfileDownloadTriggerRequest.ta.mjs";
 import { GetEimPackageResponse_eimPackageError, _decode_GetEimPackageResponse_eimPackageError, _encode_GetEimPackageResponse_eimPackageError } from "../SGP32Definitions/GetEimPackageResponse-eimPackageError.ta.mjs";
-// export { GetEimPackageResponse_eimPackageError, GetEimPackageResponse_eimPackageError_noEimPackageAvailable /* IMPORTED_LONG_NAMED_INTEGER */, noEimPackageAvailable /* IMPORTED_SHORT_NAMED_INTEGER */, GetEimPackageResponse_eimPackageError_eidNotFound /* IMPORTED_LONG_NAMED_INTEGER */, eidNotFound /* IMPORTED_SHORT_NAMED_INTEGER */, GetEimPackageResponse_eimPackageError_invalidEid /* IMPORTED_LONG_NAMED_INTEGER */, invalidEid /* IMPORTED_SHORT_NAMED_INTEGER */, GetEimPackageResponse_eimPackageError_missingEid /* IMPORTED_LONG_NAMED_INTEGER */, missingEid /* IMPORTED_SHORT_NAMED_INTEGER */, GetEimPackageResponse_eimPackageError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEimPackageResponse_eimPackageError, _encode_GetEimPackageResponse_eimPackageError } from "../SGP32Definitions/GetEimPackageResponse-eimPackageError.ta.mjs";
 
 
 /**

@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EimIdInfo, _decode_EimIdInfo, _encode_EimIdInfo } from "../SGP32Definitions/EimIdInfo.ta.mjs";
-// export { EimIdInfo, _decode_EimIdInfo, _encode_EimIdInfo } from "../SGP32Definitions/EimIdInfo.ta.mjs";
 import { ListEimResult_listEimError, _decode_ListEimResult_listEimError, _encode_ListEimResult_listEimError } from "../SGP32Definitions/ListEimResult-listEimError.ta.mjs";
-// export { ListEimResult_listEimError, ListEimResult_listEimError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ListEimResult_listEimError, _encode_ListEimResult_listEimError } from "../SGP32Definitions/ListEimResult-listEimError.ta.mjs";
 
 
 /**

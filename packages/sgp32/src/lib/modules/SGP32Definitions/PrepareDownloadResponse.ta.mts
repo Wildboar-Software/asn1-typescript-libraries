@@ -7,7 +7,6 @@ import * as $ from "@wildboar/asn1/functional";
 import { PrepareDownloadResponseOk, _decode_PrepareDownloadResponseOk, _encode_PrepareDownloadResponseOk } from "@wildboar/sgp22/RSPDefinitions";
 import { PrepareDownloadResponseError, _decode_PrepareDownloadResponseError, _encode_PrepareDownloadResponseError } from "@wildboar/sgp22/RSPDefinitions";
 import { CompactPrepareDownloadResponseOk, _decode_CompactPrepareDownloadResponseOk, _encode_CompactPrepareDownloadResponseOk } from "../SGP32Definitions/CompactPrepareDownloadResponseOk.ta.mjs";
-// export { CompactPrepareDownloadResponseOk, _decode_CompactPrepareDownloadResponseOk, _encode_CompactPrepareDownloadResponseOk } from "../SGP32Definitions/CompactPrepareDownloadResponseOk.ta.mjs";
 
 
 /**

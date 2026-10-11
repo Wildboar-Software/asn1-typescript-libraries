@@ -8,7 +8,6 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_EimIdType, _encode_EimIdType, EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
-// export { EimIdType, EimIdType_eimIdTypeOid /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeOid /* IMPORTED_SHORT_NAMED_INTEGER */, EimIdType_eimIdTypeFqdn /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeFqdn /* IMPORTED_SHORT_NAMED_INTEGER */, EimIdType_eimIdTypeProprietary /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeProprietary /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EimIdType, _encode_EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
 
 
 /**

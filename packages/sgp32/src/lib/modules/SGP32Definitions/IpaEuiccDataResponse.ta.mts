@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IpaEuiccData, _decode_IpaEuiccData, _encode_IpaEuiccData } from "../SGP32Definitions/IpaEuiccData.ta.mjs";
-// export { IpaEuiccData, _decode_IpaEuiccData, _encode_IpaEuiccData } from "../SGP32Definitions/IpaEuiccData.ta.mjs";
 import { IpaEuiccDataResponseError, _decode_IpaEuiccDataResponseError, _encode_IpaEuiccDataResponseError } from "../SGP32Definitions/IpaEuiccDataResponseError.ta.mjs";
-// export { IpaEuiccDataResponseError, _decode_IpaEuiccDataResponseError, _encode_IpaEuiccDataResponseError } from "../SGP32Definitions/IpaEuiccDataResponseError.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EuiccPackageResultDataSigned, _decode_EuiccPackageResultDataSigned, _encode_EuiccPackageResultDataSigned } from "../SGP32Definitions/EuiccPackageResultDataSigned.ta.mjs";
-// export { EuiccPackageResultDataSigned, _decode_EuiccPackageResultDataSigned, _encode_EuiccPackageResultDataSigned } from "../SGP32Definitions/EuiccPackageResultDataSigned.ta.mjs";
 
 
 /**

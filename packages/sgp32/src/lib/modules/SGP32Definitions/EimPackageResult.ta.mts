@@ -5,15 +5,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
-// export { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
 import { EimPackageResult_ePRAndNotifications, _decode_EimPackageResult_ePRAndNotifications, _encode_EimPackageResult_ePRAndNotifications } from "../SGP32Definitions/EimPackageResult-ePRAndNotifications.ta.mjs";
-// export { EimPackageResult_ePRAndNotifications, _decode_EimPackageResult_ePRAndNotifications, _encode_EimPackageResult_ePRAndNotifications } from "../SGP32Definitions/EimPackageResult-ePRAndNotifications.ta.mjs";
 import { IpaEuiccDataResponse, _decode_IpaEuiccDataResponse, _encode_IpaEuiccDataResponse } from "../SGP32Definitions/IpaEuiccDataResponse.ta.mjs";
-// export { IpaEuiccDataResponse, _decode_IpaEuiccDataResponse, _encode_IpaEuiccDataResponse } from "../SGP32Definitions/IpaEuiccDataResponse.ta.mjs";
 import { ProfileDownloadTriggerResult, _decode_ProfileDownloadTriggerResult, _encode_ProfileDownloadTriggerResult } from "../SGP32Definitions/ProfileDownloadTriggerResult.ta.mjs";
-// export { ProfileDownloadTriggerResult, _decode_ProfileDownloadTriggerResult, _encode_ProfileDownloadTriggerResult } from "../SGP32Definitions/ProfileDownloadTriggerResult.ta.mjs";
 import { EimPackageResultResponseError, _decode_EimPackageResultResponseError, _encode_EimPackageResultResponseError } from "../SGP32Definitions/EimPackageResultResponseError.ta.mjs";
-// export { EimPackageResultResponseError, _decode_EimPackageResultResponseError, _encode_EimPackageResultResponseError } from "../SGP32Definitions/EimPackageResultResponseError.ta.mjs";
 
 
 /**

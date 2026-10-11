@@ -8,7 +8,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 import { StoreMetadataRequest, _decode_StoreMetadataRequest, _encode_StoreMetadataRequest } from "../SGP32Definitions/StoreMetadataRequest.ta.mjs";
-// export { StoreMetadataRequest, _decode_StoreMetadataRequest, _encode_StoreMetadataRequest } from "../SGP32Definitions/StoreMetadataRequest.ta.mjs";
 import { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "@wildboar/sgp22/RSPDefinitions";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 import { type Octet32, _decode_Octet32, _encode_Octet32 } from "@wildboar/sgp22/RSPDefinitions";

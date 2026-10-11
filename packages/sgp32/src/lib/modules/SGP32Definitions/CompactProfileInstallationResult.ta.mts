@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompactProfileInstallationResultData, _decode_CompactProfileInstallationResultData, _encode_CompactProfileInstallationResultData } from "../SGP32Definitions/CompactProfileInstallationResultData.ta.mjs";
-// export { CompactProfileInstallationResultData, _decode_CompactProfileInstallationResultData, _encode_CompactProfileInstallationResultData } from "../SGP32Definitions/CompactProfileInstallationResultData.ta.mjs";
 import { type EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "@wildboar/sgp22/RSPDefinitions";
 
 

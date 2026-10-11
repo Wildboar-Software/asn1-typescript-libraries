@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Psmo, _decode_Psmo, _encode_Psmo } from "../SGP32Definitions/Psmo.ta.mjs";
-// export { Psmo, _decode_Psmo, _encode_Psmo } from "../SGP32Definitions/Psmo.ta.mjs";
 import { Eco, _decode_Eco, _encode_Eco } from "../SGP32Definitions/Eco.ta.mjs";
-// export { Eco, _decode_Eco, _encode_Eco } from "../SGP32Definitions/Eco.ta.mjs";
 
 
 /**

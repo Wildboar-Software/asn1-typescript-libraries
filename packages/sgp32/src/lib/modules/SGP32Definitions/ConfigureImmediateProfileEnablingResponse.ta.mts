@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult, _encode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult, ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult } from "../SGP32Definitions/ConfigureImmediateProfileEnablingResponse-configImmediateEnableResult.ta.mjs";
-// export { ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult, ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, ok /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_insufficientMemory /* IMPORTED_LONG_NAMED_INTEGER */, insufficientMemory /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_associatedEimAlreadyExists /* IMPORTED_LONG_NAMED_INTEGER */, associatedEimAlreadyExists /* IMPORTED_SHORT_NAMED_INTEGER */, ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult, _encode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult } from "../SGP32Definitions/ConfigureImmediateProfileEnablingResponse-configImmediateEnableResult.ta.mjs";
 
 
 /**

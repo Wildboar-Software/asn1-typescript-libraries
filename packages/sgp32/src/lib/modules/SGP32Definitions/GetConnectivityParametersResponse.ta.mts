@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ConnectivityParameters, _decode_ConnectivityParameters, _encode_ConnectivityParameters } from "../SGP32Definitions/ConnectivityParameters.ta.mjs";
-// export { ConnectivityParameters, _decode_ConnectivityParameters, _encode_ConnectivityParameters } from "../SGP32Definitions/ConnectivityParameters.ta.mjs";
 import { ConnectivityParametersError, _decode_ConnectivityParametersError, _encode_ConnectivityParametersError } from "../SGP32Definitions/ConnectivityParametersError.ta.mjs";
-// export { ConnectivityParametersError, ConnectivityParametersError_parametersNotAvailable /* IMPORTED_LONG_NAMED_INTEGER */, parametersNotAvailable /* IMPORTED_SHORT_NAMED_INTEGER */, ConnectivityParametersError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ConnectivityParametersError, _encode_ConnectivityParametersError } from "../SGP32Definitions/ConnectivityParametersError.ta.mjs";
 
 
 /**

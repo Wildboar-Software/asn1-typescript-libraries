@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IpaeActivationRequest_ipaeOption, _decode_IpaeActivationRequest_ipaeOption, _encode_IpaeActivationRequest_ipaeOption } from "../SGP32Definitions/IpaeActivationRequest-ipaeOption.ta.mjs";
-// export { IpaeActivationRequest_ipaeOption, IpaeActivationRequest_ipaeOption_activateIpae /* IMPORTED_LONG_NAMED_BIT */, activateIpae /* IMPORTED_SHORT_NAMED_BIT */, _decode_IpaeActivationRequest_ipaeOption, _encode_IpaeActivationRequest_ipaeOption } from "../SGP32Definitions/IpaeActivationRequest-ipaeOption.ta.mjs";
 
 
 /**

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AddEimResult_addEimResultCode, _encode_AddEimResult_addEimResultCode, AddEimResult_addEimResultCode } from "../SGP32Definitions/AddEimResult-addEimResultCode.ta.mjs";
-// export { AddEimResult_addEimResultCode, AddEimResult_addEimResultCode_ok /* IMPORTED_LONG_NAMED_INTEGER */, ok /* IMPORTED_SHORT_NAMED_INTEGER */, AddEimResult_addEimResultCode_insufficientMemory /* IMPORTED_LONG_NAMED_INTEGER */, insufficientMemory /* IMPORTED_SHORT_NAMED_INTEGER */, AddEimResult_addEimResultCode_associatedEimAlreadyExists /* IMPORTED_LONG_NAMED_INTEGER */, associatedEimAlreadyExists /* IMPORTED_SHORT_NAMED_INTEGER */, AddEimResult_addEimResultCode_ciPKUnknown /* IMPORTED_LONG_NAMED_INTEGER */, ciPKUnknown /* IMPORTED_SHORT_NAMED_INTEGER */, AddEimResult_addEimResultCode_invalidAssociationToken /* IMPORTED_LONG_NAMED_INTEGER */, invalidAssociationToken /* IMPORTED_SHORT_NAMED_INTEGER */, AddEimResult_addEimResultCode_counterValueOutOfRange /* IMPORTED_LONG_NAMED_INTEGER */, counterValueOutOfRange /* IMPORTED_SHORT_NAMED_INTEGER */, AddEimResult_addEimResultCode_commandError /* IMPORTED_LONG_NAMED_INTEGER */, commandError /* IMPORTED_SHORT_NAMED_INTEGER */, AddEimResult_addEimResultCode_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AddEimResult_addEimResultCode, _encode_AddEimResult_addEimResultCode } from "../SGP32Definitions/AddEimResult-addEimResultCode.ta.mjs";
 
 
 /**

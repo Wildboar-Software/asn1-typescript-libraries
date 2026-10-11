@@ -10,13 +10,9 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EimIdType, _decode_EimIdType, _encode_EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
-// export { EimIdType, EimIdType_eimIdTypeOid /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeOid /* IMPORTED_SHORT_NAMED_INTEGER */, EimIdType_eimIdTypeFqdn /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeFqdn /* IMPORTED_SHORT_NAMED_INTEGER */, EimIdType_eimIdTypeProprietary /* IMPORTED_LONG_NAMED_INTEGER */, eimIdTypeProprietary /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EimIdType, _encode_EimIdType } from "../SGP32Definitions/EimIdType.ta.mjs";
 import { EimConfigurationData_eimPublicKeyData, _decode_EimConfigurationData_eimPublicKeyData, _encode_EimConfigurationData_eimPublicKeyData } from "../SGP32Definitions/EimConfigurationData-eimPublicKeyData.ta.mjs";
-// export { EimConfigurationData_eimPublicKeyData, _decode_EimConfigurationData_eimPublicKeyData, _encode_EimConfigurationData_eimPublicKeyData } from "../SGP32Definitions/EimConfigurationData-eimPublicKeyData.ta.mjs";
 import { EimConfigurationData_trustedPublicKeyDataTls, _decode_EimConfigurationData_trustedPublicKeyDataTls, _encode_EimConfigurationData_trustedPublicKeyDataTls } from "../SGP32Definitions/EimConfigurationData-trustedPublicKeyDataTls.ta.mjs";
-// export { EimConfigurationData_trustedPublicKeyDataTls, _decode_EimConfigurationData_trustedPublicKeyDataTls, _encode_EimConfigurationData_trustedPublicKeyDataTls } from "../SGP32Definitions/EimConfigurationData-trustedPublicKeyDataTls.ta.mjs";
 import { EimSupportedProtocol, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
-// export { EimSupportedProtocol, EimSupportedProtocol_eimRetrieveHttps /* IMPORTED_LONG_NAMED_BIT */, eimRetrieveHttps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimRetrieveCoaps /* IMPORTED_LONG_NAMED_BIT */, eimRetrieveCoaps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimInjectHttps /* IMPORTED_LONG_NAMED_BIT */, eimInjectHttps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimInjectCoaps /* IMPORTED_LONG_NAMED_BIT */, eimInjectCoaps /* IMPORTED_SHORT_NAMED_BIT */, EimSupportedProtocol_eimProprietary /* IMPORTED_LONG_NAMED_BIT */, eimProprietary /* IMPORTED_SHORT_NAMED_BIT */, _decode_EimSupportedProtocol, _encode_EimSupportedProtocol } from "../SGP32Definitions/EimSupportedProtocol.ta.mjs";
 import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "@wildboar/x500/CertificateExtensions";
 import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "@wildboar/sgp22/RSPDefinitions";
 

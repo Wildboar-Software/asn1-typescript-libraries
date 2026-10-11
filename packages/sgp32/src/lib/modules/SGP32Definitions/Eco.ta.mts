@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EimConfigurationData, _decode_EimConfigurationData, _encode_EimConfigurationData } from "../SGP32Definitions/EimConfigurationData.ta.mjs";
-// export { EimConfigurationData, _decode_EimConfigurationData, _encode_EimConfigurationData } from "../SGP32Definitions/EimConfigurationData.ta.mjs";
 import { Eco_deleteEim, _decode_Eco_deleteEim, _encode_Eco_deleteEim } from "../SGP32Definitions/Eco-deleteEim.ta.mjs";
-// export { Eco_deleteEim, _decode_Eco_deleteEim, _encode_Eco_deleteEim } from "../SGP32Definitions/Eco-deleteEim.ta.mjs";
 import { Eco_listEim, _decode_Eco_listEim, _encode_Eco_listEim } from "../SGP32Definitions/Eco-listEim.ta.mjs";
-// export { Eco_listEim, _decode_Eco_listEim, _encode_Eco_listEim } from "../SGP32Definitions/Eco-listEim.ta.mjs";
 
 
 /**

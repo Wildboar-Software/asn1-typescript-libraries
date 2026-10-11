@@ -18,7 +18,6 @@ import { OperatorId, _decode_OperatorId, _encode_OperatorId } from "@wildboar/sg
 import { type PprIds, _decode_PprIds, _encode_PprIds } from "@wildboar/sgp22/RSPDefinitions";
 import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "@wildboar/sgp22/RSPDefinitions";
 import { StoreMetadataRequest_iotSpecificMetadata, _decode_StoreMetadataRequest_iotSpecificMetadata, _encode_StoreMetadataRequest_iotSpecificMetadata } from "../SGP32Definitions/StoreMetadataRequest-iotSpecificMetadata.ta.mjs";
-// export { StoreMetadataRequest_iotSpecificMetadata, _decode_StoreMetadataRequest_iotSpecificMetadata, _encode_StoreMetadataRequest_iotSpecificMetadata } from "../SGP32Definitions/StoreMetadataRequest-iotSpecificMetadata.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/RSPDefinitions";
 import { EimPackageResult, _decode_EimPackageResult, _encode_EimPackageResult } from "../SGP32Definitions/EimPackageResult.ta.mjs";
-// export { EimPackageResult, _decode_EimPackageResult, _encode_EimPackageResult } from "../SGP32Definitions/EimPackageResult.ta.mjs";
 
 
 /**

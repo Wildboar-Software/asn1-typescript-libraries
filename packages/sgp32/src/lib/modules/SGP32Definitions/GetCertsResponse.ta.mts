@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GetCertsResponse_certs, _decode_GetCertsResponse_certs, _encode_GetCertsResponse_certs } from "../SGP32Definitions/GetCertsResponse-certs.ta.mjs";
-// export { GetCertsResponse_certs, _decode_GetCertsResponse_certs, _encode_GetCertsResponse_certs } from "../SGP32Definitions/GetCertsResponse-certs.ta.mjs";
 import { GetCertsResponse_getCertsError, _decode_GetCertsResponse_getCertsError, _encode_GetCertsResponse_getCertsError } from "../SGP32Definitions/GetCertsResponse-getCertsError.ta.mjs";
-// export { GetCertsResponse_getCertsError, GetCertsResponse_getCertsError_invalidCiPKId /* IMPORTED_LONG_NAMED_INTEGER */, invalidCiPKId /* IMPORTED_SHORT_NAMED_INTEGER */, GetCertsResponse_getCertsError_undfinedError /* IMPORTED_LONG_NAMED_INTEGER */, undfinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetCertsResponse_getCertsError, _encode_GetCertsResponse_getCertsError } from "../SGP32Definitions/GetCertsResponse-getCertsError.ta.mjs";
 
 
 /**

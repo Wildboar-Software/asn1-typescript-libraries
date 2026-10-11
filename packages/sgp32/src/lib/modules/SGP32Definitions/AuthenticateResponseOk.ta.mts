@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EuiccSigned1, _decode_EuiccSigned1, _encode_EuiccSigned1 } from "../SGP32Definitions/EuiccSigned1.ta.mjs";
-// export { EuiccSigned1, _decode_EuiccSigned1, _encode_EuiccSigned1 } from "../SGP32Definitions/EuiccSigned1.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 
 

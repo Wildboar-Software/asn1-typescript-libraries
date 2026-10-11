@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_ReturnFromFallbackResponse_returnFromFallbackResult, ReturnFromFallbackResponse_returnFromFallbackResult } from "../SGP32Definitions/ReturnFromFallbackResponse-returnFromFallbackResult.ta.mjs";
-// export { ReturnFromFallbackResponse_returnFromFallbackResult, ReturnFromFallbackResponse_returnFromFallbackResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, ok /* IMPORTED_SHORT_NAMED_INTEGER */, ReturnFromFallbackResponse_returnFromFallbackResult_catBusy /* IMPORTED_LONG_NAMED_INTEGER */, catBusy /* IMPORTED_SHORT_NAMED_INTEGER */, ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable /* IMPORTED_LONG_NAMED_INTEGER */, fallbackNotAvailable /* IMPORTED_SHORT_NAMED_INTEGER */, ReturnFromFallbackResponse_returnFromFallbackResult_commandError /* IMPORTED_LONG_NAMED_INTEGER */, commandError /* IMPORTED_SHORT_NAMED_INTEGER */, ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_ReturnFromFallbackResponse_returnFromFallbackResult } from "../SGP32Definitions/ReturnFromFallbackResponse-returnFromFallbackResult.ta.mjs";
 
 
 /**

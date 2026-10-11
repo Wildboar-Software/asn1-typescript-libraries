@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileDownloadData, _decode_ProfileDownloadData, _encode_ProfileDownloadData } from "../SGP32Definitions/ProfileDownloadData.ta.mjs";
-// export { ProfileDownloadData, _decode_ProfileDownloadData, _encode_ProfileDownloadData } from "../SGP32Definitions/ProfileDownloadData.ta.mjs";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 
 

@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EuiccPackageResultSigned, _decode_EuiccPackageResultSigned, _encode_EuiccPackageResultSigned } from "../SGP32Definitions/EuiccPackageResultSigned.ta.mjs";
-// export { EuiccPackageResultSigned, _decode_EuiccPackageResultSigned, _encode_EuiccPackageResultSigned } from "../SGP32Definitions/EuiccPackageResultSigned.ta.mjs";
 import { EuiccPackageErrorSigned, _decode_EuiccPackageErrorSigned, _encode_EuiccPackageErrorSigned } from "../SGP32Definitions/EuiccPackageErrorSigned.ta.mjs";
-// export { EuiccPackageErrorSigned, _decode_EuiccPackageErrorSigned, _encode_EuiccPackageErrorSigned } from "../SGP32Definitions/EuiccPackageErrorSigned.ta.mjs";
 import { EuiccPackageErrorUnsigned, _decode_EuiccPackageErrorUnsigned, _encode_EuiccPackageErrorUnsigned } from "../SGP32Definitions/EuiccPackageErrorUnsigned.ta.mjs";
-// export { EuiccPackageErrorUnsigned, _decode_EuiccPackageErrorUnsigned, _encode_EuiccPackageErrorUnsigned } from "../SGP32Definitions/EuiccPackageErrorUnsigned.ta.mjs";
 
 
 /**

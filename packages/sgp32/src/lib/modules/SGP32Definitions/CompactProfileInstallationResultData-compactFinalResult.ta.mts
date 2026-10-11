@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompactSuccessResult, _decode_CompactSuccessResult, _encode_CompactSuccessResult } from "../SGP32Definitions/CompactSuccessResult.ta.mjs";
-// export { CompactSuccessResult, _decode_CompactSuccessResult, _encode_CompactSuccessResult } from "../SGP32Definitions/CompactSuccessResult.ta.mjs";
 import { ErrorResult, _decode_ErrorResult, _encode_ErrorResult } from "@wildboar/sgp22/RSPDefinitions";
 
 

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CancelSessionOk, _decode_CancelSessionOk, _encode_CancelSessionOk } from "../SGP32Definitions/CancelSessionOk.ta.mjs";
-// export { CancelSessionOk, _decode_CancelSessionOk, _encode_CancelSessionOk } from "../SGP32Definitions/CancelSessionOk.ta.mjs";
 import { CancelSessionResponseEsipa_cancelSessionError, _decode_CancelSessionResponseEsipa_cancelSessionError, _encode_CancelSessionResponseEsipa_cancelSessionError } from "../SGP32Definitions/CancelSessionResponseEsipa-cancelSessionError.ta.mjs";
-// export { CancelSessionResponseEsipa_cancelSessionError, CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId /* IMPORTED_LONG_NAMED_INTEGER */, invalidTransactionId /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid /* IMPORTED_LONG_NAMED_INTEGER */, euiccSignatureInvalid /* IMPORTED_SHORT_NAMED_INTEGER */, CancelSessionResponseEsipa_cancelSessionError_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CancelSessionResponseEsipa_cancelSessionError, _encode_CancelSessionResponseEsipa_cancelSessionError } from "../SGP32Definitions/CancelSessionResponseEsipa-cancelSessionError.ta.mjs";
 
 
 /**

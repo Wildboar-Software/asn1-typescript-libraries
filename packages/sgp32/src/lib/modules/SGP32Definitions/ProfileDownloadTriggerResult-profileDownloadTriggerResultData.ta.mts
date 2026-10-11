@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileInstallationResult, _decode_ProfileInstallationResult, _encode_ProfileInstallationResult } from "../SGP32Definitions/ProfileInstallationResult.ta.mjs";
-// export { ProfileInstallationResult, _decode_ProfileInstallationResult, _encode_ProfileInstallationResult } from "../SGP32Definitions/ProfileInstallationResult.ta.mjs";
 import { ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError, _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError, _encode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError } from "../SGP32Definitions/ProfileDownloadTriggerResult-profileDownloadTriggerResultData-profileDownloadError.ta.mjs";
-// export { ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError, _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError, _encode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError } from "../SGP32Definitions/ProfileDownloadTriggerResult-profileDownloadTriggerResultData-profileDownloadError.ta.mjs";
 
 
 /**

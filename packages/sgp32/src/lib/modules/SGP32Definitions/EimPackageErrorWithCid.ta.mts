@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EimPackageErrorWithCid_correlationId, _decode_EimPackageErrorWithCid_correlationId, _encode_EimPackageErrorWithCid_correlationId } from "../SGP32Definitions/EimPackageErrorWithCid-correlationId.ta.mjs";
-// export { EimPackageErrorWithCid_correlationId, _decode_EimPackageErrorWithCid_correlationId, _encode_EimPackageErrorWithCid_correlationId } from "../SGP32Definitions/EimPackageErrorWithCid-correlationId.ta.mjs";
 import { EimPackageResultErrorCode, _decode_EimPackageResultErrorCode, _encode_EimPackageResultErrorCode } from "../SGP32Definitions/EimPackageResultErrorCode.ta.mjs";
-// export { EimPackageResultErrorCode, EimPackageResultErrorCode_invalidPackageFormat /* IMPORTED_LONG_NAMED_INTEGER */, invalidPackageFormat /* IMPORTED_SHORT_NAMED_INTEGER */, EimPackageResultErrorCode_unknownPackage /* IMPORTED_LONG_NAMED_INTEGER */, unknownPackage /* IMPORTED_SHORT_NAMED_INTEGER */, EimPackageResultErrorCode_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EimPackageResultErrorCode, _encode_EimPackageResultErrorCode } from "../SGP32Definitions/EimPackageResultErrorCode.ta.mjs";
 
 
 /**

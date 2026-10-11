@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ImmediateEnableResponse_immediateEnableResult, _encode_ImmediateEnableResponse_immediateEnableResult, ImmediateEnableResponse_immediateEnableResult } from "../SGP32Definitions/ImmediateEnableResponse-immediateEnableResult.ta.mjs";
-// export { ImmediateEnableResponse_immediateEnableResult, ImmediateEnableResponse_immediateEnableResult_ok /* IMPORTED_LONG_NAMED_INTEGER */, ok /* IMPORTED_SHORT_NAMED_INTEGER */, ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable /* IMPORTED_LONG_NAMED_INTEGER */, immediateEnableNotAvailable /* IMPORTED_SHORT_NAMED_INTEGER */, ImmediateEnableResponse_immediateEnableResult_noSessionContext /* IMPORTED_LONG_NAMED_INTEGER */, noSessionContext /* IMPORTED_SHORT_NAMED_INTEGER */, ImmediateEnableResponse_immediateEnableResult_catBusy /* IMPORTED_LONG_NAMED_INTEGER */, catBusy /* IMPORTED_SHORT_NAMED_INTEGER */, ImmediateEnableResponse_immediateEnableResult_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ImmediateEnableResponse_immediateEnableResult, _encode_ImmediateEnableResponse_immediateEnableResult } from "../SGP32Definitions/ImmediateEnableResponse-immediateEnableResult.ta.mjs";
 
 
 /**

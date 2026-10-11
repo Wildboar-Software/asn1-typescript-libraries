@@ -10,7 +10,6 @@ import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 import { EuiccPackageUnsignedErrorCode, _decode_EuiccPackageUnsignedErrorCode, _encode_EuiccPackageUnsignedErrorCode } from "../SGP32Definitions/EuiccPackageUnsignedErrorCode.ta.mjs";
-// export { EuiccPackageUnsignedErrorCode, EuiccPackageUnsignedErrorCode_sizeOverflow /* IMPORTED_LONG_NAMED_INTEGER */, sizeOverflow /* IMPORTED_SHORT_NAMED_INTEGER */, EuiccPackageUnsignedErrorCode_undefinedError /* IMPORTED_LONG_NAMED_INTEGER */, undefinedError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EuiccPackageUnsignedErrorCode, _encode_EuiccPackageUnsignedErrorCode } from "../SGP32Definitions/EuiccPackageUnsignedErrorCode.ta.mjs";
 
 
 /**

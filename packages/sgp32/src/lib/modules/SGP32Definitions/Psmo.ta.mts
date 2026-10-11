@@ -5,22 +5,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Psmo_enable, _decode_Psmo_enable, _encode_Psmo_enable } from "../SGP32Definitions/Psmo-enable.ta.mjs";
-// export { Psmo_enable, _decode_Psmo_enable, _encode_Psmo_enable } from "../SGP32Definitions/Psmo-enable.ta.mjs";
 import { Psmo_disable, _decode_Psmo_disable, _encode_Psmo_disable } from "../SGP32Definitions/Psmo-disable.ta.mjs";
-// export { Psmo_disable, _decode_Psmo_disable, _encode_Psmo_disable } from "../SGP32Definitions/Psmo-disable.ta.mjs";
 import { Psmo_delete, _decode_Psmo_delete, _encode_Psmo_delete } from "../SGP32Definitions/Psmo-delete.ta.mjs";
-// export { Psmo_delete, _decode_Psmo_delete, _encode_Psmo_delete } from "../SGP32Definitions/Psmo-delete.ta.mjs";
 import { ProfileInfoListRequest, _decode_ProfileInfoListRequest, _encode_ProfileInfoListRequest } from "@wildboar/sgp22/RSPDefinitions";
 import { Psmo_getRAT, _decode_Psmo_getRAT, _encode_Psmo_getRAT } from "../SGP32Definitions/Psmo-getRAT.ta.mjs";
-// export { Psmo_getRAT, _decode_Psmo_getRAT, _encode_Psmo_getRAT } from "../SGP32Definitions/Psmo-getRAT.ta.mjs";
 import { Psmo_configureImmediateEnable, _decode_Psmo_configureImmediateEnable, _encode_Psmo_configureImmediateEnable } from "../SGP32Definitions/Psmo-configureImmediateEnable.ta.mjs";
-// export { Psmo_configureImmediateEnable, _decode_Psmo_configureImmediateEnable, _encode_Psmo_configureImmediateEnable } from "../SGP32Definitions/Psmo-configureImmediateEnable.ta.mjs";
 import { Psmo_setFallbackAttribute, _decode_Psmo_setFallbackAttribute, _encode_Psmo_setFallbackAttribute } from "../SGP32Definitions/Psmo-setFallbackAttribute.ta.mjs";
-// export { Psmo_setFallbackAttribute, _decode_Psmo_setFallbackAttribute, _encode_Psmo_setFallbackAttribute } from "../SGP32Definitions/Psmo-setFallbackAttribute.ta.mjs";
 import { Psmo_unsetFallbackAttribute, _decode_Psmo_unsetFallbackAttribute, _encode_Psmo_unsetFallbackAttribute } from "../SGP32Definitions/Psmo-unsetFallbackAttribute.ta.mjs";
-// export { Psmo_unsetFallbackAttribute, _decode_Psmo_unsetFallbackAttribute, _encode_Psmo_unsetFallbackAttribute } from "../SGP32Definitions/Psmo-unsetFallbackAttribute.ta.mjs";
 import { SetDefaultDpAddressRequest, _decode_SetDefaultDpAddressRequest, _encode_SetDefaultDpAddressRequest } from "../SGP32Definitions/SetDefaultDpAddressRequest.ta.mjs";
-// export { SetDefaultDpAddressRequest, _decode_SetDefaultDpAddressRequest, _encode_SetDefaultDpAddressRequest } from "../SGP32Definitions/SetDefaultDpAddressRequest.ta.mjs";
 
 
 /**

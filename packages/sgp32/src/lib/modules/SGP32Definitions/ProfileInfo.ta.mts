@@ -21,7 +21,6 @@ import { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData
 import { type PprIds, _decode_PprIds, _encode_PprIds } from "@wildboar/sgp22/RSPDefinitions";
 import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "@wildboar/sgp22/RSPDefinitions";
 import { ProfileInfo_iotSpecificProfileInfo, _decode_ProfileInfo_iotSpecificProfileInfo, _encode_ProfileInfo_iotSpecificProfileInfo } from "../SGP32Definitions/ProfileInfo-iotSpecificProfileInfo.ta.mjs";
-// export { ProfileInfo_iotSpecificProfileInfo, _decode_ProfileInfo_iotSpecificProfileInfo, _encode_ProfileInfo_iotSpecificProfileInfo } from "../SGP32Definitions/ProfileInfo-iotSpecificProfileInfo.ta.mjs";
 
 
 /**

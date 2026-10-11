@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompactEuiccSigned2, _decode_CompactEuiccSigned2, _encode_CompactEuiccSigned2 } from "../SGP32Definitions/CompactEuiccSigned2.ta.mjs";
-// export { CompactEuiccSigned2, _decode_CompactEuiccSigned2, _encode_CompactEuiccSigned2 } from "../SGP32Definitions/CompactEuiccSigned2.ta.mjs";
 
 
 /**

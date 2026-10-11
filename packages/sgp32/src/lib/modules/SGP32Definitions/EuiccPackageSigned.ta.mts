@@ -11,7 +11,6 @@ import * as $ from "@wildboar/asn1/functional";
 import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/RSPDefinitions";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 import { EuiccPackage, _decode_EuiccPackage, _encode_EuiccPackage } from "../SGP32Definitions/EuiccPackage.ta.mjs";
-// export { EuiccPackage, _decode_EuiccPackage, _encode_EuiccPackage } from "../SGP32Definitions/EuiccPackage.ta.mjs";
 
 
 /**

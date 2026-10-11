@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "../SGP32Definitions/SequenceNumber.ta.mjs";
-// export { SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "../SGP32Definitions/SequenceNumber.ta.mjs";
 
 
 /**

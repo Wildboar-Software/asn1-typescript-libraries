@@ -8,7 +8,6 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileDownloadData_contactSmds, _decode_ProfileDownloadData_contactSmds, _encode_ProfileDownloadData_contactSmds } from "../SGP32Definitions/ProfileDownloadData-contactSmds.ta.mjs";
-// export { ProfileDownloadData_contactSmds, _decode_ProfileDownloadData_contactSmds, _encode_ProfileDownloadData_contactSmds } from "../SGP32Definitions/ProfileDownloadData-contactSmds.ta.mjs";
 
 
 /**
