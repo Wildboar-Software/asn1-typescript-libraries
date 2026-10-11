@@ -1,17 +1,15 @@
-export type {
-    IRI_Parameters,
-} from "./IRI-Parameters.ta.mjs";
-
-export {
-    _decode_IRI_Parameters,
-    _encode_IRI_Parameters,
-} from "./IRI-Parameters.ta.mjs";
-
-export type {
-    UmtsCS_IRIsContent,
-} from "./UmtsCS-IRIsContent.ta.mjs";
-
-export {
-    _decode_UmtsCS_IRIsContent,
-    _encode_UmtsCS_IRIsContent,
-} from "./UmtsCS-IRIsContent.ta.mjs";
+export * from "./Change-Of-Target-Identity.ta.mjs";
+export * from "./Current-Previous-Systems.ta.mjs";
+export * from "./IRI-Parameters-callContentLinkInformation.ta.mjs";
+export * from "./IRI-Parameters-iRIversion.ta.mjs";
+export * from "./IRI-Parameters-intercepted-Call-Direct.ta.mjs";
+export * from "./IRI-Parameters-nature-Of-The-intercepted-call.ta.mjs";
+export * from "./IRI-Parameters.ta.mjs";
+export * from "./Requesting-Node-Type.ta.mjs";
+export * from "./Umts-Cs-Event.ta.mjs";
+export * from "./UmtsCS-IRIContent.ta.mjs";
+export * from "./UmtsCS-IRISequence.ta.mjs";
+export * from "./UmtsCS-IRIsContent.ta.mjs";
+export * from "./hi2CSDomainId.va.mjs";
+export * from "./lawfulInterceptDomainId.va.mjs";
+export * from "./threeGPPSUBDomainId.va.mjs";

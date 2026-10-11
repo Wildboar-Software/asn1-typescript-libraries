@@ -1,17 +1,18 @@
-export type {
-    IRI_Parameters,
-} from "./IRI-Parameters.ta.mjs";
-
-export {
-    _decode_IRI_Parameters,
-    _encode_IRI_Parameters,
-} from "./IRI-Parameters.ta.mjs";
-
-export type {
-    ConfIRIsContent,
-} from "./ConfIRIsContent.ta.mjs";
-
-export {
-    _decode_ConfIRIsContent,
-    _encode_ConfIRIsContent,
-} from "./ConfIRIsContent.ta.mjs";
+export * from "./ConfCorrelation.ta.mjs";
+export * from "./ConfEvent.ta.mjs";
+export * from "./ConfEventFailureReason.ta.mjs";
+export * from "./ConfEventInitiator.ta.mjs";
+export * from "./ConfIRIContent.ta.mjs";
+export * from "./ConfIRISequence.ta.mjs";
+export * from "./ConfIRIsContent.ta.mjs";
+export * from "./ConfPartyInformation.ta.mjs";
+export * from "./IMSIdentity.ta.mjs";
+export * from "./IRI-Parameters.ta.mjs";
+export * from "./MediaModification.ta.mjs";
+export * from "./PartyIdentity.ta.mjs";
+export * from "./Reason.ta.mjs";
+export * from "./RecurrenceInfo.ta.mjs";
+export * from "./SupportedMedia.ta.mjs";
+export * from "./hi2confDomainId.va.mjs";
+export * from "./lawfulInterceptDomainId.va.mjs";
+export * from "./threeGPPSUBDomainId.va.mjs";
