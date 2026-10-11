@@ -4,10 +4,13 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
+import { id_PK_DH } from "../Doc-9303-Part-11-Module/id-PK-DH.va.mjs";
+import { id_PK_ECDH } from "../Doc-9303-Part-11-Module/id-PK-ECDH.va.mjs";
 // export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
 
@@ -48,7 +51,11 @@ class ChipAuthenticationPublicKeyInfo {
          * @readonly
          */
         readonly keyId: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if (!id_PK_DH.isEqualTo(protocol) && !id_PK_ECDH.isEqualTo(protocol)) {
+            throw new ASN1Error("ChipAuthenticationPublicKeyInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ChipAuthenticationPublicKeyInfo

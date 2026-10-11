@@ -2,11 +2,13 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass,
     INTEGER,
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { id_TA } from "../Doc-9303-Part-11-Module/id-TA.va.mjs";
 
 
 
@@ -40,7 +42,11 @@ class TerminalAuthenticationInfo {
          * @readonly
          */
         readonly version: INTEGER
-    ) {}
+    ) {
+        if (!id_TA.isEqualTo(protocol)) {
+            throw new ASN1Error("TerminalAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a TerminalAuthenticationInfo
@@ -118,10 +124,8 @@ function _decode_TerminalAuthenticationInfo (el: _Element): TerminalAuthenticati
     }
     sequence[0].name = "protocol";
     sequence[1].name = "version";
-    let protocol!: OBJECT_IDENTIFIER;
-    let version!: INTEGER;
-    protocol = $._decodeObjectIdentifier(sequence[0]);
-    version = $._decodeInteger(sequence[1]);
+    const protocol: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const version: INTEGER = $._decodeInteger(sequence[1]);
     return new TerminalAuthenticationInfo(
         protocol,
         version,

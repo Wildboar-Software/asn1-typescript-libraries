@@ -1,69 +1,9 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
-    PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -94,8 +34,18 @@ class SecurityInfo {
          * @readonly
          */
         readonly protocol: OBJECT_IDENTIFIER,
-// FIXME: readonly requiredData: AnyType,
-// FIXME: readonly optionalData: AnyType
+        /**
+         * @summary `requiredData`.
+         * @public
+         * @readonly
+         */
+        readonly requiredData: _Element,
+        /**
+         * @summary `optionalData`.
+         * @public
+         * @readonly
+         */
+        readonly optionalData: OPTIONAL<_Element>,
     ) {}
 
     /**
@@ -111,7 +61,7 @@ class SecurityInfo {
      * @returns {SecurityInfo}
      */
     public static _from_object (_o: { [_K in keyof (SecurityInfo)]: (SecurityInfo)[_K] }): SecurityInfo {
-        return new SecurityInfo(_o.protocol, _o., _o.);
+        return new SecurityInfo(_o.protocol, _o.requiredData, _o.optionalData);
     }
 
 
@@ -170,8 +120,8 @@ export
 function _decode_SecurityInfo (el: _Element): SecurityInfo {
     if (!_cached_decoder_for_SecurityInfo) { _cached_decoder_for_SecurityInfo = function (el: _Element): SecurityInfo {
     let protocol!: OBJECT_IDENTIFIER;
-    let requiredData!: /* FIXME: requiredData COULD_NOT_COMPILE_TYPE */;
-    let optionalData: OPTIONAL</* FIXME: optionalData COULD_NOT_COMPILE_TYPE */>;
+    let requiredData!: _Element;
+    let optionalData: OPTIONAL<_Element>;
     const callbacks: $.DecodingMap = {
         "protocol": (_el: _Element): void => { protocol = $._decodeObjectIdentifier(_el); },
         "requiredData": (_el: _Element): void => { requiredData = $._decodeAny(_el); },

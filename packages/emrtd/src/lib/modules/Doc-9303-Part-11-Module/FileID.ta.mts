@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
     OPTIONAL
@@ -39,7 +40,14 @@ class FileID {
          * @readonly
          */
         readonly sfid: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (fid.length !== 2) {
+            throw new ASN1SizeError("FileID.fid violates SIZE constraint");
+        }
+        if (sfid !== undefined && sfid.length !== 1) {
+            throw new ASN1SizeError("FileID.sfid violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a FileID

@@ -118,10 +118,8 @@ function _decode_DataGroupHash (el: _Element): DataGroupHash {
     }
     sequence[0].name = "dataGroupNumber";
     sequence[1].name = "dataGroupHashValue";
-    let dataGroupNumber!: DataGroupNumber;
-    let dataGroupHashValue!: OCTET_STRING;
-    dataGroupNumber = _decode_DataGroupNumber(sequence[0]);
-    dataGroupHashValue = $._decodeOctetString(sequence[1]);
+    const dataGroupNumber: DataGroupNumber = _decode_DataGroupNumber(sequence[0]);
+    const dataGroupHashValue: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new DataGroupHash(
         dataGroupNumber,
         dataGroupHashValue,

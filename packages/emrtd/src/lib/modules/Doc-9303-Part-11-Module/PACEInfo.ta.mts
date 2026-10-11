@@ -1,12 +1,54 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass,
     INTEGER,
     OBJECT_IDENTIFIER,
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { id_PACE_DH_GM_3DES_CBC_CBC } from "../Doc-9303-Part-11-Module/id-PACE-DH-GM-3DES-CBC-CBC.va.mjs";
+import { id_PACE_DH_GM_AES_CBC_CMAC_128 } from "../Doc-9303-Part-11-Module/id-PACE-DH-GM-AES-CBC-CMAC-128.va.mjs";
+import { id_PACE_DH_GM_AES_CBC_CMAC_192 } from "../Doc-9303-Part-11-Module/id-PACE-DH-GM-AES-CBC-CMAC-192.va.mjs";
+import { id_PACE_DH_GM_AES_CBC_CMAC_256 } from "../Doc-9303-Part-11-Module/id-PACE-DH-GM-AES-CBC-CMAC-256.va.mjs";
+import { id_PACE_ECDH_GM_3DES_CBC_CBC } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-GM-3DES-CBC-CBC.va.mjs";
+import { id_PACE_ECDH_GM_AES_CBC_CMAC_128 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-GM-AES-CBC-CMAC-128.va.mjs";
+import { id_PACE_ECDH_GM_AES_CBC_CMAC_192 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-GM-AES-CBC-CMAC-192.va.mjs";
+import { id_PACE_ECDH_GM_AES_CBC_CMAC_256 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-GM-AES-CBC-CMAC-256.va.mjs";
+import { id_PACE_DH_IM_3DES_CBC_CBC } from "../Doc-9303-Part-11-Module/id-PACE-DH-IM-3DES-CBC-CBC.va.mjs";
+import { id_PACE_DH_IM_AES_CBC_CMAC_128 } from "../Doc-9303-Part-11-Module/id-PACE-DH-IM-AES-CBC-CMAC-128.va.mjs";
+import { id_PACE_DH_IM_AES_CBC_CMAC_192 } from "../Doc-9303-Part-11-Module/id-PACE-DH-IM-AES-CBC-CMAC-192.va.mjs";
+import { id_PACE_DH_IM_AES_CBC_CMAC_256 } from "../Doc-9303-Part-11-Module/id-PACE-DH-IM-AES-CBC-CMAC-256.va.mjs";
+import { id_PACE_ECDH_IM_3DES_CBC_CBC } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-IM-3DES-CBC-CBC.va.mjs";
+import { id_PACE_ECDH_IM_AES_CBC_CMAC_128 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-IM-AES-CBC-CMAC-128.va.mjs";
+import { id_PACE_ECDH_IM_AES_CBC_CMAC_192 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-IM-AES-CBC-CMAC-192.va.mjs";
+import { id_PACE_ECDH_IM_AES_CBC_CMAC_256 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-IM-AES-CBC-CMAC-256.va.mjs";
+import { id_PACE_ECDH_CAM_AES_CBC_CMAC_128 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-CAM-AES-CBC-CMAC-128.va.mjs";
+import { id_PACE_ECDH_CAM_AES_CBC_CMAC_192 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-CAM-AES-CBC-CMAC-192.va.mjs";
+import { id_PACE_ECDH_CAM_AES_CBC_CMAC_256 } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-CAM-AES-CBC-CMAC-256.va.mjs";
+
+const _permitted_protocols_for_PACEInfo: OBJECT_IDENTIFIER[] = [
+    id_PACE_DH_GM_3DES_CBC_CBC,
+    id_PACE_DH_GM_AES_CBC_CMAC_128,
+    id_PACE_DH_GM_AES_CBC_CMAC_192,
+    id_PACE_DH_GM_AES_CBC_CMAC_256,
+    id_PACE_ECDH_GM_3DES_CBC_CBC,
+    id_PACE_ECDH_GM_AES_CBC_CMAC_128,
+    id_PACE_ECDH_GM_AES_CBC_CMAC_192,
+    id_PACE_ECDH_GM_AES_CBC_CMAC_256,
+    id_PACE_DH_IM_3DES_CBC_CBC,
+    id_PACE_DH_IM_AES_CBC_CMAC_128,
+    id_PACE_DH_IM_AES_CBC_CMAC_192,
+    id_PACE_DH_IM_AES_CBC_CMAC_256,
+    id_PACE_ECDH_IM_3DES_CBC_CBC,
+    id_PACE_ECDH_IM_AES_CBC_CMAC_128,
+    id_PACE_ECDH_IM_AES_CBC_CMAC_192,
+    id_PACE_ECDH_IM_AES_CBC_CMAC_256,
+    id_PACE_ECDH_CAM_AES_CBC_CMAC_128,
+    id_PACE_ECDH_CAM_AES_CBC_CMAC_192,
+    id_PACE_ECDH_CAM_AES_CBC_CMAC_256,
+];
 
 
 
@@ -67,7 +109,11 @@ class PACEInfo {
          * @readonly
          */
         readonly parameterId: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if (!_permitted_protocols_for_PACEInfo.some((id) => id.isEqualTo(protocol))) {
+            throw new ASN1Error("PACEInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PACEInfo

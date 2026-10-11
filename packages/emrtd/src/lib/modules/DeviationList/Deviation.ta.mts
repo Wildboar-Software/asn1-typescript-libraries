@@ -119,10 +119,8 @@ function _decode_Deviation (el: _Element): Deviation {
     }
     sequence[0].name = "documents";
     sequence[1].name = "descriptions";
-    let documents!: DeviationDocuments;
-    let descriptions!: DeviationDescription[];
-    documents = _decode_DeviationDocuments(sequence[0]);
-    descriptions = $._decodeSetOf<DeviationDescription>(() => _decode_DeviationDescription)(sequence[1]);
+    const documents: DeviationDocuments = _decode_DeviationDocuments(sequence[0]);
+    const descriptions: DeviationDescription[] = $._decodeSetOf<DeviationDescription>(() => _decode_DeviationDescription)(sequence[1]);
     return new Deviation(
         documents,
         descriptions,

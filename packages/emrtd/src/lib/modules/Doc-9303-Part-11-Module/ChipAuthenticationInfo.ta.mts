@@ -1,12 +1,32 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass,
     INTEGER,
     OBJECT_IDENTIFIER,
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { id_CA_DH_3DES_CBC_CBC } from "../Doc-9303-Part-11-Module/id-CA-DH-3DES-CBC-CBC.va.mjs";
+import { id_CA_DH_AES_CBC_CMAC_128 } from "../Doc-9303-Part-11-Module/id-CA-DH-AES-CBC-CMAC-128.va.mjs";
+import { id_CA_DH_AES_CBC_CMAC_192 } from "../Doc-9303-Part-11-Module/id-CA-DH-AES-CBC-CMAC-192.va.mjs";
+import { id_CA_DH_AES_CBC_CMAC_256 } from "../Doc-9303-Part-11-Module/id-CA-DH-AES-CBC-CMAC-256.va.mjs";
+import { id_CA_ECDH_3DES_CBC_CBC } from "../Doc-9303-Part-11-Module/id-CA-ECDH-3DES-CBC-CBC.va.mjs";
+import { id_CA_ECDH_AES_CBC_CMAC_128 } from "../Doc-9303-Part-11-Module/id-CA-ECDH-AES-CBC-CMAC-128.va.mjs";
+import { id_CA_ECDH_AES_CBC_CMAC_192 } from "../Doc-9303-Part-11-Module/id-CA-ECDH-AES-CBC-CMAC-192.va.mjs";
+import { id_CA_ECDH_AES_CBC_CMAC_256 } from "../Doc-9303-Part-11-Module/id-CA-ECDH-AES-CBC-CMAC-256.va.mjs";
+
+const _permitted_protocols_for_ChipAuthenticationInfo: OBJECT_IDENTIFIER[] = [
+    id_CA_DH_3DES_CBC_CBC,
+    id_CA_DH_AES_CBC_CMAC_128,
+    id_CA_DH_AES_CBC_CMAC_192,
+    id_CA_DH_AES_CBC_CMAC_256,
+    id_CA_ECDH_3DES_CBC_CBC,
+    id_CA_ECDH_AES_CBC_CMAC_128,
+    id_CA_ECDH_AES_CBC_CMAC_192,
+    id_CA_ECDH_AES_CBC_CMAC_256,
+];
 
 
 
@@ -56,7 +76,11 @@ class ChipAuthenticationInfo {
          * @readonly
          */
         readonly keyId: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if (!_permitted_protocols_for_ChipAuthenticationInfo.some((id) => id.isEqualTo(protocol))) {
+            throw new ASN1Error("ChipAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ChipAuthenticationInfo

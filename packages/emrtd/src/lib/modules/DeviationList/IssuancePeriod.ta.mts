@@ -117,10 +117,8 @@ function _decode_IssuancePeriod (el: _Element): IssuancePeriod {
     }
     sequence[0].name = "firstIssued";
     sequence[1].name = "lastIssued";
-    let firstIssued!: GeneralizedTime;
-    let lastIssued!: GeneralizedTime;
-    firstIssued = $._decodeGeneralizedTime(sequence[0]);
-    lastIssued = $._decodeGeneralizedTime(sequence[1]);
+    const firstIssued: GeneralizedTime = $._decodeGeneralizedTime(sequence[0]);
+    const lastIssued: GeneralizedTime = $._decodeGeneralizedTime(sequence[1]);
     return new IssuancePeriod(
         firstIssued,
         lastIssued,

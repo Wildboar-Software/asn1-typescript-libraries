@@ -6,7 +6,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAndSerialNumber } from "../EnhancedSecurity/IssuerAndSerialNumber.ta.mjs";
 // export { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAndSerialNumber } from "../EnhancedSecurity/IssuerAndSerialNumber.ta.mjs";
-import { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
+import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
 // export { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
 import { Digest, _decode_Digest, _encode_Digest } from "../DeviationList/Digest.ta.mjs";
 // export { Digest, _decode_Digest, _encode_Digest } from "../DeviationList/Digest.ta.mjs";
