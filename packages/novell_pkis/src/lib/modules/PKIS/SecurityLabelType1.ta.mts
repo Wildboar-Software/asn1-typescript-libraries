@@ -70,121 +70,142 @@ import { Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Sing
  */
 export
 class SecurityLabelType1 {
+    /**
+     * @summary `labelType1`.
+     * @description
+     *
+     * Label format. Coded explicitly. The value that should be
+     * written for this version is 2. Graded Authentication
+     * version 1 uses 0 or 1. The document does not define any
+     * other label type. Byte sizes are omitted because the ASN.1
+     * already fixes them. Appendix F.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly labelType1: INTEGER;
+
+    /**
+     * @summary `secrecyLevel1`.
+     * @description
+     *
+     * Secrecy level. 0 is low and 255 is high. A subject may read
+     * down and, in the model, write up, and may not read up or
+     * write down. Coded explicitly; the value that would have been
+     * the default is 0. §3.1.
+     *
+     * On a Novell registry label these levels are the Table 6
+     * inter-enterprise scale, advisory outside a single enterprise.
+     * See `EnterpriseId.registryLabel`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly secrecyLevel1: INTEGER;
+
+    /**
+     * @summary `integrityLevel1`.
+     * @description
+     *
+     * Integrity level, numbered opposite secrecy so one dominance
+     * test serves both: 255 is low integrity and 0 is high. A
+     * subject may read up and write down, and may not read down or
+     * write up. Coded explicitly; the value that would have been
+     * the default is 0, which is high integrity. §3.1.
+     *
+     * Where Table 6 gives a secrecy figure N, the matching
+     * integrity figure is `255 - N`. §7.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityLevel1: INTEGER;
+
+    /**
+     * @summary `secrecyCategories1`.
+     * @description
+     *
+     * Ninety-six secrecy categories, index 0 first. A fixed-length
+     * string so a chain bound is a bitwise AND. Coded explicitly;
+     * an omitted default would have been all FALSE. §6.2.
+     *
+     * Novell bit assignments differ for the root, registry, and
+     * enterprise labels. They are listed on the corresponding
+     * `EnterpriseId` field.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly secrecyCategories1: BIT_STRING;
+
+    /**
+     * @summary `integrityCategories1`.
+     * @description
+     *
+     * Sixty-four integrity categories, index 0 first. The chain
+     * bound is a bitwise AND. Coded explicitly. §6.2.
+     *
+     * Novell bit assignments are listed on the corresponding
+     * `EnterpriseId` field. Registry integrity bit 3 is MABLE and
+     * has no secrecy counterpart.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityCategories1: BIT_STRING;
+
+    /**
+     * @summary `secrecySingletons1`.
+     * @description
+     *
+     * Secrecy categories that do not fit in the fixed bit string.
+     * Each singleton is the index of one bit in a very long virtual
+     * string. A singleton is usually used alone, often together
+     * with a fixed category that says what the number means.
+     * §6.2.
+     *
+     * Under root category bit 0, or registry category bit 0, the
+     * number is `organizationId * 1024 + countryCode` (ISO
+     * 3166:1993 in the low 10 bits). Novell's value is 116449096.
+     * Under registry category bit 1 it is a NICI license number.
+     * Initialize the range FALSE, then set the singletons that are
+     * on. §7.1, §7.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly secrecySingletons1: Singletons;
+
+    /**
+     * @summary `integritySingletons1`.
+     * @description
+     *
+     * Integrity singletons. Same encoding and, in the Novell
+     * assignments, the same numbers as `secrecySingletons1`. MABLE
+     * checks this singleton for 116449096 together with root
+     * integrity category bit 0. §7.2.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integritySingletons1: Singletons;
+
     constructor (
-        /**
-         * @summary `labelType1`.
-         * @description
-         *
-         * Label format. Coded explicitly. The value that should be
-         * written for this version is 2. Graded Authentication
-         * version 1 uses 0 or 1. The document does not define any
-         * other label type. Byte sizes are omitted because the ASN.1
-         * already fixes them. Appendix F.
-         *
-         * @public
-         * @readonly
-         */
-        readonly labelType1: INTEGER,
-        /**
-         * @summary `secrecyLevel1`.
-         * @description
-         *
-         * Secrecy level. 0 is low and 255 is high. A subject may read
-         * down and, in the model, write up, and may not read up or
-         * write down. Coded explicitly; the value that would have been
-         * the default is 0. §3.1.
-         *
-         * On a Novell registry label these levels are the Table 6
-         * inter-enterprise scale, advisory outside a single enterprise.
-         * See `EnterpriseId.registryLabel`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly secrecyLevel1: INTEGER,
-        /**
-         * @summary `integrityLevel1`.
-         * @description
-         *
-         * Integrity level, numbered opposite secrecy so one dominance
-         * test serves both: 255 is low integrity and 0 is high. A
-         * subject may read up and write down, and may not read down or
-         * write up. Coded explicitly; the value that would have been
-         * the default is 0, which is high integrity. §3.1.
-         *
-         * Where Table 6 gives a secrecy figure N, the matching
-         * integrity figure is `255 - N`. §7.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityLevel1: INTEGER,
-        /**
-         * @summary `secrecyCategories1`.
-         * @description
-         *
-         * Ninety-six secrecy categories, index 0 first. A fixed-length
-         * string so a chain bound is a bitwise AND. Coded explicitly;
-         * an omitted default would have been all FALSE. §6.2.
-         *
-         * Novell bit assignments differ for the root, registry, and
-         * enterprise labels. They are listed on the corresponding
-         * `EnterpriseId` field.
-         *
-         * @public
-         * @readonly
-         */
-        readonly secrecyCategories1: BIT_STRING,
-        /**
-         * @summary `integrityCategories1`.
-         * @description
-         *
-         * Sixty-four integrity categories, index 0 first. The chain
-         * bound is a bitwise AND. Coded explicitly. §6.2.
-         *
-         * Novell bit assignments are listed on the corresponding
-         * `EnterpriseId` field. Registry integrity bit 3 is MABLE and
-         * has no secrecy counterpart.
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityCategories1: BIT_STRING,
-        /**
-         * @summary `secrecySingletons1`.
-         * @description
-         *
-         * Secrecy categories that do not fit in the fixed bit string.
-         * Each singleton is the index of one bit in a very long virtual
-         * string. A singleton is usually used alone, often together
-         * with a fixed category that says what the number means.
-         * §6.2.
-         *
-         * Under root category bit 0, or registry category bit 0, the
-         * number is `organizationId * 1024 + countryCode` (ISO
-         * 3166:1993 in the low 10 bits). Novell's value is 116449096.
-         * Under registry category bit 1 it is a NICI license number.
-         * Initialize the range FALSE, then set the singletons that are
-         * on. §7.1, §7.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly secrecySingletons1: Singletons,
-        /**
-         * @summary `integritySingletons1`.
-         * @description
-         *
-         * Integrity singletons. Same encoding and, in the Novell
-         * assignments, the same numbers as `secrecySingletons1`. MABLE
-         * checks this singleton for 116449096 together with root
-         * integrity category bit 0. §7.2.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly integritySingletons1: Singletons
+        labelType1: INTEGER,
+        secrecyLevel1: INTEGER,
+        integrityLevel1: INTEGER,
+        secrecyCategories1: BIT_STRING,
+        integrityCategories1: BIT_STRING,
+        secrecySingletons1: Singletons,
+        integritySingletons1: Singletons
     ) {
+        this.labelType1 = labelType1;
+        this.secrecyLevel1 = secrecyLevel1;
+        this.integrityLevel1 = integrityLevel1;
+        this.secrecyCategories1 = secrecyCategories1;
+        this.integrityCategories1 = integrityCategories1;
+        this.secrecySingletons1 = secrecySingletons1;
+        this.integritySingletons1 = integritySingletons1;
         assertIntegerRange(labelType1, 0n, 255n, "SecurityLabelType1.labelType1");
         assertIntegerRange(secrecyLevel1, 0n, 255n, "SecurityLabelType1.secrecyLevel1");
         assertIntegerRange(integrityLevel1, 0n, 255n, "SecurityLabelType1.integrityLevel1");

@@ -30,40 +30,50 @@ import { Currency, _decode_Currency, _encode_Currency } from "../PKIS/Currency.t
  */
 export
 class MonetaryValue {
+    /**
+     * @summary `currency`.
+     * @description
+     *
+     * ISO 4217 numeric code. Display the three-letter alphabetic
+     * code; a translated currency name may be appended, for
+     * example `USD-Estados Unidos Dollar`. §2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currency: Currency;
+
+    /**
+     * @summary `amount`.
+     * @description
+     *
+     * Significand. The value is `amount * (10 ** amtExp10)`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly amount: INTEGER;
+
+    /**
+     * @summary `amtExp10`.
+     * @description
+     *
+     * Base-10 exponent applied to `amount`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly amtExp10: INTEGER;
+
     constructor (
-        /**
-         * @summary `currency`.
-         * @description
-         *
-         * ISO 4217 numeric code. Display the three-letter alphabetic
-         * code; a translated currency name may be appended, for
-         * example `USD-Estados Unidos Dollar`. §2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currency: Currency,
-        /**
-         * @summary `amount`.
-         * @description
-         *
-         * Significand. The value is `amount * (10 ** amtExp10)`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly amount: INTEGER,
-        /**
-         * @summary `amtExp10`.
-         * @description
-         *
-         * Base-10 exponent applied to `amount`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly amtExp10: INTEGER
-    ) {}
+        currency: Currency,
+        amount: INTEGER,
+        amtExp10: INTEGER
+    ) {
+        this.currency = currency;
+        this.amount = amount;
+        this.amtExp10 = amtExp10;
+    }
 
     /**
      * @summary Restructures an object into a MonetaryValue

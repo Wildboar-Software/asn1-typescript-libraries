@@ -51,62 +51,75 @@ import { EnterpriseId, _decode_EnterpriseId, _encode_EnterpriseId } from "../PKI
  */
 export
 class GLBExtensions {
+    /**
+     * @summary `keyQuality`.
+     * @description
+     *
+     * Static quality of the key pair already generated for the
+     * subject. A statement of fact, not a promise about later use.
+     * If this is too weak, the other attributes are not a reason to
+     * trust the binding, because the private key may not be under
+     * the subject's exclusive control. §4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyQuality: KeyQuality;
+
+    /**
+     * @summary `cryptoProcessQuality`.
+     * @description
+     *
+     * Minimum quality the subscriber commits to for every later
+     * process that uses the key, through the end of the certificate
+     * validity or the private-key validity, whichever is first.
+     * It is the trusted-path indication: that what was intended to
+     * be signed is what was signed. §4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cryptoProcessQuality: CryptoProcessQuality;
+
+    /**
+     * @summary `certificateClass`.
+     * @description
+     *
+     * Due diligence applied to the subject name and other
+     * attributes. The chain bound is the lowest class in the chain.
+     * PKIS certificates that leave the organization are expected to
+     * show that no external due diligence was done. §5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificateClass: CertificateClass;
+
+    /**
+     * @summary `enterpriseId`.
+     * @description
+     *
+     * Mandatory access control label: root, registry, and
+     * enterprise. Membership and rights are expressed here so they
+     * do not have to be encoded as a shared distinguished name.
+     * §6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly enterpriseId: EnterpriseId;
+
     constructor (
-        /**
-         * @summary `keyQuality`.
-         * @description
-         *
-         * Static quality of the key pair already generated for the
-         * subject. A statement of fact, not a promise about later use.
-         * If this is too weak, the other attributes are not a reason to
-         * trust the binding, because the private key may not be under
-         * the subject's exclusive control. §4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyQuality: KeyQuality,
-        /**
-         * @summary `cryptoProcessQuality`.
-         * @description
-         *
-         * Minimum quality the subscriber commits to for every later
-         * process that uses the key, through the end of the certificate
-         * validity or the private-key validity, whichever is first.
-         * It is the trusted-path indication: that what was intended to
-         * be signed is what was signed. §4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cryptoProcessQuality: CryptoProcessQuality,
-        /**
-         * @summary `certificateClass`.
-         * @description
-         *
-         * Due diligence applied to the subject name and other
-         * attributes. The chain bound is the lowest class in the chain.
-         * PKIS certificates that leave the organization are expected to
-         * show that no external due diligence was done. §5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificateClass: CertificateClass,
-        /**
-         * @summary `enterpriseId`.
-         * @description
-         *
-         * Mandatory access control label: root, registry, and
-         * enterprise. Membership and rights are expressed here so they
-         * do not have to be encoded as a shared distinguished name.
-         * §6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly enterpriseId: EnterpriseId
-    ) {}
+        keyQuality: KeyQuality,
+        cryptoProcessQuality: CryptoProcessQuality,
+        certificateClass: CertificateClass,
+        enterpriseId: EnterpriseId
+    ) {
+        this.keyQuality = keyQuality;
+        this.cryptoProcessQuality = cryptoProcessQuality;
+        this.certificateClass = certificateClass;
+        this.enterpriseId = enterpriseId;
+    }
 
     /**
      * @summary Restructures an object into a GLBExtensions
