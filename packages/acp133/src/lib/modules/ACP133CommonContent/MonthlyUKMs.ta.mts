@@ -7,7 +7,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UKMEntry, _decode_UKMEntry, _encode_UKMEntry } from "../ACP133CommonContent/UKMEntry.ta.mjs";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import {
+    AlgorithmIdentifier,
+    _decode_AlgorithmIdentifier,
+    _encode_AlgorithmIdentifier,
+} from "@wildboar/pki-stub";
 
 
 /**

@@ -4,10 +4,7 @@
   "license": "MIT",
   "exports": {
     ".": "./src/index.mts",
-    "./ACP133CommonContent": "./src/lib/modules/ACP133CommonContent/index.mts",
-    "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
-    "./CertificateExtensions": "./src/lib/modules/CertificateExtensions/index.mts",
-    "./SelectedAttributeTypes": "./src/lib/modules/SelectedAttributeTypes/index.mts"
+    "./ACP133CommonContent": "./src/lib/modules/ACP133CommonContent/index.mts"
   },
   "publish": {
     "include": [

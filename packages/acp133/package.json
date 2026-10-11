@@ -28,13 +28,10 @@
     "main": "./src/index.mjs",
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
-        "@wildboar/x500": "npm:@jsr/wildboar__x500@^2.0.9"
+        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@^2.0.4"
     },
     "exports": {
         ".": "./src/index.mts",
-        "./ACP133CommonContent": "./src/lib/modules/ACP133CommonContent/index.mts",
-        "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
-        "./CertificateExtensions": "./src/lib/modules/CertificateExtensions/index.mts",
-        "./SelectedAttributeTypes": "./src/lib/modules/SelectedAttributeTypes/index.mts"
+        "./ACP133CommonContent": "./src/lib/modules/ACP133CommonContent/index.mts"
     }
 }
