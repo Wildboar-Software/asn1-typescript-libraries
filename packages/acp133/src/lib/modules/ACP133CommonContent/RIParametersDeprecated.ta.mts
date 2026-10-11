@@ -38,53 +38,65 @@ import { Classification, _decode_Classification, _encode_Classification, _enum_f
  */
 export
 class RIParametersDeprecated {
+    /**
+     * Routing indicator the PLA is delivered to. The
+     * `rI` attribute is exactly seven characters.
+     * This component has no size constraint.
+     * Figure 3-2 uses `RUHPZFF`.
+     *
+     * [draft-dally-acp133-and-ldap-01, section 3.107](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.107).
+     * @public
+     * @readonly
+     */
+    public readonly rI: PrintableString;
+    /**
+     * `normal`, `off-line`, or a part-time terminal.
+     * @public
+     * @readonly
+     */
+    public readonly rIType: RIParametersDeprecated_rIType;
+    /**
+     * No longer used. The edition D string form
+     * fixes this field as `FALSE`. The MINIMIZE
+     * condition is the separate `minimize`
+     * attribute: when set, originators must not
+     * send unnecessary messages to the recipient.
+     *
+     * [draft-dally-acp133-and-ldap-01, section 3.85](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.85).
+     * @public
+     * @readonly
+     */
+    public readonly minimize: BOOLEAN;
+    /**
+     * Special handling designator the routing
+     * indicator can support.
+     *
+     * [draft-dally-acp133-and-ldap-01, section 3.118](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.118).
+     * @public
+     * @readonly
+     */
+    public readonly sHD: PrintableString;
+    /**
+     * Classification carried with this routing
+     * indicator. See {@link Classification}.
+     * @public
+     * @readonly
+     */
+    public readonly classification: Classification;
+
     constructor (
-        /**
-         * Routing indicator the PLA is delivered to. The
-         * `rI` attribute is exactly seven characters.
-         * This component has no size constraint.
-         * Figure 3-2 uses `RUHPZFF`.
-         *
-         * [draft-dally-acp133-and-ldap-01, section 3.107](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.107).
-         * @public
-         * @readonly
-         */
-        readonly rI: PrintableString,
-        /**
-         * `normal`, `off-line`, or a part-time terminal.
-         * @public
-         * @readonly
-         */
-        readonly rIType: RIParametersDeprecated_rIType,
-        /**
-         * No longer used. The edition D string form
-         * fixes this field as `FALSE`. The MINIMIZE
-         * condition is the separate `minimize`
-         * attribute: when set, originators must not
-         * send unnecessary messages to the recipient.
-         *
-         * [draft-dally-acp133-and-ldap-01, section 3.85](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.85).
-         * @public
-         * @readonly
-         */
-        readonly minimize: BOOLEAN,
-        /**
-         * Special handling designator the routing
-         * indicator can support.
-         *
-         * [draft-dally-acp133-and-ldap-01, section 3.118](https://datatracker.ietf.org/doc/html/draft-dally-acp133-and-ldap-01#section-3.118).
-         * @public
-         * @readonly
-         */
-        readonly sHD: PrintableString,
-        /**
-         * Classification carried with this routing
-         * indicator. See {@link Classification}.
-         * @public
-         * @readonly
-         */
-        readonly classification: Classification
-    ) {}
+        rI: PrintableString,
+        rIType: RIParametersDeprecated_rIType,
+        minimize: BOOLEAN,
+        sHD: PrintableString,
+        classification: Classification
+    ) {
+        this.rI = rI;
+        this.rIType = rIType;
+        this.minimize = minimize;
+        this.sHD = sHD;
+        this.classification = classification;
+    }
 
     /**
      * @summary Restructures an object into a RIParametersDeprecated

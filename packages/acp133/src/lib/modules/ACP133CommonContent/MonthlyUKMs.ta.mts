@@ -47,27 +47,35 @@ import {
  */
 export
 class MonthlyUKMs {
+    /**
+     * UKM values for the month. This is the content
+     * that was signed.
+     * @public
+     * @readonly
+     */
+    public readonly ukm_entries: UKMEntry[];
+    /**
+     * Algorithm that produced `encrypted`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm_identifier: AlgorithmIdentifier;
+    /**
+     * Signature bits over `ukm_entries`.
+     * @public
+     * @readonly
+     */
+    public readonly encrypted: BIT_STRING;
+
     constructor (
-        /**
-         * UKM values for the month. This is the content
-         * that was signed.
-         * @public
-         * @readonly
-         */
-        readonly ukm_entries: UKMEntry[],
-        /**
-         * Algorithm that produced `encrypted`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm_identifier: AlgorithmIdentifier,
-        /**
-         * Signature bits over `ukm_entries`.
-         * @public
-         * @readonly
-         */
-        readonly encrypted: BIT_STRING
-    ) {}
+        ukm_entries: UKMEntry[],
+        algorithm_identifier: AlgorithmIdentifier,
+        encrypted: BIT_STRING
+    ) {
+        this.ukm_entries = ukm_entries;
+        this.algorithm_identifier = algorithm_identifier;
+        this.encrypted = encrypted;
+    }
 
     /**
      * @summary Restructures an object into a MonthlyUKMs

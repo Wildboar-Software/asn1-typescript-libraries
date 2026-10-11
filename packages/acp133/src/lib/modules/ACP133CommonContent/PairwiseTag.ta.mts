@@ -37,28 +37,36 @@ import { Kmid, _decode_Kmid, _encode_Kmid } from "../ACP133CommonContent/Kmid.ta
  */
 export
 class PairwiseTag {
+    /**
+     * Key-material identifier. See {@link Kmid}.
+     * @public
+     * @readonly
+     */
+    public readonly kmid: Kmid;
+    /**
+     * Edition of the key material named by `kmid`.
+     * The SDN.701 bound is not enforced here.
+     * @public
+     * @readonly
+     */
+    public readonly edition: INTEGER;
+    /**
+     * When this edition is dated, if the source
+     * supplied a time. The imported field is `UTCTime`.
+     * @public
+     * @readonly
+     */
+    public readonly date: OPTIONAL<UTCTime>;
+
     constructor (
-        /**
-         * Key-material identifier. See {@link Kmid}.
-         * @public
-         * @readonly
-         */
-        readonly kmid: Kmid,
-        /**
-         * Edition of the key material named by `kmid`.
-         * The SDN.701 bound is not enforced here.
-         * @public
-         * @readonly
-         */
-        readonly edition: INTEGER,
-        /**
-         * When this edition is dated, if the source
-         * supplied a time. The imported field is `UTCTime`.
-         * @public
-         * @readonly
-         */
-        readonly date: OPTIONAL<UTCTime>
-    ) {}
+        kmid: Kmid,
+        edition: INTEGER,
+        date: OPTIONAL<UTCTime>
+    ) {
+        this.kmid = kmid;
+        this.edition = edition;
+        this.date = date;
+    }
 
     /**
      * @summary Restructures an object into a PairwiseTag

@@ -40,14 +40,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_Classification {
-    unmarked = 0,
-    unclassified = 1,
-    restricted = 2,
-    confidential = 3,
-    secret = 4,
-    top_secret = 5,
-}
+const _enum_for_Classification = {
+    unmarked: 0,
+    unclassified: 1,
+    restricted: 2,
+    confidential: 3,
+    secret: 4,
+    top_secret: 5,
+} as const;
+
+export
+type _enum_for_Classification =
+    (typeof _enum_for_Classification)[keyof typeof _enum_for_Classification];
 
 /**
  * @summary Classification
@@ -234,8 +238,10 @@ const Classification_top_secret: Classification = Classification.top_secret; /* 
  */
 export
 const top_secret: Classification = Classification.top_secret; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Classification = $._decodeEnumerated;
-export const _encode_Classification = $._encodeEnumerated;
+export const _decode_Classification: $.ASN1Decoder<Classification> =
+    $._decodeEnumerated as $.ASN1Decoder<Classification>;
+export const _encode_Classification: $.ASN1Encoder<Classification> =
+    $._encodeEnumerated as $.ASN1Encoder<Classification>;
 
 
 /* eslint-enable */

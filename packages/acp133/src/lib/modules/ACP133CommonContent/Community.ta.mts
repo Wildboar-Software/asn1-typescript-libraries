@@ -24,11 +24,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_Community {
-    genser = 0,
-    si = 1,
-    both = 2,
-}
+const _enum_for_Community = {
+    genser: 0,
+    si: 1,
+    both: 2,
+} as const;
+
+export
+type _enum_for_Community =
+    (typeof _enum_for_Community)[keyof typeof _enum_for_Community];
 
 /**
  * @summary Community
@@ -129,8 +133,10 @@ const Community_both: Community = Community.both; /* LONG_NAMED_ENUMERATED_VALUE
  */
 export
 const both: Community = Community.both; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Community = $._decodeEnumerated;
-export const _encode_Community = $._encodeEnumerated;
+export const _decode_Community: $.ASN1Decoder<Community> =
+    $._decodeEnumerated as $.ASN1Decoder<Community>;
+export const _encode_Community: $.ASN1Encoder<Community> =
+    $._encodeEnumerated as $.ASN1Encoder<Community>;
 
 
 /* eslint-enable */

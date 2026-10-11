@@ -23,12 +23,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_EmConState {
-    enabled = 0,
-    receive_only = 1,
-    electronic_silence = 2,
-    disabled = 3,
-}
+const _enum_for_EmConState = {
+    enabled: 0,
+    receive_only: 1,
+    electronic_silence: 2,
+    disabled: 3,
+} as const;
+
+export
+type _enum_for_EmConState =
+    (typeof _enum_for_EmConState)[keyof typeof _enum_for_EmConState];
 
 /**
  * @summary EmConState
@@ -145,8 +149,10 @@ const EmConState_disabled: EmConState = EmConState.disabled; /* LONG_NAMED_ENUME
  */
 export
 const disabled: EmConState = EmConState.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_EmConState = $._decodeEnumerated;
-export const _encode_EmConState = $._encodeEnumerated;
+export const _decode_EmConState: $.ASN1Decoder<EmConState> =
+    $._decodeEnumerated as $.ASN1Decoder<EmConState>;
+export const _encode_EmConState: $.ASN1Encoder<EmConState> =
+    $._encodeEnumerated as $.ASN1Encoder<EmConState>;
 
 
 /* eslint-enable */

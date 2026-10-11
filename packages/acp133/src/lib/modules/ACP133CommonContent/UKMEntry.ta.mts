@@ -31,20 +31,26 @@ import { PairwiseTag, _decode_PairwiseTag, _encode_PairwiseTag } from "../ACP133
  */
 export
 class UKMEntry {
+    /**
+     * Which generation of key material `ukm` is.
+     * @public
+     * @readonly
+     */
+    public readonly tag: PairwiseTag;
+    /**
+     * User keying material identified by `tag`.
+     * @public
+     * @readonly
+     */
+    public readonly ukm: OCTET_STRING;
+
     constructor (
-        /**
-         * Which generation of key material `ukm` is.
-         * @public
-         * @readonly
-         */
-        readonly tag: PairwiseTag,
-        /**
-         * User keying material identified by `tag`.
-         * @public
-         * @readonly
-         */
-        readonly ukm: OCTET_STRING
-    ) {}
+        tag: PairwiseTag,
+        ukm: OCTET_STRING
+    ) {
+        this.tag = tag;
+        this.ukm = ukm;
+    }
 
     /**
      * @summary Restructures an object into a UKMEntry

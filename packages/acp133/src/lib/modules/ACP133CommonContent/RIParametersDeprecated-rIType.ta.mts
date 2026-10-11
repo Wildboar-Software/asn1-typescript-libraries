@@ -27,11 +27,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_RIParametersDeprecated_rIType {
-    normal = 0,
-    off_line = 1,
-    partTimeTerminal = 2,
-}
+const _enum_for_RIParametersDeprecated_rIType = {
+    normal: 0,
+    off_line: 1,
+    partTimeTerminal: 2,
+} as const;
+
+export
+type _enum_for_RIParametersDeprecated_rIType =
+    (typeof _enum_for_RIParametersDeprecated_rIType)[keyof typeof _enum_for_RIParametersDeprecated_rIType];
 
 /**
  * @summary RIParametersDeprecated_rIType
@@ -138,8 +142,10 @@ const RIParametersDeprecated_rIType_partTimeTerminal: RIParametersDeprecated_rIT
  */
 export
 const partTimeTerminal: RIParametersDeprecated_rIType = RIParametersDeprecated_rIType.partTimeTerminal; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_RIParametersDeprecated_rIType = $._decodeEnumerated;
-export const _encode_RIParametersDeprecated_rIType = $._encodeEnumerated;
+export const _decode_RIParametersDeprecated_rIType: $.ASN1Decoder<RIParametersDeprecated_rIType> =
+    $._decodeEnumerated as $.ASN1Decoder<RIParametersDeprecated_rIType>;
+export const _encode_RIParametersDeprecated_rIType: $.ASN1Encoder<RIParametersDeprecated_rIType> =
+    $._encodeEnumerated as $.ASN1Encoder<RIParametersDeprecated_rIType>;
 
 
 /* eslint-enable */

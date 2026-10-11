@@ -25,11 +25,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_ACPPreferredDelivery {
-    smtp = 0,
-    acp127 = 1,
-    mhs = 2,
-}
+const _enum_for_ACPPreferredDelivery = {
+    smtp: 0,
+    acp127: 1,
+    mhs: 2,
+} as const;
+
+export
+type _enum_for_ACPPreferredDelivery =
+    (typeof _enum_for_ACPPreferredDelivery)[keyof typeof _enum_for_ACPPreferredDelivery];
 
 /**
  * @summary ACPPreferredDelivery
@@ -132,8 +136,10 @@ const ACPPreferredDelivery_mhs: ACPPreferredDelivery = ACPPreferredDelivery.mhs;
  */
 export
 const mhs: ACPPreferredDelivery = ACPPreferredDelivery.mhs; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ACPPreferredDelivery = $._decodeEnumerated;
-export const _encode_ACPPreferredDelivery = $._encodeEnumerated;
+export const _decode_ACPPreferredDelivery: $.ASN1Decoder<ACPPreferredDelivery> =
+    $._decodeEnumerated as $.ASN1Decoder<ACPPreferredDelivery>;
+export const _encode_ACPPreferredDelivery: $.ASN1Encoder<ACPPreferredDelivery> =
+    $._encodeEnumerated as $.ASN1Encoder<ACPPreferredDelivery>;
 
 
 /* eslint-enable */

@@ -22,10 +22,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_MsgProtocolInfoCapability {
-    acp_127 = 0,
-    acp_123 = 1,
-}
+const _enum_for_MsgProtocolInfoCapability = {
+    acp_127: 0,
+    acp_123: 1,
+} as const;
+
+export
+type _enum_for_MsgProtocolInfoCapability =
+    (typeof _enum_for_MsgProtocolInfoCapability)[keyof typeof _enum_for_MsgProtocolInfoCapability];
 
 /**
  * @summary MsgProtocolInfoCapability
@@ -104,8 +108,10 @@ const MsgProtocolInfoCapability_acp_123: MsgProtocolInfoCapability = MsgProtocol
  */
 export
 const acp_123: MsgProtocolInfoCapability = MsgProtocolInfoCapability.acp_123; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_MsgProtocolInfoCapability = $._decodeEnumerated;
-export const _encode_MsgProtocolInfoCapability = $._encodeEnumerated;
+export const _decode_MsgProtocolInfoCapability: $.ASN1Decoder<MsgProtocolInfoCapability> =
+    $._decodeEnumerated as $.ASN1Decoder<MsgProtocolInfoCapability>;
+export const _encode_MsgProtocolInfoCapability: $.ASN1Encoder<MsgProtocolInfoCapability> =
+    $._encodeEnumerated as $.ASN1Encoder<MsgProtocolInfoCapability>;
 
 
 /* eslint-enable */
