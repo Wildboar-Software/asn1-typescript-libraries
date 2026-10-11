@@ -1,0 +1,175 @@
+-- From ICAO Doc. 9303 Part 11. There is no formal module defined, just ASN.1
+-- littered thoughtlessly throughout the prose.
+Doc-9303-Part-11-Module DEFINITIONS ::= BEGIN
+IMPORTS
+
+    AlgorithmIdentifier, SubjectPublicKeyInfo
+        FROM AuthenticationFramework
+        {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9}
+        WITH SUCCESSORS
+
+    id-icao-mrtd-security
+        FROM LDSSecurityObjectV1
+        {joint-iso-itu-t(2) international(23) icao(136) mrtd(1) security(1)
+        ldsSecurityObject(1)}
+    ;
+
+SecurityInfos ::= SET OF SecurityInfo
+
+SecurityInfo ::= SEQUENCE {
+    protocol        OBJECT IDENTIFIER,
+    requiredData    ANY DEFINED BY protocol,
+    optionalData    ANY DEFINED BY protocol OPTIONAL
+}
+
+PACEInfo ::= SEQUENCE {
+    protocol    OBJECT IDENTIFIER(
+        id-PACE-DH-GM-3DES-CBC-CBC
+        | id-PACE-DH-GM-AES-CBC-CMAC-128
+        | id-PACE-DH-GM-AES-CBC-CMAC-192
+        | id-PACE-DH-GM-AES-CBC-CMAC-256
+        | id-PACE-ECDH-GM-3DES-CBC-CBC
+        | id-PACE-ECDH-GM-AES-CBC-CMAC-128
+        | id-PACE-ECDH-GM-AES-CBC-CMAC-192
+        | id-PACE-ECDH-GM-AES-CBC-CMAC-256
+        | id-PACE-DH-IM-3DES-CBC-CBC
+        | id-PACE-DH-IM-AES-CBC-CMAC-128
+        | id-PACE-DH-IM-AES-CBC-CMAC-192
+        | id-PACE-DH-IM-AES-CBC-CMAC-256
+        | id-PACE-ECDH-IM-3DES-CBC-CBC
+        | id-PACE-ECDH-IM-AES-CBC-CMAC-128
+        | id-PACE-ECDH-IM-AES-CBC-CMAC-192
+        | id-PACE-ECDH-IM-AES-CBC-CMAC-256
+        | id-PACE-ECDH-CAM-AES-CBC-CMAC-128
+        | id-PACE-ECDH-CAM-AES-CBC-CMAC-192
+        | id-PACE-ECDH-CAM-AES-CBC-CMAC-256
+    ),
+    version     INTEGER, -- MUST be 2
+    parameterId INTEGER OPTIONAL
+}
+
+PACEDomainParameterInfo ::= SEQUENCE {
+    protocol        OBJECT IDENTIFIER(
+        id-PACE-DH-GM
+        | id-PACE-ECDH-GM
+        | id-PACE-DH-IM
+        | id-PACE-ECDH-IM
+        | id-PACE-ECDH-CAM
+    ),
+    domainParameter AlgorithmIdentifier,
+    parameterId     INTEGER OPTIONAL
+}
+
+bsi-de OBJECT IDENTIFIER ::= {
+    itu-t(0) identified-organization(4) etsi(0)
+    reserved(127) etsi-identified-organization(0) 7
+}
+
+id-PACE OBJECT IDENTIFIER ::= { bsi-de protocols(2) smartcard(2) 4 }
+id-PACE-DH-GM                       OBJECT IDENTIFIER ::= {id-PACE 1}
+id-PACE-DH-GM-3DES-CBC-CBC          OBJECT IDENTIFIER ::= {id-PACE-DH-GM 1}
+id-PACE-DH-GM-AES-CBC-CMAC-128      OBJECT IDENTIFIER ::= {id-PACE-DH-GM 2}
+id-PACE-DH-GM-AES-CBC-CMAC-192      OBJECT IDENTIFIER ::= {id-PACE-DH-GM 3}
+id-PACE-DH-GM-AES-CBC-CMAC-256      OBJECT IDENTIFIER ::= {id-PACE-DH-GM 4}
+id-PACE-ECDH-GM                     OBJECT IDENTIFIER ::= {id-PACE 2}
+id-PACE-ECDH-GM-3DES-CBC-CBC        OBJECT IDENTIFIER ::= {id-PACE-ECDH-GM 1}
+id-PACE-ECDH-GM-AES-CBC-CMAC-128    OBJECT IDENTIFIER ::= {id-PACE-ECDH-GM 2}
+id-PACE-ECDH-GM-AES-CBC-CMAC-192    OBJECT IDENTIFIER ::= {id-PACE-ECDH-GM 3}
+id-PACE-ECDH-GM-AES-CBC-CMAC-256    OBJECT IDENTIFIER ::= {id-PACE-ECDH-GM 4}
+id-PACE-DH-IM                       OBJECT IDENTIFIER ::= {id-PACE 3}
+id-PACE-DH-IM-3DES-CBC-CBC          OBJECT IDENTIFIER ::= {id-PACE-DH-IM 1}
+id-PACE-DH-IM-AES-CBC-CMAC-128      OBJECT IDENTIFIER ::= {id-PACE-DH-IM 2}
+id-PACE-DH-IM-AES-CBC-CMAC-192      OBJECT IDENTIFIER ::= {id-PACE-DH-IM 3}
+id-PACE-DH-IM-AES-CBC-CMAC-256      OBJECT IDENTIFIER ::= {id-PACE-DH-IM 4}
+id-PACE-ECDH-IM                     OBJECT IDENTIFIER ::= {id-PACE 4}
+id-PACE-ECDH-IM-3DES-CBC-CBC        OBJECT IDENTIFIER ::= {id-PACE-ECDH-IM 1}
+id-PACE-ECDH-IM-AES-CBC-CMAC-128    OBJECT IDENTIFIER ::= {id-PACE-ECDH-IM 2}
+id-PACE-ECDH-IM-AES-CBC-CMAC-192    OBJECT IDENTIFIER ::= {id-PACE-ECDH-IM 3}
+id-PACE-ECDH-IM-AES-CBC-CMAC-256    OBJECT IDENTIFIER ::= {id-PACE-ECDH-IM 4}
+id-PACE-ECDH-CAM                    OBJECT IDENTIFIER ::= {id-PACE 6}
+id-PACE-ECDH-CAM-AES-CBC-CMAC-128   OBJECT IDENTIFIER ::= {id-PACE-ECDH-CAM 2}
+id-PACE-ECDH-CAM-AES-CBC-CMAC-192   OBJECT IDENTIFIER ::= {id-PACE-ECDH-CAM 3}
+id-PACE-ECDH-CAM-AES-CBC-CMAC-256   OBJECT IDENTIFIER ::= {id-PACE-ECDH-CAM 4}
+
+ActiveAuthenticationInfo ::= SEQUENCE {
+    protocol            OBJECT IDENTIFIER(id-icao-mrtd-security-aaProtocolObject),
+    version             INTEGER, -- MUST be 1
+    signatureAlgorithm  OBJECT IDENTIFIER
+}
+
+id-icao-mrtd-security-aaProtocolObject OBJECT IDENTIFIER ::= { id-icao-mrtd-security 5 }
+
+ChipAuthenticationInfo ::= SEQUENCE {
+    protocol    OBJECT IDENTIFIER(
+        id-CA-DH-3DES-CBC-CBC
+        | id-CA-DH-AES-CBC-CMAC-128
+        | id-CA-DH-AES-CBC-CMAC-192
+        | id-CA-DH-AES-CBC-CMAC-256
+        | id-CA-ECDH-3DES-CBC-CBC
+        | id-CA-ECDH-AES-CBC-CMAC-128
+        | id-CA-ECDH-AES-CBC-CMAC-192
+        | id-CA-ECDH-AES-CBC-CMAC-256
+    ),
+    version     INTEGER, -- MUST be 1
+    keyId       INTEGER OPTIONAL
+}
+
+ChipAuthenticationPublicKeyInfo ::= SEQUENCE {
+    protocol                    OBJECT IDENTIFIER(id-PK-DH | id-PK-ECDH),
+    chipAuthenticationPublicKey SubjectPublicKeyInfo,
+    keyId                       INTEGER OPTIONAL
+}
+
+id-PK                       OBJECT IDENTIFIER ::= { bsi-de protocols(2) smartcard(2) 1 }
+id-PK-DH                    OBJECT IDENTIFIER ::= {id-PK 1}
+id-PK-ECDH                  OBJECT IDENTIFIER ::= {id-PK 2}
+id-CA                       OBJECT IDENTIFIER ::= { bsi-de protocols(2) smartcard(2) 3 }
+id-CA-DH                    OBJECT IDENTIFIER ::= {id-CA 1}
+id-CA-DH-3DES-CBC-CBC       OBJECT IDENTIFIER ::= {id-CA-DH 1}
+id-CA-DH-AES-CBC-CMAC-128   OBJECT IDENTIFIER ::= {id-CA-DH 2}
+id-CA-DH-AES-CBC-CMAC-192   OBJECT IDENTIFIER ::= {id-CA-DH 3}
+id-CA-DH-AES-CBC-CMAC-256   OBJECT IDENTIFIER ::= {id-CA-DH 4}
+id-CA-ECDH                  OBJECT IDENTIFIER ::= {id-CA 2}
+id-CA-ECDH-3DES-CBC-CBC     OBJECT IDENTIFIER ::= {id-CA-ECDH 1}
+id-CA-ECDH-AES-CBC-CMAC-128 OBJECT IDENTIFIER ::= {id-CA-ECDH 2}
+id-CA-ECDH-AES-CBC-CMAC-192 OBJECT IDENTIFIER ::= {id-CA-ECDH 3}
+id-CA-ECDH-AES-CBC-CMAC-256 OBJECT IDENTIFIER ::= {id-CA-ECDH 4}
+
+TerminalAuthenticationInfo ::= SEQUENCE {
+    protocol    OBJECT IDENTIFIER(id-TA),
+    version     INTEGER -- MUST be 1
+}
+
+id-TA                   OBJECT IDENTIFIER ::= { bsi-de protocols(2) smartcard(2) 2 }
+id-TA-RSA               OBJECT IDENTIFIER ::= {id-TA 1}
+id-TA-RSA-PSS-SHA-256   OBJECT IDENTIFIER ::= {id-TA-RSA 4}
+id-TA-RSA-PSS-SHA-512   OBJECT IDENTIFIER ::= {id-TA-RSA 6}
+id-TA-ECDSA             OBJECT IDENTIFIER ::= {id-TA 2}
+id-TA-ECDSA-SHA-224     OBJECT IDENTIFIER ::= {id-TA-ECDSA 2}
+id-TA-ECDSA-SHA-256     OBJECT IDENTIFIER ::= {id-TA-ECDSA 3}
+id-TA-ECDSA-SHA-384     OBJECT IDENTIFIER ::= {id-TA-ECDSA 4}
+id-TA-ECDSA-SHA-512     OBJECT IDENTIFIER ::= {id-TA-ECDSA 5}
+
+EFDIRInfo ::= SEQUENCE {
+    protocol    OBJECT IDENTIFIER(id-EFDIR),
+    eFDIR       OCTET STRING
+}
+
+id-EFDIR OBJECT IDENTIFIER ::= { id-icao-mrtd-security 13 }
+
+standardizedDomainParameters OBJECT IDENTIFIER ::= { bsi-de algorithms(1) 2 }
+
+dhpublicnumber OBJECT IDENTIFIER ::= {
+    iso(1) member-body(2) us(840) ansi-x942(10046) number-type(2) 1
+}
+
+ecPublicKey OBJECT IDENTIFIER ::= {
+    iso(1) member-body(2) us(840) ansi-x962(10045) keyType(2) 1
+}
+
+FileID ::= SEQUENCE {
+    fid     OCTET STRING (SIZE(2)),
+    sfid    OCTET STRING (SIZE(1)) OPTIONAL
+}
+
+END

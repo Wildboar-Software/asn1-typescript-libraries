@@ -1,0 +1,70 @@
+-- Sourced from ICAO Document 9303, Part 10.
+LDSSecurityObjectV1
+{joint-iso-itu-t(2) international(23) icao(136) mrtd(1) security(1)
+ldsSecurityObject(1)}
+DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+IMPORTS
+    AlgorithmIdentifier
+        FROM AuthenticationFramework
+        {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9}
+        WITH SUCCESSORS
+    ;
+
+-- Constants
+ub-DataGroups INTEGER ::= 16
+
+-- Object Identifiers
+id-icao                                 OBJECT IDENTIFIER ::= {joint-iso-itu-t(2) international(23) icao(136)}
+id-icao-mrtd                            OBJECT IDENTIFIER ::= {id-icao 1}
+id-icao-mrtd-security                   OBJECT IDENTIFIER ::= {id-icao-mrtd 1}
+id-icao-mrtd-security-ldsSecurityObject OBJECT IDENTIFIER ::= {id-icao-mrtd-security 1}
+
+-- LDS Security Object
+
+LDSSecurityObjectVersion ::= INTEGER {
+    v0(0),
+    v1(1)
+    -- If LDSSecurityObjectVersion is V1, ldsVersionInfo MUST be present
+}
+
+DigestAlgorithmIdentifier ::= AlgorithmIdentifier
+
+LDSSecurityObject ::= SEQUENCE {
+    version LDSSecurityObjectVersion,
+    hashAlgorithm DigestAlgorithmIdentifier,
+    dataGroupHashValues SEQUENCE SIZE (2..ub-DataGroups) OF DataGroupHash,
+    ldsVersionInfo LDSVersionInfo OPTIONAL
+    -- If present, version MUST be V1
+}
+
+DataGroupHash ::= SEQUENCE {
+    dataGroupNumber DataGroupNumber,
+    dataGroupHashValue OCTET STRING
+}
+
+DataGroupNumber ::= INTEGER {
+    dataGroup1 (1),
+    dataGroup2 (2),
+    dataGroup3 (3),
+    dataGroup4 (4),
+    dataGroup5 (5),
+    dataGroup6 (6),
+    dataGroup7 (7),
+    dataGroup8 (8),
+    dataGroup9 (9),
+    dataGroup10 (10),
+    dataGroup11 (11),
+    dataGroup12 (12),
+    dataGroup13 (13),
+    dataGroup14 (14),
+    dataGroup15 (15),
+    dataGroup16 (16)
+}
+
+LDSVersionInfo ::= SEQUENCE {
+    ldsVersion      PrintableString,
+    unicodeVersion  PrintableString
+}
+
+END
