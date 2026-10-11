@@ -17,7 +17,14 @@ import { InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Invoke-linkedId ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Invoke-linkedId ::= CHOICE {
+ *   present  [0] IMPLICIT present < InvokeId,
+ *   absent   [1] IMPLICIT NULL
+ * }
+ * (CONSTRAINED BY { -- must identify an outstanding operation --} !
+ *  RejectProblem:invoke-unrecognizedLinkedId)
+ * (CONSTRAINED BY { -- which has one or more linked operations--} !
+ *  RejectProblem:invoke-linkedResponseUnexpected)
  * ```
  */
 export
