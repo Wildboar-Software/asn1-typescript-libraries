@@ -5,6 +5,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type VersionType, _decode_VersionType, _encode_VersionType } from "@wildboar/sgp22/RSPDefinitions";
 
@@ -53,7 +54,11 @@ class IoTSpecificInfo {
          * @readonly
          */
         readonly fallbackAllowedUpdateSupported: OPTIONAL<NULL>
-    ) {}
+    ) {
+        if (this.iotVersion.length < 1) {
+            throw new ASN1SizeError("IoTSpecificInfo.iotVersion violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a IoTSpecificInfo

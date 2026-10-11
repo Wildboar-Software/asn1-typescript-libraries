@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     UTF8String
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -37,7 +38,11 @@ function _decode_GetEimConfigurationDataRequest_searchCriteria (el: _Element): G
     if (!_cached_decoder_for_GetEimConfigurationDataRequest_searchCriteria) { _cached_decoder_for_GetEimConfigurationDataRequest_searchCriteria = $._decode_inextensible_choice<GetEimConfigurationDataRequest_searchCriteria>({
     "CONTEXT 0": [ "eimId", $._decode_implicit<UTF8String>(() => $._decodeUTF8String) ]
 }); }
-    return _cached_decoder_for_GetEimConfigurationDataRequest_searchCriteria(el);
+    const value = _cached_decoder_for_GetEimConfigurationDataRequest_searchCriteria(el);
+    if ("eimId" in value && (value.eimId.length < 1 || value.eimId.length > 128)) {
+        throw new ASN1SizeError("GetEimConfigurationDataRequest.searchCriteria.eimId violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_GetEimConfigurationDataRequest_searchCriteria: $.ASN1Encoder<GetEimConfigurationDataRequest_searchCriteria> | null = null;

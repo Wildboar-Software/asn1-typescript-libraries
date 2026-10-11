@@ -7,6 +7,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type IconType, _decode_IconType, _encode_IconType } from "@wildboar/sgp22/RSPDefinitions";
 import { type PprIds, _decode_PprIds, _encode_PprIds } from "@wildboar/sgp22/RSPDefinitions";
@@ -78,7 +79,17 @@ class UpdateMetadataRequest {
          * @readonly
          */
         readonly fallbackAllowed: OPTIONAL<BOOLEAN>
-    ) {}
+    ) {
+        if (this.serviceProviderName !== undefined && this.serviceProviderName.length > 32) {
+            throw new ASN1SizeError("UpdateMetadataRequest.serviceProviderName violates SIZE constraint");
+        }
+        if (this.profileName !== undefined && this.profileName.length > 64) {
+            throw new ASN1SizeError("UpdateMetadataRequest.profileName violates SIZE constraint");
+        }
+        if (this.icon !== undefined && this.icon.length > 1024) {
+            throw new ASN1SizeError("UpdateMetadataRequest.icon violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a UpdateMetadataRequest

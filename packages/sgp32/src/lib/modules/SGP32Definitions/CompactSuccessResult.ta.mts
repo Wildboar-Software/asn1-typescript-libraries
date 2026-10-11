@@ -5,6 +5,7 @@ import {
     OCTET_STRING,
     OPTIONAL
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -39,7 +40,11 @@ class CompactSuccessResult {
          * @readonly
          */
         readonly simaResponse: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.compactAid.length !== 2) {
+            throw new ASN1SizeError("CompactSuccessResult.compactAid violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a CompactSuccessResult

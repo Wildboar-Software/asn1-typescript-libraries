@@ -5,6 +5,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileDownloadData_contactSmds, _decode_ProfileDownloadData_contactSmds, _encode_ProfileDownloadData_contactSmds } from "../SGP32Definitions/ProfileDownloadData-contactSmds.ta.mjs";
 // export { ProfileDownloadData_contactSmds, _decode_ProfileDownloadData_contactSmds, _encode_ProfileDownloadData_contactSmds } from "../SGP32Definitions/ProfileDownloadData-contactSmds.ta.mjs";
@@ -47,7 +48,11 @@ function _decode_ProfileDownloadData (el: _Element): ProfileDownloadData {
     "CONTEXT 1": [ "contactDefaultSmdp", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 2": [ "contactSmds", $._decode_implicit<ProfileDownloadData_contactSmds>(() => _decode_ProfileDownloadData_contactSmds) ]
 }); }
-    return _cached_decoder_for_ProfileDownloadData(el);
+    const value = _cached_decoder_for_ProfileDownloadData(el);
+    if ("activationCode" in value && value.activationCode.length > 255) {
+        throw new ASN1SizeError("ProfileDownloadData.activationCode violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_ProfileDownloadData: $.ASN1Encoder<ProfileDownloadData> | null = null;

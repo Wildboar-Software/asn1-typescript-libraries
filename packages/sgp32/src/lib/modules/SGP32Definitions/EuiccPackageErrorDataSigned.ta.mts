@@ -6,6 +6,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 import { EuiccPackageErrorCode, _decode_EuiccPackageErrorCode, _encode_EuiccPackageErrorCode } from "../SGP32Definitions/EuiccPackageErrorCode.ta.mjs";
@@ -56,7 +57,11 @@ class EuiccPackageErrorDataSigned {
          * @readonly
          */
         readonly euiccPackageErrorCode: EuiccPackageErrorCode
-    ) {}
+    ) {
+        if (this.eimId.length < 1 || this.eimId.length > 128) {
+            throw new ASN1SizeError("EuiccPackageErrorDataSigned.eimId violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a EuiccPackageErrorDataSigned

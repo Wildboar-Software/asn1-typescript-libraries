@@ -6,6 +6,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type VersionType, _decode_VersionType, _encode_VersionType } from "@wildboar/sgp22/RSPDefinitions";
 import { type RspCapability, _decode_RspCapability, _encode_RspCapability } from "@wildboar/sgp22/RSPDefinitions";
@@ -216,7 +217,17 @@ class EUICCInfo2 {
          * @readonly
          */
         readonly euiccMinimumSecurityLevel: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.sasAcreditationNumber.length > 64) {
+            throw new ASN1SizeError("EUICCInfo2.sasAcreditationNumber violates SIZE constraint");
+        }
+        if (this.additionalEuiccInfo !== undefined && this.additionalEuiccInfo.length > 32) {
+            throw new ASN1SizeError("EUICCInfo2.additionalEuiccInfo violates SIZE constraint");
+        }
+        if (this.euiccMinimumSecurityLevel !== undefined && this.euiccMinimumSecurityLevel.length !== 1) {
+            throw new ASN1SizeError("EUICCInfo2.euiccMinimumSecurityLevel violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a EUICCInfo2

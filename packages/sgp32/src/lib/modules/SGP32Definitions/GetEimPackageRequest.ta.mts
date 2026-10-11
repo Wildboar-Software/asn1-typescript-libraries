@@ -6,6 +6,7 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/RSPDefinitions";
 import { StateChangeCause, _decode_StateChangeCause, _encode_StateChangeCause, undefined /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../SGP32Definitions/StateChangeCause.ta.mjs";
@@ -56,7 +57,11 @@ class GetEimPackageRequest {
          * @readonly
          */
         readonly rPLMN: OPTIONAL<OCTET_STRING>
-    ) {}
+    ) {
+        if (this.rPLMN !== undefined && this.rPLMN.length !== 3) {
+            throw new ASN1SizeError("GetEimPackageRequest.rPLMN violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a GetEimPackageRequest
