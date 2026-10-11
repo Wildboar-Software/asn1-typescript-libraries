@@ -1,4 +1,10 @@
-# sgp32
+# SGP.32 definitions in TypeScript
+
+ASN.1 data structures for GSMA SGP.32 IoT Remote SIM Provisioning.
+
+`RSPDefinitions` and `PEDefinitions` are imported from `@wildboar/sgp22`.
+`Certificate` and `SubjectPublicKeyInfo` are imported from `@wildboar/pki-stub`.
+`SubjectKeyIdentifier` is imported from `@wildboar/x500`.
 
 This module is ESM-only.
 
@@ -16,3 +22,8 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
+
+## AI Usage Statement
+
+This package was onboarded from the raw ASN.1 compiler outputs using AI
+(Grok 4.7) on October 11, 2026.
