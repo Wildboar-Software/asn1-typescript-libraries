@@ -98,8 +98,8 @@ export
 const _root_component_type_list_1_spec_for_ChangeAutoForwardingArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("autoforward-MMs", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("auto-forward-recipients", true, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: auto-forward-heading COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: auto-forward-comment COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("auto-forward-heading", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("auto-forward-comment", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**

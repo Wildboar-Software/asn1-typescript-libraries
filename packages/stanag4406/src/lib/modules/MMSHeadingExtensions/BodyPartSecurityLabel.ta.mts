@@ -76,7 +76,7 @@ class BodyPartSecurityLabel {
  */
 export
 const _root_component_type_list_1_spec_for_BodyPartSecurityLabel: $.ComponentSpec[] = [
-    /* FIXME: body-part-security-label COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("body-part-security-label", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("body-part-sequence-number", true, $.hasTag(_TagClass.context, 1))
 ];
 

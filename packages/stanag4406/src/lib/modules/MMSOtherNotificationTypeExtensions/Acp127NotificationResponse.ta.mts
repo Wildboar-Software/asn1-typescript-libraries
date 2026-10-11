@@ -110,7 +110,7 @@ class Acp127NotificationResponse {
 export
 const _root_component_type_list_1_spec_for_Acp127NotificationResponse: $.ComponentSpec[] = [
     new $.ComponentSpec("acp127-notification-type", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: receipt-time COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("receipt-time", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("addressListIndicator", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("acp127-recipient", true, $.hasTag(_TagClass.context, 3)),
     new $.ComponentSpec("acp127-supp-info", true, $.hasTag(_TagClass.context, 4))

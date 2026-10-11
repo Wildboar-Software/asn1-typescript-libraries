@@ -76,8 +76,8 @@ class MMMessageParameters {
  */
 export
 const _root_component_type_list_1_spec_for_MMMessageParameters: $.ComponentSpec[] = [
-    /* FIXME: delivery-time COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: delivery-envelope COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("delivery-time", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("delivery-envelope", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**

@@ -75,7 +75,7 @@ class ReceiveMNRNArgument {
  */
 export
 const _root_component_type_list_1_spec_for_ReceiveMNRNArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
 ];
 

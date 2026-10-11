@@ -97,7 +97,7 @@ class AddressListDesignator {
 export
 const _root_component_type_list_1_spec_for_AddressListDesignator: $.ComponentSpec[] = [
     new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: listName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("listName", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("notificationRequest", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("replyRequest", true, $.hasTag(_TagClass.context, 3))
 ];

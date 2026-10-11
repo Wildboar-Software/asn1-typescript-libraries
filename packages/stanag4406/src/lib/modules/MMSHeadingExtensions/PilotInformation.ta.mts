@@ -101,7 +101,7 @@ export
 const _root_component_type_list_1_spec_for_PilotInformation: $.ComponentSpec[] = [
     new $.ComponentSpec("pilotPrecedence", true, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("pilotRecipient", true, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: pilotSecurity COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("pilotSecurity", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("pilotHandling", true, $.hasTag(_TagClass.context, 3))
 ];
 

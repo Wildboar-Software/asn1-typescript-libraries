@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Body, _decode_Body, _encode_Body } from "@wildboar/x400/IPMSInformationObjects";
@@ -74,8 +75,8 @@ class MM {
  */
 export
 const _root_component_type_list_1_spec_for_MM: $.ComponentSpec[] = [
-    /* FIXME: mmheading COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: mmbody COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("mmheading", false, $.hasTag(_TagClass.universal, 17)),
+    new $.ComponentSpec("mmbody", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
