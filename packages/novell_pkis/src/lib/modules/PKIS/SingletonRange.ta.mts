@@ -55,42 +55,51 @@ import { assertIntegerRange } from "../../assertIntegerRange.mjs";
  */
 export
 class SingletonRange {
+    /**
+     * @summary `singletonLowerBound`.
+     * @description
+     *
+     * First singleton index in the range, inclusive. Coded
+     * explicitly. The value that would have been the default is 0.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly singletonLowerBound: INTEGER;
+
+    /**
+     * @summary `singletonUpperBound`.
+     * @description
+     *
+     * Last singleton index in the range, inclusive. Coded
+     * explicitly. The value that would have been the default is
+     * 9223372036854775807 (2^63-1). Equal bounds set one singleton.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly singletonUpperBound: INTEGER;
+
+    /**
+     * @summary `singletonValue`.
+     * @description
+     *
+     * TRUE or FALSE for every index from the lower bound through
+     * the upper bound.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly singletonValue: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `singletonLowerBound`.
-         * @description
-         *
-         * First singleton index in the range, inclusive. Coded
-         * explicitly. The value that would have been the default is 0.
-         *
-         * @public
-         * @readonly
-         */
-        readonly singletonLowerBound: INTEGER,
-        /**
-         * @summary `singletonUpperBound`.
-         * @description
-         *
-         * Last singleton index in the range, inclusive. Coded
-         * explicitly. The value that would have been the default is
-         * 9223372036854775807 (2^63-1). Equal bounds set one singleton.
-         *
-         * @public
-         * @readonly
-         */
-        readonly singletonUpperBound: INTEGER,
-        /**
-         * @summary `singletonValue`.
-         * @description
-         *
-         * TRUE or FALSE for every index from the lower bound through
-         * the upper bound.
-         *
-         * @public
-         * @readonly
-         */
-        readonly singletonValue: BOOLEAN
+        singletonLowerBound: INTEGER,
+        singletonUpperBound: INTEGER,
+        singletonValue: BOOLEAN
     ) {
+        this.singletonLowerBound = singletonLowerBound;
+        this.singletonUpperBound = singletonUpperBound;
+        this.singletonValue = singletonValue;
         assertIntegerRange(singletonLowerBound, 0n, 9223372036854775807n, "SingletonRange.singletonLowerBound");
         assertIntegerRange(singletonUpperBound, 0n, 9223372036854775807n, "SingletonRange.singletonUpperBound");
     }

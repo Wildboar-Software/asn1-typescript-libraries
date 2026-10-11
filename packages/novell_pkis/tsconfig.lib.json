@@ -19,6 +19,7 @@
     "useUnknownInCatchVariables": true,
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
+    "erasableSyntaxOnly": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "importHelpers": true,

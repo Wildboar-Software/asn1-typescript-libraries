@@ -42,30 +42,37 @@ import { MonetaryValue, _decode_MonetaryValue, _encode_MonetaryValue } from "../
  */
 export
 class RelianceLimits {
+    /**
+     * @summary `perTransactionLimit`.
+     * @description
+     *
+     * Cap for one transaction. Display name: "Per Transaction
+     * Reliance Limit". §2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly perTransactionLimit: MonetaryValue;
+
+    /**
+     * @summary `perCertificateLimit`.
+     * @description
+     *
+     * Aggregate cap for the certificate. Display name: "Per
+     * Certificate Reliance Limit". §2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly perCertificateLimit: MonetaryValue;
+
     constructor (
-        /**
-         * @summary `perTransactionLimit`.
-         * @description
-         *
-         * Cap for one transaction. Display name: "Per Transaction
-         * Reliance Limit". §2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly perTransactionLimit: MonetaryValue,
-        /**
-         * @summary `perCertificateLimit`.
-         * @description
-         *
-         * Aggregate cap for the certificate. Display name: "Per
-         * Certificate Reliance Limit". §2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly perCertificateLimit: MonetaryValue
-    ) {}
+        perTransactionLimit: MonetaryValue,
+        perCertificateLimit: MonetaryValue
+    ) {
+        this.perTransactionLimit = perTransactionLimit;
+        this.perCertificateLimit = perCertificateLimit;
+    }
 
     /**
      * @summary Restructures an object into a RelianceLimits
