@@ -2,6 +2,7 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -12,6 +13,7 @@ import { DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_D
 import { DataGroupHash, _decode_DataGroupHash, _encode_DataGroupHash } from "../LDSSecurityObjectV1/DataGroupHash.ta.mjs";
 // export { DataGroupHash, _decode_DataGroupHash, _encode_DataGroupHash } from "../LDSSecurityObjectV1/DataGroupHash.ta.mjs";
 import { LDSVersionInfo, _decode_LDSVersionInfo, _encode_LDSVersionInfo } from "../LDSSecurityObjectV1/LDSVersionInfo.ta.mjs";
+import { ub_DataGroups } from "../LDSSecurityObjectV1/ub-DataGroups.va.mjs";
 // export { LDSVersionInfo, _decode_LDSVersionInfo, _encode_LDSVersionInfo } from "../LDSSecurityObjectV1/LDSVersionInfo.ta.mjs";
 
 
@@ -60,7 +62,14 @@ class LDSSecurityObject {
          * @readonly
          */
         readonly ldsVersionInfo: OPTIONAL<LDSVersionInfo>
-    ) {}
+    ) {
+        if (
+            dataGroupHashValues.length < 2
+            || dataGroupHashValues.length > ub_DataGroups
+        ) {
+            throw new ASN1SizeError("LDSSecurityObject.dataGroupHashValues violates SIZE constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a LDSSecurityObject

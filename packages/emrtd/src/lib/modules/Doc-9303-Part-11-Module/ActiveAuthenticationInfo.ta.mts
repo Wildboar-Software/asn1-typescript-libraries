@@ -2,11 +2,13 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass,
     INTEGER,
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { id_icao_mrtd_security_aaProtocolObject } from "../Doc-9303-Part-11-Module/id-icao-mrtd-security-aaProtocolObject.va.mjs";
 
 
 
@@ -47,7 +49,11 @@ class ActiveAuthenticationInfo {
          * @readonly
          */
         readonly signatureAlgorithm: OBJECT_IDENTIFIER
-    ) {}
+    ) {
+        if (!id_icao_mrtd_security_aaProtocolObject.isEqualTo(protocol)) {
+            throw new ASN1Error("ActiveAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a ActiveAuthenticationInfo
@@ -127,12 +133,9 @@ function _decode_ActiveAuthenticationInfo (el: _Element): ActiveAuthenticationIn
     sequence[0].name = "protocol";
     sequence[1].name = "version";
     sequence[2].name = "signatureAlgorithm";
-    let protocol!: OBJECT_IDENTIFIER;
-    let version!: INTEGER;
-    let signatureAlgorithm!: OBJECT_IDENTIFIER;
-    protocol = $._decodeObjectIdentifier(sequence[0]);
-    version = $._decodeInteger(sequence[1]);
-    signatureAlgorithm = $._decodeObjectIdentifier(sequence[2]);
+    const protocol: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const version: INTEGER = $._decodeInteger(sequence[1]);
+    const signatureAlgorithm: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[2]);
     return new ActiveAuthenticationInfo(
         protocol,
         version,

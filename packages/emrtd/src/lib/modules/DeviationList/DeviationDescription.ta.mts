@@ -1,69 +1,10 @@
 /* eslint-disable */
 import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
     OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    BIT_STRING,
-    OCTET_STRING,
-    NULL,
     OBJECT_IDENTIFIER,
-    ObjectDescriptor,
-    EXTERNAL,
-    REAL,
-    INSTANCE_OF,
-    ENUMERATED,
-    EMBEDDED_PDV,
-    UTF8String,
-    RELATIVE_OID,
-    SEQUENCE,
-    SEQUENCE_OF,
-    SET,
-    SET_OF,
-    GraphicString,
-    NumericString,
-    VisibleString,
     PrintableString,
-    ISO646String,
-    TeletexString,
-    GeneralString,
-    T61String,
-    UniversalString,
-    VideotexString,
-    BMPString,
-    IA5String,
-    CharacterString,
-    UTCTime,
-    GeneralizedTime,
-    TIME,
-    DATE,
-    TIME_OF_DAY,
-    DATE_TIME,
-    DURATION,
-    OID_IRI,
-    RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -103,8 +44,18 @@ class DeviationDescription {
          * @readonly
          */
         readonly deviationType: OBJECT_IDENTIFIER,
-// FIXME: readonly parameters: PrefixedType,
-// FIXME: readonly nationalUse: PrefixedType
+        /**
+         * @summary `parameters`.
+         * @public
+         * @readonly
+         */
+        readonly parameters: OPTIONAL<_Element>,
+        /**
+         * @summary `nationalUse`.
+         * @public
+         * @readonly
+         */
+        readonly nationalUse: OPTIONAL<_Element>,
     ) {}
 
     /**
@@ -120,7 +71,7 @@ class DeviationDescription {
      * @returns {DeviationDescription}
      */
     public static _from_object (_o: { [_K in keyof (DeviationDescription)]: (DeviationDescription)[_K] }): DeviationDescription {
-        return new DeviationDescription(_o.description, _o.deviationType, _o., _o.);
+        return new DeviationDescription(_o.description, _o.deviationType, _o.parameters, _o.nationalUse);
     }
 
 
@@ -181,13 +132,13 @@ function _decode_DeviationDescription (el: _Element): DeviationDescription {
     if (!_cached_decoder_for_DeviationDescription) { _cached_decoder_for_DeviationDescription = function (el: _Element): DeviationDescription {
     let description: OPTIONAL<PrintableString>;
     let deviationType!: OBJECT_IDENTIFIER;
-    let parameters: OPTIONAL</* FIXME: parameters COULD_NOT_COMPILE_TYPE */>;
-    let nationalUse: OPTIONAL</* FIXME: nationalUse COULD_NOT_COMPILE_TYPE */>;
+    let parameters: OPTIONAL<_Element>;
+    let nationalUse: OPTIONAL<_Element>;
     const callbacks: $.DecodingMap = {
         "description": (_el: _Element): void => { description = $._decodePrintableString(_el); },
         "deviationType": (_el: _Element): void => { deviationType = $._decodeObjectIdentifier(_el); },
-        "parameters": (_el: _Element): void => { parameters = /* FIXME: COULD_NOT_COMPILE_TYPE_DECODER */ },
-        "nationalUse": (_el: _Element): void => { nationalUse = /* FIXME: COULD_NOT_COMPILE_TYPE_DECODER */ }
+        "parameters": (_el: _Element): void => { parameters = $._decode_implicit<_Element>(() => $._decodeAny)(_el); },
+        "nationalUse": (_el: _Element): void => { nationalUse = $._decode_implicit<_Element>(() => $._decodeAny)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_DeviationDescription,

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -292,35 +291,8 @@ const DataGroupNumber_dataGroup16: DataGroupNumber = 16; /* LONG_NAMED_INTEGER_V
  */
 export
 const dataGroup16: DataGroupNumber = DataGroupNumber_dataGroup16; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DataGroupNumber: $.ASN1Decoder<DataGroupNumber> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DataGroupNumber
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DataGroupNumber (el: _Element): DataGroupNumber {
-    if (!_cached_decoder_for_DataGroupNumber) { _cached_decoder_for_DataGroupNumber = $._decodeInteger; }
-    return _cached_decoder_for_DataGroupNumber(el);
-}
-
-let _cached_encoder_for_DataGroupNumber: $.ASN1Encoder<DataGroupNumber> | null = null;
-
-/**
- * @summary Encodes a(n) DataGroupNumber into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DataGroupNumber, encoded as an ASN.1 Element.
- */
-export
-function _encode_DataGroupNumber (value: DataGroupNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DataGroupNumber) { _cached_encoder_for_DataGroupNumber = $._encodeInteger; }
-    return _cached_encoder_for_DataGroupNumber(value, elGetter);
-}
+export const _decode_DataGroupNumber = $._decodeInteger;
+export const _encode_DataGroupNumber = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -182,35 +181,8 @@ const MRZField_optionalData: MRZField = 9; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const optionalData: MRZField = MRZField_optionalData; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_MRZField: $.ASN1Decoder<MRZField> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MRZField
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MRZField (el: _Element): MRZField {
-    if (!_cached_decoder_for_MRZField) { _cached_decoder_for_MRZField = $._decodeInteger; }
-    return _cached_decoder_for_MRZField(el);
-}
-
-let _cached_encoder_for_MRZField: $.ASN1Encoder<MRZField> | null = null;
-
-/**
- * @summary Encodes a(n) MRZField into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MRZField, encoded as an ASN.1 Element.
- */
-export
-function _encode_MRZField (value: MRZField, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MRZField) { _cached_encoder_for_MRZField = $._encodeInteger; }
-    return _cached_encoder_for_MRZField(value, elGetter);
-}
+export const _decode_MRZField = $._decodeInteger;
+export const _encode_MRZField = $._encodeInteger;
 
 
 /* eslint-enable */

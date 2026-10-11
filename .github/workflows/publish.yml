@@ -36,6 +36,7 @@ jobs:
           - "device-owner-attribute"
           - "dfr"
           - "ec-private-key"
+          - "emrtd"
           - "ers"
           - "ess"
           - "fast-infoset"

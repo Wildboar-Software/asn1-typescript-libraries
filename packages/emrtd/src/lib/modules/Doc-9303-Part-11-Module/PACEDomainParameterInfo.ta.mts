@@ -4,10 +4,24 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import { id_PACE_DH_GM } from "../Doc-9303-Part-11-Module/id-PACE-DH-GM.va.mjs";
+import { id_PACE_ECDH_GM } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-GM.va.mjs";
+import { id_PACE_DH_IM } from "../Doc-9303-Part-11-Module/id-PACE-DH-IM.va.mjs";
+import { id_PACE_ECDH_IM } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-IM.va.mjs";
+import { id_PACE_ECDH_CAM } from "../Doc-9303-Part-11-Module/id-PACE-ECDH-CAM.va.mjs";
+
+const _permitted_protocols_for_PACEDomainParameterInfo: OBJECT_IDENTIFIER[] = [
+    id_PACE_DH_GM,
+    id_PACE_ECDH_GM,
+    id_PACE_DH_IM,
+    id_PACE_ECDH_IM,
+    id_PACE_ECDH_CAM,
+];
 // export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
 
@@ -54,7 +68,11 @@ class PACEDomainParameterInfo {
          * @readonly
          */
         readonly parameterId: OPTIONAL<INTEGER>
-    ) {}
+    ) {
+        if (!_permitted_protocols_for_PACEDomainParameterInfo.some((id) => id.isEqualTo(protocol))) {
+            throw new ASN1Error("PACEDomainParameterInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a PACEDomainParameterInfo

@@ -2,8 +2,11 @@
 import {
     OPTIONAL,
     PrintableString,
+    ASN1CharactersError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1SizeError,
+    ASN1TagClass as _TagClass,
+    isPrintableCharacter,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DocumentSignerIdentifier, _decode_DocumentSignerIdentifier, _encode_DocumentSignerIdentifier } from "../DeviationList/DocumentSignerIdentifier.ta.mjs";
@@ -57,7 +60,18 @@ class DeviationDocuments {
          * @readonly
          */
         readonly documentNumbers: OPTIONAL<PrintableString[]>
-    ) {}
+    ) {
+        if (documentType !== undefined && documentType.length !== 2) {
+            throw new ASN1SizeError("DeviationDocuments.documentType violates SIZE constraint");
+        }
+        if (documentType !== undefined) {
+            for (let i = 0; i < documentType.length; i++) {
+                if (!isPrintableCharacter(documentType.charCodeAt(i))) {
+                    throw new ASN1CharactersError("DeviationDocuments.documentType contains a prohibited character");
+                }
+            }
+        }
+    }
 
     /**
      * @summary Restructures an object into a DeviationDocuments

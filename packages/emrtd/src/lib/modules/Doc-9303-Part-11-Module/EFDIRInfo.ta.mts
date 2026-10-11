@@ -2,11 +2,13 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
+    ASN1Error,
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { id_EFDIR } from "../Doc-9303-Part-11-Module/id-EFDIR.va.mjs";
 
 
 
@@ -40,7 +42,11 @@ class EFDIRInfo {
          * @readonly
          */
         readonly eFDIR: OCTET_STRING
-    ) {}
+    ) {
+        if (!id_EFDIR.isEqualTo(protocol)) {
+            throw new ASN1Error("EFDIRInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
+        }
+    }
 
     /**
      * @summary Restructures an object into a EFDIRInfo
@@ -118,10 +124,8 @@ function _decode_EFDIRInfo (el: _Element): EFDIRInfo {
     }
     sequence[0].name = "protocol";
     sequence[1].name = "eFDIR";
-    let protocol!: OBJECT_IDENTIFIER;
-    let eFDIR!: OCTET_STRING;
-    protocol = $._decodeObjectIdentifier(sequence[0]);
-    eFDIR = $._decodeOctetString(sequence[1]);
+    const protocol: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const eFDIR: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new EFDIRInfo(
         protocol,
         eFDIR,
