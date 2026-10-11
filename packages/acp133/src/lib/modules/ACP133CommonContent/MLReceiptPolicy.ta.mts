@@ -2,6 +2,7 @@
 import {
     NULL,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -44,7 +45,14 @@ function _decode_MLReceiptPolicy (el: _Element): MLReceiptPolicy {
     "CONTEXT 1": [ "insteadOf", $._decode_explicit<GeneralNames[]>(() => $._decodeSequenceOf<GeneralNames>(() => _decode_GeneralNames)) ],
     "CONTEXT 2": [ "inAdditionTo", $._decode_explicit<GeneralNames[]>(() => $._decodeSequenceOf<GeneralNames>(() => _decode_GeneralNames)) ]
 }); }
-    return _cached_decoder_for_MLReceiptPolicy(el);
+    const value = _cached_decoder_for_MLReceiptPolicy(el);
+    if ("insteadOf" in value && value.insteadOf.length < 1) {
+        throw new ASN1SizeError("MLReceiptPolicy.insteadOf violates SIZE constraint");
+    }
+    if ("inAdditionTo" in value && value.inAdditionTo.length < 1) {
+        throw new ASN1SizeError("MLReceiptPolicy.inAdditionTo violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_MLReceiptPolicy: $.ASN1Encoder<MLReceiptPolicy> | null = null;
