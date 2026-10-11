@@ -177,35 +177,8 @@ const PublicTypeOfNumber_abbreviatedNumber: PublicTypeOfNumber = PublicTypeOfNum
  */
 export
 const abbreviatedNumber: PublicTypeOfNumber = PublicTypeOfNumber.abbreviatedNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_PublicTypeOfNumber: $.ASN1Decoder<PublicTypeOfNumber> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PublicTypeOfNumber
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PublicTypeOfNumber (el: _Element): PublicTypeOfNumber {
-    if (!_cached_decoder_for_PublicTypeOfNumber) { _cached_decoder_for_PublicTypeOfNumber = $._decodeEnumerated; }
-    return _cached_decoder_for_PublicTypeOfNumber(el);
-}
-
-let _cached_encoder_for_PublicTypeOfNumber: $.ASN1Encoder<PublicTypeOfNumber> | null = null;
-
-/**
- * @summary Encodes a(n) PublicTypeOfNumber into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PublicTypeOfNumber, encoded as an ASN.1 Element.
- */
-export
-function _encode_PublicTypeOfNumber (value: PublicTypeOfNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PublicTypeOfNumber) { _cached_encoder_for_PublicTypeOfNumber = $._encodeEnumerated; }
-    return _cached_encoder_for_PublicTypeOfNumber(value, elGetter);
-}
+export const _decode_PublicTypeOfNumber: $.ASN1Decoder<PublicTypeOfNumber> = $._decodeEnumerated;
+export const _encode_PublicTypeOfNumber: $.ASN1Encoder<PublicTypeOfNumber> = $._encodeEnumerated;
 
 
 /* eslint-enable */

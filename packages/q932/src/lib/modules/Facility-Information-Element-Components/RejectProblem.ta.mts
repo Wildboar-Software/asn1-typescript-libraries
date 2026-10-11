@@ -334,35 +334,8 @@ const RejectProblem_returnError_mistypedParameter: RejectProblem = 34; /* LONG_N
  */
 export
 const returnError_mistypedParameter: RejectProblem = RejectProblem_returnError_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_RejectProblem: $.ASN1Decoder<RejectProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RejectProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RejectProblem (el: _Element): RejectProblem {
-    if (!_cached_decoder_for_RejectProblem) { _cached_decoder_for_RejectProblem = $._decodeInteger; }
-    return _cached_decoder_for_RejectProblem(el);
-}
-
-let _cached_encoder_for_RejectProblem: $.ASN1Encoder<RejectProblem> | null = null;
-
-/**
- * @summary Encodes a(n) RejectProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RejectProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_RejectProblem (value: RejectProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RejectProblem) { _cached_encoder_for_RejectProblem = $._encodeInteger; }
-    return _cached_encoder_for_RejectProblem(value, elGetter);
-}
+export const _decode_RejectProblem: $.ASN1Decoder<RejectProblem> = $._decodeInteger;
+export const _encode_RejectProblem: $.ASN1Encoder<RejectProblem> = $._encodeInteger;
 
 
 /* eslint-enable */
