@@ -7,9 +7,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UKMEntry, _decode_UKMEntry, _encode_UKMEntry } from "../ACP133CommonContent/UKMEntry.ta.mjs";
-// export { UKMEntry, _decode_UKMEntry, _encode_UKMEntry } from "../ACP133CommonContent/UKMEntry.ta.mjs";
-import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import {
+    AlgorithmIdentifier,
+    _decode_AlgorithmIdentifier,
+    _encode_AlgorithmIdentifier,
+} from "@wildboar/pki-stub";
 
 
 /**
@@ -129,12 +131,9 @@ function _decode_MonthlyUKMs (el: _Element): MonthlyUKMs {
     sequence[0].name = "ukm-entries";
     sequence[1].name = "algorithm-identifier";
     sequence[2].name = "encrypted";
-    let ukm_entries!: UKMEntry[];
-    let algorithm_identifier!: AlgorithmIdentifier;
-    let encrypted!: BIT_STRING;
-    ukm_entries = $._decodeSequenceOf<UKMEntry>(() => _decode_UKMEntry)(sequence[0]);
-    algorithm_identifier = _decode_AlgorithmIdentifier(sequence[1]);
-    encrypted = $._decodeBitString(sequence[2]);
+    const ukm_entries = $._decodeSequenceOf<UKMEntry>(() => _decode_UKMEntry)(sequence[0]);
+    const algorithm_identifier = _decode_AlgorithmIdentifier(sequence[1]);
+    const encrypted = $._decodeBitString(sequence[2]);
     return new MonthlyUKMs(
         ukm_entries,
         algorithm_identifier,
@@ -156,7 +155,7 @@ let _cached_encoder_for_MonthlyUKMs: $.ASN1Encoder<MonthlyUKMs> | null = null;
  */
 export
 function _encode_MonthlyUKMs (value: MonthlyUKMs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MonthlyUKMs) { _cached_encoder_for_MonthlyUKMs = function (value: MonthlyUKMs, elGetter: $.ASN1Encoder<MonthlyUKMs>): _Element {
+    if (!_cached_encoder_for_MonthlyUKMs) { _cached_encoder_for_MonthlyUKMs = function (value: MonthlyUKMs): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ $._encodeSequenceOf<UKMEntry>(() => _encode_UKMEntry, $.BER)(value.ukm_entries, $.BER),

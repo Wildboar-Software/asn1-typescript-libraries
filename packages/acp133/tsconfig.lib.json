@@ -3,20 +3,27 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
-    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "tsBuildInfoFile": "../../dist/packages/acp133/tsconfig.lib.tsbuildinfo",
     "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": true,
     "importHelpers": true,
     "types": [
       "node"
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.mts"
   ],
-  "references": [],
+  "references": [
+    {
+      "path": "../pki-stub/tsconfig.lib.json"
+    }
+  ],
   "exclude": [
+    "src/**/*.test.mts",
+    "src/**/*.spec.mts",
     "vite.config.ts",
     "vite.config.mts",
     "vitest.config.ts",

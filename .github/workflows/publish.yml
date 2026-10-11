@@ -12,6 +12,7 @@ jobs:
       matrix:
         package:
           - "acbio"
+          - "acp133"
           - "acse"
           - "ansi-x9-42"
           - "ansi-x9-62"

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PairwiseTag, _decode_PairwiseTag, _encode_PairwiseTag } from "../ACP133CommonContent/PairwiseTag.ta.mjs";
-// export { PairwiseTag, _decode_PairwiseTag, _encode_PairwiseTag } from "../ACP133CommonContent/PairwiseTag.ta.mjs";
 
 
 /**
@@ -118,10 +117,8 @@ function _decode_UKMEntry (el: _Element): UKMEntry {
     }
     sequence[0].name = "tag";
     sequence[1].name = "ukm";
-    let tag!: PairwiseTag;
-    let ukm!: OCTET_STRING;
-    tag = _decode_PairwiseTag(sequence[0]);
-    ukm = $._decodeOctetString(sequence[1]);
+    const tag = _decode_PairwiseTag(sequence[0]);
+    const ukm = $._decodeOctetString(sequence[1]);
     return new UKMEntry(
         tag,
         ukm,
@@ -142,7 +139,7 @@ let _cached_encoder_for_UKMEntry: $.ASN1Encoder<UKMEntry> | null = null;
  */
 export
 function _encode_UKMEntry (value: UKMEntry, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UKMEntry) { _cached_encoder_for_UKMEntry = function (value: UKMEntry, elGetter: $.ASN1Encoder<UKMEntry>): _Element {
+    if (!_cached_encoder_for_UKMEntry) { _cached_encoder_for_UKMEntry = function (value: UKMEntry): _Element {
     return $._encodeSequence(([] as (_Element | undefined)[]).concat(
         [
             /* REQUIRED   */ _encode_PairwiseTag(value.tag, $.BER),
