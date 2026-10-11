@@ -13,7 +13,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProvideEimPackageResultResponse-emptyResponse ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProvideEimPackageResultResponse-emptyResponse ::= SEQUENCE {}
  * ```
  * 
  * @class

@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EuiccResultData-processingTerminated ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EuiccResultData-processingTerminated ::= INTEGER {
+ *     resultSizeOverflow(1),
+ *     unknownOrDamagedCommand(2),
+ *     interruption(3),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

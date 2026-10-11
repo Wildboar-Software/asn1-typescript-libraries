@@ -14,7 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConfigureImmediateProfileEnablingResponse-configImmediateEnableResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ConfigureImmediateProfileEnablingResponse-configImmediateEnableResult ::= INTEGER {
+ *     ok(0),
+ *     insufficientMemory(1),
+ *     associatedEimAlreadyExists(2),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

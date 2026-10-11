@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AddInitialEimResponse-addInitialEimOk-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AddInitialEimResponse-addInitialEimOk-Item ::= CHOICE {
+ *     associationToken [4] INTEGER,
+ *     addOk NULL
+ * }
  * ```
  */
 export

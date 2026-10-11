@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EuiccMemoryResetResponse-resetImmediateEnableConfigResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EuiccMemoryResetResponse-resetImmediateEnableConfigResult ::= INTEGER {
+ *     ok(0),
+ *     resetIECNotSupported(1),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

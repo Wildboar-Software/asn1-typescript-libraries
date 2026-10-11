@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CancelSessionResponse-cancelSessionResponseError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CancelSessionResponse-cancelSessionResponseError ::= INTEGER {
+ *     invalidTransactionId(5),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

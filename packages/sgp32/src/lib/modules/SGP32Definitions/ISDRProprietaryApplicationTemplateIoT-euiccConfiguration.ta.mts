@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ISDRProprietaryApplicationTemplateIoT-euiccConfiguration ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * ISDRProprietaryApplicationTemplateIoT-euiccConfiguration ::= BIT STRING {
+ *     ipaeSupported(0), -- IPA in the eUICC (IPAe) supported
+ *     enabledProfile(1) -- eUICC contains an Enabled Profile
+ * }
  * ```
  */
 export

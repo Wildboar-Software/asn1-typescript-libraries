@@ -17,7 +17,10 @@ import { CompactEuiccSigned1, _decode_CompactEuiccSigned1, _encode_CompactEuiccS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CompactAuthenticateResponseOk-signedData ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CompactAuthenticateResponseOk-signedData ::= CHOICE {
+ *     euiccSigned1 EuiccSigned1,
+ *     compactEuiccSigned1 [0] CompactEuiccSigned1 -- Compact version of EuiccSigned1
+ * }
  * ```
  */
 export

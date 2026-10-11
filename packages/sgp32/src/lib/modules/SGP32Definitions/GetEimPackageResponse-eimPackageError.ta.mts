@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetEimPackageResponse-eimPackageError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * GetEimPackageResponse-eimPackageError ::= INTEGER {
+ *     noEimPackageAvailable(1),
+ *     eidNotFound(2),
+ *     invalidEid(3),
+ *     missingEid(4),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetCertsResponse-getCertsError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * GetCertsResponse-getCertsError ::= INTEGER {
+ *     invalidCiPKId(1),
+ *     undfinedError(127)
+ * }
  * ```
  */
 export

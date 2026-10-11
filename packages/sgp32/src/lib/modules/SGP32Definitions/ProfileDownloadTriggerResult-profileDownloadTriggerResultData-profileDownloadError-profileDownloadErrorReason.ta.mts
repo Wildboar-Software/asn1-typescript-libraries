@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileDownloadTriggerResult-profileDownloadTriggerResultData-profileDownloadError-profileDownloadErrorReason ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileDownloadTriggerResult-profileDownloadTriggerResultData-profileDownloadError-profileDownloadErrorReason ::= INTEGER {
+ *     ecallActive(104),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

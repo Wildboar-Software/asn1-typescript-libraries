@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileDownloadData-contactSmds ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileDownloadData-contactSmds ::= SEQUENCE {
+ *     smdsAddress UTF8String OPTIONAL
+ * }
  * ```
  * 
  * @class

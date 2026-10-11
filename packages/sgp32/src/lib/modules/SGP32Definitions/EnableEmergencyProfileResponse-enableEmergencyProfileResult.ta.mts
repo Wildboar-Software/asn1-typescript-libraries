@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EnableEmergencyProfileResponse-enableEmergencyProfileResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EnableEmergencyProfileResponse-enableEmergencyProfileResult ::= INTEGER {
+ *     ok(0),
+ *     profileNotInDisabledState(2),
+ *     catBusy(5),
+ *     ecallNotAvailable(8), -- Emergency Profile does not exist
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

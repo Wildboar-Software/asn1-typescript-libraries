@@ -14,7 +14,10 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EimConfigurationData-trustedPublicKeyDataTls ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EimConfigurationData-trustedPublicKeyDataTls ::= CHOICE {
+ *     trustedEimPkTls SubjectPublicKeyInfo, -- public key of eIM, used for TLS or DTLS, where the encoding follows X.509 standard
+ *     trustedCertificateTls Certificate -- either the certificate of eIM, used for (D)TLS, or the certificate of the CA, where the encoding follows X.509 standard
+ * }
  * ```
  */
 export

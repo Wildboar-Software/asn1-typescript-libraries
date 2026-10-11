@@ -15,7 +15,10 @@ import { ErrorResult, _decode_ErrorResult, _encode_ErrorResult } from "@wildboar
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CompactProfileInstallationResultData-compactFinalResult ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CompactProfileInstallationResultData-compactFinalResult ::= CHOICE {
+ *     compactSuccessResult CompactSuccessResult,
+ *     errorResult ErrorResult
+ * }
  * ```
  */
 export

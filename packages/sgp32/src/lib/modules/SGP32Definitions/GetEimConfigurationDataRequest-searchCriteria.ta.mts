@@ -15,7 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetEimConfigurationDataRequest-searchCriteria ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * GetEimConfigurationDataRequest-searchCriteria ::= CHOICE {
+ *     eimId [0] UTF8String (SIZE(1..128))
+ * }
  * ```
  */
 export

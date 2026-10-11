@@ -15,7 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IpaEuiccDataRequest-searchCriteriaEuiccPackageResult ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * IpaEuiccDataRequest-searchCriteriaEuiccPackageResult ::= CHOICE {
+ *     seqNumber [0] INTEGER
+ * }
  * ```
  */
 export

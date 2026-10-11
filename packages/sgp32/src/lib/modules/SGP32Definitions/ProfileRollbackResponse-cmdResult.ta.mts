@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileRollbackResponse-cmdResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileRollbackResponse-cmdResult ::= INTEGER {
+ *     ok(0),
+ *     rollbackNotAllowed(1), -- Usage of rollback was not granted by the eIM
+ *     catBusy(5),
+ *     commandError(7),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

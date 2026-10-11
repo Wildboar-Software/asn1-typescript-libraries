@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExecuteFallbackMechanismResponse-executeFallbackMechanismResult ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ExecuteFallbackMechanismResponse-executeFallbackMechanismResult ::= INTEGER {
+ *     ok(0),
+ *     profileNotInDisabledState(2),
+ *     catBusy(5),
+ *     fallbackNotAvailable(6), -- Fallback Attribute not set
+ *     commandError(7),
+ *     ecallActive(104),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

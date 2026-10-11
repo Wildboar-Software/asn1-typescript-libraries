@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * InitiateAuthenticationResponseEsipa-initiateAuthenticationErrorEsipa ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * InitiateAuthenticationResponseEsipa-initiateAuthenticationErrorEsipa ::= INTEGER {
+ *     invalidDpAddress(1),
+ *     euiccVersionNotSupportedByDp(2),
+ *     ciPKIdNotSupported(3),
+ *     smdpAddressMismatch(50),
+ *     smdpOidMismatch(51),
+ *     invalidEimTransactionId(52),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

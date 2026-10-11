@@ -14,7 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IpaeActivationRequest-ipaeOption ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * IpaeActivationRequest-ipaeOption ::= BIT STRING {
+ *     activateIpae(0) -- IPAe activation
+ * }
  * ```
  */
 export

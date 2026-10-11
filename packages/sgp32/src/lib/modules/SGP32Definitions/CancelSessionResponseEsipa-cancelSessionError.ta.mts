@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CancelSessionResponseEsipa-cancelSessionError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CancelSessionResponseEsipa-cancelSessionError ::= INTEGER {
+ *     invalidTransactionId(1),
+ *     euiccSignatureInvalid(2),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

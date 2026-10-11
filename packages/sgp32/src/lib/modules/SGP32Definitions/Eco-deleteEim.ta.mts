@@ -16,7 +16,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Eco-deleteEim ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Eco-deleteEim ::= SEQUENCE {
+ *     eimId [0] UTF8String
+ * }
  * ```
  * 
  * @class

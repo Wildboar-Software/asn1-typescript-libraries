@@ -13,7 +13,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Eco-listEim ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Eco-listEim ::= SEQUENCE {}
  * ```
  * 
  * @class

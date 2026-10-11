@@ -17,7 +17,16 @@ import { ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileDownloadTriggerResult-profileDownloadTriggerResultData ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileDownloadTriggerResult-profileDownloadTriggerResultData ::= CHOICE {
+ *     profileInstallationResult [55] ProfileInstallationResult, -- see SGP.22 [4]
+ *     profileDownloadError SEQUENCE {
+ *         profileDownloadErrorReason [0] INTEGER {
+ *             ecallActive(104),
+ *             undefinedError(127)
+ *         },
+ *         errorResponse OCTET STRING OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

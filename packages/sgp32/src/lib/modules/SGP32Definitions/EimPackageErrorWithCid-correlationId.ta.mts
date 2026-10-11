@@ -15,7 +15,10 @@ import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EimPackageErrorWithCid-correlationId ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EimPackageErrorWithCid-correlationId ::= CHOICE {
+ *     eimTransactionId [0] TransactionId, -- if received in the EimPackage
+ *     eidValue [APPLICATION 26] Octet16 -- otherwise
+ * }
  * ```
  */
 export

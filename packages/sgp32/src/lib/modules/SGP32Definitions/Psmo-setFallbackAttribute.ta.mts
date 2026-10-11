@@ -15,7 +15,9 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Psmo-setFallbackAttribute ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Psmo-setFallbackAttribute ::= SEQUENCE {
+ *     iccid [APPLICATION 26] Iccid
+ * }
  * ```
  * 
  * @class

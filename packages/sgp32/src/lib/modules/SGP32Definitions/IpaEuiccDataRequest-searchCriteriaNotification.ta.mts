@@ -15,7 +15,10 @@ import { type NotificationEvent, _decode_NotificationEvent, _encode_Notification
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IpaEuiccDataRequest-searchCriteriaNotification ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * IpaEuiccDataRequest-searchCriteriaNotification ::= CHOICE {
+ *     seqNumber [0] INTEGER,
+ *     profileManagementOperation [1] NotificationEvent
+ * }
  * ```
  */
 export

@@ -18,7 +18,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Psmo-configureImmediateEnable ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Psmo-configureImmediateEnable ::= SEQUENCE {
+ *     immediateEnableFlag [0] NULL OPTIONAL,
+ *     defaultSmdpOid [1] OBJECT IDENTIFIER OPTIONAL,
+ *     defaultSmdpAddress [2] UTF8String OPTIONAL
+ * }
  * ```
  * 
  * @class

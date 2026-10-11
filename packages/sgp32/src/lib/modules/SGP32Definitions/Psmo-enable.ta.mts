@@ -16,7 +16,10 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Psmo-enable ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Psmo-enable ::= SEQUENCE {
+ *     iccid [APPLICATION 26] Iccid,
+ *     rollbackFlag NULL OPTIONAL
+ * }
  * ```
  * 
  * @class

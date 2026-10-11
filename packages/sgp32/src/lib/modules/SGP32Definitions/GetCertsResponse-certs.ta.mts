@@ -15,7 +15,10 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GetCertsResponse-certs ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GetCertsResponse-certs ::= SEQUENCE {
+ *     eumCertificate [5] Certificate, -- Tag 'A5'
+ *     euiccCertificate [6] Certificate -- Tag 'A6'
+ * }
  * ```
  * 
  * @class

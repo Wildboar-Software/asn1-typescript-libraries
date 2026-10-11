@@ -18,7 +18,10 @@ import { PendingNotificationList, _decode_PendingNotificationList, _encode_Pendi
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EimPackageResult-ePRAndNotifications ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EimPackageResult-ePRAndNotifications ::= SEQUENCE {
+ *     euiccPackageResult [81] EuiccPackageResult, -- Tag 'BF51'
+ *     notificationList [0] PendingNotificationList -- Tag 'A0'
+ * }
  * ```
  * 
  * @class

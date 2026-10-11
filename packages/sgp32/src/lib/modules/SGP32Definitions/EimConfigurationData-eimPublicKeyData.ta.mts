@@ -14,7 +14,10 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EimConfigurationData-eimPublicKeyData ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EimConfigurationData-eimPublicKeyData ::= CHOICE {
+ *     eimPublicKey SubjectPublicKeyInfo, -- public key of eIM, used for eUICC Package signature verification, where the encoding follows X.509 standard
+ *     eimCertificate Certificate -- certificate of eIM, used for eUICC Package signature verification, where the encoding follows X.509 standard
+ * }
  * ```
  */
 export

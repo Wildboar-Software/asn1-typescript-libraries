@@ -14,7 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AddInitialEimResponse-addInitialEimError ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * AddInitialEimResponse-addInitialEimError ::= INTEGER {
+ *     insufficientMemory(1),
+ *     associatedEimAlreadyExists(2),
+ *     ciPKUnknown(3),
+ *     invalidAssociationToken(5),
+ *     counterValueOutOfRange(6),
+ *     commandError(7),
+ *     undefinedError(127)
+ * }
  * ```
  */
 export

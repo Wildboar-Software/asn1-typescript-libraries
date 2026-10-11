@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IpaCapabilities-ipaFeatures ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * IpaCapabilities-ipaFeatures ::= BIT STRING {
+ *     directRspServerCommunication(0),
+ *     indirectRspServerCommunication(1),
+ *     eimDownloadDataHandling(2),
+ *     eimCtxParams1Generation(3),
+ *     eimProfileMetadataVerification(4),
+ *     minimizeEsipaBytes(5)
+ * }
  * ```
  */
 export

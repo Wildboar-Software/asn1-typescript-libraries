@@ -17,7 +17,13 @@ import { _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_p
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProfileDownloadTriggerResult-profileDownloadTriggerResultData-profileDownloadError ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProfileDownloadTriggerResult-profileDownloadTriggerResultData-profileDownloadError ::= SEQUENCE {
+ *     profileDownloadErrorReason [0] INTEGER {
+ *         ecallActive(104),
+ *         undefinedError(127)
+ *     },
+ *     errorResponse OCTET STRING OPTIONAL
+ * }
  * ```
  * 
  * @class
