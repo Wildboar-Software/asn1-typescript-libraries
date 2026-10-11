@@ -1,15 +1,23 @@
 {
   "name": "@wildboar/acp133",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./ACP133CommonContent": "./src/lib/modules/ACP133CommonContent/index.mts",
+    "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
+    "./CertificateExtensions": "./src/lib/modules/CertificateExtensions/index.mts",
+    "./SelectedAttributeTypes": "./src/lib/modules/SelectedAttributeTypes/index.mts"
   },
   "publish": {
     "include": [
       "LICENSE.txt",
       "README.md",
       "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
     ]
   }
 }
