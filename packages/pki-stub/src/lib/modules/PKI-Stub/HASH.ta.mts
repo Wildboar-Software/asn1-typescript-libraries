@@ -52,26 +52,36 @@ export type HASHJSON = {
  *
  */
 export class HASH<_ToBeHashed> {
+    /**
+     * @summary `algorithmIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmIdentifier;
+
+    /**
+     * @summary `hashValue`.
+     * @public
+     * @readonly
+     */
+    public readonly hashValue: BIT_STRING;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithmIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `hashValue`.
-         * @public
-         * @readonly
-         */
-        readonly hashValue: BIT_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithmIdentifier: AlgorithmIdentifier,
+        hashValue: BIT_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithmIdentifier = algorithmIdentifier;
+        this.hashValue = hashValue;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a HASH

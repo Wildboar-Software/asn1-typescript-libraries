@@ -56,42 +56,52 @@ import {
  *
  */
 export class Holder {
+    /**
+     * @summary `baseCertificateID`.
+     * @description
+     *
+     * If present, only this public-key certificate may authenticate the
+     * holder. `entityName` is then only a locator hint.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly baseCertificateID?: OPTIONAL<IssuerSerial>;
+
+    /**
+     * @summary `entityName`.
+     * @description
+     *
+     * One or more names for the holder. Alone, any PKC whose subject
+     * matches one of these names may be used. Some `GeneralName` forms are
+     * a poor identifier for a holder (especially a role).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityName?: OPTIONAL<GeneralNames>;
+
+    /**
+     * @summary `objectDigestInfo`.
+     * @description
+     *
+     * Authenticates the holder by comparing a digest (including of an
+     * executable) with `objectDigest`. See {@link ObjectDigestInfo}.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>;
+
     constructor(
-        /**
-         * @summary `baseCertificateID`.
-         * @description
-         *
-         * If present, only this public-key certificate may authenticate the
-         * holder. `entityName` is then only a locator hint.
-         *
-         * @public
-         * @readonly
-         */
-        readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
-        /**
-         * @summary `entityName`.
-         * @description
-         *
-         * One or more names for the holder. Alone, any PKC whose subject
-         * matches one of these names may be used. Some `GeneralName` forms are
-         * a poor identifier for a holder (especially a role).
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityName?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `objectDigestInfo`.
-         * @description
-         *
-         * Authenticates the holder by comparing a digest (including of an
-         * executable) with `objectDigest`. See {@link ObjectDigestInfo}.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
-    ) {}
+        baseCertificateID?: OPTIONAL<IssuerSerial>,
+        entityName?: OPTIONAL<GeneralNames>,
+        objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
+    ) {
+        this.baseCertificateID = baseCertificateID;
+        this.entityName = entityName;
+        this.objectDigestInfo = objectDigestInfo;
+    }
 
     /**
      * @summary Restructures an object into a Holder

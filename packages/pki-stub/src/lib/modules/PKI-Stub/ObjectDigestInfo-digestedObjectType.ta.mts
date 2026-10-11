@@ -29,11 +29,14 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * @enum {number}
  */
-export enum _enum_for_ObjectDigestInfo_digestedObjectType {
-    publicKey = 0,
-    publicKeyCert = 1,
-    otherObjectTypes = 2,
-}
+export const _enum_for_ObjectDigestInfo_digestedObjectType = {
+    publicKey: 0,
+    publicKeyCert: 1,
+    otherObjectTypes: 2,
+} as const;
+
+export type _enum_for_ObjectDigestInfo_digestedObjectType =
+    (typeof _enum_for_ObjectDigestInfo_digestedObjectType)[keyof typeof _enum_for_ObjectDigestInfo_digestedObjectType];
 
 /**
  * @summary ObjectDigestInfo_digestedObjectType
@@ -131,7 +134,8 @@ export const otherObjectTypes: ObjectDigestInfo_digestedObjectType =
  * @param {_Element} el The element being decoded.
  * @returns {ObjectDigestInfo_digestedObjectType} The decoded data structure.
  */
-export const _decode_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<ObjectDigestInfo_digestedObjectType> = $._decodeEnumerated;
+export const _decode_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<ObjectDigestInfo_digestedObjectType> =
+    $._decodeEnumerated as $.ASN1Decoder<ObjectDigestInfo_digestedObjectType>;
 
 /**
  * @summary Encodes a(n) ObjectDigestInfo_digestedObjectType into an ASN.1 Element.
@@ -140,7 +144,8 @@ export const _decode_ObjectDigestInfo_digestedObjectType: $.ASN1Decoder<ObjectDi
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ObjectDigestInfo_digestedObjectType, encoded as an ASN.1 Element.
  */
-export const _encode_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType> = $._encodeEnumerated;
+export const _encode_ObjectDigestInfo_digestedObjectType: $.ASN1Encoder<ObjectDigestInfo_digestedObjectType> =
+    $._encodeEnumerated as $.ASN1Encoder<ObjectDigestInfo_digestedObjectType>;
 
 
 /* eslint-enable */

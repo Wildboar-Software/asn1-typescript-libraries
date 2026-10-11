@@ -57,32 +57,45 @@ export type AttributeJSON = {
  *
  */
 export class Attribute {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: OBJECT_IDENTIFIER;
+
+    /**
+     * @summary `values`.
+     * @public
+     * @readonly
+     */
+    public readonly values: _Element[];
+
+    /**
+     * @summary `valuesWithContext`.
+     * @public
+     * @readonly
+     */
+    public readonly valuesWithContext?: OPTIONAL<VWC[]>;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: OBJECT_IDENTIFIER,
-        /**
-         * @summary `values`.
-         * @public
-         * @readonly
-         */
-        readonly values: _Element[],
-        /**
-         * @summary `valuesWithContext`.
-         * @public
-         * @readonly
-         */
-        readonly valuesWithContext?: OPTIONAL<VWC[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        type_: OBJECT_IDENTIFIER,
+        values: _Element[],
+        valuesWithContext?: OPTIONAL<VWC[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.type_ = type_;
+        this.values = values;
+        this.valuesWithContext = valuesWithContext;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Attribute

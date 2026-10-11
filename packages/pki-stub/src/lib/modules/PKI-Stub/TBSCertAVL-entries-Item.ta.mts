@@ -50,32 +50,45 @@ import {
  *
  */
 export class TBSCertAVL_entries_Item {
+    /**
+     * @summary `idType`.
+     * @public
+     * @readonly
+     */
+    public readonly idType: TBSCertAVL_entries_Item_idType;
+
+    /**
+     * @summary `scope`.
+     * @public
+     * @readonly
+     */
+    public readonly scope?: OPTIONAL<ScopeRestrictions>;
+
+    /**
+     * @summary `entryExtensions`.
+     * @public
+     * @readonly
+     */
+    public readonly entryExtensions?: OPTIONAL<Extensions>;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `idType`.
-         * @public
-         * @readonly
-         */
-        readonly idType: TBSCertAVL_entries_Item_idType,
-        /**
-         * @summary `scope`.
-         * @public
-         * @readonly
-         */
-        readonly scope?: OPTIONAL<ScopeRestrictions>,
-        /**
-         * @summary `entryExtensions`.
-         * @public
-         * @readonly
-         */
-        readonly entryExtensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        idType: TBSCertAVL_entries_Item_idType,
+        scope?: OPTIONAL<ScopeRestrictions>,
+        entryExtensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.idType = idType;
+        this.scope = scope;
+        this.entryExtensions = entryExtensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBSCertAVL_entries_Item

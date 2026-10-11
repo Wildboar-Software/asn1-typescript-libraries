@@ -81,79 +81,104 @@ import {
  *
  */
 export class TBSCertAVL {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Shall be absent or v1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Required if this authorizer places more than one AVL in the entity;
+     * unique per authorizer within that entity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: OPTIONAL<AvlSerialNumber>;
+
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Shall match the algorithm used to sign the AVL.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: AlgorithmIdentifier;
+
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Authorizer DN; shall match the subject of the public-key certificate
+     * used to verify the AVL signature.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+
+    /**
+     * @summary `constrained`.
+     * @description
+     *
+     * `TRUE` if this AVL is for a constrained AVL entity: entries shall
+     * identify a specific certificate, not an `entityGroup` DN prefix.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly constrained: BOOLEAN;
+
+    /**
+     * @summary `entries`.
+     * @public
+     * @readonly
+     */
+    public readonly entries: TBSCertAVL_entries_Item[];
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
+    /**
+     * @summary `avlExtensions`.
+     * @public
+     * @readonly
+     */
+    public readonly avlExtensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Shall be absent or v1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Required if this authorizer places more than one AVL in the entity;
-         * unique per authorizer within that entity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: OPTIONAL<AvlSerialNumber>,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Shall match the algorithm used to sign the AVL.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: AlgorithmIdentifier,
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Authorizer DN; shall match the subject of the public-key certificate
-         * used to verify the AVL signature.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `constrained`.
-         * @description
-         *
-         * `TRUE` if this AVL is for a constrained AVL entity: entries shall
-         * identify a specific certificate, not an `entityGroup` DN prefix.
-         *
-         * @public
-         * @readonly
-         */
-        readonly constrained: BOOLEAN,
-        /**
-         * @summary `entries`.
-         * @public
-         * @readonly
-         */
-        readonly entries: TBSCertAVL_entries_Item[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `avlExtensions`.
-         * @public
-         * @readonly
-         */
-        readonly avlExtensions?: OPTIONAL<Extensions>
-    ) {}
+        version: OPTIONAL<Version>,
+        serialNumber: OPTIONAL<AvlSerialNumber>,
+        signature: AlgorithmIdentifier,
+        issuer: Name,
+        constrained: BOOLEAN,
+        entries: TBSCertAVL_entries_Item[],
+        _unrecognizedExtensionsList: _Element[] = [],
+        avlExtensions?: OPTIONAL<Extensions>
+    ) {
+        this.version = version;
+        this.serialNumber = serialNumber;
+        this.signature = signature;
+        this.issuer = issuer;
+        this.constrained = constrained;
+        this.entries = entries;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.avlExtensions = avlExtensions;
+    }
 
     /**
      * @summary Restructures an object into a TBSCertAVL

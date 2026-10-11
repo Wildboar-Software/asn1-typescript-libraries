@@ -59,42 +59,55 @@ export type ExtensionJSON = {
  *
  */
 export class Extension {
+    /**
+     * @summary `extnId`.
+     * @public
+     * @readonly
+     */
+    public readonly extnId: OBJECT_IDENTIFIER;
+
+    /**
+     * @summary `critical`.
+     * @description
+     *
+     * Defaults to `FALSE`. If `TRUE` and the relying party does not
+     * recognize this extension, the signed object shall be rejected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly critical: OPTIONAL<BOOLEAN>;
+
+    /**
+     * @summary `extnValue`.
+     * @description
+     *
+     * DER encoding of the extension syntax identified by `extnId`, wrapped
+     * in an OCTET STRING.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extnValue: OCTET_STRING;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `extnId`.
-         * @public
-         * @readonly
-         */
-        readonly extnId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `critical`.
-         * @description
-         *
-         * Defaults to `FALSE`. If `TRUE` and the relying party does not
-         * recognize this extension, the signed object shall be rejected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly critical: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `extnValue`.
-         * @description
-         *
-         * DER encoding of the extension syntax identified by `extnId`, wrapped
-         * in an OCTET STRING.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extnValue: OCTET_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        extnId: OBJECT_IDENTIFIER,
+        critical: OPTIONAL<BOOLEAN>,
+        extnValue: OCTET_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.extnId = extnId;
+        this.critical = critical;
+        this.extnValue = extnValue;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Extension

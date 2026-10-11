@@ -34,26 +34,36 @@ export type ScopeRestrictionJSON = {
  *
  */
 export class ScopeRestriction {
+    /**
+     * @summary `id`.
+     * @public
+     * @readonly
+     */
+    public readonly id: OBJECT_IDENTIFIER;
+
+    /**
+     * @summary `restriction`.
+     * @public
+     * @readonly
+     */
+    public readonly restriction: _Element;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `id`.
-         * @public
-         * @readonly
-         */
-        readonly id: OBJECT_IDENTIFIER,
-        /**
-         * @summary `restriction`.
-         * @public
-         * @readonly
-         */
-        readonly restriction: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        id: OBJECT_IDENTIFIER,
+        restriction: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.id = id;
+        this.restriction = restriction;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ScopeRestriction

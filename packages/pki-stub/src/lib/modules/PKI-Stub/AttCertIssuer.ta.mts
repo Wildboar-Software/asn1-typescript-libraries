@@ -52,32 +52,45 @@ import {
  *
  */
 export class AttCertIssuer {
+    /**
+     * @summary `issuerName`.
+     * @public
+     * @readonly
+     */
+    public readonly issuerName?: OPTIONAL<GeneralNames>;
+
+    /**
+     * @summary `baseCertificateID`.
+     * @public
+     * @readonly
+     */
+    public readonly baseCertificateID?: OPTIONAL<IssuerSerial>;
+
+    /**
+     * @summary `objectDigestInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuerName`.
-         * @public
-         * @readonly
-         */
-        readonly issuerName?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `baseCertificateID`.
-         * @public
-         * @readonly
-         */
-        readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
-        /**
-         * @summary `objectDigestInfo`.
-         * @public
-         * @readonly
-         */
-        readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuerName?: OPTIONAL<GeneralNames>,
+        baseCertificateID?: OPTIONAL<IssuerSerial>,
+        objectDigestInfo?: OPTIONAL<ObjectDigestInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuerName = issuerName;
+        this.baseCertificateID = baseCertificateID;
+        this.objectDigestInfo = objectDigestInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttCertIssuer

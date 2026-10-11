@@ -75,38 +75,54 @@ export type ObjectDigestInfoJSON = {
  *
  */
 export class ObjectDigestInfo {
+    /**
+     * @summary `digestedObjectType`.
+     * @public
+     * @readonly
+     */
+    public readonly digestedObjectType: ObjectDigestInfo_digestedObjectType;
+
+    /**
+     * @summary `otherObjectTypeID`.
+     * @public
+     * @readonly
+     */
+    public readonly otherObjectTypeID: OPTIONAL<OBJECT_IDENTIFIER>;
+
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: AlgorithmIdentifier;
+
+    /**
+     * @summary `objectDigest`.
+     * @public
+     * @readonly
+     */
+    public readonly objectDigest: BIT_STRING;
+
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `digestedObjectType`.
-         * @public
-         * @readonly
-         */
-        readonly digestedObjectType: ObjectDigestInfo_digestedObjectType,
-        /**
-         * @summary `otherObjectTypeID`.
-         * @public
-         * @readonly
-         */
-        readonly otherObjectTypeID: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `objectDigest`.
-         * @public
-         * @readonly
-         */
-        readonly objectDigest: BIT_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        digestedObjectType: ObjectDigestInfo_digestedObjectType,
+        otherObjectTypeID: OPTIONAL<OBJECT_IDENTIFIER>,
+        digestAlgorithm: AlgorithmIdentifier,
+        objectDigest: BIT_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.digestedObjectType = digestedObjectType;
+        this.otherObjectTypeID = otherObjectTypeID;
+        this.digestAlgorithm = digestAlgorithm;
+        this.objectDigest = objectDigest;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ObjectDigestInfo

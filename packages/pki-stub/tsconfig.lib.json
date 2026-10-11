@@ -4,7 +4,8 @@
     "outDir": "../../dist/out-tsc",
     "declaration": true,
     "rootDir": ".",
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "erasableSyntaxOnly": true
   },
   "exclude": [
     "**/*.spec.mts",
