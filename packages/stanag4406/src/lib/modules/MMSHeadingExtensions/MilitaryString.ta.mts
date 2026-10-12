@@ -1,9 +1,11 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ub_military_string } from "../MMSUpperBounds/ub-military-string.va.mjs";
 
 
 
@@ -19,7 +21,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type MilitaryString = PrintableString; // PrintableString
-export const _decode_MilitaryString: $.ASN1Decoder<MilitaryString> = $._decodePrintableString;
+
+let _cached_decoder_for_MilitaryString: $.ASN1Decoder<MilitaryString> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) MilitaryString
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_MilitaryString (el: _Element): MilitaryString {
+    if (!_cached_decoder_for_MilitaryString) { _cached_decoder_for_MilitaryString = $._decodePrintableString; }
+    const value = _cached_decoder_for_MilitaryString(el);
+    if (value.length < 1 || value.length > Number(ub_military_string)) {
+        throw new ASN1SizeError("MilitaryString violates SIZE constraint");
+    }
+    return value;
+}
+
 export const _encode_MilitaryString: $.ASN1Encoder<MilitaryString> = $._encodePrintableString;
 
 
