@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_explicitReservationCreationControl_ArgumentType_controlOption, _encode_explicitReservationCreationControl_ArgumentType_controlOption, _enum_for_explicitReservationCreationControl_ArgumentType_controlOption, explicitReservationCreationControl_ArgumentType_controlOption } from "../Explicit-Network-Controlled-Channel-Reservation/explicitReservationCreationControl-ArgumentType-controlOption.ta.mjs";
-// export { explicitReservationCreationControl_ArgumentType_controlOption, _enum_for_explicitReservationCreationControl_ArgumentType_controlOption, explicitReservationCreationControl_ArgumentType_controlOption_noReservationRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, noReservationRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithReservationIndicator /* IMPORTED_LONG_ENUMERATION_ITEM */, reservationRequiredWithReservationIndicator /* IMPORTED_SHORT_ENUMERATION_ITEM */, explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithoutReservationIndicator /* IMPORTED_LONG_ENUMERATION_ITEM */, reservationRequiredWithoutReservationIndicator /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_explicitReservationCreationControl_ArgumentType_controlOption, _encode_explicitReservationCreationControl_ArgumentType_controlOption } from "../Explicit-Network-Controlled-Channel-Reservation/explicitReservationCreationControl-ArgumentType-controlOption.ta.mjs";
 
 
 /**
@@ -16,7 +15,14 @@ import { _decode_explicitReservationCreationControl_ArgumentType_controlOption, 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * explicitReservationCreationControl-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * explicitReservationCreationControl-ArgumentType ::= SEQUENCE {
+ *   controlOption
+ *     ENUMERATED {
+ *       noReservationRequired(0),
+ *       reservationRequiredWithReservationIndicator(1),
+ *       reservationRequiredWithoutReservationIndicator(2)
+ *     }
+ * }
  * ```
  * 
  * @class
@@ -137,7 +143,7 @@ let _cached_encoder_for_explicitReservationCreationControl_ArgumentType: $.ASN1E
  */
 export
 function _encode_explicitReservationCreationControl_ArgumentType (value: explicitReservationCreationControl_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_explicitReservationCreationControl_ArgumentType) { _cached_encoder_for_explicitReservationCreationControl_ArgumentType = function (value: explicitReservationCreationControl_ArgumentType, elGetter: $.ASN1Encoder<explicitReservationCreationControl_ArgumentType>): _Element {
+    if (!_cached_encoder_for_explicitReservationCreationControl_ArgumentType) { _cached_encoder_for_explicitReservationCreationControl_ArgumentType = function (value: explicitReservationCreationControl_ArgumentType, _elGetter: $.ASN1Encoder<explicitReservationCreationControl_ArgumentType>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_explicitReservationCreationControl_ArgumentType_controlOption(value.controlOption, $.BER)
     ], $.BER);

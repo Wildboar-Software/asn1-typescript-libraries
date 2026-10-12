@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -13,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * flowControl-ArgumentType-controlReceiver ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * flowControl-ArgumentType-controlReceiver ::= ENUMERATED {
+ *   receiverNotReady(0),
+ *   receiverReady(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -31,7 +31,10 @@ enum _enum_for_flowControl_ArgumentType_controlReceiver {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * flowControl-ArgumentType-controlReceiver ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * flowControl-ArgumentType-controlReceiver ::= ENUMERATED {
+ *   receiverNotReady(0),
+ *   receiverReady(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -46,7 +49,10 @@ type flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentTy
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * flowControl-ArgumentType-controlReceiver ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * flowControl-ArgumentType-controlReceiver ::= ENUMERATED {
+ *   receiverNotReady(0),
+ *   receiverReady(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -85,35 +91,8 @@ const flowControl_ArgumentType_controlReceiver_receiverReady: flowControl_Argume
  */
 export
 const receiverReady: flowControl_ArgumentType_controlReceiver = flowControl_ArgumentType_controlReceiver.receiverReady; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_flowControl_ArgumentType_controlReceiver: $.ASN1Decoder<flowControl_ArgumentType_controlReceiver> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) flowControl_ArgumentType_controlReceiver
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_flowControl_ArgumentType_controlReceiver (el: _Element): flowControl_ArgumentType_controlReceiver {
-    if (!_cached_decoder_for_flowControl_ArgumentType_controlReceiver) { _cached_decoder_for_flowControl_ArgumentType_controlReceiver = $._decodeEnumerated; }
-    return _cached_decoder_for_flowControl_ArgumentType_controlReceiver(el);
-}
-
-let _cached_encoder_for_flowControl_ArgumentType_controlReceiver: $.ASN1Encoder<flowControl_ArgumentType_controlReceiver> | null = null;
-
-/**
- * @summary Encodes a(n) flowControl_ArgumentType_controlReceiver into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The flowControl_ArgumentType_controlReceiver, encoded as an ASN.1 Element.
- */
-export
-function _encode_flowControl_ArgumentType_controlReceiver (value: flowControl_ArgumentType_controlReceiver, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_flowControl_ArgumentType_controlReceiver) { _cached_encoder_for_flowControl_ArgumentType_controlReceiver = $._encodeEnumerated; }
-    return _cached_encoder_for_flowControl_ArgumentType_controlReceiver(value, elGetter);
-}
+export const _decode_flowControl_ArgumentType_controlReceiver: $.ASN1Decoder<flowControl_ArgumentType_controlReceiver> = $._decodeEnumerated;
+export const _encode_flowControl_ArgumentType_controlReceiver: $.ASN1Encoder<flowControl_ArgumentType_controlReceiver> = $._encodeEnumerated;
 
 
 /* eslint-enable */

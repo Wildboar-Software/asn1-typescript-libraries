@@ -4,10 +4,7 @@ import {
     itu_t
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_flowControl_ArgumentType, _encode_flowControl_ArgumentType, flowControl_ArgumentType } from "../Flow-Control/flowControl-ArgumentType.ta.mjs";
-// export { flowControl_ArgumentType, _decode_flowControl_ArgumentType, _encode_flowControl_ArgumentType } from "../Flow-Control/flowControl-ArgumentType.ta.mjs";
 
 
 /**
@@ -54,7 +51,13 @@ const flowControl: OPERATION<flowControl_ArgumentType> = {
         "&ArgumentType": _encode_flowControl_ArgumentType,
         "&ResultType": undefined,
     },
-    "&operationCode": { global: _OID.fromParts([recommendation, q, 932, /* flow-control */ 8, /* operation */ 1,], itu_t) } /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&operationCode": { global: _OID.fromParts([
+        /* recommendation */ 0,
+        /* q */ 17,
+        932,
+        /* flow-control */ 8,
+        /* operation */ 1,
+    ], itu_t) } /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&InvokePriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,

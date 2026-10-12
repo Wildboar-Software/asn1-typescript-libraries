@@ -4,8 +4,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { RejectProblem, RejectProblem_general_unrecognizedPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_unrecognizedPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_general_mistypedPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_mistypedPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_general_badlyStructuredPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_badlyStructuredPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_duplicateInvocation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_duplicateInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unrecognizedOperation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unrecognizedOperation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_mistypedArgument /* IMPORTED_LONG_NAMED_INTEGER */, invoke_mistypedArgument /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_resourceLimitation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_resourceLimitation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_releaseInProgress /* IMPORTED_LONG_NAMED_INTEGER */, invoke_releaseInProgress /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unrecognizedLinkedId /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unrecognizedLinkedId /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_linkedResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, invoke_linkedResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unexpectedLinkedOperation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unexpectedLinkedOperation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_unrecognizedInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_resultResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_resultResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_mistypedResult /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_mistypedResult /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unrecognizedInvocation /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unrecognizedInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_errorResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, returnError_errorResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unrecognizedError /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unrecognizedError /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unexpectedError /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unexpectedError /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_mistypedParameter /* IMPORTED_LONG_NAMED_INTEGER */, returnError_mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RejectProblem, _encode_RejectProblem } from "../Facility-Information-Element-Components/RejectProblem.ta.mjs";
+import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 
 
 /**
@@ -15,7 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReturnResult-result ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReturnResult-result ::= SEQUENCE {
+ *   opcode
+ *     OPERATION.&operationCode
+ *       ({Operations} !
+ *        RejectProblem:returnResult-unrecognizedInvocation),
+ *   result
+ *     OPERATION.&ResultType
+ *       ({Operations}{@.opcode} !
+ *        RejectProblem:returnResult-mistypedResult)
+ * }
  * ```
  * 
  * @class
@@ -143,7 +151,7 @@ let _cached_encoder_for_ReturnResult_result: $.ASN1Encoder<ReturnResult_result> 
  */
 export
 function _encode_ReturnResult_result (value: ReturnResult_result, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReturnResult_result) { _cached_encoder_for_ReturnResult_result = function (value: ReturnResult_result, elGetter: $.ASN1Encoder<ReturnResult_result>): _Element {
+    if (!_cached_encoder_for_ReturnResult_result) { _cached_encoder_for_ReturnResult_result = function (value: ReturnResult_result, _elGetter: $.ASN1Encoder<ReturnResult_result>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Code(value.opcode, $.BER),
         /* REQUIRED   */ $._encodeAny(value.result, $.BER)

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { Code } from "../Notification-Indicator-IE-Data-Structure/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Notification-Indicator-IE-Data-Structure/Code.ta.mjs";
 
 
 /**

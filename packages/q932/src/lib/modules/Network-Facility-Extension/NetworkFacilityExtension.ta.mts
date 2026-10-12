@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntityType, _decode_EntityType, _encode_EntityType, _enum_for_EntityType } from "../Network-Facility-Extension/EntityType.ta.mjs";
-// export { EntityType, _enum_for_EntityType, EntityType_endPINX /* IMPORTED_LONG_ENUMERATION_ITEM */, endPINX /* IMPORTED_SHORT_ENUMERATION_ITEM */, EntityType_anyTypeOfPINX /* IMPORTED_LONG_ENUMERATION_ITEM */, anyTypeOfPINX /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EntityType, _encode_EntityType } from "../Network-Facility-Extension/EntityType.ta.mjs";
 import { AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../Network-Facility-Extension/AddressInformation.ta.mjs";
-// export { AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../Network-Facility-Extension/AddressInformation.ta.mjs";
 
 
 /**
@@ -188,7 +186,7 @@ let _cached_encoder_for_NetworkFacilityExtension: $.ASN1Encoder<NetworkFacilityE
  */
 export
 function _encode_NetworkFacilityExtension (value: NetworkFacilityExtension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NetworkFacilityExtension) { _cached_encoder_for_NetworkFacilityExtension = $._encode_implicit(_TagClass.context, 10, () => function (value: NetworkFacilityExtension, elGetter: $.ASN1Encoder<NetworkFacilityExtension>): _Element {
+    if (!_cached_encoder_for_NetworkFacilityExtension) { _cached_encoder_for_NetworkFacilityExtension = $._encode_implicit(_TagClass.context, 10, () => function (value: NetworkFacilityExtension, _elGetter: $.ASN1Encoder<NetworkFacilityExtension>): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_EntityType, $.BER)(value.sourceEntity, $.BER);

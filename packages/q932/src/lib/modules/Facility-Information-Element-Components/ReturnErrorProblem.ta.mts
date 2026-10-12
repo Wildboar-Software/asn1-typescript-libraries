@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -101,35 +100,8 @@ const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LONG_NAME
  */
 export
 const mistypedParameter: ReturnErrorProblem = ReturnErrorProblem_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ReturnErrorProblem: $.ASN1Decoder<ReturnErrorProblem> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ReturnErrorProblem
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ReturnErrorProblem (el: _Element): ReturnErrorProblem {
-    if (!_cached_decoder_for_ReturnErrorProblem) { _cached_decoder_for_ReturnErrorProblem = $._decodeInteger; }
-    return _cached_decoder_for_ReturnErrorProblem(el);
-}
-
-let _cached_encoder_for_ReturnErrorProblem: $.ASN1Encoder<ReturnErrorProblem> | null = null;
-
-/**
- * @summary Encodes a(n) ReturnErrorProblem into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ReturnErrorProblem, encoded as an ASN.1 Element.
- */
-export
-function _encode_ReturnErrorProblem (value: ReturnErrorProblem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReturnErrorProblem) { _cached_encoder_for_ReturnErrorProblem = $._encodeInteger; }
-    return _cached_encoder_for_ReturnErrorProblem(value, elGetter);
-}
+export const _decode_ReturnErrorProblem: $.ASN1Decoder<ReturnErrorProblem> = $._decodeInteger;
+export const _encode_ReturnErrorProblem: $.ASN1Encoder<ReturnErrorProblem> = $._encodeInteger;
 
 
 /* eslint-enable */

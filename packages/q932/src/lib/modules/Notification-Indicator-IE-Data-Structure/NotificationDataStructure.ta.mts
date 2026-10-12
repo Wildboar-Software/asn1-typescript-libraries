@@ -4,7 +4,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { NOTIFICATION } from "../Notification-Indicator-IE-Data-Structure/NOTIFICATION.oca.mjs";
+import { type Code, _decode_Code, _encode_Code } from "../Notification-Indicator-IE-Data-Structure/Code.ta.mjs";
 
 
 /**
@@ -145,7 +145,7 @@ let _cached_encoder_for_NotificationDataStructure: $.ASN1Encoder<NotificationDat
  */
 export
 function _encode_NotificationDataStructure (value: NotificationDataStructure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationDataStructure) { _cached_encoder_for_NotificationDataStructure = function (value: NotificationDataStructure, elGetter: $.ASN1Encoder<NotificationDataStructure>): _Element {
+    if (!_cached_encoder_for_NotificationDataStructure) { _cached_encoder_for_NotificationDataStructure = function (value: NotificationDataStructure, _elGetter: $.ASN1Encoder<NotificationDataStructure>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Code(value.opcode, $.BER),
         /* REQUIRED   */ $._encodeAny(value.argument, $.BER)
