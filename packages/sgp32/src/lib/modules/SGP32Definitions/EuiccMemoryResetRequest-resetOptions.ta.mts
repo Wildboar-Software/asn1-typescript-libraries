@@ -1,0 +1,132 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    BIT_STRING
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary EuiccMemoryResetRequest_resetOptions
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EuiccMemoryResetRequest-resetOptions ::= BIT STRING {
+ *     deleteOperationalProfiles(0),
+ *     deleteFieldLoadedTestProfiles(1),
+ *     resetDefaultSmdpAddress(2),
+ *     deletePreLoadedTestProfiles(3),
+ *     deleteProvisioningProfiles(4),
+ *     resetEimConfigData(5),
+ *     resetImmediateEnableConfig(6)
+ * }
+ * ```
+ */
+export
+type EuiccMemoryResetRequest_resetOptions = BIT_STRING;
+
+/**
+ * @summary EuiccMemoryResetRequest_resetOptions_deleteOperationalProfiles
+ * @constant
+ */
+export
+const EuiccMemoryResetRequest_resetOptions_deleteOperationalProfiles: number = 0; /* LONG_NAMED_BIT */
+
+/**
+ * @summary deleteOperationalProfiles
+ * @constant
+ */
+export
+const deleteOperationalProfiles: number = EuiccMemoryResetRequest_resetOptions_deleteOperationalProfiles; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary EuiccMemoryResetRequest_resetOptions_deleteFieldLoadedTestProfiles
+ * @constant
+ */
+export
+const EuiccMemoryResetRequest_resetOptions_deleteFieldLoadedTestProfiles: number = 1; /* LONG_NAMED_BIT */
+
+/**
+ * @summary deleteFieldLoadedTestProfiles
+ * @constant
+ */
+export
+const deleteFieldLoadedTestProfiles: number = EuiccMemoryResetRequest_resetOptions_deleteFieldLoadedTestProfiles; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress
+ * @constant
+ */
+export
+const EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress: number = 2; /* LONG_NAMED_BIT */
+
+/**
+ * @summary resetDefaultSmdpAddress
+ * @constant
+ */
+export
+const resetDefaultSmdpAddress: number = EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary EuiccMemoryResetRequest_resetOptions_deletePreLoadedTestProfiles
+ * @constant
+ */
+export
+const EuiccMemoryResetRequest_resetOptions_deletePreLoadedTestProfiles: number = 3; /* LONG_NAMED_BIT */
+
+/**
+ * @summary deletePreLoadedTestProfiles
+ * @constant
+ */
+export
+const deletePreLoadedTestProfiles: number = EuiccMemoryResetRequest_resetOptions_deletePreLoadedTestProfiles; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary EuiccMemoryResetRequest_resetOptions_deleteProvisioningProfiles
+ * @constant
+ */
+export
+const EuiccMemoryResetRequest_resetOptions_deleteProvisioningProfiles: number = 4; /* LONG_NAMED_BIT */
+
+/**
+ * @summary deleteProvisioningProfiles
+ * @constant
+ */
+export
+const deleteProvisioningProfiles: number = EuiccMemoryResetRequest_resetOptions_deleteProvisioningProfiles; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary EuiccMemoryResetRequest_resetOptions_resetEimConfigData
+ * @constant
+ */
+export
+const EuiccMemoryResetRequest_resetOptions_resetEimConfigData: number = 5; /* LONG_NAMED_BIT */
+
+/**
+ * @summary resetEimConfigData
+ * @constant
+ */
+export
+const resetEimConfigData: number = EuiccMemoryResetRequest_resetOptions_resetEimConfigData; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary EuiccMemoryResetRequest_resetOptions_resetImmediateEnableConfig
+ * @constant
+ */
+export
+const EuiccMemoryResetRequest_resetOptions_resetImmediateEnableConfig: number = 6; /* LONG_NAMED_BIT */
+
+/**
+ * @summary resetImmediateEnableConfig
+ * @constant
+ */
+export
+const resetImmediateEnableConfig: number = EuiccMemoryResetRequest_resetOptions_resetImmediateEnableConfig; /* SHORT_NAMED_BIT */
+export const _decode_EuiccMemoryResetRequest_resetOptions: $.ASN1Decoder<EuiccMemoryResetRequest_resetOptions> = $._decodeBitString;
+export const _encode_EuiccMemoryResetRequest_resetOptions: $.ASN1Encoder<EuiccMemoryResetRequest_resetOptions> = $._encodeBitString;
+
+
+/* eslint-enable */
