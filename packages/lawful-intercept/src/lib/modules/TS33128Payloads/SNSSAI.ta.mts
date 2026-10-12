@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -153,10 +155,32 @@ function _decode_SNSSAI (el: _Element): SNSSAI {
     let mappedHPLMNSliceDifferentiator: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "sliceServiceType": (_el: _Element): void => { sliceServiceType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "sliceDifferentiator": (_el: _Element): void => { sliceDifferentiator = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "mappedHPLMNSliceServiceType": (_el: _Element): void => { mappedHPLMNSliceServiceType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "mappedHPLMNSliceDifferentiator": (_el: _Element): void => { mappedHPLMNSliceDifferentiator = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "sliceServiceType": (_el: _Element): void => {
+            sliceServiceType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof sliceServiceType === "bigint" ? sliceServiceType : BigInt(sliceServiceType);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("SNSSAI.sliceServiceType violates INTEGER range");
+            }
+        },
+        "sliceDifferentiator": (_el: _Element): void => {
+            sliceDifferentiator = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (sliceDifferentiator.length < 3 || sliceDifferentiator.length > 3) {
+                throw new ASN1SizeError("SNSSAI.sliceDifferentiator violates SIZE constraint");
+            }
+        },
+        "mappedHPLMNSliceServiceType": (_el: _Element): void => {
+            mappedHPLMNSliceServiceType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof mappedHPLMNSliceServiceType === "bigint" ? mappedHPLMNSliceServiceType : BigInt(mappedHPLMNSliceServiceType);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("SNSSAI.mappedHPLMNSliceServiceType violates INTEGER range");
+            }
+        },
+        "mappedHPLMNSliceDifferentiator": (_el: _Element): void => {
+            mappedHPLMNSliceDifferentiator = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (mappedHPLMNSliceDifferentiator.length < 3 || mappedHPLMNSliceDifferentiator.length > 3) {
+                throw new ASN1SizeError("SNSSAI.mappedHPLMNSliceDifferentiator violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SNSSAI,

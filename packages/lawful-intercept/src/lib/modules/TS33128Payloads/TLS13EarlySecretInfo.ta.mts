@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -136,7 +137,17 @@ function _decode_TLS13EarlySecretInfo (el: _Element): TLS13EarlySecretInfo {
     let earlySecretValue!: OCTET_STRING;
     let transcriptHash!: OCTET_STRING;
     earlySecretValue = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    {
+        if (earlySecretValue.length < 1 || earlySecretValue.length > 65535) {
+            throw new ASN1SizeError("TLS13EarlySecretInfo.earlySecretValue violates SIZE constraint");
+        }
+    }
     transcriptHash = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    {
+        if (transcriptHash.length < 1 || transcriptHash.length > 65535) {
+            throw new ASN1SizeError("TLS13EarlySecretInfo.transcriptHash violates SIZE constraint");
+        }
+    }
     return new TLS13EarlySecretInfo(
         earlySecretValue,
         transcriptHash,

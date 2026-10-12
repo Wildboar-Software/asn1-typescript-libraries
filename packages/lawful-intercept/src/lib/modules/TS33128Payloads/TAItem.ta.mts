@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
@@ -152,7 +153,12 @@ function _decode_TAItem (el: _Element): TAItem {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tAC": (_el: _Element): void => { tAC = $._decode_implicit<TAC>(() => _decode_TAC)(_el); },
-        "broadcastPLMNList": (_el: _Element): void => { broadcastPLMNList = $._decode_implicit<BroadcastPLMNItem[]>(() => $._decodeSequenceOf<BroadcastPLMNItem>(() => _decode_BroadcastPLMNItem))(_el); },
+        "broadcastPLMNList": (_el: _Element): void => {
+            broadcastPLMNList = $._decode_implicit<BroadcastPLMNItem[]>(() => $._decodeSequenceOf<BroadcastPLMNItem>(() => _decode_BroadcastPLMNItem))(_el);
+            if (broadcastPLMNList.length < 1) {
+                throw new ASN1SizeError("TAItem.broadcastPLMNList violates SIZE constraint");
+            }
+        },
         "rATinformation": (_el: _Element): void => { rATinformation = $._decode_implicit<RATInformation>(() => _decode_RATInformation)(_el); }
     };
     $._parse_sequence(el, callbacks,

@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EPSBearerID = INTEGER;
-export const _decode_EPSBearerID: $.ASN1Decoder<EPSBearerID> = $._decodeInteger;
+export const _decode_EPSBearerID: $.ASN1Decoder<EPSBearerID> = (el: _Element): EPSBearerID => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 255n) {
+        throw new ASN1OverflowError("EPSBearerID violates INTEGER range");
+    }
+    return value;
+};
 export const _encode_EPSBearerID: $.ASN1Encoder<EPSBearerID> = $._encodeInteger;
 
 

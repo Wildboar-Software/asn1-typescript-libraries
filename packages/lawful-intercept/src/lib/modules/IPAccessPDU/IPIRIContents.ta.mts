@@ -6,7 +6,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessEventType, _decode_AccessEventType, _encode_AccessEventType, _enum_for_AccessEventType } from "../IPAccessPDU/AccessEventType.ta.mjs";
@@ -499,19 +501,62 @@ function _decode_IPIRIContents (el: _Element): IPIRIContents {
         "internetAccessType": (_el: _Element): void => { internetAccessType = $._decode_implicit<InternetAccessType>(() => _decode_InternetAccessType)(_el); },
         "iPVersion": (_el: _Element): void => { iPVersion = $._decode_implicit<IPVersion>(() => _decode_IPVersion)(_el); },
         "targetIPAddress": (_el: _Element): void => { targetIPAddress = $._decode_implicit<LI_PS_PDU.IPAddress>(() => LI_PS_PDU._decode_IPAddress)(_el); },
-        "targetNetworkID": (_el: _Element): void => { targetNetworkID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "targetCPEID": (_el: _Element): void => { targetCPEID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "targetLocation": (_el: _Element): void => { targetLocation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "pOPPortNumber": (_el: _Element): void => { pOPPortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "callBackNumber": (_el: _Element): void => { callBackNumber = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "targetNetworkID": (_el: _Element): void => {
+            targetNetworkID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (targetNetworkID.length < 1 || targetNetworkID.length > 20) {
+                throw new ASN1SizeError("IPIRIContents.targetNetworkID violates SIZE constraint");
+            }
+        },
+        "targetCPEID": (_el: _Element): void => {
+            targetCPEID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (targetCPEID.length < 1 || targetCPEID.length > 128) {
+                throw new ASN1SizeError("IPIRIContents.targetCPEID violates SIZE constraint");
+            }
+        },
+        "targetLocation": (_el: _Element): void => {
+            targetLocation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (targetLocation.length < 1 || targetLocation.length > 64) {
+                throw new ASN1SizeError("IPIRIContents.targetLocation violates SIZE constraint");
+            }
+        },
+        "pOPPortNumber": (_el: _Element): void => {
+            pOPPortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof pOPPortNumber === "bigint" ? pOPPortNumber : BigInt(pOPPortNumber);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("IPIRIContents.pOPPortNumber violates INTEGER range");
+            }
+        },
+        "callBackNumber": (_el: _Element): void => {
+            callBackNumber = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (callBackNumber.length < 1 || callBackNumber.length > 20) {
+                throw new ASN1SizeError("IPIRIContents.callBackNumber violates SIZE constraint");
+            }
+        },
         "startTime": (_el: _Element): void => { startTime = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },
         "endTime": (_el: _Element): void => { endTime = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },
         "endReason": (_el: _Element): void => { endReason = $._decode_implicit<EndReason>(() => _decode_EndReason)(_el); },
-        "octetsReceived": (_el: _Element): void => { octetsReceived = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "octetsTransmitted": (_el: _Element): void => { octetsTransmitted = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "octetsReceived": (_el: _Element): void => {
+            octetsReceived = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof octetsReceived === "bigint" ? octetsReceived : BigInt(octetsReceived);
+            if (_n < 0n || _n > 18446744073709551615n) {
+                throw new ASN1OverflowError("IPIRIContents.octetsReceived violates INTEGER range");
+            }
+        },
+        "octetsTransmitted": (_el: _Element): void => {
+            octetsTransmitted = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof octetsTransmitted === "bigint" ? octetsTransmitted : BigInt(octetsTransmitted);
+            if (_n < 0n || _n > 18446744073709551615n) {
+                throw new ASN1OverflowError("IPIRIContents.octetsTransmitted violates INTEGER range");
+            }
+        },
         "rawAAAData": (_el: _Element): void => { rawAAAData = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "expectedEndTime": (_el: _Element): void => { expectedEndTime = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },
-        "pOPPhoneNumber": (_el: _Element): void => { pOPPhoneNumber = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "pOPPhoneNumber": (_el: _Element): void => {
+            pOPPhoneNumber = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (pOPPhoneNumber.length < 1 || pOPPhoneNumber.length > 20) {
+                throw new ASN1SizeError("IPIRIContents.pOPPhoneNumber violates SIZE constraint");
+            }
+        },
         "pOPIdentifier": (_el: _Element): void => { pOPIdentifier = $._decode_explicit<IPIRIIDType>(() => _decode_IPIRIIDType)(_el); },
         "pOPIPAddress": (_el: _Element): void => { pOPIPAddress = $._decode_implicit<LI_PS_PDU.IPAddress>(() => LI_PS_PDU._decode_IPAddress)(_el); },
         "nationalIPIRIParameters": (_el: _Element): void => { nationalIPIRIParameters = $._decode_implicit<NationalIPIRIParameters>(() => _decode_NationalIPIRIParameters)(_el); },

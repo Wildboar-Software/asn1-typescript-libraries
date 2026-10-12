@@ -4,7 +4,9 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../EpsHI2Operations/MapDatum.ta.mjs";
@@ -168,10 +170,26 @@ function _decode_GSMLocation_geoCoordinates (el: _Element): GSMLocation_geoCoord
     let azimuth: OPTIONAL<INTEGER>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "latitude": (_el: _Element): void => { latitude = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
-        "longitude": (_el: _Element): void => { longitude = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
+        "latitude": (_el: _Element): void => {
+            latitude = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (latitude.length < 7 || latitude.length > 10) {
+                throw new ASN1SizeError("GSMLocation_geoCoordinates.latitude violates SIZE constraint");
+            }
+        },
+        "longitude": (_el: _Element): void => {
+            longitude = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (longitude.length < 8 || longitude.length > 11) {
+                throw new ASN1SizeError("GSMLocation_geoCoordinates.longitude violates SIZE constraint");
+            }
+        },
         "mapDatum": (_el: _Element): void => { mapDatum = $._decode_implicit<MapDatum>(() => _decode_MapDatum)(_el); },
-        "azimuth": (_el: _Element): void => { azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }
+        "azimuth": (_el: _Element): void => {
+            azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof azimuth === "bigint" ? azimuth : BigInt(azimuth);
+            if (_n < 0n || _n > 359n) {
+                throw new ASN1OverflowError("GSMLocation_geoCoordinates.azimuth violates INTEGER range");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_GSMLocation_geoCoordinates,

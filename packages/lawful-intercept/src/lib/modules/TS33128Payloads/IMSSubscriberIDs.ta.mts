@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
@@ -50,7 +51,14 @@ function _decode_IMSSubscriberIDs (el: _Element): IMSSubscriberIDs {
     "CONTEXT 2": [ "deprecatedIMPU", $._decode_explicit<IMPU>(() => _decode_IMPU) ],
     "CONTEXT 3": [ "iMSSubscriberIDs", $._decode_implicit<IMSSubscriberIdentity[]>(() => $._decodeSequenceOf<IMSSubscriberIdentity>(() => _decode_IMSSubscriberIdentity)) ]
 }); }
-    return _cached_decoder_for_IMSSubscriberIDs(el);
+    const _value = _cached_decoder_for_IMSSubscriberIDs(el);
+    if ("iMSSubscriberIDs" in _value && _value.iMSSubscriberIDs !== undefined) {
+        const _alt = _value.iMSSubscriberIDs;
+        if (_alt.length < 1) {
+            throw new ASN1SizeError("IMSSubscriberIDs.iMSSubscriberIDs violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_IMSSubscriberIDs: $.ASN1Encoder<IMSSubscriberIDs> | null = null;

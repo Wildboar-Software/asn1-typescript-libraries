@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
@@ -226,7 +227,12 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
         "mMSAddress": (_el: _Element): void => { mMSAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "mMSAddressNonLocalID": (_el: _Element): void => { mMSAddressNonLocalID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "e-Mail": (_el: _Element): void => { e_Mail = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "e164-Format": (_el: _Element): void => { e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "e164_Format": (_el: _Element): void => {
+            e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (e164_Format.length < 1 || e164_Format.length > 25) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.e164_Format violates SIZE constraint");
+            }
+        },
         "iPAddress": (_el: _Element): void => { iPAddress = $._decode_implicit<IPAddress>(() => _decode_IPAddress)(_el); },
         "alphanum-Shortcode": (_el: _Element): void => { alphanum_Shortcode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "num-Shortcode": (_el: _Element): void => { num_Shortcode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

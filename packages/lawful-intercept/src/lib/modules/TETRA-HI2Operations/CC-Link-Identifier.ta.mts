@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CC_Link_Identifier = OCTET_STRING; // OctetStringType
-export const _decode_CC_Link_Identifier: $.ASN1Decoder<CC_Link_Identifier> = $._decodeOctetString;
+export const _decode_CC_Link_Identifier: $.ASN1Decoder<CC_Link_Identifier> = (el: _Element): CC_Link_Identifier => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("CC_Link_Identifier violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_CC_Link_Identifier: $.ASN1Encoder<CC_Link_Identifier> = $._encodeOctetString;
 
 

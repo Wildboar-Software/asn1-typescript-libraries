@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     RELATIVE_OID,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import * as IPMultimediaPDU from "../IPMultimediaPDU/index.mjs";
@@ -158,8 +159,20 @@ function _decode_MessagingMMCC (el: _Element): MessagingMMCC {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "messaging-mm-cc-obj-id": (_el: _Element): void => { messaging_mm_cc_obj_id = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
-        "event-identifier": (_el: _Element): void => { event_identifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "content-identifier": (_el: _Element): void => { content_identifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "event_identifier": (_el: _Element): void => {
+            event_identifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof event_identifier === "bigint" ? event_identifier : BigInt(event_identifier);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("MessagingMMCC.event_identifier violates INTEGER range");
+            }
+        },
+        "content_identifier": (_el: _Element): void => {
+            content_identifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof content_identifier === "bigint" ? content_identifier : BigInt(content_identifier);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("MessagingMMCC.content_identifier violates INTEGER range");
+            }
+        },
         "content": (_el: _Element): void => { content = $._decode_implicit<IPMultimediaPDU.IPMMCC>(() => IPMultimediaPDU._decode_IPMMCC)(_el); }
     };
     $._parse_sequence(el, callbacks,

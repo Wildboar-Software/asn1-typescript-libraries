@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -176,12 +177,32 @@ function _decode_IPv6Information (el: _Element): IPv6Information {
     let destination!: OCTET_STRING;
     const callbacks: $.DecodingMap = {
         "trafficClass": (_el: _Element): void => { trafficClass = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "flowLabel": (_el: _Element): void => { flowLabel = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "payloadLength": (_el: _Element): void => { payloadLength = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "flowLabel": (_el: _Element): void => {
+            flowLabel = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (flowLabel.length < 20 || flowLabel.length > 20) {
+                throw new ASN1SizeError("IPv6Information.flowLabel violates SIZE constraint");
+            }
+        },
+        "payloadLength": (_el: _Element): void => {
+            payloadLength = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (payloadLength.length < 4 || payloadLength.length > 4) {
+                throw new ASN1SizeError("IPv6Information.payloadLength violates SIZE constraint");
+            }
+        },
         "nextHeader": (_el: _Element): void => { nextHeader = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "hopLimit": (_el: _Element): void => { hopLimit = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "source": (_el: _Element): void => { source = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "destination": (_el: _Element): void => { destination = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "source": (_el: _Element): void => {
+            source = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (source.length < 16 || source.length > 16) {
+                throw new ASN1SizeError("IPv6Information.source violates SIZE constraint");
+            }
+        },
+        "destination": (_el: _Element): void => {
+            destination = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (destination.length < 16 || destination.length > 16) {
+                throw new ASN1SizeError("IPv6Information.destination violates SIZE constraint");
+            }
+        },
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_IPv6Information,

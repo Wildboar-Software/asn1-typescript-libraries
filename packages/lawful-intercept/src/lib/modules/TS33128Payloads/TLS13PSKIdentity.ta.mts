@@ -4,7 +4,9 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -136,7 +138,18 @@ function _decode_TLS13PSKIdentity (el: _Element): TLS13PSKIdentity {
     let identity!: OCTET_STRING;
     let obfuscatedTicketAge!: INTEGER;
     identity = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    {
+        if (identity.length < 1 || identity.length > 65535) {
+            throw new ASN1SizeError("TLS13PSKIdentity.identity violates SIZE constraint");
+        }
+    }
     obfuscatedTicketAge = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    {
+        const _n = typeof obfuscatedTicketAge === "bigint" ? obfuscatedTicketAge : BigInt(obfuscatedTicketAge);
+        if (_n < 0n || _n > 4294967295n) {
+            throw new ASN1OverflowError("TLS13PSKIdentity.obfuscatedTicketAge violates INTEGER range");
+        }
+    }
     return new TLS13PSKIdentity(
         identity,
         obfuscatedTicketAge,

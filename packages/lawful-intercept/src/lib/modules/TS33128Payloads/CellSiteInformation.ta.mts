@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
@@ -144,7 +145,13 @@ function _decode_CellSiteInformation (el: _Element): CellSiteInformation {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "geographicalCoordinates": (_el: _Element): void => { geographicalCoordinates = $._decode_implicit<GeographicalCoordinates>(() => _decode_GeographicalCoordinates)(_el); },
-        "azimuth": (_el: _Element): void => { azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "azimuth": (_el: _Element): void => {
+            azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof azimuth === "bigint" ? azimuth : BigInt(azimuth);
+            if (_n < 0n || _n > 359n) {
+                throw new ASN1OverflowError("CellSiteInformation.azimuth violates INTEGER range");
+            }
+        },
         "operatorSpecificInformation": (_el: _Element): void => { operatorSpecificInformation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }
     };
     $._parse_sequence(el, callbacks,

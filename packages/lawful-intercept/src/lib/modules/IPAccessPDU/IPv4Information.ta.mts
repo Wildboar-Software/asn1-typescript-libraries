@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -221,15 +222,50 @@ function _decode_IPv4Information (el: _Element): IPv4Information {
     const callbacks: $.DecodingMap = {
         "headerLength": (_el: _Element): void => { headerLength = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "typeOfService": (_el: _Element): void => { typeOfService = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "totalLength": (_el: _Element): void => { totalLength = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "identification": (_el: _Element): void => { identification = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "fragment": (_el: _Element): void => { fragment = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "totalLength": (_el: _Element): void => {
+            totalLength = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (totalLength.length < 2 || totalLength.length > 2) {
+                throw new ASN1SizeError("IPv4Information.totalLength violates SIZE constraint");
+            }
+        },
+        "identification": (_el: _Element): void => {
+            identification = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (identification.length < 2 || identification.length > 2) {
+                throw new ASN1SizeError("IPv4Information.identification violates SIZE constraint");
+            }
+        },
+        "fragment": (_el: _Element): void => {
+            fragment = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (fragment.length < 2 || fragment.length > 2) {
+                throw new ASN1SizeError("IPv4Information.fragment violates SIZE constraint");
+            }
+        },
         "ttl": (_el: _Element): void => { ttl = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "protocol": (_el: _Element): void => { protocol = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "headerChecksum": (_el: _Element): void => { headerChecksum = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "source": (_el: _Element): void => { source = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "destination": (_el: _Element): void => { destination = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "options": (_el: _Element): void => { options = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "headerChecksum": (_el: _Element): void => {
+            headerChecksum = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (headerChecksum.length < 2 || headerChecksum.length > 2) {
+                throw new ASN1SizeError("IPv4Information.headerChecksum violates SIZE constraint");
+            }
+        },
+        "source": (_el: _Element): void => {
+            source = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (source.length < 4 || source.length > 4) {
+                throw new ASN1SizeError("IPv4Information.source violates SIZE constraint");
+            }
+        },
+        "destination": (_el: _Element): void => {
+            destination = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (destination.length < 4 || destination.length > 4) {
+                throw new ASN1SizeError("IPv4Information.destination violates SIZE constraint");
+            }
+        },
+        "options": (_el: _Element): void => {
+            options = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (options.length > 40) {
+                throw new ASN1SizeError("IPv4Information.options violates SIZE constraint");
+            }
+        },
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_IPv4Information,

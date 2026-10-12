@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AgeOfLocation = INTEGER;
-export const _decode_AgeOfLocation: $.ASN1Decoder<AgeOfLocation> = $._decodeInteger;
+export const _decode_AgeOfLocation: $.ASN1Decoder<AgeOfLocation> = (el: _Element): AgeOfLocation => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 32767n) {
+        throw new ASN1OverflowError("AgeOfLocation violates INTEGER range");
+    }
+    return value;
+};
 export const _encode_AgeOfLocation: $.ASN1Encoder<AgeOfLocation> = $._encodeInteger;
 
 

@@ -5,7 +5,8 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     UTF8String,
-    VisibleString
+    VisibleString,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -155,6 +156,12 @@ function _decode_TalkburstControlSetting (el: _Element): TalkburstControlSetting
     talk_BurstControlProtocol = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(sequence[0]);
     talk_Burst_parameters = $._decode_implicit<VisibleString[]>(() => $._decodeSetOf<VisibleString>(() => $._decodeVisibleString))(sequence[1]);
     tBCP_PortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[2]);
+    {
+        const _n = typeof tBCP_PortNumber === "bigint" ? tBCP_PortNumber : BigInt(tBCP_PortNumber);
+        if (_n < 0n || _n > 65535n) {
+            throw new ASN1OverflowError("TalkburstControlSetting.tBCP_PortNumber violates INTEGER range");
+        }
+    }
     return new TalkburstControlSetting(
         talk_BurstControlProtocol,
         talk_Burst_parameters,

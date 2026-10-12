@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_report_sMS_Contents_initiator, _decode_SMS_report_sMS_Contents_initiator, _encode_SMS_report_sMS_Contents_initiator, _enum_for_SMS_report_sMS_Contents_initiator } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-initiator.ta.mjs";
@@ -203,7 +204,12 @@ function _decode_SMS_report_sMS_Contents (el: _Element): SMS_report_sMS_Contents
         "initiator": (_el: _Element): void => { initiator = $._decode_implicit<SMS_report_sMS_Contents_initiator>(() => _decode_SMS_report_sMS_Contents_initiator)(_el); },
         "transfer-status": (_el: _Element): void => { transfer_status = $._decode_implicit<SMS_report_sMS_Contents_transfer_status>(() => _decode_SMS_report_sMS_Contents_transfer_status)(_el); },
         "other-message": (_el: _Element): void => { other_message = $._decode_implicit<SMS_report_sMS_Contents_other_message>(() => _decode_SMS_report_sMS_Contents_other_message)(_el); },
-        "content": (_el: _Element): void => { content = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "content": (_el: _Element): void => {
+            content = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (content.length < 1 || content.length > 270) {
+                throw new ASN1SizeError("SMS_report_sMS_Contents.content violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SMS_report_sMS_Contents,

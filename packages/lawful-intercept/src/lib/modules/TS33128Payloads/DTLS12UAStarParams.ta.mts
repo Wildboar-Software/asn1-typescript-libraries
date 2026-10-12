@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS12UAStarParams, _decode_TLS12UAStarParams, _encode_TLS12UAStarParams } from "../TS33128Payloads/TLS12UAStarParams.ta.mjs";
@@ -160,7 +161,12 @@ function _decode_DTLS12UAStarParams (el: _Element): DTLS12UAStarParams {
         "tLS12CommonParams": (_el: _Element): void => { tLS12CommonParams = $._decode_implicit<TLS12UAStarParams>(() => _decode_TLS12UAStarParams)(_el); },
         "clientEpoch": (_el: _Element): void => { clientEpoch = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "serverEpoch": (_el: _Element): void => { serverEpoch = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "connectionID": (_el: _Element): void => { connectionID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "connectionID": (_el: _Element): void => {
+            connectionID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (connectionID.length > 255) {
+                throw new ASN1SizeError("DTLS12UAStarParams.connectionID violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_DTLS12UAStarParams,

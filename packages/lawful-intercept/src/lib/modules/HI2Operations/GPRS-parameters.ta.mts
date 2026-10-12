@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
@@ -172,9 +173,24 @@ function _decode_GPRS_parameters (el: _Element): GPRS_parameters {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pDP-address-allocated-to-the-target": (_el: _Element): void => { pDP_address_allocated_to_the_target = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
-        "aPN": (_el: _Element): void => { aPN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "pDP-type": (_el: _Element): void => { pDP_type = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "nSAPI": (_el: _Element): void => { nSAPI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "aPN": (_el: _Element): void => {
+            aPN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (aPN.length < 1 || aPN.length > 100) {
+                throw new ASN1SizeError("GPRS_parameters.aPN violates SIZE constraint");
+            }
+        },
+        "pDP_type": (_el: _Element): void => {
+            pDP_type = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (pDP_type.length < 2 || pDP_type.length > 2) {
+                throw new ASN1SizeError("GPRS_parameters.pDP_type violates SIZE constraint");
+            }
+        },
+        "nSAPI": (_el: _Element): void => {
+            nSAPI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (nSAPI.length < 1 || nSAPI.length > 1) {
+                throw new ASN1SizeError("GPRS_parameters.nSAPI violates SIZE constraint");
+            }
+        },
         "additionalIPaddress": (_el: _Element): void => { additionalIPaddress = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); }
     };
     $._parse_sequence(el, callbacks,

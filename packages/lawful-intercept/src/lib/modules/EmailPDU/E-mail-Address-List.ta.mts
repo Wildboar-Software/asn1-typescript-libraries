@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -31,7 +32,16 @@ let _cached_decoder_for_E_mail_Address_List: $.ASN1Decoder<E_mail_Address_List> 
 export
 function _decode_E_mail_Address_List (el: _Element): E_mail_Address_List {
     if (!_cached_decoder_for_E_mail_Address_List) { _cached_decoder_for_E_mail_Address_List = $._decodeSequenceOf<UTF8String>(() => $._decodeUTF8String); }
-    return _cached_decoder_for_E_mail_Address_List(el);
+    const _value = _cached_decoder_for_E_mail_Address_List(el);
+    if (_value.length > 1023) {
+        throw new ASN1SizeError("E_mail_Address_List violates SIZE constraint");
+    }
+    for (const _item of _value) {
+        if (_item.length > 255) {
+            throw new ASN1SizeError("E_mail_Address_List element violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_E_mail_Address_List: $.ASN1Encoder<E_mail_Address_List> | null = null;

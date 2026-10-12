@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type PagingRestrictionIndicator = OCTET_STRING; // OctetStringType
-export const _decode_PagingRestrictionIndicator: $.ASN1Decoder<PagingRestrictionIndicator> = $._decodeOctetString;
+export const _decode_PagingRestrictionIndicator: $.ASN1Decoder<PagingRestrictionIndicator> = (el: _Element): PagingRestrictionIndicator => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 33) {
+        throw new ASN1SizeError("PagingRestrictionIndicator violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_PagingRestrictionIndicator: $.ASN1Encoder<PagingRestrictionIndicator> = $._encodeOctetString;
 
 

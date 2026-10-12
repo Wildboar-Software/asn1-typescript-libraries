@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InformationAppliesTo, _decode_InformationAppliesTo, _encode_InformationAppliesTo } from "../PstnIsdnPDU/InformationAppliesTo.ta.mjs";
@@ -239,7 +240,13 @@ function _decode_SupplementaryInfo (el: _Element): SupplementaryInfo {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "informationAppliesTo": (_el: _Element): void => { informationAppliesTo = $._decode_implicit<InformationAppliesTo>(() => _decode_InformationAppliesTo)(_el); },
-        "mediaFormat": (_el: _Element): void => { mediaFormat = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "mediaFormat": (_el: _Element): void => {
+            mediaFormat = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof mediaFormat === "bigint" ? mediaFormat : BigInt(mediaFormat);
+            if (_n < 0n || _n > 127n) {
+                throw new ASN1OverflowError("SupplementaryInfo.mediaFormat violates INTEGER range");
+            }
+        },
         "mediaAttributes": (_el: _Element): void => { mediaAttributes = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "encryptionKey": (_el: _Element): void => { encryptionKey = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "sessionName": (_el: _Element): void => { sessionName = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

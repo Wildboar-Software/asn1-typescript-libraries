@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NCGI, _decode_NCGI, _encode_NCGI } from "../TS33128Payloads/NCGI.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_AreaOfInterestCellList: $.ASN1Decoder<AreaOfInterestCell
 export
 function _decode_AreaOfInterestCellList (el: _Element): AreaOfInterestCellList {
     if (!_cached_decoder_for_AreaOfInterestCellList) { _cached_decoder_for_AreaOfInterestCellList = $._decodeSequenceOf<NCGI>(() => _decode_NCGI); }
-    return _cached_decoder_for_AreaOfInterestCellList(el);
+    const _value = _cached_decoder_for_AreaOfInterestCellList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("AreaOfInterestCellList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_AreaOfInterestCellList: $.ASN1Encoder<AreaOfInterestCellList> | null = null;

@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -226,7 +227,12 @@ function _decode_AMFPositioningInfoTransfer (el: _Element): AMFPositioningInfoTr
         "gUTI": (_el: _Element): void => { gUTI = $._decode_implicit<FiveGGUTI>(() => _decode_FiveGGUTI)(_el); },
         "nRPPaMessage": (_el: _Element): void => { nRPPaMessage = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "lPPMessage": (_el: _Element): void => { lPPMessage = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "lcsCorrelationId": (_el: _Element): void => { lcsCorrelationId = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "lcsCorrelationId": (_el: _Element): void => {
+            lcsCorrelationId = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (lcsCorrelationId.length < 1 || lcsCorrelationId.length > 255) {
+                throw new ASN1SizeError("AMFPositioningInfoTransfer.lcsCorrelationId violates SIZE constraint");
+            }
+        },
         "additionalUserIdentifiers": (_el: _Element): void => { additionalUserIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); }
     };
     $._parse_sequence(el, callbacks,

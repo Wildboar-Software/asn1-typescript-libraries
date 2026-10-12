@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13CertificateType, _decode_TLS13CertificateType, _encode_TLS13CertificateType, _enum_for_TLS13CertificateType } from "../TS33128Payloads/TLS13CertificateType.ta.mjs";
@@ -151,7 +152,12 @@ function _decode_TLS13CerificateEntry (el: _Element): TLS13CerificateEntry {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tLSCertificateType": (_el: _Element): void => { tLSCertificateType = $._decode_implicit<TLS13CertificateType>(() => _decode_TLS13CertificateType)(_el); },
-        "tLSCertificateData": (_el: _Element): void => { tLSCertificateData = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "tLSCertificateData": (_el: _Element): void => {
+            tLSCertificateData = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tLSCertificateData.length < 1 || tLSCertificateData.length > 16777215) {
+                throw new ASN1SizeError("TLS13CerificateEntry.tLSCertificateData violates SIZE constraint");
+            }
+        },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<TLS13Extension[]>(() => $._decodeSequenceOf<TLS13Extension>(() => _decode_TLS13Extension))(_el); }
     };
     $._parse_sequence(el, callbacks,

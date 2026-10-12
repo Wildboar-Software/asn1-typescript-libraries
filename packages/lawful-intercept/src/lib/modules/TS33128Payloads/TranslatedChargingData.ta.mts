@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExternalChargingASN, _decode_ExternalChargingASN, _encode_ExternalChargingASN } from "../TS33128Payloads/ExternalChargingASN.ta.mjs";
@@ -164,10 +165,34 @@ function _decode_TranslatedChargingData (el: _Element): TranslatedChargingData {
     let recordData!: ExternalChargingASN;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "releaseID": (_el: _Element): void => { releaseID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "versonID": (_el: _Element): void => { versonID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "specificationNumber": (_el: _Element): void => { specificationNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "releaseIDExtension": (_el: _Element): void => { releaseIDExtension = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "releaseID": (_el: _Element): void => {
+            releaseID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof releaseID === "bigint" ? releaseID : BigInt(releaseID);
+            if (_n < 0n || _n > 7n) {
+                throw new ASN1OverflowError("TranslatedChargingData.releaseID violates INTEGER range");
+            }
+        },
+        "versonID": (_el: _Element): void => {
+            versonID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof versonID === "bigint" ? versonID : BigInt(versonID);
+            if (_n < 0n || _n > 31n) {
+                throw new ASN1OverflowError("TranslatedChargingData.versonID violates INTEGER range");
+            }
+        },
+        "specificationNumber": (_el: _Element): void => {
+            specificationNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof specificationNumber === "bigint" ? specificationNumber : BigInt(specificationNumber);
+            if (_n < 0n || _n > 31n) {
+                throw new ASN1OverflowError("TranslatedChargingData.specificationNumber violates INTEGER range");
+            }
+        },
+        "releaseIDExtension": (_el: _Element): void => {
+            releaseIDExtension = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof releaseIDExtension === "bigint" ? releaseIDExtension : BigInt(releaseIDExtension);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TranslatedChargingData.releaseIDExtension violates INTEGER range");
+            }
+        },
         "recordData": (_el: _Element): void => { recordData = $._decode_implicit<ExternalChargingASN>(() => _decode_ExternalChargingASN)(_el); }
     };
     $._parse_sequence(el, callbacks,

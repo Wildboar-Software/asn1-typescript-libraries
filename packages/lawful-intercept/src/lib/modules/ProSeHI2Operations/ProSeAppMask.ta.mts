@@ -2,7 +2,8 @@
 import {
     OCTET_STRING,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProSeMaskSequence, _decode_ProSeMaskSequence, _encode_ProSeMaskSequence } from "../ProSeHI2Operations/ProSeMaskSequence.ta.mjs";
@@ -44,7 +45,14 @@ function _decode_ProSeAppMask (el: _Element): ProSeAppMask {
     "CONTEXT 1": [ "proseMask", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 2": [ "proseMaskSequence", $._decode_implicit<ProSeMaskSequence>(() => _decode_ProSeMaskSequence) ]
 }); }
-    return _cached_decoder_for_ProSeAppMask(el);
+    const _value = _cached_decoder_for_ProSeAppMask(el);
+    if ("proseMask" in _value && _value.proseMask !== undefined) {
+        const _alt = _value.proseMask;
+        if (_alt.length < 23 || _alt.length > 23) {
+            throw new ASN1SizeError("ProSeAppMask.proseMask violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_ProSeAppMask: $.ASN1Encoder<ProSeAppMask> | null = null;

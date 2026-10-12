@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TCPPort = INTEGER;
-export const _decode_TCPPort: $.ASN1Decoder<TCPPort> = $._decodeInteger;
+export const _decode_TCPPort: $.ASN1Decoder<TCPPort> = (el: _Element): TCPPort => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 1n || _n > 65535n) {
+        throw new ASN1OverflowError("TCPPort violates INTEGER range");
+    }
+    return value;
+};
 export const _encode_TCPPort: $.ASN1Encoder<TCPPort> = $._encodeInteger;
 
 

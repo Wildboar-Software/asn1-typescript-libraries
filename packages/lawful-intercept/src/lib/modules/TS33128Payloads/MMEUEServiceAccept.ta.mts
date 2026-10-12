@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
@@ -204,13 +205,33 @@ function _decode_MMEUEServiceAccept (el: _Element): MMEUEServiceAccept {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
-        "serviceType": (_el: _Element): void => { serviceType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "serviceType": (_el: _Element): void => {
+            serviceType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (serviceType.length < 1 || serviceType.length > 1) {
+                throw new ASN1SizeError("MMEUEServiceAccept.serviceType violates SIZE constraint");
+            }
+        },
         "mTMSI": (_el: _Element): void => { mTMSI = $._decode_implicit<TMSI>(() => _decode_TMSI)(_el); },
-        "cSFBResponse": (_el: _Element): void => { cSFBResponse = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "uEEPSBearerContextStatus": (_el: _Element): void => { uEEPSBearerContextStatus = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "cSFBResponse": (_el: _Element): void => {
+            cSFBResponse = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (cSFBResponse.length < 1 || cSFBResponse.length > 1) {
+                throw new ASN1SizeError("MMEUEServiceAccept.cSFBResponse violates SIZE constraint");
+            }
+        },
+        "uEEPSBearerContextStatus": (_el: _Element): void => {
+            uEEPSBearerContextStatus = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (uEEPSBearerContextStatus.length < 2 || uEEPSBearerContextStatus.length > 2) {
+                throw new ASN1SizeError("MMEUEServiceAccept.uEEPSBearerContextStatus violates SIZE constraint");
+            }
+        },
         "uERequestType": (_el: _Element): void => { uERequestType = $._decode_implicit<MUSIMUERequestType>(() => _decode_MUSIMUERequestType)(_el); },
         "pagingRestriction": (_el: _Element): void => { pagingRestriction = $._decode_implicit<PagingRestrictionIndicator>(() => _decode_PagingRestrictionIndicator)(_el); },
-        "controlPlaneServiceType": (_el: _Element): void => { controlPlaneServiceType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "controlPlaneServiceType": (_el: _Element): void => {
+            controlPlaneServiceType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (controlPlaneServiceType.length < 1 || controlPlaneServiceType.length > 1) {
+                throw new ASN1SizeError("MMEUEServiceAccept.controlPlaneServiceType violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_MMEUEServiceAccept,

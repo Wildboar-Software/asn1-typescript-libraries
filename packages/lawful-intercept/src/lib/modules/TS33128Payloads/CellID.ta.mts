@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CellID = OCTET_STRING; // OctetStringType
-export const _decode_CellID: $.ASN1Decoder<CellID> = $._decodeOctetString;
+export const _decode_CellID: $.ASN1Decoder<CellID> = (el: _Element): CellID => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 2) {
+        throw new ASN1SizeError("CellID violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_CellID: $.ASN1Encoder<CellID> = $._encodeOctetString;
 
 

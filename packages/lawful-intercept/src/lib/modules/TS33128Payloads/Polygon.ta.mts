@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
@@ -123,6 +124,11 @@ function _decode_Polygon (el: _Element): Polygon {
     sequence[0].name = "pointList";
     let pointList!: GeographicalCoordinates[];
     pointList = $._decode_implicit<GeographicalCoordinates[]>(() => $._decodeSetOf<GeographicalCoordinates>(() => _decode_GeographicalCoordinates))(sequence[0]);
+    {
+        if (pointList.length < 3 || pointList.length > 15) {
+            throw new ASN1SizeError("Polygon.pointList violates SIZE constraint");
+        }
+    }
     return new Polygon(
         pointList,
         sequence.slice(1),

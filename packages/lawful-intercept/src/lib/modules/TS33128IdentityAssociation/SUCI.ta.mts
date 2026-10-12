@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type SUCI = OCTET_STRING; // OctetStringType
-export const _decode_SUCI: $.ASN1Decoder<SUCI> = $._decodeOctetString;
+export const _decode_SUCI: $.ASN1Decoder<SUCI> = (el: _Element): SUCI => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 8 || value.length > 3008) {
+        throw new ASN1SizeError("SUCI violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_SUCI: $.ASN1Encoder<SUCI> = $._encodeOctetString;
 
 

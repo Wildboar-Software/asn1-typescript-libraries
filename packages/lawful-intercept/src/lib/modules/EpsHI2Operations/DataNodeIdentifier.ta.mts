@@ -3,7 +3,8 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
@@ -154,7 +155,12 @@ function _decode_DataNodeIdentifier (el: _Element): DataNodeIdentifier {
     const callbacks: $.DecodingMap = {
         "dataNodeAddress": (_el: _Element): void => { dataNodeAddress = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
         "logicalFunctionType": (_el: _Element): void => { logicalFunctionType = $._decode_implicit<LogicalFunctionType>(() => _decode_LogicalFunctionType)(_el); },
-        "dataNodeName": (_el: _Element): void => { dataNodeName = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); }
+        "dataNodeName": (_el: _Element): void => {
+            dataNodeName = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (dataNodeName.length < 7 || dataNodeName.length > 25) {
+                throw new ASN1SizeError("DataNodeIdentifier.dataNodeName violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_DataNodeIdentifier,

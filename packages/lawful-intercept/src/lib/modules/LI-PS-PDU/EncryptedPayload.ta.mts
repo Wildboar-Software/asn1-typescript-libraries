@@ -3,7 +3,8 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Payload, _decode_Payload, _encode_Payload } from "../LI-PS-PDU/Payload.ta.mjs";
@@ -147,6 +148,12 @@ function _decode_EncryptedPayload (el: _Element): EncryptedPayload {
     let byteCounter!: INTEGER;
     let payload!: Payload;
     byteCounter = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    {
+        const _n = typeof byteCounter === "bigint" ? byteCounter : BigInt(byteCounter);
+        if (_n < 0n || _n > 18446744073709551615n) {
+            throw new ASN1OverflowError("EncryptedPayload.byteCounter violates INTEGER range");
+        }
+    }
     payload = $._decode_explicit<Payload>(() => _decode_Payload)(sequence[1]);
     return new EncryptedPayload(
         byteCounter,

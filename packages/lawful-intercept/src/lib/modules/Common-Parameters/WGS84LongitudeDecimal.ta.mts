@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type WGS84LongitudeDecimal = OCTET_STRING; // OctetStringType
-export const _decode_WGS84LongitudeDecimal: $.ASN1Decoder<WGS84LongitudeDecimal> = $._decodeOctetString;
+export const _decode_WGS84LongitudeDecimal: $.ASN1Decoder<WGS84LongitudeDecimal> = (el: _Element): WGS84LongitudeDecimal => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 11 || value.length > 11) {
+        throw new ASN1SizeError("WGS84LongitudeDecimal violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_WGS84LongitudeDecimal: $.ASN1Encoder<WGS84LongitudeDecimal> = $._encodeOctetString;
 
 

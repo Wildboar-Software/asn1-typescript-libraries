@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UASTargetIdentifier, _decode_UASTargetIdentifier, _encode_UASTargetIdentifier } from "../TS33128Payloads/UASTargetIdentifier.ta.mjs";
@@ -157,6 +158,11 @@ function _decode_UASNFInformation (el: _Element): UASNFInformation {
     let uASNFProcedure!: UASNFProcedure;
     let uASNFUASInformation!: UASNFUASInformation;
     uASTargetIdentifiers = $._decode_implicit<UASTargetIdentifier[]>(() => $._decodeSequenceOf<UASTargetIdentifier>(() => _decode_UASTargetIdentifier))(sequence[0]);
+    {
+        if (uASTargetIdentifiers.length < 1) {
+            throw new ASN1SizeError("UASNFInformation.uASTargetIdentifiers violates SIZE constraint");
+        }
+    }
     uASNFProcedure = $._decode_implicit<UASNFProcedure>(() => _decode_UASNFProcedure)(sequence[1]);
     uASNFUASInformation = $._decode_explicit<UASNFUASInformation>(() => _decode_UASNFUASInformation)(sequence[2]);
     return new UASNFInformation(

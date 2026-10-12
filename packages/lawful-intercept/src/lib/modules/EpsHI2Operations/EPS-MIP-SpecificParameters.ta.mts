@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -178,12 +180,44 @@ function _decode_EPS_MIP_SpecificParameters (el: _Element): EPS_MIP_SpecificPara
     let foreignDomainAddress: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "lifetime": (_el: _Element): void => { lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "homeAddress": (_el: _Element): void => { homeAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "careOfAddress": (_el: _Element): void => { careOfAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "homeAgentAddress": (_el: _Element): void => { homeAgentAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "code": (_el: _Element): void => { code = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "foreignDomainAddress": (_el: _Element): void => { foreignDomainAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "lifetime": (_el: _Element): void => {
+            lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof lifetime === "bigint" ? lifetime : BigInt(lifetime);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("EPS_MIP_SpecificParameters.lifetime violates INTEGER range");
+            }
+        },
+        "homeAddress": (_el: _Element): void => {
+            homeAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (homeAddress.length < 4 || homeAddress.length > 4) {
+                throw new ASN1SizeError("EPS_MIP_SpecificParameters.homeAddress violates SIZE constraint");
+            }
+        },
+        "careOfAddress": (_el: _Element): void => {
+            careOfAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (careOfAddress.length < 4 || careOfAddress.length > 4) {
+                throw new ASN1SizeError("EPS_MIP_SpecificParameters.careOfAddress violates SIZE constraint");
+            }
+        },
+        "homeAgentAddress": (_el: _Element): void => {
+            homeAgentAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (homeAgentAddress.length < 4 || homeAgentAddress.length > 4) {
+                throw new ASN1SizeError("EPS_MIP_SpecificParameters.homeAgentAddress violates SIZE constraint");
+            }
+        },
+        "code": (_el: _Element): void => {
+            code = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof code === "bigint" ? code : BigInt(code);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("EPS_MIP_SpecificParameters.code violates INTEGER range");
+            }
+        },
+        "foreignDomainAddress": (_el: _Element): void => {
+            foreignDomainAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (foreignDomainAddress.length < 4 || foreignDomainAddress.length > 4) {
+                throw new ASN1SizeError("EPS_MIP_SpecificParameters.foreignDomainAddress violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_EPS_MIP_SpecificParameters,

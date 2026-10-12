@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Non_Standard_Supplementary_Services_Item, _decode_Non_Standard_Supplementary_Services_Item, _encode_Non_Standard_Supplementary_Services_Item } from "../HI2Operations/Non-Standard-Supplementary-Services-Item.ta.mjs";
@@ -36,7 +37,11 @@ let _cached_decoder_for_Non_Standard_Supplementary_Services: $.ASN1Decoder<Non_S
 export
 function _decode_Non_Standard_Supplementary_Services (el: _Element): Non_Standard_Supplementary_Services {
     if (!_cached_decoder_for_Non_Standard_Supplementary_Services) { _cached_decoder_for_Non_Standard_Supplementary_Services = $._decodeSetOf<Non_Standard_Supplementary_Services_Item>(() => _decode_Non_Standard_Supplementary_Services_Item); }
-    return _cached_decoder_for_Non_Standard_Supplementary_Services(el);
+    const _value = _cached_decoder_for_Non_Standard_Supplementary_Services(el);
+    if (_value.length < 1 || _value.length > 20) {
+        throw new ASN1SizeError("Non_Standard_Supplementary_Services violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_Non_Standard_Supplementary_Services: $.ASN1Encoder<Non_Standard_Supplementary_Services> | null = null;

@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCServiceIdentity, _decode_MCServiceIdentity, _encode_MCServiceIdentity } from "../TS33128Payloads/MCServiceIdentity.ta.mjs";
@@ -44,7 +45,14 @@ function _decode_MCServiceIdentitiesOrGroupID (el: _Element): MCServiceIdentitie
     "CONTEXT 1": [ "mCServiceIdentities", $._decode_implicit<MCServiceIdentity[]>(() => $._decodeSequenceOf<MCServiceIdentity>(() => _decode_MCServiceIdentity)) ],
     "CONTEXT 2": [ "mCServiceGroupID", $._decode_implicit<MCServiceGroupID>(() => _decode_MCServiceGroupID) ]
 }); }
-    return _cached_decoder_for_MCServiceIdentitiesOrGroupID(el);
+    const _value = _cached_decoder_for_MCServiceIdentitiesOrGroupID(el);
+    if ("mCServiceIdentities" in _value && _value.mCServiceIdentities !== undefined) {
+        const _alt = _value.mCServiceIdentities;
+        if (_alt.length < 1) {
+            throw new ASN1SizeError("MCServiceIdentitiesOrGroupID.mCServiceIdentities violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_MCServiceIdentitiesOrGroupID: $.ASN1Encoder<MCServiceIdentitiesOrGroupID> | null = null;

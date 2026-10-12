@@ -4,9 +4,12 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OPTIONAL,
-    PrintableString
+    PrintableString,
+    ASN1Error,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { hi1OperationId } from "../HI1NotificationOperations/hi1OperationId.va.mjs";
 
 
 
@@ -142,8 +145,18 @@ function _decode_National_HI1_ASN1parameters (el: _Element): National_HI1_ASN1pa
     let countryCode!: PrintableString;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
-        "countryCode": (_el: _Element): void => { countryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); }
+        "domainID": (_el: _Element): void => {
+            domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);
+            if (!domainID.isEqualTo(hi1OperationId)) {
+                throw new ASN1Error("National_HI1_ASN1parameters.domainID violates OBJECT IDENTIFIER constraint");
+            }
+        },
+        "countryCode": (_el: _Element): void => {
+            countryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (countryCode.length < 2 || countryCode.length > 2) {
+                throw new ASN1SizeError("National_HI1_ASN1parameters.countryCode violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_National_HI1_ASN1parameters,

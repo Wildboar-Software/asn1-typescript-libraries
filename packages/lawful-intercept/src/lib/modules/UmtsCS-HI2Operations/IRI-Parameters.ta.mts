@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IRI_Parameters_iRIversion, _decode_IRI_Parameters_iRIversion, _encode_IRI_Parameters_iRIversion, _enum_for_IRI_Parameters_iRIversion } from "../UmtsCS-HI2Operations/IRI-Parameters-iRIversion.ta.mjs";
@@ -579,12 +580,32 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
         "intercepted-Call-Direct": (_el: _Element): void => { intercepted_Call_Direct = $._decode_implicit<IRI_Parameters_intercepted_Call_Direct>(() => _decode_IRI_Parameters_intercepted_Call_Direct)(_el); },
         "intercepted-Call-State": (_el: _Element): void => { intercepted_Call_State = $._decode_implicit<Intercepted_Call_State>(() => _decode_Intercepted_Call_State)(_el); },
-        "ringingDuration": (_el: _Element): void => { ringingDuration = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "conversationDuration": (_el: _Element): void => { conversationDuration = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "ringingDuration": (_el: _Element): void => {
+            ringingDuration = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (ringingDuration.length < 3 || ringingDuration.length > 3) {
+                throw new ASN1SizeError("IRI_Parameters.ringingDuration violates SIZE constraint");
+            }
+        },
+        "conversationDuration": (_el: _Element): void => {
+            conversationDuration = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (conversationDuration.length < 3 || conversationDuration.length > 3) {
+                throw new ASN1SizeError("IRI_Parameters.conversationDuration violates SIZE constraint");
+            }
+        },
         "locationOfTheTarget": (_el: _Element): void => { locationOfTheTarget = $._decode_implicit<Location>(() => _decode_Location)(_el); },
-        "partyInformation": (_el: _Element): void => { partyInformation = $._decode_implicit<PartyInformation[]>(() => $._decodeSetOf<PartyInformation>(() => _decode_PartyInformation))(_el); },
+        "partyInformation": (_el: _Element): void => {
+            partyInformation = $._decode_implicit<PartyInformation[]>(() => $._decodeSetOf<PartyInformation>(() => _decode_PartyInformation))(_el);
+            if (partyInformation.length < 1 || partyInformation.length > 10) {
+                throw new ASN1SizeError("IRI_Parameters.partyInformation violates SIZE constraint");
+            }
+        },
         "callContentLinkInformation": (_el: _Element): void => { callContentLinkInformation = $._decode_implicit<IRI_Parameters_callContentLinkInformation>(() => _decode_IRI_Parameters_callContentLinkInformation)(_el); },
-        "release-Reason-Of-Intercepted-Call": (_el: _Element): void => { release_Reason_Of_Intercepted_Call = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "release_Reason_Of_Intercepted_Call": (_el: _Element): void => {
+            release_Reason_Of_Intercepted_Call = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (release_Reason_Of_Intercepted_Call.length < 2 || release_Reason_Of_Intercepted_Call.length > 2) {
+                throw new ASN1SizeError("IRI_Parameters.release_Reason_Of_Intercepted_Call violates SIZE constraint");
+            }
+        },
         "nature-Of-The-intercepted-call": (_el: _Element): void => { nature_Of_The_intercepted_call = $._decode_implicit<IRI_Parameters_nature_Of_The_intercepted_call>(() => _decode_IRI_Parameters_nature_Of_The_intercepted_call)(_el); },
         "serviceCenterAddress": (_el: _Element): void => { serviceCenterAddress = $._decode_implicit<PartyInformation>(() => _decode_PartyInformation)(_el); },
         "sMS": (_el: _Element): void => { sMS = $._decode_implicit<SMS_report>(() => _decode_SMS_report)(_el); },

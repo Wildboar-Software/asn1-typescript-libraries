@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_CSGIDList: $.ASN1Decoder<CSGIDList> | null = null;
 export
 function _decode_CSGIDList (el: _Element): CSGIDList {
     if (!_cached_decoder_for_CSGIDList) { _cached_decoder_for_CSGIDList = $._decodeSequenceOf<CSGID>(() => _decode_CSGID); }
-    return _cached_decoder_for_CSGIDList(el);
+    const _value = _cached_decoder_for_CSGIDList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("CSGIDList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_CSGIDList: $.ASN1Encoder<CSGIDList> | null = null;

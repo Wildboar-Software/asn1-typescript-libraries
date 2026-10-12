@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -135,7 +136,19 @@ function _decode_PortRange (el: _Element): PortRange {
     let portStart!: INTEGER;
     let portEnd!: INTEGER;
     portStart = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    {
+        const _n = typeof portStart === "bigint" ? portStart : BigInt(portStart);
+        if (_n < 0n || _n > 65535n) {
+            throw new ASN1OverflowError("PortRange.portStart violates INTEGER range");
+        }
+    }
     portEnd = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    {
+        const _n = typeof portEnd === "bigint" ? portEnd : BigInt(portEnd);
+        if (_n < 0n || _n > 65535n) {
+            throw new ASN1OverflowError("PortRange.portEnd violates INTEGER range");
+        }
+    }
     return new PortRange(
         portStart,
         portEnd,

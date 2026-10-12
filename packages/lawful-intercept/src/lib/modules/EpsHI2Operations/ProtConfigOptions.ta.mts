@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -135,8 +136,18 @@ function _decode_ProtConfigOptions (el: _Element): ProtConfigOptions {
     let networkToUe: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "ueToNetwork": (_el: _Element): void => { ueToNetwork = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "networkToUe": (_el: _Element): void => { networkToUe = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "ueToNetwork": (_el: _Element): void => {
+            ueToNetwork = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (ueToNetwork.length < 1 || ueToNetwork.length > 251) {
+                throw new ASN1SizeError("ProtConfigOptions.ueToNetwork violates SIZE constraint");
+            }
+        },
+        "networkToUe": (_el: _Element): void => {
+            networkToUe = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (networkToUe.length < 1 || networkToUe.length > 251) {
+                throw new ASN1SizeError("ProtConfigOptions.networkToUe violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ProtConfigOptions,

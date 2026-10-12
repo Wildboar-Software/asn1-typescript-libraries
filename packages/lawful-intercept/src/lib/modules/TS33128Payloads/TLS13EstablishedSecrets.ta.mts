@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -119,7 +120,12 @@ function _decode_TLS13EstablishedSecrets (el: _Element): TLS13EstablishedSecrets
     let dHE: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "dHE": (_el: _Element): void => { dHE = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "dHE": (_el: _Element): void => {
+            dHE = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (dHE.length < 1 || dHE.length > 65535) {
+                throw new ASN1SizeError("TLS13EstablishedSecrets.dHE violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TLS13EstablishedSecrets,

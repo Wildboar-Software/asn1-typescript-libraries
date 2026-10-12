@@ -6,7 +6,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessEventType, _decode_AccessEventType, _encode_AccessEventType } from "../L2AccessPDU/AccessEventType.ta.mjs";
@@ -283,16 +285,54 @@ function _decode_L2IRIContents (el: _Element): L2IRIContents {
     const callbacks: $.DecodingMap = {
         "accessEventType": (_el: _Element): void => { accessEventType = $._decode_implicit<AccessEventType>(() => _decode_AccessEventType)(_el); },
         "internetAccessType": (_el: _Element): void => { internetAccessType = $._decode_implicit<InternetAccessType>(() => _decode_InternetAccessType)(_el); },
-        "targetNetworkID": (_el: _Element): void => { targetNetworkID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "targetCPEID": (_el: _Element): void => { targetCPEID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "targetLocation": (_el: _Element): void => { targetLocation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "nASPortNumber": (_el: _Element): void => { nASPortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "callBackNumber": (_el: _Element): void => { callBackNumber = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "targetNetworkID": (_el: _Element): void => {
+            targetNetworkID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (targetNetworkID.length < 1 || targetNetworkID.length > 128) {
+                throw new ASN1SizeError("L2IRIContents.targetNetworkID violates SIZE constraint");
+            }
+        },
+        "targetCPEID": (_el: _Element): void => {
+            targetCPEID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (targetCPEID.length < 1 || targetCPEID.length > 128) {
+                throw new ASN1SizeError("L2IRIContents.targetCPEID violates SIZE constraint");
+            }
+        },
+        "targetLocation": (_el: _Element): void => {
+            targetLocation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (targetLocation.length < 1 || targetLocation.length > 64) {
+                throw new ASN1SizeError("L2IRIContents.targetLocation violates SIZE constraint");
+            }
+        },
+        "nASPortNumber": (_el: _Element): void => {
+            nASPortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof nASPortNumber === "bigint" ? nASPortNumber : BigInt(nASPortNumber);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("L2IRIContents.nASPortNumber violates INTEGER range");
+            }
+        },
+        "callBackNumber": (_el: _Element): void => {
+            callBackNumber = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (callBackNumber.length < 1 || callBackNumber.length > 20) {
+                throw new ASN1SizeError("L2IRIContents.callBackNumber violates SIZE constraint");
+            }
+        },
         "startTime": (_el: _Element): void => { startTime = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },
         "endTime": (_el: _Element): void => { endTime = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },
         "endReason": (_el: _Element): void => { endReason = $._decode_implicit<EndReason>(() => _decode_EndReason)(_el); },
-        "octetsReceived": (_el: _Element): void => { octetsReceived = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "octetsTransmitted": (_el: _Element): void => { octetsTransmitted = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "octetsReceived": (_el: _Element): void => {
+            octetsReceived = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof octetsReceived === "bigint" ? octetsReceived : BigInt(octetsReceived);
+            if (_n < 0n || _n > 18446744073709551615n) {
+                throw new ASN1OverflowError("L2IRIContents.octetsReceived violates INTEGER range");
+            }
+        },
+        "octetsTransmitted": (_el: _Element): void => {
+            octetsTransmitted = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof octetsTransmitted === "bigint" ? octetsTransmitted : BigInt(octetsTransmitted);
+            if (_n < 0n || _n > 18446744073709551615n) {
+                throw new ASN1OverflowError("L2IRIContents.octetsTransmitted violates INTEGER range");
+            }
+        },
         "rawAAAData": (_el: _Element): void => { rawAAAData = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "authenticationType": (_el: _Element): void => { authenticationType = $._decode_implicit<AuthenticationType>(() => _decode_AuthenticationType)(_el); },
     };

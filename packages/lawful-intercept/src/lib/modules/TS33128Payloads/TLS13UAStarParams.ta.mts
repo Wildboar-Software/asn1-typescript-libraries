@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13OfferedPSK, _decode_TLS13OfferedPSK, _encode_TLS13OfferedPSK } from "../TS33128Payloads/TLS13OfferedPSK.ta.mjs";
@@ -519,34 +521,100 @@ function _decode_TLS13UAStarParams (el: _Element): TLS13UAStarParams {
     const callbacks: $.DecodingMap = {
         "offeredPSKs": (_el: _Element): void => { offeredPSKs = $._decode_implicit<TLS13OfferedPSK[]>(() => $._decodeSequenceOf<TLS13OfferedPSK>(() => _decode_TLS13OfferedPSK))(_el); },
         "offeredPSKKeyExchangeModes": (_el: _Element): void => { offeredPSKKeyExchangeModes = $._decode_implicit<TLS13PSKKeyExchangeMode[]>(() => $._decodeSequenceOf<TLS13PSKKeyExchangeMode>(() => _decode_TLS13PSKKeyExchangeMode))(_el); },
-        "selectedPSKIdentity": (_el: _Element): void => { selectedPSKIdentity = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "selectedPSKIdentity": (_el: _Element): void => {
+            selectedPSKIdentity = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof selectedPSKIdentity === "bigint" ? selectedPSKIdentity : BigInt(selectedPSKIdentity);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("TLS13UAStarParams.selectedPSKIdentity violates INTEGER range");
+            }
+        },
         "selectedPSK": (_el: _Element): void => { selectedPSK = $._decode_implicit<TLS13PSKInfo>(() => _decode_TLS13PSKInfo)(_el); },
         "kDFAlgorithm": (_el: _Element): void => { kDFAlgorithm = $._decode_implicit<TLS13KDFAlgorithm>(() => _decode_TLS13KDFAlgorithm)(_el); },
         "clientSupportedCipherSuites": (_el: _Element): void => { clientSupportedCipherSuites = $._decode_implicit<TLS13CipherSuite[]>(() => $._decodeSequenceOf<TLS13CipherSuite>(() => _decode_TLS13CipherSuite))(_el); },
         "selectedCipherSuite": (_el: _Element): void => { selectedCipherSuite = $._decode_explicit<TLS13CipherSuite>(() => _decode_TLS13CipherSuite)(_el); },
         "clientSequenceNumber": (_el: _Element): void => { clientSequenceNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "serverSequenceNumber": (_el: _Element): void => { serverSequenceNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "clientRandom": (_el: _Element): void => { clientRandom = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "serverRandom": (_el: _Element): void => { serverRandom = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "legacySessionID": (_el: _Element): void => { legacySessionID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "clientRandom": (_el: _Element): void => {
+            clientRandom = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (clientRandom.length < 32 || clientRandom.length > 32) {
+                throw new ASN1SizeError("TLS13UAStarParams.clientRandom violates SIZE constraint");
+            }
+        },
+        "serverRandom": (_el: _Element): void => {
+            serverRandom = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (serverRandom.length < 32 || serverRandom.length > 32) {
+                throw new ASN1SizeError("TLS13UAStarParams.serverRandom violates SIZE constraint");
+            }
+        },
+        "legacySessionID": (_el: _Element): void => {
+            legacySessionID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (legacySessionID.length > 32) {
+                throw new ASN1SizeError("TLS13UAStarParams.legacySessionID violates SIZE constraint");
+            }
+        },
         "tLSClientHelloExtensions": (_el: _Element): void => { tLSClientHelloExtensions = $._decode_implicit<TLS13Extension[]>(() => $._decodeSequenceOf<TLS13Extension>(() => _decode_TLS13Extension))(_el); },
         "tLSServerHelloExtensions": (_el: _Element): void => { tLSServerHelloExtensions = $._decode_implicit<TLS13Extension[]>(() => $._decodeSequenceOf<TLS13Extension>(() => _decode_TLS13Extension))(_el); },
         "tLSPlaintextEncryptedExtensions": (_el: _Element): void => { tLSPlaintextEncryptedExtensions = $._decode_implicit<TLS13Extension[]>(() => $._decodeSequenceOf<TLS13Extension>(() => _decode_TLS13Extension))(_el); },
         "tLSPlaintextClientCertificate": (_el: _Element): void => { tLSPlaintextClientCertificate = $._decode_implicit<TLS13Certificate>(() => _decode_TLS13Certificate)(_el); },
         "tLSPlaintextServerCertificate": (_el: _Element): void => { tLSPlaintextServerCertificate = $._decode_implicit<TLS13Certificate>(() => _decode_TLS13Certificate)(_el); },
         "earlySecret": (_el: _Element): void => { earlySecret = $._decode_implicit<TLS13EarlySecretInfo>(() => _decode_TLS13EarlySecretInfo)(_el); },
-        "binderKey": (_el: _Element): void => { binderKey = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "clientEarlyTrafficSecret": (_el: _Element): void => { clientEarlyTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "earlyExporterMasterSecret": (_el: _Element): void => { earlyExporterMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "binderKey": (_el: _Element): void => {
+            binderKey = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (binderKey.length < 1 || binderKey.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.binderKey violates SIZE constraint");
+            }
+        },
+        "clientEarlyTrafficSecret": (_el: _Element): void => {
+            clientEarlyTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (clientEarlyTrafficSecret.length < 1 || clientEarlyTrafficSecret.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.clientEarlyTrafficSecret violates SIZE constraint");
+            }
+        },
+        "earlyExporterMasterSecret": (_el: _Element): void => {
+            earlyExporterMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (earlyExporterMasterSecret.length < 1 || earlyExporterMasterSecret.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.earlyExporterMasterSecret violates SIZE constraint");
+            }
+        },
         "sharedKey": (_el: _Element): void => { sharedKey = $._decode_implicit<TLS13EstablishedSecrets>(() => _decode_TLS13EstablishedSecrets)(_el); },
         "handshakeSecret": (_el: _Element): void => { handshakeSecret = $._decode_implicit<TLS13HandshakeSecretInfo>(() => _decode_TLS13HandshakeSecretInfo)(_el); },
-        "clientHandshakeTrafficSecret": (_el: _Element): void => { clientHandshakeTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "serverHandshakeTrafficSecret": (_el: _Element): void => { serverHandshakeTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "clientHandshakeTrafficSecret": (_el: _Element): void => {
+            clientHandshakeTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (clientHandshakeTrafficSecret.length < 1 || clientHandshakeTrafficSecret.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.clientHandshakeTrafficSecret violates SIZE constraint");
+            }
+        },
+        "serverHandshakeTrafficSecret": (_el: _Element): void => {
+            serverHandshakeTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (serverHandshakeTrafficSecret.length < 1 || serverHandshakeTrafficSecret.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.serverHandshakeTrafficSecret violates SIZE constraint");
+            }
+        },
         "masterSecret": (_el: _Element): void => { masterSecret = $._decode_implicit<TLS13MasterSecretInfo>(() => _decode_TLS13MasterSecretInfo)(_el); },
-        "clientApplicationTrafficSecret": (_el: _Element): void => { clientApplicationTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "serverApplicationTrafficSecret": (_el: _Element): void => { serverApplicationTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "exporterMasterSecret": (_el: _Element): void => { exporterMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "resumptionMasterSecret": (_el: _Element): void => { resumptionMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "clientApplicationTrafficSecret": (_el: _Element): void => {
+            clientApplicationTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (clientApplicationTrafficSecret.length < 1 || clientApplicationTrafficSecret.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.clientApplicationTrafficSecret violates SIZE constraint");
+            }
+        },
+        "serverApplicationTrafficSecret": (_el: _Element): void => {
+            serverApplicationTrafficSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (serverApplicationTrafficSecret.length < 1 || serverApplicationTrafficSecret.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.serverApplicationTrafficSecret violates SIZE constraint");
+            }
+        },
+        "exporterMasterSecret": (_el: _Element): void => {
+            exporterMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (exporterMasterSecret.length < 1 || exporterMasterSecret.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.exporterMasterSecret violates SIZE constraint");
+            }
+        },
+        "resumptionMasterSecret": (_el: _Element): void => {
+            resumptionMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (resumptionMasterSecret.length < 1 || resumptionMasterSecret.length > 65535) {
+                throw new ASN1SizeError("TLS13UAStarParams.resumptionMasterSecret violates SIZE constraint");
+            }
+        },
         "tLSResumptionTickets": (_el: _Element): void => { tLSResumptionTickets = $._decode_implicit<TLS13NewSessionTicket[]>(() => $._decodeSequenceOf<TLS13NewSessionTicket>(() => _decode_TLS13NewSessionTicket))(_el); }
     };
     $._parse_sequence(el, callbacks,

@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -123,7 +124,12 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let imsi: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "imsi": (_el: _Element): void => { imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "imsi": (_el: _Element): void => {
+            imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imsi.length < 3 || imsi.length > 8) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.imsi violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_PartyInformation_partyIdentity,

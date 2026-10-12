@@ -4,7 +4,9 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../HI2Operations/MapDatum.ta.mjs";
@@ -169,10 +171,26 @@ function _decode_GSMLocation_utmCoordinates (el: _Element): GSMLocation_utmCoord
     let azimuth: OPTIONAL<INTEGER>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "utm-East": (_el: _Element): void => { utm_East = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
-        "utm-North": (_el: _Element): void => { utm_North = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
+        "utm_East": (_el: _Element): void => {
+            utm_East = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (utm_East.length < 10 || utm_East.length > 10) {
+                throw new ASN1SizeError("GSMLocation_utmCoordinates.utm_East violates SIZE constraint");
+            }
+        },
+        "utm_North": (_el: _Element): void => {
+            utm_North = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (utm_North.length < 7 || utm_North.length > 7) {
+                throw new ASN1SizeError("GSMLocation_utmCoordinates.utm_North violates SIZE constraint");
+            }
+        },
         "mapDatum": (_el: _Element): void => { mapDatum = $._decode_implicit<MapDatum>(() => _decode_MapDatum)(_el); },
-        "azimuth": (_el: _Element): void => { azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }
+        "azimuth": (_el: _Element): void => {
+            azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof azimuth === "bigint" ? azimuth : BigInt(azimuth);
+            if (_n < 0n || _n > 359n) {
+                throw new ASN1OverflowError("GSMLocation_utmCoordinates.azimuth violates INTEGER range");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_GSMLocation_utmCoordinates,

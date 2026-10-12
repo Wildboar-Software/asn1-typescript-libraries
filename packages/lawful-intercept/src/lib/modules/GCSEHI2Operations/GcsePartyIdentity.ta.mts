@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSIdentity, _decode_IMSIdentity, _encode_IMSIdentity } from "../GCSEHI2Operations/IMSIdentity.ta.mjs";
@@ -189,8 +190,18 @@ function _decode_GcsePartyIdentity (el: _Element): GcsePartyIdentity {
     let otherID: OPTIONAL<OtherIdentity>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "imei": (_el: _Element): void => { imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "imsi": (_el: _Element): void => { imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "imei": (_el: _Element): void => {
+            imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imei.length < 8 || imei.length > 8) {
+                throw new ASN1SizeError("GcsePartyIdentity.imei violates SIZE constraint");
+            }
+        },
+        "imsi": (_el: _Element): void => {
+            imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imsi.length < 3 || imsi.length > 8) {
+                throw new ASN1SizeError("GcsePartyIdentity.imsi violates SIZE constraint");
+            }
+        },
         "iMPU": (_el: _Element): void => { iMPU = $._decode_implicit<IMSIdentity[]>(() => $._decodeSetOf<IMSIdentity>(() => _decode_IMSIdentity))(_el); },
         "iMPI": (_el: _Element): void => { iMPI = $._decode_implicit<IMSIdentity[]>(() => $._decodeSetOf<IMSIdentity>(() => _decode_IMSIdentity))(_el); },
         "proseUEID": (_el: _Element): void => { proseUEID = $._decode_implicit<ProSeUEID[]>(() => $._decodeSetOf<ProSeUEID>(() => _decode_ProSeUEID))(_el); },

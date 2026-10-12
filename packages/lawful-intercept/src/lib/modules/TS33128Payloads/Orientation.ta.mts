@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Orientation = INTEGER;
-export const _decode_Orientation: $.ASN1Decoder<Orientation> = $._decodeInteger;
+export const _decode_Orientation: $.ASN1Decoder<Orientation> = (el: _Element): Orientation => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 180n) {
+        throw new ASN1OverflowError("Orientation violates INTEGER range");
+    }
+    return value;
+};
 export const _encode_Orientation: $.ASN1Encoder<Orientation> = $._encodeInteger;
 
 

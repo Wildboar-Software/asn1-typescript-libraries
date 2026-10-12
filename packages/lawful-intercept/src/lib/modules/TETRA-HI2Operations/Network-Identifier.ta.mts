@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../TETRA-HI2Operations/Network-Element-Identifier.ta.mjs";
@@ -134,7 +135,12 @@ function _decode_Network_Identifier (el: _Element): Network_Identifier {
     let network_Element_Identifier: OPTIONAL<Network_Element_Identifier>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "operator-Identifier": (_el: _Element): void => { operator_Identifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "operator_Identifier": (_el: _Element): void => {
+            operator_Identifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (operator_Identifier.length < 1 || operator_Identifier.length > 5) {
+                throw new ASN1SizeError("Network_Identifier.operator_Identifier violates SIZE constraint");
+            }
+        },
         "network-Element-Identifier": (_el: _Element): void => { network_Element_Identifier = $._decode_explicit<Network_Element_Identifier>(() => _decode_Network_Element_Identifier)(_el); }
     };
     $._parse_sequence(el, callbacks,

@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Messaging_Property_Priority, _decode_Messaging_Property_Priority, _encode_Messaging_Property_Priority } from "../EmailPDU/Messaging-Property-Priority.ta.mjs";
@@ -88,7 +89,14 @@ function _decode_Messaging_Property (el: _Element): Messaging_Property {
     "CONTEXT 11": [ "expires", $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime) ],
     "CONTEXT 12": [ "message_date", $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime) ]
 }); }
-    return _cached_decoder_for_Messaging_Property(el);
+    const _value = _cached_decoder_for_Messaging_Property(el);
+    if ("pincode" in _value && _value.pincode !== undefined) {
+        const _alt = _value.pincode;
+        if (_alt.length < 1 || _alt.length > 32) {
+            throw new ASN1SizeError("Messaging_Property.pincode violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_Messaging_Property: $.ASN1Encoder<Messaging_Property> | null = null;

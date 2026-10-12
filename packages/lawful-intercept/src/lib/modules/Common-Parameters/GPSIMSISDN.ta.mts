@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    NumericString
+    NumericString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type GPSIMSISDN = NumericString; // NumericString
-export const _decode_GPSIMSISDN: $.ASN1Decoder<GPSIMSISDN> = $._decodeNumericString;
+export const _decode_GPSIMSISDN: $.ASN1Decoder<GPSIMSISDN> = (el: _Element): GPSIMSISDN => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 1 || value.length > 15) {
+        throw new ASN1SizeError("GPSIMSISDN violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_GPSIMSISDN: $.ASN1Encoder<GPSIMSISDN> = $._encodeNumericString;
 
 

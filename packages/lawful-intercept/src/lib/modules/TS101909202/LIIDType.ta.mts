@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type LIIDType = INTEGER;
-export const _decode_LIIDType: $.ASN1Decoder<LIIDType> = $._decodeInteger;
+export const _decode_LIIDType: $.ASN1Decoder<LIIDType> = (el: _Element): LIIDType => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 65535n) {
+        throw new ASN1OverflowError("LIIDType violates INTEGER range");
+    }
+    return value;
+};
 export const _encode_LIIDType: $.ASN1Encoder<LIIDType> = $._encodeInteger;
 
 

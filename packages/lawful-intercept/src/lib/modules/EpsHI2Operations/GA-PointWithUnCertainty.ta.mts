@@ -3,7 +3,8 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../EpsHI2Operations/GeographicalCoordinates.ta.mjs";
@@ -128,6 +129,12 @@ function _decode_GA_PointWithUnCertainty (el: _Element): GA_PointWithUnCertainty
     let uncertaintyCode!: INTEGER;
     geographicalCoordinates = _decode_GeographicalCoordinates(sequence[0]);
     uncertaintyCode = $._decodeInteger(sequence[1]);
+    {
+        const _n = typeof uncertaintyCode === "bigint" ? uncertaintyCode : BigInt(uncertaintyCode);
+        if (_n < 0n || _n > 127n) {
+            throw new ASN1OverflowError("GA_PointWithUnCertainty.uncertaintyCode violates INTEGER range");
+        }
+    }
     return new GA_PointWithUnCertainty(
         geographicalCoordinates,
         uncertaintyCode,

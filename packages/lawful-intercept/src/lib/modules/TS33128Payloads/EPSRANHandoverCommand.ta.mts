@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
@@ -203,7 +204,12 @@ function _decode_EPSRANHandoverCommand (el: _Element): EPSRANHandoverCommand {
         "handoverType": (_el: _Element): void => { handoverType = $._decode_implicit<EPSHandoverType>(() => _decode_EPSHandoverType)(_el); },
         "eRABsToBeForwarded": (_el: _Element): void => { eRABsToBeForwarded = $._decode_implicit<ERABContextList>(() => _decode_ERABContextList)(_el); },
         "eRABsToRelease": (_el: _Element): void => { eRABsToRelease = $._decode_implicit<ERABReleaseList>(() => _decode_ERABReleaseList)(_el); },
-        "targetToSourceContainers": (_el: _Element): void => { targetToSourceContainers = $._decode_implicit<RANTargetToSourceContainer[]>(() => $._decodeSequenceOf<RANTargetToSourceContainer>(() => _decode_RANTargetToSourceContainer))(_el); }
+        "targetToSourceContainers": (_el: _Element): void => {
+            targetToSourceContainers = $._decode_implicit<RANTargetToSourceContainer[]>(() => $._decodeSequenceOf<RANTargetToSourceContainer>(() => _decode_RANTargetToSourceContainer))(_el);
+            if (targetToSourceContainers.length < 1) {
+                throw new ASN1SizeError("EPSRANHandoverCommand.targetToSourceContainers violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_EPSRANHandoverCommand,

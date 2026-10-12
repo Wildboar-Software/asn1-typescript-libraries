@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProtConfigOptions, _decode_ProtConfigOptions, _encode_ProtConfigOptions } from "../EpsHI2Operations/ProtConfigOptions.ta.mjs";
@@ -543,13 +544,38 @@ function _decode_EPS_GTPV2_SpecificParameters (el: _Element): EPS_GTPV2_Specific
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pDNAddressAllocation": (_el: _Element): void => { pDNAddressAllocation = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "aPN": (_el: _Element): void => { aPN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "aPN": (_el: _Element): void => {
+            aPN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (aPN.length < 1 || aPN.length > 100) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.aPN violates SIZE constraint");
+            }
+        },
         "protConfigOptions": (_el: _Element): void => { protConfigOptions = $._decode_implicit<ProtConfigOptions>(() => _decode_ProtConfigOptions)(_el); },
-        "attachType": (_el: _Element): void => { attachType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "attachType": (_el: _Element): void => {
+            attachType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (attachType.length < 1 || attachType.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.attachType violates SIZE constraint");
+            }
+        },
         "ePSBearerIdentity": (_el: _Element): void => { ePSBearerIdentity = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "detachType": (_el: _Element): void => { detachType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "rATType": (_el: _Element): void => { rATType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "failedBearerActivationReason": (_el: _Element): void => { failedBearerActivationReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "detachType": (_el: _Element): void => {
+            detachType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (detachType.length < 1 || detachType.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.detachType violates SIZE constraint");
+            }
+        },
+        "rATType": (_el: _Element): void => {
+            rATType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (rATType.length < 1 || rATType.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.rATType violates SIZE constraint");
+            }
+        },
+        "failedBearerActivationReason": (_el: _Element): void => {
+            failedBearerActivationReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (failedBearerActivationReason.length < 1 || failedBearerActivationReason.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.failedBearerActivationReason violates SIZE constraint");
+            }
+        },
         "ePSBearerQoS": (_el: _Element): void => { ePSBearerQoS = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "bearerActivationType": (_el: _Element): void => { bearerActivationType = $._decode_implicit<TypeOfBearer>(() => _decode_TypeOfBearer)(_el); },
         "aPN-AMBR": (_el: _Element): void => { aPN_AMBR = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
@@ -557,23 +583,78 @@ function _decode_EPS_GTPV2_SpecificParameters (el: _Element): EPS_GTPV2_Specific
         "linkedEPSBearerId": (_el: _Element): void => { linkedEPSBearerId = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "tFT": (_el: _Element): void => { tFT = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "handoverIndication": (_el: _Element): void => { handoverIndication = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
-        "failedBearerModReason": (_el: _Element): void => { failedBearerModReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "failedBearerModReason": (_el: _Element): void => {
+            failedBearerModReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (failedBearerModReason.length < 1 || failedBearerModReason.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.failedBearerModReason violates SIZE constraint");
+            }
+        },
         "trafficAggregateDescription": (_el: _Element): void => { trafficAggregateDescription = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "failedTAUReason": (_el: _Element): void => { failedTAUReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "failedEUTRANAttachReason": (_el: _Element): void => { failedEUTRANAttachReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "failedTAUReason": (_el: _Element): void => {
+            failedTAUReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (failedTAUReason.length < 1 || failedTAUReason.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.failedTAUReason violates SIZE constraint");
+            }
+        },
+        "failedEUTRANAttachReason": (_el: _Element): void => {
+            failedEUTRANAttachReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (failedEUTRANAttachReason.length < 1 || failedEUTRANAttachReason.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.failedEUTRANAttachReason violates SIZE constraint");
+            }
+        },
         "servingMMEaddress": (_el: _Element): void => { servingMMEaddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "bearerDeactivationType": (_el: _Element): void => { bearerDeactivationType = $._decode_implicit<TypeOfBearer>(() => _decode_TypeOfBearer)(_el); },
-        "bearerDeactivationCause": (_el: _Element): void => { bearerDeactivationCause = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "bearerDeactivationCause": (_el: _Element): void => {
+            bearerDeactivationCause = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (bearerDeactivationCause.length < 1 || bearerDeactivationCause.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.bearerDeactivationCause violates SIZE constraint");
+            }
+        },
         "ePSlocationOfTheTarget": (_el: _Element): void => { ePSlocationOfTheTarget = $._decode_implicit<EPSLocation>(() => _decode_EPSLocation)(_el); },
-        "pDNType": (_el: _Element): void => { pDNType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "requestType": (_el: _Element): void => { requestType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "uEReqPDNConnFailReason": (_el: _Element): void => { uEReqPDNConnFailReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "extendedHandoverIndication": (_el: _Element): void => { extendedHandoverIndication = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "uLITimestamp": (_el: _Element): void => { uLITimestamp = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "pDNType": (_el: _Element): void => {
+            pDNType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (pDNType.length < 1 || pDNType.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.pDNType violates SIZE constraint");
+            }
+        },
+        "requestType": (_el: _Element): void => {
+            requestType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (requestType.length < 1 || requestType.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.requestType violates SIZE constraint");
+            }
+        },
+        "uEReqPDNConnFailReason": (_el: _Element): void => {
+            uEReqPDNConnFailReason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (uEReqPDNConnFailReason.length < 1 || uEReqPDNConnFailReason.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.uEReqPDNConnFailReason violates SIZE constraint");
+            }
+        },
+        "extendedHandoverIndication": (_el: _Element): void => {
+            extendedHandoverIndication = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (extendedHandoverIndication.length < 1 || extendedHandoverIndication.length > 1) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.extendedHandoverIndication violates SIZE constraint");
+            }
+        },
+        "uLITimestamp": (_el: _Element): void => {
+            uLITimestamp = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (uLITimestamp.length < 8 || uLITimestamp.length > 8) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.uLITimestamp violates SIZE constraint");
+            }
+        },
         "uELocalIPAddress": (_el: _Element): void => { uELocalIPAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "uEUdpPort": (_el: _Element): void => { uEUdpPort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "uEUdpPort": (_el: _Element): void => {
+            uEUdpPort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (uEUdpPort.length < 2 || uEUdpPort.length > 2) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.uEUdpPort violates SIZE constraint");
+            }
+        },
         "tWANIdentifier": (_el: _Element): void => { tWANIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "tWANIdentifierTimestamp": (_el: _Element): void => { tWANIdentifierTimestamp = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "tWANIdentifierTimestamp": (_el: _Element): void => {
+            tWANIdentifierTimestamp = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tWANIdentifierTimestamp.length < 4 || tWANIdentifierTimestamp.length > 4) {
+                throw new ASN1SizeError("EPS_GTPV2_SpecificParameters.tWANIdentifierTimestamp violates SIZE constraint");
+            }
+        },
         "proSeRemoteUeContextConnected": (_el: _Element): void => { proSeRemoteUeContextConnected = $._decode_implicit<RemoteUeContextConnected>(() => _decode_RemoteUeContextConnected)(_el); },
         "proSeRemoteUeContextDisconnected": (_el: _Element): void => { proSeRemoteUeContextDisconnected = $._decode_implicit<RemoteUeContextDisconnected>(() => _decode_RemoteUeContextDisconnected)(_el); },
         "secondaryRATUsageIndication": (_el: _Element): void => { secondaryRATUsageIndication = $._decode_implicit<NULL>(() => $._decodeNull)(_el); }

@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../EpsHI2Operations/GSMLocation.ta.mjs";
@@ -239,13 +240,38 @@ function _decode_EPSLocation (el: _Element): EPSLocation {
     let uELocationTimestamp: OPTIONAL<EPSLocation_uELocationTimestamp>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "userLocationInfo": (_el: _Element): void => { userLocationInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "userLocationInfo": (_el: _Element): void => {
+            userLocationInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (userLocationInfo.length < 1 || userLocationInfo.length > 39) {
+                throw new ASN1SizeError("EPSLocation.userLocationInfo violates SIZE constraint");
+            }
+        },
         "gsmLocation": (_el: _Element): void => { gsmLocation = $._decode_explicit<GSMLocation>(() => _decode_GSMLocation)(_el); },
         "umtsLocation": (_el: _Element): void => { umtsLocation = $._decode_explicit<UMTSLocation>(() => _decode_UMTSLocation)(_el); },
-        "olduserLocationInfo": (_el: _Element): void => { olduserLocationInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "lastVisitedTAI": (_el: _Element): void => { lastVisitedTAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "tAIlist": (_el: _Element): void => { tAIlist = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "threeGPP2Bsid": (_el: _Element): void => { threeGPP2Bsid = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "olduserLocationInfo": (_el: _Element): void => {
+            olduserLocationInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (olduserLocationInfo.length < 1 || olduserLocationInfo.length > 39) {
+                throw new ASN1SizeError("EPSLocation.olduserLocationInfo violates SIZE constraint");
+            }
+        },
+        "lastVisitedTAI": (_el: _Element): void => {
+            lastVisitedTAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (lastVisitedTAI.length < 1 || lastVisitedTAI.length > 5) {
+                throw new ASN1SizeError("EPSLocation.lastVisitedTAI violates SIZE constraint");
+            }
+        },
+        "tAIlist": (_el: _Element): void => {
+            tAIlist = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tAIlist.length < 7 || tAIlist.length > 97) {
+                throw new ASN1SizeError("EPSLocation.tAIlist violates SIZE constraint");
+            }
+        },
+        "threeGPP2Bsid": (_el: _Element): void => {
+            threeGPP2Bsid = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (threeGPP2Bsid.length < 1 || threeGPP2Bsid.length > 12) {
+                throw new ASN1SizeError("EPSLocation.threeGPP2Bsid violates SIZE constraint");
+            }
+        },
         "civicAddress": (_el: _Element): void => { civicAddress = $._decode_explicit<CivicAddress>(() => _decode_CivicAddress)(_el); },
         "operatorSpecificInfo": (_el: _Element): void => { operatorSpecificInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "uELocationTimestamp": (_el: _Element): void => { uELocationTimestamp = $._decode_explicit<EPSLocation_uELocationTimestamp>(() => _decode_EPSLocation_uELocationTimestamp)(_el); }

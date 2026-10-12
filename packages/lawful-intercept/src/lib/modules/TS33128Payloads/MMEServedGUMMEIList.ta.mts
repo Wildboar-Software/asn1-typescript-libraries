@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMEServedGUMMEI, _decode_MMEServedGUMMEI, _encode_MMEServedGUMMEI } from "../TS33128Payloads/MMEServedGUMMEI.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_MMEServedGUMMEIList: $.ASN1Decoder<MMEServedGUMMEIList> 
 export
 function _decode_MMEServedGUMMEIList (el: _Element): MMEServedGUMMEIList {
     if (!_cached_decoder_for_MMEServedGUMMEIList) { _cached_decoder_for_MMEServedGUMMEIList = $._decodeSequenceOf<MMEServedGUMMEI>(() => _decode_MMEServedGUMMEI); }
-    return _cached_decoder_for_MMEServedGUMMEIList(el);
+    const _value = _cached_decoder_for_MMEServedGUMMEIList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("MMEServedGUMMEIList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_MMEServedGUMMEIList: $.ASN1Encoder<MMEServedGUMMEIList> | null = null;

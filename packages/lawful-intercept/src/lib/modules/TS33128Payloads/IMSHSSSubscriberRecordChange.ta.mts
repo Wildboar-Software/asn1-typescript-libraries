@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HSSIdentities, _decode_HSSIdentities, _encode_HSSIdentities } from "../TS33128Payloads/HSSIdentities.ta.mjs";
@@ -171,7 +172,12 @@ function _decode_IMSHSSSubscriberRecordChange (el: _Element): IMSHSSSubscriberRe
     const callbacks: $.DecodingMap = {
         "hSSIdentities": (_el: _Element): void => { hSSIdentities = $._decode_implicit<HSSIdentities[]>(() => $._decodeSequenceOf<HSSIdentities>(() => _decode_HSSIdentities))(_el); },
         "iMSProfileData": (_el: _Element): void => { iMSProfileData = $._decode_implicit<SBIType>(() => _decode_SBIType)(_el); },
-        "mSISDNs": (_el: _Element): void => { mSISDNs = $._decode_implicit<MSISDN[]>(() => $._decodeSequenceOf<MSISDN>(() => _decode_MSISDN))(_el); },
+        "mSISDNs": (_el: _Element): void => {
+            mSISDNs = $._decode_implicit<MSISDN[]>(() => $._decodeSequenceOf<MSISDN>(() => _decode_MSISDN))(_el);
+            if (mSISDNs.length < 1) {
+                throw new ASN1SizeError("IMSHSSSubscriberRecordChange.mSISDNs violates SIZE constraint");
+            }
+        },
         "iMEI": (_el: _Element): void => { iMEI = $._decode_implicit<IMEI>(() => _decode_IMEI)(_el); },
         "previousIMEI": (_el: _Element): void => { previousIMEI = $._decode_implicit<IMEI>(() => _decode_IMEI)(_el); }
     };

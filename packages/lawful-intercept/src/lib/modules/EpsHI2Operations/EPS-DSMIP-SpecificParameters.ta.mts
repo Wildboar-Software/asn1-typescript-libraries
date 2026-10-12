@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -212,13 +214,50 @@ function _decode_EPS_DSMIP_SpecificParameters (el: _Element): EPS_DSMIP_Specific
     let targetPDN_GW_Address: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "lifetime": (_el: _Element): void => { lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "requestedIPv6HomePrefix": (_el: _Element): void => { requestedIPv6HomePrefix = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "homeAddress": (_el: _Element): void => { homeAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "iPv4careOfAddress": (_el: _Element): void => { iPv4careOfAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "iPv6careOfAddress": (_el: _Element): void => { iPv6careOfAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "aPN": (_el: _Element): void => { aPN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "status": (_el: _Element): void => { status = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "lifetime": (_el: _Element): void => {
+            lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof lifetime === "bigint" ? lifetime : BigInt(lifetime);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("EPS_DSMIP_SpecificParameters.lifetime violates INTEGER range");
+            }
+        },
+        "requestedIPv6HomePrefix": (_el: _Element): void => {
+            requestedIPv6HomePrefix = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (requestedIPv6HomePrefix.length < 25 || requestedIPv6HomePrefix.length > 25) {
+                throw new ASN1SizeError("EPS_DSMIP_SpecificParameters.requestedIPv6HomePrefix violates SIZE constraint");
+            }
+        },
+        "homeAddress": (_el: _Element): void => {
+            homeAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (homeAddress.length < 8 || homeAddress.length > 8) {
+                throw new ASN1SizeError("EPS_DSMIP_SpecificParameters.homeAddress violates SIZE constraint");
+            }
+        },
+        "iPv4careOfAddress": (_el: _Element): void => {
+            iPv4careOfAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (iPv4careOfAddress.length < 8 || iPv4careOfAddress.length > 8) {
+                throw new ASN1SizeError("EPS_DSMIP_SpecificParameters.iPv4careOfAddress violates SIZE constraint");
+            }
+        },
+        "iPv6careOfAddress": (_el: _Element): void => {
+            iPv6careOfAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (iPv6careOfAddress.length < 16 || iPv6careOfAddress.length > 16) {
+                throw new ASN1SizeError("EPS_DSMIP_SpecificParameters.iPv6careOfAddress violates SIZE constraint");
+            }
+        },
+        "aPN": (_el: _Element): void => {
+            aPN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (aPN.length < 1 || aPN.length > 100) {
+                throw new ASN1SizeError("EPS_DSMIP_SpecificParameters.aPN violates SIZE constraint");
+            }
+        },
+        "status": (_el: _Element): void => {
+            status = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof status === "bigint" ? status : BigInt(status);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("EPS_DSMIP_SpecificParameters.status violates INTEGER range");
+            }
+        },
         "hSS-AAA-address": (_el: _Element): void => { hSS_AAA_address = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "targetPDN-GW-Address": (_el: _Element): void => { targetPDN_GW_Address = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
     };

@@ -3,7 +3,8 @@ import {
     BOOLEAN,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
@@ -170,11 +171,26 @@ function _decode_StartOfInterceptForRegisteredRCSUser (el: _Element): StartOfInt
     let additionalInstanceLocation: OPTIONAL<AdditionalInstanceLocation[]>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "rCSTargetIdentities": (_el: _Element): void => { rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el); },
-        "rCSRegistrationInformation": (_el: _Element): void => { rCSRegistrationInformation = $._decode_implicit<RCSRegistrationInformation[]>(() => $._decodeSequenceOf<RCSRegistrationInformation>(() => _decode_RCSRegistrationInformation))(_el); },
+        "rCSTargetIdentities": (_el: _Element): void => {
+            rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);
+            if (rCSTargetIdentities.length < 1) {
+                throw new ASN1SizeError("StartOfInterceptForRegisteredRCSUser.rCSTargetIdentities violates SIZE constraint");
+            }
+        },
+        "rCSRegistrationInformation": (_el: _Element): void => {
+            rCSRegistrationInformation = $._decode_implicit<RCSRegistrationInformation[]>(() => $._decodeSequenceOf<RCSRegistrationInformation>(() => _decode_RCSRegistrationInformation))(_el);
+            if (rCSRegistrationInformation.length < 1) {
+                throw new ASN1SizeError("StartOfInterceptForRegisteredRCSUser.rCSRegistrationInformation violates SIZE constraint");
+            }
+        },
         "userOnline": (_el: _Element): void => { userOnline = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "location": (_el: _Element): void => { location = $._decode_implicit<Location>(() => _decode_Location)(_el); },
-        "additionalInstanceLocation": (_el: _Element): void => { additionalInstanceLocation = $._decode_implicit<AdditionalInstanceLocation[]>(() => $._decodeSequenceOf<AdditionalInstanceLocation>(() => _decode_AdditionalInstanceLocation))(_el); }
+        "additionalInstanceLocation": (_el: _Element): void => {
+            additionalInstanceLocation = $._decode_implicit<AdditionalInstanceLocation[]>(() => $._decodeSequenceOf<AdditionalInstanceLocation>(() => _decode_AdditionalInstanceLocation))(_el);
+            if (additionalInstanceLocation.length < 1) {
+                throw new ASN1SizeError("StartOfInterceptForRegisteredRCSUser.additionalInstanceLocation violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_StartOfInterceptForRegisteredRCSUser,

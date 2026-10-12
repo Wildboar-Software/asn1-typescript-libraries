@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AMFPointer = INTEGER;
-export const _decode_AMFPointer: $.ASN1Decoder<AMFPointer> = $._decodeInteger;
+export const _decode_AMFPointer: $.ASN1Decoder<AMFPointer> = (el: _Element): AMFPointer => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 63n) {
+        throw new ASN1OverflowError("AMFPointer violates INTEGER range");
+    }
+    return value;
+};
 export const _encode_AMFPointer: $.ASN1Encoder<AMFPointer> = $._encodeInteger;
 
 

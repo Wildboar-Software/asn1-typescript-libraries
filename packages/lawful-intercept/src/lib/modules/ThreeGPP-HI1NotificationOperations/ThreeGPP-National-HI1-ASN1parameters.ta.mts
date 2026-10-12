@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OPTIONAL,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -142,7 +143,12 @@ function _decode_ThreeGPP_National_HI1_ASN1parameters (el: _Element): ThreeGPP_N
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
-        "countryCode": (_el: _Element): void => { countryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); }
+        "countryCode": (_el: _Element): void => {
+            countryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (countryCode.length < 2 || countryCode.length > 2) {
+                throw new ASN1SizeError("ThreeGPP_National_HI1_ASN1parameters.countryCode violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ThreeGPP_National_HI1_ASN1parameters,

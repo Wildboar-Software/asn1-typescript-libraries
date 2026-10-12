@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
@@ -175,8 +176,18 @@ function _decode_RCSCapabilityDiscovery (el: _Element): RCSCapabilityDiscovery {
     let location: OPTIONAL<Location>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "rCSTargetIdentities": (_el: _Element): void => { rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el); },
-        "rCSTargetContactIdentities": (_el: _Element): void => { rCSTargetContactIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el); },
+        "rCSTargetIdentities": (_el: _Element): void => {
+            rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);
+            if (rCSTargetIdentities.length < 1) {
+                throw new ASN1SizeError("RCSCapabilityDiscovery.rCSTargetIdentities violates SIZE constraint");
+            }
+        },
+        "rCSTargetContactIdentities": (_el: _Element): void => {
+            rCSTargetContactIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);
+            if (rCSTargetContactIdentities.length < 1) {
+                throw new ASN1SizeError("RCSCapabilityDiscovery.rCSTargetContactIdentities violates SIZE constraint");
+            }
+        },
         "sIPMessage": (_el: _Element): void => { sIPMessage = $._decode_explicit<IMSPayload>(() => _decode_IMSPayload)(_el); },
         "direction": (_el: _Element): void => { direction = $._decode_implicit<Direction>(() => _decode_Direction)(_el); },
         "location": (_el: _Element): void => { location = $._decode_implicit<Location>(() => _decode_Location)(_el); }

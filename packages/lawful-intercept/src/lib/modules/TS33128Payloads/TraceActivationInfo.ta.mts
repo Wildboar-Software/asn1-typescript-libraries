@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../TS33128Payloads/TraceDepth.ta.mjs";
@@ -181,8 +182,18 @@ function _decode_TraceActivationInfo (el: _Element): TraceActivationInfo {
     let mDTConfiguration: OPTIONAL<MDTConfiguration>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "nGRANTraceID": (_el: _Element): void => { nGRANTraceID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "interfacestoTrace": (_el: _Element): void => { interfacestoTrace = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(_el); },
+        "nGRANTraceID": (_el: _Element): void => {
+            nGRANTraceID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (nGRANTraceID.length < 8 || nGRANTraceID.length > 8) {
+                throw new ASN1SizeError("TraceActivationInfo.nGRANTraceID violates SIZE constraint");
+            }
+        },
+        "interfacestoTrace": (_el: _Element): void => {
+            interfacestoTrace = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(_el);
+            if (interfacestoTrace.length < 8 || interfacestoTrace.length > 8) {
+                throw new ASN1SizeError("TraceActivationInfo.interfacestoTrace violates SIZE constraint");
+            }
+        },
         "traceDepth": (_el: _Element): void => { traceDepth = $._decode_implicit<TraceDepth>(() => _decode_TraceDepth)(_el); },
         "traceCollectionEntityIPAddress": (_el: _Element): void => { traceCollectionEntityIPAddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(_el); },
         "mDTConfiguration": (_el: _Element): void => { mDTConfiguration = $._decode_implicit<MDTConfiguration>(() => _decode_MDTConfiguration)(_el); }

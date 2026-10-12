@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_GeographicalCoordinates_latitudeSign, _encode_GeographicalCoordinates_latitudeSign, _enum_for_GeographicalCoordinates_latitudeSign, GeographicalCoordinates_latitudeSign } from "../HI2Operations/GeographicalCoordinates-latitudeSign.ta.mjs";
@@ -160,7 +161,19 @@ function _decode_GeographicalCoordinates (el: _Element): GeographicalCoordinates
     let longitude!: INTEGER;
     latitudeSign = _decode_GeographicalCoordinates_latitudeSign(sequence[0]);
     latitude = $._decodeInteger(sequence[1]);
+    {
+        const _n = typeof latitude === "bigint" ? latitude : BigInt(latitude);
+        if (_n < 0n || _n > 8388607n) {
+            throw new ASN1OverflowError("GeographicalCoordinates.latitude violates INTEGER range");
+        }
+    }
     longitude = $._decodeInteger(sequence[2]);
+    {
+        const _n = typeof longitude === "bigint" ? longitude : BigInt(longitude);
+        if (_n < -8388608n || _n > 8388607n) {
+            throw new ASN1OverflowError("GeographicalCoordinates.longitude violates INTEGER range");
+        }
+    }
     return new GeographicalCoordinates(
         latitudeSign,
         latitude,

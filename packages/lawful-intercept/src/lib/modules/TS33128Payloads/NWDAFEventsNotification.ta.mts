@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -152,6 +153,11 @@ function _decode_NWDAFEventsNotification (el: _Element): NWDAFEventsNotification
     let nWDAFEventsNotification!: SBIType;
     sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(sequence[0]);
     nWDAFNotifiedEventList = $._decode_implicit<NWDAFEvent[]>(() => $._decodeSequenceOf<NWDAFEvent>(() => _decode_NWDAFEvent))(sequence[1]);
+    {
+        if (nWDAFNotifiedEventList.length < 1) {
+            throw new ASN1SizeError("NWDAFEventsNotification.nWDAFNotifiedEventList violates SIZE constraint");
+        }
+    }
     nWDAFEventsNotification = $._decode_implicit<SBIType>(() => _decode_SBIType)(sequence[2]);
     return new NWDAFEventsNotification(
         sUPI,

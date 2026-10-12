@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCServiceIdentitiesOrGroupID, _decode_MCServiceIdentitiesOrGroupID, _encode_MCServiceIdentitiesOrGroupID } from "../TS33128Payloads/MCServiceIdentitiesOrGroupID.ta.mjs";
@@ -216,7 +217,12 @@ function _decode_MCXStartOfInterceptionWithEstablishedSession (el: _Element): MC
         "mCServiceDirection": (_el: _Element): void => { mCServiceDirection = $._decode_implicit<Direction>(() => _decode_Direction)(_el); },
         "mCServiceOriginatingID": (_el: _Element): void => { mCServiceOriginatingID = $._decode_implicit<MCServiceID>(() => _decode_MCServiceID)(_el); },
         "mCServiceSessionInfo": (_el: _Element): void => { mCServiceSessionInfo = $._decode_implicit<MCServiceSessionInfo>(() => _decode_MCServiceSessionInfo)(_el); },
-        "mCServiceParticipants": (_el: _Element): void => { mCServiceParticipants = $._decode_implicit<MCServiceID[]>(() => $._decodeSequenceOf<MCServiceID>(() => _decode_MCServiceID))(_el); },
+        "mCServiceParticipants": (_el: _Element): void => {
+            mCServiceParticipants = $._decode_implicit<MCServiceID[]>(() => $._decodeSequenceOf<MCServiceID>(() => _decode_MCServiceID))(_el);
+            if (mCServiceParticipants.length < 1) {
+                throw new ASN1SizeError("MCXStartOfInterceptionWithEstablishedSession.mCServiceParticipants violates SIZE constraint");
+            }
+        },
         "location": (_el: _Element): void => { location = $._decode_implicit<Location>(() => _decode_Location)(_el); },
         "mCServiceMediaStreamAvailable": (_el: _Element): void => { mCServiceMediaStreamAvailable = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "mCServiceBearerCapability": (_el: _Element): void => { mCServiceBearerCapability = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }

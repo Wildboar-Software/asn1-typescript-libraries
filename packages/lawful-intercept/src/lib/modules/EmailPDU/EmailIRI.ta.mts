@@ -6,7 +6,9 @@ import {
     RELATIVE_OID,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { E_mail_Event, _decode_E_mail_Event, _encode_E_mail_Event, _enum_for_E_mail_Event } from "../EmailPDU/E-mail-Event.ta.mjs";
@@ -376,10 +378,21 @@ function _decode_EmailIRI (el: _Element): EmailIRI {
         "server-Octets-Sent": (_el: _Element): void => { server_Octets_Sent = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "client-Octets-Sent": (_el: _Element): void => { client_Octets_Sent = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "protocol-ID": (_el: _Element): void => { protocol_ID = $._decode_implicit<E_mail_Protocol>(() => _decode_E_mail_Protocol)(_el); },
-        "e-mail-Sender": (_el: _Element): void => { e_mail_Sender = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "e_mail_Sender": (_el: _Element): void => {
+            e_mail_Sender = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (e_mail_Sender.length > 255) {
+                throw new ASN1SizeError("EmailIRI.e_mail_Sender violates SIZE constraint");
+            }
+        },
         "e-mail-Recipients": (_el: _Element): void => { e_mail_Recipients = $._decode_implicit<E_mail_Address_List>(() => _decode_E_mail_Address_List)(_el); },
         "status": (_el: _Element): void => { status = $._decode_implicit<E_mail_Status>(() => _decode_E_mail_Status)(_el); },
-        "total-Recipient-Count": (_el: _Element): void => { total_Recipient_Count = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "total_Recipient_Count": (_el: _Element): void => {
+            total_Recipient_Count = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof total_Recipient_Count === "bigint" ? total_Recipient_Count : BigInt(total_Recipient_Count);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("EmailIRI.total_Recipient_Count violates INTEGER range");
+            }
+        },
         "message-ID": (_el: _Element): void => { message_ID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "nationalParameter": (_el: _Element): void => { nationalParameter = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "national-EM-ASN1parameters": (_el: _Element): void => { national_EM_ASN1parameters = $._decode_implicit<National_EM_ASN1parameters>(() => _decode_National_EM_ASN1parameters)(_el); },

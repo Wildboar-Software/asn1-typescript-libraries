@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../LI-PS-PDU/LawfulInterceptionIdentifier.ta.mjs";
@@ -254,15 +256,41 @@ function _decode_PSHeader (el: _Element): PSHeader {
     const callbacks: $.DecodingMap = {
         "li-psDomainId": (_el: _Element): void => { li_psDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
-        "authorizationCountryCode": (_el: _Element): void => { authorizationCountryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
+        "authorizationCountryCode": (_el: _Element): void => {
+            authorizationCountryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (authorizationCountryCode.length < 2 || authorizationCountryCode.length > 2) {
+                throw new ASN1SizeError("PSHeader.authorizationCountryCode violates SIZE constraint");
+            }
+        },
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
-        "sequenceNumber": (_el: _Element): void => { sequenceNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "sequenceNumber": (_el: _Element): void => {
+            sequenceNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof sequenceNumber === "bigint" ? sequenceNumber : BigInt(sequenceNumber);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("PSHeader.sequenceNumber violates INTEGER range");
+            }
+        },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },
-        "interceptionPointID": (_el: _Element): void => { interceptionPointID = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
+        "interceptionPointID": (_el: _Element): void => {
+            interceptionPointID = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (interceptionPointID.length < 1 || interceptionPointID.length > 8) {
+                throw new ASN1SizeError("PSHeader.interceptionPointID violates SIZE constraint");
+            }
+        },
         "microSecondTimeStamp": (_el: _Element): void => { microSecondTimeStamp = $._decode_implicit<MicroSecondTimeStamp>(() => _decode_MicroSecondTimeStamp)(_el); },
         "timeStampQualifier": (_el: _Element): void => { timeStampQualifier = $._decode_implicit<TimeStampQualifier>(() => _decode_TimeStampQualifier)(_el); },
-        "extendedInterceptionPointID": (_el: _Element): void => { extendedInterceptionPointID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "networkFunctionIdentifier": (_el: _Element): void => { networkFunctionIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "extendedInterceptionPointID": (_el: _Element): void => {
+            extendedInterceptionPointID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (extendedInterceptionPointID.length < 1 || extendedInterceptionPointID.length > 65535) {
+                throw new ASN1SizeError("PSHeader.extendedInterceptionPointID violates SIZE constraint");
+            }
+        },
+        "networkFunctionIdentifier": (_el: _Element): void => {
+            networkFunctionIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (networkFunctionIdentifier.length < 1 || networkFunctionIdentifier.length > 65535) {
+                throw new ASN1SizeError("PSHeader.networkFunctionIdentifier violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_PSHeader,

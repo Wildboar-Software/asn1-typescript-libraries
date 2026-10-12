@@ -5,7 +5,8 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IRI_Parameters_iRIversion, _decode_IRI_Parameters_iRIversion, _encode_IRI_Parameters_iRIversion, _enum_for_IRI_Parameters_iRIversion } from "../UmtsHI2Operations/IRI-Parameters-iRIversion.ta.mjs";
@@ -836,7 +837,12 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
         "initiator": (_el: _Element): void => { initiator = $._decode_implicit<IRI_Parameters_initiator>(() => _decode_IRI_Parameters_initiator)(_el); },
         "locationOfTheTarget": (_el: _Element): void => { locationOfTheTarget = $._decode_implicit<Location>(() => _decode_Location)(_el); },
-        "partyInformation": (_el: _Element): void => { partyInformation = $._decode_implicit<PartyInformation[]>(() => $._decodeSetOf<PartyInformation>(() => _decode_PartyInformation))(_el); },
+        "partyInformation": (_el: _Element): void => {
+            partyInformation = $._decode_implicit<PartyInformation[]>(() => $._decodeSetOf<PartyInformation>(() => _decode_PartyInformation))(_el);
+            if (partyInformation.length < 1 || partyInformation.length > 10) {
+                throw new ASN1SizeError("IRI_Parameters.partyInformation violates SIZE constraint");
+            }
+        },
         "serviceCenterAddress": (_el: _Element): void => { serviceCenterAddress = $._decode_implicit<PartyInformation>(() => _decode_PartyInformation)(_el); },
         "sMS": (_el: _Element): void => { sMS = $._decode_implicit<SMS_report>(() => _decode_SMS_report)(_el); },
         "national-Parameters": (_el: _Element): void => { national_Parameters = $._decode_implicit<National_Parameters>(() => _decode_National_Parameters)(_el); },
@@ -851,8 +857,18 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
         "sMSTerminatingAddress": (_el: _Element): void => { sMSTerminatingAddress = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
         "iMSevent": (_el: _Element): void => { iMSevent = $._decode_implicit<IMSevent>(() => _decode_IMSevent)(_el); },
         "sIPMessage": (_el: _Element): void => { sIPMessage = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "servingSGSN-number": (_el: _Element): void => { servingSGSN_number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "servingSGSN-address": (_el: _Element): void => { servingSGSN_address = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "servingSGSN_number": (_el: _Element): void => {
+            servingSGSN_number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (servingSGSN_number.length < 1 || servingSGSN_number.length > 20) {
+                throw new ASN1SizeError("IRI_Parameters.servingSGSN_number violates SIZE constraint");
+            }
+        },
+        "servingSGSN_address": (_el: _Element): void => {
+            servingSGSN_address = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (servingSGSN_address.length < 5 || servingSGSN_address.length > 17) {
+                throw new ASN1SizeError("IRI_Parameters.servingSGSN_address violates SIZE constraint");
+            }
+        },
         "ldiEvent": (_el: _Element): void => { ldiEvent = $._decode_implicit<LDIevent>(() => _decode_LDIevent)(_el); },
         "correlation": (_el: _Element): void => { correlation = $._decode_explicit<CorrelationValues>(() => _decode_CorrelationValues)(_el); },
         "mediaDecryption-info": (_el: _Element): void => { mediaDecryption_info = $._decode_implicit<MediaDecryption_info>(() => _decode_MediaDecryption_info)(_el); },
@@ -861,7 +877,12 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
         "sipMessageHeaderAnswer": (_el: _Element): void => { sipMessageHeaderAnswer = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "sdpOffer": (_el: _Element): void => { sdpOffer = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "sdpAnswer": (_el: _Element): void => { sdpAnswer = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "uLITimestamp": (_el: _Element): void => { uLITimestamp = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "uLITimestamp": (_el: _Element): void => {
+            uLITimestamp = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (uLITimestamp.length < 8 || uLITimestamp.length > 8) {
+                throw new ASN1SizeError("IRI_Parameters.uLITimestamp violates SIZE constraint");
+            }
+        },
         "packetDataHeaderInformation": (_el: _Element): void => { packetDataHeaderInformation = $._decode_explicit<PacketDataHeaderInformation>(() => _decode_PacketDataHeaderInformation)(_el); },
         "mediaSecFailureIndication": (_el: _Element): void => { mediaSecFailureIndication = $._decode_implicit<MediaSecFailureIndication>(() => _decode_MediaSecFailureIndication)(_el); },
         "pANI-Header-Info": (_el: _Element): void => { pANI_Header_Info = $._decode_implicit<PANI_Header_Info[]>(() => $._decodeSequenceOf<PANI_Header_Info>(() => _decode_PANI_Header_Info))(_el); },

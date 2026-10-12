@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FiveGSSubscriberID, _decode_FiveGSSubscriberID, _encode_FiveGSSubscriberID } from "../TS33128Payloads/FiveGSSubscriberID.ta.mjs";
@@ -123,6 +124,11 @@ function _decode_FiveGSSubscriberIDs (el: _Element): FiveGSSubscriberIDs {
     sequence[0].name = "fiveGSSubscriberID";
     let fiveGSSubscriberID!: FiveGSSubscriberID[];
     fiveGSSubscriberID = $._decode_implicit<FiveGSSubscriberID[]>(() => $._decodeSequenceOf<FiveGSSubscriberID>(() => _decode_FiveGSSubscriberID))(sequence[0]);
+    {
+        if (fiveGSSubscriberID.length < 1) {
+            throw new ASN1SizeError("FiveGSSubscriberIDs.fiveGSSubscriberID violates SIZE constraint");
+        }
+    }
     return new FiveGSSubscriberIDs(
         fiveGSSubscriberID,
         sequence.slice(1),

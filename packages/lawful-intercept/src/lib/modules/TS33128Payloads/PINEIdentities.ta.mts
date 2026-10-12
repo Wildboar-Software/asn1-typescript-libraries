@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PINEIdentity, _decode_PINEIdentity, _encode_PINEIdentity } from "../TS33128Payloads/PINEIdentity.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_PINEIdentities: $.ASN1Decoder<PINEIdentities> | null = n
 export
 function _decode_PINEIdentities (el: _Element): PINEIdentities {
     if (!_cached_decoder_for_PINEIdentities) { _cached_decoder_for_PINEIdentities = $._decodeSequenceOf<PINEIdentity>(() => _decode_PINEIdentity); }
-    return _cached_decoder_for_PINEIdentities(el);
+    const _value = _cached_decoder_for_PINEIdentities(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("PINEIdentities violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_PINEIdentities: $.ASN1Encoder<PINEIdentities> | null = null;

@@ -4,7 +4,8 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Version, _decode_Version, _encode_Version, _enum_for_Version } from "../Umts-HI3-PS/Version.ta.mjs";
@@ -247,7 +248,13 @@ function _decode_ULIC_header (el: _Element): ULIC_header {
         "lIID": (_el: _Element): void => { lIID = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "correlation-Number": (_el: _Element): void => { correlation_Number = $._decode_implicit<GPRSCorrelationNumber>(() => _decode_GPRSCorrelationNumber)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "sequence-number": (_el: _Element): void => { sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "sequence_number": (_el: _Element): void => {
+            sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof sequence_number === "bigint" ? sequence_number : BigInt(sequence_number);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("ULIC_header.sequence_number violates INTEGER range");
+            }
+        },
         "t-PDU-direction": (_el: _Element): void => { t_PDU_direction = $._decode_implicit<TPDU_direction>(() => _decode_TPDU_direction)(_el); },
         "national-HI3-ASN1parameters": (_el: _Element): void => { national_HI3_ASN1parameters = $._decode_implicit<National_HI3_ASN1parameters>(() => _decode_National_HI3_ASN1parameters)(_el); },
         "ice-type": (_el: _Element): void => { ice_type = $._decode_implicit<ICE_type>(() => _decode_ICE_type)(_el); }

@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13PSKIdentity, _decode_TLS13PSKIdentity, _encode_TLS13PSKIdentity } from "../TS33128Payloads/TLS13PSKIdentity.ta.mjs";
@@ -137,6 +138,11 @@ function _decode_TLS13OfferedPSK (el: _Element): TLS13OfferedPSK {
     let binder!: OCTET_STRING;
     identity = $._decode_implicit<TLS13PSKIdentity>(() => _decode_TLS13PSKIdentity)(sequence[0]);
     binder = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    {
+        if (binder.length < 32 || binder.length > 255) {
+            throw new ASN1SizeError("TLS13OfferedPSK.binder violates SIZE constraint");
+        }
+    }
     return new TLS13OfferedPSK(
         identity,
         binder,

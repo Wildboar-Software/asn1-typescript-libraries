@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
@@ -240,10 +241,25 @@ function _decode_AMFUEServiceAccept (el: _Element): AMFUEServiceAccept {
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "serviceMessageIdentity": (_el: _Element): void => { serviceMessageIdentity = $._decode_explicit<ServiceMessageIdentity>(() => _decode_ServiceMessageIdentity)(_el); },
-        "serviceType": (_el: _Element): void => { serviceType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "serviceType": (_el: _Element): void => {
+            serviceType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (serviceType.length < 1 || serviceType.length > 1) {
+                throw new ASN1SizeError("AMFUEServiceAccept.serviceType violates SIZE constraint");
+            }
+        },
         "fiveGTMSI": (_el: _Element): void => { fiveGTMSI = $._decode_implicit<FiveGTMSI>(() => _decode_FiveGTMSI)(_el); },
-        "uplinkDataStatus": (_el: _Element): void => { uplinkDataStatus = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "pDUSessionStatus": (_el: _Element): void => { pDUSessionStatus = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "uplinkDataStatus": (_el: _Element): void => {
+            uplinkDataStatus = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (uplinkDataStatus.length < 2 || uplinkDataStatus.length > 32) {
+                throw new ASN1SizeError("AMFUEServiceAccept.uplinkDataStatus violates SIZE constraint");
+            }
+        },
+        "pDUSessionStatus": (_el: _Element): void => {
+            pDUSessionStatus = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (pDUSessionStatus.length < 2 || pDUSessionStatus.length > 32) {
+                throw new ASN1SizeError("AMFUEServiceAccept.pDUSessionStatus violates SIZE constraint");
+            }
+        },
         "deprecatedUERequestType": (_el: _Element): void => { deprecatedUERequestType = $._decode_implicit<FiveGSMRequestType>(() => _decode_FiveGSMRequestType)(_el); },
         "pagingRestriction": (_el: _Element): void => { pagingRestriction = $._decode_implicit<PagingRestrictionIndicator>(() => _decode_PagingRestrictionIndicator)(_el); },
         "forbiddenTAIList": (_el: _Element): void => { forbiddenTAIList = $._decode_implicit<TAIList>(() => _decode_TAIList)(_el); },

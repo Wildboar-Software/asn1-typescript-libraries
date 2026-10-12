@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type GPRSOperationErrorCode = OCTET_STRING; // OctetStringType
-export const _decode_GPRSOperationErrorCode: $.ASN1Decoder<GPRSOperationErrorCode> = $._decodeOctetString;
+export const _decode_GPRSOperationErrorCode: $.ASN1Decoder<GPRSOperationErrorCode> = (el: _Element): GPRSOperationErrorCode => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 2 || value.length > 2) {
+        throw new ASN1SizeError("GPRSOperationErrorCode violates SIZE constraint");
+    }
+    return value;
+};
 export const _encode_GPRSOperationErrorCode: $.ASN1Encoder<GPRSOperationErrorCode> = $._encodeOctetString;
 
 

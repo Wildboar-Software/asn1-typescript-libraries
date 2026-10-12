@@ -4,9 +4,12 @@ import {
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1Error,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { himOperationId } from "../HIManagementOperations/himOperationId.va.mjs";
 
 
 
@@ -144,9 +147,24 @@ function _decode_Password_Name (el: _Element): Password_Name {
     let name!: OCTET_STRING;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
-        "password": (_el: _Element): void => { password = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "name": (_el: _Element): void => { name = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "domainID": (_el: _Element): void => {
+            domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);
+            if (!domainID.isEqualTo(himOperationId)) {
+                throw new ASN1Error("Password_Name.domainID violates OBJECT IDENTIFIER constraint");
+            }
+        },
+        "password": (_el: _Element): void => {
+            password = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (password.length < 1 || password.length > 25) {
+                throw new ASN1SizeError("Password_Name.password violates SIZE constraint");
+            }
+        },
+        "name": (_el: _Element): void => {
+            name = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (name.length < 1 || name.length > 25) {
+                throw new ASN1SizeError("Password_Name.name violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_Password_Name,

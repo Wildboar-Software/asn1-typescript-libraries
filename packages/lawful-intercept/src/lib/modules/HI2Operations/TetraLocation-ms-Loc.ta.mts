@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -145,9 +146,27 @@ function _decode_TetraLocation_ms_Loc (el: _Element): TetraLocation_ms_Loc {
     let lai!: INTEGER;
     let ci: OPTIONAL<INTEGER>;
     const callbacks: $.DecodingMap = {
-        "mcc": (_el: _Element): void => { mcc = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "mnc": (_el: _Element): void => { mnc = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "lai": (_el: _Element): void => { lai = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "mcc": (_el: _Element): void => {
+            mcc = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof mcc === "bigint" ? mcc : BigInt(mcc);
+            if (_n < 0n || _n > 1023n) {
+                throw new ASN1OverflowError("TetraLocation_ms_Loc.mcc violates INTEGER range");
+            }
+        },
+        "mnc": (_el: _Element): void => {
+            mnc = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof mnc === "bigint" ? mnc : BigInt(mnc);
+            if (_n < 0n || _n > 16383n) {
+                throw new ASN1OverflowError("TetraLocation_ms_Loc.mnc violates INTEGER range");
+            }
+        },
+        "lai": (_el: _Element): void => {
+            lai = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof lai === "bigint" ? lai : BigInt(lai);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("TetraLocation_ms_Loc.lai violates INTEGER range");
+            }
+        },
         "ci": (_el: _Element): void => { ci = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }
     };
     $._parse_sequence(el, callbacks,

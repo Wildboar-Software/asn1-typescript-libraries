@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type VLANID = INTEGER;
-export const _decode_VLANID: $.ASN1Decoder<VLANID> = $._decodeInteger;
+export const _decode_VLANID: $.ASN1Decoder<VLANID> = (el: _Element): VLANID => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 4095n) {
+        throw new ASN1OverflowError("VLANID violates INTEGER range");
+    }
+    return value;
+};
 export const _encode_VLANID: $.ASN1Encoder<VLANID> = $._encodeInteger;
 
 

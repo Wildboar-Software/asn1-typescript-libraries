@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13CerificateEntry, _decode_TLS13CerificateEntry, _encode_TLS13CerificateEntry } from "../TS33128Payloads/TLS13CerificateEntry.ta.mjs";
@@ -136,6 +137,11 @@ function _decode_TLS13Certificate (el: _Element): TLS13Certificate {
     let tLSCertificateRequestContext!: OCTET_STRING;
     let tLSCertificateList!: TLS13CerificateEntry[];
     tLSCertificateRequestContext = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    {
+        if (tLSCertificateRequestContext.length > 255) {
+            throw new ASN1SizeError("TLS13Certificate.tLSCertificateRequestContext violates SIZE constraint");
+        }
+    }
     tLSCertificateList = $._decode_implicit<TLS13CerificateEntry[]>(() => $._decodeSequenceOf<TLS13CerificateEntry>(() => _decode_TLS13CerificateEntry))(sequence[1]);
     return new TLS13Certificate(
         tLSCertificateRequestContext,

@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING
+    BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -147,8 +148,23 @@ function _decode_VLANTag (el: _Element): VLANTag {
     let cFI!: BIT_STRING;
     let vLANID!: BIT_STRING;
     priority = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(sequence[0]);
+    {
+        if (priority.length < 3 || priority.length > 3) {
+            throw new ASN1SizeError("VLANTag.priority violates SIZE constraint");
+        }
+    }
     cFI = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(sequence[1]);
+    {
+        if (cFI.length < 1 || cFI.length > 1) {
+            throw new ASN1SizeError("VLANTag.cFI violates SIZE constraint");
+        }
+    }
     vLANID = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(sequence[2]);
+    {
+        if (vLANID.length < 12 || vLANID.length > 12) {
+            throw new ASN1SizeError("VLANTag.vLANID violates SIZE constraint");
+        }
+    }
     return new VLANTag(
         priority,
         cFI,

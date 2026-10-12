@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -211,16 +212,66 @@ function _decode_TCPInformation (el: _Element): TCPInformation {
     let urgentPointer: OPTIONAL<OCTET_STRING>;
     let options: OPTIONAL<OCTET_STRING>;
     const callbacks: $.DecodingMap = {
-        "sourcePort": (_el: _Element): void => { sourcePort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "destinationPort": (_el: _Element): void => { destinationPort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "sequenceNumber": (_el: _Element): void => { sequenceNumber = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "ackNumber": (_el: _Element): void => { ackNumber = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "dataOffset": (_el: _Element): void => { dataOffset = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(_el); },
-        "controlBits": (_el: _Element): void => { controlBits = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(_el); },
-        "windowSize": (_el: _Element): void => { windowSize = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "checkSum": (_el: _Element): void => { checkSum = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "urgentPointer": (_el: _Element): void => { urgentPointer = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "options": (_el: _Element): void => { options = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "sourcePort": (_el: _Element): void => {
+            sourcePort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (sourcePort.length < 2 || sourcePort.length > 2) {
+                throw new ASN1SizeError("TCPInformation.sourcePort violates SIZE constraint");
+            }
+        },
+        "destinationPort": (_el: _Element): void => {
+            destinationPort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (destinationPort.length < 2 || destinationPort.length > 2) {
+                throw new ASN1SizeError("TCPInformation.destinationPort violates SIZE constraint");
+            }
+        },
+        "sequenceNumber": (_el: _Element): void => {
+            sequenceNumber = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (sequenceNumber.length < 4 || sequenceNumber.length > 4) {
+                throw new ASN1SizeError("TCPInformation.sequenceNumber violates SIZE constraint");
+            }
+        },
+        "ackNumber": (_el: _Element): void => {
+            ackNumber = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (ackNumber.length < 4 || ackNumber.length > 4) {
+                throw new ASN1SizeError("TCPInformation.ackNumber violates SIZE constraint");
+            }
+        },
+        "dataOffset": (_el: _Element): void => {
+            dataOffset = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(_el);
+            if (dataOffset.length < 4 || dataOffset.length > 4) {
+                throw new ASN1SizeError("TCPInformation.dataOffset violates SIZE constraint");
+            }
+        },
+        "controlBits": (_el: _Element): void => {
+            controlBits = $._decode_implicit<BIT_STRING>(() => $._decodeBitString)(_el);
+            if (controlBits.length < 6 || controlBits.length > 6) {
+                throw new ASN1SizeError("TCPInformation.controlBits violates SIZE constraint");
+            }
+        },
+        "windowSize": (_el: _Element): void => {
+            windowSize = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (windowSize.length < 2 || windowSize.length > 2) {
+                throw new ASN1SizeError("TCPInformation.windowSize violates SIZE constraint");
+            }
+        },
+        "checkSum": (_el: _Element): void => {
+            checkSum = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (checkSum.length < 2 || checkSum.length > 2) {
+                throw new ASN1SizeError("TCPInformation.checkSum violates SIZE constraint");
+            }
+        },
+        "urgentPointer": (_el: _Element): void => {
+            urgentPointer = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (urgentPointer.length < 2 || urgentPointer.length > 2) {
+                throw new ASN1SizeError("TCPInformation.urgentPointer violates SIZE constraint");
+            }
+        },
+        "options": (_el: _Element): void => {
+            options = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (options.length > 40) {
+                throw new ASN1SizeError("TCPInformation.options violates SIZE constraint");
+            }
+        },
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TCPInformation,

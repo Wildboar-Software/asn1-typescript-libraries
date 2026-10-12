@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -142,10 +143,30 @@ function _decode_UDPInformation (el: _Element): UDPInformation {
     let length: OPTIONAL<OCTET_STRING>;
     let checkSum: OPTIONAL<OCTET_STRING>;
     const callbacks: $.DecodingMap = {
-        "sourcePort": (_el: _Element): void => { sourcePort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "destinationPort": (_el: _Element): void => { destinationPort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "length": (_el: _Element): void => { length = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "checkSum": (_el: _Element): void => { checkSum = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "sourcePort": (_el: _Element): void => {
+            sourcePort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (sourcePort.length < 2 || sourcePort.length > 2) {
+                throw new ASN1SizeError("UDPInformation.sourcePort violates SIZE constraint");
+            }
+        },
+        "destinationPort": (_el: _Element): void => {
+            destinationPort = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (destinationPort.length < 2 || destinationPort.length > 2) {
+                throw new ASN1SizeError("UDPInformation.destinationPort violates SIZE constraint");
+            }
+        },
+        "length": (_el: _Element): void => {
+            length = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (length.length < 2 || length.length > 2) {
+                throw new ASN1SizeError("UDPInformation.length violates SIZE constraint");
+            }
+        },
+        "checkSum": (_el: _Element): void => {
+            checkSum = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (checkSum.length < 2 || checkSum.length > 2) {
+                throw new ASN1SizeError("UDPInformation.checkSum violates SIZE constraint");
+            }
+        },
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_UDPInformation,

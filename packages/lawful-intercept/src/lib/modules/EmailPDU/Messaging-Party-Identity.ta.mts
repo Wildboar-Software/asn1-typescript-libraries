@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { E_mail_Address_List, _decode_E_mail_Address_List, _encode_E_mail_Address_List } from "../EmailPDU/E-mail-Address-List.ta.mjs";
@@ -104,7 +105,32 @@ function _decode_Messaging_Party_Identity (el: _Element): Messaging_Party_Identi
     "CONTEXT 12": [ "sips_uri", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 13": [ "nai", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_Messaging_Party_Identity(el);
+    const _value = _cached_decoder_for_Messaging_Party_Identity(el);
+    if ("msisdn" in _value && _value.msisdn !== undefined) {
+        const _alt = _value.msisdn;
+        if (_alt.length < 1 || _alt.length > 9) {
+            throw new ASN1SizeError("Messaging_Party_Identity.msisdn violates SIZE constraint");
+        }
+    }
+    if ("e164_format" in _value && _value.e164_format !== undefined) {
+        const _alt = _value.e164_format;
+        if (_alt.length < 1 || _alt.length > 25) {
+            throw new ASN1SizeError("Messaging_Party_Identity.e164_format violates SIZE constraint");
+        }
+    }
+    if ("imsi" in _value && _value.imsi !== undefined) {
+        const _alt = _value.imsi;
+        if (_alt.length < 3 || _alt.length > 8) {
+            throw new ASN1SizeError("Messaging_Party_Identity.imsi violates SIZE constraint");
+        }
+    }
+    if ("imei" in _value && _value.imei !== undefined) {
+        const _alt = _value.imei;
+        if (_alt.length < 8 || _alt.length > 8) {
+            throw new ASN1SizeError("Messaging_Party_Identity.imei violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_Messaging_Party_Identity: $.ASN1Encoder<Messaging_Party_Identity> | null = null;

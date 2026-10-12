@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
@@ -248,16 +249,41 @@ function _decode_StartOfInterceptWithEstablisedRCSSession (el: _Element): StartO
     let additionalInstanceLocation: OPTIONAL<AdditionalInstanceLocation[]>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "rCSTargetIdentities": (_el: _Element): void => { rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el); },
-        "participants": (_el: _Element): void => { participants = $._decode_implicit<RCSDestinations[]>(() => $._decodeSequenceOf<RCSDestinations>(() => _decode_RCSDestinations))(_el); },
+        "rCSTargetIdentities": (_el: _Element): void => {
+            rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);
+            if (rCSTargetIdentities.length < 1) {
+                throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.rCSTargetIdentities violates SIZE constraint");
+            }
+        },
+        "participants": (_el: _Element): void => {
+            participants = $._decode_implicit<RCSDestinations[]>(() => $._decodeSequenceOf<RCSDestinations>(() => _decode_RCSDestinations))(_el);
+            if (participants.length < 1) {
+                throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.participants violates SIZE constraint");
+            }
+        },
         "conversationID": (_el: _Element): void => { conversationID = $._decode_implicit<RCSConversationID>(() => _decode_RCSConversationID)(_el); },
         "contributionID": (_el: _Element): void => { contributionID = $._decode_implicit<RCSContributionID>(() => _decode_RCSContributionID)(_el); },
         "rCSSessionType": (_el: _Element): void => { rCSSessionType = $._decode_implicit<RCSSessionType>(() => _decode_RCSSessionType)(_el); },
         "rCSSessionEndpoints": (_el: _Element): void => { rCSSessionEndpoints = $._decode_implicit<RCSSessionEndpoints>(() => _decode_RCSSessionEndpoints)(_el); },
-        "rCSSessionLegs": (_el: _Element): void => { rCSSessionLegs = $._decode_implicit<RCSSIPSessionExchange[]>(() => $._decodeSequenceOf<RCSSIPSessionExchange>(() => _decode_RCSSIPSessionExchange))(_el); },
-        "rCSSessionInformation": (_el: _Element): void => { rCSSessionInformation = $._decode_implicit<RCSSessionContext[]>(() => $._decodeSequenceOf<RCSSessionContext>(() => _decode_RCSSessionContext))(_el); },
+        "rCSSessionLegs": (_el: _Element): void => {
+            rCSSessionLegs = $._decode_implicit<RCSSIPSessionExchange[]>(() => $._decodeSequenceOf<RCSSIPSessionExchange>(() => _decode_RCSSIPSessionExchange))(_el);
+            if (rCSSessionLegs.length < 1) {
+                throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.rCSSessionLegs violates SIZE constraint");
+            }
+        },
+        "rCSSessionInformation": (_el: _Element): void => {
+            rCSSessionInformation = $._decode_implicit<RCSSessionContext[]>(() => $._decodeSequenceOf<RCSSessionContext>(() => _decode_RCSSessionContext))(_el);
+            if (rCSSessionInformation.length < 1) {
+                throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.rCSSessionInformation violates SIZE constraint");
+            }
+        },
         "location": (_el: _Element): void => { location = $._decode_implicit<Location>(() => _decode_Location)(_el); },
-        "additionalInstanceLocation": (_el: _Element): void => { additionalInstanceLocation = $._decode_implicit<AdditionalInstanceLocation[]>(() => $._decodeSequenceOf<AdditionalInstanceLocation>(() => _decode_AdditionalInstanceLocation))(_el); }
+        "additionalInstanceLocation": (_el: _Element): void => {
+            additionalInstanceLocation = $._decode_implicit<AdditionalInstanceLocation[]>(() => $._decodeSequenceOf<AdditionalInstanceLocation>(() => _decode_AdditionalInstanceLocation))(_el);
+            if (additionalInstanceLocation.length < 1) {
+                throw new ASN1SizeError("StartOfInterceptWithEstablisedRCSSession.additionalInstanceLocation violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_StartOfInterceptWithEstablisedRCSSession,

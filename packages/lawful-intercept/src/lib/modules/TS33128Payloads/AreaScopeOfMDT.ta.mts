@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CellID, _decode_CellID, _encode_CellID } from "../TS33128Payloads/CellID.ta.mjs";
@@ -54,7 +55,26 @@ function _decode_AreaScopeOfMDT (el: _Element): AreaScopeOfMDT {
     "CONTEXT 3": [ "pLMNWide", $._decode_implicit<PLMNID>(() => _decode_PLMNID) ],
     "CONTEXT 4": [ "tAIBased", $._decode_implicit<TAI[]>(() => $._decodeSequenceOf<TAI>(() => _decode_TAI)) ]
 }); }
-    return _cached_decoder_for_AreaScopeOfMDT(el);
+    const _value = _cached_decoder_for_AreaScopeOfMDT(el);
+    if ("cellBased" in _value && _value.cellBased !== undefined) {
+        const _alt = _value.cellBased;
+        if (_alt.length < 1) {
+            throw new ASN1SizeError("AreaScopeOfMDT.cellBased violates SIZE constraint");
+        }
+    }
+    if ("tABased" in _value && _value.tABased !== undefined) {
+        const _alt = _value.tABased;
+        if (_alt.length < 1) {
+            throw new ASN1SizeError("AreaScopeOfMDT.tABased violates SIZE constraint");
+        }
+    }
+    if ("tAIBased" in _value && _value.tAIBased !== undefined) {
+        const _alt = _value.tAIBased;
+        if (_alt.length < 1) {
+            throw new ASN1SizeError("AreaScopeOfMDT.tAIBased violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_AreaScopeOfMDT: $.ASN1Encoder<AreaScopeOfMDT> | null = null;

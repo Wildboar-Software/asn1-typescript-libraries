@@ -4,7 +4,9 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkIdentifier, _decode_NetworkIdentifier, _encode_NetworkIdentifier } from "../LI-PS-PDU/NetworkIdentifier.ta.mjs";
@@ -162,8 +164,19 @@ function _decode_CommunicationIdentifier (el: _Element): CommunicationIdentifier
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "networkIdentifier": (_el: _Element): void => { networkIdentifier = $._decode_implicit<NetworkIdentifier>(() => _decode_NetworkIdentifier)(_el); },
-        "communicationIdentityNumber": (_el: _Element): void => { communicationIdentityNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "deliveryCountryCode": (_el: _Element): void => { deliveryCountryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
+        "communicationIdentityNumber": (_el: _Element): void => {
+            communicationIdentityNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof communicationIdentityNumber === "bigint" ? communicationIdentityNumber : BigInt(communicationIdentityNumber);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("CommunicationIdentifier.communicationIdentityNumber violates INTEGER range");
+            }
+        },
+        "deliveryCountryCode": (_el: _Element): void => {
+            deliveryCountryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
+            if (deliveryCountryCode.length < 2 || deliveryCountryCode.length > 2) {
+                throw new ASN1SizeError("CommunicationIdentifier.deliveryCountryCode violates SIZE constraint");
+            }
+        },
         "cINExtension": (_el: _Element): void => { cINExtension = $._decode_explicit<UmtsHI2Operations.CorrelationValues>(() => UmtsHI2Operations._decode_CorrelationValues)(_el); }
     };
     $._parse_sequence(el, callbacks,

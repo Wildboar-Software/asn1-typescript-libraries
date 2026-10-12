@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
@@ -198,7 +199,12 @@ function _decode_MMEPositioningInfoTransfer (el: _Element): MMEPositioningInfoTr
         "gUTI": (_el: _Element): void => { gUTI = $._decode_implicit<GUTI>(() => _decode_GUTI)(_el); },
         "lPPaMessage": (_el: _Element): void => { lPPaMessage = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "lPPMessage": (_el: _Element): void => { lPPMessage = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "mMELCSCorrelationId": (_el: _Element): void => { mMELCSCorrelationId = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "mMELCSCorrelationId": (_el: _Element): void => {
+            mMELCSCorrelationId = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (mMELCSCorrelationId.length < 4 || mMELCSCorrelationId.length > 4) {
+                throw new ASN1SizeError("MMEPositioningInfoTransfer.mMELCSCorrelationId violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_MMEPositioningInfoTransfer,

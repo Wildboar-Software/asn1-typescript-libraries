@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCServiceIdentity, _decode_MCServiceIdentity, _encode_MCServiceIdentity } from "../TS33128Payloads/MCServiceIdentity.ta.mjs";
@@ -145,7 +146,12 @@ function _decode_MCXCMMessage (el: _Element): MCXCMMessage {
     let cMMessage!: CMMessage;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "mCServiceIdentities": (_el: _Element): void => { mCServiceIdentities = $._decode_implicit<MCServiceIdentity[]>(() => $._decodeSequenceOf<MCServiceIdentity>(() => _decode_MCServiceIdentity))(_el); },
+        "mCServiceIdentities": (_el: _Element): void => {
+            mCServiceIdentities = $._decode_implicit<MCServiceIdentity[]>(() => $._decodeSequenceOf<MCServiceIdentity>(() => _decode_MCServiceIdentity))(_el);
+            if (mCServiceIdentities.length < 1) {
+                throw new ASN1SizeError("MCXCMMessage.mCServiceIdentities violates SIZE constraint");
+            }
+        },
         "mcServiceClient": (_el: _Element): void => { mcServiceClient = $._decode_implicit<MCServiceID>(() => _decode_MCServiceID)(_el); },
         "cMMessage": (_el: _Element): void => { cMMessage = $._decode_implicit<CMMessage>(() => _decode_CMMessage)(_el); }
     };

@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CheckType, _encode_CheckType, _enum_for_CheckType, CheckType } from "../LI-PS-PDU/CheckType.ta.mjs";
@@ -196,7 +197,15 @@ function _decode_IntegrityCheck (el: _Element): IntegrityCheck {
     let hashAlgorithm: OPTIONAL<HashAlgorithm>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "includedSequenceNumbers": (_el: _Element): void => { includedSequenceNumbers = $._decode_implicit<INTEGER[]>(() => $._decodeSequenceOf<INTEGER>(() => $._decodeInteger))(_el); },
+        "includedSequenceNumbers": (_el: _Element): void => {
+            includedSequenceNumbers = $._decode_implicit<INTEGER[]>(() => $._decodeSequenceOf<INTEGER>(() => $._decodeInteger))(_el);
+            for (const _item of includedSequenceNumbers) {
+                const _n = typeof _item === "bigint" ? _item : BigInt(_item);
+                if (_n < 0n || _n > 4294967295n) {
+                    throw new ASN1OverflowError("IntegrityCheck.includedSequenceNumbers element violates INTEGER range");
+                }
+            }
+        },
         "checkType": (_el: _Element): void => { checkType = $._decode_implicit<CheckType>(() => _decode_CheckType)(_el); },
         "dataType": (_el: _Element): void => { dataType = $._decode_implicit<DataType>(() => _decode_DataType)(_el); },
         "checkValue": (_el: _Element): void => { checkValue = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

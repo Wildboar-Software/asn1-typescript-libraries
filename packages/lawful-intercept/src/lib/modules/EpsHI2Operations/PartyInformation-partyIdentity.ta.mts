@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
     OPTIONAL,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -252,10 +253,30 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let extID: OPTIONAL<UTF8String>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "imei": (_el: _Element): void => { imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "imsi": (_el: _Element): void => { imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "msISDN": (_el: _Element): void => { msISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "e164-Format": (_el: _Element): void => { e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "imei": (_el: _Element): void => {
+            imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imei.length < 8 || imei.length > 8) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.imei violates SIZE constraint");
+            }
+        },
+        "imsi": (_el: _Element): void => {
+            imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imsi.length < 3 || imsi.length > 8) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.imsi violates SIZE constraint");
+            }
+        },
+        "msISDN": (_el: _Element): void => {
+            msISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (msISDN.length < 1 || msISDN.length > 9) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.msISDN violates SIZE constraint");
+            }
+        },
+        "e164_Format": (_el: _Element): void => {
+            e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (e164_Format.length < 1 || e164_Format.length > 25) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.e164_Format violates SIZE constraint");
+            }
+        },
         "sip-uri": (_el: _Element): void => { sip_uri = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "tel-uri": (_el: _Element): void => { tel_uri = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "nai": (_el: _Element): void => { nai = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

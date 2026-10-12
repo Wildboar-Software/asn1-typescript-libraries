@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSSubscriberIDs, _decode_IMSSubscriberIDs, _encode_IMSSubscriberIDs } from "../TS33128Payloads/IMSSubscriberIDs.ta.mjs";
@@ -173,7 +174,13 @@ function _decode_IMSDataChannelApplicationResponse (el: _Element): IMSDataChanne
         "targetIdentity": (_el: _Element): void => { targetIdentity = $._decode_explicit<IMSSubscriberIDs>(() => _decode_IMSSubscriberIDs)(_el); },
         "callingIdentity": (_el: _Element): void => { callingIdentity = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },
         "applicationUEInformation": (_el: _Element): void => { applicationUEInformation = $._decode_implicit<ApplicationUEInformation[]>(() => $._decodeSequenceOf<ApplicationUEInformation>(() => _decode_ApplicationUEInformation))(_el); },
-        "dCStreamID": (_el: _Element): void => { dCStreamID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "dCStreamID": (_el: _Element): void => {
+            dCStreamID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof dCStreamID === "bigint" ? dCStreamID : BigInt(dCStreamID);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("IMSDataChannelApplicationResponse.dCStreamID violates INTEGER range");
+            }
+        },
         "getApplicationResponse": (_el: _Element): void => { getApplicationResponse = $._decode_explicit<ApplicationResponse>(() => _decode_ApplicationResponse)(_el); }
     };
     $._parse_sequence(el, callbacks,
