@@ -28,6 +28,20 @@
     "types": "./src/index.d.mts",
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mts",
+        "./CompressedDataType": "./src/lib/modules/CompressedDataType/index.mts",
+        "./LabelingObjectIdentifiers": "./src/lib/modules/LabelingObjectIdentifiers/index.mts",
+        "./MMSAbstractService": "./src/lib/modules/MMSAbstractService/index.mts",
+        "./MMSExtendedBodyPartTypes": "./src/lib/modules/MMSExtendedBodyPartTypes/index.mts",
+        "./MMSHeadingExtensions": "./src/lib/modules/MMSHeadingExtensions/index.mts",
+        "./MMSInformationObjects": "./src/lib/modules/MMSInformationObjects/index.mts",
+        "./MMSMessageStoreAttributes": "./src/lib/modules/MMSMessageStoreAttributes/index.mts",
+        "./MMSObjectIdentifiers": "./src/lib/modules/MMSObjectIdentifiers/index.mts",
+        "./MMSOtherNotificationTypeExtensions": "./src/lib/modules/MMSOtherNotificationTypeExtensions/index.mts",
+        "./MMSPerRecipientSpecifierExtensions": "./src/lib/modules/MMSPerRecipientSpecifierExtensions/index.mts",
+        "./MMSUpperBounds": "./src/lib/modules/MMSUpperBounds/index.mts"
+    },
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x",
