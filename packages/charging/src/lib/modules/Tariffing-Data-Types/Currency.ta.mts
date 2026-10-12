@@ -6,37 +6,38 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
-export
-enum _enum_for_Currency {
-    noIndication = 0,
-    australianDollar = 1,
-    austrianSchilling = 2,
-    belgianFranc = 3,
-    britishPound = 4,
-    czechKoruna = 5,
-    danishKrone = 6,
-    dutchGuilder = 7,
-    euro = 8,
-    finnishMarkka = 9,
-    frenchFranc = 10,
-    germanMark = 11,
-    greekDrachma = 12,
-    hungarianForint = 13,
-    irishPunt = 14,
-    italianLira = 15,
-    japaneseYen = 16,
-    luxembourgian_Franc = 17,
-    norwegianKrone = 18,
-    polishZloty = 19,
-    portugeseEscudo = 20,
-    russianRouble = 21,
-    slovakKoruna = 22,
-    spanishPeseta = 23,
-    swedishKrone = 24,
-    swissFranc = 25,
-    turkishLira = 26,
-    uSDollar = 27,
-}
+export const _enum_for_Currency = {
+    noIndication: 0,
+    australianDollar: 1,
+    austrianSchilling: 2,
+    belgianFranc: 3,
+    britishPound: 4,
+    czechKoruna: 5,
+    danishKrone: 6,
+    dutchGuilder: 7,
+    euro: 8,
+    finnishMarkka: 9,
+    frenchFranc: 10,
+    germanMark: 11,
+    greekDrachma: 12,
+    hungarianForint: 13,
+    irishPunt: 14,
+    italianLira: 15,
+    japaneseYen: 16,
+    luxembourgian_Franc: 17,
+    norwegianKrone: 18,
+    polishZloty: 19,
+    portugeseEscudo: 20,
+    russianRouble: 21,
+    slovakKoruna: 22,
+    spanishPeseta: 23,
+    swedishKrone: 24,
+    swissFranc: 25,
+    turkishLira: 26,
+    uSDollar: 27,
+} as const;
+
+export type _enum_for_Currency = (typeof _enum_for_Currency)[keyof typeof _enum_for_Currency];
 
 /**
  * @summary Currency

@@ -58,63 +58,81 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
  */
 export
 class ChargingTariffInformation {
+    /**
+     * Advice of charge versus subscriber charging, whether an
+     * immediate tariff change restarts charging, and whether
+     * tariffing waits for START. See
+     * {@link ChargingControlIndicators}.
+     * @public
+     * @readonly
+     */
+    public readonly chargingControlIndicators: ChargingControlIndicators;
+
+    /**
+     * The tariff, in currency or in meter pulses. The choice on
+     * the first CRGT is the format of every later charging
+     * message for the call. See
+     * {@link ChargingTariffInformation_chargingTariff}.
+     * @public
+     * @readonly
+     */
+    public readonly chargingTariff: ChargingTariffInformation_chargingTariff;
+
+    /**
+     * Network-operator extension. This module allows one
+     * (`numOfExtensions`), and marks that limit network specific.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<ExtensionField[]>;
+
+    /**
+     * Charging reference of the sender. On the first CRGT this
+     * is the determination point's identifier and
+     * `destinationIdentification` is absent. Later CRGT messages
+     * for the same tariff determination instance keep this value
+     * and add the registration or generation point's identifier
+     * as the destination. See clause 6.4.1.
+     * @public
+     * @readonly
+     */
+    public readonly originationIdentification: ChargingReferenceIdentification;
+
+    /**
+     * Charging reference of the other exchange. Absent on the
+     * first CRGT. Present on every later CRGT for that tariff
+     * determination instance (clause 6.4.1). A CRGT whose
+     * destination is not allocated, or whose identifier pair is
+     * wrong, is not accepted (clause 6.3.9).
+     * @public
+     * @readonly
+     */
+    public readonly destinationIdentification: OPTIONAL<ChargingReferenceIdentification>;
+
+    /**
+     * Currency named for this message. Which currency a network
+     * uses is outside this specification (clause 1).
+     * `noIndication` means none is indicated. Clause 9 does not
+     * say what to put here when the tariff is in pulse format.
+     * @public
+     * @readonly
+     */
+    public readonly currency: Currency;
+
     constructor (
-        /**
-         * Advice of charge versus subscriber charging, whether an
-         * immediate tariff change restarts charging, and whether
-         * tariffing waits for START. See
-         * {@link ChargingControlIndicators}.
-         * @public
-         * @readonly
-         */
-        readonly chargingControlIndicators: ChargingControlIndicators,
-        /**
-         * The tariff, in currency or in meter pulses. The choice on
-         * the first CRGT is the format of every later charging
-         * message for the call. See
-         * {@link ChargingTariffInformation_chargingTariff}.
-         * @public
-         * @readonly
-         */
-        readonly chargingTariff: ChargingTariffInformation_chargingTariff,
-        /**
-         * Network-operator extension. This module allows one
-         * (`numOfExtensions`), and marks that limit network specific.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
-        /**
-         * Charging reference of the sender. On the first CRGT this
-         * is the determination point's identifier and
-         * `destinationIdentification` is absent. Later CRGT messages
-         * for the same tariff determination instance keep this value
-         * and add the registration or generation point's identifier
-         * as the destination. See clause 6.4.1.
-         * @public
-         * @readonly
-         */
-        readonly originationIdentification: ChargingReferenceIdentification,
-        /**
-         * Charging reference of the other exchange. Absent on the
-         * first CRGT. Present on every later CRGT for that tariff
-         * determination instance (clause 6.4.1). A CRGT whose
-         * destination is not allocated, or whose identifier pair is
-         * wrong, is not accepted (clause 6.3.9).
-         * @public
-         * @readonly
-         */
-        readonly destinationIdentification: OPTIONAL<ChargingReferenceIdentification>,
-        /**
-         * Currency named for this message. Which currency a network
-         * uses is outside this specification (clause 1).
-         * `noIndication` means none is indicated. Clause 9 does not
-         * say what to put here when the tariff is in pulse format.
-         * @public
-         * @readonly
-         */
-        readonly currency: Currency
+        chargingControlIndicators: ChargingControlIndicators,
+        chargingTariff: ChargingTariffInformation_chargingTariff,
+        extensions: OPTIONAL<ExtensionField[]>,
+        originationIdentification: ChargingReferenceIdentification,
+        destinationIdentification: OPTIONAL<ChargingReferenceIdentification>,
+        currency: Currency
     ) {
+        this.chargingControlIndicators = chargingControlIndicators;
+        this.chargingTariff = chargingTariff;
+        this.extensions = extensions;
+        this.originationIdentification = originationIdentification;
+        this.destinationIdentification = destinationIdentification;
+        this.currency = currency;
         if (extensions !== undefined && (extensions.length < 1 || extensions.length > Number(numOfExtensions))) {
             throw new ASN1SizeError("ChargingTariffInformation.extensions violates SIZE constraint");
         }

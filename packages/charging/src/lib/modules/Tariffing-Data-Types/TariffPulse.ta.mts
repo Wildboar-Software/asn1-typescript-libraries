@@ -38,25 +38,32 @@ import { TariffSwitchPulse, _decode_TariffSwitchPulse, _encode_TariffSwitchPulse
  */
 export
 class TariffPulse {
+    /**
+     * Tariff applied at the start of charging, or the
+     * replacement when the current tariff changes. A CRGT that
+     * only carries this component deletes a stored next tariff
+     * and its switch-over time (clause 6.1.2.3).
+     * @public
+     * @readonly
+     */
+    public readonly currentTariffPulse: OPTIONAL<TariffPulseFormat>;
+
+    /**
+     * Next tariff and the GMT time it becomes active. The two
+     * are always sent together. Omit this component to delete a
+     * previously stored next tariff (clause 6.1.2.3).
+     * @public
+     * @readonly
+     */
+    public readonly tariffSwitchPulse: OPTIONAL<TariffSwitchPulse>;
+
     constructor (
-        /**
-         * Tariff applied at the start of charging, or the
-         * replacement when the current tariff changes. A CRGT that
-         * only carries this component deletes a stored next tariff
-         * and its switch-over time (clause 6.1.2.3).
-         * @public
-         * @readonly
-         */
-        readonly currentTariffPulse: OPTIONAL<TariffPulseFormat>,
-        /**
-         * Next tariff and the GMT time it becomes active. The two
-         * are always sent together. Omit this component to delete a
-         * previously stored next tariff (clause 6.1.2.3).
-         * @public
-         * @readonly
-         */
-        readonly tariffSwitchPulse: OPTIONAL<TariffSwitchPulse>
-    ) {}
+        currentTariffPulse: OPTIONAL<TariffPulseFormat>,
+        tariffSwitchPulse: OPTIONAL<TariffSwitchPulse>
+    ) {
+        this.currentTariffPulse = currentTariffPulse;
+        this.tariffSwitchPulse = tariffSwitchPulse;
+    }
 
     /**
      * @summary Restructures an object into a TariffPulse

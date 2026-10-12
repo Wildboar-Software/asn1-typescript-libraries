@@ -1,0 +1,168 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+import {
+    ProbeSubmissionEnvelope,
+    _decode_ProbeSubmissionEnvelope,
+    _encode_ProbeSubmissionEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
+import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
+
+
+/**
+ * @summary OriginateProbeArgument
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * OriginateProbeArgument ::= SET {
+ *   envelope  [0]  ProbeSubmissionEnvelope,
+ *   content   [1]  MM}
+ * ```
+ * 
+ * @class
+ */
+export
+class OriginateProbeArgument {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    readonly envelope: ProbeSubmissionEnvelope;
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    readonly content: MM;
+
+    constructor (
+        envelope: ProbeSubmissionEnvelope,
+        content: MM
+    ) {
+        this.envelope = envelope;
+        this.content = content;
+    }
+
+    /**
+     * @summary Restructures an object into a OriginateProbeArgument
+     * @description
+     * 
+     * This takes an `object` and converts it to a `OriginateProbeArgument`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `OriginateProbeArgument`.
+     * @returns {OriginateProbeArgument}
+     */
+    public static _from_object (_o: { [_K in keyof (OriginateProbeArgument)]: (OriginateProbeArgument)[_K] }): OriginateProbeArgument {
+        return new OriginateProbeArgument(_o.envelope, _o.content);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of OriginateProbeArgument
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_OriginateProbeArgument: $.ComponentSpec[] = [
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
+];
+
+/**
+ * @summary The Trailing Root Component Types of OriginateProbeArgument
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_OriginateProbeArgument: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of OriginateProbeArgument
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_OriginateProbeArgument: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_OriginateProbeArgument: $.ASN1Decoder<OriginateProbeArgument> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) OriginateProbeArgument
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_OriginateProbeArgument (el: _Element): OriginateProbeArgument {
+    if (!_cached_decoder_for_OriginateProbeArgument) { _cached_decoder_for_OriginateProbeArgument = function (el: _Element): OriginateProbeArgument {
+    /* START_OF_SET_COMPONENT_DECLARATIONS */
+    let envelope!: ProbeSubmissionEnvelope;
+    let content!: MM;
+    /* END_OF_SET_COMPONENT_DECLARATIONS */
+    /* START_OF_CALLBACKS_MAP */
+    const callbacks: $.DecodingMap = {
+        "envelope": (_el: _Element): void => { envelope = $._decode_implicit<ProbeSubmissionEnvelope>(() => _decode_ProbeSubmissionEnvelope)(_el); },
+        "content": (_el: _Element): void => { content = $._decode_implicit<MM>(() => _decode_MM)(_el); }
+    };
+    /* END_OF_CALLBACKS_MAP */
+    $._parse_set(el, callbacks,
+        _root_component_type_list_1_spec_for_OriginateProbeArgument,
+        _extension_additions_list_spec_for_OriginateProbeArgument,
+        _root_component_type_list_2_spec_for_OriginateProbeArgument,
+        undefined,
+    );
+    return new OriginateProbeArgument( /* SET_CONSTRUCTOR_CALL */
+        envelope,
+        content
+    );
+}; }
+    return _cached_decoder_for_OriginateProbeArgument(el);
+}
+
+let _cached_encoder_for_OriginateProbeArgument: $.ASN1Encoder<OriginateProbeArgument> | null = null;
+
+/**
+ * @summary Encodes a(n) OriginateProbeArgument into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The OriginateProbeArgument, encoded as an ASN.1 Element.
+ */
+export
+function _encode_OriginateProbeArgument (value: OriginateProbeArgument, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_OriginateProbeArgument) { _cached_encoder_for_OriginateProbeArgument = function (value: OriginateProbeArgument): _Element {
+    return $._encodeSet([
+        /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ProbeSubmissionEnvelope, $.BER)(value.envelope, $.BER),
+        /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MM, $.BER)(value.content, $.BER)
+    ], $.BER);
+}; }
+    return _cached_encoder_for_OriginateProbeArgument(value, elGetter);
+}
+
+
+/* eslint-enable */

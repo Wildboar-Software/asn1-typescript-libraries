@@ -50,41 +50,53 @@ import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs"
  */
 export
 class ChargingAcknowledgementInformation {
+    /**
+     * `accepted` set means the message was accepted. Clear means
+     * it was not. See
+     * {@link ChargingAcknowledgementInformation_acknowledgementIndicators}.
+     * @public
+     * @readonly
+     */
+    public readonly acknowledgementIndicators: ChargingAcknowledgementInformation_acknowledgementIndicators;
+
+    /**
+     * Network-operator extension. Clause 9 calls this a sequence
+     * for possible extensions. This module allows one.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<ExtensionField[]>;
+
+    /**
+     * Charging reference assigned by the exchange sending this
+     * acknowledgement. For the first CRGT or AOCRG reply this is
+     * the registration or generation point. It stays that value
+     * for the life of the instance (clause 6.4.1).
+     * @public
+     * @readonly
+     */
+    public readonly originationIdentification: ChargingReferenceIdentification;
+
+    /**
+     * Charging reference of the exchange that sent the request.
+     * Equal to that request's origination identifier. Always
+     * present, including on the first acknowledgement
+     * (clause 6.4).
+     * @public
+     * @readonly
+     */
+    public readonly destinationIdentification: ChargingReferenceIdentification;
+
     constructor (
-        /**
-         * `accepted` set means the message was accepted. Clear means
-         * it was not. See
-         * {@link ChargingAcknowledgementInformation_acknowledgementIndicators}.
-         * @public
-         * @readonly
-         */
-        readonly acknowledgementIndicators: ChargingAcknowledgementInformation_acknowledgementIndicators,
-        /**
-         * Network-operator extension. Clause 9 calls this a sequence
-         * for possible extensions. This module allows one.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<ExtensionField[]>,
-        /**
-         * Charging reference assigned by the exchange sending this
-         * acknowledgement. For the first CRGT or AOCRG reply this is
-         * the registration or generation point. It stays that value
-         * for the life of the instance (clause 6.4.1).
-         * @public
-         * @readonly
-         */
-        readonly originationIdentification: ChargingReferenceIdentification,
-        /**
-         * Charging reference of the exchange that sent the request.
-         * Equal to that request's origination identifier. Always
-         * present, including on the first acknowledgement
-         * (clause 6.4).
-         * @public
-         * @readonly
-         */
-        readonly destinationIdentification: ChargingReferenceIdentification
+        acknowledgementIndicators: ChargingAcknowledgementInformation_acknowledgementIndicators,
+        extensions: OPTIONAL<ExtensionField[]>,
+        originationIdentification: ChargingReferenceIdentification,
+        destinationIdentification: ChargingReferenceIdentification
     ) {
+        this.acknowledgementIndicators = acknowledgementIndicators;
+        this.extensions = extensions;
+        this.originationIdentification = originationIdentification;
+        this.destinationIdentification = destinationIdentification;
         if (extensions !== undefined && (extensions.length < 1 || extensions.length > Number(numOfExtensions))) {
             throw new ASN1SizeError("ChargingAcknowledgementInformation.extensions violates SIZE constraint");
         }

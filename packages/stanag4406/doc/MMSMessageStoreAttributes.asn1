@@ -1,0 +1,159 @@
+MMSMessageStoreAttributes
+{iso(1) identified-organization(3) nato(26) stanags(0) mmhs(4406)
+object-identifiers(0) module(0) message-store-attributes(8)}
+DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+    Acp127MessageIdentifier, AddressListDesignator, BodyPartSecurityLabel,
+    CodressMessage, DistributionCodes, DistributionExtensionField, Sic,
+    ExemptedAddress, ExtendedAuthorisationInfo, HandlingInstructions,
+    MessageInstructions, MessageType, MMHSPrecedence, SecurityInformationLabels,
+    OriginatorPlad, OriginatorReference, OtherRecipientDesignator, PilotInformation
+        FROM MMSHeadingExtensions
+        {iso(1) identified-organization(3) nato(26) stanags(0) mmhs(4406)
+        object-identifiers(0) module(0) heading-extensions(6) }
+
+    Acp127NotificationType
+        FROM MMSPerRecipientSpecifierExtensions
+        {iso(1) identified-organization(3) nato(26) stanags(0) mmhs(4406)
+        object-identifiers(0) module(0) per-recipient-specifier-extensions(11) }
+
+    Acp127NotificationResponse
+        FROM MMSOtherNotificationTypeExtensions
+        {iso(1) identified-organization(3) nato(26) stanags(0) mmhs(4406)
+        object-identifiers(0) module(0) other-notification-type-extensions(12) }
+
+    id-nato-mmhs-hat-acp127-notification-request,
+    id-nato-mmhs-hat-acp127-message-identifier,
+    id-nato-mmhs-hat-address-list-indicator,
+    id-nato-mmhs-hat-body-part-security-label, id-nato-mmhs-hat-copy-precedence,
+    id-nato-mmhs-hat-codress-message, id-nato-mmhs-hat-distribution-codes,
+    id-nato-mmhs-hat-distribution-extensions,
+    id-nato-mmhs-hat-extended-authorisation-info, id-nato-mmhs-hat-exempted-address,
+    id-nato-mmhs-hat-handling-instructions, id-nato-mmhs-hat-message-type,
+    id-nato-mmhs-hat-message-instructions, id-nato-mmhs-hat-originator-reference,
+    id-nato-mmhs-hat-originator-plad, id-nato-mmhs-hat-other-recipients-indicator,
+    id-nato-mmhs-hat-pilot-forwarding-info, id-nato-mmhs-hat-primary-precedence,
+    id-nato-mmhs-hat-security-information-labels, id-nato-mmhs-hat-sic-codes,
+    id-nato-mmhs-nat-acp127-notification-response
+        FROM MMSObjectIdentifiers
+        {iso(1) identified-organization(3) nato(26) stanags(0) mmhs(4406)
+        object-identifiers(0) }
+
+    ATTRIBUTE
+        FROM InformationFramework
+        {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9}
+    ;
+
+asdf INTEGER ::= 123
+
+exempted-address ATTRIBUTE ::= {
+  WITH SYNTAX   ExemptedAddress
+  ID            id-nato-mmhs-hat-exempted-address }
+
+extended-authorisation-info ATTRIBUTE ::= {
+  WITH SYNTAX   ExtendedAuthorisationInfo
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-extended-authorisation-info }
+
+distribution-codes ATTRIBUTE ::= {
+  WITH SYNTAX   DistributionCodes
+  ID            id-nato-mmhs-hat-distribution-codes }
+
+handling-instructions ATTRIBUTE ::= {
+  WITH SYNTAX   HandlingInstructions
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-handling-instructions }
+
+sic-codes ATTRIBUTE ::= {
+  WITH SYNTAX   Sic
+  ID            id-nato-mmhs-hat-sic-codes }
+
+-- The dist-value field shall be disregarded for the purpose of
+-- matching, unless the syntax of the field is recognized based on the
+-- value of the dist-type field.
+distribution-extensions ATTRIBUTE ::= {
+  WITH SYNTAX   DistributionExtensionField
+  ID            id-nato-mmhs-hat-distribution-extensions }
+
+message-instructions ATTRIBUTE ::= {
+  WITH SYNTAX   MessageInstructions
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-message-instructions }
+
+codress-message ATTRIBUTE ::= {
+  WITH SYNTAX   CodressMessage
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-codress-message }
+
+originator-reference ATTRIBUTE ::= {
+  WITH SYNTAX   OriginatorReference
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-originator-reference }
+
+primary-precedence ATTRIBUTE ::= {
+  WITH SYNTAX   MMHSPrecedence
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-primary-precedence }
+
+copy-precedence ATTRIBUTE ::= {
+  WITH SYNTAX   MMHSPrecedence
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-copy-precedence }
+
+message-type ATTRIBUTE ::= {
+  WITH SYNTAX   MessageType
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-message-type }
+
+address-list-indicator ATTRIBUTE ::= {
+  WITH SYNTAX   AddressListDesignator
+  ID            id-nato-mmhs-hat-address-list-indicator }
+
+other-recipients-indicator ATTRIBUTE ::= {
+  WITH SYNTAX   OtherRecipientDesignator
+  ID            id-nato-mmhs-hat-other-recipients-indicator }
+
+pilot-forwarding-info ATTRIBUTE ::= {
+  WITH SYNTAX   PilotInformation
+  ID            id-nato-mmhs-hat-pilot-forwarding-info }
+
+acp127-message-identifier ATTRIBUTE ::= {
+  WITH SYNTAX   Acp127MessageIdentifier
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-acp127-message-identifier }
+
+originator-plad ATTRIBUTE ::= {
+  WITH SYNTAX   OriginatorPlad
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-originator-plad }
+
+acp127-notification-request ATTRIBUTE ::= {
+  WITH SYNTAX   Acp127NotificationType
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-acp127-notification-request }
+
+body-part-security-label ATTRIBUTE ::= {
+  WITH SYNTAX   BodyPartSecurityLabel
+  ID            id-nato-mmhs-hat-body-part-security-label }
+
+security-information-labels ATTRIBUTE ::= {
+  WITH SYNTAX   SecurityInformationLabels
+  SINGLE VALUE  TRUE
+  ID            id-nato-mmhs-hat-security-information-labels }
+
+-- NOTE: The body-part-security-label and security-information-label
+-- attributes are now deprecated. Their use is, therefore,
+-- discouraged. See STANAG 4406 Annex B for instruction
+-- on the use of the ESSSecurityLabel.
+
+-- NOTIFICATIONS
+
+-- ACP 127 Notification Response
+
+acp127-notification-response ATTRIBUTE ::= {
+  WITH SYNTAX   Acp127NotificationResponse
+  ID            id-nato-mmhs-nat-acp127-notification-response }
+
+END -- of MMSMessagesStoreAttributes

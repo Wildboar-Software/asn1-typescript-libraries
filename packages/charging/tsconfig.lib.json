@@ -12,6 +12,7 @@
     "noUnusedParameters": true,
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
+    "erasableSyntaxOnly": true,
     "importHelpers": true,
     "types": [
       "node"

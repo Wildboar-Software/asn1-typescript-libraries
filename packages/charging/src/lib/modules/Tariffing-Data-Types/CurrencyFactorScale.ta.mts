@@ -35,21 +35,28 @@ import { noScale } from "../Tariffing-Data-Types/noScale.va.mjs";
  */
 export
 class CurrencyFactorScale {
+    /**
+     * Mantissa. Defaults to {@link noCharge} (`0`).
+     * @public
+     * @readonly
+     */
+    public readonly currencyFactor: OPTIONAL<CurrencyFactor>;
+
+    /**
+     * Power of ten. Defaults to {@link noScale} (`0`), so the
+     * scale is 1.
+     * @public
+     * @readonly
+     */
+    public readonly currencyScale: OPTIONAL<CurrencyScale>;
+
     constructor (
-        /**
-         * Mantissa. Defaults to {@link noCharge} (`0`).
-         * @public
-         * @readonly
-         */
-        readonly currencyFactor: OPTIONAL<CurrencyFactor>,
-        /**
-         * Power of ten. Defaults to {@link noScale} (`0`), so the
-         * scale is 1.
-         * @public
-         * @readonly
-         */
-        readonly currencyScale: OPTIONAL<CurrencyScale>
-    ) {}
+        currencyFactor: OPTIONAL<CurrencyFactor>,
+        currencyScale: OPTIONAL<CurrencyScale>
+    ) {
+        this.currencyFactor = currencyFactor;
+        this.currencyScale = currencyScale;
+    }
 
     /**
      * @summary Restructures an object into a CurrencyFactorScale

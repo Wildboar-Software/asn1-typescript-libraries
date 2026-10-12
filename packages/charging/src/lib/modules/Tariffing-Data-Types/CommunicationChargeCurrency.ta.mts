@@ -35,29 +35,39 @@ import { SubTariffControl, _decode_SubTariffControl, _encode_SubTariffControl } 
  */
 export
 class CommunicationChargeCurrency {
+    /**
+     * Currency amount for this subtariff. Factor times scale.
+     * Zero means this part of the communication is free.
+     * @public
+     * @readonly
+     */
+    public readonly currencyFactorScale: CurrencyFactorScale;
+
+    /**
+     * Seconds this subtariff stays in force. `0` is unlimited
+     * and is only for the last subtariff of the sequence.
+     * @public
+     * @readonly
+     */
+    public readonly tariffDuration: TariffDuration;
+
+    /**
+     * Periodic charge, or a one-time charge used as a minimum
+     * communication charge. See {@link SubTariffControl}.
+     * @public
+     * @readonly
+     */
+    public readonly subTariffControl: SubTariffControl;
+
     constructor (
-        /**
-         * Currency amount for this subtariff. Factor times scale.
-         * Zero means this part of the communication is free.
-         * @public
-         * @readonly
-         */
-        readonly currencyFactorScale: CurrencyFactorScale,
-        /**
-         * Seconds this subtariff stays in force. `0` is unlimited
-         * and is only for the last subtariff of the sequence.
-         * @public
-         * @readonly
-         */
-        readonly tariffDuration: TariffDuration,
-        /**
-         * Periodic charge, or a one-time charge used as a minimum
-         * communication charge. See {@link SubTariffControl}.
-         * @public
-         * @readonly
-         */
-        readonly subTariffControl: SubTariffControl
-    ) {}
+        currencyFactorScale: CurrencyFactorScale,
+        tariffDuration: TariffDuration,
+        subTariffControl: SubTariffControl
+    ) {
+        this.currencyFactorScale = currencyFactorScale;
+        this.tariffDuration = tariffDuration;
+        this.subTariffControl = subTariffControl;
+    }
 
     /**
      * @summary Restructures an object into a CommunicationChargeCurrency
