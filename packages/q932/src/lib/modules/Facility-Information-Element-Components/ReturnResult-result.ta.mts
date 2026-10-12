@@ -16,7 +16,16 @@ import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Info
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReturnResult-result ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReturnResult-result ::= SEQUENCE {
+ *   opcode
+ *     OPERATION.&operationCode
+ *       ({Operations} !
+ *        RejectProblem:returnResult-unrecognizedInvocation),
+ *   result
+ *     OPERATION.&ResultType
+ *       ({Operations}{@.opcode} !
+ *        RejectProblem:returnResult-mistypedResult)
+ * }
  * ```
  * 
  * @class

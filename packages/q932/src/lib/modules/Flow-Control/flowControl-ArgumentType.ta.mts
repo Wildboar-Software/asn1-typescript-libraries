@@ -17,7 +17,13 @@ import { _decode_flowControl_ArgumentType_controlReceiver, _encode_flowControl_A
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * flowControl-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * flowControl-ArgumentType ::= SEQUENCE {
+ *   controlReceiver
+ *     ENUMERATED {receiverNotReady(0), receiverReady(1)},
+ *   maximumNumberOfMessages  [0] IMPLICIT INTEGER(1..255) OPTIONAL,
+ *   replenishmentParameter   [1] IMPLICIT INTEGER(1..255) OPTIONAL,
+ *   timerT                   [2] IMPLICIT INTEGER(1..30) OPTIONAL
+ * }
  * ```
  * 
  * @class

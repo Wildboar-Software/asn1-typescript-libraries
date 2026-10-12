@@ -16,7 +16,14 @@ import { _decode_explicitReservationCreationControl_ArgumentType_controlOption, 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * explicitReservationCreationControl-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * explicitReservationCreationControl-ArgumentType ::= SEQUENCE {
+ *   controlOption
+ *     ENUMERATED {
+ *       noReservationRequired(0),
+ *       reservationRequiredWithReservationIndicator(1),
+ *       reservationRequiredWithoutReservationIndicator(2)
+ *     }
+ * }
  * ```
  * 
  * @class

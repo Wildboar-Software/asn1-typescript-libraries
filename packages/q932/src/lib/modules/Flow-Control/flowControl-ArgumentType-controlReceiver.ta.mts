@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * flowControl-ArgumentType-controlReceiver ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * flowControl-ArgumentType-controlReceiver ::= ENUMERATED {
+ *   receiverNotReady(0),
+ *   receiverReady(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -31,7 +34,10 @@ enum _enum_for_flowControl_ArgumentType_controlReceiver {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * flowControl-ArgumentType-controlReceiver ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * flowControl-ArgumentType-controlReceiver ::= ENUMERATED {
+ *   receiverNotReady(0),
+ *   receiverReady(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -46,7 +52,10 @@ type flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentTy
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * flowControl-ArgumentType-controlReceiver ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * flowControl-ArgumentType-controlReceiver ::= ENUMERATED {
+ *   receiverNotReady(0),
+ *   receiverReady(1)
+ * }
  * ```
  * 
  * @enum {number}

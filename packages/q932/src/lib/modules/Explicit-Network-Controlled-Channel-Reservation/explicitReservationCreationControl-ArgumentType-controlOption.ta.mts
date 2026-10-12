@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * explicitReservationCreationControl-ArgumentType-controlOption ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * explicitReservationCreationControl-ArgumentType-controlOption ::= ENUMERATED {
+ *   noReservationRequired(0),
+ *   reservationRequiredWithReservationIndicator(1),
+ *   reservationRequiredWithoutReservationIndicator(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -32,7 +36,11 @@ enum _enum_for_explicitReservationCreationControl_ArgumentType_controlOption {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * explicitReservationCreationControl-ArgumentType-controlOption ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * explicitReservationCreationControl-ArgumentType-controlOption ::= ENUMERATED {
+ *   noReservationRequired(0),
+ *   reservationRequiredWithReservationIndicator(1),
+ *   reservationRequiredWithoutReservationIndicator(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -47,7 +55,11 @@ type explicitReservationCreationControl_ArgumentType_controlOption = _enum_for_e
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * explicitReservationCreationControl-ArgumentType-controlOption ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * explicitReservationCreationControl-ArgumentType-controlOption ::= ENUMERATED {
+ *   noReservationRequired(0),
+ *   reservationRequiredWithReservationIndicator(1),
+ *   reservationRequiredWithoutReservationIndicator(2)
+ * }
  * ```
  * 
  * @enum {number}
