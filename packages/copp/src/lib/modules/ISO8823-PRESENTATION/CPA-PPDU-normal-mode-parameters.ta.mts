@@ -70,107 +70,132 @@ import {
  *
  */
 export class CPA_PPDU_normal_mode_parameters {
+    /**
+     * @summary `protocol_version`.
+     * @description
+     *
+     * Single version selected for the connection; must be one proposed
+     * on the CP. This Recommendation is version 1 (X.226 §6.2.3.2,
+     * §6.2.6.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version?: OPTIONAL<Protocol_version>;
+
+    /**
+     * @summary `responding_presentation_selector`.
+     * @description
+     *
+     * Presentation-selector part of Responding-presentation-address
+     * from `P-CONNECT` response (X.226 §6.2.3.3; X.216 §10.2.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responding_presentation_selector?: OPTIONAL<Responding_presentation_selector>;
+
+    /**
+     * @summary `presentation_context_definition_result_list`.
+     * @description
+     *
+     * One item per CP definition-list item, same order. `acceptance`
+     * names the chosen transfer syntax from those proposed;
+     * `provider-rejection` names a provider reason (X.226 §6.2.3.5).
+     * On indication, the PPM marks unsupported proposals
+     * `provider-rejection`; the PS-user may only change the remaining
+     * `acceptance` items (X.216 §10.2.1.5). Accepted items become the
+     * initial DCS (X.226 §6.2.5.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_definition_result_list?: OPTIONAL<Presentation_context_definition_result_list>;
+
+    /**
+     * @summary `presentation_requirements`.
+     * @description
+     *
+     * FUs required by both PS-users and supported by both PPMs
+     * (X.226 §6.2.3.7, §6.2.6.3). Response must not select a FU that
+     * was not on the indication (X.216 §10.2.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_requirements?: OPTIONAL<Presentation_requirements>;
+
+    /**
+     * @summary `user_session_requirements`.
+     * @description
+     *
+     * Session requirements from `P-CONNECT` response. Shall not be
+     * present if equal to Revised session requirements (X.226 §6.2.3.8,
+     * §8.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_session_requirements?: OPTIONAL<User_session_requirements>;
+
+    /**
+     * @summary `protocol_options`.
+     * @description
+     *
+     * Subset of options proposed on the CP that will be used. Absent if
+     * none selected (X.226/Amd.1 §6.2.3 / §6.2.6.5). Unrecognized
+     * option bits are ignored under §8.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocol_options?: OPTIONAL<Protocol_options>;
+
+    /**
+     * @summary `responders_nominated_context`.
+     * @description
+     *
+     * DCS member that is the responder's nominated context (applies
+     * immediately, including CPA User data). Only if
+     * `nominated-context` is selected and the DCS is not empty
+     * (X.226/Amd.1 §6.2.3.8 bis, §6.2.6.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responders_nominated_context?: OPTIONAL<Presentation_context_identifier>;
+
+    /**
+     * @summary `user_data`.
+     * @description
+     *
+     * `P-CONNECT` response User data; DCS rules of X.226 §6.1.2
+     * (X.226 §6.2.3.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_data?: OPTIONAL<User_data>;
+
     constructor(
-        /**
-         * @summary `protocol_version`.
-         * @description
-         *
-         * Single version selected for the connection; must be one proposed
-         * on the CP. This Recommendation is version 1 (X.226 §6.2.3.2,
-         * §6.2.6.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocol_version?: OPTIONAL<Protocol_version>,
-        /**
-         * @summary `responding_presentation_selector`.
-         * @description
-         *
-         * Presentation-selector part of Responding-presentation-address
-         * from `P-CONNECT` response (X.226 §6.2.3.3; X.216 §10.2.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responding_presentation_selector?: OPTIONAL<Responding_presentation_selector>,
-        /**
-         * @summary `presentation_context_definition_result_list`.
-         * @description
-         *
-         * One item per CP definition-list item, same order. `acceptance`
-         * names the chosen transfer syntax from those proposed;
-         * `provider-rejection` names a provider reason (X.226 §6.2.3.5).
-         * On indication, the PPM marks unsupported proposals
-         * `provider-rejection`; the PS-user may only change the remaining
-         * `acceptance` items (X.216 §10.2.1.5). Accepted items become the
-         * initial DCS (X.226 §6.2.5.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_definition_result_list?: OPTIONAL<Presentation_context_definition_result_list>,
-        /**
-         * @summary `presentation_requirements`.
-         * @description
-         *
-         * FUs required by both PS-users and supported by both PPMs
-         * (X.226 §6.2.3.7, §6.2.6.3). Response must not select a FU that
-         * was not on the indication (X.216 §10.2.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_requirements?: OPTIONAL<Presentation_requirements>,
-        /**
-         * @summary `user_session_requirements`.
-         * @description
-         *
-         * Session requirements from `P-CONNECT` response. Shall not be
-         * present if equal to Revised session requirements (X.226 §6.2.3.8,
-         * §8.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_session_requirements?: OPTIONAL<User_session_requirements>,
-        /**
-         * @summary `protocol_options`.
-         * @description
-         *
-         * Subset of options proposed on the CP that will be used. Absent if
-         * none selected (X.226/Amd.1 §6.2.3 / §6.2.6.5). Unrecognized
-         * option bits are ignored under §8.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocol_options?: OPTIONAL<Protocol_options>,
-        /**
-         * @summary `responders_nominated_context`.
-         * @description
-         *
-         * DCS member that is the responder's nominated context (applies
-         * immediately, including CPA User data). Only if
-         * `nominated-context` is selected and the DCS is not empty
-         * (X.226/Amd.1 §6.2.3.8 bis, §6.2.6.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responders_nominated_context?: OPTIONAL<Presentation_context_identifier>,
-        /**
-         * @summary `user_data`.
-         * @description
-         *
-         * `P-CONNECT` response User data; DCS rules of X.226 §6.1.2
-         * (X.226 §6.2.3.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_data?: OPTIONAL<User_data>
-    ) {}
+        protocol_version?: OPTIONAL<Protocol_version>,
+        responding_presentation_selector?: OPTIONAL<Responding_presentation_selector>,
+        presentation_context_definition_result_list?: OPTIONAL<Presentation_context_definition_result_list>,
+        presentation_requirements?: OPTIONAL<Presentation_requirements>,
+        user_session_requirements?: OPTIONAL<User_session_requirements>,
+        protocol_options?: OPTIONAL<Protocol_options>,
+        responders_nominated_context?: OPTIONAL<Presentation_context_identifier>,
+        user_data?: OPTIONAL<User_data>
+    ) {
+        this.protocol_version = protocol_version;
+        this.responding_presentation_selector = responding_presentation_selector;
+        this.presentation_context_definition_result_list = presentation_context_definition_result_list;
+        this.presentation_requirements = presentation_requirements;
+        this.user_session_requirements = user_session_requirements;
+        this.protocol_options = protocol_options;
+        this.responders_nominated_context = responders_nominated_context;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a CPA_PPDU_normal_mode_parameters

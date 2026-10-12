@@ -58,47 +58,60 @@ import {
  *
  */
 export class C_BEGIN_RI {
+  /**
+   * @summary `atomic_action_identifier`.
+   * @description
+   *
+   * Atomic Action Identifier. Owner's Name may use `name` or, if it
+   * is the requestor's AE-title from A-ASSOCIATE, the `sender`
+   * value of `side`. ITU-T Rec. X.852 (12/97) §7.2.5, Table 6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER;
+
+  /**
+   * @summary `branch_suffix`.
+   * @description
+   *
+   * Branch Identifier – Suffix. Branch-initiator's name is implied
+   * from A-ASSOCIATE, not carried on this APDU (X.852 §7.2.5).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly branch_suffix: C_BEGIN_RI_branch_suffix;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_data`.
+   * @description
+   *
+   * C-BEGIN request/indication User Data (X.852 §7.2.5, Table 6).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_data?: OPTIONAL<User_data>;
+
   constructor(
-    /**
-     * @summary `atomic_action_identifier`.
-     * @description
-     *
-     * Atomic Action Identifier. Owner's Name may use `name` or, if it
-     * is the requestor's AE-title from A-ASSOCIATE, the `sender`
-     * value of `side`. ITU-T Rec. X.852 (12/97) §7.2.5, Table 6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
-    /**
-     * @summary `branch_suffix`.
-     * @description
-     *
-     * Branch Identifier – Suffix. Branch-initiator's name is implied
-     * from A-ASSOCIATE, not carried on this APDU (X.852 §7.2.5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly branch_suffix: C_BEGIN_RI_branch_suffix,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_data`.
-     * @description
-     *
-     * C-BEGIN request/indication User Data (X.852 §7.2.5, Table 6).
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_data?: OPTIONAL<User_data>
-  ) {}
+    atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
+    branch_suffix: C_BEGIN_RI_branch_suffix,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_data?: OPTIONAL<User_data>
+  ) {
+    this.atomic_action_identifier = atomic_action_identifier;
+    this.branch_suffix = branch_suffix;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_data = user_data;
+  }
 
   /**
    * @summary Restructures an object into a C_BEGIN_RI

@@ -42,26 +42,33 @@ import {
  *
  */
 export class C_ROLLBACK_RI {
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_data`.
+   * @description
+   *
+   * C-ROLLBACK request/indication User Data (X.852 §7.6.5,
+   * Table 18). Delivery is not guaranteed for the
+   * association-responder if two C-ROLLBACK-RI collide (§7.6.8).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_data?: OPTIONAL<User_data>;
+
   constructor(
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_data`.
-     * @description
-     *
-     * C-ROLLBACK request/indication User Data (X.852 §7.6.5,
-     * Table 18). Delivery is not guaranteed for the
-     * association-responder if two C-ROLLBACK-RI collide (§7.6.8).
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_data?: OPTIONAL<User_data>
-  ) {}
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_data?: OPTIONAL<User_data>
+  ) {
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_data = user_data;
+  }
 
   /**
    * @summary Restructures an object into a C_ROLLBACK_RI

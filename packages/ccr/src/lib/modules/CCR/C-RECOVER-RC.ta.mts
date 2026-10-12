@@ -64,70 +64,89 @@ import {
  *
  */
 export class C_RECOVER_RC {
+  /**
+   * @summary `atomic_action_identifier`.
+   * @description
+   *
+   * Atomic Action Identifier of the recovered branch. On RC,
+   * `sender` is the C-RECOVER acceptor's AE-title (X.852 §7.9.6).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER;
+
+  /**
+   * @summary `branch_identifier`.
+   * @description
+   *
+   * Branch Identifier of the recovered branch (X.852 §7.9.6,
+   * Table 29).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly branch_identifier: BRANCH_IDENTIFIER;
+
+  /**
+   * @summary `recovery_state`.
+   * @description
+   *
+   * Derived by the CCR service-user from atomic action data. ITU-T
+   * Rec. X.852 (12/97) §7.9.4.3, §7.9.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly recovery_state: C_RECOVER_RC_recovery_state;
+
+  /**
+   * @summary `reversed_branch`.
+   * @description
+   *
+   * Default `FALSE`; shall be absent if `FALSE` (Annex A).
+   * Conditional on the C-RECOVER response. Table 29 labels a
+   * `was-initiator` field that is not in this APDU's ASN.1. ITU-T
+   * Rec. X.852 (12/97) §7.9.2, Table 27.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly reversed_branch?: OPTIONAL<BOOLEAN>;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_data`.
+   * @description
+   *
+   * C-RECOVER response/confirm User Data (X.852 §7.9.6, Table 29).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_data?: OPTIONAL<User_data>;
+
   constructor(
-    /**
-     * @summary `atomic_action_identifier`.
-     * @description
-     *
-     * Atomic Action Identifier of the recovered branch. On RC,
-     * `sender` is the C-RECOVER acceptor's AE-title (X.852 §7.9.6).
-     *
-     * @public
-     * @readonly
-     */
-    readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
-    /**
-     * @summary `branch_identifier`.
-     * @description
-     *
-     * Branch Identifier of the recovered branch (X.852 §7.9.6,
-     * Table 29).
-     *
-     * @public
-     * @readonly
-     */
-    readonly branch_identifier: BRANCH_IDENTIFIER,
-    /**
-     * @summary `recovery_state`.
-     * @description
-     *
-     * Derived by the CCR service-user from atomic action data. ITU-T
-     * Rec. X.852 (12/97) §7.9.4.3, §7.9.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly recovery_state: C_RECOVER_RC_recovery_state,
-    /**
-     * @summary `reversed_branch`.
-     * @description
-     *
-     * Default `FALSE`; shall be absent if `FALSE` (Annex A).
-     * Conditional on the C-RECOVER response. Table 29 labels a
-     * `was-initiator` field that is not in this APDU's ASN.1. ITU-T
-     * Rec. X.852 (12/97) §7.9.2, Table 27.
-     *
-     * @public
-     * @readonly
-     */
-    readonly reversed_branch?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_data`.
-     * @description
-     *
-     * C-RECOVER response/confirm User Data (X.852 §7.9.6, Table 29).
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_data?: OPTIONAL<User_data>
-  ) {}
+    atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
+    branch_identifier: BRANCH_IDENTIFIER,
+    recovery_state: C_RECOVER_RC_recovery_state,
+    reversed_branch?: OPTIONAL<BOOLEAN>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_data?: OPTIONAL<User_data>
+  ) {
+    this.atomic_action_identifier = atomic_action_identifier;
+    this.branch_identifier = branch_identifier;
+    this.recovery_state = recovery_state;
+    this.reversed_branch = reversed_branch;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_data = user_data;
+  }
 
   /**
    * @summary Restructures an object into a C_RECOVER_RC

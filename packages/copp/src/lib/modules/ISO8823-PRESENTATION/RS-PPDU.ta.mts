@@ -46,30 +46,37 @@ import {
  *
  */
 export class RS_PPDU {
+    /**
+     * @summary `presentation_context_identifier_list`.
+     * @description
+     *
+     * DCS that results from this RS: each item is a PCID plus the
+     * transfer syntax in use (X.226 §6.8.2.4). Present when context
+     * management is selected (X.226 §6.8.4.5–6.8.4.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>;
+
+    /**
+     * @summary `user_data`.
+     * @description
+     *
+     * PDVs from presentation contexts per X.226 §6.1.2 (X.226 §6.8.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_data?: OPTIONAL<User_data>;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier_list`.
-         * @description
-         *
-         * DCS that results from this RS: each item is a PCID plus the
-         * transfer syntax in use (X.226 §6.8.2.4). Present when context
-         * management is selected (X.226 §6.8.4.5–6.8.4.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>,
-        /**
-         * @summary `user_data`.
-         * @description
-         *
-         * PDVs from presentation contexts per X.226 §6.1.2 (X.226 §6.8.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_data?: OPTIONAL<User_data>
-    ) {}
+        presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>,
+        user_data?: OPTIONAL<User_data>
+    ) {
+        this.presentation_context_identifier_list = presentation_context_identifier_list;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a RS_PPDU

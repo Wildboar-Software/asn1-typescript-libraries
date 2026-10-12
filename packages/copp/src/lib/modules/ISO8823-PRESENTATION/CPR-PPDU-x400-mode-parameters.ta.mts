@@ -35,20 +35,27 @@ import {
  *
  */
 export class CPR_PPDU_x400_mode_parameters {
+    /**
+     * @summary `refuseReason`.
+     * @public
+     * @readonly
+     */
+    public readonly refuseReason?: OPTIONAL<RefuseReason>; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `userDataRJ`.
+     * @public
+     * @readonly
+     */
+    public readonly userDataRJ?: OPTIONAL<_Element>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `refuseReason`.
-         * @public
-         * @readonly
-         */
-        readonly refuseReason?: OPTIONAL<RefuseReason> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `userDataRJ`.
-         * @public
-         * @readonly
-         */
-        readonly userDataRJ?: OPTIONAL<_Element> /* REPLICATED_COMPONENT */
-    ) {}
+        refuseReason?: OPTIONAL<RefuseReason>,
+        userDataRJ?: OPTIONAL<_Element>
+    ) {
+        this.refuseReason = refuseReason;
+        this.userDataRJ = userDataRJ;
+    }
 
     /**
      * @summary Restructures an object into a CPR_PPDU_x400_mode_parameters

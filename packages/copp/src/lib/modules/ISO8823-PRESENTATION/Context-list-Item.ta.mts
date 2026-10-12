@@ -43,41 +43,51 @@ import {
  *
  */
 export class Context_list_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @description
+     *
+     * Unique on the connection. Default context has no identifier
+     * (X.226 §3.5.7). Initiator-allocated values are odd.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+
+    /**
+     * @summary `abstract_syntax_name`.
+     * @description
+     *
+     * Registered name of the abstract syntax. Repeating the same name
+     * still creates a distinct context (X.216 §10.2.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly abstract_syntax_name: Abstract_syntax_name;
+
+    /**
+     * @summary `transfer_syntax_name_list`.
+     * @description
+     *
+     * Transfer syntaxes (or names of specifications producing them)
+     * the sending PPM can support for this abstract syntax.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name_list: Transfer_syntax_name[];
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @description
-         *
-         * Unique on the connection. Default context has no identifier
-         * (X.226 §3.5.7). Initiator-allocated values are odd.
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `abstract_syntax_name`.
-         * @description
-         *
-         * Registered name of the abstract syntax. Repeating the same name
-         * still creates a distinct context (X.216 §10.2.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly abstract_syntax_name: Abstract_syntax_name,
-        /**
-         * @summary `transfer_syntax_name_list`.
-         * @description
-         *
-         * Transfer syntaxes (or names of specifications producing them)
-         * the sending PPM can support for this abstract syntax.
-         *
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name_list: Transfer_syntax_name[]
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        abstract_syntax_name: Abstract_syntax_name,
+        transfer_syntax_name_list: Transfer_syntax_name[]
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.abstract_syntax_name = abstract_syntax_name;
+        this.transfer_syntax_name_list = transfer_syntax_name_list;
+    }
 
     /**
      * @summary Restructures an object into a Context_list_Item

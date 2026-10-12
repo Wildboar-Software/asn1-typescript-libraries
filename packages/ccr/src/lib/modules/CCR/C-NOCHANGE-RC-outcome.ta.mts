@@ -13,12 +13,15 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_C_NOCHANGE_RC_outcome {
-  not_determined = 0,
-  committed = 1,
-  rolled_back = 2,
-  no_change = 3,
-}
+export const _enum_for_C_NOCHANGE_RC_outcome = {
+  not_determined: 0,
+  committed: 1,
+  rolled_back: 2,
+  no_change: 3,
+} as const;
+
+export type _enum_for_C_NOCHANGE_RC_outcome =
+  (typeof _enum_for_C_NOCHANGE_RC_outcome)[keyof typeof _enum_for_C_NOCHANGE_RC_outcome];
 
 
 /**

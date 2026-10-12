@@ -35,18 +35,22 @@ import {
  *
  */
 export class Mode_selector {
+    /**
+     * @summary `mode_value`.
+     * @description
+     *
+     * `x410-1984-mode` (0) or `normal-mode` (1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mode_value: Mode_selector_mode_value;
+
     constructor(
-        /**
-         * @summary `mode_value`.
-         * @description
-         *
-         * `x410-1984-mode` (0) or `normal-mode` (1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mode_value: Mode_selector_mode_value
-    ) {}
+        mode_value: Mode_selector_mode_value
+    ) {
+        this.mode_value = mode_value;
+    }
 
     /**
      * @summary Restructures an object into a Mode_selector

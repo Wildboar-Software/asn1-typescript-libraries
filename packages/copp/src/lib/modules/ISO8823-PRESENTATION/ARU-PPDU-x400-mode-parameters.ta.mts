@@ -38,26 +38,36 @@ import {
  *
  */
 export class ARU_PPDU_x400_mode_parameters {
+    /**
+     * @summary `abortReason`.
+     * @public
+     * @readonly
+     */
+    public readonly abortReason?: OPTIONAL<AbortReason>; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `reflectedParameter`.
+     * @public
+     * @readonly
+     */
+    public readonly reflectedParameter?: OPTIONAL<BIT_STRING>; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `userdataAB`.
+     * @public
+     * @readonly
+     */
+    public readonly userdataAB?: OPTIONAL<_Element>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `abortReason`.
-         * @public
-         * @readonly
-         */
-        readonly abortReason?: OPTIONAL<AbortReason> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `reflectedParameter`.
-         * @public
-         * @readonly
-         */
-        readonly reflectedParameter?: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `userdataAB`.
-         * @public
-         * @readonly
-         */
-        readonly userdataAB?: OPTIONAL<_Element> /* REPLICATED_COMPONENT */
-    ) {}
+        abortReason?: OPTIONAL<AbortReason>,
+        reflectedParameter?: OPTIONAL<BIT_STRING>,
+        userdataAB?: OPTIONAL<_Element>
+    ) {
+        this.abortReason = abortReason;
+        this.reflectedParameter = reflectedParameter;
+        this.userdataAB = userdataAB;
+    }
 
     /**
      * @summary Restructures an object into a ARU_PPDU_x400_mode_parameters
