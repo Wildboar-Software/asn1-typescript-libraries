@@ -125,35 +125,8 @@ const DiscretionaryHandling_releasable_to_internet: number = 6; /* LONG_NAMED_BI
  */
 export
 const releasable_to_internet: number = DiscretionaryHandling_releasable_to_internet; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_DiscretionaryHandling: $.ASN1Decoder<DiscretionaryHandling> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DiscretionaryHandling
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DiscretionaryHandling (el: _Element): DiscretionaryHandling {
-    if (!_cached_decoder_for_DiscretionaryHandling) { _cached_decoder_for_DiscretionaryHandling = $._decodeBitString; }
-    return _cached_decoder_for_DiscretionaryHandling(el);
-}
-
-let _cached_encoder_for_DiscretionaryHandling: $.ASN1Encoder<DiscretionaryHandling> | null = null;
-
-/**
- * @summary Encodes a(n) DiscretionaryHandling into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DiscretionaryHandling, encoded as an ASN.1 Element.
- */
-export
-function _encode_DiscretionaryHandling (value: DiscretionaryHandling, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DiscretionaryHandling) { _cached_encoder_for_DiscretionaryHandling = $._encodeBitString; }
-    return _cached_encoder_for_DiscretionaryHandling(value, elGetter);
-}
+export const _decode_DiscretionaryHandling: $.ASN1Decoder<DiscretionaryHandling> = $._decodeBitString;
+export const _encode_DiscretionaryHandling: $.ASN1Encoder<DiscretionaryHandling> = $._encodeBitString;
 
 
 /* eslint-enable */

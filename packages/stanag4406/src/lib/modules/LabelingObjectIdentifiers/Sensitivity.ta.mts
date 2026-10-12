@@ -140,35 +140,8 @@ const Sensitivity_us_siop_esi: number = 7; /* LONG_NAMED_BIT */
  */
 export
 const us_siop_esi: number = Sensitivity_us_siop_esi; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_Sensitivity: $.ASN1Decoder<Sensitivity> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Sensitivity
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Sensitivity (el: _Element): Sensitivity {
-    if (!_cached_decoder_for_Sensitivity) { _cached_decoder_for_Sensitivity = $._decodeBitString; }
-    return _cached_decoder_for_Sensitivity(el);
-}
-
-let _cached_encoder_for_Sensitivity: $.ASN1Encoder<Sensitivity> | null = null;
-
-/**
- * @summary Encodes a(n) Sensitivity into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Sensitivity, encoded as an ASN.1 Element.
- */
-export
-function _encode_Sensitivity (value: Sensitivity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Sensitivity) { _cached_encoder_for_Sensitivity = $._encodeBitString; }
-    return _cached_encoder_for_Sensitivity(value, elGetter);
-}
+export const _decode_Sensitivity: $.ASN1Decoder<Sensitivity> = $._decodeBitString;
+export const _encode_Sensitivity: $.ASN1Encoder<Sensitivity> = $._encodeBitString;
 
 
 /* eslint-enable */
