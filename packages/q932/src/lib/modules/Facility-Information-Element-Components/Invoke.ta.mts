@@ -201,7 +201,7 @@ let _cached_encoder_for_Invoke: $.ASN1Encoder<Invoke> | null = null;
  */
 export
 function _encode_Invoke (value: Invoke, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Invoke) { _cached_encoder_for_Invoke = function (value: Invoke, elGetter: $.ASN1Encoder<Invoke>): _Element {
+    if (!_cached_encoder_for_Invoke) { _cached_encoder_for_Invoke = function (value: Invoke, _elGetter: $.ASN1Encoder<Invoke>): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER);

@@ -153,7 +153,7 @@ let _cached_encoder_for_PrivatePartyNumber: $.ASN1Encoder<PrivatePartyNumber> | 
  */
 export
 function _encode_PrivatePartyNumber (value: PrivatePartyNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrivatePartyNumber) { _cached_encoder_for_PrivatePartyNumber = function (value: PrivatePartyNumber, elGetter: $.ASN1Encoder<PrivatePartyNumber>): _Element {
+    if (!_cached_encoder_for_PrivatePartyNumber) { _cached_encoder_for_PrivatePartyNumber = function (value: PrivatePartyNumber, _elGetter: $.ASN1Encoder<PrivatePartyNumber>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PrivateTypeOfNumber(value.privateTypeOfNumber, $.BER),
         /* REQUIRED   */ _encode_NumberDigits(value.privateNumberDigits, $.BER)

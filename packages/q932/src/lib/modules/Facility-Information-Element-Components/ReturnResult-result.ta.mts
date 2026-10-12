@@ -151,7 +151,7 @@ let _cached_encoder_for_ReturnResult_result: $.ASN1Encoder<ReturnResult_result> 
  */
 export
 function _encode_ReturnResult_result (value: ReturnResult_result, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReturnResult_result) { _cached_encoder_for_ReturnResult_result = function (value: ReturnResult_result, elGetter: $.ASN1Encoder<ReturnResult_result>): _Element {
+    if (!_cached_encoder_for_ReturnResult_result) { _cached_encoder_for_ReturnResult_result = function (value: ReturnResult_result, _elGetter: $.ASN1Encoder<ReturnResult_result>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Code(value.opcode, $.BER),
         /* REQUIRED   */ $._encodeAny(value.result, $.BER)

@@ -148,7 +148,7 @@ let _cached_encoder_for_UserSpecifiedSubaddress: $.ASN1Encoder<UserSpecifiedSuba
  */
 export
 function _encode_UserSpecifiedSubaddress (value: UserSpecifiedSubaddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserSpecifiedSubaddress) { _cached_encoder_for_UserSpecifiedSubaddress = function (value: UserSpecifiedSubaddress, elGetter: $.ASN1Encoder<UserSpecifiedSubaddress>): _Element {
+    if (!_cached_encoder_for_UserSpecifiedSubaddress) { _cached_encoder_for_UserSpecifiedSubaddress = function (value: UserSpecifiedSubaddress, _elGetter: $.ASN1Encoder<UserSpecifiedSubaddress>): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ _encode_SubaddressInformation(value.subaddressInformation, $.BER);

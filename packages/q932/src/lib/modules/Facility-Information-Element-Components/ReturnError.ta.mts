@@ -173,7 +173,7 @@ let _cached_encoder_for_ReturnError: $.ASN1Encoder<ReturnError> | null = null;
  */
 export
 function _encode_ReturnError (value: ReturnError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReturnError) { _cached_encoder_for_ReturnError = function (value: ReturnError, elGetter: $.ASN1Encoder<ReturnError>): _Element {
+    if (!_cached_encoder_for_ReturnError) { _cached_encoder_for_ReturnError = function (value: ReturnError, _elGetter: $.ASN1Encoder<ReturnError>): _Element {
     const _components: _Element[] = new Array(3);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER);
