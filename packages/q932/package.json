@@ -1,0 +1,44 @@
+{
+    "name": "@wildboar/q932",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mts",
+        "./Addressing-Data-Elements": "./src/lib/modules/Addressing-Data-Elements/index.mts",
+        "./Embedded-Q931-Types": "./src/lib/modules/Embedded-Q931-Types/index.mts",
+        "./Explicit-Network-Controlled-Channel-Reservation": "./src/lib/modules/Explicit-Network-Controlled-Channel-Reservation/index.mts",
+        "./Facility-Information-Element-Components": "./src/lib/modules/Facility-Information-Element-Components/index.mts",
+        "./Flow-Control": "./src/lib/modules/Flow-Control/index.mts",
+        "./Network-Facility-Extension": "./src/lib/modules/Network-Facility-Extension/index.mts",
+        "./Network-Protocol-Profile-component": "./src/lib/modules/Network-Protocol-Profile-component/index.mts",
+        "./Notification-Indicator-IE-Data-Structure": "./src/lib/modules/Notification-Indicator-IE-Data-Structure/index.mts"
+    },
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/rose": "npm:@jsr/wildboar__rose@^2.0.2"
+    }
+}

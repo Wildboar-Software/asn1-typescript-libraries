@@ -277,6 +277,9 @@
       "path": "./packages/lpp"
     },
     {
+      "path": "./packages/q932"
+    },
+    {
       "path": "./packages/stanag4406"
     }
   ],
