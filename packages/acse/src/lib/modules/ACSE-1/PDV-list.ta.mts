@@ -50,38 +50,46 @@ import {
  *
  */
 export class PDV_list {
+  /**
+   * @summary `transfer_syntax_name`.
+   * @description
+   *
+   * Transfer syntax of these PDVs, if not implied by the PCI.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
+  /**
+   * @summary `presentation_context_identifier`.
+   * @description
+   *
+   * PCI whose abstract syntax applies to `presentation-data-values`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly presentation_context_identifier: Presentation_context_identifier;
+  /**
+   * @summary `presentation_data_values`.
+   * @description
+   *
+   * Encoded user data for that PCI (X.226 | ISO/IEC 8823-1).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly presentation_data_values: PDV_list_presentation_data_values;
+
   constructor(
-    /**
-     * @summary `transfer_syntax_name`.
-     * @description
-     *
-     * Transfer syntax of these PDVs, if not implied by the PCI.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
-    /**
-     * @summary `presentation_context_identifier`.
-     * @description
-     *
-     * PCI whose abstract syntax applies to `presentation-data-values`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly presentation_context_identifier: Presentation_context_identifier,
-    /**
-     * @summary `presentation_data_values`.
-     * @description
-     *
-     * Encoded user data for that PCI (X.226 | ISO/IEC 8823-1).
-     *
-     * @public
-     * @readonly
-     */
-    readonly presentation_data_values: PDV_list_presentation_data_values
-  ) {}
+    transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
+    presentation_context_identifier: Presentation_context_identifier,
+    presentation_data_values: PDV_list_presentation_data_values
+  ) {
+    this.transfer_syntax_name = transfer_syntax_name;
+    this.presentation_context_identifier = presentation_context_identifier;
+    this.presentation_data_values = presentation_data_values;
+  }
 
   /**
    * @summary Restructures an object into a PDV_list

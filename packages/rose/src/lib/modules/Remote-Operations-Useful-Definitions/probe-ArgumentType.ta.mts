@@ -30,15 +30,19 @@ import {
  *
  */
 export class probe_ArgumentType {
+  /**
+   * @summary `invokeId`.
+   * @description Invocation being enquired about (Amd.1 §10.6.2).
+   * @public
+   * @readonly
+   */
+  public readonly invokeId: InvokeId;
+
   constructor(
-    /**
-     * @summary `invokeId`.
-     * @description Invocation being enquired about (Amd.1 §10.6.2).
-     * @public
-     * @readonly
-     */
-    readonly invokeId: InvokeId
-  ) {}
+    invokeId: InvokeId
+  ) {
+    this.invokeId = invokeId;
+  }
 
   /**
    * @summary Restructures an object into a probe_ArgumentType

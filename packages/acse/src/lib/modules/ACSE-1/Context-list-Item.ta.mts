@@ -40,38 +40,46 @@ import {
  *
  */
 export class Context_list_Item {
+  /**
+   * @summary `pci`.
+   * @description
+   *
+   * Presentation context identifier for this proposal.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly pci: Presentation_context_identifier;
+  /**
+   * @summary `abstract_syntax`.
+   * @description
+   *
+   * Abstract syntax proposed for this PCI.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly abstract_syntax: Abstract_syntax_name;
+  /**
+   * @summary `transfer_syntaxes`.
+   * @description
+   *
+   * Transfer syntaxes offered for this abstract syntax.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly transfer_syntaxes: Transfer_syntax_name[];
+
   constructor(
-    /**
-     * @summary `pci`.
-     * @description
-     *
-     * Presentation context identifier for this proposal.
-     *
-     * @public
-     * @readonly
-     */
-    readonly pci: Presentation_context_identifier,
-    /**
-     * @summary `abstract_syntax`.
-     * @description
-     *
-     * Abstract syntax proposed for this PCI.
-     *
-     * @public
-     * @readonly
-     */
-    readonly abstract_syntax: Abstract_syntax_name,
-    /**
-     * @summary `transfer_syntaxes`.
-     * @description
-     *
-     * Transfer syntaxes offered for this abstract syntax.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_syntaxes: Transfer_syntax_name[]
-  ) {}
+    pci: Presentation_context_identifier,
+    abstract_syntax: Abstract_syntax_name,
+    transfer_syntaxes: Transfer_syntax_name[]
+  ) {
+    this.pci = pci;
+    this.abstract_syntax = abstract_syntax;
+    this.transfer_syntaxes = transfer_syntaxes;
+  }
 
   /**
    * @summary Restructures an object into a Context_list_Item

@@ -13,10 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_acknowledge_ResultType {
-  acknowledged = 0,
-  unknown = 1,
-}
+export const _enum_for_acknowledge_ResultType = {
+  acknowledged: 0,
+  unknown: 1,
+} as const;
+
+export type _enum_for_acknowledge_ResultType =
+  (typeof _enum_for_acknowledge_ResultType)[keyof typeof _enum_for_acknowledge_ResultType];
 
 
 /**

@@ -61,62 +61,74 @@ import {
  *
  */
 export class RLRE_apdu {
+  /**
+   * @summary `reason`.
+   * @description
+   *
+   * Why the acceptor accepted or rejected release: `normal` (0),
+   * `not-finished` (1), or `user-defined` (30). ITU-T Rec.
+   * X.217 bis (1998) §8.2.1.1; X.227 bis (1998) §7.2.5.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly reason?: OPTIONAL<Release_response_reason>;
+  /**
+   * @summary `aso_qualifier`.
+   * @description
+   *
+   * Distinguishes APDUs for different child ASOs under a parent.
+   * Conditional. Higher Level Association FU. ITU-T Rec. X.227 bis
+   * (1998) §7.2.5.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly aso_qualifier?: OPTIONAL<ASO_qualifier>;
+  /**
+   * @summary `asoi_identifier`.
+   * @description
+   *
+   * Distinguishes concurrent instances of the same ASO. Conditional.
+   * Higher Level Association FU. ITU-T Rec. X.227 bis (1998) §7.2.4.4
+   * (same use as on RLRQ).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly asoi_identifier?: OPTIONAL<ASOI_identifier>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+  /**
+   * @summary `user_information`.
+   * @description
+   *
+   * Optional user information; meaning depends on the ASO-context in
+   * effect. ITU-T Rec. X.217 bis (1998) §8.2.1.2; X.227 bis (1998)
+   * §7.2.5.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_information?: OPTIONAL<Association_data>;
+
   constructor(
-    /**
-     * @summary `reason`.
-     * @description
-     *
-     * Why the acceptor accepted or rejected release: `normal` (0),
-     * `not-finished` (1), or `user-defined` (30). ITU-T Rec.
-     * X.217 bis (1998) §8.2.1.1; X.227 bis (1998) §7.2.5.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly reason?: OPTIONAL<Release_response_reason>,
-    /**
-     * @summary `aso_qualifier`.
-     * @description
-     *
-     * Distinguishes APDUs for different child ASOs under a parent.
-     * Conditional. Higher Level Association FU. ITU-T Rec. X.227 bis
-     * (1998) §7.2.5.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
-    /**
-     * @summary `asoi_identifier`.
-     * @description
-     *
-     * Distinguishes concurrent instances of the same ASO. Conditional.
-     * Higher Level Association FU. ITU-T Rec. X.227 bis (1998) §7.2.4.4
-     * (same use as on RLRQ).
-     *
-     * @public
-     * @readonly
-     */
-    readonly asoi_identifier?: OPTIONAL<ASOI_identifier>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_information`.
-     * @description
-     *
-     * Optional user information; meaning depends on the ASO-context in
-     * effect. ITU-T Rec. X.217 bis (1998) §8.2.1.2; X.227 bis (1998)
-     * §7.2.5.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_information?: OPTIONAL<Association_data>
-  ) {}
+    reason?: OPTIONAL<Release_response_reason>,
+    aso_qualifier?: OPTIONAL<ASO_qualifier>,
+    asoi_identifier?: OPTIONAL<ASOI_identifier>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_information?: OPTIONAL<Association_data>
+  ) {
+    this.reason = reason;
+    this.aso_qualifier = aso_qualifier;
+    this.asoi_identifier = asoi_identifier;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_information = user_information;
+  }
 
   /**
    * @summary Restructures an object into a RLRE_apdu

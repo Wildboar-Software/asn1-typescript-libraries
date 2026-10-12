@@ -36,22 +36,28 @@ import {
  *
  */
 export class cancelFailed_ParameterType {
+  /**
+   * @summary `problem`.
+   * @description Why cancellation failed (Amd.1 §10.10.2.1).
+   * @public
+   * @readonly
+   */
+  public readonly problem: CancelProblem;
+  /**
+   * @summary `operation`.
+   * @description `InvokeId` of the invocation that was to be cancelled (Amd.1 §10.10.2.2).
+   * @public
+   * @readonly
+   */
+  public readonly operation: InvokeId;
+
   constructor(
-    /**
-     * @summary `problem`.
-     * @description Why cancellation failed (Amd.1 §10.10.2.1).
-     * @public
-     * @readonly
-     */
-    readonly problem: CancelProblem,
-    /**
-     * @summary `operation`.
-     * @description `InvokeId` of the invocation that was to be cancelled (Amd.1 §10.10.2.2).
-     * @public
-     * @readonly
-     */
-    readonly operation: InvokeId
-  ) {}
+    problem: CancelProblem,
+    operation: InvokeId
+  ) {
+    this.problem = problem;
+    this.operation = operation;
+  }
 
   /**
    * @summary Restructures an object into a cancelFailed_ParameterType

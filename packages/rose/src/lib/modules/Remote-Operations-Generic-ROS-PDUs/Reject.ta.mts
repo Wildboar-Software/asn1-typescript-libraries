@@ -48,22 +48,28 @@ import {
  *
  */
 export class Reject {
+  /**
+   * @summary `invokeId`.
+   * @description Invoke-id from the rejected PDU, or `noInvokeId` if it cannot be determined (X.880 §9.6.2 a).
+   * @public
+   * @readonly
+   */
+  public readonly invokeId: InvokeId;
+  /**
+   * @summary `problem`.
+   * @description Category of problem: `general`, `invoke`, `returnResult`, or `returnError` (X.880 §9.6.2 b, §9.6.3–9.6.6).
+   * @public
+   * @readonly
+   */
+  public readonly problem: Reject_problem;
+
   constructor(
-    /**
-     * @summary `invokeId`.
-     * @description Invoke-id from the rejected PDU, or `noInvokeId` if it cannot be determined (X.880 §9.6.2 a).
-     * @public
-     * @readonly
-     */
-    readonly invokeId: InvokeId,
-    /**
-     * @summary `problem`.
-     * @description Category of problem: `general`, `invoke`, `returnResult`, or `returnError` (X.880 §9.6.2 b, §9.6.3–9.6.6).
-     * @public
-     * @readonly
-     */
-    readonly problem: Reject_problem
-  ) {}
+    invokeId: InvokeId,
+    problem: Reject_problem
+  ) {
+    this.invokeId = invokeId;
+    this.problem = problem;
+  }
 
   /**
    * @summary Restructures an object into a Reject
