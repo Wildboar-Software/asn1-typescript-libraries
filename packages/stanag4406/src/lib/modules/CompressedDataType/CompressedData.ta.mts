@@ -123,10 +123,8 @@ function _decode_CompressedData (el: _Element): CompressedData {
     }
     sequence[0].name = "compressionAlgorithm";
     sequence[1].name = "compressedContentInfo";
-    let compressionAlgorithm!: CompressionAlgorithmIdentifier;
-    let compressedContentInfo!: CompressedContentInfo;
-    compressionAlgorithm = _decode_CompressionAlgorithmIdentifier(sequence[0]);
-    compressedContentInfo = _decode_CompressedContentInfo(sequence[1]);
+    const compressionAlgorithm: CompressionAlgorithmIdentifier = _decode_CompressionAlgorithmIdentifier(sequence[0]);
+    const compressedContentInfo: CompressedContentInfo = _decode_CompressedContentInfo(sequence[1]);
     return new CompressedData(
         compressionAlgorithm,
         compressedContentInfo,
