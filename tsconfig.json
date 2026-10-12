@@ -278,6 +278,9 @@
     },
     {
       "path": "./packages/q932"
+    },
+    {
+      "path": "./packages/stanag4406"
     }
   ],
   "compilerOptions": {
