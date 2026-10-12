@@ -10,6 +10,10 @@ import { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
  * @summary MON
  * @description
  * 
+ * Military other notification: an `MN` with the other-notification-type fields
+ * chosen. ACP 127 notification responses use this alternative. STANAG 4406 (Ed.
+ * 2), Annex A, Annex E, clause 8.4, and A3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

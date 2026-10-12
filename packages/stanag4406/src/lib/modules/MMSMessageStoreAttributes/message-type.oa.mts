@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_message_type } from "../MMSObjectIdentifiers/id-nato-m
  * @summary message_type
  * @description
  * 
+ * Message type, stored for equality match. Single-valued. STANAG 4406 (Ed. 2),
+ * Annex A, C.2.5 and A1.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,5 +1,8 @@
 /**
  * ASN.1 module `MMSInformationObjects`.
+ *
+ * Military message and military notification, from STANAG 4406 (Ed. 2), Annex
+ * A, Annex E. The protocol is P772.
  */
 export {
     type InformationObject,

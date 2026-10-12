@@ -20,6 +20,13 @@ import {
  * @summary InformationObject
  * @description
  * 
+ * A military message or a military notification, as stored or returned where an
+ * information object is required (for example an undelivered object on a
+ * report).
+ *
+ * Annex E defines the alternatives as `MM` and `MN`. This module uses `IPM` and
+ * `IPN` for those alternatives. STANAG 4406 (Ed. 2), Annex A, Annex E.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

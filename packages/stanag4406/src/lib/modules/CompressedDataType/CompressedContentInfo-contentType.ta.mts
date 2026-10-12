@@ -12,6 +12,14 @@ import { _decode_ContentType_ShortForm, _encode_ContentType_ShortForm, ContentTy
  * @summary CompressedContentInfo_contentType
  * @description
  * 
+ * Type of the compressed APDU. The integer form is mandatory on origination and
+ * reception. The object-identifier form is optional on origination and
+ * mandatory on reception.
+ *
+ * Annex E writes the alternatives as `[0]` and `[1]` without `IMPLICIT`, and
+ * marks only `compressedContent` `EXPLICIT`. This module encodes the
+ * alternatives as implicit tags. STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

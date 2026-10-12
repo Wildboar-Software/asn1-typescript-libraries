@@ -9,6 +9,10 @@ import { id_nato_mmhs_nat_acp127_notification_response } from "../MMSObjectIdent
  * @summary acp127_notification_response
  * @description
  * 
+ * One ACP 127 notification response, stored for equality match. Multi-valued,
+ * because more than one response may be stored. STANAG 4406 (Ed. 2), Annex A,
+ * C3.1 and A3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

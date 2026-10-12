@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_acp127_notification_request } from "../MMSObjectIdenti
  * @summary acp127_notification_request
  * @description
  * 
+ * ACP 127 notification request from the recipient specifier, stored for
+ * equality match. Single-valued. STANAG 4406 (Ed. 2), Annex A, C.2.5 and A2.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

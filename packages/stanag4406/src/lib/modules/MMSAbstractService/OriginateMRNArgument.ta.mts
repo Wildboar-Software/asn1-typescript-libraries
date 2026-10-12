@@ -17,6 +17,10 @@ import { MRN, _decode_MRN, _encode_MRN } from "../MMSInformationObjects/MRN.ta.m
  * @summary OriginateMRNArgument
  * @description
  * 
+ * Argument of originate-MRN. Submits a military receipt notification. Errors
+ * are subscription-error and recipient-improperly-specified. STANAG 4406 (Ed.
+ * 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +35,19 @@ export
 class OriginateMRNArgument {
     /**
      * @summary `envelope`.
+     * @description
+     *
+     * MTS submission envelope for the receipt notification. STANAG 4406 (Ed.
+     * 2), Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly envelope: MessageSubmissionEnvelope;
     /**
      * @summary `content`.
+     * @description
+     *
+     * The military receipt notification. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */

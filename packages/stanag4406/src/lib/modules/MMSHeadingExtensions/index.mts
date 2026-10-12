@@ -3,6 +3,10 @@
  *
  * Short names omitted because they collide: `critic`, `deferred`, `ecp`, `flash`, `immediate`, `override`, `override_2`, `priority`, `routine`.
  * Import the long form (`TypeName_name`) instead.
+ *
+ * Military heading extensions for P772, from STANAG 4406 (Ed. 2), Annex A, A1
+ * and Annex H1. Each extension is absent or present as a whole; several have a
+ * required presence rule stated on the type.
  */
 export {
     type Acp127MessageIdentifier,

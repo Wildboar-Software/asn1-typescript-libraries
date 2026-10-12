@@ -17,6 +17,14 @@ import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
  * @summary OriginateMMArgument
  * @description
  * 
+ * Argument of originate-MM, on the origination port. Submits one military
+ * message. Distribution-list expansion is done by the MTS. Address-list
+ * expansion, reduced by the exempted-address list, is recommended at the
+ * originating domain when there is no mail list agent; only address lists
+ * support exempted addresses. Probes are a different operation and are
+ * prohibited across national boundaries. STANAG 4406 (Ed. 2), Annex A, clauses
+ * 12.1.2 and 18.2.2, and Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +39,21 @@ export
 class OriginateMMArgument {
     /**
      * @summary `envelope`.
+     * @description
+     *
+     * MTS submission envelope. Primary precedence is mapped onto its grade of
+     * delivery, and onto the priority-level qualifier when that option is
+     * selected. STANAG 4406 (Ed. 2), Annex A, clause 22.4 and Annex G.
      * @public
      * @readonly
      */
     readonly envelope: MessageSubmissionEnvelope;
     /**
      * @summary `content`.
+     * @description
+     *
+     * The military message being submitted. STANAG 4406 (Ed. 2), Annex A, Annex
+     * G.
      * @public
      * @readonly
      */

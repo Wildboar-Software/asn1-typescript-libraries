@@ -13,6 +13,10 @@ import { ub_military_bigstring } from "../MMSUpperBounds/ub-military-bigstring.v
  * @summary Acp127SuppInfo
  * @description
  * 
+ * Supplementary information returned with an ACP 127 gateway notification.
+ * Printable string of 1 to 128 characters. Edition 2 does not prescribe the
+ * contents. STANAG 4406 (Ed. 2), Annex A, A3.1, B.119, and Annex K.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

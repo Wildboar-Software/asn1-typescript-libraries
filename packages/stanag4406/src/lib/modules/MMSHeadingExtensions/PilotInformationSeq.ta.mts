@@ -10,6 +10,9 @@ import { PilotInformation, _decode_PilotInformation, _encode_PilotInformation } 
  * @summary PilotInformationSeq
  * @description
  * 
+ * The pilot-forwarding-info heading-extension value. STANAG 4406 (Ed. 2), Annex
+ * A, A1.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

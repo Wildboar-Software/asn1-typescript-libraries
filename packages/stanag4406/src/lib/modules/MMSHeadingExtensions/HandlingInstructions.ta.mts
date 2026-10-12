@@ -10,6 +10,12 @@ import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "
  * @summary HandlingInstructions
  * @description
  * 
+ * ACP 127 format-line 4 transmission instructions for the traffic operator, for
+ * example that a particular system is to be used. Presence means the message
+ * requires manual handling. Absence means it does not. Transitional, for ACP
+ * 127 interworking. Message instructions, by contrast, are also of interest to
+ * the reader. STANAG 4406 (Ed. 2), Annex A, A1.4 and B.108.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

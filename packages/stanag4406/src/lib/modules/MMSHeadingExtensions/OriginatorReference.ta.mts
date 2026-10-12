@@ -10,6 +10,11 @@ import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "
  * @summary OriginatorReference
  * @description
  * 
+ * The originator's number, supplied entirely by the originating organizational
+ * unit (ACP 121, ACP 127 format line 12). It is not the MM-message
+ * identification, which the MM-UA generates. Absence means there is no
+ * user-defined reference. STANAG 4406 (Ed. 2), Annex A, A1.7, B.55, and B.111.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

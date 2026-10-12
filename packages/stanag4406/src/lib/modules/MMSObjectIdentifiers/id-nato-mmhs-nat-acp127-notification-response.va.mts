@@ -10,6 +10,10 @@ import { id_nat } from "../MMSObjectIdentifiers/id-nat.va.mjs";
  * @summary id_nato_mmhs_nat_acp127_notification_response
  * @description
  * 
+ * Message-store attribute identifier for an ACP 127 notification response,
+ * `{id-nat 0}`. The heading-extension identifier is a different arc, `{id-mm
+ * 16}`. STANAG 4406 (Ed. 2), Annex A, Annex D and C3.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

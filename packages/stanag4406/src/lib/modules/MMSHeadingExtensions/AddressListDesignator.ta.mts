@@ -19,6 +19,17 @@ import { _decode_AddressListRequest, _encode_AddressListRequest, AddressListRequ
  * @summary AddressListDesignator
  * @description
  * 
+ * One predefined recipient list (an address list, the MMHS counterpart of an
+ * ACP 127 AIG or CAD). Says whether the list was sent as action or information,
+ * and whether notifications or replies are required from action members,
+ * information members, or both. Expansion does not add an O/R descriptor per
+ * member to the heading.
+ *
+ * This address-list-indicator form is deprecated. National systems were
+ * expected to keep using it in the short term. The alternative is to carry the
+ * list in the MMS addressing fields. STANAG 4406 (Ed. 2), Annex A, A1.11 and
+ * B.104.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +46,43 @@ export
 class AddressListDesignator {
     /**
      * @summary `type_`.
+     * @description
+     *
+     * Action (`primaryAddressList`) or information (`copyAddressList`). STANAG
+     * 4406 (Ed. 2), Annex A, A1.11 and B.104.
      * @public
      * @readonly
      */
     readonly type_: AddressListDesignator_type;
     /**
      * @summary `listName`.
+     * @description
+     *
+     * O/R descriptor of the predefined list. Expansion does not add a
+     * descriptor for each member. STANAG 4406 (Ed. 2), Annex A, A1.11. O/R
+     * descriptor as in ITU-T X.420 clause 7.1.3.
      * @public
      * @readonly
      */
     readonly listName: ORDescriptor;
     /**
      * @summary `notificationRequest`.
+     * @description
+     *
+     * Who on the list must send a notification: action, information, or both.
+     * Optional. STANAG 4406 (Ed. 2), Annex A, A1.11 and B.104.
      * @public
      * @readonly
      */
     readonly notificationRequest: OPTIONAL<AddressListRequest>;
     /**
      * @summary `replyRequest`.
+     * @description
+     *
+     * Who on the list is asked to reply: action, information, or both. A reply
+     * request can support a military acknowledgement whose procedure is defined
+     * in the body. Optional. STANAG 4406 (Ed. 2), Annex A, A1.11, B.72, and
+     * B.104.
      * @public
      * @readonly
      */

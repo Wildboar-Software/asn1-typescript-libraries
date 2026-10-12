@@ -17,6 +17,12 @@ import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
  * @summary OriginateProbeArgument
  * @description
  * 
+ * Argument of originate-probe. Annex G allows a national implementation to
+ * support probes inside its own domain. MM-UAs shall not submit probes, probes
+ * are not permitted across national boundaries, and the MMTS tells the user
+ * that probe submission is prohibited. STANAG 4406 (Ed. 2), Annex A, clauses
+ * 12.1.1 and 18.2.1, the X.411 extensions clause 8.2.1.4.2, and Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +37,20 @@ export
 class OriginateProbeArgument {
     /**
      * @summary `envelope`.
+     * @description
+     *
+     * Probe submission envelope. Probe submission is prohibited across national
+     * boundaries. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly envelope: ProbeSubmissionEnvelope;
     /**
      * @summary `content`.
+     * @description
+     *
+     * Military message content of the probe. STANAG 4406 (Ed. 2), Annex A,
+     * Annex G.
      * @public
      * @readonly
      */

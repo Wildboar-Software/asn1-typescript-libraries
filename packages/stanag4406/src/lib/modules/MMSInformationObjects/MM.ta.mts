@@ -21,6 +21,20 @@ import {
  * @summary MM
  * @description
  * 
+ * A military message: the P772 content. It is an IPMS heading and body, read
+ * with "MMS" substituted for "IPMS", plus the military heading extensions.
+ *
+ * The IPM identifier is mandatory and is the MM-message identification. The
+ * user component is the originating MM-UA's O/R name, including the O/R address
+ * and every component of the global domain identifier. The local identifier is
+ * a UA serial number, a space, and the filing time in UTC including seconds
+ * (`ddmmyyhhmmssZ` is 13 characters). The recommended minimum length is 15. Do
+ * not interpret the serial number as an integer.
+ *
+ * Content type `id-nato-mmhs-cont-mm88` (`{id-mcont 1}`), also assigned in this
+ * module as `id-mct-p772` for the message store. STANAG 4406 (Ed. 2), Annex A,
+ * clauses 7.1.1, 20.2, and B.37, and Annex E of the X.420 extensions.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +48,22 @@ export
 class MM {
     /**
      * @summary `mmheading`.
+     * @description
+     *
+     * IPMS heading, including the military heading extensions of Annex A1.
+     * Unsupported national extensions may be ignored on reception. STANAG 4406
+     * (Ed. 2), Annex A, clause 7.2.17 and Annex E.
      * @public
      * @readonly
      */
     readonly mmheading: Heading;
     /**
      * @summary `mmbody`.
+     * @description
+     *
+     * IPMS body, including the military extended body parts (ADatP-3,
+     * corrections, forwarded-encrypted, MM-message, and ACP 127 data). STANAG
+     * 4406 (Ed. 2), Annex A, clause 7.3 and Annex E.
      * @public
      * @readonly
      */

@@ -20,6 +20,9 @@ import {
  * @summary OriginateMRNResult
  * @description
  * 
+ * Result of a successful originate-MRN: the MTS submission identifier and
+ * submission time. STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,18 @@ export
 class OriginateMRNResult {
     /**
      * @summary `submission_identifier`.
+     * @description
+     *
+     * MTS message-submission identifier. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly submission_identifier: MessageSubmissionIdentifier;
     /**
      * @summary `submission_time`.
+     * @description
+     *
+     * MTS message-submission time. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */

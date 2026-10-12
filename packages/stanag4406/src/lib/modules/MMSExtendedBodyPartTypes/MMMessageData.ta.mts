@@ -16,6 +16,16 @@ import {
  * @summary MMMessageData
  * @description
  * 
+ * The forwarded message. Annex I1 assigns `MMMessageData ::= MM`. The
+ * accompanying note says this body part can carry a forwarded MM or a forwarded
+ * IPM, whereas the civil message body part can carry only an IPM. This module
+ * types the data as `IPM`.
+ *
+ * Use this body part when the received message is an MM and it is not
+ * encrypted, or it has been decrypted. An encrypted message that cannot be
+ * decrypted uses the forwarded-encrypted body part. STANAG 4406 (Ed. 2), Annex
+ * A, clause 7.3.12.4, B1.4, and 18.5.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

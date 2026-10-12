@@ -10,6 +10,9 @@ import { id_mod } from "../MMSObjectIdentifiers/id-mod.va.mjs";
  * @summary id_mod_per_recipient_specifier_extensions
  * @description
  * 
+ * Module identifier for the per-recipient extensions, `{id-mod 11}`. STANAG
+ * 4406 (Ed. 2), Annex A, Annex H2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

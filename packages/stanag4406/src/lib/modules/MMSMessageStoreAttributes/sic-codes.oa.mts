@@ -9,6 +9,10 @@ import { id_nato_mmhs_hat_sic_codes } from "../MMSObjectIdentifiers/id-nato-mmhs
  * @summary sic_codes
  * @description
  * 
+ * One subject indicator code, stored for equality match. Multi-valued, so each
+ * SIC is a separate attribute value. STANAG 4406 (Ed. 2), Annex A, C.2.5 and
+ * B.107.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

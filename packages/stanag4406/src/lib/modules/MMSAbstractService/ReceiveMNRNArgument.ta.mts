@@ -17,6 +17,9 @@ import { MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.
  * @summary ReceiveMNRNArgument
  * @description
  * 
+ * Argument of receive-MNRN. Delivers a military non-receipt notification. The
+ * operation has no result. STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +34,20 @@ export
 class ReceiveMNRNArgument {
     /**
      * @summary `envelope`.
+     * @description
+     *
+     * MTS delivery envelope of the non-receipt notification. STANAG 4406 (Ed.
+     * 2), Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly envelope: MessageDeliveryEnvelope;
     /**
      * @summary `content`.
+     * @description
+     *
+     * The delivered military non-receipt notification. STANAG 4406 (Ed. 2),
+     * Annex A, Annex G.
      * @public
      * @readonly
      */

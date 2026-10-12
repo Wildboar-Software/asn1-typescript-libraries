@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DistributionExtensionField
  * @description
  * 
+ * One privately defined or future distribution criterion, identified by an
+ * object identifier. Any number may appear in `DistributionCodes`. STANAG 4406
+ * (Ed. 2), Annex A, A1.3 and B.107.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +31,22 @@ export
 class DistributionExtensionField {
     /**
      * @summary `dist_type`.
+     * @description
+     *
+     * Which distribution criterion this is. Matching in the message store uses
+     * this to decide whether `dist-value` is compared. STANAG 4406 (Ed. 2),
+     * Annex A, A1.3 and C.2.5.
      * @public
      * @readonly
      */
     readonly dist_type: OBJECT_IDENTIFIER;
     /**
      * @summary `dist_value`.
+     * @description
+     *
+     * The criterion value, of the type identified by `dist-type`. Ignored for
+     * message-store matching unless that syntax is recognized. STANAG 4406 (Ed.
+     * 2), Annex A, A1.3 and C.2.5.
      * @public
      * @readonly
      */

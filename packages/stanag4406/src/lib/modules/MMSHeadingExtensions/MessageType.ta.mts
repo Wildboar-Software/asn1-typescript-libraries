@@ -13,6 +13,10 @@ import { MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier
  * @summary MessageType
  * @description
  * 
+ * Distinguishes a message that belongs to an exercise, operation, project, or
+ * drill. Absence of the heading extension means the type is undefined. STANAG
+ * 4406 (Ed. 2), Annex A, A1.10 and B.103.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +31,20 @@ export
 class MessageType {
     /**
      * @summary `type_`.
+     * @description
+     *
+     * Exercise, operation, project, or drill. Integers 128 to 255 may be used
+     * nationally or bilaterally. STANAG 4406 (Ed. 2), Annex A, A1.10.
      * @public
      * @readonly
      */
     readonly type_: TypeMessage;
     /**
      * @summary `identifier`.
+     * @description
+     *
+     * Further name of that exercise, operation, project, or drill. Optional.
+     * STANAG 4406 (Ed. 2), Annex A, A1.10.
      * @public
      * @readonly
      */

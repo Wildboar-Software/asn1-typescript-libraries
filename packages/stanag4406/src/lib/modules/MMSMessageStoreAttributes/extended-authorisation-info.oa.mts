@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_extended_authorisation_info } from "../MMSObjectIdenti
  * @summary extended_authorisation_info
  * @description
  * 
+ * The extended-authorisation date-time group, stored for equality match.
+ * Single-valued. STANAG 4406 (Ed. 2), Annex A, C.2.5 and A1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

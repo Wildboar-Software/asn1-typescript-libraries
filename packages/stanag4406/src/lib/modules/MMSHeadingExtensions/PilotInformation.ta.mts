@@ -24,6 +24,12 @@ import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "
  * @summary PilotInformation
  * @description
  * 
+ * One set of ACP 127 pilot information that equals or supersedes the received
+ * heading for precedence, classification, local handling, and addressing. A
+ * gateway translates a pilot by sending the original body as the text body of a
+ * new message. Transitional. Absence of the heading extension means the message
+ * has no pilot information. STANAG 4406 (Ed. 2), Annex A, A1.13 and B.115.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +48,42 @@ export
 class PilotInformation {
     /**
      * @summary `pilotPrecedence`.
+     * @description
+     *
+     * Precedence that equals or supersedes the received precedence. Values 0 to
+     * 15 are NATO; 16 to 31 are national. Optional. STANAG 4406 (Ed. 2), Annex
+     * A, A1.13.
      * @public
      * @readonly
      */
     readonly pilotPrecedence: OPTIONAL<MMHSPrecedence>;
     /**
      * @summary `pilotRecipient`.
+     * @description
+     *
+     * Addresses that equal or supersede the received addressing. Optional.
+     * STANAG 4406 (Ed. 2), Annex A, A1.13.
      * @public
      * @readonly
      */
     readonly pilotRecipient: OPTIONAL<ORDescriptor[]>;
     /**
      * @summary `pilotSecurity`.
+     * @description
+     *
+     * Classification that equals or supersedes the received classification. An
+     * X.411 message security label (clause 8.5.9). Optional. STANAG 4406 (Ed.
+     * 2), Annex A, A1.13.
      * @public
      * @readonly
      */
     readonly pilotSecurity: OPTIONAL<SecurityLabel>;
     /**
      * @summary `pilotHandling`.
+     * @description
+     *
+     * Local handling instructions that equal or supersede the received
+     * instructions. Optional. STANAG 4406 (Ed. 2), Annex A, A1.13.
      * @public
      * @readonly
      */

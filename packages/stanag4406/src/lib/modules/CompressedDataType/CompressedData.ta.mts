@@ -13,6 +13,16 @@ import { CompressedContentInfo, _decode_CompressedContentInfo, _encode_Compresse
  * @summary CompressedData
  * @description
  * 
+ * Tactical compression wrapper. It compresses a whole X.400 APDU, content and
+ * envelope, not the message content alone, because the P1, P3, and P7 envelopes
+ * are a large part of the size. Encode the APDU in BER, then compress. The
+ * wrapper is applied at the tactical application sub-layer.
+ *
+ * This is the Annex E Compressed Data Type, identified by `id-mmhs-CDT`. It is
+ * separate from the S/MIME compressed-data service in Annex B clause 7.11,
+ * which points at the NATO S/MIME profile and RFC 3274. STANAG 4406 (Ed. 2),
+ * Annex E, clause 4.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +38,20 @@ export
 class CompressedData {
     /**
      * @summary `compressionAlgorithm`.
+     * @description
+     *
+     * Dynamically mandatory. Prefer the integer form; 0 is ZLIB. STANAG 4406
+     * (Ed. 2), Annex E, clause 4.2.6.1.
      * @public
      * @readonly
      */
     readonly compressionAlgorithm: CompressionAlgorithmIdentifier;
     /**
      * @summary `compressedContentInfo`.
+     * @description
+     *
+     * Dynamically mandatory. The compressed APDU and the type of envelope that
+     * was compressed. STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.1.
      * @public
      * @readonly
      */

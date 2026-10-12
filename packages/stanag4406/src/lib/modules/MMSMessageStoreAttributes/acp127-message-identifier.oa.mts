@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_acp127_message_identifier } from "../MMSObjectIdentifi
  * @summary acp127_message_identifier
  * @description
  * 
+ * ACP 127 message identifier, stored for equality match. Single-valued. STANAG
+ * 4406 (Ed. 2), Annex A, C.2.5 and A1.14.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AddressListRequest
  * @description
  * 
+ * Which members of an address list are asked for a notification or a reply:
+ * action, information, or both. STANAG 4406 (Ed. 2), Annex A, A1.11 and B.104.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +25,10 @@ type AddressListRequest = INTEGER;
 
 /**
  * @summary AddressListRequest_action
+ * @description
+ *
+ * Ask only the action (primary) members of the address list. STANAG 4406 (Ed.
+ * 2), Annex A, A1.11 and B.104.
  * @constant
  * @type {number}
  */
@@ -30,6 +37,10 @@ const AddressListRequest_action: AddressListRequest = 0; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary AddressListRequest_action
+ * @description
+ *
+ * Ask only the action (primary) members of the address list. STANAG 4406 (Ed.
+ * 2), Annex A, A1.11 and B.104.
  * @constant
  * @type {number}
  */
@@ -38,6 +49,10 @@ const action: AddressListRequest = AddressListRequest_action; /* SHORT_NAMED_INT
 
 /**
  * @summary AddressListRequest_info
+ * @description
+ *
+ * Ask only the information (copy) members of the address list. STANAG 4406 (Ed.
+ * 2), Annex A, A1.11 and B.104.
  * @constant
  * @type {number}
  */
@@ -46,6 +61,10 @@ const AddressListRequest_info: AddressListRequest = 1; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary AddressListRequest_info
+ * @description
+ *
+ * Ask only the information (copy) members of the address list. STANAG 4406 (Ed.
+ * 2), Annex A, A1.11 and B.104.
  * @constant
  * @type {number}
  */
@@ -54,6 +73,10 @@ const info: AddressListRequest = AddressListRequest_info; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary AddressListRequest_both
+ * @description
+ *
+ * Ask both the action and information members of the address list. STANAG 4406
+ * (Ed. 2), Annex A, A1.11 and B.104.
  * @constant
  * @type {number}
  */
@@ -62,6 +85,10 @@ const AddressListRequest_both: AddressListRequest = 2; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary AddressListRequest_both
+ * @description
+ *
+ * Ask both the action and information members of the address list. STANAG 4406
+ * (Ed. 2), Annex A, A1.11 and B.104.
  * @constant
  * @type {number}
  */

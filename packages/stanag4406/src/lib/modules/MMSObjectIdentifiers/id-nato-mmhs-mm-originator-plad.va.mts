@@ -10,6 +10,9 @@ import { id_mm } from "../MMSObjectIdentifiers/id-mm.va.mjs";
  * @summary id_nato_mmhs_mm_originator_plad
  * @description
  * 
+ * Identifies the originator-PLAD heading extension. Transitional. STANAG 4406
+ * (Ed. 2), Annex A, A1.15, B.117, and Annex D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

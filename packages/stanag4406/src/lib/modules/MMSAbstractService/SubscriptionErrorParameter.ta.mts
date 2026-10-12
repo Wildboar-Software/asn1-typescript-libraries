@@ -11,6 +11,10 @@ import { SubscriptionProblem, _decode_SubscriptionProblem, _encode_SubscriptionP
  * @summary SubscriptionErrorParameter
  * @description
  * 
+ * Parameter of subscription-error, returned by originate-probe, originate-MM,
+ * originate-MRN, change-auto-acknowledgement, and change-auto-forwarding.
+ * STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +29,10 @@ export
 class SubscriptionErrorParameter {
     /**
      * @summary `problem`.
+     * @description
+     *
+     * Which element of service is not subscribed, MMS or MTS. STANAG 4406 (Ed.
+     * 2), Annex A, Annex G.
      * @public
      * @readonly
      */

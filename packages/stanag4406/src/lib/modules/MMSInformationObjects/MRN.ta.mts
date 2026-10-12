@@ -10,6 +10,9 @@ import { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
  * @summary MRN
  * @description
  * 
+ * Military receipt notification: an `MN` with the receipt fields chosen. STANAG
+ * 4406 (Ed. 2), Annex A, Annex E.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

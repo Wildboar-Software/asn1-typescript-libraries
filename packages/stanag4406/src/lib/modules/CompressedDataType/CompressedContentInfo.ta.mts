@@ -13,6 +13,11 @@ import { CompressedContent, _decode_CompressedContent, _encode_CompressedContent
  * @summary CompressedContentInfo
  * @description
  * 
+ * What was compressed, and the compressed octets. The compressed X.400 envelope
+ * is the `compressedContent`. Its type is the integer short form or an object
+ * identifier. Both components are dynamically mandatory. STANAG 4406 (Ed. 2),
+ * Annex E, clauses 4.2.6.1 and 4.2.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +36,21 @@ export
 class CompressedContentInfo {
     /**
      * @summary `contentType`.
+     * @description
+     *
+     * P1, P3, P7, EXTERNAL, unidentified, or an object identifier for the
+     * compressed envelope. The integer form is what originators are required to
+     * be able to send. STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.2.
      * @public
      * @readonly
      */
     readonly contentType: CompressedContentInfo_contentType;
     /**
      * @summary `compressedContent`.
+     * @description
+     *
+     * The compressed BER encoding of the whole envelope. STANAG 4406 (Ed. 2),
+     * Annex E, clause 4.2.6.2.
      * @public
      * @readonly
      */

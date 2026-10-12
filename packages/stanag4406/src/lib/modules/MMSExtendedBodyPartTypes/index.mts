@@ -1,5 +1,9 @@
 /**
  * ASN.1 module `MMSExtendedBodyPartTypes`.
+ *
+ * Military extended body parts, from STANAG 4406 (Ed. 2), Annex A, clause
+ * 7.3.12 and Annexes B and I1: ADatP-3, corrections, forwarded-encrypted,
+ * MM-message, and ACP 127 data.
  */
 export {
     type ACP127DataData,

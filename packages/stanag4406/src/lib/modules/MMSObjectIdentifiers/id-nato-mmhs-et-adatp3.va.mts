@@ -10,6 +10,9 @@ import { id_et } from "../MMSObjectIdentifiers/id-et.va.mjs";
  * @summary id_nato_mmhs_et_adatp3
  * @description
  * 
+ * Data identifier for the ADatP-3 (proforma) extended body part. STANAG 4406
+ * (Ed. 2), Annex A, clause 7.3.12.1, B1.1, and Annex D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

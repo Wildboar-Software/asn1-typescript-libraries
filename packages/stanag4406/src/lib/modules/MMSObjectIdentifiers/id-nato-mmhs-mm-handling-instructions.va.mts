@@ -10,6 +10,10 @@ import { id_mm } from "../MMSObjectIdentifiers/id-mm.va.mjs";
  * @summary id_nato_mmhs_mm_handling_instructions
  * @description
  * 
+ * Identifies the handling-instructions heading extension. Transitional ACP 127
+ * traffic-operator instructions. STANAG 4406 (Ed. 2), Annex A, A1.4, B.108, and
+ * Annex D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

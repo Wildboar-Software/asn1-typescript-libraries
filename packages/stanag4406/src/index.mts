@@ -4,6 +4,10 @@
  * Import a module subpath when a name is local to that module.
  * `ID` is defined identically in MMSObjectIdentifiers and LabelingObjectIdentifiers
  * and is exported once from the package root.
+ *
+ * Annex A is the military base standard, a delta on ITU-T X.400.
+ * Annex E clause 4.2.6 is the tactical compressed-data type. Annex H
+ * is the NATO security-label vocabulary for the ESS security label.
  */
 export * from "./lib/modules/CompressedDataType/index.mjs";
 export * from "./lib/modules/MMSAbstractService/index.mjs";

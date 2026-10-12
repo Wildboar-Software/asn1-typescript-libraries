@@ -21,6 +21,11 @@ import {
  * @summary ForwardedEncryptedParameters
  * @description
  * 
+ * Delivery information for a message forwarded while still encrypted. The
+ * envelope's content type indicates whether the inner message is an MM or an
+ * IPM. All security information of the original message, including the token,
+ * is forwarded. STANAG 4406 (Ed. 2), Annex A, B1.3 and clause 18.5.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +40,21 @@ export
 class ForwardedEncryptedParameters {
     /**
      * @summary `delivery_time`.
+     * @description
+     *
+     * Delivery time of the original message. Optional. Message delivery time as
+     * in ITU-T X.411. STANAG 4406 (Ed. 2), Annex A, B1.3.
      * @public
      * @readonly
      */
     readonly delivery_time: OPTIONAL<MessageDeliveryTime>;
     /**
      * @summary `delivery_envelope`.
+     * @description
+     *
+     * The other message-delivery fields of the original message, including the
+     * content type that says whether the inner message is an MM or an IPM.
+     * STANAG 4406 (Ed. 2), Annex A, B1.3.
      * @public
      * @readonly
      */

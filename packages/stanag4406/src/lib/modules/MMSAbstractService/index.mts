@@ -1,5 +1,8 @@
 /**
  * ASN.1 module `MMSAbstractService`.
+ *
+ * MMS abstract service, from STANAG 4406 (Ed. 2), Annex A, Annex G:
+ * origination, reception, and management.
  */
 export {
     ChangeAutoAcknowledgementArgument,

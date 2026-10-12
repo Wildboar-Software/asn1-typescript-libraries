@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ContentType_ShortForm
  * @description
  * 
+ * Integer names for the compressed APDU: unidentified, EXTERNAL, P1, P3, or P7.
+ * STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +31,10 @@ type ContentType_ShortForm = INTEGER;
 
 /**
  * @summary ContentType_ShortForm_unidentified
+ * @description
+ *
+ * Integer 0. The compressed content type is not identified. STANAG 4406 (Ed.
+ * 2), Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -36,6 +43,10 @@ const ContentType_ShortForm_unidentified: ContentType_ShortForm = 0; /* LONG_NAM
 
 /**
  * @summary ContentType_ShortForm_unidentified
+ * @description
+ *
+ * Integer 0. The compressed content type is not identified. STANAG 4406 (Ed.
+ * 2), Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -44,6 +55,10 @@ const unidentified: ContentType_ShortForm = ContentType_ShortForm_unidentified; 
 
 /**
  * @summary ContentType_ShortForm_external
+ * @description
+ *
+ * Integer 1. The content is EXTERNAL, identified by that content's object
+ * identifier. STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -52,6 +67,10 @@ const ContentType_ShortForm_external: ContentType_ShortForm = 1; /* LONG_NAMED_I
 
 /**
  * @summary ContentType_ShortForm_external
+ * @description
+ *
+ * Integer 1. The content is EXTERNAL, identified by that content's object
+ * identifier. STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -60,6 +79,10 @@ const external: ContentType_ShortForm = ContentType_ShortForm_external; /* SHORT
 
 /**
  * @summary ContentType_ShortForm_p1
+ * @description
+ *
+ * Integer 2. The compressed octets are a P1 envelope. STANAG 4406 (Ed. 2),
+ * Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -68,6 +91,10 @@ const ContentType_ShortForm_p1: ContentType_ShortForm = 2; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ContentType_ShortForm_p1
+ * @description
+ *
+ * Integer 2. The compressed octets are a P1 envelope. STANAG 4406 (Ed. 2),
+ * Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -76,6 +103,10 @@ const p1: ContentType_ShortForm = ContentType_ShortForm_p1; /* SHORT_NAMED_INTEG
 
 /**
  * @summary ContentType_ShortForm_p3
+ * @description
+ *
+ * Integer 3. The compressed octets are a P3 envelope. STANAG 4406 (Ed. 2),
+ * Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -84,6 +115,10 @@ const ContentType_ShortForm_p3: ContentType_ShortForm = 3; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ContentType_ShortForm_p3
+ * @description
+ *
+ * Integer 3. The compressed octets are a P3 envelope. STANAG 4406 (Ed. 2),
+ * Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -92,6 +127,10 @@ const p3: ContentType_ShortForm = ContentType_ShortForm_p3; /* SHORT_NAMED_INTEG
 
 /**
  * @summary ContentType_ShortForm_p7
+ * @description
+ *
+ * Integer 4. The compressed octets are a P7 envelope. STANAG 4406 (Ed. 2),
+ * Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */
@@ -100,6 +139,10 @@ const ContentType_ShortForm_p7: ContentType_ShortForm = 4; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ContentType_ShortForm_p7
+ * @description
+ *
+ * Integer 4. The compressed octets are a P7 envelope. STANAG 4406 (Ed. 2),
+ * Annex E, clause 4.2.6.1.
  * @constant
  * @type {number}
  */

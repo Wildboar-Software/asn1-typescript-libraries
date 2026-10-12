@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NONNATOOrgsAndCountries
  * @description
  * 
+ * Integers for the enumerated permissive tag used with the marking "RELEASABLE
+ * TO". Country values are the numeric codes in Annex H; the trigraph is what is
+ * displayed. Values 9994 to 9999 name organizations. The list is aligned with
+ * the NATO markings document AC/322-D(2004)022 and does not change without a
+ * new tag-name OID. STANAG 4406 (Ed. 2), Annex H.3.4 and H.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,6 +61,11 @@ type NONNATOOrgsAndCountries = INTEGER;
 
 /**
  * @summary NONNATOOrgsAndCountries_albania
+ * @description
+ *
+ * Numeric code for Albania, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -63,6 +74,11 @@ const NONNATOOrgsAndCountries_albania: NONNATOOrgsAndCountries = 8; /* LONG_NAME
 
 /**
  * @summary NONNATOOrgsAndCountries_albania
+ * @description
+ *
+ * Numeric code for Albania, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -71,6 +87,11 @@ const albania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_albania; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_armenia
+ * @description
+ *
+ * Numeric code for Armenia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -79,6 +100,11 @@ const NONNATOOrgsAndCountries_armenia: NONNATOOrgsAndCountries = 16; /* LONG_NAM
 
 /**
  * @summary NONNATOOrgsAndCountries_armenia
+ * @description
+ *
+ * Numeric code for Armenia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -87,6 +113,11 @@ const armenia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_armenia; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_austria
+ * @description
+ *
+ * Numeric code for Austria, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -95,6 +126,11 @@ const NONNATOOrgsAndCountries_austria: NONNATOOrgsAndCountries = 40; /* LONG_NAM
 
 /**
  * @summary NONNATOOrgsAndCountries_austria
+ * @description
+ *
+ * Numeric code for Austria, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -103,6 +139,11 @@ const austria: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_austria; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_azerbaijan
+ * @description
+ *
+ * Numeric code for Azerbaijan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -111,6 +152,11 @@ const NONNATOOrgsAndCountries_azerbaijan: NONNATOOrgsAndCountries = 31; /* LONG_
 
 /**
  * @summary NONNATOOrgsAndCountries_azerbaijan
+ * @description
+ *
+ * Numeric code for Azerbaijan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -119,6 +165,11 @@ const azerbaijan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_azerbaijan; 
 
 /**
  * @summary NONNATOOrgsAndCountries_belarus
+ * @description
+ *
+ * Numeric code for Belarus, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -127,6 +178,11 @@ const NONNATOOrgsAndCountries_belarus: NONNATOOrgsAndCountries = 112; /* LONG_NA
 
 /**
  * @summary NONNATOOrgsAndCountries_belarus
+ * @description
+ *
+ * Numeric code for Belarus, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -135,6 +191,11 @@ const belarus: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_belarus; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_bulgaria
+ * @description
+ *
+ * Numeric code for Bulgaria, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -143,6 +204,11 @@ const NONNATOOrgsAndCountries_bulgaria: NONNATOOrgsAndCountries = 100; /* LONG_N
 
 /**
  * @summary NONNATOOrgsAndCountries_bulgaria
+ * @description
+ *
+ * Numeric code for Bulgaria, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -151,6 +217,11 @@ const bulgaria: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_bulgaria; /* S
 
 /**
  * @summary NONNATOOrgsAndCountries_estonia
+ * @description
+ *
+ * Numeric code for Estonia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -159,6 +230,11 @@ const NONNATOOrgsAndCountries_estonia: NONNATOOrgsAndCountries = 233; /* LONG_NA
 
 /**
  * @summary NONNATOOrgsAndCountries_estonia
+ * @description
+ *
+ * Numeric code for Estonia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -167,6 +243,11 @@ const estonia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_estonia; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_finland
+ * @description
+ *
+ * Numeric code for Finland, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -175,6 +256,11 @@ const NONNATOOrgsAndCountries_finland: NONNATOOrgsAndCountries = 246; /* LONG_NA
 
 /**
  * @summary NONNATOOrgsAndCountries_finland
+ * @description
+ *
+ * Numeric code for Finland, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -183,6 +269,11 @@ const finland: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_finland; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_georgia
+ * @description
+ *
+ * Numeric code for Georgia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -191,6 +282,11 @@ const NONNATOOrgsAndCountries_georgia: NONNATOOrgsAndCountries = 268; /* LONG_NA
 
 /**
  * @summary NONNATOOrgsAndCountries_georgia
+ * @description
+ *
+ * Numeric code for Georgia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -199,6 +295,11 @@ const georgia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_georgia; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_kazakhstan
+ * @description
+ *
+ * Numeric code for Kazakhstan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -207,6 +308,11 @@ const NONNATOOrgsAndCountries_kazakhstan: NONNATOOrgsAndCountries = 398; /* LONG
 
 /**
  * @summary NONNATOOrgsAndCountries_kazakhstan
+ * @description
+ *
+ * Numeric code for Kazakhstan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -215,6 +321,11 @@ const kazakhstan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_kazakhstan; 
 
 /**
  * @summary NONNATOOrgsAndCountries_kyrghyz_Republic
+ * @description
+ *
+ * Numeric code for Kyrghyz Republic, carried in the enumerated permissive tag
+ * and displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG
+ * 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -223,6 +334,11 @@ const NONNATOOrgsAndCountries_kyrghyz_Republic: NONNATOOrgsAndCountries = 417; /
 
 /**
  * @summary NONNATOOrgsAndCountries_kyrghyz_Republic
+ * @description
+ *
+ * Numeric code for Kyrghyz Republic, carried in the enumerated permissive tag
+ * and displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG
+ * 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -231,6 +347,11 @@ const kyrghyz_Republic: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_kyrghy
 
 /**
  * @summary NONNATOOrgsAndCountries_latvia
+ * @description
+ *
+ * Numeric code for Latvia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -239,6 +360,11 @@ const NONNATOOrgsAndCountries_latvia: NONNATOOrgsAndCountries = 428; /* LONG_NAM
 
 /**
  * @summary NONNATOOrgsAndCountries_latvia
+ * @description
+ *
+ * Numeric code for Latvia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -247,6 +373,11 @@ const latvia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_latvia; /* SHORT
 
 /**
  * @summary NONNATOOrgsAndCountries_lithuania
+ * @description
+ *
+ * Numeric code for Lithuania, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -255,6 +386,11 @@ const NONNATOOrgsAndCountries_lithuania: NONNATOOrgsAndCountries = 440; /* LONG_
 
 /**
  * @summary NONNATOOrgsAndCountries_lithuania
+ * @description
+ *
+ * Numeric code for Lithuania, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -263,6 +399,11 @@ const lithuania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_lithuania; /*
 
 /**
  * @summary NONNATOOrgsAndCountries_malta
+ * @description
+ *
+ * Numeric code for Malta, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -271,6 +412,11 @@ const NONNATOOrgsAndCountries_malta: NONNATOOrgsAndCountries = 470; /* LONG_NAME
 
 /**
  * @summary NONNATOOrgsAndCountries_malta
+ * @description
+ *
+ * Numeric code for Malta, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -279,6 +425,11 @@ const malta: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_malta; /* SHORT_N
 
 /**
  * @summary NONNATOOrgsAndCountries_moldova
+ * @description
+ *
+ * Numeric code for Moldova, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -287,6 +438,11 @@ const NONNATOOrgsAndCountries_moldova: NONNATOOrgsAndCountries = 498; /* LONG_NA
 
 /**
  * @summary NONNATOOrgsAndCountries_moldova
+ * @description
+ *
+ * Numeric code for Moldova, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -295,6 +451,11 @@ const moldova: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_moldova; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_romania
+ * @description
+ *
+ * Numeric code for Romania, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -303,6 +464,11 @@ const NONNATOOrgsAndCountries_romania: NONNATOOrgsAndCountries = 642; /* LONG_NA
 
 /**
  * @summary NONNATOOrgsAndCountries_romania
+ * @description
+ *
+ * Numeric code for Romania, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -311,6 +477,11 @@ const romania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_romania; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_russia
+ * @description
+ *
+ * Numeric code for Russia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -319,6 +490,11 @@ const NONNATOOrgsAndCountries_russia: NONNATOOrgsAndCountries = 643; /* LONG_NAM
 
 /**
  * @summary NONNATOOrgsAndCountries_russia
+ * @description
+ *
+ * Numeric code for Russia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -327,6 +503,11 @@ const russia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_russia; /* SHORT
 
 /**
  * @summary NONNATOOrgsAndCountries_slovak_Republic
+ * @description
+ *
+ * Numeric code for Slovak Republic, carried in the enumerated permissive tag
+ * and displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG
+ * 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -335,6 +516,11 @@ const NONNATOOrgsAndCountries_slovak_Republic: NONNATOOrgsAndCountries = 703; /*
 
 /**
  * @summary NONNATOOrgsAndCountries_slovak_Republic
+ * @description
+ *
+ * Numeric code for Slovak Republic, carried in the enumerated permissive tag
+ * and displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG
+ * 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -343,6 +529,11 @@ const slovak_Republic: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_slovak_
 
 /**
  * @summary NONNATOOrgsAndCountries_slovenia
+ * @description
+ *
+ * Numeric code for Slovenia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -351,6 +542,11 @@ const NONNATOOrgsAndCountries_slovenia: NONNATOOrgsAndCountries = 705; /* LONG_N
 
 /**
  * @summary NONNATOOrgsAndCountries_slovenia
+ * @description
+ *
+ * Numeric code for Slovenia, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -359,6 +555,11 @@ const slovenia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_slovenia; /* S
 
 /**
  * @summary NONNATOOrgsAndCountries_sweden
+ * @description
+ *
+ * Numeric code for Sweden, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -367,6 +568,11 @@ const NONNATOOrgsAndCountries_sweden: NONNATOOrgsAndCountries = 752; /* LONG_NAM
 
 /**
  * @summary NONNATOOrgsAndCountries_sweden
+ * @description
+ *
+ * Numeric code for Sweden, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -375,6 +581,11 @@ const sweden: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_sweden; /* SHORT
 
 /**
  * @summary NONNATOOrgsAndCountries_switzerland
+ * @description
+ *
+ * Numeric code for Switzerland, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -383,6 +594,11 @@ const NONNATOOrgsAndCountries_switzerland: NONNATOOrgsAndCountries = 756; /* LON
 
 /**
  * @summary NONNATOOrgsAndCountries_switzerland
+ * @description
+ *
+ * Numeric code for Switzerland, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -391,6 +607,11 @@ const switzerland: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_switzerland
 
 /**
  * @summary NONNATOOrgsAndCountries_tajikistan
+ * @description
+ *
+ * Numeric code for Tajikistan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -399,6 +620,11 @@ const NONNATOOrgsAndCountries_tajikistan: NONNATOOrgsAndCountries = 762; /* LONG
 
 /**
  * @summary NONNATOOrgsAndCountries_tajikistan
+ * @description
+ *
+ * Numeric code for Tajikistan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -407,6 +633,11 @@ const tajikistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_tajikistan; 
 
 /**
  * @summary NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic
+ * @description
+ *
+ * Numeric code for Macedonia, Former Yugoslav Republic, carried in the
+ * enumerated permissive tag and displayed as a trigraph. Used with the marking
+ * "RELEASABLE TO". STANAG 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -415,6 +646,11 @@ const NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic: NONNATOOrgsAnd
 
 /**
  * @summary NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic
+ * @description
+ *
+ * Numeric code for Macedonia, Former Yugoslav Republic, carried in the
+ * enumerated permissive tag and displayed as a trigraph. Used with the marking
+ * "RELEASABLE TO". STANAG 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -423,6 +659,11 @@ const macedonia_Former_Yugoslav_Republic: NONNATOOrgsAndCountries = NONNATOOrgsA
 
 /**
  * @summary NONNATOOrgsAndCountries_turkmenistan
+ * @description
+ *
+ * Numeric code for Turkmenistan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -431,6 +672,11 @@ const NONNATOOrgsAndCountries_turkmenistan: NONNATOOrgsAndCountries = 795; /* LO
 
 /**
  * @summary NONNATOOrgsAndCountries_turkmenistan
+ * @description
+ *
+ * Numeric code for Turkmenistan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -439,6 +685,11 @@ const turkmenistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_turkmenist
 
 /**
  * @summary NONNATOOrgsAndCountries_ukraine
+ * @description
+ *
+ * Numeric code for Ukraine, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -447,6 +698,11 @@ const NONNATOOrgsAndCountries_ukraine: NONNATOOrgsAndCountries = 804; /* LONG_NA
 
 /**
  * @summary NONNATOOrgsAndCountries_ukraine
+ * @description
+ *
+ * Numeric code for Ukraine, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -455,6 +711,11 @@ const ukraine: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_ukraine; /* SHO
 
 /**
  * @summary NONNATOOrgsAndCountries_uzbekistan
+ * @description
+ *
+ * Numeric code for Uzbekistan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -463,6 +724,11 @@ const NONNATOOrgsAndCountries_uzbekistan: NONNATOOrgsAndCountries = 860; /* LONG
 
 /**
  * @summary NONNATOOrgsAndCountries_uzbekistan
+ * @description
+ *
+ * Numeric code for Uzbekistan, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -471,6 +737,11 @@ const uzbekistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_uzbekistan; 
 
 /**
  * @summary NONNATOOrgsAndCountries_united_Nations
+ * @description
+ *
+ * Numeric code for United Nations, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -479,6 +750,11 @@ const NONNATOOrgsAndCountries_united_Nations: NONNATOOrgsAndCountries = 9999; /*
 
 /**
  * @summary NONNATOOrgsAndCountries_united_Nations
+ * @description
+ *
+ * Numeric code for United Nations, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -487,6 +763,12 @@ const united_Nations: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_united_N
 
 /**
  * @summary NONNATOOrgsAndCountries_central_Europe_Initiativ
+ * @description
+ *
+ * Numeric code for Central Europe Initiative (the module keeps the spelling
+ * Initiativ), carried in the enumerated permissive tag and displayed as a
+ * trigraph. Used with the marking "RELEASABLE TO". STANAG 4406 (Ed. 2), Annex
+ * H.3.4.
  * @constant
  * @type {number}
  */
@@ -495,6 +777,12 @@ const NONNATOOrgsAndCountries_central_Europe_Initiativ: NONNATOOrgsAndCountries 
 
 /**
  * @summary NONNATOOrgsAndCountries_central_Europe_Initiativ
+ * @description
+ *
+ * Numeric code for Central Europe Initiative (the module keeps the spelling
+ * Initiativ), carried in the enumerated permissive tag and displayed as a
+ * trigraph. Used with the marking "RELEASABLE TO". STANAG 4406 (Ed. 2), Annex
+ * H.3.4.
  * @constant
  * @type {number}
  */
@@ -503,6 +791,11 @@ const central_Europe_Initiativ: NONNATOOrgsAndCountries = NONNATOOrgsAndCountrie
 
 /**
  * @summary NONNATOOrgsAndCountries_commonwealth_of_Independent_States
+ * @description
+ *
+ * Numeric code for Commonwealth of Independent States, carried in the
+ * enumerated permissive tag and displayed as a trigraph. Used with the marking
+ * "RELEASABLE TO". STANAG 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -511,6 +804,11 @@ const NONNATOOrgsAndCountries_commonwealth_of_Independent_States: NONNATOOrgsAnd
 
 /**
  * @summary NONNATOOrgsAndCountries_commonwealth_of_Independent_States
+ * @description
+ *
+ * Numeric code for Commonwealth of Independent States, carried in the
+ * enumerated permissive tag and displayed as a trigraph. Used with the marking
+ * "RELEASABLE TO". STANAG 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -519,6 +817,11 @@ const commonwealth_of_Independent_States: NONNATOOrgsAndCountries = NONNATOOrgsA
 
 /**
  * @summary NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe
+ * @description
+ *
+ * Numeric code for Council for Security and Cooperation in Europe, carried in
+ * the enumerated permissive tag and displayed as a trigraph. Used with the
+ * marking "RELEASABLE TO". STANAG 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -527,6 +830,11 @@ const NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe: NO
 
 /**
  * @summary NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe
+ * @description
+ *
+ * Numeric code for Council for Security and Cooperation in Europe, carried in
+ * the enumerated permissive tag and displayed as a trigraph. Used with the
+ * marking "RELEASABLE TO". STANAG 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -535,6 +843,11 @@ const council_for_Security_and_Cooperation_in_Europe: NONNATOOrgsAndCountries = 
 
 /**
  * @summary NONNATOOrgsAndCountries_european_Union
+ * @description
+ *
+ * Numeric code for European Union, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -543,6 +856,11 @@ const NONNATOOrgsAndCountries_european_Union: NONNATOOrgsAndCountries = 9995; /*
 
 /**
  * @summary NONNATOOrgsAndCountries_european_Union
+ * @description
+ *
+ * Numeric code for European Union, carried in the enumerated permissive tag and
+ * displayed as a trigraph. Used with the marking "RELEASABLE TO". STANAG 4406
+ * (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -551,6 +869,11 @@ const european_Union: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_european
 
 /**
  * @summary NONNATOOrgsAndCountries_western_European_Union
+ * @description
+ *
+ * Numeric code for Western European Union, carried in the enumerated permissive
+ * tag and displayed as a trigraph. Used with the marking "RELEASABLE TO".
+ * STANAG 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */
@@ -559,6 +882,11 @@ const NONNATOOrgsAndCountries_western_European_Union: NONNATOOrgsAndCountries = 
 
 /**
  * @summary NONNATOOrgsAndCountries_western_European_Union
+ * @description
+ *
+ * Numeric code for Western European Union, carried in the enumerated permissive
+ * tag and displayed as a trigraph. Used with the marking "RELEASABLE TO".
+ * STANAG 4406 (Ed. 2), Annex H.3.4.
  * @constant
  * @type {number}
  */

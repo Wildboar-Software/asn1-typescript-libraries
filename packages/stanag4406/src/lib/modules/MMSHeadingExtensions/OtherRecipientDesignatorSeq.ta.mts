@@ -10,6 +10,9 @@ import { OtherRecipientDesignator, _decode_OtherRecipientDesignator, _encode_Oth
  * @summary OtherRecipientDesignatorSeq
  * @description
  * 
+ * The other-recipients-indicator heading-extension value. STANAG 4406 (Ed. 2),
+ * Annex A, A1.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

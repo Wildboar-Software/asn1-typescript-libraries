@@ -18,6 +18,11 @@ import {
  * @summary ChangeAutoAcknowledgementArgument
  * @description
  * 
+ * Argument of change-auto-acknowledgement. Edition 2 does not define the
+ * acknowledgement procedure beyond these two components. The error is
+ * subscription-error. Management operations may apply to both MM and IPM when
+ * the implementation supports both. STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +37,20 @@ export
 class ChangeAutoAcknowledgementArgument {
     /**
      * @summary `auto_acknowledge_MMs`.
+     * @description
+     *
+     * Whether military messages are acknowledged automatically. STANAG 4406
+     * (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly auto_acknowledge_MMs: BOOLEAN;
     /**
      * @summary `auto_acknowledge_suppl_receipt_info`.
+     * @description
+     *
+     * Supplementary information placed on those automatic receipts. STANAG 4406
+     * (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */

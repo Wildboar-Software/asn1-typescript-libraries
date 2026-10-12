@@ -10,6 +10,9 @@ import { id_mmhs } from "../MMSObjectIdentifiers/id-mmhs.va.mjs";
  * @summary id_hat
  * @description
  * 
+ * Arc for military heading attributes of the message store, `{id-mmhs 3}`.
+ * STANAG 4406 (Ed. 2), Annex A, Annex D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -27,6 +27,22 @@ import {
  * @summary ChangeAutoForwardingArgument
  * @description
  * 
+ * Argument of change-auto-forwarding. Enables or disables automatic forwarding
+ * of delivered MMs to pre-specified users or distribution lists.
+ *
+ * `autoforward-MMs` is whether to auto-forward. The other three components are
+ * present if and only if that boolean is true. The heading's auto-forwarded
+ * field shall be true. The comment is placed in the auto-forward-comment
+ * non-receipt field of each NRN sent to the originator.
+ *
+ * Each MM the store originates has a single body part of type mm-message or
+ * forwarded-encrypted (or the civil message body part, for a dual MM/IPM
+ * implementation forwarding an IPM). The UA also originates an NRN when the
+ * recipient specifier requested one. Auto-forwarding is suppressed when the
+ * message already contains a forwarding MM that this UA created, including one
+ * nested in an mm-message or forwarded-encrypted body part. STANAG 4406 (Ed.
+ * 2), Annex A, clauses 12.3.3, 18.5.3.1, and 18.5.3.2, and Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,24 +59,43 @@ export
 class ChangeAutoForwardingArgument {
     /**
      * @summary `autoforward_MMs`.
+     * @description
+     *
+     * Whether delivered MMs are auto-forwarded. The other components are
+     * present if and only if this is true. STANAG 4406 (Ed. 2), Annex A, clause
+     * 12.3.3.
      * @public
      * @readonly
      */
     readonly autoforward_MMs: BOOLEAN;
     /**
      * @summary `auto_forward_recipients`.
+     * @description
+     *
+     * Users or distribution lists that receive the forwarded MMs. Conditional
+     * on auto-forwarding. STANAG 4406 (Ed. 2), Annex A, clause 12.3.3.
      * @public
      * @readonly
      */
     readonly auto_forward_recipients: OPTIONAL<ORName[]>;
     /**
      * @summary `auto_forward_heading`.
+     * @description
+     *
+     * Heading used for each forwarded message. Its auto-forwarded field shall
+     * be true. Conditional on auto-forwarding. STANAG 4406 (Ed. 2), Annex A,
+     * clause 12.3.3.
      * @public
      * @readonly
      */
     readonly auto_forward_heading: OPTIONAL<Heading>;
     /**
      * @summary `auto_forward_comment`.
+     * @description
+     *
+     * Comment placed in the non-receipt notification sent to the original
+     * originator. Conditional on auto-forwarding. STANAG 4406 (Ed. 2), Annex A,
+     * clause 12.3.3.
      * @public
      * @readonly
      */

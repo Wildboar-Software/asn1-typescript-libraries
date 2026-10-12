@@ -18,6 +18,10 @@ import { InformationObject, _decode_InformationObject, _encode_InformationObject
  * @summary ReceiveReportArgument
  * @description
  * 
+ * Argument of receive-report. Delivers an MTS report and, when present, the
+ * information object that was not delivered. The operation has no result.
+ * STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,19 @@ export
 class ReceiveReportArgument {
     /**
      * @summary `envelope`.
+     * @description
+     *
+     * MTS report-delivery envelope. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly envelope: ReportDeliveryEnvelope;
     /**
      * @summary `undelivered_object`.
+     * @description
+     *
+     * The military message or notification that was not delivered, when the
+     * report carries it. Optional. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */

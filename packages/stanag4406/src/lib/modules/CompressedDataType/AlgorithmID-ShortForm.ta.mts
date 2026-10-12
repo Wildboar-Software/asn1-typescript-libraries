@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AlgorithmID_ShortForm
  * @description
  * 
+ * Integer names for compression algorithms. Only ZLIB (0) is assigned. STANAG
+ * 4406 (Ed. 2), Annex E, clause 4.2.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +27,11 @@ type AlgorithmID_ShortForm = INTEGER;
 
 /**
  * @summary AlgorithmID_ShortForm_zlibCompress
+ * @description
+ *
+ * Integer 0, ZLIB. Annex E says this integer form should be used; the object
+ * identifier form is optional on origination. Support of ZLIB is mandatory.
+ * STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.3.
  * @constant
  * @type {number}
  */
@@ -32,6 +40,11 @@ const AlgorithmID_ShortForm_zlibCompress: AlgorithmID_ShortForm = 0; /* LONG_NAM
 
 /**
  * @summary AlgorithmID_ShortForm_zlibCompress
+ * @description
+ *
+ * Integer 0, ZLIB. Annex E says this integer form should be used; the object
+ * identifier form is optional on origination. Support of ZLIB is mandatory.
+ * STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.3.
  * @constant
  * @type {number}
  */

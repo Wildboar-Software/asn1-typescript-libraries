@@ -1,5 +1,8 @@
 /**
  * ASN.1 module `MMSPerRecipientSpecifierExtensions`.
+ *
+ * Per-recipient ACP 127 notification request, from STANAG 4406 (Ed. 2), Annex
+ * A, A2 and Annex H2.
  */
 export {
     type Acp127NotificationType,

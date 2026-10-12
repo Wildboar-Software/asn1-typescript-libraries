@@ -13,6 +13,10 @@ import { ub_military_bigstring } from "../MMSUpperBounds/ub-military-bigstring.v
  * @summary Acp127Recipient
  * @description
  * 
+ * ACP 127 recipient address returned with a gateway notification. Printable
+ * string of 1 to 128 characters. STANAG 4406 (Ed. 2), Annex A, A3.1, B.119, and
+ * Annex K.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

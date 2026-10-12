@@ -23,6 +23,11 @@ import {
  * @summary MN_choice
  * @description
  * 
+ * Which kind of military notification this is. Non-receipt is an `MNRN`,
+ * receipt is an `MRN`, and other-notification-type is an `MON` (the ACP 127
+ * notification response is carried there). STANAG 4406 (Ed. 2), Annex A, Annex
+ * E and clause 8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CorrectionsParameters
  * @description
  * 
+ * Parameters of the corrections body part. Edition 2 does not define the
+ * integer. The correction text is `CorrectionsData`. STANAG 4406 (Ed. 2), Annex
+ * A, B1.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

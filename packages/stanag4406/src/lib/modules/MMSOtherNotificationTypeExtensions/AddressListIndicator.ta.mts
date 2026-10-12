@@ -10,6 +10,11 @@ import { AddressListDesignator, _decode_AddressListDesignator, _encode_AddressLi
  * @summary AddressListIndicator
  * @description
  * 
+ * The address lists of the message, returned with an ACP 127 notification
+ * response. Each designator is as in A1.11. The heading extension of the same
+ * name is deprecated; this component is part of the gateway response. STANAG
+ * 4406 (Ed. 2), Annex A, A3.1 and B.119.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,9 @@ import { id_tag_names } from "../LabelingObjectIdentifiers/id-tag-names.va.mjs";
  * @summary id_enumerated
  * @description
  * 
+ * Arc for enumerated tag names, `{id-tag-names 1}`. STANAG 4406 (Ed. 2), Annex
+ * H.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

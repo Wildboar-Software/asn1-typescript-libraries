@@ -10,6 +10,9 @@ import { id_mmhs } from "../MMSObjectIdentifiers/id-mmhs.va.mjs";
  * @summary id_mod
  * @description
  * 
+ * Arc for MMHS ASN.1 module identifiers, `{id-mmhs 0}`. STANAG 4406 (Ed. 2),
+ * Annex A, Annex D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

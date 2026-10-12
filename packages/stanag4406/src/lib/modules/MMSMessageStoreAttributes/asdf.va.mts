@@ -9,6 +9,9 @@ import {
  * @summary asdf
  * @description
  * 
+ * STANAG 4406 (Ed. 2) Annex J1 does not define this integer. It has no
+ * specified MMHS meaning.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

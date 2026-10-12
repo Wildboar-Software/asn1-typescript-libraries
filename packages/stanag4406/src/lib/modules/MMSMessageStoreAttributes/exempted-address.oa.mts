@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_exempted_address } from "../MMSObjectIdentifiers/id-na
  * @summary exempted_address
  * @description
  * 
+ * One exempted address-list member, stored for equality match. Multi-valued.
+ * STANAG 4406 (Ed. 2), Annex A, C.2.5 and A1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

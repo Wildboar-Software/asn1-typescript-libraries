@@ -14,6 +14,12 @@ import { ub_military_sic } from "../MMSUpperBounds/ub-military-sic.va.mjs";
  * @summary Sic
  * @description
  * 
+ * One NATO Subject Indicator Code. Three to eight characters; APP-3 assignments
+ * are three characters. A message may carry up to eight SICs. The recipient
+ * uses them for local distribution after delivery. The civil IPMS subject
+ * is a separate element (B.88). STANAG 4406 (Ed. 2), Annex A, A1.3, B.88,
+ * and B.107.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

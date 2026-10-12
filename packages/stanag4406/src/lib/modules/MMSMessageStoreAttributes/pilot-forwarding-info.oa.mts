@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_pilot_forwarding_info } from "../MMSObjectIdentifiers/
  * @summary pilot_forwarding_info
  * @description
  * 
+ * One pilot-information value, stored for equality match. Multi-valued. STANAG
+ * 4406 (Ed. 2), Annex A, C.2.5 and A1.13.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

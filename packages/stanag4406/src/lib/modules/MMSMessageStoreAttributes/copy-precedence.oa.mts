@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_copy_precedence } from "../MMSObjectIdentifiers/id-nat
  * @summary copy_precedence
  * @description
  * 
+ * Copy precedence, stored for equality match. Single-valued. STANAG 4406 (Ed.
+ * 2), Annex A, C.2.5 and A1.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

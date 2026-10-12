@@ -18,6 +18,10 @@ import { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPar
  * @summary BodyPartSecurityLabel
  * @description
  * 
+ * Security label for one body part of a military message, inside the deprecated
+ * security-information-labels extension. STANAG 4406 (Ed. 2), Annex A, A1.16.
+ * See Annex B for the ESS security label that replaces this extension.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,20 @@ export
 class BodyPartSecurityLabel {
     /**
      * @summary `body_part_security_label`.
+     * @description
+     *
+     * Label for one body part. X.411 clause 8.5.9. STANAG 4406 (Ed. 2), Annex
+     * A, A1.16.
      * @public
      * @readonly
      */
     readonly body_part_security_label: SecurityLabel;
     /**
      * @summary `body_part_sequence_number`.
+     * @description
+     *
+     * Which body part, in originator encoding order. Omit when every body part
+     * is labelled. STANAG 4406 (Ed. 2), Annex A, A1.16.
      * @public
      * @readonly
      */

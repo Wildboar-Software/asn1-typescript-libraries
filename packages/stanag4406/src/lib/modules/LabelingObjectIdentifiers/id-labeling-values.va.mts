@@ -9,6 +9,9 @@ import { ID } from "../LabelingObjectIdentifiers/ID.ta.mjs";
  * @summary id_labeling_values
  * @description
  * 
+ * Module identifier for these label values, `{id-mmhs module(0)
+ * labeling-values(13)}`. STANAG 4406 (Ed. 2), Annex H.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

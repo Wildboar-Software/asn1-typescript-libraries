@@ -21,6 +21,11 @@ import {
  * @summary MMMessageParameters
  * @description
  * 
+ * Delivery envelope of a forwarded military message that is not encrypted, or
+ * that was decrypted before forwarding. The same components are used for the
+ * forwarded-encrypted body part. STANAG 4406 (Ed. 2), Annex A, B1.4 and clause
+ * 18.5.3.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +40,21 @@ export
 class MMMessageParameters {
     /**
      * @summary `delivery_time`.
+     * @description
+     *
+     * Delivery time of the forwarded message. Optional. STANAG 4406 (Ed. 2),
+     * Annex A, B1.4 and clause 18.5.3.2.
      * @public
      * @readonly
      */
     readonly delivery_time: OPTIONAL<MessageDeliveryTime>;
     /**
      * @summary `delivery_envelope`.
+     * @description
+     *
+     * The other message-delivery fields of the forwarded message. Clause
+     * 18.5.3.2 calls the parameters component the envelope argument of message
+     * delivery. STANAG 4406 (Ed. 2), Annex A, B1.4.
      * @public
      * @readonly
      */

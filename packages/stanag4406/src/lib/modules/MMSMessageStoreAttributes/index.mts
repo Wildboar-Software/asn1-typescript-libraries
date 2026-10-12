@@ -1,5 +1,9 @@
 /**
  * ASN.1 module `MMSMessageStoreAttributes`.
+ *
+ * Message-store attributes for the military heading, from STANAG 4406 (Ed. 2),
+ * Annex A, Annex C and Annex J1. Names that say IPM in X.420 are read as MM;
+ * the civil attribute object identifiers are unchanged.
  */
 export {
     acp127_message_identifier,

@@ -18,6 +18,21 @@ import { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartS
  * @summary SecurityInformationLabels
  * @description
  * 
+ * Deprecated heading extension. It attaches an X.411 security label to the
+ * whole military-message content, and optionally to the heading and to
+ * individual body parts. Edition 2 discourages it. The replacement is the ESS
+ * security label in Annex B.
+ *
+ * If every body part is labelled, `body-part-sequence-number` may be omitted
+ * and the sequence matches the originator's body order. Otherwise the sequence
+ * number identifies which body part, in the order the originator encoded them.
+ * Absence means the message was received without these information labels.
+ *
+ * Unless the two end systems trust each other to separate information on these
+ * labels, the extension is not to be used as mandatory access control. How that
+ * trust is established is outside the STANAG. STANAG 4406 (Ed. 2), Annex A,
+ * A1.16 and B.120.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +49,30 @@ export
 class SecurityInformationLabels {
     /**
      * @summary `content_security_label`.
+     * @description
+     *
+     * Label for the whole military-message content. Required when the extension
+     * is present. X.411 clause 8.5.9. STANAG 4406 (Ed. 2), Annex A, A1.16.
      * @public
      * @readonly
      */
     readonly content_security_label: SecurityLabel;
     /**
      * @summary `heading_security_label`.
+     * @description
+     *
+     * Label for the message heading. Optional. STANAG 4406 (Ed. 2), Annex A,
+     * A1.16.
      * @public
      * @readonly
      */
     readonly heading_security_label: OPTIONAL<SecurityLabel>;
     /**
      * @summary `body_part_security_labels`.
+     * @description
+     *
+     * Labels for individual body parts, in the originator's encoding order.
+     * Optional. STANAG 4406 (Ed. 2), Annex A, A1.16.
      * @public
      * @readonly
      */

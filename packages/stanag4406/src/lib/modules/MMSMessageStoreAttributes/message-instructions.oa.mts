@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_message_instructions } from "../MMSObjectIdentifiers/i
  * @summary message_instructions
  * @description
  * 
+ * Message instructions, stored for equality match. Single-valued. STANAG 4406
+ * (Ed. 2), Annex A, C.2.5 and A1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

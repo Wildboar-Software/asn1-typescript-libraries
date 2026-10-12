@@ -10,6 +10,12 @@ import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "
  * @summary OriginatorPlad
  * @description
  * 
+ * Plain language address of the originator, as defined in ACP 127, so the same
+ * reference can be used in MMHS and ACP 127 domains. Together with the extended
+ * authorisation date-time group it cross-references the two identifications.
+ * Transitional. Absence means there is no originator-PLAD cross-reference.
+ * STANAG 4406 (Ed. 2), Annex A, A1.15 and B.117.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

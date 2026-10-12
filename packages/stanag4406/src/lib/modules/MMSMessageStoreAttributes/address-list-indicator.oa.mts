@@ -9,6 +9,10 @@ import { id_nato_mmhs_hat_address_list_indicator } from "../MMSObjectIdentifiers
  * @summary address_list_indicator
  * @description
  * 
+ * One address-list designator, stored for equality match. Multi-valued. The
+ * heading extension is deprecated. STANAG 4406 (Ed. 2), Annex A, C.2.5 and
+ * A1.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

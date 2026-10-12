@@ -10,6 +10,11 @@ import { MN, _decode_MN, _encode_MN } from "../MMSInformationObjects/MN.ta.mjs";
  * @summary MNRN
  * @description
  * 
+ * Military non-receipt notification: an `MN` with the non-receipt fields
+ * chosen. When auto-forwarding, the UA originates an NRN on the user's behalf
+ * only if the recipient specifier requested one. STANAG 4406 (Ed. 2), Annex A,
+ * Annex E and clause 12.3.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

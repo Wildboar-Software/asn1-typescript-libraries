@@ -10,6 +10,9 @@ import { AddressListDesignator, _decode_AddressListDesignator, _encode_AddressLi
  * @summary AddressListDesignatorSeq
  * @description
  * 
+ * The address-list-indicator heading-extension value. Deprecated with that
+ * extension. STANAG 4406 (Ed. 2), Annex A, A1.11 and B.104.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

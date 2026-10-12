@@ -10,6 +10,10 @@ import { id_informative } from "../LabelingObjectIdentifiers/id-informative.va.m
  * @summary id_discretionary_handling
  * @description
  * 
+ * Tag name for the informative discretionary-handling bit string,
+ * `{id-informative 0}`. The bits are `DiscretionaryHandling`. STANAG 4406 (Ed.
+ * 2), Annex H.3.4 and H.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

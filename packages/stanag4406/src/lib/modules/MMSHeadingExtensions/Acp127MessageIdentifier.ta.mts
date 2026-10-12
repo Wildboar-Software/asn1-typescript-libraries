@@ -10,6 +10,13 @@ import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "
  * @summary Acp127MessageIdentifier
  * @description
  * 
+ * ACP 127 format-line 3 identifier: routing indicator of the originating
+ * commcen, station serial number, and filing time. The module stores those
+ * components separated by spaces. Required when an ACP 127 message is tandemed
+ * through MMHS, and may be used so the same identifier exists in both domains.
+ * Absence means the message did not encounter an ACP 127 domain. Transitional.
+ * STANAG 4406 (Ed. 2), Annex A, A1.14 and B.116.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

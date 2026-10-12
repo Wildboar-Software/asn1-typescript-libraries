@@ -1,5 +1,9 @@
 /**
  * ASN.1 module `LabelingObjectIdentifiers`.
+ *
+ * NATO security-label policy OID and category tag values, from STANAG 4406 (Ed.
+ * 2), Annex H. Applied to the ESS security label, not to the deprecated heading
+ * security labels.
  */
 export {
     type DiscretionaryHandling,

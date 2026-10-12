@@ -1,5 +1,8 @@
 /**
  * ASN.1 module `MMSObjectIdentifiers`.
+ *
+ * MMHS object identifiers, from STANAG 4406 (Ed. 2), Annex A, Annex D. The root
+ * is `1.3.26.0.4406.0`.
  */
 export {
     type ID,

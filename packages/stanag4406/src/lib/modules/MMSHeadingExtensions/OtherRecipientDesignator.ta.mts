@@ -12,6 +12,12 @@ import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "
  * @summary OtherRecipientDesignator
  * @description
  * 
+ * A recipient who is to receive, or has received, the message by means other
+ * than MMHS, and whether that recipient is action or information. Fulfils the
+ * ACP 127 ZEN requirement. The element does not say why MMHS was not used.
+ * Absence does not mean every recipient is inside MMHS. STANAG 4406 (Ed. 2),
+ * Annex A, A1.12 and B.113.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,12 +32,20 @@ export
 class OtherRecipientDesignator {
     /**
      * @summary `type_`.
+     * @description
+     *
+     * Action (`primary`) or information (`copy`). STANAG 4406 (Ed. 2), Annex A,
+     * A1.12.
      * @public
      * @readonly
      */
     readonly type_: OtherRecipientDesignator_type;
     /**
      * @summary `designator`.
+     * @description
+     *
+     * Name of the recipient who is reached outside MMHS. STANAG 4406 (Ed. 2),
+     * Annex A, A1.12 and B.113.
      * @public
      * @readonly
      */

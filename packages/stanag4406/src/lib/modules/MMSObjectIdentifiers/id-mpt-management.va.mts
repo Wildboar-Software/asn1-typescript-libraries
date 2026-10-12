@@ -10,6 +10,10 @@ import { id_mpt } from "../MMSObjectIdentifiers/id-mpt.va.mjs";
  * @summary id_mpt_management
  * @description
  * 
+ * Management port. The consumer invokes change-auto-discard,
+ * change-auto-acknowledgement, and change-auto-forwarding. STANAG 4406 (Ed. 2),
+ * Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

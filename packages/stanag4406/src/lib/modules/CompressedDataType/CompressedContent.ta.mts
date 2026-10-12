@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CompressedContent
  * @description
  * 
+ * The compressed octets. For the required X.400 wrapping this is the
+ * BER-encoded envelope (P1, P3, or P7), not the unwrapped content. STANAG 4406
+ * (Ed. 2), Annex E, clause 4.2.6.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,10 @@ import { MON, _decode_MON, _encode_MON } from "../MMSInformationObjects/MON.ta.m
  * @summary ReceiveMONArgument
  * @description
  * 
+ * Argument of receive-MON. Delivers a military other notification, including an
+ * ACP 127 notification response. The operation has no result. STANAG 4406 (Ed.
+ * 2), Annex A, Annex G and clause 8.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +35,20 @@ export
 class ReceiveMONArgument {
     /**
      * @summary `envelope`.
+     * @description
+     *
+     * MTS delivery envelope of the other notification. STANAG 4406 (Ed. 2),
+     * Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly envelope: MessageDeliveryEnvelope;
     /**
      * @summary `content`.
+     * @description
+     *
+     * The delivered other notification, for example an ACP 127 gateway result.
+     * STANAG 4406 (Ed. 2), Annex A, Annex G and clause 8.4.
      * @public
      * @readonly
      */

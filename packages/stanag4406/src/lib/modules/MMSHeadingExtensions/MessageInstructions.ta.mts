@@ -10,6 +10,10 @@ import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "
  * @summary MessageInstructions
  * @description
  * 
+ * Remarks accompanying the message, including operating signals from ACP 131
+ * and related national publications. Absence means the message was received
+ * without message instructions. STANAG 4406 (Ed. 2), Annex A, A1.5 and B.109.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

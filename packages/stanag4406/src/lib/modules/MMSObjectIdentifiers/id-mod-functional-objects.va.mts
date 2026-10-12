@@ -10,6 +10,9 @@ import { id_mod } from "../MMSObjectIdentifiers/id-mod.va.mjs";
  * @summary id_mod_functional_objects
  * @description
  * 
+ * Module identifier for the functional objects, `{id-mod 2}`. STANAG 4406 (Ed.
+ * 2), Annex A, Annex F.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

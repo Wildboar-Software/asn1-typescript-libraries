@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ACP127DataParameters
  * @description
  * 
+ * Parameters of the ACP 127 data body part. Edition 2 does not define the
+ * integer. The traffic is `ACP127DataData`. STANAG 4406 (Ed. 2), Annex A, B1.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

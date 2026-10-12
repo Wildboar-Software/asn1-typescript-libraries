@@ -10,6 +10,10 @@ import { id_hat } from "../MMSObjectIdentifiers/id-hat.va.mjs";
  * @summary id_nato_mmhs_hat_sic_codes
  * @description
  * 
+ * Message-store attribute identifier for one subject indicator code.
+ * Multi-valued, equality match. STANAG 4406 (Ed. 2), Annex A, C.2.5 and Annex
+ * D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,12 @@ import { DistributionExtensionField, _decode_DistributionExtensionField, _encode
  * @summary DistributionCodes
  * @description
  * 
+ * Local-distribution information for the recipient organization: subject
+ * indicator codes, and distribution-extension fields for national or allied
+ * criteria that are not SICs. Either component may be absent. If the whole
+ * heading extension is absent, distribution follows the recipient domain's
+ * policy. STANAG 4406 (Ed. 2), Annex A, A1.3 and B.107.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,21 @@ export
 class DistributionCodes {
     /**
      * @summary `sics`.
+     * @description
+     *
+     * Subject indicator codes for local distribution. One to eight codes, each
+     * 3 to 8 characters. Optional. STANAG 4406 (Ed. 2), Annex A, A1.3 and
+     * B.107.
      * @public
      * @readonly
      */
     readonly sics: OPTIONAL<Sic[]>;
     /**
      * @summary `dist_Extensions`.
+     * @description
+     *
+     * Distribution criteria other than SICs. The OID may be private or assigned
+     * later. Optional. STANAG 4406 (Ed. 2), Annex A, A1.3 and B.107.
      * @public
      * @readonly
      */

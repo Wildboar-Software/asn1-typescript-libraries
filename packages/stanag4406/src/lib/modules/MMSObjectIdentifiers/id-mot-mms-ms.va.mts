@@ -10,6 +10,9 @@ import { id_mot } from "../MMSObjectIdentifiers/id-mot.va.mjs";
  * @summary id_mot_mms_ms
  * @description
  * 
+ * Secondary object: the military-messaging message store. STANAG 4406 (Ed. 2),
+ * Annex A, Annex F.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

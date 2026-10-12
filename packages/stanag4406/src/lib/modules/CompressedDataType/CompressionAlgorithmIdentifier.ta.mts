@@ -12,6 +12,15 @@ import { _decode_AlgorithmID_ShortForm, _encode_AlgorithmID_ShortForm, Algorithm
  * @summary CompressionAlgorithmIdentifier
  * @description
  * 
+ * Which algorithm compressed the APDU. The integer form is mandatory to support
+ * on origination and on reception. The object-identifier form is optional on
+ * origination and mandatory on reception. Integer 0 is ZLIB and is the form
+ * that should be sent.
+ *
+ * Annex E writes these alternatives as `[0]` and `[1]` in a module that does
+ * not say `IMPLICIT TAGS`. This module encodes them as implicit tags. STANAG
+ * 4406 (Ed. 2), Annex E, clauses 4.2.6.1 and 4.2.6.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

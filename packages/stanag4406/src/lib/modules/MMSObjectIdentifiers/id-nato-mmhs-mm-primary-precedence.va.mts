@@ -10,6 +10,10 @@ import { id_mm } from "../MMSObjectIdentifiers/id-mm.va.mjs";
  * @summary id_nato_mmhs_mm_primary_precedence
  * @description
  * 
+ * Identifies the primary-precedence heading extension. Action addressees; the
+ * originating domain always includes it, and it selects the MTS grade of
+ * delivery. STANAG 4406 (Ed. 2), Annex A, A1.8, B.101, and Annex D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

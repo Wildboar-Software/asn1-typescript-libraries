@@ -10,6 +10,10 @@ import { id_hat } from "../MMSObjectIdentifiers/id-hat.va.mjs";
  * @summary id_nato_mmhs_hat_pilot_forwarding_info
  * @description
  * 
+ * Message-store attribute identifier for one pilot-information value.
+ * Multi-valued, equality match. STANAG 4406 (Ed. 2), Annex A, C.2.5 and Annex
+ * D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

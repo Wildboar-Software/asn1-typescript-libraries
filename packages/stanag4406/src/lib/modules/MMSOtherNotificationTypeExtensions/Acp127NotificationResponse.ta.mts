@@ -21,6 +21,10 @@ import { Acp127SuppInfo, _decode_Acp127SuppInfo, _encode_Acp127SuppInfo } from "
  * @summary Acp127NotificationResponse
  * @description
  * 
+ * Result of an attempt to transfer a message into an ACP 127 domain. Generated
+ * only by ACP 127 gateways, as an other-notification-type extension. STANAG
+ * 4406 (Ed. 2), Annex A, A3.1 and B.119.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +42,50 @@ export
 class Acp127NotificationResponse {
     /**
      * @summary `acp127_notification_type`.
+     * @description
+     *
+     * Whether the transfer was positive, negative, or a transfer without
+     * responsibility. STANAG 4406 (Ed. 2), Annex A, A3.1 and B.119.
      * @public
      * @readonly
      */
     readonly acp127_notification_type: Acp127NotificationType;
     /**
      * @summary `receipt_time`.
+     * @description
+     *
+     * When the gateway took the action being reported. Receipt time as in ITU-T
+     * X.420 clause 8.3.1. STANAG 4406 (Ed. 2), Annex A, A3.1 and B.119.
      * @public
      * @readonly
      */
     readonly receipt_time: ReceiptTimeField;
     /**
      * @summary `addressListIndicator`.
+     * @description
+     *
+     * Address lists of the message. Optional. STANAG 4406 (Ed. 2), Annex A,
+     * A3.1 and B.119.
      * @public
      * @readonly
      */
     readonly addressListIndicator: OPTIONAL<AddressListIndicator>;
     /**
      * @summary `acp127_recipient`.
+     * @description
+     *
+     * ACP 127 recipient address. Optional. STANAG 4406 (Ed. 2), Annex A, A3.1
+     * and B.119.
      * @public
      * @readonly
      */
     readonly acp127_recipient: OPTIONAL<Acp127Recipient>;
     /**
      * @summary `acp127_supp_info`.
+     * @description
+     *
+     * Supplementary information. Optional. Edition 2 does not prescribe the
+     * text. STANAG 4406 (Ed. 2), Annex A, A3.1 and B.119.
      * @public
      * @readonly
      */

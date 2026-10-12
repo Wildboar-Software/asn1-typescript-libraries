@@ -9,6 +9,9 @@ import {
  * @summary ub_military_string
  * @description
  * 
+ * 69. Maximum length of a `MilitaryString`. STANAG 4406 (Ed. 2), Annex A, Annex
+ * K.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

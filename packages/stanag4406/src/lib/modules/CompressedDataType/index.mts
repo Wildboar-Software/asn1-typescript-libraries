@@ -1,5 +1,8 @@
 /**
  * ASN.1 module `CompressedDataType`.
+ *
+ * Tactical Compressed Data Type, from STANAG 4406 (Ed. 2), Annex E, clause
+ * 4.2.6. Compresses a whole BER-encoded X.400 APDU with ZLIB.
  */
 export {
     type AlgorithmID_ShortForm,

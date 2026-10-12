@@ -10,6 +10,9 @@ import { id_tag_names } from "../LabelingObjectIdentifiers/id-tag-names.va.mjs";
  * @summary id_informative
  * @description
  * 
+ * Arc for informative tag names, `{id-tag-names 2}`. Discretionary handling is
+ * the informative category. STANAG 4406 (Ed. 2), Annex H.3.4 and H.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

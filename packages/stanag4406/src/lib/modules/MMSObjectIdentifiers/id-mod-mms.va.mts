@@ -10,6 +10,9 @@ import { id_mod } from "../MMSObjectIdentifiers/id-mod.va.mjs";
  * @summary id_mod_mms
  * @description
  * 
+ * Module identifier for the MMS information objects, `{id-mod 1}`. STANAG 4406
+ * (Ed. 2), Annex A, Annex E.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

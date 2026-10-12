@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_distribution_codes } from "../MMSObjectIdentifiers/id-
  * @summary distribution_codes
  * @description
  * 
+ * Distribution codes, stored for equality match. Multi-valued. Individual SICs
+ * are also stored as `sic-codes`. STANAG 4406 (Ed. 2), Annex A, C.2.5 and A1.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

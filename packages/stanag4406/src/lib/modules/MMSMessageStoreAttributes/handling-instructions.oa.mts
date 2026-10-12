@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_handling_instructions } from "../MMSObjectIdentifiers/
  * @summary handling_instructions
  * @description
  * 
+ * Handling instructions, stored for equality match. Single-valued. STANAG 4406
+ * (Ed. 2), Annex A, C.2.5 and A1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

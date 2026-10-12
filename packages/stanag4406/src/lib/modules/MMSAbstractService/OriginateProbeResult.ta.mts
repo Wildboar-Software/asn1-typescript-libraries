@@ -20,6 +20,9 @@ import {
  * @summary OriginateProbeResult
  * @description
  * 
+ * Result of originate-probe where a national domain allows it: probe submission
+ * identifier and time. STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,18 @@ export
 class OriginateProbeResult {
     /**
      * @summary `submission_identifier`.
+     * @description
+     *
+     * Probe submission identifier. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly submission_identifier: ProbeSubmissionIdentifier;
     /**
      * @summary `submission_time`.
+     * @description
+     *
+     * Probe submission time. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */

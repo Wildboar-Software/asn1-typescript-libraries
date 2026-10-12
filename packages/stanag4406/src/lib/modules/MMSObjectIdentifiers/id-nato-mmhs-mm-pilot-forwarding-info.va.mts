@@ -10,6 +10,9 @@ import { id_mm } from "../MMSObjectIdentifiers/id-mm.va.mjs";
  * @summary id_nato_mmhs_mm_pilot_forwarding_info
  * @description
  * 
+ * Identifies the pilot-forwarding-info heading extension. Transitional ACP 127
+ * pilot translation. STANAG 4406 (Ed. 2), Annex A, A1.13, B.115, and Annex D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

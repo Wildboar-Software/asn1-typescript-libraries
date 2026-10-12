@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ChangeAutoDiscardArgument
  * @description
  * 
+ * Argument of change-auto-discard, on the management port. Edition 2 names the
+ * two booleans and does not further define expired or obsolete. Where an
+ * implementation also supports IPM, the management operations may apply to
+ * both. The operation has no result. STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,12 +31,20 @@ export
 class ChangeAutoDiscardArgument {
     /**
      * @summary `auto_discard_expired_MMs`.
+     * @description
+     *
+     * Whether expired MMs are discarded automatically. Edition 2 does not
+     * define expired. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly auto_discard_expired_MMs: BOOLEAN;
     /**
      * @summary `auto_discard_obsolete_MMs`.
+     * @description
+     *
+     * Whether obsolete MMs are discarded automatically. Edition 2 does not
+     * define obsolete. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */

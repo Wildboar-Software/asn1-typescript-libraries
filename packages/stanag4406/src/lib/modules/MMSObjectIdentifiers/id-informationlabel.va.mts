@@ -10,6 +10,9 @@ import { id_mmhs } from "../MMSObjectIdentifiers/id-mmhs.va.mjs";
  * @summary id_informationlabel
  * @description
  * 
+ * Arc for the deprecated information-label category identifiers, `{id-mmhs
+ * 13}`. STANAG 4406 (Ed. 2), Annex A, Annex D.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

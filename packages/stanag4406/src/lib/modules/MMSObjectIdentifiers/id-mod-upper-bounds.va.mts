@@ -10,6 +10,9 @@ import { id_mod } from "../MMSObjectIdentifiers/id-mod.va.mjs";
  * @summary id_mod_upper_bounds
  * @description
  * 
+ * Module identifier for `MMSUpperBounds`, `{id-mod 0}`. STANAG 4406 (Ed. 2),
+ * Annex A, Annex K.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

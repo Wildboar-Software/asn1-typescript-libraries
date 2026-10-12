@@ -9,6 +9,9 @@ import {
  * @summary ub_data_size
  * @description
  * 
+ * 65535. Maximum length of ACP 127 data-pattern traffic in an `ACP127DataData`
+ * body part. STANAG 4406 (Ed. 2), Annex A, Annex K.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

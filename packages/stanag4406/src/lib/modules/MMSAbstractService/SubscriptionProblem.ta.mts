@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SubscriptionProblem
  * @description
  * 
+ * Why a management or origination operation failed subscription checking: the
+ * MMS element of service, or the MTS element of service, is not subscribed.
+ * STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +35,10 @@ enum _enum_for_SubscriptionProblem {
  * @summary SubscriptionProblem
  * @description
  * 
+ * Why a management or origination operation failed subscription checking: the
+ * MMS element of service, or the MTS element of service, is not subscribed.
+ * STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +57,10 @@ type SubscriptionProblem = _enum_for_SubscriptionProblem;
  * @summary SubscriptionProblem
  * @description
  * 
+ * Why a management or origination operation failed subscription checking: the
+ * MMS element of service, or the MTS element of service, is not subscribed.
+ * STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +77,10 @@ const SubscriptionProblem = _enum_for_SubscriptionProblem;
 
 /**
  * @summary SubscriptionProblem_mms_eos_not_subcribed
+ * @description
+ *
+ * The MMS element of service is not subscribed. The module spells this
+ * `subcribed`, as Annex G does. STANAG 4406 (Ed. 2), Annex A, Annex G.
  * @constant
  * @type {number}
  */
@@ -73,6 +89,10 @@ const SubscriptionProblem_mms_eos_not_subcribed: SubscriptionProblem = Subscript
 
 /**
  * @summary mms_eos_not_subcribed
+ * @description
+ *
+ * The MMS element of service is not subscribed. The module spells this
+ * `subcribed`, as Annex G does. STANAG 4406 (Ed. 2), Annex A, Annex G.
  * @constant
  * @type {number}
  */
@@ -81,6 +101,10 @@ const mms_eos_not_subcribed: SubscriptionProblem = SubscriptionProblem.mms_eos_n
 
 /**
  * @summary SubscriptionProblem_mts_eos_not_subcribed
+ * @description
+ *
+ * The MTS element of service is not subscribed. The module spells this
+ * `subcribed`, as Annex G does. STANAG 4406 (Ed. 2), Annex A, Annex G.
  * @constant
  * @type {number}
  */
@@ -89,6 +113,10 @@ const SubscriptionProblem_mts_eos_not_subcribed: SubscriptionProblem = Subscript
 
 /**
  * @summary mts_eos_not_subcribed
+ * @description
+ *
+ * The MTS element of service is not subscribed. The module spells this
+ * `subcribed`, as Annex G does. STANAG 4406 (Ed. 2), Annex A, Annex G.
  * @constant
  * @type {number}
  */

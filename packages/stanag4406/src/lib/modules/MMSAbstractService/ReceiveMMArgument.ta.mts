@@ -17,6 +17,9 @@ import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
  * @summary ReceiveMMArgument
  * @description
  * 
+ * Argument of receive-MM, on the reception port. Delivers one military message.
+ * The operation has no result. STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +34,20 @@ export
 class ReceiveMMArgument {
     /**
      * @summary `envelope`.
+     * @description
+     *
+     * MTS delivery envelope, including the priority-level qualifier when the
+     * extended grade of delivery was used. STANAG 4406 (Ed. 2), Annex A, X.411
+     * extensions clause 8.3.1.1.1 and Annex G.
      * @public
      * @readonly
      */
     readonly envelope: MessageDeliveryEnvelope;
     /**
      * @summary `content`.
+     * @description
+     *
+     * The delivered military message. STANAG 4406 (Ed. 2), Annex A, Annex G.
      * @public
      * @readonly
      */

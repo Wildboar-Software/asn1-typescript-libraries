@@ -11,6 +11,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CopyPrecedence
  * @description
  * 
+ * The same scale as `MMHSPrecedence`, for copy (information) recipients. The
+ * heading extension itself is typed as `MMHSPrecedence`. It must be equal to or
+ * lower than the primary precedence of that message, and it does not affect
+ * MM-MTS handling. The originating domain includes the extension for every
+ * information addressee.
+ *
+ * Edition 2 names only integers 0 to 5. This module also names 16, 17, and 18,
+ * which Annex A1.8 does not assign. STANAG 4406 (Ed. 2), Annex A, A1.9 and
+ * B.102.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +36,10 @@ type CopyPrecedence = INTEGER;
 
 /**
  * @summary CopyPrecedence_deferred
+ * @description
+ *
+ * Lowest of the six NATO precedence levels (integer 0). Maps to MTS non-urgent,
+ * priority-level qualifier low. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -34,6 +48,10 @@ const CopyPrecedence_deferred: CopyPrecedence = 0; /* LONG_NAMED_INTEGER_VALUE *
 
 /**
  * @summary CopyPrecedence_deferred
+ * @description
+ *
+ * Lowest of the six NATO precedence levels (integer 0). Maps to MTS non-urgent,
+ * priority-level qualifier low. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -42,6 +60,10 @@ const deferred: CopyPrecedence = CopyPrecedence_deferred; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary CopyPrecedence_routine
+ * @description
+ *
+ * NATO precedence (integer 1). Maps to MTS non-urgent, priority-level qualifier
+ * high. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -50,6 +72,10 @@ const CopyPrecedence_routine: CopyPrecedence = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_routine
+ * @description
+ *
+ * NATO precedence (integer 1). Maps to MTS non-urgent, priority-level qualifier
+ * high. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -58,6 +84,11 @@ const routine: CopyPrecedence = CopyPrecedence_routine; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary CopyPrecedence_priority
+ * @description
+ *
+ * NATO precedence (integer 2). The civil IPMS importance indication is a
+ * separate element (B.35). Maps to MTS normal, priority-level qualifier
+ * low. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -66,6 +97,11 @@ const CopyPrecedence_priority: CopyPrecedence = 2; /* LONG_NAMED_INTEGER_VALUE *
 
 /**
  * @summary CopyPrecedence_priority
+ * @description
+ *
+ * NATO precedence (integer 2). The civil IPMS importance indication is a
+ * separate element (B.35). Maps to MTS normal, priority-level qualifier
+ * low. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -74,6 +110,10 @@ const priority: CopyPrecedence = CopyPrecedence_priority; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary CopyPrecedence_immediate
+ * @description
+ *
+ * NATO precedence (integer 3). Maps to MTS normal, priority-level qualifier
+ * high. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -82,6 +122,10 @@ const CopyPrecedence_immediate: CopyPrecedence = 3; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary CopyPrecedence_immediate
+ * @description
+ *
+ * NATO precedence (integer 3). Maps to MTS normal, priority-level qualifier
+ * high. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -90,6 +134,10 @@ const immediate: CopyPrecedence = CopyPrecedence_immediate; /* SHORT_NAMED_INTEG
 
 /**
  * @summary CopyPrecedence_flash
+ * @description
+ *
+ * NATO precedence (integer 4). Maps to MTS urgent, priority-level qualifier
+ * low. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -98,6 +146,10 @@ const CopyPrecedence_flash: CopyPrecedence = 4; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_flash
+ * @description
+ *
+ * NATO precedence (integer 4). Maps to MTS urgent, priority-level qualifier
+ * low. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -106,6 +158,10 @@ const flash: CopyPrecedence = CopyPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE
 
 /**
  * @summary CopyPrecedence_override
+ * @description
+ *
+ * Highest of the six NATO precedence levels (integer 5). Maps to MTS urgent,
+ * priority-level qualifier high. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -114,6 +170,10 @@ const CopyPrecedence_override: CopyPrecedence = 5; /* LONG_NAMED_INTEGER_VALUE *
 
 /**
  * @summary CopyPrecedence_override
+ * @description
+ *
+ * Highest of the six NATO precedence levels (integer 5). Maps to MTS urgent,
+ * priority-level qualifier high. STANAG 4406 (Ed. 2), Annex A, B.101 and A1.8.
  * @constant
  * @type {number}
  */
@@ -122,6 +182,10 @@ const override: CopyPrecedence = CopyPrecedence_override; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary CopyPrecedence_ecp
+ * @description
+ *
+ * Integer 16. Annex A1.8 reserves 16 to 31 for national use and does not assign
+ * this name. STANAG 4406 (Ed. 2) does not define how a recipient treats it.
  * @constant
  * @type {number}
  */
@@ -130,6 +194,10 @@ const CopyPrecedence_ecp: CopyPrecedence = 16; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_ecp
+ * @description
+ *
+ * Integer 16. Annex A1.8 reserves 16 to 31 for national use and does not assign
+ * this name. STANAG 4406 (Ed. 2) does not define how a recipient treats it.
  * @constant
  * @type {number}
  */
@@ -138,6 +206,10 @@ const ecp: CopyPrecedence = CopyPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_critic
+ * @description
+ *
+ * Integer 17. Annex A1.8 reserves 16 to 31 for national use and does not assign
+ * this name. STANAG 4406 (Ed. 2) does not define how a recipient treats it.
  * @constant
  * @type {number}
  */
@@ -146,6 +218,10 @@ const CopyPrecedence_critic: CopyPrecedence = 17; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_critic
+ * @description
+ *
+ * Integer 17. Annex A1.8 reserves 16 to 31 for national use and does not assign
+ * this name. STANAG 4406 (Ed. 2) does not define how a recipient treats it.
  * @constant
  * @type {number}
  */
@@ -154,6 +230,10 @@ const critic: CopyPrecedence = CopyPrecedence_critic; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary CopyPrecedence_override_2
+ * @description
+ *
+ * Integer 18. Annex A1.8 reserves 16 to 31 for national use and does not assign
+ * this name. STANAG 4406 (Ed. 2) does not define how a recipient treats it.
  * @constant
  * @type {number}
  */
@@ -162,6 +242,10 @@ const CopyPrecedence_override_2: CopyPrecedence = 18; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary CopyPrecedence_override_2
+ * @description
+ *
+ * Integer 18. Annex A1.8 reserves 16 to 31 for national use and does not assign
+ * this name. STANAG 4406 (Ed. 2) does not define how a recipient treats it.
  * @constant
  * @type {number}
  */

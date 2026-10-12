@@ -13,6 +13,11 @@ import { ub_military_string } from "../MMSUpperBounds/ub-military-string.va.mjs"
  * @summary MilitaryString
  * @description
  * 
+ * Printable string of 1 to 69 characters used for handling instructions,
+ * message instructions, originator reference, PLADs, ACP 127 identifiers, and
+ * similar military heading text. The bound is `ub-military-string`. STANAG 4406
+ * (Ed. 2), Annex A, A1.4 and Annex K.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

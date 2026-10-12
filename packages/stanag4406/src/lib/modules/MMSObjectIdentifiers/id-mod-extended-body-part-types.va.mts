@@ -10,6 +10,9 @@ import { id_mod } from "../MMSObjectIdentifiers/id-mod.va.mjs";
  * @summary id_mod_extended_body_part_types
  * @description
  * 
+ * Module identifier for the military extended body parts, `{id-mod 7}`. STANAG
+ * 4406 (Ed. 2), Annex A, Annex I1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

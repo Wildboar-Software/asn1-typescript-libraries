@@ -1,5 +1,8 @@
 /**
  * ASN.1 module `MMSOtherNotificationTypeExtensions`.
+ *
+ * ACP 127 notification response, from STANAG 4406 (Ed. 2), Annex A, A3 and
+ * Annex H3. Only an ACP 127 gateway generates it.
  */
 export {
     Acp127NotificationResponse,

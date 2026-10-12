@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CorrectionsData
  * @description
  * 
+ * Correction text for information that may be in another body part. Used only
+ * when interworking with ACP 127. STANAG 4406 (Ed. 2), Annex A, clause
+ * 7.3.12.2, B1.2, and B.114.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

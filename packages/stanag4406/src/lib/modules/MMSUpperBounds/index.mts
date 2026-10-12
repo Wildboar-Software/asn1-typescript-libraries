@@ -1,5 +1,8 @@
 /**
  * ASN.1 module `MMSUpperBounds`.
+ *
+ * Length bounds for military strings, subject indicator codes, and ACP 127
+ * data, from STANAG 4406 (Ed. 2), Annex A, Annex K.
  */
 export {
     lb_military_sic,

@@ -10,6 +10,9 @@ import {
  * @summary id_mmhs_CDT
  * @description
  * 
+ * Identifies the Annex E Compressed Data Type, `{id-mcont 2}`. STANAG 4406 (Ed.
+ * 2), Annex E, clause 4.2.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,9 @@ import { id_ref } from "../MMSObjectIdentifiers/id-ref.va.mjs";
  * @summary id_ref_primary
  * @description
  * 
+ * Primary refinement of `mmme` into the MMS and the MMS user. STANAG 4406 (Ed.
+ * 2), Annex A, Annex F.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

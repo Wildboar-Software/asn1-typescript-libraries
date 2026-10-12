@@ -9,6 +9,10 @@ import { id_nato_mmhs_hat_distribution_extensions } from "../MMSObjectIdentifier
  * @summary distribution_extensions
  * @description
  * 
+ * One distribution-extension field, stored for equality match. Multi-valued.
+ * `dist-value` is ignored for matching unless its syntax is recognized from
+ * `dist-type`. STANAG 4406 (Ed. 2), Annex A, C.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

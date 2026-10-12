@@ -17,6 +17,9 @@ import { MRN, _decode_MRN, _encode_MRN } from "../MMSInformationObjects/MRN.ta.m
  * @summary ReceiveMRNArgument
  * @description
  * 
+ * Argument of receive-MRN. Delivers a military receipt notification. The
+ * operation has no result. STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +34,20 @@ export
 class ReceiveMRNArgument {
     /**
      * @summary `envelope`.
+     * @description
+     *
+     * MTS delivery envelope of the receipt notification. STANAG 4406 (Ed. 2),
+     * Annex A, Annex G.
      * @public
      * @readonly
      */
     readonly envelope: MessageDeliveryEnvelope;
     /**
      * @summary `content`.
+     * @description
+     *
+     * The delivered military receipt notification. STANAG 4406 (Ed. 2), Annex
+     * A, Annex G.
      * @public
      * @readonly
      */

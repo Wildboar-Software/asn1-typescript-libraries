@@ -10,6 +10,10 @@ import { id_mpt } from "../MMSObjectIdentifiers/id-mpt.va.mjs";
  * @summary id_mpt_origination
  * @description
  * 
+ * Origination port. The consumer invokes originate-probe, originate-MM, and
+ * originate-MRN. Probes are not permitted across national boundaries. STANAG
+ * 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -32,6 +32,12 @@ import {
  * @summary MN
  * @description
  * 
+ * A military notification: receipt, non-receipt, or another notification type.
+ * It is the IPN common fields plus that choice. `MRN`, `MNRN`, and `MON` are
+ * this type with the corresponding alternative chosen. ACP 127 gateway results
+ * are other-notification-type notifications. STANAG 4406 (Ed. 2), Annex A,
+ * clause 8 and Annex E.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,36 +56,63 @@ export
 class MN {
     /**
      * @summary `subject_ipm`.
+     * @description
+     *
+     * Imported with the IPN common fields. Edition 2 does not give it a
+     * separate military definition. The subject of an MM notification is the
+     * military message. STANAG 4406 (Ed. 2), Annex A, Annex E.
      * @public
      * @readonly
      */
     readonly subject_ipm: SubjectIPMField;
     /**
      * @summary `ipn_originator`.
+     * @description
+     *
+     * Imported with the IPN common fields. Edition 2 does not give it a
+     * separate military definition. STANAG 4406 (Ed. 2), Annex A, Annex E.
      * @public
      * @readonly
      */
     readonly ipn_originator: OPTIONAL<IPNOriginatorField>;
     /**
      * @summary `ipm_intended_recipient`.
+     * @description
+     *
+     * Imported with the IPN common fields. Edition 2 does not give it a
+     * separate military definition. STANAG 4406 (Ed. 2), Annex A, Annex E.
      * @public
      * @readonly
      */
     readonly ipm_intended_recipient: OPTIONAL<IPMIntendedRecipientField>;
     /**
      * @summary `conversion_eits`.
+     * @description
+     *
+     * Imported with the IPN common fields. Edition 2 does not give it a
+     * separate military definition. STANAG 4406 (Ed. 2), Annex A, Annex E.
      * @public
      * @readonly
      */
     readonly conversion_eits: OPTIONAL<ConversionEITsField>;
     /**
      * @summary `notification_extensions`.
+     * @description
+     *
+     * Where an ACP 127 notification response is carried, as an
+     * other-notification-type extension. STANAG 4406 (Ed. 2), Annex A, A3.1 and
+     * Annex E.
      * @public
      * @readonly
      */
     readonly notification_extensions: OPTIONAL<NotificationExtensionsField>;
     /**
      * @summary `choice`.
+     * @description
+     *
+     * Receipt, non-receipt, or other notification type. Those three
+     * alternatives are `MRN`, `MNRN`, and `MON`. STANAG 4406 (Ed. 2), Annex A,
+     * Annex E.
      * @public
      * @readonly
      */

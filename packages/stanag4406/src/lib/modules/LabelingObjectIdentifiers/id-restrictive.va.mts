@@ -10,6 +10,9 @@ import { id_tag_names } from "../LabelingObjectIdentifiers/id-tag-names.va.mjs";
  * @summary id_restrictive
  * @description
  * 
+ * Arc for restrictive tag names, `{id-tag-names 0}`. Sensitivity is the
+ * restrictive category. STANAG 4406 (Ed. 2), Annex H.3.4 and H.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,9 @@ import { id_mmhs } from "../MMSObjectIdentifiers/id-mmhs.va.mjs";
  * @summary id_ref
  * @description
  * 
+ * Arc for functional-object refinements, `{id-mmhs 12}`. STANAG 4406 (Ed. 2),
+ * Annex A, Annex D and Annex F.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

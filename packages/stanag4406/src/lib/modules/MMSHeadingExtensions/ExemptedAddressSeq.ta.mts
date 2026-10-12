@@ -10,6 +10,9 @@ import { ExemptedAddress, _decode_ExemptedAddress, _encode_ExemptedAddress } fro
  * @summary ExemptedAddressSeq
  * @description
  * 
+ * The exempted-address heading-extension value: every address-list member the
+ * originator wants left out of expansion. STANAG 4406 (Ed. 2), Annex A, A1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

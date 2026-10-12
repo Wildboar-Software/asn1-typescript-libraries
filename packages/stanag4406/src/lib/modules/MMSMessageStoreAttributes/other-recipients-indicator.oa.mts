@@ -9,6 +9,9 @@ import { id_nato_mmhs_hat_other_recipients_indicator } from "../MMSObjectIdentif
  * @summary other_recipients_indicator
  * @description
  * 
+ * One other-recipient designator, stored for equality match. Multi-valued.
+ * STANAG 4406 (Ed. 2), Annex A, C.2.5 and A1.12.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

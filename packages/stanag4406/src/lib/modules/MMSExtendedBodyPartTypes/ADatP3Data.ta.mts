@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ADatP3Data
  * @description
  * 
+ * The text of an ADatP-3 (proforma) message. Line-oriented text may be
+ * delimited by carriage return and line feed. Set-oriented text is a sequence
+ * of strings. The body part also carries a message index reference number;
+ * Edition 2 does not say that number is `ADatP3Parameters`. STANAG 4406 (Ed.
+ * 2), Annex A, clause 7.3.12.1 and B1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

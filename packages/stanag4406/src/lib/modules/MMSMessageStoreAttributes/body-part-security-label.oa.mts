@@ -9,6 +9,11 @@ import { id_nato_mmhs_hat_body_part_information_label } from "../MMSObjectIdenti
  * @summary body_part_security_label
  * @description
  * 
+ * One body-part security label, stored for equality match. Multi-valued.
+ * Deprecated, with the security-information-labels attribute. The replacement
+ * is the ESS security label in Annex B. STANAG 4406 (Ed. 2), Annex A, C.2.5 and
+ * A1.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

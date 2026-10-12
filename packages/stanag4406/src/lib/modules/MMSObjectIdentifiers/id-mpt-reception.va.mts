@@ -10,6 +10,9 @@ import { id_mpt } from "../MMSObjectIdentifiers/id-mpt.va.mjs";
  * @summary id_mpt_reception
  * @description
  * 
+ * Reception port. The consumer invokes receive-report, receive-MM, receive-MRN,
+ * receive-MNRN, and receive-MON. STANAG 4406 (Ed. 2), Annex A, Annex G.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

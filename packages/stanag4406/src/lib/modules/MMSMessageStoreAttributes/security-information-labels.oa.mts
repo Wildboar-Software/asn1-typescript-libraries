@@ -9,6 +9,10 @@ import { id_nato_mmhs_hat_security_information_labels } from "../MMSObjectIdenti
  * @summary security_information_labels
  * @description
  * 
+ * Security information labels, stored for equality match. Single-valued.
+ * Deprecated. The replacement is the ESS security label in Annex B. STANAG 4406
+ * (Ed. 2), Annex A, C.2.5 and A1.16.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

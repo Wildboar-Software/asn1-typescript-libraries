@@ -13,6 +13,10 @@ import { ub_data_size } from "../MMSUpperBounds/ub-data-size.va.mjs";
  * @summary ACP127DataData
  * @description
  * 
+ * ACP 127 data-pattern traffic. One to 65535 IA5 characters (`ub-data-size`).
+ * Used only when interworking with ACP 127. STANAG 4406 (Ed. 2), Annex A,
+ * clause 7.3.12.5, B1.5, and Annex K.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

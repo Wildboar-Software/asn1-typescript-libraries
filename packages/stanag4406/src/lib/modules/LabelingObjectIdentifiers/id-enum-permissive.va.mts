@@ -10,6 +10,10 @@ import { id_enumerated } from "../LabelingObjectIdentifiers/id-enumerated.va.mjs
  * @summary id_enum_permissive
  * @description
  * 
+ * Arc for enumerated permissive tags, `{id-enumerated 0}`. Non-NATO
+ * releasability is the permissive category. STANAG 4406 (Ed. 2), Annex H.3.4
+ * and H.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

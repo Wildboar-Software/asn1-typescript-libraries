@@ -10,6 +10,10 @@ import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "
  * @summary MessageIdentifier
  * @description
  * 
+ * Optional user string that further identifies the exercise, operation,
+ * project, or drill named by `TypeMessage`. STANAG 4406 (Ed. 2), Annex A,
+ * A1.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
