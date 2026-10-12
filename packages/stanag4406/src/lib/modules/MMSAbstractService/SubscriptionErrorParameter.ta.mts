@@ -144,7 +144,7 @@ let _cached_encoder_for_SubscriptionErrorParameter: $.ASN1Encoder<SubscriptionEr
  */
 export
 function _encode_SubscriptionErrorParameter (value: SubscriptionErrorParameter, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubscriptionErrorParameter) { _cached_encoder_for_SubscriptionErrorParameter = function (value: SubscriptionErrorParameter, elGetter: $.ASN1Encoder<SubscriptionErrorParameter>): _Element {
+    if (!_cached_encoder_for_SubscriptionErrorParameter) { _cached_encoder_for_SubscriptionErrorParameter = function (value: SubscriptionErrorParameter): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SubscriptionProblem, $.BER)(value.problem, $.BER)
     ], $.BER);

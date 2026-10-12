@@ -159,7 +159,7 @@ let _cached_encoder_for_MMMessageParameters: $.ASN1Encoder<MMMessageParameters> 
  */
 export
 function _encode_MMMessageParameters (value: MMMessageParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMMessageParameters) { _cached_encoder_for_MMMessageParameters = function (value: MMMessageParameters, elGetter: $.ASN1Encoder<MMMessageParameters>): _Element {
+    if (!_cached_encoder_for_MMMessageParameters) { _cached_encoder_for_MMMessageParameters = function (value: MMMessageParameters): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     if (value.delivery_time !== undefined) {

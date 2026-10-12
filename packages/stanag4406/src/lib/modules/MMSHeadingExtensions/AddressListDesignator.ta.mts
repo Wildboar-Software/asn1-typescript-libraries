@@ -185,7 +185,7 @@ let _cached_encoder_for_AddressListDesignator: $.ASN1Encoder<AddressListDesignat
  */
 export
 function _encode_AddressListDesignator (value: AddressListDesignator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddressListDesignator) { _cached_encoder_for_AddressListDesignator = function (value: AddressListDesignator, elGetter: $.ASN1Encoder<AddressListDesignator>): _Element {
+    if (!_cached_encoder_for_AddressListDesignator) { _cached_encoder_for_AddressListDesignator = function (value: AddressListDesignator): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_AddressListDesignator_type, $.BER)(value.type_, $.BER);

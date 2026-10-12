@@ -167,7 +167,7 @@ let _cached_encoder_for_SecurityInformationLabels: $.ASN1Encoder<SecurityInforma
  */
 export
 function _encode_SecurityInformationLabels (value: SecurityInformationLabels, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SecurityInformationLabels) { _cached_encoder_for_SecurityInformationLabels = function (value: SecurityInformationLabels, elGetter: $.ASN1Encoder<SecurityInformationLabels>): _Element {
+    if (!_cached_encoder_for_SecurityInformationLabels) { _cached_encoder_for_SecurityInformationLabels = function (value: SecurityInformationLabels): _Element {
     const _components: _Element[] = new Array(3);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SecurityLabel, $.BER)(value.content_security_label, $.BER);

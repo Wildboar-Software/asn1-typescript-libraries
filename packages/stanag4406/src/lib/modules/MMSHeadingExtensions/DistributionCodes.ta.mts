@@ -161,7 +161,7 @@ let _cached_encoder_for_DistributionCodes: $.ASN1Encoder<DistributionCodes> | nu
  */
 export
 function _encode_DistributionCodes (value: DistributionCodes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DistributionCodes) { _cached_encoder_for_DistributionCodes = function (value: DistributionCodes, elGetter: $.ASN1Encoder<DistributionCodes>): _Element {
+    if (!_cached_encoder_for_DistributionCodes) { _cached_encoder_for_DistributionCodes = function (value: DistributionCodes): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     if (value.sics !== undefined) {

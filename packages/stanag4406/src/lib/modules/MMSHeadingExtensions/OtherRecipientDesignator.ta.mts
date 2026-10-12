@@ -152,7 +152,7 @@ let _cached_encoder_for_OtherRecipientDesignator: $.ASN1Encoder<OtherRecipientDe
  */
 export
 function _encode_OtherRecipientDesignator (value: OtherRecipientDesignator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OtherRecipientDesignator) { _cached_encoder_for_OtherRecipientDesignator = function (value: OtherRecipientDesignator, elGetter: $.ASN1Encoder<OtherRecipientDesignator>): _Element {
+    if (!_cached_encoder_for_OtherRecipientDesignator) { _cached_encoder_for_OtherRecipientDesignator = function (value: OtherRecipientDesignator): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_OtherRecipientDesignator_type, $.BER)(value.type_, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MilitaryString, $.BER)(value.designator, $.BER)

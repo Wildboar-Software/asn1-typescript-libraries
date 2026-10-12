@@ -157,7 +157,7 @@ let _cached_encoder_for_BodyPartSecurityLabel: $.ASN1Encoder<BodyPartSecurityLab
  */
 export
 function _encode_BodyPartSecurityLabel (value: BodyPartSecurityLabel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BodyPartSecurityLabel) { _cached_encoder_for_BodyPartSecurityLabel = function (value: BodyPartSecurityLabel, elGetter: $.ASN1Encoder<BodyPartSecurityLabel>): _Element {
+    if (!_cached_encoder_for_BodyPartSecurityLabel) { _cached_encoder_for_BodyPartSecurityLabel = function (value: BodyPartSecurityLabel): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SecurityLabel, $.BER)(value.body_part_security_label, $.BER);

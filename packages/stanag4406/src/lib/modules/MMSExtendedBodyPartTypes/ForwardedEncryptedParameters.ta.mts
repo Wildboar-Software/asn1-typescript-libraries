@@ -159,7 +159,7 @@ let _cached_encoder_for_ForwardedEncryptedParameters: $.ASN1Encoder<ForwardedEnc
  */
 export
 function _encode_ForwardedEncryptedParameters (value: ForwardedEncryptedParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ForwardedEncryptedParameters) { _cached_encoder_for_ForwardedEncryptedParameters = function (value: ForwardedEncryptedParameters, elGetter: $.ASN1Encoder<ForwardedEncryptedParameters>): _Element {
+    if (!_cached_encoder_for_ForwardedEncryptedParameters) { _cached_encoder_for_ForwardedEncryptedParameters = function (value: ForwardedEncryptedParameters): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     if (value.delivery_time !== undefined) {

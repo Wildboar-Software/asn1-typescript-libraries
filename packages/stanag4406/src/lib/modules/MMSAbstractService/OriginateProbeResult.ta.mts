@@ -158,7 +158,7 @@ let _cached_encoder_for_OriginateProbeResult: $.ASN1Encoder<OriginateProbeResult
  */
 export
 function _encode_OriginateProbeResult (value: OriginateProbeResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginateProbeResult) { _cached_encoder_for_OriginateProbeResult = function (value: OriginateProbeResult, elGetter: $.ASN1Encoder<OriginateProbeResult>): _Element {
+    if (!_cached_encoder_for_OriginateProbeResult) { _cached_encoder_for_OriginateProbeResult = function (value: OriginateProbeResult): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ProbeSubmissionIdentifier, $.BER)(value.submission_identifier, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_ProbeSubmissionTime, $.BER)(value.submission_time, $.BER)

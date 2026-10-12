@@ -156,7 +156,7 @@ let _cached_encoder_for_ReceiveMMArgument: $.ASN1Encoder<ReceiveMMArgument> | nu
  */
 export
 function _encode_ReceiveMMArgument (value: ReceiveMMArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReceiveMMArgument) { _cached_encoder_for_ReceiveMMArgument = function (value: ReceiveMMArgument, elGetter: $.ASN1Encoder<ReceiveMMArgument>): _Element {
+    if (!_cached_encoder_for_ReceiveMMArgument) { _cached_encoder_for_ReceiveMMArgument = function (value: ReceiveMMArgument): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MessageDeliveryEnvelope, $.BER)(value.envelope, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MM, $.BER)(value.content, $.BER)

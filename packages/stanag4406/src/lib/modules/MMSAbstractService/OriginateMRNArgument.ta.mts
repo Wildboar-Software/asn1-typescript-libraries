@@ -156,7 +156,7 @@ let _cached_encoder_for_OriginateMRNArgument: $.ASN1Encoder<OriginateMRNArgument
  */
 export
 function _encode_OriginateMRNArgument (value: OriginateMRNArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginateMRNArgument) { _cached_encoder_for_OriginateMRNArgument = function (value: OriginateMRNArgument, elGetter: $.ASN1Encoder<OriginateMRNArgument>): _Element {
+    if (!_cached_encoder_for_OriginateMRNArgument) { _cached_encoder_for_OriginateMRNArgument = function (value: OriginateMRNArgument): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MessageSubmissionEnvelope, $.BER)(value.envelope, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MRN, $.BER)(value.content, $.BER)

@@ -188,7 +188,7 @@ let _cached_encoder_for_PilotInformation: $.ASN1Encoder<PilotInformation> | null
  */
 export
 function _encode_PilotInformation (value: PilotInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PilotInformation) { _cached_encoder_for_PilotInformation = function (value: PilotInformation, elGetter: $.ASN1Encoder<PilotInformation>): _Element {
+    if (!_cached_encoder_for_PilotInformation) { _cached_encoder_for_PilotInformation = function (value: PilotInformation): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     if (value.pilotPrecedence !== undefined) {

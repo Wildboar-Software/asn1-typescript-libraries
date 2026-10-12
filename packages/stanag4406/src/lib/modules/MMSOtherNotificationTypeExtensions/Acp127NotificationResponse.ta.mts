@@ -202,7 +202,7 @@ let _cached_encoder_for_Acp127NotificationResponse: $.ASN1Encoder<Acp127Notifica
  */
 export
 function _encode_Acp127NotificationResponse (value: Acp127NotificationResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Acp127NotificationResponse) { _cached_encoder_for_Acp127NotificationResponse = function (value: Acp127NotificationResponse, elGetter: $.ASN1Encoder<Acp127NotificationResponse>): _Element {
+    if (!_cached_encoder_for_Acp127NotificationResponse) { _cached_encoder_for_Acp127NotificationResponse = function (value: Acp127NotificationResponse): _Element {
     const _components: _Element[] = new Array(5);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_Acp127NotificationType, $.BER)(value.acp127_notification_type, $.BER);

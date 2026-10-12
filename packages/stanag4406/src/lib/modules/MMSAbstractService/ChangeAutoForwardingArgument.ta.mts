@@ -191,7 +191,7 @@ let _cached_encoder_for_ChangeAutoForwardingArgument: $.ASN1Encoder<ChangeAutoFo
  */
 export
 function _encode_ChangeAutoForwardingArgument (value: ChangeAutoForwardingArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeAutoForwardingArgument) { _cached_encoder_for_ChangeAutoForwardingArgument = function (value: ChangeAutoForwardingArgument, elGetter: $.ASN1Encoder<ChangeAutoForwardingArgument>): _Element {
+    if (!_cached_encoder_for_ChangeAutoForwardingArgument) { _cached_encoder_for_ChangeAutoForwardingArgument = function (value: ChangeAutoForwardingArgument): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeBoolean, $.BER)(value.autoforward_MMs, $.BER);

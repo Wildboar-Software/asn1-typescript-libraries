@@ -158,7 +158,7 @@ let _cached_encoder_for_OriginateMRNResult: $.ASN1Encoder<OriginateMRNResult> | 
  */
 export
 function _encode_OriginateMRNResult (value: OriginateMRNResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginateMRNResult) { _cached_encoder_for_OriginateMRNResult = function (value: OriginateMRNResult, elGetter: $.ASN1Encoder<OriginateMRNResult>): _Element {
+    if (!_cached_encoder_for_OriginateMRNResult) { _cached_encoder_for_OriginateMRNResult = function (value: OriginateMRNResult): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MessageSubmissionIdentifier, $.BER)(value.submission_identifier, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MessageSubmissionTime, $.BER)(value.submission_time, $.BER)

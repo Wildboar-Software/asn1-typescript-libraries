@@ -153,7 +153,7 @@ let _cached_encoder_for_MessageType: $.ASN1Encoder<MessageType> | null = null;
  */
 export
 function _encode_MessageType (value: MessageType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MessageType) { _cached_encoder_for_MessageType = function (value: MessageType, elGetter: $.ASN1Encoder<MessageType>): _Element {
+    if (!_cached_encoder_for_MessageType) { _cached_encoder_for_MessageType = function (value: MessageType): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TypeMessage, $.BER)(value.type_, $.BER);

@@ -152,7 +152,7 @@ let _cached_encoder_for_CompressedContentInfo: $.ASN1Encoder<CompressedContentIn
  */
 export
 function _encode_CompressedContentInfo (value: CompressedContentInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompressedContentInfo) { _cached_encoder_for_CompressedContentInfo = function (value: CompressedContentInfo, elGetter: $.ASN1Encoder<CompressedContentInfo>): _Element {
+    if (!_cached_encoder_for_CompressedContentInfo) { _cached_encoder_for_CompressedContentInfo = function (value: CompressedContentInfo): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_CompressedContentInfo_contentType(value.contentType, $.BER),
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_CompressedContent, $.BER)(value.compressedContent, $.BER)

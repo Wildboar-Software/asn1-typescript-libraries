@@ -221,7 +221,7 @@ let _cached_encoder_for_MN: $.ASN1Encoder<MN> | null = null;
  */
 export
 function _encode_MN (value: MN, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MN) { _cached_encoder_for_MN = function (value: MN, elGetter: $.ASN1Encoder<MN>): _Element {
+    if (!_cached_encoder_for_MN) { _cached_encoder_for_MN = function (value: MN): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_SubjectIPMField(value.subject_ipm, $.BER));
     if (value.ipn_originator !== undefined) {

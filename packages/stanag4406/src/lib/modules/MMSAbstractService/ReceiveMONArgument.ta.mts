@@ -156,7 +156,7 @@ let _cached_encoder_for_ReceiveMONArgument: $.ASN1Encoder<ReceiveMONArgument> | 
  */
 export
 function _encode_ReceiveMONArgument (value: ReceiveMONArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReceiveMONArgument) { _cached_encoder_for_ReceiveMONArgument = function (value: ReceiveMONArgument, elGetter: $.ASN1Encoder<ReceiveMONArgument>): _Element {
+    if (!_cached_encoder_for_ReceiveMONArgument) { _cached_encoder_for_ReceiveMONArgument = function (value: ReceiveMONArgument): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MessageDeliveryEnvelope, $.BER)(value.envelope, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MON, $.BER)(value.content, $.BER)

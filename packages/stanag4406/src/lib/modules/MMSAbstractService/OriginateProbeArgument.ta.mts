@@ -156,7 +156,7 @@ let _cached_encoder_for_OriginateProbeArgument: $.ASN1Encoder<OriginateProbeArgu
  */
 export
 function _encode_OriginateProbeArgument (value: OriginateProbeArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginateProbeArgument) { _cached_encoder_for_OriginateProbeArgument = function (value: OriginateProbeArgument, elGetter: $.ASN1Encoder<OriginateProbeArgument>): _Element {
+    if (!_cached_encoder_for_OriginateProbeArgument) { _cached_encoder_for_OriginateProbeArgument = function (value: OriginateProbeArgument): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ProbeSubmissionEnvelope, $.BER)(value.envelope, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MM, $.BER)(value.content, $.BER)

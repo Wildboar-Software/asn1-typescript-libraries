@@ -146,7 +146,7 @@ let _cached_encoder_for_DistributionExtensionField: $.ASN1Encoder<DistributionEx
  */
 export
 function _encode_DistributionExtensionField (value: DistributionExtensionField, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DistributionExtensionField) { _cached_encoder_for_DistributionExtensionField = function (value: DistributionExtensionField, elGetter: $.ASN1Encoder<DistributionExtensionField>): _Element {
+    if (!_cached_encoder_for_DistributionExtensionField) { _cached_encoder_for_DistributionExtensionField = function (value: DistributionExtensionField): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeObjectIdentifier(value.dist_type, $.BER),
         /* REQUIRED   */ $._encodeAny(value.dist_value, $.BER)
