@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1ConstructionError,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -25,7 +26,14 @@ type NoInvokeId = InvokeId; // VALUE_SET_TYPE
 let _cached_decoder_for_NoInvokeId: $.ASN1Decoder<NoInvokeId> | null = null;
 
 export
-function _decode_NoInvokeId (el: _Element) {    if (!_cached_decoder_for_NoInvokeId) { _cached_decoder_for_NoInvokeId = _decode_InvokeId; }    return _cached_decoder_for_NoInvokeId(el);}
+function _decode_NoInvokeId (el: _Element): NoInvokeId {
+    if (!_cached_decoder_for_NoInvokeId) { _cached_decoder_for_NoInvokeId = _decode_InvokeId; }
+    const value = _cached_decoder_for_NoInvokeId(el);
+    if (!("absent" in value)) {
+        throw new ASN1ConstructionError("NoInvokeId only permits noInvokeId");
+    }
+    return value;
+}
 
 let _cached_encoder_for_NoInvokeId: $.ASN1Encoder<NoInvokeId> | null = null;
 

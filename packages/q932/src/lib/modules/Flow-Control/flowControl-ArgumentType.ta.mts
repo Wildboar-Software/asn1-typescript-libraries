@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1OverflowError,
     ASN1TagClass as _TagClass,
     INTEGER,
     OPTIONAL
@@ -9,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
 import { _decode_flowControl_ArgumentType_controlReceiver, _encode_flowControl_ArgumentType_controlReceiver, _enum_for_flowControl_ArgumentType_controlReceiver, flowControl_ArgumentType_controlReceiver } from "../Flow-Control/flowControl-ArgumentType-controlReceiver.ta.mjs";
 // export { flowControl_ArgumentType_controlReceiver, _enum_for_flowControl_ArgumentType_controlReceiver, flowControl_ArgumentType_controlReceiver_receiverNotReady /* IMPORTED_LONG_ENUMERATION_ITEM */, receiverNotReady /* IMPORTED_SHORT_ENUMERATION_ITEM */, flowControl_ArgumentType_controlReceiver_receiverReady /* IMPORTED_LONG_ENUMERATION_ITEM */, receiverReady /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_flowControl_ArgumentType_controlReceiver, _encode_flowControl_ArgumentType_controlReceiver } from "../Flow-Control/flowControl-ArgumentType-controlReceiver.ta.mjs";
 
+function integerInRange (value: INTEGER, min: bigint, max: bigint): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return n >= min && n <= max;
+}
 
 /**
  * @summary flowControl_ArgumentType
@@ -61,6 +66,15 @@ class flowControl_ArgumentType {
         replenishmentParameter: OPTIONAL<INTEGER>,
         timerT: OPTIONAL<INTEGER>
     ) {
+        if (maximumNumberOfMessages !== undefined && !integerInRange(maximumNumberOfMessages, 1n, 255n)) {
+            throw new ASN1OverflowError("maximumNumberOfMessages violates INTEGER (1..255)");
+        }
+        if (replenishmentParameter !== undefined && !integerInRange(replenishmentParameter, 1n, 255n)) {
+            throw new ASN1OverflowError("replenishmentParameter violates INTEGER (1..255)");
+        }
+        if (timerT !== undefined && !integerInRange(timerT, 1n, 30n)) {
+            throw new ASN1OverflowError("timerT violates INTEGER (1..30)");
+        }
         this.controlReceiver = controlReceiver;
         this.maximumNumberOfMessages = maximumNumberOfMessages;
         this.replenishmentParameter = replenishmentParameter;

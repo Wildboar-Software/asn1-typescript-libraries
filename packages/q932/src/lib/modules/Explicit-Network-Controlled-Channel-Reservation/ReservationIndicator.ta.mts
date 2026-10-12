@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1OverflowError,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -19,7 +20,16 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ReservationIndicator = INTEGER;
-export const _decode_ReservationIndicator: $.ASN1Decoder<ReservationIndicator> = $._decodeInteger;
+
+export function _decode_ReservationIndicator (el: _Element): ReservationIndicator {
+    const value = $._decodeInteger(el);
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    if (n < -128n || n > 127n) {
+        throw new ASN1OverflowError("ReservationIndicator violates INTEGER (-128..127)");
+    }
+    return value;
+}
+
 export const _encode_ReservationIndicator: $.ASN1Encoder<ReservationIndicator> = $._encodeInteger;
 
 

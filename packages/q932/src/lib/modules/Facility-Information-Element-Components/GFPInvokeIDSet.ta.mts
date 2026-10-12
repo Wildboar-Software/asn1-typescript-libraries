@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1ConstructionError,
+    ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
@@ -33,7 +35,15 @@ let _cached_decoder_for_GFPInvokeIDSet: $.ASN1Decoder<GFPInvokeIDSet> | null = n
 export
 function _decode_GFPInvokeIDSet (el: _Element): GFPInvokeIDSet {
     if (!_cached_decoder_for_GFPInvokeIDSet) { _cached_decoder_for_GFPInvokeIDSet = _decode_InvokeId; }
-    return _cached_decoder_for_GFPInvokeIDSet(el);
+    const value = _cached_decoder_for_GFPInvokeIDSet(el);
+    if (!("present" in value)) {
+        throw new ASN1ConstructionError("GFPInvokeIDSet requires the present alternative");
+    }
+    const n = typeof value.present === "bigint" ? value.present : BigInt(value.present);
+    if (n < -32768n || n > 32767n) {
+        throw new ASN1OverflowError("GFPInvokeIDSet present violates INTEGER (-32768..32767)");
+    }
+    return value;
 }
 
 let _cached_encoder_for_GFPInvokeIDSet: $.ASN1Encoder<GFPInvokeIDSet> | null = null;
