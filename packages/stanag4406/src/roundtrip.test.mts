@@ -1,9 +1,14 @@
+import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     IPMIdentifier,
     NonReceiptFields,
     _enum_for_NonReceiptReasonField,
 } from "@wildboar/x400/IPMSInformationObjects";
+import {
+    _decode_Sic,
+    _encode_Sic,
+} from "./lib/modules/MMSHeadingExtensions/Sic.ta.mjs";
 import {
     MN,
     _decode_MN,
@@ -41,5 +46,14 @@ describe("MMSInformationObjects MN", () => {
         expect(decoded.choice.mn_non_receipt_fields.auto_forward_comment).toBeUndefined();
         expect(decoded.choice.mn_non_receipt_fields.returned_ipm).toBeUndefined();
         expect(decoded.choice.mn_non_receipt_fields.nrn_extensions).toBeUndefined();
+    });
+});
+
+describe("MMSHeadingExtensions Sic", () => {
+    test("enforces lb-military-sic..ub-military-sic while decoding", () => {
+        const withinBounds = "ABC";
+        expect(_decode_Sic(_encode_Sic(withinBounds, $.BER))).toBe(withinBounds);
+        expect(() => _decode_Sic(_encode_Sic("AB", $.BER))).toThrow(ASN1SizeError);
+        expect(() => _decode_Sic(_encode_Sic("ABCDEFGHI", $.BER))).toThrow(ASN1SizeError);
     });
 });
