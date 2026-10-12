@@ -102,35 +102,8 @@ const explicitReservationCreationControl_ArgumentType_controlOption_reservationR
  */
 export
 const reservationRequiredWithoutReservationIndicator: explicitReservationCreationControl_ArgumentType_controlOption = explicitReservationCreationControl_ArgumentType_controlOption.reservationRequiredWithoutReservationIndicator; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_explicitReservationCreationControl_ArgumentType_controlOption: $.ASN1Decoder<explicitReservationCreationControl_ArgumentType_controlOption> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) explicitReservationCreationControl_ArgumentType_controlOption
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_explicitReservationCreationControl_ArgumentType_controlOption (el: _Element): explicitReservationCreationControl_ArgumentType_controlOption {
-    if (!_cached_decoder_for_explicitReservationCreationControl_ArgumentType_controlOption) { _cached_decoder_for_explicitReservationCreationControl_ArgumentType_controlOption = $._decodeEnumerated; }
-    return _cached_decoder_for_explicitReservationCreationControl_ArgumentType_controlOption(el);
-}
-
-let _cached_encoder_for_explicitReservationCreationControl_ArgumentType_controlOption: $.ASN1Encoder<explicitReservationCreationControl_ArgumentType_controlOption> | null = null;
-
-/**
- * @summary Encodes a(n) explicitReservationCreationControl_ArgumentType_controlOption into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The explicitReservationCreationControl_ArgumentType_controlOption, encoded as an ASN.1 Element.
- */
-export
-function _encode_explicitReservationCreationControl_ArgumentType_controlOption (value: explicitReservationCreationControl_ArgumentType_controlOption, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_explicitReservationCreationControl_ArgumentType_controlOption) { _cached_encoder_for_explicitReservationCreationControl_ArgumentType_controlOption = $._encodeEnumerated; }
-    return _cached_encoder_for_explicitReservationCreationControl_ArgumentType_controlOption(value, elGetter);
-}
+export const _decode_explicitReservationCreationControl_ArgumentType_controlOption: $.ASN1Decoder<explicitReservationCreationControl_ArgumentType_controlOption> = $._decodeEnumerated;
+export const _encode_explicitReservationCreationControl_ArgumentType_controlOption: $.ASN1Encoder<explicitReservationCreationControl_ArgumentType_controlOption> = $._encodeEnumerated;
 
 
 /* eslint-enable */
