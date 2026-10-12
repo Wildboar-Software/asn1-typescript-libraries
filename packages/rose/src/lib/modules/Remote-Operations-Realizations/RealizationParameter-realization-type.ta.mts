@@ -26,10 +26,13 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_RealizationParameter_realization_type {
-  association_service = 0,
-  transfer_service = 1,
-}
+export const _enum_for_RealizationParameter_realization_type = {
+  association_service: 0,
+  transfer_service: 1,
+} as const;
+
+export type _enum_for_RealizationParameter_realization_type =
+  (typeof _enum_for_RealizationParameter_realization_type)[keyof typeof _enum_for_RealizationParameter_realization_type];
 
 
 /**
@@ -118,7 +121,7 @@ let _cached_decoder_for_RealizationParameter_realization_type: $.ASN1Decoder<Rea
 export function _decode_RealizationParameter_realization_type(el: _Element): RealizationParameter_realization_type {
   if (!_cached_decoder_for_RealizationParameter_realization_type) {
     _cached_decoder_for_RealizationParameter_realization_type =
-      $._decodeEnumerated;
+      $._decodeEnumerated as $.ASN1Decoder<RealizationParameter_realization_type>;
   }
   return _cached_decoder_for_RealizationParameter_realization_type(el);
 }
@@ -140,7 +143,7 @@ export function _encode_RealizationParameter_realization_type(
 ): _Element {
   if (!_cached_encoder_for_RealizationParameter_realization_type) {
     _cached_encoder_for_RealizationParameter_realization_type =
-      $._encodeEnumerated;
+      $._encodeEnumerated as $.ASN1Encoder<RealizationParameter_realization_type>;
   }
   return _cached_encoder_for_RealizationParameter_realization_type(
     value,

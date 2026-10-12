@@ -77,36 +77,46 @@ import {
  *
  */
 export class Invoke {
+  /**
+   * @summary `invokeId`.
+   * @description Identifies this invocation for later result/error/reject correlation. Must be in `InvokeIdSet` and not already in use, else `invoke-duplicateInvocation` (X.880 §9.3.3 a).
+   * @public
+   * @readonly
+   */
+  public readonly invokeId: InvokeId;
+  /**
+   * @summary `linkedId`.
+   * @description If present, this invoke is linked to an outstanding invocation in the opposite direction. Must identify an outstanding operation that allows linked operations, else `invoke-unrecognizedLinkedId` or `invoke-linkedResponseUnexpected` (X.880 §9.3.3 b).
+   * @public
+   * @readonly
+   */
+  public readonly linkedId: OPTIONAL<Invoke_linkedId>;
+  /**
+   * @summary `opcode`.
+   * @description `&operationCode` of the operation being invoked. Must name one of `Operations`, and if `linkedId` is present must be in that operation's `&Linked`, else `invoke-unrecognizedOperation` / `invoke-unexpectedLinkedOperation` (X.880 §9.3.3 c).
+   * @public
+   * @readonly
+   */
+  public readonly opcode: Code;
+  /**
+   * @summary `argument`.
+   * @description Argument of the identified operation. Required unless `&ArgumentType` is omitted or `&argumentTypeOptional` permits omission; mismatch yields `invoke-mistypedArgument` (X.880 §9.3.3 d).
+   * @public
+   * @readonly
+   */
+  public readonly argument?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `invokeId`.
-     * @description Identifies this invocation for later result/error/reject correlation. Must be in `InvokeIdSet` and not already in use, else `invoke-duplicateInvocation` (X.880 §9.3.3 a).
-     * @public
-     * @readonly
-     */
-    readonly invokeId: InvokeId,
-    /**
-     * @summary `linkedId`.
-     * @description If present, this invoke is linked to an outstanding invocation in the opposite direction. Must identify an outstanding operation that allows linked operations, else `invoke-unrecognizedLinkedId` or `invoke-linkedResponseUnexpected` (X.880 §9.3.3 b).
-     * @public
-     * @readonly
-     */
-    readonly linkedId: OPTIONAL<Invoke_linkedId>,
-    /**
-     * @summary `opcode`.
-     * @description `&operationCode` of the operation being invoked. Must name one of `Operations`, and if `linkedId` is present must be in that operation's `&Linked`, else `invoke-unrecognizedOperation` / `invoke-unexpectedLinkedOperation` (X.880 §9.3.3 c).
-     * @public
-     * @readonly
-     */
-    readonly opcode: Code,
-    /**
-     * @summary `argument`.
-     * @description Argument of the identified operation. Required unless `&ArgumentType` is omitted or `&argumentTypeOptional` permits omission; mismatch yields `invoke-mistypedArgument` (X.880 §9.3.3 d).
-     * @public
-     * @readonly
-     */
-    readonly argument?: OPTIONAL<_Element>
-  ) {}
+    invokeId: InvokeId,
+    linkedId: OPTIONAL<Invoke_linkedId>,
+    opcode: Code,
+    argument?: OPTIONAL<_Element>
+  ) {
+    this.invokeId = invokeId;
+    this.linkedId = linkedId;
+    this.opcode = opcode;
+    this.argument = argument;
+  }
 
   /**
    * @summary Restructures an object into a Invoke

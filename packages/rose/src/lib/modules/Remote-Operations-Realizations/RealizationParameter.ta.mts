@@ -36,22 +36,28 @@ import {
  *
  */
 export class RealizationParameter {
+  /**
+   * @summary `realization_type`.
+   * @description `association-service(0)` or `transfer-service(1)` (X.882 §8.2.8).
+   * @public
+   * @readonly
+   */
+  public readonly realization_type: RealizationParameter_realization_type;
+  /**
+   * @summary `concatenation`.
+   * @description If `TRUE`, nearby TRANSFER PDVs may be concatenated (and, for P-DATA, combined with A-ASSOCIATE/A-RELEASE user information) (X.882 §9.2.6). Default `FALSE`.
+   * @public
+   * @readonly
+   */
+  public readonly concatenation?: OPTIONAL<BOOLEAN>;
+
   constructor(
-    /**
-     * @summary `realization_type`.
-     * @description `association-service(0)` or `transfer-service(1)` (X.882 §8.2.8).
-     * @public
-     * @readonly
-     */
-    readonly realization_type: RealizationParameter_realization_type,
-    /**
-     * @summary `concatenation`.
-     * @description If `TRUE`, nearby TRANSFER PDVs may be concatenated (and, for P-DATA, combined with A-ASSOCIATE/A-RELEASE user information) (X.882 §9.2.6). Default `FALSE`.
-     * @public
-     * @readonly
-     */
-    readonly concatenation?: OPTIONAL<BOOLEAN>
-  ) {}
+    realization_type: RealizationParameter_realization_type,
+    concatenation?: OPTIONAL<BOOLEAN>
+  ) {
+    this.realization_type = realization_type;
+    this.concatenation = concatenation;
+  }
 
   /**
    * @summary Restructures an object into a RealizationParameter

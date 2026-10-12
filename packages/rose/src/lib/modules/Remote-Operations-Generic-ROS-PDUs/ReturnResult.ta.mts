@@ -58,22 +58,28 @@ import {
  *
  */
 export class ReturnResult {
+  /**
+   * @summary `invokeId`.
+   * @description Invocation whose success is being reported. Must be outstanding and of an operation that returns a result, else `returnResult-unrecognizedInvocation` / `returnResult-resultResponseUnexpected` (X.880 §9.4.3 a).
+   * @public
+   * @readonly
+   */
+  public readonly invokeId: InvokeId;
+  /**
+   * @summary `result`.
+   * @description Present iff the operation has a `&ResultType`. Contains `opcode` (must match the invocation) and the result value; mistype yields `returnResult-mistypedResult` (X.880 §9.4.3 b–c).
+   * @public
+   * @readonly
+   */
+  public readonly result: OPTIONAL<ReturnResult_result>;
+
   constructor(
-    /**
-     * @summary `invokeId`.
-     * @description Invocation whose success is being reported. Must be outstanding and of an operation that returns a result, else `returnResult-unrecognizedInvocation` / `returnResult-resultResponseUnexpected` (X.880 §9.4.3 a).
-     * @public
-     * @readonly
-     */
-    readonly invokeId: InvokeId,
-    /**
-     * @summary `result`.
-     * @description Present iff the operation has a `&ResultType`. Contains `opcode` (must match the invocation) and the result value; mistype yields `returnResult-mistypedResult` (X.880 §9.4.3 b–c).
-     * @public
-     * @readonly
-     */
-    readonly result: OPTIONAL<ReturnResult_result>
-  ) {}
+    invokeId: InvokeId,
+    result: OPTIONAL<ReturnResult_result>
+  ) {
+    this.invokeId = invokeId;
+    this.result = result;
+  }
 
   /**
    * @summary Restructures an object into a ReturnResult
