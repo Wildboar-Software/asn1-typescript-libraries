@@ -3,7 +3,6 @@ import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
 import { ID } from "../LabelingObjectIdentifiers/ID.ta.mjs";
-// export { ID, _decode_ID, _encode_ID } from "../LabelingObjectIdentifiers/ID.ta.mjs";
 
 
 /**

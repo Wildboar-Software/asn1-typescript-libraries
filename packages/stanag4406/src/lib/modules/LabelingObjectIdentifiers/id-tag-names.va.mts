@@ -3,9 +3,7 @@ import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
 import { ID } from "../LabelingObjectIdentifiers/ID.ta.mjs";
-// export { ID, _decode_ID, _encode_ID } from "../LabelingObjectIdentifiers/ID.ta.mjs";
 import { id_labeling_values } from "../LabelingObjectIdentifiers/id-labeling-values.va.mjs";
-// export { id_labeling_values } from "../LabelingObjectIdentifiers/id-labeling-values.va.mjs";
 
 
 /**

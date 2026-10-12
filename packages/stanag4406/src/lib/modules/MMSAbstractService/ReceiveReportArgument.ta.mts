@@ -12,7 +12,6 @@ import {
     _encode_ReportDeliveryEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
 import { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
-// export { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
 
 
 /**

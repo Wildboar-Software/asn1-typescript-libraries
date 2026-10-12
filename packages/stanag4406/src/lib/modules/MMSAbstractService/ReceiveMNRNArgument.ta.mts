@@ -11,7 +11,6 @@ import {
     _encode_MessageDeliveryEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
 import { MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.ta.mjs";
-// export { MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.ta.mjs";
 
 
 /**

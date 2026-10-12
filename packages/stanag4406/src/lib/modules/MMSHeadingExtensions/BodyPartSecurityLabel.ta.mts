@@ -12,7 +12,6 @@ import {
     _encode_SecurityLabel,
 } from "@wildboar/x400/MTSAbstractService";
 import { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPartSequenceNumber } from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
-// export { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPartSequenceNumber } from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
 
 
 /**

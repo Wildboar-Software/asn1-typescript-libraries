@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OtherRecipientDesignator_type, _decode_OtherRecipientDesignator_type, _encode_OtherRecipientDesignator_type } from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
-// export { OtherRecipientDesignator_type, OtherRecipientDesignator_type_primary /* IMPORTED_LONG_NAMED_INTEGER */, primary /* IMPORTED_SHORT_NAMED_INTEGER */, OtherRecipientDesignator_type_copy /* IMPORTED_LONG_NAMED_INTEGER */, copy /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_OtherRecipientDesignator_type, _encode_OtherRecipientDesignator_type } from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
 import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
-// export { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
 
 
 /**

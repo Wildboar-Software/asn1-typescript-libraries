@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { ExtendedAuthorisationInfo, _decode_ExtendedAuthorisationInfo, _encode_ExtendedAuthorisationInfo } from "../MMSHeadingExtensions/ExtendedAuthorisationInfo.ta.mjs";
-// export { ExtendedAuthorisationInfo, _decode_ExtendedAuthorisationInfo, _encode_ExtendedAuthorisationInfo } from "../MMSHeadingExtensions/ExtendedAuthorisationInfo.ta.mjs";
 import { id_nato_mmhs_hat_extended_authorisation_info } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-extended-authorisation-info.va.mjs";
-// export { id_nato_mmhs_hat_extended_authorisation_info } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-extended-authorisation-info.va.mjs";
 
 
 /**

@@ -11,7 +11,6 @@ import {
     _encode_MessageDeliveryEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
 import { MON, _decode_MON, _encode_MON } from "../MMSInformationObjects/MON.ta.mjs";
-// export { MON, _decode_MON, _encode_MON } from "../MMSInformationObjects/MON.ta.mjs";
 
 
 /**

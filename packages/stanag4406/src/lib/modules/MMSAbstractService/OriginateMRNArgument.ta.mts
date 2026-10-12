@@ -11,7 +11,6 @@ import {
     _encode_MessageSubmissionEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
 import { MRN, _decode_MRN, _encode_MRN } from "../MMSInformationObjects/MRN.ta.mjs";
-// export { MRN, _decode_MRN, _encode_MRN } from "../MMSInformationObjects/MRN.ta.mjs";
 
 
 /**
