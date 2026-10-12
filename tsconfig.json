@@ -275,9 +275,6 @@
     },
     {
       "path": "./packages/lpp"
-    },
-    {
-      "path": "./packages/stanag4406"
     }
   ],
   "compilerOptions": {
