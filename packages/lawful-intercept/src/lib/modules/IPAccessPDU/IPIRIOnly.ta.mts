@@ -11,6 +11,8 @@ import { IPInformation, _decode_IPInformation, _encode_IPInformation } from "../
 // export { IPInformation, _decode_IPInformation, _encode_IPInformation } from "../IPAccessPDU/IPInformation.ta.mjs";
 import { ProtocolInformation, _decode_ProtocolInformation, _encode_ProtocolInformation } from "../IPAccessPDU/ProtocolInformation.ta.mjs";
 // export { ProtocolInformation, _decode_ProtocolInformation, _encode_ProtocolInformation } from "../IPAccessPDU/ProtocolInformation.ta.mjs";
+import { PDSRInformation, _decode_PDSRInformation, _encode_PDSRInformation } from "../IPAccessPDU/PDSRInformation.ta.mjs";
+// export { PDSRInformation, _decode_PDSRInformation, _encode_PDSRInformation } from "../IPAccessPDU/PDSRInformation.ta.mjs";
 
 
 /**
@@ -156,7 +158,7 @@ const _root_component_type_list_2_spec_for_IPIRIOnly: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_IPIRIOnly: $.ComponentSpec[] = [
-    /* FIXME: pDSRInformation COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("pDSRInformation", true, $.hasTag(_TagClass.context, 5))
 ];
 
 let _cached_decoder_for_IPIRIOnly: $.ASN1Decoder<IPIRIOnly> | null = null;

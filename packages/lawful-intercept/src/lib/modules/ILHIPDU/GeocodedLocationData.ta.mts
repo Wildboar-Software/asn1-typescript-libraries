@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as Common_Parameters from "../Common-Parameters/index.mjs";
 // export { WGS84CoordinateDecimal, _decode_WGS84CoordinateDecimal, _encode_WGS84CoordinateDecimal } from "../Common-Parameters/WGS84CoordinateDecimal.ta.mjs";
 // export { WGS84CoordinateAngular, _decode_WGS84CoordinateAngular, _encode_WGS84CoordinateAngular } from "../Common-Parameters/WGS84CoordinateAngular.ta.mjs";
 

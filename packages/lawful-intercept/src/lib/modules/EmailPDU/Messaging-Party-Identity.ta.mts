@@ -10,6 +10,7 @@ import { E_mail_Address_List, _decode_E_mail_Address_List, _encode_E_mail_Addres
 // export { E_mail_Address_List, _decode_E_mail_Address_List, _encode_E_mail_Address_List } from "../EmailPDU/E-mail-Address-List.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../LI-PS-PDU/IPAddress.ta.mjs";
 import { IP_Address_And_Port, _decode_IP_Address_And_Port, _encode_IP_Address_And_Port } from "../EmailPDU/IP-Address-And-Port.ta.mjs";
+import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { IP_Address_And_Port, _decode_IP_Address_And_Port, _encode_IP_Address_And_Port } from "../EmailPDU/IP-Address-And-Port.ta.mjs";
 
 

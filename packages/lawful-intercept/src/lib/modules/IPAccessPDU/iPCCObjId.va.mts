@@ -19,6 +19,6 @@ import { iPAccessPDUObjId } from "../IPAccessPDU/iPAccessPDUObjId.va.mjs";
  * @constant
  */
 export
-const iPCCObjId: RELATIVE_OID = [ iPAccessPDUObjId, /* cC */ 2 ];
+const iPCCObjId: RELATIVE_OID = [ ...iPAccessPDUObjId, /* cC */ 2 ];
 
 /* eslint-enable */

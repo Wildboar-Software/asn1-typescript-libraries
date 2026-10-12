@@ -25,6 +25,13 @@ import { ConfIRI, _decode_ConfIRI, _encode_ConfIRI } from "../LI-PS-PDU/ConfIRI.
 import { ProSeIRI, _decode_ProSeIRI, _encode_ProSeIRI } from "../LI-PS-PDU/ProSeIRI.ta.mjs";
 // export { ProSeIRI, _decode_ProSeIRI, _encode_ProSeIRI } from "../LI-PS-PDU/ProSeIRI.ta.mjs";
 import { GcseIRI, _decode_GcseIRI, _encode_GcseIRI } from "../LI-PS-PDU/GcseIRI.ta.mjs";
+import * as EmailPDU from "../EmailPDU/index.mjs";
+import * as IPAccessPDU from "../IPAccessPDU/index.mjs";
+import * as IPMultimediaPDU from "../IPMultimediaPDU/index.mjs";
+import * as L2AccessPDU from "../L2AccessPDU/index.mjs";
+import * as PstnIsdnPDU from "../PstnIsdnPDU/index.mjs";
+import * as TS101909201 from "../TS101909201/index.mjs";
+import * as TS101909202 from "../TS101909202/index.mjs";
 // export { GcseIRI, _decode_GcseIRI, _encode_GcseIRI } from "../LI-PS-PDU/GcseIRI.ta.mjs";
 // export { IRIPayload, _decode_IRIPayload, _encode_IRIPayload } from "../TS33128Payloads/IRIPayload.ta.mjs";
 

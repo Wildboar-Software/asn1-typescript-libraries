@@ -19,6 +19,6 @@ import { tS33128IdentityAssociationOID } from "../TS33128IdentityAssociation/tS3
  * @constant
  */
 export
-const iEFRecordOID: RELATIVE_OID = [ tS33128IdentityAssociationOID, /* iEF */ 1 ];
+const iEFRecordOID: RELATIVE_OID = [ ...tS33128IdentityAssociationOID, /* iEF */ 1 ];
 
 /* eslint-enable */

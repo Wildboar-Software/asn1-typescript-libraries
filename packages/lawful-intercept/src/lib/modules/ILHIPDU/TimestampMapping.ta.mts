@@ -10,6 +10,7 @@ import { OriginalTimestamp, _decode_OriginalTimestamp, _encode_OriginalTimestamp
 import { ILHITimestamp, _decode_ILHITimestamp, _encode_ILHITimestamp } from "../ILHIPDU/ILHITimestamp.ta.mjs";
 // export { ILHITimestamp, _decode_ILHITimestamp, _encode_ILHITimestamp } from "../ILHIPDU/ILHITimestamp.ta.mjs";
 import { _enum_for_TimeStampQualifier } from "../LI-PS-PDU/TimeStampQualifier.ta.mjs";
+import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { TimeStampQualifier, _enum_for_TimeStampQualifier, TimeStampQualifier_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, TimeStampQualifier_timeOfInterception /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOfInterception /* IMPORTED_SHORT_ENUMERATION_ITEM */, TimeStampQualifier_timeOfMediation /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOfMediation /* IMPORTED_SHORT_ENUMERATION_ITEM */, TimeStampQualifier_timeOfAggregation /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOfAggregation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimeStampQualifier, _encode_TimeStampQualifier } from "../LI-PS-PDU/TimeStampQualifier.ta.mjs";
 
 

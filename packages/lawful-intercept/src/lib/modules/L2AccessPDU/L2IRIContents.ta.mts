@@ -1,12 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
+    GeneralizedTime,
+    INTEGER,
+    OCTET_STRING,
     OPTIONAL,
-    UTF8String
+    UTF8String,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
+import { AccessEventType, _decode_AccessEventType, _encode_AccessEventType } from "../L2AccessPDU/AccessEventType.ta.mjs";
+import { InternetAccessType, _decode_InternetAccessType, _encode_InternetAccessType } from "../L2AccessPDU/InternetAccessType.ta.mjs";
+import { EndReason, _decode_EndReason, _encode_EndReason } from "../L2AccessPDU/EndReason.ta.mjs";
+import { AuthenticationType, _decode_AuthenticationType, _encode_AuthenticationType } from "../L2AccessPDU/AuthenticationType.ta.mjs";
 
 
 /**
@@ -25,7 +31,7 @@ import * as $ from "@wildboar/asn1/functional";
  *         -- network elements)
  *     targetCPEID                 [6] UTF8String (SIZE (1..128)) OPTIONAL,
  *         -- CPEID (e.g. Relay Agent info, computer name)
- *     targetLocation              [7] UTF8String (SIZE (1..64))OPTIONAL,
+ *     targetLocation              [7] UTF8String (SIZE (1..64)) OPTIONAL,
  *         -- <for further study>
  *     nASPortNumber               [8] INTEGER (0..4294967295) OPTIONAL,
  *         -- The NAS port number used by the target
@@ -34,139 +40,19 @@ import * as $ from "@wildboar/asn1/functional";
  *     startTime                   [10] GeneralizedTime OPTIONAL,
  *         -- The start date-time of the session or lease
  *     endTime                     [11] GeneralizedTime OPTIONAL,
- *             -- The end date-time of the session or lease
+ *         -- The end date-time of the session or lease
  *     endReason                   [12] EndReason OPTIONAL,
  *         -- The reason for the session to end
- *     octetsReceived              [13]    INTEGER (0..18446744073709551615) OPTIONAL,
+ *     octetsReceived              [13] INTEGER (0..18446744073709551615) OPTIONAL,
  *         -- The number of octets the target received
- *     octetsTransmitted           [14]    INTEGER (0..18446744073709551615) OPTIONAL,
+ *     octetsTransmitted           [14] INTEGER (0..18446744073709551615) OPTIONAL,
  *         -- The number of octets the target transmitted
- *     rawAAAData                  [15]    OCTET STRING OPTIONAL,
+ *     rawAAAData                  [15] OCTET STRING OPTIONAL,
  *         -- Content of the raw AAA record
  *     ...,
  *     authenticationType          [16] AuthenticationType OPTIONAL
  *         -- Field used to identify the authentication type to assist with LEMF data validation
  * }
- * 
- * AccessEventType         ::= ENUMERATED
- * {
- *     accessAttempt(0),
- *         -- A target requests access to the IAS
- *     accessAccept(1),
- *         -- IAS access is granted to the target, the session begins
- *     accessReject(2),
- *         -- IAS access is refused to the target
- *     accessFailed(3),
- *         -- The accessAttempt timed-out or failed otherwise
- *     sessionStart(4),
- *         -- A target starts using the IAS; not in use anymore from version 4(4).
- *     sessionEnd(5),
- *         -- A target stops using the IAS; not in use anymore from version 4(4).
- *     interimUpdate(6),
- *         -- Intermediate status report on service status or usage
- *     unknown(7),
- *     ...,
- *     startOfInterceptionWithSessionActive(8),
- *         -- LI is started on a target who already has an active session
- *     accessEnd(9),
- *         -- A target stops using the IAS, the session ends.
- *     endOfInterceptionWithSessionActive(10),
- *         -- LI is ended on a target who still has an active session
- *     startOfInterceptionWithoutNetworkSession(11),
- *         -- Start of LI session without a network session
- *     endOfInterceptionWithoutNetworkSession(12),
- *         -- End of LI session without a network session
- *     sessionExpired(13)
- *         -- LI session terminated due to expiry by MF
- * }
- * 
- * InternetAccessType      ::= ENUMERATED
- * {
- *     undefined(0),
- *     dialUp(1),
- *         -- IAS via DialUp access
- *     xDSL(2),
- *         -- IAS via DSL access
- *     cableModem(3),
- *         -- IAS via Cable access
- *     lAN(4),
- *         -- IAS via LAN access
- *     ...,
- *     wirelessLAN(5),
- *         -- IAS via Wireless LAN access
- *     fTTx(6),
- *         -- IAS via Fiber access
- *     wIMAX-HIPERMAN(7),
- *         -- IAS via WIMAX/HIPERMAN (fixed access)
- *     satellite(8)
- *         -- IAS via Satellite access
- *         -- (when it is not covered by any 3GPP or ETSI mobile Lawful Interception specifications)
- * }
- * 
- * EndReason           ::= ENUMERATED
- * {
- *     undefined(0),
- *     regularLogoff(1),
- *         -- The target logged off
- *     connectionLoss(2),
- *         -- The connection was lost
- *     connectionTimeout(3),
- *         -- The connection timed-out
- *     leaseExpired(4),
- *         -- The DHCP lease expired
- *     ...
- * }
- * 
- * AuthenticationType ::= ENUMERATED
- * {
- *     unknown(0),
- *         -- AAA function for the target service is unknown
- *     static(1),
- *         -- The target service is assigned a static IP address & no AAA expected
- *     radiusAAA(2),
- *         -- AAA function for the target service is provided by RADIUS
- *     dhcpAAA(3),
- *         -- AAA function for the target service is provided by DHCP
- *     diameterAAA(4),
- *         -- AAA function for the target service is provided by DIAMETER
- *     ...
- * }
- * 
- * 
- * -- =====================================================
- * -- Intercept-related information for IRI-Only intercepts
- * -- =====================================================
- * 
- * L2IRIOnly       ::= SEQUENCE
- * {
- *     l2IRIOnlyObjId                  [0] RELATIVE-OID,
- *     l2protocolInformation       [2] L2ProtocolInformation,
- *     l2AggregatedNbrOfPackets    [3] INTEGER OPTIONAL,
- *     l2AggregatedNbrOfBytes      [4] INTEGER OPTIONAL,
- *     ...
- * }
- * 
- * L2ProtocolInformation       ::= ENUMERATED
- * {
- *     l2ProtocolL2tp(1),
- *         -- The L2TP protocol is used
- *     l2ProtocolL2f(2),
- *         -- The L2F protocol is used
- *     l2ProtocolPptp(3),
- *         -- The PPTP protocol is used
- *     l2ProtocolPpp(4),
- *         -- The PPP protocol is used
- *     ethernetProtocol(5),
- *         -- The ethernet protocol is used
- *     undefined(6),
- *     ...,
- *     l2ProtocolATM2684(7),
- *         -- The protocol RFC 2684, method "LLC Encapsulation for Bridged Protocols" [16] is used
- *     l2ProtocolFR2427(8)
- *         -- The protocol RFC2427 "Multiprotocol Interconnect over Frame Relay" [18] is used
- * }
- * 
- * END -- end of L2AccessPDU
  * ```
  * 
  * @class
@@ -202,20 +88,100 @@ class L2IRIContents {
      * @public
      * @readonly
      */
-    readonly targetLocation: UTF8String;
+    readonly targetLocation: OPTIONAL<UTF8String>;
+    /**
+     * @summary `nASPortNumber`.
+     * @public
+     * @readonly
+     */
+    readonly nASPortNumber: OPTIONAL<INTEGER>;
+    /**
+     * @summary `callBackNumber`.
+     * @public
+     * @readonly
+     */
+    readonly callBackNumber: OPTIONAL<UTF8String>;
+    /**
+     * @summary `startTime`.
+     * @public
+     * @readonly
+     */
+    readonly startTime: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `endTime`.
+     * @public
+     * @readonly
+     */
+    readonly endTime: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `endReason`.
+     * @public
+     * @readonly
+     */
+    readonly endReason: OPTIONAL<EndReason>;
+    /**
+     * @summary `octetsReceived`.
+     * @public
+     * @readonly
+     */
+    readonly octetsReceived: OPTIONAL<INTEGER>;
+    /**
+     * @summary `octetsTransmitted`.
+     * @public
+     * @readonly
+     */
+    readonly octetsTransmitted: OPTIONAL<INTEGER>;
+    /**
+     * @summary `rawAAAData`.
+     * @public
+     * @readonly
+     */
+    readonly rawAAAData: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `authenticationType`.
+     * @public
+     * @readonly
+     */
+    readonly authenticationType: OPTIONAL<AuthenticationType>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         accessEventType: AccessEventType,
         internetAccessType: OPTIONAL<InternetAccessType>,
         targetNetworkID: OPTIONAL<UTF8String>,
         targetCPEID: OPTIONAL<UTF8String>,
-        targetLocation: UTF8String
+        targetLocation: OPTIONAL<UTF8String>,
+        nASPortNumber: OPTIONAL<INTEGER>,
+        callBackNumber: OPTIONAL<UTF8String>,
+        startTime: OPTIONAL<GeneralizedTime>,
+        endTime: OPTIONAL<GeneralizedTime>,
+        endReason: OPTIONAL<EndReason>,
+        octetsReceived: OPTIONAL<INTEGER>,
+        octetsTransmitted: OPTIONAL<INTEGER>,
+        rawAAAData: OPTIONAL<OCTET_STRING>,
+        authenticationType: OPTIONAL<AuthenticationType>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.accessEventType = accessEventType;
         this.internetAccessType = internetAccessType;
         this.targetNetworkID = targetNetworkID;
         this.targetCPEID = targetCPEID;
         this.targetLocation = targetLocation;
+        this.nASPortNumber = nASPortNumber;
+        this.callBackNumber = callBackNumber;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.endReason = endReason;
+        this.octetsReceived = octetsReceived;
+        this.octetsTransmitted = octetsTransmitted;
+        this.rawAAAData = rawAAAData;
+        this.authenticationType = authenticationType;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 
     /**
@@ -231,7 +197,7 @@ class L2IRIContents {
      * @returns {L2IRIContents}
      */
     public static _from_object (_o: { [_K in keyof (L2IRIContents)]: (L2IRIContents)[_K] }): L2IRIContents {
-        return new L2IRIContents(_o.accessEventType, _o.internetAccessType, _o.targetNetworkID, _o.targetCPEID, _o.targetLocation);
+        return new L2IRIContents(_o.accessEventType, _o.internetAccessType, _o.targetNetworkID, _o.targetCPEID, _o.targetLocation, _o.nASPortNumber, _o.callBackNumber, _o.startTime, _o.endTime, _o.endReason, _o.octetsReceived, _o.octetsTransmitted, _o.rawAAAData, _o.authenticationType, _o._unrecognizedExtensionsList);
     }
 
 
@@ -247,11 +213,19 @@ class L2IRIContents {
  */
 export
 const _root_component_type_list_1_spec_for_L2IRIContents: $.ComponentSpec[] = [
-    /* FIXME: accessEventType COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: internetAccessType COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("accessEventType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("internetAccessType", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("targetNetworkID", true, $.hasTag(_TagClass.context, 5)),
     new $.ComponentSpec("targetCPEID", true, $.hasTag(_TagClass.context, 6)),
-    new $.ComponentSpec("targetLocation", false, $.hasTag(_TagClass.context, 7))
+    new $.ComponentSpec("targetLocation", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("nASPortNumber", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("callBackNumber", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("startTime", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("endTime", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("endReason", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("octetsReceived", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("octetsTransmitted", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("rawAAAData", true, $.hasTag(_TagClass.context, 15))
 ];
 
 /**
@@ -277,7 +251,7 @@ const _root_component_type_list_2_spec_for_L2IRIContents: $.ComponentSpec[] = [
  */
 export
 const _extension_additions_list_spec_for_L2IRIContents: $.ComponentSpec[] = [
-    
+    new $.ComponentSpec("authenticationType", true, $.hasTag(_TagClass.context, 16))
 ];
 
 let _cached_decoder_for_L2IRIContents: $.ASN1Decoder<L2IRIContents> | null = null;
@@ -295,26 +269,55 @@ function _decode_L2IRIContents (el: _Element): L2IRIContents {
     let internetAccessType: OPTIONAL<InternetAccessType>;
     let targetNetworkID: OPTIONAL<UTF8String>;
     let targetCPEID: OPTIONAL<UTF8String>;
-    let targetLocation!: UTF8String;
+    let targetLocation: OPTIONAL<UTF8String>;
+    let nASPortNumber: OPTIONAL<INTEGER>;
+    let callBackNumber: OPTIONAL<UTF8String>;
+    let startTime: OPTIONAL<GeneralizedTime>;
+    let endTime: OPTIONAL<GeneralizedTime>;
+    let endReason: OPTIONAL<EndReason>;
+    let octetsReceived: OPTIONAL<INTEGER>;
+    let octetsTransmitted: OPTIONAL<INTEGER>;
+    let rawAAAData: OPTIONAL<OCTET_STRING>;
+    let authenticationType: OPTIONAL<AuthenticationType>;
+    let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessEventType": (_el: _Element): void => { accessEventType = $._decode_implicit<AccessEventType>(() => _decode_AccessEventType)(_el); },
         "internetAccessType": (_el: _Element): void => { internetAccessType = $._decode_implicit<InternetAccessType>(() => _decode_InternetAccessType)(_el); },
         "targetNetworkID": (_el: _Element): void => { targetNetworkID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "targetCPEID": (_el: _Element): void => { targetCPEID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "targetLocation": (_el: _Element): void => { targetLocation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }
+        "targetLocation": (_el: _Element): void => { targetLocation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "nASPortNumber": (_el: _Element): void => { nASPortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "callBackNumber": (_el: _Element): void => { callBackNumber = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "startTime": (_el: _Element): void => { startTime = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },
+        "endTime": (_el: _Element): void => { endTime = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },
+        "endReason": (_el: _Element): void => { endReason = $._decode_implicit<EndReason>(() => _decode_EndReason)(_el); },
+        "octetsReceived": (_el: _Element): void => { octetsReceived = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "octetsTransmitted": (_el: _Element): void => { octetsTransmitted = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "rawAAAData": (_el: _Element): void => { rawAAAData = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "authenticationType": (_el: _Element): void => { authenticationType = $._decode_implicit<AuthenticationType>(() => _decode_AuthenticationType)(_el); },
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_L2IRIContents,
         _extension_additions_list_spec_for_L2IRIContents,
         _root_component_type_list_2_spec_for_L2IRIContents,
-        undefined,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
     return new L2IRIContents(
         accessEventType,
         internetAccessType,
         targetNetworkID,
         targetCPEID,
-        targetLocation
+        targetLocation,
+        nASPortNumber,
+        callBackNumber,
+        startTime,
+        endTime,
+        endReason,
+        octetsReceived,
+        octetsTransmitted,
+        rawAAAData,
+        authenticationType,
+        _unrecognizedExtensionsList
     );
 }; }
     return _cached_decoder_for_L2IRIContents(el);
@@ -332,19 +335,54 @@ let _cached_encoder_for_L2IRIContents: $.ASN1Encoder<L2IRIContents> | null = nul
 export
 function _encode_L2IRIContents (value: L2IRIContents, elGetter: $.ASN1Encoder<any>): _Element {
     if (!_cached_encoder_for_L2IRIContents) { _cached_encoder_for_L2IRIContents = function (value: L2IRIContents, elGetter: $.ASN1Encoder<L2IRIContents>): _Element {
-    const _components: _Element[] = new Array(5);
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(14 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
-    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_AccessEventType, $.BER)(value.accessEventType, $.BER);
+    _components[_components_i++] = /* REQUIRED    */ $._encode_implicit(_TagClass.context, 0, () => _encode_AccessEventType, $.BER)(value.accessEventType, $.BER);
     if (value.internetAccessType !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_InternetAccessType, $.BER)(value.internetAccessType, $.BER);
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 2, () => _encode_InternetAccessType, $.BER)(value.internetAccessType, $.BER);
     }
     if (value.targetNetworkID !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => $._encodeUTF8String, $.BER)(value.targetNetworkID, $.BER);
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 5, () => $._encodeUTF8String, $.BER)(value.targetNetworkID, $.BER);
     }
     if (value.targetCPEID !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => $._encodeUTF8String, $.BER)(value.targetCPEID, $.BER);
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 6, () => $._encodeUTF8String, $.BER)(value.targetCPEID, $.BER);
     }
-    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 7, () => $._encodeUTF8String, $.BER)(value.targetLocation, $.BER);
+    if (value.targetLocation !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 7, () => $._encodeUTF8String, $.BER)(value.targetLocation, $.BER);
+    }
+    if (value.nASPortNumber !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 8, () => $._encodeInteger, $.BER)(value.nASPortNumber, $.BER);
+    }
+    if (value.callBackNumber !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeUTF8String, $.BER)(value.callBackNumber, $.BER);
+    }
+    if (value.startTime !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 10, () => $._encodeGeneralizedTime, $.BER)(value.startTime, $.BER);
+    }
+    if (value.endTime !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 11, () => $._encodeGeneralizedTime, $.BER)(value.endTime, $.BER);
+    }
+    if (value.endReason !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 12, () => _encode_EndReason, $.BER)(value.endReason, $.BER);
+    }
+    if (value.octetsReceived !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 13, () => $._encodeInteger, $.BER)(value.octetsReceived, $.BER);
+    }
+    if (value.octetsTransmitted !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 14, () => $._encodeInteger, $.BER)(value.octetsTransmitted, $.BER);
+    }
+    if (value.rawAAAData !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 15, () => $._encodeOctetString, $.BER)(value.rawAAAData, $.BER);
+    }
+    if (value.authenticationType !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT   */ $._encode_implicit(_TagClass.context, 16, () => _encode_AuthenticationType, $.BER)(value.authenticationType, $.BER);
+    }
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
     _components.length = _components_i;
     return $._encodeSequence(_components, $.BER);
 }; }

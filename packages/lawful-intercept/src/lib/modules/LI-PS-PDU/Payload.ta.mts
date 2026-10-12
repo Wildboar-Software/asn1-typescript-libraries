@@ -16,6 +16,9 @@ import { EncryptionContainer, _decode_EncryptionContainer, _encode_EncryptionCon
 // export { ThreeGPP_HI1_Operation, _decode_ThreeGPP_HI1_Operation, _encode_ThreeGPP_HI1_Operation } from "../ThreeGPP-HI1NotificationOperations/ThreeGPP-HI1-Operation.ta.mjs";
 // export { ILHIPayload, _decode_ILHIPayload, _encode_ILHIPayload } from "../ILHIPDU/ILHIPayload.ta.mjs";
 import { HI4Payload, _decode_HI4Payload, _encode_HI4Payload } from "../LI-PS-PDU/HI4Payload.ta.mjs";
+import * as HI1NotificationOperations from "../HI1NotificationOperations/index.mjs";
+import * as ILHIPDU from "../ILHIPDU/index.mjs";
+import * as ThreeGPP_HI1NotificationOperations from "../ThreeGPP-HI1NotificationOperations/index.mjs";
 // export { HI4Payload, _decode_HI4Payload, _encode_HI4Payload } from "../LI-PS-PDU/HI4Payload.ta.mjs";
 
 

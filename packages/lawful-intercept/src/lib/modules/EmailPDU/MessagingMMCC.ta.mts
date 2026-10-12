@@ -7,6 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as IPMultimediaPDU from "../IPMultimediaPDU/index.mjs";
 // export { IPMMCC, _decode_IPMMCC, _encode_IPMMCC } from "../IPMultimediaPDU/IPMMCC.ta.mjs";
 
 

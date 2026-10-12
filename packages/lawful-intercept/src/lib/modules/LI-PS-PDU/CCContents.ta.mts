@@ -5,6 +5,19 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as CONF_HI3_IMS from "../CONF-HI3-IMS/index.mjs";
+import * as CSvoice_HI3_IP from "../CSvoice-HI3-IP/index.mjs";
+import * as EmailPDU from "../EmailPDU/index.mjs";
+import * as Eps_HI3_PS from "../Eps-HI3-PS/index.mjs";
+import * as GCSE_HI3 from "../GCSE-HI3/index.mjs";
+import * as IPAccessPDU from "../IPAccessPDU/index.mjs";
+import * as IPMultimediaPDU from "../IPMultimediaPDU/index.mjs";
+import * as L2AccessPDU from "../L2AccessPDU/index.mjs";
+import * as PstnIsdnPDU from "../PstnIsdnPDU/index.mjs";
+import * as TS101909201 from "../TS101909201/index.mjs";
+import * as TS101909202 from "../TS101909202/index.mjs";
+import * as Umts_HI3_PS from "../Umts-HI3-PS/index.mjs";
+import * as VoIP_HI3_IMS from "../VoIP-HI3-IMS/index.mjs";
 // export { EmailCC, _decode_EmailCC, _encode_EmailCC } from "../EmailPDU/EmailCC.ta.mjs";
 // export { IPCC, _decode_IPCC, _encode_IPCC } from "../IPAccessPDU/IPCC.ta.mjs";
 // export { L2CC, _decode_L2CC, _encode_L2CC } from "../L2AccessPDU/L2CC.ta.mjs";

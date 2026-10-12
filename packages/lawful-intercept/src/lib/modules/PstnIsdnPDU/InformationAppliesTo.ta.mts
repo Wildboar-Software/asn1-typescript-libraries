@@ -7,6 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _enum_for_PayloadDirection } from "../LI-PS-PDU/PayloadDirection.ta.mjs";
+import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { PayloadDirection, _enum_for_PayloadDirection, PayloadDirection_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, PayloadDirection_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, PayloadDirection_indeterminate /* IMPORTED_LONG_ENUMERATION_ITEM */, indeterminate /* IMPORTED_SHORT_ENUMERATION_ITEM */, PayloadDirection_combined /* IMPORTED_LONG_ENUMERATION_ITEM */, combined /* IMPORTED_SHORT_ENUMERATION_ITEM */, PayloadDirection_notapplicable /* IMPORTED_LONG_ENUMERATION_ITEM */, notapplicable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PayloadDirection, _encode_PayloadDirection } from "../LI-PS-PDU/PayloadDirection.ta.mjs";
 
 

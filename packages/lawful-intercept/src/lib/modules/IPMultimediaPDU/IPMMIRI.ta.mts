@@ -10,6 +10,7 @@ import { IPIRIContents, _decode_IPIRIContents, _encode_IPIRIContents } from "../
 // export { IPIRIContents, _decode_IPIRIContents, _encode_IPIRIContents } from "../IPMultimediaPDU/IPIRIContents.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../LI-PS-PDU/Location.ta.mjs";
 import { AdditionalSignalling, _decode_AdditionalSignalling, _encode_AdditionalSignalling } from "../IPMultimediaPDU/AdditionalSignalling.ta.mjs";
+import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { AdditionalSignalling, _decode_AdditionalSignalling, _encode_AdditionalSignalling } from "../IPMultimediaPDU/AdditionalSignalling.ta.mjs";
 
 

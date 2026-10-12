@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { unknown_version } from "../HI2Operations/unknown-version.oa.mjs";
 // export { unknown_version } from "../HI2Operations/unknown-version.oa.mjs";
 import { missing_parameter } from "../HI2Operations/missing-parameter.oa.mjs";

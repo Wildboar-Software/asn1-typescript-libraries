@@ -397,6 +397,7 @@ import { MCPTTFloorControlMessage, _decode_MCPTTFloorControlMessage, _encode_MCP
 import { IMSDataChannelApplicationResponse, _decode_IMSDataChannelApplicationResponse, _encode_IMSDataChannelApplicationResponse } from "../TS33128Payloads/IMSDataChannelApplicationResponse.ta.mjs";
 // export { IMSDataChannelApplicationResponse, _decode_IMSDataChannelApplicationResponse, _encode_IMSDataChannelApplicationResponse } from "../TS33128Payloads/IMSDataChannelApplicationResponse.ta.mjs";
 import { UASNFInformation, _decode_UASNFInformation, _encode_UASNFInformation } from "../TS33128Payloads/UASNFInformation.ta.mjs";
+import * as IPAccessPDU from "../IPAccessPDU/index.mjs";
 // export { UASNFInformation, _decode_UASNFInformation, _encode_UASNFInformation } from "../TS33128Payloads/UASNFInformation.ta.mjs";
 
 

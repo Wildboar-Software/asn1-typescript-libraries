@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 import { other_failure_causes } from "../TETRA-HI1NotificationOperations/other-failure-causes.oa.mjs";
 // export { other_failure_causes } from "../TETRA-HI1NotificationOperations/other-failure-causes.oa.mjs";
 import { missing_parameter } from "../TETRA-HI1NotificationOperations/missing-parameter.oa.mjs";
