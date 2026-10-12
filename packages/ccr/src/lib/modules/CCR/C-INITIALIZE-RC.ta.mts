@@ -58,63 +58,79 @@ import {
  *
  */
 export class C_INITIALIZE_RC {
+  /**
+   * @summary `version_number`.
+   * @description
+   *
+   * Exactly one bit set: the version selected for the association
+   * (highest mutually supported; this spec is Version 2). Leading
+   * bits for lower versions are zero; no trailing zero bits. That
+   * version is the C-INITIALIZE confirm Version parameter. ITU-T
+   * Rec. X.852 (12/97) §7.1.5.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly version_number?: OPTIONAL<C_INITIALIZE_RC_version_number>;
+
+  /**
+   * @summary `ccr_requirements`.
+   * @description
+   *
+   * Functional units selected. Mapped from C-INITIALIZE response CCR
+   * Requirements; only units proposed on the indication may appear.
+   * Default `{static-commitment}`. ITU-T Rec. X.852 (12/97)
+   * §7.1.5.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ccr_requirements?: OPTIONAL<Ccr_requirements>;
+
+  /**
+   * @summary `ready_collision_reservation`.
+   * @description
+   *
+   * Same syntax as on C-INITIALIZE-RI; default `TRUE`. Table 3 lists
+   * it; §7.1.5 does not describe a distinct RC mapping.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ready_collision_reservation?: OPTIONAL<BOOLEAN>;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_data`.
+   * @description
+   *
+   * Mapped from C-INITIALIZE response User Data to the confirm
+   * (X.852 §7.1.3.3, §7.1.5.3).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_data?: OPTIONAL<User_data>;
+
   constructor(
-    /**
-     * @summary `version_number`.
-     * @description
-     *
-     * Exactly one bit set: the version selected for the association
-     * (highest mutually supported; this spec is Version 2). Leading
-     * bits for lower versions are zero; no trailing zero bits. That
-     * version is the C-INITIALIZE confirm Version parameter. ITU-T
-     * Rec. X.852 (12/97) §7.1.5.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly version_number?: OPTIONAL<C_INITIALIZE_RC_version_number>,
-    /**
-     * @summary `ccr_requirements`.
-     * @description
-     *
-     * Functional units selected. Mapped from C-INITIALIZE response CCR
-     * Requirements; only units proposed on the indication may appear.
-     * Default `{static-commitment}`. ITU-T Rec. X.852 (12/97)
-     * §7.1.5.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly ccr_requirements?: OPTIONAL<Ccr_requirements>,
-    /**
-     * @summary `ready_collision_reservation`.
-     * @description
-     *
-     * Same syntax as on C-INITIALIZE-RI; default `TRUE`. Table 3 lists
-     * it; §7.1.5 does not describe a distinct RC mapping.
-     *
-     * @public
-     * @readonly
-     */
-    readonly ready_collision_reservation?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_data`.
-     * @description
-     *
-     * Mapped from C-INITIALIZE response User Data to the confirm
-     * (X.852 §7.1.3.3, §7.1.5.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_data?: OPTIONAL<User_data>
-  ) {}
+    version_number?: OPTIONAL<C_INITIALIZE_RC_version_number>,
+    ccr_requirements?: OPTIONAL<Ccr_requirements>,
+    ready_collision_reservation?: OPTIONAL<BOOLEAN>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_data?: OPTIONAL<User_data>
+  ) {
+    this.version_number = version_number;
+    this.ccr_requirements = ccr_requirements;
+    this.ready_collision_reservation = ready_collision_reservation;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_data = user_data;
+  }
 
   /**
    * @summary Restructures an object into a C_INITIALIZE_RC

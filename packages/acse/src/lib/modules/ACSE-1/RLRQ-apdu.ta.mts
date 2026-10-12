@@ -63,63 +63,79 @@ import {
  *
  */
 export class RLRQ_apdu {
+  /**
+   * @summary `reason`.
+   * @description
+   *
+   * Urgency of the release request: `normal` (0), `urgent` (1), or
+   * `user-defined` (30). ITU-T Rec. X.217 bis (1998) §8.2.1.1;
+   * X.227 bis (1998) §7.2.4.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly reason?: OPTIONAL<Release_request_reason>;
+
+  /**
+   * @summary `aso_qualifier`.
+   * @description
+   *
+   * Distinguishes APDUs for different child ASOs under a parent
+   * (analogous to a protocol-id). Conditional: required only if
+   * multiple child ASOs exist. Higher Level Association FU.
+   * ITU-T Rec. X.227 bis (1998) §7.2.4.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly aso_qualifier?: OPTIONAL<ASO_qualifier>;
+
+  /**
+   * @summary `asoi_identifier`.
+   * @description
+   *
+   * Distinguishes concurrent instances of the same ASO. Conditional:
+   * required only if multiple instances are active. Higher Level
+   * Association FU. ITU-T Rec. X.227 bis (1998) §7.2.4.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly asoi_identifier?: OPTIONAL<ASOI_identifier>;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_information`.
+   * @description
+   *
+   * Optional user information; meaning depends on the ASO-context in
+   * effect. ITU-T Rec. X.217 bis (1998) §8.2.1.2; X.227 bis (1998)
+   * §7.2.4.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_information?: OPTIONAL<Association_data>;
+
   constructor(
-    /**
-     * @summary `reason`.
-     * @description
-     *
-     * Urgency of the release request: `normal` (0), `urgent` (1), or
-     * `user-defined` (30). ITU-T Rec. X.217 bis (1998) §8.2.1.1;
-     * X.227 bis (1998) §7.2.4.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly reason?: OPTIONAL<Release_request_reason>,
-    /**
-     * @summary `aso_qualifier`.
-     * @description
-     *
-     * Distinguishes APDUs for different child ASOs under a parent
-     * (analogous to a protocol-id). Conditional: required only if
-     * multiple child ASOs exist. Higher Level Association FU.
-     * ITU-T Rec. X.227 bis (1998) §7.2.4.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
-    /**
-     * @summary `asoi_identifier`.
-     * @description
-     *
-     * Distinguishes concurrent instances of the same ASO. Conditional:
-     * required only if multiple instances are active. Higher Level
-     * Association FU. ITU-T Rec. X.227 bis (1998) §7.2.4.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly asoi_identifier?: OPTIONAL<ASOI_identifier>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_information`.
-     * @description
-     *
-     * Optional user information; meaning depends on the ASO-context in
-     * effect. ITU-T Rec. X.217 bis (1998) §8.2.1.2; X.227 bis (1998)
-     * §7.2.4.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_information?: OPTIONAL<Association_data>
-  ) {}
+    reason?: OPTIONAL<Release_request_reason>,
+    aso_qualifier?: OPTIONAL<ASO_qualifier>,
+    asoi_identifier?: OPTIONAL<ASOI_identifier>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_information?: OPTIONAL<Association_data>
+  ) {
+    this.reason = reason;
+    this.aso_qualifier = aso_qualifier;
+    this.asoi_identifier = asoi_identifier;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_information = user_information;
+  }
 
   /**
    * @summary Restructures an object into a RLRQ_apdu

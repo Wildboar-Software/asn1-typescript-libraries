@@ -13,13 +13,16 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_C_RECOVER_RI_recovery_state {
-  commit = 0,
-  ready = 1,
-  done = 2,
-  unknown = 3,
-  retry_later = 5,
-}
+export const _enum_for_C_RECOVER_RI_recovery_state = {
+  commit: 0,
+  ready: 1,
+  done: 2,
+  unknown: 3,
+  retry_later: 5,
+} as const;
+
+export type _enum_for_C_RECOVER_RI_recovery_state =
+  (typeof _enum_for_C_RECOVER_RI_recovery_state)[keyof typeof _enum_for_C_RECOVER_RI_recovery_state];
 
 
 /**

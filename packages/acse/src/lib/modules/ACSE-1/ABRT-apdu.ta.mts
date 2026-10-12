@@ -68,77 +68,96 @@ import {
  *
  */
 export class ABRT_apdu {
+  /**
+   * @summary `abort_source`.
+   * @description
+   *
+   * Assigned by the ACPM: `acse-service-provider` if the ACPM
+   * initiated the abort; otherwise `acse-service-user`. ITU-T Rec.
+   * X.217 bis (1998) §8.3.1.1; X.227 bis (1998) §7.3.4.1. With session
+   * version 1, A-ABORT carries no APCI, so the indication always
+   * reports service-user (X.217 (1995) §9.3.1.3).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly abort_source: ABRT_source;
+
+  /**
+   * @summary `abort_diagnostic`.
+   * @description
+   *
+   * Optional Diagnostic; shall not be present if only Kernel is used
+   * (Authentication FU). Values: no-reason-given, protocol-error,
+   * authentication-mechanism-name-not-recognized / -required,
+   * authentication-failure, authentication-required. ITU-T Rec. X.217
+   * (1995) §9.3.1.2; X.227 bis (1998) §7.3.4.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly abort_diagnostic?: OPTIONAL<ABRT_diagnostic>;
+
+  /**
+   * @summary `aso_qualifier`.
+   * @description
+   *
+   * Distinguishes APDUs for different child ASOs under a parent.
+   * Conditional. Higher Level Association FU. ITU-T Rec. X.227 bis
+   * (1998) §7.3.4.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly aso_qualifier?: OPTIONAL<ASO_qualifier>;
+
+  /**
+   * @summary `asoi_identifier`.
+   * @description
+   *
+   * Distinguishes concurrent instances of the same ASO. Conditional.
+   * Higher Level Association FU. ITU-T Rec. X.227 bis (1998) §7.3.4.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly asoi_identifier?: OPTIONAL<ASOI_identifier>;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_information`.
+   * @description
+   *
+   * Optional user information; meaning depends on the ASO-context.
+   * Unused when the ACPM itself aborts (protocol error). ITU-T Rec.
+   * X.217 bis (1998) §8.3.1.3; X.227 bis (1998) §7.3.4.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_information?: OPTIONAL<Association_data>;
+
   constructor(
-    /**
-     * @summary `abort_source`.
-     * @description
-     *
-     * Assigned by the ACPM: `acse-service-provider` if the ACPM
-     * initiated the abort; otherwise `acse-service-user`. ITU-T Rec.
-     * X.217 bis (1998) §8.3.1.1; X.227 bis (1998) §7.3.4.1. With session
-     * version 1, A-ABORT carries no APCI, so the indication always
-     * reports service-user (X.217 (1995) §9.3.1.3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly abort_source: ABRT_source,
-    /**
-     * @summary `abort_diagnostic`.
-     * @description
-     *
-     * Optional Diagnostic; shall not be present if only Kernel is used
-     * (Authentication FU). Values: no-reason-given, protocol-error,
-     * authentication-mechanism-name-not-recognized / -required,
-     * authentication-failure, authentication-required. ITU-T Rec. X.217
-     * (1995) §9.3.1.2; X.227 bis (1998) §7.3.4.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly abort_diagnostic?: OPTIONAL<ABRT_diagnostic>,
-    /**
-     * @summary `aso_qualifier`.
-     * @description
-     *
-     * Distinguishes APDUs for different child ASOs under a parent.
-     * Conditional. Higher Level Association FU. ITU-T Rec. X.227 bis
-     * (1998) §7.3.4.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
-    /**
-     * @summary `asoi_identifier`.
-     * @description
-     *
-     * Distinguishes concurrent instances of the same ASO. Conditional.
-     * Higher Level Association FU. ITU-T Rec. X.227 bis (1998) §7.3.4.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly asoi_identifier?: OPTIONAL<ASOI_identifier>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_information`.
-     * @description
-     *
-     * Optional user information; meaning depends on the ASO-context.
-     * Unused when the ACPM itself aborts (protocol error). ITU-T Rec.
-     * X.217 bis (1998) §8.3.1.3; X.227 bis (1998) §7.3.4.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_information?: OPTIONAL<Association_data>
-  ) {}
+    abort_source: ABRT_source,
+    abort_diagnostic?: OPTIONAL<ABRT_diagnostic>,
+    aso_qualifier?: OPTIONAL<ASO_qualifier>,
+    asoi_identifier?: OPTIONAL<ASOI_identifier>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_information?: OPTIONAL<Association_data>
+  ) {
+    this.abort_source = abort_source;
+    this.abort_diagnostic = abort_diagnostic;
+    this.aso_qualifier = aso_qualifier;
+    this.asoi_identifier = asoi_identifier;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_information = user_information;
+  }
 
   /**
    * @summary Restructures an object into a ABRT_apdu

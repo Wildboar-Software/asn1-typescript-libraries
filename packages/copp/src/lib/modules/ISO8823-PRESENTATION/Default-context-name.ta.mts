@@ -42,29 +42,36 @@ import {
  *
  */
 export class Default_context_name {
+    /**
+     * @summary `abstract_syntax_name`.
+     * @description
+     *
+     * Abstract syntax of the default context (X.216 §10.2.1.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly abstract_syntax_name: Abstract_syntax_name;
+
+    /**
+     * @summary `transfer_syntax_name`.
+     * @description
+     *
+     * Transfer syntax the initiating PPM requires for the default
+     * context (X.226 §6.2.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name: Transfer_syntax_name;
+
     constructor(
-        /**
-         * @summary `abstract_syntax_name`.
-         * @description
-         *
-         * Abstract syntax of the default context (X.216 §10.2.1.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly abstract_syntax_name: Abstract_syntax_name,
-        /**
-         * @summary `transfer_syntax_name`.
-         * @description
-         *
-         * Transfer syntax the initiating PPM requires for the default
-         * context (X.226 §6.2.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name: Transfer_syntax_name
-    ) {}
+        abstract_syntax_name: Abstract_syntax_name,
+        transfer_syntax_name: Transfer_syntax_name
+    ) {
+        this.abstract_syntax_name = abstract_syntax_name;
+        this.transfer_syntax_name = transfer_syntax_name;
+    }
 
     /**
      * @summary Restructures an object into a Default_context_name

@@ -41,39 +41,49 @@ import {
  *
  */
 export class P_context_result_list_Item {
+  /**
+   * @summary `result`.
+   * @description
+   *
+   * Acceptance or user/provider rejection of this proposed context.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly result: Result;
+
+  /**
+   * @summary `concrete_syntax_name`.
+   * @description
+   *
+   * Transfer syntax selected when `result` is `acceptance`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly concrete_syntax_name?: OPTIONAL<Concrete_syntax_name>;
+
+  /**
+   * @summary `provider_reason`.
+   * @description
+   *
+   * Why the provider rejected this context, if `result` is
+   * `provider-rejection`.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly provider_reason?: OPTIONAL<P_context_result_list_Item_provider_reason>;
+
   constructor(
-    /**
-     * @summary `result`.
-     * @description
-     *
-     * Acceptance or user/provider rejection of this proposed context.
-     *
-     * @public
-     * @readonly
-     */
-    readonly result: Result,
-    /**
-     * @summary `concrete_syntax_name`.
-     * @description
-     *
-     * Transfer syntax selected when `result` is `acceptance`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly concrete_syntax_name?: OPTIONAL<Concrete_syntax_name>,
-    /**
-     * @summary `provider_reason`.
-     * @description
-     *
-     * Why the provider rejected this context, if `result` is
-     * `provider-rejection`.
-     *
-     * @public
-     * @readonly
-     */
-    readonly provider_reason?: OPTIONAL<P_context_result_list_Item_provider_reason>
-  ) {}
+    result: Result,
+    concrete_syntax_name?: OPTIONAL<Concrete_syntax_name>,
+    provider_reason?: OPTIONAL<P_context_result_list_Item_provider_reason>
+  ) {
+    this.result = result;
+    this.concrete_syntax_name = concrete_syntax_name;
+    this.provider_reason = provider_reason;
+  }
 
   /**
    * @summary Restructures an object into a P_context_result_list_Item

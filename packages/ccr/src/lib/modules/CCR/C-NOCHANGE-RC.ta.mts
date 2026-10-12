@@ -49,36 +49,46 @@ import {
  *
  */
 export class C_NOCHANGE_RC {
+  /**
+   * @summary `outcome`.
+   * @description
+   *
+   * Result of the atomic action as known to the acceptor. Default
+   * `not-determined`. After two colliding C-NOCHANGE-RI, each user
+   * issues confirm with `no-change` (X.852 §7.7.6, §7.7.7.2).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly outcome?: OPTIONAL<C_NOCHANGE_RC_outcome>;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_data`.
+   * @description
+   *
+   * C-NOCHANGE response/confirm User Data (X.852 §7.7.6, Table 23).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_data?: OPTIONAL<User_data>;
+
   constructor(
-    /**
-     * @summary `outcome`.
-     * @description
-     *
-     * Result of the atomic action as known to the acceptor. Default
-     * `not-determined`. After two colliding C-NOCHANGE-RI, each user
-     * issues confirm with `no-change` (X.852 §7.7.6, §7.7.7.2).
-     *
-     * @public
-     * @readonly
-     */
-    readonly outcome?: OPTIONAL<C_NOCHANGE_RC_outcome>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_data`.
-     * @description
-     *
-     * C-NOCHANGE response/confirm User Data (X.852 §7.7.6, Table 23).
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_data?: OPTIONAL<User_data>
-  ) {}
+    outcome?: OPTIONAL<C_NOCHANGE_RC_outcome>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_data?: OPTIONAL<User_data>
+  ) {
+    this.outcome = outcome;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_data = user_data;
+  }
 
   /**
    * @summary Restructures an object into a C_NOCHANGE_RC

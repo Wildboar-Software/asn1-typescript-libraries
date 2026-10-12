@@ -36,28 +36,35 @@ import {
  *
  */
 export class ASOI_tag_Item {
+  /**
+   * @summary `qualifier`.
+   * @description
+   *
+   * ASO-qualifier of this path element (child ASO under its parent).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly qualifier?: OPTIONAL<ASO_qualifier>;
+
+  /**
+   * @summary `identifier`.
+   * @description
+   *
+   * ASO-invocation identifier of this path element (INTEGER 1..128).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly identifier?: OPTIONAL<ASOI_identifier>;
+
   constructor(
-    /**
-     * @summary `qualifier`.
-     * @description
-     *
-     * ASO-qualifier of this path element (child ASO under its parent).
-     *
-     * @public
-     * @readonly
-     */
-    readonly qualifier?: OPTIONAL<ASO_qualifier>,
-    /**
-     * @summary `identifier`.
-     * @description
-     *
-     * ASO-invocation identifier of this path element (INTEGER 1..128).
-     *
-     * @public
-     * @readonly
-     */
-    readonly identifier?: OPTIONAL<ASOI_identifier>
-  ) {}
+    qualifier?: OPTIONAL<ASO_qualifier>,
+    identifier?: OPTIONAL<ASOI_identifier>
+  ) {
+    this.qualifier = qualifier;
+    this.identifier = identifier;
+  }
 
   /**
    * @summary Restructures an object into a ASOI_tag_Item

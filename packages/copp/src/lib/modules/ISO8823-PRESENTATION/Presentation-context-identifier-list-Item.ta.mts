@@ -35,28 +35,35 @@ import {
  *
  */
 export class Presentation_context_identifier_list_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @description
+     *
+     * Member of the DCS (or of abort User data).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+
+    /**
+     * @summary `transfer_syntax_name`.
+     * @description
+     *
+     * Transfer syntax used for that context (X.226 §6.4.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name: Transfer_syntax_name;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @description
-         *
-         * Member of the DCS (or of abort User data).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `transfer_syntax_name`.
-         * @description
-         *
-         * Transfer syntax used for that context (X.226 §6.4.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name: Transfer_syntax_name
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        transfer_syntax_name: Transfer_syntax_name
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.transfer_syntax_name = transfer_syntax_name;
+    }
 
     /**
      * @summary Restructures an object into a Presentation_context_identifier_list_Item

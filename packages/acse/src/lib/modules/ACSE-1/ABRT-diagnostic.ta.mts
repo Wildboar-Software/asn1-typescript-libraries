@@ -12,14 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 
-export enum _enum_for_ABRT_diagnostic {
-  no_reason_given = 1,
-  protocol_error = 2,
-  authentication_mechanism_name_not_recognized = 3,
-  authentication_mechanism_name_required = 4,
-  authentication_failure = 5,
-  authentication_required = 6,
-}
+export const _enum_for_ABRT_diagnostic = {
+  no_reason_given: 1,
+  protocol_error: 2,
+  authentication_mechanism_name_not_recognized: 3,
+  authentication_mechanism_name_required: 4,
+  authentication_failure: 5,
+  authentication_required: 6,
+} as const;
+
+export type _enum_for_ABRT_diagnostic =
+  (typeof _enum_for_ABRT_diagnostic)[keyof typeof _enum_for_ABRT_diagnostic];
 
 /**
  * @summary ABRT_diagnostic

@@ -55,41 +55,51 @@ import {
  *
  */
 export class PDV_list {
+    /**
+     * @summary `transfer_syntax_name`.
+     * @description
+     *
+     * Required on a CP PPDU when more than one transfer syntax was
+     * proposed for this context (X.226 §8.4.2.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
+
+    /**
+     * @summary `presentation_context_identifier`.
+     * @description
+     *
+     * Context of these PDVs. On CP, identifies a proposed context
+     * (X.226 §8.4.2.6). Unexpected PCI is an invalid PPDU
+     * (X.226 §6.4.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+
+    /**
+     * @summary `presentation_data_values`.
+     * @description
+     *
+     * See `PDV-list-presentation-data-values` (X.226 §8.4.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_data_values: PDV_list_presentation_data_values;
+
     constructor(
-        /**
-         * @summary `transfer_syntax_name`.
-         * @description
-         *
-         * Required on a CP PPDU when more than one transfer syntax was
-         * proposed for this context (X.226 §8.4.2.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
-        /**
-         * @summary `presentation_context_identifier`.
-         * @description
-         *
-         * Context of these PDVs. On CP, identifies a proposed context
-         * (X.226 §8.4.2.6). Unexpected PCI is an invalid PPDU
-         * (X.226 §6.4.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `presentation_data_values`.
-         * @description
-         *
-         * See `PDV-list-presentation-data-values` (X.226 §8.4.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_data_values: PDV_list_presentation_data_values
-    ) {}
+        transfer_syntax_name: OPTIONAL<Transfer_syntax_name>,
+        presentation_context_identifier: Presentation_context_identifier,
+        presentation_data_values: PDV_list_presentation_data_values
+    ) {
+        this.transfer_syntax_name = transfer_syntax_name;
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.presentation_data_values = presentation_data_values;
+    }
 
     /**
      * @summary Restructures an object into a PDV_list

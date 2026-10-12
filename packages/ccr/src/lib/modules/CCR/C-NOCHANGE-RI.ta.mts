@@ -53,37 +53,47 @@ import {
  *
  */
 export class C_NOCHANGE_RI {
+  /**
+   * @summary `confirmation`.
+   * @description
+   *
+   * Whether the requestor wants a C-NOCHANGE-RC. `not-required` (0):
+   * response/confirm may be omitted. `result-requested` (1): default.
+   * ITU-T Rec. X.852 (12/97) §7.7.4, §7.7.5, Table 22.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly confirmation?: OPTIONAL<C_NOCHANGE_RI_confirmation>;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_data`.
+   * @description
+   *
+   * C-NOCHANGE request/indication User Data (X.852 §7.7.5,
+   * Table 22).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_data?: OPTIONAL<User_data>;
+
   constructor(
-    /**
-     * @summary `confirmation`.
-     * @description
-     *
-     * Whether the requestor wants a C-NOCHANGE-RC. `not-required` (0):
-     * response/confirm may be omitted. `result-requested` (1): default.
-     * ITU-T Rec. X.852 (12/97) §7.7.4, §7.7.5, Table 22.
-     *
-     * @public
-     * @readonly
-     */
-    readonly confirmation?: OPTIONAL<C_NOCHANGE_RI_confirmation>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_data`.
-     * @description
-     *
-     * C-NOCHANGE request/indication User Data (X.852 §7.7.5,
-     * Table 22).
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_data?: OPTIONAL<User_data>
-  ) {}
+    confirmation?: OPTIONAL<C_NOCHANGE_RI_confirmation>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_data?: OPTIONAL<User_data>
+  ) {
+    this.confirmation = confirmation;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_data = user_data;
+  }
 
   /**
    * @summary Restructures an object into a C_NOCHANGE_RI
