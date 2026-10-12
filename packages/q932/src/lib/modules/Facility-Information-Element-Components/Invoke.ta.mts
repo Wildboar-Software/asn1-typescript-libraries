@@ -11,6 +11,7 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Inform
 import { Invoke_linkedId, _decode_Invoke_linkedId, _encode_Invoke_linkedId } from "../Facility-Information-Element-Components/Invoke-linkedId.ta.mjs";
 // export { Invoke_linkedId, _decode_Invoke_linkedId, _encode_Invoke_linkedId } from "../Facility-Information-Element-Components/Invoke-linkedId.ta.mjs";
 // export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 
 
 /**

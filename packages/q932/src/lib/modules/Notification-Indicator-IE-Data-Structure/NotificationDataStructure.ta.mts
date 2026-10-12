@@ -4,6 +4,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type Code, _decode_Code, _encode_Code } from "../Notification-Indicator-IE-Data-Structure/Code.ta.mjs";
 // export { NOTIFICATION } from "../Notification-Indicator-IE-Data-Structure/NOTIFICATION.oca.mjs";
 
 

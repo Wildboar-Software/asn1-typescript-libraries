@@ -8,6 +8,8 @@ import { noExplicitReservationExistsOrInvalidReservationIndicator } from "../Exp
 // export { noExplicitReservationExistsOrInvalidReservationIndicator } from "../Explicit-Network-Controlled-Channel-Reservation/noExplicitReservationExistsOrInvalidReservationIndicator.oa.mjs";
 import { implicitReservationUsed } from "../Explicit-Network-Controlled-Channel-Reservation/implicitReservationUsed.oa.mjs";
 // export { implicitReservationUsed } from "../Explicit-Network-Controlled-Channel-Reservation/implicitReservationUsed.oa.mjs";
+import { notAvailable } from "../Explicit-Network-Controlled-Channel-Reservation/notAvailable.oa.mjs";
+import { userNotSubscribed } from "../Explicit-Network-Controlled-Channel-Reservation/userNotSubscribed.oa.mjs";
 
 
 /**
