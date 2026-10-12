@@ -60,7 +60,6 @@ export class PDV_list {
    * @readonly
    */
   public readonly transfer_syntax_name: OPTIONAL<Transfer_syntax_name>;
-
   /**
    * @summary `presentation_context_identifier`.
    * @description
@@ -71,7 +70,6 @@ export class PDV_list {
    * @readonly
    */
   public readonly presentation_context_identifier: Presentation_context_identifier;
-
   /**
    * @summary `presentation_data_values`.
    * @description

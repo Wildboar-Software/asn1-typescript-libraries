@@ -1,0 +1,583 @@
+/* eslint-disable */
+import {
+    OCTET_STRING,
+    OPTIONAL,
+    UTF8String,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import { ASN1SizeError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { type VersionType, _decode_VersionType, _encode_VersionType } from "@wildboar/sgp22/RSPDefinitions";
+import { type RspCapability, _decode_RspCapability, _encode_RspCapability } from "@wildboar/sgp22/RSPDefinitions";
+import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "@wildboar/x500/CertificateExtensions";
+import { EUICCInfo2_euiccCategory, _decode_EUICCInfo2_euiccCategory, _encode_EUICCInfo2_euiccCategory } from "../SGP32Definitions/EUICCInfo2-euiccCategory.ta.mjs";
+import { type PprIds, _decode_PprIds, _encode_PprIds } from "@wildboar/sgp22/RSPDefinitions";
+import { CertificationDataObject, _decode_CertificationDataObject, _encode_CertificationDataObject } from "@wildboar/sgp22/RSPDefinitions";
+import { EUICCInfo2_treProperties, _decode_EUICCInfo2_treProperties, _encode_EUICCInfo2_treProperties } from "../SGP32Definitions/EUICCInfo2-treProperties.ta.mjs";
+import { IpaMode, _decode_IpaMode, _encode_IpaMode } from "../SGP32Definitions/IpaMode.ta.mjs";
+import { IoTSpecificInfo, _decode_IoTSpecificInfo, _encode_IoTSpecificInfo } from "../SGP32Definitions/IoTSpecificInfo.ta.mjs";
+import { type UICCCapability, _decode_UICCCapability, _encode_UICCCapability } from "@wildboar/sgp22/PEDefinitions";
+
+
+/**
+ * @summary EUICCInfo2
+ * @description
+ *
+ * eUICC information returned by ES10b.GetEUICCInfo. This definition replaces
+ * EUICCInfo2 from SGP.22 section 5.7.8 and Annex H and extends it for IoT. The
+ * IPA acts as the LPA.
+ *
+ * iotSpecificInfo and ipaMode are mandatory in SGP.32. The eUICC omits
+ * euiccCiPKIdListForSigningV3, additionalEuiccInfo, and highestSvn. An SM-DP+
+ * ignores those three if they arrive together with iotSpecificInfo.
+ *
+ * SGP.32 v1.2, section 5.9.2.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EUICCInfo2 ::= [34] SEQUENCE { -- Tag 'BF22' 
+ *     profileVersion [1] VersionType, -- Base eUICC Profile package version supported 
+ *     svn [2] VersionType, -- GSMA SGP.22 version supported (SVN)referenced by SGP.32
+ *     euiccFirmwareVer [3] VersionType, -- eUICC Firmware version 
+ *     extCardResource [4] OCTET STRING, -- Extended Card Resource Information according to ETSI TS 102 226 
+ *     uiccCapability [5] UICCCapability, 
+ *     ts102241Version [6] VersionType OPTIONAL, 
+ *     globalplatformVersion [7] VersionType OPTIONAL, 
+ *     rspCapability [8] RspCapability, 
+ *     euiccCiPKIdListForVerification [9] SEQUENCE OF SubjectKeyIdentifier, -- List of CI Public Key Identifiers supported on the eUICC for signature verification 
+ *     euiccCiPKIdListForSigning [10] SEQUENCE OF SubjectKeyIdentifier, -- List of CI Public Key Identifier supported on the eUICC for signature creation 
+ *     euiccCategory [11] INTEGER { 
+ *         other(0), 
+ *         basicEuicc(1), 
+ *         mediumEuicc(2), 
+ *         contactlessEuicc(3) 
+ *     } OPTIONAL, 
+ *     forbiddenProfilePolicyRules [25] PprIds OPTIONAL, -- Tag '99' 
+ *     ppVersion VersionType, -- Protection Profile version 
+ *     sasAcreditationNumber UTF8String (SIZE(0..64)), 
+ *     certificationDataObject [12] CertificationDataObject OPTIONAL, 
+ *     treProperties [13] BIT STRING { 
+ *         isDiscrete(0), 
+ *         isIntegrated(1), 
+ *         usesRemoteMemory(2) -- refers to the usage of remote memory protected by the Remote Memory Protection Function described in SGP.21 [4] 
+ *     } OPTIONAL, 
+ *     treProductReference [14] UTF8String OPTIONAL, -- Platform_Label as defined in GlobalPlatform DLOA specification [57] 
+ *     additionalEuiccProfilePackageVersions [15] SEQUENCE OF VersionType OPTIONAL,
+ *     ipaMode [16] IpaMode OPTIONAL, -- active IPA, mandatory within SGP.32
+ *     euiccCiPKIdListForSigningV3 [17] SEQUENCE OF SubjectKeyIdentifier OPTIONAL, -- not used by this version of SGP.32.
+ *     additionalEuiccInfo [18] OCTET STRING (SIZE(0..32)) OPTIONAL,    -- not used by this version of SGP.32
+ *     highestSvn [19] VersionType OPTIONAL, -- not used by this version of SGP.32 
+ *     iotSpecificInfo [20] IoTSpecificInfo OPTIONAL, -- mandatory within SGP.32 
+ *     euiccMinimumSecurityLevel [21] OCTET STRING (SIZE (1)) OPTIONAL -- value for eUICC Minimum Security Level Check
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class EUICCInfo2 {
+    constructor (
+        /**
+         * @summary `profileVersion`.
+         * @description
+         *
+         * Base eUICC Profile package version supported. SGP.32 v1.2 section 5.9.2
+         * places the versioning procedures in SGP.22 section 5.7.8. SGP.22 v3.1
+         * section 5.7.8 points to section 4.3, where the corresponding field is the
+         * lowest major version and the associated highest minor version of the TCA
+         * eUICC Profile Package specification supported by the eUICC.
+         * @public
+         * @readonly
+         */
+        readonly profileVersion: VersionType,
+        /**
+         * @summary `svn`.
+         * @description
+         *
+         * GSMA SGP.22 version supported (SVN) referenced by SGP.32.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly svn: VersionType,
+        /**
+         * @summary `euiccFirmwareVer`.
+         * @description
+         *
+         * eUICC firmware version.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly euiccFirmwareVer: VersionType,
+        /**
+         * @summary `extCardResource`.
+         * @description
+         *
+         * Extended Card Resource Information according to ETSI TS 102 226.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly extCardResource: OCTET_STRING,
+        /**
+         * @summary `uiccCapability`.
+         * @description
+         *
+         * UICC capabilities of the eUICC. SGP.32 v1.2 section 5.9.2 places the related
+         * procedures in SGP.22 section 5.7.8. SGP.22 v3.1 section 4.3, reached from
+         * that section, says the field contains the UICC capabilities supported by the
+         * eUICC and that the type is imported from the TCA eUICC Profile Package
+         * specification.
+         * @public
+         * @readonly
+         */
+        readonly uiccCapability: UICCCapability,
+        /**
+         * @summary `ts102241Version`.
+         * @description
+         *
+         * SGP.32 v1.2 does not further define this field. Annex C.
+         * @public
+         * @readonly
+         */
+        readonly ts102241Version: OPTIONAL<VersionType>,
+        /**
+         * @summary `globalplatformVersion`.
+         * @description
+         *
+         * SGP.32 v1.2 does not further define this field. Annex C.
+         * @public
+         * @readonly
+         */
+        readonly globalplatformVersion: OPTIONAL<VersionType>,
+        /**
+         * @summary `rspCapability`.
+         * @description
+         *
+         * SGP.32 v1.2 does not further define this field. Annex C.
+         * @public
+         * @readonly
+         */
+        readonly rspCapability: RspCapability,
+        /**
+         * @summary `euiccCiPKIdListForVerification`.
+         * @description
+         *
+         * CI public key identifiers supported on the eUICC for signature verification.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly euiccCiPKIdListForVerification: SubjectKeyIdentifier[],
+        /**
+         * @summary `euiccCiPKIdListForSigning`.
+         * @description
+         *
+         * CI public key identifiers supported on the eUICC for signature creation.
+         * When an Associated eIM has no euiccCiPKId, the eUICC uses the first entry of
+         * this list.
+         *
+         * SGP.32 v1.2, sections 2.11.1.1 and 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly euiccCiPKIdListForSigning: SubjectKeyIdentifier[],
+        /**
+         * @summary `euiccCategory`.
+         * @description
+         *
+         * Optional eUICC category. SGP.32 v1.2 does not further define the values.
+         * Annex C.
+         * @public
+         * @readonly
+         */
+        readonly euiccCategory: OPTIONAL<EUICCInfo2_euiccCategory>,
+        /**
+         * @summary `forbiddenProfilePolicyRules`.
+         * @description
+         *
+         * SGP.32 v1.2 does not further define this field. Annex C.
+         * @public
+         * @readonly
+         */
+        readonly forbiddenProfilePolicyRules: OPTIONAL<PprIds>,
+        /**
+         * @summary `ppVersion`.
+         * @description
+         *
+         * Protection Profile version.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly ppVersion: VersionType,
+        /**
+         * @summary `sasAcreditationNumber`.
+         * @description
+         *
+         * SGP.32 v1.2 does not further define this field. Annex C.
+         * @public
+         * @readonly
+         */
+        readonly sasAcreditationNumber: UTF8String,
+        /**
+         * @summary `certificationDataObject`.
+         * @description
+         *
+         * SGP.32 v1.2 does not further define this field. Annex C.
+         * @public
+         * @readonly
+         */
+        readonly certificationDataObject: OPTIONAL<CertificationDataObject>,
+        /**
+         * @summary `treProperties`.
+         * @description
+         *
+         * Optional TRE properties. usesRemoteMemory means remote memory protected by
+         * the Remote Memory Protection Function described in SGP.21. SGP.32 v1.2 does
+         * not further define isDiscrete or isIntegrated.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly treProperties: OPTIONAL<EUICCInfo2_treProperties>,
+        /**
+         * @summary `treProductReference`.
+         * @description
+         *
+         * Platform_Label as defined in the GlobalPlatform DLOA specification [57].
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly treProductReference: OPTIONAL<UTF8String>,
+        /**
+         * @summary `additionalEuiccProfilePackageVersions`.
+         * @description
+         *
+         * Additional eUICC Profile package versions. SGP.32 v1.2 section 5.9.2 places
+         * the procedures in SGP.22 section 5.7.8. SGP.22 v3.1 section 4.3 describes
+         * the corresponding field as further major versions, each with its highest
+         * minor version, present when a major version higher than the base version is
+         * supported.
+         * @public
+         * @readonly
+         */
+        readonly additionalEuiccProfilePackageVersions: OPTIONAL<VersionType[]>,
+        /**
+         * @summary `ipaMode`.
+         * @description
+         *
+         * Which IPA is active. Mandatory in SGP.32. ipad means IPAd is active. ipae
+         * means IPAe is active.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly ipaMode: OPTIONAL<IpaMode>,
+        /**
+         * @summary `euiccCiPKIdListForSigningV3`.
+         * @description
+         *
+         * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
+         * arrives together with iotSpecificInfo.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly euiccCiPKIdListForSigningV3: OPTIONAL<SubjectKeyIdentifier[]>,
+        /**
+         * @summary `additionalEuiccInfo`.
+         * @description
+         *
+         * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
+         * arrives together with iotSpecificInfo.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly additionalEuiccInfo: OPTIONAL<OCTET_STRING>,
+        /**
+         * @summary `highestSvn`.
+         * @description
+         *
+         * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
+         * arrives together with iotSpecificInfo.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly highestSvn: OPTIONAL<VersionType>,
+        /**
+         * @summary `iotSpecificInfo`.
+         * @description
+         *
+         * IoT-specific information. Required in SGP.32. ecallSupported is present;
+         * when that flag is set, the eUICC supports the Emergency Mechanism.
+         * fallbackSupported is present when the eUICC supports the Fallback Mechanism.
+         *
+         * SGP.32 v1.2, section 5.9.2.
+         * @public
+         * @readonly
+         */
+        readonly iotSpecificInfo: OPTIONAL<IoTSpecificInfo>,
+        /**
+         * @summary `euiccMinimumSecurityLevel`.
+         * @description
+         *
+         * SGP.32 v1.2 section 5.9.2 and Annex C omit this field, so v1.2 does not
+         * further define it.
+         * @public
+         * @readonly
+         */
+        readonly euiccMinimumSecurityLevel: OPTIONAL<OCTET_STRING>
+    ) {
+        if (this.sasAcreditationNumber.length > 64) {
+            throw new ASN1SizeError("EUICCInfo2.sasAcreditationNumber violates SIZE constraint");
+        }
+        if (this.additionalEuiccInfo !== undefined && this.additionalEuiccInfo.length > 32) {
+            throw new ASN1SizeError("EUICCInfo2.additionalEuiccInfo violates SIZE constraint");
+        }
+        if (this.euiccMinimumSecurityLevel !== undefined && this.euiccMinimumSecurityLevel.length !== 1) {
+            throw new ASN1SizeError("EUICCInfo2.euiccMinimumSecurityLevel violates SIZE constraint");
+        }
+    }
+
+    /**
+     * @summary Restructures an object into a EUICCInfo2
+     * @description
+     * 
+     * This takes an `object` and converts it to a `EUICCInfo2`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `EUICCInfo2`.
+     * @returns {EUICCInfo2}
+     */
+    public static _from_object (_o: { [_K in keyof (EUICCInfo2)]: (EUICCInfo2)[_K] }): EUICCInfo2 {
+        return new EUICCInfo2(_o.profileVersion, _o.svn, _o.euiccFirmwareVer, _o.extCardResource, _o.uiccCapability, _o.ts102241Version, _o.globalplatformVersion, _o.rspCapability, _o.euiccCiPKIdListForVerification, _o.euiccCiPKIdListForSigning, _o.euiccCategory, _o.forbiddenProfilePolicyRules, _o.ppVersion, _o.sasAcreditationNumber, _o.certificationDataObject, _o.treProperties, _o.treProductReference, _o.additionalEuiccProfilePackageVersions, _o.ipaMode, _o.euiccCiPKIdListForSigningV3, _o.additionalEuiccInfo, _o.highestSvn, _o.iotSpecificInfo, _o.euiccMinimumSecurityLevel);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of EUICCInfo2
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_EUICCInfo2: $.ComponentSpec[] = [
+    new $.ComponentSpec("profileVersion", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("svn", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("euiccFirmwareVer", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extCardResource", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("uiccCapability", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("ts102241Version", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("globalplatformVersion", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("rspCapability", false, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("euiccCiPKIdListForVerification", false, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("euiccCiPKIdListForSigning", false, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("euiccCategory", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("forbiddenProfilePolicyRules", true, $.hasTag(_TagClass.context, 25)),
+    new $.ComponentSpec("ppVersion", false, $.hasTag(_TagClass.universal, 4)),
+    new $.ComponentSpec("sasAcreditationNumber", false, $.hasTag(_TagClass.universal, 12)),
+    new $.ComponentSpec("certificationDataObject", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("treProperties", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("treProductReference", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("additionalEuiccProfilePackageVersions", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("ipaMode", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("euiccCiPKIdListForSigningV3", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("additionalEuiccInfo", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("highestSvn", true, $.hasTag(_TagClass.context, 19)),
+    new $.ComponentSpec("iotSpecificInfo", true, $.hasTag(_TagClass.context, 20)),
+    new $.ComponentSpec("euiccMinimumSecurityLevel", true, $.hasTag(_TagClass.context, 21))
+];
+
+/**
+ * @summary The Trailing Root Component Types of EUICCInfo2
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_EUICCInfo2: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of EUICCInfo2
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_EUICCInfo2: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_EUICCInfo2: $.ASN1Decoder<EUICCInfo2> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) EUICCInfo2
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_EUICCInfo2 (el: _Element): EUICCInfo2 {
+    if (!_cached_decoder_for_EUICCInfo2) { _cached_decoder_for_EUICCInfo2 = $._decode_implicit<EUICCInfo2>(() => function (el: _Element): EUICCInfo2 {
+    let profileVersion!: VersionType;
+    let svn!: VersionType;
+    let euiccFirmwareVer!: VersionType;
+    let extCardResource!: OCTET_STRING;
+    let uiccCapability!: UICCCapability;
+    let ts102241Version: OPTIONAL<VersionType>;
+    let globalplatformVersion: OPTIONAL<VersionType>;
+    let rspCapability!: RspCapability;
+    let euiccCiPKIdListForVerification!: SubjectKeyIdentifier[];
+    let euiccCiPKIdListForSigning!: SubjectKeyIdentifier[];
+    let euiccCategory: OPTIONAL<EUICCInfo2_euiccCategory>;
+    let forbiddenProfilePolicyRules: OPTIONAL<PprIds>;
+    let ppVersion!: VersionType;
+    let sasAcreditationNumber!: UTF8String;
+    let certificationDataObject: OPTIONAL<CertificationDataObject>;
+    let treProperties: OPTIONAL<EUICCInfo2_treProperties>;
+    let treProductReference: OPTIONAL<UTF8String>;
+    let additionalEuiccProfilePackageVersions: OPTIONAL<VersionType[]>;
+    let ipaMode: OPTIONAL<IpaMode>;
+    let euiccCiPKIdListForSigningV3: OPTIONAL<SubjectKeyIdentifier[]>;
+    let additionalEuiccInfo: OPTIONAL<OCTET_STRING>;
+    let highestSvn: OPTIONAL<VersionType>;
+    let iotSpecificInfo: OPTIONAL<IoTSpecificInfo>;
+    let euiccMinimumSecurityLevel: OPTIONAL<OCTET_STRING>;
+    const callbacks: $.DecodingMap = {
+        "profileVersion": (_el: _Element): void => { profileVersion = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
+        "svn": (_el: _Element): void => { svn = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
+        "euiccFirmwareVer": (_el: _Element): void => { euiccFirmwareVer = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
+        "extCardResource": (_el: _Element): void => { extCardResource = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "uiccCapability": (_el: _Element): void => { uiccCapability = $._decode_implicit<UICCCapability>(() => _decode_UICCCapability)(_el); },
+        "ts102241Version": (_el: _Element): void => { ts102241Version = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
+        "globalplatformVersion": (_el: _Element): void => { globalplatformVersion = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
+        "rspCapability": (_el: _Element): void => { rspCapability = $._decode_implicit<RspCapability>(() => _decode_RspCapability)(_el); },
+        "euiccCiPKIdListForVerification": (_el: _Element): void => { euiccCiPKIdListForVerification = $._decode_implicit<SubjectKeyIdentifier[]>(() => $._decodeSequenceOf<SubjectKeyIdentifier>(() => _decode_SubjectKeyIdentifier))(_el); },
+        "euiccCiPKIdListForSigning": (_el: _Element): void => { euiccCiPKIdListForSigning = $._decode_implicit<SubjectKeyIdentifier[]>(() => $._decodeSequenceOf<SubjectKeyIdentifier>(() => _decode_SubjectKeyIdentifier))(_el); },
+        "euiccCategory": (_el: _Element): void => { euiccCategory = $._decode_implicit<EUICCInfo2_euiccCategory>(() => _decode_EUICCInfo2_euiccCategory)(_el); },
+        "forbiddenProfilePolicyRules": (_el: _Element): void => { forbiddenProfilePolicyRules = $._decode_implicit<PprIds>(() => _decode_PprIds)(_el); },
+        "ppVersion": (_el: _Element): void => { ppVersion = _decode_VersionType(_el); },
+        "sasAcreditationNumber": (_el: _Element): void => { sasAcreditationNumber = $._decodeUTF8String(_el); },
+        "certificationDataObject": (_el: _Element): void => { certificationDataObject = $._decode_implicit<CertificationDataObject>(() => _decode_CertificationDataObject)(_el); },
+        "treProperties": (_el: _Element): void => { treProperties = $._decode_implicit<EUICCInfo2_treProperties>(() => _decode_EUICCInfo2_treProperties)(_el); },
+        "treProductReference": (_el: _Element): void => { treProductReference = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "additionalEuiccProfilePackageVersions": (_el: _Element): void => { additionalEuiccProfilePackageVersions = $._decode_implicit<VersionType[]>(() => $._decodeSequenceOf<VersionType>(() => _decode_VersionType))(_el); },
+        "ipaMode": (_el: _Element): void => { ipaMode = $._decode_implicit<IpaMode>(() => _decode_IpaMode)(_el); },
+        "euiccCiPKIdListForSigningV3": (_el: _Element): void => { euiccCiPKIdListForSigningV3 = $._decode_implicit<SubjectKeyIdentifier[]>(() => $._decodeSequenceOf<SubjectKeyIdentifier>(() => _decode_SubjectKeyIdentifier))(_el); },
+        "additionalEuiccInfo": (_el: _Element): void => { additionalEuiccInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "highestSvn": (_el: _Element): void => { highestSvn = $._decode_implicit<VersionType>(() => _decode_VersionType)(_el); },
+        "iotSpecificInfo": (_el: _Element): void => { iotSpecificInfo = $._decode_implicit<IoTSpecificInfo>(() => _decode_IoTSpecificInfo)(_el); },
+        "euiccMinimumSecurityLevel": (_el: _Element): void => { euiccMinimumSecurityLevel = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_EUICCInfo2,
+        _extension_additions_list_spec_for_EUICCInfo2,
+        _root_component_type_list_2_spec_for_EUICCInfo2,
+        undefined,
+    );
+    return new EUICCInfo2(
+        profileVersion,
+        svn,
+        euiccFirmwareVer,
+        extCardResource,
+        uiccCapability,
+        ts102241Version,
+        globalplatformVersion,
+        rspCapability,
+        euiccCiPKIdListForVerification,
+        euiccCiPKIdListForSigning,
+        euiccCategory,
+        forbiddenProfilePolicyRules,
+        ppVersion,
+        sasAcreditationNumber,
+        certificationDataObject,
+        treProperties,
+        treProductReference,
+        additionalEuiccProfilePackageVersions,
+        ipaMode,
+        euiccCiPKIdListForSigningV3,
+        additionalEuiccInfo,
+        highestSvn,
+        iotSpecificInfo,
+        euiccMinimumSecurityLevel
+    );
+}); }
+    return _cached_decoder_for_EUICCInfo2(el);
+}
+
+let _cached_encoder_for_EUICCInfo2: $.ASN1Encoder<EUICCInfo2> | null = null;
+
+/**
+ * @summary Encodes a(n) EUICCInfo2 into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The EUICCInfo2, encoded as an ASN.1 Element.
+ */
+export
+function _encode_EUICCInfo2 (value: EUICCInfo2, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_EUICCInfo2) { _cached_encoder_for_EUICCInfo2 = $._encode_implicit(_TagClass.context, 34, () => function (value: EUICCInfo2): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_VersionType, $.BER)(value.profileVersion, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_VersionType, $.BER)(value.svn, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => _encode_VersionType, $.BER)(value.euiccFirmwareVer, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 4, () => $._encodeOctetString, $.BER)(value.extCardResource, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 5, () => _encode_UICCCapability, $.BER)(value.uiccCapability, $.BER),
+            /* IF_ABSENT  */ ((value.ts102241Version === undefined) ? undefined : $._encode_implicit(_TagClass.context, 6, () => _encode_VersionType, $.BER)(value.ts102241Version, $.BER)),
+            /* IF_ABSENT  */ ((value.globalplatformVersion === undefined) ? undefined : $._encode_implicit(_TagClass.context, 7, () => _encode_VersionType, $.BER)(value.globalplatformVersion, $.BER)),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 8, () => _encode_RspCapability, $.BER)(value.rspCapability, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<SubjectKeyIdentifier>(() => _encode_SubjectKeyIdentifier, $.BER), $.BER)(value.euiccCiPKIdListForVerification, $.BER),
+            /* REQUIRED   */ $._encode_implicit(_TagClass.context, 10, () => $._encodeSequenceOf<SubjectKeyIdentifier>(() => _encode_SubjectKeyIdentifier, $.BER), $.BER)(value.euiccCiPKIdListForSigning, $.BER),
+            /* IF_ABSENT  */ ((value.euiccCategory === undefined) ? undefined : $._encode_implicit(_TagClass.context, 11, () => _encode_EUICCInfo2_euiccCategory, $.BER)(value.euiccCategory, $.BER)),
+            /* IF_ABSENT  */ ((value.forbiddenProfilePolicyRules === undefined) ? undefined : $._encode_implicit(_TagClass.context, 25, () => _encode_PprIds, $.BER)(value.forbiddenProfilePolicyRules, $.BER)),
+            /* REQUIRED   */ _encode_VersionType(value.ppVersion, $.BER),
+            /* REQUIRED   */ $._encodeUTF8String(value.sasAcreditationNumber, $.BER),
+            /* IF_ABSENT  */ ((value.certificationDataObject === undefined) ? undefined : $._encode_implicit(_TagClass.context, 12, () => _encode_CertificationDataObject, $.BER)(value.certificationDataObject, $.BER)),
+            /* IF_ABSENT  */ ((value.treProperties === undefined) ? undefined : $._encode_implicit(_TagClass.context, 13, () => _encode_EUICCInfo2_treProperties, $.BER)(value.treProperties, $.BER)),
+            /* IF_ABSENT  */ ((value.treProductReference === undefined) ? undefined : $._encode_implicit(_TagClass.context, 14, () => $._encodeUTF8String, $.BER)(value.treProductReference, $.BER)),
+            /* IF_ABSENT  */ ((value.additionalEuiccProfilePackageVersions === undefined) ? undefined : $._encode_implicit(_TagClass.context, 15, () => $._encodeSequenceOf<VersionType>(() => _encode_VersionType, $.BER), $.BER)(value.additionalEuiccProfilePackageVersions, $.BER)),
+            /* IF_ABSENT  */ ((value.ipaMode === undefined) ? undefined : $._encode_implicit(_TagClass.context, 16, () => _encode_IpaMode, $.BER)(value.ipaMode, $.BER)),
+            /* IF_ABSENT  */ ((value.euiccCiPKIdListForSigningV3 === undefined) ? undefined : $._encode_implicit(_TagClass.context, 17, () => $._encodeSequenceOf<SubjectKeyIdentifier>(() => _encode_SubjectKeyIdentifier, $.BER), $.BER)(value.euiccCiPKIdListForSigningV3, $.BER)),
+            /* IF_ABSENT  */ ((value.additionalEuiccInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 18, () => $._encodeOctetString, $.BER)(value.additionalEuiccInfo, $.BER)),
+            /* IF_ABSENT  */ ((value.highestSvn === undefined) ? undefined : $._encode_implicit(_TagClass.context, 19, () => _encode_VersionType, $.BER)(value.highestSvn, $.BER)),
+            /* IF_ABSENT  */ ((value.iotSpecificInfo === undefined) ? undefined : $._encode_implicit(_TagClass.context, 20, () => _encode_IoTSpecificInfo, $.BER)(value.iotSpecificInfo, $.BER)),
+            /* IF_ABSENT  */ ((value.euiccMinimumSecurityLevel === undefined) ? undefined : $._encode_implicit(_TagClass.context, 21, () => $._encodeOctetString, $.BER)(value.euiccMinimumSecurityLevel, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}, $.BER); }
+    return _cached_encoder_for_EUICCInfo2(value, elGetter);
+}
+
+
+/* eslint-enable */

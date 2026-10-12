@@ -1,0 +1,164 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    OPTIONAL
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { _decode_CancelSessionReason, _encode_CancelSessionReason, type CancelSessionReason } from "@wildboar/sgp22/RSPDefinitions";
+
+
+/**
+ * @summary CompactEuiccCancelSessionSigned
+ * @description
+ *
+ * Compact body of a cancel-session signature input. The full
+ * euiccCancelSessionSigned contains the Transaction ID and this reason; the
+ * compact form keeps the reason. The eUICC revokes any grant to immediately
+ * enable a Profile when ES10b.CancelSession runs. CancelSessionReason values
+ * endUserRejection(0), postponed(1), and timeout(2) are unused in SGP.32.
+ *
+ * SGP.32 v1.2, sections 3.2.3.3, 5.9.9, and 5.14.8.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CompactEuiccCancelSessionSigned ::= SEQUENCE {
+ *     reason CancelSessionReason OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class CompactEuiccCancelSessionSigned {
+    constructor (
+        /**
+         * @summary `reason`.
+         * @description
+         *
+         * Cancel session reason supplied to ES10b.CancelSession. pprNotAllowed is used
+         * when Profile Metadata contains a PPR disallowed by the Rules Authorisation
+         * Table, or PPR1 while an Operational Profile is installed. metadataMismatch
+         * is used when Bound Profile Package metadata differs from the metadata in the
+         * AuthenticateClient response. loadBppExecutionError is used when installing
+         * the Bound Profile Package fails. Any other AuthenticateClient error uses
+         * undefinedReason, and the IPAd then ignores the eUICC response.
+         *
+         * SGP.32 v1.2, sections 3.2.3.3 and 5.9.9. The reason type itself is as
+         * defined in SGP.22.
+         * @public
+         * @readonly
+         */
+        readonly reason: OPTIONAL<CancelSessionReason>
+    ) {}
+
+    /**
+     * @summary Restructures an object into a CompactEuiccCancelSessionSigned
+     * @description
+     * 
+     * This takes an `object` and converts it to a `CompactEuiccCancelSessionSigned`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `CompactEuiccCancelSessionSigned`.
+     * @returns {CompactEuiccCancelSessionSigned}
+     */
+    public static _from_object (_o: { [_K in keyof (CompactEuiccCancelSessionSigned)]: (CompactEuiccCancelSessionSigned)[_K] }): CompactEuiccCancelSessionSigned {
+        return new CompactEuiccCancelSessionSigned(_o.reason);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of CompactEuiccCancelSessionSigned
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_CompactEuiccCancelSessionSigned: $.ComponentSpec[] = [
+    new $.ComponentSpec("reason", true, $.hasTag(_TagClass.context, 0))
+];
+
+/**
+ * @summary The Trailing Root Component Types of CompactEuiccCancelSessionSigned
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_CompactEuiccCancelSessionSigned: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of CompactEuiccCancelSessionSigned
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_CompactEuiccCancelSessionSigned: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_CompactEuiccCancelSessionSigned: $.ASN1Decoder<CompactEuiccCancelSessionSigned> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) CompactEuiccCancelSessionSigned
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_CompactEuiccCancelSessionSigned (el: _Element): CompactEuiccCancelSessionSigned {
+    if (!_cached_decoder_for_CompactEuiccCancelSessionSigned) { _cached_decoder_for_CompactEuiccCancelSessionSigned = function (el: _Element): CompactEuiccCancelSessionSigned {
+    let reason: OPTIONAL<CancelSessionReason>;
+    const callbacks: $.DecodingMap = {
+        "reason": (_el: _Element): void => { reason = _decode_CancelSessionReason(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_CompactEuiccCancelSessionSigned,
+        _extension_additions_list_spec_for_CompactEuiccCancelSessionSigned,
+        _root_component_type_list_2_spec_for_CompactEuiccCancelSessionSigned,
+        undefined,
+    );
+    return new CompactEuiccCancelSessionSigned(
+        reason
+    );
+}; }
+    return _cached_decoder_for_CompactEuiccCancelSessionSigned(el);
+}
+
+let _cached_encoder_for_CompactEuiccCancelSessionSigned: $.ASN1Encoder<CompactEuiccCancelSessionSigned> | null = null;
+
+/**
+ * @summary Encodes a(n) CompactEuiccCancelSessionSigned into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The CompactEuiccCancelSessionSigned, encoded as an ASN.1 Element.
+ */
+export
+function _encode_CompactEuiccCancelSessionSigned (value: CompactEuiccCancelSessionSigned, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CompactEuiccCancelSessionSigned) { _cached_encoder_for_CompactEuiccCancelSessionSigned = function (value: CompactEuiccCancelSessionSigned): _Element {
+    return $._encodeSequence(([] as (_Element | undefined)[]).concat(
+        [
+            /* IF_ABSENT  */ ((value.reason === undefined) ? undefined : _encode_CancelSessionReason(value.reason, $.BER))
+        ],
+    ).filter((c: (_Element | undefined)): c is _Element => (!!c)), $.BER);
+}; }
+    return _cached_encoder_for_CompactEuiccCancelSessionSigned(value, elGetter);
+}
+
+
+/* eslint-enable */

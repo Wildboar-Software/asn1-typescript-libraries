@@ -147,7 +147,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly protocol_version: OPTIONAL<AARQ_apdu_protocol_version>;
-
   /**
    * @summary `aSO_context_name`.
    * @description
@@ -163,7 +162,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly aSO_context_name: ASO_context_name;
-
   /**
    * @summary `called_AP_title`.
    * @description
@@ -177,7 +175,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly called_AP_title?: OPTIONAL<AP_title>;
-
   /**
    * @summary `called_AE_qualifier`.
    * @description
@@ -193,7 +190,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly called_AE_qualifier?: OPTIONAL<AE_qualifier>;
-
   /**
    * @summary `called_AP_invocation_identifier`.
    * @description
@@ -205,7 +201,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly called_AP_invocation_identifier?: OPTIONAL<AP_invocation_identifier>;
-
   /**
    * @summary `called_AE_invocation_identifier`.
    * @description
@@ -220,7 +215,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly called_AE_invocation_identifier?: OPTIONAL<AE_invocation_identifier>;
-
   /**
    * @summary `calling_AP_title`.
    * @description
@@ -232,7 +226,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly calling_AP_title?: OPTIONAL<AP_title>;
-
   /**
    * @summary `calling_AE_qualifier`.
    * @description
@@ -246,7 +239,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly calling_AE_qualifier?: OPTIONAL<AE_qualifier>;
-
   /**
    * @summary `calling_AP_invocation_identifier`.
    * @description
@@ -258,7 +250,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly calling_AP_invocation_identifier?: OPTIONAL<AP_invocation_identifier>;
-
   /**
    * @summary `calling_AE_invocation_identifier`.
    * @description
@@ -270,7 +261,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly calling_AE_invocation_identifier?: OPTIONAL<AE_invocation_identifier>;
-
   /**
    * @summary `sender_acse_requirements`.
    * @description
@@ -286,7 +276,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly sender_acse_requirements?: OPTIONAL<ACSE_requirements>;
-
   /**
    * @summary `mechanism_name`.
    * @description
@@ -302,7 +291,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly mechanism_name?: OPTIONAL<Mechanism_name>;
-
   /**
    * @summary `calling_authentication_value`.
    * @description
@@ -317,7 +305,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly calling_authentication_value?: OPTIONAL<Authentication_value>;
-
   /**
    * @summary `aSO_context_name_list`.
    * @description
@@ -333,7 +320,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly aSO_context_name_list?: OPTIONAL<ASO_context_name_list>;
-
   /**
    * @summary `implementation_information`.
    * @description
@@ -346,7 +332,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly implementation_information?: OPTIONAL<Implementation_data>;
-
   /**
    * @summary `p_context_definition_list`.
    * @description
@@ -359,7 +344,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly p_context_definition_list?: OPTIONAL<Syntactic_context_list>;
-
   /**
    * @summary `called_asoi_tag`.
    * @description
@@ -374,7 +358,6 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly called_asoi_tag?: OPTIONAL<ASOI_tag>;
-
   /**
    * @summary `calling_asoi_tag`.
    * @description
@@ -388,14 +371,12 @@ export class AARQ_apdu {
    * @readonly
    */
   public readonly calling_asoi_tag?: OPTIONAL<ASOI_tag>;
-
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
   public readonly _unrecognizedExtensionsList: _Element[];
-
   /**
    * @summary `user_information`.
    * @description

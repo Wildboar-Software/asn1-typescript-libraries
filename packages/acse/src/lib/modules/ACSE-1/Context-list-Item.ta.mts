@@ -50,7 +50,6 @@ export class Context_list_Item {
    * @readonly
    */
   public readonly pci: Presentation_context_identifier;
-
   /**
    * @summary `abstract_syntax`.
    * @description
@@ -61,7 +60,6 @@ export class Context_list_Item {
    * @readonly
    */
   public readonly abstract_syntax: Abstract_syntax_name;
-
   /**
    * @summary `transfer_syntaxes`.
    * @description

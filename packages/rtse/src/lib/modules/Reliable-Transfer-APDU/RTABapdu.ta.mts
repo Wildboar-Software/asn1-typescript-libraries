@@ -55,7 +55,6 @@ export class RTABapdu {
    * @readonly
    */
   public readonly abortReason?: OPTIONAL<AbortReason>;
-
   /**
    * @summary `reflectedParameter`.
    * @description
@@ -71,7 +70,6 @@ export class RTABapdu {
    * @readonly
    */
   public readonly reflectedParameter?: OPTIONAL<BIT_STRING>;
-
   /**
    * @summary `userdataAB`.
    * @description

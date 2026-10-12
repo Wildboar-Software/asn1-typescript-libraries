@@ -63,7 +63,6 @@ export class A_DT_apdu {
    * @readonly
    */
   public readonly aso_qualifier: OPTIONAL<ASO_qualifier>;
-
   /**
    * @summary `asoi_identifier`.
    * @description
@@ -75,14 +74,12 @@ export class A_DT_apdu {
    * @readonly
    */
   public readonly asoi_identifier: OPTIONAL<ASOI_identifier>;
-
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
   public readonly _unrecognizedExtensionsList: _Element[];
-
   /**
    * @summary `a_user_data`.
    * @description

@@ -63,7 +63,6 @@ export class RTORQapdu {
    * @readonly
    */
   public readonly checkpointSize: OPTIONAL<INTEGER>;
-
   /**
    * @summary `windowSize`.
    * @description
@@ -76,7 +75,6 @@ export class RTORQapdu {
    * @readonly
    */
   public readonly windowSize: OPTIONAL<INTEGER>;
-
   /**
    * @summary `dialogueMode`.
    * @description
@@ -89,7 +87,6 @@ export class RTORQapdu {
    * @readonly
    */
   public readonly dialogueMode: OPTIONAL<RTORQapdu_dialogueMode>;
-
   /**
    * @summary `connectionDataRQ`.
    * @description
@@ -103,7 +100,6 @@ export class RTORQapdu {
    * @readonly
    */
   public readonly connectionDataRQ: ConnectionData;
-
   /**
    * @summary `applicationProtocol`.
    * @description

@@ -1,0 +1,73 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { _decode_ContentType_ShortForm, _encode_ContentType_ShortForm, ContentType_ShortForm } from "../CompressedDataType/ContentType-ShortForm.ta.mjs";
+
+
+/**
+ * @summary CompressedContentInfo_contentType
+ * @description
+ * 
+ * Type of the compressed APDU. The integer form is mandatory on origination and
+ * reception. The object-identifier form is optional on origination and
+ * mandatory on reception.
+ *
+ * Annex E writes the alternatives as `[0]` and `[1]` without `IMPLICIT`, and
+ * marks only `compressedContent` `EXPLICIT`. This module encodes the
+ * alternatives as implicit tags. STANAG 4406 (Ed. 2), Annex E, clause 4.2.6.1.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CompressedContentInfo-contentType ::= CHOICE {
+ *   contentType-ShortForm [0] IMPLICIT ContentType-ShortForm,
+ *   contentType-OID       [1] IMPLICIT OBJECT IDENTIFIER
+ * }
+ * ```
+ */
+export
+type CompressedContentInfo_contentType =
+    { contentType_ShortForm: ContentType_ShortForm } /* CHOICE_ALT_ROOT */
+    | { contentType_OID: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
+
+let _cached_decoder_for_CompressedContentInfo_contentType: $.ASN1Decoder<CompressedContentInfo_contentType> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) CompressedContentInfo_contentType
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_CompressedContentInfo_contentType (el: _Element): CompressedContentInfo_contentType {
+    if (!_cached_decoder_for_CompressedContentInfo_contentType) { _cached_decoder_for_CompressedContentInfo_contentType = $._decode_inextensible_choice<CompressedContentInfo_contentType>({
+    "CONTEXT 0": [ "contentType_ShortForm", $._decode_implicit<ContentType_ShortForm>(() => _decode_ContentType_ShortForm) ],
+    "CONTEXT 1": [ "contentType_OID", $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier) ]
+}); }
+    return _cached_decoder_for_CompressedContentInfo_contentType(el);
+}
+
+let _cached_encoder_for_CompressedContentInfo_contentType: $.ASN1Encoder<CompressedContentInfo_contentType> | null = null;
+
+/**
+ * @summary Encodes a(n) CompressedContentInfo_contentType into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The CompressedContentInfo_contentType, encoded as an ASN.1 Element.
+ */
+export
+function _encode_CompressedContentInfo_contentType (value: CompressedContentInfo_contentType, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CompressedContentInfo_contentType) { _cached_encoder_for_CompressedContentInfo_contentType = $._encode_choice<CompressedContentInfo_contentType>({
+    "contentType_ShortForm": $._encode_implicit(_TagClass.context, 0, () => _encode_ContentType_ShortForm, $.BER),
+    "contentType_OID": $._encode_implicit(_TagClass.context, 1, () => $._encodeObjectIdentifier, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_CompressedContentInfo_contentType(value, elGetter);
+}
+
+
+/* eslint-enable */

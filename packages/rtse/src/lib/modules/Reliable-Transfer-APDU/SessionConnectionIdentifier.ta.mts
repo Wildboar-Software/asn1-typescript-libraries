@@ -65,7 +65,6 @@ export class SessionConnectionIdentifier {
    * @readonly
    */
   public readonly callingSSuserReference: CallingSSuserReference;
-
   /**
    * @summary `commonReference`.
    * @description
@@ -77,7 +76,6 @@ export class SessionConnectionIdentifier {
    * @readonly
    */
   public readonly commonReference: CommonReference;
-
   /**
    * @summary `additionalReferenceInformation`.
    * @description

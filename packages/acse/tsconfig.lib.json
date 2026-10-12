@@ -8,7 +8,7 @@
         ],
         "strictNullChecks": true,
         "erasableSyntaxOnly": true,
-    "rootDir": "."
+        "rootDir": "."
     },
     "exclude": [
         "**/*.spec.mts"

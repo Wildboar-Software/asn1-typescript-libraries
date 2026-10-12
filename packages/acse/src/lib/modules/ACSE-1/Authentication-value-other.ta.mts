@@ -38,7 +38,6 @@ export class Authentication_value_other {
    * @readonly
    */
   public readonly other_mechanism_name: OBJECT_IDENTIFIER;
-
   /**
    * @summary `other_mechanism_value`.
    * @description

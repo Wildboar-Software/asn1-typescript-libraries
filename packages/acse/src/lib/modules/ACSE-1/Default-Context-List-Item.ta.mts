@@ -46,7 +46,6 @@ export class Default_Context_List_Item {
    * @readonly
    */
   public readonly abstract_syntax_name: OPTIONAL<Abstract_syntax_name>;
-
   /**
    * @summary `transfer_syntax_name`.
    * @description

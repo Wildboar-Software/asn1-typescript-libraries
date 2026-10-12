@@ -50,7 +50,6 @@ export class RTORJapdu {
    * @readonly
    */
   public readonly refuseReason?: OPTIONAL<RefuseReason>;
-
   /**
    * @summary `userDataRJ`.
    * @description

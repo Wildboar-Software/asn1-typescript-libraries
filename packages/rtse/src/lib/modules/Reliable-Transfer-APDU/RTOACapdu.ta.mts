@@ -54,7 +54,6 @@ export class RTOACapdu {
    * @readonly
    */
   public readonly checkpointSize: OPTIONAL<INTEGER>;
-
   /**
    * @summary `windowSize`.
    * @description
@@ -69,7 +68,6 @@ export class RTOACapdu {
    * @readonly
    */
   public readonly windowSize: OPTIONAL<INTEGER>;
-
   /**
    * @summary `connectionDataAC`.
    * @description

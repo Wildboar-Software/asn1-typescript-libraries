@@ -46,7 +46,6 @@ export class ASOI_tag_Item {
    * @readonly
    */
   public readonly qualifier?: OPTIONAL<ASO_qualifier>;
-
   /**
    * @summary `identifier`.
    * @description

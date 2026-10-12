@@ -75,7 +75,6 @@ export class RLRQ_apdu {
    * @readonly
    */
   public readonly reason?: OPTIONAL<Release_request_reason>;
-
   /**
    * @summary `aso_qualifier`.
    * @description
@@ -89,7 +88,6 @@ export class RLRQ_apdu {
    * @readonly
    */
   public readonly aso_qualifier?: OPTIONAL<ASO_qualifier>;
-
   /**
    * @summary `asoi_identifier`.
    * @description
@@ -102,14 +100,12 @@ export class RLRQ_apdu {
    * @readonly
    */
   public readonly asoi_identifier?: OPTIONAL<ASOI_identifier>;
-
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
   public readonly _unrecognizedExtensionsList: _Element[];
-
   /**
    * @summary `user_information`.
    * @description

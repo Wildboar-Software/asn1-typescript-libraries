@@ -157,7 +157,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly protocol_version: OPTIONAL<AARE_apdu_protocol_version>;
-
   /**
    * @summary `aSO_context_name`.
    * @description
@@ -173,7 +172,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly aSO_context_name: ASO_context_name;
-
   /**
    * @summary `result`.
    * @description
@@ -188,7 +186,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly result: Associate_result;
-
   /**
    * @summary `result_source_diagnostic`.
    * @description
@@ -203,7 +200,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly result_source_diagnostic: Associate_source_diagnostic;
-
   /**
    * @summary `responding_AP_title`.
    * @description
@@ -215,7 +211,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly responding_AP_title?: OPTIONAL<AP_title>;
-
   /**
    * @summary `responding_AE_qualifier`.
    * @description
@@ -227,7 +222,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly responding_AE_qualifier?: OPTIONAL<AE_qualifier>;
-
   /**
    * @summary `responding_AP_invocation_identifier`.
    * @description
@@ -239,7 +233,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly responding_AP_invocation_identifier?: OPTIONAL<AP_invocation_identifier>;
-
   /**
    * @summary `responding_AE_invocation_identifier`.
    * @description
@@ -251,7 +244,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly responding_AE_invocation_identifier?: OPTIONAL<AE_invocation_identifier>;
-
   /**
    * @summary `responder_acse_requirements`.
    * @description
@@ -265,7 +257,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly responder_acse_requirements?: OPTIONAL<ACSE_requirements>;
-
   /**
    * @summary `mechanism_name`.
    * @description
@@ -278,7 +269,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly mechanism_name?: OPTIONAL<Mechanism_name>;
-
   /**
    * @summary `responding_authentication_value`.
    * @description
@@ -291,7 +281,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly responding_authentication_value?: OPTIONAL<Authentication_value>;
-
   /**
    * @summary `aSO_context_name_list`.
    * @description
@@ -305,7 +294,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly aSO_context_name_list?: OPTIONAL<ASO_context_name_list>;
-
   /**
    * @summary `implementation_information`.
    * @description
@@ -317,7 +305,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly implementation_information?: OPTIONAL<Implementation_data>;
-
   /**
    * @summary `p_context_result_list`.
    * @description
@@ -330,7 +317,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly p_context_result_list?: OPTIONAL<P_context_result_list>;
-
   /**
    * @summary `called_asoi_tag`.
    * @description
@@ -343,7 +329,6 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly called_asoi_tag?: OPTIONAL<ASOI_tag>;
-
   /**
    * @summary `calling_asoi_tag`.
    * @description
@@ -355,14 +340,12 @@ export class AARE_apdu {
    * @readonly
    */
   public readonly calling_asoi_tag?: OPTIONAL<ASOI_tag>;
-
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
   public readonly _unrecognizedExtensionsList: _Element[];
-
   /**
    * @summary `user_information`.
    * @description

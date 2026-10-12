@@ -74,7 +74,6 @@ export class ACRP_apdu {
    * @readonly
    */
   public readonly aso_qualifier?: OPTIONAL<ASO_qualifier>;
-
   /**
    * @summary `asoi_identifier`.
    * @description
@@ -86,7 +85,6 @@ export class ACRP_apdu {
    * @readonly
    */
   public readonly asoi_identifier?: OPTIONAL<ASOI_identifier>;
-
   /**
    * @summary `aSO_context_name`.
    * @description
@@ -99,7 +97,6 @@ export class ACRP_apdu {
    * @readonly
    */
   public readonly aSO_context_name?: OPTIONAL<ASO_context_name_list>;
-
   /**
    * @summary `p_context_result_list`.
    * @description
@@ -111,14 +108,12 @@ export class ACRP_apdu {
    * @readonly
    */
   public readonly p_context_result_list?: OPTIONAL<P_context_result_list>;
-
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
   public readonly _unrecognizedExtensionsList: _Element[];
-
   /**
    * @summary `user_information`.
    * @description

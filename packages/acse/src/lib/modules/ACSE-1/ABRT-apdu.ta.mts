@@ -82,7 +82,6 @@ export class ABRT_apdu {
    * @readonly
    */
   public readonly abort_source: ABRT_source;
-
   /**
    * @summary `abort_diagnostic`.
    * @description
@@ -97,7 +96,6 @@ export class ABRT_apdu {
    * @readonly
    */
   public readonly abort_diagnostic?: OPTIONAL<ABRT_diagnostic>;
-
   /**
    * @summary `aso_qualifier`.
    * @description
@@ -110,7 +108,6 @@ export class ABRT_apdu {
    * @readonly
    */
   public readonly aso_qualifier?: OPTIONAL<ASO_qualifier>;
-
   /**
    * @summary `asoi_identifier`.
    * @description
@@ -122,14 +119,12 @@ export class ABRT_apdu {
    * @readonly
    */
   public readonly asoi_identifier?: OPTIONAL<ASOI_identifier>;
-
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
   public readonly _unrecognizedExtensionsList: _Element[];
-
   /**
    * @summary `user_information`.
    * @description

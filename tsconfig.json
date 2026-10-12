@@ -253,6 +253,9 @@
       "path": "./packages/sgp22"
     },
     {
+      "path": "./packages/sgp32"
+    },
+    {
       "path": "./packages/smrse"
     },
     {
@@ -275,6 +278,12 @@
     },
     {
       "path": "./packages/lpp"
+    },
+    {
+      "path": "./packages/q932"
+    },
+    {
+      "path": "./packages/stanag4406"
     }
   ],
   "compilerOptions": {

@@ -51,7 +51,6 @@ export class P_context_result_list_Item {
    * @readonly
    */
   public readonly result: Result;
-
   /**
    * @summary `concrete_syntax_name`.
    * @description
@@ -62,7 +61,6 @@ export class P_context_result_list_Item {
    * @readonly
    */
   public readonly concrete_syntax_name?: OPTIONAL<Concrete_syntax_name>;
-
   /**
    * @summary `provider_reason`.
    * @description
