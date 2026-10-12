@@ -5,6 +5,18 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
+import {
+    NonReceiptFields,
+    _decode_NonReceiptFields,
+    _encode_NonReceiptFields,
+    OtherNotificationTypeFields,
+    _decode_OtherNotificationTypeFields,
+    _encode_OtherNotificationTypeFields,
+    ReceiptFields,
+    _decode_ReceiptFields,
+    _encode_ReceiptFields,
+} from "@wildboar/x400/IPMSInformationObjects";
+
 
 
 /**
