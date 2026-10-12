@@ -39,8 +39,45 @@ import { evaluateFilter, EvaluateFilterSettings } from "../../src/lib/utils/eval
 import type EqualityMatcher from "../../src/lib/types/EqualityMatcher.mjs";
 import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "../../src/lib/types/SubstringsMatcher.mjs";
+import { matchSubstringPieces, partitionString } from "../../src/lib/utils/substringPartition.mjs";
 import SubstringSelection from "../../src/lib/types/SubstringSelection.mjs";
 import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+
+/**
+ * Collect `initial` / `any` / `final` pieces from a filter matcher
+ * call: either one component plus `selection`, or a SEQUENCE.
+ * EXPLICIT [0]/[1]/[2] payloads are the inner element; primitive
+ * construction means the outer element is the payload.
+ */
+function substringPieces (
+    assertion: asn1.ASN1Element,
+    selection?: SubstringSelection,
+): { kind: SubstringSelection; element: asn1.ASN1Element }[] {
+    if (selection !== undefined) {
+        return [{ kind: selection, element: assertion }];
+    }
+    const unwrap = (el: asn1.ASN1Element): asn1.ASN1Element => (
+        el.construction === asn1.ASN1Construction.constructed ? el.inner : el
+    );
+    try {
+        const pieces: { kind: SubstringSelection; element: asn1.ASN1Element }[] = [];
+        for (const el of assertion.sequence) {
+            if (el.tagClass !== asn1.ASN1TagClass.context) {
+                continue;
+            }
+            if (el.tagNumber === 0) {
+                pieces.push({ kind: SubstringSelection.initial, element: unwrap(el) });
+            } else if (el.tagNumber === 1) {
+                pieces.push({ kind: SubstringSelection.any_, element: unwrap(el) });
+            } else if (el.tagNumber === 2) {
+                pieces.push({ kind: SubstringSelection.final, element: unwrap(el) });
+            }
+        }
+        return pieces;
+    } catch {
+        return [{ kind: SubstringSelection.any_, element: assertion }];
+    }
+}
 
 const TRUE_ELEMENT = new asn1.DERElement(
     asn1.ASN1TagClass.universal,
@@ -93,24 +130,14 @@ const BOOLEAN_EQUALITY_MATCHING_RULE: EqualityMatcher = (assertion, value) => (a
 // This will only work for INTEGERs within [0,127].
 const INTEGER_ORDERING_RULE: OrderingMatcher = (assertion, value) => (assertion.value[0] - value.value[0]);
 
-const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => {
-    switch (selection) {
-    case (SubstringSelection.initial): {
-        return (value.utf8String.startsWith(assertion.utf8String));
-    }
-    case (SubstringSelection.any_): {
-        return (value.utf8String.indexOf(assertion.utf8String) > -1);
-    }
-    case (SubstringSelection.final): {
-        const val = value.utf8String;
-        const ass = assertion.utf8String;
-        return (val.indexOf(ass) === (val.length - ass.length - 1));
-    }
-    default: {
-        throw new Error();
-    }
-    }
-};
+const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => matchSubstringPieces(
+    partitionString(value.utf8String),
+    substringPieces(assertion, selection).map((p) => ({
+        kind: p.kind,
+        value: p.element.utf8String,
+    })),
+    (text) => text,
+);
 
 const ALWAYS_COMPATIBLE: EvaluateFilterSettings["isMatchingRuleCompatibleWithAttributeType"] = () => true;
 const NO_SUBTYPING: EvaluateFilterSettings["isAttributeSubtype"] = (
