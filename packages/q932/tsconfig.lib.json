@@ -7,6 +7,10 @@
     "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noPropertyAccessFromIndexSignature": true,
     "importHelpers": true,
     "types": [
       "node"
@@ -28,6 +32,8 @@
     "src/**/*.test.js",
     "src/**/*.spec.js",
     "src/**/*.test.jsx",
-    "src/**/*.spec.jsx"
+    "src/**/*.spec.jsx",
+    "src/**/*.test.mts",
+    "src/**/*.spec.mts"
   ]
 }
