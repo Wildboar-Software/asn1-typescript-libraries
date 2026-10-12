@@ -202,7 +202,7 @@ function _decode_Alarm_Indicator (el: _Element): Alarm_Indicator {
         },
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "alarm_information": (_el: _Element): void => {
+        "alarm-information": (_el: _Element): void => {
             alarm_information = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (alarm_information.length < 1 || alarm_information.length > 256) {
                 throw new ASN1SizeError("Alarm_Indicator.alarm_information violates SIZE constraint");

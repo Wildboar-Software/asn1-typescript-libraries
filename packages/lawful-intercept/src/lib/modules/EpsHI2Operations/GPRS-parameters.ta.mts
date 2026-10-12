@@ -184,7 +184,7 @@ function _decode_GPRS_parameters (el: _Element): GPRS_parameters {
                 throw new ASN1SizeError("GPRS_parameters.aPN violates SIZE constraint");
             }
         },
-        "pDP_type": (_el: _Element): void => {
+        "pDP-type": (_el: _Element): void => {
             pDP_type = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (pDP_type.length < 2 || pDP_type.length > 2) {
                 throw new ASN1SizeError("GPRS_parameters.pDP_type violates SIZE constraint");

@@ -600,7 +600,7 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
             }
         },
         "callContentLinkInformation": (_el: _Element): void => { callContentLinkInformation = $._decode_implicit<IRI_Parameters_callContentLinkInformation>(() => _decode_IRI_Parameters_callContentLinkInformation)(_el); },
-        "release_Reason_Of_Intercepted_Call": (_el: _Element): void => {
+        "release-Reason-Of-Intercepted-Call": (_el: _Element): void => {
             release_Reason_Of_Intercepted_Call = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (release_Reason_Of_Intercepted_Call.length < 2 || release_Reason_Of_Intercepted_Call.length > 2) {
                 throw new ASN1SizeError("IRI_Parameters.release_Reason_Of_Intercepted_Call violates SIZE constraint");

@@ -239,7 +239,7 @@ function _decode_CSvoiceLIC_header (el: _Element): CSvoiceLIC_header {
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "ccLID": (_el: _Element): void => { ccLID = $._decode_implicit<CC_Link_Identifier>(() => _decode_CC_Link_Identifier)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "sequence_number": (_el: _Element): void => {
+        "sequence-number": (_el: _Element): void => {
             sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof sequence_number === "bigint" ? sequence_number : BigInt(sequence_number);
             if (_n < 0n || _n > 65535n) {

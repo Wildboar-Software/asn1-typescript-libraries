@@ -378,7 +378,7 @@ function _decode_EmailIRI (el: _Element): EmailIRI {
         "server-Octets-Sent": (_el: _Element): void => { server_Octets_Sent = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "client-Octets-Sent": (_el: _Element): void => { client_Octets_Sent = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "protocol-ID": (_el: _Element): void => { protocol_ID = $._decode_implicit<E_mail_Protocol>(() => _decode_E_mail_Protocol)(_el); },
-        "e_mail_Sender": (_el: _Element): void => {
+        "e-mail-Sender": (_el: _Element): void => {
             e_mail_Sender = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
             if (e_mail_Sender.length > 255) {
                 throw new ASN1SizeError("EmailIRI.e_mail_Sender violates SIZE constraint");
@@ -386,7 +386,7 @@ function _decode_EmailIRI (el: _Element): EmailIRI {
         },
         "e-mail-Recipients": (_el: _Element): void => { e_mail_Recipients = $._decode_implicit<E_mail_Address_List>(() => _decode_E_mail_Address_List)(_el); },
         "status": (_el: _Element): void => { status = $._decode_implicit<E_mail_Status>(() => _decode_E_mail_Status)(_el); },
-        "total_Recipient_Count": (_el: _Element): void => {
+        "total-Recipient-Count": (_el: _Element): void => {
             total_Recipient_Count = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof total_Recipient_Count === "bigint" ? total_Recipient_Count : BigInt(total_Recipient_Count);
             if (_n < 0n || _n > 4294967295n) {

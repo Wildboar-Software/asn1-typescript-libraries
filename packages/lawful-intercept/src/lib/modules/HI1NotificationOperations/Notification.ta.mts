@@ -204,7 +204,7 @@ function _decode_Notification (el: _Element): Notification {
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
         "national-HI1-ASN1parameters": (_el: _Element): void => { national_HI1_ASN1parameters = $._decode_implicit<National_HI1_ASN1parameters>(() => _decode_National_HI1_ASN1parameters)(_el); },
-        "target_Information": (_el: _Element): void => {
+        "target-Information": (_el: _Element): void => {
             target_Information = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (target_Information.length < 1 || target_Information.length > 256) {
                 throw new ASN1SizeError("Notification.target_Information violates SIZE constraint");

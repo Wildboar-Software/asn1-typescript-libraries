@@ -992,7 +992,7 @@ function _decode_PTC (el: _Element): PTC {
         "talkBurstReason": (_el: _Element): void => { talkBurstReason = $._decode_implicit<Talk_burst_reason_code>(() => _decode_Talk_burst_reason_code)(_el); },
         "talkburstControlSetting": (_el: _Element): void => { talkburstControlSetting = $._decode_implicit<TalkburstControlSetting>(() => _decode_TalkburstControlSetting)(_el); },
         "targetPresenceStatus": (_el: _Element): void => { targetPresenceStatus = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "port_Number": (_el: _Element): void => {
+        "port-Number": (_el: _Element): void => {
             port_Number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof port_Number === "bigint" ? port_Number : BigInt(port_Number);
             if (_n < 0n || _n > 65535n) {

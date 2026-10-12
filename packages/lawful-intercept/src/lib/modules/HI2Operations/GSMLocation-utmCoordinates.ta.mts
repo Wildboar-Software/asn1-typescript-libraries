@@ -171,13 +171,13 @@ function _decode_GSMLocation_utmCoordinates (el: _Element): GSMLocation_utmCoord
     let azimuth: OPTIONAL<INTEGER>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "utm_East": (_el: _Element): void => {
+        "utm-East": (_el: _Element): void => {
             utm_East = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
             if (utm_East.length < 10 || utm_East.length > 10) {
                 throw new ASN1SizeError("GSMLocation_utmCoordinates.utm_East violates SIZE constraint");
             }
         },
-        "utm_North": (_el: _Element): void => {
+        "utm-North": (_el: _Element): void => {
             utm_North = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);
             if (utm_North.length < 7 || utm_North.length > 7) {
                 throw new ASN1SizeError("GSMLocation_utmCoordinates.utm_North violates SIZE constraint");

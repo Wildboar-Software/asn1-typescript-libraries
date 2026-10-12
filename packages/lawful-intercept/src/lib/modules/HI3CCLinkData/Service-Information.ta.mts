@@ -152,7 +152,7 @@ function _decode_Service_Information (el: _Element): Service_Information {
     /* END_OF_SET_COMPONENT_DECLARATIONS */
     /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
-        "high_layer_capability": (_el: _Element): void => {
+        "high-layer-capability": (_el: _Element): void => {
             high_layer_capability = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (high_layer_capability.length < 1 || high_layer_capability.length > 1) {
                 throw new ASN1SizeError("Service_Information.high_layer_capability violates SIZE constraint");

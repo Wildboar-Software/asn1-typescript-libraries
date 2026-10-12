@@ -223,7 +223,7 @@ function _decode_ConfLIC_header (el: _Element): ConfLIC_header {
         "lIID": (_el: _Element): void => { lIID = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "correlation": (_el: _Element): void => { correlation = $._decode_explicit<ConfCorrelation>(() => _decode_ConfCorrelation)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "sequence_number": (_el: _Element): void => {
+        "sequence-number": (_el: _Element): void => {
             sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof sequence_number === "bigint" ? sequence_number : BigInt(sequence_number);
             if (_n < 0n || _n > 65535n) {

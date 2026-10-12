@@ -141,7 +141,7 @@ function _decode_CommunicationIdentifier (el: _Element): CommunicationIdentifier
     let network_Identifier!: Network_Identifier;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "communication_Identity_Number": (_el: _Element): void => {
+        "communication-Identity-Number": (_el: _Element): void => {
             communication_Identity_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (communication_Identity_Number.length < 1 || communication_Identity_Number.length > 8) {
                 throw new ASN1SizeError("CommunicationIdentifier.communication_Identity_Number violates SIZE constraint");

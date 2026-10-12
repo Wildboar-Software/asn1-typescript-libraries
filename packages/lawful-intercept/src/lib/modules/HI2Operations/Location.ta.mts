@@ -249,7 +249,7 @@ function _decode_Location (el: _Element): Location {
     let eCGI: OPTIONAL<OCTET_STRING>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "e164_Number": (_el: _Element): void => {
+        "e164-Number": (_el: _Element): void => {
             e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (e164_Number.length < 1 || e164_Number.length > 25) {
                 throw new ASN1SizeError("Location.e164_Number violates SIZE constraint");

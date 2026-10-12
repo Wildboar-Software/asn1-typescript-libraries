@@ -144,7 +144,7 @@ function _decode_GSMLocation_utmRefCoordinates (el: _Element): GSMLocation_utmRe
     let mapDatum: OPTIONAL<MapDatum> = GSMLocation_utmRefCoordinates._default_value_for_mapDatum;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "utmref_string": (_el: _Element): void => {
+        "utmref-string": (_el: _Element): void => {
             utmref_string = $._decodePrintableString(_el);
             if (utmref_string.length < 13 || utmref_string.length > 13) {
                 throw new ASN1SizeError("GSMLocation_utmRefCoordinates.utmref_string violates SIZE constraint");

@@ -148,7 +148,7 @@ function _decode_I_WLAN_parameters (el: _Element): I_WLAN_parameters {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "wlan-local-IP-address-of-the-target": (_el: _Element): void => { wlan_local_IP_address_of_the_target = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
-        "w_APN": (_el: _Element): void => {
+        "w-APN": (_el: _Element): void => {
             w_APN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (w_APN.length < 1 || w_APN.length > 100) {
                 throw new ASN1SizeError("I_WLAN_parameters.w_APN violates SIZE constraint");

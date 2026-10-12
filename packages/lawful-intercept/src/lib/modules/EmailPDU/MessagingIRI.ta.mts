@@ -282,7 +282,7 @@ function _decode_MessagingIRI (el: _Element): MessagingIRI {
         "party-information": (_el: _Element): void => { party_information = $._decode_implicit<Messaging_Party_Information[]>(() => $._decodeSetOf<Messaging_Party_Information>(() => _decode_Messaging_Party_Information))(_el); },
         "trigger": (_el: _Element): void => { trigger = $._decode_implicit<Messaging_Trigger>(() => _decode_Messaging_Trigger)(_el); },
         "properties": (_el: _Element): void => { properties = $._decode_implicit<Messaging_Property[]>(() => $._decodeSequenceOf<Messaging_Property>(() => _decode_Messaging_Property))(_el); },
-        "event_identifier": (_el: _Element): void => {
+        "event-identifier": (_el: _Element): void => {
             event_identifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof event_identifier === "bigint" ? event_identifier : BigInt(event_identifier);
             if (_n < 0n || _n > 4294967295n) {
@@ -291,7 +291,7 @@ function _decode_MessagingIRI (el: _Element): MessagingIRI {
         },
         "original-message": (_el: _Element): void => { original_message = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "box-identifier": (_el: _Element): void => { box_identifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "total_recipient_count": (_el: _Element): void => {
+        "total-recipient-count": (_el: _Element): void => {
             total_recipient_count = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof total_recipient_count === "bigint" ? total_recipient_count : BigInt(total_recipient_count);
             if (_n < 0n || _n > 4294967295n) {

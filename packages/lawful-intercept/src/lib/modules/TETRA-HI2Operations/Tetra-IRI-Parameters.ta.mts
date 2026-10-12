@@ -844,7 +844,7 @@ function _decode_Tetra_IRI_Parameters (el: _Element): Tetra_IRI_Parameters {
             }
         },
         "callContentLinkInformation": (_el: _Element): void => { callContentLinkInformation = $._decode_implicit<Tetra_IRI_Parameters_callContentLinkInformation>(() => _decode_Tetra_IRI_Parameters_callContentLinkInformation)(_el); },
-        "release_Reason_Of_Intercepted_Call": (_el: _Element): void => {
+        "release-Reason-Of-Intercepted-Call": (_el: _Element): void => {
             release_Reason_Of_Intercepted_Call = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (release_Reason_Of_Intercepted_Call.length < 2 || release_Reason_Of_Intercepted_Call.length > 2) {
                 throw new ASN1SizeError("Tetra_IRI_Parameters.release_Reason_Of_Intercepted_Call violates SIZE constraint");
@@ -866,13 +866,13 @@ function _decode_Tetra_IRI_Parameters (el: _Element): Tetra_IRI_Parameters {
         "sMSTerminatingAddress": (_el: _Element): void => { sMSTerminatingAddress = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
         "iMSevent": (_el: _Element): void => { iMSevent = $._decode_implicit<IMSevent>(() => _decode_IMSevent)(_el); },
         "sIPMessage": (_el: _Element): void => { sIPMessage = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "servingSGSN_number": (_el: _Element): void => {
+        "servingSGSN-number": (_el: _Element): void => {
             servingSGSN_number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (servingSGSN_number.length < 1 || servingSGSN_number.length > 20) {
                 throw new ASN1SizeError("Tetra_IRI_Parameters.servingSGSN_number violates SIZE constraint");
             }
         },
-        "servingSGSN_address": (_el: _Element): void => {
+        "servingSGSN-address": (_el: _Element): void => {
             servingSGSN_address = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (servingSGSN_address.length < 5 || servingSGSN_address.length > 17) {
                 throw new ASN1SizeError("Tetra_IRI_Parameters.servingSGSN_address violates SIZE constraint");

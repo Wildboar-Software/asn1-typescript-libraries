@@ -136,7 +136,7 @@ function _decode_Network_Identifier (el: _Element): Network_Identifier {
     let network_Element_Identifier: OPTIONAL<Network_Element_Identifier>;
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "operator_Identifier": (_el: _Element): void => {
+        "operator-Identifier": (_el: _Element): void => {
             operator_Identifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (operator_Identifier.length < 1 || operator_Identifier.length > 5) {
                 throw new ASN1SizeError("Network_Identifier.operator_Identifier violates SIZE constraint");

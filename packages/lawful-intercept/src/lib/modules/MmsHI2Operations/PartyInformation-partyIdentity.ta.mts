@@ -227,7 +227,7 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
         "mMSAddress": (_el: _Element): void => { mMSAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "mMSAddressNonLocalID": (_el: _Element): void => { mMSAddressNonLocalID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "e-Mail": (_el: _Element): void => { e_Mail = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "e164_Format": (_el: _Element): void => {
+        "e164-Format": (_el: _Element): void => {
             e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (e164_Format.length < 1 || e164_Format.length > 25) {
                 throw new ASN1SizeError("PartyInformation_partyIdentity.e164_Format violates SIZE constraint");

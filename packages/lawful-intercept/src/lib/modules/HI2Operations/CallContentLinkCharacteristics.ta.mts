@@ -171,7 +171,7 @@ function _decode_CallContentLinkCharacteristics (el: _Element): CallContentLinkC
     const callbacks: $.DecodingMap = {
         "cCLink-State": (_el: _Element): void => { cCLink_State = $._decode_implicit<CCLink_State>(() => _decode_CCLink_State)(_el); },
         "release-Time": (_el: _Element): void => { release_Time = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "release_Reason": (_el: _Element): void => {
+        "release-Reason": (_el: _Element): void => {
             release_Reason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (release_Reason.length < 2 || release_Reason.length > 2) {
                 throw new ASN1SizeError("CallContentLinkCharacteristics.release_Reason violates SIZE constraint");

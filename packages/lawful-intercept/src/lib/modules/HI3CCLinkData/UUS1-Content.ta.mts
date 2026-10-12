@@ -218,7 +218,7 @@ function _decode_UUS1_Content (el: _Element): UUS1_Content {
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "cC-Link-Identifier": (_el: _Element): void => { cC_Link_Identifier = $._decode_implicit<CC_Link_Identifier>(() => _decode_CC_Link_Identifier)(_el); },
         "direction-Indication": (_el: _Element): void => { direction_Indication = $._decode_implicit<Direction_Indication>(() => _decode_Direction_Indication)(_el); },
-        "bearer_capability": (_el: _Element): void => {
+        "bearer-capability": (_el: _Element): void => {
             bearer_capability = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
             if (bearer_capability.length < 1 || bearer_capability.length > 12) {
                 throw new ASN1SizeError("UUS1_Content.bearer_capability violates SIZE constraint");

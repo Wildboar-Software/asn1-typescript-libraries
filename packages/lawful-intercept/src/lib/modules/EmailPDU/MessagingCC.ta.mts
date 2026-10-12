@@ -212,21 +212,21 @@ function _decode_MessagingCC (el: _Element): MessagingCC {
     let _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "messaging-cc-obj-id": (_el: _Element): void => { messaging_cc_obj_id = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
-        "event_identifier": (_el: _Element): void => {
+        "event-identifier": (_el: _Element): void => {
             event_identifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof event_identifier === "bigint" ? event_identifier : BigInt(event_identifier);
             if (_n < 0n || _n > 4294967295n) {
                 throw new ASN1OverflowError("MessagingCC.event_identifier violates INTEGER range");
             }
         },
-        "content_identifier": (_el: _Element): void => {
+        "content-identifier": (_el: _Element): void => {
             content_identifier = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof content_identifier === "bigint" ? content_identifier : BigInt(content_identifier);
             if (_n < 0n || _n > 4294967295n) {
                 throw new ASN1OverflowError("MessagingCC.content_identifier violates INTEGER range");
             }
         },
-        "sequence_number": (_el: _Element): void => {
+        "sequence-number": (_el: _Element): void => {
             sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
             const _n = typeof sequence_number === "bigint" ? sequence_number : BigInt(sequence_number);
             if (_n < 0n || _n > 4294967295n) {
