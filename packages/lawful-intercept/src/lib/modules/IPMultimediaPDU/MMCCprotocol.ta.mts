@@ -85,35 +85,8 @@ const MMCCprotocol_uDPTL: MMCCprotocol = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const uDPTL: MMCCprotocol = MMCCprotocol_uDPTL; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MMCCprotocol: $.ASN1Decoder<MMCCprotocol> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MMCCprotocol
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MMCCprotocol (el: _Element): MMCCprotocol {
-    if (!_cached_decoder_for_MMCCprotocol) { _cached_decoder_for_MMCCprotocol = $._decodeEnumerated; }
-    return _cached_decoder_for_MMCCprotocol(el);
-}
-
-let _cached_encoder_for_MMCCprotocol: $.ASN1Encoder<MMCCprotocol> | null = null;
-
-/**
- * @summary Encodes a(n) MMCCprotocol into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MMCCprotocol, encoded as an ASN.1 Element.
- */
-export
-function _encode_MMCCprotocol (value: MMCCprotocol, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMCCprotocol) { _cached_encoder_for_MMCCprotocol = $._encodeEnumerated; }
-    return _cached_encoder_for_MMCCprotocol(value, elGetter);
-}
+export const _decode_MMCCprotocol: $.ASN1Decoder<MMCCprotocol> = $._decodeEnumerated;
+export const _encode_MMCCprotocol: $.ASN1Encoder<MMCCprotocol> = $._encodeEnumerated;
 
 
 /* eslint-enable */

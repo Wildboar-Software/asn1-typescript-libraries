@@ -197,35 +197,8 @@ const NAOperationType_requestDeliveryBoost: NAOperationType = NAOperationType.re
  */
 export
 const requestDeliveryBoost: NAOperationType = NAOperationType.requestDeliveryBoost; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_NAOperationType: $.ASN1Decoder<NAOperationType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NAOperationType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NAOperationType (el: _Element): NAOperationType {
-    if (!_cached_decoder_for_NAOperationType) { _cached_decoder_for_NAOperationType = $._decodeEnumerated; }
-    return _cached_decoder_for_NAOperationType(el);
-}
-
-let _cached_encoder_for_NAOperationType: $.ASN1Encoder<NAOperationType> | null = null;
-
-/**
- * @summary Encodes a(n) NAOperationType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NAOperationType, encoded as an ASN.1 Element.
- */
-export
-function _encode_NAOperationType (value: NAOperationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NAOperationType) { _cached_encoder_for_NAOperationType = $._encodeEnumerated; }
-    return _cached_encoder_for_NAOperationType(value, elGetter);
-}
+export const _decode_NAOperationType: $.ASN1Decoder<NAOperationType> = $._decodeEnumerated;
+export const _encode_NAOperationType: $.ASN1Encoder<NAOperationType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

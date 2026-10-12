@@ -93,35 +93,8 @@ const EmergencyGroupState_clientEmergencyState_cancelResponse: EmergencyGroupSta
  */
 export
 const cancelResponse: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_clientEmergencyState_cancelResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EmergencyGroupState_clientEmergencyState: $.ASN1Decoder<EmergencyGroupState_clientEmergencyState> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EmergencyGroupState_clientEmergencyState
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EmergencyGroupState_clientEmergencyState (el: _Element): EmergencyGroupState_clientEmergencyState {
-    if (!_cached_decoder_for_EmergencyGroupState_clientEmergencyState) { _cached_decoder_for_EmergencyGroupState_clientEmergencyState = $._decodeEnumerated; }
-    return _cached_decoder_for_EmergencyGroupState_clientEmergencyState(el);
-}
-
-let _cached_encoder_for_EmergencyGroupState_clientEmergencyState: $.ASN1Encoder<EmergencyGroupState_clientEmergencyState> | null = null;
-
-/**
- * @summary Encodes a(n) EmergencyGroupState_clientEmergencyState into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EmergencyGroupState_clientEmergencyState, encoded as an ASN.1 Element.
- */
-export
-function _encode_EmergencyGroupState_clientEmergencyState (value: EmergencyGroupState_clientEmergencyState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EmergencyGroupState_clientEmergencyState) { _cached_encoder_for_EmergencyGroupState_clientEmergencyState = $._encodeEnumerated; }
-    return _cached_encoder_for_EmergencyGroupState_clientEmergencyState(value, elGetter);
-}
+export const _decode_EmergencyGroupState_clientEmergencyState: $.ASN1Decoder<EmergencyGroupState_clientEmergencyState> = $._decodeEnumerated;
+export const _encode_EmergencyGroupState_clientEmergencyState: $.ASN1Encoder<EmergencyGroupState_clientEmergencyState> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -177,35 +177,8 @@ const CauseMisc_unspecified: CauseMisc = CauseMisc.unspecified; /* LONG_NAMED_EN
  */
 export
 const unspecified: CauseMisc = CauseMisc.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_CauseMisc: $.ASN1Decoder<CauseMisc> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CauseMisc
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CauseMisc (el: _Element): CauseMisc {
-    if (!_cached_decoder_for_CauseMisc) { _cached_decoder_for_CauseMisc = $._decodeEnumerated; }
-    return _cached_decoder_for_CauseMisc(el);
-}
-
-let _cached_encoder_for_CauseMisc: $.ASN1Encoder<CauseMisc> | null = null;
-
-/**
- * @summary Encodes a(n) CauseMisc into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CauseMisc, encoded as an ASN.1 Element.
- */
-export
-function _encode_CauseMisc (value: CauseMisc, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CauseMisc) { _cached_encoder_for_CauseMisc = $._encodeEnumerated; }
-    return _cached_encoder_for_CauseMisc(value, elGetter);
-}
+export const _decode_CauseMisc: $.ASN1Decoder<CauseMisc> = $._decodeEnumerated;
+export const _encode_CauseMisc: $.ASN1Encoder<CauseMisc> = $._encodeEnumerated;
 
 
 /* eslint-enable */

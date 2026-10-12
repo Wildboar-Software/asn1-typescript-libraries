@@ -76,35 +76,8 @@ const PartyInformation_partyIdentity_party_Validity_operator_added: PartyInforma
  */
 export
 const operator_added: PartyInformation_partyIdentity_party_Validity = PartyInformation_partyIdentity_party_Validity_operator_added; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_PartyInformation_partyIdentity_party_Validity: $.ASN1Decoder<PartyInformation_partyIdentity_party_Validity> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PartyInformation_partyIdentity_party_Validity
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PartyInformation_partyIdentity_party_Validity (el: _Element): PartyInformation_partyIdentity_party_Validity {
-    if (!_cached_decoder_for_PartyInformation_partyIdentity_party_Validity) { _cached_decoder_for_PartyInformation_partyIdentity_party_Validity = $._decodeEnumerated; }
-    return _cached_decoder_for_PartyInformation_partyIdentity_party_Validity(el);
-}
-
-let _cached_encoder_for_PartyInformation_partyIdentity_party_Validity: $.ASN1Encoder<PartyInformation_partyIdentity_party_Validity> | null = null;
-
-/**
- * @summary Encodes a(n) PartyInformation_partyIdentity_party_Validity into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PartyInformation_partyIdentity_party_Validity, encoded as an ASN.1 Element.
- */
-export
-function _encode_PartyInformation_partyIdentity_party_Validity (value: PartyInformation_partyIdentity_party_Validity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PartyInformation_partyIdentity_party_Validity) { _cached_encoder_for_PartyInformation_partyIdentity_party_Validity = $._encodeEnumerated; }
-    return _cached_encoder_for_PartyInformation_partyIdentity_party_Validity(value, elGetter);
-}
+export const _decode_PartyInformation_partyIdentity_party_Validity: $.ASN1Decoder<PartyInformation_partyIdentity_party_Validity> = $._decodeEnumerated;
+export const _encode_PartyInformation_partyIdentity_party_Validity: $.ASN1Encoder<PartyInformation_partyIdentity_party_Validity> = $._encodeEnumerated;
 
 
 /* eslint-enable */

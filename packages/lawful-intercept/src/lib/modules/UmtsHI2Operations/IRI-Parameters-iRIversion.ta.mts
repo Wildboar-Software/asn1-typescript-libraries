@@ -110,35 +110,8 @@ const IRI_Parameters_iRIversion_lastVersion: IRI_Parameters_iRIversion = 8; /* L
  */
 export
 const lastVersion: IRI_Parameters_iRIversion = IRI_Parameters_iRIversion_lastVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_IRI_Parameters_iRIversion: $.ASN1Decoder<IRI_Parameters_iRIversion> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IRI_Parameters_iRIversion
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IRI_Parameters_iRIversion (el: _Element): IRI_Parameters_iRIversion {
-    if (!_cached_decoder_for_IRI_Parameters_iRIversion) { _cached_decoder_for_IRI_Parameters_iRIversion = $._decodeEnumerated; }
-    return _cached_decoder_for_IRI_Parameters_iRIversion(el);
-}
-
-let _cached_encoder_for_IRI_Parameters_iRIversion: $.ASN1Encoder<IRI_Parameters_iRIversion> | null = null;
-
-/**
- * @summary Encodes a(n) IRI_Parameters_iRIversion into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IRI_Parameters_iRIversion, encoded as an ASN.1 Element.
- */
-export
-function _encode_IRI_Parameters_iRIversion (value: IRI_Parameters_iRIversion, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IRI_Parameters_iRIversion) { _cached_encoder_for_IRI_Parameters_iRIversion = $._encodeEnumerated; }
-    return _cached_encoder_for_IRI_Parameters_iRIversion(value, elGetter);
-}
+export const _decode_IRI_Parameters_iRIversion: $.ASN1Decoder<IRI_Parameters_iRIversion> = $._decodeEnumerated;
+export const _encode_IRI_Parameters_iRIversion: $.ASN1Encoder<IRI_Parameters_iRIversion> = $._encodeEnumerated;
 
 
 /* eslint-enable */

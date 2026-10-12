@@ -172,35 +172,8 @@ const MMSStatus_unreachable: MMSStatus = 7; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const unreachable: MMSStatus = MMSStatus_unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MMSStatus: $.ASN1Decoder<MMSStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MMSStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MMSStatus (el: _Element): MMSStatus {
-    if (!_cached_decoder_for_MMSStatus) { _cached_decoder_for_MMSStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_MMSStatus(el);
-}
-
-let _cached_encoder_for_MMSStatus: $.ASN1Encoder<MMSStatus> | null = null;
-
-/**
- * @summary Encodes a(n) MMSStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MMSStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_MMSStatus (value: MMSStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMSStatus) { _cached_encoder_for_MMSStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_MMSStatus(value, elGetter);
-}
+export const _decode_MMSStatus: $.ASN1Decoder<MMSStatus> = $._decodeEnumerated;
+export const _encode_MMSStatus: $.ASN1Encoder<MMSStatus> = $._encodeEnumerated;
 
 
 /* eslint-enable */

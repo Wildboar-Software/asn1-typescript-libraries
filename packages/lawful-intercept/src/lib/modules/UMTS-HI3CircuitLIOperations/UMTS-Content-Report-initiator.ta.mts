@@ -93,35 +93,8 @@ const UMTS_Content_Report_initiator_undefined_party: UMTS_Content_Report_initiat
  */
 export
 const undefined_party: UMTS_Content_Report_initiator = UMTS_Content_Report_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_UMTS_Content_Report_initiator: $.ASN1Decoder<UMTS_Content_Report_initiator> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UMTS_Content_Report_initiator
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UMTS_Content_Report_initiator (el: _Element): UMTS_Content_Report_initiator {
-    if (!_cached_decoder_for_UMTS_Content_Report_initiator) { _cached_decoder_for_UMTS_Content_Report_initiator = $._decodeEnumerated; }
-    return _cached_decoder_for_UMTS_Content_Report_initiator(el);
-}
-
-let _cached_encoder_for_UMTS_Content_Report_initiator: $.ASN1Encoder<UMTS_Content_Report_initiator> | null = null;
-
-/**
- * @summary Encodes a(n) UMTS_Content_Report_initiator into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UMTS_Content_Report_initiator, encoded as an ASN.1 Element.
- */
-export
-function _encode_UMTS_Content_Report_initiator (value: UMTS_Content_Report_initiator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UMTS_Content_Report_initiator) { _cached_encoder_for_UMTS_Content_Report_initiator = $._encodeEnumerated; }
-    return _cached_encoder_for_UMTS_Content_Report_initiator(value, elGetter);
-}
+export const _decode_UMTS_Content_Report_initiator: $.ASN1Decoder<UMTS_Content_Report_initiator> = $._decodeEnumerated;
+export const _encode_UMTS_Content_Report_initiator: $.ASN1Encoder<UMTS_Content_Report_initiator> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -19,35 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ProSeUEID = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_ProSeUEID: $.ASN1Decoder<ProSeUEID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ProSeUEID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ProSeUEID (el: _Element): ProSeUEID {
-    if (!_cached_decoder_for_ProSeUEID) { _cached_decoder_for_ProSeUEID = $._decodeOctetString; }
-    return _cached_decoder_for_ProSeUEID(el);
-}
-
-let _cached_encoder_for_ProSeUEID: $.ASN1Encoder<ProSeUEID> | null = null;
-
-/**
- * @summary Encodes a(n) ProSeUEID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProSeUEID, encoded as an ASN.1 Element.
- */
-export
-function _encode_ProSeUEID (value: ProSeUEID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProSeUEID) { _cached_encoder_for_ProSeUEID = $._encodeOctetString; }
-    return _cached_encoder_for_ProSeUEID(value, elGetter);
-}
+export const _decode_ProSeUEID: $.ASN1Decoder<ProSeUEID> = $._decodeOctetString;
+export const _encode_ProSeUEID: $.ASN1Encoder<ProSeUEID> = $._encodeOctetString;
 
 
 /* eslint-enable */

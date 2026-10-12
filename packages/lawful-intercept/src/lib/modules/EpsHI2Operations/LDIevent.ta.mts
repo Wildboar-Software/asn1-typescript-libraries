@@ -64,35 +64,8 @@ const LDIevent_targetLeavesIA: LDIevent = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const targetLeavesIA: LDIevent = LDIevent_targetLeavesIA; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_LDIevent: $.ASN1Decoder<LDIevent> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) LDIevent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_LDIevent (el: _Element): LDIevent {
-    if (!_cached_decoder_for_LDIevent) { _cached_decoder_for_LDIevent = $._decodeEnumerated; }
-    return _cached_decoder_for_LDIevent(el);
-}
-
-let _cached_encoder_for_LDIevent: $.ASN1Encoder<LDIevent> | null = null;
-
-/**
- * @summary Encodes a(n) LDIevent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LDIevent, encoded as an ASN.1 Element.
- */
-export
-function _encode_LDIevent (value: LDIevent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LDIevent) { _cached_encoder_for_LDIevent = $._encodeEnumerated; }
-    return _cached_encoder_for_LDIevent(value, elGetter);
-}
+export const _decode_LDIevent: $.ASN1Decoder<LDIevent> = $._decodeEnumerated;
+export const _encode_LDIevent: $.ASN1Encoder<LDIevent> = $._encodeEnumerated;
 
 
 /* eslint-enable */

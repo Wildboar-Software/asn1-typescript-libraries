@@ -137,35 +137,8 @@ const I_WLANEvent_packetDataHeaderInformation: I_WLANEvent = 6; /* LONG_NAMED_EN
  */
 export
 const packetDataHeaderInformation: I_WLANEvent = I_WLANEvent_packetDataHeaderInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_I_WLANEvent: $.ASN1Decoder<I_WLANEvent> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) I_WLANEvent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_I_WLANEvent (el: _Element): I_WLANEvent {
-    if (!_cached_decoder_for_I_WLANEvent) { _cached_decoder_for_I_WLANEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_I_WLANEvent(el);
-}
-
-let _cached_encoder_for_I_WLANEvent: $.ASN1Encoder<I_WLANEvent> | null = null;
-
-/**
- * @summary Encodes a(n) I_WLANEvent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The I_WLANEvent, encoded as an ASN.1 Element.
- */
-export
-function _encode_I_WLANEvent (value: I_WLANEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_I_WLANEvent) { _cached_encoder_for_I_WLANEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_I_WLANEvent(value, elGetter);
-}
+export const _decode_I_WLANEvent: $.ASN1Decoder<I_WLANEvent> = $._decodeEnumerated;
+export const _encode_I_WLANEvent: $.ASN1Encoder<I_WLANEvent> = $._encodeEnumerated;
 
 
 /* eslint-enable */

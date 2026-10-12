@@ -178,35 +178,8 @@ const Tetra_IRI_Parameters_nature_Of_The_intercepted_call_lTE_circuit_call: Tetr
  */
 export
 const lTE_circuit_call: Tetra_IRI_Parameters_nature_Of_The_intercepted_call = Tetra_IRI_Parameters_nature_Of_The_intercepted_call_lTE_circuit_call; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Decoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Tetra_IRI_Parameters_nature_Of_The_intercepted_call
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call (el: _Element): Tetra_IRI_Parameters_nature_Of_The_intercepted_call {
-    if (!_cached_decoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call) { _cached_decoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call = $._decodeEnumerated; }
-    return _cached_decoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call(el);
-}
-
-let _cached_encoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Encoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> | null = null;
-
-/**
- * @summary Encodes a(n) Tetra_IRI_Parameters_nature_Of_The_intercepted_call into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Tetra_IRI_Parameters_nature_Of_The_intercepted_call, encoded as an ASN.1 Element.
- */
-export
-function _encode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call (value: Tetra_IRI_Parameters_nature_Of_The_intercepted_call, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call) { _cached_encoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call = $._encodeEnumerated; }
-    return _cached_encoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call(value, elGetter);
-}
+export const _decode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Decoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> = $._decodeEnumerated;
+export const _encode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Encoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> = $._encodeEnumerated;
 
 
 /* eslint-enable */

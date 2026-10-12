@@ -178,35 +178,8 @@ const L2ProtocolInformation_l2ProtocolFR2427: L2ProtocolInformation = 8; /* LONG
  */
 export
 const l2ProtocolFR2427: L2ProtocolInformation = L2ProtocolInformation_l2ProtocolFR2427; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_L2ProtocolInformation: $.ASN1Decoder<L2ProtocolInformation> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) L2ProtocolInformation
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_L2ProtocolInformation (el: _Element): L2ProtocolInformation {
-    if (!_cached_decoder_for_L2ProtocolInformation) { _cached_decoder_for_L2ProtocolInformation = $._decodeEnumerated; }
-    return _cached_decoder_for_L2ProtocolInformation(el);
-}
-
-let _cached_encoder_for_L2ProtocolInformation: $.ASN1Encoder<L2ProtocolInformation> | null = null;
-
-/**
- * @summary Encodes a(n) L2ProtocolInformation into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The L2ProtocolInformation, encoded as an ASN.1 Element.
- */
-export
-function _encode_L2ProtocolInformation (value: L2ProtocolInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_L2ProtocolInformation) { _cached_encoder_for_L2ProtocolInformation = $._encodeEnumerated; }
-    return _cached_encoder_for_L2ProtocolInformation(value, elGetter);
-}
+export const _decode_L2ProtocolInformation: $.ASN1Decoder<L2ProtocolInformation> = $._decodeEnumerated;
+export const _encode_L2ProtocolInformation: $.ASN1Encoder<L2ProtocolInformation> = $._encodeEnumerated;
 
 
 /* eslint-enable */

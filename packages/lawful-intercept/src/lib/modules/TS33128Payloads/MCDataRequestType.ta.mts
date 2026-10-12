@@ -97,35 +97,8 @@ const MCDataRequestType_groupFD: MCDataRequestType = MCDataRequestType.groupFD; 
  */
 export
 const groupFD: MCDataRequestType = MCDataRequestType.groupFD; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MCDataRequestType: $.ASN1Decoder<MCDataRequestType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MCDataRequestType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MCDataRequestType (el: _Element): MCDataRequestType {
-    if (!_cached_decoder_for_MCDataRequestType) { _cached_decoder_for_MCDataRequestType = $._decodeEnumerated; }
-    return _cached_decoder_for_MCDataRequestType(el);
-}
-
-let _cached_encoder_for_MCDataRequestType: $.ASN1Encoder<MCDataRequestType> | null = null;
-
-/**
- * @summary Encodes a(n) MCDataRequestType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MCDataRequestType, encoded as an ASN.1 Element.
- */
-export
-function _encode_MCDataRequestType (value: MCDataRequestType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCDataRequestType) { _cached_encoder_for_MCDataRequestType = $._encodeEnumerated; }
-    return _cached_encoder_for_MCDataRequestType(value, elGetter);
-}
+export const _decode_MCDataRequestType: $.ASN1Decoder<MCDataRequestType> = $._decodeEnumerated;
+export const _encode_MCDataRequestType: $.ASN1Encoder<MCDataRequestType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

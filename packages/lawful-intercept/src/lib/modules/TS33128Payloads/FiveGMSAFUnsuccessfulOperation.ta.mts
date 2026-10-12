@@ -357,35 +357,8 @@ const FiveGMSAFUnsuccessfulOperation_requestDeliveryBoost: FiveGMSAFUnsuccessful
  */
 export
 const requestDeliveryBoost: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.requestDeliveryBoost; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_FiveGMSAFUnsuccessfulOperation: $.ASN1Decoder<FiveGMSAFUnsuccessfulOperation> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FiveGMSAFUnsuccessfulOperation
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FiveGMSAFUnsuccessfulOperation (el: _Element): FiveGMSAFUnsuccessfulOperation {
-    if (!_cached_decoder_for_FiveGMSAFUnsuccessfulOperation) { _cached_decoder_for_FiveGMSAFUnsuccessfulOperation = $._decodeEnumerated; }
-    return _cached_decoder_for_FiveGMSAFUnsuccessfulOperation(el);
-}
-
-let _cached_encoder_for_FiveGMSAFUnsuccessfulOperation: $.ASN1Encoder<FiveGMSAFUnsuccessfulOperation> | null = null;
-
-/**
- * @summary Encodes a(n) FiveGMSAFUnsuccessfulOperation into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FiveGMSAFUnsuccessfulOperation, encoded as an ASN.1 Element.
- */
-export
-function _encode_FiveGMSAFUnsuccessfulOperation (value: FiveGMSAFUnsuccessfulOperation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FiveGMSAFUnsuccessfulOperation) { _cached_encoder_for_FiveGMSAFUnsuccessfulOperation = $._encodeEnumerated; }
-    return _cached_encoder_for_FiveGMSAFUnsuccessfulOperation(value, elGetter);
-}
+export const _decode_FiveGMSAFUnsuccessfulOperation: $.ASN1Decoder<FiveGMSAFUnsuccessfulOperation> = $._decodeEnumerated;
+export const _encode_FiveGMSAFUnsuccessfulOperation: $.ASN1Encoder<FiveGMSAFUnsuccessfulOperation> = $._encodeEnumerated;
 
 
 /* eslint-enable */

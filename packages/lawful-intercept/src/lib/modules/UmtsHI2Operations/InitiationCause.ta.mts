@@ -84,35 +84,8 @@ const InitiationCause_pTCOriginatingId: InitiationCause = 3; /* LONG_NAMED_ENUME
  */
 export
 const pTCOriginatingId: InitiationCause = InitiationCause_pTCOriginatingId; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_InitiationCause: $.ASN1Decoder<InitiationCause> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) InitiationCause
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_InitiationCause (el: _Element): InitiationCause {
-    if (!_cached_decoder_for_InitiationCause) { _cached_decoder_for_InitiationCause = $._decodeEnumerated; }
-    return _cached_decoder_for_InitiationCause(el);
-}
-
-let _cached_encoder_for_InitiationCause: $.ASN1Encoder<InitiationCause> | null = null;
-
-/**
- * @summary Encodes a(n) InitiationCause into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The InitiationCause, encoded as an ASN.1 Element.
- */
-export
-function _encode_InitiationCause (value: InitiationCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiationCause) { _cached_encoder_for_InitiationCause = $._encodeEnumerated; }
-    return _cached_encoder_for_InitiationCause(value, elGetter);
-}
+export const _decode_InitiationCause: $.ASN1Decoder<InitiationCause> = $._decodeEnumerated;
+export const _encode_InitiationCause: $.ASN1Encoder<InitiationCause> = $._encodeEnumerated;
 
 
 /* eslint-enable */

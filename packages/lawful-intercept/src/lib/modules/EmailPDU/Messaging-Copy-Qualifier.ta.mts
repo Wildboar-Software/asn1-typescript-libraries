@@ -100,35 +100,8 @@ const Messaging_Copy_Qualifier_bcc: Messaging_Copy_Qualifier = 3; /* LONG_NAMED_
  */
 export
 const bcc: Messaging_Copy_Qualifier = Messaging_Copy_Qualifier_bcc; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Messaging_Copy_Qualifier: $.ASN1Decoder<Messaging_Copy_Qualifier> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Messaging_Copy_Qualifier
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Messaging_Copy_Qualifier (el: _Element): Messaging_Copy_Qualifier {
-    if (!_cached_decoder_for_Messaging_Copy_Qualifier) { _cached_decoder_for_Messaging_Copy_Qualifier = $._decodeEnumerated; }
-    return _cached_decoder_for_Messaging_Copy_Qualifier(el);
-}
-
-let _cached_encoder_for_Messaging_Copy_Qualifier: $.ASN1Encoder<Messaging_Copy_Qualifier> | null = null;
-
-/**
- * @summary Encodes a(n) Messaging_Copy_Qualifier into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Messaging_Copy_Qualifier, encoded as an ASN.1 Element.
- */
-export
-function _encode_Messaging_Copy_Qualifier (value: Messaging_Copy_Qualifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Messaging_Copy_Qualifier) { _cached_encoder_for_Messaging_Copy_Qualifier = $._encodeEnumerated; }
-    return _cached_encoder_for_Messaging_Copy_Qualifier(value, elGetter);
-}
+export const _decode_Messaging_Copy_Qualifier: $.ASN1Decoder<Messaging_Copy_Qualifier> = $._decodeEnumerated;
+export const _encode_Messaging_Copy_Qualifier: $.ASN1Encoder<Messaging_Copy_Qualifier> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -154,35 +154,8 @@ const Messaging_Event_contact: Messaging_Event = 7; /* LONG_NAMED_ENUMERATED_VAL
  */
 export
 const contact: Messaging_Event = Messaging_Event_contact; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Messaging_Event: $.ASN1Decoder<Messaging_Event> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Messaging_Event
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Messaging_Event (el: _Element): Messaging_Event {
-    if (!_cached_decoder_for_Messaging_Event) { _cached_decoder_for_Messaging_Event = $._decodeEnumerated; }
-    return _cached_decoder_for_Messaging_Event(el);
-}
-
-let _cached_encoder_for_Messaging_Event: $.ASN1Encoder<Messaging_Event> | null = null;
-
-/**
- * @summary Encodes a(n) Messaging_Event into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Messaging_Event, encoded as an ASN.1 Element.
- */
-export
-function _encode_Messaging_Event (value: Messaging_Event, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Messaging_Event) { _cached_encoder_for_Messaging_Event = $._encodeEnumerated; }
-    return _cached_encoder_for_Messaging_Event(value, elGetter);
-}
+export const _decode_Messaging_Event: $.ASN1Decoder<Messaging_Event> = $._decodeEnumerated;
+export const _encode_Messaging_Event: $.ASN1Encoder<Messaging_Event> = $._encodeEnumerated;
 
 
 /* eslint-enable */

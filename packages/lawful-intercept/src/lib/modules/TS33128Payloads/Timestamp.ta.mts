@@ -19,35 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Timestamp = GeneralizedTime; // GeneralizedTime
-
-let _cached_decoder_for_Timestamp: $.ASN1Decoder<Timestamp> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Timestamp
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Timestamp (el: _Element): Timestamp {
-    if (!_cached_decoder_for_Timestamp) { _cached_decoder_for_Timestamp = $._decodeGeneralizedTime; }
-    return _cached_decoder_for_Timestamp(el);
-}
-
-let _cached_encoder_for_Timestamp: $.ASN1Encoder<Timestamp> | null = null;
-
-/**
- * @summary Encodes a(n) Timestamp into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Timestamp, encoded as an ASN.1 Element.
- */
-export
-function _encode_Timestamp (value: Timestamp, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Timestamp) { _cached_encoder_for_Timestamp = $._encodeGeneralizedTime; }
-    return _cached_encoder_for_Timestamp(value, elGetter);
-}
+export const _decode_Timestamp: $.ASN1Decoder<Timestamp> = $._decodeGeneralizedTime;
+export const _encode_Timestamp: $.ASN1Encoder<Timestamp> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

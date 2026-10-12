@@ -83,35 +83,8 @@ const AlertIndicator_cancelled: AlertIndicator = 3; /* LONG_NAMED_ENUMERATED_VAL
  */
 export
 const cancelled: AlertIndicator = AlertIndicator_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_AlertIndicator: $.ASN1Decoder<AlertIndicator> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AlertIndicator
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AlertIndicator (el: _Element): AlertIndicator {
-    if (!_cached_decoder_for_AlertIndicator) { _cached_decoder_for_AlertIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_AlertIndicator(el);
-}
-
-let _cached_encoder_for_AlertIndicator: $.ASN1Encoder<AlertIndicator> | null = null;
-
-/**
- * @summary Encodes a(n) AlertIndicator into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AlertIndicator, encoded as an ASN.1 Element.
- */
-export
-function _encode_AlertIndicator (value: AlertIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AlertIndicator) { _cached_encoder_for_AlertIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_AlertIndicator(value, elGetter);
-}
+export const _decode_AlertIndicator: $.ASN1Decoder<AlertIndicator> = $._decodeEnumerated;
+export const _encode_AlertIndicator: $.ASN1Encoder<AlertIndicator> = $._encodeEnumerated;
 
 
 /* eslint-enable */

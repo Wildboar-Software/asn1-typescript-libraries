@@ -118,35 +118,8 @@ const Messaging_Property_Greeting_Type_number_: Messaging_Property_Greeting_Type
  */
 export
 const number_: Messaging_Property_Greeting_Type = Messaging_Property_Greeting_Type_number_; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Messaging_Property_Greeting_Type: $.ASN1Decoder<Messaging_Property_Greeting_Type> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Messaging_Property_Greeting_Type
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Messaging_Property_Greeting_Type (el: _Element): Messaging_Property_Greeting_Type {
-    if (!_cached_decoder_for_Messaging_Property_Greeting_Type) { _cached_decoder_for_Messaging_Property_Greeting_Type = $._decodeEnumerated; }
-    return _cached_decoder_for_Messaging_Property_Greeting_Type(el);
-}
-
-let _cached_encoder_for_Messaging_Property_Greeting_Type: $.ASN1Encoder<Messaging_Property_Greeting_Type> | null = null;
-
-/**
- * @summary Encodes a(n) Messaging_Property_Greeting_Type into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Messaging_Property_Greeting_Type, encoded as an ASN.1 Element.
- */
-export
-function _encode_Messaging_Property_Greeting_Type (value: Messaging_Property_Greeting_Type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Messaging_Property_Greeting_Type) { _cached_encoder_for_Messaging_Property_Greeting_Type = $._encodeEnumerated; }
-    return _cached_encoder_for_Messaging_Property_Greeting_Type(value, elGetter);
-}
+export const _decode_Messaging_Property_Greeting_Type: $.ASN1Decoder<Messaging_Property_Greeting_Type> = $._decodeEnumerated;
+export const _encode_Messaging_Property_Greeting_Type: $.ASN1Encoder<Messaging_Property_Greeting_Type> = $._encodeEnumerated;
 
 
 /* eslint-enable */

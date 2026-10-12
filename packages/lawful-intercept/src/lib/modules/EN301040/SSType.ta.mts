@@ -654,35 +654,8 @@ const SSType_talkingPartyIdentification: SSType = SSType.talkingPartyIdentificat
  */
 export
 const talkingPartyIdentification: SSType = SSType.talkingPartyIdentification; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_SSType: $.ASN1Decoder<SSType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SSType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SSType (el: _Element): SSType {
-    if (!_cached_decoder_for_SSType) { _cached_decoder_for_SSType = $._decodeEnumerated; }
-    return _cached_decoder_for_SSType(el);
-}
-
-let _cached_encoder_for_SSType: $.ASN1Encoder<SSType> | null = null;
-
-/**
- * @summary Encodes a(n) SSType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SSType, encoded as an ASN.1 Element.
- */
-export
-function _encode_SSType (value: SSType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SSType) { _cached_encoder_for_SSType = $._encodeEnumerated; }
-    return _cached_encoder_for_SSType(value, elGetter);
-}
+export const _decode_SSType: $.ASN1Decoder<SSType> = $._decodeEnumerated;
+export const _encode_SSType: $.ASN1Encoder<SSType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

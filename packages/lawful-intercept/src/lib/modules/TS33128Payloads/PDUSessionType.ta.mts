@@ -157,35 +157,8 @@ const PDUSessionType_ethernet: PDUSessionType = PDUSessionType.ethernet; /* LONG
  */
 export
 const ethernet: PDUSessionType = PDUSessionType.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_PDUSessionType: $.ASN1Decoder<PDUSessionType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PDUSessionType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PDUSessionType (el: _Element): PDUSessionType {
-    if (!_cached_decoder_for_PDUSessionType) { _cached_decoder_for_PDUSessionType = $._decodeEnumerated; }
-    return _cached_decoder_for_PDUSessionType(el);
-}
-
-let _cached_encoder_for_PDUSessionType: $.ASN1Encoder<PDUSessionType> | null = null;
-
-/**
- * @summary Encodes a(n) PDUSessionType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PDUSessionType, encoded as an ASN.1 Element.
- */
-export
-function _encode_PDUSessionType (value: PDUSessionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDUSessionType) { _cached_encoder_for_PDUSessionType = $._encodeEnumerated; }
-    return _cached_encoder_for_PDUSessionType(value, elGetter);
-}
+export const _decode_PDUSessionType: $.ASN1Decoder<PDUSessionType> = $._decodeEnumerated;
+export const _encode_PDUSessionType: $.ASN1Encoder<PDUSessionType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

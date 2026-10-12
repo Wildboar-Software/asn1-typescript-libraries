@@ -173,35 +173,8 @@ const ContentClass_content_rich: ContentClass = 7; /* LONG_NAMED_ENUMERATED_VALU
  */
 export
 const content_rich: ContentClass = ContentClass_content_rich; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ContentClass: $.ASN1Decoder<ContentClass> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ContentClass
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ContentClass (el: _Element): ContentClass {
-    if (!_cached_decoder_for_ContentClass) { _cached_decoder_for_ContentClass = $._decodeEnumerated; }
-    return _cached_decoder_for_ContentClass(el);
-}
-
-let _cached_encoder_for_ContentClass: $.ASN1Encoder<ContentClass> | null = null;
-
-/**
- * @summary Encodes a(n) ContentClass into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ContentClass, encoded as an ASN.1 Element.
- */
-export
-function _encode_ContentClass (value: ContentClass, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ContentClass) { _cached_encoder_for_ContentClass = $._encodeEnumerated; }
-    return _cached_encoder_for_ContentClass(value, elGetter);
-}
+export const _decode_ContentClass: $.ASN1Decoder<ContentClass> = $._decodeEnumerated;
+export const _encode_ContentClass: $.ASN1Encoder<ContentClass> = $._encodeEnumerated;
 
 
 /* eslint-enable */

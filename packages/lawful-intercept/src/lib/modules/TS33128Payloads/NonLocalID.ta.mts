@@ -97,35 +97,8 @@ const NonLocalID_nonLocal: NonLocalID = NonLocalID.nonLocal; /* LONG_NAMED_ENUME
  */
 export
 const nonLocal: NonLocalID = NonLocalID.nonLocal; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_NonLocalID: $.ASN1Decoder<NonLocalID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NonLocalID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NonLocalID (el: _Element): NonLocalID {
-    if (!_cached_decoder_for_NonLocalID) { _cached_decoder_for_NonLocalID = $._decodeEnumerated; }
-    return _cached_decoder_for_NonLocalID(el);
-}
-
-let _cached_encoder_for_NonLocalID: $.ASN1Encoder<NonLocalID> | null = null;
-
-/**
- * @summary Encodes a(n) NonLocalID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NonLocalID, encoded as an ASN.1 Element.
- */
-export
-function _encode_NonLocalID (value: NonLocalID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NonLocalID) { _cached_encoder_for_NonLocalID = $._encodeEnumerated; }
-    return _cached_encoder_for_NonLocalID(value, elGetter);
-}
+export const _decode_NonLocalID: $.ASN1Decoder<NonLocalID> = $._decodeEnumerated;
+export const _encode_NonLocalID: $.ASN1Encoder<NonLocalID> = $._encodeEnumerated;
 
 
 /* eslint-enable */

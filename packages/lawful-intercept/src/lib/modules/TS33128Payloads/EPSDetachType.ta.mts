@@ -177,35 +177,8 @@ const EPSDetachType_reserved: EPSDetachType = EPSDetachType.reserved; /* LONG_NA
  */
 export
 const reserved: EPSDetachType = EPSDetachType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EPSDetachType: $.ASN1Decoder<EPSDetachType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EPSDetachType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EPSDetachType (el: _Element): EPSDetachType {
-    if (!_cached_decoder_for_EPSDetachType) { _cached_decoder_for_EPSDetachType = $._decodeEnumerated; }
-    return _cached_decoder_for_EPSDetachType(el);
-}
-
-let _cached_encoder_for_EPSDetachType: $.ASN1Encoder<EPSDetachType> | null = null;
-
-/**
- * @summary Encodes a(n) EPSDetachType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EPSDetachType, encoded as an ASN.1 Element.
- */
-export
-function _encode_EPSDetachType (value: EPSDetachType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSDetachType) { _cached_encoder_for_EPSDetachType = $._encodeEnumerated; }
-    return _cached_encoder_for_EPSDetachType(value, elGetter);
-}
+export const _decode_EPSDetachType: $.ASN1Decoder<EPSDetachType> = $._decodeEnumerated;
+export const _encode_EPSDetachType: $.ASN1Encoder<EPSDetachType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

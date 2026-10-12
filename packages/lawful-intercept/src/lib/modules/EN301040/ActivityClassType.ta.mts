@@ -1054,35 +1054,8 @@ const ActivityClassType_supplementaryService: ActivityClassType = ActivityClassT
  */
 export
 const supplementaryService: ActivityClassType = ActivityClassType.supplementaryService; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ActivityClassType: $.ASN1Decoder<ActivityClassType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ActivityClassType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ActivityClassType (el: _Element): ActivityClassType {
-    if (!_cached_decoder_for_ActivityClassType) { _cached_decoder_for_ActivityClassType = $._decodeEnumerated; }
-    return _cached_decoder_for_ActivityClassType(el);
-}
-
-let _cached_encoder_for_ActivityClassType: $.ASN1Encoder<ActivityClassType> | null = null;
-
-/**
- * @summary Encodes a(n) ActivityClassType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ActivityClassType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ActivityClassType (value: ActivityClassType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ActivityClassType) { _cached_encoder_for_ActivityClassType = $._encodeEnumerated; }
-    return _cached_encoder_for_ActivityClassType(value, elGetter);
-}
+export const _decode_ActivityClassType: $.ASN1Decoder<ActivityClassType> = $._decodeEnumerated;
+export const _encode_ActivityClassType: $.ASN1Encoder<ActivityClassType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

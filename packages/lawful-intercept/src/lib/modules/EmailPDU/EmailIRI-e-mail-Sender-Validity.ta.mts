@@ -59,35 +59,8 @@ const EmailIRI_e_mail_Sender_Validity_nonvalidated: EmailIRI_e_mail_Sender_Valid
  */
 export
 const nonvalidated: EmailIRI_e_mail_Sender_Validity = EmailIRI_e_mail_Sender_Validity_nonvalidated; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EmailIRI_e_mail_Sender_Validity: $.ASN1Decoder<EmailIRI_e_mail_Sender_Validity> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EmailIRI_e_mail_Sender_Validity
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EmailIRI_e_mail_Sender_Validity (el: _Element): EmailIRI_e_mail_Sender_Validity {
-    if (!_cached_decoder_for_EmailIRI_e_mail_Sender_Validity) { _cached_decoder_for_EmailIRI_e_mail_Sender_Validity = $._decodeEnumerated; }
-    return _cached_decoder_for_EmailIRI_e_mail_Sender_Validity(el);
-}
-
-let _cached_encoder_for_EmailIRI_e_mail_Sender_Validity: $.ASN1Encoder<EmailIRI_e_mail_Sender_Validity> | null = null;
-
-/**
- * @summary Encodes a(n) EmailIRI_e_mail_Sender_Validity into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EmailIRI_e_mail_Sender_Validity, encoded as an ASN.1 Element.
- */
-export
-function _encode_EmailIRI_e_mail_Sender_Validity (value: EmailIRI_e_mail_Sender_Validity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EmailIRI_e_mail_Sender_Validity) { _cached_encoder_for_EmailIRI_e_mail_Sender_Validity = $._encodeEnumerated; }
-    return _cached_encoder_for_EmailIRI_e_mail_Sender_Validity(value, elGetter);
-}
+export const _decode_EmailIRI_e_mail_Sender_Validity: $.ASN1Decoder<EmailIRI_e_mail_Sender_Validity> = $._decodeEnumerated;
+export const _encode_EmailIRI_e_mail_Sender_Validity: $.ASN1Encoder<EmailIRI_e_mail_Sender_Validity> = $._encodeEnumerated;
 
 
 /* eslint-enable */

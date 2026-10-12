@@ -238,22 +238,8 @@ const PacketReportIndications_zeroedUDPChecksum: number = 12; /* LONG_NAMED_BIT 
  */
 export
 const zeroedUDPChecksum: number = PacketReportIndications_zeroedUDPChecksum; /* SHORT_NAMED_BIT */
-
-let _cached_decoder_for_PacketReportIndications: $.ASN1Decoder<PacketReportIndications> | null = null;
-
-export
-function _decode_PacketReportIndications (el: _Element): PacketReportIndications {
-    if (!_cached_decoder_for_PacketReportIndications) { _cached_decoder_for_PacketReportIndications = $._decodeBitString; }
-    return _cached_decoder_for_PacketReportIndications(el);
-}
-
-let _cached_encoder_for_PacketReportIndications: $.ASN1Encoder<PacketReportIndications> | null = null;
-
-export
-function _encode_PacketReportIndications (value: PacketReportIndications, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PacketReportIndications) { _cached_encoder_for_PacketReportIndications = $._encodeBitString; }
-    return _cached_encoder_for_PacketReportIndications(value, elGetter);
-}
+export const _decode_PacketReportIndications: $.ASN1Decoder<PacketReportIndications> = $._decodeBitString;
+export const _encode_PacketReportIndications: $.ASN1Encoder<PacketReportIndications> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -93,35 +93,8 @@ const Content_Report_initiator_undefined_party: Content_Report_initiator = 3; /*
  */
 export
 const undefined_party: Content_Report_initiator = Content_Report_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Content_Report_initiator: $.ASN1Decoder<Content_Report_initiator> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Content_Report_initiator
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Content_Report_initiator (el: _Element): Content_Report_initiator {
-    if (!_cached_decoder_for_Content_Report_initiator) { _cached_decoder_for_Content_Report_initiator = $._decodeEnumerated; }
-    return _cached_decoder_for_Content_Report_initiator(el);
-}
-
-let _cached_encoder_for_Content_Report_initiator: $.ASN1Encoder<Content_Report_initiator> | null = null;
-
-/**
- * @summary Encodes a(n) Content_Report_initiator into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Content_Report_initiator, encoded as an ASN.1 Element.
- */
-export
-function _encode_Content_Report_initiator (value: Content_Report_initiator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Content_Report_initiator) { _cached_encoder_for_Content_Report_initiator = $._encodeEnumerated; }
-    return _cached_encoder_for_Content_Report_initiator(value, elGetter);
-}
+export const _decode_Content_Report_initiator: $.ASN1Decoder<Content_Report_initiator> = $._decodeEnumerated;
+export const _encode_Content_Report_initiator: $.ASN1Encoder<Content_Report_initiator> = $._encodeEnumerated;
 
 
 /* eslint-enable */

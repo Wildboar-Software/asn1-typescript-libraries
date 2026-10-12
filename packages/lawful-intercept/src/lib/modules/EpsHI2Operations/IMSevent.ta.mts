@@ -265,35 +265,8 @@ const IMSevent_locationInformationRequest: IMSevent = 12; /* LONG_NAMED_ENUMERAT
  */
 export
 const locationInformationRequest: IMSevent = IMSevent_locationInformationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_IMSevent: $.ASN1Decoder<IMSevent> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IMSevent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IMSevent (el: _Element): IMSevent {
-    if (!_cached_decoder_for_IMSevent) { _cached_decoder_for_IMSevent = $._decodeEnumerated; }
-    return _cached_decoder_for_IMSevent(el);
-}
-
-let _cached_encoder_for_IMSevent: $.ASN1Encoder<IMSevent> | null = null;
-
-/**
- * @summary Encodes a(n) IMSevent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IMSevent, encoded as an ASN.1 Element.
- */
-export
-function _encode_IMSevent (value: IMSevent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMSevent) { _cached_encoder_for_IMSevent = $._encodeEnumerated; }
-    return _cached_encoder_for_IMSevent(value, elGetter);
-}
+export const _decode_IMSevent: $.ASN1Decoder<IMSevent> = $._decodeEnumerated;
+export const _encode_IMSevent: $.ASN1Encoder<IMSevent> = $._encodeEnumerated;
 
 
 /* eslint-enable */

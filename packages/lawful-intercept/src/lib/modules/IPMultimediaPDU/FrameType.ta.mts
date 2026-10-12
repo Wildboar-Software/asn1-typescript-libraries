@@ -181,35 +181,8 @@ const FrameType_msrpFrame: FrameType = 7; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const msrpFrame: FrameType = FrameType_msrpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_FrameType: $.ASN1Decoder<FrameType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FrameType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FrameType (el: _Element): FrameType {
-    if (!_cached_decoder_for_FrameType) { _cached_decoder_for_FrameType = $._decodeEnumerated; }
-    return _cached_decoder_for_FrameType(el);
-}
-
-let _cached_encoder_for_FrameType: $.ASN1Encoder<FrameType> | null = null;
-
-/**
- * @summary Encodes a(n) FrameType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FrameType, encoded as an ASN.1 Element.
- */
-export
-function _encode_FrameType (value: FrameType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FrameType) { _cached_encoder_for_FrameType = $._encodeEnumerated; }
-    return _cached_encoder_for_FrameType(value, elGetter);
-}
+export const _decode_FrameType: $.ASN1Decoder<FrameType> = $._decodeEnumerated;
+export const _encode_FrameType: $.ASN1Encoder<FrameType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

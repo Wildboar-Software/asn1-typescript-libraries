@@ -97,35 +97,8 @@ const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled: AccuracyFulfilm
  */
 export
 const requestedAccuracyNotFulfilled: AccuracyFulfilmentIndicator = AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_AccuracyFulfilmentIndicator: $.ASN1Decoder<AccuracyFulfilmentIndicator> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AccuracyFulfilmentIndicator
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AccuracyFulfilmentIndicator (el: _Element): AccuracyFulfilmentIndicator {
-    if (!_cached_decoder_for_AccuracyFulfilmentIndicator) { _cached_decoder_for_AccuracyFulfilmentIndicator = $._decodeEnumerated; }
-    return _cached_decoder_for_AccuracyFulfilmentIndicator(el);
-}
-
-let _cached_encoder_for_AccuracyFulfilmentIndicator: $.ASN1Encoder<AccuracyFulfilmentIndicator> | null = null;
-
-/**
- * @summary Encodes a(n) AccuracyFulfilmentIndicator into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AccuracyFulfilmentIndicator, encoded as an ASN.1 Element.
- */
-export
-function _encode_AccuracyFulfilmentIndicator (value: AccuracyFulfilmentIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccuracyFulfilmentIndicator) { _cached_encoder_for_AccuracyFulfilmentIndicator = $._encodeEnumerated; }
-    return _cached_encoder_for_AccuracyFulfilmentIndicator(value, elGetter);
-}
+export const _decode_AccuracyFulfilmentIndicator: $.ASN1Decoder<AccuracyFulfilmentIndicator> = $._decodeEnumerated;
+export const _encode_AccuracyFulfilmentIndicator: $.ASN1Encoder<AccuracyFulfilmentIndicator> = $._encodeEnumerated;
 
 
 /* eslint-enable */

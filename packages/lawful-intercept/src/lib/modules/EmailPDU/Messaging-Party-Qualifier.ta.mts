@@ -107,35 +107,8 @@ const Messaging_Party_Qualifier_associated_party: Messaging_Party_Qualifier = 3;
  */
 export
 const associated_party: Messaging_Party_Qualifier = Messaging_Party_Qualifier_associated_party; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Messaging_Party_Qualifier: $.ASN1Decoder<Messaging_Party_Qualifier> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Messaging_Party_Qualifier
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Messaging_Party_Qualifier (el: _Element): Messaging_Party_Qualifier {
-    if (!_cached_decoder_for_Messaging_Party_Qualifier) { _cached_decoder_for_Messaging_Party_Qualifier = $._decodeEnumerated; }
-    return _cached_decoder_for_Messaging_Party_Qualifier(el);
-}
-
-let _cached_encoder_for_Messaging_Party_Qualifier: $.ASN1Encoder<Messaging_Party_Qualifier> | null = null;
-
-/**
- * @summary Encodes a(n) Messaging_Party_Qualifier into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Messaging_Party_Qualifier, encoded as an ASN.1 Element.
- */
-export
-function _encode_Messaging_Party_Qualifier (value: Messaging_Party_Qualifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Messaging_Party_Qualifier) { _cached_encoder_for_Messaging_Party_Qualifier = $._encodeEnumerated; }
-    return _cached_encoder_for_Messaging_Party_Qualifier(value, elGetter);
-}
+export const _decode_Messaging_Party_Qualifier: $.ASN1Decoder<Messaging_Party_Qualifier> = $._decodeEnumerated;
+export const _encode_Messaging_Party_Qualifier: $.ASN1Encoder<Messaging_Party_Qualifier> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -65,35 +65,8 @@ const ProSeDirectDiscoveryEvent_proseMatchReport: ProSeDirectDiscoveryEvent = 2;
  */
 export
 const proseMatchReport: ProSeDirectDiscoveryEvent = ProSeDirectDiscoveryEvent_proseMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ProSeDirectDiscoveryEvent: $.ASN1Decoder<ProSeDirectDiscoveryEvent> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ProSeDirectDiscoveryEvent
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ProSeDirectDiscoveryEvent (el: _Element): ProSeDirectDiscoveryEvent {
-    if (!_cached_decoder_for_ProSeDirectDiscoveryEvent) { _cached_decoder_for_ProSeDirectDiscoveryEvent = $._decodeEnumerated; }
-    return _cached_decoder_for_ProSeDirectDiscoveryEvent(el);
-}
-
-let _cached_encoder_for_ProSeDirectDiscoveryEvent: $.ASN1Encoder<ProSeDirectDiscoveryEvent> | null = null;
-
-/**
- * @summary Encodes a(n) ProSeDirectDiscoveryEvent into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ProSeDirectDiscoveryEvent, encoded as an ASN.1 Element.
- */
-export
-function _encode_ProSeDirectDiscoveryEvent (value: ProSeDirectDiscoveryEvent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProSeDirectDiscoveryEvent) { _cached_encoder_for_ProSeDirectDiscoveryEvent = $._encodeEnumerated; }
-    return _cached_encoder_for_ProSeDirectDiscoveryEvent(value, elGetter);
-}
+export const _decode_ProSeDirectDiscoveryEvent: $.ASN1Decoder<ProSeDirectDiscoveryEvent> = $._decodeEnumerated;
+export const _encode_ProSeDirectDiscoveryEvent: $.ASN1Encoder<ProSeDirectDiscoveryEvent> = $._encodeEnumerated;
 
 
 /* eslint-enable */

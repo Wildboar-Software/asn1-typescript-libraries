@@ -19,35 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type FiveGSInterworkingIndicator = BOOLEAN; // BooleanType
-
-let _cached_decoder_for_FiveGSInterworkingIndicator: $.ASN1Decoder<FiveGSInterworkingIndicator> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FiveGSInterworkingIndicator
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FiveGSInterworkingIndicator (el: _Element): FiveGSInterworkingIndicator {
-    if (!_cached_decoder_for_FiveGSInterworkingIndicator) { _cached_decoder_for_FiveGSInterworkingIndicator = $._decodeBoolean; }
-    return _cached_decoder_for_FiveGSInterworkingIndicator(el);
-}
-
-let _cached_encoder_for_FiveGSInterworkingIndicator: $.ASN1Encoder<FiveGSInterworkingIndicator> | null = null;
-
-/**
- * @summary Encodes a(n) FiveGSInterworkingIndicator into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FiveGSInterworkingIndicator, encoded as an ASN.1 Element.
- */
-export
-function _encode_FiveGSInterworkingIndicator (value: FiveGSInterworkingIndicator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FiveGSInterworkingIndicator) { _cached_encoder_for_FiveGSInterworkingIndicator = $._encodeBoolean; }
-    return _cached_encoder_for_FiveGSInterworkingIndicator(value, elGetter);
-}
+export const _decode_FiveGSInterworkingIndicator: $.ASN1Decoder<FiveGSInterworkingIndicator> = $._decodeBoolean;
+export const _encode_FiveGSInterworkingIndicator: $.ASN1Encoder<FiveGSInterworkingIndicator> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -157,35 +157,8 @@ const DPIOperationType_destroyDynamicPolicy: DPIOperationType = DPIOperationType
  */
 export
 const destroyDynamicPolicy: DPIOperationType = DPIOperationType.destroyDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_DPIOperationType: $.ASN1Decoder<DPIOperationType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DPIOperationType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DPIOperationType (el: _Element): DPIOperationType {
-    if (!_cached_decoder_for_DPIOperationType) { _cached_decoder_for_DPIOperationType = $._decodeEnumerated; }
-    return _cached_decoder_for_DPIOperationType(el);
-}
-
-let _cached_encoder_for_DPIOperationType: $.ASN1Encoder<DPIOperationType> | null = null;
-
-/**
- * @summary Encodes a(n) DPIOperationType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DPIOperationType, encoded as an ASN.1 Element.
- */
-export
-function _encode_DPIOperationType (value: DPIOperationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DPIOperationType) { _cached_encoder_for_DPIOperationType = $._encodeEnumerated; }
-    return _cached_encoder_for_DPIOperationType(value, elGetter);
-}
+export const _decode_DPIOperationType: $.ASN1Decoder<DPIOperationType> = $._decodeEnumerated;
+export const _encode_DPIOperationType: $.ASN1Encoder<DPIOperationType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -144,35 +144,8 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_other: SMS_repo
  */
 export
 const other: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_other; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Decoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SMS_report_sMS_Contents_enhancedContent_character_encoding
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding (el: _Element): SMS_report_sMS_Contents_enhancedContent_character_encoding {
-    if (!_cached_decoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding) { _cached_decoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding = $._decodeEnumerated; }
-    return _cached_decoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding(el);
-}
-
-let _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Encoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> | null = null;
-
-/**
- * @summary Encodes a(n) SMS_report_sMS_Contents_enhancedContent_character_encoding into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SMS_report_sMS_Contents_enhancedContent_character_encoding, encoded as an ASN.1 Element.
- */
-export
-function _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding (value: SMS_report_sMS_Contents_enhancedContent_character_encoding, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding) { _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding = $._encodeEnumerated; }
-    return _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding(value, elGetter);
-}
+export const _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Decoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> = $._decodeEnumerated;
+export const _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Encoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> = $._encodeEnumerated;
 
 
 /* eslint-enable */
