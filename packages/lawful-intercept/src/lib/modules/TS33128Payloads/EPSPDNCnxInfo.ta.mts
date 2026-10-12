@@ -130,7 +130,7 @@ function _decode_EPSPDNCnxInfo (el: _Element): EPSPDNCnxInfo {
     if (!_cached_decoder_for_EPSPDNCnxInfo) { _cached_decoder_for_EPSPDNCnxInfo = function (el: _Element): EPSPDNCnxInfo {
     let pGWS8ControlPlaneFTEID!: FTEID;
     let linkedBearerID: OPTIONAL<EPSBearerID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pGWS8ControlPlaneFTEID": (_el: _Element): void => { pGWS8ControlPlaneFTEID = $._decode_implicit<FTEID>(() => _decode_FTEID)(_el); },
         "linkedBearerID": (_el: _Element): void => { linkedBearerID = $._decode_implicit<EPSBearerID>(() => _decode_EPSBearerID)(_el); }

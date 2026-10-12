@@ -231,7 +231,7 @@ function _decode_Alarm_Indicator (el: _Element): Alarm_Indicator {
     let target_Information: OPTIONAL<Target_Information>;
     let network_Identifier: OPTIONAL<Network_Identifier>;
     let network_Element_Information: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },

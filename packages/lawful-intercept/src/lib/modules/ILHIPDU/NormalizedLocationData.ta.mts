@@ -134,7 +134,7 @@ function _decode_NormalizedLocationData (el: _Element): NormalizedLocationData {
     if (!_cached_decoder_for_NormalizedLocationData) { _cached_decoder_for_NormalizedLocationData = function (el: _Element): NormalizedLocationData {
     let geocodedLocationData!: GeocodedLocationData;
     let supplementaryLocationData: OPTIONAL<SupplementaryLocationData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "geocodedLocationData": (_el: _Element): void => { geocodedLocationData = $._decode_explicit<GeocodedLocationData>(() => _decode_GeocodedLocationData)(_el); },
         "supplementaryLocationData": (_el: _Element): void => { supplementaryLocationData = $._decode_implicit<SupplementaryLocationData>(() => _decode_SupplementaryLocationData)(_el); }

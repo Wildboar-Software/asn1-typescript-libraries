@@ -139,7 +139,7 @@ function _decode_CommunicationIdentifier (el: _Element): CommunicationIdentifier
     if (!_cached_decoder_for_CommunicationIdentifier) { _cached_decoder_for_CommunicationIdentifier = function (el: _Element): CommunicationIdentifier {
     let communication_Identity_Number: OPTIONAL<OCTET_STRING>;
     let network_Identifier!: Network_Identifier;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "communication-Identity-Number": (_el: _Element): void => {
             communication_Identity_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

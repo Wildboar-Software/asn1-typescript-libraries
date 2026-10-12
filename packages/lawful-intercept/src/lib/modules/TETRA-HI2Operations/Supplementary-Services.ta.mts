@@ -144,7 +144,7 @@ function _decode_Supplementary_Services (el: _Element): Supplementary_Services {
     let standard_Supplementary_Services: OPTIONAL<Standard_Supplementary_Services>;
     let non_Standard_Supplementary_Services: OPTIONAL<Non_Standard_Supplementary_Services>;
     let other_Services: OPTIONAL<Other_Services>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "standard-Supplementary-Services": (_el: _Element): void => { standard_Supplementary_Services = $._decode_implicit<Standard_Supplementary_Services>(() => _decode_Standard_Supplementary_Services)(_el); },
         "non-Standard-Supplementary-Services": (_el: _Element): void => { non_Standard_Supplementary_Services = $._decode_implicit<Non_Standard_Supplementary_Services>(() => _decode_Non_Standard_Supplementary_Services)(_el); },

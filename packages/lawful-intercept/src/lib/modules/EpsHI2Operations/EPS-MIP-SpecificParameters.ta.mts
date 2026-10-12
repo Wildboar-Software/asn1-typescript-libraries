@@ -178,7 +178,7 @@ function _decode_EPS_MIP_SpecificParameters (el: _Element): EPS_MIP_SpecificPara
     let homeAgentAddress: OPTIONAL<OCTET_STRING>;
     let code: OPTIONAL<INTEGER>;
     let foreignDomainAddress: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "lifetime": (_el: _Element): void => {
             lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

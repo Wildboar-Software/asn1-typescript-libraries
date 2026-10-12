@@ -300,7 +300,7 @@ function _decode_SCEFCommunicationPatternUpdate (el: _Element): SCEFCommunicatio
     let expectedUEMovingTrajectory: OPTIONAL<UMTLocationArea5G[]>;
     let sCSASID!: SCSASID;
     let validityTime: OPTIONAL<Timestamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mSISDN": (_el: _Element): void => { mSISDN = $._decode_implicit<MSISDN>(() => _decode_MSISDN)(_el); },
         "externalIdentifier": (_el: _Element): void => { externalIdentifier = $._decode_implicit<NAI>(() => _decode_NAI)(_el); },

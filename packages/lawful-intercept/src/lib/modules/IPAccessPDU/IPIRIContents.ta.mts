@@ -494,7 +494,7 @@ function _decode_IPIRIContents (el: _Element): IPIRIContents {
     let location: OPTIONAL<LI_PS_PDU.Location>;
     let pOPPortID: OPTIONAL<OCTET_STRING>;
     let framedRoutes: OPTIONAL<FramedRoute[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessEventType": (_el: _Element): void => { accessEventType = $._decode_implicit<AccessEventType>(() => _decode_AccessEventType)(_el); },
         "targetUsername": (_el: _Element): void => { targetUsername = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

@@ -151,7 +151,7 @@ function _decode_DataNodeIdentifier (el: _Element): DataNodeIdentifier {
     let dataNodeAddress: OPTIONAL<DataNodeAddress>;
     let logicalFunctionType: OPTIONAL<LogicalFunctionType>;
     let dataNodeName: OPTIONAL<PrintableString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "dataNodeAddress": (_el: _Element): void => { dataNodeAddress = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
         "logicalFunctionType": (_el: _Element): void => { logicalFunctionType = $._decode_implicit<LogicalFunctionType>(() => _decode_LogicalFunctionType)(_el); },

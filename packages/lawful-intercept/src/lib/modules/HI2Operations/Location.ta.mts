@@ -247,7 +247,7 @@ function _decode_Location (el: _Element): Location {
     let oldRAI: OPTIONAL<OCTET_STRING>;
     let tAI: OPTIONAL<OCTET_STRING>;
     let eCGI: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "e164-Number": (_el: _Element): void => {
             e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

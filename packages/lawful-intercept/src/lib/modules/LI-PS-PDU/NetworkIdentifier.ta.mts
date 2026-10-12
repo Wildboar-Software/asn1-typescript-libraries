@@ -142,7 +142,7 @@ function _decode_NetworkIdentifier (el: _Element): NetworkIdentifier {
     let operatorIdentifier!: OCTET_STRING;
     let networkElementIdentifier: OPTIONAL<OCTET_STRING>;
     let eTSI671NEID: OPTIONAL<HI2Operations.Network_Element_Identifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "operatorIdentifier": (_el: _Element): void => {
             operatorIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

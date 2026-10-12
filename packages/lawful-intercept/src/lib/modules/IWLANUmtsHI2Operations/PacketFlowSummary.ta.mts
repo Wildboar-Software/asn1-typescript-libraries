@@ -233,7 +233,7 @@ function _decode_PacketFlowSummary (el: _Element): PacketFlowSummary {
     let packetCount!: INTEGER;
     let sumOfPacketSizes!: INTEGER;
     let packetDataSummaryReason!: ReportReason;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sourceIPAddress": (_el: _Element): void => { sourceIPAddress = $._decode_implicit<IPAddress>(() => _decode_IPAddress)(_el); },
         "sourcePortNumber": (_el: _Element): void => {

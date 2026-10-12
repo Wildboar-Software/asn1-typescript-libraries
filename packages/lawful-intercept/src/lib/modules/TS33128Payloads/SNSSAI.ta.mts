@@ -153,7 +153,7 @@ function _decode_SNSSAI (el: _Element): SNSSAI {
     let sliceDifferentiator: OPTIONAL<OCTET_STRING>;
     let mappedHPLMNSliceServiceType: OPTIONAL<INTEGER>;
     let mappedHPLMNSliceDifferentiator: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sliceServiceType": (_el: _Element): void => {
             sliceServiceType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

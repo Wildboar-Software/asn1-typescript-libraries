@@ -153,7 +153,7 @@ function _decode_MMSParties (el: _Element): MMSParties {
     let cCAddresses: OPTIONAL<Addresses>;
     let bCCAddresses: OPTIONAL<Addresses>;
     let fromAddresses: OPTIONAL<From>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "toAddresses": (_el: _Element): void => { toAddresses = $._decode_implicit<Addresses>(() => _decode_Addresses)(_el); },
         "cCAddresses": (_el: _Element): void => { cCAddresses = $._decode_implicit<Addresses>(() => _decode_Addresses)(_el); },

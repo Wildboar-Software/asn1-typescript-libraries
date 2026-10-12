@@ -155,7 +155,7 @@ function _decode_EncryptionContainer (el: _Element): EncryptionContainer {
     let encryptionType!: EncryptionType;
     let encryptedPayload!: OCTET_STRING;
     let encryptedPayloadType: OPTIONAL<EncryptedPayloadType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "encryptionType": (_el: _Element): void => { encryptionType = $._decode_implicit<EncryptionType>(() => _decode_EncryptionType)(_el); },
         "encryptedPayload": (_el: _Element): void => { encryptedPayload = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

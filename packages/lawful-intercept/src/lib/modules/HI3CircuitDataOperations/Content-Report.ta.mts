@@ -215,7 +215,7 @@ function _decode_Content_Report (el: _Element): Content_Report {
     let initiator: OPTIONAL<Content_Report_initiator>;
     let content: OPTIONAL<Supplementary_Services>;
     let sMS_report: OPTIONAL<SMS_report>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);

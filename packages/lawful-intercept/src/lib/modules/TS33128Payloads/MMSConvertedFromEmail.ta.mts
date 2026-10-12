@@ -277,7 +277,7 @@ function _decode_MMSConvertedFromEmail (el: _Element): MMSConvertedFromEmail {
     let readReport: OPTIONAL<BOOLEAN>;
     let subject: OPTIONAL<MMSSubject>;
     let messageID: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = $._decode_implicit<MMSVersion>(() => _decode_MMSVersion)(_el); },
         "transactionID": (_el: _Element): void => { transactionID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

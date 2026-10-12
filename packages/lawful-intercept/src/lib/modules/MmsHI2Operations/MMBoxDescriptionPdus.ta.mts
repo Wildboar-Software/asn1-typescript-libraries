@@ -363,7 +363,7 @@ function _decode_MMBoxDescriptionPdus (el: _Element): MMBoxDescriptionPdus {
     let messageSize: OPTIONAL<INTEGER>;
     let contentLocation: OPTIONAL<ContentLocation>;
     let contentType: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mMSCorrelation": (_el: _Element): void => { mMSCorrelation = $._decode_implicit<MMSCorrelationNumber>(() => _decode_MMSCorrelationNumber)(_el); },
         "toAddresses": (_el: _Element): void => { toAddresses = $._decode_implicit<Addresses>(() => _decode_Addresses)(_el); },

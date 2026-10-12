@@ -157,7 +157,7 @@ function _decode_PASSporTHeader (el: _Element): PASSporTHeader {
     let algorithm!: UTF8String;
     let ppt: OPTIONAL<UTF8String>;
     let x5u!: UTF8String;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "type": (_el: _Element): void => { type_ = $._decode_implicit<JWSTokenType>(() => _decode_JWSTokenType)(_el); },
         "algorithm": (_el: _Element): void => { algorithm = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

@@ -143,7 +143,7 @@ function _decode_TNAPID (el: _Element): TNAPID {
     let sSID: OPTIONAL<SSID>;
     let bSSID: OPTIONAL<BSSID>;
     let civicAddress: OPTIONAL<CivicAddressBytes>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sSID": (_el: _Element): void => { sSID = $._decode_implicit<SSID>(() => _decode_SSID)(_el); },
         "bSSID": (_el: _Element): void => { bSSID = $._decode_implicit<BSSID>(() => _decode_BSSID)(_el); },

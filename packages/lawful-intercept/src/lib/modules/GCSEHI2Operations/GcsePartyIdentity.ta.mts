@@ -188,7 +188,7 @@ function _decode_GcsePartyIdentity (el: _Element): GcsePartyIdentity {
     let iMPI: OPTIONAL<IMSIdentity[]>;
     let proseUEID: OPTIONAL<ProSeUEID[]>;
     let otherID: OPTIONAL<OtherIdentity>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imei": (_el: _Element): void => {
             imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

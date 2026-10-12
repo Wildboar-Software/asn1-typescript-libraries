@@ -192,7 +192,7 @@ function _decode_Alarm_Indicator (el: _Element): Alarm_Indicator {
     let alarm_information!: OCTET_STRING;
     let lawfulInterceptionIdentifier: OPTIONAL<LawfulInterceptionIdentifier>;
     let national_HI1_ASN1parameters: OPTIONAL<National_HI1_ASN1parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);

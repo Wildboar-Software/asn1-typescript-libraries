@@ -184,7 +184,7 @@ function _decode_PointAltitudeUncertainty (el: _Element): PointAltitudeUncertain
     let deprecatedUncertaintyAltitude!: Uncertainty;
     let confidence!: Confidence;
     let uncertaintyAltitudeSBI: OPTIONAL<UncertaintySBI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "point": (_el: _Element): void => { point = $._decode_implicit<GeographicalCoordinates>(() => _decode_GeographicalCoordinates)(_el); },
         "altitude": (_el: _Element): void => { altitude = $._decode_implicit<Altitude>(() => _decode_Altitude)(_el); },

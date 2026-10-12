@@ -182,7 +182,7 @@ function _decode_AMFUEPolicyTransfer (el: _Element): AMFUEPolicyTransfer {
     let gPSI: OPTIONAL<GPSI>;
     let gUTI: OPTIONAL<FiveGGUTI>;
     let uEPolicy!: UEPolicy;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "sUCI": (_el: _Element): void => { sUCI = $._decode_implicit<SUCI>(() => _decode_SUCI)(_el); },

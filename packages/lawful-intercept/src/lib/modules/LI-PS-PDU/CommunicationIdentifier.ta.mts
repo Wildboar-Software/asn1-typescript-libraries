@@ -161,7 +161,7 @@ function _decode_CommunicationIdentifier (el: _Element): CommunicationIdentifier
     let communicationIdentityNumber: OPTIONAL<INTEGER>;
     let deliveryCountryCode: OPTIONAL<PrintableString>;
     let cINExtension: OPTIONAL<UmtsHI2Operations.CorrelationValues>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "networkIdentifier": (_el: _Element): void => { networkIdentifier = $._decode_implicit<NetworkIdentifier>(() => _decode_NetworkIdentifier)(_el); },
         "communicationIdentityNumber": (_el: _Element): void => {

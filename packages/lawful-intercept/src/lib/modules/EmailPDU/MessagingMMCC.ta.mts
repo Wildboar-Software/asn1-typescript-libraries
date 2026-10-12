@@ -156,7 +156,7 @@ function _decode_MessagingMMCC (el: _Element): MessagingMMCC {
     let event_identifier!: INTEGER;
     let content_identifier: OPTIONAL<INTEGER>;
     let content!: IPMultimediaPDU.IPMMCC;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "messaging-mm-cc-obj-id": (_el: _Element): void => { messaging_mm_cc_obj_id = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "event-identifier": (_el: _Element): void => {

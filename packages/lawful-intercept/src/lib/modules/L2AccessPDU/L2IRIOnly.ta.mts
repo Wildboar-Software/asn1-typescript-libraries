@@ -152,7 +152,7 @@ function _decode_L2IRIOnly (el: _Element): L2IRIOnly {
     let l2protocolInformation!: L2ProtocolInformation;
     let l2AggregatedNbrOfPackets: OPTIONAL<INTEGER>;
     let l2AggregatedNbrOfBytes: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "l2IRIOnlyObjId": (_el: _Element): void => { l2IRIOnlyObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "l2protocolInformation": (_el: _Element): void => { l2protocolInformation = $._decode_implicit<L2ProtocolInformation>(() => _decode_L2ProtocolInformation)(_el); },

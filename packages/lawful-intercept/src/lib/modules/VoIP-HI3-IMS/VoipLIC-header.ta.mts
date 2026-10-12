@@ -275,7 +275,7 @@ function _decode_VoipLIC_header (el: _Element): VoipLIC_header {
     let payload_description: OPTIONAL<Payload_description>;
     let networkIdentifier: OPTIONAL<Network_Identifier>;
     let pTCSessionInfo: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi3voipDomainId": (_el: _Element): void => { hi3voipDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lIID": (_el: _Element): void => { lIID = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },

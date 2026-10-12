@@ -212,7 +212,7 @@ function _decode_EPS_DSMIP_SpecificParameters (el: _Element): EPS_DSMIP_Specific
     let status: OPTIONAL<INTEGER>;
     let hSS_AAA_address: OPTIONAL<OCTET_STRING>;
     let targetPDN_GW_Address: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "lifetime": (_el: _Element): void => {
             lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

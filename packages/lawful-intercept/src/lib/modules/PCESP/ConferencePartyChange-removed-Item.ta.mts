@@ -135,7 +135,7 @@ function _decode_ConferencePartyChange_removed_Item (el: _Element): ConferencePa
     if (!_cached_decoder_for_ConferencePartyChange_removed_Item) { _cached_decoder_for_ConferencePartyChange_removed_Item = function (el: _Element): ConferencePartyChange_removed_Item {
     let partyId: OPTIONAL<PartyId[]>;
     let cCCId: OPTIONAL<CCCId>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "partyId": (_el: _Element): void => { partyId = $._decode_implicit<PartyId[]>(() => $._decodeSequenceOf<PartyId>(() => _decode_PartyId))(_el); },
         "cCCId": (_el: _Element): void => { cCCId = $._decode_explicit<CCCId>(() => _decode_CCCId)(_el); }

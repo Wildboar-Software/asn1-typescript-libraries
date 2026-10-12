@@ -1103,7 +1103,7 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
     let additionalCellIDs: OPTIONAL<AdditionalCellID[]>;
     let scefID: OPTIONAL<UTF8String>;
     let national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi2epsDomainId": (_el: _Element): void => { hi2epsDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },

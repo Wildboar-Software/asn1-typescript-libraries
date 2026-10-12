@@ -143,7 +143,7 @@ function _decode_AMFUEContextUpdate (el: _Element): AMFUEContextUpdate {
     let userIdentifiers!: UserIdentifiers;
     let rANUEContextModification: OPTIONAL<RANUEContextModification>;
     let rANDownlinkNASTransport: OPTIONAL<RANDownlinkNASTransport>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "rANUEContextModification": (_el: _Element): void => { rANUEContextModification = $._decode_implicit<RANUEContextModification>(() => _decode_RANUEContextModification)(_el); },

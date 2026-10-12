@@ -557,7 +557,7 @@ function _decode_SMFPDUSessionEstablishment (el: _Element): SMFPDUSessionEstabli
     let aNDSPRules: OPTIONAL<ANDSPRules>;
     let serviceLevelAAContainer: OPTIONAL<ServiceLevelAAContainer>;
     let servingSatelliteID: OPTIONAL<SatelliteID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "sUPIUnauthenticated": (_el: _Element): void => { sUPIUnauthenticated = $._decode_implicit<SUPIUnauthenticatedIndication>(() => _decode_SUPIUnauthenticatedIndication)(_el); },

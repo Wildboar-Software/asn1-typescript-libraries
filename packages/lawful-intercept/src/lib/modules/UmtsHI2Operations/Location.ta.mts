@@ -285,7 +285,7 @@ function _decode_Location (el: _Element): Location {
     let civicAddress: OPTIONAL<CivicAddress>;
     let operatorSpecificInfo: OPTIONAL<OCTET_STRING>;
     let uELocationTimestamp: OPTIONAL<Location_uELocationTimestamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "e164-Number": (_el: _Element): void => {
             e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

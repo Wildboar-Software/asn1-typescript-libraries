@@ -541,7 +541,7 @@ function _decode_EPS_GTPV2_SpecificParameters (el: _Element): EPS_GTPV2_Specific
     let proSeRemoteUeContextConnected: OPTIONAL<RemoteUeContextConnected>;
     let proSeRemoteUeContextDisconnected: OPTIONAL<RemoteUeContextDisconnected>;
     let secondaryRATUsageIndication: OPTIONAL<NULL>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pDNAddressAllocation": (_el: _Element): void => { pDNAddressAllocation = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "aPN": (_el: _Element): void => {

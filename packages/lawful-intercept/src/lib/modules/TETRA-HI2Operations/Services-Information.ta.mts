@@ -143,7 +143,7 @@ function _decode_Services_Information (el: _Element): Services_Information {
     let iSUP_parameters: OPTIONAL<ISUP_parameters>;
     let dSS1_parameters_codeset_0: OPTIONAL<DSS1_parameters_codeset_0>;
     let mAP_parameters: OPTIONAL<MAP_parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iSUP-parameters": (_el: _Element): void => { iSUP_parameters = $._decode_implicit<ISUP_parameters>(() => _decode_ISUP_parameters)(_el); },
         "dSS1-parameters-codeset-0": (_el: _Element): void => { dSS1_parameters_codeset_0 = $._decode_implicit<DSS1_parameters_codeset_0>(() => _decode_DSS1_parameters_codeset_0)(_el); },

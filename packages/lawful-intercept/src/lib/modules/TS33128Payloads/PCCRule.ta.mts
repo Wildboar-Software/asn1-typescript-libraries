@@ -327,7 +327,7 @@ function _decode_PCCRule (el: _Element): PCCRule {
     let sourceTrafficRouting: OPTIONAL<RouteToLocation>;
     let targetTrafficRouting: OPTIONAL<RouteToLocation>;
     let eASIPReplaceInfos: OPTIONAL<EASIPReplaceInfos>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pCCRuleID": (_el: _Element): void => { pCCRuleID = $._decode_implicit<PCCRuleID>(() => _decode_PCCRuleID)(_el); },
         "appId": (_el: _Element): void => { appId = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

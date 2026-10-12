@@ -168,7 +168,7 @@ function _decode_GSMLocation_geoCoordinates (el: _Element): GSMLocation_geoCoord
     let longitude!: PrintableString;
     let mapDatum: OPTIONAL<MapDatum> = GSMLocation_geoCoordinates._default_value_for_mapDatum;
     let azimuth: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "latitude": (_el: _Element): void => {
             latitude = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);

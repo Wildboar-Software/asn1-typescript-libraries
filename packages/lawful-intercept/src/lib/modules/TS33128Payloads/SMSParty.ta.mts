@@ -156,7 +156,7 @@ function _decode_SMSParty (el: _Element): SMSParty {
     let pEI: OPTIONAL<PEI>;
     let gPSI: OPTIONAL<GPSI>;
     let sMSAddress: OPTIONAL<SMSAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "pEI": (_el: _Element): void => { pEI = $._decode_explicit<PEI>(() => _decode_PEI)(_el); },

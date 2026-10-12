@@ -222,7 +222,7 @@ function _decode_SCEFPDNConnectionRelease (el: _Element): SCEFPDNConnectionRelea
     let uplinkVolume: OPTIONAL<INTEGER>;
     let downlinkVolume: OPTIONAL<INTEGER>;
     let releaseCause!: SCEFReleaseCause;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iMSI": (_el: _Element): void => { iMSI = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "mSISDN": (_el: _Element): void => { mSISDN = $._decode_implicit<MSISDN>(() => _decode_MSISDN)(_el); },

@@ -316,7 +316,7 @@ function _decode_PartyId (el: _Element): PartyId {
     let genericName: OPTIONAL<VisibleString>;
     let port: OPTIONAL<VisibleString>;
     let context: OPTIONAL<VisibleString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "reserved0": (_el: _Element): void => { reserved0 = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },
         "reserved1": (_el: _Element): void => { reserved1 = $._decode_implicit<NULL>(() => $._decodeNull)(_el); },

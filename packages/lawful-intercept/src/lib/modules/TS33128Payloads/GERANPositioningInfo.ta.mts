@@ -130,7 +130,7 @@ function _decode_GERANPositioningInfo (el: _Element): GERANPositioningInfo {
     if (!_cached_decoder_for_GERANPositioningInfo) { _cached_decoder_for_GERANPositioningInfo = function (el: _Element): GERANPositioningInfo {
     let gERANPositioningData: OPTIONAL<GERANPositioningData>;
     let gERANGANSSPositioningData: OPTIONAL<GERANGANSSPositioningData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gERANPositioningData": (_el: _Element): void => { gERANPositioningData = $._decode_implicit<GERANPositioningData>(() => _decode_GERANPositioningData)(_el); },
         "gERANGANSSPositioningData": (_el: _Element): void => { gERANGANSSPositioningData = $._decode_implicit<GERANGANSSPositioningData>(() => _decode_GERANGANSSPositioningData)(_el); }

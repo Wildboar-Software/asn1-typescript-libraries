@@ -195,7 +195,7 @@ function _decode_IntegrityCheck (el: _Element): IntegrityCheck {
     let dataType: OPTIONAL<DataType>;
     let checkValue!: OCTET_STRING;
     let hashAlgorithm: OPTIONAL<HashAlgorithm>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "includedSequenceNumbers": (_el: _Element): void => {
             includedSequenceNumbers = $._decode_implicit<INTEGER[]>(() => $._decodeSequenceOf<INTEGER>(() => $._decodeInteger))(_el);

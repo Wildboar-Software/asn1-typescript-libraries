@@ -269,7 +269,7 @@ function _decode_RCSMessage (el: _Element): RCSMessage {
     let messageID: OPTIONAL<IMDNMessageID>;
     let location: OPTIONAL<Location>;
     let messagePayload!: RCSPayload;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rCSTargetIdentities": (_el: _Element): void => {
             rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);

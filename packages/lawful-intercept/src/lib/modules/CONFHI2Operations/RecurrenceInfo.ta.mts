@@ -143,7 +143,7 @@ function _decode_RecurrenceInfo (el: _Element): RecurrenceInfo {
     let recurrenceStartDateAndTime: OPTIONAL<TimeStamp>;
     let recurrenceEndDateAndTime: OPTIONAL<TimeStamp>;
     let recurrencePattern: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "recurrenceStartDateAndTime": (_el: _Element): void => { recurrenceStartDateAndTime = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
         "recurrenceEndDateAndTime": (_el: _Element): void => { recurrenceEndDateAndTime = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },

@@ -213,7 +213,7 @@ function _decode_NWDAFEventsSubscription (el: _Element): NWDAFEventsSubscription
     let nWDAFEventsSubscription!: SBIType;
     let nWDAFEventsSubscriptionID: OPTIONAL<UTF8String>;
     let nWDAFEventsSubscriptionResponseCode!: NWDAFEventsSubscriptionResponseCode;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "nWDAFConsumerNFType": (_el: _Element): void => { nWDAFConsumerNFType = $._decode_implicit<NWDAFConsumerNFType>(() => _decode_NWDAFConsumerNFType)(_el); },

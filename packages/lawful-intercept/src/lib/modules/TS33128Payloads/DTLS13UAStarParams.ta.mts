@@ -180,7 +180,7 @@ function _decode_DTLS13UAStarParams (el: _Element): DTLS13UAStarParams {
     let clientSnKey: OPTIONAL<OCTET_STRING>;
     let serverSnKey: OPTIONAL<OCTET_STRING>;
     let connectionID: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tLS13CommonParams": (_el: _Element): void => { tLS13CommonParams = $._decode_implicit<TLS13UAStarParams>(() => _decode_TLS13UAStarParams)(_el); },
         "clientEpoch": (_el: _Element): void => { clientEpoch = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

@@ -120,7 +120,7 @@ export
 function _decode_SupplementaryLocationData (el: _Element): SupplementaryLocationData {
     if (!_cached_decoder_for_SupplementaryLocationData) { _cached_decoder_for_SupplementaryLocationData = function (el: _Element): SupplementaryLocationData {
     let azimuth: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "azimuth": (_el: _Element): void => {
             azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

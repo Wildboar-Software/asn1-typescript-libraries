@@ -343,7 +343,7 @@ function _decode_TLS12UAStarParams (el: _Element): TLS12UAStarParams {
     let sessionID!: OCTET_STRING;
     let tLSServerExtensions!: OCTET_STRING;
     let tLSClientExtensions: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "preMasterSecret": (_el: _Element): void => {
             preMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

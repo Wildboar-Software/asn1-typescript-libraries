@@ -153,7 +153,7 @@ function _decode_InformationAppliesTo (el: _Element): InformationAppliesTo {
     let payloadDirection!: LI_PS_PDU.PayloadDirection;
     let cCLinkID: OPTIONAL<INTEGER>;
     let firstPDUNumber: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "payloadDirection": (_el: _Element): void => { payloadDirection = $._decode_implicit<LI_PS_PDU.PayloadDirection>(() => LI_PS_PDU._decode_PayloadDirection)(_el); },
         "cCLinkID": (_el: _Element): void => {

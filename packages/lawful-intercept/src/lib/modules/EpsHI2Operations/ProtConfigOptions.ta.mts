@@ -134,7 +134,7 @@ function _decode_ProtConfigOptions (el: _Element): ProtConfigOptions {
     if (!_cached_decoder_for_ProtConfigOptions) { _cached_decoder_for_ProtConfigOptions = function (el: _Element): ProtConfigOptions {
     let ueToNetwork: OPTIONAL<OCTET_STRING>;
     let networkToUe: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ueToNetwork": (_el: _Element): void => {
             ueToNetwork = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

@@ -164,7 +164,7 @@ function _decode_IMSDataChannelTermination (el: _Element): IMSDataChannelTermina
     let calledIdentity: OPTIONAL<IMPU[]>;
     let sessionEventNotification: OPTIONAL<SBIType>;
     let mediaInstructionData: OPTIONAL<SBIType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "targetIdentity": (_el: _Element): void => { targetIdentity = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },
         "callingIdentity": (_el: _Element): void => { callingIdentity = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },

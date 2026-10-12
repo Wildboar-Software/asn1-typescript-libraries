@@ -285,7 +285,7 @@ function _decode_EASProfile (el: _Element): EASProfile {
     let eASServiceContSupport: OPTIONAL<ACRScenarios>;
     let appLocs: OPTIONAL<RouteToLocations>;
     let eASStatus: OPTIONAL<EASStatus>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eASID": (_el: _Element): void => { eASID = $._decode_implicit<EASID>(() => _decode_EASID)(_el); },
         "eASEndpoint": (_el: _Element): void => { eASEndpoint = $._decode_implicit<EASEndpoint>(() => _decode_EASEndpoint)(_el); },

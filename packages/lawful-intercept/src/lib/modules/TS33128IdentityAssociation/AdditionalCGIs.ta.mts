@@ -118,7 +118,7 @@ export
 function _decode_AdditionalCGIs (el: _Element): AdditionalCGIs {
     if (!_cached_decoder_for_AdditionalCGIs) { _cached_decoder_for_AdditionalCGIs = function (el: _Element): AdditionalCGIs {
     let additionalNCGIList: OPTIONAL<AdditionalNCGI[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "additionalNCGIList": (_el: _Element): void => {
             additionalNCGIList = $._decode_implicit<AdditionalNCGI[]>(() => $._decodeSequenceOf<AdditionalNCGI>(() => _decode_AdditionalNCGI))(_el);

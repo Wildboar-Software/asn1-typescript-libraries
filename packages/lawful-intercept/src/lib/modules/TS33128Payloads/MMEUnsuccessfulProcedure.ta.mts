@@ -201,7 +201,7 @@ function _decode_MMEUnsuccessfulProcedure (el: _Element): MMEUnsuccessfulProcedu
     let mSISDN: OPTIONAL<MSISDN>;
     let gUTI: OPTIONAL<GUTI>;
     let location: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failedProcedureType": (_el: _Element): void => { failedProcedureType = $._decode_implicit<MMEFailedProcedureType>(() => _decode_MMEFailedProcedureType)(_el); },
         "failureCause": (_el: _Element): void => { failureCause = $._decode_explicit<MMEFailureCause>(() => _decode_MMEFailureCause)(_el); },

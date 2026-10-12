@@ -143,7 +143,7 @@ function _decode_GlobalRANNodeID (el: _Element): GlobalRANNodeID {
     let pLMNID!: PLMNID;
     let aNNodeID!: ANNodeID;
     let nID: OPTIONAL<NID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pLMNID": (_el: _Element): void => { pLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "aNNodeID": (_el: _Element): void => { aNNodeID = $._decode_explicit<ANNodeID>(() => _decode_ANNodeID)(_el); },

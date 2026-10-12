@@ -209,7 +209,7 @@ function _decode_MessagingCC (el: _Element): MessagingCC {
     let content_type!: OCTET_STRING;
     let content!: OCTET_STRING;
     let content_transfer_encoding: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "messaging-cc-obj-id": (_el: _Element): void => { messaging_cc_obj_id = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "event-identifier": (_el: _Element): void => {

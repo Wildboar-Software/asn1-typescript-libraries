@@ -130,7 +130,7 @@ function _decode_IPTruncatedPacket (el: _Element): IPTruncatedPacket {
     if (!_cached_decoder_for_IPTruncatedPacket) { _cached_decoder_for_IPTruncatedPacket = function (el: _Element): IPTruncatedPacket {
     let truncatedPacket!: OCTET_STRING;
     let originalLength: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "truncatedPacket": (_el: _Element): void => { truncatedPacket = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "originalLength": (_el: _Element): void => { originalLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }

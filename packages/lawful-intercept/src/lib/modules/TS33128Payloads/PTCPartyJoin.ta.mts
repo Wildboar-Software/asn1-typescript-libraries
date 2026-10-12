@@ -197,7 +197,7 @@ function _decode_PTCPartyJoin (el: _Element): PTCPartyJoin {
     let pTCParticipantPresenceStatus: OPTIONAL<MultipleParticipantPresenceStatus>;
     let pTCMediaStreamAvail: OPTIONAL<BOOLEAN>;
     let pTCBearerCapability: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pTCTargetInformation": (_el: _Element): void => { pTCTargetInformation = $._decode_implicit<PTCTargetInformation>(() => _decode_PTCTargetInformation)(_el); },
         "pTCDirection": (_el: _Element): void => { pTCDirection = $._decode_implicit<Direction>(() => _decode_Direction)(_el); },

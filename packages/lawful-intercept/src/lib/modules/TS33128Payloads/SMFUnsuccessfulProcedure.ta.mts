@@ -405,7 +405,7 @@ function _decode_SMFUnsuccessfulProcedure (el: _Element): SMFUnsuccessfulProcedu
     let location: OPTIONAL<Location>;
     let ePSPDNUnsuccessfulProcedure: OPTIONAL<EPSPDNUnsuccessfulProcedure>;
     let alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failedProcedureType": (_el: _Element): void => { failedProcedureType = $._decode_implicit<SMFFailedProcedureType>(() => _decode_SMFFailedProcedureType)(_el); },
         "failureCause": (_el: _Element): void => { failureCause = $._decode_implicit<FiveGSMCause>(() => _decode_FiveGSMCause)(_el); },

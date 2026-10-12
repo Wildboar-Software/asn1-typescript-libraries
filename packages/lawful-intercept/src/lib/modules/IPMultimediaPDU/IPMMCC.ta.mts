@@ -192,7 +192,7 @@ function _decode_IPMMCC (el: _Element): IPMMCC {
     let frameType: OPTIONAL<FrameType>;
     let streamIdentifier: OPTIONAL<OCTET_STRING>;
     let mMCCprotocol: OPTIONAL<MMCCprotocol>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iPMMCCObjId": (_el: _Element): void => { iPMMCCObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "mMCCContents": (_el: _Element): void => { mMCCContents = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

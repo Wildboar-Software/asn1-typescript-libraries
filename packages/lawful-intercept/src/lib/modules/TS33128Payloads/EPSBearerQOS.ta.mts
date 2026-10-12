@@ -176,7 +176,7 @@ function _decode_EPSBearerQOS (el: _Element): EPSBearerQOS {
     let guaranteedUplinkBitRate: OPTIONAL<BitrateBinKBPS>;
     let guaranteedDownlinkBitRate: OPTIONAL<BitrateBinKBPS>;
     let priorityLevel: OPTIONAL<EPSQOSPriority>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "qCI": (_el: _Element): void => { qCI = $._decode_implicit<QCI>(() => _decode_QCI)(_el); },
         "maximumUplinkBitRate": (_el: _Element): void => { maximumUplinkBitRate = $._decode_implicit<BitrateBinKBPS>(() => _decode_BitrateBinKBPS)(_el); },

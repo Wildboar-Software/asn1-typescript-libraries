@@ -223,7 +223,7 @@ function _decode_PTCAccessPolicy (el: _Element): PTCAccessPolicy {
     let pTCGroupAuthRule: OPTIONAL<PTCGroupAuthRule>;
     let pTCContactID: OPTIONAL<PTCTargetInformation>;
     let pTCAccessPolicyFailure: OPTIONAL<PTCAccessPolicyFailure>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pTCTargetInformation": (_el: _Element): void => { pTCTargetInformation = $._decode_implicit<PTCTargetInformation>(() => _decode_PTCTargetInformation)(_el); },
         "pTCDirection": (_el: _Element): void => { pTCDirection = $._decode_implicit<Direction>(() => _decode_Direction)(_el); },

@@ -143,7 +143,7 @@ function _decode_FTEID (el: _Element): FTEID {
     let tEID!: INTEGER;
     let iPv4Address: OPTIONAL<IPv4Address>;
     let iPv6Address: OPTIONAL<IPv6Address>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tEID": (_el: _Element): void => {
             tEID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

@@ -230,7 +230,7 @@ function _decode_RCSSessionEstablishment (el: _Element): RCSSessionEstablishment
     let sessionDirection!: Direction;
     let rCSSessionMessage!: RCSSIPSessionMessage;
     let location: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rCSTargetIdentities": (_el: _Element): void => {
             rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);

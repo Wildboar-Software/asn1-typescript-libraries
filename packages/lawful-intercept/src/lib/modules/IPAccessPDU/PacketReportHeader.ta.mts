@@ -116,7 +116,7 @@ export
 function _decode_PacketReportHeader (el: _Element): PacketReportHeader {
     if (!_cached_decoder_for_PacketReportHeader) { _cached_decoder_for_PacketReportHeader = function (el: _Element): PacketReportHeader {
     let header!: OCTET_STRING;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "header": (_el: _Element): void => { header = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
     };

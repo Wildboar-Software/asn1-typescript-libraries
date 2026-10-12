@@ -141,7 +141,7 @@ function _decode_Slice (el: _Element): Slice {
     let allowedNSSAI: OPTIONAL<NSSAI>;
     let configuredNSSAI: OPTIONAL<NSSAI>;
     let rejectedNSSAI: OPTIONAL<RejectedNSSAI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "allowedNSSAI": (_el: _Element): void => { allowedNSSAI = $._decode_implicit<NSSAI>(() => _decode_NSSAI)(_el); },
         "configuredNSSAI": (_el: _Element): void => { configuredNSSAI = $._decode_implicit<NSSAI>(() => _decode_NSSAI)(_el); },

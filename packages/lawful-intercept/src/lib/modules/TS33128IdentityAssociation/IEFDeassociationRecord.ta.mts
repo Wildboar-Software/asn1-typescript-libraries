@@ -179,7 +179,7 @@ function _decode_IEFDeassociationRecord (el: _Element): IEFDeassociationRecord {
     let nCGI!: NCGI;
     let nCGITime!: GeneralizedTime;
     let additionalCGIs: OPTIONAL<AdditionalCGIs>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "fiveGGUTI": (_el: _Element): void => { fiveGGUTI = $._decode_implicit<FiveGGUTI>(() => _decode_FiveGGUTI)(_el); },

@@ -174,7 +174,7 @@ function _decode_PositioningMethodAndUsage (el: _Element): PositioningMethodAndU
     let mode!: PositioningMode;
     let usage!: Usage;
     let methodCode: OPTIONAL<MethodCode>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "method": (_el: _Element): void => { method = $._decode_implicit<PositioningMethod>(() => _decode_PositioningMethod)(_el); },
         "mode": (_el: _Element): void => { mode = $._decode_implicit<PositioningMode>(() => _decode_PositioningMode)(_el); },

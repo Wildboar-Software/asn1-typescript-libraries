@@ -213,7 +213,7 @@ function _decode_EESEASDiscovery (el: _Element): EESEASDiscovery {
     let eASTargetDNAIs: OPTIONAL<DNAIs>;
     let discoveredEAS: OPTIONAL<DiscoveredEAS>;
     let failureResponse: OPTIONAL<FailureResponse>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eECID": (_el: _Element): void => { eECID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },

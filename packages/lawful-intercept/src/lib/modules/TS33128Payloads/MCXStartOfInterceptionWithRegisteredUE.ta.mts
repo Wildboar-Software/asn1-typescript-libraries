@@ -167,7 +167,7 @@ function _decode_MCXStartOfInterceptionWithRegisteredUE (el: _Element): MCXStart
     let sIPRegistrationRequest!: SIPMessage;
     let sIPRegistrationResponse!: SIPMessage;
     let location: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mCServiceIdentities": (_el: _Element): void => {
             mCServiceIdentities = $._decode_implicit<MCServiceIdentity[]>(() => $._decodeSequenceOf<MCServiceIdentity>(() => _decode_MCServiceIdentity))(_el);

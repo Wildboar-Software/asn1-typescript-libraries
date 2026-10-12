@@ -190,7 +190,7 @@ function _decode_NWDAFAnalyticsInfoQuery (el: _Element): NWDAFAnalyticsInfoQuery
     let nWDAFEventFilter: OPTIONAL<SBIType>;
     let nWDAFAnalyticsData: OPTIONAL<SBIType>;
     let nWDAFAnalyticsInfoResponseCode!: NWDAFAnalyticsInfoResponseCode;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "nWDAFEvent": (_el: _Element): void => { nWDAFEvent = $._decode_implicit<NWDAFEvent>(() => _decode_NWDAFEvent)(_el); },

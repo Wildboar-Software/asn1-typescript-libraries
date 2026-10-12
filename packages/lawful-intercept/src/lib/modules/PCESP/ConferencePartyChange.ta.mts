@@ -223,7 +223,7 @@ function _decode_ConferencePartyChange (el: _Element): ConferencePartyChange {
     let communicating: OPTIONAL<ConferencePartyChange_communicating_Item[]>;
     let removed: OPTIONAL<ConferencePartyChange_removed_Item[]>;
     let joined: OPTIONAL<ConferencePartyChange_joined_Item[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "caseId": (_el: _Element): void => { caseId = $._decode_implicit<CaseId>(() => _decode_CaseId)(_el); },
         "accessingElementId": (_el: _Element): void => { accessingElementId = $._decode_implicit<AccessingElementId>(() => _decode_AccessingElementId)(_el); },

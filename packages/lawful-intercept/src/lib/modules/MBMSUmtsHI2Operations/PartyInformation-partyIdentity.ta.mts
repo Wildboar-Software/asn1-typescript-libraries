@@ -122,7 +122,7 @@ export
 function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation_partyIdentity {
     if (!_cached_decoder_for_PartyInformation_partyIdentity) { _cached_decoder_for_PartyInformation_partyIdentity = function (el: _Element): PartyInformation_partyIdentity {
     let imsi: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => {
             imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

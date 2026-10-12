@@ -162,7 +162,7 @@ function _decode_PDSRInformation (el: _Element): PDSRInformation {
     let lastPacketTimestamp!: GeneralizedTime;
     let packetCount!: INTEGER;
     let byteCount!: INTEGER;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "summaryTrigger": (_el: _Element): void => { summaryTrigger = $._decode_implicit<PDSRSummaryTrigger>(() => _decode_PDSRSummaryTrigger)(_el); },
         "firstPacketTimestamp": (_el: _Element): void => { firstPacketTimestamp = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },

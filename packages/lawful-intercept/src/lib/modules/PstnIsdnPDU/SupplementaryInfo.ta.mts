@@ -237,7 +237,7 @@ function _decode_SupplementaryInfo (el: _Element): SupplementaryInfo {
     let copyOfSDPMessage: OPTIONAL<OCTET_STRING>;
     let frameType: OPTIONAL<FrameType>;
     let alternateProtocol: OPTIONAL<AlternateProtocol>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "informationAppliesTo": (_el: _Element): void => { informationAppliesTo = $._decode_implicit<InformationAppliesTo>(() => _decode_InformationAppliesTo)(_el); },
         "mediaFormat": (_el: _Element): void => {

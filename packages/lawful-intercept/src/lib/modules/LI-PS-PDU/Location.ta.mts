@@ -168,7 +168,7 @@ function _decode_Location (el: _Element): Location {
     let wlanLocationAttributes: OPTIONAL<WlanLocationAttributes>;
     let eTSI671HI2Location: OPTIONAL<HI2Operations.Location>;
     let threeGPP33128UserLocation: OPTIONAL<TS33128Payloads.UserLocation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "umtsHI2Location": (_el: _Element): void => { umtsHI2Location = $._decode_implicit<UmtsHI2Operations.Location>(() => UmtsHI2Operations._decode_Location)(_el); },
         "epsLocation": (_el: _Element): void => { epsLocation = $._decode_implicit<EpsHI2Operations.EPSLocation>(() => EpsHI2Operations._decode_EPSLocation)(_el); },

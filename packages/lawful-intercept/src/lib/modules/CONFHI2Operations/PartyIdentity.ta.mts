@@ -132,7 +132,7 @@ function _decode_PartyIdentity (el: _Element): PartyIdentity {
     if (!_cached_decoder_for_PartyIdentity) { _cached_decoder_for_PartyIdentity = function (el: _Element): PartyIdentity {
     let iMPU: OPTIONAL<IMSIdentity[]>;
     let iMPI: OPTIONAL<IMSIdentity[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iMPU": (_el: _Element): void => { iMPU = $._decode_implicit<IMSIdentity[]>(() => $._decodeSetOf<IMSIdentity>(() => _decode_IMSIdentity))(_el); },
         "iMPI": (_el: _Element): void => { iMPI = $._decode_implicit<IMSIdentity[]>(() => $._decodeSetOf<IMSIdentity>(() => _decode_IMSIdentity))(_el); }

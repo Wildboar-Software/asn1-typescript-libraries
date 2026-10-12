@@ -130,7 +130,7 @@ function _decode_ResponseStatusText (el: _Element): ResponseStatusText {
     if (!_cached_decoder_for_ResponseStatusText) { _cached_decoder_for_ResponseStatusText = function (el: _Element): ResponseStatusText {
     let statusCount: OPTIONAL<EncodedString>;
     let actualResponseStatusText!: EncodedString;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "statusCount": (_el: _Element): void => { statusCount = $._decode_explicit<EncodedString>(() => _decode_EncodedString)(_el); },
         "actualResponseStatusText": (_el: _Element): void => { actualResponseStatusText = $._decode_explicit<EncodedString>(() => _decode_EncodedString)(_el); }

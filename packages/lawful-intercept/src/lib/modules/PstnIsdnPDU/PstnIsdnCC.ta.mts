@@ -157,7 +157,7 @@ function _decode_PstnIsdnCC (el: _Element): PstnIsdnCC {
     let pstnIsdnCCContents!: OCTET_STRING;
     let cCLinkID: OPTIONAL<INTEGER>;
     let supplementaryInfo: OPTIONAL<SupplementaryInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pstnIsdnCCObjId": (_el: _Element): void => { pstnIsdnCCObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "pstnIsdnCCContents": (_el: _Element): void => { pstnIsdnCCContents = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

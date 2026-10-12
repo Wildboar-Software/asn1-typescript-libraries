@@ -156,7 +156,7 @@ function _decode_SubjectSignal_signal (el: _Element): SubjectSignal_signal {
     let dialedDigits: OPTIONAL<VisibleString>;
     let featureKey: OPTIONAL<VisibleString>;
     let otherSignalingInformation: OPTIONAL<VisibleString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "switchhookFlash": (_el: _Element): void => { switchhookFlash = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
         "dialedDigits": (_el: _Element): void => { dialedDigits = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },

@@ -223,7 +223,7 @@ function _decode_SUCI (el: _Element): SUCI {
     let routingIndicatorLength: OPTIONAL<INTEGER>;
     let sUPIType: OPTIONAL<SUPIType>;
     let homeNetworkIdentifier: OPTIONAL<HomeNetworkIdentifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mCC": (_el: _Element): void => { mCC = $._decode_implicit<MCC>(() => _decode_MCC)(_el); },
         "mNC": (_el: _Element): void => { mNC = $._decode_implicit<MNC>(() => _decode_MNC)(_el); },

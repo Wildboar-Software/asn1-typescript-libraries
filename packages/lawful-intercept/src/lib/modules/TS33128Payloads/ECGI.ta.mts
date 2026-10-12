@@ -143,7 +143,7 @@ function _decode_ECGI (el: _Element): ECGI {
     let pLMNID!: PLMNID;
     let eUTRACellID!: EUTRACellID;
     let nID: OPTIONAL<NID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pLMNID": (_el: _Element): void => { pLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "eUTRACellID": (_el: _Element): void => { eUTRACellID = $._decode_implicit<EUTRACellID>(() => _decode_EUTRACellID)(_el); },

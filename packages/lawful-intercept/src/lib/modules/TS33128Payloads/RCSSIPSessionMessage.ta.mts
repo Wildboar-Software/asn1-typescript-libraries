@@ -168,7 +168,7 @@ function _decode_RCSSIPSessionMessage (el: _Element): RCSSIPSessionMessage {
     let sIPMessage!: IMSPayload;
     let rCSSessionResult!: RCSSessionResult;
     let mSRPPathInfo: OPTIONAL<MSRPPath>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sessionLeg": (_el: _Element): void => { sessionLeg = $._decode_implicit<RCSSessionLeg>(() => _decode_RCSSessionLeg)(_el); },
         "sIPMessage": (_el: _Element): void => { sIPMessage = $._decode_explicit<IMSPayload>(() => _decode_IMSPayload)(_el); },

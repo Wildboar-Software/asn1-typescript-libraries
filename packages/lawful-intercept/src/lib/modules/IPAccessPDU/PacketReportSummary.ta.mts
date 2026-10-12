@@ -187,7 +187,7 @@ function _decode_PacketReportSummary (el: _Element): PacketReportSummary {
     let byteCount: OPTIONAL<INTEGER>;
     let firstTimestamp: OPTIONAL<GeneralizedTime>;
     let lastTimestamp: OPTIONAL<GeneralizedTime>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "header": (_el: _Element): void => { header = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "indications": (_el: _Element): void => { indications = $._decode_implicit<PacketReportIndications>(() => _decode_PacketReportIndications)(_el); },

@@ -214,7 +214,7 @@ function _decode_EESStartOfInterceptionWithRegisteredEEC (el: _Element): EESStar
     let srcEESID: OPTIONAL<UTF8String>;
     let unfulfilledACProfiles: OPTIONAL<UnfulfilledACProfiles>;
     let timeOfRegistration: OPTIONAL<Timestamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eECID": (_el: _Element): void => { eECID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },

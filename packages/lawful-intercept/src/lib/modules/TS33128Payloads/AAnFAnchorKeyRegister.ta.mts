@@ -143,7 +143,7 @@ function _decode_AAnFAnchorKeyRegister (el: _Element): AAnFAnchorKeyRegister {
     let aKID!: NAI;
     let sUPI!: SUPI;
     let kAKMA: OPTIONAL<KAKMA>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aKID": (_el: _Element): void => { aKID = $._decode_implicit<NAI>(() => _decode_NAI)(_el); },
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },

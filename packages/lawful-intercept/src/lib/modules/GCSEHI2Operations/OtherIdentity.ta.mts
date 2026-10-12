@@ -132,7 +132,7 @@ function _decode_OtherIdentity (el: _Element): OtherIdentity {
     if (!_cached_decoder_for_OtherIdentity) { _cached_decoder_for_OtherIdentity = function (el: _Element): OtherIdentity {
     let otherIdentityEncoding: OPTIONAL<UTF8String>;
     let otherIDInfo: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "otherIdentityEncoding": (_el: _Element): void => { otherIdentityEncoding = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "otherIDInfo": (_el: _Element): void => { otherIDInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

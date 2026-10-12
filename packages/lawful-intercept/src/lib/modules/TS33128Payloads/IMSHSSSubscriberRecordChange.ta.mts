@@ -168,7 +168,7 @@ function _decode_IMSHSSSubscriberRecordChange (el: _Element): IMSHSSSubscriberRe
     let mSISDNs: OPTIONAL<MSISDN[]>;
     let iMEI: OPTIONAL<IMEI>;
     let previousIMEI: OPTIONAL<IMEI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hSSIdentities": (_el: _Element): void => { hSSIdentities = $._decode_implicit<HSSIdentities[]>(() => $._decodeSequenceOf<HSSIdentities>(() => _decode_HSSIdentities))(_el); },
         "iMSProfileData": (_el: _Element): void => { iMSProfileData = $._decode_implicit<SBIType>(() => _decode_SBIType)(_el); },

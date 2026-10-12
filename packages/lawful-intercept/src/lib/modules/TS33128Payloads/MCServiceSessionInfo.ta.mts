@@ -173,7 +173,7 @@ function _decode_MCServiceSessionInfo (el: _Element): MCServiceSessionInfo {
     let sessionType!: MCServiceSessionType;
     let groupSessionType: OPTIONAL<MCServiceGroupSessionType>;
     let establishmentType!: MCServiceEstablishmentType;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sessionURI": (_el: _Element): void => { sessionURI = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "sessionType": (_el: _Element): void => { sessionType = $._decode_implicit<MCServiceSessionType>(() => _decode_MCServiceSessionType)(_el); },

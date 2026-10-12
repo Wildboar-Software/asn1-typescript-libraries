@@ -571,7 +571,7 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
     let extendedLocParameters: OPTIONAL<ExtendedLocParameters>;
     let locationErrorCode: OPTIONAL<LocationErrorCode>;
     let national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi2CSDomainId": (_el: _Element): void => { hi2CSDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "iRIversion": (_el: _Element): void => { iRIversion = $._decode_implicit<IRI_Parameters_iRIversion>(() => _decode_IRI_Parameters_iRIversion)(_el); },

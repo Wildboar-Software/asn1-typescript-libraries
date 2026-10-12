@@ -147,7 +147,7 @@ function _decode_Daytime (el: _Element): Daytime {
     let daysOfWeek: OPTIONAL<Day>;
     let timeOfDayStart: OPTIONAL<Timestamp>;
     let timeOfDayEnd: OPTIONAL<Timestamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "daysOfWeek": (_el: _Element): void => { daysOfWeek = $._decode_implicit<Day>(() => _decode_Day)(_el); },
         "timeOfDayStart": (_el: _Element): void => { timeOfDayStart = $._decode_implicit<Timestamp>(() => _decode_Timestamp)(_el); },

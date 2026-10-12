@@ -288,7 +288,7 @@ function _decode_PDSummaryReport (el: _Element): PDSummaryReport {
     let packetCount!: INTEGER;
     let byteCount!: INTEGER;
     let useSessionTrigger: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pDUSessionID": (_el: _Element): void => { pDUSessionID = $._decode_implicit<PDUSessionID>(() => _decode_PDUSessionID)(_el); },
         "sourceIPAddress": (_el: _Element): void => { sourceIPAddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(_el); },

@@ -183,7 +183,7 @@ function _decode_PTCPartyHold (el: _Element): PTCPartyHold {
     let pTCParticipants: OPTIONAL<PTCTargetInformation[]>;
     let pTCHoldID!: PTCTargetInformation[];
     let pTCHoldRetrieveInd!: BOOLEAN;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pTCTargetInformation": (_el: _Element): void => { pTCTargetInformation = $._decode_implicit<PTCTargetInformation>(() => _decode_PTCTargetInformation)(_el); },
         "pTCDirection": (_el: _Element): void => { pTCDirection = $._decode_implicit<Direction>(() => _decode_Direction)(_el); },

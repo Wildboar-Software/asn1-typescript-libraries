@@ -253,7 +253,7 @@ function _decode_AMFUnsuccessfulProcedure (el: _Element): AMFUnsuccessfulProcedu
     let location: OPTIONAL<Location>;
     let additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
     let alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failedProcedureType": (_el: _Element): void => { failedProcedureType = $._decode_implicit<AMFFailedProcedureType>(() => _decode_AMFFailedProcedureType)(_el); },
         "failureCause": (_el: _Element): void => { failureCause = $._decode_explicit<AMFFailureCause>(() => _decode_AMFFailureCause)(_el); },

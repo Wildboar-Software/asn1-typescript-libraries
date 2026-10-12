@@ -129,7 +129,7 @@ function _decode_IMSCCUnavailable (el: _Element): IMSCCUnavailable {
     if (!_cached_decoder_for_IMSCCUnavailable) { _cached_decoder_for_IMSCCUnavailable = function (el: _Element): IMSCCUnavailable {
     let cCUnavailableReason!: UTF8String;
     let sDPState: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cCUnavailableReason": (_el: _Element): void => { cCUnavailableReason = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "sDPState": (_el: _Element): void => { sDPState = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

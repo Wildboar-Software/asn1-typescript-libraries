@@ -130,7 +130,7 @@ function _decode_GTPTunnelInfo (el: _Element): GTPTunnelInfo {
     if (!_cached_decoder_for_GTPTunnelInfo) { _cached_decoder_for_GTPTunnelInfo = function (el: _Element): GTPTunnelInfo {
     let fiveGSGTPTunnels: OPTIONAL<FiveGSGTPTunnels>;
     let ePSGTPTunnels: OPTIONAL<EPSGTPTunnels>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "fiveGSGTPTunnels": (_el: _Element): void => { fiveGSGTPTunnels = $._decode_implicit<FiveGSGTPTunnels>(() => _decode_FiveGSGTPTunnels)(_el); },
         "ePSGTPTunnels": (_el: _Element): void => { ePSGTPTunnels = $._decode_implicit<EPSGTPTunnels>(() => _decode_EPSGTPTunnels)(_el); }

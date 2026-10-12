@@ -252,7 +252,7 @@ function _decode_PSHeader (el: _Element): PSHeader {
     let timeStampQualifier: OPTIONAL<TimeStampQualifier>;
     let extendedInterceptionPointID: OPTIONAL<OCTET_STRING>;
     let networkFunctionIdentifier: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "li-psDomainId": (_el: _Element): void => { li_psDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },

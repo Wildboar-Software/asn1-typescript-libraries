@@ -267,7 +267,7 @@ function _decode_EPS_PMIP_SpecificParameters (el: _Element): EPS_PMIP_SpecificPa
     let servingNetwork: OPTIONAL<OCTET_STRING>;
     let dHCPv4AddressAllocationInd: OPTIONAL<OCTET_STRING>;
     let ePSlocationOfTheTarget: OPTIONAL<EPSLocation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "lifetime": (_el: _Element): void => {
             lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

@@ -243,7 +243,7 @@ function _decode_UMTS_Content_Report (el: _Element): UMTS_Content_Report {
     let initiator: OPTIONAL<UMTS_Content_Report_initiator>;
     let content: OPTIONAL<Supplementary_Services>;
     let sMS_report: OPTIONAL<SMS_report>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi3CSDomainId": (_el: _Element): void => { hi3CSDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "version": (_el: _Element): void => { version = $._decode_implicit<UMTS_Content_Report_version>(() => _decode_UMTS_Content_Report_version)(_el); },

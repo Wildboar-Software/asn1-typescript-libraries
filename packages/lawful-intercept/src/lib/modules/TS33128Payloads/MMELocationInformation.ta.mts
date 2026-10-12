@@ -219,7 +219,7 @@ function _decode_MMELocationInformation (el: _Element): MMELocationInformation {
     let userCSGInformation: OPTIONAL<UserCSGInformation>;
     let eNbID: OPTIONAL<ENbID>;
     let additionalCellIDs: OPTIONAL<CellInformation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eCGI": (_el: _Element): void => { eCGI = $._decode_implicit<ECGI>(() => _decode_ECGI)(_el); },
         "tAI": (_el: _Element): void => { tAI = $._decode_implicit<TAI>(() => _decode_TAI)(_el); },

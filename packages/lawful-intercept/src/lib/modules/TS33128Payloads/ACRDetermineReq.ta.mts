@@ -143,7 +143,7 @@ function _decode_ACRDetermineReq (el: _Element): ACRDetermineReq {
     let eASID: OPTIONAL<EASID>;
     let aCID: OPTIONAL<ACID>;
     let sEASEndpoint!: EASEndpoint;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eASID": (_el: _Element): void => { eASID = $._decode_implicit<EASID>(() => _decode_EASID)(_el); },
         "aCID": (_el: _Element): void => { aCID = $._decode_implicit<ACID>(() => _decode_ACID)(_el); },

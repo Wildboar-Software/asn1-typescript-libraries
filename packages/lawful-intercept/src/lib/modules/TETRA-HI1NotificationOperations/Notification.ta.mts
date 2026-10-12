@@ -191,7 +191,7 @@ function _decode_Notification (el: _Element): Notification {
     let timeStamp!: TimeStamp;
     let location: OPTIONAL<TETRACGIType>;
     let national_HI1_ASN1parameters: OPTIONAL<National_HI1_ASN1parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);

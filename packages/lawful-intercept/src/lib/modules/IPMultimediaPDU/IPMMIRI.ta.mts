@@ -157,7 +157,7 @@ function _decode_IPMMIRI (el: _Element): IPMMIRI {
     let iPMMIRIContents!: IPIRIContents;
     let targetLocation: OPTIONAL<LI_PS_PDU.Location>;
     let additionalSignalling: OPTIONAL<AdditionalSignalling[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iPMMIRIObjId": (_el: _Element): void => { iPMMIRIObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "iPMMIRIContents": (_el: _Element): void => { iPMMIRIContents = $._decode_explicit<IPIRIContents>(() => _decode_IPIRIContents)(_el); },

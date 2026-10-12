@@ -207,7 +207,7 @@ function _decode_UDMAuthenticationInfoRequest (el: _Element): UDMAuthenticationI
     let aUSFInstanceID: OPTIONAL<NFID>;
     let cellCAGInfo: OPTIONAL<CAGID>;
     let n5GCIndicator: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "infoRequestType": (_el: _Element): void => { infoRequestType = $._decode_implicit<UDMInfoRequestType>(() => _decode_UDMInfoRequestType)(_el); },
         "rGAuthCtx": (_el: _Element): void => {

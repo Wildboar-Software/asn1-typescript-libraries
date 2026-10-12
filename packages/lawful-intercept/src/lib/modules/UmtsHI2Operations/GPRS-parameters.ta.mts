@@ -175,7 +175,7 @@ function _decode_GPRS_parameters (el: _Element): GPRS_parameters {
     let pDP_type: OPTIONAL<OCTET_STRING>;
     let nSAPI: OPTIONAL<OCTET_STRING>;
     let additionalIPaddress: OPTIONAL<DataNodeAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pDP-address-allocated-to-the-target": (_el: _Element): void => { pDP_address_allocated_to_the_target = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
         "aPN": (_el: _Element): void => {

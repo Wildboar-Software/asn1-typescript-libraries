@@ -142,7 +142,7 @@ function _decode_EMM5GMMStatus (el: _Element): EMM5GMMStatus {
     if (!_cached_decoder_for_EMM5GMMStatus) { _cached_decoder_for_EMM5GMMStatus = function (el: _Element): EMM5GMMStatus {
     let eMMRegStatus: OPTIONAL<EMMRegStatus>;
     let fiveGMMStatus: OPTIONAL<FiveGMMStatus>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eMMRegStatus": (_el: _Element): void => { eMMRegStatus = $._decode_implicit<EMMRegStatus>(() => _decode_EMMRegStatus)(_el); },
         "fiveGMMStatus": (_el: _Element): void => { fiveGMMStatus = $._decode_implicit<FiveGMMStatus>(() => _decode_FiveGMMStatus)(_el); }

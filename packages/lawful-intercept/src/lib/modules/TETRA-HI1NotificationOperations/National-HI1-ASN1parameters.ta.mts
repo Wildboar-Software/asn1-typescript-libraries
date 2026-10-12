@@ -143,7 +143,7 @@ function _decode_National_HI1_ASN1parameters (el: _Element): National_HI1_ASN1pa
     if (!_cached_decoder_for_National_HI1_ASN1parameters) { _cached_decoder_for_National_HI1_ASN1parameters = function (el: _Element): National_HI1_ASN1parameters {
     let domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     let countryCode!: PrintableString;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);

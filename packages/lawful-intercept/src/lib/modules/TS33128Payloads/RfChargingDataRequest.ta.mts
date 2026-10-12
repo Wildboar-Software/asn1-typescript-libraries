@@ -136,7 +136,7 @@ function _decode_RfChargingDataRequest (el: _Element): RfChargingDataRequest {
     if (!_cached_decoder_for_RfChargingDataRequest) { _cached_decoder_for_RfChargingDataRequest = function (el: _Element): RfChargingDataRequest {
     let rfChargingData!: DiameterChargingData;
     let rfChargingEvent: OPTIONAL<RfChargingEvent>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rfChargingData": (_el: _Element): void => { rfChargingData = $._decode_explicit<DiameterChargingData>(() => _decode_DiameterChargingData)(_el); },
         "rfChargingEvent": (_el: _Element): void => { rfChargingEvent = $._decode_implicit<RfChargingEvent>(() => _decode_RfChargingEvent)(_el); }

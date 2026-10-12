@@ -208,7 +208,7 @@ function _decode_UPPathChange (el: _Element): UPPathChange {
     let sourceTrafficRouting: OPTIONAL<RouteToLocation>;
     let targetTrafficRouting: OPTIONAL<RouteToLocation>;
     let mACAddress: OPTIONAL<MACAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sourceDNAI": (_el: _Element): void => { sourceDNAI = $._decode_implicit<DNAI>(() => _decode_DNAI)(_el); },
         "targetDNAI": (_el: _Element): void => { targetDNAI = $._decode_implicit<DNAI>(() => _decode_DNAI)(_el); },

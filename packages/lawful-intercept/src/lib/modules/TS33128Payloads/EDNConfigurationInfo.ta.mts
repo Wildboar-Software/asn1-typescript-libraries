@@ -142,7 +142,7 @@ function _decode_EDNConfigurationInfo (el: _Element): EDNConfigurationInfo {
     let eDNConnectionInfo!: EDNConnectionInfo;
     let eESsInfo!: EESsInfo;
     let lifetime: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eDNConnectionInfo": (_el: _Element): void => { eDNConnectionInfo = $._decode_implicit<EDNConnectionInfo>(() => _decode_EDNConnectionInfo)(_el); },
         "eESsInfo": (_el: _Element): void => { eESsInfo = $._decode_implicit<EESsInfo>(() => _decode_EESsInfo)(_el); },

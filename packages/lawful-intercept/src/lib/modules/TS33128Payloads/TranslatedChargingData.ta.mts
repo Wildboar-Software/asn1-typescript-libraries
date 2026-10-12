@@ -163,7 +163,7 @@ function _decode_TranslatedChargingData (el: _Element): TranslatedChargingData {
     let specificationNumber!: INTEGER;
     let releaseIDExtension: OPTIONAL<INTEGER>;
     let recordData!: ExternalChargingASN;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "releaseID": (_el: _Element): void => {
             releaseID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

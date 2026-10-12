@@ -143,7 +143,7 @@ function _decode_NCGI (el: _Element): NCGI {
     let pLMNID!: PLMNID;
     let nRCellID!: NRCellID;
     let nID: OPTIONAL<NID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pLMNID": (_el: _Element): void => { pLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "nRCellID": (_el: _Element): void => { nRCellID = $._decode_implicit<NRCellID>(() => _decode_NRCellID)(_el); },

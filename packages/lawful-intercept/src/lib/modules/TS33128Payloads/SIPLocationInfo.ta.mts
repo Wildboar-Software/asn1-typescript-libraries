@@ -130,7 +130,7 @@ function _decode_SIPLocationInfo (el: _Element): SIPLocationInfo {
     if (!_cached_decoder_for_SIPLocationInfo) { _cached_decoder_for_SIPLocationInfo = function (el: _Element): SIPLocationInfo {
     let locationInfo: OPTIONAL<LocationInfo>;
     let cellInformation: OPTIONAL<CellInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationInfo": (_el: _Element): void => { locationInfo = $._decode_implicit<LocationInfo>(() => _decode_LocationInfo)(_el); },
         "cellInformation": (_el: _Element): void => { cellInformation = $._decode_implicit<CellInformation>(() => _decode_CellInformation)(_el); }

@@ -143,7 +143,7 @@ function _decode_CCKeyInfo (el: _Element): CCKeyInfo {
     let cCCSID!: OCTET_STRING;
     let cCDecKey!: OCTET_STRING;
     let cCSalt: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cCCSID": (_el: _Element): void => { cCCSID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "cCDecKey": (_el: _Element): void => { cCDecKey = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

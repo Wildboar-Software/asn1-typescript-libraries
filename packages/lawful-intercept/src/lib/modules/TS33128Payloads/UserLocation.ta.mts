@@ -182,7 +182,7 @@ function _decode_UserLocation (el: _Element): UserLocation {
     let uTRALocation: OPTIONAL<UTRALocation>;
     let gERALocation: OPTIONAL<GERALocation>;
     let pLMNLocation: OPTIONAL<PLMNLocation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eUTRALocation": (_el: _Element): void => { eUTRALocation = $._decode_implicit<EUTRALocation>(() => _decode_EUTRALocation)(_el); },
         "nRLocation": (_el: _Element): void => { nRLocation = $._decode_implicit<NRLocation>(() => _decode_NRLocation)(_el); },

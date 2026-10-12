@@ -130,7 +130,7 @@ function _decode_IPAddr (el: _Element): IPAddr {
     if (!_cached_decoder_for_IPAddr) { _cached_decoder_for_IPAddr = function (el: _Element): IPAddr {
     let iPv4Addr: OPTIONAL<IPv4Address>;
     let iPv6Addr: OPTIONAL<IPv6Address>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iPv4Addr": (_el: _Element): void => { iPv4Addr = $._decode_implicit<IPv4Address>(() => _decode_IPv4Address)(_el); },
         "iPv6Addr": (_el: _Element): void => { iPv6Addr = $._decode_implicit<IPv6Address>(() => _decode_IPv6Address)(_el); }

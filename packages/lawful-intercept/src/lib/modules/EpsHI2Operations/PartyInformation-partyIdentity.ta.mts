@@ -251,7 +251,7 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let xUI: OPTIONAL<OCTET_STRING>;
     let iMPI: OPTIONAL<OCTET_STRING>;
     let extID: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imei": (_el: _Element): void => {
             imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

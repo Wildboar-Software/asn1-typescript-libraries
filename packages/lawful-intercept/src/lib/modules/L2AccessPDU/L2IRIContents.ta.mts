@@ -281,7 +281,7 @@ function _decode_L2IRIContents (el: _Element): L2IRIContents {
     let octetsTransmitted: OPTIONAL<INTEGER>;
     let rawAAAData: OPTIONAL<OCTET_STRING>;
     let authenticationType: OPTIONAL<AuthenticationType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessEventType": (_el: _Element): void => { accessEventType = $._decode_implicit<AccessEventType>(() => _decode_AccessEventType)(_el); },
         "internetAccessType": (_el: _Element): void => { internetAccessType = $._decode_implicit<InternetAccessType>(() => _decode_InternetAccessType)(_el); },

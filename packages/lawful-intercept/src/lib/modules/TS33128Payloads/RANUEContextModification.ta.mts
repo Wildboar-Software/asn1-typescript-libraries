@@ -267,7 +267,7 @@ function _decode_RANUEContextModification (el: _Element): RANUEContextModificati
     let uERadioCapabilityID: OPTIONAL<OCTET_STRING>;
     let fiveGProSeAuthorizationIndication: OPTIONAL<FiveGProSeAuthorizationIndication>;
     let mobileIABAuthorizedIndicator: OPTIONAL<MobileIABAuthorizedIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aMFUENGAPID": (_el: _Element): void => { aMFUENGAPID = $._decode_implicit<AMFUENGAPID>(() => _decode_AMFUENGAPID)(_el); },
         "rANUENGAPID": (_el: _Element): void => { rANUENGAPID = $._decode_implicit<RANUENGAPID>(() => _decode_RANUENGAPID)(_el); },

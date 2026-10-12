@@ -155,7 +155,7 @@ function _decode_UDMDeregistrationData (el: _Element): UDMDeregistrationData {
     let deregReason: OPTIONAL<UDMDeregReason>;
     let accessType: OPTIONAL<AccessType>;
     let pDUSessionID: OPTIONAL<PDUSessionID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "deregReason": (_el: _Element): void => { deregReason = $._decode_implicit<UDMDeregReason>(() => _decode_UDMDeregReason)(_el); },
         "accessType": (_el: _Element): void => { accessType = $._decode_implicit<AccessType>(() => _decode_AccessType)(_el); },

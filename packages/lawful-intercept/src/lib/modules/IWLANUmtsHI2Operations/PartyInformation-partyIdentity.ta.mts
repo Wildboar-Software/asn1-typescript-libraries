@@ -149,7 +149,7 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let imsi: OPTIONAL<OCTET_STRING>;
     let msISDN: OPTIONAL<OCTET_STRING>;
     let nai: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imsi": (_el: _Element): void => {
             imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

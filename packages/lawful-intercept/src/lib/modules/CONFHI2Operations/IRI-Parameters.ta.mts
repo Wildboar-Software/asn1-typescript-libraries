@@ -431,7 +431,7 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
     let mediamodification: OPTIONAL<MediaModification>;
     let bearerModifyPartyID: OPTIONAL<ConfPartyInformation>;
     let listOfWaitConferees: OPTIONAL<ConfPartyInformation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi2confDomainId": (_el: _Element): void => { hi2confDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },

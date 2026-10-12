@@ -222,7 +222,7 @@ function _decode_Origination (el: _Element): Origination {
     let input!: Origination_input;
     let reserved0!: NULL;
     let transitCarrierId: OPTIONAL<TransitCarrierId>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "caseId": (_el: _Element): void => { caseId = $._decode_implicit<CaseId>(() => _decode_CaseId)(_el); },
         "accessingElementId": (_el: _Element): void => { accessingElementId = $._decode_implicit<AccessingElementId>(() => _decode_AccessingElementId)(_el); },

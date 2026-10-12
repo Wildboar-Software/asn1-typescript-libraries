@@ -143,7 +143,7 @@ function _decode_UTRANPositioningInfo (el: _Element): UTRANPositioningInfo {
     let uTRANPositioningData: OPTIONAL<UTRANPositioningData>;
     let uTRANGANSSPositioningData: OPTIONAL<UTRANGANSSPositioningData>;
     let uTRANAdditionalPositioningData: OPTIONAL<UTRANAdditionalPositioningData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uTRANPositioningData": (_el: _Element): void => { uTRANPositioningData = $._decode_implicit<UTRANPositioningData>(() => _decode_UTRANPositioningData)(_el); },
         "uTRANGANSSPositioningData": (_el: _Element): void => { uTRANGANSSPositioningData = $._decode_implicit<UTRANGANSSPositioningData>(() => _decode_UTRANGANSSPositioningData)(_el); },

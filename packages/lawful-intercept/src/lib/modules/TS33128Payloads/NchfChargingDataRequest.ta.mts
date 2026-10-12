@@ -155,7 +155,7 @@ function _decode_NchfChargingDataRequest (el: _Element): NchfChargingDataRequest
     let sBIchargingData!: SBIChargingData;
     let nchfChargingEvent: OPTIONAL<NchfChargingEvent>;
     let roamerInOut!: RoamerInOut;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sBIchargingData": (_el: _Element): void => { sBIchargingData = $._decode_explicit<SBIChargingData>(() => _decode_SBIChargingData)(_el); },
         "nchfChargingEvent": (_el: _Element): void => { nchfChargingEvent = $._decode_implicit<NchfChargingEvent>(() => _decode_NchfChargingEvent)(_el); },

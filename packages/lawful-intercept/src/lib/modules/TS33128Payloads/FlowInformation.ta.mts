@@ -184,7 +184,7 @@ function _decode_FlowInformation (el: _Element): FlowInformation {
     let spi: OPTIONAL<OCTET_STRING>;
     let flowLabel: OPTIONAL<OCTET_STRING>;
     let flowDirection: OPTIONAL<FlowDirection>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "flowDescription": (_el: _Element): void => { flowDescription = $._decode_implicit<FlowDescription>(() => _decode_FlowDescription)(_el); },
         "ethFlowDescription": (_el: _Element): void => { ethFlowDescription = $._decode_implicit<EthFlowDescription>(() => _decode_EthFlowDescription)(_el); },

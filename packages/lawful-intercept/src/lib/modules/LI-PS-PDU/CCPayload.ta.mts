@@ -182,7 +182,7 @@ function _decode_CCPayload (el: _Element): CCPayload {
     let cCContents!: CCContents;
     let microSecondTimeStamp: OPTIONAL<MicroSecondTimeStamp>;
     let timeStampQualifier: OPTIONAL<TimeStampQualifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "payloadDirection": (_el: _Element): void => { payloadDirection = $._decode_implicit<PayloadDirection>(() => _decode_PayloadDirection)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },

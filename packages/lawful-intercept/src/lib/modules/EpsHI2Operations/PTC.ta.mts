@@ -930,7 +930,7 @@ function _decode_PTC (el: _Element): PTC {
     let talkburstControlSetting: OPTIONAL<TalkburstControlSetting>;
     let targetPresenceStatus: OPTIONAL<UTF8String>;
     let port_Number: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "abandonCause": (_el: _Element): void => { abandonCause = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "accessPolicyFailure": (_el: _Element): void => { accessPolicyFailure = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

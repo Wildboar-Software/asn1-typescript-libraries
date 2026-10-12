@@ -142,7 +142,7 @@ function _decode_NRNTNTAIInfo (el: _Element): NRNTNTAIInfo {
     let servingPLMN!: PLMNID;
     let tACListNRNTN!: TAC[];
     let uELocationDerivedNTNTAC: OPTIONAL<TAC>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "servingPLMN": (_el: _Element): void => { servingPLMN = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "tACListNRNTN": (_el: _Element): void => {

@@ -180,7 +180,7 @@ function _decode_TraceActivationInfo (el: _Element): TraceActivationInfo {
     let traceDepth!: TraceDepth;
     let traceCollectionEntityIPAddress!: IPAddress;
     let mDTConfiguration: OPTIONAL<MDTConfiguration>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "nGRANTraceID": (_el: _Element): void => {
             nGRANTraceID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

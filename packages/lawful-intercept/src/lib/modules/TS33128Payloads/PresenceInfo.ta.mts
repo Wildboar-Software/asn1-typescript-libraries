@@ -186,7 +186,7 @@ function _decode_PresenceInfo (el: _Element): PresenceInfo {
     let nCGIList: OPTIONAL<NCGI[]>;
     let globalRANNodeIDList: OPTIONAL<GlobalRANNodeID[]>;
     let globalENbIDList: OPTIONAL<GlobalRANNodeID[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "presenceState": (_el: _Element): void => { presenceState = $._decode_implicit<PresenceState>(() => _decode_PresenceState)(_el); },
         "trackingAreaList": (_el: _Element): void => { trackingAreaList = $._decode_implicit<TAI[]>(() => $._decodeSetOf<TAI>(() => _decode_TAI))(_el); },

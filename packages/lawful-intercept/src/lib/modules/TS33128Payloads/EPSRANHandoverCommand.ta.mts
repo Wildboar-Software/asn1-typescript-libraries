@@ -196,7 +196,7 @@ function _decode_EPSRANHandoverCommand (el: _Element): EPSRANHandoverCommand {
     let eRABsToBeForwarded: OPTIONAL<ERABContextList>;
     let eRABsToRelease: OPTIONAL<ERABReleaseList>;
     let targetToSourceContainers!: RANTargetToSourceContainer[];
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "mMEUES1APID": (_el: _Element): void => { mMEUES1APID = $._decode_implicit<MMEUES1APID>(() => _decode_MMEUES1APID)(_el); },

@@ -178,7 +178,7 @@ function _decode_IPIRIOnly (el: _Element): IPIRIOnly {
     let iPAggregatedNbrOfPackets: OPTIONAL<INTEGER>;
     let iPAggregatedNbrOfBytes: OPTIONAL<INTEGER>;
     let pDSRInformation: OPTIONAL<PDSRInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iPIRIOnlyObjId": (_el: _Element): void => { iPIRIOnlyObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "iPInformation": (_el: _Element): void => { iPInformation = $._decode_explicit<IPInformation>(() => _decode_IPInformation)(_el); },

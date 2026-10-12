@@ -169,7 +169,7 @@ function _decode_EPSBearerContextCreated (el: _Element): EPSBearerContextCreated
     let gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>;
     let bearerQOS: OPTIONAL<EPSBearerQOS>;
     let protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ePSBearerID": (_el: _Element): void => { ePSBearerID = $._decode_implicit<EPSBearerID>(() => _decode_EPSBearerID)(_el); },
         "cause": (_el: _Element): void => { cause = $._decode_implicit<EPSBearerCreationCauseValue>(() => _decode_EPSBearerCreationCauseValue)(_el); },

@@ -221,7 +221,7 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let alphanum_Shortcode: OPTIONAL<OCTET_STRING>;
     let num_Shortcode: OPTIONAL<OCTET_STRING>;
     let iMSI: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mSISDN": (_el: _Element): void => { mSISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "mMSAddress": (_el: _Element): void => { mMSAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

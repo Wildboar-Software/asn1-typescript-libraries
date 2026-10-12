@@ -307,7 +307,7 @@ function _decode_SMFPDUSessionRelease (el: _Element): SMFPDUSessionRelease {
     let pCCRuleIDs: OPTIONAL<PCCRuleIDSet>;
     let ePSPDNConnectionRelease: OPTIONAL<EPSPDNConnectionRelease>;
     let alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "pEI": (_el: _Element): void => { pEI = $._decode_explicit<PEI>(() => _decode_PEI)(_el); },

@@ -168,7 +168,7 @@ function _decode_GSMLocation_utmCoordinates (el: _Element): GSMLocation_utmCoord
     let utm_North!: PrintableString;
     let mapDatum: OPTIONAL<MapDatum> = GSMLocation_utmCoordinates._default_value_for_mapDatum;
     let azimuth: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "utm-East": (_el: _Element): void => {
             utm_East = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el);

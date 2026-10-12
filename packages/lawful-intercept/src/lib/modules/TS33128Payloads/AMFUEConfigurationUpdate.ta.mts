@@ -233,7 +233,7 @@ function _decode_AMFUEConfigurationUpdate (el: _Element): AMFUEConfigurationUpda
     let registrationResult: OPTIONAL<AMFRegistrationResult>;
     let sMSOverNASIndicator: OPTIONAL<SMSOverNASIndicator>;
     let alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "gUTI": (_el: _Element): void => { gUTI = $._decode_implicit<GUTI>(() => _decode_GUTI)(_el); },

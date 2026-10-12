@@ -199,7 +199,7 @@ function _decode_ProSeDirectDiscovery (el: _Element): ProSeDirectDiscovery {
     let directDiscoveryData!: DirectDiscoveryData;
     let metadata: OPTIONAL<UTF8String>;
     let otherUeImsi: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "proseDirectDiscoveryEvent": (_el: _Element): void => { proseDirectDiscoveryEvent = $._decode_implicit<ProSeDirectDiscoveryEvent>(() => _decode_ProSeDirectDiscoveryEvent)(_el); },
         "targetImsi": (_el: _Element): void => {

@@ -129,7 +129,7 @@ function _decode_SIPCellularNetworkInformation (el: _Element): SIPCellularNetwor
     if (!_cached_decoder_for_SIPCellularNetworkInformation) { _cached_decoder_for_SIPCellularNetworkInformation = function (el: _Element): SIPCellularNetworkInformation {
     let cellularNetworkInfo!: UTF8String;
     let servingPLMN: OPTIONAL<PLMNID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cellularNetworkInfo": (_el: _Element): void => { cellularNetworkInfo = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "servingPLMN": (_el: _Element): void => { servingPLMN = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); }

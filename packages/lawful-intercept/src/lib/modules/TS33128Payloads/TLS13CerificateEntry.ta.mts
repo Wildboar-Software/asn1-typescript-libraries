@@ -149,7 +149,7 @@ function _decode_TLS13CerificateEntry (el: _Element): TLS13CerificateEntry {
     let tLSCertificateType!: TLS13CertificateType;
     let tLSCertificateData!: OCTET_STRING;
     let extensions: OPTIONAL<TLS13Extension[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tLSCertificateType": (_el: _Element): void => { tLSCertificateType = $._decode_implicit<TLS13CertificateType>(() => _decode_TLS13CertificateType)(_el); },
         "tLSCertificateData": (_el: _Element): void => {

@@ -269,7 +269,7 @@ function _decode_SMSMessage (el: _Element): SMSMessage {
     let sMSTPDUData: OPTIONAL<SMSTPDUData>;
     let messageType: OPTIONAL<SMSMessageType>;
     let rPMessageReference: OPTIONAL<SMSRPMessageReference>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "originatingSMSParty": (_el: _Element): void => { originatingSMSParty = $._decode_implicit<SMSParty>(() => _decode_SMSParty)(_el); },
         "terminatingSMSParty": (_el: _Element): void => { terminatingSMSParty = $._decode_implicit<SMSParty>(() => _decode_SMSParty)(_el); },

@@ -140,7 +140,7 @@ function _decode_GeographicalCoordinates (el: _Element): GeographicalCoordinates
     let latitude!: UTF8String;
     let longitude!: UTF8String;
     let mapDatumInformation: OPTIONAL<OGCURN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "latitude": (_el: _Element): void => { latitude = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "longitude": (_el: _Element): void => { longitude = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

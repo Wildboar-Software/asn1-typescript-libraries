@@ -247,7 +247,7 @@ function _decode_StartOfInterceptWithEstablisedRCSSession (el: _Element): StartO
     let rCSSessionInformation!: RCSSessionContext[];
     let location: OPTIONAL<Location>;
     let additionalInstanceLocation: OPTIONAL<AdditionalInstanceLocation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rCSTargetIdentities": (_el: _Element): void => {
             rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);

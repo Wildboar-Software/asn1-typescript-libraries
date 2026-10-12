@@ -143,7 +143,7 @@ function _decode_ServiceAreaInfo (el: _Element): ServiceAreaInfo {
     let pLMNIdentity!: PLMNID;
     let allowedTACs: OPTIONAL<AllowedTACs>;
     let notAllowedTACs: OPTIONAL<ForbiddenTACs>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pLMNIdentity": (_el: _Element): void => { pLMNIdentity = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "allowedTACs": (_el: _Element): void => { allowedTACs = $._decode_implicit<AllowedTACs>(() => _decode_AllowedTACs)(_el); },

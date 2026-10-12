@@ -345,7 +345,7 @@ function _decode_EPSStartOfInterceptionWithEstablishedPDNConnection (el: _Elemen
     let servingNetwork: OPTIONAL<SMFServingNetwork>;
     let sMPDUDNRequest: OPTIONAL<SMPDUDNRequest>;
     let bearerContexts!: EPSBearerContext[];
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ePSSubscriberIDs": (_el: _Element): void => { ePSSubscriberIDs = $._decode_implicit<EPSSubscriberIDs>(() => _decode_EPSSubscriberIDs)(_el); },
         "iMSIUnauthenticated": (_el: _Element): void => { iMSIUnauthenticated = $._decode_implicit<IMSIUnauthenticatedIndication>(() => _decode_IMSIUnauthenticatedIndication)(_el); },

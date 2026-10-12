@@ -182,7 +182,7 @@ function _decode_MMEIdentifierAssociation (el: _Element): MMEIdentifierAssociati
     let gUTI!: GUTI;
     let location!: Location;
     let tAIList: OPTIONAL<TAIList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iMSI": (_el: _Element): void => { iMSI = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "iMEI": (_el: _Element): void => { iMEI = $._decode_implicit<IMEI>(() => _decode_IMEI)(_el); },

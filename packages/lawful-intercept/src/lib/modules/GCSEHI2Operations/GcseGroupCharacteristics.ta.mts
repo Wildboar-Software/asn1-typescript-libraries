@@ -132,7 +132,7 @@ function _decode_GcseGroupCharacteristics (el: _Element): GcseGroupCharacteristi
     if (!_cached_decoder_for_GcseGroupCharacteristics) { _cached_decoder_for_GcseGroupCharacteristics = function (el: _Element): GcseGroupCharacteristics {
     let characteristicsEncoding: OPTIONAL<UTF8String>;
     let characteristics: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "characteristicsEncoding": (_el: _Element): void => { characteristicsEncoding = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "characteristics": (_el: _Element): void => { characteristics = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

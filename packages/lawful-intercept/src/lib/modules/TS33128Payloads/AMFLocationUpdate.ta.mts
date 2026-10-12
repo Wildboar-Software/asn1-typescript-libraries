@@ -240,7 +240,7 @@ function _decode_AMFLocationUpdate (el: _Element): AMFLocationUpdate {
     let deprecatedOldGUTI: OPTIONAL<EPS5GGUTI>;
     let uEAreaIndication: OPTIONAL<UEAreaIndication>;
     let additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "sUCI": (_el: _Element): void => { sUCI = $._decode_implicit<SUCI>(() => _decode_SUCI)(_el); },

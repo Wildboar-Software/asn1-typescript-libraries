@@ -174,7 +174,7 @@ function _decode_KMMessage (el: _Element): KMMessage {
     let kMSResponseBody: OPTIONAL<KMSResponseBody>;
     let kMSResponseBodyKRR: OPTIONAL<KMSResponseBodyKRR>;
     let hTTPResponseCode!: UTF8String;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "kMSRequestName": (_el: _Element): void => { kMSRequestName = $._decode_implicit<KMSRequestName>(() => _decode_KMSRequestName)(_el); },
         "kMSRequestBody": (_el: _Element): void => { kMSRequestBody = $._decode_explicit<KMSRequestBody>(() => _decode_KMSRequestBody)(_el); },

@@ -145,7 +145,7 @@ function _decode_I_WLAN_parameters (el: _Element): I_WLAN_parameters {
     let wlan_local_IP_address_of_the_target: OPTIONAL<DataNodeAddress>;
     let w_APN: OPTIONAL<OCTET_STRING>;
     let wlan_remote_IP_address_of_the_target: OPTIONAL<DataNodeAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "wlan-local-IP-address-of-the-target": (_el: _Element): void => { wlan_local_IP_address_of_the_target = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
         "w-APN": (_el: _Element): void => {

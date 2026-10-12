@@ -191,7 +191,7 @@ function _decode_FiveGProSeAuthorizationIndication (el: _Element): FiveGProSeAut
     let fiveGProSeL2UEToNetworkRelay: OPTIONAL<FiveGProSeAuthorizationIndicator>;
     let fiveGProSeL3UEToNetworkRelay: OPTIONAL<FiveGProSeAuthorizationIndicator>;
     let fiveGProSeL2RemoteUE: OPTIONAL<FiveGProSeAuthorizationIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "fiveGProSeDirectDiscovery": (_el: _Element): void => { fiveGProSeDirectDiscovery = $._decode_implicit<FiveGProSeAuthorizationIndicator>(() => _decode_FiveGProSeAuthorizationIndicator)(_el); },
         "fiveGProSeDirectCommunication": (_el: _Element): void => { fiveGProSeDirectCommunication = $._decode_implicit<FiveGProSeAuthorizationIndicator>(() => _decode_FiveGProSeAuthorizationIndicator)(_el); },

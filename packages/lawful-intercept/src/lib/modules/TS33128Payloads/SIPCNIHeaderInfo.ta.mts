@@ -143,7 +143,7 @@ function _decode_SIPCNIHeaderInfo (el: _Element): SIPCNIHeaderInfo {
     let cellularNetworkInformation!: SIPCellularNetworkInformation;
     let cellularAccessInfo: OPTIONAL<SIPCellularAccessInfo[]>;
     let cNILocation: OPTIONAL<SIPLocationInfo[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cellularNetworkInformation": (_el: _Element): void => { cellularNetworkInformation = $._decode_implicit<SIPCellularNetworkInformation>(() => _decode_SIPCellularNetworkInformation)(_el); },
         "cellularAccessInfo": (_el: _Element): void => { cellularAccessInfo = $._decode_implicit<SIPCellularAccessInfo[]>(() => $._decodeSequenceOf<SIPCellularAccessInfo>(() => _decode_SIPCellularAccessInfo))(_el); },

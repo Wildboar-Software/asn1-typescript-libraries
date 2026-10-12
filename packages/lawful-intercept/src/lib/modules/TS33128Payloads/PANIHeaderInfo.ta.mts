@@ -143,7 +143,7 @@ function _decode_PANIHeaderInfo (el: _Element): PANIHeaderInfo {
     let accessNetworkInformation!: SIPAccessNetworkInformation;
     let accessInfo: OPTIONAL<SIPAccessInfo[]>;
     let pANILocation: OPTIONAL<SIPLocationInfo[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessNetworkInformation": (_el: _Element): void => { accessNetworkInformation = $._decode_implicit<SIPAccessNetworkInformation>(() => _decode_SIPAccessNetworkInformation)(_el); },
         "accessInfo": (_el: _Element): void => { accessInfo = $._decode_implicit<SIPAccessInfo[]>(() => $._decodeSequenceOf<SIPAccessInfo>(() => _decode_SIPAccessInfo))(_el); },

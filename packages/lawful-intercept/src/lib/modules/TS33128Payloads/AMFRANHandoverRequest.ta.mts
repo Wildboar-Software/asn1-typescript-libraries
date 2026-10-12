@@ -253,7 +253,7 @@ function _decode_AMFRANHandoverRequest (el: _Element): AMFRANHandoverRequest {
     let targetToSourceContainer!: RANTargetToSourceContainer;
     let nPNAccessInformation: OPTIONAL<NPNAccessInformation>;
     let sourceToTargetContainer!: RANSourceToTargetContainer;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "aMFUENGAPID": (_el: _Element): void => { aMFUENGAPID = $._decode_implicit<AMFUENGAPID>(() => _decode_AMFUENGAPID)(_el); },

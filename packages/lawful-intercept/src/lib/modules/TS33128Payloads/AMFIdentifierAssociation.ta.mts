@@ -208,7 +208,7 @@ function _decode_AMFIdentifierAssociation (el: _Element): AMFIdentifierAssociati
     let location!: Location;
     let fiveGSTAIList: OPTIONAL<TAIList>;
     let additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "sUCI": (_el: _Element): void => { sUCI = $._decode_implicit<SUCI>(() => _decode_SUCI)(_el); },

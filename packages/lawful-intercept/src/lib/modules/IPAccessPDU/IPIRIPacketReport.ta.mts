@@ -128,7 +128,7 @@ function _decode_IPIRIPacketReport (el: _Element): IPIRIPacketReport {
     if (!_cached_decoder_for_IPIRIPacketReport) { _cached_decoder_for_IPIRIPacketReport = function (el: _Element): IPIRIPacketReport {
     let iPIRIPacketReportObjId!: RELATIVE_OID;
     let report!: PacketReport;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iPIRIPacketReportObjId": (_el: _Element): void => { iPIRIPacketReportObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "report": (_el: _Element): void => { report = $._decode_explicit<PacketReport>(() => _decode_PacketReport)(_el); },

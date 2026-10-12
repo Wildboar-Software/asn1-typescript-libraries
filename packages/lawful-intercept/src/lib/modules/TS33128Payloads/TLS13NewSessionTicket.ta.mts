@@ -165,7 +165,7 @@ function _decode_TLS13NewSessionTicket (el: _Element): TLS13NewSessionTicket {
     let ticketNonce!: OCTET_STRING;
     let ticket!: OCTET_STRING;
     let extensions: OPTIONAL<TLS13Extension[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ticketLifeTime": (_el: _Element): void => {
             ticketLifeTime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

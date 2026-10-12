@@ -150,7 +150,7 @@ function _decode_TAItem (el: _Element): TAItem {
     let tAC!: TAC;
     let broadcastPLMNList!: BroadcastPLMNItem[];
     let rATinformation: OPTIONAL<RATInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tAC": (_el: _Element): void => { tAC = $._decode_implicit<TAC>(() => _decode_TAC)(_el); },
         "broadcastPLMNList": (_el: _Element): void => {

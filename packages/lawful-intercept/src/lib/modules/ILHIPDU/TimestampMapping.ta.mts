@@ -151,7 +151,7 @@ function _decode_TimestampMapping (el: _Element): TimestampMapping {
     let originalTimestamp!: OriginalTimestamp;
     let normalizedTimestamp!: ILHITimestamp;
     let timeStampQualifier: OPTIONAL<LI_PS_PDU.TimeStampQualifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "originalTimestamp": (_el: _Element): void => { originalTimestamp = $._decode_explicit<OriginalTimestamp>(() => _decode_OriginalTimestamp)(_el); },
         "normalizedTimestamp": (_el: _Element): void => { normalizedTimestamp = $._decode_explicit<ILHITimestamp>(() => _decode_ILHITimestamp)(_el); },

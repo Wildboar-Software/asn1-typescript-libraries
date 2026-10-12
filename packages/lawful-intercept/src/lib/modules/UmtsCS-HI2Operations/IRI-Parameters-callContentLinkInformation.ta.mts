@@ -132,7 +132,7 @@ function _decode_IRI_Parameters_callContentLinkInformation (el: _Element): IRI_P
     if (!_cached_decoder_for_IRI_Parameters_callContentLinkInformation) { _cached_decoder_for_IRI_Parameters_callContentLinkInformation = function (el: _Element): IRI_Parameters_callContentLinkInformation {
     let cCLink1Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
     let cCLink2Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cCLink1Characteristics": (_el: _Element): void => { cCLink1Characteristics = $._decode_implicit<CallContentLinkCharacteristics>(() => _decode_CallContentLinkCharacteristics)(_el); },
         "cCLink2Characteristics": (_el: _Element): void => { cCLink2Characteristics = $._decode_implicit<CallContentLinkCharacteristics>(() => _decode_CallContentLinkCharacteristics)(_el); }

@@ -143,7 +143,7 @@ function _decode_FiveGDDNMFProSeNNIDirectDiscovery (el: _Element): FiveGDDNMFPro
     let sUPI: OPTIONAL<SUPI>;
     let gPSI: OPTIONAL<GPSI>;
     let fiveGDDNMFProSeDirectDiscoveryMessage!: SBIType;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },

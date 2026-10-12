@@ -145,7 +145,7 @@ function _decode_PointUncertaintyCircle (el: _Element): PointUncertaintyCircle {
     let geographicalCoordinates!: GeographicalCoordinates;
     let deprecatedUncertainty!: Uncertainty;
     let uncertaintySBI: OPTIONAL<UncertaintySBI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "geographicalCoordinates": (_el: _Element): void => { geographicalCoordinates = $._decode_implicit<GeographicalCoordinates>(() => _decode_GeographicalCoordinates)(_el); },
         "deprecatedUncertainty": (_el: _Element): void => { deprecatedUncertainty = $._decode_implicit<Uncertainty>(() => _decode_Uncertainty)(_el); },

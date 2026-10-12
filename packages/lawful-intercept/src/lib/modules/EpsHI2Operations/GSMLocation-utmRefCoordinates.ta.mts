@@ -142,7 +142,7 @@ function _decode_GSMLocation_utmRefCoordinates (el: _Element): GSMLocation_utmRe
     if (!_cached_decoder_for_GSMLocation_utmRefCoordinates) { _cached_decoder_for_GSMLocation_utmRefCoordinates = function (el: _Element): GSMLocation_utmRefCoordinates {
     let utmref_string!: PrintableString;
     let mapDatum: OPTIONAL<MapDatum> = GSMLocation_utmRefCoordinates._default_value_for_mapDatum;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "utmref-string": (_el: _Element): void => {
             utmref_string = $._decodePrintableString(_el);

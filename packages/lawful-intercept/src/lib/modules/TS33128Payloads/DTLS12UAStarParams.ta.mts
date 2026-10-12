@@ -156,7 +156,7 @@ function _decode_DTLS12UAStarParams (el: _Element): DTLS12UAStarParams {
     let clientEpoch!: INTEGER;
     let serverEpoch!: INTEGER;
     let connectionID: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tLS12CommonParams": (_el: _Element): void => { tLS12CommonParams = $._decode_implicit<TLS12UAStarParams>(() => _decode_TLS12UAStarParams)(_el); },
         "clientEpoch": (_el: _Element): void => { clientEpoch = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

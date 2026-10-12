@@ -203,7 +203,7 @@ function _decode_EASCharacteristics (el: _Element): EASCharacteristics {
     let eASServiceArea: OPTIONAL<Location>;
     let eASServicePermLevel: OPTIONAL<UTF8String>;
     let eASServiceFeatures: OPTIONAL<EASServiceFeatures>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eASID": (_el: _Element): void => { eASID = $._decode_implicit<EASID>(() => _decode_EASID)(_el); },
         "aSPID": (_el: _Element): void => { aSPID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

@@ -162,7 +162,7 @@ function _decode_EmergencyGroupState (el: _Element): EmergencyGroupState {
     if (!_cached_decoder_for_EmergencyGroupState) { _cached_decoder_for_EmergencyGroupState = function (el: _Element): EmergencyGroupState {
     let clientEmergencyState: OPTIONAL<EmergencyGroupState_clientEmergencyState>;
     let groupEmergencyState!: EmergencyGroupState_groupEmergencyState;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "clientEmergencyState": (_el: _Element): void => { clientEmergencyState = $._decode_implicit<EmergencyGroupState_clientEmergencyState>(() => _decode_EmergencyGroupState_clientEmergencyState)(_el); },
         "groupEmergencyState": (_el: _Element): void => { groupEmergencyState = $._decode_implicit<EmergencyGroupState_groupEmergencyState>(() => _decode_EmergencyGroupState_groupEmergencyState)(_el); }

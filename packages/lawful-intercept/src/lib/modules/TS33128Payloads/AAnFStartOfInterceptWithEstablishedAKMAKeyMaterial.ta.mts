@@ -143,7 +143,7 @@ function _decode_AAnFStartOfInterceptWithEstablishedAKMAKeyMaterial (el: _Elemen
     let aKID!: NAI;
     let kAKMA: OPTIONAL<KAKMA>;
     let aFKeyList: OPTIONAL<AFKeyInfo[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aKID": (_el: _Element): void => { aKID = $._decode_implicit<NAI>(() => _decode_NAI)(_el); },
         "kAKMA": (_el: _Element): void => { kAKMA = $._decode_implicit<KAKMA>(() => _decode_KAKMA)(_el); },

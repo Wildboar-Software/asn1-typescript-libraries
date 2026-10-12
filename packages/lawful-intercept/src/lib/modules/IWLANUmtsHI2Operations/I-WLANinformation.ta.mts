@@ -202,7 +202,7 @@ function _decode_I_WLANinformation (el: _Element): I_WLANinformation {
     let sessionAliveTimer: OPTIONAL<SessionAliveTime>;
     let geographicalCoordinates: OPTIONAL<GeographicalCoordinates>;
     let civicAddress: OPTIONAL<CivicAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "wLANOperatorName": (_el: _Element): void => { wLANOperatorName = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "wLANLocationData": (_el: _Element): void => { wLANLocationData = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

@@ -241,7 +241,7 @@ function _decode_ULIC_header (el: _Element): ULIC_header {
     let t_PDU_direction!: TPDU_direction;
     let national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     let ice_type: OPTIONAL<ICE_type>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi3DomainId": (_el: _Element): void => { hi3DomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "version": (_el: _Element): void => { version = $._decode_implicit<Version>(() => _decode_Version)(_el); },

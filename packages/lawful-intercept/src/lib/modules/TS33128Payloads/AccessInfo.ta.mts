@@ -256,7 +256,7 @@ function _decode_AccessInfo (el: _Element): AccessInfo {
     let satelliteBackhaulCategory: OPTIONAL<SBIType>;
     let gEOSatelliteID: OPTIONAL<GEOSatelliteID>;
     let servingSatelliteID: OPTIONAL<SatelliteID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessType": (_el: _Element): void => { accessType = $._decode_implicit<AccessType>(() => _decode_AccessType)(_el); },
         "rATType": (_el: _Element): void => { rATType = $._decode_implicit<RATType>(() => _decode_RATType)(_el); },

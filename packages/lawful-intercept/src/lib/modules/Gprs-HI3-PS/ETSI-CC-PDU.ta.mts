@@ -133,7 +133,7 @@ function _decode_ETSI_CC_PDU (el: _Element): ETSI_CC_PDU {
     if (!_cached_decoder_for_ETSI_CC_PDU) { _cached_decoder_for_ETSI_CC_PDU = function (el: _Element): ETSI_CC_PDU {
     let domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     let eTSI_CC_PDU!: CC_PDU;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);

@@ -142,7 +142,7 @@ function _decode_CellSiteInformation (el: _Element): CellSiteInformation {
     let geographicalCoordinates!: GeographicalCoordinates;
     let azimuth: OPTIONAL<INTEGER>;
     let operatorSpecificInformation: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "geographicalCoordinates": (_el: _Element): void => { geographicalCoordinates = $._decode_implicit<GeographicalCoordinates>(() => _decode_GeographicalCoordinates)(_el); },
         "azimuth": (_el: _Element): void => {

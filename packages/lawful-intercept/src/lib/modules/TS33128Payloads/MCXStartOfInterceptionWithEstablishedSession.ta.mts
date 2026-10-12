@@ -211,7 +211,7 @@ function _decode_MCXStartOfInterceptionWithEstablishedSession (el: _Element): MC
     let location: OPTIONAL<Location>;
     let mCServiceMediaStreamAvailable: OPTIONAL<BOOLEAN>;
     let mCServiceBearerCapability: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mCServiceIdentitiesOrGroupID": (_el: _Element): void => { mCServiceIdentitiesOrGroupID = $._decode_explicit<MCServiceIdentitiesOrGroupID>(() => _decode_MCServiceIdentitiesOrGroupID)(_el); },
         "mCServiceDirection": (_el: _Element): void => { mCServiceDirection = $._decode_implicit<Direction>(() => _decode_Direction)(_el); },

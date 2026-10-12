@@ -144,7 +144,7 @@ function _decode_TargetConnectionMethod (el: _Element): TargetConnectionMethod {
     let connectionStatus!: BOOLEAN;
     let upstream: OPTIONAL<Upstream>;
     let downstream: OPTIONAL<Downstream>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "connectionStatus": (_el: _Element): void => { connectionStatus = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "upstream": (_el: _Element): void => { upstream = $._decode_implicit<Upstream>(() => _decode_Upstream)(_el); },

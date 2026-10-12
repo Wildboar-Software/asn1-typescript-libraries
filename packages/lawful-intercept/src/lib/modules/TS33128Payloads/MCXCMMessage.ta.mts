@@ -144,7 +144,7 @@ function _decode_MCXCMMessage (el: _Element): MCXCMMessage {
     let mCServiceIdentities!: MCServiceIdentity[];
     let mcServiceClient: OPTIONAL<MCServiceID>;
     let cMMessage!: CMMessage;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mCServiceIdentities": (_el: _Element): void => {
             mCServiceIdentities = $._decode_implicit<MCServiceIdentity[]>(() => $._decodeSequenceOf<MCServiceIdentity>(() => _decode_MCServiceIdentity))(_el);

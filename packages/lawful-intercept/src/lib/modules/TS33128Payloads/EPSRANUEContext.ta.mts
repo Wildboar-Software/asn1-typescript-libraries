@@ -291,7 +291,7 @@ function _decode_EPSRANUEContext (el: _Element): EPSRANUEContext {
     let subscriptionBasedUEDifferentiationIndication: OPTIONAL<EPSSubscriptionBasedUEDifferentiationIndication>;
     let iABAuthorizedIndicator: OPTIONAL<IABAuthorizedIndicator>;
     let nRV2XServicesAuthorization: OPTIONAL<NRV2XServicesAuthorization>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mMEUES1APID": (_el: _Element): void => { mMEUES1APID = $._decode_implicit<MMEUES1APID>(() => _decode_MMEUES1APID)(_el); },
         "rANUES1APID": (_el: _Element): void => { rANUES1APID = $._decode_implicit<RANUES1APID>(() => _decode_RANUES1APID)(_el); },

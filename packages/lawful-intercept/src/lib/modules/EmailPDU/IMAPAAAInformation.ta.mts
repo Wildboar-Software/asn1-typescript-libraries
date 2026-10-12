@@ -149,7 +149,7 @@ function _decode_IMAPAAAInformation (el: _Element): IMAPAAAInformation {
     let username!: UTF8String;
     let password: OPTIONAL<UTF8String>;
     let aAAResult: OPTIONAL<AAAResult>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "username": (_el: _Element): void => {
             username = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);

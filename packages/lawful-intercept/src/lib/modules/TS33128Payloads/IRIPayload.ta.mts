@@ -155,7 +155,7 @@ function _decode_IRIPayload (el: _Element): IRIPayload {
     let event!: IRIEvent;
     let targetIdentifiers: OPTIONAL<IRITargetIdentifier[]>;
     let mediatedFromIndicator: OPTIONAL<MediatedFromIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iRIPayloadOID": (_el: _Element): void => { iRIPayloadOID = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "event": (_el: _Element): void => { event = $._decode_explicit<IRIEvent>(() => _decode_IRIEvent)(_el); },

@@ -207,7 +207,7 @@ function _decode_NWDAFRoamingAnalyticsSubscription (el: _Element): NWDAFRoamingA
     let nWDAFEventsSubscription!: SBIType;
     let nWDAFEventsSubscriptionID: OPTIONAL<UTF8String>;
     let nWDAFEventsSubscriptionResponseCode!: NWDAFEventsSubscriptionResponseCode;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "pLMNID": (_el: _Element): void => { pLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },

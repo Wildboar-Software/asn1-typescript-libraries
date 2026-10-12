@@ -175,7 +175,7 @@ function _decode_EPSPDNUnsuccessfulProcedure (el: _Element): EPSPDNUnsuccessfulP
     let ePSSubscriberIDs!: EPSSubscriberIDs;
     let iMSIUnauthenticated: OPTIONAL<IMSIUnauthenticatedIndication>;
     let failedProcedure!: EPSPDNFailedProcedure;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failureCause": (_el: _Element): void => { failureCause = $._decode_implicit<ESMCause>(() => _decode_ESMCause)(_el); },
         "initiator": (_el: _Element): void => { initiator = $._decode_implicit<Initiator>(() => _decode_Initiator)(_el); },

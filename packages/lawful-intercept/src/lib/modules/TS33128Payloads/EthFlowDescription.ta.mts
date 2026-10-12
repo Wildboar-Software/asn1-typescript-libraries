@@ -208,7 +208,7 @@ function _decode_EthFlowDescription (el: _Element): EthFlowDescription {
     let vlanTags!: VLANTag[];
     let srcMacAddrEnd: OPTIONAL<MACAddress>;
     let destMacAddrEnd: OPTIONAL<MACAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "destMacAddress": (_el: _Element): void => { destMacAddress = $._decode_implicit<MACAddress>(() => _decode_MACAddress)(_el); },
         "ethType": (_el: _Element): void => {

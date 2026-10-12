@@ -133,7 +133,7 @@ function _decode_SupportedMedia (el: _Element): SupportedMedia {
     if (!_cached_decoder_for_SupportedMedia) { _cached_decoder_for_SupportedMedia = function (el: _Element): SupportedMedia {
     let confServerSideSDP: OPTIONAL<OCTET_STRING>;
     let confUserSideSDP: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "confServerSideSDP": (_el: _Element): void => { confServerSideSDP = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "confUserSideSDP": (_el: _Element): void => { confUserSideSDP = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

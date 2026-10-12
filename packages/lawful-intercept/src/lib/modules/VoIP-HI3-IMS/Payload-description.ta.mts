@@ -147,7 +147,7 @@ function _decode_Payload_description (el: _Element): Payload_description {
     let copyOfSDPdescription: OPTIONAL<OCTET_STRING>;
     let mediaFormat: OPTIONAL<INTEGER>;
     let mediaAttributes: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "copyOfSDPdescription": (_el: _Element): void => { copyOfSDPdescription = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "mediaFormat": (_el: _Element): void => {

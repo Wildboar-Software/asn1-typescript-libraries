@@ -230,7 +230,7 @@ function _decode_SMS_report_sMS_Contents (el: _Element): SMS_report_sMS_Contents
     let other_message: OPTIONAL<SMS_report_sMS_Contents_other_message>;
     let content: OPTIONAL<OCTET_STRING>;
     let enhancedContent: OPTIONAL<SMS_report_sMS_Contents_enhancedContent>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "initiator": (_el: _Element): void => { initiator = $._decode_implicit<SMS_report_sMS_Contents_initiator>(() => _decode_SMS_report_sMS_Contents_initiator)(_el); },
         "transfer-status": (_el: _Element): void => { transfer_status = $._decode_implicit<SMS_report_sMS_Contents_transfer_status>(() => _decode_SMS_report_sMS_Contents_transfer_status)(_el); },

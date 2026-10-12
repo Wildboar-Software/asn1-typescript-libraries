@@ -145,7 +145,7 @@ function _decode_Password_Name (el: _Element): Password_Name {
     let domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     let password!: OCTET_STRING;
     let name!: OCTET_STRING;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);

@@ -194,7 +194,7 @@ function _decode_NASTransportInitialInformation (el: _Element): NASTransportInit
     let nPNAccessInformation: OPTIONAL<CellCAGList>;
     let rEDCAPIndication: OPTIONAL<REDCAPIndication>;
     let mobileIABNodeIndication: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rANUENGAPID": (_el: _Element): void => { rANUENGAPID = $._decode_implicit<RANUENGAPID>(() => _decode_RANUENGAPID)(_el); },
         "iABNodeIndication": (_el: _Element): void => { iABNodeIndication = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

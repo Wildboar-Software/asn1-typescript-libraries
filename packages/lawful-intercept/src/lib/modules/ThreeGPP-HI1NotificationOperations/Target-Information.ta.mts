@@ -251,7 +251,7 @@ function _decode_Target_Information (el: _Element): Target_Information {
     let liModificationTime: OPTIONAL<TimeStamp>;
     let interceptionType: OPTIONAL<InterceptionType>;
     let liSetUpTime: OPTIONAL<TimeStamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "network-Identifier": (_el: _Element): void => { network_Identifier = $._decode_implicit<Network_Identifier>(() => _decode_Network_Identifier)(_el); },

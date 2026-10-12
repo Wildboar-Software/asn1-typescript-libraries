@@ -169,7 +169,7 @@ function _decode_EESInfo (el: _Element): EESInfo {
     let eASIDs: OPTIONAL<EASIDs>;
     let serviceArea: OPTIONAL<Location>;
     let dNAIS: OPTIONAL<DNAIs>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eESID": (_el: _Element): void => { eESID = $._decode_implicit<EESID>(() => _decode_EESID)(_el); },
         "eESEndpoint": (_el: _Element): void => { eESEndpoint = $._decode_implicit<EESEndpoint>(() => _decode_EESEndpoint)(_el); },

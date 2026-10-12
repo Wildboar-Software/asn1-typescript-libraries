@@ -168,7 +168,7 @@ function _decode_DirectDiscoveryData (el: _Element): DirectDiscoveryData {
     let proseAppCode!: OCTET_STRING;
     let proseAppMask: OPTIONAL<ProSeAppMask>;
     let timer!: INTEGER;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "discoveryPLMNID": (_el: _Element): void => { discoveryPLMNID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "proseAppIdName": (_el: _Element): void => { proseAppIdName = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

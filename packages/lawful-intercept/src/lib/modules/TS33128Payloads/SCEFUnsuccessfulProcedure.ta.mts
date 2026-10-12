@@ -227,7 +227,7 @@ function _decode_SCEFUnsuccessfulProcedure (el: _Element): SCEFUnsuccessfulProce
     let rDSDestinationPortNumber: OPTIONAL<RDSPortNumber>;
     let applicationID: OPTIONAL<ApplicationID>;
     let sCSASID!: SCSASID;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failureCause": (_el: _Element): void => { failureCause = $._decode_implicit<SCEFFailureCause>(() => _decode_SCEFFailureCause)(_el); },
         "iMSI": (_el: _Element): void => { iMSI = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },

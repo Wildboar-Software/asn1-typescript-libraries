@@ -329,7 +329,7 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
     let national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
     let nSAPI: OPTIONAL<OCTET_STRING>;
     let packetDataHeaderInformation: OPTIONAL<PacketDataHeaderInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi2iwlanDomainId": (_el: _Element): void => { hi2iwlanDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },

@@ -217,7 +217,7 @@ function _decode_GcseLIC_header (el: _Element): GcseLIC_header {
     let t_PDU_direction!: TPDU_direction;
     let national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     let mediaID: OPTIONAL<MediaID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi3gcseDomainId": (_el: _Element): void => { hi3gcseDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lIID": (_el: _Element): void => { lIID = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },

@@ -223,7 +223,7 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let e164_Format: OPTIONAL<OCTET_STRING>;
     let sip_uri: OPTIONAL<OCTET_STRING>;
     let tel_url: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "imei": (_el: _Element): void => {
             imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

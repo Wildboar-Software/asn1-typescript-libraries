@@ -118,7 +118,7 @@ export
 function _decode_TLS13EstablishedSecrets (el: _Element): TLS13EstablishedSecrets {
     if (!_cached_decoder_for_TLS13EstablishedSecrets) { _cached_decoder_for_TLS13EstablishedSecrets = function (el: _Element): TLS13EstablishedSecrets {
     let dHE: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "dHE": (_el: _Element): void => {
             dHE = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

@@ -167,7 +167,7 @@ function _decode_CallContentLinkCharacteristics (el: _Element): CallContentLinkC
     let release_Time: OPTIONAL<TimeStamp>;
     let release_Reason: OPTIONAL<OCTET_STRING>;
     let lEMF_Address: OPTIONAL<CalledPartyNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cCLink-State": (_el: _Element): void => { cCLink_State = $._decode_implicit<CCLink_State>(() => _decode_CCLink_State)(_el); },
         "release-Time": (_el: _Element): void => { release_Time = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },

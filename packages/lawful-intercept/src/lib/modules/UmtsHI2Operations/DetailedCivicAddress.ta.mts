@@ -450,7 +450,7 @@ function _decode_DetailedCivicAddress (el: _Element): DetailedCivicAddress {
     let county: OPTIONAL<UTF8String>;
     let country!: UTF8String;
     let language!: UTF8String;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "building": (_el: _Element): void => { building = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "room": (_el: _Element): void => { room = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

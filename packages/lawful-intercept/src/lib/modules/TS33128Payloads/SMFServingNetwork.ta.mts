@@ -130,7 +130,7 @@ function _decode_SMFServingNetwork (el: _Element): SMFServingNetwork {
     if (!_cached_decoder_for_SMFServingNetwork) { _cached_decoder_for_SMFServingNetwork = function (el: _Element): SMFServingNetwork {
     let pLMNID!: PLMNID;
     let nID: OPTIONAL<NID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pLMNID": (_el: _Element): void => { pLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "nID": (_el: _Element): void => { nID = $._decode_implicit<NID>(() => _decode_NID)(_el); }

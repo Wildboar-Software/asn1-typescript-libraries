@@ -206,7 +206,7 @@ function _decode_UUS1_Content (el: _Element): UUS1_Content {
     let direction_Indication!: Direction_Indication;
     let bearer_capability: OPTIONAL<OCTET_STRING>;
     let service_Information: OPTIONAL<Service_Information>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);

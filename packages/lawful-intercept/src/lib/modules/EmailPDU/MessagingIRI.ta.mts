@@ -272,7 +272,7 @@ function _decode_MessagingIRI (el: _Element): MessagingIRI {
     let original_message: OPTIONAL<OCTET_STRING>;
     let box_identifier: OPTIONAL<OCTET_STRING>;
     let total_recipient_count: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "messaging-iri-obj-id": (_el: _Element): void => { messaging_iri_obj_id = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "system-type": (_el: _Element): void => { system_type = $._decode_implicit<Messaging_System_Type>(() => _decode_Messaging_System_Type)(_el); },

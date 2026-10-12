@@ -517,7 +517,7 @@ function _decode_TLS13UAStarParams (el: _Element): TLS13UAStarParams {
     let exporterMasterSecret!: OCTET_STRING;
     let resumptionMasterSecret!: OCTET_STRING;
     let tLSResumptionTickets: OPTIONAL<TLS13NewSessionTicket[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "offeredPSKs": (_el: _Element): void => { offeredPSKs = $._decode_implicit<TLS13OfferedPSK[]>(() => $._decodeSequenceOf<TLS13OfferedPSK>(() => _decode_TLS13OfferedPSK))(_el); },
         "offeredPSKKeyExchangeModes": (_el: _Element): void => { offeredPSKKeyExchangeModes = $._decode_implicit<TLS13PSKKeyExchangeMode[]>(() => $._decodeSequenceOf<TLS13PSKKeyExchangeMode>(() => _decode_TLS13PSKKeyExchangeMode))(_el); },

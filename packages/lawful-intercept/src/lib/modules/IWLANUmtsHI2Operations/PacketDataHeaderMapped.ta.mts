@@ -219,7 +219,7 @@ function _decode_PacketDataHeaderMapped (el: _Element): PacketDataHeaderMapped {
     let flowLabel: OPTIONAL<INTEGER>;
     let packetCount: OPTIONAL<INTEGER>;
     let direction!: TPDU_direction;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sourceIPAddress": (_el: _Element): void => { sourceIPAddress = $._decode_implicit<IPAddress>(() => _decode_IPAddress)(_el); },
         "sourcePortNumber": (_el: _Element): void => {

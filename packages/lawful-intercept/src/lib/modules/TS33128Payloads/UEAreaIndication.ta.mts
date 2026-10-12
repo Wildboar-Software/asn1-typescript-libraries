@@ -130,7 +130,7 @@ function _decode_UEAreaIndication (el: _Element): UEAreaIndication {
     if (!_cached_decoder_for_UEAreaIndication) { _cached_decoder_for_UEAreaIndication = function (el: _Element): UEAreaIndication {
     let country: OPTIONAL<UTF8String>;
     let internationalAreaIndication: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "country": (_el: _Element): void => {
             country = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);

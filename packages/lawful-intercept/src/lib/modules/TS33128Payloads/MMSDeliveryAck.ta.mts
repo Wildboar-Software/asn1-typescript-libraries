@@ -179,7 +179,7 @@ function _decode_MMSDeliveryAck (el: _Element): MMSDeliveryAck {
     let reportAllowed: OPTIONAL<BOOLEAN>;
     let status!: MMStatus;
     let direction!: MMSDirection;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "transactionID": (_el: _Element): void => { transactionID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "version": (_el: _Element): void => { version = $._decode_implicit<MMSVersion>(() => _decode_MMSVersion)(_el); },

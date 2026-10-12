@@ -810,7 +810,7 @@ function _decode_Tetra_IRI_Parameters (el: _Element): Tetra_IRI_Parameters {
     let txGrantedStatus: OPTIONAL<TxGrantedStatus>;
     let groupStatus: OPTIONAL<GroupStatus>;
     let national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);

@@ -419,7 +419,7 @@ function _decode_MMSSendByNonLocalTarget (el: _Element): MMSSendByNonLocalTarget
     let contentClass: OPTIONAL<MMSContentClass>;
     let dRMContent: OPTIONAL<BOOLEAN>;
     let adaptationAllowed: OPTIONAL<MMSAdaptation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "version": (_el: _Element): void => { version = $._decode_implicit<MMSVersion>(() => _decode_MMSVersion)(_el); },
         "transactionID": (_el: _Element): void => { transactionID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

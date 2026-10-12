@@ -297,7 +297,7 @@ function _decode_AMFDeregistration (el: _Element): AMFDeregistration {
     let reRegRequiredIndicator: OPTIONAL<ReRegRequiredIndicator>;
     let unavailabilityPeriodDuration: OPTIONAL<UnavailabilityPeriodDuration>;
     let additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "deregistrationDirection": (_el: _Element): void => { deregistrationDirection = $._decode_implicit<AMFDirection>(() => _decode_AMFDirection)(_el); },
         "accessType": (_el: _Element): void => { accessType = $._decode_implicit<AccessType>(() => _decode_AccessType)(_el); },

@@ -184,7 +184,7 @@ function _decode_ASMTPAAAInformation (el: _Element): ASMTPAAAInformation {
     let challenge: OPTIONAL<OCTET_STRING>;
     let response: OPTIONAL<OCTET_STRING>;
     let aAAResult: OPTIONAL<AAAResult>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "username": (_el: _Element): void => {
             username = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);

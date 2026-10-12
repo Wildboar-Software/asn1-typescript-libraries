@@ -130,7 +130,7 @@ function _decode_HSSIdentities (el: _Element): HSSIdentities {
     if (!_cached_decoder_for_HSSIdentities) { _cached_decoder_for_HSSIdentities = function (el: _Element): HSSIdentities {
     let ePSSubscriberIDs: OPTIONAL<EPSSubscriberIDs>;
     let iMSSubscriberIDs: OPTIONAL<IMSSubscriberIDs>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ePSSubscriberIDs": (_el: _Element): void => { ePSSubscriberIDs = $._decode_implicit<EPSSubscriberIDs>(() => _decode_EPSSubscriberIDs)(_el); },
         "iMSSubscriberIDs": (_el: _Element): void => { iMSSubscriberIDs = $._decode_explicit<IMSSubscriberIDs>(() => _decode_IMSSubscriberIDs)(_el); }

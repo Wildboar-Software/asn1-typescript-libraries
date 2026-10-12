@@ -129,7 +129,7 @@ function _decode_DiscoveredEAS (el: _Element): DiscoveredEAS {
     if (!_cached_decoder_for_DiscoveredEAS) { _cached_decoder_for_DiscoveredEAS = function (el: _Element): DiscoveredEAS {
     let eASProfile!: EASProfile;
     let lifetime: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eASProfile": (_el: _Element): void => { eASProfile = $._decode_implicit<EASProfile>(() => _decode_EASProfile)(_el); },
         "lifetime": (_el: _Element): void => { lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }

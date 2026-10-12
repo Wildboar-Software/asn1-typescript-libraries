@@ -202,7 +202,7 @@ function _decode_MMEUEServiceAccept (el: _Element): MMEUEServiceAccept {
     let uERequestType: OPTIONAL<MUSIMUERequestType>;
     let pagingRestriction: OPTIONAL<PagingRestrictionIndicator>;
     let controlPlaneServiceType: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "serviceType": (_el: _Element): void => {

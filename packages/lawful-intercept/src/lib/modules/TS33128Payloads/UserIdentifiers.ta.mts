@@ -130,7 +130,7 @@ function _decode_UserIdentifiers (el: _Element): UserIdentifiers {
     if (!_cached_decoder_for_UserIdentifiers) { _cached_decoder_for_UserIdentifiers = function (el: _Element): UserIdentifiers {
     let fiveGSSubscriberIDs: OPTIONAL<FiveGSSubscriberIDs>;
     let ePSSubscriberIDs: OPTIONAL<EPSSubscriberIDs>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "fiveGSSubscriberIDs": (_el: _Element): void => { fiveGSSubscriberIDs = $._decode_implicit<FiveGSSubscriberIDs>(() => _decode_FiveGSSubscriberIDs)(_el); },
         "ePSSubscriberIDs": (_el: _Element): void => { ePSSubscriberIDs = $._decode_implicit<EPSSubscriberIDs>(() => _decode_EPSSubscriberIDs)(_el); }

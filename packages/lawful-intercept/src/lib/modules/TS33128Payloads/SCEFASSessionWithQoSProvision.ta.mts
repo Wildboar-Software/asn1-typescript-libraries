@@ -205,7 +205,7 @@ function _decode_SCEFASSessionWithQoSProvision (el: _Element): SCEFASSessionWith
     let aSSessionWithQoSSubscription: OPTIONAL<SBIType>;
     let aSSessionWithQoSSubscriptionPatch: OPTIONAL<SBIType>;
     let aSSessionWithQoSResponseCode!: AForASSessionWithQoSResponseCode;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mSISDN": (_el: _Element): void => { mSISDN = $._decode_implicit<MSISDN>(() => _decode_MSISDN)(_el); },
         "externalIdentifier": (_el: _Element): void => { externalIdentifier = $._decode_implicit<NAI>(() => _decode_NAI)(_el); },

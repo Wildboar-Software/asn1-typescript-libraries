@@ -452,7 +452,7 @@ function _decode_SMFStartOfInterceptionWithEstablishedMAPDUSession (el: _Element
     let pCCRules: OPTIONAL<PCCRuleSet>;
     let pFDDataForApps: OPTIONAL<PFDDataForApps>;
     let ePSStartOfInterceptionWithEstablishedPDNConnection: OPTIONAL<EPSStartOfInterceptionWithEstablishedPDNConnection>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "sUPIUnauthenticated": (_el: _Element): void => { sUPIUnauthenticated = $._decode_implicit<SUPIUnauthenticatedIndication>(() => _decode_SUPIUnauthenticatedIndication)(_el); },

@@ -130,7 +130,7 @@ function _decode_HSSSubscriberRecordChange (el: _Element): HSSSubscriberRecordCh
     if (!_cached_decoder_for_HSSSubscriberRecordChange) { _cached_decoder_for_HSSSubscriberRecordChange = function (el: _Element): HSSSubscriberRecordChange {
     let hSSIdentities!: HSSIdentities[];
     let subscriberRecordChangePayload: OPTIONAL<SubscriberRecordChangePayload>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hSSIdentities": (_el: _Element): void => { hSSIdentities = $._decode_implicit<HSSIdentities[]>(() => $._decodeSequenceOf<HSSIdentities>(() => _decode_HSSIdentities))(_el); },
         "subscriberRecordChangePayload": (_el: _Element): void => { subscriberRecordChangePayload = $._decode_explicit<SubscriberRecordChangePayload>(() => _decode_SubscriberRecordChangePayload)(_el); }

@@ -215,7 +215,7 @@ function _decode_Location (el: _Element): Location {
     let umtsLocation: OPTIONAL<UMTSLocation>;
     let sAI: OPTIONAL<OCTET_STRING>;
     let oldRAI: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "e164-Number": (_el: _Element): void => {
             e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

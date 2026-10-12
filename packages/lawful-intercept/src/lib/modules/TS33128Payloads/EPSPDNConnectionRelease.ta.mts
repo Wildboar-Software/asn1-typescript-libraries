@@ -240,7 +240,7 @@ function _decode_EPSPDNConnectionRelease (el: _Element): EPSPDNConnectionRelease
     let indicationFlags: OPTIONAL<PDNConnectionIndicationFlags>;
     let scopeIndication: OPTIONAL<EPSPDNConnectionReleaseScopeIndication>;
     let bearersDeleted: OPTIONAL<EPSBearersDeleted[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ePSSubscriberIDs": (_el: _Element): void => { ePSSubscriberIDs = $._decode_implicit<EPSSubscriberIDs>(() => _decode_EPSSubscriberIDs)(_el); },
         "iMSIUnauthenticated": (_el: _Element): void => { iMSIUnauthenticated = $._decode_implicit<IMSIUnauthenticatedIndication>(() => _decode_IMSIUnauthenticatedIndication)(_el); },

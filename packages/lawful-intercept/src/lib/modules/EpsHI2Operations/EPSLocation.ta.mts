@@ -238,7 +238,7 @@ function _decode_EPSLocation (el: _Element): EPSLocation {
     let civicAddress: OPTIONAL<CivicAddress>;
     let operatorSpecificInfo: OPTIONAL<OCTET_STRING>;
     let uELocationTimestamp: OPTIONAL<EPSLocation_uELocationTimestamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userLocationInfo": (_el: _Element): void => {
             userLocationInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);

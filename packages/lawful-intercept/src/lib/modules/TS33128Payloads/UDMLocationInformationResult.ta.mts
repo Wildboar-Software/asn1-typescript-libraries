@@ -250,7 +250,7 @@ function _decode_UDMLocationInformationResult (el: _Element): UDMLocationInforma
     let location: OPTIONAL<Location>;
     let rATType: OPTIONAL<RATType>;
     let problemDetails: OPTIONAL<UDMProblemDetails>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "pEI": (_el: _Element): void => { pEI = $._decode_explicit<PEI>(() => _decode_PEI)(_el); },

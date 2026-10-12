@@ -128,7 +128,7 @@ function _decode_ProSeRemoteUEsReport (el: _Element): ProSeRemoteUEsReport {
     if (!_cached_decoder_for_ProSeRemoteUEsReport) { _cached_decoder_for_ProSeRemoteUEsReport = function (el: _Element): ProSeRemoteUEsReport {
     let remoteUEsContextConnected: OPTIONAL<RemoteUEContextList>;
     let remoteUEsContextDisconnected: OPTIONAL<RemoteUEContextList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "remoteUEsContextConnected": (_el: _Element): void => { remoteUEsContextConnected = $._decode_implicit<RemoteUEContextList>(() => _decode_RemoteUEContextList)(_el); },
         "remoteUEsContextDisconnected": (_el: _Element): void => { remoteUEsContextDisconnected = $._decode_implicit<RemoteUEContextList>(() => _decode_RemoteUEContextList)(_el); }

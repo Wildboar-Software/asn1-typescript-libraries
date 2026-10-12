@@ -194,7 +194,7 @@ function _decode_S1Information (el: _Element): S1Information {
     let connectedENGNBList: OPTIONAL<ConnectedENGNBList>;
     let mMEServedGUMMEIList!: MMEServedGUMMEIList;
     let iABSupported: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "globalRANNodeID": (_el: _Element): void => { globalRANNodeID = $._decode_implicit<GlobalRANNodeID>(() => _decode_GlobalRANNodeID)(_el); },
         "rANNodeName": (_el: _Element): void => { rANNodeName = $._decode_explicit<RANNodeName>(() => _decode_RANNodeName)(_el); },

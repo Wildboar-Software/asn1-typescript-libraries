@@ -152,7 +152,7 @@ function _decode_LIAppliedDeliveryInformation (el: _Element): LIAppliedDeliveryI
     let hI2DeliveryPortNumber: OPTIONAL<PortNumber>;
     let hI3DeliveryIPAddress: OPTIONAL<IPAddress>;
     let hI3DeliveryPortNumber: OPTIONAL<PortNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hI2DeliveryIPAddress": (_el: _Element): void => { hI2DeliveryIPAddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(_el); },
         "hI2DeliveryPortNumber": (_el: _Element): void => { hI2DeliveryPortNumber = $._decode_implicit<PortNumber>(() => _decode_PortNumber)(_el); },

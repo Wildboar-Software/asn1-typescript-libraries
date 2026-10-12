@@ -358,7 +358,7 @@ function _decode_MMBoxDescription (el: _Element): MMBoxDescription {
     let previouslySentBy: OPTIONAL<MMSPreviouslySentBy>;
     let previouslySentByDateTime: OPTIONAL<Timestamp>;
     let contentType: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "contentLocation": (_el: _Element): void => { contentLocation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "messageID": (_el: _Element): void => { messageID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

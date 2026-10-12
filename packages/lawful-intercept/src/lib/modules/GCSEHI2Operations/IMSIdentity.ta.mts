@@ -133,7 +133,7 @@ function _decode_IMSIdentity (el: _Element): IMSIdentity {
     if (!_cached_decoder_for_IMSIdentity) { _cached_decoder_for_IMSIdentity = function (el: _Element): IMSIdentity {
     let sip_uri: OPTIONAL<OCTET_STRING>;
     let tel_uri: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sip-uri": (_el: _Element): void => { sip_uri = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "tel-uri": (_el: _Element): void => { tel_uri = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

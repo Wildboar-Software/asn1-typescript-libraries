@@ -186,7 +186,7 @@ function _decode_IPAddress (el: _Element): IPAddress {
     let iP_value!: IP_value;
     let iP_assignment: OPTIONAL<IPAddress_iP_assignment>;
     let iPv6PrefixLength: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iP-type": (_el: _Element): void => { iP_type = $._decode_implicit<IPAddress_iP_type>(() => _decode_IPAddress_iP_type)(_el); },
         "iP-value": (_el: _Element): void => { iP_value = $._decode_explicit<IP_value>(() => _decode_IP_value)(_el); },

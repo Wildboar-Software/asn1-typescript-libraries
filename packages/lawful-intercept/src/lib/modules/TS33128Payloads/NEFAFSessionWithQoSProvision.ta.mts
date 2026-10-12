@@ -192,7 +192,7 @@ function _decode_NEFAFSessionWithQoSProvision (el: _Element): NEFAFSessionWithQo
     let aFSessionWithQoSSubscription: OPTIONAL<SBIType>;
     let aFSessionWithQoSSubscriptionPatch: OPTIONAL<SBIType>;
     let aFSessionWithQoSResponseCode!: AForASSessionWithQoSResponseCode;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },
         "aFID": (_el: _Element): void => { aFID = $._decode_implicit<AFID>(() => _decode_AFID)(_el); },

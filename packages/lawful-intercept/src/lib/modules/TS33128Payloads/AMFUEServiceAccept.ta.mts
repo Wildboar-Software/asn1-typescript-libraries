@@ -237,7 +237,7 @@ function _decode_AMFUEServiceAccept (el: _Element): AMFUEServiceAccept {
     let pagingRestriction: OPTIONAL<PagingRestrictionIndicator>;
     let forbiddenTAIList: OPTIONAL<TAIList>;
     let uERequestType: OPTIONAL<MUSIMUERequestType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "serviceMessageIdentity": (_el: _Element): void => { serviceMessageIdentity = $._decode_explicit<ServiceMessageIdentity>(() => _decode_ServiceMessageIdentity)(_el); },

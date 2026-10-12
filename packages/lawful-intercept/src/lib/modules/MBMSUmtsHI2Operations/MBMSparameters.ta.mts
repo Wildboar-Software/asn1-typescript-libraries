@@ -121,7 +121,7 @@ export
 function _decode_MBMSparameters (el: _Element): MBMSparameters {
     if (!_cached_decoder_for_MBMSparameters) { _cached_decoder_for_MBMSparameters = function (el: _Element): MBMSparameters {
     let aPN: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aPN": (_el: _Element): void => { aPN = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }
     };

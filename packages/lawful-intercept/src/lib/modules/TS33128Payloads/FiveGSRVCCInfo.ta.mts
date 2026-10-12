@@ -141,7 +141,7 @@ function _decode_FiveGSRVCCInfo (el: _Element): FiveGSRVCCInfo {
     let uE5GSRVCCCapability!: BOOLEAN;
     let sessionTransferNumber: OPTIONAL<UTF8String>;
     let correlationMSISDN: OPTIONAL<MSISDN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uE5GSRVCCCapability": (_el: _Element): void => { uE5GSRVCCCapability = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "sessionTransferNumber": (_el: _Element): void => { sessionTransferNumber = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

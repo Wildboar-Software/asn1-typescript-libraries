@@ -156,7 +156,7 @@ function _decode_Current_Previous_Systems (el: _Element): Current_Previous_Syste
     let current_Serving_MME_Address: OPTIONAL<DataNodeIdentifier>;
     let previous_Serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     let previous_Serving_MME_Address: OPTIONAL<DataNodeIdentifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serving-System-Identifier": (_el: _Element): void => { serving_System_Identifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "current-Serving-MME-Address": (_el: _Element): void => { current_Serving_MME_Address = $._decode_implicit<DataNodeIdentifier>(() => _decode_DataNodeIdentifier)(_el); },

@@ -167,7 +167,7 @@ function _decode_EESEASDiscoveryNotification (el: _Element): EESEASDiscoveryNoti
     let eventType!: EASEventType;
     let discoveredEAS!: DiscoveredEAS;
     let failureResponse: OPTIONAL<FailureResponse>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "subscriptionID": (_el: _Element): void => { subscriptionID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "eventType": (_el: _Element): void => { eventType = $._decode_implicit<EASEventType>(() => _decode_EASEventType)(_el); },

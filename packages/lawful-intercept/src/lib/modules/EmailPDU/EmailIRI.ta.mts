@@ -367,7 +367,7 @@ function _decode_EmailIRI (el: _Element): EmailIRI {
     let national_EM_ASN1parameters: OPTIONAL<National_EM_ASN1parameters>;
     let aAAInformation: OPTIONAL<AAAInformation>;
     let e_mail_Sender_Validity: OPTIONAL<EmailIRI_e_mail_Sender_Validity>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "emailIRIObjId": (_el: _Element): void => { emailIRIObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "eventType": (_el: _Element): void => { eventType = $._decode_implicit<E_mail_Event>(() => _decode_E_mail_Event)(_el); },

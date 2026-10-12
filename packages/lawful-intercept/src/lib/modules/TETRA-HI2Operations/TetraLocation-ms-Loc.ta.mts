@@ -154,7 +154,7 @@ function _decode_TetraLocation_ms_Loc (el: _Element): TetraLocation_ms_Loc {
     let mnc!: INTEGER;
     let lai!: INTEGER;
     let ci: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mcc": (_el: _Element): void => {
             mcc = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

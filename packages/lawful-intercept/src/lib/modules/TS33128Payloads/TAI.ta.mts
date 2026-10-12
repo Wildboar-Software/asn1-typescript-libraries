@@ -143,7 +143,7 @@ function _decode_TAI (el: _Element): TAI {
     let pLMNID!: PLMNID;
     let tAC!: TAC;
     let nID: OPTIONAL<NID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pLMNID": (_el: _Element): void => { pLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "tAC": (_el: _Element): void => { tAC = $._decode_implicit<TAC>(() => _decode_TAC)(_el); },

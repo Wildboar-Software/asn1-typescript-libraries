@@ -176,7 +176,7 @@ function _decode_F1Information (el: _Element): F1Information {
     let gNBDUServedCells!: RANCGI[];
     let extendedGNBDUName: OPTIONAL<UTF8String>;
     let extendedGNBCUName: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gNBDUID": (_el: _Element): void => {
             gNBDUID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);

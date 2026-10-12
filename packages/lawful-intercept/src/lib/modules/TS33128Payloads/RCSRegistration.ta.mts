@@ -174,7 +174,7 @@ function _decode_RCSRegistration (el: _Element): RCSRegistration {
     let rCSRegistrationUpdateRequest!: IMSPayload;
     let rCSRegistrationUpdateResponse!: IMSPayload;
     let location: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rCSTargetIdentities": (_el: _Element): void => {
             rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);

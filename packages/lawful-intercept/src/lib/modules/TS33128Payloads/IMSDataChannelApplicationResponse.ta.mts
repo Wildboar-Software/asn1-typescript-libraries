@@ -169,7 +169,7 @@ function _decode_IMSDataChannelApplicationResponse (el: _Element): IMSDataChanne
     let applicationUEInformation: OPTIONAL<ApplicationUEInformation[]>;
     let dCStreamID: OPTIONAL<INTEGER>;
     let getApplicationResponse!: ApplicationResponse;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "targetIdentity": (_el: _Element): void => { targetIdentity = $._decode_explicit<IMSSubscriberIDs>(() => _decode_IMSSubscriberIDs)(_el); },
         "callingIdentity": (_el: _Element): void => { callingIdentity = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },

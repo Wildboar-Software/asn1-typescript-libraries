@@ -166,7 +166,7 @@ function _decode_EESEECContextRelocation (el: _Element): EESEECContextRelocation
     let gPSI: OPTIONAL<GPSI>;
     let uELoc: OPTIONAL<Location>;
     let aCProfiles: OPTIONAL<ACProfiles>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eECID": (_el: _Element): void => { eECID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "eECContextID": (_el: _Element): void => { eECContextID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

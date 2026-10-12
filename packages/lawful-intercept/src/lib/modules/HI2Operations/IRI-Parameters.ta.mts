@@ -748,7 +748,7 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
     let cTTRAFFICind: OPTIONAL<CTTRAFFICind>;
     let servingSystem: OPTIONAL<Network_Element_Identifier>;
     let national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => {
             domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);
