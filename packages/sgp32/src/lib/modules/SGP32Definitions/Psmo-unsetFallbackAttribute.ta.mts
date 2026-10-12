@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Psmo_unsetFallbackAttribute
  * @description
  * 
+ * Clear the Fallback Attribute of the current Fallback Profile. The command
+ * carries no ICCID. The eUICC supports the Fallback Mechanism. After success,
+ * the eUICC has no Fallback Profile. SGP.32 v1.2, sections 2.11.1.1 and 3.4.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

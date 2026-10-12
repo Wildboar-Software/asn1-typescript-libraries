@@ -11,7 +11,15 @@ import { _decode_CancelSessionReason, _encode_CancelSessionReason, type CancelSe
 /**
  * @summary CompactEuiccCancelSessionSigned
  * @description
- * 
+ *
+ * Compact body of a cancel-session signature input. The full
+ * euiccCancelSessionSigned contains the Transaction ID and this reason; the
+ * compact form keeps the reason. The eUICC revokes any grant to immediately
+ * enable a Profile when ES10b.CancelSession runs. CancelSessionReason values
+ * endUserRejection(0), postponed(1), and timeout(2) are unused in SGP.32.
+ *
+ * SGP.32 v1.2, sections 3.2.3.3, 5.9.9, and 5.14.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +35,18 @@ class CompactEuiccCancelSessionSigned {
     constructor (
         /**
          * @summary `reason`.
+         * @description
+         *
+         * Cancel session reason supplied to ES10b.CancelSession. pprNotAllowed is used
+         * when Profile Metadata contains a PPR disallowed by the Rules Authorisation
+         * Table, or PPR1 while an Operational Profile is installed. metadataMismatch
+         * is used when Bound Profile Package metadata differs from the metadata in the
+         * AuthenticateClient response. loadBppExecutionError is used when installing
+         * the Bound Profile Package fails. Any other AuthenticateClient error uses
+         * undefinedReason, and the IPAd then ignores the eUICC response.
+         *
+         * SGP.32 v1.2, sections 3.2.3.3 and 5.9.9. The reason type itself is as
+         * defined in SGP.22.
          * @public
          * @readonly
          */

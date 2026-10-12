@@ -10,7 +10,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeleteProfileResult
  * @description
- * 
+ *
+ * Result of the delete PSMO after the signed eUICC Package is verified. The
+ * target Profile is marked to be deleted, or to be disabled and deleted, and
+ * the signed result is stored on the eUICC. Deletion of a Provisioning Profile
+ * or a preloaded Test Profile may be unsupported; those conditions are out of
+ * scope. Deleting a Fallback Profile is allowed. An eUICC Package must not
+ * combine an Enable that grants rollback with a Delete of the Profile that
+ * rollback would restore.
+ *
+ * SGP.32 v1.2, sections 2.11.2.1 and 3.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +40,13 @@ type DeleteProfileResult = INTEGER;
 
 /**
  * @summary DeleteProfileResult_ok
+ * @description
+ *
+ * The target Profile was marked to be deleted (Disabled, and not marked to be
+ * enabled) or to be disabled and deleted (Enabled, already marked to be
+ * disabled, and not referenced by rollback).
+ *
+ * SGP.32 v1.2, section 3.4.3.
  * @constant
  * @type {number}
  */
@@ -38,6 +55,10 @@ const DeleteProfileResult_ok: DeleteProfileResult = 0; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary DeleteProfileResult_ok
+ * @description
+ *
+ * The target Profile was marked to be deleted, or to be disabled and deleted
+ * (SGP.32 v1.2, section 3.4.3).
  * @constant
  * @type {number}
  */
@@ -46,6 +67,11 @@ const ok: DeleteProfileResult = DeleteProfileResult_ok; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary DeleteProfileResult_iccidOrAidNotFound
+ * @description
+ *
+ * No Profile on the eUICC has the ICCID given in the delete PSMO.
+ *
+ * SGP.32 v1.2, section 3.4.3.
  * @constant
  * @type {number}
  */
@@ -54,6 +80,9 @@ const DeleteProfileResult_iccidOrAidNotFound: DeleteProfileResult = 1; /* LONG_N
 
 /**
  * @summary DeleteProfileResult_iccidOrAidNotFound
+ * @description
+ *
+ * No Profile has the given ICCID (SGP.32 v1.2, section 3.4.3).
  * @constant
  * @type {number}
  */
@@ -62,6 +91,12 @@ const iccidOrAidNotFound: DeleteProfileResult = DeleteProfileResult_iccidOrAidNo
 
 /**
  * @summary DeleteProfileResult_profileNotInDisabledState
+ * @description
+ *
+ * The target is Enabled and is not marked to be disabled, or it is Disabled
+ * and is marked to be enabled.
+ *
+ * SGP.32 v1.2, section 3.4.3.
  * @constant
  * @type {number}
  */
@@ -70,6 +105,10 @@ const DeleteProfileResult_profileNotInDisabledState: DeleteProfileResult = 2; /*
 
 /**
  * @summary DeleteProfileResult_profileNotInDisabledState
+ * @description
+ *
+ * The target is Enabled without a pending disable, or Disabled with a pending
+ * enable (SGP.32 v1.2, section 3.4.3).
  * @constant
  * @type {number}
  */
@@ -78,6 +117,10 @@ const profileNotInDisabledState: DeleteProfileResult = DeleteProfileResult_profi
 
 /**
  * @summary DeleteProfileResult_disallowedByPolicy
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on the delete PSMO result and does not further
+ * define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -86,6 +129,9 @@ const DeleteProfileResult_disallowedByPolicy: DeleteProfileResult = 3; /* LONG_N
 
 /**
  * @summary DeleteProfileResult_disallowedByPolicy
+ * @description
+ *
+ * Listed on the delete PSMO; SGP.32 v1.2 does not further define it (Annex C).
  * @constant
  * @type {number}
  */
@@ -94,6 +140,13 @@ const disallowedByPolicy: DeleteProfileResult = DeleteProfileResult_disallowedBy
 
 /**
  * @summary DeleteProfileResult_rollbackNotAvailable
+ * @description
+ *
+ * The target is Disabled, or marked to be disabled, and is currently
+ * referenced by the Rollback Mechanism recorded for an earlier enable in this
+ * package.
+ *
+ * SGP.32 v1.2, section 3.4.3.
  * @constant
  * @type {number}
  */
@@ -102,6 +155,10 @@ const DeleteProfileResult_rollbackNotAvailable: DeleteProfileResult = 20; /* LON
 
 /**
  * @summary DeleteProfileResult_rollbackNotAvailable
+ * @description
+ *
+ * The target is the Profile recorded for rollback (SGP.32 v1.2, section
+ * 3.4.3).
  * @constant
  * @type {number}
  */
@@ -110,6 +167,13 @@ const rollbackNotAvailable: DeleteProfileResult = DeleteProfileResult_rollbackNo
 
 /**
  * @summary DeleteProfileResult_returnFallbackProfile
+ * @description
+ *
+ * The Fallback Profile is enabled and the target is the Profile that
+ * ES10b.ExecuteFallbackMechanism disabled, so it is still referenced by the
+ * Fallback Mechanism.
+ *
+ * SGP.32 v1.2, section 3.4.3.
  * @constant
  * @type {number}
  */
@@ -118,6 +182,10 @@ const DeleteProfileResult_returnFallbackProfile: DeleteProfileResult = 21; /* LO
 
 /**
  * @summary DeleteProfileResult_returnFallbackProfile
+ * @description
+ *
+ * The target is the Profile that fallback disabled, and fallback is still
+ * enabled (SGP.32 v1.2, section 3.4.3).
  * @constant
  * @type {number}
  */
@@ -126,6 +194,10 @@ const returnFallbackProfile: DeleteProfileResult = DeleteProfileResult_returnFal
 
 /**
  * @summary DeleteProfileResult_undefinedError
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on the delete PSMO result and does not further
+ * define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -134,6 +206,9 @@ const DeleteProfileResult_undefinedError: DeleteProfileResult = 127; /* LONG_NAM
 
 /**
  * @summary DeleteProfileResult_undefinedError
+ * @description
+ *
+ * Listed on the delete PSMO; SGP.32 v1.2 does not further define it (Annex C).
  * @constant
  * @type {number}
  */

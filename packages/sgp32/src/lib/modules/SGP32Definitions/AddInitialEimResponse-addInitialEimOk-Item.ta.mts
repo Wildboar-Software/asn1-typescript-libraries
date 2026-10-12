@@ -12,7 +12,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AddInitialEimResponse_addInitialEimOk_Item
  * @description
- * 
+ *
+ * One success entry of addInitialEimOk, aligned with one stored eIM
+ * Configuration Data entry.
+ *
+ * Select associationToken for an Associated eIM whose token calculation was
+ * requested; the integer is the token the eUICC calculated and stored. Select
+ * addOk for a successful entry for which no token was requested.
+ *
+ * SGP.32 v1.2, section 5.9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

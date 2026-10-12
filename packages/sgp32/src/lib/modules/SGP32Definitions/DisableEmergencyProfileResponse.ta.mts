@@ -11,7 +11,15 @@ import { _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, 
 /**
  * @summary DisableEmergencyProfileResponse
  * @description
- * 
+ *
+ * ES10b.DisableEmergencyProfile response. disableEmergencyProfileResult is ok
+ * after the Emergency Profile is disabled and the previous Profile is enabled,
+ * profileNotInEnabledState when the Emergency Profile is disabled already,
+ * catBusy when a proactive session blocks the command, or ecallNotAvailable
+ * when emergency is unsupported or no Emergency Profile exists.
+ *
+ * SGP.32 v1.2, section 5.9.23.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +41,13 @@ class DisableEmergencyProfileResponse {
     constructor (
         /**
          * @summary `disableEmergencyProfileResult`.
+         * @description
+         *
+         * ok on success, profileNotInEnabledState when the Emergency Profile is not
+         * enabled, catBusy when a proactive session is left open, or ecallNotAvailable
+         * when emergency is unsupported or no Emergency Profile exists.
+         *
+         * SGP.32 v1.2, section 5.9.23.
          * @public
          * @readonly
          */

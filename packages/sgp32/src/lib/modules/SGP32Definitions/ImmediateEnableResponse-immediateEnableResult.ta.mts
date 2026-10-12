@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ImmediateEnableResponse_immediateEnableResult
  * @description
  * 
+ * ES10b.ImmediateEnable result. `ok`, `immediateEnableNotAvailable`,
+ * `noSessionContext`, and `catBusy` are defined in section 5.9.15. SGP.32 v1.2
+ * names `undefinedError(127)` and does not further define it. Annex C lists
+ * that name only.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +33,10 @@ type ImmediateEnableResponse_immediateEnableResult = INTEGER;
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_ok
+ * @description
+ * The eUICC completed the immediate enable (`refreshFlag` false) or has marked
+ * the Profiles and will send REFRESH (`refreshFlag` true). SGP.32 v1.2,
+ * section 5.9.15.
  * @constant
  * @type {number}
  */
@@ -36,6 +45,9 @@ const ImmediateEnableResponse_immediateEnableResult_ok: ImmediateEnableResponse_
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_ok
+ * @description
+ * Immediate enabling completed, or the Profiles are marked and REFRESH will be
+ * sent. SGP.32 v1.2, section 5.9.15.
  * @constant
  * @type {number}
  */
@@ -44,6 +56,10 @@ const ok: ImmediateEnableResponse_immediateEnableResult = ImmediateEnableRespons
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable
+ * @description
+ * Immediate enabling was not granted for the newly installed Profile, or the
+ * target is an Emergency Profile with `ecallIndication` set to TRUE. SGP.32
+ * v1.2, section 5.9.15.
  * @constant
  * @type {number}
  */
@@ -52,6 +68,9 @@ const ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable:
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable
+ * @description
+ * Immediate enabling was not granted, or the target is an Emergency Profile
+ * with `ecallIndication` TRUE. SGP.32 v1.2, section 5.9.15.
  * @constant
  * @type {number}
  */
@@ -60,6 +79,9 @@ const immediateEnableNotAvailable: ImmediateEnableResponse_immediateEnableResult
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_noSessionContext
+ * @description
+ * Ignoring Notification retrieval commands, the previous ES10 function was not
+ * ES10b.LoadBoundProfilePackage. SGP.32 v1.2, section 5.9.15.
  * @constant
  * @type {number}
  */
@@ -68,6 +90,9 @@ const ImmediateEnableResponse_immediateEnableResult_noSessionContext: ImmediateE
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_noSessionContext
+ * @description
+ * The previous ES10 function, ignoring Notification retrieval, was not
+ * ES10b.LoadBoundProfilePackage. SGP.32 v1.2, section 5.9.15.
  * @constant
  * @type {number}
  */
@@ -76,6 +101,10 @@ const noSessionContext: ImmediateEnableResponse_immediateEnableResult = Immediat
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_catBusy
+ * @description
+ * A proactive session is still open. The eUICC MAY stop the command with this
+ * code. If it does not, it terminates that proactive session internally and
+ * continues. SGP.32 v1.2, section 5.9.15.
  * @constant
  * @type {number}
  */
@@ -84,6 +113,9 @@ const ImmediateEnableResponse_immediateEnableResult_catBusy: ImmediateEnableResp
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_catBusy
+ * @description
+ * A proactive session is open and the eUICC stopped ImmediateEnable with this
+ * code. SGP.32 v1.2, section 5.9.15.
  * @constant
  * @type {number}
  */
@@ -92,6 +124,9 @@ const catBusy: ImmediateEnableResponse_immediateEnableResult = ImmediateEnableRe
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_undefinedError
+ * @description
+ * SGP.32 v1.2 section 5.9.15 names `undefinedError(127)` and does not further
+ * define the condition that produces it. Annex C lists the name only.
  * @constant
  * @type {number}
  */
@@ -100,6 +135,9 @@ const ImmediateEnableResponse_immediateEnableResult_undefinedError: ImmediateEna
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_undefinedError
+ * @description
+ * SGP.32 v1.2 section 5.9.15 names this code and does not further define the
+ * condition that produces it. Annex C.
  * @constant
  * @type {number}
  */

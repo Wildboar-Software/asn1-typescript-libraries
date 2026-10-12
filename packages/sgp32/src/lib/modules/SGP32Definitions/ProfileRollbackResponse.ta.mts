@@ -13,6 +13,10 @@ import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageRes
  * @summary ProfileRollbackResponse
  * @description
  * 
+ * Response to ES10b.ProfileRollback. When cmdResult is ok, the eUICC has
+ * executed the rollback and eUICCPackageResult carries the replacement signed
+ * result. SGP.32 v1.2, section 5.9.16.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,22 @@ class ProfileRollbackResponse {
     constructor (
         /**
          * @summary `cmdResult`.
+         * @description
+         * ok when rollback ran. rollbackNotAllowed when the last enable PSMO did not
+         * grant it. commandError when no Profile is enabled. catBusy when a proactive
+         * session is still open. SGP.32 v1.2, section 5.9.16.
          * @public
          * @readonly
          */
         readonly cmdResult: ProfileRollbackResponse_cmdResult,
         /**
          * @summary `eUICCPackageResult`.
+         * @description
+         * Present when cmdResult is ok. Same eimId, counterValue, and eimTransactionId
+         * as the result of the previous eUICC Package. seqNumber is one higher.
+         * euiccResultData repeats the previous PSMO results and then adds
+         * RollbackProfileResult. The previous eUICC Package Result is removed. SGP.32
+         * v1.2, section 5.9.16.
          * @public
          * @readonly
          */

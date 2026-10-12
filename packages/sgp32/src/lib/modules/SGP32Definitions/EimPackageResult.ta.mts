@@ -15,6 +15,21 @@ import { EimPackageResultResponseError, _decode_EimPackageResultResponseError, _
  * @summary EimPackageResult
  * @description
  * 
+ * Result of one eIM Package, delivered by ESipa.ProvideEimPackageResult and
+ * also returned by ESipa.TransferEimPackage (SGP.32 v1.2, sections 2.11.2 and
+ * 6.3.2.7).
+ *
+ * euiccPackageResult is the eUICC Package Result alone. ePRAndNotifications is
+ * that result followed by pending Notifications when the package contained
+ * PSMOs (section 5.14.4). ipaEuiccDataResponse answers an IpaEuiccDataRequest.
+ * profileDownloadTriggerResult reports a direct Profile download the eIM
+ * requested (section 2.11.2.3). eimPackageResultResponseError reports an IPA
+ * failure; the eIM still updates the eIM Packages pending for the eUICC
+ * (section 5.14.6).
+ *
+ * When the eIM Package contained eimTransactionId, the IPA returns that same
+ * value in ProvideEimPackageResult (section 6.3.2.7).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

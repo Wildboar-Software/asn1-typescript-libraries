@@ -12,6 +12,14 @@ import { GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa, _
  * @summary GetBoundProfilePackageResponseEsipa
  * @description
  * 
+ * ESipa.GetBoundProfilePackage response. Select
+ * `getBoundProfilePackageOkEsipa` when the Bound Profile Package is delivered.
+ * Select `getBoundProfilePackageErrorEsipa` when ES9+'.GetBoundProfilePackage
+ * fails, in which case the eIM returns that same error, or when Profile
+ * Metadata in the package has changed (`metadataMismatch`). The eIM SHALL NOT
+ * send `transactionId` to an IPA with `minimizeEsipaBytes`; otherwise it SHALL
+ * send `transactionId`. SGP.32 v1.2, sections 5.14.2 and 6.3.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,6 +16,15 @@ import { EuiccPackageErrorCode, _decode_EuiccPackageErrorCode, _encode_EuiccPack
  * @summary EuiccPackageErrorDataSigned
  * @description
  * 
+ * Signed input of euiccSignEPE for a verification failure (SGP.32 v1.2,
+ * section 2.11.2.1). The signature covers these bytes concatenated with the
+ * association token; the token value zero is used when none is configured. The
+ * eUICC does not keep this error. It echoes eimId, counterValue, and, when the
+ * request had one, eimTransactionId, so the eIM can match the error to the
+ * package (sections 2.11.1.1 and 2.11.2.1). The stored replay counter is
+ * updated only when a signed execution result is later produced (section
+ * 5.9.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +43,41 @@ class EuiccPackageErrorDataSigned {
     constructor (
         /**
          * @summary `eimId`.
+         * @description
+         * eimId from the rejected euiccPackageSigned, echoed so the eIM can match this
+         * error to the package it sent (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
+         * Length 1 to 128 bytes (section 4.3).
          * @public
          * @readonly
          */
         readonly eimId: UTF8String,
         /**
          * @summary `counterValue`.
+         * @description
+         * counterValue from the rejected package, echoed for the same matching (SGP.32
+         * v1.2, section 2.11.1.1). A replay or an out-of-range counter is reported in
+         * euiccPackageErrorCode, and this field still carries the value that was
+         * checked.
          * @public
          * @readonly
          */
         readonly counterValue: INTEGER,
         /**
          * @summary `eimTransactionId`.
+         * @description
+         * Present when the signed package contained eimTransactionId; the eUICC echoes
+         * that same value (SGP.32 v1.2, section 2.11.2.1). The identifier is as
+         * defined in SGP.22, which SGP.32 cites from section 2.11.1.1.
          * @public
          * @readonly
          */
         readonly eimTransactionId: OPTIONAL<TransactionId>,
         /**
          * @summary `euiccPackageErrorCode`.
+         * @description
+         * Why verification failed or why the package was rejected after the eIM key
+         * was resolved (SGP.32 v1.2, sections 2.11.2.1 and 5.9.1). Unknown eimId and a
+         * bad signature use the unsigned error instead.
          * @public
          * @readonly
          */

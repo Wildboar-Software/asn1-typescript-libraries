@@ -12,6 +12,17 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  * @summary Psmo_delete
  * @description
  * 
+ * Delete one installed Profile. An eUICC Package must omit an enable that
+ * grants rollback when it also deletes the Profile the IPA would roll back to.
+ * Deletion of a Provisioning Profile or a preloaded Test Profile is
+ * implementation-dependent and may be unsupported. Deleting a Fallback Profile
+ * is allowed. On success a disabled Profile that is not marked to be enabled
+ * is marked to be deleted. An enabled Profile already marked to be disabled,
+ * and not referenced by rollback, is marked to be disabled and deleted. When
+ * the Profile is deleted, its associated data is deleted. Further eUICC
+ * behaviour is as defined in SGP.22 section 5.7.18. SGP.32 v1.2, sections
+ * 2.11.1.1, 3.4.3, and 5.13.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +38,14 @@ class Psmo_delete {
     constructor (
         /**
          * @summary `iccid`.
+         * @description
+         * ICCID of the Profile to delete, as defined in SGP.22. SGP.32 v1.2, section
+         * 2.11.1.1. An unknown ICCID yields iccidOrAidNotFound(1). Enabled while not
+         * marked to be disabled, or disabled while marked to be enabled, yields
+         * profileNotInDisabledState(2). A Profile referenced by the Rollback Mechanism
+         * yields rollbackNotAvailable(20). When the Fallback Profile is enabled and
+         * this ICCID is the Profile that ES10b.ExecuteFallbackMechanism disabled, the
+         * result is returnFallbackProfile(21). SGP.32 v1.2, section 3.4.3.
          * @public
          * @readonly
          */

@@ -12,7 +12,19 @@ import { type EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "@
 /**
  * @summary CompactProfileInstallationResult
  * @description
- * 
+ *
+ * Compact ProfileInstallationResult carried as a pending notification on
+ * ESipa. An IPA with minimizeEsipaBytes should re-encode
+ * ProfileInstallationResult into this form and keep euiccSignPIR unchanged.
+ * Before ES9+'.HandleNotification, the eIM restores the full notification from
+ * data it already holds, such as StoreMetadataRequest, serverSigned1, and the
+ * server, SM-DP+, eUICC, and EUM certificates.
+ *
+ * For an indirect Profile download this notification is correlated to
+ * ESipa.GetBoundProfilePackage by the SM-DP+ Transaction ID.
+ *
+ * SGP.32 v1.2, section 5.14.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +41,24 @@ class CompactProfileInstallationResult {
     constructor (
         /**
          * @summary `compactProfileInstallationResultData`.
+         * @description
+         *
+         * Reduced installation-result body: SM-DP+ Transaction ID, sequence number,
+         * iccidPresent, and either a compact success or an ErrorResult.
+         *
+         * SGP.32 v1.2, section 5.14.7.
          * @public
          * @readonly
          */
         readonly compactProfileInstallationResultData: CompactProfileInstallationResultData,
         /**
          * @summary `euiccSignPIR`.
+         * @description
+         *
+         * eUICC signature of the Profile Installation Result, kept unchanged from the
+         * full ProfileInstallationResult.
+         *
+         * SGP.32 v1.2, section 5.14.7.
          * @public
          * @readonly
          */

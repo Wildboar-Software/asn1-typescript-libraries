@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProfileInfoListError
  * @description
  * 
+ * Failure of listProfileInfo. profileChangeOngoing is defined when that
+ * command follows an enable, disable, or delete in the same eUICC Package.
+ * SGP.32 v1.2, sections 2.11.1.1 and 2.11.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +30,9 @@ type ProfileInfoListError = INTEGER;
 
 /**
  * @summary ProfileInfoListError_incorrectInputValues
+ * @description
+ * SGP.32 v1.2 lists incorrectInputValues(1) on ProfileInfoListError and does
+ * not further define the condition. Section 2.11.2.1.
  * @constant
  * @type {number}
  */
@@ -34,6 +41,9 @@ const ProfileInfoListError_incorrectInputValues: ProfileInfoListError = 1; /* LO
 
 /**
  * @summary ProfileInfoListError_incorrectInputValues
+ * @description
+ * SGP.32 v1.2 does not further define incorrectInputValues(1). Section
+ * 2.11.2.1.
  * @constant
  * @type {number}
  */
@@ -42,6 +52,9 @@ const incorrectInputValues: ProfileInfoListError = ProfileInfoListError_incorrec
 
 /**
  * @summary ProfileInfoListError_profileChangeOngoing
+ * @description
+ * listProfileInfo was placed after an enable, disable, or delete in the same
+ * eUICC Package. SGP.32 v1.2, section 2.11.1.1.
  * @constant
  * @type {number}
  */
@@ -50,6 +63,9 @@ const ProfileInfoListError_profileChangeOngoing: ProfileInfoListError = 11; /* L
 
 /**
  * @summary ProfileInfoListError_profileChangeOngoing
+ * @description
+ * listProfileInfo followed enable, disable, or delete in the same eUICC
+ * Package. SGP.32 v1.2, section 2.11.1.1.
  * @constant
  * @type {number}
  */
@@ -58,6 +74,9 @@ const profileChangeOngoing: ProfileInfoListError = ProfileInfoListError_profileC
 
 /**
  * @summary ProfileInfoListError_undefinedError
+ * @description
+ * SGP.32 v1.2 lists undefinedError(127) on ProfileInfoListError and does not
+ * further define the condition. Section 2.11.2.1.
  * @constant
  * @type {number}
  */
@@ -66,6 +85,8 @@ const ProfileInfoListError_undefinedError: ProfileInfoListError = 127; /* LONG_N
 
 /**
  * @summary ProfileInfoListError_undefinedError
+ * @description
+ * SGP.32 v1.2 does not further define undefinedError(127). Section 2.11.2.1.
  * @constant
  * @type {number}
  */

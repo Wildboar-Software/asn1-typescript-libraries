@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IpaeActivationRequest_ipaeOption
  * @description
  * 
+ * Options byte of `IpaeActivationRequest`. `activateIpae` set to 1 requests
+ * activation of IPAe. SGP.32 v1.2, section 3.8.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +27,9 @@ type IpaeActivationRequest_ipaeOption = BIT_STRING;
 
 /**
  * @summary IpaeActivationRequest_ipaeOption_activateIpae
+ * @description
+ * Set to 1 to request activation of the IPA in the eUICC. SGP.32 v1.2, section
+ * 3.8.4.
  * @constant
  */
 export
@@ -31,6 +37,8 @@ const IpaeActivationRequest_ipaeOption_activateIpae: number = 0; /* LONG_NAMED_B
 
 /**
  * @summary activateIpae
+ * @description
+ * Set to 1 to request activation of IPAe. SGP.32 v1.2, section 3.8.4.
  * @constant
  */
 export

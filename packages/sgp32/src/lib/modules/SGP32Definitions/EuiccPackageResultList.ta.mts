@@ -10,6 +10,16 @@ import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageRes
  * @summary EuiccPackageResultList
  * @description
  * 
+ * eUICC Package Results the IPA returns for tag 'A2' in an IpaEuiccData
+ * response (SGP.32 v1.2, sections 2.11.1.2 and 2.11.2.2). With no search
+ * criterion the list contains every result stored on the eUICC. When
+ * searchCriteriaEuiccPackageResult gives a seqNumber, the list contains the
+ * stored result with that sequence number, if one exists.
+ *
+ * The eUICC stores signed execution results until the IPA deletes them after
+ * delivery. Signed and unsigned verification errors are discarded (section
+ * 2.11.2.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

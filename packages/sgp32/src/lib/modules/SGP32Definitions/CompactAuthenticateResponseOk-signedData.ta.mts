@@ -11,7 +11,17 @@ import { CompactEuiccSigned1, _decode_CompactEuiccSigned1, _encode_CompactEuiccS
 /**
  * @summary CompactAuthenticateResponseOk_signedData
  * @description
- * 
+ *
+ * Signed content inside a compact ES10b.AuthenticateServer success sent over
+ * ESipa.
+ *
+ * Select euiccSigned1 for the full signed information. Select
+ * compactEuiccSigned1 for the reduced form: extCardResource taken from
+ * euiccInfo2, and ctxParams1 omitted when the eIM already supplied ctxParams1.
+ * euiccSignature1 remains a signature on the full EuiccSigned1.
+ *
+ * SGP.32 v1.2, section 5.14.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

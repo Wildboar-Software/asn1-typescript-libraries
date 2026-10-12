@@ -10,7 +10,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DeleteEimResult
  * @description
- * 
+ *
+ * Result of the deleteEim eCO after the signed eUICC Package is verified. The
+ * eUICC removes the Associated eIM identified by eimId. If that eIM is the
+ * requester, the eUICC signs this result before deleting the configuration. If
+ * it was the last Associated eIM, the eUICC again accepts Unsigned eCO and
+ * ES10b.AddInitialEim.
+ *
+ * SGP.32 v1.2, sections 2.11.2.1, 3.5.1.2, and 5.13.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +36,12 @@ type DeleteEimResult = INTEGER;
 
 /**
  * @summary DeleteEimResult_ok
+ * @description
+ *
+ * The target eIM Configuration Data was removed. The case where it was the
+ * last Associated eIM uses lastEimDeleted.
+ *
+ * SGP.32 v1.2, section 3.5.1.2.
  * @constant
  * @type {number}
  */
@@ -36,6 +50,10 @@ const DeleteEimResult_ok: DeleteEimResult = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_ok
+ * @description
+ *
+ * The target eIM Configuration Data was removed; the last-eIM case uses
+ * lastEimDeleted (SGP.32 v1.2, section 3.5.1.2).
  * @constant
  * @type {number}
  */
@@ -44,6 +62,11 @@ const ok: DeleteEimResult = DeleteEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_eimNotFound
+ * @description
+ *
+ * The eimId is absent from the eUICC list of Associated eIMs.
+ *
+ * SGP.32 v1.2, section 3.5.1.2.
  * @constant
  * @type {number}
  */
@@ -52,6 +75,10 @@ const DeleteEimResult_eimNotFound: DeleteEimResult = 1; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary DeleteEimResult_eimNotFound
+ * @description
+ *
+ * The eimId is absent from the Associated eIM list (SGP.32 v1.2, section
+ * 3.5.1.2).
  * @constant
  * @type {number}
  */
@@ -60,6 +87,12 @@ const eimNotFound: DeleteEimResult = DeleteEimResult_eimNotFound; /* SHORT_NAMED
 
 /**
  * @summary DeleteEimResult_lastEimDeleted
+ * @description
+ *
+ * The deleted eIM was the last Associated eIM, so no eIM Configuration Data
+ * remains. The eUICC then allows Unsigned eCO and ES10b.AddInitialEim.
+ *
+ * SGP.32 v1.2, sections 2.11.2.1, 3.5.1.2, and 5.13.9.
  * @constant
  * @type {number}
  */
@@ -68,6 +101,10 @@ const DeleteEimResult_lastEimDeleted: DeleteEimResult = 2; /* LONG_NAMED_INTEGER
 
 /**
  * @summary DeleteEimResult_lastEimDeleted
+ * @description
+ *
+ * The last Associated eIM was removed, so Unsigned eCO is allowed again
+ * (SGP.32 v1.2, section 3.5.1.2).
  * @constant
  * @type {number}
  */
@@ -76,6 +113,11 @@ const lastEimDeleted: DeleteEimResult = DeleteEimResult_lastEimDeleted; /* SHORT
 
 /**
  * @summary DeleteEimResult_commandError
+ * @description
+ *
+ * No eimId was provided in the eUICC Package.
+ *
+ * SGP.32 v1.2, section 3.5.1.2.
  * @constant
  * @type {number}
  */
@@ -84,6 +126,9 @@ const DeleteEimResult_commandError: DeleteEimResult = 7; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary DeleteEimResult_commandError
+ * @description
+ *
+ * The deleteEim eCO contained no eimId (SGP.32 v1.2, section 3.5.1.2).
  * @constant
  * @type {number}
  */
@@ -92,6 +137,11 @@ const commandError: DeleteEimResult = DeleteEimResult_commandError; /* SHORT_NAM
 
 /**
  * @summary DeleteEimResult_undefinedError
+ * @description
+ *
+ * Any other error during command execution.
+ *
+ * SGP.32 v1.2, section 3.5.1.2.
  * @constant
  * @type {number}
  */
@@ -100,6 +150,9 @@ const DeleteEimResult_undefinedError: DeleteEimResult = 127; /* LONG_NAMED_INTEG
 
 /**
  * @summary DeleteEimResult_undefinedError
+ * @description
+ *
+ * Any other error during deleteEim (SGP.32 v1.2, section 3.5.1.2).
  * @constant
  * @type {number}
  */

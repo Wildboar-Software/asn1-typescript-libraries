@@ -1,11 +1,23 @@
 /**
  * @module
  * @description
- * ASN.1 data structures for GSMA SGP.32 IoT Remote SIM Provisioning.
+ * ASN.1 for the eSIM IoT remote SIM provisioning interfaces in
+ * GSMA SGP.32 v1.2 (27 June 2024).
  *
- * `RSPDefinitions` and `PEDefinitions` are imported from `@wildboar/sgp22`.
- * `Certificate` and `SubjectPublicKeyInfo` are imported from `@wildboar/pki-stub`.
- * `SubjectKeyIdentifier` is imported from `@wildboar/x500`.
+ * The module covers eIM Packages (signed eUICC Packages of
+ * profile state management operations and eIM configuration
+ * operations, IPA and eUICC data requests, Profile download
+ * triggers, and acknowledgements), the ES10b functions the IPA
+ * uses toward the eUICC, and the ESipa functions between the IPA
+ * and the eIM, including the compact data objects used when the
+ * IPA has the `minimizeEsipaBytes` capability.
+ *
+ * `RSPDefinitions` and `PEDefinitions` are imported from
+ * `@wildboar/sgp22`. `Certificate` and `SubjectPublicKeyInfo`
+ * are imported from `@wildboar/pki-stub`. `SubjectKeyIdentifier`
+ * is imported from `@wildboar/x500`.
+ *
+ * SGP.32 v1.2, sections 2, 5, and 6, and Annex C.
  */
 export type {
     AddEimResult_addEimResultCode,

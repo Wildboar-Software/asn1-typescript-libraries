@@ -13,6 +13,13 @@ import { type NotificationEvent, _decode_NotificationEvent, _encode_Notification
  * @summary RetrieveNotificationsListRequest_searchCriteria
  * @description
  * 
+ * Filter for ES10b.RetrieveNotificationsList. seqNumber selects the one
+ * Notification or eUICC Package Result that has that sequence number.
+ * profileManagementOperation selects every Notification whose type has the
+ * corresponding bit set to 1; notificationInstall includes
+ * ProfileInstallationResult. euiccPackageResults selects every stored eUICC
+ * Package Result. SGP.32 v1.2, section 5.9.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

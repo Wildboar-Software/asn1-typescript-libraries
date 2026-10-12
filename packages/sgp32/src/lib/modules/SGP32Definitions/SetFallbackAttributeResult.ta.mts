@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SetFallbackAttributeResult
  * @description
  * 
+ * Result of a setFallbackAttribute PSMO. SGP.32 v1.2, sections 2.11.2.1 and
+ * 3.4.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +31,9 @@ type SetFallbackAttributeResult = INTEGER;
 
 /**
  * @summary SetFallbackAttributeResult_ok
+ * @description
+ * The target Profile already had the Fallback Attribute, or the attribute was
+ * moved onto it from a disabled Fallback Profile. SGP.32 v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */
@@ -36,6 +42,8 @@ const SetFallbackAttributeResult_ok: SetFallbackAttributeResult = 0; /* LONG_NAM
 
 /**
  * @summary SetFallbackAttributeResult_ok
+ * @description
+ * setFallbackAttribute succeeded. SGP.32 v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */
@@ -44,6 +52,9 @@ const ok: SetFallbackAttributeResult = SetFallbackAttributeResult_ok; /* SHORT_N
 
 /**
  * @summary SetFallbackAttributeResult_iccidOrAidNotFound
+ * @description
+ * No Profile on the eUICC has the ICCID given to setFallbackAttribute. SGP.32
+ * v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */
@@ -52,6 +63,9 @@ const SetFallbackAttributeResult_iccidOrAidNotFound: SetFallbackAttributeResult 
 
 /**
  * @summary SetFallbackAttributeResult_iccidOrAidNotFound
+ * @description
+ * setFallbackAttribute found no Profile for that ICCID. SGP.32 v1.2, section
+ * 3.4.6.
  * @constant
  * @type {number}
  */
@@ -60,6 +74,9 @@ const iccidOrAidNotFound: SetFallbackAttributeResult = SetFallbackAttributeResul
 
 /**
  * @summary SetFallbackAttributeResult_fallbackNotAllowed
+ * @description
+ * fallbackAllowed is absent or FALSE on the target Profile, so the Fallback
+ * Attribute stays unset. SGP.32 v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */
@@ -68,6 +85,8 @@ const SetFallbackAttributeResult_fallbackNotAllowed: SetFallbackAttributeResult 
 
 /**
  * @summary SetFallbackAttributeResult_fallbackNotAllowed
+ * @description
+ * fallbackAllowed is absent or FALSE. SGP.32 v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */
@@ -76,6 +95,9 @@ const fallbackNotAllowed: SetFallbackAttributeResult = SetFallbackAttributeResul
 
 /**
  * @summary SetFallbackAttributeResult_fallbackProfileEnabled
+ * @description
+ * Another Profile already has the Fallback Attribute and that Fallback Profile
+ * is enabled. SGP.32 v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */
@@ -84,6 +106,8 @@ const SetFallbackAttributeResult_fallbackProfileEnabled: SetFallbackAttributeRes
 
 /**
  * @summary SetFallbackAttributeResult_fallbackProfileEnabled
+ * @description
+ * The current Fallback Profile is enabled. SGP.32 v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */
@@ -92,6 +116,9 @@ const fallbackProfileEnabled: SetFallbackAttributeResult = SetFallbackAttributeR
 
 /**
  * @summary SetFallbackAttributeResult_undefinedError
+ * @description
+ * The target Profile is an Emergency Profile with ecallIndication TRUE. SGP.32
+ * v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */
@@ -100,6 +127,8 @@ const SetFallbackAttributeResult_undefinedError: SetFallbackAttributeResult = 12
 
 /**
  * @summary SetFallbackAttributeResult_undefinedError
+ * @description
+ * Emergency Profile with ecallIndication TRUE. SGP.32 v1.2, section 3.4.6.
  * @constant
  * @type {number}
  */

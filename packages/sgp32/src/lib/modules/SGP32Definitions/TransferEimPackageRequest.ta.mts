@@ -14,6 +14,21 @@ import { ProfileDownloadTriggerRequest, _decode_ProfileDownloadTriggerRequest, _
  * @summary TransferEimPackageRequest
  * @description
  * 
+ * ESipa.TransferEimPackage request. The eIM injects one eIM Package. Exactly
+ * one alternative is present. euiccPackageRequest makes the IPA call
+ * ES10b.LoadEuiccPackage and collect the signed result. If the IPA cannot
+ * notify the eIM, it should call ES10b.ProfileRollback as in section 3.3.1.
+ * ipaEuiccDataRequest makes the IPA return IpaEuiccDataResponse.
+ * profileDownloadTriggerRequest is parsed for download data; invalid trigger
+ * data yields invalidPackageFormat (subject 8.31.1, reason 2.1). A direct
+ * download returns eimPackageReceived. An indirect download may return
+ * eimPackageReceived, and the eIM then expects either that acknowledgement
+ * followed by ESipa.InitiateAuthentication, or InitiateAuthentication alone.
+ * eimAcknowledgements makes the IPA return eimPackageReceived and call
+ * ES10b.RemoveNotificationFromList for each sequence number. Any other data
+ * object yields unknownPackage (subject 8.31.1, reason 1.1). SGP.32 v1.2,
+ * sections 5.14.4 and 6.3.3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

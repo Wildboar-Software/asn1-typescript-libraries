@@ -12,6 +12,11 @@ import { _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_Re
  * @summary ReturnFromFallbackResponse
  * @description
  * 
+ * Response to ES10b.ReturnFromFallback. ok means the Fallback Profile was
+ * disabled and the previously enabled Profile was enabled, or those Profiles
+ * were marked pending REFRESH. fallbackNotAvailable means the enabled Profile
+ * is not the Fallback Profile. SGP.32 v1.2, section 5.9.21.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +38,9 @@ class ReturnFromFallbackResponse {
     constructor (
         /**
          * @summary `returnFromFallbackResult`.
+         * @description
+         * ok, catBusy, fallbackNotAvailable, commandError, or undefinedError, as
+         * defined for ES10b.ReturnFromFallback. SGP.32 v1.2, section 5.9.21.
          * @public
          * @readonly
          */

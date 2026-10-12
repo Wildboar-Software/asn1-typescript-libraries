@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UnsetFallbackAttributeResult
  * @description
  * 
+ * Result of an unsetFallbackAttribute PSMO. SGP.32 v1.2, sections 2.11.2.1 and
+ * 3.4.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +31,9 @@ type UnsetFallbackAttributeResult = INTEGER;
 
 /**
  * @summary UnsetFallbackAttributeResult_ok
+ * @description
+ * The Fallback Profile was disabled and its Fallback Attribute was cleared.
+ * The eUICC then has no Fallback Profile. SGP.32 v1.2, section 3.4.7.
  * @constant
  * @type {number}
  */
@@ -36,6 +42,8 @@ const UnsetFallbackAttributeResult_ok: UnsetFallbackAttributeResult = 0; /* LONG
 
 /**
  * @summary UnsetFallbackAttributeResult_ok
+ * @description
+ * The Fallback Attribute was cleared. SGP.32 v1.2, section 3.4.7.
  * @constant
  * @type {number}
  */
@@ -44,6 +52,9 @@ const ok: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_ok; /* SHO
 
 /**
  * @summary UnsetFallbackAttributeResult_noFallbackAttribute
+ * @description
+ * No Profile on the eUICC has the Fallback Attribute set. SGP.32 v1.2, section
+ * 3.4.7.
  * @constant
  * @type {number}
  */
@@ -52,6 +63,8 @@ const UnsetFallbackAttributeResult_noFallbackAttribute: UnsetFallbackAttributeRe
 
 /**
  * @summary UnsetFallbackAttributeResult_noFallbackAttribute
+ * @description
+ * No Fallback Attribute is set. SGP.32 v1.2, section 3.4.7.
  * @constant
  * @type {number}
  */
@@ -60,6 +73,9 @@ const noFallbackAttribute: UnsetFallbackAttributeResult = UnsetFallbackAttribute
 
 /**
  * @summary UnsetFallbackAttributeResult_fallbackProfileEnabled
+ * @description
+ * A Fallback Profile exists and it is enabled, so the attribute stays set.
+ * SGP.32 v1.2, section 3.4.7.
  * @constant
  * @type {number}
  */
@@ -68,6 +84,8 @@ const UnsetFallbackAttributeResult_fallbackProfileEnabled: UnsetFallbackAttribut
 
 /**
  * @summary UnsetFallbackAttributeResult_fallbackProfileEnabled
+ * @description
+ * The Fallback Profile is enabled. SGP.32 v1.2, section 3.4.7.
  * @constant
  * @type {number}
  */
@@ -76,6 +94,9 @@ const fallbackProfileEnabled: UnsetFallbackAttributeResult = UnsetFallbackAttrib
 
 /**
  * @summary UnsetFallbackAttributeResult_commandError
+ * @description
+ * SGP.32 v1.2 lists commandError(7) on UnsetFallbackAttributeResult and does
+ * not further define the condition. Section 2.11.2.1.
  * @constant
  * @type {number}
  */
@@ -84,6 +105,8 @@ const UnsetFallbackAttributeResult_commandError: UnsetFallbackAttributeResult = 
 
 /**
  * @summary UnsetFallbackAttributeResult_commandError
+ * @description
+ * SGP.32 v1.2 does not further define commandError(7). Section 2.11.2.1.
  * @constant
  * @type {number}
  */
@@ -92,6 +115,9 @@ const commandError: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_
 
 /**
  * @summary UnsetFallbackAttributeResult_undefinedError
+ * @description
+ * SGP.32 v1.2 lists undefinedError(127) on UnsetFallbackAttributeResult and
+ * does not further define the condition. Section 2.11.2.1.
  * @constant
  * @type {number}
  */
@@ -100,6 +126,8 @@ const UnsetFallbackAttributeResult_undefinedError: UnsetFallbackAttributeResult 
 
 /**
  * @summary UnsetFallbackAttributeResult_undefinedError
+ * @description
+ * SGP.32 v1.2 does not further define undefinedError(127). Section 2.11.2.1.
  * @constant
  * @type {number}
  */

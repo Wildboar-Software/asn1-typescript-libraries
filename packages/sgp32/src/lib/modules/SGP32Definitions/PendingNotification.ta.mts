@@ -14,6 +14,22 @@ import { CompactOtherSignedNotification, _decode_CompactOtherSignedNotification,
  * @summary PendingNotification
  * @description
  * 
+ * One pending Notification, extending the PendingNotification of SGP.22
+ * section 5.7.10 with two compact forms. SGP.32 section 5.9.11 states that a
+ * PendingNotification from the eUICC is a `ProfileInstallationResult` or an
+ * `OtherSignedNotification` as defined in SGP.22 section 5.7.10.
+ * 
+ * Select `profileInstallationResult` or `otherSignedNotification` for the full
+ * notification. Select `compactProfileInstallationResult` or
+ * `compactOtherSignedNotification` for the compact form. An IPA with
+ * `minimizeEsipaBytes` SHOULD re-encode the full forms into those compact
+ * forms and SHALL keep the eUICC signature unchanged. Before
+ * ES9+'.HandleNotification, an eIM that received a compact form SHALL restore
+ * the full Notification from data it already has, such as
+ * `StoreMetadataRequest` from the Bound Profile Package, `serverSigned1`,
+ * `serverCertificate` or `smdpCertificate`, `euiccCertificate`, and
+ * `eumCertificate`. SGP.32 v1.2, sections 5.9.11 and 5.14.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

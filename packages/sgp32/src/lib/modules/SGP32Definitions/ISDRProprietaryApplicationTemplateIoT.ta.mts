@@ -12,6 +12,15 @@ import { ISDRProprietaryApplicationTemplateIoT_euiccConfiguration, _decode_ISDRP
  * @summary ISDRProprietaryApplicationTemplateIoT
  * @description
  * 
+ * Returned in the FCI, after the objects defined in the GlobalPlatform Card
+ * Specification, when the ISD-R is selected. It tells the IoT Device whether
+ * the eUICC supports IPAe before any further command. If the Device supports
+ * the IPAe requirements in Annex A.2 and `ipaeSupported` is set, the Device
+ * MAY send `IpaeActivationRequest`. If the Device indicated IPAd support in
+ * Terminal Capability and does not send that request, the eUICC SHALL NOT
+ * activate IPAe. If the Device indicated that IPAd is not supported, the eUICC
+ * SHALL activate IPAe when the eUICC supports it. SGP.32 v1.2, section 3.8.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +39,9 @@ class ISDRProprietaryApplicationTemplateIoT {
     constructor (
         /**
          * @summary `euiccConfiguration`.
+         * @description
+         * eUICC capability bits returned at ISD-R selection. The eUICC sets
+         * `ipaeSupported` when it supports IPAe. SGP.32 v1.2, section 3.8.4.
          * @public
          * @readonly
          */

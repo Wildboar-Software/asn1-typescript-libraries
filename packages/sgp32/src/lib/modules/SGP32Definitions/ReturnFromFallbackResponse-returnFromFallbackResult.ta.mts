@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult
  * @description
  * 
+ * Outcome of ES10b.ReturnFromFallback. SGP.32 v1.2, section 5.9.21.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +30,9 @@ type ReturnFromFallbackResponse_returnFromFallbackResult = INTEGER;
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_ok
+ * @description
+ * The return from the Fallback Profile completed, or the Profiles were marked
+ * and REFRESH was sent. SGP.32 v1.2, section 5.9.21.
  * @constant
  * @type {number}
  */
@@ -36,6 +41,8 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_ok: ReturnFromFallback
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_ok
+ * @description
+ * Return from the Fallback Profile succeeded. SGP.32 v1.2, section 5.9.21.
  * @constant
  * @type {number}
  */
@@ -44,6 +51,9 @@ const ok: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromFallba
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_catBusy
+ * @description
+ * A proactive session is still open. The eUICC may return this and stop. If it
+ * continues, it ends that session. SGP.32 v1.2, section 5.9.21.
  * @constant
  * @type {number}
  */
@@ -52,6 +62,8 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_catBusy: ReturnFromFal
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_catBusy
+ * @description
+ * A proactive session is still open. SGP.32 v1.2, section 5.9.21.
  * @constant
  * @type {number}
  */
@@ -60,6 +72,9 @@ const catBusy: ReturnFromFallbackResponse_returnFromFallbackResult = ReturnFromF
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable
+ * @description
+ * The currently enabled Profile is not the Fallback Profile. SGP.32 v1.2,
+ * section 5.9.21.
  * @constant
  * @type {number}
  */
@@ -68,6 +83,9 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable: 
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_fallbackNotAvailable
+ * @description
+ * The enabled Profile is not the Fallback Profile. SGP.32 v1.2, section
+ * 5.9.21.
  * @constant
  * @type {number}
  */
@@ -76,6 +94,9 @@ const fallbackNotAvailable: ReturnFromFallbackResponse_returnFromFallbackResult 
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_commandError
+ * @description
+ * SGP.32 v1.2 lists commandError(7) on this result and does not further define
+ * the condition. Section 5.9.21.
  * @constant
  * @type {number}
  */
@@ -84,6 +105,8 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_commandError: ReturnFr
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_commandError
+ * @description
+ * SGP.32 v1.2 does not further define commandError(7). Section 5.9.21.
  * @constant
  * @type {number}
  */
@@ -92,6 +115,9 @@ const commandError: ReturnFromFallbackResponse_returnFromFallbackResult = Return
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError
+ * @description
+ * SGP.32 v1.2 lists undefinedError(127) on this result and does not further
+ * define the condition. Section 5.9.21.
  * @constant
  * @type {number}
  */
@@ -100,6 +126,8 @@ const ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError: Return
 
 /**
  * @summary ReturnFromFallbackResponse_returnFromFallbackResult_undefinedError
+ * @description
+ * SGP.32 v1.2 does not further define undefinedError(127). Section 5.9.21.
  * @constant
  * @type {number}
  */

@@ -18,6 +18,9 @@ import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_
  * @summary UpdateMetadataRequest
  * @description
  * 
+ * SGP.32 v1.2 does not further define UpdateMetadataRequest. It is absent from
+ * section 5.5 and from Annex C.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,42 +42,63 @@ class UpdateMetadataRequest {
     constructor (
         /**
          * @summary `serviceProviderName`.
+         * @description
+         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+         * absent from section 5.5 and from Annex C.
          * @public
          * @readonly
          */
         readonly serviceProviderName: OPTIONAL<UTF8String>,
         /**
          * @summary `profileName`.
+         * @description
+         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+         * absent from section 5.5 and from Annex C.
          * @public
          * @readonly
          */
         readonly profileName: OPTIONAL<UTF8String>,
         /**
          * @summary `iconType`.
+         * @description
+         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+         * absent from section 5.5 and from Annex C.
          * @public
          * @readonly
          */
         readonly iconType: OPTIONAL<IconType>,
         /**
          * @summary `icon`.
+         * @description
+         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+         * absent from section 5.5 and from Annex C.
          * @public
          * @readonly
          */
         readonly icon: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `profilePolicyRules`.
+         * @description
+         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+         * absent from section 5.5 and from Annex C.
          * @public
          * @readonly
          */
         readonly profilePolicyRules: OPTIONAL<PprIds>,
         /**
          * @summary `serviceSpecificDataStoredInEuicc`.
+         * @description
+         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+         * absent from section 5.5 and from Annex C.
          * @public
          * @readonly
          */
         readonly serviceSpecificDataStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `fallbackAllowed`.
+         * @description
+         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+         * absent from section 5.5 and from Annex C.
          * @public
          * @readonly
          */

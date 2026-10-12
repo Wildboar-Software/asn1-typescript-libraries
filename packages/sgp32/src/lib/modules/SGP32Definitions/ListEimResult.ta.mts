@@ -11,6 +11,15 @@ import { ListEimResult_listEimError, _decode_ListEimResult_listEimError, _encode
  * @summary ListEimResult
  * @description
  * 
+ * Result of the `listEim` eCO (ESep.ListEim). After the eUICC Package is
+ * verified, the ISD-R returns the eIM identifiers of the Associated eIMs. The
+ * start condition is that the eUICC holds eIM Configuration Data for at least
+ * one Associated eIM. Select `eimIdList` for that list. Each `EimIdInfo`
+ * carries `eimId` and, for an OID or FQDN identifier, `eimIdType`. Select
+ * `listEimError` for `undefinedError(127)`, which section 2.11.2.1 names and
+ * does not further define. SGP.32 v1.2, sections 2.11.2.1, 3.5.1.4, and
+ * 5.13.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

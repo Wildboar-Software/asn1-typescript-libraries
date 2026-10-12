@@ -13,6 +13,30 @@ import { Eco_listEim, _decode_Eco_listEim, _encode_Eco_listEim } from "../SGP32D
  * @summary Eco
  * @description
  * 
+ * eUICC Configuration Operation carried in an eUICC Package (SGP.32 v1.2,
+ * section 2.11.1.1). The eUICC runs the selected eCO only after the eIM
+ * signature, the EID, and the replay counter have been verified, and runs eCOs
+ * in order until the list ends or one of them fails (sections 3.3.1 and
+ * 5.9.1).
+ *
+ * addEim stores a new Associated eIM. eimId, counterValue, and
+ * eimPublicKeyData are mandatory. associationToken is set to -1 when the eUICC
+ * must allocate a token, and is omitted otherwise.
+ *
+ * deleteEim removes the Associated eIM named by eimId, and that eimId is the
+ * only component. Deleting the last Associated eIM returns lastEimDeleted and
+ * again allows an unsigned eCO (section 3.5.1.2).
+ *
+ * updateEim changes the Associated eIM named by eimId. At least one of
+ * counterValue, eimPublicKeyData, eimIdType, eimFqdn, eimSupportedProtocol,
+ * trustedPublicKeyDataTls, euiccCiPKId, or indirectProfileDownload is present.
+ * associationToken is omitted. The stored eimId stays unchanged. A lower
+ * counterValue is accepted only when eimPublicKeyData is updated in the same
+ * command (sections 2.11.1.1 and 3.5.1.3).
+ *
+ * listEim asks for every Associated eIM identifier and carries no parameters
+ * (section 3.5.1.4).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

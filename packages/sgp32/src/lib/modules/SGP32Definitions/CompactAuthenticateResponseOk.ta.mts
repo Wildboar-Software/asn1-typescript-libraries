@@ -13,7 +13,18 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
 /**
  * @summary CompactAuthenticateResponseOk
  * @description
- * 
+ *
+ * Compact success form of AuthenticateServerResponse, used on
+ * ESipa.AuthenticateClient by an IPA with minimizeEsipaBytes. It drops the
+ * eUICC certificate, the EUM certificate, or both, and sends only the
+ * non-static parts of euiccInfo2. The eIM restores authenticateResponseOk
+ * before calling ES9+' or ES11'.
+ *
+ * euiccSignature1 is the eUICC signature on the full EuiccSigned1 and is kept
+ * with the compact body.
+ *
+ * SGP.32 v1.2, section 5.14.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +46,48 @@ class CompactAuthenticateResponseOk {
     constructor (
         /**
          * @summary `signedData`.
+         * @description
+         *
+         * Either the full EuiccSigned1 or CompactEuiccSigned1. The compact alternative
+         * carries extCardResource from euiccInfo2 and may omit ctxParams1 when the eIM
+         * already sent it.
+         *
+         * SGP.32 v1.2, section 5.14.3.
          * @public
          * @readonly
          */
         readonly signedData: CompactAuthenticateResponseOk_signedData,
         /**
          * @summary `euiccSignature1`.
+         * @description
+         *
+         * eUICC signature (tag '5F37') on the full EuiccSigned1.
+         *
+         * SGP.32 v1.2, section 5.14.3.
          * @public
          * @readonly
          */
         readonly euiccSignature1: OCTET_STRING,
         /**
          * @summary `euiccCertificate`.
+         * @description
+         *
+         * eUICC certificate CERT.EUICC.ECDSA. Omitted in the compact form when the eIM
+         * can restore it from data it already holds.
+         *
+         * SGP.32 v1.2, section 5.14.3.
          * @public
          * @readonly
          */
         readonly euiccCertificate: OPTIONAL<Certificate>,
         /**
          * @summary `eumCertificate`.
+         * @description
+         *
+         * EUM certificate CERT.EUM.ECDSA. Omitted in the compact form when the eIM can
+         * restore it from data it already holds.
+         *
+         * SGP.32 v1.2, section 5.14.3.
          * @public
          * @readonly
          */

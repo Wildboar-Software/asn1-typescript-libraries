@@ -10,7 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult
  * @description
- * 
+ *
+ * Result of ES10b.DisableEmergencyProfile. On success the eUICC may generate
+ * OtherSignedNotification entries configured in the metadata of the Emergency
+ * Profile and of the Profile that is enabled again.
+ *
+ * SGP.32 v1.2, section 5.9.23.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +34,13 @@ type DisableEmergencyProfileResponse_disableEmergencyProfileResult = INTEGER;
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok
+ * @description
+ *
+ * The Emergency Profile was disabled, or marked to be disabled, and the
+ * previously enabled Profile was enabled, or marked to be enabled. Rollback
+ * authorisation was cleared.
+ *
+ * SGP.32 v1.2, section 5.9.23.
  * @constant
  * @type {number}
  */
@@ -36,6 +49,10 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok: DisableE
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok
+ * @description
+ *
+ * The Emergency Profile was disabled and the previous Profile enabled (SGP.32
+ * v1.2, section 5.9.23).
  * @constant
  * @type {number}
  */
@@ -44,6 +61,11 @@ const ok: DisableEmergencyProfileResponse_disableEmergencyProfileResult = Disabl
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotInEnabledState
+ * @description
+ *
+ * The Emergency Profile (ecallIndication TRUE) is not enabled.
+ *
+ * SGP.32 v1.2, section 5.9.23.
  * @constant
  * @type {number}
  */
@@ -52,6 +74,9 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotIn
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotInEnabledState
+ * @description
+ *
+ * The Emergency Profile is not enabled (SGP.32 v1.2, section 5.9.23).
  * @constant
  * @type {number}
  */
@@ -60,6 +85,12 @@ const profileNotInEnabledState: DisableEmergencyProfileResponse_disableEmergency
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy
+ * @description
+ *
+ * A proactive session is still open. The eUICC may return this code. If it
+ * continues, it terminates that proactive session internally.
+ *
+ * SGP.32 v1.2, section 5.9.23.
  * @constant
  * @type {number}
  */
@@ -68,6 +99,10 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy: Dis
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy
+ * @description
+ *
+ * A proactive session is open and the eUICC stopped the command (SGP.32 v1.2,
+ * section 5.9.23).
  * @constant
  * @type {number}
  */
@@ -76,6 +111,12 @@ const catBusy: DisableEmergencyProfileResponse_disableEmergencyProfileResult = D
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvailable
+ * @description
+ *
+ * The Emergency feature is unsupported, or no Profile has ecallIndication set
+ * to TRUE.
+ *
+ * SGP.32 v1.2, section 5.9.23.
  * @constant
  * @type {number}
  */
@@ -84,6 +125,10 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvai
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvailable
+ * @description
+ *
+ * Emergency is unsupported, or no Emergency Profile exists (SGP.32 v1.2,
+ * section 5.9.23).
  * @constant
  * @type {number}
  */
@@ -92,6 +137,10 @@ const ecallNotAvailable: DisableEmergencyProfileResponse_disableEmergencyProfile
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedError
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on DisableEmergencyProfile and does not further
+ * define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -100,6 +149,10 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedErr
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedError
+ * @description
+ *
+ * Listed on DisableEmergencyProfile; SGP.32 v1.2 does not further define it
+ * (Annex C).
  * @constant
  * @type {number}
  */

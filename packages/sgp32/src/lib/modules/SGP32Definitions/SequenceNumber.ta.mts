@@ -12,6 +12,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SequenceNumber
  * @description
  * 
+ * Sequence number of one pending Notification or one signed eUICC Package
+ * Result. EimAcknowledgements is a sequence of these values. The eUICC puts
+ * the next unused value, the counter SGP.22 defines for Notifications, into a
+ * signed eUICC Package Result and then increments its stored counter by 1.
+ * When the eIM acknowledges a number, the IPA calls
+ * ES10b.RemoveNotificationFromList and the eUICC deletes that Notification or
+ * eUICC Package Result. SGP.32 v1.2, sections 2.11.1.4, 5.9.1, 5.9.12, and
+ * 5.14.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

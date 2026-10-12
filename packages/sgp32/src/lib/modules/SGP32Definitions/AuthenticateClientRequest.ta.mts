@@ -12,7 +12,14 @@ import { AuthenticateServerResponse, _decode_AuthenticateServerResponse, _encode
 /**
  * @summary AuthenticateClientRequest
  * @description
- * 
+ *
+ * ES9+.AuthenticateClient request. The IPA asks the SM-DP+ to authenticate the
+ * eUICC. The function is identical to ES9+.AuthenticateClient in SGP.22
+ * section 5.6.3, with the IPA in the LPA role. EUICCInfo2 inside the enclosed
+ * AuthenticateResponseOk follows section 5.9.2.
+ *
+ * SGP.32 v1.2, section 5.6.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,24 @@ class AuthenticateClientRequest {
     constructor (
         /**
          * @summary `transactionId`.
+         * @description
+         *
+         * Transaction ID that correlates this call with the preceding
+         * ES9+.InitiateAuthentication. SGP.32 v1.2 section 5.6.1 defines the request
+         * as identical to SGP.22 section 5.6.3, where the SM-DP+ delivers that
+         * Transaction ID. Clarified from SGP.22 v3.1, section 5.6.3.
          * @public
          * @readonly
          */
         readonly transactionId: TransactionId,
         /**
          * @summary `authenticateServerResponse`.
+         * @description
+         *
+         * Response from ES10b.AuthenticateServer, carried to the SM-DP+ so it can
+         * authenticate the eUICC.
+         *
+         * SGP.32 v1.2, section 5.6.1.
          * @public
          * @readonly
          */

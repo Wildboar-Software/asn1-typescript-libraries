@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Psmo_getRAT
  * @description
  * 
+ * Ask the eUICC for its Rules Authorisation Table. The matching result is
+ * getRATResult, a RulesAuthorisationTable as defined in SGP.22. ES10b.GetRAT
+ * is identical to SGP.22 section 5.7.22, with the IPA in the LPA role. SGP.32
+ * v1.2, sections 2.11.1.1, 2.11.2.1, 5.9.13, and 5.13.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,14 @@ import { ProfileDownloadTriggerResult_profileDownloadTriggerResultData, _decode_
  * @summary ProfileDownloadTriggerResult
  * @description
  * 
+ * IPA report of a direct Profile download that an eIM requested. The IPA sends
+ * it to the eIM. When the request carried eimTransactionId, this result
+ * carries the same value; otherwise eimTransactionId is absent. When the
+ * Emergency Profile is enabled, the IPA stops and returns profileDownloadError
+ * with ecallActive. A successful ES10b.LoadBoundProfilePackage yields
+ * profileInstallationResult. Any other outcome yields profileDownloadError.
+ * SGP.32 v1.2, section 2.11.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +46,18 @@ class ProfileDownloadTriggerResult {
     constructor (
         /**
          * @summary `eimTransactionId`.
+         * @description
+         * Same transaction identifier the eIM put in ProfileDownloadTriggerRequest.
+         * Absent when the request omitted it. SGP.32 v1.2, section 2.11.2.3.
          * @public
          * @readonly
          */
         readonly eimTransactionId: OPTIONAL<TransactionId>,
         /**
          * @summary `profileDownloadTriggerResultData`.
+         * @description
+         * Either the Profile Installation Result from ES10b.LoadBoundProfilePackage,
+         * or profileDownloadError. SGP.32 v1.2, section 2.11.2.3.
          * @public
          * @readonly
          */

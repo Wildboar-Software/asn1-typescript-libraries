@@ -12,7 +12,24 @@ import { CompactCancelSessionResponseOk, _decode_CompactCancelSessionResponseOk,
 /**
  * @summary CancelSessionResponse
  * @description
- * 
+ *
+ * ES10b.CancelSession response, extended with a compact success form for
+ * ESipa. The function matches SGP.22 section 5.7.14, and the eUICC revokes any
+ * grant to immediately enable a Profile. CancelSessionReason values
+ * endUserRejection(0), postponed(1), and timeout(2) are unused in SGP.32.
+ *
+ * The eUICC builds euiccCancelSessionSigned from the Transaction ID and the
+ * reason, and computes euiccCancelSessionSignature over that object with
+ * SK.EUICC.ECDSA for the CI public key identified by
+ * euiccCiPKIdentifierToBeUsed during common mutual authentication. If the
+ * reason is undefinedReason, the IPAd ignores the eUICC response and stops.
+ *
+ * Select cancelSessionResponseOk for the full success form,
+ * compactCancelSessionResponseOk when an IPA with minimizeEsipaBytes
+ * re-encodes that success, and cancelSessionResponseError for an eUICC error.
+ *
+ * SGP.32 v1.2, sections 3.2.3.3, 5.9.9, and 5.14.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

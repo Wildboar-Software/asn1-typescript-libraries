@@ -10,7 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AddEimResult_addEimResultCode
  * @description
- * 
+ *
+ * Codes for an addEim eCO after the signed eUICC Package has been verified. A
+ * listed failure stops that eCO. ok is the success code in the ASN.1 of
+ * section 2.11.2.1; section 3.5.1.1 names each failure.
+ *
+ * SGP.32 v1.2, sections 2.11.2.1 and 3.5.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ type AddEimResult_addEimResultCode = INTEGER;
 
 /**
  * @summary AddEimResult_addEimResultCode_ok
+ * @description
+ *
+ * The new eIM Configuration Data was stored in the eUICC list of Associated
+ * eIMs.
+ *
+ * SGP.32 v1.2, section 3.5.1.1.
  * @constant
  * @type {number}
  */
@@ -39,6 +51,9 @@ const AddEimResult_addEimResultCode_ok: AddEimResult_addEimResultCode = 0; /* LO
 
 /**
  * @summary AddEimResult_addEimResultCode_ok
+ * @description
+ *
+ * The new eIM Configuration Data was stored (SGP.32 v1.2, section 3.5.1.1).
  * @constant
  * @type {number}
  */
@@ -47,6 +62,11 @@ const ok: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_ok; /* S
 
 /**
  * @summary AddEimResult_addEimResultCode_insufficientMemory
+ * @description
+ *
+ * The eUICC lacks sufficient memory to store the new eIM.
+ *
+ * SGP.32 v1.2, section 3.5.1.1.
  * @constant
  * @type {number}
  */
@@ -55,6 +75,9 @@ const AddEimResult_addEimResultCode_insufficientMemory: AddEimResult_addEimResul
 
 /**
  * @summary AddEimResult_addEimResultCode_insufficientMemory
+ * @description
+ *
+ * The eUICC lacks memory to store the new eIM (SGP.32 v1.2, section 3.5.1.1).
  * @constant
  * @type {number}
  */
@@ -63,6 +86,11 @@ const insufficientMemory: AddEimResult_addEimResultCode = AddEimResult_addEimRes
 
 /**
  * @summary AddEimResult_addEimResultCode_associatedEimAlreadyExists
+ * @description
+ *
+ * The provided eimId belongs to an eIM already associated with the eUICC.
+ *
+ * SGP.32 v1.2, section 3.5.1.1.
  * @constant
  * @type {number}
  */
@@ -71,6 +99,9 @@ const AddEimResult_addEimResultCode_associatedEimAlreadyExists: AddEimResult_add
 
 /**
  * @summary AddEimResult_addEimResultCode_associatedEimAlreadyExists
+ * @description
+ *
+ * The eimId is already an Associated eIM (SGP.32 v1.2, section 3.5.1.1).
  * @constant
  * @type {number}
  */
@@ -79,6 +110,12 @@ const associatedEimAlreadyExists: AddEimResult_addEimResultCode = AddEimResult_a
 
 /**
  * @summary AddEimResult_addEimResultCode_ciPKUnknown
+ * @description
+ *
+ * The provided euiccCiPKId is absent from euiccCiPKIdListForSigning in
+ * eUICCInfo2.
+ *
+ * SGP.32 v1.2, section 3.5.1.1.
  * @constant
  * @type {number}
  */
@@ -87,6 +124,10 @@ const AddEimResult_addEimResultCode_ciPKUnknown: AddEimResult_addEimResultCode =
 
 /**
  * @summary AddEimResult_addEimResultCode_ciPKUnknown
+ * @description
+ *
+ * euiccCiPKId is absent from euiccCiPKIdListForSigning (SGP.32 v1.2, section
+ * 3.5.1.1).
  * @constant
  * @type {number}
  */
@@ -95,6 +136,12 @@ const ciPKUnknown: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode
 
 /**
  * @summary AddEimResult_addEimResultCode_invalidAssociationToken
+ * @description
+ *
+ * The eUICC was asked to generate an associationToken and the provided value
+ * differs from -1.
+ *
+ * SGP.32 v1.2, section 3.5.1.1.
  * @constant
  * @type {number}
  */
@@ -103,6 +150,10 @@ const AddEimResult_addEimResultCode_invalidAssociationToken: AddEimResult_addEim
 
 /**
  * @summary AddEimResult_addEimResultCode_invalidAssociationToken
+ * @description
+ *
+ * Association-token generation was requested with a value that differs from -1
+ * (SGP.32 v1.2, section 3.5.1.1).
  * @constant
  * @type {number}
  */
@@ -111,6 +162,12 @@ const invalidAssociationToken: AddEimResult_addEimResultCode = AddEimResult_addE
 
 /**
  * @summary AddEimResult_addEimResultCode_counterValueOutOfRange
+ * @description
+ *
+ * counterValue exceeds the maximum the eUICC supports. The eUICC handles
+ * counter values at least up to 8388607 (0x7FFFFF).
+ *
+ * SGP.32 v1.2, sections 2.11.1.1 and 3.5.1.1.
  * @constant
  * @type {number}
  */
@@ -119,6 +176,10 @@ const AddEimResult_addEimResultCode_counterValueOutOfRange: AddEimResult_addEimR
 
 /**
  * @summary AddEimResult_addEimResultCode_counterValueOutOfRange
+ * @description
+ *
+ * counterValue exceeds the eUICC maximum, at least 8388607 (SGP.32 v1.2,
+ * sections 2.11.1.1 and 3.5.1.1).
  * @constant
  * @type {number}
  */
@@ -127,6 +188,11 @@ const counterValueOutOfRange: AddEimResult_addEimResultCode = AddEimResult_addEi
 
 /**
  * @summary AddEimResult_addEimResultCode_commandError
+ * @description
+ *
+ * No eimId was provided, or eimId exceeds its maximum length.
+ *
+ * SGP.32 v1.2, section 3.5.1.1.
  * @constant
  * @type {number}
  */
@@ -135,6 +201,9 @@ const AddEimResult_addEimResultCode_commandError: AddEimResult_addEimResultCode 
 
 /**
  * @summary AddEimResult_addEimResultCode_commandError
+ * @description
+ *
+ * eimId is missing or longer than its maximum (SGP.32 v1.2, section 3.5.1.1).
  * @constant
  * @type {number}
  */
@@ -143,6 +212,11 @@ const commandError: AddEimResult_addEimResultCode = AddEimResult_addEimResultCod
 
 /**
  * @summary AddEimResult_addEimResultCode_undefinedError
+ * @description
+ *
+ * Any other error during command execution.
+ *
+ * SGP.32 v1.2, section 3.5.1.1.
  * @constant
  * @type {number}
  */
@@ -151,6 +225,9 @@ const AddEimResult_addEimResultCode_undefinedError: AddEimResult_addEimResultCod
 
 /**
  * @summary AddEimResult_addEimResultCode_undefinedError
+ * @description
+ *
+ * Any other error during addEim execution (SGP.32 v1.2, section 3.5.1.1).
  * @constant
  * @type {number}
  */

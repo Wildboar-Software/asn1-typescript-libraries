@@ -12,6 +12,13 @@ import { InitiateAuthenticationResponseEsipa_initiateAuthenticationErrorEsipa, _
  * @summary InitiateAuthenticationResponseEsipa
  * @description
  * 
+ * ESipa.InitiateAuthentication response. Select
+ * `initiateAuthenticationOkEsipa` when ES9+' or ES11' succeeds and the eIM's
+ * extra checks succeed. Select `initiateAuthenticationErrorEsipa` when ES9+'
+ * or ES11' returns an error, which the eIM forwards unchanged, or when one of
+ * the SGP.32 checks in section 5.14.1 fails. SGP.32 v1.2, sections 5.14.1 and
+ * 6.3.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

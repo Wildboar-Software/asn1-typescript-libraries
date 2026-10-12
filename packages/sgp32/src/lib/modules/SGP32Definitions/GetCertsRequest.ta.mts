@@ -12,6 +12,10 @@ import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_Subjec
  * @summary GetCertsRequest
  * @description
  * 
+ * ES10b.GetCerts command. The IPA uses it at any time to retrieve the eUICC
+ * certificate and the EUM certificate from the eUICC. SGP.32 v1.2, section
+ * 5.9.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +31,10 @@ class GetCertsRequest {
     constructor (
         /**
          * @summary `euiccCiPKId`.
+         * @description
+         * CI Public Key Identifier used to choose among multiple EUM certificates and
+         * eUICC certificates. Absent: the first entry of `euiccCiPKIdListForSigning`
+         * in eUICCInfo1 or eUICCInfo2 is used. SGP.32 v1.2, section 5.9.10.
          * @public
          * @readonly
          */

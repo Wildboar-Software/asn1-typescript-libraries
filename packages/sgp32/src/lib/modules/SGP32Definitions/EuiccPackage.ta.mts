@@ -11,6 +11,17 @@ import { Eco, _decode_Eco, _encode_Eco } from "../SGP32Definitions/Eco.ta.mjs";
  * @summary EuiccPackage
  * @description
  * 
+ * Commands inside one signed eUICC Package: either Profile state management
+ * (psmoList) or eIM configuration (ecoList) (SGP.32 v1.2, section 2.11.1.1).
+ * The eUICC executes that list in order and stops at the first command error
+ * (section 5.9.1).
+ *
+ * At most one enable and at most one disable occur in a package.
+ * listProfileInfo is placed before any enable, disable, or delete; a later
+ * listProfileInfo produces profileChangeOngoing. While the Emergency Profile
+ * is enabled, the eUICC rejects the enclosing EuiccPackageRequest with
+ * ecallActive (section 2.11.2.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

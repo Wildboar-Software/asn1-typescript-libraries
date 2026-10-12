@@ -12,6 +12,10 @@ import { _decode_EnableEmergencyProfileResponse_enableEmergencyProfileResult, _e
  * @summary EnableEmergencyProfileResponse
  * @description
  * 
+ * ES10b.EnableEmergencyProfile response (SGP.32 v1.2, section 5.9.22). Tag
+ * 'BF5B'. On any error the Profiles stay in the states they had before the
+ * command.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,9 @@ class EnableEmergencyProfileResponse {
     constructor (
         /**
          * @summary `enableEmergencyProfileResult`.
+         * @description
+         * Outcome of enabling the Emergency Profile. Codes are defined in section
+         * 5.9.22. SGP.32 v1.2 does not further define undefinedError(127).
          * @public
          * @readonly
          */

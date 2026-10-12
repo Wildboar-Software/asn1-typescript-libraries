@@ -12,6 +12,11 @@ import { _decode_IpaeActivationResponse_ipaeActivationResult, _encode_IpaeActiva
  * @summary IpaeActivationResponse
  * @description
  * 
+ * ISD-R response to `IpaeActivationRequest`. The result is `ok(0)` or
+ * `notSupported(1)`. SGP.32 v1.2 section 3.8.4 names both values and does not
+ * further define the condition that produces either one. Annex C lists the
+ * names only. SGP.32 v1.2, section 3.8.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +32,9 @@ class IpaeActivationResponse {
     constructor (
         /**
          * @summary `ipaeActivationResult`.
+         * @description
+         * `ok(0)` or `notSupported(1)`. SGP.32 v1.2 section 3.8.4 does not further
+         * define the condition for either value. Annex C.
          * @public
          * @readonly
          */

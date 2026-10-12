@@ -14,6 +14,12 @@ import { GetEimPackageResponse_eimPackageError, _decode_GetEimPackageResponse_ei
  * @summary GetEimPackageResponse
  * @description
  * 
+ * ESipa.GetEimPackage response. On success the eIM returns exactly one of
+ * `euiccPackageRequest`, `ipaEuiccDataRequest`, or
+ * `profileDownloadTriggerRequest`. Select `eimPackageError` when the call
+ * fails, including when no package is pending for the EID. SGP.32 v1.2,
+ * sections 5.14.5 and 6.3.2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

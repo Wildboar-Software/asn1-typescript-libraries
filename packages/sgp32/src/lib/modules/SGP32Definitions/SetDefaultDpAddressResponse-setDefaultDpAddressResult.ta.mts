@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult
  * @description
  * 
+ * Outcome of ES10b.SetDefaultDpAddress. SGP.32 v1.2, section 5.9.25.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +27,9 @@ type SetDefaultDpAddressResponse_setDefaultDpAddressResult = INTEGER;
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok
+ * @description
+ * The default SM-DP+ address was updated or removed. SGP.32 v1.2, section
+ * 5.9.25.
  * @constant
  * @type {number}
  */
@@ -33,6 +38,9 @@ const SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok: SetDefaultDpAddr
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_ok
+ * @description
+ * The default SM-DP+ address was updated or removed. SGP.32 v1.2, section
+ * 5.9.25.
  * @constant
  * @type {number}
  */
@@ -41,6 +49,10 @@ const ok: SetDefaultDpAddressResponse_setDefaultDpAddressResult = SetDefaultDpAd
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError
+ * @description
+ * Immediate enable is configured, so the eUICC rejects
+ * ES10b.SetDefaultDpAddress. SGP.32 v1.2 lists this code and does not further
+ * define any other condition that produces it. Section 5.9.25.
  * @constant
  * @type {number}
  */
@@ -49,6 +61,9 @@ const SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError: SetD
 
 /**
  * @summary SetDefaultDpAddressResponse_setDefaultDpAddressResult_undefinedError
+ * @description
+ * Immediate enable is configured, so the command is rejected. SGP.32 v1.2,
+ * section 5.9.25.
  * @constant
  * @type {number}
  */

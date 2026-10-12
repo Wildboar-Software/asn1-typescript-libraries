@@ -13,6 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SetDefaultDpAddressRequest
  * @description
  * 
+ * ES10b.SetDefaultDpAddress and the setDefaultDpAddress PSMO. Updates the
+ * default SM-DP+ address. Allowed only while immediate enable is not
+ * configured. When immediate enable is configured, the eUICC rejects the
+ * command with undefinedError. A non-empty string becomes the new default
+ * SM-DP+ address. An empty string removes the stored address. The PSMO is
+ * coded and processed as this function. SGP.32 v1.2, sections 5.9.25,
+ * 2.11.1.1, and 5.13.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +36,10 @@ class SetDefaultDpAddressRequest {
     constructor (
         /**
          * @summary `defaultDpAddress`.
+         * @description
+         * Default SM-DP+ address as an FQDN. A non-empty value replaces the address
+         * stored in the eUICC. An empty value removes the stored address. SGP.32 v1.2,
+         * section 5.9.25.
          * @public
          * @readonly
          */

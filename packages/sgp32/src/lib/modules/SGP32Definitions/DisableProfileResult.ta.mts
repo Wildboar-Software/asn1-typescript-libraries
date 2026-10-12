@@ -10,7 +10,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DisableProfileResult
  * @description
- * 
+ *
+ * Result of the disable PSMO after the signed eUICC Package is verified. At
+ * most one disable command occurs in an eUICC Package. If a disable or an
+ * enable was already processed in the same package, the ISD-R indicates
+ * failure and continues to the result step. A disable is followed by an enable
+ * in the same package when connectivity is to be kept. The signed result is
+ * stored on the eUICC.
+ *
+ * SGP.32 v1.2, sections 2.11.1.1, 2.11.2.1, and 3.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +38,11 @@ type DisableProfileResult = INTEGER;
 
 /**
  * @summary DisableProfileResult_ok
+ * @description
+ *
+ * The target Profile was marked to be disabled.
+ *
+ * SGP.32 v1.2, section 3.4.2.
  * @constant
  * @type {number}
  */
@@ -37,6 +51,9 @@ const DisableProfileResult_ok: DisableProfileResult = 0; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary DisableProfileResult_ok
+ * @description
+ *
+ * The target Profile was marked to be disabled (SGP.32 v1.2, section 3.4.2).
  * @constant
  * @type {number}
  */
@@ -45,6 +62,10 @@ const ok: DisableProfileResult = DisableProfileResult_ok; /* SHORT_NAMED_INTEGER
 
 /**
  * @summary DisableProfileResult_iccidOrAidNotFound
+ * @description
+ *
+ * Section 3.4.2 indicates an unnamed failure when the target ICCID matches no
+ * Profile. SGP.32 v1.2 does not further define this code. Annex C.
  * @constant
  * @type {number}
  */
@@ -53,6 +74,9 @@ const DisableProfileResult_iccidOrAidNotFound: DisableProfileResult = 1; /* LONG
 
 /**
  * @summary DisableProfileResult_iccidOrAidNotFound
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this disable-PSMO code (Annex C).
  * @constant
  * @type {number}
  */
@@ -61,6 +85,11 @@ const iccidOrAidNotFound: DisableProfileResult = DisableProfileResult_iccidOrAid
 
 /**
  * @summary DisableProfileResult_profileNotInEnabledState
+ * @description
+ *
+ * Section 3.4.2 indicates an unnamed failure when the target Profile is
+ * outside the Enabled state. SGP.32 v1.2 does not further define this code.
+ * Annex C.
  * @constant
  * @type {number}
  */
@@ -69,6 +98,9 @@ const DisableProfileResult_profileNotInEnabledState: DisableProfileResult = 2; /
 
 /**
  * @summary DisableProfileResult_profileNotInEnabledState
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this disable-PSMO code (Annex C).
  * @constant
  * @type {number}
  */
@@ -77,6 +109,10 @@ const profileNotInEnabledState: DisableProfileResult = DisableProfileResult_prof
 
 /**
  * @summary DisableProfileResult_disallowedByPolicy
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on the disable PSMO result and does not further
+ * define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -85,6 +121,10 @@ const DisableProfileResult_disallowedByPolicy: DisableProfileResult = 3; /* LONG
 
 /**
  * @summary DisableProfileResult_disallowedByPolicy
+ * @description
+ *
+ * Listed on the disable PSMO; SGP.32 v1.2 does not further define it (Annex
+ * C).
  * @constant
  * @type {number}
  */
@@ -93,6 +133,10 @@ const disallowedByPolicy: DisableProfileResult = DisableProfileResult_disallowed
 
 /**
  * @summary DisableProfileResult_catBusy
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on the disable PSMO result and does not further
+ * define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -101,6 +145,10 @@ const DisableProfileResult_catBusy: DisableProfileResult = 5; /* LONG_NAMED_INTE
 
 /**
  * @summary DisableProfileResult_catBusy
+ * @description
+ *
+ * Listed on the disable PSMO; SGP.32 v1.2 does not further define it (Annex
+ * C).
  * @constant
  * @type {number}
  */
@@ -109,6 +157,10 @@ const catBusy: DisableProfileResult = DisableProfileResult_catBusy; /* SHORT_NAM
 
 /**
  * @summary DisableProfileResult_undefinedError
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on the disable PSMO result and does not further
+ * define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -117,6 +169,10 @@ const DisableProfileResult_undefinedError: DisableProfileResult = 127; /* LONG_N
 
 /**
  * @summary DisableProfileResult_undefinedError
+ * @description
+ *
+ * Listed on the disable PSMO; SGP.32 v1.2 does not further define it (Annex
+ * C).
  * @constant
  * @type {number}
  */

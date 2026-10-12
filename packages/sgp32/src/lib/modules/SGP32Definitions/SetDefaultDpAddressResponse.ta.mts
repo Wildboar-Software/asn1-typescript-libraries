@@ -12,6 +12,10 @@ import { _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, _encode_
  * @summary SetDefaultDpAddressResponse
  * @description
  * 
+ * Response to ES10b.SetDefaultDpAddress and to the setDefaultDpAddress PSMO.
+ * ok means the address was stored or removed. undefinedError means immediate
+ * enable is already configured. SGP.32 v1.2, section 5.9.25.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +31,9 @@ class SetDefaultDpAddressResponse {
     constructor (
         /**
          * @summary `setDefaultDpAddressResult`.
+         * @description
+         * ok after the address is stored or removed. undefinedError when immediate
+         * enable is configured. SGP.32 v1.2, section 5.9.25.
          * @public
          * @readonly
          */

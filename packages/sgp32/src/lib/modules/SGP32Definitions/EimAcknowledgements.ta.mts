@@ -11,6 +11,18 @@ import { SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "
  * @summary EimAcknowledgements
  * @description
  * 
+ * Sequence numbers of Notifications and eUICC Package Results the eIM has
+ * successfully received (SGP.32 v1.2, section 2.11.1.4). Tag 'BF53'.
+ *
+ * On ESipa.TransferEimPackage the IPA answers eimPackageReceived and, for each
+ * sequence number, calls ES10b.RemoveNotificationFromList so the eUICC deletes
+ * that Notification or eUICC Package Result (section 5.14.4).
+ *
+ * On ESipa.ProvideEimPackageResult the eIM returns the sequence numbers of
+ * eUICC Package Results and Notifications it processed, including results it
+ * discarded, and of Notifications it forwarded (section 5.14.6). The response
+ * may omit this list.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

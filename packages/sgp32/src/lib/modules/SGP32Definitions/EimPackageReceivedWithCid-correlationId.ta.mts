@@ -12,6 +12,9 @@ import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/
  * @summary EimPackageReceivedWithCid_correlationId
  * @description
  * 
+ * SGP.32 v1.2 does not further define this type. Annex C stops
+ * TransferEimPackageResponse at eimPackageReceived and eimPackageError.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

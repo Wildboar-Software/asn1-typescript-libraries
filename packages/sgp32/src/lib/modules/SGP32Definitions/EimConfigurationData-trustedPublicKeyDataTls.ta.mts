@@ -11,6 +11,18 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * @summary EimConfigurationData_trustedPublicKeyDataTls
  * @description
  * 
+ * Trust material for TLS or DTLS toward this eIM (SGP.32 v1.2, section
+ * 2.11.1.1). An IPAd may ignore the choice. Supply it on addEim when
+ * eUICCInfo2.ipaMode is ipae and eimSupportedProtocol has eimRetrieveHttps or
+ * eimRetrieveCoaps set, so an IPAe can complete eIM Package retrieval over
+ * TLS or DTLS.
+ *
+ * trustedEimPkTls is the eIM public key, X.509 encoded. trustedCertificateTls
+ * is a certificate in the chain that ends at the eIM leaf: the eIM
+ * certificate, a root CA, or an intermediate CA. It contains
+ * SubjectKeyIdentifier. A root or intermediate CA certificate includes
+ * BasicConstraints with cA set to TRUE.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

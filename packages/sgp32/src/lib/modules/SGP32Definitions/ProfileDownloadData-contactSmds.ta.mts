@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProfileDownloadData_contactSmds
  * @description
  * 
+ * Asks the IPA to retrieve the SM-DP+ address and EventID from an SM-DS.
+ * Retrieval uses ES11 as defined in SGP.22 section 3.6.2, or ESipa and ES11'
+ * as defined in SGP.32 section 3.9.2.2. SGP.32 v1.2, section 2.11.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +32,10 @@ class ProfileDownloadData_contactSmds {
     constructor (
         /**
          * @summary `smdsAddress`.
+         * @description
+         * Present when the eIM specifies the SM-DS address. Absent when the IPA uses
+         * the SM-DS address available in the IoT Device. SGP.32 v1.2, section
+         * 2.11.1.3.
          * @public
          * @readonly
          */

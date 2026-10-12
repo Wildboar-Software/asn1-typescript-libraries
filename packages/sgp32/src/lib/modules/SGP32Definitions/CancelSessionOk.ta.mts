@@ -9,7 +9,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CancelSessionOk
  * @description
- * 
+ *
+ * Success of ESipa.CancelSession. The function has no output data. The eIM
+ * forwards the status of ES9+'.CancelSession.
+ *
+ * SGP.32 v1.2, sections 5.14.8 and 6.3.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

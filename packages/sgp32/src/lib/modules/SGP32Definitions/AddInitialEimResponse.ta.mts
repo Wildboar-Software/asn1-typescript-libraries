@@ -11,7 +11,14 @@ import { AddInitialEimResponse_addInitialEimError, _decode_AddInitialEimResponse
 /**
  * @summary AddInitialEimResponse
  * @description
- * 
+ *
+ * ES10b.AddInitialEim response. addInitialEimOk contains one entry per stored
+ * eIM Configuration Data item after the atomic store succeeds.
+ * addInitialEimError is selected when any check in section 5.9.4 fails; stored
+ * eIM Configuration Data stays as it was.
+ *
+ * SGP.32 v1.2, sections 3.5.2.1 and 5.9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

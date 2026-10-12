@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetCertsResponse_getCertsError
  * @description
  * 
+ * ES10b.GetCerts error. SGP.32 v1.2 section 5.9.10 names `invalidCiPKId(1)`
+ * and `undfinedError(127)` and does not further define the conditions. The
+ * spelling `undfinedError` is the spelling in the specification. Annex C lists
+ * the names only.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +30,9 @@ type GetCertsResponse_getCertsError = INTEGER;
 
 /**
  * @summary GetCertsResponse_getCertsError_invalidCiPKId
+ * @description
+ * SGP.32 v1.2 section 5.9.10 names `invalidCiPKId(1)` and does not further
+ * define the condition that produces it. Annex C lists the name only.
  * @constant
  * @type {number}
  */
@@ -33,6 +41,9 @@ const GetCertsResponse_getCertsError_invalidCiPKId: GetCertsResponse_getCertsErr
 
 /**
  * @summary GetCertsResponse_getCertsError_invalidCiPKId
+ * @description
+ * SGP.32 v1.2 section 5.9.10 names this code and does not further define the
+ * condition that produces it. Annex C.
  * @constant
  * @type {number}
  */
@@ -41,6 +52,10 @@ const invalidCiPKId: GetCertsResponse_getCertsError = GetCertsResponse_getCertsE
 
 /**
  * @summary GetCertsResponse_getCertsError_undfinedError
+ * @description
+ * SGP.32 v1.2 section 5.9.10 names `undfinedError(127)` and does not further
+ * define the condition that produces it. The spelling is the spelling in the
+ * specification. Annex C lists the name only.
  * @constant
  * @type {number}
  */
@@ -49,6 +64,9 @@ const GetCertsResponse_getCertsError_undfinedError: GetCertsResponse_getCertsErr
 
 /**
  * @summary GetCertsResponse_getCertsError_undfinedError
+ * @description
+ * SGP.32 v1.2 section 5.9.10 names this code, spelled `undfinedError`, and
+ * does not further define the condition. Annex C.
  * @constant
  * @type {number}
  */

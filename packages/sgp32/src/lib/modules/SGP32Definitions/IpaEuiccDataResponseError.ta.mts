@@ -13,6 +13,11 @@ import { IpaEuiccDataErrorCode, _decode_IpaEuiccDataErrorCode, _encode_IpaEuiccD
  * @summary IpaEuiccDataResponseError
  * @description
  * 
+ * Error alternative of `IpaEuiccDataResponse`. If the Emergency Profile is
+ * enabled, `ipaEuiccDataErrorCode` is `ecallActive` and the IPA stops the
+ * procedure. If the request included `eimTransactionId`, copy it here. SGP.32
+ * v1.2, section 2.11.2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +34,18 @@ class IpaEuiccDataResponseError {
     constructor (
         /**
          * @summary `eimTransactionId`.
+         * @description
+         * Copied from the request when the request included it. SGP.32 v1.2, section
+         * 2.11.2.2.
          * @public
          * @readonly
          */
         readonly eimTransactionId: OPTIONAL<TransactionId>,
         /**
          * @summary `ipaEuiccDataErrorCode`.
+         * @description
+         * Reason the IPA stopped. `ecallActive` is required when the Emergency Profile
+         * is enabled. SGP.32 v1.2, section 2.11.2.2.
          * @public
          * @readonly
          */

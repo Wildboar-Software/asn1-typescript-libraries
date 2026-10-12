@@ -17,6 +17,15 @@ import { EimPackageErrorWithCid, _decode_EimPackageErrorWithCid, _encode_EimPack
  * @summary TransferEimPackageResponse
  * @description
  * 
+ * Response to ESipa.TransferEimPackage. euiccPackageResult is the signed eUICC
+ * Package Result alone. ePRAndNotifications is that result plus pending
+ * Notifications. ipaEuiccDataResponse answers IpaEuiccDataRequest.
+ * eimPackageReceived acknowledges a download trigger or an EimAcknowledgements
+ * package. eimPackageError is invalidPackageFormat, unknownPackage, or
+ * undefinedError. SGP.32 v1.2 section 6.3.3.1 and Annex C do not define
+ * eimPackageReceivedWithCid or eimPackageErrorWithCid. SGP.32 v1.2, sections
+ * 5.14.4 and 6.3.3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

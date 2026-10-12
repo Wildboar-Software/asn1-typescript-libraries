@@ -13,6 +13,14 @@ import { EuiccPackageResultList, _decode_EuiccPackageResultList, _encode_EuiccPa
  * @summary RetrieveNotificationsListResponse
  * @description
  * 
+ * Response to ES10b.RetrieveNotificationsList. notificationList is the pending
+ * Notifications that match the filter, in any order, and is empty when none
+ * match. Each entry is a ProfileInstallationResult or an
+ * OtherSignedNotification as defined in SGP.22 section 5.7.10.
+ * euiccPackageResultList is the matching eUICC Package Results, also in any
+ * order, and empty when none match. notificationsListResultError is the error
+ * alternative. SGP.32 v1.2, section 5.9.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

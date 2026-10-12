@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CompactSuccessResult
  * @description
- * 
+ *
+ * Success branch of a compact Profile Installation Result. The IPA keeps the
+ * original eUICC signature when re-encoding.
+ *
+ * SGP.32 v1.2, section 5.14.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +35,23 @@ class CompactSuccessResult {
     constructor (
         /**
          * @summary `compactAid`.
+         * @description
+         *
+         * Bytes 14 and 15 of the ISD-P AID.
+         *
+         * SGP.32 v1.2, section 5.14.7.
          * @public
          * @readonly
          */
         readonly compactAid: OCTET_STRING,
         /**
          * @summary `simaResponse`.
+         * @description
+         *
+         * EUICCResponse from the installation. Required when its value differs from
+         * the 9-byte success value '30 07 A0 05 30 03 80 01 00'.
+         *
+         * SGP.32 v1.2, section 5.14.7.
          * @public
          * @readonly
          */

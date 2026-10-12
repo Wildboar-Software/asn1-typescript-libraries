@@ -13,6 +13,23 @@ import { EuiccPackageSigned, _decode_EuiccPackageSigned, _encode_EuiccPackageSig
  * @summary EuiccPackageRequest
  * @description
  * 
+ * Signed eUICC Package, one of the four eIM Package request bodies (SGP.32
+ * v1.2, sections 2.11.1 and 2.11.1.1). Tag 'BF51'. It is the command data of
+ * ES10b.LoadEuiccPackage (section 5.9.1).
+ *
+ * The eIM signs euiccPackageSigned concatenated with the association token
+ * from this eIM's configuration. When no token is configured, the signature
+ * input uses the associationToken data object with value zero, encoded '84 01
+ * 00'. The eUICC checks that signature with the stored eIM public key, then
+ * checks the EID and that counterValue is strictly greater than the stored
+ * counter.
+ *
+ * While the Emergency Profile is enabled, the eUICC rejects this request with
+ * ecallActive (section 2.11.2.1). A non-resumable interruption, such as power
+ * loss, reverts every change from this command, including the stored counter,
+ * and discards any partial result; the IPA may submit the same package again
+ * (section 5.9.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +46,23 @@ class EuiccPackageRequest {
     constructor (
         /**
          * @summary `euiccPackageSigned`.
+         * @description
+         * The bytes the eIM signs, concatenated with the association token, and the
+         * bytes the eUICC verifies (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
+         * Contains the issuing eimId, the target EID, the replay counter, an optional
+         * transaction identifier, and either PSMOs or eCOs.
          * @public
          * @readonly
          */
         readonly euiccPackageSigned: EuiccPackageSigned,
         /**
          * @summary `eimSignature`.
+         * @description
+         * eIM signature, tag '5F37', over euiccPackageSigned concatenated with the
+         * associationToken data object (SGP.32 v1.2, section 2.11.1.1). When no token
+         * is configured, that object is the value zero, '84 01 00'. An invalid
+         * signature produces euiccPackageErrorUnsigned and, when a token is
+         * configured, includes that token (section 5.9.1).
          * @public
          * @readonly
          */

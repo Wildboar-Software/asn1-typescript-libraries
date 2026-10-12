@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetEimConfigurationDataRequest_searchCriteria
  * @description
  * 
+ * Filter for ES10b.GetEimConfigurationData. The only alternative, `eimId`, is
+ * the eIM identifier from section 4.3, 1 to 128 characters. The eUICC returns
+ * the eIM Configuration Data with that `eimId`. If nothing is stored, or
+ * nothing matches, the response list is empty. SGP.32 v1.2, sections 4.3 and
+ * 5.9.18.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

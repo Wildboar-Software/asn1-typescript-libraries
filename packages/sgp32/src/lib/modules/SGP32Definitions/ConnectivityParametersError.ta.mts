@@ -10,7 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ConnectivityParametersError
  * @description
- * 
+ *
+ * Error alternative of ES10b.GetConnectivityParameters.
+ *
+ * SGP.32 v1.2, section 5.9.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +29,12 @@ type ConnectivityParametersError = INTEGER;
 
 /**
  * @summary ConnectivityParametersError_parametersNotAvailable
+ * @description
+ *
+ * Connectivity parameters for the HTTP protocol are not available on the
+ * currently enabled Profile.
+ *
+ * SGP.32 v1.2, section 5.9.24.
  * @constant
  * @type {number}
  */
@@ -33,6 +43,10 @@ const ConnectivityParametersError_parametersNotAvailable: ConnectivityParameters
 
 /**
  * @summary ConnectivityParametersError_parametersNotAvailable
+ * @description
+ *
+ * HTTP connectivity parameters are unavailable on the enabled Profile (SGP.32
+ * v1.2, section 5.9.24).
  * @constant
  * @type {number}
  */
@@ -41,6 +55,10 @@ const parametersNotAvailable: ConnectivityParametersError = ConnectivityParamete
 
 /**
  * @summary ConnectivityParametersError_undefinedError
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on GetConnectivityParameters and does not
+ * further define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -49,6 +67,10 @@ const ConnectivityParametersError_undefinedError: ConnectivityParametersError = 
 
 /**
  * @summary ConnectivityParametersError_undefinedError
+ * @description
+ *
+ * Listed on GetConnectivityParameters; SGP.32 v1.2 does not further define it
+ * (Annex C).
  * @constant
  * @type {number}
  */

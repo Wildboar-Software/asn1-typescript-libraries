@@ -11,6 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccMemoryResetResponse_resetResult
  * @description
  * 
+ * Whether the Profile-deletion part of ES10b.eUICCMemoryReset deleted
+ * anything, or why it stopped (SGP.32 v1.2, section 5.9.5). When
+ * resetDefaultSmdpAddress is set, both ok and nothingToDelete mean the default
+ * SM-DP+ address was reset. resetEimResult and
+ * resetImmediateEnableConfigResult are added only when this value is ok or
+ * nothingToDelete.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +37,9 @@ type EuiccMemoryResetResponse_resetResult = INTEGER;
  * @summary EuiccMemoryResetResponse_resetResult_ok
  * @constant
  * @type {number}
+ * @description
+ * At least one Profile was deleted (SGP.32 v1.2, section 5.9.5). When
+ * resetDefaultSmdpAddress is set, ok also means that address reset succeeded.
  */
 export
 const EuiccMemoryResetResponse_resetResult_ok: EuiccMemoryResetResponse_resetResult = 0; /* LONG_NAMED_INTEGER_VALUE */
@@ -38,6 +48,8 @@ const EuiccMemoryResetResponse_resetResult_ok: EuiccMemoryResetResponse_resetRes
  * @summary EuiccMemoryResetResponse_resetResult_ok
  * @constant
  * @type {number}
+ * @description
+ * At least one Profile was deleted (SGP.32 v1.2, section 5.9.5).
  */
 export
 const ok: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
@@ -46,6 +58,10 @@ const ok: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetR
  * @summary EuiccMemoryResetResponse_resetResult_nothingToDelete
  * @constant
  * @type {number}
+ * @description
+ * No Profile was deleted (SGP.32 v1.2, section 5.9.5). When
+ * resetDefaultSmdpAddress is set, this value still means that address reset
+ * succeeded.
  */
 export
 const EuiccMemoryResetResponse_resetResult_nothingToDelete: EuiccMemoryResetResponse_resetResult = 1; /* LONG_NAMED_INTEGER_VALUE */
@@ -54,6 +70,8 @@ const EuiccMemoryResetResponse_resetResult_nothingToDelete: EuiccMemoryResetResp
  * @summary EuiccMemoryResetResponse_resetResult_nothingToDelete
  * @constant
  * @type {number}
+ * @description
+ * No Profile was deleted (SGP.32 v1.2, section 5.9.5).
  */
 export
 const nothingToDelete: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_nothingToDelete; /* SHORT_NAMED_INTEGER_VALUE */
@@ -62,6 +80,11 @@ const nothingToDelete: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetRe
  * @summary EuiccMemoryResetResponse_resetResult_catBusy
  * @constant
  * @type {number}
+ * @description
+ * An enabled Profile has a proactive session still open, and the eUICC stops
+ * the command (SGP.32 v1.2, section 5.9.5). The Device may end that session
+ * and send the command again. The other eUICC choice is to end the session
+ * itself and queue REFRESH.
  */
 export
 const EuiccMemoryResetResponse_resetResult_catBusy: EuiccMemoryResetResponse_resetResult = 5; /* LONG_NAMED_INTEGER_VALUE */
@@ -70,6 +93,9 @@ const EuiccMemoryResetResponse_resetResult_catBusy: EuiccMemoryResetResponse_res
  * @summary EuiccMemoryResetResponse_resetResult_catBusy
  * @constant
  * @type {number}
+ * @description
+ * An open proactive session on an enabled Profile stopped the reset (SGP.32
+ * v1.2, section 5.9.5).
  */
 export
 const catBusy: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
@@ -78,6 +104,9 @@ const catBusy: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_r
  * @summary EuiccMemoryResetResponse_resetResult_ecallActive
  * @constant
  * @type {number}
+ * @description
+ * The Emergency Profile is enabled, so the eUICC rejects the memory reset
+ * (SGP.32 v1.2, sections 5.9.5 and 2.11.2.1).
  */
 export
 const EuiccMemoryResetResponse_resetResult_ecallActive: EuiccMemoryResetResponse_resetResult = 104; /* LONG_NAMED_INTEGER_VALUE */
@@ -86,6 +115,9 @@ const EuiccMemoryResetResponse_resetResult_ecallActive: EuiccMemoryResetResponse
  * @summary EuiccMemoryResetResponse_resetResult_ecallActive
  * @constant
  * @type {number}
+ * @description
+ * The Emergency Profile is enabled, so the memory reset is rejected (SGP.32
+ * v1.2, section 5.9.5).
  */
 export
 const ecallActive: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
@@ -94,6 +126,9 @@ const ecallActive: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetRespon
  * @summary EuiccMemoryResetResponse_resetResult_undefinedError
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists undefinedError(127) on resetResult in section 5.9.5 and
+ * does not further define the condition that produces it.
  */
 export
 const EuiccMemoryResetResponse_resetResult_undefinedError: EuiccMemoryResetResponse_resetResult = 127; /* LONG_NAMED_INTEGER_VALUE */
@@ -102,6 +137,9 @@ const EuiccMemoryResetResponse_resetResult_undefinedError: EuiccMemoryResetRespo
  * @summary EuiccMemoryResetResponse_resetResult_undefinedError
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists this code in section 5.9.5 and does not further define the
+ * condition that produces it.
  */
 export
 const undefinedError: EuiccMemoryResetResponse_resetResult = EuiccMemoryResetResponse_resetResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */

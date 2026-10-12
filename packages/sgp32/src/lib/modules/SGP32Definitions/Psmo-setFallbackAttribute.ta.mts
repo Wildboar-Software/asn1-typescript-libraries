@@ -12,6 +12,14 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  * @summary Psmo_setFallbackAttribute
  * @description
  * 
+ * Set the Fallback Attribute on the target Profile. The IPA may call
+ * ES10b.ExecuteFallbackMechanism (section 5.9.20) after a permanent loss of
+ * connectivity on the enabled Profile, and may later call
+ * ES10b.ReturnFromFallback (section 5.9.21). How that loss is detected is
+ * implementation specific. When the eUICC has no Fallback Mechanism, this
+ * command stops with processingTerminated and unknownOrDamagedCommand. SGP.32
+ * v1.2, sections 2.11.1.1 and 3.4.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +35,16 @@ class Psmo_setFallbackAttribute {
     constructor (
         /**
          * @summary `iccid`.
+         * @description
+         * ICCID of the Profile that receives the Fallback Attribute, as defined in
+         * SGP.22. SGP.32 v1.2, section 2.11.1.1. An unknown ICCID yields
+         * iccidOrAidNotFound. The command returns ok when this Profile already has the
+         * attribute. fallbackAllowed is TRUE; an absent or FALSE flag yields
+         * fallbackNotAllowed(2). An Emergency Profile with ecallIndication TRUE yields
+         * undefinedError(127). When another Profile already has the attribute and is
+         * enabled, the result is fallbackProfileEnabled(3). When that other Profile is
+         * disabled, its attribute is cleared and this Profile receives it. SGP.32
+         * v1.2, section 3.4.6.
          * @public
          * @readonly
          */

@@ -17,6 +17,13 @@ import { EuiccPackage, _decode_EuiccPackage, _encode_EuiccPackage } from "../SGP
  * @summary EuiccPackageSigned
  * @description
  * 
+ * The data the eIM signs, together with the association token, to produce
+ * eimSignature (SGP.32 v1.2, section 2.11.1.1). The eUICC echoes eimId,
+ * eimTransactionId, and counterValue in the package result so the eIM can
+ * match them. Each eIM keeps its own counter and increments it by 1 for every
+ * package it sends. The eUICC handles counter values through 8388607
+ * (0x7FFFFF) inclusive.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,30 +43,55 @@ class EuiccPackageSigned {
     constructor (
         /**
          * @summary `eimId`.
+         * @description
+         * Identifier of the eIM that issued this package, matching an Associated eIM
+         * stored on the eUICC (SGP.32 v1.2, sections 2.11.1.1 and 4.3). Length 1 to
+         * 128 bytes. An unknown value produces euiccPackageErrorUnsigned (section
+         * 5.9.1).
          * @public
          * @readonly
          */
         readonly eimId: UTF8String,
         /**
          * @summary `eidValue`.
+         * @description
+         * EID of the eUICC this package targets (SGP.32 v1.2, section 2.11.1.1). The
+         * eUICC compares it with its own EID and returns the signed error invalidEid
+         * on a mismatch (section 5.9.1).
          * @public
          * @readonly
          */
         readonly eidValue: Octet16,
         /**
          * @summary `counterValue`.
+         * @description
+         * Replay counter for this eIM. The eIM increments its counter by 1 for each
+         * package. The eUICC accepts the package only when this value is greater than
+         * the highest counter it has stored for this eIM, then stores this value once
+         * the signed execution result is produced (SGP.32 v1.2, sections 2.11.1.1 and
+         * 5.9.1). A smaller or equal value produces replayError. A value above the
+         * maximum the eUICC can store produces counterValueOutOfRange. The
+         * implementation handles at least 8388607 (0x7FFFFF) inclusive.
          * @public
          * @readonly
          */
         readonly counterValue: INTEGER,
         /**
          * @summary `eimTransactionId`.
+         * @description
+         * Optional transaction identifier as defined in SGP.22, which SGP.32 cites
+         * (SGP.32 v1.2, section 2.11.1.1). When present, the eUICC echoes it in the
+         * signed result and in both the signed and unsigned errors (section 2.11.2.1).
+         * The eIM may use it to link this package to that result (section 3.3.1).
          * @public
          * @readonly
          */
         readonly eimTransactionId: OPTIONAL<TransactionId>,
         /**
          * @summary `euiccPackage`.
+         * @description
+         * Either the PSMO list or the eCO list to execute, in order, after
+         * verification succeeds (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
          * @public
          * @readonly
          */

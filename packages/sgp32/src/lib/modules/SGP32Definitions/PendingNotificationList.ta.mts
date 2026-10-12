@@ -10,6 +10,13 @@ import { PendingNotification, _decode_PendingNotification, _encode_PendingNotifi
  * @summary PendingNotificationList
  * @description
  * 
+ * List of pending Notifications. The eUICC MAY order them in any way inside
+ * the list, and the list is empty when no Notification matches the filter. The
+ * IPA includes this list after a signed eUICC Package Result when it reports
+ * Notifications together with that result and the eUICC Package contained
+ * PSMOs. An IPA with `minimizeEsipaBytes` SHOULD put each Notification in
+ * compact form. SGP.32 v1.2, sections 2.11.2.2, 5.9.11, and 5.14.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

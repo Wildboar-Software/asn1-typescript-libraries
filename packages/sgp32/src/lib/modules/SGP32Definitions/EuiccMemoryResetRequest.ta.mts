@@ -12,6 +12,24 @@ import { _decode_EuiccMemoryResetRequest_resetOptions, _encode_EuiccMemoryResetR
  * @summary EuiccMemoryResetRequest
  * @description
  * 
+ * ES10b.eUICCMemoryReset command data (SGP.32 v1.2, section 5.9.5). Tag
+ * 'BF64'. This is distinct from the SGP.22 function that uses tag 'BF34'.
+ *
+ * The command deletes the Profile subsets named in resetOptions regardless of
+ * enabled state or Profile Policy Rules, and may also reset the default SM-DP+
+ * address, remove every eIM Configuration Data, and clear immediate Profile
+ * enabling. Any combination is allowed. The operation is atomic. After power
+ * loss the eUICC continues the same command at the next power-on. Any other
+ * error stops the command and restores the prior eUICC and Profile state.
+ *
+ * While the Emergency Profile is enabled the eUICC returns ecallActive and
+ * leaves the eUICC unchanged (sections 5.9.5 and 2.11.2.1). If an enabled
+ * Profile has a proactive session still open, the eUICC either returns catBusy
+ * or ends that session and queues REFRESH as the next proactive command.
+ * Deleting an enabled Profile is followed by REFRESH in "UICC Reset" mode.
+ * Each deleted Profile produces the OtherSignedNotification entries configured
+ * in its metadata.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +53,10 @@ class EuiccMemoryResetRequest {
     constructor (
         /**
          * @summary `resetOptions`.
+         * @description
+         * Bits that select Profile classes to delete and the optional address, eIM,
+         * and immediate-enable resets (SGP.32 v1.2, section 5.9.5). Any combination
+         * may be set.
          * @public
          * @readonly
          */

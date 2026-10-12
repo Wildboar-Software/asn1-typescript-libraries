@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ReturnFromFallbackRequest
  * @description
  * 
+ * ES10b.ReturnFromFallback. Optional on the eUICC. The IPA uses it to disable
+ * the enabled Fallback Profile and re-enable the Profile that was enabled
+ * before ES10b.ExecuteFallbackMechanism. If ExecuteFallbackMechanism is
+ * supported, this function is supported too. The swap is atomic. SGP.32 v1.2,
+ * section 5.9.21.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +34,13 @@ class ReturnFromFallbackRequest {
     constructor (
         /**
          * @summary `refreshFlag`.
+         * @description
+         * FALSE performs the swap in this call. TRUE marks the Fallback Profile to be
+         * disabled and the previously enabled Profile to be enabled, returns ok, and
+         * sends REFRESH in eUICC Profile State Change mode when the IoT Device
+         * supports it, otherwise UICC Reset mode, per ETSI TS 102 223. A proactive
+         * session already open may yield catBusy. If the eUICC continues, it ends that
+         * session. SGP.32 v1.2, section 5.9.21.
          * @public
          * @readonly
          */

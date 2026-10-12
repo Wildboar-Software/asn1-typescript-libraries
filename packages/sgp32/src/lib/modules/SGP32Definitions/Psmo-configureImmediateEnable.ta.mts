@@ -15,6 +15,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Psmo_configureImmediateEnable
  * @description
  * 
+ * Activate or deactivate immediate Profile enabling, and store default SM-DP+
+ * data used for that enabling. Default SM-DP+ data may be updated whether or
+ * not immediate enabling changes in the same command. A stored
+ * defaultSmdpAddress is also the default SM-DP+ address returned by
+ * GetEuiccConfiguredAddresses. SGP.32 v1.2, sections 2.11.1.1, 3.4.4, and
+ * 5.13.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +39,31 @@ class Psmo_configureImmediateEnable {
     constructor (
         /**
          * @summary `immediateEnableFlag`.
+         * @description
+         * Present to activate immediate Profile enabling when it is inactive. Absent
+         * to deactivate it when it is active. Any other combination leaves the current
+         * activation state unchanged. SGP.32 v1.2, sections 2.11.1.1 and 3.4.4.
          * @public
          * @readonly
          */
         readonly immediateEnableFlag: OPTIONAL<NULL>,
         /**
          * @summary `defaultSmdpOid`.
+         * @description
+         * Default SM-DP+ object identifier stored for immediate Profile enabling when
+         * this field is present. It may be sent with or without immediateEnableFlag.
+         * SGP.32 v1.2, sections 2.11.1.1 and 3.4.4.
          * @public
          * @readonly
          */
         readonly defaultSmdpOid: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `defaultSmdpAddress`.
+         * @description
+         * Default SM-DP+ address stored for immediate Profile enabling when this field
+         * is present. It may be sent with or without immediateEnableFlag. Once stored,
+         * GetEuiccConfiguredAddresses returns it as the default SM-DP+ address. SGP.32
+         * v1.2, sections 2.11.1.1 and 3.4.4.
          * @public
          * @readonly
          */

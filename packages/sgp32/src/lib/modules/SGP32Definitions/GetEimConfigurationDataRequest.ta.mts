@@ -12,6 +12,10 @@ import { GetEimConfigurationDataRequest_searchCriteria, _decode_GetEimConfigurat
  * @summary GetEimConfigurationDataRequest
  * @description
  * 
+ * ES10b.GetEimConfigurationData command. The IPA reads eIM Configuration Data
+ * stored in the eUICC. Omit `searchCriteria` to receive every stored entry.
+ * SGP.32 v1.2, section 5.9.18.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +33,9 @@ class GetEimConfigurationDataRequest {
     constructor (
         /**
          * @summary `searchCriteria`.
+         * @description
+         * Optional filter. Omit it to receive every stored eIM Configuration Data
+         * entry. SGP.32 v1.2, section 5.9.18.
          * @public
          * @readonly
          */

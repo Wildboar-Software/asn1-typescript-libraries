@@ -10,7 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AddInitialEimResponse_addInitialEimError
  * @description
- * 
+ *
+ * Error alternative of ES10b.AddInitialEim. Any of these codes stops the
+ * command and leaves eIM Configuration Data as it was before the call.
+ *
+ * SGP.32 v1.2, sections 3.5.2.1 and 5.9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +35,12 @@ type AddInitialEimResponse_addInitialEimError = INTEGER;
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_insufficientMemory
+ * @description
+ *
+ * The eUICC lacks sufficient memory to store the provided list of eIM
+ * Configuration Data.
+ *
+ * SGP.32 v1.2, sections 3.5.2.1 and 5.9.4.
  * @constant
  * @type {number}
  */
@@ -38,6 +49,10 @@ const AddInitialEimResponse_addInitialEimError_insufficientMemory: AddInitialEim
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_insufficientMemory
+ * @description
+ *
+ * Not enough memory for the eIM Configuration Data list (SGP.32 v1.2, section
+ * 5.9.4).
  * @constant
  * @type {number}
  */
@@ -46,6 +61,12 @@ const insufficientMemory: AddInitialEimResponse_addInitialEimError = AddInitialE
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists
+ * @description
+ *
+ * Any eIM Configuration Data is already present on the eUICC, so AddInitialEim
+ * is refused.
+ *
+ * SGP.32 v1.2, sections 3.5.2.1 and 5.9.4.
  * @constant
  * @type {number}
  */
@@ -54,6 +75,10 @@ const AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists: AddIn
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists
+ * @description
+ *
+ * The eUICC already stores eIM Configuration Data (SGP.32 v1.2, section
+ * 5.9.4).
  * @constant
  * @type {number}
  */
@@ -62,6 +87,12 @@ const associatedEimAlreadyExists: AddInitialEimResponse_addInitialEimError = Add
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_ciPKUnknown
+ * @description
+ *
+ * A provided euiccCiPKId is absent from euiccCiPKIdListForSigning in
+ * eUICCInfo2.
+ *
+ * SGP.32 v1.2, sections 3.5.2.1 and 5.9.4.
  * @constant
  * @type {number}
  */
@@ -70,6 +101,10 @@ const AddInitialEimResponse_addInitialEimError_ciPKUnknown: AddInitialEimRespons
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_ciPKUnknown
+ * @description
+ *
+ * A provided euiccCiPKId is absent from euiccCiPKIdListForSigning (SGP.32
+ * v1.2, section 5.9.4).
  * @constant
  * @type {number}
  */
@@ -78,6 +113,12 @@ const ciPKUnknown: AddInitialEimResponse_addInitialEimError = AddInitialEimRespo
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_invalidAssociationToken
+ * @description
+ *
+ * The eUICC was asked to generate an associationToken and the provided value
+ * differs from -1.
+ *
+ * SGP.32 v1.2, sections 3.5.2.1 and 5.9.4.
  * @constant
  * @type {number}
  */
@@ -86,6 +127,10 @@ const AddInitialEimResponse_addInitialEimError_invalidAssociationToken: AddIniti
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_invalidAssociationToken
+ * @description
+ *
+ * Association-token generation was requested with a value that differs from -1
+ * (SGP.32 v1.2, section 5.9.4).
  * @constant
  * @type {number}
  */
@@ -94,6 +139,12 @@ const invalidAssociationToken: AddInitialEimResponse_addInitialEimError = AddIni
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_counterValueOutOfRange
+ * @description
+ *
+ * counterValue exceeds the maximum the eUICC supports. The eUICC handles
+ * counter values at least up to 8388607 (0x7FFFFF).
+ *
+ * SGP.32 v1.2, sections 2.11.1.1, 3.5.2.1, and 5.9.4.
  * @constant
  * @type {number}
  */
@@ -102,6 +153,10 @@ const AddInitialEimResponse_addInitialEimError_counterValueOutOfRange: AddInitia
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_counterValueOutOfRange
+ * @description
+ *
+ * counterValue exceeds the eUICC maximum, at least 8388607 (SGP.32 v1.2,
+ * sections 2.11.1.1 and 5.9.4).
  * @constant
  * @type {number}
  */
@@ -110,6 +165,11 @@ const counterValueOutOfRange: AddInitialEimResponse_addInitialEimError = AddInit
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_commandError
+ * @description
+ *
+ * An entry has no eimId, or an eimId exceeds its maximum length.
+ *
+ * SGP.32 v1.2, sections 3.5.2.1 and 5.9.4.
  * @constant
  * @type {number}
  */
@@ -118,6 +178,10 @@ const AddInitialEimResponse_addInitialEimError_commandError: AddInitialEimRespon
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_commandError
+ * @description
+ *
+ * An entry's eimId is missing or longer than its maximum (SGP.32 v1.2, section
+ * 5.9.4).
  * @constant
  * @type {number}
  */
@@ -126,6 +190,11 @@ const commandError: AddInitialEimResponse_addInitialEimError = AddInitialEimResp
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_undefinedError
+ * @description
+ *
+ * Any other error during command execution.
+ *
+ * SGP.32 v1.2, sections 3.5.2.1 and 5.9.4.
  * @constant
  * @type {number}
  */
@@ -134,6 +203,9 @@ const AddInitialEimResponse_addInitialEimError_undefinedError: AddInitialEimResp
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_undefinedError
+ * @description
+ *
+ * Any other error during AddInitialEim (SGP.32 v1.2, section 5.9.4).
  * @constant
  * @type {number}
  */

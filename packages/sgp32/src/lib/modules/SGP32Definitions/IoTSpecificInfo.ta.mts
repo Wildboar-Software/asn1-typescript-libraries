@@ -14,6 +14,12 @@ import { type VersionType, _decode_VersionType, _encode_VersionType } from "@wil
  * @summary IoTSpecificInfo
  * @description
  * 
+ * IoT extension of EUICCInfo2. Within SGP.32 this object SHALL be present. The
+ * eUICC SHALL NOT include `euiccCiPKIdListForSigningV3`,
+ * `additionalEuiccInfo`, or `highestSvn` in euiccInfo2; an SM-DP+ SHOULD
+ * ignore those fields if they arrive together with `iotSpecificInfo`. SGP.32
+ * v1.2, section 5.9.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +38,36 @@ class IoTSpecificInfo {
     constructor (
         /**
          * @summary `iotVersion`.
+         * @description
+         * SGP.32 version or versions the eUICC supports. At least one version SHALL be
+         * present. SGP.32 v1.2, section 5.9.2.
          * @public
          * @readonly
          */
         readonly iotVersion: VersionType[],
         /**
          * @summary `ecallSupported`.
+         * @description
+         * SHALL be present. When it is present, the eUICC supports the Emergency
+         * Mechanism. SGP.32 v1.2, section 5.9.2.
          * @public
          * @readonly
          */
         readonly ecallSupported: OPTIONAL<NULL>,
         /**
          * @summary `fallbackSupported`.
+         * @description
+         * SHALL be present when the eUICC supports the Fallback Mechanism. SGP.32
+         * v1.2, section 5.9.2.
          * @public
          * @readonly
          */
         readonly fallbackSupported: OPTIONAL<NULL>,
         /**
          * @summary `fallbackAllowedUpdateSupported`.
+         * @description
+         * SGP.32 v1.2 section 5.9.2 does not define this component. Annex C does not
+         * further define it.
          * @public
          * @readonly
          */

@@ -14,6 +14,15 @@ import { ProfileDownloadData_contactSmds, _decode_ProfileDownloadData_contactSmd
  * @summary ProfileDownloadData
  * @description
  * 
+ * Download data inside `ProfileDownloadTriggerRequest` when that request is
+ * not the empty trigger used for an IPA with `eimDownloadDataHandling`. Select
+ * `activationCode` when the eIM supplies an Activation Code of 0 to 255
+ * characters. Select `contactDefaultSmdp` when the IPA is to contact the
+ * default SM-DP+ address available in the IoT Device. Select `contactSmds`
+ * when the IPA is to contact an SM-DS. The IPA then continues with the direct
+ * or indirect Profile download or Event Retrieval procedure that matches its
+ * capabilities. SGP.32 v1.2, section 2.11.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

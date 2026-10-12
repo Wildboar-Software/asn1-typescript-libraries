@@ -13,6 +13,9 @@ import { EimPackageResultErrorCode, _decode_EimPackageResultErrorCode, _encode_E
  * @summary EimPackageErrorWithCid
  * @description
  * 
+ * SGP.32 v1.2 does not further define this type. Annex C stops
+ * TransferEimPackageResponse at eimPackageReceived and eimPackageError.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +35,19 @@ class EimPackageErrorWithCid {
     constructor (
         /**
          * @summary `correlationId`.
+         * @description
+         * SGP.32 v1.2 does not further define this component. Annex C does not define
+         * EimPackageErrorWithCid.
          * @public
          * @readonly
          */
         readonly correlationId: OPTIONAL<EimPackageErrorWithCid_correlationId>,
         /**
          * @summary `eimPackageError`.
+         * @description
+         * SGP.32 v1.2 does not further define this component on
+         * EimPackageErrorWithCid. Annex C does not define that sequence. The same code
+         * names are defined for EimPackageResultResponseError in section 6.3.2.7.
          * @public
          * @readonly
          */

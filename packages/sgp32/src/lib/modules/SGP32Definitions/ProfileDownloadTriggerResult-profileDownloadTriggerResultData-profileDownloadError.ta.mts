@@ -13,6 +13,10 @@ import { _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_p
  * @summary ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError
  * @description
  * 
+ * Failure of a Profile download triggered by the eIM. Used when the IPA has no
+ * Profile Installation Result from ES10b.LoadBoundProfilePackage, and when the
+ * Emergency Profile is enabled. SGP.32 v1.2, section 2.11.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,20 @@ class ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownl
     constructor (
         /**
          * @summary `profileDownloadErrorReason`.
+         * @description
+         * ecallActive(104) when the Emergency Profile is enabled. The only other named
+         * value is undefinedError(127). SGP.32 v1.2, section 2.11.2.3.
          * @public
          * @readonly
          */
         readonly profileDownloadErrorReason: ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason,
         /**
          * @summary `errorResponse`.
+         * @description
+         * When present, the error response of an ES10b function or of an ES9+ function
+         * with ASN.1 binding that the IPA hit during the download. SGP.32 v1.2 says
+         * the error response of an ES9+ function with JSON binding is for further
+         * study. SGP.32 v1.2, section 2.11.2.3.
          * @public
          * @readonly
          */

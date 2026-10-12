@@ -12,7 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DisableEmergencyProfileRequest
  * @description
- * 
+ *
+ * ES10b.DisableEmergencyProfile command. Optional for the eUICC and the IPA.
+ * It disables the enabled Emergency Profile and enables the Profile that was
+ * enabled before it. Required when ES10b.EnableEmergencyProfile is supported.
+ * The command is atomic: an error leaves both Profiles as they were.
+ *
+ * SGP.32 v1.2, section 5.9.23.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +35,16 @@ class DisableEmergencyProfileRequest {
     constructor (
         /**
          * @summary `refreshFlag`.
+         * @description
+         *
+         * Whether REFRESH is required. When clear, the eUICC disables the Emergency
+         * Profile and enables the previous Profile immediately, and may return catBusy
+         * if a proactive session is open. When set, the eUICC marks those Profile
+         * state changes, returns ok, and sends REFRESH in eUICC Profile State Change
+         * mode or UICC Reset mode per ETSI TS 102 223. A Terminal Response reporting a
+         * temporary or permanent problem leaves both Profiles unchanged.
+         *
+         * SGP.32 v1.2, section 5.9.23.
          * @public
          * @readonly
          */

@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult
  * @description
  * 
+ * Outcome of resetImmediateEnableConfig. Present only when that bit was set
+ * and resetResult is ok or nothingToDelete (SGP.32 v1.2, section 5.9.5). The
+ * operation deactivates immediate Profile enabling and removes its stored
+ * data.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +33,9 @@ type EuiccMemoryResetResponse_resetImmediateEnableConfigResult = INTEGER;
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok
  * @constant
  * @type {number}
+ * @description
+ * Immediate Profile enabling was deactivated and its stored data was removed
+ * (SGP.32 v1.2, section 5.9.5).
  */
 export
 const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok: EuiccMemoryResetResponse_resetImmediateEnableConfigResult = 0; /* LONG_NAMED_INTEGER_VALUE */
@@ -36,6 +44,9 @@ const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok: EuiccMemoryR
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok
  * @constant
  * @type {number}
+ * @description
+ * Immediate Profile enabling configuration was reset (SGP.32 v1.2, section
+ * 5.9.5).
  */
 export
 const ok: EuiccMemoryResetResponse_resetImmediateEnableConfigResult = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
@@ -44,6 +55,9 @@ const ok: EuiccMemoryResetResponse_resetImmediateEnableConfigResult = EuiccMemor
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported
  * @constant
  * @type {number}
+ * @description
+ * This eUICC does not support resetting the immediate Profile enabling
+ * configuration (SGP.32 v1.2, section 5.9.5).
  */
 export
 const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported: EuiccMemoryResetResponse_resetImmediateEnableConfigResult = 1; /* LONG_NAMED_INTEGER_VALUE */
@@ -52,6 +66,9 @@ const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSuppo
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported
  * @constant
  * @type {number}
+ * @description
+ * The eUICC does not support resetting immediate Profile enabling (SGP.32
+ * v1.2, section 5.9.5).
  */
 export
 const resetIECNotSupported: EuiccMemoryResetResponse_resetImmediateEnableConfigResult = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_resetIECNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
@@ -60,6 +77,9 @@ const resetIECNotSupported: EuiccMemoryResetResponse_resetImmediateEnableConfigR
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists undefinedError(127) on resetImmediateEnableConfigResult in
+ * section 5.9.5 and does not further define the condition that produces it.
  */
 export
 const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError: EuiccMemoryResetResponse_resetImmediateEnableConfigResult = 127; /* LONG_NAMED_INTEGER_VALUE */
@@ -68,6 +88,9 @@ const EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError: 
  * @summary EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists this code in section 5.9.5 and does not further define the
+ * condition that produces it.
  */
 export
 const undefinedError: EuiccMemoryResetResponse_resetImmediateEnableConfigResult = EuiccMemoryResetResponse_resetImmediateEnableConfigResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */

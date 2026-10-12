@@ -14,6 +14,10 @@ import { _decode_EimIdType, _encode_EimIdType, EimIdType } from "../SGP32Definit
  * @summary EimIdInfo
  * @description
  * 
+ * One Associated eIM identifier returned by listEim (SGP.32 v1.2, sections
+ * 2.11.2.1 and 3.5.1.4). The eUICC returns the identifier of every Associated
+ * eIM after the signed package has been verified.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +34,19 @@ class EimIdInfo {
     constructor (
         /**
          * @summary `eimId`.
+         * @description
+         * Identifier of an Associated eIM, 1 to 128 bytes, unique within the eUICC
+         * (SGP.32 v1.2, sections 2.11.2.1 and 4.3).
          * @public
          * @readonly
          */
         readonly eimId: UTF8String,
         /**
          * @summary `eimIdType`.
+         * @description
+         * Present when the stored type is eimIdTypeOid or eimIdTypeFqdn (SGP.32 v1.2,
+         * section 2.11.2.1). When the stored type is eimIdTypeProprietary this
+         * component is absent.
          * @public
          * @readonly
          */

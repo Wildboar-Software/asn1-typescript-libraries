@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError
  * @description
  * 
+ * The eIM rejected ESipa.ProvideEimPackageResult. The named EID failures map
+ * from the status codes in section 5.14.6 Table 21. SGP.32 v1.2, sections
+ * 5.14.6 and 6.3.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +31,9 @@ type ProvideEimPackageResultResponse_provideEimPackageResultError = INTEGER;
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound
+ * @description
+ * No eUICC is known for the supplied EID. Maps from subject 8.1.1, reason 3.9
+ * Unknown. SGP.32 v1.2, section 5.14.6, Table 21.
  * @constant
  * @type {number}
  */
@@ -35,6 +42,8 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound: 
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound
+ * @description
+ * No eUICC is known for the supplied EID. SGP.32 v1.2, section 5.14.6.
  * @constant
  * @type {number}
  */
@@ -43,6 +52,10 @@ const eidNotFound: ProvideEimPackageResultResponse_provideEimPackageResultError 
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid
+ * @description
+ * The EID parameter is invalid. The format is the one in SGP.02 section 2.2.2.
+ * Maps from subject 8.1.1, reason 2.1 Invalid. SGP.32 v1.2, section 5.14.6,
+ * Table 21.
  * @constant
  * @type {number}
  */
@@ -51,6 +64,8 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid: P
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid
+ * @description
+ * The EID parameter is invalid. SGP.32 v1.2, section 5.14.6.
  * @constant
  * @type {number}
  */
@@ -59,6 +74,10 @@ const invalidEid: ProvideEimPackageResultResponse_provideEimPackageResultError =
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid
+ * @description
+ * The EID is absent and the eIM cannot identify the eUICC. Maps from subject
+ * 8.1.1, reason 2.2 Mandatory Element Missing. SGP.32 v1.2, section 5.14.6,
+ * Table 21.
  * @constant
  * @type {number}
  */
@@ -67,6 +86,9 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid: P
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid
+ * @description
+ * The EID is absent and the eIM cannot identify the eUICC. SGP.32 v1.2,
+ * section 5.14.6.
  * @constant
  * @type {number}
  */
@@ -75,6 +97,9 @@ const missingEid: ProvideEimPackageResultResponse_provideEimPackageResultError =
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError
+ * @description
+ * SGP.32 v1.2 lists undefinedError(127) on this error and does not further
+ * define the condition. Section 6.3.2.7.
  * @constant
  * @type {number}
  */
@@ -83,6 +108,8 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedErro
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError
+ * @description
+ * SGP.32 v1.2 does not further define undefinedError(127). Section 6.3.2.7.
  * @constant
  * @type {number}
  */

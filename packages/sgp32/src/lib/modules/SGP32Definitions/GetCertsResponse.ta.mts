@@ -12,6 +12,12 @@ import { GetCertsResponse_getCertsError, _decode_GetCertsResponse_getCertsError,
  * @summary GetCertsResponse
  * @description
  * 
+ * ES10b.GetCerts response. Select `certs` to return both the EUM certificate
+ * and the eUICC certificate. Select `getCertsError` on failure. SGP.32 v1.2
+ * section 5.9.10 names `invalidCiPKId(1)` and `undfinedError(127)` and does
+ * not further define the conditions that produce them. SGP.32 v1.2, section
+ * 5.9.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

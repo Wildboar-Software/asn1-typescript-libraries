@@ -24,6 +24,21 @@ import { StoreMetadataRequest_iotSpecificMetadata, _decode_StoreMetadataRequest_
  * @summary StoreMetadataRequest
  * @description
  * 
+ * Command data of ES8+.StoreMetadata. SGP.32 processes every ES8+ function as
+ * defined in SGP.22 section 5.5, with this command data in place of the SGP.22
+ * structure. The notes below that come from SGP.22 are from SGP.22 v3.1
+ * section 5.5.3, used because of that deferral. The SM-DP+ supplies Profile
+ * metadata. The eUICC checks that the Profile class is supported, that the
+ * ICCID differs from every installed Profile, and that any Profile Policy
+ * Rules are allowed for the Profile Owner. It stores each supplied object.
+ * serviceSpecificDataNotStoredInEuicc is discarded.
+ * 
+ * When ecallIndication is present, fallbackAllowed on the target Profile is
+ * clear. If fallbackAllowed is set, the eUICC returns incorrectInputValues.
+ * Otherwise it sets the Emergency Profile Attribute, generates as many
+ * Notifications as the metadata configures, and returns ok. SGP.32 v1.2,
+ * section 5.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,84 +69,145 @@ class StoreMetadataRequest {
     constructor (
         /**
          * @summary `iccid`.
+         * @description
+         * ICCID of the Profile being installed. From SGP.22 v3.1 section 5.5.3: it
+         * differs from the ICCID of every installed Profile, or the eUICC reports
+         * installFailedDueToIccidAlreadyExistsOnEuicc. SGP.32 v1.2 section 5.5 defers
+         * ES8+ processing to SGP.22 section 5.5.
          * @public
          * @readonly
          */
         readonly iccid: Iccid,
         /**
          * @summary `serviceProviderName`.
+         * @description
+         * Service provider name, at most 32 characters. From SGP.22 v3.1 section
+         * 5.5.3: the SM-DP+ supplies a non-empty string. The eUICC stores it. SGP.32
+         * v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly serviceProviderName: UTF8String,
         /**
          * @summary `profileName`.
+         * @description
+         * Profile name, at most 64 characters. The SGP.32 command comment says this
+         * corresponds to Short Description in SGP.21. From SGP.22 v3.1 section 5.5.3:
+         * the SM-DP+ supplies a non-empty string. SGP.32 v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly profileName: UTF8String,
         /**
          * @summary `iconType`.
+         * @description
+         * JPG or PNG. Present when an icon is supplied. SGP.32 v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly iconType: OPTIONAL<IconType>,
         /**
          * @summary `icon`.
+         * @description
+         * Icon bytes, 64 by 64 pixels, at most 1024 octets. Present only when iconType
+         * is present. SGP.32 v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly icon: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `profileClass`.
+         * @description
+         * Profile class. The SGP.32 definition defaults it to operational. From SGP.22
+         * v3.1 section 5.5.3: the class is one the eUICC supports, or the eUICC
+         * reports unsupportedProfileClass. SGP.32 v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly profileClass: OPTIONAL<ProfileClass>,
         /**
          * @summary `notificationConfigurationInfo`.
+         * @description
+         * Notification recipients stored with the Profile. From SGP.22 v3.1 section
+         * 5.5.3: one event bit may occur more than once, and each occurrence names
+         * another recipient address for that event. SGP.32 v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly notificationConfigurationInfo: OPTIONAL<NotificationConfigurationInformation[]>,
         /**
          * @summary `profileOwner`.
+         * @description
+         * Operator identity. From SGP.22 v3.1 section 5.5.3: present when
+         * profilePolicyRules is present, and then mccMnc contains no wildcard digit
+         * 'E'. Absent when the Profile has no EFIMSI. If rules are present, the owner
+         * is present and the rules are allowed for that owner, or the eUICC reports
+         * pprNotAllowed. SGP.32 v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly profileOwner: OPTIONAL<OperatorId>,
         /**
          * @summary `profilePolicyRules`.
+         * @description
+         * Profile Policy Rules. From SGP.22 v3.1 section 5.5.3: absent when no rule is
+         * set; otherwise it lists every rule that is set. When absent, every rule bit
+         * is treated as zero. Absent when the Profile has no EFIMSI. SGP.32 v1.2,
+         * section 5.5.
          * @public
          * @readonly
          */
         readonly profilePolicyRules: OPTIONAL<PprIds>,
         /**
          * @summary `serviceSpecificDataStoredInEuicc`.
+         * @description
+         * Vendor-specific data the eUICC stores. From SGP.22 v3.1 section 5.5.3: the
+         * SM-DP+ includes it only after the eUICC indicated
+         * serviceSpecificDataSupport. It leaves non-vendor Profile Management and
+         * interoperability unchanged. SGP.32 v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly serviceSpecificDataStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `serviceSpecificDataNotStoredInEuicc`.
+         * @description
+         * Vendor-specific data. The eUICC discards it when the command contains it.
+         * From SGP.22 v3.1 section 5.5.3: the SM-DP+ includes it only after the eUICC
+         * indicated serviceSpecificDataSupport. SGP.32 v1.2, section 5.5.
          * @public
          * @readonly
          */
         readonly serviceSpecificDataNotStoredInEuicc: OPTIONAL<VendorSpecificExtension>,
         /**
          * @summary `ecallIndication`.
+         * @description
+         * When present, the eUICC runs the extra Emergency Profile steps in section
+         * 5.5: fallbackAllowed on the target Profile is clear, or the eUICC returns
+         * incorrectInputValues. The eUICC then sets the Emergency Profile Attribute.
+         * An Emergency Profile download also stops with incorrectInputValues when the
+         * eUICC has no Emergency Mechanism, or when it already holds an Emergency
+         * Profile with ecallIndication TRUE. SGP.32 v1.2, sections 5.5, 3.2.3.1,
+         * and 3.2.3.2.
          * @public
          * @readonly
          */
         readonly ecallIndication: OPTIONAL<BOOLEAN>,
         /**
          * @summary `fallbackAllowed`.
+         * @description
+         * When TRUE, the Profile Owner authorises a later setFallbackAttribute. The
+         * Profile Owner chooses this at Profile generation. It is clear on a Profile
+         * that also carries ecallIndication. SGP.32 v1.2, sections 4.4 and 5.5.
          * @public
          * @readonly
          */
         readonly fallbackAllowed: OPTIONAL<BOOLEAN>,
         /**
          * @summary `iotSpecificMetadata`.
+         * @description
+         * SGP.32 v1.2 does not further define this field. Annex C StoreMetadataRequest
+         * ends at fallbackAllowed.
          * @public
          * @readonly
          */

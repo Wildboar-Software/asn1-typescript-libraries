@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StateChangeCause
  * @description
  * 
+ * Cause of the eUICC state change that the IPA reports with notifyStateChange
+ * on ESipa.GetEimPackage. Mandatory when notifyStateChange is present. The eIM
+ * should refresh its view of the eUICC, such as the Profile list and Profile
+ * states. SGP.32 v1.2, sections 5.14.5 and 6.3.2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +36,9 @@ type StateChangeCause = INTEGER;
 
 /**
  * @summary StateChangeCause_otherEim
+ * @description
+ * State change requested by another registered eIM. SGP.32 v1.2, section
+ * 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -39,6 +47,8 @@ const StateChangeCause_otherEim: StateChangeCause = 0; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary StateChangeCause_otherEim
+ * @description
+ * Change requested by another registered eIM. SGP.32 v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -47,6 +57,9 @@ const otherEim: StateChangeCause = StateChangeCause_otherEim; /* SHORT_NAMED_INT
 
 /**
  * @summary StateChangeCause_fallback
+ * @description
+ * State change following fallback requested by the IPA. SGP.32 v1.2, section
+ * 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -55,6 +68,9 @@ const StateChangeCause_fallback: StateChangeCause = 1; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary StateChangeCause_fallback
+ * @description
+ * Change following fallback requested by the IPA. SGP.32 v1.2, section
+ * 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -63,6 +79,9 @@ const fallback: StateChangeCause = StateChangeCause_fallback; /* SHORT_NAMED_INT
 
 /**
  * @summary StateChangeCause_emergencyProfile
+ * @description
+ * State change following an Emergency Profile swap requested by the IPA.
+ * SGP.32 v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -71,6 +90,9 @@ const StateChangeCause_emergencyProfile: StateChangeCause = 2; /* LONG_NAMED_INT
 
 /**
  * @summary StateChangeCause_emergencyProfile
+ * @description
+ * Change following an Emergency Profile swap requested by the IPA. SGP.32
+ * v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -79,6 +101,9 @@ const emergencyProfile: StateChangeCause = StateChangeCause_emergencyProfile; /*
 
 /**
  * @summary StateChangeCause_local
+ * @description
+ * State change applied locally. Reserved, and unsupported in this version of
+ * SGP.32. SGP.32 v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -87,6 +112,9 @@ const StateChangeCause_local: StateChangeCause = 3; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary StateChangeCause_local
+ * @description
+ * Local change. Reserved and unsupported in this version. SGP.32 v1.2, section
+ * 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -95,6 +123,8 @@ const local: StateChangeCause = StateChangeCause_local; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary StateChangeCause_reset
+ * @description
+ * State change following an eUICC reset. SGP.32 v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -103,6 +133,8 @@ const StateChangeCause_reset: StateChangeCause = 4; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary StateChangeCause_reset
+ * @description
+ * Change following an eUICC reset. SGP.32 v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -111,6 +143,9 @@ const reset: StateChangeCause = StateChangeCause_reset; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary StateChangeCause_immediateEnableProfile
+ * @description
+ * State change following immediate Profile enabling requested by the IPA.
+ * SGP.32 v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -119,6 +154,9 @@ const StateChangeCause_immediateEnableProfile: StateChangeCause = 5; /* LONG_NAM
 
 /**
  * @summary StateChangeCause_immediateEnableProfile
+ * @description
+ * Change following immediate Profile enabling requested by the IPA. SGP.32
+ * v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -127,6 +165,9 @@ const immediateEnableProfile: StateChangeCause = StateChangeCause_immediateEnabl
 
 /**
  * @summary StateChangeCause_deviceChange
+ * @description
+ * State change detected by an IPAe after the IoT Device changed, for a
+ * removable eSIM. SGP.32 v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -135,6 +176,9 @@ const StateChangeCause_deviceChange: StateChangeCause = 6; /* LONG_NAMED_INTEGER
 
 /**
  * @summary StateChangeCause_deviceChange
+ * @description
+ * IPAe detected a change after the IoT Device changed. SGP.32 v1.2, section
+ * 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -143,6 +187,9 @@ const deviceChange: StateChangeCause = StateChangeCause_deviceChange; /* SHORT_N
 
 /**
  * @summary StateChangeCause_undefined
+ * @description
+ * The cause of the notified state change is unknown. SGP.32 v1.2, section
+ * 6.3.2.6.
  * @constant
  * @type {number}
  */
@@ -151,6 +198,8 @@ const StateChangeCause_undefined: StateChangeCause = 127; /* LONG_NAMED_INTEGER_
 
 /**
  * @summary StateChangeCause_undefined
+ * @description
+ * Unknown cause of the notified state change. SGP.32 v1.2, section 6.3.2.6.
  * @constant
  * @type {number}
  */

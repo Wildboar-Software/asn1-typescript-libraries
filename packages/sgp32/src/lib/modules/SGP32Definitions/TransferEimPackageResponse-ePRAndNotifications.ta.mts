@@ -13,6 +13,13 @@ import { PendingNotificationList, _decode_PendingNotificationList, _encode_Pendi
  * @summary TransferEimPackageResponse_ePRAndNotifications
  * @description
  * 
+ * Signed eUICC Package Result followed by the pending Notifications generated
+ * for a PSMO package. The IPA includes this when it sends both in one
+ * TransferEimPackage response. An IPA with minimizeEsipaBytes should put each
+ * Notification in compact form, as in section 5.14.7. The eIM restores compact
+ * Notifications, forwards them, and acknowledges sequence numbers. SGP.32
+ * v1.2, sections 5.14.4, 3.3.1, and 6.3.3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,20 @@ class TransferEimPackageResponse_ePRAndNotifications {
     constructor (
         /**
          * @summary `euiccPackageResult`.
+         * @description
+         * Signed result of the eUICC Package the IPA just loaded. Sent together with
+         * notificationList. SGP.32 v1.2, sections 5.14.4 and 6.3.3.1.
          * @public
          * @readonly
          */
         readonly euiccPackageResult: EuiccPackageResult,
         /**
          * @summary `notificationList`.
+         * @description
+         * Pending Notifications retrieved with ES10b.RetrieveNotificationsList after a
+         * package that contained PSMOs. Empty lists are omitted: the IPA includes the
+         * list when retrieval is non-empty. Compact form is preferred when the IPA has
+         * minimizeEsipaBytes. SGP.32 v1.2, sections 5.14.4 and 5.14.7.
          * @public
          * @readonly
          */

@@ -11,7 +11,17 @@ import { _decode_AddEimResult_addEimResultCode, _encode_AddEimResult_addEimResul
 /**
  * @summary AddEimResult
  * @description
- * 
+ *
+ * Execution result of the addEim eCO (ESep.AddEim) after the signed eUICC
+ * Package is verified. The eUICC then stores the new Associated eIM or stops
+ * with a failure code.
+ *
+ * Select addEimResultCode for ok or for a failure named in section 3.5.1.1.
+ * associationToken carries an association token integer. SGP.32 v1.2 does not
+ * further define when that alternative is selected (section 2.11.2.1).
+ *
+ * SGP.32 v1.2, sections 2.11.2.1, 3.5.1.1, and 5.13.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

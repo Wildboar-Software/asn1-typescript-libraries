@@ -10,7 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary EUICCInfo2_euiccCategory
  * @description
- * 
+ *
+ * Optional eUICC category inside EUICCInfo2. SGP.32 v1.2 includes the values
+ * in the ASN.1 of section 5.9.2 and does not further define them.
+ *
+ * SGP.32 v1.2, section 5.9.2 and Annex C.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +32,9 @@ type EUICCInfo2_euiccCategory = INTEGER;
 
 /**
  * @summary EUICCInfo2_euiccCategory_other
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this code. Annex C.
  * @constant
  * @type {number}
  */
@@ -35,6 +43,9 @@ const EUICCInfo2_euiccCategory_other: EUICCInfo2_euiccCategory = 0; /* LONG_NAME
 
 /**
  * @summary EUICCInfo2_euiccCategory_other
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this euiccCategory value (Annex C).
  * @constant
  * @type {number}
  */
@@ -43,6 +54,9 @@ const other: EUICCInfo2_euiccCategory = EUICCInfo2_euiccCategory_other; /* SHORT
 
 /**
  * @summary EUICCInfo2_euiccCategory_basicEuicc
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this code. Annex C.
  * @constant
  * @type {number}
  */
@@ -51,6 +65,9 @@ const EUICCInfo2_euiccCategory_basicEuicc: EUICCInfo2_euiccCategory = 1; /* LONG
 
 /**
  * @summary EUICCInfo2_euiccCategory_basicEuicc
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this euiccCategory value (Annex C).
  * @constant
  * @type {number}
  */
@@ -59,6 +76,9 @@ const basicEuicc: EUICCInfo2_euiccCategory = EUICCInfo2_euiccCategory_basicEuicc
 
 /**
  * @summary EUICCInfo2_euiccCategory_mediumEuicc
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this code. Annex C.
  * @constant
  * @type {number}
  */
@@ -67,6 +87,9 @@ const EUICCInfo2_euiccCategory_mediumEuicc: EUICCInfo2_euiccCategory = 2; /* LON
 
 /**
  * @summary EUICCInfo2_euiccCategory_mediumEuicc
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this euiccCategory value (Annex C).
  * @constant
  * @type {number}
  */
@@ -75,6 +98,9 @@ const mediumEuicc: EUICCInfo2_euiccCategory = EUICCInfo2_euiccCategory_mediumEui
 
 /**
  * @summary EUICCInfo2_euiccCategory_contactlessEuicc
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this code. Annex C.
  * @constant
  * @type {number}
  */
@@ -83,6 +109,9 @@ const EUICCInfo2_euiccCategory_contactlessEuicc: EUICCInfo2_euiccCategory = 3; /
 
 /**
  * @summary EUICCInfo2_euiccCategory_contactlessEuicc
+ * @description
+ *
+ * SGP.32 v1.2 does not further define this euiccCategory value (Annex C).
  * @constant
  * @type {number}
  */

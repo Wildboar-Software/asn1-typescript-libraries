@@ -14,6 +14,12 @@ import { EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _decode_Euic
  * @summary EuiccMemoryResetResponse
  * @description
  * 
+ * ES10b.eUICCMemoryReset response (SGP.32 v1.2, section 5.9.5). Tag 'BF64'.
+ * resetResult is always present. resetEimResult is added when
+ * resetEimConfigData was set and resetResult is ok or nothingToDelete.
+ * resetImmediateEnableConfigResult is added when resetImmediateEnableConfig
+ * was set and resetResult is ok or nothingToDelete.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +37,31 @@ class EuiccMemoryResetResponse {
     constructor (
         /**
          * @summary `resetResult`.
+         * @description
+         * Whether any selected Profile was deleted, or why Profile deletion stopped
+         * (SGP.32 v1.2, section 5.9.5). ok means at least one Profile was deleted.
+         * nothingToDelete means none was. Both of those also confirm a successful
+         * default SM-DP+ address reset when that bit was set.
          * @public
          * @readonly
          */
         readonly resetResult: EuiccMemoryResetResponse_resetResult,
         /**
          * @summary `resetEimResult`.
+         * @description
+         * Result of removing every Associated eIM's configuration. Included only when
+         * resetEimConfigData was set and resetResult is ok or nothingToDelete (SGP.32
+         * v1.2, section 5.9.5).
          * @public
          * @readonly
          */
         readonly resetEimResult: OPTIONAL<EuiccMemoryResetResponse_resetEimResult>,
         /**
          * @summary `resetImmediateEnableConfigResult`.
+         * @description
+         * Result of clearing immediate Profile enabling. Included only when
+         * resetImmediateEnableConfig was set and resetResult is ok or nothingToDelete
+         * (SGP.32 v1.2, section 5.9.5).
          * @public
          * @readonly
          */

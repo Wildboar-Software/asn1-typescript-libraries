@@ -19,6 +19,28 @@ import { SetDefaultDpAddressRequest, _decode_SetDefaultDpAddressRequest, _encode
  * @summary Psmo
  * @description
  * 
+ * Profile state management operation inside an eUICC Package (`psmoList`). The
+ * eUICC runs the operations in order until the end or the first error. At most
+ * one enable and at most one disable appear in one eUICC Package. A
+ * listProfileInfo placed after an enable, disable, or delete yields
+ * profileChangeOngoing.
+ * 
+ * enable enables the Profile identified by ICCID. disable disables an enabled
+ * Profile. delete deletes an installed Profile. listProfileInfo is coded and
+ * processed as ES10b.GetProfilesInfo (section 5.9.14). With no tag list the
+ * eUICC returns ICCID, ISD-P AID, profile state, service provider name,
+ * profile name, profile class, ecallIndication, fallbackAttribute, and
+ * fallbackAllowed. getRAT returns the Rules Authorisation Table.
+ * configureImmediateEnable activates or deactivates immediate Profile enabling
+ * and may store default SM-DP+ data. setFallbackAttribute sets the Fallback
+ * Attribute on the target Profile. unsetFallbackAttribute clears the Fallback
+ * Attribute of the current Fallback Profile. setDefaultDpAddress is coded and
+ * processed as section 5.9.25.
+ * 
+ * While the Emergency Profile is enabled, the eUICC rejects the
+ * EuiccPackageRequest with ecallActive. SGP.32 v1.2, sections 2.11.1.1,
+ * 2.11.2.1, and 5.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

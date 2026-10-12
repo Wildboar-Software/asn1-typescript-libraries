@@ -13,6 +13,10 @@ import { EimPackageResultErrorCode, _decode_EimPackageResultErrorCode, _encode_E
  * @summary EimPackageResultResponseError
  * @description
  * 
+ * IPA failure alternative of an eIM Package Result (SGP.32 v1.2, sections
+ * 2.11.2 and 6.3.2.7). On receipt the eIM updates the eIM Packages pending for
+ * the eUICC (section 5.14.6).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +33,20 @@ class EimPackageResultResponseError {
     constructor (
         /**
          * @summary `eimTransactionId`.
+         * @description
+         * When the eIM Package contained a transaction identifier, the IPA returns
+         * that same value here (SGP.32 v1.2, section 6.3.2.7). The identifier itself
+         * is as defined in SGP.22, which SGP.32 cites from section 2.11.1.1.
          * @public
          * @readonly
          */
         readonly eimTransactionId: OPTIONAL<TransactionId>,
         /**
          * @summary `eimPackageResultErrorCode`.
+         * @description
+         * Why the IPA rejected or failed the eIM Package. invalidPackageFormat and
+         * unknownPackage are defined in sections 3.2 and 5.14.4. SGP.32 v1.2 does not
+         * further define undefinedError beyond listing it in section 6.3.2.7.
          * @public
          * @readonly
          */

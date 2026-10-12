@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IpaEuiccDataErrorCode
  * @description
  * 
+ * Error code inside `IpaEuiccDataResponseError`. `ecallActive` is required
+ * when the Emergency Profile is enabled. SGP.32 v1.2 section 2.11.2.2 does not
+ * further define `incorrectTagList`, `euiccCiPKIdNotFound`, or
+ * `undefinedError`. Annex C lists those names only. SGP.32 v1.2, section
+ * 2.11.2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +33,11 @@ type IpaEuiccDataErrorCode = INTEGER;
 
 /**
  * @summary IpaEuiccDataErrorCode_incorrectTagList
+ * @description
+ * SGP.32 v1.2 section 2.11.2.2 names `incorrectTagList(1)` and does not
+ * further define the condition that produces it. A tag in `tagList` outside
+ * the list in section 2.11.1.2 is ignored without error. Annex C lists the
+ * name only.
  * @constant
  * @type {number}
  */
@@ -35,6 +46,9 @@ const IpaEuiccDataErrorCode_incorrectTagList: IpaEuiccDataErrorCode = 1; /* LONG
 
 /**
  * @summary IpaEuiccDataErrorCode_incorrectTagList
+ * @description
+ * SGP.32 v1.2 section 2.11.2.2 names this code and does not further define the
+ * condition that produces it. Annex C.
  * @constant
  * @type {number}
  */
@@ -43,6 +57,9 @@ const incorrectTagList: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_incorrectT
 
 /**
  * @summary IpaEuiccDataErrorCode_euiccCiPKIdNotFound
+ * @description
+ * SGP.32 v1.2 section 2.11.2.2 names `euiccCiPKIdNotFound(5)` and does not
+ * further define the condition that produces it. Annex C lists the name only.
  * @constant
  * @type {number}
  */
@@ -51,6 +68,9 @@ const IpaEuiccDataErrorCode_euiccCiPKIdNotFound: IpaEuiccDataErrorCode = 5; /* L
 
 /**
  * @summary IpaEuiccDataErrorCode_euiccCiPKIdNotFound
+ * @description
+ * SGP.32 v1.2 section 2.11.2.2 names this code and does not further define the
+ * condition that produces it. Annex C.
  * @constant
  * @type {number}
  */
@@ -59,6 +79,10 @@ const euiccCiPKIdNotFound: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_euiccCi
 
 /**
  * @summary IpaEuiccDataErrorCode_ecallActive
+ * @description
+ * Returned when the Emergency Profile is enabled. The IPA stops the procedure
+ * and places this code in `IpaEuiccDataResponseError`. SGP.32 v1.2, section
+ * 2.11.2.2.
  * @constant
  * @type {number}
  */
@@ -67,6 +91,9 @@ const IpaEuiccDataErrorCode_ecallActive: IpaEuiccDataErrorCode = 104; /* LONG_NA
 
 /**
  * @summary IpaEuiccDataErrorCode_ecallActive
+ * @description
+ * The Emergency Profile is enabled, so the IPA stopped and returned this
+ * error. SGP.32 v1.2, section 2.11.2.2.
  * @constant
  * @type {number}
  */
@@ -75,6 +102,9 @@ const ecallActive: IpaEuiccDataErrorCode = IpaEuiccDataErrorCode_ecallActive; /*
 
 /**
  * @summary IpaEuiccDataErrorCode_undefinedError
+ * @description
+ * SGP.32 v1.2 section 2.11.2.2 names `undefinedError(127)` and does not
+ * further define the condition that produces it. Annex C lists the name only.
  * @constant
  * @type {number}
  */
@@ -83,6 +113,9 @@ const IpaEuiccDataErrorCode_undefinedError: IpaEuiccDataErrorCode = 127; /* LONG
 
 /**
  * @summary IpaEuiccDataErrorCode_undefinedError
+ * @description
+ * SGP.32 v1.2 section 2.11.2.2 names this code and does not further define the
+ * condition that produces it. Annex C.
  * @constant
  * @type {number}
  */

@@ -11,6 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EnableProfileResult
  * @description
  * 
+ * Result of one enable PSMO (SGP.32 v1.2, sections 2.11.2.1 and 3.4.1). At
+ * most one enable appears in an eUICC Package (section 2.11.1.1). A second
+ * enable in the same package is a failure; section 3.4.1 does not name which
+ * code that failure uses. Success marks the target "to be enabled" and the
+ * currently enabled Profile, if any, "to be disabled", and records Rollback
+ * authorisation when rollbackFlag was present.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +39,10 @@ type EnableProfileResult = INTEGER;
  * @summary EnableProfileResult_ok
  * @constant
  * @type {number}
+ * @description
+ * The target Profile was marked "to be enabled" and the currently enabled
+ * Profile, if any, was marked "to be disabled" (SGP.32 v1.2, section 3.4.1).
+ * Rollback authorisation is recorded when it was granted.
  */
 export
 const EnableProfileResult_ok: EnableProfileResult = 0; /* LONG_NAMED_INTEGER_VALUE */
@@ -40,6 +51,9 @@ const EnableProfileResult_ok: EnableProfileResult = 0; /* LONG_NAMED_INTEGER_VAL
  * @summary EnableProfileResult_ok
  * @constant
  * @type {number}
+ * @description
+ * The enable PSMO marked the target Profile "to be enabled" (SGP.32 v1.2,
+ * section 3.4.1).
  */
 export
 const ok: EnableProfileResult = EnableProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
@@ -48,6 +62,9 @@ const ok: EnableProfileResult = EnableProfileResult_ok; /* SHORT_NAMED_INTEGER_V
  * @summary EnableProfileResult_iccidOrAidNotFound
  * @constant
  * @type {number}
+ * @description
+ * No Profile on the eUICC has the ICCID given in the enable PSMO (SGP.32 v1.2,
+ * section 3.4.1).
  */
 export
 const EnableProfileResult_iccidOrAidNotFound: EnableProfileResult = 1; /* LONG_NAMED_INTEGER_VALUE */
@@ -56,6 +73,9 @@ const EnableProfileResult_iccidOrAidNotFound: EnableProfileResult = 1; /* LONG_N
  * @summary EnableProfileResult_iccidOrAidNotFound
  * @constant
  * @type {number}
+ * @description
+ * The enable PSMO names an ICCID that is not on the eUICC (SGP.32 v1.2,
+ * section 3.4.1).
  */
 export
 const iccidOrAidNotFound: EnableProfileResult = EnableProfileResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
@@ -64,6 +84,9 @@ const iccidOrAidNotFound: EnableProfileResult = EnableProfileResult_iccidOrAidNo
  * @summary EnableProfileResult_profileNotInDisabledState
  * @constant
  * @type {number}
+ * @description
+ * The target Profile is in a state other than Disabled (SGP.32 v1.2, section
+ * 3.4.1).
  */
 export
 const EnableProfileResult_profileNotInDisabledState: EnableProfileResult = 2; /* LONG_NAMED_INTEGER_VALUE */
@@ -72,6 +95,9 @@ const EnableProfileResult_profileNotInDisabledState: EnableProfileResult = 2; /*
  * @summary EnableProfileResult_profileNotInDisabledState
  * @constant
  * @type {number}
+ * @description
+ * The target Profile is in a state other than Disabled (SGP.32 v1.2, section
+ * 3.4.1).
  */
 export
 const profileNotInDisabledState: EnableProfileResult = EnableProfileResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
@@ -80,6 +106,10 @@ const profileNotInDisabledState: EnableProfileResult = EnableProfileResult_profi
  * @summary EnableProfileResult_disallowedByPolicy
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists disallowedByPolicy(3) on EnableProfileResult in section
+ * 2.11.2.1 and does not further define the condition that produces it. Annex C
+ * repeats the enumeration.
  */
 export
 const EnableProfileResult_disallowedByPolicy: EnableProfileResult = 3; /* LONG_NAMED_INTEGER_VALUE */
@@ -88,6 +118,9 @@ const EnableProfileResult_disallowedByPolicy: EnableProfileResult = 3; /* LONG_N
  * @summary EnableProfileResult_disallowedByPolicy
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists this code in section 2.11.2.1 and does not further define
+ * the condition that produces it.
  */
 export
 const disallowedByPolicy: EnableProfileResult = EnableProfileResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
@@ -96,6 +129,10 @@ const disallowedByPolicy: EnableProfileResult = EnableProfileResult_disallowedBy
  * @summary EnableProfileResult_catBusy
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists catBusy(5) on EnableProfileResult in section 2.11.2.1 and
+ * does not further define the condition that produces it. Annex C repeats the
+ * enumeration.
  */
 export
 const EnableProfileResult_catBusy: EnableProfileResult = 5; /* LONG_NAMED_INTEGER_VALUE */
@@ -104,6 +141,9 @@ const EnableProfileResult_catBusy: EnableProfileResult = 5; /* LONG_NAMED_INTEGE
  * @summary EnableProfileResult_catBusy
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists this code in section 2.11.2.1 and does not further define
+ * the condition that produces it.
  */
 export
 const catBusy: EnableProfileResult = EnableProfileResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
@@ -112,6 +152,10 @@ const catBusy: EnableProfileResult = EnableProfileResult_catBusy; /* SHORT_NAMED
  * @summary EnableProfileResult_rollbackNotAvailable
  * @constant
  * @type {number}
+ * @description
+ * rollbackFlag granted Rollback use, and the eUICC has neither a currently
+ * enabled Profile nor a Profile marked "to be disabled" (SGP.32 v1.2, section
+ * 3.4.1).
  */
 export
 const EnableProfileResult_rollbackNotAvailable: EnableProfileResult = 20; /* LONG_NAMED_INTEGER_VALUE */
@@ -120,6 +164,9 @@ const EnableProfileResult_rollbackNotAvailable: EnableProfileResult = 20; /* LON
  * @summary EnableProfileResult_rollbackNotAvailable
  * @constant
  * @type {number}
+ * @description
+ * Rollback was granted and there is no enabled Profile to roll back to (SGP.32
+ * v1.2, section 3.4.1).
  */
 export
 const rollbackNotAvailable: EnableProfileResult = EnableProfileResult_rollbackNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
@@ -128,6 +175,9 @@ const rollbackNotAvailable: EnableProfileResult = EnableProfileResult_rollbackNo
  * @summary EnableProfileResult_undefinedError
  * @constant
  * @type {number}
+ * @description
+ * The target Profile is the Emergency Profile, with ecallIndication set to
+ * TRUE (SGP.32 v1.2, section 3.4.1).
  */
 export
 const EnableProfileResult_undefinedError: EnableProfileResult = 127; /* LONG_NAMED_INTEGER_VALUE */
@@ -136,6 +186,9 @@ const EnableProfileResult_undefinedError: EnableProfileResult = 127; /* LONG_NAM
  * @summary EnableProfileResult_undefinedError
  * @constant
  * @type {number}
+ * @description
+ * The enable target is the Emergency Profile (ecallIndication TRUE) (SGP.32
+ * v1.2, section 3.4.1).
  */
 export
 const undefinedError: EnableProfileResult = EnableProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */

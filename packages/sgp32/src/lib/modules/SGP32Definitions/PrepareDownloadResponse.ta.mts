@@ -13,6 +13,17 @@ import { CompactPrepareDownloadResponseOk, _decode_CompactPrepareDownloadRespons
  * @summary PrepareDownloadResponse
  * @description
  * 
+ * ES10b.PrepareDownload response, extended for ESipa. The function is
+ * otherwise identical to ES10b.PrepareDownload in SGP.22 section 5.7.5, with
+ * the IPA in the LPA role. Select `downloadResponseOk` or
+ * `downloadResponseError` for the SGP.22 alternatives. Select
+ * `compactDownloadResponseOk` when an IPA with `minimizeEsipaBytes` re-encodes
+ * a `downloadResponseOk` from the eUICC. Before calling
+ * ES9+'.GetBoundProfilePackage, the eIM restores `downloadResponseOk` from
+ * `smdpSigned2` and `hashCc` it already holds for this eUICC. The encoded
+ * value is the `prepareDownloadResponse` input of
+ * ESipa.GetBoundProfilePackage. SGP.32 v1.2, sections 5.9.7 and 5.14.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

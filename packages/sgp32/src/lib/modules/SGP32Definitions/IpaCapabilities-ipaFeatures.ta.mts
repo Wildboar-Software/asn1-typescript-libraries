@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IpaCapabilities_ipaFeatures
  * @description
  * 
+ * Profile-download and compact-ESipa features. A bit set to 1 means the IPA
+ * supports that feature. Indirect-download bits are additional capabilities of
+ * an IPA that supports indirect Profile download. SGP.32 v1.2, section 4.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +33,10 @@ type IpaCapabilities_ipaFeatures = BIT_STRING;
 
 /**
  * @summary IpaCapabilities_ipaFeatures_directRspServerCommunication
+ * @description
+ * Set to 1 when the IPA supports direct Profile download per section 3.2.3.1,
+ * including direct delivery of Notifications to the SM-DP+. SGP.32 v1.2,
+ * section 4.1.
  * @constant
  */
 export
@@ -36,6 +44,9 @@ const IpaCapabilities_ipaFeatures_directRspServerCommunication: number = 0; /* L
 
 /**
  * @summary directRspServerCommunication
+ * @description
+ * Set to 1 when the IPA supports direct Profile download, including
+ * Notifications sent directly to the SM-DP+. SGP.32 v1.2, section 4.1.
  * @constant
  */
 export
@@ -43,6 +54,10 @@ const directRspServerCommunication: number = IpaCapabilities_ipaFeatures_directR
 
 /**
  * @summary IpaCapabilities_ipaFeatures_indirectRspServerCommunication
+ * @description
+ * Set to 1 when the IPA supports indirect Profile download per section
+ * 3.2.3.2, including delivery of Notifications via the eIM to the SM-DP+.
+ * SGP.32 v1.2, section 4.1.
  * @constant
  */
 export
@@ -50,6 +65,9 @@ const IpaCapabilities_ipaFeatures_indirectRspServerCommunication: number = 1; /*
 
 /**
  * @summary indirectRspServerCommunication
+ * @description
+ * Set to 1 when the IPA supports indirect Profile download, including
+ * Notifications delivered via the eIM. SGP.32 v1.2, section 4.1.
  * @constant
  */
 export
@@ -57,6 +75,12 @@ const indirectRspServerCommunication: number = IpaCapabilities_ipaFeatures_indir
 
 /**
  * @summary IpaCapabilities_ipaFeatures_eimDownloadDataHandling
+ * @description
+ * Set to 1 when, during indirect Profile download, the IPA leaves Activation
+ * Codes, SM-DS data, and the default SM-DP+ address at the eIM. The eIM
+ * extracts the SM-DP+ address, matchingId, and SM-DP+ OID for
+ * ESipa.InitiateAuthentication. With an Activation Code, that IPA SHALL NOT
+ * send `smdpAddress`. SGP.32 v1.2, sections 4.1 and 5.14.1.
  * @constant
  */
 export
@@ -64,6 +88,10 @@ const IpaCapabilities_ipaFeatures_eimDownloadDataHandling: number = 2; /* LONG_N
 
 /**
  * @summary eimDownloadDataHandling
+ * @description
+ * Set to 1 when the eIM, during indirect download, keeps the Activation Code,
+ * SM-DS data, and default SM-DP+ address and supplies the extracted values.
+ * SGP.32 v1.2, section 4.1.
  * @constant
  */
 export
@@ -71,6 +99,10 @@ const eimDownloadDataHandling: number = IpaCapabilities_ipaFeatures_eimDownloadD
 
 /**
  * @summary IpaCapabilities_ipaFeatures_eimCtxParams1Generation
+ * @description
+ * Set to 1 when the IPA does not generate CtxParams1 and expects the eIM to
+ * provide it in ESipa.InitiateAuthentication. Such an IPA SHALL support
+ * providing `deviceInfo` to the eIM. SGP.32 v1.2, sections 4.1 and 2.11.1.2.
  * @constant
  */
 export
@@ -78,6 +110,9 @@ const IpaCapabilities_ipaFeatures_eimCtxParams1Generation: number = 3; /* LONG_N
 
 /**
  * @summary eimCtxParams1Generation
+ * @description
+ * Set to 1 when the eIM must generate CtxParams1 and supply it in
+ * ESipa.InitiateAuthentication. SGP.32 v1.2, section 4.1.
  * @constant
  */
 export
@@ -85,6 +120,11 @@ const eimCtxParams1Generation: number = IpaCapabilities_ipaFeatures_eimCtxParams
 
 /**
  * @summary IpaCapabilities_ipaFeatures_eimProfileMetadataVerification
+ * @description
+ * Set to 1 when the IPA does not verify Profile Metadata. The eIM verifies it
+ * in ESipa.AuthenticateClient, and in ESipa.GetBoundProfilePackage checks that
+ * the metadata in the Bound Profile Package matches the metadata from that
+ * earlier response. SGP.32 v1.2, section 4.1.
  * @constant
  */
 export
@@ -92,6 +132,9 @@ const IpaCapabilities_ipaFeatures_eimProfileMetadataVerification: number = 4; /*
 
 /**
  * @summary eimProfileMetadataVerification
+ * @description
+ * Set to 1 when the eIM verifies Profile Metadata and checks that the Bound
+ * Profile Package still carries that metadata. SGP.32 v1.2, section 4.1.
  * @constant
  */
 export
@@ -99,6 +142,13 @@ const eimProfileMetadataVerification: number = IpaCapabilities_ipaFeatures_eimPr
 
 /**
  * @summary IpaCapabilities_ipaFeatures_minimizeEsipaBytes
+ * @description
+ * Set to 1 when the IPA uses compact data objects and omits ESipa bytes the
+ * other party already has. The eIM rebuilds the full objects from
+ * pre-configured data, data from the same eUICC batch, data read from the IoT
+ * Device, and SM-DP+ session data. Such an IPA SHALL support returning
+ * `euiccInfo1`, `euiccInfo2`, `eumCertificate`, and `euiccCertificate`. SGP.32
+ * v1.2, sections 4.1 and 2.11.1.2.
  * @constant
  */
 export
@@ -106,6 +156,9 @@ const IpaCapabilities_ipaFeatures_minimizeEsipaBytes: number = 5; /* LONG_NAMED_
 
 /**
  * @summary minimizeEsipaBytes
+ * @description
+ * Set to 1 when the IPA uses compact ESipa objects and omits bytes the eIM can
+ * rebuild. SGP.32 v1.2, section 4.1.
  * @constant
  */
 export

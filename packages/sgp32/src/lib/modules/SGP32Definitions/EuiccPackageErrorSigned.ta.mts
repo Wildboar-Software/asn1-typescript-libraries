@@ -13,6 +13,12 @@ import { EuiccPackageErrorDataSigned, _decode_EuiccPackageErrorDataSigned, _enco
  * @summary EuiccPackageErrorSigned
  * @description
  * 
+ * Signed eUICC Package error for a verification failure after the eIM public
+ * key was found (SGP.32 v1.2, sections 2.11.2.1 and 5.9.1). Used for
+ * invalidEid, replayError, and the other EuiccPackageErrorCode values. The
+ * eUICC does not store this result. Unknown eimId and an invalid signature use
+ * euiccPackageErrorUnsigned.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,23 @@ class EuiccPackageErrorSigned {
     constructor (
         /**
          * @summary `euiccPackageErrorDataSigned`.
+         * @description
+         * Bytes covered by euiccSignEPE, together with the association token (SGP.32
+         * v1.2, section 2.11.2.1). Echoes eimId, counterValue, and any
+         * eimTransactionId from the request.
          * @public
          * @readonly
          */
         readonly euiccPackageErrorDataSigned: EuiccPackageErrorDataSigned,
         /**
          * @summary `euiccSignEPE`.
+         * @description
+         * eUICC signature, tag '5F37', created with SK.EUICC.ECDSA over
+         * euiccPackageErrorDataSigned concatenated with the association token (SGP.32
+         * v1.2, section 2.11.2.1). When no token is configured, the value zero is
+         * used. If several signing keys exist, the key that chains to euiccCiPKId in
+         * that eIM's configuration is used. The eIM verifies the signature with
+         * PK.EUICC.ECDSA from CERT.EUICC.ECDSA and verifies that certificate.
          * @public
          * @readonly
          */

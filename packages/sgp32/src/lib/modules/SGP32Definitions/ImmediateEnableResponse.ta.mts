@@ -12,6 +12,10 @@ import { _decode_ImmediateEnableResponse_immediateEnableResult, _encode_Immediat
  * @summary ImmediateEnableResponse
  * @description
  * 
+ * ES10b.ImmediateEnable response. `immediateEnableResult` is `ok` after the
+ * enable or the REFRESH handover described for `refreshFlag`, or one of the
+ * rejection codes in section 5.9.15. SGP.32 v1.2, section 5.9.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,9 @@ class ImmediateEnableResponse {
     constructor (
         /**
          * @summary `immediateEnableResult`.
+         * @description
+         * Outcome of ES10b.ImmediateEnable. See the named codes. SGP.32 v1.2, section
+         * 5.9.15.
          * @public
          * @readonly
          */

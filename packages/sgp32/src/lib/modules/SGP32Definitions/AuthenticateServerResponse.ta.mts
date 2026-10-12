@@ -12,7 +12,25 @@ import { CompactAuthenticateResponseOk, _decode_CompactAuthenticateResponseOk, _
 /**
  * @summary AuthenticateServerResponse
  * @description
- * 
+ *
+ * ES10b.AuthenticateServer response, extended with a compact success
+ * alternative for ESipa. The function matches SGP.22 section 5.7.13, with the
+ * IPA in the LPA role, and EUICCInfo2 follows section 5.9.2.
+ *
+ * After the received RSP Server Certificate is attached to the RSP session, if
+ * immediate Profile enabling is activated and MatchingID is missing from
+ * CtxParams1, the eUICC checks that the OID in that certificate and the FQDN
+ * in serverSigned1 match the stored default SM-DP+ OID and FQDN. A match
+ * grants immediate enabling of the Profile. The eUICC then generates
+ * euiccSigned1 whether or not that match succeeds.
+ *
+ * Select authenticateResponseOk for the full success form,
+ * authenticateResponseError for an error as defined in SGP.22, and
+ * compactAuthenticateResponseOk when an IPA with minimizeEsipaBytes sends the
+ * success toward the eIM.
+ *
+ * SGP.32 v1.2, sections 5.9.6 and 5.14.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

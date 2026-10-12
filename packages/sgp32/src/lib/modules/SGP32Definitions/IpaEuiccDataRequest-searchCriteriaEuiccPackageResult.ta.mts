@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IpaEuiccDataRequest_searchCriteriaEuiccPackageResult
  * @description
  * 
+ * eUICC Package Result filter, applied only when `tagList` contains `'A2'`.
+ * `seqNumber` selects the stored eUICC Package Result with that sequence
+ * number, when one is stored. SGP.32 v1.2, section 2.11.1.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,6 +21,27 @@ import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_
  * @summary EimConfigurationData
  * @description
  * 
+ * eIM Configuration Data the eUICC stores for one Associated eIM, and the
+ * object used when that data is added, updated, or read back (SGP.32 v1.2,
+ * section 2.11.1.1).
+ *
+ * On addEim, eimId, counterValue, and eimPublicKeyData are mandatory. On
+ * updateEim, eimId names the target and at least one of counterValue,
+ * eimPublicKeyData, eimIdType, eimFqdn, eimSupportedProtocol,
+ * trustedPublicKeyDataTls, euiccCiPKId, or indirectProfileDownload is present.
+ * associationToken is omitted on updateEim. The stored eimId stays unchanged.
+ * A lower counterValue is accepted only when eimPublicKeyData is updated in
+ * the same command.
+ *
+ * Section 3.5.1.3 returns eimNotFound when the eimId is unknown or absent.
+ * It returns commandError when associationToken is present, when
+ * counterValue, eimPublicKeyData, eimIdType, eimFqdn, eimSupportedProtocol,
+ * trustedPublicKeyDataTls, and euiccCiPKId are all absent, or when
+ * counterValue moves downward while eimPublicKeyData is left unchanged.
+ * ciPKUnknown is returned when euiccCiPKId is outside
+ * euiccCiPKIdListForSigning in eUICCInfo2. deleteEim is a separate Eco
+ * alternative that carries only the target eimId.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,66 +74,131 @@ class EimConfigurationData {
     constructor (
         /**
          * @summary `eimId`.
+         * @description
+         * Unique identifier of this Associated eIM inside the eUICC. Length is 1 to
+         * 128 bytes (SGP.32 v1.2, sections 2.11.1.1 and 4.3). Mandatory on addEim,
+         * updateEim, and deleteEim. On updateEim it selects the stored row; the stored
+         * identifier itself stays unchanged.
          * @public
          * @readonly
          */
         readonly eimId: UTF8String,
         /**
          * @summary `eimFqdn`.
+         * @description
+         * FQDN of the eIM, or of an intermediate server such as an MQTT broker placed
+         * between the eIM and the IoT Device (SGP.32 v1.2, section 2.11.1.1). Required
+         * when eimIdType is eimIdTypeOid or eimIdTypeProprietary. When eimIdType is
+         * eimIdTypeFqdn this component is omitted, because eimId already holds that
+         * FQDN.
          * @public
          * @readonly
          */
         readonly eimFqdn: OPTIONAL<UTF8String>,
         /**
          * @summary `eimIdType`.
+         * @description
+         * Encoding of eimId: an OID, an FQDN, or a proprietary string (SGP.32 v1.2,
+         * sections 2.11.1.1 and 4.3). Optional on add. When it is absent the eUICC
+         * stores eimIdTypeProprietary before saving the configuration.
          * @public
          * @readonly
          */
         readonly eimIdType: OPTIONAL<EimIdType>,
         /**
          * @summary `counterValue`.
+         * @description
+         * Replay counter for eUICC Packages from this eIM. On addEim it is the initial
+         * value and is mandatory. The eUICC stores the highest counter it has accepted
+         * from this eIM and accepts a later package only when the new counter is
+         * greater. The implementation handles values through 8388607 (0x7FFFFF)
+         * inclusive; a larger value produces counterValueOutOfRange (SGP.32 v1.2,
+         * sections 2.11.1.1 and 5.9.1). On updateEim a lower value is accepted only
+         * together with a new eimPublicKeyData.
          * @public
          * @readonly
          */
         readonly counterValue: OPTIONAL<INTEGER>,
         /**
          * @summary `associationToken`.
+         * @description
+         * Optional anti-replay value taken from one eUICC-wide counter. That counter
+         * starts at zero, advances by one each time a token is requested, and
+         * therefore issues 1 as its first token. No operation, including eUICC Memory
+         * Reset, resets it (SGP.32 v1.2, section 2.11.1.1).
+         *
+         * On addEim, the value -1 asks the eUICC to allocate the next token; any other
+         * request omits this component. A value other than -1 on that request produces
+         * invalidAssociationToken (section 5.9.4). On updateEim this component is
+         * omitted. eIM and eUICC signatures are computed over the signed bytes
+         * concatenated with this token; when no token is configured, the value zero is
+         * used.
          * @public
          * @readonly
          */
         readonly associationToken: OPTIONAL<INTEGER>,
         /**
          * @summary `eimPublicKeyData`.
+         * @description
+         * eIM public key used to verify eUICC Package signatures, as a raw key or as a
+         * certificate, X.509 encoded (SGP.32 v1.2, section 2.11.1.1). Mandatory on
+         * addEim. On updateEim it may be one of the changed components, and it is
+         * required when counterValue is lowered.
          * @public
          * @readonly
          */
         readonly eimPublicKeyData: OPTIONAL<EimConfigurationData_eimPublicKeyData>,
         /**
          * @summary `trustedPublicKeyDataTls`.
+         * @description
+         * Optional TLS or DTLS trust material for this eIM (SGP.32 v1.2, section
+         * 2.11.1.1). It should be present on addEim when eUICCInfo2.ipaMode is ipae
+         * and eimSupportedProtocol has eimRetrieveHttps or eimRetrieveCoaps set. An
+         * IPAd may ignore it. Some IPAd implementations read it back with
+         * GetEimConfigurationData, which requires that addEim included it.
          * @public
          * @readonly
          */
         readonly trustedPublicKeyDataTls: OPTIONAL<EimConfigurationData_trustedPublicKeyDataTls>,
         /**
          * @summary `eimSupportedProtocol`.
+         * @description
+         * ESipa transports and transfer methods this eIM supports (SGP.32 v1.2,
+         * sections 2.11.1.1 and 4.2). Optional. When it is absent the eUICC stores the
+         * value in which only the eimProprietary bit is set.
          * @public
          * @readonly
          */
         readonly eimSupportedProtocol: OPTIONAL<EimSupportedProtocol>,
         /**
          * @summary `euiccCiPKId`.
+         * @description
+         * CI public key identifier that selects the eUICC certificate used to sign
+         * results returned to this eIM (SGP.32 v1.2, section 2.11.1.1). Optional. When
+         * it is absent the eUICC stores the first entry of euiccCiPKIdListForSigning
+         * in eUICCInfo2. A value outside that list produces ciPKUnknown (section
+         * 3.5.1.1). When several SK.EUICC.ECDSA keys exist, the result is signed with
+         * the key that chains to this CI public key (section 2.11.2.1).
          * @public
          * @readonly
          */
         readonly euiccCiPKId: OPTIONAL<SubjectKeyIdentifier>,
         /**
          * @summary `indirectProfileDownload`.
+         * @description
+         * Present when this eIM supports indirect Profile download using the protocol
+         * named by eimSupportedProtocol (SGP.32 v1.2, section 2.11.1.1). On updateEim,
+         * its presence satisfies the rule that at least one updatable component is
+         * supplied.
          * @public
          * @readonly
          */
         readonly indirectProfileDownload: OPTIONAL<NULL>,
         /**
          * @summary `eSipaProprietaryProtocolInformation`.
+         * @description
+         * SGP.32 v1.2 does not further define this component. Section 2.11.1.1 and
+         * Annex C end EimConfigurationData at indirectProfileDownload.
          * @public
          * @readonly
          */

@@ -12,6 +12,12 @@ import { IpaEuiccDataResponseError, _decode_IpaEuiccDataResponseError, _encode_I
  * @summary IpaEuiccDataResponse
  * @description
  * 
+ * Result of an `IpaEuiccDataRequest`. Select `ipaEuiccData` for the requested
+ * items the IPA supports. Select `ipaEuiccDataResponseError` when the IPA
+ * stops with an error, including when the Emergency Profile is enabled
+ * (`ecallActive`). If the request carried `eimTransactionId`, the same value
+ * is returned on either alternative. SGP.32 v1.2, section 2.11.2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Eco_listEim
  * @description
  * 
+ * listEim eCO: an empty command that asks the eUICC for the eimId of every
+ * Associated eIM (SGP.32 v1.2, sections 2.11.1.1, 3.5.1.4, and 5.13.10).
+ *
+ * The eUICC runs it only after the signed eUICC Package has been verified and
+ * at least one Associated eIM is already stored. The identifiers come back in
+ * listEimResult inside the signed eUICC Package Result.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

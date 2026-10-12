@@ -13,6 +13,28 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExecuteFallbackMechanismRequest
  * @description
  * 
+ * ES10b.ExecuteFallbackMechanism command data. Optional for the eUICC. The IPA
+ * uses it to enable the Profile that has the Fallback Attribute and to disable
+ * the currently enabled Profile (SGP.32 v1.2, section 5.9.20). Tag 'BF5D'.
+ *
+ * The command is atomic: an error leaves both Profiles unchanged. It is
+ * rejected with ecallActive while the Emergency Profile is enabled (sections
+ * 5.9.20 and 2.11.2.1), with commandError when no Profile is enabled, with
+ * fallbackNotAvailable when no Profile has the Fallback Attribute, and with
+ * profileNotInDisabledState when the Fallback Profile is already enabled.
+ *
+ * refreshFlag clear swaps the Profiles inside this command, after closing
+ * channels of the current Profile and resetting PIN status, and clears any
+ * Rollback authorisation. refreshFlag set marks the current Profile "to be
+ * disabled" and the Fallback Profile "to be enabled", returns ok, and sends
+ * REFRESH in "eUICC Profile State Change" mode when the IoT Device supports
+ * it, otherwise "UICC Reset". The swap completes on a successful TERMINAL
+ * RESPONSE or on eUICC reset. A temporary or permanent problem in the TERMINAL
+ * RESPONSE leaves both Profiles unchanged. An open proactive session may yield
+ * catBusy; otherwise the eUICC ends that session. Each Profile that is
+ * actually disabled or enabled generates the OtherSignedNotification entries
+ * configured in its metadata.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +50,10 @@ class ExecuteFallbackMechanismRequest {
     constructor (
         /**
          * @summary `refreshFlag`.
+         * @description
+         * When set, the Fallback swap is finished by a REFRESH proactive command. When
+         * clear, the eUICC disables the enabled Profile and enables the Fallback
+         * Profile inside this command (SGP.32 v1.2, section 5.9.20).
          * @public
          * @readonly
          */

@@ -11,6 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EuiccMemoryResetResponse_resetEimResult
  * @description
  * 
+ * Outcome of resetEimConfigData. Present only when that bit was set and
+ * resetResult is ok or nothingToDelete (SGP.32 v1.2, section 5.9.5).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +32,10 @@ type EuiccMemoryResetResponse_resetEimResult = INTEGER;
  * @summary EuiccMemoryResetResponse_resetEimResult_ok
  * @constant
  * @type {number}
+ * @description
+ * All eIM Configuration Data of all Associated eIMs was removed (SGP.32 v1.2,
+ * section 5.9.5). The association-token counter is left as it was (section
+ * 2.11.1.1).
  */
 export
 const EuiccMemoryResetResponse_resetEimResult_ok: EuiccMemoryResetResponse_resetEimResult = 0; /* LONG_NAMED_INTEGER_VALUE */
@@ -37,6 +44,9 @@ const EuiccMemoryResetResponse_resetEimResult_ok: EuiccMemoryResetResponse_reset
  * @summary EuiccMemoryResetResponse_resetEimResult_ok
  * @constant
  * @type {number}
+ * @description
+ * All Associated eIM Configuration Data was removed (SGP.32 v1.2, section
+ * 5.9.5).
  */
 export
 const ok: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
@@ -45,6 +55,9 @@ const ok: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_res
  * @summary EuiccMemoryResetResponse_resetEimResult_nothingToDelete
  * @constant
  * @type {number}
+ * @description
+ * No eIM Configuration Data was stored, so there was nothing to remove (SGP.32
+ * v1.2, section 5.9.5).
  */
 export
 const EuiccMemoryResetResponse_resetEimResult_nothingToDelete: EuiccMemoryResetResponse_resetEimResult = 1; /* LONG_NAMED_INTEGER_VALUE */
@@ -53,6 +66,9 @@ const EuiccMemoryResetResponse_resetEimResult_nothingToDelete: EuiccMemoryResetR
  * @summary EuiccMemoryResetResponse_resetEimResult_nothingToDelete
  * @constant
  * @type {number}
+ * @description
+ * No eIM Configuration Data was present to remove (SGP.32 v1.2, section
+ * 5.9.5).
  */
 export
 const nothingToDelete: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_nothingToDelete; /* SHORT_NAMED_INTEGER_VALUE */
@@ -61,6 +77,9 @@ const nothingToDelete: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryRese
  * @summary EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported
  * @constant
  * @type {number}
+ * @description
+ * This eUICC does not support removing eIM Configuration Data (SGP.32 v1.2,
+ * section 5.9.5).
  */
 export
 const EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported: EuiccMemoryResetResponse_resetEimResult = 2; /* LONG_NAMED_INTEGER_VALUE */
@@ -69,6 +88,9 @@ const EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported: EuiccMemoryR
  * @summary EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported
  * @constant
  * @type {number}
+ * @description
+ * The eUICC does not support removing eIM Configuration Data (SGP.32 v1.2,
+ * section 5.9.5).
  */
 export
 const eimResetNotSupported: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_eimResetNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
@@ -77,6 +99,9 @@ const eimResetNotSupported: EuiccMemoryResetResponse_resetEimResult = EuiccMemor
  * @summary EuiccMemoryResetResponse_resetEimResult_undefinedError
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists undefinedError(127) on resetEimResult in section 5.9.5 and
+ * does not further define the condition that produces it.
  */
 export
 const EuiccMemoryResetResponse_resetEimResult_undefinedError: EuiccMemoryResetResponse_resetEimResult = 127; /* LONG_NAMED_INTEGER_VALUE */
@@ -85,6 +110,9 @@ const EuiccMemoryResetResponse_resetEimResult_undefinedError: EuiccMemoryResetRe
  * @summary EuiccMemoryResetResponse_resetEimResult_undefinedError
  * @constant
  * @type {number}
+ * @description
+ * SGP.32 v1.2 lists this code in section 5.9.5 and does not further define the
+ * condition that produces it.
  */
 export
 const undefinedError: EuiccMemoryResetResponse_resetEimResult = EuiccMemoryResetResponse_resetEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */

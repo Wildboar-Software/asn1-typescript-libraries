@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IpaMode
  * @description
  * 
+ * Active IPA, carried in EUICCInfo2. Within SGP.32 the eUICC SHALL include
+ * `ipaMode`. `ipad` means IPAd is active. `ipae` means IPAe is active. SGP.32
+ * v1.2, section 5.9.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +29,8 @@ type IpaMode = INTEGER;
 
 /**
  * @summary IpaMode_ipad
+ * @description
+ * IPAd is the active IPA. SGP.32 v1.2, section 5.9.2.
  * @constant
  * @type {number}
  */
@@ -33,6 +39,8 @@ const IpaMode_ipad: IpaMode = 0; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaMode_ipad
+ * @description
+ * IPAd is the active IPA. SGP.32 v1.2, section 5.9.2.
  * @constant
  * @type {number}
  */
@@ -41,6 +49,8 @@ const ipad: IpaMode = IpaMode_ipad; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaMode_ipae
+ * @description
+ * IPAe is the active IPA. SGP.32 v1.2, section 5.9.2.
  * @constant
  * @type {number}
  */
@@ -49,6 +59,8 @@ const IpaMode_ipae: IpaMode = 1; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaMode_ipae
+ * @description
+ * IPAe is the active IPA. SGP.32 v1.2, section 5.9.2.
  * @constant
  * @type {number}
  */

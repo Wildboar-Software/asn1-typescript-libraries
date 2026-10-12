@@ -12,6 +12,34 @@ import { ProvideEimPackageResult, _decode_ProvideEimPackageResult, _encode_Provi
  * @summary HandleNotificationEsipa
  * @description
  * 
+ * ESipa.HandleNotification request. No response structure is defined. The IPA
+ * reports that a Profile was installed, enabled, disabled, or deleted,
+ * including a Fallback Profile, and MAY report disablement of an Emergency
+ * Profile. It MAY also report a successful installation with a
+ * `ProfileInstallationResult`, a `compactProfileInstallationResult`, or a
+ * `ProfileDownloadTriggerResult`. Exactly one alternative is present.
+ * 
+ * Select `pendingNotification` to deliver one Notification, in full or compact
+ * form, to a Notification Receiver. For an indirect Profile download, a
+ * `ProfileInstallationResult` or `compactProfileInstallationResult` is
+ * correlated to the earlier ESipa.GetBoundProfilePackage by the SM-DP+
+ * TransactionID. For `OtherSignedNotification` or
+ * `compactOtherSignedNotification`, the receiver address is the
+ * NotificationAddress in the NotificationMetaData. The eIM restores a compact
+ * Notification from data it already holds, then forwards the Notification.
+ * 
+ * Select `provideEimPackageResult` to deliver an eIM Package Result. In this
+ * call that object SHALL NOT contain `ePRAndNotifications`. If it contains
+ * `EuiccPackageResult`, the eIM verifies the eUICC signature with
+ * PK.EUICC.ECDSA and discards the input when the signature is invalid or the
+ * sequence number is not greater than the expected sequence number. Otherwise
+ * it sets the expected sequence number to the received value and manages
+ * pending eIM Packages. An `IpaEuiccDataResponse` is stored for later use. A
+ * `profileDownloadTriggerResult` or `eimPackageError` causes the eIM to manage
+ * pending eIM Packages.
+ * 
+ * SGP.32 v1.2, sections 5.14.7 and 6.3.2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

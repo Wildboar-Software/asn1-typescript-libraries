@@ -12,6 +12,15 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  * @summary Psmo_disable
  * @description
  * 
+ * Disable one enabled Profile. At most one disable appears in an eUICC
+ * Package. A disable or an enable already processed in that package is a PSMO
+ * failure; section 3.4.2 does not name that failure code. On success the
+ * target is marked to be disabled. A disable is followed by an enable in the
+ * same eUICC Package so the device keeps connectivity. Disabling via PSMO
+ * always uses REFRESH. The eUICC behaviour with refreshFlag set is as defined
+ * in SGP.22 section 5.7.17. SGP.32 v1.2, sections 2.11.1.1, 3.3.1, 3.4.2, and
+ * 5.13.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +36,11 @@ class Psmo_disable {
     constructor (
         /**
          * @summary `iccid`.
+         * @description
+         * ICCID of the Profile to disable, as defined in SGP.22. SGP.32 v1.2, section
+         * 2.11.1.1. Section 3.4.2 stops with a PSMO failure when that ICCID matches no
+         * installed Profile, and when the Profile is in any state other than Enabled.
+         * Section 3.4.2 does not name those result codes.
          * @public
          * @readonly
          */

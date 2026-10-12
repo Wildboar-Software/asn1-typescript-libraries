@@ -10,7 +10,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa
  * @description
- * 
+ *
+ * Error alternative of ESipa.AuthenticateClient. If ES9+'.AuthenticateClient
+ * or ES11'.AuthenticateClient returns an error, the eIM returns that same
+ * error. pprNotAllowed is an additional SGP.32 code.
+ *
+ * SGP.32 v1.2 section 6.3.2.2 lists codes 1 through 11, then 50, 56, and 127.
+ * SGP.32 v1.2 does not further define downloadOrderExpired.
+ *
+ * SGP.32 v1.2, sections 5.14.3 and 6.3.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +47,11 @@ type AuthenticateClientResponseEsipa_authenticateClientErrorEsipa = INTEGER;
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateInvalid
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -46,6 +60,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificat
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateInvalid
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -54,6 +72,11 @@ const eumCertificateInvalid: AuthenticateClientResponseEsipa_authenticateClientE
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateExpired
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -62,6 +85,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificat
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eumCertificateExpired
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -70,6 +97,11 @@ const eumCertificateExpired: AuthenticateClientResponseEsipa_authenticateClientE
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateInvalid
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -78,6 +110,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertific
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateInvalid
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -86,6 +122,11 @@ const euiccCertificateInvalid: AuthenticateClientResponseEsipa_authenticateClien
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateExpired
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -94,6 +135,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertific
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccCertificateExpired
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -102,6 +147,11 @@ const euiccCertificateExpired: AuthenticateClientResponseEsipa_authenticateClien
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatureInvalid
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -110,6 +160,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatur
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_euiccSignatureInvalid
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -118,6 +172,11 @@ const euiccSignatureInvalid: AuthenticateClientResponseEsipa_authenticateClientE
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRefused
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -126,6 +185,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRef
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_matchingIdRefused
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -134,6 +197,11 @@ const matchingIdRefused: AuthenticateClientResponseEsipa_authenticateClientError
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -142,6 +210,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch: 
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eidMismatch
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -150,6 +222,11 @@ const eidMismatch: AuthenticateClientResponseEsipa_authenticateClientErrorEsipa 
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligibleProfile
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -158,6 +235,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligiblePro
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_noEligibleProfile
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -166,6 +247,11 @@ const noEligibleProfile: AuthenticateClientResponseEsipa_authenticateClientError
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -174,6 +260,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown: 
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_ciPKUnknown
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -182,6 +272,11 @@ const ciPKUnknown: AuthenticateClientResponseEsipa_authenticateClientErrorEsipa 
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransactionId
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -190,6 +285,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransa
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_invalidTransactionId
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -198,6 +297,11 @@ const invalidTransactionId: AuthenticateClientResponseEsipa_authenticateClientEr
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientMemory
+ * @description
+ *
+ * SGP.32 v1.2 section 5.14.3 uses the same code as ES9+'.AuthenticateClient,
+ * which section 5.7.3 defines as identical to ES9+.AuthenticateClient in
+ * SGP.22 section 5.6.3. SGP.32 v1.2 does not further define this integer.
  * @constant
  * @type {number}
  */
@@ -206,6 +310,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientM
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_insufficientMemory
+ * @description
+ *
+ * Same code as ES9+'.AuthenticateClient in SGP.22 section 5.6.3; SGP.32 v1.2
+ * does not further define it (section 5.14.3).
  * @constant
  * @type {number}
  */
@@ -214,6 +322,10 @@ const insufficientMemory: AuthenticateClientResponseEsipa_authenticateClientErro
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrderExpired
+ * @description
+ *
+ * SGP.32 v1.2 section 6.3.2.2 and Annex C omit this code, so v1.2 does not
+ * further define it.
  * @constant
  * @type {number}
  */
@@ -222,6 +334,9 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrder
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_downloadOrderExpired
+ * @description
+ *
+ * SGP.32 v1.2 section 6.3.2.2 and Annex C omit this code.
  * @constant
  * @type {number}
  */
@@ -230,6 +345,14 @@ const downloadOrderExpired: AuthenticateClientResponseEsipa_authenticateClientEr
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed
+ * @description
+ *
+ * While verifying Profile Metadata, the eIM found a PPR disallowed by the
+ * Rules Authorisation Table, or found PPR1 while an Operational Profile is
+ * already installed. The IPA then cancels the RSP session with reason
+ * pprNotAllowed.
+ *
+ * SGP.32 v1.2, sections 3.2.3.3 and 5.14.3.
  * @constant
  * @type {number}
  */
@@ -238,6 +361,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_pprNotAllowed
+ * @description
+ *
+ * Profile Metadata PPR failed the eIM RAT check, or PPR1 is set while an
+ * Operational Profile is installed (SGP.32 v1.2, sections 3.2.3.3 and 5.14.3).
  * @constant
  * @type {number}
  */
@@ -246,6 +373,10 @@ const pprNotAllowed: AuthenticateClientResponseEsipa_authenticateClientErrorEsip
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknown
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on ESipa.AuthenticateClient and does not further
+ * define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -254,6 +385,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknow
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_eventIdUnknown
+ * @description
+ *
+ * Listed on ESipa.AuthenticateClient; SGP.32 v1.2 does not further define it
+ * (Annex C).
  * @constant
  * @type {number}
  */
@@ -262,6 +397,10 @@ const eventIdUnknown: AuthenticateClientResponseEsipa_authenticateClientErrorEsi
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedError
+ * @description
+ *
+ * SGP.32 v1.2 lists this code on ESipa.AuthenticateClient and does not further
+ * define it. Annex C.
  * @constant
  * @type {number}
  */
@@ -270,6 +409,10 @@ const AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedErro
 
 /**
  * @summary AuthenticateClientResponseEsipa_authenticateClientErrorEsipa_undefinedError
+ * @description
+ *
+ * Listed on ESipa.AuthenticateClient; SGP.32 v1.2 does not further define it
+ * (Annex C).
  * @constant
  * @type {number}
  */

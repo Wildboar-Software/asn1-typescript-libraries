@@ -13,7 +13,19 @@ import { NotificationMetadata, _decode_NotificationMetadata, _encode_Notificatio
 /**
  * @summary CompactOtherSignedNotification
  * @description
- * 
+ *
+ * Compact OtherSignedNotification on ESipa. An IPA with minimizeEsipaBytes
+ * should re-encode OtherSignedNotification into this form and keep the eUICC
+ * signature unchanged. The eIM restores the full notification from data it
+ * already holds before forwarding it to the Notification Receiver.
+ *
+ * The Notification Receiver address is the NotificationAddress in the
+ * NotificationMetadata. For an indirect Profile download this notification is
+ * independent of the SM-DP+ Transaction ID used for a Profile Installation
+ * Result.
+ *
+ * SGP.32 v1.2, section 5.14.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +44,49 @@ class CompactOtherSignedNotification {
     constructor (
         /**
          * @summary `eidValue`.
+         * @description
+         *
+         * EID (tag '5A'). When the transport identifies the EID to the eIM (Figure 8),
+         * the IPA omits it. When there is no such transport (Figure 7) and this
+         * notification is sent with ESipa.HandleNotification, the IPA should include
+         * it.
+         *
+         * SGP.32 v1.2, section 5.14.7.
          * @public
          * @readonly
          */
         readonly eidValue: OPTIONAL<Octet16>,
         /**
          * @summary `tbsOtherNotification`.
+         * @description
+         *
+         * NotificationMetadata covered by the eUICC signature. Its NotificationAddress
+         * is the Notification Receiver for an enable, disable, delete, fallback, or
+         * emergency-profile notification.
+         *
+         * SGP.32 v1.2, section 5.14.7. NotificationMetadata is as defined in SGP.22.
          * @public
          * @readonly
          */
         readonly tbsOtherNotification: NotificationMetadata,
         /**
          * @summary `euiccNotificationSignature`.
+         * @description
+         *
+         * eUICC signature (tag '5F37') of tbsOtherNotification. The signature is kept
+         * unchanged when the IPA re-encodes the notification.
+         *
+         * SGP.32 v1.2, section 5.14.7.
          * @public
          * @readonly
          */
         readonly euiccNotificationSignature: OCTET_STRING,
         /**
          * @summary `euiccCiPKIdentifierToBeUsed`.
+         * @description
+         *
+         * SGP.32 v1.2 section 5.14.7 and Annex C omit this field, so v1.2 does not
+         * further define it.
          * @public
          * @readonly
          */

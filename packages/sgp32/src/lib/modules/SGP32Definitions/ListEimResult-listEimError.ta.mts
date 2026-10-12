@@ -11,6 +11,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ListEimResult_listEimError
  * @description
  * 
+ * Error alternative of `ListEimResult`. SGP.32 v1.2 section 2.11.2.1 names
+ * only `undefinedError(127)` and does not further define the condition that
+ * produces it. Annex C lists the name only.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +28,10 @@ type ListEimResult_listEimError = INTEGER;
 
 /**
  * @summary ListEimResult_listEimError_undefinedError
+ * @description
+ * SGP.32 v1.2 section 2.11.2.1 names `undefinedError(127)` as the only
+ * `listEim` error and does not further define the condition that produces it.
+ * Annex C lists the name only.
  * @constant
  * @type {number}
  */
@@ -32,6 +40,9 @@ const ListEimResult_listEimError_undefinedError: ListEimResult_listEimError = 12
 
 /**
  * @summary ListEimResult_listEimError_undefinedError
+ * @description
+ * SGP.32 v1.2 section 2.11.2.1 names this `listEim` error and does not further
+ * define the condition. Annex C.
  * @constant
  * @type {number}
  */

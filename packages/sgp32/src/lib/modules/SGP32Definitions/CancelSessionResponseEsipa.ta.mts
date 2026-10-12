@@ -11,7 +11,16 @@ import { CancelSessionResponseEsipa_cancelSessionError, _decode_CancelSessionRes
 /**
  * @summary CancelSessionResponseEsipa
  * @description
- * 
+ *
+ * ESipa.CancelSession response. The eIM forwards the status of
+ * ES9+'.CancelSession.
+ *
+ * Select cancelSessionOk when cancellation is accepted. That alternative
+ * carries no output data. Select cancelSessionError for invalidTransactionId,
+ * euiccSignatureInvalid, or undefinedError.
+ *
+ * SGP.32 v1.2, sections 5.14.8 and 6.3.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

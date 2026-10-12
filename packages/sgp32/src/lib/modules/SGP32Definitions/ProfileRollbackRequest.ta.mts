@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProfileRollbackRequest
  * @description
  * 
+ * ES10b.ProfileRollback. Used when the last enable PSMO granted rollback and
+ * the IPA asks the eUICC to disable the Profile enabled by that package and
+ * re-enable the Profile that was enabled before it, if any. The swap is
+ * atomic: an error leaves both Profiles in the states they had before the
+ * call. SGP.32 v1.2, section 5.9.16.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +34,15 @@ class ProfileRollbackRequest {
     constructor (
         /**
          * @summary `refreshFlag`.
+         * @description
+         * FALSE applies the rollback in this call, after the IoT Device has met the
+         * conditions of use indicated for ES10c.EnableProfile in SGP.22 section 3.2.1.
+         * TRUE marks the current Profile to be disabled and the previous Profile to be
+         * enabled, returns ok with the new eUICC Package Result, and sends REFRESH in
+         * eUICC Profile State Change mode when the IoT Device supports it, otherwise
+         * UICC Reset mode, per ETSI TS 102 223. A proactive session already open may
+         * yield catBusy. If the eUICC continues, it ends that session. SGP.32 v1.2,
+         * section 5.9.16.
          * @public
          * @readonly
          */

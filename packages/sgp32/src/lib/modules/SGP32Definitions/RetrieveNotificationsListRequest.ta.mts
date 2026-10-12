@@ -12,6 +12,13 @@ import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotifi
  * @summary RetrieveNotificationsListRequest
  * @description
  * 
+ * ES10b.RetrieveNotificationsList. Retrieves pending Notifications for
+ * installed Profiles and eUICC Package Results. When searchCriteria is
+ * omitted, the eUICC returns every stored Notification in the pending-
+ * notification list. The IPA uses this after a PSMO package when it sends the
+ * eUICC Package Result and Notifications together. SGP.32 v1.2, sections
+ * 5.9.11 and 3.3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +38,10 @@ class RetrieveNotificationsListRequest {
     constructor (
         /**
          * @summary `searchCriteria`.
+         * @description
+         * Optional filter. Omitted, the eUICC returns every stored Notification.
+         * seqNumber, a profile-management bit mask, and euiccPackageResults are
+         * defined on the choice. SGP.32 v1.2, section 5.9.11.
          * @public
          * @readonly
          */

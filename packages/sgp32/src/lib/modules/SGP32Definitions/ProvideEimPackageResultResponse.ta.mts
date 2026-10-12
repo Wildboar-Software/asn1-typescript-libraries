@@ -13,6 +13,12 @@ import { ProvideEimPackageResultResponse_provideEimPackageResultError, _decode_P
  * @summary ProvideEimPackageResultResponse
  * @description
  * 
+ * Response to ESipa.ProvideEimPackageResult. eimAcknowledgements lists
+ * sequence numbers of the eUICC Package Result and Notifications the eIM
+ * processed or forwarded. emptyResponse is the success response when that list
+ * is omitted. provideEimPackageResultError reports an EID failure or
+ * undefinedError. SGP.32 v1.2, sections 5.14.6 and 6.3.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

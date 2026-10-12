@@ -12,7 +12,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Eco_deleteEim
  * @description
- * 
+ *
+ * deleteEim eCO inside a signed eUICC Package. It names the Associated eIM
+ * whose configuration the eUICC removes. Only eimId is supplied. If the target
+ * is the requesting eIM, the eUICC signs the eCO result before deleting the
+ * configuration. If the target is the last Associated eIM, the result is
+ * lastEimDeleted and the eUICC again accepts Unsigned eCO and
+ * ES10b.AddInitialEim.
+ *
+ * SGP.32 v1.2, sections 2.11.1.1, 3.5.1.2, and 5.13.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +37,13 @@ class Eco_deleteEim {
     constructor (
         /**
          * @summary `eimId`.
+         * @description
+         *
+         * eimId of the target Associated eIM. It uniquely identifies that eIM in the
+         * eUICC list. The text is at most 128 bytes. A missing eimId yields
+         * commandError on DeleteEimResult.
+         *
+         * SGP.32 v1.2, sections 3.5.1.2 and 4.3.
          * @public
          * @readonly
          */

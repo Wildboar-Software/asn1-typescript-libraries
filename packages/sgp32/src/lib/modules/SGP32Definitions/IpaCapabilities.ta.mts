@@ -14,6 +14,12 @@ import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_
  * @summary IpaCapabilities
  * @description
  * 
+ * The eIM uses this to decide whether it can support Profile download and
+ * Profile management for this IPA, including the functional split and the use
+ * of compact ESipa objects. It MAY be obtained out of band from the IoT Device
+ * owner, or by requesting tag `'A8'` in an eIM Package. SGP.32 v1.2, section
+ * 4.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,18 +51,27 @@ class IpaCapabilities {
     constructor (
         /**
          * @summary `ipaFeatures`.
+         * @description
+         * Required. Each bit set to 1 is a Profile-download or compact-ESipa feature
+         * this IPA supports. SGP.32 v1.2, section 4.1.
          * @public
          * @readonly
          */
         readonly ipaFeatures: IpaCapabilities_ipaFeatures,
         /**
          * @summary `ipaSupportedProtocols`.
+         * @description
+         * Present when the IPA advertises eIM Package transfer. Each bit set to 1 is a
+         * supported retrieval or injection transport. SGP.32 v1.2, section 4.1.
          * @public
          * @readonly
          */
         readonly ipaSupportedProtocols: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>,
         /**
          * @summary `eSipaProprietaryProtocolInformation`.
+         * @description
+         * SGP.32 v1.2 section 4.1 does not define this component. Annex C does not
+         * further define it.
          * @public
          * @readonly
          */

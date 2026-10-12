@@ -12,6 +12,13 @@ import { IpaeActivationRequest_ipaeOption, _decode_IpaeActivationRequest_ipaeOpt
  * @summary IpaeActivationRequest
  * @description
  * 
+ * Command the IoT Device sends to the ISD-R to activate IPAe, using the
+ * transport defined in SGP.22 section 5.7.2. The Device MAY send it when it
+ * supports Annex A.2 and the eUICC set `ipaeSupported`. If the Device
+ * indicated IPAd support and does not send this command, the eUICC SHALL NOT
+ * activate IPAe. If the Device indicated that IPAd is not supported, the eUICC
+ * SHALL activate IPAe when it supports IPAe. SGP.32 v1.2, section 3.8.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +36,9 @@ class IpaeActivationRequest {
     constructor (
         /**
          * @summary `ipaeOption`.
+         * @description
+         * Options for IPAe activation. The `activateIpae` bit requests activation of
+         * the IPA in the eUICC. SGP.32 v1.2, section 3.8.4.
          * @public
          * @readonly
          */

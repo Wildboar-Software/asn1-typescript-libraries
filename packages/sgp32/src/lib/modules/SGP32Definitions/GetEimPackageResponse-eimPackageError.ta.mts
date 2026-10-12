@@ -11,6 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetEimPackageResponse_eimPackageError
  * @description
  * 
+ * ESipa.GetEimPackage failure. `noEimPackageAvailable`, `eidNotFound`,
+ * `invalidEid`, and `missingEid` are defined in section 5.14.5 Table 18.
+ * SGP.32 v1.2 section 6.3.2.6 names `undefinedError(127)` and does not further
+ * define it. Annex C lists that name only.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +33,9 @@ type GetEimPackageResponse_eimPackageError = INTEGER;
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_noEimPackageAvailable
+ * @description
+ * No pending eIM Package for the EID. Maps from status 8.1.1 EID / 3.7
+ * Unavailable. SGP.32 v1.2, section 5.14.5 Table 18.
  * @constant
  * @type {number}
  */
@@ -36,6 +44,8 @@ const GetEimPackageResponse_eimPackageError_noEimPackageAvailable: GetEimPackage
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_noEimPackageAvailable
+ * @description
+ * No pending eIM Package for the EID. SGP.32 v1.2, section 5.14.5.
  * @constant
  * @type {number}
  */
@@ -44,6 +54,9 @@ const noEimPackageAvailable: GetEimPackageResponse_eimPackageError = GetEimPacka
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_eidNotFound
+ * @description
+ * No eUICC was found with the specified EID. Maps from status 8.1.1 EID / 3.9
+ * Unknown. SGP.32 v1.2, section 5.14.5 Table 18.
  * @constant
  * @type {number}
  */
@@ -52,6 +65,8 @@ const GetEimPackageResponse_eimPackageError_eidNotFound: GetEimPackageResponse_e
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_eidNotFound
+ * @description
+ * No eUICC was found with the specified EID. SGP.32 v1.2, section 5.14.5.
  * @constant
  * @type {number}
  */
@@ -60,6 +75,10 @@ const eidNotFound: GetEimPackageResponse_eimPackageError = GetEimPackageResponse
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_invalidEid
+ * @description
+ * The EID parameter is invalid. The format is defined in SGP.02 section 2.2.2.
+ * Maps from status 8.1.1 EID / 2.1 Invalid. SGP.32 v1.2, section 5.14.5 Table
+ * 18.
  * @constant
  * @type {number}
  */
@@ -68,6 +87,9 @@ const GetEimPackageResponse_eimPackageError_invalidEid: GetEimPackageResponse_ei
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_invalidEid
+ * @description
+ * The EID parameter is invalid. Format: SGP.02 section 2.2.2. SGP.32 v1.2,
+ * section 5.14.5.
  * @constant
  * @type {number}
  */
@@ -76,6 +98,9 @@ const invalidEid: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_missingEid
+ * @description
+ * The mandatory EID parameter is missing. Maps from status 8.1.1 EID / 2.2
+ * Mandatory Element Missing. SGP.32 v1.2, section 5.14.5 Table 18.
  * @constant
  * @type {number}
  */
@@ -84,6 +109,8 @@ const GetEimPackageResponse_eimPackageError_missingEid: GetEimPackageResponse_ei
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_missingEid
+ * @description
+ * The mandatory EID parameter is missing. SGP.32 v1.2, section 5.14.5.
  * @constant
  * @type {number}
  */
@@ -92,6 +119,9 @@ const missingEid: GetEimPackageResponse_eimPackageError = GetEimPackageResponse_
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_undefinedError
+ * @description
+ * SGP.32 v1.2 section 6.3.2.6 names `undefinedError(127)` and does not further
+ * define the condition that produces it. Annex C lists the name only.
  * @constant
  * @type {number}
  */
@@ -100,6 +130,9 @@ const GetEimPackageResponse_eimPackageError_undefinedError: GetEimPackageRespons
 
 /**
  * @summary GetEimPackageResponse_eimPackageError_undefinedError
+ * @description
+ * SGP.32 v1.2 section 6.3.2.6 names this code and does not further define the
+ * condition that produces it. Annex C.
  * @constant
  * @type {number}
  */

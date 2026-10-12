@@ -11,7 +11,17 @@ import { EimConfigurationData, _decode_EimConfigurationData, _encode_EimConfigur
 /**
  * @summary AddInitialEimRequest
  * @description
- * 
+ *
+ * ES10b.AddInitialEim command. The IPAd stores one or more eIM Configuration
+ * Data entries on an eUICC that has none. The eUICC runs the checks in section
+ * 5.9.4 atomically: any error leaves stored eIM Configuration Data unchanged.
+ *
+ * Further Associated eIMs are added later by a signed eUICC Package containing
+ * addEim (section 3.5.1.1). With IPAe, how this data reaches the eUICC is
+ * implementation specific (section 3.5.2.1).
+ *
+ * SGP.32 v1.2, sections 2.10.2, 3.5.2.1, and 5.9.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +37,20 @@ class AddInitialEimRequest {
     constructor (
         /**
          * @summary `eimConfigurationDataList`.
+         * @description
+         *
+         * eIM Configuration Data to store. Each entry includes eimId, counterValue,
+         * and either eimPublicKey or eimCertificate. Uniqueness of eimId is the IPA's
+         * responsibility (section 5.9.4 NOTE).
+         *
+         * If eimIdType is absent the eUICC stores eimIdTypeProprietary. If
+         * eimSupportedProtocol is absent the eUICC stores only the eimProprietary bit.
+         * If euiccCiPKId is absent the eUICC stores the first entry of
+         * euiccCiPKIdListForSigning in eUICCInfo2. associationToken set to -1 requests
+         * calculation of an association token. eimFqdn and trustedPublicKeyDataTls may
+         * be included.
+         *
+         * SGP.32 v1.2, section 5.9.4.
          * @public
          * @readonly
          */

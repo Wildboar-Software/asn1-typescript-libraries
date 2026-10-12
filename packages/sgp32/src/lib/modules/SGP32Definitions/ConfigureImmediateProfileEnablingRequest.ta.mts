@@ -14,7 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ConfigureImmediateProfileEnablingRequest
  * @description
- * 
+ *
+ * ES10b.ConfigureImmediateProfileEnabling command. The IPA activates or
+ * deactivates immediate Profile enabling and may store default SM-DP+ data.
+ * The eUICC accepts it only while no eIM Configuration Data is stored. Any
+ * error is atomic: the previous immediate-enabling configuration remains.
+ *
+ * How these values reach an IPAe is implementation specific.
+ *
+ * SGP.32 v1.2, sections 3.4.5 and 5.9.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +41,39 @@ class ConfigureImmediateProfileEnablingRequest {
     constructor (
         /**
          * @summary `immediateEnableFlag`.
+         * @description
+         *
+         * Presence activates immediate Profile enabling when it is inactive. Absence
+         * deactivates it when it is active. Any other combination leaves the state
+         * unchanged. Default SM-DP+ data may be configured whether or not this flag is
+         * present.
+         *
+         * SGP.32 v1.2, sections 2.11.1.1 and 5.9.17.
          * @public
          * @readonly
          */
         readonly immediateEnableFlag: OPTIONAL<NULL>,
         /**
          * @summary `defaultSmdpOid`.
+         * @description
+         *
+         * Default SM-DP+ OID stored for immediate Profile enabling when the eUICC has
+         * memory for it. The IPA may send it with or without defaultSmdpAddress.
+         *
+         * SGP.32 v1.2, section 5.9.17.
          * @public
          * @readonly
          */
         readonly defaultSmdpOid: OPTIONAL<OBJECT_IDENTIFIER>,
         /**
          * @summary `defaultSmdpAddress`.
+         * @description
+         *
+         * Default SM-DP+ address stored for immediate Profile enabling when the eUICC
+         * has memory for it. Once stored, GetEuiccConfiguredAddresses returns it as
+         * the default SM-DP+ address.
+         *
+         * SGP.32 v1.2, sections 3.4.5 and 5.9.17.
          * @public
          * @readonly
          */

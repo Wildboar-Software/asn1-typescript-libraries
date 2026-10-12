@@ -12,7 +12,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ConnectivityParameters
  * @description
- * 
+ *
+ * HTTP/CoAP connectivity parameters of the currently enabled Profile, returned
+ * by ES10b.GetConnectivityParameters when they are available. HTTP parameters
+ * are supplied in a Profile Package as described in the TCA Profile
+ * Interoperability Technical Specification and may be updated by the operator
+ * over ES6 as described in SGP.02 section 3.13.
+ *
+ * SGP.32 v1.2, section 5.9.24.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +36,13 @@ class ConnectivityParameters {
     constructor (
         /**
          * @summary `httpParams`.
+         * @description
+         *
+         * Connectivity parameters for HTTP, also used for CoAP. The format is
+         * identical to Table 95 of SGP.02. Present when those parameters are
+         * available; otherwise the response is parametersNotAvailable.
+         *
+         * SGP.32 v1.2, section 5.9.24.
          * @public
          * @readonly
          */

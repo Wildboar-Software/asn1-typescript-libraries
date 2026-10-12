@@ -12,6 +12,13 @@ import { ConnectivityParametersError, _decode_ConnectivityParametersError, _enco
  * @summary GetConnectivityParametersResponse
  * @description
  * 
+ * ES10b.GetConnectivityParameters response. Select `connectivityParameters`
+ * when the enabled Profile has HTTP or CoAP parameters. `httpParams` uses the
+ * format of Table 95 of SGP.02 and is also used for CoAP. Select
+ * `connectivityParametersError` when the parameters are not available
+ * (`parametersNotAvailable`) or for `undefinedError(127)`, which section
+ * 5.9.24 names and does not further define. SGP.32 v1.2, section 5.9.24.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

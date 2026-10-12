@@ -13,6 +13,16 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  * @summary Psmo_enable
  * @description
  * 
+ * Enable one Profile that is already installed. At most one enable appears in
+ * an eUICC Package. A further enable in that package is a PSMO failure;
+ * section 3.4.1 does not name that failure code. On success the target is
+ * marked to be enabled and the currently enabled Profile, if any, is marked to
+ * be disabled. When the target is a Fallback Profile, the eUICC records the
+ * currently enabled Profile for a later ES10b.ReturnFromFallback. Enabling via
+ * PSMO always uses REFRESH. The eUICC behaviour with refreshFlag set is as
+ * defined in SGP.22 section 5.7.16. SGP.32 v1.2, sections 2.11.1.1, 3.3.1,
+ * 3.4.1, and 5.13.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +39,25 @@ class Psmo_enable {
     constructor (
         /**
          * @summary `iccid`.
+         * @description
+         * ICCID of the Profile to enable, as defined in SGP.22. SGP.32 v1.2, section
+         * 2.11.1.1. The Profile is installed and disabled. An unknown ICCID yields
+         * iccidOrAidNotFound(1). A Profile that is still enabled yields
+         * profileNotInDisabledState(2). An Emergency Profile with ecallIndication TRUE
+         * yields undefinedError(127). When rollback is granted and no Profile is
+         * enabled or marked to be disabled, the result is rollbackNotAvailable(20).
+         * SGP.32 v1.2, section 3.4.1.
          * @public
          * @readonly
          */
         readonly iccid: Iccid,
         /**
          * @summary `rollbackFlag`.
+         * @description
+         * Present when the eIM grants the Rollback Mechanism for this enable. The IPA
+         * may call ES10b.ProfileRollback if the newly enabled Profile fails to provide
+         * connectivity. The eUICC records the grant together with the Profile that is
+         * to be disabled. SGP.32 v1.2, sections 2.11.1.1 and 3.4.1.
          * @public
          * @readonly
          */

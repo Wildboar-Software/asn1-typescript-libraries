@@ -11,6 +11,13 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * @summary EimConfigurationData_eimPublicKeyData
  * @description
  * 
+ * Public key the eUICC uses to verify eUICC Packages from this eIM (SGP.32
+ * v1.2, section 2.11.1.1). Encoding follows X.509. addEim supplies one
+ * alternative; section 5.9.4 requires either the raw key or the certificate.
+ *
+ * eimPublicKey is the raw eIM public key. eimCertificate is the eIM
+ * certificate.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ImmediateEnableRequest
  * @description
  * 
+ * ES10b.ImmediateEnable command. The IPA requests immediate enabling of the
+ * Profile just installed, without eIM involvement. The eUICC MAY be configured
+ * to support that. The eUICC rejects the command with `noSessionContext`
+ * unless, ignoring Notification retrieval, the previous ES10 function was
+ * ES10b.LoadBoundProfilePackage. It rejects with `immediateEnableNotAvailable`
+ * when immediate enabling was not granted for that Profile, or when the target
+ * is an Emergency Profile with `ecallIndication` TRUE. SGP.32 v1.2, section
+ * 5.9.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +37,17 @@ class ImmediateEnableRequest {
     constructor (
         /**
          * @summary `refreshFlag`.
+         * @description
+         * When false, the eUICC closes logical channels of the currently enabled
+         * Profile, resets PIN status, disables that Profile, enables the downloaded
+         * Profile, clears any Profile Rollback authorisation, selects the MF, and
+         * returns `ok`. When true, it marks the current Profile to be disabled and the
+         * downloaded Profile to be enabled, clears Rollback authorisation, returns
+         * `ok`, and sends REFRESH in "eUICC Profile State Change" mode when the IoT
+         * Device supports it, otherwise in "UICC Reset" mode (ETSI TS 102 223). A
+         * Terminal Response of "temporary problem with executing command" or
+         * "permanent problem with executing command" leaves both Profiles unchanged.
+         * SGP.32 v1.2, section 5.9.15.
          * @public
          * @readonly
          */

@@ -11,6 +11,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetConnectivityParametersRequest
  * @description
  * 
+ * ES10b.GetConnectivityParameters command. The IPA reads the HTTP and CoAP
+ * connectivity parameters of the currently enabled Profile, when the eUICC has
+ * them. The command carries no parameters. HTTP parameters SHOULD be supplied
+ * in the Profile Package as described in the TCA eUICC Profile Package
+ * Interoperability Technical Specification, and the operator can update them
+ * over ES6 as described in SGP.02 section 3.13. If they are not available, the
+ * response is `parametersNotAvailable`. SGP.32 v1.2, section 5.9.24.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

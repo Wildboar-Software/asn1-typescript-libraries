@@ -11,7 +11,15 @@ import { _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnable
 /**
  * @summary ConfigureImmediateProfileEnablingResponse
  * @description
- * 
+ *
+ * ES10b.ConfigureImmediateProfileEnabling response.
+ * configImmediateEnableResult is ok after the enabling state and any default
+ * SM-DP+ data are applied, insufficientMemory when that data cannot be stored,
+ * or associatedEimAlreadyExists when any eIM Configuration Data is already
+ * present.
+ *
+ * SGP.32 v1.2, sections 3.4.5 and 5.9.17.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +40,14 @@ class ConfigureImmediateProfileEnablingResponse {
     constructor (
         /**
          * @summary `configImmediateEnableResult`.
+         * @description
+         *
+         * ok when the requested immediate-enabling change was applied,
+         * insufficientMemory when default SM-DP+ data cannot be stored, or
+         * associatedEimAlreadyExists when eIM Configuration Data is already present.
+         * The command is atomic.
+         *
+         * SGP.32 v1.2, section 5.9.17.
          * @public
          * @readonly
          */

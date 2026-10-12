@@ -12,7 +12,18 @@ import { AuthenticateClientResponseEsipa_authenticateClientErrorEsipa, _decode_A
 /**
  * @summary AuthenticateClientResponseEsipa
  * @description
- * 
+ *
+ * ESipa.AuthenticateClient response from the eIM to the IPA.
+ *
+ * Select authenticateClientOkDPEsipa when the eIM called
+ * ES9+'.AuthenticateClient and the SM-DP+ authenticated the eUICC. Select
+ * authenticateClientOkDSEsipa when the eIM called ES11'.AuthenticateClient and
+ * the SM-DS authenticated the eUICC. Select authenticateClientErrorEsipa when
+ * that upstream call fails, or when Profile Metadata verification fails with
+ * pprNotAllowed.
+ *
+ * SGP.32 v1.2, sections 5.14.3 and 6.3.2.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

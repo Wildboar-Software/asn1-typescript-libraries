@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa
  * @description
  * 
+ * ESipa.GetBoundProfilePackage error. Except for `metadataMismatch`, these
+ * codes are the same as the same-named errors of ES9+'.GetBoundProfilePackage,
+ * as defined in SGP.22. Integer 6 is `downloadOrderExpired` in SGP.32 v1.2
+ * section 6.3.2.3. `metadataMismatch` is defined in section 5.14.2 Table 11a.
+ * SGP.32 v1.2, sections 5.14.2 and 6.3.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +38,10 @@ type GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa = INTE
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_euiccSignatureInvalid
+ * @description
+ * SGP.32 v1.2 section 5.14.2 states that this code is the same as the
+ * same-named error of ES9+'.GetBoundProfilePackage, as defined in SGP.22.
+ * SGP.32 v1.2 does not further define the condition that produces it.
  * @constant
  * @type {number}
  */
@@ -40,6 +50,9 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_euicc
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_euiccSignatureInvalid
+ * @description
+ * Same as the same-named ES9+'.GetBoundProfilePackage error, as defined in
+ * SGP.22. SGP.32 v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */
@@ -48,6 +61,10 @@ const euiccSignatureInvalid: GetBoundProfilePackageResponseEsipa_getBoundProfile
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeMissing
+ * @description
+ * SGP.32 v1.2 section 5.14.2 states that this code is the same as the
+ * same-named error of ES9+'.GetBoundProfilePackage, as defined in SGP.22.
+ * SGP.32 v1.2 does not further define the condition that produces it.
  * @constant
  * @type {number}
  */
@@ -56,6 +73,9 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confi
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeMissing
+ * @description
+ * Same as the same-named ES9+'.GetBoundProfilePackage error, as defined in
+ * SGP.22. SGP.32 v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */
@@ -64,6 +84,10 @@ const confirmationCodeMissing: GetBoundProfilePackageResponseEsipa_getBoundProfi
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRefused
+ * @description
+ * SGP.32 v1.2 section 5.14.2 states that this code is the same as the
+ * same-named error of ES9+'.GetBoundProfilePackage, as defined in SGP.22.
+ * SGP.32 v1.2 does not further define the condition that produces it.
  * @constant
  * @type {number}
  */
@@ -72,6 +96,9 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confi
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRefused
+ * @description
+ * Same as the same-named ES9+'.GetBoundProfilePackage error, as defined in
+ * SGP.22. SGP.32 v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */
@@ -80,6 +107,10 @@ const confirmationCodeRefused: GetBoundProfilePackageResponseEsipa_getBoundProfi
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRetriesExceeded
+ * @description
+ * SGP.32 v1.2 section 5.14.2 states that this code is the same as the
+ * same-named error of ES9+'.GetBoundProfilePackage, as defined in SGP.22.
+ * SGP.32 v1.2 does not further define the condition that produces it.
  * @constant
  * @type {number}
  */
@@ -88,6 +119,9 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confi
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_confirmationCodeRetriesExceeded
+ * @description
+ * Same as the same-named ES9+'.GetBoundProfilePackage error, as defined in
+ * SGP.22. SGP.32 v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */
@@ -96,6 +130,10 @@ const confirmationCodeRetriesExceeded: GetBoundProfilePackageResponseEsipa_getBo
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_bppRebindingRefused
+ * @description
+ * SGP.32 v1.2 section 5.14.2 states that this code is the same as the
+ * same-named error of ES9+'.GetBoundProfilePackage, as defined in SGP.22.
+ * SGP.32 v1.2 does not further define the condition that produces it.
  * @constant
  * @type {number}
  */
@@ -104,6 +142,9 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_bppRe
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_bppRebindingRefused
+ * @description
+ * Same as the same-named ES9+'.GetBoundProfilePackage error, as defined in
+ * SGP.22. SGP.32 v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */
@@ -112,6 +153,11 @@ const bppRebindingRefused: GetBoundProfilePackageResponseEsipa_getBoundProfilePa
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_deprecated
+ * @description
+ * Integer 6. SGP.32 v1.2 section 6.3.2.3 names this value
+ * `downloadOrderExpired` and includes it among the errors that are the same as
+ * ES9+'.GetBoundProfilePackage, as defined in SGP.22. SGP.32 v1.2 does not
+ * further define the condition that produces it.
  * @constant
  * @type {number}
  */
@@ -120,6 +166,9 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_depre
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_deprecated
+ * @description
+ * Integer 6. SGP.32 v1.2 section 6.3.2.3 names it
+ * `downloadOrderExpired` and does not further define the condition.
  * @constant
  * @type {number}
  */
@@ -128,6 +177,12 @@ const deprecated: GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErro
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_metadataMismatch
+ * @description
+ * Profile Metadata in the Bound Profile Package does not match the Profile
+ * Metadata received in the ES9+'.AuthenticateClient response. The eIM performs
+ * this check when it verified metadata because the IPA has
+ * `eimProfileMetadataVerification`. Maps from status 8.2.9 Profile Metadata /
+ * 3.11 Value has Changed. SGP.32 v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */
@@ -136,6 +191,9 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_metad
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_metadataMismatch
+ * @description
+ * Bound Profile Package metadata does not match the metadata from
+ * ES9+'.AuthenticateClient. SGP.32 v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */
@@ -144,6 +202,10 @@ const metadataMismatch: GetBoundProfilePackageResponseEsipa_getBoundProfilePacka
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_invalidTransactionId
+ * @description
+ * SGP.32 v1.2 section 5.14.2 states that this code is the same as the
+ * same-named error of ES9+'.GetBoundProfilePackage, as defined in SGP.22.
+ * SGP.32 v1.2 does not further define the condition that produces it.
  * @constant
  * @type {number}
  */
@@ -152,6 +214,9 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_inval
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_invalidTransactionId
+ * @description
+ * Same as the same-named ES9+'.GetBoundProfilePackage error, as defined in
+ * SGP.22. SGP.32 v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */
@@ -160,6 +225,10 @@ const invalidTransactionId: GetBoundProfilePackageResponseEsipa_getBoundProfileP
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undefinedError
+ * @description
+ * SGP.22 v3.1 section 6.6.1.1 maps `undefinedError(127)` to the status code
+ * "Function provider - Execution Error". SGP.32 v1.2 section 5.14.2 includes
+ * this code among those that are the same as ES9+'.GetBoundProfilePackage.
  * @constant
  * @type {number}
  */
@@ -168,6 +237,10 @@ const GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undef
 
 /**
  * @summary GetBoundProfilePackageResponseEsipa_getBoundProfilePackageErrorEsipa_undefinedError
+ * @description
+ * Same as ES9+'.GetBoundProfilePackage `undefinedError(127)`. SGP.22 v3.1
+ * section 6.6.1.1 maps it to "Function provider - Execution Error". SGP.32
+ * v1.2, section 5.14.2.
  * @constant
  * @type {number}
  */

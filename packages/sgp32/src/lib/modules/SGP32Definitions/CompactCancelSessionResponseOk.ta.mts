@@ -12,7 +12,14 @@ import { CompactEuiccCancelSessionSigned, _decode_CompactEuiccCancelSessionSigne
 /**
  * @summary CompactCancelSessionResponseOk
  * @description
- * 
+ *
+ * Compact success form of ES10b.CancelSession, used on ESipa.CancelSession by
+ * an IPA with minimizeEsipaBytes. The eUICC signature is over the full
+ * euiccCancelSessionSigned. The eIM restores cancelSessionResponseOk from the
+ * Transaction ID and the server or SM-DP+ certificate it already holds.
+ *
+ * SGP.32 v1.2, section 5.14.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,24 @@ class CompactCancelSessionResponseOk {
     constructor (
         /**
          * @summary `compactEuiccCancelSessionSigned`.
+         * @description
+         *
+         * Compact euiccCancelSessionSigned. It carries the CancelSessionReason and
+         * omits the Transaction ID, which the eIM restores.
+         *
+         * SGP.32 v1.2, section 5.14.8.
          * @public
          * @readonly
          */
         readonly compactEuiccCancelSessionSigned: CompactEuiccCancelSessionSigned,
         /**
          * @summary `euiccCancelSessionSignature`.
+         * @description
+         *
+         * eUICC signature (tag '5F37') on the full euiccCancelSessionSigned, computed
+         * with SK.EUICC.ECDSA for the CI public key from common mutual authentication.
+         *
+         * SGP.32 v1.2, sections 3.2.3.3 and 5.14.8.
          * @public
          * @readonly
          */

@@ -17,6 +17,21 @@ import { ProvideEimPackageResultResponse, _decode_ProvideEimPackageResultRespons
  * @summary EsipaMessageFromEimToIpa
  * @description
  * 
+ * ESipa message from the eIM to the IPA. The HTTP binding (section 6.1.1) and
+ * the CoAP binding (section 6.2) use this CHOICE to select the function. Other
+ * bindings may use it as well (SGP.32 v1.2, section 6.3.1).
+ *
+ * initiateAuthenticationResponseEsipa answers ESipa.InitiateAuthentication
+ * (section 6.3.2.1). authenticateClientResponseEsipa answers
+ * ESipa.AuthenticateClient (section 6.3.2.2).
+ * getBoundProfilePackageResponseEsipa answers ESipa.GetBoundProfilePackage
+ * (section 6.3.2.3). cancelSessionResponseEsipa answers ESipa.CancelSession
+ * (section 6.3.2.5). transferEimPackageRequest is the eIM calling
+ * ESipa.TransferEimPackage, which the IPA provides (section 6.3.3.1).
+ * getEimPackageResponse answers ESipa.GetEimPackage (section 6.3.2.6).
+ * provideEimPackageResultResponse answers ESipa.ProvideEimPackageResult
+ * (section 6.3.2.7).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

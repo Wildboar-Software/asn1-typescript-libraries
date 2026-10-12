@@ -13,7 +13,15 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
 /**
  * @summary AuthenticateResponseOk
  * @description
- * 
+ *
+ * Full success result of ES10b.AuthenticateServer. EUICCInfo2 inside
+ * euiccSigned1 follows section 5.9.2. An IPA with minimizeEsipaBytes should
+ * re-encode this into CompactAuthenticateResponseOk before
+ * ESipa.AuthenticateClient, omitting the eUICC certificate, the EUM
+ * certificate, or both, and sending only the non-static parts of euiccInfo2.
+ *
+ * SGP.32 v1.2, sections 5.9.6 and 5.14.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +40,46 @@ class AuthenticateResponseOk {
     constructor (
         /**
          * @summary `euiccSigned1`.
+         * @description
+         *
+         * Information signed by the eUICC for ES10b.AuthenticateServer, including the
+         * Transaction ID, server address, server challenge, euiccInfo2, and
+         * ctxParams1.
+         *
+         * SGP.32 v1.2, section 5.14.3.
          * @public
          * @readonly
          */
         readonly euiccSigned1: EuiccSigned1,
         /**
          * @summary `euiccSignature1`.
+         * @description
+         *
+         * eUICC signature EUICC_Sign1 (tag '5F37') on EuiccSigned1.
+         *
+         * SGP.32 v1.2, section 5.14.3.
          * @public
          * @readonly
          */
         readonly euiccSignature1: OCTET_STRING,
         /**
          * @summary `euiccCertificate`.
+         * @description
+         *
+         * eUICC certificate CERT.EUICC.ECDSA, signed by the EUM.
+         *
+         * SGP.32 v1.2, section 5.14.3.
          * @public
          * @readonly
          */
         readonly euiccCertificate: Certificate,
         /**
          * @summary `eumCertificate`.
+         * @description
+         *
+         * EUM certificate CERT.EUM.ECDSA, signed by the requested CI.
+         *
+         * SGP.32 v1.2, section 5.14.3.
          * @public
          * @readonly
          */

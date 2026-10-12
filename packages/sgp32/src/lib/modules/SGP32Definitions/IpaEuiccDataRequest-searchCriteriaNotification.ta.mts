@@ -12,6 +12,13 @@ import { type NotificationEvent, _decode_NotificationEvent, _encode_Notification
  * @summary IpaEuiccDataRequest_searchCriteriaNotification
  * @description
  * 
+ * Notification filter, applied only when `tagList` contains `'A0'`. Select
+ * `seqNumber` to return the stored Notification with that sequence number,
+ * when one is stored. Select `profileManagementOperation` to return every
+ * stored Notification whose type has the corresponding bit set to 1. The type
+ * `notificationInstall` includes `ProfileInstallationResult`. SGP.32 v1.2,
+ * sections 2.11.1.2 and 5.9.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

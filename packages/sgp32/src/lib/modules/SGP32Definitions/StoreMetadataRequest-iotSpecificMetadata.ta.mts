@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary StoreMetadataRequest_iotSpecificMetadata
  * @description
  * 
+ * SGP.32 v1.2 does not further define this structure. Annex C
+ * StoreMetadataRequest ends at fallbackAllowed and has no IoT-specific
+ * metadata sequence.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

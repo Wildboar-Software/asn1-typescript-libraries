@@ -12,6 +12,12 @@ import { ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDo
  * @summary ProfileDownloadTriggerResult_profileDownloadTriggerResultData
  * @description
  * 
+ * Select profileInstallationResult after ES10b.LoadBoundProfilePackage returns
+ * a Profile Installation Result. SGP.32 v1.2 section 2.11.2.3 says that object
+ * is as defined in SGP.22. Select profileDownloadError when the download
+ * produces no such result, including when the Emergency Profile is enabled.
+ * SGP.32 v1.2, section 2.11.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

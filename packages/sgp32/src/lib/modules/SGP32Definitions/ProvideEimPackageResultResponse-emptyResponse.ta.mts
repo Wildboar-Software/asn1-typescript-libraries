@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProvideEimPackageResultResponse_emptyResponse
  * @description
  * 
+ * Successful ProvideEimPackageResult response with no sequence numbers.
+ * EimAcknowledgements is optional on this response, so an empty sequence
+ * stands in when the eIM acknowledges nothing. SGP.32 v1.2, section 6.3.2.7
+ * and Table 20.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

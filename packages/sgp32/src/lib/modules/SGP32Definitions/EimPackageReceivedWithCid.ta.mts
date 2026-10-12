@@ -12,6 +12,9 @@ import { EimPackageReceivedWithCid_correlationId, _decode_EimPackageReceivedWith
  * @summary EimPackageReceivedWithCid
  * @description
  * 
+ * SGP.32 v1.2 does not further define this type. Annex C stops
+ * TransferEimPackageResponse at eimPackageReceived and eimPackageError.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +33,9 @@ class EimPackageReceivedWithCid {
     constructor (
         /**
          * @summary `correlationId`.
+         * @description
+         * SGP.32 v1.2 does not further define this component. Annex C does not define
+         * EimPackageReceivedWithCid.
          * @public
          * @readonly
          */

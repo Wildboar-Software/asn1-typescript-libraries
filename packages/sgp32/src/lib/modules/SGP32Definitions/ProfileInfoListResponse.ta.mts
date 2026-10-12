@@ -12,6 +12,15 @@ import { ProfileInfoListError, _decode_ProfileInfoListError, _encode_ProfileInfo
  * @summary ProfileInfoListResponse
  * @description
  * 
+ * Result of listProfileInfo. profileInfoListOk is the list of ProfileInfo for
+ * the installed Profiles, including Enabled or Disabled state and Profile
+ * metadata. The section 2.11.2.1 comment points at SGP.22; section 4.4
+ * replaces that ProfileInfo. profileInfoListError is selected on failure,
+ * including profileChangeOngoing when this command follows an enable, disable,
+ * or delete in the same eUICC Package. When the request has no tag list, each
+ * ProfileInfo contains the default objects listed in section 2.11.1.1. SGP.32
+ * v1.2, sections 2.11.1.1, 2.11.2.1, 5.9.14, and 5.13.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -16,6 +16,17 @@ import { EuiccPackageUnsignedErrorCode, _decode_EuiccPackageUnsignedErrorCode, _
  * @summary EuiccPackageErrorUnsigned
  * @description
  * 
+ * Unsigned error from ES10b.LoadEuiccPackage when the eimId is unknown or the
+ * eIM signature is invalid (SGP.32 v1.2, section 5.9.1). The eUICC does not
+ * store it (section 2.11.2.1). It always carries the eimId from the request.
+ * associationToken is returned on the invalid-signature path when, and only
+ * when, that eIM has a configured association token. eimTransactionId is
+ * echoed when the request contained one (section 2.11.2.1).
+ *
+ * SGP.32 v1.2 section 2.11.2.1 and Annex C define this sequence with eimId,
+ * eimTransactionId, and associationToken. They do not define
+ * euiccPackageUnsignedErrorCode.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +46,41 @@ class EuiccPackageErrorUnsigned {
     constructor (
         /**
          * @summary `eimId`.
+         * @description
+         * eimId taken from the request. Returned both when that eimId matches no
+         * Associated eIM and when the signature check fails (SGP.32 v1.2, section
+         * 5.9.1). Length 1 to 128 bytes (section 4.3).
          * @public
          * @readonly
          */
         readonly eimId: UTF8String,
         /**
          * @summary `eimTransactionId`.
+         * @description
+         * Echoed when the signed package contained eimTransactionId (SGP.32 v1.2,
+         * section 2.11.2.1). The identifier is as defined in SGP.22, which SGP.32
+         * cites from section 2.11.1.1.
          * @public
          * @readonly
          */
         readonly eimTransactionId: OPTIONAL<TransactionId>,
         /**
          * @summary `associationToken`.
+         * @description
+         * Returned on an invalid signature when this eIM has an association token
+         * configured (SGP.32 v1.2, section 5.9.1). When no token is configured, the
+         * verifier uses the value zero and this component is absent. The unknown-eimId
+         * error carries the eimId from the request.
          * @public
          * @readonly
          */
         readonly associationToken: OPTIONAL<INTEGER>,
         /**
          * @summary `euiccPackageUnsignedErrorCode`.
+         * @description
+         * SGP.32 v1.2 does not further define this component. Section 2.11.2.1 and
+         * Annex C define EuiccPackageErrorUnsigned as eimId, eimTransactionId, and
+         * associationToken.
          * @public
          * @readonly
          */

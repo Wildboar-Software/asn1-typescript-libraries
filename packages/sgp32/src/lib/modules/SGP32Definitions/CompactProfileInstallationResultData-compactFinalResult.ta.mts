@@ -10,7 +10,16 @@ import { ErrorResult, _decode_ErrorResult, _encode_ErrorResult } from "@wildboar
 /**
  * @summary CompactProfileInstallationResultData_compactFinalResult
  * @description
- * 
+ *
+ * Final outcome inside a compact Profile Installation Result.
+ *
+ * Select compactSuccessResult when installation succeeded. compactAid is bytes
+ * 14 and 15 of the ISD-P AID, and simaResponse is required when EUICCResponse
+ * differs from the 9-byte success value '30 07 A0 05 30 03 80 01 00'. Select
+ * errorResult when installation failed. ErrorResult is as defined in SGP.22.
+ *
+ * SGP.32 v1.2, section 5.14.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

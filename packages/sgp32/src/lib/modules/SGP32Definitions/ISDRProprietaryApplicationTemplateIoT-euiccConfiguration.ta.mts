@@ -11,6 +11,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ISDRProprietaryApplicationTemplateIoT_euiccConfiguration
  * @description
  * 
+ * Bits returned at ISD-R selection. `ipaeSupported` set to 1 means the eUICC
+ * supports IPA inside the eUICC. `enabledProfile` is described by the
+ * specification comment on the bit: the eUICC contains an enabled Profile.
+ * Section 3.8.4 does not add a further procedure for `enabledProfile`. SGP.32
+ * v1.2, section 3.8.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +31,9 @@ type ISDRProprietaryApplicationTemplateIoT_euiccConfiguration = BIT_STRING;
 
 /**
  * @summary ISDRProprietaryApplicationTemplateIoT_euiccConfiguration_ipaeSupported
+ * @description
+ * Set to 1 when the eUICC supports IPAe. The IoT Device MAY then activate IPAe
+ * if it supports Annex A.2. SGP.32 v1.2, section 3.8.4.
  * @constant
  */
 export
@@ -32,6 +41,8 @@ const ISDRProprietaryApplicationTemplateIoT_euiccConfiguration_ipaeSupported: nu
 
 /**
  * @summary ipaeSupported
+ * @description
+ * Set to 1 when the eUICC supports IPAe. SGP.32 v1.2, section 3.8.4.
  * @constant
  */
 export
@@ -39,6 +50,10 @@ const ipaeSupported: number = ISDRProprietaryApplicationTemplateIoT_euiccConfigu
 
 /**
  * @summary ISDRProprietaryApplicationTemplateIoT_euiccConfiguration_enabledProfile
+ * @description
+ * Set to 1 when the eUICC contains an enabled Profile, as stated by the
+ * comment on this bit. SGP.32 v1.2 section 3.8.4 does not add a further
+ * procedure for it.
  * @constant
  */
 export
@@ -46,6 +61,9 @@ const ISDRProprietaryApplicationTemplateIoT_euiccConfiguration_enabledProfile: n
 
 /**
  * @summary enabledProfile
+ * @description
+ * Set to 1 when the eUICC contains an enabled Profile. SGP.32 v1.2, section
+ * 3.8.4.
  * @constant
  */
 export

@@ -12,6 +12,11 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  * @summary GetCertsResponse_certs
  * @description
  * 
+ * Successful ES10b.GetCerts body. Both the EUM certificate and the eUICC
+ * certificate are returned, selected by `euiccCiPKId` or by the first signing
+ * CI Public Key Identifier when that input is absent. SGP.32 v1.2, section
+ * 5.9.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,16 @@ class GetCertsResponse_certs {
     constructor (
         /**
          * @summary `eumCertificate`.
+         * @description
+         * EUM certificate, tag `'A5'`. SGP.32 v1.2, section 5.9.10.
          * @public
          * @readonly
          */
         readonly eumCertificate: Certificate,
         /**
          * @summary `euiccCertificate`.
+         * @description
+         * eUICC certificate, tag `'A6'`. SGP.32 v1.2, section 5.9.10.
          * @public
          * @readonly
          */

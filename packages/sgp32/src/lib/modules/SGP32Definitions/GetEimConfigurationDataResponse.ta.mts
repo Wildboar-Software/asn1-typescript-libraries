@@ -12,6 +12,10 @@ import { EimConfigurationData, _decode_EimConfigurationData, _encode_EimConfigur
  * @summary GetEimConfigurationDataResponse
  * @description
  * 
+ * ES10b.GetEimConfigurationData response. An empty `eimConfigurationDataList`
+ * means nothing is stored, or nothing matched `searchCriteria`. SGP.32 v1.2,
+ * section 5.9.18.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +31,14 @@ class GetEimConfigurationDataResponse {
     constructor (
         /**
          * @summary `eimConfigurationDataList`.
+         * @description
+         * Stored eIM Configuration Data, filtered by `searchCriteria` when that was
+         * present. Each entry SHALL include `eimId`, `eimFqdn` when present,
+         * `eimIdType`, `trustedPublicKeyDataTls` when present, `eimSupportedProtocol`,
+         * `euiccCiPKId` when present, and `associationToken` when configured. The
+         * eUICC MAY also include either `eimPublicKey` or `eimCertificate`. The eUICC
+         * SHALL NOT include `counterValue`. The list is empty when nothing is stored
+         * or nothing matches. SGP.32 v1.2, section 5.9.18.
          * @public
          * @readonly
          */

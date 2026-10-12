@@ -12,7 +12,13 @@ import { type Octet32, _decode_Octet32, _encode_Octet32 } from "@wildboar/sgp22/
 /**
  * @summary CompactEuiccSigned2
  * @description
- * 
+ *
+ * Compact EuiccSigned2 inside a compact PrepareDownload success sent over
+ * ESipa. The eUICC signature remains on the full EuiccSigned2. The eIM
+ * restores downloadResponseOk using smdpSigned2 and hashCc it already holds.
+ *
+ * SGP.32 v1.2, section 5.14.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,23 @@ class CompactEuiccSigned2 {
     constructor (
         /**
          * @summary `euiccOtpk`.
+         * @description
+         *
+         * otPK.EUICC.ECKA (tag '5F49'). Present unless the eUICC chose bppEuiccOtpk.
+         *
+         * SGP.32 v1.2, section 5.14.2.
          * @public
          * @readonly
          */
         readonly euiccOtpk: OPTIONAL<OCTET_STRING>,
         /**
          * @summary `hashCc`.
+         * @description
+         *
+         * Hash of the confirmation code, included when the eIM has not already
+         * received that hash.
+         *
+         * SGP.32 v1.2, section 5.14.2.
          * @public
          * @readonly
          */

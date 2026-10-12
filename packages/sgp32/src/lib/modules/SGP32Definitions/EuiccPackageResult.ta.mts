@@ -13,6 +13,22 @@ import { EuiccPackageErrorUnsigned, _decode_EuiccPackageErrorUnsigned, _encode_E
  * @summary EuiccPackageResult
  * @description
  * 
+ * Response of ES10b.LoadEuiccPackage, tag 'BF51' (SGP.32 v1.2, sections
+ * 2.11.2.1 and 5.9.1).
+ *
+ * euiccPackageResultSigned is produced after the signature, EID, and counter
+ * have been accepted, including when a later PSMO or eCO stops the sequence.
+ * The eUICC keeps one or more of these signed execution results until the IPA
+ * deletes them after delivery to the eIM. When a new result exceeds the free
+ * space, the eUICC deletes stored signed results and pending Notifications
+ * starting at the lowest sequence number. When the free space is still too
+ * small, it returns the new result to the IPA and leaves it unstored.
+ *
+ * euiccPackageErrorSigned is a signed verification failure (invalid EID,
+ * replay, counter range, and the other EuiccPackageErrorCode values).
+ * euiccPackageErrorUnsigned is an unknown eimId or an invalid eIM signature.
+ * The eUICC discards both of those error results.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProfileInfo_iotSpecificProfileInfo
  * @description
  * 
+ * SGP.32 v1.2 does not further define this structure. Annex C ProfileInfo ends
+ * at fallbackAllowed and has no IoT-specific profile-info sequence.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -25,6 +25,21 @@ import { SetDefaultDpAddressResponse, _decode_SetDefaultDpAddressResponse, _enco
  * @summary EuiccResultData
  * @description
  * 
+ * One command outcome inside a signed eUICC Package Result (SGP.32 v1.2,
+ * section 2.11.2.1). The eUICC appends an entry for each PSMO or eCO it
+ * executes, in order, and stops the list at the first error (section 5.9.1).
+ *
+ * enableResult, disableResult, and deleteResult report those Profile commands.
+ * listProfileInfoResult reports listProfileInfo. getRATResult is the Rules
+ * Authorisation Table as defined in SGP.22, which the ASN.1 in section
+ * 2.11.2.1 cites. configureImmediateEnableResult reports
+ * configureImmediateEnable. addEimResult, deleteEimResult, updateEimResult,
+ * and listEimResult report those eCOs. rollbackResult reports profile
+ * rollback. setFallbackAttributeResult and unsetFallbackAttributeResult report
+ * those commands. setDefaultDpAddressResult reports setDefaultDpAddress.
+ * processingTerminated is selected when the eUICC stops the remaining commands
+ * after an error (section 5.9.1).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

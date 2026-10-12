@@ -13,6 +13,12 @@ import { EuiccPackageResultDataSigned, _decode_EuiccPackageResultDataSigned, _en
  * @summary EuiccPackageResultSigned
  * @description
  * 
+ * Signed eUICC Package execution result, kept by the eUICC until the IPA
+ * deletes it after the eIM has received it (SGP.32 v1.2, section 2.11.2.1).
+ * Produced after signature, EID, and counter verification, including when
+ * processingTerminated ends the command list early (section 5.9.1). The IPA
+ * may read it again at any time before deletion.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,25 @@ class EuiccPackageResultSigned {
     constructor (
         /**
          * @summary `euiccPackageResultDataSigned`.
+         * @description
+         * Bytes covered by euiccSignEPR, together with the association token (SGP.32
+         * v1.2, section 2.11.2.1). Holds the echoed eimId, counter, optional
+         * transaction identifier, the sequence number, and one result per executed
+         * command.
          * @public
          * @readonly
          */
         readonly euiccPackageResultDataSigned: EuiccPackageResultDataSigned,
         /**
          * @summary `euiccSignEPR`.
+         * @description
+         * eUICC signature, tag '5F37', created with SK.EUICC.ECDSA over
+         * euiccPackageResultDataSigned concatenated with the association token (SGP.32
+         * v1.2, section 2.11.2.1). When no token is configured, the value zero is
+         * used. If several signing keys exist, the key that chains to euiccCiPKId in
+         * that eIM's configuration is used. The eIM verifies the signature with
+         * PK.EUICC.ECDSA from CERT.EUICC.ECDSA and verifies that certificate (section
+         * 5.14.6).
          * @public
          * @readonly
          */

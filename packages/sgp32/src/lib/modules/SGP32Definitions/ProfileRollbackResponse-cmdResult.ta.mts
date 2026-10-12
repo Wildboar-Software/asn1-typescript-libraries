@@ -11,6 +11,8 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProfileRollbackResponse_cmdResult
  * @description
  * 
+ * Outcome of ES10b.ProfileRollback. SGP.32 v1.2, section 5.9.16.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +30,9 @@ type ProfileRollbackResponse_cmdResult = INTEGER;
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_ok
+ * @description
+ * Rollback was executed. eUICCPackageResult is present and contains the new
+ * signed result, including RollbackProfileResult. SGP.32 v1.2, section 5.9.16.
  * @constant
  * @type {number}
  */
@@ -36,6 +41,9 @@ const ProfileRollbackResponse_cmdResult_ok: ProfileRollbackResponse_cmdResult = 
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_ok
+ * @description
+ * Rollback was executed and eUICCPackageResult is present. SGP.32 v1.2,
+ * section 5.9.16.
  * @constant
  * @type {number}
  */
@@ -44,6 +52,9 @@ const ok: ProfileRollbackResponse_cmdResult = ProfileRollbackResponse_cmdResult_
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_rollbackNotAllowed
+ * @description
+ * The last enable PSMO did not grant the Rollback Mechanism. SGP.32 v1.2,
+ * section 5.9.16.
  * @constant
  * @type {number}
  */
@@ -52,6 +63,9 @@ const ProfileRollbackResponse_cmdResult_rollbackNotAllowed: ProfileRollbackRespo
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_rollbackNotAllowed
+ * @description
+ * The eIM did not grant rollback on the last enable. SGP.32 v1.2, section
+ * 5.9.16.
  * @constant
  * @type {number}
  */
@@ -60,6 +74,9 @@ const rollbackNotAllowed: ProfileRollbackResponse_cmdResult = ProfileRollbackRes
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_catBusy
+ * @description
+ * A proactive session is still open. The eUICC may return this and stop. If it
+ * continues, it ends that session. SGP.32 v1.2, section 5.9.16.
  * @constant
  * @type {number}
  */
@@ -68,6 +85,8 @@ const ProfileRollbackResponse_cmdResult_catBusy: ProfileRollbackResponse_cmdResu
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_catBusy
+ * @description
+ * A proactive session is still open. SGP.32 v1.2, section 5.9.16.
  * @constant
  * @type {number}
  */
@@ -76,6 +95,8 @@ const catBusy: ProfileRollbackResponse_cmdResult = ProfileRollbackResponse_cmdRe
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_commandError
+ * @description
+ * No Profile is currently enabled. SGP.32 v1.2, section 5.9.16.
  * @constant
  * @type {number}
  */
@@ -84,6 +105,8 @@ const ProfileRollbackResponse_cmdResult_commandError: ProfileRollbackResponse_cm
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_commandError
+ * @description
+ * No Profile is currently enabled. SGP.32 v1.2, section 5.9.16.
  * @constant
  * @type {number}
  */
@@ -92,6 +115,9 @@ const commandError: ProfileRollbackResponse_cmdResult = ProfileRollbackResponse_
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_undefinedError
+ * @description
+ * SGP.32 v1.2 lists undefinedError(127) on this result and does not further
+ * define the condition. Section 5.9.16.
  * @constant
  * @type {number}
  */
@@ -100,6 +126,8 @@ const ProfileRollbackResponse_cmdResult_undefinedError: ProfileRollbackResponse_
 
 /**
  * @summary ProfileRollbackResponse_cmdResult_undefinedError
+ * @description
+ * SGP.32 v1.2 does not further define undefinedError(127). Section 5.9.16.
  * @constant
  * @type {number}
  */
