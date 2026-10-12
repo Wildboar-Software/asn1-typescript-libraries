@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TypeMessage, _decode_TypeMessage, _encode_TypeMessage } from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
-// export { TypeMessage, TypeMessage_exercise /* IMPORTED_LONG_NAMED_INTEGER */, exercise /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_operation /* IMPORTED_LONG_NAMED_INTEGER */, operation /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_project /* IMPORTED_LONG_NAMED_INTEGER */, project /* IMPORTED_SHORT_NAMED_INTEGER */, TypeMessage_drill /* IMPORTED_LONG_NAMED_INTEGER */, drill /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TypeMessage, _encode_TypeMessage } from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
 import { MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier } from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
-// export { MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier } from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
 
 
 /**
@@ -153,7 +151,7 @@ let _cached_encoder_for_MessageType: $.ASN1Encoder<MessageType> | null = null;
  */
 export
 function _encode_MessageType (value: MessageType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MessageType) { _cached_encoder_for_MessageType = function (value: MessageType, elGetter: $.ASN1Encoder<MessageType>): _Element {
+    if (!_cached_encoder_for_MessageType) { _cached_encoder_for_MessageType = function (value: MessageType): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TypeMessage, $.BER)(value.type_, $.BER);

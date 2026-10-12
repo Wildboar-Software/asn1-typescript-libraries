@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OtherRecipientDesignator_type, _decode_OtherRecipientDesignator_type, _encode_OtherRecipientDesignator_type } from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
-// export { OtherRecipientDesignator_type, OtherRecipientDesignator_type_primary /* IMPORTED_LONG_NAMED_INTEGER */, primary /* IMPORTED_SHORT_NAMED_INTEGER */, OtherRecipientDesignator_type_copy /* IMPORTED_LONG_NAMED_INTEGER */, copy /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_OtherRecipientDesignator_type, _encode_OtherRecipientDesignator_type } from "../MMSHeadingExtensions/OtherRecipientDesignator-type.ta.mjs";
 import { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
-// export { MilitaryString, _decode_MilitaryString, _encode_MilitaryString } from "../MMSHeadingExtensions/MilitaryString.ta.mjs";
 
 
 /**
@@ -152,7 +150,7 @@ let _cached_encoder_for_OtherRecipientDesignator: $.ASN1Encoder<OtherRecipientDe
  */
 export
 function _encode_OtherRecipientDesignator (value: OtherRecipientDesignator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OtherRecipientDesignator) { _cached_encoder_for_OtherRecipientDesignator = function (value: OtherRecipientDesignator, elGetter: $.ASN1Encoder<OtherRecipientDesignator>): _Element {
+    if (!_cached_encoder_for_OtherRecipientDesignator) { _cached_encoder_for_OtherRecipientDesignator = function (value: OtherRecipientDesignator): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_OtherRecipientDesignator_type, $.BER)(value.type_, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MilitaryString, $.BER)(value.designator, $.BER)

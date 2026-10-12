@@ -5,8 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+
+import {
+    ReportDeliveryEnvelope,
+    _decode_ReportDeliveryEnvelope,
+    _encode_ReportDeliveryEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
 import { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
-// export { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
 
 
 /**
@@ -75,7 +80,7 @@ class ReceiveReportArgument {
  */
 export
 const _root_component_type_list_1_spec_for_ReceiveReportArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("undelivered-object", true, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -151,7 +156,7 @@ let _cached_encoder_for_ReceiveReportArgument: $.ASN1Encoder<ReceiveReportArgume
  */
 export
 function _encode_ReceiveReportArgument (value: ReceiveReportArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReceiveReportArgument) { _cached_encoder_for_ReceiveReportArgument = function (value: ReceiveReportArgument, elGetter: $.ASN1Encoder<ReceiveReportArgument>): _Element {
+    if (!_cached_encoder_for_ReceiveReportArgument) { _cached_encoder_for_ReceiveReportArgument = function (value: ReceiveReportArgument): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ReportDeliveryEnvelope, $.BER)(value.envelope, $.BER);

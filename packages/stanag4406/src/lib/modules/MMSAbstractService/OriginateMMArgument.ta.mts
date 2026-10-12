@@ -4,8 +4,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+
+import {
+    MessageSubmissionEnvelope,
+    _decode_MessageSubmissionEnvelope,
+    _encode_MessageSubmissionEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
 import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
-// export { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
 
 
 /**
@@ -74,7 +79,7 @@ class OriginateMMArgument {
  */
 export
 const _root_component_type_list_1_spec_for_OriginateMMArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -150,7 +155,7 @@ let _cached_encoder_for_OriginateMMArgument: $.ASN1Encoder<OriginateMMArgument> 
  */
 export
 function _encode_OriginateMMArgument (value: OriginateMMArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginateMMArgument) { _cached_encoder_for_OriginateMMArgument = function (value: OriginateMMArgument, elGetter: $.ASN1Encoder<OriginateMMArgument>): _Element {
+    if (!_cached_encoder_for_OriginateMMArgument) { _cached_encoder_for_OriginateMMArgument = function (value: OriginateMMArgument): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MessageSubmissionEnvelope, $.BER)(value.envelope, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MM, $.BER)(value.content, $.BER)

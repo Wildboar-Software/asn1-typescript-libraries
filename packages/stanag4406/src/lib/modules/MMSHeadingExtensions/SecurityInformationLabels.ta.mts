@@ -5,8 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+
+import {
+    SecurityLabel,
+    _decode_SecurityLabel,
+    _encode_SecurityLabel,
+} from "@wildboar/x400/MTSAbstractService";
 import { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
-// export { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
 
 
 /**
@@ -85,8 +90,8 @@ class SecurityInformationLabels {
  */
 export
 const _root_component_type_list_1_spec_for_SecurityInformationLabels: $.ComponentSpec[] = [
-    /* FIXME: content-security-label COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: heading-security-label COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("content-security-label", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("heading-security-label", true, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("body-part-security-labels", true, $.hasTag(_TagClass.context, 2))
 ];
 
@@ -161,7 +166,7 @@ let _cached_encoder_for_SecurityInformationLabels: $.ASN1Encoder<SecurityInforma
  */
 export
 function _encode_SecurityInformationLabels (value: SecurityInformationLabels, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SecurityInformationLabels) { _cached_encoder_for_SecurityInformationLabels = function (value: SecurityInformationLabels, elGetter: $.ASN1Encoder<SecurityInformationLabels>): _Element {
+    if (!_cached_encoder_for_SecurityInformationLabels) { _cached_encoder_for_SecurityInformationLabels = function (value: SecurityInformationLabels): _Element {
     const _components: _Element[] = new Array(3);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SecurityLabel, $.BER)(value.content_security_label, $.BER);

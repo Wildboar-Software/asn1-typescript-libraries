@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
 import { Acp127NotificationResponse, _decode_Acp127NotificationResponse, _encode_Acp127NotificationResponse } from "../MMSOtherNotificationTypeExtensions/Acp127NotificationResponse.ta.mjs";
-// export { Acp127NotificationResponse, _decode_Acp127NotificationResponse, _encode_Acp127NotificationResponse } from "../MMSOtherNotificationTypeExtensions/Acp127NotificationResponse.ta.mjs";
 import { id_nato_mmhs_nat_acp127_notification_response } from "../MMSObjectIdentifiers/id-nato-mmhs-nat-acp127-notification-response.va.mjs";
-// export { id_nato_mmhs_nat_acp127_notification_response } from "../MMSObjectIdentifiers/id-nato-mmhs-nat-acp127-notification-response.va.mjs";
 
 
 /**

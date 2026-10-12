@@ -4,8 +4,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+
+import {
+    MessageDeliveryEnvelope,
+    _decode_MessageDeliveryEnvelope,
+    _encode_MessageDeliveryEnvelope,
+} from "@wildboar/x400/MTSAbstractService";
 import { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
-// export { MM, _decode_MM, _encode_MM } from "../MMSInformationObjects/MM.ta.mjs";
 
 
 /**
@@ -74,7 +79,7 @@ class ReceiveMMArgument {
  */
 export
 const _root_component_type_list_1_spec_for_ReceiveMMArgument: $.ComponentSpec[] = [
-    /* FIXME: envelope COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("envelope", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("content", false, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -150,7 +155,7 @@ let _cached_encoder_for_ReceiveMMArgument: $.ASN1Encoder<ReceiveMMArgument> | nu
  */
 export
 function _encode_ReceiveMMArgument (value: ReceiveMMArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReceiveMMArgument) { _cached_encoder_for_ReceiveMMArgument = function (value: ReceiveMMArgument, elGetter: $.ASN1Encoder<ReceiveMMArgument>): _Element {
+    if (!_cached_encoder_for_ReceiveMMArgument) { _cached_encoder_for_ReceiveMMArgument = function (value: ReceiveMMArgument): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MessageDeliveryEnvelope, $.BER)(value.envelope, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MM, $.BER)(value.content, $.BER)

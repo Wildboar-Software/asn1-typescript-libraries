@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OtherRecipientDesignator, _decode_OtherRecipientDesignator, _encode_OtherRecipientDesignator } from "../MMSHeadingExtensions/OtherRecipientDesignator.ta.mjs";
-// export { OtherRecipientDesignator, _decode_OtherRecipientDesignator, _encode_OtherRecipientDesignator } from "../MMSHeadingExtensions/OtherRecipientDesignator.ta.mjs";
 
 
 /**

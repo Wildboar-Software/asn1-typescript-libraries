@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompressionAlgorithmIdentifier, _decode_CompressionAlgorithmIdentifier, _encode_CompressionAlgorithmIdentifier } from "../CompressedDataType/CompressionAlgorithmIdentifier.ta.mjs";
-// export { CompressionAlgorithmIdentifier, _decode_CompressionAlgorithmIdentifier, _encode_CompressionAlgorithmIdentifier } from "../CompressedDataType/CompressionAlgorithmIdentifier.ta.mjs";
 import { CompressedContentInfo, _decode_CompressedContentInfo, _encode_CompressedContentInfo } from "../CompressedDataType/CompressedContentInfo.ta.mjs";
-// export { CompressedContentInfo, _decode_CompressedContentInfo, _encode_CompressedContentInfo } from "../CompressedDataType/CompressedContentInfo.ta.mjs";
 
 
 /**
@@ -125,10 +123,8 @@ function _decode_CompressedData (el: _Element): CompressedData {
     }
     sequence[0].name = "compressionAlgorithm";
     sequence[1].name = "compressedContentInfo";
-    let compressionAlgorithm!: CompressionAlgorithmIdentifier;
-    let compressedContentInfo!: CompressedContentInfo;
-    compressionAlgorithm = _decode_CompressionAlgorithmIdentifier(sequence[0]);
-    compressedContentInfo = _decode_CompressedContentInfo(sequence[1]);
+    const compressionAlgorithm: CompressionAlgorithmIdentifier = _decode_CompressionAlgorithmIdentifier(sequence[0]);
+    const compressedContentInfo: CompressedContentInfo = _decode_CompressedContentInfo(sequence[1]);
     return new CompressedData(
         compressionAlgorithm,
         compressedContentInfo,
@@ -149,7 +145,7 @@ let _cached_encoder_for_CompressedData: $.ASN1Encoder<CompressedData> | null = n
  */
 export
 function _encode_CompressedData (value: CompressedData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompressedData) { _cached_encoder_for_CompressedData = function (value: CompressedData, elGetter: $.ASN1Encoder<CompressedData>): _Element {
+    if (!_cached_encoder_for_CompressedData) { _cached_encoder_for_CompressedData = function (value: CompressedData): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_CompressionAlgorithmIdentifier(value.compressionAlgorithm, $.BER),
         /* REQUIRED   */ _encode_CompressedContentInfo(value.compressedContentInfo, $.BER)

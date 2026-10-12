@@ -6,6 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
+import {
+    SupplementaryInformation,
+    _decode_SupplementaryInformation,
+    _encode_SupplementaryInformation,
+} from "@wildboar/x400/MTSAbstractService";
+
 
 
 /**
@@ -75,7 +81,7 @@ class ChangeAutoAcknowledgementArgument {
 export
 const _root_component_type_list_1_spec_for_ChangeAutoAcknowledgementArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("auto-acknowledge-MMs", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: auto-acknowledge-suppl-receipt-info COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("auto-acknowledge-suppl-receipt-info", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -150,7 +156,7 @@ let _cached_encoder_for_ChangeAutoAcknowledgementArgument: $.ASN1Encoder<ChangeA
  */
 export
 function _encode_ChangeAutoAcknowledgementArgument (value: ChangeAutoAcknowledgementArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeAutoAcknowledgementArgument) { _cached_encoder_for_ChangeAutoAcknowledgementArgument = function (value: ChangeAutoAcknowledgementArgument, elGetter: $.ASN1Encoder<ChangeAutoAcknowledgementArgument>): _Element {
+    if (!_cached_encoder_for_ChangeAutoAcknowledgementArgument) { _cached_encoder_for_ChangeAutoAcknowledgementArgument = function (value: ChangeAutoAcknowledgementArgument): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeBoolean, $.BER)(value.auto_acknowledge_MMs, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_SupplementaryInformation, $.BER)(value.auto_acknowledge_suppl_receipt_info, $.BER)

@@ -150,7 +150,7 @@ let _cached_encoder_for_ChangeAutoDiscardArgument: $.ASN1Encoder<ChangeAutoDisca
  */
 export
 function _encode_ChangeAutoDiscardArgument (value: ChangeAutoDiscardArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeAutoDiscardArgument) { _cached_encoder_for_ChangeAutoDiscardArgument = function (value: ChangeAutoDiscardArgument, elGetter: $.ASN1Encoder<ChangeAutoDiscardArgument>): _Element {
+    if (!_cached_encoder_for_ChangeAutoDiscardArgument) { _cached_encoder_for_ChangeAutoDiscardArgument = function (value: ChangeAutoDiscardArgument): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeBoolean, $.BER)(value.auto_discard_expired_MMs, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeBoolean, $.BER)(value.auto_discard_obsolete_MMs, $.BER)

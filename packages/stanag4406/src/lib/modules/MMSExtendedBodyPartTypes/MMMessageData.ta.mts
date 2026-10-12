@@ -4,6 +4,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
+import {
+    IPM,
+    _decode_IPM,
+    _encode_IPM,
+} from "@wildboar/x400/IPMSInformationObjects";
+
 
 
 /**

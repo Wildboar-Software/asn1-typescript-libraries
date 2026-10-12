@@ -122,10 +122,8 @@ function _decode_DistributionExtensionField (el: _Element): DistributionExtensio
     }
     sequence[0].name = "dist-type";
     sequence[1].name = "dist-value";
-    let dist_type!: OBJECT_IDENTIFIER;
-    let dist_value!: _Element;
-    dist_type = $._decodeObjectIdentifier(sequence[0]);
-    dist_value = $._decodeAny(sequence[1]);
+    const dist_type: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const dist_value: _Element = $._decodeAny(sequence[1]);
     return new DistributionExtensionField(
         dist_type,
         dist_value,
@@ -146,7 +144,7 @@ let _cached_encoder_for_DistributionExtensionField: $.ASN1Encoder<DistributionEx
  */
 export
 function _encode_DistributionExtensionField (value: DistributionExtensionField, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DistributionExtensionField) { _cached_encoder_for_DistributionExtensionField = function (value: DistributionExtensionField, elGetter: $.ASN1Encoder<DistributionExtensionField>): _Element {
+    if (!_cached_encoder_for_DistributionExtensionField) { _cached_encoder_for_DistributionExtensionField = function (value: DistributionExtensionField): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeObjectIdentifier(value.dist_type, $.BER),
         /* REQUIRED   */ $._encodeAny(value.dist_value, $.BER)

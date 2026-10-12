@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
 import { _decode_MMHSPrecedence, _encode_MMHSPrecedence, MMHSPrecedence } from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
-// export { MMHSPrecedence, MMHSPrecedence_deferred /* IMPORTED_LONG_NAMED_INTEGER */, deferred /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_routine /* IMPORTED_LONG_NAMED_INTEGER */, routine /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_priority /* IMPORTED_LONG_NAMED_INTEGER */, priority /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_immediate /* IMPORTED_LONG_NAMED_INTEGER */, immediate /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_flash /* IMPORTED_LONG_NAMED_INTEGER */, flash /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_override /* IMPORTED_LONG_NAMED_INTEGER */, override /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_ecp /* IMPORTED_LONG_NAMED_INTEGER */, ecp /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_critic /* IMPORTED_LONG_NAMED_INTEGER */, critic /* IMPORTED_SHORT_NAMED_INTEGER */, MMHSPrecedence_override_2 /* IMPORTED_LONG_NAMED_INTEGER */, override_2 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MMHSPrecedence, _encode_MMHSPrecedence } from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
 import { id_nato_mmhs_hat_copy_precedence } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-copy-precedence.va.mjs";
-// export { id_nato_mmhs_hat_copy_precedence } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-copy-precedence.va.mjs";
 
 
 /**

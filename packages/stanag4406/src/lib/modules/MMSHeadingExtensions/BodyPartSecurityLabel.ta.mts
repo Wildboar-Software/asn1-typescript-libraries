@@ -5,8 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+
+import {
+    SecurityLabel,
+    _decode_SecurityLabel,
+    _encode_SecurityLabel,
+} from "@wildboar/x400/MTSAbstractService";
 import { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPartSequenceNumber } from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
-// export { BodyPartSequenceNumber, _decode_BodyPartSequenceNumber, _encode_BodyPartSequenceNumber } from "../MMSHeadingExtensions/BodyPartSequenceNumber.ta.mjs";
 
 
 /**
@@ -75,7 +80,7 @@ class BodyPartSecurityLabel {
  */
 export
 const _root_component_type_list_1_spec_for_BodyPartSecurityLabel: $.ComponentSpec[] = [
-    /* FIXME: body-part-security-label COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("body-part-security-label", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("body-part-sequence-number", true, $.hasTag(_TagClass.context, 1))
 ];
 
@@ -151,7 +156,7 @@ let _cached_encoder_for_BodyPartSecurityLabel: $.ASN1Encoder<BodyPartSecurityLab
  */
 export
 function _encode_BodyPartSecurityLabel (value: BodyPartSecurityLabel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BodyPartSecurityLabel) { _cached_encoder_for_BodyPartSecurityLabel = function (value: BodyPartSecurityLabel, elGetter: $.ASN1Encoder<BodyPartSecurityLabel>): _Element {
+    if (!_cached_encoder_for_BodyPartSecurityLabel) { _cached_encoder_for_BodyPartSecurityLabel = function (value: BodyPartSecurityLabel): _Element {
     const _components: _Element[] = new Array(2);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SecurityLabel, $.BER)(value.body_part_security_label, $.BER);

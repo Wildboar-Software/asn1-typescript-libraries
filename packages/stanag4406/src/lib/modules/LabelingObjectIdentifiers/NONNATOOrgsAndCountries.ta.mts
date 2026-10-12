@@ -564,35 +564,8 @@ const NONNATOOrgsAndCountries_western_European_Union: NONNATOOrgsAndCountries = 
  */
 export
 const western_European_Union: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_western_European_Union; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_NONNATOOrgsAndCountries: $.ASN1Decoder<NONNATOOrgsAndCountries> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NONNATOOrgsAndCountries
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NONNATOOrgsAndCountries (el: _Element): NONNATOOrgsAndCountries {
-    if (!_cached_decoder_for_NONNATOOrgsAndCountries) { _cached_decoder_for_NONNATOOrgsAndCountries = $._decodeInteger; }
-    return _cached_decoder_for_NONNATOOrgsAndCountries(el);
-}
-
-let _cached_encoder_for_NONNATOOrgsAndCountries: $.ASN1Encoder<NONNATOOrgsAndCountries> | null = null;
-
-/**
- * @summary Encodes a(n) NONNATOOrgsAndCountries into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NONNATOOrgsAndCountries, encoded as an ASN.1 Element.
- */
-export
-function _encode_NONNATOOrgsAndCountries (value: NONNATOOrgsAndCountries, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NONNATOOrgsAndCountries) { _cached_encoder_for_NONNATOOrgsAndCountries = $._encodeInteger; }
-    return _cached_encoder_for_NONNATOOrgsAndCountries(value, elGetter);
-}
+export const _decode_NONNATOOrgsAndCountries: $.ASN1Decoder<NONNATOOrgsAndCountries> = $._decodeInteger;
+export const _encode_NONNATOOrgsAndCountries: $.ASN1Encoder<NONNATOOrgsAndCountries> = $._encodeInteger;
 
 
 /* eslint-enable */

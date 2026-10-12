@@ -5,6 +5,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
+import {
+    ProbeSubmissionIdentifier,
+    _decode_ProbeSubmissionIdentifier,
+    _encode_ProbeSubmissionIdentifier,
+    ProbeSubmissionTime,
+    _decode_ProbeSubmissionTime,
+    _encode_ProbeSubmissionTime,
+} from "@wildboar/x400/MTSAbstractService";
+
 
 
 /**
@@ -73,8 +82,8 @@ class OriginateProbeResult {
  */
 export
 const _root_component_type_list_1_spec_for_OriginateProbeResult: $.ComponentSpec[] = [
-    /* FIXME: submission-identifier COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: submission-time COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("submission-identifier", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("submission-time", false, $.hasTag(_TagClass.context, 1))
 ];
 
 /**
@@ -149,7 +158,7 @@ let _cached_encoder_for_OriginateProbeResult: $.ASN1Encoder<OriginateProbeResult
  */
 export
 function _encode_OriginateProbeResult (value: OriginateProbeResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginateProbeResult) { _cached_encoder_for_OriginateProbeResult = function (value: OriginateProbeResult, elGetter: $.ASN1Encoder<OriginateProbeResult>): _Element {
+    if (!_cached_encoder_for_OriginateProbeResult) { _cached_encoder_for_OriginateProbeResult = function (value: OriginateProbeResult): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ProbeSubmissionIdentifier, $.BER)(value.submission_identifier, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_ProbeSubmissionTime, $.BER)(value.submission_time, $.BER)

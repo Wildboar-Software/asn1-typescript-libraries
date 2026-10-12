@@ -4,6 +4,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
+import {
+    ORDescriptor,
+    _decode_ORDescriptor,
+    _encode_ORDescriptor,
+} from "@wildboar/x400/IPMSInformationObjects";
+
 
 
 /**

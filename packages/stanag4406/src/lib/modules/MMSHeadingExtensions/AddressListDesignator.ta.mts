@@ -5,10 +5,14 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+
+import {
+    ORDescriptor,
+    _decode_ORDescriptor,
+    _encode_ORDescriptor,
+} from "@wildboar/x400/IPMSInformationObjects";
 import { _decode_AddressListDesignator_type, _encode_AddressListDesignator_type, AddressListDesignator_type } from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
-// export { AddressListDesignator_type, AddressListDesignator_type_primaryAddressList /* IMPORTED_LONG_NAMED_INTEGER */, primaryAddressList /* IMPORTED_SHORT_NAMED_INTEGER */, AddressListDesignator_type_copyAddressList /* IMPORTED_LONG_NAMED_INTEGER */, copyAddressList /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AddressListDesignator_type, _encode_AddressListDesignator_type } from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
 import { _decode_AddressListRequest, _encode_AddressListRequest, AddressListRequest } from "../MMSHeadingExtensions/AddressListRequest.ta.mjs";
-// export { AddressListRequest, AddressListRequest_action /* IMPORTED_LONG_NAMED_INTEGER */, action /* IMPORTED_SHORT_NAMED_INTEGER */, AddressListRequest_info /* IMPORTED_LONG_NAMED_INTEGER */, info /* IMPORTED_SHORT_NAMED_INTEGER */, AddressListRequest_both /* IMPORTED_LONG_NAMED_INTEGER */, both /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AddressListRequest, _encode_AddressListRequest } from "../MMSHeadingExtensions/AddressListRequest.ta.mjs";
 
 
 /**
@@ -96,7 +100,7 @@ class AddressListDesignator {
 export
 const _root_component_type_list_1_spec_for_AddressListDesignator: $.ComponentSpec[] = [
     new $.ComponentSpec("type", false, $.hasTag(_TagClass.context, 0)),
-    /* FIXME: listName COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("listName", false, $.hasTag(_TagClass.context, 1)),
     new $.ComponentSpec("notificationRequest", true, $.hasTag(_TagClass.context, 2)),
     new $.ComponentSpec("replyRequest", true, $.hasTag(_TagClass.context, 3))
 ];
@@ -179,7 +183,7 @@ let _cached_encoder_for_AddressListDesignator: $.ASN1Encoder<AddressListDesignat
  */
 export
 function _encode_AddressListDesignator (value: AddressListDesignator, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddressListDesignator) { _cached_encoder_for_AddressListDesignator = function (value: AddressListDesignator, elGetter: $.ASN1Encoder<AddressListDesignator>): _Element {
+    if (!_cached_encoder_for_AddressListDesignator) { _cached_encoder_for_AddressListDesignator = function (value: AddressListDesignator): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_AddressListDesignator_type, $.BER)(value.type_, $.BER);

@@ -1,9 +1,19 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+
+import {
+    Body,
+    _decode_Body,
+    _encode_Body,
+    Heading,
+    _decode_Heading,
+    _encode_Heading,
+} from "@wildboar/x400/IPMSInformationObjects";
 
 
 
@@ -72,8 +82,8 @@ class MM {
  */
 export
 const _root_component_type_list_1_spec_for_MM: $.ComponentSpec[] = [
-    /* FIXME: mmheading COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: mmbody COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("mmheading", false, $.hasTag(_TagClass.universal, 17)),
+    new $.ComponentSpec("mmbody", false, $.hasTag(_TagClass.universal, 16))
 ];
 
 /**
@@ -119,10 +129,8 @@ function _decode_MM (el: _Element): MM {
     }
     sequence[0].name = "mmheading";
     sequence[1].name = "mmbody";
-    let mmheading!: Heading;
-    let mmbody!: Body;
-    mmheading = _decode_Heading(sequence[0]);
-    mmbody = _decode_Body(sequence[1]);
+    const mmheading: Heading = _decode_Heading(sequence[0]);
+    const mmbody: Body = _decode_Body(sequence[1]);
     return new MM(
         mmheading,
         mmbody,
@@ -143,7 +151,7 @@ let _cached_encoder_for_MM: $.ASN1Encoder<MM> | null = null;
  */
 export
 function _encode_MM (value: MM, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MM) { _cached_encoder_for_MM = function (value: MM, elGetter: $.ASN1Encoder<MM>): _Element {
+    if (!_cached_encoder_for_MM) { _cached_encoder_for_MM = function (value: MM): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Heading(value.mmheading, $.BER),
         /* REQUIRED   */ _encode_Body(value.mmbody, $.BER)

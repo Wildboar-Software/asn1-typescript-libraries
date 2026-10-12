@@ -7,6 +7,20 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
+import {
+    AutoForwardComment,
+    _decode_AutoForwardComment,
+    _encode_AutoForwardComment,
+    Heading,
+    _decode_Heading,
+    _encode_Heading,
+} from "@wildboar/x400/IPMSInformationObjects";
+import {
+    ORName,
+    _decode_ORName,
+    _encode_ORName,
+} from "@wildboar/x400/MTSAbstractService";
+
 
 
 /**
@@ -95,8 +109,8 @@ export
 const _root_component_type_list_1_spec_for_ChangeAutoForwardingArgument: $.ComponentSpec[] = [
     new $.ComponentSpec("autoforward-MMs", false, $.hasTag(_TagClass.context, 0)),
     new $.ComponentSpec("auto-forward-recipients", true, $.hasTag(_TagClass.context, 1)),
-    /* FIXME: auto-forward-heading COULD_NOT_RESOLVE_TYPE_DEF */,
-    /* FIXME: auto-forward-comment COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("auto-forward-heading", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("auto-forward-comment", true, $.hasTag(_TagClass.context, 3))
 ];
 
 /**
@@ -177,7 +191,7 @@ let _cached_encoder_for_ChangeAutoForwardingArgument: $.ASN1Encoder<ChangeAutoFo
  */
 export
 function _encode_ChangeAutoForwardingArgument (value: ChangeAutoForwardingArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeAutoForwardingArgument) { _cached_encoder_for_ChangeAutoForwardingArgument = function (value: ChangeAutoForwardingArgument, elGetter: $.ASN1Encoder<ChangeAutoForwardingArgument>): _Element {
+    if (!_cached_encoder_for_ChangeAutoForwardingArgument) { _cached_encoder_for_ChangeAutoForwardingArgument = function (value: ChangeAutoForwardingArgument): _Element {
     const _components: _Element[] = new Array(4);
     let _components_i = 0;
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeBoolean, $.BER)(value.autoforward_MMs, $.BER);
