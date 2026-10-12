@@ -12,6 +12,18 @@ import { Reject_problem, _decode_Reject_problem, _encode_Reject_problem } from "
  * @summary Reject
  * @description
  * 
+ * Report that a received component could not be processed. `invokeId` is
+ * `noInvokeId` (`absent`) when the invocation cannot be identified. `problem`
+ * selects a general, invoke, return-result, or return-error problem. General
+ * problems are detected by the Q.932 protocol entity. The other three are
+ * detected by the supplementary-service entity.
+ *
+ * These encoded problem integers are not the `RejectProblem` integers.
+ * `RejectProblem` names the constraint failures in the abstract syntax.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.3.6.1 and Table 8-7; ITU-T Rec. Q.932 (1998)
+ * Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +45,23 @@ export
 class Reject {
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Invocation that failed. Use `noInvokeId` when the invocation cannot be
+     * identified.
+     * 
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `problem`.
+     * @description
+     * 
+     * `general` is reported by the Q.932 protocol entity. `invoke`,
+     * `returnResult`, and `returnError` are reported by the
+     * supplementary-service entity.
+     * 
      * @public
      * @readonly
      */

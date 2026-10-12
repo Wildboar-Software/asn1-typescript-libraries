@@ -13,6 +13,20 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NetworkProtocolProfile
  * @description
  * 
+ * Network protocol profile (NPP). Optional component (context tag 18) included
+ * only when the Facility information element protocol profile is "networking
+ * extensions". It identifies the protocol of the service components. Omit it to
+ * indicate ROSE; a receiver that finds no NPP assumes ROSE. If the receiver
+ * does not recognize the NPP value, it discards the whole Facility information
+ * element.
+ *
+ * Named values are `acse` (19) and `dse` (32). Other integers from 0 to 254 are
+ * syntactically allowed. Q.932 does not expand the name `dse`. The definition
+ * is an extract of ISO/IEC 11582; differences are resolved in favour of ISO/IEC
+ * 11582.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §8.2.3 and Annex D, D.3.6.2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +38,11 @@ type NetworkProtocolProfile = INTEGER;
 
 /**
  * @summary NetworkProtocolProfile_acse
+ * @description
+ * 
+ * Service components are ACSE. Integer 19. Omit the NPP entirely to indicate
+ * ROSE. ITU-T Rec. Q.932 (05/1998) Annex D, Figure D.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -32,6 +51,11 @@ const NetworkProtocolProfile_acse: NetworkProtocolProfile = 19; /* LONG_NAMED_IN
 
 /**
  * @summary NetworkProtocolProfile_acse
+ * @description
+ * 
+ * Service components are ACSE. Integer 19. Omit the NPP entirely to indicate
+ * ROSE. ITU-T Rec. Q.932 (05/1998) Annex D, Figure D.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -40,6 +64,11 @@ const acse: NetworkProtocolProfile = NetworkProtocolProfile_acse; /* SHORT_NAMED
 
 /**
  * @summary NetworkProtocolProfile_dse
+ * @description
+ * 
+ * Named profile integer 32. Q.932 does not expand the name `dse`. ITU-T Rec.
+ * Q.932 (05/1998) Annex D, Figure D.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -48,6 +77,11 @@ const NetworkProtocolProfile_dse: NetworkProtocolProfile = 32; /* LONG_NAMED_INT
 
 /**
  * @summary NetworkProtocolProfile_dse
+ * @description
+ * 
+ * Named profile integer 32. Q.932 does not expand the name `dse`. ITU-T Rec.
+ * Q.932 (05/1998) Annex D, Figure D.2.
+ * 
  * @constant
  * @type {number}
  */

@@ -12,6 +12,23 @@ import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-El
  * @summary PresentedAddressUnscreened
  * @description
  * 
+ * Address, without a screening indicator, together with whether it may be
+ * presented.
+ *
+ * This module spells the interworking alternative
+ * `numberNotAvailableDueTolnterworking`. Amendment 1 Table C-1 bis spells it
+ * `numberNotAvailableDueToInterworking` (context tag 2).
+ *
+ * `presentationAllowedAddress` includes the address and allows presentation.
+ * `presentationRestricted` is NULL: presentation is restricted and no address
+ * is included. `presentationRestrictedAddress` includes the address but
+ * restricts presentation. `numberNotAvailableDueTolnterworking` is NULL:
+ * interworking left no number to present.
+ *
+ * Annex C says these types are imported by the Q.95x-series Recommendations.
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

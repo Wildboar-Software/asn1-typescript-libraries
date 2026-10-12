@@ -10,6 +10,13 @@ import { ROS, _decode_ROS, _encode_ROS } from "../Facility-Information-Element-C
  * @summary Components
  * @description
  * 
+ * Service component in octet group 4 of a Facility information element for the
+ * Remote Operations protocol profile. The only alternative is one ROSE PDU
+ * (`gfpROS`) whose invoke identifiers use `GFPInvokeIDSet`.
+ *
+ * ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis. See `ROS` for how
+ * components are carried and how errors are reported.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

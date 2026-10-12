@@ -6,6 +6,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary notAvailable
  * @description
  *
+ * Q.932 §6.4.2 calls this condition "function not available". Local error code
+ * 3, imported from ITU-T Q.950 general-errors-list.
+ *
  * Imported by Explicit-Network-Controlled-Channel-Reservation from
  * ITU-T Q.950 General-Error-List. The user has subscribed to this service,
  * but the requested service is not available combined with the basic service

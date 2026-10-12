@@ -12,6 +12,29 @@ import { userNotSubscribed } from "../Explicit-Network-Controlled-Channel-Reserv
  * @summary explicitReservationCreationControl
  * @description
  * 
+ * Create an explicit network-side channel reservation for the data-link
+ * connection endpoint (CEI). Local operation code 20. The user sends the invoke
+ * in a Facility information element in a call-related transport message.
+ *
+ * `noReservationRequired` asks for no reservation.
+ * `reservationRequiredWithReservationIndicator` asks the network to allocate a
+ * reservation and return a `ReservationIndicator`.
+ * `reservationRequiredWithoutReservationIndicator` asks for a reservation with
+ * no indicator. If the invoke includes no argument, the network assumes
+ * reservation required without an indicator.
+ *
+ * When the invoke is carried in RELEASE, RELEASE COMPLETE, HOLD, or HOLD
+ * ACKNOWLEDGE, a channel that those messages release is not given to another
+ * call if the reservation needs it.
+ *
+ * Errors: `maximumNumberOfReservationsReached` (the maximum, default one,
+ * already exists for this CEI), `notAvailable`, `userNotSubscribed`, and
+ * `unwantedReservationCreated`. On success the user retains the indicator when
+ * one is returned.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.1; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

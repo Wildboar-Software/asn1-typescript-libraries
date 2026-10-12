@@ -6,6 +6,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary noExplicitReservationExistsOrInvalidReservationIndicator
  * @description
  * 
+ * No explicit reservation exists for this CEI, or the `ReservationIndicator` is
+ * not the one stored for the reservation. Local error code 34. Returned by
+ * reservation management and cancellation.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.2 and §6.4.2.3; ITU-T Rec. Q.932 (1998)
+ * Amd.1 (06/2000) Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

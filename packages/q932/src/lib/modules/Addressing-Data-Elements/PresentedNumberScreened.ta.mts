@@ -12,6 +12,20 @@ import { NumberScreened, _decode_NumberScreened, _encode_NumberScreened } from "
  * @summary PresentedNumberScreened
  * @description
  * 
+ * Screened number, without a subaddress, together with whether it may be
+ * presented.
+ *
+ * `presentationAllowedNumber` includes the screened number and allows
+ * presentation. `presentationRestricted` is NULL: presentation is restricted
+ * and no number is included. `presentationRestrictedNumber` includes the
+ * screened number but restricts presentation.
+ * `numberNotAvailableDueToInterworking` is NULL: interworking left no number
+ * to present.
+ *
+ * Annex C says these types are imported by the Q.95x-series Recommendations.
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

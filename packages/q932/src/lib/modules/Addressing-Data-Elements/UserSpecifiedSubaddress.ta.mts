@@ -13,6 +13,12 @@ import { SubaddressInformation, _decode_SubaddressInformation, _encode_Subaddres
  * @summary UserSpecifiedSubaddress
  * @description
  * 
+ * User-specified subaddress. Not the recommended form of `PartySubaddress`.
+ * `oddCountIndicator` is included when the subaddress is coded in BCD.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,20 @@ export
 class UserSpecifiedSubaddress {
     /**
      * @summary `subaddressInformation`.
+     * @description
+     * 
+     * Subaddress octets, coded according to user requirements.
+     * 
      * @public
      * @readonly
      */
     readonly subaddressInformation: SubaddressInformation;
     /**
      * @summary `oddCountIndicator`.
+     * @description
+     * 
+     * Present when the subaddress is coded in BCD.
+     * 
      * @public
      * @readonly
      */

@@ -14,6 +14,29 @@ import { Reject, _decode_Reject, _encode_Reject } from "../Facility-Information-
  * @summary ROS
  * @description
  * 
+ * One ROSE component carried in octet group 4 of a Facility information element
+ * when octet 3 is coded "Remote Operations Protocol". A component may be
+ * repeated. Several components in one Facility information element are treated
+ * as several Facility information elements in one message.
+ *
+ * An invoke identifier has meaning only inside the call reference that carries
+ * it, including the dummy call reference. The same identifier sent both ways at
+ * once can make a later reject ambiguous. Q.932 does not specify how to keep
+ * identifiers from being reused while a class 3 or class 5 operation can still
+ * return an error or a reject, or how to separate the dummy call reference on
+ * the broadcast CEI from the same value on a specific CEI.
+ *
+ * If the operation is not implemented, return a reject reporting unrecognized
+ * operation. That reject does not change handling of the message or of its
+ * other information elements. If the operation is known but is not defined for
+ * the message that carried it, return the Q.950 error "procedural error". An
+ * invalid protocol profile is a Q.931 information-element error (no STATUS on
+ * connectionless transport). An invalid profile in REGISTER discards the
+ * REGISTER contents and returns RELEASE COMPLETE with cause #100.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.3.6.1, §8.2.3, §8.2.3.1.2; ITU-T Rec. Q.932
+ * (1998) Amd.1 (06/2000) Table 8-5 and Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

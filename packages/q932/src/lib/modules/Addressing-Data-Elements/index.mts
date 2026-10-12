@@ -1,7 +1,10 @@
 /**
  * @description
  *
- * Address and number types from ITU-T Q.932 Addressing-Data-Elements.
+ * Party numbers, subaddresses, screening, and presentation used by
+ * Q.95x supplementary services. ITU-T Rec. Q.932 (05/1998) Annex C,
+ * updated by Amendment 1 (06/2000) Table C-1 bis. `nsapEncodedNumber`
+ * is the Amendment 1 ATM NSAP alternative.
  *
  * @see https://www.itu.int/rec/T-REC-Q.932
  */

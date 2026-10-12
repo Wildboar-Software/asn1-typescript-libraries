@@ -14,6 +14,13 @@ import { ReturnErrorProblem, _decode_ReturnErrorProblem, _encode_ReturnErrorProb
  * @summary Reject_problem
  * @description
  * 
+ * Which kind of problem a reject reports. `general` is detected by the Q.932
+ * protocol entity. `invoke`, `returnResult`, and `returnError` are detected by
+ * the supplementary-service entity.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -6,6 +6,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary implicitReservationUsed
  * @description
  * 
+ * The user is not subscribed to explicit reservation management, and an
+ * implicit reservation was used instead. Section 6.4.2.2 calls this "function
+ * not subscribed – implicit reservation used". Local error code 36.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.2; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,11 @@ import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addres
  * @summary AddressInformation
  * @description
  * 
+ * Address of the source or destination entity in a network facility extension.
+ * It is a `PartyNumber`.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex D, Figure D.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,10 @@ import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Info
  * @summary ReturnResult_result
  * @description
  * 
+ * Operation code and result value inside a return result. The opcode is the
+ * code of the operation identified by the invoke identifier. ITU-T Rec. Q.932
+ * (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,20 @@ export
 class ReturnResult_result {
     /**
      * @summary `opcode`.
+     * @description
+     * 
+     * Operation code of the invocation named by `invokeId`.
+     * 
      * @public
      * @readonly
      */
     readonly opcode: Code;
     /**
      * @summary `result`.
+     * @description
+     * 
+     * Result value defined for that operation.
+     * 
      * @public
      * @readonly
      */

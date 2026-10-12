@@ -12,6 +12,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Q931InformationElement
  * @description
  * 
+ * One or more Q.931 information elements encapsulated as a single
+ * supplementary-service parameter, keeping their Q.931 coding. The tag is
+ * application class, primitive, code 0 (octet `01000000`). Every Q.931
+ * information element that is encapsulated this way is placed together in the
+ * contents. Do not encapsulate a Facility information element inside a Facility
+ * information element.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §8.2.3.1.3, Table 8-8, and Table 8-9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

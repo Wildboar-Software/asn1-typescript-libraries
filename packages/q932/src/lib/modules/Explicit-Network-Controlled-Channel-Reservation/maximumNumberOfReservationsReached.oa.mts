@@ -6,6 +6,12 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary maximumNumberOfReservationsReached
  * @description
  * 
+ * The maximum number of explicit reservations for this CEI already exists. The
+ * default maximum is one. Local error code 33.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.1; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -7,6 +7,19 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ScreeningIndicator
  * @description
  * 
+ * Result of screening a party number.
+ *
+ * `userProvidedNotScreened`: a remote user terminal supplied the number, and a
+ * network that is not the local public or local private network screened it.
+ * `userProvidedVerifiedAndPassed`: a remote user terminal or a remote private
+ * network supplied the number, and the local public or local private network
+ * screened it. `userProvidedVerifiedAndFailed` is reserved and not used.
+ * `networkProvided`: the local public or local private network supplied the
+ * number.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +53,19 @@ enum _enum_for_ScreeningIndicator {
  * @summary ScreeningIndicator
  * @description
  * 
+ * Result of screening a party number.
+ *
+ * `userProvidedNotScreened`: a remote user terminal supplied the number, and a
+ * network that is not the local public or local private network screened it.
+ * `userProvidedVerifiedAndPassed`: a remote user terminal or a remote private
+ * network supplied the number, and the local public or local private network
+ * screened it. `userProvidedVerifiedAndFailed` is reserved and not used.
+ * `networkProvided`: the local public or local private network supplied the
+ * number.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,6 +94,19 @@ type ScreeningIndicator = _enum_for_ScreeningIndicator;
  * @summary ScreeningIndicator
  * @description
  * 
+ * Result of screening a party number.
+ *
+ * `userProvidedNotScreened`: a remote user terminal supplied the number, and a
+ * network that is not the local public or local private network screened it.
+ * `userProvidedVerifiedAndPassed`: a remote user terminal or a remote private
+ * network supplied the number, and the local public or local private network
+ * screened it. `userProvidedVerifiedAndFailed` is reserved and not used.
+ * `networkProvided`: the local public or local private network supplied the
+ * number.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,6 +133,12 @@ const ScreeningIndicator = _enum_for_ScreeningIndicator;
 
 /**
  * @summary ScreeningIndicator_userProvidedNotScreened
+ * @description
+ * 
+ * A remote user terminal supplied the number. A network that is not the local
+ * public or local private network screened it. ITU-T Rec. Q.932 (05/1998) Annex
+ * C.
+ * 
  * @constant
  * @type {number}
  */
@@ -102,6 +147,12 @@ const ScreeningIndicator_userProvidedNotScreened: ScreeningIndicator = Screening
 
 /**
  * @summary userProvidedNotScreened
+ * @description
+ * 
+ * A remote user terminal supplied the number. A network that is not the local
+ * public or local private network screened it. ITU-T Rec. Q.932 (05/1998) Annex
+ * C.
+ * 
  * @constant
  * @type {number}
  */
@@ -110,6 +161,12 @@ const userProvidedNotScreened: ScreeningIndicator = ScreeningIndicator.userProvi
 
 /**
  * @summary ScreeningIndicator_userProvidedVerifiedAndPassed
+ * @description
+ * 
+ * A remote user terminal, or a remote private network, supplied the number. The
+ * local public or local private network screened it. ITU-T Rec. Q.932 (05/1998)
+ * Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -118,6 +175,12 @@ const ScreeningIndicator_userProvidedVerifiedAndPassed: ScreeningIndicator = Scr
 
 /**
  * @summary userProvidedVerifiedAndPassed
+ * @description
+ * 
+ * A remote user terminal, or a remote private network, supplied the number. The
+ * local public or local private network screened it. ITU-T Rec. Q.932 (05/1998)
+ * Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -126,6 +189,11 @@ const userProvidedVerifiedAndPassed: ScreeningIndicator = ScreeningIndicator.use
 
 /**
  * @summary ScreeningIndicator_userProvidedVerifiedAndFailed
+ * @description
+ * 
+ * Reserved. Not used. ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932
+ * (1998) Amd.1 (06/2000) Table C-1 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -134,6 +202,11 @@ const ScreeningIndicator_userProvidedVerifiedAndFailed: ScreeningIndicator = Scr
 
 /**
  * @summary userProvidedVerifiedAndFailed
+ * @description
+ * 
+ * Reserved. Not used. ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932
+ * (1998) Amd.1 (06/2000) Table C-1 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -142,6 +215,11 @@ const userProvidedVerifiedAndFailed: ScreeningIndicator = ScreeningIndicator.use
 
 /**
  * @summary ScreeningIndicator_networkProvided
+ * @description
+ * 
+ * The local public or local private network supplied the number. ITU-T Rec.
+ * Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -150,6 +228,11 @@ const ScreeningIndicator_networkProvided: ScreeningIndicator = ScreeningIndicato
 
 /**
  * @summary networkProvided
+ * @description
+ * 
+ * The local public or local private network supplied the number. ITU-T Rec.
+ * Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */

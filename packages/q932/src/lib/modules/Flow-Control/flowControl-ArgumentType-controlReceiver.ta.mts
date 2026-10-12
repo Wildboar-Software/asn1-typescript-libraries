@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary flowControl_ArgumentType_controlReceiver
  * @description
  * 
+ * Whether the VPN node will accept further FACILITY and NOTIFY messages that
+ * require transport through the public network.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex D, D.6.2; ITU-T Rec. Q.932 (1998) Amd.1
+ * (06/2000) Figure D.4 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +34,12 @@ enum _enum_for_flowControl_ArgumentType_controlReceiver {
  * @summary flowControl_ArgumentType_controlReceiver
  * @description
  * 
+ * Whether the VPN node will accept further FACILITY and NOTIFY messages that
+ * require transport through the public network.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex D, D.6.2; ITU-T Rec. Q.932 (1998) Amd.1
+ * (06/2000) Figure D.4 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,6 +58,12 @@ type flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentTy
  * @summary flowControl_ArgumentType_controlReceiver
  * @description
  * 
+ * Whether the VPN node will accept further FACILITY and NOTIFY messages that
+ * require transport through the public network.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex D, D.6.2; ITU-T Rec. Q.932 (1998) Amd.1
+ * (06/2000) Figure D.4 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,6 +80,13 @@ const flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentT
 
 /**
  * @summary flowControl_ArgumentType_controlReceiver_receiverNotReady
+ * @description
+ * 
+ * The VPN node is not ready to receive more FACILITY and NOTIFY messages that
+ * need transport through the public network. Later messages of that kind may be
+ * discarded. FACILITY messages that do not need that transport are still
+ * processed. ITU-T Rec. Q.932 (05/1998) Annex D, D.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +95,13 @@ const flowControl_ArgumentType_controlReceiver_receiverNotReady: flowControl_Arg
 
 /**
  * @summary receiverNotReady
+ * @description
+ * 
+ * The VPN node is not ready to receive more FACILITY and NOTIFY messages that
+ * need transport through the public network. Later messages of that kind may be
+ * discarded. FACILITY messages that do not need that transport are still
+ * processed. ITU-T Rec. Q.932 (05/1998) Annex D, D.6.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +110,13 @@ const receiverNotReady: flowControl_ArgumentType_controlReceiver = flowControl_A
 
 /**
  * @summary flowControl_ArgumentType_controlReceiver_receiverReady
+ * @description
+ * 
+ * The VPN node can accept further FACILITY and NOTIFY messages that need
+ * transport through the public network. `maximumNumberOfMessages` and `timerT`
+ * may be included with this value. ITU-T Rec. Q.932 (05/1998) Annex D, D.6.2
+ * and Figure D.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +125,13 @@ const flowControl_ArgumentType_controlReceiver_receiverReady: flowControl_Argume
 
 /**
  * @summary receiverReady
+ * @description
+ * 
+ * The VPN node can accept further FACILITY and NOTIFY messages that need
+ * transport through the public network. `maximumNumberOfMessages` and `timerT`
+ * may be included with this value. ITU-T Rec. Q.932 (05/1998) Annex D, D.6.2
+ * and Figure D.4.
+ * 
  * @constant
  * @type {number}
  */

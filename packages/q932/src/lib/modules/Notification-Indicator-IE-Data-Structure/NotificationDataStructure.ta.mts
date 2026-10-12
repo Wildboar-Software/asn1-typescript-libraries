@@ -11,6 +11,19 @@ import { type Code, _decode_Code, _encode_Code } from "../Notification-Indicator
  * @summary NotificationDataStructure
  * @description
  * 
+ * ASN.1 notification in octets 4 onward of a Notification indicator information
+ * element, used when octet 3 is the discriminator for an ASN.1 encoded
+ * component. `opcode` selects the notification. `argument` is the value defined
+ * for that notification.
+ *
+ * Non-standardized notifications in a VPN use an object identifier for the
+ * notification type. Additional information on a standardized notification is
+ * carried in the argument. The description field is then only the discriminator
+ * codepoint.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §8.2.8, §9.1.3, and Annex D, D.5.2; ITU-T Rec.
+ * Q.932 (1998) Amd.1 (06/2000) Table 8-14 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,12 +39,23 @@ export
 class NotificationDataStructure {
     /**
      * @summary `opcode`.
+     * @description
+     * 
+     * Notification code. For a non-standardized VPN notification this is an
+     * object identifier. ITU-T Rec. Q.932 (05/1998) Annex D, D.5.2.
+     * 
      * @public
      * @readonly
      */
     readonly opcode: Code;
     /**
      * @summary `argument`.
+     * @description
+     * 
+     * Argument of the notification, the type that follows ARGUMENT in its
+     * definition. Additional information on a standardized notification is
+     * placed here.
+     * 
      * @public
      * @readonly
      */

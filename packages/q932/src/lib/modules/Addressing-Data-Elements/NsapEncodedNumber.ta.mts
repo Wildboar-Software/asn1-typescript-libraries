@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NsapEncodedNumber
  * @description
  * 
+ * ATM endsystem address encoded as an NSAP, 20 octets. Amendment 1 adds this as
+ * `PartyNumber` alternative `nsapEncodedNumber`.
+ *
+ * ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table C-1 and Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,22 @@ import { userNotSubscribed } from "../Explicit-Network-Controlled-Channel-Reserv
  * @summary explicitReservationCancel
  * @description
  * 
+ * Cancel one explicit channel reservation. Local operation code 22. Include the
+ * `ReservationIndicator` when the network requires it. Each invoke cancels a
+ * single reservation; several reservations need several invokes. On the return
+ * result the user discards the indicator that was used.
+ *
+ * The network also cancels every reservation, with no reservation signalling,
+ * on RELEASE COMPLETE for the last call on that CEI, on RESTART ACKNOWLEDGE
+ * when the RESTART specified "single interface" or "all interfaces", and on
+ * DL-RELEASE. The user then discards every stored indicator.
+ *
+ * Errors: `noExplicitReservationExistsOrInvalidReservationIndicator`,
+ * `notAvailable`, and `userNotSubscribed`.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.3; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

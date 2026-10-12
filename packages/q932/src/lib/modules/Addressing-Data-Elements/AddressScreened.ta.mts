@@ -14,6 +14,15 @@ import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } fro
  * @summary AddressScreened
  * @description
  * 
+ * A party number, a screening indicator, and an optional subaddress.
+ *
+ * The screening component is spelled `screeninglndicator` in this module,
+ * following the 1998 text. Amendment 1 Table C-1 bis spells it
+ * `screeningIndicator`.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +39,31 @@ export
 class AddressScreened {
     /**
      * @summary `partyNumber`.
+     * @description
+     * 
+     * Number of the party.
+     * 
      * @public
      * @readonly
      */
     readonly partyNumber: PartyNumber;
     /**
      * @summary `screeninglndicator`.
+     * @description
+     * 
+     * How the number was provided and screened. Amendment 1 Table C-1 bis
+     * spells this component `screeningIndicator`.
+     * 
      * @public
      * @readonly
      */
     readonly screeninglndicator: ScreeningIndicator;
     /**
      * @summary `partySubaddress`.
+     * @description
+     * 
+     * Optional subaddress.
+     * 
      * @public
      * @readonly
      */

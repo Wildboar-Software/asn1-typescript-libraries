@@ -13,6 +13,11 @@ import { ScreeningIndicator, _decode_ScreeningIndicator, _encode_ScreeningIndica
  * @summary NumberScreened
  * @description
  * 
+ * A party number and a screening indicator, with no subaddress.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,20 @@ export
 class NumberScreened {
     /**
      * @summary `partyNumber`.
+     * @description
+     * 
+     * Number of the party.
+     * 
      * @public
      * @readonly
      */
     readonly partyNumber: PartyNumber;
     /**
      * @summary `screeningIndicator`.
+     * @description
+     * 
+     * How the number was provided and screened.
+     * 
      * @public
      * @readonly
      */

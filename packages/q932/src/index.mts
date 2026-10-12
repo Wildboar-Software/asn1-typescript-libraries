@@ -1,10 +1,23 @@
 /**
  * @description
  *
- * ITU-T Recommendation Q.932 generic procedures for the control of
- * ISDN supplementary services. ROSE `OPERATION` and `ERROR` are
- * re-exported from `@wildboar/rose`. `Code` matches the ROSE `Code`
- * and is exported with the notification indicator module.
+ * ITU-T Recommendation Q.932 (05/1998), as amended by Amendment 1
+ * (06/2000): generic procedures for the control of ISDN supplementary
+ * services at the DSS1 user-network interface.
+ *
+ * The modules cover Facility information element components (ROSE),
+ * addressing types imported by the Q.95x-series, explicit
+ * network-controlled channel reservation, the VPN networking-extension
+ * components (network facility extension and network protocol
+ * profile), flow control between a VPN node and a physical PINX,
+ * the notification data structure, and an embedded Q.931 information
+ * element.
+ *
+ * ROSE `OPERATION` and `ERROR` are re-exported from `@wildboar/rose`.
+ * Amendment 1 says that ROSE module matches Appendix A of ITU-T
+ * Rec. X.880, and that bind and unbind are outside the scope of
+ * Q.932. `Code` is that ROSE `Code`, exported from the notification
+ * indicator module.
  *
  * @see https://www.itu.int/rec/T-REC-Q.932
  */

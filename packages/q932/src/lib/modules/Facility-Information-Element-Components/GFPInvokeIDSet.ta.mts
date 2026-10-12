@@ -12,6 +12,13 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Inform
  * @summary GFPInvokeIDSet
  * @description
  * 
+ * Invoke identifier permitted in the generic functional protocol: the `present`
+ * alternative, in the range -32768..32767. This is the same range as the 1998
+ * `InvokeIdentifierType`.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

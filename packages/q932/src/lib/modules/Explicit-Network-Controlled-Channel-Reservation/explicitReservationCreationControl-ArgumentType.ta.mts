@@ -12,6 +12,10 @@ import { _decode_explicitReservationCreationControl_ArgumentType_controlOption, 
  * @summary explicitReservationCreationControl_ArgumentType
  * @description
  * 
+ * Argument of `explicitReservationCreationControl`. See `controlOption`. If the
+ * invoke carries no argument, the network assumes reservation required without
+ * an indicator. ITU-T Rec. Q.932 (05/1998) §6.4.2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +35,11 @@ export
 class explicitReservationCreationControl_ArgumentType {
     /**
      * @summary `controlOption`.
+     * @description
+     * 
+     * Whether to reserve a channel, and whether the network must return a
+     * `ReservationIndicator`. ITU-T Rec. Q.932 (05/1998) §6.4.2.1.
+     * 
      * @public
      * @readonly
      */

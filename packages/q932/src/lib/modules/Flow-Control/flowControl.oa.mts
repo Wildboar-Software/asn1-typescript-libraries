@@ -11,6 +11,32 @@ import { _decode_flowControl_ArgumentType, _encode_flowControl_ArgumentType, flo
  * @summary flowControl
  * @description
  * 
+ * Class 5 operation. The VPN node tells a physical PINX whether the public
+ * network will accept more FACILITY and NOTIFY messages that need transport
+ * through the public network, for calls in a VPN context. The global code is
+ * `{itu-t recommendation q 932 flow-control(8) operation(1)}`.
+ *
+ * Send it in a FACILITY message whose Facility information element uses
+ * protocol profile "networking extensions" and an Interpretation component
+ * coded `discardAnyUnrecognisedInvokeComponent`.
+ *
+ * `receiverNotReady`: further FACILITY and NOTIFY messages that need transport
+ * through the public network may be discarded. FACILITY messages that do not
+ * need that transport are still processed. `receiverReady`: further such
+ * messages can be accepted. `maximumNumberOfMessages` and `timerT` may be
+ * included with `receiverReady`. The specification does not state the unit of
+ * `timerT`.
+ *
+ * As a network option, a burst of N FACILITY and NOTIFY messages is allowed per
+ * call reference. N starts at the burst parameter X, decreases by one for each
+ * such message, and increases by the replenishment parameter Y at each interval
+ * T, never above X. If Y is 0, the limit is X messages for that call reference.
+ * Messages beyond N are discarded. X, Y, T, and whether the timer is
+ * implemented are network options.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex D, D.6 and Figure D.4; ITU-T Rec. Q.932
+ * (1998) Amd.1 (06/2000) Figure D.4 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary InvokeProblem
  * @description
  * 
+ * Problem detected by the supplementary-service entity for an invoke, carried
+ * in a reject as the `invoke` alternative.
+ *
+ * Integer 4 is `releaseInProgress`. The 1998 module names that value
+ * `initiatorReleasing`. Integer 7 is `unexpectedLinkedOperation`. The 1998
+ * module names that value `unexpectedChildOperation`.
+ *
+ * An unrecognized operation (integer 1) is rejected without affecting the rest
+ * of the message. ITU-T Rec. Q.932 (05/1998) §6.3.6.1 and Table 8-7; ITU-T Rec.
+ * Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +35,12 @@ type InvokeProblem = INTEGER;
 
 /**
  * @summary InvokeProblem_duplicateInvocation
+ * @description
+ * 
+ * This invoke identifier is already in use. Identifiers are significant only
+ * within one call reference. ITU-T Rec. Q.932 (05/1998) §8.2.3.1.2 and Table
+ * 8-7.
+ * 
  * @constant
  * @type {number}
  */
@@ -32,6 +49,12 @@ const InvokeProblem_duplicateInvocation: InvokeProblem = 0; /* LONG_NAMED_INTEGE
 
 /**
  * @summary InvokeProblem_duplicateInvocation
+ * @description
+ * 
+ * This invoke identifier is already in use. Identifiers are significant only
+ * within one call reference. ITU-T Rec. Q.932 (05/1998) §8.2.3.1.2 and Table
+ * 8-7.
+ * 
  * @constant
  * @type {number}
  */
@@ -40,6 +63,11 @@ const duplicateInvocation: InvokeProblem = InvokeProblem_duplicateInvocation; /*
 
 /**
  * @summary InvokeProblem_unrecognizedOperation
+ * @description
+ * 
+ * The operation is not implemented. Return this reject and continue to handle
+ * the rest of the message. ITU-T Rec. Q.932 (05/1998) §6.3.6.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -48,6 +76,11 @@ const InvokeProblem_unrecognizedOperation: InvokeProblem = 1; /* LONG_NAMED_INTE
 
 /**
  * @summary InvokeProblem_unrecognizedOperation
+ * @description
+ * 
+ * The operation is not implemented. Return this reject and continue to handle
+ * the rest of the message. ITU-T Rec. Q.932 (05/1998) §6.3.6.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -56,6 +89,11 @@ const unrecognizedOperation: InvokeProblem = InvokeProblem_unrecognizedOperation
 
 /**
  * @summary InvokeProblem_mistypedArgument
+ * @description
+ * 
+ * The invoke argument does not match the operation. ITU-T Rec. Q.932 (05/1998)
+ * Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -64,6 +102,11 @@ const InvokeProblem_mistypedArgument: InvokeProblem = 2; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary InvokeProblem_mistypedArgument
+ * @description
+ * 
+ * The invoke argument does not match the operation. ITU-T Rec. Q.932 (05/1998)
+ * Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -72,6 +115,11 @@ const mistypedArgument: InvokeProblem = InvokeProblem_mistypedArgument; /* SHORT
 
 /**
  * @summary InvokeProblem_resourceLimitation
+ * @description
+ * 
+ * The performing entity cannot carry out the operation because of a resource
+ * limitation. ITU-T Rec. Q.932 (05/1998) Table 8-7.
+ * 
  * @constant
  * @type {number}
  */
@@ -80,6 +128,11 @@ const InvokeProblem_resourceLimitation: InvokeProblem = 3; /* LONG_NAMED_INTEGER
 
 /**
  * @summary InvokeProblem_resourceLimitation
+ * @description
+ * 
+ * The performing entity cannot carry out the operation because of a resource
+ * limitation. ITU-T Rec. Q.932 (05/1998) Table 8-7.
+ * 
  * @constant
  * @type {number}
  */
@@ -88,6 +141,12 @@ const resourceLimitation: InvokeProblem = InvokeProblem_resourceLimitation; /* S
 
 /**
  * @summary InvokeProblem_releaseInProgress
+ * @description
+ * 
+ * Amendment 1 name for integer 4. The 1998 module calls this value
+ * `initiatorReleasing`. ITU-T Rec. Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932
+ * (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -96,6 +155,12 @@ const InvokeProblem_releaseInProgress: InvokeProblem = 4; /* LONG_NAMED_INTEGER_
 
 /**
  * @summary InvokeProblem_releaseInProgress
+ * @description
+ * 
+ * Amendment 1 name for integer 4. The 1998 module calls this value
+ * `initiatorReleasing`. ITU-T Rec. Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932
+ * (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -104,6 +169,11 @@ const releaseInProgress: InvokeProblem = InvokeProblem_releaseInProgress; /* SHO
 
 /**
  * @summary InvokeProblem_unrecognizedLinkedId
+ * @description
+ * 
+ * The linked identifier does not identify an outstanding operation. ITU-T Rec.
+ * Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -112,6 +182,11 @@ const InvokeProblem_unrecognizedLinkedId: InvokeProblem = 5; /* LONG_NAMED_INTEG
 
 /**
  * @summary InvokeProblem_unrecognizedLinkedId
+ * @description
+ * 
+ * The linked identifier does not identify an outstanding operation. ITU-T Rec.
+ * Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -120,6 +195,11 @@ const unrecognizedLinkedId: InvokeProblem = InvokeProblem_unrecognizedLinkedId; 
 
 /**
  * @summary InvokeProblem_linkedResponseUnexpected
+ * @description
+ * 
+ * The identified operation has no linked operations. ITU-T Rec. Q.932 (1998)
+ * Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -128,6 +208,11 @@ const InvokeProblem_linkedResponseUnexpected: InvokeProblem = 6; /* LONG_NAMED_I
 
 /**
  * @summary InvokeProblem_linkedResponseUnexpected
+ * @description
+ * 
+ * The identified operation has no linked operations. ITU-T Rec. Q.932 (1998)
+ * Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -136,6 +221,12 @@ const linkedResponseUnexpected: InvokeProblem = InvokeProblem_linkedResponseUnex
 
 /**
  * @summary InvokeProblem_unexpectedLinkedOperation
+ * @description
+ * 
+ * The opcode is not in the parent operation's `&Linked` set. The 1998 module
+ * calls integer 7 `unexpectedChildOperation`. ITU-T Rec. Q.932 (05/1998) Table
+ * 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -144,6 +235,12 @@ const InvokeProblem_unexpectedLinkedOperation: InvokeProblem = 7; /* LONG_NAMED_
 
 /**
  * @summary InvokeProblem_unexpectedLinkedOperation
+ * @description
+ * 
+ * The opcode is not in the parent operation's `&Linked` set. The 1998 module
+ * calls integer 7 `unexpectedChildOperation`. ITU-T Rec. Q.932 (05/1998) Table
+ * 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */

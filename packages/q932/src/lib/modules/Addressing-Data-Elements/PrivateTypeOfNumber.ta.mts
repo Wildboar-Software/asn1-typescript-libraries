@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PrivateTypeOfNumber
  * @description
  * 
+ * Type of number for a private party number: unknown, level 2 regional, level 1
+ * regional, PTN-specific, local, or abbreviated. Q.932 does not further define
+ * the two regional levels.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +38,13 @@ enum _enum_for_PrivateTypeOfNumber {
  * @summary PrivateTypeOfNumber
  * @description
  * 
+ * Type of number for a private party number: unknown, level 2 regional, level 1
+ * regional, PTN-specific, local, or abbreviated. Q.932 does not further define
+ * the two regional levels.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +62,13 @@ type PrivateTypeOfNumber = _enum_for_PrivateTypeOfNumber;
  * @summary PrivateTypeOfNumber
  * @description
  * 
+ * Type of number for a private party number: unknown, level 2 regional, level 1
+ * regional, PTN-specific, local, or abbreviated. Q.932 does not further define
+ * the two regional levels.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +84,10 @@ const PrivateTypeOfNumber = _enum_for_PrivateTypeOfNumber;
 
 /**
  * @summary PrivateTypeOfNumber_unknown
+ * @description
+ * 
+ * Private number whose type is unknown. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -71,6 +96,10 @@ const PrivateTypeOfNumber_unknown: PrivateTypeOfNumber = PrivateTypeOfNumber.unk
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * Private number whose type is unknown. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -79,6 +108,11 @@ const unknown: PrivateTypeOfNumber = PrivateTypeOfNumber.unknown; /* SHORT_NAMED
 
 /**
  * @summary PrivateTypeOfNumber_level2RegionalNumber
+ * @description
+ * 
+ * Level 2 regional private number. Q.932 does not further define this level.
+ * ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -87,6 +121,11 @@ const PrivateTypeOfNumber_level2RegionalNumber: PrivateTypeOfNumber = PrivateTyp
 
 /**
  * @summary level2RegionalNumber
+ * @description
+ * 
+ * Level 2 regional private number. Q.932 does not further define this level.
+ * ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -95,6 +134,11 @@ const level2RegionalNumber: PrivateTypeOfNumber = PrivateTypeOfNumber.level2Regi
 
 /**
  * @summary PrivateTypeOfNumber_level1RegionalNumber
+ * @description
+ * 
+ * Level 1 regional private number. Q.932 does not further define this level.
+ * ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -103,6 +147,11 @@ const PrivateTypeOfNumber_level1RegionalNumber: PrivateTypeOfNumber = PrivateTyp
 
 /**
  * @summary level1RegionalNumber
+ * @description
+ * 
+ * Level 1 regional private number. Q.932 does not further define this level.
+ * ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -111,6 +160,11 @@ const level1RegionalNumber: PrivateTypeOfNumber = PrivateTypeOfNumber.level1Regi
 
 /**
  * @summary PrivateTypeOfNumber_pTNSpecificNumber
+ * @description
+ * 
+ * Private telecommunication network specific number. ITU-T Rec. Q.932 (05/1998)
+ * Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -119,6 +173,11 @@ const PrivateTypeOfNumber_pTNSpecificNumber: PrivateTypeOfNumber = PrivateTypeOf
 
 /**
  * @summary pTNSpecificNumber
+ * @description
+ * 
+ * Private telecommunication network specific number. ITU-T Rec. Q.932 (05/1998)
+ * Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -127,6 +186,10 @@ const pTNSpecificNumber: PrivateTypeOfNumber = PrivateTypeOfNumber.pTNSpecificNu
 
 /**
  * @summary PrivateTypeOfNumber_localNumber
+ * @description
+ * 
+ * Local private number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -135,6 +198,10 @@ const PrivateTypeOfNumber_localNumber: PrivateTypeOfNumber = PrivateTypeOfNumber
 
 /**
  * @summary localNumber
+ * @description
+ * 
+ * Local private number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -143,6 +210,10 @@ const localNumber: PrivateTypeOfNumber = PrivateTypeOfNumber.localNumber; /* SHO
 
 /**
  * @summary PrivateTypeOfNumber_abbreviatedNumber
+ * @description
+ * 
+ * Abbreviated private number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -151,6 +222,10 @@ const PrivateTypeOfNumber_abbreviatedNumber: PrivateTypeOfNumber = PrivateTypeOf
 
 /**
  * @summary abbreviatedNumber
+ * @description
+ * 
+ * Abbreviated private number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */

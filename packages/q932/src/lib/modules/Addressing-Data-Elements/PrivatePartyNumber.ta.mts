@@ -13,6 +13,12 @@ import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Add
  * @summary PrivatePartyNumber
  * @description
  * 
+ * Private party number: a private type-of-number and the digit string.
+ * `privatePartyNumber` of `PartyNumber` uses this type.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,20 @@ export
 class PrivatePartyNumber {
     /**
      * @summary `privateTypeOfNumber`.
+     * @description
+     * 
+     * Private type of number. See `PrivateTypeOfNumber`.
+     * 
      * @public
      * @readonly
      */
     readonly privateTypeOfNumber: PrivateTypeOfNumber;
     /**
      * @summary `privateNumberDigits`.
+     * @description
+     * 
+     * The private digits, 1 to 20 characters.
+     * 
      * @public
      * @readonly
      */

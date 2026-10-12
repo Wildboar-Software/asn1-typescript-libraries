@@ -14,6 +14,19 @@ import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Info
  * @summary Invoke
  * @description
  * 
+ * Request that the peer perform an operation. `invokeId` identifies this
+ * invocation and is copied into the return result, return error, or reject.
+ * `linkedId`, when present, identifies an outstanding parent operation that has
+ * linked operations; `opcode` must then be in that operation's `&Linked` set.
+ * `argument` is omitted when the operation has no argument.
+ *
+ * The 1998 module calls invoke-problem integer 4 `initiatorReleasing` and
+ * integer 7 `unexpectedChildOperation`. Amendment 1 names those values
+ * `releaseInProgress` and `unexpectedLinkedOperation`.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §8.2.3.1; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,24 +70,46 @@ export
 class Invoke {
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Identifies this invocation inside the call reference. Copied into the
+     * return result, return error, or reject. Must be unambiguous. ITU-T Rec.
+     * Q.932 (05/1998) §8.2.3.1.2.
+     * 
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `linkedId`.
+     * @description
+     * 
+     * Invoke identifier of the parent operation, when this invoke is a linked
+     * operation. The parent must be outstanding and must have linked
+     * operations. The opcode must be in that operation's `&Linked` set.
+     * 
      * @public
      * @readonly
      */
     readonly linkedId: OPTIONAL<Invoke_linkedId>;
     /**
      * @summary `opcode`.
+     * @description
+     * 
+     * Operation to perform. An unrecognized operation is rejected and the rest
+     * of the message is still handled. ITU-T Rec. Q.932 (05/1998) §6.3.6.1.
+     * 
      * @public
      * @readonly
      */
     readonly opcode: Code;
     /**
      * @summary `argument`.
+     * @description
+     * 
+     * Argument of the operation. Omitted when the operation defines no
+     * argument.
+     * 
      * @public
      * @readonly
      */

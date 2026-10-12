@@ -11,6 +11,10 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Inform
  * @summary NoInvokeId
  * @description
  * 
+ * The invoke-identifier value set whose only permitted value is `noInvokeId`.
+ *
+ * ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

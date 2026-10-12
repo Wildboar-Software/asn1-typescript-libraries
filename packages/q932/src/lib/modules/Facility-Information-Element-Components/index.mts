@@ -1,7 +1,11 @@
 /**
  * @description
  *
- * Facility information element components from ITU-T Q.932.
+ * ROSE components carried in a Facility information element when the
+ * protocol profile is Remote Operations. Invoke identifiers are
+ * significant only within the call reference and, for this protocol,
+ * lie in -32768..32767. ITU-T Rec. Q.932 (05/1998) §8.2.3; Amendment 1
+ * (06/2000) Table 8-7 bis.
  *
  * @see https://www.itu.int/rec/T-REC-Q.932
  */

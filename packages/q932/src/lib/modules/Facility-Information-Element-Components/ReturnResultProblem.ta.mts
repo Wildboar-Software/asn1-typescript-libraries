@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ReturnResultProblem
  * @description
  * 
+ * Problem detected by the supplementary-service entity for a return result,
+ * carried in a reject as the `returnResult` alternative.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +29,12 @@ type ReturnResultProblem = INTEGER;
 
 /**
  * @summary ReturnResultProblem_unrecognizedInvocation
+ * @description
+ * 
+ * The invoke identifier is not an outstanding operation. On a return error the
+ * same integer is `ReturnErrorProblem`. ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -31,6 +43,12 @@ const ReturnResultProblem_unrecognizedInvocation: ReturnResultProblem = 0; /* LO
 
 /**
  * @summary ReturnResultProblem_unrecognizedInvocation
+ * @description
+ * 
+ * The invoke identifier is not an outstanding operation. On a return error the
+ * same integer is `ReturnErrorProblem`. ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -39,6 +57,11 @@ const unrecognizedInvocation: ReturnResultProblem = ReturnResultProblem_unrecogn
 
 /**
  * @summary ReturnResultProblem_resultResponseUnexpected
+ * @description
+ * 
+ * The outstanding operation does not return a result. ITU-T Rec. Q.932 (1998)
+ * Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -47,6 +70,11 @@ const ReturnResultProblem_resultResponseUnexpected: ReturnResultProblem = 1; /* 
 
 /**
  * @summary ReturnResultProblem_resultResponseUnexpected
+ * @description
+ * 
+ * The outstanding operation does not return a result. ITU-T Rec. Q.932 (1998)
+ * Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -55,6 +83,11 @@ const resultResponseUnexpected: ReturnResultProblem = ReturnResultProblem_result
 
 /**
  * @summary ReturnResultProblem_mistypedResult
+ * @description
+ * 
+ * The result value does not match the operation identified by the invoke
+ * identifier. ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -63,6 +96,11 @@ const ReturnResultProblem_mistypedResult: ReturnResultProblem = 2; /* LONG_NAMED
 
 /**
  * @summary ReturnResultProblem_mistypedResult
+ * @description
+ * 
+ * The result value does not match the operation identified by the invoke
+ * identifier. ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */

@@ -12,6 +12,13 @@ import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Info
  * @summary ReturnError
  * @description
  * 
+ * Unsuccessful outcome of an outstanding operation. `invokeId` must identify an
+ * operation that returns an error. `errcode` must be one of that operation's
+ * errors. `parameter` is the error parameter, omitted when the error has none.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.3.6 and §8.2.3.1; ITU-T Rec. Q.932 (1998) Amd.1
+ * (06/2000) Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,18 +48,31 @@ export
 class ReturnError {
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Invoke identifier of the outstanding operation that returns an error.
+     * 
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `errcode`.
+     * @description
+     * 
+     * Error code. It must be one of the errors of the operation identified by
+     * `invokeId`.
+     * 
      * @public
      * @readonly
      */
     readonly errcode: Code;
     /**
      * @summary `parameter`.
+     * @description
+     * 
+     * Parameter of that error. Omitted when the error defines none.
+     * 
      * @public
      * @readonly
      */

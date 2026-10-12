@@ -7,6 +7,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary explicitReservationCreationControl_ArgumentType_controlOption
  * @description
  * 
+ * What explicit reservation creation should do.
+ *
+ * `noReservationRequired`: do not reserve a channel.
+ * `reservationRequiredWithReservationIndicator`: reserve a channel and return a
+ * `ReservationIndicator`, which later management and cancellation must repeat.
+ * `reservationRequiredWithoutReservationIndicator`: reserve a channel and do
+ * not allocate an indicator. If the creation invoke has no argument, the
+ * network assumes this last option.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.1; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,6 +42,18 @@ enum _enum_for_explicitReservationCreationControl_ArgumentType_controlOption {
  * @summary explicitReservationCreationControl_ArgumentType_controlOption
  * @description
  * 
+ * What explicit reservation creation should do.
+ *
+ * `noReservationRequired`: do not reserve a channel.
+ * `reservationRequiredWithReservationIndicator`: reserve a channel and return a
+ * `ReservationIndicator`, which later management and cancellation must repeat.
+ * `reservationRequiredWithoutReservationIndicator`: reserve a channel and do
+ * not allocate an indicator. If the creation invoke has no argument, the
+ * network assumes this last option.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.1; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +73,18 @@ type explicitReservationCreationControl_ArgumentType_controlOption = _enum_for_e
  * @summary explicitReservationCreationControl_ArgumentType_controlOption
  * @description
  * 
+ * What explicit reservation creation should do.
+ *
+ * `noReservationRequired`: do not reserve a channel.
+ * `reservationRequiredWithReservationIndicator`: reserve a channel and return a
+ * `ReservationIndicator`, which later management and cancellation must repeat.
+ * `reservationRequiredWithoutReservationIndicator`: reserve a channel and do
+ * not allocate an indicator. If the creation invoke has no argument, the
+ * network assumes this last option.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.1; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +102,10 @@ const explicitReservationCreationControl_ArgumentType_controlOption = _enum_for_
 
 /**
  * @summary explicitReservationCreationControl_ArgumentType_controlOption_noReservationRequired
+ * @description
+ * 
+ * Do not create a channel reservation. ITU-T Rec. Q.932 (05/1998) §6.4.2.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -74,6 +114,10 @@ const explicitReservationCreationControl_ArgumentType_controlOption_noReservatio
 
 /**
  * @summary noReservationRequired
+ * @description
+ * 
+ * Do not create a channel reservation. ITU-T Rec. Q.932 (05/1998) §6.4.2.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -82,6 +126,12 @@ const noReservationRequired: explicitReservationCreationControl_ArgumentType_con
 
 /**
  * @summary explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithReservationIndicator
+ * @description
+ * 
+ * Create a reservation and return a `ReservationIndicator`. Later use or
+ * cancellation of that reservation includes the same value. ITU-T Rec. Q.932
+ * (05/1998) §6.4.2.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -90,6 +140,12 @@ const explicitReservationCreationControl_ArgumentType_controlOption_reservationR
 
 /**
  * @summary reservationRequiredWithReservationIndicator
+ * @description
+ * 
+ * Create a reservation and return a `ReservationIndicator`. Later use or
+ * cancellation of that reservation includes the same value. ITU-T Rec. Q.932
+ * (05/1998) §6.4.2.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -98,6 +154,12 @@ const reservationRequiredWithReservationIndicator: explicitReservationCreationCo
 
 /**
  * @summary explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithoutReservationIndicator
+ * @description
+ * 
+ * Create a reservation and do not allocate an indicator. If the creation invoke
+ * has no argument, the network assumes this option. ITU-T Rec. Q.932 (05/1998)
+ * §6.4.2.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -106,6 +168,12 @@ const explicitReservationCreationControl_ArgumentType_controlOption_reservationR
 
 /**
  * @summary reservationRequiredWithoutReservationIndicator
+ * @description
+ * 
+ * Create a reservation and do not allocate an indicator. If the creation invoke
+ * has no argument, the network assumes this option. ITU-T Rec. Q.932 (05/1998)
+ * §6.4.2.1.
+ * 
  * @constant
  * @type {number}
  */

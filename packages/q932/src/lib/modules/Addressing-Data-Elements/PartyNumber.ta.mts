@@ -14,6 +14,18 @@ import { PrivatePartyNumber, _decode_PrivatePartyNumber, _encode_PrivatePartyNum
  * @summary PartyNumber
  * @description
  * 
+ * Party number imported by the Q.95x-series Recommendations.
+ *
+ * `unknownPartyNumber` uses the network's default numbering plan. Q.932
+ * recommends this alternative. `publicPartyNumber` is an E.164 number.
+ * `nsapEncodedNumber` is an ATM endsystem address encoded as an NSAP (Amendment
+ * 1). `dataPartyNumber`, `telexPartyNumber`, and `nationalStandardPartyNumber`
+ * are reserved and not used. `privatePartyNumber` is a private numbering-plan
+ * number.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

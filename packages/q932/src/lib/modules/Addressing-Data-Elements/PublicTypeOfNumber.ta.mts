@@ -7,6 +7,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PublicTypeOfNumber
  * @description
  * 
+ * Type of number for an E.164 public party number.
+ *
+ * `unknown`: if used, the digits carry a prefix that indicates the type of
+ * number according to national recommendations. `networkSpecificNumber` is
+ * reserved and not used. `abbreviatedNumber` is valid only for a called party
+ * number at the outgoing access; the network substitutes the appropriate
+ * number.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +48,17 @@ enum _enum_for_PublicTypeOfNumber {
  * @summary PublicTypeOfNumber
  * @description
  * 
+ * Type of number for an E.164 public party number.
+ *
+ * `unknown`: if used, the digits carry a prefix that indicates the type of
+ * number according to national recommendations. `networkSpecificNumber` is
+ * reserved and not used. `abbreviatedNumber` is valid only for a called party
+ * number at the outgoing access; the network substitutes the appropriate
+ * number.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,6 +82,17 @@ type PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
  * @summary PublicTypeOfNumber
  * @description
  * 
+ * Type of number for an E.164 public party number.
+ *
+ * `unknown`: if used, the digits carry a prefix that indicates the type of
+ * number according to national recommendations. `networkSpecificNumber` is
+ * reserved and not used. `abbreviatedNumber` is valid only for a called party
+ * number at the outgoing access; the network substitutes the appropriate
+ * number.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -81,6 +114,11 @@ const PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
 
 /**
  * @summary PublicTypeOfNumber_unknown
+ * @description
+ * 
+ * If used, the digits carry a prefix that indicates the type of number
+ * according to national recommendations. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -89,6 +127,11 @@ const PublicTypeOfNumber_unknown: PublicTypeOfNumber = PublicTypeOfNumber.unknow
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * If used, the digits carry a prefix that indicates the type of number
+ * according to national recommendations. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -97,6 +140,10 @@ const unknown: PublicTypeOfNumber = PublicTypeOfNumber.unknown; /* SHORT_NAMED_E
 
 /**
  * @summary PublicTypeOfNumber_internationalNumber
+ * @description
+ * 
+ * International E.164 number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -105,6 +152,10 @@ const PublicTypeOfNumber_internationalNumber: PublicTypeOfNumber = PublicTypeOfN
 
 /**
  * @summary internationalNumber
+ * @description
+ * 
+ * International E.164 number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -113,6 +164,10 @@ const internationalNumber: PublicTypeOfNumber = PublicTypeOfNumber.international
 
 /**
  * @summary PublicTypeOfNumber_nationalNumber
+ * @description
+ * 
+ * National E.164 number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -121,6 +176,10 @@ const PublicTypeOfNumber_nationalNumber: PublicTypeOfNumber = PublicTypeOfNumber
 
 /**
  * @summary nationalNumber
+ * @description
+ * 
+ * National E.164 number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -129,6 +188,10 @@ const nationalNumber: PublicTypeOfNumber = PublicTypeOfNumber.nationalNumber; /*
 
 /**
  * @summary PublicTypeOfNumber_networkSpecificNumber
+ * @description
+ * 
+ * Reserved. Not used. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -137,6 +200,10 @@ const PublicTypeOfNumber_networkSpecificNumber: PublicTypeOfNumber = PublicTypeO
 
 /**
  * @summary networkSpecificNumber
+ * @description
+ * 
+ * Reserved. Not used. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -145,6 +212,10 @@ const networkSpecificNumber: PublicTypeOfNumber = PublicTypeOfNumber.networkSpec
 
 /**
  * @summary PublicTypeOfNumber_subscriberNumber
+ * @description
+ * 
+ * Subscriber number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -153,6 +224,10 @@ const PublicTypeOfNumber_subscriberNumber: PublicTypeOfNumber = PublicTypeOfNumb
 
 /**
  * @summary subscriberNumber
+ * @description
+ * 
+ * Subscriber number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -161,6 +236,11 @@ const subscriberNumber: PublicTypeOfNumber = PublicTypeOfNumber.subscriberNumber
 
 /**
  * @summary PublicTypeOfNumber_abbreviatedNumber
+ * @description
+ * 
+ * Valid only for a called party number at the outgoing access. The network
+ * substitutes the appropriate number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */
@@ -169,6 +249,11 @@ const PublicTypeOfNumber_abbreviatedNumber: PublicTypeOfNumber = PublicTypeOfNum
 
 /**
  * @summary abbreviatedNumber
+ * @description
+ * 
+ * Valid only for a called party number at the outgoing access. The network
+ * substitutes the appropriate number. ITU-T Rec. Q.932 (05/1998) Annex C.
+ * 
  * @constant
  * @type {number}
  */

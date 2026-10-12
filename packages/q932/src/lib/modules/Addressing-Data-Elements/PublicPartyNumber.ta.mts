@@ -13,6 +13,12 @@ import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Add
  * @summary PublicPartyNumber
  * @description
  * 
+ * Public party number: an E.164 type-of-number and the digit string.
+ * `publicPartyNumber` of `PartyNumber` uses this type.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,20 @@ export
 class PublicPartyNumber {
     /**
      * @summary `publicTypeOfNumber`.
+     * @description
+     * 
+     * E.164 type of number. See `PublicTypeOfNumber`.
+     * 
      * @public
      * @readonly
      */
     readonly publicTypeOfNumber: PublicTypeOfNumber;
     /**
      * @summary `publicNumberDigits`.
+     * @description
+     * 
+     * The E.164 digits, 1 to 20 characters.
+     * 
      * @public
      * @readonly
      */

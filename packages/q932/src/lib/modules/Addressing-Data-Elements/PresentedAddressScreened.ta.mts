@@ -12,6 +12,24 @@ import { AddressScreened, _decode_AddressScreened, _encode_AddressScreened } fro
  * @summary PresentedAddressScreened
  * @description
  * 
+ * Screened address together with whether it may be presented.
+ *
+ * This module spells two alternatives `presentationAlIowedAddress` and
+ * `numberNotAvailableDueTolnterworking`. Amendment 1 Table C-1 bis spells them
+ * `presentationAllowedAddress` and `numberNotAvailableDueToInterworking`. The
+ * tags are unchanged: context 0 and context 2.
+ *
+ * `presentationAlIowedAddress` includes the screened address and allows
+ * presentation. `presentationRestricted` is NULL: presentation is restricted
+ * and no address is included. `presentationRestrictedAddress` includes the
+ * screened address but restricts presentation.
+ * `numberNotAvailableDueTolnterworking` is NULL: interworking left no number
+ * to present.
+ *
+ * Annex C says these types are imported by the Q.95x-series Recommendations.
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

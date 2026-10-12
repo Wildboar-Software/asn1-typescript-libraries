@@ -10,6 +10,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GeneralProblem
  * @description
  * 
+ * Problem detected by the Q.932 protocol entity, carried in a reject as the
+ * `general` alternative. Integer 0 means the component type is not recognized.
+ * Integer 1 means the component is mistyped. Integer 2 means the component is
+ * badly structured.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +31,12 @@ type GeneralProblem = INTEGER;
 
 /**
  * @summary GeneralProblem_unrecognizedComponent
+ * @description
+ * 
+ * The component type is not one of invoke, return result, return error, or
+ * reject. ITU-T Rec. Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1
+ * (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -31,6 +45,12 @@ const GeneralProblem_unrecognizedComponent: GeneralProblem = 0; /* LONG_NAMED_IN
 
 /**
  * @summary GeneralProblem_unrecognizedComponent
+ * @description
+ * 
+ * The component type is not one of invoke, return result, return error, or
+ * reject. ITU-T Rec. Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1
+ * (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -39,6 +59,12 @@ const unrecognizedComponent: GeneralProblem = GeneralProblem_unrecognizedCompone
 
 /**
  * @summary GeneralProblem_mistypedComponent
+ * @description
+ * 
+ * The component is recognized but does not conform to its type. ITU-T Rec.
+ * Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7
+ * bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -47,6 +73,12 @@ const GeneralProblem_mistypedComponent: GeneralProblem = 1; /* LONG_NAMED_INTEGE
 
 /**
  * @summary GeneralProblem_mistypedComponent
+ * @description
+ * 
+ * The component is recognized but does not conform to its type. ITU-T Rec.
+ * Q.932 (05/1998) Table 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7
+ * bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -55,6 +87,11 @@ const mistypedComponent: GeneralProblem = GeneralProblem_mistypedComponent; /* S
 
 /**
  * @summary GeneralProblem_badlyStructuredComponent
+ * @description
+ * 
+ * The component structure is badly formed. ITU-T Rec. Q.932 (05/1998) Table
+ * 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */
@@ -63,6 +100,11 @@ const GeneralProblem_badlyStructuredComponent: GeneralProblem = 2; /* LONG_NAMED
 
 /**
  * @summary GeneralProblem_badlyStructuredComponent
+ * @description
+ * 
+ * The component structure is badly formed. ITU-T Rec. Q.932 (05/1998) Table
+ * 8-7; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * @constant
  * @type {number}
  */

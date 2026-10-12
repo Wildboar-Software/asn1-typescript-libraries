@@ -11,6 +11,31 @@ import { userNotSubscribed } from "../Explicit-Network-Controlled-Channel-Reserv
  * @summary explicitReservationManagement
  * @description
  * 
+ * Use an explicit channel reservation while selecting a channel. Local
+ * operation code 21. Send the invoke in a Facility information element in
+ * SETUP, SETUP ACKNOWLEDGE, CALL PROCEEDING, ALERTING, CONNECT, CONNECT
+ * ACKNOWLEDGE, RETRIEVE, or RETRIEVE ACKNOWLEDGE.
+ *
+ * The argument is the `ReservationIndicator` when the network requires one
+ * (subscription, or the creation request asked for an indicator). The network
+ * grants the reservation only when the required value is present. If this
+ * invoke is omitted, the network uses an implicit reservation when one exists;
+ * otherwise explicit reservations stay available. To keep an implicit
+ * reservation from being used by that channel selection, include an indicator
+ * in this invoke. Q.932 does not assign a specific indicator value to that
+ * case.
+ *
+ * A return error does not by itself mean channel selection failed. It means the
+ * reservation was not managed. On the return result the user discards the
+ * indicator that was used.
+ *
+ * Errors: `noExplicitReservationExistsOrInvalidReservationIndicator`,
+ * `notAvailable`, `userNotSubscribed`, and `implicitReservationUsed` ("function
+ * not subscribed – implicit reservation used").
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.2 and §6.4.2.6; ITU-T Rec. Q.932 (1998)
+ * Amd.1 (06/2000) Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,13 @@ import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } fro
  * @summary Address
  * @description
  * 
+ * A party number and an optional subaddress, with no screening indicator. Used
+ * when the number may be presented and has not been screened, and as the
+ * address inside an unscreened presentation.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +35,20 @@ export
 class Address {
     /**
      * @summary `partyNumber`.
+     * @description
+     * 
+     * Number of the party.
+     * 
      * @public
      * @readonly
      */
     readonly partyNumber: PartyNumber;
     /**
      * @summary `partySubaddress`.
+     * @description
+     * 
+     * Optional subaddress. The user-specified form is not recommended.
+     * 
      * @public
      * @readonly
      */

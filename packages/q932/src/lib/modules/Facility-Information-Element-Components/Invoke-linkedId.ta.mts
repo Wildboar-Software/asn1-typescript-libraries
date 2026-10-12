@@ -12,6 +12,13 @@ import { InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta
  * @summary Invoke_linkedId
  * @description
  * 
+ * Parent invocation of a linked (child) operation. `present` is the parent's
+ * invoke identifier and must identify an outstanding operation that has one or
+ * more linked operations. `absent` carries NULL. If this field is present on an
+ * invoke, the opcode must be in the parent operation's `&Linked` set.
+ *
+ * ITU-T Rec. Q.932 (1998) Amd.1 (06/2000) Table 8-7 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

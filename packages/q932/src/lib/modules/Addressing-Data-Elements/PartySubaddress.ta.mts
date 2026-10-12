@@ -11,6 +11,12 @@ import { NSAPSubaddress, _decode_NSAPSubaddress, _encode_NSAPSubaddress } from "
  * @summary PartySubaddress
  * @description
  * 
+ * Subaddress of a party. `userSpecifiedSubaddress` is not recommended.
+ * `nSAPSubaddress` is an NSAP subaddress according to ITU-T Rec. X.213.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex C; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table C-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

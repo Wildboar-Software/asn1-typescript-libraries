@@ -18,6 +18,15 @@ function integerInRange (value: INTEGER, min: bigint, max: bigint): boolean {
  * @summary flowControl_ArgumentType
  * @description
  * 
+ * Argument of `flowControl`. `maximumNumberOfMessages` is how many FACILITY and
+ * NOTIFY messages may be sent during `timerT` for the call reference of the
+ * FACILITY message (integer 1..255). `replenishmentParameter` is how many
+ * additional messages may be sent at the end of that interval (integer 1..255).
+ * `timerT` is an integer 1..30; Q.932 does not state the unit.
+ *
+ * ITU-T Rec. Q.932 (05/1998) Annex D, D.6.1 and Figure D.4; ITU-T Rec. Q.932
+ * (1998) Amd.1 (06/2000) Figure D.4 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +45,45 @@ export
 class flowControl_ArgumentType {
     /**
      * @summary `controlReceiver`.
+     * @description
+     * 
+     * `receiverNotReady` or `receiverReady`. See `flowControl`.
+     * 
      * @public
      * @readonly
      */
     readonly controlReceiver: flowControl_ArgumentType_controlReceiver;
     /**
      * @summary `maximumNumberOfMessages`.
+     * @description
+     * 
+     * How many FACILITY and NOTIFY messages may be sent during `timerT` for
+     * this call reference (1..255). May be included when `controlReceiver` is
+     * `receiverReady`.
+     * 
      * @public
      * @readonly
      */
     readonly maximumNumberOfMessages: OPTIONAL<INTEGER>;
     /**
      * @summary `replenishmentParameter`.
+     * @description
+     * 
+     * How many additional messages may be sent at the end of interval `timerT`
+     * (1..255). This is Y in the burst procedure of Annex D, D.6.1.
+     * 
      * @public
      * @readonly
      */
     readonly replenishmentParameter: OPTIONAL<INTEGER>;
     /**
      * @summary `timerT`.
+     * @description
+     * 
+     * Interval used with `maximumNumberOfMessages` (1..30). Q.932 does not
+     * state the unit. May be included when `controlReceiver` is
+     * `receiverReady`.
+     * 
      * @public
      * @readonly
      */

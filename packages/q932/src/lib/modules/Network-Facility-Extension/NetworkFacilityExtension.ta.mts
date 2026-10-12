@@ -13,6 +13,21 @@ import { AddressInformation, _decode_AddressInformation, _encode_AddressInformat
  * @summary NetworkFacilityExtension
  * @description
  * 
+ * Network facility extension (NFE). Included only when the Facility information
+ * element protocol profile is "networking extensions" (octet group 3.1). It
+ * names the source and destination PINX entities, each optionally with a
+ * `PartyNumber`.
+ *
+ * Q.932 reproduces the ISO/IEC 11582 definition. Where this extract differs
+ * from ISO/IEC 11582, ISO/IEC 11582 applies.
+ *
+ * A nodal entity that does not terminate GFT-Control forwards the Facility
+ * information element to the next entity regardless of `destinationEntity`.
+ * Q.932 gives a transit PINX with reduced functionality, and a relay node, as
+ * examples.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §8.2.3, Annex D, D.3.6.2.1 and D.4.3.1.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,24 +45,42 @@ export
 class NetworkFacilityExtension {
     /**
      * @summary `sourceEntity`.
+     * @description
+     * 
+     * PINX entity that originated the facility. `endPINX` or `anyTypeOfPINX`.
+     * 
      * @public
      * @readonly
      */
     readonly sourceEntity: EntityType;
     /**
      * @summary `sourceEntityAddress`.
+     * @description
+     * 
+     * Optional `PartyNumber` of the source entity.
+     * 
      * @public
      * @readonly
      */
     readonly sourceEntityAddress: OPTIONAL<AddressInformation>;
     /**
      * @summary `destinationEntity`.
+     * @description
+     * 
+     * PINX entity that should receive the facility. A node that does not
+     * terminate GFT-Control forwards the Facility information element
+     * regardless of this value. ITU-T Rec. Q.932 (05/1998) Annex D, D.4.3.1.2.
+     * 
      * @public
      * @readonly
      */
     readonly destinationEntity: EntityType;
     /**
      * @summary `destinationEntityAddress`.
+     * @description
+     * 
+     * Optional `PartyNumber` of the destination entity.
+     * 
      * @public
      * @readonly
      */

@@ -13,6 +13,15 @@ import { ReturnResult_result, _decode_ReturnResult_result, _encode_ReturnResult_
  * @summary ReturnResult
  * @description
  * 
+ * Successful outcome of an outstanding operation that returns a result.
+ * `invokeId` must be that operation's invoke identifier. `result` may be
+ * omitted; when present it repeats the operation code and carries the result
+ * value.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §8.2.3.1; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 8-7 bis. Amendment 1 replaces the 1998 return result definition, in
+ * which the operation value and result were not optional as a group.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,12 +52,21 @@ export
 class ReturnResult {
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Invoke identifier of the outstanding operation that returns a result.
+     * 
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * 
+     * Operation code and result value. Omitted when the operation's result is
+     * empty.
+     * 
      * @public
      * @readonly
      */

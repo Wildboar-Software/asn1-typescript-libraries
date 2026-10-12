@@ -6,6 +6,13 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary unwantedReservationCreated
  * @description
  * 
+ * The network created a reservation the user did not want. Local error code 35.
+ * Q.932 lists this error for explicit reservation creation and does not add
+ * conditions beyond the error name.
+ *
+ * ITU-T Rec. Q.932 (05/1998) §6.4.2.1; ITU-T Rec. Q.932 (1998) Amd.1 (06/2000)
+ * Table 6-1 bis.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
