@@ -21,7 +21,16 @@ enum _enum_for_IRI_Parameters_initiator {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-initiator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-initiator ::= ENUMERATED {
+ *     not-Available        (0),
+ *     originating-Target    (1),
+ *     -- in case of I-WLAN, this indicates that the I-WLAN tunnel disconnect is WLAN UE
+ *     -- requested.
+ *     terminating-Target    (2),
+ *     -- in case of I-WLAN, this indicates that the I-WLAN tunnel disconnect is network
+ *     -- initiated.
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

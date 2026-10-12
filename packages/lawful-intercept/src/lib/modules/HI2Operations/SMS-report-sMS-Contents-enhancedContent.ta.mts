@@ -17,7 +17,22 @@ import { SMS_report_sMS_Contents_enhancedContent_character_encoding, _decode_SMS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents-enhancedContent ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents-enhancedContent ::= SEQUENCE {
+ *     content                [1] OCTET STRING,
+ *     -- The character encoding used in the content field is specified in the
+ *     -- character-encoding field.
+ *     character-encoding    [2] ENUMERATED
+ *     {
+ *         gsm-7-bit-ascii(0),
+ *         eight-bit-ascii(1),
+ *         eight-bit-binary(2),
+ *         ucs-2(3),
+ *         utf-8(4),
+ *         utf-16(5),
+ *         other(6),
+ *         ...
+ *     }
+ * }
  * ```
  * 
  * @class

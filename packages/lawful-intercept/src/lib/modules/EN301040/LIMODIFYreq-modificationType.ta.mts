@@ -18,7 +18,15 @@ import { ActivityType, _decode_ActivityType, _encode_ActivityType } from "../EN3
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LIMODIFYreq-modificationType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * LIMODIFYreq-modificationType ::= CHOICE {
+ *     -- The duplicate tags here are not problematic because this module uses AUTOMATIC TAGS
+ *     halt                    BOOLEAN,
+ *     reset                    BOOLEAN,
+ *     expiryDateTime           UTCTime,
+ *     targetname               VisibleString,
+ *     additionaltargetdata       VisibleString,
+ *     monitorServiceList       SEQUENCE OF ActivityType
+ * }
  * ```
  */
 export

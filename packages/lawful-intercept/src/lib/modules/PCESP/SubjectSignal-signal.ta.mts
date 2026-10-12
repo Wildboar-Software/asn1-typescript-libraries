@@ -16,7 +16,19 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubjectSignal-signal ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SubjectSignal-signal ::= SEQUENCE {
+ *     -- The following four parameters are used to report
+ *     -- information regarding subject-initiated dialing and
+ *     -- signaling. Include at least one of the following four
+ *     -- parameters to identify the subject- initiated dialing
+ *     -- and signaling information being reported.
+ *     switchhookFlash             [0] VisibleString (SIZE (1..128, ...)) OPTIONAL,
+ *     dialedDigits                [1] VisibleString (SIZE (1..128, ...)) OPTIONAL,
+ *     featureKey                  [2] VisibleString (SIZE (1..128, ...)) OPTIONAL,
+ *     otherSignalingInformation   [3] VisibleString (SIZE (1..128, ...)) OPTIONAL,
+ *     -- Can be used to report undefined subject signals
+ *     ...
+ * }
  * ```
  * 
  * @class

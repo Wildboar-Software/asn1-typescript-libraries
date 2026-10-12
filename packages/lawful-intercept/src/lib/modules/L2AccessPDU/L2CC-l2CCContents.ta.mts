@@ -16,7 +16,37 @@ import { L2TruncatedDatagram, _decode_L2TruncatedDatagram, _encode_L2TruncatedDa
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * L2CC-l2CCContents ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * L2CC-l2CCContents ::= CHOICE {
+ *     l2TP                    [1] OCTET STRING,
+ *     -- The L2TP protocol is used
+ *     l2F                     [2] OCTET STRING,
+ *     -- The L2F protocol is used
+ *     pPTP                    [3] OCTET STRING,
+ *     -- The PPTP protocol is used
+ *     pPP                     [4] OCTET STRING,
+ *     -- The PPP protocol is used
+ *     ethernet                [5] OCTET STRING,
+ *     -- The ethernet protocol is used
+ *     ...,
+ *     l2ATM2684               [6] OCTET STRING,
+ *     -- The protocol RFC 2684, method "LLC Encapsulation for Bridged Protocols" [16] is used
+ *     l2FR2427                [7] OCTET STRING,
+ *     -- The protocol RFC 2427 "Multiprotocol Interconnect over Frame Relay" [18] is used
+ *     truncatedL2TP           [8] L2TruncatedDatagram,
+ *     -- truncated l2TP[1]
+ *     truncatedL2F            [9] L2TruncatedDatagram,
+ *     -- truncated l2F[2]
+ *     truncatedPPTP           [10] L2TruncatedDatagram,
+ *     -- truncated pPTP[3]
+ *     truncatedPPP            [11] L2TruncatedDatagram,
+ *     -- truncated pPP[4]
+ *     truncatedEthernet       [12] L2TruncatedDatagram,
+ *     -- truncated ethernet[5]
+ *     truncatedL2ATM2684      [13] L2TruncatedDatagram,
+ *     -- truncated l2ATM2684[6]
+ *     truncatedL2FR2427       [14] L2TruncatedDatagram
+ *     -- truncated l2FR2427[7]
+ * }
  * ```
  */
 export

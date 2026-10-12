@@ -16,7 +16,11 @@ import { CallId, _decode_CallId, _encode_CallId } from "../PCESP/CallId.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CCOpen-ccOpenOption ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CCOpen-ccOpenOption ::= CHOICE {
+ *     ccOpenTime  [3] SEQUENCE OF CallId,
+ *     reserved0   [4] NULL, -- Reserved
+ *     ...
+ * }
  * ```
  */
 export

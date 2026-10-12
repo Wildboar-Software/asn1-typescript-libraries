@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-scope ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-scope ::= ENUMERATED {
+ *     point2Point,
+ *     point2MultiPoint,
+ *     broadcast
+ * }
  * ```
  * 
  * @enum {number}
@@ -32,7 +36,11 @@ enum _enum_for_ActivityType_scope {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-scope ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-scope ::= ENUMERATED {
+ *     point2Point,
+ *     point2MultiPoint,
+ *     broadcast
+ * }
  * ```
  * 
  * @enum {number}
@@ -47,7 +55,11 @@ type ActivityType_scope = _enum_for_ActivityType_scope;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-scope ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-scope ::= ENUMERATED {
+ *     point2Point,
+ *     point2MultiPoint,
+ *     broadcast
+ * }
  * ```
  * 
  * @enum {number}

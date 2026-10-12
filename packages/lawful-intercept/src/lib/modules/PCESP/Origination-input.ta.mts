@@ -15,7 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Origination-input ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Origination-input ::= CHOICE {
+ *     userinput               [6] VisibleString (SIZE (1..32, ...)),
+ *     translationinput        [7] VisibleString (SIZE (1..32, ...)),
+ *     ...
+ * }
  * ```
  */
 export

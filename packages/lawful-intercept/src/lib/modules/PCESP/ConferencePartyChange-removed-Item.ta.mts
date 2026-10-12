@@ -18,7 +18,16 @@ import { CCCId, _decode_CCCId, _encode_CCCId } from "../PCESP/CCCId.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConferencePartyChange-removed-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ConferencePartyChange-removed-Item ::= SEQUENCE {
+ *     -- include to identify parties removed (e.g., hold
+ *     -- service) from the communication.
+ *     partyId     [0] SEQUENCE OF PartyId OPTIONAL,
+ *     -- identifies removed party identity(ies).
+ *     cCCId       [1] EXPLICIT CCCId OPTIONAL,
+ *     -- included when the content of the resulting call is
+ *     -- delivered to identify the associated CCC(s).
+ *     ...
+ * }
  * ```
  * 
  * @class

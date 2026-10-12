@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-callRelation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-callRelation ::= ENUMERATED {
+ *     begin,
+ *     end,
+ *     continue,
+ *     report
+ * }
  * ```
  * 
  * @enum {number}
@@ -33,7 +38,12 @@ enum _enum_for_ActivityType_callRelation {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-callRelation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-callRelation ::= ENUMERATED {
+ *     begin,
+ *     end,
+ *     continue,
+ *     report
+ * }
  * ```
  * 
  * @enum {number}
@@ -48,7 +58,12 @@ type ActivityType_callRelation = _enum_for_ActivityType_callRelation;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-callRelation ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-callRelation ::= ENUMERATED {
+ *     begin,
+ *     end,
+ *     continue,
+ *     report
+ * }
  * ```
  * 
  * @enum {number}

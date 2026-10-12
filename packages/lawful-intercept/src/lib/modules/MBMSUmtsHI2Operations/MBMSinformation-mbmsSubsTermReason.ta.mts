@@ -20,7 +20,11 @@ enum _enum_for_MBMSinformation_mbmsSubsTermReason {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSinformation-mbmsSubsTermReason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSinformation-mbmsSubsTermReason ::= ENUMERATED {
+ *     userInitiated            (0),
+ *     subscriptionExpired        (1),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

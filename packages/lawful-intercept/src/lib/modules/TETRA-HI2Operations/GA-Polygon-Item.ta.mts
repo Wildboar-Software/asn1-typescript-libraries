@@ -16,7 +16,10 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GA-Polygon-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GA-Polygon-Item ::= SEQUENCE {
+ *     geographicalCoordinates     [0] GeographicalCoordinates,
+ *     ...
+ * }
  * ```
  * 
  * @class

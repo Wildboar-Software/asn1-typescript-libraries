@@ -25,7 +25,16 @@ enum _enum_for_IRI_Parameters_iRIversion {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-iRIversion ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-iRIversion ::= ENUMERATED {
+ *     version2(2),
+ *     ...,
+ *     version3(3),
+ *     version4(4),
+ *     version5(5),
+ *     version6(6),
+ *     version7(7),
+ *     lastVersion(8)
+ * }
  * ```
  * 
  * @enum {number}

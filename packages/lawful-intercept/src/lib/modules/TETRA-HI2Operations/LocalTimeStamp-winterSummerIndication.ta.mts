@@ -21,7 +21,12 @@ enum _enum_for_LocalTimeStamp_winterSummerIndication {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LocalTimeStamp-winterSummerIndication ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * LocalTimeStamp-winterSummerIndication ::= ENUMERATED {
+ *     notProvided(0),
+ *     winterTime(1),
+ *     summerTime(2),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

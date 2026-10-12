@@ -20,7 +20,11 @@ enum _enum_for_MBMSinformation_mbmsLeavingReason {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSinformation-mbmsLeavingReason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSinformation-mbmsLeavingReason ::= ENUMERATED {
+ *     uEinitiatedRequested    (0),
+ *     bMSCorNetworkTerminated    (1),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

@@ -22,7 +22,14 @@ enum _enum_for_IRI_Parameters_iRIversion {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-iRIversion ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-iRIversion ::= ENUMERATED {
+ *     version1(1),
+ *     ...,
+ *     version2(2),
+ *     version3(3),
+ *     -- versions 4-7 were ommited to align with UmtsHI2Operations.
+ *     lastVersion(8)
+ * }
  * ```
  * 
  * @enum {number}

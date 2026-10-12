@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-direction ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-direction ::= ENUMERATED {
+ *     toTarget,
+ *     fromTarget
+ * }
  * ```
  * 
  * @enum {number}
@@ -31,7 +34,10 @@ enum _enum_for_ActivityType_direction {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-direction ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-direction ::= ENUMERATED {
+ *     toTarget,
+ *     fromTarget
+ * }
  * ```
  * 
  * @enum {number}
@@ -46,7 +52,10 @@ type ActivityType_direction = _enum_for_ActivityType_direction;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ActivityType-direction ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ActivityType-direction ::= ENUMERATED {
+ *     toTarget,
+ *     fromTarget
+ * }
  * ```
  * 
  * @enum {number}

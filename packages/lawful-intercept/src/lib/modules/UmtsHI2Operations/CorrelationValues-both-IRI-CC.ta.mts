@@ -18,7 +18,10 @@ import { IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CorrelationValues-both-IRI-CC ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CorrelationValues-both-IRI-CC ::= SEQUENCE { -- correlates IRI to IRI and IRI to Content(s)
+ *     iri-CC    [0]    IRI-to-CC-Correlation,
+ *     iri-IRI    [1]    IRI-to-IRI-Correlation
+ * }
  * ```
  * 
  * @class

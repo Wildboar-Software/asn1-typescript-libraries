@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CCCId-sepCCCpair ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CCCId-sepCCCpair ::= SEQUENCE {
+ *     sepXmitCCC  [0] VisibleString (SIZE(1..20, ...)),
+ *     sepRecvCCC  [1] VisibleString (SIZE(1..20, ...)),
+ *     ...
+ * }
  * ```
  * 
  * @class

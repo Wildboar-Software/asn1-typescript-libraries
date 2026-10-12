@@ -23,7 +23,58 @@ import { SMS_report_sMS_Contents_enhancedContent, _decode_SMS_report_sMS_Content
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents ::= SEQUENCE {
+ *     initiator            [1] ENUMERATED
+ *     {
+ *         -- party which sent the SMS
+ *         target(0),
+ *         server(1),
+ *         undefined-party(2),
+ *         ...
+ *     }
+ *     ,
+ *     transfer-status        [2] ENUMERATED
+ *     {
+ *         succeed-transfer(0),
+ *         --the transfer of the SMS message succeeds
+ *         not-succeed-transfer(1),
+ *         undefined(2),
+ *         ...
+ *     }
+ *     OPTIONAL,
+ *     other-message        [3] ENUMERATED
+ *     {
+ *         -- In case of terminating call, indicates if the server will send other SMS.
+ *         yes(0),
+ *         no(1),
+ *         undefined(2),
+ *         ...
+ *     }
+ *     OPTIONAL,
+ *     content                [4] OCTET STRING (SIZE (1..270)) OPTIONAL,
+ *     -- Encoded in the format defined for the SMS mobile.
+ *     -- The content and enhancedContent fields are mutually exclusive.
+ *     -- The content field is dedicated for 3GPP purposes.
+ *     ...,
+ *     enhancedContent        [5] SEQUENCE
+ *     {
+ *         content                [1] OCTET STRING,
+ *         -- The character encoding used in the content field is specified in the
+ *         -- character-encoding field.
+ *         character-encoding    [2] ENUMERATED
+ *         {
+ *             gsm-7-bit-ascii(0),
+ *             eight-bit-ascii(1),
+ *             eight-bit-binary(2),
+ *             ucs-2(3),
+ *             utf-8(4),
+ *             utf-16(5),
+ *             other(6),
+ *             ...
+ *         }
+ *     }
+ *     OPTIONAL
+ * }
  * ```
  * 
  * @class

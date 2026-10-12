@@ -20,7 +20,12 @@ enum _enum_for_UMTS_Content_Report_version {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UMTS-Content-Report-version ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * UMTS-Content-Report-version ::= ENUMERATED {
+ *     version1(1),
+ *     ... ,
+ *     -- versions 2-7 were omitted to align with UmtsHI2Operations.
+ *     version8(8)
+ * }
  * ```
  * 
  * @enum {number}

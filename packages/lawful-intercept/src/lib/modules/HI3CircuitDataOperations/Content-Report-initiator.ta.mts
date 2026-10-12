@@ -22,7 +22,13 @@ enum _enum_for_Content_Report_initiator {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Content-Report-initiator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Content-Report-initiator ::= ENUMERATED {
+ *     originating-party(0),
+ *     terminating-party(1),
+ *     forwarded-to-party(2),
+ *     undefined-party(3),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

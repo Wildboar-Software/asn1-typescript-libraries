@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GeographicalCoordinates-latitudeSign ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * GeographicalCoordinates-latitudeSign ::= ENUMERATED {
+ *     north(1),
+ *     south(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -31,7 +34,10 @@ enum _enum_for_GeographicalCoordinates_latitudeSign {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GeographicalCoordinates-latitudeSign ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * GeographicalCoordinates-latitudeSign ::= ENUMERATED {
+ *     north(1),
+ *     south(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -46,7 +52,10 @@ type GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_la
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GeographicalCoordinates-latitudeSign ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * GeographicalCoordinates-latitudeSign ::= ENUMERATED {
+ *     north(1),
+ *     south(2)
+ * }
  * ```
  * 
  * @enum {number}

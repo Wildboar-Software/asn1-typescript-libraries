@@ -21,7 +21,16 @@ enum _enum_for_IPAddress_iP_assignment {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IPAddress-iP-assignment ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IPAddress-iP-assignment ::= ENUMERATED {
+ *     static(1),
+ *     -- The static coding shall be used to report a static address.
+ *     dynamic(2),
+ *     -- The dynamic coding shall be used to report a dynamically allocated address.
+ *     notKnown(3),
+ *     -- The notKnown coding shall be used to report other then static or dynamically
+ *     -- allocated IP addresses.
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

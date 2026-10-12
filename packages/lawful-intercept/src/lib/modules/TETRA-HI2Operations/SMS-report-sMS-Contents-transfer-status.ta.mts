@@ -21,7 +21,13 @@ enum _enum_for_SMS_report_sMS_Contents_transfer_status {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents-transfer-status ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents-transfer-status ::= ENUMERATED {
+ *     succeed-transfer(0),
+ *     --the transfer of the SMS message succeeds
+ *     not-succeed-transfer(1),
+ *     undefined(2),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

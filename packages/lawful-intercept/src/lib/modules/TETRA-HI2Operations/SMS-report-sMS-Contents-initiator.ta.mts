@@ -21,7 +21,13 @@ enum _enum_for_SMS_report_sMS_Contents_initiator {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents-initiator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents-initiator ::= ENUMERATED {
+ *     -- party which sent the SMS
+ *     target(0),
+ *     server(1),
+ *     undefined-party(2),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

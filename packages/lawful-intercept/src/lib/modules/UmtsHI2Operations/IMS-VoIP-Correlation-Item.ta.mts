@@ -18,7 +18,10 @@ import { IRI_to_CC_Correlation, _decode_IRI_to_CC_Correlation, _encode_IRI_to_CC
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IMS-VoIP-Correlation-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * IMS-VoIP-Correlation-Item ::= SEQUENCE {
+ *     ims-iri        [0]        IRI-to-IRI-Correlation,
+ *     ims-cc        [1]        IRI-to-CC-Correlation         OPTIONAL
+ * }
  * ```
  * 
  * @class

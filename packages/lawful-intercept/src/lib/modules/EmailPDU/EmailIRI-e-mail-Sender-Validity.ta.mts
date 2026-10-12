@@ -20,7 +20,13 @@ enum _enum_for_EmailIRI_e_mail_Sender_Validity {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EmailIRI-e-mail-Sender-Validity ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EmailIRI-e-mail-Sender-Validity ::= ENUMERATED {
+ *     validated(0),
+ *     -- The operator has assured the e-mail-sender
+ *     nonvalidated(1),
+ *     -- The operator does not assure the e-mail-sender
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}

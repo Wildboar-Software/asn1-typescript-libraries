@@ -16,7 +16,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TetraLocation-ms-Loc ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TetraLocation-ms-Loc ::= SEQUENCE {
+ *     mcc     [1] INTEGER (0..1023),
+ *     -- 10 bits EN 300 392-1 [40]
+ *     mnc     [2] INTEGER (0..16383),
+ *     -- 14 bits EN 300 392-1 [40]
+ *     lai     [3] INTEGER (0..65535),
+ *     -- 14 bits EN 300 392-1 [40]
+ *     ci         [4] INTEGER OPTIONAL,
+ *     ...
+ * }
  * ```
  * 
  * @class

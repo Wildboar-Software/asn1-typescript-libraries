@@ -17,7 +17,11 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSNodeList-Item-mBMSNODELIST ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSNodeList-Item-mBMSNODELIST ::= SEQUENCE {
+ *     mbmsnodeIPAdress    [1]      IPAddress     OPTIONAL,
+ *     mbmsnodeName        [2]        UTF8String    OPTIONAL,
+ *     ...
+ * }
  * ```
  * 
  * @class

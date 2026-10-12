@@ -24,7 +24,25 @@ enum _enum_for_IRI_Parameters_nature_Of_The_intercepted_call {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-nature-Of-The-intercepted-call ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-nature-Of-The-intercepted-call ::= ENUMERATED {
+ *     --Not required for UMTS. May be included for backwards compatibility to GSM
+ *     --Nature of the intercepted "call":
+ *     gSM-ISDN-PSTN-circuit-call(0),
+ *     -- the possible UUS content is sent through the HI2 or HI3 "data" interface
+ *     -- the possible call content call is established through the HI3 "circuit" interface
+ *     gSM-SMS-Message(1),
+ *     -- the SMS content is sent through the HI2 or HI3 "data" interface
+ *     uUS4-Messages(2),
+ *     -- the UUS content is sent through the HI2 or HI3 "data" interface
+ *     tETRA-circuit-call(3),
+ *     -- the possible call content call is established through the HI3 "circuit" interface
+ *     -- the possible data are sent through the HI3 "data" interface
+ *     teTRA-Packet-Data(4),
+ *     -- the data are sent through the HI3 "data" interface
+ *     gPRS-Packet-Data(5),
+ *     -- the data are sent through the HI3 "data" interface
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}
