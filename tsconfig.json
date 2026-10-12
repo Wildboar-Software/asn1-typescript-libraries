@@ -275,6 +275,9 @@
     },
     {
       "path": "./packages/lpp"
+    },
+    {
+      "path": "./packages/q932"
     }
   ],
   "compilerOptions": {
