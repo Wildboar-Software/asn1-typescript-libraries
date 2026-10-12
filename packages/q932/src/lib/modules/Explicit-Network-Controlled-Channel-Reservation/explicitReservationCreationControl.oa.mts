@@ -1,15 +1,9 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_explicitReservationCreationControl_ArgumentType, _encode_explicitReservationCreationControl_ArgumentType, explicitReservationCreationControl_ArgumentType } from "../Explicit-Network-Controlled-Channel-Reservation/explicitReservationCreationControl-ArgumentType.ta.mjs";
-// export { explicitReservationCreationControl_ArgumentType, _decode_explicitReservationCreationControl_ArgumentType, _encode_explicitReservationCreationControl_ArgumentType } from "../Explicit-Network-Controlled-Channel-Reservation/explicitReservationCreationControl-ArgumentType.ta.mjs";
 import { ReservationIndicator, _decode_ReservationIndicator, _encode_ReservationIndicator } from "../Explicit-Network-Controlled-Channel-Reservation/ReservationIndicator.ta.mjs";
-// export { ReservationIndicator, _decode_ReservationIndicator, _encode_ReservationIndicator } from "../Explicit-Network-Controlled-Channel-Reservation/ReservationIndicator.ta.mjs";
 import { maximumNumberOfReservationsReached } from "../Explicit-Network-Controlled-Channel-Reservation/maximumNumberOfReservationsReached.oa.mjs";
-// export { maximumNumberOfReservationsReached } from "../Explicit-Network-Controlled-Channel-Reservation/maximumNumberOfReservationsReached.oa.mjs";
 import { unwantedReservationCreated } from "../Explicit-Network-Controlled-Channel-Reservation/unwantedReservationCreated.oa.mjs";
-// export { unwantedReservationCreated } from "../Explicit-Network-Controlled-Channel-Reservation/unwantedReservationCreated.oa.mjs";
 import { notAvailable } from "../Explicit-Network-Controlled-Channel-Reservation/notAvailable.oa.mjs";
 import { userNotSubscribed } from "../Explicit-Network-Controlled-Channel-Reservation/userNotSubscribed.oa.mjs";
 

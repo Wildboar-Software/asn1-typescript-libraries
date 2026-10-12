@@ -4,10 +4,7 @@ import {
     itu_t
 } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_flowControl_ArgumentType, _encode_flowControl_ArgumentType, flowControl_ArgumentType } from "../Flow-Control/flowControl-ArgumentType.ta.mjs";
-// export { flowControl_ArgumentType, _decode_flowControl_ArgumentType, _encode_flowControl_ArgumentType } from "../Flow-Control/flowControl-ArgumentType.ta.mjs";
 
 
 /**

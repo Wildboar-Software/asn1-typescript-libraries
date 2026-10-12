@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_explicitReservationCreationControl_ArgumentType_controlOption, _encode_explicitReservationCreationControl_ArgumentType_controlOption, _enum_for_explicitReservationCreationControl_ArgumentType_controlOption, explicitReservationCreationControl_ArgumentType_controlOption } from "../Explicit-Network-Controlled-Channel-Reservation/explicitReservationCreationControl-ArgumentType-controlOption.ta.mjs";
-// export { explicitReservationCreationControl_ArgumentType_controlOption, _enum_for_explicitReservationCreationControl_ArgumentType_controlOption, explicitReservationCreationControl_ArgumentType_controlOption_noReservationRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, noReservationRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithReservationIndicator /* IMPORTED_LONG_ENUMERATION_ITEM */, reservationRequiredWithReservationIndicator /* IMPORTED_SHORT_ENUMERATION_ITEM */, explicitReservationCreationControl_ArgumentType_controlOption_reservationRequiredWithoutReservationIndicator /* IMPORTED_LONG_ENUMERATION_ITEM */, reservationRequiredWithoutReservationIndicator /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_explicitReservationCreationControl_ArgumentType_controlOption, _encode_explicitReservationCreationControl_ArgumentType_controlOption } from "../Explicit-Network-Controlled-Channel-Reservation/explicitReservationCreationControl-ArgumentType-controlOption.ta.mjs";
 
 
 /**

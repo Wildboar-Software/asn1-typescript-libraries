@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements/PartyNumber.ta.mjs";
 import { ScreeningIndicator, _decode_ScreeningIndicator, _encode_ScreeningIndicator, _enum_for_ScreeningIndicator } from "../Addressing-Data-Elements/ScreeningIndicator.ta.mjs";
-// export { ScreeningIndicator, _enum_for_ScreeningIndicator, ScreeningIndicator_userProvidedNotScreened /* IMPORTED_LONG_ENUMERATION_ITEM */, userProvidedNotScreened /* IMPORTED_SHORT_ENUMERATION_ITEM */, ScreeningIndicator_userProvidedVerifiedAndPassed /* IMPORTED_LONG_ENUMERATION_ITEM */, userProvidedVerifiedAndPassed /* IMPORTED_SHORT_ENUMERATION_ITEM */, ScreeningIndicator_userProvidedVerifiedAndFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, userProvidedVerifiedAndFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, ScreeningIndicator_networkProvided /* IMPORTED_LONG_ENUMERATION_ITEM */, networkProvided /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ScreeningIndicator, _encode_ScreeningIndicator } from "../Addressing-Data-Elements/ScreeningIndicator.ta.mjs";
 
 
 /**
