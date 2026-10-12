@@ -52,48 +52,58 @@ import {
  *
  */
 export class A_DT_apdu {
+  /**
+   * @summary `aso_qualifier`.
+   * @description
+   *
+   * Child ASO to which this APDU is delivered. Conditional: omit if
+   * there is only one child ASO. ITU-T Rec. X.227 bis (1998) §7.4.4.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly aso_qualifier: OPTIONAL<ASO_qualifier>;
+  /**
+   * @summary `asoi_identifier`.
+   * @description
+   *
+   * Which concurrent instance of that ASO. Conditional: omit if only
+   * one instance is active. ITU-T Rec. X.227 bis (1998) §7.4.4.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly asoi_identifier: OPTIONAL<ASOI_identifier>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+  /**
+   * @summary `a_user_data`.
+   * @description
+   *
+   * Mandatory user data; meaning only to the ASO on which the
+   * association terminates. ITU-T Rec. X.217 bis (1998) §8.5.1.1;
+   * X.227 bis (1998) §7.4.4.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly a_user_data: User_Data;
+
   constructor(
-    /**
-     * @summary `aso_qualifier`.
-     * @description
-     *
-     * Child ASO to which this APDU is delivered. Conditional: omit if
-     * there is only one child ASO. ITU-T Rec. X.227 bis (1998) §7.4.4.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly aso_qualifier: OPTIONAL<ASO_qualifier>,
-    /**
-     * @summary `asoi_identifier`.
-     * @description
-     *
-     * Which concurrent instance of that ASO. Conditional: omit if only
-     * one instance is active. ITU-T Rec. X.227 bis (1998) §7.4.4.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly asoi_identifier: OPTIONAL<ASOI_identifier>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `a_user_data`.
-     * @description
-     *
-     * Mandatory user data; meaning only to the ASO on which the
-     * association terminates. ITU-T Rec. X.217 bis (1998) §8.5.1.1;
-     * X.227 bis (1998) §7.4.4.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly a_user_data: User_Data
-  ) {}
+    aso_qualifier: OPTIONAL<ASO_qualifier>,
+    asoi_identifier: OPTIONAL<ASOI_identifier>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    a_user_data: User_Data
+  ) {
+    this.aso_qualifier = aso_qualifier;
+    this.asoi_identifier = asoi_identifier;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.a_user_data = a_user_data;
+  }
 
   /**
    * @summary Restructures an object into a A_DT_apdu

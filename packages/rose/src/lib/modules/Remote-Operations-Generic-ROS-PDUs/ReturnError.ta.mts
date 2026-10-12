@@ -57,29 +57,37 @@ import {
  *
  */
 export class ReturnError {
+  /**
+   * @summary `invokeId`.
+   * @description Invocation whose failure is being reported. Must be outstanding and of an operation that returns errors, else `returnError-unrecognizedInvocation` / `returnError-errorResponseUnexpected` (X.880 §9.5.3 a).
+   * @public
+   * @readonly
+   */
+  public readonly invokeId: InvokeId;
+  /**
+   * @summary `errcode`.
+   * @description `&errorCode` of the error. Must be in `Errors` and in the associated operation's `&Errors`, else `returnError-unrecognizedError` / `returnError-unexpectedError` (X.880 §9.5.3 b).
+   * @public
+   * @readonly
+   */
+  public readonly errcode: Code;
+  /**
+   * @summary `parameter`.
+   * @description Parameter of the identified error. Present iff that error has `&ParameterType`; mismatch yields `returnError-mistypedParameter` (X.880 §9.5.3 c).
+   * @public
+   * @readonly
+   */
+  public readonly parameter?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `invokeId`.
-     * @description Invocation whose failure is being reported. Must be outstanding and of an operation that returns errors, else `returnError-unrecognizedInvocation` / `returnError-errorResponseUnexpected` (X.880 §9.5.3 a).
-     * @public
-     * @readonly
-     */
-    readonly invokeId: InvokeId,
-    /**
-     * @summary `errcode`.
-     * @description `&errorCode` of the error. Must be in `Errors` and in the associated operation's `&Errors`, else `returnError-unrecognizedError` / `returnError-unexpectedError` (X.880 §9.5.3 b).
-     * @public
-     * @readonly
-     */
-    readonly errcode: Code,
-    /**
-     * @summary `parameter`.
-     * @description Parameter of the identified error. Present iff that error has `&ParameterType`; mismatch yields `returnError-mistypedParameter` (X.880 §9.5.3 c).
-     * @public
-     * @readonly
-     */
-    readonly parameter?: OPTIONAL<_Element>
-  ) {}
+    invokeId: InvokeId,
+    errcode: Code,
+    parameter?: OPTIONAL<_Element>
+  ) {
+    this.invokeId = invokeId;
+    this.errcode = errcode;
+    this.parameter = parameter;
+  }
 
   /**
    * @summary Restructures an object into a ReturnError

@@ -36,28 +36,34 @@ import {
  *
  */
 export class Default_Context_List_Item {
+  /**
+   * @summary `abstract_syntax_name`.
+   * @description
+   *
+   * Abstract syntax of this default context, if named.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly abstract_syntax_name: OPTIONAL<Abstract_syntax_name>;
+  /**
+   * @summary `transfer_syntax_name`.
+   * @description
+   *
+   * Transfer syntax of this default context.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly transfer_syntax_name: Transfer_syntax_name;
+
   constructor(
-    /**
-     * @summary `abstract_syntax_name`.
-     * @description
-     *
-     * Abstract syntax of this default context, if named.
-     *
-     * @public
-     * @readonly
-     */
-    readonly abstract_syntax_name: OPTIONAL<Abstract_syntax_name>,
-    /**
-     * @summary `transfer_syntax_name`.
-     * @description
-     *
-     * Transfer syntax of this default context.
-     *
-     * @public
-     * @readonly
-     */
-    readonly transfer_syntax_name: Transfer_syntax_name
-  ) {}
+    abstract_syntax_name: OPTIONAL<Abstract_syntax_name>,
+    transfer_syntax_name: Transfer_syntax_name
+  ) {
+    this.abstract_syntax_name = abstract_syntax_name;
+    this.transfer_syntax_name = transfer_syntax_name;
+  }
 
   /**
    * @summary Restructures an object into a Default_Context_List_Item

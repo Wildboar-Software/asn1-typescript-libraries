@@ -35,22 +35,28 @@ import {
  *
  */
 export class ReturnResult_result {
+  /**
+   * @summary `opcode`.
+   * @description `&operationCode` of the operation identified by `invokeId` (X.880 §9.4.3 b).
+   * @public
+   * @readonly
+   */
+  public readonly opcode: Code;
+  /**
+   * @summary `result`.
+   * @description Value of the operation's `&ResultType` (X.880 §9.4.3 c).
+   * @public
+   * @readonly
+   */
+  public readonly result: _Element;
+
   constructor(
-    /**
-     * @summary `opcode`.
-     * @description `&operationCode` of the operation identified by `invokeId` (X.880 §9.4.3 b).
-     * @public
-     * @readonly
-     */
-    readonly opcode: Code,
-    /**
-     * @summary `result`.
-     * @description Value of the operation's `&ResultType` (X.880 §9.4.3 c).
-     * @public
-     * @readonly
-     */
-    readonly result: _Element
-  ) {}
+    opcode: Code,
+    result: _Element
+  ) {
+    this.opcode = opcode;
+    this.result = result;
+  }
 
   /**
    * @summary Restructures an object into a ReturnResult_result
