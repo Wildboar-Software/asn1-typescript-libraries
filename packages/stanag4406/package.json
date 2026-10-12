@@ -1,9 +1,7 @@
 {
     "name": "@wildboar/stanag4406",
     "type": "module",
-    "version": "0.1.0",
-    "description": "",
-    "keywords": [],
+    "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
@@ -44,7 +42,6 @@
     },
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
-        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x",
         "@wildboar/x400": "npm:@jsr/wildboar__x400@^2.0.3",
         "@wildboar/x500": "npm:@jsr/wildboar__x500@^2.0.9"
     }
