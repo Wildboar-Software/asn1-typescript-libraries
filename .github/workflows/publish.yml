@@ -67,6 +67,7 @@ jobs:
           - "presentation-address"
           - "q932"
           - "sgp22"
+          - "sgp32"
           - "smrse"
           - "spnego"
           - "stanag4406"

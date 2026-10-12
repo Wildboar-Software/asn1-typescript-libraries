@@ -253,6 +253,9 @@
       "path": "./packages/sgp22"
     },
     {
+      "path": "./packages/sgp32"
+    },
+    {
       "path": "./packages/smrse"
     },
     {
