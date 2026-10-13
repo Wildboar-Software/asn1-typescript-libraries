@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlternativeNSSAIEntry, _decode_AlternativeNSSAIEntry, _encode_AlternativeNSSAIEntry } from "../TS33128Payloads/AlternativeNSSAIEntry.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_AlternativeNSSAIList: $.ASN1Decoder<AlternativeNSSAIList
 export
 function _decode_AlternativeNSSAIList (el: _Element): AlternativeNSSAIList {
     if (!_cached_decoder_for_AlternativeNSSAIList) { _cached_decoder_for_AlternativeNSSAIList = $._decodeSequenceOf<AlternativeNSSAIEntry>(() => _decode_AlternativeNSSAIEntry); }
-    return _cached_decoder_for_AlternativeNSSAIList(el);
+    const _value = _cached_decoder_for_AlternativeNSSAIList(el);
+    if (_value.length < 1 || _value.length > 8) {
+        throw new ASN1SizeError("AlternativeNSSAIList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_AlternativeNSSAIList: $.ASN1Encoder<AlternativeNSSAIList> | null = null;

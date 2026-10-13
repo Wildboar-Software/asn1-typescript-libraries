@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13Extension, _decode_TLS13Extension, _encode_TLS13Extension } from "../TS33128Payloads/TLS13Extension.ta.mjs";
@@ -163,12 +165,34 @@ function _decode_TLS13NewSessionTicket (el: _Element): TLS13NewSessionTicket {
     let ticketNonce!: OCTET_STRING;
     let ticket!: OCTET_STRING;
     let extensions: OPTIONAL<TLS13Extension[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "ticketLifeTime": (_el: _Element): void => { ticketLifeTime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "ticketAgeAdd": (_el: _Element): void => { ticketAgeAdd = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "ticketNonce": (_el: _Element): void => { ticketNonce = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "ticket": (_el: _Element): void => { ticket = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "ticketLifeTime": (_el: _Element): void => {
+            ticketLifeTime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof ticketLifeTime === "bigint" ? ticketLifeTime : BigInt(ticketLifeTime);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("TLS13NewSessionTicket.ticketLifeTime violates INTEGER range");
+            }
+        },
+        "ticketAgeAdd": (_el: _Element): void => {
+            ticketAgeAdd = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof ticketAgeAdd === "bigint" ? ticketAgeAdd : BigInt(ticketAgeAdd);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("TLS13NewSessionTicket.ticketAgeAdd violates INTEGER range");
+            }
+        },
+        "ticketNonce": (_el: _Element): void => {
+            ticketNonce = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (ticketNonce.length > 255) {
+                throw new ASN1SizeError("TLS13NewSessionTicket.ticketNonce violates SIZE constraint");
+            }
+        },
+        "ticket": (_el: _Element): void => {
+            ticket = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (ticket.length < 1 || ticket.length > 65535) {
+                throw new ASN1SizeError("TLS13NewSessionTicket.ticket violates SIZE constraint");
+            }
+        },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<TLS13Extension[]>(() => $._decodeSequenceOf<TLS13Extension>(() => _decode_TLS13Extension))(_el); }
     };
     $._parse_sequence(el, callbacks,

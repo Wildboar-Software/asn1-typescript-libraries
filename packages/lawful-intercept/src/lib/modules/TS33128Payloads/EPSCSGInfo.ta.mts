@@ -136,7 +136,7 @@ function _decode_EPSCSGInfo (el: _Element): EPSCSGInfo {
     if (!_cached_decoder_for_EPSCSGInfo) { _cached_decoder_for_EPSCSGInfo = function (el: _Element): EPSCSGInfo {
     let cSGID: OPTIONAL<CSGID>;
     let cSGMembershipStatus: OPTIONAL<CSGMembershipIndication>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cSGID": (_el: _Element): void => { cSGID = $._decode_implicit<CSGID>(() => _decode_CSGID)(_el); },
         "cSGMembershipStatus": (_el: _Element): void => { cSGMembershipStatus = $._decode_implicit<CSGMembershipIndication>(() => _decode_CSGMembershipIndication)(_el); }

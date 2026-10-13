@@ -19,6 +19,6 @@ import { emailPDUObjId } from "../EmailPDU/emailPDUObjId.va.mjs";
  * @constant
  */
 export
-const emailCCObjId: RELATIVE_OID = [ emailPDUObjId, /* cC */ 2 ];
+const emailCCObjId: RELATIVE_OID = [ ...emailPDUObjId, /* cC */ 2 ];
 
 /* eslint-enable */

@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -117,35 +114,8 @@ const AMFRegistrationResult_threeGPPAndNonThreeGPPAccess: AMFRegistrationResult 
  */
 export
 const threeGPPAndNonThreeGPPAccess: AMFRegistrationResult = AMFRegistrationResult.threeGPPAndNonThreeGPPAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_AMFRegistrationResult: $.ASN1Decoder<AMFRegistrationResult> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AMFRegistrationResult
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AMFRegistrationResult (el: _Element): AMFRegistrationResult {
-    if (!_cached_decoder_for_AMFRegistrationResult) { _cached_decoder_for_AMFRegistrationResult = $._decodeEnumerated; }
-    return _cached_decoder_for_AMFRegistrationResult(el);
-}
-
-let _cached_encoder_for_AMFRegistrationResult: $.ASN1Encoder<AMFRegistrationResult> | null = null;
-
-/**
- * @summary Encodes a(n) AMFRegistrationResult into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AMFRegistrationResult, encoded as an ASN.1 Element.
- */
-export
-function _encode_AMFRegistrationResult (value: AMFRegistrationResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFRegistrationResult) { _cached_encoder_for_AMFRegistrationResult = $._encodeEnumerated; }
-    return _cached_encoder_for_AMFRegistrationResult(value, elGetter);
-}
+export const _decode_AMFRegistrationResult: $.ASN1Decoder<AMFRegistrationResult> = $._decodeEnumerated;
+export const _encode_AMFRegistrationResult: $.ASN1Encoder<AMFRegistrationResult> = $._encodeEnumerated;
 
 
 /* eslint-enable */

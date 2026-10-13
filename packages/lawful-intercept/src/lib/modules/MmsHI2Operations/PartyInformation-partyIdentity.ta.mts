@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
@@ -17,7 +18,32 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity ::= SEQUENCE {
+ *     mSISDN                    [1] OCTET STRING OPTIONAL,
+ *     -- MSISDN, based on the value of
+ *     -- global-phone-number found in the MMS (see OMA Multimedia Messaging
+ *     -- Service Encapsulation Protocol [90]).
+ *     mMSAddress                [2] OCTET STRING OPTIONAL,
+ *     -- See clause 8 of OMA Multimedia Messaging Service Encapsulation Protocol [90]. It
+ *     -- may be each value of a user defined identifier, that will be an external
+ *     -- representation of an address processed by the MMS Proxy Relay.
+ *     mMSAddressNonLocalID    [3] OCTET STRING OPTIONAL,
+ *     -- see table 15.3.6.1.2: Mapping between Events information and IRI information
+ *     e-Mail                    [4] OCTET STRING OPTIONAL,
+ *     -- it is described in section 3.4 of IETF RFC 2822 [92], but excluding the obsolete
+ *     -- definitions as indicated by the "obs-"prefix.(see clause 8 of Multimedia Messaging
+ *     -- Service Encapsulation Protocol OMA-TS-MMS_ENC-V1_3-20110913-A [90].)
+ *     e164-Format                [5] OCTET STRING (SIZE (1 .. 25)) OPTIONAL,
+ *     -- E164 address but based on value of global-phone-number the found in the MMS.
+ *     iPAddress                 [6] IPAddress OPTIONAL,
+ *     -- IP Address may be an IPv4 or IPv6.
+ *     alphanum-Shortcode         [8] OCTET STRING OPTIONAL,
+ *     -- see clause 8 of OMA Multimedia Messaging Service Encapsulation Protocol [90].
+ *     num-Shortcode            [9] OCTET STRING OPTIONAL,
+ *     -- see clause 8 of OMA Multimedia Messaging Service Encapsulation Protocol [90].
+ *     iMSI                    [10] OCTET STRING OPTIONAL,
+ *     ...
+ * }
  * ```
  * 
  * @class
@@ -195,13 +221,18 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let alphanum_Shortcode: OPTIONAL<OCTET_STRING>;
     let num_Shortcode: OPTIONAL<OCTET_STRING>;
     let iMSI: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mSISDN": (_el: _Element): void => { mSISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "mMSAddress": (_el: _Element): void => { mMSAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "mMSAddressNonLocalID": (_el: _Element): void => { mMSAddressNonLocalID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "e-Mail": (_el: _Element): void => { e_Mail = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "e164-Format": (_el: _Element): void => { e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "e164-Format": (_el: _Element): void => {
+            e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (e164_Format.length < 1 || e164_Format.length > 25) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.e164_Format violates SIZE constraint");
+            }
+        },
         "iPAddress": (_el: _Element): void => { iPAddress = $._decode_implicit<IPAddress>(() => _decode_IPAddress)(_el); },
         "alphanum-Shortcode": (_el: _Element): void => { alphanum_Shortcode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "num-Shortcode": (_el: _Element): void => { num_Shortcode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

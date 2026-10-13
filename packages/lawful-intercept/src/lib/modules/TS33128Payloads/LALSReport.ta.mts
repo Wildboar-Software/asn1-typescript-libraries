@@ -196,7 +196,7 @@ function _decode_LALSReport (el: _Element): LALSReport {
     let iMPU: OPTIONAL<IMPU>;
     let iMSI: OPTIONAL<IMSI>;
     let mSISDN: OPTIONAL<MSISDN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "deprecatedPEI": (_el: _Element): void => { deprecatedPEI = $._decode_explicit<PEI>(() => _decode_PEI)(_el); },

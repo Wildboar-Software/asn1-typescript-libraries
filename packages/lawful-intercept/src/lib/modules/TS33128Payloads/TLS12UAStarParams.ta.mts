@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLSPRFAlgorithm, _decode_TLSPRFAlgorithm, _encode_TLSPRFAlgorithm, _enum_for_TLSPRFAlgorithm } from "../TS33128Payloads/TLSPRFAlgorithm.ta.mjs";
@@ -341,27 +343,98 @@ function _decode_TLS12UAStarParams (el: _Element): TLS12UAStarParams {
     let sessionID!: OCTET_STRING;
     let tLSServerExtensions!: OCTET_STRING;
     let tLSClientExtensions: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "preMasterSecret": (_el: _Element): void => { preMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "masterSecret": (_el: _Element): void => { masterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "preMasterSecret": (_el: _Element): void => {
+            preMasterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (preMasterSecret.length < 48 || preMasterSecret.length > 48) {
+                throw new ASN1SizeError("TLS12UAStarParams.preMasterSecret violates SIZE constraint");
+            }
+        },
+        "masterSecret": (_el: _Element): void => {
+            masterSecret = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (masterSecret.length < 48 || masterSecret.length > 48) {
+                throw new ASN1SizeError("TLS12UAStarParams.masterSecret violates SIZE constraint");
+            }
+        },
         "pRFAlgorithm": (_el: _Element): void => { pRFAlgorithm = $._decode_implicit<TLSPRFAlgorithm>(() => _decode_TLSPRFAlgorithm)(_el); },
         "cipherSuite": (_el: _Element): void => { cipherSuite = $._decode_implicit<TLSCipherSuite>(() => _decode_TLSCipherSuite)(_el); },
         "cipherType": (_el: _Element): void => { cipherType = $._decode_implicit<TLSCipherType>(() => _decode_TLSCipherType)(_el); },
-        "encKeyLength": (_el: _Element): void => { encKeyLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "blockLength": (_el: _Element): void => { blockLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "fixedIVLength": (_el: _Element): void => { fixedIVLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "recordIVLength": (_el: _Element): void => { recordIVLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "macLength": (_el: _Element): void => { macLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "macKeyLength": (_el: _Element): void => { macKeyLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "encKeyLength": (_el: _Element): void => {
+            encKeyLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof encKeyLength === "bigint" ? encKeyLength : BigInt(encKeyLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.encKeyLength violates INTEGER range");
+            }
+        },
+        "blockLength": (_el: _Element): void => {
+            blockLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof blockLength === "bigint" ? blockLength : BigInt(blockLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.blockLength violates INTEGER range");
+            }
+        },
+        "fixedIVLength": (_el: _Element): void => {
+            fixedIVLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof fixedIVLength === "bigint" ? fixedIVLength : BigInt(fixedIVLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.fixedIVLength violates INTEGER range");
+            }
+        },
+        "recordIVLength": (_el: _Element): void => {
+            recordIVLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof recordIVLength === "bigint" ? recordIVLength : BigInt(recordIVLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.recordIVLength violates INTEGER range");
+            }
+        },
+        "macLength": (_el: _Element): void => {
+            macLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof macLength === "bigint" ? macLength : BigInt(macLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.macLength violates INTEGER range");
+            }
+        },
+        "macKeyLength": (_el: _Element): void => {
+            macKeyLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof macKeyLength === "bigint" ? macKeyLength : BigInt(macKeyLength);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("TLS12UAStarParams.macKeyLength violates INTEGER range");
+            }
+        },
         "compressionAlgorithm": (_el: _Element): void => { compressionAlgorithm = $._decode_implicit<TLSCompressionAlgorithm>(() => _decode_TLSCompressionAlgorithm)(_el); },
-        "clientRandom": (_el: _Element): void => { clientRandom = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "serverRandom": (_el: _Element): void => { serverRandom = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "clientRandom": (_el: _Element): void => {
+            clientRandom = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (clientRandom.length < 32 || clientRandom.length > 32) {
+                throw new ASN1SizeError("TLS12UAStarParams.clientRandom violates SIZE constraint");
+            }
+        },
+        "serverRandom": (_el: _Element): void => {
+            serverRandom = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (serverRandom.length < 32 || serverRandom.length > 32) {
+                throw new ASN1SizeError("TLS12UAStarParams.serverRandom violates SIZE constraint");
+            }
+        },
         "clientSequenceNumber": (_el: _Element): void => { clientSequenceNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "serverSequenceNumber": (_el: _Element): void => { serverSequenceNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "sessionID": (_el: _Element): void => { sessionID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "tLSServerExtensions": (_el: _Element): void => { tLSServerExtensions = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "tLSClientExtensions": (_el: _Element): void => { tLSClientExtensions = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "sessionID": (_el: _Element): void => {
+            sessionID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (sessionID.length > 32) {
+                throw new ASN1SizeError("TLS12UAStarParams.sessionID violates SIZE constraint");
+            }
+        },
+        "tLSServerExtensions": (_el: _Element): void => {
+            tLSServerExtensions = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tLSServerExtensions.length > 65535) {
+                throw new ASN1SizeError("TLS12UAStarParams.tLSServerExtensions violates SIZE constraint");
+            }
+        },
+        "tLSClientExtensions": (_el: _Element): void => {
+            tLSClientExtensions = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tLSClientExtensions.length > 65535) {
+                throw new ASN1SizeError("TLS12UAStarParams.tLSClientExtensions violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_TLS12UAStarParams,

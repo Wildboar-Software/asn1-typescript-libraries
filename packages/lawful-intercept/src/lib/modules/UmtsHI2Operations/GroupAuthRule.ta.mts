@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -208,35 +207,8 @@ const GroupAuthRule_forbid_Anonymity: GroupAuthRule = 9; /* LONG_NAMED_ENUMERATE
  */
 export
 const forbid_Anonymity: GroupAuthRule = GroupAuthRule_forbid_Anonymity; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_GroupAuthRule: $.ASN1Decoder<GroupAuthRule> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) GroupAuthRule
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_GroupAuthRule (el: _Element): GroupAuthRule {
-    if (!_cached_decoder_for_GroupAuthRule) { _cached_decoder_for_GroupAuthRule = $._decodeEnumerated; }
-    return _cached_decoder_for_GroupAuthRule(el);
-}
-
-let _cached_encoder_for_GroupAuthRule: $.ASN1Encoder<GroupAuthRule> | null = null;
-
-/**
- * @summary Encodes a(n) GroupAuthRule into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The GroupAuthRule, encoded as an ASN.1 Element.
- */
-export
-function _encode_GroupAuthRule (value: GroupAuthRule, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GroupAuthRule) { _cached_encoder_for_GroupAuthRule = $._encodeEnumerated; }
-    return _cached_encoder_for_GroupAuthRule(value, elGetter);
-}
+export const _decode_GroupAuthRule: $.ASN1Decoder<GroupAuthRule> = $._decodeEnumerated;
+export const _encode_GroupAuthRule: $.ASN1Encoder<GroupAuthRule> = $._encodeEnumerated;
 
 
 /* eslint-enable */

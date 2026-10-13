@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -119,9 +120,15 @@ export
 function _decode_SupplementaryLocationData (el: _Element): SupplementaryLocationData {
     if (!_cached_decoder_for_SupplementaryLocationData) { _cached_decoder_for_SupplementaryLocationData = function (el: _Element): SupplementaryLocationData {
     let azimuth: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "azimuth": (_el: _Element): void => { azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }
+        "azimuth": (_el: _Element): void => {
+            azimuth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof azimuth === "bigint" ? azimuth : BigInt(azimuth);
+            if (_n < 0n || _n > 359n) {
+                throw new ASN1OverflowError("SupplementaryLocationData.azimuth violates INTEGER range");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_SupplementaryLocationData,

@@ -4,7 +4,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RANCGI, _decode_RANCGI, _encode_RANCGI } from "../TS33128Payloads/RANCGI.ta.mjs";
@@ -174,12 +176,23 @@ function _decode_F1Information (el: _Element): F1Information {
     let gNBDUServedCells!: RANCGI[];
     let extendedGNBDUName: OPTIONAL<UTF8String>;
     let extendedGNBCUName: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "gNBDUID": (_el: _Element): void => { gNBDUID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "gNBDUID": (_el: _Element): void => {
+            gNBDUID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof gNBDUID === "bigint" ? gNBDUID : BigInt(gNBDUID);
+            if (_n < 0n || _n > 68719476735n) {
+                throw new ASN1OverflowError("F1Information.gNBDUID violates INTEGER range");
+            }
+        },
         "gNBDUName": (_el: _Element): void => { gNBDUName = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "gNBCUName": (_el: _Element): void => { gNBCUName = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "gNBDUServedCells": (_el: _Element): void => { gNBDUServedCells = $._decode_implicit<RANCGI[]>(() => $._decodeSequenceOf<RANCGI>(() => _decode_RANCGI))(_el); },
+        "gNBDUServedCells": (_el: _Element): void => {
+            gNBDUServedCells = $._decode_implicit<RANCGI[]>(() => $._decodeSequenceOf<RANCGI>(() => _decode_RANCGI))(_el);
+            if (gNBDUServedCells.length < 1) {
+                throw new ASN1SizeError("F1Information.gNBDUServedCells violates SIZE constraint");
+            }
+        },
         "extendedGNBDUName": (_el: _Element): void => { extendedGNBDUName = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "extendedGNBCUName": (_el: _Element): void => { extendedGNBCUName = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }
     };

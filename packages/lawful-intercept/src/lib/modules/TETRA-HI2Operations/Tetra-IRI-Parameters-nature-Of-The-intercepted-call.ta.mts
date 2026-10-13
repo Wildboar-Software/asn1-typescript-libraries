@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,7 +26,32 @@ enum _enum_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Tetra-IRI-Parameters-nature-Of-The-intercepted-call ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Tetra-IRI-Parameters-nature-Of-The-intercepted-call ::= ENUMERATED {
+ *     -- Nature of the intercepted "call":
+ *     gSM-ISDN-PSTN-circuit-call(0),
+ *     -- the possible UUS content is sent through the HI2 or HI3 "data" interface
+ *     -- the possible call content call is established through the HI3 "circuit" interface
+ *     gSM-SMS-Message(1),
+ *     -- the SMS content is sent through the HI2 or HI3 "data" interface
+ *     uUS4-Messages(2),
+ *     -- the UUS content is sent through the HI2 or HI3 "data" interface
+ *     tETRA-circuit-call(3),
+ *     -- the possible call content call is established through the HI3 "circuit" interface
+ *     -- the possible data are sent through the HI3 "data" interface
+ *     teTRA-Packet-Data(4),
+ *     -- the data are sent through the HI3 "data" interface
+ *     gPRS-Packet-Data(5),
+ *     -- the data are sent through the HI3 "data" interface
+ *     ...,
+ *     uMTS-circuit-call(6),
+ *     -- the possible call content call is established through the HI3 "circuit" interface
+ *     -- the possible data are sent through the HI3 "data" interface
+ *     lTE-SMS-Message(7),
+ *     -- indicator for SMS from LTE handset
+ *     -- the SMS content is sent through the HI2 or HI3 "data" interface
+ *     lTE-circuit-call(8)
+ *     -- indicator for CS call from LTE handset
+ * }
  * ```
  * 
  * @enum {number}
@@ -178,35 +202,8 @@ const Tetra_IRI_Parameters_nature_Of_The_intercepted_call_lTE_circuit_call: Tetr
  */
 export
 const lTE_circuit_call: Tetra_IRI_Parameters_nature_Of_The_intercepted_call = Tetra_IRI_Parameters_nature_Of_The_intercepted_call_lTE_circuit_call; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Decoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Tetra_IRI_Parameters_nature_Of_The_intercepted_call
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call (el: _Element): Tetra_IRI_Parameters_nature_Of_The_intercepted_call {
-    if (!_cached_decoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call) { _cached_decoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call = $._decodeEnumerated; }
-    return _cached_decoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call(el);
-}
-
-let _cached_encoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Encoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> | null = null;
-
-/**
- * @summary Encodes a(n) Tetra_IRI_Parameters_nature_Of_The_intercepted_call into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Tetra_IRI_Parameters_nature_Of_The_intercepted_call, encoded as an ASN.1 Element.
- */
-export
-function _encode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call (value: Tetra_IRI_Parameters_nature_Of_The_intercepted_call, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call) { _cached_encoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call = $._encodeEnumerated; }
-    return _cached_encoder_for_Tetra_IRI_Parameters_nature_Of_The_intercepted_call(value, elGetter);
-}
+export const _decode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Decoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> = $._decodeEnumerated;
+export const _encode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Encoder<Tetra_IRI_Parameters_nature_Of_The_intercepted_call> = $._encodeEnumerated;
 
 
 /* eslint-enable */

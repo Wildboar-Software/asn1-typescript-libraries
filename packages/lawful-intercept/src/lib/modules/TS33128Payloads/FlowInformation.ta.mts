@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FlowDescription, _decode_FlowDescription, _encode_FlowDescription } from "../TS33128Payloads/FlowDescription.ta.mjs";
@@ -183,13 +184,28 @@ function _decode_FlowInformation (el: _Element): FlowInformation {
     let spi: OPTIONAL<OCTET_STRING>;
     let flowLabel: OPTIONAL<OCTET_STRING>;
     let flowDirection: OPTIONAL<FlowDirection>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "flowDescription": (_el: _Element): void => { flowDescription = $._decode_implicit<FlowDescription>(() => _decode_FlowDescription)(_el); },
         "ethFlowDescription": (_el: _Element): void => { ethFlowDescription = $._decode_implicit<EthFlowDescription>(() => _decode_EthFlowDescription)(_el); },
-        "tosTrafficClass": (_el: _Element): void => { tosTrafficClass = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "spi": (_el: _Element): void => { spi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "flowLabel": (_el: _Element): void => { flowLabel = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "tosTrafficClass": (_el: _Element): void => {
+            tosTrafficClass = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tosTrafficClass.length < 2 || tosTrafficClass.length > 2) {
+                throw new ASN1SizeError("FlowInformation.tosTrafficClass violates SIZE constraint");
+            }
+        },
+        "spi": (_el: _Element): void => {
+            spi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (spi.length < 4 || spi.length > 4) {
+                throw new ASN1SizeError("FlowInformation.spi violates SIZE constraint");
+            }
+        },
+        "flowLabel": (_el: _Element): void => {
+            flowLabel = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (flowLabel.length < 3 || flowLabel.length > 3) {
+                throw new ASN1SizeError("FlowInformation.flowLabel violates SIZE constraint");
+            }
+        },
         "flowDirection": (_el: _Element): void => { flowDirection = $._decode_implicit<FlowDirection>(() => _decode_FlowDirection)(_el); }
     };
     $._parse_sequence(el, callbacks,

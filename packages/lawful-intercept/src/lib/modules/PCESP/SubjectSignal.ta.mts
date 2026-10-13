@@ -194,7 +194,7 @@ function _decode_SubjectSignal (el: _Element): SubjectSignal {
     let callId: OPTIONAL<CallId>;
     let signal!: SubjectSignal_signal;
     let signaledFromPartyId!: PartyId;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "caseId": (_el: _Element): void => { caseId = $._decode_implicit<CaseId>(() => _decode_CaseId)(_el); },
         "accessingElementId": (_el: _Element): void => { accessingElementId = $._decode_implicit<AccessingElementId>(() => _decode_AccessingElementId)(_el); },

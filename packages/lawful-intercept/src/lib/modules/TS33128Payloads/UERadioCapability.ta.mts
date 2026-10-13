@@ -128,7 +128,7 @@ function _decode_UERadioCapability (el: _Element): UERadioCapability {
     if (!_cached_decoder_for_UERadioCapability) { _cached_decoder_for_UERadioCapability = function (el: _Element): UERadioCapability {
     let uERadioCapibilityNR: OPTIONAL<OCTET_STRING>;
     let uERadioCapabilityEUTRA: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uERadioCapibilityNR": (_el: _Element): void => { uERadioCapibilityNR = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "uERadioCapabilityEUTRA": (_el: _Element): void => { uERadioCapabilityEUTRA = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

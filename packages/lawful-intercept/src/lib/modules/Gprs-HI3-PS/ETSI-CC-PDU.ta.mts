@@ -3,9 +3,11 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { hi3GPRSLIIdOperationId } from "../Gprs-HI3-PS/hi3GPRSLIIdOperationId.va.mjs";
 import { CC_PDU, _decode_CC_PDU, _encode_CC_PDU } from "../Umts-HI3-PS/CC-PDU.ta.mjs";
 // export { CC_PDU, _decode_CC_PDU, _encode_CC_PDU } from "../Umts-HI3-PS/CC-PDU.ta.mjs";
 
@@ -131,9 +133,14 @@ function _decode_ETSI_CC_PDU (el: _Element): ETSI_CC_PDU {
     if (!_cached_decoder_for_ETSI_CC_PDU) { _cached_decoder_for_ETSI_CC_PDU = function (el: _Element): ETSI_CC_PDU {
     let domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     let eTSI_CC_PDU!: CC_PDU;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
+        "domainID": (_el: _Element): void => {
+            domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);
+            if (!domainID.isEqualTo(hi3GPRSLIIdOperationId)) {
+                throw new ASN1Error("ETSI_CC_PDU.domainID violates OBJECT IDENTIFIER constraint");
+            }
+        },
         "eTSI-CC-PDU": (_el: _Element): void => { eTSI_CC_PDU = $._decode_implicit<CC_PDU>(() => _decode_CC_PDU)(_el); }
     };
     $._parse_sequence(el, callbacks,

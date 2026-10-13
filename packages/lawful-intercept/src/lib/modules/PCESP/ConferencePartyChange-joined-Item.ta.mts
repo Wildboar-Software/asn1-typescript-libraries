@@ -18,7 +18,17 @@ import { CCCId, _decode_CCCId, _encode_CCCId } from "../PCESP/CCCId.ta.mjs";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConferencePartyChange-joined-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ConferencePartyChange-joined-Item ::= SEQUENCE {
+ *     -- include to identify parties newly added to the
+ *     -- communication.
+ *     partyId     [0] SEQUENCE OF PartyId OPTIONAL,
+ *     -- identifies newly added party identity(ies) to an existing
+ *     -- communication.
+ *     cCCId       [1] EXPLICIT CCCId OPTIONAL,
+ *     -- included when the content of the resulting call is
+ *     -- delivered to identify the associated CCC(s).
+ *     ...
+ * }
  * ```
  * 
  * @class
@@ -126,7 +136,7 @@ function _decode_ConferencePartyChange_joined_Item (el: _Element): ConferencePar
     if (!_cached_decoder_for_ConferencePartyChange_joined_Item) { _cached_decoder_for_ConferencePartyChange_joined_Item = function (el: _Element): ConferencePartyChange_joined_Item {
     let partyId: OPTIONAL<PartyId[]>;
     let cCCId: OPTIONAL<CCCId>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "partyId": (_el: _Element): void => { partyId = $._decode_implicit<PartyId[]>(() => $._decodeSequenceOf<PartyId>(() => _decode_PartyId))(_el); },
         "cCCId": (_el: _Element): void => { cCCId = $._decode_explicit<CCCId>(() => _decode_CCCId)(_el); }

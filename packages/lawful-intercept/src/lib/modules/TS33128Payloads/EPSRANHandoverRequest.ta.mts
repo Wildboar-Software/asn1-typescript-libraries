@@ -208,7 +208,7 @@ function _decode_EPSRANHandoverRequest (el: _Element): EPSRANHandoverRequest {
     let targetToSourceContainer!: RANTargetToSourceContainer;
     let admittedCSGID: OPTIONAL<CSGID>;
     let ePSRANUEContext!: EPSRANUEContext;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "handoverType": (_el: _Element): void => { handoverType = $._decode_implicit<EPSHandoverType>(() => _decode_EPSHandoverType)(_el); },

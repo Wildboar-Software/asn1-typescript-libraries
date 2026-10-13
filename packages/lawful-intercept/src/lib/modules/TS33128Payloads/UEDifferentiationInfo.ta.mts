@@ -181,7 +181,7 @@ function _decode_UEDifferentiationInfo (el: _Element): UEDifferentiationInfo {
     let stationaryIndication: OPTIONAL<SBIType>;
     let trafficProfile: OPTIONAL<SBIType>;
     let batteryIndication: OPTIONAL<SBIType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "periodicCommunicationIndicator": (_el: _Element): void => { periodicCommunicationIndicator = $._decode_implicit<PeriodicCommunicationIndicator>(() => _decode_PeriodicCommunicationIndicator)(_el); },
         "periodicTime": (_el: _Element): void => { periodicTime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

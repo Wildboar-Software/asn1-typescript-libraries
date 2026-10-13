@@ -156,7 +156,7 @@ function _decode_AdditionalCellID (el: _Element): AdditionalCellID {
     let gsmLocation: OPTIONAL<GSMLocation>;
     let umtsLocation: OPTIONAL<UMTSLocation>;
     let timeOfLocation: OPTIONAL<GeneralizedTime>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "nCGI": (_el: _Element): void => { nCGI = $._decode_implicit<NCGI>(() => _decode_NCGI)(_el); },
         "gsmLocation": (_el: _Element): void => { gsmLocation = $._decode_explicit<GSMLocation>(() => _decode_GSMLocation)(_el); },

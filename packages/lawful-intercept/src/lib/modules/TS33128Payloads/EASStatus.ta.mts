@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -97,35 +94,8 @@ const EASStatus_disabled: EASStatus = EASStatus.disabled; /* LONG_NAMED_ENUMERAT
  */
 export
 const disabled: EASStatus = EASStatus.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EASStatus: $.ASN1Decoder<EASStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EASStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EASStatus (el: _Element): EASStatus {
-    if (!_cached_decoder_for_EASStatus) { _cached_decoder_for_EASStatus = $._decodeEnumerated; }
-    return _cached_decoder_for_EASStatus(el);
-}
-
-let _cached_encoder_for_EASStatus: $.ASN1Encoder<EASStatus> | null = null;
-
-/**
- * @summary Encodes a(n) EASStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EASStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_EASStatus (value: EASStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EASStatus) { _cached_encoder_for_EASStatus = $._encodeEnumerated; }
-    return _cached_encoder_for_EASStatus(value, elGetter);
-}
+export const _decode_EASStatus: $.ASN1Decoder<EASStatus> = $._decodeEnumerated;
+export const _encode_EASStatus: $.ASN1Encoder<EASStatus> = $._encodeEnumerated;
 
 
 /* eslint-enable */

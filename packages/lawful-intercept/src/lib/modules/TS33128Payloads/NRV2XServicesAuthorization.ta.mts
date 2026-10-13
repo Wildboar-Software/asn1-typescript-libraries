@@ -140,7 +140,7 @@ function _decode_NRV2XServicesAuthorization (el: _Element): NRV2XServicesAuthori
     if (!_cached_decoder_for_NRV2XServicesAuthorization) { _cached_decoder_for_NRV2XServicesAuthorization = function (el: _Element): NRV2XServicesAuthorization {
     let v2XVehicleUEAuthorizationIndicator: OPTIONAL<V2XUEAuthorizationIndicator>;
     let v2XPedestrianUEAuthorizationIndicator: OPTIONAL<V2XUEAuthorizationIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "v2XVehicleUEAuthorizationIndicator": (_el: _Element): void => { v2XVehicleUEAuthorizationIndicator = $._decode_implicit<V2XUEAuthorizationIndicator>(() => _decode_V2XUEAuthorizationIndicator)(_el); },
         "v2XPedestrianUEAuthorizationIndicator": (_el: _Element): void => { v2XPedestrianUEAuthorizationIndicator = $._decode_implicit<V2XUEAuthorizationIndicator>(() => _decode_V2XUEAuthorizationIndicator)(_el); }

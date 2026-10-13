@@ -4,9 +4,12 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1Error,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { hi3CCLinkIdOperationId } from "../HI3CCLinkData/hi3CCLinkIdOperationId.va.mjs";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
@@ -203,14 +206,24 @@ function _decode_UUS1_Content (el: _Element): UUS1_Content {
     let direction_Indication!: Direction_Indication;
     let bearer_capability: OPTIONAL<OCTET_STRING>;
     let service_Information: OPTIONAL<Service_Information>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
+        "domainID": (_el: _Element): void => {
+            domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);
+            if (!domainID.isEqualTo(hi3CCLinkIdOperationId)) {
+                throw new ASN1Error("UUS1_Content.domainID violates OBJECT IDENTIFIER constraint");
+            }
+        },
         "lawfullInterceptionIdentifier": (_el: _Element): void => { lawfullInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "cC-Link-Identifier": (_el: _Element): void => { cC_Link_Identifier = $._decode_implicit<CC_Link_Identifier>(() => _decode_CC_Link_Identifier)(_el); },
         "direction-Indication": (_el: _Element): void => { direction_Indication = $._decode_implicit<Direction_Indication>(() => _decode_Direction_Indication)(_el); },
-        "bearer-capability": (_el: _Element): void => { bearer_capability = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "bearer-capability": (_el: _Element): void => {
+            bearer_capability = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (bearer_capability.length < 1 || bearer_capability.length > 12) {
+                throw new ASN1SizeError("UUS1_Content.bearer_capability violates SIZE constraint");
+            }
+        },
         "service-Information": (_el: _Element): void => { service_Information = $._decode_implicit<Service_Information>(() => _decode_Service_Information)(_el); }
     };
     $._parse_sequence(el, callbacks,

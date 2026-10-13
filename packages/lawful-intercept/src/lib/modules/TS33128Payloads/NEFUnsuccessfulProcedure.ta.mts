@@ -227,7 +227,7 @@ function _decode_NEFUnsuccessfulProcedure (el: _Element): NEFUnsuccessfulProcedu
     let rDSDestinationPortNumber!: RDSPortNumber;
     let applicationID!: ApplicationID;
     let aFID!: AFID;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "failureCause": (_el: _Element): void => { failureCause = $._decode_implicit<NEFFailureCause>(() => _decode_NEFFailureCause)(_el); },
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },

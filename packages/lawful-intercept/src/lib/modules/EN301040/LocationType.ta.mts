@@ -40,12 +40,7 @@ export
 function _decode_LocationType (el: _Element): LocationType {
     if (!_cached_decoder_for_LocationType) { _cached_decoder_for_LocationType = $._decode_inextensible_choice<LocationType>({
     "CONTEXT 0": [ "mSLoc", _decode_TETRACGIType ],
-    "CONTEXT 0": [ "lSLoc", _decode_TETRAAddressType ],
-    "CONTEXT 1": [ "lSLoc", _decode_TETRAAddressType ],
-    "CONTEXT 2": [ "lSLoc", _decode_TETRAAddressType ],
-    "CONTEXT 3": [ "lSLoc", _decode_TETRAAddressType ],
-    "CONTEXT 4": [ "lSLoc", _decode_TETRAAddressType ],
-    "CONTEXT 5": [ "lSLoc", _decode_TETRAAddressType ]
+    "CONTEXT 1": [ "lSLoc", $._decode_explicit<TETRAAddressType>(() => _decode_TETRAAddressType) ]
 }); }
     return _cached_decoder_for_LocationType(el);
 }

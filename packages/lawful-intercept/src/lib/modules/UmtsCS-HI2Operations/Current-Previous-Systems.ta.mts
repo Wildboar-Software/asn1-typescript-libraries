@@ -179,7 +179,7 @@ function _decode_Current_Previous_Systems (el: _Element): Current_Previous_Syste
     let previous_Serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     let previous_Serving_MSC_Number: OPTIONAL<OCTET_STRING>;
     let previous_Serving_MSC_Address: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "current-Serving-System-Identifier": (_el: _Element): void => { current_Serving_System_Identifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "current-Serving-MSC-Number": (_el: _Element): void => { current_Serving_MSC_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

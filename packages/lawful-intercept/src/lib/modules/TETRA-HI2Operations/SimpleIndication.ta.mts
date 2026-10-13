@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -161,35 +160,8 @@ const SimpleIndication_answer_Indication: SimpleIndication = 6; /* LONG_NAMED_EN
  */
 export
 const answer_Indication: SimpleIndication = SimpleIndication_answer_Indication; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_SimpleIndication: $.ASN1Decoder<SimpleIndication> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SimpleIndication
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SimpleIndication (el: _Element): SimpleIndication {
-    if (!_cached_decoder_for_SimpleIndication) { _cached_decoder_for_SimpleIndication = $._decodeEnumerated; }
-    return _cached_decoder_for_SimpleIndication(el);
-}
-
-let _cached_encoder_for_SimpleIndication: $.ASN1Encoder<SimpleIndication> | null = null;
-
-/**
- * @summary Encodes a(n) SimpleIndication into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SimpleIndication, encoded as an ASN.1 Element.
- */
-export
-function _encode_SimpleIndication (value: SimpleIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SimpleIndication) { _cached_encoder_for_SimpleIndication = $._encodeEnumerated; }
-    return _cached_encoder_for_SimpleIndication(value, elGetter);
-}
+export const _decode_SimpleIndication: $.ASN1Decoder<SimpleIndication> = $._decodeEnumerated;
+export const _encode_SimpleIndication: $.ASN1Encoder<SimpleIndication> = $._encodeEnumerated;
 
 
 /* eslint-enable */

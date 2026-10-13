@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -118,35 +117,8 @@ const ListManagementType_requestSuccessful: ListManagementType = 5; /* LONG_NAME
  */
 export
 const requestSuccessful: ListManagementType = ListManagementType_requestSuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ListManagementType: $.ASN1Decoder<ListManagementType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ListManagementType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ListManagementType (el: _Element): ListManagementType {
-    if (!_cached_decoder_for_ListManagementType) { _cached_decoder_for_ListManagementType = $._decodeEnumerated; }
-    return _cached_decoder_for_ListManagementType(el);
-}
-
-let _cached_encoder_for_ListManagementType: $.ASN1Encoder<ListManagementType> | null = null;
-
-/**
- * @summary Encodes a(n) ListManagementType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ListManagementType, encoded as an ASN.1 Element.
- */
-export
-function _encode_ListManagementType (value: ListManagementType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ListManagementType) { _cached_encoder_for_ListManagementType = $._encodeEnumerated; }
-    return _cached_encoder_for_ListManagementType(value, elGetter);
-}
+export const _decode_ListManagementType: $.ASN1Decoder<ListManagementType> = $._decodeEnumerated;
+export const _encode_ListManagementType: $.ASN1Encoder<ListManagementType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

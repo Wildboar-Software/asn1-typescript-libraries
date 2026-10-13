@@ -143,7 +143,7 @@ function _decode_IMSLocation (el: _Element): IMSLocation {
     let pANIHeaderInfo: OPTIONAL<PANIHeaderInfo[]>;
     let geolocationHeaderInfo: OPTIONAL<SIPGeolocationHeaderInfo[]>;
     let cNIHeaderInfo: OPTIONAL<SIPCNIHeaderInfo[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pANIHeaderInfo": (_el: _Element): void => { pANIHeaderInfo = $._decode_implicit<PANIHeaderInfo[]>(() => $._decodeSequenceOf<PANIHeaderInfo>(() => _decode_PANIHeaderInfo))(_el); },
         "geolocationHeaderInfo": (_el: _Element): void => { geolocationHeaderInfo = $._decode_implicit<SIPGeolocationHeaderInfo[]>(() => $._decodeSequenceOf<SIPGeolocationHeaderInfo>(() => _decode_SIPGeolocationHeaderInfo))(_el); },

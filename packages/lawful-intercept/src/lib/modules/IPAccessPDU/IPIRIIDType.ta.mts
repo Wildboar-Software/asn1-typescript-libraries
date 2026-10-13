@@ -3,9 +3,11 @@ import {
     OCTET_STRING,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../LI-PS-PDU/IPAddress.ta.mjs";
 
 
@@ -50,7 +52,20 @@ function _decode_IPIRIIDType (el: _Element): IPIRIIDType {
     "CONTEXT 1": [ "macAddressType", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 2": [ "ipAddressType", $._decode_implicit<LI_PS_PDU.IPAddress>(() => LI_PS_PDU._decode_IPAddress) ]
 }); }
-    return _cached_decoder_for_IPIRIIDType(el);
+    const _value = _cached_decoder_for_IPIRIIDType(el);
+    if ("printableIDType" in _value && _value.printableIDType !== undefined) {
+        const _alt = _value.printableIDType;
+        if (_alt.length < 1 || _alt.length > 128) {
+            throw new ASN1SizeError("IPIRIIDType.printableIDType violates SIZE constraint");
+        }
+    }
+    if ("macAddressType" in _value && _value.macAddressType !== undefined) {
+        const _alt = _value.macAddressType;
+        if (_alt.length < 6 || _alt.length > 6) {
+            throw new ASN1SizeError("IPIRIIDType.macAddressType violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_IPIRIIDType: $.ASN1Encoder<IPIRIIDType> | null = null;

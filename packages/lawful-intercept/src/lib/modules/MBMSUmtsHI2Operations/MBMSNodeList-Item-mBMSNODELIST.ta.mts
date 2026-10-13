@@ -17,7 +17,11 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSNodeList-Item-mBMSNODELIST ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSNodeList-Item-mBMSNODELIST ::= SEQUENCE {
+ *     mbmsnodeIPAdress    [1]      IPAddress     OPTIONAL,
+ *     mbmsnodeName        [2]        UTF8String    OPTIONAL,
+ *     ...
+ * }
  * ```
  * 
  * @class
@@ -125,7 +129,7 @@ function _decode_MBMSNodeList_Item_mBMSNODELIST (el: _Element): MBMSNodeList_Ite
     if (!_cached_decoder_for_MBMSNodeList_Item_mBMSNODELIST) { _cached_decoder_for_MBMSNodeList_Item_mBMSNODELIST = function (el: _Element): MBMSNodeList_Item_mBMSNODELIST {
     let mbmsnodeIPAdress: OPTIONAL<IPAddress>;
     let mbmsnodeName: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mbmsnodeIPAdress": (_el: _Element): void => { mbmsnodeIPAdress = $._decode_implicit<IPAddress>(() => _decode_IPAddress)(_el); },
         "mbmsnodeName": (_el: _Element): void => { mbmsnodeName = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }

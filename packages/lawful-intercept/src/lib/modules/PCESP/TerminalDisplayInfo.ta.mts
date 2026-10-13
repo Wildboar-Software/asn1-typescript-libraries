@@ -208,7 +208,7 @@ function _decode_TerminalDisplayInfo (el: _Element): TerminalDisplayInfo {
     let redirectingName: OPTIONAL<VisibleString>;
     let redirectingReason: OPTIONAL<VisibleString>;
     let messageWaitingNotif: OPTIONAL<VisibleString>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "generalDisplay": (_el: _Element): void => { generalDisplay = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },
         "calledNumber": (_el: _Element): void => { calledNumber = $._decode_implicit<VisibleString>(() => $._decodeVisibleString)(_el); },

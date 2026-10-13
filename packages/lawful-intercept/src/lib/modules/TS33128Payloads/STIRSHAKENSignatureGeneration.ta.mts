@@ -130,7 +130,7 @@ function _decode_STIRSHAKENSignatureGeneration (el: _Element): STIRSHAKENSignatu
     if (!_cached_decoder_for_STIRSHAKENSignatureGeneration) { _cached_decoder_for_STIRSHAKENSignatureGeneration = function (el: _Element): STIRSHAKENSignatureGeneration {
     let pASSporTs!: PASSporT[];
     let encapsulatedSIPMessage: OPTIONAL<SIPMessage>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pASSporTs": (_el: _Element): void => { pASSporTs = $._decode_implicit<PASSporT[]>(() => $._decodeSequenceOf<PASSporT>(() => _decode_PASSporT))(_el); },
         "encapsulatedSIPMessage": (_el: _Element): void => { encapsulatedSIPMessage = $._decode_implicit<SIPMessage>(() => _decode_SIPMessage)(_el); }

@@ -131,7 +131,7 @@ function _decode_MappingInfo (el: _Element): MappingInfo {
     if (!_cached_decoder_for_MappingInfo) { _cached_decoder_for_MappingInfo = function (el: _Element): MappingInfo {
     let timestampMapping: OPTIONAL<TimestampMapping[]>;
     let locationMapping: OPTIONAL<LocationMapping[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "timestampMapping": (_el: _Element): void => { timestampMapping = $._decode_implicit<TimestampMapping[]>(() => $._decodeSequenceOf<TimestampMapping>(() => _decode_TimestampMapping))(_el); },
         "locationMapping": (_el: _Element): void => { locationMapping = $._decode_implicit<LocationMapping[]>(() => $._decodeSequenceOf<LocationMapping>(() => _decode_LocationMapping))(_el); }

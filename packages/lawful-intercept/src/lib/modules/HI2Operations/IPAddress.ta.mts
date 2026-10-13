@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress_iP_type, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type, _enum_for_IPAddress_iP_type } from "../HI2Operations/IPAddress-iP-type.ta.mjs";
@@ -201,13 +203,24 @@ function _decode_IPAddress (el: _Element): IPAddress {
     let iP_assignment: OPTIONAL<IPAddress_iP_assignment>;
     let iPv6PrefixLength: OPTIONAL<INTEGER>;
     let iPv4SubnetMask: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iP-type": (_el: _Element): void => { iP_type = $._decode_implicit<IPAddress_iP_type>(() => _decode_IPAddress_iP_type)(_el); },
         "iP-value": (_el: _Element): void => { iP_value = $._decode_explicit<IP_value>(() => _decode_IP_value)(_el); },
         "iP-assignment": (_el: _Element): void => { iP_assignment = $._decode_implicit<IPAddress_iP_assignment>(() => _decode_IPAddress_iP_assignment)(_el); },
-        "iPv6PrefixLength": (_el: _Element): void => { iPv6PrefixLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "iPv4SubnetMask": (_el: _Element): void => { iPv4SubnetMask = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "iPv6PrefixLength": (_el: _Element): void => {
+            iPv6PrefixLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof iPv6PrefixLength === "bigint" ? iPv6PrefixLength : BigInt(iPv6PrefixLength);
+            if (_n < 1n || _n > 128n) {
+                throw new ASN1OverflowError("IPAddress.iPv6PrefixLength violates INTEGER range");
+            }
+        },
+        "iPv4SubnetMask": (_el: _Element): void => {
+            iPv4SubnetMask = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (iPv4SubnetMask.length < 4 || iPv4SubnetMask.length > 4) {
+                throw new ASN1SizeError("IPAddress.iPv4SubnetMask violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_IPAddress,

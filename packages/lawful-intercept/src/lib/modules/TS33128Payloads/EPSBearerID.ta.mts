@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EPSBearerID = INTEGER;
-
-let _cached_decoder_for_EPSBearerID: $.ASN1Decoder<EPSBearerID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EPSBearerID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EPSBearerID (el: _Element): EPSBearerID {
-    if (!_cached_decoder_for_EPSBearerID) { _cached_decoder_for_EPSBearerID = $._decodeInteger; }
-    return _cached_decoder_for_EPSBearerID(el);
-}
-
-let _cached_encoder_for_EPSBearerID: $.ASN1Encoder<EPSBearerID> | null = null;
-
-/**
- * @summary Encodes a(n) EPSBearerID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EPSBearerID, encoded as an ASN.1 Element.
- */
-export
-function _encode_EPSBearerID (value: EPSBearerID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPSBearerID) { _cached_encoder_for_EPSBearerID = $._encodeInteger; }
-    return _cached_encoder_for_EPSBearerID(value, elGetter);
-}
+export const _decode_EPSBearerID: $.ASN1Decoder<EPSBearerID> = (el: _Element): EPSBearerID => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 255n) {
+        throw new ASN1OverflowError("EPSBearerID violates INTEGER range");
+    }
+    return value;
+};
+export const _encode_EPSBearerID: $.ASN1Encoder<EPSBearerID> = $._encodeInteger;
 
 
 /* eslint-enable */

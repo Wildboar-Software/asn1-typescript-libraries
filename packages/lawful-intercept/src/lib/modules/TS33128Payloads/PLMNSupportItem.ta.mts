@@ -142,7 +142,7 @@ function _decode_PLMNSupportItem (el: _Element): PLMNSupportItem {
     let pLMNIdentity!: PLMNID;
     let nPNSupport: OPTIONAL<NID>;
     let onboardingSupport: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pLMNIdentity": (_el: _Element): void => { pLMNIdentity = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "nPNSupport": (_el: _Element): void => { nPNSupport = $._decode_implicit<NID>(() => _decode_NID)(_el); },

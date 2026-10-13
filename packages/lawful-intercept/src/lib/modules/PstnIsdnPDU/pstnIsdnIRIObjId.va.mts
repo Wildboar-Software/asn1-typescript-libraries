@@ -19,6 +19,6 @@ import { pstnIsdnPDUObjId } from "../PstnIsdnPDU/pstnIsdnPDUObjId.va.mjs";
  * @constant
  */
 export
-const pstnIsdnIRIObjId: RELATIVE_OID = [ pstnIsdnPDUObjId, /* iRI */ 1 ];
+const pstnIsdnIRIObjId: RELATIVE_OID = [ ...pstnIsdnPDUObjId, /* iRI */ 1 ];
 
 /* eslint-enable */

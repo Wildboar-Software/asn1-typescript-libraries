@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../UmtsHI2Operations/GlobalCellID.ta.mjs";
@@ -284,17 +285,32 @@ function _decode_Location (el: _Element): Location {
     let civicAddress: OPTIONAL<CivicAddress>;
     let operatorSpecificInfo: OPTIONAL<OCTET_STRING>;
     let uELocationTimestamp: OPTIONAL<Location_uELocationTimestamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "e164-Number": (_el: _Element): void => { e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "e164-Number": (_el: _Element): void => {
+            e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (e164_Number.length < 1 || e164_Number.length > 25) {
+                throw new ASN1SizeError("Location.e164_Number violates SIZE constraint");
+            }
+        },
         "globalCellID": (_el: _Element): void => { globalCellID = $._decode_implicit<GlobalCellID>(() => _decode_GlobalCellID)(_el); },
         "rAI": (_el: _Element): void => { rAI = $._decode_implicit<Rai>(() => _decode_Rai)(_el); },
         "gsmLocation": (_el: _Element): void => { gsmLocation = $._decode_explicit<GSMLocation>(() => _decode_GSMLocation)(_el); },
         "umtsLocation": (_el: _Element): void => { umtsLocation = $._decode_explicit<UMTSLocation>(() => _decode_UMTSLocation)(_el); },
         "sAI": (_el: _Element): void => { sAI = $._decode_implicit<Sai>(() => _decode_Sai)(_el); },
         "oldRAI": (_el: _Element): void => { oldRAI = $._decode_implicit<Rai>(() => _decode_Rai)(_el); },
-        "tAI": (_el: _Element): void => { tAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "eCGI": (_el: _Element): void => { eCGI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "tAI": (_el: _Element): void => {
+            tAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tAI.length < 6 || tAI.length > 6) {
+                throw new ASN1SizeError("Location.tAI violates SIZE constraint");
+            }
+        },
+        "eCGI": (_el: _Element): void => {
+            eCGI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (eCGI.length < 8 || eCGI.length > 8) {
+                throw new ASN1SizeError("Location.eCGI violates SIZE constraint");
+            }
+        },
         "civicAddress": (_el: _Element): void => { civicAddress = $._decode_explicit<CivicAddress>(() => _decode_CivicAddress)(_el); },
         "operatorSpecificInfo": (_el: _Element): void => { operatorSpecificInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "uELocationTimestamp": (_el: _Element): void => { uELocationTimestamp = $._decode_explicit<Location_uELocationTimestamp>(() => _decode_Location_uELocationTimestamp)(_el); }

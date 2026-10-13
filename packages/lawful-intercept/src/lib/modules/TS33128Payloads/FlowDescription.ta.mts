@@ -165,7 +165,7 @@ function _decode_FlowDescription (el: _Element): FlowDescription {
     let sourcePortNumber: OPTIONAL<PortNumber>;
     let destinationPortNumber: OPTIONAL<PortNumber>;
     let protocol!: NextLayerProtocolOrAny;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sourceIPAddress": (_el: _Element): void => { sourceIPAddress = $._decode_explicit<IPAddressOrRangeOrAny>(() => _decode_IPAddressOrRangeOrAny)(_el); },
         "destinationIPAddress": (_el: _Element): void => { destinationIPAddress = $._decode_explicit<IPAddressOrRangeOrAny>(() => _decode_IPAddressOrRangeOrAny)(_el); },

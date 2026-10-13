@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type UEPolicy = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_UEPolicy: $.ASN1Decoder<UEPolicy> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) UEPolicy
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_UEPolicy (el: _Element): UEPolicy {
-    if (!_cached_decoder_for_UEPolicy) { _cached_decoder_for_UEPolicy = $._decodeOctetString; }
-    return _cached_decoder_for_UEPolicy(el);
-}
-
-let _cached_encoder_for_UEPolicy: $.ASN1Encoder<UEPolicy> | null = null;
-
-/**
- * @summary Encodes a(n) UEPolicy into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The UEPolicy, encoded as an ASN.1 Element.
- */
-export
-function _encode_UEPolicy (value: UEPolicy, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UEPolicy) { _cached_encoder_for_UEPolicy = $._encodeOctetString; }
-    return _cached_encoder_for_UEPolicy(value, elGetter);
-}
+export const _decode_UEPolicy: $.ASN1Decoder<UEPolicy> = (el: _Element): UEPolicy => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 16 || value.length > 65540) {
+        throw new ASN1SizeError("UEPolicy violates SIZE constraint");
+    }
+    return value;
+};
+export const _encode_UEPolicy: $.ASN1Encoder<UEPolicy> = $._encodeOctetString;
 
 
 /* eslint-enable */

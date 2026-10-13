@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -177,35 +174,8 @@ const RATInformation_nROTHERSAT: RATInformation = RATInformation.nROTHERSAT; /* 
  */
 export
 const nROTHERSAT: RATInformation = RATInformation.nROTHERSAT; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_RATInformation: $.ASN1Decoder<RATInformation> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RATInformation
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RATInformation (el: _Element): RATInformation {
-    if (!_cached_decoder_for_RATInformation) { _cached_decoder_for_RATInformation = $._decodeEnumerated; }
-    return _cached_decoder_for_RATInformation(el);
-}
-
-let _cached_encoder_for_RATInformation: $.ASN1Encoder<RATInformation> | null = null;
-
-/**
- * @summary Encodes a(n) RATInformation into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RATInformation, encoded as an ASN.1 Element.
- */
-export
-function _encode_RATInformation (value: RATInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RATInformation) { _cached_encoder_for_RATInformation = $._encodeEnumerated; }
-    return _cached_encoder_for_RATInformation(value, elGetter);
-}
+export const _decode_RATInformation: $.ASN1Decoder<RATInformation> = $._decodeEnumerated;
+export const _encode_RATInformation: $.ASN1Encoder<RATInformation> = $._encodeEnumerated;
 
 
 /* eslint-enable */

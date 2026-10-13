@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -117,35 +114,8 @@ const E_mail_Status_operation_succeeded: E_mail_Status = E_mail_Status.operation
  */
 export
 const operation_succeeded: E_mail_Status = E_mail_Status.operation_succeeded; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_E_mail_Status: $.ASN1Decoder<E_mail_Status> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) E_mail_Status
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_E_mail_Status (el: _Element): E_mail_Status {
-    if (!_cached_decoder_for_E_mail_Status) { _cached_decoder_for_E_mail_Status = $._decodeEnumerated; }
-    return _cached_decoder_for_E_mail_Status(el);
-}
-
-let _cached_encoder_for_E_mail_Status: $.ASN1Encoder<E_mail_Status> | null = null;
-
-/**
- * @summary Encodes a(n) E_mail_Status into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The E_mail_Status, encoded as an ASN.1 Element.
- */
-export
-function _encode_E_mail_Status (value: E_mail_Status, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_E_mail_Status) { _cached_encoder_for_E_mail_Status = $._encodeEnumerated; }
-    return _cached_encoder_for_E_mail_Status(value, elGetter);
-}
+export const _decode_E_mail_Status: $.ASN1Decoder<E_mail_Status> = $._decodeEnumerated;
+export const _encode_E_mail_Status: $.ASN1Encoder<E_mail_Status> = $._encodeEnumerated;
 
 
 /* eslint-enable */

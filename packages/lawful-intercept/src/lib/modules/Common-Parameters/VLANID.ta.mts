@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type VLANID = INTEGER;
-
-let _cached_decoder_for_VLANID: $.ASN1Decoder<VLANID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) VLANID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_VLANID (el: _Element): VLANID {
-    if (!_cached_decoder_for_VLANID) { _cached_decoder_for_VLANID = $._decodeInteger; }
-    return _cached_decoder_for_VLANID(el);
-}
-
-let _cached_encoder_for_VLANID: $.ASN1Encoder<VLANID> | null = null;
-
-/**
- * @summary Encodes a(n) VLANID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The VLANID, encoded as an ASN.1 Element.
- */
-export
-function _encode_VLANID (value: VLANID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VLANID) { _cached_encoder_for_VLANID = $._encodeInteger; }
-    return _cached_encoder_for_VLANID(value, elGetter);
-}
+export const _decode_VLANID: $.ASN1Decoder<VLANID> = (el: _Element): VLANID => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 4095n) {
+        throw new ASN1OverflowError("VLANID violates INTEGER range");
+    }
+    return value;
+};
+export const _encode_VLANID: $.ASN1Encoder<VLANID> = $._encodeInteger;
 
 
 /* eslint-enable */

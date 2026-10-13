@@ -4,9 +4,12 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1Error,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { hi1OperationId } from "../HI1NotificationOperations/hi1OperationId.va.mjs";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
@@ -189,14 +192,24 @@ function _decode_Notification (el: _Element): Notification {
     let timeStamp!: TimeStamp;
     let national_HI1_ASN1parameters: OPTIONAL<National_HI1_ASN1parameters>;
     let target_Information: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
+        "domainID": (_el: _Element): void => {
+            domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);
+            if (!domainID.isEqualTo(hi1OperationId)) {
+                throw new ASN1Error("Notification.domainID violates OBJECT IDENTIFIER constraint");
+            }
+        },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
         "national-HI1-ASN1parameters": (_el: _Element): void => { national_HI1_ASN1parameters = $._decode_implicit<National_HI1_ASN1parameters>(() => _decode_National_HI1_ASN1parameters)(_el); },
-        "target-Information": (_el: _Element): void => { target_Information = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "target-Information": (_el: _Element): void => {
+            target_Information = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (target_Information.length < 1 || target_Information.length > 256) {
+                throw new ASN1SizeError("Notification.target_Information violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_Notification,

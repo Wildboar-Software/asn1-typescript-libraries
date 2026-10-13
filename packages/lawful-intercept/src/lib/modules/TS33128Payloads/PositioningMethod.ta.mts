@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -437,35 +434,8 @@ const PositioningMethod_sLRT: PositioningMethod = PositioningMethod.sLRT; /* LON
  */
 export
 const sLRT: PositioningMethod = PositioningMethod.sLRT; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_PositioningMethod: $.ASN1Decoder<PositioningMethod> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PositioningMethod
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PositioningMethod (el: _Element): PositioningMethod {
-    if (!_cached_decoder_for_PositioningMethod) { _cached_decoder_for_PositioningMethod = $._decodeEnumerated; }
-    return _cached_decoder_for_PositioningMethod(el);
-}
-
-let _cached_encoder_for_PositioningMethod: $.ASN1Encoder<PositioningMethod> | null = null;
-
-/**
- * @summary Encodes a(n) PositioningMethod into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PositioningMethod, encoded as an ASN.1 Element.
- */
-export
-function _encode_PositioningMethod (value: PositioningMethod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PositioningMethod) { _cached_encoder_for_PositioningMethod = $._encodeEnumerated; }
-    return _cached_encoder_for_PositioningMethod(value, elGetter);
-}
+export const _decode_PositioningMethod: $.ASN1Decoder<PositioningMethod> = $._decodeEnumerated;
+export const _encode_PositioningMethod: $.ASN1Encoder<PositioningMethod> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -179,7 +179,7 @@ function _decode_NGInformation (el: _Element): NGInformation {
     let extendedRANNodeName: OPTIONAL<RANNodeName>;
     let pLMNSupportList!: PLMNSupportList;
     let iABSupported: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "globalRANNodeID": (_el: _Element): void => { globalRANNodeID = $._decode_implicit<GlobalRANNodeID>(() => _decode_GlobalRANNodeID)(_el); },
         "rANNodeName": (_el: _Element): void => { rANNodeName = $._decode_explicit<RANNodeName>(() => _decode_RANNodeName)(_el); },

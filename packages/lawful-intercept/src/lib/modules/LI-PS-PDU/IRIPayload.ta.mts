@@ -225,7 +225,7 @@ function _decode_IRIPayload (el: _Element): IRIPayload {
     let timeStampQualifier: OPTIONAL<TimeStampQualifier>;
     let sessionDirection: OPTIONAL<PayloadDirection>;
     let payloadDirection: OPTIONAL<PayloadDirection>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iRIType": (_el: _Element): void => { iRIType = $._decode_implicit<IRIType>(() => _decode_IRIType)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_implicit<GeneralizedTime>(() => $._decodeGeneralizedTime)(_el); },

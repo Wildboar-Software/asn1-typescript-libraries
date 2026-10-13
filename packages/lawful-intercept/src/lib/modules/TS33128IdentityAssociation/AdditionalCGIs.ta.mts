@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdditionalNCGI, _decode_AdditionalNCGI, _encode_AdditionalNCGI } from "../TS33128IdentityAssociation/AdditionalNCGI.ta.mjs";
@@ -117,9 +118,14 @@ export
 function _decode_AdditionalCGIs (el: _Element): AdditionalCGIs {
     if (!_cached_decoder_for_AdditionalCGIs) { _cached_decoder_for_AdditionalCGIs = function (el: _Element): AdditionalCGIs {
     let additionalNCGIList: OPTIONAL<AdditionalNCGI[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "additionalNCGIList": (_el: _Element): void => { additionalNCGIList = $._decode_implicit<AdditionalNCGI[]>(() => $._decodeSequenceOf<AdditionalNCGI>(() => _decode_AdditionalNCGI))(_el); }
+        "additionalNCGIList": (_el: _Element): void => {
+            additionalNCGIList = $._decode_implicit<AdditionalNCGI[]>(() => $._decodeSequenceOf<AdditionalNCGI>(() => _decode_AdditionalNCGI))(_el);
+            if (additionalNCGIList.length < 1) {
+                throw new ASN1SizeError("AdditionalCGIs.additionalNCGIList violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_AdditionalCGIs,

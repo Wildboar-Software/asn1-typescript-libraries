@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -151,10 +152,30 @@ function _decode_Service_Information (el: _Element): Service_Information {
     /* END_OF_SET_COMPONENT_DECLARATIONS */
     /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
-        "high-layer-capability": (_el: _Element): void => { high_layer_capability = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "tMR": (_el: _Element): void => { tMR = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "bearerServiceCode": (_el: _Element): void => { bearerServiceCode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "teleServiceCode": (_el: _Element): void => { teleServiceCode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "high-layer-capability": (_el: _Element): void => {
+            high_layer_capability = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (high_layer_capability.length < 1 || high_layer_capability.length > 1) {
+                throw new ASN1SizeError("Service_Information.high_layer_capability violates SIZE constraint");
+            }
+        },
+        "tMR": (_el: _Element): void => {
+            tMR = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tMR.length < 1 || tMR.length > 1) {
+                throw new ASN1SizeError("Service_Information.tMR violates SIZE constraint");
+            }
+        },
+        "bearerServiceCode": (_el: _Element): void => {
+            bearerServiceCode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (bearerServiceCode.length < 1 || bearerServiceCode.length > 1) {
+                throw new ASN1SizeError("Service_Information.bearerServiceCode violates SIZE constraint");
+            }
+        },
+        "teleServiceCode": (_el: _Element): void => {
+            teleServiceCode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (teleServiceCode.length < 1 || teleServiceCode.length > 1) {
+                throw new ASN1SizeError("Service_Information.teleServiceCode violates SIZE constraint");
+            }
+        }
     };
     /* END_OF_CALLBACKS_MAP */
     $._parse_set(el, callbacks,

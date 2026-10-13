@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -117,35 +114,8 @@ const MMStateFlag_filter: MMStateFlag = MMStateFlag.filter; /* LONG_NAMED_ENUMER
  */
 export
 const filter: MMStateFlag = MMStateFlag.filter; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MMStateFlag: $.ASN1Decoder<MMStateFlag> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MMStateFlag
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MMStateFlag (el: _Element): MMStateFlag {
-    if (!_cached_decoder_for_MMStateFlag) { _cached_decoder_for_MMStateFlag = $._decodeEnumerated; }
-    return _cached_decoder_for_MMStateFlag(el);
-}
-
-let _cached_encoder_for_MMStateFlag: $.ASN1Encoder<MMStateFlag> | null = null;
-
-/**
- * @summary Encodes a(n) MMStateFlag into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MMStateFlag, encoded as an ASN.1 Element.
- */
-export
-function _encode_MMStateFlag (value: MMStateFlag, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMStateFlag) { _cached_encoder_for_MMStateFlag = $._encodeEnumerated; }
-    return _cached_encoder_for_MMStateFlag(value, elGetter);
-}
+export const _decode_MMStateFlag: $.ASN1Decoder<MMStateFlag> = $._decodeEnumerated;
+export const _encode_MMStateFlag: $.ASN1Encoder<MMStateFlag> = $._encodeEnumerated;
 
 
 /* eslint-enable */

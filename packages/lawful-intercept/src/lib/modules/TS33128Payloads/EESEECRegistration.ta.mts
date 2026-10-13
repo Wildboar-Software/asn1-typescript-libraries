@@ -241,7 +241,7 @@ function _decode_EESEECRegistration (el: _Element): EESEECRegistration {
     let srcEESID: OPTIONAL<UTF8String>;
     let unfulfilledACProfiles: OPTIONAL<UnfulfilledACProfiles>;
     let failureResponse: OPTIONAL<FailureResponse>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "registrationType": (_el: _Element): void => { registrationType = $._decode_implicit<RegistrationType>(() => _decode_RegistrationType)(_el); },
         "eECID": (_el: _Element): void => { eECID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

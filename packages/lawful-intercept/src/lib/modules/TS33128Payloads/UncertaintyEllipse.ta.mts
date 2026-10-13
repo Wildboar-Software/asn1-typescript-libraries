@@ -169,7 +169,7 @@ function _decode_UncertaintyEllipse (el: _Element): UncertaintyEllipse {
     let orientationMajor!: Orientation;
     let semiMajorSBI: OPTIONAL<UncertaintySBI>;
     let semiMinorSBI: OPTIONAL<UncertaintySBI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "deprecatedSemiMajor": (_el: _Element): void => { deprecatedSemiMajor = $._decode_implicit<Uncertainty>(() => _decode_Uncertainty)(_el); },
         "deprecatedSemiMinor": (_el: _Element): void => { deprecatedSemiMinor = $._decode_implicit<Uncertainty>(() => _decode_Uncertainty)(_el); },

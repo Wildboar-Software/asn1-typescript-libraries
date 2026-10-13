@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -154,35 +153,8 @@ const Messaging_Status_operation_lost: Messaging_Status = 6; /* LONG_NAMED_ENUME
  */
 export
 const operation_lost: Messaging_Status = Messaging_Status_operation_lost; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Messaging_Status: $.ASN1Decoder<Messaging_Status> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Messaging_Status
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Messaging_Status (el: _Element): Messaging_Status {
-    if (!_cached_decoder_for_Messaging_Status) { _cached_decoder_for_Messaging_Status = $._decodeEnumerated; }
-    return _cached_decoder_for_Messaging_Status(el);
-}
-
-let _cached_encoder_for_Messaging_Status: $.ASN1Encoder<Messaging_Status> | null = null;
-
-/**
- * @summary Encodes a(n) Messaging_Status into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Messaging_Status, encoded as an ASN.1 Element.
- */
-export
-function _encode_Messaging_Status (value: Messaging_Status, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Messaging_Status) { _cached_encoder_for_Messaging_Status = $._encodeEnumerated; }
-    return _cached_encoder_for_Messaging_Status(value, elGetter);
-}
+export const _decode_Messaging_Status: $.ASN1Decoder<Messaging_Status> = $._decodeEnumerated;
+export const _encode_Messaging_Status: $.ASN1Encoder<Messaging_Status> = $._encodeEnumerated;
 
 
 /* eslint-enable */

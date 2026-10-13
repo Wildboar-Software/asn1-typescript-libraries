@@ -4,7 +4,8 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -231,14 +232,20 @@ function _decode_CSvoiceLIC_header (el: _Element): CSvoiceLIC_header {
     let t_PDU_direction!: TPDU_direction;
     let national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     let payload_description!: Payload_description;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi3CSvoiceDomainId": (_el: _Element): void => { hi3CSvoiceDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lIID": (_el: _Element): void => { lIID = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "ccLID": (_el: _Element): void => { ccLID = $._decode_implicit<CC_Link_Identifier>(() => _decode_CC_Link_Identifier)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "sequence-number": (_el: _Element): void => { sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "sequence-number": (_el: _Element): void => {
+            sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof sequence_number === "bigint" ? sequence_number : BigInt(sequence_number);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("CSvoiceLIC_header.sequence_number violates INTEGER range");
+            }
+        },
         "t-PDU-direction": (_el: _Element): void => { t_PDU_direction = $._decode_implicit<TPDU_direction>(() => _decode_TPDU_direction)(_el); },
         "national-HI3-ASN1parameters": (_el: _Element): void => { national_HI3_ASN1parameters = $._decode_implicit<National_HI3_ASN1parameters>(() => _decode_National_HI3_ASN1parameters)(_el); },
         "payload-description": (_el: _Element): void => { payload_description = $._decode_implicit<Payload_description>(() => _decode_Payload_description)(_el); }

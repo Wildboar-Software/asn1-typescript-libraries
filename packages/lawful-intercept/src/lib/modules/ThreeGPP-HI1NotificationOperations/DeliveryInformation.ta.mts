@@ -156,7 +156,7 @@ function _decode_DeliveryInformation (el: _Element): DeliveryInformation {
     let hi3DeliveryNumber: OPTIONAL<CalledPartyNumber>;
     let hi2DeliveryIpAddress: OPTIONAL<IPAddress>;
     let hi3DeliveryIpAddress: OPTIONAL<IPAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi2DeliveryNumber": (_el: _Element): void => { hi2DeliveryNumber = $._decode_explicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); },
         "hi3DeliveryNumber": (_el: _Element): void => { hi3DeliveryNumber = $._decode_explicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); },

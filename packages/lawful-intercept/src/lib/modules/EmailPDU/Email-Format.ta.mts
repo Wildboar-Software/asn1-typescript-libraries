@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -112,35 +109,8 @@ const Email_Format_application: Email_Format = Email_Format.application; /* LONG
  */
 export
 const application: Email_Format = Email_Format.application; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Email_Format: $.ASN1Decoder<Email_Format> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Email_Format
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Email_Format (el: _Element): Email_Format {
-    if (!_cached_decoder_for_Email_Format) { _cached_decoder_for_Email_Format = $._decodeEnumerated; }
-    return _cached_decoder_for_Email_Format(el);
-}
-
-let _cached_encoder_for_Email_Format: $.ASN1Encoder<Email_Format> | null = null;
-
-/**
- * @summary Encodes a(n) Email_Format into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Email_Format, encoded as an ASN.1 Element.
- */
-export
-function _encode_Email_Format (value: Email_Format, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Email_Format) { _cached_encoder_for_Email_Format = $._encodeEnumerated; }
-    return _cached_encoder_for_Email_Format(value, elGetter);
-}
+export const _decode_Email_Format: $.ASN1Decoder<Email_Format> = $._decodeEnumerated;
+export const _encode_Email_Format: $.ASN1Encoder<Email_Format> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -142,7 +142,7 @@ function _decode_ExternalASNType (el: _Element): ExternalASNType {
     let moduleIdentifier!: OBJECT_IDENTIFIER;
     let aSNReference: OPTIONAL<ExternalASNReference>;
     let encodedASNValue!: ExternalASNValue;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "moduleIdentifier": (_el: _Element): void => { moduleIdentifier = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "aSNReference": (_el: _Element): void => { aSNReference = $._decode_implicit<ExternalASNReference>(() => _decode_ExternalASNReference)(_el); },

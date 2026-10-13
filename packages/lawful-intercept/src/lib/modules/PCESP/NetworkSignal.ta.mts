@@ -239,7 +239,7 @@ function _decode_NetworkSignal (el: _Element): NetworkSignal {
     let terminalDisplayInfo: OPTIONAL<TerminalDisplayInfo>;
     let other: OPTIONAL<VisibleString>;
     let signaledToPartyId!: PartyId;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "caseId": (_el: _Element): void => { caseId = $._decode_implicit<CaseId>(() => _decode_CaseId)(_el); },
         "accessingElementId": (_el: _Element): void => { accessingElementId = $._decode_implicit<AccessingElementId>(() => _decode_AccessingElementId)(_el); },

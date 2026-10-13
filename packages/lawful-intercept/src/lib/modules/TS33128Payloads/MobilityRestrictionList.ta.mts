@@ -169,7 +169,7 @@ function _decode_MobilityRestrictionList (el: _Element): MobilityRestrictionList
     let rATRestrictions: OPTIONAL<RATRestrictions>;
     let forbiddenAreaInformation: OPTIONAL<ForbiddenAreaInformation>;
     let serviceAreaInformation: OPTIONAL<ServiceAreaInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "servingPLMN": (_el: _Element): void => { servingPLMN = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "equivalentPLMNs": (_el: _Element): void => { equivalentPLMNs = $._decode_implicit<EquivalentPLMNs>(() => _decode_EquivalentPLMNs)(_el); },

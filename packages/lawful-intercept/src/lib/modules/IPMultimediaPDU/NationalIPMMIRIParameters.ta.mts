@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -133,6 +134,11 @@ function _decode_NationalIPMMIRIParameters (el: _Element): NationalIPMMIRIParame
     sequence[0].name = "countryCode";
     let countryCode!: PrintableString;
     countryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
+    {
+        if (countryCode.length < 2 || countryCode.length > 2) {
+            throw new ASN1SizeError("NationalIPMMIRIParameters.countryCode violates SIZE constraint");
+        }
+    }
     return new NationalIPMMIRIParameters(
         countryCode,
         sequence.slice(1),

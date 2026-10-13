@@ -130,7 +130,7 @@ function _decode_ExtendedUPFCCPDU (el: _Element): ExtendedUPFCCPDU {
     if (!_cached_decoder_for_ExtendedUPFCCPDU) { _cached_decoder_for_ExtendedUPFCCPDU = function (el: _Element): ExtendedUPFCCPDU {
     let payload!: UPFCCPDUPayload;
     let qFI: OPTIONAL<QFI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "payload": (_el: _Element): void => { payload = $._decode_explicit<UPFCCPDUPayload>(() => _decode_UPFCCPDUPayload)(_el); },
         "qFI": (_el: _Element): void => { qFI = $._decode_implicit<QFI>(() => _decode_QFI)(_el); }

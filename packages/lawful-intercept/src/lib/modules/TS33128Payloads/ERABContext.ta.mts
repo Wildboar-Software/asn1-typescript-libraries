@@ -167,7 +167,7 @@ function _decode_ERABContext (el: _Element): ERABContext {
     let transportLayerAddress: OPTIONAL<IPAddr>;
     let uLGTPTEID: OPTIONAL<FTEID>;
     let dLGTPTEID: OPTIONAL<FTEID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eRABID": (_el: _Element): void => { eRABID = $._decode_implicit<EPSBearerID>(() => _decode_EPSBearerID)(_el); },
         "eRABQoSParameters": (_el: _Element): void => { eRABQoSParameters = $._decode_implicit<ERABQoSParameters>(() => _decode_ERABQoSParameters)(_el); },

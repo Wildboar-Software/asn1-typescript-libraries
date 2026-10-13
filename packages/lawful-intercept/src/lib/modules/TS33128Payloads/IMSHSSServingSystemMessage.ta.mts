@@ -169,7 +169,7 @@ function _decode_IMSHSSServingSystemMessage (el: _Element): IMSHSSServingSystemM
     let authorizationRequest!: AuthorizationRequest;
     let roamingIndicator!: RoamingIndicator;
     let deregistrationData: OPTIONAL<SBIType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iMSI": (_el: _Element): void => { iMSI = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "oldPLMNID": (_el: _Element): void => { oldPLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },

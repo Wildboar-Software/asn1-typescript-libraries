@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ERABError, _decode_ERABError, _encode_ERABError } from "../TS33128Payloads/ERABError.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_ERABReleaseList: $.ASN1Decoder<ERABReleaseList> | null =
 export
 function _decode_ERABReleaseList (el: _Element): ERABReleaseList {
     if (!_cached_decoder_for_ERABReleaseList) { _cached_decoder_for_ERABReleaseList = $._decodeSequenceOf<ERABError>(() => _decode_ERABError); }
-    return _cached_decoder_for_ERABReleaseList(el);
+    const _value = _cached_decoder_for_ERABReleaseList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("ERABReleaseList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_ERABReleaseList: $.ASN1Encoder<ERABReleaseList> | null = null;

@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -136,7 +137,17 @@ function _decode_TETRA_Password_Name (el: _Element): TETRA_Password_Name {
     let password!: OCTET_STRING;
     let name!: OCTET_STRING;
     password = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    {
+        if (password.length < 1 || password.length > 25) {
+            throw new ASN1SizeError("TETRA_Password_Name.password violates SIZE constraint");
+        }
+    }
     name = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    {
+        if (name.length < 1 || name.length > 25) {
+            throw new ASN1SizeError("TETRA_Password_Name.name violates SIZE constraint");
+        }
+    }
     return new TETRA_Password_Name(
         password,
         name,

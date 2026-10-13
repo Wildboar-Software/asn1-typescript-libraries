@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../EpsHI2Operations/GlobalCellID.ta.mjs";
@@ -249,9 +250,14 @@ function _decode_Location (el: _Element): Location {
     let civicAddress: OPTIONAL<CivicAddress>;
     let operatorSpecificInfo: OPTIONAL<OCTET_STRING>;
     let uELocationTimestamp: OPTIONAL<Location_uELocationTimestamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "e164-Number": (_el: _Element): void => { e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "e164-Number": (_el: _Element): void => {
+            e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (e164_Number.length < 1 || e164_Number.length > 25) {
+                throw new ASN1SizeError("Location.e164_Number violates SIZE constraint");
+            }
+        },
         "globalCellID": (_el: _Element): void => { globalCellID = $._decode_implicit<GlobalCellID>(() => _decode_GlobalCellID)(_el); },
         "rAI": (_el: _Element): void => { rAI = $._decode_implicit<Rai>(() => _decode_Rai)(_el); },
         "gsmLocation": (_el: _Element): void => { gsmLocation = $._decode_explicit<GSMLocation>(() => _decode_GSMLocation)(_el); },

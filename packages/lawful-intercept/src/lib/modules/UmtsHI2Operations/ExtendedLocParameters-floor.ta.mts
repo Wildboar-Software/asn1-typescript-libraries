@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExtendedLocParameters-floor ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExtendedLocParameters-floor ::= SEQUENCE     {
+ *     floor-number PrintableString, -- clause 5.3.39
+ *     floor-number-uncertainty PrintableString OPTIONAL
+ *     -- clause 5.3.40
+ * }
  * ```
  * 
  * @class

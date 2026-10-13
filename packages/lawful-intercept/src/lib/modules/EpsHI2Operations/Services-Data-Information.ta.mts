@@ -118,7 +118,7 @@ export
 function _decode_Services_Data_Information (el: _Element): Services_Data_Information {
     if (!_cached_decoder_for_Services_Data_Information) { _cached_decoder_for_Services_Data_Information = function (el: _Element): Services_Data_Information {
     let gPRS_parameters: OPTIONAL<GPRS_parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gPRS-parameters": (_el: _Element): void => { gPRS_parameters = $._decode_implicit<GPRS_parameters>(() => _decode_GPRS_parameters)(_el); }
     };

@@ -163,7 +163,7 @@ function _decode_StartOfInterceptionWithEstablishedIMSDataChannel (el: _Element)
     let calledIdentities: OPTIONAL<IMPU[]>;
     let sessionEventNotification: OPTIONAL<SBIType>;
     let mediaInstructions: OPTIONAL<SBIType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "targetIdentity": (_el: _Element): void => { targetIdentity = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },
         "callingIdentity": (_el: _Element): void => { callingIdentity = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },

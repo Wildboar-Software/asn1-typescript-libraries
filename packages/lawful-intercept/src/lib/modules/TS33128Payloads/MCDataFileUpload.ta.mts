@@ -172,7 +172,7 @@ function _decode_MCDataFileUpload (el: _Element): MCDataFileUpload {
     let mcDataRequestType!: MCDataRequestType;
     let mCDataFileURL: OPTIONAL<UTF8String>;
     let hTTPResponseCode!: UTF8String;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mCServiceID": (_el: _Element): void => { mCServiceID = $._decode_implicit<MCServiceID>(() => _decode_MCServiceID)(_el); },
         "mCServiceGroupID": (_el: _Element): void => { mCServiceGroupID = $._decode_implicit<MCServiceGroupID>(() => _decode_MCServiceGroupID)(_el); },

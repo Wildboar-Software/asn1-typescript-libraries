@@ -143,7 +143,7 @@ function _decode_EDNConnectionInfo (el: _Element): EDNConnectionInfo {
     let dNN: OPTIONAL<DNN>;
     let sNSSAI: OPTIONAL<SNSSAI>;
     let serviceArea: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "dNN": (_el: _Element): void => { dNN = $._decode_implicit<DNN>(() => _decode_DNN)(_el); },
         "sNSSAI": (_el: _Element): void => { sNSSAI = $._decode_implicit<SNSSAI>(() => _decode_SNSSAI)(_el); },

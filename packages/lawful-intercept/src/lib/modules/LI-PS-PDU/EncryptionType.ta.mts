@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -161,35 +160,8 @@ const EncryptionType_threedes_cbc: EncryptionType = 7; /* LONG_NAMED_ENUMERATED_
  */
 export
 const threedes_cbc: EncryptionType = EncryptionType_threedes_cbc; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EncryptionType: $.ASN1Decoder<EncryptionType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EncryptionType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EncryptionType (el: _Element): EncryptionType {
-    if (!_cached_decoder_for_EncryptionType) { _cached_decoder_for_EncryptionType = $._decodeEnumerated; }
-    return _cached_decoder_for_EncryptionType(el);
-}
-
-let _cached_encoder_for_EncryptionType: $.ASN1Encoder<EncryptionType> | null = null;
-
-/**
- * @summary Encodes a(n) EncryptionType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EncryptionType, encoded as an ASN.1 Element.
- */
-export
-function _encode_EncryptionType (value: EncryptionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EncryptionType) { _cached_encoder_for_EncryptionType = $._encodeEnumerated; }
-    return _cached_encoder_for_EncryptionType(value, elGetter);
-}
+export const _decode_EncryptionType: $.ASN1Decoder<EncryptionType> = $._decodeEnumerated;
+export const _encode_EncryptionType: $.ASN1Encoder<EncryptionType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

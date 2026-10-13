@@ -222,7 +222,7 @@ function _decode_Notification (el: _Element): Notification {
     let target_Information: OPTIONAL<Target_Information>;
     let network_Identifier: OPTIONAL<Network_Identifier>;
     let broadcastStatus: OPTIONAL<BroadcastStatus>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },

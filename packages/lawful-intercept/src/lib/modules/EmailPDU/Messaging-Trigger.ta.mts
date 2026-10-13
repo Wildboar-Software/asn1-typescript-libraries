@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -118,35 +117,8 @@ const Messaging_Trigger_system_operator: Messaging_Trigger = 4; /* LONG_NAMED_EN
  */
 export
 const system_operator: Messaging_Trigger = Messaging_Trigger_system_operator; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Messaging_Trigger: $.ASN1Decoder<Messaging_Trigger> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Messaging_Trigger
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Messaging_Trigger (el: _Element): Messaging_Trigger {
-    if (!_cached_decoder_for_Messaging_Trigger) { _cached_decoder_for_Messaging_Trigger = $._decodeEnumerated; }
-    return _cached_decoder_for_Messaging_Trigger(el);
-}
-
-let _cached_encoder_for_Messaging_Trigger: $.ASN1Encoder<Messaging_Trigger> | null = null;
-
-/**
- * @summary Encodes a(n) Messaging_Trigger into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Messaging_Trigger, encoded as an ASN.1 Element.
- */
-export
-function _encode_Messaging_Trigger (value: Messaging_Trigger, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Messaging_Trigger) { _cached_encoder_for_Messaging_Trigger = $._encodeEnumerated; }
-    return _cached_encoder_for_Messaging_Trigger(value, elGetter);
-}
+export const _decode_Messaging_Trigger: $.ASN1Decoder<Messaging_Trigger> = $._decodeEnumerated;
+export const _encode_Messaging_Trigger: $.ASN1Encoder<Messaging_Trigger> = $._encodeEnumerated;
 
 
 /* eslint-enable */

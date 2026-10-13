@@ -130,7 +130,7 @@ function _decode_TargetInfo (el: _Element): TargetInfo {
     if (!_cached_decoder_for_TargetInfo) { _cached_decoder_for_TargetInfo = function (el: _Element): TargetInfo {
     let discoveredEAS!: DiscoveredEAS;
     let targetEESInfo: OPTIONAL<EDNConfigurationInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "discoveredEAS": (_el: _Element): void => { discoveredEAS = $._decode_implicit<DiscoveredEAS>(() => _decode_DiscoveredEAS)(_el); },
         "targetEESInfo": (_el: _Element): void => { targetEESInfo = $._decode_implicit<EDNConfigurationInfo>(() => _decode_EDNConfigurationInfo)(_el); }

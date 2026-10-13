@@ -130,7 +130,7 @@ function _decode_PositioningInfo (el: _Element): PositioningInfo {
     if (!_cached_decoder_for_PositioningInfo) { _cached_decoder_for_PositioningInfo = function (el: _Element): PositioningInfo {
     let positionInfo: OPTIONAL<LocationData>;
     let rawMLPResponse: OPTIONAL<RawMLPResponse>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "positionInfo": (_el: _Element): void => { positionInfo = $._decode_implicit<LocationData>(() => _decode_LocationData)(_el); },
         "rawMLPResponse": (_el: _Element): void => { rawMLPResponse = $._decode_explicit<RawMLPResponse>(() => _decode_RawMLPResponse)(_el); }

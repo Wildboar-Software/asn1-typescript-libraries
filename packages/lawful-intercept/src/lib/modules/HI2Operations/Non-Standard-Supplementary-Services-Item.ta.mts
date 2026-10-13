@@ -17,7 +17,11 @@ import { SciDataMode, _decode_SciDataMode, _encode_SciDataMode } from "../HI2Ope
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Non-Standard-Supplementary-Services-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Non-Standard-Supplementary-Services-Item ::= CHOICE {
+ *     simpleIndication        [1] SimpleIndication,
+ *     sciData                    [2] SciDataMode,
+ *     ...
+ * }
  * ```
  */
 export

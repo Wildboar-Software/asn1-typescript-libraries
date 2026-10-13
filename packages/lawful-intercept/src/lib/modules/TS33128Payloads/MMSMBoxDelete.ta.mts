@@ -200,7 +200,7 @@ function _decode_MMSMBoxDelete (el: _Element): MMSMBoxDelete {
     let contentLocationConf: OPTIONAL<UTF8String[]>;
     let responseStatus!: MMSDeleteResponseStatus;
     let responseStatusText: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "transactionID": (_el: _Element): void => { transactionID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "version": (_el: _Element): void => { version = $._decode_implicit<MMSVersion>(() => _decode_MMSVersion)(_el); },

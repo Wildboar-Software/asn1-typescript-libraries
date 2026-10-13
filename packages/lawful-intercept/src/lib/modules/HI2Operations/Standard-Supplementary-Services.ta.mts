@@ -222,7 +222,7 @@ function _decode_Standard_Supplementary_Services (el: _Element): Standard_Supple
     let dSS1_SS_Invoke_components: OPTIONAL<DSS1_SS_Invoke_Components>;
     let mAP_SS_Parameters: OPTIONAL<MAP_SS_Parameters>;
     let mAP_SS_Invoke_Components: OPTIONAL<MAP_SS_Invoke_Components>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iSUP-SS-parameters": (_el: _Element): void => { iSUP_SS_parameters = $._decode_implicit<ISUP_SS_parameters>(() => _decode_ISUP_SS_parameters)(_el); },
         "dSS1-SS-parameters-codeset-0": (_el: _Element): void => { dSS1_SS_parameters_codeset_0 = $._decode_implicit<DSS1_SS_parameters_codeset_0>(() => _decode_DSS1_SS_parameters_codeset_0)(_el); },

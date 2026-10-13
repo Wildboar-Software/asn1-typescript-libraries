@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,15 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AMFSetID = INTEGER;
-
-let _cached_decoder_for_AMFSetID: $.ASN1Decoder<AMFSetID> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) AMFSetID
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_AMFSetID (el: _Element): AMFSetID {
-    if (!_cached_decoder_for_AMFSetID) { _cached_decoder_for_AMFSetID = $._decodeInteger; }
-    return _cached_decoder_for_AMFSetID(el);
-}
-
-let _cached_encoder_for_AMFSetID: $.ASN1Encoder<AMFSetID> | null = null;
-
-/**
- * @summary Encodes a(n) AMFSetID into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The AMFSetID, encoded as an ASN.1 Element.
- */
-export
-function _encode_AMFSetID (value: AMFSetID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AMFSetID) { _cached_encoder_for_AMFSetID = $._encodeInteger; }
-    return _cached_encoder_for_AMFSetID(value, elGetter);
-}
+export const _decode_AMFSetID: $.ASN1Decoder<AMFSetID> = (el: _Element): AMFSetID => {
+    const value = $._decodeInteger(el);
+    const _n = typeof value === "bigint" ? value : BigInt(value);
+    if (_n < 0n || _n > 1023n) {
+        throw new ASN1OverflowError("AMFSetID violates INTEGER range");
+    }
+    return value;
+};
+export const _encode_AMFSetID: $.ASN1Encoder<AMFSetID> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -196,7 +196,7 @@ function _decode_UDMProblemDetailsOtherCause (el: _Element): UDMProblemDetailsOt
     let cause: OPTIONAL<UTF8String>;
     let uDMInvalidParameters!: UDMInvalidParameters;
     let uDMSupportedFeatures!: UTF8String;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "problemDetailsType": (_el: _Element): void => { problemDetailsType = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "title": (_el: _Element): void => { title = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

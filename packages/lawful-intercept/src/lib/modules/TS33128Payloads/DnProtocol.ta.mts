@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -137,35 +134,8 @@ const DnProtocol_tlsScn: DnProtocol = DnProtocol.tlsScn; /* LONG_NAMED_ENUMERATE
  */
 export
 const tlsScn: DnProtocol = DnProtocol.tlsScn; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_DnProtocol: $.ASN1Decoder<DnProtocol> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DnProtocol
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DnProtocol (el: _Element): DnProtocol {
-    if (!_cached_decoder_for_DnProtocol) { _cached_decoder_for_DnProtocol = $._decodeEnumerated; }
-    return _cached_decoder_for_DnProtocol(el);
-}
-
-let _cached_encoder_for_DnProtocol: $.ASN1Encoder<DnProtocol> | null = null;
-
-/**
- * @summary Encodes a(n) DnProtocol into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DnProtocol, encoded as an ASN.1 Element.
- */
-export
-function _encode_DnProtocol (value: DnProtocol, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DnProtocol) { _cached_encoder_for_DnProtocol = $._encodeEnumerated; }
-    return _cached_encoder_for_DnProtocol(value, elGetter);
-}
+export const _decode_DnProtocol: $.ASN1Decoder<DnProtocol> = $._decodeEnumerated;
+export const _encode_DnProtocol: $.ASN1Encoder<DnProtocol> = $._encodeEnumerated;
 
 
 /* eslint-enable */

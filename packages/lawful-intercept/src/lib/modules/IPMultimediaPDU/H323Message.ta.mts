@@ -7,6 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../LI-PS-PDU/IPAddress.ta.mjs";
 import { H323MessageContent, _decode_H323MessageContent, _encode_H323MessageContent } from "../IPMultimediaPDU/H323MessageContent.ta.mjs";
+import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { H323MessageContent, _decode_H323MessageContent, _encode_H323MessageContent } from "../IPMultimediaPDU/H323MessageContent.ta.mjs";
 
 

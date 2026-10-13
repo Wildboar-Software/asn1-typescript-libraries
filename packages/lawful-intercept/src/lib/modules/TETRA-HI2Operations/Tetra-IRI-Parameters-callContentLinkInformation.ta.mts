@@ -16,7 +16,15 @@ import { CallContentLinkCharacteristics, _decode_CallContentLinkCharacteristics,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Tetra-IRI-Parameters-callContentLinkInformation ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Tetra-IRI-Parameters-callContentLinkInformation ::= SEQUENCE {
+ *     cCLink1Characteristics    [1] CallContentLinkCharacteristics OPTIONAL,
+ *     -- Information concerning the Content of Communication Link Tx channel established
+ *     -- toward the LEMF (or the sum signal channel, in case of mono mode)
+ *     cCLink2Characteristics    [2] CallContentLinkCharacteristics OPTIONAL,
+ *     -- Information concerning the Content of Communication Link Rx channel established
+ *     -- toward the LEMF
+ *     ...
+ * }
  * ```
  * 
  * @class
@@ -124,7 +132,7 @@ function _decode_Tetra_IRI_Parameters_callContentLinkInformation (el: _Element):
     if (!_cached_decoder_for_Tetra_IRI_Parameters_callContentLinkInformation) { _cached_decoder_for_Tetra_IRI_Parameters_callContentLinkInformation = function (el: _Element): Tetra_IRI_Parameters_callContentLinkInformation {
     let cCLink1Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
     let cCLink2Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cCLink1Characteristics": (_el: _Element): void => { cCLink1Characteristics = $._decode_implicit<CallContentLinkCharacteristics>(() => _decode_CallContentLinkCharacteristics)(_el); },
         "cCLink2Characteristics": (_el: _Element): void => { cCLink2Characteristics = $._decode_implicit<CallContentLinkCharacteristics>(() => _decode_CallContentLinkCharacteristics)(_el); }

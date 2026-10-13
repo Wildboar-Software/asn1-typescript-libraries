@@ -130,7 +130,7 @@ function _decode_BBFTunnelInformation (el: _Element): BBFTunnelInformation {
     if (!_cached_decoder_for_BBFTunnelInformation) { _cached_decoder_for_BBFTunnelInformation = function (el: _Element): BBFTunnelInformation {
     let hENBTransportLayerAddress!: IPAddr;
     let uDPPortNumber: OPTIONAL<PortNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hENBTransportLayerAddress": (_el: _Element): void => { hENBTransportLayerAddress = $._decode_implicit<IPAddr>(() => _decode_IPAddr)(_el); },
         "uDPPortNumber": (_el: _Element): void => { uDPPortNumber = $._decode_implicit<PortNumber>(() => _decode_PortNumber)(_el); }

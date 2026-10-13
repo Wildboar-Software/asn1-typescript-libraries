@@ -128,7 +128,7 @@ function _decode_SIPGeolocationHeaderInfo (el: _Element): SIPGeolocationHeaderIn
     if (!_cached_decoder_for_SIPGeolocationHeaderInfo) { _cached_decoder_for_SIPGeolocationHeaderInfo = function (el: _Element): SIPGeolocationHeaderInfo {
     let locationValue!: UTF8String;
     let cidInfo: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationValue": (_el: _Element): void => { locationValue = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "cidInfo": (_el: _Element): void => { cidInfo = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }

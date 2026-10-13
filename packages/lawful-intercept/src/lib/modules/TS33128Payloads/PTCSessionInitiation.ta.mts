@@ -231,7 +231,7 @@ function _decode_PTCSessionInitiation (el: _Element): PTCSessionInitiation {
     let location: OPTIONAL<Location>;
     let pTCBearerCapability: OPTIONAL<UTF8String>;
     let pTCHost: OPTIONAL<PTCTargetInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pTCTargetInformation": (_el: _Element): void => { pTCTargetInformation = $._decode_implicit<PTCTargetInformation>(() => _decode_PTCTargetInformation)(_el); },
         "pTCDirection": (_el: _Element): void => { pTCDirection = $._decode_implicit<Direction>(() => _decode_Direction)(_el); },

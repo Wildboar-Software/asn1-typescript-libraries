@@ -219,7 +219,7 @@ function _decode_SGSNLocationInformation (el: _Element): SGSNLocationInformation
     let currentLocationRetrieved: OPTIONAL<BOOLEAN>;
     let ageOfLocationInformation: OPTIONAL<INTEGER>;
     let userCSGInformation: OPTIONAL<UserCSGInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cGI": (_el: _Element): void => { cGI = $._decode_implicit<CGI>(() => _decode_CGI)(_el); },
         "lAI": (_el: _Element): void => { lAI = $._decode_implicit<LAI>(() => _decode_LAI)(_el); },

@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -137,7 +138,19 @@ function _decode_MicroSecondTimeStamp (el: _Element): MicroSecondTimeStamp {
     let seconds!: INTEGER;
     let microSeconds!: INTEGER;
     seconds = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    {
+        const _n = typeof seconds === "bigint" ? seconds : BigInt(seconds);
+        if (_n < 0n || _n > 18446744073709551615n) {
+            throw new ASN1OverflowError("MicroSecondTimeStamp.seconds violates INTEGER range");
+        }
+    }
     microSeconds = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    {
+        const _n = typeof microSeconds === "bigint" ? microSeconds : BigInt(microSeconds);
+        if (_n < 0n || _n > 999999n) {
+            throw new ASN1OverflowError("MicroSecondTimeStamp.microSeconds violates INTEGER range");
+        }
+    }
     return new MicroSecondTimeStamp(
         seconds,
         microSeconds,

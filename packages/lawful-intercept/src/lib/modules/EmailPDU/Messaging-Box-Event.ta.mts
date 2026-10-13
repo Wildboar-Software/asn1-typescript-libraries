@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -604,35 +603,8 @@ const Messaging_Box_Event_header_play_disable: Messaging_Box_Event = 31; /* LONG
  */
 export
 const header_play_disable: Messaging_Box_Event = Messaging_Box_Event_header_play_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Messaging_Box_Event: $.ASN1Decoder<Messaging_Box_Event> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Messaging_Box_Event
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Messaging_Box_Event (el: _Element): Messaging_Box_Event {
-    if (!_cached_decoder_for_Messaging_Box_Event) { _cached_decoder_for_Messaging_Box_Event = $._decodeEnumerated; }
-    return _cached_decoder_for_Messaging_Box_Event(el);
-}
-
-let _cached_encoder_for_Messaging_Box_Event: $.ASN1Encoder<Messaging_Box_Event> | null = null;
-
-/**
- * @summary Encodes a(n) Messaging_Box_Event into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Messaging_Box_Event, encoded as an ASN.1 Element.
- */
-export
-function _encode_Messaging_Box_Event (value: Messaging_Box_Event, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Messaging_Box_Event) { _cached_encoder_for_Messaging_Box_Event = $._encodeEnumerated; }
-    return _cached_encoder_for_Messaging_Box_Event(value, elGetter);
-}
+export const _decode_Messaging_Box_Event: $.ASN1Decoder<Messaging_Box_Event> = $._decodeEnumerated;
+export const _encode_Messaging_Box_Event: $.ASN1Encoder<Messaging_Box_Event> = $._encodeEnumerated;
 
 
 /* eslint-enable */

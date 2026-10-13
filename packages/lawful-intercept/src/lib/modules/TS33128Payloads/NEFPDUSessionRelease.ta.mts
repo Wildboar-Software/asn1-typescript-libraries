@@ -209,7 +209,7 @@ function _decode_NEFPDUSessionRelease (el: _Element): NEFPDUSessionRelease {
     let uplinkVolume: OPTIONAL<INTEGER>;
     let downlinkVolume: OPTIONAL<INTEGER>;
     let releaseCause!: NEFReleaseCause;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },

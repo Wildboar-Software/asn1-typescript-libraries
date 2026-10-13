@@ -173,7 +173,7 @@ function _decode_PTCEncryptionInfo (el: _Element): PTCEncryptionInfo {
     let keyEncoding!: UTF8String;
     let salt: OPTIONAL<UTF8String>;
     let pTCOther: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cipher": (_el: _Element): void => { cipher = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "cryptoContext": (_el: _Element): void => { cryptoContext = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

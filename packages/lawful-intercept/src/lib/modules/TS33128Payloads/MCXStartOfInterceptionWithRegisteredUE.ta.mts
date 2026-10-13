@@ -3,7 +3,8 @@ import {
     BOOLEAN,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCServiceIdentity, _decode_MCServiceIdentity, _encode_MCServiceIdentity } from "../TS33128Payloads/MCServiceIdentity.ta.mjs";
@@ -166,9 +167,14 @@ function _decode_MCXStartOfInterceptionWithRegisteredUE (el: _Element): MCXStart
     let sIPRegistrationRequest!: SIPMessage;
     let sIPRegistrationResponse!: SIPMessage;
     let location: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "mCServiceIdentities": (_el: _Element): void => { mCServiceIdentities = $._decode_implicit<MCServiceIdentity[]>(() => $._decodeSequenceOf<MCServiceIdentity>(() => _decode_MCServiceIdentity))(_el); },
+        "mCServiceIdentities": (_el: _Element): void => {
+            mCServiceIdentities = $._decode_implicit<MCServiceIdentity[]>(() => $._decodeSequenceOf<MCServiceIdentity>(() => _decode_MCServiceIdentity))(_el);
+            if (mCServiceIdentities.length < 1) {
+                throw new ASN1SizeError("MCXStartOfInterceptionWithRegisteredUE.mCServiceIdentities violates SIZE constraint");
+            }
+        },
         "userOnline": (_el: _Element): void => { userOnline = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "sIPRegistrationRequest": (_el: _Element): void => { sIPRegistrationRequest = $._decode_implicit<SIPMessage>(() => _decode_SIPMessage)(_el); },
         "sIPRegistrationResponse": (_el: _Element): void => { sIPRegistrationResponse = $._decode_implicit<SIPMessage>(() => _decode_SIPMessage)(_el); },

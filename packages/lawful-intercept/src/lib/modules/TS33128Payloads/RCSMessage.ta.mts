@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
@@ -268,11 +269,21 @@ function _decode_RCSMessage (el: _Element): RCSMessage {
     let messageID: OPTIONAL<IMDNMessageID>;
     let location: OPTIONAL<Location>;
     let messagePayload!: RCSPayload;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "rCSTargetIdentities": (_el: _Element): void => { rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el); },
+        "rCSTargetIdentities": (_el: _Element): void => {
+            rCSTargetIdentities = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);
+            if (rCSTargetIdentities.length < 1) {
+                throw new ASN1SizeError("RCSMessage.rCSTargetIdentities violates SIZE constraint");
+            }
+        },
         "groupChatSessionID": (_el: _Element): void => { groupChatSessionID = $._decode_implicit<RCSGroupChatSessionID>(() => _decode_RCSGroupChatSessionID)(_el); },
-        "originatingIdentity": (_el: _Element): void => { originatingIdentity = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el); },
+        "originatingIdentity": (_el: _Element): void => {
+            originatingIdentity = $._decode_implicit<RCSIdentity[]>(() => $._decodeSequenceOf<RCSIdentity>(() => _decode_RCSIdentity))(_el);
+            if (originatingIdentity.length < 1) {
+                throw new ASN1SizeError("RCSMessage.originatingIdentity violates SIZE constraint");
+            }
+        },
         "destinationIdentities": (_el: _Element): void => { destinationIdentities = $._decode_implicit<RCSDestinations>(() => _decode_RCSDestinations)(_el); },
         "direction": (_el: _Element): void => { direction = $._decode_implicit<Direction>(() => _decode_Direction)(_el); },
         "messageType": (_el: _Element): void => { messageType = $._decode_implicit<RCSMessageType>(() => _decode_RCSMessageType)(_el); },

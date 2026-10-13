@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -25,7 +24,16 @@ enum _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents-enhancedContent-character-encoding ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents-enhancedContent-character-encoding ::= ENUMERATED {
+ *     gsm-7-bit-ascii(0),
+ *     eight-bit-ascii(1),
+ *     eight-bit-binary(2),
+ *     ucs-2(3),
+ *     utf-8(4),
+ *     utf-16(5),
+ *     other(6),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}
@@ -144,35 +152,8 @@ const SMS_report_sMS_Contents_enhancedContent_character_encoding_other: SMS_repo
  */
 export
 const other: SMS_report_sMS_Contents_enhancedContent_character_encoding = SMS_report_sMS_Contents_enhancedContent_character_encoding_other; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Decoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) SMS_report_sMS_Contents_enhancedContent_character_encoding
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding (el: _Element): SMS_report_sMS_Contents_enhancedContent_character_encoding {
-    if (!_cached_decoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding) { _cached_decoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding = $._decodeEnumerated; }
-    return _cached_decoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding(el);
-}
-
-let _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Encoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> | null = null;
-
-/**
- * @summary Encodes a(n) SMS_report_sMS_Contents_enhancedContent_character_encoding into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The SMS_report_sMS_Contents_enhancedContent_character_encoding, encoded as an ASN.1 Element.
- */
-export
-function _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding (value: SMS_report_sMS_Contents_enhancedContent_character_encoding, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding) { _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding = $._encodeEnumerated; }
-    return _cached_encoder_for_SMS_report_sMS_Contents_enhancedContent_character_encoding(value, elGetter);
-}
+export const _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Decoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> = $._decodeEnumerated;
+export const _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding: $.ASN1Encoder<SMS_report_sMS_Contents_enhancedContent_character_encoding> = $._encodeEnumerated;
 
 
 /* eslint-enable */

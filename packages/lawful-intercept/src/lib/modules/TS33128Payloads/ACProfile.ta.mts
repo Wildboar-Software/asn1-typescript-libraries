@@ -181,7 +181,7 @@ function _decode_ACProfile (el: _Element): ACProfile {
     let expACGeoServArea: OPTIONAL<Location>;
     let eASsInfo: OPTIONAL<EASsInfo>;
     let aCServiceContSupport: OPTIONAL<ACRScenarios>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aCID": (_el: _Element): void => { aCID = $._decode_implicit<ACID>(() => _decode_ACID)(_el); },
         "aCType": (_el: _Element): void => { aCType = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

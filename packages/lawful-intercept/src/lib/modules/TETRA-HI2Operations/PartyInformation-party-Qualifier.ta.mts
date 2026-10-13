@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,7 +21,22 @@ enum _enum_for_PartyInformation_party_Qualifier {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-party-Qualifier ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-party-Qualifier ::= ENUMERATED {
+ *     originating-Party(0),
+ *     -- In this case, the partyInformation parameter provides the identities related to
+ *     -- the originating party and all information provided by this party.
+ *     -- This parameter provides also all the information concerning the redirecting
+ *     -- party when a forwarded call reaches a target.
+ *     terminating-Party(1),
+ *     -- In this case, the partyInformation parameter provides the identities related to
+ *     -- the terminating party and all information provided by this party.
+ *     forwarded-to-Party(2),
+ *     -- In this case, the partyInformation parameter provides the identities related to
+ *     -- the forwarded to party and parties beyond this one and all information
+ *     -- provided by this parties, including the call forwarding reason.
+ *     gPRS-Target(3),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}
@@ -93,35 +107,8 @@ const PartyInformation_party_Qualifier_gPRS_Target: PartyInformation_party_Quali
  */
 export
 const gPRS_Target: PartyInformation_party_Qualifier = PartyInformation_party_Qualifier_gPRS_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_PartyInformation_party_Qualifier: $.ASN1Decoder<PartyInformation_party_Qualifier> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PartyInformation_party_Qualifier
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PartyInformation_party_Qualifier (el: _Element): PartyInformation_party_Qualifier {
-    if (!_cached_decoder_for_PartyInformation_party_Qualifier) { _cached_decoder_for_PartyInformation_party_Qualifier = $._decodeEnumerated; }
-    return _cached_decoder_for_PartyInformation_party_Qualifier(el);
-}
-
-let _cached_encoder_for_PartyInformation_party_Qualifier: $.ASN1Encoder<PartyInformation_party_Qualifier> | null = null;
-
-/**
- * @summary Encodes a(n) PartyInformation_party_Qualifier into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PartyInformation_party_Qualifier, encoded as an ASN.1 Element.
- */
-export
-function _encode_PartyInformation_party_Qualifier (value: PartyInformation_party_Qualifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PartyInformation_party_Qualifier) { _cached_encoder_for_PartyInformation_party_Qualifier = $._encodeEnumerated; }
-    return _cached_encoder_for_PartyInformation_party_Qualifier(value, elGetter);
-}
+export const _decode_PartyInformation_party_Qualifier: $.ASN1Decoder<PartyInformation_party_Qualifier> = $._decodeEnumerated;
+export const _encode_PartyInformation_party_Qualifier: $.ASN1Encoder<PartyInformation_party_Qualifier> = $._encodeEnumerated;
 
 
 /* eslint-enable */

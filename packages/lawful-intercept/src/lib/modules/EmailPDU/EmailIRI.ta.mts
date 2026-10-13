@@ -6,13 +6,15 @@ import {
     RELATIVE_OID,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { E_mail_Event, _decode_E_mail_Event, _encode_E_mail_Event, _enum_for_E_mail_Event } from "../EmailPDU/E-mail-Event.ta.mjs";
 // export { E_mail_Event, _enum_for_E_mail_Event, E_mail_Event_e_mail_send /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_send /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_receive /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_receive /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_download /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_download /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_logon_attempt /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_logon_attempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_logon /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_logon /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_logon_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_logon_failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_logoff /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_logoff /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_partial_download /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_partial_download /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_upload /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_upload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_E_mail_Event, _encode_E_mail_Event } from "../EmailPDU/E-mail-Event.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../LI-PS-PDU/IPAddress.ta.mjs";
-import { E_mail_Protocol, _decode_E_mail_Protocol, _encode_E_mail_Protocol, _enum_for_E_mail_Protocol, undefined /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../EmailPDU/E-mail-Protocol.ta.mjs";
+import { E_mail_Protocol, _decode_E_mail_Protocol, _encode_E_mail_Protocol, _enum_for_E_mail_Protocol } from "../EmailPDU/E-mail-Protocol.ta.mjs";
 // export { E_mail_Protocol, _enum_for_E_mail_Protocol, E_mail_Protocol_smtp /* IMPORTED_LONG_ENUMERATION_ITEM */, smtp /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Protocol_pop3 /* IMPORTED_LONG_ENUMERATION_ITEM */, pop3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Protocol_imap4 /* IMPORTED_LONG_ENUMERATION_ITEM */, imap4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Protocol_webmail /* IMPORTED_LONG_ENUMERATION_ITEM */, webmail /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Protocol_undefined /* IMPORTED_LONG_ENUMERATION_ITEM */, undefined /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_E_mail_Protocol, _encode_E_mail_Protocol } from "../EmailPDU/E-mail-Protocol.ta.mjs";
 import { E_mail_Address_List, _decode_E_mail_Address_List, _encode_E_mail_Address_List } from "../EmailPDU/E-mail-Address-List.ta.mjs";
 // export { E_mail_Address_List, _decode_E_mail_Address_List, _encode_E_mail_Address_List } from "../EmailPDU/E-mail-Address-List.ta.mjs";
@@ -23,6 +25,7 @@ import { National_EM_ASN1parameters, _decode_National_EM_ASN1parameters, _encode
 import { AAAInformation, _decode_AAAInformation, _encode_AAAInformation } from "../EmailPDU/AAAInformation.ta.mjs";
 // export { AAAInformation, _decode_AAAInformation, _encode_AAAInformation } from "../EmailPDU/AAAInformation.ta.mjs";
 import { EmailIRI_e_mail_Sender_Validity, _decode_EmailIRI_e_mail_Sender_Validity, _encode_EmailIRI_e_mail_Sender_Validity, _enum_for_EmailIRI_e_mail_Sender_Validity } from "../EmailPDU/EmailIRI-e-mail-Sender-Validity.ta.mjs";
+import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { EmailIRI_e_mail_Sender_Validity, _enum_for_EmailIRI_e_mail_Sender_Validity, EmailIRI_e_mail_Sender_Validity_validated /* IMPORTED_LONG_ENUMERATION_ITEM */, validated /* IMPORTED_SHORT_ENUMERATION_ITEM */, EmailIRI_e_mail_Sender_Validity_nonvalidated /* IMPORTED_LONG_ENUMERATION_ITEM */, nonvalidated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EmailIRI_e_mail_Sender_Validity, _encode_EmailIRI_e_mail_Sender_Validity } from "../EmailPDU/EmailIRI-e-mail-Sender-Validity.ta.mjs";
 
 
@@ -364,7 +367,7 @@ function _decode_EmailIRI (el: _Element): EmailIRI {
     let national_EM_ASN1parameters: OPTIONAL<National_EM_ASN1parameters>;
     let aAAInformation: OPTIONAL<AAAInformation>;
     let e_mail_Sender_Validity: OPTIONAL<EmailIRI_e_mail_Sender_Validity>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "emailIRIObjId": (_el: _Element): void => { emailIRIObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "eventType": (_el: _Element): void => { eventType = $._decode_implicit<E_mail_Event>(() => _decode_E_mail_Event)(_el); },
@@ -375,10 +378,21 @@ function _decode_EmailIRI (el: _Element): EmailIRI {
         "server-Octets-Sent": (_el: _Element): void => { server_Octets_Sent = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "client-Octets-Sent": (_el: _Element): void => { client_Octets_Sent = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "protocol-ID": (_el: _Element): void => { protocol_ID = $._decode_implicit<E_mail_Protocol>(() => _decode_E_mail_Protocol)(_el); },
-        "e-mail-Sender": (_el: _Element): void => { e_mail_Sender = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "e-mail-Sender": (_el: _Element): void => {
+            e_mail_Sender = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (e_mail_Sender.length > 255) {
+                throw new ASN1SizeError("EmailIRI.e_mail_Sender violates SIZE constraint");
+            }
+        },
         "e-mail-Recipients": (_el: _Element): void => { e_mail_Recipients = $._decode_implicit<E_mail_Address_List>(() => _decode_E_mail_Address_List)(_el); },
         "status": (_el: _Element): void => { status = $._decode_implicit<E_mail_Status>(() => _decode_E_mail_Status)(_el); },
-        "total-Recipient-Count": (_el: _Element): void => { total_Recipient_Count = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "total-Recipient-Count": (_el: _Element): void => {
+            total_Recipient_Count = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof total_Recipient_Count === "bigint" ? total_Recipient_Count : BigInt(total_Recipient_Count);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("EmailIRI.total_Recipient_Count violates INTEGER range");
+            }
+        },
         "message-ID": (_el: _Element): void => { message_ID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "nationalParameter": (_el: _Element): void => { nationalParameter = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "national-EM-ASN1parameters": (_el: _Element): void => { national_EM_ASN1parameters = $._decode_implicit<National_EM_ASN1parameters>(() => _decode_National_EM_ASN1parameters)(_el); },

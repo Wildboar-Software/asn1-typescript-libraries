@@ -395,7 +395,7 @@ function _decode_AMFStartOfInterceptionWithRegisteredUE (el: _Element): AMFStart
     let fiveGSUpdateType: OPTIONAL<FiveGSUpdateType>;
     let uEAreaIndication: OPTIONAL<UEAreaIndication>;
     let additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "registrationResult": (_el: _Element): void => { registrationResult = $._decode_implicit<AMFRegistrationResult>(() => _decode_AMFRegistrationResult)(_el); },
         "registrationType": (_el: _Element): void => { registrationType = $._decode_implicit<AMFRegistrationType>(() => _decode_AMFRegistrationType)(_el); },

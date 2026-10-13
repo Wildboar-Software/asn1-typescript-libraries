@@ -132,7 +132,7 @@ function _decode_ContentLocation (el: _Element): ContentLocation {
     if (!_cached_decoder_for_ContentLocation) { _cached_decoder_for_ContentLocation = function (el: _Element): ContentLocation {
     let contentLocationURI!: OCTET_STRING;
     let statusCount: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "contentLocationURI": (_el: _Element): void => { contentLocationURI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "statusCount": (_el: _Element): void => { statusCount = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }

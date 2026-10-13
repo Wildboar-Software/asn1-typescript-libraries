@@ -133,7 +133,7 @@ function _decode_MediaID (el: _Element): MediaID {
     if (!_cached_decoder_for_MediaID) { _cached_decoder_for_MediaID = function (el: _Element): MediaID {
     let sourceUserID: OPTIONAL<ConfPartyInformation>;
     let streamID: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sourceUserID": (_el: _Element): void => { sourceUserID = $._decode_implicit<ConfPartyInformation>(() => _decode_ConfPartyInformation)(_el); },
         "streamID": (_el: _Element): void => { streamID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

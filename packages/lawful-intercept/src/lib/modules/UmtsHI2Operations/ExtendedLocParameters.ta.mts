@@ -260,7 +260,7 @@ function _decode_ExtendedLocParameters (el: _Element): ExtendedLocParameters {
     let floor: OPTIONAL<ExtendedLocParameters_floor>;
     let additional_info: OPTIONAL<PrintableString>;
     let lALS_rawMLPPosData: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "posMethod": (_el: _Element): void => { posMethod = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(_el); },
         "mapData": (_el: _Element): void => { mapData = $._decode_explicit<ExtendedLocParameters_mapData>(() => _decode_ExtendedLocParameters_mapData)(_el); },

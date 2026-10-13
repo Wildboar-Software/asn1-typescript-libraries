@@ -177,7 +177,7 @@ function _decode_EPSNASTransportInitialInformation (el: _Element): EPSNASTranspo
     let eDTSession: OPTIONAL<BOOLEAN>;
     let iABNodeIndication: OPTIONAL<BOOLEAN>;
     let lTENTNTAIInformation: OPTIONAL<LTENTNTAIInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rANUES1APID": (_el: _Element): void => { rANUES1APID = $._decode_implicit<RANUES1APID>(() => _decode_RANUES1APID)(_el); },
         "relayNodeIndicator": (_el: _Element): void => { relayNodeIndicator = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

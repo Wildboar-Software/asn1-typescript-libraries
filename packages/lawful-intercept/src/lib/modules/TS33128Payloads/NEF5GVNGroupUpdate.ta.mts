@@ -154,7 +154,7 @@ function _decode_NEF5GVNGroupUpdate (el: _Element): NEF5GVNGroupUpdate {
     let gPSI!: GPSI;
     let fiveGLanParametersProvision: OPTIONAL<SBIType>;
     let fiveGLanParametersProvisionPatch: OPTIONAL<SBIType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aFID": (_el: _Element): void => { aFID = $._decode_implicit<AFID>(() => _decode_AFID)(_el); },
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },

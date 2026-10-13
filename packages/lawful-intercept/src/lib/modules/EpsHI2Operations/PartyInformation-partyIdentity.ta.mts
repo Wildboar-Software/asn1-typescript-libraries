@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
     OPTIONAL,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -17,7 +18,43 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity ::= SEQUENCE {
+ *     imei                    [1] OCTET STRING (SIZE (8)) OPTIONAL,
+ *     -- See MAP format [4]
+ *
+ *     imsi                    [3] OCTET STRING (SIZE (3..8)) OPTIONAL,
+ *     -- See MAP format [4] International Mobile
+ *     -- Station Identity E.212 number beginning with Mobile Country Code
+ *
+ *     msISDN                    [6] OCTET STRING (SIZE (1..9)) OPTIONAL,
+ *     -- MSISDN of the target, encoded in the same format as the AddressString
+ *     -- parameters defined in MAP format document TS 29.002 [4]
+ *
+ *     e164-Format                [7] OCTET STRING    (SIZE (1 .. 25)) OPTIONAL,
+ *     -- E164 address of the node in international format. Coded in the same format as
+ *     -- the calling party number  parameter of the ISUP (parameter part:[29])
+ *
+ *     sip-uri                    [8] OCTET STRING     OPTIONAL,
+ *     -- See [26]
+ *
+ *     ...,
+ *     tel-uri                    [9] OCTET STRING     OPTIONAL,
+ *     -- See [67]
+ *     nai                          [10] OCTET STRING    OPTIONAL,
+ *     -- NAI of the target, encoded in the same format as defined by [EPS stage 3 specs]
+ *     x-3GPP-Asserted-Identity [11] OCTET STRING     OPTIONAL,
+ *     -- X-3GPP-Asserted-Identity header (3GPP TS 24.109 [79]) of the target, used in
+ *     -- some XCAP transactions as a complement information to SIP URI or Tel URI.
+ *     xUI                        [12] OCTET STRING     OPTIONAL,
+ *     -- XCAP User Identifier (XUI)is a string, valid as a path element in an XCAP URI, that is
+ *     -- may be associated with each user served by a XCAP resource server. Defined in IETF RFC
+ *     -- 4825[80] as a complement information to SIP URI or Tel URI
+ *     iMPI                    [13] OCTET STRING   OPTIONAL,
+ *     -- Private User Identity as defined in 3GPP TS 23.003 [25]
+ *     extID                   [14] UTF8String OPTIONAL
+ *     -- RFC 4282 [102] compliant string as per TS 23.003 [25], clause 19.7.2
+ *
+ * }
  * ```
  * 
  * @class
@@ -214,12 +251,32 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let xUI: OPTIONAL<OCTET_STRING>;
     let iMPI: OPTIONAL<OCTET_STRING>;
     let extID: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "imei": (_el: _Element): void => { imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "imsi": (_el: _Element): void => { imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "msISDN": (_el: _Element): void => { msISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "e164-Format": (_el: _Element): void => { e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "imei": (_el: _Element): void => {
+            imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imei.length < 8 || imei.length > 8) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.imei violates SIZE constraint");
+            }
+        },
+        "imsi": (_el: _Element): void => {
+            imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imsi.length < 3 || imsi.length > 8) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.imsi violates SIZE constraint");
+            }
+        },
+        "msISDN": (_el: _Element): void => {
+            msISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (msISDN.length < 1 || msISDN.length > 9) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.msISDN violates SIZE constraint");
+            }
+        },
+        "e164-Format": (_el: _Element): void => {
+            e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (e164_Format.length < 1 || e164_Format.length > 25) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.e164_Format violates SIZE constraint");
+            }
+        },
         "sip-uri": (_el: _Element): void => { sip_uri = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "tel-uri": (_el: _Element): void => { tel_uri = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "nai": (_el: _Element): void => { nai = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

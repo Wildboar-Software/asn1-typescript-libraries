@@ -172,7 +172,7 @@ function _decode_PDNProtocolConfigurationOptions (el: _Element): PDNProtocolConf
     let responsePCO: OPTIONAL<PDNPCO>;
     let responseAPCO: OPTIONAL<PDNPCO>;
     let responseEPCO: OPTIONAL<PDNPCO>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestPCO": (_el: _Element): void => { requestPCO = $._decode_implicit<PDNPCO>(() => _decode_PDNPCO)(_el); },
         "requestAPCO": (_el: _Element): void => { requestAPCO = $._decode_implicit<PDNPCO>(() => _decode_PDNPCO)(_el); },

@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
@@ -163,11 +164,16 @@ function _decode_IMSDataChannelSetup (el: _Element): IMSDataChannelSetup {
     let calledIdentity: OPTIONAL<IMPU[]>;
     let sessionEventNotification: OPTIONAL<SBIType>;
     let mediaInstructionData: OPTIONAL<SBIType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "targetIdentity": (_el: _Element): void => { targetIdentity = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },
         "callingIdentity": (_el: _Element): void => { callingIdentity = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },
-        "calledIdentity": (_el: _Element): void => { calledIdentity = $._decode_implicit<IMPU[]>(() => $._decodeSequenceOf<IMPU>(() => _decode_IMPU))(_el); },
+        "calledIdentity": (_el: _Element): void => {
+            calledIdentity = $._decode_implicit<IMPU[]>(() => $._decodeSequenceOf<IMPU>(() => _decode_IMPU))(_el);
+            if (calledIdentity.length < 1) {
+                throw new ASN1SizeError("IMSDataChannelSetup.calledIdentity violates SIZE constraint");
+            }
+        },
         "sessionEventNotification": (_el: _Element): void => { sessionEventNotification = $._decode_implicit<SBIType>(() => _decode_SBIType)(_el); },
         "mediaInstructionData": (_el: _Element): void => { mediaInstructionData = $._decode_implicit<SBIType>(() => _decode_SBIType)(_el); }
     };

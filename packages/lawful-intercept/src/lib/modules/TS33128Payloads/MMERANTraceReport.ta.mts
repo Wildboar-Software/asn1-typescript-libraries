@@ -259,7 +259,7 @@ function _decode_MMERANTraceReport (el: _Element): MMERANTraceReport {
     let traceCollectionEntityInfo: OPTIONAL<TraceCollectionEntityInfo>;
     let mMETraceData: OPTIONAL<XMLType>;
     let location: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "mMEUES1APID": (_el: _Element): void => { mMEUES1APID = $._decode_implicit<MMEUES1APID>(() => _decode_MMEUES1APID)(_el); },

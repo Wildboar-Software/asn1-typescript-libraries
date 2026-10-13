@@ -3,9 +3,11 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as HI2Operations from "../HI2Operations/index.mjs";
 // export { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../HI2Operations/Network-Element-Identifier.ta.mjs";
 
 
@@ -140,10 +142,20 @@ function _decode_NetworkIdentifier (el: _Element): NetworkIdentifier {
     let operatorIdentifier!: OCTET_STRING;
     let networkElementIdentifier: OPTIONAL<OCTET_STRING>;
     let eTSI671NEID: OPTIONAL<HI2Operations.Network_Element_Identifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "operatorIdentifier": (_el: _Element): void => { operatorIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "networkElementIdentifier": (_el: _Element): void => { networkElementIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "operatorIdentifier": (_el: _Element): void => {
+            operatorIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (operatorIdentifier.length < 1 || operatorIdentifier.length > 16) {
+                throw new ASN1SizeError("NetworkIdentifier.operatorIdentifier violates SIZE constraint");
+            }
+        },
+        "networkElementIdentifier": (_el: _Element): void => {
+            networkElementIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (networkElementIdentifier.length < 1 || networkElementIdentifier.length > 16) {
+                throw new ASN1SizeError("NetworkIdentifier.networkElementIdentifier violates SIZE constraint");
+            }
+        },
         "eTSI671NEID": (_el: _Element): void => { eTSI671NEID = $._decode_explicit<HI2Operations.Network_Element_Identifier>(() => HI2Operations._decode_Network_Element_Identifier)(_el); }
     };
     $._parse_sequence(el, callbacks,

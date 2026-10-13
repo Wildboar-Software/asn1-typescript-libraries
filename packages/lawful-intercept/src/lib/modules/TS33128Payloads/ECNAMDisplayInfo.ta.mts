@@ -129,7 +129,7 @@ function _decode_ECNAMDisplayInfo (el: _Element): ECNAMDisplayInfo {
     if (!_cached_decoder_for_ECNAMDisplayInfo) { _cached_decoder_for_ECNAMDisplayInfo = function (el: _Element): ECNAMDisplayInfo {
     let name!: UTF8String;
     let additionalInfo: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "name": (_el: _Element): void => { name = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "additionalInfo": (_el: _Element): void => { additionalInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

@@ -155,7 +155,7 @@ function _decode_ILHIPayload (el: _Element): ILHIPayload {
     let resPayload!: EncapsulationPayload;
     let mappingInfo: OPTIONAL<MappingInfo>;
     let originalPayload: OPTIONAL<EncapsulationPayload>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iLHIObjId": (_el: _Element): void => { iLHIObjId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "resPayload": (_el: _Element): void => { resPayload = $._decode_implicit<EncapsulationPayload>(() => _decode_EncapsulationPayload)(_el); },

@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPv4Address, _decode_IPv4Address, _encode_IPv4Address } from "../TS33128Payloads/IPv4Address.ta.mjs";
@@ -142,9 +143,15 @@ function _decode_FTEID (el: _Element): FTEID {
     let tEID!: INTEGER;
     let iPv4Address: OPTIONAL<IPv4Address>;
     let iPv6Address: OPTIONAL<IPv6Address>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "tEID": (_el: _Element): void => { tEID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "tEID": (_el: _Element): void => {
+            tEID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof tEID === "bigint" ? tEID : BigInt(tEID);
+            if (_n < 0n || _n > 4294967295n) {
+                throw new ASN1OverflowError("FTEID.tEID violates INTEGER range");
+            }
+        },
         "iPv4Address": (_el: _Element): void => { iPv4Address = $._decode_implicit<IPv4Address>(() => _decode_IPv4Address)(_el); },
         "iPv6Address": (_el: _Element): void => { iPv6Address = $._decode_implicit<IPv6Address>(() => _decode_IPv6Address)(_el); }
     };

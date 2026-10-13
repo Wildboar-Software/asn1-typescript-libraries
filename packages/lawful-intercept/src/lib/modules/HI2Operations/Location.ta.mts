@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TetraLocation, _decode_TetraLocation, _encode_TetraLocation } from "../HI2Operations/TetraLocation.ta.mjs";
@@ -246,18 +247,53 @@ function _decode_Location (el: _Element): Location {
     let oldRAI: OPTIONAL<OCTET_STRING>;
     let tAI: OPTIONAL<OCTET_STRING>;
     let eCGI: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "e164-Number": (_el: _Element): void => { e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "globalCellID": (_el: _Element): void => { globalCellID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "e164-Number": (_el: _Element): void => {
+            e164_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (e164_Number.length < 1 || e164_Number.length > 25) {
+                throw new ASN1SizeError("Location.e164_Number violates SIZE constraint");
+            }
+        },
+        "globalCellID": (_el: _Element): void => {
+            globalCellID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (globalCellID.length < 5 || globalCellID.length > 7) {
+                throw new ASN1SizeError("Location.globalCellID violates SIZE constraint");
+            }
+        },
         "tetraLocation": (_el: _Element): void => { tetraLocation = $._decode_explicit<TetraLocation>(() => _decode_TetraLocation)(_el); },
-        "rAI": (_el: _Element): void => { rAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "rAI": (_el: _Element): void => {
+            rAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (rAI.length < 6 || rAI.length > 6) {
+                throw new ASN1SizeError("Location.rAI violates SIZE constraint");
+            }
+        },
         "gsmLocation": (_el: _Element): void => { gsmLocation = $._decode_explicit<GSMLocation>(() => _decode_GSMLocation)(_el); },
         "umtsLocation": (_el: _Element): void => { umtsLocation = $._decode_explicit<UMTSLocation>(() => _decode_UMTSLocation)(_el); },
-        "sAI": (_el: _Element): void => { sAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "oldRAI": (_el: _Element): void => { oldRAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "tAI": (_el: _Element): void => { tAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "eCGI": (_el: _Element): void => { eCGI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "sAI": (_el: _Element): void => {
+            sAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (sAI.length < 7 || sAI.length > 7) {
+                throw new ASN1SizeError("Location.sAI violates SIZE constraint");
+            }
+        },
+        "oldRAI": (_el: _Element): void => {
+            oldRAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (oldRAI.length < 6 || oldRAI.length > 6) {
+                throw new ASN1SizeError("Location.oldRAI violates SIZE constraint");
+            }
+        },
+        "tAI": (_el: _Element): void => {
+            tAI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tAI.length < 6 || tAI.length > 6) {
+                throw new ASN1SizeError("Location.tAI violates SIZE constraint");
+            }
+        },
+        "eCGI": (_el: _Element): void => {
+            eCGI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (eCGI.length < 8 || eCGI.length > 8) {
+                throw new ASN1SizeError("Location.eCGI violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_Location,

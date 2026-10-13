@@ -2,7 +2,8 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PTCIdentifiers, _decode_PTCIdentifiers, _encode_PTCIdentifiers } from "../TS33128Payloads/PTCIdentifiers.ta.mjs";
@@ -123,6 +124,11 @@ function _decode_PTCTargetInformation (el: _Element): PTCTargetInformation {
     sequence[0].name = "identifiers";
     let identifiers!: PTCIdentifiers[];
     identifiers = $._decode_implicit<PTCIdentifiers[]>(() => $._decodeSequenceOf<PTCIdentifiers>(() => _decode_PTCIdentifiers))(sequence[0]);
+    {
+        if (identifiers.length < 1) {
+            throw new ASN1SizeError("PTCTargetInformation.identifiers violates SIZE constraint");
+        }
+    }
     return new PTCTargetInformation(
         identifiers,
         sequence.slice(1),

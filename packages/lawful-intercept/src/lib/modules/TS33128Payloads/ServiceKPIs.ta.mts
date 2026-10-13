@@ -195,7 +195,7 @@ function _decode_ServiceKPIs (el: _Element): ServiceKPIs {
     let requestedGraphCompute: OPTIONAL<OCTET_STRING>;
     let requestedMemory: OPTIONAL<OCTET_STRING>;
     let requestedStorage: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "connectionBandwidth": (_el: _Element): void => { connectionBandwidth = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "requestRate": (_el: _Element): void => { requestRate = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },

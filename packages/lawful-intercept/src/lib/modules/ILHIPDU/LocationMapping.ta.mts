@@ -7,6 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 // export { Location, _decode_Location, _encode_Location } from "../LI-PS-PDU/Location.ta.mjs";
 import { NormalizedLocationData, _decode_NormalizedLocationData, _encode_NormalizedLocationData } from "../ILHIPDU/NormalizedLocationData.ta.mjs";
+import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { NormalizedLocationData, _decode_NormalizedLocationData, _encode_NormalizedLocationData } from "../ILHIPDU/NormalizedLocationData.ta.mjs";
 
 

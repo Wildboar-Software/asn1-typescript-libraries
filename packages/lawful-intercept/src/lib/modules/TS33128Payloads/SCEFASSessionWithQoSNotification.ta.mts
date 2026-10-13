@@ -175,7 +175,7 @@ function _decode_SCEFASSessionWithQoSNotification (el: _Element): SCEFASSessionW
     let sCSASID!: SCSASID;
     let userPlaneNotificationData!: SBIType;
     let aSSessionWithQoSResponseCode!: AForASSessionWithQoSResponseCode;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mSISDN": (_el: _Element): void => { mSISDN = $._decode_implicit<MSISDN>(() => _decode_MSISDN)(_el); },
         "externalIdentifier": (_el: _Element): void => { externalIdentifier = $._decode_implicit<NAI>(() => _decode_NAI)(_el); },

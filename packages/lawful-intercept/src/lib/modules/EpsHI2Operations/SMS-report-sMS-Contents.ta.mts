@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_report_sMS_Contents_sms_initiator, _decode_SMS_report_sMS_Contents_sms_initiator, _encode_SMS_report_sMS_Contents_sms_initiator, _enum_for_SMS_report_sMS_Contents_sms_initiator } from "../EpsHI2Operations/SMS-report-sMS-Contents-sms-initiator.ta.mjs";
@@ -22,7 +23,37 @@ import { SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMS-report-sMS-Contents ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SMS-report-sMS-Contents ::= SEQUENCE {
+ *     sms-initiator        [1] ENUMERATED -- party which sent the  SMS
+ *     {
+ *         target            (0),
+ *         server            (1),
+ *         undefined-party    (2),
+ *         ...
+ *     }
+ *     ,
+ *     transfer-status        [2] ENUMERATED
+ *     {
+ *         succeed-transfer    (0), -- the transfer of the SMS message succeeds
+ *         not-succeed-transfer(1),
+ *         undefined            (2),
+ *         ...
+ *     }
+ *     OPTIONAL,
+ *     other-message        [3] ENUMERATED -- in case of terminating call, indicates if
+ *     -- the server will send other SMS
+ *     {
+ *         yes            (0),
+ *         no            (1),
+ *         undefined    (2),
+ *         ...
+ *     }
+ *     OPTIONAL,
+ *     content                [4] OCTET STRING (SIZE (1 .. 270)) OPTIONAL,
+ *     -- Encoded in the format defined for the SMS mobile
+ *     ...,
+ *     sMSContentRemovedIndicator [5] BOOLEAN OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -177,12 +208,17 @@ function _decode_SMS_report_sMS_Contents (el: _Element): SMS_report_sMS_Contents
     let other_message: OPTIONAL<SMS_report_sMS_Contents_other_message>;
     let content: OPTIONAL<OCTET_STRING>;
     let sMSContentRemovedIndicator: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sms-initiator": (_el: _Element): void => { sms_initiator = $._decode_implicit<SMS_report_sMS_Contents_sms_initiator>(() => _decode_SMS_report_sMS_Contents_sms_initiator)(_el); },
         "transfer-status": (_el: _Element): void => { transfer_status = $._decode_implicit<SMS_report_sMS_Contents_transfer_status>(() => _decode_SMS_report_sMS_Contents_transfer_status)(_el); },
         "other-message": (_el: _Element): void => { other_message = $._decode_implicit<SMS_report_sMS_Contents_other_message>(() => _decode_SMS_report_sMS_Contents_other_message)(_el); },
-        "content": (_el: _Element): void => { content = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "content": (_el: _Element): void => {
+            content = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (content.length < 1 || content.length > 270) {
+                throw new ASN1SizeError("SMS_report_sMS_Contents.content violates SIZE constraint");
+            }
+        },
         "sMSContentRemovedIndicator": (_el: _Element): void => { sMSContentRemovedIndicator = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); }
     };
     $._parse_sequence(el, callbacks,

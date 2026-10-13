@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExtendedLocParameters-motionStateList ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExtendedLocParameters-motionStateList ::= SEQUENCE    {
+ *     primaryMotionState     [0] PrintableString, -- clause 5.3.69
+ *     secondaryMotionState     [1] SEQUENCE OF PrintableString OPTIONAL,
+ *     confidence                 [2] PrintableString -- clause 5.3.24
+ * }
  * ```
  * 
  * @class

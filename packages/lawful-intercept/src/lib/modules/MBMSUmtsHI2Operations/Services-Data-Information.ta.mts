@@ -119,7 +119,7 @@ export
 function _decode_Services_Data_Information (el: _Element): Services_Data_Information {
     if (!_cached_decoder_for_Services_Data_Information) { _cached_decoder_for_Services_Data_Information = function (el: _Element): Services_Data_Information {
     let mBMSparameters: OPTIONAL<MBMSparameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mBMSparameters": (_el: _Element): void => { mBMSparameters = $._decode_implicit<MBMSparameters>(() => _decode_MBMSparameters)(_el); }
     };

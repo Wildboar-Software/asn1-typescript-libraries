@@ -143,7 +143,7 @@ function _decode_AreaOfInterest (el: _Element): AreaOfInterest {
     let areaOfInterestTAIList: OPTIONAL<AreaOfInterestTAIList>;
     let areaOfInterestCellList: OPTIONAL<AreaOfInterestCellList>;
     let areaOfInterestRANNodeList: OPTIONAL<AreaOfInterestRANNodeList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "areaOfInterestTAIList": (_el: _Element): void => { areaOfInterestTAIList = $._decode_implicit<AreaOfInterestTAIList>(() => _decode_AreaOfInterestTAIList)(_el); },
         "areaOfInterestCellList": (_el: _Element): void => { areaOfInterestCellList = $._decode_implicit<AreaOfInterestCellList>(() => _decode_AreaOfInterestCellList)(_el); },

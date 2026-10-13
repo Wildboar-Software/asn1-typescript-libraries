@@ -179,7 +179,7 @@ function _decode_UDMUEAuthenticationResponse (el: _Element): UDMUEAuthentication
     let problemDetails: OPTIONAL<UDMProblemDetails>;
     let authAAA: OPTIONAL<BOOLEAN>;
     let pvsInfo: OPTIONAL<ServerAddressingInfoList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "authenticationInfoRequest": (_el: _Element): void => { authenticationInfoRequest = $._decode_implicit<UDMAuthenticationInfoRequest>(() => _decode_UDMAuthenticationInfoRequest)(_el); },

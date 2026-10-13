@@ -130,7 +130,7 @@ function _decode_AMFEventArea (el: _Element): AMFEventArea {
     if (!_cached_decoder_for_AMFEventArea) { _cached_decoder_for_AMFEventArea = function (el: _Element): AMFEventArea {
     let presenceInfo: OPTIONAL<PresenceInfo>;
     let lADNInfo: OPTIONAL<LADNInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "presenceInfo": (_el: _Element): void => { presenceInfo = $._decode_implicit<PresenceInfo>(() => _decode_PresenceInfo)(_el); },
         "lADNInfo": (_el: _Element): void => { lADNInfo = $._decode_implicit<LADNInfo>(() => _decode_LADNInfo)(_el); }

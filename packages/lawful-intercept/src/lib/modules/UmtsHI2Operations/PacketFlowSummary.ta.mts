@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
@@ -232,12 +233,24 @@ function _decode_PacketFlowSummary (el: _Element): PacketFlowSummary {
     let packetCount!: INTEGER;
     let sumOfPacketSizes!: INTEGER;
     let packetDataSummaryReason!: ReportReason;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sourceIPAddress": (_el: _Element): void => { sourceIPAddress = $._decode_implicit<IPAddress>(() => _decode_IPAddress)(_el); },
-        "sourcePortNumber": (_el: _Element): void => { sourcePortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "sourcePortNumber": (_el: _Element): void => {
+            sourcePortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof sourcePortNumber === "bigint" ? sourcePortNumber : BigInt(sourcePortNumber);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("PacketFlowSummary.sourcePortNumber violates INTEGER range");
+            }
+        },
         "destinationIPAddress": (_el: _Element): void => { destinationIPAddress = $._decode_implicit<IPAddress>(() => _decode_IPAddress)(_el); },
-        "destinationPortNumber": (_el: _Element): void => { destinationPortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "destinationPortNumber": (_el: _Element): void => {
+            destinationPortNumber = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof destinationPortNumber === "bigint" ? destinationPortNumber : BigInt(destinationPortNumber);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("PacketFlowSummary.destinationPortNumber violates INTEGER range");
+            }
+        },
         "transportProtocol": (_el: _Element): void => { transportProtocol = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "flowLabel": (_el: _Element): void => { flowLabel = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "summaryPeriod": (_el: _Element): void => { summaryPeriod = $._decode_implicit<ReportInterval>(() => _decode_ReportInterval)(_el); },

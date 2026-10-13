@@ -227,7 +227,7 @@ function _decode_UDMServingSystemMessage (el: _Element): UDMServingSystemMessage
     let servingSystemMethod!: UDMServingSystemMethod;
     let serviceID: OPTIONAL<ServiceID>;
     let roamingIndicator: OPTIONAL<RoamingIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "pEI": (_el: _Element): void => { pEI = $._decode_explicit<PEI>(() => _decode_PEI)(_el); },

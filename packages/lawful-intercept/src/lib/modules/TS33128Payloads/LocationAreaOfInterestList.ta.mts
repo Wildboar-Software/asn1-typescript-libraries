@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AreaOfInterestItem, _decode_AreaOfInterestItem, _encode_AreaOfInterestItem } from "../TS33128Payloads/AreaOfInterestItem.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_LocationAreaOfInterestList: $.ASN1Decoder<LocationAreaOf
 export
 function _decode_LocationAreaOfInterestList (el: _Element): LocationAreaOfInterestList {
     if (!_cached_decoder_for_LocationAreaOfInterestList) { _cached_decoder_for_LocationAreaOfInterestList = $._decodeSequenceOf<AreaOfInterestItem>(() => _decode_AreaOfInterestItem); }
-    return _cached_decoder_for_LocationAreaOfInterestList(el);
+    const _value = _cached_decoder_for_LocationAreaOfInterestList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("LocationAreaOfInterestList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_LocationAreaOfInterestList: $.ASN1Encoder<LocationAreaOfInterestList> | null = null;

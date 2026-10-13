@@ -246,7 +246,7 @@ function _decode_LocationPresenceReport (el: _Element): LocationPresenceReport {
     let reachability: OPTIONAL<UEReachability>;
     let location: OPTIONAL<UserLocation>;
     let additionalCellIDs: OPTIONAL<CellInformation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "type": (_el: _Element): void => { type_ = $._decode_implicit<AMFEventType>(() => _decode_AMFEventType)(_el); },
         "timestamp": (_el: _Element): void => { timestamp = $._decode_implicit<Timestamp>(() => _decode_Timestamp)(_el); },

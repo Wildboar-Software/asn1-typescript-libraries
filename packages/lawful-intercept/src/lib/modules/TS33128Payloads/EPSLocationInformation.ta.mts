@@ -130,7 +130,7 @@ function _decode_EPSLocationInformation (el: _Element): EPSLocationInformation {
     if (!_cached_decoder_for_EPSLocationInformation) { _cached_decoder_for_EPSLocationInformation = function (el: _Element): EPSLocationInformation {
     let mMELocationInformation: OPTIONAL<MMELocationInformation>;
     let sGSNLocationInformation: OPTIONAL<SGSNLocationInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mMELocationInformation": (_el: _Element): void => { mMELocationInformation = $._decode_implicit<MMELocationInformation>(() => _decode_MMELocationInformation)(_el); },
         "sGSNLocationInformation": (_el: _Element): void => { sGSNLocationInformation = $._decode_implicit<SGSNLocationInformation>(() => _decode_SGSNLocationInformation)(_el); }

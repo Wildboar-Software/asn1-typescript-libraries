@@ -223,7 +223,7 @@ function _decode_RemoteUEContext (el: _Element): RemoteUEContext {
     let protocolUsedByRemoteUE!: ProtocolUsedByRemoteUE;
     let addressInformation: OPTIONAL<AddressInformation>;
     let hPLMNID: OPTIONAL<PLMNID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "remoteUEIDFormat": (_el: _Element): void => { remoteUEIDFormat = $._decode_implicit<RemoteUEIDFormat>(() => _decode_RemoteUEIDFormat)(_el); },
         "remoteUEIDType": (_el: _Element): void => { remoteUEIDType = $._decode_implicit<RemoteUEIDType>(() => _decode_RemoteUEIDType)(_el); },

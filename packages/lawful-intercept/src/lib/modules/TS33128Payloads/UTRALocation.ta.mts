@@ -217,7 +217,7 @@ function _decode_UTRALocation (el: _Element): UTRALocation {
     let geographicalInformation: OPTIONAL<UTF8String>;
     let geodeticInformation: OPTIONAL<UTF8String>;
     let cellSiteInformation: OPTIONAL<CellSiteInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cGI": (_el: _Element): void => { cGI = $._decode_implicit<CGI>(() => _decode_CGI)(_el); },
         "sAI": (_el: _Element): void => { sAI = $._decode_implicit<SAI>(() => _decode_SAI)(_el); },

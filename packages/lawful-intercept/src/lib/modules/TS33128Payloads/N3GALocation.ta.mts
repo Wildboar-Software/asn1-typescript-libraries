@@ -284,7 +284,7 @@ function _decode_N3GALocation (el: _Element): N3GALocation {
     let ageOfLocationInfo: OPTIONAL<AgeOfLocation>;
     let uELocationTimestamp: OPTIONAL<Timestamp>;
     let protocol: OPTIONAL<TransportProtocol>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tAI": (_el: _Element): void => { tAI = $._decode_implicit<TAI>(() => _decode_TAI)(_el); },
         "n3IWFID": (_el: _Element): void => { n3IWFID = $._decode_implicit<N3IWFIDNGAP>(() => _decode_N3IWFIDNGAP)(_el); },

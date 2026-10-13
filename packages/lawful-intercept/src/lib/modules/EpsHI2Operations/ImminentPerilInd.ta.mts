@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -83,35 +82,8 @@ const ImminentPerilInd_cancel: ImminentPerilInd = 3; /* LONG_NAMED_ENUMERATED_VA
  */
 export
 const cancel: ImminentPerilInd = ImminentPerilInd_cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_ImminentPerilInd: $.ASN1Decoder<ImminentPerilInd> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ImminentPerilInd
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ImminentPerilInd (el: _Element): ImminentPerilInd {
-    if (!_cached_decoder_for_ImminentPerilInd) { _cached_decoder_for_ImminentPerilInd = $._decodeEnumerated; }
-    return _cached_decoder_for_ImminentPerilInd(el);
-}
-
-let _cached_encoder_for_ImminentPerilInd: $.ASN1Encoder<ImminentPerilInd> | null = null;
-
-/**
- * @summary Encodes a(n) ImminentPerilInd into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ImminentPerilInd, encoded as an ASN.1 Element.
- */
-export
-function _encode_ImminentPerilInd (value: ImminentPerilInd, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ImminentPerilInd) { _cached_encoder_for_ImminentPerilInd = $._encodeEnumerated; }
-    return _cached_encoder_for_ImminentPerilInd(value, elGetter);
-}
+export const _decode_ImminentPerilInd: $.ASN1Decoder<ImminentPerilInd> = $._decodeEnumerated;
+export const _encode_ImminentPerilInd: $.ASN1Encoder<ImminentPerilInd> = $._encodeEnumerated;
 
 
 /* eslint-enable */

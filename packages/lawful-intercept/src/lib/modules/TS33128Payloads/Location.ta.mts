@@ -195,7 +195,7 @@ function _decode_Location (el: _Element): Location {
     let fourGLocationInfo: OPTIONAL<FourGLocationInfo>;
     let iMSLocation: OPTIONAL<IMSLocation>;
     let coarseLocation: OPTIONAL<CoarseLocation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationInfo": (_el: _Element): void => { locationInfo = $._decode_implicit<LocationInfo>(() => _decode_LocationInfo)(_el); },
         "positioningInfo": (_el: _Element): void => { positioningInfo = $._decode_implicit<PositioningInfo>(() => _decode_PositioningInfo)(_el); },

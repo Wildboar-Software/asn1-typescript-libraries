@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    BIT_STRING
+    BIT_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type MCCType = BIT_STRING;
-
-let _cached_decoder_for_MCCType: $.ASN1Decoder<MCCType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MCCType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MCCType (el: _Element): MCCType {
-    if (!_cached_decoder_for_MCCType) { _cached_decoder_for_MCCType = $._decodeBitString; }
-    return _cached_decoder_for_MCCType(el);
-}
-
-let _cached_encoder_for_MCCType: $.ASN1Encoder<MCCType> | null = null;
-
-/**
- * @summary Encodes a(n) MCCType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MCCType, encoded as an ASN.1 Element.
- */
-export
-function _encode_MCCType (value: MCCType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCCType) { _cached_encoder_for_MCCType = $._encodeBitString; }
-    return _cached_encoder_for_MCCType(value, elGetter);
-}
+export const _decode_MCCType: $.ASN1Decoder<MCCType> = (el: _Element): MCCType => {
+    const value = $._decodeBitString(el);
+    if (value.length < 10 || value.length > 10) {
+        throw new ASN1SizeError("MCCType violates SIZE constraint");
+    }
+    return value;
+};
+export const _encode_MCCType: $.ASN1Encoder<MCCType> = $._encodeBitString;
 
 
 /* eslint-enable */

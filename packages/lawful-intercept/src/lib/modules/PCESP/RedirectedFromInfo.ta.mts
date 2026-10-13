@@ -140,7 +140,7 @@ function _decode_RedirectedFromInfo (el: _Element): RedirectedFromInfo {
     let lastRedirecting: OPTIONAL<PartyId>;
     let originalCalled: OPTIONAL<PartyId>;
     let numRedirections: OPTIONAL<INTEGER>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "lastRedirecting": (_el: _Element): void => { lastRedirecting = $._decode_implicit<PartyId>(() => _decode_PartyId)(_el); },
         "originalCalled": (_el: _Element): void => { originalCalled = $._decode_implicit<PartyId>(() => _decode_PartyId)(_el); },

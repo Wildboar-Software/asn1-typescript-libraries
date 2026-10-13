@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OperatorLeaMessagePriority, _decode_OperatorLeaMessagePriority, _encode_OperatorLeaMessagePriority, _enum_for_OperatorLeaMessagePriority } from "../LI-PS-PDU/OperatorLeaMessagePriority.ta.mjs";
@@ -144,6 +145,11 @@ function _decode_OperatorLeaMessage (el: _Element): OperatorLeaMessage {
     let message!: OCTET_STRING;
     messagePriority = $._decode_implicit<OperatorLeaMessagePriority>(() => _decode_OperatorLeaMessagePriority)(sequence[0]);
     message = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    {
+        if (message.length < 1 || message.length > 255) {
+            throw new ASN1SizeError("OperatorLeaMessage.message violates SIZE constraint");
+        }
+    }
     return new OperatorLeaMessage(
         messagePriority,
         message,

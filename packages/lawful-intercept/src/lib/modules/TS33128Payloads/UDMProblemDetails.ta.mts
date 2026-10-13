@@ -117,7 +117,7 @@ export
 function _decode_UDMProblemDetails (el: _Element): UDMProblemDetails {
     if (!_cached_decoder_for_UDMProblemDetails) { _cached_decoder_for_UDMProblemDetails = function (el: _Element): UDMProblemDetails {
     let cause: OPTIONAL<UDMProblemDetailsCause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cause": (_el: _Element): void => { cause = $._decode_explicit<UDMProblemDetailsCause>(() => _decode_UDMProblemDetailsCause)(_el); }
     };

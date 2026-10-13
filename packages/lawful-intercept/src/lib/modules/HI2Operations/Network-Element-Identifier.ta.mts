@@ -2,7 +2,8 @@
 import {
     OCTET_STRING,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
@@ -58,7 +59,32 @@ function _decode_Network_Element_Identifier (el: _Element): Network_Element_Iden
     "CONTEXT 4": [ "dNS_Format", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 5": [ "iP_Address", $._decode_implicit<IPAddress>(() => _decode_IPAddress) ]
 }); }
-    return _cached_decoder_for_Network_Element_Identifier(el);
+    const _value = _cached_decoder_for_Network_Element_Identifier(el);
+    if ("e164_Format" in _value && _value.e164_Format !== undefined) {
+        const _alt = _value.e164_Format;
+        if (_alt.length < 1 || _alt.length > 25) {
+            throw new ASN1SizeError("Network_Element_Identifier.e164_Format violates SIZE constraint");
+        }
+    }
+    if ("x25_Format" in _value && _value.x25_Format !== undefined) {
+        const _alt = _value.x25_Format;
+        if (_alt.length < 1 || _alt.length > 25) {
+            throw new ASN1SizeError("Network_Element_Identifier.x25_Format violates SIZE constraint");
+        }
+    }
+    if ("iP_Format" in _value && _value.iP_Format !== undefined) {
+        const _alt = _value.iP_Format;
+        if (_alt.length < 1 || _alt.length > 25) {
+            throw new ASN1SizeError("Network_Element_Identifier.iP_Format violates SIZE constraint");
+        }
+    }
+    if ("dNS_Format" in _value && _value.dNS_Format !== undefined) {
+        const _alt = _value.dNS_Format;
+        if (_alt.length < 1 || _alt.length > 25) {
+            throw new ASN1SizeError("Network_Element_Identifier.dNS_Format violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_Network_Element_Identifier: $.ASN1Encoder<Network_Element_Identifier> | null = null;

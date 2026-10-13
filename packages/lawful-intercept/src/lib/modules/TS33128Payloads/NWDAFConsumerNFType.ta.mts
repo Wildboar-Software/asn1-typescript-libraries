@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -277,35 +274,8 @@ const NWDAFConsumerNFType_cEF: NWDAFConsumerNFType = NWDAFConsumerNFType.cEF; /*
  */
 export
 const cEF: NWDAFConsumerNFType = NWDAFConsumerNFType.cEF; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_NWDAFConsumerNFType: $.ASN1Decoder<NWDAFConsumerNFType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NWDAFConsumerNFType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NWDAFConsumerNFType (el: _Element): NWDAFConsumerNFType {
-    if (!_cached_decoder_for_NWDAFConsumerNFType) { _cached_decoder_for_NWDAFConsumerNFType = $._decodeEnumerated; }
-    return _cached_decoder_for_NWDAFConsumerNFType(el);
-}
-
-let _cached_encoder_for_NWDAFConsumerNFType: $.ASN1Encoder<NWDAFConsumerNFType> | null = null;
-
-/**
- * @summary Encodes a(n) NWDAFConsumerNFType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NWDAFConsumerNFType, encoded as an ASN.1 Element.
- */
-export
-function _encode_NWDAFConsumerNFType (value: NWDAFConsumerNFType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NWDAFConsumerNFType) { _cached_encoder_for_NWDAFConsumerNFType = $._encodeEnumerated; }
-    return _cached_encoder_for_NWDAFConsumerNFType(value, elGetter);
-}
+export const _decode_NWDAFConsumerNFType: $.ASN1Decoder<NWDAFConsumerNFType> = $._decodeEnumerated;
+export const _encode_NWDAFConsumerNFType: $.ASN1Encoder<NWDAFConsumerNFType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

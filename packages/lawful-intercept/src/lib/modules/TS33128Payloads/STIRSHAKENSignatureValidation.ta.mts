@@ -188,7 +188,7 @@ function _decode_STIRSHAKENSignatureValidation (el: _Element): STIRSHAKENSignatu
     let sHAKENValidationResult!: SHAKENValidationResult;
     let sHAKENFailureStatusCode: OPTIONAL<SHAKENFailureStatusCode>;
     let encapsulatedSIPMessage: OPTIONAL<SIPMessage>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pASSporTs": (_el: _Element): void => { pASSporTs = $._decode_implicit<PASSporT[]>(() => $._decodeSequenceOf<PASSporT>(() => _decode_PASSporT))(_el); },
         "rCDTerminalDisplayInfo": (_el: _Element): void => { rCDTerminalDisplayInfo = $._decode_implicit<RCDDisplayInfo>(() => _decode_RCDDisplayInfo)(_el); },

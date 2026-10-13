@@ -169,7 +169,7 @@ function _decode_FiveGPINAPPMessage (el: _Element): FiveGPINAPPMessage {
     let pINID: OPTIONAL<PINID>;
     let pINServerID!: PINServerID;
     let pINAPPMessage!: XMLType;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pINEIdentities": (_el: _Element): void => { pINEIdentities = $._decode_implicit<PINEIdentities>(() => _decode_PINEIdentities)(_el); },
         "mACAddress": (_el: _Element): void => { mACAddress = $._decode_implicit<MACAddress>(() => _decode_MACAddress)(_el); },

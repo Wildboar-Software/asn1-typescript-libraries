@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
@@ -141,10 +142,15 @@ function _decode_NRNTNTAIInfo (el: _Element): NRNTNTAIInfo {
     let servingPLMN!: PLMNID;
     let tACListNRNTN!: TAC[];
     let uELocationDerivedNTNTAC: OPTIONAL<TAC>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "servingPLMN": (_el: _Element): void => { servingPLMN = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
-        "tACListNRNTN": (_el: _Element): void => { tACListNRNTN = $._decode_implicit<TAC[]>(() => $._decodeSequenceOf<TAC>(() => _decode_TAC))(_el); },
+        "tACListNRNTN": (_el: _Element): void => {
+            tACListNRNTN = $._decode_implicit<TAC[]>(() => $._decodeSequenceOf<TAC>(() => _decode_TAC))(_el);
+            if (tACListNRNTN.length < 1) {
+                throw new ASN1SizeError("NRNTNTAIInfo.tACListNRNTN violates SIZE constraint");
+            }
+        },
         "uELocationDerivedNTNTAC": (_el: _Element): void => { uELocationDerivedNTNTAC = $._decode_implicit<TAC>(() => _decode_TAC)(_el); }
     };
     $._parse_sequence(el, callbacks,

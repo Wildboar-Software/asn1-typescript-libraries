@@ -139,7 +139,7 @@ function _decode_UERadioCapabilityForPaging (el: _Element): UERadioCapabilityFor
     let uERadioCapabilityForPagingOfNR: OPTIONAL<OCTET_STRING>;
     let uERadioCapabilityForPagingOfEUTRA: OPTIONAL<OCTET_STRING>;
     let uERadioCapabilityForPagingOfNBIoT: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uERadioCapabilityForPagingOfNR": (_el: _Element): void => { uERadioCapabilityForPagingOfNR = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "uERadioCapabilityForPagingOfEUTRA": (_el: _Element): void => { uERadioCapabilityForPagingOfEUTRA = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

@@ -3,7 +3,8 @@ import {
     OBJECT_IDENTIFIER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -430,12 +431,17 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
     let mediamodification: OPTIONAL<MediaModification>;
     let bearerModifyPartyID: OPTIONAL<ConfPartyInformation>;
     let listOfWaitConferees: OPTIONAL<ConfPartyInformation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi2confDomainId": (_el: _Element): void => { hi2confDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "partyInformation": (_el: _Element): void => { partyInformation = $._decode_implicit<PartyIdentity[]>(() => $._decodeSetOf<PartyIdentity>(() => _decode_PartyIdentity))(_el); },
+        "partyInformation": (_el: _Element): void => {
+            partyInformation = $._decode_implicit<PartyIdentity[]>(() => $._decodeSetOf<PartyIdentity>(() => _decode_PartyIdentity))(_el);
+            if (partyInformation.length < 1 || partyInformation.length > 10) {
+                throw new ASN1SizeError("IRI_Parameters.partyInformation violates SIZE constraint");
+            }
+        },
         "national-Parameters": (_el: _Element): void => { national_Parameters = $._decode_implicit<National_Parameters>(() => _decode_National_Parameters)(_el); },
         "networkIdentifier": (_el: _Element): void => { networkIdentifier = $._decode_implicit<Network_Identifier>(() => _decode_Network_Identifier)(_el); },
         "confEvent": (_el: _Element): void => { confEvent = $._decode_implicit<ConfEvent>(() => _decode_ConfEvent)(_el); },

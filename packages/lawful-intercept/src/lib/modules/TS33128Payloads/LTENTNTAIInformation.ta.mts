@@ -143,7 +143,7 @@ function _decode_LTENTNTAIInformation (el: _Element): LTENTNTAIInformation {
     let pLMN!: PLMNID;
     let tACListInLTENTN!: TACList;
     let uETAC: OPTIONAL<TAC>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pLMN": (_el: _Element): void => { pLMN = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "tACListInLTENTN": (_el: _Element): void => { tACListInLTENTN = $._decode_implicit<TACList>(() => _decode_TACList)(_el); },

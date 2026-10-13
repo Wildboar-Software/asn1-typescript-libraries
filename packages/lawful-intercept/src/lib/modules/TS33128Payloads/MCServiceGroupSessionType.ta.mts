@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -117,35 +114,8 @@ const MCServiceGroupSessionType_adHoc: MCServiceGroupSessionType = MCServiceGrou
  */
 export
 const adHoc: MCServiceGroupSessionType = MCServiceGroupSessionType.adHoc; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_MCServiceGroupSessionType: $.ASN1Decoder<MCServiceGroupSessionType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) MCServiceGroupSessionType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_MCServiceGroupSessionType (el: _Element): MCServiceGroupSessionType {
-    if (!_cached_decoder_for_MCServiceGroupSessionType) { _cached_decoder_for_MCServiceGroupSessionType = $._decodeEnumerated; }
-    return _cached_decoder_for_MCServiceGroupSessionType(el);
-}
-
-let _cached_encoder_for_MCServiceGroupSessionType: $.ASN1Encoder<MCServiceGroupSessionType> | null = null;
-
-/**
- * @summary Encodes a(n) MCServiceGroupSessionType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The MCServiceGroupSessionType, encoded as an ASN.1 Element.
- */
-export
-function _encode_MCServiceGroupSessionType (value: MCServiceGroupSessionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCServiceGroupSessionType) { _cached_encoder_for_MCServiceGroupSessionType = $._encodeEnumerated; }
-    return _cached_encoder_for_MCServiceGroupSessionType(value, elGetter);
-}
+export const _decode_MCServiceGroupSessionType: $.ASN1Decoder<MCServiceGroupSessionType> = $._decodeEnumerated;
+export const _encode_MCServiceGroupSessionType: $.ASN1Encoder<MCServiceGroupSessionType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

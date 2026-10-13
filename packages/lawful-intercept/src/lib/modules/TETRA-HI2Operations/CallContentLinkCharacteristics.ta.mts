@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CCLink_State, _decode_CCLink_State, _encode_CCLink_State, _enum_for_CCLink_State } from "../TETRA-HI2Operations/CCLink-State.ta.mjs";
@@ -166,11 +167,16 @@ function _decode_CallContentLinkCharacteristics (el: _Element): CallContentLinkC
     let release_Time: OPTIONAL<TimeStamp>;
     let release_Reason: OPTIONAL<OCTET_STRING>;
     let lEMF_Address: OPTIONAL<CalledPartyNumber>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cCLink-State": (_el: _Element): void => { cCLink_State = $._decode_implicit<CCLink_State>(() => _decode_CCLink_State)(_el); },
         "release-Time": (_el: _Element): void => { release_Time = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "release-Reason": (_el: _Element): void => { release_Reason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "release-Reason": (_el: _Element): void => {
+            release_Reason = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (release_Reason.length < 2 || release_Reason.length > 2) {
+                throw new ASN1SizeError("CallContentLinkCharacteristics.release_Reason violates SIZE constraint");
+            }
+        },
         "lEMF-Address": (_el: _Element): void => { lEMF_Address = $._decode_explicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); }
     };
     $._parse_sequence(el, callbacks,

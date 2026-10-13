@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
@@ -250,11 +251,16 @@ function _decode_Target_Information (el: _Element): Target_Information {
     let liModificationTime: OPTIONAL<TimeStamp>;
     let interceptionType: OPTIONAL<InterceptionType>;
     let liSetUpTime: OPTIONAL<TimeStamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "network-Identifier": (_el: _Element): void => { network_Identifier = $._decode_implicit<Network_Identifier>(() => _decode_Network_Identifier)(_el); },
-        "broadcastArea": (_el: _Element): void => { broadcastArea = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "broadcastArea": (_el: _Element): void => {
+            broadcastArea = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (broadcastArea.length < 1 || broadcastArea.length > 256) {
+                throw new ASN1SizeError("Target_Information.broadcastArea violates SIZE constraint");
+            }
+        },
         "targetType": (_el: _Element): void => { targetType = $._decode_implicit<TargetType>(() => _decode_TargetType)(_el); },
         "deliveryInformation": (_el: _Element): void => { deliveryInformation = $._decode_implicit<DeliveryInformation>(() => _decode_DeliveryInformation)(_el); },
         "liActivatedTime": (_el: _Element): void => { liActivatedTime = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },

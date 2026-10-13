@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -1077,35 +1074,8 @@ const CauseRadioNetwork_insufficientUECapabilities: CauseRadioNetwork = CauseRad
  */
 export
 const insufficientUECapabilities: CauseRadioNetwork = CauseRadioNetwork.insufficientUECapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_CauseRadioNetwork: $.ASN1Decoder<CauseRadioNetwork> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CauseRadioNetwork
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CauseRadioNetwork (el: _Element): CauseRadioNetwork {
-    if (!_cached_decoder_for_CauseRadioNetwork) { _cached_decoder_for_CauseRadioNetwork = $._decodeEnumerated; }
-    return _cached_decoder_for_CauseRadioNetwork(el);
-}
-
-let _cached_encoder_for_CauseRadioNetwork: $.ASN1Encoder<CauseRadioNetwork> | null = null;
-
-/**
- * @summary Encodes a(n) CauseRadioNetwork into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CauseRadioNetwork, encoded as an ASN.1 Element.
- */
-export
-function _encode_CauseRadioNetwork (value: CauseRadioNetwork, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CauseRadioNetwork) { _cached_encoder_for_CauseRadioNetwork = $._encodeEnumerated; }
-    return _cached_encoder_for_CauseRadioNetwork(value, elGetter);
-}
+export const _decode_CauseRadioNetwork: $.ASN1Decoder<CauseRadioNetwork> = $._decodeEnumerated;
+export const _encode_CauseRadioNetwork: $.ASN1Encoder<CauseRadioNetwork> = $._encodeEnumerated;
 
 
 /* eslint-enable */

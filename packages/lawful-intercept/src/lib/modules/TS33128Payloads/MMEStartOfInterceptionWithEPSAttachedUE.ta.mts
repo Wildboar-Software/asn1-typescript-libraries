@@ -388,7 +388,7 @@ function _decode_MMEStartOfInterceptionWithEPSAttachedUE (el: _Element): MMEStar
     let initailRANUEContextSetup: OPTIONAL<EPSRANUEContext>;
     let mUSIMUERequestType: OPTIONAL<MUSIMUERequestType>;
     let ePSNetworkPolicy: OPTIONAL<EPSNetworkPolicy>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "attachType": (_el: _Element): void => { attachType = $._decode_implicit<EPSAttachType>(() => _decode_EPSAttachType)(_el); },
         "attachResult": (_el: _Element): void => { attachResult = $._decode_implicit<EPSAttachResult>(() => _decode_EPSAttachResult)(_el); },

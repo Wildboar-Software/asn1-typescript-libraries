@@ -142,7 +142,7 @@ function _decode_EESAppContextRelocation (el: _Element): EESAppContextRelocation
     let eECID!: UTF8String;
     let gPSI: OPTIONAL<GPSI>;
     let eESACRDetOrInit!: EESACRDetOrInit;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eECID": (_el: _Element): void => { eECID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },

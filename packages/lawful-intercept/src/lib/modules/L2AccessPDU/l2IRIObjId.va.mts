@@ -19,6 +19,6 @@ import { l2AccessPDUObjId } from "../L2AccessPDU/l2AccessPDUObjId.va.mjs";
  * @constant
  */
 export
-const l2IRIObjId: RELATIVE_OID = [ l2AccessPDUObjId, /* iRI */ 1 ];
+const l2IRIObjId: RELATIVE_OID = [ ...l2AccessPDUObjId, /* iRI */ 1 ];
 
 /* eslint-enable */

@@ -195,7 +195,7 @@ function _decode_EllipsoidArc (el: _Element): EllipsoidArc {
     let includedAngle!: Angle;
     let confidence!: Confidence;
     let uncertaintyRadiusSBI: OPTIONAL<UncertaintySBI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "point": (_el: _Element): void => { point = $._decode_implicit<GeographicalCoordinates>(() => _decode_GeographicalCoordinates)(_el); },
         "innerRadius": (_el: _Element): void => { innerRadius = $._decode_implicit<InnerRadius>(() => _decode_InnerRadius)(_el); },

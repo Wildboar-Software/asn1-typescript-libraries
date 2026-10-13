@@ -162,7 +162,7 @@ function _decode_SMSReport (el: _Element): SMSReport {
     let sMSTPDUData!: SMSTPDUData;
     let messageType!: SMSMessageType;
     let rPMessageReference!: SMSRPMessageReference;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "location": (_el: _Element): void => { location = $._decode_implicit<Location>(() => _decode_Location)(_el); },
         "sMSTPDUData": (_el: _Element): void => { sMSTPDUData = $._decode_explicit<SMSTPDUData>(() => _decode_SMSTPDUData)(_el); },

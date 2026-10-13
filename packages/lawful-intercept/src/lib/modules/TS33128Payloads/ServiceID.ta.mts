@@ -130,7 +130,7 @@ function _decode_ServiceID (el: _Element): ServiceID {
     if (!_cached_decoder_for_ServiceID) { _cached_decoder_for_ServiceID = function (el: _Element): ServiceID {
     let nSSAI: OPTIONAL<NSSAI>;
     let cAGID: OPTIONAL<CAGID[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "nSSAI": (_el: _Element): void => { nSSAI = $._decode_implicit<NSSAI>(() => _decode_NSSAI)(_el); },
         "cAGID": (_el: _Element): void => { cAGID = $._decode_implicit<CAGID[]>(() => $._decodeSequenceOf<CAGID>(() => _decode_CAGID))(_el); }

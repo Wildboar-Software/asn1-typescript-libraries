@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -120,35 +119,8 @@ const E_mail_Protocol_undefined: E_mail_Protocol = 255; /* LONG_NAMED_ENUMERATED
  */
 export
 const undefined: E_mail_Protocol = E_mail_Protocol_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_E_mail_Protocol: $.ASN1Decoder<E_mail_Protocol> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) E_mail_Protocol
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_E_mail_Protocol (el: _Element): E_mail_Protocol {
-    if (!_cached_decoder_for_E_mail_Protocol) { _cached_decoder_for_E_mail_Protocol = $._decodeEnumerated; }
-    return _cached_decoder_for_E_mail_Protocol(el);
-}
-
-let _cached_encoder_for_E_mail_Protocol: $.ASN1Encoder<E_mail_Protocol> | null = null;
-
-/**
- * @summary Encodes a(n) E_mail_Protocol into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The E_mail_Protocol, encoded as an ASN.1 Element.
- */
-export
-function _encode_E_mail_Protocol (value: E_mail_Protocol, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_E_mail_Protocol) { _cached_encoder_for_E_mail_Protocol = $._encodeEnumerated; }
-    return _cached_encoder_for_E_mail_Protocol(value, elGetter);
-}
+export const _decode_E_mail_Protocol: $.ASN1Decoder<E_mail_Protocol> = $._decodeEnumerated;
+export const _encode_E_mail_Protocol: $.ASN1Encoder<E_mail_Protocol> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -169,7 +169,7 @@ function _decode_CellInformation (el: _Element): CellInformation {
     let timeOfLocation: OPTIONAL<Timestamp>;
     let cellRadioRelatedInformation: OPTIONAL<CellRadioRelatedInformation>;
     let band: OPTIONAL<RFBand>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "rANCGI": (_el: _Element): void => { rANCGI = $._decode_explicit<RANCGI>(() => _decode_RANCGI)(_el); },
         "cellSiteinformation": (_el: _Element): void => { cellSiteinformation = $._decode_implicit<CellSiteInformation>(() => _decode_CellSiteInformation)(_el); },

@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_PLMNList: $.ASN1Decoder<PLMNList> | null = null;
 export
 function _decode_PLMNList (el: _Element): PLMNList {
     if (!_cached_decoder_for_PLMNList) { _cached_decoder_for_PLMNList = $._decodeSequenceOf<PLMNID>(() => _decode_PLMNID); }
-    return _cached_decoder_for_PLMNList(el);
+    const _value = _cached_decoder_for_PLMNList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("PLMNList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_PLMNList: $.ASN1Encoder<PLMNList> | null = null;

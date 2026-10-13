@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OPTIONAL,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AAAResult, _encode_AAAResult, _enum_for_AAAResult, AAAResult } from "../EmailPDU/AAAResult.ta.mjs";
@@ -148,10 +149,20 @@ function _decode_POP3AAAInformation (el: _Element): POP3AAAInformation {
     let username!: UTF8String;
     let password: OPTIONAL<UTF8String>;
     let aAAResult: OPTIONAL<AAAResult>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "username": (_el: _Element): void => { username = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "password": (_el: _Element): void => { password = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "username": (_el: _Element): void => {
+            username = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (username.length > 64) {
+                throw new ASN1SizeError("POP3AAAInformation.username violates SIZE constraint");
+            }
+        },
+        "password": (_el: _Element): void => {
+            password = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (password.length > 64) {
+                throw new ASN1SizeError("POP3AAAInformation.password violates SIZE constraint");
+            }
+        },
         "aAAResult": (_el: _Element): void => { aAAResult = $._decode_implicit<AAAResult>(() => _decode_AAAResult)(_el); }
     };
     $._parse_sequence(el, callbacks,

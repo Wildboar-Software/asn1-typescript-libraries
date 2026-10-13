@@ -413,7 +413,7 @@ function _decode_SMFMAPDUSessionModification (el: _Element): SMFMAPDUSessionModi
     let pFDDataForApp: OPTIONAL<PFDDataForApp>;
     let ePSPDNConnectionModification: OPTIONAL<EPSPDNConnectionModification>;
     let alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "sUPIUnauthenticated": (_el: _Element): void => { sUPIUnauthenticated = $._decode_implicit<SUPIUnauthenticatedIndication>(() => _decode_SUPIUnauthenticatedIndication)(_el); },

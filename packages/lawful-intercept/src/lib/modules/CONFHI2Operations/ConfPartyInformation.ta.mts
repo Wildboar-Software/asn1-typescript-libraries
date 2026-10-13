@@ -133,7 +133,7 @@ function _decode_ConfPartyInformation (el: _Element): ConfPartyInformation {
     if (!_cached_decoder_for_ConfPartyInformation) { _cached_decoder_for_ConfPartyInformation = function (el: _Element): ConfPartyInformation {
     let partyIdentity: OPTIONAL<PartyIdentity>;
     let supportedmedia: OPTIONAL<SupportedMedia>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "partyIdentity": (_el: _Element): void => { partyIdentity = $._decode_implicit<PartyIdentity>(() => _decode_PartyIdentity)(_el); },
         "supportedmedia": (_el: _Element): void => { supportedmedia = $._decode_implicit<SupportedMedia>(() => _decode_SupportedMedia)(_el); }

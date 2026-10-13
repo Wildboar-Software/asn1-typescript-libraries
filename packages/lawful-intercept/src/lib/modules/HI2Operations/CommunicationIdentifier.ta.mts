@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
@@ -138,9 +139,14 @@ function _decode_CommunicationIdentifier (el: _Element): CommunicationIdentifier
     if (!_cached_decoder_for_CommunicationIdentifier) { _cached_decoder_for_CommunicationIdentifier = function (el: _Element): CommunicationIdentifier {
     let communication_Identity_Number: OPTIONAL<OCTET_STRING>;
     let network_Identifier!: Network_Identifier;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "communication-Identity-Number": (_el: _Element): void => { communication_Identity_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "communication-Identity-Number": (_el: _Element): void => {
+            communication_Identity_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (communication_Identity_Number.length < 1 || communication_Identity_Number.length > 8) {
+                throw new ASN1SizeError("CommunicationIdentifier.communication_Identity_Number violates SIZE constraint");
+            }
+        },
         "network-Identifier": (_el: _Element): void => { network_Identifier = $._decode_implicit<Network_Identifier>(() => _decode_Network_Identifier)(_el); }
     };
     $._parse_sequence(el, callbacks,

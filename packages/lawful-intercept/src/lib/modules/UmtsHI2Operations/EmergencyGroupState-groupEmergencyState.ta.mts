@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,7 +21,15 @@ enum _enum_for_EmergencyGroupState_groupEmergencyState {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EmergencyGroupState-groupEmergencyState ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EmergencyGroupState-groupEmergencyState ::= ENUMERATED {
+ *     -- in case of MCPTT group call, indicates if there is a group emergency or
+ *     -- a response from the Target to indicate current Client state of emergency.
+ *     inForm            (1),
+ *     reSponse        (2),
+ *     cancelInform     (3),
+ *     cancelResponse    (4),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}
@@ -93,35 +100,8 @@ const EmergencyGroupState_groupEmergencyState_cancelResponse: EmergencyGroupStat
  */
 export
 const cancelResponse: EmergencyGroupState_groupEmergencyState = EmergencyGroupState_groupEmergencyState_cancelResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_EmergencyGroupState_groupEmergencyState: $.ASN1Decoder<EmergencyGroupState_groupEmergencyState> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) EmergencyGroupState_groupEmergencyState
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_EmergencyGroupState_groupEmergencyState (el: _Element): EmergencyGroupState_groupEmergencyState {
-    if (!_cached_decoder_for_EmergencyGroupState_groupEmergencyState) { _cached_decoder_for_EmergencyGroupState_groupEmergencyState = $._decodeEnumerated; }
-    return _cached_decoder_for_EmergencyGroupState_groupEmergencyState(el);
-}
-
-let _cached_encoder_for_EmergencyGroupState_groupEmergencyState: $.ASN1Encoder<EmergencyGroupState_groupEmergencyState> | null = null;
-
-/**
- * @summary Encodes a(n) EmergencyGroupState_groupEmergencyState into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The EmergencyGroupState_groupEmergencyState, encoded as an ASN.1 Element.
- */
-export
-function _encode_EmergencyGroupState_groupEmergencyState (value: EmergencyGroupState_groupEmergencyState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EmergencyGroupState_groupEmergencyState) { _cached_encoder_for_EmergencyGroupState_groupEmergencyState = $._encodeEnumerated; }
-    return _cached_encoder_for_EmergencyGroupState_groupEmergencyState(value, elGetter);
-}
+export const _decode_EmergencyGroupState_groupEmergencyState: $.ASN1Decoder<EmergencyGroupState_groupEmergencyState> = $._decodeEnumerated;
+export const _encode_EmergencyGroupState_groupEmergencyState: $.ASN1Encoder<EmergencyGroupState_groupEmergencyState> = $._encodeEnumerated;
 
 
 /* eslint-enable */

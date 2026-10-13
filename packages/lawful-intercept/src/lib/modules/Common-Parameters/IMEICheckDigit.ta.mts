@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    NumericString
+    NumericString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type IMEICheckDigit = NumericString; // NumericString
-
-let _cached_decoder_for_IMEICheckDigit: $.ASN1Decoder<IMEICheckDigit> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IMEICheckDigit
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IMEICheckDigit (el: _Element): IMEICheckDigit {
-    if (!_cached_decoder_for_IMEICheckDigit) { _cached_decoder_for_IMEICheckDigit = $._decodeNumericString; }
-    return _cached_decoder_for_IMEICheckDigit(el);
-}
-
-let _cached_encoder_for_IMEICheckDigit: $.ASN1Encoder<IMEICheckDigit> | null = null;
-
-/**
- * @summary Encodes a(n) IMEICheckDigit into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IMEICheckDigit, encoded as an ASN.1 Element.
- */
-export
-function _encode_IMEICheckDigit (value: IMEICheckDigit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IMEICheckDigit) { _cached_encoder_for_IMEICheckDigit = $._encodeNumericString; }
-    return _cached_encoder_for_IMEICheckDigit(value, elGetter);
-}
+export const _decode_IMEICheckDigit: $.ASN1Decoder<IMEICheckDigit> = (el: _Element): IMEICheckDigit => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 15 || value.length > 15) {
+        throw new ASN1SizeError("IMEICheckDigit violates SIZE constraint");
+    }
+    return value;
+};
+export const _encode_IMEICheckDigit: $.ASN1Encoder<IMEICheckDigit> = $._encodeNumericString;
 
 
 /* eslint-enable */

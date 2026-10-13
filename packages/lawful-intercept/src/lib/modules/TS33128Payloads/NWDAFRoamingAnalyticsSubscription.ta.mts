@@ -3,7 +3,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
@@ -206,12 +207,17 @@ function _decode_NWDAFRoamingAnalyticsSubscription (el: _Element): NWDAFRoamingA
     let nWDAFEventsSubscription!: SBIType;
     let nWDAFEventsSubscriptionID: OPTIONAL<UTF8String>;
     let nWDAFEventsSubscriptionResponseCode!: NWDAFEventsSubscriptionResponseCode;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "pLMNID": (_el: _Element): void => { pLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "nWDAFEventsSubscriptionOpType": (_el: _Element): void => { nWDAFEventsSubscriptionOpType = $._decode_implicit<NWDAFEventsSubscriptionOpType>(() => _decode_NWDAFEventsSubscriptionOpType)(_el); },
-        "nWDAFSubscribedEventList": (_el: _Element): void => { nWDAFSubscribedEventList = $._decode_implicit<NWDAFEvent[]>(() => $._decodeSequenceOf<NWDAFEvent>(() => _decode_NWDAFEvent))(_el); },
+        "nWDAFSubscribedEventList": (_el: _Element): void => {
+            nWDAFSubscribedEventList = $._decode_implicit<NWDAFEvent[]>(() => $._decodeSequenceOf<NWDAFEvent>(() => _decode_NWDAFEvent))(_el);
+            if (nWDAFSubscribedEventList.length < 1) {
+                throw new ASN1SizeError("NWDAFRoamingAnalyticsSubscription.nWDAFSubscribedEventList violates SIZE constraint");
+            }
+        },
         "nWDAFEventsSubscription": (_el: _Element): void => { nWDAFEventsSubscription = $._decode_implicit<SBIType>(() => _decode_SBIType)(_el); },
         "nWDAFEventsSubscriptionID": (_el: _Element): void => { nWDAFEventsSubscriptionID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "nWDAFEventsSubscriptionResponseCode": (_el: _Element): void => { nWDAFEventsSubscriptionResponseCode = $._decode_implicit<NWDAFEventsSubscriptionResponseCode>(() => _decode_NWDAFEventsSubscriptionResponseCode)(_el); }

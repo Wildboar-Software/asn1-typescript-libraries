@@ -227,7 +227,7 @@ function _decode_SeparatedLocationReporting (el: _Element): SeparatedLocationRep
     let non3GPPAccessEndpoint: OPTIONAL<UEEndpointAddress>;
     let rATType: OPTIONAL<RATType>;
     let ePSIdentities: OPTIONAL<EPSSubscriberIDs>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "sUCI": (_el: _Element): void => { sUCI = $._decode_implicit<SUCI>(() => _decode_SUCI)(_el); },

@@ -143,7 +143,7 @@ function _decode_MCXGMMessage (el: _Element): MCXGMMessage {
     let mCServiceIdentitiesOrGroupID!: MCServiceIdentitiesOrGroupID;
     let mCServiceClient: OPTIONAL<MCServiceID>;
     let gMMessage!: GMMessage;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mCServiceIdentitiesOrGroupID": (_el: _Element): void => { mCServiceIdentitiesOrGroupID = $._decode_explicit<MCServiceIdentitiesOrGroupID>(() => _decode_MCServiceIdentitiesOrGroupID)(_el); },
         "mCServiceClient": (_el: _Element): void => { mCServiceClient = $._decode_implicit<MCServiceID>(() => _decode_MCServiceID)(_el); },

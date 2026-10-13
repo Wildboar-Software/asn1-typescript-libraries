@@ -155,7 +155,7 @@ function _decode_EESEndpoint (el: _Element): EESEndpoint {
     let iPv4Addresses: OPTIONAL<IPv4Addresses>;
     let iPv6Addresses: OPTIONAL<IPv6Addresses>;
     let uRI: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "fQDN": (_el: _Element): void => { fQDN = $._decode_implicit<FQDN>(() => _decode_FQDN)(_el); },
         "iPv4Addresses": (_el: _Element): void => { iPv4Addresses = $._decode_implicit<IPv4Addresses>(() => _decode_IPv4Addresses)(_el); },

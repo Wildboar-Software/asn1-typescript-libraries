@@ -130,7 +130,7 @@ function _decode_IMEIUpdateResponse (el: _Element): IMEIUpdateResponse {
     if (!_cached_decoder_for_IMEIUpdateResponse) { _cached_decoder_for_IMEIUpdateResponse = function (el: _Element): IMEIUpdateResponse {
     let previousIMEI: OPTIONAL<IMEI>;
     let previousIMEISV: OPTIONAL<IMEISV>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "previousIMEI": (_el: _Element): void => { previousIMEI = $._decode_implicit<IMEI>(() => _decode_IMEI)(_el); },
         "previousIMEISV": (_el: _Element): void => { previousIMEISV = $._decode_implicit<IMEISV>(() => _decode_IMEISV)(_el); }

@@ -183,7 +183,7 @@ function _decode_EPSGTPTunnels (el: _Element): EPSGTPTunnels {
     let s5S8PGWFTEID: OPTIONAL<FTEID>;
     let s2bUePDGFTEID: OPTIONAL<FTEID>;
     let s2aUePDGFTEID: OPTIONAL<FTEID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "controlPlaneSenderFTEID": (_el: _Element): void => { controlPlaneSenderFTEID = $._decode_implicit<FTEID>(() => _decode_FTEID)(_el); },
         "controlPlanePGWS5S8FTEID": (_el: _Element): void => { controlPlanePGWS5S8FTEID = $._decode_implicit<FTEID>(() => _decode_FTEID)(_el); },

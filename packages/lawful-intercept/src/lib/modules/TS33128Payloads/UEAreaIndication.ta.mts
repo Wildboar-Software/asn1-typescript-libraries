@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     BOOLEAN,
     OPTIONAL,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -129,9 +130,14 @@ function _decode_UEAreaIndication (el: _Element): UEAreaIndication {
     if (!_cached_decoder_for_UEAreaIndication) { _cached_decoder_for_UEAreaIndication = function (el: _Element): UEAreaIndication {
     let country: OPTIONAL<UTF8String>;
     let internationalAreaIndication: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "country": (_el: _Element): void => { country = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "country": (_el: _Element): void => {
+            country = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (country.length < 2 || country.length > 2) {
+                throw new ASN1SizeError("UEAreaIndication.country violates SIZE constraint");
+            }
+        },
         "internationalAreaIndication": (_el: _Element): void => { internationalAreaIndication = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); }
     };
     $._parse_sequence(el, callbacks,

@@ -135,7 +135,7 @@ function _decode_LADNInfo (el: _Element): LADNInfo {
     if (!_cached_decoder_for_LADNInfo) { _cached_decoder_for_LADNInfo = function (el: _Element): LADNInfo {
     let lADN!: UTF8String;
     let presence: OPTIONAL<PresenceState>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "lADN": (_el: _Element): void => { lADN = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "presence": (_el: _Element): void => { presence = $._decode_implicit<PresenceState>(() => _decode_PresenceState)(_el); }

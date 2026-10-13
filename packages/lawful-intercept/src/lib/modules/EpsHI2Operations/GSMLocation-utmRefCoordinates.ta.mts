@@ -3,7 +3,8 @@ import {
     OPTIONAL,
     PrintableString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../EpsHI2Operations/MapDatum.ta.mjs";
@@ -17,7 +18,11 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GSMLocation-utmRefCoordinates ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GSMLocation-utmRefCoordinates ::= SEQUENCE {
+ *     utmref-string        PrintableString (SIZE(13)),
+ *     mapDatum            MapDatum DEFAULT wGS84,
+ *     ...
+ * }
  * ```
  * 
  * @class
@@ -137,9 +142,14 @@ function _decode_GSMLocation_utmRefCoordinates (el: _Element): GSMLocation_utmRe
     if (!_cached_decoder_for_GSMLocation_utmRefCoordinates) { _cached_decoder_for_GSMLocation_utmRefCoordinates = function (el: _Element): GSMLocation_utmRefCoordinates {
     let utmref_string!: PrintableString;
     let mapDatum: OPTIONAL<MapDatum> = GSMLocation_utmRefCoordinates._default_value_for_mapDatum;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "utmref-string": (_el: _Element): void => { utmref_string = $._decodePrintableString(_el); },
+        "utmref-string": (_el: _Element): void => {
+            utmref_string = $._decodePrintableString(_el);
+            if (utmref_string.length < 13 || utmref_string.length > 13) {
+                throw new ASN1SizeError("GSMLocation_utmRefCoordinates.utmref_string violates SIZE constraint");
+            }
+        },
         "mapDatum": (_el: _Element): void => { mapDatum = _decode_MapDatum(_el); }
     };
     $._parse_sequence(el, callbacks,

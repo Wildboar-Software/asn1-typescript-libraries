@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     BIT_STRING,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +42,14 @@ function _decode_LocationType (el: _Element): LocationType {
     "CONTEXT 0": [ "geodeticData", $._decodeBitString ],
     "CONTEXT 1": [ "nameAddress", $._decodePrintableString ]
 }); }
-    return _cached_decoder_for_LocationType(el);
+    const _value = _cached_decoder_for_LocationType(el);
+    if ("nameAddress" in _value && _value.nameAddress !== undefined) {
+        const _alt = _value.nameAddress;
+        if (_alt.length < 1 || _alt.length > 100) {
+            throw new ASN1SizeError("LocationType.nameAddress violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_LocationType: $.ASN1Encoder<LocationType> | null = null;

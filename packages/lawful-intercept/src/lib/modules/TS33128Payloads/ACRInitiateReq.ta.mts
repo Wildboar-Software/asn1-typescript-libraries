@@ -178,7 +178,7 @@ function _decode_ACRInitiateReq (el: _Element): ACRInitiateReq {
     let sEASEndpoint: OPTIONAL<EASEndpoint>;
     let previousTEASEndpoint: OPTIONAL<EASEndpoint>;
     let routeReq: OPTIONAL<RouteToLocation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eASID": (_el: _Element): void => { eASID = $._decode_implicit<EASID>(() => _decode_EASID)(_el); },
         "aCID": (_el: _Element): void => { aCID = $._decode_implicit<ACID>(() => _decode_ACID)(_el); },

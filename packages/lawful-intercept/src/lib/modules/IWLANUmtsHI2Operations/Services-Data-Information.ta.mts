@@ -119,7 +119,7 @@ export
 function _decode_Services_Data_Information (el: _Element): Services_Data_Information {
     if (!_cached_decoder_for_Services_Data_Information) { _cached_decoder_for_Services_Data_Information = function (el: _Element): Services_Data_Information {
     let i_WLAN_parameters: OPTIONAL<I_WLAN_parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "i-WLAN-parameters": (_el: _Element): void => { i_WLAN_parameters = $._decode_implicit<I_WLAN_parameters>(() => _decode_I_WLAN_parameters)(_el); }
     };

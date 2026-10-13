@@ -222,7 +222,7 @@ function _decode_PDHeaderReport (el: _Element): PDHeaderReport {
     let iPv6flowLabel: OPTIONAL<IPv6FlowLabel>;
     let direction!: Direction;
     let packetSize!: INTEGER;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pDUSessionID": (_el: _Element): void => { pDUSessionID = $._decode_implicit<PDUSessionID>(() => _decode_PDUSessionID)(_el); },
         "sourceIPAddress": (_el: _Element): void => { sourceIPAddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(_el); },

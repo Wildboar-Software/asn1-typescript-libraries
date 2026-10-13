@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -21,7 +20,12 @@ enum _enum_for_IRI_Parameters_intercepted_Call_Direct {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IRI-Parameters-intercepted-Call-Direct ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IRI-Parameters-intercepted-Call-Direct ::= ENUMERATED {
+ *     not-Available(0),
+ *     originating-Target(1),
+ *     terminating-Target(2),
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}
@@ -76,35 +80,8 @@ const IRI_Parameters_intercepted_Call_Direct_terminating_Target: IRI_Parameters_
  */
 export
 const terminating_Target: IRI_Parameters_intercepted_Call_Direct = IRI_Parameters_intercepted_Call_Direct_terminating_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_IRI_Parameters_intercepted_Call_Direct: $.ASN1Decoder<IRI_Parameters_intercepted_Call_Direct> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IRI_Parameters_intercepted_Call_Direct
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IRI_Parameters_intercepted_Call_Direct (el: _Element): IRI_Parameters_intercepted_Call_Direct {
-    if (!_cached_decoder_for_IRI_Parameters_intercepted_Call_Direct) { _cached_decoder_for_IRI_Parameters_intercepted_Call_Direct = $._decodeEnumerated; }
-    return _cached_decoder_for_IRI_Parameters_intercepted_Call_Direct(el);
-}
-
-let _cached_encoder_for_IRI_Parameters_intercepted_Call_Direct: $.ASN1Encoder<IRI_Parameters_intercepted_Call_Direct> | null = null;
-
-/**
- * @summary Encodes a(n) IRI_Parameters_intercepted_Call_Direct into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IRI_Parameters_intercepted_Call_Direct, encoded as an ASN.1 Element.
- */
-export
-function _encode_IRI_Parameters_intercepted_Call_Direct (value: IRI_Parameters_intercepted_Call_Direct, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IRI_Parameters_intercepted_Call_Direct) { _cached_encoder_for_IRI_Parameters_intercepted_Call_Direct = $._encodeEnumerated; }
-    return _cached_encoder_for_IRI_Parameters_intercepted_Call_Direct(value, elGetter);
-}
+export const _decode_IRI_Parameters_intercepted_Call_Direct: $.ASN1Decoder<IRI_Parameters_intercepted_Call_Direct> = $._decodeEnumerated;
+export const _encode_IRI_Parameters_intercepted_Call_Direct: $.ASN1Encoder<IRI_Parameters_intercepted_Call_Direct> = $._encodeEnumerated;
 
 
 /* eslint-enable */

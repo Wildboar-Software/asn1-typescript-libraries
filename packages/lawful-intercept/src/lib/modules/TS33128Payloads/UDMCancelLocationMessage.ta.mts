@@ -214,7 +214,7 @@ function _decode_UDMCancelLocationMessage (el: _Element): UDMCancelLocationMessa
     let cancelLocationMethod!: UDMCancelLocationMethod;
     let aMFDeregistrationInfo: OPTIONAL<UDMAMFDeregistrationInfo>;
     let deregistrationData: OPTIONAL<UDMDeregistrationData>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "pEI": (_el: _Element): void => { pEI = $._decode_explicit<PEI>(() => _decode_PEI)(_el); },

@@ -141,7 +141,7 @@ function _decode_EASInfo (el: _Element): EASInfo {
     let eASID!: EASID;
     let expectedSvcKPIs: OPTIONAL<ServiceKPIs>;
     let minimumReqSvcKPIs: OPTIONAL<ServiceKPIs>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "eASID": (_el: _Element): void => { eASID = $._decode_implicit<EASID>(() => _decode_EASID)(_el); },
         "expectedSvcKPIs": (_el: _Element): void => { expectedSvcKPIs = $._decode_implicit<ServiceKPIs>(() => _decode_ServiceKPIs)(_el); },

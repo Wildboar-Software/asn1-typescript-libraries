@@ -130,7 +130,7 @@ function _decode_ChargingDataEvent (el: _Element): ChargingDataEvent {
     if (!_cached_decoder_for_ChargingDataEvent) { _cached_decoder_for_ChargingDataEvent = function (el: _Element): ChargingDataEvent {
     let location: OPTIONAL<Location>;
     let chargingDataInformation!: ChargingDataInformation;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "location": (_el: _Element): void => { location = $._decode_implicit<Location>(() => _decode_Location)(_el); },
         "chargingDataInformation": (_el: _Element): void => { chargingDataInformation = $._decode_explicit<ChargingDataInformation>(() => _decode_ChargingDataInformation)(_el); }

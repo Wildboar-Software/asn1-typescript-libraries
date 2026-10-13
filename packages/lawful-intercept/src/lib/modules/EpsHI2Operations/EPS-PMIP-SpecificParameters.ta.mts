@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2Operations/EPSLocation.ta.mjs";
@@ -265,21 +267,74 @@ function _decode_EPS_PMIP_SpecificParameters (el: _Element): EPS_PMIP_SpecificPa
     let servingNetwork: OPTIONAL<OCTET_STRING>;
     let dHCPv4AddressAllocationInd: OPTIONAL<OCTET_STRING>;
     let ePSlocationOfTheTarget: OPTIONAL<EPSLocation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "lifetime": (_el: _Element): void => { lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "accessTechnologyType": (_el: _Element): void => { accessTechnologyType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "aPN": (_el: _Element): void => { aPN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "iPv6HomeNetworkPrefix": (_el: _Element): void => { iPv6HomeNetworkPrefix = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "lifetime": (_el: _Element): void => {
+            lifetime = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof lifetime === "bigint" ? lifetime : BigInt(lifetime);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("EPS_PMIP_SpecificParameters.lifetime violates INTEGER range");
+            }
+        },
+        "accessTechnologyType": (_el: _Element): void => {
+            accessTechnologyType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (accessTechnologyType.length < 4 || accessTechnologyType.length > 4) {
+                throw new ASN1SizeError("EPS_PMIP_SpecificParameters.accessTechnologyType violates SIZE constraint");
+            }
+        },
+        "aPN": (_el: _Element): void => {
+            aPN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (aPN.length < 1 || aPN.length > 100) {
+                throw new ASN1SizeError("EPS_PMIP_SpecificParameters.aPN violates SIZE constraint");
+            }
+        },
+        "iPv6HomeNetworkPrefix": (_el: _Element): void => {
+            iPv6HomeNetworkPrefix = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (iPv6HomeNetworkPrefix.length < 20 || iPv6HomeNetworkPrefix.length > 20) {
+                throw new ASN1SizeError("EPS_PMIP_SpecificParameters.iPv6HomeNetworkPrefix violates SIZE constraint");
+            }
+        },
         "protConfigurationOption": (_el: _Element): void => { protConfigurationOption = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "handoverIndication": (_el: _Element): void => { handoverIndication = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "status": (_el: _Element): void => { status = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "revocationTrigger": (_el: _Element): void => { revocationTrigger = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "iPv4HomeAddress": (_el: _Element): void => { iPv4HomeAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "handoverIndication": (_el: _Element): void => {
+            handoverIndication = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (handoverIndication.length < 4 || handoverIndication.length > 4) {
+                throw new ASN1SizeError("EPS_PMIP_SpecificParameters.handoverIndication violates SIZE constraint");
+            }
+        },
+        "status": (_el: _Element): void => {
+            status = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof status === "bigint" ? status : BigInt(status);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("EPS_PMIP_SpecificParameters.status violates INTEGER range");
+            }
+        },
+        "revocationTrigger": (_el: _Element): void => {
+            revocationTrigger = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof revocationTrigger === "bigint" ? revocationTrigger : BigInt(revocationTrigger);
+            if (_n < 0n || _n > 255n) {
+                throw new ASN1OverflowError("EPS_PMIP_SpecificParameters.revocationTrigger violates INTEGER range");
+            }
+        },
+        "iPv4HomeAddress": (_el: _Element): void => {
+            iPv4HomeAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (iPv4HomeAddress.length < 4 || iPv4HomeAddress.length > 4) {
+                throw new ASN1SizeError("EPS_PMIP_SpecificParameters.iPv4HomeAddress violates SIZE constraint");
+            }
+        },
         "iPv6careOfAddress": (_el: _Element): void => { iPv6careOfAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "iPv4careOfAddress": (_el: _Element): void => { iPv4careOfAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "servingNetwork": (_el: _Element): void => { servingNetwork = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "dHCPv4AddressAllocationInd": (_el: _Element): void => { dHCPv4AddressAllocationInd = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "servingNetwork": (_el: _Element): void => {
+            servingNetwork = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (servingNetwork.length < 3 || servingNetwork.length > 3) {
+                throw new ASN1SizeError("EPS_PMIP_SpecificParameters.servingNetwork violates SIZE constraint");
+            }
+        },
+        "dHCPv4AddressAllocationInd": (_el: _Element): void => {
+            dHCPv4AddressAllocationInd = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (dHCPv4AddressAllocationInd.length < 1 || dHCPv4AddressAllocationInd.length > 1) {
+                throw new ASN1SizeError("EPS_PMIP_SpecificParameters.dHCPv4AddressAllocationInd violates SIZE constraint");
+            }
+        },
         "ePSlocationOfTheTarget": (_el: _Element): void => { ePSlocationOfTheTarget = $._decode_implicit<EPSLocation>(() => _decode_EPSLocation)(_el); }
     };
     $._parse_sequence(el, callbacks,

@@ -161,7 +161,7 @@ function _decode_UDMLocationInfoRequest (el: _Element): UDMLocationInfoRequest {
     let requestedRATType: OPTIONAL<BOOLEAN>;
     let requestedTimeZone: OPTIONAL<BOOLEAN>;
     let requestedServingNode: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requested5GSLocation": (_el: _Element): void => { requested5GSLocation = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "requestedCurrentLocation": (_el: _Element): void => { requestedCurrentLocation = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

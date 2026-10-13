@@ -172,7 +172,7 @@ function _decode_PartyInformation (el: _Element): PartyInformation {
     let party_Qualifier!: PartyInformation_party_Qualifier;
     let partyIdentity!: PartyInformation_partyIdentity;
     let services_Data_Information: OPTIONAL<Services_Data_Information>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "party-Qualifier": (_el: _Element): void => { party_Qualifier = $._decode_implicit<PartyInformation_party_Qualifier>(() => _decode_PartyInformation_party_Qualifier)(_el); },
         "partyIdentity": (_el: _Element): void => { partyIdentity = $._decode_implicit<PartyInformation_partyIdentity>(() => _decode_PartyInformation_partyIdentity)(_el); },

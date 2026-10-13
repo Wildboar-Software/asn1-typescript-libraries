@@ -130,7 +130,7 @@ function _decode_RoamingStatusUpdateInfo (el: _Element): RoamingStatusUpdateInfo
     if (!_cached_decoder_for_RoamingStatusUpdateInfo) { _cached_decoder_for_RoamingStatusUpdateInfo = function (el: _Element): RoamingStatusUpdateInfo {
     let iMSI: OPTIONAL<IMSI>;
     let pLMNID: OPTIONAL<PLMNID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iMSI": (_el: _Element): void => { iMSI = $._decode_implicit<IMSI>(() => _decode_IMSI)(_el); },
         "pLMNID": (_el: _Element): void => { pLMNID = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); }

@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -149,8 +150,23 @@ function _decode_TLS13MasterSecretInfo (el: _Element): TLS13MasterSecretInfo {
     let transcriptHashS!: OCTET_STRING;
     let transcriptHashC!: OCTET_STRING;
     masterSecretValue = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    {
+        if (masterSecretValue.length < 1 || masterSecretValue.length > 65535) {
+            throw new ASN1SizeError("TLS13MasterSecretInfo.masterSecretValue violates SIZE constraint");
+        }
+    }
     transcriptHashS = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    {
+        if (transcriptHashS.length < 1 || transcriptHashS.length > 65535) {
+            throw new ASN1SizeError("TLS13MasterSecretInfo.transcriptHashS violates SIZE constraint");
+        }
+    }
     transcriptHashC = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[2]);
+    {
+        if (transcriptHashC.length < 1 || transcriptHashC.length > 65535) {
+            throw new ASN1SizeError("TLS13MasterSecretInfo.transcriptHashC violates SIZE constraint");
+        }
+    }
     return new TLS13MasterSecretInfo(
         masterSecretValue,
         transcriptHashS,

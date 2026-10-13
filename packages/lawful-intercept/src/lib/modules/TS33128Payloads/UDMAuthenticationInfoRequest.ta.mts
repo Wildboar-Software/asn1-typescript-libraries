@@ -3,7 +3,8 @@ import {
     BOOLEAN,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UDMInfoRequestType, _decode_UDMInfoRequestType, _encode_UDMInfoRequestType, _enum_for_UDMInfoRequestType } from "../TS33128Payloads/UDMInfoRequestType.ta.mjs";
@@ -206,10 +207,15 @@ function _decode_UDMAuthenticationInfoRequest (el: _Element): UDMAuthenticationI
     let aUSFInstanceID: OPTIONAL<NFID>;
     let cellCAGInfo: OPTIONAL<CAGID>;
     let n5GCIndicator: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "infoRequestType": (_el: _Element): void => { infoRequestType = $._decode_implicit<UDMInfoRequestType>(() => _decode_UDMInfoRequestType)(_el); },
-        "rGAuthCtx": (_el: _Element): void => { rGAuthCtx = $._decode_implicit<SubscriberIdentifier[]>(() => $._decodeSequenceOf<SubscriberIdentifier>(() => _decode_SubscriberIdentifier))(_el); },
+        "rGAuthCtx": (_el: _Element): void => {
+            rGAuthCtx = $._decode_implicit<SubscriberIdentifier[]>(() => $._decodeSequenceOf<SubscriberIdentifier>(() => _decode_SubscriberIdentifier))(_el);
+            if (rGAuthCtx.length < 1) {
+                throw new ASN1SizeError("UDMAuthenticationInfoRequest.rGAuthCtx violates SIZE constraint");
+            }
+        },
         "authType": (_el: _Element): void => { authType = $._decode_implicit<PrimaryAuthenticationType>(() => _decode_PrimaryAuthenticationType)(_el); },
         "servingNetworkName": (_el: _Element): void => { servingNetworkName = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); },
         "aUSFInstanceID": (_el: _Element): void => { aUSFInstanceID = $._decode_implicit<NFID>(() => _decode_NFID)(_el); },

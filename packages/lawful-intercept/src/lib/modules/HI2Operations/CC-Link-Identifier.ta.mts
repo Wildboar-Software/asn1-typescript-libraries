@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,35 +20,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CC_Link_Identifier = OCTET_STRING; // OctetStringType
-
-let _cached_decoder_for_CC_Link_Identifier: $.ASN1Decoder<CC_Link_Identifier> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CC_Link_Identifier
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CC_Link_Identifier (el: _Element): CC_Link_Identifier {
-    if (!_cached_decoder_for_CC_Link_Identifier) { _cached_decoder_for_CC_Link_Identifier = $._decodeOctetString; }
-    return _cached_decoder_for_CC_Link_Identifier(el);
-}
-
-let _cached_encoder_for_CC_Link_Identifier: $.ASN1Encoder<CC_Link_Identifier> | null = null;
-
-/**
- * @summary Encodes a(n) CC_Link_Identifier into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CC_Link_Identifier, encoded as an ASN.1 Element.
- */
-export
-function _encode_CC_Link_Identifier (value: CC_Link_Identifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CC_Link_Identifier) { _cached_encoder_for_CC_Link_Identifier = $._encodeOctetString; }
-    return _cached_encoder_for_CC_Link_Identifier(value, elGetter);
-}
+export const _decode_CC_Link_Identifier: $.ASN1Decoder<CC_Link_Identifier> = (el: _Element): CC_Link_Identifier => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("CC_Link_Identifier violates SIZE constraint");
+    }
+    return value;
+};
+export const _encode_CC_Link_Identifier: $.ASN1Encoder<CC_Link_Identifier> = $._encodeOctetString;
 
 
 /* eslint-enable */

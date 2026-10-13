@@ -5,7 +5,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -274,13 +275,19 @@ function _decode_VoipLIC_header (el: _Element): VoipLIC_header {
     let payload_description: OPTIONAL<Payload_description>;
     let networkIdentifier: OPTIONAL<Network_Identifier>;
     let pTCSessionInfo: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi3voipDomainId": (_el: _Element): void => { hi3voipDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lIID": (_el: _Element): void => { lIID = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "voipCorrelationNumber": (_el: _Element): void => { voipCorrelationNumber = $._decode_implicit<VoipCorrelationNumber>(() => _decode_VoipCorrelationNumber)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
-        "sequence-number": (_el: _Element): void => { sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "sequence-number": (_el: _Element): void => {
+            sequence_number = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof sequence_number === "bigint" ? sequence_number : BigInt(sequence_number);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("VoipLIC_header.sequence_number violates INTEGER range");
+            }
+        },
         "t-PDU-direction": (_el: _Element): void => { t_PDU_direction = $._decode_implicit<TPDU_direction>(() => _decode_TPDU_direction)(_el); },
         "national-HI3-ASN1parameters": (_el: _Element): void => { national_HI3_ASN1parameters = $._decode_implicit<National_HI3_ASN1parameters>(() => _decode_National_HI3_ASN1parameters)(_el); },
         "ice-type": (_el: _Element): void => { ice_type = $._decode_implicit<ICE_type>(() => _decode_ICE_type)(_el); },

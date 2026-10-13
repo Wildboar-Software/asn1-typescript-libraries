@@ -132,7 +132,7 @@ function _decode_PANI_Location (el: _Element): PANI_Location {
     if (!_cached_decoder_for_PANI_Location) { _cached_decoder_for_PANI_Location = function (el: _Element): PANI_Location {
     let raw_Location: OPTIONAL<OCTET_STRING>;
     let location: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "raw-Location": (_el: _Element): void => { raw_Location = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "location": (_el: _Element): void => { location = $._decode_implicit<Location>(() => _decode_Location)(_el); }

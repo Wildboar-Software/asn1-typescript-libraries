@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -83,35 +82,8 @@ const Emergency_cancel: Emergency = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  */
 export
 const cancel: Emergency = Emergency_cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_Emergency: $.ASN1Decoder<Emergency> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Emergency
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Emergency (el: _Element): Emergency {
-    if (!_cached_decoder_for_Emergency) { _cached_decoder_for_Emergency = $._decodeEnumerated; }
-    return _cached_decoder_for_Emergency(el);
-}
-
-let _cached_encoder_for_Emergency: $.ASN1Encoder<Emergency> | null = null;
-
-/**
- * @summary Encodes a(n) Emergency into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Emergency, encoded as an ASN.1 Element.
- */
-export
-function _encode_Emergency (value: Emergency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Emergency) { _cached_encoder_for_Emergency = $._encodeEnumerated; }
-    return _cached_encoder_for_Emergency(value, elGetter);
-}
+export const _decode_Emergency: $.ASN1Decoder<Emergency> = $._decodeEnumerated;
+export const _encode_Emergency: $.ASN1Encoder<Emergency> = $._encodeEnumerated;
 
 
 /* eslint-enable */

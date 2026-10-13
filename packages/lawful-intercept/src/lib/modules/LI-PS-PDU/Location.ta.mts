@@ -7,6 +7,10 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 // export { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2Operations/EPSLocation.ta.mjs";
 import { WlanLocationAttributes, _decode_WlanLocationAttributes, _encode_WlanLocationAttributes } from "../LI-PS-PDU/WlanLocationAttributes.ta.mjs";
+import * as EpsHI2Operations from "../EpsHI2Operations/index.mjs";
+import * as HI2Operations from "../HI2Operations/index.mjs";
+import * as TS33128Payloads from "../TS33128Payloads/index.mjs";
+import * as UmtsHI2Operations from "../UmtsHI2Operations/index.mjs";
 // export { WlanLocationAttributes, _decode_WlanLocationAttributes, _encode_WlanLocationAttributes } from "../LI-PS-PDU/WlanLocationAttributes.ta.mjs";
 // export { UserLocation, _decode_UserLocation, _encode_UserLocation } from "../TS33128Payloads/UserLocation.ta.mjs";
 
@@ -164,7 +168,7 @@ function _decode_Location (el: _Element): Location {
     let wlanLocationAttributes: OPTIONAL<WlanLocationAttributes>;
     let eTSI671HI2Location: OPTIONAL<HI2Operations.Location>;
     let threeGPP33128UserLocation: OPTIONAL<TS33128Payloads.UserLocation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "umtsHI2Location": (_el: _Element): void => { umtsHI2Location = $._decode_implicit<UmtsHI2Operations.Location>(() => UmtsHI2Operations._decode_Location)(_el); },
         "epsLocation": (_el: _Element): void => { epsLocation = $._decode_implicit<EpsHI2Operations.EPSLocation>(() => EpsHI2Operations._decode_EPSLocation)(_el); },

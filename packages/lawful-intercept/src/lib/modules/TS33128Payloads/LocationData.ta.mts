@@ -253,7 +253,7 @@ function _decode_LocationData (el: _Element): LocationData {
     let nCGI: OPTIONAL<NCGI>;
     let altitude: OPTIONAL<Altitude>;
     let barometricPressure: OPTIONAL<BarometricPressure>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationEstimate": (_el: _Element): void => { locationEstimate = $._decode_explicit<GeographicArea>(() => _decode_GeographicArea)(_el); },
         "accuracyFulfilmentIndicator": (_el: _Element): void => { accuracyFulfilmentIndicator = $._decode_implicit<AccuracyFulfilmentIndicator>(() => _decode_AccuracyFulfilmentIndicator)(_el); },

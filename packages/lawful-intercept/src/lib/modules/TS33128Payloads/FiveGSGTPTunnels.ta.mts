@@ -143,7 +143,7 @@ function _decode_FiveGSGTPTunnels (el: _Element): FiveGSGTPTunnels {
     let uLNGUUPTunnelInformation: OPTIONAL<FTEID>;
     let additionalULNGUUPTunnelInformation: OPTIONAL<FTEIDList>;
     let dLRANTunnelInformation: OPTIONAL<DLRANTunnelInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uLNGUUPTunnelInformation": (_el: _Element): void => { uLNGUUPTunnelInformation = $._decode_implicit<FTEID>(() => _decode_FTEID)(_el); },
         "additionalULNGUUPTunnelInformation": (_el: _Element): void => { additionalULNGUUPTunnelInformation = $._decode_implicit<FTEIDList>(() => _decode_FTEIDList)(_el); },

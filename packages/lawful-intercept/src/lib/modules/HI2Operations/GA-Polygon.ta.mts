@@ -1,8 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { maxNrOfPoints } from "../HI2Operations/maxNrOfPoints.va.mjs";
 import { GA_Polygon_Item, _decode_GA_Polygon_Item, _encode_GA_Polygon_Item } from "../HI2Operations/GA-Polygon-Item.ta.mjs";
 // export { GA_Polygon_Item, _decode_GA_Polygon_Item, _encode_GA_Polygon_Item } from "../HI2Operations/GA-Polygon-Item.ta.mjs";
 
@@ -36,7 +38,12 @@ let _cached_decoder_for_GA_Polygon: $.ASN1Decoder<GA_Polygon> | null = null;
 export
 function _decode_GA_Polygon (el: _Element): GA_Polygon {
     if (!_cached_decoder_for_GA_Polygon) { _cached_decoder_for_GA_Polygon = $._decodeSequenceOf<GA_Polygon_Item>(() => _decode_GA_Polygon_Item); }
-    return _cached_decoder_for_GA_Polygon(el);
+    const _value = _cached_decoder_for_GA_Polygon(el);
+    const _hi = typeof maxNrOfPoints === "bigint" ? Number(maxNrOfPoints) : maxNrOfPoints;
+    if (_value.length < 1 || _value.length > _hi) {
+        throw new ASN1SizeError("GA_Polygon violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_GA_Polygon: $.ASN1Encoder<GA_Polygon> | null = null;

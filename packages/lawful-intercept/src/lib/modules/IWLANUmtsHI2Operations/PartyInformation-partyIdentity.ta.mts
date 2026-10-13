@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -16,7 +17,21 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity ::= SEQUENCE {
+ *     imsi                    [2] OCTET STRING (SIZE (3..8)) OPTIONAL,
+ *     -- See MAP format [4] International Mobile
+ *     -- Station Identity E.212 number beginning with Mobile Country Code
+ *
+ *     msISDN                    [3] OCTET STRING (SIZE (1..9)) OPTIONAL,
+ *     -- MSISDN of the target, encoded in the same format as the AddressString
+ *     -- parameters defined in MAP format document TS 29.002 [4]
+ *
+ *     nai                        [7]  OCTET STRING  OPTIONAL,
+ *     -- NAI of the target, encoded in the same format as
+ *     -- defined in 3GPP TS 29.234 [41].
+ *     ...
+ *
+ * }
  * ```
  * 
  * @class
@@ -134,10 +149,20 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let imsi: OPTIONAL<OCTET_STRING>;
     let msISDN: OPTIONAL<OCTET_STRING>;
     let nai: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "imsi": (_el: _Element): void => { imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "msISDN": (_el: _Element): void => { msISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "imsi": (_el: _Element): void => {
+            imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imsi.length < 3 || imsi.length > 8) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.imsi violates SIZE constraint");
+            }
+        },
+        "msISDN": (_el: _Element): void => {
+            msISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (msISDN.length < 1 || msISDN.length > 9) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.msISDN violates SIZE constraint");
+            }
+        },
         "nai": (_el: _Element): void => { nai = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
     };
     $._parse_sequence(el, callbacks,

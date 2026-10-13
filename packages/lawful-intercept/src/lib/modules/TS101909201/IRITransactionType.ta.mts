@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -134,35 +131,8 @@ const IRITransactionType_iRIreport: IRITransactionType = IRITransactionType.iRIr
  */
 export
 const iRIreport: IRITransactionType = IRITransactionType.iRIreport; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_IRITransactionType: $.ASN1Decoder<IRITransactionType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IRITransactionType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IRITransactionType (el: _Element): IRITransactionType {
-    if (!_cached_decoder_for_IRITransactionType) { _cached_decoder_for_IRITransactionType = $._decodeEnumerated; }
-    return _cached_decoder_for_IRITransactionType(el);
-}
-
-let _cached_encoder_for_IRITransactionType: $.ASN1Encoder<IRITransactionType> | null = null;
-
-/**
- * @summary Encodes a(n) IRITransactionType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IRITransactionType, encoded as an ASN.1 Element.
- */
-export
-function _encode_IRITransactionType (value: IRITransactionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IRITransactionType) { _cached_encoder_for_IRITransactionType = $._encodeEnumerated; }
-    return _cached_encoder_for_IRITransactionType(value, elGetter);
-}
+export const _decode_IRITransactionType: $.ASN1Decoder<IRITransactionType> = $._decodeEnumerated;
+export const _encode_IRITransactionType: $.ASN1Encoder<IRITransactionType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

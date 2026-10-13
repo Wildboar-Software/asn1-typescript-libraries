@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -31,7 +32,13 @@ let _cached_decoder_for_ProSeMaskSequence: $.ASN1Decoder<ProSeMaskSequence> | nu
 export
 function _decode_ProSeMaskSequence (el: _Element): ProSeMaskSequence {
     if (!_cached_decoder_for_ProSeMaskSequence) { _cached_decoder_for_ProSeMaskSequence = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString); }
-    return _cached_decoder_for_ProSeMaskSequence(el);
+    const _value = _cached_decoder_for_ProSeMaskSequence(el);
+    for (const _item of _value) {
+        if (_item.length < 23 || _item.length > 23) {
+            throw new ASN1SizeError("ProSeMaskSequence element violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_ProSeMaskSequence: $.ASN1Encoder<ProSeMaskSequence> | null = null;

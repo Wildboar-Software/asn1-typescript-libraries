@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -119,9 +120,14 @@ export
 function _decode_WlanLocationAttributes (el: _Element): WlanLocationAttributes {
     if (!_cached_decoder_for_WlanLocationAttributes) { _cached_decoder_for_WlanLocationAttributes = function (el: _Element): WlanLocationAttributes {
     let wlanAPMACAddress: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "wlanAPMACAddress": (_el: _Element): void => { wlanAPMACAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "wlanAPMACAddress": (_el: _Element): void => {
+            wlanAPMACAddress = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (wlanAPMACAddress.length < 6 || wlanAPMACAddress.length > 6) {
+                throw new ASN1SizeError("WlanLocationAttributes.wlanAPMACAddress violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_WlanLocationAttributes,

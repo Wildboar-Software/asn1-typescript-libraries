@@ -209,7 +209,7 @@ function _decode_IMSMessage (el: _Element): IMSMessage {
     let accessNetworkInformation: OPTIONAL<SIPAccessNetworkInformation[]>;
     let cellularNetworkInformation: OPTIONAL<SIPCellularNetworkInformation[]>;
     let numberTranslationInformation: OPTIONAL<NumberTranslation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "payload": (_el: _Element): void => { payload = $._decode_explicit<IMSPayload>(() => _decode_IMSPayload)(_el); },
         "sessionDirection": (_el: _Element): void => { sessionDirection = $._decode_implicit<SessionDirection>(() => _decode_SessionDirection)(_el); },

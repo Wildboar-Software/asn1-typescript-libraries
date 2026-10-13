@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Payloads/MACAddress.ta.mjs";
@@ -207,10 +208,15 @@ function _decode_EthFlowDescription (el: _Element): EthFlowDescription {
     let vlanTags!: VLANTag[];
     let srcMacAddrEnd: OPTIONAL<MACAddress>;
     let destMacAddrEnd: OPTIONAL<MACAddress>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "destMacAddress": (_el: _Element): void => { destMacAddress = $._decode_implicit<MACAddress>(() => _decode_MACAddress)(_el); },
-        "ethType": (_el: _Element): void => { ethType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "ethType": (_el: _Element): void => {
+            ethType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (ethType.length < 2 || ethType.length > 2) {
+                throw new ASN1SizeError("EthFlowDescription.ethType violates SIZE constraint");
+            }
+        },
         "fDesc": (_el: _Element): void => { fDesc = $._decode_implicit<FlowDescription>(() => _decode_FlowDescription)(_el); },
         "fDir": (_el: _Element): void => { fDir = $._decode_implicit<FDir>(() => _decode_FDir)(_el); },
         "sourceMacAddress": (_el: _Element): void => { sourceMacAddress = $._decode_implicit<MACAddress>(() => _decode_MACAddress)(_el); },

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -21,7 +20,16 @@ enum _enum_for_IPAddress_iP_assignment {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IPAddress-iP-assignment ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * IPAddress-iP-assignment ::= ENUMERATED {
+ *     static(1),
+ *     -- The static coding shall be used to report a static address.
+ *     dynamic(2),
+ *     -- The dynamic coding shall be used to report a dynamically allocated address.
+ *     notKnown(3),
+ *     -- The notKnown coding shall be used to report other then static or dynamically
+ *     -- allocated IP addresses.
+ *     ...
+ * }
  * ```
  * 
  * @enum {number}
@@ -76,35 +84,8 @@ const IPAddress_iP_assignment_notKnown: IPAddress_iP_assignment = 3; /* LONG_NAM
  */
 export
 const notKnown: IPAddress_iP_assignment = IPAddress_iP_assignment_notKnown; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_IPAddress_iP_assignment: $.ASN1Decoder<IPAddress_iP_assignment> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IPAddress_iP_assignment
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IPAddress_iP_assignment (el: _Element): IPAddress_iP_assignment {
-    if (!_cached_decoder_for_IPAddress_iP_assignment) { _cached_decoder_for_IPAddress_iP_assignment = $._decodeEnumerated; }
-    return _cached_decoder_for_IPAddress_iP_assignment(el);
-}
-
-let _cached_encoder_for_IPAddress_iP_assignment: $.ASN1Encoder<IPAddress_iP_assignment> | null = null;
-
-/**
- * @summary Encodes a(n) IPAddress_iP_assignment into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IPAddress_iP_assignment, encoded as an ASN.1 Element.
- */
-export
-function _encode_IPAddress_iP_assignment (value: IPAddress_iP_assignment, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPAddress_iP_assignment) { _cached_encoder_for_IPAddress_iP_assignment = $._encodeEnumerated; }
-    return _cached_encoder_for_IPAddress_iP_assignment(value, elGetter);
-}
+export const _decode_IPAddress_iP_assignment: $.ASN1Decoder<IPAddress_iP_assignment> = $._decodeEnumerated;
+export const _encode_IPAddress_iP_assignment: $.ASN1Encoder<IPAddress_iP_assignment> = $._encodeEnumerated;
 
 
 /* eslint-enable */

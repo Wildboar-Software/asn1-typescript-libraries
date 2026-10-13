@@ -129,7 +129,7 @@ function _decode_SIPAccessNetworkInformation (el: _Element): SIPAccessNetworkInf
     if (!_cached_decoder_for_SIPAccessNetworkInformation) { _cached_decoder_for_SIPAccessNetworkInformation = function (el: _Element): SIPAccessNetworkInformation {
     let accessNetworkInfo!: UTF8String;
     let servingPLMN: OPTIONAL<PLMNID>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "accessNetworkInfo": (_el: _Element): void => { accessNetworkInfo = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "servingPLMN": (_el: _Element): void => { servingPLMN = $._decode_implicit<PLMNID>(() => _decode_PLMNID)(_el); }

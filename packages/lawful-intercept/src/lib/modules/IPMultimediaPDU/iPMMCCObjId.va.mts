@@ -19,6 +19,6 @@ import { iPMultimediaPDUObjId } from "../IPMultimediaPDU/iPMultimediaPDUObjId.va
  * @constant
  */
 export
-const iPMMCCObjId: RELATIVE_OID = [ iPMultimediaPDUObjId, /* cC */ 2 ];
+const iPMMCCObjId: RELATIVE_OID = [ ...iPMultimediaPDUObjId, /* cC */ 2 ];
 
 /* eslint-enable */

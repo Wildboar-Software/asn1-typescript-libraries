@@ -252,7 +252,7 @@ function _decode_EUTRALocation (el: _Element): EUTRALocation {
     let ignoreTAI: OPTIONAL<BOOLEAN>;
     let ignoreECGI: OPTIONAL<BOOLEAN>;
     let cellRadioRelatedInformation: OPTIONAL<CellRadioRelatedInformation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tAI": (_el: _Element): void => { tAI = $._decode_implicit<TAI>(() => _decode_TAI)(_el); },
         "eCGI": (_el: _Element): void => { eCGI = $._decode_implicit<ECGI>(() => _decode_ECGI)(_el); },

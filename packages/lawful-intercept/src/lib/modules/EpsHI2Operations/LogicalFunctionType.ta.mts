@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -118,35 +117,8 @@ const LogicalFunctionType_hSS: LogicalFunctionType = 4; /* LONG_NAMED_ENUMERATED
  */
 export
 const hSS: LogicalFunctionType = LogicalFunctionType_hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_LogicalFunctionType: $.ASN1Decoder<LogicalFunctionType> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) LogicalFunctionType
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_LogicalFunctionType (el: _Element): LogicalFunctionType {
-    if (!_cached_decoder_for_LogicalFunctionType) { _cached_decoder_for_LogicalFunctionType = $._decodeEnumerated; }
-    return _cached_decoder_for_LogicalFunctionType(el);
-}
-
-let _cached_encoder_for_LogicalFunctionType: $.ASN1Encoder<LogicalFunctionType> | null = null;
-
-/**
- * @summary Encodes a(n) LogicalFunctionType into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The LogicalFunctionType, encoded as an ASN.1 Element.
- */
-export
-function _encode_LogicalFunctionType (value: LogicalFunctionType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogicalFunctionType) { _cached_encoder_for_LogicalFunctionType = $._encodeEnumerated; }
-    return _cached_encoder_for_LogicalFunctionType(value, elGetter);
-}
+export const _decode_LogicalFunctionType: $.ASN1Decoder<LogicalFunctionType> = $._decodeEnumerated;
+export const _encode_LogicalFunctionType: $.ASN1Encoder<LogicalFunctionType> = $._encodeEnumerated;
 
 
 /* eslint-enable */

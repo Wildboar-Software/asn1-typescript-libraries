@@ -210,7 +210,7 @@ function _decode_StartOfInterceptionForActiveIMSSession (el: _Element): StartOfI
     let location: OPTIONAL<Location>;
     let accessNetworkInformation: OPTIONAL<SIPAccessNetworkInformation[]>;
     let cellularNetworkInformation: OPTIONAL<SIPCellularNetworkInformation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "originatingId": (_el: _Element): void => { originatingId = $._decode_implicit<IMPU[]>(() => $._decodeSequenceOf<IMPU>(() => _decode_IMPU))(_el); },
         "terminatingId": (_el: _Element): void => { terminatingId = $._decode_explicit<IMPU>(() => _decode_IMPU)(_el); },

@@ -162,7 +162,7 @@ function _decode_EPS5GSComboInfo (el: _Element): EPS5GSComboInfo {
     let ePSSubscriberIDs!: EPSSubscriberIDs;
     let ePSPDNCnxInfo: OPTIONAL<EPSPDNCnxInfo>;
     let ePSBearerInfo: OPTIONAL<EPSBearerInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "ePSInterworkingIndication": (_el: _Element): void => { ePSInterworkingIndication = $._decode_implicit<EPSInterworkingIndication>(() => _decode_EPSInterworkingIndication)(_el); },
         "ePSSubscriberIDs": (_el: _Element): void => { ePSSubscriberIDs = $._decode_implicit<EPSSubscriberIDs>(() => _decode_EPSSubscriberIDs)(_el); },

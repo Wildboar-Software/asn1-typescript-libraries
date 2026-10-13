@@ -129,7 +129,7 @@ function _decode_IMSCCPDU (el: _Element): IMSCCPDU {
     if (!_cached_decoder_for_IMSCCPDU) { _cached_decoder_for_IMSCCPDU = function (el: _Element): IMSCCPDU {
     let payload!: IMSCCPDUPayload;
     let sDPInfo: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "payload": (_el: _Element): void => { payload = $._decode_implicit<IMSCCPDUPayload>(() => _decode_IMSCCPDUPayload)(_el); },
         "sDPInfo": (_el: _Element): void => { sDPInfo = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }

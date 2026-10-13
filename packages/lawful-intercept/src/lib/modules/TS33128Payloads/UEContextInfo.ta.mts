@@ -178,7 +178,7 @@ function _decode_UEContextInfo (el: _Element): UEContextInfo {
     let lastActiveTime: OPTIONAL<Timestamp>;
     let accessType: OPTIONAL<AccessType>;
     let rATType: OPTIONAL<RATType>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "supportVoPS": (_el: _Element): void => { supportVoPS = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
         "supportVoPSNon3GPP": (_el: _Element): void => { supportVoPSNon3GPP = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

@@ -130,7 +130,7 @@ function _decode_IABMTUserLocation (el: _Element): IABMTUserLocation {
     if (!_cached_decoder_for_IABMTUserLocation) { _cached_decoder_for_IABMTUserLocation = function (el: _Element): IABMTUserLocation {
     let nRCGI!: NCGI;
     let tAI: OPTIONAL<TAI>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "nRCGI": (_el: _Element): void => { nRCGI = $._decode_implicit<NCGI>(() => _decode_NCGI)(_el); },
         "tAI": (_el: _Element): void => { tAI = $._decode_implicit<TAI>(() => _decode_TAI)(_el); }

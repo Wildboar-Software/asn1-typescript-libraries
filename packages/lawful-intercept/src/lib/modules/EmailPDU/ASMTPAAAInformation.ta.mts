@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     OCTET_STRING,
     OPTIONAL,
-    UTF8String
+    UTF8String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AAAauthMethod, _encode_AAAauthMethod, _enum_for_AAAauthMethod, AAAauthMethod } from "../EmailPDU/AAAauthMethod.ta.mjs";
@@ -183,9 +184,14 @@ function _decode_ASMTPAAAInformation (el: _Element): ASMTPAAAInformation {
     let challenge: OPTIONAL<OCTET_STRING>;
     let response: OPTIONAL<OCTET_STRING>;
     let aAAResult: OPTIONAL<AAAResult>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "username": (_el: _Element): void => { username = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "username": (_el: _Element): void => {
+            username = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el);
+            if (username.length > 64) {
+                throw new ASN1SizeError("ASMTPAAAInformation.username violates SIZE constraint");
+            }
+        },
         "authMethod": (_el: _Element): void => { authMethod = $._decode_implicit<AAAauthMethod>(() => _decode_AAAauthMethod)(_el); },
         "challenge": (_el: _Element): void => { challenge = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "response": (_el: _Element): void => { response = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

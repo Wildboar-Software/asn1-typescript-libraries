@@ -184,7 +184,7 @@ function _decode_EESACRNotification (el: _Element): EESACRNotification {
     let targetInfo: OPTIONAL<TargetInfo>;
     let aCRRes: OPTIONAL<BOOLEAN>;
     let failReason: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "subscriptionID": (_el: _Element): void => { subscriptionID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "eASID": (_el: _Element): void => { eASID = $._decode_implicit<EASID>(() => _decode_EASID)(_el); },

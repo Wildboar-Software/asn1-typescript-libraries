@@ -563,7 +563,7 @@ function _decode_AMFRegistration (el: _Element): AMFRegistration {
     let additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
     let alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>;
     let serviceLevelAAContainer: OPTIONAL<ServiceLevelAAContainer>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "registrationType": (_el: _Element): void => { registrationType = $._decode_implicit<AMFRegistrationType>(() => _decode_AMFRegistrationType)(_el); },
         "registrationResult": (_el: _Element): void => { registrationResult = $._decode_implicit<AMFRegistrationResult>(() => _decode_AMFRegistrationResult)(_el); },

@@ -203,7 +203,7 @@ function _decode_Current_Previous_Systems (el: _Element): Current_Previous_Syste
     let previous_Serving_SGSN_Number: OPTIONAL<OCTET_STRING>;
     let previous_Serving_SGSN_Address: OPTIONAL<OCTET_STRING>;
     let previous_Serving_S4_SGSN_Address: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "serving-System-Identifier": (_el: _Element): void => { serving_System_Identifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "current-Serving-SGSN-Number": (_el: _Element): void => { current_Serving_SGSN_Number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

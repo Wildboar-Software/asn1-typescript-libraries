@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -146,10 +147,16 @@ function _decode_Payload_description (el: _Element): Payload_description {
     let copyOfSDPdescription: OPTIONAL<OCTET_STRING>;
     let mediaFormat: OPTIONAL<INTEGER>;
     let mediaAttributes: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "copyOfSDPdescription": (_el: _Element): void => { copyOfSDPdescription = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "mediaFormat": (_el: _Element): void => { mediaFormat = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "mediaFormat": (_el: _Element): void => {
+            mediaFormat = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof mediaFormat === "bigint" ? mediaFormat : BigInt(mediaFormat);
+            if (_n < 0n || _n > 127n) {
+                throw new ASN1OverflowError("Payload_description.mediaFormat violates INTEGER range");
+            }
+        },
         "mediaAttributes": (_el: _Element): void => { mediaAttributes = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
     };
     $._parse_sequence(el, callbacks,

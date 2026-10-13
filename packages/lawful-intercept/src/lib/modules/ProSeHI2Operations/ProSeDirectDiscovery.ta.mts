@@ -4,7 +4,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProSeDirectDiscoveryEvent, _decode_ProSeDirectDiscoveryEvent, _encode_ProSeDirectDiscoveryEvent, _enum_for_ProSeDirectDiscoveryEvent } from "../ProSeHI2Operations/ProSeDirectDiscoveryEvent.ta.mjs";
@@ -198,14 +199,24 @@ function _decode_ProSeDirectDiscovery (el: _Element): ProSeDirectDiscovery {
     let directDiscoveryData!: DirectDiscoveryData;
     let metadata: OPTIONAL<UTF8String>;
     let otherUeImsi: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "proseDirectDiscoveryEvent": (_el: _Element): void => { proseDirectDiscoveryEvent = $._decode_implicit<ProSeDirectDiscoveryEvent>(() => _decode_ProSeDirectDiscoveryEvent)(_el); },
-        "targetImsi": (_el: _Element): void => { targetImsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "targetImsi": (_el: _Element): void => {
+            targetImsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (targetImsi.length < 3 || targetImsi.length > 8) {
+                throw new ASN1SizeError("ProSeDirectDiscovery.targetImsi violates SIZE constraint");
+            }
+        },
         "targetRole": (_el: _Element): void => { targetRole = $._decode_implicit<TargetRole>(() => _decode_TargetRole)(_el); },
         "directDiscoveryData": (_el: _Element): void => { directDiscoveryData = $._decode_implicit<DirectDiscoveryData>(() => _decode_DirectDiscoveryData)(_el); },
         "metadata": (_el: _Element): void => { metadata = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "otherUeImsi": (_el: _Element): void => { otherUeImsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "otherUeImsi": (_el: _Element): void => {
+            otherUeImsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (otherUeImsi.length < 3 || otherUeImsi.length > 8) {
+                throw new ASN1SizeError("ProSeDirectDiscovery.otherUeImsi violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_ProSeDirectDiscovery,

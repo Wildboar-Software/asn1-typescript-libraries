@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -31,7 +32,16 @@ let _cached_decoder_for_National_Parameters: $.ASN1Decoder<National_Parameters> 
 export
 function _decode_National_Parameters (el: _Element): National_Parameters {
     if (!_cached_decoder_for_National_Parameters) { _cached_decoder_for_National_Parameters = $._decodeSetOf<OCTET_STRING>(() => $._decodeOctetString); }
-    return _cached_decoder_for_National_Parameters(el);
+    const _value = _cached_decoder_for_National_Parameters(el);
+    if (_value.length < 1 || _value.length > 40) {
+        throw new ASN1SizeError("National_Parameters violates SIZE constraint");
+    }
+    for (const _item of _value) {
+        if (_item.length < 1 || _item.length > 256) {
+            throw new ASN1SizeError("National_Parameters element violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_National_Parameters: $.ASN1Encoder<National_Parameters> | null = null;

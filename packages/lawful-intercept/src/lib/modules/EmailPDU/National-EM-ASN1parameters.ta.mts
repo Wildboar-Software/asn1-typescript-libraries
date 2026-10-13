@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    PrintableString
+    PrintableString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -129,6 +130,11 @@ function _decode_National_EM_ASN1parameters (el: _Element): National_EM_ASN1para
     sequence[0].name = "countryCode";
     let countryCode!: PrintableString;
     countryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
+    {
+        if (countryCode.length < 2 || countryCode.length > 2) {
+            throw new ASN1SizeError("National_EM_ASN1parameters.countryCode violates SIZE constraint");
+        }
+    }
     return new National_EM_ASN1parameters(
         countryCode,
         sequence.slice(1),

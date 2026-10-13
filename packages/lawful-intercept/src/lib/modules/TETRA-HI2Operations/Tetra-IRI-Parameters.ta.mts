@@ -4,9 +4,12 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1Error,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { hi2OperationId } from "../TETRA-HI2Operations/hi2OperationId.va.mjs";
 import { Tetra_IRI_Parameters_iRIversion, _decode_Tetra_IRI_Parameters_iRIversion, _encode_Tetra_IRI_Parameters_iRIversion, _enum_for_Tetra_IRI_Parameters_iRIversion } from "../TETRA-HI2Operations/Tetra-IRI-Parameters-iRIversion.ta.mjs";
 // export { Tetra_IRI_Parameters_iRIversion, _enum_for_Tetra_IRI_Parameters_iRIversion, Tetra_IRI_Parameters_iRIversion_version0 /* IMPORTED_LONG_ENUMERATION_ITEM */, version0 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Tetra_IRI_Parameters_iRIversion, _encode_Tetra_IRI_Parameters_iRIversion } from "../TETRA-HI2Operations/Tetra-IRI-Parameters-iRIversion.ta.mjs";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../TETRA-HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -807,21 +810,46 @@ function _decode_Tetra_IRI_Parameters (el: _Element): Tetra_IRI_Parameters {
     let txGrantedStatus: OPTIONAL<TxGrantedStatus>;
     let groupStatus: OPTIONAL<GroupStatus>;
     let national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "domainID": (_el: _Element): void => { domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
+        "domainID": (_el: _Element): void => {
+            domainID = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el);
+            if (!domainID.isEqualTo(hi2OperationId)) {
+                throw new ASN1Error("Tetra_IRI_Parameters.domainID violates OBJECT IDENTIFIER constraint");
+            }
+        },
         "iRIversion": (_el: _Element): void => { iRIversion = $._decode_implicit<Tetra_IRI_Parameters_iRIversion>(() => _decode_Tetra_IRI_Parameters_iRIversion)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "communicationIdentifier": (_el: _Element): void => { communicationIdentifier = $._decode_implicit<CommunicationIdentifier>(() => _decode_CommunicationIdentifier)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
         "intercepted-Call-Direct": (_el: _Element): void => { intercepted_Call_Direct = $._decode_implicit<Tetra_IRI_Parameters_intercepted_Call_Direct>(() => _decode_Tetra_IRI_Parameters_intercepted_Call_Direct)(_el); },
         "intercepted-Call-State": (_el: _Element): void => { intercepted_Call_State = $._decode_implicit<Intercepted_Call_State>(() => _decode_Intercepted_Call_State)(_el); },
-        "ringingDuration": (_el: _Element): void => { ringingDuration = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "conversationDuration": (_el: _Element): void => { conversationDuration = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "ringingDuration": (_el: _Element): void => {
+            ringingDuration = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (ringingDuration.length < 3 || ringingDuration.length > 3) {
+                throw new ASN1SizeError("Tetra_IRI_Parameters.ringingDuration violates SIZE constraint");
+            }
+        },
+        "conversationDuration": (_el: _Element): void => {
+            conversationDuration = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (conversationDuration.length < 3 || conversationDuration.length > 3) {
+                throw new ASN1SizeError("Tetra_IRI_Parameters.conversationDuration violates SIZE constraint");
+            }
+        },
         "locationOfTheTarget": (_el: _Element): void => { locationOfTheTarget = $._decode_implicit<Location>(() => _decode_Location)(_el); },
-        "partyInformation": (_el: _Element): void => { partyInformation = $._decode_implicit<PartyInformation[]>(() => $._decodeSetOf<PartyInformation>(() => _decode_PartyInformation))(_el); },
+        "partyInformation": (_el: _Element): void => {
+            partyInformation = $._decode_implicit<PartyInformation[]>(() => $._decodeSetOf<PartyInformation>(() => _decode_PartyInformation))(_el);
+            if (partyInformation.length < 1 || partyInformation.length > 10) {
+                throw new ASN1SizeError("Tetra_IRI_Parameters.partyInformation violates SIZE constraint");
+            }
+        },
         "callContentLinkInformation": (_el: _Element): void => { callContentLinkInformation = $._decode_implicit<Tetra_IRI_Parameters_callContentLinkInformation>(() => _decode_Tetra_IRI_Parameters_callContentLinkInformation)(_el); },
-        "release-Reason-Of-Intercepted-Call": (_el: _Element): void => { release_Reason_Of_Intercepted_Call = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "release-Reason-Of-Intercepted-Call": (_el: _Element): void => {
+            release_Reason_Of_Intercepted_Call = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (release_Reason_Of_Intercepted_Call.length < 2 || release_Reason_Of_Intercepted_Call.length > 2) {
+                throw new ASN1SizeError("Tetra_IRI_Parameters.release_Reason_Of_Intercepted_Call violates SIZE constraint");
+            }
+        },
         "nature-Of-The-intercepted-call": (_el: _Element): void => { nature_Of_The_intercepted_call = $._decode_implicit<Tetra_IRI_Parameters_nature_Of_The_intercepted_call>(() => _decode_Tetra_IRI_Parameters_nature_Of_The_intercepted_call)(_el); },
         "serverCenterAddress": (_el: _Element): void => { serverCenterAddress = $._decode_implicit<PartyInformation>(() => _decode_PartyInformation)(_el); },
         "sMS": (_el: _Element): void => { sMS = $._decode_implicit<SMS_report>(() => _decode_SMS_report)(_el); },
@@ -838,8 +866,18 @@ function _decode_Tetra_IRI_Parameters (el: _Element): Tetra_IRI_Parameters {
         "sMSTerminatingAddress": (_el: _Element): void => { sMSTerminatingAddress = $._decode_explicit<DataNodeAddress>(() => _decode_DataNodeAddress)(_el); },
         "iMSevent": (_el: _Element): void => { iMSevent = $._decode_implicit<IMSevent>(() => _decode_IMSevent)(_el); },
         "sIPMessage": (_el: _Element): void => { sIPMessage = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "servingSGSN-number": (_el: _Element): void => { servingSGSN_number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "servingSGSN-address": (_el: _Element): void => { servingSGSN_address = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "servingSGSN-number": (_el: _Element): void => {
+            servingSGSN_number = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (servingSGSN_number.length < 1 || servingSGSN_number.length > 20) {
+                throw new ASN1SizeError("Tetra_IRI_Parameters.servingSGSN_number violates SIZE constraint");
+            }
+        },
+        "servingSGSN-address": (_el: _Element): void => {
+            servingSGSN_address = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (servingSGSN_address.length < 5 || servingSGSN_address.length > 17) {
+                throw new ASN1SizeError("Tetra_IRI_Parameters.servingSGSN_address violates SIZE constraint");
+            }
+        },
         "tARGETACTIVITYMONITOR": (_el: _Element): void => { tARGETACTIVITYMONITOR = $._decode_implicit<TARGETACTIVITYMONITOR_1>(() => _decode_TARGETACTIVITYMONITOR_1)(_el); },
         "ldiEvent": (_el: _Element): void => { ldiEvent = $._decode_implicit<LDIevent>(() => _decode_LDIevent)(_el); },
         "correlation": (_el: _Element): void => { correlation = $._decode_explicit<CorrelationValues>(() => _decode_CorrelationValues)(_el); },

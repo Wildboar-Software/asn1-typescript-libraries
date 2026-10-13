@@ -279,7 +279,7 @@ function _decode_NEFExpectedUEBehaviourUpdate (el: _Element): NEFExpectedUEBehav
     let expectedTimeAndDayOfWeekInTrajectory: OPTIONAL<UMTLocationArea5G[]>;
     let aFID!: AFID;
     let validityTime: OPTIONAL<Timestamp>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },
         "expectedUEMovingTrajectory": (_el: _Element): void => { expectedUEMovingTrajectory = $._decode_implicit<UMTLocationArea5G[]>(() => $._decodeSequenceOf<UMTLocationArea5G>(() => _decode_UMTLocationArea5G))(_el); },

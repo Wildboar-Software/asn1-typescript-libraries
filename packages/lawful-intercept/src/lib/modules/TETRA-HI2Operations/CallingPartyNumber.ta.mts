@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -52,7 +53,26 @@ function _decode_CallingPartyNumber (el: _Element): CallingPartyNumber {
     "CONTEXT 2": [ "dSS1_Format", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 3": [ "mAP_Format", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_CallingPartyNumber(el);
+    const _value = _cached_decoder_for_CallingPartyNumber(el);
+    if ("iSUP_Format" in _value && _value.iSUP_Format !== undefined) {
+        const _alt = _value.iSUP_Format;
+        if (_alt.length < 1 || _alt.length > 25) {
+            throw new ASN1SizeError("CallingPartyNumber.iSUP_Format violates SIZE constraint");
+        }
+    }
+    if ("dSS1_Format" in _value && _value.dSS1_Format !== undefined) {
+        const _alt = _value.dSS1_Format;
+        if (_alt.length < 1 || _alt.length > 25) {
+            throw new ASN1SizeError("CallingPartyNumber.dSS1_Format violates SIZE constraint");
+        }
+    }
+    if ("mAP_Format" in _value && _value.mAP_Format !== undefined) {
+        const _alt = _value.mAP_Format;
+        if (_alt.length < 1 || _alt.length > 25) {
+            throw new ASN1SizeError("CallingPartyNumber.mAP_Format violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_CallingPartyNumber: $.ASN1Encoder<CallingPartyNumber> | null = null;

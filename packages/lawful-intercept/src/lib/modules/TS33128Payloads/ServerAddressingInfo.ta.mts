@@ -143,7 +143,7 @@ function _decode_ServerAddressingInfo (el: _Element): ServerAddressingInfo {
     let iPv4Address: OPTIONAL<IPv4Address>;
     let iPv6Address: OPTIONAL<IPv6Address>;
     let fQDNList: OPTIONAL<FQDNList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "iPv4Address": (_el: _Element): void => { iPv4Address = $._decode_implicit<IPv4Address>(() => _decode_IPv4Address)(_el); },
         "iPv6Address": (_el: _Element): void => { iPv6Address = $._decode_implicit<IPv6Address>(() => _decode_IPv6Address)(_el); },

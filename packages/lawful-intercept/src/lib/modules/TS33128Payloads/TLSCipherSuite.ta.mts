@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -31,7 +33,17 @@ let _cached_decoder_for_TLSCipherSuite: $.ASN1Decoder<TLSCipherSuite> | null = n
 export
 function _decode_TLSCipherSuite (el: _Element): TLSCipherSuite {
     if (!_cached_decoder_for_TLSCipherSuite) { _cached_decoder_for_TLSCipherSuite = $._decodeSequenceOf<INTEGER>(() => $._decodeInteger); }
-    return _cached_decoder_for_TLSCipherSuite(el);
+    const _value = _cached_decoder_for_TLSCipherSuite(el);
+    if (_value.length < 2 || _value.length > 2) {
+        throw new ASN1SizeError("TLSCipherSuite violates SIZE constraint");
+    }
+    for (const _item of _value) {
+        const _n = typeof _item === "bigint" ? _item : BigInt(_item);
+        if (_n < 0n || _n > 255n) {
+            throw new ASN1OverflowError("TLSCipherSuite element violates INTEGER range");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_TLSCipherSuite: $.ASN1Encoder<TLSCipherSuite> | null = null;

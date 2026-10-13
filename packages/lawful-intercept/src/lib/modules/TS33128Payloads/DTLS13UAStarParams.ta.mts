@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TLS13UAStarParams, _decode_TLS13UAStarParams, _encode_TLS13UAStarParams } from "../TS33128Payloads/TLS13UAStarParams.ta.mjs";
@@ -179,14 +180,29 @@ function _decode_DTLS13UAStarParams (el: _Element): DTLS13UAStarParams {
     let clientSnKey: OPTIONAL<OCTET_STRING>;
     let serverSnKey: OPTIONAL<OCTET_STRING>;
     let connectionID: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tLS13CommonParams": (_el: _Element): void => { tLS13CommonParams = $._decode_implicit<TLS13UAStarParams>(() => _decode_TLS13UAStarParams)(_el); },
         "clientEpoch": (_el: _Element): void => { clientEpoch = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
         "serverEpoch": (_el: _Element): void => { serverEpoch = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "clientSnKey": (_el: _Element): void => { clientSnKey = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "serverSnKey": (_el: _Element): void => { serverSnKey = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "connectionID": (_el: _Element): void => { connectionID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
+        "clientSnKey": (_el: _Element): void => {
+            clientSnKey = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (clientSnKey.length < 1 || clientSnKey.length > 65535) {
+                throw new ASN1SizeError("DTLS13UAStarParams.clientSnKey violates SIZE constraint");
+            }
+        },
+        "serverSnKey": (_el: _Element): void => {
+            serverSnKey = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (serverSnKey.length < 1 || serverSnKey.length > 65535) {
+                throw new ASN1SizeError("DTLS13UAStarParams.serverSnKey violates SIZE constraint");
+            }
+        },
+        "connectionID": (_el: _Element): void => {
+            connectionID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (connectionID.length > 255) {
+                throw new ASN1SizeError("DTLS13UAStarParams.connectionID violates SIZE constraint");
+            }
+        }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_DTLS13UAStarParams,

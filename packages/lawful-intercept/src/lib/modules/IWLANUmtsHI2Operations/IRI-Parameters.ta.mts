@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
@@ -328,13 +329,18 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
     let national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
     let nSAPI: OPTIONAL<OCTET_STRING>;
     let packetDataHeaderInformation: OPTIONAL<PacketDataHeaderInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "hi2iwlanDomainId": (_el: _Element): void => { hi2iwlanDomainId = $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(_el); },
         "lawfulInterceptionIdentifier": (_el: _Element): void => { lawfulInterceptionIdentifier = $._decode_implicit<LawfulInterceptionIdentifier>(() => _decode_LawfulInterceptionIdentifier)(_el); },
         "timeStamp": (_el: _Element): void => { timeStamp = $._decode_explicit<TimeStamp>(() => _decode_TimeStamp)(_el); },
         "initiator": (_el: _Element): void => { initiator = $._decode_implicit<IRI_Parameters_initiator>(() => _decode_IRI_Parameters_initiator)(_el); },
-        "partyInformation": (_el: _Element): void => { partyInformation = $._decode_implicit<PartyInformation[]>(() => $._decodeSetOf<PartyInformation>(() => _decode_PartyInformation))(_el); },
+        "partyInformation": (_el: _Element): void => {
+            partyInformation = $._decode_implicit<PartyInformation[]>(() => $._decodeSetOf<PartyInformation>(() => _decode_PartyInformation))(_el);
+            if (partyInformation.length < 1 || partyInformation.length > 10) {
+                throw new ASN1SizeError("IRI_Parameters.partyInformation violates SIZE constraint");
+            }
+        },
         "national-Parameters": (_el: _Element): void => { national_Parameters = $._decode_implicit<National_Parameters>(() => _decode_National_Parameters)(_el); },
         "networkIdentifier": (_el: _Element): void => { networkIdentifier = $._decode_implicit<Network_Identifier>(() => _decode_Network_Identifier)(_el); },
         "i-WLANevent": (_el: _Element): void => { i_WLANevent = $._decode_implicit<I_WLANEvent>(() => _decode_I_WLANEvent)(_el); },
@@ -343,7 +349,12 @@ function _decode_IRI_Parameters (el: _Element): IRI_Parameters {
         "i-wLANinformation": (_el: _Element): void => { i_wLANinformation = $._decode_implicit<I_WLANinformation>(() => _decode_I_WLANinformation)(_el); },
         "visitedPLMNID": (_el: _Element): void => { visitedPLMNID = $._decode_implicit<VisitedPLMNID>(() => _decode_VisitedPLMNID)(_el); },
         "national-HI2-ASN1parameters": (_el: _Element): void => { national_HI2_ASN1parameters = $._decode_implicit<National_HI2_ASN1parameters>(() => _decode_National_HI2_ASN1parameters)(_el); },
-        "nSAPI": (_el: _Element): void => { nSAPI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "nSAPI": (_el: _Element): void => {
+            nSAPI = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (nSAPI.length < 1 || nSAPI.length > 1) {
+                throw new ASN1SizeError("IRI_Parameters.nSAPI violates SIZE constraint");
+            }
+        },
         "packetDataHeaderInformation": (_el: _Element): void => { packetDataHeaderInformation = $._decode_explicit<PacketDataHeaderInformation>(() => _decode_PacketDataHeaderInformation)(_el); }
     };
     $._parse_sequence(el, callbacks,

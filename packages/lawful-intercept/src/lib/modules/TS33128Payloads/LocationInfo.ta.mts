@@ -187,7 +187,7 @@ function _decode_LocationInfo (el: _Element): LocationInfo {
     let rATType: OPTIONAL<RATType>;
     let timeZone: OPTIONAL<TimeZone>;
     let additionalCellIDs: OPTIONAL<CellInformation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userLocation": (_el: _Element): void => { userLocation = $._decode_implicit<UserLocation>(() => _decode_UserLocation)(_el); },
         "currentLoc": (_el: _Element): void => { currentLoc = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

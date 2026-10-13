@@ -185,7 +185,7 @@ function _decode_Change_Of_Target_Identity (el: _Element): Change_Of_Target_Iden
     let old_IMSI: OPTIONAL<PartyInformation>;
     let new_IMEI: OPTIONAL<PartyInformation>;
     let old_IMEI: OPTIONAL<PartyInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "new-MSISDN": (_el: _Element): void => { new_MSISDN = $._decode_implicit<PartyInformation>(() => _decode_PartyInformation)(_el); },
         "old-MSISDN": (_el: _Element): void => { old_MSISDN = $._decode_implicit<PartyInformation>(() => _decode_PartyInformation)(_el); },

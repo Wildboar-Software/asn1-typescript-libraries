@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
@@ -222,7 +223,7 @@ function _decode_SUCI (el: _Element): SUCI {
     let routingIndicatorLength: OPTIONAL<INTEGER>;
     let sUPIType: OPTIONAL<SUPIType>;
     let homeNetworkIdentifier: OPTIONAL<HomeNetworkIdentifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mCC": (_el: _Element): void => { mCC = $._decode_implicit<MCC>(() => _decode_MCC)(_el); },
         "mNC": (_el: _Element): void => { mNC = $._decode_implicit<MNC>(() => _decode_MNC)(_el); },
@@ -230,7 +231,13 @@ function _decode_SUCI (el: _Element): SUCI {
         "protectionSchemeID": (_el: _Element): void => { protectionSchemeID = $._decode_implicit<ProtectionSchemeID>(() => _decode_ProtectionSchemeID)(_el); },
         "homeNetworkPublicKeyID": (_el: _Element): void => { homeNetworkPublicKeyID = $._decode_implicit<HomeNetworkPublicKeyID>(() => _decode_HomeNetworkPublicKeyID)(_el); },
         "schemeOutput": (_el: _Element): void => { schemeOutput = $._decode_implicit<SchemeOutput>(() => _decode_SchemeOutput)(_el); },
-        "routingIndicatorLength": (_el: _Element): void => { routingIndicatorLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "routingIndicatorLength": (_el: _Element): void => {
+            routingIndicatorLength = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof routingIndicatorLength === "bigint" ? routingIndicatorLength : BigInt(routingIndicatorLength);
+            if (_n < 1n || _n > 4n) {
+                throw new ASN1OverflowError("SUCI.routingIndicatorLength violates INTEGER range");
+            }
+        },
         "sUPIType": (_el: _Element): void => { sUPIType = $._decode_implicit<SUPIType>(() => _decode_SUPIType)(_el); },
         "homeNetworkIdentifier": (_el: _Element): void => { homeNetworkIdentifier = $._decode_implicit<HomeNetworkIdentifier>(() => _decode_HomeNetworkIdentifier)(_el); }
     };

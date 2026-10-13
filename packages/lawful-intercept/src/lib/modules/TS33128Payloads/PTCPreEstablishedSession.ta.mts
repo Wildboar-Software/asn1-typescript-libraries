@@ -229,7 +229,7 @@ function _decode_PTCPreEstablishedSession (el: _Element): PTCPreEstablishedSessi
     let pTCMediaStreamAvail: OPTIONAL<BOOLEAN>;
     let location: OPTIONAL<Location>;
     let pTCFailureCode: OPTIONAL<PTCFailureCode>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pTCTargetInformation": (_el: _Element): void => { pTCTargetInformation = $._decode_implicit<PTCTargetInformation>(() => _decode_PTCTargetInformation)(_el); },
         "pTCServerURI": (_el: _Element): void => { pTCServerURI = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

@@ -273,7 +273,7 @@ function _decode_AMFRANTraceReport (el: _Element): AMFRANTraceReport {
     let aMFTraceData!: XMLType;
     let location: OPTIONAL<Location>;
     let traceActivation: OPTIONAL<TraceActivation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "userIdentifiers": (_el: _Element): void => { userIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); },
         "aMFUENGAPID": (_el: _Element): void => { aMFUENGAPID = $._decode_implicit<AMFUENGAPID>(() => _decode_AMFUENGAPID)(_el); },

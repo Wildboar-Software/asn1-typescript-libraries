@@ -174,7 +174,7 @@ function _decode_Messaging_Party_Information (el: _Element): Messaging_Party_Inf
     let party_identity!: Messaging_Party_Identity;
     let party_validity: OPTIONAL<Messaging_Party_Validity>;
     let copy_qualifier: OPTIONAL<Messaging_Copy_Qualifier>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "party-qualifier": (_el: _Element): void => { party_qualifier = $._decode_implicit<Messaging_Party_Qualifier>(() => _decode_Messaging_Party_Qualifier)(_el); },
         "party-identity": (_el: _Element): void => { party_identity = $._decode_explicit<Messaging_Party_Identity>(() => _decode_Messaging_Party_Identity)(_el); },

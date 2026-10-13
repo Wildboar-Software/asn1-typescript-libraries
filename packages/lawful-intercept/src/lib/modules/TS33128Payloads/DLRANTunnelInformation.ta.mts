@@ -152,7 +152,7 @@ function _decode_DLRANTunnelInformation (el: _Element): DLRANTunnelInformation {
     let additionalDLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformationList>;
     let redundantDLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformationList>;
     let additionalredundantDLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformationList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "dLQOSFlowTunnelInformation": (_el: _Element): void => { dLQOSFlowTunnelInformation = $._decode_implicit<QOSFlowTunnelInformation>(() => _decode_QOSFlowTunnelInformation)(_el); },
         "additionalDLQOSFlowTunnelInformation": (_el: _Element): void => { additionalDLQOSFlowTunnelInformation = $._decode_implicit<QOSFlowTunnelInformationList>(() => _decode_QOSFlowTunnelInformationList)(_el); },

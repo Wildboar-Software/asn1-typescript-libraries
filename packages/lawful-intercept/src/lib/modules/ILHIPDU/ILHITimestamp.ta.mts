@@ -5,6 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as Common_Parameters from "../Common-Parameters/index.mjs";
 // export { QualifiedDateTime, _decode_QualifiedDateTime, _encode_QualifiedDateTime } from "../Common-Parameters/QualifiedDateTime.ta.mjs";
 // export { QualifiedMicrosecondDateTime, _decode_QualifiedMicrosecondDateTime, _encode_QualifiedMicrosecondDateTime } from "../Common-Parameters/QualifiedMicrosecondDateTime.ta.mjs";
 

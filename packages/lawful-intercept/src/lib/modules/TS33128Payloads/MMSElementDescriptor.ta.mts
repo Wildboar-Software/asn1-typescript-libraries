@@ -139,7 +139,7 @@ function _decode_MMSElementDescriptor (el: _Element): MMSElementDescriptor {
     let reference!: UTF8String;
     let parameter: OPTIONAL<UTF8String>;
     let value: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "reference": (_el: _Element): void => { reference = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "parameter": (_el: _Element): void => { parameter = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

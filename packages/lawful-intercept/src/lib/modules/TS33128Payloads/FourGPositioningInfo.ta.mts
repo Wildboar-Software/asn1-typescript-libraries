@@ -195,7 +195,7 @@ function _decode_FourGPositioningInfo (el: _Element): FourGPositioningInfo {
     let gERANPositioningInfo: OPTIONAL<GERANPositioningInfo>;
     let uTRANPositioningInfo: OPTIONAL<UTRANPositioningInfo>;
     let rawMLPResponse: OPTIONAL<RawMLPResponse>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationData": (_el: _Element): void => { locationData = $._decode_implicit<LocationData>(() => _decode_LocationData)(_el); },
         "cGI": (_el: _Element): void => { cGI = $._decode_implicit<CGI>(() => _decode_CGI)(_el); },

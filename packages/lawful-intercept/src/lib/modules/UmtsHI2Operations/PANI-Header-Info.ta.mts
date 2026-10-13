@@ -156,7 +156,7 @@ function _decode_PANI_Header_Info (el: _Element): PANI_Header_Info {
     let access_Class: OPTIONAL<OCTET_STRING>;
     let network_Provided: OPTIONAL<NULL>;
     let pANI_Location: OPTIONAL<PANI_Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "access-Type": (_el: _Element): void => { access_Type = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "access-Class": (_el: _Element): void => { access_Class = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

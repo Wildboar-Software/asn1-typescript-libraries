@@ -1,7 +1,4 @@
 /* eslint-disable */
-import {
-    ASN1Element as _Element
-} from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -157,35 +154,8 @@ const NEFFailureCause_portNotAssociatedWithSpecifiedApplication: NEFFailureCause
  */
 export
 const portNotAssociatedWithSpecifiedApplication: NEFFailureCause = NEFFailureCause.portNotAssociatedWithSpecifiedApplication; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_NEFFailureCause: $.ASN1Decoder<NEFFailureCause> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) NEFFailureCause
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_NEFFailureCause (el: _Element): NEFFailureCause {
-    if (!_cached_decoder_for_NEFFailureCause) { _cached_decoder_for_NEFFailureCause = $._decodeEnumerated; }
-    return _cached_decoder_for_NEFFailureCause(el);
-}
-
-let _cached_encoder_for_NEFFailureCause: $.ASN1Encoder<NEFFailureCause> | null = null;
-
-/**
- * @summary Encodes a(n) NEFFailureCause into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The NEFFailureCause, encoded as an ASN.1 Element.
- */
-export
-function _encode_NEFFailureCause (value: NEFFailureCause, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NEFFailureCause) { _cached_encoder_for_NEFFailureCause = $._encodeEnumerated; }
-    return _cached_encoder_for_NEFFailureCause(value, elGetter);
-}
+export const _decode_NEFFailureCause: $.ASN1Decoder<NEFFailureCause> = $._decodeEnumerated;
+export const _encode_NEFFailureCause: $.ASN1Encoder<NEFFailureCause> = $._encodeEnumerated;
 
 
 /* eslint-enable */

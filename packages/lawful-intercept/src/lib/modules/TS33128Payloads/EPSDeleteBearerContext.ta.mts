@@ -156,7 +156,7 @@ function _decode_EPSDeleteBearerContext (el: _Element): EPSDeleteBearerContext {
     let ePSBearerID!: EPSBearerID;
     let protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>;
     let rANNASCause: OPTIONAL<EPSRANNASCause>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "cause": (_el: _Element): void => { cause = $._decode_implicit<EPSBearerDeletionCauseValue>(() => _decode_EPSBearerDeletionCauseValue)(_el); },
         "ePSBearerID": (_el: _Element): void => { ePSBearerID = $._decode_implicit<EPSBearerID>(() => _decode_EPSBearerID)(_el); },

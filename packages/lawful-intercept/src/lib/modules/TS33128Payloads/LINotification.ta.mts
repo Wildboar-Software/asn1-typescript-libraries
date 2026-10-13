@@ -196,7 +196,7 @@ function _decode_LINotification (el: _Element): LINotification {
     let appliedEndTime: OPTIONAL<Timestamp>;
     let appliedTargetIsLocal: OPTIONAL<BOOLEAN>;
     let appliedTargetIsNonLocal: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "notificationType": (_el: _Element): void => { notificationType = $._decode_implicit<LINotificationType>(() => _decode_LINotificationType)(_el); },
         "appliedTargetID": (_el: _Element): void => { appliedTargetID = $._decode_explicit<TargetIdentifier>(() => _decode_TargetIdentifier)(_el); },

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -103,35 +102,8 @@ const CCLink_State_lack_of_resource: CCLink_State = 4; /* LONG_NAMED_ENUMERATED_
  */
 export
 const lack_of_resource: CCLink_State = CCLink_State_lack_of_resource; /* SHORT_NAMED_ENUMERATED_VALUE */
-
-let _cached_decoder_for_CCLink_State: $.ASN1Decoder<CCLink_State> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) CCLink_State
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_CCLink_State (el: _Element): CCLink_State {
-    if (!_cached_decoder_for_CCLink_State) { _cached_decoder_for_CCLink_State = $._decodeEnumerated; }
-    return _cached_decoder_for_CCLink_State(el);
-}
-
-let _cached_encoder_for_CCLink_State: $.ASN1Encoder<CCLink_State> | null = null;
-
-/**
- * @summary Encodes a(n) CCLink_State into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The CCLink_State, encoded as an ASN.1 Element.
- */
-export
-function _encode_CCLink_State (value: CCLink_State, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CCLink_State) { _cached_encoder_for_CCLink_State = $._encodeEnumerated; }
-    return _cached_encoder_for_CCLink_State(value, elGetter);
-}
+export const _decode_CCLink_State: $.ASN1Decoder<CCLink_State> = $._decodeEnumerated;
+export const _encode_CCLink_State: $.ASN1Encoder<CCLink_State> = $._encodeEnumerated;
 
 
 /* eslint-enable */

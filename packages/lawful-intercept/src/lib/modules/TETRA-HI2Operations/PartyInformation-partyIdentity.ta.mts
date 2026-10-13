@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../TETRA-HI2Operations/CallingPartyNumber.ta.mjs";
@@ -19,7 +20,33 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PartyInformation-partyIdentity ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PartyInformation-partyIdentity ::= SEQUENCE {
+ *     imei                [1] OCTET STRING (SIZE (8)) OPTIONAL,
+ *     -- See MAP format TS GSM 09.02 [32]
+ *     tei                    [2] OCTET STRING (SIZE (1..15)) OPTIONAL,
+ *     -- ISDN-based Terminal Equipment Identity
+ *     imsi                [3] OCTET STRING (SIZE (3..8)) OPTIONAL,
+ *     -- See MAP format TS GSM 09.02 [32] International Mobile
+ *     -- Station Identity E.212 number beginning with Mobile Country Code
+ *     callingPartyNumber    [4] CallingPartyNumber OPTIONAL,
+ *     -- The calling party format is used to transmit the identity of a calling party
+ *     calledPartyNumber    [5] CalledPartyNumber OPTIONAL,
+ *     -- The called party format is used to transmit the identity of a called party or
+ *     -- a forwarded to party.
+ *     msISDN                [6] OCTET STRING (SIZE (1..9)) OPTIONAL,
+ *     -- MSISDN of the target, encoded in the same format as the AddressString
+ *     -- parameters defined in MAP format TS GSM 09.02 [32], clause 14.7.8.
+ *     ...,
+ *     e164-Format            [7] OCTET STRING (SIZE (1..25)) OPTIONAL,
+ *     -- E164 address of the node in international format. Coded in the same format as
+ *     -- the calling party number parameter of the ISUP (parameter part: EN 300 356 [5])
+ *     sip-uri                [8] OCTET STRING OPTIONAL,
+ *     -- Session Initiation Protocol - Uniform Resource Identifier. See RFC 3261 [59].
+ *     -- This parameter is duplicated from 3GPP TS 33.108 [61].
+ *     tel-url                [9] OCTET STRING OPTIONAL
+ *     -- See "URLs for Telephone Calls", RFC 3966 [68].
+ *     -- This parameter is duplicated from 3GPP TS 33.108 [61].
+ * }
  * ```
  * 
  * @class
@@ -196,15 +223,40 @@ function _decode_PartyInformation_partyIdentity (el: _Element): PartyInformation
     let e164_Format: OPTIONAL<OCTET_STRING>;
     let sip_uri: OPTIONAL<OCTET_STRING>;
     let tel_url: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        "imei": (_el: _Element): void => { imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "tei": (_el: _Element): void => { tei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "imsi": (_el: _Element): void => { imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "imei": (_el: _Element): void => {
+            imei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imei.length < 8 || imei.length > 8) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.imei violates SIZE constraint");
+            }
+        },
+        "tei": (_el: _Element): void => {
+            tei = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (tei.length < 1 || tei.length > 15) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.tei violates SIZE constraint");
+            }
+        },
+        "imsi": (_el: _Element): void => {
+            imsi = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (imsi.length < 3 || imsi.length > 8) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.imsi violates SIZE constraint");
+            }
+        },
         "callingPartyNumber": (_el: _Element): void => { callingPartyNumber = $._decode_explicit<CallingPartyNumber>(() => _decode_CallingPartyNumber)(_el); },
         "calledPartyNumber": (_el: _Element): void => { calledPartyNumber = $._decode_explicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); },
-        "msISDN": (_el: _Element): void => { msISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "e164-Format": (_el: _Element): void => { e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "msISDN": (_el: _Element): void => {
+            msISDN = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (msISDN.length < 1 || msISDN.length > 9) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.msISDN violates SIZE constraint");
+            }
+        },
+        "e164-Format": (_el: _Element): void => {
+            e164_Format = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (e164_Format.length < 1 || e164_Format.length > 25) {
+                throw new ASN1SizeError("PartyInformation_partyIdentity.e164_Format violates SIZE constraint");
+            }
+        },
         "sip-uri": (_el: _Element): void => { sip_uri = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
         "tel-url": (_el: _Element): void => { tel_url = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); }
     };

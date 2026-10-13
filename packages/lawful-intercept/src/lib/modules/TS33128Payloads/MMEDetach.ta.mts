@@ -239,7 +239,7 @@ function _decode_MMEDetach (el: _Element): MMEDetach {
     let cause: OPTIONAL<EMMCause>;
     let location: OPTIONAL<Location>;
     let switchOffIndicator: OPTIONAL<SwitchOffIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "detachDirection": (_el: _Element): void => { detachDirection = $._decode_implicit<MMEDirection>(() => _decode_MMEDirection)(_el); },
         "detachType": (_el: _Element): void => { detachType = $._decode_implicit<EPSDetachType>(() => _decode_EPSDetachType)(_el); },

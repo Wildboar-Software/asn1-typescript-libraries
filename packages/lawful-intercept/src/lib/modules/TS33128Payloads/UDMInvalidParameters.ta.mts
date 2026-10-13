@@ -128,7 +128,7 @@ function _decode_UDMInvalidParameters (el: _Element): UDMInvalidParameters {
     if (!_cached_decoder_for_UDMInvalidParameters) { _cached_decoder_for_UDMInvalidParameters = function (el: _Element): UDMInvalidParameters {
     let parameter: OPTIONAL<UTF8String>;
     let reason: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "parameter": (_el: _Element): void => { parameter = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "reason": (_el: _Element): void => { reason = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }

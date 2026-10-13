@@ -136,7 +136,7 @@ function _decode_IRITargetIdentifier (el: _Element): IRITargetIdentifier {
     if (!_cached_decoder_for_IRITargetIdentifier) { _cached_decoder_for_IRITargetIdentifier = function (el: _Element): IRITargetIdentifier {
     let identifier!: TargetIdentifier;
     let provenance: OPTIONAL<TargetIdentifierProvenance>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "identifier": (_el: _Element): void => { identifier = $._decode_explicit<TargetIdentifier>(() => _decode_TargetIdentifier)(_el); },
         "provenance": (_el: _Element): void => { provenance = $._decode_implicit<TargetIdentifierProvenance>(() => _decode_TargetIdentifierProvenance)(_el); }

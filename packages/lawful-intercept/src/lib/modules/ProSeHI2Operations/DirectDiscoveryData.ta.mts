@@ -5,7 +5,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../ProSeHI2Operations/ProSeAppMask.ta.mjs";
@@ -167,11 +168,16 @@ function _decode_DirectDiscoveryData (el: _Element): DirectDiscoveryData {
     let proseAppCode!: OCTET_STRING;
     let proseAppMask: OPTIONAL<ProSeAppMask>;
     let timer!: INTEGER;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "discoveryPLMNID": (_el: _Element): void => { discoveryPLMNID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "proseAppIdName": (_el: _Element): void => { proseAppIdName = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
-        "proseAppCode": (_el: _Element): void => { proseAppCode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "proseAppCode": (_el: _Element): void => {
+            proseAppCode = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el);
+            if (proseAppCode.length < 23 || proseAppCode.length > 23) {
+                throw new ASN1SizeError("DirectDiscoveryData.proseAppCode violates SIZE constraint");
+            }
+        },
         "proseAppMask": (_el: _Element): void => { proseAppMask = $._decode_explicit<ProSeAppMask>(() => _decode_ProSeAppMask)(_el); },
         "timer": (_el: _Element): void => { timer = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); }
     };

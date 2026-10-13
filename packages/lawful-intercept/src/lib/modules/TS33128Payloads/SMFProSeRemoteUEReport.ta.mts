@@ -193,7 +193,7 @@ function _decode_SMFProSeRemoteUEReport (el: _Element): SMFProSeRemoteUEReport {
     let remoteUEContextConnected: OPTIONAL<RemoteUEContext>;
     let remoteUEContextDisconnected: OPTIONAL<RemoteUEContext>;
     let location: OPTIONAL<Location>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },

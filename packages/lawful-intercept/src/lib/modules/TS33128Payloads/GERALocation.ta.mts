@@ -252,7 +252,7 @@ function _decode_GERALocation (el: _Element): GERALocation {
     let geographicalInformation: OPTIONAL<UTF8String>;
     let geodeticInformation: OPTIONAL<UTF8String>;
     let cellSiteInformation: OPTIONAL<CellSiteInformation>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "locationNumber": (_el: _Element): void => { locationNumber = $._decode_implicit<E164Number>(() => _decode_E164Number)(_el); },
         "cGI": (_el: _Element): void => { cGI = $._decode_implicit<CGI>(() => _decode_CGI)(_el); },

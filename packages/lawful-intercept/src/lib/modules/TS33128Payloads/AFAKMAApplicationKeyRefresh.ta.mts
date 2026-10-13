@@ -156,7 +156,7 @@ function _decode_AFAKMAApplicationKeyRefresh (el: _Element): AFAKMAApplicationKe
     let aKID!: NAI;
     let kAF!: KAF;
     let uaStarParams: OPTIONAL<UAStarParams>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aFID": (_el: _Element): void => { aFID = $._decode_implicit<AFID>(() => _decode_AFID)(_el); },
         "aKID": (_el: _Element): void => { aKID = $._decode_implicit<NAI>(() => _decode_NAI)(_el); },

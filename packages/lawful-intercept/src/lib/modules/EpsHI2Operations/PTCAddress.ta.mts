@@ -161,7 +161,7 @@ function _decode_PTCAddress (el: _Element): PTCAddress {
     let privacy_setting!: BOOLEAN;
     let privacy_alias: OPTIONAL<VisibleString>;
     let nickname: OPTIONAL<UTF8String>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "uri": (_el: _Element): void => { uri = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "privacy-setting": (_el: _Element): void => { privacy_setting = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },

@@ -4,6 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import * as CONFHI2Operations from "../CONFHI2Operations/index.mjs";
 // export { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "../CONFHI2Operations/IRI-Parameters.ta.mjs";
 // export { ConfIRIsContent, _decode_ConfIRIsContent, _encode_ConfIRIsContent } from "../CONFHI2Operations/ConfIRIsContent.ta.mjs";
 

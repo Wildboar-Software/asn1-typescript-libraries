@@ -3,7 +3,8 @@ import {
     BIT_STRING,
     NumericString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TSIType, _decode_TSIType, _encode_TSIType } from "../EN301040/TSIType.ta.mjs";
@@ -56,7 +57,32 @@ function _decode_TETRAAddressType (el: _Element): TETRAAddressType {
     "CONTEXT 4": [ "e164address", $._decodeNumericString ],
     "CONTEXT 5": [ "tEI", _decode_TEIType ]
 }); }
-    return _cached_decoder_for_TETRAAddressType(el);
+    const _value = _cached_decoder_for_TETRAAddressType(el);
+    if ("pISNaddress" in _value && _value.pISNaddress !== undefined) {
+        const _alt = _value.pISNaddress;
+        if (_alt.length < 20 || _alt.length > 20) {
+            throw new ASN1SizeError("TETRAAddressType.pISNaddress violates SIZE constraint");
+        }
+    }
+    if ("iP4address" in _value && _value.iP4address !== undefined) {
+        const _alt = _value.iP4address;
+        if (_alt.length < 32 || _alt.length > 32) {
+            throw new ASN1SizeError("TETRAAddressType.iP4address violates SIZE constraint");
+        }
+    }
+    if ("iP6address" in _value && _value.iP6address !== undefined) {
+        const _alt = _value.iP6address;
+        if (_alt.length < 128 || _alt.length > 128) {
+            throw new ASN1SizeError("TETRAAddressType.iP6address violates SIZE constraint");
+        }
+    }
+    if ("e164address" in _value && _value.e164address !== undefined) {
+        const _alt = _value.e164address;
+        if (_alt.length < 20 || _alt.length > 20) {
+            throw new ASN1SizeError("TETRAAddressType.e164address violates SIZE constraint");
+        }
+    }
+    return _value;
 }
 
 let _cached_encoder_for_TETRAAddressType: $.ASN1Encoder<TETRAAddressType> | null = null;

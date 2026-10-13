@@ -169,7 +169,7 @@ function _decode_UDMUEInformationResponse (el: _Element): UDMUEInformationRespon
     let fiveGSUserStateInfo: OPTIONAL<FiveGSUserStateInfo>;
     let fiveGSRVCCInfo: OPTIONAL<FiveGSRVCCInfo>;
     let problemDetails: OPTIONAL<UDMProblemDetails>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
         "tADSInfo": (_el: _Element): void => { tADSInfo = $._decode_implicit<UEContextInfo>(() => _decode_UEContextInfo)(_el); },

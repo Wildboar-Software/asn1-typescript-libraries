@@ -200,7 +200,7 @@ function _decode_QOSFlowList (el: _Element): QOSFlowList {
     let qOSFlowProfile: OPTIONAL<QOSFlowProfile>;
     let associatedANType: OPTIONAL<AccessType>;
     let defaultQOSRuleIndication: OPTIONAL<BOOLEAN>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "qFI": (_el: _Element): void => { qFI = $._decode_implicit<QFI>(() => _decode_QFI)(_el); },
         "qOSRules": (_el: _Element): void => { qOSRules = $._decode_implicit<QOSRules>(() => _decode_QOSRules)(_el); },

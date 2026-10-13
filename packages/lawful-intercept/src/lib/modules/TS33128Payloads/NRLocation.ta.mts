@@ -256,7 +256,7 @@ function _decode_NRLocation (el: _Element): NRLocation {
     let nRNTNTAIInfo: OPTIONAL<NRNTNTAIInfo>;
     let iABMTUserLocation: OPTIONAL<IABMTUserLocation>;
     let cellRadioRelatedInformation: OPTIONAL<CellRadioRelatedInformation[]>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tAI": (_el: _Element): void => { tAI = $._decode_implicit<TAI>(() => _decode_TAI)(_el); },
         "nCGI": (_el: _Element): void => { nCGI = $._decode_implicit<NCGI>(() => _decode_NCGI)(_el); },

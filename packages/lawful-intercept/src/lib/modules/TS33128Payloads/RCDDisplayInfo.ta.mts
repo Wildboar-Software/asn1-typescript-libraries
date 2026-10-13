@@ -140,7 +140,7 @@ function _decode_RCDDisplayInfo (el: _Element): RCDDisplayInfo {
     let name!: UTF8String;
     let jcd: OPTIONAL<OCTET_STRING>;
     let jcl: OPTIONAL<OCTET_STRING>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "name": (_el: _Element): void => { name = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "jcd": (_el: _Element): void => { jcd = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },

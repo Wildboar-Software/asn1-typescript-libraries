@@ -255,7 +255,7 @@ function _decode_MBMSinformation (el: _Element): MBMSinformation {
     let mBMSapn: OPTIONAL<UTF8String>;
     let mbmsSerSubscriberList: OPTIONAL<MBMSSerSubscriberList>;
     let mbmsNodeList: OPTIONAL<MBMSNodeList>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "mbmsServiceName": (_el: _Element): void => { mbmsServiceName = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
         "mbms-join-time": (_el: _Element): void => { mbms_join_time = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },

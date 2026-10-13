@@ -5,7 +5,8 @@ import {
     OPTIONAL,
     RELATIVE_OID,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SupplementaryInfo, _decode_SupplementaryInfo, _encode_SupplementaryInfo } from "../PstnIsdnPDU/SupplementaryInfo.ta.mjs";
@@ -156,11 +157,17 @@ function _decode_PstnIsdnCC (el: _Element): PstnIsdnCC {
     let pstnIsdnCCContents!: OCTET_STRING;
     let cCLinkID: OPTIONAL<INTEGER>;
     let supplementaryInfo: OPTIONAL<SupplementaryInfo>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "pstnIsdnCCObjId": (_el: _Element): void => { pstnIsdnCCObjId = $._decode_implicit<RELATIVE_OID>(() => $._decodeRelativeOID)(_el); },
         "pstnIsdnCCContents": (_el: _Element): void => { pstnIsdnCCContents = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
-        "cCLinkID": (_el: _Element): void => { cCLinkID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "cCLinkID": (_el: _Element): void => {
+            cCLinkID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            const _n = typeof cCLinkID === "bigint" ? cCLinkID : BigInt(cCLinkID);
+            if (_n < 0n || _n > 65535n) {
+                throw new ASN1OverflowError("PstnIsdnCC.cCLinkID violates INTEGER range");
+            }
+        },
         "supplementaryInfo": (_el: _Element): void => { supplementaryInfo = $._decode_implicit<SupplementaryInfo>(() => _decode_SupplementaryInfo)(_el); }
     };
     $._parse_sequence(el, callbacks,

@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AMFUENGAPID, _decode_AMFUENGAPID, _encode_AMFUENGAPID } from "../TS33128Payloads/AMFUENGAPID.ta.mjs";
@@ -347,12 +348,17 @@ function _decode_InitialRANUEContextSetup (el: _Element): InitialRANUEContextSet
     let fiveGProSeAuthorizationIndication: OPTIONAL<FiveGProSeAuthorizationIndication>;
     let uEDifferentiationInfo: OPTIONAL<UEDifferentiationInfo>;
     let mobileIABAuthorizedIndicator: OPTIONAL<MobileIABAuthorizedIndicator>;
-    let _unrecognizedExtensionsList: _Element[] = [];
+    const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "aMFUENGAPID": (_el: _Element): void => { aMFUENGAPID = $._decode_implicit<AMFUENGAPID>(() => _decode_AMFUENGAPID)(_el); },
         "rANUENGAPID": (_el: _Element): void => { rANUENGAPID = $._decode_implicit<RANUENGAPID>(() => _decode_RANUENGAPID)(_el); },
         "oldAMF": (_el: _Element): void => { oldAMF = $._decode_implicit<GUAMI>(() => _decode_GUAMI)(_el); },
-        "pDUSessionSetupRequest": (_el: _Element): void => { pDUSessionSetupRequest = $._decode_implicit<PDUSessionSetupRequestItem[]>(() => $._decodeSequenceOf<PDUSessionSetupRequestItem>(() => _decode_PDUSessionSetupRequestItem))(_el); },
+        "pDUSessionSetupRequest": (_el: _Element): void => {
+            pDUSessionSetupRequest = $._decode_implicit<PDUSessionSetupRequestItem[]>(() => $._decodeSequenceOf<PDUSessionSetupRequestItem>(() => _decode_PDUSessionSetupRequestItem))(_el);
+            if (pDUSessionSetupRequest.length < 1) {
+                throw new ASN1SizeError("InitialRANUEContextSetup.pDUSessionSetupRequest violates SIZE constraint");
+            }
+        },
         "allowedNSSAI": (_el: _Element): void => { allowedNSSAI = $._decode_implicit<AllowedNSSAI>(() => _decode_AllowedNSSAI)(_el); },
         "mobilityRestrictionList": (_el: _Element): void => { mobilityRestrictionList = $._decode_implicit<MobilityRestrictionList>(() => _decode_MobilityRestrictionList)(_el); },
         "uERadioCapability": (_el: _Element): void => { uERadioCapability = $._decode_implicit<UERadioCapability>(() => _decode_UERadioCapability)(_el); },
