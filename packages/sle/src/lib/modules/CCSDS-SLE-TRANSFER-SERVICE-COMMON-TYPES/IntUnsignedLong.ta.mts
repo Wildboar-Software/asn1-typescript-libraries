@@ -1,11 +1,17 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return n >= min && n <= max;
+}
 
 /**
  * @summary IntUnsignedLong
@@ -19,7 +25,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type IntUnsignedLong = INTEGER;
-export const _decode_IntUnsignedLong: $.ASN1Decoder<IntUnsignedLong> = $._decodeInteger;
+export function _decode_IntUnsignedLong (el: _Element): IntUnsignedLong {
+    const _decoded = $._decodeInteger(el);
+    if (!integerInRange(_decoded, 0n, 4294967295n)) {
+        throw new ASN1OverflowError("IntUnsignedLong violates INTEGER (0..4294967295)");
+    }
+    return _decoded;
+}
 export const _encode_IntUnsignedLong: $.ASN1Encoder<IntUnsignedLong> = $._encodeInteger;
 
 

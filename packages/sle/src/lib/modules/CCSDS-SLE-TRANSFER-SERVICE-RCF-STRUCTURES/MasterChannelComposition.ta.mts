@@ -3,12 +3,24 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MasterChannelComposition_mcOrVcList, _decode_MasterChannelComposition_mcOrVcList, _encode_MasterChannelComposition_mcOrVcList } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/MasterChannelComposition-mcOrVcList.ta.mjs";
 // export { MasterChannelComposition_mcOrVcList, _decode_MasterChannelComposition_mcOrVcList, _encode_MasterChannelComposition_mcOrVcList } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/MasterChannelComposition-mcOrVcList.ta.mjs";
 
+
+function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return n >= min && n <= max;
+}
+
+function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return allowed.includes(n);
+}
 
 /**
  * @summary MasterChannelComposition
@@ -64,6 +76,12 @@ class MasterChannelComposition {
         versionNumber: INTEGER,
         mcOrVcList: MasterChannelComposition_mcOrVcList
     ) {
+        if (!integerInRange(spacecraftId, 0n, 65535n)) {
+            throw new ASN1OverflowError("MasterChannelComposition.spacecraftId violates INTEGER (0..65535)");
+        }
+        if (!integerIsOneOf(versionNumber, [0n, 1n, 12n])) {
+            throw new ASN1Error("MasterChannelComposition.versionNumber violates INTEGER (0 | 1 | 12)");
+        }
         this.spacecraftId = spacecraftId;
         this.versionNumber = versionNumber;
         this.mcOrVcList = mcOrVcList;

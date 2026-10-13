@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedFrameQuality, _decode_RequestedFrameQuality, _encode_RequestedFrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RequestedFrameQuality.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_PermittedFrameQualitySet: $.ASN1Decoder<PermittedFrameQu
 export
 function _decode_PermittedFrameQualitySet (el: _Element): PermittedFrameQualitySet {
     if (!_cached_decoder_for_PermittedFrameQualitySet) { _cached_decoder_for_PermittedFrameQualitySet = $._decodeSetOf<RequestedFrameQuality>(() => _decode_RequestedFrameQuality); }
-    return _cached_decoder_for_PermittedFrameQualitySet(el);
+    const _decoded = _cached_decoder_for_PermittedFrameQualitySet(el);
+    if (_decoded.length < 1 || _decoded.length > 3) {
+        throw new ASN1SizeError("PermittedFrameQualitySet violates SIZE (1..3)");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_PermittedFrameQualitySet: $.ASN1Encoder<PermittedFrameQualitySet> | null = null;

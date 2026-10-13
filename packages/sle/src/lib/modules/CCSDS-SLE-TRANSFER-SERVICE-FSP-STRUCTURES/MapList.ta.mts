@@ -2,7 +2,8 @@
 import {
     NULL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MapId, _decode_MapId, _encode_MapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapId.ta.mjs";
@@ -41,7 +42,13 @@ function _decode_MapList (el: _Element): MapList {
     "CONTEXT 0": [ "mapsNotUsed", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 1": [ "mapsUsed", $._decode_implicit<MapId[]>(() => $._decodeSequenceOf<MapId>(() => _decode_MapId)) ]
 }); }
-    return _cached_decoder_for_MapList(el);
+    const _decoded = _cached_decoder_for_MapList(el);
+    if ("mapsUsed" in _decoded) {
+        if (_decoded.mapsUsed.length < 1 || _decoded.mapsUsed.length > 64) {
+            throw new ASN1SizeError("MapList.mapsUsed violates SIZE (1..64)");
+        }
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_MapList: $.ASN1Encoder<MapList> | null = null;

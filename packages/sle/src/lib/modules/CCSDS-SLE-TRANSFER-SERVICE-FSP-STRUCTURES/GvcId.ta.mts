@@ -3,12 +3,18 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/GvcId-vcId.ta.mjs";
 // export { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/GvcId-vcId.ta.mjs";
 
+
+function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return n >= min && n <= max;
+}
 
 /**
  * @summary GvcId
@@ -55,6 +61,12 @@ class GvcId {
         versionNumber: INTEGER,
         vcId: GvcId_vcId
     ) {
+        if (!integerInRange(spacecraftId, 0n, 1023n)) {
+            throw new ASN1OverflowError("GvcId.spacecraftId violates INTEGER (0..1023)");
+        }
+        if (!integerInRange(versionNumber, 0n, 3n)) {
+            throw new ASN1OverflowError("GvcId.versionNumber violates INTEGER (0..3)");
+        }
         this.spacecraftId = spacecraftId;
         this.versionNumber = versionNumber;
         this.vcId = vcId;

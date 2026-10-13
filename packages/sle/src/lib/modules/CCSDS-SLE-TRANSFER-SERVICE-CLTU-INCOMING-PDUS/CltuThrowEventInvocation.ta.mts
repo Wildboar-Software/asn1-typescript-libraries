@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
@@ -74,6 +75,9 @@ class CltuThrowEventInvocation {
         eventIdentifier: IntPosShort,
         eventQualifier: OCTET_STRING
     ) {
+        if (eventQualifier.length < 1 || eventQualifier.length > 1024) {
+            throw new ASN1SizeError("CltuThrowEventInvocation.eventQualifier violates SIZE (1..1024)");
+        }
         this.invokerCredentials = invokerCredentials;
         this.invokeId = invokeId;
         this.eventInvocationIdentification = eventInvocationIdentification;

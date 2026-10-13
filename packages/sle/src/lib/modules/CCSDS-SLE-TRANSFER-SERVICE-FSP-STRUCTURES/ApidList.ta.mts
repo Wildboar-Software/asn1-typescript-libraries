@@ -2,7 +2,8 @@
 import {
     NULL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Apid, _decode_Apid, _encode_Apid } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Apid.ta.mjs";
@@ -41,7 +42,13 @@ function _decode_ApidList (el: _Element): ApidList {
     "CONTEXT 0": [ "any_", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 1": [ "apidList", $._decode_implicit<Apid[]>(() => $._decodeSequenceOf<Apid>(() => _decode_Apid)) ]
 }); }
-    return _cached_decoder_for_ApidList(el);
+    const _decoded = _cached_decoder_for_ApidList(el);
+    if ("apidList" in _decoded) {
+        if (_decoded.apidList.length < 1 || _decoded.apidList.length > 2048) {
+            throw new ASN1SizeError("ApidList.apidList violates SIZE (1..2048)");
+        }
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_ApidList: $.ASN1Encoder<ApidList> | null = null;

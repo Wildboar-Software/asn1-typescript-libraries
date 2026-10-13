@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AbsolutePriority, _decode_AbsolutePriority, _encode_AbsolutePriority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/AbsolutePriority.ta.mjs";
@@ -42,7 +43,18 @@ function _decode_MapMuxControl (el: _Element): MapMuxControl {
     "CONTEXT 0": [ "absolutePriority", $._decode_implicit<AbsolutePriority[]>(() => $._decodeSequenceOf<AbsolutePriority>(() => _decode_AbsolutePriority)) ],
     "CONTEXT 1": [ "pollingVector", $._decode_implicit<MapId[]>(() => $._decodeSequenceOf<MapId>(() => _decode_MapId)) ]
 }); }
-    return _cached_decoder_for_MapMuxControl(el);
+    const _decoded = _cached_decoder_for_MapMuxControl(el);
+    if ("absolutePriority" in _decoded) {
+        if (_decoded.absolutePriority.length < 1 || _decoded.absolutePriority.length > 64) {
+            throw new ASN1SizeError("MapMuxControl.absolutePriority violates SIZE (1..64)");
+        }
+    }
+    if ("pollingVector" in _decoded) {
+        if (_decoded.pollingVector.length < 1 || _decoded.pollingVector.length > 192) {
+            throw new ASN1SizeError("MapMuxControl.pollingVector violates SIZE (1..192)");
+        }
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_MapMuxControl: $.ASN1Encoder<MapMuxControl> | null = null;

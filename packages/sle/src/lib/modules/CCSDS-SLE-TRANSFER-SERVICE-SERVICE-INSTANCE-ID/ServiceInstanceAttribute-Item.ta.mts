@@ -4,7 +4,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
-    VisibleString
+    VisibleString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 // export { ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
@@ -46,6 +47,9 @@ class ServiceInstanceAttribute_Item {
         identifier: OBJECT_IDENTIFIER,
         siAttributeValue: VisibleString
     ) {
+        if (siAttributeValue.length < 1 || siAttributeValue.length > 256) {
+            throw new ASN1SizeError("ServiceInstanceAttribute_Item.siAttributeValue violates SIZE (1..256)");
+        }
         this.identifier = identifier;
         this.siAttributeValue = siAttributeValue;
     }

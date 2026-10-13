@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     NULL,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +42,13 @@ function _decode_RocfTransferDataInvocation_privateAnnotation (el: _Element): Ro
     "CONTEXT 0": [ "null_", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 1": [ "notNull", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_RocfTransferDataInvocation_privateAnnotation(el);
+    const _decoded = _cached_decoder_for_RocfTransferDataInvocation_privateAnnotation(el);
+    if ("notNull" in _decoded) {
+        if (_decoded.notNull.length < 1 || _decoded.notNull.length > 128) {
+            throw new ASN1SizeError("RocfTransferDataInvocation_privateAnnotation.notNull violates SIZE (1..128)");
+        }
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_RocfTransferDataInvocation_privateAnnotation: $.ASN1Encoder<RocfTransferDataInvocation_privateAnnotation> | null = null;

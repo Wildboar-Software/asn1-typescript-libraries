@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,7 +20,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TimeCCSDSpico = OCTET_STRING; // OctetStringType
-export const _decode_TimeCCSDSpico: $.ASN1Decoder<TimeCCSDSpico> = $._decodeOctetString;
+export function _decode_TimeCCSDSpico (el: _Element): TimeCCSDSpico {
+    const _decoded = $._decodeOctetString(el);
+    if (_decoded.length < 10 || _decoded.length > 10) {
+        throw new ASN1SizeError("TimeCCSDSpico violates SIZE (10)");
+    }
+    return _decoded;
+}
 export const _encode_TimeCCSDSpico: $.ASN1Encoder<TimeCCSDSpico> = $._encodeOctetString;
 
 

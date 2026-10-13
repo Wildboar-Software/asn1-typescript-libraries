@@ -3,7 +3,8 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
@@ -17,6 +18,11 @@ import { RcfTransferDataInvocation_privateAnnotation, _decode_RcfTransferDataInv
 import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
 // export { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
 
+
+function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return n >= min && n <= max;
+}
 
 /**
  * @summary RcfTransferDataInvocation
@@ -87,6 +93,9 @@ class RcfTransferDataInvocation {
         privateAnnotation: RcfTransferDataInvocation_privateAnnotation,
         data: SpaceLinkDataUnit
     ) {
+        if (!integerInRange(dataLinkContinuity, -1n, 16777215n)) {
+            throw new ASN1OverflowError("RcfTransferDataInvocation.dataLinkContinuity violates INTEGER (-1..16777215)");
+        }
         this.invokerCredentials = invokerCredentials;
         this.earthReceiveTime = earthReceiveTime;
         this.antennaId = antennaId;

@@ -1,11 +1,17 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return n >= min && n <= max;
+}
 
 /**
  * @summary ReportingCycle
@@ -19,7 +25,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ReportingCycle = INTEGER;
-export const _decode_ReportingCycle: $.ASN1Decoder<ReportingCycle> = $._decodeInteger;
+export function _decode_ReportingCycle (el: _Element): ReportingCycle {
+    const _decoded = $._decodeInteger(el);
+    if (!integerInRange(_decoded, 2n, 600n)) {
+        throw new ASN1OverflowError("ReportingCycle violates INTEGER (2..600)");
+    }
+    return _decoded;
+}
 export const _encode_ReportingCycle: $.ASN1Encoder<ReportingCycle> = $._encodeInteger;
 
 

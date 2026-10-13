@@ -1,11 +1,17 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return n >= min && n <= max;
+}
 
 /**
  * @summary Priority
@@ -19,7 +25,13 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Priority = INTEGER;
-export const _decode_Priority: $.ASN1Decoder<Priority> = $._decodeInteger;
+export function _decode_Priority (el: _Element): Priority {
+    const _decoded = $._decodeInteger(el);
+    if (!integerInRange(_decoded, 1n, 64n)) {
+        throw new ASN1OverflowError("Priority violates INTEGER (1..64)");
+    }
+    return _decoded;
+}
 export const _encode_Priority: $.ASN1Encoder<Priority> = $._encodeInteger;
 
 

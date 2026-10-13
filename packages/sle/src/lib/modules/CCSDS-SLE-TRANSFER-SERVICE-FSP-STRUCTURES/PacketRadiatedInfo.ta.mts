@@ -3,12 +3,18 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
 // export { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
 
+
+function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return n >= min && n <= max;
+}
 
 /**
  * @summary PacketRadiatedInfo
@@ -44,6 +50,9 @@ class PacketRadiatedInfo {
         packetIdentificationList: PacketIdentificationList,
         frameSequenceNumber: INTEGER
     ) {
+        if (!integerInRange(frameSequenceNumber, 0n, 255n)) {
+            throw new ASN1OverflowError("PacketRadiatedInfo.frameSequenceNumber violates INTEGER (0..255)");
+        }
         this.packetIdentificationList = packetIdentificationList;
         this.frameSequenceNumber = frameSequenceNumber;
     }

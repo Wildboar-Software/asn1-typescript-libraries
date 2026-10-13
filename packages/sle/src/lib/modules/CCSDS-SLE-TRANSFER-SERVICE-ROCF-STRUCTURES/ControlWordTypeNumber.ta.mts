@@ -1,11 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedControlWordTypeNumber.ta.mjs";
 // export { RequestedControlWordTypeNumber, RequestedControlWordTypeNumber_allControlWords /* IMPORTED_LONG_NAMED_INTEGER */, allControlWords /* IMPORTED_SHORT_NAMED_INTEGER */, RequestedControlWordTypeNumber_clcw /* IMPORTED_LONG_NAMED_INTEGER */, clcw /* IMPORTED_SHORT_NAMED_INTEGER */, RequestedControlWordTypeNumber_notClcw /* IMPORTED_LONG_NAMED_INTEGER */, notClcw /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedControlWordTypeNumber.ta.mjs";
 
+
+function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return allowed.includes(n);
+}
 
 /**
  * @summary ControlWordTypeNumber
@@ -35,7 +41,11 @@ let _cached_decoder_for_ControlWordTypeNumber: $.ASN1Decoder<ControlWordTypeNumb
 export
 function _decode_ControlWordTypeNumber (el: _Element): ControlWordTypeNumber {
     if (!_cached_decoder_for_ControlWordTypeNumber) { _cached_decoder_for_ControlWordTypeNumber = _decode_RequestedControlWordTypeNumber; }
-    return _cached_decoder_for_ControlWordTypeNumber(el);
+    const _decoded = _cached_decoder_for_ControlWordTypeNumber(el);
+    if (!integerIsOneOf(_decoded, [BigInt(RequestedControlWordTypeNumber_allControlWords), BigInt(RequestedControlWordTypeNumber_clcw), BigInt(RequestedControlWordTypeNumber_notClcw)])) {
+        throw new ASN1Error("ControlWordTypeNumber violates RequestedControlWordTypeNumber (allControlWords | clcw | notClcw)");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_ControlWordTypeNumber: $.ASN1Encoder<ControlWordTypeNumber> | null = null;
@@ -55,3 +65,4 @@ function _encode_ControlWordTypeNumber (value: ControlWordTypeNumber, elGetter: 
 
 
 /* eslint-enable */
+import { RequestedControlWordTypeNumber_allControlWords, RequestedControlWordTypeNumber_clcw, RequestedControlWordTypeNumber_notClcw } from "./RequestedControlWordTypeNumber.ta.mjs";

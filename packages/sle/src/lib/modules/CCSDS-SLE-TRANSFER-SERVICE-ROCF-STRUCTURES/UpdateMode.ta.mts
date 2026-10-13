@@ -1,11 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";
 // export { RequestedUpdateMode, RequestedUpdateMode_continuous /* IMPORTED_LONG_NAMED_INTEGER */, continuous /* IMPORTED_SHORT_NAMED_INTEGER */, RequestedUpdateMode_changeBased /* IMPORTED_LONG_NAMED_INTEGER */, changeBased /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";
 
+
+function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
+    const n = typeof value === "bigint" ? value : BigInt(value);
+    return allowed.includes(n);
+}
 
 /**
  * @summary UpdateMode
@@ -34,7 +40,11 @@ let _cached_decoder_for_UpdateMode: $.ASN1Decoder<UpdateMode> | null = null;
 export
 function _decode_UpdateMode (el: _Element): UpdateMode {
     if (!_cached_decoder_for_UpdateMode) { _cached_decoder_for_UpdateMode = _decode_RequestedUpdateMode; }
-    return _cached_decoder_for_UpdateMode(el);
+    const _decoded = _cached_decoder_for_UpdateMode(el);
+    if (!integerIsOneOf(_decoded, [BigInt(RequestedUpdateMode_continuous), BigInt(RequestedUpdateMode_changeBased)])) {
+        throw new ASN1Error("UpdateMode violates RequestedUpdateMode (continuous | changeBased)");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_UpdateMode: $.ASN1Encoder<UpdateMode> | null = null;
@@ -54,3 +64,4 @@ function _encode_UpdateMode (value: UpdateMode, elGetter: $.ASN1Encoder<any>): _
 
 
 /* eslint-enable */
+import { RequestedUpdateMode_continuous, RequestedUpdateMode_changeBased } from "./RequestedUpdateMode.ta.mjs";
