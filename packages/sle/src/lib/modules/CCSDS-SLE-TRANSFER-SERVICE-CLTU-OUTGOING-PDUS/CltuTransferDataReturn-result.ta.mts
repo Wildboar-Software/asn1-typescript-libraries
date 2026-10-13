@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticCltuTransferData, _decode_DiagnosticCltuTransferData, _encode_DiagnosticCltuTransferData } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuTransferData.ta.mjs";
-// export { DiagnosticCltuTransferData, _decode_DiagnosticCltuTransferData, _encode_DiagnosticCltuTransferData } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuTransferData.ta.mjs";
 
 
 /**

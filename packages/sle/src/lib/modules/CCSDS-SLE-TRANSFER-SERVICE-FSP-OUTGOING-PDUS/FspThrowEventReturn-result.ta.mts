@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticFspThrowEvent, _decode_DiagnosticFspThrowEvent, _encode_DiagnosticFspThrowEvent } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspThrowEvent.ta.mjs";
-// export { DiagnosticFspThrowEvent, _decode_DiagnosticFspThrowEvent, _encode_DiagnosticFspThrowEvent } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspThrowEvent.ta.mjs";
 
 
 /**

@@ -6,17 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
-// export { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
 import { PacketRadiatedInfo, _decode_PacketRadiatedInfo, _encode_PacketRadiatedInfo } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketRadiatedInfo.ta.mjs";
-// export { PacketRadiatedInfo, _decode_PacketRadiatedInfo, _encode_PacketRadiatedInfo } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketRadiatedInfo.ta.mjs";
 import { FopAlert, _decode_FopAlert, _encode_FopAlert } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FopAlert.ta.mjs";
-// export { FopAlert, FopAlert_noAlert /* IMPORTED_LONG_NAMED_INTEGER */, noAlert /* IMPORTED_SHORT_NAMED_INTEGER */, FopAlert_limit /* IMPORTED_LONG_NAMED_INTEGER */, limit /* IMPORTED_SHORT_NAMED_INTEGER */, FopAlert_lockOutDetected /* IMPORTED_LONG_NAMED_INTEGER */, lockOutDetected /* IMPORTED_SHORT_NAMED_INTEGER */, FopAlert_synch /* IMPORTED_LONG_NAMED_INTEGER */, synch /* IMPORTED_SHORT_NAMED_INTEGER */, FopAlert_invalidNR /* IMPORTED_LONG_NAMED_INTEGER */, invalidNR /* IMPORTED_SHORT_NAMED_INTEGER */, FopAlert_clcw /* IMPORTED_LONG_NAMED_INTEGER */, clcw /* IMPORTED_SHORT_NAMED_INTEGER */, FopAlert_lowerLayerOutOfSync /* IMPORTED_LONG_NAMED_INTEGER */, lowerLayerOutOfSync /* IMPORTED_SHORT_NAMED_INTEGER */, FopAlert_terminateADService /* IMPORTED_LONG_NAMED_INTEGER */, terminateADService /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FopAlert, _encode_FopAlert } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FopAlert.ta.mjs";
 import { DirectiveExecutedId, _decode_DirectiveExecutedId, _encode_DirectiveExecutedId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DirectiveExecutedId.ta.mjs";
-// export { DirectiveExecutedId, _decode_DirectiveExecutedId, _encode_DirectiveExecutedId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DirectiveExecutedId.ta.mjs";
 import { NegativeConfirmResponseToDirective, _decode_NegativeConfirmResponseToDirective, _encode_NegativeConfirmResponseToDirective } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/NegativeConfirmResponseToDirective.ta.mjs";
-// export { NegativeConfirmResponseToDirective, _decode_NegativeConfirmResponseToDirective, _encode_NegativeConfirmResponseToDirective } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/NegativeConfirmResponseToDirective.ta.mjs";
 import { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/EventInvocationId.ta.mjs";
-// export { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/EventInvocationId.ta.mjs";
 
 
 /**

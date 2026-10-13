@@ -8,13 +8,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IntPosLong, _decode_IntPosLong, _encode_IntPosLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosLong.ta.mjs";
-// export { IntPosLong, _decode_IntPosLong, _encode_IntPosLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosLong.ta.mjs";
 import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
-// export { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
 import { FspInvokeDirectiveInvocation_directive_setTimeoutType, _decode_FspInvokeDirectiveInvocation_directive_setTimeoutType, _encode_FspInvokeDirectiveInvocation_directive_setTimeoutType } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-INCOMING-PDUS/FspInvokeDirectiveInvocation-directive-setTimeoutType.ta.mjs";
-// export { FspInvokeDirectiveInvocation_directive_setTimeoutType, FspInvokeDirectiveInvocation_directive_setTimeoutType_terminateAD /* IMPORTED_LONG_NAMED_INTEGER */, terminateAD /* IMPORTED_SHORT_NAMED_INTEGER */, FspInvokeDirectiveInvocation_directive_setTimeoutType_suspendAD /* IMPORTED_LONG_NAMED_INTEGER */, suspendAD /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FspInvokeDirectiveInvocation_directive_setTimeoutType, _encode_FspInvokeDirectiveInvocation_directive_setTimeoutType } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-INCOMING-PDUS/FspInvokeDirectiveInvocation-directive-setTimeoutType.ta.mjs";
 import { MapMuxControl, _decode_MapMuxControl, _encode_MapMuxControl } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapMuxControl.ta.mjs";
-// export { MapMuxControl, _decode_MapMuxControl, _encode_MapMuxControl } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapMuxControl.ta.mjs";
 
 
 function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {

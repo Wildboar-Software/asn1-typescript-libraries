@@ -9,7 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MasterChannelComposition_mcOrVcList, _decode_MasterChannelComposition_mcOrVcList, _encode_MasterChannelComposition_mcOrVcList } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/MasterChannelComposition-mcOrVcList.ta.mjs";
-// export { MasterChannelComposition_mcOrVcList, _decode_MasterChannelComposition_mcOrVcList, _encode_MasterChannelComposition_mcOrVcList } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/MasterChannelComposition-mcOrVcList.ta.mjs";
 
 
 function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {

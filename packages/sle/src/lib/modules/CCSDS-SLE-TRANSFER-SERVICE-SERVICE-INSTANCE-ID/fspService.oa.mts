@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { fsp } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/fsp.va.mjs";
-// export { fsp } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/fsp.va.mjs";
 import { type ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
 
 

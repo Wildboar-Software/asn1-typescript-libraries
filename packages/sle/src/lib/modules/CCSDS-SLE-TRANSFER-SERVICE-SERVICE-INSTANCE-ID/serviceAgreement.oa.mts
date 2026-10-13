@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { sagr } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/sagr.va.mjs";
-// export { sagr } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/sagr.va.mjs";
 import { type ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
 
 

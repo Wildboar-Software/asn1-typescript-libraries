@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VersionNumber, _decode_VersionNumber, _encode_VersionNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/VersionNumber.ta.mjs";
-// export { VersionNumber, _decode_VersionNumber, _encode_VersionNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/VersionNumber.ta.mjs";
 import { BindDiagnostic, _decode_BindDiagnostic, _encode_BindDiagnostic } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/BindDiagnostic.ta.mjs";
-// export { BindDiagnostic, BindDiagnostic_accessDenied /* IMPORTED_LONG_NAMED_INTEGER */, accessDenied /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_serviceTypeNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, serviceTypeNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_versionNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, versionNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_noSuchServiceInstance /* IMPORTED_LONG_NAMED_INTEGER */, noSuchServiceInstance /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_alreadyBound /* IMPORTED_LONG_NAMED_INTEGER */, alreadyBound /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_siNotAccessibleToThisInitiator /* IMPORTED_LONG_NAMED_INTEGER */, siNotAccessibleToThisInitiator /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_inconsistentServiceType /* IMPORTED_LONG_NAMED_INTEGER */, inconsistentServiceType /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_invalidTime /* IMPORTED_LONG_NAMED_INTEGER */, invalidTime /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_outOfService /* IMPORTED_LONG_NAMED_INTEGER */, outOfService /* IMPORTED_SHORT_NAMED_INTEGER */, BindDiagnostic_otherReason /* IMPORTED_LONG_NAMED_INTEGER */, otherReason /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_BindDiagnostic, _encode_BindDiagnostic } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/BindDiagnostic.ta.mjs";
 
 
 /**

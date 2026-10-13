@@ -6,17 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { CltuNotification, _decode_CltuNotification, _encode_CltuNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuNotification.ta.mjs";
-// export { CltuNotification, _decode_CltuNotification, _encode_CltuNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuNotification.ta.mjs";
 import { CltuLastProcessed, _decode_CltuLastProcessed, _encode_CltuLastProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastProcessed.ta.mjs";
-// export { CltuLastProcessed, _decode_CltuLastProcessed, _encode_CltuLastProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastProcessed.ta.mjs";
 import { CltuLastOk, _decode_CltuLastOk, _encode_CltuLastOk } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastOk.ta.mjs";
-// export { CltuLastOk, _decode_CltuLastOk, _encode_CltuLastOk } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastOk.ta.mjs";
 import { ProductionStatus, _decode_ProductionStatus, _encode_ProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/ProductionStatus.ta.mjs";
-// export { ProductionStatus, ProductionStatus_operational /* IMPORTED_LONG_NAMED_INTEGER */, operational /* IMPORTED_SHORT_NAMED_INTEGER */, ProductionStatus_configured /* IMPORTED_LONG_NAMED_INTEGER */, configured /* IMPORTED_SHORT_NAMED_INTEGER */, ProductionStatus_interrupted /* IMPORTED_LONG_NAMED_INTEGER */, interrupted /* IMPORTED_SHORT_NAMED_INTEGER */, ProductionStatus_halted /* IMPORTED_LONG_NAMED_INTEGER */, halted /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ProductionStatus, _encode_ProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/ProductionStatus.ta.mjs";
 import { UplinkStatus, _decode_UplinkStatus, _encode_UplinkStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/UplinkStatus.ta.mjs";
-// export { UplinkStatus, UplinkStatus_uplinkStatusNotAvailable /* IMPORTED_LONG_NAMED_INTEGER */, uplinkStatusNotAvailable /* IMPORTED_SHORT_NAMED_INTEGER */, UplinkStatus_noRfAvailable /* IMPORTED_LONG_NAMED_INTEGER */, noRfAvailable /* IMPORTED_SHORT_NAMED_INTEGER */, UplinkStatus_noBitLock /* IMPORTED_LONG_NAMED_INTEGER */, noBitLock /* IMPORTED_SHORT_NAMED_INTEGER */, UplinkStatus_nominal /* IMPORTED_LONG_NAMED_INTEGER */, nominal /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_UplinkStatus, _encode_UplinkStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/UplinkStatus.ta.mjs";
 
 
 /**

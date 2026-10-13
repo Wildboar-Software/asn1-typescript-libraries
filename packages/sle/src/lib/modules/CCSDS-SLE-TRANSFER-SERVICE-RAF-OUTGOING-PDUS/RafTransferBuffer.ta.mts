@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FrameOrNotification, _decode_FrameOrNotification, _encode_FrameOrNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/FrameOrNotification.ta.mjs";
-// export { FrameOrNotification, _decode_FrameOrNotification, _encode_FrameOrNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/FrameOrNotification.ta.mjs";
 
 
 /**

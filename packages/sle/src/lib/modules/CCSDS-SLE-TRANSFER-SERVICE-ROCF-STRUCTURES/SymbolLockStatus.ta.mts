@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_LockStatus, _encode_LockStatus, LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/LockStatus.ta.mjs";
-// export { LockStatus, LockStatus_inLock /* IMPORTED_LONG_NAMED_INTEGER */, inLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_outOfLock /* IMPORTED_LONG_NAMED_INTEGER */, outOfLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_notInUse /* IMPORTED_LONG_NAMED_INTEGER */, notInUse /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_LockStatus, _encode_LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/LockStatus.ta.mjs";
 
 
 function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {

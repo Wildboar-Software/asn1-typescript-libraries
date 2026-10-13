@@ -5,29 +5,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SleBindReturn, _decode_SleBindReturn, _encode_SleBindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindReturn.ta.mjs";
-// export { SleBindReturn, _decode_SleBindReturn, _encode_SleBindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindReturn.ta.mjs";
 import { SleUnbindReturn, _decode_SleUnbindReturn, _encode_SleUnbindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleUnbindReturn.ta.mjs";
-// export { SleUnbindReturn, _decode_SleUnbindReturn, _encode_SleUnbindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleUnbindReturn.ta.mjs";
 import { FspStartReturn, _decode_FspStartReturn, _encode_FspStartReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspStartReturn.ta.mjs";
-// export { FspStartReturn, _decode_FspStartReturn, _encode_FspStartReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspStartReturn.ta.mjs";
 import { SleAcknowledgement, _decode_SleAcknowledgement, _encode_SleAcknowledgement } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleAcknowledgement.ta.mjs";
-// export { SleAcknowledgement, _decode_SleAcknowledgement, _encode_SleAcknowledgement } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleAcknowledgement.ta.mjs";
 import { FspTransferDataReturn, _decode_FspTransferDataReturn, _encode_FspTransferDataReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspTransferDataReturn.ta.mjs";
-// export { FspTransferDataReturn, _decode_FspTransferDataReturn, _encode_FspTransferDataReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspTransferDataReturn.ta.mjs";
 import { FspAsyncNotifyInvocation, _decode_FspAsyncNotifyInvocation, _encode_FspAsyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspAsyncNotifyInvocation.ta.mjs";
-// export { FspAsyncNotifyInvocation, _decode_FspAsyncNotifyInvocation, _encode_FspAsyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspAsyncNotifyInvocation.ta.mjs";
 import { SleScheduleStatusReportReturn, _decode_SleScheduleStatusReportReturn, _encode_SleScheduleStatusReportReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleScheduleStatusReportReturn.ta.mjs";
-// export { SleScheduleStatusReportReturn, _decode_SleScheduleStatusReportReturn, _encode_SleScheduleStatusReportReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleScheduleStatusReportReturn.ta.mjs";
 import { FspStatusReportInvocation, _decode_FspStatusReportInvocation, _encode_FspStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspStatusReportInvocation.ta.mjs";
-// export { FspStatusReportInvocation, _decode_FspStatusReportInvocation, _encode_FspStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspStatusReportInvocation.ta.mjs";
 import { FspGetParameterReturn, _decode_FspGetParameterReturn, _encode_FspGetParameterReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspGetParameterReturn.ta.mjs";
-// export { FspGetParameterReturn, _decode_FspGetParameterReturn, _encode_FspGetParameterReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspGetParameterReturn.ta.mjs";
 import { FspThrowEventReturn, _decode_FspThrowEventReturn, _encode_FspThrowEventReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspThrowEventReturn.ta.mjs";
-// export { FspThrowEventReturn, _decode_FspThrowEventReturn, _encode_FspThrowEventReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspThrowEventReturn.ta.mjs";
 import { FspInvokeDirectiveReturn, _decode_FspInvokeDirectiveReturn, _encode_FspInvokeDirectiveReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspInvokeDirectiveReturn.ta.mjs";
-// export { FspInvokeDirectiveReturn, _decode_FspInvokeDirectiveReturn, _encode_FspInvokeDirectiveReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspInvokeDirectiveReturn.ta.mjs";
 import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
-// export { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
 
 
 /**

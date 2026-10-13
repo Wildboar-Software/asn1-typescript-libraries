@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { FspParameterName, _decode_FspParameterName, _encode_FspParameterName } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspParameterName.ta.mjs";
-// export { FspParameterName, _decode_FspParameterName, _encode_FspParameterName } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspParameterName.ta.mjs";
 
 
 /**

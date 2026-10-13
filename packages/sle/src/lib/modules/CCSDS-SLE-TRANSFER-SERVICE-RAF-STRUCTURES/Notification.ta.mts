@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LockStatusReport, _decode_LockStatusReport, _encode_LockStatusReport } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/LockStatusReport.ta.mjs";
-// export { LockStatusReport, _decode_LockStatusReport, _encode_LockStatusReport } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/LockStatusReport.ta.mjs";
 import { RafProductionStatus, _decode_RafProductionStatus, _encode_RafProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafProductionStatus.ta.mjs";
-// export { RafProductionStatus, RafProductionStatus_running /* IMPORTED_LONG_NAMED_INTEGER */, running /* IMPORTED_SHORT_NAMED_INTEGER */, RafProductionStatus_interrupted /* IMPORTED_LONG_NAMED_INTEGER */, interrupted /* IMPORTED_SHORT_NAMED_INTEGER */, RafProductionStatus_halted /* IMPORTED_LONG_NAMED_INTEGER */, halted /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RafProductionStatus, _encode_RafProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafProductionStatus.ta.mjs";
 
 
 /**

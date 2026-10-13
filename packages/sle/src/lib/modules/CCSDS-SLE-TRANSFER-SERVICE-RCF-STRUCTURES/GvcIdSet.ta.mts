@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MasterChannelComposition, _decode_MasterChannelComposition, _encode_MasterChannelComposition } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/MasterChannelComposition.ta.mjs";
-// export { MasterChannelComposition, _decode_MasterChannelComposition, _encode_MasterChannelComposition } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/MasterChannelComposition.ta.mjs";
 
 
 /**

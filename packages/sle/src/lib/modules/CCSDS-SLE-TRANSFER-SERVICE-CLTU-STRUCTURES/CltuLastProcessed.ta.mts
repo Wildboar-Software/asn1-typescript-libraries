@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CltuLastProcessed_cltuProcessed, _decode_CltuLastProcessed_cltuProcessed, _encode_CltuLastProcessed_cltuProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastProcessed-cltuProcessed.ta.mjs";
-// export { CltuLastProcessed_cltuProcessed, _decode_CltuLastProcessed_cltuProcessed, _encode_CltuLastProcessed_cltuProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastProcessed-cltuProcessed.ta.mjs";
 
 
 /**

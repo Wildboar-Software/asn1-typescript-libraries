@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedControlWordTypeNumber.ta.mjs";
-// export { RequestedControlWordTypeNumber, RequestedControlWordTypeNumber_allControlWords /* IMPORTED_LONG_NAMED_INTEGER */, allControlWords /* IMPORTED_SHORT_NAMED_INTEGER */, RequestedControlWordTypeNumber_clcw /* IMPORTED_LONG_NAMED_INTEGER */, clcw /* IMPORTED_SHORT_NAMED_INTEGER */, RequestedControlWordTypeNumber_notClcw /* IMPORTED_LONG_NAMED_INTEGER */, notClcw /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedControlWordTypeNumber.ta.mjs";
 
 
 function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BlockingTimeoutPeriod, _decode_BlockingTimeoutPeriod, _encode_BlockingTimeoutPeriod } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingTimeoutPeriod.ta.mjs";
-// export { BlockingTimeoutPeriod, _decode_BlockingTimeoutPeriod, _encode_BlockingTimeoutPeriod } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingTimeoutPeriod.ta.mjs";
 
 
 /**

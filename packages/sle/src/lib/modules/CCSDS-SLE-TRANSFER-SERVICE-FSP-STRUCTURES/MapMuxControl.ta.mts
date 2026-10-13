@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AbsolutePriority, _decode_AbsolutePriority, _encode_AbsolutePriority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/AbsolutePriority.ta.mjs";
-// export { AbsolutePriority, _decode_AbsolutePriority, _encode_AbsolutePriority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/AbsolutePriority.ta.mjs";
 import { MapId, _decode_MapId, _encode_MapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapId.ta.mjs";
-// export { MapId, _decode_MapId, _encode_MapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapId.ta.mjs";
 
 
 /**

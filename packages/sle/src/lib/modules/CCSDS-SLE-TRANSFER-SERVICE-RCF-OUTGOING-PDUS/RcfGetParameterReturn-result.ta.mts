@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RcfGetParameter, _decode_RcfGetParameter, _encode_RcfGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter.ta.mjs";
-// export { RcfGetParameter, _decode_RcfGetParameter, _encode_RcfGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter.ta.mjs";
 import { DiagnosticRcfGet, _decode_DiagnosticRcfGet, _encode_DiagnosticRcfGet } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/DiagnosticRcfGet.ta.mjs";
-// export { DiagnosticRcfGet, _decode_DiagnosticRcfGet, _encode_DiagnosticRcfGet } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/DiagnosticRcfGet.ta.mjs";
 
 
 /**

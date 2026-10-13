@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";
-// export { RequestedUpdateMode, RequestedUpdateMode_continuous /* IMPORTED_LONG_NAMED_INTEGER */, continuous /* IMPORTED_SHORT_NAMED_INTEGER */, RequestedUpdateMode_changeBased /* IMPORTED_LONG_NAMED_INTEGER */, changeBased /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";
 
 
 function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {

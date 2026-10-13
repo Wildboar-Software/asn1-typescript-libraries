@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
-// export { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 import { FspPacketStatus, _decode_FspPacketStatus, _encode_FspPacketStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketStatus.ta.mjs";
-// export { FspPacketStatus, _decode_FspPacketStatus, _encode_FspPacketStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketStatus.ta.mjs";
 
 
 /**

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticScheduleStatusReport, _decode_DiagnosticScheduleStatusReport, _encode_DiagnosticScheduleStatusReport } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/DiagnosticScheduleStatusReport.ta.mjs";
-// export { DiagnosticScheduleStatusReport, _decode_DiagnosticScheduleStatusReport, _encode_DiagnosticScheduleStatusReport } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/DiagnosticScheduleStatusReport.ta.mjs";
 
 
 /**

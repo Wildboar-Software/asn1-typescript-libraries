@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FspStartReturn_result_positiveResult, _decode_FspStartReturn_result_positiveResult, _encode_FspStartReturn_result_positiveResult } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspStartReturn-result-positiveResult.ta.mjs";
-// export { FspStartReturn_result_positiveResult, _decode_FspStartReturn_result_positiveResult, _encode_FspStartReturn_result_positiveResult } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspStartReturn-result-positiveResult.ta.mjs";
 import { DiagnosticFspStart, _decode_DiagnosticFspStart, _encode_DiagnosticFspStart } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspStart.ta.mjs";
-// export { DiagnosticFspStart, _decode_DiagnosticFspStart, _encode_DiagnosticFspStart } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspStart.ta.mjs";
 
 
 /**

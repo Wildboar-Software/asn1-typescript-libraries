@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { cltu } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/cltu.va.mjs";
-// export { cltu } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/cltu.va.mjs";
 import { type ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
 
 

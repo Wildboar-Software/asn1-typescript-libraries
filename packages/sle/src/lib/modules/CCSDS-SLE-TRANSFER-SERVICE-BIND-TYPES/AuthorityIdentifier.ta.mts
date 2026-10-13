@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IdentifierString, _decode_IdentifierString, _encode_IdentifierString } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/IdentifierString.ta.mjs";
-// export { IdentifierString, _decode_IdentifierString, _encode_IdentifierString } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/IdentifierString.ta.mjs";
 
 
 /**

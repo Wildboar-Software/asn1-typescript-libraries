@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FspGetParameter, _decode_FspGetParameter, _encode_FspGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter.ta.mjs";
-// export { FspGetParameter, _decode_FspGetParameter, _encode_FspGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter.ta.mjs";
 import { DiagnosticFspGet, _decode_DiagnosticFspGet, _encode_DiagnosticFspGet } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspGet.ta.mjs";
-// export { DiagnosticFspGet, _decode_DiagnosticFspGet, _encode_DiagnosticFspGet } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspGet.ta.mjs";
 
 
 /**

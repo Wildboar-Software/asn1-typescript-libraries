@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RafGetParameter, _decode_RafGetParameter, _encode_RafGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter.ta.mjs";
-// export { RafGetParameter, _decode_RafGetParameter, _encode_RafGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter.ta.mjs";
 import { DiagnosticRafGet, _decode_DiagnosticRafGet, _encode_DiagnosticRafGet } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/DiagnosticRafGet.ta.mjs";
-// export { DiagnosticRafGet, _decode_DiagnosticRafGet, _encode_DiagnosticRafGet } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/DiagnosticRafGet.ta.mjs";
 
 
 /**

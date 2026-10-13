@@ -11,7 +11,6 @@ import { _decode_ForwardDuStatus, _encode_ForwardDuStatus, ForwardDuStatus,
     ForwardDuStatus_productionStarted,
     ForwardDuStatus_productionNotStarted
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ForwardDuStatus.ta.mjs";
-// export { ForwardDuStatus, ForwardDuStatus_radiated /* IMPORTED_LONG_NAMED_INTEGER */, radiated /* IMPORTED_SHORT_NAMED_INTEGER */, ForwardDuStatus_expired /* IMPORTED_LONG_NAMED_INTEGER */, expired /* IMPORTED_SHORT_NAMED_INTEGER */, ForwardDuStatus_interrupted /* IMPORTED_LONG_NAMED_INTEGER */, interrupted /* IMPORTED_SHORT_NAMED_INTEGER */, ForwardDuStatus_acknowledged /* IMPORTED_LONG_NAMED_INTEGER */, acknowledged /* IMPORTED_SHORT_NAMED_INTEGER */, ForwardDuStatus_productionStarted /* IMPORTED_LONG_NAMED_INTEGER */, productionStarted /* IMPORTED_SHORT_NAMED_INTEGER */, ForwardDuStatus_productionNotStarted /* IMPORTED_LONG_NAMED_INTEGER */, productionNotStarted /* IMPORTED_SHORT_NAMED_INTEGER */, ForwardDuStatus_unsupportedTransmissionMode /* IMPORTED_LONG_NAMED_INTEGER */, unsupportedTransmissionMode /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ForwardDuStatus, _encode_ForwardDuStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ForwardDuStatus.ta.mjs";
 
 
 function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {

@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedFrameQuality, _decode_RequestedFrameQuality, _encode_RequestedFrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RequestedFrameQuality.ta.mjs";
-// export { RequestedFrameQuality, RequestedFrameQuality_goodFramesOnly /* IMPORTED_LONG_NAMED_INTEGER */, goodFramesOnly /* IMPORTED_SHORT_NAMED_INTEGER */, RequestedFrameQuality_erredFrameOnly /* IMPORTED_LONG_NAMED_INTEGER */, erredFrameOnly /* IMPORTED_SHORT_NAMED_INTEGER */, RequestedFrameQuality_allFrames /* IMPORTED_LONG_NAMED_INTEGER */, allFrames /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RequestedFrameQuality, _encode_RequestedFrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RequestedFrameQuality.ta.mjs";
 
 
 /**

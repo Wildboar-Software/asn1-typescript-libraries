@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { spack } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/spack.va.mjs";
-// export { spack } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/spack.va.mjs";
 import { type ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
 
 

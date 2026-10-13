@@ -6,19 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
-// export { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
 import { FrameSyncLockStatus, _decode_FrameSyncLockStatus, _encode_FrameSyncLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/FrameSyncLockStatus.ta.mjs";
-// export { FrameSyncLockStatus, _decode_FrameSyncLockStatus, _encode_FrameSyncLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/FrameSyncLockStatus.ta.mjs";
 import { SymbolLockStatus, _decode_SymbolLockStatus, _encode_SymbolLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/SymbolLockStatus.ta.mjs";
-// export { SymbolLockStatus, _decode_SymbolLockStatus, _encode_SymbolLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/SymbolLockStatus.ta.mjs";
 import { LockStatus, _decode_LockStatus, _encode_LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/LockStatus.ta.mjs";
-// export { LockStatus, LockStatus_inLock /* IMPORTED_LONG_NAMED_INTEGER */, inLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_outOfLock /* IMPORTED_LONG_NAMED_INTEGER */, outOfLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_notInUse /* IMPORTED_LONG_NAMED_INTEGER */, notInUse /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_LockStatus, _encode_LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/LockStatus.ta.mjs";
 import { CarrierLockStatus, _decode_CarrierLockStatus, _encode_CarrierLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/CarrierLockStatus.ta.mjs";
-// export { CarrierLockStatus, _decode_CarrierLockStatus, _encode_CarrierLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/CarrierLockStatus.ta.mjs";
 import { RafProductionStatus, _decode_RafProductionStatus, _encode_RafProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafProductionStatus.ta.mjs";
-// export { RafProductionStatus, RafProductionStatus_running /* IMPORTED_LONG_NAMED_INTEGER */, running /* IMPORTED_SHORT_NAMED_INTEGER */, RafProductionStatus_interrupted /* IMPORTED_LONG_NAMED_INTEGER */, interrupted /* IMPORTED_SHORT_NAMED_INTEGER */, RafProductionStatus_halted /* IMPORTED_LONG_NAMED_INTEGER */, halted /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RafProductionStatus, _encode_RafProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafProductionStatus.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Apid, _decode_Apid, _encode_Apid } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Apid.ta.mjs";
-// export { Apid, _decode_Apid, _encode_Apid } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Apid.ta.mjs";
 
 
 /**

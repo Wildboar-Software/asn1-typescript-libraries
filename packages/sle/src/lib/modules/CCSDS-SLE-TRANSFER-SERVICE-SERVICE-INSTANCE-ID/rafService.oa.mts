@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { raf } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/raf.va.mjs";
-// export { raf } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/raf.va.mjs";
 import { type ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
 
 

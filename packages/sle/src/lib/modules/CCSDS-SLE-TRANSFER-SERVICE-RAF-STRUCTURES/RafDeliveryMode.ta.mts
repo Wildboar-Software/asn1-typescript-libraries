@@ -9,7 +9,6 @@ import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode,
     DeliveryMode_rtnCompleteOnline,
     DeliveryMode_rtnOffline
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/DeliveryMode.ta.mjs";
-// export { DeliveryMode, DeliveryMode_rtnTimelyOnline /* IMPORTED_LONG_NAMED_INTEGER */, rtnTimelyOnline /* IMPORTED_SHORT_NAMED_INTEGER */, DeliveryMode_rtnCompleteOnline /* IMPORTED_LONG_NAMED_INTEGER */, rtnCompleteOnline /* IMPORTED_SHORT_NAMED_INTEGER */, DeliveryMode_rtnOffline /* IMPORTED_LONG_NAMED_INTEGER */, rtnOffline /* IMPORTED_SHORT_NAMED_INTEGER */, DeliveryMode_fwdOnline /* IMPORTED_LONG_NAMED_INTEGER */, fwdOnline /* IMPORTED_SHORT_NAMED_INTEGER */, DeliveryMode_fwdOffline /* IMPORTED_LONG_NAMED_INTEGER */, fwdOffline /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeliveryMode, _encode_DeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/DeliveryMode.ta.mjs";
 
 
 function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {

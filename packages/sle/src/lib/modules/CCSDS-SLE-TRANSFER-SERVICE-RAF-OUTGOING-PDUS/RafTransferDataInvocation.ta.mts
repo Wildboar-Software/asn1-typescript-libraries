@@ -8,17 +8,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 import { AntennaId, _decode_AntennaId, _encode_AntennaId } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/AntennaId.ta.mjs";
-// export { AntennaId, _decode_AntennaId, _encode_AntennaId } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/AntennaId.ta.mjs";
 import { FrameQuality, _decode_FrameQuality, _encode_FrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/FrameQuality.ta.mjs";
-// export { FrameQuality, FrameQuality_good /* IMPORTED_LONG_NAMED_INTEGER */, good /* IMPORTED_SHORT_NAMED_INTEGER */, FrameQuality_erred /* IMPORTED_LONG_NAMED_INTEGER */, erred /* IMPORTED_SHORT_NAMED_INTEGER */, FrameQuality_undetermined /* IMPORTED_LONG_NAMED_INTEGER */, undetermined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FrameQuality, _encode_FrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/FrameQuality.ta.mjs";
 import { RafTransferDataInvocation_privateAnnotation, _decode_RafTransferDataInvocation_privateAnnotation, _encode_RafTransferDataInvocation_privateAnnotation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafTransferDataInvocation-privateAnnotation.ta.mjs";
-// export { RafTransferDataInvocation_privateAnnotation, _decode_RafTransferDataInvocation_privateAnnotation, _encode_RafTransferDataInvocation_privateAnnotation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafTransferDataInvocation-privateAnnotation.ta.mjs";
 import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
-// export { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
 
 
 function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RafTransferDataInvocation, _decode_RafTransferDataInvocation, _encode_RafTransferDataInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafTransferDataInvocation.ta.mjs";
-// export { RafTransferDataInvocation, _decode_RafTransferDataInvocation, _encode_RafTransferDataInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafTransferDataInvocation.ta.mjs";
 import { RafSyncNotifyInvocation, _decode_RafSyncNotifyInvocation, _encode_RafSyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafSyncNotifyInvocation.ta.mjs";
-// export { RafSyncNotifyInvocation, _decode_RafSyncNotifyInvocation, _encode_RafSyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafSyncNotifyInvocation.ta.mjs";
 
 
 /**

@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
-// export { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
 
 
 function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {

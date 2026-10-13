@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { AuthorityIdentifier, _decode_AuthorityIdentifier, _encode_AuthorityIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/AuthorityIdentifier.ta.mjs";
-// export { AuthorityIdentifier, _decode_AuthorityIdentifier, _encode_AuthorityIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/AuthorityIdentifier.ta.mjs";
 import { SleBindReturn_result, _decode_SleBindReturn_result, _encode_SleBindReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindReturn-result.ta.mjs";
-// export { SleBindReturn_result, _decode_SleBindReturn_result, _encode_SleBindReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindReturn-result.ta.mjs";
 
 
 /**

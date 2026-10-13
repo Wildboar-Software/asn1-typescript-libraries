@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CltuStartReturn_result_positiveResult, _decode_CltuStartReturn_result_positiveResult, _encode_CltuStartReturn_result_positiveResult } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuStartReturn-result-positiveResult.ta.mjs";
-// export { CltuStartReturn_result_positiveResult, _decode_CltuStartReturn_result_positiveResult, _encode_CltuStartReturn_result_positiveResult } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuStartReturn-result-positiveResult.ta.mjs";
 import { DiagnosticCltuStart, _decode_DiagnosticCltuStart, _encode_DiagnosticCltuStart } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuStart.ta.mjs";
-// export { DiagnosticCltuStart, _decode_DiagnosticCltuStart, _encode_DiagnosticCltuStart } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuStart.ta.mjs";
 
 
 /**

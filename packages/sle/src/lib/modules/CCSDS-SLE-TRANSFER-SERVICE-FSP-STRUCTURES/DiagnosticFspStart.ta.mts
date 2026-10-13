@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Diagnostics, _encode_Diagnostics, Diagnostics } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Diagnostics.ta.mjs";
-// export { Diagnostics, Diagnostics_duplicateInvokeId /* IMPORTED_LONG_NAMED_INTEGER */, duplicateInvokeId /* IMPORTED_SHORT_NAMED_INTEGER */, Diagnostics_otherReason /* IMPORTED_LONG_NAMED_INTEGER */, otherReason /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Diagnostics, _encode_Diagnostics } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Diagnostics.ta.mjs";
 import { _decode_DiagnosticFspStart_specific, _encode_DiagnosticFspStart_specific, DiagnosticFspStart_specific } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspStart-specific.ta.mjs";
-// export { DiagnosticFspStart_specific, DiagnosticFspStart_specific_outOfService /* IMPORTED_LONG_NAMED_INTEGER */, outOfService /* IMPORTED_SHORT_NAMED_INTEGER */, DiagnosticFspStart_specific_unableToComply /* IMPORTED_LONG_NAMED_INTEGER */, unableToComply /* IMPORTED_SHORT_NAMED_INTEGER */, DiagnosticFspStart_specific_productionTimeExpired /* IMPORTED_LONG_NAMED_INTEGER */, productionTimeExpired /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagnosticFspStart_specific, _encode_DiagnosticFspStart_specific } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspStart-specific.ta.mjs";
 
 
 /**

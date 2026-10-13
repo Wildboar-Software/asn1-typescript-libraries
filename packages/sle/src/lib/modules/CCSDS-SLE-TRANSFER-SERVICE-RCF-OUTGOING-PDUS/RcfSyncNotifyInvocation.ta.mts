@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { Notification, _decode_Notification, _encode_Notification } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/Notification.ta.mjs";
-// export { Notification, _decode_Notification, _encode_Notification } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/Notification.ta.mjs";
 
 
 /**

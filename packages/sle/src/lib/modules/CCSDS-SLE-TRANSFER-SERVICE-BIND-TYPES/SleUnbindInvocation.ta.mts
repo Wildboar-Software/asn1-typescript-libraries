@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { UnbindReason, _decode_UnbindReason, _encode_UnbindReason } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/UnbindReason.ta.mjs";
-// export { UnbindReason, UnbindReason_end /* IMPORTED_LONG_NAMED_INTEGER */, end /* IMPORTED_SHORT_NAMED_INTEGER */, UnbindReason_suspend /* IMPORTED_LONG_NAMED_INTEGER */, suspend /* IMPORTED_SHORT_NAMED_INTEGER */, UnbindReason_versionNotSupported /* IMPORTED_LONG_NAMED_INTEGER */, versionNotSupported /* IMPORTED_SHORT_NAMED_INTEGER */, UnbindReason_other /* IMPORTED_LONG_NAMED_INTEGER */, other /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_UnbindReason, _encode_UnbindReason } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/UnbindReason.ta.mjs";
 
 
 /**

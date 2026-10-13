@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticRafStart, _decode_DiagnosticRafStart, _encode_DiagnosticRafStart } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/DiagnosticRafStart.ta.mjs";
-// export { DiagnosticRafStart, _decode_DiagnosticRafStart, _encode_DiagnosticRafStart } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/DiagnosticRafStart.ta.mjs";
 
 
 /**

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OcfOrNotification, _decode_OcfOrNotification, _encode_OcfOrNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-OUTGOING-PDUS/OcfOrNotification.ta.mjs";
-// export { OcfOrNotification, _decode_OcfOrNotification, _encode_OcfOrNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-OUTGOING-PDUS/OcfOrNotification.ta.mjs";
 
 
 /**

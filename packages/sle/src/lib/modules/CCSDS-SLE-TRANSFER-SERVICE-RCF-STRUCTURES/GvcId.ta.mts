@@ -9,7 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/GvcId-vcId.ta.mjs";
-// export { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/GvcId-vcId.ta.mjs";
 
 
 function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
