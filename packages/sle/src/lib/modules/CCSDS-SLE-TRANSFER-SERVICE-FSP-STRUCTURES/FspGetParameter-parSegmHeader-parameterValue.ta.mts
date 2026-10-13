@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parSegmHeader-parameterValue ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parSegmHeader-parameterValue ::= INTEGER
+ *       {  present           (0)
+ *       ,  absent            (1)
+ *       }
  * ```
  */
 export

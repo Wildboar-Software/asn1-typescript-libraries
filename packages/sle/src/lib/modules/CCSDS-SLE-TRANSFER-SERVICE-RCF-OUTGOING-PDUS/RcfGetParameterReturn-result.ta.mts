@@ -17,7 +17,10 @@ import { DiagnosticRcfGet, _decode_DiagnosticRcfGet, _encode_DiagnosticRcfGet } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RcfGetParameterReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RcfGetParameterReturn-result ::= CHOICE
+ *     {   positiveResult                     [0] RcfGetParameter
+ *     ,   negativeResult                     [1] DiagnosticRcfGet
+ *     }
  * ```
  */
 export

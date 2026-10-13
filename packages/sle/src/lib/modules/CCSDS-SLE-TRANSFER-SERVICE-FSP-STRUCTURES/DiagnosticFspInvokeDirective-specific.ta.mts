@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticFspInvokeDirective-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticFspInvokeDirective-specific ::= INTEGER
+ *    {  directiveInvocationNotAllowed          (0)
+ *    ,  directiveIdentificationOutOfSequence   (1)
+ *    ,  directiveError                         (2)
+ *    }
  * ```
  */
 export

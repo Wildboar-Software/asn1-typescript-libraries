@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticRcfStart-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticRcfStart-specific ::= INTEGER
+ *     {   outOfService                          (0)
+ *     ,   unableToComply                        (1)
+ *     ,   invalidStartTime                      (2)
+ *     ,   invalidStopTime                       (3)
+ *     ,   missingTimeValue                      (4)
+ *     ,   invalidGvcid                          (5)
+ *     }
  * ```
  */
 export

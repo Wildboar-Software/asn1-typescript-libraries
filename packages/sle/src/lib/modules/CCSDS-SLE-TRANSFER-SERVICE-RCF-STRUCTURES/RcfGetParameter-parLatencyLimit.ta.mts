@@ -18,7 +18,14 @@ import { RcfGetParameter_parLatencyLimit_parameterValue, _decode_RcfGetParameter
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RcfGetParameter-parLatencyLimit ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RcfGetParameter-parLatencyLimit ::= SEQUENCE
+ *     { parameterName                  ParameterName (latencyLimit)
+ *     , parameterValue                 CHOICE
+ *        { online                  [0]    IntPosShort
+ *                                               -- latencyLimit in seconds
+ *        ,   offline               [1]    NULL
+ *        }
+ *     }
  * ```
  * 
  * @class

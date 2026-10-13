@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parFopState-fopState ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parFopState-fopState ::= INTEGER
+ *       {  active                     (0)
+ *       ,  retransmitWithoutWait      (1)
+ *       ,  retransmitWithWait         (2)
+ *       ,  initialisingWithoutBCFrame (3)
+ *       ,  initialisingWithBCFrame    (4)
+ *       ,  initial                    (5)
+ *       }
  * ```
  */
 export

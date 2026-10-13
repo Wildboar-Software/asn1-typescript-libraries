@@ -17,7 +17,13 @@ import { DiagnosticCltuStart, _decode_DiagnosticCltuStart, _encode_DiagnosticClt
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuStartReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuStartReturn-result ::= CHOICE
+ * {  positiveResult                      [0]   SEQUENCE
+ *       {  startRadiationTime         Time
+ *       ,  stopRadiationTime          ConditionalTime
+ *       }
+ *    ,  negativeResult                   [1]   DiagnosticCltuStart
+ *    }
  * ```
  */
 export

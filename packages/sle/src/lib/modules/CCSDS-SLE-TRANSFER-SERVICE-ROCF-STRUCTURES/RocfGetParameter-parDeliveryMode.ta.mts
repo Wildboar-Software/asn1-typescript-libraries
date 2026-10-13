@@ -18,7 +18,10 @@ import { RocfDeliveryMode, _decode_RocfDeliveryMode, _encode_RocfDeliveryMode } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parDeliveryMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parDeliveryMode ::= SEQUENCE
+ *    {  parameterName                 ParameterName (deliveryMode)
+ *    ,  parameterValue                RocfDeliveryMode
+ *    }
  * ```
  * 
  * @class

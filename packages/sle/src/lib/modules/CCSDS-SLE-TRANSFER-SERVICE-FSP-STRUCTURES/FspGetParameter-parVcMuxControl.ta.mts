@@ -18,7 +18,10 @@ import { MuxControl, _decode_MuxControl, _encode_MuxControl } from "../CCSDS-SLE
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parVcMuxControl ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parVcMuxControl ::= SEQUENCE
+ *    {  parameterName     ParameterName (vcMuxControl)
+ *    ,  parameterValue    MuxControl
+ *    }
  * ```
  * 
  * @class

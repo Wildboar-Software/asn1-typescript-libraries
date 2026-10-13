@@ -16,7 +16,10 @@ import { _decode_Diagnostics, _encode_Diagnostics, Diagnostics } from "../CCSDS-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SleAcknowledgement-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SleAcknowledgement-result ::= CHOICE
+ *    { positiveResult     [0]    NULL
+ *    , negativeResult     [1]    Diagnostics
+ *    }
  * ```
  */
 export

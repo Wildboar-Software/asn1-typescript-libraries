@@ -14,7 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parNotificationMode-parameterValue ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parNotificationMode-parameterValue ::= INTEGER
+ *       {  deferred                         (0)
+ * 
+ * 
+ * 
+ * 
+ *       ,  immediate                        (1)
+ *       }
  * ```
  */
 export

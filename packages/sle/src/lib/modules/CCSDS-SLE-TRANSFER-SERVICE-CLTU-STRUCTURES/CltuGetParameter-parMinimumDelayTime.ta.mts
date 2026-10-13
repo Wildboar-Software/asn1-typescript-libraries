@@ -18,7 +18,10 @@ import { Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parMinimumDelayTime ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parMinimumDelayTime ::= SEQUENCE
+ *    {  parameterName                    ParameterName (minimumDelayTime)
+ *    ,  parameterValue                   Duration
+ *    }
  * ```
  * 
  * @class

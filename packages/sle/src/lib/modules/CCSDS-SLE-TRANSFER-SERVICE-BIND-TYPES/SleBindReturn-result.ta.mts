@@ -17,7 +17,10 @@ import { BindDiagnostic, _decode_BindDiagnostic, _encode_BindDiagnostic } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SleBindReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SleBindReturn-result ::= CHOICE
+ *    { positive          [0]   VersionNumber
+ *    , negative          [1]   BindDiagnostic
+ *    }
  * ```
  */
 export

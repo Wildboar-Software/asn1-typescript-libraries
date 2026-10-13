@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parDirectiveInvoc-parameterValue ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parDirectiveInvoc-parameterValue ::= INTEGER
+ *       {  enabled           (0)
+ *       ,  disabled          (1)
+ *       }
  * ```
  */
 export

@@ -18,7 +18,10 @@ import { RafDeliveryMode, _decode_RafDeliveryMode, _encode_RafDeliveryMode } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameter-parDeliveryMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameter-parDeliveryMode ::= SEQUENCE
+ *     {   parameterName                ParameterName (deliveryMode)
+ *     ,   parameterValue               RafDeliveryMode
+ *     }
  * ```
  * 
  * @class

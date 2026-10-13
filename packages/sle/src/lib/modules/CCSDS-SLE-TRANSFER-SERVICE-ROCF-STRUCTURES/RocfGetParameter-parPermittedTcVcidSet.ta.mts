@@ -18,7 +18,10 @@ import { TcVcidSet, _decode_TcVcidSet, _encode_TcVcidSet } from "../CCSDS-SLE-TR
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parPermittedTcVcidSet ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parPermittedTcVcidSet ::= SEQUENCE
+ *    {  parameterName                 ParameterName (permittedTcVcidSet)
+ *    ,  parameterValue                TcVcidSet
+ *    }
  * ```
  * 
  * @class

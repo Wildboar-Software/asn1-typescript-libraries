@@ -14,7 +14,24 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticFspTransferData-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticFspTransferData-specific ::= INTEGER
+ *    {  unableToProcess                     (0)
+ *    ,  unableToStore                       (1)
+ *    ,  packetIdentificationOutOfSequence   (2)
+ *    ,  duplicatePacketIdentification       (3)
+ * ,  inconsistentTimeRange                  (4)
+ *    ,  invalidTime                         (5)
+ *    ,  conflictingProductionTimeIntervals  (6)
+ *    ,  lateSldu                            (7)
+ *    ,  invalidDelayTime                    (8)
+ *    ,  invalidTransmissionMode             (9)
+ *    ,  invalidMap                          (10)
+ *    ,  invalidNotificationRequest          (11)
+ *    ,  packetTooLong                       (12)
+ *    ,  unsupportedPacketVersion            (13)
+ *    ,  incorrectPacketType                 (14)
+ *    ,  invalidPacketApid                   (15)
+ *    }
  * ```
  */
 export

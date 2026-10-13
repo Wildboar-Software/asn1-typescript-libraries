@@ -14,7 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticRcfGet-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticRcfGet-specific ::= INTEGER
+ *     {   unknownParameter                      (0)
+ *     }
  * ```
  */
 export

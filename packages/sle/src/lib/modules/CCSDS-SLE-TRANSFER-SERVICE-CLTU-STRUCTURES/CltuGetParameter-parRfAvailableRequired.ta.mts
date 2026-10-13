@@ -18,7 +18,14 @@ import { _decode_CltuGetParameter_parRfAvailableRequired_parameterValue, _encode
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parRfAvailableRequired ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parRfAvailableRequired ::= SEQUENCE
+ *    {  parameterName                    ParameterName
+ *                                           (rfAvailableRequired)
+ *    ,  parameterValue                   INTEGER
+ *       {  yes                                    (0)
+ *       ,  no                                     (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

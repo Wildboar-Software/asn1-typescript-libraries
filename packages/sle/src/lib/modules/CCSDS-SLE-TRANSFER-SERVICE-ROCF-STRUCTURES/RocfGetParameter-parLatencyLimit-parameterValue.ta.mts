@@ -16,7 +16,11 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parLatencyLimit-parameterValue ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parLatencyLimit-parameterValue ::= CHOICE
+ *       {  online                  [0]   IntPosShort
+ *                                     -- latencyLimit in seconds
+ *       ,  offline                 [1]   NULL
+ *       }
  * ```
  */
 export

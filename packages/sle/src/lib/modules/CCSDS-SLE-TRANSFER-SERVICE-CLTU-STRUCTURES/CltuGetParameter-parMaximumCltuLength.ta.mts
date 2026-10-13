@@ -17,7 +17,10 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parMaximumCltuLength ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parMaximumCltuLength ::= SEQUENCE
+ *    {  parameterName                    ParameterName (maximumSlduLength)
+ *    ,  parameterValue                   INTEGER (12 .. 4096)
+ *    }
  * ```
  * 
  * @class

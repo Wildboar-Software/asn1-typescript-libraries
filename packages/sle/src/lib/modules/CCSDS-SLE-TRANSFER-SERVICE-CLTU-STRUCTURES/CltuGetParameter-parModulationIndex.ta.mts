@@ -18,7 +18,10 @@ import { ModulationIndex, _decode_ModulationIndex, _encode_ModulationIndex } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parModulationIndex ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parModulationIndex ::= SEQUENCE
+ *    {  parameterName                    ParameterName (modulationIndex)
+ *    ,  parameterValue                   ModulationIndex
+ *    }
  * ```
  * 
  * @class

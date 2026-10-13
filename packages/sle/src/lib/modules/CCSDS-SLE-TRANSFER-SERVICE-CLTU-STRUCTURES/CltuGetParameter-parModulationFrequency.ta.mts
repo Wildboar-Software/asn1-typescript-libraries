@@ -18,7 +18,10 @@ import { ModulationFrequency, _decode_ModulationFrequency, _encode_ModulationFre
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parModulationFrequency ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parModulationFrequency ::= SEQUENCE
+ *    {  parameterName                    ParameterName (modulationFrequency)
+ *    ,  parameterValue                   ModulationFrequency
+ *    }
  * ```
  * 
  * @class

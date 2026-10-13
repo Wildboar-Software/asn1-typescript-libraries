@@ -18,7 +18,10 @@ import { TimeoutPeriod, _decode_TimeoutPeriod, _encode_TimeoutPeriod } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameter-parReturnTimeout ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameter-parReturnTimeout ::= SEQUENCE
+ *     {   parameterName                ParameterName (returnTimeoutPeriod)
+ *     ,   parameterValue               TimeoutPeriod
+ *     }
  * ```
  * 
  * @class

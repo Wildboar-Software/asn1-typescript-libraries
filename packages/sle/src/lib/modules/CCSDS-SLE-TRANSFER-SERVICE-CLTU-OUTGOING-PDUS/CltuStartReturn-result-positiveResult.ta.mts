@@ -17,7 +17,10 @@ import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuStartReturn-result-positiveResult ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuStartReturn-result-positiveResult ::= SEQUENCE
+ *       {  startRadiationTime         Time
+ *       ,  stopRadiationTime          ConditionalTime
+ *       }
  * ```
  * 
  * @class

@@ -18,7 +18,10 @@ import { UpdateMode, _decode_UpdateMode, _encode_UpdateMode } from "../CCSDS-SLE
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parPermittedUpdModeSet ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parPermittedUpdModeSet ::= SEQUENCE
+ *    {  parameterName                 ParameterName (permittedUpdateModeSet)
+ *    ,  parameterValue                SEQUENCE OF UpdateMode
+ *    }
  * ```
  * 
  * @class

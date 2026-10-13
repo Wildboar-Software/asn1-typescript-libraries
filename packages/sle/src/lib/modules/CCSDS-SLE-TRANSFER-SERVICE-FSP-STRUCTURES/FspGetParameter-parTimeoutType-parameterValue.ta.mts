@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parTimeoutType-parameterValue ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parTimeoutType-parameterValue ::= INTEGER
+ *       {  generateAlert              (0)
+ *       ,  suspendSequenceControlled  (1)
+ *       }
  * ```
  */
 export

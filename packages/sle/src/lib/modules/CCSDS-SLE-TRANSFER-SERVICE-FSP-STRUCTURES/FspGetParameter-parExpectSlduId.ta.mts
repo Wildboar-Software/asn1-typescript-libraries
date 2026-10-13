@@ -18,7 +18,10 @@ import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdent
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parExpectSlduId ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parExpectSlduId ::= SEQUENCE
+ *    {  parameterName     ParameterName  (expectedSlduIdentification)
+ *    ,  parameterValue    PacketIdentification
+ *    }
  * ```
  * 
  * @class

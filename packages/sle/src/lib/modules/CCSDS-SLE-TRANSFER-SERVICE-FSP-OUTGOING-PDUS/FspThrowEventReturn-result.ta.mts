@@ -16,7 +16,10 @@ import { DiagnosticFspThrowEvent, _decode_DiagnosticFspThrowEvent, _encode_Diagn
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspThrowEventReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FspThrowEventReturn-result ::= CHOICE
+ *    {  positiveResult    [0]   NULL
+ *    ,  negativeResult    [1]   DiagnosticFspThrowEvent
+ *    }
  * ```
  */
 export

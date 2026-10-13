@@ -18,7 +18,10 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parCopCntrFramesRepetition ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parCopCntrFramesRepetition ::= SEQUENCE
+ *    {  parameterName     ParameterName  (copCntrFramesRepetition)
+ *    ,  parameterValue    IntPosShort
+ *    }
  * ```
  * 
  * @class

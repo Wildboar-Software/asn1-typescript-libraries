@@ -17,7 +17,10 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parMaxFrameLength ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parMaxFrameLength ::= SEQUENCE
+ *    {  parameterName     ParameterName (maximumFrameLength)
+ *    ,  parameterValue    INTEGER (12 .. 1024) -- octets
+ *    }
  * ```
  * 
  * @class

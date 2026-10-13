@@ -18,7 +18,13 @@ import { _decode_CltuGetParameter_parPlopInEffect_parameterValue, _encode_CltuGe
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parPlopInEffect ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parPlopInEffect ::= SEQUENCE
+ *    {  parameterName                    ParameterName (plopInEffect)
+ *    ,  parameterValue                   INTEGER
+ *       {  plop1                                  (0)
+ *       ,  plop2                                  (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

@@ -18,7 +18,11 @@ import { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentificat
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parCltuIdentification ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parCltuIdentification ::= SEQUENCE
+ *    {  parameterName                    ParameterName
+ *                                           (expectedSlduIdentification)
+ *    ,  parameterValue                   CltuIdentification
+ *    }
  * ```
  * 
  * @class

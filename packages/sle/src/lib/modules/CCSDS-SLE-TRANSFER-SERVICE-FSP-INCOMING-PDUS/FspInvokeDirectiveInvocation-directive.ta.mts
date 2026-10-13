@@ -23,7 +23,25 @@ import { MapMuxControl, _decode_MapMuxControl, _encode_MapMuxControl } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspInvokeDirectiveInvocation-directive ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FspInvokeDirectiveInvocation-directive ::= CHOICE
+ *    {  initiateADserviceWithoutCLCW  [0]   NULL
+ *    ,  initiateADserviceWithCLCW     [1]   NULL
+ *    ,  initiateADserviceWithUnlock   [2]   NULL
+ *    ,  initiateADserviceWithSetVR    [3]   INTEGER (0 .. 255)
+ *    ,  terminateADservice            [4]   NULL
+ *    ,  resumeADservice               [5]   NULL
+ *    ,  setVS                         [6]   INTEGER (0 .. 255)
+ *    ,  setFOPslidingWindowWidth      [7]   INTEGER (1 .. 255)
+ *    ,  setT1Initial                  [8]   IntPosLong  -- in
+ *                                                             -- microseconds
+ *    ,  setTransmissionLimit          [9]   IntPosShort
+ *    ,  setTimeoutType                [10]  INTEGER
+ *       {  terminateAD                         (0)
+ *       ,  suspendAD                           (1)
+ *       }
+ *    ,  abortVC                       [11]  NULL
+ *    ,  modifyMapMuxControl           [12]  MapMuxControl
+ *    }
  * ```
  */
 export

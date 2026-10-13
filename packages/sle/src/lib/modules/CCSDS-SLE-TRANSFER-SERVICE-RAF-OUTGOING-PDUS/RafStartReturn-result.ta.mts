@@ -16,7 +16,10 @@ import { DiagnosticRafStart, _decode_DiagnosticRafStart, _encode_DiagnosticRafSt
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafStartReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RafStartReturn-result ::= CHOICE
+ *     {   positiveResult                     [0] NULL
+ *     ,   negativeResult                     [1] DiagnosticRafStart
+ *     }
  * ```
  */
 export

@@ -18,7 +18,12 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameter-parBufferSize ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameter-parBufferSize ::= SEQUENCE
+ *     {   parameterName                ParameterName (bufferSize)
+ *     ,   parameterValue               IntPosShort
+ *                                      -- bufferSize in number of invocations
+ *                                      -- that can be held in buffer
+ *     }
  * ```
  * 
  * @class

@@ -18,7 +18,10 @@ import { _decode_BlockingUsage, _encode_BlockingUsage, BlockingUsage } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parBlockingUsage ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parBlockingUsage ::= SEQUENCE
+ *    {  parameterName     ParameterName (blockingUsage)
+ *    ,  parameterValue    BlockingUsage
+ *    }
  * ```
  * 
  * @class

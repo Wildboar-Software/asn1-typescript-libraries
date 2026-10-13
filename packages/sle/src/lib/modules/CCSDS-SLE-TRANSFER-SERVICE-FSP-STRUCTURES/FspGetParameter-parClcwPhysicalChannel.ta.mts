@@ -18,7 +18,10 @@ import { ClcwPhysicalChannel, _decode_ClcwPhysicalChannel, _encode_ClcwPhysicalC
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parClcwPhysicalChannel ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parClcwPhysicalChannel ::= SEQUENCE
+ *    {  parameterName        ParameterName  (clcwPhysicalChannel)
+ *    ,  parameterValue       ClcwPhysicalChannel
+ *    }
  * ```
  * 
  * @class

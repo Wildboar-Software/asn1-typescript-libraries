@@ -18,7 +18,13 @@ import { _decode_FspGetParameter_parRfAvailableRequired_parameterValue, _encode_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parRfAvailableRequired ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parRfAvailableRequired ::= SEQUENCE
+ *    {  parameterName        ParameterName  (rfAvailableRequired)
+ *    ,  parameterValue       INTEGER
+ *       {  yes                        (0)
+ *       ,  no                         (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

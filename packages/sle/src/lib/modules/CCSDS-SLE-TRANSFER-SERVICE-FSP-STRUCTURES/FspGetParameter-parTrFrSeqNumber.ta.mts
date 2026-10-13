@@ -17,7 +17,10 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parTrFrSeqNumber ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parTrFrSeqNumber ::= SEQUENCE
+ *    {  parameterName     ParameterName  (transmitterFrameSequenceNumber)
+ *    ,  parameterValue    INTEGER (0 .. 255)
+ *    }
  * ```
  * 
  * @class

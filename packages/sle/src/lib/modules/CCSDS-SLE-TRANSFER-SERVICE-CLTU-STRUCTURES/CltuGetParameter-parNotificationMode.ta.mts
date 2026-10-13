@@ -18,7 +18,17 @@ import { _decode_CltuGetParameter_parNotificationMode_parameterValue, _encode_Cl
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parNotificationMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parNotificationMode ::= SEQUENCE
+ *    {  parameterName                    ParameterName (notificationMode)
+ *    ,  parameterValue                   INTEGER
+ *       {  deferred                         (0)
+ * 
+ * 
+ * 
+ * 
+ *       ,  immediate                        (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

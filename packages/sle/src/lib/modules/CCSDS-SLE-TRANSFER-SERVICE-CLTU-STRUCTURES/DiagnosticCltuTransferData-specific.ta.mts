@@ -14,7 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticCltuTransferData-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticCltuTransferData-specific ::= INTEGER
+ *    {  unableToProcess                  (0)
+ *    ,  unableToStore                    (1)
+ *    ,  outOfSequence                    (2)
+ *    ,  inconsistentTimeRange            (3)
+ *    ,  invalidTime                      (4)
+ *    ,  lateSldu                         (5)
+ *    ,  invalidDelayTime                 (6)
+ *    ,  cltuError                        (7)
+ *    }
  * ```
  */
 export

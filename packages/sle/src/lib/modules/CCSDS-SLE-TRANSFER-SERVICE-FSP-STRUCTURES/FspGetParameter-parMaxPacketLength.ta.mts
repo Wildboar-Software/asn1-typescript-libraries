@@ -17,7 +17,10 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parMaxPacketLength ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parMaxPacketLength ::= SEQUENCE
+ *    {  parameterName     ParameterName (maximumPacketLength)
+ *    ,  parameterValue    INTEGER (7 .. 65542)
+ *    }
  * ```
  * 
  * @class

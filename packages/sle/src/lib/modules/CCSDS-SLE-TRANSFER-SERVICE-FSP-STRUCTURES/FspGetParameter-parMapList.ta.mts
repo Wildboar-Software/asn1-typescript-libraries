@@ -18,7 +18,10 @@ import { MapList, _decode_MapList, _encode_MapList } from "../CCSDS-SLE-TRANSFER
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parMapList ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parMapList ::= SEQUENCE
+ *    {  parameterName     ParameterName (mapList)
+ *    ,  mapList           MapList
+ *    }
  * ```
  * 
  * @class

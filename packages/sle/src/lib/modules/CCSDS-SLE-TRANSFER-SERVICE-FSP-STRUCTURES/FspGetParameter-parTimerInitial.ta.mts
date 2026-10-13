@@ -18,7 +18,10 @@ import { IntPosLong, _decode_IntPosLong, _encode_IntPosLong } from "../CCSDS-SLE
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parTimerInitial ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parTimerInitial ::= SEQUENCE
+ *    {  parameterName     ParameterName (timerInitial)
+ *    ,  parameterValue    IntPosLong  -- in microseconds
+ *    }
  * ```
  * 
  * @class

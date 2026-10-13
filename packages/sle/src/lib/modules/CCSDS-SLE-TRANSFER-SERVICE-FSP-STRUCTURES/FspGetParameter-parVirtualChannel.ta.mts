@@ -18,7 +18,10 @@ import { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TR
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parVirtualChannel ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parVirtualChannel ::= SEQUENCE
+ *    {  parameterName     ParameterName (virtualChannel)
+ *    ,  parameterValue    VcOrMapId
+ *    }
  * ```
  * 
  * @class

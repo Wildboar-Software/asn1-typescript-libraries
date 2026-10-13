@@ -16,7 +16,10 @@ import { DiagnosticFspTransferData, _decode_DiagnosticFspTransferData, _encode_D
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspTransferDataReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FspTransferDataReturn-result ::= CHOICE
+ *    {  positiveResult          [0]   NULL
+ *    ,  negativeResult          [1]   DiagnosticFspTransferData
+ *    }
  * ```
  */
 export

@@ -18,7 +18,10 @@ import { _decode_MuxScheme, _encode_MuxScheme, MuxScheme } from "../CCSDS-SLE-TR
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parVcMuxScheme ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parVcMuxScheme ::= SEQUENCE
+ *    {  parameterName     ParameterName (vcMuxScheme)
+ *    ,  parameterValue    MuxScheme
+ *    }
  * ```
  * 
  * @class

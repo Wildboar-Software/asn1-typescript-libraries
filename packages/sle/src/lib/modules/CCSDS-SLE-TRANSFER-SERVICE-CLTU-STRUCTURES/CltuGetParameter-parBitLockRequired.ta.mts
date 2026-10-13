@@ -18,7 +18,13 @@ import { _decode_CltuGetParameter_parBitLockRequired_parameterValue, _encode_Clt
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parBitLockRequired ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parBitLockRequired ::= SEQUENCE
+ *    {  parameterName                    ParameterName  (bitLockRequired)
+ *    ,  parameterValue                   INTEGER
+ *       {  yes                                          (0)
+ *       ,  no                                           (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

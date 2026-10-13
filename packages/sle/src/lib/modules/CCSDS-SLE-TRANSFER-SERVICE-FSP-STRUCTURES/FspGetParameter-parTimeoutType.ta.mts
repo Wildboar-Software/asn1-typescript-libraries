@@ -18,7 +18,13 @@ import { _decode_FspGetParameter_parTimeoutType_parameterValue, _encode_FspGetPa
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parTimeoutType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parTimeoutType ::= SEQUENCE
+ *    {  parameterName     ParameterName (timeoutType)
+ *    ,  parameterValue    INTEGER
+ *       {  generateAlert              (0)
+ *       ,  suspendSequenceControlled  (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

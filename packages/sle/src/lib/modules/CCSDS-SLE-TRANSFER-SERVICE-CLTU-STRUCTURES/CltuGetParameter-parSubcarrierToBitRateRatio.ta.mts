@@ -18,7 +18,11 @@ import { SubcarrierDivisor, _decode_SubcarrierDivisor, _encode_SubcarrierDivisor
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parSubcarrierToBitRateRatio ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parSubcarrierToBitRateRatio ::= SEQUENCE
+ *    {  parameterName                    ParameterName
+ *                                           (subcarrierToBitRateRatio)
+ *    ,  parameterValue                   SubcarrierDivisor
+ *    }
  * ```
  * 
  * @class

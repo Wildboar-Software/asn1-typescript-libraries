@@ -18,7 +18,10 @@ import { ClcwGvcId, _decode_ClcwGvcId, _encode_ClcwGvcId } from "../CCSDS-SLE-TR
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parClcwGlobalVcId ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parClcwGlobalVcId ::= SEQUENCE
+ *    {  parameterName     ParameterName  (clcwGlobalVcId)
+ *    ,  parameterValue    ClcwGvcId
+ *    }
  * ```
  * 
  * @class

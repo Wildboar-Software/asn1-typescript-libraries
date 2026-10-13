@@ -16,7 +16,10 @@ import { DiagnosticCltuTransferData, _decode_DiagnosticCltuTransferData, _encode
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuTransferDataReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuTransferDataReturn-result ::= CHOICE
+ *    {  positiveResult                [0]   NULL
+ *    ,  negativeResult                [1]   DiagnosticCltuTransferData
+ *    }
  * ```
  */
 export

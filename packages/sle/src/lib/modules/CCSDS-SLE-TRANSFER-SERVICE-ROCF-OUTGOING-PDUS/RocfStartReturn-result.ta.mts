@@ -16,7 +16,10 @@ import { DiagnosticRocfStart, _decode_DiagnosticRocfStart, _encode_DiagnosticRoc
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfStartReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfStartReturn-result ::= CHOICE
+ *    {  positiveResult    [0]   NULL
+ *    ,  negativeResult    [1]   DiagnosticRocfStart
+ *    }
  * ```
  */
 export

@@ -18,7 +18,10 @@ import { GvcIdSet, _decode_GvcIdSet, _encode_GvcIdSet } from "../CCSDS-SLE-TRANS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parPermittedGvcidSet ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parPermittedGvcidSet ::= SEQUENCE
+ *    {  parameterName                 ParameterName (permittedGvcidSet)
+ *    ,  parameterValue                GvcIdSet
+ *    }
  * ```
  * 
  * @class

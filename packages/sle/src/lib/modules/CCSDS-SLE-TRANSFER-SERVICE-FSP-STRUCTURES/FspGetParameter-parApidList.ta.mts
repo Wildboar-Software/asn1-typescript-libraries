@@ -18,7 +18,10 @@ import { ApidList, _decode_ApidList, _encode_ApidList } from "../CCSDS-SLE-TRANS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parApidList ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parApidList ::= SEQUENCE
+ *    {  parameterName     ParameterName (apidList)
+ *    ,  parameterValue    ApidList
+ *    }
  * ```
  * 
  * @class

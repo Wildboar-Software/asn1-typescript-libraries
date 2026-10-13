@@ -17,7 +17,10 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parTransmissLimit ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parTransmissLimit ::= SEQUENCE
+ *    {  parameterName     ParameterName (transmissionLimit)
+ *    ,  parameterValue    INTEGER (1 .. 255)
+ *    }
  * ```
  * 
  * @class

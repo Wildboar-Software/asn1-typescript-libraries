@@ -18,7 +18,14 @@ import { RafGetParameter_parReqFrameQuality_parameterValue, _decode_RafGetParame
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameter-parReqFrameQuality ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameter-parReqFrameQuality ::= SEQUENCE
+ *     {   parameterName                ParameterName (requestedFrameQuality)
+ *     ,   parameterValue               INTEGER
+ *         {   goodFramesOnly                (0)
+ *         ,   erredFrameOnly                (1)
+ *         ,   allFrames                     (2)
+ *         }
+ *     }
  * ```
  * 
  * @class

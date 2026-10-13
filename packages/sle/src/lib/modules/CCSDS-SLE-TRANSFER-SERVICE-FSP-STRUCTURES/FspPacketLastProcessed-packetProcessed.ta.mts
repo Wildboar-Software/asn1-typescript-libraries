@@ -20,7 +20,11 @@ import { FspPacketStatus, _decode_FspPacketStatus, _encode_FspPacketStatus } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspPacketLastProcessed-packetProcessed ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspPacketLastProcessed-packetProcessed ::= SEQUENCE
+ *    {  packetIdentification    PacketIdentification
+ *    ,  processingStartTime     Time
+ *    ,  packetStatus            FspPacketStatus
+ *    }
  * ```
  * 
  * @class

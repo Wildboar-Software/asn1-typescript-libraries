@@ -18,7 +18,10 @@ import { PermittedFrameQualitySet, _decode_PermittedFrameQualitySet, _encode_Per
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameter-parPermittedFrameQuality ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameter-parPermittedFrameQuality ::= SEQUENCE
+ *     {   parameterName                ParameterName (permittedFrameQuality)
+ *     ,   parameterValue               PermittedFrameQualitySet
+ *     }
  * ```
  * 
  * @class

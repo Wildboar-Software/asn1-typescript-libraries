@@ -18,7 +18,10 @@ import { FspDeliveryMode, _decode_FspDeliveryMode, _encode_FspDeliveryMode } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parDeliveryMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parDeliveryMode ::= SEQUENCE
+ *    {  parameterName     ParameterName (deliveryMode)
+ *    ,  parameterValue    FspDeliveryMode
+ *    }
  * ```
  * 
  * @class

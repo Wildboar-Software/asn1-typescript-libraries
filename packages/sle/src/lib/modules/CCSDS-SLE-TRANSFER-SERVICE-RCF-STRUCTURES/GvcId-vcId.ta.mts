@@ -16,7 +16,10 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GvcId-vcId ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * GvcId-vcId ::= CHOICE
+ *    { masterChannel            [0]   NULL
+ *    , virtualChannel           [1]   VcId
+ *    }
  * ```
  */
 export

@@ -18,7 +18,10 @@ import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuLastOk-cltuOk ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuLastOk-cltuOk ::= SEQUENCE
+ *    {  cltuIdentification               CltuIdentification
+ *    ,  radiationStopTime                Time
+ *    }
  * ```
  * 
  * @class

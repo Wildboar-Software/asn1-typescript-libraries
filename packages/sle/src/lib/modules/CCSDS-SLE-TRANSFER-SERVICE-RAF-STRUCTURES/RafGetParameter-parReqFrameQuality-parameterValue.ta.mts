@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameter-parReqFrameQuality-parameterValue ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameter-parReqFrameQuality-parameterValue ::= INTEGER
+ *         {   goodFramesOnly                (0)
+ *         ,   erredFrameOnly                (1)
+ *         ,   allFrames                     (2)
+ *         }
  * ```
  */
 export

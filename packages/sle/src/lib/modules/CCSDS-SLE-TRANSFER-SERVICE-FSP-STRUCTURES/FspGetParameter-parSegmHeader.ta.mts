@@ -18,7 +18,13 @@ import { FspGetParameter_parSegmHeader_parameterValue, _decode_FspGetParameter_p
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parSegmHeader ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parSegmHeader ::= SEQUENCE
+ *    {  parameterName     ParameterName (segmentHeader)
+ *    ,  parameterValue    INTEGER
+ *       {  present           (0)
+ *       ,  absent            (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

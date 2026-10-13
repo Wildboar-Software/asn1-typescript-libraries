@@ -18,7 +18,10 @@ import { CltuDeliveryMode, _decode_CltuDeliveryMode, _encode_CltuDeliveryMode } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parDeliveryMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parDeliveryMode ::= SEQUENCE
+ *    {  parameterName                    ParameterName (deliveryMode)
+ *    ,  parameterValue                   CltuDeliveryMode
+ *    }
  * ```
  * 
  * @class

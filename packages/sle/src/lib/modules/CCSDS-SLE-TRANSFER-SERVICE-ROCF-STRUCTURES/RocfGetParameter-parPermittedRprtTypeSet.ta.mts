@@ -18,7 +18,11 @@ import { ControlWordTypeNumber, _decode_ControlWordTypeNumber, _encode_ControlWo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parPermittedRprtTypeSet ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parPermittedRprtTypeSet ::= SEQUENCE
+ *    {  parameterName                 ParameterName
+ *                                        (permittedControlWordTypeSet)
+ *    ,  parameterValue                SEQUENCE OF ControlWordTypeNumber
+ *    }
  * ```
  * 
  * @class

@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticFspStart-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticFspStart-specific ::= INTEGER
+ *    {  outOfService            (0)
+ *    ,  unableToComply          (1)
+ *    ,  productionTimeExpired   (2)
+ *    }
  * ```
  */
 export

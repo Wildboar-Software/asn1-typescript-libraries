@@ -18,7 +18,13 @@ import { _decode_FspGetParameter_parDirInvocOnl_parameterValue, _encode_FspGetPa
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parDirInvocOnl ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parDirInvocOnl ::= SEQUENCE
+ *    {  parameterName     ParameterName (directiveInvocationOnline)
+ *    ,  parameterValue    INTEGER
+ *       {  yes               (0)
+ *       ,  no                (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

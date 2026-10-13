@@ -18,7 +18,10 @@ import { TimeoutPeriod, _decode_TimeoutPeriod, _encode_TimeoutPeriod } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parReturnTimeout ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parReturnTimeout ::= SEQUENCE
+ *    {  parameterName     ParameterName (returnTimeoutPeriod)
+ *    ,  parameterValue    TimeoutPeriod
+ *    }
  * ```
  * 
  * @class

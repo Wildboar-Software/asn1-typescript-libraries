@@ -18,7 +18,10 @@ import { RequestedTcVcid, _decode_RequestedTcVcid, _encode_RequestedTcVcid } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parReqTcVcid ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parReqTcVcid ::= SEQUENCE
+ *    {  parameterName                 ParameterName (requestedTcVcid)
+ *    ,  parameterValue                RequestedTcVcid
+ *    }
  * ```
  * 
  * @class

@@ -17,7 +17,10 @@ import { DiagnosticRafGet, _decode_DiagnosticRafGet, _encode_DiagnosticRafGet } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameterReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameterReturn-result ::= CHOICE
+ *     {   positiveResult                     [0] RafGetParameter
+ *     ,   negativeResult                     [1] DiagnosticRafGet
+ *     }
  * ```
  */
 export

@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parProtocolAbortMode-parameterValue ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parProtocolAbortMode-parameterValue ::= INTEGER
+ *       {  abort                                  (0)
+ *       ,  continue                               (1)
+ *       }
  * ```
  */
 export

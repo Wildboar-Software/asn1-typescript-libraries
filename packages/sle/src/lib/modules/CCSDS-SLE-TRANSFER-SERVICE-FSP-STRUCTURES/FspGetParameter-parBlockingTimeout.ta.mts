@@ -18,7 +18,13 @@ import { FspGetParameter_parBlockingTimeout_parameterValue, _decode_FspGetParame
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parBlockingTimeout ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parBlockingTimeout ::= SEQUENCE
+ *    {  parameterName        ParameterName(blockingTimeoutPeriod)
+ *    ,  parameterValue       CHOICE
+ *       {  blockingOff       [0]   NULL
+ *       ,  blockingOn        [1]   BlockingTimeoutPeriod
+ *       }
+ *    }
  * ```
  * 
  * @class

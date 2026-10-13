@@ -18,7 +18,10 @@ import { PermittedTransmissionMode, _decode_PermittedTransmissionMode, _encode_P
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parPermTransMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parPermTransMode ::= SEQUENCE
+ *    {  parameterName     ParameterName (permittedTransmissionMode)
+ *    ,  parameterValue    PermittedTransmissionMode
+ *    }
  * ```
  * 
  * @class

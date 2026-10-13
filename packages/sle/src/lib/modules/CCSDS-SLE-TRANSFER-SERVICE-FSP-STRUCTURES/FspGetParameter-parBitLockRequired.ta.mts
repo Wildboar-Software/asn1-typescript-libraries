@@ -18,7 +18,13 @@ import { _decode_FspGetParameter_parBitLockRequired_parameterValue, _encode_FspG
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parBitLockRequired ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parBitLockRequired ::= SEQUENCE
+ *    {  parameterName     ParameterName  (bitLockRequired)
+ *    ,  parameterValue    INTEGER
+ *       {  yes                     (0)
+ *       ,  no                      (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parPlopInEffect-parameterValue ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parPlopInEffect-parameterValue ::= INTEGER
+ *       {  plop1                                  (0)
+ *       ,  plop2                                  (1)
+ *       }
  * ```
  */
 export

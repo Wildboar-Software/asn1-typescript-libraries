@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspInvokeDirectiveInvocation-directive-setTimeoutType ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * FspInvokeDirectiveInvocation-directive-setTimeoutType ::= INTEGER
+ *       {  terminateAD                         (0)
+ *       ,  suspendAD                           (1)
+ *       }
  * ```
  */
 export

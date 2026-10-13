@@ -18,7 +18,10 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RcfGetParameter-parMinReportingCycle ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RcfGetParameter-parMinReportingCycle ::= SEQUENCE
+ *     { parameterName                 ParameterName (minReportingCycle)
+ *     , parameterValue                IntPosShort (1 .. 600)
+ *     }
  * ```
  * 
  * @class

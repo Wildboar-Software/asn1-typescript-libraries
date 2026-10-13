@@ -14,7 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticScheduleStatusReport-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticScheduleStatusReport-specific ::= INTEGER
+ *    { notSupportedInThisDeliveryMode      (0)   -- not used for
+ *                                                -- version 1 forward transfer
+ *                                                -- services
+ *    ,     alreadyStopped                  (1)
+ *    ,     invalidReportingCycle           (2)
+ *    }
  * ```
  */
 export

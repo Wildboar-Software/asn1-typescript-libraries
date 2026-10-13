@@ -18,7 +18,11 @@ import { RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parReqControlWordType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parReqControlWordType ::= SEQUENCE
+ *    {  parameterName                 ParameterName
+ *                                        (requestedControlWordType)
+ *    ,  parameterValue                RequestedControlWordTypeNumber
+ *    }
  * ```
  * 
  * @class

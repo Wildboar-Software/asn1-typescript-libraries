@@ -17,7 +17,10 @@ import { DiagnosticCltuGetParameter, _decode_DiagnosticCltuGetParameter, _encode
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameterReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameterReturn-result ::= CHOICE
+ *    {  positiveResult                   [0]   CltuGetParameter
+ *    ,  negativeResult                   [1]   DiagnosticCltuGetParameter
+ *    }
  * ```
  */
 export

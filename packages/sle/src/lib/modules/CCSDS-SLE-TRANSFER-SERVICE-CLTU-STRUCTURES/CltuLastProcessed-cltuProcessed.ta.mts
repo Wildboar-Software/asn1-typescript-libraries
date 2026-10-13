@@ -20,7 +20,11 @@ import { CltuStatus, _decode_CltuStatus, _encode_CltuStatus } from "../CCSDS-SLE
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuLastProcessed-cltuProcessed ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuLastProcessed-cltuProcessed ::= SEQUENCE
+ *    {  cltuIdentification               CltuIdentification
+ *    ,  radiationStartTime               ConditionalTime
+ *    ,  cltuStatus                       CltuStatus
+ *    }
  * ```
  * 
  * @class

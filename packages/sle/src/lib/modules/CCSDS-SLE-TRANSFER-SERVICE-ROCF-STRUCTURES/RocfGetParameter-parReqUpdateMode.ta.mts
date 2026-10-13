@@ -18,7 +18,10 @@ import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpda
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parReqUpdateMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parReqUpdateMode ::= SEQUENCE
+ *    {  parameterName                 ParameterName (requestedUpdateMode)
+ *    ,  parameterValue                RequestedUpdateMode
+ *    }
  * ```
  * 
  * @class

@@ -18,7 +18,14 @@ import { RocfGetParameter_parLatencyLimit_parameterValue, _decode_RocfGetParamet
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parLatencyLimit ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parLatencyLimit ::= SEQUENCE
+ *    {  parameterName                 ParameterName (latencyLimit)
+ *    ,  parameterValue                CHOICE
+ *       {  online                  [0]   IntPosShort
+ *                                     -- latencyLimit in seconds
+ *       ,  offline                 [1]   NULL
+ *       }
+ *    }
  * ```
  * 
  * @class

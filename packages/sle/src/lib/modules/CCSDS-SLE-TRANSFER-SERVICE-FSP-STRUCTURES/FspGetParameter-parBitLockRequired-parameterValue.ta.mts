@@ -14,7 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parBitLockRequired-parameterValue ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parBitLockRequired-parameterValue ::= INTEGER
+ *       {  yes                     (0)
+ *       ,  no                      (1)
+ *       }
  * ```
  */
 export

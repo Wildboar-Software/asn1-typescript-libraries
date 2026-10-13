@@ -16,7 +16,13 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MasterChannelComposition-mcOrVcList ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MasterChannelComposition-mcOrVcList ::= CHOICE
+ *    {  masterChannel                [0] NULL
+ *    ,  vcList                       [1] SET SIZE (1 .. 64) OF VcId
+ *    -- Set size range for TM Transfer Frames: (1 .. 8)
+ *    -- Set size range for AOS Transfer Frames: (1 .. 64)
+ *    -- Set size range for USLP Transfer Frames: (1 .. 64)
+ *    }
  * ```
  */
 export

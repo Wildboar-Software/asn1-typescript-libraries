@@ -18,7 +18,10 @@ import { CurrentReportingCycle, _decode_CurrentReportingCycle, _encode_CurrentRe
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RcfGetParameter-parReportingCycle ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RcfGetParameter-parReportingCycle ::= SEQUENCE
+ *     { parameterName                 ParameterName (reportingCycle)
+ *     , parameterValue                CurrentReportingCycle
+ *     }
  * ```
  * 
  * @class

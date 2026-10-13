@@ -18,7 +18,13 @@ import { _decode_CltuGetParameter_parProtocolAbortMode_parameterValue, _encode_C
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parProtocolAbortMode ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parProtocolAbortMode ::= SEQUENCE
+ *    {  parameterName                    ParameterName (protocolAbortMode)
+ *    ,  parameterValue                   INTEGER
+ *       {  abort                                  (0)
+ *       ,  continue                               (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

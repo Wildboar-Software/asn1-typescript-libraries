@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RcfTransferDataInvocation-privateAnnotation ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RcfTransferDataInvocation-privateAnnotation ::= CHOICE
+ *     {   null                            [0] NULL
+ *     ,   notNull                         [1] OCTET STRING (SIZE (1 .. 128))
+ *     }
  * ```
  */
 export

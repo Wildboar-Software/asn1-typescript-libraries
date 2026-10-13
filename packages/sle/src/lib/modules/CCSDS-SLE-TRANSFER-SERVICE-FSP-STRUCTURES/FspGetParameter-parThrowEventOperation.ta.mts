@@ -18,7 +18,13 @@ import { FspGetParameter_parThrowEventOperation_parameterValue, _decode_FspGetPa
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parThrowEventOperation ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parThrowEventOperation ::= SEQUENCE
+ *    {  parameterName     ParameterName (throwEventOperation)
+ *    ,  parameterValue    INTEGER
+ *       {  enabled           (0)
+ *       ,  disabled          (1)
+ *       }
+ *    }
  * ```
  * 
  * @class

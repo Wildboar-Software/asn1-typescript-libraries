@@ -17,7 +17,10 @@ import { DiagnosticFspGet, _decode_DiagnosticFspGet, _encode_DiagnosticFspGet } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameterReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameterReturn-result ::= CHOICE
+ *    {  positiveResult    [0]   FspGetParameter
+ *    ,  negativeResult    [1]   DiagnosticFspGet
+ *    }
  * ```
  */
 export

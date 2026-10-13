@@ -18,7 +18,11 @@ import { IntUnsignedShort, _decode_IntUnsignedShort, _encode_IntUnsignedShort } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parPlop1IdleSequenceLength ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parPlop1IdleSequenceLength ::= SEQUENCE
+ *    {  parameterName                    ParameterName
+ *                                           (plop1IdleSequenceLength)
+ *    ,  parameterValue                   IntUnsignedShort
+ *    }
  * ```
  * 
  * @class

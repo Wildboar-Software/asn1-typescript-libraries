@@ -16,7 +16,10 @@ import { DiagnosticScheduleStatusReport, _decode_DiagnosticScheduleStatusReport,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SleScheduleStatusReportReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SleScheduleStatusReportReturn-result ::= CHOICE
+ *    { positiveResult           [0]    NULL
+ *    , negativeResult           [1]    DiagnosticScheduleStatusReport
+ *    }
  * ```
  */
 export

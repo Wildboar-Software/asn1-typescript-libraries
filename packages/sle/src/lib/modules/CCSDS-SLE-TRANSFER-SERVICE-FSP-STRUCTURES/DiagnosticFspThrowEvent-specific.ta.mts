@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticFspThrowEvent-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticFspThrowEvent-specific ::= INTEGER
+ *    {  operationNotSupported            (0)
+ *    ,  eventIdentificationOutOfSequence (1)
+ * ,  noSuchEvent                         (2)
+ *    }
  * ```
  */
 export

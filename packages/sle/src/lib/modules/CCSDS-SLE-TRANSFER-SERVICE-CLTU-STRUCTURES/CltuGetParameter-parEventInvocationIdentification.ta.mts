@@ -18,7 +18,11 @@ import { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuGetParameter-parEventInvocationIdentification ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuGetParameter-parEventInvocationIdentification ::= SEQUENCE
+ *    {  parameterName                    ParameterName
+ *                                  (expectedEventInvocationIdentification)
+ *    , parameterValue                    EventInvocationId
+ *    }
  * ```
  * 
  * @class

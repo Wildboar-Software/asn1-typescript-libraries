@@ -18,7 +18,11 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspGetParameter-parExpectEventInvId ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspGetParameter-parExpectEventInvId ::= SEQUENCE
+ * {  parameterName        ParameterName
+ *                         (expectedEventInvocationIdentification)
+ *    ,  parameterValue    IntUnsignedLong
+ *    }
  * ```
  * 
  * @class

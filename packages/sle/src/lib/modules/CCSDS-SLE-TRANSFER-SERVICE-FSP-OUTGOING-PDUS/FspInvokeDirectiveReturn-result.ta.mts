@@ -16,7 +16,10 @@ import { DiagnosticFspInvokeDirective, _decode_DiagnosticFspInvokeDirective, _en
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspInvokeDirectiveReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FspInvokeDirectiveReturn-result ::= CHOICE
+ *    {  positiveResult       [0]   NULL
+ *    ,  negativeResult       [1]   DiagnosticFspInvokeDirective
+ *    }
  * ```
  */
 export

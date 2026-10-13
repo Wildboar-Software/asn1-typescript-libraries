@@ -18,7 +18,10 @@ import { RequestedGvcId, _decode_RequestedGvcId, _encode_RequestedGvcId } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameter-parReqGvcId ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameter-parReqGvcId ::= SEQUENCE
+ *    {  parameterName                 ParameterName (requestedGvcid)
+ *    ,  parameterValue                RequestedGvcId
+ *    }
  * ```
  * 
  * @class

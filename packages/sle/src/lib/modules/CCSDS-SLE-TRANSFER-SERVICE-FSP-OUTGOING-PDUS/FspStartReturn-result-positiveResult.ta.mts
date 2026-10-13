@@ -17,7 +17,10 @@ import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspStartReturn-result-positiveResult ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspStartReturn-result-positiveResult ::= SEQUENCE
+ *       {  startProductionTime     Time
+ *       ,  stopProductionTime      ConditionalTime
+ *       }
  * ```
  * 
  * @class

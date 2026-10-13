@@ -14,7 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticCltuThrowEvent-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticCltuThrowEvent-specific ::= INTEGER
+ *    {  operationNotSupported            (0)
+ *    ,  eventInvocIdOutOfSequence        (1)
+ *    ,  noSuchEvent                      (2)
+ *    }
  * ```
  */
 export

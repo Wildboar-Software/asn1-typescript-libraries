@@ -17,7 +17,13 @@ import { DiagnosticFspStart, _decode_DiagnosticFspStart, _encode_DiagnosticFspSt
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspStartReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FspStartReturn-result ::= CHOICE
+ *    {  positiveResult    [0]   SEQUENCE
+ *       {  startProductionTime     Time
+ *       ,  stopProductionTime      ConditionalTime
+ *       }
+ *    ,  negativeResult    [1]   DiagnosticFspStart
+ *    }
  * ```
  */
 export

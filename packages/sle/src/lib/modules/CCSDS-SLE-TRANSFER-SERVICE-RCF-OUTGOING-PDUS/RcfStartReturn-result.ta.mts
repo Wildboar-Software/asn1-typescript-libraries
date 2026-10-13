@@ -16,7 +16,10 @@ import { DiagnosticRcfStart, _decode_DiagnosticRcfStart, _encode_DiagnosticRcfSt
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RcfStartReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RcfStartReturn-result ::= CHOICE
+ *     {   positiveResult                     [0] NULL
+ *     ,   negativeResult                     [1] DiagnosticRcfStart
+ *     }
  * ```
  */
 export

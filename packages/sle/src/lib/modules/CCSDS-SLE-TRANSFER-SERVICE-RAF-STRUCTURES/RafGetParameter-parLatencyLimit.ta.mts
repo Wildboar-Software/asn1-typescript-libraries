@@ -18,7 +18,14 @@ import { RafGetParameter_parLatencyLimit_parameterValue, _decode_RafGetParameter
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameter-parLatencyLimit ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameter-parLatencyLimit ::= SEQUENCE
+ *     {   parameterName                ParameterName (latencyLimit)
+ *     ,   parameterValue               CHOICE
+ *         {   online                   [0] IntPosShort
+ *                                               -- latencyLimit in seconds
+ *         ,   offline                  [1] NULL
+ *         }
+ *     }
  * ```
  * 
  * @class
