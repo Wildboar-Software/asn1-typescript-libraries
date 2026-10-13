@@ -115,35 +115,8 @@ const FspGetParameter_parFopState_fopState_initial: FspGetParameter_parFopState_
  */
 export
 const initial: FspGetParameter_parFopState_fopState = FspGetParameter_parFopState_fopState_initial; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_FspGetParameter_parFopState_fopState: $.ASN1Decoder<FspGetParameter_parFopState_fopState> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FspGetParameter_parFopState_fopState
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FspGetParameter_parFopState_fopState (el: _Element): FspGetParameter_parFopState_fopState {
-    if (!_cached_decoder_for_FspGetParameter_parFopState_fopState) { _cached_decoder_for_FspGetParameter_parFopState_fopState = $._decodeInteger; }
-    return _cached_decoder_for_FspGetParameter_parFopState_fopState(el);
-}
-
-let _cached_encoder_for_FspGetParameter_parFopState_fopState: $.ASN1Encoder<FspGetParameter_parFopState_fopState> | null = null;
-
-/**
- * @summary Encodes a(n) FspGetParameter_parFopState_fopState into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FspGetParameter_parFopState_fopState, encoded as an ASN.1 Element.
- */
-export
-function _encode_FspGetParameter_parFopState_fopState (value: FspGetParameter_parFopState_fopState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parFopState_fopState) { _cached_encoder_for_FspGetParameter_parFopState_fopState = $._encodeInteger; }
-    return _cached_encoder_for_FspGetParameter_parFopState_fopState(value, elGetter);
-}
+export const _decode_FspGetParameter_parFopState_fopState: $.ASN1Decoder<FspGetParameter_parFopState_fopState> = $._decodeInteger;
+export const _encode_FspGetParameter_parFopState_fopState: $.ASN1Encoder<FspGetParameter_parFopState_fopState> = $._encodeInteger;
 
 
 /* eslint-enable */

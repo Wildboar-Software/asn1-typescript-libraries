@@ -71,35 +71,8 @@ const FrameQuality_undetermined: FrameQuality = 2; /* LONG_NAMED_INTEGER_VALUE *
  */
 export
 const undetermined: FrameQuality = FrameQuality_undetermined; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_FrameQuality: $.ASN1Decoder<FrameQuality> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FrameQuality
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FrameQuality (el: _Element): FrameQuality {
-    if (!_cached_decoder_for_FrameQuality) { _cached_decoder_for_FrameQuality = $._decodeInteger; }
-    return _cached_decoder_for_FrameQuality(el);
-}
-
-let _cached_encoder_for_FrameQuality: $.ASN1Encoder<FrameQuality> | null = null;
-
-/**
- * @summary Encodes a(n) FrameQuality into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FrameQuality, encoded as an ASN.1 Element.
- */
-export
-function _encode_FrameQuality (value: FrameQuality, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FrameQuality) { _cached_encoder_for_FrameQuality = $._encodeInteger; }
-    return _cached_encoder_for_FrameQuality(value, elGetter);
-}
+export const _decode_FrameQuality: $.ASN1Decoder<FrameQuality> = $._decodeInteger;
+export const _encode_FrameQuality: $.ASN1Encoder<FrameQuality> = $._encodeInteger;
 
 
 /* eslint-enable */

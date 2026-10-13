@@ -122,35 +122,8 @@ const FspProductionStatus_halted: FspProductionStatus = 5; /* LONG_NAMED_INTEGER
  */
 export
 const halted: FspProductionStatus = FspProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_FspProductionStatus: $.ASN1Decoder<FspProductionStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FspProductionStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FspProductionStatus (el: _Element): FspProductionStatus {
-    if (!_cached_decoder_for_FspProductionStatus) { _cached_decoder_for_FspProductionStatus = $._decodeInteger; }
-    return _cached_decoder_for_FspProductionStatus(el);
-}
-
-let _cached_encoder_for_FspProductionStatus: $.ASN1Encoder<FspProductionStatus> | null = null;
-
-/**
- * @summary Encodes a(n) FspProductionStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FspProductionStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_FspProductionStatus (value: FspProductionStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspProductionStatus) { _cached_encoder_for_FspProductionStatus = $._encodeInteger; }
-    return _cached_encoder_for_FspProductionStatus(value, elGetter);
-}
+export const _decode_FspProductionStatus: $.ASN1Decoder<FspProductionStatus> = $._decodeInteger;
+export const _encode_FspProductionStatus: $.ASN1Encoder<FspProductionStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -71,35 +71,8 @@ const RafProductionStatus_halted: RafProductionStatus = 2; /* LONG_NAMED_INTEGER
  */
 export
 const halted: RafProductionStatus = RafProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_RafProductionStatus: $.ASN1Decoder<RafProductionStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) RafProductionStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_RafProductionStatus (el: _Element): RafProductionStatus {
-    if (!_cached_decoder_for_RafProductionStatus) { _cached_decoder_for_RafProductionStatus = $._decodeInteger; }
-    return _cached_decoder_for_RafProductionStatus(el);
-}
-
-let _cached_encoder_for_RafProductionStatus: $.ASN1Encoder<RafProductionStatus> | null = null;
-
-/**
- * @summary Encodes a(n) RafProductionStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The RafProductionStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_RafProductionStatus (value: RafProductionStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafProductionStatus) { _cached_encoder_for_RafProductionStatus = $._encodeInteger; }
-    return _cached_encoder_for_RafProductionStatus(value, elGetter);
-}
+export const _decode_RafProductionStatus: $.ASN1Decoder<RafProductionStatus> = $._decodeInteger;
+export const _encode_RafProductionStatus: $.ASN1Encoder<RafProductionStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

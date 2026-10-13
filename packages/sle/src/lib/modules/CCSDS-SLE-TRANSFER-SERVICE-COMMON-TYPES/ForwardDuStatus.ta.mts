@@ -139,35 +139,8 @@ const ForwardDuStatus_unsupportedTransmissionMode: ForwardDuStatus = 6; /* LONG_
  */
 export
 const unsupportedTransmissionMode: ForwardDuStatus = ForwardDuStatus_unsupportedTransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ForwardDuStatus: $.ASN1Decoder<ForwardDuStatus> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ForwardDuStatus
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ForwardDuStatus (el: _Element): ForwardDuStatus {
-    if (!_cached_decoder_for_ForwardDuStatus) { _cached_decoder_for_ForwardDuStatus = $._decodeInteger; }
-    return _cached_decoder_for_ForwardDuStatus(el);
-}
-
-let _cached_encoder_for_ForwardDuStatus: $.ASN1Encoder<ForwardDuStatus> | null = null;
-
-/**
- * @summary Encodes a(n) ForwardDuStatus into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ForwardDuStatus, encoded as an ASN.1 Element.
- */
-export
-function _encode_ForwardDuStatus (value: ForwardDuStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ForwardDuStatus) { _cached_encoder_for_ForwardDuStatus = $._encodeInteger; }
-    return _cached_encoder_for_ForwardDuStatus(value, elGetter);
-}
+export const _decode_ForwardDuStatus: $.ASN1Decoder<ForwardDuStatus> = $._decodeInteger;
+export const _encode_ForwardDuStatus: $.ASN1Encoder<ForwardDuStatus> = $._encodeInteger;
 
 
 /* eslint-enable */

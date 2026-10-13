@@ -190,35 +190,8 @@ const BindDiagnostic_otherReason: BindDiagnostic = 127; /* LONG_NAMED_INTEGER_VA
  */
 export
 const otherReason: BindDiagnostic = BindDiagnostic_otherReason; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_BindDiagnostic: $.ASN1Decoder<BindDiagnostic> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) BindDiagnostic
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_BindDiagnostic (el: _Element): BindDiagnostic {
-    if (!_cached_decoder_for_BindDiagnostic) { _cached_decoder_for_BindDiagnostic = $._decodeInteger; }
-    return _cached_decoder_for_BindDiagnostic(el);
-}
-
-let _cached_encoder_for_BindDiagnostic: $.ASN1Encoder<BindDiagnostic> | null = null;
-
-/**
- * @summary Encodes a(n) BindDiagnostic into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The BindDiagnostic, encoded as an ASN.1 Element.
- */
-export
-function _encode_BindDiagnostic (value: BindDiagnostic, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BindDiagnostic) { _cached_encoder_for_BindDiagnostic = $._encodeInteger; }
-    return _cached_encoder_for_BindDiagnostic(value, elGetter);
-}
+export const _decode_BindDiagnostic: $.ASN1Decoder<BindDiagnostic> = $._decodeInteger;
+export const _encode_BindDiagnostic: $.ASN1Encoder<BindDiagnostic> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -54,35 +54,8 @@ const Diagnostics_otherReason: Diagnostics = 127; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const otherReason: Diagnostics = Diagnostics_otherReason; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_Diagnostics: $.ASN1Decoder<Diagnostics> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) Diagnostics
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_Diagnostics (el: _Element): Diagnostics {
-    if (!_cached_decoder_for_Diagnostics) { _cached_decoder_for_Diagnostics = $._decodeInteger; }
-    return _cached_decoder_for_Diagnostics(el);
-}
-
-let _cached_encoder_for_Diagnostics: $.ASN1Encoder<Diagnostics> | null = null;
-
-/**
- * @summary Encodes a(n) Diagnostics into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The Diagnostics, encoded as an ASN.1 Element.
- */
-export
-function _encode_Diagnostics (value: Diagnostics, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Diagnostics) { _cached_encoder_for_Diagnostics = $._encodeInteger; }
-    return _cached_encoder_for_Diagnostics(value, elGetter);
-}
+export const _decode_Diagnostics: $.ASN1Decoder<Diagnostics> = $._decodeInteger;
+export const _encode_Diagnostics: $.ASN1Encoder<Diagnostics> = $._encodeInteger;
 
 
 /* eslint-enable */

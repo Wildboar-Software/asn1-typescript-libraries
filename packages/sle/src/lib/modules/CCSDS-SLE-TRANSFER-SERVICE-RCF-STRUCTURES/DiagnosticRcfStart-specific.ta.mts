@@ -115,35 +115,8 @@ const DiagnosticRcfStart_specific_invalidGvcid: DiagnosticRcfStart_specific = 5;
  */
 export
 const invalidGvcid: DiagnosticRcfStart_specific = DiagnosticRcfStart_specific_invalidGvcid; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DiagnosticRcfStart_specific: $.ASN1Decoder<DiagnosticRcfStart_specific> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DiagnosticRcfStart_specific
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DiagnosticRcfStart_specific (el: _Element): DiagnosticRcfStart_specific {
-    if (!_cached_decoder_for_DiagnosticRcfStart_specific) { _cached_decoder_for_DiagnosticRcfStart_specific = $._decodeInteger; }
-    return _cached_decoder_for_DiagnosticRcfStart_specific(el);
-}
-
-let _cached_encoder_for_DiagnosticRcfStart_specific: $.ASN1Encoder<DiagnosticRcfStart_specific> | null = null;
-
-/**
- * @summary Encodes a(n) DiagnosticRcfStart_specific into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DiagnosticRcfStart_specific, encoded as an ASN.1 Element.
- */
-export
-function _encode_DiagnosticRcfStart_specific (value: DiagnosticRcfStart_specific, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DiagnosticRcfStart_specific) { _cached_encoder_for_DiagnosticRcfStart_specific = $._encodeInteger; }
-    return _cached_encoder_for_DiagnosticRcfStart_specific(value, elGetter);
-}
+export const _decode_DiagnosticRcfStart_specific: $.ASN1Decoder<DiagnosticRcfStart_specific> = $._decodeInteger;
+export const _encode_DiagnosticRcfStart_specific: $.ASN1Encoder<DiagnosticRcfStart_specific> = $._encodeInteger;
 
 
 /* eslint-enable */
