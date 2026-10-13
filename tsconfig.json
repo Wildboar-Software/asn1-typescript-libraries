@@ -284,6 +284,9 @@
     },
     {
       "path": "./packages/stanag4406"
+    },
+    {
+      "path": "./packages/sle"
     }
   ],
   "compilerOptions": {

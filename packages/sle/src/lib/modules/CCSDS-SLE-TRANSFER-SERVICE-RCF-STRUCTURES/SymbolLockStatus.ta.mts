@@ -1,0 +1,57 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { _decode_LockStatus, _encode_LockStatus, LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/LockStatus.ta.mjs";
+// export { LockStatus, LockStatus_inLock /* IMPORTED_LONG_NAMED_INTEGER */, inLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_outOfLock /* IMPORTED_LONG_NAMED_INTEGER */, outOfLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_notInUse /* IMPORTED_LONG_NAMED_INTEGER */, notInUse /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_LockStatus, _encode_LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/LockStatus.ta.mjs";
+
+
+/**
+ * @summary SymbolLockStatus
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * SymbolLockStatus        ::=    LockStatus
+ * ( inLock
+ * | outOfLock
+ * | unknown
+ * )
+ * ```
+ */
+export
+type SymbolLockStatus = LockStatus; // DefinedType
+
+let _cached_decoder_for_SymbolLockStatus: $.ASN1Decoder<SymbolLockStatus> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) SymbolLockStatus
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_SymbolLockStatus (el: _Element): SymbolLockStatus {
+    if (!_cached_decoder_for_SymbolLockStatus) { _cached_decoder_for_SymbolLockStatus = _decode_LockStatus; }
+    return _cached_decoder_for_SymbolLockStatus(el);
+}
+
+let _cached_encoder_for_SymbolLockStatus: $.ASN1Encoder<SymbolLockStatus> | null = null;
+
+/**
+ * @summary Encodes a(n) SymbolLockStatus into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The SymbolLockStatus, encoded as an ASN.1 Element.
+ */
+export
+function _encode_SymbolLockStatus (value: SymbolLockStatus, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_SymbolLockStatus) { _cached_encoder_for_SymbolLockStatus = _encode_LockStatus; }
+    return _cached_encoder_for_SymbolLockStatus(value, elGetter);
+}
+
+
+/* eslint-enable */
