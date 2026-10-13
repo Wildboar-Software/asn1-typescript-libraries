@@ -1,8 +1,11 @@
-# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
+# Space Link Extension (SLE)
 
-Data structures from the ASN.1 definitions defined in
-[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
-Telebiometrics Authentication Infrastructure (TAI).
+ASN.1 data structures and PDUs for the CCSDS Space Link Extension (SLE)
+transfer services. The compiled modules cover the return all frames service
+(CCSDS 911.1-B-5), return channel frames, return operational control field,
+CLTU, and forward space packet services, plus the shared SLE types.
+
+Service modules repeat type names, so each ASN.1 module is its own entrypoint.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -21,5 +24,9 @@ programming languages, or if you have any other questions, please contact us at
 
 ## ESM-Only
 
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from raw ASN.1 compiler outputs using AI
+(Grok 4.7) on 13 October 2026.
