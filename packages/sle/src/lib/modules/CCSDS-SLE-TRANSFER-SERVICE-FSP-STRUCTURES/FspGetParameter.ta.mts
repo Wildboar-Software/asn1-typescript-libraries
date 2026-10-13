@@ -307,13 +307,16 @@ let _cached_decoder_for_FspGetParameter: $.ASN1Decoder<FspGetParameter> | null =
  */
 export
 function _decode_FspGetParameter (el: _Element): FspGetParameter {
+    // The bundled ASN.1 repeats context tag 27 on parBitLockRequired and
+    // parClcwGlobalVcId, and context tag 28 on parClcwPhysicalChannel and
+    // parRfAvailableRequired. CCSDS 912.3-B-2 assigns 27 to parBitLockRequired
+    // and 28 to parRfAvailableRequired, so those alternatives are the ones
+    // decoded. The colliding alternatives remain encodable.
     if (!_cached_decoder_for_FspGetParameter) { _cached_decoder_for_FspGetParameter = $._decode_inextensible_choice<FspGetParameter>({
     "CONTEXT 0": [ "parApidList", $._decode_implicit<FspGetParameter_parApidList>(() => _decode_FspGetParameter_parApidList) ],
     "CONTEXT 27": [ "parBitLockRequired", $._decode_implicit<FspGetParameter_parBitLockRequired>(() => _decode_FspGetParameter_parBitLockRequired) ],
     "CONTEXT 1": [ "parBlockingTimeout", $._decode_implicit<FspGetParameter_parBlockingTimeout>(() => _decode_FspGetParameter_parBlockingTimeout) ],
     "CONTEXT 2": [ "parBlockingUsage", $._decode_implicit<FspGetParameter_parBlockingUsage>(() => _decode_FspGetParameter_parBlockingUsage) ],
-    "CONTEXT 27": [ "parClcwGlobalVcId", $._decode_implicit<FspGetParameter_parClcwGlobalVcId>(() => _decode_FspGetParameter_parClcwGlobalVcId) ],
-    "CONTEXT 28": [ "parClcwPhysicalChannel", $._decode_implicit<FspGetParameter_parClcwPhysicalChannel>(() => _decode_FspGetParameter_parClcwPhysicalChannel) ],
     "CONTEXT 29": [ "parCopCntrFramesRepetition", $._decode_implicit<FspGetParameter_parCopCntrFramesRepetition>(() => _decode_FspGetParameter_parCopCntrFramesRepetition) ],
     "CONTEXT 3": [ "parDeliveryMode", $._decode_implicit<FspGetParameter_parDeliveryMode>(() => _decode_FspGetParameter_parDeliveryMode) ],
     "CONTEXT 4": [ "parDirectiveInvoc", $._decode_implicit<FspGetParameter_parDirectiveInvoc>(() => _decode_FspGetParameter_parDirectiveInvoc) ],
