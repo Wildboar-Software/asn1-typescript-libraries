@@ -1,0 +1,221 @@
+/* eslint-disable */
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary PTCFloorActivity
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PTCFloorActivity   ::=  ENUMERATED
+ * {
+ *     tBCPRequest(1),
+ *     tBCPGranted(2),
+ *     tBCPDeny(3),
+ *     tBCPIdle(4),
+ *     tBCPTaken(5),
+ *     tBCPRevoke(6),
+ *     tBCPQueued(7),
+ *     tBCPRelease(8)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_PTCFloorActivity {
+    tBCPRequest = 1,
+    tBCPGranted = 2,
+    tBCPDeny = 3,
+    tBCPIdle = 4,
+    tBCPTaken = 5,
+    tBCPRevoke = 6,
+    tBCPQueued = 7,
+    tBCPRelease = 8,
+}
+
+/**
+ * @summary PTCFloorActivity
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PTCFloorActivity   ::=  ENUMERATED
+ * {
+ *     tBCPRequest(1),
+ *     tBCPGranted(2),
+ *     tBCPDeny(3),
+ *     tBCPIdle(4),
+ *     tBCPTaken(5),
+ *     tBCPRevoke(6),
+ *     tBCPQueued(7),
+ *     tBCPRelease(8)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type PTCFloorActivity = _enum_for_PTCFloorActivity;
+
+/**
+ * @summary PTCFloorActivity
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PTCFloorActivity   ::=  ENUMERATED
+ * {
+ *     tBCPRequest(1),
+ *     tBCPGranted(2),
+ *     tBCPDeny(3),
+ *     tBCPIdle(4),
+ *     tBCPTaken(5),
+ *     tBCPRevoke(6),
+ *     tBCPQueued(7),
+ *     tBCPRelease(8)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const PTCFloorActivity = _enum_for_PTCFloorActivity;
+
+/**
+ * @summary PTCFloorActivity_tBCPRequest
+ * @constant
+ * @type {number}
+ */
+export
+const PTCFloorActivity_tBCPRequest: PTCFloorActivity = PTCFloorActivity.tBCPRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary tBCPRequest
+ * @constant
+ * @type {number}
+ */
+export
+const tBCPRequest: PTCFloorActivity = PTCFloorActivity.tBCPRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PTCFloorActivity_tBCPGranted
+ * @constant
+ * @type {number}
+ */
+export
+const PTCFloorActivity_tBCPGranted: PTCFloorActivity = PTCFloorActivity.tBCPGranted; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary tBCPGranted
+ * @constant
+ * @type {number}
+ */
+export
+const tBCPGranted: PTCFloorActivity = PTCFloorActivity.tBCPGranted; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PTCFloorActivity_tBCPDeny
+ * @constant
+ * @type {number}
+ */
+export
+const PTCFloorActivity_tBCPDeny: PTCFloorActivity = PTCFloorActivity.tBCPDeny; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary tBCPDeny
+ * @constant
+ * @type {number}
+ */
+export
+const tBCPDeny: PTCFloorActivity = PTCFloorActivity.tBCPDeny; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PTCFloorActivity_tBCPIdle
+ * @constant
+ * @type {number}
+ */
+export
+const PTCFloorActivity_tBCPIdle: PTCFloorActivity = PTCFloorActivity.tBCPIdle; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary tBCPIdle
+ * @constant
+ * @type {number}
+ */
+export
+const tBCPIdle: PTCFloorActivity = PTCFloorActivity.tBCPIdle; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PTCFloorActivity_tBCPTaken
+ * @constant
+ * @type {number}
+ */
+export
+const PTCFloorActivity_tBCPTaken: PTCFloorActivity = PTCFloorActivity.tBCPTaken; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary tBCPTaken
+ * @constant
+ * @type {number}
+ */
+export
+const tBCPTaken: PTCFloorActivity = PTCFloorActivity.tBCPTaken; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PTCFloorActivity_tBCPRevoke
+ * @constant
+ * @type {number}
+ */
+export
+const PTCFloorActivity_tBCPRevoke: PTCFloorActivity = PTCFloorActivity.tBCPRevoke; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary tBCPRevoke
+ * @constant
+ * @type {number}
+ */
+export
+const tBCPRevoke: PTCFloorActivity = PTCFloorActivity.tBCPRevoke; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PTCFloorActivity_tBCPQueued
+ * @constant
+ * @type {number}
+ */
+export
+const PTCFloorActivity_tBCPQueued: PTCFloorActivity = PTCFloorActivity.tBCPQueued; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary tBCPQueued
+ * @constant
+ * @type {number}
+ */
+export
+const tBCPQueued: PTCFloorActivity = PTCFloorActivity.tBCPQueued; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PTCFloorActivity_tBCPRelease
+ * @constant
+ * @type {number}
+ */
+export
+const PTCFloorActivity_tBCPRelease: PTCFloorActivity = PTCFloorActivity.tBCPRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary tBCPRelease
+ * @constant
+ * @type {number}
+ */
+export
+const tBCPRelease: PTCFloorActivity = PTCFloorActivity.tBCPRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_PTCFloorActivity: $.ASN1Decoder<PTCFloorActivity> = $._decodeEnumerated;
+export const _encode_PTCFloorActivity: $.ASN1Encoder<PTCFloorActivity> = $._encodeEnumerated;
+
+
+/* eslint-enable */

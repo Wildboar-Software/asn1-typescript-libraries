@@ -1,0 +1,141 @@
+/* eslint-disable */
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary RCSMessageType
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RCSMessageType  ::=  ENUMERATED
+ * {
+ *     messageWithUserContent(1),
+ *     fileTransferMessage(2),
+ *     geoLocationPUSHMessage(3),
+ *     iMDNNotification(4)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_RCSMessageType {
+    messageWithUserContent = 1,
+    fileTransferMessage = 2,
+    geoLocationPUSHMessage = 3,
+    iMDNNotification = 4,
+}
+
+/**
+ * @summary RCSMessageType
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RCSMessageType  ::=  ENUMERATED
+ * {
+ *     messageWithUserContent(1),
+ *     fileTransferMessage(2),
+ *     geoLocationPUSHMessage(3),
+ *     iMDNNotification(4)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type RCSMessageType = _enum_for_RCSMessageType;
+
+/**
+ * @summary RCSMessageType
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RCSMessageType  ::=  ENUMERATED
+ * {
+ *     messageWithUserContent(1),
+ *     fileTransferMessage(2),
+ *     geoLocationPUSHMessage(3),
+ *     iMDNNotification(4)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const RCSMessageType = _enum_for_RCSMessageType;
+
+/**
+ * @summary RCSMessageType_messageWithUserContent
+ * @constant
+ * @type {number}
+ */
+export
+const RCSMessageType_messageWithUserContent: RCSMessageType = RCSMessageType.messageWithUserContent; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary messageWithUserContent
+ * @constant
+ * @type {number}
+ */
+export
+const messageWithUserContent: RCSMessageType = RCSMessageType.messageWithUserContent; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary RCSMessageType_fileTransferMessage
+ * @constant
+ * @type {number}
+ */
+export
+const RCSMessageType_fileTransferMessage: RCSMessageType = RCSMessageType.fileTransferMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary fileTransferMessage
+ * @constant
+ * @type {number}
+ */
+export
+const fileTransferMessage: RCSMessageType = RCSMessageType.fileTransferMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary RCSMessageType_geoLocationPUSHMessage
+ * @constant
+ * @type {number}
+ */
+export
+const RCSMessageType_geoLocationPUSHMessage: RCSMessageType = RCSMessageType.geoLocationPUSHMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary geoLocationPUSHMessage
+ * @constant
+ * @type {number}
+ */
+export
+const geoLocationPUSHMessage: RCSMessageType = RCSMessageType.geoLocationPUSHMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary RCSMessageType_iMDNNotification
+ * @constant
+ * @type {number}
+ */
+export
+const RCSMessageType_iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotification; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary iMDNNotification
+ * @constant
+ * @type {number}
+ */
+export
+const iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_RCSMessageType: $.ASN1Decoder<RCSMessageType> = $._decodeEnumerated;
+export const _encode_RCSMessageType: $.ASN1Encoder<RCSMessageType> = $._encodeEnumerated;
+
+
+/* eslint-enable */

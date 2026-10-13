@@ -1,0 +1,188 @@
+/* eslint-disable */
+import {
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    OCTET_STRING,
+    ASN1SizeError
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary TLS13EarlySecretInfo
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * TLS13EarlySecretInfo ::= SEQUENCE
+ * {
+ *     earlySecretValue [1] OCTET STRING (SIZE(1..65535)),
+ *     transcriptHash   [2] OCTET STRING (SIZE(1..65535))
+ *     -- Hash(ClientHello)
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class TLS13EarlySecretInfo {
+    /**
+     * @summary `earlySecretValue`.
+     * @public
+     * @readonly
+     */
+    readonly earlySecretValue: OCTET_STRING;
+    /**
+     * @summary `transcriptHash`.
+     * @public
+     * @readonly
+     */
+    readonly transcriptHash: OCTET_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        earlySecretValue: OCTET_STRING,
+        transcriptHash: OCTET_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.earlySecretValue = earlySecretValue;
+        this.transcriptHash = transcriptHash;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a TLS13EarlySecretInfo
+     * @description
+     * 
+     * This takes an `object` and converts it to a `TLS13EarlySecretInfo`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `TLS13EarlySecretInfo`.
+     * @returns {TLS13EarlySecretInfo}
+     */
+    public static _from_object (_o: { [_K in keyof (TLS13EarlySecretInfo)]: (TLS13EarlySecretInfo)[_K] }): TLS13EarlySecretInfo {
+        return new TLS13EarlySecretInfo(_o.earlySecretValue, _o.transcriptHash, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of TLS13EarlySecretInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_TLS13EarlySecretInfo: $.ComponentSpec[] = [
+    new $.ComponentSpec("earlySecretValue", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("transcriptHash", false, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of TLS13EarlySecretInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_TLS13EarlySecretInfo: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of TLS13EarlySecretInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_TLS13EarlySecretInfo: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_TLS13EarlySecretInfo: $.ASN1Decoder<TLS13EarlySecretInfo> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) TLS13EarlySecretInfo
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_TLS13EarlySecretInfo (el: _Element): TLS13EarlySecretInfo {
+    if (!_cached_decoder_for_TLS13EarlySecretInfo) { _cached_decoder_for_TLS13EarlySecretInfo = function (el: _Element): TLS13EarlySecretInfo {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError("TLS13EarlySecretInfo contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "earlySecretValue";
+    sequence[1].name = "transcriptHash";
+    let earlySecretValue!: OCTET_STRING;
+    let transcriptHash!: OCTET_STRING;
+    earlySecretValue = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    {
+        if (earlySecretValue.length < 1 || earlySecretValue.length > 65535) {
+            throw new ASN1SizeError("TLS13EarlySecretInfo.earlySecretValue violates SIZE constraint");
+        }
+    }
+    transcriptHash = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    {
+        if (transcriptHash.length < 1 || transcriptHash.length > 65535) {
+            throw new ASN1SizeError("TLS13EarlySecretInfo.transcriptHash violates SIZE constraint");
+        }
+    }
+    return new TLS13EarlySecretInfo(
+        earlySecretValue,
+        transcriptHash,
+        sequence.slice(2),
+    );
+}; }
+    return _cached_decoder_for_TLS13EarlySecretInfo(el);
+}
+
+let _cached_encoder_for_TLS13EarlySecretInfo: $.ASN1Encoder<TLS13EarlySecretInfo> | null = null;
+
+/**
+ * @summary Encodes a(n) TLS13EarlySecretInfo into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The TLS13EarlySecretInfo, encoded as an ASN.1 Element.
+ */
+export
+function _encode_TLS13EarlySecretInfo (value: TLS13EarlySecretInfo, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_TLS13EarlySecretInfo) { _cached_encoder_for_TLS13EarlySecretInfo = function (value: TLS13EarlySecretInfo, elGetter: $.ASN1Encoder<TLS13EarlySecretInfo>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.earlySecretValue, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.transcriptHash, $.BER);
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_TLS13EarlySecretInfo(value, elGetter);
+}
+
+
+/* eslint-enable */

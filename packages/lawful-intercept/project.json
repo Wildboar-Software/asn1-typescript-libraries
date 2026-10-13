@@ -1,0 +1,25 @@
+{
+  "name": "lawful-intercept",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/lawful-intercept/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/lawful-intercept",
+        "tsConfig": "packages/lawful-intercept/tsconfig.lib.json",
+        "packageJson": "packages/lawful-intercept/package.json",
+        "main": "packages/lawful-intercept/src/index.mts",
+        "assets": [
+          "packages/lawful-intercept/*.md",
+          "packages/lawful-intercept/LICENSE.txt",
+          "packages/lawful-intercept/package.json"
+        ]
+      }
+    }
+  }
+}

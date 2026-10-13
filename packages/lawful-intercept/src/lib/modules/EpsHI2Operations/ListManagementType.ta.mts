@@ -1,0 +1,124 @@
+/* eslint-disable */
+import {
+    ENUMERATED
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+export
+enum _enum_for_ListManagementType {
+    contactListManagementAttempt = 1,
+    groupListManagementAttempt = 2,
+    contactListManagementResult = 3,
+    groupListManagementResult = 4,
+    requestSuccessful = 5,
+}
+
+/**
+ * @summary ListManagementType
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ListManagementType         ::=  ENUMERATED
+ * {
+ *     contactListManagementAttempt    (1),
+ *     groupListManagementAttempt        (2),
+ *     contactListManagementResult    (3),
+ *     groupListManagementResult        (4),
+ *     requestSuccessful                (5),
+ * ...
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type ListManagementType = _enum_for_ListManagementType | ENUMERATED;
+
+/**
+ * @summary ListManagementType_contactListManagementAttempt
+ * @constant
+ * @type {number}
+ */
+export
+const ListManagementType_contactListManagementAttempt: ListManagementType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary contactListManagementAttempt
+ * @constant
+ * @type {number}
+ */
+export
+const contactListManagementAttempt: ListManagementType = ListManagementType_contactListManagementAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ListManagementType_groupListManagementAttempt
+ * @constant
+ * @type {number}
+ */
+export
+const ListManagementType_groupListManagementAttempt: ListManagementType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary groupListManagementAttempt
+ * @constant
+ * @type {number}
+ */
+export
+const groupListManagementAttempt: ListManagementType = ListManagementType_groupListManagementAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ListManagementType_contactListManagementResult
+ * @constant
+ * @type {number}
+ */
+export
+const ListManagementType_contactListManagementResult: ListManagementType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary contactListManagementResult
+ * @constant
+ * @type {number}
+ */
+export
+const contactListManagementResult: ListManagementType = ListManagementType_contactListManagementResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ListManagementType_groupListManagementResult
+ * @constant
+ * @type {number}
+ */
+export
+const ListManagementType_groupListManagementResult: ListManagementType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary groupListManagementResult
+ * @constant
+ * @type {number}
+ */
+export
+const groupListManagementResult: ListManagementType = ListManagementType_groupListManagementResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ListManagementType_requestSuccessful
+ * @constant
+ * @type {number}
+ */
+export
+const ListManagementType_requestSuccessful: ListManagementType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary requestSuccessful
+ * @constant
+ * @type {number}
+ */
+export
+const requestSuccessful: ListManagementType = ListManagementType_requestSuccessful; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ListManagementType: $.ASN1Decoder<ListManagementType> = $._decodeEnumerated;
+export const _encode_ListManagementType: $.ASN1Encoder<ListManagementType> = $._encodeEnumerated;
+
+
+/* eslint-enable */

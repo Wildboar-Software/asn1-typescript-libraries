@@ -1,0 +1,441 @@
+/* eslint-disable */
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary PositioningMethod
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PositioningMethod  ::=  ENUMERATED
+ * {
+ *     cellID(1),
+ *     eCID(2),
+ *     oTDOA(3),
+ *     barometricPressure(4),
+ *     wLAN(5),
+ *     bluetooth(6),
+ *     mBS(7),
+ *     motionSensor(8),
+ *     dLTDOA(9),
+ *     dLAOD(10),
+ *     multiRTT(11),
+ *     nRECID(12),
+ *     uLTDOA(13),
+ *     uLAOA(14),
+ *     networkSpecific(15),
+ *     sLTDOA(16),
+ *     sLTOA(17),
+ *     sLAOA(18),
+ *     sLRT(19)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_PositioningMethod {
+    cellID = 1,
+    eCID = 2,
+    oTDOA = 3,
+    barometricPressure = 4,
+    wLAN = 5,
+    bluetooth = 6,
+    mBS = 7,
+    motionSensor = 8,
+    dLTDOA = 9,
+    dLAOD = 10,
+    multiRTT = 11,
+    nRECID = 12,
+    uLTDOA = 13,
+    uLAOA = 14,
+    networkSpecific = 15,
+    sLTDOA = 16,
+    sLTOA = 17,
+    sLAOA = 18,
+    sLRT = 19,
+}
+
+/**
+ * @summary PositioningMethod
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PositioningMethod  ::=  ENUMERATED
+ * {
+ *     cellID(1),
+ *     eCID(2),
+ *     oTDOA(3),
+ *     barometricPressure(4),
+ *     wLAN(5),
+ *     bluetooth(6),
+ *     mBS(7),
+ *     motionSensor(8),
+ *     dLTDOA(9),
+ *     dLAOD(10),
+ *     multiRTT(11),
+ *     nRECID(12),
+ *     uLTDOA(13),
+ *     uLAOA(14),
+ *     networkSpecific(15),
+ *     sLTDOA(16),
+ *     sLTOA(17),
+ *     sLAOA(18),
+ *     sLRT(19)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type PositioningMethod = _enum_for_PositioningMethod;
+
+/**
+ * @summary PositioningMethod
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PositioningMethod  ::=  ENUMERATED
+ * {
+ *     cellID(1),
+ *     eCID(2),
+ *     oTDOA(3),
+ *     barometricPressure(4),
+ *     wLAN(5),
+ *     bluetooth(6),
+ *     mBS(7),
+ *     motionSensor(8),
+ *     dLTDOA(9),
+ *     dLAOD(10),
+ *     multiRTT(11),
+ *     nRECID(12),
+ *     uLTDOA(13),
+ *     uLAOA(14),
+ *     networkSpecific(15),
+ *     sLTDOA(16),
+ *     sLTOA(17),
+ *     sLAOA(18),
+ *     sLRT(19)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const PositioningMethod = _enum_for_PositioningMethod;
+
+/**
+ * @summary PositioningMethod_cellID
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_cellID: PositioningMethod = PositioningMethod.cellID; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary cellID
+ * @constant
+ * @type {number}
+ */
+export
+const cellID: PositioningMethod = PositioningMethod.cellID; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_eCID
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_eCID: PositioningMethod = PositioningMethod.eCID; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary eCID
+ * @constant
+ * @type {number}
+ */
+export
+const eCID: PositioningMethod = PositioningMethod.eCID; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_oTDOA
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_oTDOA: PositioningMethod = PositioningMethod.oTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary oTDOA
+ * @constant
+ * @type {number}
+ */
+export
+const oTDOA: PositioningMethod = PositioningMethod.oTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_barometricPressure
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_barometricPressure: PositioningMethod = PositioningMethod.barometricPressure; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary barometricPressure
+ * @constant
+ * @type {number}
+ */
+export
+const barometricPressure: PositioningMethod = PositioningMethod.barometricPressure; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_wLAN
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_wLAN: PositioningMethod = PositioningMethod.wLAN; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary wLAN
+ * @constant
+ * @type {number}
+ */
+export
+const wLAN: PositioningMethod = PositioningMethod.wLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_bluetooth
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_bluetooth: PositioningMethod = PositioningMethod.bluetooth; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary bluetooth
+ * @constant
+ * @type {number}
+ */
+export
+const bluetooth: PositioningMethod = PositioningMethod.bluetooth; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_mBS
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_mBS: PositioningMethod = PositioningMethod.mBS; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary mBS
+ * @constant
+ * @type {number}
+ */
+export
+const mBS: PositioningMethod = PositioningMethod.mBS; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_motionSensor
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_motionSensor: PositioningMethod = PositioningMethod.motionSensor; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary motionSensor
+ * @constant
+ * @type {number}
+ */
+export
+const motionSensor: PositioningMethod = PositioningMethod.motionSensor; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_dLTDOA
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_dLTDOA: PositioningMethod = PositioningMethod.dLTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary dLTDOA
+ * @constant
+ * @type {number}
+ */
+export
+const dLTDOA: PositioningMethod = PositioningMethod.dLTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_dLAOD
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_dLAOD: PositioningMethod = PositioningMethod.dLAOD; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary dLAOD
+ * @constant
+ * @type {number}
+ */
+export
+const dLAOD: PositioningMethod = PositioningMethod.dLAOD; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_multiRTT
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_multiRTT: PositioningMethod = PositioningMethod.multiRTT; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary multiRTT
+ * @constant
+ * @type {number}
+ */
+export
+const multiRTT: PositioningMethod = PositioningMethod.multiRTT; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_nRECID
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_nRECID: PositioningMethod = PositioningMethod.nRECID; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary nRECID
+ * @constant
+ * @type {number}
+ */
+export
+const nRECID: PositioningMethod = PositioningMethod.nRECID; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_uLTDOA
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_uLTDOA: PositioningMethod = PositioningMethod.uLTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary uLTDOA
+ * @constant
+ * @type {number}
+ */
+export
+const uLTDOA: PositioningMethod = PositioningMethod.uLTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_uLAOA
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_uLAOA: PositioningMethod = PositioningMethod.uLAOA; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary uLAOA
+ * @constant
+ * @type {number}
+ */
+export
+const uLAOA: PositioningMethod = PositioningMethod.uLAOA; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_networkSpecific
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_networkSpecific: PositioningMethod = PositioningMethod.networkSpecific; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary networkSpecific
+ * @constant
+ * @type {number}
+ */
+export
+const networkSpecific: PositioningMethod = PositioningMethod.networkSpecific; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_sLTDOA
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_sLTDOA: PositioningMethod = PositioningMethod.sLTDOA; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary sLTDOA
+ * @constant
+ * @type {number}
+ */
+export
+const sLTDOA: PositioningMethod = PositioningMethod.sLTDOA; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_sLTOA
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_sLTOA: PositioningMethod = PositioningMethod.sLTOA; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary sLTOA
+ * @constant
+ * @type {number}
+ */
+export
+const sLTOA: PositioningMethod = PositioningMethod.sLTOA; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_sLAOA
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_sLAOA: PositioningMethod = PositioningMethod.sLAOA; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary sLAOA
+ * @constant
+ * @type {number}
+ */
+export
+const sLAOA: PositioningMethod = PositioningMethod.sLAOA; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary PositioningMethod_sLRT
+ * @constant
+ * @type {number}
+ */
+export
+const PositioningMethod_sLRT: PositioningMethod = PositioningMethod.sLRT; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary sLRT
+ * @constant
+ * @type {number}
+ */
+export
+const sLRT: PositioningMethod = PositioningMethod.sLRT; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_PositioningMethod: $.ASN1Decoder<PositioningMethod> = $._decodeEnumerated;
+export const _encode_PositioningMethod: $.ASN1Encoder<PositioningMethod> = $._encodeEnumerated;
+
+
+/* eslint-enable */

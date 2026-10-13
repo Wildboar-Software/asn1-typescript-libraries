@@ -1,0 +1,101 @@
+/* eslint-disable */
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary EPSAttachResult
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EPSAttachResult  ::=  ENUMERATED
+ * {
+ *     ePSOnly(1),
+ *     combinedEPSIMSI(2)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_EPSAttachResult {
+    ePSOnly = 1,
+    combinedEPSIMSI = 2,
+}
+
+/**
+ * @summary EPSAttachResult
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EPSAttachResult  ::=  ENUMERATED
+ * {
+ *     ePSOnly(1),
+ *     combinedEPSIMSI(2)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type EPSAttachResult = _enum_for_EPSAttachResult;
+
+/**
+ * @summary EPSAttachResult
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EPSAttachResult  ::=  ENUMERATED
+ * {
+ *     ePSOnly(1),
+ *     combinedEPSIMSI(2)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const EPSAttachResult = _enum_for_EPSAttachResult;
+
+/**
+ * @summary EPSAttachResult_ePSOnly
+ * @constant
+ * @type {number}
+ */
+export
+const EPSAttachResult_ePSOnly: EPSAttachResult = EPSAttachResult.ePSOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary ePSOnly
+ * @constant
+ * @type {number}
+ */
+export
+const ePSOnly: EPSAttachResult = EPSAttachResult.ePSOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary EPSAttachResult_combinedEPSIMSI
+ * @constant
+ * @type {number}
+ */
+export
+const EPSAttachResult_combinedEPSIMSI: EPSAttachResult = EPSAttachResult.combinedEPSIMSI; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary combinedEPSIMSI
+ * @constant
+ * @type {number}
+ */
+export
+const combinedEPSIMSI: EPSAttachResult = EPSAttachResult.combinedEPSIMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_EPSAttachResult: $.ASN1Decoder<EPSAttachResult> = $._decodeEnumerated;
+export const _encode_EPSAttachResult: $.ASN1Encoder<EPSAttachResult> = $._encodeEnumerated;
+
+
+/* eslint-enable */

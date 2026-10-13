@@ -280,6 +280,9 @@
       "path": "./packages/lpp"
     },
     {
+      "path": "./packages/lawful-intercept"
+    },
+    {
       "path": "./packages/q932"
     },
     {

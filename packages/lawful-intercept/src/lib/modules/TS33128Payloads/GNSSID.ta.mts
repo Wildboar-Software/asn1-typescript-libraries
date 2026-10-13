@@ -1,0 +1,221 @@
+/* eslint-disable */
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary GNSSID
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * GNSSID  ::=  ENUMERATED
+ * {
+ *     gPS(1),
+ *     galileo(2),
+ *     sBAS(3),
+ *     modernizedGPS(4),
+ *     qZSS(5),
+ *     gLONASS(6),
+ *     bDS(7),
+ *     nAVIC(8)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_GNSSID {
+    gPS = 1,
+    galileo = 2,
+    sBAS = 3,
+    modernizedGPS = 4,
+    qZSS = 5,
+    gLONASS = 6,
+    bDS = 7,
+    nAVIC = 8,
+}
+
+/**
+ * @summary GNSSID
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * GNSSID  ::=  ENUMERATED
+ * {
+ *     gPS(1),
+ *     galileo(2),
+ *     sBAS(3),
+ *     modernizedGPS(4),
+ *     qZSS(5),
+ *     gLONASS(6),
+ *     bDS(7),
+ *     nAVIC(8)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type GNSSID = _enum_for_GNSSID;
+
+/**
+ * @summary GNSSID
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * GNSSID  ::=  ENUMERATED
+ * {
+ *     gPS(1),
+ *     galileo(2),
+ *     sBAS(3),
+ *     modernizedGPS(4),
+ *     qZSS(5),
+ *     gLONASS(6),
+ *     bDS(7),
+ *     nAVIC(8)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const GNSSID = _enum_for_GNSSID;
+
+/**
+ * @summary GNSSID_gPS
+ * @constant
+ * @type {number}
+ */
+export
+const GNSSID_gPS: GNSSID = GNSSID.gPS; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary gPS
+ * @constant
+ * @type {number}
+ */
+export
+const gPS: GNSSID = GNSSID.gPS; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary GNSSID_galileo
+ * @constant
+ * @type {number}
+ */
+export
+const GNSSID_galileo: GNSSID = GNSSID.galileo; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary galileo
+ * @constant
+ * @type {number}
+ */
+export
+const galileo: GNSSID = GNSSID.galileo; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary GNSSID_sBAS
+ * @constant
+ * @type {number}
+ */
+export
+const GNSSID_sBAS: GNSSID = GNSSID.sBAS; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary sBAS
+ * @constant
+ * @type {number}
+ */
+export
+const sBAS: GNSSID = GNSSID.sBAS; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary GNSSID_modernizedGPS
+ * @constant
+ * @type {number}
+ */
+export
+const GNSSID_modernizedGPS: GNSSID = GNSSID.modernizedGPS; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary modernizedGPS
+ * @constant
+ * @type {number}
+ */
+export
+const modernizedGPS: GNSSID = GNSSID.modernizedGPS; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary GNSSID_qZSS
+ * @constant
+ * @type {number}
+ */
+export
+const GNSSID_qZSS: GNSSID = GNSSID.qZSS; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary qZSS
+ * @constant
+ * @type {number}
+ */
+export
+const qZSS: GNSSID = GNSSID.qZSS; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary GNSSID_gLONASS
+ * @constant
+ * @type {number}
+ */
+export
+const GNSSID_gLONASS: GNSSID = GNSSID.gLONASS; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary gLONASS
+ * @constant
+ * @type {number}
+ */
+export
+const gLONASS: GNSSID = GNSSID.gLONASS; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary GNSSID_bDS
+ * @constant
+ * @type {number}
+ */
+export
+const GNSSID_bDS: GNSSID = GNSSID.bDS; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary bDS
+ * @constant
+ * @type {number}
+ */
+export
+const bDS: GNSSID = GNSSID.bDS; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary GNSSID_nAVIC
+ * @constant
+ * @type {number}
+ */
+export
+const GNSSID_nAVIC: GNSSID = GNSSID.nAVIC; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary nAVIC
+ * @constant
+ * @type {number}
+ */
+export
+const nAVIC: GNSSID = GNSSID.nAVIC; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_GNSSID: $.ASN1Decoder<GNSSID> = $._decodeEnumerated;
+export const _encode_GNSSID: $.ASN1Encoder<GNSSID> = $._encodeEnumerated;
+
+
+/* eslint-enable */

@@ -1,0 +1,101 @@
+/* eslint-disable */
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary AccuracyFulfilmentIndicator
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AccuracyFulfilmentIndicator  ::=  ENUMERATED
+ * {
+ *     requestedAccuracyFulfilled(1),
+ *     requestedAccuracyNotFulfilled(2)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_AccuracyFulfilmentIndicator {
+    requestedAccuracyFulfilled = 1,
+    requestedAccuracyNotFulfilled = 2,
+}
+
+/**
+ * @summary AccuracyFulfilmentIndicator
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AccuracyFulfilmentIndicator  ::=  ENUMERATED
+ * {
+ *     requestedAccuracyFulfilled(1),
+ *     requestedAccuracyNotFulfilled(2)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
+
+/**
+ * @summary AccuracyFulfilmentIndicator
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AccuracyFulfilmentIndicator  ::=  ENUMERATED
+ * {
+ *     requestedAccuracyFulfilled(1),
+ *     requestedAccuracyNotFulfilled(2)
+ * }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
+
+/**
+ * @summary AccuracyFulfilmentIndicator_requestedAccuracyFulfilled
+ * @constant
+ * @type {number}
+ */
+export
+const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled: AccuracyFulfilmentIndicator = AccuracyFulfilmentIndicator.requestedAccuracyFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary requestedAccuracyFulfilled
+ * @constant
+ * @type {number}
+ */
+export
+const requestedAccuracyFulfilled: AccuracyFulfilmentIndicator = AccuracyFulfilmentIndicator.requestedAccuracyFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled
+ * @constant
+ * @type {number}
+ */
+export
+const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled: AccuracyFulfilmentIndicator = AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary requestedAccuracyNotFulfilled
+ * @constant
+ * @type {number}
+ */
+export
+const requestedAccuracyNotFulfilled: AccuracyFulfilmentIndicator = AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_AccuracyFulfilmentIndicator: $.ASN1Decoder<AccuracyFulfilmentIndicator> = $._decodeEnumerated;
+export const _encode_AccuracyFulfilmentIndicator: $.ASN1Encoder<AccuracyFulfilmentIndicator> = $._encodeEnumerated;
+
+
+/* eslint-enable */
