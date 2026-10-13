@@ -284,6 +284,9 @@
     },
     {
       "path": "./packages/stanag4406"
+    },
+    {
+      "path": "./packages/ltans-scvp-extension"
     }
   ],
   "compilerOptions": {
