@@ -146,7 +146,7 @@ let _cached_encoder_for_FspPacketCount: $.ASN1Encoder<FspPacketCount> | null = n
  */
 export
 function _encode_FspPacketCount (value: FspPacketCount, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspPacketCount) { _cached_encoder_for_FspPacketCount = function (value: FspPacketCount, elGetter: $.ASN1Encoder<FspPacketCount>): _Element {
+    if (!_cached_encoder_for_FspPacketCount) { _cached_encoder_for_FspPacketCount = function (value: FspPacketCount, _elGetter: $.ASN1Encoder<FspPacketCount>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_IntUnsignedLong(value.adCount, $.BER),
         /* REQUIRED   */ _encode_IntUnsignedLong(value.bdCount, $.BER)

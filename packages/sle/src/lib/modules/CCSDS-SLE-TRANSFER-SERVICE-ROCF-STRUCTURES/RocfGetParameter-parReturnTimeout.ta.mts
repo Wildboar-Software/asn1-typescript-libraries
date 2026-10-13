@@ -158,7 +158,7 @@ let _cached_encoder_for_RocfGetParameter_parReturnTimeout: $.ASN1Encoder<RocfGet
  */
 export
 function _encode_RocfGetParameter_parReturnTimeout (value: RocfGetParameter_parReturnTimeout, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameter_parReturnTimeout) { _cached_encoder_for_RocfGetParameter_parReturnTimeout = function (value: RocfGetParameter_parReturnTimeout, elGetter: $.ASN1Encoder<RocfGetParameter_parReturnTimeout>): _Element {
+    if (!_cached_encoder_for_RocfGetParameter_parReturnTimeout) { _cached_encoder_for_RocfGetParameter_parReturnTimeout = function (value: RocfGetParameter_parReturnTimeout, _elGetter: $.ASN1Encoder<RocfGetParameter_parReturnTimeout>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_TimeoutPeriod(value.parameterValue, $.BER)

@@ -207,7 +207,7 @@ let _cached_encoder_for_SleBindInvocation: $.ASN1Encoder<SleBindInvocation> | nu
  */
 export
 function _encode_SleBindInvocation (value: SleBindInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SleBindInvocation) { _cached_encoder_for_SleBindInvocation = function (value: SleBindInvocation, elGetter: $.ASN1Encoder<SleBindInvocation>): _Element {
+    if (!_cached_encoder_for_SleBindInvocation) { _cached_encoder_for_SleBindInvocation = function (value: SleBindInvocation, _elGetter: $.ASN1Encoder<SleBindInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_AuthorityIdentifier(value.initiatorIdentifier, $.BER),

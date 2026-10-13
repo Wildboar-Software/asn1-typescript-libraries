@@ -158,7 +158,7 @@ let _cached_encoder_for_RocfGetParameter_parReqGvcId: $.ASN1Encoder<RocfGetParam
  */
 export
 function _encode_RocfGetParameter_parReqGvcId (value: RocfGetParameter_parReqGvcId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameter_parReqGvcId) { _cached_encoder_for_RocfGetParameter_parReqGvcId = function (value: RocfGetParameter_parReqGvcId, elGetter: $.ASN1Encoder<RocfGetParameter_parReqGvcId>): _Element {
+    if (!_cached_encoder_for_RocfGetParameter_parReqGvcId) { _cached_encoder_for_RocfGetParameter_parReqGvcId = function (value: RocfGetParameter_parReqGvcId, _elGetter: $.ASN1Encoder<RocfGetParameter_parReqGvcId>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_RequestedGvcId(value.parameterValue, $.BER)

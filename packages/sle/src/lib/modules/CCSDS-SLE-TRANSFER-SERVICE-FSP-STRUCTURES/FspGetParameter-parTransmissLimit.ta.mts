@@ -167,7 +167,7 @@ let _cached_encoder_for_FspGetParameter_parTransmissLimit: $.ASN1Encoder<FspGetP
  */
 export
 function _encode_FspGetParameter_parTransmissLimit (value: FspGetParameter_parTransmissLimit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parTransmissLimit) { _cached_encoder_for_FspGetParameter_parTransmissLimit = function (value: FspGetParameter_parTransmissLimit, elGetter: $.ASN1Encoder<FspGetParameter_parTransmissLimit>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parTransmissLimit) { _cached_encoder_for_FspGetParameter_parTransmissLimit = function (value: FspGetParameter_parTransmissLimit, _elGetter: $.ASN1Encoder<FspGetParameter_parTransmissLimit>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.parameterValue, $.BER)

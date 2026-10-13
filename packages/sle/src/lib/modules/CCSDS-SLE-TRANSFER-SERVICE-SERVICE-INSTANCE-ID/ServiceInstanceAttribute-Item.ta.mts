@@ -152,7 +152,7 @@ let _cached_encoder_for_ServiceInstanceAttribute_Item: $.ASN1Encoder<ServiceInst
  */
 export
 function _encode_ServiceInstanceAttribute_Item (value: ServiceInstanceAttribute_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceInstanceAttribute_Item) { _cached_encoder_for_ServiceInstanceAttribute_Item = function (value: ServiceInstanceAttribute_Item, elGetter: $.ASN1Encoder<ServiceInstanceAttribute_Item>): _Element {
+    if (!_cached_encoder_for_ServiceInstanceAttribute_Item) { _cached_encoder_for_ServiceInstanceAttribute_Item = function (value: ServiceInstanceAttribute_Item, _elGetter: $.ASN1Encoder<ServiceInstanceAttribute_Item>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeObjectIdentifier(value.identifier, $.BER),
         /* REQUIRED   */ $._encodeVisibleString(value.siAttributeValue, $.BER)

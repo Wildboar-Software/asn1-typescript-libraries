@@ -161,7 +161,7 @@ let _cached_encoder_for_FspGetParameter_parSegmHeader: $.ASN1Encoder<FspGetParam
  */
 export
 function _encode_FspGetParameter_parSegmHeader (value: FspGetParameter_parSegmHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parSegmHeader) { _cached_encoder_for_FspGetParameter_parSegmHeader = function (value: FspGetParameter_parSegmHeader, elGetter: $.ASN1Encoder<FspGetParameter_parSegmHeader>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parSegmHeader) { _cached_encoder_for_FspGetParameter_parSegmHeader = function (value: FspGetParameter_parSegmHeader, _elGetter: $.ASN1Encoder<FspGetParameter_parSegmHeader>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_FspGetParameter_parSegmHeader_parameterValue(value.parameterValue, $.BER)

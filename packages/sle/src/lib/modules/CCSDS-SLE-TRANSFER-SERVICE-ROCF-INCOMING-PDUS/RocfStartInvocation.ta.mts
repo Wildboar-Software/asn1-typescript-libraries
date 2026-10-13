@@ -221,7 +221,7 @@ let _cached_encoder_for_RocfStartInvocation: $.ASN1Encoder<RocfStartInvocation> 
  */
 export
 function _encode_RocfStartInvocation (value: RocfStartInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfStartInvocation) { _cached_encoder_for_RocfStartInvocation = function (value: RocfStartInvocation, elGetter: $.ASN1Encoder<RocfStartInvocation>): _Element {
+    if (!_cached_encoder_for_RocfStartInvocation) { _cached_encoder_for_RocfStartInvocation = function (value: RocfStartInvocation, _elGetter: $.ASN1Encoder<RocfStartInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

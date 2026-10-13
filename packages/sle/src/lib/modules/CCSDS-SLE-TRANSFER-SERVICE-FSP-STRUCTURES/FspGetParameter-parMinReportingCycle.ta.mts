@@ -167,7 +167,7 @@ let _cached_encoder_for_FspGetParameter_parMinReportingCycle: $.ASN1Encoder<FspG
  */
 export
 function _encode_FspGetParameter_parMinReportingCycle (value: FspGetParameter_parMinReportingCycle, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parMinReportingCycle) { _cached_encoder_for_FspGetParameter_parMinReportingCycle = function (value: FspGetParameter_parMinReportingCycle, elGetter: $.ASN1Encoder<FspGetParameter_parMinReportingCycle>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parMinReportingCycle) { _cached_encoder_for_FspGetParameter_parMinReportingCycle = function (value: FspGetParameter_parMinReportingCycle, _elGetter: $.ASN1Encoder<FspGetParameter_parMinReportingCycle>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_IntPosShort(value.parameterValue, $.BER)

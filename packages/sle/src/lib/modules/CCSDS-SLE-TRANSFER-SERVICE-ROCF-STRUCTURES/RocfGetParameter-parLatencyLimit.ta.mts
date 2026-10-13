@@ -162,7 +162,7 @@ let _cached_encoder_for_RocfGetParameter_parLatencyLimit: $.ASN1Encoder<RocfGetP
  */
 export
 function _encode_RocfGetParameter_parLatencyLimit (value: RocfGetParameter_parLatencyLimit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameter_parLatencyLimit) { _cached_encoder_for_RocfGetParameter_parLatencyLimit = function (value: RocfGetParameter_parLatencyLimit, elGetter: $.ASN1Encoder<RocfGetParameter_parLatencyLimit>): _Element {
+    if (!_cached_encoder_for_RocfGetParameter_parLatencyLimit) { _cached_encoder_for_RocfGetParameter_parLatencyLimit = function (value: RocfGetParameter_parLatencyLimit, _elGetter: $.ASN1Encoder<RocfGetParameter_parLatencyLimit>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_RocfGetParameter_parLatencyLimit_parameterValue(value.parameterValue, $.BER)

@@ -158,7 +158,7 @@ let _cached_encoder_for_RafGetParameter_parPermittedFrameQuality: $.ASN1Encoder<
  */
 export
 function _encode_RafGetParameter_parPermittedFrameQuality (value: RafGetParameter_parPermittedFrameQuality, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafGetParameter_parPermittedFrameQuality) { _cached_encoder_for_RafGetParameter_parPermittedFrameQuality = function (value: RafGetParameter_parPermittedFrameQuality, elGetter: $.ASN1Encoder<RafGetParameter_parPermittedFrameQuality>): _Element {
+    if (!_cached_encoder_for_RafGetParameter_parPermittedFrameQuality) { _cached_encoder_for_RafGetParameter_parPermittedFrameQuality = function (value: RafGetParameter_parPermittedFrameQuality, _elGetter: $.ASN1Encoder<RafGetParameter_parPermittedFrameQuality>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_PermittedFrameQualitySet(value.parameterValue, $.BER)

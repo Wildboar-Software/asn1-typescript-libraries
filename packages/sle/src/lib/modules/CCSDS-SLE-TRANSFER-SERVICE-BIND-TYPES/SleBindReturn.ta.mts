@@ -165,7 +165,7 @@ let _cached_encoder_for_SleBindReturn: $.ASN1Encoder<SleBindReturn> | null = nul
  */
 export
 function _encode_SleBindReturn (value: SleBindReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SleBindReturn) { _cached_encoder_for_SleBindReturn = function (value: SleBindReturn, elGetter: $.ASN1Encoder<SleBindReturn>): _Element {
+    if (!_cached_encoder_for_SleBindReturn) { _cached_encoder_for_SleBindReturn = function (value: SleBindReturn, _elGetter: $.ASN1Encoder<SleBindReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_AuthorityIdentifier(value.responderIdentifier, $.BER),

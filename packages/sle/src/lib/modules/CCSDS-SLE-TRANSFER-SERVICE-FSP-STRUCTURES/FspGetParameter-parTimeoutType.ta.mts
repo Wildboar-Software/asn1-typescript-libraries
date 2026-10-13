@@ -161,7 +161,7 @@ let _cached_encoder_for_FspGetParameter_parTimeoutType: $.ASN1Encoder<FspGetPara
  */
 export
 function _encode_FspGetParameter_parTimeoutType (value: FspGetParameter_parTimeoutType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parTimeoutType) { _cached_encoder_for_FspGetParameter_parTimeoutType = function (value: FspGetParameter_parTimeoutType, elGetter: $.ASN1Encoder<FspGetParameter_parTimeoutType>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parTimeoutType) { _cached_encoder_for_FspGetParameter_parTimeoutType = function (value: FspGetParameter_parTimeoutType, _elGetter: $.ASN1Encoder<FspGetParameter_parTimeoutType>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_FspGetParameter_parTimeoutType_parameterValue(value.parameterValue, $.BER)

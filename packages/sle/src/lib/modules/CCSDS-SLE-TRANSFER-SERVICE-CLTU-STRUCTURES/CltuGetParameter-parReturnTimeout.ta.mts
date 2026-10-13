@@ -158,7 +158,7 @@ let _cached_encoder_for_CltuGetParameter_parReturnTimeout: $.ASN1Encoder<CltuGet
  */
 export
 function _encode_CltuGetParameter_parReturnTimeout (value: CltuGetParameter_parReturnTimeout, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parReturnTimeout) { _cached_encoder_for_CltuGetParameter_parReturnTimeout = function (value: CltuGetParameter_parReturnTimeout, elGetter: $.ASN1Encoder<CltuGetParameter_parReturnTimeout>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parReturnTimeout) { _cached_encoder_for_CltuGetParameter_parReturnTimeout = function (value: CltuGetParameter_parReturnTimeout, _elGetter: $.ASN1Encoder<CltuGetParameter_parReturnTimeout>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_TimeoutPeriod(value.parameterValue, $.BER)

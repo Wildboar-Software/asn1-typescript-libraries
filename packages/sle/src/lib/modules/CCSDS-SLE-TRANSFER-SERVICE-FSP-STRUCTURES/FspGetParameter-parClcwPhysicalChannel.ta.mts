@@ -158,7 +158,7 @@ let _cached_encoder_for_FspGetParameter_parClcwPhysicalChannel: $.ASN1Encoder<Fs
  */
 export
 function _encode_FspGetParameter_parClcwPhysicalChannel (value: FspGetParameter_parClcwPhysicalChannel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parClcwPhysicalChannel) { _cached_encoder_for_FspGetParameter_parClcwPhysicalChannel = function (value: FspGetParameter_parClcwPhysicalChannel, elGetter: $.ASN1Encoder<FspGetParameter_parClcwPhysicalChannel>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parClcwPhysicalChannel) { _cached_encoder_for_FspGetParameter_parClcwPhysicalChannel = function (value: FspGetParameter_parClcwPhysicalChannel, _elGetter: $.ASN1Encoder<FspGetParameter_parClcwPhysicalChannel>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_ClcwPhysicalChannel(value.parameterValue, $.BER)

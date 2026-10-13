@@ -147,7 +147,7 @@ let _cached_encoder_for_FspPacketLastOk_packetOk: $.ASN1Encoder<FspPacketLastOk_
  */
 export
 function _encode_FspPacketLastOk_packetOk (value: FspPacketLastOk_packetOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspPacketLastOk_packetOk) { _cached_encoder_for_FspPacketLastOk_packetOk = function (value: FspPacketLastOk_packetOk, elGetter: $.ASN1Encoder<FspPacketLastOk_packetOk>): _Element {
+    if (!_cached_encoder_for_FspPacketLastOk_packetOk) { _cached_encoder_for_FspPacketLastOk_packetOk = function (value: FspPacketLastOk_packetOk, _elGetter: $.ASN1Encoder<FspPacketLastOk_packetOk>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PacketIdentification(value.packetIdentification, $.BER),
         /* REQUIRED   */ _encode_Time(value.processingStopTime, $.BER)

@@ -222,7 +222,7 @@ let _cached_encoder_for_RcfStatusReportInvocation: $.ASN1Encoder<RcfStatusReport
  */
 export
 function _encode_RcfStatusReportInvocation (value: RcfStatusReportInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RcfStatusReportInvocation) { _cached_encoder_for_RcfStatusReportInvocation = function (value: RcfStatusReportInvocation, elGetter: $.ASN1Encoder<RcfStatusReportInvocation>): _Element {
+    if (!_cached_encoder_for_RcfStatusReportInvocation) { _cached_encoder_for_RcfStatusReportInvocation = function (value: RcfStatusReportInvocation, _elGetter: $.ASN1Encoder<RcfStatusReportInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_IntUnsignedLong(value.deliveredFrameNumber, $.BER),

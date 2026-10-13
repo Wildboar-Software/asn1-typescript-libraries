@@ -165,7 +165,7 @@ let _cached_encoder_for_FspGetParameter_parFopState: $.ASN1Encoder<FspGetParamet
  */
 export
 function _encode_FspGetParameter_parFopState (value: FspGetParameter_parFopState, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parFopState) { _cached_encoder_for_FspGetParameter_parFopState = function (value: FspGetParameter_parFopState, elGetter: $.ASN1Encoder<FspGetParameter_parFopState>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parFopState) { _cached_encoder_for_FspGetParameter_parFopState = function (value: FspGetParameter_parFopState, _elGetter: $.ASN1Encoder<FspGetParameter_parFopState>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_FspGetParameter_parFopState_fopState(value.fopState, $.BER)

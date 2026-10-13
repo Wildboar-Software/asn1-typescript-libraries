@@ -162,7 +162,7 @@ let _cached_encoder_for_CltuGetParameter_parRfAvailableRequired: $.ASN1Encoder<C
  */
 export
 function _encode_CltuGetParameter_parRfAvailableRequired (value: CltuGetParameter_parRfAvailableRequired, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parRfAvailableRequired) { _cached_encoder_for_CltuGetParameter_parRfAvailableRequired = function (value: CltuGetParameter_parRfAvailableRequired, elGetter: $.ASN1Encoder<CltuGetParameter_parRfAvailableRequired>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parRfAvailableRequired) { _cached_encoder_for_CltuGetParameter_parRfAvailableRequired = function (value: CltuGetParameter_parRfAvailableRequired, _elGetter: $.ASN1Encoder<CltuGetParameter_parRfAvailableRequired>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_CltuGetParameter_parRfAvailableRequired_parameterValue(value.parameterValue, $.BER)

@@ -177,7 +177,7 @@ let _cached_encoder_for_LockStatusReport: $.ASN1Encoder<LockStatusReport> | null
  */
 export
 function _encode_LockStatusReport (value: LockStatusReport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LockStatusReport) { _cached_encoder_for_LockStatusReport = function (value: LockStatusReport, elGetter: $.ASN1Encoder<LockStatusReport>): _Element {
+    if (!_cached_encoder_for_LockStatusReport) { _cached_encoder_for_LockStatusReport = function (value: LockStatusReport, _elGetter: $.ASN1Encoder<LockStatusReport>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Time(value.time, $.BER),
         /* REQUIRED   */ _encode_CarrierLockStatus(value.carrierLockStatus, $.BER),

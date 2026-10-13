@@ -188,7 +188,7 @@ let _cached_encoder_for_GvcId: $.ASN1Encoder<GvcId> | null = null;
  */
 export
 function _encode_GvcId (value: GvcId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GvcId) { _cached_encoder_for_GvcId = function (value: GvcId, elGetter: $.ASN1Encoder<GvcId>): _Element {
+    if (!_cached_encoder_for_GvcId) { _cached_encoder_for_GvcId = function (value: GvcId, _elGetter: $.ASN1Encoder<GvcId>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.spacecraftId, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.versionNumber, $.BER),

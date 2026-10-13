@@ -236,7 +236,7 @@ let _cached_encoder_for_RafStatusReportInvocation: $.ASN1Encoder<RafStatusReport
  */
 export
 function _encode_RafStatusReportInvocation (value: RafStatusReportInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafStatusReportInvocation) { _cached_encoder_for_RafStatusReportInvocation = function (value: RafStatusReportInvocation, elGetter: $.ASN1Encoder<RafStatusReportInvocation>): _Element {
+    if (!_cached_encoder_for_RafStatusReportInvocation) { _cached_encoder_for_RafStatusReportInvocation = function (value: RafStatusReportInvocation, _elGetter: $.ASN1Encoder<RafStatusReportInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_IntUnsignedLong(value.errorFreeFrameNumber, $.BER),

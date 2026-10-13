@@ -159,7 +159,7 @@ let _cached_encoder_for_CltuGetParameter_parSubcarrierToBitRateRatio: $.ASN1Enco
  */
 export
 function _encode_CltuGetParameter_parSubcarrierToBitRateRatio (value: CltuGetParameter_parSubcarrierToBitRateRatio, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parSubcarrierToBitRateRatio) { _cached_encoder_for_CltuGetParameter_parSubcarrierToBitRateRatio = function (value: CltuGetParameter_parSubcarrierToBitRateRatio, elGetter: $.ASN1Encoder<CltuGetParameter_parSubcarrierToBitRateRatio>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parSubcarrierToBitRateRatio) { _cached_encoder_for_CltuGetParameter_parSubcarrierToBitRateRatio = function (value: CltuGetParameter_parSubcarrierToBitRateRatio, _elGetter: $.ASN1Encoder<CltuGetParameter_parSubcarrierToBitRateRatio>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_SubcarrierDivisor(value.parameterValue, $.BER)

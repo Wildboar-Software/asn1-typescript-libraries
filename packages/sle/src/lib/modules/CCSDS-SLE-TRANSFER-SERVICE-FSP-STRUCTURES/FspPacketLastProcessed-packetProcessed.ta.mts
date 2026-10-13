@@ -162,7 +162,7 @@ let _cached_encoder_for_FspPacketLastProcessed_packetProcessed: $.ASN1Encoder<Fs
  */
 export
 function _encode_FspPacketLastProcessed_packetProcessed (value: FspPacketLastProcessed_packetProcessed, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspPacketLastProcessed_packetProcessed) { _cached_encoder_for_FspPacketLastProcessed_packetProcessed = function (value: FspPacketLastProcessed_packetProcessed, elGetter: $.ASN1Encoder<FspPacketLastProcessed_packetProcessed>): _Element {
+    if (!_cached_encoder_for_FspPacketLastProcessed_packetProcessed) { _cached_encoder_for_FspPacketLastProcessed_packetProcessed = function (value: FspPacketLastProcessed_packetProcessed, _elGetter: $.ASN1Encoder<FspPacketLastProcessed_packetProcessed>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PacketIdentification(value.packetIdentification, $.BER),
         /* REQUIRED   */ _encode_Time(value.processingStartTime, $.BER),

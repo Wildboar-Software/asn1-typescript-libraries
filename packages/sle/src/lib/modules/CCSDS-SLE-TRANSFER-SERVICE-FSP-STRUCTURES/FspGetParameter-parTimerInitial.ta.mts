@@ -158,7 +158,7 @@ let _cached_encoder_for_FspGetParameter_parTimerInitial: $.ASN1Encoder<FspGetPar
  */
 export
 function _encode_FspGetParameter_parTimerInitial (value: FspGetParameter_parTimerInitial, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parTimerInitial) { _cached_encoder_for_FspGetParameter_parTimerInitial = function (value: FspGetParameter_parTimerInitial, elGetter: $.ASN1Encoder<FspGetParameter_parTimerInitial>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parTimerInitial) { _cached_encoder_for_FspGetParameter_parTimerInitial = function (value: FspGetParameter_parTimerInitial, _elGetter: $.ASN1Encoder<FspGetParameter_parTimerInitial>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_IntPosLong(value.parameterValue, $.BER)

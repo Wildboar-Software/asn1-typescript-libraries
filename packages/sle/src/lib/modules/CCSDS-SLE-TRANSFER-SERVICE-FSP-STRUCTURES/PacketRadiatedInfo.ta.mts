@@ -156,7 +156,7 @@ let _cached_encoder_for_PacketRadiatedInfo: $.ASN1Encoder<PacketRadiatedInfo> | 
  */
 export
 function _encode_PacketRadiatedInfo (value: PacketRadiatedInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PacketRadiatedInfo) { _cached_encoder_for_PacketRadiatedInfo = function (value: PacketRadiatedInfo, elGetter: $.ASN1Encoder<PacketRadiatedInfo>): _Element {
+    if (!_cached_encoder_for_PacketRadiatedInfo) { _cached_encoder_for_PacketRadiatedInfo = function (value: PacketRadiatedInfo, _elGetter: $.ASN1Encoder<PacketRadiatedInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PacketIdentificationList(value.packetIdentificationList, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.frameSequenceNumber, $.BER)

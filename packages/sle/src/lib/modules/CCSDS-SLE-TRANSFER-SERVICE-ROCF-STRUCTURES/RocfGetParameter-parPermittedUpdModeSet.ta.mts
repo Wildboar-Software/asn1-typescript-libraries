@@ -158,7 +158,7 @@ let _cached_encoder_for_RocfGetParameter_parPermittedUpdModeSet: $.ASN1Encoder<R
  */
 export
 function _encode_RocfGetParameter_parPermittedUpdModeSet (value: RocfGetParameter_parPermittedUpdModeSet, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameter_parPermittedUpdModeSet) { _cached_encoder_for_RocfGetParameter_parPermittedUpdModeSet = function (value: RocfGetParameter_parPermittedUpdModeSet, elGetter: $.ASN1Encoder<RocfGetParameter_parPermittedUpdModeSet>): _Element {
+    if (!_cached_encoder_for_RocfGetParameter_parPermittedUpdModeSet) { _cached_encoder_for_RocfGetParameter_parPermittedUpdModeSet = function (value: RocfGetParameter_parPermittedUpdModeSet, _elGetter: $.ASN1Encoder<RocfGetParameter_parPermittedUpdModeSet>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ $._encodeSequenceOf<UpdateMode>(() => _encode_UpdateMode, $.BER)(value.parameterValue, $.BER)

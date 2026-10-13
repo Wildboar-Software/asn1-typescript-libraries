@@ -158,7 +158,7 @@ let _cached_encoder_for_RafGetParameter_parDeliveryMode: $.ASN1Encoder<RafGetPar
  */
 export
 function _encode_RafGetParameter_parDeliveryMode (value: RafGetParameter_parDeliveryMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafGetParameter_parDeliveryMode) { _cached_encoder_for_RafGetParameter_parDeliveryMode = function (value: RafGetParameter_parDeliveryMode, elGetter: $.ASN1Encoder<RafGetParameter_parDeliveryMode>): _Element {
+    if (!_cached_encoder_for_RafGetParameter_parDeliveryMode) { _cached_encoder_for_RafGetParameter_parDeliveryMode = function (value: RafGetParameter_parDeliveryMode, _elGetter: $.ASN1Encoder<RafGetParameter_parDeliveryMode>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_RafDeliveryMode(value.parameterValue, $.BER)

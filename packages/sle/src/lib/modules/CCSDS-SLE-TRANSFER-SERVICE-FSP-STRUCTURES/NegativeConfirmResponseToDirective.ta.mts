@@ -147,7 +147,7 @@ let _cached_encoder_for_NegativeConfirmResponseToDirective: $.ASN1Encoder<Negati
  */
 export
 function _encode_NegativeConfirmResponseToDirective (value: NegativeConfirmResponseToDirective, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NegativeConfirmResponseToDirective) { _cached_encoder_for_NegativeConfirmResponseToDirective = function (value: NegativeConfirmResponseToDirective, elGetter: $.ASN1Encoder<NegativeConfirmResponseToDirective>): _Element {
+    if (!_cached_encoder_for_NegativeConfirmResponseToDirective) { _cached_encoder_for_NegativeConfirmResponseToDirective = function (value: NegativeConfirmResponseToDirective, _elGetter: $.ASN1Encoder<NegativeConfirmResponseToDirective>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_DirectiveExecutedId(value.directiveExecutedId, $.BER),
         /* REQUIRED   */ _encode_FopAlert(value.fopAlert, $.BER)

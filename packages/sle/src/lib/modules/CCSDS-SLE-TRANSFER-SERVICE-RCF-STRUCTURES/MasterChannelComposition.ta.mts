@@ -191,7 +191,7 @@ let _cached_encoder_for_MasterChannelComposition: $.ASN1Encoder<MasterChannelCom
  */
 export
 function _encode_MasterChannelComposition (value: MasterChannelComposition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MasterChannelComposition) { _cached_encoder_for_MasterChannelComposition = function (value: MasterChannelComposition, elGetter: $.ASN1Encoder<MasterChannelComposition>): _Element {
+    if (!_cached_encoder_for_MasterChannelComposition) { _cached_encoder_for_MasterChannelComposition = function (value: MasterChannelComposition, _elGetter: $.ASN1Encoder<MasterChannelComposition>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.spacecraftId, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.versionNumber, $.BER),

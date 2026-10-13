@@ -158,7 +158,7 @@ let _cached_encoder_for_CltuGetParameter_parModulationFrequency: $.ASN1Encoder<C
  */
 export
 function _encode_CltuGetParameter_parModulationFrequency (value: CltuGetParameter_parModulationFrequency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parModulationFrequency) { _cached_encoder_for_CltuGetParameter_parModulationFrequency = function (value: CltuGetParameter_parModulationFrequency, elGetter: $.ASN1Encoder<CltuGetParameter_parModulationFrequency>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parModulationFrequency) { _cached_encoder_for_CltuGetParameter_parModulationFrequency = function (value: CltuGetParameter_parModulationFrequency, _elGetter: $.ASN1Encoder<CltuGetParameter_parModulationFrequency>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_ModulationFrequency(value.parameterValue, $.BER)

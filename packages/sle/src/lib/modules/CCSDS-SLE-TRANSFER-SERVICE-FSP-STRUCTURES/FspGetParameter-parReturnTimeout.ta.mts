@@ -158,7 +158,7 @@ let _cached_encoder_for_FspGetParameter_parReturnTimeout: $.ASN1Encoder<FspGetPa
  */
 export
 function _encode_FspGetParameter_parReturnTimeout (value: FspGetParameter_parReturnTimeout, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parReturnTimeout) { _cached_encoder_for_FspGetParameter_parReturnTimeout = function (value: FspGetParameter_parReturnTimeout, elGetter: $.ASN1Encoder<FspGetParameter_parReturnTimeout>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parReturnTimeout) { _cached_encoder_for_FspGetParameter_parReturnTimeout = function (value: FspGetParameter_parReturnTimeout, _elGetter: $.ASN1Encoder<FspGetParameter_parReturnTimeout>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_TimeoutPeriod(value.parameterValue, $.BER)

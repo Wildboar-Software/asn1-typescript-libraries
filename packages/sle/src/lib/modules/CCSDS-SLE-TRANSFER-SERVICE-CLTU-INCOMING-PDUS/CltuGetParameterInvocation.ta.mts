@@ -162,7 +162,7 @@ let _cached_encoder_for_CltuGetParameterInvocation: $.ASN1Encoder<CltuGetParamet
  */
 export
 function _encode_CltuGetParameterInvocation (value: CltuGetParameterInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameterInvocation) { _cached_encoder_for_CltuGetParameterInvocation = function (value: CltuGetParameterInvocation, elGetter: $.ASN1Encoder<CltuGetParameterInvocation>): _Element {
+    if (!_cached_encoder_for_CltuGetParameterInvocation) { _cached_encoder_for_CltuGetParameterInvocation = function (value: CltuGetParameterInvocation, _elGetter: $.ASN1Encoder<CltuGetParameterInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

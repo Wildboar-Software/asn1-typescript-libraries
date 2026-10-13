@@ -165,7 +165,7 @@ let _cached_encoder_for_RcfGetParameterReturn: $.ASN1Encoder<RcfGetParameterRetu
  */
 export
 function _encode_RcfGetParameterReturn (value: RcfGetParameterReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RcfGetParameterReturn) { _cached_encoder_for_RcfGetParameterReturn = function (value: RcfGetParameterReturn, elGetter: $.ASN1Encoder<RcfGetParameterReturn>): _Element {
+    if (!_cached_encoder_for_RcfGetParameterReturn) { _cached_encoder_for_RcfGetParameterReturn = function (value: RcfGetParameterReturn, _elGetter: $.ASN1Encoder<RcfGetParameterReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

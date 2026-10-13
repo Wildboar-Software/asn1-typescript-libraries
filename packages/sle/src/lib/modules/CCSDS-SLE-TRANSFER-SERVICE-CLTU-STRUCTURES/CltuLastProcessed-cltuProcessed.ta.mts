@@ -162,7 +162,7 @@ let _cached_encoder_for_CltuLastProcessed_cltuProcessed: $.ASN1Encoder<CltuLastP
  */
 export
 function _encode_CltuLastProcessed_cltuProcessed (value: CltuLastProcessed_cltuProcessed, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuLastProcessed_cltuProcessed) { _cached_encoder_for_CltuLastProcessed_cltuProcessed = function (value: CltuLastProcessed_cltuProcessed, elGetter: $.ASN1Encoder<CltuLastProcessed_cltuProcessed>): _Element {
+    if (!_cached_encoder_for_CltuLastProcessed_cltuProcessed) { _cached_encoder_for_CltuLastProcessed_cltuProcessed = function (value: CltuLastProcessed_cltuProcessed, _elGetter: $.ASN1Encoder<CltuLastProcessed_cltuProcessed>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_CltuIdentification(value.cltuIdentification, $.BER),
         /* REQUIRED   */ _encode_ConditionalTime(value.radiationStartTime, $.BER),

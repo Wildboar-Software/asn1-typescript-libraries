@@ -162,7 +162,7 @@ let _cached_encoder_for_SleScheduleStatusReportInvocation: $.ASN1Encoder<SleSche
  */
 export
 function _encode_SleScheduleStatusReportInvocation (value: SleScheduleStatusReportInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SleScheduleStatusReportInvocation) { _cached_encoder_for_SleScheduleStatusReportInvocation = function (value: SleScheduleStatusReportInvocation, elGetter: $.ASN1Encoder<SleScheduleStatusReportInvocation>): _Element {
+    if (!_cached_encoder_for_SleScheduleStatusReportInvocation) { _cached_encoder_for_SleScheduleStatusReportInvocation = function (value: SleScheduleStatusReportInvocation, _elGetter: $.ASN1Encoder<SleScheduleStatusReportInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

@@ -167,7 +167,7 @@ let _cached_encoder_for_RocfGetParameter_parMinReportingCycle: $.ASN1Encoder<Roc
  */
 export
 function _encode_RocfGetParameter_parMinReportingCycle (value: RocfGetParameter_parMinReportingCycle, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameter_parMinReportingCycle) { _cached_encoder_for_RocfGetParameter_parMinReportingCycle = function (value: RocfGetParameter_parMinReportingCycle, elGetter: $.ASN1Encoder<RocfGetParameter_parMinReportingCycle>): _Element {
+    if (!_cached_encoder_for_RocfGetParameter_parMinReportingCycle) { _cached_encoder_for_RocfGetParameter_parMinReportingCycle = function (value: RocfGetParameter_parMinReportingCycle, _elGetter: $.ASN1Encoder<RocfGetParameter_parMinReportingCycle>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_IntPosShort(value.parameterValue, $.BER)

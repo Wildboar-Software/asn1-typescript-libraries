@@ -162,7 +162,7 @@ let _cached_encoder_for_RocfGetParameterInvocation: $.ASN1Encoder<RocfGetParamet
  */
 export
 function _encode_RocfGetParameterInvocation (value: RocfGetParameterInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameterInvocation) { _cached_encoder_for_RocfGetParameterInvocation = function (value: RocfGetParameterInvocation, elGetter: $.ASN1Encoder<RocfGetParameterInvocation>): _Element {
+    if (!_cached_encoder_for_RocfGetParameterInvocation) { _cached_encoder_for_RocfGetParameterInvocation = function (value: RocfGetParameterInvocation, _elGetter: $.ASN1Encoder<RocfGetParameterInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

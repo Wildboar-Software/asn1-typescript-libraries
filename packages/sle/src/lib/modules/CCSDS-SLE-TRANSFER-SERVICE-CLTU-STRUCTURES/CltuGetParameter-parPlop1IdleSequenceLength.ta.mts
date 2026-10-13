@@ -159,7 +159,7 @@ let _cached_encoder_for_CltuGetParameter_parPlop1IdleSequenceLength: $.ASN1Encod
  */
 export
 function _encode_CltuGetParameter_parPlop1IdleSequenceLength (value: CltuGetParameter_parPlop1IdleSequenceLength, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parPlop1IdleSequenceLength) { _cached_encoder_for_CltuGetParameter_parPlop1IdleSequenceLength = function (value: CltuGetParameter_parPlop1IdleSequenceLength, elGetter: $.ASN1Encoder<CltuGetParameter_parPlop1IdleSequenceLength>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parPlop1IdleSequenceLength) { _cached_encoder_for_CltuGetParameter_parPlop1IdleSequenceLength = function (value: CltuGetParameter_parPlop1IdleSequenceLength, _elGetter: $.ASN1Encoder<CltuGetParameter_parPlop1IdleSequenceLength>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_IntUnsignedShort(value.parameterValue, $.BER)

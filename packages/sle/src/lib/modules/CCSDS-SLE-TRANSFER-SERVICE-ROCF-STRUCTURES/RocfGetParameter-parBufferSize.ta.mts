@@ -160,7 +160,7 @@ let _cached_encoder_for_RocfGetParameter_parBufferSize: $.ASN1Encoder<RocfGetPar
  */
 export
 function _encode_RocfGetParameter_parBufferSize (value: RocfGetParameter_parBufferSize, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameter_parBufferSize) { _cached_encoder_for_RocfGetParameter_parBufferSize = function (value: RocfGetParameter_parBufferSize, elGetter: $.ASN1Encoder<RocfGetParameter_parBufferSize>): _Element {
+    if (!_cached_encoder_for_RocfGetParameter_parBufferSize) { _cached_encoder_for_RocfGetParameter_parBufferSize = function (value: RocfGetParameter_parBufferSize, _elGetter: $.ASN1Encoder<RocfGetParameter_parBufferSize>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_IntPosShort(value.parameterValue, $.BER)

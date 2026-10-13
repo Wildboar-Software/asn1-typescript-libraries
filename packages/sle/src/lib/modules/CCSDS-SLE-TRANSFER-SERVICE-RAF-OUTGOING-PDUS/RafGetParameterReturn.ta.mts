@@ -165,7 +165,7 @@ let _cached_encoder_for_RafGetParameterReturn: $.ASN1Encoder<RafGetParameterRetu
  */
 export
 function _encode_RafGetParameterReturn (value: RafGetParameterReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafGetParameterReturn) { _cached_encoder_for_RafGetParameterReturn = function (value: RafGetParameterReturn, elGetter: $.ASN1Encoder<RafGetParameterReturn>): _Element {
+    if (!_cached_encoder_for_RafGetParameterReturn) { _cached_encoder_for_RafGetParameterReturn = function (value: RafGetParameterReturn, _elGetter: $.ASN1Encoder<RafGetParameterReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

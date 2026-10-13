@@ -147,7 +147,7 @@ let _cached_encoder_for_CltuLastOk_cltuOk: $.ASN1Encoder<CltuLastOk_cltuOk> | nu
  */
 export
 function _encode_CltuLastOk_cltuOk (value: CltuLastOk_cltuOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuLastOk_cltuOk) { _cached_encoder_for_CltuLastOk_cltuOk = function (value: CltuLastOk_cltuOk, elGetter: $.ASN1Encoder<CltuLastOk_cltuOk>): _Element {
+    if (!_cached_encoder_for_CltuLastOk_cltuOk) { _cached_encoder_for_CltuLastOk_cltuOk = function (value: CltuLastOk_cltuOk, _elGetter: $.ASN1Encoder<CltuLastOk_cltuOk>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_CltuIdentification(value.cltuIdentification, $.BER),
         /* REQUIRED   */ _encode_Time(value.radiationStopTime, $.BER)

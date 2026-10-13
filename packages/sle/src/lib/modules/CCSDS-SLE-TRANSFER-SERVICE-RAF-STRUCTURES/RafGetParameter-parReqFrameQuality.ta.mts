@@ -162,7 +162,7 @@ let _cached_encoder_for_RafGetParameter_parReqFrameQuality: $.ASN1Encoder<RafGet
  */
 export
 function _encode_RafGetParameter_parReqFrameQuality (value: RafGetParameter_parReqFrameQuality, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafGetParameter_parReqFrameQuality) { _cached_encoder_for_RafGetParameter_parReqFrameQuality = function (value: RafGetParameter_parReqFrameQuality, elGetter: $.ASN1Encoder<RafGetParameter_parReqFrameQuality>): _Element {
+    if (!_cached_encoder_for_RafGetParameter_parReqFrameQuality) { _cached_encoder_for_RafGetParameter_parReqFrameQuality = function (value: RafGetParameter_parReqFrameQuality, _elGetter: $.ASN1Encoder<RafGetParameter_parReqFrameQuality>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_RafGetParameter_parReqFrameQuality_parameterValue(value.parameterValue, $.BER)

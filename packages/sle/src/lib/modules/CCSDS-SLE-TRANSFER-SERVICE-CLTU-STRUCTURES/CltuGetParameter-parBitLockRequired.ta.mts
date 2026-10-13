@@ -161,7 +161,7 @@ let _cached_encoder_for_CltuGetParameter_parBitLockRequired: $.ASN1Encoder<CltuG
  */
 export
 function _encode_CltuGetParameter_parBitLockRequired (value: CltuGetParameter_parBitLockRequired, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parBitLockRequired) { _cached_encoder_for_CltuGetParameter_parBitLockRequired = function (value: CltuGetParameter_parBitLockRequired, elGetter: $.ASN1Encoder<CltuGetParameter_parBitLockRequired>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parBitLockRequired) { _cached_encoder_for_CltuGetParameter_parBitLockRequired = function (value: CltuGetParameter_parBitLockRequired, _elGetter: $.ASN1Encoder<CltuGetParameter_parBitLockRequired>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_CltuGetParameter_parBitLockRequired_parameterValue(value.parameterValue, $.BER)

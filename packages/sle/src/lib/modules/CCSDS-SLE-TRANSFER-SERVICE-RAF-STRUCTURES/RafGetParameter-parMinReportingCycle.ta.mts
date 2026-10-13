@@ -167,7 +167,7 @@ let _cached_encoder_for_RafGetParameter_parMinReportingCycle: $.ASN1Encoder<RafG
  */
 export
 function _encode_RafGetParameter_parMinReportingCycle (value: RafGetParameter_parMinReportingCycle, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafGetParameter_parMinReportingCycle) { _cached_encoder_for_RafGetParameter_parMinReportingCycle = function (value: RafGetParameter_parMinReportingCycle, elGetter: $.ASN1Encoder<RafGetParameter_parMinReportingCycle>): _Element {
+    if (!_cached_encoder_for_RafGetParameter_parMinReportingCycle) { _cached_encoder_for_RafGetParameter_parMinReportingCycle = function (value: RafGetParameter_parMinReportingCycle, _elGetter: $.ASN1Encoder<RafGetParameter_parMinReportingCycle>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_IntPosShort(value.parameterValue, $.BER)

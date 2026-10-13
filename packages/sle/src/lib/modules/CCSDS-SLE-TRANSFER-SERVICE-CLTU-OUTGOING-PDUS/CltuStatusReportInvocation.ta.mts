@@ -252,7 +252,7 @@ let _cached_encoder_for_CltuStatusReportInvocation: $.ASN1Encoder<CltuStatusRepo
  */
 export
 function _encode_CltuStatusReportInvocation (value: CltuStatusReportInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuStatusReportInvocation) { _cached_encoder_for_CltuStatusReportInvocation = function (value: CltuStatusReportInvocation, elGetter: $.ASN1Encoder<CltuStatusReportInvocation>): _Element {
+    if (!_cached_encoder_for_CltuStatusReportInvocation) { _cached_encoder_for_CltuStatusReportInvocation = function (value: CltuStatusReportInvocation, _elGetter: $.ASN1Encoder<CltuStatusReportInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_CltuLastProcessed(value.cltuLastProcessed, $.BER),

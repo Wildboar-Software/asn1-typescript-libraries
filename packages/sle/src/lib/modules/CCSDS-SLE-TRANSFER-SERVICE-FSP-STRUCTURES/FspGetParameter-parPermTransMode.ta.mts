@@ -158,7 +158,7 @@ let _cached_encoder_for_FspGetParameter_parPermTransMode: $.ASN1Encoder<FspGetPa
  */
 export
 function _encode_FspGetParameter_parPermTransMode (value: FspGetParameter_parPermTransMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parPermTransMode) { _cached_encoder_for_FspGetParameter_parPermTransMode = function (value: FspGetParameter_parPermTransMode, elGetter: $.ASN1Encoder<FspGetParameter_parPermTransMode>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parPermTransMode) { _cached_encoder_for_FspGetParameter_parPermTransMode = function (value: FspGetParameter_parPermTransMode, _elGetter: $.ASN1Encoder<FspGetParameter_parPermTransMode>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_PermittedTransmissionMode(value.parameterValue, $.BER)

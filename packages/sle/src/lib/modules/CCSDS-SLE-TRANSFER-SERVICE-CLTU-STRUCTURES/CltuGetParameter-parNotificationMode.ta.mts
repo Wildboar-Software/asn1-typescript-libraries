@@ -165,7 +165,7 @@ let _cached_encoder_for_CltuGetParameter_parNotificationMode: $.ASN1Encoder<Cltu
  */
 export
 function _encode_CltuGetParameter_parNotificationMode (value: CltuGetParameter_parNotificationMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parNotificationMode) { _cached_encoder_for_CltuGetParameter_parNotificationMode = function (value: CltuGetParameter_parNotificationMode, elGetter: $.ASN1Encoder<CltuGetParameter_parNotificationMode>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parNotificationMode) { _cached_encoder_for_CltuGetParameter_parNotificationMode = function (value: CltuGetParameter_parNotificationMode, _elGetter: $.ASN1Encoder<CltuGetParameter_parNotificationMode>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_CltuGetParameter_parNotificationMode_parameterValue(value.parameterValue, $.BER)

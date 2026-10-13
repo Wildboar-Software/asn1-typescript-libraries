@@ -159,7 +159,7 @@ let _cached_encoder_for_RocfGetParameter_parReqControlWordType: $.ASN1Encoder<Ro
  */
 export
 function _encode_RocfGetParameter_parReqControlWordType (value: RocfGetParameter_parReqControlWordType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameter_parReqControlWordType) { _cached_encoder_for_RocfGetParameter_parReqControlWordType = function (value: RocfGetParameter_parReqControlWordType, elGetter: $.ASN1Encoder<RocfGetParameter_parReqControlWordType>): _Element {
+    if (!_cached_encoder_for_RocfGetParameter_parReqControlWordType) { _cached_encoder_for_RocfGetParameter_parReqControlWordType = function (value: RocfGetParameter_parReqControlWordType, _elGetter: $.ASN1Encoder<RocfGetParameter_parReqControlWordType>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_RequestedControlWordTypeNumber(value.parameterValue, $.BER)

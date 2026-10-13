@@ -160,7 +160,7 @@ let _cached_encoder_for_RafGetParameter_parBufferSize: $.ASN1Encoder<RafGetParam
  */
 export
 function _encode_RafGetParameter_parBufferSize (value: RafGetParameter_parBufferSize, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafGetParameter_parBufferSize) { _cached_encoder_for_RafGetParameter_parBufferSize = function (value: RafGetParameter_parBufferSize, elGetter: $.ASN1Encoder<RafGetParameter_parBufferSize>): _Element {
+    if (!_cached_encoder_for_RafGetParameter_parBufferSize) { _cached_encoder_for_RafGetParameter_parBufferSize = function (value: RafGetParameter_parBufferSize, _elGetter: $.ASN1Encoder<RafGetParameter_parBufferSize>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_IntPosShort(value.parameterValue, $.BER)

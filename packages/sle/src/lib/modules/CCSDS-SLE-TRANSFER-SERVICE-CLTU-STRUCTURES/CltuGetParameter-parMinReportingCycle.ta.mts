@@ -167,7 +167,7 @@ let _cached_encoder_for_CltuGetParameter_parMinReportingCycle: $.ASN1Encoder<Clt
  */
 export
 function _encode_CltuGetParameter_parMinReportingCycle (value: CltuGetParameter_parMinReportingCycle, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parMinReportingCycle) { _cached_encoder_for_CltuGetParameter_parMinReportingCycle = function (value: CltuGetParameter_parMinReportingCycle, elGetter: $.ASN1Encoder<CltuGetParameter_parMinReportingCycle>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parMinReportingCycle) { _cached_encoder_for_CltuGetParameter_parMinReportingCycle = function (value: CltuGetParameter_parMinReportingCycle, _elGetter: $.ASN1Encoder<CltuGetParameter_parMinReportingCycle>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_IntPosShort(value.parameterValue, $.BER)

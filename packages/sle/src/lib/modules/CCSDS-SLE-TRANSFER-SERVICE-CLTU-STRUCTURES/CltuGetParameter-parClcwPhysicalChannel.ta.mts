@@ -159,7 +159,7 @@ let _cached_encoder_for_CltuGetParameter_parClcwPhysicalChannel: $.ASN1Encoder<C
  */
 export
 function _encode_CltuGetParameter_parClcwPhysicalChannel (value: CltuGetParameter_parClcwPhysicalChannel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuGetParameter_parClcwPhysicalChannel) { _cached_encoder_for_CltuGetParameter_parClcwPhysicalChannel = function (value: CltuGetParameter_parClcwPhysicalChannel, elGetter: $.ASN1Encoder<CltuGetParameter_parClcwPhysicalChannel>): _Element {
+    if (!_cached_encoder_for_CltuGetParameter_parClcwPhysicalChannel) { _cached_encoder_for_CltuGetParameter_parClcwPhysicalChannel = function (value: CltuGetParameter_parClcwPhysicalChannel, _elGetter: $.ASN1Encoder<CltuGetParameter_parClcwPhysicalChannel>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_ClcwPhysicalChannel(value.parameterValue, $.BER)

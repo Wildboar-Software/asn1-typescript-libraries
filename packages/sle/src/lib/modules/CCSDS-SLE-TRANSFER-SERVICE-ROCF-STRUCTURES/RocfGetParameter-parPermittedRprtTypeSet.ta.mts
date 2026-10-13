@@ -159,7 +159,7 @@ let _cached_encoder_for_RocfGetParameter_parPermittedRprtTypeSet: $.ASN1Encoder<
  */
 export
 function _encode_RocfGetParameter_parPermittedRprtTypeSet (value: RocfGetParameter_parPermittedRprtTypeSet, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameter_parPermittedRprtTypeSet) { _cached_encoder_for_RocfGetParameter_parPermittedRprtTypeSet = function (value: RocfGetParameter_parPermittedRprtTypeSet, elGetter: $.ASN1Encoder<RocfGetParameter_parPermittedRprtTypeSet>): _Element {
+    if (!_cached_encoder_for_RocfGetParameter_parPermittedRprtTypeSet) { _cached_encoder_for_RocfGetParameter_parPermittedRprtTypeSet = function (value: RocfGetParameter_parPermittedRprtTypeSet, _elGetter: $.ASN1Encoder<RocfGetParameter_parPermittedRprtTypeSet>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ $._encodeSequenceOf<ControlWordTypeNumber>(() => _encode_ControlWordTypeNumber, $.BER)(value.parameterValue, $.BER)

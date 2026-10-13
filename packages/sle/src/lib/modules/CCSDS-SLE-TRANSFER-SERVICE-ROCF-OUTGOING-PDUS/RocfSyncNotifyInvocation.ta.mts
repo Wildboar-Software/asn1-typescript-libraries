@@ -146,7 +146,7 @@ let _cached_encoder_for_RocfSyncNotifyInvocation: $.ASN1Encoder<RocfSyncNotifyIn
  */
 export
 function _encode_RocfSyncNotifyInvocation (value: RocfSyncNotifyInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfSyncNotifyInvocation) { _cached_encoder_for_RocfSyncNotifyInvocation = function (value: RocfSyncNotifyInvocation, elGetter: $.ASN1Encoder<RocfSyncNotifyInvocation>): _Element {
+    if (!_cached_encoder_for_RocfSyncNotifyInvocation) { _cached_encoder_for_RocfSyncNotifyInvocation = function (value: RocfSyncNotifyInvocation, _elGetter: $.ASN1Encoder<RocfSyncNotifyInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_Notification(value.notification, $.BER)

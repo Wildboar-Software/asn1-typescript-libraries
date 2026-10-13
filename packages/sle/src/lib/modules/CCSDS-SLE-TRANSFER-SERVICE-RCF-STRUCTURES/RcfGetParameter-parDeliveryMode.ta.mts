@@ -158,7 +158,7 @@ let _cached_encoder_for_RcfGetParameter_parDeliveryMode: $.ASN1Encoder<RcfGetPar
  */
 export
 function _encode_RcfGetParameter_parDeliveryMode (value: RcfGetParameter_parDeliveryMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RcfGetParameter_parDeliveryMode) { _cached_encoder_for_RcfGetParameter_parDeliveryMode = function (value: RcfGetParameter_parDeliveryMode, elGetter: $.ASN1Encoder<RcfGetParameter_parDeliveryMode>): _Element {
+    if (!_cached_encoder_for_RcfGetParameter_parDeliveryMode) { _cached_encoder_for_RcfGetParameter_parDeliveryMode = function (value: RcfGetParameter_parDeliveryMode, _elGetter: $.ASN1Encoder<RcfGetParameter_parDeliveryMode>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_RcfDeliveryMode(value.parameterValue, $.BER)

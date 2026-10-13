@@ -161,7 +161,7 @@ let _cached_encoder_for_FspGetParameter_parBitLockRequired: $.ASN1Encoder<FspGet
  */
 export
 function _encode_FspGetParameter_parBitLockRequired (value: FspGetParameter_parBitLockRequired, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parBitLockRequired) { _cached_encoder_for_FspGetParameter_parBitLockRequired = function (value: FspGetParameter_parBitLockRequired, elGetter: $.ASN1Encoder<FspGetParameter_parBitLockRequired>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parBitLockRequired) { _cached_encoder_for_FspGetParameter_parBitLockRequired = function (value: FspGetParameter_parBitLockRequired, _elGetter: $.ASN1Encoder<FspGetParameter_parBitLockRequired>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_FspGetParameter_parBitLockRequired_parameterValue(value.parameterValue, $.BER)

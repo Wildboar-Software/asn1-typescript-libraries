@@ -158,7 +158,7 @@ let _cached_encoder_for_FspGetParameter_parVirtualChannel: $.ASN1Encoder<FspGetP
  */
 export
 function _encode_FspGetParameter_parVirtualChannel (value: FspGetParameter_parVirtualChannel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameter_parVirtualChannel) { _cached_encoder_for_FspGetParameter_parVirtualChannel = function (value: FspGetParameter_parVirtualChannel, elGetter: $.ASN1Encoder<FspGetParameter_parVirtualChannel>): _Element {
+    if (!_cached_encoder_for_FspGetParameter_parVirtualChannel) { _cached_encoder_for_FspGetParameter_parVirtualChannel = function (value: FspGetParameter_parVirtualChannel, _elGetter: $.ASN1Encoder<FspGetParameter_parVirtualChannel>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ParameterName(value.parameterName, $.BER),
         /* REQUIRED   */ _encode_VcOrMapId(value.parameterValue, $.BER)

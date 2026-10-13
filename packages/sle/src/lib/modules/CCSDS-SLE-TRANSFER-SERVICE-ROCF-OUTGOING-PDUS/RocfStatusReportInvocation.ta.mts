@@ -236,7 +236,7 @@ let _cached_encoder_for_RocfStatusReportInvocation: $.ASN1Encoder<RocfStatusRepo
  */
 export
 function _encode_RocfStatusReportInvocation (value: RocfStatusReportInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfStatusReportInvocation) { _cached_encoder_for_RocfStatusReportInvocation = function (value: RocfStatusReportInvocation, elGetter: $.ASN1Encoder<RocfStatusReportInvocation>): _Element {
+    if (!_cached_encoder_for_RocfStatusReportInvocation) { _cached_encoder_for_RocfStatusReportInvocation = function (value: RocfStatusReportInvocation, _elGetter: $.ASN1Encoder<RocfStatusReportInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_IntUnsignedLong(value.processedFrameNumber, $.BER),
