@@ -36,26 +36,36 @@ import {
  *
  */
 export class CPA_PPDU_x410_mode_parameters {
+    /**
+     * @summary `checkpointSize`.
+     * @public
+     * @readonly
+     */
+    public readonly checkpointSize: OPTIONAL<INTEGER>; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `windowSize`.
+     * @public
+     * @readonly
+     */
+    public readonly windowSize: OPTIONAL<INTEGER>; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `connectionDataAC`.
+     * @public
+     * @readonly
+     */
+    public readonly connectionDataAC: ConnectionData; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `checkpointSize`.
-         * @public
-         * @readonly
-         */
-        readonly checkpointSize: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `windowSize`.
-         * @public
-         * @readonly
-         */
-        readonly windowSize: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `connectionDataAC`.
-         * @public
-         * @readonly
-         */
-        readonly connectionDataAC: ConnectionData /* REPLICATED_COMPONENT */
-    ) {}
+        checkpointSize: OPTIONAL<INTEGER>,
+        windowSize: OPTIONAL<INTEGER>,
+        connectionDataAC: ConnectionData
+    ) {
+        this.checkpointSize = checkpointSize;
+        this.windowSize = windowSize;
+        this.connectionDataAC = connectionDataAC;
+    }
 
     /**
      * @summary Restructures an object into a CPA_PPDU_x410_mode_parameters

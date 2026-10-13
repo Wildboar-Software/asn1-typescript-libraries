@@ -13,11 +13,14 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_CancelProblem {
-  unknownOperation = 0,
-  tooLate = 1,
-  operationNotCancellable = 2,
-}
+export const _enum_for_CancelProblem = {
+  unknownOperation: 0,
+  tooLate: 1,
+  operationNotCancellable: 2,
+} as const;
+
+export type _enum_for_CancelProblem =
+  (typeof _enum_for_CancelProblem)[keyof typeof _enum_for_CancelProblem];
 
 
 /**

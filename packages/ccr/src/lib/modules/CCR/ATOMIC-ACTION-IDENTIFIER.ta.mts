@@ -47,31 +47,38 @@ import {
  *
  */
 export class ATOMIC_ACTION_IDENTIFIER {
+  /**
+   * @summary `owners_name`.
+   * @description
+   *
+   * Atomic-action owner: `name` (`AE-title`) or `side`
+   * (`sender`/`receiver` of this APDU). ITU-T Rec. X.852 (12/97)
+   * Annex A, §7.2.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly owners_name: ATOMIC_ACTION_IDENTIFIER_owners_name;
+
+  /**
+   * @summary `atomic_action_suffix`.
+   * @description
+   *
+   * Distinguishes this atomic action among those of the owner
+   * (`form1` OCTET STRING or `form2` INTEGER). X.852 Table 6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly atomic_action_suffix: ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix;
+
   constructor(
-    /**
-     * @summary `owners_name`.
-     * @description
-     *
-     * Atomic-action owner: `name` (`AE-title`) or `side`
-     * (`sender`/`receiver` of this APDU). ITU-T Rec. X.852 (12/97)
-     * Annex A, §7.2.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly owners_name: ATOMIC_ACTION_IDENTIFIER_owners_name,
-    /**
-     * @summary `atomic_action_suffix`.
-     * @description
-     *
-     * Distinguishes this atomic action among those of the owner
-     * (`form1` OCTET STRING or `form2` INTEGER). X.852 Table 6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly atomic_action_suffix: ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix
-  ) {}
+    owners_name: ATOMIC_ACTION_IDENTIFIER_owners_name,
+    atomic_action_suffix: ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix
+  ) {
+    this.owners_name = owners_name;
+    this.atomic_action_suffix = atomic_action_suffix;
+  }
 
   /**
    * @summary Restructures an object into a ATOMIC_ACTION_IDENTIFIER

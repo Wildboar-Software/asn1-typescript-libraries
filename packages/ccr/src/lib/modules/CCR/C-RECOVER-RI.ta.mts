@@ -68,73 +68,92 @@ import {
  *
  */
 export class C_RECOVER_RI {
+  /**
+   * @summary `atomic_action_identifier`.
+   * @description
+   *
+   * Atomic Action Identifier of the disrupted branch. AE-titles of
+   * the C-RECOVER requestor/acceptor may use `name` or `side`
+   * (`sender`/`receiver`). ITU-T Rec. X.852 (12/97) §7.9.5,
+   * Table 28.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER;
+
+  /**
+   * @summary `branch_identifier`.
+   * @description
+   *
+   * Branch Identifier of the disrupted branch. Same `name`/`side`
+   * rules as `atomic-action-identifier` (X.852 §7.9.5).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly branch_identifier: BRANCH_IDENTIFIER;
+
+  /**
+   * @summary `recovery_state`.
+   * @description
+   *
+   * Derived by the CCR service-user from atomic action data
+   * (`commit`, `ready`, `done`, `unknown`, `retry-later`). ITU-T
+   * Rec. X.852 (12/97) §7.9.4.1, §7.9.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly recovery_state: C_RECOVER_RI_recovery_state;
+
+  /**
+   * @summary `reversed_branch`.
+   * @description
+   *
+   * Default `FALSE`; shall be absent if `FALSE` (Annex A).
+   * Conditional on the C-RECOVER request. X.852 does not specify
+   * when `TRUE` is sent. ITU-T Rec. X.852 (12/97) §7.9.2, Table 26.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly reversed_branch?: OPTIONAL<BOOLEAN>;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_data`.
+   * @description
+   *
+   * C-RECOVER request/indication User Data (X.852 §7.9.5,
+   * Table 28).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_data?: OPTIONAL<User_data>;
+
   constructor(
-    /**
-     * @summary `atomic_action_identifier`.
-     * @description
-     *
-     * Atomic Action Identifier of the disrupted branch. AE-titles of
-     * the C-RECOVER requestor/acceptor may use `name` or `side`
-     * (`sender`/`receiver`). ITU-T Rec. X.852 (12/97) §7.9.5,
-     * Table 28.
-     *
-     * @public
-     * @readonly
-     */
-    readonly atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
-    /**
-     * @summary `branch_identifier`.
-     * @description
-     *
-     * Branch Identifier of the disrupted branch. Same `name`/`side`
-     * rules as `atomic-action-identifier` (X.852 §7.9.5).
-     *
-     * @public
-     * @readonly
-     */
-    readonly branch_identifier: BRANCH_IDENTIFIER,
-    /**
-     * @summary `recovery_state`.
-     * @description
-     *
-     * Derived by the CCR service-user from atomic action data
-     * (`commit`, `ready`, `done`, `unknown`, `retry-later`). ITU-T
-     * Rec. X.852 (12/97) §7.9.4.1, §7.9.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly recovery_state: C_RECOVER_RI_recovery_state,
-    /**
-     * @summary `reversed_branch`.
-     * @description
-     *
-     * Default `FALSE`; shall be absent if `FALSE` (Annex A).
-     * Conditional on the C-RECOVER request. X.852 does not specify
-     * when `TRUE` is sent. ITU-T Rec. X.852 (12/97) §7.9.2, Table 26.
-     *
-     * @public
-     * @readonly
-     */
-    readonly reversed_branch?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_data`.
-     * @description
-     *
-     * C-RECOVER request/indication User Data (X.852 §7.9.5,
-     * Table 28).
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_data?: OPTIONAL<User_data>
-  ) {}
+    atomic_action_identifier: ATOMIC_ACTION_IDENTIFIER,
+    branch_identifier: BRANCH_IDENTIFIER,
+    recovery_state: C_RECOVER_RI_recovery_state,
+    reversed_branch?: OPTIONAL<BOOLEAN>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_data?: OPTIONAL<User_data>
+  ) {
+    this.atomic_action_identifier = atomic_action_identifier;
+    this.branch_identifier = branch_identifier;
+    this.recovery_state = recovery_state;
+    this.reversed_branch = reversed_branch;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_data = user_data;
+  }
 
   /**
    * @summary Restructures an object into a C_RECOVER_RI

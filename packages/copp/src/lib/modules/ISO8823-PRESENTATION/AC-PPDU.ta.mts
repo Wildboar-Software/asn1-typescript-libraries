@@ -54,41 +54,51 @@ import {
  *
  */
 export class AC_PPDU {
+    /**
+     * @summary `presentation_context_addition_list`.
+     * @description
+     *
+     * New contexts to add to the DCS. Same shape as a context-definition
+     * list. Identifiers must be unused on this connection; initiator
+     * uses odd integers, responder even (X.226 §6.5.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_addition_list?: OPTIONAL<Presentation_context_addition_list>;
+
+    /**
+     * @summary `presentation_context_deletion_list`.
+     * @description
+     *
+     * PCIDs of DCS members proposed for removal (X.226 §6.5.2.2;
+     * X.216 §10.5.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_deletion_list?: OPTIONAL<Presentation_context_deletion_list>;
+
+    /**
+     * @summary `user_data`.
+     * @description
+     *
+     * PDVs from the DCS per X.226 §6.1.2 (X.226 §6.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_data?: OPTIONAL<User_data>;
+
     constructor(
-        /**
-         * @summary `presentation_context_addition_list`.
-         * @description
-         *
-         * New contexts to add to the DCS. Same shape as a context-definition
-         * list. Identifiers must be unused on this connection; initiator
-         * uses odd integers, responder even (X.226 §6.5.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_addition_list?: OPTIONAL<Presentation_context_addition_list>,
-        /**
-         * @summary `presentation_context_deletion_list`.
-         * @description
-         *
-         * PCIDs of DCS members proposed for removal (X.226 §6.5.2.2;
-         * X.216 §10.5.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_deletion_list?: OPTIONAL<Presentation_context_deletion_list>,
-        /**
-         * @summary `user_data`.
-         * @description
-         *
-         * PDVs from the DCS per X.226 §6.1.2 (X.226 §6.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_data?: OPTIONAL<User_data>
-    ) {}
+        presentation_context_addition_list?: OPTIONAL<Presentation_context_addition_list>,
+        presentation_context_deletion_list?: OPTIONAL<Presentation_context_deletion_list>,
+        user_data?: OPTIONAL<User_data>
+    ) {
+        this.presentation_context_addition_list = presentation_context_addition_list;
+        this.presentation_context_deletion_list = presentation_context_deletion_list;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a AC_PPDU

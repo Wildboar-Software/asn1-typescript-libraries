@@ -13,11 +13,14 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_probe_ResultType {
-  running = 0,
-  finished = 1,
-  unknown = 2,
-}
+export const _enum_for_probe_ResultType = {
+  running: 0,
+  finished: 1,
+  unknown: 2,
+} as const;
+
+export type _enum_for_probe_ResultType =
+  (typeof _enum_for_probe_ResultType)[keyof typeof _enum_for_probe_ResultType];
 
 
 /**

@@ -38,32 +38,38 @@ import {
  *
  */
 export class RTORJapdu {
+  /**
+   * @summary `refuseReason`.
+   * @description
+   *
+   * Solely in X.410-1984 mode. Why the RTPM or acceptor refused
+   * establishment or recovery. ITU-T Rec. X.228 (11/88) Table
+   * 4/X.228 note 1, §7.1.6.1, §7.8.3.6.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly refuseReason?: OPTIONAL<RefuseReason>;
+  /**
+   * @summary `userDataRJ`.
+   * @description
+   *
+   * Solely in normal mode. RT-OPEN response User-data; transparent
+   * to the RTPM. Not used in association-recovery. ITU-T Rec.
+   * X.228 (11/88) Table 4/X.228 note 2, §7.1.6.2, §7.8.3.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly userDataRJ?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `refuseReason`.
-     * @description
-     *
-     * Solely in X.410-1984 mode. Why the RTPM or acceptor refused
-     * establishment or recovery. ITU-T Rec. X.228 (11/88) Table
-     * 4/X.228 note 1, §7.1.6.1, §7.8.3.6.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly refuseReason?: OPTIONAL<RefuseReason>,
-    /**
-     * @summary `userDataRJ`.
-     * @description
-     *
-     * Solely in normal mode. RT-OPEN response User-data; transparent
-     * to the RTPM. Not used in association-recovery. ITU-T Rec.
-     * X.228 (11/88) Table 4/X.228 note 2, §7.1.6.2, §7.8.3.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly userDataRJ?: OPTIONAL<_Element>
-  ) {}
+    refuseReason?: OPTIONAL<RefuseReason>,
+    userDataRJ?: OPTIONAL<_Element>
+  ) {
+    this.refuseReason = refuseReason;
+    this.userDataRJ = userDataRJ;
+  }
 
   /**
    * @summary Restructures an object into a RTORJapdu

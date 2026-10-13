@@ -47,30 +47,37 @@ import {
  *
  */
 export class RSA_PPDU {
+    /**
+     * @summary `presentation_context_identifier_list`.
+     * @description
+     *
+     * DCS that results from this RSA (X.226 §6.8.3.3). When context
+     * management is selected, corresponds to the DCS known to the
+     * accepting PPM (X.226 §6.8.4.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>;
+
+    /**
+     * @summary `user_data`.
+     * @description
+     *
+     * PDVs from presentation contexts per X.226 §6.1.2 (X.226 §6.8.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_data?: OPTIONAL<User_data>;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier_list`.
-         * @description
-         *
-         * DCS that results from this RSA (X.226 §6.8.3.3). When context
-         * management is selected, corresponds to the DCS known to the
-         * accepting PPM (X.226 §6.8.4.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>,
-        /**
-         * @summary `user_data`.
-         * @description
-         *
-         * PDVs from presentation contexts per X.226 §6.1.2 (X.226 §6.8.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_data?: OPTIONAL<User_data>
-    ) {}
+        presentation_context_identifier_list?: OPTIONAL<Presentation_context_identifier_list>,
+        user_data?: OPTIONAL<User_data>
+    ) {
+        this.presentation_context_identifier_list = presentation_context_identifier_list;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a RSA_PPDU

@@ -1,0 +1,141 @@
+LabelingObjectIdentifiers
+{iso(1) identified-organization(3) nato(26) stanags(0) mmhs(4406)
+object-identifiers(0) module(0) labeling-values(13)}
+DEFINITIONS IMPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+    id-policy
+        FROM MMSObjectIdentifiers
+        {iso(1) identified-organization(3) nato(26) stanags(0) mmhs(4406)
+        object-identifiers(0) policy(5) }
+    ;
+
+ID ::= OBJECT IDENTIFIER
+
+id-labeling-values ID ::= {
+    iso(1)
+    identified-organization(3)
+    nato(26)
+    stanags(0)
+    mmhs(4406)
+    object-identifiers(0)
+    module(0)
+    labeling-values(13)
+}
+
+-- Security Policy Identifiers
+
+id-policy-nato ID ::= {id-policy 0}
+-- Deprecated: used with older implementations of STANAG 4406 Ed. 1
+
+id-policy-v1 ID ::= {id-policy v1(1) }
+
+-- Security Categories
+
+-- TagName Values
+
+id-tag-names ID ::= {id-labeling-values 0}
+
+-- Restrictive Tag Names
+
+id-restrictive ID ::= {id-tag-names 0}
+
+-- Sensitivity
+-- For RestrictiveTag.tagName
+
+id-sensitivity ID ::= {id-restrictive 1}
+
+-- For RestrictiveTag.attributeFlags the values are
+-- The above OID corresponds to the following syntax
+
+Sensitivity ::= BIT STRING {
+    atomal (0),
+    crypto (1),
+    exclusive (2),
+    intelligence (3),
+    logistics (4),
+    operations (5),
+    us-siop (6),
+    us-siop-esi (7)
+}
+
+-- Enumerated
+
+id-enumerated ID ::= {id-tag-names 1}
+
+-- Enumerated Permissive
+
+id-enum-permissive ID ::= {id-enumerated 0}
+
+-- Enumerated Restrictive
+
+id-enum-restrictive ID ::= {id-enumerated 1}
+
+-- Non-NATO Organizations and Countries
+-- For EnumeratedTag.tagName
+
+id-nonnato-orgs-and-countries ID ::= {id-enum-permissive 0}
+
+-- For EnumeratedTag.attributes.securityAttributes CHOICE
+-- Values are the 3 digit code. Note that the trigraph is displayed.
+-- The above OID corresponds to the following syntax
+
+NONNATOOrgsAndCountries ::= INTEGER {
+    albania (8),
+    armenia (16),
+    austria (40),
+    azerbaijan (31),
+    belarus (112),
+    bulgaria (100),
+    estonia (233),
+    finland (246),
+    georgia (268),
+    kazakhstan (398),
+    kyrghyz-Republic (417),
+    latvia (428),
+    lithuania (440),
+    malta (470),
+    moldova (498),
+    romania (642),
+    russia (643),
+    slovak-Republic (703),
+    slovenia (705),
+    sweden (752),
+    switzerland (756),
+    tajikistan (762),
+    macedonia-Former-Yugoslav-Republic (807),
+    turkmenistan (795),
+    ukraine (804),
+    uzbekistan (860),
+    united-Nations (9999),
+    central-Europe-Initiativ (9998),
+    commonwealth-of-Independent-States (9997),
+    council-for-Security-and-Cooperation-in-Europe (9996),
+    european-Union (9995),
+    western-European-Union (9994)
+}
+
+-- Information Tag Names
+
+id-informative ID ::= {id-tag-names 2}
+
+-- Discretionary Handling
+-- For PermissiveTag.tagName
+
+id-discretionary-handling ID ::= {id-informative 0}
+
+-- For InformativeTag.attributes.bitSetAttributes CHOICE
+-- The above OID corresponds to the following syntax
+
+DiscretionaryHandling ::= BIT STRING {
+    cosmic (0),
+    management (1),
+    staff (2),
+    personal (3),
+    medical (4),
+    commercial (5),
+    releasable-to-internet (6)
+}
+
+END -- of LabelingObjectIdentifiers

@@ -79,40 +79,50 @@ import {
  *
  */
 export class CPA_PPDU {
+    /**
+     * @summary `mode_selector`.
+     * @description
+     *
+     * Copied from the CP PPDU (X.226 §6.2.3.1). Mandatory (X.226 Table 2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mode_selector: Mode_selector;
+
+    /**
+     * @summary `x410_mode_parameters`.
+     * @description
+     *
+     * X.410-1984 mode only: `COMPONENTS OF RTOACapdu`, bitwise compatible
+     * with CCITT Rec. X.410-1984; this is the CPA User data in that mode.
+     * Absent for a nested presentation-connection (X.226 §8.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly x410_mode_parameters?: OPTIONAL<CPA_PPDU_x410_mode_parameters>;
+
+    /**
+     * @summary `normal_mode_parameters`.
+     * @description
+     *
+     * Normal-mode CPA parameters (X.226 §6.2.3, §8.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly normal_mode_parameters?: OPTIONAL<CPA_PPDU_normal_mode_parameters>;
+
     constructor(
-        /**
-         * @summary `mode_selector`.
-         * @description
-         *
-         * Copied from the CP PPDU (X.226 §6.2.3.1). Mandatory (X.226 Table 2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mode_selector: Mode_selector,
-        /**
-         * @summary `x410_mode_parameters`.
-         * @description
-         *
-         * X.410-1984 mode only: `COMPONENTS OF RTOACapdu`, bitwise compatible
-         * with CCITT Rec. X.410-1984; this is the CPA User data in that mode.
-         * Absent for a nested presentation-connection (X.226 §8.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly x410_mode_parameters?: OPTIONAL<CPA_PPDU_x410_mode_parameters>,
-        /**
-         * @summary `normal_mode_parameters`.
-         * @description
-         *
-         * Normal-mode CPA parameters (X.226 §6.2.3, §8.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly normal_mode_parameters?: OPTIONAL<CPA_PPDU_normal_mode_parameters>
-    ) {}
+        mode_selector: Mode_selector,
+        x410_mode_parameters?: OPTIONAL<CPA_PPDU_x410_mode_parameters>,
+        normal_mode_parameters?: OPTIONAL<CPA_PPDU_normal_mode_parameters>
+    ) {
+        this.mode_selector = mode_selector;
+        this.x410_mode_parameters = x410_mode_parameters;
+        this.normal_mode_parameters = normal_mode_parameters;
+    }
 
     /**
      * @summary Restructures an object into a CPA_PPDU

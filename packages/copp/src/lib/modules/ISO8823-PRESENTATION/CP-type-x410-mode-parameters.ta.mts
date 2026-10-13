@@ -43,38 +43,54 @@ import {
  *
  */
 export class CP_type_x410_mode_parameters {
+    /**
+     * @summary `checkpointSize`.
+     * @public
+     * @readonly
+     */
+    public readonly checkpointSize: OPTIONAL<INTEGER>; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `windowSize`.
+     * @public
+     * @readonly
+     */
+    public readonly windowSize: OPTIONAL<INTEGER>; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `dialogueMode`.
+     * @public
+     * @readonly
+     */
+    public readonly dialogueMode: OPTIONAL<RTORQapdu_dialogueMode>; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `connectionDataRQ`.
+     * @public
+     * @readonly
+     */
+    public readonly connectionDataRQ: ConnectionData; /* REPLICATED_COMPONENT */
+
+    /**
+     * @summary `applicationProtocol`.
+     * @public
+     * @readonly
+     */
+    public readonly applicationProtocol?: OPTIONAL<INTEGER>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `checkpointSize`.
-         * @public
-         * @readonly
-         */
-        readonly checkpointSize: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `windowSize`.
-         * @public
-         * @readonly
-         */
-        readonly windowSize: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `dialogueMode`.
-         * @public
-         * @readonly
-         */
-        readonly dialogueMode: OPTIONAL<RTORQapdu_dialogueMode> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `connectionDataRQ`.
-         * @public
-         * @readonly
-         */
-        readonly connectionDataRQ: ConnectionData /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `applicationProtocol`.
-         * @public
-         * @readonly
-         */
-        readonly applicationProtocol?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */
-    ) {}
+        checkpointSize: OPTIONAL<INTEGER>,
+        windowSize: OPTIONAL<INTEGER>,
+        dialogueMode: OPTIONAL<RTORQapdu_dialogueMode>,
+        connectionDataRQ: ConnectionData,
+        applicationProtocol?: OPTIONAL<INTEGER>
+    ) {
+        this.checkpointSize = checkpointSize;
+        this.windowSize = windowSize;
+        this.dialogueMode = dialogueMode;
+        this.connectionDataRQ = connectionDataRQ;
+        this.applicationProtocol = applicationProtocol;
+    }
 
     /**
      * @summary Restructures an object into a CP_type_x410_mode_parameters

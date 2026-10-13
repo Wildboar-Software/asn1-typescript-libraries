@@ -54,41 +54,49 @@ import {
  *
  */
 export class SessionConnectionIdentifier {
+  /**
+   * @summary `callingSSuserReference`.
+   * @description
+   *
+   * Calling SS-User Reference of the original session-connection.
+   * ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly callingSSuserReference: CallingSSuserReference;
+  /**
+   * @summary `commonReference`.
+   * @description
+   *
+   * Common Reference of the original session-connection (UTCTime).
+   * ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly commonReference: CommonReference;
+  /**
+   * @summary `additionalReferenceInformation`.
+   * @description
+   *
+   * Optional Additional Reference Information of the original
+   * session-connection. ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly additionalReferenceInformation?: OPTIONAL<AdditionalReferenceInformation>;
+
   constructor(
-    /**
-     * @summary `callingSSuserReference`.
-     * @description
-     *
-     * Calling SS-User Reference of the original session-connection.
-     * ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly callingSSuserReference: CallingSSuserReference,
-    /**
-     * @summary `commonReference`.
-     * @description
-     *
-     * Common Reference of the original session-connection (UTCTime).
-     * ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly commonReference: CommonReference,
-    /**
-     * @summary `additionalReferenceInformation`.
-     * @description
-     *
-     * Optional Additional Reference Information of the original
-     * session-connection. ITU-T Rec. X.228 (11/88) §8.1.1.1.3.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly additionalReferenceInformation?: OPTIONAL<AdditionalReferenceInformation>
-  ) {}
+    callingSSuserReference: CallingSSuserReference,
+    commonReference: CommonReference,
+    additionalReferenceInformation?: OPTIONAL<AdditionalReferenceInformation>
+  ) {
+    this.callingSSuserReference = callingSSuserReference;
+    this.commonReference = commonReference;
+    this.additionalReferenceInformation = additionalReferenceInformation;
+  }
 
   /**
    * @summary Restructures an object into a SessionConnectionIdentifier

@@ -28,28 +28,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Authentication_value_other {
+  /**
+   * @summary `other_mechanism_name`.
+   * @description
+   *
+   * OBJECT IDENTIFIER of the `MECHANISM-NAME` information object.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly other_mechanism_name: OBJECT_IDENTIFIER;
+  /**
+   * @summary `other_mechanism_value`.
+   * @description
+   *
+   * Open type whose abstract syntax is that of the named mechanism.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly other_mechanism_value: _Element;
+
   constructor(
-    /**
-     * @summary `other_mechanism_name`.
-     * @description
-     *
-     * OBJECT IDENTIFIER of the `MECHANISM-NAME` information object.
-     *
-     * @public
-     * @readonly
-     */
-    readonly other_mechanism_name: OBJECT_IDENTIFIER,
-    /**
-     * @summary `other_mechanism_value`.
-     * @description
-     *
-     * Open type whose abstract syntax is that of the named mechanism.
-     *
-     * @public
-     * @readonly
-     */
-    readonly other_mechanism_value: _Element
-  ) {}
+    other_mechanism_name: OBJECT_IDENTIFIER,
+    other_mechanism_value: _Element
+  ) {
+    this.other_mechanism_name = other_mechanism_name;
+    this.other_mechanism_value = other_mechanism_value;
+  }
 
   /**
    * @summary Restructures an object into a Authentication_value_other

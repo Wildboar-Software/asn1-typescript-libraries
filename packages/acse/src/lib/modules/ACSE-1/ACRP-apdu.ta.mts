@@ -63,70 +63,84 @@ import {
  *
  */
 export class ACRP_apdu {
+  /**
+   * @summary `aso_qualifier`.
+   * @description
+   *
+   * Distinguishes child ASOs. Conditional. ITU-T Rec. X.227 bis
+   * (1998) §7.5.6.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly aso_qualifier?: OPTIONAL<ASO_qualifier>;
+  /**
+   * @summary `asoi_identifier`.
+   * @description
+   *
+   * Distinguishes concurrent ASO instances. Conditional. ITU-T Rec.
+   * X.227 bis (1998) §7.5.6.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly asoi_identifier?: OPTIONAL<ASOI_identifier>;
+  /**
+   * @summary `aSO_context_name`.
+   * @description
+   *
+   * ASO-context the acceptor returns (same or a refusal). Despite the
+   * field name, the ACSE-1 ASN.1 types this as `ASO-context-name-list`.
+   * ITU-T Rec. X.227 bis (1998) §7.5.6.3, §9.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly aSO_context_name?: OPTIONAL<ASO_context_name_list>;
+  /**
+   * @summary `p_context_result_list`.
+   * @description
+   *
+   * Presentation context result list (ITU-T Rec. X.216 | ISO/IEC 8822).
+   * ITU-T Rec. X.227 bis (1998) §7.5.6.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly p_context_result_list?: OPTIONAL<P_context_result_list>;
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+  /**
+   * @summary `user_information`.
+   * @description
+   *
+   * Optional; interpreted in the contexts this response specifies.
+   * ITU-T Rec. X.217 bis (1998) §8.6.1.5; X.227 bis (1998) §7.5.6.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_information?: OPTIONAL<User_information>;
+
   constructor(
-    /**
-     * @summary `aso_qualifier`.
-     * @description
-     *
-     * Distinguishes child ASOs. Conditional. ITU-T Rec. X.227 bis
-     * (1998) §7.5.6.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly aso_qualifier?: OPTIONAL<ASO_qualifier>,
-    /**
-     * @summary `asoi_identifier`.
-     * @description
-     *
-     * Distinguishes concurrent ASO instances. Conditional. ITU-T Rec.
-     * X.227 bis (1998) §7.5.6.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly asoi_identifier?: OPTIONAL<ASOI_identifier>,
-    /**
-     * @summary `aSO_context_name`.
-     * @description
-     *
-     * ASO-context the acceptor returns (same or a refusal). Despite the
-     * field name, the ACSE-1 ASN.1 types this as `ASO-context-name-list`.
-     * ITU-T Rec. X.227 bis (1998) §7.5.6.3, §9.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly aSO_context_name?: OPTIONAL<ASO_context_name_list>,
-    /**
-     * @summary `p_context_result_list`.
-     * @description
-     *
-     * Presentation context result list (ITU-T Rec. X.216 | ISO/IEC 8822).
-     * ITU-T Rec. X.227 bis (1998) §7.5.6.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly p_context_result_list?: OPTIONAL<P_context_result_list>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_information`.
-     * @description
-     *
-     * Optional; interpreted in the contexts this response specifies.
-     * ITU-T Rec. X.217 bis (1998) §8.6.1.5; X.227 bis (1998) §7.5.6.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_information?: OPTIONAL<User_information>
-  ) {}
+    aso_qualifier?: OPTIONAL<ASO_qualifier>,
+    asoi_identifier?: OPTIONAL<ASOI_identifier>,
+    aSO_context_name?: OPTIONAL<ASO_context_name_list>,
+    p_context_result_list?: OPTIONAL<P_context_result_list>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_information?: OPTIONAL<User_information>
+  ) {
+    this.aso_qualifier = aso_qualifier;
+    this.asoi_identifier = asoi_identifier;
+    this.aSO_context_name = aSO_context_name;
+    this.p_context_result_list = p_context_result_list;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_information = user_information;
+  }
 
   /**
    * @summary Restructures an object into a ACRP_apdu

@@ -1,0 +1,213 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+import {
+    SecurityLabel,
+    _decode_SecurityLabel,
+    _encode_SecurityLabel,
+} from "@wildboar/x400/MTSAbstractService";
+import { BodyPartSecurityLabel, _decode_BodyPartSecurityLabel, _encode_BodyPartSecurityLabel } from "../MMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs";
+
+
+/**
+ * @summary SecurityInformationLabels
+ * @description
+ * 
+ * Deprecated heading extension. It attaches an X.411 security label to the
+ * whole military-message content, and optionally to the heading and to
+ * individual body parts. Edition 2 discourages it. The replacement is the ESS
+ * security label in Annex B.
+ *
+ * If every body part is labelled, `body-part-sequence-number` may be omitted
+ * and the sequence matches the originator's body order. Otherwise the sequence
+ * number identifies which body part, in the order the originator encoded them.
+ * Absence means the message was received without these information labels.
+ *
+ * Unless the two end systems trust each other to separate information on these
+ * labels, the extension is not to be used as mandatory access control. How that
+ * trust is established is outside the STANAG. STANAG 4406 (Ed. 2), Annex A,
+ * A1.16 and B.120.
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * SecurityInformationLabels ::= SEQUENCE {
+ *   content-security-label     [0]  SecurityLabel,
+ *   -- SecurityLabel as defined in 8.5.9 of ITU-T X.411
+ *   heading-security-label     [1]  SecurityLabel OPTIONAL,
+ *   body-part-security-labels  [2]  SEQUENCE OF BodyPartSecurityLabel OPTIONAL}
+ * ```
+ * 
+ * @class
+ */
+export
+class SecurityInformationLabels {
+    /**
+     * @summary `content_security_label`.
+     * @description
+     *
+     * Label for the whole military-message content. Required when the extension
+     * is present. X.411 clause 8.5.9. STANAG 4406 (Ed. 2), Annex A, A1.16.
+     * @public
+     * @readonly
+     */
+    readonly content_security_label: SecurityLabel;
+    /**
+     * @summary `heading_security_label`.
+     * @description
+     *
+     * Label for the message heading. Optional. STANAG 4406 (Ed. 2), Annex A,
+     * A1.16.
+     * @public
+     * @readonly
+     */
+    readonly heading_security_label: OPTIONAL<SecurityLabel>;
+    /**
+     * @summary `body_part_security_labels`.
+     * @description
+     *
+     * Labels for individual body parts, in the originator's encoding order.
+     * Optional. STANAG 4406 (Ed. 2), Annex A, A1.16.
+     * @public
+     * @readonly
+     */
+    readonly body_part_security_labels: OPTIONAL<BodyPartSecurityLabel[]>;
+
+    constructor (
+        content_security_label: SecurityLabel,
+        heading_security_label: OPTIONAL<SecurityLabel>,
+        body_part_security_labels: OPTIONAL<BodyPartSecurityLabel[]>
+    ) {
+        this.content_security_label = content_security_label;
+        this.heading_security_label = heading_security_label;
+        this.body_part_security_labels = body_part_security_labels;
+    }
+
+    /**
+     * @summary Restructures an object into a SecurityInformationLabels
+     * @description
+     * 
+     * This takes an `object` and converts it to a `SecurityInformationLabels`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `SecurityInformationLabels`.
+     * @returns {SecurityInformationLabels}
+     */
+    public static _from_object (_o: { [_K in keyof (SecurityInformationLabels)]: (SecurityInformationLabels)[_K] }): SecurityInformationLabels {
+        return new SecurityInformationLabels(_o.content_security_label, _o.heading_security_label, _o.body_part_security_labels);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of SecurityInformationLabels
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_SecurityInformationLabels: $.ComponentSpec[] = [
+    new $.ComponentSpec("content-security-label", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("heading-security-label", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("body-part-security-labels", true, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of SecurityInformationLabels
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_SecurityInformationLabels: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of SecurityInformationLabels
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_SecurityInformationLabels: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_SecurityInformationLabels: $.ASN1Decoder<SecurityInformationLabels> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) SecurityInformationLabels
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_SecurityInformationLabels (el: _Element): SecurityInformationLabels {
+    if (!_cached_decoder_for_SecurityInformationLabels) { _cached_decoder_for_SecurityInformationLabels = function (el: _Element): SecurityInformationLabels {
+    let content_security_label!: SecurityLabel;
+    let heading_security_label: OPTIONAL<SecurityLabel>;
+    let body_part_security_labels: OPTIONAL<BodyPartSecurityLabel[]>;
+    const callbacks: $.DecodingMap = {
+        "content-security-label": (_el: _Element): void => { content_security_label = $._decode_implicit<SecurityLabel>(() => _decode_SecurityLabel)(_el); },
+        "heading-security-label": (_el: _Element): void => { heading_security_label = $._decode_implicit<SecurityLabel>(() => _decode_SecurityLabel)(_el); },
+        "body-part-security-labels": (_el: _Element): void => { body_part_security_labels = $._decode_implicit<BodyPartSecurityLabel[]>(() => $._decodeSequenceOf<BodyPartSecurityLabel>(() => _decode_BodyPartSecurityLabel))(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_SecurityInformationLabels,
+        _extension_additions_list_spec_for_SecurityInformationLabels,
+        _root_component_type_list_2_spec_for_SecurityInformationLabels,
+        undefined,
+    );
+    return new SecurityInformationLabels(
+        content_security_label,
+        heading_security_label,
+        body_part_security_labels
+    );
+}; }
+    return _cached_decoder_for_SecurityInformationLabels(el);
+}
+
+let _cached_encoder_for_SecurityInformationLabels: $.ASN1Encoder<SecurityInformationLabels> | null = null;
+
+/**
+ * @summary Encodes a(n) SecurityInformationLabels into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The SecurityInformationLabels, encoded as an ASN.1 Element.
+ */
+export
+function _encode_SecurityInformationLabels (value: SecurityInformationLabels, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_SecurityInformationLabels) { _cached_encoder_for_SecurityInformationLabels = function (value: SecurityInformationLabels): _Element {
+    const _components: _Element[] = new Array(3);
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SecurityLabel, $.BER)(value.content_security_label, $.BER);
+    if (value.heading_security_label !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => _encode_SecurityLabel, $.BER)(value.heading_security_label, $.BER);
+    }
+    if (value.body_part_security_labels !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<BodyPartSecurityLabel>(() => _encode_BodyPartSecurityLabel, $.BER), $.BER)(value.body_part_security_labels, $.BER);
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_SecurityInformationLabels(value, elGetter);
+}
+
+
+/* eslint-enable */

@@ -253,6 +253,9 @@
       "path": "./packages/sgp22"
     },
     {
+      "path": "./packages/sgp32"
+    },
+    {
       "path": "./packages/smrse"
     },
     {
@@ -278,6 +281,12 @@
     },
     {
       "path": "./packages/lawful-intercept"
+    },
+    {
+      "path": "./packages/q932"
+    },
+    {
+      "path": "./packages/stanag4406"
     }
   ],
   "compilerOptions": {

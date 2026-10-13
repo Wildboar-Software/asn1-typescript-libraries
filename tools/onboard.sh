@@ -43,7 +43,7 @@ packages=(
 
 for pkg in "${packages[@]}"; do
   echo "Onboarding ${pkg}..."
-  git checkout -b "onboard_${pkg}_2"
+  git checkout -b "onboard_${pkg}_3"
   npx nx g @nx/js:lib packages/${pkg} \
     --name @wildboar/${pkg} \
     --bundler=tsc \
@@ -57,8 +57,8 @@ for pkg in "${packages[@]}"; do
   echo 'export {};' > packages/${pkg}/src/index.mts
   mkdir -p packages/${pkg}/src/lib
   mkdir -p packages/${pkg}/doc
-  cp ~/Downloads/asn1-compiled-to-ts/round2/${pkg}/asn1/* packages/${pkg}/doc
-  cp -r ~/Downloads/asn1-compiled-to-ts/round2/${pkg}/source/modules packages/${pkg}/src/lib
+  cp ~/Downloads/asn1-compiled-to-ts/round3/${pkg}/asn1/* packages/${pkg}/doc
+  cp -r ~/Downloads/asn1-compiled-to-ts/round3/${pkg}/source/modules packages/${pkg}/src/lib
   npx organize-imports-cli packages/${pkg}/src/lib/modules
   sed "s/spkac/${pkg}/" packages/spkac/project.json > packages/${pkg}/project.json
   sed "s/spkac/${pkg}/" packages/spkac/package.json > packages/${pkg}/package.json
@@ -73,7 +73,7 @@ for pkg in "${packages[@]}"; do
   git add package-lock.json
   git add tsconfig.json
   git commit -m "${pkg}: initial"
-  git push -u origin "onboard_${pkg}_2"
+  git push -u origin "onboard_${pkg}_3"
   git checkout master
-  gh pr create --repo Wildboar-Software/asn1-typescript-libraries --title "Onboard ${pkg}" --head onboard_${pkg}_2 --body "Onboard the \`@wildboar/${pkg}\` module." --label onboard --draft --assignee @me
+  gh pr create --repo Wildboar-Software/asn1-typescript-libraries --title "Onboard ${pkg}" --head onboard_${pkg}_3 --body "Onboard the \`@wildboar/${pkg}\` module." --label onboard --draft --assignee @me
 done

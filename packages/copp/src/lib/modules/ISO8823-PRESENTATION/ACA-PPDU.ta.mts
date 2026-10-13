@@ -52,44 +52,54 @@ import {
  *
  */
 export class ACA_PPDU {
+    /**
+     * @summary `presentation_context_addition_result_list`.
+     * @description
+     *
+     * One result per AC addition-list item, same order. `acceptance`
+     * includes the selected transfer-syntax name; `provider-rejection`
+     * includes a provider reason (X.226 §6.5.3.1). Absent means all
+     * additions accepted (X.216 §10.5.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_addition_result_list?: OPTIONAL<Presentation_context_addition_result_list>;
+
+    /**
+     * @summary `presentation_context_deletion_result_list`.
+     * @description
+     *
+     * One `acceptance` or `user-rejection` per AC deletion-list item
+     * (X.226 §6.5.3.2). Absent means all deletions accepted
+     * (X.216 §10.5.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_deletion_result_list?: OPTIONAL<Presentation_context_deletion_result_list>;
+
+    /**
+     * @summary `user_data`.
+     * @description
+     *
+     * PDVs from the DCS as it will be after this ACA (X.226 §6.1.2,
+     * §6.5.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_data?: OPTIONAL<User_data>;
+
     constructor(
-        /**
-         * @summary `presentation_context_addition_result_list`.
-         * @description
-         *
-         * One result per AC addition-list item, same order. `acceptance`
-         * includes the selected transfer-syntax name; `provider-rejection`
-         * includes a provider reason (X.226 §6.5.3.1). Absent means all
-         * additions accepted (X.216 §10.5.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_addition_result_list?: OPTIONAL<Presentation_context_addition_result_list>,
-        /**
-         * @summary `presentation_context_deletion_result_list`.
-         * @description
-         *
-         * One `acceptance` or `user-rejection` per AC deletion-list item
-         * (X.226 §6.5.3.2). Absent means all deletions accepted
-         * (X.216 §10.5.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_deletion_result_list?: OPTIONAL<Presentation_context_deletion_result_list>,
-        /**
-         * @summary `user_data`.
-         * @description
-         *
-         * PDVs from the DCS as it will be after this ACA (X.226 §6.1.2,
-         * §6.5.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_data?: OPTIONAL<User_data>
-    ) {}
+        presentation_context_addition_result_list?: OPTIONAL<Presentation_context_addition_result_list>,
+        presentation_context_deletion_result_list?: OPTIONAL<Presentation_context_deletion_result_list>,
+        user_data?: OPTIONAL<User_data>
+    ) {
+        this.presentation_context_addition_result_list = presentation_context_addition_result_list;
+        this.presentation_context_deletion_result_list = presentation_context_deletion_result_list;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a ACA_PPDU

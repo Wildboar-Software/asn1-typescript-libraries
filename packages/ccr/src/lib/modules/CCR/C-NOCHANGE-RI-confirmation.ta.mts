@@ -13,10 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_C_NOCHANGE_RI_confirmation {
-  not_required = 0,
-  result_requested = 1,
-}
+export const _enum_for_C_NOCHANGE_RI_confirmation = {
+  not_required: 0,
+  result_requested: 1,
+} as const;
+
+export type _enum_for_C_NOCHANGE_RI_confirmation =
+  (typeof _enum_for_C_NOCHANGE_RI_confirmation)[keyof typeof _enum_for_C_NOCHANGE_RI_confirmation];
 
 
 /**
