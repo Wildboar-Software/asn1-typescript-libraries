@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { TcVcidSet, _decode_TcVcidSet, _encode_TcVcidSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/TcVcidSet.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RocfGetParameter_parPermittedTcVcidSet
@@ -51,7 +47,7 @@ class RocfGetParameter_parPermittedTcVcidSet {
         parameterName: ParameterName,
         parameterValue: TcVcidSet
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_permittedTcVcidSet)])) {
+        if (parameterName !== ParameterName_permittedTcVcidSet) {
             throw new ASN1Error("RocfGetParameter_parPermittedTcVcidSet.parameterName violates ParameterName (permittedTcVcidSet)");
         }
         this.parameterName = parameterName;

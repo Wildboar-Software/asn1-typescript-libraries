@@ -13,15 +13,9 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary FspGetParameter_parFopSlidWindow
@@ -57,10 +51,10 @@ class FspGetParameter_parFopSlidWindow {
         parameterName: ParameterName,
         parameterValue: INTEGER
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_fopSlidingWindow)])) {
+        if (parameterName !== ParameterName_fopSlidingWindow) {
             throw new ASN1Error("FspGetParameter_parFopSlidWindow.parameterName violates ParameterName (fopSlidingWindow)");
         }
-        if (!integerInRange(parameterValue, 1n, 255n)) {
+        if (!integerInRange(parameterValue, 1, 255)) {
             throw new ASN1OverflowError("FspGetParameter_parFopSlidWindow.parameterValue violates INTEGER (1..255)");
         }
         this.parameterName = parameterName;

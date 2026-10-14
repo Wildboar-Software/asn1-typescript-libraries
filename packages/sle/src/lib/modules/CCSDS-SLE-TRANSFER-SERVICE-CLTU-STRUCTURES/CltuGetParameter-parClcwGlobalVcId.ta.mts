@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { ClcwGvcId, _decode_ClcwGvcId, _encode_ClcwGvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/ClcwGvcId.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parClcwGlobalVcId
@@ -51,7 +47,7 @@ class CltuGetParameter_parClcwGlobalVcId {
         parameterName: ParameterName,
         parameterValue: ClcwGvcId
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_clcwGlobalVcId)])) {
+        if (parameterName !== ParameterName_clcwGlobalVcId) {
             throw new ASN1Error("CltuGetParameter_parClcwGlobalVcId.parameterName violates ParameterName (clcwGlobalVcId)");
         }
         this.parameterName = parameterName;

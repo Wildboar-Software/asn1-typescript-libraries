@@ -15,10 +15,8 @@ import { RafTransferDataInvocation_privateAnnotation, _decode_RafTransferDataInv
 import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary RafTransferDataInvocation
@@ -97,7 +95,7 @@ class RafTransferDataInvocation {
         privateAnnotation: RafTransferDataInvocation_privateAnnotation,
         data: SpaceLinkDataUnit
     ) {
-        if (!integerInRange(dataLinkContinuity, -1n, 16777215n)) {
+        if (!integerInRange(dataLinkContinuity, -1, 16777215)) {
             throw new ASN1OverflowError("RafTransferDataInvocation.dataLinkContinuity violates INTEGER (-1..16777215)");
         }
         this.invokerCredentials = invokerCredentials;

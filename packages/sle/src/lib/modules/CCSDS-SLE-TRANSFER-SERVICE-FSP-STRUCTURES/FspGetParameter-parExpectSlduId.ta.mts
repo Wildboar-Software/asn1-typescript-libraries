@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parExpectSlduId
@@ -51,7 +47,7 @@ class FspGetParameter_parExpectSlduId {
         parameterName: ParameterName,
         parameterValue: PacketIdentification
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_expectedSlduIdentification)])) {
+        if (parameterName !== ParameterName_expectedSlduIdentification) {
             throw new ASN1Error("FspGetParameter_parExpectSlduId.parameterName violates ParameterName (expectedSlduIdentification)");
         }
         this.parameterName = parameterName;

@@ -8,10 +8,8 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary Apid
@@ -27,7 +25,7 @@ export
 type Apid = INTEGER;
 export function _decode_Apid (el: _Element): Apid {
     const _decoded = $._decodeInteger(el);
-    if (!integerInRange(_decoded, 0n, 2047n)) {
+    if (!integerInRange(_decoded, 0, 2047)) {
         throw new ASN1OverflowError("Apid violates INTEGER (0..2047)");
     }
     return _decoded;

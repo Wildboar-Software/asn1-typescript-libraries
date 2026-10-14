@@ -4,13 +4,15 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedControlWordTypeNumber.ta.mjs";
+import { RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber,
+    RequestedControlWordTypeNumber_allControlWords,
+    RequestedControlWordTypeNumber_clcw,
+    RequestedControlWordTypeNumber_notClcw
+} from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedControlWordTypeNumber.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary ControlWordTypeNumber
@@ -64,4 +66,3 @@ function _encode_ControlWordTypeNumber (value: ControlWordTypeNumber, elGetter: 
 
 
 /* eslint-enable */
-import { RequestedControlWordTypeNumber_allControlWords, RequestedControlWordTypeNumber_clcw, RequestedControlWordTypeNumber_notClcw } from "./RequestedControlWordTypeNumber.ta.mjs";

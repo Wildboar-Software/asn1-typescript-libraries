@@ -16,10 +16,19 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
+
+const _RcfParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
+    BigInt(ParameterName_bufferSize),
+    BigInt(ParameterName_deliveryMode),
+    BigInt(ParameterName_latencyLimit),
+    BigInt(ParameterName_minReportingCycle),
+    BigInt(ParameterName_permittedGvcidSet),
+    BigInt(ParameterName_reportingCycle),
+    BigInt(ParameterName_requestedGvcid),
+    BigInt(ParameterName_returnTimeoutPeriod),
+]);
 
 /**
  * @summary RcfParameterName
@@ -55,8 +64,8 @@ export
 function _decode_RcfParameterName (el: _Element): RcfParameterName {
     if (!_cached_decoder_for_RcfParameterName) { _cached_decoder_for_RcfParameterName = _decode_ParameterName; }
     const _decoded = _cached_decoder_for_RcfParameterName(el);
-    if (!integerIsOneOf(_decoded, [BigInt(ParameterName_bufferSize), BigInt(ParameterName_deliveryMode), BigInt(ParameterName_latencyLimit), BigInt(ParameterName_minReportingCycle), BigInt(ParameterName_permittedGvcidSet), BigInt(ParameterName_reportingCycle), BigInt(ParameterName_requestedGvcid), BigInt(ParameterName_returnTimeoutPeriod)])) {
-        throw new ASN1Error("RcfParameterName violates ParameterName (bufferSize | deliveryMode | latencyLimit | minReportingCycle | permittedGvcidSet | reportingCycle | requestedGvcid | returnTimeoutPeriod)");
+    if (!integerIsOneOf(_decoded, _RcfParameterName_permitted)) {
+        throw new ASN1Error("RcfParameterName violates ParameterName");
     }
     return _decoded;
 }

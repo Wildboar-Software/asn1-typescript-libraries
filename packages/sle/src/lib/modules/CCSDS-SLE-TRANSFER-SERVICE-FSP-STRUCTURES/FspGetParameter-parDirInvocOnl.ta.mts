@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_FspGetParameter_parDirInvocOnl_parameterValue, _encode_FspGetParameter_parDirInvocOnl_parameterValue, FspGetParameter_parDirInvocOnl_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parDirInvocOnl-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parDirInvocOnl
@@ -54,7 +50,7 @@ class FspGetParameter_parDirInvocOnl {
         parameterName: ParameterName,
         parameterValue: FspGetParameter_parDirInvocOnl_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_directiveInvocationOnline)])) {
+        if (parameterName !== ParameterName_directiveInvocationOnline) {
             throw new ASN1Error("FspGetParameter_parDirInvocOnl.parameterName violates ParameterName (directiveInvocationOnline)");
         }
         this.parameterName = parameterName;

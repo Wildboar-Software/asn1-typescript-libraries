@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parSequCntrFramesRepetition
@@ -51,7 +47,7 @@ class FspGetParameter_parSequCntrFramesRepetition {
         parameterName: ParameterName,
         parameterValue: IntPosShort
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_sequCntrFramesRepetition)])) {
+        if (parameterName !== ParameterName_sequCntrFramesRepetition) {
             throw new ASN1Error("FspGetParameter_parSequCntrFramesRepetition.parameterName violates ParameterName (sequCntrFramesRepetition)");
         }
         this.parameterName = parameterName;

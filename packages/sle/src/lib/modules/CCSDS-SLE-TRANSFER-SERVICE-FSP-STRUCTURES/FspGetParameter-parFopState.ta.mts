@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_FspGetParameter_parFopState_fopState, _encode_FspGetParameter_parFopState_fopState, FspGetParameter_parFopState_fopState } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parFopState-fopState.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parFopState
@@ -58,7 +54,7 @@ class FspGetParameter_parFopState {
         parameterName: ParameterName,
         fopState: FspGetParameter_parFopState_fopState
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_fopState)])) {
+        if (parameterName !== ParameterName_fopState) {
             throw new ASN1Error("FspGetParameter_parFopState.parameterName violates ParameterName (fopState)");
         }
         this.parameterName = parameterName;

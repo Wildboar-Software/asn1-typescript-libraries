@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { SubcarrierDivisor, _decode_SubcarrierDivisor, _encode_SubcarrierDivisor } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/SubcarrierDivisor.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parSubcarrierToBitRateRatio
@@ -52,7 +48,7 @@ class CltuGetParameter_parSubcarrierToBitRateRatio {
         parameterName: ParameterName,
         parameterValue: SubcarrierDivisor
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_subcarrierToBitRateRatio)])) {
+        if (parameterName !== ParameterName_subcarrierToBitRateRatio) {
             throw new ASN1Error("CltuGetParameter_parSubcarrierToBitRateRatio.parameterName violates ParameterName (subcarrierToBitRateRatio)");
         }
         this.parameterName = parameterName;

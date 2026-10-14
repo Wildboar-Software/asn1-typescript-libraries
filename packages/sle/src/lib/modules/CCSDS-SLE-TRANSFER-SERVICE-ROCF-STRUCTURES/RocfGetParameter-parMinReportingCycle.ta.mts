@@ -13,15 +13,9 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary RocfGetParameter_parMinReportingCycle
@@ -57,10 +51,10 @@ class RocfGetParameter_parMinReportingCycle {
         parameterName: ParameterName,
         parameterValue: IntPosShort
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_minReportingCycle)])) {
+        if (parameterName !== ParameterName_minReportingCycle) {
             throw new ASN1Error("RocfGetParameter_parMinReportingCycle.parameterName violates ParameterName (minReportingCycle)");
         }
-        if (!integerInRange(parameterValue, 1n, 600n)) {
+        if (!integerInRange(parameterValue, 1, 600)) {
             throw new ASN1OverflowError("RocfGetParameter_parMinReportingCycle.parameterValue violates INTEGER (1..600)");
         }
         this.parameterName = parameterName;

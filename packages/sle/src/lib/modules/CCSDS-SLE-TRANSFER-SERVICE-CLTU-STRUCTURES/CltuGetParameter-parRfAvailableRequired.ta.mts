@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_CltuGetParameter_parRfAvailableRequired_parameterValue, _encode_CltuGetParameter_parRfAvailableRequired_parameterValue, CltuGetParameter_parRfAvailableRequired_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter-parRfAvailableRequired-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parRfAvailableRequired
@@ -55,7 +51,7 @@ class CltuGetParameter_parRfAvailableRequired {
         parameterName: ParameterName,
         parameterValue: CltuGetParameter_parRfAvailableRequired_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_rfAvailableRequired)])) {
+        if (parameterName !== ParameterName_rfAvailableRequired) {
             throw new ASN1Error("CltuGetParameter_parRfAvailableRequired.parameterName violates ParameterName (rfAvailableRequired)");
         }
         this.parameterName = parameterName;

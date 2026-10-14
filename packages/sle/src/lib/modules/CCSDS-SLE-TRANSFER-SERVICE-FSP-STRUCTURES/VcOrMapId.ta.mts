@@ -8,10 +8,8 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary VcOrMapId
@@ -27,7 +25,7 @@ export
 type VcOrMapId = INTEGER;
 export function _decode_VcOrMapId (el: _Element): VcOrMapId {
     const _decoded = $._decodeInteger(el);
-    if (!integerInRange(_decoded, 0n, 63n)) {
+    if (!integerInRange(_decoded, 0, 63)) {
         throw new ASN1OverflowError("VcOrMapId violates INTEGER (0..63)");
     }
     return _decoded;

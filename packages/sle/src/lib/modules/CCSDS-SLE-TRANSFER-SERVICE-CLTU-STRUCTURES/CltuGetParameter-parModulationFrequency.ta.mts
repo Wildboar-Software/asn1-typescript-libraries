@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { ModulationFrequency, _decode_ModulationFrequency, _encode_ModulationFrequency } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/ModulationFrequency.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parModulationFrequency
@@ -51,7 +47,7 @@ class CltuGetParameter_parModulationFrequency {
         parameterName: ParameterName,
         parameterValue: ModulationFrequency
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_modulationFrequency)])) {
+        if (parameterName !== ParameterName_modulationFrequency) {
             throw new ASN1Error("CltuGetParameter_parModulationFrequency.parameterName violates ParameterName (modulationFrequency)");
         }
         this.parameterName = parameterName;

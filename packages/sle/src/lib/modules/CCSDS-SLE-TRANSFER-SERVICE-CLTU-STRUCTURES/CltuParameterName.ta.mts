@@ -28,10 +28,31 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
+
+const _CltuParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
+    BigInt(ParameterName_acquisitionSequenceLength),
+    BigInt(ParameterName_bitLockRequired),
+    BigInt(ParameterName_clcwGlobalVcId),
+    BigInt(ParameterName_clcwPhysicalChannel),
+    BigInt(ParameterName_deliveryMode),
+    BigInt(ParameterName_expectedSlduIdentification),
+    BigInt(ParameterName_expectedEventInvocationIdentification),
+    BigInt(ParameterName_maximumSlduLength),
+    BigInt(ParameterName_minimumDelayTime),
+    BigInt(ParameterName_minReportingCycle),
+    BigInt(ParameterName_modulationFrequency),
+    BigInt(ParameterName_modulationIndex),
+    BigInt(ParameterName_notificationMode),
+    BigInt(ParameterName_plop1IdleSequenceLength),
+    BigInt(ParameterName_plopInEffect),
+    BigInt(ParameterName_protocolAbortMode),
+    BigInt(ParameterName_reportingCycle),
+    BigInt(ParameterName_returnTimeoutPeriod),
+    BigInt(ParameterName_rfAvailableRequired),
+    BigInt(ParameterName_subcarrierToBitRateRatio),
+]);
 
 /**
  * @summary CltuParameterName
@@ -79,8 +100,8 @@ export
 function _decode_CltuParameterName (el: _Element): CltuParameterName {
     if (!_cached_decoder_for_CltuParameterName) { _cached_decoder_for_CltuParameterName = _decode_ParameterName; }
     const _decoded = _cached_decoder_for_CltuParameterName(el);
-    if (!integerIsOneOf(_decoded, [BigInt(ParameterName_acquisitionSequenceLength), BigInt(ParameterName_bitLockRequired), BigInt(ParameterName_clcwGlobalVcId), BigInt(ParameterName_clcwPhysicalChannel), BigInt(ParameterName_deliveryMode), BigInt(ParameterName_expectedSlduIdentification), BigInt(ParameterName_expectedEventInvocationIdentification), BigInt(ParameterName_maximumSlduLength), BigInt(ParameterName_minimumDelayTime), BigInt(ParameterName_minReportingCycle), BigInt(ParameterName_modulationFrequency), BigInt(ParameterName_modulationIndex), BigInt(ParameterName_notificationMode), BigInt(ParameterName_plop1IdleSequenceLength), BigInt(ParameterName_plopInEffect), BigInt(ParameterName_protocolAbortMode), BigInt(ParameterName_reportingCycle), BigInt(ParameterName_returnTimeoutPeriod), BigInt(ParameterName_rfAvailableRequired), BigInt(ParameterName_subcarrierToBitRateRatio)])) {
-        throw new ASN1Error("CltuParameterName violates ParameterName (acquisitionSequenceLength | bitLockRequired | clcwGlobalVcId | clcwPhysicalChannel | deliveryMode | expectedSlduIdentification | expectedEventInvocationIdentification | maximumSlduLength | minimumDelayTime | minReportingCycle | modulationFrequency | modulationIndex | notificationMode | plop1IdleSequenceLength | plopInEffect | protocolAbortMode | reportingCycle | returnTimeoutPeriod | rfAvailableRequired | subcarrierToBitRateRatio)");
+    if (!integerIsOneOf(_decoded, _CltuParameterName_permitted)) {
+        throw new ASN1Error("CltuParameterName violates ParameterName");
     }
     return _decoded;
 }

@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/VcOrMapId.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parVirtualChannel
@@ -51,7 +47,7 @@ class FspGetParameter_parVirtualChannel {
         parameterName: ParameterName,
         parameterValue: VcOrMapId
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_virtualChannel)])) {
+        if (parameterName !== ParameterName_virtualChannel) {
             throw new ASN1Error("FspGetParameter_parVirtualChannel.parameterName violates ParameterName (virtualChannel)");
         }
         this.parameterName = parameterName;

@@ -15,10 +15,8 @@ import { _decode_ForwardDuStatus, _encode_ForwardDuStatus, ForwardDuStatus,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ForwardDuStatus.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary FspPacketStatus

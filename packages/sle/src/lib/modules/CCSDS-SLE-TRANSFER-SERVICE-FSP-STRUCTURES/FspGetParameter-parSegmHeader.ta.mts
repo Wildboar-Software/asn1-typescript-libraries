@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { FspGetParameter_parSegmHeader_parameterValue, _decode_FspGetParameter_parSegmHeader_parameterValue, _encode_FspGetParameter_parSegmHeader_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parSegmHeader-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parSegmHeader
@@ -54,7 +50,7 @@ class FspGetParameter_parSegmHeader {
         parameterName: ParameterName,
         parameterValue: FspGetParameter_parSegmHeader_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_segmentHeader)])) {
+        if (parameterName !== ParameterName_segmentHeader) {
             throw new ASN1Error("FspGetParameter_parSegmHeader.parameterName violates ParameterName (segmentHeader)");
         }
         this.parameterName = parameterName;

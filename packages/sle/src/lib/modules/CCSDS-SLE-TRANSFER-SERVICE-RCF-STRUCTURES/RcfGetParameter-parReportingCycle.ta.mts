@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { CurrentReportingCycle, _decode_CurrentReportingCycle, _encode_CurrentReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/CurrentReportingCycle.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RcfGetParameter_parReportingCycle
@@ -51,7 +47,7 @@ class RcfGetParameter_parReportingCycle {
         parameterName: ParameterName,
         parameterValue: CurrentReportingCycle
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_reportingCycle)])) {
+        if (parameterName !== ParameterName_reportingCycle) {
             throw new ASN1Error("RcfGetParameter_parReportingCycle.parameterName violates ParameterName (reportingCycle)");
         }
         this.parameterName = parameterName;

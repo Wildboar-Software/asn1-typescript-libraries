@@ -11,15 +11,9 @@ import * as $ from "@wildboar/asn1/functional";
 import { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/GvcId-vcId.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerInRange, integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary GvcId
@@ -72,7 +66,7 @@ class GvcId {
         versionNumber: INTEGER,
         vcId: GvcId_vcId
     ) {
-        if (!integerInRange(spacecraftId, 0n, 65535n)) {
+        if (!integerInRange(spacecraftId, 0, 65535)) {
             throw new ASN1OverflowError("GvcId.spacecraftId violates INTEGER (0..65535)");
         }
         if (!integerIsOneOf(versionNumber, [0n, 1n, 12n])) {

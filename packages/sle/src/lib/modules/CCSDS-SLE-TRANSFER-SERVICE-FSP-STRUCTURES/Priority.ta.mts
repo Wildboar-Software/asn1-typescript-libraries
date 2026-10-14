@@ -8,10 +8,8 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary Priority
@@ -27,7 +25,7 @@ export
 type Priority = INTEGER;
 export function _decode_Priority (el: _Element): Priority {
     const _decoded = $._decodeInteger(el);
-    if (!integerInRange(_decoded, 1n, 64n)) {
+    if (!integerInRange(_decoded, 1, 64)) {
         throw new ASN1OverflowError("Priority violates INTEGER (1..64)");
     }
     return _decoded;

@@ -13,15 +13,9 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary FspGetParameter_parMaxPacketLength
@@ -57,10 +51,10 @@ class FspGetParameter_parMaxPacketLength {
         parameterName: ParameterName,
         parameterValue: INTEGER
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_maximumPacketLength)])) {
+        if (parameterName !== ParameterName_maximumPacketLength) {
             throw new ASN1Error("FspGetParameter_parMaxPacketLength.parameterName violates ParameterName (maximumPacketLength)");
         }
-        if (!integerInRange(parameterValue, 7n, 65542n)) {
+        if (!integerInRange(parameterValue, 7, 65542)) {
             throw new ASN1OverflowError("FspGetParameter_parMaxPacketLength.parameterValue violates INTEGER (7..65542)");
         }
         this.parameterName = parameterName;

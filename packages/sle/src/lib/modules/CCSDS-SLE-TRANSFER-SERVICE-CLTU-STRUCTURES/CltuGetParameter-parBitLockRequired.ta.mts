@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_CltuGetParameter_parBitLockRequired_parameterValue, _encode_CltuGetParameter_parBitLockRequired_parameterValue, CltuGetParameter_parBitLockRequired_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter-parBitLockRequired-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parBitLockRequired
@@ -54,7 +50,7 @@ class CltuGetParameter_parBitLockRequired {
         parameterName: ParameterName,
         parameterValue: CltuGetParameter_parBitLockRequired_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_bitLockRequired)])) {
+        if (parameterName !== ParameterName_bitLockRequired) {
             throw new ASN1Error("CltuGetParameter_parBitLockRequired.parameterName violates ParameterName (bitLockRequired)");
         }
         this.parameterName = parameterName;

@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { ControlWordTypeNumber, _decode_ControlWordTypeNumber, _encode_ControlWordTypeNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/ControlWordTypeNumber.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RocfGetParameter_parPermittedRprtTypeSet
@@ -52,7 +48,7 @@ class RocfGetParameter_parPermittedRprtTypeSet {
         parameterName: ParameterName,
         parameterValue: ControlWordTypeNumber[]
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_permittedControlWordTypeSet)])) {
+        if (parameterName !== ParameterName_permittedControlWordTypeSet) {
             throw new ASN1Error("RocfGetParameter_parPermittedRprtTypeSet.parameterName violates ParameterName (permittedControlWordTypeSet)");
         }
         this.parameterName = parameterName;

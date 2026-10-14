@@ -8,10 +8,8 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary ReportingCycle
@@ -27,7 +25,7 @@ export
 type ReportingCycle = INTEGER;
 export function _decode_ReportingCycle (el: _Element): ReportingCycle {
     const _decoded = $._decodeInteger(el);
-    if (!integerInRange(_decoded, 2n, 600n)) {
+    if (!integerInRange(_decoded, 2, 600)) {
         throw new ASN1OverflowError("ReportingCycle violates INTEGER (2..600)");
     }
     return _decoded;

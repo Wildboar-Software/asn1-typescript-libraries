@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_BlockingUsage, _encode_BlockingUsage, BlockingUsage } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingUsage.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parBlockingUsage
@@ -51,7 +47,7 @@ class FspGetParameter_parBlockingUsage {
         parameterName: ParameterName,
         parameterValue: BlockingUsage
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_blockingUsage)])) {
+        if (parameterName !== ParameterName_blockingUsage) {
             throw new ASN1Error("FspGetParameter_parBlockingUsage.parameterName violates ParameterName (blockingUsage)");
         }
         this.parameterName = parameterName;

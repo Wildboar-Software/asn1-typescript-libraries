@@ -16,10 +16,19 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
+
+const _RafParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
+    BigInt(ParameterName_bufferSize),
+    BigInt(ParameterName_deliveryMode),
+    BigInt(ParameterName_latencyLimit),
+    BigInt(ParameterName_minReportingCycle),
+    BigInt(ParameterName_permittedFrameQuality),
+    BigInt(ParameterName_reportingCycle),
+    BigInt(ParameterName_requestedFrameQuality),
+    BigInt(ParameterName_returnTimeoutPeriod),
+]);
 
 /**
  * @summary RafParameterName
@@ -55,8 +64,8 @@ export
 function _decode_RafParameterName (el: _Element): RafParameterName {
     if (!_cached_decoder_for_RafParameterName) { _cached_decoder_for_RafParameterName = _decode_ParameterName; }
     const _decoded = _cached_decoder_for_RafParameterName(el);
-    if (!integerIsOneOf(_decoded, [BigInt(ParameterName_bufferSize), BigInt(ParameterName_deliveryMode), BigInt(ParameterName_latencyLimit), BigInt(ParameterName_minReportingCycle), BigInt(ParameterName_permittedFrameQuality), BigInt(ParameterName_reportingCycle), BigInt(ParameterName_requestedFrameQuality), BigInt(ParameterName_returnTimeoutPeriod)])) {
-        throw new ASN1Error("RafParameterName violates ParameterName (bufferSize | deliveryMode | latencyLimit | minReportingCycle | permittedFrameQuality | reportingCycle | requestedFrameQuality | returnTimeoutPeriod)");
+    if (!integerIsOneOf(_decoded, _RafParameterName_permitted)) {
+        throw new ASN1Error("RafParameterName violates ParameterName");
     }
     return _decoded;
 }

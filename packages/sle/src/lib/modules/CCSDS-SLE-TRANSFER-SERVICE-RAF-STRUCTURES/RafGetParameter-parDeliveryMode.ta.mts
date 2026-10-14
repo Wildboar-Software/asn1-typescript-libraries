@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { RafDeliveryMode, _decode_RafDeliveryMode, _encode_RafDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafDeliveryMode.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RafGetParameter_parDeliveryMode
@@ -51,7 +47,7 @@ class RafGetParameter_parDeliveryMode {
         parameterName: ParameterName,
         parameterValue: RafDeliveryMode
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_deliveryMode)])) {
+        if (parameterName !== ParameterName_deliveryMode) {
             throw new ASN1Error("RafGetParameter_parDeliveryMode.parameterName violates ParameterName (deliveryMode)");
         }
         this.parameterName = parameterName;

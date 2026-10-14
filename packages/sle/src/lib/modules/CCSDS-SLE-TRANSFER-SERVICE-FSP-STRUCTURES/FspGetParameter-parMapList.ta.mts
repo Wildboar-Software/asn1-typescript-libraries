@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { MapList, _decode_MapList, _encode_MapList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapList.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parMapList
@@ -51,7 +47,7 @@ class FspGetParameter_parMapList {
         parameterName: ParameterName,
         mapList: MapList
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_mapList)])) {
+        if (parameterName !== ParameterName_mapList) {
             throw new ASN1Error("FspGetParameter_parMapList.parameterName violates ParameterName (mapList)");
         }
         this.parameterName = parameterName;

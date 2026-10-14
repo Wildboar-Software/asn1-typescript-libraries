@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { ModulationIndex, _decode_ModulationIndex, _encode_ModulationIndex } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/ModulationIndex.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parModulationIndex
@@ -51,7 +47,7 @@ class CltuGetParameter_parModulationIndex {
         parameterName: ParameterName,
         parameterValue: ModulationIndex
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_modulationIndex)])) {
+        if (parameterName !== ParameterName_modulationIndex) {
             throw new ASN1Error("CltuGetParameter_parModulationIndex.parameterName violates ParameterName (modulationIndex)");
         }
         this.parameterName = parameterName;

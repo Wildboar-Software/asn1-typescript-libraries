@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Duration.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parMinimumDelayTime
@@ -51,7 +47,7 @@ class CltuGetParameter_parMinimumDelayTime {
         parameterName: ParameterName,
         parameterValue: Duration
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_minimumDelayTime)])) {
+        if (parameterName !== ParameterName_minimumDelayTime) {
             throw new ASN1Error("CltuGetParameter_parMinimumDelayTime.parameterName violates ParameterName (minimumDelayTime)");
         }
         this.parameterName = parameterName;

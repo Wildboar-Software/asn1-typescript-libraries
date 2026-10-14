@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_CltuGetParameter_parNotificationMode_parameterValue, _encode_CltuGetParameter_parNotificationMode_parameterValue, CltuGetParameter_parNotificationMode_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter-parNotificationMode-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parNotificationMode
@@ -58,7 +54,7 @@ class CltuGetParameter_parNotificationMode {
         parameterName: ParameterName,
         parameterValue: CltuGetParameter_parNotificationMode_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_notificationMode)])) {
+        if (parameterName !== ParameterName_notificationMode) {
             throw new ASN1Error("CltuGetParameter_parNotificationMode.parameterName violates ParameterName (notificationMode)");
         }
         this.parameterName = parameterName;

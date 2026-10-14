@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { PermittedFrameQualitySet, _decode_PermittedFrameQualitySet, _encode_PermittedFrameQualitySet } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/PermittedFrameQualitySet.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RafGetParameter_parPermittedFrameQuality
@@ -51,7 +47,7 @@ class RafGetParameter_parPermittedFrameQuality {
         parameterName: ParameterName,
         parameterValue: PermittedFrameQualitySet
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_permittedFrameQuality)])) {
+        if (parameterName !== ParameterName_permittedFrameQuality) {
             throw new ASN1Error("RafGetParameter_parPermittedFrameQuality.parameterName violates ParameterName (permittedFrameQuality)");
         }
         this.parameterName = parameterName;

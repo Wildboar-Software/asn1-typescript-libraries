@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { FspGetParameter_parBlockingTimeout_parameterValue, _decode_FspGetParameter_parBlockingTimeout_parameterValue, _encode_FspGetParameter_parBlockingTimeout_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parBlockingTimeout-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parBlockingTimeout
@@ -54,7 +50,7 @@ class FspGetParameter_parBlockingTimeout {
         parameterName: ParameterName,
         parameterValue: FspGetParameter_parBlockingTimeout_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_blockingTimeoutPeriod)])) {
+        if (parameterName !== ParameterName_blockingTimeoutPeriod) {
             throw new ASN1Error("FspGetParameter_parBlockingTimeout.parameterName violates ParameterName (blockingTimeoutPeriod)");
         }
         this.parameterName = parameterName;

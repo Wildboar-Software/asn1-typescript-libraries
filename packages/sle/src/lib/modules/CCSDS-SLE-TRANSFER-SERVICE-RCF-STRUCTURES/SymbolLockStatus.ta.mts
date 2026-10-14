@@ -4,13 +4,15 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LockStatus, _encode_LockStatus, LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/LockStatus.ta.mjs";
+import { _decode_LockStatus, _encode_LockStatus, LockStatus,
+    LockStatus_inLock,
+    LockStatus_outOfLock,
+    LockStatus_unknown
+} from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/LockStatus.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary SymbolLockStatus
@@ -64,4 +66,3 @@ function _encode_SymbolLockStatus (value: SymbolLockStatus, elGetter: $.ASN1Enco
 
 
 /* eslint-enable */
-import { LockStatus_inLock, LockStatus_outOfLock, LockStatus_unknown } from "./LockStatus.ta.mjs";

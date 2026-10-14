@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_CltuGetParameter_parProtocolAbortMode_parameterValue, _encode_CltuGetParameter_parProtocolAbortMode_parameterValue, CltuGetParameter_parProtocolAbortMode_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter-parProtocolAbortMode-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parProtocolAbortMode
@@ -54,7 +50,7 @@ class CltuGetParameter_parProtocolAbortMode {
         parameterName: ParameterName,
         parameterValue: CltuGetParameter_parProtocolAbortMode_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_protocolAbortMode)])) {
+        if (parameterName !== ParameterName_protocolAbortMode) {
             throw new ASN1Error("CltuGetParameter_parProtocolAbortMode.parameterName violates ParameterName (protocolAbortMode)");
         }
         this.parameterName = parameterName;

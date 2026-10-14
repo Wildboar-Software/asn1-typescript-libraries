@@ -13,15 +13,9 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary FspGetParameter_parTrFrSeqNumber
@@ -57,10 +51,10 @@ class FspGetParameter_parTrFrSeqNumber {
         parameterName: ParameterName,
         parameterValue: INTEGER
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_transmitterFrameSequenceNumber)])) {
+        if (parameterName !== ParameterName_transmitterFrameSequenceNumber) {
             throw new ASN1Error("FspGetParameter_parTrFrSeqNumber.parameterName violates ParameterName (transmitterFrameSequenceNumber)");
         }
-        if (!integerInRange(parameterValue, 0n, 255n)) {
+        if (!integerInRange(parameterValue, 0, 255)) {
             throw new ASN1OverflowError("FspGetParameter_parTrFrSeqNumber.parameterValue violates INTEGER (0..255)");
         }
         this.parameterName = parameterName;

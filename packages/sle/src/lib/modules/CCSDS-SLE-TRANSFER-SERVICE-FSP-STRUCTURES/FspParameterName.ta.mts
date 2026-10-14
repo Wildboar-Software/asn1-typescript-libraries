@@ -43,10 +43,46 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
+
+const _FspParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
+    BigInt(ParameterName_apidList),
+    BigInt(ParameterName_bitLockRequired),
+    BigInt(ParameterName_blockingTimeoutPeriod),
+    BigInt(ParameterName_blockingUsage),
+    BigInt(ParameterName_clcwGlobalVcId),
+    BigInt(ParameterName_clcwPhysicalChannel),
+    BigInt(ParameterName_copCntrFramesRepetition),
+    BigInt(ParameterName_deliveryMode),
+    BigInt(ParameterName_directiveInvocation),
+    BigInt(ParameterName_directiveInvocationOnline),
+    BigInt(ParameterName_expectedDirectiveIdentification),
+    BigInt(ParameterName_expectedSlduIdentification),
+    BigInt(ParameterName_expectedEventInvocationIdentification),
+    BigInt(ParameterName_fopSlidingWindow),
+    BigInt(ParameterName_fopState),
+    BigInt(ParameterName_mapList),
+    BigInt(ParameterName_mapMuxControl),
+    BigInt(ParameterName_mapMuxScheme),
+    BigInt(ParameterName_maximumFrameLength),
+    BigInt(ParameterName_maximumPacketLength),
+    BigInt(ParameterName_minReportingCycle),
+    BigInt(ParameterName_permittedTransmissionMode),
+    BigInt(ParameterName_reportingCycle),
+    BigInt(ParameterName_returnTimeoutPeriod),
+    BigInt(ParameterName_rfAvailableRequired),
+    BigInt(ParameterName_segmentHeader),
+    BigInt(ParameterName_sequCntrFramesRepetition),
+    BigInt(ParameterName_throwEventOperation),
+    BigInt(ParameterName_timeoutType),
+    BigInt(ParameterName_timerInitial),
+    BigInt(ParameterName_transmissionLimit),
+    BigInt(ParameterName_transmitterFrameSequenceNumber),
+    BigInt(ParameterName_vcMuxControl),
+    BigInt(ParameterName_vcMuxScheme),
+    BigInt(ParameterName_virtualChannel),
+]);
 
 /**
  * @summary FspParameterName
@@ -109,8 +145,8 @@ export
 function _decode_FspParameterName (el: _Element): FspParameterName {
     if (!_cached_decoder_for_FspParameterName) { _cached_decoder_for_FspParameterName = _decode_ParameterName; }
     const _decoded = _cached_decoder_for_FspParameterName(el);
-    if (!integerIsOneOf(_decoded, [BigInt(ParameterName_apidList), BigInt(ParameterName_bitLockRequired), BigInt(ParameterName_blockingTimeoutPeriod), BigInt(ParameterName_blockingUsage), BigInt(ParameterName_clcwGlobalVcId), BigInt(ParameterName_clcwPhysicalChannel), BigInt(ParameterName_copCntrFramesRepetition), BigInt(ParameterName_deliveryMode), BigInt(ParameterName_directiveInvocation), BigInt(ParameterName_directiveInvocationOnline), BigInt(ParameterName_expectedDirectiveIdentification), BigInt(ParameterName_expectedSlduIdentification), BigInt(ParameterName_expectedEventInvocationIdentification), BigInt(ParameterName_fopSlidingWindow), BigInt(ParameterName_fopState), BigInt(ParameterName_mapList), BigInt(ParameterName_mapMuxControl), BigInt(ParameterName_mapMuxScheme), BigInt(ParameterName_maximumFrameLength), BigInt(ParameterName_maximumPacketLength), BigInt(ParameterName_minReportingCycle), BigInt(ParameterName_permittedTransmissionMode), BigInt(ParameterName_reportingCycle), BigInt(ParameterName_returnTimeoutPeriod), BigInt(ParameterName_rfAvailableRequired), BigInt(ParameterName_segmentHeader), BigInt(ParameterName_sequCntrFramesRepetition), BigInt(ParameterName_throwEventOperation), BigInt(ParameterName_timeoutType), BigInt(ParameterName_timerInitial), BigInt(ParameterName_transmissionLimit), BigInt(ParameterName_transmitterFrameSequenceNumber), BigInt(ParameterName_vcMuxControl), BigInt(ParameterName_vcMuxScheme), BigInt(ParameterName_virtualChannel)])) {
-        throw new ASN1Error("FspParameterName violates ParameterName (apidList | bitLockRequired | blockingTimeoutPeriod | blockingUsage | clcwGlobalVcId | clcwPhysicalChannel | copCntrFramesRepetition | deliveryMode | directiveInvocation | directiveInvocationOnline | expectedDirectiveIdentification | expectedSlduIdentification | expectedEventInvocationIdentification | fopSlidingWindow | fopState | mapList | mapMuxControl | mapMuxScheme | maximumFrameLength | maximumPacketLength | minReportingCycle | permittedTransmissionMode | reportingCycle | returnTimeoutPeriod | rfAvailableRequired | segmentHeader | sequCntrFramesRepetition | throwEventOperation | timeoutType | timerInitial | transmissionLimit | transmitterFrameSequenceNumber | vcMuxControl | vcMuxScheme | virtualChannel)");
+    if (!integerIsOneOf(_decoded, _FspParameterName_permitted)) {
+        throw new ASN1Error("FspParameterName violates ParameterName");
     }
     return _decoded;
 }

@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { GvcIdSet, _decode_GvcIdSet, _encode_GvcIdSet } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/GvcIdSet.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RcfGetParameter_parPermittedGvcidSet
@@ -51,7 +47,7 @@ class RcfGetParameter_parPermittedGvcidSet {
         parameterName: ParameterName,
         parameterValue: GvcIdSet
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_permittedGvcidSet)])) {
+        if (parameterName !== ParameterName_permittedGvcidSet) {
             throw new ASN1Error("RcfGetParameter_parPermittedGvcidSet.parameterName violates ParameterName (permittedGvcidSet)");
         }
         this.parameterName = parameterName;

@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { CltuDeliveryMode, _decode_CltuDeliveryMode, _encode_CltuDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuDeliveryMode.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parDeliveryMode
@@ -51,7 +47,7 @@ class CltuGetParameter_parDeliveryMode {
         parameterName: ParameterName,
         parameterValue: CltuDeliveryMode
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_deliveryMode)])) {
+        if (parameterName !== ParameterName_deliveryMode) {
             throw new ASN1Error("CltuGetParameter_parDeliveryMode.parameterName violates ParameterName (deliveryMode)");
         }
         this.parameterName = parameterName;

@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { RcfGetParameter_parLatencyLimit_parameterValue, _decode_RcfGetParameter_parLatencyLimit_parameterValue, _encode_RcfGetParameter_parLatencyLimit_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parLatencyLimit-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RcfGetParameter_parLatencyLimit
@@ -55,7 +51,7 @@ class RcfGetParameter_parLatencyLimit {
         parameterName: ParameterName,
         parameterValue: RcfGetParameter_parLatencyLimit_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_latencyLimit)])) {
+        if (parameterName !== ParameterName_latencyLimit) {
             throw new ASN1Error("RcfGetParameter_parLatencyLimit.parameterName violates ParameterName (latencyLimit)");
         }
         this.parameterName = parameterName;

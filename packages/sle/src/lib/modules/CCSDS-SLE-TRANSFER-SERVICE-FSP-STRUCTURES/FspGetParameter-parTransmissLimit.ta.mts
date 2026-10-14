@@ -13,15 +13,9 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary FspGetParameter_parTransmissLimit
@@ -57,10 +51,10 @@ class FspGetParameter_parTransmissLimit {
         parameterName: ParameterName,
         parameterValue: INTEGER
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_transmissionLimit)])) {
+        if (parameterName !== ParameterName_transmissionLimit) {
             throw new ASN1Error("FspGetParameter_parTransmissLimit.parameterName violates ParameterName (transmissionLimit)");
         }
-        if (!integerInRange(parameterValue, 1n, 255n)) {
+        if (!integerInRange(parameterValue, 1, 255)) {
             throw new ASN1OverflowError("FspGetParameter_parTransmissLimit.parameterValue violates INTEGER (1..255)");
         }
         this.parameterName = parameterName;

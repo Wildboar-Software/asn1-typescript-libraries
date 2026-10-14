@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { IntPosLong, _decode_IntPosLong, _encode_IntPosLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosLong.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parTimerInitial
@@ -51,7 +47,7 @@ class FspGetParameter_parTimerInitial {
         parameterName: ParameterName,
         parameterValue: IntPosLong
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_timerInitial)])) {
+        if (parameterName !== ParameterName_timerInitial) {
             throw new ASN1Error("FspGetParameter_parTimerInitial.parameterName violates ParameterName (timerInitial)");
         }
         this.parameterName = parameterName;

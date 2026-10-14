@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_FspGetParameter_parBitLockRequired_parameterValue, _encode_FspGetParameter_parBitLockRequired_parameterValue, FspGetParameter_parBitLockRequired_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parBitLockRequired-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parBitLockRequired
@@ -54,7 +50,7 @@ class FspGetParameter_parBitLockRequired {
         parameterName: ParameterName,
         parameterValue: FspGetParameter_parBitLockRequired_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_bitLockRequired)])) {
+        if (parameterName !== ParameterName_bitLockRequired) {
             throw new ASN1Error("FspGetParameter_parBitLockRequired.parameterName violates ParameterName (bitLockRequired)");
         }
         this.parameterName = parameterName;

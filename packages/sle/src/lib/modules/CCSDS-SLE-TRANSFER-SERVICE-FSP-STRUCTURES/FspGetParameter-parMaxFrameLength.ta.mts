@@ -13,15 +13,9 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary FspGetParameter_parMaxFrameLength
@@ -57,10 +51,10 @@ class FspGetParameter_parMaxFrameLength {
         parameterName: ParameterName,
         parameterValue: INTEGER
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_maximumFrameLength)])) {
+        if (parameterName !== ParameterName_maximumFrameLength) {
             throw new ASN1Error("FspGetParameter_parMaxFrameLength.parameterName violates ParameterName (maximumFrameLength)");
         }
-        if (!integerInRange(parameterValue, 12n, 1024n)) {
+        if (!integerInRange(parameterValue, 12, 1024)) {
             throw new ASN1OverflowError("FspGetParameter_parMaxFrameLength.parameterValue violates INTEGER (12..1024)");
         }
         this.parameterName = parameterName;

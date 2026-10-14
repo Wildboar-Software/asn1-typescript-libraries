@@ -13,10 +13,8 @@ import { FspInvokeDirectiveInvocation_directive_setTimeoutType, _decode_FspInvok
 import { MapMuxControl, _decode_MapMuxControl, _encode_MapMuxControl } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapMuxControl.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary FspInvokeDirectiveInvocation_directive
@@ -89,17 +87,17 @@ function _decode_FspInvokeDirectiveInvocation_directive (el: _Element): FspInvok
 }); }
     const _decoded = _cached_decoder_for_FspInvokeDirectiveInvocation_directive(el);
     if ("initiateADserviceWithSetVR" in _decoded) {
-        if (!integerInRange(_decoded.initiateADserviceWithSetVR, 0n, 255n)) {
+        if (!integerInRange(_decoded.initiateADserviceWithSetVR, 0, 255)) {
             throw new ASN1OverflowError("FspInvokeDirectiveInvocation_directive.initiateADserviceWithSetVR violates INTEGER (0..255)");
         }
     }
     if ("setVS" in _decoded) {
-        if (!integerInRange(_decoded.setVS, 0n, 255n)) {
+        if (!integerInRange(_decoded.setVS, 0, 255)) {
             throw new ASN1OverflowError("FspInvokeDirectiveInvocation_directive.setVS violates INTEGER (0..255)");
         }
     }
     if ("setFOPslidingWindowWidth" in _decoded) {
-        if (!integerInRange(_decoded.setFOPslidingWindowWidth, 1n, 255n)) {
+        if (!integerInRange(_decoded.setFOPslidingWindowWidth, 1, 255)) {
             throw new ASN1OverflowError("FspInvokeDirectiveInvocation_directive.setFOPslidingWindowWidth violates INTEGER (1..255)");
         }
     }

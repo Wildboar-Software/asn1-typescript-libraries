@@ -11,10 +11,8 @@ import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/DeliveryMode.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary RafDeliveryMode

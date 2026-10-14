@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { ClcwPhysicalChannel, _decode_ClcwPhysicalChannel, _encode_ClcwPhysicalChannel } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/ClcwPhysicalChannel.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parClcwPhysicalChannel
@@ -51,7 +47,7 @@ class FspGetParameter_parClcwPhysicalChannel {
         parameterName: ParameterName,
         parameterValue: ClcwPhysicalChannel
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_clcwPhysicalChannel)])) {
+        if (parameterName !== ParameterName_clcwPhysicalChannel) {
             throw new ASN1Error("FspGetParameter_parClcwPhysicalChannel.parameterName violates ParameterName (clcwPhysicalChannel)");
         }
         this.parameterName = parameterName;

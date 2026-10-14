@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { ApidList, _decode_ApidList, _encode_ApidList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/ApidList.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parApidList
@@ -51,7 +47,7 @@ class FspGetParameter_parApidList {
         parameterName: ParameterName,
         parameterValue: ApidList
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_apidList)])) {
+        if (parameterName !== ParameterName_apidList) {
             throw new ASN1Error("FspGetParameter_parApidList.parameterName violates ParameterName (apidList)");
         }
         this.parameterName = parameterName;

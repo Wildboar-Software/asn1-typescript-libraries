@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { TimeoutPeriod, _decode_TimeoutPeriod, _encode_TimeoutPeriod } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/TimeoutPeriod.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parReturnTimeout
@@ -51,7 +47,7 @@ class FspGetParameter_parReturnTimeout {
         parameterName: ParameterName,
         parameterValue: TimeoutPeriod
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_returnTimeoutPeriod)])) {
+        if (parameterName !== ParameterName_returnTimeoutPeriod) {
             throw new ASN1Error("FspGetParameter_parReturnTimeout.parameterName violates ParameterName (returnTimeoutPeriod)");
         }
         this.parameterName = parameterName;

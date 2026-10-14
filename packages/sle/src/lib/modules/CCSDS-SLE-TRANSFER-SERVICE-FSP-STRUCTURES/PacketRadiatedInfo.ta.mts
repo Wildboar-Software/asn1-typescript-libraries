@@ -10,10 +10,8 @@ import * as $ from "@wildboar/asn1/functional";
 import { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary PacketRadiatedInfo
@@ -49,7 +47,7 @@ class PacketRadiatedInfo {
         packetIdentificationList: PacketIdentificationList,
         frameSequenceNumber: INTEGER
     ) {
-        if (!integerInRange(frameSequenceNumber, 0n, 255n)) {
+        if (!integerInRange(frameSequenceNumber, 0, 255)) {
             throw new ASN1OverflowError("PacketRadiatedInfo.frameSequenceNumber violates INTEGER (0..255)");
         }
         this.packetIdentificationList = packetIdentificationList;

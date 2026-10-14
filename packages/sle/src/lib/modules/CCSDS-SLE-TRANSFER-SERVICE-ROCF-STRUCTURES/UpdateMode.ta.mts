@@ -4,13 +4,14 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";
+import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode,
+    RequestedUpdateMode_continuous,
+    RequestedUpdateMode_changeBased
+} from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary UpdateMode
@@ -63,4 +64,3 @@ function _encode_UpdateMode (value: UpdateMode, elGetter: $.ASN1Encoder<any>): _
 
 
 /* eslint-enable */
-import { RequestedUpdateMode_continuous, RequestedUpdateMode_changeBased } from "./RequestedUpdateMode.ta.mjs";

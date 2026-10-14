@@ -12,10 +12,6 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 import { _decode_FspGetParameter_parRfAvailableRequired_parameterValue, _encode_FspGetParameter_parRfAvailableRequired_parameterValue, FspGetParameter_parRfAvailableRequired_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parRfAvailableRequired-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parRfAvailableRequired
@@ -54,7 +50,7 @@ class FspGetParameter_parRfAvailableRequired {
         parameterName: ParameterName,
         parameterValue: FspGetParameter_parRfAvailableRequired_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_rfAvailableRequired)])) {
+        if (parameterName !== ParameterName_rfAvailableRequired) {
             throw new ASN1Error("FspGetParameter_parRfAvailableRequired.parameterName violates ParameterName (rfAvailableRequired)");
         }
         this.parameterName = parameterName;

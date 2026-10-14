@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { RafGetParameter_parReqFrameQuality_parameterValue, _decode_RafGetParameter_parReqFrameQuality_parameterValue, _encode_RafGetParameter_parReqFrameQuality_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReqFrameQuality-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RafGetParameter_parReqFrameQuality
@@ -55,7 +51,7 @@ class RafGetParameter_parReqFrameQuality {
         parameterName: ParameterName,
         parameterValue: RafGetParameter_parReqFrameQuality_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_requestedFrameQuality)])) {
+        if (parameterName !== ParameterName_requestedFrameQuality) {
             throw new ASN1Error("RafGetParameter_parReqFrameQuality.parameterName violates ParameterName (requestedFrameQuality)");
         }
         this.parameterName = parameterName;

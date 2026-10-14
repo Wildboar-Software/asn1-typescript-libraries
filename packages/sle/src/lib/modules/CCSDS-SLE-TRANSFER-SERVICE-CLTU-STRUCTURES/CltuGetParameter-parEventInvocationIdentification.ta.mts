@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/EventInvocationId.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parEventInvocationIdentification
@@ -52,7 +48,7 @@ class CltuGetParameter_parEventInvocationIdentification {
         parameterName: ParameterName,
         parameterValue: EventInvocationId
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_expectedEventInvocationIdentification)])) {
+        if (parameterName !== ParameterName_expectedEventInvocationIdentification) {
             throw new ASN1Error("CltuGetParameter_parEventInvocationIdentification.parameterName violates ParameterName (expectedEventInvocationIdentification)");
         }
         this.parameterName = parameterName;

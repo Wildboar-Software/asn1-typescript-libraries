@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RocfGetParameter_parReqUpdateMode
@@ -51,7 +47,7 @@ class RocfGetParameter_parReqUpdateMode {
         parameterName: ParameterName,
         parameterValue: RequestedUpdateMode
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_requestedUpdateMode)])) {
+        if (parameterName !== ParameterName_requestedUpdateMode) {
             throw new ASN1Error("RocfGetParameter_parReqUpdateMode.parameterName violates ParameterName (requestedUpdateMode)");
         }
         this.parameterName = parameterName;

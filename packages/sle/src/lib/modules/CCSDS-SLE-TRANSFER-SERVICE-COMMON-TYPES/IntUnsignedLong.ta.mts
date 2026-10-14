@@ -8,10 +8,8 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary IntUnsignedLong
@@ -27,7 +25,7 @@ export
 type IntUnsignedLong = INTEGER;
 export function _decode_IntUnsignedLong (el: _Element): IntUnsignedLong {
     const _decoded = $._decodeInteger(el);
-    if (!integerInRange(_decoded, 0n, 4294967295n)) {
+    if (!integerInRange(_decoded, 0, 4294967295)) {
         throw new ASN1OverflowError("IntUnsignedLong violates INTEGER (0..4294967295)");
     }
     return _decoded;

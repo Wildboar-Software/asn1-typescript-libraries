@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parCltuIdentification
@@ -52,7 +48,7 @@ class CltuGetParameter_parCltuIdentification {
         parameterName: ParameterName,
         parameterValue: CltuIdentification
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_expectedSlduIdentification)])) {
+        if (parameterName !== ParameterName_expectedSlduIdentification) {
             throw new ASN1Error("CltuGetParameter_parCltuIdentification.parameterName violates ParameterName (expectedSlduIdentification)");
         }
         this.parameterName = parameterName;

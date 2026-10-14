@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { MuxControl, _decode_MuxControl, _encode_MuxControl } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MuxControl.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parMapMuxControl
@@ -51,7 +47,7 @@ class FspGetParameter_parMapMuxControl {
         parameterName: ParameterName,
         parameterValue: MuxControl
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_mapMuxControl)])) {
+        if (parameterName !== ParameterName_mapMuxControl) {
             throw new ASN1Error("FspGetParameter_parMapMuxControl.parameterName violates ParameterName (mapMuxControl)");
         }
         this.parameterName = parameterName;

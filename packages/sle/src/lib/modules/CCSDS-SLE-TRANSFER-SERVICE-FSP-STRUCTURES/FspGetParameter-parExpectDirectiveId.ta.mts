@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parExpectDirectiveId
@@ -51,7 +47,7 @@ class FspGetParameter_parExpectDirectiveId {
         parameterName: ParameterName,
         parameterValue: IntUnsignedLong
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_expectedDirectiveIdentification)])) {
+        if (parameterName !== ParameterName_expectedDirectiveIdentification) {
             throw new ASN1Error("FspGetParameter_parExpectDirectiveId.parameterName violates ParameterName (expectedDirectiveIdentification)");
         }
         this.parameterName = parameterName;

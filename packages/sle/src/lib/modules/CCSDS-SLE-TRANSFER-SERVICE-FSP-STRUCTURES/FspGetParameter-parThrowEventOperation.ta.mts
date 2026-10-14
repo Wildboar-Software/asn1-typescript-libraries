@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { FspGetParameter_parThrowEventOperation_parameterValue, _decode_FspGetParameter_parThrowEventOperation_parameterValue, _encode_FspGetParameter_parThrowEventOperation_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parThrowEventOperation-parameterValue.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parThrowEventOperation
@@ -54,7 +50,7 @@ class FspGetParameter_parThrowEventOperation {
         parameterName: ParameterName,
         parameterValue: FspGetParameter_parThrowEventOperation_parameterValue
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_throwEventOperation)])) {
+        if (parameterName !== ParameterName_throwEventOperation) {
             throw new ASN1Error("FspGetParameter_parThrowEventOperation.parameterName violates ParameterName (throwEventOperation)");
         }
         this.parameterName = parameterName;

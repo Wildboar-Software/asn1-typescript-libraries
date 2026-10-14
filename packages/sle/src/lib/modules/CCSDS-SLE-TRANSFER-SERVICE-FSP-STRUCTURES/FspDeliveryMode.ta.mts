@@ -9,10 +9,6 @@ import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/DeliveryMode.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspDeliveryMode
@@ -39,7 +35,7 @@ export
 function _decode_FspDeliveryMode (el: _Element): FspDeliveryMode {
     if (!_cached_decoder_for_FspDeliveryMode) { _cached_decoder_for_FspDeliveryMode = _decode_DeliveryMode; }
     const _decoded = _cached_decoder_for_FspDeliveryMode(el);
-    if (!integerIsOneOf(_decoded, [BigInt(DeliveryMode_fwdOnline)])) {
+    if (_decoded !== DeliveryMode_fwdOnline) {
         throw new ASN1Error("FspDeliveryMode violates DeliveryMode (fwdOnline)");
     }
     return _decoded;

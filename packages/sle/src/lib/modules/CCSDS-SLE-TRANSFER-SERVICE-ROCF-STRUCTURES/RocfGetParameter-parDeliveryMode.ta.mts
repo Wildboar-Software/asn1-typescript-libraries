@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { RocfDeliveryMode, _decode_RocfDeliveryMode, _encode_RocfDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfDeliveryMode.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RocfGetParameter_parDeliveryMode
@@ -51,7 +47,7 @@ class RocfGetParameter_parDeliveryMode {
         parameterName: ParameterName,
         parameterValue: RocfDeliveryMode
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_deliveryMode)])) {
+        if (parameterName !== ParameterName_deliveryMode) {
             throw new ASN1Error("RocfGetParameter_parDeliveryMode.parameterName violates ParameterName (deliveryMode)");
         }
         this.parameterName = parameterName;

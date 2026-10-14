@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { PermittedTransmissionMode, _decode_PermittedTransmissionMode, _encode_PermittedTransmissionMode } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PermittedTransmissionMode.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary FspGetParameter_parPermTransMode
@@ -51,7 +47,7 @@ class FspGetParameter_parPermTransMode {
         parameterName: ParameterName,
         parameterValue: PermittedTransmissionMode
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_permittedTransmissionMode)])) {
+        if (parameterName !== ParameterName_permittedTransmissionMode) {
             throw new ASN1Error("FspGetParameter_parPermTransMode.parameterName violates ParameterName (permittedTransmissionMode)");
         }
         this.parameterName = parameterName;

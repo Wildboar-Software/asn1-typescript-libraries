@@ -8,10 +8,8 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
-function integerInRange (value: number | bigint, min: bigint, max: bigint): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return n >= min && n <= max;
-}
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary BufferSize
@@ -27,7 +25,7 @@ export
 type BufferSize = INTEGER;
 export function _decode_BufferSize (el: _Element): BufferSize {
     const _decoded = $._decodeInteger(el);
-    if (!integerInRange(_decoded, 7n, 66560n)) {
+    if (!integerInRange(_decoded, 7, 66560)) {
         throw new ASN1OverflowError("BufferSize violates INTEGER (7..66560)");
     }
     return _decoded;

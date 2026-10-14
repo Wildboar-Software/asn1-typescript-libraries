@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedControlWordTypeNumber.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary RocfGetParameter_parReqControlWordType
@@ -52,7 +48,7 @@ class RocfGetParameter_parReqControlWordType {
         parameterName: ParameterName,
         parameterValue: RequestedControlWordTypeNumber
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_requestedControlWordType)])) {
+        if (parameterName !== ParameterName_requestedControlWordType) {
             throw new ASN1Error("RocfGetParameter_parReqControlWordType.parameterName violates ParameterName (requestedControlWordType)");
         }
         this.parameterName = parameterName;

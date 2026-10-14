@@ -12,10 +12,6 @@ import { ParameterName, _decode_ParameterName, _encode_ParameterName,
 import { IntUnsignedShort, _decode_IntUnsignedShort, _encode_IntUnsignedShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedShort.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
 
 /**
  * @summary CltuGetParameter_parPlop1IdleSequenceLength
@@ -52,7 +48,7 @@ class CltuGetParameter_parPlop1IdleSequenceLength {
         parameterName: ParameterName,
         parameterValue: IntUnsignedShort
     ) {
-        if (!integerIsOneOf(parameterName, [BigInt(ParameterName_plop1IdleSequenceLength)])) {
+        if (parameterName !== ParameterName_plop1IdleSequenceLength) {
             throw new ASN1Error("CltuGetParameter_parPlop1IdleSequenceLength.parameterName violates ParameterName (plop1IdleSequenceLength)");
         }
         this.parameterName = parameterName;

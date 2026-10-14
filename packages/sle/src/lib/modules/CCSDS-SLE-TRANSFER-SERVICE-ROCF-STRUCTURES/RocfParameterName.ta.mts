@@ -22,10 +22,25 @@ import { _decode_ParameterName, _encode_ParameterName, ParameterName,
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
 
 
-function integerIsOneOf (value: number | bigint, allowed: readonly bigint[]): boolean {
-    const n = typeof value === "bigint" ? value : BigInt(value);
-    return allowed.includes(n);
-}
+
+import { integerIsOneOf } from "../../constraints.mjs";
+
+const _RocfParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
+    BigInt(ParameterName_bufferSize),
+    BigInt(ParameterName_deliveryMode),
+    BigInt(ParameterName_latencyLimit),
+    BigInt(ParameterName_minReportingCycle),
+    BigInt(ParameterName_permittedControlWordTypeSet),
+    BigInt(ParameterName_permittedGvcidSet),
+    BigInt(ParameterName_permittedTcVcidSet),
+    BigInt(ParameterName_permittedUpdateModeSet),
+    BigInt(ParameterName_reportingCycle),
+    BigInt(ParameterName_requestedControlWordType),
+    BigInt(ParameterName_requestedGvcid),
+    BigInt(ParameterName_requestedTcVcid),
+    BigInt(ParameterName_requestedUpdateMode),
+    BigInt(ParameterName_returnTimeoutPeriod),
+]);
 
 /**
  * @summary RocfParameterName
@@ -67,8 +82,8 @@ export
 function _decode_RocfParameterName (el: _Element): RocfParameterName {
     if (!_cached_decoder_for_RocfParameterName) { _cached_decoder_for_RocfParameterName = _decode_ParameterName; }
     const _decoded = _cached_decoder_for_RocfParameterName(el);
-    if (!integerIsOneOf(_decoded, [BigInt(ParameterName_bufferSize), BigInt(ParameterName_deliveryMode), BigInt(ParameterName_latencyLimit), BigInt(ParameterName_minReportingCycle), BigInt(ParameterName_permittedControlWordTypeSet), BigInt(ParameterName_permittedGvcidSet), BigInt(ParameterName_permittedTcVcidSet), BigInt(ParameterName_permittedUpdateModeSet), BigInt(ParameterName_reportingCycle), BigInt(ParameterName_requestedControlWordType), BigInt(ParameterName_requestedGvcid), BigInt(ParameterName_requestedTcVcid), BigInt(ParameterName_requestedUpdateMode), BigInt(ParameterName_returnTimeoutPeriod)])) {
-        throw new ASN1Error("RocfParameterName violates ParameterName (bufferSize | deliveryMode | latencyLimit | minReportingCycle | permittedControlWordTypeSet | permittedGvcidSet | permittedTcVcidSet | permittedUpdateModeSet | reportingCycle | requestedControlWordType | requestedGvcid | requestedTcVcid | requestedUpdateMode | returnTimeoutPeriod)");
+    if (!integerIsOneOf(_decoded, _RocfParameterName_permitted)) {
+        throw new ASN1Error("RocfParameterName violates ParameterName");
     }
     return _decoded;
 }
