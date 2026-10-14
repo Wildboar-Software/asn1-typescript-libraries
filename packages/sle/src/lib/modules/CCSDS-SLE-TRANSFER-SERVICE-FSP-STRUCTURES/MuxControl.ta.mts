@@ -2,13 +2,12 @@
 import {
     NULL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AbsolutePriority, _decode_AbsolutePriority, _encode_AbsolutePriority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/AbsolutePriority.ta.mjs";
-// export { AbsolutePriority, _decode_AbsolutePriority, _encode_AbsolutePriority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/AbsolutePriority.ta.mjs";
 import { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/VcOrMapId.ta.mjs";
-// export { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/VcOrMapId.ta.mjs";
 
 
 /**
@@ -46,7 +45,18 @@ function _decode_MuxControl (el: _Element): MuxControl {
     "CONTEXT 1": [ "muxSchemeIsPriority", $._decode_implicit<AbsolutePriority[]>(() => $._decodeSequenceOf<AbsolutePriority>(() => _decode_AbsolutePriority)) ],
     "CONTEXT 2": [ "muxSchemeIsVector", $._decode_implicit<VcOrMapId[]>(() => $._decodeSequenceOf<VcOrMapId>(() => _decode_VcOrMapId)) ]
 }); }
-    return _cached_decoder_for_MuxControl(el);
+    const _decoded = _cached_decoder_for_MuxControl(el);
+    if ("muxSchemeIsPriority" in _decoded) {
+        if (_decoded.muxSchemeIsPriority.length < 1 || _decoded.muxSchemeIsPriority.length > 64) {
+            throw new ASN1SizeError("MuxControl.muxSchemeIsPriority violates SIZE (1..64)");
+        }
+    }
+    if ("muxSchemeIsVector" in _decoded) {
+        if (_decoded.muxSchemeIsVector.length < 1 || _decoded.muxSchemeIsVector.length > 192) {
+            throw new ASN1SizeError("MuxControl.muxSchemeIsVector violates SIZE (1..192)");
+        }
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_MuxControl: $.ASN1Encoder<MuxControl> | null = null;

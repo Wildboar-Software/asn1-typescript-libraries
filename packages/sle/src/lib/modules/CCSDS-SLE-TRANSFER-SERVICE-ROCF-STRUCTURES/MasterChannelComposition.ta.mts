@@ -3,12 +3,17 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MasterChannelComposition_mcOrVcList, _decode_MasterChannelComposition_mcOrVcList, _encode_MasterChannelComposition_mcOrVcList } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/MasterChannelComposition-mcOrVcList.ta.mjs";
-// export { MasterChannelComposition_mcOrVcList, _decode_MasterChannelComposition_mcOrVcList, _encode_MasterChannelComposition_mcOrVcList } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/MasterChannelComposition-mcOrVcList.ta.mjs";
 
+
+
+
+import { integerInRange, integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary MasterChannelComposition
@@ -64,6 +69,12 @@ class MasterChannelComposition {
         versionNumber: INTEGER,
         mcOrVcList: MasterChannelComposition_mcOrVcList
     ) {
+        if (!integerInRange(spacecraftId, 0, 65535)) {
+            throw new ASN1OverflowError("MasterChannelComposition.spacecraftId violates INTEGER (0..65535)");
+        }
+        if (!integerIsOneOf(versionNumber, [0n, 1n, 12n])) {
+            throw new ASN1Error("MasterChannelComposition.versionNumber violates INTEGER (0 | 1 | 12)");
+        }
         this.spacecraftId = spacecraftId;
         this.versionNumber = versionNumber;
         this.mcOrVcList = mcOrVcList;
@@ -174,7 +185,7 @@ let _cached_encoder_for_MasterChannelComposition: $.ASN1Encoder<MasterChannelCom
  */
 export
 function _encode_MasterChannelComposition (value: MasterChannelComposition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MasterChannelComposition) { _cached_encoder_for_MasterChannelComposition = function (value: MasterChannelComposition, elGetter: $.ASN1Encoder<MasterChannelComposition>): _Element {
+    if (!_cached_encoder_for_MasterChannelComposition) { _cached_encoder_for_MasterChannelComposition = function (value: MasterChannelComposition, _elGetter: $.ASN1Encoder<MasterChannelComposition>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.spacecraftId, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.versionNumber, $.BER),

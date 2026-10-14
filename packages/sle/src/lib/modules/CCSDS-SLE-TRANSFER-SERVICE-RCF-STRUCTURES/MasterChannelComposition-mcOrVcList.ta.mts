@@ -2,11 +2,11 @@
 import {
     NULL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/VcId.ta.mjs";
-// export { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/VcId.ta.mjs";
 
 
 /**
@@ -16,7 +16,13 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MasterChannelComposition-mcOrVcList ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MasterChannelComposition-mcOrVcList ::= CHOICE
+ *    { masterChannel         [0] NULL
+ *    , vcList                [1] SET SIZE (1 .. 64) OF VcId
+ *    -- Set size range for TM Transfer Frames: (1 .. 8)
+ *    -- Set size range for AOS Transfer Frames: (1 .. 64)
+ *    -- Set size range for USLP Transfer Frames: (1 .. 64)
+ *    }
  * ```
  */
 export
@@ -38,7 +44,13 @@ function _decode_MasterChannelComposition_mcOrVcList (el: _Element): MasterChann
     "CONTEXT 0": [ "masterChannel", $._decode_implicit<NULL>(() => $._decodeNull) ],
     "CONTEXT 1": [ "vcList", $._decode_implicit<VcId[]>(() => $._decodeSetOf<VcId>(() => _decode_VcId)) ]
 }); }
-    return _cached_decoder_for_MasterChannelComposition_mcOrVcList(el);
+    const _decoded = _cached_decoder_for_MasterChannelComposition_mcOrVcList(el);
+    if ("vcList" in _decoded) {
+        if (_decoded.vcList.length < 1 || _decoded.vcList.length > 64) {
+            throw new ASN1SizeError("MasterChannelComposition_mcOrVcList.vcList violates SIZE (1..64)");
+        }
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_MasterChannelComposition_mcOrVcList: $.ASN1Encoder<MasterChannelComposition_mcOrVcList> | null = null;

@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { RocfGetParameterReturn_result, _decode_RocfGetParameterReturn_result, _encode_RocfGetParameterReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-OUTGOING-PDUS/RocfGetParameterReturn-result.ta.mjs";
-// export { RocfGetParameterReturn_result, _decode_RocfGetParameterReturn_result, _encode_RocfGetParameterReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-OUTGOING-PDUS/RocfGetParameterReturn-result.ta.mjs";
 
 
 /**
@@ -168,7 +165,7 @@ let _cached_encoder_for_RocfGetParameterReturn: $.ASN1Encoder<RocfGetParameterRe
  */
 export
 function _encode_RocfGetParameterReturn (value: RocfGetParameterReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfGetParameterReturn) { _cached_encoder_for_RocfGetParameterReturn = function (value: RocfGetParameterReturn, elGetter: $.ASN1Encoder<RocfGetParameterReturn>): _Element {
+    if (!_cached_encoder_for_RocfGetParameterReturn) { _cached_encoder_for_RocfGetParameterReturn = function (value: RocfGetParameterReturn, _elGetter: $.ASN1Encoder<RocfGetParameterReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

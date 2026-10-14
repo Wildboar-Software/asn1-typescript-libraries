@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 import { CarrierLockStatus, _decode_CarrierLockStatus, _encode_CarrierLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/CarrierLockStatus.ta.mjs";
-// export { CarrierLockStatus, _decode_CarrierLockStatus, _encode_CarrierLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/CarrierLockStatus.ta.mjs";
 import { LockStatus, _decode_LockStatus, _encode_LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/LockStatus.ta.mjs";
-// export { LockStatus, LockStatus_inLock /* IMPORTED_LONG_NAMED_INTEGER */, inLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_outOfLock /* IMPORTED_LONG_NAMED_INTEGER */, outOfLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_notInUse /* IMPORTED_LONG_NAMED_INTEGER */, notInUse /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_LockStatus, _encode_LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/LockStatus.ta.mjs";
 import { SymbolLockStatus, _decode_SymbolLockStatus, _encode_SymbolLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/SymbolLockStatus.ta.mjs";
-// export { SymbolLockStatus, _decode_SymbolLockStatus, _encode_SymbolLockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/SymbolLockStatus.ta.mjs";
 
 
 /**
@@ -181,7 +177,7 @@ let _cached_encoder_for_LockStatusReport: $.ASN1Encoder<LockStatusReport> | null
  */
 export
 function _encode_LockStatusReport (value: LockStatusReport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LockStatusReport) { _cached_encoder_for_LockStatusReport = function (value: LockStatusReport, elGetter: $.ASN1Encoder<LockStatusReport>): _Element {
+    if (!_cached_encoder_for_LockStatusReport) { _cached_encoder_for_LockStatusReport = function (value: LockStatusReport, _elGetter: $.ASN1Encoder<LockStatusReport>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Time(value.time, $.BER),
         /* REQUIRED   */ _encode_CarrierLockStatus(value.carrierLockStatus, $.BER),

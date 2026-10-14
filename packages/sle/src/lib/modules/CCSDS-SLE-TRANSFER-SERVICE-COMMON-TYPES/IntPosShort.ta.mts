@@ -1,11 +1,15 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
+
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary IntPosShort
@@ -19,35 +23,14 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type IntPosShort = INTEGER;
-
-let _cached_decoder_for_IntPosShort: $.ASN1Decoder<IntPosShort> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) IntPosShort
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_IntPosShort (el: _Element): IntPosShort {
-    if (!_cached_decoder_for_IntPosShort) { _cached_decoder_for_IntPosShort = $._decodeInteger; }
-    return _cached_decoder_for_IntPosShort(el);
+export function _decode_IntPosShort (el: _Element): IntPosShort {
+    const _decoded = $._decodeInteger(el);
+    if (!integerInRange(_decoded, 1, 65535)) {
+        throw new ASN1OverflowError("IntPosShort violates INTEGER (1..65535)");
+    }
+    return _decoded;
 }
-
-let _cached_encoder_for_IntPosShort: $.ASN1Encoder<IntPosShort> | null = null;
-
-/**
- * @summary Encodes a(n) IntPosShort into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The IntPosShort, encoded as an ASN.1 Element.
- */
-export
-function _encode_IntPosShort (value: IntPosShort, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IntPosShort) { _cached_encoder_for_IntPosShort = $._encodeInteger; }
-    return _cached_encoder_for_IntPosShort(value, elGetter);
-}
+export const _encode_IntPosShort: $.ASN1Encoder<IntPosShort> = $._encodeInteger;
 
 
 /* eslint-enable */

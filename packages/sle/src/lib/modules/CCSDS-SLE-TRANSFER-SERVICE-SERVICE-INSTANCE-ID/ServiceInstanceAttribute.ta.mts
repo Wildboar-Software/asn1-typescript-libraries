@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceInstanceAttribute_Item, _decode_ServiceInstanceAttribute_Item, _encode_ServiceInstanceAttribute_Item } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceAttribute-Item.ta.mjs";
-// export { ServiceInstanceAttribute_Item, _decode_ServiceInstanceAttribute_Item, _encode_ServiceInstanceAttribute_Item } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceAttribute-Item.ta.mjs";
 
 
 /**
@@ -35,7 +35,11 @@ let _cached_decoder_for_ServiceInstanceAttribute: $.ASN1Decoder<ServiceInstanceA
 export
 function _decode_ServiceInstanceAttribute (el: _Element): ServiceInstanceAttribute {
     if (!_cached_decoder_for_ServiceInstanceAttribute) { _cached_decoder_for_ServiceInstanceAttribute = $._decodeSetOf<ServiceInstanceAttribute_Item>(() => _decode_ServiceInstanceAttribute_Item); }
-    return _cached_decoder_for_ServiceInstanceAttribute(el);
+    const _decoded = _cached_decoder_for_ServiceInstanceAttribute(el);
+    if (_decoded.length < 1 || _decoded.length > 1) {
+        throw new ASN1SizeError("ServiceInstanceAttribute violates SIZE (1)");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_ServiceInstanceAttribute: $.ASN1Encoder<ServiceInstanceAttribute> | null = null;

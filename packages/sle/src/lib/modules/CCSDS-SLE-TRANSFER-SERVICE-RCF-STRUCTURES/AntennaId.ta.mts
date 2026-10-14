@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +42,13 @@ function _decode_AntennaId (el: _Element): AntennaId {
     "CONTEXT 0": [ "globalForm", $._decode_implicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier) ],
     "CONTEXT 1": [ "localForm", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_AntennaId(el);
+    const _decoded = _cached_decoder_for_AntennaId(el);
+    if ("localForm" in _decoded) {
+        if (_decoded.localForm.length < 1 || _decoded.localForm.length > 16) {
+            throw new ASN1SizeError("AntennaId.localForm violates SIZE (1..16)");
+        }
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_AntennaId: $.ASN1Encoder<AntennaId> | null = null;

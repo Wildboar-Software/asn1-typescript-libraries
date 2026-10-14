@@ -69,6 +69,7 @@ jobs:
           - "sgp22"
           - "sgp32"
           - "smrse"
+          - "sle"
           - "spnego"
           - "stanag4406"
           - "sv"

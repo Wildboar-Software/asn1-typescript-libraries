@@ -1,11 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/DeliveryMode.ta.mjs";
-// export { DeliveryMode, DeliveryMode_rtnTimelyOnline /* IMPORTED_LONG_NAMED_INTEGER */, rtnTimelyOnline /* IMPORTED_SHORT_NAMED_INTEGER */, DeliveryMode_rtnCompleteOnline /* IMPORTED_LONG_NAMED_INTEGER */, rtnCompleteOnline /* IMPORTED_SHORT_NAMED_INTEGER */, DeliveryMode_rtnOffline /* IMPORTED_LONG_NAMED_INTEGER */, rtnOffline /* IMPORTED_SHORT_NAMED_INTEGER */, DeliveryMode_fwdOnline /* IMPORTED_LONG_NAMED_INTEGER */, fwdOnline /* IMPORTED_SHORT_NAMED_INTEGER */, DeliveryMode_fwdOffline /* IMPORTED_LONG_NAMED_INTEGER */, fwdOffline /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeliveryMode, _encode_DeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/DeliveryMode.ta.mjs";
+import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode,
+    DeliveryMode_rtnTimelyOnline,
+    DeliveryMode_rtnCompleteOnline,
+    DeliveryMode_rtnOffline
+} from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/DeliveryMode.ta.mjs";
 
+
+
+import { integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary RcfDeliveryMode
@@ -35,7 +42,11 @@ let _cached_decoder_for_RcfDeliveryMode: $.ASN1Decoder<RcfDeliveryMode> | null =
 export
 function _decode_RcfDeliveryMode (el: _Element): RcfDeliveryMode {
     if (!_cached_decoder_for_RcfDeliveryMode) { _cached_decoder_for_RcfDeliveryMode = _decode_DeliveryMode; }
-    return _cached_decoder_for_RcfDeliveryMode(el);
+    const _decoded = _cached_decoder_for_RcfDeliveryMode(el);
+    if (!integerIsOneOf(_decoded, [BigInt(DeliveryMode_rtnTimelyOnline), BigInt(DeliveryMode_rtnCompleteOnline), BigInt(DeliveryMode_rtnOffline)])) {
+        throw new ASN1Error("RcfDeliveryMode violates DeliveryMode (rtnTimelyOnline | rtnCompleteOnline | rtnOffline)");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_RcfDeliveryMode: $.ASN1Encoder<RcfDeliveryMode> | null = null;

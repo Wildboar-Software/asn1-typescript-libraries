@@ -4,11 +4,10 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OBJECT_IDENTIFIER,
-    VisibleString
+    VisibleString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
-// export { ServiceInstanceAttributes } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceAttributes.osa.mjs";
 
 
 /**
@@ -18,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceInstanceAttribute-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceInstanceAttribute-Item ::= SEQUENCE
+ * {  identifier                       ATTRIBUTE.&id
+ *                                     ({ServiceInstanceAttributes})
+ * ,  siAttributeValue                 VisibleString (SIZE (1 .. 256))
+ * }
  * ```
  * 
  * @class
@@ -42,6 +45,9 @@ class ServiceInstanceAttribute_Item {
         identifier: OBJECT_IDENTIFIER,
         siAttributeValue: VisibleString
     ) {
+        if (siAttributeValue.length < 1 || siAttributeValue.length > 256) {
+            throw new ASN1SizeError("ServiceInstanceAttribute_Item.siAttributeValue violates SIZE (1..256)");
+        }
         this.identifier = identifier;
         this.siAttributeValue = siAttributeValue;
     }
@@ -146,7 +152,7 @@ let _cached_encoder_for_ServiceInstanceAttribute_Item: $.ASN1Encoder<ServiceInst
  */
 export
 function _encode_ServiceInstanceAttribute_Item (value: ServiceInstanceAttribute_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceInstanceAttribute_Item) { _cached_encoder_for_ServiceInstanceAttribute_Item = function (value: ServiceInstanceAttribute_Item, elGetter: $.ASN1Encoder<ServiceInstanceAttribute_Item>): _Element {
+    if (!_cached_encoder_for_ServiceInstanceAttribute_Item) { _cached_encoder_for_ServiceInstanceAttribute_Item = function (value: ServiceInstanceAttribute_Item, _elGetter: $.ASN1Encoder<ServiceInstanceAttribute_Item>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeObjectIdentifier(value.identifier, $.BER),
         /* REQUIRED   */ $._encodeVisibleString(value.siAttributeValue, $.BER)

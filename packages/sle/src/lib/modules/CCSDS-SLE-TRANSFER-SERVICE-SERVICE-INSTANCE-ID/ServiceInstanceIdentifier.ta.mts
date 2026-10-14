@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceInstanceAttribute, _decode_ServiceInstanceAttribute, _encode_ServiceInstanceAttribute } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceAttribute.ta.mjs";
-// export { ServiceInstanceAttribute, _decode_ServiceInstanceAttribute, _encode_ServiceInstanceAttribute } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceAttribute.ta.mjs";
 
 
 /**

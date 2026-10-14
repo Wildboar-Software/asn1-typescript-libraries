@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticScheduleStatusReport, _decode_DiagnosticScheduleStatusReport, _encode_DiagnosticScheduleStatusReport } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/DiagnosticScheduleStatusReport.ta.mjs";
-// export { DiagnosticScheduleStatusReport, _decode_DiagnosticScheduleStatusReport, _encode_DiagnosticScheduleStatusReport } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/DiagnosticScheduleStatusReport.ta.mjs";
 
 
 /**
@@ -16,7 +15,10 @@ import { DiagnosticScheduleStatusReport, _decode_DiagnosticScheduleStatusReport,
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SleScheduleStatusReportReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SleScheduleStatusReportReturn-result ::= CHOICE
+ *    { positiveResult           [0]    NULL
+ *    , negativeResult           [1]    DiagnosticScheduleStatusReport
+ *    }
  * ```
  */
 export

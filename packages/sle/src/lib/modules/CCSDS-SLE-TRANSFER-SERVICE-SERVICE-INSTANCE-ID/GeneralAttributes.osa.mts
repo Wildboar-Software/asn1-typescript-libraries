@@ -1,14 +1,9 @@
 /* eslint-disable */
 import { ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
 import { serviceAgreement } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/serviceAgreement.oa.mjs";
-// export { serviceAgreement } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/serviceAgreement.oa.mjs";
 import { servicePackage } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/servicePackage.oa.mjs";
-// export { servicePackage } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/servicePackage.oa.mjs";
 import { forwardService } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/forwardService.oa.mjs";
-// export { forwardService } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/forwardService.oa.mjs";
 import { returnService } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/returnService.oa.mjs";
-// export { returnService } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/returnService.oa.mjs";
 
 
 /**

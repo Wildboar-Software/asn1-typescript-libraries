@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RafGetParameter, _decode_RafGetParameter, _encode_RafGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter.ta.mjs";
-// export { RafGetParameter, _decode_RafGetParameter, _encode_RafGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter.ta.mjs";
 import { DiagnosticRafGet, _decode_DiagnosticRafGet, _encode_DiagnosticRafGet } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/DiagnosticRafGet.ta.mjs";
-// export { DiagnosticRafGet, _decode_DiagnosticRafGet, _encode_DiagnosticRafGet } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/DiagnosticRafGet.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { DiagnosticRafGet, _decode_DiagnosticRafGet, _encode_DiagnosticRafGet } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameterReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameterReturn-result ::= CHOICE
+ *     {   positiveResult                     [0] RafGetParameter
+ *     ,   negativeResult                     [1] DiagnosticRafGet
+ *     }
  * ```
  */
 export

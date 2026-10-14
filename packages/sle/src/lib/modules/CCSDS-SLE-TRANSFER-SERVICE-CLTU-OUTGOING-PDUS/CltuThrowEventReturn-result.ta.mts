@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticCltuThrowEvent, _decode_DiagnosticCltuThrowEvent, _encode_DiagnosticCltuThrowEvent } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuThrowEvent.ta.mjs";
-// export { DiagnosticCltuThrowEvent, _decode_DiagnosticCltuThrowEvent, _encode_DiagnosticCltuThrowEvent } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuThrowEvent.ta.mjs";
 
 
 /**
@@ -16,7 +15,10 @@ import { DiagnosticCltuThrowEvent, _decode_DiagnosticCltuThrowEvent, _encode_Dia
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuThrowEventReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuThrowEventReturn-result ::= CHOICE
+ *    {  positiveResult                      [0]   NULL
+ *    ,  negativeResult                      [1]   DiagnosticCltuThrowEvent
+ *    }
  * ```
  */
 export

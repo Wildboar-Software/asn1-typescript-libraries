@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { Notification, _decode_Notification, _encode_Notification } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/Notification.ta.mjs";
-// export { Notification, _decode_Notification, _encode_Notification } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/Notification.ta.mjs";
 
 
 /**
@@ -148,7 +146,7 @@ let _cached_encoder_for_RcfSyncNotifyInvocation: $.ASN1Encoder<RcfSyncNotifyInvo
  */
 export
 function _encode_RcfSyncNotifyInvocation (value: RcfSyncNotifyInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RcfSyncNotifyInvocation) { _cached_encoder_for_RcfSyncNotifyInvocation = function (value: RcfSyncNotifyInvocation, elGetter: $.ASN1Encoder<RcfSyncNotifyInvocation>): _Element {
+    if (!_cached_encoder_for_RcfSyncNotifyInvocation) { _cached_encoder_for_RcfSyncNotifyInvocation = function (value: RcfSyncNotifyInvocation, _elGetter: $.ASN1Encoder<RcfSyncNotifyInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_Notification(value.notification, $.BER)

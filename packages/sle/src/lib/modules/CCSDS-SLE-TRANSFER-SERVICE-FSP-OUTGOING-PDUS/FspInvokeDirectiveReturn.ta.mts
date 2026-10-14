@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
-// export { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
 import { FspInvokeDirectiveReturn_result, _decode_FspInvokeDirectiveReturn_result, _encode_FspInvokeDirectiveReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspInvokeDirectiveReturn-result.ta.mjs";
-// export { FspInvokeDirectiveReturn_result, _decode_FspInvokeDirectiveReturn_result, _encode_FspInvokeDirectiveReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspInvokeDirectiveReturn-result.ta.mjs";
 
 
 /**
@@ -184,7 +180,7 @@ let _cached_encoder_for_FspInvokeDirectiveReturn: $.ASN1Encoder<FspInvokeDirecti
  */
 export
 function _encode_FspInvokeDirectiveReturn (value: FspInvokeDirectiveReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspInvokeDirectiveReturn) { _cached_encoder_for_FspInvokeDirectiveReturn = function (value: FspInvokeDirectiveReturn, elGetter: $.ASN1Encoder<FspInvokeDirectiveReturn>): _Element {
+    if (!_cached_encoder_for_FspInvokeDirectiveReturn) { _cached_encoder_for_FspInvokeDirectiveReturn = function (value: FspInvokeDirectiveReturn, _elGetter: $.ASN1Encoder<FspInvokeDirectiveReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

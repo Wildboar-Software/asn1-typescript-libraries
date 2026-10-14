@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/EventInvocationId.ta.mjs";
-// export { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/EventInvocationId.ta.mjs";
 import { CltuThrowEventReturn_result, _decode_CltuThrowEventReturn_result, _encode_CltuThrowEventReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuThrowEventReturn-result.ta.mjs";
-// export { CltuThrowEventReturn_result, _decode_CltuThrowEventReturn_result, _encode_CltuThrowEventReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuThrowEventReturn-result.ta.mjs";
 
 
 /**
@@ -184,7 +180,7 @@ let _cached_encoder_for_CltuThrowEventReturn: $.ASN1Encoder<CltuThrowEventReturn
  */
 export
 function _encode_CltuThrowEventReturn (value: CltuThrowEventReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuThrowEventReturn) { _cached_encoder_for_CltuThrowEventReturn = function (value: CltuThrowEventReturn, elGetter: $.ASN1Encoder<CltuThrowEventReturn>): _Element {
+    if (!_cached_encoder_for_CltuThrowEventReturn) { _cached_encoder_for_CltuThrowEventReturn = function (value: CltuThrowEventReturn, _elGetter: $.ASN1Encoder<CltuThrowEventReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

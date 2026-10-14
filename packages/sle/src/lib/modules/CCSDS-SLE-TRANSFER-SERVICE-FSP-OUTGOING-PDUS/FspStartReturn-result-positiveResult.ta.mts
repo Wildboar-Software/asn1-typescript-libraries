@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
-// export { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspStartReturn-result-positiveResult ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspStartReturn-result-positiveResult ::= SEQUENCE
+ *       {  startProductionTime     Time
+ *       ,  stopProductionTime      ConditionalTime
+ *       }
  * ```
  * 
  * @class
@@ -145,7 +146,7 @@ let _cached_encoder_for_FspStartReturn_result_positiveResult: $.ASN1Encoder<FspS
  */
 export
 function _encode_FspStartReturn_result_positiveResult (value: FspStartReturn_result_positiveResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspStartReturn_result_positiveResult) { _cached_encoder_for_FspStartReturn_result_positiveResult = function (value: FspStartReturn_result_positiveResult, elGetter: $.ASN1Encoder<FspStartReturn_result_positiveResult>): _Element {
+    if (!_cached_encoder_for_FspStartReturn_result_positiveResult) { _cached_encoder_for_FspStartReturn_result_positiveResult = function (value: FspStartReturn_result_positiveResult, _elGetter: $.ASN1Encoder<FspStartReturn_result_positiveResult>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Time(value.startProductionTime, $.BER),
         /* REQUIRED   */ _encode_ConditionalTime(value.stopProductionTime, $.BER)

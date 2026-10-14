@@ -1,11 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LockStatus, _encode_LockStatus, LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/LockStatus.ta.mjs";
-// export { LockStatus, LockStatus_inLock /* IMPORTED_LONG_NAMED_INTEGER */, inLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_outOfLock /* IMPORTED_LONG_NAMED_INTEGER */, outOfLock /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_notInUse /* IMPORTED_LONG_NAMED_INTEGER */, notInUse /* IMPORTED_SHORT_NAMED_INTEGER */, LockStatus_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_LockStatus, _encode_LockStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/LockStatus.ta.mjs";
+import { _decode_LockStatus, _encode_LockStatus, LockStatus,
+    LockStatus_inLock,
+    LockStatus_outOfLock,
+    LockStatus_unknown
+} from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/LockStatus.ta.mjs";
 
+
+
+import { integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary FrameSyncLockStatus
@@ -35,7 +42,11 @@ let _cached_decoder_for_FrameSyncLockStatus: $.ASN1Decoder<FrameSyncLockStatus> 
 export
 function _decode_FrameSyncLockStatus (el: _Element): FrameSyncLockStatus {
     if (!_cached_decoder_for_FrameSyncLockStatus) { _cached_decoder_for_FrameSyncLockStatus = _decode_LockStatus; }
-    return _cached_decoder_for_FrameSyncLockStatus(el);
+    const _decoded = _cached_decoder_for_FrameSyncLockStatus(el);
+    if (!integerIsOneOf(_decoded, [BigInt(LockStatus_inLock), BigInt(LockStatus_outOfLock), BigInt(LockStatus_unknown)])) {
+        throw new ASN1Error("FrameSyncLockStatus violates LockStatus (inLock | outOfLock | unknown)");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_FrameSyncLockStatus: $.ASN1Encoder<FrameSyncLockStatus> | null = null;

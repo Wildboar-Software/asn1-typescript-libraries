@@ -3,20 +3,19 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 import { AntennaId, _decode_AntennaId, _encode_AntennaId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/AntennaId.ta.mjs";
-// export { AntennaId, _decode_AntennaId, _encode_AntennaId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/AntennaId.ta.mjs";
 import { RcfTransferDataInvocation_privateAnnotation, _decode_RcfTransferDataInvocation_privateAnnotation, _encode_RcfTransferDataInvocation_privateAnnotation } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfTransferDataInvocation-privateAnnotation.ta.mjs";
-// export { RcfTransferDataInvocation_privateAnnotation, _decode_RcfTransferDataInvocation_privateAnnotation, _encode_RcfTransferDataInvocation_privateAnnotation } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfTransferDataInvocation-privateAnnotation.ta.mjs";
 import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
-// export { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
 
+
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary RcfTransferDataInvocation
@@ -87,6 +86,9 @@ class RcfTransferDataInvocation {
         privateAnnotation: RcfTransferDataInvocation_privateAnnotation,
         data: SpaceLinkDataUnit
     ) {
+        if (!integerInRange(dataLinkContinuity, -1, 16777215)) {
+            throw new ASN1OverflowError("RcfTransferDataInvocation.dataLinkContinuity violates INTEGER (-1..16777215)");
+        }
         this.invokerCredentials = invokerCredentials;
         this.earthReceiveTime = earthReceiveTime;
         this.antennaId = antennaId;
@@ -215,7 +217,7 @@ let _cached_encoder_for_RcfTransferDataInvocation: $.ASN1Encoder<RcfTransferData
  */
 export
 function _encode_RcfTransferDataInvocation (value: RcfTransferDataInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RcfTransferDataInvocation) { _cached_encoder_for_RcfTransferDataInvocation = function (value: RcfTransferDataInvocation, elGetter: $.ASN1Encoder<RcfTransferDataInvocation>): _Element {
+    if (!_cached_encoder_for_RcfTransferDataInvocation) { _cached_encoder_for_RcfTransferDataInvocation = function (value: RcfTransferDataInvocation, _elGetter: $.ASN1Encoder<RcfTransferDataInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_Time(value.earthReceiveTime, $.BER),

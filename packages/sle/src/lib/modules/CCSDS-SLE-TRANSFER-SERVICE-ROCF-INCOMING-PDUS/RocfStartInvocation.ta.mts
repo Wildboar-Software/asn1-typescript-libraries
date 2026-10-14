@@ -6,17 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
-// export { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
 import { GvcId, _decode_GvcId, _encode_GvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/GvcId.ta.mjs";
-// export { GvcId, _decode_GvcId, _encode_GvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/GvcId.ta.mjs";
 import { ControlWordType, _decode_ControlWordType, _encode_ControlWordType } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/ControlWordType.ta.mjs";
-// export { ControlWordType, _decode_ControlWordType, _encode_ControlWordType } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/ControlWordType.ta.mjs";
 import { UpdateMode, _decode_UpdateMode, _encode_UpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/UpdateMode.ta.mjs";
-// export { UpdateMode, _decode_UpdateMode, _encode_UpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/UpdateMode.ta.mjs";
 
 
 /**
@@ -227,7 +221,7 @@ let _cached_encoder_for_RocfStartInvocation: $.ASN1Encoder<RocfStartInvocation> 
  */
 export
 function _encode_RocfStartInvocation (value: RocfStartInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RocfStartInvocation) { _cached_encoder_for_RocfStartInvocation = function (value: RocfStartInvocation, elGetter: $.ASN1Encoder<RocfStartInvocation>): _Element {
+    if (!_cached_encoder_for_RocfStartInvocation) { _cached_encoder_for_RocfStartInvocation = function (value: RocfStartInvocation, _elGetter: $.ASN1Encoder<RocfStartInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

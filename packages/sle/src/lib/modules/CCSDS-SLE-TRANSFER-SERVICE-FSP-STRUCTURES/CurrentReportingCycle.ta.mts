@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReportingCycle, _decode_ReportingCycle, _encode_ReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/ReportingCycle.ta.mjs";
-// export { ReportingCycle, _decode_ReportingCycle, _encode_ReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/ReportingCycle.ta.mjs";
 
 
 /**

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Diagnostics, _encode_Diagnostics, Diagnostics } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Diagnostics.ta.mjs";
-// export { Diagnostics, Diagnostics_duplicateInvokeId /* IMPORTED_LONG_NAMED_INTEGER */, duplicateInvokeId /* IMPORTED_SHORT_NAMED_INTEGER */, Diagnostics_otherReason /* IMPORTED_LONG_NAMED_INTEGER */, otherReason /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Diagnostics, _encode_Diagnostics } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Diagnostics.ta.mjs";
 import { _decode_DiagnosticScheduleStatusReport_specific, _encode_DiagnosticScheduleStatusReport_specific, DiagnosticScheduleStatusReport_specific } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/DiagnosticScheduleStatusReport-specific.ta.mjs";
-// export { DiagnosticScheduleStatusReport_specific, DiagnosticScheduleStatusReport_specific_notSupportedInThisDeliveryMode /* IMPORTED_LONG_NAMED_INTEGER */, notSupportedInThisDeliveryMode /* IMPORTED_SHORT_NAMED_INTEGER */, DiagnosticScheduleStatusReport_specific_alreadyStopped /* IMPORTED_LONG_NAMED_INTEGER */, alreadyStopped /* IMPORTED_SHORT_NAMED_INTEGER */, DiagnosticScheduleStatusReport_specific_invalidReportingCycle /* IMPORTED_LONG_NAMED_INTEGER */, invalidReportingCycle /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagnosticScheduleStatusReport_specific, _encode_DiagnosticScheduleStatusReport_specific } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/DiagnosticScheduleStatusReport-specific.ta.mjs";
 
 
 /**

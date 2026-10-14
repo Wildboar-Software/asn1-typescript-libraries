@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticFspInvokeDirective, _decode_DiagnosticFspInvokeDirective, _encode_DiagnosticFspInvokeDirective } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspInvokeDirective.ta.mjs";
-// export { DiagnosticFspInvokeDirective, _decode_DiagnosticFspInvokeDirective, _encode_DiagnosticFspInvokeDirective } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspInvokeDirective.ta.mjs";
 
 
 /**
@@ -16,7 +15,10 @@ import { DiagnosticFspInvokeDirective, _decode_DiagnosticFspInvokeDirective, _en
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspInvokeDirectiveReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * FspInvokeDirectiveReturn-result ::= CHOICE
+ *    {  positiveResult       [0]   NULL
+ *    ,  negativeResult       [1]   DiagnosticFspInvokeDirective
+ *    }
  * ```
  */
 export

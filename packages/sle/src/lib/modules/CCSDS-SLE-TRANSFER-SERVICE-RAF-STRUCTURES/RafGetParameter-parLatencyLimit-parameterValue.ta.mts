@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
-// export { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
 
 
 /**
@@ -16,7 +15,11 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafGetParameter-parLatencyLimit-parameterValue ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RafGetParameter-parLatencyLimit-parameterValue ::= CHOICE
+ *         {   online                   [0] IntPosShort
+ *                                               -- latencyLimit in seconds
+ *         ,   offline                  [1] NULL
+ *         }
  * ```
  */
 export

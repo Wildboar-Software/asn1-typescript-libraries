@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -105,35 +104,8 @@ const DeliveryMode_fwdOffline: DeliveryMode = 4; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const fwdOffline: DeliveryMode = DeliveryMode_fwdOffline; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DeliveryMode: $.ASN1Decoder<DeliveryMode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DeliveryMode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DeliveryMode (el: _Element): DeliveryMode {
-    if (!_cached_decoder_for_DeliveryMode) { _cached_decoder_for_DeliveryMode = $._decodeInteger; }
-    return _cached_decoder_for_DeliveryMode(el);
-}
-
-let _cached_encoder_for_DeliveryMode: $.ASN1Encoder<DeliveryMode> | null = null;
-
-/**
- * @summary Encodes a(n) DeliveryMode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DeliveryMode, encoded as an ASN.1 Element.
- */
-export
-function _encode_DeliveryMode (value: DeliveryMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeliveryMode) { _cached_encoder_for_DeliveryMode = $._encodeInteger; }
-    return _cached_encoder_for_DeliveryMode(value, elGetter);
-}
+export const _decode_DeliveryMode: $.ASN1Decoder<DeliveryMode> = $._decodeInteger;
+export const _encode_DeliveryMode: $.ASN1Encoder<DeliveryMode> = $._encodeInteger;
 
 
 /* eslint-enable */

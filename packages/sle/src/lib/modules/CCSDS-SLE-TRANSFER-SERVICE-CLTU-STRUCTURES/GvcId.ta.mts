@@ -3,12 +3,17 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/GvcId-vcId.ta.mjs";
-// export { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/GvcId-vcId.ta.mjs";
 
+
+
+
+import { integerInRange, integerIsOneOf } from "../../constraints.mjs";
 
 /**
  * @summary GvcId
@@ -61,6 +66,12 @@ class GvcId {
         versionNumber: INTEGER,
         vcId: GvcId_vcId
     ) {
+        if (!integerInRange(spacecraftId, 0, 65535)) {
+            throw new ASN1OverflowError("GvcId.spacecraftId violates INTEGER (0..65535)");
+        }
+        if (!integerIsOneOf(versionNumber, [0n, 1n, 12n])) {
+            throw new ASN1Error("GvcId.versionNumber violates INTEGER (0 | 1 | 12)");
+        }
         this.spacecraftId = spacecraftId;
         this.versionNumber = versionNumber;
         this.vcId = vcId;
@@ -171,7 +182,7 @@ let _cached_encoder_for_GvcId: $.ASN1Encoder<GvcId> | null = null;
  */
 export
 function _encode_GvcId (value: GvcId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GvcId) { _cached_encoder_for_GvcId = function (value: GvcId, elGetter: $.ASN1Encoder<GvcId>): _Element {
+    if (!_cached_encoder_for_GvcId) { _cached_encoder_for_GvcId = function (value: GvcId, _elGetter: $.ASN1Encoder<GvcId>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.spacecraftId, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.versionNumber, $.BER),

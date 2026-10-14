@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { SleAcknowledgement_result, _decode_SleAcknowledgement_result, _encode_SleAcknowledgement_result } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleAcknowledgement-result.ta.mjs";
-// export { SleAcknowledgement_result, _decode_SleAcknowledgement_result, _encode_SleAcknowledgement_result } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleAcknowledgement-result.ta.mjs";
 
 
 /**
@@ -168,7 +165,7 @@ let _cached_encoder_for_SleAcknowledgement: $.ASN1Encoder<SleAcknowledgement> | 
  */
 export
 function _encode_SleAcknowledgement (value: SleAcknowledgement, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SleAcknowledgement) { _cached_encoder_for_SleAcknowledgement = function (value: SleAcknowledgement, elGetter: $.ASN1Encoder<SleAcknowledgement>): _Element {
+    if (!_cached_encoder_for_SleAcknowledgement) { _cached_encoder_for_SleAcknowledgement = function (value: SleAcknowledgement, _elGetter: $.ASN1Encoder<SleAcknowledgement>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.credentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

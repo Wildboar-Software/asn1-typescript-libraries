@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { AuthorityIdentifier, _decode_AuthorityIdentifier, _encode_AuthorityIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/AuthorityIdentifier.ta.mjs";
-// export { AuthorityIdentifier, _decode_AuthorityIdentifier, _encode_AuthorityIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/AuthorityIdentifier.ta.mjs";
 import { SleBindReturn_result, _decode_SleBindReturn_result, _encode_SleBindReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindReturn-result.ta.mjs";
-// export { SleBindReturn_result, _decode_SleBindReturn_result, _encode_SleBindReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindReturn-result.ta.mjs";
 
 
 /**
@@ -168,7 +165,7 @@ let _cached_encoder_for_SleBindReturn: $.ASN1Encoder<SleBindReturn> | null = nul
  */
 export
 function _encode_SleBindReturn (value: SleBindReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SleBindReturn) { _cached_encoder_for_SleBindReturn = function (value: SleBindReturn, elGetter: $.ASN1Encoder<SleBindReturn>): _Element {
+    if (!_cached_encoder_for_SleBindReturn) { _cached_encoder_for_SleBindReturn = function (value: SleBindReturn, _elGetter: $.ASN1Encoder<SleBindReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_AuthorityIdentifier(value.responderIdentifier, $.BER),

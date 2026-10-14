@@ -5,21 +5,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RcfGetParameter_parBufferSize, _decode_RcfGetParameter_parBufferSize, _encode_RcfGetParameter_parBufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parBufferSize.ta.mjs";
-// export { RcfGetParameter_parBufferSize, _decode_RcfGetParameter_parBufferSize, _encode_RcfGetParameter_parBufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parBufferSize.ta.mjs";
 import { RcfGetParameter_parDeliveryMode, _decode_RcfGetParameter_parDeliveryMode, _encode_RcfGetParameter_parDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parDeliveryMode.ta.mjs";
-// export { RcfGetParameter_parDeliveryMode, _decode_RcfGetParameter_parDeliveryMode, _encode_RcfGetParameter_parDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parDeliveryMode.ta.mjs";
 import { RcfGetParameter_parLatencyLimit, _decode_RcfGetParameter_parLatencyLimit, _encode_RcfGetParameter_parLatencyLimit } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parLatencyLimit.ta.mjs";
-// export { RcfGetParameter_parLatencyLimit, _decode_RcfGetParameter_parLatencyLimit, _encode_RcfGetParameter_parLatencyLimit } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parLatencyLimit.ta.mjs";
 import { RcfGetParameter_parMinReportingCycle, _decode_RcfGetParameter_parMinReportingCycle, _encode_RcfGetParameter_parMinReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parMinReportingCycle.ta.mjs";
-// export { RcfGetParameter_parMinReportingCycle, _decode_RcfGetParameter_parMinReportingCycle, _encode_RcfGetParameter_parMinReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parMinReportingCycle.ta.mjs";
 import { RcfGetParameter_parPermittedGvcidSet, _decode_RcfGetParameter_parPermittedGvcidSet, _encode_RcfGetParameter_parPermittedGvcidSet } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parPermittedGvcidSet.ta.mjs";
-// export { RcfGetParameter_parPermittedGvcidSet, _decode_RcfGetParameter_parPermittedGvcidSet, _encode_RcfGetParameter_parPermittedGvcidSet } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parPermittedGvcidSet.ta.mjs";
 import { RcfGetParameter_parReportingCycle, _decode_RcfGetParameter_parReportingCycle, _encode_RcfGetParameter_parReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parReportingCycle.ta.mjs";
-// export { RcfGetParameter_parReportingCycle, _decode_RcfGetParameter_parReportingCycle, _encode_RcfGetParameter_parReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parReportingCycle.ta.mjs";
 import { RcfGetParameter_parReqGvcId, _decode_RcfGetParameter_parReqGvcId, _encode_RcfGetParameter_parReqGvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parReqGvcId.ta.mjs";
-// export { RcfGetParameter_parReqGvcId, _decode_RcfGetParameter_parReqGvcId, _encode_RcfGetParameter_parReqGvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parReqGvcId.ta.mjs";
 import { RcfGetParameter_parReturnTimeout, _decode_RcfGetParameter_parReturnTimeout, _encode_RcfGetParameter_parReturnTimeout } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parReturnTimeout.ta.mjs";
-// export { RcfGetParameter_parReturnTimeout, _decode_RcfGetParameter_parReturnTimeout, _encode_RcfGetParameter_parReturnTimeout } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfGetParameter-parReturnTimeout.ta.mjs";
 
 
 /**

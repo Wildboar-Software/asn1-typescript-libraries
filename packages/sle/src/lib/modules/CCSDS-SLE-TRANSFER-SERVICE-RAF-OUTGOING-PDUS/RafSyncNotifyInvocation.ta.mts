@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { Notification, _decode_Notification, _encode_Notification } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/Notification.ta.mjs";
-// export { Notification, _decode_Notification, _encode_Notification } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/Notification.ta.mjs";
 
 
 /**
@@ -148,7 +146,7 @@ let _cached_encoder_for_RafSyncNotifyInvocation: $.ASN1Encoder<RafSyncNotifyInvo
  */
 export
 function _encode_RafSyncNotifyInvocation (value: RafSyncNotifyInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafSyncNotifyInvocation) { _cached_encoder_for_RafSyncNotifyInvocation = function (value: RafSyncNotifyInvocation, elGetter: $.ASN1Encoder<RafSyncNotifyInvocation>): _Element {
+    if (!_cached_encoder_for_RafSyncNotifyInvocation) { _cached_encoder_for_RafSyncNotifyInvocation = function (value: RafSyncNotifyInvocation, _elGetter: $.ASN1Encoder<RafSyncNotifyInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_Notification(value.notification, $.BER)

@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { RafGetParameterReturn_result, _decode_RafGetParameterReturn_result, _encode_RafGetParameterReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafGetParameterReturn-result.ta.mjs";
-// export { RafGetParameterReturn_result, _decode_RafGetParameterReturn_result, _encode_RafGetParameterReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafGetParameterReturn-result.ta.mjs";
 
 
 /**
@@ -168,7 +165,7 @@ let _cached_encoder_for_RafGetParameterReturn: $.ASN1Encoder<RafGetParameterRetu
  */
 export
 function _encode_RafGetParameterReturn (value: RafGetParameterReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafGetParameterReturn) { _cached_encoder_for_RafGetParameterReturn = function (value: RafGetParameterReturn, elGetter: $.ASN1Encoder<RafGetParameterReturn>): _Element {
+    if (!_cached_encoder_for_RafGetParameterReturn) { _cached_encoder_for_RafGetParameterReturn = function (value: RafGetParameterReturn, _elGetter: $.ASN1Encoder<RafGetParameterReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

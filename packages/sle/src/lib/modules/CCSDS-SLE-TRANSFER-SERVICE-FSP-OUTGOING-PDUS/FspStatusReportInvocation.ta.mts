@@ -6,17 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { FspPacketLastProcessed, _decode_FspPacketLastProcessed, _encode_FspPacketLastProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketLastProcessed.ta.mjs";
-// export { FspPacketLastProcessed, _decode_FspPacketLastProcessed, _encode_FspPacketLastProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketLastProcessed.ta.mjs";
 import { FspPacketLastOk, _decode_FspPacketLastOk, _encode_FspPacketLastOk } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketLastOk.ta.mjs";
-// export { FspPacketLastOk, _decode_FspPacketLastOk, _encode_FspPacketLastOk } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketLastOk.ta.mjs";
 import { FspProductionStatus, _decode_FspProductionStatus, _encode_FspProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspProductionStatus.ta.mjs";
-// export { FspProductionStatus, FspProductionStatus_configured /* IMPORTED_LONG_NAMED_INTEGER */, configured /* IMPORTED_SHORT_NAMED_INTEGER */, FspProductionStatus_operationalBd /* IMPORTED_LONG_NAMED_INTEGER */, operationalBd /* IMPORTED_SHORT_NAMED_INTEGER */, FspProductionStatus_operationalAdAndBd /* IMPORTED_LONG_NAMED_INTEGER */, operationalAdAndBd /* IMPORTED_SHORT_NAMED_INTEGER */, FspProductionStatus_operationalAdSuspended /* IMPORTED_LONG_NAMED_INTEGER */, operationalAdSuspended /* IMPORTED_SHORT_NAMED_INTEGER */, FspProductionStatus_interrupted /* IMPORTED_LONG_NAMED_INTEGER */, interrupted /* IMPORTED_SHORT_NAMED_INTEGER */, FspProductionStatus_halted /* IMPORTED_LONG_NAMED_INTEGER */, halted /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FspProductionStatus, _encode_FspProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspProductionStatus.ta.mjs";
 import { FspPacketCount, _decode_FspPacketCount, _encode_FspPacketCount } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketCount.ta.mjs";
-// export { FspPacketCount, _decode_FspPacketCount, _encode_FspPacketCount } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketCount.ta.mjs";
 import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
-// export { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
 
 
 /**
@@ -255,7 +249,7 @@ let _cached_encoder_for_FspStatusReportInvocation: $.ASN1Encoder<FspStatusReport
  */
 export
 function _encode_FspStatusReportInvocation (value: FspStatusReportInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspStatusReportInvocation) { _cached_encoder_for_FspStatusReportInvocation = function (value: FspStatusReportInvocation, elGetter: $.ASN1Encoder<FspStatusReportInvocation>): _Element {
+    if (!_cached_encoder_for_FspStatusReportInvocation) { _cached_encoder_for_FspStatusReportInvocation = function (value: FspStatusReportInvocation, _elGetter: $.ASN1Encoder<FspStatusReportInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_FspPacketLastProcessed(value.fspPacketLastProcessed, $.BER),

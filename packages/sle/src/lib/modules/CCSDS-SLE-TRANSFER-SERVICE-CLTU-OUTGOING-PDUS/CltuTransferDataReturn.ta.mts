@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
-// export { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
 import { BufferSize, _decode_BufferSize, _encode_BufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/BufferSize.ta.mjs";
-// export { BufferSize, _decode_BufferSize, _encode_BufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/BufferSize.ta.mjs";
 import { CltuTransferDataReturn_result, _decode_CltuTransferDataReturn_result, _encode_CltuTransferDataReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuTransferDataReturn-result.ta.mjs";
-// export { CltuTransferDataReturn_result, _decode_CltuTransferDataReturn_result, _encode_CltuTransferDataReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuTransferDataReturn-result.ta.mjs";
 
 
 /**
@@ -200,7 +195,7 @@ let _cached_encoder_for_CltuTransferDataReturn: $.ASN1Encoder<CltuTransferDataRe
  */
 export
 function _encode_CltuTransferDataReturn (value: CltuTransferDataReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuTransferDataReturn) { _cached_encoder_for_CltuTransferDataReturn = function (value: CltuTransferDataReturn, elGetter: $.ASN1Encoder<CltuTransferDataReturn>): _Element {
+    if (!_cached_encoder_for_CltuTransferDataReturn) { _cached_encoder_for_CltuTransferDataReturn = function (value: CltuTransferDataReturn, _elGetter: $.ASN1Encoder<CltuTransferDataReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

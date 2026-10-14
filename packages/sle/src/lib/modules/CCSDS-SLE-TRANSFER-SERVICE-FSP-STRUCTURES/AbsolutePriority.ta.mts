@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/VcOrMapId.ta.mjs";
-// export { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/VcOrMapId.ta.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Priority.ta.mjs";
 
 
 /**
@@ -149,7 +147,7 @@ let _cached_encoder_for_AbsolutePriority: $.ASN1Encoder<AbsolutePriority> | null
  */
 export
 function _encode_AbsolutePriority (value: AbsolutePriority, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AbsolutePriority) { _cached_encoder_for_AbsolutePriority = function (value: AbsolutePriority, elGetter: $.ASN1Encoder<AbsolutePriority>): _Element {
+    if (!_cached_encoder_for_AbsolutePriority) { _cached_encoder_for_AbsolutePriority = function (value: AbsolutePriority, _elGetter: $.ASN1Encoder<AbsolutePriority>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_VcOrMapId(value.vcOrMapId, $.BER),
         /* REQUIRED   */ _encode_Priority(value.priority, $.BER)

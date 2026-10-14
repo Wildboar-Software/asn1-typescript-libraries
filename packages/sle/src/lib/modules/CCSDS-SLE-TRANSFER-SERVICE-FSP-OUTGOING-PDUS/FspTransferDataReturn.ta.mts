@@ -6,15 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
-// export { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
 import { BufferSize, _decode_BufferSize, _encode_BufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BufferSize.ta.mjs";
-// export { BufferSize, _decode_BufferSize, _encode_BufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BufferSize.ta.mjs";
 import { FspTransferDataReturn_result, _decode_FspTransferDataReturn_result, _encode_FspTransferDataReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspTransferDataReturn-result.ta.mjs";
-// export { FspTransferDataReturn_result, _decode_FspTransferDataReturn_result, _encode_FspTransferDataReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspTransferDataReturn-result.ta.mjs";
 
 
 /**
@@ -200,7 +195,7 @@ let _cached_encoder_for_FspTransferDataReturn: $.ASN1Encoder<FspTransferDataRetu
  */
 export
 function _encode_FspTransferDataReturn (value: FspTransferDataReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspTransferDataReturn) { _cached_encoder_for_FspTransferDataReturn = function (value: FspTransferDataReturn, elGetter: $.ASN1Encoder<FspTransferDataReturn>): _Element {
+    if (!_cached_encoder_for_FspTransferDataReturn) { _cached_encoder_for_FspTransferDataReturn = function (value: FspTransferDataReturn, _elGetter: $.ASN1Encoder<FspTransferDataReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

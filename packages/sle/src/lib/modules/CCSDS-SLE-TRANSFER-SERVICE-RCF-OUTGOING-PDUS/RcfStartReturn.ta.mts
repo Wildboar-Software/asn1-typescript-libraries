@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { RcfStartReturn_result, _decode_RcfStartReturn_result, _encode_RcfStartReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfStartReturn-result.ta.mjs";
-// export { RcfStartReturn_result, _decode_RcfStartReturn_result, _encode_RcfStartReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfStartReturn-result.ta.mjs";
 
 
 /**
@@ -168,7 +165,7 @@ let _cached_encoder_for_RcfStartReturn: $.ASN1Encoder<RcfStartReturn> | null = n
  */
 export
 function _encode_RcfStartReturn (value: RcfStartReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RcfStartReturn) { _cached_encoder_for_RcfStartReturn = function (value: RcfStartReturn, elGetter: $.ASN1Encoder<RcfStartReturn>): _Element {
+    if (!_cached_encoder_for_RcfStartReturn) { _cached_encoder_for_RcfStartReturn = function (value: RcfStartReturn, _elGetter: $.ASN1Encoder<RcfStartReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

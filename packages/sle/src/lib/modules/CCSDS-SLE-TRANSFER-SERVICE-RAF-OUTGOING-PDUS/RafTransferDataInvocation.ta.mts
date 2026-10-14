@@ -3,22 +3,20 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 import { AntennaId, _decode_AntennaId, _encode_AntennaId } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/AntennaId.ta.mjs";
-// export { AntennaId, _decode_AntennaId, _encode_AntennaId } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/AntennaId.ta.mjs";
 import { FrameQuality, _decode_FrameQuality, _encode_FrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/FrameQuality.ta.mjs";
-// export { FrameQuality, FrameQuality_good /* IMPORTED_LONG_NAMED_INTEGER */, good /* IMPORTED_SHORT_NAMED_INTEGER */, FrameQuality_erred /* IMPORTED_LONG_NAMED_INTEGER */, erred /* IMPORTED_SHORT_NAMED_INTEGER */, FrameQuality_undetermined /* IMPORTED_LONG_NAMED_INTEGER */, undetermined /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_FrameQuality, _encode_FrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/FrameQuality.ta.mjs";
 import { RafTransferDataInvocation_privateAnnotation, _decode_RafTransferDataInvocation_privateAnnotation, _encode_RafTransferDataInvocation_privateAnnotation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafTransferDataInvocation-privateAnnotation.ta.mjs";
-// export { RafTransferDataInvocation_privateAnnotation, _decode_RafTransferDataInvocation_privateAnnotation, _encode_RafTransferDataInvocation_privateAnnotation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafTransferDataInvocation-privateAnnotation.ta.mjs";
 import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
-// export { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
 
+
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary RafTransferDataInvocation
@@ -97,6 +95,9 @@ class RafTransferDataInvocation {
         privateAnnotation: RafTransferDataInvocation_privateAnnotation,
         data: SpaceLinkDataUnit
     ) {
+        if (!integerInRange(dataLinkContinuity, -1, 16777215)) {
+            throw new ASN1OverflowError("RafTransferDataInvocation.dataLinkContinuity violates INTEGER (-1..16777215)");
+        }
         this.invokerCredentials = invokerCredentials;
         this.earthReceiveTime = earthReceiveTime;
         this.antennaId = antennaId;
@@ -231,7 +232,7 @@ let _cached_encoder_for_RafTransferDataInvocation: $.ASN1Encoder<RafTransferData
  */
 export
 function _encode_RafTransferDataInvocation (value: RafTransferDataInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafTransferDataInvocation) { _cached_encoder_for_RafTransferDataInvocation = function (value: RafTransferDataInvocation, elGetter: $.ASN1Encoder<RafTransferDataInvocation>): _Element {
+    if (!_cached_encoder_for_RafTransferDataInvocation) { _cached_encoder_for_RafTransferDataInvocation = function (value: RafTransferDataInvocation, _elGetter: $.ASN1Encoder<RafTransferDataInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_Time(value.earthReceiveTime, $.BER),

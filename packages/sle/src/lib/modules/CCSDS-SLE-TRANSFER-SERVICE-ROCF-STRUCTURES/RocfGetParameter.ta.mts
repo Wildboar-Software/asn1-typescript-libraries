@@ -5,33 +5,19 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RocfGetParameter_parBufferSize, _decode_RocfGetParameter_parBufferSize, _encode_RocfGetParameter_parBufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parBufferSize.ta.mjs";
-// export { RocfGetParameter_parBufferSize, _decode_RocfGetParameter_parBufferSize, _encode_RocfGetParameter_parBufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parBufferSize.ta.mjs";
 import { RocfGetParameter_parDeliveryMode, _decode_RocfGetParameter_parDeliveryMode, _encode_RocfGetParameter_parDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parDeliveryMode.ta.mjs";
-// export { RocfGetParameter_parDeliveryMode, _decode_RocfGetParameter_parDeliveryMode, _encode_RocfGetParameter_parDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parDeliveryMode.ta.mjs";
 import { RocfGetParameter_parLatencyLimit, _decode_RocfGetParameter_parLatencyLimit, _encode_RocfGetParameter_parLatencyLimit } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parLatencyLimit.ta.mjs";
-// export { RocfGetParameter_parLatencyLimit, _decode_RocfGetParameter_parLatencyLimit, _encode_RocfGetParameter_parLatencyLimit } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parLatencyLimit.ta.mjs";
 import { RocfGetParameter_parMinReportingCycle, _decode_RocfGetParameter_parMinReportingCycle, _encode_RocfGetParameter_parMinReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parMinReportingCycle.ta.mjs";
-// export { RocfGetParameter_parMinReportingCycle, _decode_RocfGetParameter_parMinReportingCycle, _encode_RocfGetParameter_parMinReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parMinReportingCycle.ta.mjs";
 import { RocfGetParameter_parPermittedGvcidSet, _decode_RocfGetParameter_parPermittedGvcidSet, _encode_RocfGetParameter_parPermittedGvcidSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parPermittedGvcidSet.ta.mjs";
-// export { RocfGetParameter_parPermittedGvcidSet, _decode_RocfGetParameter_parPermittedGvcidSet, _encode_RocfGetParameter_parPermittedGvcidSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parPermittedGvcidSet.ta.mjs";
 import { RocfGetParameter_parPermittedRprtTypeSet, _decode_RocfGetParameter_parPermittedRprtTypeSet, _encode_RocfGetParameter_parPermittedRprtTypeSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parPermittedRprtTypeSet.ta.mjs";
-// export { RocfGetParameter_parPermittedRprtTypeSet, _decode_RocfGetParameter_parPermittedRprtTypeSet, _encode_RocfGetParameter_parPermittedRprtTypeSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parPermittedRprtTypeSet.ta.mjs";
 import { RocfGetParameter_parPermittedTcVcidSet, _decode_RocfGetParameter_parPermittedTcVcidSet, _encode_RocfGetParameter_parPermittedTcVcidSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parPermittedTcVcidSet.ta.mjs";
-// export { RocfGetParameter_parPermittedTcVcidSet, _decode_RocfGetParameter_parPermittedTcVcidSet, _encode_RocfGetParameter_parPermittedTcVcidSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parPermittedTcVcidSet.ta.mjs";
 import { RocfGetParameter_parPermittedUpdModeSet, _decode_RocfGetParameter_parPermittedUpdModeSet, _encode_RocfGetParameter_parPermittedUpdModeSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parPermittedUpdModeSet.ta.mjs";
-// export { RocfGetParameter_parPermittedUpdModeSet, _decode_RocfGetParameter_parPermittedUpdModeSet, _encode_RocfGetParameter_parPermittedUpdModeSet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parPermittedUpdModeSet.ta.mjs";
 import { RocfGetParameter_parReportingCycle, _decode_RocfGetParameter_parReportingCycle, _encode_RocfGetParameter_parReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReportingCycle.ta.mjs";
-// export { RocfGetParameter_parReportingCycle, _decode_RocfGetParameter_parReportingCycle, _encode_RocfGetParameter_parReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReportingCycle.ta.mjs";
 import { RocfGetParameter_parReqGvcId, _decode_RocfGetParameter_parReqGvcId, _encode_RocfGetParameter_parReqGvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReqGvcId.ta.mjs";
-// export { RocfGetParameter_parReqGvcId, _decode_RocfGetParameter_parReqGvcId, _encode_RocfGetParameter_parReqGvcId } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReqGvcId.ta.mjs";
 import { RocfGetParameter_parReqControlWordType, _decode_RocfGetParameter_parReqControlWordType, _encode_RocfGetParameter_parReqControlWordType } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReqControlWordType.ta.mjs";
-// export { RocfGetParameter_parReqControlWordType, _decode_RocfGetParameter_parReqControlWordType, _encode_RocfGetParameter_parReqControlWordType } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReqControlWordType.ta.mjs";
 import { RocfGetParameter_parReqTcVcid, _decode_RocfGetParameter_parReqTcVcid, _encode_RocfGetParameter_parReqTcVcid } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReqTcVcid.ta.mjs";
-// export { RocfGetParameter_parReqTcVcid, _decode_RocfGetParameter_parReqTcVcid, _encode_RocfGetParameter_parReqTcVcid } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReqTcVcid.ta.mjs";
 import { RocfGetParameter_parReqUpdateMode, _decode_RocfGetParameter_parReqUpdateMode, _encode_RocfGetParameter_parReqUpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReqUpdateMode.ta.mjs";
-// export { RocfGetParameter_parReqUpdateMode, _decode_RocfGetParameter_parReqUpdateMode, _encode_RocfGetParameter_parReqUpdateMode } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReqUpdateMode.ta.mjs";
 import { RocfGetParameter_parReturnTimeout, _decode_RocfGetParameter_parReturnTimeout, _encode_RocfGetParameter_parReturnTimeout } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReturnTimeout.ta.mjs";
-// export { RocfGetParameter_parReturnTimeout, _decode_RocfGetParameter_parReturnTimeout, _encode_RocfGetParameter_parReturnTimeout } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter-parReturnTimeout.ta.mjs";
 
 
 /**

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RcfTransferDataInvocation, _decode_RcfTransferDataInvocation, _encode_RcfTransferDataInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfTransferDataInvocation.ta.mjs";
-// export { RcfTransferDataInvocation, _decode_RcfTransferDataInvocation, _encode_RcfTransferDataInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfTransferDataInvocation.ta.mjs";
 import { RcfSyncNotifyInvocation, _decode_RcfSyncNotifyInvocation, _encode_RcfSyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfSyncNotifyInvocation.ta.mjs";
-// export { RcfSyncNotifyInvocation, _decode_RcfSyncNotifyInvocation, _encode_RcfSyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfSyncNotifyInvocation.ta.mjs";
 
 
 /**

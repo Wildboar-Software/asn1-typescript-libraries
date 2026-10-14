@@ -3,12 +3,15 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
-// export { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
 
+
+
+import { integerInRange } from "../../constraints.mjs";
 
 /**
  * @summary PacketRadiatedInfo
@@ -44,6 +47,9 @@ class PacketRadiatedInfo {
         packetIdentificationList: PacketIdentificationList,
         frameSequenceNumber: INTEGER
     ) {
+        if (!integerInRange(frameSequenceNumber, 0, 255)) {
+            throw new ASN1OverflowError("PacketRadiatedInfo.frameSequenceNumber violates INTEGER (0..255)");
+        }
         this.packetIdentificationList = packetIdentificationList;
         this.frameSequenceNumber = frameSequenceNumber;
     }
@@ -148,7 +154,7 @@ let _cached_encoder_for_PacketRadiatedInfo: $.ASN1Encoder<PacketRadiatedInfo> | 
  */
 export
 function _encode_PacketRadiatedInfo (value: PacketRadiatedInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PacketRadiatedInfo) { _cached_encoder_for_PacketRadiatedInfo = function (value: PacketRadiatedInfo, elGetter: $.ASN1Encoder<PacketRadiatedInfo>): _Element {
+    if (!_cached_encoder_for_PacketRadiatedInfo) { _cached_encoder_for_PacketRadiatedInfo = function (value: PacketRadiatedInfo, _elGetter: $.ASN1Encoder<PacketRadiatedInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PacketIdentificationList(value.packetIdentificationList, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.frameSequenceNumber, $.BER)

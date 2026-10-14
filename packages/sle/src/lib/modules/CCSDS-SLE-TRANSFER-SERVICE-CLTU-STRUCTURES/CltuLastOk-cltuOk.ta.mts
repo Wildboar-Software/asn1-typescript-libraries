@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
-// export { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuLastOk-cltuOk ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuLastOk-cltuOk ::= SEQUENCE
+ *    {  cltuIdentification               CltuIdentification
+ *    ,  radiationStopTime                Time
+ *    }
  * ```
  * 
  * @class
@@ -146,7 +147,7 @@ let _cached_encoder_for_CltuLastOk_cltuOk: $.ASN1Encoder<CltuLastOk_cltuOk> | nu
  */
 export
 function _encode_CltuLastOk_cltuOk (value: CltuLastOk_cltuOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuLastOk_cltuOk) { _cached_encoder_for_CltuLastOk_cltuOk = function (value: CltuLastOk_cltuOk, elGetter: $.ASN1Encoder<CltuLastOk_cltuOk>): _Element {
+    if (!_cached_encoder_for_CltuLastOk_cltuOk) { _cached_encoder_for_CltuLastOk_cltuOk = function (value: CltuLastOk_cltuOk, _elGetter: $.ASN1Encoder<CltuLastOk_cltuOk>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_CltuIdentification(value.cltuIdentification, $.BER),
         /* REQUIRED   */ _encode_Time(value.radiationStopTime, $.BER)

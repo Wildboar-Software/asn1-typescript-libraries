@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -1006,35 +1005,8 @@ const ParameterName_virtualChannel: ParameterName = 41; /* LONG_NAMED_INTEGER_VA
  */
 export
 const virtualChannel: ParameterName = ParameterName_virtualChannel; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_ParameterName: $.ASN1Decoder<ParameterName> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) ParameterName
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_ParameterName (el: _Element): ParameterName {
-    if (!_cached_decoder_for_ParameterName) { _cached_decoder_for_ParameterName = $._decodeInteger; }
-    return _cached_decoder_for_ParameterName(el);
-}
-
-let _cached_encoder_for_ParameterName: $.ASN1Encoder<ParameterName> | null = null;
-
-/**
- * @summary Encodes a(n) ParameterName into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The ParameterName, encoded as an ASN.1 Element.
- */
-export
-function _encode_ParameterName (value: ParameterName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ParameterName) { _cached_encoder_for_ParameterName = $._encodeInteger; }
-    return _cached_encoder_for_ParameterName(value, elGetter);
-}
+export const _decode_ParameterName: $.ASN1Decoder<ParameterName> = $._decodeInteger;
+export const _encode_ParameterName: $.ASN1Encoder<ParameterName> = $._encodeInteger;
 
 
 /* eslint-enable */

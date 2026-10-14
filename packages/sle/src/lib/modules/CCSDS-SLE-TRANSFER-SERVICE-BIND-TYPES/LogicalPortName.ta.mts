@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IdentifierString, _decode_IdentifierString, _encode_IdentifierString } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/IdentifierString.ta.mjs";
-// export { IdentifierString, _decode_IdentifierString, _encode_IdentifierString } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/IdentifierString.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_LogicalPortName: $.ASN1Decoder<LogicalPortName> | null =
 export
 function _decode_LogicalPortName (el: _Element): LogicalPortName {
     if (!_cached_decoder_for_LogicalPortName) { _cached_decoder_for_LogicalPortName = _decode_IdentifierString; }
-    return _cached_decoder_for_LogicalPortName(el);
+    const _decoded = _cached_decoder_for_LogicalPortName(el);
+    if (_decoded.length < 1 || _decoded.length > 128) {
+        throw new ASN1SizeError("LogicalPortName violates SIZE (1..128)");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_LogicalPortName: $.ASN1Encoder<LogicalPortName> | null = null;

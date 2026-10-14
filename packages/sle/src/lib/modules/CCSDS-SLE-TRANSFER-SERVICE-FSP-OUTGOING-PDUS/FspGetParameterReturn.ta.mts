@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { FspGetParameterReturn_result, _decode_FspGetParameterReturn_result, _encode_FspGetParameterReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspGetParameterReturn-result.ta.mjs";
-// export { FspGetParameterReturn_result, _decode_FspGetParameterReturn_result, _encode_FspGetParameterReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspGetParameterReturn-result.ta.mjs";
 
 
 /**
@@ -168,7 +165,7 @@ let _cached_encoder_for_FspGetParameterReturn: $.ASN1Encoder<FspGetParameterRetu
  */
 export
 function _encode_FspGetParameterReturn (value: FspGetParameterReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspGetParameterReturn) { _cached_encoder_for_FspGetParameterReturn = function (value: FspGetParameterReturn, elGetter: $.ASN1Encoder<FspGetParameterReturn>): _Element {
+    if (!_cached_encoder_for_FspGetParameterReturn) { _cached_encoder_for_FspGetParameterReturn = function (value: FspGetParameterReturn, _elGetter: $.ASN1Encoder<FspGetParameterReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

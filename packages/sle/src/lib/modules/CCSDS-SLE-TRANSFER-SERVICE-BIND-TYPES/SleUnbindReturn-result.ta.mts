@@ -15,7 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SleUnbindReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SleUnbindReturn-result ::= CHOICE
+ *    { positive          [0]    NULL
+ *    }
  * ```
  */
 export

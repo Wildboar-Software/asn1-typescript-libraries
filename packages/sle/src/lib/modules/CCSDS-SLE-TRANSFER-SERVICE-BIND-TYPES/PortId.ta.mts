@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LogicalPortName, _decode_LogicalPortName, _encode_LogicalPortName } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/LogicalPortName.ta.mjs";
-// export { LogicalPortName, _decode_LogicalPortName, _encode_LogicalPortName } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/LogicalPortName.ta.mjs";
 
 
 /**

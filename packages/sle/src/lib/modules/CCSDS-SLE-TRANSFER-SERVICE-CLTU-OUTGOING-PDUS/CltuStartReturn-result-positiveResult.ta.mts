@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
-// export { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuStartReturn-result-positiveResult ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuStartReturn-result-positiveResult ::= SEQUENCE
+ *       {  startRadiationTime         Time
+ *       ,  stopRadiationTime          ConditionalTime
+ *       }
  * ```
  * 
  * @class
@@ -145,7 +146,7 @@ let _cached_encoder_for_CltuStartReturn_result_positiveResult: $.ASN1Encoder<Clt
  */
 export
 function _encode_CltuStartReturn_result_positiveResult (value: CltuStartReturn_result_positiveResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuStartReturn_result_positiveResult) { _cached_encoder_for_CltuStartReturn_result_positiveResult = function (value: CltuStartReturn_result_positiveResult, elGetter: $.ASN1Encoder<CltuStartReturn_result_positiveResult>): _Element {
+    if (!_cached_encoder_for_CltuStartReturn_result_positiveResult) { _cached_encoder_for_CltuStartReturn_result_positiveResult = function (value: CltuStartReturn_result_positiveResult, _elGetter: $.ASN1Encoder<CltuStartReturn_result_positiveResult>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Time(value.startRadiationTime, $.BER),
         /* REQUIRED   */ _encode_ConditionalTime(value.stopRadiationTime, $.BER)

@@ -3,17 +3,14 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
-// export { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
 import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
-// export { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
 
 
 /**
@@ -74,6 +71,9 @@ class FspThrowEventInvocation {
         eventQualifier: OCTET_STRING,
         eventInvocationIdentification: IntUnsignedLong
     ) {
+        if (eventQualifier.length < 1 || eventQualifier.length > 1024) {
+            throw new ASN1SizeError("FspThrowEventInvocation.eventQualifier violates SIZE (1..1024)");
+        }
         this.invokerCredentials = invokerCredentials;
         this.invokeId = invokeId;
         this.eventIdentifier = eventIdentifier;
@@ -196,7 +196,7 @@ let _cached_encoder_for_FspThrowEventInvocation: $.ASN1Encoder<FspThrowEventInvo
  */
 export
 function _encode_FspThrowEventInvocation (value: FspThrowEventInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspThrowEventInvocation) { _cached_encoder_for_FspThrowEventInvocation = function (value: FspThrowEventInvocation, elGetter: $.ASN1Encoder<FspThrowEventInvocation>): _Element {
+    if (!_cached_encoder_for_FspThrowEventInvocation) { _cached_encoder_for_FspThrowEventInvocation = function (value: FspThrowEventInvocation, _elGetter: $.ASN1Encoder<FspThrowEventInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

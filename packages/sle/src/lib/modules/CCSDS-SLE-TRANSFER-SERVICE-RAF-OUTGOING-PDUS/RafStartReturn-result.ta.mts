@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticRafStart, _decode_DiagnosticRafStart, _encode_DiagnosticRafStart } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/DiagnosticRafStart.ta.mjs";
-// export { DiagnosticRafStart, _decode_DiagnosticRafStart, _encode_DiagnosticRafStart } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/DiagnosticRafStart.ta.mjs";
 
 
 /**
@@ -16,7 +15,10 @@ import { DiagnosticRafStart, _decode_DiagnosticRafStart, _encode_DiagnosticRafSt
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RafStartReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RafStartReturn-result ::= CHOICE
+ *     {   positiveResult                     [0] NULL
+ *     ,   negativeResult                     [1] DiagnosticRafStart
+ *     }
  * ```
  */
 export

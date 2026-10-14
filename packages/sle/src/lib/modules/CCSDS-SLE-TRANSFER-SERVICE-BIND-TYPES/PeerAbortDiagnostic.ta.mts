@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -193,35 +192,8 @@ const PeerAbortDiagnostic_otherReason: PeerAbortDiagnostic = 127; /* LONG_NAMED_
  */
 export
 const otherReason: PeerAbortDiagnostic = PeerAbortDiagnostic_otherReason; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_PeerAbortDiagnostic: $.ASN1Decoder<PeerAbortDiagnostic> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) PeerAbortDiagnostic
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_PeerAbortDiagnostic (el: _Element): PeerAbortDiagnostic {
-    if (!_cached_decoder_for_PeerAbortDiagnostic) { _cached_decoder_for_PeerAbortDiagnostic = $._decodeInteger; }
-    return _cached_decoder_for_PeerAbortDiagnostic(el);
-}
-
-let _cached_encoder_for_PeerAbortDiagnostic: $.ASN1Encoder<PeerAbortDiagnostic> | null = null;
-
-/**
- * @summary Encodes a(n) PeerAbortDiagnostic into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The PeerAbortDiagnostic, encoded as an ASN.1 Element.
- */
-export
-function _encode_PeerAbortDiagnostic (value: PeerAbortDiagnostic, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PeerAbortDiagnostic) { _cached_encoder_for_PeerAbortDiagnostic = $._encodeInteger; }
-    return _cached_encoder_for_PeerAbortDiagnostic(value, elGetter);
-}
+export const _decode_PeerAbortDiagnostic: $.ASN1Decoder<PeerAbortDiagnostic> = $._decodeInteger;
+export const _encode_PeerAbortDiagnostic: $.ASN1Encoder<PeerAbortDiagnostic> = $._encodeInteger;
 
 
 /* eslint-enable */

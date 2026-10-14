@@ -11,6 +11,7 @@
     ],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": true,
     "importHelpers": true
   },
   "include": [
@@ -19,6 +20,8 @@
     "vitest.config.ts",
     "vitest.config.mts",
     "src/**/*.test.ts",
+    "src/**/*.test.mts",
+    "src/**/*.spec.mts",
     "src/**/*.spec.ts",
     "src/**/*.test.tsx",
     "src/**/*.spec.tsx",

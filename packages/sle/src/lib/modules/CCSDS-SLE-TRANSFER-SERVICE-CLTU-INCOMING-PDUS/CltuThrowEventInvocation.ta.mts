@@ -3,17 +3,14 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/EventInvocationId.ta.mjs";
-// export { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/EventInvocationId.ta.mjs";
 import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
-// export { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
 
 
 /**
@@ -74,6 +71,9 @@ class CltuThrowEventInvocation {
         eventIdentifier: IntPosShort,
         eventQualifier: OCTET_STRING
     ) {
+        if (eventQualifier.length < 1 || eventQualifier.length > 1024) {
+            throw new ASN1SizeError("CltuThrowEventInvocation.eventQualifier violates SIZE (1..1024)");
+        }
         this.invokerCredentials = invokerCredentials;
         this.invokeId = invokeId;
         this.eventInvocationIdentification = eventInvocationIdentification;
@@ -196,7 +196,7 @@ let _cached_encoder_for_CltuThrowEventInvocation: $.ASN1Encoder<CltuThrowEventIn
  */
 export
 function _encode_CltuThrowEventInvocation (value: CltuThrowEventInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuThrowEventInvocation) { _cached_encoder_for_CltuThrowEventInvocation = function (value: CltuThrowEventInvocation, elGetter: $.ASN1Encoder<CltuThrowEventInvocation>): _Element {
+    if (!_cached_encoder_for_CltuThrowEventInvocation) { _cached_encoder_for_CltuThrowEventInvocation = function (value: CltuThrowEventInvocation, _elGetter: $.ASN1Encoder<CltuThrowEventInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

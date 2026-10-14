@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
-// export { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 
 
 /**
@@ -18,7 +16,10 @@ import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspPacketLastOk-packetOk ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspPacketLastOk-packetOk ::= SEQUENCE
+ *    {  packetIdentification    PacketIdentification
+ *    ,  processingStopTime      Time
+ *    }
  * ```
  * 
  * @class
@@ -146,7 +147,7 @@ let _cached_encoder_for_FspPacketLastOk_packetOk: $.ASN1Encoder<FspPacketLastOk_
  */
 export
 function _encode_FspPacketLastOk_packetOk (value: FspPacketLastOk_packetOk, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspPacketLastOk_packetOk) { _cached_encoder_for_FspPacketLastOk_packetOk = function (value: FspPacketLastOk_packetOk, elGetter: $.ASN1Encoder<FspPacketLastOk_packetOk>): _Element {
+    if (!_cached_encoder_for_FspPacketLastOk_packetOk) { _cached_encoder_for_FspPacketLastOk_packetOk = function (value: FspPacketLastOk_packetOk, _elGetter: $.ASN1Encoder<FspPacketLastOk_packetOk>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PacketIdentification(value.packetIdentification, $.BER),
         /* REQUIRED   */ _encode_Time(value.processingStopTime, $.BER)

@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,7 +13,24 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DiagnosticFspTransferData-specific ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DiagnosticFspTransferData-specific ::= INTEGER
+ *    {  unableToProcess                     (0)
+ *    ,  unableToStore                       (1)
+ *    ,  packetIdentificationOutOfSequence   (2)
+ *    ,  duplicatePacketIdentification       (3)
+ * ,  inconsistentTimeRange                  (4)
+ *    ,  invalidTime                         (5)
+ *    ,  conflictingProductionTimeIntervals  (6)
+ *    ,  lateSldu                            (7)
+ *    ,  invalidDelayTime                    (8)
+ *    ,  invalidTransmissionMode             (9)
+ *    ,  invalidMap                          (10)
+ *    ,  invalidNotificationRequest          (11)
+ *    ,  packetTooLong                       (12)
+ *    ,  unsupportedPacketVersion            (13)
+ *    ,  incorrectPacketType                 (14)
+ *    ,  invalidPacketApid                   (15)
+ *    }
  * ```
  */
 export
@@ -275,35 +291,8 @@ const DiagnosticFspTransferData_specific_invalidPacketApid: DiagnosticFspTransfe
  */
 export
 const invalidPacketApid: DiagnosticFspTransferData_specific = DiagnosticFspTransferData_specific_invalidPacketApid; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_DiagnosticFspTransferData_specific: $.ASN1Decoder<DiagnosticFspTransferData_specific> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) DiagnosticFspTransferData_specific
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_DiagnosticFspTransferData_specific (el: _Element): DiagnosticFspTransferData_specific {
-    if (!_cached_decoder_for_DiagnosticFspTransferData_specific) { _cached_decoder_for_DiagnosticFspTransferData_specific = $._decodeInteger; }
-    return _cached_decoder_for_DiagnosticFspTransferData_specific(el);
-}
-
-let _cached_encoder_for_DiagnosticFspTransferData_specific: $.ASN1Encoder<DiagnosticFspTransferData_specific> | null = null;
-
-/**
- * @summary Encodes a(n) DiagnosticFspTransferData_specific into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The DiagnosticFspTransferData_specific, encoded as an ASN.1 Element.
- */
-export
-function _encode_DiagnosticFspTransferData_specific (value: DiagnosticFspTransferData_specific, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DiagnosticFspTransferData_specific) { _cached_encoder_for_DiagnosticFspTransferData_specific = $._encodeInteger; }
-    return _cached_encoder_for_DiagnosticFspTransferData_specific(value, elGetter);
-}
+export const _decode_DiagnosticFspTransferData_specific: $.ASN1Decoder<DiagnosticFspTransferData_specific> = $._decodeInteger;
+export const _encode_DiagnosticFspTransferData_specific: $.ASN1Encoder<DiagnosticFspTransferData_specific> = $._encodeInteger;
 
 
 /* eslint-enable */

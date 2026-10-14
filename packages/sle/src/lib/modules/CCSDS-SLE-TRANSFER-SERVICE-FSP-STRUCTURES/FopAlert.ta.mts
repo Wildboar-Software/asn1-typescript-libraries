@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -156,35 +155,8 @@ const FopAlert_terminateADService: FopAlert = 7; /* LONG_NAMED_INTEGER_VALUE */
  */
 export
 const terminateADService: FopAlert = FopAlert_terminateADService; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_FopAlert: $.ASN1Decoder<FopAlert> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) FopAlert
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_FopAlert (el: _Element): FopAlert {
-    if (!_cached_decoder_for_FopAlert) { _cached_decoder_for_FopAlert = $._decodeInteger; }
-    return _cached_decoder_for_FopAlert(el);
-}
-
-let _cached_encoder_for_FopAlert: $.ASN1Encoder<FopAlert> | null = null;
-
-/**
- * @summary Encodes a(n) FopAlert into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The FopAlert, encoded as an ASN.1 Element.
- */
-export
-function _encode_FopAlert (value: FopAlert, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FopAlert) { _cached_encoder_for_FopAlert = $._encodeInteger; }
-    return _cached_encoder_for_FopAlert(value, elGetter);
-}
+export const _decode_FopAlert: $.ASN1Decoder<FopAlert> = $._decodeInteger;
+export const _encode_FopAlert: $.ASN1Encoder<FopAlert> = $._encodeInteger;
 
 
 /* eslint-enable */

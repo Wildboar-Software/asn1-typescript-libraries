@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { rocf } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/rocf.va.mjs";
-// export { rocf } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/rocf.va.mjs";
 import { type ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ATTRIBUTE.oca.mjs";
 
 

@@ -5,23 +5,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SleBindInvocation, _decode_SleBindInvocation, _encode_SleBindInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindInvocation.ta.mjs";
-// export { SleBindInvocation, _decode_SleBindInvocation, _encode_SleBindInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindInvocation.ta.mjs";
 import { SleUnbindInvocation, _decode_SleUnbindInvocation, _encode_SleUnbindInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleUnbindInvocation.ta.mjs";
-// export { SleUnbindInvocation, _decode_SleUnbindInvocation, _encode_SleUnbindInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleUnbindInvocation.ta.mjs";
 import { CltuStartInvocation, _decode_CltuStartInvocation, _encode_CltuStartInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/CltuStartInvocation.ta.mjs";
-// export { CltuStartInvocation, _decode_CltuStartInvocation, _encode_CltuStartInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/CltuStartInvocation.ta.mjs";
 import { SleStopInvocation, _decode_SleStopInvocation, _encode_SleStopInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleStopInvocation.ta.mjs";
-// export { SleStopInvocation, _decode_SleStopInvocation, _encode_SleStopInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleStopInvocation.ta.mjs";
 import { SleScheduleStatusReportInvocation, _decode_SleScheduleStatusReportInvocation, _encode_SleScheduleStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleScheduleStatusReportInvocation.ta.mjs";
-// export { SleScheduleStatusReportInvocation, _decode_SleScheduleStatusReportInvocation, _encode_SleScheduleStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleScheduleStatusReportInvocation.ta.mjs";
 import { CltuGetParameterInvocation, _decode_CltuGetParameterInvocation, _encode_CltuGetParameterInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/CltuGetParameterInvocation.ta.mjs";
-// export { CltuGetParameterInvocation, _decode_CltuGetParameterInvocation, _encode_CltuGetParameterInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/CltuGetParameterInvocation.ta.mjs";
 import { CltuThrowEventInvocation, _decode_CltuThrowEventInvocation, _encode_CltuThrowEventInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/CltuThrowEventInvocation.ta.mjs";
-// export { CltuThrowEventInvocation, _decode_CltuThrowEventInvocation, _encode_CltuThrowEventInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/CltuThrowEventInvocation.ta.mjs";
 import { CltuTransferDataInvocation, _decode_CltuTransferDataInvocation, _encode_CltuTransferDataInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/CltuTransferDataInvocation.ta.mjs";
-// export { CltuTransferDataInvocation, _decode_CltuTransferDataInvocation, _encode_CltuTransferDataInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/CltuTransferDataInvocation.ta.mjs";
 import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
-// export { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
 
 
 /**

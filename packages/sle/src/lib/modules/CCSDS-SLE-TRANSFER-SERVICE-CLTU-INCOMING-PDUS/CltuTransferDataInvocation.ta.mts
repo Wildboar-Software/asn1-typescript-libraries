@@ -6,19 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
-// export { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
 import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
-// export { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
 import { Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Duration.ta.mjs";
-// export { Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Duration.ta.mjs";
 import { SlduStatusNotification, _decode_SlduStatusNotification, _encode_SlduStatusNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SlduStatusNotification.ta.mjs";
-// export { SlduStatusNotification, SlduStatusNotification_produceNotification /* IMPORTED_LONG_NAMED_INTEGER */, produceNotification /* IMPORTED_SHORT_NAMED_INTEGER */, SlduStatusNotification_doNotProduceNotification /* IMPORTED_LONG_NAMED_INTEGER */, doNotProduceNotification /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SlduStatusNotification, _encode_SlduStatusNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SlduStatusNotification.ta.mjs";
 import { CltuData, _decode_CltuData, _encode_CltuData } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuData.ta.mjs";
-// export { CltuData, _decode_CltuData, _encode_CltuData } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuData.ta.mjs";
 
 
 /**
@@ -243,7 +236,7 @@ let _cached_encoder_for_CltuTransferDataInvocation: $.ASN1Encoder<CltuTransferDa
  */
 export
 function _encode_CltuTransferDataInvocation (value: CltuTransferDataInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuTransferDataInvocation) { _cached_encoder_for_CltuTransferDataInvocation = function (value: CltuTransferDataInvocation, elGetter: $.ASN1Encoder<CltuTransferDataInvocation>): _Element {
+    if (!_cached_encoder_for_CltuTransferDataInvocation) { _cached_encoder_for_CltuTransferDataInvocation = function (value: CltuTransferDataInvocation, _elGetter: $.ASN1Encoder<CltuTransferDataInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiagnosticRocfStart, _decode_DiagnosticRocfStart, _encode_DiagnosticRocfStart } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/DiagnosticRocfStart.ta.mjs";
-// export { DiagnosticRocfStart, _decode_DiagnosticRocfStart, _encode_DiagnosticRocfStart } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/DiagnosticRocfStart.ta.mjs";
 
 
 /**
@@ -16,7 +15,10 @@ import { DiagnosticRocfStart, _decode_DiagnosticRocfStart, _encode_DiagnosticRoc
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfStartReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfStartReturn-result ::= CHOICE
+ *    {  positiveResult    [0]   NULL
+ *    ,  negativeResult    [1]   DiagnosticRocfStart
+ *    }
  * ```
  */
 export

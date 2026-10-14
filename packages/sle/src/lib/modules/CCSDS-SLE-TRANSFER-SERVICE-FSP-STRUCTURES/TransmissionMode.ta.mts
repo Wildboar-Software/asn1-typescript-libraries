@@ -1,6 +1,5 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
     INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -71,35 +70,8 @@ const TransmissionMode_sequenceControlledUnblock: TransmissionMode = 2; /* LONG_
  */
 export
 const sequenceControlledUnblock: TransmissionMode = TransmissionMode_sequenceControlledUnblock; /* SHORT_NAMED_INTEGER_VALUE */
-
-let _cached_decoder_for_TransmissionMode: $.ASN1Decoder<TransmissionMode> | null = null;
-
-/**
- * @summary Decodes an ASN.1 element into a(n) TransmissionMode
- * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
- */
-export
-function _decode_TransmissionMode (el: _Element): TransmissionMode {
-    if (!_cached_decoder_for_TransmissionMode) { _cached_decoder_for_TransmissionMode = $._decodeInteger; }
-    return _cached_decoder_for_TransmissionMode(el);
-}
-
-let _cached_encoder_for_TransmissionMode: $.ASN1Encoder<TransmissionMode> | null = null;
-
-/**
- * @summary Encodes a(n) TransmissionMode into an ASN.1 Element.
- * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The TransmissionMode, encoded as an ASN.1 Element.
- */
-export
-function _encode_TransmissionMode (value: TransmissionMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransmissionMode) { _cached_encoder_for_TransmissionMode = $._encodeInteger; }
-    return _cached_encoder_for_TransmissionMode(value, elGetter);
-}
+export const _decode_TransmissionMode: $.ASN1Decoder<TransmissionMode> = $._decodeInteger;
+export const _encode_TransmissionMode: $.ASN1Encoder<TransmissionMode> = $._encodeInteger;
 
 
 /* eslint-enable */

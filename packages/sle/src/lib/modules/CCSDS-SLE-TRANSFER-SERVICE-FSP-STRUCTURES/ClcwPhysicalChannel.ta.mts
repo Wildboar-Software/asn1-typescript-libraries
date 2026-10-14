@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     NULL,
-    VisibleString
+    VisibleString,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +42,13 @@ function _decode_ClcwPhysicalChannel (el: _Element): ClcwPhysicalChannel {
     "CONTEXT 0": [ "configured", $._decode_implicit<VisibleString>(() => $._decodeVisibleString) ],
     "CONTEXT 1": [ "notConfigured", $._decode_implicit<NULL>(() => $._decodeNull) ]
 }); }
-    return _cached_decoder_for_ClcwPhysicalChannel(el);
+    const _decoded = _cached_decoder_for_ClcwPhysicalChannel(el);
+    if ("configured" in _decoded) {
+        if (_decoded.configured.length < 1 || _decoded.configured.length > 32) {
+            throw new ASN1SizeError("ClcwPhysicalChannel.configured violates SIZE (1..32)");
+        }
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_ClcwPhysicalChannel: $.ASN1Encoder<ClcwPhysicalChannel> | null = null;

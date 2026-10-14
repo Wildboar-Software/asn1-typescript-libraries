@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
-// export { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuIdentification.ta.mjs";
 import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
-// export { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ConditionalTime.ta.mjs";
 import { CltuStatus, _decode_CltuStatus, _encode_CltuStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuStatus.ta.mjs";
-// export { CltuStatus, _decode_CltuStatus, _encode_CltuStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuStatus.ta.mjs";
 
 
 /**
@@ -20,7 +17,11 @@ import { CltuStatus, _decode_CltuStatus, _encode_CltuStatus } from "../CCSDS-SLE
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CltuLastProcessed-cltuProcessed ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CltuLastProcessed-cltuProcessed ::= SEQUENCE
+ *    {  cltuIdentification               CltuIdentification
+ *    ,  radiationStartTime               ConditionalTime
+ *    ,  cltuStatus                       CltuStatus
+ *    }
  * ```
  * 
  * @class
@@ -161,7 +162,7 @@ let _cached_encoder_for_CltuLastProcessed_cltuProcessed: $.ASN1Encoder<CltuLastP
  */
 export
 function _encode_CltuLastProcessed_cltuProcessed (value: CltuLastProcessed_cltuProcessed, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuLastProcessed_cltuProcessed) { _cached_encoder_for_CltuLastProcessed_cltuProcessed = function (value: CltuLastProcessed_cltuProcessed, elGetter: $.ASN1Encoder<CltuLastProcessed_cltuProcessed>): _Element {
+    if (!_cached_encoder_for_CltuLastProcessed_cltuProcessed) { _cached_encoder_for_CltuLastProcessed_cltuProcessed = function (value: CltuLastProcessed_cltuProcessed, _elGetter: $.ASN1Encoder<CltuLastProcessed_cltuProcessed>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_CltuIdentification(value.cltuIdentification, $.BER),
         /* REQUIRED   */ _encode_ConditionalTime(value.radiationStartTime, $.BER),

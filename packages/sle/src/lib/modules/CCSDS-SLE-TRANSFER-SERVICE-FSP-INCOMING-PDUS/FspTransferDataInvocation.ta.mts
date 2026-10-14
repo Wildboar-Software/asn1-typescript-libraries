@@ -6,25 +6,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
-// export { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
 import { ProductionTime, _decode_ProductionTime, _encode_ProductionTime } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/ProductionTime.ta.mjs";
-// export { ProductionTime, _decode_ProductionTime, _encode_ProductionTime } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/ProductionTime.ta.mjs";
 import { Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Duration.ta.mjs";
-// export { Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Duration.ta.mjs";
 import { TransmissionMode, _decode_TransmissionMode, _encode_TransmissionMode } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/TransmissionMode.ta.mjs";
-// export { TransmissionMode, TransmissionMode_sequenceControlled /* IMPORTED_LONG_NAMED_INTEGER */, sequenceControlled /* IMPORTED_SHORT_NAMED_INTEGER */, TransmissionMode_expedited /* IMPORTED_LONG_NAMED_INTEGER */, expedited /* IMPORTED_SHORT_NAMED_INTEGER */, TransmissionMode_sequenceControlledUnblock /* IMPORTED_LONG_NAMED_INTEGER */, sequenceControlledUnblock /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_TransmissionMode, _encode_TransmissionMode } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/TransmissionMode.ta.mjs";
 import { Map, _decode_Map, _encode_Map } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Map.ta.mjs";
-// export { Map, _decode_Map, _encode_Map } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Map.ta.mjs";
 import { BlockingUsage, _decode_BlockingUsage, _encode_BlockingUsage } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingUsage.ta.mjs";
-// export { BlockingUsage, BlockingUsage_permitted /* IMPORTED_LONG_NAMED_INTEGER */, permitted /* IMPORTED_SHORT_NAMED_INTEGER */, BlockingUsage_notPermitted /* IMPORTED_LONG_NAMED_INTEGER */, notPermitted /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_BlockingUsage, _encode_BlockingUsage } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingUsage.ta.mjs";
 import { SlduStatusNotification, _decode_SlduStatusNotification, _encode_SlduStatusNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SlduStatusNotification.ta.mjs";
-// export { SlduStatusNotification, SlduStatusNotification_produceNotification /* IMPORTED_LONG_NAMED_INTEGER */, produceNotification /* IMPORTED_SHORT_NAMED_INTEGER */, SlduStatusNotification_doNotProduceNotification /* IMPORTED_LONG_NAMED_INTEGER */, doNotProduceNotification /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SlduStatusNotification, _encode_SlduStatusNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SlduStatusNotification.ta.mjs";
 import { FspData, _decode_FspData, _encode_FspData } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspData.ta.mjs";
-// export { FspData, _decode_FspData, _encode_FspData } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspData.ta.mjs";
 
 
 /**
@@ -319,7 +309,7 @@ let _cached_encoder_for_FspTransferDataInvocation: $.ASN1Encoder<FspTransferData
  */
 export
 function _encode_FspTransferDataInvocation (value: FspTransferDataInvocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspTransferDataInvocation) { _cached_encoder_for_FspTransferDataInvocation = function (value: FspTransferDataInvocation, elGetter: $.ASN1Encoder<FspTransferDataInvocation>): _Element {
+    if (!_cached_encoder_for_FspTransferDataInvocation) { _cached_encoder_for_FspTransferDataInvocation = function (value: FspTransferDataInvocation, _elGetter: $.ASN1Encoder<FspTransferDataInvocation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.invokerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

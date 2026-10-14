@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-// export { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
 import { FspStartReturn_result, _decode_FspStartReturn_result, _encode_FspStartReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspStartReturn-result.ta.mjs";
-// export { FspStartReturn_result, _decode_FspStartReturn_result, _encode_FspStartReturn_result } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/FspStartReturn-result.ta.mjs";
 
 
 /**
@@ -171,7 +168,7 @@ let _cached_encoder_for_FspStartReturn: $.ASN1Encoder<FspStartReturn> | null = n
  */
 export
 function _encode_FspStartReturn (value: FspStartReturn, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspStartReturn) { _cached_encoder_for_FspStartReturn = function (value: FspStartReturn, elGetter: $.ASN1Encoder<FspStartReturn>): _Element {
+    if (!_cached_encoder_for_FspStartReturn) { _cached_encoder_for_FspStartReturn = function (value: FspStartReturn, _elGetter: $.ASN1Encoder<FspStartReturn>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Credentials(value.performerCredentials, $.BER),
         /* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER),

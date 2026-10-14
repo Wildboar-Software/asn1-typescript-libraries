@@ -5,21 +5,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RafGetParameter_parBufferSize, _decode_RafGetParameter_parBufferSize, _encode_RafGetParameter_parBufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parBufferSize.ta.mjs";
-// export { RafGetParameter_parBufferSize, _decode_RafGetParameter_parBufferSize, _encode_RafGetParameter_parBufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parBufferSize.ta.mjs";
 import { RafGetParameter_parDeliveryMode, _decode_RafGetParameter_parDeliveryMode, _encode_RafGetParameter_parDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parDeliveryMode.ta.mjs";
-// export { RafGetParameter_parDeliveryMode, _decode_RafGetParameter_parDeliveryMode, _encode_RafGetParameter_parDeliveryMode } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parDeliveryMode.ta.mjs";
 import { RafGetParameter_parLatencyLimit, _decode_RafGetParameter_parLatencyLimit, _encode_RafGetParameter_parLatencyLimit } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parLatencyLimit.ta.mjs";
-// export { RafGetParameter_parLatencyLimit, _decode_RafGetParameter_parLatencyLimit, _encode_RafGetParameter_parLatencyLimit } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parLatencyLimit.ta.mjs";
 import { RafGetParameter_parMinReportingCycle, _decode_RafGetParameter_parMinReportingCycle, _encode_RafGetParameter_parMinReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parMinReportingCycle.ta.mjs";
-// export { RafGetParameter_parMinReportingCycle, _decode_RafGetParameter_parMinReportingCycle, _encode_RafGetParameter_parMinReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parMinReportingCycle.ta.mjs";
 import { RafGetParameter_parPermittedFrameQuality, _decode_RafGetParameter_parPermittedFrameQuality, _encode_RafGetParameter_parPermittedFrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parPermittedFrameQuality.ta.mjs";
-// export { RafGetParameter_parPermittedFrameQuality, _decode_RafGetParameter_parPermittedFrameQuality, _encode_RafGetParameter_parPermittedFrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parPermittedFrameQuality.ta.mjs";
 import { RafGetParameter_parReportingCycle, _decode_RafGetParameter_parReportingCycle, _encode_RafGetParameter_parReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReportingCycle.ta.mjs";
-// export { RafGetParameter_parReportingCycle, _decode_RafGetParameter_parReportingCycle, _encode_RafGetParameter_parReportingCycle } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReportingCycle.ta.mjs";
 import { RafGetParameter_parReqFrameQuality, _decode_RafGetParameter_parReqFrameQuality, _encode_RafGetParameter_parReqFrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReqFrameQuality.ta.mjs";
-// export { RafGetParameter_parReqFrameQuality, _decode_RafGetParameter_parReqFrameQuality, _encode_RafGetParameter_parReqFrameQuality } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReqFrameQuality.ta.mjs";
 import { RafGetParameter_parReturnTimeout, _decode_RafGetParameter_parReturnTimeout, _encode_RafGetParameter_parReturnTimeout } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReturnTimeout.ta.mjs";
-// export { RafGetParameter_parReturnTimeout, _decode_RafGetParameter_parReturnTimeout, _encode_RafGetParameter_parReturnTimeout } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReturnTimeout.ta.mjs";
 
 
 /**

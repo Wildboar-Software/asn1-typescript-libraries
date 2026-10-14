@@ -5,27 +5,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SleBindReturn, _decode_SleBindReturn, _encode_SleBindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindReturn.ta.mjs";
-// export { SleBindReturn, _decode_SleBindReturn, _encode_SleBindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleBindReturn.ta.mjs";
 import { SleUnbindReturn, _decode_SleUnbindReturn, _encode_SleUnbindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleUnbindReturn.ta.mjs";
-// export { SleUnbindReturn, _decode_SleUnbindReturn, _encode_SleUnbindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleUnbindReturn.ta.mjs";
 import { CltuStartReturn, _decode_CltuStartReturn, _encode_CltuStartReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuStartReturn.ta.mjs";
-// export { CltuStartReturn, _decode_CltuStartReturn, _encode_CltuStartReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuStartReturn.ta.mjs";
 import { SleAcknowledgement, _decode_SleAcknowledgement, _encode_SleAcknowledgement } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleAcknowledgement.ta.mjs";
-// export { SleAcknowledgement, _decode_SleAcknowledgement, _encode_SleAcknowledgement } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleAcknowledgement.ta.mjs";
 import { SleScheduleStatusReportReturn, _decode_SleScheduleStatusReportReturn, _encode_SleScheduleStatusReportReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleScheduleStatusReportReturn.ta.mjs";
-// export { SleScheduleStatusReportReturn, _decode_SleScheduleStatusReportReturn, _encode_SleScheduleStatusReportReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleScheduleStatusReportReturn.ta.mjs";
 import { CltuGetParameterReturn, _decode_CltuGetParameterReturn, _encode_CltuGetParameterReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuGetParameterReturn.ta.mjs";
-// export { CltuGetParameterReturn, _decode_CltuGetParameterReturn, _encode_CltuGetParameterReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuGetParameterReturn.ta.mjs";
 import { CltuThrowEventReturn, _decode_CltuThrowEventReturn, _encode_CltuThrowEventReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuThrowEventReturn.ta.mjs";
-// export { CltuThrowEventReturn, _decode_CltuThrowEventReturn, _encode_CltuThrowEventReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuThrowEventReturn.ta.mjs";
 import { CltuTransferDataReturn, _decode_CltuTransferDataReturn, _encode_CltuTransferDataReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuTransferDataReturn.ta.mjs";
-// export { CltuTransferDataReturn, _decode_CltuTransferDataReturn, _encode_CltuTransferDataReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuTransferDataReturn.ta.mjs";
 import { CltuAsyncNotifyInvocation, _decode_CltuAsyncNotifyInvocation, _encode_CltuAsyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuAsyncNotifyInvocation.ta.mjs";
-// export { CltuAsyncNotifyInvocation, _decode_CltuAsyncNotifyInvocation, _encode_CltuAsyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuAsyncNotifyInvocation.ta.mjs";
 import { CltuStatusReportInvocation, _decode_CltuStatusReportInvocation, _encode_CltuStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuStatusReportInvocation.ta.mjs";
-// export { CltuStatusReportInvocation, _decode_CltuStatusReportInvocation, _encode_CltuStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuStatusReportInvocation.ta.mjs";
 import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
-// export { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
 
 
 /**

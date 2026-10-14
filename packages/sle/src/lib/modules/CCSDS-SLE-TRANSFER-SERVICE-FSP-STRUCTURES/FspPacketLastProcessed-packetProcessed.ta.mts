@@ -6,11 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
-// export { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
 import { FspPacketStatus, _decode_FspPacketStatus, _encode_FspPacketStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketStatus.ta.mjs";
-// export { FspPacketStatus, _decode_FspPacketStatus, _encode_FspPacketStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketStatus.ta.mjs";
 
 
 /**
@@ -20,7 +17,11 @@ import { FspPacketStatus, _decode_FspPacketStatus, _encode_FspPacketStatus } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FspPacketLastProcessed-packetProcessed ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FspPacketLastProcessed-packetProcessed ::= SEQUENCE
+ *    {  packetIdentification    PacketIdentification
+ *    ,  processingStartTime     Time
+ *    ,  packetStatus            FspPacketStatus
+ *    }
  * ```
  * 
  * @class
@@ -161,7 +162,7 @@ let _cached_encoder_for_FspPacketLastProcessed_packetProcessed: $.ASN1Encoder<Fs
  */
 export
 function _encode_FspPacketLastProcessed_packetProcessed (value: FspPacketLastProcessed_packetProcessed, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FspPacketLastProcessed_packetProcessed) { _cached_encoder_for_FspPacketLastProcessed_packetProcessed = function (value: FspPacketLastProcessed_packetProcessed, elGetter: $.ASN1Encoder<FspPacketLastProcessed_packetProcessed>): _Element {
+    if (!_cached_encoder_for_FspPacketLastProcessed_packetProcessed) { _cached_encoder_for_FspPacketLastProcessed_packetProcessed = function (value: FspPacketLastProcessed_packetProcessed, _elGetter: $.ASN1Encoder<FspPacketLastProcessed_packetProcessed>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PacketIdentification(value.packetIdentification, $.BER),
         /* REQUIRED   */ _encode_Time(value.processingStartTime, $.BER),

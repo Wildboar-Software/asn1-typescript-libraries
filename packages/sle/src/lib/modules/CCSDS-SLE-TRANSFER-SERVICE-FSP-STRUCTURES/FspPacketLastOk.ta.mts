@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FspPacketLastOk_packetOk, _decode_FspPacketLastOk_packetOk, _encode_FspPacketLastOk_packetOk } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketLastOk-packetOk.ta.mjs";
-// export { FspPacketLastOk_packetOk, _decode_FspPacketLastOk_packetOk, _encode_FspPacketLastOk_packetOk } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspPacketLastOk-packetOk.ta.mjs";
 
 
 /**

@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RocfGetParameter, _decode_RocfGetParameter, _encode_RocfGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter.ta.mjs";
-// export { RocfGetParameter, _decode_RocfGetParameter, _encode_RocfGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter.ta.mjs";
 import { DiagnosticRocfGet, _decode_DiagnosticRocfGet, _encode_DiagnosticRocfGet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/DiagnosticRocfGet.ta.mjs";
-// export { DiagnosticRocfGet, _decode_DiagnosticRocfGet, _encode_DiagnosticRocfGet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/DiagnosticRocfGet.ta.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import { DiagnosticRocfGet, _decode_DiagnosticRocfGet, _encode_DiagnosticRocfGet
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RocfGetParameterReturn-result ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RocfGetParameterReturn-result ::= CHOICE
+ *    {  positiveResult    [0]   RocfGetParameter
+ *    ,  negativeResult    [1]   DiagnosticRocfGet
+ *    }
  * ```
  */
 export

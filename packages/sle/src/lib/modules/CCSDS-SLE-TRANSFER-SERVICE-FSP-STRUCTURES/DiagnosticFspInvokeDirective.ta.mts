@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_Diagnostics, _encode_Diagnostics, Diagnostics } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Diagnostics.ta.mjs";
-// export { Diagnostics, Diagnostics_duplicateInvokeId /* IMPORTED_LONG_NAMED_INTEGER */, duplicateInvokeId /* IMPORTED_SHORT_NAMED_INTEGER */, Diagnostics_otherReason /* IMPORTED_LONG_NAMED_INTEGER */, otherReason /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Diagnostics, _encode_Diagnostics } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Diagnostics.ta.mjs";
 import { _decode_DiagnosticFspInvokeDirective_specific, _encode_DiagnosticFspInvokeDirective_specific, DiagnosticFspInvokeDirective_specific } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspInvokeDirective-specific.ta.mjs";
-// export { DiagnosticFspInvokeDirective_specific, DiagnosticFspInvokeDirective_specific_directiveInvocationNotAllowed /* IMPORTED_LONG_NAMED_INTEGER */, directiveInvocationNotAllowed /* IMPORTED_SHORT_NAMED_INTEGER */, DiagnosticFspInvokeDirective_specific_directiveIdentificationOutOfSequence /* IMPORTED_LONG_NAMED_INTEGER */, directiveIdentificationOutOfSequence /* IMPORTED_SHORT_NAMED_INTEGER */, DiagnosticFspInvokeDirective_specific_directiveError /* IMPORTED_LONG_NAMED_INTEGER */, directiveError /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DiagnosticFspInvokeDirective_specific, _encode_DiagnosticFspInvokeDirective_specific } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspInvokeDirective-specific.ta.mjs";
 
 
 /**
