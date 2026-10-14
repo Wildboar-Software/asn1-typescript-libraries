@@ -1,0 +1,52 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
+
+
+/**
+ * @summary VersionNumber
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * VersionNumber        ::=    IntPosShort
+ * ```
+ */
+export
+type VersionNumber = IntPosShort; // DefinedType
+
+let _cached_decoder_for_VersionNumber: $.ASN1Decoder<VersionNumber> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) VersionNumber
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_VersionNumber (el: _Element): VersionNumber {
+    if (!_cached_decoder_for_VersionNumber) { _cached_decoder_for_VersionNumber = _decode_IntPosShort; }
+    return _cached_decoder_for_VersionNumber(el);
+}
+
+let _cached_encoder_for_VersionNumber: $.ASN1Encoder<VersionNumber> | null = null;
+
+/**
+ * @summary Encodes a(n) VersionNumber into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The VersionNumber, encoded as an ASN.1 Element.
+ */
+export
+function _encode_VersionNumber (value: VersionNumber, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_VersionNumber) { _cached_encoder_for_VersionNumber = _encode_IntPosShort; }
+    return _cached_encoder_for_VersionNumber(value, elGetter);
+}
+
+
+/* eslint-enable */

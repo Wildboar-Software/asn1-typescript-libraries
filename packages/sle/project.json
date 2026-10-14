@@ -1,0 +1,25 @@
+{
+  "name": "sle",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/sle/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/sle",
+        "tsConfig": "packages/sle/tsconfig.lib.json",
+        "packageJson": "packages/sle/package.json",
+        "main": "packages/sle/src/index.mts",
+        "assets": [
+          "packages/sle/*.md",
+          "packages/sle/LICENSE.txt",
+          "packages/sle/package.json"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "name": "@wildboar/sle",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-CLTU-INCOMING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-FSP-INCOMING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-FSP-INCOMING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-FSP-OUTGOING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-RAF-INCOMING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-RAF-INCOMING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-RCF-INCOMING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-RCF-INCOMING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-ROCF-INCOMING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-ROCF-INCOMING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-ROCF-OUTGOING-PDUS": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-ROCF-OUTGOING-PDUS/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/index.mts",
+        "./CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID": "./src/lib/modules/CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/index.mts"
+    }
+}
