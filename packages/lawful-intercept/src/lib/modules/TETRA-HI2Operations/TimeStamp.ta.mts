@@ -13,6 +13,16 @@ import { LocalTimeStamp, _decode_LocalTimeStamp, _encode_LocalTimeStamp } from "
  * @summary TimeStamp
  * @description
  * 
+ * Date and time of the event that triggered the report, or of another event
+ * that names this type, such as release of a CC link. The minimum resolution is
+ * one second. Resolution is the smallest incremental change that can be
+ * measured for time. `localTime` carries local time with a winter or summer
+ * indication and no time zone. `utcTime` carries UTC. The operator normally
+ * defines which form is used.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

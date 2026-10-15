@@ -8,17 +8,62 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_DMO_Indicator {
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     dMOSTATETUNKNOWNC = 0,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     dMOSTATETTMOC = 1,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     dMOSTATETDMOC = 2,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     dMOSTATETIDLEDUALWATCHC = 3,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     dMOSTATETFULLDUALWATCHC = 4,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     dMOSTATETTXINHIBITC = 5,
 }
 
 /**
  * @summary DMO_Indicator
  * @description
+ * 
+ * Direct Mode state reported with the DMO event. Annex A.9.2.1.4.7 requires the
+ * indicator on that REPORT. The event tells the LEA that the observed party has
+ * entered radio communications which the TETRA switch cannot observe. The
+ * module gives each value a name and no further behaviour. An extension marker
+ * follows the named values.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -42,6 +87,13 @@ type DMO_Indicator = _enum_for_DMO_Indicator | ENUMERATED;
 
 /**
  * @summary DMO_Indicator_dMOSTATETUNKNOWNC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -50,6 +102,13 @@ const DMO_Indicator_dMOSTATETUNKNOWNC: DMO_Indicator = 0; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary dMOSTATETUNKNOWNC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -58,6 +117,13 @@ const dMOSTATETUNKNOWNC: DMO_Indicator = DMO_Indicator_dMOSTATETUNKNOWNC; /* SHO
 
 /**
  * @summary DMO_Indicator_dMOSTATETTMOC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -66,6 +132,13 @@ const DMO_Indicator_dMOSTATETTMOC: DMO_Indicator = 1; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary dMOSTATETTMOC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +147,13 @@ const dMOSTATETTMOC: DMO_Indicator = DMO_Indicator_dMOSTATETTMOC; /* SHORT_NAMED
 
 /**
  * @summary DMO_Indicator_dMOSTATETDMOC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +162,13 @@ const DMO_Indicator_dMOSTATETDMOC: DMO_Indicator = 2; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary dMOSTATETDMOC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +177,13 @@ const dMOSTATETDMOC: DMO_Indicator = DMO_Indicator_dMOSTATETDMOC; /* SHORT_NAMED
 
 /**
  * @summary DMO_Indicator_dMOSTATETIDLEDUALWATCHC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +192,13 @@ const DMO_Indicator_dMOSTATETIDLEDUALWATCHC: DMO_Indicator = 3; /* LONG_NAMED_EN
 
 /**
  * @summary dMOSTATETIDLEDUALWATCHC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +207,13 @@ const dMOSTATETIDLEDUALWATCHC: DMO_Indicator = DMO_Indicator_dMOSTATETIDLEDUALWA
 
 /**
  * @summary DMO_Indicator_dMOSTATETFULLDUALWATCHC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -114,6 +222,13 @@ const DMO_Indicator_dMOSTATETFULLDUALWATCHC: DMO_Indicator = 4; /* LONG_NAMED_EN
 
 /**
  * @summary dMOSTATETFULLDUALWATCHC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -122,6 +237,13 @@ const dMOSTATETFULLDUALWATCHC: DMO_Indicator = DMO_Indicator_dMOSTATETFULLDUALWA
 
 /**
  * @summary DMO_Indicator_dMOSTATETTXINHIBITC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -130,6 +252,13 @@ const DMO_Indicator_dMOSTATETTXINHIBITC: DMO_Indicator = 5; /* LONG_NAMED_ENUMER
 
 /**
  * @summary dMOSTATETTXINHIBITC
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

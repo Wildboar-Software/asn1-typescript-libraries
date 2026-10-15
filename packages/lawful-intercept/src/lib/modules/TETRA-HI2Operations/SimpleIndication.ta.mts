@@ -8,18 +8,75 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_SimpleIndication {
+    /**
+     * The target has received a call-waiting indication for this call. Table
+     * A.5.1 reports that indication when the target is the served user. The
+     * other party is reported with the generic notification indicator.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     call_Waiting_Indication = 0,
+    /**
+     * This call has been added to a conference.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.11, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     add_conf_Indication = 1,
+    /**
+     * This call is on hold. Table A.5.1 reports the indication when the target
+     * invokes hold.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     call_on_hold_Indication = 2,
+    /**
+     * This call has been retrieved. Table A.5.1 reports the indication when the
+     * target invokes retrieve.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     retrieve_Indication = 3,
+    /**
+     * This call has been suspended. Table A.5.1 reports suspend when the target
+     * invokes terminal portability.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.21, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     suspend_Indication = 4,
+    /**
+     * This call has been resumed. Table A.5.1 reports resume when the target
+     * invokes terminal portability.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.21, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     resume_Indication = 5,
+    /**
+     * This call has been answered.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     answer_Indication = 6,
 }
 
 /**
  * @summary SimpleIndication
  * @description
+ * 
+ * LI-specific call event that has no equivalent parameter in the signalling
+ * standards of table A.3.2. Clause A.3.3 includes it when the event is
+ * detected. Table A.5.1 uses these indications when the target is the served
+ * user for call waiting, hold, retrieve, and conference. An extension marker
+ * follows the named indications.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.5.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -51,6 +108,15 @@ type SimpleIndication = _enum_for_SimpleIndication | ENUMERATED;
 
 /**
  * @summary SimpleIndication_call_Waiting_Indication
+ * @description
+ *
+ * The target has received a call-waiting indication for this call. Table A.5.1
+ * reports that indication when the target is the served user. The other party
+ * is reported with the generic notification indicator.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +125,15 @@ const SimpleIndication_call_Waiting_Indication: SimpleIndication = 0; /* LONG_NA
 
 /**
  * @summary call_Waiting_Indication
+ * @description
+ *
+ * The target has received a call-waiting indication for this call. Table A.5.1
+ * reports that indication when the target is the served user. The other party
+ * is reported with the generic notification indicator.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +142,13 @@ const call_Waiting_Indication: SimpleIndication = SimpleIndication_call_Waiting_
 
 /**
  * @summary SimpleIndication_add_conf_Indication
+ * @description
+ *
+ * This call has been added to a conference.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.11, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +157,13 @@ const SimpleIndication_add_conf_Indication: SimpleIndication = 1; /* LONG_NAMED_
 
 /**
  * @summary add_conf_Indication
+ * @description
+ *
+ * This call has been added to a conference.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.11, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +172,14 @@ const add_conf_Indication: SimpleIndication = SimpleIndication_add_conf_Indicati
 
 /**
  * @summary SimpleIndication_call_on_hold_Indication
+ * @description
+ *
+ * This call is on hold. Table A.5.1 reports the indication when the target
+ * invokes hold.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +188,14 @@ const SimpleIndication_call_on_hold_Indication: SimpleIndication = 2; /* LONG_NA
 
 /**
  * @summary call_on_hold_Indication
+ * @description
+ *
+ * This call is on hold. Table A.5.1 reports the indication when the target
+ * invokes hold.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +204,14 @@ const call_on_hold_Indication: SimpleIndication = SimpleIndication_call_on_hold_
 
 /**
  * @summary SimpleIndication_retrieve_Indication
+ * @description
+ *
+ * This call has been retrieved. Table A.5.1 reports the indication when the
+ * target invokes retrieve.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +220,14 @@ const SimpleIndication_retrieve_Indication: SimpleIndication = 3; /* LONG_NAMED_
 
 /**
  * @summary retrieve_Indication
+ * @description
+ *
+ * This call has been retrieved. Table A.5.1 reports the indication when the
+ * target invokes retrieve.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +236,14 @@ const retrieve_Indication: SimpleIndication = SimpleIndication_retrieve_Indicati
 
 /**
  * @summary SimpleIndication_suspend_Indication
+ * @description
+ *
+ * This call has been suspended. Table A.5.1 reports suspend when the target
+ * invokes terminal portability.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.21, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +252,14 @@ const SimpleIndication_suspend_Indication: SimpleIndication = 4; /* LONG_NAMED_E
 
 /**
  * @summary suspend_Indication
+ * @description
+ *
+ * This call has been suspended. Table A.5.1 reports suspend when the target
+ * invokes terminal portability.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.21, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +268,14 @@ const suspend_Indication: SimpleIndication = SimpleIndication_suspend_Indication
 
 /**
  * @summary SimpleIndication_resume_Indication
+ * @description
+ *
+ * This call has been resumed. Table A.5.1 reports resume when the target
+ * invokes terminal portability.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.21, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +284,14 @@ const SimpleIndication_resume_Indication: SimpleIndication = 5; /* LONG_NAMED_EN
 
 /**
  * @summary resume_Indication
+ * @description
+ *
+ * This call has been resumed. Table A.5.1 reports resume when the target
+ * invokes terminal portability.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.21, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +300,13 @@ const resume_Indication: SimpleIndication = SimpleIndication_resume_Indication; 
 
 /**
  * @summary SimpleIndication_answer_Indication
+ * @description
+ *
+ * This call has been answered.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +315,13 @@ const SimpleIndication_answer_Indication: SimpleIndication = 6; /* LONG_NAMED_EN
 
 /**
  * @summary answer_Indication
+ * @description
+ *
+ * This call has been answered.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

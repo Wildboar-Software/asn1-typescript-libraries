@@ -12,6 +12,25 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSS1_SS_Invoke_Components
  * @description
  * 
+ * DSS1 invoke or return-result components, one per octet string, coded as in
+ * the relevant DSS1 supplementary-service recommendation. The module lists
+ * BeginCONF, AddCONF, SplitCONF, DropCONF, IsolateCONF, ReattachCONF, and
+ * PartyDISC (EN 300 185-1); MCIDRequest (EN 300 130-1); Begin3PTY and End3PTY
+ * (EN 300 188-1); ECTExecute, ECTInform, ECTLinkIdRequest, ECTLoopTest,
+ * ExplicitECTExecute, RequestSubaddress, and SubaddressTransfer (EN 300 369-1);
+ * and the call-forwarding operations ActivationDiversion,
+ * DeactivationDiversion, ActivationStatusNotification,
+ * DeactivationStatusNotification, InterrogationDiversion,
+ * InterrogationServedUserNumber, DiversionInformation, CallDeflection,
+ * CallRerouteing, and DivertingLegInformation1, 2, and 3 (EN 300 207-1). Other
+ * invoke or return-result components may be added. Clause A.5 sends these when
+ * the target is the served user for conference, three-party, explicit call
+ * transfer, call deflection, and malicious-call identification, as table A.5.1
+ * states.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5.1, clause A.6, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

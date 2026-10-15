@@ -11,7 +11,30 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DSS1_parameters_codeset_0
  * @description
- * 
+ *
+ * Each octet string is one DSS1 codeset-0 parameter, coded as in EN 300 403-1,
+ * including the DSS1 information-element identifier and the DSS1 length.
+ * Further parameters may be added.
+ *
+ * Bearer capability, high layer compatibility, and low layer compatibility may
+ * each be repeated. Each may be provided with the party information of the
+ * calling party, the called party, or the forwarded-to party.
+ *
+ * Clause A.3.2.2 treats these as basic-service parameters (for example BC,
+ * HLC, LLC) copied from the signalling protocol, and also allows the release
+ * cause to be carried here. Table A.3.2 places bearer capability, high layer
+ * compatibility, and low layer compatibility in `services-Information`. Table
+ * A.8.2 places tele-service or bearer-service information in this parameter.
+ *
+ * The value uses an imported format, so clause D.1 keeps that standard's
+ * half-octet order: the general rule (most significant half-octet in bits 5 to
+ * 8, least significant in bits 1 to 4) does not apply.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, table A.3.2, table A.8.2,
+ * clause D.1, annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

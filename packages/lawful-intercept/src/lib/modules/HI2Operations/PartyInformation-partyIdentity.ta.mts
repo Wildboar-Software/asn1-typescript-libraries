@@ -20,6 +20,15 @@ import { PartyInformation_partyIdentity_party_Validity, _decode_PartyInformation
  * @summary PartyInformation_partyIdentity
  * @description
  * 
+ * Identities of one party on an IRI record, taken from the signalling protocol
+ * when they appear. An identical value need not be repeated. Formats follow
+ * ISUP, DSS1, or MAP as named on each component. An alphanumeric identity is
+ * allowed only when the underlying protocol marks the party identifier as
+ * alphanumeric.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -71,72 +80,189 @@ export
 class PartyInformation_partyIdentity {
     /**
      * @summary `imei`.
+     * @description
+     *
+     * IMEI of the target, MAP format (TS GSM 09.02), eight octets. For GSM it
+     * is checked for each call over the radio interface. Interception based on
+     * IMEI can delay the start of interception at the beginning of a call, and
+     * non-call-related events cannot be intercepted that way.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.8.1, clause
+     * A.8.4, clause B.5.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly imei: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tei`.
+     * @description
+     *
+     * ISDN-based terminal equipment identity, size 1 to 15. The module states
+     * no further coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tei: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `imsi`.
+     * @description
+     *
+     * IMSI of the target, MAP format (TS GSM 09.02). E.212 number beginning
+     * with the Mobile Country Code. Size 3 to 8.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.8.4, clause
+     * B.5.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly imsi: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callingPartyNumber`.
+     * @description
+     *
+     * Calling-party format, used to transmit the identity of a calling party.
+     * ISUP, DSS1, or MAP, as on that type.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.3, clause
+     * D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>;
     /**
      * @summary `calledPartyNumber`.
+     * @description
+     *
+     * Called-party format, used for a called party or a forwarded-to party. A
+     * partial number is sent at IRI-BEGIN when that is all that is known. Table
+     * A.8.2 uses this component for the other party's directory number on an
+     * originating call and for the forwarded-to number.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.8.4, clause
+     * D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly calledPartyNumber: OPTIONAL<CalledPartyNumber>;
     /**
      * @summary `msISDN`.
+     * @description
+     *
+     * MSISDN of the target, encoded as the MAP `AddressString` (TS GSM 09.02).
+     * Size 1 to 9. GSM and GPRS tables map the observed MSISDN here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.8.4, clause
+     * B.5.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly msISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `e164_Format`.
+     * @description
+     *
+     * E.164 address of the node in international format, coded as the ISUP
+     * calling party number parameter (parameter part, EN 300 356). Size 1 to
+     * 25.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly e164_Format: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sip_uri`.
+     * @description
+     *
+     * SIP URI. See RFC 3261. The parameter is duplicated from 3GPP TS 33.108.
+     * This document does not add a coding rule. Annex H identifies IMS
+     * interception by the SIP URI.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5, annex H.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sip_uri: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tel_url`.
+     * @description
+     *
+     * Telephone URL. See RFC 3966. The parameter is duplicated from 3GPP TS
+     * 33.108. This document does not add a coding rule. Annex H identifies IMS
+     * interception by the TEL URL.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5, annex H.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tel_url: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `party_Validity`.
+     * @description
+     *
+     * Whether the operator assures the party identity, does not assure it, or
+     * added it, for example a roaming number. The module does not say when the
+     * component has to be present.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly party_Validity: OPTIONAL<PartyInformation_partyIdentity_party_Validity>;
     /**
      * @summary `alphanumeric`.
+     * @description
+     *
+     * Alphanumeric party identifier. Use it only when the underlying network
+     * protocol identifies the party identifier as alphanumeric. In SMPP that
+     * indication is the Type of Number parameter. In UCP it is the OTOA
+     * parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly alphanumeric: OPTIONAL<UTF8String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * BER extension additions that were not recognized. Clause C.1.2.4 refers
+     * unrecognized fields and parameters to annex G. The LEMF ignores an
+     * unrecognized parameter name and continues the record; that case does not
+     * by itself require an error, because the network may be using a newer
+     * specification. An unrecognized or disallowed value is also ignored, and
+     * the LEMF may raise an alarm. An undecodable ROSE record is rejected. The
+     * module allows an `OperationErrors` value when an operation or a parameter
+     * is misunderstood. Annex G does not name those error codes.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.4, annex G, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -188,6 +314,15 @@ class PartyInformation_partyIdentity {
 
         /**
          * @summary The enum used as the type of the component `party_Validity`
+         * @description
+         *
+         * Operator assurance of the party identity: assured, not assured, or
+         * added by the operator. The module does not say when the component is
+         * required.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

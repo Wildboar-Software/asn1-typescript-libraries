@@ -15,6 +15,13 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum } from
  * @summary GSMLocation_utmRefCoordinates
  * @description
  * 
+ * UTM grid reference as text. The example is `32UPU91294045`. An omitted map
+ * datum means WGS 84. An extension marker follows the datum. The specification
+ * gives no further layout.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +39,43 @@ export
 class GSMLocation_utmRefCoordinates {
     /**
      * @summary `utmref_string`.
+     * @description
+     *
+     * UTM grid reference. The example is `32UPU91294045`. The specification
+     * gives no further layout.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly utmref_string: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     *
+     * Geodetic datum. The module comment says the default is WGS 84 when the
+     * datum is omitted.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

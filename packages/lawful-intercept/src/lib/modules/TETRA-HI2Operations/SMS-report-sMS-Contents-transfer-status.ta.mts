@@ -8,14 +8,38 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_SMS_report_sMS_Contents_transfer_status {
+    /**
+     * The transfer of the SMS message succeeds.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     succeed_transfer = 0,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     not_succeed_transfer = 1,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     undefined = 2,
 }
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status
  * @description
+ * 
+ * Result of transferring the SMS. An extension marker follows the named
+ * results.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -36,6 +60,13 @@ type SMS_report_sMS_Contents_transfer_status = _enum_for_SMS_report_sMS_Contents
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_succeed_transfer
+ * @description
+ *
+ * The transfer of the SMS message succeeds.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +75,13 @@ const SMS_report_sMS_Contents_transfer_status_succeed_transfer: SMS_report_sMS_C
 
 /**
  * @summary succeed_transfer
+ * @description
+ *
+ * The transfer of the SMS message succeeds.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +90,13 @@ const succeed_transfer: SMS_report_sMS_Contents_transfer_status = SMS_report_sMS
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_not_succeed_transfer
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +105,13 @@ const SMS_report_sMS_Contents_transfer_status_not_succeed_transfer: SMS_report_s
 
 /**
  * @summary not_succeed_transfer
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +120,13 @@ const not_succeed_transfer: SMS_report_sMS_Contents_transfer_status = SMS_report
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_undefined
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +135,13 @@ const SMS_report_sMS_Contents_transfer_status_undefined: SMS_report_sMS_Contents
 
 /**
  * @summary undefined
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

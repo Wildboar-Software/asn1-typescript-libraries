@@ -8,14 +8,43 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_Tetra_IRI_Parameters_intercepted_Call_Direct {
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     not_Available = 0,
+    /**
+     * The target is the originating party. For GPRS, the mobile station
+     * requested the PDP context activation, modification, or deactivation.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     originating_Target = 1,
+    /**
+     * The target is the terminating party. For GPRS, the network initiated the
+     * PDP context activation, modification, or deactivation.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     terminating_Target = 2,
 }
 
 /**
  * @summary Tetra_IRI_Parameters_intercepted_Call_Direct
  * @description
+ * 
+ * Direction of the intercepted call. Clause A.3.2.2 uses it to say whether the
+ * target is the originating or the terminating party. For GPRS the same values
+ * say whether the PDP context activation, modification, or deactivation was
+ * requested by the mobile station or initiated by the network. An extension
+ * marker follows the named values.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -39,6 +68,13 @@ type Tetra_IRI_Parameters_intercepted_Call_Direct = _enum_for_Tetra_IRI_Paramete
 
 /**
  * @summary Tetra_IRI_Parameters_intercepted_Call_Direct_not_Available
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +83,13 @@ const Tetra_IRI_Parameters_intercepted_Call_Direct_not_Available: Tetra_IRI_Para
 
 /**
  * @summary not_Available
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +98,14 @@ const not_Available: Tetra_IRI_Parameters_intercepted_Call_Direct = Tetra_IRI_Pa
 
 /**
  * @summary Tetra_IRI_Parameters_intercepted_Call_Direct_originating_Target
+ * @description
+ *
+ * The target is the originating party. For GPRS, the mobile station requested
+ * the PDP context activation, modification, or deactivation.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +114,14 @@ const Tetra_IRI_Parameters_intercepted_Call_Direct_originating_Target: Tetra_IRI
 
 /**
  * @summary originating_Target
+ * @description
+ *
+ * The target is the originating party. For GPRS, the mobile station requested
+ * the PDP context activation, modification, or deactivation.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +130,14 @@ const originating_Target: Tetra_IRI_Parameters_intercepted_Call_Direct = Tetra_I
 
 /**
  * @summary Tetra_IRI_Parameters_intercepted_Call_Direct_terminating_Target
+ * @description
+ *
+ * The target is the terminating party. For GPRS, the network initiated the PDP
+ * context activation, modification, or deactivation.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +146,14 @@ const Tetra_IRI_Parameters_intercepted_Call_Direct_terminating_Target: Tetra_IRI
 
 /**
  * @summary terminating_Target
+ * @description
+ *
+ * The target is the terminating party. For GPRS, the network initiated the PDP
+ * context activation, modification, or deactivation.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

@@ -17,6 +17,15 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * @summary PartyInformation_partyIdentity
  * @description
  * 
+ * Identities available for one party. Clause A.3.2 copies them from signalling
+ * in the standardized coding. An extension marker precedes the E.164, SIP URI,
+ * and tel URL forms. This identity does not include a party-validity component
+ * or an alphanumeric component. Table A.3.2 names an alphanumeric party
+ * identity that this module does not define.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,60 +64,146 @@ export
 class PartyInformation_partyIdentity {
     /**
      * @summary `imei`.
+     * @description
+     *
+     * IMEI of the party, in the MAP format of TS GSM 09.02. Clause B.5.3 uses
+     * the IMEI as a target identity for GPRS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly imei: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tei`.
+     * @description
+     *
+     * ISDN-based terminal equipment identity. The module states no further
+     * coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tei: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `imsi`.
+     * @description
+     *
+     * IMSI in the MAP format of TS GSM 09.02. It is an E.212 number beginning
+     * with the mobile country code. Clause B.5.3 uses the IMSI as a target
+     * identity for GPRS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly imsi: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `callingPartyNumber`.
+     * @description
+     *
+     * Identity of a calling party. Clause A.3.2.2 sends it when it becomes
+     * available.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly callingPartyNumber: OPTIONAL<CallingPartyNumber>;
     /**
      * @summary `calledPartyNumber`.
+     * @description
+     *
+     * Identity of a called party or of a forwarded-to party. A partial number
+     * may be sent in IRI-BEGIN. The complete number follows when it is known.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly calledPartyNumber: OPTIONAL<CalledPartyNumber>;
     /**
      * @summary `msISDN`.
+     * @description
+     *
+     * MSISDN of the target, coded as the MAP `AddressString` of TS GSM 09.02,
+     * clause 14.7.8. Clause B.5.3 uses the MSISDN as a target identity for
+     * GPRS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly msISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `e164_Format`.
+     * @description
+     *
+     * E.164 address of the node in international format, coded as the
+     * calling-party number parameter of ISUP (EN 300 356). The imported ISUP
+     * order applies, not the clause D.1 half-octet order.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly e164_Format: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sip_uri`.
+     * @description
+     *
+     * Session Initiation Protocol uniform resource identifier. See RFC 3261.
+     * The parameter is duplicated from 3GPP TS 33.108. The present document
+     * states no further coding rule.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sip_uri: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tel_url`.
+     * @description
+     *
+     * Telephone URL. See RFC 3966, "URLs for Telephone Calls". The parameter is
+     * duplicated from 3GPP TS 33.108. The present document states no further
+     * coding rule.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tel_url: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

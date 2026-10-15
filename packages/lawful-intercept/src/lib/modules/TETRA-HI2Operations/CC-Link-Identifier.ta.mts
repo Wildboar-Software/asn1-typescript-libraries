@@ -12,6 +12,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CC_Link_Identifier
  * @description
  * 
+ * CC link identifier for multiparty calls when option B reuses one CC link for
+ * the active call. Option A does not use it. It tells each multiparty IRI which
+ * CC link carries the CC. It may use the same format as the communication
+ * identity number, and then it need not be sent as part of HI3 set-up. The CIN
+ * may implicitly represent it. Digits are ASCII, as for the communication
+ * identity number: `12345678` is `0x31` through `0x38`. Annex E carries it in
+ * the called-party subaddress as 1 to 8 decimal digits.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.1.1, clause A.5.4, annex E,
+ * clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,7 +11,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Other_Services
  * @description
- * 
+ *
+ * From one to fifty octet strings, each of size 1 to 256. The module says:
+ * reference manufacturer manuals. No parameter list and no layout are given.
+ *
+ * Clause D.1's general rule for an OCTET STRING puts the most significant
+ * half-octet in bits 5 to 8 and the least significant half-octet in bits 1 to
+ * 4. No imported format is named here, and no octet layout is stated.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.1, annex D,
+ * clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

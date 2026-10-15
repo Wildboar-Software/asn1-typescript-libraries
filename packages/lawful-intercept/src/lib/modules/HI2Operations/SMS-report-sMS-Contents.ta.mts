@@ -20,7 +20,22 @@ import { SMS_report_sMS_Contents_enhancedContent, _decode_SMS_report_sMS_Content
 /**
  * @summary SMS_report_sMS_Contents
  * @description
- * 
+ *
+ * Contents of an SMS report: who sent it, whether the transfer succeeded,
+ * whether a terminating server will send a further SMS, and the content.
+ * `content` and `enhancedContent` are mutually exclusive. `content` is for
+ * 3GPP, size 1 to 270 octets, encoded in the format defined for the SMS
+ * mobile. This document does not define that PDU layout. Enhanced content
+ * names its character encoding.
+ *
+ * Clause A.8.3 delivers SMS via HI2. Table A.8.2 carries the SMS content with
+ * header sent with the SMS service.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.8.3, table A.8.2, annex D,
+ * clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -84,36 +99,93 @@ export
 class SMS_report_sMS_Contents {
     /**
      * @summary `initiator`.
+     * @description
+     *
+     * Party which sent the SMS: the target, the server, or `undefined-party`.
+     * No further meaning is stated for `undefined-party`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly initiator: SMS_report_sMS_Contents_initiator;
     /**
      * @summary `transfer_status`.
+     * @description
+     *
+     * `succeed-transfer` means the transfer of the SMS message succeeds.
+     * `not-succeed-transfer` and `undefined` are named with no further
+     * meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly transfer_status: OPTIONAL<SMS_report_sMS_Contents_transfer_status>;
     /**
      * @summary `other_message`.
+     * @description
+     *
+     * On a terminating call, whether the server will send another SMS: yes,
+     * no, or undefined. No further meaning is stated for undefined.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly other_message: OPTIONAL<SMS_report_sMS_Contents_other_message>;
     /**
      * @summary `content`.
+     * @description
+     *
+     * SMS octets, size 1 to 270, encoded in the format defined for the SMS
+     * mobile, for 3GPP. Mutually exclusive with the enhanced content. This
+     * document does not define the PDU layout.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table A.8.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly content: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `enhancedContent`.
+     * @description
+     *
+     * SMS octets whose character encoding is named with them: GSM 7-bit ASCII,
+     * 8-bit ASCII, 8-bit binary, UCS-2, UTF-8, UTF-16, or other. Mutually
+     * exclusive with the 3GPP content. No bit-level coding is stated.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly enhancedContent: OPTIONAL<SMS_report_sMS_Contents_enhancedContent>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -153,18 +225,44 @@ class SMS_report_sMS_Contents {
 
         /**
          * @summary The enum used as the type of the component `initiator`
+         * @description
+         *
+         * Party which sent the SMS: the target, the server, or
+         * `undefined-party`.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+         *
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */
 
     public static _enum_for_initiator = _enum_for_SMS_report_sMS_Contents_initiator;        /**
          * @summary The enum used as the type of the component `transfer_status`
+         * @description
+         *
+         * `succeed-transfer` means the SMS transfer succeeds. The other two
+         * names have no further meaning in the module.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+         *
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */
 
     public static _enum_for_transfer_status = _enum_for_SMS_report_sMS_Contents_transfer_status;        /**
          * @summary The enum used as the type of the component `other_message`
+         * @description
+         *
+         * On a terminating call, whether the server will send another SMS.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+         *
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

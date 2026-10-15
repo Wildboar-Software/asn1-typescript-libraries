@@ -15,6 +15,12 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * @summary GA_PointWithUnCertainty
  * @description
  * 
+ * A geographic point and an uncertainty code. The specification gives no
+ * meaning for the uncertainty code.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +37,27 @@ export
 class GA_PointWithUnCertainty {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * Coordinates of the point. The specification states no unit for the
+     * integers.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary `uncertaintyCode`.
+     * @description
+     *
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

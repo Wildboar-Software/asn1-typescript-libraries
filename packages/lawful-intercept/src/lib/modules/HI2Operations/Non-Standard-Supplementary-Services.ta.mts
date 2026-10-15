@@ -11,7 +11,17 @@ import { Non_Standard_Supplementary_Services_Item, _decode_Non_Standard_Suppleme
 /**
  * @summary Non_Standard_Supplementary_Services
  * @description
- * 
+ *
+ * From one to twenty non-standard supplementary-service items. Each item is a
+ * call-event indication (`simpleIndication`) or subscriber-controlled-input
+ * data (`sciData`). Table A.3.3 lists those as LI-specific parameters,
+ * included when the event or parameter to be reported is detected.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), table A.3.3, clause A.3.2.4, annex D,
+ * clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

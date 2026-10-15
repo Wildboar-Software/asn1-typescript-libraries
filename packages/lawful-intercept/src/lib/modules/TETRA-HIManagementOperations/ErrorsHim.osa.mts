@@ -13,7 +13,15 @@ import { erroneous_parameter } from "../TETRA-HIManagementOperations/erroneous-p
 /**
  * @summary ErrorsHim
  * @description
- * 
+ *
+ * Errors `tETRA-sending-of-Password` may return. `tETRA-data-Link-Test` and
+ * `tETRA-end-Of-Connection` list only `other-failure-causes`. Local codes 0 to
+ * 3 as in the common management module. Clause D.10.1 applies only to ROSE. The
+ * document does not say which condition selects which code.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.1, clause C.1.2.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,7 +12,15 @@ import { GA_Polygon_Item, _decode_GA_Polygon_Item, _encode_GA_Polygon_Item } fro
 /**
  * @summary GA_Polygon
  * @description
- * 
+ *
+ * UMTS polygon: a sequence of 1 to `maxNrOfPoints` vertices. `maxNrOfPoints`
+ * is 15. Each vertex carries geographical coordinates. This document states no
+ * vertex order and no closure rule.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

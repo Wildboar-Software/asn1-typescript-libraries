@@ -11,7 +11,37 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ISUP_SS_parameters
  * @description
- * 
+ *
+ * Retained for compatibility. It should not be used in new work; use
+ * `ISUP-parameters`.
+ *
+ * Each octet string is one additional ISUP parameter, tag-length-value, not
+ * already defined in the previous parameters. The tag is the one given in EN
+ * 300 356. Length and value follow EN 300 356. Further parameters may be
+ * added. Table A.3.2 places these parameters in
+ * `supplementary-Services-Information`.
+ *
+ * Connected number (called party or forwarded-to party). Redirecting number
+ * (originating party and/or terminating party). Original called party number
+ * (originating party). Redirection information (originating party,
+ * forwarded-to party, and/or terminating party). Redirection number
+ * (forwarded-to party or terminating party). Call diversion information
+ * (forwarded-to party or terminating party). Generic number (calling party,
+ * called party, or forwarded-to party), used for additional identities such as
+ * an additional calling party number or an additional called number. Generic
+ * notification (calling party, called party, or forwarded-to party), which
+ * notifies the other part of the call of supplementary services activated or
+ * invoked by a subscriber during the call. CUG interlock code (calling party).
+ *
+ * The value uses an imported format, so clause D.1 keeps that standard's
+ * half-octet order: the general rule (most significant half-octet in bits 5 to
+ * 8, least significant in bits 1 to 4) does not apply.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), table A.3.2, clause A.3.2.3, clause D.1,
+ * annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

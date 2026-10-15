@@ -13,7 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TETRA_Password_Name
  * @description
- * 
+ *
+ * Argument of `tETRA-sending-of-Password`. No `domainID`. The common
+ * `Password-Name` has one, used when FTP is the delivery mechanism; that
+ * component is not in this type. An IA5 string is recommended. Clause D.10.1
+ * applies only to ROSE.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.1, clause D.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +39,48 @@ export
 class TETRA_Password_Name {
     /**
      * @summary `password`.
+     * @description
+     *
+     * Password for the TETRA data-link exchange. Length 1 to 25 octets. IA5 is
+     * recommended. The document does not define further coding. Clause
+     * C.1.2.3.1 describes the origin and destination passwords for
+     * `sending-of-Password`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.1, clause C.1.2.3.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly password: OCTET_STRING;
     /**
      * @summary `name`.
+     * @description
+     *
+     * Length 1 to 25 octets. IA5 is recommended. The document does not say what
+     * the name identifies.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly name: OCTET_STRING;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * An unrecognized parameter is ignored and processing of the record
+     * continues. No special error or alarm is required, because the cause may
+     * be a newer version of the specification. Content that is not recognized
+     * is also ignored; the LEMF may raise an alarm. A record that cannot be
+     * decoded is rejected when ROSE is used, or ignored.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex G, clause C.1.2.4,
+     * clause D.10.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

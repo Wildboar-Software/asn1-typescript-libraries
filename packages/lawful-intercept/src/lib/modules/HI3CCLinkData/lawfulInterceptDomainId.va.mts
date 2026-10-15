@@ -9,15 +9,17 @@ import {
 /**
  * @summary lawfulInterceptDomainId
  * @description
- * 
- * Arc `lawfulIntercept(2)` under `itu-t(0) identified-organization(4) etsi(0)
- * securityDomain(2)`. Root of the ETSI lawful-interception object tree used by
- * the 3GPP HI3 domains. 3GPP TS 33.108, annex B.2.
- * 
- * 3GPP TS 33.108, annex B.2.
- * 
- * https://www.3gpp.org/DynaReport/33108.htm
- * 
+ *
+ * Root of the lawful-interception object tree: `itu-t(0)`
+ * `identified-organization(4)` `etsi(0)` `securityDomain(2)`
+ * `lawfulIntercept(2)`. Clause D.2 places HI1, HI2, HI3, HI management, and
+ * TETRA under this arc. ETSI TR 102 503 describes the ETSI domain and points at
+ * the specifications that assign the OIDs. Each module in this annex assigns
+ * the value again.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.2, clause D.8.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

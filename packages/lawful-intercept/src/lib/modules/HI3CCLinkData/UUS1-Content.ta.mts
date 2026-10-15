@@ -25,17 +25,35 @@ import { Service_Information, _decode_Service_Information, _encode_Service_Infor
 /**
  * @summary UUS1_Content
  * @description
- * 
- * LI-specific contents of the UUS1 parameter on the ISDN CC link, carried in
- * the ISUP IAM or the DSS1 SETUP. Identifies the target and the call and, when
- * required, the CC link, and signals direction. Parameters 2, 3, and 4 also
- * appear in the IRI. Stereo links carry the same values except direction. The
- * network shall support a UUS1 user-information length of 131 octets.
- * 
- * 3GPP TS 33.108, clause 5.3.2 and annex J.1.
- * 
- * https://www.3gpp.org/DynaReport/33108.htm
- * 
+ *
+ * LI control information in the User-to-User service 1 parameter of a
+ * circuit-switched CC link. Carried at call set-up in the ISUP IAM (EN 300 356)
+ * or the DSS1 SETUP (EN 300 403-1), and delivered unchanged to the LEMF.
+ *
+ * Table A.4.1 requires the LIID, the communication identifier, the direction,
+ * and, when required, the CC-link identifier. The two stereo links carry the
+ * same values except the direction. The CC link is a one-way 64 kbit/s
+ * unrestricted bearer from the mediation function to the LEMF; the direction
+ * toward the mediation function is not switched through. For one bi-directional
+ * target call, two delivery calls are set up: one toward the target and one
+ * from the target. The network that transmits the CC links shall support a UUS1
+ * parameter of 131 octets. ISUP does not discard UUS1 for length, because the
+ * services used on these links do not make the message exceed the maximum.
+ *
+ * If a network does not support UUS1, or supports only 32 octets rather than
+ * 128, annex E carries correlation in the calling-party and called-party
+ * subaddresses. That procedure is not used when every network involved supports
+ * 128 octets of UUS1.
+ *
+ * UUS1, UUS2, and UUS3 user-to-user parameters are reported as HI3 or via HI2
+ * (clause A.6.22). The ROSE operation for UUS associated with a circuit call is
+ * `circuit-Call-related-Services`. This type is the UUS1 element on the CC-link
+ * set-up.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3, clause A.4.1,
+ * clause A.6.22, clause E.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,9 +80,14 @@ class UUS1_Content {
     /**
      * @summary `domainID`.
      * @description
-     * 
-     * HI3 CC-link domain identifier, sent once the FTP delivery mechanism is
-     * used. 3GPP TS 33.108, annex J.1.
+     *
+     * Used when the FTP delivery mechanism is used. Constrained to
+     * `hi3CCLinkIdOperationId`. Clause D.8 does not say that the CC link itself
+     * is an FTP transfer; the comment is on this component.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -72,9 +95,14 @@ class UUS1_Content {
     /**
      * @summary `lawfullInterceptionIdentifier`.
      * @description
-     * 
-     * Lawful interception identifier of the target identity. 3GPP TS 33.108,
-     * clause 5.3.2 and clause 5.1.
+     *
+     * LIID of the target identity (clause 6.1, table A.4.1 item 2). The
+     * double-l spelling is the one assigned in clause D.8. Alphanumeric, or a
+     * digit string for the subaddress option (annex E).
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3, clause 6.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -82,10 +110,15 @@ class UUS1_Content {
     /**
      * @summary `communicationIdentifier`.
      * @description
-     * 
-     * Communication identifier of this call of the target (network identifier
-     * and communication identity number). Also present in the IRI. 3GPP TS
-     * 33.108, clause 5.3.2 and clause 5.1.2.
+     *
+     * Communication identifier of this call of the target (clause 6.2, table
+     * A.4.1 item 3). The same value is present in the IRI (clause A.4.3). It is
+     * the network identifier plus an optional communication identity number,
+     * and it correlates IRI with the CC links.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3, clause 6.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -93,10 +126,18 @@ class UUS1_Content {
     /**
      * @summary `cC_Link_Identifier`.
      * @description
-     * 
-     * CC-link identifier, when CC links are reused (option B). Correlates the
-     * CC link with IRI. May be omitted when the CIN stands for it. 3GPP TS
-     * 33.108, clause 5.1.3 and clause 5.3.2.
+     *
+     * Used at HI2 and HI3 when CC links are reused (option B). For each CC link
+     * toward the LEMF, the CCLID is sent with the CIN and the NID so that a
+     * multiparty call's IRI shows which link carries the content. It may use
+     * the same format as the CIN. In that case it need not be sent on HI3,
+     * because the CIN may stand for the CCLID. Table A.1.1 note 2: it may be
+     * omitted. Optional here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+     * clause A.1.1, clause A.1.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -104,9 +145,14 @@ class UUS1_Content {
     /**
      * @summary `direction_Indication`.
      * @description
-     * 
-     * From the target, towards the target, or combined (mono). In stereo the
-     * two CC links differ only in this value. 3GPP TS 33.108, clause 5.3.2.
+     *
+     * From the target, toward the target, or combined. In stereo the two CC
+     * links differ only in this value. Parameter 5 of table A.4.1.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+     * clause E.4.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -114,10 +160,18 @@ class UUS1_Content {
     /**
      * @summary `bearer_capability`.
      * @description
-     * 
-     * Bearer capability information element of the target call, value part (EN
-     * 300 403-1). Tells the LEMF the basic service in use. 3GPP TS 33.108,
-     * clause 5.3.2.
+     *
+     * Bearer capability information element of the target call, value part
+     * only. Protocol: EN 300 403-1. Tells the LEMF the basic service in use,
+     * for example so speech can be compressed for storage. Length 1 to 12
+     * octets. The CC link itself is 64 kbit/s unrestricted and requires no
+     * specific high-layer compatibility. This document does not restate EN 300
+     * 403-1.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+     * clause A.4.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -125,10 +179,13 @@ class UUS1_Content {
     /**
      * @summary `service_Information`.
      * @description
-     * 
-     * Further service octets for the target call: high-layer compatibility,
-     * transmission medium requirement, and MAP service codes. 3GPP TS 33.108,
-     * annex J.1.
+     *
+     * Further service octets for the target call. See `Service-Information`.
+     * Optional. The module does not say when it is included.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -136,8 +193,16 @@ class UUS1_Content {
     /**
      * @summary Extensions that are not recognized.
      * @description
-     * 
-     * Extension additions not named in this module.
+     *
+     * An unrecognized parameter is ignored and processing of the record
+     * continues. No special error or alarm is required, because the cause may
+     * be a newer version of the specification. Content that is not recognized
+     * is also ignored; the LEMF may raise an alarm. A record that cannot be
+     * decoded is rejected when ROSE is used, or ignored.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex G, clause C.1.2.4, clause D.8.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

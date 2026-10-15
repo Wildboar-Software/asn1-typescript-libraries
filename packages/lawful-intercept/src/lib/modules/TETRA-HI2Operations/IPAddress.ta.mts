@@ -19,6 +19,16 @@ import { IPAddress_iP_assignment, _decode_IPAddress_iP_assignment, _encode_IPAdd
  * @summary IPAddress
  * @description
  * 
+ * IP address and how it was assigned. IPv4 and IPv6 are named. The assignment,
+ * when present, is static, dynamic, or unknown. For an IPv6 binary value the
+ * prefix length is mandatory and gives the length of the prefix the provider
+ * delegated to the subscriber. The example is 60 for
+ * `2001:db8:0:85a3::ac1f:8001/60`. An extension marker precedes the prefix
+ * length.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,30 +66,74 @@ export
 class IPAddress {
     /**
      * @summary `iP_type`.
+     * @description
+     *
+     * IPv4 or IPv6. The specification gives the two names and no further
+     * behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_type: IPAddress_iP_type;
     /**
      * @summary `iP_value`.
+     * @description
+     *
+     * The address, either binary or text. For IPv6 binary form, the prefix
+     * length is given by `iPv6PrefixLength`. A text IPv6 value may be one
+     * address or a prefix for a subnetwork on the target side.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_value: IP_value;
     /**
      * @summary `iP_assignment`.
+     * @description
+     *
+     * Whether the address is static, dynamically allocated, or neither. The
+     * specification requires static for a static address, dynamic for a
+     * dynamically allocated address, and notKnown for any other case.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_assignment: OPTIONAL<IPAddress_iP_assignment>;
     /**
      * @summary `iPv6PrefixLength`.
+     * @description
+     *
+     * Length of the IPv6 prefix the provider delegated to the subscriber. The
+     * example is 60 when the address is `2001:db8:0:85a3::ac1f:8001/60`.
+     * Mandatory when `iP-value` contains an IPv6 binary value.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iPv6PrefixLength: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

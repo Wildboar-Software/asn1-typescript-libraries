@@ -29,6 +29,15 @@ import { MAP_SS_Invoke_Components, _decode_MAP_SS_Invoke_Components, _encode_MAP
  * @summary Standard_Supplementary_Services
  * @description
  * 
+ * Standard supplementary-service codings. ISUP supplementary parameters are
+ * retained for compatibility and should not be used in new work. DSS1 codesets
+ * 0, 4, 5, 6, and 7, DSS1 invoke components, and MAP parameters and invoke
+ * components carry the service information that table A.3.2 and clause A.6
+ * name. An extension marker follows them.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5, clause A.6, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,60 +62,143 @@ export
 class Standard_Supplementary_Services {
     /**
      * @summary `iSUP_SS_parameters`.
+     * @description
+     *
+     * ISUP supplementary-service parameters. Retained for compatibility. New
+     * work should use `ISUP-parameters` instead.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iSUP_SS_parameters: OPTIONAL<ISUP_SS_parameters>;
     /**
      * @summary `dSS1_SS_parameters_codeset_0`.
+     * @description
+     *
+     * DSS1 codeset-0 supplementary-service parameters, including subaddresses,
+     * connected number, keypad, dialled digits, and user-to-user information.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_0: OPTIONAL<DSS1_SS_parameters_codeset_0>;
     /**
      * @summary `dSS1_SS_parameters_codeset_4`.
+     * @description
+     *
+     * One DSS1 codeset-4 parameter per octet string, coded as in the relevant
+     * recommendation. The present document names no parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_4: OPTIONAL<DSS1_SS_parameters_codeset_4>;
     /**
      * @summary `dSS1_SS_parameters_codeset_5`.
+     * @description
+     *
+     * One DSS1 codeset-5 parameter per octet string, coded as in the relevant
+     * national recommendation. The present document names no parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_5: OPTIONAL<DSS1_SS_parameters_codeset_5>;
     /**
      * @summary `dSS1_SS_parameters_codeset_6`.
+     * @description
+     *
+     * One DSS1 codeset-6 parameter per octet string, coded as in the relevant
+     * local-network recommendation. The present document names no parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_6: OPTIONAL<DSS1_SS_parameters_codeset_6>;
     /**
      * @summary `dSS1_SS_parameters_codeset_7`.
+     * @description
+     *
+     * One DSS1 codeset-7 parameter per octet string, coded as in the relevant
+     * user-specific recommendation. The present document names no parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_7: OPTIONAL<DSS1_SS_parameters_codeset_7>;
     /**
      * @summary `dSS1_SS_Invoke_components`.
+     * @description
+     *
+     * DSS1 invoke or return-result components for the supplementary services
+     * listed on `DSS1-SS-Invoke-Components`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_Invoke_components: OPTIONAL<DSS1_SS_Invoke_Components>;
     /**
      * @summary `mAP_SS_Parameters`.
+     * @description
+     *
+     * MAP supplementary-service parameters, one per octet string, coded as in
+     * the relevant MAP supplementary-service recommendation. The present
+     * document names no parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mAP_SS_Parameters: OPTIONAL<MAP_SS_Parameters>;
     /**
      * @summary `mAP_SS_Invoke_Components`.
+     * @description
+     *
+     * MAP invoke or return-result components, one per octet string, coded as in
+     * the relevant MAP supplementary-service recommendation. The present
+     * document names no component.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mAP_SS_Invoke_Components: OPTIONAL<MAP_SS_Invoke_Components>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

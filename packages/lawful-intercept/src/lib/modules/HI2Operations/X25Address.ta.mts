@@ -11,7 +11,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary X25Address
  * @description
- * 
+ *
+ * X.25 address carried as a data-node address, size 1 to 25 octets. The module
+ * and annex B do not define the address layout.
+ *
+ * Clause D.1's general rule for an OCTET STRING puts the most significant
+ * half-octet in bits 5 to 8 and the least significant half-octet in bits 1 to
+ * 4. No imported format is named here, and no octet layout is stated.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, clause D.1, annex D, clause
+ * D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

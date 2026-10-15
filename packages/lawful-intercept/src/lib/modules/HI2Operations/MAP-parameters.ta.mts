@@ -11,7 +11,22 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MAP_parameters
  * @description
- * 
+ *
+ * Each octet string is one MAP parameter, coded as described in GSM 09.02. The
+ * `map-TS-Code` is included. The module names no further parameters.
+ *
+ * Clause A.5.1 treats GSM MAP supplementary services (3GPP TS 09.02) by the
+ * same principles as the DSS1 services they relate to.
+ *
+ * The value uses an imported format, so clause D.1 keeps that standard's
+ * half-octet order: the general rule (most significant half-octet in bits 5 to
+ * 8, least significant in bits 1 to 4) does not apply.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5.1, clause D.1, annex D, clause
+ * D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

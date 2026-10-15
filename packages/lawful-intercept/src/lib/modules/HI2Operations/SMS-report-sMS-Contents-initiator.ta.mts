@@ -6,17 +6,59 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_SMS_report_sMS_Contents_initiator
+ * @description
+ *
+ * Party which sent the SMS: the target, the server, or a party the module
+ * names `undefined-party`. No further meaning is stated for `undefined-party`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
+ * @enum {number}
+ */
 export
 enum _enum_for_SMS_report_sMS_Contents_initiator {
+    /**
+     * The target sent the SMS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     target = 0,
+    /**
+     * The server sent the SMS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     server = 1,
+    /**
+     * A sending party named `undefined-party`. The module states no further
+     * meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     undefined_party = 2,
 }
 
 /**
  * @summary SMS_report_sMS_Contents_initiator
  * @description
- * 
+ *
+ * Party which sent the SMS: the target, the server, or a party the module
+ * names `undefined-party`. No further meaning is stated for `undefined-party`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +78,14 @@ type SMS_report_sMS_Contents_initiator = _enum_for_SMS_report_sMS_Contents_initi
 
 /**
  * @summary SMS_report_sMS_Contents_initiator_target
+ * @description
+ *
+ * The target sent the SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +94,14 @@ const SMS_report_sMS_Contents_initiator_target: SMS_report_sMS_Contents_initiato
 
 /**
  * @summary target
+ * @description
+ *
+ * The target sent the SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +110,14 @@ const target: SMS_report_sMS_Contents_initiator = SMS_report_sMS_Contents_initia
 
 /**
  * @summary SMS_report_sMS_Contents_initiator_server
+ * @description
+ *
+ * The server sent the SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +126,14 @@ const SMS_report_sMS_Contents_initiator_server: SMS_report_sMS_Contents_initiato
 
 /**
  * @summary server
+ * @description
+ *
+ * The server sent the SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +142,15 @@ const server: SMS_report_sMS_Contents_initiator = SMS_report_sMS_Contents_initia
 
 /**
  * @summary SMS_report_sMS_Contents_initiator_undefined_party
+ * @description
+ *
+ * A sending party named `undefined-party`. The module states no further
+ * meaning.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +159,15 @@ const SMS_report_sMS_Contents_initiator_undefined_party: SMS_report_sMS_Contents
 
 /**
  * @summary undefined_party
+ * @description
+ *
+ * A sending party named `undefined-party`. The module states no further
+ * meaning.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

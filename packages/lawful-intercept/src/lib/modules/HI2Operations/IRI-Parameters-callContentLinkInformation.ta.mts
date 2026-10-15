@@ -13,6 +13,18 @@ import { CallContentLinkCharacteristics, _decode_CallContentLinkCharacteristics,
  * @summary IRI_Parameters_callContentLinkInformation
  * @description
  * 
+ * CC-link information for the two directions of a circuit-switched target call.
+ * LI-specific. Include it when a link event to be reported is detected. Clause
+ * A.4 sets up two one-way 64 kbit/s links from the mediation function to the
+ * LEMF: content from the target, and content toward the target. Mono mode, kept
+ * for compatibility with earlier editions, uses one combined signal. Clause
+ * E.4.1 codes direction 1 as CC from the target and 2 as CC to the target, and
+ * says stereo is the default.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.4.1, clause D.5,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +45,48 @@ export
 class IRI_Parameters_callContentLinkInformation {
     /**
      * @summary `cCLink1Characteristics`.
+     * @description
+     *
+     * Content-of-communication link for the transmit channel toward the LEMF,
+     * or the sum signal when mono mode is used.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4.1, clause D.5, clause
+     * E.4.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCLink1Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
     /**
      * @summary `cCLink2Characteristics`.
+     * @description
+     *
+     * Content-of-communication link for the receive channel toward the LEMF.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4.1, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCLink2Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * BER extension additions that were not recognized. Clause C.1.2.4 refers
+     * unrecognized fields and parameters to annex G. The LEMF ignores an
+     * unrecognized parameter name and continues the record; that case does not
+     * by itself require an error, because the network may be using a newer
+     * specification. An unrecognized or disallowed value is also ignored, and
+     * the LEMF may raise an alarm. An undecodable ROSE record is rejected. The
+     * module allows an `OperationErrors` value when an operation or a parameter
+     * is misunderstood. Annex G does not name those error codes.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.4, annex G, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

@@ -16,7 +16,33 @@ import { Other_Services, _decode_Other_Services, _encode_Other_Services } from "
 /**
  * @summary Supplementary_Services
  * @description
- * 
+ *
+ * Standard supplementary services, non-standard indications, and other
+ * services. In party information this carries activation or invocation of
+ * supplementary services, during a call or out of call, that earlier
+ * parameters do not already provide.
+ *
+ * Clause A.3.2.3: send the information when the signalling event is received,
+ * in the standard protocol format where possible. For forwarding and
+ * re-routing, redirecting-party parameters sit in the originating or
+ * terminating party container as clause A.3.2.3 points 1 and 2 describe, and
+ * parameters of the forwarded-to party, including
+ * `supplementary-Services-Information` with the forwarded-to address and the
+ * redirection information (reason, number of redirections, and similar), sit
+ * in the forwarded-to party. Clause A.3.2.4 sends non-call-related service
+ * information as received; a typical action is subscriber controlled input
+ * (clause A.5).
+ *
+ * Clause A.5.1: supplementary-service behaviour is unchanged by interception,
+ * and invoking a supplementary service does not prevent interception. IRI may
+ * carry service-specific data. Parameters from tables A.3.2 and A.3.3 are
+ * included when they become available (clause A.5.3).
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause A.3.2.4, clause
+ * A.5.1, clause A.5.3, annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +61,62 @@ export
 class Supplementary_Services {
     /**
      * @summary `standard_Supplementary_Services`.
+     * @description
+     *
+     * Standardized ISUP, DSS1, and MAP supplementary-service parameters and
+     * invoke components.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, table A.3.2, annex D,
+     * clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly standard_Supplementary_Services: OPTIONAL<Standard_Supplementary_Services>;
     /**
      * @summary `non_Standard_Supplementary_Services`.
+     * @description
+     *
+     * Call-event indications and subscriber-controlled-input data that are not
+     * the standardized protocol parameters. One to twenty items.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table A.3.3, clause A.5.5, annex D,
+     * clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly non_Standard_Supplementary_Services: OPTIONAL<Non_Standard_Supplementary_Services>;
     /**
      * @summary `other_Services`.
+     * @description
+     *
+     * Further service octets. The module says to reference manufacturer
+     * manuals. No parameter list is given.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly other_Services: OPTIONAL<Other_Services>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

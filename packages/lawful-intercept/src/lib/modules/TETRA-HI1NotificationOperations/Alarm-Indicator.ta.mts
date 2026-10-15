@@ -23,7 +23,21 @@ import { National_HI1_ASN1parameters, _decode_National_HI1_ASN1parameters, _enco
 /**
  * @summary Alarm_Indicator
  * @description
- * 
+ *
+ * TETRA HI1 alarm, sent toward the LEMF across HI2 for certain exceptional
+ * situations (clause 7.2, clause D.10.2). Alarm for certain exceptional
+ * situations. Clause A.4.4.2 allows CC-link faults to be sent to the LEMF as
+ * this kind of notification instead of only to the administration centre. The
+ * events in table A.4.2 are: no answer from the LEA, LEA busy, COLP error, CUG
+ * error, set-up failure within the network, lack of system resources, and a
+ * general CC-link set-up failure. Delivery to the administration centre is not
+ * part of the handover interface. The alarm text is free format. Alarm text in
+ * this module is 1 to 25 octets. The common module's 1-to-256 range, and its
+ * note about ASN.1 version 6, are not stated here.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2, clause 7.2, clause A.4.4.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,42 +66,110 @@ export
 class Alarm_Indicator {
     /**
      * @summary `domainID`.
+     * @description
+     *
+     * Used when the FTP delivery mechanism is used. Constrained to
+     * `hi1OperationId`. Optional. This module's comment does not require the
+     * sending entity to include the OID; that rule is the HI2 `domainID`
+     * comment, and it is not stated here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     *
+     * Only the NWO/PA/SvP identifier is provided, the one given with the lawful
+     * authorization. Called `callIdentifier` in V1.1.1 of ES 201 671. Clause
+     * 6.2 defines a communication identifier as the network identifier plus an
+     * optional communication identity number. This comment limits the
+     * notification to the NWO/PA/SvP identifier.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2, clause 6.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communicationIdentifier: OPTIONAL<CommunicationIdentifier>;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Date and time of the report. `TimeStamp` is imported from HI2Operations.
+     * This module does not define its coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `alarm_information`.
+     * @description
+     *
+     * Free-format alarm information. Length 1 to 25 octets. The common
+     * `Alarm-Indicator` allows 1 to 256 octets and records that the limit was
+     * 25 until ASN.1 version 6 (document v3.12.1). This TETRA component remains
+     * 1 to 25 octets. That history note is not in this module.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2, clause D.4.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly alarm_information: OCTET_STRING;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     *
+     * LIID from the lawful authorization for each target, according to national
+     * law. Optional. Clause 6.1 requires a LIID on information exchanged at HI2
+     * and HI3; this module still marks the component optional and ties it to
+     * national law.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2, clause 6.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `national_HI1_ASN1parameters`.
+     * @description
+     *
+     * National parameters, present when a country adds its own.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly national_HI1_ASN1parameters: OPTIONAL<National_HI1_ASN1parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * An unrecognized parameter is ignored and processing of the record
+     * continues. No special error or alarm is required, because the cause may
+     * be a newer version of the specification. Content that is not recognized
+     * is also ignored; the LEMF may raise an alarm. A record that cannot be
+     * decoded is rejected when ROSE is used, or ignored.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex G, clause C.1.2.4,
+     * clause D.10.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

@@ -19,6 +19,15 @@ import { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../TET
  * @summary Location
  * @description
  * 
+ * Location of the target, in whatever form signalling or the access network
+ * supplied. Clause A.3.2.2 includes it when it is available. Annex A.9 uses it
+ * for TETRA location and, on handover and location update, for the new
+ * location. An extension marker precedes `oldRAI`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.9.2.1, clause
+ * D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,54 +66,135 @@ export
 class Location {
     /**
      * @summary `e164_Number`.
+     * @description
+     *
+     * Location number coded as the ISUP location-number parameter field of EN
+     * 300 356. The imported ISUP order applies.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly e164_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `globalCellID`.
+     * @description
+     *
+     * Global cell identity in the MAP format of TS GSM 09.02. Clause B.5.3 uses
+     * it as the cell of the GPRS target.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly globalCellID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tetraLocation`.
+     * @description
+     *
+     * TETRA location. The module comment says this optional parameter is not in
+     * use any more, but is kept for backwards compatibility. Annex A.9.2.1.1.1
+     * note 2 says the `tetraLocation` value defined in the present document may
+     * alternatively be used for the TETRA location, and that note continues to
+     * apply on later records. The `TetraLocation` type itself does not repeat
+     * the comment that the parameter is no longer in use.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.1.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tetraLocation: OPTIONAL<TetraLocation>;
     /**
      * @summary `rAI`.
+     * @description
+     *
+     * Routing area identifier of the current SGSN. Coded as in 3GPP TS 24.008
+     * without the routing-area-identification information-element identifier.
+     * Only the last 6 octets are used. Clause B.5.3 reports it for the GPRS
+     * target.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly rAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `gsmLocation`.
+     * @description
+     *
+     * GSM geographic location: geodetic, UTM, UTM reference, or WGS 84
+     * coordinates.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly gsmLocation: OPTIONAL<GSMLocation>;
     /**
      * @summary `umtsLocation`.
+     * @description
+     *
+     * UMTS geographic area: a point, a point with an uncertainty code, or a
+     * polygon. The present document does not state when each shape is chosen.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly umtsLocation: OPTIONAL<UMTSLocation>;
     /**
      * @summary `sAI`.
+     * @description
+     *
+     * Service area identity. Octets 1 to 3 are the PLMN identity, octets 4 to 5
+     * are the LAC, and octets 6 to 7 are the SAC, according to 3GPP TS 25.431.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `oldRAI`.
+     * @description
+     *
+     * Routing area identifier of the old SGSN, coded as in 3GPP TS 24.008
+     * without the routing-area-identification information-element identifier.
+     * Only the last 6 octets are used. The parameter is duplicated from 3GPP TS
+     * 33.108.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly oldRAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

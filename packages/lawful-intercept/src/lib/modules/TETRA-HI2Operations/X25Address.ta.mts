@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary X25Address
  * @description
  * 
+ * X.25 address. Clause 6.2.1 allows an X.25 address as a network element
+ * identifier. The module comment on the X.25 form of
+ * `Network-Element-Identifier` says only "X25 address". The present document
+ * states no further coding.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

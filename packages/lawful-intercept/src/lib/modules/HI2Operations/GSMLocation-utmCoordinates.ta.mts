@@ -16,7 +16,17 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
 /**
  * @summary GSMLocation_utmCoordinates
  * @description
- * 
+ *
+ * Universal Transverse Mercator coordinates. Easting is 10 characters, example
+ * `32U0439955`. Northing is 7 characters, example `5540736`. The datum
+ * defaults to World Geodetic System 1984. Azimuth is the bearing relative to
+ * true north, from 0 to 359. The module states no further UTM character
+ * layout.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +49,75 @@ export
 class GSMLocation_utmCoordinates {
     /**
      * @summary `utm_East`.
+     * @description
+     *
+     * UTM easting, 10 characters. Example: `32U0439955`. The module states no
+     * further character layout.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly utm_East: PrintableString;
     /**
      * @summary `utm_North`.
+     * @description
+     *
+     * UTM northing, 7 characters. Example: `5540736`. The module states no
+     * further character layout.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly utm_North: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     *
+     * Datum for these coordinates. Omitted means World Geodetic System 1984.
+     * `wGS84` is World Geodetic System 1984, `eD50` is European Datum 50, and
+     * `wGS72` is named without expansion.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary `azimuth`.
+     * @description
+     *
+     * Bearing relative to true north, from 0 to 359.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly azimuth: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -100,12 +155,30 @@ class GSMLocation_utmCoordinates {
 
     /**
      * @summary Getter that returns the default value for `mapDatum`.
+     * @description
+     *
+     * World Geodetic System 1984, used when the datum is omitted.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @static
      * @method
      */
     public static get _default_value_for_mapDatum () { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
+         * @description
+         *
+         * Datum for these coordinates. Omitted means World Geodetic System
+         * 1984. `wGS84` is World Geodetic System 1984, `eD50` is European
+         * Datum 50, and `wGS72` is named without expansion.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+         *
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

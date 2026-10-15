@@ -14,7 +14,15 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
 /**
  * @summary GA_PointWithUnCertainty
  * @description
- * 
+ *
+ * A UMTS point with an uncertainty code. The uncertainty code is an integer
+ * from 0 to 127. This document states that range and does not state the unit
+ * of the coordinates or any further coding of the uncertainty code.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +39,30 @@ export
 class GA_PointWithUnCertainty {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * Latitude 0 to 8388607 and longitude -8388608 to 8388607, signed north or
+     * south. This document states no unit and no further coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary `uncertaintyCode`.
+     * @description
+     *
+     * Integer from 0 to 127. This document states the range and no further
+     * coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

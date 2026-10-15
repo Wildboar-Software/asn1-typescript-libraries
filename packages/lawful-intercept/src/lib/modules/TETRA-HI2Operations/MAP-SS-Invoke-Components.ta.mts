@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MAP_SS_Invoke_Components
  * @description
  * 
+ * MAP invoke or return-result components, one per octet string, coded as in the
+ * relevant MAP supplementary-service recommendation. The present document names
+ * no component.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

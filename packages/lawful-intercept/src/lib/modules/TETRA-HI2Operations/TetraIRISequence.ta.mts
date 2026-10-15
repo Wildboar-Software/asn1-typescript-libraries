@@ -11,6 +11,15 @@ import { TetraIRIContent, _decode_TetraIRIContent, _encode_TetraIRIContent } fro
  * @summary TetraIRISequence
  * @description
  * 
+ * Aggregated TETRA IRI records. The module comment, which names UmtsIRIContent,
+ * allows aggregation only when several records are available at one time for
+ * the same LEA, and forbids holding records in the DF or MF in order to
+ * aggregate. Clause 5.2 makes that aggregation optional and subject to national
+ * or regional requirements.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 5.2, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -5,6 +5,18 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary missing_parameter
  * @description
  *
+ * Local code 1. One of the errors the LEMF may return when an operation or a
+ * parameter is misunderstood. Clause C.1.2.2 sends `RO_Error` when the
+ * operation fails at application level, with a cause taken from the operation.
+ * Clause C.1.2.4 refers unrecognized fields and parameters to annex G. Annex G
+ * tells the LEMF to ignore an unrecognized parameter or value and to reject an
+ * undecodable ROSE record. TS 101 671 does not assign this error code to one of
+ * those cases.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.2, clause C.1.2.4, annex G,
+ * clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

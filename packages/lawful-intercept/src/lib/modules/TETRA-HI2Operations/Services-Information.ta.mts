@@ -17,6 +17,16 @@ import { MAP_parameters, _decode_MAP_parameters, _encode_MAP_parameters } from "
  * @summary Services_Information
  * @description
  * 
+ * Basic-call parameters copied from signalling: ISUP, DSS1 codeset 0, and MAP.
+ * Clause A.3.2.2 uses them for the basic service (bearer capability, high-layer
+ * and low-layer compatibility, transmission medium). Include a parameter when
+ * it appears in the target's signalling. An extension marker precedes the MAP
+ * component.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.3, clause
+ * D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +45,59 @@ export
 class Services_Information {
     /**
      * @summary `iSUP_parameters`.
+     * @description
+     *
+     * Additional ISUP parameters not already carried elsewhere. See
+     * `ISUP-parameters`. Transmission medium requirement and its prime may be
+     * supplied with the calling party.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iSUP_parameters: OPTIONAL<ISUP_parameters>;
     /**
      * @summary `dSS1_parameters_codeset_0`.
+     * @description
+     *
+     * DSS1 codeset-0 parameters of the basic call, including bearer capability
+     * and the layer compatibilities. They may be supplied with the calling,
+     * called, or forwarded-to party.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_parameters_codeset_0: OPTIONAL<DSS1_parameters_codeset_0>;
     /**
      * @summary `mAP_parameters`.
+     * @description
+     *
+     * MAP parameters of the basic call. Each octet string is one MAP parameter,
+     * including the map-TS-Code, coded as in TS GSM 09.02.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mAP_parameters: OPTIONAL<MAP_parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

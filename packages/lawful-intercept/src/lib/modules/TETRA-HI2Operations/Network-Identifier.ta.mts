@@ -15,6 +15,13 @@ import { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode
  * @summary Network_Identifier
  * @description
  * 
+ * Network identifier. The operator identifier is mandatory. The network-element
+ * identifier is optional. Together they should be internationally unique. An
+ * extension marker follows them.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,52 @@ export
 class Network_Identifier {
     /**
      * @summary `operator_Identifier`.
+     * @description
+     *
+     * Notification of the network operator, access provider, or service
+     * provider, in ASCII characters. It is mandatory. Annex E carries the
+     * operator id in the called-party subaddress as 2 to 5 decimal digits,
+     * ended by a field separator. Where the octet string is not an imported
+     * parameter format, clause D.1 places the most significant half-octet in
+     * bits 5 to 8 and the least significant half-octet in bits 1 to 4. An
+     * imported format, such as an E.164 number coded as ISUP, keeps the order
+     * of that standard.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, annex E, clause D.1,
+     * clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly operator_Identifier: OCTET_STRING;
     /**
      * @summary `network_Element_Identifier`.
+     * @description
+     *
+     * Identifies the network element that carries out lawful interception, such
+     * as activation or sending of IRI. It is optional. Clause 6.2.1 allows an
+     * E.164 international node number, an X.25 address, or an IP address. This
+     * module also allows a DNS form and a structured IP address.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly network_Element_Identifier: OPTIONAL<Network_Element_Identifier>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

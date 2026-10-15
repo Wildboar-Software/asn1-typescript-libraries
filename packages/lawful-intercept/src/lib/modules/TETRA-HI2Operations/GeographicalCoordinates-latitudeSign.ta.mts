@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GeographicalCoordinates_latitudeSign
  * @description
  * 
+ * Hemisphere of a UMTS geographic point. The specification gives each name and
+ * no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -20,13 +26,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_GeographicalCoordinates_latitudeSign {
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     north = 1,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     south = 2,
 }
 
 /**
  * @summary GeographicalCoordinates_latitudeSign
  * @description
+ * 
+ * Hemisphere of a UMTS geographic point. The specification gives each name and
+ * no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -46,6 +70,12 @@ type GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_la
  * @summary GeographicalCoordinates_latitudeSign
  * @description
  * 
+ * Hemisphere of a UMTS geographic point. The specification gives each name and
+ * no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,6 +92,13 @@ const GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_l
 
 /**
  * @summary GeographicalCoordinates_latitudeSign_north
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +107,13 @@ const GeographicalCoordinates_latitudeSign_north: GeographicalCoordinates_latitu
 
 /**
  * @summary north
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +122,13 @@ const north: GeographicalCoordinates_latitudeSign = GeographicalCoordinates_lati
 
 /**
  * @summary GeographicalCoordinates_latitudeSign_south
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +137,13 @@ const GeographicalCoordinates_latitudeSign_south: GeographicalCoordinates_latitu
 
 /**
  * @summary south
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

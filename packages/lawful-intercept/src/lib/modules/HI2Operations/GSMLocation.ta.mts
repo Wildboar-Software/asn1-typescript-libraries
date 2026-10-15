@@ -16,7 +16,32 @@ import { GSMLocation_utmRefCoordinates, _decode_GSMLocation_utmRefCoordinates, _
 /**
  * @summary GSMLocation
  * @description
- * 
+ *
+ * GSM location as geographic coordinates, UTM coordinates, a UTM reference
+ * string, or a WGS 84 octet string.
+ *
+ * Geographic text: latitude `XDDMMSS.SS` (7 to 10 characters), longitude
+ * `XDDDMMSS.SS` (8 to 11 characters). `X` is N, S, E, or W. `DD` or `DDD` is
+ * degrees, numeric. `MM` is minutes, numeric. `SS.SS` is seconds; `.SS` is
+ * optional. Examples: latitude short form `N502312`, longitude long form
+ * `E1122312.18`.
+ *
+ * UTM: easting 10 characters, example `32U0439955`; northing 7 characters,
+ * example `5540736`. UTM reference: 13 characters, example `32UPU91294045`.
+ *
+ * Azimuth, on the geographic and UTM forms, is the bearing relative to true
+ * north, from 0 to 359. The datum defaults to World Geodetic System 1984.
+ *
+ * The WGS 84 alternative is an octet string whose format is defined in 3GPP TS
+ * 03.32. This document does not copy that format. Because that format is
+ * imported, clause D.1 keeps the half-octet order of 3GPP TS 03.32. Annex A.8
+ * places cell identity and location area code on `locationOfTheTarget`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.8.4, table A.8.2, clause D.1,
+ * annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

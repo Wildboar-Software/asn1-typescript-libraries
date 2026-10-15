@@ -10,7 +10,14 @@ import { lawfulInterceptDomainId } from "../Gprs-HI3-PS/lawfulInterceptDomainId.
 /**
  * @summary hi3GPRSLIId
  * @description
- * 
+ *
+ * GPRS HI3 arc: `hi3(2) gPRSLI(3)` under `lawfulInterceptDomainId`. Clause D.2
+ * points this arc at clause D.9. It is not the circuit-data arc `circuitLI(1)`
+ * or the CC-link arc `ccLinkLI(4)`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.2, clause D.9.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

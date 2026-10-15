@@ -19,6 +19,16 @@ import { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../HI2
  * @summary Location
  * @description
  * 
+ * Location of the target subscriber. An additional network parameter, included
+ * when it becomes available. GSM table A.8.2 maps cell id and location area
+ * code here. GPRS table B.5.2 maps the cell global id to `globalCellID` and the
+ * routing area identifier to `rAI`. Components that cite MAP or a 3GPP
+ * specification carry only the coding rule stated in this module.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.8.4, clause
+ * B.5.3, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,66 +79,179 @@ export
 class Location {
     /**
      * @summary `e164_Number`.
+     * @description
+     *
+     * Location number, coded as the ISUP location number parameter field (EN
+     * 300 356). Size 1 to 25. Table A.3.2 lists the location number as ISUP or
+     * MAP.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly e164_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `globalCellID`.
+     * @description
+     *
+     * Cell global identity in MAP format (TS GSM 09.02). Size 5 to 7. GSM uses
+     * it as the target's cell id. GPRS table B.5.2 maps the cell global id
+     * here. This module states no further radio coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.8.4, clause
+     * B.5.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly globalCellID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tetraLocation`.
+     * @description
+     *
+     * Not in use anymore. Kept so that old encodings can still be read. It is
+     * not the current TETRA location mechanism. Clause A.9.1 defines TETRA
+     * handover by reference to EN 301 040.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tetraLocation: OPTIONAL<TetraLocation>;
     /**
      * @summary `rAI`.
+     * @description
+     *
+     * Routing area identifier in the current SGSN. Coded in accordance with
+     * 3GPP TS 24.008 without the Routing Area Identification IEI. Only the last
+     * 6 octets are used. GPRS table B.5.2 maps the target's routing area
+     * identifier here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly rAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `gsmLocation`.
+     * @description
+     *
+     * GSM location. In this module `GSMLocation` is geographic coordinates
+     * (latitude `XDDMMSS.SS`, longitude `XDDDMMSS.SS`, datum default WGS 84,
+     * optional azimuth as the bearing relative to true north), UTM coordinates,
+     * a UTM reference string, or WGS 84 coordinates whose format is defined in
+     * 3GPP TS 03.32. This document adds no radio semantics.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly gsmLocation: OPTIONAL<GSMLocation>;
     /**
      * @summary `umtsLocation`.
+     * @description
+     *
+     * UMTS location: a point, a point with uncertainty, or a polygon, as
+     * defined by `UMTSLocation` in this module. The `Location` comment cites no
+     * 3GPP radio specification for this component.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly umtsLocation: OPTIONAL<UMTSLocation>;
     /**
      * @summary `sAI`.
+     * @description
+     *
+     * Service area identifier, seven octets, according to 3GPP TS 25.413:
+     * PLMN-Id octets 1 to 3, LAC octets 4 and 5, SAC octets 6 and 7. This
+     * module states no further radio semantics.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `oldRAI`.
+     * @description
+     *
+     * Routing area identifier in the old SGSN. Same coding as `rAI`: 3GPP TS
+     * 24.008 without the Routing Area Identification IEI, only the last 6
+     * octets. The parameter is duplicated from 3GPP TS 33.108. This document
+     * adds no other coding rule.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly oldRAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tAI`.
+     * @description
+     *
+     * Tracking area identity, six octets, coded in accordance with 3GPP TS
+     * 29.118 without the TAI IEI. Applicable only to circuit-switched cases
+     * where the location information available is the information received from
+     * the MME. Duplicated from 3GPP TS 33.108. This module states no further
+     * radio semantics.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `eCGI`.
+     * @description
+     *
+     * E-UTRAN cell global identity, eight octets, coded in accordance with 3GPP
+     * TS 29.118 without the E-CGI IEI. Applicable only to circuit-switched
+     * cases where the location information available is the information
+     * received from the MME. Duplicated from 3GPP TS 33.108. This module states
+     * no further radio semantics.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly eCGI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * BER extension additions that were not recognized. Clause C.1.2.4 refers
+     * unrecognized fields and parameters to annex G. The LEMF ignores an
+     * unrecognized parameter name and continues the record; that case does not
+     * by itself require an error, because the network may be using a newer
+     * specification. An unrecognized or disallowed value is also ignored, and
+     * the LEMF may raise an alarm. An undecodable ROSE record is rejected. The
+     * module allows an `OperationErrors` value when an operation or a parameter
+     * is misunderstood. Annex G does not name those error codes.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.4, annex G, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

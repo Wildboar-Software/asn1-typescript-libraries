@@ -12,7 +12,16 @@ import { GPRS_parameters, _decode_GPRS_parameters, _encode_GPRS_parameters } fro
 /**
  * @summary Services_Data_Information
  * @description
- * 
+ *
+ * Complementary information for the basic data call. The module places the
+ * GPRS parameters here. Annex B.5.3 uses those parameters on the GPRS IRI
+ * records described in tables B.5.1 and B.5.2.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex B, clause B.5.3, annex D, clause
+ * D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +38,30 @@ export
 class Services_Data_Information {
     /**
      * @summary `gPRS_parameters`.
+     * @description
+     *
+     * PDP address, access point name, PDP type, NSAPI, and the additional
+     * address used when the PDP type is IPv4v6.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly gPRS_parameters: OPTIONAL<GPRS_parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

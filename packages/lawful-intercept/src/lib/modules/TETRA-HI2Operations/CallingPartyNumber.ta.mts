@@ -13,6 +13,19 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CallingPartyNumber
  * @description
  * 
+ * Calling-party identity in one of the network's codings. ISUP uses the
+ * calling-party number parameter field of EN 300 356. DSS1 uses the value part
+ * of the calling-party number information element of EN 300 403-1, without the
+ * information-element identifier and without the DSS1 length. MAP uses
+ * `AddressString` of TS GSM 09.02. An extension marker precedes the MAP
+ * alternative. These are imported formats, so half-octet order follows the
+ * source standard rather than clause D.1. Annex E uses the calling-party number
+ * information element to carry the network-element identifier on a CC link,
+ * which is a different use from this IRI identity.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

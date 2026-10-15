@@ -9,6 +9,21 @@ import { ErrorsHim } from "../HIManagementOperations/ErrorsHim.osa.mjs";
  * @summary sending_of_Password
  * @description
  *
+ * Class 2 ROSE operation. Clause D.3 applies only to the ROSE delivery
+ * mechanism. The ASN.1 comment says the timer must be set to a value between 3s
+ * and 240s. The default is 60s.
+ *
+ * At data-link establishment the origin sends the origin password. After
+ * acceptance the peer returns RO_Result and sends the destination password.
+ * After acceptance of that password, each side may send data. An erroneous
+ * password releases the data link immediately, and a password-error indication
+ * is sent toward the operator.
+ *
+ * Errors are `ErrorsHim`. The argument is `Password-Name`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.3, clause C.1.2.3.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

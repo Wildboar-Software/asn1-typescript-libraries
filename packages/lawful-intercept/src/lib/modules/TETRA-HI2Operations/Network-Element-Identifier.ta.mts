@@ -14,6 +14,18 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TETRA-HI2Ope
  * @summary Network_Element_Identifier
  * @description
  * 
+ * Identity of the network element that performs interception. `e164-Format` is
+ * the E.164 address of the node in international format, coded as the
+ * calling-party number parameter of ISUP (EN 300 356). `x25-Format` is an X.25
+ * address. `iP-Format` is an IP address. `dNS-Format` is a DNS address. The
+ * module comment states no further coding for the X.25, IP, or DNS octet
+ * strings. `iP-Address` is the structured IP address. An extension marker
+ * precedes `iP-Address`. Because the E.164 form is an imported ISUP coding, its
+ * half-octet order follows EN 300 356 rather than clause D.1.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

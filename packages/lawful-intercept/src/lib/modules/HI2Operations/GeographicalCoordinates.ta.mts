@@ -14,7 +14,17 @@ import { _decode_GeographicalCoordinates_latitudeSign, _encode_GeographicalCoord
 /**
  * @summary GeographicalCoordinates
  * @description
- * 
+ *
+ * Coordinates of a UMTS point, a point with uncertainty, or a polygon vertex.
+ * Latitude is an integer from 0 to 8388607. Longitude is an integer from
+ * -8388608 to 8388607. The sign of latitude is north or south. This document
+ * states those ranges and does not state the unit or any further coding of the
+ * integers.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +47,59 @@ export
 class GeographicalCoordinates {
     /**
      * @summary `latitudeSign`.
+     * @description
+     *
+     * North or south. The module states no further coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly latitudeSign: GeographicalCoordinates_latitudeSign;
     /**
      * @summary `latitude`.
+     * @description
+     *
+     * Integer from 0 to 8388607. This document states the range and does not
+     * state the unit or any further coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly latitude: INTEGER;
     /**
      * @summary `longitude`.
+     * @description
+     *
+     * Integer from -8388608 to 8388607. This document states the range and
+     * does not state the unit or any further coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly longitude: INTEGER;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -90,6 +135,14 @@ class GeographicalCoordinates {
 
         /**
          * @summary The enum used as the type of the component `latitudeSign`
+         * @description
+         *
+         * North or south. The module states no further coding.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+         *
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

@@ -12,6 +12,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary National_Parameters
  * @description
  * 
+ * National parameters. Content is defined by national law. A set of 1 to 40
+ * octet strings, each of size 1 to 256. Tables A.3.2 and A.3.3 may be extended
+ * nationally or by the operator; those extensions are carried here. When they
+ * are delivered to a LEA they are transmitted as defined by the sending
+ * network.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.3, clause
+ * A.3.4, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

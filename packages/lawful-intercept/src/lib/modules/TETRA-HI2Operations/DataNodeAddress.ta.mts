@@ -14,6 +14,14 @@ import { X25Address, _decode_X25Address, _encode_X25Address } from "../TETRA-HI2
  * @summary DataNodeAddress
  * @description
  * 
+ * Address of a data node, either an IP address or an X.25 address. An extension
+ * marker follows those alternatives. The present document does not state which
+ * nodes use which alternative, except where a component that carries this type
+ * names the node.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

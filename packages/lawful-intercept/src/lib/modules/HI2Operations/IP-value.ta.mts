@@ -13,7 +13,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IP_value
  * @description
- * 
+ *
+ * IP address as binary octets or as text.
+ *
+ * Binary, size 4 to 16 octets: for IPv6 the prefix length is
+ * `iPv6PrefixLength`; for IPv4 the netmask is `iPv4SubnetMask`. Text, size 7
+ * to 45 characters: for IPv6, a complete single IPv6 address or an IPv6 prefix
+ * for a subnetwork on the target side; for IPv4, a single IPv4 address or an
+ * IPv4 address and netmask, for example `192.168.1.1` or `192.168.1.1/24`.
+ *
+ * The module does not name an imported half-octet format for the binary
+ * address. Clause D.1's general rule puts the most significant half-octet in
+ * bits 5 to 8 and the least significant in bits 1 to 4.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.1, annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

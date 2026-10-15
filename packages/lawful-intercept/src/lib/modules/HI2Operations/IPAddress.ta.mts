@@ -20,7 +20,21 @@ import { IPAddress_iP_assignment, _decode_IPAddress_iP_assignment, _encode_IPAdd
 /**
  * @summary IPAddress
  * @description
- * 
+ *
+ * IP address reported for a data node, including a PDP address allocated to
+ * the target (table B.5.2). The assignment coding is normative: static for a
+ * static address, dynamic for a dynamically allocated address, and notKnown
+ * for an address that is neither.
+ *
+ * `iPv6PrefixLength` is the length of the prefix the CSP delegated to the
+ * subscriber. It is mandatory when `iP-value` contains an IPv6 binary value.
+ * The example in the module is 60 for `2001:db8:0:85a3::ac1f:8001/60`.
+ * `iPv4SubnetMask` is the subnet mask applied to an IPv4 value.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,36 +77,96 @@ export
 class IPAddress {
     /**
      * @summary `iP_type`.
+     * @description
+     *
+     * IPv4 or IPv6. The module states no further coding for either name.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_type: IPAddress_iP_type;
     /**
      * @summary `iP_value`.
+     * @description
+     *
+     * Binary address (size 4 to 16 octets) or text (size 7 to 45). For a
+     * binary IPv6 value the prefix length is supplied separately and is
+     * mandatory. For a binary IPv4 value the netmask is supplied separately.
+     * Text may be a single address or, for IPv6, a prefix for a target-side
+     * subnetwork, and for IPv4 an address or `address/netmask` such as
+     * `192.168.1.1` or `192.168.1.1/24`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.1, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_value: IP_value;
     /**
      * @summary `iP_assignment`.
+     * @description
+     *
+     * Static shall be used for a static address. Dynamic shall be used for a
+     * dynamically allocated address. NotKnown shall be used for an address
+     * that is neither.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_assignment: OPTIONAL<IPAddress_iP_assignment>;
     /**
      * @summary `iPv6PrefixLength`.
+     * @description
+     *
+     * Length of the prefix the CSP delegated to the subscriber, from 1 to 128.
+     * Mandatory when the address contains an IPv6 binary value. The module's
+     * example is 60 for `2001:db8:0:85a3::ac1f:8001/60`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iPv6PrefixLength: OPTIONAL<INTEGER>;
     /**
      * @summary `iPv4SubnetMask`.
+     * @description
+     *
+     * Four octets. Subnet mask applied to an IPv4 address, as a binary value.
+     * The module's example is `ff ff ff f8`, the dotted-decimal mask
+     * 255.255.255.248, a /29 prefix.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iPv4SubnetMask: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -132,12 +206,30 @@ class IPAddress {
 
         /**
          * @summary The enum used as the type of the component `iP_type`
+         * @description
+         *
+         * Named values IPv4 and IPv6. The module states no further coding for
+         * either name.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+         *
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */
 
     public static _enum_for_iP_type = _enum_for_IPAddress_iP_type;        /**
          * @summary The enum used as the type of the component `iP_assignment`
+         * @description
+         *
+         * Static shall report a static address, dynamic a dynamically
+         * allocated address, and notKnown an address that is neither.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+         *
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

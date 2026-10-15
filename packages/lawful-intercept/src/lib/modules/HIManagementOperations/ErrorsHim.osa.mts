@@ -13,7 +13,16 @@ import { erroneous_parameter } from "../HIManagementOperations/erroneous-paramet
 /**
  * @summary ErrorsHim
  * @description
- * 
+ *
+ * Errors `sending-of-Password` may return. `data-Link-Test` and
+ * `end-Of-Connection` list only `other-failure-causes`, not this whole set.
+ * Local codes: `other-failure-causes` 0, `missing-parameter` 1,
+ * `unknown-parameter` 2, `erroneous-parameter` 3. Clause D.3 applies only to
+ * ROSE. The document does not say which condition selects which code.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.3, clause C.1.2.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,15 @@ import { TetraLocation_ms_Loc, _decode_TetraLocation_ms_Loc, _encode_TetraLocati
  * @summary TetraLocation
  * @description
  * 
+ * Not in use anymore. Kept for backwards compatibility. It is not the current
+ * TETRA location mechanism. `ms-Loc` retains a mobile country code, mobile
+ * network code, location area, and optional cell identity with the bit comments
+ * in this module. `ls-Loc` is an integer. The module does not define what that
+ * integer means.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

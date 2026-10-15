@@ -10,14 +10,15 @@ import { lawfulInterceptDomainId } from "../HI3CCLinkData/lawfulInterceptDomainI
 /**
  * @summary hi3CCLinkId
  * @description
- * 
- * HI3 CC-link domain. Under `lawfulInterceptDomainId`, not under `threeGPP(4)`:
- * `hi3(2)` `ccLinkLI(4)`. The operation identifier adds `version4(4)`.
- * 
- * 3GPP TS 33.108, annex J.1.
- * 
- * https://www.3gpp.org/DynaReport/33108.htm
- * 
+ *
+ * CC-link UUS1 arc: `hi3(2) ccLinkLI(4)` under `lawfulInterceptDomainId`.
+ * Clause D.2 points this arc at clause D.8, the UUS1 content associated with
+ * the circuit-switched CC link. The module object identifier spells the same
+ * arc `cclinkLI(4)`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.2, clause D.8.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

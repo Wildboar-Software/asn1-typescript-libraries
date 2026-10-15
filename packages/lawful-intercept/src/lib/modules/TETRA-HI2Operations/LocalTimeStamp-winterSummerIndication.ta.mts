@@ -8,14 +8,38 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_LocalTimeStamp_winterSummerIndication {
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     notProvided = 0,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     winterTime = 1,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     summerTime = 2,
 }
 
 /**
  * @summary LocalTimeStamp_winterSummerIndication
  * @description
+ * 
+ * Winter or summer regime of a local timestamp. The specification gives each
+ * name and no further behaviour. An extension marker follows the named values.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -35,6 +59,13 @@ type LocalTimeStamp_winterSummerIndication = _enum_for_LocalTimeStamp_winterSumm
 
 /**
  * @summary LocalTimeStamp_winterSummerIndication_notProvided
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +74,13 @@ const LocalTimeStamp_winterSummerIndication_notProvided: LocalTimeStamp_winterSu
 
 /**
  * @summary notProvided
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +89,13 @@ const notProvided: LocalTimeStamp_winterSummerIndication = LocalTimeStamp_winter
 
 /**
  * @summary LocalTimeStamp_winterSummerIndication_winterTime
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +104,13 @@ const LocalTimeStamp_winterSummerIndication_winterTime: LocalTimeStamp_winterSum
 
 /**
  * @summary winterTime
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +119,13 @@ const winterTime: LocalTimeStamp_winterSummerIndication = LocalTimeStamp_winterS
 
 /**
  * @summary LocalTimeStamp_winterSummerIndication_summerTime
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +134,13 @@ const LocalTimeStamp_winterSummerIndication_summerTime: LocalTimeStamp_winterSum
 
 /**
  * @summary summerTime
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

@@ -6,17 +6,61 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_SMS_report_sMS_Contents_transfer_status
+ * @description
+ *
+ * Result of transferring the SMS. `succeed-transfer` means the transfer of the
+ * SMS message succeeds. `not-succeed-transfer` and `undefined` are named and
+ * the module states no further meaning for them.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
+ * @enum {number}
+ */
 export
 enum _enum_for_SMS_report_sMS_Contents_transfer_status {
+    /**
+     * The transfer of the SMS message succeeds.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     succeed_transfer = 0,
+    /**
+     * The transfer did not succeed. The module gives the name and no further
+     * meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     not_succeed_transfer = 1,
+    /**
+     * Transfer result named `undefined`. The module states no further meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     undefined = 2,
 }
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status
  * @description
- * 
+ *
+ * Result of transferring the SMS. `succeed-transfer` means the transfer of the
+ * SMS message succeeds. `not-succeed-transfer` and `undefined` are named and
+ * the module states no further meaning for them.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +80,14 @@ type SMS_report_sMS_Contents_transfer_status = _enum_for_SMS_report_sMS_Contents
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_succeed_transfer
+ * @description
+ *
+ * The transfer of the SMS message succeeds.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +96,14 @@ const SMS_report_sMS_Contents_transfer_status_succeed_transfer: SMS_report_sMS_C
 
 /**
  * @summary succeed_transfer
+ * @description
+ *
+ * The transfer of the SMS message succeeds.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +112,15 @@ const succeed_transfer: SMS_report_sMS_Contents_transfer_status = SMS_report_sMS
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_not_succeed_transfer
+ * @description
+ *
+ * The transfer did not succeed. The module gives the name and no further
+ * meaning.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +129,15 @@ const SMS_report_sMS_Contents_transfer_status_not_succeed_transfer: SMS_report_s
 
 /**
  * @summary not_succeed_transfer
+ * @description
+ *
+ * The transfer did not succeed. The module gives the name and no further
+ * meaning.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +146,14 @@ const not_succeed_transfer: SMS_report_sMS_Contents_transfer_status = SMS_report
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_undefined
+ * @description
+ *
+ * Transfer result named `undefined`. The module states no further meaning.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +162,14 @@ const SMS_report_sMS_Contents_transfer_status_undefined: SMS_report_sMS_Contents
 
 /**
  * @summary undefined
+ * @description
+ *
+ * Transfer result named `undefined`. The module states no further meaning.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

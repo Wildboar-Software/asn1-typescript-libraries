@@ -82,6 +82,28 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  * @summary Tetra_IRI_Parameters
  * @description
  * 
+ * Parameters of one TETRA HI2 record. The record type is selected by
+ * `TetraIRIContent`. The sending entity shall include `domainID`. If
+ * `iRIversion` is absent, version 1 is handled. The only named version is
+ * `version0(0)`, followed by an extension marker.
+ *
+ * After the shared extension marker this module adds `tETRA-LI-Event`,
+ * `dMO-Indicator`, `tETRA-PartyInformation`, `tETRA-Other-PartyInformation`,
+ * `txGrantedStatus`, and `groupStatus`, and then national HI2 parameters.
+ * Clause A.9.2.1.0 requires `nature-Of-The-intercepted-call` to be
+ * `tETRA-circuit-call` for the TETRA events defined there. Notes on an
+ * information field apply from the first table that states them to every later
+ * record that carries that field.
+ *
+ * BEGIN, CONTINUE, and REPORT shall include at least one optional parameter.
+ * IRI parameters come from normal network signalling. The interception function
+ * is not required to request extra information that signalling did not supply,
+ * and it is not required to filter IRI.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 5.2, clause 8.2, clause A.9.2.1.0,
+ * clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -228,276 +250,753 @@ export
 class Tetra_IRI_Parameters {
     /**
      * @summary `domainID`.
+     * @description
+     *
+     * Object identifier of the sending entity, constrained to `hi2OperationId`
+     * (`{tETRADomainId hi2(2) version3(3)}`). The component is marked optional,
+     * and the module comment says that for the sending entity its inclusion is
+     * mandatory.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `iRIversion`.
+     * @description
+     *
+     * Identifies which version of the HI2 specification the sender handles. The
+     * only named value is `version0(0)`, and an extension marker follows it. If
+     * the component is absent, version 1 is handled. The present document does
+     * not define further behaviour for `version0`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRIversion: OPTIONAL<Tetra_IRI_Parameters_iRIversion>;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     *
+     * Lawful Interception Identifier associated with the target. See
+     * `LawfulInterceptionIdentifier`. It is mandatory HI2 control information
+     * and is required on every annex A.9 TETRA event.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.1, clause A.3.2.1, clause
+     * A.9.2.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     *
+     * Identifies the intercepted call. The same value is sent on HI3, so IRI
+     * can be correlated with CC, and on each IRI of that call. It was called
+     * callIdentifier in V1.1.1 of ES 201 671. Clause A.3.2.1 allows it to be
+     * omitted on IRI-REPORT records that are not about a call.
+     *
+     * The first TETRA call-setup note says the value shall be the same on every
+     * record of a call from BEGIN to END, and unique for one LIID for at least
+     * several days. That note continues to apply wherever the call identity
+     * appears. The call-release note adds that the call identity is incoming or
+     * outgoing depending on call type.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2, clause A.3.2.1, clause
+     * A.9.2.1.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Date and time of the event that triggered the report. Clause A.3.2.1
+     * describes it as the date and time of the record trigger condition. The
+     * minimum resolution is one second. The operator normally chooses local
+     * time or UTC. Annex A.9 marks the event time mandatory on every TETRA
+     * event.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.1, clause A.9.2.1, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `intercepted_Call_Direct`.
+     * @description
+     *
+     * Whether the target is the originating party, the terminating party, or
+     * the direction is not available. For GPRS, originating means the mobile
+     * station requested the PDP context activation, modification, or
+     * deactivation, and terminating means the network initiated it. Include it
+     * when it first becomes available. An identical later value need not be
+     * repeated.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly intercepted_Call_Direct: OPTIONAL<Tetra_IRI_Parameters_intercepted_Call_Direct>;
     /**
      * @summary `intercepted_Call_State`.
+     * @description
+     *
+     * State of the intercepted call. Idle means the call has been released, and
+     * the reason is then taken from `release-Reason-Of-Intercepted-Call`. Annex
+     * A.9 marks the call state mandatory on call setup, ringing, queueing,
+     * connected, and call release.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly intercepted_Call_State: OPTIONAL<Intercepted_Call_State>;
     /**
      * @summary `ringingDuration`.
+     * @description
+     *
+     * Ringing duration in seconds, BCD coded HHMMSS. Clause A.3.3 includes it
+     * when the corresponding event is detected. Where the octet string is not
+     * an imported parameter format, clause D.1 places the most significant
+     * half-octet in bits 5 to 8 and the least significant half-octet in bits 1
+     * to 4. An imported format, such as an E.164 number coded as ISUP, keeps
+     * the order of that standard.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.1, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly ringingDuration: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `conversationDuration`.
+     * @description
+     *
+     * Conversation duration in seconds, BCD coded HHMMSS. Clause A.3.3 includes
+     * it when the corresponding event is detected. Where the octet string is
+     * not an imported parameter format, clause D.1 places the most significant
+     * half-octet in bits 5 to 8 and the least significant half-octet in bits 1
+     * to 4. An imported format, such as an E.164 number coded as ISUP, keeps
+     * the order of that standard.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.1, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly conversationDuration: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `locationOfTheTarget`.
+     * @description
+     *
+     * Location of the target subscriber. Include it when signalling provides
+     * it. Annex A.9 reports it as conditional TETRA location on call setup,
+     * ringing, queueing, connected, call forward, call hold, call release, SDS,
+     * group indication, mobile on, mobile off, and direct mode. Handover and
+     * location update report the new location.
+     *
+     * The first call-setup note says `tetraLocation` may be used for that TETRA
+     * location. The note continues to apply on later records. The component
+     * `tetraLocation` inside `Location` is commented as no longer in use and
+     * kept for compatibility. The TxGranted table names `TETRACGIType` rather
+     * than this component. `TETRACGIType` is not a component of
+     * `Tetra-IRI-Parameters`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.9.2.1, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly locationOfTheTarget: OPTIONAL<Location>;
     /**
      * @summary `partyInformation`.
+     * @description
+     *
+     * Originating, terminating, or forwarded-to party, the identities of that
+     * party, and the information the party provided. From one to ten parties.
+     * Send an address when it first becomes available, including a partial
+     * called address in IRI-BEGIN, and send the completed address later.
+     *
+     * When a forwarded call reaches the target, redirecting-party information
+     * is placed with the originating party. When the target forwards, the
+     * target's redirecting information is placed with the terminating party,
+     * and forwarded-to information, including the forwarding reason, is placed
+     * with the forwarded-to party.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.2.3, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly partyInformation: OPTIONAL<PartyInformation[]>;
     /**
      * @summary `callContentLinkInformation`.
+     * @description
+     *
+     * CC links set up toward the LEMF. Link 1 is the Tx channel, or the sum
+     * signal when mono mode is used. Link 2 is the Rx channel. For a
+     * bi-directional circuit call, clause A.4 sets up two one-way delivery
+     * calls: one carries CC from the target and one carries CC toward the
+     * target. Annex E treats stereo as the default and mono as historic.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4.1, clause A.3.3, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly callContentLinkInformation: OPTIONAL<Tetra_IRI_Parameters_callContentLinkInformation>;
     /**
      * @summary `release_Reason_Of_Intercepted_Call`.
+     * @description
+     *
+     * Why the intercepted call cannot be established, or why it was released
+     * after the active phase. Coded in ITU-T Q.850 format. When the call state
+     * is idle, that state uses this value as the reason. A cause received from
+     * ISUP or DSS1 is sent with the party that initiated the release, or with
+     * either party if the network initiated the release.
+     *
+     * The call-release table names `callReleaseReason`. That name is not a
+     * component of `Tetra-IRI-Parameters`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.9.2.1.3.1,
+     * clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly release_Reason_Of_Intercepted_Call: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nature_Of_The_intercepted_call`.
+     * @description
+     *
+     * Nature of the intercepted call, and which handover interface carries
+     * user-to-user data or call content. Clause A.9.2.1.0 requires
+     * `tETRA-circuit-call` for the TETRA events defined in that clause. Annex
+     * A.9 marks this component mandatory on the call and SDS-related tables
+     * that include a call-information row.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.0, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly nature_Of_The_intercepted_call: OPTIONAL<Tetra_IRI_Parameters_nature_Of_The_intercepted_call>;
     /**
      * @summary `serverCenterAddress`.
+     * @description
+     *
+     * Address of a server centre. For SMS, the address of the relevant server,
+     * carried with the calling party when the server originates the message and
+     * with the called party when the server terminates it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly serverCenterAddress: OPTIONAL<PartyInformation>;
     /**
      * @summary `sMS`.
+     * @description
+     *
+     * SMS content and the information associated with that content. Clause
+     * B.5.3 maps a GPRS SMS event to an IRI-REPORT and carries the SMS content,
+     * including its header, here. Clause A.4.2 allows GSM SMS, exceptionally,
+     * to be passed on HI2.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4.2, clause B.5.3, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sMS: OPTIONAL<SMS_report>;
     /**
      * @summary `cC_Link_Identifier`.
+     * @description
+     *
+     * Identifies a CC link when a network option reuses CC links for multiparty
+     * calls. That reuse is option B. Option A keeps separate CC links for
+     * active and non-active calls and does not use this identifier. It may use
+     * the same format as the communication identity number. In that case it
+     * need not be sent when the CC link is set up, and the CIN may stand for
+     * it. Digits are ASCII, one octet per digit: `12345678` is `0x31` `0x32`
+     * `0x33` `0x34` `0x35` `0x36` `0x37` `0x38`. Annex E carries it in the
+     * called-party subaddress as 1 to 8 decimal digits.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.1.1, clause A.5.4, annex E,
+     * clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cC_Link_Identifier: OPTIONAL<CC_Link_Identifier>;
     /**
      * @summary `national_Parameters`.
+     * @description
+     *
+     * National extensions. The content is defined by national law. Clauses
+     * A.3.2.2 and A.3.3 allow a country or an operator to extend the IRI
+     * parameters. The operator is not required to filter IRI.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly national_Parameters: OPTIONAL<National_Parameters>;
     /**
      * @summary `gPRSCorrelationNumber`.
+     * @description
+     *
+     * Correlation number for GPRS. It is unique per PDP context and correlates
+     * CC with IRI, and the IRI records of that PDP context. The SGSN or GGSN
+     * provides it to HI2 and HI3. Annex B gives the combination of GGSN address
+     * and charging ID as an example.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.1, clause B.5.2.2, clause
+     * B.5.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly gPRSCorrelationNumber: OPTIONAL<GPRSCorrelationNumber>;
     /**
      * @summary `gPRSevent`.
+     * @description
+     *
+     * Particular action of the target, such as attach or detach. Clause B.5.3
+     * maps each named event to an IRI record type. The module comment refers to
+     * 3GPP TS 03.33. This document does not restate that specification.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly gPRSevent: OPTIONAL<GPRSEvent>;
     /**
      * @summary `sgsnAddress`.
+     * @description
+     *
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sgsnAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `gPRSOperationErrorCode`.
+     * @description
+     *
+     * Reason a PDP context activation failed, or a GPRS attach failed. Values
+     * are the GMM cause or the SM cause of 3GPP TS 24.008. This document does
+     * not list those causes.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly gPRSOperationErrorCode: OPTIONAL<GPRSOperationErrorCode>;
     /**
      * @summary `ggsnAddress`.
+     * @description
+     *
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly ggsnAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `qOS`.
+     * @description
+     *
+     * This parameter is duplicated from 3GPP TS 33.108. The present document
+     * states no further coding rule for it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly qOS: OPTIONAL<UmtsQos>;
     /**
      * @summary `networkIdentifier`.
+     * @description
+     *
+     * Network identification. Annex A.9 marks it mandatory on every TETRA event
+     * table. The module comment says this parameter is duplicated from 3GPP TS
+     * 33.108 and states no further coding rule. It is a different component
+     * from the network identifier inside `communicationIdentifier`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly networkIdentifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `sMSOriginatingAddress`.
+     * @description
+     *
+     * This parameter is duplicated from 3GPP TS 33.108. The present document
+     * states no further coding rule for it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sMSOriginatingAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `sMSTerminatingAddress`.
+     * @description
+     *
+     * This parameter is duplicated from 3GPP TS 33.108. The present document
+     * states no further coding rule for it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sMSTerminatingAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `iMSevent`.
+     * @description
+     *
+     * Imported from `UmtsHI2Operations`, which this module attributes to 3GPP
+     * TS 33.108. The present document assigns no behaviour to this component.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iMSevent: OPTIONAL<IMSevent>;
     /**
      * @summary `sIPMessage`.
+     * @description
+     *
+     * This parameter is duplicated from 3GPP TS 33.108. The present document
+     * states no further coding rule for it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sIPMessage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servingSGSN_number`.
+     * @description
+     *
+     * This parameter is duplicated from 3GPP TS 33.108. The present document
+     * states no further coding rule for it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly servingSGSN_number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servingSGSN_address`.
+     * @description
+     *
+     * Octets are coded according to TS 123 003. The parameter is duplicated
+     * from 3GPP TS 33.108. The present document states no further coding rule.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly servingSGSN_address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tARGETACTIVITYMONITOR`.
+     * @description
+     *
+     * Used in TS 101 909-20-1. The present document assigns no further
+     * behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tARGETACTIVITYMONITOR: OPTIONAL<TARGETACTIVITYMONITOR_1>;
     /**
      * @summary `ldiEvent`.
+     * @description
+     *
+     * Location Dependent Interception parameter, duplicated from 3GPP TS
+     * 33.108. The present document states no further coding rule.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly ldiEvent: OPTIONAL<LDIevent>;
     /**
      * @summary `correlation`.
+     * @description
+     *
+     * This parameter is duplicated from 3GPP TS 33.108. The present document
+     * states no further coding rule for it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly correlation: OPTIONAL<CorrelationValues>;
     /**
      * @summary `tARGETACTIVITYMONITORind`.
+     * @description
+     *
+     * Used in EN 301 040. The present document assigns no further behaviour in
+     * this module.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tARGETACTIVITYMONITORind: OPTIONAL<TARGETACTIVITYMONITORind>;
     /**
      * @summary `tARGETCOMMSMONITORind`.
+     * @description
+     *
+     * Used in EN 301 040. Annex A.9 uses `targetcommsid` of `CircuitIdType`
+     * inside it as the HI3 line identity, which correlates IRI and CC. It is
+     * mandatory on originating and terminating call setup, handover, call
+     * forward, and call release. The call-release note says the line identity
+     * is moc or mtc depending on call type.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tARGETCOMMSMONITORind: OPTIONAL<TARGETCOMMSMONITORind>;
     /**
      * @summary `tTRAFFICind`.
+     * @description
+     *
+     * Used in EN 301 040. The present document assigns no further behaviour in
+     * this module.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tTRAFFICind: OPTIONAL<TTRAFFICind>;
     /**
      * @summary `cTTRAFFICind`.
+     * @description
+     *
+     * Used in EN 301 040. The present document assigns no further behaviour in
+     * this module.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cTTRAFFICind: OPTIONAL<CTTRAFFICind>;
     /**
      * @summary `tETRA_LI_Event`.
+     * @description
+     *
+     * TETRA event that caused the record. Clause A.9.2.0 assigns each event to
+     * a BEGIN, CONTINUE, END, or REPORT record. Each annex A.9 table marks the
+     * event mandatory. The behaviour of each value is defined on
+     * `TETRA-LI-Event`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.0, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tETRA_LI_Event: OPTIONAL<TETRA_LI_Event>;
     /**
      * @summary `dMO_Indicator`.
+     * @description
+     *
+     * Direct Mode state on a DMO report. Annex A.9.2.1.4.7 requires it. That
+     * report tells the LEA that the observed party has entered radio
+     * communications which the TETRA switch cannot observe. Each enumeration
+     * value is a name only. The specification gives those names no further
+     * behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.7, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dMO_Indicator: OPTIONAL<DMO_Indicator>;
     /**
      * @summary `tETRA_PartyInformation`.
+     * @description
+     *
+     * TETRA identity of the target. The type is imported from EN 301 040. Annex
+     * A.9 marks it mandatory on every event in clause A.9.2.1. For group
+     * indication, observation of an individual subscriber puts the ITSI here
+     * and the GTSI in the other party. Observation of a group puts the GTSI
+     * here and the ITSI in the other party.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1, clause A.9.2.1.4.4,
+     * clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tETRA_PartyInformation: OPTIONAL<TETRAAddressType>;
     /**
      * @summary `tETRA_Other_PartyInformation`.
+     * @description
+     *
+     * TETRA identity of the other party, imported from EN 301 040. Annex A.9
+     * requires it on call setup, ringing, queueing, connected, call forward,
+     * call hold, call release, and group indication. On TxGranted it is the
+     * group identity. The group-indication note swaps ITSI and GTSI with the
+     * target identity when the warrant is on a group rather than an individual.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1, clause A.9.2.1.2.7,
+     * clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tETRA_Other_PartyInformation: OPTIONAL<TETRAAddressType>;
     /**
      * @summary `txGrantedStatus`.
+     * @description
+     *
+     * Talker status in a group. FALSE means TxCeased. TRUE means TxGranted.
+     * Annex A.9.2.1.2.7 requires it on the TxGranted CONTINUE record.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.2.7, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly txGrantedStatus: OPTIONAL<TxGrantedStatus>;
     /**
      * @summary `groupStatus`.
+     * @description
+     *
+     * FALSE when the observed subscriber leaves the group, TRUE when the
+     * subscriber joins. Annex A.9.2.1.4.4 sends one REPORT for every such group
+     * and requires this value.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1.4.4, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly groupStatus: OPTIONAL<GroupStatus>;
     /**
      * @summary `national_HI2_ASN1parameters`.
+     * @description
+     *
+     * National HI2 parameters for one country. The country code is the ISO
+     * 3166-1 code of the country to which parameters after the extension marker
+     * apply. Those parameters should be defined in ASN.1 after the extension
+     * marker. The module recommends a version parameter and a vendor
+     * identification parameter. Vendor identifications can be retrieved from
+     * the IANA web site (annex K). Tags 240 to 255 should be avoided in a
+     * formal type definition.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3, annex K.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

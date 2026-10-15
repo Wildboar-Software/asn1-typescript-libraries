@@ -13,6 +13,15 @@ import { CallContentLinkCharacteristics, _decode_CallContentLinkCharacteristics,
  * @summary Tetra_IRI_Parameters_callContentLinkInformation
  * @description
  * 
+ * The two CC links of a circuit interception. Link 1 is the transmit channel
+ * toward the LEMF, or the sum signal in mono mode. Link 2 is the receive
+ * channel toward the LEMF. Clause A.4 uses two one-way delivery calls for a
+ * bi-directional target call. Annex E treats stereo as the default and combined
+ * mono as historic. An extension marker follows the two links.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4.1, annex E, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +42,42 @@ export
 class Tetra_IRI_Parameters_callContentLinkInformation {
     /**
      * @summary `cCLink1Characteristics`.
+     * @description
+     *
+     * CC link for the transmit channel toward the LEMF, or for the sum signal
+     * when mono mode is used.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCLink1Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
     /**
      * @summary `cCLink2Characteristics`.
+     * @description
+     *
+     * CC link for the receive channel toward the LEMF.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCLink2Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

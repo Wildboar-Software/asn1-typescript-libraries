@@ -14,6 +14,16 @@ import { _decode_LocalTimeStamp_winterSummerIndication, _encode_LocalTimeStamp_w
  * @summary LocalTimeStamp
  * @description
  * 
+ * Local-time form of an IRI timestamp. The generalized time has a minimum
+ * resolution of one second. Resolution is the smallest incremental change that
+ * can be measured for time, expressed with a definite number of decimal digits
+ * or bits. Winter or summer is a separate indication. The module does not put a
+ * UTC offset in this sequence. Clause A.3.2.1 calls this local time without a
+ * time zone.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.1, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +49,30 @@ export
 class LocalTimeStamp {
     /**
      * @summary `generalizedTime`.
+     * @description
+     *
+     * Local date and time of the event. Minimum resolution is one second. The
+     * module does not carry a UTC offset here. Winter time, summer time, or
+     * "not provided" is the following component.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.1, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly generalizedTime: GeneralizedTime;
     /**
      * @summary `winterSummerIndication`.
+     * @description
+     *
+     * Whether this local time is winter time, summer time, or the indication
+     * was not provided. TS 101 671 names the three values and defines no
+     * offsets.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -76,6 +104,14 @@ class LocalTimeStamp {
 
         /**
          * @summary The enum used as the type of the component `winterSummerIndication`
+         * @description
+         *
+         * Winter, summer, or not provided, for the local timestamp. TS 101 671
+         * defines no offsets for winter or summer time.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

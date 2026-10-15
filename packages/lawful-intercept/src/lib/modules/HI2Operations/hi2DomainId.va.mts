@@ -11,6 +11,15 @@ import { lawfulInterceptDomainId } from "../HI2Operations/lawfulInterceptDomainI
  * @summary hi2DomainId
  * @description
  * 
+ * HI2 arc `{lawfulInterceptDomainId hi2(1)}`. `sending-of-IRI` is coded under
+ * this arc as `{hi2DomainId sending-of-IRI(1) version1(1)}`. The operation
+ * carries Intercept Related Information from the mediation function to the
+ * LEMF.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 8.1, clause C.1.2.1, clause D.2,
+ * clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,6 +19,15 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * @summary CallContentLinkCharacteristics
  * @description
  * 
+ * Characteristics of one content-of-communication link from the mediation
+ * function toward the LEMF. LI-specific. Include a component when the
+ * corresponding link event is detected. Clause A.4 uses two one-way 64 kbit/s
+ * links for a bi-directional target call. The link state, release time, Q.850
+ * release cause, and LEMF directory number are all optional.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.4, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +51,78 @@ export
 class CallContentLinkCharacteristics {
     /**
      * @summary `cCLink_State`.
+     * @description
+     *
+     * Current state of the CC link: set-up in process, active, released, or
+     * unable to be established for lack of resource at the mediation function.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCLink_State: OPTIONAL<CCLink_State>;
     /**
      * @summary `release_Time`.
+     * @description
+     *
+     * Date and time of the release of the call-content link. The timestamp's
+     * minimum resolution is one second.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly release_Time: OPTIONAL<TimeStamp>;
     /**
      * @summary `release_Reason`.
+     * @description
+     *
+     * Release cause of the CC link, coded in ITU-T Q.850 format, two octets.
+     * Table A.3.2 also lists the cause indicator on this parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly release_Reason: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lEMF_Address`.
+     * @description
+     *
+     * Directory number used to route the call toward the LEMF. Clause A.4.1
+     * assigns a fixed LEMF address for each interception and says that address
+     * is not used for identification. Correlation uses the LI identifiers in
+     * clauses 6 and A.1.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4.1, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lEMF_Address: OPTIONAL<CalledPartyNumber>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * BER extension additions that were not recognized. Clause C.1.2.4 refers
+     * unrecognized fields and parameters to annex G. The LEMF ignores an
+     * unrecognized parameter name and continues the record; that case does not
+     * by itself require an error, because the network may be using a newer
+     * specification. An unrecognized or disallowed value is also ignored, and
+     * the LEMF may raise an alarm. An undecodable ROSE record is rejected. The
+     * module allows an `OperationErrors` value when an operation or a parameter
+     * is misunderstood. Annex G does not name those error codes.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.4, annex G, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -103,6 +160,14 @@ class CallContentLinkCharacteristics {
 
         /**
          * @summary The enum used as the type of the component `cCLink_State`
+         * @description
+         *
+         * Current state of this CC link, including lack of resource at the
+         * mediation function.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

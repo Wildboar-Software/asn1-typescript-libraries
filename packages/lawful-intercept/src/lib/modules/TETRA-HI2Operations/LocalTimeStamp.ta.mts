@@ -14,6 +14,13 @@ import { _decode_LocalTimeStamp_winterSummerIndication, _encode_LocalTimeStamp_w
  * @summary LocalTimeStamp
  * @description
  * 
+ * Local time of an event, without a numeric time zone. The winter or summer
+ * indication says which local regime applies, or that it was not provided. The
+ * minimum resolution is one second.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +46,30 @@ export
 class LocalTimeStamp {
     /**
      * @summary `generalizedTime`.
+     * @description
+     *
+     * Local date and time. The minimum resolution is one second. Resolution is
+     * the smallest incremental change that can be measured for time, expressed
+     * with a definite number of decimal digits or bits.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly generalizedTime: GeneralizedTime;
     /**
      * @summary `winterSummerIndication`.
+     * @description
+     *
+     * Whether the local time is winter time, summer time, or the indication was
+     * not provided. The specification gives the three names and no further
+     * behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

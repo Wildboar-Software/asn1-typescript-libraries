@@ -12,6 +12,44 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary IRIContent
  * @description
  * 
+ * One IRI record. BEGIN is the first event of a communication attempt and opens
+ * the IRI transaction. END is the end of a communication or communication
+ * attempt and closes it. CONTINUE is any time during the communication or
+ * attempt. REPORT is for non-communication events, such as
+ * subscriber-controlled input, and may report a simple unsuccessful attempt.
+ * Types BEGIN, CONTINUE, and END follow the communication phase. They are not
+ * tied to particular signalling messages; the causing events are carried in
+ * other parameters.
+ *
+ * BEGIN, CONTINUE, and REPORT must include at least one optional parameter. The
+ * END alternative's comment does not state that requirement. Clause A.3.5 adds
+ * no further ban on which parameters appear in which type, apart from the
+ * mandatory parameters. A called party number is normally absent from END
+ * because it was sent earlier.
+ *
+ * GSM circuit-switched table A.8.1: establishment BEGIN; answer, supplementary
+ * service, and handover CONTINUE; release END; location update,
+ * subscriber-controlled input, SMS, and serving system REPORT. Sending
+ * redundant information on later events is an implementation option. GPRS table
+ * B.5.1: attach, detach, unsuccessful PDP-context activation, cell or RA
+ * update, SMS, and end of intercept with an active PDP context are REPORT;
+ * successful activation is BEGIN; start of intercept with an active context is
+ * BEGIN or optionally CONTINUE; modification is CONTINUE; deactivation is END.
+ * While a PDP context is active, CONTINUE carries CC-relevant IRI and REPORT is
+ * used otherwise. If interception starts on a context the IAP already knows, an
+ * IRI-BEGIN with `startOfInterceptionWithPDPContextActive` is recommended. If
+ * it ends while the context is still active, a national option is an IRI-REPORT
+ * with `endOfInterceptionWithPDPContextActive`, or no such REPORT and another
+ * indication such as HI1 `liDeactivated`.
+ *
+ * Clause A.9.2 assigns TETRA events to these four types in table A.9.1. For
+ * those events `nature-Of-The-intercepted-call` shall be `tETRA-circuit-call`.
+ * This module's `TetraLocation` is not the current TETRA location mechanism.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 8.2, clause A.3.5, clause A.8.4,
+ * clause A.9.2, clause B.5.3, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

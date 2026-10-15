@@ -11,7 +11,34 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ISUP_parameters
  * @description
- * 
+ *
+ * Each octet string is one ISUP parameter, tag-length-value, that is not
+ * already carried in an earlier parameter. The tag is the one given in EN 300
+ * 356. Length and value follow that parameter's definition in EN 300 356.
+ * Further parameters may be added.
+ *
+ * Transmission medium requirement, and transmission medium requirement prime,
+ * may be provided with the party information of the calling party.
+ *
+ * In version 1, `iSUP-parameters` is mandatory. If no ISUP parameter is
+ * available, a version 1 implementation may include the value zero in the
+ * first octet string.
+ *
+ * Clause A.3.2.2 places the release cause here or in
+ * `DSS1-parameters-codeset-0`: the cause received from the signalling
+ * protocol, sent with the party that initiated the release, or with either
+ * party when the network initiated the release. Table A.3.2 places
+ * transmission medium requirement in `services-Information`.
+ *
+ * The value uses an imported format, so clause D.1 keeps that standard's
+ * half-octet order: the general rule (most significant half-octet in bits 5 to
+ * 8, least significant in bits 1 to 4) does not apply.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, table A.3.2, clause D.1,
+ * annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

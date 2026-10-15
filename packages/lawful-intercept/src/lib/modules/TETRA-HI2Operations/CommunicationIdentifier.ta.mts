@@ -15,6 +15,22 @@ import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identif
  * @summary CommunicationIdentifier
  * @description
  * 
+ * Communication identifier, called callIdentifier in V1.1.1 of ES 201 671. It
+ * distinguishes activities of the target and correlates IRI with CC on HI2 and
+ * HI3. It contains the network identifier and, when required, the communication
+ * identity number. The same value is sent with the HI3 information and with
+ * each IRI of the same intercepted call.
+ *
+ * It is mandatory for connection-oriented IRI, for example a circuit call. It
+ * is mandatory in this module when HI3 information is associated (CC link,
+ * data) or when the identifier is used for an IRI other than IRI-REPORT. Clause
+ * A.3.2.1 allows it to be omitted for a non-call IRI-REPORT. For SMS, SCI, and
+ * other records that are not CC, no correlation to CC is made. An extension
+ * marker follows the components.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2, clause A.3.2.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,18 +55,55 @@ export
 class CommunicationIdentifier {
     /**
      * @summary `communication_Identity_Number`.
+     * @description
+     *
+     * Temporary identity of one intercepted communication inside the node. All
+     * results of one session use the same value. Two sessions of one
+     * interception subject through the same network element use different
+     * values. Targets that share one communication may be given the same value.
+     * It was called call-Identity-Number in V1.1.1 of ES 201 671.
+     *
+     * It is mandatory when associated information is sent on HI3, or when this
+     * identifier is used for an IRI other than IRI-REPORT. Digits are ASCII:
+     * `12345678` is the eight octets `0x31` through `0x38`. Annex E carries it
+     * in the called-party subaddress as 6 to 8 decimal digits. For option B,
+     * the CIN of the first call for which the CC link was set up is the CIN
+     * used on HI3.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.2, clause A.1.3, annex E,
+     * clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communication_Identity_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `network_Identifier`.
+     * @description
+     *
+     * Network identifier of the operator and, optionally, of the network
+     * element that performs the interception. It is mandatory. It should be
+     * internationally unique. See `Network-Identifier`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly network_Identifier: Network_Identifier;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

@@ -14,6 +14,29 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * @summary Network_Element_Identifier
  * @description
  * 
+ * Identity of the network element that performs the interception. Optional
+ * inside the NID. Clause 6.2.1 lists an E.164 international node number, an
+ * X.25 address, or an IP address. This choice also has DNS and a structured
+ * `IPAddress`. The specification does not say when `iP-Format` is used rather
+ * than `iP-Address`.
+ *
+ * `e164-Format` is the E.164 address of the node in international format, coded
+ * as the calling-party number parameter of ISUP (parameter part, EN 300 356),
+ * size 1 to 25. When annex E carries the NEID in the Calling Party Number
+ * information element, clause E.4.2 sets the numbering plan to E.164,
+ * presentation allowed, and screening to network-provided for ISUP or
+ * user-provided not screened for DSS1, with nature of address or type of number
+ * taken from the Q-series and DSS1 citations in that clause.
+ *
+ * `x25-Format` is an X.25 address, size 1 to 25. `iP-Format` is an IP address,
+ * size 1 to 25. `dNS-Format` is a DNS address, size 1 to 25. Clause 6.2.1 does
+ * not list DNS. The module does not define the octet layout of the X.25, IP, or
+ * DNS octet-string alternatives. `iP-Address` is the structured `IPAddress`
+ * type. The module gives that alternative no comment.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.5, clause E.4.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

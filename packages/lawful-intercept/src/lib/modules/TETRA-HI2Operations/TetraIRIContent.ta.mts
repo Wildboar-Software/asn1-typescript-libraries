@@ -12,6 +12,30 @@ import { Tetra_IRI_Parameters, _decode_Tetra_IRI_Parameters, _encode_Tetra_IRI_P
  * @summary TetraIRIContent
  * @description
  * 
+ * One IRI record. Clause 8.2 defines four types, independent of the signalling
+ * message that caused the record. IRI-BEGIN opens the transaction at the first
+ * event of a communication attempt. IRI-END closes it when the communication or
+ * attempt ends. IRI-CONTINUE is sent at any time during that transaction.
+ * IRI-REPORT is used for events that are not part of a communication, such as
+ * subscriber-controlled input, and may also report a simple unsuccessful
+ * attempt.
+ *
+ * For TETRA, BEGIN is call setup with the A party or the B party as the target.
+ * CONTINUE is ringing, queueing, connected, handover, call forward, call hold,
+ * or TxGranted. END is call release. REPORT is location update, SDS mobile
+ * originating, SDS mobile terminating, group indication, mobile on, mobile off,
+ * or direct mode.
+ *
+ * BEGIN, CONTINUE, and REPORT shall each include at least one optional
+ * parameter. The module comment does not put that requirement on END. Clause
+ * A.3.5 does not otherwise restrict which parameters appear in which record
+ * type, apart from the mandatory control information. A value already sent is
+ * not normally repeated: a called-party number is not expected in IRI-END.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 8.2, clause A.3.5, clause A.9.2,
+ * clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

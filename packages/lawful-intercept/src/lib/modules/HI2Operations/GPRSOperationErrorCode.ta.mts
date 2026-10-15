@@ -11,7 +11,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary GPRSOperationErrorCode
  * @description
- * 
+ *
+ * Two octets. The module says refer to 3GPP TS 24.008 for the values (GMM
+ * cause or SM cause). This document does not list those cause codes.
+ *
+ * Table B.5.2 uses this parameter for the reason for a failed PDP-context
+ * activation, and for the reason for a failed attach, of the target
+ * subscriber.
+ *
+ * The value uses an imported format, so clause D.1 keeps that standard's
+ * half-octet order: the general rule (most significant half-octet in bits 5 to
+ * 8, least significant in bits 1 to 4) does not apply.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, clause D.1, annex D, clause
+ * D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

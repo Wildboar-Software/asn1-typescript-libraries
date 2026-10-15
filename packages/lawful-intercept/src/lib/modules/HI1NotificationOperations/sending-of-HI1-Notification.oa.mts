@@ -9,6 +9,30 @@ import { ErrorHI1Notifications } from "../HI1NotificationOperations/ErrorHI1Noti
  * @summary sending_of_HI1_Notification
  * @description
  *
+ * These are HI1 notifications sent toward the LEMF across HI2. They are not the
+ * LEA-to-operator activation request of clause 7.1. Clause 7.2 requires a
+ * notification after activation, after deactivation, after modification of an
+ * active interception, and for certain exceptional situations. Clause 5.1
+ * allows some HI1 information, for example fault reporting, to be delivered
+ * with the HI2 mechanism.
+ *
+ * The operation applies only to ROSE. With FTP, `HI1-Operation` is sent
+ * directly. Table C.2.1 file type "1" may carry IRI and, as an option, HI1
+ * notifications.
+ *
+ * Class 2. The timer shall be set to a value between 3s and 240s. The default
+ * is 60s. Set the timer on the equipment that waits for the returned message.
+ * The NWO/AP/SvP and the LEA agree the value, depending on their equipment. On
+ * timeout the ASE_HI tells the LI application that no answer was received. The
+ * application sends the data again or informs the administrator.
+ *
+ * The operation code is `version1(1)` under `hi1NotificationOperationsId`. The
+ * argument is `HI1-Operation`. Errors are `ErrorHI1Notifications`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4, clause D.0, clause C.1.2.1,
+ * clause C.2, clause 7.2, clause 7.1, clause 5.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

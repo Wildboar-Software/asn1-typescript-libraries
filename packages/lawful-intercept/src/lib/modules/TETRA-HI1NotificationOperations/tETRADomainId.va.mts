@@ -10,7 +10,14 @@ import { lawfulInterceptDomainId } from "../TETRA-HI1NotificationOperations/lawf
 /**
  * @summary tETRADomainId
  * @description
- * 
+ *
+ * `tetra(6)` under `lawfulInterceptDomainId` (clause D.2). TETRA HI management,
+ * HI1 notifications, and HI2 sit under this arc. The common HI1 module uses
+ * `hi1(0)`, not `tetra(6)`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.2, clause D.10.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,13 @@ import { Non_Standard_Supplementary_Services_Item, _decode_Non_Standard_Suppleme
  * @summary Non_Standard_Supplementary_Services
  * @description
  * 
+ * From one to twenty non-standard supplementary-service values. Each value is a
+ * simple indication, subscriber-controlled input, or an extension alternative.
+ * Clause A.3.3 treats subscriber-controlled input as LI-specific IRI.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

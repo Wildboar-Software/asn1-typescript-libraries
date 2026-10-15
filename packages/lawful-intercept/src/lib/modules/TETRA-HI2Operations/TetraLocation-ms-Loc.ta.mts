@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TetraLocation_ms_Loc
  * @description
  * 
+ * Mobile TETRA location coded from EN 300 392-1. The module gives bit lengths
+ * for the country code, network code, and location area. `ci` is optional and
+ * has no further comment. An extension marker follows it.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +42,67 @@ export
 class TetraLocation_ms_Loc {
     /**
      * @summary `mcc`.
+     * @description
+     *
+     * Mobile country code, 10 bits, from EN 300 392-1.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mcc: INTEGER;
     /**
      * @summary `mnc`.
+     * @description
+     *
+     * Mobile network code, 14 bits, from EN 300 392-1.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mnc: INTEGER;
     /**
      * @summary `lai`.
+     * @description
+     *
+     * Location area, 14 bits, from EN 300 392-1.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lai: INTEGER;
     /**
      * @summary `ci`.
+     * @description
+     *
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly ci: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

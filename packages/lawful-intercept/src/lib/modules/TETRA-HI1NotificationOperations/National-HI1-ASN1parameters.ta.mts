@@ -16,7 +16,14 @@ import { hi1OperationId } from "../TETRA-HI1NotificationOperations/hi1OperationI
 /**
  * @summary National_HI1_ASN1parameters
  * @description
- * 
+ *
+ * National parameters for the TETRA HI1 notification. `countryCode` names the
+ * country to which parameters after the extension marker apply. With FTP,
+ * `HI1-Operation` is sent directly (clause D.10.2).
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +51,51 @@ export
 class National_HI1_ASN1parameters {
     /**
      * @summary `domainID`.
+     * @description
+     *
+     * Used when the FTP delivery mechanism is used. Constrained to
+     * `hi1OperationId`. Optional. This module's comment does not require the
+     * sending entity to include the OID; that rule is the HI2 `domainID`
+     * comment, and it is not stated here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `countryCode`.
+     * @description
+     *
+     * ISO 3166-1 code of the country to which the parameters after the
+     * extension marker apply. Two characters. This document does not restate
+     * ISO 3166-1.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly countryCode: PrintableString;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Parameters a country adds, in ASN.1, after the extension marker. Include
+     * a version parameter and a vendor identification parameter. Vendor
+     * identifications are retrieved from the IANA web site (annex K). Avoid
+     * tags 240 to 255. An unrecognized parameter is ignored and the record is
+     * still processed; no special error is required for that case. Unrecognized
+     * content is ignored, and the LEMF may raise an alarm. A record that cannot
+     * be decoded is rejected when ROSE is used, or ignored.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2, annex K, annex G,
+     * clause C.1.2.4.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

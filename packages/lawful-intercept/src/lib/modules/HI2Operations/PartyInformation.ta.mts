@@ -21,6 +21,17 @@ import { Services_Data_Information, _decode_Services_Data_Information, _encode_S
  * @summary PartyInformation
  * @description
  * 
+ * One concerned party: originating, terminating, forwarded-to, or the GPRS
+ * target, together with that party's identities and the information the party
+ * provided. On an IRI record the parameter is a set of 1 to 10. Basic-call
+ * items are included when they first become available, and an identical value
+ * need not be sent again. A forwarded call uses the three party roles in clause
+ * A.3.2.3.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.2.3, clause
+ * D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,36 +114,107 @@ export
 class PartyInformation {
     /**
      * @summary `party_Qualifier`.
+     * @description
+     *
+     * Which party this information describes. Originating includes the
+     * redirecting party when a forwarded call reaches the target. Terminating
+     * includes the target when the target's access forwards the call.
+     * Forwarded-to covers that party and parties beyond, including the
+     * forwarding reason. The module names `gPRS-Target` and does not define it
+     * further.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly party_Qualifier: PartyInformation_party_Qualifier;
     /**
      * @summary `partyIdentity`.
+     * @description
+     *
+     * Identities of this party, and whether the operator assures them.
+     * Alphanumeric use is limited to protocols that mark the identifier as
+     * alphanumeric.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly partyIdentity: PartyInformation_partyIdentity;
     /**
      * @summary `services_Information`.
+     * @description
+     *
+     * Complementary information associated with the basic call, such as bearer
+     * capability, high-layer and low-layer compatibility, and transmission
+     * medium requirement, copied from the signalling protocol. Table A.3.2
+     * places those parameters here. A release cause received from signalling is
+     * sent with the party that initiated the release; if the network releases
+     * the call, either party may carry it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.3, clause
+     * D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly services_Information: OPTIONAL<Services_Information>;
     /**
      * @summary `supplementary_Services_Information`.
+     * @description
+     *
+     * Supplementary-service information for activation or invocation during a
+     * call, or out of call, that the other parameters do not already carry. For
+     * a forwarded-to party this includes the forwarded-to address and the
+     * redirection information, such as the forwarding reason and the number of
+     * redirections. Invoke and return-result components are reported when the
+     * invocation succeeds. One IRI record may carry the invoke component and
+     * parameters from the result.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause A.5.3, clause
+     * D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly supplementary_Services_Information: OPTIONAL<Supplementary_Services>;
     /**
      * @summary `services_Data_Information`.
+     * @description
+     *
+     * Complementary information associated with the basic data call. The module
+     * does not list the GPRS parameters here; they are defined on the data-call
+     * type.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly services_Data_Information: OPTIONAL<Services_Data_Information>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * BER extension additions that were not recognized. Clause C.1.2.4 refers
+     * unrecognized fields and parameters to annex G. The LEMF ignores an
+     * unrecognized parameter name and continues the record; that case does not
+     * by itself require an error, because the network may be using a newer
+     * specification. An unrecognized or disallowed value is also ignored, and
+     * the LEMF may raise an alarm. An undecodable ROSE record is rejected. The
+     * module allows an `OperationErrors` value when an operation or a parameter
+     * is misunderstood. Annex G does not name those error codes.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.4, annex G, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -172,6 +254,15 @@ class PartyInformation {
 
         /**
          * @summary The enum used as the type of the component `party_Qualifier`
+         * @description
+         *
+         * Originating, terminating, forwarded-to, or GPRS target. Forwarding
+         * rules for the first three are in clause A.3.2.3. The module does not
+         * define `gPRS-Target` beyond the name.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.5.
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

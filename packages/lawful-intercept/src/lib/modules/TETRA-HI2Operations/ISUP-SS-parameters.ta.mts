@@ -12,6 +12,27 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ISUP_SS_parameters
  * @description
  * 
+ * Additional ISUP parameters for supplementary services, one TLV per octet
+ * string. The tag is the tag of EN 300 356. Length and value follow that
+ * specification. Retained for compatibility. New work should use
+ * `ISUP-parameters`. The coding is imported, so half-octet order follows EN 300
+ * 356.
+ *
+ * Connected number may be supplied with the called or forwarded-to party.
+ * Redirecting number may be supplied with the originating party or the
+ * terminating party. Original called number may be supplied with the
+ * originating party. Redirection information may be supplied with the
+ * originating, forwarded-to, or terminating party. Redirection number and
+ * call-diversion information may be supplied with the forwarded-to or
+ * terminating party. Generic number carries extra identities and may be
+ * supplied with the calling, called, or forwarded-to party. Generic
+ * notification tells the other party which supplementary services were
+ * activated or invoked, for those same parties. CUG interlock code may be
+ * supplied with the calling party. Other parameters may be added.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6, clause D.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

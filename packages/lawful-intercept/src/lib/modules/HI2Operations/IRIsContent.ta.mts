@@ -13,6 +13,19 @@ import { IRISequence, _decode_IRISequence, _encode_IRISequence } from "../HI2Ope
  * @summary IRIsContent
  * @description
  * 
+ * Argument of `sending-of-IRI`. `iRIContent` is one IRI record. `iRISequence`
+ * is the optional aggregation of several records that are ready at the same
+ * time for the same LEA. Records are sent immediately and are not held in the
+ * DF or MF in order to aggregate. When aggregation is not used, choose
+ * `iRIContent`.
+ *
+ * FTP may also pack several complete records into one file. That packaging is
+ * separate from this choice. A single IRI record is not divided across files.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 5.2, clause C.2.2, clause C.2.4,
+ * clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -8,14 +8,38 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_SMS_report_sMS_Contents_other_message {
+    /**
+     * The server will send other SMS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     yes = 0,
+    /**
+     * The server will not send other SMS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     no = 1,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     undefined = 2,
 }
 
 /**
  * @summary SMS_report_sMS_Contents_other_message
  * @description
+ * 
+ * For a terminating call, whether the server will send other SMS. An extension
+ * marker follows the named answers.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -36,6 +60,13 @@ type SMS_report_sMS_Contents_other_message = _enum_for_SMS_report_sMS_Contents_o
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_yes
+ * @description
+ *
+ * The server will send other SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +75,13 @@ const SMS_report_sMS_Contents_other_message_yes: SMS_report_sMS_Contents_other_m
 
 /**
  * @summary yes
+ * @description
+ *
+ * The server will send other SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +90,13 @@ const yes: SMS_report_sMS_Contents_other_message = SMS_report_sMS_Contents_other
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_no
+ * @description
+ *
+ * The server will not send other SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +105,13 @@ const SMS_report_sMS_Contents_other_message_no: SMS_report_sMS_Contents_other_me
 
 /**
  * @summary no
+ * @description
+ *
+ * The server will not send other SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +120,13 @@ const no: SMS_report_sMS_Contents_other_message = SMS_report_sMS_Contents_other_
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_undefined
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +135,13 @@ const SMS_report_sMS_Contents_other_message_undefined: SMS_report_sMS_Contents_o
 
 /**
  * @summary undefined
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

@@ -11,7 +11,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DSS1_SS_parameters_codeset_6
  * @description
- * 
+ *
+ * Each octet string is one DSS1 codeset-6 parameter, coded as described in the
+ * relevant local-network recommendation. The module gives no parameter list
+ * and does not name that recommendation.
+ *
+ * The value uses an imported format, so clause D.1 keeps that standard's
+ * half-octet order: the general rule (most significant half-octet in bits 5 to
+ * 8, least significant in bits 1 to 4) does not apply.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.4, clause D.1, annex D, clause
+ * D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

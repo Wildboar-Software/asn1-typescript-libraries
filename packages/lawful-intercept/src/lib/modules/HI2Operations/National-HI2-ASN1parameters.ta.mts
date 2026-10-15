@@ -14,6 +14,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary National_HI2_ASN1parameters
  * @description
  * 
+ * National HI2 parameters defined in ASN.1, rather than as opaque octets.
+ * `countryCode` is the ISO 3166-1 alpha-2 code of the country to which
+ * parameters placed after the extension marker apply. A country that needs
+ * further parameters under its law should define them in ASN.1 and add them
+ * after that marker. The module recommends a version parameter and a vendor
+ * identification parameter. Vendor identifications can be taken from the IANA
+ * web site; the module points to annex K and does not list the values. Avoid
+ * tags 240 to 255 in a formal type definition.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +51,32 @@ export
 class National_HI2_ASN1parameters {
     /**
      * @summary `countryCode`.
+     * @description
+     *
+     * ISO 3166-1 alpha-2 country code, two characters. Identifies the country
+     * whose national parameters follow the extension marker.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly countryCode: PrintableString;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * National parameters added after the extension marker, when this
+     * implementation does not recognize them. They should be ASN.1, should
+     * identify version and vendor, and should avoid tags 240 to 255. Clause
+     * C.1.2.4 refers unrecognized fields to annex G: an unrecognized parameter
+     * is ignored and the record continues. An unrecognized name does not by
+     * itself require an error.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.4, annex G, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

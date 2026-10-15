@@ -5,6 +5,14 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary other_failure_causes
  * @description
  *
+ * Local error code 0. The only error listed for `data-Link-Test` and
+ * `end-Of-Connection`, and one of `ErrorsHim` on `sending-of-Password`. The
+ * document does not say which failure selects this code when the password
+ * operation fails.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.3, clause C.1.2.2, annex G.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

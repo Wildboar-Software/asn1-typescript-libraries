@@ -17,6 +17,16 @@ import { Other_Services, _decode_Other_Services, _encode_Other_Services } from "
  * @summary Supplementary_Services
  * @description
  * 
+ * Supplementary-service information not already carried by other party
+ * components: standard codings, non-standard indications, and other services.
+ * Clause A.5.3 sends a service parameter when signalling makes it available.
+ * Services in table A.5.1 affect CC links or IRI. Services outside that table
+ * have no impact on LI, but must not change their behaviour because
+ * interception is active. An extension marker follows the three containers.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5.1, clause A.5.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +45,59 @@ export
 class Supplementary_Services {
     /**
      * @summary `standard_Supplementary_Services`.
+     * @description
+     *
+     * Standard supplementary-service parameters from ISUP, DSS1, and MAP,
+     * including DSS1 invoke and return-result components.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly standard_Supplementary_Services: OPTIONAL<Standard_Supplementary_Services>;
     /**
      * @summary `non_Standard_Supplementary_Services`.
+     * @description
+     *
+     * From one to twenty non-standard indications: a simple indication or
+     * subscriber-controlled input. Clause A.3.3 lists subscriber-controlled
+     * input as LI-specific data.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.5.5, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly non_Standard_Supplementary_Services: OPTIONAL<Non_Standard_Supplementary_Services>;
     /**
      * @summary `other_Services`.
+     * @description
+     *
+     * Other service data. The module comment says to reference manufacturer
+     * manuals. The present document defines no further content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly other_Services: OPTIONAL<Other_Services>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

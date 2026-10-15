@@ -8,6 +8,25 @@ import { other_failure_causes } from "../TETRA-HIManagementOperations/other-fail
  * @summary tETRA_end_Of_Connection
  * @description
  *
+ * TETRA end of connection. Clause D.10.1 applies only to ROSE. Class 2. The
+ * ASN.1 comment says the timer must be set to a value between 3s and 240s. The
+ * default is 60s. The only listed error is `other-failure-causes`.
+ *
+ * Clause C.1.2.3.2 describes this procedure for the operation it names
+ * `end-of-Connection`. This module's operation is `tETRA-end-Of-Connection`.
+ *
+ * The LI application decides when the connection ends. Clause C.1.2.3.2 gives
+ * examples: all data have been sent, in which case the link may be released
+ * only after a network-dependent idle period; the link was opened for an
+ * intercepted call and that call, with its data, has been released; security; a
+ * change of password or of the LEMF or IIF address. The peer returns RO_Result,
+ * and the application then releases the data link. If no result arrives after a
+ * network-dependent period, or a reject or error arrives, the application
+ * releases the link and sends an error toward the operator or administrator.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.1, clause C.1.2.3.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

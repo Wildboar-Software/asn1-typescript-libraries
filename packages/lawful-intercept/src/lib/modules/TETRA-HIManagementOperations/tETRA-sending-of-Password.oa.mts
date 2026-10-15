@@ -9,6 +9,19 @@ import { ErrorsHim } from "../TETRA-HIManagementOperations/ErrorsHim.osa.mjs";
  * @summary tETRA_sending_of_Password
  * @description
  *
+ * TETRA HI-management password operation. Clause D.10.1 applies only to ROSE.
+ * Class 2. The ASN.1 comment says the timer must be set to a value between 3s
+ * and 240s. The default is 60s.
+ *
+ * Clause C.1.2.3.1 describes the exchange for the operation it names
+ * `sending-of-Password`: origin password, then destination password, then data;
+ * an erroneous password releases the link and a password-error indication is
+ * sent to the operator. This module's operation is `tETRA-sending-of-Password`.
+ * The argument `TETRA-Password-Name` has no `domainID`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.1, clause C.1.2.3.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

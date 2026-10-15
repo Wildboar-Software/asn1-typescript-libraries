@@ -12,6 +12,21 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ISUP_parameters
  * @description
  * 
+ * Additional ISUP parameters, one TLV per octet string, whose tag is the tag of
+ * EN 300 356 and whose length and value follow that specification. They are
+ * parameters not already defined in earlier components. Other parameters than
+ * the ones named may be added. Transmission medium requirement, and
+ * transmission medium requirement prime, may be provided with the calling
+ * party.
+ *
+ * In version 1 of the present document this component was mandatory. A version
+ * 1 implementation that has no ISUP parameter may put zero in the first octet
+ * string. The coding is imported from EN 300 356, so half-octet order follows
+ * that standard rather than clause D.1.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

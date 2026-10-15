@@ -13,6 +13,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CalledPartyNumber
  * @description
  * 
+ * Called-party or forwarded-to identity. ISUP uses the called-party number
+ * parameter field of EN 300 356. MAP uses `AddressString` of TS GSM 09.02. DSS1
+ * uses the value part of the called-party number information element of EN 300
+ * 403-1, without the information-element identifier and without the DSS1
+ * length. An extension marker follows the named alternatives. Imported formats
+ * keep the half-octet order of the source standard.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

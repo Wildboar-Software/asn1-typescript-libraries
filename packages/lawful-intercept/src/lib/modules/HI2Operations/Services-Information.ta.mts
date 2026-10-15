@@ -16,7 +16,21 @@ import { MAP_parameters, _decode_MAP_parameters, _encode_MAP_parameters } from "
 /**
  * @summary Services_Information
  * @description
- * 
+ *
+ * Complementary information for the basic call. Clause A.3.2.2 item 3: basic
+ * service and low layer compatibility, parameters as received from the
+ * signalling protocol (for example BC, HLC, TMR, LLC).
+ *
+ * Table A.3.2 places bearer capability, high layer compatibility, low layer
+ * compatibility, and transmission medium requirement here. It also places the
+ * MCID response indicator here (ISUP, EN 300 356). Table A.5.1 sends that
+ * indicator when malicious call identification is invoked.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, table A.3.2, table A.5.1,
+ * annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +49,64 @@ export
 class Services_Information {
     /**
      * @summary `iSUP_parameters`.
+     * @description
+     *
+     * Additional ISUP parameters for the basic call. Transmission medium
+     * requirement and transmission medium requirement prime may be supplied
+     * for the calling party. Version 1 made this component mandatory and
+     * allowed a zero octet when none was available.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iSUP_parameters: OPTIONAL<ISUP_parameters>;
     /**
      * @summary `dSS1_parameters_codeset_0`.
+     * @description
+     *
+     * DSS1 codeset-0 basic-call parameters: bearer capability, high layer
+     * compatibility, and low layer compatibility, for the calling, called, or
+     * forwarded-to party. Table A.8.2 uses this for tele service or bearer
+     * service.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table A.3.2, table A.8.2, annex D,
+     * clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_parameters_codeset_0: OPTIONAL<DSS1_parameters_codeset_0>;
     /**
      * @summary `mAP_parameters`.
+     * @description
+     *
+     * MAP parameters coded as in GSM 09.02, including `map-TS-Code`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mAP_parameters: OPTIONAL<MAP_parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

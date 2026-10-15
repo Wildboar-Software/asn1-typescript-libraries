@@ -13,6 +13,24 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CalledPartyNumber
  * @description
  * 
+ * Identity of a called party or of a forwarded-to party. If only a partial
+ * terminating address is known at IRI-BEGIN, send that partial address and send
+ * the complete address when it is known. An identical value need not be
+ * repeated. A called party number is normally absent from IRI-END because it
+ * was sent earlier. The same type carries the directory number that routes a CC
+ * link toward the LEMF.
+ *
+ * `iSUP-Format` is the parameter field of the ISUP called party number (EN 300
+ * 356). `mAP-Format` is the MAP `AddressString` (TS GSM 09.02). `dSS1-Format`
+ * is the value part of the DSS1 Called party number information element (EN 300
+ * 403-1); the information-element identifier and the length are not included.
+ * Each alternative is size 1 to 25. Table A.3.2 allows ISUP, DSS1, or MAP.
+ * Spare or default values may fill a signalling system that provides less.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.3, clause
+ * A.3.5, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

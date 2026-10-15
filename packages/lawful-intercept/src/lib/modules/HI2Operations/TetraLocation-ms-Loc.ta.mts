@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TetraLocation_ms_Loc
  * @description
  * 
+ * Mobile-station alternative of `TetraLocation`. The choice is not in use
+ * anymore and is kept so that old encodings can be read. The integer ranges
+ * below are the retained coding, not a current TETRA location procedure.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +41,58 @@ export
 class TetraLocation_ms_Loc {
     /**
      * @summary `mcc`.
+     * @description
+     *
+     * Mobile country code. Integer 0 to 1023. The module says 10 bits, EN 300
+     * 392-1. Retained only for compatibility.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mcc: INTEGER;
     /**
      * @summary `mnc`.
+     * @description
+     *
+     * Mobile network code. Integer 0 to 16383. The module says 14 bits, EN 300
+     * 392-1. Retained only for compatibility.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mnc: INTEGER;
     /**
      * @summary `lai`.
+     * @description
+     *
+     * Location area identity. Integer 0 to 65535. The module's comment says 14
+     * bits, EN 300 392-1. The specification does not explain the difference
+     * between that comment and the integer range. Retained only for
+     * compatibility.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lai: INTEGER;
     /**
      * @summary `ci`.
+     * @description
+     *
+     * Optional cell identity. The module gives no range and no reference.
+     * Retained only for compatibility.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

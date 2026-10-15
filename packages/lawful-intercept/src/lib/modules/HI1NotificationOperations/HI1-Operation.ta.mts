@@ -15,7 +15,22 @@ import { National_HI1_ASN1parameters, _decode_National_HI1_ASN1parameters, _enco
 /**
  * @summary HI1_Operation
  * @description
- * 
+ *
+ * Choice sent as the ROSE argument of `sending-of-HI1-Notification`. With FTP,
+ * this choice is what is sent (clauses D.0 and D.4). Notifications go toward
+ * the LEMF across HI2. They are not the activation request of clause 7.1.
+ *
+ * `liActivated`, `liDeactivated`, and `liModified` are the notifications after
+ * activation, deactivation, and modification of an active interception (clause
+ * 7.2). `alarms-indicator` covers certain exceptional situations (clause 7.2);
+ * clause A.4.4.2 allows CC-link fault reports to be sent this way.
+ * `national-HI1-ASN1parameters` is the extension addition for national
+ * parameters.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4, clause D.0, clause 7.2,
+ * clause 7.1, clause A.4.4.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

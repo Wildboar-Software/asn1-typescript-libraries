@@ -15,6 +15,13 @@ import { _decode_GeographicalCoordinates_latitudeSign, _encode_GeographicalCoord
  * @summary GeographicalCoordinates
  * @description
  * 
+ * Geographic point used by the UMTS location shapes. The specification names
+ * the sign, the latitude integer, and the longitude integer, and states no unit
+ * or coding for the integers. An extension marker follows them.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +44,55 @@ export
 class GeographicalCoordinates {
     /**
      * @summary `latitudeSign`.
+     * @description
+     *
+     * Northern or southern hemisphere. The specification gives the two names
+     * and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly latitudeSign: GeographicalCoordinates_latitudeSign;
     /**
      * @summary `latitude`.
+     * @description
+     *
+     * The specification gives the name and no unit or coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly latitude: INTEGER;
     /**
      * @summary `longitude`.
+     * @description
+     *
+     * The specification gives the name and no unit or coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly longitude: INTEGER;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

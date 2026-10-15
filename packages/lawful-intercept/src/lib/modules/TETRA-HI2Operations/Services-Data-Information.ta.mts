@@ -13,6 +13,12 @@ import { GPRS_parameters, _decode_GPRS_parameters, _encode_GPRS_parameters } fro
  * @summary Services_Data_Information
  * @description
  * 
+ * Complementary information for the basic data call. In this module the only
+ * named component is the GPRS parameters. An extension marker follows it.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,29 @@ export
 class Services_Data_Information {
     /**
      * @summary `gPRS_parameters`.
+     * @description
+     *
+     * PDP address, access-point name, PDP type, NSAPI, and any additional IP
+     * address of the target's data context.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly gPRS_parameters: OPTIONAL<GPRS_parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

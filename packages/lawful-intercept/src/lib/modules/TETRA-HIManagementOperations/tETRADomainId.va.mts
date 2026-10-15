@@ -10,7 +10,14 @@ import { lawfulInterceptDomainId } from "../TETRA-HIManagementOperations/lawfulI
 /**
  * @summary tETRADomainId
  * @description
- * 
+ *
+ * `tetra(6)` under `lawfulInterceptDomainId`. TETRA HI management is
+ * `him(3) version0(0)` under this arc (clause D.10.1). The common management
+ * module is not under `tetra(6)`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.2, clause D.10.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

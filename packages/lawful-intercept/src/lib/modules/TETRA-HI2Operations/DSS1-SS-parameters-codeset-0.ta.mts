@@ -12,6 +12,25 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSS1_SS_parameters_codeset_0
  * @description
  * 
+ * DSS1 codeset-0 supplementary-service parameters, one per octet string, coded
+ * as in EN 300 403-1 including the information-element identifier and length,
+ * except where a service recommendation is named. The coding is imported.
+ *
+ * Calling-party subaddress (EN 300 403-1) may be supplied with the calling
+ * party. The module comment places called-party subaddress with the calling
+ * party as well. Connected subaddress and connected number (EN 300 097-1) may
+ * be supplied with the called or forwarded-to party. Keypad facility (EN 300
+ * 403-1) may be supplied with the calling, called, or forwarded-to party.
+ * Called-party number (EN 300 403-1) may be supplied with the calling party
+ * when the target originates the call, and then contains the dialled digits
+ * before network modification such as IN translation. User-user (EN 300 286-1)
+ * may be supplied with the calling, called, or forwarded-to party. Other
+ * parameters may be added.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.6.20, clause A.6.22, clause
+ * D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

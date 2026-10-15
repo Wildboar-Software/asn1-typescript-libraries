@@ -23,7 +23,16 @@ import { National_HI1_ASN1parameters, _decode_National_HI1_ASN1parameters, _enco
 /**
  * @summary Notification
  * @description
- * 
+ *
+ * Contents of an activation, deactivation, or modification notification. Sent
+ * toward the LEMF across HI2, not as the clause 7.1 request. This common
+ * notification has `target-Information` and has no location component. The
+ * TETRA notification has `location` and has no `target-Information`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4, clause 7.2, clause 7.1,
+ * clause D.10.2.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,42 +63,113 @@ export
 class Notification {
     /**
      * @summary `domainID`.
+     * @description
+     *
+     * Used when the FTP delivery mechanism is used. Constrained to
+     * `hi1OperationId`. Optional. This module's comment does not require the
+     * sending entity to include the OID; that rule is the HI2 `domainID`
+     * comment, and it is not stated here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     *
+     * LIID assigned with the lawful authorization for each target. The
+     * NWO/AP/SvP assigns it, as agreed with the LEA. One LIID for each target
+     * identity, or, as a national option, one LIID for several target
+     * identities of the same interception subject. If more than one LEA
+     * intercepts the same target identity, each LEA has its own LIID.
+     * Alphanumeric, or a digit string when the subaddress option of annex E is
+     * used. It may contain a lawful-authorization reference and the date the
+     * authorization was issued.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4, clause 6.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     *
+     * Only the NWO/PA/SvP identifier is provided, the one given with the lawful
+     * authorization. Called `callIdentifier` in V1.1.1 of ES 201 671. Clause
+     * 6.2 defines a communication identifier as the network identifier plus an
+     * optional communication identity number. This comment limits the
+     * notification to the NWO/PA/SvP identifier.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4, clause 6.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communicationIdentifier: OPTIONAL<CommunicationIdentifier>;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Date and time of the report. `TimeStamp` is imported from HI2Operations.
+     * This module does not define its coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `national_HI1_ASN1parameters`.
+     * @description
+     *
+     * National parameters, present when a country adds its own. See
+     * `National-HI1-ASN1parameters`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly national_HI1_ASN1parameters: OPTIONAL<National_HI1_ASN1parameters>;
     /**
      * @summary `target_Information`.
+     * @description
+     *
+     * Number or characteristic of the target, for example an e-mail address or
+     * an E.164 number, in ASCII. Length 1 to 256 octets. The TETRA notification
+     * does not carry this.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly target_Information: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * An unrecognized parameter is ignored and processing of the record
+     * continues. No special error or alarm is required, because the cause may
+     * be a newer version of the specification. Content that is not recognized
+     * is also ignored; the LEMF may raise an alarm. A record that cannot be
+     * decoded is rejected when ROSE is used, or ignored.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex G, clause C.1.2.4, clause D.4.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

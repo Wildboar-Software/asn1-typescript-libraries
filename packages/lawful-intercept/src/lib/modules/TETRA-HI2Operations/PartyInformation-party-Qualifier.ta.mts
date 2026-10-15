@@ -8,15 +8,51 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_PartyInformation_party_Qualifier {
+    /**
+     * Identities of the originating party and the information that party
+     * provided. Also the redirecting party, when a forwarded call reaches the
+     * target.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     originating_Party = 0,
+    /**
+     * Identities of the terminating party and the information that party
+     * provided. When the target forwards the call, the target's redirecting
+     * information is placed here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     terminating_Party = 1,
+    /**
+     * Identities of the forwarded-to party and of parties beyond it, including
+     * the information those parties provided and the call-forwarding reason.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     forwarded_to_Party = 2,
+    /**
+     * The specification gives the name and no further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     gPRS_Target = 3,
 }
 
 /**
  * @summary PartyInformation_party_Qualifier
  * @description
+ * 
+ * Role of the party described by `PartyInformation`. The originating role also
+ * carries redirecting-party information when a forwarded call reaches the
+ * target. An extension marker follows the named roles.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -46,6 +82,14 @@ type PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifi
 
 /**
  * @summary PartyInformation_party_Qualifier_originating_Party
+ * @description
+ *
+ * Identities of the originating party and the information that party provided.
+ * Also the redirecting party, when a forwarded call reaches the target.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +98,14 @@ const PartyInformation_party_Qualifier_originating_Party: PartyInformation_party
 
 /**
  * @summary originating_Party
+ * @description
+ *
+ * Identities of the originating party and the information that party provided.
+ * Also the redirecting party, when a forwarded call reaches the target.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +114,15 @@ const originating_Party: PartyInformation_party_Qualifier = PartyInformation_par
 
 /**
  * @summary PartyInformation_party_Qualifier_terminating_Party
+ * @description
+ *
+ * Identities of the terminating party and the information that party provided.
+ * When the target forwards the call, the target's redirecting information is
+ * placed here.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +131,15 @@ const PartyInformation_party_Qualifier_terminating_Party: PartyInformation_party
 
 /**
  * @summary terminating_Party
+ * @description
+ *
+ * Identities of the terminating party and the information that party provided.
+ * When the target forwards the call, the target's redirecting information is
+ * placed here.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +148,14 @@ const terminating_Party: PartyInformation_party_Qualifier = PartyInformation_par
 
 /**
  * @summary PartyInformation_party_Qualifier_forwarded_to_Party
+ * @description
+ *
+ * Identities of the forwarded-to party and of parties beyond it, including the
+ * information those parties provided and the call-forwarding reason.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +164,14 @@ const PartyInformation_party_Qualifier_forwarded_to_Party: PartyInformation_part
 
 /**
  * @summary forwarded_to_Party
+ * @description
+ *
+ * Identities of the forwarded-to party and of parties beyond it, including the
+ * information those parties provided and the call-forwarding reason.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -94,6 +180,13 @@ const forwarded_to_Party: PartyInformation_party_Qualifier = PartyInformation_pa
 
 /**
  * @summary PartyInformation_party_Qualifier_gPRS_Target
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +195,13 @@ const PartyInformation_party_Qualifier_gPRS_Target: PartyInformation_party_Quali
 
 /**
  * @summary gPRS_Target
+ * @description
+ *
+ * The specification gives the name and no further behaviour.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

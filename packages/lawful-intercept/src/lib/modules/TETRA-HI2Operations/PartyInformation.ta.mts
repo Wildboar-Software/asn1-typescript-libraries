@@ -21,6 +21,19 @@ import { Services_Data_Information, _decode_Services_Data_Information, _encode_S
  * @summary PartyInformation
  * @description
  * 
+ * One party of the intercepted call: which role it has, its identities,
+ * basic-call information, supplementary-service information, and data-call
+ * information. From one to ten such parties may be reported. Clause A.3.2.3
+ * places redirecting information with the originating party when a forwarded
+ * call reaches the target, with the terminating party when the target forwards,
+ * and forwarded-to information with the forwarded-to party. An extension marker
+ * follows the components. Table A.3.2 names an alphanumeric party identity.
+ * This party identity does not include that component.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.2.3, clause
+ * D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,36 +104,92 @@ export
 class PartyInformation {
     /**
      * @summary `party_Qualifier`.
+     * @description
+     *
+     * Role of this party: originating, terminating, forwarded-to, or GPRS
+     * target. The originating role also carries redirecting-party information
+     * when a forwarded call reaches a target.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly party_Qualifier: PartyInformation_party_Qualifier;
     /**
      * @summary `partyIdentity`.
+     * @description
+     *
+     * Identities of this party. Include an identity when signalling provides
+     * it. A partial called number in IRI-BEGIN is followed by the complete
+     * number when it is known.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly partyIdentity: PartyInformation_partyIdentity;
     /**
      * @summary `services_Information`.
+     * @description
+     *
+     * Complementary information associated with the basic call, such as bearer
+     * capability, high-layer compatibility, and low-layer compatibility, copied
+     * from ISUP, DSS1, or MAP.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly services_Information: OPTIONAL<Services_Information>;
     /**
      * @summary `supplementary_Services_Information`.
+     * @description
+     *
+     * Activation or invocation of supplementary services during a call, or out
+     * of call, that the other components do not already carry. Clause A.5.3
+     * sends service parameters when the signalling procedure makes them
+     * available. The target must not be able to prevent interception by
+     * invoking a supplementary service.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5.1, clause A.5.3, clause
+     * D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly supplementary_Services_Information: OPTIONAL<Supplementary_Services>;
     /**
      * @summary `services_Data_Information`.
+     * @description
+     *
+     * Complementary information associated with the basic data call. In this
+     * module that information is the GPRS parameters.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly services_Data_Information: OPTIONAL<Services_Data_Information>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

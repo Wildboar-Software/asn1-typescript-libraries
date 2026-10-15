@@ -13,6 +13,25 @@ import { TetraIRISequence, _decode_TetraIRISequence, _encode_TetraIRISequence } 
  * @summary TETRAIRIsContent
  * @description
  * 
+ * One TETRA IRI record, or a sequence of records. The module comment says
+ * aggregation of UmtsIRIContent is an optional feature. It may be applied when,
+ * at one time, several IRI records are available for the same LEA. As a general
+ * rule, records created at any event shall be sent immediately and not withheld
+ * in the DF or MF in order to apply aggregation. When aggregation is not to be
+ * applied, the comment says UmtsIRIContent needs to be chosen. The alternatives
+ * defined in this module are `tetraiRIContent` and `tetraIRISequence`.
+ *
+ * Clause 5.2 states the same rule for HI2: records are sent individually, or
+ * optionally aggregated for one LEA in a single delivery. Use of aggregation is
+ * subject to national or regional requirements. IRI shall be sent immediately
+ * and shall not be held in the MF/DF in order to aggregate. Clause 8 requires
+ * IRI to be sent as soon as possible once the information is available, and
+ * allows buffering only in exceptional cases, such as data-link failure, for a
+ * specified period.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 5.2, clause 8, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

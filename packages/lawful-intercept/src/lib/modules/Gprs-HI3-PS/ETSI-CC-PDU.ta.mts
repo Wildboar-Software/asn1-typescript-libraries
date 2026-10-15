@@ -15,7 +15,29 @@ import { CC_PDU, _decode_CC_PDU, _encode_CC_PDU } from "../Umts-HI3-PS/CC-PDU.ta
 /**
  * @summary ETSI_CC_PDU
  * @description
- * 
+ *
+ * GPRS HI3 content defined in clause D.9. `eTSI-CC-PDU` carries `CC-PDU`
+ * imported from 3GPP TS 33.108, module Umts-HI3-PS. This document does not
+ * define that imported type.
+ *
+ * Clause B.5.1: one administration function, with the delivery functions, hides
+ * multiple LEA activations on the same target from the xGSN. The figure is a
+ * logical reference configuration and does not mandate separate physical
+ * entities. GGSN interception is a national option. A communication may be
+ * intercepted on several identities (MSISDN, IMSI, IMEI) of the same target.
+ * The xGSN gives DF2P and DF3P a correlation number and a target identity, used
+ * to select the LEAs. Clause B.5.2.2: that correlation number is unique per PDP
+ * context and correlates CC with IRI, and the IRIs of one PDP context. Clause
+ * B.5.2.1 maps the LIID to the GSM warrant reference number.
+ *
+ * Clause B.5.4 points the GPRS HI3 port at annex F. Annex F describes a GLIC
+ * header carried over UDP or TCP, and a separate FTP CC header. This document
+ * does not identify `ETSI-CC-PDU` with either header.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.9, clause B.5.1, clause B.5.2,
+ * clause B.5.4.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +56,48 @@ export
 class ETSI_CC_PDU {
     /**
      * @summary `domainID`.
+     * @description
+     *
+     * Used when the FTP delivery mechanism is used. Constrained to
+     * `hi3GPRSLIIdOperationId`. Optional. This module's comment does not
+     * require the sending entity to include the OID; that rule is the HI2
+     * `domainID` comment, and it is not stated here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.9.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `eTSI_CC_PDU`.
+     * @description
+     *
+     * `CC-PDU` imported from 3GPP TS 33.108 (Umts-HI3-PS). Clause D.9 does not
+     * define its contents. Annex F header fields are not components of this
+     * value.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.9, clause B.5.4.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly eTSI_CC_PDU: CC_PDU;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * An unrecognized parameter is ignored and processing of the record
+     * continues. No special error or alarm is required, because the cause may
+     * be a newer version of the specification. Content that is not recognized
+     * is also ignored; the LEMF may raise an alarm. A record that cannot be
+     * decoded is rejected when ROSE is used, or ignored.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex G, clause C.1.2.4, clause D.9.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

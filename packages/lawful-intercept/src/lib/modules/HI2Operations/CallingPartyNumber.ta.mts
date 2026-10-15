@@ -13,6 +13,22 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CallingPartyNumber
  * @description
  * 
+ * Identity of a calling party, copied from the target's signalling when it
+ * first becomes available. An identical value need not be repeated later in the
+ * call. Table A.3.2 allows ISUP, DSS1, or MAP. Each alternative is an octet
+ * string of size 1 to 25. If the signalling system provides less than those
+ * standards, spare or default values may be used. Only parameters defined in
+ * ETSI standards are used for a common implementation.
+ *
+ * `iSUP-Format` is the parameter field of the ISUP calling party number (EN 300
+ * 356). `dSS1-Format` is the value part of the DSS1 Calling party number
+ * information element (EN 300 403-1); the information-element identifier and
+ * the length are not included. `mAP-Format` is the MAP `AddressString` (TS GSM
+ * 09.02).
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.2, clause A.3.3, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

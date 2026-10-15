@@ -13,7 +13,17 @@ import { SciDataMode, _decode_SciDataMode, _encode_SciDataMode } from "../HI2Ope
 /**
  * @summary Non_Standard_Supplementary_Services_Item
  * @description
- * 
+ *
+ * One non-standard supplementary-service item: a call-event indication, or
+ * subscriber-controlled-input octets. The call-event values are defined by
+ * their module comments (table A.3.3). Subscriber-controlled input is
+ * specified in clause A.5.5; that clause does not define the octet layout.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), table A.3.3, clause A.5.5, annex D,
+ * clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

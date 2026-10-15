@@ -17,6 +17,14 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum } from
  * @summary GSMLocation_geoCoordinates
  * @description
  * 
+ * Geodetic position as text. Latitude is `XDDMMSS.SS`. Longitude is
+ * `XDDDMMSS.SS`. `X` is N, S, E, or W. Degrees, minutes, and seconds are
+ * numeric. The fractional part of the seconds is optional. An omitted map datum
+ * means WGS 84. An extension marker precedes the azimuth.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +47,68 @@ export
 class GSMLocation_geoCoordinates {
     /**
      * @summary `latitude`.
+     * @description
+     *
+     * Latitude text, format `XDDMMSS.SS`. The short example is `N502312`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly latitude: PrintableString;
     /**
      * @summary `longitude`.
+     * @description
+     *
+     * Longitude text, format `XDDDMMSS.SS`. The long example is `E1122312.18`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly longitude: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     *
+     * Geodetic datum. The module comment says the default is WGS 84 when the
+     * datum is omitted.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary `azimuth`.
+     * @description
+     *
+     * Bearing relative to true north.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly azimuth: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

@@ -8,14 +8,40 @@ import * as $ from "@wildboar/asn1/functional";
 
 export
 enum _enum_for_Intercepted_Call_State {
+    /**
+     * The intercepted call has been released. The reason is provided by
+     * `release-Reason-Of-Intercepted-Call`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     idle = 1,
+    /**
+     * The set-up of the call is in process.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     setUpInProcess = 2,
+    /**
+     * The answer has been received.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     connected = 3,
 }
 
 /**
  * @summary Intercepted_Call_State
  * @description
+ * 
+ * State of the intercepted call. Annex A.9 requires it on call setup, ringing,
+ * queueing, connected, and call release. An extension marker follows the named
+ * states.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.9.2.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -40,6 +66,14 @@ type Intercepted_Call_State = _enum_for_Intercepted_Call_State | ENUMERATED;
 
 /**
  * @summary Intercepted_Call_State_idle
+ * @description
+ *
+ * The intercepted call has been released. The reason is provided by
+ * `release-Reason-Of-Intercepted-Call`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -48,6 +82,14 @@ const Intercepted_Call_State_idle: Intercepted_Call_State = 1; /* LONG_NAMED_ENU
 
 /**
  * @summary idle
+ * @description
+ *
+ * The intercepted call has been released. The reason is provided by
+ * `release-Reason-Of-Intercepted-Call`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -56,6 +98,13 @@ const idle: Intercepted_Call_State = Intercepted_Call_State_idle; /* SHORT_NAMED
 
 /**
  * @summary Intercepted_Call_State_setUpInProcess
+ * @description
+ *
+ * The set-up of the call is in process.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -64,6 +113,13 @@ const Intercepted_Call_State_setUpInProcess: Intercepted_Call_State = 2; /* LONG
 
 /**
  * @summary setUpInProcess
+ * @description
+ *
+ * The set-up of the call is in process.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -72,6 +128,13 @@ const setUpInProcess: Intercepted_Call_State = Intercepted_Call_State_setUpInPro
 
 /**
  * @summary Intercepted_Call_State_connected
+ * @description
+ *
+ * The answer has been received.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -80,6 +143,13 @@ const Intercepted_Call_State_connected: Intercepted_Call_State = 3; /* LONG_NAME
 
 /**
  * @summary connected
+ * @description
+ *
+ * The answer has been received.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

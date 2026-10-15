@@ -8,6 +8,22 @@ import { other_failure_causes } from "../TETRA-HIManagementOperations/other-fail
  * @summary tETRA_data_Link_Test
  * @description
  *
+ * TETRA data-link test. Clause D.10.1 applies only to ROSE. Class 2. The ASN.1
+ * comment says the timer must be set to a value between 3s and 240s. The
+ * default is 60s. The only listed error is `other-failure-causes`.
+ *
+ * Clause C.1.2.3.1 describes this procedure for the operation it names
+ * `data-Link-Test`. This module's operation is `tETRA-data-Link-Test`.
+ *
+ * Optional. When no data have been exchanged toward an address for a
+ * network-dependent period, which may vary from 1 minute to 30 minutes, the LI
+ * application sends this operation. The peer returns RO_Result, and the test is
+ * then valid. If no result is received, or a reject or error is received, the
+ * application releases the data link and sends an error toward the operator.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.1, clause C.1.2.3.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

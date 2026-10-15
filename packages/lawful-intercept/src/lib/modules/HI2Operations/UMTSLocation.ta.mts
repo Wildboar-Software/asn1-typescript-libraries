@@ -15,7 +15,17 @@ import { GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../HI2Operat
 /**
  * @summary UMTSLocation
  * @description
- * 
+ *
+ * UMTS location: a point, a point with uncertainty, or a polygon of 1 to 15
+ * vertices. The coordinates are integers, latitude 0 to 8388607 and longitude
+ * -8388608 to 8388607, with a north or south sign. The uncertainty code is an
+ * integer from 0 to 127. This document states those ranges and does not state
+ * the unit or any further coding of the uncertainty code.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

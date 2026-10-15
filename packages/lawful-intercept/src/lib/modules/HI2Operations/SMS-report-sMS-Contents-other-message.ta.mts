@@ -6,17 +6,59 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_SMS_report_sMS_Contents_other_message
+ * @description
+ *
+ * On a terminating call, whether the server will send another SMS: yes, no, or
+ * undefined. The module states no further meaning for undefined.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
+ * @enum {number}
+ */
 export
 enum _enum_for_SMS_report_sMS_Contents_other_message {
+    /**
+     * On a terminating call, the server will send another SMS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     yes = 0,
+    /**
+     * On a terminating call, the server will not send another SMS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     no = 1,
+    /**
+     * On a terminating call, whether the server will send another SMS is named
+     * `undefined`. The module states no further meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     undefined = 2,
 }
 
 /**
  * @summary SMS_report_sMS_Contents_other_message
  * @description
- * 
+ *
+ * On a terminating call, whether the server will send another SMS: yes, no, or
+ * undefined. The module states no further meaning for undefined.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +78,14 @@ type SMS_report_sMS_Contents_other_message = _enum_for_SMS_report_sMS_Contents_o
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_yes
+ * @description
+ *
+ * On a terminating call, the server will send another SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -44,6 +94,14 @@ const SMS_report_sMS_Contents_other_message_yes: SMS_report_sMS_Contents_other_m
 
 /**
  * @summary yes
+ * @description
+ *
+ * On a terminating call, the server will send another SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +110,14 @@ const yes: SMS_report_sMS_Contents_other_message = SMS_report_sMS_Contents_other
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_no
+ * @description
+ *
+ * On a terminating call, the server will not send another SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +126,14 @@ const SMS_report_sMS_Contents_other_message_no: SMS_report_sMS_Contents_other_me
 
 /**
  * @summary no
+ * @description
+ *
+ * On a terminating call, the server will not send another SMS.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +142,15 @@ const no: SMS_report_sMS_Contents_other_message = SMS_report_sMS_Contents_other_
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_undefined
+ * @description
+ *
+ * On a terminating call, whether the server will send another SMS is named
+ * `undefined`. The module states no further meaning.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +159,15 @@ const SMS_report_sMS_Contents_other_message_undefined: SMS_report_sMS_Contents_o
 
 /**
  * @summary undefined
+ * @description
+ *
+ * On a terminating call, whether the server will send another SMS is named
+ * `undefined`. The module states no further meaning.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

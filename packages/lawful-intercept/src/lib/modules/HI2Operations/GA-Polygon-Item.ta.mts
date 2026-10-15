@@ -12,7 +12,16 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
 /**
  * @summary GA_Polygon_Item
  * @description
- * 
+ *
+ * One vertex of a UMTS polygon. A polygon contains from 1 to `maxNrOfPoints`
+ * (15) vertices. This document states no order and no closure rule. The
+ * coordinates use the integer ranges on geographical coordinates, and no unit
+ * is stated.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +37,30 @@ export
 class GA_Polygon_Item {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * Latitude 0 to 8388607 and longitude -8388608 to 8388607, signed north or
+     * south. This document states no unit and no further coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

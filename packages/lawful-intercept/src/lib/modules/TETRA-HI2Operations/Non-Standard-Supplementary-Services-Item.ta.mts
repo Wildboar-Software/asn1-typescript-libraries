@@ -14,6 +14,16 @@ import { SciDataMode, _decode_SciDataMode, _encode_SciDataMode } from "../TETRA-
  * @summary Non_Standard_Supplementary_Services_Item
  * @description
  * 
+ * One non-standard supplementary-service value. `simpleIndication` reports call
+ * waiting, conference add, hold, retrieve, suspend, resume, or answer.
+ * `sciData` is subscriber-controlled input. An extension marker follows those
+ * alternatives. Clause A.5.5 covers activation, deactivation, and interrogation
+ * by subscriber-controlled input. The present document does not define the
+ * contents of the input octets.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause A.5.5, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

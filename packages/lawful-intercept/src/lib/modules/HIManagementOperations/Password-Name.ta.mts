@@ -16,7 +16,14 @@ import { himOperationId } from "../HIManagementOperations/himOperationId.va.mjs"
 /**
  * @summary Password_Name
  * @description
- * 
+ *
+ * Argument of `sending-of-Password`. An IA5 string is recommended for the octet
+ * strings. The operation is ROSE-only (clause D.3). `domainID` is present when
+ * the FTP delivery mechanism is used.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.3, clause C.1.2.3.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +43,62 @@ export
 class Password_Name {
     /**
      * @summary `domainID`.
+     * @description
+     *
+     * Used when the FTP delivery mechanism is used. Constrained to
+     * `himOperationId`. Optional. This module's comment does not require the
+     * sending entity to include the OID; that rule is the HI2 `domainID`
+     * comment, and it is not stated here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `password`.
+     * @description
+     *
+     * Password checked at data-link establishment. Length 1 to 25 octets. IA5
+     * is recommended. The document does not define further coding. See the
+     * exchange on `sending-of-Password`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.3, clause C.1.2.3.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly password: OCTET_STRING;
     /**
      * @summary `name`.
+     * @description
+     *
+     * Length 1 to 25 octets. IA5 is recommended. The document does not say what
+     * the name identifies.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly name: OCTET_STRING;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * An unrecognized parameter is ignored and processing of the record
+     * continues. No special error or alarm is required, because the cause may
+     * be a newer version of the specification. Content that is not recognized
+     * is also ignored; the LEMF may raise an alarm. A record that cannot be
+     * decoded is rejected when ROSE is used, or ignored.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex G, clause C.1.2.4, clause D.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

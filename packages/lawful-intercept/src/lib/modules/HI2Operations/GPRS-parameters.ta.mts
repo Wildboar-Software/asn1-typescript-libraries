@@ -14,7 +14,16 @@ import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } fro
 /**
  * @summary GPRS_parameters
  * @description
- * 
+ *
+ * PDP context information on a GPRS IRI record (table B.5.2). While a PDP
+ * context is active, IRI-CONTINUE carries CC-relevant IRI and IRI-REPORT
+ * carries other IRI (clause B.5.3).
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, clause B.5.3, annex D,
+ * clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,36 +51,108 @@ export
 class GPRS_parameters {
     /**
      * @summary `pDP_address_allocated_to_the_target`.
+     * @description
+     *
+     * PDP address used by the target. Table B.5.2: for IPv4v6, two addresses
+     * may be carried. When the PDP type is IPv4 or IPv6, the address is
+     * carried here. When the PDP type is IPv4v6, the additional address is
+     * carried separately.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly pDP_address_allocated_to_the_target: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `aPN`.
+     * @description
+     *
+     * Access point name. Coded per 3GPP TS 24.008 without the APN
+     * information-element identifier; only the last 100 octets are used.
+     * Octets are coded per 3GPP TS 23.003. Duplicated from 3GPP TS 33.108.
+     * Table B.5.2: the name is a logical name (3GPP TS 23.060). The value uses
+     * an imported format, so clause D.1 keeps that standard's half-octet
+     * order: the general rule (most significant half-octet in bits 5 to 8,
+     * least significant in bits 1 to 4) does not apply.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, clause D.1, annex D,
+     * clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `pDP_type`.
+     * @description
+     *
+     * Two octets. Table B.5.2: the PDP type as defined in 3GPP TS 09.60, 3GPP
+     * TS 29.060, 3GPP TS 04.08, 3GPP TS 24.008, 3GPP TS 09.02, and 3GPP TS
+     * 29.002. This document does not list those type values. When the type is
+     * IPv4 or IPv6, the address is the PDP address allocated to the target.
+     * When the type is IPv4v6, the additional address is carried separately.
+     * The value uses an imported format, so clause D.1 keeps that standard's
+     * half-octet order: the general rule (most significant half-octet in bits
+     * 5 to 8, least significant in bits 1 to 4) does not apply.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, clause D.1, annex D,
+     * clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly pDP_type: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nSAPI`.
+     * @description
+     *
+     * One octet. Table B.5.2: the network-layer service access point
+     * identifier information element contains an NSAPI identifying a PDP
+     * context in a mobility management context specified by the Tunnel
+     * Endpoint Identifier Control Plane. This document does not state the
+     * octet coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly nSAPI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `additionalIPaddress`.
+     * @description
+     *
+     * Additional PDP address when the PDP type is IPv4v6. Table B.5.2 allows
+     * two addresses in that case.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table B.5.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly additionalIPaddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

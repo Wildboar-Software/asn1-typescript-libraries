@@ -15,6 +15,13 @@ import { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode
  * @summary Network_Identifier
  * @description
  * 
+ * Network identifier (NID). Mandatory part of the CID. It should be
+ * internationally unique. It is the operator identifier and, optionally, the
+ * network element identifier of the element that performs interception.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +42,53 @@ export
 class Network_Identifier {
     /**
      * @summary `operator_Identifier`.
+     * @description
+     *
+     * NWO, access-provider, or service-provider identifier. Mandatory. ASCII
+     * characters, size 1 to 5. For the subaddress option only `0` to `9` shall
+     * be used. Annex E carries Operator-ID in the Called Party Subaddress as
+     * decimal digits, minimum 2 and maximum 5, ended by a field separator.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.5, annex E.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly operator_Identifier: OCTET_STRING;
     /**
      * @summary `network_Element_Identifier`.
+     * @description
+     *
+     * Optional NEID. Uniquely identifies the network element that carries out
+     * LI activation, IRI sending, and similar operations. Clause 6.2.1 allows
+     * an E.164 international node number for circuit-switched networks such as
+     * ISDN, PSTN, and GSM, an X.25 address, or an IP address. This module also
+     * defines a DNS alternative and a structured IP address.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly network_Element_Identifier: OPTIONAL<Network_Element_Identifier>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * BER extension additions that were not recognized. Clause C.1.2.4 refers
+     * unrecognized fields and parameters to annex G. The LEMF ignores an
+     * unrecognized parameter name and continues the record; that case does not
+     * by itself require an error, because the network may be using a newer
+     * specification. An unrecognized or disallowed value is also ignored, and
+     * the LEMF may raise an alarm. An undecodable ROSE record is rejected. The
+     * module allows an `OperationErrors` value when an operation or a parameter
+     * is misunderstood. Annex G does not name those error codes.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.4, annex G, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

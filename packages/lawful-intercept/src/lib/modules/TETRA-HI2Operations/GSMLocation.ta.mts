@@ -17,6 +17,18 @@ import { GSMLocation_utmRefCoordinates, _decode_GSMLocation_utmRefCoordinates, _
  * @summary GSMLocation
  * @description
  * 
+ * GSM location as geodetic text, UTM, a UTM grid reference, or a WGS 84 octet
+ * string. Geodetic latitude uses `XDDMMSS.SS` and longitude uses `XDDDMMSS.SS`.
+ * `X` is N, S, E, or W. `DD` or `DDD` is degrees, `MM` is minutes, and `SS.SS`
+ * is seconds. The fractional seconds are optional. The short latitude example
+ * is `N502312`. The long longitude example is `E1122312.18`. UTM easting
+ * example `32U0439955` and northing `5540736`. UTM reference example
+ * `32UPU91294045`. The WGS 84 alternative uses the format of 3GPP TS 03.32.
+ * This document does not restate that format. Omitted map datum means WGS 84.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

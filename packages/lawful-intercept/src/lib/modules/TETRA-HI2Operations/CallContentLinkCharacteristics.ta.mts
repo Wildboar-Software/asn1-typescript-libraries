@@ -19,6 +19,14 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * @summary CallContentLinkCharacteristics
  * @description
  * 
+ * State and routing of one CC link toward the LEMF. Clause A.4 delivers circuit
+ * CC as one-way 64 kbit/s unrestricted ISDN calls. Failure of a CC link does
+ * not affect the target call. The CC is then lost. An extension marker follows
+ * the components.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +50,72 @@ export
 class CallContentLinkCharacteristics {
     /**
      * @summary `cCLink_State`.
+     * @description
+     *
+     * Current state of the CC link.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCLink_State: OPTIONAL<CCLink_State>;
     /**
      * @summary `release_Time`.
+     * @description
+     *
+     * Date and time when the CC link was released.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly release_Time: OPTIONAL<TimeStamp>;
     /**
      * @summary `release_Reason`.
+     * @description
+     *
+     * Release cause of the CC link, coded in Q.850 format. Clause A.3.2 lists
+     * the cause indicator from ISUP or DSS1 as the related signalling
+     * parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly release_Reason: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lEMF_Address`.
+     * @description
+     *
+     * Directory number used to route the delivery call toward the LEMF. Clause
+     * A.4.1 assigns a fixed LEMF address per activation and does not use that
+     * address to identify the interception. Correlation uses the LIID and the
+     * communication identifier.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4.1, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lEMF_Address: OPTIONAL<CalledPartyNumber>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

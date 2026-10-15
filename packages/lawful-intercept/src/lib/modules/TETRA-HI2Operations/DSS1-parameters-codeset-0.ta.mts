@@ -12,6 +12,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DSS1_parameters_codeset_0
  * @description
  * 
+ * DSS1 codeset-0 parameters of the basic call, one parameter per octet string,
+ * coded as in EN 300 403-1, including the information-element identifier and
+ * the DSS1 length. Bearer capability, high-layer compatibility, and low-layer
+ * capability may each be repeated, and each may be supplied with the calling,
+ * called, or forwarded-to party. Other parameters may be added. The coding is
+ * imported, so half-octet order follows EN 300 403-1.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.3, clause D.1, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

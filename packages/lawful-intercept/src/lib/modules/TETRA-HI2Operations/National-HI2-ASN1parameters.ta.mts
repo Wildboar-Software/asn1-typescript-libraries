@@ -14,6 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary National_HI2_ASN1parameters
  * @description
  * 
+ * National HI2 parameters that apply in one country. Parameters a country adds
+ * under its law are defined in ASN.1 after the extension marker. The module
+ * recommends including a version parameter and a vendor identification
+ * parameter. Vendor identifications can be retrieved from the IANA web site,
+ * see annex K. Tags 240 to 255 should be avoided in a formal type definition.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3, annex K.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +48,29 @@ export
 class National_HI2_ASN1parameters {
     /**
      * @summary `countryCode`.
+     * @description
+     *
+     * ISO 3166-1 country code of the country to which the parameters after the
+     * extension marker apply.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly countryCode: PrintableString;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

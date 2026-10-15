@@ -13,15 +13,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary Service_Information
  * @description
- * 
- * Service octets accompanying UUS1: high-layer compatibility, transmission
- * medium requirement, and MAP bearer and teleservice codes (TS GSM 09.02
- * clauses 14.7.9 and 14.7.10).
- * 
- * 3GPP TS 33.108, annex J.1.
- * 
- * https://www.3gpp.org/DynaReport/33108.htm
- * 
+ *
+ * Service octets that may accompany the UUS1 CC-link information. Each
+ * component is optional. The comments name the source protocol and do not say
+ * when a component is present. Annex E maps the same kinds of octet into the
+ * calling-party subaddress when UUS1 is not used, and fills a missing
+ * subaddress service octet with FF hex. That fill is stated for the subaddress,
+ * not for these components.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause E.3.2, clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,9 +48,13 @@ class Service_Information {
     /**
      * @summary `high_layer_capability`.
      * @description
-     * 
-     * High layer compatibility, octet 4 only (EN 300 403-1). 3GPP TS 33.108,
-     * annex J.1.
+     *
+     * High-layer compatibility, octet 4 only. Protocol: EN 300 403-1. This
+     * document does not restate that protocol. One octet.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -56,9 +62,13 @@ class Service_Information {
     /**
      * @summary `tMR`.
      * @description
-     * 
-     * Transmission medium requirement (ISUP, EN 300 356). 3GPP TS 33.108, annex
-     * J.1.
+     *
+     * Transmission medium requirement. Protocol: ISUP, EN 300 356. This
+     * document does not restate that protocol. One octet.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -66,9 +76,16 @@ class Service_Information {
     /**
      * @summary `bearerServiceCode`.
      * @description
-     * 
-     * Bearer service code. The module cites MAP, TS GSM 09.02 clauses 14.7.9
-     * and 14.7.10, for the service codes. 3GPP TS 33.108, annex J.1.
+     *
+     * No comment of its own. The comment after `teleServiceCode` cites MAP, TS
+     * GSM 09.02, clauses 14.7.9 and 14.7.10, and does not say which clause
+     * applies to which component. Annex E codes a mobile bearer service code
+     * from 3GPP TS 09.02 in the calling-party subaddress. This document does
+     * not define the octet.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause E.3.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -76,9 +93,15 @@ class Service_Information {
     /**
      * @summary `teleServiceCode`.
      * @description
-     * 
-     * Teleservice code from MAP, TS GSM 09.02 clauses 14.7.9 and 14.7.10. 3GPP
-     * TS 33.108, annex J.1.
+     *
+     * The comment cites MAP, TS GSM 09.02, clauses 14.7.9 and 14.7.10. This
+     * document does not restate those clauses and does not say which clause is
+     * the teleservice code. Annex E codes a mobile teleservice code from 3GPP
+     * TS 09.02 in the calling-party subaddress.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause E.3.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

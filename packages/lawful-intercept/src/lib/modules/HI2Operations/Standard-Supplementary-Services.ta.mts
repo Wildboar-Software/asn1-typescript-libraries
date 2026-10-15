@@ -28,7 +28,17 @@ import { MAP_SS_Invoke_Components, _decode_MAP_SS_Invoke_Components, _encode_MAP
 /**
  * @summary Standard_Supplementary_Services
  * @description
- * 
+ *
+ * Standardized supplementary-service parameters for the party: ISUP, DSS1
+ * codeset 0 and codesets 4 to 7, DSS1 invoke and return-result components, and
+ * MAP parameters and invoke components. Clause A.3.4 copies those parameters
+ * as octet strings from the applicable standards.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.4, table A.3.2, annex D,
+ * clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,60 +63,153 @@ export
 class Standard_Supplementary_Services {
     /**
      * @summary `iSUP_SS_parameters`.
+     * @description
+     *
+     * ISUP supplementary-service parameters. Retained for compatibility; new
+     * work uses `ISUP-parameters`.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iSUP_SS_parameters: OPTIONAL<ISUP_SS_parameters>;
     /**
      * @summary `dSS1_SS_parameters_codeset_0`.
+     * @description
+     *
+     * DSS1 codeset-0 supplementary-service parameters: subaddresses, connected
+     * number, keypad, called party number, user-user, and further parameters
+     * the module allows.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table A.3.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_0: OPTIONAL<DSS1_SS_parameters_codeset_0>;
     /**
      * @summary `dSS1_SS_parameters_codeset_4`.
+     * @description
+     *
+     * DSS1 codeset-4 parameters, coded as in the relevant recommendation. No
+     * parameter list is given.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_4: OPTIONAL<DSS1_SS_parameters_codeset_4>;
     /**
      * @summary `dSS1_SS_parameters_codeset_5`.
+     * @description
+     *
+     * DSS1 codeset-5 parameters, coded as in the relevant national
+     * recommendation. No parameter list is given.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_5: OPTIONAL<DSS1_SS_parameters_codeset_5>;
     /**
      * @summary `dSS1_SS_parameters_codeset_6`.
+     * @description
+     *
+     * DSS1 codeset-6 parameters, coded as in the relevant local-network
+     * recommendation. No parameter list is given.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_6: OPTIONAL<DSS1_SS_parameters_codeset_6>;
     /**
      * @summary `dSS1_SS_parameters_codeset_7`.
+     * @description
+     *
+     * DSS1 codeset-7 parameters, coded as in the relevant user-specific
+     * recommendation. No parameter list is given.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_parameters_codeset_7: OPTIONAL<DSS1_SS_parameters_codeset_7>;
     /**
      * @summary `dSS1_SS_Invoke_components`.
+     * @description
+     *
+     * DSS1 Invoke or Return Result components for the operations named on that
+     * set. Clause A.5.3 reports a successful invocation, and one record may
+     * include return-result parameters.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5.3, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dSS1_SS_Invoke_components: OPTIONAL<DSS1_SS_Invoke_Components>;
     /**
      * @summary `mAP_SS_Parameters`.
+     * @description
+     *
+     * MAP supplementary-service parameters, coded as in the relevant MAP
+     * recommendation. No parameter list is given.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5.3, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mAP_SS_Parameters: OPTIONAL<MAP_SS_Parameters>;
     /**
      * @summary `mAP_SS_Invoke_Components`.
+     * @description
+     *
+     * MAP Invoke or Return Result components. Clause A.5.3 allows MAP
+     * components (3GPP TS 09.02) in place of DSS1 functional components. No
+     * operation list is given.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.5.3, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mAP_SS_Invoke_Components: OPTIONAL<MAP_SS_Invoke_Components>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried with this value. This module version assigns
+     * them no name and no meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

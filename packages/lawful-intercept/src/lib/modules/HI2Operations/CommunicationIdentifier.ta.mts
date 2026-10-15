@@ -15,6 +15,25 @@ import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identif
  * @summary CommunicationIdentifier
  * @description
  * 
+ * Communication identifier (CID). The relevant network element generates one
+ * for each activity of a target identity. It distinguishes those activities and
+ * correlates IRI records with each other and with CC at HI2 and HI3. Called
+ * `callIdentifier` in ES 201 671 v1.1.1. It is the NID plus an optional CIN.
+ * The same value is sent with the HI3 information and with each IRI of the same
+ * intercepted call.
+ *
+ * Clause 6.2 and table A.3.1 allow the CID to be omitted for non-call-related
+ * records such as SMS and subscriber-controlled input, where no CC correlation
+ * is made. The ASN.1 still makes this component mandatory in `IRI-Parameters`
+ * and makes the CIN optional inside it. GSM clause A.8.2 uses the intercepting
+ * node id as the NID and the correlation number as the CIN. GPRS clause B.5.2
+ * uses the same pair. If both parties of a packet communication are
+ * intercepted, each party is a separate intercept activity.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2, clause A.3.2.1, clause A.8.2,
+ * clause B.5.2, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,18 +59,62 @@ export
 class CommunicationIdentifier {
     /**
      * @summary `communication_Identity_Number`.
+     * @description
+     *
+     * CIN. Temporary identifier of one intercepted communication inside the
+     * network element. Mandatory for connection-oriented IRI, whenever HI3
+     * information is associated (CC link, data, and similar), and when this
+     * identifier is used for an IRI other than IRI-REPORT. Optional for
+     * IRI-REPORT with no HI3. All results of one session in one network element
+     * use the same CIN. Two sessions of one subject through the same element
+     * use different CINs. Different target identities in the same communication
+     * may share a CIN. Called `call-Identity-Number` in ES 201 671 v1.1.1.
+     *
+     * ASCII digits. "12345678" is the eight octets 0x31 through 0x38. Size 1 to
+     * 8. For the subaddress option only `0` to `9` shall be used. Annex E
+     * carries it in the Called Party Subaddress as decimal digits, recommended
+     * minimum 6 and maximum 8, ended by a field separator. Under option B the
+     * HI3 CIN is the CIN of the first call for which that CC link was set up.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.2, clause A.1.3, clause
+     * D.5, annex E.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communication_Identity_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `network_Identifier`.
+     * @description
+     *
+     * NID. Mandatory half of the CID. It should be internationally unique. The
+     * operator identifier is mandatory. The network element identifier is
+     * optional.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2.1, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly network_Identifier: Network_Identifier;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * BER extension additions that were not recognized. Clause C.1.2.4 refers
+     * unrecognized fields and parameters to annex G. The LEMF ignores an
+     * unrecognized parameter name and continues the record; that case does not
+     * by itself require an error, because the network may be using a newer
+     * specification. An unrecognized or disallowed value is also ignored, and
+     * the LEMF may raise an alarm. An undecodable ROSE record is rejected. The
+     * module allows an `OperationErrors` value when an operation or a parameter
+     * is misunderstood. Annex G does not name those error codes.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.4, annex G, clause D.5.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

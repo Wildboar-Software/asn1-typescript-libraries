@@ -13,6 +13,13 @@ import { GA_Polygon_Item, _decode_GA_Polygon_Item, _encode_GA_Polygon_Item } fro
  * @summary GA_Polygon
  * @description
  * 
+ * Polygon of 1 to `maxNrOfPoints` points, and `maxNrOfPoints` is 15. Each point
+ * is a geographic coordinate. The specification gives no further meaning for
+ * the shape.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

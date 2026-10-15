@@ -19,6 +19,13 @@ import { SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_
  * @summary SMS_report_sMS_Contents
  * @description
  * 
+ * Contents of one SMS report: the sending party, an optional transfer result,
+ * an optional indication that further SMS will follow, and optional SMS
+ * content. An extension marker follows the content.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,30 +69,70 @@ export
 class SMS_report_sMS_Contents {
     /**
      * @summary `initiator`.
+     * @description
+     *
+     * Party which sent the SMS: the target, the server, or an undefined party.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly initiator: SMS_report_sMS_Contents_initiator;
     /**
      * @summary `transfer_status`.
+     * @description
+     *
+     * Whether transfer of the SMS succeeded. Only the successful value has a
+     * behaviour sentence. The other two values are names.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly transfer_status: OPTIONAL<SMS_report_sMS_Contents_transfer_status>;
     /**
      * @summary `other_message`.
+     * @description
+     *
+     * For a terminating SMS, whether the server will send other SMS.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly other_message: OPTIONAL<SMS_report_sMS_Contents_other_message>;
     /**
      * @summary `content`.
+     * @description
+     *
+     * SMS content, encoded in the format defined for the SMS mobile. The
+     * present document does not restate that format. Clause B.5.3 describes the
+     * GPRS SMS field as the SMS content with its header.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly content: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

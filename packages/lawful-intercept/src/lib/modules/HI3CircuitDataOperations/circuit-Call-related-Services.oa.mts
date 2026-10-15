@@ -9,6 +9,29 @@ import { OperationErrors } from "../HI2Operations/OperationErrors.osa.mjs";
  * @summary circuit_Call_related_Services
  * @description
  *
+ * ROSE operation for user data associated with a circuit call, for example
+ * UUS1, UUS2, and UUS3. The operation applies only to ROSE. With FTP,
+ * `Content-Report` is sent directly. UUS parameters are reported as HI3 or via
+ * HI2. If user-to-user information is not delivered from the target to the
+ * other party, for example because of overload in SS No.7, no notification is
+ * sent to the LEA.
+ *
+ * Class 2. The timer shall be set to a value between 3s and 240s. The default
+ * is 60s. The ASN.1 comment says the same note as for the HI management
+ * operation applies. The clause D.3 comments state the class 2 timer range and
+ * default for those operations, and do not restate a further note. The
+ * agreement note on `sending-of-HI1-Notification` is not written on this
+ * operation.
+ *
+ * On timeout the ASE_HI tells the LI application that no answer was received.
+ * The application sends the data again or informs the administrator. Errors are
+ * `OperationErrors`, imported from HI2Operations. This module does not define
+ * that error set.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6, clause D.0, clause C.1.2.1,
+ * clause A.4.2, clause A.6.22, clause D.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

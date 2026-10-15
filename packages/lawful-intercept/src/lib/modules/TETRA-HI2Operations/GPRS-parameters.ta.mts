@@ -15,6 +15,18 @@ import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } fro
  * @summary GPRS_parameters
  * @description
  * 
+ * GPRS context parameters copied into the IRI. Clause B.5.3 maps them from the
+ * information the xGSN supplies. When the PDP type is IPv4 or IPv6, the IP
+ * address is carried in the PDP address allocated to the target. When the PDP
+ * type is IPv4v6, the additional IP address carries the other address. An
+ * extension marker precedes NSAPI and the additional address. This document
+ * refers to 3GPP TS 23.060 for the access-point name and to the 3GPP
+ * specifications named in table B.5.2 for the PDP type, and does not restate
+ * those definitions.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,36 +50,89 @@ export
 class GPRS_parameters {
     /**
      * @summary `pDP_address_allocated_to_the_target`.
+     * @description
+     *
+     * PDP address used by the target. For IPv4v6, table B.5.2 allows two
+     * addresses. This component carries the address when the PDP type is IPv4
+     * or IPv6.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly pDP_address_allocated_to_the_target: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `aPN`.
+     * @description
+     *
+     * Access point name. Table B.5.2 says it contains a logical name and refers
+     * to 3GPP TS 23.060. This document does not restate that name format.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `pDP_type`.
+     * @description
+     *
+     * PDP type. Table B.5.2 says it is the PDP type defined in 3GPP TS 09.60,
+     * TS 29.060, TS 04.08, TS 24.008, TS 09.02, and TS 29.002. This document
+     * does not restate those codings. The module comment uses it to decide
+     * which component carries an IPv4, IPv6, or IPv4v6 address.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly pDP_type: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nSAPI`.
+     * @description
+     *
+     * Network-layer service access point identifier. Table B.5.2 describes it
+     * as the NSAPI that identifies a PDP context in a mobility-management
+     * context specified by the tunnel endpoint identifier control plane. This
+     * document states no further coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause B.5.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly nSAPI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `additionalIPaddress`.
+     * @description
+     *
+     * The other IP address when the PDP type is IPv4v6.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly additionalIPaddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions carried after the extension marker that were not
+     * mapped to a named component. The present document does not define their
+     * content.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

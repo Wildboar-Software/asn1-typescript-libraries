@@ -17,6 +17,16 @@ import { SMS_report_sMS_Contents, _decode_SMS_report_sMS_Contents, _encode_SMS_r
  * @summary SMS_report
  * @description
  * 
+ * SMS content and the information associated with it. The communication
+ * identifier is the one used for the relevant IRI. It was called callIdentifier
+ * in V1.1.1 of ES 201 671. Clause A.4.2 allows GSM SMS, exceptionally, to be
+ * passed on HI2. Clause B.5.3 maps a GPRS SMS event to IRI-REPORT and carries
+ * the SMS content, including its header, in the IRI. This report contains the
+ * communication identifier, the time of the report, and the SMS contents.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.4.2, clause B.5.3, clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,18 +79,44 @@ export
 class SMS_report {
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     *
+     * Communication identifier of the relevant IRI, used to identify the
+     * intercepted SMS. It was called callIdentifier in V1.1.1 of ES 201 671.
+     * Clause 6.2 note 2 says that for SMS no correlation to CC is made.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause 6.2, clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Date and time of the report. The module comment says the format is case
+     * a) of ITU-T Recommendation X.680: year, month, day, hour, minutes,
+     * seconds.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `sMS_Contents`.
+     * @description
+     *
+     * Who sent the SMS, whether the transfer succeeded, whether the server will
+     * send further SMS, and the SMS content coded for the mobile.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

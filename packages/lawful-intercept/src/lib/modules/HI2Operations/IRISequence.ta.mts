@@ -11,6 +11,16 @@ import { IRIContent, _decode_IRIContent, _encode_IRIContent } from "../HI2Operat
  * @summary IRISequence
  * @description
  * 
+ * Optional aggregation of `IRIContent` when several IRI records are available
+ * at one time for the same LEA destination. As a general rule, a record created
+ * at any event is sent immediately and is not held in the DF or MF in order to
+ * apply aggregation. When aggregation is not used, `IRIContent` is chosen
+ * instead. National or regional requirements govern use of the option, because
+ * IRI delivery is time-constrained.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause 5.2, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

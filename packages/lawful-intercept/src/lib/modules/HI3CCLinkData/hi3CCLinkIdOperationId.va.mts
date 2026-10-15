@@ -10,15 +10,14 @@ import { hi3CCLinkId } from "../HI3CCLinkData/hi3CCLinkId.va.mjs";
 /**
  * @summary hi3CCLinkIdOperationId
  * @description
- * 
- * HI3 CC-link operation identifier: `hi3CCLinkId` plus `version4(4)`. UUS1
- * `domainID` is this value when the FTP delivery mechanism is used.
- * `hi3CCLinkId` is `hi3(2)` `ccLinkLI(4)` under `lawfulInterceptDomainId`.
- * 
- * 3GPP TS 33.108, annex J.1.
- * 
- * https://www.3gpp.org/DynaReport/33108.htm
- * 
+ *
+ * `version4(4)` under `hi3CCLinkId`. `domainID` in `UUS1-Content` is
+ * constrained to this value when the FTP delivery mechanism is used. The module
+ * object identifier is the same version.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

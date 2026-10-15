@@ -16,6 +16,13 @@ import { GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../TETRA-HI2
  * @summary UMTSLocation
  * @description
  * 
+ * UMTS geographic area: a point, a point with an uncertainty code, or a polygon
+ * of at most `maxNrOfPoints` points. The present document does not state when
+ * each shape is used. An extension marker follows the named shapes.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

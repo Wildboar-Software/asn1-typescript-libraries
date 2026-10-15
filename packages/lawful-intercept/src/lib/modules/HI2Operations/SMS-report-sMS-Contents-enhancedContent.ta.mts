@@ -13,7 +13,16 @@ import { SMS_report_sMS_Contents_enhancedContent_character_encoding, _decode_SMS
 /**
  * @summary SMS_report_sMS_Contents_enhancedContent
  * @description
- * 
+ *
+ * SMS content whose character encoding is named alongside the octets. Mutually
+ * exclusive with the 3GPP `content` alternative. The encoding names are GSM
+ * 7-bit ASCII, 8-bit ASCII, 8-bit binary, UCS-2, UTF-8, UTF-16, and other. No
+ * bit-level coding is stated.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,12 +50,31 @@ export
 class SMS_report_sMS_Contents_enhancedContent {
     /**
      * @summary `content`.
+     * @description
+     *
+     * SMS octets. The character encoding is the accompanying encoding name.
+     * This document does not define an SMS PDU layout.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly content: OCTET_STRING;
     /**
      * @summary `character_encoding`.
+     * @description
+     *
+     * Encoding of the accompanying octets: GSM 7-bit ASCII, 8-bit ASCII, 8-bit
+     * binary, UCS-2, UTF-8, UTF-16, or other. No bit-level coding is stated,
+     * and `other` has no further meaning.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
@@ -78,6 +106,15 @@ class SMS_report_sMS_Contents_enhancedContent {
 
         /**
          * @summary The enum used as the type of the component `character_encoding`
+         * @description
+         *
+         * GSM 7-bit ASCII, 8-bit ASCII, 8-bit binary, UCS-2, UTF-8, UTF-16, or
+         * other. No bit-level coding is stated.
+         *
+         * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+         *
+         * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+         *
          * @public
          * @static
          */

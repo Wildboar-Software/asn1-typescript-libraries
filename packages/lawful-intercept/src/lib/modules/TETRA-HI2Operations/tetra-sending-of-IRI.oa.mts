@@ -9,6 +9,25 @@ import { OperationErrors } from "../TETRA-HI2Operations/OperationErrors.osa.mjs"
  * @summary tetra_sending_of_IRI
  * @description
  *
+ * Class 2 ROSE operation carrying TETRA IRI to the LEMF. The argument is
+ * `TETRAIRIsContent`. Failures are `OperationErrors`. The operation code is
+ * `global:{tETRADomainId hi2(1) opcode(1)}`, as written: `hi2(1)` then
+ * `opcode(1)` under `tETRADomainId`.
+ *
+ * The timer shall be set to a value between 3 s and 240 s. The default is 60 s.
+ * The module comment says the same note as for the HI management operation
+ * applies. Clause D.10.1 gives the TETRA HI management operations that same
+ * class 2 timer and default, and no further note.
+ *
+ * Annex C defines class 2 delivery. The sender starts a timer, waits for
+ * `RO_Result`, `RO_Error`, or `RO_Reject`, and on timeout reports that no
+ * answer was received. Annex C names `sending-of-IRI` for the common HI2
+ * operation. This module defines `tetra-sending-of-IRI` for TETRA HI2.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause C.1.2.1, clause D.10.1, clause
+ * D.10.3.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

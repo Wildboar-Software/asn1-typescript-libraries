@@ -6,26 +6,94 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_Direction_Indication
+ * @description
+ *
+ * Which part of the target communication one CC link carries: from the target,
+ * toward the target, or combined. In stereo the two links carry the same UUS1
+ * values except this one. Annex E uses the same numbers in the calling-party
+ * subaddress when UUS1 is not used. Stereo (1 and 2) is the default. Mono (0)
+ * is historic.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3, clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * Direction-Indication     ::=  ENUMERATED
+ * {
+ *     mono-mode(0),
+ *     cc-from-target(1),
+ *     cc-from-other-party(2),
+ *     ...,
+ *     direction-unknown(3)
+ * }
+ * ```
+ *
+ * @enum {number}
+ */
+
 export
 enum _enum_for_Direction_Indication {
+    /**
+     * Combined signal, one direction indication for both ways. Value 0. Annex E
+     * calls value 0 mono mode, combined signal, and marks it historic. Stereo,
+     * values 1 and 2, is the default. Mono mode is kept for compatibility with
+     * previous versions and may be used where national requirements say so.
+     * Table A.4.1 includes combined (mono) as a direction.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+     * clause E.4.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     mono_mode = 0,
+    /**
+     * Content from the target (transmit). Value 1. Table A.4.1: signal from the
+     * target. Annex E codes value 1 as "CC from target" when the calling-party
+     * subaddress carries direction instead of UUS1.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+     * clause E.4.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     cc_from_target = 1,
+    /**
+     * Content toward the target (receive), from the other party. Value 2. Table
+     * A.4.1: signal toward the target. Annex E codes value 2 as "CC to target".
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+     * clause E.4.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     cc_from_other_party = 2,
+    /**
+     * Direction unknown. Value 3. Annex E table E.4.1 assigns the same value.
+     * It is an extension addition in this module. Clause E.3.2 represents an
+     * empty direction field in the subaddress by its field separator alone;
+     * that clause does not say the empty field is this value.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+     * clause E.4.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     */
     direction_unknown = 3,
 }
 
 /**
  * @summary Direction_Indication
  * @description
- * 
- * Direction on the CC link. Table J.2.7 codes the subaddress direction; this
- * enumeration is the UUS1 form (annex J.1). `direction-unknown` is an extension
- * and has no code in that table.
- * 
- * 3GPP TS 33.108, clause 5.3.2 and annex J.2.4.1.
- * 
- * https://www.3gpp.org/DynaReport/33108.htm
- * 
+ *
+ * Which part of the target communication one CC link carries: from the target,
+ * toward the target, or combined. In stereo the two links carry the same UUS1
+ * values except this one. Annex E uses the same numbers in the calling-party
+ * subaddress when UUS1 is not used. Stereo (1 and 2) is the default. Mono (0)
+ * is historic.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3, clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,9 +115,17 @@ type Direction_Indication = _enum_for_Direction_Indication | ENUMERATED;
 /**
  * @summary Direction_Indication_mono_mode
  * @description
- * 
- * Combined (mono) signal. Table J.2.7 marks value 0 historic. 3GPP TS 33.108,
- * clause 5.3.2 and annex J.2.4.1.
+ *
+ * Combined signal, one direction indication for both ways. Value 0. Annex E
+ * calls value 0 mono mode, combined signal, and marks it historic. Stereo,
+ * values 1 and 2, is the default. Mono mode is kept for compatibility with
+ * previous versions and may be used where national requirements say so.
+ * Table A.4.1 includes combined (mono) as a direction.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -59,8 +135,17 @@ const Direction_Indication_mono_mode: Direction_Indication = 0; /* LONG_NAMED_EN
 /**
  * @summary mono_mode
  * @description
- * 
- * Combined mono signal (historic code 0). Annex J.2.4.1.
+ *
+ * Combined signal, one direction indication for both ways. Value 0. Annex E
+ * calls value 0 mono mode, combined signal, and marks it historic. Stereo,
+ * values 1 and 2, is the default. Mono mode is kept for compatibility with
+ * previous versions and may be used where national requirements say so.
+ * Table A.4.1 includes combined (mono) as a direction.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -70,9 +155,15 @@ const mono_mode: Direction_Indication = Direction_Indication_mono_mode; /* SHORT
 /**
  * @summary Direction_Indication_cc_from_target
  * @description
- * 
- * CC from the target (Tx). Table J.2.7 value 1. 3GPP TS 33.108, clause 5.3.2
- * and annex J.2.4.1.
+ *
+ * Content from the target (transmit). Value 1. Table A.4.1: signal from the
+ * target. Annex E codes value 1 as "CC from target" when the calling-party
+ * subaddress carries direction instead of UUS1.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -82,8 +173,15 @@ const Direction_Indication_cc_from_target: Direction_Indication = 1; /* LONG_NAM
 /**
  * @summary cc_from_target
  * @description
- * 
- * CC from the target. Annex J.2.4.1.
+ *
+ * Content from the target (transmit). Value 1. Table A.4.1: signal from the
+ * target. Annex E codes value 1 as "CC from target" when the calling-party
+ * subaddress carries direction instead of UUS1.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -93,9 +191,14 @@ const cc_from_target: Direction_Indication = Direction_Indication_cc_from_target
 /**
  * @summary Direction_Indication_cc_from_other_party
  * @description
- * 
- * CC to the target, from the other party (Rx). Table J.2.7 value 2. 3GPP TS
- * 33.108, clause 5.3.2 and annex J.2.4.1.
+ *
+ * Content toward the target (receive), from the other party. Value 2. Table
+ * A.4.1: signal toward the target. Annex E codes value 2 as "CC to target".
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -105,8 +208,14 @@ const Direction_Indication_cc_from_other_party: Direction_Indication = 2; /* LON
 /**
  * @summary cc_from_other_party
  * @description
- * 
- * CC to the target (from the other party). Annex J.2.4.1.
+ *
+ * Content toward the target (receive), from the other party. Value 2. Table
+ * A.4.1: signal toward the target. Annex E codes value 2 as "CC to target".
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -116,9 +225,16 @@ const cc_from_other_party: Direction_Indication = Direction_Indication_cc_from_o
 /**
  * @summary Direction_Indication_direction_unknown
  * @description
- * 
- * Direction unknown. Extension value. Annex J.2.4.1 does not assign it a
- * subaddress code. 3GPP TS 33.108, annex J.1.
+ *
+ * Direction unknown. Value 3. Annex E table E.4.1 assigns the same value.
+ * It is an extension addition in this module. Clause E.3.2 represents an
+ * empty direction field in the subaddress by its field separator alone;
+ * that clause does not say the empty field is this value.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -128,8 +244,16 @@ const Direction_Indication_direction_unknown: Direction_Indication = 3; /* LONG_
 /**
  * @summary direction_unknown
  * @description
- * 
- * Direction unknown. Not in table J.2.7. Annex J.1.
+ *
+ * Direction unknown. Value 3. Annex E table E.4.1 assigns the same value.
+ * It is an extension addition in this module. Clause E.3.2 represents an
+ * empty direction field in the subaddress by its field separator alone;
+ * that clause does not say the empty field is this value.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.8, clause A.4.3,
+ * clause E.4.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * @constant
  * @type {number}
  */

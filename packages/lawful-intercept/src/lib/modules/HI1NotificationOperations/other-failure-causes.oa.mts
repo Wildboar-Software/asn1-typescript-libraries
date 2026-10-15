@@ -5,6 +5,15 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @summary other_failure_causes
  * @description
  *
+ * Local error code 0 of `sending-of-HI1-Notification`, through
+ * `ErrorHI1Notifications`. Clause C.1.2.2 returns RO_Error when the operation
+ * fails at application level, with a cause the operation defines. The document
+ * does not say which failure selects this code rather than one of the other
+ * three.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.4, clause C.1.2.2, annex G.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1

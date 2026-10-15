@@ -15,7 +15,20 @@ import { National_HI1_ASN1parameters, _decode_National_HI1_ASN1parameters, _enco
 /**
  * @summary HI1_Operation
  * @description
- * 
+ *
+ * TETRA choice sent as the ROSE argument. With FTP, this choice is what is sent
+ * (clause D.10.2). Notifications go toward the LEMF across HI2. They are not
+ * the activation request of clause 7.1.
+ *
+ * `liActivated`, `liDeactivated`, and `liModified` follow clause 7.2
+ * (activation, deactivation, modification). `alarms-indicator` is for certain
+ * exceptional situations. `national-HI1-ASN1parameters` is the extension for
+ * national parameters. The embedded `Notification` is the TETRA one, which has
+ * `location`.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.10.2, clause 7.2, clause 7.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

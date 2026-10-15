@@ -16,7 +16,28 @@ import { SMS_report_sMS_Contents, _decode_SMS_report_sMS_Contents, _encode_SMS_r
 /**
  * @summary SMS_report
  * @description
- * 
+ *
+ * SMS content and the information associated with it. Clause A.8.3:
+ * exceptionally, SMS is delivered via HI2. Table A.8.1 maps the SMS event to
+ * an IRI-REPORT. Table A.8.2: the SMS content with the header which is sent
+ * with the SMS service.
+ *
+ * Clause A.8.4: IRI information such as the receiving MSISDN, included as
+ * header information in the SMS message body sent to the SMS service centre,
+ * is included in the IRI. Where an authorization covers IRI only, the message
+ * body is outside what the LEA may receive; party information that the
+ * intercepting element holds inside what it treats as contents is still
+ * included in the IRI.
+ *
+ * `content` and `enhancedContent` are mutually exclusive. `content` is for
+ * 3GPP and is encoded in the format defined for the SMS mobile. This document
+ * does not define that PDU layout.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.8.3, clause A.8.4, table A.8.1,
+ * table A.8.2, annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,18 +109,49 @@ export
 class SMS_report {
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     *
+     * Identifies the intercepted SMS. The same value is used for the relevant
+     * IRI. Called `callIdentifier` in V1.1.1 of ES 201 671. Table A.8.2 maps
+     * the GSM communication identifier (interception node identity and
+     * correlation number) to this parameter.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table A.8.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Date and time of the report. The format is case a) of ITU-T
+     * Recommendation X.680: year, month, day, hour, minutes, seconds. Table
+     * A.8.2 maps the MSC/VLR or GMSC event date and time to the timestamp.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), table A.8.2, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `sMS_Contents`.
+     * @description
+     *
+     * Party that sent the SMS, transfer result, whether the server will send a
+     * further SMS on a terminating call, and either the 3GPP content or the
+     * enhanced content. Those two content forms are mutually exclusive.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause A.8.4, annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */

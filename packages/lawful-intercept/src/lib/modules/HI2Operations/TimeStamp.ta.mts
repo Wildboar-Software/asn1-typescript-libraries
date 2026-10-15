@@ -13,6 +13,19 @@ import { LocalTimeStamp, _decode_LocalTimeStamp, _encode_LocalTimeStamp } from "
  * @summary TimeStamp
  * @description
  * 
+ * Date and time of the event that triggered the IRI record. Minimum resolution
+ * is one second. Resolution is the smallest incremental change that can be
+ * measured for time, expressed with a definite number of decimal digits or
+ * bits. `localTime` is local time with a winter or summer indication and, in
+ * this module, without a UTC offset. `utcTime` is UTC. The parameter shall be
+ * able to show which of those forms is used. The NWO, access provider, or
+ * service provider normally defines which form is sent. GSM and GPRS tables map
+ * the event date and event time to this parameter.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause A.3.2.1, clause A.8.4, clause
+ * B.5.3, clause D.5.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

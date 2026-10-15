@@ -25,7 +25,15 @@ import { SMS_report, _decode_SMS_report, _encode_SMS_report } from "../HI2Operat
 /**
  * @summary Content_Report
  * @description
- * 
+ *
+ * User data from DSS1, ISUP, or MAP signalling, for example UUS or SMS. ROSE
+ * operations `circuit-Call-related-Services` and
+ * `no-Circuit-Call-related-Services` carry this value as the argument. With
+ * FTP, this value is sent directly.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6, clause D.0, clause C.1.2.1.
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,48 +68,128 @@ export
 class Content_Report {
     /**
      * @summary `domainID`.
+     * @description
+     *
+     * Used when the FTP delivery mechanism is used. Constrained to
+     * `hi3CircuitLIOperationId`. Optional. This module's comment does not
+     * require the sending entity to include the OID; that rule is the HI2
+     * `domainID` comment, and it is not stated here.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     *
+     * LIID of the interception (clause 6.1). Optional. The module does not say
+     * when it is omitted. Clause 6.1 requires the LIID on HI3 information.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6, clause 6.1.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     *
+     * Identifies the intercepted call. Use the same value as in the relevant
+     * IRI. Called `callIdentifier` in V1.1.1 of ES 201 671. Clause 6.2: the
+     * communication identifier is the network identifier plus an optional
+     * communication identity number, and it correlates IRI with CC.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6, clause 6.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * The module does not say which instant this timestamp records. `TimeStamp`
+     * is imported from HI2Operations.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `initiator`.
+     * @description
+     *
+     * Party associated with the reported user data. Optional. Clause D.6 names
+     * the four values and does not define further behaviour.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly initiator: OPTIONAL<Content_Report_initiator>;
     /**
      * @summary `content`.
+     * @description
+     *
+     * User-to-user information, in the format of the ISUP user-to-user
+     * information parameter (EN 300 356). Only one UUI parameter is sent per
+     * message. UUS1, UUS2, and UUS3 are reported as HI3 or via HI2. If that
+     * information is not delivered from the target to the other party, for
+     * example because of overload in SS No.7, no notification is sent to the
+     * LEA. `Supplementary-Services` is imported from HI2Operations; this module
+     * does not define it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6, clause A.6.22,
+     * clause A.4.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly content: OPTIONAL<Supplementary_Services>;
     /**
      * @summary `sMS_report`.
+     * @description
+     *
+     * SMS content for data not associated with a circuit call. Clause C.1.2.1
+     * gives SMS as the example for `no-Circuit-Call-related-Services`.
+     * Exceptionally, GSM SMS may be passed via HI2. `SMS-report` is imported
+     * from HI2Operations; this module does not define it.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), clause D.6, clause C.1.2.1,
+     * clause A.4.2.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sMS_report: OPTIONAL<SMS_report>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * An unrecognized parameter is ignored and processing of the record
+     * continues. No special error or alarm is required, because the cause may
+     * be a newer version of the specification. Content that is not recognized
+     * is also ignored; the LEMF may raise an alarm. A record that cannot be
+     * decoded is rejected when ROSE is used, or ignored.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex G, clause C.1.2.4, clause D.6.
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
      * @public
      * @readonly
      */
