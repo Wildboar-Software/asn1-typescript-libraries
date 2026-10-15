@@ -17,6 +17,13 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary FspStatusReportInvocation
  * @description
  * 
+ * Provider invocation of FSP-STATUS-REPORT, an unconfirmed operation. Valid in
+ * states 2 (ready) and 3 (active). Reports are sent according to the user's
+ * FSP-SCHEDULE-STATUS-REPORT requests. The provider remains in its original
+ * state.
+ * 
+ * CCSDS 912.3-B-3, sections 3.9.1 and 3.9.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,54 +46,120 @@ export
 class FspStatusReportInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated; `bind` authenticates only FSP-BIND;
+     * `none` leaves every invocation and return unauthenticated. When this
+     * invocation is unauthenticated, the value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `fspPacketLastProcessed`.
+     * @description
+     * Identification of the Space Packet of this service instance that most
+     * recently started to be processed, whether or not processing succeeded, or
+     * `null` if none has. The value survives release or abort of the
+     * association. Section 3.9.2.3 says processing starts when the Packet moves
+     * from the requests queue to a packets queue. Section 3.7.2.9, for the same
+     * parameter on FSP-ASYNC-NOTIFY, says processing starts when it moves from
+     * a packets queue to a segments queue.
+     * 
+     * CCSDS 912.3-B-3, sections 3.9.2.3 and 3.7.2.9.
      * @public
      * @readonly
      */
     readonly fspPacketLastProcessed: FspPacketLastProcessed;
     /**
      * @summary `fspPacketLastOk`.
+     * @description
+     * Identification of the last Space Packet of this service instance that was
+     * successfully processed, or `null` if none has. The value survives release
+     * or abort of the association.
+     * 
+     * CCSDS 912.3-B-3, section 3.9.2.6.
      * @public
      * @readonly
      */
     readonly fspPacketLastOk: FspPacketLastOk;
     /**
      * @summary `productionStatus`.
+     * @description
+     * Current status of the production process. The operational value has
+     * sub-states BD, AD and BD, and AD suspended.
+     * 
+     * CCSDS 912.3-B-3, section 3.9.2.8 and annex C.
      * @public
      * @readonly
      */
     readonly productionStatus: FspProductionStatus;
     /**
      * @summary `numberOfPacketsReceived`.
+     * @description
+     * Number of Space Packets received during this service instance, with
+     * separate counts for AD and BD. Only Packets that are checked successfully
+     * and buffered are counted. The count is zero when none have been received.
+     * Statistics cover the service instance provision period.
+     * 
+     * CCSDS 912.3-B-3, sections 3.9.2.9 and 3.1.11.
      * @public
      * @readonly
      */
     readonly numberOfPacketsReceived: FspPacketCount;
     /**
      * @summary `numberOfPacketsProcessed`.
+     * @description
+     * Number of Space Packets the provider attempted to process during this
+     * service instance, with separate counts for AD and BD. The count includes
+     * Packets that were acknowledged, Packets that radiated successfully and
+     * are not yet acknowledged, Packets that aborted, and Packets currently
+     * being processed. The count is zero when none have been processed.
+     * 
+     * CCSDS 912.3-B-3, section 3.9.2.10.
      * @public
      * @readonly
      */
     readonly numberOfPacketsProcessed: FspPacketCount;
     /**
      * @summary `numberOfPacketsRadiated`.
+     * @description
+     * Number of Space Packets successfully radiated during this service
+     * instance, with separate counts for AD and BD. A Packet still being
+     * radiated is excluded. For a given Packet only the first radiation is
+     * counted; COP-1 retransmission of frames does not update the count. The
+     * count is zero when none have been radiated.
+     * 
+     * CCSDS 912.3-B-3, section 3.9.2.11.
      * @public
      * @readonly
      */
     readonly numberOfPacketsRadiated: FspPacketCount;
     /**
      * @summary `numberOfPacketsAcknowledged`.
+     * @description
+     * Applies only to sequence-controlled transmission. Section 3.9.2.12.1
+     * defines it as the number of Space Packets that during this service
+     * instance were successfully transferred to the space element, as
+     * determined by evaluation of CLCWs. Section 3.9.2.12.2 says that if Space
+     * Packets have been acknowledged, this parameter shall be set to zero.
+     * 
+     * CCSDS 912.3-B-3, section 3.9.2.12.
      * @public
      * @readonly
      */
     readonly numberOfPacketsAcknowledged: IntUnsignedLong;
     /**
      * @summary `fspBufferAvailable`.
+     * @description
+     * Number of octets still available in this service instance's request
+     * queue. Once the provider starts to process a Space Packet, that Packet is
+     * treated as removed from the buffer.
+     * 
+     * CCSDS 912.3-B-3, section 3.9.2.13 and annex B.
      * @public
      * @readonly
      */

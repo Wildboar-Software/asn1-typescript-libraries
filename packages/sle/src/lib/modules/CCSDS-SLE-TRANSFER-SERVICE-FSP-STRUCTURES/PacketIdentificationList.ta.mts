@@ -10,6 +10,14 @@ import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdent
  * @summary PacketIdentificationList
  * @description
  * 
+ * Packet identifications attached to an FSP-ASYNC-NOTIFY event. Processing
+ * started, radiated, acknowledged, and expired events carry the one affected
+ * Packet. A transmission-mode mismatch, production interrupted, VC aborted, and
+ * production halted carry every discarded Packet of this user. Other
+ * notifications omit the list.
+ * 
+ * CCSDS 912.3-B-3, section 3.7.2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

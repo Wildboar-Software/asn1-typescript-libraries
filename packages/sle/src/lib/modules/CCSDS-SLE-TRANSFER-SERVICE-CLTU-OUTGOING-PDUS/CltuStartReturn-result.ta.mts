@@ -12,6 +12,12 @@ import { DiagnosticCltuStart, _decode_DiagnosticCltuStart, _encode_DiagnosticClt
  * @summary CltuStartReturn_result
  * @description
  * 
+ * Result of CLTU-START. positiveResult means the provider entered state 3
+ * (active) and will accept CLTU-TRANSFER-DATA; the radiation window is
+ * included. negativeResult means the provider stayed in state 2 (ready) and
+ * will reject CLTU-TRANSFER-DATA; the diagnostic says why. CCSDS 912.1-B-5,
+ * sections 3.4.2.8 and 3.4.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

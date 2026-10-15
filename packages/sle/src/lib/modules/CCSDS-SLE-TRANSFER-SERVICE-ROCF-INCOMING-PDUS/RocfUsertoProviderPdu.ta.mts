@@ -19,6 +19,18 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
  * @summary RocfUsertoProviderPdu
  * @description
  * 
+ * SLE-PDU the ROCF provider can receive. The user sends START, STOP,
+ * SCHEDULE-STATUS-REPORT, and GET-PARAMETER. BIND, UNBIND, and PEER-ABORT are
+ * carried here when the user is the invoker: the initiator sends BIND and
+ * UNBIND, and either peer may send PEER-ABORT. BIND is valid only in state 1
+ * (unbound). START is valid only in state 2 (ready). STOP is valid only in
+ * state 3 (active). SCHEDULE-STATUS-REPORT and GET-PARAMETER are valid in
+ * states 2 and 3. An operation that the current state forbids makes the
+ * performer peer-abort with protocol error.
+ *
+ * CCSDS 911.5-B-4, sections 2.6.4.2, 3.2.1, 3.4.1, 3.5.1, 3.8.1, 3.10.1,
+ * 3.11.1, 4.1.1, and annex A2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

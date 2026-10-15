@@ -21,6 +21,14 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary FspGetParameter_parTrFrSeqNumber
  * @description
  * 
+ * transmitter-frame-sequence-number: after a transmission mode capability
+ * change, Transmitter_Frame_Sequence_Number, V(S), holds the Frame Sequence
+ * Number, N(S), placed in the Transfer Frame Primary Header of the next Type-AD
+ * frame. The value is an integer from 0 to 255 (annex A2.5). Service management
+ * sets it. FSP-INVOKE-DIRECTIVE may also set it (table 3-1).
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +44,20 @@ export
 class FspGetParameter_parTrFrSeqNumber {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `transmitterFrameSequenceNumber`, selecting
+     * transmitter-frame-sequence-number in table 3-11. CCSDS 912.3-B-3, section
+     * 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * V(S): the N(S) for the next Type-AD Transfer Frame Primary Header after a
+     * transmission mode capability change. Integer from 0 to 255. CCSDS
+     * 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

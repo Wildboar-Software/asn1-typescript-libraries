@@ -19,6 +19,11 @@ import { integerInRange, integerIsOneOf } from "../../constraints.mjs";
  * @summary MasterChannelComposition
  * @description
  * 
+ * One spacecraft and transfer-frame version in the permitted global-VCID set,
+ * together with either that Master Channel or a list of its Virtual Channels.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.7 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,18 +52,38 @@ export
 class MasterChannelComposition {
     /**
      * @summary `spacecraftId`.
+     * @description
+     * 
+     * Spacecraft identifier of this Master Channel. The annex A comment limits
+     * TM to 0..1023, AOS to 0..255, and USLP to 0..65535.
+     *
+     * CCSDS 911.5-B-4, section 3.4.2.7.3 and annex A2.5.
      * @public
      * @readonly
      */
     readonly spacecraftId: INTEGER;
     /**
      * @summary `versionNumber`.
+     * @description
+     * 
+     * Transfer Frame Version Number for this Master Channel. 0 is TM version 1,
+     * 1 is AOS version 2, and 12 is USLP version 4.
+     *
+     * CCSDS 911.5-B-4, section 3.4.2.7.2 and annex A2.5.
      * @public
      * @readonly
      */
     readonly versionNumber: INTEGER;
     /**
      * @summary `mcOrVcList`.
+     * @description
+     * 
+     * masterChannel permits that Master Channel as an OCF source. vcList
+     * permits those Virtual Channels. When the permitted set contains a Master
+     * Channel and no Virtual Channel from it, the user cannot request one of
+     * its Virtual Channels.
+     *
+     * CCSDS 911.5-B-4, section 3.4.2.7.1 and annex A2.5.
      * @public
      * @readonly
      */

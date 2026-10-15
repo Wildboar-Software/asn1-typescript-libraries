@@ -12,6 +12,11 @@ import { CltuLastOk_cltuOk, _decode_CltuLastOk_cltuOk, _encode_CltuLastOk_cltuOk
  * @summary CltuLastOk
  * @description
  * 
+ * cltu-last-OK. noCltuOk is the section 3 value null: no CLTU has been radiated
+ * completely during this service instance, and radiation-stop-time is absent.
+ * cltuOk identifies the CLTU most recently radiated completely and carries
+ * radiation-stop-time. CCSDS 912.1-B-5, sections 3.7.2.6 and 3.9.2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

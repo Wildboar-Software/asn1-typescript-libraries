@@ -14,6 +14,12 @@ import { RafParameterName, _decode_RafParameterName, _encode_RafParameterName } 
  * @summary RafGetParameterInvocation
  * @description
  * 
+ * User invocation of RAF-GET-PARAMETER. Valid in state 2 (ready) and state 3
+ * (active). On success the return carries the current value of the named
+ * parameter. The provider state stays unchanged.
+ * 
+ * CCSDS 911.1-B-5, sections 3.10 and 3.10.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +36,38 @@ export
 class RafGetParameterInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the provider authenticates this invocation. When
+     * the agreed level is `all`, every RAF invocation and return except
+     * RAF-PEER-ABORT is authenticated; `bind` authenticates only RAF-BIND;
+     * `none` leaves every invocation and return unauthenticated. When
+     * this invocation is unauthenticated, the value should be `unused`.
+     * CCSDS 911.1-B-5, sections
+     * 3.10.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. A value that still has an outstanding return in the same
+     * service instance is rejected with diagnostic `duplicate Invoke-ID`. CCSDS
+     * 911.1-B-5, sections 3.10.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `rafParameter`.
+     * @description
+     * Which RAF parameter to return. The permitted names are the
+     * `RafParameterName` subset in table 3-11. A name the provider does not
+     * recognize yields diagnostic `unknownParameter`. On a negative result the
+     * name is omitted from the return.
+     * 
+     * CCSDS 911.1-B-5, sections 3.10.2.5 and 3.10.2.8.
      * @public
      * @readonly
      */

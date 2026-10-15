@@ -17,6 +17,16 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary CltuThrowEventInvocation
  * @description
  * 
+ * User request that the provider forward an event to SLE Complex Management.
+ * Valid in state 2 (ready) and state 3 (active). Confirmed and non-blocking.
+ * The return reports only whether the invocation was accepted. Completion of
+ * the actions is reported later by CLTU-ASYNC-NOTIFY. The operation is optional
+ * (Annex C). The event is asynchronous with CLTU radiation; the user aligns it
+ * with a particular CLTU when that is required. While the provider processes an
+ * accepted event it may reject CLTU-TRANSFER-DATA with diagnostic unable to
+ * process, without a fault notification. CCSDS 912.1-B-5, sections 3.11 and
+ * 3.6.2.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +45,65 @@ export
 class CltuThrowEventInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the performer authenticate this invocation when the
+     * agreed authentication level requires it. Set this to unused when
+     * authentication is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Invoker-supplied integer. The performer returns it unchanged so the
+     * return can be matched to this invocation. Reusing a value that still has
+     * a return outstanding is rejected with diagnostic duplicate invoke id.
+     * CCSDS 912.1-B-5, section 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `eventInvocationIdentification`.
+     * @description
+     *
+     * Monotonic sequence number for this event. Zero on the first
+     * CLTU-THROW-EVENT after the first successful CLTU-BIND to the service
+     * instance, then one greater for each invocation the provider accepts. The
+     * next invocation uses the value returned by the provider. Releasing or
+     * aborting the association leaves the expected value unchanged. A mismatch
+     * with the expected value yields diagnostic out of sequence. CCSDS
+     * 912.1-B-5, section 3.11.2.5.
      * @public
      * @readonly
      */
     readonly eventInvocationIdentification: EventInvocationId;
     /**
      * @summary `eventIdentifier`.
+     * @description
+     *
+     * Identifies the event to forward to SLE Complex Management. The set of
+     * identifiers is agreed by service management; this book does not enumerate
+     * them. An example is a bit-rate change, thrown after the spacecraft has
+     * been commanded to the new rate. An identifier outside the recognized set
+     * yields diagnostic no such event. CCSDS 912.1-B-5, sections 3.11.1 and
+     * 3.11.2.6.
      * @public
      * @readonly
      */
     readonly eventIdentifier: IntPosShort;
     /**
      * @summary `eventQualifier`.
+     * @description
+     *
+     * Additional data forwarded with event-identifier, 1 to 1024 octets. Its
+     * meaning depends on the event; for a bit-rate change it may carry the new
+     * rate. The provider checks only the octet string and the length. Complex
+     * Management checks the contents and, on error, reports action list not
+     * completed. CCSDS 912.1-B-5, sections 3.11.2.7 and 3.11.3.
      * @public
      * @readonly
      */

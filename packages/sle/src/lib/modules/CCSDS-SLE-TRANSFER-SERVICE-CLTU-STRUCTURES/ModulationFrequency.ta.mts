@@ -10,6 +10,10 @@ import { IntPosLong, _decode_IntPosLong, _encode_IntPosLong } from "../CCSDS-SLE
  * @summary ModulationFrequency
  * @description
  * 
+ * Subcarrier frequency, or the frequency of direct-on-carrier data modulation,
+ * in tenths of a hertz. Set by service management as modulation-frequency.
+ * CCSDS 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,16 @@ import { Notification, _decode_Notification, _encode_Notification } from "../CCS
  * @summary RafSyncNotifyInvocation
  * @description
  * 
+ * Unconfirmed provider notification of an event that changes or disrupts the
+ * frames being delivered. Valid only in state 3 (active). The provider inserts
+ * it in the transfer buffer after the last frame acquired before the event and
+ * before the first frame acquired after it, so its order against
+ * RAF-TRANSFER-DATA follows Earth Receive Time. In complete online mode the
+ * same record is stored in the online frame buffer. Offline delivery carries
+ * only the end-of-data notification.
+ * 
+ * CCSDS 911.1-B-5, sections 3.7, 3.1.9, and 3.1.9.3.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +37,25 @@ export
 class RafSyncNotifyInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the user authenticates this invocation. When the
+     * agreed level is `all`, every RAF invocation and return except
+     * RAF-PEER-ABORT is authenticated; `bind` authenticates only RAF-BIND;
+     * `none` leaves every invocation and return unauthenticated. When
+     * this invocation is unauthenticated, the value should be `unused`.
+     * CCSDS 911.1-B-5, sections
+     * 3.7.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `notification`.
+     * @description
+     * The event, and the value that event carries. Loss of frame
+     * synchronization and a production-status change carry a value. Data
+     * discarded because of backlog, and end of data, carry none. CCSDS
+     * 911.1-B-5, sections 3.7.2.3 and 3.7.2.4.
      * @public
      * @readonly
      */

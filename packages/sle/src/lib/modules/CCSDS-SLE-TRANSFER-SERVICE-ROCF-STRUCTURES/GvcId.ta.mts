@@ -19,6 +19,17 @@ import { integerInRange, integerIsOneOf } from "../../constraints.mjs";
  * @summary GvcId
  * @description
  * 
+ * Global virtual channel identifier of the telemetry Master Channel or Virtual
+ * Channel that supplies OCFs. It carries the transfer frame version, the
+ * spacecraft identifier, and either the Master Channel or one Virtual Channel.
+ * SCID and VCID are defined by the version: TM in reference [3], AOS in
+ * reference [6], USLP in reference [10]. The physical channel is the RAF data
+ * channel of the service package. At publication the valid version numbers
+ * were binary 00 (TM version 1), binary 01 (AOS version 2), and binary 1100
+ * (USLP version 4).
+ *
+ * CCSDS 911.5-B-4, sections 1.6.1.9.8, 1.6.1.9.20, and 3.4.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +55,40 @@ export
 class GvcId {
     /**
      * @summary `spacecraftId`.
+     * @description
+     * 
+     * Spacecraft identifier of the Master Channel. It must be a CCSDS SCID for
+     * the transfer frame version. The annex A comment limits TM to 0..1023, AOS
+     * to 0..255, and USLP to 0..65535. The INTEGER itself allows 0..65535.
+     *
+     * CCSDS 911.5-B-4, section 3.4.2.7.3 and annex A2.5.
      * @public
      * @readonly
      */
     readonly spacecraftId: INTEGER;
     /**
      * @summary `versionNumber`.
+     * @description
+     * 
+     * Transfer Frame Version Number. 0 is TM version 1 (binary 00). 1 is AOS
+     * version 2 (binary 01). 12 is USLP version 4 (binary 1100). Section
+     * 3.4.2.7.2 requires a valid CCSDS TFVN and, at publication, lists those
+     * three.
+     *
+     * CCSDS 911.5-B-4, sections 1.6.1.9.18 and 3.4.2.7.2.
      * @public
      * @readonly
      */
     readonly versionNumber: INTEGER;
     /**
      * @summary `vcId`.
+     * @description
+     * 
+     * masterChannel selects the Master Channel identified by the version and
+     * spacecraft identifier. That is the VCID value 'any' in section 3.4.2.7.4.
+     * virtualChannel selects that Virtual Channel.
+     *
+     * CCSDS 911.5-B-4, section 3.4.2.7.4.
      * @public
      * @readonly
      */

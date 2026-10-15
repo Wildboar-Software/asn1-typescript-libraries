@@ -17,6 +17,12 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary RocfGetParameter_parBufferSize
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the transfer-buffer size. Table
+ * 3-11 calls this parameter transfer-buffer-size. Annex A names it bufferSize.
+ * Service management sets it.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and section 3.1.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +40,25 @@ export
 class RocfGetParameter_parBufferSize {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to bufferSize, the annex A name of transfer-buffer-size. CCSDS
+     * 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Number of ROCF-TRANSFER-DATA and ROCF-SYNC-NOTIFY records the transfer
+     * buffer can hold. The buffer is released when it fills, when the
+     * latency-limit release timer expires, when end of data is inserted, or
+     * when ROCF-STOP is accepted. Annex C requires a transfer buffer large
+     * enough for at least 200 ROCF-TRANSFER-DATA invocations.
+     *
+     * CCSDS 911.5-B-4, table 3-11, section 3.1.9, and table C-2.
      * @public
      * @readonly
      */

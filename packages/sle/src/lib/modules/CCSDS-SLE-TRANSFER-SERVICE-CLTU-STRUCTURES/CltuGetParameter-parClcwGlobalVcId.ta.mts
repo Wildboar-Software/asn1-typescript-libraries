@@ -17,6 +17,11 @@ import { ClcwGvcId, _decode_ClcwGvcId, _encode_ClcwGvcId } from "../CCSDS-SLE-TR
  * @summary CltuGetParameter_parClcwGlobalVcId
  * @description
  * 
+ * clcw-global-VCID. Identifies the Master Channel or Virtual Channel whose CLCW
+ * supplies forward-link RF and bit-lock status. notConfigured means this
+ * service instance does not evaluate the CLCW. Set by service management. CCSDS
+ * 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +37,20 @@ export
 class CltuGetParameter_parClcwGlobalVcId {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `clcwGlobalVcId`. Names the clcw-global-VCID parameter requested
+     * by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * The GVCID to monitor, or notConfigured when the CLCW is not evaluated.
+     * CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

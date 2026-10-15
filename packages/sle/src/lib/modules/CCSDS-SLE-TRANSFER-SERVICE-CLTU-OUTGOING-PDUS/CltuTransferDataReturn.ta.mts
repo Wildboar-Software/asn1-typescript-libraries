@@ -16,6 +16,11 @@ import { CltuTransferDataReturn_result, _decode_CltuTransferDataReturn_result, _
  * @summary CltuTransferDataReturn
  * @description
  * 
+ * Provider report of CLTU-TRANSFER-DATA. The provider state stays active.
+ * cltu-identification in the return is the value expected on the next
+ * invocation, on both success and failure. cltu-buffer-available is always
+ * present. CCSDS 912.1-B-5, section 3.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,30 +42,56 @@ export
 class CltuTransferDataReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     *
+     * Credentials that let the invoker authenticate this return when the agreed
+     * authentication level requires it. Set this to unused when authentication
+     * is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * The invoke-ID from the invocation, returned unchanged. CCSDS 912.1-B-5,
+     * sections 3.6.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `cltuIdentification`.
+     * @description
+     *
+     * cltu-identification expected on the next CLTU-TRANSFER-DATA. After a
+     * positive result this is one greater than the value in the invocation.
+     * After a negative result it is the value the provider still expects: the
+     * START first-cltu-identification for the first CLTU, otherwise one greater
+     * than the last accepted CLTU. CCSDS 912.1-B-5, section 3.6.2.5.
      * @public
      * @readonly
      */
     readonly cltuIdentification: CltuIdentification;
     /**
      * @summary `cltuBufferAvailable`.
+     * @description
+     *
+     * Octets still available for complete CLTUs. A small extra buffer at the
+     * modulator input, used to avoid underflow, is part of production and is
+     * omitted from this count. CCSDS 912.1-B-5, section 3.6.2.11.
      * @public
      * @readonly
      */
     readonly cltuBufferAvailable: BufferSize;
     /**
      * @summary `result`.
+     * @description
+     *
+     * positiveResult accepts the CLTU into the buffer. negativeResult carries
+     * DiagnosticCltuTransferData and the CLTU is discarded. CCSDS 912.1-B-5,
+     * sections 3.6.2.12 and 3.6.3.
      * @public
      * @readonly
      */

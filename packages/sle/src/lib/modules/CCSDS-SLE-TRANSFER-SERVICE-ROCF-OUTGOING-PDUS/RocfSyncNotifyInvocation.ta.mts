@@ -12,6 +12,15 @@ import { Notification, _decode_Notification, _encode_Notification } from "../CCS
  * @summary RocfSyncNotifyInvocation
  * @description
  * 
+ * Provider notification of an event that changes or interrupts the OCFs being
+ * delivered. Unconfirmed, provider-only, and valid only in state 3 (active).
+ * The notification is ordered with ROCF-TRANSFER-DATA so that it falls between
+ * the OCFs acquired before the event and those acquired after it. Offline
+ * delivery carries only the end-of-data notification. The provider state stays
+ * unchanged.
+ *
+ * CCSDS 911.5-B-4, sections 3.7 and 3.1.9.3.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +36,26 @@ export
 class RocfSyncNotifyInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * 
+     * Credentials the user uses to authenticate this provider invocation. When
+     * the agreed authentication level does not cover the invocation, the value
+     * is unused. The octet layout is the bilaterally agreed algorithm, which
+     * this specification leaves unspecified. CCSDS 911.5-B-4, sections 3.1.5
+     * and 3.7.2.2.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `notification`.
+     * @description
+     * 
+     * The event and, where section 3.7.2.4 requires one, its value. Loss of
+     * frame synchronization and a production-status change carry a value. Data
+     * discarded due to excessive backlog and end of data carry none.
+     *
+     * CCSDS 911.5-B-4, sections 3.7.2.3 and 3.7.2.4.
      * @public
      * @readonly
      */

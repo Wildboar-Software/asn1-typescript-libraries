@@ -16,7 +16,16 @@ import { TimeoutPeriod, _decode_TimeoutPeriod, _encode_TimeoutPeriod } from "../
 /**
  * @summary RcfGetParameter_parReturnTimeout
  * @description
- * 
+ *
+ * Returned value of return-timeout-period, in seconds. The maximum time from
+ * invocation of a confirmed RCF operation until the invoker receives the
+ * return. If the return is still missing when the period expires, the invoker
+ * aborts the association with RCF-PEER-ABORT diagnostic return timeout.
+ * Service management sets the period. The return itself must be generated
+ * without human interaction. Annex A bounds the value by 1 to 600 seconds.
+ *
+ * CCSDS 911.2-B-4, section 4.1.3 and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +41,22 @@ export
 class RcfGetParameter_parReturnTimeout {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Identifies this value as return-timeout-period (returnTimeoutPeriod).
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Return timeout, in seconds, for confirmed RCF operations.
+     *
+     * CCSDS 911.2-B-4, section 4.1.3 and table 3-11.
      * @public
      * @readonly
      */
@@ -58,7 +77,8 @@ class RcfGetParameter_parReturnTimeout {
      * @summary Restructures an object into a RcfGetParameter_parReturnTimeout
      * @description
      * 
-     * This takes an `object` and converts it to a `RcfGetParameter_parReturnTimeout`.
+     * This takes an `object` and converts it to a
+     * `RcfGetParameter_parReturnTimeout`.
      * 
      * @public
      * @static
@@ -77,7 +97,8 @@ class RcfGetParameter_parReturnTimeout {
  * @summary The Leading Root Component Types of RcfGetParameter_parReturnTimeout
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -91,7 +112,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameter_parReturnTimeout: $.C
  * @summary The Trailing Root Component Types of RcfGetParameter_parReturnTimeout
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -104,7 +126,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameter_parReturnTimeout: $.C
  * @summary The Extension Addition Component Types of RcfGetParameter_parReturnTimeout
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

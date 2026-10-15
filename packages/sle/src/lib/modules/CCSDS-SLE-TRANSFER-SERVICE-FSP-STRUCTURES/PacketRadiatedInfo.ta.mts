@@ -17,6 +17,11 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary PacketRadiatedInfo
  * @description
  * 
+ * Identification and frame sequence number reported with a `packetRadiated`
+ * notification.
+ * 
+ * CCSDS 912.3-B-3, sections 3.7.2.3 and 3.7.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +37,29 @@ export
 class PacketRadiatedInfo {
     /**
      * @summary `packetIdentificationList`.
+     * @description
+     * The radiated Packet. For this notification the list contains a single
+     * identification.
+     * 
+     * CCSDS 912.3-B-3, sections 3.7.2.3 and 3.7.2.6.
      * @public
      * @readonly
      */
     readonly packetIdentificationList: PacketIdentificationList;
     /**
      * @summary `frameSequenceNumber`.
+     * @description
+     * Frame Sequence Number from the Primary Transfer Frame Header of the TC
+     * Transfer Frame that radiated the Packet. If the Packet was segmented,
+     * this is the number of the frame that carried the last segment. Annex A
+     * constrains it to 0 through 255. During nominal operations the Mission
+     * Data Operations System does not need this number. If telemetry is lost
+     * and a later FSP provider must resume commanding, the Mission Data
+     * Operations System can compare this number with that provider's
+     * transmitter frame sequence number and decide which Packets arrived on
+     * board.
+     * 
+     * CCSDS 912.3-B-3, section 3.7.2.8.
      * @public
      * @readonly
      */

@@ -17,6 +17,21 @@ import { CurrentReportingCycle, _decode_CurrentReportingCycle, _encode_CurrentRe
  * @summary FspGetParameter_parReportingCycle
  * @description
  * 
+ * reporting-cycle: the current interval between status reports. When cyclic
+ * reporting is off, the value is null. When cyclic reporting is on, the value
+ * is the time in seconds between successive FSP-STATUS-REPORT invocations
+ * (sections 3.8 and 3.9).
+ * 
+ * Until a successful FSP-SCHEDULE-STATUS-REPORT sets the cycle, the value is
+ * null. Periodic reporting is inactive after FSP-BIND (section 3.8.1.3). For a
+ * periodic request, the interval is present and is expressed in seconds
+ * (section 3.8.2.6).
+ * 
+ * Annex A2.5: `cyclicReportOff` is null; `cyclicReportOn` is `ReportingCycle`,
+ * 2 to 600 seconds (annex A2.3).
+ * 
+ * CCSDS 912.3-B-3, table 3-11, sections 3.8 and 3.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +47,19 @@ export
 class FspGetParameter_parReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `reportingCycle`, selecting reporting-cycle in table 3-11. CCSDS
+     * 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Null while cyclic reporting is off. Otherwise, seconds between
+     * FSP-STATUS-REPORT invocations, from 2 to 600. CCSDS 912.3-B-3, table
+     * 3-11, section 3.8, and annex A2.3.
      * @public
      * @readonly
      */

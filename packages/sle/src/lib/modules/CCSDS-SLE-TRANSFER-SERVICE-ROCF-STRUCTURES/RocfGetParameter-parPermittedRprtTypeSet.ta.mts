@@ -17,6 +17,12 @@ import { ControlWordTypeNumber, _decode_ControlWordTypeNumber, _encode_ControlWo
  * @summary RocfGetParameter_parPermittedRprtTypeSet
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the permitted control-word-type
+ * set. Service management sets which of all control words, CLCW, and control
+ * word type 1 this instance may deliver. ROCF-START must select a member.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.8 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,22 @@ export
 class RocfGetParameter_parPermittedRprtTypeSet {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to permittedControlWordTypeSet. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Control word types the user may request. Each element is all control
+     * words, CLCW (control word type 0), or control word type 1, the setting
+     * used to obtain Frame Security Reports.
+     *
+     * CCSDS 911.5-B-4, section 3.4.2.8 and table 3-11.
      * @public
      * @readonly
      */

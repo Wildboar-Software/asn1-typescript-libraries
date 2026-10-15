@@ -17,6 +17,12 @@ import { Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANS
  * @summary CltuGetParameter_parMinimumDelayTime
  * @description
  * 
+ * minimum-delay-time: the smallest delay-time the provider accepts between
+ * consecutive CLTUs. delay-time is specified in microseconds (section
+ * 3.6.2.8.1), and a CLTU-TRANSFER-DATA whose delay-time is below this floor is
+ * rejected with diagnostic invalid delay time. Set by service management. CCSDS
+ * 912.1-B-5, table 3-11 and section 3.6.2.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,21 @@ export
 class CltuGetParameter_parMinimumDelayTime {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `minimumDelayTime`. Names the minimum-delay-time parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Floor applied to delay-time. A smaller delay-time is diagnostic invalid
+     * delay time. CCSDS 912.1-B-5, sections 3.6.2.8 and 3.6.2.13.
      * @public
      * @readonly
      */

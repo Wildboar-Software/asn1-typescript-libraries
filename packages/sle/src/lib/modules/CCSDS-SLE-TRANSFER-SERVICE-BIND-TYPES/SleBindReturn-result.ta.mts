@@ -12,6 +12,14 @@ import { BindDiagnostic, _decode_BindDiagnostic, _encode_BindDiagnostic } from "
  * @summary SleBindReturn_result
  * @description
  * 
+ * Outcome of BIND. `positive` carries the version that governs the association:
+ * the version the initiator proposed, or a lower version when the responder
+ * negotiates. `negative` carries the `BindDiagnostic`. The version is absent
+ * when the result is negative, and the diagnostic is absent when the result is
+ * positive.
+ * 
+ * CCSDS 911.1-B-5, sections 3.2.2.8 and 3.2.2.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

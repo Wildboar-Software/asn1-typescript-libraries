@@ -10,6 +10,11 @@ import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit
  * @summary CltuData
  * @description
  * 
+ * One CLTU handed to the provider for radiation on the forward physical
+ * channel. The provider buffers complete CLTUs only. Embedded TC frames may
+ * already carry Space Data Link Security protection; that protection is
+ * transparent to this service. CCSDS 912.1-B-5, sections 3.6.2.10 and 3.1.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

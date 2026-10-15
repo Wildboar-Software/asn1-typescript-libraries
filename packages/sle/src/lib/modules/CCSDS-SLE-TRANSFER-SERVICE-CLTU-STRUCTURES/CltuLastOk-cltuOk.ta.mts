@@ -13,6 +13,10 @@ import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary CltuLastOk_cltuOk
  * @description
  * 
+ * Identity and completion time of the CLTU most recently radiated completely.
+ * Used when cltu-last-OK is not null. CCSDS 912.1-B-5, sections 3.7.2.6 and
+ * 3.9.2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +32,21 @@ export
 class CltuLastOk_cltuOk {
     /**
      * @summary `cltuIdentification`.
+     * @description
+     *
+     * cltu-identification of the CLTU that most recently completed radiation.
+     * CCSDS 912.1-B-5, sections 3.7.2.6 and 3.9.2.4.
      * @public
      * @readonly
      */
     readonly cltuIdentification: CltuIdentification;
     /**
      * @summary `radiationStopTime`.
+     * @description
+     *
+     * Time of the trailing edge of the last radiated bit of that CLTU. UTC CDS,
+     * epoch 1958-01-01, to at least 0.1 s. CCSDS 912.1-B-5, sections 3.7.2.9,
+     * 3.9.2.7, and 3.1.7.
      * @public
      * @readonly
      */

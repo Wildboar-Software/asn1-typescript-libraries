@@ -17,6 +17,12 @@ import { TimeoutPeriod, _decode_TimeoutPeriod, _encode_TimeoutPeriod } from "../
  * @summary RafGetParameter_parReturnTimeout
  * @description
  * 
+ * RAF-GET-PARAMETER value of `return-timeout-period`: the maximum seconds from
+ * a confirmed RAF invocation until the return arrives. Service management sets
+ * it. Expiry causes RAF-PEER-ABORT with diagnostic `return timeout`.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 4.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,18 @@ export
 class RafGetParameter_parReturnTimeout {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `returnTimeoutPeriod`, selecting return-timeout-period in table
+     * 3-11. CCSDS 911.1-B-5, annex A2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Return timeout in seconds, from 1 to 600. CCSDS 911.1-B-5, table 3-11 and
+     * annex A2.5.
      * @public
      * @readonly
      */

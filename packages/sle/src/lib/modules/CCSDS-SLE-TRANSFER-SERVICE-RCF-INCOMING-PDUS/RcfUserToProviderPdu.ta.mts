@@ -18,7 +18,42 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
 /**
  * @summary RcfUserToProviderPdu
  * @description
- * 
+ *
+ * One SLE-PDU received by the RCF provider. An operation is legal only in the
+ * provider state named below; an operation outside that state makes the
+ * performer abort the association with diagnostic protocol error.
+ *
+ * rcfBindInvocation: the user invokes RCF-BIND. Legal only in state 1
+ * (unbound). On a user-initiated instance only the user may bind.
+ *
+ * rcfBindReturn: the user reports the outcome of a provider-initiated
+ * RCF-BIND.
+ *
+ * rcfUnbindInvocation: the association initiator asks to release the
+ * association.
+ *
+ * rcfUnbindReturn: the responder reports the outcome of RCF-UNBIND.
+ *
+ * rcfStartInvocation: the user, in state 2 (ready), asks the provider to start
+ * delivering frames.
+ *
+ * rcfStopInvocation: the user, in state 3 (active), asks the provider to stop
+ * delivering frames.
+ *
+ * rcfScheduleStatusReportInvocation: the user, in state 2 or 3, asks for one
+ * status report, for periodic reports, or for periodic reporting to stop. The
+ * provider rejects the operation when the instance is configured for offline
+ * delivery.
+ *
+ * rcfGetParameterInvocation: the user, in state 2 or 3, asks for the current
+ * value of one RCF parameter.
+ *
+ * rcfPeerAbortInvocation: the user aborts the association in state 2 or 3. The
+ * operation is unconfirmed and carries no credentials.
+ *
+ * CCSDS 911.2-B-4, sections 2.6.4.2, 3.2, 3.4, 3.5, 3.8, 3.10, 3.11, and
+ * 4.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

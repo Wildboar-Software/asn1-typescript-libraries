@@ -10,6 +10,13 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary EventInvocationId
  * @description
  * 
+ * Monotonic sequence number for CLTU-THROW-EVENT. Zero for the first accepted
+ * event after the first successful CLTU-BIND, then incremented for each
+ * accepted invocation. The provider returns the next expected value, and the
+ * user copies that value into the next invocation. The expected value is kept
+ * across release and abort, and the provider uses it to name the event in later
+ * CLTU-ASYNC-NOTIFY reports. CCSDS 912.1-B-5, section 3.11.2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

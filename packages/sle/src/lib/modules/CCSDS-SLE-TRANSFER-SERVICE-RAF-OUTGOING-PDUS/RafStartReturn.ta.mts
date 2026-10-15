@@ -14,6 +14,15 @@ import { RafStartReturn_result, _decode_RafStartReturn_result, _encode_RafStartR
  * @summary RafStartReturn
  * @description
  * 
+ * Return from RAF-START. A positive result means the provider has entered state
+ * 3 (active) and will invoke RAF-TRANSFER-DATA for frames that meet the
+ * delivery criteria. A negative result leaves the provider in state 2 and
+ * delivers no frames. On `unableToComply` the user may retry within the
+ * provision period; if management judges the fault more than transient, the
+ * provider may invoke RAF-PEER-ABORT.
+ * 
+ * CCSDS 911.1-B-5, sections 3.4.2.8 and 3.4.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +42,33 @@ export
 class RafStartReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * Information with which the user authenticates this return. When the
+     * agreed level is `all`, every RAF invocation and return except
+     * RAF-PEER-ABORT is authenticated; `bind` authenticates only RAF-BIND;
+     * `none` leaves every invocation and return unauthenticated. When
+     * this return is unauthenticated, the value should be `unused`.
+     * CCSDS 911.1-B-5, sections 3.4.2.3 and
+     * 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * The `invoke-ID` from the RAF-START invocation, unchanged. CCSDS
+     * 911.1-B-5, section 3.4.2.4.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * Outcome of RAF-START. `positiveResult` is empty and carries no
+     * diagnostic. `negativeResult` is a `DiagnosticRafStart`. CCSDS 911.1-B-5,
+     * sections 3.4.2.8 and 3.4.2.9.
      * @public
      * @readonly
      */

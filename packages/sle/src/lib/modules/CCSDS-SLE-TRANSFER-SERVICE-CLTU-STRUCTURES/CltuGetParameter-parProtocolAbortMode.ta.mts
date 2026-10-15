@@ -17,6 +17,13 @@ import { _decode_CltuGetParameter_parProtocolAbortMode_parameterValue, _encode_C
  * @summary CltuGetParameter_parProtocolAbortMode
  * @description
  * 
+ * protocol-abort-mode: abort or continue. abort ceases service production on a
+ * protocol abort (table 3-11). continue keeps radiating CLTUs already buffered
+ * (section 4.1.5.3). Section 4.1.5.3 and Annex C also use the name flush for
+ * the discard behavior; Annex A does not define flush. Set by service
+ * management. Optional, and the default when it is absent is the flush behavior
+ * in Annex C. CCSDS 912.1-B-5, table 3-11, section 4.1.5, and Annex C.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +42,21 @@ export
 class CltuGetParameter_parProtocolAbortMode {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `protocolAbortMode`. Names the protocol-abort-mode parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * abort (0) or continue (1). See section 4.1.5.3 for the buffer after a
+     * protocol abort. CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

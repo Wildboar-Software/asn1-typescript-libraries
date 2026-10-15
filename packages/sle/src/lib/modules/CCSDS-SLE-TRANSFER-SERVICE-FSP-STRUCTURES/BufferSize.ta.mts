@@ -15,6 +15,16 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary BufferSize
  * @description
  * 
+ * Octet count used for the packet-buffer-available return of FSP-TRANSFER-DATA.
+ * Annex A constrains it to 7 through 66560 and comments that the minimum
+ * Telecommand size is 7 octets and the maximum is 64K octets plus overhead.
+ * Section 3.6.2.16 defines the parameter as the remaining octets in the request
+ * queue and does not restate that range. The provider buffers only complete
+ * Space Packets. The service package specifies how much buffering the provider
+ * maintains, in octets.
+ * 
+ * CCSDS 912.3-B-3, annex A2.5, sections 3.6.2.16 and 3.1.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,13 @@ import { DiagnosticRocfStart, _decode_DiagnosticRocfStart, _encode_DiagnosticRoc
  * @summary RocfStartReturn_result
  * @description
  * 
+ * Outcome of ROCF-START. positiveResult means the provider is in state 3
+ * (active) and will deliver matching OCFs; the alternative carries no
+ * diagnostic. negativeResult means the provider did not start delivery; the
+ * diagnostic is DiagnosticRocfStart.
+ *
+ * CCSDS 911.5-B-4, sections 3.4.2.11 and 3.4.2.12.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

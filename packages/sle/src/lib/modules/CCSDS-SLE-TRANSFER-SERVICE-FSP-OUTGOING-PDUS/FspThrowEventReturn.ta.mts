@@ -15,6 +15,14 @@ import { FspThrowEventReturn_result, _decode_FspThrowEventReturn_result, _encode
  * @summary FspThrowEventReturn
  * @description
  * 
+ * Provider return from FSP-THROW-EVENT. A positive result means the event and
+ * its qualifier will be forwarded to Complex Management. A negative result
+ * means they will not. The return does not report whether the actions
+ * completed; that arrives by FSP-ASYNC-NOTIFY. The provider remains in state 2
+ * or state 3.
+ * 
+ * CCSDS 912.3-B-3, sections 3.11.1.3, 3.11.2.8, and 3.11.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +43,53 @@ export
 class FspThrowEventReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * Information with which the invoker authenticates this return. When the
+     * agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated. When this return is unauthenticated, the
+     * value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. An invoke-ID that still has an outstanding return in the
+     * same service instance is rejected with `duplicateInvokeId`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.6.4 and 3.1.6.5.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `eventInvokeId`.
+     * @description
+     * Event-invocation identification the provider expects on the next
+     * FSP-THROW-EVENT. If this invocation is accepted, the value is one greater
+     * than the identification in the invocation. If it is rejected, the value
+     * is the one the provider expected: 0 for the first throw-event after a
+     * successful FSP-BIND, otherwise one greater than the last accepted
+     * identification. The user copies this returned value into the next
+     * invocation.
+     * 
+     * CCSDS 912.3-B-3, section 3.11.2.7.
      * @public
      * @readonly
      */
     readonly eventInvokeId: IntUnsignedLong;
     /**
      * @summary `result`.
+     * @description
+     * Outcome of FSP-THROW-EVENT. `positiveResult` means the event will be
+     * forwarded. `negativeResult` means it will not and carries a
+     * `DiagnosticFspThrowEvent`.
+     * 
+     * CCSDS 912.3-B-3, section 3.11.2.8.
      * @public
      * @readonly
      */

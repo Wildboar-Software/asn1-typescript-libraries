@@ -17,6 +17,15 @@ import { RafGetParameter_parLatencyLimit_parameterValue, _decode_RafGetParameter
  * @summary RafGetParameter_parLatencyLimit
  * @description
  * 
+ * RAF-GET-PARAMETER value of `latency-limit`. When the provider inserts a
+ * record into an empty transfer buffer it starts the release timer; this
+ * parameter is that timer's duration. Service management sets it. Table 3-11
+ * also describes it as the maximum delay, in seconds, from acquisition of a
+ * frame until the RAF-TRANSFER-DATA PDU is delivered, and requires the offline
+ * alternative when the delivery mode is offline.
+ * 
+ * CCSDS 911.1-B-5, section 3.1.9.1.5 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +45,19 @@ export
 class RafGetParameter_parLatencyLimit {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `latencyLimit`, selecting latency-limit in table 3-11. CCSDS
+     * 911.1-B-5, annex A2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * `online` is the release-timer duration in seconds. `offline` is null and
+     * is the value when the delivery mode is offline. CCSDS 911.1-B-5, table
+     * 3-11 and section 3.1.9.1.5.
      * @public
      * @readonly
      */

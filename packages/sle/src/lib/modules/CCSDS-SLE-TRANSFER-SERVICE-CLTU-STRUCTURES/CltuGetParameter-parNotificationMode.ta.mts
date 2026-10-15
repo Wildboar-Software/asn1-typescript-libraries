@@ -17,6 +17,11 @@ import { _decode_CltuGetParameter_parNotificationMode_parameterValue, _encode_Cl
  * @summary CltuGetParameter_parNotificationMode
  * @description
  * 
+ * notification-mode: immediate or deferred notification of production-status
+ * changing to interrupted. Set by service management. Optional; its role is to
+ * record how the provider behaves (Annex C). CCSDS 912.1-B-5, table 3-11,
+ * section 3.7.2.3, and Annex C.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +44,22 @@ export
 class CltuGetParameter_parNotificationMode {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `notificationMode`. Names the notification-mode parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * deferred (0) waits until a CLTU's radiation is affected. immediate (1)
+     * reports the transition as soon as it is detected. CCSDS 912.1-B-5,
+     * section 3.7.2.3.
      * @public
      * @readonly
      */

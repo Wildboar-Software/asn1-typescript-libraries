@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagnosticFspInvokeDirective_specific
  * @description
  * 
+ * FSP-specific rejection codes for FSP-INVOKE-DIRECTIVE. Duplicate invoke-ID
+ * and other reason are carried in the `common` alternative.
+ * 
+ * CCSDS 912.3-B-3, section 3.12.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +30,12 @@ type DiagnosticFspInvokeDirective_specific = INTEGER;
 
 /**
  * @summary DiagnosticFspInvokeDirective_specific_directiveInvocationNotAllowed
+ * @description
+ * 
+ * FSP-INVOKE-DIRECTIVE is not enabled for this service instance. For one
+ * telecommand VC, at most one instance is configured to invoke it.
+ * 
+ * CCSDS 912.3-B-3, sections 3.12.2.8 and 3.12.1.2.
  * @constant
  * @type {number}
  */
@@ -33,6 +44,10 @@ const DiagnosticFspInvokeDirective_specific_directiveInvocationNotAllowed: Diagn
 
 /**
  * @summary DiagnosticFspInvokeDirective_specific_directiveInvocationNotAllowed
+ * @description
+ * 
+ * This instance is not enabled to invoke directives (CCSDS 912.3-B-3, section
+ * 3.12.2.8).
  * @constant
  * @type {number}
  */
@@ -41,6 +56,11 @@ const directiveInvocationNotAllowed: DiagnosticFspInvokeDirective_specific = Dia
 
 /**
  * @summary DiagnosticFspInvokeDirective_specific_directiveIdentificationOutOfSequence
+ * @description
+ * 
+ * The directive identification is not the value the provider expected.
+ * 
+ * CCSDS 912.3-B-3, sections 3.12.2.8 and 3.12.2.5.
  * @constant
  * @type {number}
  */
@@ -49,6 +69,10 @@ const DiagnosticFspInvokeDirective_specific_directiveIdentificationOutOfSequence
 
 /**
  * @summary DiagnosticFspInvokeDirective_specific_directiveIdentificationOutOfSequence
+ * @description
+ * 
+ * The directive identification is not the expected value (CCSDS 912.3-B-3,
+ * section 3.12.2.8).
  * @constant
  * @type {number}
  */
@@ -57,6 +81,12 @@ const directiveIdentificationOutOfSequence: DiagnosticFspInvokeDirective_specifi
 
 /**
  * @summary DiagnosticFspInvokeDirective_specific_directiveError
+ * @description
+ * 
+ * The provider found an error in the directive. The directive may be unknown,
+ * or the associated parameter may be in error, for example out of range.
+ * 
+ * CCSDS 912.3-B-3, section 3.12.2.8.
  * @constant
  * @type {number}
  */
@@ -65,6 +95,10 @@ const DiagnosticFspInvokeDirective_specific_directiveError: DiagnosticFspInvokeD
 
 /**
  * @summary DiagnosticFspInvokeDirective_specific_directiveError
+ * @description
+ * 
+ * The directive is unknown or its parameter is in error (CCSDS 912.3-B-3,
+ * section 3.12.2.8).
  * @constant
  * @type {number}
  */

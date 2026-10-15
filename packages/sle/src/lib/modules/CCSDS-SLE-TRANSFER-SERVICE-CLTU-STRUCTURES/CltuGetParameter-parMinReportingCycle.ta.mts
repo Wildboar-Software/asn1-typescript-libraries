@@ -21,6 +21,12 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary CltuGetParameter_parMinReportingCycle
  * @description
  * 
+ * minimum-reporting-cycle: the smallest reporting-cycle, in seconds, that the
+ * user may request in CLTU-SCHEDULE-STATUS-REPORT. Annex A constrains this
+ * parameter to 1 through 600. A requested cycle outside the range agreed by
+ * service management is rejected with diagnostic invalid reporting cycle. Set
+ * by service management. CCSDS 912.1-B-5, table 3-11 and section 3.8.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,21 @@ export
 class CltuGetParameter_parMinReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `minReportingCycle`. Names the minimum-reporting-cycle parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Minimum status-report interval in seconds, from 1 through 600. CCSDS
+     * 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

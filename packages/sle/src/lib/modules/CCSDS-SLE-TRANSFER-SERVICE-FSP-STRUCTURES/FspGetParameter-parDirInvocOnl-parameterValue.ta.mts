@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FspGetParameter_parDirInvocOnl_parameterValue
  * @description
  * 
+ * Whether a service instance permitted to invoke directives for this VC is
+ * online. yes is 0 and no is 1.
+ * 
+ * CCSDS 912.3-B-3, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +29,10 @@ type FspGetParameter_parDirInvocOnl_parameterValue = INTEGER;
 
 /**
  * @summary FspGetParameter_parDirInvocOnl_parameterValue_yes
+ * @description
+ *
+ * A service instance permitted to invoke directives for this VC is in state
+ * ready or active. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -32,6 +41,10 @@ const FspGetParameter_parDirInvocOnl_parameterValue_yes: FspGetParameter_parDirI
 
 /**
  * @summary FspGetParameter_parDirInvocOnl_parameterValue_yes
+ * @description
+ *
+ * The directive-capable instance for this VC is ready or active (CCSDS
+ * 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */
@@ -40,6 +53,10 @@ const yes: FspGetParameter_parDirInvocOnl_parameterValue = FspGetParameter_parDi
 
 /**
  * @summary FspGetParameter_parDirInvocOnl_parameterValue_no
+ * @description
+ *
+ * No service instance permitted to invoke directives exists for this VC, or
+ * that instance is unbound. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -48,6 +65,10 @@ const FspGetParameter_parDirInvocOnl_parameterValue_no: FspGetParameter_parDirIn
 
 /**
  * @summary FspGetParameter_parDirInvocOnl_parameterValue_no
+ * @description
+ *
+ * No directive-capable instance is online for this VC (CCSDS 912.3-B-3, table
+ * 3-11).
  * @constant
  * @type {number}
  */

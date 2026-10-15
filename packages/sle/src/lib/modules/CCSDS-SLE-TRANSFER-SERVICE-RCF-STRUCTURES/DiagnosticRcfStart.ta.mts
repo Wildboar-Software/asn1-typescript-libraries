@@ -11,7 +11,15 @@ import { _decode_DiagnosticRcfStart_specific, _encode_DiagnosticRcfStart_specifi
 /**
  * @summary DiagnosticRcfStart
  * @description
- * 
+ *
+ * Why RCF-START was rejected. Present only when the result is negative. The
+ * provider should test in the order listed in section 3.4.2.9 and return the
+ * first match. common carries the shared diagnostics duplicate Invoke-ID and
+ * other reason. specific carries the RCF-START diagnostics. 'other reason' is
+ * used only when no listed value fits.
+ *
+ * CCSDS 911.2-B-4, sections 3.4.2.9, 3.1.1.4, and 3.1.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

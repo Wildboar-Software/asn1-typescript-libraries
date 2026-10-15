@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FspGetParameter_parTimeoutType_parameterValue
  * @description
  * 
+ * FOP behavior on timeout: Alert or AD service suspension. `generateAlert` is 0
+ * and `suspendSequenceControlled` is 1. Section 3.10.2.5 does not further
+ * define either behavior.
+ * 
+ * CCSDS 912.3-B-3, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +30,10 @@ type FspGetParameter_parTimeoutType_parameterValue = INTEGER;
 
 /**
  * @summary FspGetParameter_parTimeoutType_parameterValue_generateAlert
+ * @description
+ *
+ * FOP timeout behavior Alert. Section 3.10.2.5 names Alert and does not define
+ * that behavior further. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -32,6 +42,9 @@ const FspGetParameter_parTimeoutType_parameterValue_generateAlert: FspGetParamet
 
 /**
  * @summary FspGetParameter_parTimeoutType_parameterValue_generateAlert
+ * @description
+ *
+ * FOP timeout behavior Alert (CCSDS 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */
@@ -40,6 +53,10 @@ const generateAlert: FspGetParameter_parTimeoutType_parameterValue = FspGetParam
 
 /**
  * @summary FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled
+ * @description
+ *
+ * FOP timeout behavior AD service suspension. Section 3.10.2.5 names that
+ * behavior and does not define it further. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -48,6 +65,9 @@ const FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled: F
 
 /**
  * @summary FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled
+ * @description
+ *
+ * FOP timeout behavior AD service suspension (CCSDS 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */

@@ -10,6 +10,15 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary PacketIdentification
  * @description
  * 
+ * Sequence number that identifies one Space Packet of a service instance. Annex
+ * A types it as an unsigned long integer, 0 through 4294967295. On
+ * FSP-TRANSFER-DATA it increases by one for each accepted invocation, starting
+ * at the FSP-START first-packet identification. The same number is reported in
+ * notifications and status for the last processed and last successfully
+ * processed Packets.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.5, 3.4.2.5, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

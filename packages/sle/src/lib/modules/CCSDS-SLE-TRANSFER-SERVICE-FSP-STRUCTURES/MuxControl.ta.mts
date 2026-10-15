@@ -14,6 +14,15 @@ import { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TR
  * @summary MuxControl
  * @description
  * 
+ * Multiplexing control reported for MAP multiplexing or VC multiplexing.
+ * `muxSchemeIsFifo` is empty and is used when the scheme is FIFO; table 3-11
+ * also reports null in that case, and for MAP control when MAPs are not used.
+ * `muxSchemeIsPriority` is the absolute-priority list, 1 to 64 entries.
+ * `muxSchemeIsVector` is the polling vector, 1 to 192 VC or MAP identifiers.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11), sections B2 through B4, and
+ * annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

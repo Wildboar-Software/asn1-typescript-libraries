@@ -13,6 +13,14 @@ import { FopAlert, _decode_FopAlert, _encode_FopAlert } from "../CCSDS-SLE-TRANS
  * @summary NegativeConfirmResponseToDirective
  * @description
  * 
+ * Failed directive and the FOP alert reported with a negative confirm response.
+ * Section 3.7.2.3 says this notification does not carry a parameter that gives
+ * the reason for the failure. The FOP alert is present because section 3.7.2.7
+ * requires it for this notification, and a separate transmission-mode
+ * capability change may explain the failure.
+ * 
+ * CCSDS 912.3-B-3, sections 3.7.2.3, 3.7.2.4, and 3.7.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +36,22 @@ export
 class NegativeConfirmResponseToDirective {
     /**
      * @summary `directiveExecutedId`.
+     * @description
+     * Directive identification from the FSP-INVOKE-DIRECTIVE invocation that
+     * did not complete.
+     * 
+     * CCSDS 912.3-B-3, section 3.7.2.4.
      * @public
      * @readonly
      */
     readonly directiveExecutedId: DirectiveExecutedId;
     /**
      * @summary `fopAlert`.
+     * @description
+     * FOP alert associated with the failed directive. Section 3.7.2.7 requires
+     * this parameter on a negative confirm response.
+     * 
+     * CCSDS 912.3-B-3, section 3.7.2.7.
      * @public
      * @readonly
      */

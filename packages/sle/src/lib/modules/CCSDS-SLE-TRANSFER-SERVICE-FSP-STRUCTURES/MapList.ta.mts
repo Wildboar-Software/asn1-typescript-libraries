@@ -13,6 +13,13 @@ import { MapId, _decode_MapId, _encode_MapId } from "../CCSDS-SLE-TRANSFER-SERVI
  * @summary MapList
  * @description
  * 
+ * MAPs a service instance may use. `mapsNotUsed` means MAPs are not used.
+ * `mapsUsed` is the permitted list. Annex A requires the entries to be in
+ * ascending order, from 1 to 64 identifiers. Table 3-11 reports `null` when
+ * MAPs are not used.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11) and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

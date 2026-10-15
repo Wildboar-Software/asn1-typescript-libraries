@@ -16,7 +16,12 @@ import { GvcIdSet, _decode_GvcIdSet, _encode_GvcIdSet } from "../CCSDS-SLE-TRANS
 /**
  * @summary RcfGetParameter_parPermittedGvcidSet
  * @description
- * 
+ *
+ * Returned value of permitted-global-VCID-set: the Master Channel and Virtual
+ * Channels the user may name in RCF-START. Service management sets the set.
+ *
+ * CCSDS 911.2-B-4, section 3.4.2.7 and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +37,22 @@ export
 class RcfGetParameter_parPermittedGvcidSet {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Identifies this value as permitted-global-VCID-set (permittedGvcidSet).
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Master Channels and Virtual Channels permitted for this service instance.
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
@@ -58,7 +73,8 @@ class RcfGetParameter_parPermittedGvcidSet {
      * @summary Restructures an object into a RcfGetParameter_parPermittedGvcidSet
      * @description
      * 
-     * This takes an `object` and converts it to a `RcfGetParameter_parPermittedGvcidSet`.
+     * This takes an `object` and converts it to a
+     * `RcfGetParameter_parPermittedGvcidSet`.
      * 
      * @public
      * @static
@@ -77,7 +93,8 @@ class RcfGetParameter_parPermittedGvcidSet {
  * @summary The Leading Root Component Types of RcfGetParameter_parPermittedGvcidSet
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -91,7 +108,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameter_parPermittedGvcidSet:
  * @summary The Trailing Root Component Types of RcfGetParameter_parPermittedGvcidSet
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -104,7 +122,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameter_parPermittedGvcidSet:
  * @summary The Extension Addition Component Types of RcfGetParameter_parPermittedGvcidSet
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

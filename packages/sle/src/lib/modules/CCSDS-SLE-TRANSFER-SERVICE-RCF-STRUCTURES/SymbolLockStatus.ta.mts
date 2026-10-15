@@ -17,7 +17,13 @@ import { integerIsOneOf } from "../../constraints.mjs";
 /**
  * @summary SymbolLockStatus
  * @description
- * 
+ *
+ * Lock of the symbol (or bit) synchronization process: in-lock, out-of-lock,
+ * or unknown. Reported on a status report and, with the carrier and subcarrier
+ * status, on a loss-of-frame-sync notification.
+ *
+ * CCSDS 911.2-B-4, sections 3.7.2.4.2 and 3.9.2.5.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,14 @@ import { _decode_FspGetParameter_parRfAvailableRequired_parameterValue, _encode_
  * @summary FspGetParameter_parRfAvailableRequired
  * @description
  * 
+ * rf-available-required: when the value is yes, the CLCW No RF Available flag
+ * must be false before the provider may set production-status to operational.
+ * Service management sets it for the physical channel.
+ * 
+ * Table 3-11 defines yes. It does not further define no.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and section 3.1.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +43,19 @@ export
 class FspGetParameter_parRfAvailableRequired {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `rfAvailableRequired`, selecting rf-available-required in table
+     * 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * yes (0) requires the CLCW No RF Available flag to be false before
+     * production-status becomes operational. Table 3-11 does not further define
+     * no (1). CCSDS 912.3-B-3, table 3-11.
      * @public
      * @readonly
      */

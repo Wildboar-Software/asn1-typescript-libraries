@@ -10,6 +10,21 @@ import { FrameOrNotification, _decode_FrameOrNotification, _encode_FrameOrNotifi
  * @summary RafTransferBuffer
  * @description
  * 
+ * One release of the RAF transfer buffer, passed to the communications service
+ * as a single SLE-PDU. Records stay in insertion order. The provider releases
+ * the buffer when it is full, the release timer expires, an end-of-data
+ * notification is inserted, or RAF-STOP is accepted. The buffer is used in
+ * every delivery mode and is cleared when the association is aborted.
+ * 
+ * In timely online mode, communications backpressure discards the whole buffer;
+ * the provider then inserts one `excessiveDataBacklog` notification and
+ * restarts the release timer. Inserting that notification raises the effective
+ * buffer size by one until the buffer is released. Complete online and offline
+ * modes hold the buffer until the communications service accepts it. A
+ * conforming provider can hold at least 200 RAF-TRANSFER-DATA invocations.
+ * 
+ * CCSDS 911.1-B-5, sections 3.1.9 and 2.6.4.6.2, and annex C table C-2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

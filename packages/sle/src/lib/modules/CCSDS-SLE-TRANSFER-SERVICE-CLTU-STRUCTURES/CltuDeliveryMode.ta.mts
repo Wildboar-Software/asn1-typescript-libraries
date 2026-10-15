@@ -14,6 +14,14 @@ import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode,
  * @summary CltuDeliveryMode
  * @description
  * 
+ * Delivery mode of this service instance, constrained to forward online.
+ * Provision happens during the space link session. The provider buffers CLTUs
+ * until they are processed, and that buffer exists only while the service is
+ * being provided. Processing order is the buffer order plus the timing
+ * annotation on each CLTU. Forward offline delivery is outside the scope of
+ * this issue. Set by service management. CLTU-GET-PARAMETER reports fwd online.
+ * CCSDS 912.1-B-5, section 3.1.8 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

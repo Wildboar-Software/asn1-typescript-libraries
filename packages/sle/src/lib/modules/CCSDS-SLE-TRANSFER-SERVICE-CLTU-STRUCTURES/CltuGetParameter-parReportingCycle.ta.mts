@@ -17,6 +17,12 @@ import { CurrentReportingCycle, _decode_CurrentReportingCycle, _encode_CurrentRe
  * @summary CltuGetParameter_parReportingCycle
  * @description
  * 
+ * reporting-cycle: the interval, in seconds, between CLTU-STATUS-REPORT
+ * invocations, or null when cyclic reporting is off. Null until the user
+ * completes a CLTU-SCHEDULE-STATUS-REPORT that asks for periodic reports. The
+ * user sets it with that operation; it is not a service-management parameter.
+ * CCSDS 912.1-B-5, table 3-11 and section 3.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,20 @@ export
 class CltuGetParameter_parReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `reportingCycle`. Names the reporting-cycle parameter requested
+     * by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * periodicReportingOff is the table 3-11 value null. periodicReportingOn is
+     * the interval in seconds. CCSDS 912.1-B-5, table 3-11 and section 3.8.2.6.
      * @public
      * @readonly
      */

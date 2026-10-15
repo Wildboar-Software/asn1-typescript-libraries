@@ -17,6 +17,11 @@ import { _decode_CltuGetParameter_parBitLockRequired_parameterValue, _encode_Clt
  * @summary CltuGetParameter_parBitLockRequired
  * @description
  * 
+ * bit-lock-required. If yes, the No Bit Lock flag in the CLCW must be false
+ * before the provider sets production-status to operational. Set by service
+ * management. The provider reads the flag from the CLCW on the configured
+ * return channel. CCSDS 912.1-B-5, table 3-11 and section 2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +40,21 @@ export
 class CltuGetParameter_parBitLockRequired {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `bitLockRequired`. Names the bit-lock-required parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * yes (0) requires the CLCW No Bit Lock flag to be false. Table 3-11 does
+     * not further define no (1). CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

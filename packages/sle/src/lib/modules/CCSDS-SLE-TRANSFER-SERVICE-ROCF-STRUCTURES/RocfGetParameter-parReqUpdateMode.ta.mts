@@ -17,6 +17,13 @@ import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpda
  * @summary RocfGetParameter_parReqUpdateMode
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the requested update mode. While
+ * the instance is in state 3 (active), this is the mode from the most recent
+ * ROCF-START. Otherwise it is the first element of the permitted update-mode
+ * set.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,21 @@ export
 class RocfGetParameter_parReqUpdateMode {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to requestedUpdateMode. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * continuous or changeBased. While the instance is active this is the most
+     * recent START selection; otherwise it is the first permitted mode.
+     *
+     * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.10.
      * @public
      * @readonly
      */

@@ -17,6 +17,12 @@ import { RafDeliveryMode, _decode_RafDeliveryMode, _encode_RafDeliveryMode } fro
  * @summary RafGetParameter_parDeliveryMode
  * @description
  * 
+ * RAF-GET-PARAMETER value of `delivery-mode` for this instance. Service
+ * management sets it to timely online, complete online, or offline, and the
+ * instance supports only that mode.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and sections 2.3 and 3.1.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,18 @@ export
 class RafGetParameter_parDeliveryMode {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `deliveryMode`, selecting delivery-mode in table 3-11. CCSDS
+     * 911.1-B-5, annex A2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * The instance's delivery mode: `rtnTimelyOnline`, `rtnCompleteOnline`, or
+     * `rtnOffline`. CCSDS 911.1-B-5, table 3-11 and section 3.1.9.
      * @public
      * @readonly
      */

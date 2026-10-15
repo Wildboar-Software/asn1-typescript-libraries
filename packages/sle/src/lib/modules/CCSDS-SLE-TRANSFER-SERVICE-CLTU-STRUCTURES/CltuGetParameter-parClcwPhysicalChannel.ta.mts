@@ -17,6 +17,11 @@ import { ClcwPhysicalChannel, _decode_ClcwPhysicalChannel, _encode_ClcwPhysicalC
  * @summary CltuGetParameter_parClcwPhysicalChannel
  * @description
  * 
+ * clcw-physical-channel. Names the RF return channel that carries the CLCW, and
+ * thereby the transfer-frame version (TM, AOS, USLP fixed-length, or USLP
+ * variable-length). notConfigured means this service instance does not evaluate
+ * the CLCW. Set by service management. CCSDS 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,21 @@ export
 class CltuGetParameter_parClcwPhysicalChannel {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `clcwPhysicalChannel`. Names the clcw-physical-channel parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Return-channel name of 1 to 32 characters, or notConfigured when the CLCW
+     * is not evaluated. CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

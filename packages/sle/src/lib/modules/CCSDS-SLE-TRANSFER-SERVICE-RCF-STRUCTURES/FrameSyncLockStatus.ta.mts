@@ -17,7 +17,15 @@ import { integerIsOneOf } from "../../constraints.mjs";
 /**
  * @summary FrameSyncLockStatus
  * @description
- * 
+ *
+ * Lock of the frame synchronization process: in-lock, out-of-lock, or unknown.
+ * Loss of lock during the provider's lock-status observation period causes one
+ * loss-of-frame-sync notification. The provider documents that period. Return
+ * to lock is indicated by the next RCF-TRANSFER-DATA, and there is no separate
+ * notification for it.
+ *
+ * CCSDS 911.2-B-4, sections 3.7.2.3 and 3.9.2.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

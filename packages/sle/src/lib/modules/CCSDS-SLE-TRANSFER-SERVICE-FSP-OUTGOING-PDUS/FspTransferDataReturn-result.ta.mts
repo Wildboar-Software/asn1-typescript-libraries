@@ -12,6 +12,11 @@ import { DiagnosticFspTransferData, _decode_DiagnosticFspTransferData, _encode_D
  * @summary FspTransferDataReturn_result
  * @description
  * 
+ * Result of FSP-TRANSFER-DATA. `positiveResult` is empty. A positive result
+ * omits the diagnostic. `negativeResult` carries the diagnostic.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.17 and 3.6.2.18.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

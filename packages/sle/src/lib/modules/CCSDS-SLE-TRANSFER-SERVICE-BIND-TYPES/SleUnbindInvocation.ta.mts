@@ -13,6 +13,14 @@ import { UnbindReason, _decode_UnbindReason, _encode_UnbindReason } from "../CCS
  * @summary SleUnbindInvocation
  * @description
  * 
+ * Invocation of UNBIND. Releases an association established by BIND. Valid only
+ * in state 2 (ready), and only the BIND initiator may invoke it. Until the
+ * return arrives, the initiator invokes no further operations, performs no
+ * further operations the responder has invoked, and returns no further
+ * reports. If the return does not arrive, the initiator should PEER-ABORT.
+ * 
+ * CCSDS 911.1-B-5, sections 3.3.1 and A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +36,26 @@ export
 class SleUnbindInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * 
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all`, UNBIND is authenticated; an invocation that
+     * then fails the check is ignored. When the level is `bind` or `none`, the
+     * value should be `unused`.
+     *
+     * CCSDS 911.1-B-5, sections 3.3.2.2, 3.1.5, and 3.3.2.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `unbindReason`.
+     * @description
+     * 
+     * Why the association is being released. The meaning depends on whether the
+     * user or the provider invoked UNBIND.
+     *
+     * CCSDS 911.1-B-5, section 3.3.2.4.
      * @public
      * @readonly
      */

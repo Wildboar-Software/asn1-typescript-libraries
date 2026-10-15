@@ -12,6 +12,14 @@ import { _decode_DiagnosticRocfGet_specific, _encode_DiagnosticRocfGet_specific,
  * @summary DiagnosticRocfGet
  * @description
  * 
+ * Negative-result diagnostic of ROCF-GET-PARAMETER. The common alternative
+ * carries duplicateInvokeId (100) and otherReason (127). The specific
+ * alternative carries unknownParameter when the requested name is not an ROCF
+ * parameter the provider recognizes. A negative result omits the parameter
+ * name and value.
+ *
+ * CCSDS 911.5-B-4, sections 3.1.1.4, 3.10.2.5, 3.10.2.8, and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

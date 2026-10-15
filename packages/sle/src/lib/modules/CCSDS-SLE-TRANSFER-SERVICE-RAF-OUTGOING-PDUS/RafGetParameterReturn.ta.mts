@@ -14,6 +14,12 @@ import { RafGetParameterReturn_result, _decode_RafGetParameterReturn_result, _en
  * @summary RafGetParameterReturn
  * @description
  * 
+ * Return from RAF-GET-PARAMETER. A positive result carries the parameter name
+ * and its current value. A negative result carries only the diagnostic. The
+ * provider state stays unchanged.
+ * 
+ * CCSDS 911.1-B-5, sections 3.10.2 and 3.10.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,34 @@ export
 class RafGetParameterReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * Information with which the user authenticates this return. When the
+     * agreed level is `all`, every RAF invocation and return except
+     * RAF-PEER-ABORT is authenticated; `bind` authenticates only RAF-BIND;
+     * `none` leaves every invocation and return unauthenticated. When
+     * this return is unauthenticated, the value should be `unused`.
+     * CCSDS 911.1-B-5, sections 3.10.2.3 and
+     * 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * The `invoke-ID` from the RAF-GET-PARAMETER invocation, unchanged. CCSDS
+     * 911.1-B-5, section 3.10.2.4.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * `positiveResult` is the requested parameter and its value.
+     * `negativeResult` is a `DiagnosticRafGet`, and the parameter name and
+     * value are omitted. CCSDS 911.1-B-5, sections 3.10.2.5, 3.10.2.6, and
+     * 3.10.2.8.
      * @public
      * @readonly
      */

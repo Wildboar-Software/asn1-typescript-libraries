@@ -17,6 +17,16 @@ import { FspGetParameter_parSegmHeader_parameterValue, _decode_FspGetParameter_p
  * @summary FspGetParameter_parSegmHeader
  * @description
  * 
+ * segment-header: whether a Segment Header is present or absent in the TC
+ * transfer frames. present is 0 and absent is 1. Service management sets it.
+ * 
+ * The note to table 3-11 requires maximum-frame-length, maximum-packet-length,
+ * and segment-header to be consistent. Service management rejects an
+ * inconsistent combination at configuration time. Section 3.10 says FSP is not
+ * designed to deal with that inconsistency at run time.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +45,18 @@ export
 class FspGetParameter_parSegmHeader {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `segmentHeader`, selecting segment-header in table 3-11. CCSDS
+     * 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * present (0) or absent (1) for the Segment Header in TC transfer frames.
+     * CCSDS 912.3-B-3, table 3-11.
      * @public
      * @readonly
      */

@@ -33,7 +33,18 @@ const _RcfParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
 /**
  * @summary RcfParameterName
  * @description
- * 
+ *
+ * Parameter names RCF-GET-PARAMETER accepts. Each name is one row of table
+ * 3-11: transfer-buffer size, delivery mode, latency limit, minimum reporting
+ * cycle, permitted global-VCID set, current reporting cycle, requested global
+ * VCID, and return timeout period. Any other parameter name is rejected with
+ * unknown parameter. The integer values are those of ParameterName. Service
+ * management sets every one of these except the reporting cycle, which the
+ * user sets with RCF-SCHEDULE-STATUS-REPORT, and the requested global VCID,
+ * which the user sets with RCF-START.
+ *
+ * CCSDS 911.2-B-4, section 3.10 and tables 3-1 and 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

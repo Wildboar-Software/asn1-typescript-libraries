@@ -12,6 +12,13 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary RocfGetParameter_parLatencyLimit_parameterValue
  * @description
  * 
+ * latency-limit value. online is the limit in seconds: the release-timer
+ * duration, and the maximum delay from acquisition of a frame until the OCF
+ * extracted from it is delivered. offline is null, which table 3-11 requires
+ * when the delivery mode is offline.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and sections 3.1.9.1.5 and 3.1.9.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

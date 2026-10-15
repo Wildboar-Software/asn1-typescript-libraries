@@ -17,7 +17,15 @@ import { integerIsOneOf } from "../../constraints.mjs";
 /**
  * @summary CarrierLockStatus
  * @description
- * 
+ *
+ * Lock of the carrier demodulation process, on a status report and on a
+ * loss-of-frame-sync notification. Section 3.7.2.4.2 lists in-lock,
+ * out-of-lock, and unknown, which are the names of this subtype. Section
+ * 3.9.2.7 also lists not-in-use for the status-report carrier field. This
+ * subtype has no such code.
+ *
+ * CCSDS 911.2-B-4, sections 3.7.2.4.2 and 3.9.2.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

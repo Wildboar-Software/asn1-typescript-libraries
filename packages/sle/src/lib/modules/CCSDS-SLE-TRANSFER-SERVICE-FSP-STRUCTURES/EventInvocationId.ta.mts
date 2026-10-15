@@ -10,6 +10,13 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary EventInvocationId
  * @description
  * 
+ * Event-invocation identification of the FSP-THROW-EVENT whose action-list
+ * result is being reported. Present for action list completed, action list not
+ * completed, and event condition evaluated to false. Omitted for every other
+ * notification. Annex A types it as an unsigned long integer.
+ * 
+ * CCSDS 912.3-B-3, section 3.7.2.5 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

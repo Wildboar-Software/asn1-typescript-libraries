@@ -13,6 +13,12 @@ import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary FspPacketLastOk_packetOk
  * @description
  * 
+ * Identification and completion time of the Packet that most recently completed
+ * processing successfully. Present when at least one Packet of this instance
+ * has been successfully processed.
+ * 
+ * CCSDS 912.3-B-3, sections 3.7.2.12, 3.7.2.13, 3.9.2.6, and 3.9.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,24 @@ export
 class FspPacketLastOk_packetOk {
     /**
      * @summary `packetIdentification`.
+     * @description
+     * Identification of the Space Packet of this instance that most recently
+     * completed processing successfully.
+     * 
+     * CCSDS 912.3-B-3, sections 3.7.2.12 and 3.9.2.6.
      * @public
      * @readonly
      */
     readonly packetIdentification: PacketIdentification;
     /**
      * @summary `processingStopTime`.
+     * @description
+     * Time at which processing of the identified Packet completed. For
+     * expedited (BD) transmission this is the time radiation completed. For
+     * sequence-controlled (AD) transmission this is the time the last component
+     * was acknowledged by a received CLCW.
+     * 
+     * CCSDS 912.3-B-3, sections 3.7.2.13 and 3.9.2.7.
      * @public
      * @readonly
      */

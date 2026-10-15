@@ -1,9 +1,12 @@
 /**
  * @description
- *
+ * 
  * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES` from the CCSDS Space Link Extension
  * transfer services. The module is declared with IMPLICIT TAGS.
- *
+ * 
+ * Data types of the Forward Space Packet service.
+ * CCSDS 912.3-B-3 (August 2016, historical), annex A2.5.
+ * 
  * `{iso identified-organization(3) standards-producing-organization(112) ccsds(4) space-link-extension(3) sle-transfer-services(1) modules(1) forward-space-packet-service(24) version-five(5) asn1-fsp-structures(1)}`
  */
 export * from "./AbsolutePriority.ta.mjs";

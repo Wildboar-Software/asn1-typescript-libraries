@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagnosticScheduleStatusReport_specific
  * @description
  * 
+ * SCHEDULE-STATUS-REPORT diagnostics other than duplicate invoke-ID and other
+ * reason. Annex A2.3 notes that `notSupportedInThisDeliveryMode` is not used
+ * for version 1 forward transfer services. Section 3.8 defines the RAF
+ * conditions.
+ * 
+ * CCSDS 911.1-B-5, section 3.8.2.8 and annex A2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +34,12 @@ type DiagnosticScheduleStatusReport_specific = INTEGER;
 
 /**
  * @summary DiagnosticScheduleStatusReport_specific_notSupportedInThisDeliveryMode
+ * @description
+ * 
+ * The service instance is configured for offline delivery. Annex A2.3 states
+ * that this code is not used for version 1 forward transfer services.
+ * 
+ * CCSDS 911.1-B-5, sections 3.8.2.8, 3.8.1.6, and annex A2.3.
  * @constant
  * @type {number}
  */
@@ -35,6 +48,10 @@ const DiagnosticScheduleStatusReport_specific_notSupportedInThisDeliveryMode: Di
 
 /**
  * @summary DiagnosticScheduleStatusReport_specific_notSupportedInThisDeliveryMode
+ * @description
+ * 
+ * Offline delivery rejects schedule-status-report (CCSDS 911.1-B-5, section
+ * 3.8.1.6).
  * @constant
  * @type {number}
  */
@@ -43,6 +60,12 @@ const notSupportedInThisDeliveryMode: DiagnosticScheduleStatusReport_specific = 
 
 /**
  * @summary DiagnosticScheduleStatusReport_specific_alreadyStopped
+ * @description
+ * 
+ * The provider is not currently providing periodic reports. This applies only
+ * when report-request-type is `stop`.
+ * 
+ * CCSDS 911.1-B-5, section 3.8.2.8.
  * @constant
  * @type {number}
  */
@@ -51,6 +74,10 @@ const DiagnosticScheduleStatusReport_specific_alreadyStopped: DiagnosticSchedule
 
 /**
  * @summary DiagnosticScheduleStatusReport_specific_alreadyStopped
+ * @description
+ * 
+ * Periodic reports are already stopped and the request is `stop` (CCSDS
+ * 911.1-B-5, section 3.8.2.8).
  * @constant
  * @type {number}
  */
@@ -59,6 +86,13 @@ const alreadyStopped: DiagnosticScheduleStatusReport_specific = DiagnosticSchedu
 
 /**
  * @summary DiagnosticScheduleStatusReport_specific_invalidReportingCycle
+ * @description
+ * 
+ * The requested reporting cycle is outside the range agreed by SLE Complex
+ * Management and SLE Utilization Management. The lowest value the user may
+ * request is the managed minimum-reporting-cycle.
+ * 
+ * CCSDS 911.1-B-5, section 3.8.2.8 and table 3-11.
  * @constant
  * @type {number}
  */
@@ -67,6 +101,10 @@ const DiagnosticScheduleStatusReport_specific_invalidReportingCycle: DiagnosticS
 
 /**
  * @summary DiagnosticScheduleStatusReport_specific_invalidReportingCycle
+ * @description
+ * 
+ * The reporting cycle is outside the agreed range (CCSDS 911.1-B-5, section
+ * 3.8.2.8).
  * @constant
  * @type {number}
  */

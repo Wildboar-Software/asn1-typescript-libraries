@@ -18,6 +18,14 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary FrameSyncLockStatus
  * @description
  * 
+ * Lock of the frame synchronization process in an RAF-STATUS-REPORT. The
+ * permitted values are `inLock`, `outOfLock`, and `unknown`. A transition from
+ * in-lock to out-of-lock is also signalled, once per observation period, by a
+ * `lossFrameSync` notification; the return to lock is indicated by the next
+ * RAF-TRANSFER-DATA.
+ * 
+ * CCSDS 911.1-B-5, sections 3.9.2.5 and 3.7.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

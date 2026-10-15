@@ -12,6 +12,12 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary GvcId_vcId
  * @description
  * 
+ * Whether the global identifier names the Master Channel or one Virtual
+ * Channel. `masterChannel` is empty. `virtualChannel` carries the VC
+ * identifier.
+ * 
+ * CCSDS 912.3-B-3, annex A2.5 and section 3.10.2.5 (table 3-11).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

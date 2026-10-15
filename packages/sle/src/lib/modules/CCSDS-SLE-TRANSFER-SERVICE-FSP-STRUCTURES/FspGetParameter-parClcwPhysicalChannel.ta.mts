@@ -17,6 +17,13 @@ import { ClcwPhysicalChannel, _decode_ClcwPhysicalChannel, _encode_ClcwPhysicalC
  * @summary FspGetParameter_parClcwPhysicalChannel
  * @description
  * 
+ * clcw-physical-channel: the RF return channel that carries the CLCW the
+ * provider uses for forward-link RF and bit-lock status. When this service
+ * instance does not evaluate the CLCW, the reported value is not configured.
+ * Service management sets it.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and section 3.1.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,20 @@ export
 class FspGetParameter_parClcwPhysicalChannel {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `clcwPhysicalChannel`, selecting clcw-physical-channel in table
+     * 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Name of the RF return channel, or not configured when the CLCW is
+     * unevaluated. Annex A2.5 limits a configured name to 1 to 32 characters
+     * and encodes not configured as NULL. CCSDS 912.3-B-3, table 3-11 and annex
+     * A2.5.
      * @public
      * @readonly
      */

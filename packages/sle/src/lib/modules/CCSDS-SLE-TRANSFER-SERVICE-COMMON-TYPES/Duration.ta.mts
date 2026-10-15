@@ -10,6 +10,11 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary Duration
  * @description
  * 
+ * A length of time expressed in microseconds, from 0 through 4294967295.
+ * Section 3 does not define an RAF parameter of this type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

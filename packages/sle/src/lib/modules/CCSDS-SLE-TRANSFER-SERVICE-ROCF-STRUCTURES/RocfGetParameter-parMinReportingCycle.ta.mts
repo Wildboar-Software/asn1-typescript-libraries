@@ -21,6 +21,13 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary RocfGetParameter_parMinReportingCycle
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the minimum reporting cycle.
+ * Service management sets the shortest interval, in seconds, that the user may
+ * request in ROCF-SCHEDULE-STATUS-REPORT. A requested cycle below this minimum
+ * conflicts with the provider configuration and is invalid.
+ *
+ * CCSDS 911.5-B-4, sections 3.1.3.2 and 3.8.2.8 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +43,24 @@ export
 class RocfGetParameter_parMinReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to minReportingCycle. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Minimum reporting-cycle the user may request, in seconds. Annex A
+     * constrains the value to 1..600. A SCHEDULE-STATUS-REPORT cycle outside
+     * the range agreed by management, including a cycle below this minimum, is
+     * rejected as an invalid reporting cycle.
+     *
+     * CCSDS 911.5-B-4, sections 3.1.3.2 and 3.8.2.8, table 3-11, and annex
+     * A2.5.
      * @public
      * @readonly
      */

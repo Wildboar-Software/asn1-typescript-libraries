@@ -14,6 +14,13 @@ import { FspPacketStatus, _decode_FspPacketStatus, _encode_FspPacketStatus } fro
  * @summary FspPacketLastProcessed_packetProcessed
  * @description
  * 
+ * Identification, start time, and status of the Packet that most recently
+ * started to be processed. Present when at least one Packet of this instance
+ * has been processed.
+ * 
+ * CCSDS 912.3-B-3, sections 3.7.2.9 through 3.7.2.11 and 3.9.2.3 through
+ * 3.9.2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +37,33 @@ export
 class FspPacketLastProcessed_packetProcessed {
     /**
      * @summary `packetIdentification`.
+     * @description
+     * Identification of the Space Packet of this instance that most recently
+     * started to be processed.
+     * 
+     * CCSDS 912.3-B-3, sections 3.7.2.9 and 3.9.2.3.
      * @public
      * @readonly
      */
     readonly packetIdentification: PacketIdentification;
     /**
      * @summary `processingStartTime`.
+     * @description
+     * Time at which the provider started to process the identified Packet. Time
+     * values use UTC and the CCSDS day segmented time code, epoch 1958-01-01,
+     * with a 16-bit day segment.
+     * 
+     * CCSDS 912.3-B-3, sections 3.7.2.10, 3.9.2.4, and 3.1.7.
      * @public
      * @readonly
      */
     readonly processingStartTime: Time;
     /**
      * @summary `packetStatus`.
+     * @description
+     * Processing state of the identified Packet.
+     * 
+     * CCSDS 912.3-B-3, sections 3.7.2.11 and 3.9.2.5.
      * @public
      * @readonly
      */

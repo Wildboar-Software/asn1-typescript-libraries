@@ -21,6 +21,16 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary FspGetParameter_parTransmissLimit
  * @description
  * 
+ * transmission-limit: the maximum number of times the first frame on the
+ * Sent_Queue may be transmitted. The value is an integer from 1 to 255 (annex
+ * A2.5). Service management sets it. FSP-INVOKE-DIRECTIVE may also set it
+ * (table 3-1).
+ * 
+ * Section 3.10 cites COP-1, CCSDS 232.1-B-2 (reference [5]), for this parameter
+ * and does not define Sent_Queue.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 1.7 reference [5], and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +46,19 @@ export
 class FspGetParameter_parTransmissLimit {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `transmissionLimit`, selecting transmission-limit in table 3-11.
+     * CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Maximum transmissions of the first frame on the Sent_Queue, from 1 to
+     * 255. Section 3.10 does not define Sent_Queue; it cites CCSDS 232.1-B-2.
+     * CCSDS 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

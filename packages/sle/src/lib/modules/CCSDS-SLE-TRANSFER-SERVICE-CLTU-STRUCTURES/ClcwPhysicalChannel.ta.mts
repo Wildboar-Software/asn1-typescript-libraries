@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ClcwPhysicalChannel
  * @description
  * 
+ * RF return channel that carries the CLCW used for forward-link RF and bit-lock
+ * status. The channel also selects the transfer-frame version: TM, AOS, USLP
+ * fixed-length, or USLP variable-length. configured is a name of 1 to 32
+ * characters. notConfigured means this service instance does not evaluate the
+ * CLCW. Set by service management. CCSDS 912.1-B-5, table 3-11
+ * (clcw-physical-channel).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

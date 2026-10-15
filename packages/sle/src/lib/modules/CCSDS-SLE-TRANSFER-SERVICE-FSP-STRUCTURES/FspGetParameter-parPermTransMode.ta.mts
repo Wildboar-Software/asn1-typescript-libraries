@@ -17,6 +17,14 @@ import { PermittedTransmissionMode, _decode_PermittedTransmissionMode, _encode_P
  * @summary FspGetParameter_parPermTransMode
  * @description
  * 
+ * permitted-transmission-mode: the transmission mode permitted for this service
+ * instance. The values are sequence-controlled, expedited, and any. Service
+ * management sets it.
+ * 
+ * Annex A2.5: sequenceControlled is 0, expedited is 1, and any is 2.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,19 @@ export
 class FspGetParameter_parPermTransMode {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `permittedTransmissionMode`, selecting
+     * permitted-transmission-mode in table 3-11. CCSDS 912.3-B-3, section
+     * 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * sequence-controlled (0), expedited (1), or any (2). CCSDS 912.3-B-3,
+     * table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

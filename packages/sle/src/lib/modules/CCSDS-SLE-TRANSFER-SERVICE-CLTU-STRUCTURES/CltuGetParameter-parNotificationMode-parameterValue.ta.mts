@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CltuGetParameter_parNotificationMode_parameterValue
  * @description
  * 
+ * When the provider reports a production-status change to interrupted. deferred
+ * is 0 and immediate is 1. The parameter is optional and records the provider's
+ * behavior (Annex C). CCSDS 912.1-B-5, table 3-11 and section 3.7.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +32,13 @@ type CltuGetParameter_parNotificationMode_parameterValue = INTEGER;
 
 /**
  * @summary CltuGetParameter_parNotificationMode_parameterValue_deferred
+ * @description
+ *
+ * The user is told that production-status changed to interrupted only when
+ * radiation of a CLTU is affected: cltu-status is radiation started, or
+ * radiation must start because of the CLTU's earliest-radiation-time and
+ * latest-radiation-time. Until that notification, the provider still accepts
+ * CLTU-TRANSFER-DATA. CCSDS 912.1-B-5, table 3-11 and section 3.7.2.3.
  * @constant
  * @type {number}
  */
@@ -36,6 +47,10 @@ const CltuGetParameter_parNotificationMode_parameterValue_deferred: CltuGetParam
 
 /**
  * @summary CltuGetParameter_parNotificationMode_parameterValue_deferred
+ * @description
+ *
+ * Notify production interrupted only when a CLTU's radiation is affected (CCSDS
+ * 912.1-B-5, section 3.7.2.3).
  * @constant
  * @type {number}
  */
@@ -44,6 +59,10 @@ const deferred: CltuGetParameter_parNotificationMode_parameterValue = CltuGetPar
 
 /**
  * @summary CltuGetParameter_parNotificationMode_parameterValue_immediate
+ * @description
+ *
+ * CLTU-ASYNC-NOTIFY is sent as soon as production-status changes to
+ * interrupted. CCSDS 912.1-B-5, table 3-11 and section 3.7.2.3.
  * @constant
  * @type {number}
  */
@@ -52,6 +71,10 @@ const CltuGetParameter_parNotificationMode_parameterValue_immediate: CltuGetPara
 
 /**
  * @summary CltuGetParameter_parNotificationMode_parameterValue_immediate
+ * @description
+ *
+ * Notify production interrupted as soon as the transition is detected (CCSDS
+ * 912.1-B-5, section 3.7.2.3).
  * @constant
  * @type {number}
  */

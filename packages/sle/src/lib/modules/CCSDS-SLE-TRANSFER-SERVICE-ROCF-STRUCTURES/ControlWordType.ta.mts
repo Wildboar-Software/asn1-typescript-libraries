@@ -12,6 +12,19 @@ import { TcVcid, _decode_TcVcid, _encode_TcVcid } from "../CCSDS-SLE-TRANSFER-SE
  * @summary ControlWordType
  * @description
  * 
+ * Control-word filter on ROCF-START, and the place annex A puts the
+ * conditional tc-vcid parameter of table 3-4.
+ *
+ * allControlWords delivers every OCF from the selected telemetry channel. clcw
+ * delivers OCFs whose control word type is 0 (a CLCW) and carries the
+ * telecommand VC: noTcVC delivers every such CLCW, and tcVcid delivers the
+ * CLCWs that refer to that telecommand VC. notClcw delivers OCFs whose control
+ * word type is 1. Section 3.4.2.8 says notClcw is the setting used to obtain
+ * Frame Security Reports, and section 3.4.2.9 then omits tc-vcid. The value
+ * must be in the permitted control-word-type set.
+ *
+ * CCSDS 911.5-B-4, sections 3.4.2.8, 3.4.2.9, and 1.6.1.9.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

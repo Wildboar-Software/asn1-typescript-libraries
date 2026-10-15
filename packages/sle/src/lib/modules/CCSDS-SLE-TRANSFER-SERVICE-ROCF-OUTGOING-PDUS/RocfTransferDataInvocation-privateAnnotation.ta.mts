@@ -14,6 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RocfTransferDataInvocation_privateAnnotation
  * @description
  * 
+ * Private annotation attached to one delivered OCF. null means the frame has
+ * no private annotation. notNull is 1 to 128 octets. The contents and their
+ * interpretation require a prior arrangement between SLE Complex Management
+ * and SLE Utilization Management. This specification does not define those
+ * contents.
+ *
+ * CCSDS 911.5-B-4, section 3.6.2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

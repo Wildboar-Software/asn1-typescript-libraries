@@ -12,6 +12,14 @@ import { SleUnbindReturn_result, _decode_SleUnbindReturn_result, _encode_SleUnbi
  * @summary SleUnbindReturn
  * @description
  * 
+ * Return from UNBIND. The only permitted result is positive: the responder has
+ * released the association and the provider transitions to state 1 (unbound).
+ * If the unbind reason is `end`, the provider may delete the service instance
+ * and release its resources. Otherwise the initiator may BIND again before the
+ * provision period ends.
+ * 
+ * CCSDS 911.1-B-5, sections 3.3.2.5, 3.3.3, and A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +37,25 @@ export
 class SleUnbindReturn {
     /**
      * @summary `responderCredentials`.
+     * @description
+     * 
+     * Performer credentials with which the invoker authenticates this return.
+     * Section 3.3.2.3 names the operation parameter performer-credentials. When
+     * the return is unauthenticated, the value should be `unused`.
+     *
+     * CCSDS 911.1-B-5, sections 3.3.2.3 and 3.1.5.6.
      * @public
      * @readonly
      */
     readonly responderCredentials: Credentials;
     /**
      * @summary `result`.
+     * @description
+     * 
+     * Always `positive`: the responder has released the association. The book
+     * defines no negative result for this return.
+     *
+     * CCSDS 911.1-B-5, section 3.3.2.5.
      * @public
      * @readonly
      */

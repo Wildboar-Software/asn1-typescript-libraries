@@ -12,6 +12,11 @@ import { DiagnosticFspInvokeDirective, _decode_DiagnosticFspInvokeDirective, _en
  * @summary FspInvokeDirectiveReturn_result
  * @description
  * 
+ * Result of FSP-INVOKE-DIRECTIVE. `positiveResult` is empty. A positive result
+ * omits the diagnostic. `negativeResult` carries the diagnostic.
+ * 
+ * CCSDS 912.3-B-3, sections 3.12.2.7 and 3.12.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

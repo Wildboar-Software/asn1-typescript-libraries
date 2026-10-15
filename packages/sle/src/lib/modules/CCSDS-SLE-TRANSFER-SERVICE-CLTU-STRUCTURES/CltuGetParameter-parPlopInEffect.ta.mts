@@ -17,6 +17,10 @@ import { _decode_CltuGetParameter_parPlopInEffect_parameterValue, _encode_CltuGe
  * @summary CltuGetParameter_parPlopInEffect
  * @description
  * 
+ * plop-in-effect: PLOP-1 or PLOP-2. This selects how delay-time, the
+ * acquisition sequence, and the idle sequence shape the uplink. Set by service
+ * management. CCSDS 912.1-B-5, table 3-11 and section 3.6.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +39,20 @@ export
 class CltuGetParameter_parPlopInEffect {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `plopInEffect`. Names the plop-in-effect parameter requested by
+     * CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * plop1 (0) or plop2 (1). See section 3.6.2.8 for the carrier modulation
+     * modes each procedure uses. CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

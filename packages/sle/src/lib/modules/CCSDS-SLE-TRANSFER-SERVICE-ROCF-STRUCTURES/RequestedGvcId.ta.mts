@@ -10,6 +10,13 @@ import { GvcId, _decode_GvcId, _encode_GvcId } from "../CCSDS-SLE-TRANSFER-SERVI
  * @summary RequestedGvcId
  * @description
  * 
+ * requested-global-VCID as returned by ROCF-GET-PARAMETER. While the instance
+ * is in state 3 (active), this is the global VCID from the most recent
+ * ROCF-START. Otherwise it is the first element of the permitted global-VCID
+ * set.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

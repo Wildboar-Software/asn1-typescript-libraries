@@ -17,6 +17,18 @@ import { _decode_BlockingUsage, _encode_BlockingUsage, BlockingUsage } from "../
  * @summary FspGetParameter_parBlockingUsage
  * @description
  * 
+ * blocking-usage: permitted when the provider may place more than one Space
+ * Packet in one frame. The permission applies to every MAP on this VC. Service
+ * management sets it.
+ * 
+ * When the value is not permitted, the provider ignores the FSP-TRANSFER-DATA
+ * blocking parameter, and each frame carries at most one Space Packet (section
+ * 3.6.2.11).
+ * 
+ * Annex A2.5: permitted is 0 and notPermitted is 1.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, section 3.6.2.11, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +44,20 @@ export
 class FspGetParameter_parBlockingUsage {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `blockingUsage`, selecting blocking-usage in table 3-11. CCSDS
+     * 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * permitted (0) allows multiple Space Packets in one frame, on every MAP of
+     * this VC. notPermitted (1) causes the provider to ignore the transfer-data
+     * blocking parameter, so each frame carries at most one Space Packet. CCSDS
+     * 912.3-B-3, table 3-11, section 3.6.2.11, and annex A2.5.
      * @public
      * @readonly
      */

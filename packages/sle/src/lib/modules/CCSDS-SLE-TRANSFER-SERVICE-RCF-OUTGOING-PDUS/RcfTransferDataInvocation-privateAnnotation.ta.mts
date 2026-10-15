@@ -13,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary RcfTransferDataInvocation_privateAnnotation
  * @description
- * 
+ *
+ * Private annotation on one delivered frame. null_ means the provider has no
+ * private annotation for this frame. notNull carries the agreed annotation.
+ * Section 3.6.2.6 requires a prior management arrangement for any non-null
+ * contents and does not define those contents.
+ *
+ * CCSDS 911.2-B-4, section 3.6.2.6.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

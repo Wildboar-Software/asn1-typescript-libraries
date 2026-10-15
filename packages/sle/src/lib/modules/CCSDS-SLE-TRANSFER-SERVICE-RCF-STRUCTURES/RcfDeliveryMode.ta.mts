@@ -17,7 +17,30 @@ import { integerIsOneOf } from "../../constraints.mjs";
 /**
  * @summary RcfDeliveryMode
  * @description
- * 
+ *
+ * Delivery mode of this RCF service instance. Service management sets it, and
+ * the instance supports one mode.
+ *
+ * rtnTimelyOnline: online delivery during the space link session. The transfer
+ * buffer is the only buffer. If that buffer cannot be passed because of
+ * communications congestion, the provider discards it and notifies the user
+ * that data were discarded.
+ *
+ * rtnCompleteOnline: online delivery that keeps frames and synchronous
+ * notifications in the online frame buffer so they can still be delivered
+ * through communications delays and outages. An association abort drops frames
+ * already taken from that buffer for the transfer buffer. An RCF-UNBIND with
+ * reason 'end' clears the online frame buffer. At the end of the service
+ * instance provision period its contents are discarded.
+ *
+ * rtnOffline: frames already acquired are stored in an offline frame buffer
+ * and delivered later. One offline buffer should serve every offline service
+ * instance of a service agreement. Synchronous notifications other than
+ * end-of-data are omitted. The provider documents how long after acquisition a
+ * frame becomes available, and when offline records are deleted.
+ *
+ * CCSDS 911.2-B-4, sections 2.3 and 3.1.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

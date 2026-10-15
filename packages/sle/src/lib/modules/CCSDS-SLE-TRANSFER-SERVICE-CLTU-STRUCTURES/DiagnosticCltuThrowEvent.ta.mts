@@ -12,6 +12,11 @@ import { _decode_DiagnosticCltuThrowEvent_specific, _encode_DiagnosticCltuThrowE
  * @summary DiagnosticCltuThrowEvent
  * @description
  * 
+ * Why CLTU-THROW-EVENT failed. common carries duplicate invoke id and other
+ * reason. specific carries operation not supported, out of sequence, and no
+ * such event. On any negative result the event is not forwarded. CCSDS
+ * 912.1-B-5, section 3.11.2.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

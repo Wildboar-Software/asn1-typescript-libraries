@@ -14,6 +14,12 @@ import { CltuParameterName, _decode_CltuParameterName, _encode_CltuParameterName
  * @summary CltuGetParameterInvocation
  * @description
  * 
+ * User request for the current value of one FCLTU service parameter. Valid in
+ * state 2 (ready) and state 3 (active). Confirmed and non-blocking. A positive
+ * return carries the value in CltuGetParameter; a negative return carries
+ * DiagnosticCltuGetParameter and omits the parameter. The provider state stays
+ * unchanged. CCSDS 912.1-B-5, section 3.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +36,34 @@ export
 class CltuGetParameterInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the performer authenticate this invocation when the
+     * agreed authentication level requires it. Set this to unused when
+     * authentication is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Invoker-supplied integer. The performer returns it unchanged so the
+     * return can be matched to this invocation. Reusing a value that still has
+     * a return outstanding is rejected with diagnostic duplicate invoke id.
+     * CCSDS 912.1-B-5, section 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `cltuParameter`.
+     * @description
+     *
+     * Which FCLTU parameter to return. The value is one of the names in table
+     * 3-11 (CltuParameterName). A name the provider does not recognize yields
+     * diagnostic unknown parameter. CCSDS 912.1-B-5, section 3.10.2.5.
      * @public
      * @readonly
      */

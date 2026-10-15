@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RafGetParameter_parReqFrameQuality_parameterValue
  * @description
  * 
+ * Current requested-frame-quality filter, as returned by RAF-GET-PARAMETER. The
+ * codes match `RequestedFrameQuality`. Until the user sets the filter with a
+ * successful RAF-START, the value is the first element of
+ * `permitted-frame-quality-set`.
+ * 
+ * CCSDS 911.1-B-5, section 3.4.2.7 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +32,13 @@ type RafGetParameter_parReqFrameQuality_parameterValue = INTEGER;
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly
+ * @description
+ * 
+ * Deliver only frames annotated `good`. This is the value RAF-GET-PARAMETER
+ * returns for `requested-frame-quality`. Until a successful RAF-START, that
+ * value is the first element of the permitted-frame-quality set.
+ * 
+ * CCSDS 911.1-B-5, section 3.4.2.7 and table 3-11.
  * @constant
  * @type {number}
  */
@@ -33,6 +47,10 @@ const RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly: RafGetPa
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly
+ * @description
+ * 
+ * Deliver only frames annotated `good` (CCSDS 911.1-B-5, section 3.4.2.7 and
+ * table 3-11).
  * @constant
  * @type {number}
  */
@@ -41,6 +59,13 @@ const goodFramesOnly: RafGetParameter_parReqFrameQuality_parameterValue = RafGet
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly
+ * @description
+ * 
+ * Deliver only frames annotated `erred`. This is the value RAF-GET-PARAMETER
+ * returns for `requested-frame-quality`. Until a successful RAF-START, that
+ * value is the first element of the permitted-frame-quality set.
+ * 
+ * CCSDS 911.1-B-5, section 3.4.2.7 and table 3-11.
  * @constant
  * @type {number}
  */
@@ -49,6 +74,10 @@ const RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly: RafGetPa
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly
+ * @description
+ * 
+ * Deliver only frames annotated `erred` (CCSDS 911.1-B-5, section 3.4.2.7 and
+ * table 3-11).
  * @constant
  * @type {number}
  */
@@ -57,6 +86,14 @@ const erredFrameOnly: RafGetParameter_parReqFrameQuality_parameterValue = RafGet
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_allFrames
+ * @description
+ * 
+ * Deliver every frame, including `undetermined`. This is the value
+ * RAF-GET-PARAMETER returns for `requested-frame-quality`. Until a successful
+ * RAF-START, that value is the first element of the permitted-frame-quality
+ * set.
+ * 
+ * CCSDS 911.1-B-5, section 3.4.2.7 and table 3-11.
  * @constant
  * @type {number}
  */
@@ -65,6 +102,10 @@ const RafGetParameter_parReqFrameQuality_parameterValue_allFrames: RafGetParamet
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_allFrames
+ * @description
+ * 
+ * Deliver every frame, including `undetermined` (CCSDS 911.1-B-5, section
+ * 3.4.2.7 and table 3-11).
  * @constant
  * @type {number}
  */

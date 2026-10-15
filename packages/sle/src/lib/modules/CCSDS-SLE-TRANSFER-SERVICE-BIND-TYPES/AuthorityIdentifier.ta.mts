@@ -11,6 +11,13 @@ import { IdentifierString, _decode_IdentifierString, _encode_IdentifierString } 
  * @summary AuthorityIdentifier
  * @description
  * 
+ * Identity of an initiator or responder authority. Service management assigns
+ * the value and registers the authorized initiator and responder for each
+ * service instance. The length is 3 to 16 characters, with no space. Each value
+ * has exactly one authentication level and one authentication scheme.
+ * 
+ * CCSDS 911.1-B-5, sections 3.1.4, 3.2.2.4, and annex A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

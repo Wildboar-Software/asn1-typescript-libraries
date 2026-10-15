@@ -9,7 +9,20 @@ import { FrameOrNotification, _decode_FrameOrNotification, _encode_FrameOrNotifi
 /**
  * @summary RcfTransferBuffer
  * @description
- * 
+ *
+ * One release of the transfer buffer. The provider passes this SLE-PDU when
+ * the buffer is full, the release timer expires, an end-of-data notification
+ * has been inserted, or RCF-STOP has been accepted. Records stay in the order
+ * they were inserted. The buffer is used in every delivery mode. In timely
+ * online mode, if the communications service will not accept the PDU, the
+ * provider discards it, clears the buffer, and inserts a data-discarded
+ * notification. In complete online and offline modes the provider holds the
+ * PDU until the communications service accepts it. An aborted association
+ * clears the buffer. Its capacity is transfer-buffer-size; annex C requires
+ * room for at least 200 RCF-TRANSFER-DATA invocations.
+ *
+ * CCSDS 911.2-B-4, sections 2.6.4.6, 3.1.9, and annex C.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

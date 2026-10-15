@@ -12,6 +12,11 @@ import { DiagnosticFspThrowEvent, _decode_DiagnosticFspThrowEvent, _encode_Diagn
  * @summary FspThrowEventReturn_result
  * @description
  * 
+ * Result of FSP-THROW-EVENT. `positiveResult` is empty. A positive result omits
+ * the diagnostic. `negativeResult` carries the diagnostic.
+ * 
+ * CCSDS 912.3-B-3, sections 3.11.2.8 and 3.11.2.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

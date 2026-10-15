@@ -20,6 +20,16 @@ import { BufferSize, _decode_BufferSize, _encode_BufferSize } from "../CCSDS-SLE
  * @summary CltuStatusReportInvocation
  * @description
  * 
+ * Unconfirmed provider status report. Sent only as requested by
+ * CLTU-SCHEDULE-STATUS-REPORT: once for immediately, and at the requested
+ * interval for periodically. Valid in state 2 (ready) and state 3 (active).
+ * After CLTU-BIND, periodic reporting is off. Counts cover the whole service
+ * instance provision period and survive release, abort, and protocol abort.
+ * Section 3.9 lists cltu-status, radiation-start-time, and radiation-stop-time
+ * separately; Annex A carries them inside cltuLastProcessed and cltuLastOk. The
+ * provider state stays unchanged. CCSDS 912.1-B-5, sections 3.9, 3.8, 3.1.11,
+ * and 2.6.4.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,54 +52,99 @@ export
 class CltuStatusReportInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the user authenticate this provider invocation when
+     * the agreed authentication level requires it. Set this to unused when
+     * authentication is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `cltuLastProcessed`.
+     * @description
+     *
+     * The CLTU most recently processed or attempted in this service instance,
+     * or noCltuProcessed when none have been attempted (section 3.9.2.3).
+     * cltu-status and radiation-start-time are inside the cltuProcessed
+     * alternative.
      * @public
      * @readonly
      */
     readonly cltuLastProcessed: CltuLastProcessed;
     /**
      * @summary `cltuLastOk`.
+     * @description
+     *
+     * The CLTU most recently radiated completely, or noCltuOk when none have
+     * completed (section 3.9.2.4). radiation-stop-time is inside the cltuOk
+     * alternative.
      * @public
      * @readonly
      */
     readonly cltuLastOk: CltuLastOk;
     /**
      * @summary `cltuProductionStatus`.
+     * @description
+     *
+     * Current production-status. operational here means the process is
+     * configured, has completed the acquisition sequence, and can radiate
+     * CLTUs. CCSDS 912.1-B-5, section 3.9.2.8.
      * @public
      * @readonly
      */
     readonly cltuProductionStatus: ProductionStatus;
     /**
      * @summary `uplinkStatus`.
+     * @description
+     *
+     * Forward-link state from the CLCW in the return telemetry. CCSDS
+     * 912.1-B-5, section 3.9.2.9.
      * @public
      * @readonly
      */
     readonly uplinkStatus: UplinkStatus;
     /**
      * @summary `numberOfCltusReceived`.
+     * @description
+     *
+     * CLTUs received, checked successfully, and buffered during this service
+     * instance. Zero when none have been received. Rejected CLTUs are omitted.
+     * CCSDS 912.1-B-5, section 3.9.2.10.
      * @public
      * @readonly
      */
     readonly numberOfCltusReceived: NumberOfCltusReceived;
     /**
      * @summary `numberOfCltusProcessed`.
+     * @description
+     *
+     * CLTUs the provider attempted to radiate during this service instance:
+     * radiated, expired, aborted, and a CLTU currently being radiated. Zero
+     * when none have been processed. CCSDS 912.1-B-5, section 3.9.2.11.
      * @public
      * @readonly
      */
     readonly numberOfCltusProcessed: NumberOfCltusProcessed;
     /**
      * @summary `numberOfCltusRadiated`.
+     * @description
+     *
+     * CLTUs radiated completely during this service instance. A CLTU still
+     * being radiated is omitted. Zero when none have been radiated. CCSDS
+     * 912.1-B-5, section 3.9.2.12.
      * @public
      * @readonly
      */
     readonly numberOfCltusRadiated: NumberOfCltusRadiated;
     /**
      * @summary `cltuBufferAvailable`.
+     * @description
+     *
+     * Octets still available for buffering complete CLTUs. A CLTU is removed
+     * from this count when the provider starts to process it. CCSDS 912.1-B-5,
+     * section 3.9.2.13.
      * @public
      * @readonly
      */

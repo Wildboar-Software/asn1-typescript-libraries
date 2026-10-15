@@ -20,6 +20,29 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary CltuStatus
  * @description
  * 
+ * Processing state of the CLTU named by cltu-last-processed. Present only when
+ * that parameter is not null.
+ *
+ * radiated: radiation finished without abort; the CLTU was radiated.
+ *
+ * expired: latest-radiation-time passed before radiation began; the CLTU was
+ * not radiated.
+ *
+ * interrupted: radiation started and stopped because production-status became
+ * interrupted. Section 3.9.2.5 adds that the available status shows the CLTU
+ * aborted before nominal completion.
+ *
+ * productionStarted: radiation has started and processing is still in progress.
+ * Section 3 calls this radiation started. The Annex A comment is the same
+ * mapping.
+ *
+ * productionNotStarted: the provider attempted the CLTU and radiation did not
+ * start because production-status was interrupted. Section 3.7.2.7 and section
+ * 3.9.2.5 call this radiation not started. Section 3.7.2.8 calls the same state
+ * production not started when it sets radiation-start-time to null.
+ *
+ * CCSDS 912.1-B-5, sections 3.7.2.7 and 3.9.2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

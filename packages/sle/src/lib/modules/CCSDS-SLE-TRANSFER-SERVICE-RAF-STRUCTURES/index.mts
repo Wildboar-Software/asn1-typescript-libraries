@@ -4,6 +4,10 @@
  * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES` from the CCSDS Space Link Extension
  * transfer services. The module is declared with IMPLICIT TAGS.
  *
+ * RAF frame quality, lock and production status, notifications, diagnostics,
+ * and the parameters read by RAF-GET-PARAMETER. CCSDS 911.1-B-5, sections 3 and
+ * A2.5.
+ *
  * `{iso identified-organization(3) standards-producing-organization(112) ccsds(4) space-link-extension(3) sle-transfer-services(1) modules(1) return-all-frames-service(11) version-six(6) asn1-raf-structures(1)}`
  */
 export * from "./AntennaId.ta.mjs";

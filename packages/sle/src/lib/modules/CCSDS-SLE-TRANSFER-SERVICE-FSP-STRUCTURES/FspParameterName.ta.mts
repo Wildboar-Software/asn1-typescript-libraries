@@ -88,6 +88,19 @@ const _FspParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
  * @summary FspParameterName
  * @description
  * 
+ * Name of the FSP service parameter read by FSP-GET-PARAMETER. Table 3-11
+ * defines each name. Table 3-1 shows which parameters service management sets,
+ * which FSP-START sets (`expectedSlduIdentification`), which
+ * FSP-SCHEDULE-STATUS-REPORT sets (`reportingCycle`), and which
+ * FSP-INVOKE-DIRECTIVE sets (`fopSlidingWindow`, `mapMuxControl`,
+ * `timeoutType`, `timerInitial`, `transmissionLimit`, and
+ * `transmitterFrameSequenceNumber`). Parameters apply to every FSP instance, to
+ * every instance on a physical channel, to every instance on a VC, or to one
+ * service instance, as table 3-1 groups them. An unrecognized name is rejected
+ * with `unknownParameter`.
+ * 
+ * CCSDS 912.3-B-3, sections 3.10.2.5, 3.1.9, and 3.10.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

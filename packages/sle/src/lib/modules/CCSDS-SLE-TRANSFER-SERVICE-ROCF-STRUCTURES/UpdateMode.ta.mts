@@ -17,6 +17,13 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary UpdateMode
  * @description
  * 
+ * update-mode on ROCF-START and in the permitted update-mode set. continuous
+ * delivers every matching OCF. changeBased delivers an OCF when its contents
+ * differ from the previous OCF with the same telecommand VC, or when none has
+ * been delivered since this START. Service management sets the permitted set.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.10 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

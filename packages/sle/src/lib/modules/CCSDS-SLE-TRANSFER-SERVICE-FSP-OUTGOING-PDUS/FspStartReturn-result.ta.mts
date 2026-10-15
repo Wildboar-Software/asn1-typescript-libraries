@@ -12,6 +12,12 @@ import { DiagnosticFspStart, _decode_DiagnosticFspStart, _encode_DiagnosticFspSt
  * @summary FspStartReturn_result
  * @description
  * 
+ * Result of FSP-START. `positiveResult` is present only for a positive outcome
+ * and carries the production times. `negativeResult` carries the diagnostic and
+ * is present only for a negative outcome.
+ * 
+ * CCSDS 912.3-B-3, sections 3.4.2.8, 3.4.2.9, and 3.4.2.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

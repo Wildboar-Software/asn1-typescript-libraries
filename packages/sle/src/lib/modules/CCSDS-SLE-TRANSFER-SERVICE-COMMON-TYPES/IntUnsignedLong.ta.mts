@@ -15,6 +15,11 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary IntUnsignedLong
  * @description
  * 
+ * Integer from 0 through 4294967295, that is 0 through (2^32)-1. Duration
+ * counts microseconds in this range.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

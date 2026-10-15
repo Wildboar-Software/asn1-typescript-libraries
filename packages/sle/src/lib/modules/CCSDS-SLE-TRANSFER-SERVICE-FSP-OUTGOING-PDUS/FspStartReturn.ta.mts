@@ -14,6 +14,12 @@ import { FspStartReturn_result, _decode_FspStartReturn_result, _encode_FspStartR
  * @summary FspStartReturn
  * @description
  * 
+ * Provider return from FSP-START. A positive result reports the production
+ * window and moves the provider to state 3 (active). A negative result leaves
+ * the provider in state 2 (ready).
+ * 
+ * CCSDS 912.3-B-3, sections 3.4.2 and 3.4.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,38 @@ export
 class FspStartReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * Information with which the invoker authenticates this return. When the
+     * agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated. When this return is unauthenticated, the
+     * value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. An invoke-ID that still has an outstanding return in the
+     * same service instance is rejected with `duplicateInvokeId`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.6.4 and 3.1.6.5.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * Outcome of FSP-START. `positiveResult` means the user may invoke
+     * FSP-TRANSFER-DATA and includes the production times. `negativeResult`
+     * means the provider will not accept FSP-TRANSFER-DATA and includes a
+     * `DiagnosticFspStart`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.4.2.8 and 3.4.2.9.
      * @public
      * @readonly
      */

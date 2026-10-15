@@ -18,6 +18,14 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary CarrierLockStatus
  * @description
  * 
+ * Lock of the carrier demodulation process, as reported in RAF-STATUS-REPORT
+ * and in a loss-of-frame-sync notification. The permitted values are `inLock`,
+ * `outOfLock`, and `unknown`. `notInUse` is reserved for subcarrier
+ * demodulation. Lock indications are typically integrated over a measurement
+ * interval and can reflect a time slightly earlier than the report.
+ * 
+ * CCSDS 911.1-B-5, sections 3.9.2.8 and 3.7.2.4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

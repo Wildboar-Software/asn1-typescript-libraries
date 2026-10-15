@@ -12,6 +12,10 @@ import { DiagnosticCltuTransferData, _decode_DiagnosticCltuTransferData, _encode
  * @summary CltuTransferDataReturn_result
  * @description
  * 
+ * Result of CLTU-TRANSFER-DATA. positiveResult (NULL) means the CLTU will be
+ * buffered until processing is due. negativeResult means the CLTU is not
+ * buffered. CCSDS 912.1-B-5, sections 3.6.2.12 and 3.6.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

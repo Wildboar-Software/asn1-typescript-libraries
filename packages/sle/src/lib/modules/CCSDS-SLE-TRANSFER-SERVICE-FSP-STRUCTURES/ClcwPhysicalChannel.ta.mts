@@ -14,6 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ClcwPhysicalChannel
  * @description
  * 
+ * RF return channel that carries the CLCW the provider uses for forward-link RF
+ * and bit-lock status. When the instance is configured so that the CLCW is not
+ * evaluated, the reported value is not configured. Annex A types the configured
+ * name as a visible string of 1 to 32 characters. This issue does not define
+ * the string contents beyond that role.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11) and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

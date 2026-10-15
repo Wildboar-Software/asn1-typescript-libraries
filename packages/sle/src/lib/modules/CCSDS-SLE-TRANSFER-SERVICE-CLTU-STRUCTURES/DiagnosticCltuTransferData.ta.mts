@@ -12,6 +12,11 @@ import { DiagnosticCltuTransferData_specific, _decode_DiagnosticCltuTransferData
  * @summary DiagnosticCltuTransferData
  * @description
  * 
+ * Why CLTU-TRANSFER-DATA failed. common carries duplicate invoke id and other
+ * reason. specific carries unable to process, unable to store, out of sequence,
+ * inconsistent time range, invalid time, late sldu, invalid delay time, and
+ * CLTU error. The CLTU is not buffered. CCSDS 912.1-B-5, section 3.6.2.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

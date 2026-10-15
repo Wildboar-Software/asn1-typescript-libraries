@@ -12,6 +12,12 @@ import { _decode_Diagnostics, _encode_Diagnostics, Diagnostics } from "../CCSDS-
  * @summary SleAcknowledgement_result
  * @description
  * 
+ * `positiveResult` reports success and carries no diagnostic. `negativeResult`
+ * carries `Diagnostics`. For the RAF-STOP return the negative values are
+ * `duplicateInvokeId` and `otherReason`.
+ * 
+ * CCSDS 911.1-B-5, sections 3.1.1, 3.5.2.6, and annex A2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

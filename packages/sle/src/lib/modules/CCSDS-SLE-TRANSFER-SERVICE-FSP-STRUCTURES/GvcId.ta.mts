@@ -17,6 +17,15 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary GvcId
  * @description
  * 
+ * Global virtual-channel identification of a Master Channel or a Virtual
+ * Channel that can carry the CLCW used for forward-link RF and bit-lock status.
+ * Annex A says PTM and AOS frames are supported. For AOS the spacecraft
+ * identifier is 0 to 255 (8 bits). For PTM it is 0 to 1023 (10 bits). The
+ * permissible spacecraft-identifier range depends on the version number. This
+ * issue does not expand the abbreviations PTM and AOS.
+ * 
+ * CCSDS 912.3-B-3, annex A2.5 and section 3.10.2.5 (table 3-11).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +45,37 @@ export
 class GvcId {
     /**
      * @summary `spacecraftId`.
+     * @description
+     * Spacecraft identifier. Annex A allows 0 through 1023 and says the
+     * permissible range depends on `versionNumber`: 0 to 255 for AOS and 0 to
+     * 1023 for PTM.
+     * 
+     * CCSDS 912.3-B-3, annex A2.5.
      * @public
      * @readonly
      */
     readonly spacecraftId: INTEGER;
     /**
      * @summary `versionNumber`.
+     * @description
+     * Transfer-frame version that selects the spacecraft-identifier width.
+     * Annex A allows 0 through 3 and says AOS uses an 8-bit spacecraft
+     * identifier and PTM a 10-bit identifier. This issue does not state which
+     * version number is AOS or PTM.
+     * 
+     * CCSDS 912.3-B-3, annex A2.5.
      * @public
      * @readonly
      */
     readonly versionNumber: INTEGER;
     /**
      * @summary `vcId`.
+     * @description
+     * Master Channel, or a Virtual Channel on that spacecraft and version.
+     * Table 3-11 says the CLCW global VCID is the Master or Virtual Channel
+     * that carries the CLCW used for forward-link lock status.
+     * 
+     * CCSDS 912.3-B-3, annex A2.5 and section 3.10.2.5 (table 3-11).
      * @public
      * @readonly
      */

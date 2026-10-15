@@ -10,6 +10,10 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary SubcarrierDivisor
  * @description
  * 
+ * Ratio of the subcarrier frequency to the uplink bit rate. One means the data
+ * are modulated directly onto the carrier. The Annex A comment calls this the
+ * divisor of the subcarrier frequency. CCSDS 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

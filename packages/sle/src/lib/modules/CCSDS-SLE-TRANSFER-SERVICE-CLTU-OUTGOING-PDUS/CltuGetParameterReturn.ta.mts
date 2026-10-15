@@ -14,6 +14,11 @@ import { CltuGetParameterReturn_result, _decode_CltuGetParameterReturn_result, _
  * @summary CltuGetParameterReturn
  * @description
  * 
+ * Provider report of CLTU-GET-PARAMETER. On positive result the current value
+ * of the requested parameter is in result. On negative result no parameter
+ * value is returned. The provider state stays unchanged. CCSDS 912.1-B-5,
+ * section 3.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +38,32 @@ export
 class CltuGetParameterReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     *
+     * Credentials that let the invoker authenticate this return when the agreed
+     * authentication level requires it. Set this to unused when authentication
+     * is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * The invoke-ID from the invocation, returned unchanged. CCSDS 912.1-B-5,
+     * sections 3.10.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     *
+     * positiveResult carries the parameter. negativeResult carries the
+     * diagnostic and omits cltu-parameter and parameter-value. CCSDS 912.1-B-5,
+     * sections 3.10.2.5 through 3.10.2.8.
      * @public
      * @readonly
      */

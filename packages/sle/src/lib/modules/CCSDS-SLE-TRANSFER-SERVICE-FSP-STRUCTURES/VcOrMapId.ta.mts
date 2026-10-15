@@ -15,6 +15,12 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary VcOrMapId
  * @description
  * 
+ * Integer from 0 to 63 used both as a Virtual Channel identifier and as a MAP
+ * identifier. Table 3-11 reports the VC of this service instance in this range.
+ * The polling-vector and priority-list entries use the same range.
+ * 
+ * CCSDS 912.3-B-3, annex A2.5 and section 3.10.2.5 (table 3-11).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

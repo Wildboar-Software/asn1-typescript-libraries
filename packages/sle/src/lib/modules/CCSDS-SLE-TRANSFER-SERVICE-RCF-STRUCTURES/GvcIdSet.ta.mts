@@ -9,7 +9,15 @@ import { MasterChannelComposition, _decode_MasterChannelComposition, _encode_Mas
 /**
  * @summary GvcIdSet
  * @description
- * 
+ *
+ * The Master Channel and Virtual Channels the user may select on this service
+ * instance. An instance permits one Master Channel, or one Virtual Channel, or
+ * one Master Channel plus a set of its Virtual Channels. Only one of those
+ * channels is delivered at a time. Service management sets the set.
+ * RCF-GET-PARAMETER returns it as permitted-global-VCID-set.
+ *
+ * CCSDS 911.2-B-4, sections 2.1, 3.4.2.7, and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

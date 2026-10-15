@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SlduStatusNotification
  * @description
  * 
+ * Whether an SLDU status notification is produced. Annex A2.1 assigns the two
+ * numbers. Section 3 does not define when either value is selected.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +29,12 @@ type SlduStatusNotification = INTEGER;
 
 /**
  * @summary SlduStatusNotification_produceNotification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define the condition that
+ * selects it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1.
  * @constant
  * @type {number}
  */
@@ -32,6 +43,10 @@ const SlduStatusNotification_produceNotification: SlduStatusNotification = 0; /*
 
 /**
  * @summary SlduStatusNotification_produceNotification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define when it is selected
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -40,6 +55,12 @@ const produceNotification: SlduStatusNotification = SlduStatusNotification_produ
 
 /**
  * @summary SlduStatusNotification_doNotProduceNotification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define the condition that
+ * selects it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1.
  * @constant
  * @type {number}
  */
@@ -48,6 +69,10 @@ const SlduStatusNotification_doNotProduceNotification: SlduStatusNotification = 
 
 /**
  * @summary SlduStatusNotification_doNotProduceNotification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define when it is selected
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */

@@ -11,7 +11,14 @@ import { _decode_DiagnosticRcfGet_specific, _encode_DiagnosticRcfGet_specific, D
 /**
  * @summary DiagnosticRcfGet
  * @description
- * 
+ *
+ * Why RCF-GET-PARAMETER was rejected. Present only on a negative result.
+ * common carries duplicate Invoke-ID and other reason. specific carries
+ * unknown parameter. The provider should return the first matching diagnostic
+ * in the order listed in section 3.10.2.8.
+ *
+ * CCSDS 911.2-B-4, sections 3.10.2.8 and 3.1.3.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

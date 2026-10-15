@@ -20,7 +20,16 @@ import { integerInRange } from "../../constraints.mjs";
 /**
  * @summary RcfGetParameter_parMinReportingCycle
  * @description
- * 
+ *
+ * Returned value of minimum-reporting-cycle, in seconds. Service management
+ * sets the shortest reporting cycle the user may put in an
+ * RCF-SCHEDULE-STATUS-REPORT invocation. A shorter cycle is rejected with
+ * invalid reporting cycle. Annex A bounds this value by 1 to 600. The
+ * reporting cycle carried by that operation is ReportingCycle, which annex
+ * A2.3 bounds by 2 to 600.
+ *
+ * CCSDS 911.2-B-4, table 3-11, sections 3.8.2.8 and 3.1.3.2, and annex A2.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +45,23 @@ export
 class RcfGetParameter_parMinReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Identifies this value as minimum-reporting-cycle (minReportingCycle).
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Shortest reporting cycle, in seconds, that the user may request for
+     * periodic status reports.
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
@@ -65,7 +85,8 @@ class RcfGetParameter_parMinReportingCycle {
      * @summary Restructures an object into a RcfGetParameter_parMinReportingCycle
      * @description
      * 
-     * This takes an `object` and converts it to a `RcfGetParameter_parMinReportingCycle`.
+     * This takes an `object` and converts it to a
+     * `RcfGetParameter_parMinReportingCycle`.
      * 
      * @public
      * @static
@@ -84,7 +105,8 @@ class RcfGetParameter_parMinReportingCycle {
  * @summary The Leading Root Component Types of RcfGetParameter_parMinReportingCycle
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -98,7 +120,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameter_parMinReportingCycle:
  * @summary The Trailing Root Component Types of RcfGetParameter_parMinReportingCycle
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -111,7 +134,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameter_parMinReportingCycle:
  * @summary The Extension Addition Component Types of RcfGetParameter_parMinReportingCycle
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

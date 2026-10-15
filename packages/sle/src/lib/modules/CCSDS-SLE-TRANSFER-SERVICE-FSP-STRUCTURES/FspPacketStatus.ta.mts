@@ -22,6 +22,42 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary FspPacketStatus
  * @description
  * 
+ * Processing state of the last processed Space Packet. The permitted values are
+ * the Forward DU statuses named below.
+ * 
+ * `acknowledged` applies only to sequence-controlled transmission. Every
+ * component has been acknowledged by the space element in the CLCW stream.
+ * Reception is guaranteed. Acceptance, reassembly, and execution are determined
+ * from telemetry.
+ * 
+ * `radiated` means radiation completed without abort, so the Packet was
+ * radiated nominally. The status stays unchanged until every CLTU containing
+ * part of the Packet has been transmitted. For sequence-controlled transmission
+ * at least one CLCW acknowledgement may still be outstanding.
+ * 
+ * `productionStarted` means the Packet has left the instance request queue and
+ * has been inserted into the packets queue.
+ * 
+ * `productionNotStarted` means that when the Packet had to leave the request
+ * queue, production status was not operational, so production of this Packet
+ * could not start.
+ * 
+ * `expired` means the latest production time was reached before processing
+ * began. The Packet was not radiated.
+ * 
+ * `unsupportedTransmissionMode` means the requested transmission mode was
+ * unsupported when production of this Packet began. The Packet was not
+ * radiated.
+ * 
+ * `interrupted` means processing aborted when production status left
+ * operational for interrupted or halted, or when Abort VC was executed.
+ * Processing had started and stopped before nominal completion. Earlier Packets
+ * may also have been affected. A sequence-controlled Packet may have finished
+ * radiation before the status became interrupted.
+ * 
+ * CCSDS 912.3-B-3, sections 3.7.2.11, 3.9.2.5, and 1.6.1.8.1. Section
+ * 1.6.1.8.11 defines radiated.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

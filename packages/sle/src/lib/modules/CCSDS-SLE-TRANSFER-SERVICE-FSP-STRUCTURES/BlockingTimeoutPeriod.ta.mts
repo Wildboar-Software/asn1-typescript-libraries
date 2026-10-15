@@ -15,6 +15,15 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary BlockingTimeoutPeriod
  * @description
  * 
+ * Milliseconds from insertion of the first Packet into a Frame Data Unit until
+ * that unit is passed to the FOP, regardless of how many Packets it contains.
+ * The period applies to all blocking on the VC, independent of MAP. Annex A
+ * constrains it to 100 through 100000. The reported parameter is null when
+ * blocking is off; that alternative is part of the GET-PARAMETER value, not of
+ * this integer.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11) and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

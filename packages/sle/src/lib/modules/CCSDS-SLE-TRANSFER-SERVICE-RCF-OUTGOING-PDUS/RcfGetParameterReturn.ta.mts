@@ -13,7 +13,13 @@ import { RcfGetParameterReturn_result, _decode_RcfGetParameterReturn_result, _en
 /**
  * @summary RcfGetParameterReturn
  * @description
- * 
+ *
+ * The provider's report of RCF-GET-PARAMETER. A positive result returns the
+ * requested parameter and its value. A negative result returns a diagnostic
+ * and no parameter value. The provider state stays unchanged.
+ *
+ * CCSDS 911.2-B-4, sections 3.10.2.7 and 3.10.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,37 @@ export
 class RcfGetParameterReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     *
+     * Credentials that let the user authenticate this return when the agreed
+     * level requires it. When authentication of the return is not required, the
+     * value should be 'unused'.
+     *
+     * CCSDS 911.2-B-4, sections 3.10.2.3 and 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * The invoke-ID from the RCF-GET-PARAMETER invocation, returned unchanged.
+     *
+     * CCSDS 911.2-B-4, sections 3.10.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     *
+     * Positive when the requested parameter value is included. Negative when it
+     * is omitted. On a positive result the parameter name is present again in
+     * the returned value.
+     *
+     * CCSDS 911.2-B-4, sections 3.10.2.5, 3.10.2.6, and 3.10.2.7.
      * @public
      * @readonly
      */
@@ -83,7 +108,8 @@ class RcfGetParameterReturn {
  * @summary The Leading Root Component Types of RcfGetParameterReturn
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -98,7 +124,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameterReturn: $.ComponentSpe
  * @summary The Trailing Root Component Types of RcfGetParameterReturn
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -111,7 +138,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameterReturn: $.ComponentSpe
  * @summary The Extension Addition Component Types of RcfGetParameterReturn
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

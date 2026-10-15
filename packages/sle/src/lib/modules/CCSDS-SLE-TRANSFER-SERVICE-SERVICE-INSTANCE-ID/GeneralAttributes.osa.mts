@@ -10,6 +10,11 @@ import { returnService } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID
  * @summary GeneralAttributes
  * @description
  * 
+ * Service-agreement, service-package, and forward and return
+ * functional-group attributes.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

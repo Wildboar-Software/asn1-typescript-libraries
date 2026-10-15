@@ -12,6 +12,14 @@ import { _decode_DiagnosticScheduleStatusReport_specific, _encode_DiagnosticSche
  * @summary DiagnosticScheduleStatusReport
  * @description
  * 
+ * Negative-result diagnostic of SCHEDULE-STATUS-REPORT. `common` carries
+ * `duplicateInvokeId` and `otherReason`. `specific` carries the remaining codes
+ * in section 3.8.2.8. Checks should follow that section's order: duplicate
+ * invoke-ID, unsupported delivery mode, already stopped, invalid reporting
+ * cycle, then other reason.
+ * 
+ * CCSDS 911.1-B-5, sections 3.8.2.8 and 3.1.3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

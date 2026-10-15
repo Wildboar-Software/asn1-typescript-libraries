@@ -17,6 +17,13 @@ import { _decode_FspGetParameter_parTimeoutType_parameterValue, _encode_FspGetPa
  * @summary FspGetParameter_parTimeoutType
  * @description
  * 
+ * timeout-type: FOP behavior on timeout. Table 3-11 allows Alert or AD service
+ * suspension. `generateAlert` is 0 and `suspendSequenceControlled` is 1.
+ * Section 3.10.2.5 does not further define either behavior. Service management
+ * sets the value. FSP-INVOKE-DIRECTIVE may also set it (table 3-1).
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +42,19 @@ export
 class FspGetParameter_parTimeoutType {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `timeoutType`, selecting timeout-type in table 3-11. CCSDS
+     * 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Alert (`generateAlert`, 0) or AD service suspension
+     * (`suspendSequenceControlled`, 1). Section 3.10.2.5 does not further
+     * define either behavior. CCSDS 912.3-B-3, table 3-11.
      * @public
      * @readonly
      */

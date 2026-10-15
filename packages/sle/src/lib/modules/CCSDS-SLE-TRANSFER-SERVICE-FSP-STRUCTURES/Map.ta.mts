@@ -12,6 +12,14 @@ import { MapId, _decode_MapId, _encode_MapId } from "../CCSDS-SLE-TRANSFER-SERVI
  * @summary Map
  * @description
  * 
+ * MAP identifier for one Space Packet, or an indication that no MAP is used.
+ * When the instance generates no Segment Headers, the value is `none`. MAP is a
+ * term of CCSDS 232.0-B-3, cited in section 1.6.1.4. If MAPs are not used, each
+ * service instance has one packets queue; if they are used, it has one packets
+ * queue per MAP permitted for the instance.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.10 and B3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

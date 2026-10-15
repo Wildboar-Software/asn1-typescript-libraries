@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagnosticFspStart_specific
  * @description
  * 
+ * FSP-specific rejection codes for FSP-START. Duplicate invoke-ID and other
+ * reason are carried in the `common` alternative. On `unableToComply` the user
+ * may retry within the provision period, and the provider may FSP-PEER-ABORT if
+ * the fault is more than transient.
+ * 
+ * CCSDS 912.3-B-3, sections 3.4.2.9 and 3.4.3.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +32,12 @@ type DiagnosticFspStart_specific = INTEGER;
 
 /**
  * @summary DiagnosticFspStart_specific_outOfService
+ * @description
+ * 
+ * FSP-START is rejected because production status is `halted`: management has
+ * taken the provider out of service for an indefinite period.
+ * 
+ * CCSDS 912.3-B-3, section 3.4.2.9.
  * @constant
  * @type {number}
  */
@@ -33,6 +46,9 @@ const DiagnosticFspStart_specific_outOfService: DiagnosticFspStart_specific = 0;
 
 /**
  * @summary DiagnosticFspStart_specific_outOfService
+ * @description
+ * 
+ * Production status is `halted` (CCSDS 912.3-B-3, section 3.4.2.9).
  * @constant
  * @type {number}
  */
@@ -41,6 +57,13 @@ const outOfService: DiagnosticFspStart_specific = DiagnosticFspStart_specific_ou
 
 /**
  * @summary DiagnosticFspStart_specific_unableToComply
+ * @description
+ * 
+ * The provider cannot accept data because of a possibly temporary fault.
+ * Production status is `interrupted`. The user may invoke FSP-START again later
+ * in the provision period.
+ * 
+ * CCSDS 912.3-B-3, sections 3.4.2.9 and 3.4.3.2.
  * @constant
  * @type {number}
  */
@@ -49,6 +72,9 @@ const DiagnosticFspStart_specific_unableToComply: DiagnosticFspStart_specific = 
 
 /**
  * @summary DiagnosticFspStart_specific_unableToComply
+ * @description
+ * 
+ * Production status is `interrupted` (CCSDS 912.3-B-3, section 3.4.2.9).
  * @constant
  * @type {number}
  */
@@ -57,6 +83,12 @@ const unableToComply: DiagnosticFspStart_specific = DiagnosticFspStart_specific_
 
 /**
  * @summary DiagnosticFspStart_specific_productionTimeExpired
+ * @description
+ * 
+ * The time period scheduled for service production, the processing of Space
+ * Packets, is already past.
+ * 
+ * CCSDS 912.3-B-3, section 3.4.2.9.
  * @constant
  * @type {number}
  */
@@ -65,6 +97,10 @@ const DiagnosticFspStart_specific_productionTimeExpired: DiagnosticFspStart_spec
 
 /**
  * @summary DiagnosticFspStart_specific_productionTimeExpired
+ * @description
+ * 
+ * The scheduled production period is already past (CCSDS 912.3-B-3, section
+ * 3.4.2.9).
  * @constant
  * @type {number}
  */

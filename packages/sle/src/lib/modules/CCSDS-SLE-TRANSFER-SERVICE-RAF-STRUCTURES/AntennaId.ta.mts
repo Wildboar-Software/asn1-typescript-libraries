@@ -14,6 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AntennaId
  * @description
  * 
+ * Antenna that acquired the frame, used as the reference point for Earth
+ * Receive Time. `globalForm` is an object identifier. `localForm` is a
+ * 1-to-16-octet string. Section 3.6.2.4 requires SLE Complex Management and SLE
+ * Utilization Management to agree the allowable values and their
+ * interpretation. That section does not define which alternative is used, or
+ * how either encoding maps to a physical location. The value refers to location
+ * information supplied outside this service.
+ * 
+ * CCSDS 911.1-B-5, sections 3.6.2.4 and A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

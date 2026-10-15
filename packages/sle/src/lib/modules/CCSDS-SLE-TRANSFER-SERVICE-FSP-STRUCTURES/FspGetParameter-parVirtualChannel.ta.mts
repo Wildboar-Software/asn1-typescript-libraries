@@ -17,6 +17,12 @@ import { VcOrMapId, _decode_VcOrMapId, _encode_VcOrMapId } from "../CCSDS-SLE-TR
  * @summary FspGetParameter_parVirtualChannel
  * @description
  * 
+ * virtual-channel: the VC this service instance uses. Service management sets
+ * it. Annex A2.5 types the identifier as an integer from 0 to 63. Section 3.10
+ * does not state a tighter range.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,18 @@ export
 class FspGetParameter_parVirtualChannel {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `virtualChannel`, selecting virtual-channel in table 3-11. CCSDS
+     * 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * VC identifier for this service instance, from 0 to 63. CCSDS 912.3-B-3,
+     * table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

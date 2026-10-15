@@ -13,6 +13,34 @@ import { RafProductionStatus, _decode_RafProductionStatus, _encode_RafProduction
  * @summary Notification
  * @description
  * 
+ * Event reported by RAF-SYNC-NOTIFY. The provider stores the record in time
+ * order with the frames.
+ * 
+ * `lossFrameSync` means frame delivery has stopped because the frame
+ * synchronizer cannot lock to the space-link stream. It is sent once if the
+ * synchronizer went from in-lock to out-of-lock at least once during the
+ * provider's lock-status observation period; the provider documents that period
+ * and keeps the latency from the event short. The value is a
+ * `LockStatusReport`. The next RAF-TRANSFER-DATA indicates the return to
+ * lock. This event is sent during online delivery.
+ * 
+ * `productionStatusChange` reports that production status changed. The value is
+ * the new status: `running`, `halted`, or `interrupted`. This event is sent
+ * during online delivery.
+ * 
+ * `excessiveDataBacklog` means the provider discarded data, either because
+ * timely online delivery could not release a transfer buffer or because the
+ * complete-online frame buffer overflowed. Consecutive discards with no
+ * successful frame delivery in between produce at most one notification.
+ * This event is sent during online delivery. The alternative is NULL.
+ * 
+ * `endOfData` means the provider has nothing further to send. It is used in
+ * every delivery mode: the space link session has ended and no frames remain,
+ * or every available frame between the RAF-START start and stop times has been
+ * delivered. The alternative is NULL.
+ * 
+ * CCSDS 911.1-B-5, sections 3.7.2.3, 3.7.2.4, and 3.1.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

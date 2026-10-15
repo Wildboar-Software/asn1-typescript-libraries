@@ -11,6 +11,13 @@ import { RequestedFrameQuality, _decode_RequestedFrameQuality, _encode_Requested
  * @summary PermittedFrameQualitySet
  * @description
  * 
+ * Frame-quality filters the user may select on RAF-START. Service management
+ * sets the set. It contains at least one of `goodFramesOnly`, `erredFrameOnly`,
+ * and `allFrames`, and at most those three. The first element is the
+ * requested-frame-quality value reported until the first successful RAF-START.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.1.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProductionStatus
  * @description
  * 
+ * Status of FCLTU service production, reported on CLTU-ASYNC-NOTIFY and
+ * CLTU-STATUS-REPORT. The provider notifies the user when the status becomes
+ * operational, and, under the configured notification-mode, when it becomes
+ * interrupted or halted. CCSDS 912.1-B-5, sections 3.7.2.10, 3.9.2.8, and 2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +31,13 @@ type ProductionStatus = INTEGER;
 
 /**
  * @summary ProductionStatus_operational
+ * @description
+ *
+ * The production process can radiate CLTUs. Section 3.9.2.8 adds that the
+ * acquisition sequence has completed. Reached after the uplink is established
+ * or after recovery from halted or interrupted. CLTU-START then reports that
+ * time as start-production-time. CCSDS 912.1-B-5, sections 3.7.2.10 and
+ * 3.9.2.8.
  * @constant
  * @type {number}
  */
@@ -34,6 +46,9 @@ const ProductionStatus_operational: ProductionStatus = 0; /* LONG_NAMED_INTEGER_
 
 /**
  * @summary ProductionStatus_operational
+ * @description
+ *
+ * Production can radiate CLTUs (CCSDS 912.1-B-5, section 3.7.2.10).
  * @constant
  * @type {number}
  */
@@ -42,6 +57,11 @@ const operational: ProductionStatus = ProductionStatus_operational; /* SHORT_NAM
 
 /**
  * @summary ProductionStatus_configured
+ * @description
+ *
+ * Equipment has been assigned to the service instance, and the production
+ * process cannot yet radiate CLTUs. CCSDS 912.1-B-5, sections 3.7.2.10 and
+ * 3.9.2.8.
  * @constant
  * @type {number}
  */
@@ -50,6 +70,10 @@ const ProductionStatus_configured: ProductionStatus = 1; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary ProductionStatus_configured
+ * @description
+ *
+ * Equipment is assigned and radiation is not yet possible (CCSDS 912.1-B-5,
+ * section 3.7.2.10).
  * @constant
  * @type {number}
  */
@@ -58,6 +82,14 @@ const configured: ProductionStatus = ProductionStatus_configured; /* SHORT_NAMED
 
 /**
  * @summary ProductionStatus_interrupted
+ * @description
+ *
+ * A fault is stopping radiation. Section 3.7.2.10 allows the fault to be
+ * transient and to clear by automatic reconfiguration. CLTU-START is rejected
+ * with unable to comply. Depending on notification-mode, the user is told
+ * immediately or when a CLTU's radiation is affected; buffered CLTUs are then
+ * discarded and further transfers are blocked. CCSDS 912.1-B-5, sections
+ * 3.7.2.10, 3.7.2.3, and 3.4.2.9.
  * @constant
  * @type {number}
  */
@@ -66,6 +98,10 @@ const ProductionStatus_interrupted: ProductionStatus = 2; /* LONG_NAMED_INTEGER_
 
 /**
  * @summary ProductionStatus_interrupted
+ * @description
+ *
+ * A fault is stopping radiation; it may be transient (CCSDS 912.1-B-5, section
+ * 3.7.2.10).
  * @constant
  * @type {number}
  */
@@ -74,6 +110,13 @@ const interrupted: ProductionStatus = ProductionStatus_interrupted; /* SHORT_NAM
 
 /**
  * @summary ProductionStatus_halted
+ * @description
+ *
+ * Service management has taken production out of service, for example because
+ * an interruption is not transient or because the resources must be reassigned.
+ * CLTU-START is rejected with out of service. Buffered CLTUs are discarded and
+ * further transfers are blocked after the production halted notification. CCSDS
+ * 912.1-B-5, sections 3.7.2.10, 3.7.2.3, and 3.4.2.9.
  * @constant
  * @type {number}
  */
@@ -82,6 +125,10 @@ const ProductionStatus_halted: ProductionStatus = 3; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary ProductionStatus_halted
+ * @description
+ *
+ * Management has taken production out of service (CCSDS 912.1-B-5, section
+ * 3.7.2.10).
  * @constant
  * @type {number}
  */

@@ -14,6 +14,12 @@ import { CltuStartReturn_result, _decode_CltuStartReturn_result, _encode_CltuSta
  * @summary CltuStartReturn
  * @description
  * 
+ * Provider report of CLTU-START. A positive result authorizes
+ * CLTU-TRANSFER-DATA and supplies the production window. A negative result with
+ * diagnostic unable to comply may be retried later in the provision period; if
+ * management decides the fault is lasting, the provider may PEER-ABORT. CCSDS
+ * 912.1-B-5, section 3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,32 @@ export
 class CltuStartReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     *
+     * Credentials that let the invoker authenticate this return when the agreed
+     * authentication level requires it. Set this to unused when authentication
+     * is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * The invoke-ID from the CLTU-START invocation, returned unchanged. CCSDS
+     * 912.1-B-5, sections 3.4.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     *
+     * positiveResult carries start-production-time and stop-production-time.
+     * negativeResult carries DiagnosticCltuStart and omits those times. CCSDS
+     * 912.1-B-5, sections 3.4.2.6 through 3.4.2.9.
      * @public
      * @readonly
      */

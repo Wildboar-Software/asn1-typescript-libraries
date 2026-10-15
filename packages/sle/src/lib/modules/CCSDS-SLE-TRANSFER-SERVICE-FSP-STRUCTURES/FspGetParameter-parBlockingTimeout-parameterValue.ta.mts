@@ -12,6 +12,15 @@ import { BlockingTimeoutPeriod, _decode_BlockingTimeoutPeriod, _encode_BlockingT
  * @summary FspGetParameter_parBlockingTimeout_parameterValue
  * @description
  * 
+ * `blockingOn` is the blocking-timeout period in milliseconds, an integer from
+ * 100 to 100000. The period runs from insertion of the first Packet into the
+ * Frame Data Unit until that unit is passed to the FOP, on every MAP.
+ * `blockingOff` is null.
+ * 
+ * Section 3.10.2.5 describes the period and does not define `blockingOff`.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

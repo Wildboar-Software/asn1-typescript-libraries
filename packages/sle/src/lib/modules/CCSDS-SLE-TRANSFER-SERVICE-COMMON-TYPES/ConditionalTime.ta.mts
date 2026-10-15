@@ -12,6 +12,14 @@ import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary ConditionalTime
  * @description
  * 
+ * A time parameter that may be null. `undefined` is the null time. `known` is a
+ * UTC time. RAF-START uses this for the start and stop times. Online, a null
+ * start begins at the next frame acquired from the space link, and a null stop
+ * continues until STOP or the association is released or aborted. Offline, a
+ * null start or stop is rejected with diagnostic 'missing time value'.
+ * 
+ * CCSDS 911.1-B-5, sections 3.1.7, 3.4.2.5, 3.4.2.6, and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

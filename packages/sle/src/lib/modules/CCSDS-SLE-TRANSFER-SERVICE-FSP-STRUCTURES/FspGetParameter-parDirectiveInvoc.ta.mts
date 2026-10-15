@@ -17,6 +17,14 @@ import { FspGetParameter_parDirectiveInvoc_parameterValue, _decode_FspGetParamet
  * @summary FspGetParameter_parDirectiveInvoc
  * @description
  * 
+ * directive-invocation-enabled: enabled when this service instance is
+ * authorized to invoke FSP-INVOKE-DIRECTIVE. disabled withholds that
+ * authorization. Service management sets it.
+ * 
+ * enabled is 0 and disabled is 1 (annex A2.5).
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +43,18 @@ export
 class FspGetParameter_parDirectiveInvoc {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `directiveInvocation`, selecting directive-invocation-enabled in
+     * table 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * enabled (0) authorizes FSP-INVOKE-DIRECTIVE on this service instance.
+     * disabled (1) withholds that authorization. CCSDS 912.3-B-3, table 3-11.
      * @public
      * @readonly
      */

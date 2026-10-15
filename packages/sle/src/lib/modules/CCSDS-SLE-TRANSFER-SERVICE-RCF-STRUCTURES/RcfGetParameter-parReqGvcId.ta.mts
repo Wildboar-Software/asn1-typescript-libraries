@@ -16,7 +16,14 @@ import { RequestedGvcId, _decode_RequestedGvcId, _encode_RequestedGvcId } from "
 /**
  * @summary RcfGetParameter_parReqGvcId
  * @description
- * 
+ *
+ * Returned value of requested-global-VCID. In state 3 (active) it is the
+ * global VCID from the accepted RCF-START. In any other state, table 3-11 says
+ * to return the first element of permitted-global-VCID-set. Section 3.10 does
+ * not define which element of that SET OF is first.
+ *
+ * CCSDS 911.2-B-4, table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,23 @@ export
 class RcfGetParameter_parReqGvcId {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Identifies this value as requested-global-VCID (requestedGvcid).
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Global VCID currently selecting frames, or, outside state 3, the value
+     * table 3-11 requires from the permitted set.
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
@@ -58,7 +76,8 @@ class RcfGetParameter_parReqGvcId {
      * @summary Restructures an object into a RcfGetParameter_parReqGvcId
      * @description
      * 
-     * This takes an `object` and converts it to a `RcfGetParameter_parReqGvcId`.
+     * This takes an `object` and converts it to a
+     * `RcfGetParameter_parReqGvcId`.
      * 
      * @public
      * @static
@@ -77,7 +96,8 @@ class RcfGetParameter_parReqGvcId {
  * @summary The Leading Root Component Types of RcfGetParameter_parReqGvcId
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -91,7 +111,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameter_parReqGvcId: $.Compon
  * @summary The Trailing Root Component Types of RcfGetParameter_parReqGvcId
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -104,7 +125,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameter_parReqGvcId: $.Compon
  * @summary The Extension Addition Component Types of RcfGetParameter_parReqGvcId
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

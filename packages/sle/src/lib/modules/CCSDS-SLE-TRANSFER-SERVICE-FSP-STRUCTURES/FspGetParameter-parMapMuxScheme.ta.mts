@@ -17,6 +17,14 @@ import { _decode_MuxScheme, _encode_MuxScheme, MuxScheme } from "../CCSDS-SLE-TR
  * @summary FspGetParameter_parMapMuxScheme
  * @description
  * 
+ * map-multiplexing-scheme: the MAP multiplexing scheme on this VC. The values
+ * are FIFO, absolute priority, and polling vector. When MAP multiplexing is
+ * unused, the value is FIFO. Service management sets it.
+ * 
+ * Annex A2.5: fifo is 0, absolute-priority is 1, and polling-vector is 2.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,19 @@ export
 class FspGetParameter_parMapMuxScheme {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `mapMuxScheme`, selecting map-multiplexing-scheme in table 3-11.
+     * CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * FIFO (0), absolute priority (1), or polling vector (2) for MAPs on this
+     * VC. Unused MAP multiplexing is reported as FIFO. CCSDS 912.3-B-3, table
+     * 3-11 and annex A2.5.
      * @public
      * @readonly
      */

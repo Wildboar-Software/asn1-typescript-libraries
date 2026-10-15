@@ -14,6 +14,12 @@ import { SleScheduleStatusReportReturn_result, _decode_SleScheduleStatusReportRe
  * @summary SleScheduleStatusReportReturn
  * @description
  * 
+ * Return from SCHEDULE-STATUS-REPORT. A positive result applies the requested
+ * reporting change. A negative result leaves the previous reporting setting in
+ * effect. The provider state does not change.
+ * 
+ * CCSDS 911.1-B-5, sections 3.8.2.7, 3.8.3, and annex A2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,36 @@ export
 class SleScheduleStatusReportReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * 
+     * Information with which the invoker authenticates this return. When the
+     * return is unauthenticated, the value should be `unused`.
+     *
+     * CCSDS 911.1-B-5, sections 3.8.2.3 and 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * The invoke ID from the invocation, returned unchanged.
+     *
+     * CCSDS 911.1-B-5, sections 3.8.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * 
+     * `positiveResult` applies the requested reporting change. `negativeResult`
+     * carries the diagnostic and leaves the previous reporting setting in
+     * effect.
+     *
+     * CCSDS 911.1-B-5, sections 3.8.2.7 and 3.8.2.8.
      * @public
      * @readonly
      */

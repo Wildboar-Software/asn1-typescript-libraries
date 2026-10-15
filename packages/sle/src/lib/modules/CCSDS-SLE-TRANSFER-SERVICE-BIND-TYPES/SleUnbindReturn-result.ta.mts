@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SleUnbindReturn_result
  * @description
  * 
+ * The only alternative is `positive`. The book defines no negative result for
+ * UNBIND: the responder reports that the association has been released. If
+ * UNBIND arrives outside state 2, the responder PEER-ABORTs. If authentication
+ * level `all` fails, the responder ignores the invocation.
+ * 
+ * CCSDS 911.1-B-5, section 3.3.2.5 and annex A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

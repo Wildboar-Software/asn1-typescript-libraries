@@ -10,6 +10,13 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary CltuIdentification
  * @description
  * 
+ * Monotonic CLTU sequence number for one service instance. The first
+ * CLTU-TRANSFER-DATA after CLTU-START uses that operation's
+ * first-cltu-identification; each accepted transfer uses the next value. The
+ * provider echoes the next expected value on every TRANSFER-DATA return. Before
+ * any START, the expected value reported by CLTU-GET-PARAMETER is zero. CCSDS
+ * 912.1-B-5, section 3.6.2.5 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

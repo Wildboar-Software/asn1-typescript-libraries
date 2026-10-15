@@ -21,6 +21,36 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
  * @summary RafProviderToUserPdu
  * @description
  * 
+ * SLE-PDU the RAF provider may send.
+ * 
+ * `rafBindInvocation` is the provider invoking RAF-BIND on a provider-initiated
+ * instance (state 1). `rafBindReturn` reports a user-initiated RAF-BIND; a
+ * positive result moves the provider from state 1 to state 2.
+ * `rafUnbindInvocation` is the provider, as initiator, releasing the
+ * association (state 2). `rafUnbindReturn` reports the user's RAF-UNBIND,
+ * always with a positive result, and the provider returns to state 1. An `end`
+ * unbind reason allows the provider to delete the service instance.
+ * 
+ * `rafStartReturn` reports RAF-START. `rafStopReturn` reports RAF-STOP; a
+ * positive result stops RAF-TRANSFER-DATA, flushes the transfer buffer, and
+ * returns the provider to state 2. `rafScheduleStatusReportReturn` reports
+ * RAF-SCHEDULE-STATUS-REPORT. `rafGetParameterReturn` reports
+ * RAF-GET-PARAMETER.
+ * 
+ * `rafTransferBuffer` is one release of the transfer buffer: RAF-TRANSFER-DATA
+ * and RAF-SYNC-NOTIFY records in the order they occurred.
+ * `rafStatusReportInvocation` is an unconfirmed status report, valid in states
+ * 2 and 3, sent only as scheduled.
+ * 
+ * `rafPeerAbortInvocation` is the provider aborting the association. It is
+ * unconfirmed, valid in states 2 and 3, and carries no credentials. Diagnostics
+ * are those listed for RAF-PEER-ABORT in section 3.11. The provider enters
+ * state 1, discards the transfer buffer, and keeps status-report statistics for
+ * the provision period.
+ * 
+ * CCSDS 911.1-B-5, sections 3.2, 3.3, 3.4, 3.5, 3.8, 3.9, 3.10, 3.11, 2.6.4.6,
+ * and A2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

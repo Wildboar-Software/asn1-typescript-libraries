@@ -20,6 +20,29 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
  * @summary FspUserToProviderPdu
  * @description
  * 
+ * SLE-PDU the FSP provider may receive. Annex A2.6 collects every such PDU in
+ * this choice.
+ * 
+ * `fspBindInvocation` is FSP-BIND, valid only in state 1 (unbound). It
+ * establishes the association. `fspUnbindInvocation` is FSP-UNBIND and releases
+ * it. `fspStartInvocation` is FSP-START, valid only in state 2 (ready).
+ * `fspStopInvocation` is FSP-STOP, valid only in state 3 (active); a positive
+ * result returns the provider to state 2 and stops acceptance of
+ * FSP-TRANSFER-DATA. Packets not yet passed to the segment queue are discarded;
+ * Packets already converted to Frame Data Units are processed to completion.
+ * `fspTransferDataInvocation` is FSP-TRANSFER-DATA, valid only in state 3.
+ * `fspScheduleStatusReportInvocation` requests an immediate status report,
+ * periodic reports, or the end of periodic reports, and is valid in states 2
+ * and 3. Periodic reporting is inactive when the provider enters state 2.
+ * `fspGetParameterInvocation` asks for one FSP service parameter and is valid
+ * in states 2 and 3. `fspThrowEventInvocation` is valid in states 2 and 3.
+ * `fspInvokeDirectiveInvocation` is valid only in state 3.
+ * `fspPeerAbortInvocation` aborts the association. Either peer may invoke it,
+ * and it is not authenticated.
+ * 
+ * CCSDS 912.3-B-3, sections 3.2.1, 3.3, 3.4.1, 3.5, 3.6.1, 3.8.1, 3.10.1,
+ * 3.11.1, 3.12.1, 3.13, and annex A2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

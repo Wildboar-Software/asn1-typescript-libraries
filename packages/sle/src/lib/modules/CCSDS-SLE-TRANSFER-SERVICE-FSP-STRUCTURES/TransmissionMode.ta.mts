@@ -10,6 +10,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TransmissionMode
  * @description
  * 
+ * Transmission mode requested for one Space Packet. Sequence-controlled service
+ * gives a high probability of complete delivery, with no duplication and no
+ * delivery out of sequence. Expedited service delivers Packets in the specified
+ * sequence and does not guarantee complete delivery. Forward offline delivery
+ * is not defined in this issue. The permitted mode for an instance is a
+ * separate managed parameter.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.9, 3.1.8.1.5, and 3.1.8.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +34,12 @@ type TransmissionMode = INTEGER;
 
 /**
  * @summary TransmissionMode_sequenceControlled
+ * @description
+ * 
+ * Sequence-controlled (AD) transmission. The Packet is delivered with a high
+ * probability of completeness, without duplication, and in sequence.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.9 and 3.1.8.1.5.
  * @constant
  * @type {number}
  */
@@ -33,6 +48,9 @@ const TransmissionMode_sequenceControlled: TransmissionMode = 0; /* LONG_NAMED_I
 
 /**
  * @summary TransmissionMode_sequenceControlled
+ * @description
+ * 
+ * Sequence-controlled (AD) transmission (CCSDS 912.3-B-3, section 3.6.2.9).
  * @constant
  * @type {number}
  */
@@ -41,6 +59,12 @@ const sequenceControlled: TransmissionMode = TransmissionMode_sequenceControlled
 
 /**
  * @summary TransmissionMode_expedited
+ * @description
+ * 
+ * Expedited (BD) transmission. Packets are delivered in the specified sequence.
+ * Complete delivery is not guaranteed.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.9 and 3.1.8.1.5.
  * @constant
  * @type {number}
  */
@@ -49,6 +73,9 @@ const TransmissionMode_expedited: TransmissionMode = 1; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary TransmissionMode_expedited
+ * @description
+ * 
+ * Expedited (BD) transmission (CCSDS 912.3-B-3, section 3.6.2.9).
  * @constant
  * @type {number}
  */
@@ -57,6 +84,12 @@ const expedited: TransmissionMode = TransmissionMode_expedited; /* SHORT_NAMED_I
 
 /**
  * @summary TransmissionMode_sequenceControlledUnblock
+ * @description
+ * 
+ * Unblock AD mode and transmit this Packet in sequence-controlled (AD) mode.
+ * Accepted only while AD mode is blocked. Accepting it unblocks AD mode.
+ * 
+ * CCSDS 912.3-B-3, section 3.6.2.9.
  * @constant
  * @type {number}
  */
@@ -65,6 +98,10 @@ const TransmissionMode_sequenceControlledUnblock: TransmissionMode = 2; /* LONG_
 
 /**
  * @summary TransmissionMode_sequenceControlledUnblock
+ * @description
+ * 
+ * Unblock AD mode and transmit this Packet in AD mode (CCSDS 912.3-B-3, section
+ * 3.6.2.9).
  * @constant
  * @type {number}
  */

@@ -16,7 +16,12 @@ import { RcfDeliveryMode, _decode_RcfDeliveryMode, _encode_RcfDeliveryMode } fro
 /**
  * @summary RcfGetParameter_parDeliveryMode
  * @description
- * 
+ *
+ * Returned value of delivery-mode. Service management sets it to timely
+ * online, complete online, or offline, and the instance keeps that one mode.
+ *
+ * CCSDS 911.2-B-4, sections 2.3 and 3.1.9, and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +37,22 @@ export
 class RcfGetParameter_parDeliveryMode {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Identifies this value as delivery-mode (deliveryMode).
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * The delivery mode of this service instance.
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
@@ -58,7 +73,8 @@ class RcfGetParameter_parDeliveryMode {
      * @summary Restructures an object into a RcfGetParameter_parDeliveryMode
      * @description
      * 
-     * This takes an `object` and converts it to a `RcfGetParameter_parDeliveryMode`.
+     * This takes an `object` and converts it to a
+     * `RcfGetParameter_parDeliveryMode`.
      * 
      * @public
      * @static
@@ -77,7 +93,8 @@ class RcfGetParameter_parDeliveryMode {
  * @summary The Leading Root Component Types of RcfGetParameter_parDeliveryMode
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -91,7 +108,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameter_parDeliveryMode: $.Co
  * @summary The Trailing Root Component Types of RcfGetParameter_parDeliveryMode
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -104,7 +122,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameter_parDeliveryMode: $.Co
  * @summary The Extension Addition Component Types of RcfGetParameter_parDeliveryMode
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

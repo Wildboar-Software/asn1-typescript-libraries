@@ -14,6 +14,14 @@ import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode,
  * @summary FspDeliveryMode
  * @description
  * 
+ * Delivery mode of the FSP service. This issue defines only forward online
+ * delivery: provisioning occurs during the space link session, Packets are
+ * buffered until they are processed, and the buffer exists only during
+ * provisioning. Annex A fixes the value at `fwdOnline`. Forward offline
+ * delivery is not defined in this issue.
+ * 
+ * CCSDS 912.3-B-3, sections 3.1.8 and 3.10.2.5 (table 3-11).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

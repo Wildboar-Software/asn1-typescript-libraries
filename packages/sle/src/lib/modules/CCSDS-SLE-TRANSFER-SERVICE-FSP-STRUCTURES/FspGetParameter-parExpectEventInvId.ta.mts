@@ -17,6 +17,15 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary FspGetParameter_parExpectEventInvId
  * @description
  * 
+ * expected-event-invocation-identification: the event-invocation-identification
+ * the provider expects on the next FSP-THROW-EVENT invocation. The initial
+ * value is zero.
+ * 
+ * Annex A2.1 types the value as `IntUnsignedLong` (0 to 4294967295). Section
+ * 3.10 states the initial value and does not state a tighter range.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +42,19 @@ export
 class FspGetParameter_parExpectEventInvId {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `expectedEventInvocationIdentification`, selecting
+     * expected-event-invocation-identification in table 3-11. CCSDS 912.3-B-3,
+     * section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Next event-invocation-identification, initially 0, in the range 0 to
+     * 4294967295. CCSDS 912.3-B-3, table 3-11 and annex A2.1.
      * @public
      * @readonly
      */

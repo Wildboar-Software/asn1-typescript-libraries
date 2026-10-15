@@ -17,6 +17,16 @@ import { TimeoutPeriod, _decode_TimeoutPeriod, _encode_TimeoutPeriod } from "../
  * @summary FspGetParameter_parReturnTimeout
  * @description
  * 
+ * return-timeout-period: the maximum time, in seconds, from invocation of a
+ * confirmed FSP operation until the invoker receives the return. Service
+ * management sets it.
+ * 
+ * If the return is still absent when the period expires, the invoker aborts the
+ * association with FSP-PEER-ABORT diagnostic return timeout (section 4.1.3).
+ * Annex A2.5 types `TimeoutPeriod` as an integer from 1 to 600 seconds.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 4.1.3, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +42,18 @@ export
 class FspGetParameter_parReturnTimeout {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `returnTimeoutPeriod`, selecting return-timeout-period in table
+     * 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Maximum seconds from a confirmed invocation until its return, from 1 to
+     * 600. CCSDS 912.3-B-3, table 3-11, section 4.1.3, and annex A2.5.
      * @public
      * @readonly
      */

@@ -14,6 +14,14 @@ import { SleAcknowledgement_result, _decode_SleAcknowledgement_result, _encode_S
  * @summary SleAcknowledgement
  * @description
  * 
+ * Confirmed-operation return whose negative alternative carries the common
+ * diagnostics. Annex A2.7 maps this PDU to the RAF-STOP return. A positive STOP
+ * result means frame delivery has ceased and the provider moves to state 2
+ * (ready). A negative result leaves delivery running and the provider state
+ * unchanged.
+ * 
+ * CCSDS 911.1-B-5, sections 3.5.2, 3.5.3, and annex A2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +41,37 @@ export
 class SleAcknowledgement {
     /**
      * @summary `credentials`.
+     * @description
+     * 
+     * Performer credentials with which the invoker authenticates this return.
+     * For RAF-STOP, section 3.5.2.3 names the parameter performer-credentials.
+     * When the return is unauthenticated, the value should be `unused`.
+     *
+     * CCSDS 911.1-B-5, sections 3.5.2.3 and 3.1.5.6.
      * @public
      * @readonly
      */
     readonly credentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * The invoke ID of the invocation, returned unchanged.
+     *
+     * CCSDS 911.1-B-5, sections 3.5.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * 
+     * `positiveResult` reports that the operation was performed. For RAF-STOP
+     * that means frame delivery has ceased. `negativeResult` carries
+     * `duplicateInvokeId` or `otherReason`, and RAF-STOP delivery continues.
+     *
+     * CCSDS 911.1-B-5, sections 3.5.2.5 and 3.5.2.6.
      * @public
      * @readonly
      */

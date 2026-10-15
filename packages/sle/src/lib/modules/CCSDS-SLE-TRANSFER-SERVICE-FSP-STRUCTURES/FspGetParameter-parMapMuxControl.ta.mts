@@ -17,6 +17,18 @@ import { MuxControl, _decode_MuxControl, _encode_MuxControl } from "../CCSDS-SLE
  * @summary FspGetParameter_parMapMuxControl
  * @description
  * 
+ * map-multiplexing-control: the MAP priority list or the MAP polling vector for
+ * this VC. When the MAP multiplexing scheme is FIFO, or when MAPs are unused,
+ * the value is null. Service management sets it. FSP-INVOKE-DIRECTIVE may also
+ * set it (table 3-1).
+ * 
+ * Annex A2.5 `MuxControl`: FIFO is null; absolute priority is 1 to 64 entries,
+ * with priority 1 highest and 64 lowest; a polling vector is 1 to 192 MAP
+ * identifiers. Annex B3 selects the next Frame Data Unit from the segments
+ * queues by this scheme.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, annex A2.5, and annex B3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +44,20 @@ export
 class FspGetParameter_parMapMuxControl {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `mapMuxControl`, selecting map-multiplexing-control in table
+     * 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * MAP priority list or MAP polling vector for this VC. Null when the scheme
+     * is FIFO or MAPs are unused. A priority list has 1 to 64 entries (1
+     * highest, 64 lowest). A polling vector has 1 to 192 MAP identifiers. CCSDS
+     * 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

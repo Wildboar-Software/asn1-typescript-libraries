@@ -17,6 +17,18 @@ import { UpdateMode, _decode_UpdateMode, _encode_UpdateMode } from "../CCSDS-SLE
  * @summary RocfStartInvocation
  * @description
  * 
+ * The user invokes ROCF-START, only in state 2 (ready), to request delivery of
+ * operational control fields. On a positive return the provider enters state 3
+ * (active) and delivers, in the order the frames were received, every OCF that
+ * meets the criteria in these parameters. ROCF-STOP returns the provider to
+ * state 2. A further START can select a new interval or channel. The operation
+ * is confirmed and non-blocking.
+ *
+ * Annex A carries the conditional tc-vcid parameter of table 3-4 on the clcw
+ * alternative of controlWordType.
+ *
+ * CCSDS 911.5-B-4, sections 2.6.4.2, 3.4.1, 3.4.3, and A2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,42 +49,116 @@ export
 class RocfStartInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * 
+     * Credentials the provider uses to authenticate this invocation. When the
+     * agreed authentication level does not cover the invocation, the value is
+     * unused. The octet layout is the bilaterally agreed algorithm, which this
+     * specification leaves unspecified. CCSDS 911.5-B-4, sections 3.1.5 and
+     * 3.4.2.2.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Integer chosen by the invoker. The performer returns it unchanged so the
+     * return can be matched to this invocation. A value that duplicates an
+     * invoke-ID still awaiting confirmation in this service instance is
+     * rejected. CCSDS 911.5-B-4, sections 3.1.6 and 3.4.2.4.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `startTime`.
+     * @description
+     * 
+     * Earliest Earth Receive Time of an OCF to deliver, or null when the user
+     * sets no start bound. Times are UTC. Online, a null start begins with the
+     * OCF from the next frame acquired on the space link, and a specified start
+     * must lie inside the service instance provision period. Online delivery
+     * stays within the space link session of this instance. Offline, a null
+     * start is rejected as missing time value, and OCFs from any session that
+     * meet the criteria are eligible. In complete online delivery, OCFs and
+     * notifications older than start-time are removed from the online buffer.
+     * If start-time is earlier than every OCF still held in the complete-online
+     * or offline buffer, delivery begins with the earliest OCF still held. The
+     * start must be earlier than the stop time.
+     *
+     * CCSDS 911.5-B-4, sections 3.1.7.1, 3.4.2.5, 3.1.9.2.16, and 3.1.9.3.10.
      * @public
      * @readonly
      */
     readonly startTime: ConditionalTime;
     /**
      * @summary `stopTime`.
+     * @description
+     * 
+     * Latest Earth Receive Time to include, or null when the user sets no stop
+     * bound. Delivery ceases when the next candidate OCF has a later ERT.
+     * Online, a null stop continues until ROCF-STOP or the association ends,
+     * and a specified stop must be earlier than or equal to the end of the
+     * provision period. Offline, a null stop is rejected as missing time value,
+     * and stop-time plus the offline processing latency must be earlier than
+     * the current time. Offline retrieval applies to frames already acquired
+     * when START is invoked. The stop must be later than the start time.
+     *
+     * CCSDS 911.5-B-4, sections 3.4.2.6 and 3.1.9.3.
      * @public
      * @readonly
      */
     readonly stopTime: ConditionalTime;
     /**
      * @summary `requestedGvcid`.
+     * @description
+     * 
+     * Master Channel or Virtual Channel from which OCFs are extracted. The
+     * value must belong to the permitted global-VCID set for this instance. One
+     * instance permits one Master Channel, one Virtual Channel, or one Master
+     * Channel together with a set of its Virtual Channels. When that set names
+     * a Master Channel and names no Virtual Channel of that Master Channel, a
+     * Virtual Channel request for it is invalid. The physical channel is the
+     * RAF data channel of the service package.
+     *
+     * CCSDS 911.5-B-4, sections 2.1, 2.7, and 3.4.2.7.
      * @public
      * @readonly
      */
     readonly requestedGvcid: GvcId;
     /**
      * @summary `controlWordType`.
+     * @description
+     * 
+     * Which reports inside the extracted OCF are delivered. allControlWords
+     * delivers every OCF from the selected channel. clcw delivers OCFs whose
+     * control word type is 0, a CLCW, and carries the telecommand VC of section
+     * 3.4.2.9. notClcw delivers OCFs whose control word type is 1; section
+     * 3.4.2.8 says this is the setting used to obtain Frame Security Reports.
+     * The selected type must be one service management permits for the
+     * instance.
+     *
+     * CCSDS 911.5-B-4, sections 3.4.2.8, 3.4.2.9, 1.6.1.9.4, and 3.1.3.2.
      * @public
      * @readonly
      */
     readonly controlWordType: ControlWordType;
     /**
      * @summary `updateMode`.
+     * @description
+     * 
+     * continuous inserts a transfer-data record for every OCF that meets the
+     * start time, stop time, global VCID, control word type, and telecommand VC
+     * criteria. changeBased inserts a record when the OCF contents differ from
+     * the previous OCF with the same telecommand VC already placed in the
+     * transfer buffer, or when no such OCF has been delivered since this START.
+     * Section 3.4.2.10 states that comparison in terms of tc-vcid and gives no
+     * separate rule for control words that are not CLCWs. The mode must be in
+     * the permitted update-mode set.
+     *
+     * CCSDS 911.5-B-4, sections 3.4.2.10 and 3.4.2.12.
      * @public
      * @readonly
      */

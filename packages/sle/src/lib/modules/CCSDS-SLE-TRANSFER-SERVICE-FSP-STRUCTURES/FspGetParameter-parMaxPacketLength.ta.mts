@@ -21,6 +21,17 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary FspGetParameter_parMaxPacketLength
  * @description
  * 
+ * maximum-packet-length: the mission maximum Packet Data Length, in octets. The
+ * value is an integer from 7 to 65542 (annex A2.5). Service management sets it.
+ * Table 3-1 names the managed parameter maximum-packet-data-length.
+ * 
+ * The note to table 3-11 requires maximum-frame-length, maximum-packet-length,
+ * and segment-header to be consistent. Service management rejects an
+ * inconsistent combination at configuration time. Section 3.10 says FSP is not
+ * designed to deal with that inconsistency at run time.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, table 3-1, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +47,18 @@ export
 class FspGetParameter_parMaxPacketLength {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `maximumPacketLength`, selecting maximum-packet-length in table
+     * 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Mission maximum Packet Data Length in octets, from 7 to 65542. CCSDS
+     * 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

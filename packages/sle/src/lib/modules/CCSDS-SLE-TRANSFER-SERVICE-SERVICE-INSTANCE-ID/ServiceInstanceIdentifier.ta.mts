@@ -10,6 +10,16 @@ import { ServiceInstanceAttribute, _decode_ServiceInstanceAttribute, _encode_Ser
  * @summary ServiceInstanceIdentifier
  * @description
  * 
+ * Concatenation of the attributes that identify one service instance.
+ * The string form joins `name=value` pairs with `.`. The module
+ * comment lists them in this order: `sagr`, `spack`, then `fsl-fg`
+ * or `rsl-fg`, then the service name.
+ * Example: `sagr=xyz.spack=abcdef.rsl-fg=gfjdy.raf=onlc2`.
+ * 
+ * The identifier is unique within the service-providing SLE Complex.
+ * 
+ * CCSDS 911.1-B-5, sections 3.2.2.9 and A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

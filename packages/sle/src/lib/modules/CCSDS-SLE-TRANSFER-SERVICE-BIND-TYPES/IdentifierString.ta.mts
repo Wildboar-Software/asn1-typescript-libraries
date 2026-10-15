@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IdentifierString
  * @description
  * 
+ * Visible-string characters with the space character excluded. Authority
+ * identifiers and logical port names are length-limited strings of this type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

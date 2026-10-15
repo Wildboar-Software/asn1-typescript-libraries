@@ -11,7 +11,16 @@ import { RcfSyncNotifyInvocation, _decode_RcfSyncNotifyInvocation, _encode_RcfSy
 /**
  * @summary FrameOrNotification
  * @description
- * 
+ *
+ * One record in the transfer buffer. annotatedFrame is one good telemetry
+ * frame from the selected Master Channel or Virtual Channel, with its
+ * annotation. syncNotification is an event stored after the last frame
+ * acquired before the event and before the first frame acquired after it.
+ * Offline delivery carries end-of-data and omits the other synchronous
+ * notifications.
+ *
+ * CCSDS 911.2-B-4, sections 2.4.1, 3.1.9, 3.6, and 3.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

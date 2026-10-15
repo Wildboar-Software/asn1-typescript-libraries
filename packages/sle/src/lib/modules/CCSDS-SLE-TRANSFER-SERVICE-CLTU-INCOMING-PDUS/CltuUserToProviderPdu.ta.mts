@@ -19,6 +19,53 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
  * @summary CltuUserToProviderPdu
  * @description
  * 
+ * One user-to-provider SLE-PDU for a Forward CLTU association. An operation
+ * that is illegal in the current provider state is aborted with CLTU-PEER-ABORT
+ * diagnostic protocol error (section 4.1.1). An undecodable PDU is aborted with
+ * diagnostic encoding error (section 4.1.2).
+ *
+ * cltuBindInvocation is CLTU-BIND, invoked by the user in state 1 (unbound) to
+ * establish the association. It is blocking. If the return is late the user may
+ * PEER-ABORT and bind again. A positive result enters state 2 (ready) and
+ * leaves periodic status reporting off. The service version-number for this
+ * issue is 6 (section 3.2.2.8.7).
+ *
+ * cltuUnbindInvocation is CLTU-UNBIND, user only, state 2. It releases the
+ * association and returns the provider to state 1. unbind-reason end lets the
+ * provider delete the service instance. suspend leaves a later bind possible
+ * until the provision period ends. version not supported is used only as the
+ * first operation after BIND when the initiator rejects the version the
+ * provider proposed. The result of an accepted UNBIND is positive result.
+ * UNBIND invoked outside state 2 causes PEER-ABORT.
+ *
+ * cltuStartInvocation is CLTU-START (section 3.4). cltuStopInvocation is
+ * CLTU-STOP, user only, state 3 (section 3.5): stop radiation of CLTUs already
+ * received. A positive result returns to state 2, discards CLTUs whose
+ * radiation has not begun, finishes a CLTU already radiating, and still emits a
+ * requested ASYNC-NOTIFY for that CLTU. A negative result keeps the buffer and
+ * stays in state 3. Diagnostics are duplicate invoke id and other reason.
+ *
+ * cltuScheduleStatusReportInvocation is CLTU-SCHEDULE-STATUS-REPORT, user,
+ * states 2 and 3 (section 3.8). report-request-type immediately sends one
+ * status report and then stops periodic reports. periodically sends one report
+ * now and then one every reporting-cycle seconds. stop ends periodic reports.
+ * reporting-cycle is present only for periodically. A negative result leaves
+ * the previous reporting setup in place. Diagnostics include duplicate invoke
+ * id, already stopped, invalid reporting cycle, and other reason.
+ *
+ * cltuGetParameterInvocation is CLTU-GET-PARAMETER (section 3.10).
+ * cltuThrowEventInvocation is CLTU-THROW-EVENT (section 3.11).
+ * cltuTransferDataInvocation is CLTU-TRANSFER-DATA, state 3 only (section 3.6).
+ *
+ * cltuPeerAbortInvocation is CLTU-PEER-ABORT, unconfirmed, from either peer in
+ * states 2 and 3, and from the user in state 1 when a CLTU-BIND return is late
+ * (section 3.12). The invocation carries only the diagnostic. The association
+ * ends, the provider returns to state 1, buffered CLTUs are discarded, and a
+ * CLTU already radiating is finished. Status-report
+ * statistics and parameters that correlate notifications with the operations
+ * that caused them are kept. CCSDS 912.1-B-5, sections 2.6.4, 3.2, 3.3, 3.5,
+ * 3.8, and 3.12.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

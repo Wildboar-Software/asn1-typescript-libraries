@@ -15,6 +15,14 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary VcId
  * @description
  * 
+ * Virtual Channel Identifier. Used as the telemetry VCID inside a global VCID
+ * and as the telecommand VC of a CLCW filter. The INTEGER allows 0..63. The
+ * annex A comment gives the usable range as 0..7 for TM (3 bits), 0..63 for
+ * AOS, 0..63 for USLP, and 0..63 for telecommand. Section 3.4.2.7.4 requires a
+ * VCID that is valid for the frame version in references [3], [6], and [10].
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.7.4 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

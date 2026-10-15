@@ -11,7 +11,16 @@ import { Notification, _decode_Notification, _encode_Notification } from "../CCS
 /**
  * @summary RcfSyncNotifyInvocation
  * @description
- * 
+ *
+ * The provider notifies the user of an event affecting RCF production.
+ * Unconfirmed, legal only in state 3 (active), and invoked only by the
+ * provider. Its position among RCF-TRANSFER-DATA invocations follows the
+ * chronology of the frames' Earth Receive Times. The provider state stays
+ * unchanged. Offline delivery sends end-of-data and omits the other
+ * notifications.
+ *
+ * CCSDS 911.2-B-4, sections 3.7 and 3.1.9.3.11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +36,26 @@ export
 class RcfSyncNotifyInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the user authenticate this invocation when the
+     * agreed level is 'all'. When the level is 'bind' or 'none', the value
+     * should be 'unused'.
+     *
+     * CCSDS 911.2-B-4, sections 3.7.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `notification`.
+     * @description
+     *
+     * The event being reported. A notification value accompanies loss of frame
+     * synchronization and a production-status change. Data discarded due to
+     * excessive backlog and end of data carry no further value.
+     *
+     * CCSDS 911.2-B-4, sections 3.7.2.3 and 3.7.2.4.
      * @public
      * @readonly
      */
@@ -69,7 +92,8 @@ class RcfSyncNotifyInvocation {
  * @summary The Leading Root Component Types of RcfSyncNotifyInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -83,7 +107,8 @@ const _root_component_type_list_1_spec_for_RcfSyncNotifyInvocation: $.ComponentS
  * @summary The Trailing Root Component Types of RcfSyncNotifyInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -96,7 +121,8 @@ const _root_component_type_list_2_spec_for_RcfSyncNotifyInvocation: $.ComponentS
  * @summary The Extension Addition Component Types of RcfSyncNotifyInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -12,6 +12,12 @@ import { DiagnosticCltuThrowEvent, _decode_DiagnosticCltuThrowEvent, _encode_Dia
  * @summary CltuThrowEventReturn_result
  * @description
  * 
+ * Result of CLTU-THROW-EVENT. positiveResult (NULL) means the event and its
+ * qualifier will be forwarded to SLE Complex Management. It does not report
+ * whether the actions succeeded; that arrives later on CLTU-ASYNC-NOTIFY.
+ * negativeResult means the event is not forwarded. CCSDS 912.1-B-5, sections
+ * 3.11.1.2 and 3.11.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

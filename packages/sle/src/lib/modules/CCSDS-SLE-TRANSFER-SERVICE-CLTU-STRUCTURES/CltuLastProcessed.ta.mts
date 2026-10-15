@@ -12,6 +12,12 @@ import { CltuLastProcessed_cltuProcessed, _decode_CltuLastProcessed_cltuProcesse
  * @summary CltuLastProcessed
  * @description
  * 
+ * cltu-last-processed. noCltuProcessed is the section 3 value null: the
+ * provider has not attempted to radiate any CLTU in this service instance, and
+ * cltu-status and radiation-start-time are absent. cltuProcessed identifies the
+ * CLTU most recently attempted and carries those parameters. CCSDS 912.1-B-5,
+ * sections 3.7.2.5 and 3.9.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

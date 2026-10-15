@@ -17,6 +17,14 @@ import { ServiceInstanceIdentifier, _decode_ServiceInstanceIdentifier, _encode_S
  * @summary SleBindInvocation
  * @description
  * 
+ * Invocation of BIND. Establishes an association. Valid only in state 1
+ * (unbound). Service management decides whether the user or the provider is the
+ * only permitted initiator. The invoker waits for the return before invoking
+ * anything else. If the return does not arrive, the initiator may PEER-ABORT
+ * and try BIND again.
+ * 
+ * CCSDS 911.1-B-5, sections 3.2.1 and A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,36 +44,78 @@ export
 class SleBindInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * 
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all` or `bind`, BIND is authenticated. When the
+     * level is `none`, the value should be `unused`.
+     *
+     * CCSDS 911.1-B-5, sections 3.2.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `initiatorIdentifier`.
+     * @description
+     * 
+     * Authority on whose behalf the initiating application is binding. The
+     * responder uses it to decide whether this initiator is registered and is
+     * authorized for the service instance.
+     *
+     * CCSDS 911.1-B-5, sections 3.2.2.4, 3.1.4, and 1.6.1.8.6.
      * @public
      * @readonly
      */
     readonly initiatorIdentifier: AuthorityIdentifier;
     /**
      * @summary `responderPortIdentifier`.
+     * @description
+     * 
+     * Logical name of the responding application's port. A gateway may
+     * translate it into technology-specific addressing. The responding
+     * application ignores it when judging the invocation. An incorrect value
+     * generally yields no return, and the invoker then PEER-ABORTs with
+     * `returnTimeout`.
+     *
+     * CCSDS 911.1-B-5, sections 3.2.2.6 and 2.6.4.5.
      * @public
      * @readonly
      */
     readonly responderPortIdentifier: PortId;
     /**
      * @summary `serviceType`.
+     * @description
+     * 
+     * Service that will be provided if BIND succeeds. For RAF the value is
+     * `rtnAllFrames` ('Rtn All Frames').
+     *
+     * CCSDS 911.1-B-5, section 3.2.2.7.
      * @public
      * @readonly
      */
     readonly serviceType: ApplicationIdentifier;
     /**
      * @summary `versionNumber`.
+     * @description
+     * 
+     * Version of the service specification proposed for this association. This
+     * issue of the RAF service uses 6. On a positive return the responder
+     * accepts this version or, if it negotiates, proposes a lower one.
+     *
+     * CCSDS 911.1-B-5, section 3.2.2.8.
      * @public
      * @readonly
      */
     readonly versionNumber: VersionNumber;
     /**
      * @summary `serviceInstanceIdentifier`.
+     * @description
+     * 
+     * Uniquely identifies this service instance within the service-providing
+     * SLE Complex. The attribute concatenation is specified in annex A2.4.
+     *
+     * CCSDS 911.1-B-5, sections 3.2.2.9 and A2.4.
      * @public
      * @readonly
      */

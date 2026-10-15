@@ -12,6 +12,10 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary GvcId_vcId
  * @description
  * 
+ * Which channel of the return link carries the CLCW. masterChannel selects the
+ * Master Channel. virtualChannel selects one virtual channel. CCSDS 912.1-B-5,
+ * table 3-11 (clcw-global-VCID).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

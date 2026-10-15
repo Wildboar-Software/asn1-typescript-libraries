@@ -45,6 +45,13 @@ import { FspGetParameter_parVirtualChannel, _decode_FspGetParameter_parVirtualCh
  * @summary FspGetParameter
  * @description
  * 
+ * Positive result of FSP-GET-PARAMETER: one alternative for each parameter in
+ * table 3-11, with the parameter name and its current value. On a negative
+ * result the parameter is omitted. The provider remains in state 2 (ready) or
+ * state 3 (active).
+ * 
+ * CCSDS 912.3-B-3, sections 3.10.2.5.2, 3.10.3, and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

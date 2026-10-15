@@ -15,6 +15,11 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary TimeoutPeriod
  * @description
  * 
+ * return-timeout-period in seconds, from 1 through 600. If a confirmed
+ * operation's return is still missing when this period expires, the invoker
+ * sends CLTU-PEER-ABORT with diagnostic return timeout. CCSDS 912.1-B-5, table
+ * 3-11 and section 4.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

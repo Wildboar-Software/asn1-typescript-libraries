@@ -19,6 +19,38 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
  * @summary RafUsertoProviderPdu
  * @description
  * 
+ * SLE-PDU the RAF provider may receive. An instance is either user-initiated or
+ * provider-initiated, as set by service management.
+ * 
+ * `rafBindInvocation` is the user invoking RAF-BIND on a user-initiated
+ * instance. The operation is valid only in state 1 (unbound) and is confirmed.
+ * On a positive return the provider enters state 2 (ready) and sets parameters
+ * to the values supplied by service management.
+ * 
+ * `rafBindReturn` is the user's report of a provider-initiated RAF-BIND.
+ * `rafUnbindInvocation` is the initiator releasing the association; it is valid
+ * only in state 2 and only the invoker of RAF-BIND may send it.
+ * `rafUnbindReturn` is the user's report when the provider initiated the
+ * association. The only permitted UNBIND result is positive.
+ * 
+ * `rafStartInvocation` asks the provider to start frame delivery (state 2).
+ * `rafStopInvocation` asks it to stop (state 3).
+ * `rafScheduleStatusReportInvocation` asks for one status report, periodic
+ * reports, or for periodic reports to stop; it is valid in states 2 and 3 and
+ * is rejected for offline delivery. `rafGetParameterInvocation` reads one RAF
+ * parameter and is valid in states 2 and 3.
+ * 
+ * `rafPeerAbortInvocation` is the user aborting the association. It is
+ * unconfirmed, valid in states 2 and 3, and carries no credentials. The
+ * diagnostic is one of: access denied, unexpected responder ID, operational
+ * requirement, protocol error, communications failure (gateway only), encoding
+ * error, return timeout, end of the service-instance provision period,
+ * unsolicited invoke-ID, or other reason. The provider enters state 1, discards
+ * the transfer buffer, and keeps status-report statistics for the provision
+ * period.
+ * 
+ * CCSDS 911.1-B-5, sections 3.2, 3.3, 3.4, 3.5, 3.8, 3.10, 3.11, and A2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

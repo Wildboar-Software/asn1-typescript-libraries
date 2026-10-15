@@ -17,6 +17,11 @@ import { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId
  * @summary CltuGetParameter_parEventInvocationIdentification
  * @description
  * 
+ * expected-event-invocation-identification: the event-invocation-identification
+ * the provider expects on the next CLTU-THROW-EVENT. The initial value is zero.
+ * Each accepted THROW-EVENT advances it, and the value survives release and
+ * abort of the association. CCSDS 912.1-B-5, table 3-11 and section 3.11.2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,21 @@ export
 class CltuGetParameter_parEventInvocationIdentification {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `expectedEventInvocationIdentification`. Names the
+     * expected-event-invocation-identification parameter requested by
+     * CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Next event-invocation-identification the provider will accept. Starts at
+     * zero. CCSDS 912.1-B-5, table 3-11 and section 3.11.2.5.
      * @public
      * @readonly
      */

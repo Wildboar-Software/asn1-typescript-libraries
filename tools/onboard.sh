@@ -7,9 +7,11 @@
 set -euo pipefail
 
 packages=(
-    "lawful-intercept"
-    "q932"
-    "stanag4406"
+    # "sle"
+    # "ltans-scvp-extension"
+    # "lawful-intercept"
+    # "q932"
+    # "stanag4406"
     # "acp133"
     # "ain"
     # "c1222"

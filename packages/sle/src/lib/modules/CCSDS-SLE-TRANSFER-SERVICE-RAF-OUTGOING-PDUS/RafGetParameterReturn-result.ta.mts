@@ -12,6 +12,13 @@ import { DiagnosticRafGet, _decode_DiagnosticRafGet, _encode_DiagnosticRafGet } 
  * @summary RafGetParameterReturn_result
  * @description
  * 
+ * `positiveResult` is the current value of the parameter named in the
+ * invocation (table 3-11). `negativeResult` is the rejection diagnostic.
+ * Duplicate invoke-ID and other reason are the common diagnostics;
+ * `unknownParameter` is RAF-specific.
+ * 
+ * CCSDS 911.1-B-5, sections 3.10.2.7 and 3.10.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

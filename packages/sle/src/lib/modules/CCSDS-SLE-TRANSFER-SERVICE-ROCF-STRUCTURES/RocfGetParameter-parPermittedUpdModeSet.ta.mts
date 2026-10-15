@@ -17,6 +17,12 @@ import { UpdateMode, _decode_UpdateMode, _encode_UpdateMode } from "../CCSDS-SLE
  * @summary RocfGetParameter_parPermittedUpdModeSet
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the permitted update-mode set.
+ * Service management sets which of continuous and change-based this instance
+ * may use. ROCF-START must select a member.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.10 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,23 @@ export
 class RocfGetParameter_parPermittedUpdModeSet {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to permittedUpdateModeSet. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Update modes the user may request. continuous delivers every matching
+     * OCF. changeBased delivers an OCF when its contents differ from the
+     * previous OCF with the same telecommand VC. A START mode outside this set
+     * is rejected as an invalid update mode.
+     *
+     * CCSDS 911.5-B-4, sections 3.4.2.10 and 3.4.2.12 and table 3-11.
      * @public
      * @readonly
      */

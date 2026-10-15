@@ -17,6 +17,13 @@ import { _decode_FspGetParameter_parFopState_fopState, _encode_FspGetParameter_p
  * @summary FspGetParameter_parFopState
  * @description
  * 
+ * fop-state: the FOP state on this VC. Table 3-11 names ACTIVE, RETRANSMIT
+ * WITHOUT WAIT, RETRANSMIT WITH WAIT, INITIALIZING WITHOUT BC FRAME,
+ * INITIALIZING WITH BC FRAME, and INITIAL. Section 3.10 does not define the
+ * behavior of each state. Annex D1.3.4 calls fop-state read-only.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and annex D1.3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +46,18 @@ export
 class FspGetParameter_parFopState {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `fopState`, selecting fop-state in table 3-11. CCSDS 912.3-B-3,
+     * section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `fopState`.
+     * @description
+     * One of the six FOP states named in table 3-11. Section 3.10 does not
+     * define each state's behavior. CCSDS 912.3-B-3, table 3-11.
      * @public
      * @readonly
      */

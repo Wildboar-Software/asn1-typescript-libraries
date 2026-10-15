@@ -10,6 +10,12 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary NumberOfCltusProcessed
  * @description
  * 
+ * How many CLTUs the provider has attempted to radiate during this service
+ * instance. The count includes CLTUs that radiated, expired, or aborted, and a
+ * CLTU currently being radiated. Zero when none have been attempted.
+ * Accumulated for the whole provision period and kept across release, abort,
+ * and protocol abort. CCSDS 912.1-B-5, sections 3.9.2.11, 3.1.11, and 2.6.4.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

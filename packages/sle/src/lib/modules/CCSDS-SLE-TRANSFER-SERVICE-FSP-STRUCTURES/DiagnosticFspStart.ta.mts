@@ -12,6 +12,14 @@ import { _decode_DiagnosticFspStart_specific, _encode_DiagnosticFspStart_specifi
  * @summary DiagnosticFspStart
  * @description
  * 
+ * Negative-result diagnostic of FSP-START. A positive result omits the
+ * diagnostic, and the provider stays in state 2. `common` carries
+ * `duplicateInvokeId` and `otherReason`. `specific` carries the FSP-START codes
+ * in section 3.4.2.9. Checks follow the order in which that section lists the
+ * diagnostics.
+ * 
+ * CCSDS 912.3-B-3, sections 3.4.2.9, 3.4.3, and 3.1.3.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

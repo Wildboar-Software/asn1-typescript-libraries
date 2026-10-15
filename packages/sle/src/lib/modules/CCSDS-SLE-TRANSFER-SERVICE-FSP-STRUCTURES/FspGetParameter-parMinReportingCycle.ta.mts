@@ -21,6 +21,16 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary FspGetParameter_parMinReportingCycle
  * @description
  * 
+ * minimum-reporting-cycle: the minimum reporting cycle, in seconds, that the
+ * user may request in FSP-SCHEDULE-STATUS-REPORT. Service management sets it.
+ * The value is an integer from 1 to 600 (annex A2.5).
+ * 
+ * A requested cycle outside the range agreed by service management is rejected
+ * with diagnostic invalid reporting cycle (section 3.8.2.8.1). The cycle
+ * carried in that request is `ReportingCycle`, 2 to 600 seconds (annex A2.3).
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.8.2.8.1, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +46,18 @@ export
 class FspGetParameter_parMinReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `minReportingCycle`, selecting minimum-reporting-cycle in table
+     * 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Minimum reporting cycle in seconds, from 1 to 600. CCSDS 912.3-B-3, table
+     * 3-11 and annex A2.5.
      * @public
      * @readonly
      */

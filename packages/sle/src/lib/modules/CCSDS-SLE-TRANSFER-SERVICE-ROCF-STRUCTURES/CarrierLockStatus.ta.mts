@@ -18,6 +18,12 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary CarrierLockStatus
  * @description
  * 
+ * Lock of carrier demodulation, reported in a status report and in the value
+ * of a loss-of-frame-synchronization notification. The permitted values are
+ * in-lock, out-of-lock, and unknown.
+ *
+ * CCSDS 911.5-B-4, sections 3.7.2.4.2 and 3.9.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

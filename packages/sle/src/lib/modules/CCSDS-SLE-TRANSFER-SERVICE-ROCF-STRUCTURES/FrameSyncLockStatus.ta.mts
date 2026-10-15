@@ -18,6 +18,14 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary FrameSyncLockStatus
  * @description
  * 
+ * Lock of the frame synchronization process, as reported by
+ * ROCF-STATUS-REPORT. The permitted values are in-lock, out-of-lock, and
+ * unknown. A transition from in-lock to out-of-lock is also signalled by
+ * ROCF-SYNC-NOTIFY; the return to in-lock is indicated by the next
+ * ROCF-TRANSFER-DATA.
+ *
+ * CCSDS 911.5-B-4, sections 3.7.2.3 and 3.9.2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

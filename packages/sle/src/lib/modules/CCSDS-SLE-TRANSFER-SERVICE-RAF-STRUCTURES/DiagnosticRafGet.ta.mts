@@ -12,6 +12,14 @@ import { _decode_DiagnosticRafGet_specific, _encode_DiagnosticRafGet_specific, D
  * @summary DiagnosticRafGet
  * @description
  * 
+ * Negative-result diagnostic of RAF-GET-PARAMETER. A positive result includes
+ * no diagnostic. `common` carries the shared diagnostics `duplicateInvokeId`
+ * and `otherReason`. `specific` carries `unknownParameter`. `otherReason` is
+ * used only when no listed value fits. Checks should follow the order in
+ * section 3.10.2.8.
+ * 
+ * CCSDS 911.1-B-5, sections 3.10.2.8, 3.1.1.4, and 3.1.3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

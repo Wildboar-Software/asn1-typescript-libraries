@@ -8,6 +8,11 @@ import { ServiceNames } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/
  * @summary ServiceInstanceAttributes
  * @description
  * 
+ * Every attribute that may appear in a service instance identifier:
+ * `GeneralAttributes` together with `ServiceNames`.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

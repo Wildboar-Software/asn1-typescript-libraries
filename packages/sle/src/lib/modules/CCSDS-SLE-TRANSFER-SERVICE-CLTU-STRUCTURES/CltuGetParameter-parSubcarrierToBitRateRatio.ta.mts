@@ -17,6 +17,12 @@ import { SubcarrierDivisor, _decode_SubcarrierDivisor, _encode_SubcarrierDivisor
  * @summary CltuGetParameter_parSubcarrierToBitRateRatio
  * @description
  * 
+ * subcarrier-to-bit-rate-ratio: when a subcarrier is used, the ratio of the
+ * subcarrier frequency to the uplink bit rate. A value of one means the data
+ * are modulated directly onto the carrier. The Annex A comment calls the same
+ * value the divisor of the subcarrier frequency. Set by service management.
+ * CCSDS 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,21 @@ export
 class CltuGetParameter_parSubcarrierToBitRateRatio {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `subcarrierToBitRateRatio`. Names the
+     * subcarrier-to-bit-rate-ratio parameter requested by CLTU-GET-PARAMETER.
+     * CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Subcarrier frequency divided by the uplink bit rate. One means direct
+     * carrier modulation. CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

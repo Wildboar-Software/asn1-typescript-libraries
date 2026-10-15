@@ -12,6 +12,13 @@ import { _decode_DiagnosticFspInvokeDirective_specific, _encode_DiagnosticFspInv
  * @summary DiagnosticFspInvokeDirective
  * @description
  * 
+ * Negative-result diagnostic of FSP-INVOKE-DIRECTIVE. A positive result omits
+ * the diagnostic and forwards the directive. The provider stays in state 3.
+ * `common` carries `duplicateInvokeId` and `otherReason`. `specific` carries
+ * the codes in section 3.12.2.8. Checks follow the order in that section.
+ * 
+ * CCSDS 912.3-B-3, sections 3.12.2.8, 3.12.3, and 3.1.3.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

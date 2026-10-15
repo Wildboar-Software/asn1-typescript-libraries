@@ -12,6 +12,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TimeCCSDS
  * @description
  * 
+ * Eight-octet CCSDS day-segmented time code with microsecond resolution. The
+ * P-field is implicit and defaulted to 41 hex. The T-field is two octets of
+ * days since 1958-01-01 00:00:00, four octets of milliseconds of the day, and
+ * two octets of microseconds of the millisecond, set to 0 when unused. This is
+ * the time-tag format used in space link data units (reference [7] of this
+ * book).
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.1.7.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

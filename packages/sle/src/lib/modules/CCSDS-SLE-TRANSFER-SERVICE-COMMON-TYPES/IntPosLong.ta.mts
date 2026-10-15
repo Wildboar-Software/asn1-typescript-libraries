@@ -15,6 +15,10 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary IntPosLong
  * @description
  * 
+ * Positive integer from 1 through 4294967295, that is 1 through (2^32)-1.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

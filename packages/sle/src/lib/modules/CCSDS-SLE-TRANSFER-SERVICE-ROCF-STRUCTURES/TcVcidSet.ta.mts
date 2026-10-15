@@ -12,6 +12,14 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary TcVcidSet
  * @description
  * 
+ * permitted-tc-vcid-set, configured by service management. noTcVC means a
+ * telecommand VC must not be selected, for example because the OCFs to be
+ * delivered are not CLCWs. tcVcids is the set of telecommand VCs the user may
+ * name when requesting CLCWs. An ROCF-START tc-vcid outside this set is
+ * invalid.
+ *
+ * CCSDS 911.5-B-4, sections 3.4.2.9, 3.4.2.12, and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

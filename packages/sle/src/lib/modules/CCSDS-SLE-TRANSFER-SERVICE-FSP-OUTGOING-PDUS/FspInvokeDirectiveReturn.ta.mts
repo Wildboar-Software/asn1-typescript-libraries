@@ -15,6 +15,13 @@ import { FspInvokeDirectiveReturn_result, _decode_FspInvokeDirectiveReturn_resul
  * @summary FspInvokeDirectiveReturn
  * @description
  * 
+ * Provider return from FSP-INVOKE-DIRECTIVE. A positive result means the
+ * directive will be passed to the relevant protocol entity. A negative result
+ * means it will not. Completion of an accepted directive is reported later by
+ * FSP-ASYNC-NOTIFY. The provider remains in state 3 (active).
+ * 
+ * CCSDS 912.3-B-3, sections 3.12.2.7 and 3.12.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +42,53 @@ export
 class FspInvokeDirectiveReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * Information with which the invoker authenticates this return. When the
+     * agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated. When this return is unauthenticated, the
+     * value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. An invoke-ID that still has an outstanding return in the
+     * same service instance is rejected with `duplicateInvokeId`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.6.4 and 3.1.6.5.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `directiveIdentification`.
+     * @description
+     * Directive identification the provider expects on the next
+     * FSP-INVOKE-DIRECTIVE. If this invocation is accepted, the value is one
+     * greater than the identification in the invocation. If it is rejected, the
+     * value is the one the provider expected: 0 for the first directive after a
+     * successful FSP-BIND, otherwise one greater than the last accepted
+     * identification. The user copies this returned value into the next
+     * invocation.
+     * 
+     * CCSDS 912.3-B-3, section 3.12.2.5.
      * @public
      * @readonly
      */
     readonly directiveIdentification: IntUnsignedLong;
     /**
      * @summary `result`.
+     * @description
+     * Outcome of FSP-INVOKE-DIRECTIVE. `positiveResult` means the directive
+     * will be implemented. `negativeResult` carries a
+     * `DiagnosticFspInvokeDirective`.
+     * 
+     * CCSDS 912.3-B-3, section 3.12.2.7.
      * @public
      * @readonly
      */

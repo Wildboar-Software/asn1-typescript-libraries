@@ -15,6 +15,11 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary IntUnsignedShort
  * @description
  * 
+ * Integer from 0 through 65535, that is 0 through (2^16)-1. Invoke identifiers
+ * use this range.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

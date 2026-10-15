@@ -12,6 +12,11 @@ import { _decode_DiagnosticCltuStart_specific, _encode_DiagnosticCltuStart_speci
  * @summary DiagnosticCltuStart
  * @description
  * 
+ * Why CLTU-START failed. common carries duplicate invoke id and other reason.
+ * specific carries out of service, unable to comply, production time expired,
+ * and invalid cltu-ID. Present only when result is negative. CCSDS 912.1-B-5,
+ * section 3.4.2.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

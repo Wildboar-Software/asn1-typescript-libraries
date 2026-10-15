@@ -11,6 +11,12 @@ import { ServiceInstanceAttribute_Item, _decode_ServiceInstanceAttribute_Item, _
  * @summary ServiceInstanceAttribute
  * @description
  * 
+ * One attribute of a service instance identifier: a printable name
+ * together with its value. The set contains exactly one pair. In the
+ * string form this attribute is `name=value`.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

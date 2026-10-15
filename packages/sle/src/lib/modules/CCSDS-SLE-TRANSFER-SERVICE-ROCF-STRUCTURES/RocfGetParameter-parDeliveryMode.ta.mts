@@ -17,6 +17,12 @@ import { RocfDeliveryMode, _decode_RocfDeliveryMode, _encode_RocfDeliveryMode } 
  * @summary RocfGetParameter_parDeliveryMode
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the delivery mode of this instance.
+ * Service management sets the mode, and the instance supports one of timely
+ * online, complete online, or offline.
+ *
+ * CCSDS 911.5-B-4, sections 2.3 and 3.1.9 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,24 @@ export
 class RocfGetParameter_parDeliveryMode {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to deliveryMode. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * The instance delivery mode: timely online, complete online, or offline.
+     * Online modes run with the space link session. Offline delivers stored
+     * OCFs after the session. Timely online may discard a transfer buffer that
+     * cannot be released in time. Complete online attempts to deliver every
+     * acquired OCF.
+     *
+     * CCSDS 911.5-B-4, sections 2.3 and 3.1.9 and table 3-11.
      * @public
      * @readonly
      */

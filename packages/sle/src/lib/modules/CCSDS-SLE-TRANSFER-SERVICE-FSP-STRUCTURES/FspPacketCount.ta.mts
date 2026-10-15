@@ -12,6 +12,11 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary FspPacketCount
  * @description
  * 
+ * Separate AD and BD counts for one status-report total. Section 3.1.11
+ * requires AD and BD information to be kept separately.
+ * 
+ * CCSDS 912.3-B-3, sections 3.9.2.9 through 3.9.2.11 and 3.1.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,20 @@ export
 class FspPacketCount {
     /**
      * @summary `adCount`.
+     * @description
+     * Count of sequence-controlled (AD) Packets in this total.
+     * 
+     * CCSDS 912.3-B-3, sections 3.9.2.9 through 3.9.2.11.
      * @public
      * @readonly
      */
     readonly adCount: IntUnsignedLong;
     /**
      * @summary `bdCount`.
+     * @description
+     * Count of expedited (BD) Packets in this total.
+     * 
+     * CCSDS 912.3-B-3, sections 3.9.2.9 through 3.9.2.11.
      * @public
      * @readonly
      */

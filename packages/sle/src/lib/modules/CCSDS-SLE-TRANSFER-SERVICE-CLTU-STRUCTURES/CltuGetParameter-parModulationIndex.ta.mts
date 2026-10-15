@@ -17,6 +17,10 @@ import { ModulationIndex, _decode_ModulationIndex, _encode_ModulationIndex } fro
  * @summary CltuGetParameter_parModulationIndex
  * @description
  * 
+ * modulation-index: the peak angle by which the RF carrier is phase shifted
+ * from the unmodulated carrier, in milliradians (10^-3 rad). Set by service
+ * management. CCSDS 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,19 @@ export
 class CltuGetParameter_parModulationIndex {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `modulationIndex`. Names the modulation-index parameter requested
+     * by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Peak carrier phase shift in milliradians. CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

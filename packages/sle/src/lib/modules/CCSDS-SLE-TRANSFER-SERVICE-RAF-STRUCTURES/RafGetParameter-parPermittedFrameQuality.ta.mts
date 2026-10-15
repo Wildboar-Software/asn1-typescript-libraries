@@ -17,6 +17,12 @@ import { PermittedFrameQualitySet, _decode_PermittedFrameQualitySet, _encode_Per
  * @summary RafGetParameter_parPermittedFrameQuality
  * @description
  * 
+ * RAF-GET-PARAMETER value of `permitted-frame-quality-set`: the frame-quality
+ * filters the user may choose on RAF-START. Service management sets the set. It
+ * contains at least one of good frames only, erred frames only, and all frames.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.1.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,18 @@ export
 class RafGetParameter_parPermittedFrameQuality {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `permittedFrameQuality`, selecting permitted-frame-quality-set
+     * in table 3-11. CCSDS 911.1-B-5, annex A2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * The permitted requested-frame-quality values for this instance. CCSDS
+     * 911.1-B-5, table 3-11.
      * @public
      * @readonly
      */

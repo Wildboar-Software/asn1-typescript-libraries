@@ -15,6 +15,16 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary TimeoutPeriod
  * @description
  * 
+ * return-timeout-period, in seconds, from 1 to 600. The maximum time from
+ * invocation of a confirmed ROCF operation until the invoker receives the
+ * return. Service management sets it. If the return is still missing when the
+ * period expires, the invoker peer-aborts with the return-timeout diagnostic.
+ * The period accounts for user and provider performance and for delay in the
+ * communications service. Generation of the return must not depend on a human
+ * action.
+ *
+ * CCSDS 911.5-B-4, section 4.1.3, table 3-11, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

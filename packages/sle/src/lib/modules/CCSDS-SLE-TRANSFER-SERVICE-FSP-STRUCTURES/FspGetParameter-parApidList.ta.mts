@@ -17,6 +17,15 @@ import { ApidList, _decode_ApidList, _encode_ApidList } from "../CCSDS-SLE-TRANS
  * @summary FspGetParameter_parApidList
  * @description
  * 
+ * apid-list: the APIDs this service instance is authorized to access. Service
+ * management sets it.
+ * 
+ * Annex A2.5 encodes the value as `any` (null) or 1 to 2048 APIDs in ascending
+ * order. Each APID is an integer from 0 to 2047. Section 3.10 does not define
+ * `any`.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +41,19 @@ export
 class FspGetParameter_parApidList {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `apidList`, selecting apid-list in table 3-11. CCSDS 912.3-B-3,
+     * section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * APIDs this service instance may access. Annex A2.5 allows `any`, or 1 to
+     * 2048 APIDs in ascending order, each from 0 to 2047. Section 3.10 does not
+     * define `any`. CCSDS 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

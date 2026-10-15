@@ -13,6 +13,12 @@ import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANS
  * @summary SleStopInvocation
  * @description
  * 
+ * Invocation of STOP. The user asks the provider to stop delivering telemetry
+ * frames. Valid only in state 3 (active). Within the provision period the user
+ * may start delivery again with START. Annex A2.6 maps this PDU to RAF-STOP.
+ * 
+ * CCSDS 911.1-B-5, section 3.5.1 and annex A2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,26 @@ export
 class SleStopInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * 
+     * Information with which the performer authenticates this RAF-STOP
+     * invocation. When the agreed level is `all`, STOP is authenticated.
+     * Otherwise the value should be `unused`.
+     *
+     * CCSDS 911.1-B-5, sections 3.5.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * User-supplied integer that the provider returns unchanged. A value that
+     * still has an outstanding return in this service instance is rejected with
+     * `duplicateInvokeId`.
+     *
+     * CCSDS 911.1-B-5, sections 3.5.2.4 and 3.1.6.
      * @public
      * @readonly
      */

@@ -13,7 +13,14 @@ import { FspGetParameterReturn_result, _decode_FspGetParameterReturn_result, _en
 /**
  * @summary FspGetParameterReturn
  * @description
- * 
+ *
+ * Return from FSP-GET-PARAMETER. A positive result carries the parameter and
+ * its current value. A negative result carries only the diagnostic. The
+ * provider stays in state 2 (ready) or state 3 (active), whichever it was
+ * already in.
+ *
+ * CCSDS 912.3-B-3, sections 3.10.2 and 3.10.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +40,36 @@ export
 class FspGetParameterReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * Information with which the invoker authenticates this return. When the
+     * agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated; `bind` authenticates only FSP-BIND;
+     * `none` leaves every invocation and return unauthenticated. When this
+     * return is unauthenticated, the value should be `unused`.
+     *
+     * CCSDS 912.3-B-3, sections 3.10.2.3 and 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * The invoke-ID from the FSP-GET-PARAMETER invocation, unchanged.
+     *
+     * CCSDS 912.3-B-3, section 3.10.2.4.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * `positiveResult` carries the requested parameter and its value.
+     * `negativeResult` is a `DiagnosticFspGet`, and the parameter name and
+     * value are omitted.
+     *
+     * CCSDS 912.3-B-3, sections 3.10.2.5, 3.10.2.6, and 3.10.2.7.
      * @public
      * @readonly
      */

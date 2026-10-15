@@ -18,6 +18,12 @@ import { RafGetParameter_parReturnTimeout, _decode_RafGetParameter_parReturnTime
  * @summary RafGetParameter
  * @description
  * 
+ * Positive result of RAF-GET-PARAMETER: one alternative for each parameter in
+ * table 3-11, carrying the parameter name and its current value. A negative
+ * result carries `DiagnosticRafGet`. The provider state stays unchanged.
+ * 
+ * CCSDS 911.1-B-5, sections 3.10.2.6, 3.10.3, and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,17 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary FspGetParameter_parCopCntrFramesRepetition
  * @description
  * 
+ * cop-control-frames-repetition: how many times a BC frame on this VC is passed
+ * to the Forward CLTU Generation FG. Service management sets it. A BD frame is
+ * passed once (annex B5.3).
+ * 
+ * Annex A2.1 types the value as `IntPosShort` (1 to 65535). When frame
+ * repetition is unsupported, the value is 1 (annex B5.4). It must not exceed
+ * `repetition-limit` (annex B5.5). Section 3.10 does not define
+ * `repetition-limit`.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, annex A2.1, and annex B5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +43,21 @@ export
 class FspGetParameter_parCopCntrFramesRepetition {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `copCntrFramesRepetition`, selecting
+     * cop-control-frames-repetition in table 3-11. CCSDS 912.3-B-3, section
+     * 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Repetitions of each BC frame passed to the Forward CLTU Generation FG.
+     * Range 1 to 65535. The value is 1 when frame repetition is unsupported,
+     * and it must not exceed `repetition-limit`. CCSDS 912.3-B-3, table 3-11,
+     * annex A2.1, and annex B5.
      * @public
      * @readonly
      */

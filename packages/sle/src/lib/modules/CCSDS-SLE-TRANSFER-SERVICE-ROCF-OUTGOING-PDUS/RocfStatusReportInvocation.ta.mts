@@ -18,6 +18,16 @@ import { RocfProductionStatus, _decode_RocfProductionStatus, _encode_RocfProduct
  * @summary RocfStatusReportInvocation
  * @description
  * 
+ * Unconfirmed status report sent by the provider as arranged by
+ * ROCF-SCHEDULE-STATUS-REPORT. Valid in states 2 (ready) and 3 (active).
+ * Periodic reporting is off when BIND moves the provider from state 1 to state
+ * 2. The schedule operation is rejected for an offline instance. Frame and OCF
+ * counters accumulate for the whole service instance provision period,
+ * including across a new association, and are kept if the association aborts.
+ * The provider state stays unchanged.
+ *
+ * CCSDS 911.5-B-4, sections 3.8.1, 3.9, 2.6.4.4, and 3.11.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,48 +49,98 @@ export
 class RocfStatusReportInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * 
+     * Credentials the user uses to authenticate this provider invocation. When
+     * the agreed authentication level does not cover the invocation, the value
+     * is unused. The octet layout is the bilaterally agreed algorithm, which
+     * this specification leaves unspecified. CCSDS 911.5-B-4, sections 3.1.5
+     * and 3.9.2.2.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `processedFrameNumber`.
+     * @description
+     * 
+     * Count of telemetry frames processed for OCF extraction since the start of
+     * the service instance provision period: the frames whose global VCID is
+     * the requested one. The book equates this with the number of frames an RCF
+     * instance with the same requested global VCID would deliver while active.
+     *
+     * CCSDS 911.5-B-4, section 3.9.2.3.
      * @public
      * @readonly
      */
     readonly processedFrameNumber: IntUnsignedLong;
     /**
      * @summary `deliveredOcfsNumber`.
+     * @description
+     * 
+     * Count of OCFs delivered to the user since the start of the service
+     * instance provision period.
+     *
+     * CCSDS 911.5-B-4, section 3.9.2.4.
      * @public
      * @readonly
      */
     readonly deliveredOcfsNumber: IntUnsignedLong;
     /**
      * @summary `frameSyncLockStatus`.
+     * @description
+     * 
+     * Current lock of the frame synchronization process: in-lock, out-of-lock,
+     * or unknown.
+     *
+     * CCSDS 911.5-B-4, section 3.9.2.5.
      * @public
      * @readonly
      */
     readonly frameSyncLockStatus: FrameSyncLockStatus;
     /**
      * @summary `symbolSyncLockStatus`.
+     * @description
+     * 
+     * Current lock of the symbol (or bit) synchronization process: in-lock,
+     * out-of-lock, or unknown.
+     *
+     * CCSDS 911.5-B-4, section 3.9.2.6.
      * @public
      * @readonly
      */
     readonly symbolSyncLockStatus: SymbolLockStatus;
     /**
      * @summary `subcarrierLockStatus`.
+     * @description
+     * 
+     * Current lock of subcarrier demodulation: in-lock, out-of-lock, not in
+     * use, or unknown.
+     *
+     * CCSDS 911.5-B-4, section 3.9.2.7.
      * @public
      * @readonly
      */
     readonly subcarrierLockStatus: LockStatus;
     /**
      * @summary `carrierLockStatus`.
+     * @description
+     * 
+     * Current lock of carrier demodulation: in-lock, out-of-lock, or unknown.
+     *
+     * CCSDS 911.5-B-4, section 3.9.2.8.
      * @public
      * @readonly
      */
     readonly carrierLockStatus: CarrierLockStatus;
     /**
      * @summary `productionStatus`.
+     * @description
+     * 
+     * Current ROCF production status: running, halted, or interrupted. See
+     * section 3.7.2.4 and annex B.
+     *
+     * CCSDS 911.5-B-4, section 3.9.2.9.
      * @public
      * @readonly
      */

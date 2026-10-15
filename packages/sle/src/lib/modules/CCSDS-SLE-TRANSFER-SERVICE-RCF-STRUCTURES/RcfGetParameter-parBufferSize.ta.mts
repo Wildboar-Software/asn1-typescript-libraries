@@ -16,7 +16,16 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
 /**
  * @summary RcfGetParameter_parBufferSize
  * @description
- * 
+ *
+ * Returned value of transfer-buffer-size. Service management sets how many
+ * RCF-TRANSFER-DATA and RCF-SYNC-NOTIFY invocations the transfer buffer holds.
+ * In timely online mode the provider temporarily treats the buffer as one
+ * larger while a data-discarded notification occupies a slot, then restores
+ * the configured size after the buffer is passed. Annex C requires capacity
+ * for at least 200 RCF-TRANSFER-DATA invocations.
+ *
+ * CCSDS 911.2-B-4, section 3.1.9, table 3-11, and annex C.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +43,24 @@ export
 class RcfGetParameter_parBufferSize {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Identifies this value as transfer-buffer-size (bufferSize).
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Number of RCF-TRANSFER-DATA and RCF-SYNC-NOTIFY invocations the transfer
+     * buffer can hold. See the type description for the timely-online size
+     * adjustment and the annex C minimum.
+     *
+     * CCSDS 911.2-B-4, section 3.1.9 and table 3-11.
      * @public
      * @readonly
      */
@@ -60,7 +81,8 @@ class RcfGetParameter_parBufferSize {
      * @summary Restructures an object into a RcfGetParameter_parBufferSize
      * @description
      * 
-     * This takes an `object` and converts it to a `RcfGetParameter_parBufferSize`.
+     * This takes an `object` and converts it to a
+     * `RcfGetParameter_parBufferSize`.
      * 
      * @public
      * @static
@@ -79,7 +101,8 @@ class RcfGetParameter_parBufferSize {
  * @summary The Leading Root Component Types of RcfGetParameter_parBufferSize
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -93,7 +116,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameter_parBufferSize: $.Comp
  * @summary The Trailing Root Component Types of RcfGetParameter_parBufferSize
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -106,7 +130,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameter_parBufferSize: $.Comp
  * @summary The Extension Addition Component Types of RcfGetParameter_parBufferSize
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

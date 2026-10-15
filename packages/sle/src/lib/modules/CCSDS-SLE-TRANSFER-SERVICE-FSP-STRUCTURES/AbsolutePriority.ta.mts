@@ -13,6 +13,11 @@ import { Priority, _decode_Priority, _encode_Priority } from "../CCSDS-SLE-TRANS
  * @summary AbsolutePriority
  * @description
  * 
+ * One entry of an absolute-priority list: a VC or MAP identifier and its
+ * priority. The list has 1 to 64 entries. All priorities are different.
+ * 
+ * CCSDS 912.3-B-3, annex A2.5 and section B2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,21 @@ export
 class AbsolutePriority {
     /**
      * @summary `vcOrMapId`.
+     * @description
+     * Virtual Channel or MAP to which `priority` applies. At MAP level the
+     * identifier is a MAP. At VC level it is a VC.
+     * 
+     * CCSDS 912.3-B-3, annex A2.5 and sections B3 and B4.
      * @public
      * @readonly
      */
     readonly vcOrMapId: VcOrMapId;
     /**
      * @summary `priority`.
+     * @description
+     * Priority of this VC or MAP. 1 is highest and 64 is lowest.
+     * 
+     * CCSDS 912.3-B-3, annex A2.5.
      * @public
      * @readonly
      */

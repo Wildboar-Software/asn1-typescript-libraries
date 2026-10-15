@@ -4,6 +4,10 @@
  * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES` from the CCSDS Space Link Extension
  * transfer services. The module is declared with IMPLICIT TAGS.
  *
+ * Credentials, invoke ID, time, delivery mode, diagnostics, and parameter names
+ * shared by the SLE transfer services. CCSDS 911.1-B-5, section 3.1 and annex
+ * A2.1.
+ *
  * `{iso identified-organization(3) standards-producing-organization(112) ccsds(4) space-link-extension(3) sle-transfer-services(1) modules(1) common-modules(99) version-five(5) asn1-common-types(1)}`
  */
 export * from "./ConditionalTime.ta.mjs";

@@ -14,6 +14,15 @@ import { RocfStartReturn_result, _decode_RocfStartReturn_result, _encode_RocfSta
  * @summary RocfStartReturn
  * @description
  * 
+ * Provider return for ROCF-START. A positive result means the provider has
+ * entered state 3 (active) and will deliver every available OCF that meets the
+ * START criteria. A negative result leaves the state unchanged and the
+ * provider delivers no OCFs. Checks should be applied in the order the
+ * diagnostics are listed in section 3.4.2.12, and the first problem found is
+ * the one reported.
+ *
+ * CCSDS 911.5-B-4, sections 3.1.3.4, 3.4.2.11, 3.4.2.12, and 3.4.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +42,37 @@ export
 class RocfStartReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * 
+     * Credentials the invoker uses to authenticate this return. When
+     * authentication of the return is not required, the value is unused. The
+     * octet layout is the bilaterally agreed algorithm, which this
+     * specification leaves unspecified. CCSDS 911.5-B-4, sections 3.1.5 and
+     * 3.4.2.3.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Integer chosen by the invoker. The performer returns it unchanged so the
+     * return can be matched to this invocation. A value that duplicates an
+     * invoke-ID still awaiting confirmation in this service instance is
+     * rejected. CCSDS 911.5-B-4, sections 3.1.6 and 3.4.2.4.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * 
+     * positiveResult reports that START was performed. negativeResult carries
+     * DiagnosticRocfStart and reports that START was not performed.
+     *
+     * CCSDS 911.5-B-4, sections 3.4.2.11 and 3.4.2.12.
      * @public
      * @readonly
      */

@@ -12,7 +12,14 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
 /**
  * @summary MasterChannelComposition_mcOrVcList
  * @description
- * 
+ *
+ * What of one Master Channel an RCF instance may deliver. masterChannel
+ * permits the Master Channel itself. vcList permits the listed Virtual
+ * Channels. Annex A sizes vcList to 1..64 and comments that TM uses 1..8 while
+ * AOS and USLP use 1..64.
+ *
+ * CCSDS 911.2-B-4, section 3.4.2.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,13 @@ import { ReportingCycle, _decode_ReportingCycle, _encode_ReportingCycle } from "
  * @summary CurrentReportingCycle
  * @description
  * 
+ * Current reporting-cycle as returned by CLTU-GET-PARAMETER.
+ * periodicReportingOff is the table 3-11 value null: cyclic reporting is off,
+ * which is also the value until the first successful periodic
+ * CLTU-SCHEDULE-STATUS-REPORT. periodicReportingOn is the interval, in seconds,
+ * between CLTU-STATUS-REPORT invocations. CCSDS 912.1-B-5, table 3-11 and
+ * section 3.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

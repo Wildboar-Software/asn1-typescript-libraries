@@ -16,7 +16,16 @@ import { RcfGetParameter_parLatencyLimit_parameterValue, _decode_RcfGetParameter
 /**
  * @summary RcfGetParameter_parLatencyLimit
  * @description
- * 
+ *
+ * Returned value of latency-limit. For an online mode this is the
+ * release-timer duration, in seconds: the timer starts when a record is
+ * inserted into an empty transfer buffer, and its expiry releases the buffer.
+ * Table 3-11 also describes the parameter as the maximum delay from
+ * acquisition of a frame until the PDU containing that frame is delivered. For
+ * offline delivery the value is null. Service management sets it.
+ *
+ * CCSDS 911.2-B-4, sections 3.1.9.1.5 and 3.1.9.2.7, and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +45,23 @@ export
 class RcfGetParameter_parLatencyLimit {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Identifies this value as latency-limit (latencyLimit).
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Latency limit for an online mode, in seconds, or null when the delivery
+     * mode is offline.
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
@@ -62,7 +82,8 @@ class RcfGetParameter_parLatencyLimit {
      * @summary Restructures an object into a RcfGetParameter_parLatencyLimit
      * @description
      * 
-     * This takes an `object` and converts it to a `RcfGetParameter_parLatencyLimit`.
+     * This takes an `object` and converts it to a
+     * `RcfGetParameter_parLatencyLimit`.
      * 
      * @public
      * @static
@@ -81,7 +102,8 @@ class RcfGetParameter_parLatencyLimit {
  * @summary The Leading Root Component Types of RcfGetParameter_parLatencyLimit
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -95,7 +117,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameter_parLatencyLimit: $.Co
  * @summary The Trailing Root Component Types of RcfGetParameter_parLatencyLimit
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -108,7 +131,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameter_parLatencyLimit: $.Co
  * @summary The Extension Addition Component Types of RcfGetParameter_parLatencyLimit
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -11,6 +11,12 @@ import { IdentifierString, _decode_IdentifierString, _encode_IdentifierString } 
  * @summary LogicalPortName
  * @description
  * 
+ * Logical name that SLE Complex Management and SLE Utilization Management
+ * agree, and translate into technology-specific addressing. The length is 1 to
+ * 128 characters, with no space.
+ * 
+ * CCSDS 911.1-B-5, section 2.6.4.5 and annex A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

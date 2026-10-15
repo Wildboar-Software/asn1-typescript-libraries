@@ -13,6 +13,15 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary MasterChannelComposition_mcOrVcList
  * @description
  * 
+ * What a permitted Master Channel composition allows the user to select.
+ * masterChannel permits the Master Channel. vcList permits the listed Virtual
+ * Channels. The list size is 1..64. The annex A comment further limits a TM
+ * list to 1..8, and AOS and USLP lists to 1..64. If the permitted set names a
+ * Master Channel and names no Virtual Channel of that Master Channel, a
+ * Virtual Channel of it is not a valid ROCF-START request.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.7 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

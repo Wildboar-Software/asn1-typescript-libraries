@@ -30,6 +30,11 @@ import { CltuGetParameter_parSubcarrierToBitRateRatio, _decode_CltuGetParameter_
  * @summary CltuGetParameter
  * @description
  * 
+ * The parameter value returned by a positive CLTU-GET-PARAMETER. Each
+ * alternative is one row of table 3-11, with the ParameterName that identifies
+ * it. Omitted from the return when the result is negative. CCSDS 912.1-B-5,
+ * section 3.10 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

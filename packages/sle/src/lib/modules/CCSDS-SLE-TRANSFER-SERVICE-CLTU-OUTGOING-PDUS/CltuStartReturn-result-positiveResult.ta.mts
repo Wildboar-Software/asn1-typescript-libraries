@@ -12,6 +12,9 @@ import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } fro
  * @summary CltuStartReturn_result_positiveResult
  * @description
  * 
+ * Radiation window returned when CLTU-START succeeds. Present only for positive
+ * result. CCSDS 912.1-B-5, sections 3.4.2.6 and 3.4.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +30,28 @@ export
 class CltuStartReturn_result_positiveResult {
     /**
      * @summary `startRadiationTime`.
+     * @description
+     *
+     * Estimated time the provider can start radiating CLTUs (section 3.4.2.6,
+     * start-production-time). If production-status is not yet operational, this
+     * is taken from the schedule and includes completion of the uplink
+     * acquisition sequence. If production is already operational, this is the
+     * time production-status became operational, and a later START in the same
+     * service instance reports the most recent such time. UTC CDS, epoch
+     * 1958-01-01, to at least 0.1 s (section 3.1.7).
      * @public
      * @readonly
      */
     readonly startRadiationTime: Time;
     /**
      * @summary `stopRadiationTime`.
+     * @description
+     *
+     * Estimated time the provider will stop radiating CLTUs (section 3.4.2.7,
+     * stop-production-time). This may fall after the end of the service
+     * instance provision period. The undefined alternative is the section 3
+     * value null, used when the provider has no estimate. UTC CDS, epoch
+     * 1958-01-01 (section 3.1.7).
      * @public
      * @readonly
      */

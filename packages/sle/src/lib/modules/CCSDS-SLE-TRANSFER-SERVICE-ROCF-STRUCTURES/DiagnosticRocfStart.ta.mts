@@ -12,6 +12,16 @@ import { _decode_DiagnosticRocfStart_specific, _encode_DiagnosticRocfStart_speci
  * @summary DiagnosticRocfStart
  * @description
  * 
+ * Negative-result diagnostic of ROCF-START. The common alternative carries the
+ * diagnostics shared by SLE operations: duplicateInvokeId (100) when invoke-ID
+ * matches an invocation still awaiting confirmation, and otherReason (127),
+ * used only when no listed diagnostic fits. The specific alternative carries
+ * the ROCF-START diagnostics in section 3.4.2.12, items b through j. The
+ * provider should test in the order those diagnostics are listed and report
+ * the first problem found.
+ *
+ * CCSDS 911.5-B-4, sections 3.1.1.4, 3.1.3.4, 3.4.2.12, and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

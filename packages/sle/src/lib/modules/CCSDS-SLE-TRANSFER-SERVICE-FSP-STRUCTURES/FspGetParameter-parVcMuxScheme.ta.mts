@@ -17,6 +17,14 @@ import { _decode_MuxScheme, _encode_MuxScheme, MuxScheme } from "../CCSDS-SLE-TR
  * @summary FspGetParameter_parVcMuxScheme
  * @description
  * 
+ * vc-multiplexing-scheme: the VC multiplexing scheme in effect. The values are
+ * FIFO, absolute priority, and polling vector. Service management sets it.
+ * Annex B4 defines how each scheme selects the next TC frame.
+ * 
+ * Annex A2.5: fifo is 0, absolute-priority is 1, and polling-vector is 2.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, annex A2.5, and annex B4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,18 @@ export
 class FspGetParameter_parVcMuxScheme {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `vcMuxScheme`, selecting vc-multiplexing-scheme in table 3-11.
+     * CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * FIFO (0), absolute priority (1), or polling vector (2). CCSDS 912.3-B-3,
+     * table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

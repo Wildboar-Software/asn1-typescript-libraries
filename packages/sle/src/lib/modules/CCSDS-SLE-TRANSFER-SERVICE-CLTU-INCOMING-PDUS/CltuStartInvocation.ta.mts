@@ -14,6 +14,12 @@ import { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentificat
  * @summary CltuStartInvocation
  * @description
  * 
+ * User request that the provider prepare to accept CLTU-TRANSFER-DATA. Valid
+ * only in state 2 (ready). Confirmed and non-blocking. A positive result moves
+ * the provider to state 3 (active) and returns the scheduled radiation window.
+ * A negative result leaves the state unchanged. CCSDS 912.1-B-5, sections 3.4
+ * and 2.6.4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +36,37 @@ export
 class CltuStartInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the performer authenticate this invocation when the
+     * agreed authentication level requires it. Set this to unused when
+     * authentication is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Invoker-supplied integer. The performer returns it unchanged so the
+     * return can be matched to this invocation. Reusing a value that still has
+     * a return outstanding is rejected with diagnostic duplicate invoke id.
+     * CCSDS 912.1-B-5, section 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `firstCltuIdentification`.
+     * @description
+     *
+     * cltu-identification the provider expects on the first CLTU-TRANSFER-DATA
+     * after this START. After an exception that requires STOP followed by
+     * START, choose a value that still uniquely identifies a CLTU whose
+     * processing had not finished. A value lower than the identification of a
+     * CLTU already in the buffer yields diagnostic invalid cltu-ID. CCSDS
+     * 912.1-B-5, sections 3.4.2.5 and 3.4.2.9.
      * @public
      * @readonly
      */

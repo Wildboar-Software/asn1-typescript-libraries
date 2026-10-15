@@ -13,6 +13,35 @@ import { RocfProductionStatus, _decode_RocfProductionStatus, _encode_RocfProduct
  * @summary Notification
  * @description
  * 
+ * Event reported by ROCF-SYNC-NOTIFY, in time order with the OCFs.
+ *
+ * lossFrameSync: frame synchronization left in-lock at least once during the
+ * provider's lock-status observation period. The provider documents that
+ * period and keeps the delay from the event to the notification short. The
+ * return to in-lock is indicated by the next ROCF-TRANSFER-DATA. Offline
+ * delivery omits this notification. The event concerns frame sync on the space
+ * link and can occur when the selected Master Channel or Virtual Channel
+ * itself lost no frames. The value is a LockStatusReport.
+ *
+ * productionStatusChange: production status changed. The value is the new
+ * status, running, halted, or interrupted. Offline delivery omits this
+ * notification.
+ *
+ * excessiveDataBacklog: the provider discarded OCFs, either because timely
+ * online delivery could not release the transfer buffer or because the
+ * complete-online OCF buffer overflowed. Repeated discards with no successful
+ * OCF delivery between them produce at most one notification. Offline delivery
+ * omits this notification. There is no notification value.
+ *
+ * endOfData: the provider has no further data. Sent in every delivery mode.
+ * For an online instance this includes the end of the space link session after
+ * the last OCF, and in every mode it includes delivery of every OCF between
+ * the START start and stop times. An offline interval that contains no OCFs
+ * yields only this notification.
+ *
+ * CCSDS 911.5-B-4, sections 3.7.2.3, 3.7.2.4, 3.1.9.1.9, 3.1.9.2.15, and
+ * 3.1.9.3.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

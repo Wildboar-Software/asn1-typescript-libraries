@@ -12,6 +12,17 @@ import { FspPacketLastProcessed_packetProcessed, _decode_FspPacketLastProcessed_
  * @summary FspPacketLastProcessed
  * @description
  * 
+ * The Space Packet of this service instance that most recently started to be
+ * processed, or an indication that none has. Present on every FSP-ASYNC-NOTIFY
+ * and every FSP-STATUS-REPORT. The value survives release or abort of the
+ * association. Section 3.7.2.9 says processing starts when the Packet moves
+ * from a packets queue to a segments queue. Section 3.9.2.3 says processing
+ * starts when it moves from the requests queue to a packets queue. The Packet
+ * may be the same one reported as last successfully processed.
+ * 
+ * CCSDS 912.3-B-3, sections 3.7.2.9 through 3.7.2.11 and 3.9.2.3 through
+ * 3.9.2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

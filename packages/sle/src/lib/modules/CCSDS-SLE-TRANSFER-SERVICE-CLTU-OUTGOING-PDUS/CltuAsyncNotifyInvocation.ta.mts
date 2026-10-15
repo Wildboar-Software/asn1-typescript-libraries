@@ -17,6 +17,17 @@ import { UplinkStatus, _decode_UplinkStatus, _encode_UplinkStatus } from "../CCS
  * @summary CltuAsyncNotifyInvocation
  * @description
  * 
+ * Unconfirmed provider notification of an event that affects FCLTU production.
+ * Valid in state 2 (ready) and state 3 (active). Delivered asynchronously to
+ * the CLTU-TRANSFER-DATA flow. Section 3.7 also lists
+ * event-thrown-identification, cltu-status, radiation-start-time, and
+ * radiation-stop-time; Annex A carries those inside cltuNotification,
+ * cltuLastProcessed, and cltuLastOk. Notifications sldu expired, production
+ * interrupted, and production halted stop further radiation, discard buffered
+ * CLTUs, and cause later CLTU-TRANSFER-DATA invocations to be rejected. Any
+ * other notification leaves production behavior unchanged. The provider state
+ * stays unchanged. CCSDS 912.1-B-5, section 3.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,36 +47,67 @@ export
 class CltuAsyncNotifyInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the user authenticate this provider invocation when
+     * the agreed authentication level requires it. Set this to unused when
+     * authentication is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `cltuNotification`.
+     * @description
+     *
+     * The event being notified (section 3.7.2.3, notification-type). action
+     * list completed, action list not completed, and event condition evaluated
+     * to false carry the event-invocation-identification of the
+     * CLTU-THROW-EVENT that caused them (section 3.7.2.4). Every other
+     * notification omits that identification.
      * @public
      * @readonly
      */
     readonly cltuNotification: CltuNotification;
     /**
      * @summary `cltuLastProcessed`.
+     * @description
+     *
+     * The CLTU the provider most recently attempted to radiate, or
+     * noCltuProcessed when none have been attempted in this service instance
+     * (section 3.7.2.5). cltu-status and radiation-start-time are present only
+     * in the cltuProcessed alternative (sections 3.7.2.7 and 3.7.2.8).
      * @public
      * @readonly
      */
     readonly cltuLastProcessed: CltuLastProcessed;
     /**
      * @summary `cltuLastOk`.
+     * @description
+     *
+     * The CLTU most recently radiated completely, or noCltuOk when none have
+     * completed in this service instance (section 3.7.2.6). radiation-stop-time
+     * is present only in the cltuOk alternative (section 3.7.2.9).
      * @public
      * @readonly
      */
     readonly cltuLastOk: CltuLastOk;
     /**
      * @summary `productionStatus`.
+     * @description
+     *
+     * Current status of the production process: configured, operational,
+     * interrupted, or halted. CCSDS 912.1-B-5, section 3.7.2.10.
      * @public
      * @readonly
      */
     readonly productionStatus: ProductionStatus;
     /**
      * @summary `uplinkStatus`.
+     * @description
+     *
+     * Forward-link state taken from the CLCW in the return telemetry, when that
+     * evaluation is configured. CCSDS 912.1-B-5, section 3.7.2.11.
      * @public
      * @readonly
      */

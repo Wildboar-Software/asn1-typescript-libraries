@@ -13,7 +13,14 @@ import { RcfStartReturn_result, _decode_RcfStartReturn_result, _encode_RcfStartR
 /**
  * @summary RcfStartReturn
  * @description
- * 
+ *
+ * The provider's report of RCF-START. A positive result means the provider has
+ * entered state 3 (active) and will deliver frames that meet the delivery
+ * criteria. A negative result leaves the provider in state 2 (ready) and
+ * suppresses RCF-TRANSFER-DATA.
+ *
+ * CCSDS 911.2-B-4, sections 3.4.2.8 and 3.4.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +40,38 @@ export
 class RcfStartReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     *
+     * Credentials that let the user authenticate this return when the agreed
+     * level requires it. When authentication of the return is not required, the
+     * value should be 'unused'.
+     *
+     * CCSDS 911.2-B-4, sections 3.4.2.3 and 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * The invoke-ID from the RCF-START invocation, returned unchanged.
+     *
+     * CCSDS 911.2-B-4, sections 3.4.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     *
+     * Positive when frame delivery has started. Negative when the provider
+     * rejected the invocation; the diagnostic is present only on the negative
+     * alternative. The provider should apply the checks in the order the
+     * diagnostics are listed and report the first one that matches.
+     *
+     * CCSDS 911.2-B-4, sections 3.4.2.8, 3.4.2.9, and 3.1.3.4.
      * @public
      * @readonly
      */
@@ -83,7 +110,8 @@ class RcfStartReturn {
  * @summary The Leading Root Component Types of RcfStartReturn
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -98,7 +126,8 @@ const _root_component_type_list_1_spec_for_RcfStartReturn: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of RcfStartReturn
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -111,7 +140,8 @@ const _root_component_type_list_2_spec_for_RcfStartReturn: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of RcfStartReturn
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

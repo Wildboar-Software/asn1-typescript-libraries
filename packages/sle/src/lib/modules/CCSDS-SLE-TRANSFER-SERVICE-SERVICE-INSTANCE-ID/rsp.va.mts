@@ -11,6 +11,11 @@ import {
  * @summary rsp
  * @description
  * 
+ * Object identifier of the service-name attribute whose printable name
+ * is `rsp`.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

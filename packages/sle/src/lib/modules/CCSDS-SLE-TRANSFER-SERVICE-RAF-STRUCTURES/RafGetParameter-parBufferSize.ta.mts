@@ -17,6 +17,15 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary RafGetParameter_parBufferSize
  * @description
  * 
+ * RAF-GET-PARAMETER value of `transfer-buffer-size`: how many RAF-TRANSFER-DATA
+ * and RAF-SYNC-NOTIFY invocations the transfer buffer can hold. Service
+ * management sets it. While an `excessiveDataBacklog` notification occupies the
+ * buffer, the effective size is one greater, then returns to this value. Annex
+ * C requires room for at least 200 RAF-TRANSFER-DATA invocations.
+ * 
+ * CCSDS 911.1-B-5, sections 3.1.9.1.6 and 3.1.9.1.10, table 3-11, and annex C
+ * table C-2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +43,18 @@ export
 class RafGetParameter_parBufferSize {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `bufferSize`, selecting transfer-buffer-size in table 3-11.
+     * CCSDS 911.1-B-5, annex A2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Number of RAF-TRANSFER-DATA and RAF-SYNC-NOTIFY invocations the transfer
+     * buffer can hold. CCSDS 911.1-B-5, table 3-11 and section 3.1.9.
      * @public
      * @readonly
      */

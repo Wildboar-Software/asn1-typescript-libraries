@@ -15,6 +15,11 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary IntPosShort
  * @description
  * 
+ * Positive integer from 1 through 65535, that is 1 through (2^16)-1. Version
+ * numbers use this range.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

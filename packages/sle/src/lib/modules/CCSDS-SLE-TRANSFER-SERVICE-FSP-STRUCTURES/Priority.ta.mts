@@ -15,6 +15,11 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary Priority
  * @description
  * 
+ * Absolute priority. Annex A says 1 is the highest priority and 64 is the
+ * lowest. In the absolute-priority scheme every priority is different.
+ * 
+ * CCSDS 912.3-B-3, annex A2.5 and section B2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

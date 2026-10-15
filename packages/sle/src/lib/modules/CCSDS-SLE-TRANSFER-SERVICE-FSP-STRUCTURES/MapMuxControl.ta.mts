@@ -13,6 +13,15 @@ import { MapId, _decode_MapId, _encode_MapId } from "../CCSDS-SLE-TRANSFER-SERVI
  * @summary MapMuxControl
  * @description
  * 
+ * MAP multiplexing control for one VC, as changed by the modify
+ * map-multiplexing-control directive. `absolutePriority` is the priority of
+ * each MAP in use, 1 to 64 entries. `pollingVector` is the MAP polling vector,
+ * 1 to 192 MAP identifiers. When the MAP scheme is FIFO, or MAPs are not used,
+ * table 3-11 says the reported map-multiplexing-control parameter is null; that
+ * report uses `MuxControl`, which has an empty FIFO alternative.
+ * 
+ * CCSDS 912.3-B-3, sections 3.12.2.6, 3.10.2.5 (table 3-11), and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,13 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary VcId
  * @description
  * 
+ * Virtual Channel identifier. Annex A constrains it to 0 through 63. Virtual
+ * Channel is a term of CCSDS 232.0-B-3, cited in section 1.6.1.4. This issue
+ * does not further define the numbering. One service instance uses one VC, and
+ * only one of FSP or TC VCA is allowed on a given VC.
+ * 
+ * CCSDS 912.3-B-3, section 1.6.1.4, annex A2.5, and annex B1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

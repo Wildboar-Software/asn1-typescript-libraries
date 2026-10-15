@@ -21,6 +21,12 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary CltuGetParameter_parMaximumCltuLength
  * @description
  * 
+ * maximum-cltu-length: the largest CLTU, in octets, that this service instance
+ * will accept. Annex A constrains the parameter to 12 through 4096. A CLTU that
+ * fails the service-agreement checks, including one longer than the maximum for
+ * the instance, is rejected with diagnostic CLTU error. Set by service
+ * management. CCSDS 912.1-B-5, table 3-11 and section 3.6.2.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,21 @@ export
 class CltuGetParameter_parMaximumCltuLength {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `maximumSlduLength`. Names the maximum-cltu-length parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Maximum accepted CLTU length in octets, from 12 through 4096. CCSDS
+     * 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

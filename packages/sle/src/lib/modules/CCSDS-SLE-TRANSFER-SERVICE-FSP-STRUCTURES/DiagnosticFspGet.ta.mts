@@ -12,6 +12,13 @@ import { _decode_DiagnosticFspGet_specific, _encode_DiagnosticFspGet_specific, D
  * @summary DiagnosticFspGet
  * @description
  * 
+ * Negative-result diagnostic of FSP-GET-PARAMETER. A positive result omits the
+ * diagnostic and returns the parameter. The provider stays in state 2 or state
+ * 3. `common` carries `duplicateInvokeId` and `otherReason`. `specific` carries
+ * `unknownParameter`. Checks follow the order in section 3.10.2.8.
+ * 
+ * CCSDS 912.3-B-3, sections 3.10.2.8, 3.10.3, and 3.1.3.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

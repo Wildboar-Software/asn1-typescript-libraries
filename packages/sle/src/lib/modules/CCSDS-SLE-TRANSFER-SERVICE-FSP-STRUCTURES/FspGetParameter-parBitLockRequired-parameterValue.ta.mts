@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FspGetParameter_parBitLockRequired_parameterValue
  * @description
  * 
+ * Whether production-status may become operational only when the CLCW reports
+ * bit lock. yes is 0 and no is 1. Table 3-11 defines yes and does not further
+ * define no.
+ * 
+ * CCSDS 912.3-B-3, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +30,10 @@ type FspGetParameter_parBitLockRequired_parameterValue = INTEGER;
 
 /**
  * @summary FspGetParameter_parBitLockRequired_parameterValue_yes
+ * @description
+ *
+ * The CLCW No Bit Lock flag must be false before the provider may set
+ * production-status to operational. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -32,6 +42,10 @@ const FspGetParameter_parBitLockRequired_parameterValue_yes: FspGetParameter_par
 
 /**
  * @summary FspGetParameter_parBitLockRequired_parameterValue_yes
+ * @description
+ *
+ * No Bit Lock must be false before production-status becomes operational (CCSDS
+ * 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */
@@ -40,6 +54,11 @@ const yes: FspGetParameter_parBitLockRequired_parameterValue = FspGetParameter_p
 
 /**
  * @summary FspGetParameter_parBitLockRequired_parameterValue_no
+ * @description
+ *
+ * Table 3-11 defines the No Bit Lock constraint for yes. It does not further
+ * define no. The value remains a service-management setting of
+ * bit-lock-required. CCSDS 912.3-B-3, table 3-1 and table 3-11.
  * @constant
  * @type {number}
  */
@@ -48,6 +67,9 @@ const FspGetParameter_parBitLockRequired_parameterValue_no: FspGetParameter_parB
 
 /**
  * @summary FspGetParameter_parBitLockRequired_parameterValue_no
+ * @description
+ *
+ * Table 3-11 does not further define no for bit-lock-required.
  * @constant
  * @type {number}
  */

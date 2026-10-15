@@ -14,6 +14,10 @@ import { CltuStatus, _decode_CltuStatus, _encode_CltuStatus } from "../CCSDS-SLE
  * @summary CltuLastProcessed_cltuProcessed
  * @description
  * 
+ * Identity, start time, and status of the CLTU the provider most recently
+ * attempted to radiate. Used when cltu-last-processed is not null. CCSDS
+ * 912.1-B-5, sections 3.7.2.5 and 3.9.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +34,36 @@ export
 class CltuLastProcessed_cltuProcessed {
     /**
      * @summary `cltuIdentification`.
+     * @description
+     *
+     * cltu-identification of the CLTU most recently processed or attempted,
+     * whether radiation finished or an exception occurred. CCSDS 912.1-B-5,
+     * sections 3.7.2.5 and 3.9.2.3.
      * @public
      * @readonly
      */
     readonly cltuIdentification: CltuIdentification;
     /**
      * @summary `radiationStartTime`.
+     * @description
+     *
+     * Time of the leading edge of the first radiated bit of that CLTU. The
+     * undefined alternative is the section 3 value null, required when
+     * cltu-status is expired or radiation has not started. Section 3.7.2.8
+     * names that second case production not started; section 3.9.2.6 names it
+     * radiation not started. Both refer to productionNotStarted. UTC CDS, epoch
+     * 1958-01-01. CCSDS 912.1-B-5, sections 3.7.2.8, 3.9.2.6, and 3.1.7.
      * @public
      * @readonly
      */
     readonly radiationStartTime: ConditionalTime;
     /**
      * @summary `cltuStatus`.
+     * @description
+     *
+     * Processing state of this CLTU: radiated, expired, interrupted, radiation
+     * started, or radiation not started. CCSDS 912.1-B-5, sections 3.7.2.7 and
+     * 3.9.2.5.
      * @public
      * @readonly
      */

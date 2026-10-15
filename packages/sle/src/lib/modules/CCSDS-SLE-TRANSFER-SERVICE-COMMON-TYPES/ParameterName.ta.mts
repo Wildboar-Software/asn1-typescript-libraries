@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ParameterName
  * @description
  * 
+ * Name of a service parameter that GET-PARAMETER may read. Table 3-11 defines
+ * the RAF parameters. Annex A2.1 also assigns numbers used by other SLE
+ * services. Section 3 does not define those other names.
+ * 
+ * CCSDS 911.1-B-5, section 3.10, table 3-11, and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,6 +86,13 @@ type ParameterName = INTEGER;
 
 /**
  * @summary ParameterName_acquisitionSequenceLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -88,6 +101,10 @@ const ParameterName_acquisitionSequenceLength: ParameterName = 201; /* LONG_NAME
 
 /**
  * @summary ParameterName_acquisitionSequenceLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -96,6 +113,13 @@ const acquisitionSequenceLength: ParameterName = ParameterName_acquisitionSequen
 
 /**
  * @summary ParameterName_apidList
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -104,6 +128,10 @@ const ParameterName_apidList: ParameterName = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_apidList
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -112,6 +140,13 @@ const apidList: ParameterName = ParameterName_apidList; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary ParameterName_bitLockRequired
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -120,6 +155,10 @@ const ParameterName_bitLockRequired: ParameterName = 3; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary ParameterName_bitLockRequired
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -128,6 +167,13 @@ const bitLockRequired: ParameterName = ParameterName_bitLockRequired; /* SHORT_N
 
 /**
  * @summary ParameterName_blockingTimeoutPeriod
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -136,6 +182,10 @@ const ParameterName_blockingTimeoutPeriod: ParameterName = 0; /* LONG_NAMED_INTE
 
 /**
  * @summary ParameterName_blockingTimeoutPeriod
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -144,6 +194,13 @@ const blockingTimeoutPeriod: ParameterName = ParameterName_blockingTimeoutPeriod
 
 /**
  * @summary ParameterName_blockingUsage
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -152,6 +209,10 @@ const ParameterName_blockingUsage: ParameterName = 1; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary ParameterName_blockingUsage
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -160,6 +221,13 @@ const blockingUsage: ParameterName = ParameterName_blockingUsage; /* SHORT_NAMED
 
 /**
  * @summary ParameterName_bufferSize
+ * @description
+ * 
+ * Transfer-buffer size for this RAF instance: the number of RAF-TRANSFER-DATA
+ * and RAF-SYNC-NOTIFY invocations the transfer buffer can hold. Service
+ * management sets it. Annex A2.5 returns the value as that invocation count.
+ * 
+ * CCSDS 911.1-B-5, table 3-11, section 3.1.9, and annex A2.5.
  * @constant
  * @type {number}
  */
@@ -168,6 +236,10 @@ const ParameterName_bufferSize: ParameterName = 4; /* LONG_NAMED_INTEGER_VALUE *
 
 /**
  * @summary ParameterName_bufferSize
+ * @description
+ * 
+ * How many transfer-data and sync-notify invocations the RAF transfer buffer
+ * holds (CCSDS 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -176,6 +248,13 @@ const bufferSize: ParameterName = ParameterName_bufferSize; /* SHORT_NAMED_INTEG
 
 /**
  * @summary ParameterName_clcwGlobalVcId
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -184,6 +263,10 @@ const ParameterName_clcwGlobalVcId: ParameterName = 202; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary ParameterName_clcwGlobalVcId
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -192,6 +275,13 @@ const clcwGlobalVcId: ParameterName = ParameterName_clcwGlobalVcId; /* SHORT_NAM
 
 /**
  * @summary ParameterName_clcwPhysicalChannel
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -200,6 +290,10 @@ const ParameterName_clcwPhysicalChannel: ParameterName = 203; /* LONG_NAMED_INTE
 
 /**
  * @summary ParameterName_clcwPhysicalChannel
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -208,6 +302,13 @@ const clcwPhysicalChannel: ParameterName = ParameterName_clcwPhysicalChannel; /*
 
 /**
  * @summary ParameterName_copCntrFramesRepetition
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -216,6 +317,10 @@ const ParameterName_copCntrFramesRepetition: ParameterName = 300; /* LONG_NAMED_
 
 /**
  * @summary ParameterName_copCntrFramesRepetition
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -224,6 +329,12 @@ const copCntrFramesRepetition: ParameterName = ParameterName_copCntrFramesRepeti
 
 /**
  * @summary ParameterName_deliveryMode
+ * @description
+ * 
+ * Delivery mode of this RAF instance, set by service management. The value is
+ * timely online, complete online, or offline.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.1.9.
  * @constant
  * @type {number}
  */
@@ -232,6 +343,10 @@ const ParameterName_deliveryMode: ParameterName = 6; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary ParameterName_deliveryMode
+ * @description
+ * 
+ * RAF delivery mode set by service management (CCSDS 911.1-B-5, table 3-11 and
+ * section 3.1.9).
  * @constant
  * @type {number}
  */
@@ -240,6 +355,13 @@ const deliveryMode: ParameterName = ParameterName_deliveryMode; /* SHORT_NAMED_I
 
 /**
  * @summary ParameterName_directiveInvocation
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -248,6 +370,10 @@ const ParameterName_directiveInvocation: ParameterName = 7; /* LONG_NAMED_INTEGE
 
 /**
  * @summary ParameterName_directiveInvocation
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -256,6 +382,13 @@ const directiveInvocation: ParameterName = ParameterName_directiveInvocation; /*
 
 /**
  * @summary ParameterName_directiveInvocationOnline
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -264,6 +397,10 @@ const ParameterName_directiveInvocationOnline: ParameterName = 108; /* LONG_NAME
 
 /**
  * @summary ParameterName_directiveInvocationOnline
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -272,6 +409,13 @@ const directiveInvocationOnline: ParameterName = ParameterName_directiveInvocati
 
 /**
  * @summary ParameterName_expectedDirectiveIdentification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -280,6 +424,10 @@ const ParameterName_expectedDirectiveIdentification: ParameterName = 8; /* LONG_
 
 /**
  * @summary ParameterName_expectedDirectiveIdentification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -288,6 +436,13 @@ const expectedDirectiveIdentification: ParameterName = ParameterName_expectedDir
 
 /**
  * @summary ParameterName_expectedEventInvocationIdentification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -296,6 +451,10 @@ const ParameterName_expectedEventInvocationIdentification: ParameterName = 9; /*
 
 /**
  * @summary ParameterName_expectedEventInvocationIdentification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -304,6 +463,13 @@ const expectedEventInvocationIdentification: ParameterName = ParameterName_expec
 
 /**
  * @summary ParameterName_expectedSlduIdentification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -312,6 +478,10 @@ const ParameterName_expectedSlduIdentification: ParameterName = 10; /* LONG_NAME
 
 /**
  * @summary ParameterName_expectedSlduIdentification
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -320,6 +490,13 @@ const expectedSlduIdentification: ParameterName = ParameterName_expectedSlduIden
 
 /**
  * @summary ParameterName_fopSlidingWindow
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -328,6 +505,10 @@ const ParameterName_fopSlidingWindow: ParameterName = 11; /* LONG_NAMED_INTEGER_
 
 /**
  * @summary ParameterName_fopSlidingWindow
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -336,6 +517,13 @@ const fopSlidingWindow: ParameterName = ParameterName_fopSlidingWindow; /* SHORT
 
 /**
  * @summary ParameterName_fopState
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -344,6 +532,10 @@ const ParameterName_fopState: ParameterName = 12; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_fopState
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -352,6 +544,14 @@ const fopState: ParameterName = ParameterName_fopState; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary ParameterName_latencyLimit
+ * @description
+ * 
+ * Maximum online delivery latency, in seconds: the maximum delay from
+ * acquisition of a frame until the RAF-TRANSFER-DATA PDU is delivered to the
+ * user. The value is null when the delivery mode is offline. Annex A2.5 returns
+ * an online integer in seconds or a null offline alternative.
+ * 
+ * CCSDS 911.1-B-5, table 3-11, section 3.1.9.1, and annex A2.5.
  * @constant
  * @type {number}
  */
@@ -360,6 +560,10 @@ const ParameterName_latencyLimit: ParameterName = 15; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary ParameterName_latencyLimit
+ * @description
+ * 
+ * Online delivery latency limit in seconds; null when offline (CCSDS 911.1-B-5,
+ * table 3-11).
  * @constant
  * @type {number}
  */
@@ -368,6 +572,13 @@ const latencyLimit: ParameterName = ParameterName_latencyLimit; /* SHORT_NAMED_I
 
 /**
  * @summary ParameterName_mapList
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -376,6 +587,10 @@ const ParameterName_mapList: ParameterName = 16; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterName_mapList
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -384,6 +599,13 @@ const mapList: ParameterName = ParameterName_mapList; /* SHORT_NAMED_INTEGER_VAL
 
 /**
  * @summary ParameterName_mapMuxControl
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -392,6 +614,10 @@ const ParameterName_mapMuxControl: ParameterName = 17; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary ParameterName_mapMuxControl
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -400,6 +626,13 @@ const mapMuxControl: ParameterName = ParameterName_mapMuxControl; /* SHORT_NAMED
 
 /**
  * @summary ParameterName_mapMuxScheme
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -408,6 +641,10 @@ const ParameterName_mapMuxScheme: ParameterName = 18; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary ParameterName_mapMuxScheme
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -416,6 +653,13 @@ const mapMuxScheme: ParameterName = ParameterName_mapMuxScheme; /* SHORT_NAMED_I
 
 /**
  * @summary ParameterName_maximumFrameLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -424,6 +668,10 @@ const ParameterName_maximumFrameLength: ParameterName = 19; /* LONG_NAMED_INTEGE
 
 /**
  * @summary ParameterName_maximumFrameLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -432,6 +680,13 @@ const maximumFrameLength: ParameterName = ParameterName_maximumFrameLength; /* S
 
 /**
  * @summary ParameterName_maximumPacketLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -440,6 +695,10 @@ const ParameterName_maximumPacketLength: ParameterName = 20; /* LONG_NAMED_INTEG
 
 /**
  * @summary ParameterName_maximumPacketLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -448,6 +707,13 @@ const maximumPacketLength: ParameterName = ParameterName_maximumPacketLength; /*
 
 /**
  * @summary ParameterName_maximumSlduLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -456,6 +722,10 @@ const ParameterName_maximumSlduLength: ParameterName = 21; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ParameterName_maximumSlduLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -464,6 +734,13 @@ const maximumSlduLength: ParameterName = ParameterName_maximumSlduLength; /* SHO
 
 /**
  * @summary ParameterName_minimumDelayTime
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -472,6 +749,10 @@ const ParameterName_minimumDelayTime: ParameterName = 204; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ParameterName_minimumDelayTime
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -480,6 +761,13 @@ const minimumDelayTime: ParameterName = ParameterName_minimumDelayTime; /* SHORT
 
 /**
  * @summary ParameterName_minReportingCycle
+ * @description
+ * 
+ * Minimum reporting cycle, in seconds, that the user may request in
+ * SCHEDULE-STATUS-REPORT. Service management sets it. Annex A2.5 constrains the
+ * returned value to 1 through 600.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and annex A2.5.
  * @constant
  * @type {number}
  */
@@ -488,6 +776,10 @@ const ParameterName_minReportingCycle: ParameterName = 301; /* LONG_NAMED_INTEGE
 
 /**
  * @summary ParameterName_minReportingCycle
+ * @description
+ * 
+ * Minimum status-report period, in seconds, the user may request (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -496,6 +788,13 @@ const minReportingCycle: ParameterName = ParameterName_minReportingCycle; /* SHO
 
 /**
  * @summary ParameterName_modulationFrequency
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -504,6 +803,10 @@ const ParameterName_modulationFrequency: ParameterName = 22; /* LONG_NAMED_INTEG
 
 /**
  * @summary ParameterName_modulationFrequency
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -512,6 +815,13 @@ const modulationFrequency: ParameterName = ParameterName_modulationFrequency; /*
 
 /**
  * @summary ParameterName_modulationIndex
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -520,6 +830,10 @@ const ParameterName_modulationIndex: ParameterName = 23; /* LONG_NAMED_INTEGER_V
 
 /**
  * @summary ParameterName_modulationIndex
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -528,6 +842,13 @@ const modulationIndex: ParameterName = ParameterName_modulationIndex; /* SHORT_N
 
 /**
  * @summary ParameterName_notificationMode
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -536,6 +857,10 @@ const ParameterName_notificationMode: ParameterName = 205; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ParameterName_notificationMode
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -544,6 +869,13 @@ const notificationMode: ParameterName = ParameterName_notificationMode; /* SHORT
 
 /**
  * @summary ParameterName_permittedControlWordTypeSet
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -552,6 +884,10 @@ const ParameterName_permittedControlWordTypeSet: ParameterName = 101; /* LONG_NA
 
 /**
  * @summary ParameterName_permittedControlWordTypeSet
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -560,6 +896,12 @@ const permittedControlWordTypeSet: ParameterName = ParameterName_permittedContro
 
 /**
  * @summary ParameterName_permittedFrameQuality
+ * @description
+ * 
+ * Frame-quality criteria the user may select for delivery. The set contains at
+ * least one of 'good frames only', 'erred frames only', and 'all frames'.
+ * 
+ * CCSDS 911.1-B-5, table 3-11.
  * @constant
  * @type {number}
  */
@@ -568,6 +910,9 @@ const ParameterName_permittedFrameQuality: ParameterName = 302; /* LONG_NAMED_IN
 
 /**
  * @summary ParameterName_permittedFrameQuality
+ * @description
+ * 
+ * Frame-quality criteria the RAF user may select (CCSDS 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -576,6 +921,13 @@ const permittedFrameQuality: ParameterName = ParameterName_permittedFrameQuality
 
 /**
  * @summary ParameterName_permittedGvcidSet
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -584,6 +936,10 @@ const ParameterName_permittedGvcidSet: ParameterName = 24; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ParameterName_permittedGvcidSet
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -592,6 +948,13 @@ const permittedGvcidSet: ParameterName = ParameterName_permittedGvcidSet; /* SHO
 
 /**
  * @summary ParameterName_permittedTcVcidSet
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -600,6 +963,10 @@ const ParameterName_permittedTcVcidSet: ParameterName = 102; /* LONG_NAMED_INTEG
 
 /**
  * @summary ParameterName_permittedTcVcidSet
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -608,6 +975,13 @@ const permittedTcVcidSet: ParameterName = ParameterName_permittedTcVcidSet; /* S
 
 /**
  * @summary ParameterName_permittedTransmissionMode
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -616,6 +990,10 @@ const ParameterName_permittedTransmissionMode: ParameterName = 107; /* LONG_NAME
 
 /**
  * @summary ParameterName_permittedTransmissionMode
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -624,6 +1002,13 @@ const permittedTransmissionMode: ParameterName = ParameterName_permittedTransmis
 
 /**
  * @summary ParameterName_permittedUpdateModeSet
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -632,6 +1017,10 @@ const ParameterName_permittedUpdateModeSet: ParameterName = 103; /* LONG_NAMED_I
 
 /**
  * @summary ParameterName_permittedUpdateModeSet
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -640,6 +1029,13 @@ const permittedUpdateModeSet: ParameterName = ParameterName_permittedUpdateModeS
 
 /**
  * @summary ParameterName_plop1IdleSequenceLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -648,6 +1044,10 @@ const ParameterName_plop1IdleSequenceLength: ParameterName = 206; /* LONG_NAMED_
 
 /**
  * @summary ParameterName_plop1IdleSequenceLength
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -656,6 +1056,13 @@ const plop1IdleSequenceLength: ParameterName = ParameterName_plop1IdleSequenceLe
 
 /**
  * @summary ParameterName_plopInEffect
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -664,6 +1071,10 @@ const ParameterName_plopInEffect: ParameterName = 25; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary ParameterName_plopInEffect
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -672,6 +1083,13 @@ const plopInEffect: ParameterName = ParameterName_plopInEffect; /* SHORT_NAMED_I
 
 /**
  * @summary ParameterName_protocolAbortMode
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -680,6 +1098,10 @@ const ParameterName_protocolAbortMode: ParameterName = 207; /* LONG_NAMED_INTEGE
 
 /**
  * @summary ParameterName_protocolAbortMode
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -688,6 +1110,13 @@ const protocolAbortMode: ParameterName = ParameterName_protocolAbortMode; /* SHO
 
 /**
  * @summary ParameterName_reportingCycle
+ * @description
+ * 
+ * Current status-report cycle. The value is null when cyclic reporting is off,
+ * which is also the value until a successful SCHEDULE-STATUS-REPORT enables it.
+ * Otherwise it is the seconds between successive STATUS-REPORT invocations.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.8.
  * @constant
  * @type {number}
  */
@@ -696,6 +1125,10 @@ const ParameterName_reportingCycle: ParameterName = 26; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary ParameterName_reportingCycle
+ * @description
+ * 
+ * Seconds between status reports, or null when cyclic reporting is off (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -704,6 +1137,13 @@ const reportingCycle: ParameterName = ParameterName_reportingCycle; /* SHORT_NAM
 
 /**
  * @summary ParameterName_requestedControlWordType
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -712,6 +1152,10 @@ const ParameterName_requestedControlWordType: ParameterName = 104; /* LONG_NAMED
 
 /**
  * @summary ParameterName_requestedControlWordType
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -720,6 +1164,13 @@ const requestedControlWordType: ParameterName = ParameterName_requestedControlWo
 
 /**
  * @summary ParameterName_requestedFrameQuality
+ * @description
+ * 
+ * Frame-quality criterion, set by START, that selects which frames are
+ * delivered. Until a successful START, the value is the first element of the
+ * permitted-frame-quality set.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.4.2.7.
  * @constant
  * @type {number}
  */
@@ -728,6 +1179,10 @@ const ParameterName_requestedFrameQuality: ParameterName = 27; /* LONG_NAMED_INT
 
 /**
  * @summary ParameterName_requestedFrameQuality
+ * @description
+ * 
+ * Frame quality START uses to select frames (CCSDS 911.1-B-5, table 3-11 and
+ * section 3.4.2.7).
  * @constant
  * @type {number}
  */
@@ -736,6 +1191,13 @@ const requestedFrameQuality: ParameterName = ParameterName_requestedFrameQuality
 
 /**
  * @summary ParameterName_requestedGvcid
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -744,6 +1206,10 @@ const ParameterName_requestedGvcid: ParameterName = 28; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary ParameterName_requestedGvcid
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -752,6 +1218,13 @@ const requestedGvcid: ParameterName = ParameterName_requestedGvcid; /* SHORT_NAM
 
 /**
  * @summary ParameterName_requestedTcVcid
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -760,6 +1233,10 @@ const ParameterName_requestedTcVcid: ParameterName = 105; /* LONG_NAMED_INTEGER_
 
 /**
  * @summary ParameterName_requestedTcVcid
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -768,6 +1245,13 @@ const requestedTcVcid: ParameterName = ParameterName_requestedTcVcid; /* SHORT_N
 
 /**
  * @summary ParameterName_requestedUpdateMode
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -776,6 +1260,10 @@ const ParameterName_requestedUpdateMode: ParameterName = 106; /* LONG_NAMED_INTE
 
 /**
  * @summary ParameterName_requestedUpdateMode
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -784,6 +1272,14 @@ const requestedUpdateMode: ParameterName = ParameterName_requestedUpdateMode; /*
 
 /**
  * @summary ParameterName_returnTimeoutPeriod
+ * @description
+ * 
+ * Maximum time, in seconds, from invocation of a confirmed operation until the
+ * invoker receives the return. If the return is missing, the invoker
+ * PEER-ABORTs with `returnTimeout`. Annex A2.5 measures the value in seconds,
+ * from 1 through 600.
+ * 
+ * CCSDS 911.1-B-5, table 3-11, section 4.1.3, and annex A2.5.
  * @constant
  * @type {number}
  */
@@ -792,6 +1288,10 @@ const ParameterName_returnTimeoutPeriod: ParameterName = 29; /* LONG_NAMED_INTEG
 
 /**
  * @summary ParameterName_returnTimeoutPeriod
+ * @description
+ * 
+ * Seconds allowed for a confirmed-operation return before PEER-ABORT
+ * `returnTimeout` (CCSDS 911.1-B-5, section 4.1.3).
  * @constant
  * @type {number}
  */
@@ -800,6 +1300,13 @@ const returnTimeoutPeriod: ParameterName = ParameterName_returnTimeoutPeriod; /*
 
 /**
  * @summary ParameterName_rfAvailable
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -808,6 +1315,10 @@ const ParameterName_rfAvailable: ParameterName = 30; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary ParameterName_rfAvailable
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -816,6 +1327,13 @@ const rfAvailable: ParameterName = ParameterName_rfAvailable; /* SHORT_NAMED_INT
 
 /**
  * @summary ParameterName_rfAvailableRequired
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -824,6 +1342,10 @@ const ParameterName_rfAvailableRequired: ParameterName = 31; /* LONG_NAMED_INTEG
 
 /**
  * @summary ParameterName_rfAvailableRequired
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -832,6 +1354,13 @@ const rfAvailableRequired: ParameterName = ParameterName_rfAvailableRequired; /*
 
 /**
  * @summary ParameterName_segmentHeader
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -840,6 +1369,10 @@ const ParameterName_segmentHeader: ParameterName = 32; /* LONG_NAMED_INTEGER_VAL
 
 /**
  * @summary ParameterName_segmentHeader
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -848,6 +1381,13 @@ const segmentHeader: ParameterName = ParameterName_segmentHeader; /* SHORT_NAMED
 
 /**
  * @summary ParameterName_sequCntrFramesRepetition
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -856,6 +1396,10 @@ const ParameterName_sequCntrFramesRepetition: ParameterName = 303; /* LONG_NAMED
 
 /**
  * @summary ParameterName_sequCntrFramesRepetition
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -864,6 +1408,13 @@ const sequCntrFramesRepetition: ParameterName = ParameterName_sequCntrFramesRepe
 
 /**
  * @summary ParameterName_subcarrierToBitRateRatio
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -872,6 +1423,10 @@ const ParameterName_subcarrierToBitRateRatio: ParameterName = 34; /* LONG_NAMED_
 
 /**
  * @summary ParameterName_subcarrierToBitRateRatio
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -880,6 +1435,13 @@ const subcarrierToBitRateRatio: ParameterName = ParameterName_subcarrierToBitRat
 
 /**
  * @summary ParameterName_throwEventOperation
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -888,6 +1450,10 @@ const ParameterName_throwEventOperation: ParameterName = 304; /* LONG_NAMED_INTE
 
 /**
  * @summary ParameterName_throwEventOperation
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -896,6 +1462,13 @@ const throwEventOperation: ParameterName = ParameterName_throwEventOperation; /*
 
 /**
  * @summary ParameterName_timeoutType
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -904,6 +1477,10 @@ const ParameterName_timeoutType: ParameterName = 35; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary ParameterName_timeoutType
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -912,6 +1489,13 @@ const timeoutType: ParameterName = ParameterName_timeoutType; /* SHORT_NAMED_INT
 
 /**
  * @summary ParameterName_timerInitial
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -920,6 +1504,10 @@ const ParameterName_timerInitial: ParameterName = 36; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary ParameterName_timerInitial
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -928,6 +1516,13 @@ const timerInitial: ParameterName = ParameterName_timerInitial; /* SHORT_NAMED_I
 
 /**
  * @summary ParameterName_transmissionLimit
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -936,6 +1531,10 @@ const ParameterName_transmissionLimit: ParameterName = 37; /* LONG_NAMED_INTEGER
 
 /**
  * @summary ParameterName_transmissionLimit
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -944,6 +1543,13 @@ const transmissionLimit: ParameterName = ParameterName_transmissionLimit; /* SHO
 
 /**
  * @summary ParameterName_transmitterFrameSequenceNumber
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -952,6 +1558,10 @@ const ParameterName_transmitterFrameSequenceNumber: ParameterName = 38; /* LONG_
 
 /**
  * @summary ParameterName_transmitterFrameSequenceNumber
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -960,6 +1570,13 @@ const transmitterFrameSequenceNumber: ParameterName = ParameterName_transmitterF
 
 /**
  * @summary ParameterName_vcMuxControl
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -968,6 +1585,10 @@ const ParameterName_vcMuxControl: ParameterName = 39; /* LONG_NAMED_INTEGER_VALU
 
 /**
  * @summary ParameterName_vcMuxControl
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -976,6 +1597,13 @@ const vcMuxControl: ParameterName = ParameterName_vcMuxControl; /* SHORT_NAMED_I
 
 /**
  * @summary ParameterName_vcMuxScheme
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -984,6 +1612,10 @@ const ParameterName_vcMuxScheme: ParameterName = 40; /* LONG_NAMED_INTEGER_VALUE
 
 /**
  * @summary ParameterName_vcMuxScheme
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */
@@ -992,6 +1624,13 @@ const vcMuxScheme: ParameterName = ParameterName_vcMuxScheme; /* SHORT_NAMED_INT
 
 /**
  * @summary ParameterName_virtualChannel
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Table 3-11 lists the RAF parameters that
+ * section 3 defines. This name is not among them, and section 3 does not define
+ * it.
+ * 
+ * CCSDS 911.1-B-5, annex A2.1 and section 3.10.
  * @constant
  * @type {number}
  */
@@ -1000,6 +1639,10 @@ const ParameterName_virtualChannel: ParameterName = 41; /* LONG_NAMED_INTEGER_VA
 
 /**
  * @summary ParameterName_virtualChannel
+ * @description
+ * 
+ * Annex A2.1 assigns this number. Section 3 does not define it (CCSDS
+ * 911.1-B-5, table 3-11).
  * @constant
  * @type {number}
  */

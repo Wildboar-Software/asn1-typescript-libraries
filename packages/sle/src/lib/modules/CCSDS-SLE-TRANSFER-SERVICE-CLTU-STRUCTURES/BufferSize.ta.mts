@@ -10,6 +10,11 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary BufferSize
  * @description
  * 
+ * Octet count of buffer space. The service package states how many octets the
+ * provider must buffer, and only complete CLTUs occupy that buffer. Used for
+ * the remaining space reported as cltu-buffer-available. CCSDS 912.1-B-5,
+ * sections 3.1.10, 3.6.2.11, and 3.9.2.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

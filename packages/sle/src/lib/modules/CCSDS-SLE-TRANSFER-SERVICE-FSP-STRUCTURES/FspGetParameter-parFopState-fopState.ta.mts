@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FspGetParameter_parFopState_fopState
  * @description
  * 
+ * State of the FOP on this VC. Table 3-11 names the six states below and does
+ * not define the behavior of each state. Annex D1.3.4 calls fop-state
+ * read-only.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and annex D1.3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +34,10 @@ type FspGetParameter_parFopState_fopState = INTEGER;
 
 /**
  * @summary FspGetParameter_parFopState_fopState_active
+ * @description
+ *
+ * Table 3-11 FOP state ACTIVE on this VC. Section 3.10.2.5 names this state and
+ * does not define its behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -36,6 +46,10 @@ const FspGetParameter_parFopState_fopState_active: FspGetParameter_parFopState_f
 
 /**
  * @summary FspGetParameter_parFopState_fopState_active
+ * @description
+ *
+ * FOP state ACTIVE. Section 3.10.2.5 names this state and does not define its
+ * behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -44,6 +58,11 @@ const active: FspGetParameter_parFopState_fopState = FspGetParameter_parFopState
 
 /**
  * @summary FspGetParameter_parFopState_fopState_retransmitWithoutWait
+ * @description
+ *
+ * Table 3-11 FOP state RETRANSMIT WITHOUT WAIT on this VC. Section 3.10.2.5
+ * names this state and does not define its behavior. CCSDS 912.3-B-3, table
+ * 3-11.
  * @constant
  * @type {number}
  */
@@ -52,6 +71,10 @@ const FspGetParameter_parFopState_fopState_retransmitWithoutWait: FspGetParamete
 
 /**
  * @summary FspGetParameter_parFopState_fopState_retransmitWithoutWait
+ * @description
+ *
+ * FOP state RETRANSMIT WITHOUT WAIT. Section 3.10.2.5 names this state and does
+ * not define its behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -60,6 +83,10 @@ const retransmitWithoutWait: FspGetParameter_parFopState_fopState = FspGetParame
 
 /**
  * @summary FspGetParameter_parFopState_fopState_retransmitWithWait
+ * @description
+ *
+ * Table 3-11 FOP state RETRANSMIT WITH WAIT on this VC. Section 3.10.2.5 names
+ * this state and does not define its behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -68,6 +95,10 @@ const FspGetParameter_parFopState_fopState_retransmitWithWait: FspGetParameter_p
 
 /**
  * @summary FspGetParameter_parFopState_fopState_retransmitWithWait
+ * @description
+ *
+ * FOP state RETRANSMIT WITH WAIT. Section 3.10.2.5 names this state and does
+ * not define its behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -76,6 +107,11 @@ const retransmitWithWait: FspGetParameter_parFopState_fopState = FspGetParameter
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initialisingWithoutBCFrame
+ * @description
+ *
+ * Table 3-11 FOP state INITIALIZING WITHOUT BC FRAME on this VC. Section
+ * 3.10.2.5 names this state and does not define its behavior. CCSDS 912.3-B-3,
+ * table 3-11.
  * @constant
  * @type {number}
  */
@@ -84,6 +120,10 @@ const FspGetParameter_parFopState_fopState_initialisingWithoutBCFrame: FspGetPar
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initialisingWithoutBCFrame
+ * @description
+ *
+ * FOP state INITIALIZING WITHOUT BC FRAME. Section 3.10.2.5 names this state
+ * and does not define its behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -92,6 +132,11 @@ const initialisingWithoutBCFrame: FspGetParameter_parFopState_fopState = FspGetP
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initialisingWithBCFrame
+ * @description
+ *
+ * Table 3-11 FOP state INITIALIZING WITH BC FRAME on this VC. Section 3.10.2.5
+ * names this state and does not define its behavior. CCSDS 912.3-B-3, table
+ * 3-11.
  * @constant
  * @type {number}
  */
@@ -100,6 +145,10 @@ const FspGetParameter_parFopState_fopState_initialisingWithBCFrame: FspGetParame
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initialisingWithBCFrame
+ * @description
+ *
+ * FOP state INITIALIZING WITH BC FRAME. Section 3.10.2.5 names this state and
+ * does not define its behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -108,6 +157,10 @@ const initialisingWithBCFrame: FspGetParameter_parFopState_fopState = FspGetPara
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initial
+ * @description
+ *
+ * Table 3-11 FOP state INITIAL on this VC. Section 3.10.2.5 names this state
+ * and does not define its behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -116,6 +169,10 @@ const FspGetParameter_parFopState_fopState_initial: FspGetParameter_parFopState_
 
 /**
  * @summary FspGetParameter_parFopState_fopState_initial
+ * @description
+ *
+ * FOP state INITIAL. Section 3.10.2.5 names this state and does not define its
+ * behavior. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */

@@ -22,6 +22,22 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
  * @summary FspProviderToUserPdu
  * @description
  * 
+ * SLE-PDU the FSP provider may send. Annex A2.7 collects every such PDU in this
+ * choice.
+ * 
+ * `fspBindReturn` and `fspUnbindReturn` complete FSP-BIND and FSP-UNBIND.
+ * `fspStartReturn` completes FSP-START. `fspStopReturn` completes FSP-STOP.
+ * `fspTransferDataReturn` completes FSP-TRANSFER-DATA.
+ * `fspAsyncNotifyInvocation` is the unconfirmed notification, valid in states 2
+ * and 3. `fspScheduleStatusReportReturn` completes FSP-SCHEDULE-STATUS-REPORT.
+ * `fspStatusReportInvocation` is the unconfirmed status report.
+ * `fspGetParameterReturn` completes FSP-GET-PARAMETER. `fspThrowEventReturn`
+ * completes FSP-THROW-EVENT. `fspInvokeDirectiveReturn` completes
+ * FSP-INVOKE-DIRECTIVE. `fspPeerAbortInvocation` aborts the association. Either
+ * peer may invoke it, and it is not authenticated.
+ * 
+ * CCSDS 912.3-B-3, sections 3.2 through 3.13 and annex A2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

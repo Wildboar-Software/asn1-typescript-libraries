@@ -14,6 +14,14 @@ import { ReportRequestType, _decode_ReportRequestType, _encode_ReportRequestType
  * @summary SleScheduleStatusReportInvocation
  * @description
  * 
+ * Invocation of SCHEDULE-STATUS-REPORT. The user asks for one status report
+ * immediately, for periodic reports, or for periodic reports to stop. Valid in
+ * states 2 (ready) and 3 (active), and only the user may invoke it. Rejected
+ * when the instance is configured for offline delivery. Periodic reporting is
+ * stopped after a positive BIND.
+ * 
+ * CCSDS 911.1-B-5, section 3.8.1 and annex A2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +38,39 @@ export
 class SleScheduleStatusReportInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * 
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all`, this invocation is authenticated. Otherwise
+     * the value should be `unused`.
+     *
+     * CCSDS 911.1-B-5, sections 3.8.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. A value that still has an outstanding return in the same
+     * service instance is rejected with `duplicateInvokeId`.
+     *
+     * CCSDS 911.1-B-5, sections 3.8.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `reportRequestType`.
+     * @description
+     * 
+     * `immediately` sends one status report and then stops periodic reporting.
+     * `periodically` carries the reporting cycle. `stop` ceases periodic
+     * reports.
+     *
+     * CCSDS 911.1-B-5, sections 3.8.2.5 and 3.8.3.1.
      * @public
      * @readonly
      */

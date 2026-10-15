@@ -11,7 +11,14 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
 /**
  * @summary GvcId_vcId
  * @description
- * 
+ *
+ * Whether a global VCID names a Master Channel or one Virtual Channel.
+ * masterChannel is the VCID value 'any': deliver the Master Channel identified
+ * by the Transfer Frame version and spacecraft identifier. virtualChannel
+ * delivers the Virtual Channel whose identifier is given.
+ *
+ * CCSDS 911.2-B-4, sections 3.4.2.7.4, 1.6.1.8.8, and 1.6.1.8.19.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

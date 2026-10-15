@@ -18,6 +18,32 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary RocfDeliveryMode
  * @description
  * 
+ * Delivery mode of this ROCF instance. Service management sets it, and one
+ * instance supports one mode. The integer codes are the DeliveryMode values
+ * rtnTimelyOnline (0), rtnCompleteOnline (1), and rtnOffline (2).
+ *
+ * Timely online stores OCFs and synchronous notifications only in the transfer
+ * buffer and delivers during the space link session. If the communications
+ * service will not accept a full buffer, the provider discards that buffer and
+ * inserts one data-discarded notification.
+ *
+ * Complete online also fills an online OCF buffer and attempts to deliver
+ * every acquired OCF in order, including across communications outages. The
+ * online buffer survives an unbind unless unbind-reason is end. An abort
+ * clears the transfer buffer and stops removal from the online buffer; OCFs
+ * already removed are not extracted again. Overflow discards the oldest
+ * records, in a count set by service management, and signals data discarded.
+ * The online buffer is discarded at the end of the provision period.
+ *
+ * Offline delivery is after the space link session. There should be one
+ * offline OCF buffer for the service instances of a service agreement. START
+ * must give both a start and a stop time. The only synchronous notification
+ * in offline delivery is end of data. ROCF-SCHEDULE-STATUS-REPORT is rejected.
+ * The provider documents the delay before an acquired OCF can be retrieved and
+ * the policy for deleting offline records.
+ *
+ * CCSDS 911.5-B-4, sections 2.3, 2.6.4.4, 3.1.9, 3.8.1.6, and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

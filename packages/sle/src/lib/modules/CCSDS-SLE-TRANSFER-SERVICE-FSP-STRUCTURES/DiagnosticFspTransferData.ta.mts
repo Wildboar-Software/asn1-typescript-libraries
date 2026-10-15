@@ -12,6 +12,13 @@ import { _decode_DiagnosticFspTransferData_specific, _encode_DiagnosticFspTransf
  * @summary DiagnosticFspTransferData
  * @description
  * 
+ * Negative-result diagnostic of FSP-TRANSFER-DATA. A positive result omits the
+ * diagnostic and queues the Packet. The provider stays in state 3. `common`
+ * carries `duplicateInvokeId` and `otherReason`. `specific` carries the codes
+ * in section 3.6.2.18. Checks follow the order in that section.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.18, 3.6.3, and 3.1.3.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

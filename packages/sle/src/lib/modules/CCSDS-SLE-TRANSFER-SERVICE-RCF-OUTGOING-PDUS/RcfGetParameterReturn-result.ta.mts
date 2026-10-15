@@ -11,7 +11,14 @@ import { DiagnosticRcfGet, _decode_DiagnosticRcfGet, _encode_DiagnosticRcfGet } 
 /**
  * @summary RcfGetParameterReturn_result
  * @description
- * 
+ *
+ * Outcome of RCF-GET-PARAMETER. positiveResult is the current value of the
+ * requested parameter. negativeResult is the diagnostic, and no parameter
+ * value is returned. 'other reason' is used only when no listed diagnostic
+ * describes the failure.
+ *
+ * CCSDS 911.2-B-4, sections 3.10.2.7, 3.10.2.8, and 3.1.1.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

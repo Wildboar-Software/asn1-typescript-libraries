@@ -13,7 +13,14 @@ import { RcfParameterName, _decode_RcfParameterName, _encode_RcfParameterName } 
 /**
  * @summary RcfGetParameterInvocation
  * @description
- * 
+ *
+ * The user invokes RCF-GET-PARAMETER, in state 2 (ready) or state 3 (active),
+ * to read one RCF service parameter. The provider state stays unchanged. A
+ * positive return carries the parameter and its value. A negative return
+ * carries a diagnostic and omits both.
+ *
+ * CCSDS 911.2-B-4, section 3.10.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +37,39 @@ export
 class RcfGetParameterInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the provider authenticate this invocation when the
+     * agreed level is 'all'. When the level is 'bind' or 'none', the value
+     * should be 'unused'.
+     *
+     * CCSDS 911.2-B-4, sections 3.10.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * User-supplied integer. The provider returns it unchanged. A value that
+     * still belongs to an invocation awaiting confirmation in this service
+     * instance is rejected with duplicate Invoke-ID.
+     *
+     * CCSDS 911.2-B-4, sections 3.1.6 and 3.10.2.4.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `rcfParameter`.
+     * @description
+     *
+     * Which RCF parameter to return. The permitted names are those of
+     * RcfParameterName, corresponding to table 3-11. A name the provider does
+     * not recognize yields diagnostic unknown parameter.
+     *
+     * CCSDS 911.2-B-4, sections 3.10.2.5 and 3.10.2.8.
      * @public
      * @readonly
      */
@@ -80,7 +108,8 @@ class RcfGetParameterInvocation {
  * @summary The Leading Root Component Types of RcfGetParameterInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -95,7 +124,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameterInvocation: $.Componen
  * @summary The Trailing Root Component Types of RcfGetParameterInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -108,7 +138,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameterInvocation: $.Componen
  * @summary The Extension Addition Component Types of RcfGetParameterInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

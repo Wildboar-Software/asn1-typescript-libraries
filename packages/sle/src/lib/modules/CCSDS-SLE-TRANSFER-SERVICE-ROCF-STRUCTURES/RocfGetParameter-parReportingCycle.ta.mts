@@ -17,6 +17,13 @@ import { CurrentReportingCycle, _decode_CurrentReportingCycle, _encode_CurrentRe
  * @summary RocfGetParameter_parReportingCycle
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the current reporting cycle. Until
+ * the user completes a periodic ROCF-SCHEDULE-STATUS-REPORT, and whenever
+ * cyclic reporting is off, the value is null. Otherwise it is the seconds
+ * between ROCF-STATUS-REPORT invocations.
+ *
+ * CCSDS 911.5-B-4, section 3.8 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,23 @@ export
 class RocfGetParameter_parReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to reportingCycle. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * periodicReportingOff means cyclic status reports are off.
+     * periodicReportingOn is the interval in seconds. An immediate status
+     * report, and a stop request, both leave cyclic reporting off. The schedule
+     * operation is rejected for an offline instance.
+     *
+     * CCSDS 911.5-B-4, sections 3.8.1 through 3.8.3 and table 3-11.
      * @public
      * @readonly
      */

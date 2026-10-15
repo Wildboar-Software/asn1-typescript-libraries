@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagnosticFspGet_specific
  * @description
  * 
+ * FSP-specific rejection code for FSP-GET-PARAMETER. Duplicate invoke-ID and
+ * other reason are carried in the `common` alternative.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +28,12 @@ type DiagnosticFspGet_specific = INTEGER;
 
 /**
  * @summary DiagnosticFspGet_specific_unknownParameter
+ * @description
+ * 
+ * The `fspParameter` value does not identify an FSP service parameter the
+ * provider recognizes.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.8.
  * @constant
  * @type {number}
  */
@@ -31,6 +42,10 @@ const DiagnosticFspGet_specific_unknownParameter: DiagnosticFspGet_specific = 0;
 
 /**
  * @summary DiagnosticFspGet_specific_unknownParameter
+ * @description
+ * 
+ * The requested name is not an FSP service parameter (CCSDS 912.3-B-3, section
+ * 3.10.2.8).
  * @constant
  * @type {number}
  */

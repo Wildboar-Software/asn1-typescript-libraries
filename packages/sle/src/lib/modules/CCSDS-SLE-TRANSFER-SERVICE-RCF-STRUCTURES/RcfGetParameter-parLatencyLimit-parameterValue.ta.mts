@@ -11,7 +11,13 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
 /**
  * @summary RcfGetParameter_parLatencyLimit_parameterValue
  * @description
- * 
+ *
+ * Latency limit as returned by RCF-GET-PARAMETER. online is the limit in
+ * seconds while the instance is in an online delivery mode. offline is null
+ * and is the value while the delivery mode is offline.
+ *
+ * CCSDS 911.2-B-4, table 3-11 and section 3.1.9.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

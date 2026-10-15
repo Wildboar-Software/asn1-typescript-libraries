@@ -12,6 +12,15 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary TcVcid
  * @description
  * 
+ * Telecommand Virtual Channel filter for CLCW operational control fields.
+ * Present on ROCF-START when the control word type is clcw; annex A carries it
+ * on that alternative of ControlWordType. noTcVC is the null of section
+ * 3.4.2.9.3: deliver every CLCW OCF, whichever telecommand VC the report
+ * names. tcVcid names one telecommand VC, and only CLCWs for that VC are
+ * delivered. The value must be in the permitted telecommand-VC set.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.9 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

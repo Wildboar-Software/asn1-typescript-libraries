@@ -12,6 +12,16 @@ import { ReportingCycle, _decode_ReportingCycle, _encode_ReportingCycle } from "
  * @summary CurrentReportingCycle
  * @description
  * 
+ * Whether periodic FSP-STATUS-REPORT invocations are scheduled.
+ * `cyclicReportOff` means cyclic reporting is off; table 3-11 calls that value
+ * null. Reporting is null until the user sets it with a successful
+ * FSP-SCHEDULE-STATUS-REPORT, and it is null again when cyclic reporting is
+ * stopped. `cyclicReportOn` is the time, in seconds, between successive status
+ * reports. The user cannot set a cycle below the managed minimum reporting
+ * cycle.
+ * 
+ * CCSDS 912.3-B-3, sections 3.10.2.5 (table 3-11), 3.8, and 3.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

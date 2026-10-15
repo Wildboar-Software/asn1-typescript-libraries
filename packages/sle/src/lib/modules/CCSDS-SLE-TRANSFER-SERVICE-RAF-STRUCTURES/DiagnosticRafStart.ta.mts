@@ -12,6 +12,15 @@ import { _decode_DiagnosticRafStart_specific, _encode_DiagnosticRafStart_specifi
  * @summary DiagnosticRafStart
  * @description
  * 
+ * Negative-result diagnostic of RAF-START. A positive result includes no
+ * diagnostic, and the provider stays in state 2 when the result is negative.
+ * `common` carries `duplicateInvokeId` and `otherReason`. `specific` carries
+ * the RAF-START codes in section 3.4.2.9. Checks should follow that section's
+ * order: duplicate invoke-ID, out of service, unable to comply, missing time
+ * value, invalid start time, invalid stop time, then other reason.
+ * 
+ * CCSDS 911.1-B-5, sections 3.4.2.9, 3.4.3, and 3.1.3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,13 @@ import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit
  * @summary FspData
  * @description
  * 
+ * The Space Packet carried by FSP-TRANSFER-DATA. Annex A types it as a
+ * space-link data unit, an octet string of length 1 to 65536. The Packet is
+ * destined for the space element. Its version, type, APID, and length are
+ * checked as section 3.6.2.18 specifies.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.15 and 3.6.2.18, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

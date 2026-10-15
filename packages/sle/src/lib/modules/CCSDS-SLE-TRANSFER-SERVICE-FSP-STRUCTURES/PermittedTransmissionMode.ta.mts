@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PermittedTransmissionMode
  * @description
  * 
+ * Transmission modes service management permits for one service instance:
+ * sequence-controlled, expedited, or any. A transfer that requests a mode
+ * outside this permission is rejected with `invalidTransmissionMode`.
+ * 
+ * CCSDS 912.3-B-3, sections 3.10.2.5 (table 3-11) and 3.6.2.18.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +31,12 @@ type PermittedTransmissionMode = INTEGER;
 
 /**
  * @summary PermittedTransmissionMode_sequenceControlled
+ * @description
+ * 
+ * Only sequence-controlled (AD) transmission is permitted for the service
+ * instance.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11).
  * @constant
  * @type {number}
  */
@@ -33,6 +45,10 @@ const PermittedTransmissionMode_sequenceControlled: PermittedTransmissionMode = 
 
 /**
  * @summary PermittedTransmissionMode_sequenceControlled
+ * @description
+ * 
+ * Only sequence-controlled transmission is permitted (CCSDS 912.3-B-3, table
+ * 3-11).
  * @constant
  * @type {number}
  */
@@ -41,6 +57,11 @@ const sequenceControlled: PermittedTransmissionMode = PermittedTransmissionMode_
 
 /**
  * @summary PermittedTransmissionMode_expedited
+ * @description
+ * 
+ * Only expedited (BD) transmission is permitted for the service instance.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11).
  * @constant
  * @type {number}
  */
@@ -49,6 +70,9 @@ const PermittedTransmissionMode_expedited: PermittedTransmissionMode = 1; /* LON
 
 /**
  * @summary PermittedTransmissionMode_expedited
+ * @description
+ * 
+ * Only expedited transmission is permitted (CCSDS 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */
@@ -57,6 +81,12 @@ const expedited: PermittedTransmissionMode = PermittedTransmissionMode_expedited
 
 /**
  * @summary PermittedTransmissionMode_any_
+ * @description
+ * 
+ * The service instance may use sequence-controlled or expedited transmission.
+ * Annex A names this value `any`.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11) and annex A2.5.
  * @constant
  * @type {number}
  */
@@ -65,6 +95,10 @@ const PermittedTransmissionMode_any_: PermittedTransmissionMode = 2; /* LONG_NAM
 
 /**
  * @summary PermittedTransmissionMode_any_
+ * @description
+ * 
+ * Sequence-controlled or expedited transmission is permitted (CCSDS 912.3-B-3,
+ * table 3-11).
  * @constant
  * @type {number}
  */

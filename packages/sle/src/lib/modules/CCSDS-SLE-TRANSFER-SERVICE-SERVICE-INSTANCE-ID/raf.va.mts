@@ -11,6 +11,11 @@ import {
  * @summary raf
  * @description
  * 
+ * Object identifier of the Return All Frames service-name attribute.
+ * The printable name is `raf`.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

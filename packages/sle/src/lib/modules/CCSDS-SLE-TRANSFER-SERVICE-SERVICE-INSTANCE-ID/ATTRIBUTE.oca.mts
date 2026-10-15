@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ATTRIBUTE
  * @description
  * 
+ * Object class of a service-instance attribute. `&id` is the object
+ * identifier carried in `ServiceInstanceAttribute`. The module
+ * comments state the printable name of each attribute.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +47,9 @@ interface ATTRIBUTE {
     }>;
     /**
      * @summary &id
+     * @description
+     * Object identifier of the attribute.
+     * CCSDS 911.1-B-5, section A2.4.
      */
     readonly "&id"?: OBJECT_IDENTIFIER;
 };

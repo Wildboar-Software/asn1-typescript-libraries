@@ -1,8 +1,12 @@
 /**
  * @description
  *
- * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID` from the CCSDS Space Link Extension
- * transfer services. The module is declared with IMPLICIT TAGS.
+ * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID`
+ * from the CCSDS Space Link Extension transfer services. The module
+ * is declared with IMPLICIT TAGS.
+ *
+ * Service instance identifier attributes and their string form.
+ * CCSDS 911.1-B-5, sections 3.2.2.9 and A2.4.
  *
  * `{iso identified-organization(3) standards-producing-organization(112) ccsds(4) space-link-extension(3) sle-transfer-services(1) modules(1) common-modules(99) version-five(5) asn1-service-id-type(4)}`
  */

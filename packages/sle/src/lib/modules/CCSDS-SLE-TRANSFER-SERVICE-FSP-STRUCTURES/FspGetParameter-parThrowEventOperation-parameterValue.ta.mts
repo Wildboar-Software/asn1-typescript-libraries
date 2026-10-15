@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FspGetParameter_parThrowEventOperation_parameterValue
  * @description
  * 
+ * Whether this service instance may invoke FSP-THROW-EVENT. enabled is 0 and
+ * disabled is 1.
+ * 
+ * CCSDS 912.3-B-3, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +29,10 @@ type FspGetParameter_parThrowEventOperation_parameterValue = INTEGER;
 
 /**
  * @summary FspGetParameter_parThrowEventOperation_parameterValue_enabled
+ * @description
+ *
+ * This service instance is authorized to invoke FSP-THROW-EVENT. CCSDS
+ * 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -32,6 +41,9 @@ const FspGetParameter_parThrowEventOperation_parameterValue_enabled: FspGetParam
 
 /**
  * @summary FspGetParameter_parThrowEventOperation_parameterValue_enabled
+ * @description
+ *
+ * FSP-THROW-EVENT is authorized (CCSDS 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */
@@ -40,6 +52,10 @@ const enabled: FspGetParameter_parThrowEventOperation_parameterValue = FspGetPar
 
 /**
  * @summary FspGetParameter_parThrowEventOperation_parameterValue_disabled
+ * @description
+ *
+ * This service instance is unauthorized to invoke FSP-THROW-EVENT. CCSDS
+ * 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -48,6 +64,9 @@ const FspGetParameter_parThrowEventOperation_parameterValue_disabled: FspGetPara
 
 /**
  * @summary FspGetParameter_parThrowEventOperation_parameterValue_disabled
+ * @description
+ *
+ * FSP-THROW-EVENT is unauthorized (CCSDS 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */

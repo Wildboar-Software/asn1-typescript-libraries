@@ -13,7 +13,13 @@ import { FspParameterName, _decode_FspParameterName, _encode_FspParameterName } 
 /**
  * @summary FspGetParameterInvocation
  * @description
- * 
+ *
+ * User invocation of FSP-GET-PARAMETER. Valid in state 2 (ready) and state 3
+ * (active). On success the return carries the current value of the named FSP
+ * service parameter. The provider stays in the state it was already in.
+ *
+ * CCSDS 912.3-B-3, sections 3.10.1 and 3.10.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +36,39 @@ export
 class FspGetParameterInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated; `bind` authenticates only FSP-BIND;
+     * `none` leaves every invocation and return unauthenticated. When this
+     * invocation is unauthenticated, the value should be `unused`.
+     *
+     * CCSDS 912.3-B-3, sections 3.10.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. An invoke-ID that still has an outstanding return in the
+     * same service instance is rejected with `duplicateInvokeId`.
+     *
+     * CCSDS 912.3-B-3, sections 3.10.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `fspParameterName`.
+     * @description
+     * Which FSP service parameter to return. The value is one of the names in
+     * table 3-11. A name the provider does not recognize yields
+     * `unknownParameter`. On a negative result the name is omitted from the
+     * return.
+     *
+     * CCSDS 912.3-B-3, sections 3.10.2.5 and 3.10.2.8.
      * @public
      * @readonly
      */

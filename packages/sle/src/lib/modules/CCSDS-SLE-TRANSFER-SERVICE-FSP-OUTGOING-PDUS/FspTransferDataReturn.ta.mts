@@ -16,6 +16,12 @@ import { FspTransferDataReturn_result, _decode_FspTransferDataReturn_result, _en
  * @summary FspTransferDataReturn
  * @description
  * 
+ * Provider return from FSP-TRANSFER-DATA. A positive result means the Packet
+ * will be queued until processing is due. A negative result means the Packet
+ * has not been queued. The provider remains in state 3 (active) either way.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.17 and 3.6.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,30 +43,67 @@ export
 class FspTransferDataReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * Information with which the invoker authenticates this return. When the
+     * agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated. When this return is unauthenticated, the
+     * value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. An invoke-ID that still has an outstanding return in the
+     * same service instance is rejected with `duplicateInvokeId`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.6.4 and 3.1.6.5.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `expectedPacketIdentification`.
+     * @description
+     * Packet identification the provider expects on the next FSP-TRANSFER-DATA.
+     * If this invocation is accepted, the value is one greater than the
+     * identification in the invocation. If it is rejected, the value is the
+     * identification the provider expected: the FSP-START
+     * `firstPacketIdentification` for the first transfer after that start,
+     * otherwise one greater than the last accepted identification. The same
+     * rule applies when the diagnostic is `duplicatePacketIdentification`.
+     * 
+     * CCSDS 912.3-B-3, section 3.6.2.5.2.
      * @public
      * @readonly
      */
     readonly expectedPacketIdentification: PacketIdentification;
     /**
      * @summary `packetBufferAvailable`.
+     * @description
+     * Remaining number of octets available to this service instance for
+     * buffering Space Packets in the request queue. Annex A constrains the
+     * value to 7 through 66560 and comments that the minimum Telecommand size
+     * is 7 octets and the maximum is 64K octets plus overhead. Section 3.6.2.16
+     * does not restate that range.
+     * 
+     * CCSDS 912.3-B-3, section 3.6.2.16 and annex A2.5.
      * @public
      * @readonly
      */
     readonly packetBufferAvailable: BufferSize;
     /**
      * @summary `result`.
+     * @description
+     * Outcome of FSP-TRANSFER-DATA. `positiveResult` means the Packet will be
+     * queued. `negativeResult` means it was not queued and carries a
+     * `DiagnosticFspTransferData`.
+     * 
+     * CCSDS 912.3-B-3, section 3.6.2.17.
      * @public
      * @readonly
      */

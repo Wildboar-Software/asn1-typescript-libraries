@@ -10,6 +10,16 @@ import { MasterChannelComposition, _decode_MasterChannelComposition, _encode_Mas
  * @summary GvcIdSet
  * @description
  * 
+ * permitted-global-VCID-set. Service management configures the Master Channel
+ * and Virtual Channels from which this instance may extract OCFs. One instance
+ * permits one Master Channel, one Virtual Channel, or one Master Channel
+ * together with a set of its Virtual Channels. ROCF-START must request a
+ * member of this set. When the set contains a Master Channel and no Virtual
+ * Channel of that Master Channel, the user cannot request a Virtual Channel of
+ * it.
+ *
+ * CCSDS 911.5-B-4, sections 2.1, 2.7, 3.4.2.7, and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

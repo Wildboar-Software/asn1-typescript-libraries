@@ -11,6 +11,11 @@ import {
  * @summary spack
  * @description
  * 
+ * Object identifier of the service-package attribute. The printable
+ * name is `spack`.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

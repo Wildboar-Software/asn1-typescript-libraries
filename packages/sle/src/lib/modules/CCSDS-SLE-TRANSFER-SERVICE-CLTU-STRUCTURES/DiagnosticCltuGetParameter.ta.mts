@@ -12,6 +12,11 @@ import { _decode_DiagnosticCltuGetParameter_specific, _encode_DiagnosticCltuGetP
  * @summary DiagnosticCltuGetParameter
  * @description
  * 
+ * Why CLTU-GET-PARAMETER failed. common carries duplicate invoke id, when the
+ * invoke-ID matches an invocation still awaiting a return, and other reason,
+ * used only when no listed diagnostic fits. specific carries unknown parameter.
+ * CCSDS 912.1-B-5, sections 3.10.2.8 and 3.1.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,15 @@ import { TcVcid, _decode_TcVcid, _encode_TcVcid } from "../CCSDS-SLE-TRANSFER-SE
  * @summary RequestedTcVcid
  * @description
  * 
+ * requested-tc-vcid as returned by ROCF-GET-PARAMETER. While the instance is
+ * in state 3 (active), this is the telecommand VC from the most recent
+ * ROCF-START. The value is null when a telecommand VC must not be selected,
+ * for example because the delivered control words are not CLCWs. When the
+ * instance is not active, the reported value is the first element of the
+ * permitted telecommand-VC set.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

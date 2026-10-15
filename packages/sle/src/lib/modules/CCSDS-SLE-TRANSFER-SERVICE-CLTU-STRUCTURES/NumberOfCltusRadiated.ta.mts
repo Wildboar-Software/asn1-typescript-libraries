@@ -10,6 +10,11 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary NumberOfCltusRadiated
  * @description
  * 
+ * How many CLTUs have been radiated completely during this service instance. A
+ * CLTU still being radiated is omitted. Zero when none have completed.
+ * Accumulated for the whole provision period. CCSDS 912.1-B-5, sections
+ * 3.9.2.12 and 3.1.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

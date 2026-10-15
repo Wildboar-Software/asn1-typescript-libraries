@@ -20,7 +20,47 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
 /**
  * @summary RcfProviderToUserPdu
  * @description
- * 
+ *
+ * One SLE-PDU sent by the RCF provider.
+ *
+ * rcfBindInvocation: the provider invokes RCF-BIND for a provider-initiated
+ * instance. Legal only in state 1 (unbound).
+ *
+ * rcfBindReturn: the provider reports a user-initiated RCF-BIND. Acceptance
+ * moves the provider from state 1 to state 2 (ready).
+ *
+ * rcfUnbindInvocation: the provider, as association initiator, asks to release
+ * the association.
+ *
+ * rcfUnbindReturn: the provider reports the outcome of RCF-UNBIND.
+ *
+ * rcfStartReturn: the provider reports RCF-START. A positive result moves the
+ * provider to state 3 (active).
+ *
+ * rcfStopReturn: the provider reports RCF-STOP. A positive result stops frame
+ * delivery, releases the transfer buffer, and returns the provider to state 2
+ * (ready).
+ *
+ * rcfTransferBuffer: one release of the transfer buffer, carrying
+ * RCF-TRANSFER-DATA and RCF-SYNC-NOTIFY records in insertion order.
+ *
+ * rcfScheduleStatusReportReturn: the provider reports
+ * RCF-SCHEDULE-STATUS-REPORT. The provider state stays unchanged.
+ *
+ * rcfStatusReportInvocation: the provider sends a status report in state 2 or
+ * 3, as requested by the user. Unconfirmed, and sent without waiting for the
+ * transfer buffer.
+ *
+ * rcfGetParameterReturn: the provider reports RCF-GET-PARAMETER. The provider
+ * state stays unchanged.
+ *
+ * rcfPeerAbortInvocation: the provider aborts the association, enters state 1,
+ * and discards the transfer buffer. Status-report statistics are kept for the
+ * service instance provision period.
+ *
+ * CCSDS 911.2-B-4, sections 2.6.4.2, 3.2, 3.4.3, 3.5.3, 3.8, 3.9, 3.10, and
+ * 3.11.3.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

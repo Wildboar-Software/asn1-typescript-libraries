@@ -12,6 +12,13 @@ import { ReportingCycle, _decode_ReportingCycle, _encode_ReportingCycle } from "
  * @summary ReportRequestType
  * @description
  * 
+ * How status reports shall be sent. `immediately` sends one report and then
+ * stops any periodic reporting. `periodically` sends a report immediately and
+ * then one every reporting-cycle seconds. `stop` ceases periodic reports. The
+ * reporting cycle is present only for `periodically`.
+ * 
+ * CCSDS 911.1-B-5, sections 3.8.2.5, 3.8.2.6, and 3.8.3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

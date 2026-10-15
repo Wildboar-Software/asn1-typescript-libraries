@@ -16,7 +16,14 @@ import { CurrentReportingCycle, _decode_CurrentReportingCycle, _encode_CurrentRe
 /**
  * @summary RcfGetParameter_parReportingCycle
  * @description
- * 
+ *
+ * Returned value of reporting-cycle. Null while cyclic status reporting is
+ * off, which is the state after RCF-BIND and until a successful
+ * RCF-SCHEDULE-STATUS-REPORT asks for periodic reports. Otherwise the number
+ * of seconds between successive RCF-STATUS-REPORT invocations.
+ *
+ * CCSDS 911.2-B-4, section 3.8 and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,23 @@ export
 class RcfGetParameter_parReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Identifies this value as reporting-cycle (reportingCycle).
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Current interval between status reports, or an indication that cyclic
+     * reporting is off.
+     *
+     * CCSDS 911.2-B-4, table 3-11.
      * @public
      * @readonly
      */
@@ -58,7 +76,8 @@ class RcfGetParameter_parReportingCycle {
      * @summary Restructures an object into a RcfGetParameter_parReportingCycle
      * @description
      * 
-     * This takes an `object` and converts it to a `RcfGetParameter_parReportingCycle`.
+     * This takes an `object` and converts it to a
+     * `RcfGetParameter_parReportingCycle`.
      * 
      * @public
      * @static
@@ -77,7 +96,8 @@ class RcfGetParameter_parReportingCycle {
  * @summary The Leading Root Component Types of RcfGetParameter_parReportingCycle
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -91,7 +111,8 @@ const _root_component_type_list_1_spec_for_RcfGetParameter_parReportingCycle: $.
  * @summary The Trailing Root Component Types of RcfGetParameter_parReportingCycle
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -104,7 +125,8 @@ const _root_component_type_list_2_spec_for_RcfGetParameter_parReportingCycle: $.
  * @summary The Extension Addition Component Types of RcfGetParameter_parReportingCycle
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

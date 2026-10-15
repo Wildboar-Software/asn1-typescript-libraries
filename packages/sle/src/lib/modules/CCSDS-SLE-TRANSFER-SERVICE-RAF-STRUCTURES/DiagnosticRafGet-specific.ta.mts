@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagnosticRafGet_specific
  * @description
  * 
+ * RAF-specific rejection codes for RAF-GET-PARAMETER. Duplicate invoke-ID and
+ * other reason are carried in the `common` alternative.
+ * 
+ * CCSDS 911.1-B-5, section 3.10.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +28,12 @@ type DiagnosticRafGet_specific = INTEGER;
 
 /**
  * @summary DiagnosticRafGet_specific_unknownParameter
+ * @description
+ * 
+ * The `raf-parameter` in the invocation does not identify an RAF parameter the
+ * provider recognizes. The recognized set is table 3-11.
+ * 
+ * CCSDS 911.1-B-5, section 3.10.2.8.
  * @constant
  * @type {number}
  */
@@ -31,6 +42,10 @@ const DiagnosticRafGet_specific_unknownParameter: DiagnosticRafGet_specific = 0;
 
 /**
  * @summary DiagnosticRafGet_specific_unknownParameter
+ * @description
+ * 
+ * `raf-parameter` is not a recognized RAF parameter (CCSDS 911.1-B-5, section
+ * 3.10.2.8).
  * @constant
  * @type {number}
  */

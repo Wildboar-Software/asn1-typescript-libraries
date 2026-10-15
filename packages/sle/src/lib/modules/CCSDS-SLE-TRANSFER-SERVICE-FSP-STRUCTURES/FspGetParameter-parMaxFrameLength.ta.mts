@@ -21,6 +21,17 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary FspGetParameter_parMaxFrameLength
  * @description
  * 
+ * maximum-frame-length: the mission maximum TC transfer frame length, in
+ * octets. The value is an integer from 12 to 1024 (annex A2.5). Service
+ * management sets it.
+ * 
+ * The note to table 3-11 requires maximum-frame-length, maximum-packet-length,
+ * and segment-header to be consistent. Service management rejects an
+ * inconsistent combination at configuration time. Section 3.10 says FSP is not
+ * designed to deal with that inconsistency at run time.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +47,18 @@ export
 class FspGetParameter_parMaxFrameLength {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `maximumFrameLength`, selecting maximum-frame-length in table
+     * 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Mission maximum TC transfer frame length in octets, from 12 to 1024.
+     * CCSDS 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

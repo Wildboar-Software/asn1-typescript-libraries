@@ -17,6 +17,10 @@ import { ModulationFrequency, _decode_ModulationFrequency, _encode_ModulationFre
  * @summary CltuGetParameter_parModulationFrequency
  * @description
  * 
+ * modulation-frequency: the subcarrier frequency, or the frequency of
+ * direct-on-carrier data modulation, in tenths of a hertz. Set by service
+ * management. CCSDS 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +36,21 @@ export
 class CltuGetParameter_parModulationFrequency {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `modulationFrequency`. Names the modulation-frequency parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Subcarrier frequency, or the direct-on-carrier modulation frequency, in
+     * tenths of a hertz. CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

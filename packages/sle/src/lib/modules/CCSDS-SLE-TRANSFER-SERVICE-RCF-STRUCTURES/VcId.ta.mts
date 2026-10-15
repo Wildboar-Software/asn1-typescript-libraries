@@ -14,7 +14,14 @@ import { integerInRange } from "../../constraints.mjs";
 /**
  * @summary VcId
  * @description
- * 
+ *
+ * Virtual Channel identifier inside a global VCID. It must be a valid VCID for
+ * the Transfer Frame version of that global VCID. Annex A comments give the
+ * ranges: TM 0 to 7, AOS 0 to 63, and USLP 0 to 63. The master-channel
+ * selection is a separate alternative and is not a numeric VCID.
+ *
+ * CCSDS 911.2-B-4, sections 3.4.2.7.4 and 1.6.1.8.20.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

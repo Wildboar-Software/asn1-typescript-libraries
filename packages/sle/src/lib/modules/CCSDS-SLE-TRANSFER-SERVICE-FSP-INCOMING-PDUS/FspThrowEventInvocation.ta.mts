@@ -17,6 +17,19 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary FspThrowEventInvocation
  * @description
  * 
+ * User invocation of FSP-THROW-EVENT. Valid in states 2 (ready) and 3 (active),
+ * and only when throwing of events is enabled for the instance. The provider
+ * forwards the event to SLE Complex Management with minimal delay. The event is
+ * asynchronous with radiation of space-link data units; the user arranges any
+ * required alignment, for example by production time or by notifications. The
+ * return reports only whether the invocation was accepted. The outcome of the
+ * associated actions arrives later by FSP-ASYNC-NOTIFY. A positive result
+ * leaves the provider in its original state. Several instances on one physical
+ * channel may be allowed to throw events.
+ * 
+ * CCSDS 912.3-B-3, sections 3.11.1 and 3.11.3. Annex H gives non-binding
+ * examples.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,30 +48,72 @@ export
 class FspThrowEventInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated; `bind` authenticates only FSP-BIND;
+     * `none` leaves every invocation and return unauthenticated. When this
+     * invocation is unauthenticated, the value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. An invoke-ID that still has an outstanding return in the
+     * same service instance is rejected with `duplicateInvokeId`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.6.4 and 3.1.6.5.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `eventIdentifier`.
+     * @description
+     * Identifies the event the provider forwards to Complex Management. The
+     * provider and Complex Management must already have agreed the identifiers
+     * and the interpretation of `eventQualifier`. An identifier outside the set
+     * Complex Management recognizes is rejected with `noSuchEvent`. Annex H
+     * lists informative, non-binding examples (Set Mod, Change Rate, Change
+     * Index, and Change Rate/Index, numbered 1 through 4). This issue does not
+     * define a required set of identifiers.
+     * 
+     * CCSDS 912.3-B-3, sections 3.11.2.5, 3.11.2.9, and annex H.
      * @public
      * @readonly
      */
     readonly eventIdentifier: IntPosShort;
     /**
      * @summary `eventQualifier`.
+     * @description
+     * Additional data, forwarded with `eventIdentifier`, that constrains the
+     * actions Complex Management takes. Its contents depend on the event. The
+     * provider checks only that the value is an octet string of length 1 to
+     * 1024, as annex A specifies. Complex Management checks the contents. An
+     * error found there is reported by FSP-ASYNC-NOTIFY with
+     * `actionListNotCompleted`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.11.2.6 and 3.11.3.1.
      * @public
      * @readonly
      */
     readonly eventQualifier: OCTET_STRING;
     /**
      * @summary `eventInvocationIdentification`.
+     * @description
+     * Monotonic sequence number of this throw-event invocation. The first
+     * invocation after the first successful FSP-BIND is 0, and each accepted
+     * invocation increments it. The next invocation uses the value the provider
+     * returned. The expected value survives release or abort of the
+     * association. The provider uses the user-supplied value to reference the
+     * event in later reports.
+     * 
+     * CCSDS 912.3-B-3, section 3.11.2.7.
      * @public
      * @readonly
      */

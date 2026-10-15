@@ -46,6 +46,18 @@ const _RocfParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
  * @summary RocfParameterName
  * @description
  * 
+ * Parameter name the user may pass to ROCF-GET-PARAMETER. The legal values are
+ * the ParameterName codes for table 3-11: bufferSize (4), which that table
+ * calls transfer-buffer-size; deliveryMode (6); latencyLimit (15);
+ * minReportingCycle (301); permittedControlWordTypeSet (101);
+ * permittedGvcidSet (24); permittedTcVcidSet (102); permittedUpdateModeSet
+ * (103); reportingCycle (26); requestedControlWordType (104); requestedGvcid
+ * (28); requestedTcVcid (105); requestedUpdateMode (106); returnTimeoutPeriod
+ * (29). Any other name is rejected as unknownParameter. Section 3.1.8 note 2
+ * says management parameters absent from table 3-11 are outside GET-PARAMETER.
+ *
+ * CCSDS 911.5-B-4, table 3-11, sections 3.1.8 and 3.10.2.5, and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

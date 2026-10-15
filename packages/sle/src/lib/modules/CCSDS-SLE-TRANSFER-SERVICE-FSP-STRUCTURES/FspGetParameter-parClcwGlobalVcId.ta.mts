@@ -17,6 +17,13 @@ import { ClcwGvcId, _decode_ClcwGvcId, _encode_ClcwGvcId } from "../CCSDS-SLE-TR
  * @summary FspGetParameter_parClcwGlobalVcId
  * @description
  * 
+ * clcw-global-VCID: the Master Channel or Virtual Channel that carries the CLCW
+ * the provider uses for forward-link RF status, bit-lock status, or both. When
+ * this service instance does not evaluate the CLCW, the reported value is not
+ * configured. Service management sets it.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and section 3.1.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,19 @@ export
 class FspGetParameter_parClcwGlobalVcId {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `clcwGlobalVcId`, selecting clcw-global-VCID in table 3-11.
+     * CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * GVCID of the CLCW source, or not configured when the CLCW is unevaluated.
+     * Annex A2.5 encodes not configured as NULL. CCSDS 912.3-B-3, table 3-11
+     * and annex A2.5.
      * @public
      * @readonly
      */

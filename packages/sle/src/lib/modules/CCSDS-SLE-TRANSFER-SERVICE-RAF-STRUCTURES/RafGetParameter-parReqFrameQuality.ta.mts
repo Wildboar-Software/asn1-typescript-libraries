@@ -17,6 +17,12 @@ import { RafGetParameter_parReqFrameQuality_parameterValue, _decode_RafGetParame
  * @summary RafGetParameter_parReqFrameQuality
  * @description
  * 
+ * RAF-GET-PARAMETER value of `requested-frame-quality`, the filter RAF-START
+ * uses to choose frames. Until the first successful RAF-START, the value is the
+ * first element of `permitted-frame-quality-set`.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.4.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,18 @@ export
 class RafGetParameter_parReqFrameQuality {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `requestedFrameQuality`, selecting requested-frame-quality in
+     * table 3-11. CCSDS 911.1-B-5, annex A2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * The frame-quality filter in effect: good frames only, erred frames only,
+     * or all frames. CCSDS 911.1-B-5, section 3.4.2.7 and table 3-11.
      * @public
      * @readonly
      */

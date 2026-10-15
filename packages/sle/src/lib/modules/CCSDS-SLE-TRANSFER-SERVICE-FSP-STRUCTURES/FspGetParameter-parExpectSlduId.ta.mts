@@ -17,6 +17,16 @@ import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdent
  * @summary FspGetParameter_parExpectSlduId
  * @description
  * 
+ * expected-sldu-identification: the packet-identification the provider expects
+ * on the next FSP-TRANSFER-DATA invocation. When no FSP-START has been
+ * performed, the returned value is zero.
+ * 
+ * Annex A2.5 types packet identification as `IntUnsignedLong` (0 to
+ * 4294967295). Section 3.10 states the default of zero and does not state a
+ * tighter range.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +42,19 @@ export
 class FspGetParameter_parExpectSlduId {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `expectedSlduIdentification`, selecting
+     * expected-sldu-identification in table 3-11. CCSDS 912.3-B-3, section
+     * 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Next packet-identification. Zero when no FSP-START has been performed.
+     * Range 0 to 4294967295. CCSDS 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

@@ -14,6 +14,13 @@ import { SleBindReturn_result, _decode_SleBindReturn_result, _encode_SleBindRetu
  * @summary SleBindReturn
  * @description
  * 
+ * Return from BIND. A positive result establishes the association and moves the
+ * provider from state 1 (unbound) to state 2 (ready), with service parameters
+ * at the initial values set by service management. A negative result leaves the
+ * provider state unchanged and establishes no association.
+ * 
+ * CCSDS 911.1-B-5, sections 3.2.2.10, 3.2.3, and A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +40,40 @@ export
 class SleBindReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * 
+     * Information with which the invoker authenticates this return. When the
+     * return is unauthenticated, the value should be `unused`. An unrecognized
+     * initiator-identifier is rejected with `accessDenied` and this parameter
+     * set to `unused`, with no authentication attempt.
+     *
+     * CCSDS 911.1-B-5, sections 3.2.2.3, 3.1.5.6, and 4.1.6.2.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `responderIdentifier`.
+     * @description
+     * 
+     * Authority on whose behalf the responding application is acting. An
+     * unknown value causes the initiator to PEER-ABORT with `accessDenied`. A
+     * known value that is not the authorized responder causes PEER-ABORT with
+     * `unexpectedResponderId`.
+     *
+     * CCSDS 911.1-B-5, sections 3.2.2.5, 4.1.6.4, and 4.1.6.5.
      * @public
      * @readonly
      */
     readonly responderIdentifier: AuthorityIdentifier;
     /**
      * @summary `result`.
+     * @description
+     * 
+     * `positive` accepts the invocation and carries the version that governs
+     * the association. `negative` rejects it and carries a `BindDiagnostic`.
+     *
+     * CCSDS 911.1-B-5, sections 3.2.2.10 and 3.2.2.11.
      * @public
      * @readonly
      */

@@ -12,6 +12,14 @@ import { TimeCCSDSpico, _decode_TimeCCSDSpico, _encode_TimeCCSDSpico } from "../
  * @summary Time
  * @description
  * 
+ * UTC time in the CCSDS day-segmented time code, epoch 1958-01-01, with a
+ * 16-bit day segment. `ccsdsFormat` has microsecond resolution.
+ * `ccsdsPicoFormat` has picosecond resolution. The provider chooses the
+ * resolution, and the user is expected to accept either. Earth receive time is
+ * accurate to within one millisecond or better.
+ * 
+ * CCSDS 911.1-B-5, section 3.1.7 and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

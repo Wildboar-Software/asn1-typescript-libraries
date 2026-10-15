@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RafTransferDataInvocation_privateAnnotation
  * @description
  * 
+ * `null` means this frame has no private annotation. `notNull` is 1 to 128
+ * octets. The book requires a prior management arrangement for any non-null
+ * contents and does not define those contents (section 3.6.2.7 does not specify
+ * an octet layout).
+ * 
+ * CCSDS 911.1-B-5, section 3.6.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

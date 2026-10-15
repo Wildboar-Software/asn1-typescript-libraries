@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UplinkStatus
  * @description
  * 
+ * Forward-link state taken from the CLCW in the return telemetry. Reported on
+ * every CLTU-ASYNC-NOTIFY and CLTU-STATUS-REPORT. The CLCW comes from the
+ * channel named by clcw-physical-channel and clcw-global-VCID when those
+ * parameters are configured. CCSDS 912.1-B-5, sections 3.7.2.11 and 3.9.2.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +31,10 @@ type UplinkStatus = INTEGER;
 
 /**
  * @summary UplinkStatus_uplinkStatusNotAvailable
+ * @description
+ *
+ * The provider has received no CLCW from the spacecraft, so forward-link lock
+ * cannot be reported. CCSDS 912.1-B-5, sections 3.7.2.11 and 3.9.2.9.
  * @constant
  * @type {number}
  */
@@ -34,6 +43,9 @@ const UplinkStatus_uplinkStatusNotAvailable: UplinkStatus = 0; /* LONG_NAMED_INT
 
 /**
  * @summary UplinkStatus_uplinkStatusNotAvailable
+ * @description
+ *
+ * No CLCW has been received (CCSDS 912.1-B-5, section 3.7.2.11).
  * @constant
  * @type {number}
  */
@@ -42,6 +54,10 @@ const uplinkStatusNotAvailable: UplinkStatus = UplinkStatus_uplinkStatusNotAvail
 
 /**
  * @summary UplinkStatus_noRfAvailable
+ * @description
+ *
+ * At least one CLCW has been received, and in the latest CLCW the No RF
+ * Available flag is 1. CCSDS 912.1-B-5, sections 3.7.2.11 and 3.9.2.9.
  * @constant
  * @type {number}
  */
@@ -50,6 +66,9 @@ const UplinkStatus_noRfAvailable: UplinkStatus = 1; /* LONG_NAMED_INTEGER_VALUE 
 
 /**
  * @summary UplinkStatus_noRfAvailable
+ * @description
+ *
+ * The latest CLCW has No RF Available set (CCSDS 912.1-B-5, section 3.7.2.11).
  * @constant
  * @type {number}
  */
@@ -58,6 +77,10 @@ const noRfAvailable: UplinkStatus = UplinkStatus_noRfAvailable; /* SHORT_NAMED_I
 
 /**
  * @summary UplinkStatus_noBitLock
+ * @description
+ *
+ * At least one CLCW has been received. In the latest CLCW, No RF Available is 0
+ * and No Bit Lock is 1. CCSDS 912.1-B-5, sections 3.7.2.11 and 3.9.2.9.
  * @constant
  * @type {number}
  */
@@ -66,6 +89,10 @@ const UplinkStatus_noBitLock: UplinkStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_noBitLock
+ * @description
+ *
+ * The latest CLCW has RF available and No Bit Lock set (CCSDS 912.1-B-5,
+ * section 3.7.2.11).
  * @constant
  * @type {number}
  */
@@ -74,6 +101,11 @@ const noBitLock: UplinkStatus = UplinkStatus_noBitLock; /* SHORT_NAMED_INTEGER_V
 
 /**
  * @summary UplinkStatus_nominal
+ * @description
+ *
+ * At least one CLCW has been received, and in the latest CLCW both No RF
+ * Available and No Bit Lock are 0. CCSDS 912.1-B-5, sections 3.7.2.11 and
+ * 3.9.2.9.
  * @constant
  * @type {number}
  */
@@ -82,6 +114,10 @@ const UplinkStatus_nominal: UplinkStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_nominal
+ * @description
+ *
+ * The latest CLCW shows RF available and bit lock (CCSDS 912.1-B-5, section
+ * 3.7.2.11).
  * @constant
  * @type {number}
  */

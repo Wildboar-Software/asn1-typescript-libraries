@@ -10,6 +10,18 @@ import { PeerAbortDiagnostic, _decode_PeerAbortDiagnostic, _encode_PeerAbortDiag
  * @summary SlePeerAbort
  * @description
  * 
+ * Invocation of PEER-ABORT. Unconfirmed notification that the local application
+ * detected an error that requires the association to be terminated abnormally.
+ * Valid in states 2 (ready) and 3 (active), from either user or provider. It
+ * carries no credentials. The association is aborted, the provider returns to
+ * state 1 (unbound), and the transfer buffer is discarded. Status-report
+ * statistics are kept for the rest of the provision period.
+ * 
+ * The initiator may also send it when a BIND return does not arrive, then
+ * invoke BIND again.
+ * 
+ * CCSDS 911.1-B-5, sections 3.11, 3.1.5.1, 3.2.1.5, and A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

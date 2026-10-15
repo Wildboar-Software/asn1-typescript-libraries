@@ -17,6 +17,16 @@ import { FspDeliveryMode, _decode_FspDeliveryMode, _encode_FspDeliveryMode } fro
  * @summary FspGetParameter_parDeliveryMode
  * @description
  * 
+ * delivery-mode: the only value in this issue is fwd online. Forward online
+ * delivery is provisioned during a space link session, at the same time as
+ * production (section 3.1.8.1). Section 3.1.8.2 leaves forward offline delivery
+ * undefined in this issue. Service management sets the mode.
+ * 
+ * Annex A2.5 constrains `FspDeliveryMode` to `fwdOnline`. Annex A2.1 numbers
+ * `fwdOnline` as 3.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.8, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +42,18 @@ export
 class FspGetParameter_parDeliveryMode {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `deliveryMode`, selecting delivery-mode in table 3-11. CCSDS
+     * 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * `fwdOnline` (3), the only FSP delivery mode in this issue. CCSDS
+     * 912.3-B-3, table 3-11, section 3.1.8.1, and annex A2.1.
      * @public
      * @readonly
      */

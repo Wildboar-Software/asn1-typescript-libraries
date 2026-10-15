@@ -14,6 +14,12 @@ import { RocfGetParameterReturn_result, _decode_RocfGetParameterReturn_result, _
  * @summary RocfGetParameterReturn
  * @description
  * 
+ * Provider return for ROCF-GET-PARAMETER. A positive result supplies the
+ * requested parameter. A negative result supplies a diagnostic and no
+ * parameter value. The provider state stays unchanged.
+ *
+ * CCSDS 911.5-B-4, sections 3.10.2 and 3.10.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,38 @@ export
 class RocfGetParameterReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     * 
+     * Credentials the invoker uses to authenticate this return. When
+     * authentication of the return is not required, the value is unused. The
+     * octet layout is the bilaterally agreed algorithm, which this
+     * specification leaves unspecified. CCSDS 911.5-B-4, sections 3.1.5 and
+     * 3.10.2.3.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Integer chosen by the invoker. The performer returns it unchanged so the
+     * return can be matched to this invocation. A value that duplicates an
+     * invoke-ID still awaiting confirmation in this service instance is
+     * rejected. CCSDS 911.5-B-4, sections 3.1.6 and 3.10.2.4.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `result`.
+     * @description
+     * 
+     * positiveResult is the parameter named in the invocation and its current
+     * value. negativeResult is DiagnosticRocfGet. On a negative result the
+     * parameter name and value are omitted.
+     *
+     * CCSDS 911.5-B-4, sections 3.10.2.5 through 3.10.2.8.
      * @public
      * @readonly
      */

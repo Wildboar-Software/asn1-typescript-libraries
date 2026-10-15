@@ -4,6 +4,10 @@
  * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES` from the CCSDS Space Link Extension
  * transfer services. The module is declared with IMPLICIT TAGS.
  *
+ * CCSDS 911.5-B-4 annex A2.5 defines this module. Section 3 and annex B
+ * specify the ROCF parameters, diagnostics, delivery criteria, and production
+ * status these types carry.
+ *
  * `{iso identified-organization(3) standards-producing-organization(112) ccsds(4) space-link-extension(3) sle-transfer-services(1) modules(1) return-operational-control-field-service(14) version-six(6) asn1-rocf-structures(1)}`
  */
 export * from "./AntennaId.ta.mjs";

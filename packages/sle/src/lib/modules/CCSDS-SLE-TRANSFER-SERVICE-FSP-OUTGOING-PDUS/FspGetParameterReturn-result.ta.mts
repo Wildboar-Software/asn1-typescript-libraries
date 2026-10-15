@@ -11,7 +11,14 @@ import { DiagnosticFspGet, _decode_DiagnosticFspGet, _encode_DiagnosticFspGet } 
 /**
  * @summary FspGetParameterReturn_result
  * @description
- * 
+ *
+ * `positiveResult` is the current value of the parameter named in the
+ * invocation (table 3-11). `negativeResult` is the rejection diagnostic.
+ * Duplicate invoke-ID and other reason are the common diagnostics;
+ * `unknownParameter` is FSP-specific.
+ *
+ * CCSDS 912.3-B-3, sections 3.10.2.7 and 3.10.2.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -20,6 +20,71 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary FspInvokeDirectiveInvocation_directive
  * @description
  * 
+ * Directive code and associated parameter of FSP-INVOKE-DIRECTIVE.
+ * 
+ * `initiateADserviceWithoutCLCW` is Initiate AD Service (without CLCW check).
+ * `initiateADserviceWithCLCW` is Initiate AD Service (with CLCW check). Both
+ * alternatives are empty.
+ * 
+ * `initiateADserviceWithUnlock` is Initiate AD Service (with Unlock) and causes
+ * a BC segment to be transmitted. The alternative is empty.
+ * 
+ * `initiateADserviceWithSetVR` is Initiate AD Service (with Set V(R)) and
+ * causes a BC segment to be transmitted. Annex A carries an integer from 0 to
+ * 255. Section 1.6.1.5 names Receiver_Frame_Sequence_Number V(R) as a term of
+ * CCSDS 232.1-B-2. This issue does not restate the definition of V(R) or say
+ * anything further about the integer.
+ * 
+ * `terminateADservice` is Terminate AD Service. It deletes the AD Packets
+ * currently buffered for transmission on the instance's VC. BD Packets remain
+ * buffered. The alternative is empty.
+ * 
+ * `resumeADservice` is Resume AD Service. After the transmission limit has
+ * suspended the AD service, this directive causes FOP-1 to resume in the state
+ * it had when it was suspended. The alternative is empty.
+ * 
+ * `setVS` is Set V(S) to V*(S). Annex A carries an integer from 0 to 255.
+ * Section 3.12.2.6 does not define V*(S). Table 3-11 describes
+ * Transmitter_Frame_Sequence_Number, V(S), as the Frame Sequence Number N(S)
+ * placed in the Transfer Frame Primary Header of the next Type-AD frame after a
+ * transmission-mode capability change. Section 1.6.1.5 names V(S) as a term of
+ * CCSDS 232.1-B-2.
+ * 
+ * `setFOPslidingWindowWidth` sets FOP_Sliding_Window_Width to an integer from 1
+ * to 255. Table 3-11 defines that width as the number of frames that can be
+ * transmitted on the VC before an acknowledgement is required. When the number
+ * of unacknowledged AD and BC frames reaches the width, expedited Frame Data
+ * Units are still passed to the FOP.
+ * 
+ * `setT1Initial` sets T1_Initial, in microseconds, to a positive integer. Table
+ * 3-11 defines it as the initial countdown when an AD or BC frame is
+ * transmitted. Section 1.6.1.5 names T1_Initial as a term of CCSDS 232.1-B-2.
+ * 
+ * `setTransmissionLimit` sets Transmission_Limit. Annex A types the directive
+ * parameter as a positive short integer, 1 through 65535. Table 3-11 defines
+ * the managed parameter as the maximum number of times the first frame on the
+ * Sent_Queue may be transmitted, and types the reported value as an integer
+ * from 1 to 255. A parameter the provider finds out of range is rejected with
+ * `directiveError`. Section 3.12.2.6 cites CCSDS 232.1-B-2 for the Sent_Queue
+ * rule.
+ * 
+ * `setTimeoutType` sets Timeout_Type. The codes are documented on
+ * `FspInvokeDirectiveInvocation_directive_setTimeoutType`.
+ * 
+ * `abortVC` is Abort VC. It implies Terminate AD Service and deletes the frames
+ * that segmentation and MAP multiplexing have queued for the Forward CLTU
+ * Generation functional group. Every Space Packet on the VC is affected,
+ * including BD Packets. After successful execution, BD Packets can be handled.
+ * AD transmission requires one of the Initiate AD Service directives. The
+ * alternative is empty. All queues of that VC are cleared.
+ * 
+ * `modifyMapMuxControl` changes the priority with which concurrent MAPs are
+ * multiplexed into the instance's VC. The value is a priority list or a polling
+ * vector, according to the multiplexing scheme in effect.
+ * 
+ * CCSDS 912.3-B-3, sections 3.12.2.6, 3.7.2.14, 3.10.2.5 (table 3-11), B3.15,
+ * B3.18, and annex A2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

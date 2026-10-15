@@ -17,6 +17,15 @@ import { FspGetParameter_parThrowEventOperation_parameterValue, _decode_FspGetPa
  * @summary FspGetParameter_parThrowEventOperation
  * @description
  * 
+ * throw-event-operation: enabled when this service instance is authorized to
+ * invoke FSP-THROW-EVENT. disabled withholds that authorization. Service
+ * management sets it. Table 3-1 names the managed parameter
+ * throwing-of-events-enabled.
+ * 
+ * enabled is 0 and disabled is 1 (annex A2.5).
+ * 
+ * CCSDS 912.3-B-3, table 3-11, table 3-1, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +44,18 @@ export
 class FspGetParameter_parThrowEventOperation {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `throwEventOperation`, selecting throw-event-operation in table
+     * 3-11. CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * enabled (0) authorizes FSP-THROW-EVENT on this service instance. disabled
+     * (1) withholds that authorization. CCSDS 912.3-B-3, table 3-11.
      * @public
      * @readonly
      */

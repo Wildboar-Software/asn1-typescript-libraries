@@ -18,6 +18,17 @@ import { CltuData, _decode_CltuData, _encode_CltuData } from "../CCSDS-SLE-TRANS
  * @summary CltuTransferDataInvocation
  * @description
  * 
+ * User transfer of one CLTU for radiation. Valid only in state 3 (active).
+ * Confirmed and non-blocking. A positive result buffers the CLTU until it is
+ * due; CLTUs are processed in the order received, subject to the radiation
+ * window and delay-time. A negative result leaves the CLTU out of the buffer.
+ * The provider state stays active. The buffer exists to keep radiation steady
+ * across variable ground latency, and every transfer falls inside the scheduled
+ * service instance provision period. Section 3 names earliest-radiation-time,
+ * latest-radiation-time, report, and data; Annex A uses
+ * earliestTransmissionTime, latestTransmissionTime, slduRadiationNotification,
+ * and cltuData. CCSDS 912.1-B-5, sections 3.6, 2.6.4.6, and 3.1.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,48 +50,111 @@ export
 class CltuTransferDataInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the performer authenticate this invocation when the
+     * agreed authentication level requires it. Set this to unused when
+     * authentication is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Invoker-supplied integer. The performer returns it unchanged so the
+     * return can be matched to this invocation. Reusing a value that still has
+     * a return outstanding is rejected with diagnostic duplicate invoke id.
+     * CCSDS 912.1-B-5, section 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `cltuIdentification`.
+     * @description
+     *
+     * Monotonic sequence number of this CLTU. The first invocation after a
+     * successful CLTU-START uses that START's first-cltu-identification. Each
+     * later accepted invocation uses the cltu-identification from the previous
+     * positive return. Any other value yields diagnostic out of sequence. The
+     * supported range is assumed large enough that two CLTUs in the buffer do
+     * not share a value. CCSDS 912.1-B-5, section 3.6.2.5.
      * @public
      * @readonly
      */
     readonly cltuIdentification: CltuIdentification;
     /**
      * @summary `earliestTransmissionTime`.
+     * @description
+     *
+     * Earliest time the leading edge of the first bit of this CLTU may start
+     * radiation (section 3.6.2.6, earliest-radiation-time). The undefined
+     * alternative is the section 3 value null: processing starts once the
+     * previous CLTU's delay-time has elapsed and production-status is
+     * operational. A specified time may delay the PLOP-1 acquisition sequence
+     * so the CLTU itself waits. Times are UTC CDS with epoch 1958-01-01, to at
+     * least 0.1 s. CCSDS 912.1-B-5, sections 3.6.2.6 and 3.1.7.
      * @public
      * @readonly
      */
     readonly earliestTransmissionTime: ConditionalTime;
     /**
      * @summary `latestTransmissionTime`.
+     * @description
+     *
+     * Latest time the leading edge of the first bit may start radiation
+     * (section 3.6.2.7, latest-radiation-time). undefined means null: the
+     * provider may radiate while the service instance is in state 3 (active)
+     * and production-status is configured, operational, or interrupted. A
+     * specified time defers an interrupted CLTU until production is operational
+     * again or the time expires, in which case the CLTU is discarded. Equal to
+     * earliest-radiation-time means radiate at that instant. If radiation has
+     * not begun by this time the provider notifies sldu expired and drops the
+     * CLTU. CCSDS 912.1-B-5, sections 3.6.2.7 and 3.1.7.
      * @public
      * @readonly
      */
     readonly latestTransmissionTime: ConditionalTime;
     /**
      * @summary `delayTime`.
+     * @description
+     *
+     * Minimum radiation delay, in microseconds, between this CLTU and the next.
+     * Measured from the trailing edge of the last radiated bit of the CLTU, or
+     * of the PLOP-1 trailing idle sequence when that sequence is used. Under
+     * PLOP-1 the carrier stays unmodulated by CLTU data until this delay
+     * expires, the next CLTU is ready, or the session ends. Under PLOP-2 the
+     * idle sequence continues for the same interval. A value below
+     * minimum-delay-time yields diagnostic invalid delay time. CCSDS 912.1-B-5,
+     * section 3.6.2.8.
      * @public
      * @readonly
      */
     readonly delayTime: Duration;
     /**
      * @summary `slduRadiationNotification`.
+     * @description
+     *
+     * Whether the provider invokes CLTU-ASYNC-NOTIFY when radiation of this
+     * CLTU completes (section 3.6.2.9, report). produceNotification is produce
+     * report. doNotProduceNotification is do not produce report. The cltu
+     * radiated notification is sent only for produce report. CCSDS 912.1-B-5,
+     * sections 3.6.2.9 and 3.7.2.3.
      * @public
      * @readonly
      */
     readonly slduRadiationNotification: SlduStatusNotification;
     /**
      * @summary `cltuData`.
+     * @description
+     *
+     * The CLTU to radiate. Space Data Link Security protection, when used, is
+     * already inside the CLTU; this service neither inspects nor adds that
+     * header and trailer. A CLTU that fails the checks in the service
+     * agreement, including a length above maximum-cltu-length, yields
+     * diagnostic CLTU error. CCSDS 912.1-B-5, sections 3.6.2.10 and 3.6.2.13.
      * @public
      * @readonly
      */

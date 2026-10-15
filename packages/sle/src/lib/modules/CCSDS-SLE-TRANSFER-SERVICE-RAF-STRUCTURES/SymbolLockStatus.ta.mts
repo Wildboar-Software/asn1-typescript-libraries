@@ -18,6 +18,12 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary SymbolLockStatus
  * @description
  * 
+ * Lock of the symbol (or bit) synchronization process, as reported in
+ * RAF-STATUS-REPORT and in a loss-of-frame-sync notification. The permitted
+ * values are `inLock`, `outOfLock`, and `unknown`.
+ * 
+ * CCSDS 911.1-B-5, sections 3.9.2.6 and 3.7.2.4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

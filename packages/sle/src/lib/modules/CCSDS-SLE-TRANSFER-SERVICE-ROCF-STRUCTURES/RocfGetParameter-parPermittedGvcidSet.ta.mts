@@ -17,6 +17,13 @@ import { GvcIdSet, _decode_GvcIdSet, _encode_GvcIdSet } from "../CCSDS-SLE-TRANS
  * @summary RocfGetParameter_parPermittedGvcidSet
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the permitted global-VCID set.
+ * Service management sets the Master Channels and Virtual Channels this
+ * instance may use as OCF sources. ROCF-START must request a member of the
+ * set.
+ *
+ * CCSDS 911.5-B-4, sections 2.1 and 3.4.2.7 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,23 @@ export
 class RocfGetParameter_parPermittedGvcidSet {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to permittedGvcidSet. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Master Channel compositions the user may select. One instance permits one
+     * Master Channel, one Virtual Channel, or one Master Channel together with
+     * a set of its Virtual Channels. A requested global VCID outside this set
+     * is rejected as invalid.
+     *
+     * CCSDS 911.5-B-4, sections 3.4.2.7 and 3.4.2.12 and table 3-11.
      * @public
      * @readonly
      */

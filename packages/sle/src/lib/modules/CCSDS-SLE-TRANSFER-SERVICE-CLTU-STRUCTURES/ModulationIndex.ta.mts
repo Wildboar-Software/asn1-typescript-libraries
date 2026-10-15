@@ -10,6 +10,10 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary ModulationIndex
  * @description
  * 
+ * Peak RF-carrier phase shift from the unmodulated carrier, in milliradians
+ * (10^-3 rad). Set by service management as modulation-index. CCSDS 912.1-B-5,
+ * table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

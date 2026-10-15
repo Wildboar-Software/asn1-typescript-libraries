@@ -17,6 +17,14 @@ import { TimeoutPeriod, _decode_TimeoutPeriod, _encode_TimeoutPeriod } from "../
  * @summary CltuGetParameter_parReturnTimeout
  * @description
  * 
+ * return-timeout-period: the maximum time, in seconds, from invoking a
+ * confirmed FCLTU operation until the invoker receives the return. Annex A
+ * constrains it to 1 through 600. If the return is still missing when the
+ * period expires, the invoker sends CLTU-PEER-ABORT with diagnostic return
+ * timeout. The period accounts for application performance and communications
+ * delay, and generation of the return must not wait on a person. Set by service
+ * management. CCSDS 912.1-B-5, table 3-11 and section 4.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,21 @@ export
 class CltuGetParameter_parReturnTimeout {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `returnTimeoutPeriod`. Names the return-timeout-period parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Timeout in seconds, from 1 through 600. CCSDS 912.1-B-5, table 3-11 and
+     * section 4.1.3.
      * @public
      * @readonly
      */

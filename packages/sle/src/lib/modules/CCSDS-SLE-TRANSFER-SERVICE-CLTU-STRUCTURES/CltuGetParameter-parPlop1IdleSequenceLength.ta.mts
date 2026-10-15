@@ -17,6 +17,14 @@ import { IntUnsignedShort, _decode_IntUnsignedShort, _encode_IntUnsignedShort } 
  * @summary CltuGetParameter_parPlop1IdleSequenceLength
  * @description
  * 
+ * plop-1-idle-sequence-length, in octets: the optional idle sequence used with
+ * PLOP-1. When the length is greater than zero, that many octets are sent as a
+ * leading idle sequence after the acquisition sequence (CMM-4) and again as a
+ * trailing idle sequence after the CLTU. Zero means no idle sequence is
+ * applied. Both this length and acquisition-sequence-length may be zero so the
+ * user can insert those patterns in the CLTU. Set by service management. CCSDS
+ * 912.1-B-5, table 3-11 and section 3.6.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,21 @@ export
 class CltuGetParameter_parPlop1IdleSequenceLength {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `plop1IdleSequenceLength`. Names the plop-1-idle-sequence-length
+     * parameter requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section
+     * 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * PLOP-1 idle-sequence length in octets. Zero suppresses the idle sequence.
+     * CCSDS 912.1-B-5, table 3-11 and section 3.6.2.8.
      * @public
      * @readonly
      */

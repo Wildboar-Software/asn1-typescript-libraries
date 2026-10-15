@@ -17,6 +17,15 @@ import { IntPosLong, _decode_IntPosLong, _encode_IntPosLong } from "../CCSDS-SLE
  * @summary FspGetParameter_parTimerInitial
  * @description
  * 
+ * timer-initial: the initial countdown, in microseconds, used when an AD or BC
+ * frame is transmitted. Service management sets it. FSP-INVOKE-DIRECTIVE may
+ * also set it (table 3-1).
+ * 
+ * Annex A2.1 types the value as `IntPosLong` (1 to 4294967295). Section 3.10
+ * states the unit and does not state a tighter range.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, table 3-1, and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +41,18 @@ export
 class FspGetParameter_parTimerInitial {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `timerInitial`, selecting timer-initial in table 3-11. CCSDS
+     * 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Initial countdown in microseconds for an AD or BC frame, from 1 to
+     * 4294967295. CCSDS 912.3-B-3, table 3-11 and annex A2.1.
      * @public
      * @readonly
      */

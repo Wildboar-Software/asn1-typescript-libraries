@@ -10,6 +10,11 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary NumberOfCltusReceived
  * @description
  * 
+ * How many CLTUs have been received, checked successfully, and buffered during
+ * this service instance. Zero when none have been received. Rejected CLTUs are
+ * omitted. Accumulated for the whole provision period. CCSDS 912.1-B-5,
+ * sections 3.9.2.10 and 3.1.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

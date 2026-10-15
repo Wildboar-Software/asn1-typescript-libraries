@@ -9,7 +9,15 @@ import { GvcId, _decode_GvcId, _encode_GvcId } from "../CCSDS-SLE-TRANSFER-SERVI
 /**
  * @summary RequestedGvcId
  * @description
- * 
+ *
+ * The requested-global-VCID parameter. While the provider is in state 3
+ * (active), this is the global VCID accepted in RCF-START and used to select
+ * frames. While the provider is in any other state, section 3.10 requires the
+ * first element of permitted-global-VCID-set. That set is a SET OF, and
+ * section 3.10 does not define which element is first.
+ *
+ * CCSDS 911.2-B-4, table 3-11 and section 3.4.2.7.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

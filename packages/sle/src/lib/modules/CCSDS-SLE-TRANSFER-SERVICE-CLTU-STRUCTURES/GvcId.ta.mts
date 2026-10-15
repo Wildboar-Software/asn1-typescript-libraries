@@ -19,6 +19,10 @@ import { integerInRange, integerIsOneOf } from "../../constraints.mjs";
  * @summary GvcId
  * @description
  * 
+ * Global virtual-channel identifier of the return channel whose CLCW the FCLTU
+ * provider reads for No RF Available and No Bit Lock. Used when
+ * clcw-global-VCID is configured. CCSDS 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +48,31 @@ export
 class GvcId {
     /**
      * @summary `spacecraftId`.
+     * @description
+     *
+     * Spacecraft identifier in the return transfer frames, from 0 through
+     * 65535. Annex A limits TM and AOS frames to 0 through 255 and allows the
+     * full range for USLP. CCSDS 912.1-B-5, Annex A2.5.
      * @public
      * @readonly
      */
     readonly spacecraftId: INTEGER;
     /**
      * @summary `versionNumber`.
+     * @description
+     *
+     * Transfer frame version. 0 is TM Version 1. 1 is AOS Version 2. 12 is USLP
+     * Version 4. CCSDS 912.1-B-5, Annex A2.5.
      * @public
      * @readonly
      */
     readonly versionNumber: INTEGER;
     /**
      * @summary `vcId`.
+     * @description
+     *
+     * Master Channel, or one virtual channel, that carries the CLCW. CCSDS
+     * 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

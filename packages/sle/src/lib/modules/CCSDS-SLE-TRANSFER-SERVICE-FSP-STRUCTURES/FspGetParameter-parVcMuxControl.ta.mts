@@ -17,6 +17,16 @@ import { MuxControl, _decode_MuxControl, _encode_MuxControl } from "../CCSDS-SLE
  * @summary FspGetParameter_parVcMuxControl
  * @description
  * 
+ * vc-multiplexing-control: the VC priority list or the VC polling vector. When
+ * the VC multiplexing scheme is FIFO, the value is null. Service management
+ * sets it.
+ * 
+ * Annex A2.5 `MuxControl`: FIFO is null; absolute priority is 1 to 64 entries,
+ * with priority 1 highest and 64 lowest; a polling vector is 1 to 192 VC
+ * identifiers. Annex B4 selects the next TC frame by this scheme.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, annex A2.5, and annex B4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +42,20 @@ export
 class FspGetParameter_parVcMuxControl {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `vcMuxControl`, selecting vc-multiplexing-control in table 3-11.
+     * CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * VC priority list or VC polling vector. Null when the scheme is FIFO. A
+     * priority list has 1 to 64 entries (1 highest, 64 lowest). A polling
+     * vector has 1 to 192 VC identifiers. CCSDS 912.3-B-3, table 3-11 and annex
+     * A2.5.
      * @public
      * @readonly
      */

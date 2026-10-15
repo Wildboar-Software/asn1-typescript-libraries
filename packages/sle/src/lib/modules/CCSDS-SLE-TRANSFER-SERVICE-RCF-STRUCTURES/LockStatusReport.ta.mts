@@ -14,7 +14,14 @@ import { SymbolLockStatus, _decode_SymbolLockStatus, _encode_SymbolLockStatus } 
 /**
  * @summary LockStatusReport
  * @description
- * 
+ *
+ * The value carried with a loss-of-frame-sync notification: when the frame
+ * synchronizer lost lock, and the carrier, subcarrier, and symbol-sync status
+ * at that time. Lock measurements are typically integrated, so the three
+ * status values can reflect a time slightly earlier than the notification.
+ *
+ * CCSDS 911.2-B-4, section 3.7.2.4.2.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +39,48 @@ export
 class LockStatusReport {
     /**
      * @summary `time`.
+     * @description
+     *
+     * UTC time at which the frame synchronizer transitioned from in-lock to
+     * out-of-lock. All time parameters in this service use UTC.
+     *
+     * CCSDS 911.2-B-4, sections 3.7.2.4.2 and 3.1.7.1.
      * @public
      * @readonly
      */
     readonly time: Time;
     /**
      * @summary `carrierLockStatus`.
+     * @description
+     *
+     * Carrier demodulation status when frame sync was lost: in-lock,
+     * out-of-lock, or unknown.
+     *
+     * CCSDS 911.2-B-4, section 3.7.2.4.2.
      * @public
      * @readonly
      */
     readonly carrierLockStatus: CarrierLockStatus;
     /**
      * @summary `subcarrierLockStatus`.
+     * @description
+     *
+     * Subcarrier demodulation status when frame sync was lost: in-lock,
+     * out-of-lock, not in use, or unknown.
+     *
+     * CCSDS 911.2-B-4, section 3.7.2.4.2.
      * @public
      * @readonly
      */
     readonly subcarrierLockStatus: LockStatus;
     /**
      * @summary `symbolSyncLockStatus`.
+     * @description
+     *
+     * Symbol synchronization status when frame sync was lost: in-lock,
+     * out-of-lock, or unknown.
+     *
+     * CCSDS 911.2-B-4, section 3.7.2.4.2.
      * @public
      * @readonly
      */
@@ -90,7 +121,8 @@ class LockStatusReport {
  * @summary The Leading Root Component Types of LockStatusReport
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -106,7 +138,8 @@ const _root_component_type_list_1_spec_for_LockStatusReport: $.ComponentSpec[] =
  * @summary The Trailing Root Component Types of LockStatusReport
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -119,7 +152,8 @@ const _root_component_type_list_2_spec_for_LockStatusReport: $.ComponentSpec[] =
  * @summary The Extension Addition Component Types of LockStatusReport
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

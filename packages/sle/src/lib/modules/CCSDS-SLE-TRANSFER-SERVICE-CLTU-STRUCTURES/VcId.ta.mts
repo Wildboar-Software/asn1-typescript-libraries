@@ -15,6 +15,11 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary VcId
  * @description
  * 
+ * Virtual channel identifier inside a GvcId, from 0 through 63. Annex A further
+ * limits the range by the transfer-frame version in that GVCID: TM is 0 through
+ * 7 (3 bits); AOS, USLP, and TC are 0 through 63 (6 bits). CCSDS 912.1-B-5,
+ * Annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

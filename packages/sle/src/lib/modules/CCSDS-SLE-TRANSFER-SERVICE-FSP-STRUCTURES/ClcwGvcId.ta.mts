@@ -12,6 +12,16 @@ import { GvcId, _decode_GvcId, _encode_GvcId } from "../CCSDS-SLE-TRANSFER-SERVI
  * @summary ClcwGvcId
  * @description
  * 
+ * Master or Virtual Channel that carries the CLCW the provider uses for
+ * forward-link RF and bit-lock status. Annex A spells the configured
+ * alternative `congigured`. When the instance is configured so that the CLCW is
+ * not evaluated, the reported value is not configured. Processing of the lock
+ * flags is delegated to the Forward TC Space Link Processing functional group
+ * and is the same for every FSP instance that shares the physical channel.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11), section 3.1.9, and annex
+ * A2.5. CLCW is a term of CCSDS 232.0-B-3, cited in section 1.6.1.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,12 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary RafGetParameter_parLatencyLimit_parameterValue
  * @description
  * 
+ * `online` is the latency limit in seconds, used for online delivery. `offline`
+ * is null. Table 3-11 requires null when the delivery mode is offline. The
+ * online value is the release-timer duration defined in section 3.1.9.1.5.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.1.9.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,12 @@ import { TcVcidSet, _decode_TcVcidSet, _encode_TcVcidSet } from "../CCSDS-SLE-TR
  * @summary RocfGetParameter_parPermittedTcVcidSet
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the permitted telecommand-VC set.
+ * Service management sets it. The value is null when a telecommand VC must not
+ * be selected, for example when the OCFs to deliver are not CLCWs.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.9 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,22 @@ export
 class RocfGetParameter_parPermittedTcVcidSet {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to permittedTcVcidSet. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * noTcVC means telecommand-VC selection is not permissible. tcVcids lists
+     * the telecommand VCs the user may name when the control word type is clcw.
+     * A START value outside this set is an invalid tc-vcid.
+     *
+     * CCSDS 911.5-B-4, sections 3.4.2.9 and 3.4.2.12 and table 3-11.
      * @public
      * @readonly
      */

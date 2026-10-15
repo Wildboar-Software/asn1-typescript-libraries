@@ -12,6 +12,14 @@ import { DiagnosticRafStart, _decode_DiagnosticRafStart, _encode_DiagnosticRafSt
  * @summary RafStartReturn_result
  * @description
  * 
+ * `positiveResult` accepts RAF-START. `negativeResult` rejects it. The
+ * diagnostic should name the first problem found, in the order listed in
+ * section 3.4.2.9: duplicate invoke-ID, out of service, unable to comply,
+ * missing time value, invalid start time, invalid stop time, then other reason.
+ * An implementation that checks in another order must document that order.
+ * 
+ * CCSDS 911.1-B-5, sections 3.4.2.8, 3.4.2.9, and 3.1.3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

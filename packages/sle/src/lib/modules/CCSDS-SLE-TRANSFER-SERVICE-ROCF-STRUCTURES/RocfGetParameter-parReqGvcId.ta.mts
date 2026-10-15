@@ -17,6 +17,13 @@ import { RequestedGvcId, _decode_RequestedGvcId, _encode_RequestedGvcId } from "
  * @summary RocfGetParameter_parReqGvcId
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the requested global VCID. While
+ * the instance is in state 3 (active), this is the value from the most recent
+ * ROCF-START. Otherwise it is the first element of the permitted global-VCID
+ * set.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,21 @@ export
 class RocfGetParameter_parReqGvcId {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to requestedGvcid. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Global VCID currently in effect for OCF extraction while the instance is
+     * active, or the first permitted global VCID while it is not.
+     *
+     * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.7.
      * @public
      * @readonly
      */

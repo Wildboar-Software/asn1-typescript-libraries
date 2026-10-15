@@ -14,6 +14,15 @@ import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdent
  * @summary FspStartInvocation
  * @description
  * 
+ * User invocation of FSP-START. Valid only in state 2 (ready). On a positive
+ * return the provider enters state 3 (active) and accepts FSP-TRANSFER-DATA.
+ * The return reports the scheduled start and stop of service production. COP-1
+ * is set up from the parameters supplied by service management. The user may
+ * change those parameters with FSP-INVOKE-DIRECTIVE when that operation is
+ * enabled for the instance.
+ * 
+ * CCSDS 912.3-B-3, sections 3.4.1, 3.4.3, and 2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +39,39 @@ export
 class FspStartInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated; `bind` authenticates only FSP-BIND;
+     * `none` leaves every invocation and return unauthenticated. When this
+     * invocation is unauthenticated, the value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. An invoke-ID that still has an outstanding return in the
+     * same service instance is rejected with `duplicateInvokeId`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.6.4 and 3.1.6.5.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `firstPacketIdentification`.
+     * @description
+     * Packet identification the provider expects on the first FSP-TRANSFER-DATA
+     * after this FSP-START. After an FSP-STOP, Packets already in process may
+     * still cause notifications. Later identification values should keep every
+     * Packet whose production has not finished uniquely identifiable.
+     * 
+     * CCSDS 912.3-B-3, section 3.4.2.5.
      * @public
      * @readonly
      */

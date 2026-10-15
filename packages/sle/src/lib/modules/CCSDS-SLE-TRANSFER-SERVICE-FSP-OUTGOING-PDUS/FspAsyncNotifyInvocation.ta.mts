@@ -16,6 +16,16 @@ import { FspProductionStatus, _decode_FspProductionStatus, _encode_FspProduction
  * @summary FspAsyncNotifyInvocation
  * @description
  * 
+ * Provider invocation of FSP-ASYNC-NOTIFY, an unconfirmed operation. Valid in
+ * states 2 (ready) and 3 (active). It reports an event that affects production
+ * of the FSP service. Notifications are asynchronous with the user's
+ * FSP-TRANSFER-DATA invocations. The provider remains in its original state
+ * except for the effects of `slduExpired`, `productionInterrupted`,
+ * `productionHalted`, `packetTransmissionModeMismatch`, and `vcAborted`, which
+ * discard Packets as section 3.7.3 specifies.
+ * 
+ * CCSDS 912.3-B-3, sections 3.7.1 and 3.7.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +44,66 @@ export
 class FspAsyncNotifyInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated; `bind` authenticates only FSP-BIND;
+     * `none` leaves every invocation and return unauthenticated. When this
+     * invocation is unauthenticated, the value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `fspNotification`.
+     * @description
+     * The event being reported. Which of the conditional parameters in table
+     * 3-7 are present depends on this value, as section 3.7.2 specifies for
+     * each notification.
+     * 
+     * CCSDS 912.3-B-3, sections 3.7.2.3 through 3.7.2.8.
      * @public
      * @readonly
      */
     readonly fspNotification: FspNotification;
     /**
      * @summary `fspPacketLastProc`.
+     * @description
+     * The Space Packet of this service instance that most recently started to
+     * be processed, or an indication that none has. Present on every
+     * notification. The value survives release or abort of the association.
+     * Section 3.7.2.9 says a Packet starts to be processed when it moves from a
+     * packets queue to a segments queue. Section 3.9.2.3, for the same
+     * parameter on the status report, says processing starts when it moves from
+     * the requests queue to a packets queue.
+     * 
+     * CCSDS 912.3-B-3, sections 3.7.2.9 and 3.9.2.3.
      * @public
      * @readonly
      */
     readonly fspPacketLastProc: FspPacketLastProcessed;
     /**
      * @summary `fspPacketLastOk`.
+     * @description
+     * The Space Packet of this service instance that most recently completed
+     * processing successfully, or an indication that none has. Present on every
+     * notification. The value survives release or abort of the association. The
+     * Packet identified here may be the same as the one in `fspPacketLastProc`.
+     * 
+     * CCSDS 912.3-B-3, section 3.7.2.12.
      * @public
      * @readonly
      */
     readonly fspPacketLastOk: FspPacketLastOk;
     /**
      * @summary `productionStatus`.
+     * @description
+     * Current status of the production process, including the operational
+     * sub-state that says whether AD, BD, or both can be handled.
+     * 
+     * CCSDS 912.3-B-3, section 3.7.2.14 and annex C.
      * @public
      * @readonly
      */

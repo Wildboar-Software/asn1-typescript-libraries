@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RequestedFrameQuality
  * @description
  * 
+ * Frame-quality filter supplied on RAF-START. It selects frames by the
+ * `delivered-frame-quality` annotation. Until a successful RAF-START,
+ * RAF-GET-PARAMETER reports the first element of the permitted-frame-quality
+ * set.
+ * 
+ * CCSDS 911.1-B-5, section 3.4.2.7 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +32,11 @@ type RequestedFrameQuality = INTEGER;
 
 /**
  * @summary RequestedFrameQuality_goodFramesOnly
+ * @description
+ * 
+ * Deliver only frames whose delivered-frame-quality is `good`.
+ * 
+ * CCSDS 911.1-B-5, section 3.4.2.7.
  * @constant
  * @type {number}
  */
@@ -33,6 +45,9 @@ const RequestedFrameQuality_goodFramesOnly: RequestedFrameQuality = 0; /* LONG_N
 
 /**
  * @summary RequestedFrameQuality_goodFramesOnly
+ * @description
+ * 
+ * Deliver only frames annotated `good` (CCSDS 911.1-B-5, section 3.4.2.7).
  * @constant
  * @type {number}
  */
@@ -41,6 +56,12 @@ const goodFramesOnly: RequestedFrameQuality = RequestedFrameQuality_goodFramesOn
 
 /**
  * @summary RequestedFrameQuality_erredFrameOnly
+ * @description
+ * 
+ * Deliver only frames whose delivered-frame-quality is `erred`. The book spells
+ * the criterion `erred frames only`; the ASN.1 name is `erredFrameOnly`.
+ * 
+ * CCSDS 911.1-B-5, section 3.4.2.7 and annex A2.5.
  * @constant
  * @type {number}
  */
@@ -49,6 +70,9 @@ const RequestedFrameQuality_erredFrameOnly: RequestedFrameQuality = 1; /* LONG_N
 
 /**
  * @summary RequestedFrameQuality_erredFrameOnly
+ * @description
+ * 
+ * Deliver only frames annotated `erred` (CCSDS 911.1-B-5, section 3.4.2.7).
  * @constant
  * @type {number}
  */
@@ -57,6 +81,12 @@ const erredFrameOnly: RequestedFrameQuality = RequestedFrameQuality_erredFrameOn
 
 /**
  * @summary RequestedFrameQuality_allFrames
+ * @description
+ * 
+ * Deliver every frame, whatever its delivered-frame-quality, including
+ * `undetermined`.
+ * 
+ * CCSDS 911.1-B-5, sections 3.4.2.7 and 3.6.2.6.
  * @constant
  * @type {number}
  */
@@ -65,6 +95,10 @@ const RequestedFrameQuality_allFrames: RequestedFrameQuality = 2; /* LONG_NAMED_
 
 /**
  * @summary RequestedFrameQuality_allFrames
+ * @description
+ * 
+ * Deliver every frame, including `undetermined` (CCSDS 911.1-B-5, sections
+ * 3.4.2.7 and 3.6.2.6).
  * @constant
  * @type {number}
  */

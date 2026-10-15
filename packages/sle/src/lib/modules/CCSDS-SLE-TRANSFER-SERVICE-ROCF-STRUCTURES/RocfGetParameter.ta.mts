@@ -24,6 +24,15 @@ import { RocfGetParameter_parReturnTimeout, _decode_RocfGetParameter_parReturnTi
  * @summary RocfGetParameter
  * @description
  * 
+ * Parameter value returned by a successful ROCF-GET-PARAMETER. Each
+ * alternative is one parameter from table 3-11. The user may read these in
+ * state 2 (ready) or state 3 (active). Service management initializes the
+ * configuration parameters; START updates the requested global VCID, control
+ * word type, telecommand VC, and update mode; SCHEDULE-STATUS-REPORT updates
+ * the reporting cycle.
+ *
+ * CCSDS 911.5-B-4, sections 3.1.8, 3.10, and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

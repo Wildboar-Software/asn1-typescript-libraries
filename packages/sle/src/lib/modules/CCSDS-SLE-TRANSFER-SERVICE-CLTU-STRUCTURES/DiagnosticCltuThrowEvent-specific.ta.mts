@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagnosticCltuThrowEvent_specific
  * @description
  * 
+ * FCLTU-specific negative result for CLTU-THROW-EVENT. The provider should
+ * report the first failure in the order given in section 3.11.2.9, after
+ * duplicate invoke id. CCSDS 912.1-B-5, sections 3.11.2.9 and 3.1.3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +29,10 @@ type DiagnosticCltuThrowEvent_specific = INTEGER;
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_operationNotSupported
+ * @description
+ *
+ * This provider does not support CLTU-THROW-EVENT. The operation is optional
+ * (Annex C). CCSDS 912.1-B-5, section 3.11.2.9 and Annex C.
  * @constant
  * @type {number}
  */
@@ -33,6 +41,10 @@ const DiagnosticCltuThrowEvent_specific_operationNotSupported: DiagnosticCltuThr
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_operationNotSupported
+ * @description
+ *
+ * CLTU-THROW-EVENT is not supported by this provider (CCSDS 912.1-B-5, section
+ * 3.11.2.9).
  * @constant
  * @type {number}
  */
@@ -41,6 +53,11 @@ const operationNotSupported: DiagnosticCltuThrowEvent_specific = DiagnosticCltuT
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence
+ * @description
+ *
+ * event-invocation-identification is not the value the provider expects.
+ * Section 3.11.2.9 calls this diagnostic out of sequence. CCSDS 912.1-B-5,
+ * sections 3.11.2.5 and 3.11.2.9.
  * @constant
  * @type {number}
  */
@@ -49,6 +66,10 @@ const DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence: DiagnosticClt
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence
+ * @description
+ *
+ * event-invocation-identification is not the value expected (CCSDS 912.1-B-5,
+ * section 3.11.2.9).
  * @constant
  * @type {number}
  */
@@ -57,6 +78,10 @@ const eventInvocIdOutOfSequence: DiagnosticCltuThrowEvent_specific = DiagnosticC
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_noSuchEvent
+ * @description
+ *
+ * event-identifier is outside the set SLE Complex Management recognizes for
+ * this service instance. CCSDS 912.1-B-5, section 3.11.2.9.
  * @constant
  * @type {number}
  */
@@ -65,6 +90,10 @@ const DiagnosticCltuThrowEvent_specific_noSuchEvent: DiagnosticCltuThrowEvent_sp
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_noSuchEvent
+ * @description
+ *
+ * event-identifier is not recognized by Complex Management (CCSDS 912.1-B-5,
+ * section 3.11.2.9).
  * @constant
  * @type {number}
  */

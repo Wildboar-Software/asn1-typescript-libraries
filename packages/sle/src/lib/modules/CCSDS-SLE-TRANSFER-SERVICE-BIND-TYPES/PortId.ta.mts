@@ -10,6 +10,13 @@ import { LogicalPortName, _decode_LogicalPortName, _encode_LogicalPortName } fro
  * @summary PortId
  * @description
  * 
+ * Responder port identifier: the logical name of the SLE endpoint that performs
+ * BIND. It stands for the addressing information needed to route SLE-PDUs to
+ * that application entity. The responding application ignores the value when
+ * judging the invocation.
+ * 
+ * CCSDS 911.1-B-5, sections 3.2.2.6, 2.6.4.5, and 1.6.1.8.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

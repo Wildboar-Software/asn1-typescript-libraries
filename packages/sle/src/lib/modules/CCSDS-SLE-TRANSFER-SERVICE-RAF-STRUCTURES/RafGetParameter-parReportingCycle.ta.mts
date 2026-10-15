@@ -17,6 +17,14 @@ import { CurrentReportingCycle, _decode_CurrentReportingCycle, _encode_CurrentRe
  * @summary RafGetParameter_parReportingCycle
  * @description
  * 
+ * RAF-GET-PARAMETER value of the current `reporting-cycle`. Null when cyclic
+ * reporting is off. Otherwise the seconds between successive RAF-STATUS-REPORT
+ * invocations. The value stays null until a successful
+ * RAF-SCHEDULE-STATUS-REPORT sets it, and returns to null after `immediately`
+ * or `stop`.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,18 @@ export
 class RafGetParameter_parReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `reportingCycle`, selecting reporting-cycle in table 3-11. CCSDS
+     * 911.1-B-5, annex A2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * `periodicReportingOff` when cyclic reports are off; `periodicReportingOn`
+     * is the interval in seconds. CCSDS 911.1-B-5, table 3-11 and section 3.8.
      * @public
      * @readonly
      */

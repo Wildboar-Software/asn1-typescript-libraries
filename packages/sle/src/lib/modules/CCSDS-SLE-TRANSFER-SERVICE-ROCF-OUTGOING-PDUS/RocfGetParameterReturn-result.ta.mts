@@ -12,6 +12,12 @@ import { DiagnosticRocfGet, _decode_DiagnosticRocfGet, _encode_DiagnosticRocfGet
  * @summary RocfGetParameterReturn_result
  * @description
  * 
+ * Outcome of ROCF-GET-PARAMETER. positiveResult is the table 3-11 parameter
+ * and its value. negativeResult is the diagnostic, and no parameter value is
+ * returned.
+ *
+ * CCSDS 911.5-B-4, sections 3.10.2.6 and 3.10.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

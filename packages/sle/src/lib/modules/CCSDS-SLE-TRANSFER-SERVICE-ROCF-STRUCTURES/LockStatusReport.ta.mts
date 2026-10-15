@@ -15,6 +15,15 @@ import { SymbolLockStatus, _decode_SymbolLockStatus, _encode_SymbolLockStatus } 
  * @summary LockStatusReport
  * @description
  * 
+ * Value of a loss-of-frame-synchronization notification: the UTC time the
+ * frame synchronizer left in-lock, plus the carrier, subcarrier, and symbol
+ * lock at the time of the report. Those lock measurements are typically
+ * integrated over a period and can reflect a slightly earlier time. The
+ * provider documents the length of the lock-status observation period. This
+ * notification is omitted in offline delivery.
+ *
+ * CCSDS 911.5-B-4, sections 3.7.2.3 and 3.7.2.4.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +41,48 @@ export
 class LockStatusReport {
     /**
      * @summary `time`.
+     * @description
+     * 
+     * UTC time at which the frame synchronizer transitioned from in-lock to
+     * out-of-lock.
+     *
+     * CCSDS 911.5-B-4, sections 3.1.7.1 and 3.7.2.4.2.
      * @public
      * @readonly
      */
     readonly time: Time;
     /**
      * @summary `carrierLockStatus`.
+     * @description
+     * 
+     * Carrier demodulation at the time of the notification: in-lock,
+     * out-of-lock, or unknown.
+     *
+     * CCSDS 911.5-B-4, section 3.7.2.4.2.
      * @public
      * @readonly
      */
     readonly carrierLockStatus: CarrierLockStatus;
     /**
      * @summary `subcarrierLockStatus`.
+     * @description
+     * 
+     * Subcarrier demodulation at the time of the notification: in-lock,
+     * out-of-lock, not in use, or unknown.
+     *
+     * CCSDS 911.5-B-4, section 3.7.2.4.2.
      * @public
      * @readonly
      */
     readonly subcarrierLockStatus: LockStatus;
     /**
      * @summary `symbolSyncLockStatus`.
+     * @description
+     * 
+     * Symbol synchronization at the time of the notification: in-lock,
+     * out-of-lock, or unknown.
+     *
+     * CCSDS 911.5-B-4, section 3.7.2.4.2.
      * @public
      * @readonly
      */

@@ -14,6 +14,14 @@ import { RocfParameterName, _decode_RocfParameterName, _encode_RocfParameterName
  * @summary RocfGetParameterInvocation
  * @description
  * 
+ * The user invokes ROCF-GET-PARAMETER, in state 2 (ready) or state 3 (active),
+ * to read one parameter from table 3-11. The operation is confirmed and
+ * non-blocking. A positive return carries the current value. A negative return
+ * carries a diagnostic and omits the value. The provider state stays
+ * unchanged.
+ *
+ * CCSDS 911.5-B-4, section 3.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +38,37 @@ export
 class RocfGetParameterInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * 
+     * Credentials the provider uses to authenticate this invocation. When the
+     * agreed authentication level does not cover the invocation, the value is
+     * unused. The octet layout is the bilaterally agreed algorithm, which this
+     * specification leaves unspecified. CCSDS 911.5-B-4, sections 3.1.5 and
+     * 3.10.2.2.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * 
+     * Integer chosen by the invoker. The performer returns it unchanged so the
+     * return can be matched to this invocation. A value that duplicates an
+     * invoke-ID still awaiting confirmation in this service instance is
+     * rejected. CCSDS 911.5-B-4, sections 3.1.6 and 3.10.2.4.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `rocfParameter`.
+     * @description
+     * 
+     * The table 3-11 parameter to return. A name the provider does not
+     * recognize as an ROCF parameter produces the unknownParameter diagnostic.
+     *
+     * CCSDS 911.5-B-4, sections 3.10.2.5 and 3.10.2.8.
      * @public
      * @readonly
      */

@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FspGetParameter_parSegmHeader_parameterValue
  * @description
  * 
+ * Whether TC transfer frames carry a Segment Header. present is 0 and absent is
+ * 1. Service management must keep this value consistent with
+ * maximum-frame-length and maximum-packet-length.
+ * 
+ * CCSDS 912.3-B-3, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,6 +30,10 @@ type FspGetParameter_parSegmHeader_parameterValue = INTEGER;
 
 /**
  * @summary FspGetParameter_parSegmHeader_parameterValue_present
+ * @description
+ *
+ * A Segment Header is present in the TC transfer frames. CCSDS 912.3-B-3, table
+ * 3-11.
  * @constant
  * @type {number}
  */
@@ -32,6 +42,9 @@ const FspGetParameter_parSegmHeader_parameterValue_present: FspGetParameter_parS
 
 /**
  * @summary FspGetParameter_parSegmHeader_parameterValue_present
+ * @description
+ *
+ * Segment Header is present (CCSDS 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */
@@ -40,6 +53,11 @@ const present: FspGetParameter_parSegmHeader_parameterValue = FspGetParameter_pa
 
 /**
  * @summary FspGetParameter_parSegmHeader_parameterValue_absent
+ * @description
+ *
+ * A Segment Header is absent from the TC transfer frames. The note to table
+ * 3-11 requires this setting to stay consistent with maximum-frame-length and
+ * maximum-packet-length. CCSDS 912.3-B-3, table 3-11.
  * @constant
  * @type {number}
  */
@@ -48,6 +66,9 @@ const FspGetParameter_parSegmHeader_parameterValue_absent: FspGetParameter_parSe
 
 /**
  * @summary FspGetParameter_parSegmHeader_parameterValue_absent
+ * @description
+ *
+ * Segment Header is absent (CCSDS 912.3-B-3, table 3-11).
  * @constant
  * @type {number}
  */

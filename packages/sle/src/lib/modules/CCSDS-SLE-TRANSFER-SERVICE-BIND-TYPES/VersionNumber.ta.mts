@@ -10,6 +10,13 @@ import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-
  * @summary VersionNumber
  * @description
  * 
+ * Version of the service specification that governs the association if BIND
+ * succeeds. For the RAF service in this issue the value is 6. The allowed
+ * values are 1 through 65535. A provider that does not negotiate versions
+ * accepts only the managed service-version-number.
+ * 
+ * CCSDS 911.1-B-5, sections 3.2.2.8 and annex A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

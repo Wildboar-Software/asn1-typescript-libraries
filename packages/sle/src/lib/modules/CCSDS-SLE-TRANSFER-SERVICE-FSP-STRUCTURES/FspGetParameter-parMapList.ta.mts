@@ -17,6 +17,14 @@ import { MapList, _decode_MapList, _encode_MapList } from "../CCSDS-SLE-TRANSFER
  * @summary FspGetParameter_parMapList
  * @description
  * 
+ * map-list: the MAPs this service instance may use. When MAPs are unused, the
+ * value is null. Service management sets it.
+ * 
+ * Annex A2.5: `mapsNotUsed` is null; `mapsUsed` is 1 to 64 MAP identifiers in
+ * ascending order, each from 0 to 63.
+ * 
+ * CCSDS 912.3-B-3, table 3-11, section 3.1.9, and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,19 @@ export
 class FspGetParameter_parMapList {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `mapList`, selecting map-list in table 3-11. CCSDS 912.3-B-3,
+     * section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `mapList`.
+     * @description
+     * Permitted MAP identifiers, or null when MAPs are unused. A used list
+     * holds 1 to 64 identifiers in ascending order, each from 0 to 63. CCSDS
+     * 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

@@ -34,6 +34,17 @@ const _RafParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
  * @summary RafParameterName
  * @description
  * 
+ * Parameter names RAF-GET-PARAMETER accepts. The set is table 3-11:
+ * `bufferSize`, `deliveryMode`, `latencyLimit`, `minReportingCycle`,
+ * `permittedFrameQuality`, `reportingCycle`, `requestedFrameQuality`, and
+ * `returnTimeoutPeriod`. Any other parameter name yields diagnostic
+ * `unknownParameter`. Parameters that service management sets and that are
+ * absent from table 3-1 cannot be read with this operation.
+ * `service-instance-provision-period` and `service-version-number` are in table
+ * 3-1 and are absent from this set.
+ * 
+ * CCSDS 911.1-B-5, sections 3.10.2.5 and 3.1.8, and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

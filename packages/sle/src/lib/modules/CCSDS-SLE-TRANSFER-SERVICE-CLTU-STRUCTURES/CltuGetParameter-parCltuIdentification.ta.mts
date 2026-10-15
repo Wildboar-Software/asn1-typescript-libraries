@@ -17,6 +17,11 @@ import { CltuIdentification, _decode_CltuIdentification, _encode_CltuIdentificat
  * @summary CltuGetParameter_parCltuIdentification
  * @description
  * 
+ * expected-cltu-identification: the cltu-identification the provider expects on
+ * the next CLTU-TRANSFER-DATA. CLTU-START sets the value used for the first
+ * CLTU after that START. Before any CLTU-START, CLTU-GET-PARAMETER returns
+ * zero. CCSDS 912.1-B-5, table 3-11 and section 3.6.2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,21 @@ export
 class CltuGetParameter_parCltuIdentification {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `expectedSlduIdentification`. Names the
+     * expected-cltu-identification parameter requested by CLTU-GET-PARAMETER.
+     * CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Next cltu-identification the provider will accept. Zero until the first
+     * CLTU-START. CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

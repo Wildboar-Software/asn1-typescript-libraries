@@ -15,6 +15,14 @@ import { RequestedFrameQuality, _decode_RequestedFrameQuality, _encode_Requested
  * @summary RafStartInvocation
  * @description
  * 
+ * User invocation of RAF-START. Valid only in state 2 (ready). On a positive
+ * return the provider enters state 3 (active) and delivers frames that meet the
+ * start time, stop time, and requested frame quality, in the order they were
+ * received on the space link. Changing the time bounds later is an RAF-STOP
+ * followed by another RAF-START.
+ * 
+ * CCSDS 911.1-B-5, sections 3.4, 2.6.4.2, and 1.6.1.8.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,30 +41,78 @@ export
 class RafStartInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the provider authenticates this invocation. When
+     * the agreed level is `all`, every RAF invocation and return except
+     * RAF-PEER-ABORT is authenticated; `bind` authenticates only RAF-BIND;
+     * `none` leaves every invocation and return unauthenticated. When
+     * this invocation is unauthenticated, the value should be `unused`.
+     * CCSDS 911.1-B-5, sections
+     * 3.4.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. A value that still has an outstanding return in the same
+     * service instance is rejected with diagnostic `duplicate Invoke-ID`. CCSDS
+     * 911.1-B-5, sections 3.4.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `startTime`.
+     * @description
+     * Earliest Earth Receive Time to deliver, or `undefined` for the null start
+     * time in section 3. Frames with an earlier ERT are withheld. Online, null
+     * starts at the next frame acquired from the space link, and only frames
+     * from this instance's space link session are eligible. Offline, a null
+     * start time is rejected with `missingTimeValue`, and frames are taken from
+     * the offline buffer regardless of which session acquired them.
+     * 
+     * Online validity: at or after the service-instance provision period start,
+     * before the provision period end, and earlier than `stopTime`. In complete
+     * online and offline delivery, a start time earlier than every frame still
+     * held begins delivery at the earliest frame still held.
+     * 
+     * CCSDS 911.1-B-5, sections 3.4.2.5, 3.4.2.9, 3.1.9.2.16, and 3.1.9.3.10.
      * @public
      * @readonly
      */
     readonly startTime: ConditionalTime;
     /**
      * @summary `stopTime`.
+     * @description
+     * Delivery ceases when the next candidate frame has an ERT later than this
+     * time. `undefined` is the null stop time. Online, null means delivery
+     * continues until RAF-STOP or the association is released or aborted, and
+     * only frames from this instance's space link session are eligible.
+     * Offline, null is rejected with `missingTimeValue`.
+     * 
+     * The time must be later than `startTime`. Online, a known stop time must
+     * be at or before the provision period end. Offline, the stop time plus the
+     * offline processing latency must be earlier than the current time, and
+     * only frames already acquired when RAF-START is invoked are available.
+     * 
+     * CCSDS 911.1-B-5, sections 3.4.2.6 and 3.1.9.3.
      * @public
      * @readonly
      */
     readonly stopTime: ConditionalTime;
     /**
      * @summary `requestedFrameQuality`.
+     * @description
+     * Which frames to deliver, by delivered-frame-quality. `goodFramesOnly`
+     * delivers frames annotated `good`. `erredFrameOnly` delivers frames
+     * annotated `erred`. `allFrames` delivers every frame, which is the only
+     * setting that includes `undetermined`. The Transfer Frame type follows the
+     * physical channel selected by service management.
+     * 
+     * CCSDS 911.1-B-5, sections 3.4.2.7 and 3.6.2.6.
      * @public
      * @readonly
      */

@@ -4,6 +4,12 @@
  * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES` from the CCSDS Space Link Extension
  * transfer services. The module is declared with IMPLICIT TAGS.
  *
+ * Forward CLTU types for CLTU transfer, the radiation window, production and
+ * uplink status, and CLTU-GET-PARAMETER, CCSDS 912.1-B-5 (July 2023), Annex
+ * A2.5. Parameter semantics are in section 3 and table 3-11. This module's OID
+ * is version-six(6), the service version-number of this issue (section
+ * 3.2.2.8.7).
+ *
  * `{iso identified-organization(3) standards-producing-organization(112) ccsds(4) space-link-extension(3) sle-transfer-services(1) modules(1) forward-cltu-service(21) version-six(6) asn1-transfer-structures(1)}`
  */
 export * from "./BufferSize.ta.mjs";

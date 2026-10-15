@@ -12,6 +12,11 @@ import { ConditionalTime, _decode_ConditionalTime, _encode_ConditionalTime } fro
  * @summary FspStartReturn_result_positiveResult
  * @description
  * 
+ * Production window returned when FSP-START succeeds. Returned only for a
+ * positive result.
+ * 
+ * CCSDS 912.3-B-3, sections 3.4.2.6 and 3.4.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,12 +32,29 @@ export
 class FspStartReturn_result_positiveResult {
     /**
      * @summary `startProductionTime`.
+     * @description
+     * When production status is not yet operational, the estimated time at
+     * which the provider can start processing buffered Space Packets, taken
+     * from the production schedule with allowance for later production steps
+     * and the uplink acquisition sequence. When production status is
+     * operational and the provider is ready, the time at which production
+     * status became operational. On a later FSP-START in the same instance, the
+     * latest time the provider became ready, which is the most recent change of
+     * production status to operational.
+     * 
+     * CCSDS 912.3-B-3, section 3.4.2.6.
      * @public
      * @readonly
      */
     readonly startProductionTime: Time;
     /**
      * @summary `stopProductionTime`.
+     * @description
+     * Estimated time at which the provider will stop service production. The
+     * estimate may fall after the end of the service instance provision period.
+     * When the provider has no estimate, the value is `null`.
+     * 
+     * CCSDS 912.3-B-3, section 3.4.2.7.
      * @public
      * @readonly
      */

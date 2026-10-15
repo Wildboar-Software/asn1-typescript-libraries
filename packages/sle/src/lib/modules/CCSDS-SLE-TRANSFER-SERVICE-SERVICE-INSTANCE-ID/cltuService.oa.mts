@@ -7,6 +7,11 @@ import { type ATTRIBUTE } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-I
  * @summary cltuService
  * @description
  * 
+ * Service-name attribute. The printable name is `cltu`. The value is
+ * `cltu` followed by an instance number.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

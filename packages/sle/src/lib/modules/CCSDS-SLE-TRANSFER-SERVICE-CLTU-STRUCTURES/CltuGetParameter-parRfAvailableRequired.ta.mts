@@ -17,6 +17,10 @@ import { _decode_CltuGetParameter_parRfAvailableRequired_parameterValue, _encode
  * @summary CltuGetParameter_parRfAvailableRequired
  * @description
  * 
+ * rf-available-required. If yes, the No RF Available flag in the CLCW must be
+ * false before the provider sets production-status to operational. Set by
+ * service management. CCSDS 912.1-B-5, table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +40,21 @@ export
 class CltuGetParameter_parRfAvailableRequired {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `rfAvailableRequired`. Names the rf-available-required parameter
+     * requested by CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and
+     * table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * yes (0) requires the CLCW No RF Available flag to be false. Table 3-11
+     * does not further define no (1). CCSDS 912.1-B-5, table 3-11.
      * @public
      * @readonly
      */

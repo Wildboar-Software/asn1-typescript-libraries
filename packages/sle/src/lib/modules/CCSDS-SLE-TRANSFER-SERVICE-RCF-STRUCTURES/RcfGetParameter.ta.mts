@@ -17,7 +17,20 @@ import { RcfGetParameter_parReturnTimeout, _decode_RcfGetParameter_parReturnTime
 /**
  * @summary RcfGetParameter
  * @description
- * 
+ *
+ * The parameter value returned by a successful RCF-GET-PARAMETER. The
+ * alternative matches the name the user requested. The provider state stays
+ * unchanged.
+ *
+ * parBufferSize is transfer-buffer-size. parDeliveryMode is the delivery mode.
+ * parLatencyLimit is the latency limit, null when the mode is offline.
+ * parMinReportingCycle is the shortest reporting cycle the user may request.
+ * parPermittedGvcidSet is the permitted channels. parReportingCycle is the
+ * current status-report cycle, null while cyclic reporting is off. parReqGvcId
+ * is the requested global VCID. parReturnTimeout is the return timeout.
+ *
+ * CCSDS 911.2-B-4, section 3.10 and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

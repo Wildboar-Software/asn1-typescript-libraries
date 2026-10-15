@@ -12,6 +12,14 @@ import { ReportingCycle, _decode_ReportingCycle, _encode_ReportingCycle } from "
  * @summary CurrentReportingCycle
  * @description
  * 
+ * Current setting of `reporting-cycle`. `periodicReportingOff` means cyclic
+ * status reports are off: the value after RAF-BIND, the value until a
+ * successful RAF-SCHEDULE-STATUS-REPORT with `periodically`, and the value
+ * after a request of `immediately` or `stop`. `periodicReportingOn` is the
+ * interval, in seconds, between successive RAF-STATUS-REPORT invocations.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and section 3.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,6 +18,13 @@ import { integerIsOneOf } from "../../constraints.mjs";
  * @summary ControlWordTypeNumber
  * @description
  * 
+ * One member of the permitted control-word-type set returned by
+ * ROCF-GET-PARAMETER. The permitted values are all control words, CLCW, and
+ * control word type 1. Service management sets the set. ROCF-START must select
+ * a member of it.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.8 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

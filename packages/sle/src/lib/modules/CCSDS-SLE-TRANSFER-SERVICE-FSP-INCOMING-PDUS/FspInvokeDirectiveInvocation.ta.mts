@@ -15,6 +15,16 @@ import { FspInvokeDirectiveInvocation_directive, _decode_FspInvokeDirectiveInvoc
  * @summary FspInvokeDirectiveInvocation
  * @description
  * 
+ * User invocation of FSP-INVOKE-DIRECTIVE. Valid only in state 3 (active). For
+ * one telecommand VC, at most one FSP service instance is configured to invoke
+ * it. On a positive return the provider forwards the TC directive to the FSP
+ * production engine and reports completion with FSP-ASYNC-NOTIFY. A negative
+ * return does not forward the directive. The provider remains in state 3. TC
+ * directives reconfigure the TC protocol entities and are specified in CCSDS
+ * 232.1-B-2, which section 3.12.1 cites as reference [5].
+ * 
+ * CCSDS 912.3-B-3, sections 3.12.1 and 3.12.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,24 +60,57 @@ export
 class FspInvokeDirectiveInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the performer authenticates this invocation. When
+     * the agreed level is `all`, every FSP invocation and return except
+     * FSP-PEER-ABORT is authenticated; `bind` authenticates only FSP-BIND;
+     * `none` leaves every invocation and return unauthenticated. When this
+     * invocation is unauthenticated, the value should be `unused`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.5.1, 3.1.5.4, and 3.1.5.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     * Invoker-chosen integer, returned unchanged, that pairs this return with
+     * its invocation. An invoke-ID that still has an outstanding return in the
+     * same service instance is rejected with `duplicateInvokeId`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.1.6.4 and 3.1.6.5.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `directiveIdentification`.
+     * @description
+     * Monotonic sequence number of this directive. The first invocation after
+     * the first successful FSP-BIND is 0, and each accepted invocation
+     * increments it. The next invocation uses the value the provider returned.
+     * The expected value survives release or abort of the association. The
+     * provider uses the user-supplied value to reference the directive in later
+     * reports.
+     * 
+     * CCSDS 912.3-B-3, section 3.12.2.5.
      * @public
      * @readonly
      */
     readonly directiveIdentification: IntUnsignedLong;
     /**
      * @summary `directive`.
+     * @description
+     * Directive code and, where the directive has one, its parameter. The
+     * supported directives are Initiate AD Service without a CLCW check, with a
+     * CLCW check, with Unlock, and with Set V(R); Terminate AD Service; Resume
+     * AD Service; Set V(S) to V*(S); Set FOP sliding-window width; Set T1
+     * initial; Set transmission limit; Set timeout type; Abort VC; and modify
+     * MAP multiplexing control. An unknown directive or a parameter the
+     * provider finds in error is rejected with `directiveError`.
+     * 
+     * CCSDS 912.3-B-3, sections 3.12.2.6 and 3.12.2.8.
      * @public
      * @readonly
      */

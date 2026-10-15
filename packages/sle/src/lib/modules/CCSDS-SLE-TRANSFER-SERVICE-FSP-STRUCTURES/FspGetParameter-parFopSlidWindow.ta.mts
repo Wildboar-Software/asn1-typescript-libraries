@@ -21,6 +21,16 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary FspGetParameter_parFopSlidWindow
  * @description
  * 
+ * fop-sliding-window: how many frames may be transmitted on this VC before an
+ * acknowledgement is required. The value is an integer from 1 to 255 (annex
+ * A2.5). Service management sets it. FSP-INVOKE-DIRECTIVE may also set it
+ * (table 3-1).
+ * 
+ * When unacknowledged AD and BC frames reach this width, expedited Frame Data
+ * Units are still passed to the FOP (annex B3.18).
+ * 
+ * CCSDS 912.3-B-3, table 3-11, annex A2.5, and annex B3.18.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +46,18 @@ export
 class FspGetParameter_parFopSlidWindow {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `fopSlidingWindow`, selecting fop-sliding-window in table 3-11.
+     * CCSDS 912.3-B-3, section 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Frames that may be sent on this VC before an acknowledgement is required.
+     * Integer from 1 to 255. CCSDS 912.3-B-3, table 3-11 and annex A2.5.
      * @public
      * @readonly
      */

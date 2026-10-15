@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DiagnosticCltuGetParameter_specific
  * @description
  * 
+ * FCLTU-specific negative result for CLTU-GET-PARAMETER. The provider should
+ * report the first failure in the order given in section 3.10.2.8. duplicate
+ * invoke id and other reason are the common alternative. CCSDS 912.1-B-5,
+ * sections 3.10.2.8 and 3.1.3.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +28,11 @@ type DiagnosticCltuGetParameter_specific = INTEGER;
 
 /**
  * @summary DiagnosticCltuGetParameter_specific_unknownParameter
+ * @description
+ *
+ * The cltu-parameter value does not name an FCLTU service parameter the
+ * provider recognizes. Listed after duplicate invoke id. CCSDS 912.1-B-5,
+ * section 3.10.2.8.
  * @constant
  * @type {number}
  */
@@ -31,6 +41,10 @@ const DiagnosticCltuGetParameter_specific_unknownParameter: DiagnosticCltuGetPar
 
 /**
  * @summary DiagnosticCltuGetParameter_specific_unknownParameter
+ * @description
+ *
+ * cltu-parameter is not a parameter this provider recognizes (CCSDS 912.1-B-5,
+ * section 3.10.2.8).
  * @constant
  * @type {number}
  */

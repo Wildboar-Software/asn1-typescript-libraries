@@ -11,7 +11,14 @@ import { DiagnosticRcfStart, _decode_DiagnosticRcfStart, _encode_DiagnosticRcfSt
 /**
  * @summary RcfStartReturn_result
  * @description
- * 
+ *
+ * Outcome of RCF-START. positiveResult means the provider will deliver every
+ * available frame that meets the delivery criteria. negativeResult means the
+ * provider did not start delivery; this alternative carries the diagnostic.
+ * 'other reason' is used only when no listed diagnostic describes the failure.
+ *
+ * CCSDS 911.2-B-4, sections 3.4.2.8, 3.4.2.9, and 3.1.1.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

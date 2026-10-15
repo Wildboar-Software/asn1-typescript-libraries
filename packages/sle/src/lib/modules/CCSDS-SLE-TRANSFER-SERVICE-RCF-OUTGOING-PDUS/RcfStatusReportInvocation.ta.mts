@@ -17,7 +17,16 @@ import { RcfProductionStatus, _decode_RcfProductionStatus, _encode_RcfProduction
 /**
  * @summary RcfStatusReportInvocation
  * @description
- * 
+ *
+ * The provider sends a status report. Unconfirmed, legal in state 2 (ready)
+ * and state 3 (active), and sent only as requested by
+ * RCF-SCHEDULE-STATUS-REPORT. That request is rejected for an offline
+ * instance. The provider state stays unchanged. The counts and status
+ * accumulate for the whole service instance provision period and remain
+ * available to a later association.
+ *
+ * CCSDS 911.2-B-4, sections 3.8.1, 3.9, and 2.6.4.4.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,42 +47,92 @@ export
 class RcfStatusReportInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     *
+     * Credentials that let the user authenticate this invocation when the
+     * agreed level is 'all'. When the level is 'bind' or 'none', the value
+     * should be 'unused'.
+     *
+     * CCSDS 911.2-B-4, sections 3.9.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `deliveredFrameNumber`.
+     * @description
+     *
+     * Total telemetry frames with the requested global VCID that have been
+     * delivered to the user since the start of the service instance provision
+     * period. Section 3.9.2.3 equates this with the number of frames an
+     * instance using that same global VCID would deliver while active.
+     *
+     * CCSDS 911.2-B-4, section 3.9.2.3.
      * @public
      * @readonly
      */
     readonly deliveredFrameNumber: IntUnsignedLong;
     /**
      * @summary `frameSyncLockStatus`.
+     * @description
+     *
+     * Current lock of the frame synchronization process. Section 3.9.2.4 lists
+     * in-lock, out-of-lock, and unknown.
+     *
+     * CCSDS 911.2-B-4, section 3.9.2.4.
      * @public
      * @readonly
      */
     readonly frameSyncLockStatus: FrameSyncLockStatus;
     /**
      * @summary `symbolSyncLockStatus`.
+     * @description
+     *
+     * Current lock of the symbol (or bit) synchronization process. Section
+     * 3.9.2.5 lists in-lock, out-of-lock, and unknown.
+     *
+     * CCSDS 911.2-B-4, section 3.9.2.5.
      * @public
      * @readonly
      */
     readonly symbolSyncLockStatus: SymbolLockStatus;
     /**
      * @summary `subcarrierLockStatus`.
+     * @description
+     *
+     * Current lock of the subcarrier demodulation process. Section 3.9.2.6
+     * lists in-lock, out-of-lock, and unknown. Annex A types this field as
+     * LockStatus, which also names notInUse. Section 3.7.2.4.2 lists not-in-use
+     * for subcarrier demodulation on a loss-of-frame-sync notification. CCSDS
+     * 911.2-B-4 does not reconcile section 3.9.2.6 with Annex A.
+     *
+     * CCSDS 911.2-B-4, sections 3.9.2.6 and 3.7.2.4.2.
      * @public
      * @readonly
      */
     readonly subcarrierLockStatus: LockStatus;
     /**
      * @summary `carrierLockStatus`.
+     * @description
+     *
+     * Current lock of the carrier demodulation process. Section 3.9.2.7 lists
+     * in-lock, out-of-lock, not-in-use, and unknown. Annex A types this field
+     * as CarrierLockStatus, whose names are inLock, outOfLock, and unknown.
+     * Section 3.7.2.4.2 lists those three values for carrier demodulation.
+     * CCSDS 911.2-B-4 does not reconcile section 3.9.2.7 with Annex A.
+     *
+     * CCSDS 911.2-B-4, sections 3.9.2.7 and 3.7.2.4.2.
      * @public
      * @readonly
      */
     readonly carrierLockStatus: CarrierLockStatus;
     /**
      * @summary `productionStatus`.
+     * @description
+     *
+     * Current RCF production status: running, halted, or interrupted.
+     *
+     * CCSDS 911.2-B-4, sections 3.9.2.8 and 3.7.2.4.3.
      * @public
      * @readonly
      */
@@ -120,7 +179,8 @@ class RcfStatusReportInvocation {
  * @summary The Leading Root Component Types of RcfStatusReportInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -139,7 +199,8 @@ const _root_component_type_list_1_spec_for_RcfStatusReportInvocation: $.Componen
  * @summary The Trailing Root Component Types of RcfStatusReportInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -152,7 +213,8 @@ const _root_component_type_list_2_spec_for_RcfStatusReportInvocation: $.Componen
  * @summary The Extension Addition Component Types of RcfStatusReportInvocation
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

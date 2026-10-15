@@ -17,6 +17,12 @@ import { RocfGetParameter_parLatencyLimit_parameterValue, _decode_RocfGetParamet
  * @summary RocfGetParameter_parLatencyLimit
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for latency-limit. Service management
+ * sets it. For online delivery it is the release-timer duration. For offline
+ * delivery the value is null.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and section 3.1.9.1.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +42,21 @@ export
 class RocfGetParameter_parLatencyLimit {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to latencyLimit. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Online, the latency limit in seconds. Offline, null. See the online and
+     * offline alternatives.
+     *
+     * CCSDS 911.5-B-4, table 3-11 and section 3.1.9.
      * @public
      * @readonly
      */

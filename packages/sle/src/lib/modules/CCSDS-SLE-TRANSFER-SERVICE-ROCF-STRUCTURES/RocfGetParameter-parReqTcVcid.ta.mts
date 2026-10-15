@@ -17,6 +17,14 @@ import { RequestedTcVcid, _decode_RequestedTcVcid, _encode_RequestedTcVcid } fro
  * @summary RocfGetParameter_parReqTcVcid
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the requested telecommand VC. While
+ * the instance is in state 3 (active), this is the tc-vcid from the most
+ * recent ROCF-START. The value is null when a telecommand VC must not be
+ * selected. When the instance is not active, the value is the first element of
+ * the permitted telecommand-VC set.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.9.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +40,22 @@ export
 class RocfGetParameter_parReqTcVcid {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to requestedTcVcid. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Telecommand VC in effect for CLCW delivery while the instance is active,
+     * or the first permitted value while it is not. Null when telecommand-VC
+     * selection is not permissible.
+     *
+     * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.9.
      * @public
      * @readonly
      */

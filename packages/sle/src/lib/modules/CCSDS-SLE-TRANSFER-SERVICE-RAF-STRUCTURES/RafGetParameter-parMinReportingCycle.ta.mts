@@ -21,6 +21,15 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary RafGetParameter_parMinReportingCycle
  * @description
  * 
+ * RAF-GET-PARAMETER value of `minimum-reporting-cycle`: the shortest
+ * status-report interval, in seconds, that the user may request. Service
+ * management sets it. A requested cycle outside the range agreed by SLE Complex
+ * Management and SLE Utilization Management is rejected with `invalid reporting
+ * cycle`. A cycle shorter than this configured minimum conflicts with the
+ * provider configuration. The returned integer is from 1 to 600.
+ * 
+ * CCSDS 911.1-B-5, table 3-11 and sections 3.8.2.8 and 3.1.3.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,12 +45,18 @@ export
 class RafGetParameter_parMinReportingCycle {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `minReportingCycle`, selecting minimum-reporting-cycle in table
+     * 3-11. CCSDS 911.1-B-5, annex A2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * Minimum reporting cycle in seconds, from 1 to 600. CCSDS 911.1-B-5, table
+     * 3-11.
      * @public
      * @readonly
      */

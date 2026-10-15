@@ -17,6 +17,9 @@ import { CltuDeliveryMode, _decode_CltuDeliveryMode, _encode_CltuDeliveryMode } 
  * @summary CltuGetParameter_parDeliveryMode
  * @description
  * 
+ * delivery-mode. This issue reports forward online only. Set by service
+ * management. CCSDS 912.1-B-5, section 3.1.8 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +35,20 @@ export
 class CltuGetParameter_parDeliveryMode {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `deliveryMode`. Names the delivery-mode parameter requested by
+     * CLTU-GET-PARAMETER. CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * fwd online. Forward offline delivery is outside the scope of this issue.
+     * CCSDS 912.1-B-5, section 3.1.8 and table 3-11.
      * @public
      * @readonly
      */

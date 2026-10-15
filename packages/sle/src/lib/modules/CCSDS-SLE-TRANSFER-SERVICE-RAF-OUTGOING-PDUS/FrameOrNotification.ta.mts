@@ -12,6 +12,12 @@ import { RafSyncNotifyInvocation, _decode_RafSyncNotifyInvocation, _encode_RafSy
  * @summary FrameOrNotification
  * @description
  * 
+ * One record in `RafTransferBuffer`. `annotatedFrame` is an RAF-TRANSFER-DATA
+ * invocation. `syncNotification` is an RAF-SYNC-NOTIFY invocation. The provider
+ * keeps the order in which the frames and synchronous events occurred.
+ * 
+ * CCSDS 911.1-B-5, sections 3.1.9 and A2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

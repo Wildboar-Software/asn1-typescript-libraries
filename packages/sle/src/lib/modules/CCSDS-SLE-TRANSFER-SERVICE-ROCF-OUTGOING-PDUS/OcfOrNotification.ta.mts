@@ -12,6 +12,13 @@ import { RocfSyncNotifyInvocation, _decode_RocfSyncNotifyInvocation, _encode_Roc
  * @summary OcfOrNotification
  * @description
  * 
+ * One transfer-buffer record. annotatedOcf is a single delivered OCF
+ * (ROCF-TRANSFER-DATA). syncNotification is an ROCF-SYNC-NOTIFY stored after
+ * the last OCF acquired before the event and before the first OCF acquired
+ * after it. The sequence follows the chronology of frames and events.
+ *
+ * CCSDS 911.5-B-4, sections 3.1.9.1.3, 3.6, and 3.7.1.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

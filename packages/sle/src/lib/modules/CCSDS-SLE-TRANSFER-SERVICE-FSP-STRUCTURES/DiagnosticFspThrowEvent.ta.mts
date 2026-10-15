@@ -12,6 +12,13 @@ import { _decode_DiagnosticFspThrowEvent_specific, _encode_DiagnosticFspThrowEve
  * @summary DiagnosticFspThrowEvent
  * @description
  * 
+ * Negative-result diagnostic of FSP-THROW-EVENT. A positive result omits the
+ * diagnostic and forwards the event. The provider stays in state 2 or state 3.
+ * `common` carries `duplicateInvokeId` and `otherReason`. `specific` carries
+ * the codes in section 3.11.2.9. Checks follow the order in that section.
+ * 
+ * CCSDS 912.3-B-3, sections 3.11.2.9, 3.11.3, and 3.1.3.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,6 +21,18 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
  * @summary RocfProviderToUserPdu
  * @description
  * 
+ * SLE-PDU the ROCF provider can send. It carries START returns, STOP returns,
+ * the transfer buffer, SCHEDULE-STATUS-REPORT returns, STATUS-REPORT, and
+ * GET-PARAMETER returns. BIND, UNBIND, and PEER-ABORT are included when the
+ * provider is the invoker. ROCF-TRANSFER-DATA and ROCF-SYNC-NOTIFY travel
+ * inside rocfTransferBuffer and are valid only in state 3 (active).
+ * STATUS-REPORT is valid in states 2 and 3. Invocations and returns other than
+ * TRANSFER-DATA and SYNC-NOTIFY are sent as soon as possible, without waiting
+ * for the transfer buffer.
+ *
+ * CCSDS 911.5-B-4, sections 2.6.4.2, 3.1.9.1.13, 3.6.1, 3.7.1, 3.9.1, and
+ * annex A2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

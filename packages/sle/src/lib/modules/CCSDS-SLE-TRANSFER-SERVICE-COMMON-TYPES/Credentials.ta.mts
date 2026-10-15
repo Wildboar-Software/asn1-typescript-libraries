@@ -14,6 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Credentials
  * @description
  * 
+ * Authentication material for an invocation or a return. `unused` means the PDU
+ * carries no credentials and is the value to send when authentication is not
+ * required. `used` is 8 to 256 octets whose layout depends on the algorithm
+ * agreed by SLE Complex Management and SLE Utilization Management. That layout
+ * is outside this book; both peers must know it. Levels are `all`
+ * (every invocation and return except PEER-ABORT), `bind` (only BIND), and
+ * `none`. A PDU that fails a required check is ignored.
+ * 
+ * CCSDS 911.1-B-5, sections 3.1.5, 4.1.7, and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

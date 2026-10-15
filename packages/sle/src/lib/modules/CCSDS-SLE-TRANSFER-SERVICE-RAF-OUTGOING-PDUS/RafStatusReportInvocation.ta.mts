@@ -18,6 +18,14 @@ import { RafProductionStatus, _decode_RafProductionStatus, _encode_RafProduction
  * @summary RafStatusReportInvocation
  * @description
  * 
+ * Unconfirmed status report from the provider. Sent only as requested by
+ * RAF-SCHEDULE-STATUS-REPORT. Valid in states 2 (ready) and 3 (active).
+ * Periodic reporting is off after every successful RAF-BIND. The frame counts
+ * accumulate for the whole service-instance provision period and are kept
+ * across an abort.
+ * 
+ * CCSDS 911.1-B-5, sections 3.9, 3.8.1.4, 2.6.4.4, and 3.11.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,48 +47,78 @@ export
 class RafStatusReportInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the user authenticates this invocation. When the
+     * agreed level is `all`, every RAF invocation and return except
+     * RAF-PEER-ABORT is authenticated; `bind` authenticates only RAF-BIND;
+     * `none` leaves every invocation and return unauthenticated. When
+     * this invocation is unauthenticated, the value should be `unused`.
+     * CCSDS 911.1-B-5, sections
+     * 3.9.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `errorFreeFrameNumber`.
+     * @description
+     * Count of telemetry frames annotated `good` and delivered to this user
+     * since the start of the service-instance provision period. CCSDS
+     * 911.1-B-5, section 3.9.2.3.
      * @public
      * @readonly
      */
     readonly errorFreeFrameNumber: IntUnsignedLong;
     /**
      * @summary `deliveredFrameNumber`.
+     * @description
+     * Count of telemetry frames delivered to this user since the start of the
+     * service-instance provision period. CCSDS 911.1-B-5, section 3.9.2.4.
      * @public
      * @readonly
      */
     readonly deliveredFrameNumber: IntUnsignedLong;
     /**
      * @summary `frameSyncLockStatus`.
+     * @description
+     * Current lock of the frame synchronization process: in-lock, out-of-lock,
+     * or unknown. CCSDS 911.1-B-5, section 3.9.2.5.
      * @public
      * @readonly
      */
     readonly frameSyncLockStatus: FrameSyncLockStatus;
     /**
      * @summary `symbolSyncLockStatus`.
+     * @description
+     * Current lock of the symbol (or bit) synchronization process: in-lock,
+     * out-of-lock, or unknown. CCSDS 911.1-B-5, section 3.9.2.6.
      * @public
      * @readonly
      */
     readonly symbolSyncLockStatus: SymbolLockStatus;
     /**
      * @summary `subcarrierLockStatus`.
+     * @description
+     * Current lock of subcarrier demodulation: in-lock, out-of-lock, not in
+     * use, or unknown. CCSDS 911.1-B-5, section 3.9.2.7.
      * @public
      * @readonly
      */
     readonly subcarrierLockStatus: LockStatus;
     /**
      * @summary `carrierLockStatus`.
+     * @description
+     * Current lock of carrier demodulation: in-lock, out-of-lock, or unknown.
+     * CCSDS 911.1-B-5, section 3.9.2.8.
      * @public
      * @readonly
      */
     readonly carrierLockStatus: CarrierLockStatus;
     /**
      * @summary `productionStatus`.
+     * @description
+     * Current RAF production status: `running`, `halted`, or `interrupted`.
+     * CCSDS 911.1-B-5, sections 3.9.2.9 and 3.7.2.4.3.
      * @public
      * @readonly
      */

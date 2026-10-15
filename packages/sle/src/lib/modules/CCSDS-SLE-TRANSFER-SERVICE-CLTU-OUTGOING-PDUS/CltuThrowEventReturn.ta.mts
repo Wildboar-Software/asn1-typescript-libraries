@@ -15,6 +15,11 @@ import { CltuThrowEventReturn_result, _decode_CltuThrowEventReturn_result, _enco
  * @summary CltuThrowEventReturn
  * @description
  * 
+ * Provider report of CLTU-THROW-EVENT. The provider state stays unchanged. On a
+ * positive result the event is forwarded with minimum delay, and later
+ * notifications from the event handler are passed to the user as
+ * CLTU-ASYNC-NOTIFY. CCSDS 912.1-B-5, section 3.11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +40,45 @@ export
 class CltuThrowEventReturn {
     /**
      * @summary `performerCredentials`.
+     * @description
+     *
+     * Credentials that let the invoker authenticate this return when the agreed
+     * authentication level requires it. Set this to unused when authentication
+     * is not required. CCSDS 912.1-B-5, section 3.1.5.
      * @public
      * @readonly
      */
     readonly performerCredentials: Credentials;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * The invoke-ID from the invocation, returned unchanged. CCSDS 912.1-B-5,
+     * sections 3.11.2.4 and 3.1.6.
      * @public
      * @readonly
      */
     readonly invokeId: InvokeId;
     /**
      * @summary `eventInvocationIdentification`.
+     * @description
+     *
+     * Sequence number the provider expects on the next CLTU-THROW-EVENT. One
+     * greater than the invocation when this return is positive. When this
+     * return is negative, the value the provider still expects: zero for the
+     * first event after the first successful BIND, otherwise one greater than
+     * the last accepted event. CCSDS 912.1-B-5, section 3.11.2.5.
      * @public
      * @readonly
      */
     readonly eventInvocationIdentification: EventInvocationId;
     /**
      * @summary `result`.
+     * @description
+     *
+     * positiveResult accepts the event for forwarding. negativeResult carries
+     * DiagnosticCltuThrowEvent and the event is not forwarded. CCSDS 912.1-B-5,
+     * sections 3.11.2.8 and 3.11.3.
      * @public
      * @readonly
      */

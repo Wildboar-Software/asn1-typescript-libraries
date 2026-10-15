@@ -17,6 +17,13 @@ import { TimeoutPeriod, _decode_TimeoutPeriod, _encode_TimeoutPeriod } from "../
  * @summary RocfGetParameter_parReturnTimeout
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the return timeout. Service
+ * management sets the maximum seconds from a confirmed ROCF invocation until
+ * the invoker must have the return. Expiry causes a peer abort with the
+ * return-timeout diagnostic.
+ *
+ * CCSDS 911.5-B-4, section 4.1.3 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,22 @@ export
 class RocfGetParameter_parReturnTimeout {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to returnTimeoutPeriod. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Return timeout in seconds, from 1 to 600. If a confirmed operation's
+     * return is still missing when this period expires, the invoker invokes
+     * ROCF-PEER-ABORT with diagnostic return timeout.
+     *
+     * CCSDS 911.5-B-4, section 4.1.3, table 3-11, and annex A2.5.
      * @public
      * @readonly
      */

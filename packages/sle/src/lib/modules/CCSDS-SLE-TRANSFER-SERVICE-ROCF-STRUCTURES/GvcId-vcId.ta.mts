@@ -12,6 +12,13 @@ import { VcId, _decode_VcId, _encode_VcId } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary GvcId_vcId
  * @description
  * 
+ * Master Channel or Virtual Channel inside a global VCID. masterChannel is the
+ * section 3.4.2.7.4 value 'any': the service provides the Master Channel
+ * identified by the TFVN and SCID. virtualChannel provides that Virtual
+ * Channel. The VCID must be valid for the frame version.
+ *
+ * CCSDS 911.5-B-4, section 3.4.2.7.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

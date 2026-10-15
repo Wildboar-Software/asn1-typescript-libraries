@@ -10,6 +10,14 @@ import { IntUnsignedShort, _decode_IntUnsignedShort, _encode_IntUnsignedShort } 
  * @summary InvokeId
  * @description
  * 
+ * Invoker-chosen integer, returned unchanged, that pairs a return with its
+ * invocation. Confirmed operations other than BIND and UNBIND carry it and are
+ * non-blocking. A value that still has an outstanding return in the same
+ * service instance is rejected with `duplicateInvokeId`. The range is 0 through
+ * 65535.
+ * 
+ * CCSDS 911.1-B-5, section 3.1.6 and annex A2.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

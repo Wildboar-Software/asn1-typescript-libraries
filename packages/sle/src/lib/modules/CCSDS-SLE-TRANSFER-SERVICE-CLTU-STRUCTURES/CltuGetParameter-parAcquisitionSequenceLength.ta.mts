@@ -17,6 +17,13 @@ import { IntUnsignedShort, _decode_IntUnsignedShort, _encode_IntUnsignedShort } 
  * @summary CltuGetParameter_parAcquisitionSequenceLength
  * @description
  * 
+ * acquisition-sequence-length, in octets: the bit pattern radiated so the
+ * spacecraft telecommand system can achieve bit lock. Under PLOP-1 it is the
+ * CMM-2 sequence sent before each CLTU. Under PLOP-2 it is the single CMM-2
+ * sequence sent after the uplink sweep. Zero is permitted, in which case the
+ * user may place the acquisition pattern inside the CLTU. Set by service
+ * management. CCSDS 912.1-B-5, table 3-11 and section 3.6.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +39,21 @@ export
 class CltuGetParameter_parAcquisitionSequenceLength {
     /**
      * @summary `parameterName`.
+     * @description
+     *
+     * Must be `acquisitionSequenceLength`. Names the
+     * acquisition-sequence-length parameter requested by CLTU-GET-PARAMETER.
+     * CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     *
+     * Length of the acquisition sequence in octets. CCSDS 912.1-B-5, table 3-11
+     * and section 3.6.2.8.
      * @public
      * @readonly
      */

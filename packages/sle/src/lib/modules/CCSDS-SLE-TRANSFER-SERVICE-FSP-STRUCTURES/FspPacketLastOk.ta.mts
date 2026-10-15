@@ -12,6 +12,13 @@ import { FspPacketLastOk_packetOk, _decode_FspPacketLastOk_packetOk, _encode_Fsp
  * @summary FspPacketLastOk
  * @description
  * 
+ * The Space Packet of this service instance that most recently completed
+ * processing successfully, or an indication that none has. Present on every
+ * FSP-ASYNC-NOTIFY and every FSP-STATUS-REPORT. The value survives release or
+ * abort of the association.
+ * 
+ * CCSDS 912.3-B-3, sections 3.7.2.12, 3.7.2.13, 3.9.2.6, and 3.9.2.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

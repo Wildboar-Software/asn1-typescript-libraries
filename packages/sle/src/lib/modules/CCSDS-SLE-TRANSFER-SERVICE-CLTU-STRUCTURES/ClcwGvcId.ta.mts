@@ -12,6 +12,12 @@ import { GvcId, _decode_GvcId, _encode_GvcId } from "../CCSDS-SLE-TRANSFER-SERVI
  * @summary ClcwGvcId
  * @description
  * 
+ * Master Channel or Virtual Channel that carries the CLCW the provider uses for
+ * forward-link RF and bit-lock status. configured carries that GvcId.
+ * notConfigured means this service instance does not evaluate the CLCW, which
+ * is the value CLTU-GET-PARAMETER reports in that case. Set by service
+ * management. CCSDS 912.1-B-5, table 3-11 (clcw-global-VCID).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

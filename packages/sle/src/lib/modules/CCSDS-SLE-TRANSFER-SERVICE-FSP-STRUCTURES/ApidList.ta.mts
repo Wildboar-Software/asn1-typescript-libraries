@@ -13,6 +13,13 @@ import { Apid, _decode_Apid, _encode_Apid } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary ApidList
  * @description
  * 
+ * APIDs the service instance is authorized to access. `any` accepts every APID.
+ * `apidList` is the authorized set. Annex A requires the entries to be in
+ * ascending order and allows 1 to 2048 identifiers.
+ * 
+ * CCSDS 912.3-B-3, section 3.10.2.5 (table 3-11), section 3.6.2.18.1, and annex
+ * A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

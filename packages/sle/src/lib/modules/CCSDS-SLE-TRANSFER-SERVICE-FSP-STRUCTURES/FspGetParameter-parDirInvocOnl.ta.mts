@@ -17,6 +17,15 @@ import { _decode_FspGetParameter_parDirInvocOnl_parameterValue, _encode_FspGetPa
  * @summary FspGetParameter_parDirInvocOnl
  * @description
  * 
+ * directive-invocation-online: yes when a service instance permitted to invoke
+ * directives for this VC is in state ready or active. no when no such service
+ * instance exists, or when the permitted instance is unbound.
+ * 
+ * yes is 0 and no is 1 (annex A2.5). Table 3-1 does not list this parameter as
+ * a service-management setting.
+ * 
+ * CCSDS 912.3-B-3, table 3-11 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,12 +44,20 @@ export
 class FspGetParameter_parDirInvocOnl {
     /**
      * @summary `parameterName`.
+     * @description
+     * Fixed to `directiveInvocationOnline`, selecting
+     * directive-invocation-online in table 3-11. CCSDS 912.3-B-3, section
+     * 3.10.2.5.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * yes (0): a directive-capable service instance for this VC is ready or
+     * active. no (1): no such instance exists, or it is unbound. CCSDS
+     * 912.3-B-3, table 3-11.
      * @public
      * @readonly
      */

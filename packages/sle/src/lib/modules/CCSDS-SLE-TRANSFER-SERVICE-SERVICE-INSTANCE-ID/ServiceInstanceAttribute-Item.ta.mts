@@ -14,6 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceInstanceAttribute_Item
  * @description
  * 
+ * One attribute name and its value. `identifier` is the object
+ * identifier. The module comments state the printable name for that
+ * identifier.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,23 @@ export
 class ServiceInstanceAttribute_Item {
     /**
      * @summary `identifier`.
+     * @description
+     * Object identifier of this attribute, constrained to an `&id` in
+     * `ServiceInstanceAttributes`. Printable names are `sagr`,
+     * `spack`, `fsl-fg`, `rsl-fg`, and the service names.
+     * CCSDS 911.1-B-5, section A2.4.
      * @public
      * @readonly
      */
     readonly identifier: OBJECT_IDENTIFIER;
     /**
      * @summary `siAttributeValue`.
+     * @description
+     * Visible string of 1 to 256 characters. For `sagr`, `spack`,
+     * `fsl-fg`, and `rsl-fg`, the user and the provider agree the
+     * value. Each service-name attribute states the prefix its value
+     * starts with, followed by an instance number.
+     * CCSDS 911.1-B-5, section A2.4.
      * @public
      * @readonly
      */

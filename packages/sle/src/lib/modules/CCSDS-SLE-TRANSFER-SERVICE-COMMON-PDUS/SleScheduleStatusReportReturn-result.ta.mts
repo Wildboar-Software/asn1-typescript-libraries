@@ -12,6 +12,12 @@ import { DiagnosticScheduleStatusReport, _decode_DiagnosticScheduleStatusReport,
  * @summary SleScheduleStatusReportReturn_result
  * @description
  * 
+ * `positiveResult` means the provider will send the requested reports or stop
+ * periodic reports. `negativeResult` carries `DiagnosticScheduleStatusReport`
+ * and leaves the previous reporting setting unchanged.
+ * 
+ * CCSDS 911.1-B-5, sections 3.8.2.7 and 3.8.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ApplicationIdentifier
  * @description
  * 
+ * Service type requested by BIND. For the RAF service in this book the value is
+ * `rtnAllFrames`. Annex A2.2 also assigns numbers for other SLE service types.
+ * Section 3 defines only 'Rtn All Frames'.
+ * 
+ * CCSDS 911.1-B-5, section 3.2.2.7 and annex A2.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,6 +48,12 @@ type ApplicationIdentifier = INTEGER;
 
 /**
  * @summary ApplicationIdentifier_rtnAllFrames
+ * @description
+ * 
+ * RAF service type 'Rtn All Frames'. For RAF-BIND this is the only valid
+ * service-type.
+ * 
+ * CCSDS 911.1-B-5, section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -50,6 +62,10 @@ const ApplicationIdentifier_rtnAllFrames: ApplicationIdentifier = 0; /* LONG_NAM
 
 /**
  * @summary ApplicationIdentifier_rtnAllFrames
+ * @description
+ * 
+ * RAF service type 'Rtn All Frames', the only valid RAF-BIND service-type
+ * (CCSDS 911.1-B-5, section 3.2.2.7).
  * @constant
  * @type {number}
  */
@@ -58,6 +74,11 @@ const rtnAllFrames: ApplicationIdentifier = ApplicationIdentifier_rtnAllFrames; 
 
 /**
  * @summary ApplicationIdentifier_rtnInsert
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -66,6 +87,10 @@ const ApplicationIdentifier_rtnInsert: ApplicationIdentifier = 1; /* LONG_NAMED_
 
 /**
  * @summary ApplicationIdentifier_rtnInsert
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -74,6 +99,12 @@ const rtnInsert: ApplicationIdentifier = ApplicationIdentifier_rtnInsert; /* SHO
 
 /**
  * @summary ApplicationIdentifier_rtnChFrames
+ * @description
+ * 
+ * Annex A2.2 assigns this number and states that rtnChFrames includes
+ * rtnMcFrames and rtnVcFrames. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -82,6 +113,11 @@ const ApplicationIdentifier_rtnChFrames: ApplicationIdentifier = 2; /* LONG_NAME
 
 /**
  * @summary ApplicationIdentifier_rtnChFrames
+ * @description
+ * 
+ * Annex A2.2 assigns this number and states that rtnChFrames includes
+ * rtnMcFrames and rtnVcFrames. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -90,6 +126,12 @@ const rtnChFrames: ApplicationIdentifier = ApplicationIdentifier_rtnChFrames; /*
 
 /**
  * @summary ApplicationIdentifier_rtnChFsh
+ * @description
+ * 
+ * Annex A2.2 assigns this number and states that rtnChFsh includes rtnMcFsh and
+ * rtnVcFsh. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -98,6 +140,10 @@ const ApplicationIdentifier_rtnChFsh: ApplicationIdentifier = 3; /* LONG_NAMED_I
 
 /**
  * @summary ApplicationIdentifier_rtnChFsh
+ * @description
+ * 
+ * Annex A2.2 assigns this number and states that rtnChFsh includes rtnMcFsh and
+ * rtnVcFsh. Section 3 does not define this service type (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -106,6 +152,12 @@ const rtnChFsh: ApplicationIdentifier = ApplicationIdentifier_rtnChFsh; /* SHORT
 
 /**
  * @summary ApplicationIdentifier_rtnChOcf
+ * @description
+ * 
+ * Annex A2.2 assigns this number and states that rtnChOcf includes rtnMcOcf and
+ * rtnVcOcf. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -114,6 +166,10 @@ const ApplicationIdentifier_rtnChOcf: ApplicationIdentifier = 4; /* LONG_NAMED_I
 
 /**
  * @summary ApplicationIdentifier_rtnChOcf
+ * @description
+ * 
+ * Annex A2.2 assigns this number and states that rtnChOcf includes rtnMcOcf and
+ * rtnVcOcf. Section 3 does not define this service type (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -122,6 +178,12 @@ const rtnChOcf: ApplicationIdentifier = ApplicationIdentifier_rtnChOcf; /* SHORT
 
 /**
  * @summary ApplicationIdentifier_rtnBitstr
+ * @description
+ * 
+ * Annex A2.2 assigns this number and annotates it "AOS". Section 3 does not
+ * define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -130,6 +192,10 @@ const ApplicationIdentifier_rtnBitstr: ApplicationIdentifier = 5; /* LONG_NAMED_
 
 /**
  * @summary ApplicationIdentifier_rtnBitstr
+ * @description
+ * 
+ * Annex A2.2 assigns this number and annotates it "AOS". Section 3 does not
+ * define this service type (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -138,6 +204,11 @@ const rtnBitstr: ApplicationIdentifier = ApplicationIdentifier_rtnBitstr; /* SHO
 
 /**
  * @summary ApplicationIdentifier_rtnSpacePkt
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -146,6 +217,10 @@ const ApplicationIdentifier_rtnSpacePkt: ApplicationIdentifier = 6; /* LONG_NAME
 
 /**
  * @summary ApplicationIdentifier_rtnSpacePkt
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -154,6 +229,11 @@ const rtnSpacePkt: ApplicationIdentifier = ApplicationIdentifier_rtnSpacePkt; /*
 
 /**
  * @summary ApplicationIdentifier_fwdAosSpacePkt
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -162,6 +242,10 @@ const ApplicationIdentifier_fwdAosSpacePkt: ApplicationIdentifier = 7; /* LONG_N
 
 /**
  * @summary ApplicationIdentifier_fwdAosSpacePkt
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -170,6 +254,11 @@ const fwdAosSpacePkt: ApplicationIdentifier = ApplicationIdentifier_fwdAosSpaceP
 
 /**
  * @summary ApplicationIdentifier_fwdAosVca
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -178,6 +267,10 @@ const ApplicationIdentifier_fwdAosVca: ApplicationIdentifier = 8; /* LONG_NAMED_
 
 /**
  * @summary ApplicationIdentifier_fwdAosVca
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -186,6 +279,11 @@ const fwdAosVca: ApplicationIdentifier = ApplicationIdentifier_fwdAosVca; /* SHO
 
 /**
  * @summary ApplicationIdentifier_fwdBitstr
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -194,6 +292,10 @@ const ApplicationIdentifier_fwdBitstr: ApplicationIdentifier = 9; /* LONG_NAMED_
 
 /**
  * @summary ApplicationIdentifier_fwdBitstr
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -202,6 +304,11 @@ const fwdBitstr: ApplicationIdentifier = ApplicationIdentifier_fwdBitstr; /* SHO
 
 /**
  * @summary ApplicationIdentifier_fwdProtoVcdu
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -210,6 +317,10 @@ const ApplicationIdentifier_fwdProtoVcdu: ApplicationIdentifier = 10; /* LONG_NA
 
 /**
  * @summary ApplicationIdentifier_fwdProtoVcdu
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -218,6 +329,11 @@ const fwdProtoVcdu: ApplicationIdentifier = ApplicationIdentifier_fwdProtoVcdu; 
 
 /**
  * @summary ApplicationIdentifier_fwdInsert
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -226,6 +342,10 @@ const ApplicationIdentifier_fwdInsert: ApplicationIdentifier = 11; /* LONG_NAMED
 
 /**
  * @summary ApplicationIdentifier_fwdInsert
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -234,6 +354,11 @@ const fwdInsert: ApplicationIdentifier = ApplicationIdentifier_fwdInsert; /* SHO
 
 /**
  * @summary ApplicationIdentifier_fwdCVcdu
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -242,6 +367,10 @@ const ApplicationIdentifier_fwdCVcdu: ApplicationIdentifier = 12; /* LONG_NAMED_
 
 /**
  * @summary ApplicationIdentifier_fwdCVcdu
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -250,6 +379,12 @@ const fwdCVcdu: ApplicationIdentifier = ApplicationIdentifier_fwdCVcdu; /* SHORT
 
 /**
  * @summary ApplicationIdentifier_fwdTcSpacePkt
+ * @description
+ * 
+ * Annex A2.2 assigns this number and annotates it "conventional telecommand".
+ * Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -258,6 +393,10 @@ const ApplicationIdentifier_fwdTcSpacePkt: ApplicationIdentifier = 13; /* LONG_N
 
 /**
  * @summary ApplicationIdentifier_fwdTcSpacePkt
+ * @description
+ * 
+ * Annex A2.2 assigns this number and annotates it "conventional telecommand".
+ * Section 3 does not define this service type (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -266,6 +405,12 @@ const fwdTcSpacePkt: ApplicationIdentifier = ApplicationIdentifier_fwdTcSpacePkt
 
 /**
  * @summary ApplicationIdentifier_fwdTcVca
+ * @description
+ * 
+ * Annex A2.2 assigns this number and annotates it "conventional telecommand".
+ * Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -274,6 +419,10 @@ const ApplicationIdentifier_fwdTcVca: ApplicationIdentifier = 14; /* LONG_NAMED_
 
 /**
  * @summary ApplicationIdentifier_fwdTcVca
+ * @description
+ * 
+ * Annex A2.2 assigns this number and annotates it "conventional telecommand".
+ * Section 3 does not define this service type (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -282,6 +431,11 @@ const fwdTcVca: ApplicationIdentifier = ApplicationIdentifier_fwdTcVca; /* SHORT
 
 /**
  * @summary ApplicationIdentifier_fwdTcFrame
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -290,6 +444,10 @@ const ApplicationIdentifier_fwdTcFrame: ApplicationIdentifier = 15; /* LONG_NAME
 
 /**
  * @summary ApplicationIdentifier_fwdTcFrame
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */
@@ -298,6 +456,11 @@ const fwdTcFrame: ApplicationIdentifier = ApplicationIdentifier_fwdTcFrame; /* S
 
 /**
  * @summary ApplicationIdentifier_fwdCltu
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type.
+ * 
+ * CCSDS 911.1-B-5, annex A2.2 and section 3.2.2.7.
  * @constant
  * @type {number}
  */
@@ -306,6 +469,10 @@ const ApplicationIdentifier_fwdCltu: ApplicationIdentifier = 16; /* LONG_NAMED_I
 
 /**
  * @summary ApplicationIdentifier_fwdCltu
+ * @description
+ * 
+ * Annex A2.2 assigns this number. Section 3 does not define this service type
+ * (CCSDS 911.1-B-5).
  * @constant
  * @type {number}
  */

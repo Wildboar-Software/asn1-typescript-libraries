@@ -15,6 +15,11 @@ import { tcvaService } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/t
  * @summary ServiceNames
  * @description
  * 
+ * Service-name attributes: `raf`, `rcf`, `rcfsh`, `rocf`, `rsp`,
+ * `cltu`, `fsp`, `tcf`, and `tcva`.
+ * 
+ * CCSDS 911.1-B-5, section A2.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,7 +18,13 @@ import { integerInRange, integerIsOneOf } from "../../constraints.mjs";
 /**
  * @summary MasterChannelComposition
  * @description
- * 
+ *
+ * One entry of the permitted global-VCID set: a spacecraft identifier, a
+ * Transfer Frame version, and either that whole Master Channel or the Virtual
+ * Channels of it that the user may request.
+ *
+ * CCSDS 911.2-B-4, section 3.4.2.7 and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,18 +53,39 @@ export
 class MasterChannelComposition {
     /**
      * @summary `spacecraftId`.
+     * @description
+     *
+     * Spacecraft identifier of this Master Channel. Annex A comments give TM 0
+     * to 1023, AOS 0 to 255, and USLP 0 to 65535.
+     *
+     * CCSDS 911.2-B-4, sections 3.4.2.7.3 and 1.6.1.8.15.
      * @public
      * @readonly
      */
     readonly spacecraftId: INTEGER;
     /**
      * @summary `versionNumber`.
+     * @description
+     *
+     * Transfer Frame version for this Master Channel: 0 for TM (TFVN '00'B), 1
+     * for AOS (TFVN '01'B), and 12 for USLP (TFVN '1100'B).
+     *
+     * CCSDS 911.2-B-4, section 3.4.2.7.2.
      * @public
      * @readonly
      */
     readonly versionNumber: INTEGER;
     /**
      * @summary `mcOrVcList`.
+     * @description
+     *
+     * The whole Master Channel, or the Virtual Channels of it that this
+     * instance may deliver. When the permitted list contains this Master
+     * Channel and no Virtual Channels from it, a request for a Virtual
+     * Channel from that Master Channel is invalid (section 3.4.2.7
+     * note 3).
+     *
+     * CCSDS 911.2-B-4, section 3.4.2.7.
      * @public
      * @readonly
      */
@@ -103,7 +130,8 @@ class MasterChannelComposition {
  * @summary The Leading Root Component Types of MasterChannelComposition
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -118,7 +146,8 @@ const _root_component_type_list_1_spec_for_MasterChannelComposition: $.Component
  * @summary The Trailing Root Component Types of MasterChannelComposition
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -131,7 +160,8 @@ const _root_component_type_list_2_spec_for_MasterChannelComposition: $.Component
  * @summary The Extension Addition Component Types of MasterChannelComposition
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

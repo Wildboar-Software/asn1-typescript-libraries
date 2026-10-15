@@ -11,7 +11,16 @@ import { ReportingCycle, _decode_ReportingCycle, _encode_ReportingCycle } from "
 /**
  * @summary CurrentReportingCycle
  * @description
- * 
+ *
+ * Current setting of the status-report cycle. periodicReportingOff means
+ * cyclic reporting is off: the value after RCF-BIND, after a request to stop,
+ * and after an immediate report, which itself stops further periodic reports.
+ * periodicReportingOn is the interval, in seconds, between RCF-STATUS-REPORT
+ * invocations while periodic reporting is in effect. The interval is present
+ * on RCF-SCHEDULE-STATUS-REPORT only when the request type is periodically.
+ *
+ * CCSDS 911.2-B-4, section 3.8 and table 3-11.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

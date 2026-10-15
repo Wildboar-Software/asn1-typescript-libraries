@@ -58,6 +58,10 @@ const _CltuParameterName_permitted: ReadonlySet<bigint> = new Set<bigint>([
  * @summary CltuParameterName
  * @description
  * 
+ * Names the user may pass as cltu-parameter in CLTU-GET-PARAMETER. The set is
+ * table 3-11. A name outside the set the provider recognizes yields diagnostic
+ * unknown parameter. CCSDS 912.1-B-5, section 3.10.2.5 and table 3-11.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

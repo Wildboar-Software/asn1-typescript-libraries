@@ -22,6 +22,15 @@ import { integerInRange } from "../../constraints.mjs";
  * @summary RafTransferDataInvocation
  * @description
  * 
+ * Unconfirmed delivery of one telemetry frame from one space link physical
+ * channel. A telemetry frame is a TM, AOS, or USLP Transfer Frame. Valid only
+ * in state 3 (active), and invoked only by the provider. The provider state
+ * stays unchanged. The underlying communications service is required to
+ * transfer the invocation in sequence, completely, without duplication, and
+ * with congestion and disruption indications.
+ * 
+ * CCSDS 911.1-B-5, sections 3.6, 2.1, 1.6.1.8.14, and 1.3.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,42 +54,134 @@ export
 class RafTransferDataInvocation {
     /**
      * @summary `invokerCredentials`.
+     * @description
+     * Information with which the user authenticates this invocation. When the
+     * agreed level is `all`, every RAF invocation and return except
+     * RAF-PEER-ABORT is authenticated; `bind` authenticates only RAF-BIND;
+     * `none` leaves every invocation and return unauthenticated. When
+     * this invocation is unauthenticated, the value should be `unused`.
+     * CCSDS 911.1-B-5, sections
+     * 3.6.2.2 and 3.1.5.
      * @public
      * @readonly
      */
     readonly invokerCredentials: Credentials;
     /**
      * @summary `earthReceiveTime`.
+     * @description
+     * UTC at the phase center of the antenna that acquired the frame. Section
+     * 3.6.2.3 states two reference events: the leading edge of the first bit of
+     * the Attached Sync Marker that immediately preceded this encoded or
+     * uncoded frame, and the leading edge of the first bit of the start
+     * sequence that immediately preceded this encoded frame. The book states
+     * both and does not assign them to particular frame types.
+     * 
+     * The time uses the CCSDS Day Segmented time code (CCSDS 301.0-B-4) with
+     * epoch 1958-01-01 and a 16-bit day segment, at microsecond or picosecond
+     * resolution. The user is expected to accept either resolution. The
+     * annotation is accurate to within one millisecond. Punctured coding makes
+     * the symbol-to-bit relationship vary with the puncture pattern, which
+     * jitters this time relative to the start of the frame.
+     * 
+     * CCSDS 911.1-B-5, sections 3.6.2.3 and 3.1.7, and annex C table C-2.
      * @public
      * @readonly
      */
     readonly earthReceiveTime: Time;
     /**
      * @summary `antennaId`.
+     * @description
+     * Which antenna of the SLE Complex acquired this frame. It identifies the
+     * physical location used as the reference point for `earthReceiveTime`.
+     * Allowable values and their interpretation are agreed by SLE Complex
+     * Management and SLE Utilization Management. The value refers to location
+     * information supplied outside this service.
+     * 
+     * CCSDS 911.1-B-5, section 3.6.2.4.
      * @public
      * @readonly
      */
     readonly antennaId: AntennaId;
     /**
      * @summary `dataLinkContinuity`.
+     * @description
+     * How this frame follows the previous frame on the space link selected by
+     * RAF-START, as estimated by RAF production. Production forms the estimate
+     * without evaluating Transfer Frame headers. `-1` means this is the first
+     * frame after production starts. `0` means this frame is the direct
+     * successor of the last frame acquired from the space link. A positive
+     * value estimates how many frames were missed; `1` may be used when no
+     * better estimate is available.
+     * 
+     * The requested frame quality can still make this frame skip frames that
+     * were acquired and then withheld from this user.
+     * 
+     * CCSDS 911.1-B-5, section 3.6.2.5.
      * @public
      * @readonly
      */
     readonly dataLinkContinuity: INTEGER;
     /**
      * @summary `deliveredFrameQuality`.
+     * @description
+     * Result of Reed-Solomon or LDPC decoding, Frame Error Control Field
+     * evaluation, or the USLP Frame Validation Check Procedure in CCSDS
+     * 732.1-B-2 subsection 4.3.10.3. Subsection 4.3.10.3.4 c) is outside RAF
+     * production. `undetermined` is delivered only when RAF-START requested
+     * `allFrames`. The AOS Header Frame Error Control field is disregarded;
+     * the annotation covers the complete Transfer Frame.
+     * 
+     * CCSDS 911.1-B-5, sections 3.6.2.6 and 2.4.2.
      * @public
      * @readonly
      */
     readonly deliveredFrameQuality: FrameQuality;
     /**
      * @summary `privateAnnotation`.
+     * @description
+     * Extra annotation associated with this frame, or null when there is none.
+     * A non-null value requires a prior arrangement between SLE Complex
+     * Management and SLE Utilization Management on its contents and
+     * interpretation. The book does not define those contents.
+     * 
+     * CCSDS 911.1-B-5, section 3.6.2.7.
      * @public
      * @readonly
      */
     readonly privateAnnotation: RafTransferDataInvocation_privateAnnotation;
     /**
      * @summary `data`.
+     * @description
+     * The telemetry frame acquired for this user. The octet string starts at
+     * the first bit after the Attached Sync Marker.
+     * 
+     * When quality is `good`, the value is a TM, AOS, or USLP Transfer Frame
+     * with coding overhead removed: Reed-Solomon check symbols; LDPC parity
+     * bits and trailing fill bits; or, for BCH, the Error Control octet of each
+     * codeword and any fill bits in the last codeword.
+     * 
+     * When quality is `erred` and the frame is neither Reed-Solomon nor BCH
+     * encoded (convolutional, turbo, LDPC, CCSDS 131.2-B-2, CCSDS 131.3-B-2, or
+     * uncoded), the value is the decoding result, or the frame as acquired when
+     * it is uncoded, and has the same length as a `good` frame.
+     * 
+     * When quality is `erred` and the frame is Reed-Solomon encoded, the value
+     * is the unmodified candidate codeblock presented at the Reed-Solomon
+     * decoder input. When quality is `erred` and the frame is BCH encoded, the
+     * value is the decoding result with fill bits still present, so the length
+     * can differ from a successfully decoded frame.
+     * 
+     * When quality is `undetermined`, the value is a candidate identified
+     * during frame synchronization whose coding is unknown or unsupported. Its
+     * length is implementation dependent and may be a frame or codeblock in the
+     * symbol or bit domain.
+     * 
+     * Space Data Link Security protection of parts of the frame is transparent
+     * here, and Security Header and Security Trailer processing is left to
+     * applications that consume the frame. Section 3.6.2.8 note 3 names the RCF
+     * service in that statement.
+     * 
+     * CCSDS 911.1-B-5, section 3.6.2.8 and 2.4.1.
      * @public
      * @readonly
      */

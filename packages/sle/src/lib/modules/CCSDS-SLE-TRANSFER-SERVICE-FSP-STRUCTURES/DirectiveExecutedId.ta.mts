@@ -10,6 +10,13 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
  * @summary DirectiveExecutedId
  * @description
  * 
+ * Directive identification of the FSP-INVOKE-DIRECTIVE invocation whose
+ * completion is being reported. Present for a positive or negative confirm
+ * response to a directive, and omitted for every other notification. Annex A
+ * types it as an unsigned long integer.
+ * 
+ * CCSDS 912.3-B-3, section 3.7.2.4 and annex A2.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

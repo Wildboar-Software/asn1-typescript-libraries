@@ -12,6 +12,10 @@ import { DiagnosticCltuGetParameter, _decode_DiagnosticCltuGetParameter, _encode
  * @summary CltuGetParameterReturn_result
  * @description
  * 
+ * Result of CLTU-GET-PARAMETER. positiveResult returns the requested parameter.
+ * negativeResult returns DiagnosticCltuGetParameter and the parameter is
+ * omitted. CCSDS 912.1-B-5, sections 3.10.2.5 through 3.10.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

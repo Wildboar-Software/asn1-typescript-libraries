@@ -10,6 +10,19 @@ import { OcfOrNotification, _decode_OcfOrNotification, _encode_OcfOrNotification
  * @summary RocfTransferBuffer
  * @description
  * 
+ * Transfer-buffer SLE-PDU. The provider appends ROCF-TRANSFER-DATA and
+ * ROCF-SYNC-NOTIFY records and releases them as one PDU when the buffer fills,
+ * the release timer set by latency-limit expires, an end-of-data notification
+ * is inserted, or ROCF-STOP is accepted. Record order is insertion order. In
+ * timely online mode, communications backpressure discards the whole PDU; the
+ * provider then inserts one data-discarded notification and restarts the
+ * release timer. In complete online and offline modes the buffer is held until
+ * the communications service accepts it. The buffer is cleared when the
+ * association aborts. Service management sets the capacity. Annex C requires
+ * room for at least 200 ROCF-TRANSFER-DATA invocations.
+ *
+ * CCSDS 911.5-B-4, sections 2.6.4.6.2, 3.1.9, and table C-2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,15 @@ import { Time, _decode_Time, _encode_Time } from "../CCSDS-SLE-TRANSFER-SERVICE-
  * @summary ProductionTime
  * @description
  * 
+ * A production time, or an indication that the time is unspecified.
+ * `unspecified` is the null value used for earliest and latest production time.
+ * `specified` is an absolute time. Time values use UTC and the CCSDS day
+ * segmented time code, epoch 1958-01-01, with a 16-bit day segment, at a
+ * resolution of microseconds or picoseconds, and are precise and accurate to at
+ * least 0.1 second.
+ * 
+ * CCSDS 912.3-B-3, sections 3.6.2.6, 3.6.2.7, and 3.1.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

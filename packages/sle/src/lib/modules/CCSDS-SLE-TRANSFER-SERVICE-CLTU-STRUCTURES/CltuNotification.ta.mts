@@ -12,6 +12,50 @@ import { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId
  * @summary CltuNotification
  * @description
  * 
+ * notification-type of CLTU-ASYNC-NOTIFY (section 3.7.2.3).
+ *
+ * cltuRadiated: the CLTU named by cltu-last-processed finished radiation. Sent
+ * only when that CLTU's CLTU-TRANSFER-DATA asked for a report.
+ *
+ * slduExpired: radiation of the CLTU named by cltu-last-processed did not start
+ * by its latest-radiation-time. Further radiation stops, the buffer is
+ * discarded, and further CLTU-TRANSFER-DATA is rejected with unable to process.
+ * The user clears that block with CLTU-STOP and resumes with CLTU-START.
+ *
+ * productionInterrupted: production stopped for a condition that may be
+ * temporary. In immediate mode this is sent when production-status becomes
+ * interrupted. In deferred mode it is sent when status is interrupted and a
+ * CLTU's radiation has started or is due. The same block and discard rules as
+ * sldu expired apply. After the fault clears, the provider sends
+ * productionOperational; the user then STOP and START to resume.
+ *
+ * productionHalted: management stopped production and production-status is
+ * halted, for example because equipment has failed or resources must be
+ * reassigned. The same block and discard rules apply. The user clears the block
+ * with CLTU-STOP and, after management lifts the halt, resumes with CLTU-START.
+ *
+ * productionOperational: production-status has changed to operational and the
+ * provider can radiate. This follows initial uplink setup or recovery from a
+ * halt or an interruption.
+ *
+ * bufferEmpty: the provider has no further CLTUs buffered for this service
+ * instance. This is omitted when the buffer was emptied by CLTU-STOP or by a
+ * production interrupted or production halted notification.
+ *
+ * actionListCompleted: every action started by the CLTU-THROW-EVENT identified
+ * here finished successfully.
+ *
+ * actionListNotCompleted: at least one action of that CLTU-THROW-EVENT did not
+ * finish. Complex Management also uses this when event-qualifier fails its
+ * checks.
+ *
+ * eventConditionEvFalse: a required condition was false for the event
+ * identified here, so its actions were not performed.
+ *
+ * The three event alternatives carry the event-invocation-identification
+ * (section 3.7.2.4). The provider state does not change. CCSDS 912.1-B-5,
+ * sections 3.7.2.3, 3.7.3, and 3.11.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

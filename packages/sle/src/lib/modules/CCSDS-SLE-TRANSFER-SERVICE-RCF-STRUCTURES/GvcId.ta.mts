@@ -18,7 +18,15 @@ import { integerInRange, integerIsOneOf } from "../../constraints.mjs";
 /**
  * @summary GvcId
  * @description
- * 
+ *
+ * One Master Channel or one Virtual Channel. RCF-START uses it to select the
+ * frames to deliver. A frame is delivered when its Earth Receive Time is in
+ * the requested interval, its spacecraft identifier matches, and, for a
+ * Virtual Channel, its Virtual Channel identifier matches. The physical
+ * channel is the RAF data channel of the service package.
+ *
+ * CCSDS 911.2-B-4, sections 3.4.2.7, 1.6.1.8.4, and 1.6.1.8.8.
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,18 +52,43 @@ export
 class GvcId {
     /**
      * @summary `spacecraftId`.
+     * @description
+     *
+     * Spacecraft identifier of the Master Channel. It must be a valid CCSDS
+     * spacecraft identifier for the Transfer Frame version. Annex A comments
+     * give the ranges used with each version: TM 0 to 1023, AOS 0 to 255, and
+     * USLP 0 to 65535.
+     *
+     * CCSDS 911.2-B-4, sections 3.4.2.7.3 and 1.6.1.8.15.
      * @public
      * @readonly
      */
     readonly spacecraftId: INTEGER;
     /**
      * @summary `versionNumber`.
+     * @description
+     *
+     * Transfer Frame version. 0 is TM Transfer Frames (version 1, TFVN '00'B).
+     * 1 is AOS Transfer Frames (version 2, TFVN '01'B). 12 is USLP Transfer
+     * Frames (version 4, TFVN '1100'B). At the time of this issue those were
+     * the only valid TFVNs. The version selects which definition of spacecraft
+     * identifier and Virtual Channel identifier applies.
+     *
+     * CCSDS 911.2-B-4, section 3.4.2.7.2.
      * @public
      * @readonly
      */
     readonly versionNumber: INTEGER;
     /**
      * @summary `vcId`.
+     * @description
+     *
+     * Master-channel selection, or the Virtual Channel identifier. The
+     * master-channel alternative is the VCID value 'any' and selects every
+     * frame of this Transfer Frame version and spacecraft identifier on the
+     * physical channel.
+     *
+     * CCSDS 911.2-B-4, section 3.4.2.7.4.
      * @public
      * @readonly
      */
@@ -100,7 +133,8 @@ class GvcId {
  * @summary The Leading Root Component Types of GvcId
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the leading
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -115,7 +149,8 @@ const _root_component_type_list_1_spec_for_GvcId: $.ComponentSpec[] = [
  * @summary The Trailing Root Component Types of GvcId
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the trailing
+ * root component type list of a SET or SEQUENCE.
  * 
  * @constant
  */
@@ -128,7 +163,8 @@ const _root_component_type_list_2_spec_for_GvcId: $.ComponentSpec[] = [
  * @summary The Extension Addition Component Types of GvcId
  * @description
  * 
- * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * This is an array of `ComponentSpec`s that define how to decode the extension
+ * addition component type list of a SET or SEQUENCE.
  * 
  * @constant
  */

@@ -17,6 +17,14 @@ import { RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber,
  * @summary RocfGetParameter_parReqControlWordType
  * @description
  * 
+ * Successful ROCF-GET-PARAMETER result for the requested control word type.
+ * While the instance is in state 3 (active), this is the type from the most
+ * recent ROCF-START. Otherwise it is the first element of the permitted
+ * control-word-type set. The report uses the integer form. The telecommand VC
+ * selected with a CLCW is a separate parameter.
+ *
+ * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,22 @@ export
 class RocfGetParameter_parReqControlWordType {
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Fixed to requestedControlWordType. CCSDS 911.5-B-4, table 3-11.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * 0 delivers every control word, 1 delivers CLCWs, and 2 delivers control
+     * word type 1. While the instance is active this is the most recent START
+     * selection; otherwise it is the first permitted type.
+     *
+     * CCSDS 911.5-B-4, table 3-11 and section 3.4.2.8.
      * @public
      * @readonly
      */

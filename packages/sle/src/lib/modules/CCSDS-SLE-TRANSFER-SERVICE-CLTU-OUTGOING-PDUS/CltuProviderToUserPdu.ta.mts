@@ -21,6 +21,23 @@ import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCS
  * @summary CltuProviderToUserPdu
  * @description
  * 
+ * One provider-to-user SLE-PDU for a Forward CLTU association. Returns answer
+ * confirmed operations. cltuAsyncNotifyInvocation and
+ * cltuStatusReportInvocation are unconfirmed provider invocations.
+ * cltuPeerAbortInvocation is the provider's CLTU-PEER-ABORT (section 3.12); the
+ * user may send the same operation on CltuUserToProviderPdu.
+ *
+ * cltuBindReturn answers CLTU-BIND (section 3.2). cltuUnbindReturn answers
+ * CLTU-UNBIND; an accepted unbind reports positive result and releases the
+ * association (section 3.3). cltuStartReturn answers CLTU-START (section 3.4).
+ * cltuStopReturn answers CLTU-STOP (section 3.5); see CltuUserToProviderPdu for
+ * the stop effects. cltuScheduleStatusReportReturn answers
+ * CLTU-SCHEDULE-STATUS-REPORT (section 3.8). cltuGetParameterReturn,
+ * cltuThrowEventReturn, and cltuTransferDataReturn answer sections 3.10, 3.11,
+ * and 3.6. cltuAsyncNotifyInvocation is section 3.7. cltuStatusReportInvocation
+ * is section 3.9 and is sent only as arranged by CLTU-SCHEDULE-STATUS-REPORT.
+ * CCSDS 912.1-B-5, sections 2.6.4 and 3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
