@@ -14,7 +14,26 @@ import { LIIDType, _decode_LIIDType, _encode_LIIDType } from "../TS101909202/LII
 /**
  * @summary CTTRAFFIC
  * @description
- * 
+ *
+ * `CT_TRAFFIC` carries one intercepted traffic packet of a co-target to the
+ * delivery function across INI3. Each successive correspondent is identified
+ * by incrementing `correspondentCount`. Used when IP carries streamed media.
+ * No response is expected.
+ *
+ * The result of content interception covers calls the target originates,
+ * calls to the target, multi-party calls in which the operator believes the
+ * target is taking part, and broadcast calls to a population of which the
+ * operator believes the target is a member (clause 7.1.1).
+ *
+ * Annex A requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; `interceptVersion` in the
+ * module object identifier is incremented when the published module changes.
+ *
+ * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 7.1.2.2, clause 7.1.1,
+ * annex A.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,36 +53,90 @@ export
 class CTTRAFFIC {
     /**
      * @summary `version`.
+     * @description
+     *
+     * Version of this document that the structure is defined against. This
+     * first edition uses 1. Increment by 1 when ASN.1 parameters are added or
+     * existing parameters are modified.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 7.1.2.3.1.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: OPTIONAL<INTEGER>;
     /**
      * @summary `lIInstanceid`.
+     * @description
+     *
+     * The interception this packet belongs to. The same value is used on the
+     * corresponding IRI record (clause 6.4.2.1.2).
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 7.1.2.3.2.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lIInstanceid: LIIDType;
     /**
      * @summary `correspondentCount`.
+     * @description
+     *
+     * Distinguishes the intercepted content of each of the target's
+     * correspondents. The first correspondent is 0. Each successive
+     * correspondent increments this value.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 7.1.2.2, clause 7.1.2.3.3.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly correspondentCount: INTEGER;
     /**
      * @summary `iRITransactionNumber`.
+     * @description
+     *
+     * With `lIInstanceid`, correlates this packet to a known IRI transaction.
+     * If the correlation cannot be determined, set this to zero; the receiver
+     * should ignore it. Clause 7.1.2.3.4 notes that the pair plays a role
+     * similar to the Communication Identifier in clause 6.2 of TS 101 671.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 7.1.2.3.4.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRITransactionNumber: INTEGER;
     /**
      * @summary `trafficPacket`.
+     * @description
+     *
+     * A bit-exact copy of the intercepted IP packet.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 7.1.2.3.5.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly trafficPacket: BIT_STRING;
     /**
      * @summary `cryptoChecksum`.
+     * @description
+     *
+     * Optional cryptographic checksum over the main content of the record.
+     * The operator may include it so the integrity of the intercepted data
+     * can be checked. The mechanism should follow the operator's security
+     * policy. This document does not name an algorithm. Spelled
+     * `cryptoCheckSum` on `TARGETACTIVITYMONITOR`.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 7.1.2.3.6.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */

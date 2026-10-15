@@ -19,6 +19,16 @@ import { CellIdType, _decode_CellIdType, _encode_CellIdType } from "../EN301040/
  * @summary TETRACGIType
  * @description
  * 
+ * TETRA Cell Global Identification of a mobile user: country code, network
+ * code, location area, and an optional cell identity. On initialization of
+ * interception, `mcc` and `mnc` in particular may be system defaults. SwMI
+ * network management should also offer a current translation of this identity
+ * to national map coordinates. The method of that translation is outside the
+ * scope of EN 301 040.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.8.1.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +46,57 @@ export
 class TETRACGIType {
     /**
      * @summary `mcc`.
+     * @description
+     *
+     * Mobile Country Code of the cell, 10 bits, as defined in EN 300 392-1. May
+     * be a system default when interception is initialized.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.8.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mcc: MCCType;
     /**
      * @summary `mnc`.
+     * @description
+     *
+     * Mobile Network Code of the cell, 14 bits, as defined in EN 300 392-1. May
+     * be a system default when interception is initialized.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.8.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mnc: MNCType;
     /**
      * @summary `lai`.
+     * @description
+     *
+     * Location area, 14 bits, as defined in EN 300 392-2. Clause 4.4: the
+     * location area at which the target is registered.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.8.1, clause 4.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lai: LocationAreaType;
     /**
      * @summary `cI`.
+     * @description
+     *
+     * Cell identity, 16 bits, present when the base station is known.
+     * Clause 4.4 allows the location to name the base station when that is
+     * available, and otherwise the location area.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.8.1, clause 4.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

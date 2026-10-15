@@ -13,7 +13,20 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UserSignalType
  * @description
- * 
+ *
+ * The user's signalling transaction on an IRI record. By default this is a
+ * bit-exact copy and no interpretation is attempted (clause 6.4.2).
+ *
+ * `copySignal` is that bit-exact copy. `copyCharSignal` is the character form;
+ * `PrintableString` is recommended for text signalling such as SIP.
+ * `interpretedSignal` is an integer placeholder. Annex A marks it as a place
+ * holder, and this document does not assign integer values. Figures 23 and 24
+ * show optional models in which the Policy Server or the CMTS offers only
+ * interpreted signalling.
+ *
+ * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.8, annex A.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

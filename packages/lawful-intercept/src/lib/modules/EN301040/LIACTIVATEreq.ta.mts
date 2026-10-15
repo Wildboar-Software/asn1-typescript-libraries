@@ -18,6 +18,33 @@ import { ActivityType, _decode_ActivityType, _encode_ActivityType } from "../EN3
  * @summary LIACTIVATEreq
  * @description
  * 
+ * `LI_ACTIVATE_req` is sent from the mediation function to the SwMI. It asks
+ * the SwMI to redirect the target's traffic (`TTRAFFICind`, `CTTRAFFICind`) and
+ * signalling (`TARGETACTIVITYMONITORind`, `TARGETCOMMSMONITORind`). The flow
+ * carries what the SwMI needs in order to validate the request and to make that
+ * activity available to the mediation function. Nothing precedes it.
+ * `LIACTIVATEconf` is the expected response. No protocol timer is defined;
+ * clause 4.5 still requires the instance to be established as quickly as
+ * possible and results to be delivered in real time or near real time, for
+ * calls that start no earlier than receipt of the interception request.
+ *
+ * Clause 4.8 requires the LEMF to learn of activation, deactivation, any
+ * change, and temporary unavailability. HI1 may carry those events. This flow
+ * is the internal activation. The interface stays up for the life of the
+ * warrant and, after expiry, until remaining results have been delivered. Those
+ * results may include an advice of charge for the resources used to provide the
+ * interception. This module has no component for that charge.
+ *
+ * Annex E requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; interceptVersion in the
+ * module object identifier is incremented when the published module changes.
+ * Clause 1 leaves encoding towards the LEMF to the handover interface that is
+ * adopted.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1, clause 5.2.2.1.1.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,42 +66,117 @@ export
 class LIACTIVATEreq {
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * UTC time on this information flow. Coordinated Universal Time is defined
+     * in clause 3.1. EN 301 040 does not name the event this component
+     * timestamps.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: UTCTime;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Integer carried on this request and on `LIACTIVATEconf`, which is the
+     * response to this request. EN 301 040 does not state a rule for matching
+     * the two values.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.1, clause 5.2.2.1.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly invokeId: INTEGER;
     /**
      * @summary `targetAddress`.
+     * @description
+     *
+     * Identity to be intercepted. Clause 4.2 allows any valid TETRA Subscriber
+     * Identity: an individual ITSI or a group GTSI. The address space is flat,
+     * with no reserved range for either. Clause 4.2 says a multi-user gateway
+     * should not be a target (an address used only as an intermediate port, for
+     * example an ISDN gateway). Where the warrant names a Terminal Equipment
+     * Identity, the operator uses best endeavours to find a TSI, which may use
+     * the Mobility Management TEI PROVIDE exchange. Clause 4.2 does not mandate
+     * that exchange; clause 6.2 requires it when the (co)target is identified
+     * by TEI. See EN 300 392-7, clause 4.
+     *
+     * If the operator cannot map the warrant to a single address, the LI
+     * interface is not invoked (clause 4.2). A home SwMI provides results only
+     * for targets operating in its own network (clause 4.3.1).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 4.2, clause 6.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetAddress: AddressType;
     /**
      * @summary `expiryDateTime`.
+     * @description
+     *
+     * UTC expiry carried on the activation. Clause 4.5 makes the result of
+     * interception available during the period given in the interception order.
+     * Clause 4.8 keeps the interface active after expiry until remaining
+     * results for the target have been delivered. The same provision can later
+     * be replaced through `LIMODIFYreq`.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 4.5, clause 4.8,
+     * clause 5.2.2.1.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly expiryDateTime: UTCTime;
     /**
      * @summary `targetname`.
+     * @description
+     *
+     * Optional visible string on the activation. The same provision can be
+     * replaced through `LIMODIFYreq`. EN 301 040 does not define the contents.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetname: OPTIONAL<VisibleString>;
     /**
      * @summary `additionaltargetdata`.
+     * @description
+     *
+     * Optional visible string on the activation. The same provision can be
+     * replaced through `LIMODIFYreq`. EN 301 040 does not define the contents.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly additionaltargetdata: OPTIONAL<VisibleString>;
     /**
      * @summary `monitorServiceList`.
+     * @description
+     *
+     * Services to monitor, each one an `ActivityType` (the class, its relation
+     * to the call, and any direction, scope, C-plane data, or
+     * supplementary-service selector). The same list can be replaced through
+     * `LIMODIFYreq`.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.1, clause 6.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

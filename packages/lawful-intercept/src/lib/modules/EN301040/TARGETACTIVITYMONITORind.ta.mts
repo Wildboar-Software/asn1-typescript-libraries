@@ -20,6 +20,35 @@ import { AddressType, _decode_AddressType, _encode_AddressType } from "../EN3010
  * @summary TARGETACTIVITYMONITORind
  * @description
  * 
+ * `TARGET_ACTIVITY_MONITOR_ind` summarizes target activity on the SwMI for the
+ * mediation function. The header is who (`tLIInstanceid`), when (`timestamp`),
+ * and where (`targetLocation`). The body is what (`targetAction`). No response
+ * is expected. The flow is carried in the body of an IRI-Record across HI2.
+ *
+ * Clause 5.2.2.2.1 also shows an optional `tSignallingPacket`. That component
+ * is absent from the collated module in annex E, which this type follows.
+ *
+ * The result of interception covers calls the target originates, calls
+ * addressed to the target, multi-party calls in which the operator believes the
+ * target is taking part, and broadcast calls to a population of which the
+ * operator believes the target is a member. It also covers attempted parties,
+ * identities associated with the target, service parameters, signals that
+ * invoke or modify services, time-stamps, diverted directory numbers, location,
+ * and advice of charge (clause 4.3.4). For a group call the GTSI is tied to the
+ * target ITSI when the operator believes the target is in the group, from
+ * ATTACH/DETACH GROUP IDENTITY or from a permanent attachment. With no required
+ * dynamic attachment, there is no ITSI-to-GTSI association for that group.
+ *
+ * Annex E requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; interceptVersion in the
+ * module object identifier is incremented when the published module changes.
+ * Clause 1 leaves encoding towards the LEMF to the handover interface that is
+ * adopted.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.1, clause 6.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,42 +69,125 @@ export
 class TARGETACTIVITYMONITORind {
     /**
      * @summary `tLIInstanceid`.
+     * @description
+     *
+     * Header: who. The interception this activity belongs to. The monitored
+     * target is the one correlated by this tag, which is how clause 6.6
+     * distinguishes that target from an address the SwMI is using towards it.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.1, clause 6.1,
+     * clause 6.6.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tLIInstanceid: TLIIdType;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Header: when. Mandatory UTC time for the beginning, end, and duration of
+     * the connection (clause 6.5). Clause 3.1 defines Coordinated Universal
+     * Time from ITU-R Recommendation TF.460-6. EN 300 392-2, table 254, zeros
+     * the TETRA network time element at 00:00 on 1 January each year and
+     * increments it every 2 s (clause 6.5, notes 2 and 3).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.5.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timestamp: UTCTime;
     /**
      * @summary `targetLocation`.
+     * @description
+     *
+     * Header: where. Supplied on every activity indication (clause 6.8).
+     * `mSLoc` is a mobile station (TETRA cell global identity). `lSLoc` is a
+     * fixed line station. Clause 4.4 asks for the current location area, or the
+     * base station when known; the line identity of a registered target; or the
+     * line or service identity to which calls are redirected. Location is
+     * delivered with registration and with the result of interception. On
+     * migration or roaming the new location is this header field (clause 6.4.5,
+     * clause 6.4.6).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.8, clause 4.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetLocation: LocationType;
     /**
      * @summary `targetAction`.
+     * @description
+     *
+     * Body: what the target did. Services and their parameters use clause 6.3.
+     * Signals that invoke or modify a non-call service (authentication, OTAR,
+     * enable or disable, registration, migration, roaming, supplementary
+     * services) use the same element under clause 6.4.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3, clause 6.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetAction: ActivityType;
     /**
      * @summary `supplementaryTargetaddress`.
+     * @description
+     *
+     * Address the SwMI uses when communicating with the target (clause 6.2.1).
+     * When an ITSI attaches to a group with ATTACH DETACH GROUP IDENTITY, that
+     * group identity is placed here. For IP, the target's IP address is placed
+     * in the supplementary address (clause 6.3.2.5). Clause 6.6 uses this
+     * address for the actual destination, including a diverted number, and
+     * distinguishes it from the monitored target, which is found from
+     * `tLIInstanceid`. A line station is normally addressed by its ITSI; where
+     * that ITSI is mapped to an ISDN or PSTN line, clause 6.8.2 puts the line
+     * address in this element.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2.1, clause 6.6.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly supplementaryTargetaddress: OPTIONAL<AddressType>;
     /**
      * @summary `cotargetaddress`.
+     * @description
+     *
+     * Identities of co-targets, one `AddressType` each. A co-target is the
+     * individual or group address with whom the target is communicating
+     * (clause 3.1). Several co-targets produce several entries (clause 6.2.2).
+     * For IP, the correspondent IP address is placed on the co-target
+     * (clause 6.3.2.5). Every such address is bound to the (co)target TSI that
+     * is the principal monitoring key (clause 6.2).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cotargetaddress: OPTIONAL<AddressType[]>;
     /**
      * @summary `cotargetlocation`.
+     * @description
+     *
+     * Optional list of co-target locations. Clause 6.8 requires the target
+     * location in the header and does not further define this component.
+     * Annex A.3 notes that a SwMI intercepting a target on its own system can
+     * report that the correspondent is on another SwMI and still lack that
+     * correspondent's location area.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.1, annex A.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

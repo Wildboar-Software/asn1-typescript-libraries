@@ -16,6 +16,21 @@ import { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLI
  * @summary LIMODIFYconf
  * @description
  * 
+ * `LI_MODIFY_conf` is the SwMI answer to `LIMODIFYreq`. `result` is TRUE when
+ * the modification succeeded and FALSE otherwise. No further response is
+ * expected. The confirmation repeats the interception tag, the timestamp, and
+ * the modification number of the request.
+ *
+ * Annex E requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; interceptVersion in the
+ * module object identifier is incremented when the published module changes.
+ * Clause 1 leaves encoding towards the LEMF to the handover interface that is
+ * adopted.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +48,59 @@ export
 class LIMODIFYconf {
     /**
      * @summary `tLIInstanceid`.
+     * @description
+     *
+     * 16-bit interception tag. It identifies the LEA, the target, the network
+     * operator or service provider, and the warrant reference. It is allocated
+     * in `LIACTIVATEconf` when activation succeeds and then copied onto later
+     * flows so those flows correlate with that provision (clause 4.3.2,
+     * clause 6.1). One LI interface instance serves one target (clause 4.7).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tLIInstanceid: TLIIdType;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * UTC time on this information flow. Coordinated Universal Time is defined
+     * in clause 3.1. EN 301 040 does not name the event this component
+     * timestamps.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timestamp: UTCTime;
     /**
      * @summary `modificationNumber`.
+     * @description
+     *
+     * The `modificationNumber` from the `LIMODIFYreq` this confirmation
+     * answers.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly modificationNumber: INTEGER;
     /**
      * @summary `result`.
+     * @description
+     *
+     * TRUE when the SwMI applied the modification. FALSE when it did not.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

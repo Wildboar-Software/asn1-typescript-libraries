@@ -23,7 +23,33 @@ import { UserSignalType, _decode_UserSignalType, _encode_UserSignalType } from "
 /**
  * @summary TARGETACTIVITYMONITOR
  * @description
- * 
+ *
+ * `TARGET_ACTIVITY_MONITOR` carries the target's activity on the IPCablecom
+ * network to the LIMF across INI2. The header is who (`lIInstanceid`), when
+ * (`timestamp`), and where (`targetLocation`). The body is the signal and the
+ * IRI transaction it belongs to. No response is expected.
+ *
+ * By default the record is an IRI-Report and `userSignal` is a bit-exact copy
+ * of the signal, with no interpretation.
+ *
+ * The IRI record shall contain identities that attempted communication with
+ * the target, successful or not; identities the target attempted communication
+ * with, successful or not; identities used by or associated with the target;
+ * services used and their parameters; signals from the target that invoke
+ * additional or modified services; time-stamps for the beginning, end, and
+ * duration of the connection; and the actual destination and intermediate
+ * directory numbers if the call was diverted. It should also contain location.
+ * The result applies to all call types while, to the operator's knowledge, the
+ * target is a participant (clause 6.1.1).
+ *
+ * Annex A requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; `interceptVersion` in the
+ * module object identifier is incremented when the published module changes.
+ *
+ * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2, clause 6.1.1, annex A.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,54 +72,139 @@ export
 class TARGETACTIVITYMONITOR {
     /**
      * @summary `version`.
+     * @description
+     *
+     * Version of this document that the structure is defined against. This
+     * first edition uses 1. Increment by 1 when ASN.1 parameters are added or
+     * existing parameters are modified.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: OPTIONAL<INTEGER>;
     /**
      * @summary `lIInstanceid`.
+     * @description
+     *
+     * Header: who. The interception this activity belongs to. The same value
+     * is used on the corresponding content records.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.2.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lIInstanceid: LIIDType;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Header: when. Mandatory time of the interception. `UTCTime` follows
+     * Coordinated Universal Time. Clause 3.1 defines that scale as the one
+     * maintained by the Bureau International de l'Heure, citing ITU-T
+     * Recommendation 460-2 of the CCIR.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.3, clause 3.1.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timestamp: UTCTime;
     /**
      * @summary `targetLocation`.
+     * @description
+     *
+     * Header: where. Supplied on every activity record. Delivered with
+     * registration, with the result of interception, or both, for location the
+     * warrant asks for and that the network normally has.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.4.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetLocation: LocationType;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Whether the signal is to the target or from the target, to the
+     * operator's knowledge.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.5.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly direction: DirectionType;
     /**
      * @summary `iRITransaction`.
+     * @description
+     *
+     * Which kind of IRI record this is. Defaults to `iRIreport`. The record
+     * shall say whether it belongs to an IRI transaction and, if so, which
+     * point in that transaction. Begin, continue, and end form one
+     * transaction; report is for events outside a communication (clause 6.1,
+     * table 2).
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.6, clause 6.1.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRITransaction: OPTIONAL<IRITransactionType>;
     /**
      * @summary `iRITransactionNumber`.
+     * @description
+     *
+     * With `lIInstanceid`, identifies one IRI transaction. `iRIbegin`
+     * increments it; `iRIcontinue` and `iRIend` keep that value. For
+     * `iRIreport` it shall be zero and the receiver should ignore it. The
+     * same number is placed on the content packets so the intercepted
+     * signalling and the related traffic can be correlated.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.7.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRITransactionNumber: INTEGER;
     /**
      * @summary `userSignal`.
+     * @description
+     *
+     * The intercepted user signalling, either copied or interpreted. By
+     * default it is a bit-exact copy and no interpretation is attempted.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2, clause 6.4.2.1.8.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly userSignal: UserSignalType;
     /**
      * @summary `cryptoCheckSum`.
+     * @description
+     *
+     * Optional cryptographic checksum over the main content of the record.
+     * The operator may include it so the integrity of the intercepted data
+     * can be checked. The mechanism should follow the operator's security
+     * policy. This document does not name an algorithm. Spelled
+     * `cryptoChecksum` on `TTRAFFIC` and `CTTRAFFIC`.
+     *
+     * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.9.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+     *
      * @public
      * @readonly
      */

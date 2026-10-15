@@ -15,6 +15,17 @@ import { TETRAAddressType, _decode_TETRAAddressType, _encode_TETRAAddressType } 
  * @summary AddressType
  * @description
  * 
+ * An identity used by the target or a co-target, whether or not the
+ * communication succeeds. `tSI` is the principal monitoring key. Every other
+ * address used in the communication is bound to that TSI. Clause 6.2 gives
+ * these examples of supplementary identities: an Alias Short Subscriber
+ * Identity assigned by the hosting network, a group TSI (an ITSI may belong to
+ * several groups), an IP address, a PISN address used towards a PSTN or ISDN
+ * gateway, and a TETRA Equipment Identity.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +41,31 @@ export
 class AddressType {
     /**
      * @summary `tSI`.
+     * @description
+     *
+     * Principal TETRA Subscriber Identity for this party. Individual (ITSI) and
+     * group (GTSI) addresses share one flat space (clause 4.2). Other addresses
+     * in `supplementaryAddress` are bound to this TSI.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2, clause 4.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tSI: TSIType;
     /**
      * @summary `supplementaryAddress`.
+     * @description
+     *
+     * Other addresses bound to `tSI`. Examples in clause 6.2: ASSI, group TSI,
+     * IP address, PISN address, and TEI. For an IP activity, the target's IP
+     * address is a supplementary address and the correspondent's IP address is
+     * carried on the co-target (clause 6.3.2.5).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

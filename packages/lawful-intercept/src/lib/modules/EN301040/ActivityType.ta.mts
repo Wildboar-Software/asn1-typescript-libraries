@@ -22,6 +22,26 @@ import { _decode_SSType, _encode_SSType, _enum_for_SSType, SSType } from "../EN3
  * @summary ActivityType
  * @description
  * 
+ * One monitored activity. It is `targetAction` on `TARGETACTIVITYMONITORind`,
+ * and each entry of `monitorServiceList` on activation and modification.
+ * Clause 6.3 calls `cctivity` ActivityType!Activity and calls `cPlaneData`
+ * ActivityType!Data.
+ *
+ * Circuit-mode U-plane services set `cctivity` to speech or a circuit-data
+ * class and include `direction` and `scope` (clause 6.3.1). The U-plane bits
+ * themselves go in `TTRAFFICind` and `CTTRAFFICind`.
+ *
+ * C-plane data services set `direction` and `scope` to match the service and
+ * put the user data in `cPlaneData` (clause 6.3.2). An SDS message may be
+ * reported both when it enters the SwMI store and when it is retrieved.
+ *
+ * A supplementary service sets `cctivity` to `supplementaryService`, sets
+ * `direction` as appropriate, omits `scope`, omits `cPlaneData`, and sets
+ * `sStype` (clause 6.4.7).
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3, clause 6.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,36 +73,100 @@ export
 class ActivityType {
     /**
      * @summary `cctivity`.
+     * @description
+     *
+     * Service or signal class. Clause 6.3 and clause 6.4 assign the values.
+     * Those clauses call this component ActivityType!Activity. The ASN.1
+     * identifier in annex E is `cctivity`.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3, clause 6.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cctivity: ActivityClassType;
     /**
      * @summary `callRelation`.
+     * @description
+     *
+     * `begin`, `end`, `continue`, or `report`. Mandatory. Clause 6.3 lists the
+     * four names and gives no further definition of them. Clause 6.5 places the
+     * beginning, end, and duration of a connection in the activity-monitor
+     * timestamp.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly callRelation: ActivityType_callRelation;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * `toTarget` or `fromTarget`. Circuit-mode services include it
+     * (clause 6.3.1). Data services set it to match the service (clause 6.3.2).
+     * Supplementary services set it as appropriate (clause 6.4.7). Annex C uses
+     * `fromTarget` for a target-originated U-SETUP and for registration.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly direction: OPTIONAL<ActivityType_direction>;
     /**
      * @summary `scope`.
+     * @description
+     *
+     * `point2Point`, `point2MultiPoint`, or `broadcast`. Circuit-mode services
+     * state whether the call was initiated as point-to-point or
+     * point-to-multipoint (clause 6.3.1). Data services set it to match the
+     * service (clause 6.3.2). Supplementary services omit it (clause 6.4.7).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1, clause 6.4.7.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly scope: OPTIONAL<ActivityType_scope>;
     /**
      * @summary `cPlaneData`.
+     * @description
+     *
+     * User data for a C-plane service. Clause 6.3.2 calls this component
+     * ActivityType!Data. Unacknowledged and acknowledged SDS carry the
+     * user-defined data. SCLNS carries the user-defined packet data; the SwMI
+     * generally cannot name the applications. CONS carries the user-defined
+     * data, which the mediation function may decode to see virtual-circuit
+     * establishment (ISO/IEC 8348 and ISO/IEC 8878, as profiled by TETRA). IP
+     * carries the full IP packet, header and data. Supplementary services omit
+     * this component (clause 6.4.7). Circuit-mode U-plane content is carried in
+     * `TTRAFFICind` and `CTTRAFFICind` instead.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cPlaneData: OPTIONAL<BIT_STRING>;
     /**
      * @summary `sStype`.
+     * @description
+     *
+     * Which TETRA supplementary service, set when `cctivity` is
+     * `supplementaryService`. Clause 6.4.7 requires this selector, requires
+     * `direction`, and omits `scope` and `cPlaneData`. Invoking interception
+     * does not change the supplementary service (clause 5.1.3).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.4.7.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

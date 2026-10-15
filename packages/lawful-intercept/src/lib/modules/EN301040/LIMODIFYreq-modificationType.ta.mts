@@ -15,6 +15,16 @@ import { ActivityType, _decode_ActivityType, _encode_ActivityType } from "../EN3
  * @summary LIMODIFYreq_modificationType
  * @description
  * 
+ * The one change applied by `LIMODIFYreq`. `expiryDateTime`, `targetname`,
+ * `additionaltargetdata`, and `monitorServiceList` replace the provisions of
+ * the same name on `LIACTIVATEreq`. `halt` and `reset` are Boolean
+ * alternatives. Figure 2b labels cleardown as `LI_MODIFY_req` (stop).
+ * EN 301 040 does not define the Boolean polarity of `halt` or `reset`, and it
+ * does not say which alternative implements stop.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,19 @@ import { TEIType, _decode_TEIType, _encode_TEIType } from "../EN301040/TEIType.t
  * @summary TETRAAddressType
  * @description
  * 
+ * One address other than, or in addition to, the principal TSI. `tETRAaddress`
+ * is a TSI. `pISNaddress` is a PISN number of 20 digits, used towards a PSTN or
+ * ISDN gateway. `iP4address` is 32 bits and `iP6address` is 128 bits.
+ * `e164address` is an E.164 number of 20 digits. `tEI` is the 60-bit TETRA
+ * Equipment Identity of EN 300 392-1. When the (co)target is identified by TEI,
+ * the SwMI supports TEI PROVIDE as described in EN 300 392-7, clause 4
+ * (clause 6.2). Clause 4.2 does not mandate that exchange for every TETRA
+ * system, and it forbids the exchange from breaking service transparency
+ * (clause 4.6).
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

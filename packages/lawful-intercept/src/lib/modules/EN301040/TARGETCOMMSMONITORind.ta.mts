@@ -20,6 +20,21 @@ import { CircuitIdType, _decode_CircuitIdType, _encode_CircuitIdType } from "../
  * @summary TARGETCOMMSMONITORind
  * @description
  * 
+ * `TARGET_COMMS_MONITOR_ind` marks the change from signalling or packet-mode
+ * data to circuit-mode activity, and it identifies the logical place of the
+ * following `TTRAFFICind` and `CTTRAFFICind` flows. No response is expected.
+ * The flow is carried in the body of an IRI-Record across HI2.
+ *
+ * Annex E requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; interceptVersion in the
+ * module object identifier is incremented when the published module changes.
+ * Clause 1 leaves encoding towards the LEMF to the handover interface that is
+ * adopted.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.2.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,42 +55,105 @@ export
 class TARGETCOMMSMONITORind {
     /**
      * @summary `tLIInstanceid`.
+     * @description
+     *
+     * 16-bit interception tag. It identifies the LEA, the target, the network
+     * operator or service provider, and the warrant reference. It is allocated
+     * in `LIACTIVATEconf` when activation succeeds and then copied onto later
+     * flows so those flows correlate with that provision (clause 4.3.2,
+     * clause 6.1). One LI interface instance serves one target (clause 4.7).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.2, clause 6.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tLIInstanceid: TLIIdType;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * UTC time on this information flow. Coordinated Universal Time is defined
+     * in clause 3.1. EN 301 040 does not name the event this component
+     * timestamps.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timestamp: UTCTime;
     /**
      * @summary `targetlocation`.
+     * @description
+     *
+     * Location of the target on this circuit-mode indication.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.2, clause 6.8.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetlocation: LocationType;
     /**
      * @summary `supplementaryTargetaddress`.
+     * @description
+     *
+     * Optional supplementary address of the target on this circuit-mode
+     * indication. Clause 6.2.1 assigns the supplementary target address on
+     * `TARGETACTIVITYMONITORind`; this component is the same-named optional
+     * field of the circuit-mode indication.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly supplementaryTargetaddress: OPTIONAL<AddressType>;
     /**
      * @summary `targetcommsid`.
+     * @description
+     *
+     * Logical identity of the circuit that will carry the target's
+     * `TTRAFFICind` packets. A numeric string of 20 digits. EN 301 040 does not
+     * define the numbering plan.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetcommsid: CircuitIdType;
     /**
      * @summary `cotargetaddress`.
+     * @description
+     *
+     * Optional co-target addresses for the circuit-mode call. A co-target is
+     * the correspondent of the target (clause 3.1).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.2, clause 6.2.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cotargetaddress: OPTIONAL<AddressType[]>;
     /**
      * @summary `cotargetcommsid`.
+     * @description
+     *
+     * Optional circuit identities for co-target `CTTRAFFICind` packets.
+     * Clause 6.7 sends target content and co-target content to the mediation
+     * function on separate links.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.2, clause 6.7.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

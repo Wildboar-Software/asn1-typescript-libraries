@@ -17,6 +17,21 @@ import { SSIType, _decode_SSIType, _encode_SSIType } from "../EN301040/SSIType.t
  * @summary TSIType
  * @description
  * 
+ * TETRA Subscriber Identity: mobile country code, mobile network code, and
+ * short subscriber identity, as defined for those fields in EN 300 392-1. An
+ * individual ITSI and a group GTSI share one flat address space (clause 4.2).
+ * Groups the target belongs to are those its ITSI has attached to, whether the
+ * mobile requested the attachment, the SwMI enforced it, or the attachment is
+ * permanent. Group communication stops being intercepted when the SwMI treats
+ * the mobile as detached, for example by explicit detachment or deregistration
+ * (clause 4.2). The GTSI is reported as used by the ITSI when the operator
+ * believes the target is in the group. If the group requires dynamic attachment
+ * and the target has not attached, there is no ITSI-to-GTSI association
+ * (clause 4.3.4). See EN 300 392-2.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2, clause 4.2, clause 4.3.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +48,43 @@ export
 class TSIType {
     /**
      * @summary `mcc`.
+     * @description
+     *
+     * Mobile Country Code, 10 bits, as defined in EN 300 392-1. On
+     * initialization of interception, `mcc` may be filled with a system default
+     * (clause 6.8.1).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2, clause 6.8.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mcc: MCCType;
     /**
      * @summary `mnc`.
+     * @description
+     *
+     * Mobile Network Code, 14 bits, as defined in EN 300 392-1. On
+     * initialization of interception, `mnc` may be filled with a system default
+     * (clause 6.8.1).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2, clause 6.8.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mnc: MNCType;
     /**
      * @summary `ssi`.
+     * @description
+     *
+     * Short Subscriber Identity, 24 bits, as defined in EN 300 392-1.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

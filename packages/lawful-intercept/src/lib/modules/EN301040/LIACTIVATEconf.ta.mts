@@ -16,6 +16,21 @@ import { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLI
  * @summary LIACTIVATEconf
  * @description
  * 
+ * `LI_ACTIVATE_conf` is the SwMI answer to `LIACTIVATEreq`. No further response
+ * is expected. When `result` is TRUE, `tLIInstanceid` is present and becomes
+ * the TETRA pointer to this interception; later `LIMODIFYreq` and monitor flows
+ * cite it. When `result` is FALSE, `tLIInstanceid` is absent.
+ *
+ * Annex E requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; interceptVersion in the
+ * module object identifier is incremented when the published module changes.
+ * Clause 1 leaves encoding towards the LEMF to the handover interface that is
+ * adopted.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.2.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,24 +48,58 @@ export
 class LIACTIVATEconf {
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * UTC time on this information flow. Coordinated Universal Time is defined
+     * in clause 3.1. EN 301 040 does not name the event this component
+     * timestamps.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: UTCTime;
     /**
      * @summary `invokeId`.
+     * @description
+     *
+     * Integer carried on this confirmation and on the `LIACTIVATEreq` it
+     * answers. EN 301 040 does not state a rule for matching the two values.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly invokeId: INTEGER;
     /**
      * @summary `result`.
+     * @description
+     *
+     * TRUE when the SwMI accepted the activation. FALSE when it rejected the
+     * activation; in that case `tLIInstanceid` is omitted.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.2.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly result: BOOLEAN;
     /**
      * @summary `tLIInstanceid`.
+     * @description
+     *
+     * Present only when `result` is TRUE. This is the first issuance of the
+     * 16-bit tag defined in clause 6.1. Later modify, status, monitor, and
+     * traffic flows copy it.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.2, clause 6.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

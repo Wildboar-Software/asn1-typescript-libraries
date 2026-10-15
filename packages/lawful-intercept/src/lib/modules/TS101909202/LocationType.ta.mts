@@ -13,7 +13,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary LocationType
  * @description
- * 
+ *
+ * Where the target is. Carried in the header of every
+ * `TARGETACTIVITYMONITOR`. Delivered with registration, with the result of
+ * interception, or both. The operator supplies what the warrant asks for,
+ * within the normal operating parameters of the network.
+ *
+ * `nameAddress` is a static location the service provider already knows, as a
+ * name and address of the kind used when addressing the customer bill.
+ * `PrintableString` of 1 to 100 characters.
+ *
+ * `geodeticData` gives the spatial coordinates of the target. GPS coordinates
+ * are the example in clause 6.4.2.1.4. This document does not define the bit
+ * layout.
+ *
+ * ETSI TS 101 909-20-2 V1.1.2 (2005-10), clause 6.4.2.1.4.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092002/01.01.02_60/ts_1019092002v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

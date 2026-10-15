@@ -23,7 +23,49 @@ import { UserSignalType, _decode_UserSignalType, _encode_UserSignalType } from "
 /**
  * @summary TARGETACTIVITYMONITOR_1
  * @description
- * 
+ *
+ * `TARGET_ACTIVITY_MONITOR` reports target activity on the IPCablecom
+ * network to the LIMF across INI2. The header is who (`lIInstanceid`),
+ * when (`timestamp`), and where (`targetLocation`). The body is the
+ * signal, its direction, and the IRI transaction it belongs to. No
+ * response is expected.
+ *
+ * By default the IRI record is `iRIreport` and `userSignal` is a
+ * bit-exact copy of the signal, with no interpretation (clause 8.4.2).
+ * Clause 8.1.1 requires identities that attempted communication with the
+ * target and that the target attempted communication with, identities
+ * used by or associated with the target, services and their parameters,
+ * signals that invoke or modify services, time-stamps, and any diverted
+ * directory numbers. Location should also be present. The result applies
+ * to every call type for as long as the operator believes the target is
+ * a participant.
+ *
+ * The target service is voice telephony identified by a unique address,
+ * for example an E.164 number, inside one IPCablecom domain (clause 1,
+ * clause 4.2.2.4). The IRIIF may sit in the CMS, MGC, MG, or CMTS
+ * (clause 8.3). Transfer across the IRI service access point should
+ * protect integrity and confidentiality and places no retransmission
+ * constraint on this record. The security mechanism is pkt-s21 and/or
+ * pkt-s23, as modified by clause 8 of TS 101 909-20-2 (clause 8.4.1).
+ *
+ * Clause 8.4.2 prints a SEQUENCE named `TARGETACTIVITYMONITOR` with
+ * `version` default 2 and optional `iRIMessageBER` and `iRIMessageDER`.
+ * Annex A, which this type follows, names the type
+ * `TARGETACTIVITYMONITOR-1`, defaults `version` to 1, and omits those
+ * components.
+ *
+ * Annex A requires ITU-T Recommendation X.680 and the Basic Encoding
+ * Rules (ITU-T Recommendation X.690), plus the data-definition rules in
+ * annex D of TS 101 671. The module has no extension markers;
+ * interceptVersion in the module object identifier is incremented when
+ * the published module changes. The module sits in the ETSI document
+ * tree and is not a leaf of the ETSI LI tree in TS 101 671. If INI2
+ * arrives at the LIMF in DER, the LIMF decodes it and re-encodes BER
+ * for HI2 (clause 5.1). This document does not define HI2.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2, annex A.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,54 +88,146 @@ export
 class TARGETACTIVITYMONITOR_1 {
     /**
      * @summary `version`.
+     * @description
+     *
+     * Version of the present document that defines this structure. For
+     * the first version the value is 1, which is the annex A default.
+     * Clause 8.4.2's prose SEQUENCE defaults the field to 2 because it
+     * adds `iRIMessage`; that SEQUENCE is not this type.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: OPTIONAL<INTEGER>;
     /**
      * @summary `lIInstanceid`.
+     * @description
+     *
+     * Header: who. Identifies the LEA, the target, the network operator
+     * or service provider, and the warrant reference. Clause 8.4.2.1.2
+     * says the management activation flow first returns this tag and
+     * cites annex B. Annex B describes CMS-to-LIMF call flows and does
+     * not define that activation encoding. The same tag heads
+     * `TTRAFFIC` and `CTTRAFFIC`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.2.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lIInstanceid: LIIDType;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Header: when the interception was made. Mandatory on every IRI
+     * record. The note in clause 8.4.2.1.3 says `UTCTime` is derived
+     * from Coordinated Universal Time and points at clause 3.1.
+     * Clause 3.1 does not define that time base further.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.3.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timestamp: UTCTime;
     /**
      * @summary `targetLocation`.
+     * @description
+     *
+     * Header: where. Present on every activity indication. The operator
+     * provides, to the best of its knowledge, the location the warrant
+     * asked for, within the normal operating parameters of the network.
+     * Delivered with registration and with the result of interception.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.4.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetLocation: LocationType;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Whether the signal is to the target, from the target, or unknown,
+     * to the best of the operator's knowledge.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly direction: DirectionType;
     /**
      * @summary `iRITransaction`.
+     * @description
+     *
+     * Which IRI record this is. Default `iRIreport`. Begin, continue,
+     * and end form one IRI transaction. Report is for an event that is
+     * not part of a communication (clause 8.1, table 1). Clause 8.2
+     * places a signal in begin, end, or continue when it belongs to the
+     * transaction set, and in report when it does not.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.6.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRITransaction: OPTIONAL<IRITransactionType>;
     /**
      * @summary `iRITransactionNumber`.
+     * @description
+     *
+     * With `lIInstanceid`, identifies one IRI transaction. An
+     * `iRIbegin` increments it, and that value stays constant through
+     * `iRIcontinue` and the closing `iRIend`. When `iRITransaction` is
+     * `iRIreport` this field is 0 and the receiver should ignore it.
+     * `TTRAFFIC` and `CTTRAFFIC` copy it so content correlates with
+     * this transaction (clause 9.1.2.3.4).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.7.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRITransactionNumber: INTEGER;
     /**
      * @summary `userSignal`.
+     * @description
+     *
+     * The user's signalling transaction. Clause 8.4.2 requires a
+     * bit-exact copy and forbids interpretation, which is `copySignal`.
+     * The component comment also allows interpreted signalling.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2, clause 8.4.2.1.8.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly userSignal: UserSignalType;
     /**
      * @summary `cryptoCheckSum`.
+     * @description
+     *
+     * Optional cryptographic checksum over the main content of the
+     * record. The operator may include it. The mechanism follows the
+     * operator's security policy; this document does not name an
+     * algorithm.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.9.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */

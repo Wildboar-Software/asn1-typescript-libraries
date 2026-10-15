@@ -6,7 +6,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary DirectionType
  * @description
- * 
+ *
+ * Direction of a signal relative to the target, to the best of the
+ * operator's knowledge (clause 8.4.2.1.5).
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,15 +27,40 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_DirectionType {
+    /**
+     * The signal is addressed to the target.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     */
     toTarget = 0,
+    /**
+     * The signal is from the target.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     */
     fromTarget = 1,
+    /**
+     * The operator cannot determine whether the signal is to or from
+     * the target.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     */
     unknown = 2,
 }
 
 /**
  * @summary DirectionType
  * @description
- * 
+ *
+ * Direction of a signal relative to the target, to the best of the
+ * operator's knowledge (clause 8.4.2.1.5).
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,7 +79,13 @@ type DirectionType = _enum_for_DirectionType;
 /**
  * @summary DirectionType
  * @description
- * 
+ *
+ * Direction of a signal relative to the target, to the best of the
+ * operator's knowledge (clause 8.4.2.1.5).
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +103,13 @@ const DirectionType = _enum_for_DirectionType;
 
 /**
  * @summary DirectionType_toTarget
+ * @description
+ *
+ * The signal is addressed to the target.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +118,13 @@ const DirectionType_toTarget: DirectionType = DirectionType.toTarget; /* LONG_NA
 
 /**
  * @summary toTarget
+ * @description
+ *
+ * The signal is addressed to the target.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +133,13 @@ const toTarget: DirectionType = DirectionType.toTarget; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary DirectionType_fromTarget
+ * @description
+ *
+ * The signal is from the target.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +148,13 @@ const DirectionType_fromTarget: DirectionType = DirectionType.fromTarget; /* LON
 
 /**
  * @summary fromTarget
+ * @description
+ *
+ * The signal is from the target.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +163,14 @@ const fromTarget: DirectionType = DirectionType.fromTarget; /* SHORT_NAMED_ENUME
 
 /**
  * @summary DirectionType_unknown
+ * @description
+ *
+ * The operator cannot determine whether the signal is to or from
+ * the target.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +179,14 @@ const DirectionType_unknown: DirectionType = DirectionType.unknown; /* LONG_NAME
 
 /**
  * @summary unknown
+ * @description
+ *
+ * The operator cannot determine whether the signal is to or from
+ * the target.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.5.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * @constant
  * @type {number}
  */

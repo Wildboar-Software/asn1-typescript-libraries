@@ -14,6 +14,26 @@ import { TETRAAddressType, _decode_TETRAAddressType, _encode_TETRAAddressType } 
  * @summary LocationType
  * @description
  * 
+ * Where a party is. `mSLoc` is a mobile station, as a TETRA cell global
+ * identity. `lSLoc` is a fixed line station. Clause 6.8 writes the alternatives
+ * as `MS_Loc` and `LS_Loc` and types the line-station alternative as
+ * `TETRA_LS_AddressType`. Annex E, which this type follows, uses `mSLoc`,
+ * `lSLoc`, and `TETRAAddressType`.
+ *
+ * A line station is identified by the PISN number of its access port to the
+ * SwMI. In normal operation an LS is addressed by its TSI, normally an ITSI.
+ * Where that TSI is mapped to an ISDN or PSTN line, clause 6.8.2 places the
+ * line address in the target-address element of `TARGETACTIVITYMONITORind`.
+ *
+ * Clause 4.4 asks for the registered location area or, when known, the base
+ * station; the line identity associated with a registered target; or the line
+ * or service identity to which the target is registered and to which calls are
+ * redirected. Location is delivered with registration and with the result of
+ * interception.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.8, clause 4.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

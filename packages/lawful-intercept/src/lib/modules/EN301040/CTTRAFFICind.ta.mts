@@ -14,6 +14,23 @@ import { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLI
  * @summary CTTRAFFICind
  * @description
  * 
+ * `CT_TRAFFIC_ind` carries one TETRA air-interface traffic packet of a
+ * co-target to the mediation function. Circuit mode only. No response is
+ * expected. The flow is carried in the body of a CC-Record across HI3. Packets
+ * are discrete and may be TETRA-encoded speech. Clause 6.7 places co-target
+ * content on a different link from the target's `TTRAFFICind` content. The same
+ * verbatim-content rules as for the target apply (clause 4.3.3).
+ *
+ * Annex E requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; interceptVersion in the
+ * module object identifier is incremented when the published module changes.
+ * Clause 1 leaves encoding towards the LEMF to the handover interface that is
+ * adopted.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.4, clause 6.7.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +46,32 @@ export
 class CTTRAFFICind {
     /**
      * @summary `tLIInstanceid`.
+     * @description
+     *
+     * 16-bit interception tag. It identifies the LEA, the target, the network
+     * operator or service provider, and the warrant reference. It is allocated
+     * in `LIACTIVATEconf` when activation succeeds and then copied onto later
+     * flows so those flows correlate with that provision (clause 4.3.2,
+     * clause 6.1). One LI interface instance serves one target (clause 4.7).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tLIInstanceid: TLIIdType;
     /**
      * @summary `trafficPacket`.
+     * @description
+     *
+     * One circuit-mode air-interface traffic packet from a co-target, in native
+     * TETRA form. `TARGETCOMMSMONITORind.cotargetcommsid` identifies the
+     * logical circuit.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.2.4, clause 4.3.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */

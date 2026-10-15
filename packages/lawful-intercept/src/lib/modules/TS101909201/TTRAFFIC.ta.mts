@@ -14,7 +14,38 @@ import { LIIDType, _decode_LIIDType, _encode_LIIDType } from "../TS101909201/LII
 /**
  * @summary TTRAFFIC
  * @description
- * 
+ *
+ * `T_TRAFFIC` carries one intercepted IP packet of the target to the
+ * Delivery Function across INI3. No response is expected. Used only when
+ * IP streams the media (clause 9.1). The packet is a bit-exact copy of
+ * the IP packet the operator received. The operator does not interpret
+ * it and does not remove user-level compression or encryption
+ * (clause 4.4, clause 9.1.2.3.5). If INI3 arrives with network
+ * encryption, the LIMF removes that encryption (clause 5.1).
+ *
+ * The result covers calls the target originates, calls to the target,
+ * multi-party calls in which the operator believes the target is taking
+ * part, and broadcast calls to a population of which the operator
+ * believes the target is a member (clause 9.1.1). The CCIF is in the
+ * CMTS and the MG (clause 8.3).
+ *
+ * `iRITransactionNumber` with `lIInstanceid` correlates this content
+ * with the IRI transaction. When both IRI and content are invoked, that
+ * correlation is mandatory and delivery is as near real time as possible
+ * (clause 4.2.2.3). Transfer across the content service access point
+ * should protect integrity and confidentiality and places no
+ * retransmission constraint on this record. The security mechanism is
+ * pkt-s22, or as modified by clause 8 of TS 101 909-20-2 (clause 9.1.2).
+ *
+ * Annex A requires ITU-T Recommendation X.680 and the Basic Encoding
+ * Rules (ITU-T Recommendation X.690), plus the data-definition rules in
+ * annex D of TS 101 671. The module has no extension markers;
+ * interceptVersion in the module object identifier is incremented when
+ * the published module changes. This document does not define HI3.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 9.1.2.1, annex A.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,30 +64,77 @@ export
 class TTRAFFIC {
     /**
      * @summary `version`.
+     * @description
+     *
+     * Version of the present document that defines this structure. For
+     * the first version the value is 1, which is the default.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 9.1.2.3.1.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly version: OPTIONAL<INTEGER>;
     /**
      * @summary `lIInstanceid`.
+     * @description
+     *
+     * Identifies the LEA, the target, the network operator or service
+     * provider, and the warrant reference. The same tag heads
+     * `TARGETACTIVITYMONITOR-1`. With `iRITransactionNumber` it
+     * correlates this packet with that IRI transaction.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 9.1.2.3.2.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lIInstanceid: LIIDType;
     /**
      * @summary `iRITransactionNumber`.
+     * @description
+     *
+     * With `lIInstanceid`, correlates this packet with a known IRI
+     * transaction. If the correlation cannot be determined the value is
+     * 0 and the receiver should ignore it. The pair plays the role
+     * TS 101 671 clause 6.2 gives to the Communication Identifier.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 9.1.2.3.4.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRITransactionNumber: INTEGER;
     /**
      * @summary `trafficPacket`.
+     * @description
+     *
+     * Bit-exact copy of the intercepted IP packet. Clause 9.1.1 says
+     * the intercepted packet is embedded in this element; the only
+     * embedding rule given is that copy (clause 9.1.2.3.5).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 9.1.2.3.5.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */
     readonly trafficPacket: BIT_STRING;
     /**
      * @summary `cryptoChecksum`.
+     * @description
+     *
+     * Optional cryptographic checksum over the main content of the
+     * record. The operator may include it. The mechanism follows the
+     * operator's security policy; this document does not name an
+     * algorithm.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 9.1.2.3.6.
+     * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+     *
      * @public
      * @readonly
      */

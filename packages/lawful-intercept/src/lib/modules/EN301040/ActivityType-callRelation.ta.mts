@@ -7,6 +7,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ActivityType_callRelation
  * @description
  * 
+ * How this activity sits relative to the call: `begin`, `end`, `continue`, or
+ * `report`. The component is mandatory on `ActivityType`. Clause 6.3 lists the
+ * names and gives no further definition. The beginning, end, and duration of a
+ * connection are carried by the activity-monitor timestamp (clause 6.5).
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,9 +30,39 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_ActivityType_callRelation {
+    /**
+     * Named call relation on `ActivityType`. Clause 6.3 lists `begin` with
+     * `end`, `continue`, and `report`, and gives no further definition.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     */
     begin = 0,
+    /**
+     * Named call relation on `ActivityType`. Clause 6.3 lists `end` with
+     * `begin`, `continue`, and `report`, and gives no further definition.
+     * Connection end time is the activity-monitor timestamp (clause 6.5).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     */
     end = 1,
+    /**
+     * Named call relation on `ActivityType`. The ASN.1 identifier is
+     * `continue`. Clause 6.3 lists it with `begin`, `end`, and `report`, and
+     * gives no further definition.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     */
     continue_ = 2,
+    /**
+     * Named call relation on `ActivityType`. Clause 6.3 lists `report` with
+     * `begin`, `end`, and `continue`, and gives no further definition.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     */
     report = 3,
 }
 
@@ -32,6 +70,14 @@ enum _enum_for_ActivityType_callRelation {
  * @summary ActivityType_callRelation
  * @description
  * 
+ * How this activity sits relative to the call: `begin`, `end`, `continue`, or
+ * `report`. The component is mandatory on `ActivityType`. Clause 6.3 lists the
+ * names and gives no further definition. The beginning, end, and duration of a
+ * connection are carried by the activity-monitor timestamp (clause 6.5).
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,6 +98,14 @@ type ActivityType_callRelation = _enum_for_ActivityType_callRelation;
  * @summary ActivityType_callRelation
  * @description
  * 
+ * How this activity sits relative to the call: `begin`, `end`, `continue`, or
+ * `report`. The component is mandatory on `ActivityType`. Clause 6.3 lists the
+ * names and gives no further definition. The beginning, end, and duration of a
+ * connection are carried by the activity-monitor timestamp (clause 6.5).
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -70,6 +124,14 @@ const ActivityType_callRelation = _enum_for_ActivityType_callRelation;
 
 /**
  * @summary ActivityType_callRelation_begin
+ * @description
+ *
+ * Named call relation on `ActivityType`. Clause 6.3 lists `begin` with `end`,
+ * `continue`, and `report`, and gives no further definition.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +140,14 @@ const ActivityType_callRelation_begin: ActivityType_callRelation = ActivityType_
 
 /**
  * @summary begin
+ * @description
+ *
+ * Named call relation on `ActivityType`. Clause 6.3 lists `begin` with `end`,
+ * `continue`, and `report`, and gives no further definition.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +156,15 @@ const begin: ActivityType_callRelation = ActivityType_callRelation.begin; /* SHO
 
 /**
  * @summary ActivityType_callRelation_end
+ * @description
+ *
+ * Named call relation on `ActivityType`. Clause 6.3 lists `end` with `begin`,
+ * `continue`, and `report`, and gives no further definition. Connection end
+ * time is the activity-monitor timestamp (clause 6.5).
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -94,6 +173,15 @@ const ActivityType_callRelation_end: ActivityType_callRelation = ActivityType_ca
 
 /**
  * @summary end
+ * @description
+ *
+ * Named call relation on `ActivityType`. Clause 6.3 lists `end` with `begin`,
+ * `continue`, and `report`, and gives no further definition. Connection end
+ * time is the activity-monitor timestamp (clause 6.5).
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +190,15 @@ const end: ActivityType_callRelation = ActivityType_callRelation.end; /* SHORT_N
 
 /**
  * @summary ActivityType_callRelation_continue_
+ * @description
+ *
+ * Named call relation on `ActivityType`. The ASN.1 identifier is `continue`.
+ * Clause 6.3 lists it with `begin`, `end`, and `report`, and gives no further
+ * definition.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +207,15 @@ const ActivityType_callRelation_continue_: ActivityType_callRelation = ActivityT
 
 /**
  * @summary continue_
+ * @description
+ *
+ * Named call relation on `ActivityType`. The ASN.1 identifier is `continue`.
+ * Clause 6.3 lists it with `begin`, `end`, and `report`, and gives no further
+ * definition.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +224,14 @@ const continue_: ActivityType_callRelation = ActivityType_callRelation.continue_
 
 /**
  * @summary ActivityType_callRelation_report
+ * @description
+ *
+ * Named call relation on `ActivityType`. Clause 6.3 lists `report` with
+ * `begin`, `end`, and `continue`, and gives no further definition.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +240,14 @@ const ActivityType_callRelation_report: ActivityType_callRelation = ActivityType
 
 /**
  * @summary report
+ * @description
+ *
+ * Named call relation on `ActivityType`. Clause 6.3 lists `report` with
+ * `begin`, `end`, and `continue`, and gives no further definition.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */

@@ -7,6 +7,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ActivityType_scope
  * @description
  * 
+ * Point-to-point, point-to-multipoint, or broadcast. Circuit-mode services
+ * state whether the call was initiated as point-to-point or point-to-multipoint
+ * (clause 6.3.1). Data services set scope to match the service (clause 6.3.2).
+ * Supplementary services omit scope (clause 6.4.7). Clause 4.3.4 requires
+ * content of broadcast calls to a user population of which the operator
+ * believes the target is a member.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1, clause 4.3.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,8 +31,33 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_ActivityType_scope {
+    /**
+     * Point-to-point. Clause 6.3.1 requires a circuit-mode call to record this
+     * or point-to-multipoint. Annex C.1 uses it for an individual duplex speech
+     * call.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     */
     point2Point = 0,
+    /**
+     * Point-to-multipoint. Clause 6.3.1 requires a circuit-mode call to record
+     * this or point-to-point.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     */
     point2MultiPoint = 1,
+    /**
+     * Broadcast. Listed with `point2Point` and `point2MultiPoint`. Clause 4.3.4
+     * requires the content of broadcast calls to a population of which the
+     * operator believes the target is a member. Clause 6.3.1 requires
+     * circuit-mode scope to distinguish point-to-point from
+     * point-to-multipoint.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1, clause 4.3.4.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     */
     broadcast = 2,
 }
 
@@ -30,6 +65,16 @@ enum _enum_for_ActivityType_scope {
  * @summary ActivityType_scope
  * @description
  * 
+ * Point-to-point, point-to-multipoint, or broadcast. Circuit-mode services
+ * state whether the call was initiated as point-to-point or point-to-multipoint
+ * (clause 6.3.1). Data services set scope to match the service (clause 6.3.2).
+ * Supplementary services omit scope (clause 6.4.7). Clause 4.3.4 requires
+ * content of broadcast calls to a user population of which the operator
+ * believes the target is a member.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1, clause 4.3.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +94,16 @@ type ActivityType_scope = _enum_for_ActivityType_scope;
  * @summary ActivityType_scope
  * @description
  * 
+ * Point-to-point, point-to-multipoint, or broadcast. Circuit-mode services
+ * state whether the call was initiated as point-to-point or point-to-multipoint
+ * (clause 6.3.1). Data services set scope to match the service (clause 6.3.2).
+ * Supplementary services omit scope (clause 6.4.7). Clause 4.3.4 requires
+ * content of broadcast calls to a user population of which the operator
+ * believes the target is a member.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1, clause 4.3.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +121,14 @@ const ActivityType_scope = _enum_for_ActivityType_scope;
 
 /**
  * @summary ActivityType_scope_point2Point
+ * @description
+ *
+ * Point-to-point. Clause 6.3.1 requires a circuit-mode call to record this or
+ * point-to-multipoint. Annex C.1 uses it for an individual duplex speech call.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -74,6 +137,14 @@ const ActivityType_scope_point2Point: ActivityType_scope = ActivityType_scope.po
 
 /**
  * @summary point2Point
+ * @description
+ *
+ * Point-to-point. Clause 6.3.1 requires a circuit-mode call to record this or
+ * point-to-multipoint. Annex C.1 uses it for an individual duplex speech call.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -82,6 +153,14 @@ const point2Point: ActivityType_scope = ActivityType_scope.point2Point; /* SHORT
 
 /**
  * @summary ActivityType_scope_point2MultiPoint
+ * @description
+ *
+ * Point-to-multipoint. Clause 6.3.1 requires a circuit-mode call to record this
+ * or point-to-point.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -90,6 +169,14 @@ const ActivityType_scope_point2MultiPoint: ActivityType_scope = ActivityType_sco
 
 /**
  * @summary point2MultiPoint
+ * @description
+ *
+ * Point-to-multipoint. Clause 6.3.1 requires a circuit-mode call to record this
+ * or point-to-point.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -98,6 +185,16 @@ const point2MultiPoint: ActivityType_scope = ActivityType_scope.point2MultiPoint
 
 /**
  * @summary ActivityType_scope_broadcast
+ * @description
+ *
+ * Broadcast. Listed with `point2Point` and `point2MultiPoint`. Clause 4.3.4
+ * requires the content of broadcast calls to a population of which the operator
+ * believes the target is a member. Clause 6.3.1 requires circuit-mode scope to
+ * distinguish point-to-point from point-to-multipoint.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1, clause 4.3.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -106,6 +203,16 @@ const ActivityType_scope_broadcast: ActivityType_scope = ActivityType_scope.broa
 
 /**
  * @summary broadcast
+ * @description
+ *
+ * Broadcast. Listed with `point2Point` and `point2MultiPoint`. Clause 4.3.4
+ * requires the content of broadcast calls to a population of which the operator
+ * believes the target is a member. Clause 6.3.1 requires circuit-mode scope to
+ * distinguish point-to-point from point-to-multipoint.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 6.3.1, clause 4.3.4.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * @constant
  * @type {number}
  */

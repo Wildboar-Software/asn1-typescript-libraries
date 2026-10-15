@@ -13,7 +13,22 @@ import { CdcPdu, _decode_CdcPdu, _encode_CdcPdu } from "../PCESP/CdcPdu.ta.mjs";
 /**
  * @summary UserSignalType
  * @description
- * 
+ *
+ * The signalling transaction of the target (clause 8.4.2.1.8).
+ * Clause 8.4.2 requires a bit-exact copy and forbids interpretation,
+ * which is `copySignal`. `interpretedSignal` is an integer; this
+ * document does not assign meanings to those integers.
+ *
+ * `cdcPdu` is a PacketCable CDC PDU imported from PCESP version 4.
+ * Clause 8.4.2.1.8's CHOICE does not list `cdcPdu`; annex A does.
+ * Annex A note 2 says the LIMF receives that PCESP module in BER and
+ * places it in this choice before delivery to the LEMF. Clause 5.1
+ * says that if INI2 arrives in DER the LIMF re-encodes BER for HI2.
+ * PCESP field definitions are in PacketCable PKT-SP-ESP-I04-040723.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.8, annex A.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

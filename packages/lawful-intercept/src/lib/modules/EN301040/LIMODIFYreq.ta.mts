@@ -17,6 +17,23 @@ import { LIMODIFYreq_modificationType, _decode_LIMODIFYreq_modificationType, _en
  * @summary LIMODIFYreq
  * @description
  * 
+ * `LI_MODIFY_req` is sent from the mediation function to the SwMI. An
+ * interception may be modified many times. Each modification names the
+ * interception (`tLIInstanceid`) and a sequential `modificationNumber`, and
+ * applies exactly one alternative of `modificationType`. Figure 2b shows
+ * closure (cleardown) as `LI_MODIFY_req` (stop). Nothing precedes this flow.
+ * `LIMODIFYconf` is the expected response.
+ *
+ * Annex E requires ITU-T Recommendation X.680 and the Basic Encoding Rules
+ * (ITU-T Recommendation X.690), plus the data-definition rules in annex D of
+ * TS 101 671. The module has no extension markers; interceptVersion in the
+ * module object identifier is incremented when the published module changes.
+ * Clause 1 leaves encoding towards the LEMF to the handover interface that is
+ * adopted.
+ *
+ * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.3.
+ * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +59,61 @@ export
 class LIMODIFYreq {
     /**
      * @summary `tLIInstanceid`.
+     * @description
+     *
+     * 16-bit interception tag. It identifies the LEA, the target, the network
+     * operator or service provider, and the warrant reference. It is allocated
+     * in `LIACTIVATEconf` when activation succeeds and then copied onto later
+     * flows so those flows correlate with that provision (clause 4.3.2,
+     * clause 6.1). One LI interface instance serves one target (clause 4.7).
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.3, clause 6.1.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly tLIInstanceid: TLIIdType;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * UTC time on this information flow. Coordinated Universal Time is defined
+     * in clause 3.1. EN 301 040 does not name the event this component
+     * timestamps.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timestamp: UTCTime;
     /**
      * @summary `modificationNumber`.
+     * @description
+     *
+     * Sequential number of this modification of the interception.
+     * `LIMODIFYconf` echoes it. EN 301 040 does not define the starting value
+     * or the step.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly modificationNumber: INTEGER;
     /**
      * @summary `modificationType`.
+     * @description
+     *
+     * The single provision changed by this request. See
+     * `LIMODIFYreq_modificationType`.
+     *
+     * ETSI EN 301 040 V2.1.1 (2006-03), clause 5.2.2.1.3.
+     * https://www.etsi.org/deliver/etsi_en/301000_301099/301040/02.01.01_60/en_301040v020101p.pdf
+     *
      * @public
      * @readonly
      */
