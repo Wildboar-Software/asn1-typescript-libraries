@@ -11,7 +11,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IMEISV
  * @description
- * 
+ *
+ * International Mobile station Equipment Identity and Software Version
+ * Number, as defined in 3GPP TS 23.003, clause 6.2.2. Decimal digits,
+ * with a software version number in place of a Luhn check digit.
+ * Length 16. Example: `0099712345678999`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.10, citing 3GPP TS 23.003,
+ * clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

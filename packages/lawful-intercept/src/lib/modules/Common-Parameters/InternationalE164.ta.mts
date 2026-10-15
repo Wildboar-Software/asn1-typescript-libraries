@@ -11,7 +11,15 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary InternationalE164
  * @description
- * 
+ *
+ * E.164 number in fully international format, written as decimal
+ * digits. Length 1 to 15. Example: `447700900123`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.6, citing Recommendation
+ * ITU-T E.164, clause 6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

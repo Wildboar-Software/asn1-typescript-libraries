@@ -12,7 +12,14 @@ import { UDPPort, _decode_UDPPort, _encode_UDPPort } from "../Common-Parameters/
 /**
  * @summary UDPPortRange
  * @description
- * 
+ *
+ * Inclusive range of UDP ports, from `start` through `end`.
+ * Example: `2048-4096`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.20.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,28 @@ export
 class UDPPortRange {
     /**
      * @summary `start`.
+     * @description
+     *
+     * Inclusive first UDP port of the range.
+     *
+     * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.20.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+     *
      * @public
      * @readonly
      */
     readonly start: UDPPort;
     /**
      * @summary `end`.
+     * @description
+     *
+     * Inclusive last UDP port of the range.
+     *
+     * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.20.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+     *
      * @public
      * @readonly
      */

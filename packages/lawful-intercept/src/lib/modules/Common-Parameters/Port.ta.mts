@@ -13,7 +13,13 @@ import { UDPPort, _decode_UDPPort, _encode_UDPPort } from "../Common-Parameters/
 /**
  * @summary Port
  * @description
- * 
+ *
+ * Either a TCP port or a UDP port.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.21.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

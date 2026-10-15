@@ -14,7 +14,17 @@ import { WGS84LongitudeDecimal, _decode_WGS84LongitudeDecimal, _encode_WGS84Long
 /**
  * @summary WGS84CoordinateDecimal
  * @description
- * 
+ *
+ * Geographical latitude and longitude on the WGS84 reference
+ * ellipsoid, in decimal notation. Example: latitude `N43.616000`,
+ * longitude `E007.053000`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.33. NIMA Technical
+ * Report 8350.2 is cited for the WGS84 definition, not for this
+ * syntax.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +41,32 @@ export
 class WGS84CoordinateDecimal {
     /**
      * @summary `latitude`.
+     * @description
+     *
+     * Decimal latitude. Two digits before the decimal point, left-padded
+     * with zero, and six digits after, right-padded with zero.
+     * Hemisphere `N` or `S`. Example: `N43.616000`.
+     *
+     * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.34.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+     *
      * @public
      * @readonly
      */
     readonly latitude: WGS84LatitudeDecimal;
     /**
      * @summary `longitude`.
+     * @description
+     *
+     * Decimal longitude. Three digits before the decimal point,
+     * left-padded with zero, and six digits after, right-padded with
+     * zero. Hemisphere `E` or `W`. Example: `E007.053000`.
+     *
+     * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.35.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+     *
      * @public
      * @readonly
      */

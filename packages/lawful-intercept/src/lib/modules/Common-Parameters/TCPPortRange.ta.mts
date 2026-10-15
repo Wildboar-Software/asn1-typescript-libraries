@@ -12,7 +12,14 @@ import { TCPPort, _decode_TCPPort, _encode_TCPPort } from "../Common-Parameters/
 /**
  * @summary TCPPortRange
  * @description
- * 
+ *
+ * Inclusive range of TCP ports, from `start` through `end`.
+ * Example: `1024-2048`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.18.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,28 @@ export
 class TCPPortRange {
     /**
      * @summary `start`.
+     * @description
+     *
+     * Inclusive first TCP port of the range.
+     *
+     * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.18.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+     *
      * @public
      * @readonly
      */
     readonly start: TCPPort;
     /**
      * @summary `end`.
+     * @description
+     *
+     * Inclusive last TCP port of the range.
+     *
+     * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.18.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+     *
      * @public
      * @readonly
      */

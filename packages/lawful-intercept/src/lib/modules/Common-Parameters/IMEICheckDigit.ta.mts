@@ -11,7 +11,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IMEICheckDigit
  * @description
- * 
+ *
+ * International Mobile station Equipment Identity, written as decimal
+ * digits, with the Luhn check digit of ISO/IEC 7812-1, annex B.
+ * Length 15. Example: `009971234567892`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.9, citing 3GPP TS 23.003,
+ * clause 6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

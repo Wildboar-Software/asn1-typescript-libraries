@@ -14,7 +14,17 @@ import { WGS84LongitudeAngular, _decode_WGS84LongitudeAngular, _encode_WGS84Long
 /**
  * @summary WGS84CoordinateAngular
  * @description
- * 
+ *
+ * Geographical latitude and longitude on the WGS84 reference
+ * ellipsoid, in angular notation. Example: latitude `N433700.62`,
+ * longitude `E0070310.42`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.36. NIMA Technical
+ * Report 8350.2 is cited for the WGS84 definition, not for this
+ * syntax.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +41,36 @@ export
 class WGS84CoordinateAngular {
     /**
      * @summary `latitude`.
+     * @description
+     *
+     * Angular latitude, form `XDDMMSS.ss`: hemisphere `N` or `S`, two
+     * digits of degrees, two digits of arc-minutes, two digits of whole
+     * arc-seconds, a decimal point, and two digits of fractional
+     * arc-seconds. Each part is padded with zeroes. Example:
+     * `N433700.62`.
+     *
+     * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.37.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+     *
      * @public
      * @readonly
      */
     readonly latitude: WGS84LatitudeAngular;
     /**
      * @summary `longitude`.
+     * @description
+     *
+     * Angular longitude, form `XDDDMMSS.ss`: hemisphere `E` or `W`,
+     * three digits of degrees, two digits of arc-minutes, two digits of
+     * whole arc-seconds, a decimal point, and two digits of fractional
+     * arc-seconds. Each part is padded with zeroes. Example:
+     * `E0070310.42`.
+     *
+     * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.38.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+     *
      * @public
      * @readonly
      */

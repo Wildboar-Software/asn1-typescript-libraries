@@ -11,7 +11,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UDPPort
  * @description
- * 
+ *
+ * UDP port, written in decimal. Range 0 to 65535 inclusive.
+ * Example: `53`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.19, citing IETF RFC 768.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
+ * https://www.rfc-editor.org/rfc/rfc768
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

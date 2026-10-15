@@ -10,7 +10,17 @@ import { IMSI, _decode_IMSI, _encode_IMSI } from "../Common-Parameters/IMSI.ta.m
 /**
  * @summary SUPIIMSI
  * @description
- * 
+ *
+ * Subscription Permanent Identifier, as defined in 3GPP TS 23.501,
+ * clause 5.9.2, in IMSI representation. In 3GPP Release 15 a SUPI is
+ * either an IMSI or an NAI. This form is the IMSI. The value follows
+ * `IMSI`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.39, citing 3GPP TS 23.501
+ * and 3GPP TS 23.003, clause 2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

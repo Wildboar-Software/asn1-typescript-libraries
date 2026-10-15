@@ -1,3 +1,13 @@
+/**
+ * Common LI parameters from ETSI TS 103 280 V2.7.1 (2021-11).
+ *
+ * The module object identifier in this package is `version261`.
+ * Clause 7.2 and annex B of that edition publish `version231`.
+ * `IPProtocol`, `VLANID`, and `ServiceAccessIdentifier` are assigned
+ * in this module and are not defined in V2.7.1 clause 6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ */
 export {
     type GPSIMSISDN,
     _decode_GPSIMSISDN,

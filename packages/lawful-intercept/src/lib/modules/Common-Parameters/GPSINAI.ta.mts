@@ -10,7 +10,20 @@ import { NAI, _decode_NAI, _encode_NAI } from "../Common-Parameters/NAI.ta.mjs";
 /**
  * @summary GPSINAI
  * @description
- * 
+ *
+ * Generic Public Subscription Identifier, as defined in 3GPP
+ * TS 23.501, clause 5.9.8, in NAI representation. In 3GPP Release 15 a
+ * GPSI is either an MSISDN or an External Identifier given as an NAI
+ * under 3GPP TS 23.003, clause 19.7.2. This form is the NAI. The value
+ * follows `NAI`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.46, citing 3GPP TS 23.501
+ * and IETF RFC 7542.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
+ * https://www.rfc-editor.org/rfc/rfc7542
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

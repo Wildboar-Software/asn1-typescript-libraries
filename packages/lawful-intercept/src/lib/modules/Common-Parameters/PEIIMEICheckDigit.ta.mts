@@ -10,7 +10,18 @@ import { IMEICheckDigit, _decode_IMEICheckDigit, _encode_IMEICheckDigit } from "
 /**
  * @summary PEIIMEICheckDigit
  * @description
- * 
+ *
+ * Permanent Equipment Identifier, as defined in 3GPP TS 23.501,
+ * clause 5.9.3, in IMEI representation with the Luhn check digit. In
+ * 3GPP Release 15 a PEI is either an IMEI or an IMEISV. This form is
+ * the IMEI including the Luhn check digit. The value follows
+ * `IMEICheckDigit`.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.43, citing 3GPP TS 23.501,
+ * clause 5.9.3, and 3GPP TS 23.003, clause 6.2.1.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

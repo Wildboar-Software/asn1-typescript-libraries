@@ -13,7 +13,14 @@ import { UDPPortRange, _decode_UDPPortRange, _encode_UDPPortRange } from "../Com
 /**
  * @summary PortRange
  * @description
- * 
+ *
+ * Either a TCP port range or a UDP port range. The start and end of
+ * the chosen range are inclusive.
+ *
+ * ETSI TS 103 280 V2.7.1 (2021-11), clause 6.22.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/103200_103299/103280/02.07.01_60/ts_103280v020701p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
