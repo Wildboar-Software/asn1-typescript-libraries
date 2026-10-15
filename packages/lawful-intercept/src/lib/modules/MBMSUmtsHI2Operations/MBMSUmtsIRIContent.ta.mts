@@ -12,6 +12,16 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary MBMSUmtsIRIContent
  * @description
  * 
+ * One HI2 record for an MBMS event.
+ * 
+ * `iRI_Begin_record` is service joining, or start of intercept while a service
+ * is already active. `iRI_End_record` is service leaving. `iRI_Report_record`
+ * is subscription activation, modification, or termination.
+ * 
+ * Table 9.1 maps each event to Begin, End, or Report.
+ * 
+ * 3GPP TS 33.108, clause 9.5.1 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

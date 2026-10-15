@@ -16,6 +16,13 @@ enum _enum_for_IPADirection {
  * @summary IPADirection
  * @description
  * 
+ * Direction of an Instant Personal Alert: toward the PTC target, or from the
+ * PTC target. Mandatory on the IPA report.
+ * 
+ * 3GPP TS 33.108, table 17.2.8.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +41,11 @@ type IPADirection = _enum_for_IPADirection | ENUMERATED;
 
 /**
  * @summary IPADirection_toTarget
+ * @description
+ * 
+ * The Instant Personal Alert is toward the PTC target.
+ * 
+ * 3GPP TS 33.108, table 17.2.8.
  * @constant
  * @type {number}
  */
@@ -42,6 +54,9 @@ const IPADirection_toTarget: IPADirection = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
+ * @description
+ * 
+ * Instant Personal Alert toward the PTC target (table 17.2.8).
  * @constant
  * @type {number}
  */
@@ -50,6 +65,11 @@ const toTarget: IPADirection = IPADirection_toTarget; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary IPADirection_fromTarget
+ * @description
+ * 
+ * The Instant Personal Alert is from the PTC target.
+ * 
+ * 3GPP TS 33.108, table 17.2.8.
  * @constant
  * @type {number}
  */
@@ -58,6 +78,9 @@ const IPADirection_fromTarget: IPADirection = 1; /* LONG_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary fromTarget
+ * @description
+ * 
+ * Instant Personal Alert from the PTC target (table 17.2.8).
  * @constant
  * @type {number}
  */

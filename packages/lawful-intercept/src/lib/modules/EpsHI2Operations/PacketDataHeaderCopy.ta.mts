@@ -14,6 +14,15 @@ import { _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_directio
  * @summary PacketDataHeaderCopy
  * @description
  * 
+ * Raw packet-header copy used instead of the mapped address, port, protocol,
+ * size, and flow-label fields. Conditional in table 10.5.1.1.15 (and clause
+ * 6.9B when annex B.9 carries a PDP-context report, clause 6.5.1.0). Direction
+ * is still mandatory. The copy includes the IP header and headers above it,
+ * including extension headers, and excludes the payload (module comment and
+ * clause 10.5.2).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +41,31 @@ export
 class PacketDataHeaderCopy {
     /**
      * @summary `direction`.
+     * @description
+     * 
+     * Whether the packet was sent by the target or to the target. Mandatory
+     * (table 10.5.1.1.15 and table 6.9B).
      * @public
      * @readonly
      */
     readonly direction: TPDU_direction;
     /**
      * @summary `headerCopy`.
+     * @description
+     * 
+     * Copy of the packet headers from the IP layer upward, including extension
+     * headers, excluding the payload (module comment and clause 10.5.2).
+     * Conditional: use this instead of the mapped individual fields (table
+     * 10.5.1.1.15).
      * @public
      * @readonly
      */
     readonly headerCopy: OCTET_STRING;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */
@@ -77,6 +99,10 @@ class PacketDataHeaderCopy {
 
         /**
          * @summary The enum used as the type of the component `direction`
+         * @description
+         * 
+         * Whether the packet was sent by the target or to the target (table
+         * 10.5.1.1.15).
          * @public
          * @static
          */

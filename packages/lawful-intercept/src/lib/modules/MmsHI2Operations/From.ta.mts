@@ -11,6 +11,11 @@ import { FromAddresses, _decode_FromAddresses, _encode_FromAddresses } from "../
  * @summary From
  * @description
  * 
+ * One or more From addresses of an MM or a read reply, including a token the
+ * client sent when the Proxy-Relay replaces that token with an address.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

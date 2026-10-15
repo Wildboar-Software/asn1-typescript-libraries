@@ -12,6 +12,19 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary GcseIRIContent
  * @description
  * 
+ * GCSE HI2 record type (table 14.1).
+ *
+ * `iRI-Begin-record`: activation of a group that includes the target, the
+ * target added to an active group, or start of interception while the target
+ * is already a member. `iRI-Continue-record`: user added, user dropped, or
+ * the target's connection to the GCS AS changed. `iRI-End-record`:
+ * deactivation, the target dropped from an active group, or interception
+ * deactivated for a target who is still a member. `iRI-Report-record` is
+ * defined in annex B.14.1; table 14.1 does not map a GCSE event to a report.
+ *
+ * Begin, continue, and report records include at least one parameter that
+ * the module marks optional. 3GPP TS 33.108, clause 14.2.6 and annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

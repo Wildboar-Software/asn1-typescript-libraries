@@ -28,6 +28,18 @@ import { PreviouslySentByDateTime, _decode_PreviouslySentByDateTime, _encode_Pre
  * @summary MMSAttributes
  * @description
  * 
+ * One information element that should appear in the MMBox view of each selected
+ * message (table 15.3.6.1.2).
+ * 
+ * The alternatives are the application id, auxiliary application info, BCC, CC,
+ * content, content type, date, delivery report, delivery time, expiry, From,
+ * message class, message id, message size, priority, read report, To, reply
+ * application id, previously sent by, previously sent by date and time, and
+ * additional headers. Clause 15.3 does not further define
+ * `attributeAdditionalHeaders` or `attributeContent`.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

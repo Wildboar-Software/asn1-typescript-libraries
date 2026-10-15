@@ -20,6 +20,11 @@ enum _enum_for_IRI_Parameters_nature_Of_The_intercepted_call {
  * @summary IRI_Parameters_nature_Of_The_intercepted_call
  * @description
  * 
+ * GSM-era nature of the intercepted communication. Not required for UMTS;
+ * retained for backward compatibility. Each value states which HI2 or HI3
+ * interface carries user data and which carries circuit content. 3GPP TS
+ * 33.108, annex B.3a.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +56,12 @@ type IRI_Parameters_nature_Of_The_intercepted_call = _enum_for_IRI_Parameters_na
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_gSM_ISDN_PSTN_circuit_call
+ * @description
+ * 
+ * GSM/ISDN/PSTN circuit call. Any UUS content is sent on the HI2 or HI3 data
+ * interface. Call content uses the HI3 circuit interface. 3GPP TS 33.108, annex
+ * B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +70,10 @@ const IRI_Parameters_nature_Of_The_intercepted_call_gSM_ISDN_PSTN_circuit_call: 
 
 /**
  * @summary gSM_ISDN_PSTN_circuit_call
+ * @description
+ * 
+ * Circuit call; content on HI3 circuit. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +82,11 @@ const gSM_ISDN_PSTN_circuit_call: IRI_Parameters_nature_Of_The_intercepted_call 
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message
+ * @description
+ * 
+ * GSM SMS. The SMS content is sent on the HI2 or HI3 data interface. 3GPP TS
+ * 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -75,6 +95,10 @@ const IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message: IRI_Paramet
 
 /**
  * @summary gSM_SMS_Message
+ * @description
+ * 
+ * GSM SMS on the data interface. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -83,6 +107,12 @@ const gSM_SMS_Message: IRI_Parameters_nature_Of_The_intercepted_call = IRI_Param
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages
+ * @description
+ * 
+ * UUS4 messages. The user-to-user content is sent on the HI2 or HI3 data
+ * interface. This is not the annex J UUS1 coding, which is a separate HI3
+ * schema. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -91,6 +121,10 @@ const IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages: IRI_Parameter
 
 /**
  * @summary uUS4_Messages
+ * @description
+ * 
+ * UUS4 on the data interface. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -99,6 +133,11 @@ const uUS4_Messages: IRI_Parameters_nature_Of_The_intercepted_call = IRI_Paramet
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call
+ * @description
+ * 
+ * TETRA circuit call. Call content uses the HI3 circuit interface. Any data use
+ * the HI3 data interface. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -107,6 +146,10 @@ const IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call: IRI_Para
 
 /**
  * @summary tETRA_circuit_call
+ * @description
+ * 
+ * TETRA circuit call. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -115,6 +158,11 @@ const tETRA_circuit_call: IRI_Parameters_nature_Of_The_intercepted_call = IRI_Pa
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data
+ * @description
+ * 
+ * TETRA packet data, sent on the HI3 data interface. 3GPP TS 33.108, annex
+ * B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -123,6 +171,10 @@ const IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data: IRI_Param
 
 /**
  * @summary teTRA_Packet_Data
+ * @description
+ * 
+ * TETRA packet data on HI3. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -131,6 +183,10 @@ const teTRA_Packet_Data: IRI_Parameters_nature_Of_The_intercepted_call = IRI_Par
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data
+ * @description
+ * 
+ * GPRS packet data, sent on the HI3 data interface. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -139,6 +195,10 @@ const IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data: IRI_Parame
 
 /**
  * @summary gPRS_Packet_Data
+ * @description
+ * 
+ * GPRS packet data on HI3. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */

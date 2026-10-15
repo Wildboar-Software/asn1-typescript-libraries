@@ -15,28 +15,35 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PartyInformation_partyIdentity
  * @description
  * 
+ * Identities of one party. Event tables say to provide at least one identity
+ * and any others that are available (clause 10.5.1 event tables, clause 6, and
+ * clause 7). Which component is populated depends on the identity the warrant
+ * and the event actually carry.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
  * PartyInformation-partyIdentity ::= SEQUENCE {
  *     imei                    [1] OCTET STRING (SIZE (8)) OPTIONAL,
  *     -- See MAP format [4]
- *
+ * 
  *     imsi                    [3] OCTET STRING (SIZE (3..8)) OPTIONAL,
  *     -- See MAP format [4] International Mobile
  *     -- Station Identity E.212 number beginning with Mobile Country Code
- *
+ * 
  *     msISDN                    [6] OCTET STRING (SIZE (1..9)) OPTIONAL,
  *     -- MSISDN of the target, encoded in the same format as the AddressString
  *     -- parameters defined in MAP format document TS 29.002 [4]
- *
+ * 
  *     e164-Format                [7] OCTET STRING    (SIZE (1 .. 25)) OPTIONAL,
  *     -- E164 address of the node in international format. Coded in the same format as
  *     -- the calling party number  parameter of the ISUP (parameter part:[29])
- *
+ * 
  *     sip-uri                    [8] OCTET STRING     OPTIONAL,
  *     -- See [26]
- *
+ * 
  *     ...,
  *     tel-uri                    [9] OCTET STRING     OPTIONAL,
  *     -- See [67]
@@ -53,7 +60,7 @@ import * as $ from "@wildboar/asn1/functional";
  *     -- Private User Identity as defined in 3GPP TS 23.003 [25]
  *     extID                   [14] UTF8String OPTIONAL
  *     -- RFC 4282 [102] compliant string as per TS 23.003 [25], clause 19.7.2
- *
+ * 
  * }
  * ```
  * 
@@ -63,72 +70,131 @@ export
 class PartyInformation_partyIdentity {
     /**
      * @summary `imei`.
+     * @description
+     * 
+     * IMEI or ME identity, in the MAP format of 3GPP TS 29.002 (module
+     * comment). Eight octets. Provide it when available: clause 10.5.2 observed
+     * IMEI and observed ME identity, clause 6 table 6.2, and clause 7 table
+     * 7.2.
      * @public
      * @readonly
      */
     readonly imei: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `imsi`.
+     * @description
+     * 
+     * IMSI, an E.212 number beginning with the mobile country code, in the MAP
+     * format of 3GPP TS 29.002 (module comment). Provide it when available
+     * (clause 10.5.2, clause 6 table 6.2, and clause 7 table 7.2). Clause 7
+     * note 12 limits the IMS row to the HSS.
      * @public
      * @readonly
      */
     readonly imsi: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `msISDN`.
+     * @description
+     * 
+     * MSISDN of the target, in the AddressString format of 3GPP TS 29.002
+     * (module comment). Clause 10.5.2 also maps the A-MSISDN to this same
+     * component. Provide it when available.
      * @public
      * @readonly
      */
     readonly msISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `e164_Format`.
+     * @description
+     * 
+     * E.164 address in international form, coded as the parameter part of the
+     * ISUP calling-party number (ITU-T Q.763, module comment). Clause 6 table
+     * 6.2 maps the observed non-local identity here. Clause 10.5.2 does not
+     * list this component.
      * @public
      * @readonly
      */
     readonly e164_Format: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sip_uri`.
+     * @description
+     * 
+     * SIP URI of the party (RFC 3261, the reference the module cites). Clause 7
+     * table 7.2 observed SIP URI, when available.
      * @public
      * @readonly
      */
     readonly sip_uri: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tel_uri`.
+     * @description
+     * 
+     * tel URI of the party (RFC 3966, the reference the module cites). Clause 7
+     * table 7.2 observed TEL URI, when available.
      * @public
      * @readonly
      */
     readonly tel_uri: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nai`.
+     * @description
+     * 
+     * Network access identifier of the target, in the form defined by the EPS
+     * stage 3 specifications (module comment). Clause 10.5.2 observed MN NAI.
      * @public
      * @readonly
      */
     readonly nai: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `x_3GPP_Asserted_Identity`.
+     * @description
+     * 
+     * X-3GPP-Asserted-Identity header (3GPP TS 24.109) of the target. The
+     * module comment says it complements the SIP URI or tel URI in some XCAP
+     * transactions. Clause 7 describes XCAP reporting and does not name this
+     * header in table 7.2.
      * @public
      * @readonly
      */
     readonly x_3GPP_Asserted_Identity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `xUI`.
+     * @description
+     * 
+     * XCAP user identifier (RFC 4825): a string that is valid as a path element
+     * in an XCAP URI, associated with a user of an XCAP server. The module
+     * comment says it complements the SIP URI or tel URI. Table 7.2 does not
+     * name it.
      * @public
      * @readonly
      */
     readonly xUI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iMPI`.
+     * @description
+     * 
+     * IMS private user identity as defined in 3GPP TS 23.003 (module comment).
+     * Clause 7 table 7.2 observed IMPI. Note 12 limits that row to the HSS.
      * @public
      * @readonly
      */
     readonly iMPI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `extID`.
+     * @description
+     * 
+     * External identifier: an RFC 4282 network access identifier as specified
+     * in 3GPP TS 23.003 clause 19.7.2 (module comment). Clause 10.5.2 observed
+     * external identifier, used for an IoT UE.
      * @public
      * @readonly
      */
     readonly extID: OPTIONAL<UTF8String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

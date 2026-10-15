@@ -12,6 +12,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GlobalCellID
  * @description
  * 
+ * Cell Global Identification of the target, or of the cell in a cell-site
+ * report, in the MAP format cited by annex B.3 (3GPP TS 29.002).
+ * 
+ * Clause 16.4 requires the reported location to include the cell identity, for
+ * example this value. Annex B.3 limits it to 5..7 octets and does not restate
+ * the MAP layout.
+ * 
+ * 3GPP TS 33.108, annex B.3 and clause 16.4.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

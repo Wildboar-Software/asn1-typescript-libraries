@@ -63,6 +63,15 @@ import { TalkburstControlSetting, _decode_TalkburstControlSetting, _encode_Talkb
  * @summary PTC
  * @description
  * 
+ * Push-to-talk over cellular event, either PoC or MCPTT, in the IRI parameter
+ * ptc (module comment). Clause 17. PTC events are delivered separately from
+ * other services. Clause 17.2.0 applies the records to both PoC and MCPTT. Each
+ * record's event type and timestamp are mandatory in the clause 17 tables;
+ * stage 2 inclusion takes precedence over an OPTIONAL mark in the module. Annex
+ * B.9.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -151,372 +160,683 @@ export
 class PTC {
     /**
      * @summary `abandonCause`.
+     * @description
+     * 
+     * Reason a PTC session was abandoned before end-to-end connectivity.
+     * Mandatory on the session abandon END record (table 17.2.5) and on the
+     * session end record (clause 17.2.7).
      * @public
      * @readonly
      */
     readonly abandonCause: OPTIONAL<UTF8String>;
     /**
      * @summary `accessPolicyFailure`.
+     * @description
+     * 
+     * Error code or reason when an access-policy request fails (clause 17.1.5).
+     * Provide it when the access-policy request is unsuccessful (table
+     * 17.2.18).
      * @public
      * @readonly
      */
     readonly accessPolicyFailure: OPTIONAL<UTF8String>;
     /**
      * @summary `accessPolicyType`.
+     * @description
+     * 
+     * Which access-policy list the target is managing or querying (clause
+     * 17.1.5). Conditional on the access-policy record (table 17.2.18): report
+     * the attempt or query when the target changes or queries the lists, and
+     * report the result when the network answers.
      * @public
      * @readonly
      */
     readonly accessPolicyType: OPTIONAL<AccessPolicyType>;
     /**
      * @summary `alertIndicator`.
+     * @description
+     * 
+     * An emergency alert was sent, received, or cancelled (clause 17.1.5).
+     * Conditional on the group-call records when an emergency alert was
+     * indicated (tables 17.3.2, 17.3.3, and 17.3.4).
      * @public
      * @readonly
      */
     readonly alertIndicator: OPTIONAL<AlertIndicator>;
     /**
      * @summary `associatePresenceStatus`.
+     * @description
+     * 
+     * Presence of other PTC clients or of a PTC group: identity, whether that
+     * identity is a client or a group, and whether it is connected.
+     * Conditional. Report it when the PTC server supports presence and acts as
+     * watcher for the target (clause 17.1.5 and the associate-presence record).
      * @public
      * @readonly
      */
     readonly associatePresenceStatus: OPTIONAL<AssociatePresenceStatus>;
     /**
      * @summary `bearer_capability`.
+     * @description
+     * 
+     * Media characteristics of the PTC session, such as SDP, media format, or
+     * vocoder, and the value part of the bearer-capability information (module
+     * comment and clause 17.1.5). Conditional: provide when known.
      * @public
      * @readonly
      */
     readonly bearer_capability: OPTIONAL<UTF8String>;
     /**
      * @summary `broadcastIndicator`.
+     * @description
+     * 
+     * This session is a broadcast to the group. Conditional on the group-call
+     * records (clause 17.3). The module default is false; send true for a group
+     * broadcast.
      * @public
      * @readonly
      */
     readonly broadcastIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `contactID`.
+     * @description
+     * 
+     * One contact in a contact list, group list, or access-control list.
+     * Conditional: report it when known, one contact at a time (tables 17.2.17
+     * and 17.2.18).
      * @public
      * @readonly
      */
     readonly contactID: OPTIONAL<UTF8String>;
     /**
      * @summary `emergency`.
+     * @description
+     * 
+     * MCPTT peril condition (module comment). Conditional on group-call
+     * records: indicate a peril or imminent-peril alert, and on cancel indicate
+     * the alert being cancelled (tables 17.3.2, 17.3.3, and 17.3.4).
      * @public
      * @readonly
      */
     readonly emergency: OPTIONAL<Emergency>;
     /**
      * @summary `emergencyGroupState`.
+     * @description
+     * 
+     * Emergency state of an MCPTT emergency call. Conditional: include it when
+     * an emergency is indicated (tables 17.3.2 and 17.3.4). The module requires
+     * at least one of the client state or the group state.
      * @public
      * @readonly
      */
     readonly emergencyGroupState: OPTIONAL<EmergencyGroupState>;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time the PTC event was generated. Mandatory on every clause 17
+     * record.
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `pTCType`.
+     * @description
+     * 
+     * Which clause 17 PTC record this is. Each record table requires the event
+     * type. Stage 2 inclusion takes precedence over the OPTIONAL mark.
      * @public
      * @readonly
      */
     readonly pTCType: OPTIONAL<PTCType>;
     /**
      * @summary `failureCode`.
+     * @description
+     * 
+     * Reason or code for a failure or for closing the session (clause 17.1.5).
+     * On a pre-established session, provide it when the session cannot be
+     * established or modified (table 17.2.20).
      * @public
      * @readonly
      */
     readonly failureCode: OPTIONAL<UTF8String>;
     /**
      * @summary `floorActivity`.
+     * @description
+     * 
+     * Talk-burst control outcome: request, grant, deny, queue, release, revoke,
+     * taken, or idle. Mandatory on the floor-control CONTINUE record (table
+     * 17.2.14). Clause 17.2.14 lists the TBCP messages.
      * @public
      * @readonly
      */
     readonly floorActivity: OPTIONAL<FloorActivity>;
     /**
      * @summary `floorSpeakerID`.
+     * @description
+     * 
+     * PTC client that holds the talk burst. Conditional on floor control:
+     * include it when known, and omit it when the floor is idle (table
+     * 17.2.14).
      * @public
      * @readonly
      */
     readonly floorSpeakerID: OPTIONAL<PTCAddress>;
     /**
      * @summary `groupAdSender`.
+     * @description
+     * 
+     * Group administrator who originated the group call (module comment and
+     * clause 17.1.5). The group-advertisement record reports advertisement the
+     * target sends (clause 17.2.13).
      * @public
      * @readonly
      */
     readonly groupAdSender: OPTIONAL<UTF8String>;
     /**
      * @summary `groupAuthRule`.
+     * @description
+     * 
+     * Action the target requested on the PTC group authorization rules (clause
+     * 17.1.5). Conditional on the access-policy record: report it when the
+     * target changes or queries those rules (table 17.2.18).
      * @public
      * @readonly
      */
     readonly groupAuthRule: OPTIONAL<GroupAuthRule>;
     /**
      * @summary `groupCharacteristics`.
+     * @description
+     * 
+     * Identifying feature of the PTC group, including an MCPTT-specific
+     * characteristic (clause 17.1.5). Conditional on the group-call records:
+     * provide when known.
      * @public
      * @readonly
      */
     readonly groupCharacteristics: OPTIONAL<UTF8String>;
     /**
      * @summary `holdRetrieveInd`.
+     * @description
+     * 
+     * True when the PTC session is placed on hold (media bursts deactivated,
+     * talking and listening locked). False when it is retrieved from hold.
+     * Mandatory on the hold-retrieve record (table 17.2.11). The module states
+     * the same polarity.
      * @public
      * @readonly
      */
     readonly holdRetrieveInd: OPTIONAL<BOOLEAN>;
     /**
      * @summary `imminentPerilInd`.
+     * @description
+     * 
+     * Imminent-peril group-call request, response, or cancel (module comment).
+     * Mandatory on the MCPTT imminent-peril report (table 17.3.6): the
+     * notification to or from the target.
      * @public
      * @readonly
      */
     readonly imminentPerilInd: OPTIONAL<ImminentPerilInd>;
     /**
      * @summary `implicitFloorReq`.
+     * @description
+     * 
+     * Clause 17.1.5 says this indicates the client who requested the floor. The
+     * module comment says it is a group-call request to join, rejoin, or
+     * release. The record tables do not give a separate inclusion condition.
      * @public
      * @readonly
      */
     readonly implicitFloorReq: OPTIONAL<ImplicitFloorReq>;
     /**
      * @summary `initiationCause`.
+     * @description
+     * 
+     * Who originated PTC session initiation. Mandatory on the
+     * session-initiation BEGIN record (table 17.2.4). If an associate
+     * originated it, include that associate's identity when known. The module
+     * also uses this to identify the originating PTC party.
      * @public
      * @readonly
      */
     readonly initiationCause: OPTIONAL<InitiationCause>;
     /**
      * @summary `invitationCause`.
+     * @description
+     * 
+     * The handover text does not define this component.
      * @public
      * @readonly
      */
     readonly invitationCause: OPTIONAL<UTF8String>;
     /**
      * @summary `iPAPartyID`.
+     * @description
+     * 
+     * PTC associate that received or sent the instant personal alert. Mandatory
+     * on the instant personal alert report (table 17.2.8). Clause 17.1.5.
      * @public
      * @readonly
      */
     readonly iPAPartyID: OPTIONAL<UTF8String>;
     /**
      * @summary `iPADirection`.
+     * @description
+     * 
+     * Whether the instant personal alert is toward the target or from the
+     * target. Mandatory on table 17.2.8.
      * @public
      * @readonly
      */
     readonly iPADirection: OPTIONAL<IPADirection>;
     /**
      * @summary `listManagementAction`.
+     * @description
+     * 
+     * Create, modify, retrieve, delete, or notify on a contact list or group
+     * list. Conditional on the list-management record: report the action when
+     * the target changes a list, and report a notification when the network
+     * tells the target of a change (table 17.2.17).
      * @public
      * @readonly
      */
     readonly listManagementAction: OPTIONAL<ListManagementAction>;
     /**
      * @summary `listManagementFailure`.
+     * @description
+     * 
+     * Error code or reason a list-management request failed. Conditional:
+     * report it when the request is unsuccessful (table 17.2.17).
      * @public
      * @readonly
      */
     readonly listManagementFailure: OPTIONAL<UTF8String>;
     /**
      * @summary `listManagementType`.
+     * @description
+     * 
+     * Contact-list or group-list attempt or result, and whether the request
+     * succeeded (clause 17.1.5). Conditional on table 17.2.17: report the
+     * attempt when the target's client changes a list, and report the result
+     * when the network notifies the target.
      * @public
      * @readonly
      */
     readonly listManagementType: OPTIONAL<ListManagementType>;
     /**
      * @summary `maxTBTime`.
+     * @description
+     * 
+     * Maximum talk-burst duration, in seconds, before permission is revoked
+     * (module comment and table 17.2.14). Conditional on floor control: provide
+     * when known.
      * @public
      * @readonly
      */
     readonly maxTBTime: OPTIONAL<UTF8String>;
     /**
      * @summary `mCPTTGroupID`.
+     * @description
+     * 
+     * Mission Critical Push To Talk group identity. Mandatory on the
+     * imminent-peril report (table 17.3.6). Clause 17.1.5.
      * @public
      * @readonly
      */
     readonly mCPTTGroupID: OPTIONAL<UTF8String>;
     /**
      * @summary `mCPTTID`.
+     * @description
+     * 
+     * MCPTT identity of the target, when available (clause 17.1.5). The
+     * group-call tables list an observed MCPTT identity among the identities of
+     * which at least one is required.
      * @public
      * @readonly
      */
     readonly mCPTTID: OPTIONAL<UTF8String>;
     /**
      * @summary `mCPTTInd`.
+     * @description
+     * 
+     * Direction of an MCPTT emergency or imminent-peril condition: from the
+     * target, or from an MCPTT group toward the target (clause 17.1.5).
+     * Conditional on group-call records; mandatory on the imminent-peril report
+     * (table 17.3.6). The module default is false for from the target, and true
+     * for toward the target.
      * @public
      * @readonly
      */
     readonly mCPTTInd: OPTIONAL<BOOLEAN>;
     /**
      * @summary `location`.
+     * @description
+     * 
+     * Location of the PTC target. Include it when reporting that location is
+     * authorized (clause 17.1.5). On a pre-established session, report it when
+     * the target establishes or terminates the session (table 17.2.20).
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `mCPTTOrganizationName`.
+     * @description
+     * 
+     * Name of the organization the MCPTT device belongs to, when known (clause
+     * 17.1.5). Conditional on the group-call records.
      * @public
      * @readonly
      */
     readonly mCPTTOrganizationName: OPTIONAL<UTF8String>;
     /**
      * @summary `mediaStreamAvail`.
+     * @description
+     * 
+     * Whether the target's PTC client can accept media immediately. True means
+     * media can be accepted; false means it cannot (module comment).
+     * Conditional: provide it when a pre-established session is established
+     * (tables 17.2.2, 17.2.19, and 17.2.20).
      * @public
      * @readonly
      */
     readonly mediaStreamAvail: OPTIONAL<BOOLEAN>;
     /**
      * @summary `priority_Level`.
+     * @description
+     * 
+     * Talk-burst priority of the PTC client when more than one level is
+     * supported (clause 17.1.5, OMA-PoC-AD). Conditional on that support.
      * @public
      * @readonly
      */
     readonly priority_Level: OPTIONAL<Priority_Level>;
     /**
      * @summary `preEstSessionID`.
+     * @description
+     * 
+     * Identity of a pre-established PTC session (session URI, session type, and
+     * nickname in the clause 17.1.5 wording). Mandatory on the pre-established
+     * session record (table 17.2.20). On start of interception, include it for
+     * a pre-established session (table 17.2.2).
      * @public
      * @readonly
      */
     readonly preEstSessionID: OPTIONAL<UTF8String>;
     /**
      * @summary `preEstStatus`.
+     * @description
+     * 
+     * Whether the pre-established session is established, modified, or
+     * released. Mandatory on table 17.2.20. On session end, include it when a
+     * pre-established session was used (clause 17.2.7).
      * @public
      * @readonly
      */
     readonly preEstStatus: OPTIONAL<PreEstStatus>;
     /**
      * @summary `pTCGroupID`.
+     * @description
+     * 
+     * PTC group identity, nickname, and characteristics (clause 17.1.5).
+     * Mandatory on the group-call request, cancel, response, and interrogate
+     * records. Conditional on list management.
      * @public
      * @readonly
      */
     readonly pTCGroupID: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCIDList`.
+     * @description
+     * 
+     * Participants from the target's contact list and from the PTC group list
+     * for a group call (clause 17.1.5). Mandatory on the group-call request
+     * (table 17.3.2). Conditional on other group-call records.
      * @public
      * @readonly
      */
     readonly pTCIDList: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCMediaCapability`.
+     * @description
+     * 
+     * Codecs and media parameters the PTC server selected from the SDP offer of
+     * the target's client (clause 17.1.5). Mandatory on the pre-established
+     * session record (table 17.2.20).
      * @public
      * @readonly
      */
     readonly pTCMediaCapability: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCOriginatingId`.
+     * @description
+     * 
+     * Originating party, when known (clause 17.1.5). Conditional on start of
+     * interception and on session end (tables 17.2.2 and 17.2.7).
      * @public
      * @readonly
      */
     readonly pTCOriginatingId: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCOther`.
+     * @description
+     * 
+     * Clause 17.1.5 defines PTC Other as other information required to decrypt
+     * the data. Clause 18 attaches that role to the encryption parameter of the
+     * same name. The handover text does not say when this component of the PTC
+     * event is used.
      * @public
      * @readonly
      */
     readonly pTCOther: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCParticipants`.
+     * @description
+     * 
+     * Known individual PTC participants (clause 17.1.5). Mandatory on start of
+     * interception, on several group-call records, and on the imminent-peril
+     * report. Conditional on party join, party drop, and session end: include
+     * them when known.
      * @public
      * @readonly
      */
     readonly pTCParticipants: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCParty`.
+     * @description
+     * 
+     * Associate who joined, dropped, was placed on hold, was retrieved, or is
+     * the MCPTT emergency or imminent-peril associate of the target (clause
+     * 17.1.5). Mandatory on hold-retrieve, on group-call cancel, and on the
+     * imminent-peril report. Conditional when an associate requested or
+     * cancelled the group call.
      * @public
      * @readonly
      */
     readonly pTCParty: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCPartyDrop`.
+     * @description
+     * 
+     * Associate that leaves the PTC session (clause 17.1.5). The party-drop
+     * CONTINUE record is sent when an associate leaves a group session the
+     * target is in (clause 17.2.10).
      * @public
      * @readonly
      */
     readonly pTCPartyDrop: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCSessionInfo`.
+     * @description
+     * 
+     * PTC session URI, session type, and nickname (clause 17.1.5). Mandatory on
+     * session abandon, session end, instant personal alert, party join, party
+     * drop, hold, floor control, and media-type notification. On start of
+     * interception, include it when the session is not a pre-established
+     * session (table 17.2.2).
      * @public
      * @readonly
      */
     readonly pTCSessionInfo: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCServerURI`.
+     * @description
+     * 
+     * PTC server that serves the target, or the server of a session the target
+     * is in, when known (clause 17.1.5). Conditional on registration and on
+     * session end. Mandatory on the pre-established session record: the server
+     * associated with the client that originated the request (table 17.2.20).
      * @public
      * @readonly
      */
     readonly pTCServerURI: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCUserAccessPolicy`.
+     * @description
+     * 
+     * Action the target requested on the PTC user access policy (clause
+     * 17.1.5). Conditional on the access-policy record: report it when the
+     * target changes or queries that policy (table 17.2.18).
      * @public
      * @readonly
      */
     readonly pTCUserAccessPolicy: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCAddress`.
+     * @description
+     * 
+     * The handover text does not name this component. The floor speaker is a
+     * separate component. The module comment on the address form (RFC 3261 URI,
+     * privacy alias) is on the address type itself.
      * @public
      * @readonly
      */
     readonly pTCAddress: OPTIONAL<PTCAddress>;
     /**
      * @summary `queuedFloorControl`.
+     * @description
+     * 
+     * Whether queued floor control is in use. Conditional on the floor-control
+     * record: indicate whether the PTC server and the target's client support
+     * queuing (table 17.2.14). The module default is false; send true when
+     * queuing is used.
      * @public
      * @readonly
      */
     readonly queuedFloorControl: OPTIONAL<BOOLEAN>;
     /**
      * @summary `queuedPosition`.
+     * @description
+     * 
+     * Queue position of the speaker who has the right to speak, target or
+     * associate (module comment). Conditional: include it when queued floor
+     * control is supported (table 17.2.14).
      * @public
      * @readonly
      */
     readonly queuedPosition: OPTIONAL<UTF8String>;
     /**
      * @summary `registrationRequest`.
+     * @description
+     * 
+     * Register, re-register, or deregister. Mandatory on the PTC registration
+     * report (table 17.2.1).
      * @public
      * @readonly
      */
     readonly registrationRequest: OPTIONAL<RegistrationRequest>;
     /**
      * @summary `registrationOutcome`.
+     * @description
+     * 
+     * Success or failure of that registration, with the failure reason when it
+     * fails. Mandatory on table 17.2.1.
      * @public
      * @readonly
      */
     readonly registrationOutcome: OPTIONAL<RegistrationOutcome>;
     /**
      * @summary `retrieveID`.
+     * @description
+     * 
+     * PTC subscriber that retrieved an on-going session from hold (clause
+     * 17.1.5). Mandatory on the hold-retrieve record (table 17.2.11).
      * @public
      * @readonly
      */
     readonly retrieveID: OPTIONAL<UTF8String>;
     /**
      * @summary `rTPSetting`.
+     * @description
+     * 
+     * IP address and port of the target at the PTC server for the RTP session.
+     * Mandatory on the pre-established session record (table 17.2.20).
      * @public
      * @readonly
      */
     readonly rTPSetting: OPTIONAL<RTPSetting>;
     /**
      * @summary `talkBurstPriority`.
+     * @description
+     * 
+     * Talk-burst priority of the PTC client when more than one level is
+     * supported (table 17.2.14, OMA-PoC-AD). Conditional on that support.
      * @public
      * @readonly
      */
     readonly talkBurstPriority: OPTIONAL<Priority_Level>;
     /**
      * @summary `talkBurstReason`.
+     * @description
+     * 
+     * Reason code for denial or revoke of a talk burst. Conditional on floor
+     * control: provide it when known (table 17.2.14). The module comment says
+     * the code follows OMA-PoC-AD.
      * @public
      * @readonly
      */
     readonly talkBurstReason: OPTIONAL<Talk_burst_reason_code>;
     /**
      * @summary `talkburstControlSetting`.
+     * @description
+     * 
+     * Talk-burst control protocol, the parameters the PTC server selected from
+     * the SDP offer, and the server's port for that protocol (module comments).
+     * Clause 17.2.14 describes floor control and does not name this parameter.
      * @public
      * @readonly
      */
     readonly talkburstControlSetting: OPTIONAL<TalkburstControlSetting>;
     /**
      * @summary `targetPresenceStatus`.
+     * @description
+     * 
+     * PTC presence of the target, when it has changed (clause 17.1.5). The
+     * target-presence report is sent when the PTC server, acting as presence
+     * source, publishes presence for the target (clause 17.2.15). Table 17.2.18
+     * also requires it on the access-policy record when presence changed.
      * @public
      * @readonly
      */
     readonly targetPresenceStatus: OPTIONAL<UTF8String>;
     /**
      * @summary `port_Number`.
+     * @description
+     * 
+     * The handover text does not name this component. Table 17.2.20 carries the
+     * RTP port in the RTP setting. The module allows a port from 0 to 65535
+     * here.
      * @public
      * @readonly
      */
     readonly port_Number: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */
@@ -668,90 +988,142 @@ class PTC {
 
         /**
          * @summary The enum used as the type of the component `alertIndicator`
+         * @description
+         * 
+         * Emergency alert sent, received, or cancelled (clause 17.1.5).
          * @public
          * @static
          */
 
     public static _enum_for_alertIndicator = _enum_for_AlertIndicator;        /**
          * @summary The enum used as the type of the component `emergency`
+         * @description
+         * 
+         * MCPTT peril or imminent-peril alert on a group call (clause 17.3).
          * @public
          * @static
          */
 
     public static _enum_for_emergency = _enum_for_Emergency;        /**
          * @summary The enum used as the type of the component `pTCType`
+         * @description
+         * 
+         * Which clause 17 PTC record this is. Each record table requires it.
          * @public
          * @static
          */
 
     public static _enum_for_pTCType = _enum_for_PTCType;        /**
          * @summary The enum used as the type of the component `groupAuthRule`
+         * @description
+         * 
+         * Action requested on the PTC group authorization rules (clause
+         * 17.2.18).
          * @public
          * @static
          */
 
     public static _enum_for_groupAuthRule = _enum_for_GroupAuthRule;        /**
          * @summary The enum used as the type of the component `imminentPerilInd`
+         * @description
+         * 
+         * Imminent-peril request, response, or cancel (clause 17.3.6).
          * @public
          * @static
          */
 
     public static _enum_for_imminentPerilInd = _enum_for_ImminentPerilInd;        /**
          * @summary The enum used as the type of the component `implicitFloorReq`
+         * @description
+         * 
+         * Clause 17.1.5: the client who requested the floor. The module comment
+         * says join, rejoin, or release.
          * @public
          * @static
          */
 
     public static _enum_for_implicitFloorReq = _enum_for_ImplicitFloorReq;        /**
          * @summary The enum used as the type of the component `initiationCause`
+         * @description
+         * 
+         * Who originated PTC session initiation (table 17.2.4).
          * @public
          * @static
          */
 
     public static _enum_for_initiationCause = _enum_for_InitiationCause;        /**
          * @summary The enum used as the type of the component `iPADirection`
+         * @description
+         * 
+         * Instant personal alert toward the target or from the target (table
+         * 17.2.8).
          * @public
          * @static
          */
 
     public static _enum_for_iPADirection = _enum_for_IPADirection;        /**
          * @summary The enum used as the type of the component `listManagementAction`
+         * @description
+         * 
+         * Create, modify, retrieve, delete, or notify on a PTC list (table
+         * 17.2.17).
          * @public
          * @static
          */
 
     public static _enum_for_listManagementAction = _enum_for_ListManagementAction;        /**
          * @summary The enum used as the type of the component `listManagementType`
+         * @description
+         * 
+         * Contact-list or group-list attempt or result (table 17.2.17).
          * @public
          * @static
          */
 
     public static _enum_for_listManagementType = _enum_for_ListManagementType;        /**
          * @summary The enum used as the type of the component `priority_Level`
+         * @description
+         * 
+         * Talk-burst priority when more than one level is supported (clause
+         * 17.1.5).
          * @public
          * @static
          */
 
     public static _enum_for_priority_Level = _enum_for_Priority_Level;        /**
          * @summary The enum used as the type of the component `preEstStatus`
+         * @description
+         * 
+         * Pre-established session established, modified, or released (table
+         * 17.2.20).
          * @public
          * @static
          */
 
     public static _enum_for_preEstStatus = _enum_for_PreEstStatus;        /**
          * @summary The enum used as the type of the component `registrationRequest`
+         * @description
+         * 
+         * PTC register, re-register, or deregister (table 17.2.1).
          * @public
          * @static
          */
 
     public static _enum_for_registrationRequest = _enum_for_RegistrationRequest;        /**
          * @summary The enum used as the type of the component `registrationOutcome`
+         * @description
+         * 
+         * Success or failure of PTC registration (table 17.2.1).
          * @public
          * @static
          */
 
     public static _enum_for_registrationOutcome = _enum_for_RegistrationOutcome;        /**
          * @summary The enum used as the type of the component `talkBurstPriority`
+         * @description
+         * 
+         * Talk-burst priority when more than one level is supported (table
+         * 17.2.14).
          * @public
          * @static
          */

@@ -14,6 +14,13 @@ import { ProSeIRISequence, _decode_ProSeIRISequence, _encode_ProSeIRISequence } 
  * @summary ProSeIRIsContent
  * @description
  * 
+ * One ProSe IRI record, or a sequence of them for the same LEA destination.
+ *
+ * Aggregation is optional and only when several records are already available.
+ * Records are sent immediately and are not held back in order to aggregate.
+ * Direct discovery events are report records. 3GPP TS 33.108, clause 13.2 and
+ * annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,12 @@ import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operation
  * @summary Location_uELocationTimestamp
  * @description
  * 
+ * Date and time of the UE location in the PS location parameter (module
+ * comment). Table 6.2 calls this Time of Location: when the location source
+ * obtained the location. Conditional when that location is provided.
+ * timestampUnknown means no time was available. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

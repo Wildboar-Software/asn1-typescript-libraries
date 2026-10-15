@@ -13,6 +13,16 @@ import { MmsIRISequence, _decode_MmsIRISequence, _encode_MmsIRISequence } from "
  * @summary MmsIRIsContent
  * @description
  * 
+ * One IRI record (`mmsiRIContent`) or a sequence of records (`mmsIRISequence`)
+ * for the same LEA.
+ * 
+ * Use the sequence only when several records are already available for delivery
+ * together. Do not withhold a record in order to aggregate it. When not
+ * aggregating, choose the single record. The single record includes the events
+ * that correspond to MMS.
+ * 
+ * 3GPP TS 33.108, clause 15.3 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

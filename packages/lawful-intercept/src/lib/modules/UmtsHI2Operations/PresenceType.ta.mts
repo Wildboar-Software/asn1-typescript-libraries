@@ -16,6 +16,12 @@ enum _enum_for_PresenceType {
  * @summary PresenceType
  * @description
  * 
+ * Whether a presence identifier is a PTC client or a PTC group. Reported in the
+ * associate presence status when the PTC server watches presence on behalf of
+ * the target.
+ * 
+ * 3GPP TS 33.108, clause 17.1.5 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +41,12 @@ type PresenceType = _enum_for_PresenceType | ENUMERATED;
 
 /**
  * @summary PresenceType_pTCClient
+ * @description
+ * 
+ * The presence identifier is one or more PTC clients. Used in associate
+ * presence status when the PTC server watches presence for the target. 3GPP TS
+ * 33.108, clause 17.1.5 and annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +55,10 @@ const PresenceType_pTCClient: PresenceType = 1; /* LONG_NAMED_ENUMERATED_VALUE *
 
 /**
  * @summary pTCClient
+ * @description
+ * 
+ * Presence identifier is a PTC client (3GPP TS 33.108, clause 17.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +67,12 @@ const pTCClient: PresenceType = PresenceType_pTCClient; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary PresenceType_pTCGroup
+ * @description
+ * 
+ * The presence identifier is a PTC group. Used in associate presence status
+ * when the PTC server watches presence for the target. 3GPP TS 33.108, clause
+ * 17.1.5 and annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +81,10 @@ const PresenceType_pTCGroup: PresenceType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCGroup
+ * @description
+ * 
+ * Presence identifier is a PTC group (3GPP TS 33.108, clause 17.1.5).
+ * 
  * @constant
  * @type {number}
  */

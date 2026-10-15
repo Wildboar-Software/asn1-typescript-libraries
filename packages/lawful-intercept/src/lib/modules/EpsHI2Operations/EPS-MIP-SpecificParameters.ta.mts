@@ -16,6 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPS_MIP_SpecificParameters
  * @description
  * 
+ * MIP parameters of the intercepted procedure. Coded according to 3GPP TS
+ * 29.279 and the RFCs it cites (module comment). Carried for MIP registration,
+ * deregistration, resource-allocation deactivation, and start of interception
+ * with an active MIP tunnel (clause 10.5.1). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,42 +45,74 @@ export
 class EPS_MIP_SpecificParameters {
     /**
      * @summary `lifetime`.
+     * @description
+     * 
+     * Lifetime of the tunnel. Nonzero for registration or a lifetime extension;
+     * zero for deregistration (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly lifetime: OPTIONAL<INTEGER>;
     /**
      * @summary `homeAddress`.
+     * @description
+     * 
+     * Home IP address of the UE (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly homeAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `careOfAddress`.
+     * @description
+     * 
+     * Local IP address the access network assigned to the UE (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly careOfAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `homeAgentAddress`.
+     * @description
+     * 
+     * IP address of the home agent (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly homeAgentAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `code`.
+     * @description
+     * 
+     * Failure cause when the protocol reports it this way. Table 10.5.2 uses
+     * code, depending on the protocol, for a failed attach.
+     * 
      * @public
      * @readonly
      */
     readonly code: OPTIONAL<INTEGER>;
     /**
      * @summary `foreignDomainAddress`.
+     * @description
+     * 
+     * The relevant IP address in the foreign domain (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly foreignDomainAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

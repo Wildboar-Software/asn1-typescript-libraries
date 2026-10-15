@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncodedTextString
  * @description
  * 
+ * A character string together with the character set used to encode it.
+ * 
+ * 3GPP TS 33.108, annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +35,32 @@ export
 class EncodedTextString {
     /**
      * @summary `stringType`.
+     * @description
+     * 
+     * Character set of the string. Annex B.15 requires the MIBEnum values
+     * registered with IANA, as defined in the OMA encapsulation protocol.
+     * Clause 15.3 does not list those values.
      * @public
      * @readonly
      */
     readonly stringType: OCTET_STRING;
     /**
      * @summary `actualString`.
+     * @description
+     * 
+     * The characters of the encoded string. Clause 15.3 does not further define
+     * the contents.
+     * 
+     * 3GPP TS 33.108, annex B.15.
      * @public
      * @readonly
      */
     readonly actualString: OCTET_STRING;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

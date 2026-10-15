@@ -67,6 +67,21 @@ import { National_Parameters, _decode_National_Parameters, _encode_National_Para
  * @summary IRI_Parameters
  * @description
  * 
+ * Parameters of one MMS IRI record sent to the LEMF. Clause 15.3 uses the
+ * REPORT record for every MMS event.
+ * 
+ * Stage 2 mandatory and conditional parameters are optional in the annex B.15
+ * syntax. Stage 2 inclusion overrides that syntax (clause 15.3.6.2.1). The
+ * lawful interception identifier is present in every record sent to the LEMF.
+ * 
+ * Tables name Read Status, Retrieve Status, Retrieve Status Text, and MMS
+ * Status Text. This record has no components under those names. The plain-text
+ * mapping table is misaligned after MMS Status Text, so inclusion below follows
+ * the event tables.
+ * 
+ * 3GPP TS 33.108, clause 15.3.6 and annex B.15.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -156,342 +171,748 @@ export
 class IRI_Parameters {
     /**
      * @summary `hi2mmsDomainId`.
+     * @description
+     * 
+     * 3GPP HI2 MMS domain identifier. Carries `hi2mmsDomainId`: threeGPP(4),
+     * hi2mms(16), r16(16), version-0(0).
+     * 
+     * 3GPP TS 33.108, annex B.15.
      * @public
      * @readonly
      */
     readonly hi2mmsDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * LIID agreed for this MMS intercept, per national regulation.
+     * Alphanumeric. It may carry an authorization reference and the date the
+     * authorization was issued. One value per target identity, or one value for
+     * several identities of the same target. If several LEAs intercept the same
+     * identity, each LEA has its own value.
+     * 
+     * Mandatory in every clause 15.3.6.2 record. Table 15.3.6.1.2 spells the
+     * parameter lawfulInterceptionIdentifer.
+     * 
+     * 3GPP TS 33.108, clause 15.3.2.2.
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time the event was generated in the MMS Proxy/Server. The time
+     * comes from that node's clock.
+     * 
+     * Event date and event time are mandatory on every REPORT.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `locationOfTheTarget`.
+     * @description
+     * 
+     * Location of the target (annex B.15). The clause 15.3 event tables do not
+     * name this parameter. Serving System and Serving EPS events are reported
+     * under clauses 6.5.1.1 and 10.5.1.1.
+     * 
+     * TS 33.108 does not further define it for MMS.
      * @public
      * @readonly
      */
     readonly locationOfTheTarget: OPTIONAL<Location>;
     /**
      * @summary `partyInformation`.
+     * @description
+     * 
+     * The concerned party, its identities, and the information that party
+     * provided. At most ten parties.
+     * 
+     * Provide at least one identity and the others when available. The event
+     * tables list IMEI, IMSI, MSISDN, IMPU/IMPI, E.164, MMS address or MMBox
+     * ID, and IPv4/IPv6. This module has no IMEI, IMPU, or IMPI component.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly partyInformation: OPTIONAL<PartyInformation[]>;
     /**
      * @summary `mMSevent`.
+     * @description
+     * 
+     * Which MMS event this record reports. Mandatory on every clause 15.3.6.2
+     * REPORT. Table 15.3.6.1.1 maps the named events to REPORT and does not
+     * list upload or delivery as their own rows.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and clause 15.3.6.2.2.
      * @public
      * @readonly
      */
     readonly mMSevent: OPTIONAL<MMSEvent>;
     /**
      * @summary `serviceCenterAddress`.
+     * @description
+     * 
+     * Address of the relevant MMS server (annex B.15). The clause 15.3 event
+     * tables do not name this parameter. TS 33.108 does not further define it.
      * @public
      * @readonly
      */
     readonly serviceCenterAddress: OPTIONAL<PartyInformation>;
     /**
      * @summary `mMSParties`.
+     * @description
+     * 
+     * To, CC, BCC, and From parties of the MM. When an address is translated,
+     * include both the address before translation and the address after it.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly mMSParties: OPTIONAL<MMSParties>;
     /**
      * @summary `mMSVersion`.
+     * @description
+     * 
+     * Version of MMS used by the target (table 15.3.6.1.2).
+     * 
+     * Mandatory on Send, Notification, Notification Response, Retrieval,
+     * Retrieval Acknowledgement, Forwarding, Store, Upload, Delete, Cancel,
+     * View Request, and View Confirm.
+     * 
+     * 3GPP TS 33.108, clause 15.3.6.2.2.
      * @public
      * @readonly
      */
     readonly mMSVersion: OPTIONAL<INTEGER>;
     /**
      * @summary `transactionID`.
+     * @description
+     * 
+     * Correlates an MMS request and its response between the target and the MMS
+     * Proxy-Relay (table 15.3.6.1.2).
+     * 
+     * Mandatory on Send, Notification, Notification Response, Retrieval,
+     * Retrieval Acknowledgement, Forwarding, Store, Upload, Delete, View
+     * Request, and View Confirm.
      * @public
      * @readonly
      */
     readonly transactionID: OPTIONAL<UTF8String>;
     /**
      * @summary `messageID`.
+     * @description
+     * 
+     * Identifier the MMS Proxy-Relay assigns to the MM (table 15.3.6.1.2).
+     * Encoded as an RFC 2822 address, without "<" and ">" (OMA Multimedia
+     * Messaging Service Encapsulation Protocol, cited by annex B.15).
+     * 
+     * Mandatory on Send, Notification, Notification Response, Retrieval,
+     * Retrieval Acknowledgement, Forwarding, Delivery, and both Read Reply
+     * records.
      * @public
      * @readonly
      */
     readonly messageID: OPTIONAL<UTF8String>;
     /**
      * @summary `mMSDateTime`.
+     * @description
+     * 
+     * Date and time the MM was last handled, either originated or forwarded.
+     * For origination, the sending client or the originating Proxy-Relay
+     * includes it (table 15.3.6.1.2).
+     * 
+     * Mandatory on Send, Notification, Retrieval, Delivery, and Read Reply From
+     * Target. Conditional on Read Reply To Target if available.
      * @public
      * @readonly
      */
     readonly mMSDateTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `messageClass`.
+     * @description
+     * 
+     * Class of the MM. A value of auto means the UE generated the MM. If this
+     * is absent, interpret the class as personal (table 15.3.6.1.2).
+     * 
+     * Mandatory on Notification. Conditional when available on Send, Retrieval,
+     * and Forwarding.
      * @public
      * @readonly
      */
     readonly messageClass: OPTIONAL<MessageClass>;
     /**
      * @summary `expiry`.
+     * @description
+     * 
+     * How long the MM is stored in the MMS Proxy-Relay, or when to delete it.
+     * The parameter has an absolute form and a relative form (table
+     * 15.3.6.1.2). Annex B.15 carries one time value and does not say how a
+     * relative interval is distinguished.
+     * 
+     * Mandatory on Send and Forwarding, using the signalled expiry or the
+     * default. Mandatory on Notification.
      * @public
      * @readonly
      */
     readonly expiry: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `distributionIndicator`.
+     * @description
+     * 
+     * Whether the originator allows the MM to be distributed further. No means
+     * the originator requested that the content not be distributed (table
+     * 15.3.6.1.2).
+     * 
+     * Conditional on Notification and Retrieval when it was sent to the target.
      * @public
      * @readonly
      */
     readonly distributionIndicator: OPTIONAL<YesNo>;
     /**
      * @summary `elementDescriptor`.
+     * @description
+     * 
+     * Content-Reference of the top-level content waiting for retrieval, and
+     * optionally the type or format of that content (table 15.3.6.1.2).
+     * 
+     * Conditional on Notification when it was sent to the target.
      * @public
      * @readonly
      */
     readonly elementDescriptor: OPTIONAL<ElementDescriptor>;
     /**
      * @summary `retrievalMode`.
+     * @description
+     * 
+     * Whether manual retrieval is recommended for the MM (table 15.3.6.1.2). If
+     * this is present, annex B.15 requires Yes, meaning manual retrieval is
+     * recommended.
+     * 
+     * Conditional on Notification when it was sent to the target.
      * @public
      * @readonly
      */
     readonly retrievalMode: OPTIONAL<YesNo>;
     /**
      * @summary `retrievalModeText`.
+     * @description
+     * 
+     * Why manual retrieval is recommended (table 15.3.6.1.2).
+     * 
+     * Conditional on Notification when it was sent to the target.
      * @public
      * @readonly
      */
     readonly retrievalModeText: OPTIONAL<EncodedString>;
     /**
      * @summary `senderVisibility`.
+     * @description
+     * 
+     * Whether the sender address is shown to the recipient. Yes means Show and
+     * No means Do Not Show (annex B.15). Table 15.3.6.1.2 describes an
+     * indication that the sender address should not be delivered to the
+     * recipient.
+     * 
+     * On Send and Forwarding, include it when the target sent it, or when the
+     * target did not signal it and the default hides the target. On
+     * Notification and Retrieval, include it when the originator asked to
+     * withhold the address.
      * @public
      * @readonly
      */
     readonly senderVisibility: OPTIONAL<YesNo>;
     /**
      * @summary `deliveryReport`.
+     * @description
+     * 
+     * Whether the originator MMS UE requests a delivery report from each
+     * recipient (table 15.3.6.1.2).
+     * 
+     * Conditional on Send, Retrieval, and Forwarding when the target sent it.
+     * Conditional on Notification when it was sent to the target.
      * @public
      * @readonly
      */
     readonly deliveryReport: OPTIONAL<YesNo>;
     /**
      * @summary `readReport`.
+     * @description
+     * 
+     * Whether the originator MMS UE requests a read report from each recipient
+     * (table 15.3.6.1.2).
+     * 
+     * Conditional on Send, Notification, Retrieval, and Forwarding when the
+     * target sent it. The Notification table uses that same "when sent by the
+     * target" condition.
      * @public
      * @readonly
      */
     readonly readReport: OPTIONAL<YesNo>;
     /**
      * @summary `applicID`.
+     * @description
+     * 
+     * Identification of the originating application of the original MM (table
+     * 15.3.6.1.2).
+     * 
+     * Conditional on Send when the target sent it. Conditional on Notification,
+     * Retrieval, Delivery, and both Read Replies when available or when sent to
+     * the target, as each of those tables states.
      * @public
      * @readonly
      */
     readonly applicID: OPTIONAL<UTF8String>;
     /**
      * @summary `replyApplicID`.
+     * @description
+     * 
+     * Application to which replies, delivery reports, and read reports are
+     * addressed (table 15.3.6.1.2).
+     * 
+     * Same inclusion pattern as the application identifier: when the target
+     * sent it on Send, and when available or sent to the target on
+     * Notification, Retrieval, Delivery, and both Read Replies.
      * @public
      * @readonly
      */
     readonly replyApplicID: OPTIONAL<UTF8String>;
     /**
      * @summary `auxApplicInfo`.
+     * @description
+     * 
+     * Auxiliary application addressing information from the original MM (table
+     * 15.3.6.1.2).
+     * 
+     * Conditional on Notification and Retrieval when sent to the target, and on
+     * Delivery and both Read Replies when available.
      * @public
      * @readonly
      */
     readonly auxApplicInfo: OPTIONAL<UTF8String>;
     /**
      * @summary `contentClass`.
+     * @description
+     * 
+     * Smallest content class to which the MM belongs (table 15.3.6.1.2).
+     * 
+     * Conditional on Send when the target sent it, and on Notification and
+     * Retrieval when it was sent to the target.
      * @public
      * @readonly
      */
     readonly contentClass: OPTIONAL<ContentClass>;
     /**
      * @summary `dRMContent`.
+     * @description
+     * 
+     * Whether the MM contains a DRM-protected element (table 15.3.6.1.2).
+     * 
+     * Conditional on Send when the target sent it, and on Notification and
+     * Retrieval when it was sent to the target.
      * @public
      * @readonly
      */
     readonly dRMContent: OPTIONAL<YesNo>;
     /**
      * @summary `replaceID`.
+     * @description
+     * 
+     * Message-ID of the previous MM that this MM replaces (table 15.3.6.1.2).
+     * 
+     * Conditional on Notification and Retrieval when it was sent to the target.
      * @public
      * @readonly
      */
     readonly replaceID: OPTIONAL<UTF8String>;
     /**
      * @summary `contentLocation`.
+     * @description
+     * 
+     * Location of the content to be retrieved (table 15.3.6.1.2).
+     * 
+     * Conditional on Send if signalled back to the target. Conditional on
+     * Notification if sent to the target. Mandatory on Forwarding, Store, and
+     * Delete. Conditional on Upload if available. Conditional on View Request
+     * if the target provided it, and on View Confirm if sent to the target.
+     * 
+     * In an MMBox description, table 15.3.6.2.2.16 says this is used only with
+     * View Confirm.
      * @public
      * @readonly
      */
     readonly contentLocation: OPTIONAL<ContentLocation>;
     /**
      * @summary `mMSStatus`.
+     * @description
+     * 
+     * Status of the MM. A status of retrieved is signalled by the retrieving UE
+     * only after it has retrieved the MM (table 15.3.6.1.2).
+     * 
+     * Mandatory on Notification Response and on Delivery.
      * @public
      * @readonly
      */
     readonly mMSStatus: OPTIONAL<MMSStatus>;
     /**
      * @summary `reportAllowed`.
+     * @description
+     * 
+     * Whether the recipient MMS client allows a delivery report to be sent
+     * (table 15.3.6.1.2).
+     * 
+     * Conditional on Notification Response if the target sent it, and on
+     * Retrieval Acknowledgement if it was sent to the target.
      * @public
      * @readonly
      */
     readonly reportAllowed: OPTIONAL<YesNo>;
     /**
      * @summary `previouslySentBy`.
+     * @description
+     * 
+     * MMS client that forwarded the MM or originally sent it, with a sequence
+     * number. A higher sequence number is a later forward. Table 15.3.6.1.2
+     * says the header may appear more than once. Annex B.15 defines one
+     * sequence number and one party.
+     * 
+     * Conditional on Retrieval, and in an MMBox description, if available.
      * @public
      * @readonly
      */
     readonly previouslySentBy: OPTIONAL<PreviouslySentBy>;
     /**
      * @summary `previouslySentByDateTime`.
+     * @description
+     * 
+     * Date and time of a forward or of the original send, with the sequence
+     * number of the matching previously-sent-by party. Table 15.3.6.1.2 says
+     * the header may appear more than once. The mapping table spells the
+     * parameter reviouslySentByDateTime.
+     * 
+     * Conditional on Retrieval, and in an MMBox description, if available.
      * @public
      * @readonly
      */
     readonly previouslySentByDateTime: OPTIONAL<PreviouslySentByDateTime>;
     /**
      * @summary `mMState`.
+     * @description
+     * 
+     * State of an MM that is stored or is to be stored (table 15.3.6.1.2).
+     * 
+     * Conditional on Retrieval if sent to the target. Conditional on
+     * Forwarding, Store, and Upload if the target sent it. Conditional on View
+     * Request if the target provided it, and on View Confirm if sent to the
+     * target.
      * @public
      * @readonly
      */
     readonly mMState: OPTIONAL<MMSState>;
     /**
      * @summary `desiredDeliveryTime`.
+     * @description
+     * 
+     * Earliest time the MM may be delivered to the recipient (table
+     * 15.3.6.1.2).
+     * 
+     * Conditional on Send and Forwarding when the target sent it.
      * @public
      * @readonly
      */
     readonly desiredDeliveryTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `deliveryReportAllowed`.
+     * @description
+     * 
+     * Whether the target requested a delivery report toward the original
+     * sender, or the default when the target did not signal it.
+     * 
+     * Mandatory on Forwarding (table 15.3.6.2.2.6). Distinct from
+     * `deliveryReport`. Not listed in table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly deliveryReportAllowed: OPTIONAL<YesNo>;
     /**
      * @summary `store`.
+     * @description
+     * 
+     * Whether the originator wants the submitted MM saved in the user's MMBox
+     * in addition to sending it (table 15.3.6.1.2).
+     * 
+     * Conditional on Send and Forwarding when the target sent it.
      * @public
      * @readonly
      */
     readonly store: OPTIONAL<YesNo>;
     /**
      * @summary `responseStatus`.
+     * @description
+     * 
+     * MMS-specific status (table 15.3.6.1.2).
+     * 
+     * Conditional on Send if signalled to the target. Mandatory on Forwarding,
+     * Delete, and View Confirm.
      * @public
      * @readonly
      */
     readonly responseStatus: OPTIONAL<ResponseStatus>;
     /**
      * @summary `responseStatusText`.
+     * @description
+     * 
+     * Text that qualifies the response status (table 15.3.6.1.2).
+     * 
+     * Conditional on Send, Forwarding, and View Confirm when provided or sent
+     * to the target. Conditional on Delete if available.
      * @public
      * @readonly
      */
     readonly responseStatusText: OPTIONAL<ResponseStatusText>;
     /**
      * @summary `storeStatus`.
+     * @description
+     * 
+     * Whether the MM was stored in the MMBox (table 15.3.6.1.2).
+     * 
+     * Conditional on Send if signalled to the target, and on Forwarding if sent
+     * to the target. Mandatory on Store and Upload.
      * @public
      * @readonly
      */
     readonly storeStatus: OPTIONAL<StoreStatus>;
     /**
      * @summary `storeStatusText`.
+     * @description
+     * 
+     * Text that qualifies the store status (table 15.3.6.1.2).
+     * 
+     * Conditional on Send, Forwarding, Store, and Upload when it was sent to
+     * the target.
      * @public
      * @readonly
      */
     readonly storeStatusText: OPTIONAL<EncodedString>;
     /**
      * @summary `mMFlags`.
+     * @description
+     * 
+     * Keyword to add to, or remove from, the keywords of a stored MM (table
+     * 15.3.6.1.2).
+     * 
+     * Conditional on Store and Upload if the target provided it, on View
+     * Request if the target provided it, and on View Confirm if sent to the
+     * target.
      * @public
      * @readonly
      */
     readonly mMFlags: OPTIONAL<MMFlags>;
     /**
      * @summary `mMBoxDescriptionPdus`.
+     * @description
+     * 
+     * Description of an MM in the MMBox (table 15.3.6.2.2.16).
+     * 
+     * Mandatory on Upload: one description, for the MM being uploaded.
+     * Mandatory on View Confirm: one or more, one for each MM.
+     * 
+     * 3GPP TS 33.108, tables 15.3.6.2.2.8 and 15.3.6.2.2.15.
      * @public
      * @readonly
      */
     readonly mMBoxDescriptionPdus: OPTIONAL<MMBoxDescriptionPdus[]>;
     /**
      * @summary `cancelID`.
+     * @description
+     * 
+     * Message ID of the MM to cancel (table 15.3.6.1.2).
+     * 
+     * Mandatory on Cancel (table 15.3.6.2.2.13).
      * @public
      * @readonly
      */
     readonly cancelID: OPTIONAL<UTF8String>;
     /**
      * @summary `cancelStatus`.
+     * @description
+     * 
+     * Result of the cancel request. Yes means the cancel was received
+     * successfully. No means the cancel request was corrupted (annex B.15).
+     * 
+     * Conditional on Cancel if available (table 15.3.6.2.2.13).
      * @public
      * @readonly
      */
     readonly cancelStatus: OPTIONAL<YesNo>;
     /**
      * @summary `mMSStart`.
+     * @description
+     * 
+     * Index of the first selected MM whose information is returned (table
+     * 15.3.6.1.2).
+     * 
+     * Conditional on View Request if the target provided it, and on View
+     * Confirm if sent to the target.
      * @public
      * @readonly
      */
     readonly mMSStart: OPTIONAL<INTEGER>;
     /**
      * @summary `mMSLimit`.
+     * @description
+     * 
+     * Maximum number of selected MMs to return. If absent, information for all
+     * remaining MMs is returned. If zero, no MM-related information is returned
+     * (table 15.3.6.1.2).
+     * 
+     * Conditional on View Request if the target provided it, and on View
+     * Confirm if sent to the target.
      * @public
      * @readonly
      */
     readonly mMSLimit: OPTIONAL<INTEGER>;
     /**
      * @summary `mMSAttributes`.
+     * @description
+     * 
+     * Information elements that should appear in the view of each selected
+     * message (table 15.3.6.1.2).
+     * 
+     * Conditional on View Request if the target provided them, and on View
+     * Confirm if sent to the target.
      * @public
      * @readonly
      */
     readonly mMSAttributes: OPTIONAL<MMSAttributes>;
     /**
      * @summary `mMSTotals`.
+     * @description
+     * 
+     * Table 15.3.6.1.2: a request for the number of messages in the MMBox, or
+     * that count. Annex B.15 uses the Yes/No value and does not say which value
+     * is the request and which is the count. The plain-text mapping row has no
+     * HI2 parameter cell of its own.
+     * 
+     * Conditional on View Request if the target provided it, and on View
+     * Confirm if sent to the target.
      * @public
      * @readonly
      */
     readonly mMSTotals: OPTIONAL<YesNo>;
     /**
      * @summary `mMSQuotas`.
+     * @description
+     * 
+     * Table 15.3.6.1.2: a request for the user's MMBox quotas, in messages or
+     * bytes, or those quotas. Annex B.15 uses the Yes/No value and does not say
+     * which value is the request and which is the quota. The plain-text mapping
+     * row has no HI2 parameter cell of its own.
+     * 
+     * Conditional on View Request if the target provided it, and on View
+     * Confirm if sent to the target.
      * @public
      * @readonly
      */
     readonly mMSQuotas: OPTIONAL<YesNo>;
     /**
      * @summary `mMSMessageCount`.
+     * @description
+     * 
+     * Number of messages in the content part of the PDU (table 15.3.6.1.2).
+     * 
+     * Conditional on View Confirm if sent to the target (table 15.3.6.2.2.15).
      * @public
      * @readonly
      */
     readonly mMSMessageCount: OPTIONAL<INTEGER>;
     /**
      * @summary `messageSize`.
+     * @description
+     * 
+     * Size of the MM. Conditional in an MMBox description when available (table
+     * 15.3.6.2.2.16). Clause 15.3 does not define the unit. Not listed in table
+     * 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly messageSize: OPTIONAL<INTEGER>;
     /**
      * @summary `mMSForwardReqDateTime`.
+     * @description
+     * 
+     * Date and time of the forward request. Mandatory on Forwarding (table
+     * 15.3.6.2.2.6). Not listed in table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly mMSForwardReqDateTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `adaptationAllowed`.
+     * @description
+     * 
+     * Whether the target wants the MM adapted. If that wish is overridden, an
+     * indication shall be included (table 15.3.6.2.2.1). Clause 15.3 does not
+     * say how the override is indicated.
+     * 
+     * Conditional on Send when the target sent it.
      * @public
      * @readonly
      */
     readonly adaptationAllowed: OPTIONAL<YesNo>;
     /**
      * @summary `priority`.
+     * @description
+     * 
+     * Priority the originator MMS client assigned to the MM (table 15.3.6.1.2).
+     * 
+     * Conditional on Send and Forwarding when the target sent it. Mandatory on
+     * Retrieval, using the signalled priority or the default.
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<Priority>;
     /**
      * @summary `mMSCorrelationNumber`.
+     * @description
+     * 
+     * Correlates CC with IRI for this MMS of the target. Present when the event
+     * also provides CC (annex B.15).
+     * 
+     * Conditional on Send, Notification, Retrieval, and Forwarding when
+     * delivery of CC is authorized.
+     * 
+     * 3GPP TS 33.108, clause 15.3.2.3.
      * @public
      * @readonly
      */
     readonly mMSCorrelationNumber: OPTIONAL<MMSCorrelationNumber>;
     /**
      * @summary `contentType`.
+     * @description
+     * 
+     * Content type of the MM (table 15.3.6.1.2).
+     * 
+     * Mandatory on Send and Upload. Conditional on Retrieval if sent to the
+     * target. Mandatory on View Confirm.
      * @public
      * @readonly
      */
     readonly contentType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `national_Parameters`.
+     * @description
+     * 
+     * National parameters. Clause 15.3.6.1 allows the ICE or the DF2/MF to
+     * extend the information set when a country requires it. TS 33.108 does not
+     * further define the contents.
      * @public
      * @readonly
      */

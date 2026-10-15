@@ -15,6 +15,11 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * @summary GA_PointWithUnCertainty
  * @description
  * 
+ * A point plus an uncertainty code, one shape of the UMTS location inside an
+ * EPS or PS location. Clause 10 does not describe the shape further. The
+ * uncertainty code's meaning is not given in the specification text. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +35,22 @@ export
 class GA_PointWithUnCertainty {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     * 
+     * Latitude and longitude of the point. The specification text does not
+     * define the integer scaling.
+     * 
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary `uncertaintyCode`.
+     * @description
+     * 
+     * Uncertainty accompanying the point. The specification text does not
+     * define the code. The module only bounds it.
+     * 
      * @public
      * @readonly
      */

@@ -14,6 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PreviouslySentByDateTime
  * @description
  * 
+ * Date and time of one forward or of the original send, with the sequence
+ * number of the client address that has the same number.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +36,32 @@ export
 class PreviouslySentByDateTime {
     /**
      * @summary `forwardedCount`.
+     * @description
+     * 
+     * Sequence number shared with the previously-sent-by client address for the
+     * same hop (table 15.3.6.1.2).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly forwardedCount: INTEGER;
     /**
      * @summary `forwardedDateTime`.
+     * @description
+     * 
+     * Date and time of that forward or original send (table 15.3.6.1.2).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly forwardedDateTime: GeneralizedTime;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

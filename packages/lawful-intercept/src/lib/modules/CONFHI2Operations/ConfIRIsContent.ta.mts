@@ -13,6 +13,14 @@ import { ConfIRISequence, _decode_ConfIRISequence, _encode_ConfIRISequence } fro
  * @summary ConfIRIsContent
  * @description
  * 
+ * One conference IRI record, or a sequence of them for the same LEA
+ * destination.
+ *
+ * Aggregation is optional. It may be used only when several records are already
+ * available for that destination. Records are sent immediately and are not held
+ * back in order to aggregate. When aggregation is not used, send a single
+ * record. 3GPP TS 33.108, annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MBMSSerSubscriberList_Item
  * @description
  * 
+ * One entry in the MBMS service subscription list.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +32,22 @@ export
 class MBMSSerSubscriberList_Item {
     /**
      * @summary `mBMSSERSUBSCRIBERLIST`.
+     * @description
+     * 
+     * One subscriber on the MBMS service the target joined or subscribed to.
+     * Clause 9 does not further define how the subscriber is identified. The
+     * list may be very long (table 9.2).
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly mBMSSERSUBSCRIBERLIST: UTF8String;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

@@ -24,6 +24,12 @@ import { RemoteUeContextDisconnected, _decode_RemoteUeContextDisconnected, _enco
  * @summary EPS_GTPV2_SpecificParameters
  * @description
  * 
+ * GTPv2 parameters of the intercepted procedure (module comment). Present for
+ * E-UTRAN bearer, attach, detach, PDN, and related events in clause 10.5.1.
+ * Coding of the individual information elements follows the stage 3
+ * specifications cited on each component. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -101,216 +107,410 @@ export
 class EPS_GTPV2_SpecificParameters {
     /**
      * @summary `pDNAddressAllocation`.
+     * @description
+     * 
+     * IP version and the IP address or addresses allocated to the UE (table
+     * 10.5.2). Conditional on successful bearer activation.
+     * 
      * @public
      * @readonly
      */
     readonly pDNAddressAllocation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `aPN`.
+     * @description
+     * 
+     * APN. From the MME, the APN the UE provided; from the S-GW or PDN-GW, the
+     * APN of the PDN connection (table 10.5.2). Conditional on attach and on
+     * default-bearer activation.
+     * 
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `protConfigOptions`.
+     * @description
+     * 
+     * Parameters passed between the UE and the PDN-GW, for example a DHCP
+     * address-allocation preference (table 10.5.2). On attach, the information
+     * the UE sent to the network (table 10.5.1.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly protConfigOptions: OPTIONAL<ProtConfigOptions>;
     /**
      * @summary `attachType`.
+     * @description
+     * 
+     * Type of attach. It may also indicate handover for mobility with non-3GPP
+     * access (table 10.5.2). One octet coded according to 3GPP TS 24.301.
+     * 
      * @public
      * @readonly
      */
     readonly attachType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ePSBearerIdentity`.
+     * @description
+     * 
+     * EPS bearer for this UE on E-UTRAN, allocated by the MME (table 10.5.2).
+     * Conditional when the attach succeeds.
+     * 
      * @public
      * @readonly
      */
     readonly ePSBearerIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `detachType`.
+     * @description
+     * 
+     * Detach type, and whether the detach is a switch-off (table 10.5.2 maps
+     * both the detach type and the switch-off indicator here). One octet coded
+     * according to 3GPP TS 24.301.
+     * 
      * @public
      * @readonly
      */
     readonly detachType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `rATType`.
+     * @description
+     * 
+     * Radio access type (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `failedBearerActivationReason`.
+     * @description
+     * 
+     * Why bearer activation failed (table 10.5.2). Conditional on an
+     * unsuccessful bearer activation.
+     * 
      * @public
      * @readonly
      */
     readonly failedBearerActivationReason: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ePSBearerQoS`.
+     * @description
+     * 
+     * QoS associated with the EPS bearer procedure (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly ePSBearerQoS: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `bearerActivationType`.
+     * @description
+     * 
+     * Whether the bearer being activated is the default or a dedicated bearer
+     * (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly bearerActivationType: OPTIONAL<TypeOfBearer>;
     /**
      * @summary `aPN_AMBR`.
+     * @description
+     * 
+     * Aggregate maximum bit rate of the APN (table 10.5.2). Coded by the 3GPP
+     * TS 29.274 rules that apply to these GTPv2 parameters (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly aPN_AMBR: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `procedureTransactionId`.
+     * @description
+     * 
+     * Ties the messages of one procedure. The UE allocates it (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly procedureTransactionId: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `linkedEPSBearerId`.
+     * @description
+     * 
+     * For a dedicated bearer, the EPS bearer identity of the default bearer
+     * (table 10.5.2). Coded according to 3GPP TS 29.274.
+     * 
      * @public
      * @readonly
      */
     readonly linkedEPSBearerId: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tFT`.
+     * @description
+     * 
+     * All packet filters of the EPS bearer (table 10.5.2). Only octets from
+     * octet 3 of the traffic-flow template information element in 3GPP TS
+     * 24.008 are included (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly tFT: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `handoverIndication`.
+     * @description
+     * 
+     * The procedure is part of a handover (table 10.5.2). Mutually exclusive
+     * with the extended handover indication; which one is sent depends on the
+     * encoding method in use (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly handoverIndication: OPTIONAL<NULL>;
     /**
      * @summary `failedBearerModReason`.
+     * @description
+     * 
+     * Why bearer modification failed (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly failedBearerModReason: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `trafficAggregateDescription`.
+     * @description
+     * 
+     * Packet filters of the traffic-flow aggregate (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly trafficAggregateDescription: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `failedTAUReason`.
+     * @description
+     * 
+     * Why a tracking-area update failed or was rejected (table 10.5.2, table
+     * 10.5.1.1.5). Coded according to 3GPP TS 24.301.
+     * 
      * @public
      * @readonly
      */
     readonly failedTAUReason: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `failedEUTRANAttachReason`.
+     * @description
+     * 
+     * Why the E-UTRAN attach failed (table 10.5.2). Conditional on attach.
+     * Coded according to 3GPP TS 24.301.
+     * 
      * @public
      * @readonly
      */
     readonly failedEUTRANAttachReason: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servingMMEaddress`.
+     * @description
+     * 
+     * Serving MME as Diameter Origin-Host and Origin-Realm received at the HSS,
+     * or its IP address (table 10.5.2, 3GPP TS 29.272). Only the AVP data
+     * fields are concatenated, with a semicolon between them (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly servingMMEaddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `bearerDeactivationType`.
+     * @description
+     * 
+     * Whether the bearer being deactivated is the default or a dedicated bearer
+     * (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly bearerDeactivationType: OPTIONAL<TypeOfBearer>;
     /**
      * @summary `bearerDeactivationCause`.
+     * @description
+     * 
+     * Why the bearer was deactivated (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly bearerDeactivationCause: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ePSlocationOfTheTarget`.
+     * @description
+     * 
+     * Location of the target when the record was produced, if the warrant
+     * authorizes location (table 10.5.2). Also the cell site. Mutually
+     * exclusive with the IRI location parameter; this form uses SAE stage 3
+     * coding (module comment). Old location before a tracking-area update is
+     * reported with the same parameter (table 10.5.2). Clause 16.4 uses it for
+     * 4G cell-site supplemental information.
+     * 
      * @public
      * @readonly
      */
     readonly ePSlocationOfTheTarget: OPTIONAL<EPSLocation>;
     /**
      * @summary `pDNType`.
+     * @description
+     * 
+     * IP version in use (IPv4, IPv6, or both), including a change the network
+     * made to the version the UE requested (table 10.5.2, table 10.5.1.1.1).
+     * Coded according to 3GPP TS 24.301.
+     * 
      * @public
      * @readonly
      */
     readonly pDNType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `requestType`.
+     * @description
+     * 
+     * Kind of UE-requested PDN connectivity, such as an initial request or a
+     * handover (table 10.5.2, table 10.5.1.1.6). Coded according to 3GPP TS
+     * 24.301.
+     * 
      * @public
      * @readonly
      */
     readonly requestType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uEReqPDNConnFailReason`.
+     * @description
+     * 
+     * Why UE-requested PDN connectivity failed (table 10.5.2). Coded according
+     * to 3GPP TS 24.301.
+     * 
      * @public
      * @readonly
      */
     readonly uEReqPDNConnFailReason: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `extendedHandoverIndication`.
+     * @description
+     * 
+     * Handover indication coded as an octet. Value 1 means handover from the
+     * flags in 3GPP TS 29.274; any other case is 0 (module comment). Mutually
+     * exclusive with the null handover indication.
+     * 
      * @public
      * @readonly
      */
     readonly extendedHandoverIndication: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uLITimestamp`.
+     * @description
+     * 
+     * Time the user location information was acquired (table 10.5.2). The upper
+     * four octets carry the timestamp; the lower four are undefined and the
+     * receiver ignores them (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly uLITimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uELocalIPAddress`.
+     * @description
+     * 
+     * UE local IP address, the IPsec tunnel endpoint, seen by the ePDG and
+     * PDN-GW for fixed-broadband interworking when the GTP-based S2b interface
+     * of 3GPP TS 29.274 is used (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly uELocalIPAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uEUdpPort`.
+     * @description
+     * 
+     * UE UDP port of that IPsec endpoint, when NAT is detected and the local IP
+     * address is present (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly uEUdpPort: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tWANIdentifier`.
+     * @description
+     * 
+     * TWAN identifier for WLAN location at the ePDG or PDN-GW, when the
+     * GTP-based S2b interface is used and the identifier is available (table
+     * 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly tWANIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tWANIdentifierTimestamp`.
+     * @description
+     * 
+     * Time associated with that TWAN identifier (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly tWANIdentifierTimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proSeRemoteUeContextConnected`.
+     * @description
+     * 
+     * Identities, and when available the IP addresses, of ProSe remote UEs that
+     * are connected. On a tracking-area update, include them when the target is
+     * a ProSe UE-to-network relay (table 10.5.2, table 10.5.1.1.5). Clause 13.3
+     * also uses this for ProSe remote-UE communication records.
+     * 
      * @public
      * @readonly
      */
     readonly proSeRemoteUeContextConnected: OPTIONAL<RemoteUeContextConnected>;
     /**
      * @summary `proSeRemoteUeContextDisconnected`.
+     * @description
+     * 
+     * Identities of ProSe remote UEs that disconnected (table 13.3.1-2). The
+     * tracking-area update table names the connected form and does not repeat
+     * this one.
+     * 
      * @public
      * @readonly
      */
     readonly proSeRemoteUeContextDisconnected: OPTIONAL<RemoteUeContextDisconnected>;
     /**
      * @summary `secondaryRATUsageIndication`.
+     * @description
+     * 
+     * The S-GW has received a Secondary RAT Usage Report from the MME (3GPP TS
+     * 37.340). If the indication is absent, that is not evidence that a
+     * secondary RAT was unused (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly secondaryRATUsageIndication: OPTIONAL<NULL>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -410,12 +610,22 @@ class EPS_GTPV2_SpecificParameters {
 
         /**
          * @summary The enum used as the type of the component `bearerActivationType`
+         * @description
+         * 
+         * Whether the bearer being activated is the default or a dedicated
+         * bearer (table 10.5.2).
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_bearerActivationType = _enum_for_TypeOfBearer;        /**
          * @summary The enum used as the type of the component `bearerDeactivationType`
+         * @description
+         * 
+         * Whether the bearer being deactivated is the default or a dedicated
+         * bearer (table 10.5.2).
+         * 
          * @public
          * @static
          */

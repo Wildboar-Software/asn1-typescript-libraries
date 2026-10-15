@@ -13,6 +13,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IRI_to_CC_Correlation
  * @description
  * 
+ * Correlates this IRI to content. Table 7.2 uses it for each PDP context or EPS
+ * bearer delivered to the LEMF, and for the signalling context when two
+ * contexts are used.
+ * 
+ * Annex B.3 also uses the optional second value to correlate IRI to CC that
+ * carries signalling. The octet layout is an implementation matter (clause
+ * 7.1.3).
+ * 
+ * 3GPP TS 33.108, clause 7.1.3 and table 7.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +41,24 @@ export
 class IRI_to_CC_Correlation {
     /**
      * @summary `cc`.
+     * @description
+     * 
+     * One or more correlation numbers that tie this IRI to content streams. The
+     * octet layout is an implementation matter.
+     * 
+     * 3GPP TS 33.108, clause 7.1.3 and annex B.3.
      * @public
      * @readonly
      */
     readonly cc: OCTET_STRING[];
     /**
      * @summary `iri`.
+     * @description
+     * 
+     * Optional correlation of this IRI to content that also carries signalling.
+     * The octet layout is an implementation matter.
+     * 
+     * 3GPP TS 33.108, clause 7.1.3 and annex B.3.
      * @public
      * @readonly
      */

@@ -12,6 +12,18 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary ConfIRIContent
  * @description
  * 
+ * Conference HI2 record type for one event (table 11.1).
+ *
+ * `iRI-Begin-record`: successful start of conference, or start of interception
+ * while the conference is active. `iRI-Continue-record`: party join, party
+ * leave, bearer modification, or unsuccessful conference end. `iRI-End-record`:
+ * successful conference end. `iRI-Report-record`: unsuccessful conference
+ * start, conference creation, or conference update.
+ *
+ * Begin, continue, and report records include at least one parameter that the
+ * module marks optional. A continue record shall not carry a new correlation
+ * number. 3GPP TS 33.108, clauses 11.5.1.2 to 11.5.1.5 and annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

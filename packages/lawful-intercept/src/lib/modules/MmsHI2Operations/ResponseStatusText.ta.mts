@@ -13,6 +13,11 @@ import { EncodedString, _decode_EncodedString, _encode_EncodedString } from "../
  * @summary ResponseStatusText
  * @description
  * 
+ * Text that qualifies the MMS response status (table 15.3.6.1.2), with a count
+ * used only on Delete.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +36,29 @@ export
 class ResponseStatusText {
     /**
      * @summary `statusCount`.
+     * @description
+     * 
+     * Included only for the Delete event (annex B.15). Clause 15.3 does not
+     * further define the count.
      * @public
      * @readonly
      */
     readonly statusCount: OPTIONAL<EncodedString>;
     /**
      * @summary `actualResponseStatusText`.
+     * @description
+     * 
+     * Text qualifying the response status (table 15.3.6.1.2). Clause 15.3 does
+     * not further define the text.
      * @public
      * @readonly
      */
     readonly actualResponseStatusText: EncodedString;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

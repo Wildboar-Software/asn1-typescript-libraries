@@ -17,6 +17,18 @@ enum _enum_for_Version {
  * @summary Version
  * @description
  * 
+ * ASN.1 version of the ULIC version-1 header. ULIC version 0 is not a value of
+ * this enumeration; it is the octet header in annex C.1.2. The parameter was
+ * redundant from the first publication because `hi3DomainId` already identifies
+ * the domain. Always send lastVersion (8), even if that OID version arc later
+ * increases. Values 4 through 7 are omitted to align with UmtsHI2Operations.
+ * The module does not define version1 or version3 beyond those numbers. EPS
+ * does not use this parameter.
+ * 
+ * 3GPP TS 33.108, annex C.1.3 and annex B.4.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,6 +54,11 @@ type Version = _enum_for_Version | ENUMERATED;
 
 /**
  * @summary Version_version1
+ * @description
+ * 
+ * ASN.1 version value 1 of the redundant ULIC version parameter. ULIC header
+ * version 0 is annex C.1.2; ULIC header version 1 is the ASN.1 header. The
+ * module recommends sending lastVersion (8). 3GPP TS 33.108, annex B.4.
  * @constant
  * @type {number}
  */
@@ -50,6 +67,9 @@ const Version_version1: Version = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version1
+ * @description
+ * 
+ * ASN.1 version value 1; send lastVersion (8). Annex B.4.
  * @constant
  * @type {number}
  */
@@ -58,6 +78,11 @@ const version1: Version = Version_version1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Version_version3
+ * @description
+ * 
+ * ASN.1 version value 3. Values 4 through 7 were omitted to align with
+ * UmtsHI2Operations. ULIC header version 0 is annex C.1.2; ULIC header version
+ * 1 is the ASN.1 header. Send lastVersion (8). 3GPP TS 33.108, annex B.4.
  * @constant
  * @type {number}
  */
@@ -66,6 +91,9 @@ const Version_version3: Version = 3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version3
+ * @description
+ * 
+ * ASN.1 version value 3; send lastVersion (8). Annex B.4.
  * @constant
  * @type {number}
  */
@@ -74,6 +102,11 @@ const version3: Version = Version_version3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Version_lastVersion
+ * @description
+ * 
+ * Value 8. Recommended on every ULIC version-1 header, including after the
+ * hi3DomainId version arc is incremented. 3GPP TS 33.108, annex B.4 and annex
+ * C.1.3.
  * @constant
  * @type {number}
  */
@@ -82,6 +115,9 @@ const Version_lastVersion: Version = 8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lastVersion
+ * @description
+ * 
+ * Value 8, the recommended ULIC ASN.1 version. Annex B.4.
  * @constant
  * @type {number}
  */

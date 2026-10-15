@@ -64,6 +64,14 @@ enum _enum_for_EPSEvent {
  * @summary EPSEvent
  * @description
  * 
+ * Which action this IRI reports. Table 10.5.1 maps each EPS value to a REPORT,
+ * BEGIN, CONTINUE, or END record. Clause 10.5.0 leaves the event out of a LALS
+ * report that is not tied to an event. Values below the E-UTRAN attach are the
+ * packet-domain events of table 6.1, used when clause 6.5.1 delivers that IRI
+ * on annex B.9 or when clause 10.0 applies Gn/Gp behaviour to the PDN-GW. ProSe
+ * values are also mapped in clause 13.3, which requires this HI2. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -132,6 +140,13 @@ type EPSEvent = _enum_for_EPSEvent | ENUMERATED;
 
 /**
  * @summary EPSEvent_pDPContextActivation
+ * @description
+ * 
+ * PDP-context activation. A successful activation is a BEGIN; an unsuccessful
+ * one is a REPORT (table 6.1).
+ * Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -140,6 +155,11 @@ const EPSEvent_pDPContextActivation: EPSEvent = 1; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary pDPContextActivation
+ * @description
+ * 
+ * PDP-context activation. A successful activation is a BEGIN; an unsuccessful
+ * one is a REPORT (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -148,6 +168,13 @@ const pDPContextActivation: EPSEvent = EPSEvent_pDPContextActivation; /* SHORT_N
 
 /**
  * @summary EPSEvent_startOfInterceptionWithPDPContextActive
+ * @description
+ * 
+ * Interception started while a PDP context was already active. BEGIN, or
+ * optionally CONTINUE (table 6.1).
+ * Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -156,6 +183,11 @@ const EPSEvent_startOfInterceptionWithPDPContextActive: EPSEvent = 2; /* LONG_NA
 
 /**
  * @summary startOfInterceptionWithPDPContextActive
+ * @description
+ * 
+ * Interception started while a PDP context was already active. BEGIN, or
+ * optionally CONTINUE (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -164,6 +196,12 @@ const startOfInterceptionWithPDPContextActive: EPSEvent = EPSEvent_startOfInterc
 
 /**
  * @summary EPSEvent_pDPContextDeactivation
+ * @description
+ * 
+ * PDP-context deactivation. END record (table 6.1).
+ * Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -172,6 +210,10 @@ const EPSEvent_pDPContextDeactivation: EPSEvent = 4; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary pDPContextDeactivation
+ * @description
+ * 
+ * PDP-context deactivation. END record (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -180,6 +222,13 @@ const pDPContextDeactivation: EPSEvent = EPSEvent_pDPContextDeactivation; /* SHO
 
 /**
  * @summary EPSEvent_gPRSAttach
+ * @description
+ * 
+ * GPRS attach, successful or unsuccessful. Clause 6.5.0 also uses this for a
+ * mobile-station attach. REPORT (table 6.1).
+ * Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -188,6 +237,11 @@ const EPSEvent_gPRSAttach: EPSEvent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRSAttach
+ * @description
+ * 
+ * GPRS attach, successful or unsuccessful. Clause 6.5.0 also uses this for a
+ * mobile-station attach. REPORT (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -196,6 +250,12 @@ const gPRSAttach: EPSEvent = EPSEvent_gPRSAttach; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EPSEvent_gPRSDetach
+ * @description
+ * 
+ * GPRS detach. Clause 6.5.0 also uses this for a mobile-station detach. REPORT
+ * (table 6.1). Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -204,6 +264,11 @@ const EPSEvent_gPRSDetach: EPSEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRSDetach
+ * @description
+ * 
+ * GPRS detach. Clause 6.5.0 also uses this for a mobile-station detach. REPORT
+ * (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -212,6 +277,14 @@ const gPRSDetach: EPSEvent = EPSEvent_gPRSDetach; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EPSEvent_locationInfoUpdate
+ * @description
+ * 
+ * Cell, routing-area, or combined location update. The new SGSN sends it; the
+ * old SGSN may send it when the mobile leaves (table 6.6). This is not the EPS
+ * tracking-area update. REPORT (table 6.1).
+ * Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -220,6 +293,12 @@ const EPSEvent_locationInfoUpdate: EPSEvent = 10; /* LONG_NAMED_ENUMERATED_VALUE
 
 /**
  * @summary locationInfoUpdate
+ * @description
+ * 
+ * Cell, routing-area, or combined location update. The new SGSN sends it; the
+ * old SGSN may send it when the mobile leaves (table 6.6). This is not the EPS
+ * tracking-area update. REPORT (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -228,6 +307,12 @@ const locationInfoUpdate: EPSEvent = EPSEvent_locationInfoUpdate; /* SHORT_NAMED
 
 /**
  * @summary EPSEvent_sMS
+ * @description
+ * 
+ * SMS. Mobile-originated and mobile-terminated SMS reports are in table 6.7 and
+ * clause 15.2.2. REPORT (table 6.1). Used when PS IRI is delivered on this HI2
+ * (clause 6.5.1) or the PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -236,6 +321,11 @@ const EPSEvent_sMS: EPSEvent = 11; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMS
+ * @description
+ * 
+ * SMS. Mobile-originated and mobile-terminated SMS reports are in table 6.7 and
+ * clause 15.2.2. REPORT (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -244,6 +334,12 @@ const sMS: EPSEvent = EPSEvent_sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSEvent_pDPContextModification
+ * @description
+ * 
+ * PDP-context modification. CONTINUE (table 6.1).
+ * Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -252,6 +348,10 @@ const EPSEvent_pDPContextModification: EPSEvent = 13; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary pDPContextModification
+ * @description
+ * 
+ * PDP-context modification. CONTINUE (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -260,6 +360,14 @@ const pDPContextModification: EPSEvent = EPSEvent_pDPContextModification; /* SHO
 
 /**
  * @summary EPSEvent_servingSystem
+ * @description
+ * 
+ * Serving system. National option when the mobile is authorized with another
+ * operator; cancel location, register location, and a location-information
+ * request are then also required (clause 6.5.1.1). REPORT (table 6.1).
+ * Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -268,6 +376,12 @@ const EPSEvent_servingSystem: EPSEvent = 14; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servingSystem
+ * @description
+ * 
+ * Serving system. National option when the mobile is authorized with another
+ * operator; cancel location, register location, and a location-information
+ * request are then also required (clause 6.5.1.1). REPORT (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -276,6 +390,13 @@ const servingSystem: EPSEvent = EPSEvent_servingSystem; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EPSEvent_startOfInterceptionWithMSAttached
+ * @description
+ * 
+ * Interception started after a successful GPRS attach. National option (table
+ * 6.1, clause 6.5.1.1). REPORT (table 6.1).
+ * Used when PS IRI is delivered on this HI2 (clause 6.5.1) or the
+ * PDN-GW reports Gn/Gp behaviour as a GGSN (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -284,6 +405,11 @@ const EPSEvent_startOfInterceptionWithMSAttached: EPSEvent = 15; /* LONG_NAMED_E
 
 /**
  * @summary startOfInterceptionWithMSAttached
+ * @description
+ * 
+ * Interception started after a successful GPRS attach. National option (table
+ * 6.1, clause 6.5.1.1). REPORT (table 6.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -292,6 +418,12 @@ const startOfInterceptionWithMSAttached: EPSEvent = EPSEvent_startOfInterception
 
 /**
  * @summary EPSEvent_e_UTRANAttach
+ * @description
+ * 
+ * E-UTRAN attach, successful or unsuccessful, including via a HeNB. REPORT
+ * (table 10.5.1.1.1). Also used for IoT NIDD via the SCEF (table 10.5.1 note
+ * 2).
+ * 
  * @constant
  * @type {number}
  */
@@ -300,6 +432,11 @@ const EPSEvent_e_UTRANAttach: EPSEvent = 16; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_UTRANAttach
+ * @description
+ * 
+ * E-UTRAN attach REPORT, including a failed attach and IoT NIDD (clause
+ * 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -308,6 +445,11 @@ const e_UTRANAttach: EPSEvent = EPSEvent_e_UTRANAttach; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EPSEvent_e_UTRANDetach
+ * @description
+ * 
+ * E-UTRAN detach, including via a HeNB. REPORT (table 10.5.1.1.2). Also used
+ * for IoT NIDD via the SCEF (table 10.5.1 note 2).
+ * 
  * @constant
  * @type {number}
  */
@@ -316,6 +458,10 @@ const EPSEvent_e_UTRANDetach: EPSEvent = 17; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_UTRANDetach
+ * @description
+ * 
+ * E-UTRAN detach REPORT, including IoT NIDD (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -324,6 +470,11 @@ const e_UTRANDetach: EPSEvent = EPSEvent_e_UTRANDetach; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EPSEvent_bearerActivation
+ * @description
+ * 
+ * EPS bearer activation. BEGIN when it succeeds (table 10.5.1.2.1); REPORT when
+ * it fails (table 10.5.1.1.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -332,6 +483,10 @@ const EPSEvent_bearerActivation: EPSEvent = 18; /* LONG_NAMED_ENUMERATED_VALUE *
 
 /**
  * @summary bearerActivation
+ * @description
+ * 
+ * Bearer activation: BEGIN if successful, REPORT if not (clause 10.5.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -340,6 +495,14 @@ const bearerActivation: EPSEvent = EPSEvent_bearerActivation; /* SHORT_NAMED_ENU
 
 /**
  * @summary EPSEvent_startOfInterceptionWithActiveBearer
+ * @description
+ * 
+ * Interception started with at least one EPS bearer already active. BEGIN, or
+ * optionally CONTINUE, one record per bearer (table 10.5.1, clause 10.5.1.2).
+ * Parameters that the node no longer has need not be stored for a later
+ * warrant. Do not send this BEGIN to a LEMF that was already intercepting the
+ * target.
+ * 
  * @constant
  * @type {number}
  */
@@ -348,6 +511,11 @@ const EPSEvent_startOfInterceptionWithActiveBearer: EPSEvent = 19; /* LONG_NAMED
 
 /**
  * @summary startOfInterceptionWithActiveBearer
+ * @description
+ * 
+ * Start of interception with an active bearer: BEGIN or optional CONTINUE
+ * (clause 10.5.1.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -356,6 +524,10 @@ const startOfInterceptionWithActiveBearer: EPSEvent = EPSEvent_startOfIntercepti
 
 /**
  * @summary EPSEvent_bearerModification
+ * @description
+ * 
+ * EPS bearer modification. CONTINUE (table 10.5.1.3.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -364,6 +536,10 @@ const EPSEvent_bearerModification: EPSEvent = 20; /* LONG_NAMED_ENUMERATED_VALUE
 
 /**
  * @summary bearerModification
+ * @description
+ * 
+ * Bearer modification CONTINUE (clause 10.5.1.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -372,6 +548,10 @@ const bearerModification: EPSEvent = EPSEvent_bearerModification; /* SHORT_NAMED
 
 /**
  * @summary EPSEvent_bearerDeactivation
+ * @description
+ * 
+ * EPS bearer deactivation. END (table 10.5.1.4.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -380,6 +560,10 @@ const EPSEvent_bearerDeactivation: EPSEvent = 21; /* LONG_NAMED_ENUMERATED_VALUE
 
 /**
  * @summary bearerDeactivation
+ * @description
+ * 
+ * Bearer deactivation END (clause 10.5.1.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -388,6 +572,10 @@ const bearerDeactivation: EPSEvent = EPSEvent_bearerDeactivation; /* SHORT_NAMED
 
 /**
  * @summary EPSEvent_uERequestedBearerResourceModification
+ * @description
+ * 
+ * The UE requested a bearer-resource modification. REPORT (table 10.5.1.1.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -396,6 +584,10 @@ const EPSEvent_uERequestedBearerResourceModification: EPSEvent = 22; /* LONG_NAM
 
 /**
  * @summary uERequestedBearerResourceModification
+ * @description
+ * 
+ * UE-requested bearer-resource modification REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -404,6 +596,11 @@ const uERequestedBearerResourceModification: EPSEvent = EPSEvent_uERequestedBear
 
 /**
  * @summary EPSEvent_uERequestedPDNConnectivity
+ * @description
+ * 
+ * The UE requested PDN connectivity. REPORT (table 10.5.1.1.6). Also used for
+ * IoT NIDD via the SCEF (table 10.5.1 note 2).
+ * 
  * @constant
  * @type {number}
  */
@@ -412,6 +609,10 @@ const EPSEvent_uERequestedPDNConnectivity: EPSEvent = 23; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary uERequestedPDNConnectivity
+ * @description
+ * 
+ * UE-requested PDN connectivity REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -420,6 +621,11 @@ const uERequestedPDNConnectivity: EPSEvent = EPSEvent_uERequestedPDNConnectivity
 
 /**
  * @summary EPSEvent_uERequestedPDNDisconnection
+ * @description
+ * 
+ * The UE requested PDN disconnection. REPORT (table 10.5.1.1.7). Also used for
+ * IoT NIDD via the SCEF (table 10.5.1 note 2).
+ * 
  * @constant
  * @type {number}
  */
@@ -428,6 +634,10 @@ const EPSEvent_uERequestedPDNDisconnection: EPSEvent = 24; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary uERequestedPDNDisconnection
+ * @description
+ * 
+ * UE-requested PDN disconnection REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -436,6 +646,14 @@ const uERequestedPDNDisconnection: EPSEvent = EPSEvent_uERequestedPDNDisconnecti
 
 /**
  * @summary EPSEvent_trackingAreaEpsLocationUpdate
+ * @description
+ * 
+ * Tracking-area or EPS location update. REPORT (table 10.5.1.1.5). Also sent
+ * for a UE-triggered service request, an X2 handover, an S1 handover, and an
+ * S1AP E-RAB modification indication from Dual Connectivity. On an inter-MME
+ * update the new MME sends it; the old MME may send it when the UE leaves. Also
+ * IoT NIDD (table 10.5.1 note 2).
+ * 
  * @constant
  * @type {number}
  */
@@ -444,6 +662,10 @@ const EPSEvent_trackingAreaEpsLocationUpdate: EPSEvent = 25; /* LONG_NAMED_ENUME
 
 /**
  * @summary trackingAreaEpsLocationUpdate
+ * @description
+ * 
+ * Tracking-area or EPS location update REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -452,6 +674,14 @@ const trackingAreaEpsLocationUpdate: EPSEvent = EPSEvent_trackingAreaEpsLocation
 
 /**
  * @summary EPSEvent_servingEvolvedPacketSystem
+ * @description
+ * 
+ * Serving evolved packet system. REPORT (table 10.5.1.1.12). National option
+ * when the UE is authorized with another operator; cancel location, register
+ * location, and a location-information request then also apply (clause
+ * 10.5.1.1). Also IoT NIDD (note 2). Clause 15.2.3 uses it for SMS over IMS
+ * while roaming.
+ * 
  * @constant
  * @type {number}
  */
@@ -460,6 +690,11 @@ const EPSEvent_servingEvolvedPacketSystem: EPSEvent = 26; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary servingEvolvedPacketSystem
+ * @description
+ * 
+ * Serving EPS REPORT, including the roaming SMS-over-IMS case (clause 10.5.1.1,
+ * clause 15.2.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -468,6 +703,11 @@ const servingEvolvedPacketSystem: EPSEvent = EPSEvent_servingEvolvedPacketSystem
 
 /**
  * @summary EPSEvent_pMIPAttachTunnelActivation
+ * @description
+ * 
+ * PMIP attach or tunnel activation. BEGIN when it succeeds (table 10.5.1.2.2);
+ * REPORT when it fails (table 10.5.1.1.8).
+ * 
  * @constant
  * @type {number}
  */
@@ -476,6 +716,10 @@ const EPSEvent_pMIPAttachTunnelActivation: EPSEvent = 27; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary pMIPAttachTunnelActivation
+ * @description
+ * 
+ * PMIP attach or tunnel activation: BEGIN if successful, REPORT if not.
+ * 
  * @constant
  * @type {number}
  */
@@ -484,6 +728,10 @@ const pMIPAttachTunnelActivation: EPSEvent = EPSEvent_pMIPAttachTunnelActivation
 
 /**
  * @summary EPSEvent_pMIPDetachTunnelDeactivation
+ * @description
+ * 
+ * PMIP detach or tunnel deactivation. END (table 10.5.1.4.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -492,6 +740,10 @@ const EPSEvent_pMIPDetachTunnelDeactivation: EPSEvent = 28; /* LONG_NAMED_ENUMER
 
 /**
  * @summary pMIPDetachTunnelDeactivation
+ * @description
+ * 
+ * PMIP detach or tunnel deactivation END (clause 10.5.1.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -500,6 +752,11 @@ const pMIPDetachTunnelDeactivation: EPSEvent = EPSEvent_pMIPDetachTunnelDeactiva
 
 /**
  * @summary EPSEvent_startOfInterceptWithActivePMIPTunnel
+ * @description
+ * 
+ * Interception started with an active PMIP tunnel. BEGIN, or optionally
+ * CONTINUE (table 10.5.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -508,6 +765,10 @@ const EPSEvent_startOfInterceptWithActivePMIPTunnel: EPSEvent = 29; /* LONG_NAME
 
 /**
  * @summary startOfInterceptWithActivePMIPTunnel
+ * @description
+ * 
+ * Start of interception with an active PMIP tunnel: BEGIN or optional CONTINUE.
+ * 
  * @constant
  * @type {number}
  */
@@ -516,6 +777,10 @@ const startOfInterceptWithActivePMIPTunnel: EPSEvent = EPSEvent_startOfIntercept
 
 /**
  * @summary EPSEvent_pMIPPdnGwInitiatedPdnDisconnection
+ * @description
+ * 
+ * The PDN-GW initiated a PDN disconnection over PMIP. END (table 10.5.1.4.6).
+ * 
  * @constant
  * @type {number}
  */
@@ -524,6 +789,10 @@ const EPSEvent_pMIPPdnGwInitiatedPdnDisconnection: EPSEvent = 30; /* LONG_NAMED_
 
 /**
  * @summary pMIPPdnGwInitiatedPdnDisconnection
+ * @description
+ * 
+ * PMIP PDN-GW-initiated PDN disconnection END (clause 10.5.1.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -532,6 +801,11 @@ const pMIPPdnGwInitiatedPdnDisconnection: EPSEvent = EPSEvent_pMIPPdnGwInitiated
 
 /**
  * @summary EPSEvent_mIPRegistrationTunnelActivation
+ * @description
+ * 
+ * MIP registration or tunnel activation. BEGIN when it succeeds (table
+ * 10.5.1.2.3); REPORT when it fails (table 10.5.1.1.9).
+ * 
  * @constant
  * @type {number}
  */
@@ -540,6 +814,10 @@ const EPSEvent_mIPRegistrationTunnelActivation: EPSEvent = 31; /* LONG_NAMED_ENU
 
 /**
  * @summary mIPRegistrationTunnelActivation
+ * @description
+ * 
+ * MIP registration or tunnel activation: BEGIN if successful, REPORT if not.
+ * 
  * @constant
  * @type {number}
  */
@@ -548,6 +826,10 @@ const mIPRegistrationTunnelActivation: EPSEvent = EPSEvent_mIPRegistrationTunnel
 
 /**
  * @summary EPSEvent_mIPDeregistrationTunnelDeactivation
+ * @description
+ * 
+ * MIP deregistration or tunnel deactivation. END (table 10.5.1.4.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -556,6 +838,10 @@ const EPSEvent_mIPDeregistrationTunnelDeactivation: EPSEvent = 32; /* LONG_NAMED
 
 /**
  * @summary mIPDeregistrationTunnelDeactivation
+ * @description
+ * 
+ * MIP deregistration or tunnel deactivation END (clause 10.5.1.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -564,6 +850,12 @@ const mIPDeregistrationTunnelDeactivation: EPSEvent = EPSEvent_mIPDeregistration
 
 /**
  * @summary EPSEvent_startOfInterceptWithActiveMIPTunnel
+ * @description
+ * 
+ * Interception started with an active MIP tunnel. BEGIN (table 10.5.1). Clause
+ * 10.5.1.3 says the optional CONTINUE form of a start-of-interception record
+ * does not apply to MIP.
+ * 
  * @constant
  * @type {number}
  */
@@ -572,6 +864,10 @@ const EPSEvent_startOfInterceptWithActiveMIPTunnel: EPSEvent = 33; /* LONG_NAMED
 
 /**
  * @summary startOfInterceptWithActiveMIPTunnel
+ * @description
+ * 
+ * Start of interception with an active MIP tunnel: BEGIN (clause 10.5.1.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -580,6 +876,11 @@ const startOfInterceptWithActiveMIPTunnel: EPSEvent = EPSEvent_startOfInterceptW
 
 /**
  * @summary EPSEvent_dSMIPRegistrationTunnelActivation
+ * @description
+ * 
+ * DSMIP registration or tunnel activation. BEGIN when it succeeds (table
+ * 10.5.1.2.4); REPORT when it fails (table 10.5.1.1.10).
+ * 
  * @constant
  * @type {number}
  */
@@ -588,6 +889,10 @@ const EPSEvent_dSMIPRegistrationTunnelActivation: EPSEvent = 34; /* LONG_NAMED_E
 
 /**
  * @summary dSMIPRegistrationTunnelActivation
+ * @description
+ * 
+ * DSMIP registration or tunnel activation: BEGIN if successful, REPORT if not.
+ * 
  * @constant
  * @type {number}
  */
@@ -596,6 +901,10 @@ const dSMIPRegistrationTunnelActivation: EPSEvent = EPSEvent_dSMIPRegistrationTu
 
 /**
  * @summary EPSEvent_dSMIPDeregistrationTunnelDeactivation
+ * @description
+ * 
+ * DSMIP deregistration or tunnel deactivation. END (table 10.5.1.4.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -604,6 +913,10 @@ const EPSEvent_dSMIPDeregistrationTunnelDeactivation: EPSEvent = 35; /* LONG_NAM
 
 /**
  * @summary dSMIPDeregistrationTunnelDeactivation
+ * @description
+ * 
+ * DSMIP deregistration or tunnel deactivation END (clause 10.5.1.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -612,6 +925,11 @@ const dSMIPDeregistrationTunnelDeactivation: EPSEvent = EPSEvent_dSMIPDeregistra
 
 /**
  * @summary EPSEvent_startOfInterceptWithActiveDsmipTunnel
+ * @description
+ * 
+ * Interception started with an active DSMIP tunnel. BEGIN (table 10.5.1).
+ * Clause 10.5.1.3 says the optional CONTINUE form does not apply to DSMIP.
+ * 
  * @constant
  * @type {number}
  */
@@ -620,6 +938,10 @@ const EPSEvent_startOfInterceptWithActiveDsmipTunnel: EPSEvent = 36; /* LONG_NAM
 
 /**
  * @summary startOfInterceptWithActiveDsmipTunnel
+ * @description
+ * 
+ * Start of interception with an active DSMIP tunnel: BEGIN.
+ * 
  * @constant
  * @type {number}
  */
@@ -628,6 +950,10 @@ const startOfInterceptWithActiveDsmipTunnel: EPSEvent = EPSEvent_startOfIntercep
 
 /**
  * @summary EPSEvent_dSMipHaSwitch
+ * @description
+ * 
+ * The network ordered a home-agent switch. REPORT (table 10.5.1.1.11).
+ * 
  * @constant
  * @type {number}
  */
@@ -636,6 +962,10 @@ const EPSEvent_dSMipHaSwitch: EPSEvent = 37; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dSMipHaSwitch
+ * @description
+ * 
+ * DSMIP home-agent switch REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -644,6 +974,10 @@ const dSMipHaSwitch: EPSEvent = EPSEvent_dSMipHaSwitch; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary EPSEvent_pMIPResourceAllocationDeactivation
+ * @description
+ * 
+ * PMIP resource-allocation deactivation. END (table 10.5.1.4.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -652,6 +986,10 @@ const EPSEvent_pMIPResourceAllocationDeactivation: EPSEvent = 38; /* LONG_NAMED_
 
 /**
  * @summary pMIPResourceAllocationDeactivation
+ * @description
+ * 
+ * PMIP resource-allocation deactivation END (clause 10.5.1.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -660,6 +998,10 @@ const pMIPResourceAllocationDeactivation: EPSEvent = EPSEvent_pMIPResourceAlloca
 
 /**
  * @summary EPSEvent_mIPResourceAllocationDeactivation
+ * @description
+ * 
+ * MIP resource-allocation deactivation. END (table 10.5.1.4.7).
+ * 
  * @constant
  * @type {number}
  */
@@ -668,6 +1010,10 @@ const EPSEvent_mIPResourceAllocationDeactivation: EPSEvent = 39; /* LONG_NAMED_E
 
 /**
  * @summary mIPResourceAllocationDeactivation
+ * @description
+ * 
+ * MIP resource-allocation deactivation END (clause 10.5.1.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -676,6 +1022,10 @@ const mIPResourceAllocationDeactivation: EPSEvent = EPSEvent_mIPResourceAllocati
 
 /**
  * @summary EPSEvent_pMIPsessionModification
+ * @description
+ * 
+ * PMIP session modification. CONTINUE (table 10.5.1.3.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -684,6 +1034,10 @@ const EPSEvent_pMIPsessionModification: EPSEvent = 40; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary pMIPsessionModification
+ * @description
+ * 
+ * PMIP session modification CONTINUE (clause 10.5.1.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -692,6 +1046,11 @@ const pMIPsessionModification: EPSEvent = EPSEvent_pMIPsessionModification; /* S
 
 /**
  * @summary EPSEvent_startOfInterceptWithEUTRANAttachedUE
+ * @description
+ * 
+ * Interception started while the UE was E-UTRAN attached. REPORT, one record
+ * per PDN connection (table 10.5.1.1.13). Also IoT NIDD (table 10.5.1 note 2).
+ * 
  * @constant
  * @type {number}
  */
@@ -700,6 +1059,10 @@ const EPSEvent_startOfInterceptWithEUTRANAttachedUE: EPSEvent = 41; /* LONG_NAME
 
 /**
  * @summary startOfInterceptWithEUTRANAttachedUE
+ * @description
+ * 
+ * Start of interception with an E-UTRAN-attached UE: REPORT per PDN connection.
+ * 
  * @constant
  * @type {number}
  */
@@ -708,6 +1071,10 @@ const startOfInterceptWithEUTRANAttachedUE: EPSEvent = EPSEvent_startOfIntercept
 
 /**
  * @summary EPSEvent_dSMIPSessionModification
+ * @description
+ * 
+ * DSMIP session modification. CONTINUE (table 10.5.1.3.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -716,6 +1083,10 @@ const EPSEvent_dSMIPSessionModification: EPSEvent = 42; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary dSMIPSessionModification
+ * @description
+ * 
+ * DSMIP session modification CONTINUE (clause 10.5.1.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -724,6 +1095,12 @@ const dSMIPSessionModification: EPSEvent = EPSEvent_dSMIPSessionModification; /*
 
 /**
  * @summary EPSEvent_packetDataHeaderInformation
+ * @description
+ * 
+ * Packet-data header report, either per packet or as a summary for one flow.
+ * REPORT (clause 10.5.1.1). Table 6.1 uses the same event when a GPRS PDP
+ * context is reported on this HI2.
+ * 
  * @constant
  * @type {number}
  */
@@ -732,6 +1109,10 @@ const EPSEvent_packetDataHeaderInformation: EPSEvent = 43; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary packetDataHeaderInformation
+ * @description
+ * 
+ * Packet-data header REPORT for an EPS bearer or, on this HI2, a PDP context.
+ * 
  * @constant
  * @type {number}
  */
@@ -740,6 +1121,12 @@ const packetDataHeaderInformation: EPSEvent = EPSEvent_packetDataHeaderInformati
 
 /**
  * @summary EPSEvent_hSS_Subscriber_Record_Change
+ * @description
+ * 
+ * HSS subscriber-record change of IMSI, MSISDN, A-MSISDN, IMEI, or external
+ * identifier. REPORT, national option (table 10.5.1.1.17). Also IoT NIDD (table
+ * 10.5.1 note 2).
+ * 
  * @constant
  * @type {number}
  */
@@ -748,6 +1135,10 @@ const EPSEvent_hSS_Subscriber_Record_Change: EPSEvent = 44; /* LONG_NAMED_ENUMER
 
 /**
  * @summary hSS_Subscriber_Record_Change
+ * @description
+ * 
+ * HSS subscriber-record change REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -756,6 +1147,12 @@ const hSS_Subscriber_Record_Change: EPSEvent = EPSEvent_hSS_Subscriber_Record_Ch
 
 /**
  * @summary EPSEvent_registration_Termination
+ * @description
+ * 
+ * The module marks this value for further study. Table 10.5.1 does not map it.
+ * IMS registration termination is a separate IMS event (table 7.1), not this
+ * value.
+ * 
  * @constant
  * @type {number}
  */
@@ -764,6 +1161,10 @@ const EPSEvent_registration_Termination: EPSEvent = 45; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary registration_Termination
+ * @description
+ * 
+ * Marked for further study. Table 10.5.1 does not map it.
+ * 
  * @constant
  * @type {number}
  */
@@ -772,6 +1173,11 @@ const registration_Termination: EPSEvent = EPSEvent_registration_Termination; /*
 
 /**
  * @summary EPSEvent_location_Up_Date
+ * @description
+ * 
+ * The module marks this value for further study. Table 10.5.1 does not map it.
+ * The EPS tracking-area update is a different value.
+ * 
  * @constant
  * @type {number}
  */
@@ -780,6 +1186,10 @@ const EPSEvent_location_Up_Date: EPSEvent = 46; /* LONG_NAMED_ENUMERATED_VALUE *
 
 /**
  * @summary location_Up_Date
+ * @description
+ * 
+ * Marked for further study. Not the tracking-area update value.
+ * 
  * @constant
  * @type {number}
  */
@@ -788,6 +1198,11 @@ const location_Up_Date: EPSEvent = EPSEvent_location_Up_Date; /* SHORT_NAMED_ENU
 
 /**
  * @summary EPSEvent_cancel_Location
+ * @description
+ * 
+ * Cancel location, including a purge from the HSS toward the SGSN. REPORT
+ * (table 10.5.1.1.18). Also IoT NIDD (table 10.5.1 note 2).
+ * 
  * @constant
  * @type {number}
  */
@@ -796,6 +1211,10 @@ const EPSEvent_cancel_Location: EPSEvent = 47; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancel_Location
+ * @description
+ * 
+ * Cancel location REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -804,6 +1223,10 @@ const cancel_Location: EPSEvent = EPSEvent_cancel_Location; /* SHORT_NAMED_ENUME
 
 /**
  * @summary EPSEvent_register_Location
+ * @description
+ * 
+ * Register location. REPORT (table 10.5.1.1.19).
+ * 
  * @constant
  * @type {number}
  */
@@ -812,6 +1235,10 @@ const EPSEvent_register_Location: EPSEvent = 48; /* LONG_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary register_Location
+ * @description
+ * 
+ * Register location REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -820,6 +1247,10 @@ const register_Location: EPSEvent = EPSEvent_register_Location; /* SHORT_NAMED_E
 
 /**
  * @summary EPSEvent_location_Information_Request
+ * @description
+ * 
+ * Location information request. REPORT (table 10.5.1.1.20).
+ * 
  * @constant
  * @type {number}
  */
@@ -828,6 +1259,10 @@ const EPSEvent_location_Information_Request: EPSEvent = 49; /* LONG_NAMED_ENUMER
 
 /**
  * @summary location_Information_Request
+ * @description
+ * 
+ * Location information request REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -836,6 +1271,12 @@ const location_Information_Request: EPSEvent = EPSEvent_location_Information_Req
 
 /**
  * @summary EPSEvent_proSeRemoteUEReport
+ * @description
+ * 
+ * ProSe remote-UE report. REPORT (table 10.5.1, table 13.3.1-1). Clause 13
+ * applies in addition to clause 10 when the target is a remote UE or a
+ * UE-to-network relay (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -844,6 +1285,10 @@ const EPSEvent_proSeRemoteUEReport: EPSEvent = 50; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary proSeRemoteUEReport
+ * @description
+ * 
+ * ProSe remote-UE report: REPORT (clause 13.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -852,6 +1297,10 @@ const proSeRemoteUEReport: EPSEvent = EPSEvent_proSeRemoteUEReport; /* SHORT_NAM
 
 /**
  * @summary EPSEvent_proSeRemoteUEStartOfCommunication
+ * @description
+ * 
+ * ProSe remote UE started communication. BEGIN (table 10.5.1, table 13.3.1-1).
+ * 
  * @constant
  * @type {number}
  */
@@ -860,6 +1309,10 @@ const EPSEvent_proSeRemoteUEStartOfCommunication: EPSEvent = 51; /* LONG_NAMED_E
 
 /**
  * @summary proSeRemoteUEStartOfCommunication
+ * @description
+ * 
+ * ProSe remote-UE start of communication: BEGIN (clause 13.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -868,6 +1321,10 @@ const proSeRemoteUEStartOfCommunication: EPSEvent = EPSEvent_proSeRemoteUEStartO
 
 /**
  * @summary EPSEvent_proSeRemoteUEEndOfCommunication
+ * @description
+ * 
+ * ProSe remote UE ended communication. END (table 10.5.1, table 13.3.1-1).
+ * 
  * @constant
  * @type {number}
  */
@@ -876,6 +1333,10 @@ const EPSEvent_proSeRemoteUEEndOfCommunication: EPSEvent = 52; /* LONG_NAMED_ENU
 
 /**
  * @summary proSeRemoteUEEndOfCommunication
+ * @description
+ * 
+ * ProSe remote-UE end of communication: END (clause 13.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -884,6 +1345,11 @@ const proSeRemoteUEEndOfCommunication: EPSEvent = EPSEvent_proSeRemoteUEEndOfCom
 
 /**
  * @summary EPSEvent_startOfLIwithProSeRemoteUEOngoingComm
+ * @description
+ * 
+ * Interception started during ongoing ProSe remote-UE communication. Table
+ * 10.5.1 maps it to BEGIN. Table 13.3.1-1 allows BEGIN or CONTINUE.
+ * 
  * @constant
  * @type {number}
  */
@@ -892,6 +1358,11 @@ const EPSEvent_startOfLIwithProSeRemoteUEOngoingComm: EPSEvent = 53; /* LONG_NAM
 
 /**
  * @summary startOfLIwithProSeRemoteUEOngoingComm
+ * @description
+ * 
+ * Start of interception with ongoing ProSe remote-UE communication (clause
+ * 13.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -900,6 +1371,11 @@ const startOfLIwithProSeRemoteUEOngoingComm: EPSEvent = EPSEvent_startOfLIwithPr
 
 /**
  * @summary EPSEvent_startOfLIforProSeUEtoNWRelay
+ * @description
+ * 
+ * Interception started for a ProSe UE-to-network relay. REPORT (table 10.5.1,
+ * table 13.3.1-1).
+ * 
  * @constant
  * @type {number}
  */
@@ -908,6 +1384,10 @@ const EPSEvent_startOfLIforProSeUEtoNWRelay: EPSEvent = 54; /* LONG_NAMED_ENUMER
 
 /**
  * @summary startOfLIforProSeUEtoNWRelay
+ * @description
+ * 
+ * Start of interception for a ProSe UE-to-network relay: REPORT.
+ * 
  * @constant
  * @type {number}
  */
@@ -916,6 +1396,11 @@ const startOfLIforProSeUEtoNWRelay: EPSEvent = EPSEvent_startOfLIforProSeUEtoNWR
 
 /**
  * @summary EPSEvent_scefRequestednonIPPDNDisconnection
+ * @description
+ * 
+ * The SCEF requested a non-IP PDN disconnection. REPORT (table 10.5.1, table
+ * 10.5.1.1.7A).
+ * 
  * @constant
  * @type {number}
  */
@@ -924,6 +1409,10 @@ const EPSEvent_scefRequestednonIPPDNDisconnection: EPSEvent = 55; /* LONG_NAMED_
 
 /**
  * @summary scefRequestednonIPPDNDisconnection
+ * @description
+ * 
+ * SCEF-requested non-IP PDN disconnection REPORT (clause 10.5.1.1).
+ * 
  * @constant
  * @type {number}
  */

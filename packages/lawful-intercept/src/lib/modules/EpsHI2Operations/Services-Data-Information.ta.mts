@@ -13,6 +13,14 @@ import { GPRS_parameters, _decode_GPRS_parameters, _encode_GPRS_parameters } fro
  * @summary Services_Data_Information
  * @description
  * 
+ * Complementary information for the basic data call (module comment on the
+ * party component that carries this). Clause 6 table 6.2 places the PDP
+ * address, the APN, and the PDP type here. On a PDN-GW that presents a Gn/Gp
+ * interface and acts as a GGSN, clause 10.0 applies those GGSN packet-domain
+ * requirements as well as the EPS requirements.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +37,21 @@ export
 class Services_Data_Information {
     /**
      * @summary `gPRS_parameters`.
+     * @description
+     * 
+     * PDP address, APN, and PDP type for the data call (clause 6 table 6.2).
+     * Include them when the event is a PDP-context procedure. Clause 10.0
+     * applies those GGSN rules when a PDN-GW presents Gn/Gp. Clause 10 EPS
+     * bearer events carry the APN in the GTP or PMIP parameters.
      * @public
      * @readonly
      */
     readonly gPRS_parameters: OPTIONAL<GPRS_parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

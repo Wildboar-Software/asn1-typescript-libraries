@@ -20,6 +20,10 @@ import { DirectDiscoveryData, _decode_DirectDiscoveryData, _encode_DirectDiscove
  * @summary ProSeDirectDiscovery
  * @description
  * 
+ * One ProSe Direct Discovery report: the event, the target's IMSI and role, and
+ * the discovery data. A match report may also identify the other UE. 3GPP TS
+ * 33.108, clause 13.2.2.2 and annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,36 +52,73 @@ export
 class ProSeDirectDiscovery {
     /**
      * @summary `proseDirectDiscoveryEvent`.
+     * @description
+     * 
+     * Discovery request or match report. Required. 3GPP TS 33.108, clause
+     * 13.2.2.2, tables 13.2.2.2-1 and 13.2.2.2-2.
+     * 
      * @public
      * @readonly
      */
     readonly proseDirectDiscoveryEvent: ProSeDirectDiscoveryEvent;
     /**
      * @summary `targetImsi`.
+     * @description
+     * 
+     * IMSI of the target. Required. MAP format of 3GPP TS 29.002, an E.212
+     * number beginning with the mobile country code, three to eight octets.
+     * 3GPP TS 33.108, clause 13.2, table 13.2.1-2, and annex B.13.
+     * 
      * @public
      * @readonly
      */
     readonly targetImsi: OCTET_STRING;
     /**
      * @summary `targetRole`.
+     * @description
+     * 
+     * Whether the target is the announcing UE or the monitoring UE. Required.
+     * The role decides which conditional discovery parameters apply. 3GPP TS
+     * 33.108, clause 13.2.2.2.
+     * 
      * @public
      * @readonly
      */
     readonly targetRole: TargetRole;
     /**
      * @summary `directDiscoveryData`.
+     * @description
+     * 
+     * PLMN, application identity, application code, optional mask, and validity
+     * timer for this discovery event. 3GPP TS 33.108, clause 13.2 and annex
+     * B.13.
+     * 
      * @public
      * @readonly
      */
     readonly directDiscoveryData: DirectDiscoveryData;
     /**
      * @summary `metadata`.
+     * @description
+     * 
+     * Metadata for a ProSe application identity. On a discovery request,
+     * conditional and only when the target is announcing. On a match report,
+     * conditional when available. The text layout is not defined. 3GPP TS
+     * 33.108, clause 13.2.2.2, tables 13.2.2.2-1 and 13.2.2.2-2.
+     * 
      * @public
      * @readonly
      */
     readonly metadata: OPTIONAL<UTF8String>;
     /**
      * @summary `otherUeImsi`.
+     * @description
+     * 
+     * IMSI of the other UE. Used on a match report, where a second UE is
+     * involved, and only when available. Not listed on the discovery-request
+     * record. Same MAP / E.212 form as the target IMSI, three to eight octets.
+     * 3GPP TS 33.108, clause 13.2, table 13.2.2.2-2, and annex B.13.
+     * 
      * @public
      * @readonly
      */

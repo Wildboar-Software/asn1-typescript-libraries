@@ -12,6 +12,32 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary EpsIRIContent
  * @description
  * 
+ * One HI2 record delivered to the LEMF (clause 10.5.1, annex B.9).
+ * 
+ * iRI-Begin-record is the first event of an EPS communication: successful
+ * bearer or tunnel establishment, start of interception with an active bearer
+ * or tunnel, an S-GW relocation that changes the PLMN, or entry to an
+ * interception area with a bearer or tunnel active. The last of those is for
+ * further study (clause 10.5.1.2). The module comment requires at least one
+ * optional parameter.
+ * 
+ * iRI-End-record is the last event: bearer or tunnel deactivation, or
+ * resource-allocation deactivation (clause 10.5.1.4).
+ * 
+ * iRI-Continue-record is a later event of the same communication, such as
+ * bearer modification or a PMIP or DSMIP session modification (clause
+ * 10.5.1.3). The module comment requires at least one optional parameter.
+ * 
+ * iRI-Report-record is a non-communication action, an unsuccessful attempt, a
+ * LALS report, or another report in clause 10.5.1.1. The module comment
+ * requires at least one optional parameter. Clause 16.4 also uses the report
+ * record for a cell-site report.
+ * 
+ * The same four records carry IMS, PTC, and ProSe IRI when those clauses use
+ * this module.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

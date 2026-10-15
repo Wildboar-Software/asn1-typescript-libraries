@@ -13,6 +13,12 @@ import { I_WLAN_parameters, _decode_I_WLAN_parameters, _encode_I_WLAN_parameters
  * @summary Services_Data_Information
  * @description
  * 
+ * Complementary information associated with the basic data call. For I-WLAN
+ * this is the WLAN parameters. Table 8.2 places the access-point name and the
+ * local and remote UE addresses here.
+ * 
+ * 3GPP TS 33.108, table 8.2 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,21 @@ export
 class Services_Data_Information {
     /**
      * @summary `i_WLAN_parameters`.
+     * @description
+     * 
+     * WLAN access-point name and the target's local and remote IP addresses for
+     * the data call.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly i_WLAN_parameters: OPTIONAL<I_WLAN_parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

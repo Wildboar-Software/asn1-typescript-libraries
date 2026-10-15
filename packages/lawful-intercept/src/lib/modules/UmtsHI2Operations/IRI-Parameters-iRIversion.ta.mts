@@ -19,6 +19,19 @@ enum _enum_for_IRI_Parameters_iRIversion {
  * @summary IRI_Parameters_iRIversion
  * @description
  * 
+ * Version of these IRI parameters. If the component is absent, version 1 is
+ * meant.
+ * 
+ * The parameter has been redundant since hi2DomainId was added in TS 33.108
+ * v5.0.0. Annex B.3 recommends always sending lastVersion (8), even when the
+ * version arc of that OID changes, so an older LEMF still accepts the record.
+ * Value 5 shall not be used: it was skipped in version 5 of this module. Value
+ * 7 was omitted to stay aligned with ETSI TS 101 671.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,6 +55,12 @@ type IRI_Parameters_iRIversion = _enum_for_IRI_Parameters_iRIversion | ENUMERATE
 
 /**
  * @summary IRI_Parameters_iRIversion_version2
+ * @description
+ * 
+ * IRI parameter version 2. If this component is absent, the record is version
+ * 1.
+ * 
+ * 3GPP TS 33.108, annex B.3.
  * @constant
  * @type {number}
  */
@@ -50,6 +69,10 @@ const IRI_Parameters_iRIversion_version2: IRI_Parameters_iRIversion = 2; /* LONG
 
 /**
  * @summary version2
+ * @description
+ * 
+ * IRI parameter version 2. Absence of the component means version 1 (annex
+ * B.3).
  * @constant
  * @type {number}
  */
@@ -58,6 +81,11 @@ const version2: IRI_Parameters_iRIversion = IRI_Parameters_iRIversion_version2; 
 
 /**
  * @summary IRI_Parameters_iRIversion_version3
+ * @description
+ * 
+ * IRI parameter version 3, carried as an extension addition.
+ * 
+ * 3GPP TS 33.108, annex B.3.
  * @constant
  * @type {number}
  */
@@ -66,6 +94,9 @@ const IRI_Parameters_iRIversion_version3: IRI_Parameters_iRIversion = 3; /* LONG
 
 /**
  * @summary version3
+ * @description
+ * 
+ * IRI parameter version 3 (annex B.3).
  * @constant
  * @type {number}
  */
@@ -74,6 +105,12 @@ const version3: IRI_Parameters_iRIversion = IRI_Parameters_iRIversion_version3; 
 
 /**
  * @summary IRI_Parameters_iRIversion_version4
+ * @description
+ * 
+ * IRI parameter version 4. Value 5 shall not be used: it was skipped in version
+ * 5 of this module.
+ * 
+ * 3GPP TS 33.108, annex B.3.
  * @constant
  * @type {number}
  */
@@ -82,6 +119,10 @@ const IRI_Parameters_iRIversion_version4: IRI_Parameters_iRIversion = 4; /* LONG
 
 /**
  * @summary version4
+ * @description
+ * 
+ * IRI parameter version 4. Value 5 was skipped and shall not be used (annex
+ * B.3).
  * @constant
  * @type {number}
  */
@@ -90,6 +131,12 @@ const version4: IRI_Parameters_iRIversion = IRI_Parameters_iRIversion_version4; 
 
 /**
  * @summary IRI_Parameters_iRIversion_version6
+ * @description
+ * 
+ * IRI parameter version 6. Value 7 was omitted so the numbering matches ETSI TS
+ * 101 671.
+ * 
+ * 3GPP TS 33.108, annex B.3.
  * @constant
  * @type {number}
  */
@@ -98,6 +145,10 @@ const IRI_Parameters_iRIversion_version6: IRI_Parameters_iRIversion = 6; /* LONG
 
 /**
  * @summary version6
+ * @description
+ * 
+ * IRI parameter version 6. Value 7 was omitted to match ETSI TS 101 671 (annex
+ * B.3).
  * @constant
  * @type {number}
  */
@@ -106,6 +157,12 @@ const version6: IRI_Parameters_iRIversion = IRI_Parameters_iRIversion_version6; 
 
 /**
  * @summary IRI_Parameters_iRIversion_lastVersion
+ * @description
+ * 
+ * Value 8. Annex B.3 recommends always sending this, even when the HI2 domain
+ * identifier's version arc changes, so an older LEMF still accepts the record.
+ * 
+ * 3GPP TS 33.108, annex B.3.
  * @constant
  * @type {number}
  */
@@ -114,6 +171,10 @@ const IRI_Parameters_iRIversion_lastVersion: IRI_Parameters_iRIversion = 8; /* L
 
 /**
  * @summary lastVersion
+ * @description
+ * 
+ * Value 8, the version annex B.3 says to send even after the domain OID
+ * changes.
  * @constant
  * @type {number}
  */

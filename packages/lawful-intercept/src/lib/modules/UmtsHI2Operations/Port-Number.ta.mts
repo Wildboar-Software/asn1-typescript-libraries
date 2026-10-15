@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Port_Number
  * @description
  * 
+ * Port number in the range 0..65535. Used as the PTC server port for the RTP
+ * session (annex B.3). Table 17.2.20 requires that address and port on a
+ * pre-established session record and describes them as the IP address and port
+ * of the target at the PTC server.
+ * 
+ * 3GPP TS 33.108, clause 17.2.20 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

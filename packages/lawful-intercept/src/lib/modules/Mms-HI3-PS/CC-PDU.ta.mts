@@ -14,6 +14,14 @@ import { MMSLIC_header, _decode_MMSLIC_header, _encode_MMSLIC_header } from "../
  * @summary CC_PDU
  * @description
  * 
+ * MMS CC PDU. The ICE gives it to DF3, which delivers it on HI3. The PDU
+ * contains the content of an MMS, with correlation to the IRI (clause 15.3.1
+ * and table 15.3.7.1).
+ * 
+ * 3GPP TS 33.108, clause 15.3.7 and annex B.16.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +38,19 @@ export
 class CC_PDU {
     /**
      * @summary `mmSLIC_header`.
+     * @description
+     * 
+     * MMS correlation header. 3GPP TS 33.108, table 15.3.7.1 and annex B.16.
      * @public
      * @readonly
      */
     readonly mmSLIC_header: MMSLIC_header;
     /**
      * @summary `payload`.
+     * @description
+     * 
+     * Content of the MMS. Table 15.3.7.1 requires it. 3GPP TS 33.108, clause
+     * 15.3.1 and clause 15.3.7.
      * @public
      * @readonly
      */

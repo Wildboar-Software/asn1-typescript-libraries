@@ -13,6 +13,12 @@ import { IMSIdentity, _decode_IMSIdentity, _encode_IMSIdentity } from "../CONFHI
  * @summary PartyIdentity
  * @description
  * 
+ * IMS identities of the target or of a conference party. Provide at least one,
+ * and any other that is available. In most cases either the public or the
+ * private identity is observed, not both. Table 11.2 maps an observed NAI here
+ * as well; no NAI component is defined. 3GPP TS 33.108, clause 11.5, table 11.2
+ * note 1, and annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,22 @@ export
 class PartyIdentity {
     /**
      * @summary `iMPU`.
+     * @description
+     * 
+     * IMS public user identities of the party. The MRFC may not observe them.
+     * 3GPP TS 33.108, clause 11.5, table 11.2.
+     * 
      * @public
      * @readonly
      */
     readonly iMPU: OPTIONAL<IMSIdentity[]>;
     /**
      * @summary `iMPI`.
+     * @description
+     * 
+     * IMS private user identities of the party. The MRFC may not observe them.
+     * 3GPP TS 33.108, clause 11.5, table 11.2.
+     * 
      * @public
      * @readonly
      */

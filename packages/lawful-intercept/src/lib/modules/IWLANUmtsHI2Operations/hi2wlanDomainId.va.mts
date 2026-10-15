@@ -11,6 +11,14 @@ import { threeGPPSUBDomainId } from "../IWLANUmtsHI2Operations/threeGPPSUBDomain
  * @summary hi2wlanDomainId
  * @description
  * 
+ * Object identifier of the 3GPP HI2 WLAN domain. Under `threeGPPSUBDomainId`,
+ * arc 6 is hi2wlan, arc 16 is r16, and arc 1 is version-1.
+ * 
+ * The module identifier uses version-0(0). This value uses version-1(1). Each
+ * IRI record carries this identifier in `hi2iwlanDomainId`.
+ * 
+ * 3GPP TS 33.108, annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

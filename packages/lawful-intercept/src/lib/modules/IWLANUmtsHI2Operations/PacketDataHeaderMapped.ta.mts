@@ -17,6 +17,11 @@ import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_f
  * @summary PacketDataHeaderMapped
  * @description
  * 
+ * Mapped header of one packet, used when individual header fields are reported
+ * instead of a header copy.
+ * 
+ * 3GPP TS 33.108, table 8.9 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,60 +49,124 @@ export
 class PacketDataHeaderMapped {
     /**
      * @summary `sourceIPAddress`.
+     * @description
+     * 
+     * Source IP address of the packet. Conditional when header fields are
+     * mapped (table 8.9).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.9.
      * @public
      * @readonly
      */
     readonly sourceIPAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `sourcePortNumber`.
+     * @description
+     * 
+     * Source port of the packet. Conditional when header fields are mapped and
+     * the transport protocol supports port numbers (table 8.9).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.9.
      * @public
      * @readonly
      */
     readonly sourcePortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `destinationIPAddress`.
+     * @description
+     * 
+     * Destination IP address of the packet. Conditional when header fields are
+     * mapped (table 8.9).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.9.
      * @public
      * @readonly
      */
     readonly destinationIPAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `destinationPortNumber`.
+     * @description
+     * 
+     * Destination port of the packet. Conditional when header fields are mapped
+     * and the transport protocol supports port numbers (table 8.9).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.9.
      * @public
      * @readonly
      */
     readonly destinationPortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `transportProtocol`.
+     * @description
+     * 
+     * Transport protocol of the packet. For IPv4 report the Protocol field; for
+     * IPv6 report the Next Header field. Conditional when header fields are
+     * mapped (table 8.9).
+     * 
+     * Assigned Internet Protocol Numbers are listed at
+     * http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xml
+     * 
+     * 3GPP TS 33.108, table 8.2, table 8.9, and annex B.7.
      * @public
      * @readonly
      */
     readonly transportProtocol: OPTIONAL<INTEGER>;
     /**
      * @summary `packetsize`.
+     * @description
+     * 
+     * Size of the packet: Total Length in IPv4, or Payload Length in IPv6.
+     * Optional when header fields are mapped (table 8.9). Table 8.2 names this
+     * packet size.
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.9.
      * @public
      * @readonly
      */
     readonly packetsize: OPTIONAL<INTEGER>;
     /**
      * @summary `flowLabel`.
+     * @description
+     * 
+     * IPv6 flow label, the header field a source uses to label packets of a
+     * flow (RFC 3697). Conditional, and only for IPv6, when header fields are
+     * mapped (table 8.9).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.9.
      * @public
      * @readonly
      */
     readonly flowLabel: OPTIONAL<INTEGER>;
     /**
      * @summary `packetCount`.
+     * @description
+     * 
+     * Table 8.9 does not list a packet count for the mapped per-packet header.
+     * Table 8.2 defines packet count as the number of packets detected in a
+     * summary report. TS 33.108 does not further define this component of the
+     * mapped header.
      * @public
      * @readonly
      */
     readonly packetCount: OPTIONAL<INTEGER>;
     /**
      * @summary `direction`.
+     * @description
+     * 
+     * Direction of the packet, from the target or to the target. Mandatory when
+     * header fields are mapped (table 8.9). Table 8.2 names this
+     * packetDirection.
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.9.
      * @public
      * @readonly
      */
     readonly direction: TPDU_direction;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

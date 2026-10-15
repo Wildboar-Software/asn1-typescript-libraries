@@ -17,6 +17,14 @@ enum _enum_for_InitiationCause {
  * @summary InitiationCause
  * @description
  * 
+ * Who originated a PTC session initiation. Mandatory on the session-initiation
+ * begin record (table 17.2.4). If an associate originated it, include that
+ * associate's identity when known. The module comment covers all three values
+ * in one sentence and does not define them separately: the target requests or
+ * receives a session initiation from the network or another party, and the
+ * originating PTC party is identified if known. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +46,11 @@ type InitiationCause = _enum_for_InitiationCause | ENUMERATED;
 
 /**
  * @summary InitiationCause_requests
+ * @description
+ * 
+ * The shared module comment says a session initiation is requested. The
+ * specification does not further separate this value from the other two.
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +59,10 @@ const InitiationCause_requests: InitiationCause = 1; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary requests
+ * @description
+ * 
+ * Session initiation was requested (module comment).
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +71,11 @@ const requests: InitiationCause = InitiationCause_requests; /* SHORT_NAMED_ENUME
 
 /**
  * @summary InitiationCause_received
+ * @description
+ * 
+ * The shared module comment says a session initiation is received. The
+ * specification does not further separate this value from the other two.
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +84,10 @@ const InitiationCause_received: InitiationCause = 2; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary received
+ * @description
+ * 
+ * Session initiation was received (module comment).
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +96,12 @@ const received: InitiationCause = InitiationCause_received; /* SHORT_NAMED_ENUME
 
 /**
  * @summary InitiationCause_pTCOriginatingId
+ * @description
+ * 
+ * The shared module comment says to identify the originating PTC party if
+ * known. Table 17.2.4 requires the associate's identity when an associate
+ * originated the session and the identity is known.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +110,10 @@ const InitiationCause_pTCOriginatingId: InitiationCause = 3; /* LONG_NAMED_ENUME
 
 /**
  * @summary pTCOriginatingId
+ * @description
+ * 
+ * Originating PTC party, when known (table 17.2.4).
+ * 
  * @constant
  * @type {number}
  */

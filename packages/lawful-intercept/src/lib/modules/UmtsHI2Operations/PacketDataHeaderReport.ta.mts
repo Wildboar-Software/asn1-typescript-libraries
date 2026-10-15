@@ -14,6 +14,10 @@ import { PacketDataHeaderCopy, _decode_PacketDataHeaderCopy, _encode_PacketDataH
  * @summary PacketDataHeaderReport
  * @description
  * 
+ * Per-packet packet-data header information: either mapped header fields or a
+ * copy of the headers, excluding contents (table 6.9B). 3GPP TS 33.108, clause
+ * 6.5.1.1 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

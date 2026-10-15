@@ -17,6 +17,11 @@ enum _enum_for_ImminentPerilInd {
  * @summary ImminentPerilInd
  * @description
  * 
+ * Which MCPTT imminent-peril group-call signal this is. Mandatory on the
+ * imminent-peril group-call report: a request toward the target, a response
+ * from the target, or a cancel (table 17.3.6, clause 17.3.6). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +42,11 @@ type ImminentPerilInd = _enum_for_ImminentPerilInd | ENUMERATED;
 
 /**
  * @summary ImminentPerilInd_request
+ * @description
+ * 
+ * Imminent-peril group-call request (table 17.3.6). The module comment names
+ * the request, response, or cancel detected at the MCPTT server.
+ * 
  * @constant
  * @type {number}
  */
@@ -45,6 +55,10 @@ const ImminentPerilInd_request: ImminentPerilInd = 1; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary request
+ * @description
+ * 
+ * Imminent-peril call request (clause 17.3.6).
+ * 
  * @constant
  * @type {number}
  */
@@ -53,6 +67,10 @@ const request: ImminentPerilInd = ImminentPerilInd_request; /* SHORT_NAMED_ENUME
 
 /**
  * @summary ImminentPerilInd_response
+ * @description
+ * 
+ * Response to an imminent-peril group call (table 17.3.6).
+ * 
  * @constant
  * @type {number}
  */
@@ -61,6 +79,10 @@ const ImminentPerilInd_response: ImminentPerilInd = 2; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary response
+ * @description
+ * 
+ * Imminent-peril call response (clause 17.3.6).
+ * 
  * @constant
  * @type {number}
  */
@@ -69,6 +91,10 @@ const response: ImminentPerilInd = ImminentPerilInd_response; /* SHORT_NAMED_ENU
 
 /**
  * @summary ImminentPerilInd_cancel
+ * @description
+ * 
+ * Cancel of an imminent-peril group call (table 17.3.6).
+ * 
  * @constant
  * @type {number}
  */
@@ -77,6 +103,10 @@ const ImminentPerilInd_cancel: ImminentPerilInd = 3; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary cancel
+ * @description
+ * 
+ * Imminent-peril call cancel (clause 17.3.6).
+ * 
  * @constant
  * @type {number}
  */

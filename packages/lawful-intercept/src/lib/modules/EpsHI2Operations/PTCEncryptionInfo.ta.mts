@@ -13,6 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCEncryptionInfo
  * @description
  * 
+ * Decryption material for PTC media that the CSP provides or manages (clause
+ * 18). Sent when the keys are needed, and again on each rekey, coincident with
+ * the change. IRI parameter ptcEncryption. Table 18.1 requires the cipher and
+ * the key. The crypto context, salt, key encoding, and any other decrypting
+ * information are conditional as stated on each component.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,42 +41,68 @@ export
 class PTCEncryptionInfo {
     /**
      * @summary `cipher`.
+     * @description
+     * 
+     * Name of the cipher. Mandatory (table 18.1).
      * @public
      * @readonly
      */
     readonly cipher: UTF8String;
     /**
      * @summary `cryptoContext`.
+     * @description
+     * 
+     * Context that ties these keys to a session or a stream, when that
+     * association is needed. Conditional (table 18.1 and table 18.2).
      * @public
      * @readonly
      */
     readonly cryptoContext: OPTIONAL<UTF8String>;
     /**
      * @summary `key`.
+     * @description
+     * 
+     * Key needed to decipher the PTC media. Mandatory (table 18.1).
      * @public
      * @readonly
      */
     readonly key: UTF8String;
     /**
      * @summary `keyEncoding`.
+     * @description
+     * 
+     * Encoding of the key when the encoding is other than binary (table 18.1).
+     * The module does not mark the component optional, so a value is always
+     * encoded. The handover text does not say what to send when the encoding is
+     * binary.
      * @public
      * @readonly
      */
     readonly keyEncoding: UTF8String;
     /**
      * @summary `salt`.
+     * @description
+     * 
+     * Initial salt, when the cipher requires one. Conditional (table 18.1).
      * @public
      * @readonly
      */
     readonly salt: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCOther`.
+     * @description
+     * 
+     * Any other information required to decrypt the data. Conditional (table
+     * 18.1 and table 18.2).
      * @public
      * @readonly
      */
     readonly pTCOther: OPTIONAL<UTF8String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

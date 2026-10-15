@@ -13,6 +13,12 @@ import { GcseIRISequence, _decode_GcseIRISequence, _encode_GcseIRISequence } fro
  * @summary GcseIRIsContent
  * @description
  * 
+ * One GCSE IRI record, or a sequence of them for the same LEA destination.
+ *
+ * Aggregation is optional and only when several records are already available.
+ * Records are sent immediately and are not held back in order to aggregate.
+ * 3GPP TS 33.108, annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

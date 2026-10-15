@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a conference T-PDU: from or to the target, unknown, the
+ * conference as target, from or to the mixer, or combined.
+ * 
+ * 3GPP TS 33.108, annex L.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,6 +52,13 @@ enum _enum_for_TPDU_direction {
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a conference T-PDU: from or to the target, unknown, the
+ * conference as target, from or to the mixer, or combined.
+ * 
+ * 3GPP TS 33.108, annex L.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,6 +89,13 @@ type TPDU_direction = _enum_for_TPDU_direction;
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a conference T-PDU: from or to the target, unknown, the
+ * conference as target, from or to the mixer, or combined.
+ * 
+ * 3GPP TS 33.108, annex L.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -103,6 +124,9 @@ const TPDU_direction = _enum_for_TPDU_direction;
 
 /**
  * @summary TPDU_direction_from_target
+ * @description
+ * 
+ * CC coming from the target to the conference mixer. 3GPP TS 33.108, annex L.2.
  * @constant
  * @type {number}
  */
@@ -111,6 +135,9 @@ const TPDU_direction_from_target: TPDU_direction = TPDU_direction.from_target; /
 
 /**
  * @summary from_target
+ * @description
+ * 
+ * From the target to the conference mixer. Annex L.2.
  * @constant
  * @type {number}
  */
@@ -119,6 +146,10 @@ const from_target: TPDU_direction = TPDU_direction.from_target; /* SHORT_NAMED_E
 
 /**
  * @summary TPDU_direction_to_target
+ * @description
+ * 
+ * CC sent towards the target from the conference mixer. 3GPP TS 33.108, annex
+ * L.2.
  * @constant
  * @type {number}
  */
@@ -127,6 +158,9 @@ const TPDU_direction_to_target: TPDU_direction = TPDU_direction.to_target; /* LO
 
 /**
  * @summary to_target
+ * @description
+ * 
+ * Towards the target from the conference mixer. Annex L.2.
  * @constant
  * @type {number}
  */
@@ -135,6 +169,9 @@ const to_target: TPDU_direction = TPDU_direction.to_target; /* SHORT_NAMED_ENUME
 
 /**
  * @summary TPDU_direction_unknown
+ * @description
+ * 
+ * T-PDU direction cannot be determined. 3GPP TS 33.108, annex L.2.
  * @constant
  * @type {number}
  */
@@ -143,6 +180,9 @@ const TPDU_direction_unknown: TPDU_direction = TPDU_direction.unknown; /* LONG_N
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * Direction cannot be determined. Annex L.2.
  * @constant
  * @type {number}
  */
@@ -151,6 +191,10 @@ const unknown: TPDU_direction = TPDU_direction.unknown; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary TPDU_direction_conftarget
+ * @description
+ * 
+ * The conference itself is the target. The module comment says this denotes
+ * that there is no directionality. 3GPP TS 33.108, annex L.2.
  * @constant
  * @type {number}
  */
@@ -159,6 +203,9 @@ const TPDU_direction_conftarget: TPDU_direction = TPDU_direction.conftarget; /* 
 
 /**
  * @summary conftarget
+ * @description
+ * 
+ * Conference is the target; no directionality. Annex L.2.
  * @constant
  * @type {number}
  */
@@ -167,6 +214,10 @@ const conftarget: TPDU_direction = TPDU_direction.conftarget; /* SHORT_NAMED_ENU
 
 /**
  * @summary TPDU_direction_from_mixer
+ * @description
+ * 
+ * CC coming from the conference mixer: the stream the conference server sends
+ * towards the conference party. 3GPP TS 33.108, annex L.2.
  * @constant
  * @type {number}
  */
@@ -175,6 +226,9 @@ const TPDU_direction_from_mixer: TPDU_direction = TPDU_direction.from_mixer; /* 
 
 /**
  * @summary from_mixer
+ * @description
+ * 
+ * From the conference mixer towards a party. Annex L.2.
  * @constant
  * @type {number}
  */
@@ -183,6 +237,10 @@ const from_mixer: TPDU_direction = TPDU_direction.from_mixer; /* SHORT_NAMED_ENU
 
 /**
  * @summary TPDU_direction_to_mixer
+ * @description
+ * 
+ * CC sent towards the conference mixer from the conference party. 3GPP TS
+ * 33.108, annex L.2.
  * @constant
  * @type {number}
  */
@@ -191,6 +249,9 @@ const TPDU_direction_to_mixer: TPDU_direction = TPDU_direction.to_mixer; /* LONG
 
 /**
  * @summary to_mixer
+ * @description
+ * 
+ * Towards the conference mixer from a party. Annex L.2.
  * @constant
  * @type {number}
  */
@@ -199,6 +260,10 @@ const to_mixer: TPDU_direction = TPDU_direction.to_mixer; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary TPDU_direction_combined
+ * @description
+ * 
+ * Combined CC, to and from the conference mixer, or to and from the target.
+ * 3GPP TS 33.108, annex L.2.
  * @constant
  * @type {number}
  */
@@ -207,6 +272,9 @@ const TPDU_direction_combined: TPDU_direction = TPDU_direction.combined; /* LONG
 
 /**
  * @summary combined
+ * @description
+ * 
+ * Combined to and from the mixer, or to and from the target. Annex L.2.
  * @constant
  * @type {number}
  */

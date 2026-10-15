@@ -14,6 +14,13 @@ import { ProSeMaskSequence, _decode_ProSeMaskSequence, _encode_ProSeMaskSequence
  * @summary ProSeAppMask
  * @description
  * 
+ * One mask, or a list of masks, for a ProSe application code at a monitoring
+ * UE.
+ *
+ * `proseMask` is a single 23-octet mask formatted like the application code.
+ * Together with that code it forms a filter. `proseMaskSequence` carries more
+ * than one such mask. 3GPP TS 33.108, annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

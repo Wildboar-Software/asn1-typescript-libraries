@@ -14,6 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GcseGroupCharacteristics
  * @description
  * 
+ * Characteristics of the group communications, for example voice or video. The
+ * encoding name and the value are separate. The value layout is not defined
+ * beyond that name. 3GPP TS 33.108, clause 14.2.6, table 14.2, and annex
+ * B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,23 @@ export
 class GcseGroupCharacteristics {
     /**
      * @summary `characteristicsEncoding`.
+     * @description
+     * 
+     * Name of the encoding used for the characteristics octets. 3GPP TS 33.108,
+     * annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly characteristicsEncoding: OPTIONAL<UTF8String>;
     /**
      * @summary `characteristics`.
+     * @description
+     * 
+     * Characteristic octets in the named encoding. Clause 14's example is voice
+     * or video. No layout is defined. 3GPP TS 33.108, table 14.2 and annex
+     * B.14.1.
+     * 
      * @public
      * @readonly
      */

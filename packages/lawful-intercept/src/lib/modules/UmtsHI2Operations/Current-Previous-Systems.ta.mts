@@ -13,6 +13,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Current_Previous_Systems
  * @description
  * 
+ * Current and previous serving system of the target, taken from the intercepted
+ * MAP or Diameter message at the HLR.
+ * 
+ * On register location the current VPLMN identity is mandatory and the previous
+ * system is included when available (table 6.9F). On cancel location the
+ * previous system is included when available (table 6.9E). S4-SGSN identities
+ * are Diameter Origin-Host and Origin-Realm.
+ * 
+ * 3GPP TS 33.108, table 6.2, table 6.9E, and table 6.9F.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,54 +56,116 @@ export
 class Current_Previous_Systems {
     /**
      * @summary `serving_System_Identifier`.
+     * @description
+     * 
+     * Current VPLMN identity (MCC and MNC, ITU-T E.212). Table 6.9F makes the
+     * current serving-system identifier mandatory on register location.
+     * 
+     * Table 6.2's path says current-Serving-System-Identifier. The annex B.3
+     * component is serving-System-Identifier.
+     * 
+     * 3GPP TS 33.108, table 6.9F and annex B.3.
      * @public
      * @readonly
      */
     readonly serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `current_Serving_SGSN_Number`.
+     * @description
+     * 
+     * E.164 number of the current serving SGSN, from the intercepted MAP
+     * message. Include it when available (table 6.9F).
+     * 
+     * 3GPP TS 33.108, table 6.9F and annex B.3.
      * @public
      * @readonly
      */
     readonly current_Serving_SGSN_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `current_Serving_SGSN_Address`.
+     * @description
+     * 
+     * IP address of the current serving SGSN, or its Diameter Origin-Host and
+     * Origin-Realm. Include it when available (table 6.9F).
+     * 
+     * 3GPP TS 33.108, table 6.2 and annex B.3.
      * @public
      * @readonly
      */
     readonly current_Serving_SGSN_Address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `current_Serving_S4_SGSN_Address`.
+     * @description
+     * 
+     * Diameter Origin-Host and Origin-Realm of the current serving S4-SGSN.
+     * Table 6.9F: include it when available.
+     * 
+     * Table 6.2's flattened path for the S4 row repeats the non-S4 SGSN
+     * address. This component is the S4 identity defined in annex B.3.
+     * 
+     * 3GPP TS 33.108, table 6.9F and annex B.3.
      * @public
      * @readonly
      */
     readonly current_Serving_S4_SGSN_Address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `previous_Serving_System_Identifier`.
+     * @description
+     * 
+     * Previous VPLMN identity (MCC and MNC, ITU-T E.212). Include it when
+     * available on cancel location and on register location (tables 6.9E and
+     * 6.9F).
+     * 
+     * 3GPP TS 33.108, table 6.9E and annex B.3.
      * @public
      * @readonly
      */
     readonly previous_Serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `previous_Serving_SGSN_Number`.
+     * @description
+     * 
+     * E.164 number of the previous serving SGSN, from the intercepted MAP
+     * message. Include it when available (tables 6.9E and 6.9F). The annex
+     * comment spells the node SGCN.
+     * 
+     * 3GPP TS 33.108, table 6.9E and annex B.3.
      * @public
      * @readonly
      */
     readonly previous_Serving_SGSN_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `previous_Serving_SGSN_Address`.
+     * @description
+     * 
+     * IP address of the previous serving SGSN, or its Diameter Origin-Host and
+     * Origin-Realm. Include it when available (tables 6.9E and 6.9F).
+     * 
+     * 3GPP TS 33.108, table 6.9E and annex B.3.
      * @public
      * @readonly
      */
     readonly previous_Serving_SGSN_Address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `previous_Serving_S4_SGSN_Address`.
+     * @description
+     * 
+     * Diameter Origin-Host and Origin-Realm of the previous serving S4-SGSN.
+     * Include it when available (tables 6.9E and 6.9F).
+     * 
+     * 3GPP TS 33.108, table 6.9E and annex B.3.
      * @public
      * @readonly
      */
     readonly previous_Serving_S4_SGSN_Address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

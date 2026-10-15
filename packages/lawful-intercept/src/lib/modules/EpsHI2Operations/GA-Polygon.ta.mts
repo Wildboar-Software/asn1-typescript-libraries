@@ -13,6 +13,11 @@ import { GA_Polygon_Item, _decode_GA_Polygon_Item, _encode_GA_Polygon_Item } fro
  * @summary GA_Polygon
  * @description
  * 
+ * Polygon shape of a UMTS location: one to maxNrOfPoints vertices. The module
+ * sets that maximum to 15. Used when the UMTS location inside an EPS or PS
+ * location is a polygon. Clause 10 does not describe the shape further. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

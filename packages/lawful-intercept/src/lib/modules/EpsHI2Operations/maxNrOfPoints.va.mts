@@ -9,6 +9,11 @@ import {
  * @summary maxNrOfPoints
  * @description
  * 
+ * Upper bound of 15 points in a UMTS location polygon (annex B.9). The handover
+ * prose does not discuss the bound.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

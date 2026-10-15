@@ -1,3 +1,19 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `GCSE-HI3`, `IMPLICIT TAGS`. HI3 content of communication for
+ * GCSE group communications.
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulIntercept(2) threeGPP(4) hi3gcse(14) r17(17) version-0(0)}`.
+ * 
+ * 3GPP TS 33.108, clause 14.2.7 and annex B.14.2. Clause 14.2.1: when the GCS
+ * AS is in the intercepting operator's network, interception is similar to IMS
+ * conferencing, with the GCS AS as the single functional entity.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
 export {
     Gcse_CC_PDU,
     _decode_Gcse_CC_PDU,

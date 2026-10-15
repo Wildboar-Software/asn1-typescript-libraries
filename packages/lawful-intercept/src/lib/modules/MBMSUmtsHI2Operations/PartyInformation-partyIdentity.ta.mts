@@ -14,6 +14,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PartyInformation_partyIdentity
  * @description
  * 
+ * Target identifier for the party. Clause 9 records require the IMSI.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +37,22 @@ export
 class PartyInformation_partyIdentity {
     /**
      * @summary `imsi`.
+     * @description
+     * 
+     * IMSI of the target. International Mobile Station Identity, an E.212
+     * number beginning with the Mobile Country Code, in the MAP format of TS
+     * 29.002. Mandatory on every clause 9.5.1 record.
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly imsi: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

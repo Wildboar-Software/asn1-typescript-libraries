@@ -27,6 +27,10 @@ enum _enum_for_Umts_Cs_Event {
  * @summary Umts_Cs_Event
  * @description
  * 
+ * Circuit-switched event that caused the IRI, or that the record is associated
+ * with. Table 5.4 assigns the record type. If the event is omitted, other
+ * parameters stand in for it. 3GPP TS 33.108, clause 5.2.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,6 +60,13 @@ type Umts_Cs_Event = _enum_for_Umts_Cs_Event | ENUMERATED;
 
 /**
  * @summary Umts_Cs_Event_call_establishment
+ * @description
+ * 
+ * Call establishment, including when the target is originating, terminating, or
+ * brought in by a supplementary service. IRI-BEGIN. Destination information may
+ * still be incomplete; send what is known and complete it later. 3GPP TS
+ * 33.108, clauses 5.2.1 and 5.2.3, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -64,6 +75,10 @@ const Umts_Cs_Event_call_establishment: Umts_Cs_Event = 1; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary call_establishment
+ * @description
+ * 
+ * Call establishment. IRI-BEGIN. 3GPP TS 33.108, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -72,6 +87,11 @@ const call_establishment: Umts_Cs_Event = Umts_Cs_Event_call_establishment; /* S
 
 /**
  * @summary Umts_Cs_Event_answer
+ * @description
+ * 
+ * Answer during the active phase. IRI-CONTINUE. 3GPP TS 33.108, clause 5.2.3,
+ * table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -80,6 +100,10 @@ const Umts_Cs_Event_answer: Umts_Cs_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answer
+ * @description
+ * 
+ * Answer. IRI-CONTINUE. 3GPP TS 33.108, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -88,6 +112,13 @@ const answer: Umts_Cs_Event = Umts_Cs_Event_answer; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary Umts_Cs_Event_supplementary_Service
+ * @description
+ * 
+ * A supplementary service event on a call in progress. IRI-CONTINUE. Which IRI
+ * items and content links apply depends on the service, on option A or B, and
+ * on whether the target or the other party is the served user (clauses 5.4 and
+ * 5.5). 3GPP TS 33.108, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -96,6 +127,10 @@ const Umts_Cs_Event_supplementary_Service: Umts_Cs_Event = 3; /* LONG_NAMED_ENUM
 
 /**
  * @summary supplementary_Service
+ * @description
+ * 
+ * Supplementary service. IRI-CONTINUE. 3GPP TS 33.108, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -104,6 +139,11 @@ const supplementary_Service: Umts_Cs_Event = Umts_Cs_Event_supplementary_Service
 
 /**
  * @summary Umts_Cs_Event_handover
+ * @description
+ * 
+ * Handover during the active phase. IRI-CONTINUE. 3GPP TS 33.108, clause 5.2.3,
+ * table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -112,6 +152,10 @@ const Umts_Cs_Event_handover: Umts_Cs_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary handover
+ * @description
+ * 
+ * Handover. IRI-CONTINUE. 3GPP TS 33.108, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -120,6 +164,12 @@ const handover: Umts_Cs_Event = Umts_Cs_Event_handover; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary Umts_Cs_Event_release
+ * @description
+ * 
+ * Release, when the target identity becomes inactive. IRI-END. Also used when a
+ * transferred target leaves the call, and when barring releases a call that
+ * already has IRI. 3GPP TS 33.108, clauses 5.2.1, 5.5.4, and 5.5.16, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -128,6 +178,10 @@ const Umts_Cs_Event_release: Umts_Cs_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE *
 
 /**
  * @summary release
+ * @description
+ * 
+ * Release. IRI-END. 3GPP TS 33.108, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -136,6 +190,12 @@ const release: Umts_Cs_Event = Umts_Cs_Event_release; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary Umts_Cs_Event_sMS
+ * @description
+ * 
+ * SMS. IRI-REPORT. There is no content-link correlation for this non-call
+ * record. Presence of the SMS contents can indicate the event if this value is
+ * omitted. 3GPP TS 33.108, clauses 5.1.2 and 5.2.3, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -144,6 +204,10 @@ const Umts_Cs_Event_sMS: Umts_Cs_Event = 6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMS
+ * @description
+ * 
+ * SMS. IRI-REPORT. 3GPP TS 33.108, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -152,6 +216,10 @@ const sMS: Umts_Cs_Event = Umts_Cs_Event_sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_location_update
+ * @description
+ * 
+ * Location update. IRI-REPORT. 3GPP TS 33.108, clause 5.2.3, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -160,6 +228,10 @@ const Umts_Cs_Event_location_update: Umts_Cs_Event = 7; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary location_update
+ * @description
+ * 
+ * Location update. IRI-REPORT. 3GPP TS 33.108, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -168,6 +240,12 @@ const location_update: Umts_Cs_Event = Umts_Cs_Event_location_update; /* SHORT_N
 
 /**
  * @summary Umts_Cs_Event_subscriber_Controlled_Input
+ * @description
+ * 
+ * Subscriber controlled input: activation, deactivation, or interrogation of a
+ * service. IRI-REPORT, which shall say whether the target's request succeeded.
+ * No content correlation. 3GPP TS 33.108, clauses 5.2.2.4 and 5.4.5, table 5.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -176,6 +254,10 @@ const Umts_Cs_Event_subscriber_Controlled_Input: Umts_Cs_Event = 8; /* LONG_NAME
 
 /**
  * @summary subscriber_Controlled_Input
+ * @description
+ * 
+ * Subscriber controlled input. IRI-REPORT. 3GPP TS 33.108, clause 5.4.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -184,6 +266,12 @@ const subscriber_Controlled_Input: Umts_Cs_Event = Umts_Cs_Event_subscriber_Cont
 
 /**
  * @summary Umts_Cs_Event_hLR_Subscriber_Record_Change
+ * @description
+ * 
+ * HLR subscriber record change. IRI-REPORT. State the old and new MSISDN, IMSI,
+ * or IMEI. Carrier-specific HLR data is conditional. 3GPP TS 33.108, table 5.4
+ * and table 5.5B.
+ * 
  * @constant
  * @type {number}
  */
@@ -192,6 +280,10 @@ const Umts_Cs_Event_hLR_Subscriber_Record_Change: Umts_Cs_Event = 9; /* LONG_NAM
 
 /**
  * @summary hLR_Subscriber_Record_Change
+ * @description
+ * 
+ * HLR subscriber record changed. IRI-REPORT. 3GPP TS 33.108, table 5.5B.
+ * 
  * @constant
  * @type {number}
  */
@@ -200,6 +292,12 @@ const hLR_Subscriber_Record_Change: Umts_Cs_Event = Umts_Cs_Event_hLR_Subscriber
 
 /**
  * @summary Umts_Cs_Event_serving_System
+ * @description
+ * 
+ * Serving system. IRI-REPORT from the HLR. The serving-system PLMN identity is
+ * conditional. The network identifier includes the HLR's network-element
+ * identifier. 3GPP TS 33.108, table 5.4 and table 5.5A.
+ * 
  * @constant
  * @type {number}
  */
@@ -208,6 +306,10 @@ const Umts_Cs_Event_serving_System: Umts_Cs_Event = 10; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary serving_System
+ * @description
+ * 
+ * Serving system report. IRI-REPORT. 3GPP TS 33.108, table 5.5A.
+ * 
  * @constant
  * @type {number}
  */
@@ -216,6 +318,12 @@ const serving_System: Umts_Cs_Event = Umts_Cs_Event_serving_System; /* SHORT_NAM
 
 /**
  * @summary Umts_Cs_Event_cancel_Location
+ * @description
+ * 
+ * Cancel location, including a purge from the HLR sent to the SGSN. IRI-REPORT.
+ * Previous serving system, MSC number, and MSC address are conditional. 3GPP TS
+ * 33.108, table 5.4 and table 5.5C.
+ * 
  * @constant
  * @type {number}
  */
@@ -224,6 +332,10 @@ const Umts_Cs_Event_cancel_Location: Umts_Cs_Event = 11; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary cancel_Location
+ * @description
+ * 
+ * Cancel location. IRI-REPORT. 3GPP TS 33.108, table 5.5C.
+ * 
  * @constant
  * @type {number}
  */
@@ -232,6 +344,12 @@ const cancel_Location: Umts_Cs_Event = Umts_Cs_Event_cancel_Location; /* SHORT_N
 
 /**
  * @summary Umts_Cs_Event_register_Location
+ * @description
+ * 
+ * Register location. IRI-REPORT. Previous and current serving system, MSC
+ * number, and MSC address are conditional. 3GPP TS 33.108, table 5.4 and table
+ * 5.5D.
+ * 
  * @constant
  * @type {number}
  */
@@ -240,6 +358,10 @@ const Umts_Cs_Event_register_Location: Umts_Cs_Event = 12; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary register_Location
+ * @description
+ * 
+ * Register location. IRI-REPORT. 3GPP TS 33.108, table 5.5D.
+ * 
  * @constant
  * @type {number}
  */
@@ -248,6 +370,12 @@ const register_Location: Umts_Cs_Event = Umts_Cs_Event_register_Location; /* SHO
 
 /**
  * @summary Umts_Cs_Event_location_Information_Request
+ * @description
+ * 
+ * Location information request. IRI-REPORT from the HLR. Requesting network
+ * identity and requesting node type are conditional. 3GPP TS 33.108, table 5.4
+ * and table 5.5E.
+ * 
  * @constant
  * @type {number}
  */
@@ -256,6 +384,10 @@ const Umts_Cs_Event_location_Information_Request: Umts_Cs_Event = 13; /* LONG_NA
 
 /**
  * @summary location_Information_Request
+ * @description
+ * 
+ * Location information request. IRI-REPORT. 3GPP TS 33.108, table 5.5E.
+ * 
  * @constant
  * @type {number}
  */

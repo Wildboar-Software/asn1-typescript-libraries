@@ -16,6 +16,9 @@ enum _enum_for_ProSeDirectDiscoveryEvent {
  * @summary ProSeDirectDiscoveryEvent
  * @description
  * 
+ * Direct discovery event. Both values are delivered as IRI report records. 3GPP
+ * TS 33.108, clause 13.2, table 13.2.1-1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +38,15 @@ type ProSeDirectDiscoveryEvent = _enum_for_ProSeDirectDiscoveryEvent | ENUMERATE
 
 /**
  * @summary ProSeDirectDiscoveryEvent_proseDiscoveryRequest
+ * @description
+ * 
+ * The ProSe Function received a Discovery Request from the UE. IRI-REPORT. A
+ * monitoring target may have more than one PLMN, application name, timer, code,
+ * or mask; this record's discovery data carries one of each, except that
+ * several masks may be listed. The specification does not say how further PLMN,
+ * name, timer, or code values are encoded. 3GPP TS 33.108, clause 13.2.2.2,
+ * table 13.2.2.2-1.
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +55,10 @@ const ProSeDirectDiscoveryEvent_proseDiscoveryRequest: ProSeDirectDiscoveryEvent
 
 /**
  * @summary proseDiscoveryRequest
+ * @description
+ * 
+ * Discovery Request from the UE. IRI-REPORT. 3GPP TS 33.108, clause 13.2.2.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +67,12 @@ const proseDiscoveryRequest: ProSeDirectDiscoveryEvent = ProSeDirectDiscoveryEve
 
 /**
  * @summary ProSeDirectDiscoveryEvent_proseMatchReport
+ * @description
+ * 
+ * The ProSe Function received a Match Report from the UE. IRI-REPORT. The other
+ * UE's IMSI is included when available. 3GPP TS 33.108, clause 13.2.2.2, table
+ * 13.2.2.2-2.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +81,10 @@ const ProSeDirectDiscoveryEvent_proseMatchReport: ProSeDirectDiscoveryEvent = 2;
 
 /**
  * @summary proseMatchReport
+ * @description
+ * 
+ * Match Report from the UE. IRI-REPORT. 3GPP TS 33.108, clause 13.2.2.2.
+ * 
  * @constant
  * @type {number}
  */

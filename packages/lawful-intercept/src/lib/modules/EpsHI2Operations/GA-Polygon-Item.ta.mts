@@ -13,6 +13,9 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * @summary GA_Polygon_Item
  * @description
  * 
+ * One vertex of a UMTS location polygon. Clause 10 does not describe the shape
+ * further. 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +31,23 @@ export
 class GA_Polygon_Item {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     * 
+     * Latitude and longitude of this vertex. The specification text does not
+     * define the integer scaling.
+     * 
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

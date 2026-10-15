@@ -15,6 +15,11 @@ enum _enum_for_PartyInformation_party_Qualifier {
  * @summary PartyInformation_party_Qualifier
  * @description
  * 
+ * Role of the party in an I-WLAN IRI record. Annex B.7 names only the I-WLAN
+ * target.
+ * 
+ * 3GPP TS 33.108, annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +36,11 @@ type PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifi
 
 /**
  * @summary PartyInformation_party_Qualifier_iWLAN_Target
+ * @description
+ * 
+ * This party is the I-WLAN interception target.
+ * 
+ * 3GPP TS 33.108, annex B.7. Clause 8 does not further define this value.
  * @constant
  * @type {number}
  */
@@ -39,6 +49,9 @@ const PartyInformation_party_Qualifier_iWLAN_Target: PartyInformation_party_Qual
 
 /**
  * @summary iWLAN_Target
+ * @description
+ * 
+ * The party is the I-WLAN target. Clause 8 does not further define this value.
  * @constant
  * @type {number}
  */

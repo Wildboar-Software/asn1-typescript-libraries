@@ -19,6 +19,13 @@ import { ReportReason, _decode_ReportReason, _encode_ReportReason, _enum_for_Rep
  * @summary PacketFlowSummary
  * @description
  * 
+ * Reporting information for one packet flow in a summary: the flow endpoints,
+ * how many packets were seen, the interval, and why the summary was sent. A
+ * flow is the combination of source and destination IP address, source and
+ * destination port, and protocol, plus the IPv6 flow label.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9C; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,60 +55,133 @@ export
 class PacketFlowSummary {
     /**
      * @summary `sourceIPAddress`.
+     * @description
+     * 
+     * Source IP address of this packet flow. Required on a summary flow (table
+     * 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly sourceIPAddress: IPAddress;
     /**
      * @summary `sourcePortNumber`.
+     * @description
+     * 
+     * Source port of this packet flow. Conditional when the transport protocol
+     * supports port numbers (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly sourcePortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `destinationIPAddress`.
+     * @description
+     * 
+     * Destination IP address of this packet flow. Required on a summary flow
+     * (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly destinationIPAddress: IPAddress;
     /**
      * @summary `destinationPortNumber`.
+     * @description
+     * 
+     * Destination port of this packet flow. Conditional when the transport
+     * protocol supports port numbers (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly destinationPortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `transportProtocol`.
+     * @description
+     * 
+     * Transport protocol of this packet flow (for example TCP): the IPv4
+     * Protocol field or the IPv6 Next Header field. Required on a summary flow
+     * (table 6.9C). Assigned numbers are at the IANA registry cited in annex
+     * B.3.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9C, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly transportProtocol: INTEGER;
     /**
      * @summary `flowLabel`.
+     * @description
+     * 
+     * IPv6 flow label for this packet flow (IETF RFC 3697). Conditional, and
+     * only for IPv6 (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly flowLabel: OPTIONAL<INTEGER>;
     /**
      * @summary `summaryPeriod`.
+     * @description
+     * 
+     * Time from detection of the first packet of this flow in the reporting
+     * period to detection of the last packet. Required (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly summaryPeriod: ReportInterval;
     /**
      * @summary `packetCount`.
+     * @description
+     * 
+     * Number of packets detected for this flow. Required (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly packetCount: INTEGER;
     /**
      * @summary `sumOfPacketSizes`.
+     * @description
+     * 
+     * Sum of the IPv4 Total Length fields, or of the IPv6 Payload Length
+     * fields, for the packets of this flow. Optional (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly sumOfPacketSizes: INTEGER;
     /**
      * @summary `packetDataSummaryReason`.
+     * @description
+     * 
+     * Why this summary was sent: summary-timer expiry, count threshold, end of
+     * the flow (including PDP context deactivation), PDP context modification,
+     * or another or unknown reason. Required (table 6.9C). Table 6.9C names
+     * timeout, count limit, and end of session.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9C, and annex B.3.
+     * 
      * @public
      * @readonly
      */

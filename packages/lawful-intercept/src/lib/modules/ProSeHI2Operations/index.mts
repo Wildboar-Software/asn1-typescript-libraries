@@ -1,3 +1,17 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `ProSeHI2Operations`, IMPLICIT TAGS. HI2 intercept related
+ * information for ProSe Direct Discovery. That service is IRI only; there is no
+ * content of communication.
+ *
+ * 3GPP TS 33.108, clause 13.2 and annex B.13.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ *
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2) lawfulIntercept(2) threeGPP(4) hi2prose(15) r16(16) version0(0)}`
+ *
+ * Clause 13.3 (ProSe Remote UE communications) is not defined in this module.
+ */
 export {
     DirectDiscoveryData,
     _decode_DirectDiscoveryData,

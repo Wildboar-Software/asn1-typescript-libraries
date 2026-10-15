@@ -12,6 +12,18 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary MmsIRIContent
  * @description
  * 
+ * One HI2 record.
+ * 
+ * `iRI_Begin_record`, `iRI_End_record`, and `iRI_Continue_record` are not
+ * applicable in this specification. `iRI_Report_record` carries the MMS events
+ * and includes at least one of the record's optional parameters. The same
+ * record may also carry events that correspond to UMTS/GPRS or EPS. Parameters
+ * that share tag numbers stay identical from Release 14 onward.
+ * 
+ * Clause 15.3 sends every MMS event as a REPORT.
+ * 
+ * 3GPP TS 33.108, clause 15.3.6 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

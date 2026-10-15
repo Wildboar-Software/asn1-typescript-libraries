@@ -15,6 +15,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Payload_description
  * @description
  * 
+ * Optional description of the CC payload. For VoIP, a copy of the SDP so HI3
+ * can be decoded without HI2 media information. For IP-based CS voice, the
+ * media format (RFC 3551) and media attributes (RFC 4566). Payload description
+ * for RTP CS voice is sent on HI3, not on HI2.
+ * 
+ * 3GPP TS 33.108, annex K.2 and clause 5.7.4.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +48,41 @@ export
 class Payload_description {
     /**
      * @summary `copyOfSDPdescription`.
+     * @description
+     * 
+     * Copy of the SDP, format as in RFC 4566, used for VoIP. 3GPP TS 33.108,
+     * annex K.2.
      * @public
      * @readonly
      */
     readonly copyOfSDPdescription: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mediaFormat`.
+     * @description
+     * 
+     * Codec, as defined in RFC 3551. Used for IP-based delivery of CS voice.
+     * Table 5.8 requires it for that delivery. 3GPP TS 33.108, clause 5.7.4.
      * @public
      * @readonly
      */
     readonly mediaFormat: OPTIONAL<INTEGER>;
     /**
      * @summary `mediaAttributes`.
+     * @description
+     * 
+     * Extra information in the `a=` form of SDP (RFC 4566), when the media
+     * format is not enough to decode the CC. Table 5.8: typically present if
+     * and only if the media format is 32 or above. Used for IP-based CS voice.
+     * 3GPP TS 33.108, clause 5.7.4.
      * @public
      * @readonly
      */
     readonly mediaAttributes: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

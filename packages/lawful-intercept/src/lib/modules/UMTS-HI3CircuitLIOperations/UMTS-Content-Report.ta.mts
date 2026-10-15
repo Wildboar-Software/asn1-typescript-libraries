@@ -26,6 +26,15 @@ import { SMS_report, _decode_SMS_report, _encode_SMS_report } from "../UmtsHI2Op
  * @summary UMTS_Content_Report
  * @description
  * 
+ * User data sent on HI3 CS. The communication identifier is the same value as
+ * in the IRI for that call. When FTP is used, the HI3 CS domain identifier
+ * shall be sent. UUI in the content, when present, uses the ISUP user-to-user
+ * information parameter (EN 300 356), one UUI parameter per message.
+ * 
+ * 3GPP TS 33.108, annex B.6.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,54 +81,92 @@ export
 class UMTS_Content_Report {
     /**
      * @summary `hi3CSDomainId`.
+     * @description
+     * 
+     * 3GPP HI3 CS domain identifier. When FTP is used, send this to the LEMF.
+     * 3GPP TS 33.108, annex B.6.
      * @public
      * @readonly
      */
     readonly hi3CSDomainId: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `version`.
+     * @description
+     * 
+     * Redundant from 3GPP TS 33.108 v6.8.0, when the domain identifier was
+     * added. For compatibility, always send value 8 (the comment names it
+     * lastVersion; this module names it version8), even if the domain OID
+     * version arc increases.
      * @public
      * @readonly
      */
     readonly version: OPTIONAL<UMTS_Content_Report_version>;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * Lawful interception identifier of the target, also carried in the IRI.
+     * 3GPP TS 33.108, clause 5.1.4 and annex B.6.
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     * 
+     * Uniquely identifies the intercepted call; the same value as in the
+     * relevant IRI. Edition 1 of ES 201 671 called this callIdentifier. 3GPP TS
+     * 33.108, annex B.6 and clause 5.1.2.
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Time of this user-data report. 3GPP TS 33.108, annex B.6.
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `initiator`.
+     * @description
+     * 
+     * Party associated with the user data: originating, terminating,
+     * forwarded-to, or undefined. 3GPP TS 33.108, annex B.6.
      * @public
      * @readonly
      */
     readonly initiator: OPTIONAL<UMTS_Content_Report_initiator>;
     /**
      * @summary `content`.
+     * @description
+     * 
+     * User-to-user information, encoded as the ISUP user-to-user information
+     * parameter (EN 300 356). Only one UUI parameter is sent per message. 3GPP
+     * TS 33.108, annex B.6.
      * @public
      * @readonly
      */
     readonly content: OPTIONAL<Supplementary_Services>;
     /**
      * @summary `sMS_report`.
+     * @description
+     * 
+     * SMS report, when present. Clause 5.3.1 delivers SMS exceptionally via
+     * HI2. 3GPP TS 33.108, annex B.6.
      * @public
      * @readonly
      */
     readonly sMS_report: OPTIONAL<SMS_report>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

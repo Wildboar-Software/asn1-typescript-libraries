@@ -13,6 +13,11 @@ import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operation
  * @summary EPSLocation_uELocationTimestamp
  * @description
  * 
+ * Date and time the UE location was obtained (module comment; table 10.5.2,
+ * Time of Location). Conditional when a target location is provided. timestamp
+ * carries the time. timestampUnknown means the location source did not provide
+ * a time. 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

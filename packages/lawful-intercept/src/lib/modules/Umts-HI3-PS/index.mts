@@ -1,3 +1,19 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `Umts-HI3-PS`, `IMPLICIT TAGS`. HI3 content of communication for
+ * the UMTS packet domain. This module is ULIC version 1. Version 0 is the
+ * separate octet header in annex C.1.2.
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulintercept(2) threeGPP(4) hi3(2) r7(7) version-0(0)}`.
+ * 
+ * 3GPP TS 33.108, clause 6.7, annex C, and annex B.4. GGSN interception of CC
+ * is a national option, and is required when 3G direct tunnel is used.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
 export {
     CC_PDU,
     _decode_CC_PDU,

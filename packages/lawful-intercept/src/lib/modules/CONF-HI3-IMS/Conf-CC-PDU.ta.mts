@@ -14,6 +14,16 @@ import { ConfLIC_header, _decode_ConfLIC_header, _encode_ConfLIC_header } from "
  * @summary Conf_CC_PDU
  * @description
  * 
+ * Conference CC PDU sent to the LEMF over UDP or TCP, chosen nationally:
+ * correlation header and payload. Clause 11.6 adds a party identifier for media
+ * the MRFP multicasts, and allows a separate stream per conference user. IPsec
+ * is recommended. The LEMF stores packets with the sequence number and
+ * timestamp and correlates CC to IRI with the conference correlation.
+ * 
+ * 3GPP TS 33.108, annex L.1 and clause 11.6.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +40,20 @@ export
 class Conf_CC_PDU {
     /**
      * @summary `confLIC_header`.
+     * @description
+     * 
+     * Conference LI correlation header. 3GPP TS 33.108, annex L.1.
      * @public
      * @readonly
      */
     readonly confLIC_header: ConfLIC_header;
     /**
      * @summary `payload`.
+     * @description
+     * 
+     * User-plane packets of the conference call. Direction of the T-PDU
+     * identifies the source. Packets include the IP layer and above (for
+     * example IP/UDP/RTP). 3GPP TS 33.108, annex L.3.
      * @public
      * @readonly
      */

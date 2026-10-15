@@ -16,6 +16,20 @@ import { CorrelationValues_both_IRI_CC, _decode_CorrelationValues_both_IRI_CC, _
  * @summary CorrelationValues
  * @description
  * 
+ * Correlation beyond the PDP-context correlation number. The CSCF may generate
+ * the value; how it is chosen is an implementation matter.
+ * 
+ * Table 7.2: IRI-to-content identifies each PDP context or bearer, and a second
+ * bearer when signalling and user data use two contexts. IRI-to-IRI is the SIP
+ * session correlation, a Call-id or another value that identifies the SIP
+ * messages of one session. The same parameter correlates an XCAP request with
+ * its response (table 7.6). For separated IMS VoIP, the IMS VoIP correlation
+ * may be sent instead.
+ * 
+ * 3GPP TS 33.108, clause 7.1.3, clause 12.1.4, and table 7.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -18,6 +18,13 @@ enum _enum_for_Priority_Level {
  * @summary Priority_Level
  * @description
  * 
+ * Talk-burst priority of a PTC client when more than one level is supported
+ * (clause 17.1.5 and table 17.2.14, OMA-PoC-AD). Conditional on that
+ * multi-level support. The same four levels are used for the session priority
+ * and for the talk-burst priority.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +45,10 @@ type Priority_Level = _enum_for_Priority_Level | ENUMERATED;
 
 /**
  * @summary Priority_Level_pre_emptive
+ * @description
+ * 
+ * Pre-emptive talk-burst priority. Used when more than one priority level is
+ * supported (clause 17.1.5 and table 17.2.14, OMA-PoC-AD).
  * @constant
  * @type {number}
  */
@@ -46,6 +57,9 @@ const Priority_Level_pre_emptive: Priority_Level = 0; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary pre_emptive
+ * @description
+ * 
+ * Pre-emptive talk-burst priority (clause 17.1.5).
  * @constant
  * @type {number}
  */
@@ -54,6 +68,10 @@ const pre_emptive: Priority_Level = Priority_Level_pre_emptive; /* SHORT_NAMED_E
 
 /**
  * @summary Priority_Level_high_priority
+ * @description
+ * 
+ * High talk-burst priority. Used when more than one priority level is supported
+ * (clause 17.1.5, OMA-PoC-AD).
  * @constant
  * @type {number}
  */
@@ -62,6 +80,9 @@ const Priority_Level_high_priority: Priority_Level = 1; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary high_priority
+ * @description
+ * 
+ * High talk-burst priority (clause 17.1.5).
  * @constant
  * @type {number}
  */
@@ -70,6 +91,10 @@ const high_priority: Priority_Level = Priority_Level_high_priority; /* SHORT_NAM
 
 /**
  * @summary Priority_Level_normal_priority
+ * @description
+ * 
+ * Normal talk-burst priority. Used when more than one priority level is
+ * supported (clause 17.1.5, OMA-PoC-AD).
  * @constant
  * @type {number}
  */
@@ -78,6 +103,9 @@ const Priority_Level_normal_priority: Priority_Level = 2; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary normal_priority
+ * @description
+ * 
+ * Normal talk-burst priority (clause 17.1.5).
  * @constant
  * @type {number}
  */
@@ -86,6 +114,10 @@ const normal_priority: Priority_Level = Priority_Level_normal_priority; /* SHORT
 
 /**
  * @summary Priority_Level_listen_only
+ * @description
+ * 
+ * Listen-only talk-burst priority. Used when more than one priority level is
+ * supported (clause 17.1.5, OMA-PoC-AD).
  * @constant
  * @type {number}
  */
@@ -94,6 +126,9 @@ const Priority_Level_listen_only: Priority_Level = 3; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary listen_only
+ * @description
+ * 
+ * Listen-only talk-burst priority (clause 17.1.5).
  * @constant
  * @type {number}
  */

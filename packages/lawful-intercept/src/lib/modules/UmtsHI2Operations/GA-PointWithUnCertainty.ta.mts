@@ -15,6 +15,13 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * @summary GA_PointWithUnCertainty
  * @description
  * 
+ * UMTS location reported as one geographical point plus an uncertainty code.
+ * Annex B.3 limits the code to 0..127 and does not define the code values.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +37,23 @@ export
 class GA_PointWithUnCertainty {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     * 
+     * The geographical point whose uncertainty is reported with it.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary `uncertaintyCode`.
+     * @description
+     * 
+     * Uncertainty of the point. Annex B.3 limits the code to 0..127 and does
+     * not define the code values.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

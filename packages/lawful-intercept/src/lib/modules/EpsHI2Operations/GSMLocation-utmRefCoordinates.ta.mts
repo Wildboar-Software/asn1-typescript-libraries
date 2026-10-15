@@ -15,6 +15,10 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * @summary GSMLocation_utmRefCoordinates
  * @description
  * 
+ * UTM grid reference of the target or of a cell site, as one 13-character
+ * string. The module comment's example is 32UPU91294045. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +35,32 @@ export
 class GSMLocation_utmRefCoordinates {
     /**
      * @summary `utmref_string`.
+     * @description
+     * 
+     * The UTM grid reference. The module comment's example is 32UPU91294045.
+     * 
      * @public
      * @readonly
      */
     readonly utmref_string: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     * 
+     * Geodetic datum. If omitted, WGS 84 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -82,6 +100,10 @@ class GSMLocation_utmRefCoordinates {
      */
     public static get _default_value_for_mapDatum () { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
+         * @description
+         * 
+         * Geodetic datum. If omitted, WGS 84 (module comment).
+         * 
          * @public
          * @static
          */

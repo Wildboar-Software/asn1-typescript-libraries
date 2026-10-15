@@ -15,6 +15,16 @@ import { IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_
  * @summary CorrelationValues_both_IRI_CC
  * @description
  * 
+ * Both correlation values for one IRI: the value that ties the IRI to content,
+ * and the value that ties it to other IRI.
+ * 
+ * Clause 7.1.3 uses this when the LEMF must correlate the record both to CC and
+ * to other IRI of the same session.
+ * 
+ * 3GPP TS 33.108, clause 7.1.3 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +40,22 @@ export
 class CorrelationValues_both_IRI_CC {
     /**
      * @summary `iri_CC`.
+     * @description
+     * 
+     * Correlation of this IRI to one or more content streams.
+     * 
+     * 3GPP TS 33.108, clause 7.1.3 and annex B.3.
      * @public
      * @readonly
      */
     readonly iri_CC: IRI_to_CC_Correlation;
     /**
      * @summary `iri_IRI`.
+     * @description
+     * 
+     * Correlation of this IRI to other IRI of the same session.
+     * 
+     * 3GPP TS 33.108, clause 7.1.3 and annex B.3.
      * @public
      * @readonly
      */

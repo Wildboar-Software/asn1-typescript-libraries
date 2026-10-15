@@ -1,3 +1,19 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `CONFHI2Operations`, IMPLICIT TAGS. IMS conference HI2 intercept
+ * related information. Content of communication is defined separately (annex
+ * B.11.2).
+ *
+ * 3GPP TS 33.108, clause 11 and annex B.11.1.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ *
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2) lawfulIntercept(2) threeGPP(4) hi2conf(10) r16(16) version-0(0)}`
+ *
+ * Annex N.3 is informative correlation guidance, not a requirement. Its
+ * ConfCorrelation illustration uses different context tags than annex B.11.1;
+ * this module is the definition that applies.
+ */
 export {
     type ConfCorrelation,
     _decode_ConfCorrelation,

@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Rai
  * @description
  * 
+ * Routing area identifier, six octets. Coded as in 3GPP TS 24.008 clause
+ * 10.5.5.15 without the Routing Area Identification IEI; only the last six
+ * octets are used. Carried as the current SGSN RAI or the old SGSN RAI.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

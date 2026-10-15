@@ -11,6 +11,12 @@ import { threeGPPSUBDomainId } from "../MBMSUmtsHI2Operations/threeGPPSUBDomainI
  * @summary hi2mbmsDomainId
  * @description
  * 
+ * Object identifier of the 3GPP HI2 MBMS domain. Under `threeGPPSUBDomainId`,
+ * arc 7 is hi2mbms, arc 16 is r16, and arc 0 is version0. Each IRI record
+ * carries this identifier in `hi2mbmsDomainId`.
+ * 
+ * 3GPP TS 33.108, annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

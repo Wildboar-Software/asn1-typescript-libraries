@@ -37,6 +37,12 @@ import { ContentLocation, _decode_ContentLocation, _encode_ContentLocation } fro
  * @summary MMBoxDescriptionPdus
  * @description
  * 
+ * Description of one MM in the MMBox (table 15.3.6.2.2.16). Upload carries the
+ * description of the MM being uploaded. View Confirm carries one description
+ * for each MM.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.2.2.16 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,126 +78,230 @@ export
 class MMBoxDescriptionPdus {
     /**
      * @summary `mMSCorrelation`.
+     * @description
+     * 
+     * Correlates CC with IRI for this MM when delivery of CC is authorized.
+     * Conditional (table 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, clause 15.3.2.3 and table 15.3.6.2.2.16.
      * @public
      * @readonly
      */
     readonly mMSCorrelation: OPTIONAL<MMSCorrelationNumber>;
     /**
      * @summary `toAddresses`.
+     * @description
+     * 
+     * To recipients of this MM. Mandatory in the description (table
+     * 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.2.2.16.
      * @public
      * @readonly
      */
     readonly toAddresses: Addresses;
     /**
      * @summary `cCAddresses`.
+     * @description
+     * 
+     * CC recipients of this MM. Conditional if available (table 15.3.6.2.2.16).
      * @public
      * @readonly
      */
     readonly cCAddresses: OPTIONAL<Addresses>;
     /**
      * @summary `bCCAddresses`.
+     * @description
+     * 
+     * BCC recipients of this MM. Conditional if available (table
+     * 15.3.6.2.2.16).
      * @public
      * @readonly
      */
     readonly bCCAddresses: OPTIONAL<Addresses>;
     /**
      * @summary `fromAddress`.
+     * @description
+     * 
+     * From address of this MM. Mandatory regardless of anonymity (table
+     * 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.2.2.16.
      * @public
      * @readonly
      */
     readonly fromAddress: From;
     /**
      * @summary `messageID`.
+     * @description
+     * 
+     * Message ID of this MM. Mandatory for a View Confirm description. For an
+     * Upload description, include it only when a Message ID was already
+     * assigned; otherwise omit it (table 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.2.2.16.
      * @public
      * @readonly
      */
     readonly messageID: UTF8String;
     /**
      * @summary `mMSDateTime`.
+     * @description
+     * 
+     * Date and time of this MM, if available (table 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and table 15.3.6.2.2.16.
      * @public
      * @readonly
      */
     readonly mMSDateTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `previouslySentBy`.
+     * @description
+     * 
+     * Earlier sender or forwarder of this MM, if available (table
+     * 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and table 15.3.6.2.2.16.
      * @public
      * @readonly
      */
     readonly previouslySentBy: OPTIONAL<PreviouslySentBy>;
     /**
      * @summary `previouslySentByDateTime`.
+     * @description
+     * 
+     * Date and time of that earlier send or forward, if available (table
+     * 15.3.6.2.2.16).
      * @public
      * @readonly
      */
     readonly previouslySentByDateTime: OPTIONAL<PreviouslySentByDateTime>;
     /**
      * @summary `mMState`.
+     * @description
+     * 
+     * State of this MM. Included for View Confirm. Included for Upload if the
+     * target provided it (table 15.3.6.2.2.16).
      * @public
      * @readonly
      */
     readonly mMState: OPTIONAL<MMSState>;
     /**
      * @summary `mMFlags`.
+     * @description
+     * 
+     * Keywords of this MM. Include when at least one keyword is associated; the
+     * value may carry every keyword. Omit when there are none (table
+     * 15.3.6.2.2.16).
      * @public
      * @readonly
      */
     readonly mMFlags: OPTIONAL<MMFlags>;
     /**
      * @summary `messageClass`.
+     * @description
+     * 
+     * Class of this MM, if available (table 15.3.6.2.2.16). If a class is
+     * absent, table 15.3.6.1.2 says to interpret it as personal.
      * @public
      * @readonly
      */
     readonly messageClass: OPTIONAL<MessageClass>;
     /**
      * @summary `priority`.
+     * @description
+     * 
+     * Originator-assigned priority of this MM, if available (table
+     * 15.3.6.2.2.16).
      * @public
      * @readonly
      */
     readonly priority: OPTIONAL<Priority>;
     /**
      * @summary `deliveryTime`.
+     * @description
+     * 
+     * Delivery time of this MM, if available (table 15.3.6.2.2.16). Table
+     * 15.3.6.1.2 describes desired delivery time as the earliest delivery.
+     * Clause 15.3 does not further define this description field beyond "if
+     * available".
      * @public
      * @readonly
      */
     readonly deliveryTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `expiry`.
+     * @description
+     * 
+     * Expiry of this MM, if available (table 15.3.6.2.2.16). The record field
+     * has an absolute form and a relative form; annex B.15 does not say how
+     * they are distinguished.
      * @public
      * @readonly
      */
     readonly expiry: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `deliveryReport`.
+     * @description
+     * 
+     * Whether a delivery report was requested for this MM, if available (table
+     * 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly deliveryReport: OPTIONAL<YesNo>;
     /**
      * @summary `readReport`.
+     * @description
+     * 
+     * Whether a read report was requested for this MM, if available (table
+     * 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly readReport: OPTIONAL<YesNo>;
     /**
      * @summary `messageSize`.
+     * @description
+     * 
+     * Size of this MM, if available (table 15.3.6.2.2.16). Clause 15.3 does not
+     * define the unit.
      * @public
      * @readonly
      */
     readonly messageSize: OPTIONAL<INTEGER>;
     /**
      * @summary `contentLocation`.
+     * @description
+     * 
+     * Where this MM's content is retrieved. Used only with a View Confirm
+     * description (table 15.3.6.2.2.16).
      * @public
      * @readonly
      */
     readonly contentLocation: OPTIONAL<ContentLocation>;
     /**
      * @summary `contentType`.
+     * @description
+     * 
+     * Content type of this MM. Mandatory in the description (table
+     * 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and table 15.3.6.2.2.16.
      * @public
      * @readonly
      */
     readonly contentType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

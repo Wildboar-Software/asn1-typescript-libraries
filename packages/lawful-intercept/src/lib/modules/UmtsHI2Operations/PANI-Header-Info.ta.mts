@@ -15,6 +15,18 @@ import { PANI_Location, _decode_PANI_Location, _encode_PANI_Location } from "../
  * @summary PANI_Header_Info
  * @description
  * 
+ * Elements copied from a P-Access-Network-Info header in a SIP message that the
+ * target UE originated and a CSCF handled. The MF parses the message and copies
+ * the access type and class and, when the warrant requires location, the
+ * location. The SIP message that carried the header is also sent unmodified. If
+ * the warrant does not authorize location, location is removed from the raw SIP
+ * before delivery to the LEMF.
+ * 
+ * Optional on a SIP-message REPORT and on start-of-interception for an
+ * established IMS session, when available and applicable. 3GPP TS 33.108,
+ * clause 7.5, tables 7.3 and 7.5; annex B.3. Access type and class strings are
+ * defined in 3GPP TS 24.229 clause 7.2A.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +49,54 @@ export
 class PANI_Header_Info {
     /**
      * @summary `access_Type`.
+     * @description
+     * 
+     * Access type from the P-Access-Network-Info header, as an ASCII string
+     * such as '3GPP-GERAN'. The strings are defined in 3GPP TS 24.229 clause
+     * 7.2A.4. The MF copies this from SIP that the target UE originated.
+     * 
+     * 3GPP TS 33.108, clause 7.5 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly access_Type: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `access_Class`.
+     * @description
+     * 
+     * Access class from the P-Access-Network-Info header, as an ASCII string
+     * defined in 3GPP TS 24.229 clause 7.2A.4.
+     * 
+     * 3GPP TS 33.108, clause 7.5 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly access_Class: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `network_Provided`.
+     * @description
+     * 
+     * Present when the network, rather than the UE, supplied the
+     * P-Access-Network-Info information.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly network_Provided: OPTIONAL<NULL>;
     /**
      * @summary `pANI_Location`.
+     * @description
+     * 
+     * Location from the P-Access-Network-Info header. Include it when the
+     * warrant requires location. If the warrant does not, location is removed
+     * from the raw SIP before the LEMF receives it.
+     * 
+     * 3GPP TS 33.108, clause 7.5 and annex B.3.
+     * 
      * @public
      * @readonly
      */

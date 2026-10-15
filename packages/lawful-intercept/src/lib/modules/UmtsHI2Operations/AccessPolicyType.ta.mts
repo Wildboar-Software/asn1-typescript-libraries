@@ -14,6 +14,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AccessPolicyType
  * @description
  * 
+ * Which access-control list a PTC target managed or queried, and the network
+ * result, on a PTC access-policy report.
+ * 
+ * Clause 17.2.18 treats the six items as alternatives. Annex B.3 encodes them
+ * together. Each boolean defaults to false; true means the target has accessed
+ * that list. An unsuccessful request is not one of these components.
+ * 
+ * 3GPP TS 33.108, clause 17.2.18 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,42 +50,93 @@ export
 class AccessPolicyType {
     /**
      * @summary `userAccessPolicyAttempt`.
+     * @description
+     * 
+     * True when the target has accessed the PTC user access policy. Annex B.3
+     * defaults this to false.
+     * 
+     * Table 17.2.18 reports the attempt when the target changes or queries the
+     * access-control lists.
+     * 
+     * 3GPP TS 33.108, clause 17.2.18 and annex B.3.
      * @public
      * @readonly
      */
     readonly userAccessPolicyAttempt: BOOLEAN;
     /**
      * @summary `groupAuthorizationRulesAttempt`.
+     * @description
+     * 
+     * True when the target has accessed the PTC group authorization rules.
+     * Annex B.3 defaults this to false.
+     * 
+     * Table 17.2.18 reports the attempt when the target changes or queries
+     * those rules.
+     * 
+     * 3GPP TS 33.108, clause 17.2.18 and annex B.3.
      * @public
      * @readonly
      */
     readonly groupAuthorizationRulesAttempt: BOOLEAN;
     /**
      * @summary `userAccessPolicyQuery`.
+     * @description
+     * 
+     * True when the target has queried the PTC user access policy. Annex B.3
+     * uses the same rule as the attempt flag: default false, and true means the
+     * target has accessed it.
+     * 
+     * 3GPP TS 33.108, table 17.2.18 and annex B.3.
      * @public
      * @readonly
      */
     readonly userAccessPolicyQuery: BOOLEAN;
     /**
      * @summary `groupAuthorizationRulesQuery`.
+     * @description
+     * 
+     * True when the target has queried the PTC group authorization rules. Annex
+     * B.3 defaults this to false; true means the target has accessed them.
+     * 
+     * 3GPP TS 33.108, table 17.2.18 and annex B.3.
      * @public
      * @readonly
      */
     readonly groupAuthorizationRulesQuery: BOOLEAN;
     /**
      * @summary `userAccessPolicyResult`.
+     * @description
+     * 
+     * Result the network returns for the user access policy. Table 17.2.18
+     * reports it when the network notifies the target of a change to the
+     * access-control lists. Annex B.3 does not define the string.
+     * 
+     * 3GPP TS 33.108, clause 17.2.18.
      * @public
      * @readonly
      */
     readonly userAccessPolicyResult: UTF8String;
     /**
      * @summary `groupAuthorizationRulesResult`.
+     * @description
+     * 
+     * Result the network returns for the group authorization rules. Table
+     * 17.2.18 reports it when the network notifies the target of a change to
+     * those rules. Annex B.3 does not define the string.
+     * 
+     * 3GPP TS 33.108, clause 17.2.18.
      * @public
      * @readonly
      */
     readonly groupAuthorizationRulesResult: UTF8String;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

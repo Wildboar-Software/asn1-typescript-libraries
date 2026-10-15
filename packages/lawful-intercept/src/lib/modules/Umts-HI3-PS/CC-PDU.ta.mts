@@ -14,6 +14,18 @@ import { ULIC_header, _decode_ULIC_header, _encode_ULIC_header } from "../Umts-H
  * @summary CC_PDU
  * @description
  * 
+ * UMTS PS CC for ULIC version 1: one correlation header and one payload. ULIC
+ * version 0 is the 20-octet header in annex C.1.2 (correlation number, message
+ * type 255, DIR bit, sequence number, length, and an ICE bit). ULIC version 1
+ * is this ASN.1 header (annex C.1.3). The network shall support version 1;
+ * version 0 is optional and version 1 is the default when both are supported
+ * (annex C.0). Delivery is UDP/IP or TCP/IP. Annex C also allows FTP and ETSI
+ * TS 102 232; option c is recommended.
+ * 
+ * 3GPP TS 33.108, annex C.1.3 and annex B.4.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +42,21 @@ export
 class CC_PDU {
     /**
      * @summary `uLIC_header`.
+     * @description
+     * 
+     * ULIC version-1 correlation header. 3GPP TS 33.108, annex C.1.3.
      * @public
      * @readonly
      */
     readonly uLIC_header: ULIC_header;
     /**
      * @summary `payload`.
+     * @description
+     * 
+     * Duplicated communication between the target and the other party (that
+     * communication's header and payload). Only one payload is allowed. ULIC
+     * payload information element of annex C.1. FTP delivery uses the CC body
+     * in annex C.2. 3GPP TS 33.108, annex C.1.1 and annex C.1.3.
      * @public
      * @readonly
      */

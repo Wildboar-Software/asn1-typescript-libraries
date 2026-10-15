@@ -11,6 +11,14 @@ import { IMS_VoIP_Correlation_Item, _decode_IMS_VoIP_Correlation_Item, _encode_I
  * @summary IMS_VoIP_Correlation
  * @description
  * 
+ * The set of IRI and content correlation numbers for one IMS VoIP session
+ * (clause 12.1.4). Each element pairs the IRI correlation with an optional
+ * content correlation. The LEMF treats messages and content that carry those
+ * numbers as one session. Clause 12 may use this instead of the correlation
+ * number or the correlation parameter (table 7.2 note 11). Annex N gives
+ * informative examples only. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

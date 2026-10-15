@@ -11,6 +11,12 @@ import { lawfulInterceptDomainId } from "../CONFHI2Operations/lawfulInterceptDom
  * @summary threeGPPSUBDomainId
  * @description
  * 
+ * 3GPP lawful-intercept subdomain, arc `threeGPP(4)` under the ETSI
+ * lawful-intercept identifier.
+ *
+ * Parent of `hi2conf(10)`. Not carried as a value in a conference IRI. 3GPP TS
+ * 33.108, annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

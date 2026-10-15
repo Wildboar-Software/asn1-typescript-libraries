@@ -16,6 +16,14 @@ import { GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../EpsHI2Ope
  * @summary UMTSLocation
  * @description
  * 
+ * UMTS geographical shape of a target or cell location: one point, one point
+ * with an uncertainty code, or a polygon of at most 15 points. It may appear in
+ * the EPS location of an EPS event (clause 10.5.2) or in the packet-domain or
+ * LALS location (clause 6 table 6.2 and clause 10.5.2 locationOfTheTarget). The
+ * handover text does not define the coordinate coding of the three shapes.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

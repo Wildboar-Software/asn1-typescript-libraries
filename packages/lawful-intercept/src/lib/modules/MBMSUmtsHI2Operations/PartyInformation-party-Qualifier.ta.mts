@@ -15,6 +15,11 @@ enum _enum_for_PartyInformation_party_Qualifier {
  * @summary PartyInformation_party_Qualifier
  * @description
  * 
+ * Role of the party in an MBMS IRI record. Annex B.8 names only the MBMS
+ * target.
+ * 
+ * 3GPP TS 33.108, annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +36,11 @@ type PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifi
 
 /**
  * @summary PartyInformation_party_Qualifier_mBMS_Target
+ * @description
+ * 
+ * This party is the MBMS interception target.
+ * 
+ * 3GPP TS 33.108, annex B.8. Clause 9 does not further define this value.
  * @constant
  * @type {number}
  */
@@ -39,6 +49,9 @@ const PartyInformation_party_Qualifier_mBMS_Target: PartyInformation_party_Quali
 
 /**
  * @summary mBMS_Target
+ * @description
+ * 
+ * The party is the MBMS target. Clause 9 does not further define this value.
  * @constant
  * @type {number}
  */

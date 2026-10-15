@@ -26,6 +26,14 @@ import { MediaID, _decode_MediaID, _encode_MediaID } from "../GCSE-HI3/MediaID.t
  * @summary GcseLIC_header
  * @description
  * 
+ * Correlation header for GCSE group-communications CC. For a given target the
+ * correlation number is unique per group communications session (clause
+ * 14.2.2.3).
+ * 
+ * 3GPP TS 33.108, clause 14.2.7 and annex B.14.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,54 +60,92 @@ export
 class GcseLIC_header {
     /**
      * @summary `hi3gcseDomainId`.
+     * @description
+     * 
+     * 3GPP HI3 GCSE domain identifier in this header (`hi3gcse` under
+     * `threeGPPSUBDomainId`). 3GPP TS 33.108, annex B.14.2.
      * @public
      * @readonly
      */
     readonly hi3gcseDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lIID`.
+     * @description
+     * 
+     * Lawful interception identifier of the target on HI2 and HI3.
+     * Alphanumeric, agreed between the LEA and the operator. 3GPP TS 33.108,
+     * clause 14.2.2.2.
      * @public
      * @readonly
      */
     readonly lIID: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `correlation`.
+     * @description
+     * 
+     * Unique per group communications session for a given target. Correlates CC
+     * with IRI and IRI records of that session. The same number may be assigned
+     * when several target identities share the session. 3GPP TS 33.108, clause
+     * 14.2.2.3.
      * @public
      * @readonly
      */
     readonly correlation: GcseCorrelation;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Clause 14.2.7 does not state when a timestamp is sent on CC. Clause
+     * 14.2.3.1 gives timing for IRI. 3GPP TS 33.108.
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `sequence_number`.
+     * @description
+     * 
+     * Present on the GCSE CC header. Clause 14.2.7 does not specify sequencing.
+     * 3GPP TS 33.108, annex B.14.2.
      * @public
      * @readonly
      */
     readonly sequence_number: INTEGER;
     /**
      * @summary `t_PDU_direction`.
+     * @description
+     * 
+     * Direction of the group-communications T-PDU. The module defines from the
+     * target, to the target, and unknown. Clause 14.2.7 does not further
+     * specify them. 3GPP TS 33.108, annex B.14.2.
      * @public
      * @readonly
      */
     readonly t_PDU_direction: TPDU_direction;
     /**
      * @summary `national_HI3_ASN1parameters`.
+     * @description
+     * 
+     * Encoded per national requirements. 3GPP TS 33.108, annex B.14.2.
      * @public
      * @readonly
      */
     readonly national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     /**
      * @summary `mediaID`.
+     * @description
+     * 
+     * Media exchanged by parties on the GCSE group communication. 3GPP TS
+     * 33.108, annex B.14.2 and clause 14.2.7.
      * @public
      * @readonly
      */
     readonly mediaID: OPTIONAL<MediaID>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

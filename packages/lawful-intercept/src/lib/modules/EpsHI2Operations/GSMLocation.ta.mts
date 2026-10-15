@@ -17,6 +17,17 @@ import { GSMLocation_utmRefCoordinates, _decode_GSMLocation_utmRefCoordinates, _
  * @summary GSMLocation
  * @description
  * 
+ * GSM coordinates of the target or of a cell site. Carried in an EPS location
+ * and in the PS location. Table 16.1 places cell-site latitude, longitude, and
+ * azimuth here.
+ * 
+ * geoCoordinates are character latitude and longitude. utmCoordinates are UTM
+ * easting and northing. utmRefCoordinates are a single UTM grid reference.
+ * wGS84Coordinates use the format defined in 3GPP TS 23.032 (module comment,
+ * reference [37]).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

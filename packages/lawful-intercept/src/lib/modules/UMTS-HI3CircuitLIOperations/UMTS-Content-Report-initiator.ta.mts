@@ -18,6 +18,13 @@ enum _enum_for_UMTS_Content_Report_initiator {
  * @summary UMTS_Content_Report_initiator
  * @description
  * 
+ * Party associated with the user data in the CS HI3 report. The module names
+ * the four roles and does not further define them.
+ * 
+ * 3GPP TS 33.108, annex B.6.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +44,9 @@ type UMTS_Content_Report_initiator = _enum_for_UMTS_Content_Report_initiator | E
 
 /**
  * @summary UMTS_Content_Report_initiator_originating_party
+ * @description
+ * 
+ * Originating party. 3GPP TS 33.108, annex B.6.
  * @constant
  * @type {number}
  */
@@ -45,6 +55,9 @@ const UMTS_Content_Report_initiator_originating_party: UMTS_Content_Report_initi
 
 /**
  * @summary originating_party
+ * @description
+ * 
+ * Originating party. Annex B.6.
  * @constant
  * @type {number}
  */
@@ -53,6 +66,9 @@ const originating_party: UMTS_Content_Report_initiator = UMTS_Content_Report_ini
 
 /**
  * @summary UMTS_Content_Report_initiator_terminating_party
+ * @description
+ * 
+ * Terminating party. 3GPP TS 33.108, annex B.6.
  * @constant
  * @type {number}
  */
@@ -61,6 +77,9 @@ const UMTS_Content_Report_initiator_terminating_party: UMTS_Content_Report_initi
 
 /**
  * @summary terminating_party
+ * @description
+ * 
+ * Terminating party. Annex B.6.
  * @constant
  * @type {number}
  */
@@ -69,6 +88,9 @@ const terminating_party: UMTS_Content_Report_initiator = UMTS_Content_Report_ini
 
 /**
  * @summary UMTS_Content_Report_initiator_forwarded_to_party
+ * @description
+ * 
+ * Forwarded-to party. 3GPP TS 33.108, annex B.6.
  * @constant
  * @type {number}
  */
@@ -77,6 +99,9 @@ const UMTS_Content_Report_initiator_forwarded_to_party: UMTS_Content_Report_init
 
 /**
  * @summary forwarded_to_party
+ * @description
+ * 
+ * Forwarded-to party. Annex B.6.
  * @constant
  * @type {number}
  */
@@ -85,6 +110,9 @@ const forwarded_to_party: UMTS_Content_Report_initiator = UMTS_Content_Report_in
 
 /**
  * @summary UMTS_Content_Report_initiator_undefined_party
+ * @description
+ * 
+ * Party is undefined. 3GPP TS 33.108, annex B.6.
  * @constant
  * @type {number}
  */
@@ -93,6 +121,9 @@ const UMTS_Content_Report_initiator_undefined_party: UMTS_Content_Report_initiat
 
 /**
  * @summary undefined_party
+ * @description
+ * 
+ * Party is undefined. Annex B.6.
  * @constant
  * @type {number}
  */

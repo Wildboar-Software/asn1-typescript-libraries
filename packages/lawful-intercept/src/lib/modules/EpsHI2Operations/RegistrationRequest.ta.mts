@@ -17,6 +17,12 @@ enum _enum_for_RegistrationRequest {
  * @summary RegistrationRequest
  * @description
  * 
+ * Whether a PTC registration report is a register, a re-register, or a
+ * deregister. Mandatory on table 17.2.1. The report is sent for each of those
+ * requests, successful or unsuccessful (clause 17.2.1).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +42,10 @@ type RegistrationRequest = _enum_for_RegistrationRequest | ENUMERATED;
 
 /**
  * @summary RegistrationRequest_register
+ * @description
+ * 
+ * Initial PTC registration. The registration report is sent whether or not it
+ * succeeds (clause 17.2.1).
  * @constant
  * @type {number}
  */
@@ -44,6 +54,9 @@ const RegistrationRequest_register: RegistrationRequest = 1; /* LONG_NAMED_ENUME
 
 /**
  * @summary register
+ * @description
+ * 
+ * PTC register request (clause 17.2.1).
  * @constant
  * @type {number}
  */
@@ -52,6 +65,9 @@ const register: RegistrationRequest = RegistrationRequest_register; /* SHORT_NAM
 
 /**
  * @summary RegistrationRequest_re_register
+ * @description
+ * 
+ * PTC re-registration. Reported whether or not it succeeds (clause 17.2.1).
  * @constant
  * @type {number}
  */
@@ -60,6 +76,9 @@ const RegistrationRequest_re_register: RegistrationRequest = 2; /* LONG_NAMED_EN
 
 /**
  * @summary re_register
+ * @description
+ * 
+ * PTC re-register request (clause 17.2.1).
  * @constant
  * @type {number}
  */
@@ -68,6 +87,9 @@ const re_register: RegistrationRequest = RegistrationRequest_re_register; /* SHO
 
 /**
  * @summary RegistrationRequest_de_register
+ * @description
+ * 
+ * PTC deregistration. Reported whether or not it succeeds (clause 17.2.1).
  * @constant
  * @type {number}
  */
@@ -76,6 +98,9 @@ const RegistrationRequest_de_register: RegistrationRequest = 3; /* LONG_NAMED_EN
 
 /**
  * @summary de_register
+ * @description
+ * 
+ * PTC deregister request (clause 17.2.1).
  * @constant
  * @type {number}
  */

@@ -15,6 +15,11 @@ import { From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mj
  * @summary MMSParties
  * @description
  * 
+ * To, CC, BCC, and From addresses of the MM. Translated addresses are carried
+ * together with the addresses they replace.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,30 +39,68 @@ export
 class MMSParties {
     /**
      * @summary `toAddresses`.
+     * @description
+     * 
+     * Recipients in the To field. There may be more than one. When an address
+     * is translated, include both the untranslated and the translated address.
+     * 
+     * Mandatory on Send, Notification, Retrieval, Forwarding, Delivery, and
+     * both Read Replies. On a read reply from the target, this is the recipient
+     * of the read report. On a read reply to the target, this includes the
+     * target.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and clause 15.3.6.2.2.
      * @public
      * @readonly
      */
     readonly toAddresses: OPTIONAL<Addresses>;
     /**
      * @summary `cCAddresses`.
+     * @description
+     * 
+     * Recipients in the CC field. Conditional when available. When included,
+     * provide both the untranslated and the translated addresses.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly cCAddresses: OPTIONAL<Addresses>;
     /**
      * @summary `bCCAddresses`.
+     * @description
+     * 
+     * Recipients in the BCC field. Conditional when available. When included,
+     * provide both the untranslated and the translated addresses.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly bCCAddresses: OPTIONAL<Addresses>;
     /**
      * @summary `fromAddresses`.
+     * @description
+     * 
+     * Sender of the MM or of the read reply. The sender may be the originator
+     * or a user who forwarded the MM. Include the address the target provided
+     * and, when a token is replaced, the address the Proxy-Relay substituted.
+     * 
+     * Mandatory on Send, Forwarding, and both Read Replies. Mandatory on
+     * Notification and Retrieval regardless of anonymity. On a read reply from
+     * the target, include the target's MMS address. On a read reply to the
+     * target, include the source of the read reply.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and clause 15.3.6.2.2.
      * @public
      * @readonly
      */
     readonly fromAddresses: OPTIONAL<From>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

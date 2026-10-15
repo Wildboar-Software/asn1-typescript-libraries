@@ -18,6 +18,17 @@ enum _enum_for_EmergencyGroupState_clientEmergencyState {
  * @summary EmergencyGroupState_clientEmergencyState
  * @description
  * 
+ * Client side of an MCPTT emergency call: inform, response, cancellation of the
+ * notification, or cancellation of the response.
+ * 
+ * Annex B.3 says this is the response for the client. It does not define a
+ * further procedure for each value. Optional on the emergency-group state; the
+ * annex requires at least one of the client state and the group state.
+ * 
+ * 3GPP TS 33.108, clause 17.3 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +49,12 @@ type EmergencyGroupState_clientEmergencyState = _enum_for_EmergencyGroupState_cl
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_inform
+ * @description
+ * 
+ * The MCPTT client is informed of the emergency. Annex B.3 does not define a
+ * further procedure for this value.
+ * 
+ * 3GPP TS 33.108, clause 17.3 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -46,6 +63,9 @@ const EmergencyGroupState_clientEmergencyState_inform: EmergencyGroupState_clien
 
 /**
  * @summary inform
+ * @description
+ * 
+ * Client informed of the MCPTT emergency (annex B.3).
  * @constant
  * @type {number}
  */
@@ -54,6 +74,12 @@ const inform: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_cli
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_response
+ * @description
+ * 
+ * The MCPTT client's response to the emergency. Annex B.3 does not define a
+ * further procedure for this value.
+ * 
+ * 3GPP TS 33.108, clause 17.3 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -62,6 +88,9 @@ const EmergencyGroupState_clientEmergencyState_response: EmergencyGroupState_cli
 
 /**
  * @summary response
+ * @description
+ * 
+ * Client response to the MCPTT emergency (annex B.3).
  * @constant
  * @type {number}
  */
@@ -70,6 +99,12 @@ const response: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_c
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_cancelInform
+ * @description
+ * 
+ * Cancellation of the notification to the MCPTT client. Annex B.3 does not
+ * define a further procedure for this value.
+ * 
+ * 3GPP TS 33.108, clause 17.3 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -78,6 +113,9 @@ const EmergencyGroupState_clientEmergencyState_cancelInform: EmergencyGroupState
 
 /**
  * @summary cancelInform
+ * @description
+ * 
+ * Cancellation of the client emergency notification (annex B.3).
  * @constant
  * @type {number}
  */
@@ -86,6 +124,12 @@ const cancelInform: EmergencyGroupState_clientEmergencyState = EmergencyGroupSta
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_cancelResponse
+ * @description
+ * 
+ * Cancellation of the MCPTT client's emergency response. Annex B.3 does not
+ * define a further procedure for this value.
+ * 
+ * 3GPP TS 33.108, clause 17.3 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -94,6 +138,9 @@ const EmergencyGroupState_clientEmergencyState_cancelResponse: EmergencyGroupSta
 
 /**
  * @summary cancelResponse
+ * @description
+ * 
+ * Cancellation of the client emergency response (annex B.3).
  * @constant
  * @type {number}
  */

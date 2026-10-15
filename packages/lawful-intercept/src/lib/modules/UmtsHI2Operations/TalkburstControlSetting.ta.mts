@@ -16,6 +16,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TalkburstControlSetting
  * @description
  * 
+ * Talk-burst control protocol for a PTC session, the parameters the PTC server
+ * selected from the client's SDP offer, and the server port for that protocol.
+ * Clause 17.2.14 treats floor control and talk-burst control as the same
+ * function; TBCP is specified in OMA-PoC-AD [97] and the OMA PoC user plane
+ * [98]. Clause 17 does not say on which record this parameter is required.
+ * 
+ * 3GPP TS 33.108, clause 17.2.14 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,18 +45,40 @@ export
 class TalkburstControlSetting {
     /**
      * @summary `talk_BurstControlProtocol`.
+     * @description
+     * 
+     * Talk-burst control protocol used for the session. Clause 17.2.14
+     * identifies TBCP, specified in OMA-PoC-AD [97] and the OMA PoC user plane
+     * [98]. Annex B.3 does not constrain the string beyond naming the protocol.
+     * 
+     * 3GPP TS 33.108, clause 17.2.14 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly talk_BurstControlProtocol: UTF8String;
     /**
      * @summary `talk_Burst_parameters`.
+     * @description
+     * 
+     * Talk-burst parameters the PTC server selected from those in the SDP offer
+     * of the incoming SIP INVITE from the PTC client.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly talk_Burst_parameters: VisibleString[];
     /**
      * @summary `tBCP_PortNumber`.
+     * @description
+     * 
+     * Port number at the PTC server for the talk-burst control protocol, in the
+     * range 0..65535.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */

@@ -20,6 +20,14 @@ import { SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_
  * @summary SMS_report_sMS_Contents
  * @description
  * 
+ * SMS initiator, transfer result, whether more SMS will follow, the TPDU, and
+ * whether annex P removed the content. Clause 6 SMS REPORT. The initiator is
+ * mandatory. The TPDU and the content-removed indicator are conditional. Annex
+ * B.9 may carry this packet-domain IRI (clause 6.5.1.0). Clause 10 does not
+ * define an SMS record.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,36 +70,63 @@ export
 class SMS_report_sMS_Contents {
     /**
      * @summary `sms_initiator`.
+     * @description
+     * 
+     * Who sent the SMS. Mandatory (clause 6 SMS REPORT and table 6.2):
+     * mobile-originated, mobile-terminated, or undefined. The module names the
+     * sender as the target, the server, or an undefined party.
      * @public
      * @readonly
      */
     readonly sms_initiator: SMS_report_sMS_Contents_sms_initiator;
     /**
      * @summary `transfer_status`.
+     * @description
+     * 
+     * Whether the SMS transfer succeeded. The module comment defines the
+     * success value. The SMS REPORT table in clause 6 does not list this
+     * indicator.
      * @public
      * @readonly
      */
     readonly transfer_status: OPTIONAL<SMS_report_sMS_Contents_transfer_status>;
     /**
      * @summary `other_message`.
+     * @description
+     * 
+     * On a terminating SMS, whether the server will send further SMS (module
+     * comment). The SMS REPORT table in clause 6 does not list this indicator.
      * @public
      * @readonly
      */
     readonly other_message: OPTIONAL<SMS_report_sMS_Contents_other_message>;
     /**
      * @summary `content`.
+     * @description
+     * 
+     * SMS TPDU, 3GPP TS 23.040 clause 9.2, in the format defined for the mobile
+     * (module comment). One to 270 octets. Conditional on the SMS REPORT. For
+     * IRI-only interception, annex P may remove it. If it is absent, provide
+     * the service-centre address; if it is present, that address is optional.
      * @public
      * @readonly
      */
     readonly content: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sMSContentRemovedIndicator`.
+     * @description
+     * 
+     * True when annex P removed the SMS content, and false when it did not.
+     * Conditional, for backward compatibility (clause 6 SMS REPORT).
      * @public
      * @readonly
      */
     readonly sMSContentRemovedIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */
@@ -131,18 +166,30 @@ class SMS_report_sMS_Contents {
 
         /**
          * @summary The enum used as the type of the component `sms_initiator`
+         * @description
+         * 
+         * Who sent the SMS: the target, the server, or an undefined party
+         * (clause 6).
          * @public
          * @static
          */
 
     public static _enum_for_sms_initiator = _enum_for_SMS_report_sMS_Contents_sms_initiator;        /**
          * @summary The enum used as the type of the component `transfer_status`
+         * @description
+         * 
+         * Whether the SMS transfer succeeded. The clause 6 SMS REPORT table
+         * does not list this indicator.
          * @public
          * @static
          */
 
     public static _enum_for_transfer_status = _enum_for_SMS_report_sMS_Contents_transfer_status;        /**
          * @summary The enum used as the type of the component `other_message`
+         * @description
+         * 
+         * On a terminating SMS, whether the server will send further SMS. The
+         * clause 6 SMS table does not list this indicator.
          * @public
          * @static
          */

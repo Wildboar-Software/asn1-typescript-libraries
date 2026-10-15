@@ -15,6 +15,20 @@ import { IMS_VoIP_Correlation, _decode_IMS_VoIP_Correlation, _encode_IMS_VoIP_Co
  * @summary ConfCorrelation
  * @description
  * 
+ * Correlation for one conference session, shared with the content of
+ * communication when that is delivered.
+ *
+ * `correlationNumber` is a single correlation value used for both IRI and
+ * content. `imsVoIP` is the IMS VoIP correlation form. Informative annex N.3.1
+ * says `correlationValues` remains only for historical compatibility and that
+ * the other two alternatives are the ones used; that annex is not a
+ * requirement, and its context tags differ from this module. For an
+ * interception of a conference identity alone, either the single number or the
+ * IMS VoIP form may be used. For a target-initiated ad hoc conference,
+ * informative annex N.3.2 points at the VoIP examples in clauses N.2.3 and
+ * N.2.4 when the conference must be tied to the basic call. 3GPP TS 33.108,
+ * clauses 11.1.4 and 11.5; annex N.3 (informative).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

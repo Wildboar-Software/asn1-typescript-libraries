@@ -17,6 +17,11 @@ enum _enum_for_SMS_report_sMS_Contents_sms_initiator {
  * @summary SMS_report_sMS_Contents_sms_initiator
  * @description
  * 
+ * Which party sent the SMS: the target (mobile originated), the server (mobile
+ * terminated), or unknown. Mandatory on an SMS REPORT.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1.1, table 6.7, and table 15.2.3.1; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +40,12 @@ type SMS_report_sMS_Contents_sms_initiator = _enum_for_SMS_report_sMS_Contents_s
 
 /**
  * @summary SMS_report_sMS_Contents_sms_initiator_target
+ * @description
+ * 
+ * The target sent the SMS (mobile originated). Mandatory indication on an SMS
+ * REPORT: the initiator is the target, the server, or undefined. 3GPP TS
+ * 33.108, table 6.7 and table 15.2.3.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +54,10 @@ const SMS_report_sMS_Contents_sms_initiator_target: SMS_report_sMS_Contents_sms_
 
 /**
  * @summary target
+ * @description
+ * 
+ * The target sent the SMS (3GPP TS 33.108, table 6.7).
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +66,11 @@ const target: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sm
 
 /**
  * @summary SMS_report_sMS_Contents_sms_initiator_server
+ * @description
+ * 
+ * The server sent the SMS (mobile terminated). Mandatory indication on an SMS
+ * REPORT. 3GPP TS 33.108, table 6.7 and table 15.2.3.1.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +79,10 @@ const SMS_report_sMS_Contents_sms_initiator_server: SMS_report_sMS_Contents_sms_
 
 /**
  * @summary server
+ * @description
+ * 
+ * The server sent the SMS (3GPP TS 33.108, table 6.7).
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +91,12 @@ const server: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sm
 
 /**
  * @summary SMS_report_sMS_Contents_sms_initiator_undefined_party
+ * @description
+ * 
+ * The party that sent the SMS is undefined: neither identified as the target
+ * nor as the server. Table 6.7 requires the initiator to say MO, MT, or
+ * undefined. 3GPP TS 33.108, table 6.7.
+ * 
  * @constant
  * @type {number}
  */
@@ -75,6 +105,10 @@ const SMS_report_sMS_Contents_sms_initiator_undefined_party: SMS_report_sMS_Cont
 
 /**
  * @summary undefined_party
+ * @description
+ * 
+ * The SMS sender is undefined (3GPP TS 33.108, table 6.7).
+ * 
  * @constant
  * @type {number}
  */

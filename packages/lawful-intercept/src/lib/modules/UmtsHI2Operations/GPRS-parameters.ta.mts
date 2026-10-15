@@ -15,6 +15,17 @@ import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } fro
  * @summary GPRS_parameters
  * @description
  * 
+ * PDP context seen for the target: the allocated address, APN, PDP type, NSAPI,
+ * and, for IPv4v6, the second IP address.
+ * 
+ * Table 6.2 maps the observed PDP address, access point name, and PDP type
+ * here. The address and APN conditions of the PDP-context records are in tables
+ * 6.5, 6.10, 6.12, and 6.14.
+ * 
+ * 3GPP TS 33.108, clause 6.5 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,36 +58,95 @@ export
 class GPRS_parameters {
     /**
      * @summary `pDP_address_allocated_to_the_target`.
+     * @description
+     * 
+     * PDP address allocated to the target. For IPv4 or IPv6 this is that
+     * address. For IPv4v6 the other address is carried separately.
+     * 
+     * Mandatory on a successful activation: the static address the network
+     * allocated, the dynamic address in the Activate PDP Context Accept, or the
+     * address offered on a network-initiated activation that the MS accepted
+     * (table 6.10). On failure, report the address the MS requested or the
+     * network offered in the cases table 6.5 lists. On deactivation, include it
+     * when available (table 6.14). On modification, include the address after
+     * the change when it changed; otherwise it is optional (table 6.12).
+     * 
+     * 3GPP TS 33.108, clause 6.5 and annex B.3.
      * @public
      * @readonly
      */
     readonly pDP_address_allocated_to_the_target: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `aPN`.
+     * @description
+     * 
+     * Access point name: the logical name of the packet data network (3GPP TS
+     * 23.060). Coded as in TS 24.008 without the APN information-element
+     * identifier, using at most the last 100 octets, with the octet coding of
+     * TS 23.003.
+     * 
+     * Mandatory on successful activation, modification, and deactivation. On a
+     * failed activation, include it when the UE supplied it (table 6.5).
+     * 
+     * 3GPP TS 33.108, table 6.2 and annex B.3.
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `pDP_type`.
+     * @description
+     * 
+     * PDP type: the end-user protocol between the external packet data network
+     * and the MS. Octets 3 and 4 of the Packet Data Protocol Address
+     * information element in TS 24.008, or octets 4 and 5 of the End User
+     * Address information element in TS 29.060.
+     * 
+     * Mandatory when a PDP address is reported for a successful activation.
+     * Conditional in that same case on failure, modification, and deactivation.
+     * 
+     * 3GPP TS 33.108, table 6.10 and annex B.3.
      * @public
      * @readonly
      */
     readonly pDP_type: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nSAPI`.
+     * @description
+     * 
+     * Network-layer service access point identifier of this PDP context, in the
+     * mobility-management context identified by the tunnel-endpoint identifier
+     * control plane. Octet 2 of the NSAPI information element in TS 24.008 or
+     * TS 29.060.
+     * 
+     * Optional. Table 6.2 also uses it to tell mobile access networks apart
+     * when the GGSN is the PDG (TS 23.234).
+     * 
+     * 3GPP TS 33.108, table 6.2 and annex B.3.
      * @public
      * @readonly
      */
     readonly nSAPI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `additionalIPaddress`.
+     * @description
+     * 
+     * The other IP address when the PDP type is IPv4v6. Annex B.3 does not give
+     * this parameter a separate stage-2 condition.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly additionalIPaddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

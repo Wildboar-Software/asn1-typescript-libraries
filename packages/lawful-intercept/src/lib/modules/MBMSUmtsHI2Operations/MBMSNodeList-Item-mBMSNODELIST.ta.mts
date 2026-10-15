@@ -14,6 +14,12 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * @summary MBMSNodeList_Item_mBMSNODELIST
  * @description
  * 
+ * Address and name of one entry in the downstream-node list. Table 9.2 also
+ * maps the BM-SC identifier onto this structure. Clause 9 does not say which
+ * component carries that identifier.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +36,35 @@ export
 class MBMSNodeList_Item_mBMSNODELIST {
     /**
      * @summary `mbmsnodeIPAdress`.
+     * @description
+     * 
+     * IP address of one node in the list. Clause 9 does not further define this
+     * component, including whether it is the BM-SC address. Annex B.8 spells
+     * the name mbmsnodeIPAdress.
+     * 
+     * 3GPP TS 33.108, annex B.8.
      * @public
      * @readonly
      */
     readonly mbmsnodeIPAdress: OPTIONAL<IPAddress>;
     /**
      * @summary `mbmsnodeName`.
+     * @description
+     * 
+     * Name of one node in the list. Table 9.2 describes the BM-SC identifier as
+     * a name or identifier of the BM-SC and maps it to mBMSNODELIST. Clause 9
+     * does not say that this component is that identifier.
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly mbmsnodeName: OPTIONAL<UTF8String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

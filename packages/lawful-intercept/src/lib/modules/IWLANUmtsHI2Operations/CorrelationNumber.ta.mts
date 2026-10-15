@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CorrelationNumber
  * @description
  * 
+ * Correlation number for one I-WLAN tunnel. Eight to twenty octets.
+ * 
+ * Correlates CC with IRI at the PDG, and correlates IRI records of the same
+ * tunnel at the PDG or the AAA server. At least unique for each concurrent
+ * tunnel of a target in one node under one lawful authorization.
+ * 
+ * 3GPP TS 33.108, clause 8.1.4 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

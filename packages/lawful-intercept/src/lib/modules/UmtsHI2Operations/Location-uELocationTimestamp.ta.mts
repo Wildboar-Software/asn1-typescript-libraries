@@ -13,6 +13,13 @@ import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operation
  * @summary Location_uELocationTimestamp
  * @description
  * 
+ * Date and time at which the location source established the UE location. If
+ * that time cannot be given to the MF/DF, the unknown alternative is sent so
+ * the LEMF can tell the timestamp is absent.
+ * 
+ * Conditional when a target location is provided ("Date/Time of Location").
+ * 3GPP TS 33.108, clause 4.5.0 and clause 6.5.1; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

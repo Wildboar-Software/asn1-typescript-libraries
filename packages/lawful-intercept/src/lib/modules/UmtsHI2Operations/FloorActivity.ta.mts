@@ -13,6 +13,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FloorActivity
  * @description
  * 
+ * Talk-burst control for a PTC session the target is in. A CONTINUE record is
+ * sent when the target requests the floor, is granted or refused, releases, is
+ * revoked, or is queued, when the floor goes idle, and when an associate's
+ * grant or queue is visible to the target's service.
+ * 
+ * The eight flags are the TBCP indications in table 17.2.14. Some annex B.3
+ * comments give a different polarity; the table is the stage-2 requirement.
+ * 
+ * 3GPP TS 33.108, clause 17.2.14.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,54 +58,120 @@ export
 class FloorActivity {
     /**
      * @summary `tBCP_Request`.
+     * @description
+     * 
+     * True when the PTC client requests permission to send a talk burst (table
+     * 17.2.14). Annex B.3 defaults the flag to false. Its comment that true
+     * means Granted conflicts with the table, which assigns the grant to the
+     * granted flag.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
      * @public
      * @readonly
      */
     readonly tBCP_Request: BOOLEAN;
     /**
      * @summary `tBCP_Granted`.
+     * @description
+     * 
+     * True when the PTC server grants the client permission to send a talk
+     * burst. Annex B.3 defaults this to false.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
      * @public
      * @readonly
      */
     readonly tBCP_Granted: BOOLEAN;
     /**
      * @summary `tBCP_Deny`.
+     * @description
+     * 
+     * True when the PTC server denies permission to send a talk burst (table
+     * 17.2.14). Annex B.3 says the flag defaults to true and that false means
+     * permission was granted.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
      * @public
      * @readonly
      */
     readonly tBCP_Deny: BOOLEAN;
     /**
      * @summary `tBCP_Queued`.
+     * @description
+     * 
+     * True when the request to talk is queued. Annex B.3 defaults this to
+     * false. Include the queued client's identity on the floor-control record
+     * when it is known (table 17.2.14).
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
      * @public
      * @readonly
      */
     readonly tBCP_Queued: BOOLEAN;
     /**
      * @summary `tBCP_Release`.
+     * @description
+     * 
+     * The request to talk has completed (table 17.2.14). Annex B.3 defaults
+     * this to true, and says false means the PTC client still has the request
+     * to talk.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
      * @public
      * @readonly
      */
     readonly tBCP_Release: BOOLEAN;
     /**
      * @summary `tBCP_Revoke`.
+     * @description
+     * 
+     * True when the PTC server revokes the permission to talk, including
+     * pre-emption and cutting off an over-long talk burst. Annex B.3 defaults
+     * this to false.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
      * @public
      * @readonly
      */
     readonly tBCP_Revoke: BOOLEAN;
     /**
      * @summary `tBCP_Taken`.
+     * @description
+     * 
+     * The server tells every client except the one that holds the floor that
+     * another client may send a talk burst (table 17.2.14).
+     * 
+     * Annex B.3 defaults the flag to true and says false means another client
+     * has permission. That polarity is the opposite of the table's description
+     * of this message.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
      * @public
      * @readonly
      */
     readonly tBCP_Taken: BOOLEAN;
     /**
      * @summary `tBCP_Idle`.
+     * @description
+     * 
+     * True when nobody holds the floor and the server may accept a talk-burst
+     * request (table 17.2.14). Annex B.3 defaults this to true and says false
+     * means the talk-burst protocol is taken. Do not include the floor-speaker
+     * identity when the floor is idle.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
      * @public
      * @readonly
      */
     readonly tBCP_Idle: BOOLEAN;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

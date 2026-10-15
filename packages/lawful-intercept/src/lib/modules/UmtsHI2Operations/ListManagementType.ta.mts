@@ -19,6 +19,18 @@ enum _enum_for_ListManagementType {
  * @summary ListManagementType
  * @description
  * 
+ * Which PTC list is involved, and whether this report is the target's attempt
+ * or the network's result.
+ * 
+ * Attempts are reported when the target's client changes a contact list or a
+ * group list, including adding or removing a contact on a group. Results are
+ * reported when the network notifies the target of those changes. The report is
+ * sent whether the attempt succeeds or fails (clause 17.2.17).
+ * 
+ * 3GPP TS 33.108, clause 17.2.17 and table 17.2.17.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +52,12 @@ type ListManagementType = _enum_for_ListManagementType | ENUMERATED;
 
 /**
  * @summary ListManagementType_contactListManagementAttempt
+ * @description
+ * 
+ * The target's client is attempting to change its contact list, for example to
+ * create, modify, retrieve, or delete it.
+ * 
+ * 3GPP TS 33.108, clause 17.2.17 and table 17.2.17.
  * @constant
  * @type {number}
  */
@@ -48,6 +66,9 @@ const ListManagementType_contactListManagementAttempt: ListManagementType = 1; /
 
 /**
  * @summary contactListManagementAttempt
+ * @description
+ * 
+ * The target is attempting to change its contact list (table 17.2.17).
  * @constant
  * @type {number}
  */
@@ -56,6 +77,12 @@ const contactListManagementAttempt: ListManagementType = ListManagementType_cont
 
 /**
  * @summary ListManagementType_groupListManagementAttempt
+ * @description
+ * 
+ * The target's client is attempting to change a PTC group list, including
+ * adding or deleting a contact on that list.
+ * 
+ * 3GPP TS 33.108, clause 17.2.17 and table 17.2.17.
  * @constant
  * @type {number}
  */
@@ -64,6 +91,9 @@ const ListManagementType_groupListManagementAttempt: ListManagementType = 2; /* 
 
 /**
  * @summary groupListManagementAttempt
+ * @description
+ * 
+ * The target is attempting to change a PTC group list (table 17.2.17).
  * @constant
  * @type {number}
  */
@@ -72,6 +102,11 @@ const groupListManagementAttempt: ListManagementType = ListManagementType_groupL
 
 /**
  * @summary ListManagementType_contactListManagementResult
+ * @description
+ * 
+ * The network is notifying the target of a change to the contact list.
+ * 
+ * 3GPP TS 33.108, table 17.2.17.
  * @constant
  * @type {number}
  */
@@ -80,6 +115,9 @@ const ListManagementType_contactListManagementResult: ListManagementType = 3; /*
 
 /**
  * @summary contactListManagementResult
+ * @description
+ * 
+ * Network notification of a contact-list change (table 17.2.17).
  * @constant
  * @type {number}
  */
@@ -88,6 +126,11 @@ const contactListManagementResult: ListManagementType = ListManagementType_conta
 
 /**
  * @summary ListManagementType_groupListManagementResult
+ * @description
+ * 
+ * The network is notifying the target of a change to a PTC group list.
+ * 
+ * 3GPP TS 33.108, table 17.2.17.
  * @constant
  * @type {number}
  */
@@ -96,6 +139,9 @@ const ListManagementType_groupListManagementResult: ListManagementType = 4; /* L
 
 /**
  * @summary groupListManagementResult
+ * @description
+ * 
+ * Network notification of a PTC group-list change (table 17.2.17).
  * @constant
  * @type {number}
  */
@@ -104,6 +150,14 @@ const groupListManagementResult: ListManagementType = ListManagementType_groupLi
 
 /**
  * @summary ListManagementType_requestSuccessful
+ * @description
+ * 
+ * Annex B.3 names this value requestSuccessful. Table 17.2.17 lists the fifth
+ * alternative as "Request unsuccessful" and says to report that alternative
+ * when the network notifies the target of a list change. The specification does
+ * not reconcile the two wordings.
+ * 
+ * 3GPP TS 33.108, table 17.2.17 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -112,6 +166,10 @@ const ListManagementType_requestSuccessful: ListManagementType = 5; /* LONG_NAME
 
 /**
  * @summary requestSuccessful
+ * @description
+ * 
+ * Annex B.3 says the request succeeded; table 17.2.17's fifth choice says it
+ * did not.
  * @constant
  * @type {number}
  */

@@ -12,6 +12,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProSeMaskSequence
  * @description
  * 
+ * Several 23-octet masks for one ProSe application code at the monitoring UE.
+ * Each mask is formatted like the application code. 3GPP TS 33.108, annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

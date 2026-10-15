@@ -13,6 +13,12 @@ import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operation
  * @summary ReportInterval
  * @description
  * 
+ * Interval of a packet-flow summary: the time the first packet of the reporting
+ * period was detected and the time the last packet was detected. Mandatory for
+ * each summarized flow (table 6.9C).
+ * 
+ * 3GPP TS 33.108, clause 6.5.1.1, table 6.9C, and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,26 @@ export
 class ReportInterval {
     /**
      * @summary `firstPacketTimeStamp`.
+     * @description
+     * 
+     * Time at which the first packet of this summary period was detected for
+     * the flow. Required as one end of the summary period (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9C, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly firstPacketTimeStamp: TimeStamp;
     /**
      * @summary `lastPacketTimeStamp`.
+     * @description
+     * 
+     * Time at which the last packet of this summary period was detected for the
+     * flow. Required as the other end of the summary period (table 6.9C).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9C, and annex B.3.
+     * 
      * @public
      * @readonly
      */

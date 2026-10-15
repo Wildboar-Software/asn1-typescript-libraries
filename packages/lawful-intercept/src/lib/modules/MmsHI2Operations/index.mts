@@ -1,4 +1,24 @@
 /**
+ * @description
+ * 
+ * ASN.1 module `MmsHI2Operations` from 3GPP TS 33.108. The module is declared
+ * with IMPLICIT TAGS.
+ * 
+ * HI2 intercept-related information for MMS. Clause 15.3 reports every MMS
+ * event as a REPORT record. Begin, End, and Continue are not applicable in this
+ * module. A delivery is one `MmsIRIContent` record or an optional
+ * `MmsIRISequence`. Aggregation is optional. A record that is ready to send is
+ * not withheld in order to aggregate it.
+ * 
+ * SMS IRI in clause 15.2 is not defined here.
+ * 
+ * 3GPP TS 33.108, clause 15.3 and annex B.15.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulintercept(2) threeGPP(4) hi2mms(16) r16(16) version-0(0)}`
+ */
+/**
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `forwarded`, `high`

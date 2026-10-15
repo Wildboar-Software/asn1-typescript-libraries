@@ -14,6 +14,14 @@ import { ConfPartyInformation, _decode_ConfPartyInformation, _encode_ConfPartyIn
  * @summary MediaID
  * @description
  * 
+ * Identifies media exchanged by parties on the conference. Clause 11.6 requires
+ * a party identifier when the MRFP multicasts a bearer, so the source of that
+ * stream is known.
+ * 
+ * 3GPP TS 33.108, annex L.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +42,28 @@ export
 class MediaID {
     /**
      * @summary `sourceUserID`.
+     * @description
+     * 
+     * SDP information describing the conference server side. 3GPP TS 33.108,
+     * annex L.2.
      * @public
      * @readonly
      */
     readonly sourceUserID: OPTIONAL<ConfPartyInformation>;
     /**
      * @summary `streamID`.
+     * @description
+     * 
+     * Stream identifier taken from the SDP. 3GPP TS 33.108, annex L.2.
      * @public
      * @readonly
      */
     readonly streamID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

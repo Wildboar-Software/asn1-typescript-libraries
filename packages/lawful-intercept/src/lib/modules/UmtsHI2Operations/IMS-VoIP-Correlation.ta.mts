@@ -11,6 +11,16 @@ import { IMS_VoIP_Correlation_Item, _decode_IMS_VoIP_Correlation_Item, _encode_I
  * @summary IMS_VoIP_Correlation
  * @description
  * 
+ * Set of IRI and CC correlation numbers for IMS VoIP sessions.
+ * 
+ * For separated IMS VoIP delivery this may be sent instead of the PDP
+ * correlation number or the general correlation parameter (table 7.2 note 11,
+ * and the note under tables 7.3 to 7.5).
+ * 
+ * 3GPP TS 33.108, clause 12.1.4.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

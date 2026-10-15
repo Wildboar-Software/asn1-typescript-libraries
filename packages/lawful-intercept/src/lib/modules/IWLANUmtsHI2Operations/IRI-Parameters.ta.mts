@@ -40,6 +40,15 @@ import { PacketDataHeaderInformation, _decode_PacketDataHeaderInformation, _enco
  * @summary IRI_Parameters
  * @description
  * 
+ * Parameters of one I-WLAN IRI record sent to the LEMF.
+ * 
+ * Stage 2 mandatory and conditional parameters are optional in the annex B.7
+ * syntax. Stage 2 inclusion overrides that syntax (clause 8.5.1.1). The lawful
+ * interception identifier is present in every record sent to the LEMF.
+ * 
+ * 3GPP TS 33.108, clause 8.5 and annex B.7.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -89,96 +98,242 @@ export
 class IRI_Parameters {
     /**
      * @summary `hi2iwlanDomainId`.
+     * @description
+     * 
+     * 3GPP HI2 WLAN domain identifier. Carries `hi2wlanDomainId`: threeGPP(4),
+     * hi2wlan(6), r16(16), version-1(1).
+     * 
+     * 3GPP TS 33.108, annex B.7.
      * @public
      * @readonly
      */
     readonly hi2iwlanDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * Identifier assigned to the target for this intercept, agreed between the
+     * LEA and the operator. Alphanumeric. It may carry an authorization
+     * reference and the date the authorization was issued. One value per target
+     * identity, or one value for several identities of the same target. If
+     * several LEAs intercept the same identity, each LEA has its own value.
+     * 
+     * Present in every record. Mandatory in the clause 8.5.1 records.
+     * 
+     * 3GPP TS 33.108, clause 8.1.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time of the event that triggered the report, from the
+     * intercepting node's clock (PDG or AAA server).
+     * 
+     * Event date and event time are mandatory in the clause 8.5.1 records.
+     * 
+     * 3GPP TS 33.108, clause 8.2.1, table 8.2, and annex B.7.
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `initiator`.
+     * @description
+     * 
+     * Whether the reported action was started by the WLAN UE or by the network,
+     * when either side can start it.
+     * 
+     * Conditional on tunnel disconnect (tables 8.12 and 8.13):
+     * target-initiated, network-initiated, or not available. The other clause
+     * 8.5.1 records do not include it.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly initiator: OPTIONAL<IRI_Parameters_initiator>;
     /**
      * @summary `partyInformation`.
+     * @description
+     * 
+     * The concerned party, its identities, and the information that party
+     * provided. At most ten parties.
+     * 
+     * The identity group is conditional: provide at least one identity and the
+     * others when available. Access and tunnel records list MSISDN, IMSI, and
+     * NAI. The packet-data header REPORT and the PDG start-of-intercept Begin
+     * list IMEI instead of NAI. This module has no IMEI component.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly partyInformation: OPTIONAL<PartyInformation[]>;
     /**
      * @summary `national_Parameters`.
+     * @description
+     * 
+     * National parameters. Clause 8.5 allows the ICE or the DF2/MF to extend
+     * the information set when a country requires it. TS 33.108 does not
+     * further define the contents.
      * @public
      * @readonly
      */
     readonly national_Parameters: OPTIONAL<National_Parameters>;
     /**
      * @summary `networkIdentifier`.
+     * @description
+     * 
+     * Operator identifier plus the PDG or AAA server address.
+     * 
+     * The operator identifier is mandatory and should be internationally
+     * unique. The network-element identifier is optional; national regulations
+     * may require it. Mandatory in the clause 8.5.1 records.
+     * 
+     * 3GPP TS 33.108, clause 8.1.3 and table 8.2.
      * @public
      * @readonly
      */
     readonly networkIdentifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `i_WLANevent`.
+     * @description
+     * 
+     * Which I-WLAN event this record reports: access initiation, access
+     * termination, tunnel establishment, tunnel disconnect, start of intercept
+     * with communication active, or packet-data header information.
+     * 
+     * Conditional on the access and tunnel records. Mandatory on the
+     * packet-data header REPORT (table 8.8, Packet Data Header Information
+     * REPORT Record).
+     * 
+     * 3GPP TS 33.108, table 8.1 and table 8.2.
      * @public
      * @readonly
      */
     readonly i_WLANevent: OPTIONAL<I_WLANEvent>;
     /**
      * @summary `correlationNumber`.
+     * @description
+     * 
+     * Unique per I-WLAN tunnel. Correlates CC with IRI at the PDG, and
+     * correlates the IRI records of one tunnel at the PDG or the AAA server. At
+     * least unique for each concurrent tunnel of a target in one node under one
+     * lawful authorization.
+     * 
+     * Conditional on successful-tunnel Begin and on tunnel-disconnect End, so
+     * CC and IRI can be correlated (AAA Begin correlates IRI only). Mandatory
+     * on the packet-data header REPORT.
+     * 
+     * 3GPP TS 33.108, clause 8.1.4 and table 8.2.
      * @public
      * @readonly
      */
     readonly correlationNumber: OPTIONAL<CorrelationNumber>;
     /**
      * @summary `i_WLANOperationErrorCode`.
+     * @description
+     * 
+     * Reason the access initiation failed, the tunnel establishment failed, or
+     * the I-WLAN session ended.
+     * 
+     * Failed tunnel establishment is "Authentication failed" or "Authorization
+     * failed". The tunnel-disconnect reason is for further study and is not a
+     * column of the disconnect End records. TS 33.108 does not define how the
+     * reason is encoded.
+     * 
+     * Conditional on failed access initiation (table 8.3), access termination
+     * (table 8.4), and unsuccessful tunnel establishment (tables 8.5 and 8.6).
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly i_WLANOperationErrorCode: OPTIONAL<I_WLANOperationErrorCode>;
     /**
      * @summary `i_wLANinformation`.
+     * @description
+     * 
+     * WLAN operator, location, NAS address, UE MAC address, and session alive
+     * time for the target. Annex B.7 also adds geographical coordinates and a
+     * civic address, which clause 8 tables do not name.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly i_wLANinformation: OPTIONAL<I_WLANinformation>;
     /**
      * @summary `visitedPLMNID`.
+     * @description
+     * 
+     * Visited PLMN that will terminate the target's communications or tunnel
+     * them to the home PLMN.
+     * 
+     * Conditional when available on access initiation, unsuccessful AAA tunnel
+     * setup, the AAA start-of-intercept REPORT, and the AAA start-of-intercept
+     * Begin.
+     * 
+     * 3GPP TS 33.108, table 8.2. Annex B.7 says to carry the identifier defined
+     * in TS 29.234 and does not define the encoding.
      * @public
      * @readonly
      */
     readonly visitedPLMNID: OPTIONAL<VisitedPLMNID>;
     /**
      * @summary `national_HI2_ASN1parameters`.
+     * @description
+     * 
+     * National HI2 parameters. Clause 8.5 allows the information set to be
+     * extended when a country requires it. TS 33.108 does not further define
+     * the contents.
      * @public
      * @readonly
      */
     readonly national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
     /**
      * @summary `nSAPI`.
+     * @description
+     * 
+     * Octet 2 of the NSAPI information element from TS 24.008 or from TS
+     * 29.060. It identifies a PDP context in the mobility-management context
+     * given by the Tunnel Endpoint Identifier Control Plane.
+     * 
+     * Optional extra information, to distinguish sending mobile access networks
+     * when the GGSN is used as part of the PDG (TS 23.234). Included on the
+     * packet-data header REPORT and on the PDG Begin and End records. The
+     * AAA-server records in clause 8.5.1 do not include it.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly nSAPI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `packetDataHeaderInformation`.
+     * @description
+     * 
+     * Packet header information for active I-WLAN communications, either one
+     * intercepted packet or a summary of a packet flow.
+     * 
+     * Mandatory on the packet-data header REPORT. Per-packet contents are table
+     * 8.9; each summary flow is table 8.10. For IP fragments, a 6-tuple may
+     * exist only on the first packet, and later fragments may not be reported.
+     * 
+     * 3GPP TS 33.108, clause 8.5.1.2 and table 8.8 (Packet Data Header
+     * Information REPORT Record).
      * @public
      * @readonly
      */
     readonly packetDataHeaderInformation: OPTIONAL<PacketDataHeaderInformation>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

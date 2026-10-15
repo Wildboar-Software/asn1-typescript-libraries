@@ -12,6 +12,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UmtsQos
  * @description
  * 
+ * QoS of a PDP context procedure, so the LEMF can see the quality applied to
+ * the intercepted packet session (table 6.2). Provide it on an unsuccessful PDP
+ * context activation. On success, provide it if available. On modification,
+ * provide it if available and changed; if it did not change, reporting it is
+ * optional. On deactivation, provide it if available.
+ * 
+ * The radio alternative is the QoS information element of 3GPP TS 24.008 clause
+ * 10.5.6.5 without the IEI and the length octet. The Gn alternative is coded as
+ * in 3GPP TS 29.060 clause 7.7.34.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1, tables 6.5, 6.10, 6.12, and 6.14; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,12 @@ import {
  * @summary lawfulInterceptDomainId
  * @description
  * 
+ * Root of the lawful-intercept object identifiers in this module. Arcs:
+ * itu-t(0), identified-organization(4), etsi(0), securityDomain(2),
+ * lawfulIntercept(2).
+ * 
+ * 3GPP TS 33.108, annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

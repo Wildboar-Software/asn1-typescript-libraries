@@ -13,6 +13,10 @@ import { EpsIRISequence, _decode_EpsIRISequence, _encode_EpsIRISequence } from "
  * @summary EpsIRIsContent
  * @description
  * 
+ * The HI2 payload for EPS and IMS IRI (annex B.9): either one record or a
+ * sequence of records. The specification text does not say when the sequence is
+ * chosen. 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

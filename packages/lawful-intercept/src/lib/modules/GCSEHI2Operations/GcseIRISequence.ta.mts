@@ -11,6 +11,10 @@ import { GcseIRIContent, _decode_GcseIRIContent, _encode_GcseIRIContent } from "
  * @summary GcseIRISequence
  * @description
  * 
+ * Aggregated GCSE IRI records for one LEA destination. Do not delay a record in
+ * the delivery or mediation function in order to build this sequence. 3GPP TS
+ * 33.108, annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

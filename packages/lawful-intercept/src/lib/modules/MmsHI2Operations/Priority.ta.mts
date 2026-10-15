@@ -17,6 +17,11 @@ enum _enum_for_Priority {
  * @summary Priority
  * @description
  * 
+ * Priority the originator MMS client assigned to the MM (table 15.3.6.1.2).
+ * Clause 15.3 does not further define the three levels beyond their names.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +41,10 @@ type Priority = _enum_for_Priority | ENUMERATED;
 
 /**
  * @summary Priority_low
+ * @description
+ * 
+ * Low priority assigned by the originator MMS client. Clause 15.3 does not
+ * further define this level.
  * @constant
  * @type {number}
  */
@@ -44,6 +53,9 @@ const Priority_low: Priority = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
+ * @description
+ * 
+ * Low originator priority. Clause 15.3 does not further define it.
  * @constant
  * @type {number}
  */
@@ -52,6 +64,10 @@ const low: Priority = Priority_low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_normal
+ * @description
+ * 
+ * Normal priority assigned by the originator MMS client. Clause 15.3 does not
+ * further define this level.
  * @constant
  * @type {number}
  */
@@ -60,6 +76,9 @@ const Priority_normal: Priority = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
+ * @description
+ * 
+ * Normal originator priority. Clause 15.3 does not further define it.
  * @constant
  * @type {number}
  */
@@ -68,6 +87,10 @@ const normal: Priority = Priority_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_high
+ * @description
+ * 
+ * High priority assigned by the originator MMS client. Clause 15.3 does not
+ * further define this level.
  * @constant
  * @type {number}
  */
@@ -76,6 +99,9 @@ const Priority_high: Priority = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
+ * @description
+ * 
+ * High originator priority. Clause 15.3 does not further define it.
  * @constant
  * @type {number}
  */

@@ -14,6 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PartyInformation_partyIdentity
  * @description
  * 
+ * Identities of the concerned party. Packet-domain tables require at least one
+ * of MSISDN, IMSI, and IMEI, and the others when available. An observed
+ * non-local ID is the E.164 number. IMS events carry SIP URI, TEL URI, and IMEI
+ * when available. XCAP events may add the asserted identity and the XCAP user
+ * identifier.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1, clause 7.1, clause 7.5, table 7.6; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,48 +64,116 @@ export
 class PartyInformation_partyIdentity {
     /**
      * @summary `imei`.
+     * @description
+     * 
+     * IMEI of the target, in the MAP format of 3GPP TS 29.002. On IMS, when the
+     * Instance-ID is an IMEI URN, extract the IMEI and convert it to this
+     * reporting format. Provide it when available; packet-domain tables ask for
+     * at least one of MSISDN, IMSI, and IMEI.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1, clause 7.5, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly imei: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `imsi`.
+     * @description
+     * 
+     * IMSI of the target: an E.212 number beginning with the mobile country
+     * code, in the MAP format of 3GPP TS 29.002. Provide it when available. For
+     * HSS interception, IMSI is a target identity when the subscription data
+     * contain it and it can be associated with the IMS identities.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1, clause 7.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly imsi: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `msISDN`.
+     * @description
+     * 
+     * MSISDN of the target, in the MAP AddressString format of 3GPP TS 29.002.
+     * Provide it when available. For HSS interception it is a target identity
+     * when the HSS is shared with access services and the association with IMS
+     * identities can be made.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1, clause 7.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly msISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `e164_Format`.
+     * @description
+     * 
+     * E.164 address of the node, international format, coded as the ISUP
+     * calling-party number parameter part (ITU-T Q.763). Table 6.2 uses it for
+     * an observed non-local ID, the target's E.164 number.
+     * 
+     * 3GPP TS 33.108, table 6.2 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly e164_Format: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sip_uri`.
+     * @description
+     * 
+     * SIP URI of the target (IETF RFC 3261). Conditional on IMS events when
+     * available (table 7.3). Non-local ID interception may use this URI.
+     * 
+     * 3GPP TS 33.108, clause 7.1, clause 7.5, table 7.3, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly sip_uri: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tel_uri`.
+     * @description
+     * 
+     * TEL URI of the target (IETF RFC 3966). Conditional on IMS events when
+     * available (table 7.3). Non-local ID interception may use this URI.
+     * 
+     * 3GPP TS 33.108, clause 7.1, clause 7.5, table 7.3, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly tel_uri: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `x_3GPP_Asserted_Identity`.
+     * @description
+     * 
+     * X-3GPP-Asserted-Identity of the target (3GPP TS 24.109), used in some
+     * XCAP transactions. It complements the SIP URI or TEL URI because XCAP can
+     * change the formal shape of those URIs. Conditional on an XCAP REPORT when
+     * available (table 7.6). It may come from that header, from
+     * X-3GPP-Intended-Identity, or from the XCAP user identifier.
+     * 
+     * 3GPP TS 33.108, clause 7.5, table 7.6, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly x_3GPP_Asserted_Identity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `xUI`.
+     * @description
+     * 
+     * XCAP User Identifier (IETF RFC 4825): a string that is valid as a path
+     * element in an XCAP URI and may be associated with a user of the XCAP
+     * server. It complements the SIP URI or TEL URI. Conditional on an XCAP
+     * REPORT when available (table 7.6).
+     * 
+     * 3GPP TS 33.108, clause 7.5, table 7.6, and annex B.3.
+     * 
      * @public
      * @readonly
      */

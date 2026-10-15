@@ -13,6 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExtendedLocParameters_motionStateList
  * @description
  * 
+ * Motion state of a LALS fix, mapped from the OMA MLP pos element (clause
+ * 5.2.2.3). The primary state cites MLP clause 5.3.69 and the confidence cites
+ * clause 5.3.24. TS 33.108 does not restate that syntax. A secondary state has
+ * no MLP clause in the annex.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,18 +38,36 @@ export
 class ExtendedLocParameters_motionStateList {
     /**
      * @summary `primaryMotionState`.
+     * @description
+     * 
+     * Primary motion state of the LALS fix, from OMA MLP clause 5.3.69. TS
+     * 33.108 does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly primaryMotionState: PrintableString;
     /**
      * @summary `secondaryMotionState`.
+     * @description
+     * 
+     * Further motion states, when the MLP response includes them. Annex B.3
+     * gives no MLP clause for this component.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly secondaryMotionState: OPTIONAL<PrintableString[]>;
     /**
      * @summary `confidence`.
+     * @description
+     * 
+     * Confidence of the motion state, from OMA MLP clause 5.3.24. TS 33.108
+     * does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

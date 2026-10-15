@@ -13,6 +13,13 @@ import { GA_Polygon_Item, _decode_GA_Polygon_Item, _encode_GA_Polygon_Item } fro
  * @summary GA_Polygon
  * @description
  * 
+ * UMTS location reported as a polygon. Annex B.3 allows 1 to maxNrOfPoints
+ * vertices and sets that bound to 15.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

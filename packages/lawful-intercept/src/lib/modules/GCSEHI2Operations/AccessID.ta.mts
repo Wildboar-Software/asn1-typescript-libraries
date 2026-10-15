@@ -14,6 +14,10 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * @summary AccessID
  * @description
  * 
+ * Identifier of one upstream or downstream access. `tMGI` is the reserved TMGI.
+ * `uEIPAddress` is the UE IP address. A UE may receive by more than one access.
+ * 3GPP TS 33.108, annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

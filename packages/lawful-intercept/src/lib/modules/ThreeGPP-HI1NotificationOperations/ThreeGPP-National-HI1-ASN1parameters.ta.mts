@@ -15,6 +15,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ThreeGPP_National_HI1_ASN1parameters
  * @description
  * 
+ * National HI1 parameters for one country. Informative annex M includes them
+ * when national regulation requests them. Anything after the extension marker
+ * is defined nationally and is not specified here. The schema recommends a
+ * version and a vendor identification, with vendor identities taken from IANA,
+ * and recommends avoiding tags 240 to 255. Those are recommendations in an
+ * informative annex, not a national layout. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,12 +49,23 @@ export
 class ThreeGPP_National_HI1_ASN1parameters {
     /**
      * @summary `domainID`.
+     * @description
+     * 
+     * Object identifier, included when FTP delivery is used. Which OID is
+     * placed here is not stated. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `countryCode`.
+     * @description
+     * 
+     * ISO 3166-1 country code, two characters, of the country whose national
+     * parameters follow the extension marker. 3GPP TS 33.108, annex M
+     * (informative); the schema cites ISO 3166-1.
+     * 
      * @public
      * @readonly
      */

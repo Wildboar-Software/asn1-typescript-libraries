@@ -19,6 +19,12 @@ enum _enum_for_ListManagementType {
  * @summary ListManagementType
  * @description
  * 
+ * Which PTC list the target touched, and whether this IRI is the attempt or the
+ * network's result (table 17.2.17). Conditional on the list-management report.
+ * The table's fifth choice is worded "Request unsuccessful"; the module name is
+ * the success value. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +46,10 @@ type ListManagementType = _enum_for_ListManagementType | ENUMERATED;
 
 /**
  * @summary ListManagementType_contactListManagementAttempt
+ * @description
+ * 
+ * The target's client attempted to change the contact list (table 17.2.17).
+ * 
  * @constant
  * @type {number}
  */
@@ -48,6 +58,10 @@ const ListManagementType_contactListManagementAttempt: ListManagementType = 1; /
 
 /**
  * @summary contactListManagementAttempt
+ * @description
+ * 
+ * Attempt to change the contact list (clause 17.2.17).
+ * 
  * @constant
  * @type {number}
  */
@@ -56,6 +70,10 @@ const contactListManagementAttempt: ListManagementType = ListManagementType_cont
 
 /**
  * @summary ListManagementType_groupListManagementAttempt
+ * @description
+ * 
+ * The target's client attempted to change a PTC group list (table 17.2.17).
+ * 
  * @constant
  * @type {number}
  */
@@ -64,6 +82,10 @@ const ListManagementType_groupListManagementAttempt: ListManagementType = 2; /* 
 
 /**
  * @summary groupListManagementAttempt
+ * @description
+ * 
+ * Attempt to change a group list (clause 17.2.17).
+ * 
  * @constant
  * @type {number}
  */
@@ -72,6 +94,10 @@ const groupListManagementAttempt: ListManagementType = ListManagementType_groupL
 
 /**
  * @summary ListManagementType_contactListManagementResult
+ * @description
+ * 
+ * The network's result for a contact-list change (table 17.2.17).
+ * 
  * @constant
  * @type {number}
  */
@@ -80,6 +106,10 @@ const ListManagementType_contactListManagementResult: ListManagementType = 3; /*
 
 /**
  * @summary contactListManagementResult
+ * @description
+ * 
+ * Result of a contact-list change (clause 17.2.17).
+ * 
  * @constant
  * @type {number}
  */
@@ -88,6 +118,10 @@ const contactListManagementResult: ListManagementType = ListManagementType_conta
 
 /**
  * @summary ListManagementType_groupListManagementResult
+ * @description
+ * 
+ * The network's result for a group-list change (table 17.2.17).
+ * 
  * @constant
  * @type {number}
  */
@@ -96,6 +130,10 @@ const ListManagementType_groupListManagementResult: ListManagementType = 4; /* L
 
 /**
  * @summary groupListManagementResult
+ * @description
+ * 
+ * Result of a group-list change (clause 17.2.17).
+ * 
  * @constant
  * @type {number}
  */
@@ -104,6 +142,12 @@ const groupListManagementResult: ListManagementType = ListManagementType_groupLi
 
 /**
  * @summary ListManagementType_requestSuccessful
+ * @description
+ * 
+ * The module names this value as success. Table 17.2.17 choice (e) is worded
+ * "Request unsuccessful" and is reported with the result values when the
+ * network notifies the target.
+ * 
  * @constant
  * @type {number}
  */
@@ -112,6 +156,10 @@ const ListManagementType_requestSuccessful: ListManagementType = 5; /* LONG_NAME
 
 /**
  * @summary requestSuccessful
+ * @description
+ * 
+ * Module name is success; table 17.2.17 choice (e) says unsuccessful.
+ * 
  * @constant
  * @type {number}
  */

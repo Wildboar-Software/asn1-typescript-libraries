@@ -17,6 +17,14 @@ import { Services_Data_Information, _decode_Services_Data_Information, _encode_S
  * @summary PartyInformation
  * @description
  * 
+ * One concerned party: its qualifier, its identities, and any complementary
+ * data-call information (module comment). The IRI carries a set of one to ten
+ * of these. Clause 10.5.2 maps observed EPS identities here. Clause 6 table 6.2
+ * maps observed packet-domain identities here when annex B.9 carries that IRI
+ * (clause 6.5.1.0). Clause 7 table 7.2 maps observed IMS identities here.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -79,24 +87,43 @@ export
 class PartyInformation {
     /**
      * @summary `party_Qualifier`.
+     * @description
+     * 
+     * The only defined value marks the intercepted EPS or packet-domain target.
+     * Clause 10.5.2, clause 6 table 6.2, and clause 7 table 7.2 put the
+     * observed identities in this party.
      * @public
      * @readonly
      */
     readonly party_Qualifier: PartyInformation_party_Qualifier;
     /**
      * @summary `partyIdentity`.
+     * @description
+     * 
+     * Identities of that party. Provide at least one that is available, and any
+     * others that are known (clause 10, clause 6, and clause 7 event tables).
      * @public
      * @readonly
      */
     readonly partyIdentity: PartyInformation_partyIdentity;
     /**
      * @summary `services_Data_Information`.
+     * @description
+     * 
+     * Complementary information for the basic data call (module comment).
+     * Clause 6 table 6.2 places the PDP address, the APN, and the PDP type
+     * here. Clause 10 places the EPS APN in the GTP or PMIP parameters. Clause
+     * 10.0 also applies the GGSN rules, including this information, when a
+     * PDN-GW presents Gn/Gp.
      * @public
      * @readonly
      */
     readonly services_Data_Information: OPTIONAL<Services_Data_Information>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */
@@ -132,6 +159,10 @@ class PartyInformation {
 
         /**
          * @summary The enum used as the type of the component `party_Qualifier`
+         * @description
+         * 
+         * Marks the intercepted EPS or packet-domain target (clause 10.5.2 and
+         * clause 6 table 6.2).
          * @public
          * @static
          */

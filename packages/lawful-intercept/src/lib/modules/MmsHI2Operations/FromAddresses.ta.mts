@@ -13,6 +13,14 @@ import { EncodedString, _decode_EncodedString, _encode_EncodedString } from "../
  * @summary FromAddresses
  * @description
  * 
+ * One From address, or the token the client sent in its place.
+ * 
+ * `actualAddress` is the address, before or after translation. `insertToken` is
+ * the token the client sent, which the MMS Proxy-Relay replaces with an address
+ * (table 15.3.6.1.2). Annex B.15 gives that alternative no further value.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

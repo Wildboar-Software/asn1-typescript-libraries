@@ -17,6 +17,13 @@ import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_f
  * @summary PacketDataHeaderMapped
  * @description
  * 
+ * Per-packet header fields mapped out of the packet, for one packet flow. Used
+ * when the REPORT does not carry a raw header copy (table 6.9B). A flow is
+ * source and destination address and port, protocol, and for IPv6 the flow
+ * label.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1.1, table 6.9B; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,54 +51,121 @@ export
 class PacketDataHeaderMapped {
     /**
      * @summary `sourceIPAddress`.
+     * @description
+     * 
+     * Source IP address of this packet. Conditional when header fields are
+     * mapped for a packet flow (table 6.9B).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9B.
+     * 
      * @public
      * @readonly
      */
     readonly sourceIPAddress: IPAddress;
     /**
      * @summary `sourcePortNumber`.
+     * @description
+     * 
+     * Source port of this packet. Conditional when header fields are mapped and
+     * the transport protocol supports port numbers (table 6.9B).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9B.
+     * 
      * @public
      * @readonly
      */
     readonly sourcePortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `destinationIPAddress`.
+     * @description
+     * 
+     * Destination IP address of this packet. Conditional when header fields are
+     * mapped (table 6.9B).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9B.
+     * 
      * @public
      * @readonly
      */
     readonly destinationIPAddress: IPAddress;
     /**
      * @summary `destinationPortNumber`.
+     * @description
+     * 
+     * Destination port of this packet. Conditional when header fields are
+     * mapped and the transport protocol supports port numbers (table 6.9B).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9B.
+     * 
      * @public
      * @readonly
      */
     readonly destinationPortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `transportProtocol`.
+     * @description
+     * 
+     * IPv4 Protocol field, or IPv6 Next Header field. Assigned numbers are at
+     * the IANA protocol-numbers registry cited in annex B.3. Conditional when
+     * header fields are mapped (table 6.9B).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9B; annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly transportProtocol: INTEGER;
     /**
      * @summary `packetsize`.
+     * @description
+     * 
+     * Total Length of an IPv4 packet, or Payload Length of an IPv6 packet.
+     * Optional when header fields are mapped (table 6.9B).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9B.
+     * 
      * @public
      * @readonly
      */
     readonly packetsize: OPTIONAL<INTEGER>;
     /**
      * @summary `flowLabel`.
+     * @description
+     * 
+     * IPv6 flow label (IETF RFC 3697), used by the source to label packets of a
+     * flow. Conditional, and only for IPv6, when header fields are mapped
+     * (table 6.9B).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9B.
+     * 
      * @public
      * @readonly
      */
     readonly flowLabel: OPTIONAL<INTEGER>;
     /**
      * @summary `packetCount`.
+     * @description
+     * 
+     * Number of packets detected. Table 6.2 and table 6.9C attach this count to
+     * a summary flow, where it is mandatory. The per-packet mapped form also
+     * has the field, and table 6.9B does not list it.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2, table 6.9B, and table 6.9C.
+     * 
      * @public
      * @readonly
      */
     readonly packetCount: OPTIONAL<INTEGER>;
     /**
      * @summary `direction`.
+     * @description
+     * 
+     * Direction of this packet: from the target, to the target, or unknown.
+     * Required when header fields are mapped. Stage 2 describes the direction
+     * as from the target or to the target.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9B, and annex B.3.
+     * 
      * @public
      * @readonly
      */

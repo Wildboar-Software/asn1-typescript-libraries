@@ -26,6 +26,12 @@ enum _enum_for_IMSevent {
  * @summary IMSevent
  * @description
  * 
+ * Which IMS event this IRI reports (table 7.2). Each event is a REPORT (table
+ * 7.1). HSS values are serving system, subscriber record change, registration
+ * termination, and location information request. Clause 12.5 adds the case
+ * where media was required but did not enter the CSP network. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,6 +81,12 @@ type IMSevent = _enum_for_IMSevent | ENUMERATED;
 
 /**
  * @summary IMSevent_unfilteredSIPmessage
+ * @description
+ * 
+ * The whole SIP message is included, with no content filtering. The delivery
+ * function removes location if the warrant does not allow it (module comment,
+ * table 7.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -83,6 +95,10 @@ const IMSevent_unfilteredSIPmessage: IMSevent = 1; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary unfilteredSIPmessage
+ * @description
+ * 
+ * Whole SIP message, unfiltered except for unauthorized location (clause 7.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -91,6 +107,12 @@ const unfilteredSIPmessage: IMSevent = IMSevent_unfilteredSIPmessage; /* SHORT_N
 
 /**
  * @summary IMSevent_sIPheaderOnly
+ * @description
+ * 
+ * The warrant asks for IRI only, so specific content in the SIP message, such
+ * as a Message body, was deleted before delivery. Unknown headers are not
+ * deleted (module comment, table 7.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -99,6 +121,10 @@ const IMSevent_sIPheaderOnly: IMSevent = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sIPheaderOnly
+ * @description
+ * 
+ * SIP header, with IRI-only content removed (clause 7.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -107,6 +133,11 @@ const sIPheaderOnly: IMSevent = IMSevent_sIPheaderOnly; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary IMSevent_decryptionKeysAvailable
+ * @description
+ * 
+ * This IRI carries the keys the LEMF needs to decrypt the session content
+ * (module comment, table 7.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -115,6 +146,10 @@ const IMSevent_decryptionKeysAvailable: IMSevent = 3; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary decryptionKeysAvailable
+ * @description
+ * 
+ * IRI carries content-decryption keys (table 7.4).
+ * 
  * @constant
  * @type {number}
  */
@@ -123,6 +158,12 @@ const decryptionKeysAvailable: IMSevent = IMSevent_decryptionKeysAvailable; /* S
 
 /**
  * @summary IMSevent_startOfInterceptionForIMSEstablishedSession
+ * @description
+ * 
+ * Interception started on an IMS session that was already established (module
+ * comment, table 7.5). Not sent to a LEMF that was already intercepting that
+ * session (clause 7.5.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -131,6 +172,10 @@ const IMSevent_startOfInterceptionForIMSEstablishedSession: IMSevent = 4; /* LON
 
 /**
  * @summary startOfInterceptionForIMSEstablishedSession
+ * @description
+ * 
+ * Start of interception on an already established IMS session (table 7.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -139,6 +184,11 @@ const startOfInterceptionForIMSEstablishedSession: IMSevent = IMSevent_startOfIn
 
 /**
  * @summary IMSevent_xCAPRequest
+ * @description
+ * 
+ * An XCAP request for the target's IMS supplementary-service settings is
+ * included (module comment, table 7.6).
+ * 
  * @constant
  * @type {number}
  */
@@ -147,6 +197,10 @@ const IMSevent_xCAPRequest: IMSevent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xCAPRequest
+ * @description
+ * 
+ * XCAP request REPORT (table 7.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -155,6 +209,10 @@ const xCAPRequest: IMSevent = IMSevent_xCAPRequest; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary IMSevent_xCAPResponse
+ * @description
+ * 
+ * The XCAP response is included (module comment, table 7.6).
+ * 
  * @constant
  * @type {number}
  */
@@ -163,6 +221,10 @@ const IMSevent_xCAPResponse: IMSevent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xCAPResponse
+ * @description
+ * 
+ * XCAP response REPORT (table 7.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -171,6 +233,11 @@ const xCAPResponse: IMSevent = IMSevent_xCAPResponse; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary IMSevent_ccUnavailable
+ * @description
+ * 
+ * The warrant requires media, but the media is not available for interception
+ * because it does not enter the CSP network (module comment, clause 12.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -179,6 +246,10 @@ const IMSevent_ccUnavailable: IMSevent = 7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ccUnavailable
+ * @description
+ * 
+ * Required media is not available for interception (clause 12.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -187,6 +258,11 @@ const ccUnavailable: IMSevent = IMSevent_ccUnavailable; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary IMSevent_sMSOverIMS
+ * @description
+ * 
+ * SMS over IP using IMS is being reported (module comment). Clause 15.2.3
+ * requires an SMS-over-IP REPORT, with event type SMS over IP (table 15.2.3.1).
+ * 
  * @constant
  * @type {number}
  */
@@ -195,6 +271,10 @@ const IMSevent_sMSOverIMS: IMSevent = 8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSOverIMS
+ * @description
+ * 
+ * SMS over IMS REPORT (clause 15.2.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -203,6 +283,10 @@ const sMSOverIMS: IMSevent = IMSevent_sMSOverIMS; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary IMSevent_servingSystem
+ * @description
+ * 
+ * HSS serving-system event (module comment, table 7.7).
+ * 
  * @constant
  * @type {number}
  */
@@ -211,6 +295,10 @@ const IMSevent_servingSystem: IMSevent = 9; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servingSystem
+ * @description
+ * 
+ * HSS serving system (clause 7.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -219,6 +307,10 @@ const servingSystem: IMSevent = IMSevent_servingSystem; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary IMSevent_subscriberRecordChange
+ * @description
+ * 
+ * HSS subscriber-record change (module comment, table 7.8).
+ * 
  * @constant
  * @type {number}
  */
@@ -227,6 +319,10 @@ const IMSevent_subscriberRecordChange: IMSevent = 10; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary subscriberRecordChange
+ * @description
+ * 
+ * HSS subscriber-record change (clause 7.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -235,6 +331,10 @@ const subscriberRecordChange: IMSevent = IMSevent_subscriberRecordChange; /* SHO
 
 /**
  * @summary IMSevent_registrationTermination
+ * @description
+ * 
+ * HSS registration termination (module comment, table 7.9).
+ * 
  * @constant
  * @type {number}
  */
@@ -243,6 +343,10 @@ const IMSevent_registrationTermination: IMSevent = 11; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary registrationTermination
+ * @description
+ * 
+ * HSS registration termination (clause 7.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -251,6 +355,10 @@ const registrationTermination: IMSevent = IMSevent_registrationTermination; /* S
 
 /**
  * @summary IMSevent_locationInformationRequest
+ * @description
+ * 
+ * HSS location-information request (module comment, table 7.10).
+ * 
  * @constant
  * @type {number}
  */
@@ -259,6 +367,10 @@ const IMSevent_locationInformationRequest: IMSevent = 12; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary locationInformationRequest
+ * @description
+ * 
+ * HSS location-information request (clause 7.5).
+ * 
  * @constant
  * @type {number}
  */

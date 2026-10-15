@@ -11,6 +11,10 @@ import { EncodedString, _decode_EncodedString, _encode_EncodedString } from "../
  * @summary Address
  * @description
  * 
+ * One MMS address, either as text or as an encoded character string.
+ * 
+ * 3GPP TS 33.108, annex B.15. Clause 15.3 does not further define this alias.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

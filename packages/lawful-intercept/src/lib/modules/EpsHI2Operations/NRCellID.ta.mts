@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NRCellID
  * @description
  * 
+ * NR cell identity within a PLMN, carried in the NR cell global identity of an
+ * additional cell identity (clause 10.5.2). The module comment points to 3GPP
+ * TS 36.413 clause 9.2.1.142. The handover prose does not restate the bit
+ * coding. The value is 36 bits.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

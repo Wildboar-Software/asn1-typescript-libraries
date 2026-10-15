@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ParameterValue
  * @description
  * 
+ * Value of one element-descriptor parameter.
+ * 
+ * `intValue` is an octet value. `textValue` is text. Clause 15.3 does not
+ * further define either alternative.
+ * 
+ * 3GPP TS 33.108, annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

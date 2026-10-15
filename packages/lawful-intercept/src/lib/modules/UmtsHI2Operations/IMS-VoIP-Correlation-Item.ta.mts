@@ -15,6 +15,17 @@ import { IRI_to_CC_Correlation, _decode_IRI_to_CC_Correlation, _encode_IRI_to_CC
  * @summary IMS_VoIP_Correlation_Item
  * @description
  * 
+ * Correlation numbers of one IMS VoIP session: the number used on the IRI, and,
+ * when CC is delivered, the number used on the CC.
+ * 
+ * The LEMF treats IRI and CC that carry these numbers as the same session. The
+ * CC intercept function receives the number from the triggering function
+ * (P-CSCF, IBCF, MGCF, S-CSCF, or AS, depending on the call).
+ * 
+ * 3GPP TS 33.108, clause 12.1.4.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +41,25 @@ export
 class IMS_VoIP_Correlation_Item {
     /**
      * @summary `ims_iri`.
+     * @description
+     * 
+     * Correlation number placed on the IRI of this IMS VoIP session. The LEMF
+     * matches it to the other IRI of that session.
+     * 
+     * 3GPP TS 33.108, clause 12.1.4.
      * @public
      * @readonly
      */
     readonly ims_iri: IRI_to_IRI_Correlation;
     /**
      * @summary `ims_cc`.
+     * @description
+     * 
+     * Correlation number placed on the CC of this IMS VoIP session. Omit it
+     * when no CC is delivered. The LEMF matches CC that carries it to the IRI
+     * of the same session.
+     * 
+     * 3GPP TS 33.108, clause 12.1.4.
      * @public
      * @readonly
      */

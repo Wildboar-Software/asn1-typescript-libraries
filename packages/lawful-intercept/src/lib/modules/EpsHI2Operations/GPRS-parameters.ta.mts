@@ -15,6 +15,13 @@ import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } fro
  * @summary GPRS_parameters
  * @description
  * 
+ * PDP-context parameters when packet-domain IRI is delivered on this HI2
+ * (clause 6.5.1) or the PDN-GW reports Gn/Gp behaviour (clause 10.0). Table 6.2
+ * maps the APN and the PDP type through party information into the
+ * services-data information that contains these parameters. The EPS APN and PDN
+ * address are the GTPv2, PMIP, MIP, or DSMIP parameters, not these (table
+ * 10.5.2). 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,36 +54,77 @@ export
 class GPRS_parameters {
     /**
      * @summary `pDP_address_allocated_to_the_target`.
+     * @description
+     * 
+     * PDP address of the target. When the PDP type is IPv4 or IPv6, the IP
+     * address is carried here (module comment). Table 6.2 calls this the
+     * observed PDP address; an IPv4v6 context may have two.
+     * 
      * @public
      * @readonly
      */
     readonly pDP_address_allocated_to_the_target: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `aPN`.
+     * @description
+     * 
+     * Access point name, a logical name (3GPP TS 23.060, table 6.2). Coded as
+     * in 3GPP TS 24.008 without the APN information-element identifier, using
+     * only the last 100 octets, with octets as in 3GPP TS 23.003 (module
+     * comment).
+     * 
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `pDP_type`.
+     * @description
+     * 
+     * PDP type as defined in 3GPP TS 29.060, 3GPP TS 24.008, and 3GPP TS 29.002
+     * (table 6.2). Include either octets 3 and 4 of the packet-data protocol
+     * address in 3GPP TS 24.008, or octets 4 and 5 of the end-user address
+     * information element in 3GPP TS 29.060. For IPv4 or IPv6 the address
+     * itself is the PDP address parameter; for IPv4v6 the additional address is
+     * the additional IP address (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly pDP_type: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nSAPI`.
+     * @description
+     * 
+     * Network-layer service access point identifier of the PDP context in the
+     * mobility-management context identified by the tunnel endpoint identifier
+     * control plane (table 6.2). Optional, to help separate the mobile access
+     * networks when the GGSN is used as the element of the PDG. Include either
+     * octet 2 of the NSAPI information element in 3GPP TS 24.008 or octet 2 of
+     * the NSAPI information element in 3GPP TS 29.060 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly nSAPI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `additionalIPaddress`.
+     * @description
+     * 
+     * The other IP address when the PDP type is IPv4v6 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly additionalIPaddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

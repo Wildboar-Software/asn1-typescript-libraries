@@ -11,6 +11,9 @@ import { UmtsCS_IRIContent, _decode_UmtsCS_IRIContent, _encode_UmtsCS_IRIContent
  * @summary UmtsCS_IRISequence
  * @description
  * 
+ * Aggregated CS IRI records for one LEA destination. Do not delay a record in
+ * order to build this sequence. 3GPP TS 33.108, annex B.3a.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

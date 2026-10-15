@@ -15,6 +15,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCAddress
  * @description
  * 
+ * Identity of a PTC client. Table 17.2.14 uses it for the floor speaker:
+ * include the client that holds the talk burst, when known, and omit it when
+ * the floor is idle. The URI set, the privacy flag, and any anonymous alias are
+ * defined in the module comments (RFC 3261 and the PoC anonymity form).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,30 +49,53 @@ export
 class PTCAddress {
     /**
      * @summary `uri`.
+     * @description
+     * 
+     * SIP URIs defined in RFC 3261 and related SIP RFCs (module comment).
+     * Identifies the PTC client that holds the floor or is otherwise addressed
+     * (table 17.2.14).
      * @public
      * @readonly
      */
     readonly uri: UTF8String;
     /**
      * @summary `privacy_setting`.
+     * @description
+     * 
+     * True when privacy is used. The module default is false. Clause 17 does
+     * not restate the default.
      * @public
      * @readonly
      */
     readonly privacy_setting: BOOLEAN;
     /**
      * @summary `privacy_alias`.
+     * @description
+     * 
+     * Anonymous address used when privacy is set. The server uses
+     * sip:anonymous@anonymous.invalid, unique within the session. Further
+     * anonymous participants use sip:anonymous-n@anonymous.invalid (module
+     * comment).
      * @public
      * @readonly
      */
     readonly privacy_alias: OPTIONAL<VisibleString>;
     /**
      * @summary `nickname`.
+     * @description
+     * 
+     * Nickname of the PTC address. The module does not state when it is
+     * required. Clause 17.1.5 mentions a nickname inside session information
+     * and the group identity, separately from this component.
      * @public
      * @readonly
      */
     readonly nickname: OPTIONAL<UTF8String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

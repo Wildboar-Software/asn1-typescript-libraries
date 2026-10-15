@@ -11,6 +11,12 @@ import { PacketFlowSummary, _decode_PacketFlowSummary, _encode_PacketFlowSummary
  * @summary PacketDataSummaryReport
  * @description
  * 
+ * One or more packet-flow summaries for the packet-data header REPORT. Each
+ * summary belongs to one flow: source and destination IP addresses, source and
+ * destination ports, transport protocol, and for IPv6 the flow label.
+ * 
+ * 3GPP TS 33.108, clause 8.5.1.2, table 8.2, and table 8.10.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

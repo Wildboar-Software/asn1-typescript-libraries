@@ -15,6 +15,17 @@ import { _decode_PresenceType, _encode_PresenceType, _enum_for_PresenceType, Pre
  * @summary AssociatePresenceStatus
  * @description
  * 
+ * Presence of one PTC associate or one PTC group. The PTC server reports it
+ * when it is the watcher for the target.
+ * 
+ * Used on the associate-presence report and also when session initiation or
+ * party join includes associate presence. Each entry is an identity, the kind
+ * of identity, and whether it is connected.
+ * 
+ * 3GPP TS 33.108, clause 17.2.16, table 17.2.4, and table 17.2.9.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +46,47 @@ export
 class AssociatePresenceStatus {
     /**
      * @summary `presenceID`.
+     * @description
+     * 
+     * Identity of the PTC client or clients, or of the PTC group, when it is
+     * known.
+     * 
+     * 3GPP TS 33.108, clause 17.2.16 and annex B.3.
      * @public
      * @readonly
      */
     readonly presenceID: UTF8String;
     /**
      * @summary `presenceType`.
+     * @description
+     * 
+     * Whether the presence identity is a PTC client or a PTC group.
+     * 
+     * 3GPP TS 33.108, clause 17.2.16.
      * @public
      * @readonly
      */
     readonly presenceType: PresenceType;
     /**
      * @summary `presenceStatus`.
+     * @description
+     * 
+     * Presence state of that identity. Annex B.3 defaults this to false; true
+     * means connected.
+     * 
+     * 3GPP TS 33.108, clause 17.2.16 and annex B.3.
      * @public
      * @readonly
      */
     readonly presenceStatus: BOOLEAN;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
@@ -88,6 +122,11 @@ class AssociatePresenceStatus {
 
         /**
          * @summary The enum used as the type of the component `presenceType`
+         * @description
+         * 
+         * Whether the presence identity is a PTC client or a PTC group.
+         * 
+         * 3GPP TS 33.108, clause 17.2.16.
          * @public
          * @static
          */

@@ -20,6 +20,10 @@ enum _enum_for_InterceptionType {
  * @summary InterceptionType
  * @description
  * 
+ * Scope of the warrant, as listed in informative annex M: voice or data or
+ * both, with or without content of communication. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +45,11 @@ type InterceptionType = _enum_for_InterceptionType | ENUMERATED;
 
 /**
  * @summary InterceptionType_voiceIriCc
+ * @description
+ * 
+ * Voice IRI and content of communication. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -49,6 +58,10 @@ const InterceptionType_voiceIriCc: InterceptionType = 0; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary voiceIriCc
+ * @description
+ * 
+ * Voice IRI and content. 3GPP TS 33.108, annex M (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -57,6 +70,11 @@ const voiceIriCc: InterceptionType = InterceptionType_voiceIriCc; /* SHORT_NAMED
 
 /**
  * @summary InterceptionType_voiceIriOnly
+ * @description
+ * 
+ * Voice IRI only, without content of communication. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -65,6 +83,10 @@ const InterceptionType_voiceIriOnly: InterceptionType = 1; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary voiceIriOnly
+ * @description
+ * 
+ * Voice IRI only. 3GPP TS 33.108, annex M (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -73,6 +95,10 @@ const voiceIriOnly: InterceptionType = InterceptionType_voiceIriOnly; /* SHORT_N
 
 /**
  * @summary InterceptionType_dataIriCc
+ * @description
+ * 
+ * Data IRI and content of communication. 3GPP TS 33.108, annex M (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -81,6 +107,10 @@ const InterceptionType_dataIriCc: InterceptionType = 2; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary dataIriCc
+ * @description
+ * 
+ * Data IRI and content. 3GPP TS 33.108, annex M (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -89,6 +119,11 @@ const dataIriCc: InterceptionType = InterceptionType_dataIriCc; /* SHORT_NAMED_E
 
 /**
  * @summary InterceptionType_dataIriOnly
+ * @description
+ * 
+ * Data IRI only, without content of communication. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -97,6 +132,10 @@ const InterceptionType_dataIriOnly: InterceptionType = 3; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary dataIriOnly
+ * @description
+ * 
+ * Data IRI only. 3GPP TS 33.108, annex M (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -105,6 +144,11 @@ const dataIriOnly: InterceptionType = InterceptionType_dataIriOnly; /* SHORT_NAM
 
 /**
  * @summary InterceptionType_voiceAndDataIriCc
+ * @description
+ * 
+ * Voice and data IRI, with content of communication. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -113,6 +157,10 @@ const InterceptionType_voiceAndDataIriCc: InterceptionType = 4; /* LONG_NAMED_EN
 
 /**
  * @summary voiceAndDataIriCc
+ * @description
+ * 
+ * Voice and data, IRI and content. 3GPP TS 33.108, annex M (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -121,6 +169,11 @@ const voiceAndDataIriCc: InterceptionType = InterceptionType_voiceAndDataIriCc; 
 
 /**
  * @summary InterceptionType_voiceAndDataIriOnly
+ * @description
+ * 
+ * Voice and data IRI, without content of communication. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -129,6 +182,10 @@ const InterceptionType_voiceAndDataIriOnly: InterceptionType = 5; /* LONG_NAMED_
 
 /**
  * @summary voiceAndDataIriOnly
+ * @description
+ * 
+ * Voice and data IRI only. 3GPP TS 33.108, annex M (informative).
+ * 
  * @constant
  * @type {number}
  */

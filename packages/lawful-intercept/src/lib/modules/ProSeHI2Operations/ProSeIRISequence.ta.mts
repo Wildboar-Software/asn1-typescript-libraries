@@ -11,6 +11,10 @@ import { ProSeIRIContent, _decode_ProSeIRIContent, _encode_ProSeIRIContent } fro
  * @summary ProSeIRISequence
  * @description
  * 
+ * Aggregated ProSe IRI records for one LEA destination. Do not delay a record
+ * in the delivery or mediation function in order to build this sequence. 3GPP
+ * TS 33.108, annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

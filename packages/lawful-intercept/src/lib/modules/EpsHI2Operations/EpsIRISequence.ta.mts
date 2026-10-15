@@ -11,6 +11,11 @@ import { EpsIRIContent, _decode_EpsIRIContent, _encode_EpsIRIContent } from "../
  * @summary EpsIRISequence
  * @description
  * 
+ * More than one HI2 record in a single delivery. The specification text does
+ * not say when a sequence is sent instead of one record. Each element is one
+ * BEGIN, END, CONTINUE, or REPORT (clause 10.5.1, annex B.9). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,6 +14,10 @@ import { DataNodeIdentifier, _decode_DataNodeIdentifier, _encode_DataNodeIdentif
  * @summary Current_Previous_Systems
  * @description
  * 
+ * Current and previous visited network and MME, from HSS procedures such as
+ * cancel location and register location (table 10.5.2, tables 10.5.1.1.18 and
+ * 10.5.1.1.19). 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,30 +41,58 @@ export
 class Current_Previous_Systems {
     /**
      * @summary `serving_System_Identifier`.
+     * @description
+     * 
+     * Current visited-network identity (MCC and MNC, ITU-T E.212), so the home
+     * network can identify the visited network (table 10.5.2, 3GPP TS 29.273).
+     * The module comment calls it the VPLMN id.
+     * 
      * @public
      * @readonly
      */
     readonly serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `current_Serving_MME_Address`.
+     * @description
+     * 
+     * Current serving MME: its IP address, or its Diameter Origin-Host and
+     * Origin-Realm (module comment). Table 10.5.2's sentence for this parameter
+     * also says "previous"; the module comment says current.
+     * 
      * @public
      * @readonly
      */
     readonly current_Serving_MME_Address: OPTIONAL<DataNodeIdentifier>;
     /**
      * @summary `previous_Serving_System_Identifier`.
+     * @description
+     * 
+     * Previous VPLMN id (MCC and MNC, ITU-T E.212), for example on cancel
+     * location (table 10.5.2, table 10.5.1.1.18).
+     * 
      * @public
      * @readonly
      */
     readonly previous_Serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `previous_Serving_MME_Address`.
+     * @description
+     * 
+     * Previous serving MME: its IP address, or its Diameter Origin-Host and
+     * Origin-Realm (table 10.5.2, table 10.5.1.1.18).
+     * 
      * @public
      * @readonly
      */
     readonly previous_Serving_MME_Address: OPTIONAL<DataNodeIdentifier>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

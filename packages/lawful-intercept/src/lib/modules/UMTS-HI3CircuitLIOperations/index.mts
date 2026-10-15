@@ -1,3 +1,20 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `UMTS-HI3CircuitLIOperations`, `IMPLICIT TAGS`. User-data packet
+ * transfer on HI3 for UMTS circuit-switched interception (DSS1, ISUP, or MAP
+ * signalling, for example UUS).
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulintercept(2) threeGPP(4) hi3CS(4) r16(16) version0(0)}`.
+ * 
+ * 3GPP TS 33.108, annex B.6, clause 5.3, and annex J. Clause 5.3.1 delivers CS
+ * bearer content on ISDN calls; annex J defines the UUS1 correlation on those
+ * calls.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
 export {
     type UMTS_Content_Report_initiator,
     UMTS_Content_Report_initiator_forwarded_to_party,

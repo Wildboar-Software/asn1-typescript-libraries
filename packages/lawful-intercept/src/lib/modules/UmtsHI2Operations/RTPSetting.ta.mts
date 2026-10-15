@@ -15,6 +15,12 @@ import { Port_Number, _decode_Port_Number, _encode_Port_Number } from "../UmtsHI
  * @summary RTPSetting
  * @description
  * 
+ * IP address and port at the PTC server for the RTP session. Mandatory on the
+ * pre-established session record. Table 17.2.20 describes the same pair as the
+ * IP address and port number of the target at the PTC server.
+ * 
+ * 3GPP TS 33.108, clause 17.2.20 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +39,27 @@ export
 class RTPSetting {
     /**
      * @summary `ip_address`.
+     * @description
+     * 
+     * IP address at the PTC server for the RTP session. Together with the port,
+     * mandatory on a pre-established session record. Table 17.2.20 describes
+     * the pair as the address and port of the target at the PTC server.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, table 17.2.20, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly ip_address: IPAddress;
     /**
      * @summary `port_number`.
+     * @description
+     * 
+     * Port at the PTC server for the RTP session, in the range 0..65535. See
+     * the IP address for the pre-established session condition.
+     * 
+     * 3GPP TS 33.108, clause 17.2.20 and annex B.3.
+     * 
      * @public
      * @readonly
      */

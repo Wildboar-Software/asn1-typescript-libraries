@@ -16,6 +16,13 @@ import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2
  * @summary PANI_Location
  * @description
  * 
+ * Location taken from a P-Access-Network-Info header (clause 7). Include it
+ * only when the warrant authorizes location. The raw string and a parsed
+ * location may both be present. The handover text does not say which parsed
+ * form to prefer.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +42,42 @@ export
 class PANI_Location {
     /**
      * @summary `raw_Location`.
+     * @description
+     * 
+     * Unparsed copy of the location string from the P-Access-Network-Info
+     * header (module comment). Include it when the warrant authorizes location
+     * (clause 7).
      * @public
      * @readonly
      */
     readonly raw_Location: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `location`.
+     * @description
+     * 
+     * Parsed location in the form used for 2G and 3G location. Include it when
+     * the warrant authorizes location and the header location is carried that
+     * way (clause 7). The handover text does not say when to prefer this form.
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `ePSLocation`.
+     * @description
+     * 
+     * Parsed EPS location from the header. Include it when the warrant
+     * authorizes location and the header location is carried as an EPS location
+     * (clause 7). The handover text does not say when to prefer this form.
      * @public
      * @readonly
      */
     readonly ePSLocation: OPTIONAL<EPSLocation>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

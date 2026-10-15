@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of an MMS T-PDU. Only from the target, to the target, and unknown
+ * are defined. Table 15.3.7.1 does not further specify them.
+ * 
+ * 3GPP TS 33.108, annex B.16.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +38,13 @@ enum _enum_for_TPDU_direction {
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of an MMS T-PDU. Only from the target, to the target, and unknown
+ * are defined. Table 15.3.7.1 does not further specify them.
+ * 
+ * 3GPP TS 33.108, annex B.16.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +65,13 @@ type TPDU_direction = _enum_for_TPDU_direction;
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of an MMS T-PDU. Only from the target, to the target, and unknown
+ * are defined. Table 15.3.7.1 does not further specify them.
+ * 
+ * 3GPP TS 33.108, annex B.16.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +90,10 @@ const TPDU_direction = _enum_for_TPDU_direction;
 
 /**
  * @summary TPDU_direction_from_target
+ * @description
+ * 
+ * MMS T-PDU from the target. Table 15.3.7.1 does not further define this value.
+ * 3GPP TS 33.108, annex B.16.
  * @constant
  * @type {number}
  */
@@ -77,6 +102,9 @@ const TPDU_direction_from_target: TPDU_direction = TPDU_direction.from_target; /
 
 /**
  * @summary from_target
+ * @description
+ * 
+ * MMS T-PDU from the target. Annex B.16.
  * @constant
  * @type {number}
  */
@@ -85,6 +113,10 @@ const from_target: TPDU_direction = TPDU_direction.from_target; /* SHORT_NAMED_E
 
 /**
  * @summary TPDU_direction_to_target
+ * @description
+ * 
+ * MMS T-PDU to the target. Table 15.3.7.1 does not further define this value.
+ * 3GPP TS 33.108, annex B.16.
  * @constant
  * @type {number}
  */
@@ -93,6 +125,9 @@ const TPDU_direction_to_target: TPDU_direction = TPDU_direction.to_target; /* LO
 
 /**
  * @summary to_target
+ * @description
+ * 
+ * MMS T-PDU to the target. Annex B.16.
  * @constant
  * @type {number}
  */
@@ -101,6 +136,10 @@ const to_target: TPDU_direction = TPDU_direction.to_target; /* SHORT_NAMED_ENUME
 
 /**
  * @summary TPDU_direction_unknown
+ * @description
+ * 
+ * Direction unknown. Table 15.3.7.1 does not further define this value. 3GPP TS
+ * 33.108, annex B.16.
  * @constant
  * @type {number}
  */
@@ -109,6 +148,9 @@ const TPDU_direction_unknown: TPDU_direction = TPDU_direction.unknown; /* LONG_N
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * Direction unknown. Annex B.16.
  * @constant
  * @type {number}
  */

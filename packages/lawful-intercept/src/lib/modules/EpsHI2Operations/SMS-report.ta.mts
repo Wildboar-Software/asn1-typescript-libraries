@@ -13,6 +13,17 @@ import { SMS_report_sMS_Contents, _decode_SMS_report_sMS_Contents, _encode_SMS_r
  * @summary SMS_report
  * @description
  * 
+ * SMS content and the information that accompanies it. IRI parameter sMS
+ * (module comment). Clause 6 table 6.2 and the SMS REPORT record: deliver the
+ * SMS TPDU (3GPP TS 23.040 clause 9.2). For IRI-only interception, apply annex
+ * P. The other party's identity is inside the TPDU. The parameter is
+ * conditional for backward compatibility. If the content is absent, provide the
+ * service-centre address; if the content is present, that address is optional.
+ * Annex B.9 may carry this packet-domain IRI (clause 6.5.1.0). Clause 10 does
+ * not define an SMS record.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,6 +67,11 @@ export
 class SMS_report {
     /**
      * @summary `sMS_Contents`.
+     * @description
+     * 
+     * Initiator, transfer result, indication of further SMS, the TPDU, and
+     * whether annex P removed the content. Clause 6 SMS REPORT. The initiator
+     * is mandatory. The TPDU is conditional.
      * @public
      * @readonly
      */

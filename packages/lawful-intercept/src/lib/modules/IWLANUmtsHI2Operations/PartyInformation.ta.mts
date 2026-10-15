@@ -17,6 +17,11 @@ import { Services_Data_Information, _decode_Services_Data_Information, _encode_S
  * @summary PartyInformation
  * @description
  * 
+ * One party of the I-WLAN event: role, identities, and the complementary data
+ * associated with the basic call.
+ * 
+ * 3GPP TS 33.108, table 8.2 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,24 +62,45 @@ export
 class PartyInformation {
     /**
      * @summary `party_Qualifier`.
+     * @description
+     * 
+     * Role of this party. Annex B.7 names only the I-WLAN target.
+     * 
+     * 3GPP TS 33.108, annex B.7.
      * @public
      * @readonly
      */
     readonly party_Qualifier: PartyInformation_party_Qualifier;
     /**
      * @summary `partyIdentity`.
+     * @description
+     * 
+     * Identities of this party. Provide at least one, and the others when
+     * available. The module provides MSISDN, IMSI, and NAI. Clause 8 tables
+     * that list observed IMEI have no component for it here.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly partyIdentity: PartyInformation_partyIdentity;
     /**
      * @summary `services_Data_Information`.
+     * @description
+     * 
+     * Complementary information for the basic data call. Table 8.2 places the
+     * WLAN access-point name and the local and remote UE IP addresses here.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly services_Data_Information: OPTIONAL<Services_Data_Information>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

@@ -15,6 +15,10 @@ enum _enum_for_PartyInformation_party_Qualifier {
  * @summary PartyInformation_party_Qualifier
  * @description
  * 
+ * Role of the party in an MMS IRI record. Annex B.15 names only the MMS target.
+ * 
+ * 3GPP TS 33.108, annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +35,11 @@ type PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifi
 
 /**
  * @summary PartyInformation_party_Qualifier_mMS_Target
+ * @description
+ * 
+ * This party is the MMS interception target.
+ * 
+ * 3GPP TS 33.108, annex B.15. Clause 15.3 does not further define this value.
  * @constant
  * @type {number}
  */
@@ -39,6 +48,9 @@ const PartyInformation_party_Qualifier_mMS_Target: PartyInformation_party_Qualif
 
 /**
  * @summary mMS_Target
+ * @description
+ * 
+ * The party is the MMS target. Clause 15.3 does not further define this value.
  * @constant
  * @type {number}
  */

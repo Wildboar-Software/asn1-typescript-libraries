@@ -1,3 +1,25 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `MBMSUmtsHI2Operations` from 3GPP TS 33.108. The module is
+ * declared with IMPLICIT TAGS.
+ * 
+ * HI2 intercept-related information for MBMS. Clause 9 provides IRI only;
+ * content of communication is left to the transport bearer. A delivery is one
+ * `MBMSUmtsIRIContent` record or an optional `MBMSUmtsIRISequence`. Aggregation
+ * is optional. A record that is ready to send is not withheld in order to
+ * aggregate it.
+ * 
+ * Begin is service joining, or start of intercept while a service is already
+ * active. End is service leaving. Report is subscription activation,
+ * modification, or termination. Subscription records are not correlated.
+ * 
+ * 3GPP TS 33.108, clause 9 and annex B.8.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulintercept(2) threeGPP(4) hi2mbms(7) r16(16) version0(0)}`
+ */
 export {
     type CorrelationNumber,
     _decode_CorrelationNumber,

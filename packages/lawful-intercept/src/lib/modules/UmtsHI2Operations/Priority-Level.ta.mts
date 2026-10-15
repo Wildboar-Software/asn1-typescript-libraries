@@ -18,6 +18,13 @@ enum _enum_for_Priority_Level {
  * @summary Priority_Level
  * @description
  * 
+ * Talk-burst priority of a PTC client, included when more than one priority
+ * level is supported. The levels are those named in annex B.3. OMA-PoC-AD [97]
+ * is the referenced architecture; TS 33.108 does not restate that document's
+ * procedures.
+ * 
+ * 3GPP TS 33.108, clause 17.1.5, table 17.2.14, and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +45,11 @@ type Priority_Level = _enum_for_Priority_Level | ENUMERATED;
 
 /**
  * @summary Priority_Level_pre_emptive
+ * @description
+ * 
+ * Pre-emptive talk-burst priority. Used when more than one priority level is
+ * supported. 3GPP TS 33.108, clause 17.1.5, table 17.2.14, and annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +58,10 @@ const Priority_Level_pre_emptive: Priority_Level = 0; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary pre_emptive
+ * @description
+ * 
+ * Pre-emptive talk-burst priority (3GPP TS 33.108, clause 17.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +70,11 @@ const pre_emptive: Priority_Level = Priority_Level_pre_emptive; /* SHORT_NAMED_E
 
 /**
  * @summary Priority_Level_high_priority
+ * @description
+ * 
+ * High talk-burst priority. Used when more than one priority level is
+ * supported. 3GPP TS 33.108, clause 17.1.5, table 17.2.14, and annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +83,10 @@ const Priority_Level_high_priority: Priority_Level = 1; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary high_priority
+ * @description
+ * 
+ * High talk-burst priority (3GPP TS 33.108, clause 17.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +95,11 @@ const high_priority: Priority_Level = Priority_Level_high_priority; /* SHORT_NAM
 
 /**
  * @summary Priority_Level_normal_priority
+ * @description
+ * 
+ * Normal talk-burst priority. Used when more than one priority level is
+ * supported. 3GPP TS 33.108, clause 17.1.5, table 17.2.14, and annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +108,10 @@ const Priority_Level_normal_priority: Priority_Level = 2; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary normal_priority
+ * @description
+ * 
+ * Normal talk-burst priority (3GPP TS 33.108, clause 17.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +120,12 @@ const normal_priority: Priority_Level = Priority_Level_normal_priority; /* SHORT
 
 /**
  * @summary Priority_Level_listen_only
+ * @description
+ * 
+ * Listen-only talk-burst priority. Used when more than one priority level is
+ * supported. Annex B.3 names the level and does not add a procedure. 3GPP TS
+ * 33.108, clause 17.1.5 and annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -94,6 +134,10 @@ const Priority_Level_listen_only: Priority_Level = 3; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary listen_only
+ * @description
+ * 
+ * Listen-only talk-burst priority (3GPP TS 33.108, annex B.3).
+ * 
  * @constant
  * @type {number}
  */

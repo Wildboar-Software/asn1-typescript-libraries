@@ -1,3 +1,17 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `CONF-HI3-IMS`, `IMPLICIT TAGS`. HI3 content of communication
+ * for IMS conferencing.
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulIntercept(2) threeGPP(4) hi3conf(11) r17(17) version-0(0)}`.
+ * 
+ * 3GPP TS 33.108, clause 11.6, annex L, and annex B.11.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
 export {
     Conf_CC_PDU,
     _decode_Conf_CC_PDU,

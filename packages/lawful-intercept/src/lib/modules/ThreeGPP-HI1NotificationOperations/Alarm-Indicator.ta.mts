@@ -26,6 +26,10 @@ import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identif
  * @summary Alarm_Indicator
  * @description
  * 
+ * Alarm indication toward the LEMF. Informative annex M lists alarm reporting,
+ * in particular an O&M alarm, as for further study. The schema still defines a
+ * free-format alarm string. 3GPP TS 33.108, annex M (informative).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,54 +66,106 @@ export
 class Alarm_Indicator {
     /**
      * @summary `domainID`.
+     * @description
+     * 
+     * Object identifier, included when FTP delivery is used. Which OID is
+     * placed here is not stated. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     * 
+     * Only the operator / access-provider / service-provider identifier from
+     * the lawful authorization. 3GPP TS 33.108, annex M (informative) and the
+     * accompanying schema.
+     * 
      * @public
      * @readonly
      */
     readonly communicationIdentifier: OPTIONAL<CommunicationIdentifier>;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time of the alarm report. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `alarm_information`.
+     * @description
+     * 
+     * Free-format alarm information, one to 256 octets. Until Release 16
+     * version 0 (document v16.3.0) the schema limited the string to 25 octets.
+     * No alarm layout is defined. Annex M (informative) says alarm details are
+     * for further study. 3GPP TS 33.108, annex M.
+     * 
      * @public
      * @readonly
      */
     readonly alarm_information: OCTET_STRING;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * LIID from the lawful authorization for the target, according to national
+     * law. Optional on an alarm. The informative annex recommends limiting
+     * flows that contain target identities. 3GPP TS 33.108, annex M
+     * (informative).
+     * 
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `threeGPP_National_HI1_ASN1parameters`.
+     * @description
+     * 
+     * National HI1 parameters when national regulation requests them. Layout
+     * not defined here. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly threeGPP_National_HI1_ASN1parameters: OPTIONAL<ThreeGPP_National_HI1_ASN1parameters>;
     /**
      * @summary `target_Information`.
+     * @description
+     * 
+     * Warrant and delivery details associated with the alarm. Optional. Target
+     * identities remain limited under informative annex M. 3GPP TS 33.108,
+     * annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly target_Information: OPTIONAL<Target_Information>;
     /**
      * @summary `network_Identifier`.
+     * @description
+     * 
+     * Operator identifier of the network sending the alarm. Same notion as
+     * annexes B.3, B.8, B.9, and B.11.1. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly network_Identifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `network_Element_Information`.
+     * @description
+     * 
+     * Network element that may not be working, for example an IP address
+     * together with that address. One to 256 octets. The identifier is agreed
+     * between the CSP and the LEA. No layout is defined. 3GPP TS 33.108, annex
+     * M (informative) and the accompanying schema.
+     * 
      * @public
      * @readonly
      */

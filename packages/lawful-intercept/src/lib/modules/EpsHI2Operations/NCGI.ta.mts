@@ -15,6 +15,13 @@ import { NRCellID, _decode_NRCellID, _encode_NRCellID } from "../EpsHI2Operation
  * @summary NCGI
  * @description
  * 
+ * NR cell global identity: the PLMN identity and the NR cell identity. Clause
+ * 10.5.2 additional cell identities report the primary cell of a secondary cell
+ * group when it is available. The location-information parameter reports the
+ * primary cell of the primary cell group.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +39,30 @@ export
 class NCGI {
     /**
      * @summary `pLMNID`.
+     * @description
+     * 
+     * PLMN identity of the NR cell (ITU-T E.212 country code and network code).
+     * Clause 10.5.2 additional cell identities.
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `nRCellID`.
+     * @description
+     * 
+     * NR cell identity within that PLMN. The module comment on the cell
+     * identity points to 3GPP TS 36.413 clause 9.2.1.142. Clause 10.5.2 does
+     * not restate the bit coding.
      * @public
      * @readonly
      */
     readonly nRCellID: NRCellID;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

@@ -14,6 +14,10 @@ import { Location, _decode_Location, _encode_Location } from "../UmtsHI2Operatio
  * @summary PANI_Location
  * @description
  * 
+ * Location taken from a P-Access-Network-Info header. Copied only when the
+ * warrant requires the target's location (clause 7.5). 3GPP TS 33.108, clause
+ * 7.5 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +37,25 @@ export
 class PANI_Location {
     /**
      * @summary `raw_Location`.
+     * @description
+     * 
+     * Unparsed location string copied from the P-Access-Network-Info header.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly raw_Location: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `location`.
+     * @description
+     * 
+     * Location from the P-Access-Network-Info header, parsed into the location
+     * parameters of annex B.3, when the warrant requires location.
+     * 
+     * 3GPP TS 33.108, clause 7.5 and annex B.3.
+     * 
      * @public
      * @readonly
      */

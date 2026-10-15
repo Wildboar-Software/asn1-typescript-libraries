@@ -15,6 +15,17 @@ import { PANI_Location, _decode_PANI_Location, _encode_PANI_Location } from "../
  * @summary PANI_Header_Info
  * @description
  * 
+ * Elements copied from a P-Access-Network-Info header in a SIP message that the
+ * target UE originated and a CSCF handled (clause 7). The header is defined in
+ * 3GPP TS 24.229 clause 7.2A.4. The MF copies the access type and class and,
+ * when the warrant authorizes location, the location. Table 7.3 marks the
+ * header optional: provide it when available and applicable. When location is
+ * copied, the SIP message that carried the header is also sent unmodified. When
+ * the warrant does not authorize location, location is removed from the raw SIP
+ * message before delivery.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,30 +48,52 @@ export
 class PANI_Header_Info {
     /**
      * @summary `access_Type`.
+     * @description
+     * 
+     * ASCII access type from the P-Access-Network-Info header, for example
+     * 3GPP-UTRAN-TDD or 3GPP-E-UTRAN-TDD (3GPP TS 24.229 clause 7.2A.4, module
+     * comment). Include it when the header has an access type (clause 7).
      * @public
      * @readonly
      */
     readonly access_Type: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `access_Class`.
+     * @description
+     * 
+     * ASCII access class from the same header, for example 3GPP-UTRAN or
+     * 3GPP-E-UTRAN (3GPP TS 24.229 clause 7.2A.4). Include it when the header
+     * has an access class (clause 7).
      * @public
      * @readonly
      */
     readonly access_Class: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `network_Provided`.
+     * @description
+     * 
+     * Present when the header says the network provided the access-network
+     * information (module comment). Omit it otherwise. Clause 7.
      * @public
      * @readonly
      */
     readonly network_Provided: OPTIONAL<NULL>;
     /**
      * @summary `pANI_Location`.
+     * @description
+     * 
+     * Location from the header. Include it only when the warrant authorizes
+     * location (clause 7). When it is included, the SIP message that carried
+     * the header is also sent unmodified.
      * @public
      * @readonly
      */
     readonly pANI_Location: OPTIONAL<PANI_Location>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

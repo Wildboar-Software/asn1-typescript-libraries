@@ -13,6 +13,14 @@ import { CallContentLinkCharacteristics, _decode_CallContentLinkCharacteristics,
  * @summary IRI_Parameters_callContentLinkInformation
  * @description
  * 
+ * The two content-of-communication channels toward the LEMF for one target
+ * call. Transmit is the direction from the target; receive is the direction
+ * toward the target (clause 5.3.1). In a multiparty conference controlled by
+ * the target, transmit carries the target and receive carries the conference
+ * sum (clause 5.5.11). Mono mode uses the first channel as the sum. Option A
+ * keeps a pair per leg; option B reuses the pair of the active leg (clause
+ * 5.4.4). 3GPP TS 33.108, clauses 5.3 and 5.4.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +41,25 @@ export
 class IRI_Parameters_callContentLinkInformation {
     /**
      * @summary `cCLink1Characteristics`.
+     * @description
+     * 
+     * Transmit channel toward the LEMF (content from the target), or the sum
+     * signal when mono mode is used. For a target who is the multiparty
+     * controller, this is the target's own signal. 3GPP TS 33.108, clauses
+     * 5.3.1 and 5.5.11, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly cCLink1Characteristics: OPTIONAL<CallContentLinkCharacteristics>;
     /**
      * @summary `cCLink2Characteristics`.
+     * @description
+     * 
+     * Receive channel toward the LEMF (content toward the target). For a target
+     * who is the multiparty controller, this is the conference sum. 3GPP TS
+     * 33.108, clauses 5.3.1 and 5.5.11, annex B.3a.
+     * 
      * @public
      * @readonly
      */

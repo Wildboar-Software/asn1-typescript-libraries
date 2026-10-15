@@ -17,6 +17,11 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * @summary GSMLocation_geoCoordinates
  * @description
  * 
+ * Latitude and longitude of the target or of a cell site, as characters. Table
+ * 16.1 uses this form for cell-site latitude, longitude, and azimuth, on the
+ * 2G/3G location path and on the 4G EPS-location path. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +43,57 @@ export
 class GSMLocation_geoCoordinates {
     /**
      * @summary `latitude`.
+     * @description
+     * 
+     * Latitude as characters. The module comment gives the form XDDMMSS.SS:
+     * hemisphere N or S, degrees, minutes, and optional seconds. A short
+     * example is N502312.
+     * 
      * @public
      * @readonly
      */
     readonly latitude: PrintableString;
     /**
      * @summary `longitude`.
+     * @description
+     * 
+     * Longitude as characters. The module comment gives the form XDDDMMSS.SS:
+     * hemisphere E or W, degrees, minutes, and optional seconds. A long example
+     * is E1122312.18.
+     * 
      * @public
      * @readonly
      */
     readonly longitude: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     * 
+     * Geodetic datum of these coordinates. If omitted, WGS 84 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary `azimuth`.
+     * @description
+     * 
+     * Bearing of the cell antenna sector relative to true north, in degrees,
+     * when known (module comment, table 16.1).
+     * 
      * @public
      * @readonly
      */
     readonly azimuth: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -105,6 +137,11 @@ class GSMLocation_geoCoordinates {
      */
     public static get _default_value_for_mapDatum () { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
+         * @description
+         * 
+         * Geodetic datum of these coordinates. If omitted, WGS 84 (module
+         * comment).
+         * 
          * @public
          * @static
          */

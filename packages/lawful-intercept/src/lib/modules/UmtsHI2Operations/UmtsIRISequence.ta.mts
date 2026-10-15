@@ -11,6 +11,13 @@ import { UmtsIRIContent, _decode_UmtsIRIContent, _encode_UmtsIRIContent } from "
  * @summary UmtsIRISequence
  * @description
  * 
+ * Optional aggregation of IRI records for one delivery to the same LEA, when
+ * several records are already available at the same time. Records shall be sent
+ * immediately and shall not be withheld in the DF or MF in order to aggregate.
+ * When aggregation is not used, send a single UmtsIRIContent.
+ * 
+ * 3GPP TS 33.108, clause 4.4.1 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

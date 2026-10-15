@@ -14,6 +14,12 @@ import { PacketDataHeaderCopy, _decode_PacketDataHeaderCopy, _encode_PacketDataH
  * @summary PacketDataHeaderReport
  * @description
  * 
+ * One intercepted packet's header, either mapped field by field or copied raw.
+ * The copy is the alternative to the mapped individual fields (table
+ * 10.5.1.1.15 and table 6.9B). Direction is required in either case.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

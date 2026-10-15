@@ -11,6 +11,10 @@ import { PacketFlowSummary, _decode_PacketFlowSummary, _encode_PacketFlowSummary
  * @summary PacketDataSummaryReport
  * @description
  * 
+ * One or more packet-flow summaries for the summary form of a packet data
+ * header information REPORT (table 6.9A). 3GPP TS 33.108, clause 6.5.1.1 and
+ * annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

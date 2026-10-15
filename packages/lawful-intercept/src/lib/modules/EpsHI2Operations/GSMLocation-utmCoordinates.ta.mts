@@ -17,6 +17,10 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * @summary GSMLocation_utmCoordinates
  * @description
  * 
+ * UTM easting and northing of the target or of a cell site. One alternative of
+ * the GSM location inside an EPS or PS location. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +42,53 @@ export
 class GSMLocation_utmCoordinates {
     /**
      * @summary `utm_East`.
+     * @description
+     * 
+     * UTM easting. The module comment's example is 32U0439955.
+     * 
      * @public
      * @readonly
      */
     readonly utm_East: PrintableString;
     /**
      * @summary `utm_North`.
+     * @description
+     * 
+     * UTM northing. The module comment's example is 5540736.
+     * 
      * @public
      * @readonly
      */
     readonly utm_North: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     * 
+     * Geodetic datum. If omitted, WGS 84 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary `azimuth`.
+     * @description
+     * 
+     * Bearing of the cell antenna sector relative to true north, in degrees,
+     * when known (module comment, table 16.1).
+     * 
      * @public
      * @readonly
      */
     readonly azimuth: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -105,6 +132,10 @@ class GSMLocation_utmCoordinates {
      */
     public static get _default_value_for_mapDatum () { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
+         * @description
+         * 
+         * Geodetic datum. If omitted, WGS 84 (module comment).
+         * 
          * @public
          * @static
          */

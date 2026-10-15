@@ -11,6 +11,13 @@ import { lawfulInterceptDomainId } from "../HI3CCLinkData/lawfulInterceptDomainI
  * @summary hi3CCLinkId
  * @description
  * 
+ * HI3 CC-link domain. Under `lawfulInterceptDomainId`, not under `threeGPP(4)`:
+ * `hi3(2)` `ccLinkLI(4)`. The operation identifier adds `version4(4)`.
+ * 
+ * 3GPP TS 33.108, annex J.1.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

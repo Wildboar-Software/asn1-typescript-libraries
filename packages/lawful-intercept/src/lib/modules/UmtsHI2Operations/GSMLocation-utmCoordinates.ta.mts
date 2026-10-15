@@ -17,6 +17,14 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * @summary GSMLocation_utmCoordinates
  * @description
  * 
+ * GSM location as UTM easting and northing. Annex B.3 examples are easting
+ * `32U0439955` (10 characters) and northing `5540736` (7 characters). The datum
+ * defaults to WGS 84. Azimuth, when present, is the bearing from true north.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +46,57 @@ export
 class GSMLocation_utmCoordinates {
     /**
      * @summary `utm_East`.
+     * @description
+     * 
+     * UTM easting. Annex B.3 example: `32U0439955` (10 characters).
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly utm_East: PrintableString;
     /**
      * @summary `utm_North`.
+     * @description
+     * 
+     * UTM northing. Annex B.3 example: `5540736` (7 characters).
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly utm_North: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     * 
+     * Coordinate reference. Annex B.3 defaults it to WGS 84 when the IRI omits
+     * it. The module also allows WGS 72 and European Datum 50.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary `azimuth`.
+     * @description
+     * 
+     * Bearing from true north, in degrees from 0 to 359.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly azimuth: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
@@ -99,12 +134,23 @@ class GSMLocation_utmCoordinates {
 
     /**
      * @summary Getter that returns the default value for `mapDatum`.
+     * @description
+     * 
+     * Annex B.3 default when the IRI omits the datum: WGS 84.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @static
      * @method
      */
     public static get _default_value_for_mapDatum () { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
+         * @description
+         * 
+         * Coordinate reference of this GSM location. Annex B.3 defaults it to
+         * WGS 84 and also allows WGS 72 and European Datum 50.
+         * 
+         * 3GPP TS 33.108, annex B.3.
          * @public
          * @static
          */

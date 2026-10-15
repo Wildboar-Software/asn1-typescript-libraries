@@ -1,3 +1,20 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `Eps-HI3-PS`, `IMPLICIT TAGS`. HI3 content of communication for
+ * the evolved packet system. ULIC version 0 is not specified for EPS. This
+ * header is the version-1 family without the ASN.1 version component.
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulintercept(2) threeGPP(4) hi3eps(9) r17(17) version-0(0)}`.
+ * 
+ * 3GPP TS 33.108, clause 10.7, annex C, and annex B.10. PDN-GW interception of
+ * CC is a national option, except where the PDN-GW is the only ICE in the
+ * accessed PLMN.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
 export {
     CC_PDU,
     _decode_CC_PDU,

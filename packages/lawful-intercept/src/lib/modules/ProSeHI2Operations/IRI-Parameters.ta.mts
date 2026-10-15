@@ -24,6 +24,11 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  * @summary IRI_Parameters
  * @description
  * 
+ * Parameters of one ProSe Direct Discovery IRI from the ProSe Function. Stage 2
+ * inclusion in tables 13.2.2.2-1 and 13.2.2.2-2 overrides module syntax that
+ * marks a parameter optional. The LIID is required on every record. 3GPP TS
+ * 33.108, clause 13.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,42 +53,87 @@ export
 class IRI_Parameters {
     /**
      * @summary `hi2ProSeDomainId`.
+     * @description
+     * 
+     * 3GPP HI2 ProSe domain identifier. Present on the IRI. 3GPP TS 33.108,
+     * annex B.13.
+     * 
      * @public
      * @readonly
      */
     readonly hi2ProSeDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * LIID assigned by the CSP for the target. Required on every record.
+     * Alphanumeric. One LIID per target identity, or one LIID for several
+     * identities of the same target. Separate LIIDs when several LEAs intercept
+     * the same identity. Used on HI2 for identification and correlation. There
+     * is no content of communication to correlate for direct discovery. 3GPP TS
+     * 33.108, clause 13.1.1.2.
+     * 
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time of the event at the ProSe Function, from the intercepting
+     * node's clock. Both the date and the time are required on
+     * discovery-request and match-report records. 3GPP TS 33.108, clauses
+     * 13.1.2.1 and 13.2.2.2.
+     * 
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `networkIdentifier`.
+     * @description
+     * 
+     * Operator identifier plus a unique identifier of the ProSe Function.
+     * Required. The operator identifier should be internationally unique. A
+     * network-element identifier is optional; national regulation may require
+     * it. 3GPP TS 33.108, clauses 13.1.1.3 and 13.2.2.2.
+     * 
      * @public
      * @readonly
      */
     readonly networkIdentifier: Network_Identifier;
     /**
      * @summary `proseEventData`.
+     * @description
+     * 
+     * The ProSe event. In this module the defined event is direct discovery
+     * (discovery request or match report). 3GPP TS 33.108, clause 13.2 and
+     * annex B.13.
+     * 
      * @public
      * @readonly
      */
     readonly proseEventData: ProSeEventData;
     /**
      * @summary `national_Parameters`.
+     * @description
+     * 
+     * National extension. The clause allows the ICE or DF2 to extend the record
+     * for a specific country. The layout is not defined. 3GPP TS 33.108, clause
+     * 13.2.1.
+     * 
      * @public
      * @readonly
      */
     readonly national_Parameters: OPTIONAL<National_Parameters>;
     /**
      * @summary `national_HI2_ASN1parameters`.
+     * @description
+     * 
+     * National HI2 extension carried with the ProSe IRI. The layout is not
+     * defined in clause 13 or annex B.13. 3GPP TS 33.108, annex B.13.
+     * 
      * @public
      * @readonly
      */

@@ -14,6 +14,15 @@ import { PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_Packe
  * @summary PacketDataHeaderInformation
  * @description
  * 
+ * Header information for packets of an active I-WLAN communication.
+ * 
+ * `packetDataHeader` reports one packet (table 8.9). `packetDataSummary`
+ * reports one or more packet flows (table 8.10). A flow is the source and
+ * destination addresses and ports, the protocol, and for IPv6 the flow label.
+ * Reports are per packet or summarized (clause 8.5.1.2).
+ * 
+ * 3GPP TS 33.108, clause 8.5.1.2 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

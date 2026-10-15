@@ -14,6 +14,15 @@ import { ULIC_header, _decode_ULIC_header, _encode_ULIC_header } from "../Eps-HI
  * @summary CC_PDU
  * @description
  * 
+ * EPS CC: one ULIC header and one payload. ULIC version 0 is not specified for
+ * EPS (annex C.0). The ASN.1 version parameter is not used (annex C.1.3). If
+ * the same PDN-GW still carries the content after handover to another S-GW, it
+ * continues CC interception under the national option in clause 10.7.
+ * 
+ * 3GPP TS 33.108, annex C.1.3, annex B.10, and clause 10.7.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +39,21 @@ export
 class CC_PDU {
     /**
      * @summary `uLIC_header`.
+     * @description
+     * 
+     * EPS ULIC correlation header (version 1; no ASN.1 version component). 3GPP
+     * TS 33.108, annex C.1.3 and annex B.10.
      * @public
      * @readonly
      */
     readonly uLIC_header: ULIC_header;
     /**
      * @summary `payload`.
+     * @description
+     * 
+     * Duplicated communication between the target and the other party (that
+     * communication's header and payload). Only one payload is allowed. 3GPP TS
+     * 33.108, annex C.1.3.
      * @public
      * @readonly
      */

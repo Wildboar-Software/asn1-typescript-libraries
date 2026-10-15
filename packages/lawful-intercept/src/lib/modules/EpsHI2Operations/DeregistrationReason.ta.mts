@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DeregistrationReason
  * @description
  * 
+ * Why the HSS deregistered the target (table 7.2). When the HSS initiates
+ * deregistration, the reason-code alternative carries the Reason-Code AVP; when
+ * the S-CSCF indicates it, the server-assignment alternative carries the
+ * Server-Assignment-Type AVP. Both are coded according to 3GPP TS 29.229 (table
+ * 7.2 and the module comment). The specification text does not list the integer
+ * values. 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

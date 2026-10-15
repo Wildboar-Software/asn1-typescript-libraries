@@ -12,6 +12,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExtendedLocParameters_mapData
  * @description
  * 
+ * Map associated with a LALS fix, either embedded or referenced by a URL. Annex
+ * B.3 points the choice at OMA MLP clause 5.2.2.3, the embedded form at clause
+ * 5.3.12, and the URL at clause 5.3.138. TS 33.108 does not restate that
+ * syntax.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

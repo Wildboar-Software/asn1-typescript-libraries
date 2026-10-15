@@ -14,6 +14,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AccessPolicyType
  * @description
  * 
+ * What the PTC target did to an access-control list, and what the network
+ * answered. Sent on a PTC access-policy report when the target changes or
+ * queries a user access policy or group authorization rules, and when the
+ * network answers, whether the request worked or not (clause 17.2.18). 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,42 +45,86 @@ export
 class AccessPolicyType {
     /**
      * @summary `userAccessPolicyAttempt`.
+     * @description
+     * 
+     * The target attempted to change the PTC user access policy. The module
+     * comment says the value is false unless the target has accessed that list.
+     * Report this attempt when the target changes or queries an access-control
+     * list (table 17.2.18).
+     * 
      * @public
      * @readonly
      */
     readonly userAccessPolicyAttempt: BOOLEAN;
     /**
      * @summary `groupAuthorizationRulesAttempt`.
+     * @description
+     * 
+     * The target attempted to change the PTC group authorization rules. The
+     * module comment says the value is false unless the target has accessed
+     * that list. Report when the target changes or queries those rules (table
+     * 17.2.18).
+     * 
      * @public
      * @readonly
      */
     readonly groupAuthorizationRulesAttempt: BOOLEAN;
     /**
      * @summary `userAccessPolicyQuery`.
+     * @description
+     * 
+     * The target queried the PTC user access policy. The module comment says
+     * the value is false unless the target has accessed that list. Report when
+     * the target queries an access-control list (table 17.2.18).
+     * 
      * @public
      * @readonly
      */
     readonly userAccessPolicyQuery: BOOLEAN;
     /**
      * @summary `groupAuthorizationRulesQuery`.
+     * @description
+     * 
+     * The target queried the PTC group authorization rules. The module comment
+     * says the value is false unless the target has accessed that list. Report
+     * when the target queries those rules (table 17.2.18).
+     * 
      * @public
      * @readonly
      */
     readonly groupAuthorizationRulesQuery: BOOLEAN;
     /**
      * @summary `userAccessPolicyResult`.
+     * @description
+     * 
+     * The network's answer to a change or query of the PTC user access policy,
+     * including an unsuccessful request (table 17.2.18). The specification text
+     * does not define the character contents.
+     * 
      * @public
      * @readonly
      */
     readonly userAccessPolicyResult: UTF8String;
     /**
      * @summary `groupAuthorizationRulesResult`.
+     * @description
+     * 
+     * The network's answer to a change or query of the PTC group authorization
+     * rules, including an unsuccessful request (table 17.2.18). The
+     * specification text does not define the character contents.
+     * 
      * @public
      * @readonly
      */
     readonly groupAuthorizationRulesResult: UTF8String;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

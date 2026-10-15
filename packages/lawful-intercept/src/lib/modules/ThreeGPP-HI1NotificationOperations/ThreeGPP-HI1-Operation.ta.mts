@@ -16,6 +16,17 @@ import { ThreeGPP_National_HI1_ASN1parameters, _decode_ThreeGPP_National_HI1_ASN
  * @summary ThreeGPP_HI1_Operation
  * @description
  * 
+ * One informative HI1 notification sent on HI2. Annex M (informative) lists
+ * notification after activation, after deactivation, and after modification of
+ * an active interception. Alarm and broadcast status are noted as for further
+ * study.
+ *
+ * `liActivated`, `liDeactivated`, and `liModified` carry the warrant
+ * notification except that target identities are to be limited.
+ * `alarms-indicator` carries alarm information.
+ * `threeGPP-National-HI1-ASN1parameters` carries national parameters when
+ * national regulation requests them. 3GPP TS 33.108, annex M (informative).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

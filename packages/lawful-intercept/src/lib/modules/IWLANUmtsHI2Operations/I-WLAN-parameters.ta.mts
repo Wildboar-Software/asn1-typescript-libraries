@@ -15,6 +15,11 @@ import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } fro
  * @summary I_WLAN_parameters
  * @description
  * 
+ * WLAN access-point name and the IP addresses of the target in the WLAN access
+ * network and in the network being accessed.
+ * 
+ * 3GPP TS 33.108, table 8.2 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +41,61 @@ export
 class I_WLAN_parameters {
     /**
      * @summary `wlan_local_IP_address_of_the_target`.
+     * @description
+     * 
+     * Local IP address the target uses in the WLAN access network.
+     * 
+     * Conditional when available on unsuccessful PDG tunnel setup (table 8.5)
+     * and on the packet-data header REPORT. Mandatory on the PDG
+     * successful-tunnel Begin, the PDG start-of-intercept Begin, and the PDG
+     * tunnel-disconnect End.
+     * 
+     * 3GPP TS 33.108, table 8.2.
      * @public
      * @readonly
      */
     readonly wlan_local_IP_address_of_the_target: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `w_APN`.
+     * @description
+     * 
+     * WLAN access-point name: the logical name of the access point (TS 23.060).
+     * Coded as the APN in TS 24.008 without the APN information-element
+     * identifier; only the last 100 octets are used. Octets are coded according
+     * to TS 23.003.
+     * 
+     * Included to identify the packet data network the target requested or is
+     * connected to, on the tunnel, start-of-intercept, disconnect, and
+     * packet-header records. Not included on the access-initiation or
+     * access-termination REPORTs (tables 8.3 and 8.4).
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly w_APN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `wlan_remote_IP_address_of_the_target`.
+     * @description
+     * 
+     * IP address of the WLAN UE in the network being accessed. It is used in
+     * the packet encapsulated by the UE-initiated tunnel, and applications in
+     * the UE use it as their source address.
+     * 
+     * Same inclusion as the local address: conditional when available on
+     * unsuccessful PDG tunnel setup and on the packet-header REPORT; mandatory
+     * on the PDG Begin records and the PDG disconnect End.
+     * 
+     * 3GPP TS 33.108, table 8.2.
      * @public
      * @readonly
      */
     readonly wlan_remote_IP_address_of_the_target: OPTIONAL<DataNodeAddress>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

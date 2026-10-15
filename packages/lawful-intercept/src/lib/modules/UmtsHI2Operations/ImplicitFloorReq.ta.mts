@@ -17,6 +17,17 @@ enum _enum_for_ImplicitFloorReq {
  * @summary ImplicitFloorReq
  * @description
  * 
+ * Group-call request to join, to rejoin, or to release the group call.
+ * 
+ * Clause 17.3.2 sends a Begin record when the PTC server receives such a
+ * request or sends one to the target. Table 17.1.5 instead says this parameter
+ * indicates the client that requested the floor. These three values do not
+ * carry a client identity.
+ * 
+ * 3GPP TS 33.108, clause 17.3.2 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +48,12 @@ type ImplicitFloorReq = _enum_for_ImplicitFloorReq | ENUMERATED;
 
 /**
  * @summary ImplicitFloorReq_join
+ * @description
+ * 
+ * Group-call request to join. Clause 17.3.2 sends a Begin record when the PTC
+ * server receives this request or sends it to the target.
+ * 
+ * 3GPP TS 33.108, clause 17.3.2 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -45,6 +62,9 @@ const ImplicitFloorReq_join: ImplicitFloorReq = 1; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary join
+ * @description
+ * 
+ * Group-call request to join (clause 17.3.2).
  * @constant
  * @type {number}
  */
@@ -53,6 +73,11 @@ const join: ImplicitFloorReq = ImplicitFloorReq_join; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary ImplicitFloorReq_rejoin
+ * @description
+ * 
+ * Group-call request to rejoin.
+ * 
+ * 3GPP TS 33.108, clause 17.3.2 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -61,6 +86,9 @@ const ImplicitFloorReq_rejoin: ImplicitFloorReq = 2; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary rejoin
+ * @description
+ * 
+ * Group-call request to rejoin (clause 17.3.2).
  * @constant
  * @type {number}
  */
@@ -69,6 +97,11 @@ const rejoin: ImplicitFloorReq = ImplicitFloorReq_rejoin; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ImplicitFloorReq_release
+ * @description
+ * 
+ * Group-call request to release the group call.
+ * 
+ * 3GPP TS 33.108, clause 17.3.2 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -77,6 +110,9 @@ const ImplicitFloorReq_release: ImplicitFloorReq = 3; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary release
+ * @description
+ * 
+ * Group-call request to release (clause 17.3.2).
  * @constant
  * @type {number}
  */

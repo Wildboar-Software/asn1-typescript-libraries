@@ -15,6 +15,11 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * @summary DeliveryInformation
  * @description
  * 
+ * HI2 and HI3 delivery addresses decided by the LEA. Informative annex M
+ * includes them in the notification. Circuit-switched delivery uses E.164
+ * numbers; packet delivery uses the LEMF addresses. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +42,42 @@ export
 class DeliveryInformation {
     /**
      * @summary `hi2DeliveryNumber`.
+     * @description
+     * 
+     * E.164 number for circuit-switched IRI delivery. 3GPP TS 33.108, annex M
+     * (informative) schema.
+     * 
      * @public
      * @readonly
      */
     readonly hi2DeliveryNumber: OPTIONAL<CalledPartyNumber>;
     /**
      * @summary `hi3DeliveryNumber`.
+     * @description
+     * 
+     * E.164 number for circuit-switched voice content delivery. 3GPP TS 33.108,
+     * annex M (informative) schema.
+     * 
      * @public
      * @readonly
      */
     readonly hi3DeliveryNumber: OPTIONAL<CalledPartyNumber>;
     /**
      * @summary `hi2DeliveryIpAddress`.
+     * @description
+     * 
+     * HI2 address of the LEMF. 3GPP TS 33.108, annex M (informative) schema.
+     * 
      * @public
      * @readonly
      */
     readonly hi2DeliveryIpAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `hi3DeliveryIpAddress`.
+     * @description
+     * 
+     * HI3 address of the LEMF. 3GPP TS 33.108, annex M (informative) schema.
+     * 
      * @public
      * @readonly
      */

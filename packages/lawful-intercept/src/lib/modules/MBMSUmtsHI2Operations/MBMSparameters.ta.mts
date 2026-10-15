@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MBMSparameters
  * @description
  * 
+ * Annex B.8 defines an access point name here. Clause 9 tables map the APN to
+ * `mBMSapn` on the MBMS information and do not name this type.
+ * 
+ * 3GPP TS 33.108, annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +37,26 @@ export
 class MBMSparameters {
     /**
      * @summary `aPN`.
+     * @description
+     * 
+     * Access point name coded as in TS 24.008 without the APN
+     * information-element identifier; only the last 100 octets are used. Octets
+     * are coded according to TS 23.003.
+     * 
+     * Clause 9 describes that APN as the logical name on which the IP multicast
+     * address is defined (TS 23.060) and maps it to `mBMSapn`. TS 33.108 does
+     * not say when to use this component instead.
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<UTF8String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

@@ -16,6 +16,15 @@ enum _enum_for_UMTS_Content_Report_version {
  * @summary UMTS_Content_Report_version
  * @description
  * 
+ * Report version. Values 2 through 7 are omitted to align with
+ * UmtsHI2Operations. The enclosing report comment says the parameter is
+ * redundant from v6.8.0 and recommends always sending value 8, which that
+ * comment calls lastVersion and this module names version8.
+ * 
+ * 3GPP TS 33.108, annex B.6.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +43,10 @@ type UMTS_Content_Report_version = _enum_for_UMTS_Content_Report_version | ENUME
 
 /**
  * @summary UMTS_Content_Report_version_version1
+ * @description
+ * 
+ * Version value 1. The report comment recommends always sending value 8
+ * instead. 3GPP TS 33.108, annex B.6.
  * @constant
  * @type {number}
  */
@@ -42,6 +55,9 @@ const UMTS_Content_Report_version_version1: UMTS_Content_Report_version = 1; /* 
 
 /**
  * @summary version1
+ * @description
+ * 
+ * Version value 1; recommended value to send is 8. Annex B.6.
  * @constant
  * @type {number}
  */
@@ -50,6 +66,11 @@ const version1: UMTS_Content_Report_version = UMTS_Content_Report_version_versio
 
 /**
  * @summary UMTS_Content_Report_version_version8
+ * @description
+ * 
+ * Version value 8. The report comment calls this lastVersion(8) and recommends
+ * always sending it, including after the HI3 CS domain OID version arc
+ * increases. 3GPP TS 33.108, annex B.6.
  * @constant
  * @type {number}
  */
@@ -58,6 +79,9 @@ const UMTS_Content_Report_version_version8: UMTS_Content_Report_version = 8; /* 
 
 /**
  * @summary version8
+ * @description
+ * 
+ * Version value 8, the recommended value to send. Annex B.6.
  * @constant
  * @type {number}
  */

@@ -12,6 +12,20 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary UmtsCS_IRIContent
  * @description
  * 
+ * CS HI2 record type (table 5.4).
+ *
+ * `iRI-Begin-record`: call establishment. `iRI-Continue-record`: answer,
+ * supplementary service, or handover. `iRI-End-record`: release.
+ * `iRI-Report-record`: location update, subscriber controlled input, SMS,
+ * serving system, HLR subscriber record change, cancel location, register
+ * location, location information request, and LALS reports. LALS reports are
+ * not tied to one of the thirteen events and may omit the event parameter.
+ *
+ * Begin, continue, and report records include at least one parameter that the
+ * module marks optional. Sending the same information again on later events of
+ * one call is an implementation option. 3GPP TS 33.108, clause 5.2.3 and annex
+ * B.3a.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,6 +19,14 @@ enum _enum_for_Requesting_Node_Type {
  * @summary Requesting_Node_Type
  * @description
  * 
+ * Kind of node that requested location information from the HLR or HSS.
+ * Conditional on a location-information-request REPORT for an MSC, SMS Centre,
+ * GMLC, MME, or SGSN. Table 6.9G writes "GMSC" in that sentence; the mapping in
+ * table 6.2 and the named number say MSC.
+ * 
+ * Also listed for IMS HSS location-information requests (table 7.2). 3GPP TS
+ * 33.108, clause 6.5.1.1, table 6.9G, and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +48,12 @@ type Requesting_Node_Type = _enum_for_Requesting_Node_Type | ENUMERATED;
 
 /**
  * @summary Requesting_Node_Type_mSC
+ * @description
+ * 
+ * The node that requested location information is an MSC. Conditional on a
+ * location-information-request REPORT. Table 6.2 says MSC; table 6.9G writes
+ * GMSC in the same condition. 3GPP TS 33.108, clause 6.5.1.1, table 6.9G.
+ * 
  * @constant
  * @type {number}
  */
@@ -48,6 +62,10 @@ const Requesting_Node_Type_mSC: Requesting_Node_Type = 1; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary mSC
+ * @description
+ * 
+ * Requesting node is an MSC (3GPP TS 33.108, table 6.9G).
+ * 
  * @constant
  * @type {number}
  */
@@ -56,6 +74,12 @@ const mSC: Requesting_Node_Type = Requesting_Node_Type_mSC; /* SHORT_NAMED_ENUME
 
 /**
  * @summary Requesting_Node_Type_sMS_Centre
+ * @description
+ * 
+ * The node that requested location information is an SMS Centre. Conditional on
+ * a location-information-request REPORT. 3GPP TS 33.108, clause 6.5.1.1, table
+ * 6.9G.
+ * 
  * @constant
  * @type {number}
  */
@@ -64,6 +88,10 @@ const Requesting_Node_Type_sMS_Centre: Requesting_Node_Type = 2; /* LONG_NAMED_E
 
 /**
  * @summary sMS_Centre
+ * @description
+ * 
+ * Requesting node is an SMS Centre (3GPP TS 33.108, table 6.9G).
+ * 
  * @constant
  * @type {number}
  */
@@ -72,6 +100,12 @@ const sMS_Centre: Requesting_Node_Type = Requesting_Node_Type_sMS_Centre; /* SHO
 
 /**
  * @summary Requesting_Node_Type_gMLC
+ * @description
+ * 
+ * The node that requested location information is a GMLC. Conditional on a
+ * location-information-request REPORT. 3GPP TS 33.108, clause 6.5.1.1, table
+ * 6.9G.
+ * 
  * @constant
  * @type {number}
  */
@@ -80,6 +114,10 @@ const Requesting_Node_Type_gMLC: Requesting_Node_Type = 3; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary gMLC
+ * @description
+ * 
+ * Requesting node is a GMLC (3GPP TS 33.108, table 6.9G).
+ * 
  * @constant
  * @type {number}
  */
@@ -88,6 +126,12 @@ const gMLC: Requesting_Node_Type = Requesting_Node_Type_gMLC; /* SHORT_NAMED_ENU
 
 /**
  * @summary Requesting_Node_Type_mME
+ * @description
+ * 
+ * The node that requested location information is an MME. Conditional on a
+ * location-information-request REPORT. 3GPP TS 33.108, clause 6.5.1.1, table
+ * 6.9G.
+ * 
  * @constant
  * @type {number}
  */
@@ -96,6 +140,10 @@ const Requesting_Node_Type_mME: Requesting_Node_Type = 4; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary mME
+ * @description
+ * 
+ * Requesting node is an MME (3GPP TS 33.108, table 6.9G).
+ * 
  * @constant
  * @type {number}
  */
@@ -104,6 +152,12 @@ const mME: Requesting_Node_Type = Requesting_Node_Type_mME; /* SHORT_NAMED_ENUME
 
 /**
  * @summary Requesting_Node_Type_sGSN
+ * @description
+ * 
+ * The node that requested location information is an SGSN. Conditional on a
+ * location-information-request REPORT. 3GPP TS 33.108, clause 6.5.1.1, table
+ * 6.9G.
+ * 
  * @constant
  * @type {number}
  */
@@ -112,6 +166,10 @@ const Requesting_Node_Type_sGSN: Requesting_Node_Type = 5; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary sGSN
+ * @description
+ * 
+ * Requesting node is an SGSN (3GPP TS 33.108, table 6.9G).
+ * 
  * @constant
  * @type {number}
  */

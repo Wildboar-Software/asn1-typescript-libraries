@@ -20,6 +20,11 @@ enum _enum_for_MBMSEvent {
  * @summary MBMSEvent
  * @description
  * 
+ * MBMS event that caused the IRI record. Table 9.1 maps each event to Begin,
+ * End, or Report. The events are those defined for HI2 delivery from TS 33.107.
+ * 
+ * 3GPP TS 33.108, clause 9.5, table 9.1, and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,6 +48,10 @@ type MBMSEvent = _enum_for_MBMSEvent | ENUMERATED;
 
 /**
  * @summary MBMSEvent_mBMSServiceJoining
+ * @description
+ * 
+ * The target's UE successfully joined an MBMS service. Sent as BEGIN (table
+ * 9.1, table 9.6).
  * @constant
  * @type {number}
  */
@@ -51,6 +60,9 @@ const MBMSEvent_mBMSServiceJoining: MBMSEvent = 1; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary mBMSServiceJoining
+ * @description
+ * 
+ * Service joining BEGIN (table 9.6).
  * @constant
  * @type {number}
  */
@@ -59,6 +71,11 @@ const mBMSServiceJoining: MBMSEvent = MBMSEvent_mBMSServiceJoining; /* SHORT_NAM
 
 /**
  * @summary MBMSEvent_mBMSServiceLeaving
+ * @description
+ * 
+ * The target's UE left an MBMS service, or the BM-SC terminated the service.
+ * Sent as END (table 9.1, table 9.8). Table 9.8's event-type cell says to
+ * provide the MBMS Service Joining event type.
  * @constant
  * @type {number}
  */
@@ -67,6 +84,10 @@ const MBMSEvent_mBMSServiceLeaving: MBMSEvent = 2; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary mBMSServiceLeaving
+ * @description
+ * 
+ * Service leaving END (table 9.8). That table's event-type cell says Service
+ * Joining.
  * @constant
  * @type {number}
  */
@@ -75,6 +96,11 @@ const mBMSServiceLeaving: MBMSEvent = MBMSEvent_mBMSServiceLeaving; /* SHORT_NAM
 
 /**
  * @summary MBMSEvent_mBMSSubscriptionActivation
+ * @description
+ * 
+ * The target activated an MBMS subscription, from the UE or by an off-line
+ * means. Sent as REPORT (table 9.1, table 9.3). Table 9.3's event-type cell
+ * says to provide the MBMS Service Joining event type.
  * @constant
  * @type {number}
  */
@@ -83,6 +109,10 @@ const MBMSEvent_mBMSSubscriptionActivation: MBMSEvent = 3; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary mBMSSubscriptionActivation
+ * @description
+ * 
+ * Subscription activation REPORT (table 9.3). Its event-type cell says Service
+ * Joining.
  * @constant
  * @type {number}
  */
@@ -91,6 +121,11 @@ const mBMSSubscriptionActivation: MBMSEvent = MBMSEvent_mBMSSubscriptionActivati
 
 /**
  * @summary MBMSEvent_mBMSSubscriptionModification
+ * @description
+ * 
+ * The target modified an MBMS subscription, from the UE or by an off-line
+ * means. Sent as REPORT (table 9.1, table 9.4). Table 9.4's event-type cell
+ * says to provide the MBMS Service Joining event type.
  * @constant
  * @type {number}
  */
@@ -99,6 +134,10 @@ const MBMSEvent_mBMSSubscriptionModification: MBMSEvent = 4; /* LONG_NAMED_ENUME
 
 /**
  * @summary mBMSSubscriptionModification
+ * @description
+ * 
+ * Subscription modification REPORT (table 9.4). Its event-type cell says
+ * Service Joining.
  * @constant
  * @type {number}
  */
@@ -107,6 +146,12 @@ const mBMSSubscriptionModification: MBMSEvent = MBMSEvent_mBMSSubscriptionModifi
 
 /**
  * @summary MBMSEvent_mBMSSubscriptionTermination
+ * @description
+ * 
+ * The target terminated an MBMS subscription, from the UE or by an off-line
+ * means. Sent as REPORT (table 9.1, table 9.5). Table 9.5's event-type cell
+ * says to provide the MBMS Service Joining event type. If a leave reason is
+ * subscription expiry, this report is also generated (table 9.2).
  * @constant
  * @type {number}
  */
@@ -115,6 +160,10 @@ const MBMSEvent_mBMSSubscriptionTermination: MBMSEvent = 5; /* LONG_NAMED_ENUMER
 
 /**
  * @summary mBMSSubscriptionTermination
+ * @description
+ * 
+ * Subscription termination REPORT (table 9.5). Its event-type cell says Service
+ * Joining.
  * @constant
  * @type {number}
  */
@@ -123,6 +172,14 @@ const mBMSSubscriptionTermination: MBMSEvent = MBMSEvent_mBMSSubscriptionTermina
 
 /**
  * @summary MBMSEvent_startofInterceptWithMBMSServiceActive
+ * @description
+ * 
+ * Interception started while the UE had already joined an MBMS service. Sent as
+ * BEGIN (table 9.1, table 9.7). Table 9.7's event-type cell says to provide the
+ * MBMS Service Joining event type. If the BM-SC does not know that several
+ * intercepts are active, the MF/DF builds this record from information it
+ * retained, and does not send it to LEMFs already intercepting that target
+ * (clause 9.5.1.3).
  * @constant
  * @type {number}
  */
@@ -131,6 +188,9 @@ const MBMSEvent_startofInterceptWithMBMSServiceActive: MBMSEvent = 6; /* LONG_NA
 
 /**
  * @summary startofInterceptWithMBMSServiceActive
+ * @description
+ * 
+ * Start of intercept with a service active, BEGIN (table 9.7).
  * @constant
  * @type {number}
  */

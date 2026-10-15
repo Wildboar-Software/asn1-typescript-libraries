@@ -22,6 +22,18 @@ import { ExtendedLocParameters_floor, _decode_ExtendedLocParameters_floor, _enco
  * @summary ExtendedLocParameters
  * @description
  * 
+ * Additional location and QoS for a LALS report, mapped from the OMA MLP pos
+ * element (TS 33.108 reference [88]). Optional when the LI LCS client has it
+ * (tables 6.9H and 6.9I).
+ * 
+ * If the client cannot map the MLP response into a Location, it copies the raw
+ * slia or slirep XML instead. TS 33.108 does not restate the MLP value syntax;
+ * each component cites the MLP clause in the annex B.3 comments.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1.1 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -71,72 +83,145 @@ export
 class ExtendedLocParameters {
     /**
      * @summary `posMethod`.
+     * @description
+     * 
+     * Positioning method of the LALS fix, from OMA MLP clause 5.3.93.1. Include
+     * it when available. TS 33.108 does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3 and table 6.9H.
      * @public
      * @readonly
      */
     readonly posMethod: OPTIONAL<PrintableString>;
     /**
      * @summary `mapData`.
+     * @description
+     * 
+     * Map for the LALS fix, either embedded or given as a URL. Annex B.3 points
+     * this at OMA MLP clause 5.2.2.3. Include it when available.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly mapData: OPTIONAL<ExtendedLocParameters_mapData>;
     /**
      * @summary `altitude`.
+     * @description
+     * 
+     * Altitude of the LALS fix and, when present, its uncertainty. Include it
+     * when available.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly altitude: OPTIONAL<ExtendedLocParameters_altitude>;
     /**
      * @summary `speed`.
+     * @description
+     * 
+     * Speed of the LALS fix, from OMA MLP clause 5.3.119. Include it when
+     * available. TS 33.108 does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly speed: OPTIONAL<PrintableString>;
     /**
      * @summary `direction`.
+     * @description
+     * 
+     * Direction of the LALS fix, from OMA MLP clause 5.3.26. Include it when
+     * available. TS 33.108 does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly direction: OPTIONAL<PrintableString>;
     /**
      * @summary `level_conf`.
+     * @description
+     * 
+     * Confidence level of the LALS fix, from OMA MLP clause 5.3.24. Include it
+     * when available. TS 33.108 does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly level_conf: OPTIONAL<PrintableString>;
     /**
      * @summary `qOS_not_met`.
+     * @description
+     * 
+     * MLP indication that the requested positioning QoS was not met (OMA MLP
+     * clause 5.3.97). TS 33.108 does not restate when the boolean is true.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly qOS_not_met: OPTIONAL<BOOLEAN>;
     /**
      * @summary `motionStateList`.
+     * @description
+     * 
+     * Motion state of the LALS fix and its confidence, from the OMA MLP pos
+     * element. Include it when available.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly motionStateList: OPTIONAL<ExtendedLocParameters_motionStateList>;
     /**
      * @summary `floor`.
+     * @description
+     * 
+     * Floor of the LALS fix and, when present, the uncertainty of the floor
+     * number. Include it when available.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly floor: OPTIONAL<ExtendedLocParameters_floor>;
     /**
      * @summary `additional_info`.
+     * @description
+     * 
+     * Additional positioning information, from OMA MLP clause 5.3.1. Include it
+     * when available. TS 33.108 does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly additional_info: OPTIONAL<PrintableString>;
     /**
      * @summary `lALS_rawMLPPosData`.
+     * @description
+     * 
+     * The MLP response as unparsed XML: a whole slia document (OMA MLP clause
+     * 5.2.3.2.2) or a whole slirep document (clause 5.2.3.2.3). Present when
+     * the LI LCS client cannot map the response into a Location.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly lALS_rawMLPPosData: OPTIONAL<UTF8String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

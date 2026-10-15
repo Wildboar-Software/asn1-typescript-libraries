@@ -21,6 +21,10 @@ enum _enum_for_GcseEvent {
  * @summary GcseEvent
  * @description
  * 
+ * GCSE event that caused the IRI. Table 14.1 assigns begin, continue, or end.
+ * The module also defines a target-dropped value that table 14.1 does not name.
+ * 3GPP TS 33.108, clause 14.2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,6 +48,12 @@ type GcseEvent = _enum_for_GcseEvent | ENUMERATED;
 
 /**
  * @summary GcseEvent_activationOfGcseGroupComms
+ * @description
+ * 
+ * A GCSE group that includes the target was activated, or the target was added
+ * to an active group. IRI-BEGIN. 3GPP TS 33.108, clause 14.2.6.2.2, tables 14.1
+ * and 14.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -52,6 +62,11 @@ const GcseEvent_activationOfGcseGroupComms: GcseEvent = 1; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary activationOfGcseGroupComms
+ * @description
+ * 
+ * GCSE group activated for the target. IRI-BEGIN. 3GPP TS 33.108, clause
+ * 14.2.6.2.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -60,6 +75,14 @@ const activationOfGcseGroupComms: GcseEvent = GcseEvent_activationOfGcseGroupCom
 
 /**
  * @summary GcseEvent_startOfInterceptionGcseGroupComms
+ * @description
+ * 
+ * Interception started for a target already in an active group. IRI-BEGIN. If
+ * the GCS AS does not know of multiple authorizations, the MF/DF builds the
+ * record from retained information. Do not send it to an LEMF that was already
+ * intercepting that target. 3GPP TS 33.108, clause 14.2.6.2.2, tables 14.1 and
+ * 14.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -68,6 +91,11 @@ const GcseEvent_startOfInterceptionGcseGroupComms: GcseEvent = 2; /* LONG_NAMED_
 
 /**
  * @summary startOfInterceptionGcseGroupComms
+ * @description
+ * 
+ * Interception started on an active GCSE group. IRI-BEGIN. 3GPP TS 33.108,
+ * clause 14.2.6.2.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -76,6 +104,12 @@ const startOfInterceptionGcseGroupComms: GcseEvent = GcseEvent_startOfIntercepti
 
 /**
  * @summary GcseEvent_userAdded
+ * @description
+ * 
+ * A user became a participant, or was added to the membership list.
+ * IRI-CONTINUE. The added user is required. 3GPP TS 33.108, clause 14.2.6.2.3,
+ * tables 14.1 and 14.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -84,6 +118,10 @@ const GcseEvent_userAdded: GcseEvent = 3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userAdded
+ * @description
+ * 
+ * User added to the group. IRI-CONTINUE. 3GPP TS 33.108, clause 14.2.6.2.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -92,6 +130,12 @@ const userAdded: GcseEvent = GcseEvent_userAdded; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary GcseEvent_userDropped
+ * @description
+ * 
+ * A user ceased to be a participant, or was removed from the membership list.
+ * IRI-CONTINUE. The dropped user is required. 3GPP TS 33.108, clause
+ * 14.2.6.2.3, tables 14.1 and 14.6.
+ * 
  * @constant
  * @type {number}
  */
@@ -100,6 +144,10 @@ const GcseEvent_userDropped: GcseEvent = 4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userDropped
+ * @description
+ * 
+ * User dropped from the group. IRI-CONTINUE. 3GPP TS 33.108, clause 14.2.6.2.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -108,6 +156,12 @@ const userDropped: GcseEvent = GcseEvent_userDropped; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary GcseEvent_targetConnectionModification
+ * @description
+ * 
+ * The target's connection to the GCS AS changed. IRI-CONTINUE. The modified
+ * connection method is required. 3GPP TS 33.108, clause 14.2.6.2.3, tables 14.1
+ * and 14.7.
+ * 
  * @constant
  * @type {number}
  */
@@ -116,6 +170,11 @@ const GcseEvent_targetConnectionModification: GcseEvent = 5; /* LONG_NAMED_ENUME
 
 /**
  * @summary targetConnectionModification
+ * @description
+ * 
+ * Target connection to the GCS AS changed. IRI-CONTINUE. 3GPP TS 33.108, clause
+ * 14.2.6.2.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -124,6 +183,13 @@ const targetConnectionModification: GcseEvent = GcseEvent_targetConnectionModifi
 
 /**
  * @summary GcseEvent_targetdropped
+ * @description
+ * 
+ * Present in annex B.14.1. Table 14.1 does not name it. Clause 14.2.6.2.4
+ * triggers an end record when the target is dropped from an active group, and
+ * also when interception is deactivated. The specification does not say which
+ * of those cases uses this value.
+ * 
  * @constant
  * @type {number}
  */
@@ -132,6 +198,10 @@ const GcseEvent_targetdropped: GcseEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetdropped
+ * @description
+ * 
+ * Table 14.1 does not name this value. See clause 14.2.6.2.4.
+ * 
  * @constant
  * @type {number}
  */
@@ -140,6 +210,13 @@ const targetdropped: GcseEvent = GcseEvent_targetdropped; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary GcseEvent_deactivationOfGcseGroupComms
+ * @description
+ * 
+ * Deactivation of the GCSE group communications. Table 14.1 maps that event to
+ * IRI-END. Clause 14.2.6.2.4 also ends interception when the target is dropped
+ * or when interception is deactivated for a member. 3GPP TS 33.108, clause
+ * 14.2.6.2.4, tables 14.1 and 14.8.
+ * 
  * @constant
  * @type {number}
  */
@@ -148,6 +225,10 @@ const GcseEvent_deactivationOfGcseGroupComms: GcseEvent = 7; /* LONG_NAMED_ENUME
 
 /**
  * @summary deactivationOfGcseGroupComms
+ * @description
+ * 
+ * GCSE group communications deactivated. IRI-END. 3GPP TS 33.108, table 14.1.
+ * 
  * @constant
  * @type {number}
  */

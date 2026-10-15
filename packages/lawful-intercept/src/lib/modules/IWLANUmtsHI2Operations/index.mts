@@ -1,3 +1,27 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `IWLANUmtsHI2Operations` from 3GPP TS 33.108. The module is
+ * declared with IMPLICIT TAGS.
+ * 
+ * HI2 intercept-related information for 3GPP WLAN interworking. A delivery is
+ * one `IWLANUmtsIRIContent` record or an optional `IWLANUmtsIRISequence`.
+ * Aggregation is optional. A record that is ready to send is not withheld in
+ * order to aggregate it.
+ * 
+ * Begin is a successful I-WLAN tunnel, or start of intercept when a tunnel is
+ * already up. End is tunnel disconnect. Report covers access initiation and
+ * termination, unsuccessful tunnel setup, start of intercept with no tunnel,
+ * and packet-data headers.
+ * 
+ * Clause 8 is not maintained from Release 12 onwards.
+ * 
+ * 3GPP TS 33.108, clause 8 and annex B.7.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulintercept(2) threeGPP(4) hi2wlan(6) r16(16) version-0(0)}`
+ */
 export {
     type CorrelationNumber,
     _decode_CorrelationNumber,

@@ -14,6 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary OtherIdentity
  * @description
  * 
+ * An identity whose encoding is named beside the value. Table 14.2 uses the
+ * other identity for the target's NAI. The octet layout is whatever the
+ * encoding name identifies; no particular NAI encoding is defined. 3GPP TS
+ * 33.108, annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +38,22 @@ export
 class OtherIdentity {
     /**
      * @summary `otherIdentityEncoding`.
+     * @description
+     * 
+     * Name of the encoding used for the accompanying identity octets. 3GPP TS
+     * 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly otherIdentityEncoding: OPTIONAL<UTF8String>;
     /**
      * @summary `otherIDInfo`.
+     * @description
+     * 
+     * Identity octets in the named encoding. The specification does not define
+     * a layout. 3GPP TS 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */

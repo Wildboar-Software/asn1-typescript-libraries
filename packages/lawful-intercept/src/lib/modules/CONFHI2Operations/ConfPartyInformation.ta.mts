@@ -15,6 +15,11 @@ import { SupportedMedia, _decode_SupportedMedia, _encode_SupportedMedia } from "
  * @summary ConfPartyInformation
  * @description
  * 
+ * One conference party: identity and the bearers that party supports. Used for
+ * conferees, waiting parties, the joining party, the leaving party, the party
+ * changing a bearer, and parties affected by that change. 3GPP TS 33.108,
+ * clause 11.5 and annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,26 @@ export
 class ConfPartyInformation {
     /**
      * @summary `partyIdentity`.
+     * @description
+     * 
+     * Public and private IMS identities of this party. At least one when the
+     * party is reported. 3GPP TS 33.108, clause 11.5, table 11.2.
+     * 
      * @public
      * @readonly
      */
     readonly partyIdentity: OPTIONAL<PartyIdentity>;
     /**
      * @summary `supportedmedia`.
+     * @description
+     * 
+     * Bearers for this party. On a successful join, all bearers the joining
+     * party supports are required. On a successful leave, all bearers that
+     * party supported are required. For each current conferee, the bearers
+     * actively in use are conditional at a successful start and required when
+     * interception starts on an active conference. 3GPP TS 33.108, clause 11.5,
+     * tables 11.3 to 11.5 and 11.7.
+     * 
      * @public
      * @readonly
      */

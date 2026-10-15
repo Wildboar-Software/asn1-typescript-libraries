@@ -16,6 +16,12 @@ import { GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../UmtsHI2Op
  * @summary UMTSLocation
  * @description
  * 
+ * UMTS geographical area for a target or cell-site location: a point, a point
+ * with an uncertainty, or a polygon of at most 15 points (maxNrOfPoints in
+ * annex B.3).
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

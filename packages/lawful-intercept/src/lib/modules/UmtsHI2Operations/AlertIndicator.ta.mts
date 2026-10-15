@@ -17,6 +17,15 @@ enum _enum_for_AlertIndicator {
  * @summary AlertIndicator
  * @description
  * 
+ * Group-call alert condition: the alert was sent, received, or cancelled.
+ * 
+ * Conditional on a PTC group-call record when an emergency alert was indicated,
+ * or when that alert signalling was cancelled.
+ * 
+ * 3GPP TS 33.108, clause 17.1.5, table 17.3.2, and table 17.3.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +46,11 @@ type AlertIndicator = _enum_for_AlertIndicator | ENUMERATED;
 
 /**
  * @summary AlertIndicator_sent
+ * @description
+ * 
+ * The group-call emergency alert was sent.
+ * 
+ * 3GPP TS 33.108, clause 17.1.5 and table 17.3.2.
  * @constant
  * @type {number}
  */
@@ -45,6 +59,9 @@ const AlertIndicator_sent: AlertIndicator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sent
+ * @description
+ * 
+ * The group-call emergency alert was sent (clause 17.1.5).
  * @constant
  * @type {number}
  */
@@ -53,6 +70,11 @@ const sent: AlertIndicator = AlertIndicator_sent; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary AlertIndicator_received
+ * @description
+ * 
+ * The group-call emergency alert was received.
+ * 
+ * 3GPP TS 33.108, clause 17.1.5 and table 17.3.2.
  * @constant
  * @type {number}
  */
@@ -61,6 +83,9 @@ const AlertIndicator_received: AlertIndicator = 2; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary received
+ * @description
+ * 
+ * The group-call emergency alert was received (clause 17.1.5).
  * @constant
  * @type {number}
  */
@@ -69,6 +94,11 @@ const received: AlertIndicator = AlertIndicator_received; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary AlertIndicator_cancelled
+ * @description
+ * 
+ * The group-call emergency alert was cancelled.
+ * 
+ * 3GPP TS 33.108, clause 17.1.5 and table 17.3.3.
  * @constant
  * @type {number}
  */
@@ -77,6 +107,9 @@ const AlertIndicator_cancelled: AlertIndicator = 3; /* LONG_NAMED_ENUMERATED_VAL
 
 /**
  * @summary cancelled
+ * @description
+ * 
+ * The group-call emergency alert was cancelled (clause 17.3.3).
  * @constant
  * @type {number}
  */

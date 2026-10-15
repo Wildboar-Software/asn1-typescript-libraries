@@ -12,6 +12,36 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary UmtsIRIContent
  * @description
  * 
+ * One HI2 IRI record for UMTS packet-domain and IMS interception (annex B.3).
+ * The four alternatives are independent of any one signalling message; the
+ * event inside the record says what happened.
+ * 
+ * Begin opens a communication attempt. In the packet domain that is successful
+ * PDP context activation, start of interception while a PDP context is active
+ * (one begin per active context), an inter-SGSN routing area update that
+ * changes the PLMN while a context is active, or entry to an interception area
+ * with a context active (clause 6.5.1.2). Begin, continue, and report each
+ * include at least one optional parameter.
+ * 
+ * End closes the attempt. In the packet domain it is PDP context deactivation
+ * (clause 6.5.1.4). If interception is turned off while a PDP context stays up,
+ * no end record is sent (clause 4.5.3).
+ * 
+ * Continue is used during the attempt. In the packet domain it reports PDP
+ * context modification and an inter-SGSN routing area update that does not
+ * change the PLMN (clause 6.5.1.3). While a PDP context is active, continue
+ * carries CC-relevant IRI and report carries the other IRI (clause 4.5.3). A
+ * continue does not allocate a new correlation number.
+ * 
+ * Report is for non-communication events, unsuccessful attempts, LALS, and cell
+ * site reports (clauses 4.5.3, 6.5.1, and 16.4). IMS uses report for every
+ * event in table 7.1; clause 7.5 says IMS record types differ from clause
+ * 4.5.3. PTC events in clause 17 name their own begin, continue, end, or report
+ * record.
+ * 
+ * 3GPP TS 33.108, clauses 4.5.3, 6.5.1, 7.5, 16, and 17; annex B.3.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

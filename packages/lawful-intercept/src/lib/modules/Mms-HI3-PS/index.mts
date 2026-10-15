@@ -1,3 +1,18 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `Mms-HI3-PS`, `IMPLICIT TAGS`. HI3 content of communication for
+ * MMS, separated from other services.
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulintercept(2) threeGPP(4) hi3mms(17) r16(16) version-0(0)}`.
+ * 
+ * 3GPP TS 33.108, clause 15.3.7 and annex B.16. Clause 15.3.1 says the CC is
+ * reported using a ULIC header; annex B.16 defines this MMS header for that CC.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
 export {
     CC_PDU,
     _decode_CC_PDU,

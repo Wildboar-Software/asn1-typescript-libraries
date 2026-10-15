@@ -13,6 +13,13 @@ import { GPRS_parameters, _decode_GPRS_parameters, _encode_GPRS_parameters } fro
  * @summary Services_Data_Information
  * @description
  * 
+ * Complementary information for the basic packet-data call. Table 6.2 maps the
+ * observed PDP address, the access point name, and the PDP type to this
+ * parameter. The PDP type is the end-user protocol between the external packet
+ * data network and the MS.
+ * 
+ * 3GPP TS 33.108, clause 6.5, table 6.2, and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +36,15 @@ export
 class Services_Data_Information {
     /**
      * @summary `gPRS_parameters`.
+     * @description
+     * 
+     * PDP address allocated to the target, access point name, and PDP type for
+     * the packet-data call. Table 6.2 maps those three event fields here. The
+     * PDP type is the end-user protocol between the external packet data
+     * network and the MS.
+     * 
+     * 3GPP TS 33.108, table 6.2 and annex B.3.
+     * 
      * @public
      * @readonly
      */

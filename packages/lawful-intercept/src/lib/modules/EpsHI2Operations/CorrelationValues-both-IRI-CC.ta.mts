@@ -15,6 +15,10 @@ import { IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_
  * @summary CorrelationValues_both_IRI_CC
  * @description
  * 
+ * Both correlations at once: IRI to IRI, and IRI to content. Used when the
+ * correlation parameter carries the both-IRI-CC alternative (module comment;
+ * table 7.2). 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +34,22 @@ export
 class CorrelationValues_both_IRI_CC {
     /**
      * @summary `iri_CC`.
+     * @description
+     * 
+     * Correlates this IRI with one or more content streams (module comment,
+     * table 7.2).
+     * 
      * @public
      * @readonly
      */
     readonly iri_CC: IRI_to_CC_Correlation;
     /**
      * @summary `iri_IRI`.
+     * @description
+     * 
+     * Correlates this IRI with other IRI of the same communication. For IMS
+     * this is the SIP-session or XCAP-transaction correlation (table 7.2).
+     * 
      * @public
      * @readonly
      */

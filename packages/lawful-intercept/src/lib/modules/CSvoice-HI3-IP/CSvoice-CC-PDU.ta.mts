@@ -14,6 +14,14 @@ import { CSvoiceLIC_header, _decode_CSvoiceLIC_header, _encode_CSvoiceLIC_header
  * @summary CSvoice_CC_PDU
  * @description
  * 
+ * CC of an intercepted CS voice call when the handover interface is IP-based.
+ * Correlated to IRI by the lawful interception identifier, the communication
+ * identifier, and, when HI2 carries it, the CC-link identifier (clause 5.7.2).
+ * 
+ * 3GPP TS 33.108, clause 5.7 and annex B.17.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +39,30 @@ export
 class CSvoice_CC_PDU {
     /**
      * @summary `cSvoiceLIC_header`.
+     * @description
+     * 
+     * Correlation and codec header for the voice content. 3GPP TS 33.108,
+     * clause 5.7.
      * @public
      * @readonly
      */
     readonly cSvoiceLIC_header: CSvoiceLIC_header;
     /**
      * @summary `payload`.
+     * @description
+     * 
+     * Intercepted voice content. When this IP handover is used, the payload can
+     * be RTP (RFC 3550). Codec information is carried in the payload
+     * description on HI3. 3GPP TS 33.108, clause 5.7.4.
      * @public
      * @readonly
      */
     readonly payload: OCTET_STRING;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

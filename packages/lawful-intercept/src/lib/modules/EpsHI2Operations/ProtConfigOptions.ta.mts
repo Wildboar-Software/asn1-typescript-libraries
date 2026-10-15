@@ -14,6 +14,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ProtConfigOptions
  * @description
  * 
+ * Protocol configuration options transferred between the UE and the PDN-GW, for
+ * example a DHCP address-allocation preference (clause 10.5.2). On bearer
+ * activation, provide the options the UE requested. On bearer modification,
+ * provide them when available and only for the default bearer (tables
+ * 10.5.1.1.3, 10.5.1.2.1, and 10.5.1.3.1). Each direction is octet 3 onward of
+ * the protocol configuration options IE in 3GPP TS 24.008; the IEI and length
+ * octets are omitted (module comment).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +45,33 @@ export
 class ProtConfigOptions {
     /**
      * @summary `ueToNetwork`.
+     * @description
+     * 
+     * Protocol configuration options the UE sent. Octet 3 onward of that
+     * information element in 3GPP TS 24.008; the IEI and length are omitted
+     * (module comment). Provide the options the UE requested on bearer
+     * activation (clause 10.5.2 and the bearer-activation tables).
      * @public
      * @readonly
      */
     readonly ueToNetwork: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `networkToUe`.
+     * @description
+     * 
+     * Protocol configuration options the network sent to the UE. Same
+     * octet-3-onward coding from 3GPP TS 24.008 (module comment). Clause 10.5.2
+     * describes the options as parameters transferred between the UE and the
+     * PDN-GW.
      * @public
      * @readonly
      */
     readonly networkToUe: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

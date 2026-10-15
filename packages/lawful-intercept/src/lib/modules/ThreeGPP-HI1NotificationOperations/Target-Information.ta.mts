@@ -25,6 +25,11 @@ import { InterceptionType, _decode_InterceptionType, _encode_InterceptionType, _
  * @summary Target_Information
  * @description
  * 
+ * Details of the warrant that informative annex M says may be notified, other
+ * than the target identity value itself. The annex still allows a
+ * target-identity type and says flows that include target identities may have
+ * to be limited. 3GPP TS 33.108, annex M (informative).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,60 +66,123 @@ export
 class Target_Information {
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     * 
+     * Only the operator / access-provider / service-provider identifier from
+     * the lawful authorization. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly communicationIdentifier: OPTIONAL<CommunicationIdentifier>;
     /**
      * @summary `network_Identifier`.
+     * @description
+     * 
+     * Operator identifier. Same notion as annexes B.3, B.8, B.9, and B.11.1.
+     * 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly network_Identifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `broadcastArea`.
+     * @description
+     * 
+     * Broadcast area: which network elements the interception applies to. The
+     * group may be chosen by network type, technology, or geography to fit
+     * national regulation and jurisdiction. Predefined values are decided by
+     * national regulation or by the CSP and the LEA. One to 256 octets. The
+     * encoding of those values is not defined. 3GPP TS 33.108, annex M
+     * (informative).
+     * 
      * @public
      * @readonly
      */
     readonly broadcastArea: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `targetType`.
+     * @description
+     * 
+     * Kind of target identity on the warrant. The identity value itself is not
+     * this parameter. Informative annex M says notification is of warrant
+     * elements except the target's identities, and that flows containing those
+     * identities may have to be limited. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly targetType: OPTIONAL<TargetType>;
     /**
      * @summary `deliveryInformation`.
+     * @description
+     * 
+     * HI2 and HI3 delivery numbers and IP addresses chosen by the LEA. 3GPP TS
+     * 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly deliveryInformation: OPTIONAL<DeliveryInformation>;
     /**
      * @summary `liActivatedTime`.
+     * @description
+     * 
+     * When interception was activated. Informative annex M: Generalized Time in
+     * UTC, unless national regulation defines otherwise. Either the warrant
+     * time or the operator's actual activation time may be used. 3GPP TS
+     * 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly liActivatedTime: OPTIONAL<TimeStamp>;
     /**
      * @summary `liDeactivatedTime`.
+     * @description
+     * 
+     * When interception was deactivated. Informative annex M: Generalized Time
+     * in UTC, unless national regulation defines otherwise. Either the warrant
+     * time or the operator's actual deactivation time may be used. 3GPP TS
+     * 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly liDeactivatedTime: OPTIONAL<TimeStamp>;
     /**
      * @summary `liModificationTime`.
+     * @description
+     * 
+     * Present on a modification notification. Informative annex M requires a
+     * notification after modification of an active interception and does not
+     * further define this time. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly liModificationTime: OPTIONAL<TimeStamp>;
     /**
      * @summary `interceptionType`.
+     * @description
+     * 
+     * What the warrant covers: voice, data, or both, and whether content of
+     * communication is included. The six values are those listed in informative
+     * annex M. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly interceptionType: OPTIONAL<InterceptionType>;
     /**
      * @summary `liSetUpTime`.
+     * @description
+     * 
+     * When the warrant was entered into the ADMF. Informative annex M: the
+     * format is national; Generalized Time in UTC is recommended. 3GPP TS
+     * 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */

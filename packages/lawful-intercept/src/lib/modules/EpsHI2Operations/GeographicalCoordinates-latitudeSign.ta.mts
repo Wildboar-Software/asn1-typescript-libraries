@@ -7,6 +7,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GeographicalCoordinates_latitudeSign
  * @description
  * 
+ * Which hemisphere the latitude integer of a UMTS geographical area refers to.
+ * The specification text does not add meaning beyond north and south. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +32,10 @@ enum _enum_for_GeographicalCoordinates_latitudeSign {
  * @summary GeographicalCoordinates_latitudeSign
  * @description
  * 
+ * Which hemisphere the latitude integer of a UMTS geographical area refers to.
+ * The specification text does not add meaning beyond north and south. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,6 +54,10 @@ type GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_la
  * @summary GeographicalCoordinates_latitudeSign
  * @description
  * 
+ * Which hemisphere the latitude integer of a UMTS geographical area refers to.
+ * The specification text does not add meaning beyond north and south. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,6 +74,10 @@ const GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_l
 
 /**
  * @summary GeographicalCoordinates_latitudeSign_north
+ * @description
+ * 
+ * The latitude integer is in the northern hemisphere.
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +86,10 @@ const GeographicalCoordinates_latitudeSign_north: GeographicalCoordinates_latitu
 
 /**
  * @summary north
+ * @description
+ * 
+ * Northern hemisphere.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +98,10 @@ const north: GeographicalCoordinates_latitudeSign = GeographicalCoordinates_lati
 
 /**
  * @summary GeographicalCoordinates_latitudeSign_south
+ * @description
+ * 
+ * The latitude integer is in the southern hemisphere.
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +110,10 @@ const GeographicalCoordinates_latitudeSign_south: GeographicalCoordinates_latitu
 
 /**
  * @summary south
+ * @description
+ * 
+ * Southern hemisphere.
+ * 
  * @constant
  * @type {number}
  */

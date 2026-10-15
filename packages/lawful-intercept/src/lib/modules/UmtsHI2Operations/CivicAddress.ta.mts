@@ -13,6 +13,19 @@ import { XmlCivicAddress, _decode_XmlCivicAddress, _encode_XmlCivicAddress } fro
  * @summary CivicAddress
  * @description
  * 
+ * Civic location of an H(e)NodeB or a WLAN hotspot, used to enrich the IRI
+ * instead of the target's geographical coordinates.
+ * 
+ * Annex B.3 bases the elements on IETF RFC 4776 or RFC 5139, ISO 3166-1 and ISO
+ * 3166-2, ISO 639-1, and UPU SB42-4, and points to TS 33.106 clause 5.11 and TS
+ * 33.107 clause 4. Clause 16.3 includes the cell site's civic address when it
+ * is known. The value is either a set of detailed elements or XML that conforms
+ * to the February 2008 civic-location format of RFC 5139.
+ * 
+ * 3GPP TS 33.108, annex B.3 and clause 16.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

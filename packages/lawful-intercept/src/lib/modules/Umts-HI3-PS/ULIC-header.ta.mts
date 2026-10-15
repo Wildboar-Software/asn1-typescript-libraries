@@ -28,6 +28,17 @@ import { ICE_type, _decode_ICE_type, _encode_ICE_type, _enum_for_ICE_type } from
  * @summary ULIC_header
  * @description
  * 
+ * ASN.1 ULIC header (version 1) for UMTS PS. The ASN.1 version component is not
+ * the version-0/version-1 selector; version 0 does not use this type (annex
+ * C.1.2). IPsec is recommended. The LEMF stores packets in sequence-number
+ * order and correlates CC to IRI with the correlation number (annex C.1.5).
+ * With UDP the sender does not recover LEMF loss; TCP retries. CC can still be
+ * lost (annex C.1.4).
+ * 
+ * 3GPP TS 33.108, annex C.1.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,60 +66,113 @@ export
 class ULIC_header {
     /**
      * @summary `hi3DomainId`.
+     * @description
+     * 
+     * 3GPP HI3 domain identifier in this header (`hi3` `r7` `version-0` under
+     * `threeGPPSUBDomainId`). Present on version 1. 3GPP TS 33.108, annex
+     * C.1.3.
      * @public
      * @readonly
      */
     readonly hi3DomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `version`.
+     * @description
+     * 
+     * ULIC header ASN.1 version on the version-1 header. Redundant because the
+     * domain identifier is already present; the module recommends always
+     * sending lastVersion (8). ULIC header version 0 is the octet layout in
+     * annex C.1.2. EPS does not use this component. 3GPP TS 33.108, annex C.1.3
+     * and annex B.4.
      * @public
      * @readonly
      */
     readonly version: Version;
     /**
      * @summary `lIID`.
+     * @description
+     * 
+     * Lawful interception identifier. Sending is application dependent and
+     * follows national requirements. Version-1 attribute. 3GPP TS 33.108, annex
+     * C.1.3.
      * @public
      * @readonly
      */
     readonly lIID: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `correlation_Number`.
+     * @description
+     * 
+     * Unique per PDP context. Correlates CC with IRI, IRI records of that PDP
+     * context, and LALS reports with the triggering IRI. An example is the GGSN
+     * address with the charging ID. 3GPP TS 33.108, clause 6.1.3 and annex
+     * C.1.3.
      * @public
      * @readonly
      */
     readonly correlation_Number: GPRSCorrelationNumber;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Sending is application dependent and follows national requirements.
+     * Version-1 attribute. 3GPP TS 33.108, annex C.1.3.
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `sequence_number`.
+     * @description
+     * 
+     * Increasing sequence number for tunneled T-PDUs. Handling is a national
+     * requirement (for example, unique per PDP context). If handover changes
+     * the DF3, sequencing may restart. 3GPP TS 33.108, annex C.1.3.
      * @public
      * @readonly
      */
     readonly sequence_number: INTEGER;
     /**
      * @summary `t_PDU_direction`.
+     * @description
+     * 
+     * Direction of the T-PDU, from the target or to the target. Version-1 form
+     * of the direction. The version-0 DIR bit is 1 for uplink (from the
+     * observed mobile user) and 0 for downlink. 3GPP TS 33.108, annex C.1.3 and
+     * annex C.1.2.
      * @public
      * @readonly
      */
     readonly t_PDU_direction: TPDU_direction;
     /**
      * @summary `national_HI3_ASN1parameters`.
+     * @description
+     * 
+     * Encoded per national requirements. Annex C.1.3 lists this on the
+     * version-1 header. The module places it after the extension marker. 3GPP
+     * TS 33.108, annex C.1.3.
      * @public
      * @readonly
      */
     readonly national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     /**
      * @summary `ice_type`.
+     * @description
+     * 
+     * Node that intercepted the T-PDU. Needed only when several core-network
+     * nodes share one delivery or mediation function. Annex C.1.3 lists this on
+     * version 1; the module places it after the extension marker. Version 0
+     * uses a different ICE coding (0 GGSN, 1 SGSN). 3GPP TS 33.108, annex
+     * C.1.3.
      * @public
      * @readonly
      */
     readonly ice_type: OPTIONAL<ICE_type>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

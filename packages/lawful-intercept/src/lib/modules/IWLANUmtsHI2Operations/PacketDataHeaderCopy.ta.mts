@@ -14,6 +14,11 @@ import { _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_directio
  * @summary PacketDataHeaderCopy
  * @description
  * 
+ * Copy of one packet's header, used instead of mapping individual header fields
+ * (table 8.9).
+ * 
+ * 3GPP TS 33.108, table 8.2, table 8.9, and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +37,35 @@ export
 class PacketDataHeaderCopy {
     /**
      * @summary `direction`.
+     * @description
+     * 
+     * Direction of the copied packet, from the target or to the target. Table
+     * 8.2 names this packetDirection.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly direction: TPDU_direction;
     /**
      * @summary `headerCopy`.
+     * @description
+     * 
+     * Copy of the header at the IP layer and above, including extension
+     * headers, excluding the contents.
+     * 
+     * Conditional, and the alternative to the mapped fields (table 8.9).
+     * 
+     * 3GPP TS 33.108, table 8.2, table 8.9, and annex B.7.
      * @public
      * @readonly
      */
     readonly headerCopy: OCTET_STRING;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

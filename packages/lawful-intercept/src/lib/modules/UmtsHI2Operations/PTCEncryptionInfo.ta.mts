@@ -13,6 +13,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCEncryptionInfo
  * @description
  * 
+ * Cipher, key, and related material for PTC content that the CSP encrypts or
+ * manages, so the LEMF can decipher intercepted talk bursts. Sent when
+ * decryption information must be passed. If rekeying is used, one or more
+ * further messages are sent at the key change. The event type is PTC encryption
+ * (table 18.1). Clause 18 does not say whether the IRI record is a begin,
+ * continue, end, or report.
+ * 
+ * Carried as PTC security information on the IRI (annex B.3). 3GPP TS 33.108,
+ * clause 18 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,36 +44,77 @@ export
 class PTCEncryptionInfo {
     /**
      * @summary `cipher`.
+     * @description
+     * 
+     * Name of the cipher. Required on a PTC encryption message (table 18.1) so
+     * the LEMF knows which algorithm to apply.
+     * 
+     * 3GPP TS 33.108, clause 18, table 18.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly cipher: UTF8String;
     /**
      * @summary `cryptoContext`.
+     * @description
+     * 
+     * Identifies the session or stream this keying applies to, when the LEMF
+     * needs that association. Conditional (table 18.1).
+     * 
+     * 3GPP TS 33.108, clause 18, table 18.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly cryptoContext: OPTIONAL<UTF8String>;
     /**
      * @summary `key`.
+     * @description
+     * 
+     * Key needed to decipher the intercepted PTC content. Required (table
+     * 18.1). Further messages carry new keys when rekeying occurs.
+     * 
+     * 3GPP TS 33.108, clause 18, table 18.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly key: UTF8String;
     /**
      * @summary `keyEncoding`.
+     * @description
+     * 
+     * Encoding of the key when the encoding is other than binary (table 18.1).
+     * Annex B.3 does not mark the component optional.
+     * 
+     * 3GPP TS 33.108, clause 18, table 18.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly keyEncoding: UTF8String;
     /**
      * @summary `salt`.
+     * @description
+     * 
+     * Initial salt, included when the cipher requires a salt (table 18.1).
+     * 
+     * 3GPP TS 33.108, clause 18, table 18.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly salt: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCOther`.
+     * @description
+     * 
+     * Any other information required to decrypt the PTC data. Conditional
+     * (table 18.1). The same role is named on the PTC event parameter.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, clause 18, and annex B.3.
+     * 
      * @public
      * @readonly
      */

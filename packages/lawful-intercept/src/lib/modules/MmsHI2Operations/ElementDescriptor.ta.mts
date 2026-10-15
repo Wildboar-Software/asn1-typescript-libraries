@@ -16,6 +16,11 @@ import { ParameterValue, _decode_ParameterValue, _encode_ParameterValue } from "
  * @summary ElementDescriptor
  * @description
  * 
+ * Content-Reference of the top-level MM content waiting for retrieval. It may
+ * also carry the type or format of that content (table 15.3.6.1.2).
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +39,46 @@ export
 class ElementDescriptor {
     /**
      * @summary `contentReferenceValue`.
+     * @description
+     * 
+     * Content-Reference of the corresponding top-level message content waiting
+     * for retrieval (table 15.3.6.1.2).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly contentReferenceValue: UTF8String;
     /**
      * @summary `parameterName`.
+     * @description
+     * 
+     * Name of the additional type or format information for that content.
+     * Clause 15.3 says the descriptor may contain the type or format, and does
+     * not further define this name.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly parameterName: ParameterName;
     /**
      * @summary `parameterValue`.
+     * @description
+     * 
+     * Value of the additional type or format information. Clause 15.3 does not
+     * further define it.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly parameterValue: ParameterValue;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

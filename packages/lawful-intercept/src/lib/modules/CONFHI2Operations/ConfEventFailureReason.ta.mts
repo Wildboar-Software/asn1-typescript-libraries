@@ -12,6 +12,17 @@ import { Reason, _decode_Reason, _encode_Reason } from "../CONFHI2Operations/Rea
  * @summary ConfEventFailureReason
  * @description
  * 
+ * Why the named conference action failed. The octet layout is not defined. Use
+ * the alternative that matches the event. 3GPP TS 33.108, clause 11.5, table
+ * 11.2.
+ *
+ * `failedConfStartReason`: unsuccessful start, required on that report (table
+ * 11.13). `failedPartyJoinReason`: unsuccessful join, required (table 11.6).
+ * `failedPartyLeaveReason`: unsuccessful leave or drop, required (table 11.8).
+ * `failedBearerModifyReason`: unsuccessful bearer change, required (table
+ * 11.10). `failedConfEndReason`: unsuccessful conference end, required (table
+ * 11.11).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

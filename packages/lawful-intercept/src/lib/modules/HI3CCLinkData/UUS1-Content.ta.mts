@@ -26,6 +26,16 @@ import { Service_Information, _decode_Service_Information, _encode_Service_Infor
  * @summary UUS1_Content
  * @description
  * 
+ * LI-specific contents of the UUS1 parameter on the ISDN CC link, carried in
+ * the ISUP IAM or the DSS1 SETUP. Identifies the target and the call and, when
+ * required, the CC link, and signals direction. Parameters 2, 3, and 4 also
+ * appear in the IRI. Stereo links carry the same values except direction. The
+ * network shall support a UUS1 user-information length of 131 octets.
+ * 
+ * 3GPP TS 33.108, clause 5.3.2 and annex J.1.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,48 +61,83 @@ export
 class UUS1_Content {
     /**
      * @summary `domainID`.
+     * @description
+     * 
+     * HI3 CC-link domain identifier, sent once the FTP delivery mechanism is
+     * used. 3GPP TS 33.108, annex J.1.
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `lawfullInterceptionIdentifier`.
+     * @description
+     * 
+     * Lawful interception identifier of the target identity. 3GPP TS 33.108,
+     * clause 5.3.2 and clause 5.1.
      * @public
      * @readonly
      */
     readonly lawfullInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     * 
+     * Communication identifier of this call of the target (network identifier
+     * and communication identity number). Also present in the IRI. 3GPP TS
+     * 33.108, clause 5.3.2 and clause 5.1.2.
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `cC_Link_Identifier`.
+     * @description
+     * 
+     * CC-link identifier, when CC links are reused (option B). Correlates the
+     * CC link with IRI. May be omitted when the CIN stands for it. 3GPP TS
+     * 33.108, clause 5.1.3 and clause 5.3.2.
      * @public
      * @readonly
      */
     readonly cC_Link_Identifier: OPTIONAL<CC_Link_Identifier>;
     /**
      * @summary `direction_Indication`.
+     * @description
+     * 
+     * From the target, towards the target, or combined (mono). In stereo the
+     * two CC links differ only in this value. 3GPP TS 33.108, clause 5.3.2.
      * @public
      * @readonly
      */
     readonly direction_Indication: Direction_Indication;
     /**
      * @summary `bearer_capability`.
+     * @description
+     * 
+     * Bearer capability information element of the target call, value part (EN
+     * 300 403-1). Tells the LEMF the basic service in use. 3GPP TS 33.108,
+     * clause 5.3.2.
      * @public
      * @readonly
      */
     readonly bearer_capability: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `service_Information`.
+     * @description
+     * 
+     * Further service octets for the target call: high-layer compatibility,
+     * transmission medium requirement, and MAP service codes. 3GPP TS 33.108,
+     * annex J.1.
      * @public
      * @readonly
      */
     readonly service_Information: OPTIONAL<Service_Information>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

@@ -12,6 +12,10 @@ import { ProSeDirectDiscovery, _decode_ProSeDirectDiscovery, _encode_ProSeDirect
  * @summary ProSeEventData
  * @description
  * 
+ * ProSe event payload. `proseDirectDiscovery` is a discovery request or a match
+ * report. Clause 13.3 remote-UE events are not alternatives of this type. 3GPP
+ * TS 33.108, clause 13.2 and annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

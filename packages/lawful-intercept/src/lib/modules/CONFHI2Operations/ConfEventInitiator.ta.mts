@@ -13,6 +13,14 @@ import { PartyIdentity, _decode_PartyIdentity, _encode_PartyIdentity } from "../
  * @summary ConfEventInitiator
  * @description
  * 
+ * Who initiated the request: the conference server, the target, or another
+ * conferee (table 11.2).
+ *
+ * `confServer` is the conference server. `confTargetID` is the target.
+ * `confPartyID` is a conferee. Required on conference end. On join or leave,
+ * present when this party is not the joining or leaving party. 3GPP TS 33.108,
+ * clause 11.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

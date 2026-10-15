@@ -14,6 +14,11 @@ import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operation
  * @summary RecurrenceInfo
  * @description
  * 
+ * Provisioned recurrence of a created or updated conference. Conditional when
+ * the pattern is configured. Stage 2 says the information is absent for a
+ * single instance. 3GPP TS 33.108, clause 11.5, tables 11.14 and 11.15, and
+ * annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,36 @@ export
 class RecurrenceInfo {
     /**
      * @summary `recurrenceStartDateAndTime`.
+     * @description
+     * 
+     * Start of the recurrence, when present. The specification does not further
+     * distinguish this from the provisioned conference start time. 3GPP TS
+     * 33.108, annex B.11.1.
+     * 
      * @public
      * @readonly
      */
     readonly recurrenceStartDateAndTime: OPTIONAL<TimeStamp>;
     /**
      * @summary `recurrenceEndDateAndTime`.
+     * @description
+     * 
+     * End of the recurrence, when present. The specification does not further
+     * distinguish this from the provisioned conference end time. 3GPP TS
+     * 33.108, annex B.11.1.
+     * 
      * @public
      * @readonly
      */
     readonly recurrenceEndDateAndTime: OPTIONAL<TimeStamp>;
     /**
      * @summary `recurrencePattern`.
+     * @description
+     * 
+     * Text of the pattern. Annex B.11.1 gives the examples "Yearly, on Jan 23"
+     * and "Weekly, on Monday". No further format is defined. 3GPP TS 33.108,
+     * annex B.11.1.
+     * 
      * @public
      * @readonly
      */

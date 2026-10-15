@@ -35,6 +35,16 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  * @summary IRI_Parameters
  * @description
  * 
+ * Parameters of one MBMS IRI record sent to the LEMF.
+ * 
+ * Stage 2 mandatory and conditional parameters are optional in the annex B.8
+ * syntax. Stage 2 inclusion overrides that syntax (clause 9.5.1.1). The lawful
+ * interception identifier is present in every record sent to the LEMF. Support
+ * for MBMS over IMS is for further study (clause 9.5).
+ * 
+ * 3GPP TS 33.108, clause 9.5 and annex B.8.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -81,78 +91,177 @@ export
 class IRI_Parameters {
     /**
      * @summary `hi2mbmsDomainId`.
+     * @description
+     * 
+     * 3GPP HI2 MBMS domain identifier. Carries `hi2mbmsDomainId`: threeGPP(4),
+     * hi2mbms(7), r16(16), version0(0).
+     * 
+     * 3GPP TS 33.108, annex B.8.
      * @public
      * @readonly
      */
     readonly hi2mbmsDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * Identifier assigned to the target for this intercept, agreed between the
+     * LEA and the operator. Alphanumeric. It may carry an authorization
+     * reference and the date the authorization was issued. One value per target
+     * identity, or one value for several identities of the same target. If
+     * several LEAs intercept the same identity, each LEA has its own value.
+     * 
+     * Present in every record. Mandatory in the clause 9.5.1 records.
+     * 
+     * 3GPP TS 33.108, clause 9.1.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time of the event that triggered the report, generated in the
+     * BM-SC. Each record contains a timestamp from the intercepting node's
+     * clock.
+     * 
+     * Event date and event time are each mandatory in the clause 9.5.1 records.
+     * Both are this timestamp.
+     * 
+     * 3GPP TS 33.108, clause 9.2.1 and table 9.2.
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `initiator`.
+     * @description
+     * 
+     * Whether the event was started by the UE, by the network, or by an
+     * off-line action, when more than one of those can start it (table 9.2).
+     * 
+     * Mandatory on every clause 9.5.1 record.
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly initiator: OPTIONAL<IRI_Parameters_initiator>;
     /**
      * @summary `partyInformation`.
+     * @description
+     * 
+     * The concerned party and its identities. At most ten parties. Clause 9
+     * records require the observed IMSI.
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly partyInformation: OPTIONAL<PartyInformation[]>;
     /**
      * @summary `national_Parameters`.
+     * @description
+     * 
+     * National parameters. Clause 9.5 allows the ICE or the DF2/MF to extend
+     * the information set when a country requires it. TS 33.108 does not
+     * further define the contents.
      * @public
      * @readonly
      */
     readonly national_Parameters: OPTIONAL<National_Parameters>;
     /**
      * @summary `networkIdentifier`.
+     * @description
+     * 
+     * Operator identifier plus the ICE address (table 9.2).
+     * 
+     * The operator identifier is mandatory and should be internationally
+     * unique. The network-element identifier is optional; national regulations
+     * may require it. Mandatory in the clause 9.5.1 records.
+     * 
+     * 3GPP TS 33.108, clause 9.1.3 and table 9.2.
      * @public
      * @readonly
      */
     readonly networkIdentifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `mBMSevent`.
+     * @description
+     * 
+     * Which MBMS event this record reports (table 9.2). Mandatory on the clause
+     * 9.5.1 records.
+     * 
+     * Tables 9.3, 9.4, 9.5, 9.7, and 9.8 say to provide the MBMS Service
+     * Joining event type. Table 9.1 assigns those records to subscription
+     * activation, subscription modification, subscription termination, start of
+     * intercept, and service leaving.
+     * 
+     * 3GPP TS 33.108, table 9.1 and table 9.2.
      * @public
      * @readonly
      */
     readonly mBMSevent: OPTIONAL<MBMSEvent>;
     /**
      * @summary `correlationNumber`.
+     * @description
+     * 
+     * Unique per target MBMS service and MBMS session. Correlates IRI records
+     * of service usage. Not used for subscription-management events; those
+     * records do not carry it (clause 9.1.4).
+     * 
+     * Mandatory on Begin and End (tables 9.6, 9.7, and 9.8).
+     * 
+     * 3GPP TS 33.108, clause 9.1.4 and table 9.2.
      * @public
      * @readonly
      */
     readonly correlationNumber: OPTIONAL<CorrelationNumber>;
     /**
      * @summary `mbmsInformation`.
+     * @description
+     * 
+     * MBMS service name, join time, mode, multicast address, leaving and
+     * subscription-termination reasons, APN, subscriber list, and downstream
+     * nodes.
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly mbmsInformation: OPTIONAL<MBMSinformation>;
     /**
      * @summary `visitedPLMNID`.
+     * @description
+     * 
+     * Identity of the visited PLMN to which the user is registered (table 9.2).
+     * 
+     * Conditional when the target is not on the home network: access to the
+     * BM-SC for subscription records (tables 9.3 to 9.5), or access to the MBMS
+     * service for Begin and End (tables 9.6 to 9.8).
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly visitedPLMNID: OPTIONAL<VisitedPLMNID>;
     /**
      * @summary `national_HI2_ASN1parameters`.
+     * @description
+     * 
+     * National HI2 parameters. Clause 9.5 allows the information set to be
+     * extended when a country requires it. TS 33.108 does not further define
+     * the contents.
      * @public
      * @readonly
      */
     readonly national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

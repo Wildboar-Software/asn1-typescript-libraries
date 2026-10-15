@@ -17,6 +17,14 @@ import { Services_Data_Information, _decode_Services_Data_Information, _encode_S
  * @summary PartyInformation
  * @description
  * 
+ * The concerned party: its role, its identities, and complementary data for the
+ * packet call (annex B.3). The LEMF uses the identities to recognize the
+ * target. At least one of MSISDN, IMSI, and IMEI is required on packet-domain
+ * records when available; IMS records use SIP URI, TEL URI, and IMEI when
+ * available.
+ * 
+ * 3GPP TS 33.108, clause 6.5, table 6.2, and clause 7.5; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,18 +80,43 @@ export
 class PartyInformation {
     /**
      * @summary `party_Qualifier`.
+     * @description
+     * 
+     * Role of this party. In this module the only named role is the GPRS
+     * target, so the LEMF can attach the identities to the intercepted
+     * subscriber. Annex B.3 describes the parameter as the concerned party and
+     * the information that party provided.
+     * 
+     * 3GPP TS 33.108, table 6.2 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly party_Qualifier: PartyInformation_party_Qualifier;
     /**
      * @summary `partyIdentity`.
+     * @description
+     * 
+     * Identities of the concerned party. Packet-domain records require at least
+     * one of MSISDN, IMSI, and IMEI when available. IMS records carry SIP URI,
+     * TEL URI, and IMEI when available. XCAP records may add the asserted
+     * identity and the XCAP user identifier.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1, clause 7.5, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly partyIdentity: PartyInformation_partyIdentity;
     /**
      * @summary `services_Data_Information`.
+     * @description
+     * 
+     * Complementary information for the basic packet-data call: the observed
+     * PDP address, the access point name, and the PDP type (table 6.2).
+     * 
+     * 3GPP TS 33.108, table 6.2 and annex B.3.
+     * 
      * @public
      * @readonly
      */

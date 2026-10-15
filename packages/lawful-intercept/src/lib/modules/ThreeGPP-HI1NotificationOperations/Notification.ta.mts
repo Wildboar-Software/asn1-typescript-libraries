@@ -26,6 +26,12 @@ import { BroadcastStatus, _decode_BroadcastStatus, _encode_BroadcastStatus, _enu
  * @summary Notification
  * @description
  * 
+ * Activation, deactivation, or modification notification. Informative annex M:
+ * report the warrant elements, except that flows containing target identities
+ * may have to be limited, and manual entry by accredited operator staff is
+ * recommended. Individual parameters are sent with BER. The annex is
+ * informative. 3GPP TS 33.108, annex M.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,48 +63,103 @@ export
 class Notification {
     /**
      * @summary `domainID`.
+     * @description
+     * 
+     * Object identifier, included when FTP delivery is used. Informative annex
+     * M says the HI1 IRI may include the OID. Which OID is placed here is not
+     * stated. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly domainID: OPTIONAL<OBJECT_IDENTIFIER>;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * LIID supplied with the lawful authorization for the target. Informative
+     * annex M: the LIID may be provided by the LEA or, by default, by the CSP.
+     * The annex recommends limiting any flow that includes target identities.
+     * 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     * 
+     * Only the operator / access-provider / service-provider identifier from
+     * the lawful authorization, in the CS domain. The communication identity
+     * number is not described for this notification. 3GPP TS 33.108, annex M
+     * (informative) and the accompanying schema.
+     * 
      * @public
      * @readonly
      */
     readonly communicationIdentifier: OPTIONAL<CommunicationIdentifier>;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time of the report. 3GPP TS 33.108, annex M (informative) and
+     * the accompanying schema.
+     * 
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `threeGPP_National_HI1_ASN1parameters`.
+     * @description
+     * 
+     * National HI1 parameters, if national regulation requests them. The layout
+     * after the country code is national and is not defined here. 3GPP TS
+     * 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly threeGPP_National_HI1_ASN1parameters: OPTIONAL<ThreeGPP_National_HI1_ASN1parameters>;
     /**
      * @summary `target_Information`.
+     * @description
+     * 
+     * Warrant details other than a direct statement of the target identity:
+     * broadcast area, delivery addresses, interception type, and the
+     * activation, deactivation, modification, and setup times. Target identity
+     * type may be included; the informative annex still says target identities
+     * should be limited. 3GPP TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly target_Information: OPTIONAL<Target_Information>;
     /**
      * @summary `network_Identifier`.
+     * @description
+     * 
+     * Operator, or the part of the operator's network, that sends the IRI. The
+     * value may be set by national regulation. Same notion as the network
+     * identifier in annexes B.3, B.8, B.9, and B.11.1. Recommended to reuse the
+     * operator identifier used as the CS-domain communication identifier. 3GPP
+     * TS 33.108, annex M (informative).
+     * 
      * @public
      * @readonly
      */
     readonly network_Identifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `broadcastStatus`.
+     * @description
+     * 
+     * Outcome of a broadcast command. Informative annex M lists a
+     * broadcast-status system as for further study. The schema comments
+     * illustrate a successful and an unsuccessful case; those comments are not
+     * requirements of a normative procedure. 3GPP TS 33.108, annex M
+     * (informative).
+     * 
      * @public
      * @readonly
      */

@@ -18,6 +18,11 @@ enum _enum_for_EmergencyGroupState_clientEmergencyState {
  * @summary EmergencyGroupState_clientEmergencyState
  * @description
  * 
+ * How an MCPTT client call is answering an emergency: inform, response, or the
+ * cancel of either (module comment). At least one of the client state and the
+ * group state is present on the emergency group state (module comment on that
+ * structure). 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +43,10 @@ type EmergencyGroupState_clientEmergencyState = _enum_for_EmergencyGroupState_cl
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_inform
+ * @description
+ * 
+ * The MCPTT client is informed of the emergency (module comment).
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +55,10 @@ const EmergencyGroupState_clientEmergencyState_inform: EmergencyGroupState_clien
 
 /**
  * @summary inform
+ * @description
+ * 
+ * Client is informed of the emergency.
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +67,10 @@ const inform: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_cli
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_response
+ * @description
+ * 
+ * The MCPTT client is responding to the emergency (module comment).
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +79,10 @@ const EmergencyGroupState_clientEmergencyState_response: EmergencyGroupState_cli
 
 /**
  * @summary response
+ * @description
+ * 
+ * Client is responding to the emergency.
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +91,10 @@ const response: EmergencyGroupState_clientEmergencyState = EmergencyGroupState_c
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_cancelInform
+ * @description
+ * 
+ * The MCPTT client emergency inform is cancelled (module comment).
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +103,10 @@ const EmergencyGroupState_clientEmergencyState_cancelInform: EmergencyGroupState
 
 /**
  * @summary cancelInform
+ * @description
+ * 
+ * Client emergency inform is cancelled.
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +115,10 @@ const cancelInform: EmergencyGroupState_clientEmergencyState = EmergencyGroupSta
 
 /**
  * @summary EmergencyGroupState_clientEmergencyState_cancelResponse
+ * @description
+ * 
+ * The MCPTT client emergency response is cancelled (module comment).
+ * 
  * @constant
  * @type {number}
  */
@@ -94,6 +127,10 @@ const EmergencyGroupState_clientEmergencyState_cancelResponse: EmergencyGroupSta
 
 /**
  * @summary cancelResponse
+ * @description
+ * 
+ * Client emergency response is cancelled.
+ * 
  * @constant
  * @type {number}
  */

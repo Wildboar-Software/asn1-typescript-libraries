@@ -11,6 +11,11 @@ import { lawfulInterceptDomainId } from "../MmsHI2Operations/lawfulInterceptDoma
  * @summary threeGPPSUBDomainId
  * @description
  * 
+ * 3GPP subdomain under `lawfulInterceptDomainId`. Arc 4 is threeGPP. Parent of
+ * `hi2mmsDomainId`.
+ * 
+ * 3GPP TS 33.108, annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

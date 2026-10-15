@@ -13,6 +13,13 @@ import { SMS_report_sMS_Contents, _decode_SMS_report_sMS_Contents, _encode_SMS_r
  * @summary SMS_report
  * @description
  * 
+ * SMS content and the information associated with it, carried on an SMS REPORT.
+ * Packet-domain SMS-MO and SMS-MT use this REPORT (table 6.7). Separated SMS
+ * delivery reuses those records (clause 15.2.2). SMS over IMS uses the same
+ * initiator, TPDU, and content-removed rules (table 15.2.3.1).
+ * 
+ * 3GPP TS 33.108, clause 6.5.1.1, clause 15.2, and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,6 +63,14 @@ export
 class SMS_report {
     /**
      * @summary `sMS_Contents`.
+     * @description
+     * 
+     * The SMS TPDU and the attributes of that SMS: who sent it, whether
+     * transfer succeeded, whether more SMS will follow, and whether content was
+     * removed. This is the SMS parameter of an SMS REPORT.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.7, and annex B.3.
+     * 
      * @public
      * @readonly
      */

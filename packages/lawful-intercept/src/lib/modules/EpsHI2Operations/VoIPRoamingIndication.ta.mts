@@ -16,6 +16,13 @@ enum _enum_for_VoIPRoamingIndication {
  * @summary VoIPRoamingIndication
  * @description
  * 
+ * VoLTE roaming architecture in the VPLMN: local breakout or S8 home routing
+ * (clause 7 table 7.2). IMS events only. Table 7.3: provide it when the VPLMN
+ * sends the SIP messages. The IRI parameter is roamingIndication. Annex B.9
+ * carries the IMS IRI.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +40,11 @@ type VoIPRoamingIndication = _enum_for_VoIPRoamingIndication | ENUMERATED;
 
 /**
  * @summary VoIPRoamingIndication_roamingLBO
+ * @description
+ * 
+ * Local breakout. IMS events the VPLMN sends for LBO roaming (module comment
+ * and clause 7 table 7.2). Provide it when the VPLMN sends the SIP messages
+ * (table 7.3). VoLTE only.
  * @constant
  * @type {number}
  */
@@ -41,6 +53,9 @@ const VoIPRoamingIndication_roamingLBO: VoIPRoamingIndication = 1; /* LONG_NAMED
 
 /**
  * @summary roamingLBO
+ * @description
+ * 
+ * VPLMN local-breakout VoLTE roaming (clause 7).
  * @constant
  * @type {number}
  */
@@ -49,6 +64,11 @@ const roamingLBO: VoIPRoamingIndication = VoIPRoamingIndication_roamingLBO; /* S
 
 /**
  * @summary VoIPRoamingIndication_roamingS8HR
+ * @description
+ * 
+ * S8 home-routed roaming. IMS events the VPLMN sends for S8HR (module comment
+ * and clause 7 table 7.2). Provide it when the VPLMN sends the SIP messages
+ * (table 7.3). VoLTE only.
  * @constant
  * @type {number}
  */
@@ -57,6 +77,9 @@ const VoIPRoamingIndication_roamingS8HR: VoIPRoamingIndication = 2; /* LONG_NAME
 
 /**
  * @summary roamingS8HR
+ * @description
+ * 
+ * VPLMN S8 home-routed VoLTE roaming (clause 7).
  * @constant
  * @type {number}
  */

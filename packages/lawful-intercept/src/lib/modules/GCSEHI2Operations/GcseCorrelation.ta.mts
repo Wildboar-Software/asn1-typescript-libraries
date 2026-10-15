@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GcseCorrelation
  * @description
  * 
+ * Correlation number for GCSE IRI and content of communication. Required by
+ * stage 2 on the GCSE records. The octet layout is not defined. 3GPP TS 33.108,
+ * clause 14.2.2.3 and table 14.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

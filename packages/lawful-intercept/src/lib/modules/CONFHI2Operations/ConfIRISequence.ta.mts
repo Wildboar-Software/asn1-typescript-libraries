@@ -11,6 +11,11 @@ import { ConfIRIContent, _decode_ConfIRIContent, _encode_ConfIRIContent } from "
  * @summary ConfIRISequence
  * @description
  * 
+ * Aggregated conference IRI records for one LEA destination.
+ *
+ * Optional. Do not delay a record in the delivery or mediation function in
+ * order to build this sequence. 3GPP TS 33.108, annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

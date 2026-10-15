@@ -11,6 +11,14 @@ import { CCKeyInfo, _decode_CCKeyInfo, _encode_CCKeyInfo } from "../EpsHI2Operat
  * @summary MediaDecryption_info
  * @description
  * 
+ * One or more decryption keys for the intercepted IMS session, one for each
+ * media stream (module comment). The DF/MF sends them in a Media Decryption key
+ * available REPORT after it collects MIKEY tickets and obtains the keys from
+ * the KMS (3GPP TS 33.328), clause 7 and table 7.4. Include when the DF/MF has
+ * the keys. Annex B.9 carries this IMS IRI.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

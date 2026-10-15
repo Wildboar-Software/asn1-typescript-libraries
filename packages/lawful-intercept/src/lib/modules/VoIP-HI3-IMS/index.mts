@@ -1,4 +1,18 @@
 /**
+ * @description
+ * 
+ * ASN.1 module `VoIP-HI3-IMS`, `IMPLICIT TAGS`. HI3 content of communication
+ * for IMS-based VoIP. PTC CC uses this module (clause 17.1.4).
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulIntercept(2) threeGPP(4) hi3voip(12) r17(17) version-0(0)}`.
+ * 
+ * 3GPP TS 33.108, clause 12.6, annex K, and annex B.12.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
+/**
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `unknown`

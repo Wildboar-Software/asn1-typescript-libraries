@@ -16,6 +16,11 @@ enum _enum_for_MBMSinformation_mbmsSubsTermReason {
  * @summary MBMSinformation_mbmsSubsTermReason
  * @description
  * 
+ * Why the MBMS subscription ended. Mandatory on the subscription termination
+ * REPORT (table 9.5).
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +38,10 @@ type MBMSinformation_mbmsSubsTermReason = _enum_for_MBMSinformation_mbmsSubsTerm
 
 /**
  * @summary MBMSinformation_mbmsSubsTermReason_userInitiated
+ * @description
+ * 
+ * The user initiated or requested termination, including through customer
+ * services or another off-line means (table 9.2).
  * @constant
  * @type {number}
  */
@@ -41,6 +50,9 @@ const MBMSinformation_mbmsSubsTermReason_userInitiated: MBMSinformation_mbmsSubs
 
 /**
  * @summary userInitiated
+ * @description
+ * 
+ * The user requested subscription termination (table 9.2).
  * @constant
  * @type {number}
  */
@@ -49,6 +61,9 @@ const userInitiated: MBMSinformation_mbmsSubsTermReason = MBMSinformation_mbmsSu
 
 /**
  * @summary MBMSinformation_mbmsSubsTermReason_subscriptionExpired
+ * @description
+ * 
+ * The subscription expired (table 9.2).
  * @constant
  * @type {number}
  */
@@ -57,6 +72,9 @@ const MBMSinformation_mbmsSubsTermReason_subscriptionExpired: MBMSinformation_mb
 
 /**
  * @summary subscriptionExpired
+ * @description
+ * 
+ * The subscription expired (table 9.2).
  * @constant
  * @type {number}
  */

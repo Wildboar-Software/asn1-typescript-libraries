@@ -44,6 +44,11 @@ import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2
  * @summary IRI_Parameters
  * @description
  * 
+ * Parameters of one GCSE IRI produced for a target at the GCS AS. Stage 2
+ * inclusion in tables 14.3 to 14.8 overrides module syntax that marks a
+ * parameter optional. The ICE or DF2 may extend the set for a specific country.
+ * 3GPP TS 33.108, clause 14.2.6.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -88,120 +93,260 @@ export
 class IRI_Parameters {
     /**
      * @summary `hi2gcseDomainId`.
+     * @description
+     * 
+     * 3GPP HI2 GCSE domain identifier. Present on the IRI. 3GPP TS 33.108,
+     * annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly hi2gcseDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * LIID for the target. Required on every record. The table calls it a
+     * unique number for each lawful authorization. 3GPP TS 33.108, clause
+     * 14.2.2.2 and table 14.2. The module marks the association with the
+     * target.
+     * 
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time of the event at the GCS AS, from the GCS AS clock. Required
+     * on every GCSE record. Distinct from the time at which a reported location
+     * was obtained. 3GPP TS 33.108, clause 14.2.6, table 14.2.
+     * 
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `partyInformation`.
+     * @description
+     * 
+     * Identities of the target. Stage 2: provide at least one of IMEI, IMSI,
+     * ProSe UE ID, or other identity, and any other that is available. 3GPP TS
+     * 33.108, clause 14.2.6, tables 14.3 to 14.8.
+     * 
      * @public
      * @readonly
      */
     readonly partyInformation: GcsePartyIdentity[];
     /**
      * @summary `national_Parameters`.
+     * @description
+     * 
+     * National extension. Clause 14 allows a country-specific extension at the
+     * ICE or DF2. The layout is not defined. 3GPP TS 33.108, clause 14.2.6.1.
+     * 
      * @public
      * @readonly
      */
     readonly national_Parameters: OPTIONAL<National_Parameters>;
     /**
      * @summary `networkIdentifier`.
+     * @description
+     * 
+     * Operator identifier plus a unique identifier of the GCS AS. Required. The
+     * operator identifier should be internationally unique. A network-element
+     * identifier is optional; national regulation may require it. 3GPP TS
+     * 33.108, clauses 14.2.2.3 and 14.2.6.
+     * 
      * @public
      * @readonly
      */
     readonly networkIdentifier: Network_Identifier;
     /**
      * @summary `gcseEvent`.
+     * @description
+     * 
+     * Which GCSE event this record reports. Required. Table 14.1 maps the named
+     * events onto begin, continue, and end. Tables 14.4 to 14.8 repeat the
+     * parenthetical "Activation of GCSE Communications Group" in the event-type
+     * condition; that text does not match table 14.1. 3GPP TS 33.108, clause
+     * 14.2.6.
+     * 
      * @public
      * @readonly
      */
     readonly gcseEvent: GcseEvent;
     /**
      * @summary `correlation`.
+     * @description
+     * 
+     * Correlates content of communication with IRI, and correlates IRI records.
+     * Required on every GCSE record in tables 14.3 to 14.8 even though the
+     * module marks it optional. The octet layout is not defined. 3GPP TS
+     * 33.108, clause 14.2.2.3 and table 14.2.
+     * 
      * @public
      * @readonly
      */
     readonly correlation: OPTIONAL<GcseCorrelation>;
     /**
      * @summary `targetConnectionMethod`.
+     * @description
+     * 
+     * How the target sends and receives group communications at the GCS AS.
+     * Conditional when available on activation, start of interception, and end.
+     * Required when the event is a modification of that connection. Upstream
+     * and downstream are omitted when the target is not connected. 3GPP TS
+     * 33.108, clause 14.2.6, tables 14.3, 14.4, 14.7, and 14.8, and annex
+     * B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly targetConnectionMethod: OPTIONAL<TargetConnectionMethod>;
     /**
      * @summary `gcseGroupMembers`.
+     * @description
+     * 
+     * Members who could participate in the group. Required on the records in
+     * tables 14.3 to 14.8. Also updated when a user is added to or removed from
+     * the membership list (clause 14.2.6.2.3). 3GPP TS 33.108, clause 14.2.6.
+     * 
      * @public
      * @readonly
      */
     readonly gcseGroupMembers: OPTIONAL<GcseGroup>;
     /**
      * @summary `gcseGroupParticipants`.
+     * @description
+     * 
+     * Parties actually participating in the active group. Conditional on
+     * activation, if any member is participating. Required on start of
+     * interception, user added, user dropped, connection modification, and end.
+     * 3GPP TS 33.108, clause 14.2.6, tables 14.3 to 14.8.
+     * 
      * @public
      * @readonly
      */
     readonly gcseGroupParticipants: OPTIONAL<GcseGroup>;
     /**
      * @summary `gcseGroupID`.
+     * @description
+     * 
+     * Identity of the GCSE communications group. Table 14.2 uses this both as
+     * the group identity and as the observed communications group identity.
+     * Required on the records in tables 14.3 to 14.8. 3GPP TS 33.108, clause
+     * 14.2.6.
+     * 
      * @public
      * @readonly
      */
     readonly gcseGroupID: OPTIONAL<GcseGroupID>;
     /**
      * @summary `gcseGroupCharacteristics`.
+     * @description
+     * 
+     * Characteristics of the group communications, for example voice or video.
+     * Required on activation, start of interception, connection modification,
+     * and end. Not listed on user-added or user-dropped continue records. 3GPP
+     * TS 33.108, clause 14.2.6, table 14.2.
+     * 
      * @public
      * @readonly
      */
     readonly gcseGroupCharacteristics: OPTIONAL<GcseGroupCharacteristics>;
     /**
      * @summary `reservedTMGI`.
+     * @description
+     * 
+     * Stage 2: the TMGI assigned for downstream multicast delivery to the
+     * target. Conditional: provide when known (tables 14.3 to 14.8).
+     *
+     * Annex B.14.1 says these octets shall be coded as the
+     * MBMS-Session-Duration attribute of 3GPP TS 29.468. That comment does not
+     * match the stage 2 meaning. The specification does not resolve the
+     * contradiction.
+     * 
      * @public
      * @readonly
      */
     readonly reservedTMGI: OPTIONAL<ReservedTMGI>;
     /**
      * @summary `tMGIReservationDuration`.
+     * @description
+     * 
+     * Stage 2: how long the BM-SC has reserved the TMGI for the GCS AS.
+     * Conditional when a TMGI is reserved or renewed and is the one used for
+     * the target's downstream communications (tables 14.3, 14.4, 14.7, and
+     * 14.8).
+     *
+     * Annex B.14.1 says these octets shall be coded as the TMGI attribute of
+     * 3GPP TS 29.468. That comment does not match the stage 2 meaning. The
+     * specification does not resolve the contradiction.
+     * 
      * @public
      * @readonly
      */
     readonly tMGIReservationDuration: OPTIONAL<TMGIReservationDuration>;
     /**
      * @summary `visitedNetworkID`.
+     * @description
+     * 
+     * PLMN serving the UE, for the target's connection, when available.
+     * Conditional on the records in tables 14.3 to 14.8. Coded as specified by
+     * reference 53 of 3GPP TS 33.108, which is 3GPP TS 29.273. 3GPP TS 33.108,
+     * annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly visitedNetworkID: OPTIONAL<VisitedNetworkID>;
     /**
      * @summary `addedUserID`.
+     * @description
+     * 
+     * User added to an active GCSE group. Required on the user-added continue
+     * record. 3GPP TS 33.108, clause 14.2.6, tables 14.2 and 14.5.
+     * 
      * @public
      * @readonly
      */
     readonly addedUserID: OPTIONAL<GcsePartyIdentity>;
     /**
      * @summary `droppedUserID`.
+     * @description
+     * 
+     * User dropped from an active GCSE group. Required on the user-dropped
+     * continue record. 3GPP TS 33.108, clause 14.2.6, tables 14.2 and 14.6.
+     * 
      * @public
      * @readonly
      */
     readonly droppedUserID: OPTIONAL<GcsePartyIdentity>;
     /**
      * @summary `reasonForCommsEnd`.
+     * @description
+     * 
+     * Why the group communications ended, when available. Conditional on the
+     * end record. The table's example is that the target was dropped from the
+     * group. The text layout is not further defined. 3GPP TS 33.108, clause
+     * 14.2.6, tables 14.2 and 14.8.
+     * 
      * @public
      * @readonly
      */
     readonly reasonForCommsEnd: OPTIONAL<Reason>;
     /**
      * @summary `gcseLocationOfTheTarget`.
+     * @description
+     * 
+     * Location of the target known at the GCS AS when the record is produced.
+     * Conditional, and only when location is authorized. Table 14.2 also maps
+     * the time at which the location was obtained onto this same parameter. Not
+     * listed on user-added or user-dropped records. 3GPP TS 33.108, clause
+     * 14.2.6, tables 14.3, 14.4, 14.7, and 14.8.
+     * 
      * @public
      * @readonly
      */

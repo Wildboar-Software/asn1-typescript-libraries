@@ -15,6 +15,10 @@ import { IRI_to_CC_Correlation, _decode_IRI_to_CC_Correlation, _encode_IRI_to_CC
  * @summary IMS_VoIP_Correlation_Item
  * @description
  * 
+ * One pair of correlation numbers for a single IMS VoIP session. The LEMF
+ * treats IRI and content that carry these numbers as one session (clause
+ * 12.1.4). 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +34,22 @@ export
 class IMS_VoIP_Correlation_Item {
     /**
      * @summary `ims_iri`.
+     * @description
+     * 
+     * Correlation number or numbers used on the IRI of this VoIP session
+     * (clause 12.1.4).
+     * 
      * @public
      * @readonly
      */
     readonly ims_iri: IRI_to_IRI_Correlation;
     /**
      * @summary `ims_cc`.
+     * @description
+     * 
+     * Correlation number or numbers used on the content of this VoIP session
+     * (clause 12.1.4). Omitted when content correlation is not provided.
+     * 
      * @public
      * @readonly
      */

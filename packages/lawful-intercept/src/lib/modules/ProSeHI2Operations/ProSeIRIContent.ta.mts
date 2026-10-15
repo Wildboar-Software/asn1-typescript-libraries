@@ -12,6 +12,12 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary ProSeIRIContent
  * @description
  * 
+ * ProSe HI2 record. The only defined alternative is a report record.
+ *
+ * Direct discovery uses a report both for a discovery request and for a match
+ * report (table 13.2.1-1). The report is for a non-communication target action.
+ * 3GPP TS 33.108, clause 13.2.2.2 and annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

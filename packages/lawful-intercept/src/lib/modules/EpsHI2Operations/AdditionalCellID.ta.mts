@@ -18,6 +18,13 @@ import { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../Eps
  * @summary AdditionalCellID
  * @description
  * 
+ * One secondary-cell identity for the target. The additional-cell parameter
+ * reports the primary cell of a secondary cell group when that cell is
+ * available; the location parameter reports the primary cell of the primary
+ * cell group (table 10.5.2 and the note under that table). Include it when an
+ * event table requires location and the secondary cell is known. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,30 +44,58 @@ export
 class AdditionalCellID {
     /**
      * @summary `nCGI`.
+     * @description
+     * 
+     * NR cell identity of this additional cell. Table 10.5.2 describes the
+     * parameter as the primary cell of a secondary cell group and does not name
+     * this component separately.
+     * 
      * @public
      * @readonly
      */
     readonly nCGI: NCGI;
     /**
      * @summary `gsmLocation`.
+     * @description
+     * 
+     * GSM coordinates accompanying this additional cell. Clause 10 does not say
+     * when they are required.
+     * 
      * @public
      * @readonly
      */
     readonly gsmLocation: OPTIONAL<GSMLocation>;
     /**
      * @summary `umtsLocation`.
+     * @description
+     * 
+     * UMTS geographical-area shape accompanying this additional cell. Clause 10
+     * does not say when it is required.
+     * 
      * @public
      * @readonly
      */
     readonly umtsLocation: OPTIONAL<UMTSLocation>;
     /**
      * @summary `timeOfLocation`.
+     * @description
+     * 
+     * Time associated with this additional cell. Table 10.5.2 maps Time of
+     * Location to the EPS location parameter, not to this component, so the
+     * specification text does not say when this timestamp is sent.
+     * 
      * @public
      * @readonly
      */
     readonly timeOfLocation: OPTIONAL<GeneralizedTime>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

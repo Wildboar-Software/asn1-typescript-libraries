@@ -19,6 +19,11 @@ import { OtherIdentity, _decode_OtherIdentity, _encode_OtherIdentity } from "../
  * @summary GcsePartyIdentity
  * @description
  * 
+ * Identity of the target, of a group member or participant, or of a user who
+ * was added or dropped. Provide at least one of IMEI, IMSI, ProSe UE ID, or
+ * other identity, and any other that is available. 3GPP TS 33.108, clause
+ * 14.2.6 and annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,36 +54,73 @@ export
 class GcsePartyIdentity {
     /**
      * @summary `imei`.
+     * @description
+     * 
+     * IMEI of the party. Eight octets in the MAP format of 3GPP TS 29.002,
+     * reference 4 of 3GPP TS 33.108. 3GPP TS 33.108, annex B.14.1 and table
+     * 14.2.
+     * 
      * @public
      * @readonly
      */
     readonly imei: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `imsi`.
+     * @description
+     * 
+     * IMSI of the party. MAP format of 3GPP TS 29.002, an E.212 number
+     * beginning with the mobile country code, three to eight octets. 3GPP TS
+     * 33.108, annex B.14.1 and table 14.2.
+     * 
      * @public
      * @readonly
      */
     readonly imsi: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iMPU`.
+     * @description
+     * 
+     * IMS public user identities. Clause 14's identity tables list IMEI, IMSI,
+     * ProSe UE ID, and other identity; they do not state when an IMPU is
+     * required. 3GPP TS 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly iMPU: OPTIONAL<IMSIdentity[]>;
     /**
      * @summary `iMPI`.
+     * @description
+     * 
+     * IMS private user identities. Clause 14's identity tables do not state
+     * when an IMPI is required. 3GPP TS 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly iMPI: OPTIONAL<IMSIdentity[]>;
     /**
      * @summary `proseUEID`.
+     * @description
+     * 
+     * ProSe UE identity of the party. Stage 2 includes it among the target
+     * identities to provide when available. Three octets, the source L2 ID of
+     * the MAC PDU in 3GPP TS 25.321 (reference 85). 3GPP TS 33.108, annex
+     * B.14.1 and tables 14.3 to 14.8.
+     * 
      * @public
      * @readonly
      */
     readonly proseUEID: OPTIONAL<ProSeUEID[]>;
     /**
      * @summary `otherID`.
+     * @description
+     * 
+     * Other identity of the target. Table 14.2 calls the observed other
+     * identity the NAI. The encoding name and the octets are separate
+     * components; the NAI layout itself is not defined. 3GPP TS 33.108, clause
+     * 14.2.6 and annex B.14.1.
+     * 
      * @public
      * @readonly
      */

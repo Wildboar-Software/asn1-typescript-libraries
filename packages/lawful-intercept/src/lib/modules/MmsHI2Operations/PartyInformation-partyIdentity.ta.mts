@@ -15,6 +15,11 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * @summary PartyInformation_partyIdentity
  * @description
  * 
+ * Identities of the MMS target. Provide at least one, and the others when
+ * available (clause 15.3.6.2.2).
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,60 +57,129 @@ export
 class PartyInformation_partyIdentity {
     /**
      * @summary `mSISDN`.
+     * @description
+     * 
+     * MSISDN of the target, taken from the global-phone-number in the MMS (OMA
+     * Multimedia Messaging Service Encapsulation Protocol).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mMSAddress`.
+     * @description
+     * 
+     * Address the MMS Proxy-Relay processes, as an external representation of a
+     * user-defined identifier. See clause 8 of the OMA encapsulation protocol
+     * (annex B.15).
+     * 
+     * Table 15.3.6.1.2 describes Observed MMD Address as an address in that
+     * protocol, and as the place a SIP URI is included. Clause 15.3 does not
+     * name this component in that row.
      * @public
      * @readonly
      */
     readonly mMSAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mMSAddressNonLocalID`.
+     * @description
+     * 
+     * Non-local target identity, when national regulation requires one. An
+     * address as in the OMA encapsulation protocol: an E.164 number, an
+     * alphanumeric or numeric short code, or an e-mail address as in RFC 2822
+     * section 3.4, excluding obsolete forms marked "obs-". See clause 8 of that
+     * OMA protocol.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly mMSAddressNonLocalID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `e_Mail`.
+     * @description
+     * 
+     * E-mail address as in RFC 2822 section 3.4, excluding obsolete forms
+     * marked "obs-", and clause 8 of the OMA encapsulation protocol (annex
+     * B.15).
+     * 
+     * The non-local-identity row of table 15.3.6.1.2 also allows an e-mail
+     * address of that form. Clause 15.3 does not say which component carries
+     * it.
      * @public
      * @readonly
      */
     readonly e_Mail: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `e164_Format`.
+     * @description
+     * 
+     * E.164 address taken from the global-phone-number in the MMS. The event
+     * tables list observed E.164 number in the identity group. One to
+     * twenty-five octets (annex B.15).
+     * 
+     * 3GPP TS 33.108, annex B.15.
      * @public
      * @readonly
      */
     readonly e164_Format: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPAddress`.
+     * @description
+     * 
+     * IPv4 or IPv6 address of the target (table 15.3.6.1.2). Annex B.15 says
+     * the address may be either.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly iPAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `alphanum_Shortcode`.
+     * @description
+     * 
+     * Alphanumeric short code, as in clause 8 of the OMA encapsulation
+     * protocol. Table 15.3.6.1.2 lists observed short code as alphanumeric or
+     * numeric and does not assign the two forms to separate components.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly alphanum_Shortcode: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `num_Shortcode`.
+     * @description
+     * 
+     * Numeric short code, as in clause 8 of the OMA encapsulation protocol.
+     * Table 15.3.6.1.2 lists one observed-shortcode row for both alphanumeric
+     * and numeric forms.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly num_Shortcode: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iMSI`.
+     * @description
+     * 
+     * IMSI of the target (table 15.3.6.1.2). Clause 15.3 does not further
+     * define the encoding.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

@@ -17,6 +17,11 @@ enum _enum_for_SMS_report_sMS_Contents_transfer_status {
  * @summary SMS_report_sMS_Contents_transfer_status
  * @description
  * 
+ * Whether transfer of the SMS succeeded. The module comment defines the success
+ * value. The SMS REPORT table in clause 6 does not list this indicator.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +40,10 @@ type SMS_report_sMS_Contents_transfer_status = _enum_for_SMS_report_sMS_Contents
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_succeed_transfer
+ * @description
+ * 
+ * Transfer of the SMS succeeded (module comment). The SMS REPORT table in
+ * clause 6 does not list this indicator.
  * @constant
  * @type {number}
  */
@@ -43,6 +52,9 @@ const SMS_report_sMS_Contents_transfer_status_succeed_transfer: SMS_report_sMS_C
 
 /**
  * @summary succeed_transfer
+ * @description
+ * 
+ * SMS transfer succeeded (module comment).
  * @constant
  * @type {number}
  */
@@ -51,6 +63,10 @@ const succeed_transfer: SMS_report_sMS_Contents_transfer_status = SMS_report_sMS
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_not_succeed_transfer
+ * @description
+ * 
+ * Transfer of the SMS did not succeed. The module gives no further cause. The
+ * SMS REPORT table does not list this indicator.
  * @constant
  * @type {number}
  */
@@ -59,6 +75,9 @@ const SMS_report_sMS_Contents_transfer_status_not_succeed_transfer: SMS_report_s
 
 /**
  * @summary not_succeed_transfer
+ * @description
+ * 
+ * SMS transfer did not succeed.
  * @constant
  * @type {number}
  */
@@ -67,6 +86,10 @@ const not_succeed_transfer: SMS_report_sMS_Contents_transfer_status = SMS_report
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_undefined
+ * @description
+ * 
+ * The transfer result is undefined. The SMS REPORT table does not list this
+ * indicator.
  * @constant
  * @type {number}
  */
@@ -75,6 +98,9 @@ const SMS_report_sMS_Contents_transfer_status_undefined: SMS_report_sMS_Contents
 
 /**
  * @summary undefined
+ * @description
+ * 
+ * SMS transfer result is undefined.
  * @constant
  * @type {number}
  */

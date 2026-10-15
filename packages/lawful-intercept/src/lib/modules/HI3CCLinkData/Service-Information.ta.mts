@@ -14,6 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Service_Information
  * @description
  * 
+ * Service octets accompanying UUS1: high-layer compatibility, transmission
+ * medium requirement, and MAP bearer and teleservice codes (TS GSM 09.02
+ * clauses 14.7.9 and 14.7.10).
+ * 
+ * 3GPP TS 33.108, annex J.1.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +45,40 @@ export
 class Service_Information {
     /**
      * @summary `high_layer_capability`.
+     * @description
+     * 
+     * High layer compatibility, octet 4 only (EN 300 403-1). 3GPP TS 33.108,
+     * annex J.1.
      * @public
      * @readonly
      */
     readonly high_layer_capability: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tMR`.
+     * @description
+     * 
+     * Transmission medium requirement (ISUP, EN 300 356). 3GPP TS 33.108, annex
+     * J.1.
      * @public
      * @readonly
      */
     readonly tMR: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `bearerServiceCode`.
+     * @description
+     * 
+     * Bearer service code. The module cites MAP, TS GSM 09.02 clauses 14.7.9
+     * and 14.7.10, for the service codes. 3GPP TS 33.108, annex J.1.
      * @public
      * @readonly
      */
     readonly bearerServiceCode: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `teleServiceCode`.
+     * @description
+     * 
+     * Teleservice code from MAP, TS GSM 09.02 clauses 14.7.9 and 14.7.10. 3GPP
+     * TS 33.108, annex J.1.
      * @public
      * @readonly
      */

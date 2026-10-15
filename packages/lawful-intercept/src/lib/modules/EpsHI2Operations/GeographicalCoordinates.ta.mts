@@ -15,6 +15,11 @@ import { _decode_GeographicalCoordinates_latitudeSign, _encode_GeographicalCoord
  * @summary GeographicalCoordinates
  * @description
  * 
+ * Latitude and longitude of a UMTS geographical-area shape (a point, a point
+ * with uncertainty, or a polygon vertex) inside an EPS or PS location. The
+ * specification text does not define how the integers scale to degrees. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +37,43 @@ export
 class GeographicalCoordinates {
     /**
      * @summary `latitudeSign`.
+     * @description
+     * 
+     * Northern or southern hemisphere for the latitude integer.
+     * 
      * @public
      * @readonly
      */
     readonly latitudeSign: GeographicalCoordinates_latitudeSign;
     /**
      * @summary `latitude`.
+     * @description
+     * 
+     * Latitude magnitude. The specification text does not define the scaling.
+     * 
      * @public
      * @readonly
      */
     readonly latitude: INTEGER;
     /**
      * @summary `longitude`.
+     * @description
+     * 
+     * Longitude. The specification text does not define the scaling or the sign
+     * convention beyond the module bounds.
+     * 
      * @public
      * @readonly
      */
     readonly longitude: INTEGER;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -85,6 +109,10 @@ class GeographicalCoordinates {
 
         /**
          * @summary The enum used as the type of the component `latitudeSign`
+         * @description
+         * 
+         * Northern or southern hemisphere for the latitude integer.
+         * 
          * @public
          * @static
          */

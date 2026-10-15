@@ -19,6 +19,15 @@ import { ReportReason, _decode_ReportReason, _encode_ReportReason, _enum_for_Rep
  * @summary PacketFlowSummary
  * @description
  * 
+ * One packet flow inside a summary. Table 10.5.1.1.16 requires the source and
+ * destination addresses, the transport protocol, the summary period, the packet
+ * count, the sum of packet sizes, and the reason. Ports are conditional when
+ * the transport protocol uses them. The flow label is conditional and is for
+ * IPv6 only. Table 6.9C matches these rules for a PDP context, except the sum
+ * of packet sizes is optional there.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,66 +57,110 @@ export
 class PacketFlowSummary {
     /**
      * @summary `sourceIPAddress`.
+     * @description
+     * 
+     * Source IP address of this flow. Mandatory (table 10.5.1.1.16 and clause
+     * 6.9C).
      * @public
      * @readonly
      */
     readonly sourceIPAddress: IPAddress;
     /**
      * @summary `sourcePortNumber`.
+     * @description
+     * 
+     * Source port of this flow. Conditional when the transport protocol has
+     * port numbers (table 10.5.1.1.16).
      * @public
      * @readonly
      */
     readonly sourcePortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `destinationIPAddress`.
+     * @description
+     * 
+     * Destination IP address of this flow. Mandatory (table 10.5.1.1.16).
      * @public
      * @readonly
      */
     readonly destinationIPAddress: IPAddress;
     /**
      * @summary `destinationPortNumber`.
+     * @description
+     * 
+     * Destination port of this flow. Conditional when the transport protocol
+     * has port numbers (table 10.5.1.1.16).
      * @public
      * @readonly
      */
     readonly destinationPortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `transportProtocol`.
+     * @description
+     * 
+     * IPv4 Protocol field, or IPv6 Next Header field (module comment).
+     * Mandatory (table 10.5.1.1.16). Assigned numbers are at
+     * http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xml
      * @public
      * @readonly
      */
     readonly transportProtocol: INTEGER;
     /**
      * @summary `flowLabel`.
+     * @description
+     * 
+     * IPv6 flow label. Conditional, and only for IPv6 (table 10.5.1.1.16 and
+     * clause 10.5.2).
      * @public
      * @readonly
      */
     readonly flowLabel: OPTIONAL<INTEGER>;
     /**
      * @summary `summaryPeriod`.
+     * @description
+     * 
+     * Time of the first packet and time of the last packet in this reporting
+     * period. Mandatory (table 10.5.1.1.16).
      * @public
      * @readonly
      */
     readonly summaryPeriod: ReportInterval;
     /**
      * @summary `packetCount`.
+     * @description
+     * 
+     * Number of packets detected for this flow. Mandatory (table 10.5.1.1.16).
      * @public
      * @readonly
      */
     readonly packetCount: INTEGER;
     /**
      * @summary `sumOfPacketSizes`.
+     * @description
+     * 
+     * Sum of IPv4 Total Length values, or of IPv6 Payload Length values, for
+     * this flow. Mandatory in table 10.5.1.1.16. Table 6.9C marks the same sum
+     * optional for a PDP context.
      * @public
      * @readonly
      */
     readonly sumOfPacketSizes: INTEGER;
     /**
      * @summary `packetDataSummaryReason`.
+     * @description
+     * 
+     * Why this flow summary is delivered: timeout, count limit, or end of
+     * session in the table wording. Mandatory (table 10.5.1.1.16 and clause
+     * 6.9C).
      * @public
      * @readonly
      */
     readonly packetDataSummaryReason: ReportReason;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */
@@ -157,6 +210,9 @@ class PacketFlowSummary {
 
         /**
          * @summary The enum used as the type of the component `packetDataSummaryReason`
+         * @description
+         * 
+         * Why this flow summary is delivered (table 10.5.1.1.16).
          * @public
          * @static
          */

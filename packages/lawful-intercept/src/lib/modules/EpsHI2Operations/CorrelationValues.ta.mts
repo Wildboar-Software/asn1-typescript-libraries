@@ -16,6 +16,16 @@ import { CorrelationValues_both_IRI_CC, _decode_CorrelationValues_both_IRI_CC, _
  * @summary CorrelationValues
  * @description
  * 
+ * General correlation, as distinct from the EPS or GPRS correlation number
+ * (clause 7.1.3). iri-to-CC correlates IRI with content, including a signalling
+ * bearer when two bearers are used. iri-to-iri correlates IRI with IRI: a SIP
+ * session (Call-id or an implementation-dependent number) or an XCAP
+ * transaction (table 7.2). both-IRI-CC carries both. PTC uses the same
+ * parameter to tie a session's IRI together and to its content (table 17.1.5).
+ * For separated IMS VoIP, clause 12 may use the IMS VoIP correlation instead
+ * (table 7.2 note 11). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

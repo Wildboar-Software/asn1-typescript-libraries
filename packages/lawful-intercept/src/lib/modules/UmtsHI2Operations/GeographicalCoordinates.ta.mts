@@ -15,6 +15,16 @@ import { _decode_GeographicalCoordinates_latitudeSign, _encode_GeographicalCoord
  * @summary GeographicalCoordinates
  * @description
  * 
+ * Ellipsoid point used for a UMTS location: a point, a point with uncertainty,
+ * or one vertex of a polygon, carried in the target location on HI2.
+ * 
+ * Annex B.3 limits latitude to 0..8388607 and longitude to -8388608..8388607.
+ * It does not define the unit or the scaling of those integers.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,24 +42,47 @@ export
 class GeographicalCoordinates {
     /**
      * @summary `latitudeSign`.
+     * @description
+     * 
+     * Hemisphere of the latitude: north or south.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly latitudeSign: GeographicalCoordinates_latitudeSign;
     /**
      * @summary `latitude`.
+     * @description
+     * 
+     * Latitude magnitude. Annex B.3 limits it to 0..8388607 and does not define
+     * the unit or the scaling.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly latitude: INTEGER;
     /**
      * @summary `longitude`.
+     * @description
+     * 
+     * Longitude. Annex B.3 limits it to -8388608..8388607 and does not define
+     * the unit or the scaling.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly longitude: INTEGER;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
@@ -85,6 +118,11 @@ class GeographicalCoordinates {
 
         /**
          * @summary The enum used as the type of the component `latitudeSign`
+         * @description
+         * 
+         * Hemisphere of the latitude for this UMTS geographical point.
+         * 
+         * 3GPP TS 33.108, annex B.3.
          * @public
          * @static
          */

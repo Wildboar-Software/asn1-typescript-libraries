@@ -24,6 +24,11 @@ import { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBM
  * @summary MBMSinformation
  * @description
  * 
+ * Service, bearer, and subscription details for an MBMS IRI record. Table 9.2
+ * maps the MBMS-specific parameters here.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -68,60 +73,152 @@ export
 class MBMSinformation {
     /**
      * @summary `mbmsServiceName`.
+     * @description
+     * 
+     * Name or identifier of the MBMS service the target subscribed to. It must
+     * distinguish that service from every other service, for example a TV
+     * channel name and the name of the content to be viewed.
+     * 
+     * Mandatory on the clause 9.5.1 records (MBMS Subscribed Service).
+     * 
+     * 3GPP TS 33.108, table 9.2.
      * @public
      * @readonly
      */
     readonly mbmsServiceName: OPTIONAL<UTF8String>;
     /**
      * @summary `mbms_join_time`.
+     * @description
+     * 
+     * Time at which the target joined the MBMS service. On service joining,
+     * this is the time the target joined or will join (table 9.6). On start of
+     * intercept it is the time the target joined (table 9.7).
+     * 
+     * Mandatory on both Begin records. Clause 9 does not define the character
+     * format. Table 9.2 names this MBMS Service Joining Time.
+     * 
+     * 3GPP TS 33.108, table 9.2, table 9.6, and table 9.7.
      * @public
      * @readonly
      */
     readonly mbms_join_time: OPTIONAL<UTF8String>;
     /**
      * @summary `mbms_Mode`.
+     * @description
+     * 
+     * Whether the MBMS bearer is multicast or broadcast.
+     * 
+     * Mandatory on service joining and on start of intercept (tables 9.6 and
+     * 9.7).
+     * 
+     * 3GPP TS 33.108, table 9.2.
      * @public
      * @readonly
      */
     readonly mbms_Mode: OPTIONAL<MBMSinformation_mbms_Mode>;
     /**
      * @summary `mbmsIPIPv6Address`.
+     * @description
+     * 
+     * IP or IPv6 multicast address identifying the MBMS bearer described by
+     * this bearer context. Table 9.2 limits it to multicast mode.
+     * 
+     * Conditional on Begin records for multicast services, if available (tables
+     * 9.6 and 9.7). Table 9.8 marks it conditional and says it shall be
+     * provided.
+     * 
+     * Tables 9.3 to 9.5 instead describe an IP or IPv6 address of the target
+     * when the target accessed the BM-SC directly. Table 9.2 does not name a
+     * separate parameter for that address.
+     * 
+     * 3GPP TS 33.108, table 9.2.
      * @public
      * @readonly
      */
     readonly mbmsIPIPv6Address: OPTIONAL<IPAddress>;
     /**
      * @summary `mbmsLeavingReason`.
+     * @description
+     * 
+     * Whether the UE requested leaving, or the BM-SC or the network ended the
+     * service for the UE.
+     * 
+     * Mandatory on service leaving (table 9.8). If the reason is subscription
+     * expiry, a subscription-termination report is also generated (table 9.2).
+     * 
+     * 3GPP TS 33.108, table 9.2 and table 9.8.
      * @public
      * @readonly
      */
     readonly mbmsLeavingReason: OPTIONAL<MBMSinformation_mbmsLeavingReason>;
     /**
      * @summary `mbmsSubsTermReason`.
+     * @description
+     * 
+     * Whether the user ended the subscription, including through customer
+     * services or another off-line means, or the subscription expired.
+     * 
+     * Mandatory on subscription termination (table 9.5).
+     * 
+     * 3GPP TS 33.108, table 9.2 and table 9.5.
      * @public
      * @readonly
      */
     readonly mbmsSubsTermReason: OPTIONAL<MBMSinformation_mbmsSubsTermReason>;
     /**
      * @summary `mBMSapn`.
+     * @description
+     * 
+     * Access point name: a logical name on which the IP multicast address is
+     * defined (TS 23.060). Coded as the APN in TS 24.008 without the APN
+     * information-element identifier; only the last 100 octets are used. Octets
+     * are coded according to TS 23.003.
+     * 
+     * Conditional on Begin records for PS-domain access to MBMS (tables 9.6 and
+     * 9.7).
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly mBMSapn: OPTIONAL<UTF8String>;
     /**
      * @summary `mbmsSerSubscriberList`.
+     * @description
+     * 
+     * Users subscribed to the MBMS service the target asked to join. The list
+     * may be very long (table 9.2).
+     * 
+     * Optional additional information on the clause 9.5.1 records.
+     * 
+     * 3GPP TS 33.108, table 9.2.
      * @public
      * @readonly
      */
     readonly mbmsSerSubscriberList: OPTIONAL<MBMSSerSubscriberList>;
     /**
      * @summary `mbmsNodeList`.
+     * @description
+     * 
+     * Downstream nodes that have requested the MBMS bearer service and to which
+     * notifications and MBMS data are forwarded (table 9.2).
+     * 
+     * Conditional on Begin records for a multicast service, if available
+     * (tables 9.6 and 9.7).
+     * 
+     * Table 9.2 also maps BM-SC Identifier, the name or identifier of the
+     * BM-SC, to mBMSNODELIST under mbmsInformation.
+     * 
+     * 3GPP TS 33.108, table 9.2.
      * @public
      * @readonly
      */
     readonly mbmsNodeList: OPTIONAL<MBMSNodeList>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

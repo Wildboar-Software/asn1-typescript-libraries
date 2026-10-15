@@ -10,6 +10,12 @@ import {
  * @summary lawfulInterceptDomainId
  * @description
  * 
+ * Root of the ETSI lawful-intercept identifiers (3GPP TS 33.108,
+ * annex B.11.1):
+ * `itu-t(0) identified-organization(4) etsi(0) securityDomain(2) lawfulIntercept(2)`.
+ *
+ * Parent of `threeGPP(4)`. Not carried as a value in a conference IRI.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

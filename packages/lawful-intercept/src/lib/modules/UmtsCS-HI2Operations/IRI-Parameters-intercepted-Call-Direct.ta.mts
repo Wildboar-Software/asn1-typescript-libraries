@@ -17,6 +17,10 @@ enum _enum_for_IRI_Parameters_intercepted_Call_Direct {
  * @summary IRI_Parameters_intercepted_Call_Direct
  * @description
  * 
+ * Direction of the intercepted call: the target is the calling party, the
+ * called party, or the direction is not available. 3GPP TS 33.108, clause
+ * 5.2.2.2 and table 5.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +39,10 @@ type IRI_Parameters_intercepted_Call_Direct = _enum_for_IRI_Parameters_intercept
 
 /**
  * @summary IRI_Parameters_intercepted_Call_Direct_not_Available
+ * @description
+ * 
+ * Call direction is not available. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +51,10 @@ const IRI_Parameters_intercepted_Call_Direct_not_Available: IRI_Parameters_inter
 
 /**
  * @summary not_Available
+ * @description
+ * 
+ * Direction not available. 3GPP TS 33.108, annex B.3a.
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +63,11 @@ const not_Available: IRI_Parameters_intercepted_Call_Direct = IRI_Parameters_int
 
 /**
  * @summary IRI_Parameters_intercepted_Call_Direct_originating_Target
+ * @description
+ * 
+ * The target is the originating party. 3GPP TS 33.108, clause 5.2.2.2 and table
+ * 5.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +76,10 @@ const IRI_Parameters_intercepted_Call_Direct_originating_Target: IRI_Parameters_
 
 /**
  * @summary originating_Target
+ * @description
+ * 
+ * Target originated the call. 3GPP TS 33.108, clause 5.2.2.2.
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +88,11 @@ const originating_Target: IRI_Parameters_intercepted_Call_Direct = IRI_Parameter
 
 /**
  * @summary IRI_Parameters_intercepted_Call_Direct_terminating_Target
+ * @description
+ * 
+ * The target is the terminating party. 3GPP TS 33.108, clause 5.2.2.2 and table
+ * 5.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -75,6 +101,10 @@ const IRI_Parameters_intercepted_Call_Direct_terminating_Target: IRI_Parameters_
 
 /**
  * @summary terminating_Target
+ * @description
+ * 
+ * Target terminated the call. 3GPP TS 33.108, clause 5.2.2.2.
+ * 
  * @constant
  * @type {number}
  */

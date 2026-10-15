@@ -15,6 +15,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCAddress
  * @description
  * 
+ * Address of a PTC client. When privacy is used, the PTC server substitutes an
+ * anonymous URI that is unique within the PTC session. Floor-speaker identity
+ * uses this structure (table 17.2.14).
+ * 
+ * 3GPP TS 33.108, clause 17.2.14 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,24 +48,55 @@ export
 class PTCAddress {
     /**
      * @summary `uri`.
+     * @description
+     * 
+     * URI of the PTC client, from the URI set defined in IETF RFC 3261 and
+     * related SIP RFCs. Required on a PTC address.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly uri: UTF8String;
     /**
      * @summary `privacy_setting`.
+     * @description
+     * 
+     * False by default. Send true when privacy is used for this PTC address.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly privacy_setting: BOOLEAN;
     /**
      * @summary `privacy_alias`.
+     * @description
+     * 
+     * Anonymous PTC address created by the PTC server when privacy is used. It
+     * shall be unique within the PTC session. The form is
+     * sip:anonymous@anonymous.invalid. If more than one anonymous address is
+     * used in the same session, from the second onward the server should use
+     * sip:anonymous-n@anonymous.invalid, where n is an integer.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly privacy_alias: OPTIONAL<VisibleString>;
     /**
      * @summary `nickname`.
+     * @description
+     * 
+     * Name associated with this PTC address. Annex B.3 does not further define
+     * the string. Clause 17 puts the session nickname in the PTC session
+     * information parameter.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */

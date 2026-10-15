@@ -13,6 +13,11 @@ import { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } 
  * @summary Change_Of_Target_Identity
  * @description
  * 
+ * Identity values replaced by an HLR subscriber-record change. At least one new
+ * identity is required, together with the observed identity that was already
+ * known. MAP encoding is 3GPP TS 29.002 (reference 4). 3GPP TS 33.108, table
+ * 5.5B and annex B.3a.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,36 +52,67 @@ export
 class Change_Of_Target_Identity {
     /**
      * @summary `new_MSISDN`.
+     * @description
+     * 
+     * New MSISDN of the target, in the MAP address-string format of 3GPP TS
+     * 29.002. 3GPP TS 33.108, annex B.3a and table 5.5.
+     * 
      * @public
      * @readonly
      */
     readonly new_MSISDN: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_MSISDN`.
+     * @description
+     * 
+     * Previous MSISDN of the target, in the same MAP address-string format. The
+     * annex B.3a comment on this component says "new MSISDN", which contradicts
+     * the component name and table 5.5 ("old/new"). 3GPP TS 33.108, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly old_MSISDN: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_IMSI`.
+     * @description
+     * 
+     * New IMSI, MAP format, an E.212 number beginning with the mobile country
+     * code. 3GPP TS 33.108, annex B.3a and table 5.5.
+     * 
      * @public
      * @readonly
      */
     readonly new_IMSI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_IMSI`.
+     * @description
+     * 
+     * Previous IMSI, MAP format, an E.212 number beginning with the mobile
+     * country code. 3GPP TS 33.108, annex B.3a and table 5.5.
+     * 
      * @public
      * @readonly
      */
     readonly old_IMSI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_IMEI`.
+     * @description
+     * 
+     * New IMEI, MAP equipment identity of 3GPP TS 29.002. 3GPP TS 33.108, annex
+     * B.3a and table 5.5.
+     * 
      * @public
      * @readonly
      */
     readonly new_IMEI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_IMEI`.
+     * @description
+     * 
+     * Previous IMEI, MAP equipment identity of 3GPP TS 29.002. 3GPP TS 33.108,
+     * annex B.3a and table 5.5.
+     * 
      * @public
      * @readonly
      */

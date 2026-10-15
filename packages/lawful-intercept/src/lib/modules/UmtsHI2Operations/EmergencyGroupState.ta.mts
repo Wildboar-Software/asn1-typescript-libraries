@@ -15,6 +15,17 @@ import { EmergencyGroupState_groupEmergencyState, _decode_EmergencyGroupState_gr
  * @summary EmergencyGroupState
  * @description
  * 
+ * Emergency state of an MCPTT call. Annex B.3 says at least one of the client
+ * state and the group state shall be present. The group state is always
+ * carried; the client state is optional.
+ * 
+ * Conditional when a group-call record indicates an emergency (table 17.3.2) or
+ * when the group emergency state was cancelled (table 17.3.3).
+ * 
+ * 3GPP TS 33.108, clause 17.3 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,18 +62,38 @@ export
 class EmergencyGroupState {
     /**
      * @summary `clientEmergencyState`.
+     * @description
+     * 
+     * For an MCPTT call, the client's emergency response: inform, response, or
+     * a cancellation of either. Annex B.3 does not define a further procedure
+     * for each value. Omit it when there is no client state.
+     * 
+     * 3GPP TS 33.108, clause 17.3 and annex B.3.
      * @public
      * @readonly
      */
     readonly clientEmergencyState: OPTIONAL<EmergencyGroupState_clientEmergencyState>;
     /**
      * @summary `groupEmergencyState`.
+     * @description
+     * 
+     * For an MCPTT group call, whether there is a group emergency or the target
+     * is reporting the client's current emergency state. Table 17.3.3 uses this
+     * when the group emergency state was cancelled.
+     * 
+     * 3GPP TS 33.108, clause 17.3 and annex B.3.
      * @public
      * @readonly
      */
     readonly groupEmergencyState: EmergencyGroupState_groupEmergencyState;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
@@ -96,12 +127,24 @@ class EmergencyGroupState {
 
         /**
          * @summary The enum used as the type of the component `clientEmergencyState`
+         * @description
+         * 
+         * Client emergency state of an MCPTT call: inform, response, or a
+         * cancellation of either.
+         * 
+         * 3GPP TS 33.108, clause 17.3 and annex B.3.
          * @public
          * @static
          */
 
     public static _enum_for_clientEmergencyState = _enum_for_EmergencyGroupState_clientEmergencyState;        /**
          * @summary The enum used as the type of the component `groupEmergencyState`
+         * @description
+         * 
+         * Group emergency state of an MCPTT group call, or the target's
+         * response giving the client's current emergency state.
+         * 
+         * 3GPP TS 33.108, clause 17.3 and annex B.3.
          * @public
          * @static
          */

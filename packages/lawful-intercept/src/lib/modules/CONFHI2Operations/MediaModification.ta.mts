@@ -18,6 +18,10 @@ enum _enum_for_MediaModification {
  * @summary MediaModification
  * @description
  * 
+ * How conference media changed. Clause 11 names add, remove, and change. The
+ * module also defines unknown, which clause 11 does not describe. 3GPP TS
+ * 33.108, clause 11.5, table 11.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +42,11 @@ type MediaModification = _enum_for_MediaModification | ENUMERATED;
 
 /**
  * @summary MediaModification_add
+ * @description
+ * 
+ * Media added on a bearer modification. 3GPP TS 33.108, clause 11.5, tables
+ * 11.9 and 11.10.
+ * 
  * @constant
  * @type {number}
  */
@@ -46,6 +55,10 @@ const MediaModification_add: MediaModification = 1; /* LONG_NAMED_ENUMERATED_VAL
 
 /**
  * @summary add
+ * @description
+ * 
+ * Media added. 3GPP TS 33.108, clause 11.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -54,6 +67,11 @@ const add: MediaModification = MediaModification_add; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary MediaModification_remove
+ * @description
+ * 
+ * Media removed on a bearer modification. 3GPP TS 33.108, clause 11.5, tables
+ * 11.9 and 11.10.
+ * 
  * @constant
  * @type {number}
  */
@@ -62,6 +80,10 @@ const MediaModification_remove: MediaModification = 2; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary remove
+ * @description
+ * 
+ * Media removed. 3GPP TS 33.108, clause 11.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -70,6 +92,11 @@ const remove: MediaModification = MediaModification_remove; /* SHORT_NAMED_ENUME
 
 /**
  * @summary MediaModification_change
+ * @description
+ * 
+ * Existing media changed on a bearer modification. 3GPP TS 33.108, clause 11.5,
+ * tables 11.9 and 11.10.
+ * 
  * @constant
  * @type {number}
  */
@@ -78,6 +105,10 @@ const MediaModification_change: MediaModification = 3; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary change
+ * @description
+ * 
+ * Media changed. 3GPP TS 33.108, clause 11.5.
+ * 
  * @constant
  * @type {number}
  */
@@ -86,6 +117,10 @@ const change: MediaModification = MediaModification_change; /* SHORT_NAMED_ENUME
 
 /**
  * @summary MediaModification_unknown
+ * @description
+ * 
+ * Defined in annex B.11.1. Clause 11 does not say when to use it.
+ * 
  * @constant
  * @type {number}
  */
@@ -94,6 +129,10 @@ const MediaModification_unknown: MediaModification = 4; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * Clause 11 does not describe this value.
+ * 
  * @constant
  * @type {number}
  */

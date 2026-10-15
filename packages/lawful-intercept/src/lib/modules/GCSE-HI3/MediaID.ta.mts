@@ -14,6 +14,13 @@ import { GcsePartyIdentity, _decode_GcsePartyIdentity, _encode_GcsePartyIdentity
  * @summary MediaID
  * @description
  * 
+ * Identifies media exchanged on the GCSE group communication, so separate
+ * streams can be reported per user.
+ * 
+ * 3GPP TS 33.108, annex B.14.2 and clause 14.2.7.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,28 @@ export
 class MediaID {
     /**
      * @summary `sourceUserID`.
+     * @description
+     * 
+     * SDP information describing GCSE server-side characteristics. 3GPP TS
+     * 33.108, annex B.14.2.
      * @public
      * @readonly
      */
     readonly sourceUserID: OPTIONAL<GcsePartyIdentity>;
     /**
      * @summary `streamID`.
+     * @description
+     * 
+     * Stream identifier from the SDP. 3GPP TS 33.108, annex B.14.2.
      * @public
      * @readonly
      */
     readonly streamID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

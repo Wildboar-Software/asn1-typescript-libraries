@@ -13,6 +13,12 @@ import { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } 
  * @summary Change_Of_Target_Identity
  * @description
  * 
+ * Old and new identities from a subscriber-record change. Mandatory on the HSS
+ * subscriber-record-change REPORT (table 10.5.1.1.17, table 10.5.2). An IMS HSS
+ * change may also carry IMPI, SIP URI, and TEL URI (table 7.2). The same
+ * parameter is used when PS IRI is delivered on this HI2 (table 6.2). 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,90 +65,168 @@ export
 class Change_Of_Target_Identity {
     /**
      * @summary `new_MSISDN`.
+     * @description
+     * 
+     * MSISDN after the change, when it changed (table 10.5.1.1.17). Encoded in
+     * the MAP address-string format of 3GPP TS 29.002.
+     * 
      * @public
      * @readonly
      */
     readonly new_MSISDN: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_A_MSISDN`.
+     * @description
+     * 
+     * Additional MSISDN after the change, when it changed (table 10.5.1.1.17).
+     * Encoded in the address-string format of 3GPP TS 23.003.
+     * 
      * @public
      * @readonly
      */
     readonly new_A_MSISDN: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_MSISDN`.
+     * @description
+     * 
+     * MSISDN before the change (table 10.5.1.1.17). Encoded in the MAP
+     * address-string format of 3GPP TS 29.002.
+     * 
      * @public
      * @readonly
      */
     readonly old_MSISDN: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_A_MSISDN`.
+     * @description
+     * 
+     * Additional MSISDN before the change (table 10.5.1.1.17). Encoded in the
+     * address-string format of 3GPP TS 23.003.
+     * 
      * @public
      * @readonly
      */
     readonly old_A_MSISDN: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_IMSI`.
+     * @description
+     * 
+     * IMSI after the change (table 10.5.1.1.17). An E.212 number beginning with
+     * the mobile country code, in MAP format (3GPP TS 29.002).
+     * 
      * @public
      * @readonly
      */
     readonly new_IMSI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_IMSI`.
+     * @description
+     * 
+     * IMSI before the change (table 10.5.1.1.17). An E.212 number beginning
+     * with the mobile country code, in MAP format (3GPP TS 29.002).
+     * 
      * @public
      * @readonly
      */
     readonly old_IMSI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_IMEI`.
+     * @description
+     * 
+     * IMEI after the change (table 10.5.1.1.17). Mobile equipment identity in
+     * MAP format (3GPP TS 29.002).
+     * 
      * @public
      * @readonly
      */
     readonly new_IMEI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_IMEI`.
+     * @description
+     * 
+     * IMEI before the change (table 10.5.1.1.17). Mobile equipment identity in
+     * MAP format (3GPP TS 29.002).
+     * 
      * @public
      * @readonly
      */
     readonly old_IMEI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_IMPI`.
+     * @description
+     * 
+     * IMPI after the change. Table 7.2 includes IMPI in an IMS
+     * subscriber-record change. Table 10.5.1.1.17 does not list it for the EPS
+     * HSS record.
+     * 
      * @public
      * @readonly
      */
     readonly new_IMPI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_IMPI`.
+     * @description
+     * 
+     * IMPI before the change. Table 7.2 includes IMPI in an IMS
+     * subscriber-record change. Table 10.5.1.1.17 does not list it for the EPS
+     * HSS record.
+     * 
      * @public
      * @readonly
      */
     readonly old_IMPI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_SIP_URI`.
+     * @description
+     * 
+     * SIP URI after the change. Table 7.2 includes a SIP URI in an IMS
+     * subscriber-record change. The EPS HSS table does not list it.
+     * 
      * @public
      * @readonly
      */
     readonly new_SIP_URI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_SIP_URI`.
+     * @description
+     * 
+     * SIP URI before the change. Table 7.2 includes a SIP URI in an IMS
+     * subscriber-record change. The EPS HSS table does not list it.
+     * 
      * @public
      * @readonly
      */
     readonly old_SIP_URI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_TEL_URI`.
+     * @description
+     * 
+     * TEL URI after the change. Table 7.2 includes a TEL URI in an IMS
+     * subscriber-record change. The EPS HSS table does not list it.
+     * 
      * @public
      * @readonly
      */
     readonly new_TEL_URI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_TEL_URI`.
+     * @description
+     * 
+     * TEL URI before the change. Table 7.2 includes a TEL URI in an IMS
+     * subscriber-record change. The EPS HSS table does not list it.
+     * 
      * @public
      * @readonly
      */
     readonly old_TEL_URI: OPTIONAL<PartyInformation>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

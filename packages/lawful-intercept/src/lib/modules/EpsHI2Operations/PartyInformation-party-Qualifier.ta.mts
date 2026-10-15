@@ -15,6 +15,13 @@ enum _enum_for_PartyInformation_party_Qualifier {
  * @summary PartyInformation_party_Qualifier
  * @description
  * 
+ * Role of the party in partyInformation. The only defined name marks the
+ * intercepted EPS or packet-domain target. Clause 10.5.2 and clause 6 table 6.2
+ * place that target's identities in this party. Clause 7 table 7.2 places IMS
+ * identities in the same party parameter.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +38,11 @@ type PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifi
 
 /**
  * @summary PartyInformation_party_Qualifier_gPRSorEPS_Target
+ * @description
+ * 
+ * The intercepted EPS or packet-domain target. The only defined qualifier.
+ * Clause 10.5.2 and clause 6 table 6.2 place the target identities in this
+ * party. Value 3.
  * @constant
  * @type {number}
  */
@@ -39,6 +51,10 @@ const PartyInformation_party_Qualifier_gPRSorEPS_Target: PartyInformation_party_
 
 /**
  * @summary gPRSorEPS_Target
+ * @description
+ * 
+ * Intercepted EPS or packet-domain target (clause 10.5.2 and clause 6 table
+ * 6.2).
  * @constant
  * @type {number}
  */

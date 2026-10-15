@@ -13,6 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExtendedLocParameters_floor
  * @description
  * 
+ * Floor of a LALS fix, mapped from the OMA MLP pos element. TS 33.108 cites MLP
+ * clause 5.3.39 for the floor number and clause 5.3.40 for its uncertainty, and
+ * does not restate that syntax.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +37,24 @@ export
 class ExtendedLocParameters_floor {
     /**
      * @summary `floor_number`.
+     * @description
+     * 
+     * Floor number of the LALS fix, from OMA MLP clause 5.3.39. TS 33.108 does
+     * not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly floor_number: PrintableString;
     /**
      * @summary `floor_number_uncertainty`.
+     * @description
+     * 
+     * Uncertainty of the floor number, from OMA MLP clause 5.3.40. Include it
+     * when the MLP response has it. TS 33.108 does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

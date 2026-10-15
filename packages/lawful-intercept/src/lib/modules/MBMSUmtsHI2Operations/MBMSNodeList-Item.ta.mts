@@ -13,6 +13,11 @@ import { MBMSNodeList_Item_mBMSNODELIST, _decode_MBMSNodeList_Item_mBMSNODELIST,
  * @summary MBMSNodeList_Item
  * @description
  * 
+ * One downstream-node entry. Table 9.2 names the inner value mBMSNODELIST both
+ * for this list and for the BM-SC identifier.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,22 @@ export
 class MBMSNodeList_Item {
     /**
      * @summary `mBMSNODELIST`.
+     * @description
+     * 
+     * IP address and name of one node. Table 9.2 uses this name for the list of
+     * downstream nodes and, separately, for the BM-SC identifier. Clause 9 does
+     * not say which component is the BM-SC identifier.
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly mBMSNODELIST: MBMSNodeList_Item_mBMSNODELIST;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

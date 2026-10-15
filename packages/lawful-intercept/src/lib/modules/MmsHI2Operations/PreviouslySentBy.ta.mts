@@ -14,6 +14,12 @@ import { EncodedString, _decode_EncodedString, _encode_EncodedString } from "../
  * @summary PreviouslySentBy
  * @description
  * 
+ * One MMS client that forwarded the MM or originally sent it, and the sequence
+ * number of that hop. A higher sequence number is a later forward (table
+ * 15.3.6.1.2).
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +37,34 @@ export
 class PreviouslySentBy {
     /**
      * @summary `forwardedCount`.
+     * @description
+     * 
+     * Sequence number of this forward or original send. A higher number is
+     * later in time. The same number ties this party to the matching date and
+     * time.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2.
      * @public
      * @readonly
      */
     readonly forwardedCount: INTEGER;
     /**
      * @summary `forwardedPartyID`.
+     * @description
+     * 
+     * Address of the MMS client that forwarded the MM or originally sent it
+     * (table 15.3.6.1.2).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly forwardedPartyID: EncodedString;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

@@ -11,6 +11,13 @@ import { RemoteUserID, _decode_RemoteUserID, _encode_RemoteUserID } from "../Eps
  * @summary RemoteUeContextDisconnected
  * @description
  * 
+ * Identity of a ProSe remote UE that has disconnected from a ProSe
+ * UE-to-network relay. Provide it when the relay is the target (table
+ * 13.3.2.2-1). The module defines this as the remote-user identity alone, with
+ * no IP address. Clause 13 does not state the octet layout.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

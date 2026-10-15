@@ -17,6 +17,11 @@ enum _enum_for_SMS_report_sMS_Contents_other_message {
  * @summary SMS_report_sMS_Contents_other_message
  * @description
  * 
+ * On a terminating SMS, whether the server will send further SMS. Annex B.3.
+ * Stage 2 table 6.7 does not list this parameter.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +42,11 @@ type SMS_report_sMS_Contents_other_message = _enum_for_SMS_report_sMS_Contents_o
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_yes
+ * @description
+ * 
+ * On a terminating SMS, the server will send further SMS. Annex B.3. Stage 2
+ * table 6.7 does not list this parameter. 3GPP TS 33.108, annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -45,6 +55,10 @@ const SMS_report_sMS_Contents_other_message_yes: SMS_report_sMS_Contents_other_m
 
 /**
  * @summary yes
+ * @description
+ * 
+ * The server will send further SMS (3GPP TS 33.108, annex B.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -53,6 +67,11 @@ const yes: SMS_report_sMS_Contents_other_message = SMS_report_sMS_Contents_other
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_no
+ * @description
+ * 
+ * On a terminating SMS, the server will not send further SMS. Annex B.3. Stage
+ * 2 table 6.7 does not list this parameter. 3GPP TS 33.108, annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -61,6 +80,10 @@ const SMS_report_sMS_Contents_other_message_no: SMS_report_sMS_Contents_other_me
 
 /**
  * @summary no
+ * @description
+ * 
+ * The server will not send further SMS (3GPP TS 33.108, annex B.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -69,6 +92,12 @@ const no: SMS_report_sMS_Contents_other_message = SMS_report_sMS_Contents_other_
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_undefined
+ * @description
+ * 
+ * On a terminating SMS, it is undefined whether the server will send further
+ * SMS. Annex B.3 does not say when this value is used. 3GPP TS 33.108, annex
+ * B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -77,6 +106,10 @@ const SMS_report_sMS_Contents_other_message_undefined: SMS_report_sMS_Contents_o
 
 /**
  * @summary undefined
+ * @description
+ * 
+ * Whether further SMS will be sent is undefined (3GPP TS 33.108, annex B.3).
+ * 
  * @constant
  * @type {number}
  */

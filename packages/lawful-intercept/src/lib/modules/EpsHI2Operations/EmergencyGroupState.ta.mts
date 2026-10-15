@@ -15,6 +15,12 @@ import { EmergencyGroupState_groupEmergencyState, _decode_EmergencyGroupState_gr
  * @summary EmergencyGroupState
  * @description
  * 
+ * State of an MCPTT emergency call. At least one of the client state and the
+ * group state shall be present (module comment). Conditional when a group-call
+ * request or response indicates an emergency, and when a cancel clears the
+ * group emergency (clauses 17.3.2 to 17.3.4). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,18 +57,35 @@ export
 class EmergencyGroupState {
     /**
      * @summary `clientEmergencyState`.
+     * @description
+     * 
+     * For an MCPTT call, the client's inform, response, or the cancel of either
+     * (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly clientEmergencyState: OPTIONAL<EmergencyGroupState_clientEmergencyState>;
     /**
      * @summary `groupEmergencyState`.
+     * @description
+     * 
+     * For an MCPTT group call, a group emergency, or the target's response
+     * giving the client's emergency state (module comment). Table 17.3.3 uses
+     * this when the group emergency state was cancelled.
+     * 
      * @public
      * @readonly
      */
     readonly groupEmergencyState: EmergencyGroupState_groupEmergencyState;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -96,12 +119,23 @@ class EmergencyGroupState {
 
         /**
          * @summary The enum used as the type of the component `clientEmergencyState`
+         * @description
+         * 
+         * For an MCPTT call, the client's inform, response, or the cancel of
+         * either (module comment).
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_clientEmergencyState = _enum_for_EmergencyGroupState_clientEmergencyState;        /**
          * @summary The enum used as the type of the component `groupEmergencyState`
+         * @description
+         * 
+         * For an MCPTT group call, a group emergency, or the target's response
+         * giving the client's emergency state (module comment). Table 17.3.3
+         * uses this when the group emergency state was cancelled.
+         * 
          * @public
          * @static
          */

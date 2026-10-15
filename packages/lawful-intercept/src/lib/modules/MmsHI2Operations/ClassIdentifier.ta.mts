@@ -18,6 +18,11 @@ enum _enum_for_ClassIdentifier {
  * @summary ClassIdentifier
  * @description
  * 
+ * Named class of an MM. If the class is absent, interpret it as personal (table
+ * 15.3.6.1.2).
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +43,10 @@ type ClassIdentifier = _enum_for_ClassIdentifier | ENUMERATED;
 
 /**
  * @summary ClassIdentifier_personal
+ * @description
+ * 
+ * Personal MM. If the class is absent, interpret the class as personal (table
+ * 15.3.6.1.2).
  * @constant
  * @type {number}
  */
@@ -46,6 +55,9 @@ const ClassIdentifier_personal: ClassIdentifier = 0; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary personal
+ * @description
+ * 
+ * Personal class. Also the meaning when class is absent.
  * @constant
  * @type {number}
  */
@@ -54,6 +66,9 @@ const personal: ClassIdentifier = ClassIdentifier_personal; /* SHORT_NAMED_ENUME
 
 /**
  * @summary ClassIdentifier_advertisement
+ * @description
+ * 
+ * Annex B.15 names this value. Clause 15.3 does not further define it.
  * @constant
  * @type {number}
  */
@@ -62,6 +77,9 @@ const ClassIdentifier_advertisement: ClassIdentifier = 1; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary advertisement
+ * @description
+ * 
+ * Clause 15.3 does not further define this value.
  * @constant
  * @type {number}
  */
@@ -70,6 +88,9 @@ const advertisement: ClassIdentifier = ClassIdentifier_advertisement; /* SHORT_N
 
 /**
  * @summary ClassIdentifier_informational
+ * @description
+ * 
+ * Annex B.15 names this value. Clause 15.3 does not further define it.
  * @constant
  * @type {number}
  */
@@ -78,6 +99,9 @@ const ClassIdentifier_informational: ClassIdentifier = 2; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary informational
+ * @description
+ * 
+ * Clause 15.3 does not further define this value.
  * @constant
  * @type {number}
  */
@@ -86,6 +110,9 @@ const informational: ClassIdentifier = ClassIdentifier_informational; /* SHORT_N
 
 /**
  * @summary ClassIdentifier_auto
+ * @description
+ * 
+ * The UE generated the MM automatically (table 15.3.6.1.2).
  * @constant
  * @type {number}
  */
@@ -94,6 +121,9 @@ const ClassIdentifier_auto: ClassIdentifier = 3; /* LONG_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary auto
+ * @description
+ * 
+ * UE-generated MM (table 15.3.6.1.2).
  * @constant
  * @type {number}
  */

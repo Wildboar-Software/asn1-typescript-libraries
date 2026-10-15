@@ -12,6 +12,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CorrelationNumber
  * @description
  * 
+ * Correlation number for one target, one MBMS service, and one MBMS session.
+ * Eight to twenty octets.
+ * 
+ * Correlates IRI records of that service usage. Subscription activation,
+ * modification, and termination are not correlated, and their records do not
+ * carry this value (clause 9.1.4).
+ * 
+ * 3GPP TS 33.108, clause 9.1.4 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

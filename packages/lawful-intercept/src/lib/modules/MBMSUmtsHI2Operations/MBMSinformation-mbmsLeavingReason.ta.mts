@@ -16,6 +16,11 @@ enum _enum_for_MBMSinformation_mbmsLeavingReason {
  * @summary MBMSinformation_mbmsLeavingReason
  * @description
  * 
+ * Why the target left the MBMS service, or why the service was ended for the
+ * target. Mandatory on the leaving End record (table 9.8).
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +38,9 @@ type MBMSinformation_mbmsLeavingReason = _enum_for_MBMSinformation_mbmsLeavingRe
 
 /**
  * @summary MBMSinformation_mbmsLeavingReason_uEinitiatedRequested
+ * @description
+ * 
+ * The UE initiated or requested leaving (table 9.2).
  * @constant
  * @type {number}
  */
@@ -41,6 +49,9 @@ const MBMSinformation_mbmsLeavingReason_uEinitiatedRequested: MBMSinformation_mb
 
 /**
  * @summary uEinitiatedRequested
+ * @description
+ * 
+ * The UE requested leaving (table 9.2).
  * @constant
  * @type {number}
  */
@@ -49,6 +60,11 @@ const uEinitiatedRequested: MBMSinformation_mbmsLeavingReason = MBMSinformation_
 
 /**
  * @summary MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated
+ * @description
+ * 
+ * The BM-SC or the network ended the service for the UE, for example a GSN
+ * session dropped or the BM-SC subscription expired (table 9.2). If the reason
+ * is subscription expiry, a subscription-termination report is also generated.
  * @constant
  * @type {number}
  */
@@ -57,6 +73,9 @@ const MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated: MBMSinformation
 
 /**
  * @summary bMSCorNetworkTerminated
+ * @description
+ * 
+ * BM-SC or network ended the service for the UE (table 9.2).
  * @constant
  * @type {number}
  */

@@ -17,6 +17,13 @@ import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2
  * @summary EPS_PMIP_SpecificParameters
  * @description
  * 
+ * PMIP parameters of the intercepted procedure. Coded according to 3GPP TS
+ * 29.275 and the RFCs it cites (module comment). Carried for PMIP attach,
+ * detach, session modification, resource-allocation deactivation,
+ * PDN-GW-initiated disconnection, and start of interception with an active PMIP
+ * tunnel (clause 10.5.1). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,90 +56,158 @@ export
 class EPS_PMIP_SpecificParameters {
     /**
      * @summary `lifetime`.
+     * @description
+     * 
+     * Lifetime of the tunnel. Nonzero for registration or a lifetime extension;
+     * zero for deregistration (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly lifetime: OPTIONAL<INTEGER>;
     /**
      * @summary `accessTechnologyType`.
+     * @description
+     * 
+     * Radio access type (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly accessTechnologyType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `aPN`.
+     * @description
+     * 
+     * APN of the PDN connection (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPv6HomeNetworkPrefix`.
+     * @description
+     * 
+     * IPv6 home network prefix allocated to the UE. One of the UE address-info
+     * fields in table 10.5.2.
+     * 
      * @public
      * @readonly
      */
     readonly iPv6HomeNetworkPrefix: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `protConfigurationOption`.
+     * @description
+     * 
+     * Extra information from the UE, such as protocol configuration options
+     * (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly protConfigurationOption: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `handoverIndication`.
+     * @description
+     * 
+     * The procedure is part of a handover (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly handoverIndication: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `status`.
+     * @description
+     * 
+     * Failure cause of a PMIP session modification, and, depending on the
+     * protocol, of a failed attach (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly status: OPTIONAL<INTEGER>;
     /**
      * @summary `revocationTrigger`.
+     * @description
+     * 
+     * Why the PDN-GW started a PDN disconnection, the revocation (table
+     * 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly revocationTrigger: OPTIONAL<INTEGER>;
     /**
      * @summary `iPv4HomeAddress`.
+     * @description
+     * 
+     * IPv4 home address allocated to the UE (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly iPv4HomeAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPv6careOfAddress`.
+     * @description
+     * 
+     * IPv6 care-of address of the UE (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly iPv6careOfAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPv4careOfAddress`.
+     * @description
+     * 
+     * IPv4 care-of address of the UE (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly iPv4careOfAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servingNetwork`.
+     * @description
+     * 
+     * For E-UTRAN, the serving network the UE is attached to (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly servingNetwork: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `dHCPv4AddressAllocationInd`.
+     * @description
+     * 
+     * DHCPv4 is to be used to allocate the UE IPv4 address (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly dHCPv4AddressAllocationInd: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ePSlocationOfTheTarget`.
+     * @description
+     * 
+     * Location of the target when the record was produced, if authorized (table
+     * 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly ePSlocationOfTheTarget: OPTIONAL<EPSLocation>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

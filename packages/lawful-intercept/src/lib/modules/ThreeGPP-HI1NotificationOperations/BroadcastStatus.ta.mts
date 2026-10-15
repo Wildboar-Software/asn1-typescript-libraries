@@ -16,6 +16,11 @@ enum _enum_for_BroadcastStatus {
  * @summary BroadcastStatus
  * @description
  * 
+ * Whether a broadcast interception command was confirmed. Informative annex M
+ * lists the broadcast-status system as for further study. The schema comments
+ * below are illustrations, not a normative procedure. 3GPP TS 33.108, annex M
+ * (informative).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +41,13 @@ type BroadcastStatus = _enum_for_BroadcastStatus | ENUMERATED;
 
 /**
  * @summary BroadcastStatus_succesfull
+ * @description
+ * 
+ * Schema illustration: after a broadcast command, at least one node with an LI
+ * function has modified or confirmed its target list to include the identity
+ * the LEA requested. Annex M (informative) does not specify this as a
+ * requirement. 3GPP TS 33.108, annex M.
+ * 
  * @constant
  * @type {number}
  */
@@ -44,6 +56,11 @@ const BroadcastStatus_succesfull: BroadcastStatus = 0; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary succesfull
+ * @description
+ * 
+ * Broadcast confirmed by at least one LI node. Illustrative. 3GPP TS 33.108,
+ * annex M (informative).
+ * 
  * @constant
  * @type {number}
  */
@@ -52,6 +69,12 @@ const succesfull: BroadcastStatus = BroadcastStatus_succesfull; /* SHORT_NAMED_E
 
 /**
  * @summary BroadcastStatus_unsuccesfull
+ * @description
+ * 
+ * Schema illustration: no positive confirmation from at least one LI node for a
+ * command broadcast by the operator's mediation. Annex M (informative) does not
+ * specify this as a requirement. 3GPP TS 33.108, annex M.
+ * 
  * @constant
  * @type {number}
  */
@@ -60,6 +83,11 @@ const BroadcastStatus_unsuccesfull: BroadcastStatus = 1; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary unsuccesfull
+ * @description
+ * 
+ * Broadcast not confirmed by at least one LI node. Illustrative. 3GPP TS
+ * 33.108, annex M (informative).
+ * 
  * @constant
  * @type {number}
  */

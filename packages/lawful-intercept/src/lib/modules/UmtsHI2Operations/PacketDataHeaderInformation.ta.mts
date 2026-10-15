@@ -14,6 +14,16 @@ import { PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_Packe
  * @summary PacketDataHeaderInformation
  * @description
  * 
+ * Packet-header IRI for an active PDP context, either one packet at a time or a
+ * summary of packet flows. Mandatory on the packet data header information
+ * REPORT (table 6.9A). Summary reports are also sent when a flow starts, when
+ * the summary timer or the count threshold fires, and when the flow ends,
+ * including PDP context deactivation.
+ * 
+ * For IP fragments, header information on a 6-tuple basis may exist only on the
+ * first packet, and later fragments may not be reported. 3GPP TS 33.108, clause
+ * 6.5.1.1, tables 6.9A, 6.9B, and 6.9C; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

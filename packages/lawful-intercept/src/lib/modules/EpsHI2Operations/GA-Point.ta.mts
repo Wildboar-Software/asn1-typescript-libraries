@@ -13,6 +13,11 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * @summary GA_Point
  * @description
  * 
+ * A point in a UMTS geographical area. The EPS module uses it as one shape of
+ * the UMTS location carried inside an EPS or PS location. Clause 10 does not
+ * describe the shape further. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +33,23 @@ export
 class GA_Point {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     * 
+     * Latitude and longitude of the point. The specification text does not
+     * define how the integers scale to degrees.
+     * 
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

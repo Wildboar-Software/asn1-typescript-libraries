@@ -14,6 +14,12 @@ import { _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_directio
  * @summary PacketDataHeaderCopy
  * @description
  * 
+ * Per-packet header IRI that copies the packet headers, including extensions.
+ * Provide this form when the REPORT carries a copy of the whole header
+ * (table 6.9B). The copy excludes packet contents.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1.1, table 6.9B; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +38,29 @@ export
 class PacketDataHeaderCopy {
     /**
      * @summary `direction`.
+     * @description
+     * 
+     * Direction of this packet: from the target, to the target, or unknown.
+     * Required on per-packet header IRI. Stage 2 describes the direction as
+     * from the target or to the target.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.9B, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly direction: TPDU_direction;
     /**
      * @summary `headerCopy`.
+     * @description
+     * 
+     * Copy of the packet header at the IP network layer and above, including
+     * extension headers and excluding the contents. Provide this when the
+     * REPORT carries a header copy. Table 6.9B uses the copy as the form that
+     * replaces the mapped header fields.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.2 and table 6.9B; annex B.3.
+     * 
      * @public
      * @readonly
      */

@@ -16,6 +16,12 @@ enum _enum_for_RegistrationOutcome {
  * @summary RegistrationOutcome
  * @description
  * 
+ * Success or failure of a PTC registration. Mandatory on the registration
+ * report (table 17.2.1), together with the failure reason when registration
+ * fails. Clause 17.1.5.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,6 +40,10 @@ type RegistrationOutcome = _enum_for_RegistrationOutcome | ENUMERATED;
 
 /**
  * @summary RegistrationOutcome_success
+ * @description
+ * 
+ * PTC registration succeeded. Mandatory outcome on the registration report
+ * (table 17.2.1).
  * @constant
  * @type {number}
  */
@@ -42,6 +52,9 @@ const RegistrationOutcome_success: RegistrationOutcome = 0; /* LONG_NAMED_ENUMER
 
 /**
  * @summary success
+ * @description
+ * 
+ * PTC registration succeeded (table 17.2.1).
  * @constant
  * @type {number}
  */
@@ -50,6 +63,10 @@ const success: RegistrationOutcome = RegistrationOutcome_success; /* SHORT_NAMED
 
 /**
  * @summary RegistrationOutcome_failure
+ * @description
+ * 
+ * PTC registration failed. Table 17.2.1 also requires the failure reason with
+ * this outcome. The module does not carry that reason in this enumeration.
  * @constant
  * @type {number}
  */
@@ -58,6 +75,9 @@ const RegistrationOutcome_failure: RegistrationOutcome = 1; /* LONG_NAMED_ENUMER
 
 /**
  * @summary failure
+ * @description
+ * 
+ * PTC registration failed (table 17.2.1).
  * @constant
  * @type {number}
  */

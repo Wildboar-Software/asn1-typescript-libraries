@@ -13,6 +13,15 @@ import { IWLANUmtsIRISequence, _decode_IWLANUmtsIRISequence, _encode_IWLANUmtsIR
  * @summary IWLANUmtsIRIsContent
  * @description
  * 
+ * One IRI record (`iWLANumtsiRIContent`) or a sequence of records
+ * (`iWLANumtsIRISequence`) for the same LEA.
+ * 
+ * Use the sequence only when several records are already available for delivery
+ * together. Do not withhold a record in order to aggregate it. When not
+ * aggregating, choose the single record.
+ * 
+ * 3GPP TS 33.108, clause 8 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

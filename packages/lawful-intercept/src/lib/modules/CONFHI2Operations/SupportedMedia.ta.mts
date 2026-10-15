@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SupportedMedia
  * @description
  * 
+ * SDP for the conference server side and the conference user side. Carries the
+ * bearer description associated with a party. The media value requested with a
+ * bearer modification is not a separate parameter. 3GPP TS 33.108, clause 11.5
+ * and annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +39,20 @@ export
 class SupportedMedia {
     /**
      * @summary `confServerSideSDP`.
+     * @description
+     * 
+     * SDP describing the conference server side. 3GPP TS 33.108, annex B.11.1.
+     * 
      * @public
      * @readonly
      */
     readonly confServerSideSDP: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `confUserSideSDP`.
+     * @description
+     * 
+     * SDP describing the conference user side. 3GPP TS 33.108, annex B.11.1.
+     * 
      * @public
      * @readonly
      */

@@ -40,6 +40,13 @@ enum _enum_for_ActualResponseStatus {
  * @summary ActualResponseStatus
  * @description
  * 
+ * MMS-specific response status (table 15.3.6.1.2). Annex B.15 names each code,
+ * including the spellings errorUnsuportedMessage and
+ * errorTransientPartialSucess. Clause 15.3 does not further define the
+ * individual codes.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -83,6 +90,10 @@ type ActualResponseStatus = _enum_for_ActualResponseStatus | ENUMERATED;
 
 /**
  * @summary ActualResponseStatus_ok
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -91,6 +102,9 @@ const ActualResponseStatus_ok: ActualResponseStatus = 0; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary ok
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -99,6 +113,10 @@ const ok: ActualResponseStatus = ActualResponseStatus_ok; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary ActualResponseStatus_errorUnspecified
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -107,6 +125,9 @@ const ActualResponseStatus_errorUnspecified: ActualResponseStatus = 1; /* LONG_N
 
 /**
  * @summary errorUnspecified
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -115,6 +136,10 @@ const errorUnspecified: ActualResponseStatus = ActualResponseStatus_errorUnspeci
 
 /**
  * @summary ActualResponseStatus_errorServiceDenied
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -123,6 +148,9 @@ const ActualResponseStatus_errorServiceDenied: ActualResponseStatus = 2; /* LONG
 
 /**
  * @summary errorServiceDenied
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -131,6 +159,10 @@ const errorServiceDenied: ActualResponseStatus = ActualResponseStatus_errorServi
 
 /**
  * @summary ActualResponseStatus_errorMessageFormatCorrupt
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -139,6 +171,9 @@ const ActualResponseStatus_errorMessageFormatCorrupt: ActualResponseStatus = 3; 
 
 /**
  * @summary errorMessageFormatCorrupt
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -147,6 +182,10 @@ const errorMessageFormatCorrupt: ActualResponseStatus = ActualResponseStatus_err
 
 /**
  * @summary ActualResponseStatus_errorSendingAddressUnresolved
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -155,6 +194,9 @@ const ActualResponseStatus_errorSendingAddressUnresolved: ActualResponseStatus =
 
 /**
  * @summary errorSendingAddressUnresolved
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -163,6 +205,10 @@ const errorSendingAddressUnresolved: ActualResponseStatus = ActualResponseStatus
 
 /**
  * @summary ActualResponseStatus_errorMessageNotFound
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -171,6 +217,9 @@ const ActualResponseStatus_errorMessageNotFound: ActualResponseStatus = 5; /* LO
 
 /**
  * @summary errorMessageNotFound
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -179,6 +228,10 @@ const errorMessageNotFound: ActualResponseStatus = ActualResponseStatus_errorMes
 
 /**
  * @summary ActualResponseStatus_errorNetworkProblem
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -187,6 +240,9 @@ const ActualResponseStatus_errorNetworkProblem: ActualResponseStatus = 6; /* LON
 
 /**
  * @summary errorNetworkProblem
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -195,6 +251,10 @@ const errorNetworkProblem: ActualResponseStatus = ActualResponseStatus_errorNetw
 
 /**
  * @summary ActualResponseStatus_errorContentNotAccepted
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -203,6 +263,9 @@ const ActualResponseStatus_errorContentNotAccepted: ActualResponseStatus = 7; /*
 
 /**
  * @summary errorContentNotAccepted
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -211,6 +274,10 @@ const errorContentNotAccepted: ActualResponseStatus = ActualResponseStatus_error
 
 /**
  * @summary ActualResponseStatus_errorUnsuportedMessage
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -219,6 +286,9 @@ const ActualResponseStatus_errorUnsuportedMessage: ActualResponseStatus = 8; /* 
 
 /**
  * @summary errorUnsuportedMessage
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -227,6 +297,10 @@ const errorUnsuportedMessage: ActualResponseStatus = ActualResponseStatus_errorU
 
 /**
  * @summary ActualResponseStatus_errorTransientFailure
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -235,6 +309,9 @@ const ActualResponseStatus_errorTransientFailure: ActualResponseStatus = 9; /* L
 
 /**
  * @summary errorTransientFailure
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -243,6 +320,10 @@ const errorTransientFailure: ActualResponseStatus = ActualResponseStatus_errorTr
 
 /**
  * @summary ActualResponseStatus_errorTransientSendingAddressUnresolved
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -251,6 +332,9 @@ const ActualResponseStatus_errorTransientSendingAddressUnresolved: ActualRespons
 
 /**
  * @summary errorTransientSendingAddressUnresolved
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -259,6 +343,10 @@ const errorTransientSendingAddressUnresolved: ActualResponseStatus = ActualRespo
 
 /**
  * @summary ActualResponseStatus_errorTransientMessageNotFound
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -267,6 +355,9 @@ const ActualResponseStatus_errorTransientMessageNotFound: ActualResponseStatus =
 
 /**
  * @summary errorTransientMessageNotFound
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -275,6 +366,10 @@ const errorTransientMessageNotFound: ActualResponseStatus = ActualResponseStatus
 
 /**
  * @summary ActualResponseStatus_errorTransientNetworkProblem
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -283,6 +378,9 @@ const ActualResponseStatus_errorTransientNetworkProblem: ActualResponseStatus = 
 
 /**
  * @summary errorTransientNetworkProblem
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -291,6 +389,10 @@ const errorTransientNetworkProblem: ActualResponseStatus = ActualResponseStatus_
 
 /**
  * @summary ActualResponseStatus_errorTransientPartialSucess
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -299,6 +401,9 @@ const ActualResponseStatus_errorTransientPartialSucess: ActualResponseStatus = 1
 
 /**
  * @summary errorTransientPartialSucess
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -307,6 +412,10 @@ const errorTransientPartialSucess: ActualResponseStatus = ActualResponseStatus_e
 
 /**
  * @summary ActualResponseStatus_errorPermanentFailure
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -315,6 +424,9 @@ const ActualResponseStatus_errorPermanentFailure: ActualResponseStatus = 14; /* 
 
 /**
  * @summary errorPermanentFailure
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -323,6 +435,10 @@ const errorPermanentFailure: ActualResponseStatus = ActualResponseStatus_errorPe
 
 /**
  * @summary ActualResponseStatus_errorPermanentServiceDenied
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -331,6 +447,9 @@ const ActualResponseStatus_errorPermanentServiceDenied: ActualResponseStatus = 1
 
 /**
  * @summary errorPermanentServiceDenied
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -339,6 +458,10 @@ const errorPermanentServiceDenied: ActualResponseStatus = ActualResponseStatus_e
 
 /**
  * @summary ActualResponseStatus_errorPermanentMessageFormatCorrupt
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -347,6 +470,9 @@ const ActualResponseStatus_errorPermanentMessageFormatCorrupt: ActualResponseSta
 
 /**
  * @summary errorPermanentMessageFormatCorrupt
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -355,6 +481,10 @@ const errorPermanentMessageFormatCorrupt: ActualResponseStatus = ActualResponseS
 
 /**
  * @summary ActualResponseStatus_errorPermanentSendingAddressUnresolved
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -363,6 +493,9 @@ const ActualResponseStatus_errorPermanentSendingAddressUnresolved: ActualRespons
 
 /**
  * @summary errorPermanentSendingAddressUnresolved
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -371,6 +504,10 @@ const errorPermanentSendingAddressUnresolved: ActualResponseStatus = ActualRespo
 
 /**
  * @summary ActualResponseStatus_errorPermanentMessageNotFound
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -379,6 +516,9 @@ const ActualResponseStatus_errorPermanentMessageNotFound: ActualResponseStatus =
 
 /**
  * @summary errorPermanentMessageNotFound
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -387,6 +527,10 @@ const errorPermanentMessageNotFound: ActualResponseStatus = ActualResponseStatus
 
 /**
  * @summary ActualResponseStatus_errorPermanentContentNotAccepted
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -395,6 +539,9 @@ const ActualResponseStatus_errorPermanentContentNotAccepted: ActualResponseStatu
 
 /**
  * @summary errorPermanentContentNotAccepted
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -403,6 +550,10 @@ const errorPermanentContentNotAccepted: ActualResponseStatus = ActualResponseSta
 
 /**
  * @summary ActualResponseStatus_errorPermanentReplyChargingLimitationsNotMet
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -411,6 +562,9 @@ const ActualResponseStatus_errorPermanentReplyChargingLimitationsNotMet: ActualR
 
 /**
  * @summary errorPermanentReplyChargingLimitationsNotMet
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -419,6 +573,10 @@ const errorPermanentReplyChargingLimitationsNotMet: ActualResponseStatus = Actua
 
 /**
  * @summary ActualResponseStatus_errorPermanentReplyChargingRequestNotAccepted
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -427,6 +585,9 @@ const ActualResponseStatus_errorPermanentReplyChargingRequestNotAccepted: Actual
 
 /**
  * @summary errorPermanentReplyChargingRequestNotAccepted
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -435,6 +596,10 @@ const errorPermanentReplyChargingRequestNotAccepted: ActualResponseStatus = Actu
 
 /**
  * @summary ActualResponseStatus_errorPermanentReplyChargingForwardingDenied
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -443,6 +608,9 @@ const ActualResponseStatus_errorPermanentReplyChargingForwardingDenied: ActualRe
 
 /**
  * @summary errorPermanentReplyChargingForwardingDenied
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -451,6 +619,10 @@ const errorPermanentReplyChargingForwardingDenied: ActualResponseStatus = Actual
 
 /**
  * @summary ActualResponseStatus_errorPermanentReplyChargingNotSupported
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -459,6 +631,9 @@ const ActualResponseStatus_errorPermanentReplyChargingNotSupported: ActualRespon
 
 /**
  * @summary errorPermanentReplyChargingNotSupported
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -467,6 +642,10 @@ const errorPermanentReplyChargingNotSupported: ActualResponseStatus = ActualResp
 
 /**
  * @summary ActualResponseStatus_errorPermanentAddressHidingNotSupported
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -475,6 +654,9 @@ const ActualResponseStatus_errorPermanentAddressHidingNotSupported: ActualRespon
 
 /**
  * @summary errorPermanentAddressHidingNotSupported
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */
@@ -483,6 +665,10 @@ const errorPermanentAddressHidingNotSupported: ActualResponseStatus = ActualResp
 
 /**
  * @summary ActualResponseStatus_errorPermanentLackOfPrepaid
+ * @description
+ * 
+ * MMS response status named in annex B.15. Clause 15.3 does not further define
+ * this code.
  * @constant
  * @type {number}
  */
@@ -491,6 +677,9 @@ const ActualResponseStatus_errorPermanentLackOfPrepaid: ActualResponseStatus = 2
 
 /**
  * @summary errorPermanentLackOfPrepaid
+ * @description
+ * 
+ * Clause 15.3 does not further define this response status.
  * @constant
  * @type {number}
  */

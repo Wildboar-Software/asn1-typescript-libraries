@@ -16,6 +16,10 @@ import { Downstream, _decode_Downstream, _encode_Downstream } from "../GCSEHI2Op
  * @summary TargetConnectionMethod
  * @description
  * 
+ * The target's path to the GCS AS for sending and receiving. Required when that
+ * path is modified; otherwise conditional when known. 3GPP TS 33.108, clause
+ * 14.2.6 and annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +39,35 @@ export
 class TargetConnectionMethod {
     /**
      * @summary `connectionStatus`.
+     * @description
+     * 
+     * True when the target is connected to the GCS AS, false when not. Upstream
+     * and downstream are omitted when this is false. 3GPP TS 33.108, annex
+     * B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly connectionStatus: BOOLEAN;
     /**
      * @summary `upstream`.
+     * @description
+     * 
+     * How the target sends toward the GCS AS. Omitted when the target is not
+     * connected. 3GPP TS 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly upstream: OPTIONAL<Upstream>;
     /**
      * @summary `downstream`.
+     * @description
+     * 
+     * How the target receives from the GCS AS. Omitted when the target is not
+     * connected. A UE may receive in more than one way, for example unicast EPS
+     * and multicast. 3GPP TS 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */

@@ -11,6 +11,12 @@ import { threeGPPSUBDomainId } from "../GCSEHI2Operations/threeGPPSUBDomainId.va
  * @summary hi2gcseDomainId
  * @description
  * 
+ * GCSE HI2 domain: `hi2gcse(13)`, release `r16(16)`, `version-0(0)` under the
+ * 3GPP LI subdomain.
+ *
+ * Carried in every GCSE IRI so the record identifies the 3GPP HI2 GCSE domain.
+ * 3GPP TS 33.108, clause 14 and annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

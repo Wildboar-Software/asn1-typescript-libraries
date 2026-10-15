@@ -14,6 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ContentLocation
  * @description
  * 
+ * Where the MM content is to be retrieved, and, for deletion, a status count.
+ * 
+ * The URI is coded as in clause 7.3.10 of the OMA encapsulation protocol (annex
+ * B.15). Table 15.3.6.2.2.16 says the location is used only with the View
+ * Confirm description, while Delete requires a content location on the IRI
+ * record.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +42,31 @@ export
 class ContentLocation {
     /**
      * @summary `contentLocationURI`.
+     * @description
+     * 
+     * Location of the content to be retrieved. Coded as in clause 7.3.10 of the
+     * OMA encapsulation protocol.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly contentLocationURI: OCTET_STRING;
     /**
      * @summary `statusCount`.
+     * @description
+     * 
+     * Included only for the MMS Delete event (annex B.15). Clause 15.3 does not
+     * further define the count.
      * @public
      * @readonly
      */
     readonly statusCount: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

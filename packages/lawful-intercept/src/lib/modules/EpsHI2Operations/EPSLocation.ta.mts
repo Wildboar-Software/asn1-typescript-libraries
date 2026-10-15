@@ -21,6 +21,13 @@ import { EPSLocation_uELocationTimestamp, _decode_EPSLocation_uELocationTimestam
  * @summary EPSLocation
  * @description
  * 
+ * Location of the target at an EPS node when the warrant authorizes it, or the
+ * cell site (table 10.5.2, module comment). Used for EPS events, for 4G
+ * cell-site supplemental information (clause 16.4), and for the ProSe
+ * UE-to-network relay location (table 13.3.1-2). Mutually exclusive with the
+ * other location parameter on the GTPv2 parameters. Time of Location is the
+ * timestamp below. 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,66 +67,126 @@ export
 class EPSLocation {
     /**
      * @summary `userLocationInfo`.
+     * @description
+     * 
+     * User location from the EPS node. The module comment points at the 3GPP TS
+     * 29.274 coding rules used for the GTPv2 parameters. Clause 16.4 puts the
+     * 4G cell identity of a cell-site report here.
+     * 
      * @public
      * @readonly
      */
     readonly userLocationInfo: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `gsmLocation`.
+     * @description
+     * 
+     * GSM coordinates of the target or of the cell site. Table 16.1 puts 4G
+     * cell-site latitude, longitude, and azimuth on this path.
+     * 
      * @public
      * @readonly
      */
     readonly gsmLocation: OPTIONAL<GSMLocation>;
     /**
      * @summary `umtsLocation`.
+     * @description
+     * 
+     * UMTS geographical-area shape (point, point with uncertainty, or polygon).
+     * Clause 10 does not say when this shape is required inside an EPS
+     * location.
+     * 
      * @public
      * @readonly
      */
     readonly umtsLocation: OPTIONAL<UMTSLocation>;
     /**
      * @summary `olduserLocationInfo`.
+     * @description
+     * 
+     * Earlier user location, coded the same way as the current user location
+     * (module comment). Table 10.5.2 reports old location, before a
+     * tracking-area update, in the EPS location parameter; it does not name
+     * this component.
+     * 
      * @public
      * @readonly
      */
     readonly olduserLocationInfo: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lastVisitedTAI`.
+     * @description
+     * 
+     * Tracking-area identity, coded as the TAI field in 3GPP TS 29.274 (module
+     * comment).
+     * 
      * @public
      * @readonly
      */
     readonly lastVisitedTAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tAIlist`.
+     * @description
+     * 
+     * TAI list coded according to 3GPP TS 24.301, without the TAI-list
+     * information-element identifier (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly tAIlist: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `threeGPP2Bsid`.
+     * @description
+     * 
+     * Payload of the 3GPP2-BSID AVP defined in 3GPP TS 29.212, and only that
+     * payload (module comment). Clause 10 tables do not name this component.
+     * 
      * @public
      * @readonly
      */
     readonly threeGPP2Bsid: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `civicAddress`.
+     * @description
+     * 
+     * Civic address of the cell site, when known (table 16.1, the 4G path). The
+     * EPS event tables do not otherwise define it.
+     * 
      * @public
      * @readonly
      */
     readonly civicAddress: OPTIONAL<CivicAddress>;
     /**
      * @summary `operatorSpecificInfo`.
+     * @description
+     * 
+     * Other CSP-specific information whose format is not standardized (module
+     * comment, table 16.1).
+     * 
      * @public
      * @readonly
      */
     readonly operatorSpecificInfo: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uELocationTimestamp`.
+     * @description
+     * 
+     * Date and time the location was obtained (module comment). Conditional
+     * when target location is provided (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly uELocationTimestamp: OPTIONAL<EPSLocation_uELocationTimestamp>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

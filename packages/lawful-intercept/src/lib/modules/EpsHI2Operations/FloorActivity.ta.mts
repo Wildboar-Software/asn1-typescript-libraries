@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FloorActivity
  * @description
  * 
+ * Which talk-burst control action happened in a PTC session. Mandatory on the
+ * floor-control continue record (clause 17.2.14, table 17.2.14). Floor control
+ * and talk-burst control are the same thing. The module comments state the
+ * boolean polarity; the table states which TBCP message each component reports.
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,54 +52,108 @@ export
 class FloorActivity {
     /**
      * @summary `tBCP_Request`.
+     * @description
+     * 
+     * The PTC client asked the server for permission to send a talk burst
+     * (table 17.2.14). The module comment says the value is false unless it
+     * "indicates Granted", which does not match that table.
+     * 
      * @public
      * @readonly
      */
     readonly tBCP_Request: BOOLEAN;
     /**
      * @summary `tBCP_Granted`.
+     * @description
+     * 
+     * The server granted this client permission to send a talk burst (table
+     * 17.2.14). The module comment says false unless permission to talk was
+     * granted.
+     * 
      * @public
      * @readonly
      */
     readonly tBCP_Granted: BOOLEAN;
     /**
      * @summary `tBCP_Deny`.
+     * @description
+     * 
+     * The server denied this client permission to send a talk burst (table
+     * 17.2.14). The module comment says the value is true unless permission was
+     * granted.
+     * 
      * @public
      * @readonly
      */
     readonly tBCP_Deny: BOOLEAN;
     /**
      * @summary `tBCP_Queued`.
+     * @description
+     * 
+     * The request to talk is queued, when queued floor control is supported
+     * (table 17.2.14). The module comment says false unless the request is in
+     * queue.
+     * 
      * @public
      * @readonly
      */
     readonly tBCP_Queued: BOOLEAN;
     /**
      * @summary `tBCP_Release`.
+     * @description
+     * 
+     * The request to talk has completed (table 17.2.14). The module comment
+     * says true when the request is completed, and false when the client still
+     * holds the request.
+     * 
      * @public
      * @readonly
      */
     readonly tBCP_Release: BOOLEAN;
     /**
      * @summary `tBCP_Revoke`.
+     * @description
+     * 
+     * The server took the media resource back, for pre-emption or to stop an
+     * over-long talk burst (table 17.2.14). The module comment says false
+     * unless the server cancelled the privilege.
+     * 
      * @public
      * @readonly
      */
     readonly tBCP_Revoke: BOOLEAN;
     /**
      * @summary `tBCP_Taken`.
+     * @description
+     * 
+     * Some other client has permission to send a talk burst. Sent to every
+     * client except the one that was granted (table 17.2.14). The module
+     * comment says the value is true unless another client has permission.
+     * 
      * @public
      * @readonly
      */
     readonly tBCP_Taken: BOOLEAN;
     /**
      * @summary `tBCP_Idle`.
+     * @description
+     * 
+     * Nobody has permission to send a talk burst, and the server may accept a
+     * request (table 17.2.14). The module comment says true unless the
+     * talk-burst protocol is taken.
+     * 
      * @public
      * @readonly
      */
     readonly tBCP_Idle: BOOLEAN;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

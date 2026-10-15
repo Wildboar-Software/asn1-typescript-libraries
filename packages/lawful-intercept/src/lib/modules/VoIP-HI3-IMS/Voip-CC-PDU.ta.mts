@@ -14,6 +14,16 @@ import { VoipLIC_header, _decode_VoipLIC_header, _encode_VoipLIC_header } from "
  * @summary Voip_CC_PDU
  * @description
  * 
+ * VoIP CC PDU sent to the LEMF over UDP or TCP, chosen nationally: correlation
+ * header and payload. The correlation number from the CC Intercept Triggering
+ * Function is the one placed in the CC. IPsec is recommended. The LEMF stores
+ * packets with the sequence number and timestamp and correlates CC to IRI with
+ * the VoIP correlation number.
+ * 
+ * 3GPP TS 33.108, annex K.1 and clause 12.6.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +40,20 @@ export
 class Voip_CC_PDU {
     /**
      * @summary `voipLIC_header`.
+     * @description
+     * 
+     * VoIP LI correlation header. 3GPP TS 33.108, annex K.1.
      * @public
      * @readonly
      */
     readonly voipLIC_header: VoipLIC_header;
     /**
      * @summary `payload`.
+     * @description
+     * 
+     * User-plane packets exchanged between participants of the intercepted
+     * call, including the IP layer and above (for example IP/UDP/RTP). 3GPP TS
+     * 33.108, annex K.3.
      * @public
      * @readonly
      */

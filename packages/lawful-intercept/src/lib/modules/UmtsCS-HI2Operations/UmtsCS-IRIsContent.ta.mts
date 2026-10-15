@@ -13,6 +13,12 @@ import { UmtsCS_IRISequence, _decode_UmtsCS_IRISequence, _encode_UmtsCS_IRISeque
  * @summary UmtsCS_IRIsContent
  * @description
  * 
+ * One CS IRI record, or a sequence of them for the same LEA destination.
+ *
+ * Aggregation is optional and only when several records are already available.
+ * Records are sent immediately and are not held in the delivery or mediation
+ * function in order to aggregate. 3GPP TS 33.108, annex B.3a.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

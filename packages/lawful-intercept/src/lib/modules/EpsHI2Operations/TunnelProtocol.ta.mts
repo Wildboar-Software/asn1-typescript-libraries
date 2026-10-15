@@ -13,6 +13,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TunnelProtocol
  * @description
  * 
+ * Tunnel protocol that carries signalling and communications between the HeNB
+ * and the EPC (clause 10.5.2). On E-UTRAN attach and detach, provide it when a
+ * closed or hybrid HeNB is used (tables 10.5.1.1.1 and 10.5.1.1.2).
+ * 
+ * Either three octets from the Value field of the RADIUS Tunnel-Type attribute
+ * (RFC 2868), naming the outer tunnel between the HeNB and the SeGW as the SeGW
+ * sees it, with the tunnel type taken from 3GPP TS 33.320 (module comment), or
+ * an empty indication that TS 33.320 requires native IPsec between the HeNB and
+ * the SeGW.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

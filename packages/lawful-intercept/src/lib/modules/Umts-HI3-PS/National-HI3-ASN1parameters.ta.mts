@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary National_HI3_ASN1parameters
  * @description
  * 
+ * National parameters on the version-1 ULIC header, encoded per national
+ * requirements. The country code selects which national parameters apply.
+ * 
+ * 3GPP TS 33.108, annex C.1.3 and annex B.4.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +46,21 @@ export
 class National_HI3_ASN1parameters {
     /**
      * @summary `countryCode`.
+     * @description
+     * 
+     * ISO 3166-1 country code of the country whose parameters follow the
+     * extension marker. 3GPP TS 33.108, annex B.4.
      * @public
      * @readonly
      */
     readonly countryCode: PrintableString;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Further national parameters for that country, encoded per national
+     * requirements. The module recommends a version parameter and an IANA
+     * vendor identification, and avoiding tags 240 to 255.
      * @public
      * @readonly
      */

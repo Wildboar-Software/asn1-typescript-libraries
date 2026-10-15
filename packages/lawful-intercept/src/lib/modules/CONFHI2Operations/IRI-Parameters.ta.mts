@@ -41,6 +41,17 @@ import { MediaModification, _decode_MediaModification, _encode_MediaModification
  * @summary IRI_Parameters
  * @description
  * 
+ * Parameters of one IMS conference IRI. The AS/MRFC reports conference IRI; the
+ * MRFP is involved in delivering content of communication.
+ *
+ * Stage 2 mandatory, conditional, and optional inclusion in tables 11.3 to
+ * 11.15 overrides module syntax that marks a parameter optional. Each IRI is
+ * sent within seconds of the triggering event at least 95 percent of the time,
+ * subject to national requirements, and carries a timestamp from the
+ * intercepting node's clock. Security and the number of simultaneous
+ * interceptions are national requirements. 3GPP TS 33.108, clauses 11.2 to
+ * 11.5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -90,150 +101,344 @@ export
 class IRI_Parameters {
     /**
      * @summary `hi2confDomainId`.
+     * @description
+     * 
+     * 3GPP HI2 conference domain identifier. Present on the IRI. 3GPP TS
+     * 33.108, annex B.11.1.
+     * 
      * @public
      * @readonly
      */
     readonly hi2confDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * LIID agreed between the LEA and the operator, associated with the target.
+     * Required on every record sent to the LEMF.
+     *
+     * Alphanumeric. One LIID per target identity, or one LIID for several IMS
+     * identities of the same target (recommended when correlating IMS
+     * signalling with GSN content). Separate LIIDs when several LEAs intercept
+     * the same identity. If the GSN and CSCF LIIDs differ, the LEMF recovers
+     * the association. 3GPP TS 33.108, clause 11.1.2.
+     * 
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time of the event at the AS/MRFC, from that node's clock.
+     * Required on every conference record. Creation and update records also
+     * carry separate provisioned start and end times, which are not this
+     * timestamp. 3GPP TS 33.108, clauses 11.2.1 and 11.5.
+     * 
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `partyInformation`.
+     * @description
+     * 
+     * Identity of the target. Conditional: provide at least one of the public
+     * or private IMS identity, and any other that is available. Usually only
+     * one of those two is observed.
+     *
+     * The sender uses a single identity instance. The set bound of 1 to 10
+     * remains only so older encodings still decode. Table 11.2 also maps an
+     * observed NAI onto this parameter; this module defines no NAI component,
+     * and the specification does not say how an NAI would be carried. 3GPP TS
+     * 33.108, clause 11.5 and annex B.11.1.
+     * 
      * @public
      * @readonly
      */
     readonly partyInformation: OPTIONAL<PartyIdentity[]>;
     /**
      * @summary `national_Parameters`.
+     * @description
+     * 
+     * National extension of the conference record. The clause allows the ICE or
+     * DF2 to extend the information for a specific country. The national layout
+     * is not defined. 3GPP TS 33.108, clause 11.5.0.
+     * 
      * @public
      * @readonly
      */
     readonly national_Parameters: OPTIONAL<National_Parameters>;
     /**
      * @summary `networkIdentifier`.
+     * @description
+     * 
+     * Operator identifier plus the ICE address. Required on every conference
+     * record even though the module marks it optional.
+     *
+     * The operator identifier is mandatory and should be internationally
+     * unique. The network-element identifier is optional (an IP address or
+     * another identifier); national regulation may require it. 3GPP TS 33.108,
+     * clause 11.1.3. Stage 2 tables 11.3 to 11.15 require this parameter.
+     * 
      * @public
      * @readonly
      */
     readonly networkIdentifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `confEvent`.
+     * @description
+     * 
+     * Which conference event this record reports. Required. Table 11.1 maps
+     * each event to begin, continue, end, or report. 3GPP TS 33.108, clause
+     * 11.5.
+     * 
      * @public
      * @readonly
      */
     readonly confEvent: ConfEvent;
     /**
      * @summary `correlation`.
+     * @description
+     * 
+     * Correlates content of communication with IRI, and correlates IRI records
+     * of one conference session. For a given target it is unique per conference
+     * session, and at least unique among that target's concurrent
+     * communications under one authorization. The same value may be shared by
+     * several target identities in one session.
+     *
+     * Required on communication records (tables 11.3 to 11.12) and conditional
+     * on an unsuccessful start (table 11.13). Creation and update tables do not
+     * list it. A continue record shall not introduce a new value. Informative
+     * annex N.3 describes example uses; it is not a requirement. 3GPP TS
+     * 33.108, clauses 11.1.4 and 11.5.1.3.
+     * 
      * @public
      * @readonly
      */
     readonly correlation: OPTIONAL<ConfCorrelation>;
     /**
      * @summary `confID`.
+     * @description
+     * 
+     * URI of the conference being monitored. Conditional: together with the
+     * temporary conference URI, provide at least one when available. 3GPP TS
+     * 33.108, clause 11.5, tables 11.2 to 11.15.
+     * 
      * @public
      * @readonly
      */
     readonly confID: OPTIONAL<IMSIdentity>;
     /**
      * @summary `tempConfID`.
+     * @description
+     * 
+     * Temporarily allocated URI of the conference being monitored. Conditional
+     * with the conference URI: provide at least one when available. 3GPP TS
+     * 33.108, clause 11.5, table 11.2.
+     * 
      * @public
      * @readonly
      */
     readonly tempConfID: OPTIONAL<IMSIdentity>;
     /**
      * @summary `listOfPotConferees`.
+     * @description
+     * 
+     * Parties invited to the conference or permitted to join, when that list is
+     * available. Conditional on successful and unsuccessful start, creation,
+     * and update. 3GPP TS 33.108, clause 11.5, tables 11.3, 11.13, 11.14, and
+     * 11.15.
+     * 
      * @public
      * @readonly
      */
     readonly listOfPotConferees: OPTIONAL<PartyIdentity[]>;
     /**
      * @summary `listOfConferees`.
+     * @description
+     * 
+     * Parties currently on the conference, and parties who have accessed it.
+     * Conditional on a successful start: provide at least one when available
+     * (table 11.3). Mandatory when interception starts on an active conference
+     * (table 11.4). Bearers each conferee actively supports are included with
+     * that party. 3GPP TS 33.108, clause 11.5.
+     * 
      * @public
      * @readonly
      */
     readonly listOfConferees: OPTIONAL<ConfPartyInformation[]>;
     /**
      * @summary `joinPartyID`.
+     * @description
+     * 
+     * Party that joined or attempted to join. Required on successful and
+     * unsuccessful party-join continue records. On success, include every
+     * bearer that party supports. 3GPP TS 33.108, clause 11.5, tables 11.5 and
+     * 11.6.
+     * 
      * @public
      * @readonly
      */
     readonly joinPartyID: OPTIONAL<ConfPartyInformation>;
     /**
      * @summary `leavePartyID`.
+     * @description
+     * 
+     * Party that left, was dropped, or was requested to leave. Required on
+     * successful and unsuccessful party-leave continue records. On success,
+     * include the bearers that party supported.
+     *
+     * Table 11.7 also requires a party-leave reason, and table 11.2 names an
+     * ASN.1 parameter `reason` for it. This IRI has no such component. The
+     * specification does not say where that reason is carried. 3GPP TS 33.108,
+     * clause 11.5.
+     * 
      * @public
      * @readonly
      */
     readonly leavePartyID: OPTIONAL<ConfPartyInformation>;
     /**
      * @summary `listOfBearerAffectedParties`.
+     * @description
+     * 
+     * Conferees affected by a media-bearer modification. Required on a
+     * successful bearer-modify continue record (table 11.9). The unsuccessful
+     * bearer-modify table does not list it. 3GPP TS 33.108, clause 11.5.
+     * 
      * @public
      * @readonly
      */
     readonly listOfBearerAffectedParties: OPTIONAL<ConfPartyInformation[]>;
     /**
      * @summary `confEventInitiator`.
+     * @description
+     * 
+     * Who requested the event: the conference server, the target, or a
+     * conferee. Required on successful and unsuccessful conference end. On
+     * party join or leave, include it when the requester is not the joining or
+     * leaving party. 3GPP TS 33.108, clause 11.5, tables 11.2, 11.5 to 11.8,
+     * 11.11, and 11.12.
+     * 
      * @public
      * @readonly
      */
     readonly confEventInitiator: OPTIONAL<ConfEventInitiator>;
     /**
      * @summary `confEventFailureReason`.
+     * @description
+     * 
+     * Why a conference start, party join, party leave, bearer modification, or
+     * conference end failed. Required on the matching unsuccessful record
+     * (tables 11.6, 11.8, 11.10, 11.11, and 11.13). The octet layout of the
+     * reason is not defined. 3GPP TS 33.108, clause 11.5.
+     * 
      * @public
      * @readonly
      */
     readonly confEventFailureReason: OPTIONAL<ConfEventFailureReason>;
     /**
      * @summary `confEndReason`.
+     * @description
+     * 
+     * Why the conference ended. Required on a successful conference-end record.
+     * Examples in the table: time limit expired, a party termination command,
+     * or the last user left. The octet layout is not defined. This is not the
+     * party-leave reason named `reason` in table 11.2. 3GPP TS 33.108, clause
+     * 11.5, tables 11.2 and 11.12.
+     * 
      * @public
      * @readonly
      */
     readonly confEndReason: OPTIONAL<Reason>;
     /**
      * @summary `potConfStartInfo`.
+     * @description
+     * 
+     * Provisioned start time of a conference being created or updated, when
+     * configured. Not the LI event timestamp. Conditional on creation and
+     * update report records. 3GPP TS 33.108, clause 11.5, tables 11.14 and
+     * 11.15.
+     * 
      * @public
      * @readonly
      */
     readonly potConfStartInfo: OPTIONAL<TimeStamp>;
     /**
      * @summary `potConfEndInfo`.
+     * @description
+     * 
+     * Provisioned end time of a conference being created or updated, when
+     * configured. Not the LI event timestamp. Conditional on creation and
+     * update report records. 3GPP TS 33.108, clause 11.5, tables 11.14 and
+     * 11.15.
+     * 
      * @public
      * @readonly
      */
     readonly potConfEndInfo: OPTIONAL<TimeStamp>;
     /**
      * @summary `recurrenceInfo`.
+     * @description
+     * 
+     * Recurrence of a created or updated conference, when configured.
+     * Conditional on those report records. Stage 2 says this is absent for a
+     * single instance. 3GPP TS 33.108, clause 11.5, tables 11.14 and 11.15.
+     * 
      * @public
      * @readonly
      */
     readonly recurrenceInfo: OPTIONAL<RecurrenceInfo>;
     /**
      * @summary `confControllerIDs`.
+     * @description
+     * 
+     * Parties that have control privileges, when that configuration exists.
+     * Conditional on creation and update report records. 3GPP TS 33.108, clause
+     * 11.5, tables 11.2, 11.14, and 11.15.
+     * 
      * @public
      * @readonly
      */
     readonly confControllerIDs: OPTIONAL<PartyIdentity[]>;
     /**
      * @summary `mediamodification`.
+     * @description
+     * 
+     * Whether media was added, removed, or changed. Required on successful and
+     * unsuccessful bearer-modify continue records. Table 11.9 also asks for the
+     * media value; this parameter does not carry that value. Server-side and
+     * user-side SDP are carried with the party. `unknown` is defined in the
+     * module and is not described in clause 11. 3GPP TS 33.108, clause 11.5,
+     * tables 11.2, 11.9, and 11.10.
+     * 
      * @public
      * @readonly
      */
     readonly mediamodification: OPTIONAL<MediaModification>;
     /**
      * @summary `bearerModifyPartyID`.
+     * @description
+     * 
+     * Party that modified a bearer, or attempted to. Required on successful and
+     * unsuccessful bearer-modify continue records. 3GPP TS 33.108, clause 11.5,
+     * tables 11.9 and 11.10.
+     * 
      * @public
      * @readonly
      */
     readonly bearerModifyPartyID: OPTIONAL<ConfPartyInformation>;
     /**
      * @summary `listOfWaitConferees`.
+     * @description
+     * 
+     * Conferees waiting to join, for example parties called into a conference
+     * that has not started. Reported only when the service lets a party access
+     * the conference without receiving media. Conditional on a successful start
+     * (table 11.3 note) and on an unsuccessful start when the identities are
+     * known (table 11.13). 3GPP TS 33.108, clause 11.5.
+     * 
      * @public
      * @readonly
      */

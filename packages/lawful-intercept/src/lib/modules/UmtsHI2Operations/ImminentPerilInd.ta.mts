@@ -17,6 +17,15 @@ enum _enum_for_ImminentPerilInd {
  * @summary ImminentPerilInd
  * @description
  * 
+ * MCPTT imminent-peril group call: the request, the response, or the
+ * cancellation. The notification is either to the target or from the target.
+ * 
+ * Mandatory on the imminent-peril group-call report (table 17.3.6).
+ * 
+ * 3GPP TS 33.108, clause 17.3.6 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +46,11 @@ type ImminentPerilInd = _enum_for_ImminentPerilInd | ENUMERATED;
 
 /**
  * @summary ImminentPerilInd_request
+ * @description
+ * 
+ * Imminent-peril group-call request, to or from the target.
+ * 
+ * 3GPP TS 33.108, table 17.3.6 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -45,6 +59,9 @@ const ImminentPerilInd_request: ImminentPerilInd = 1; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary request
+ * @description
+ * 
+ * Imminent-peril group-call request (table 17.3.6).
  * @constant
  * @type {number}
  */
@@ -53,6 +70,11 @@ const request: ImminentPerilInd = ImminentPerilInd_request; /* SHORT_NAMED_ENUME
 
 /**
  * @summary ImminentPerilInd_response
+ * @description
+ * 
+ * Response to an imminent-peril group call, to or from the target.
+ * 
+ * 3GPP TS 33.108, table 17.3.6 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -61,6 +83,9 @@ const ImminentPerilInd_response: ImminentPerilInd = 2; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary response
+ * @description
+ * 
+ * Response to an imminent-peril group call (table 17.3.6).
  * @constant
  * @type {number}
  */
@@ -69,6 +94,11 @@ const response: ImminentPerilInd = ImminentPerilInd_response; /* SHORT_NAMED_ENU
 
 /**
  * @summary ImminentPerilInd_cancel
+ * @description
+ * 
+ * Cancellation of the imminent-peril group call.
+ * 
+ * 3GPP TS 33.108, table 17.3.6 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -77,6 +107,9 @@ const ImminentPerilInd_cancel: ImminentPerilInd = 3; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary cancel
+ * @description
+ * 
+ * Cancellation of the imminent-peril group call (table 17.3.6).
  * @constant
  * @type {number}
  */

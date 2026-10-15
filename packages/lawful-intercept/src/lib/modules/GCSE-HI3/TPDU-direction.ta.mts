@@ -17,6 +17,13 @@ enum _enum_for_TPDU_direction {
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a GCSE T-PDU. Only from the target, to the target, and unknown
+ * are defined. Clause 14.2.7 does not add further direction rules.
+ * 
+ * 3GPP TS 33.108, annex B.14.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,6 +43,10 @@ type TPDU_direction = _enum_for_TPDU_direction | ENUMERATED;
 
 /**
  * @summary TPDU_direction_from_target
+ * @description
+ * 
+ * T-PDU from the target. Clause 14.2.7 does not further define this value. 3GPP
+ * TS 33.108, annex B.14.2.
  * @constant
  * @type {number}
  */
@@ -44,6 +55,9 @@ const TPDU_direction_from_target: TPDU_direction = 1; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary from_target
+ * @description
+ * 
+ * T-PDU from the target. Annex B.14.2.
  * @constant
  * @type {number}
  */
@@ -52,6 +66,10 @@ const from_target: TPDU_direction = TPDU_direction_from_target; /* SHORT_NAMED_E
 
 /**
  * @summary TPDU_direction_to_target
+ * @description
+ * 
+ * T-PDU to the target. Clause 14.2.7 does not further define this value. 3GPP
+ * TS 33.108, annex B.14.2.
  * @constant
  * @type {number}
  */
@@ -60,6 +78,9 @@ const TPDU_direction_to_target: TPDU_direction = 2; /* LONG_NAMED_ENUMERATED_VAL
 
 /**
  * @summary to_target
+ * @description
+ * 
+ * T-PDU to the target. Annex B.14.2.
  * @constant
  * @type {number}
  */
@@ -68,6 +89,10 @@ const to_target: TPDU_direction = TPDU_direction_to_target; /* SHORT_NAMED_ENUME
 
 /**
  * @summary TPDU_direction_unknown
+ * @description
+ * 
+ * Direction is unknown. Clause 14.2.7 does not further define this value. 3GPP
+ * TS 33.108, annex B.14.2.
  * @constant
  * @type {number}
  */
@@ -76,6 +101,9 @@ const TPDU_direction_unknown: TPDU_direction = 3; /* LONG_NAMED_ENUMERATED_VALUE
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * Direction is unknown. Annex B.14.2.
  * @constant
  * @type {number}
  */

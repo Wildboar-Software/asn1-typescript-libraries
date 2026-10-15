@@ -15,6 +15,12 @@ import { Port_Number, _decode_Port_Number, _encode_Port_Number } from "../EpsHI2
  * @summary RTPSetting
  * @description
  * 
+ * IP address and port of the target at the PTC server for the RTP session.
+ * Mandatory on the pre-established session record (table 17.2.20). The module
+ * comment states the same address and port.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,30 @@ export
 class RTPSetting {
     /**
      * @summary `ip_address`.
+     * @description
+     * 
+     * IP address at the PTC server for the RTP session (module comment).
+     * Together with the port, mandatory on the pre-established session record
+     * (table 17.2.20).
      * @public
      * @readonly
      */
     readonly ip_address: IPAddress;
     /**
      * @summary `port_number`.
+     * @description
+     * 
+     * Port at the PTC server for the RTP session, from 0 to 65535. Mandatory
+     * with the address on table 17.2.20.
      * @public
      * @readonly
      */
     readonly port_number: Port_Number;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

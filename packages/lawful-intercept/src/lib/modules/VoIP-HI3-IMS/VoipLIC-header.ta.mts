@@ -31,6 +31,15 @@ import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identif
  * @summary VoipLIC_header
  * @description
  * 
+ * BER-encoded correlation header for IMS-based VoIP CC. PTC CC uses the same
+ * module (clause 17.1.4). For a VoIP session the correlation number is unique
+ * and ties CC to IRI and ties IRI records and CC within that session (clause
+ * 12.1.4).
+ * 
+ * 3GPP TS 33.108, annex K.2 and clause 12.6.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,72 +84,125 @@ export
 class VoipLIC_header {
     /**
      * @summary `hi3voipDomainId`.
+     * @description
+     * 
+     * 3GPP VoIP HI3 domain identifier in this header (`hi3voip` under
+     * `threeGPPSUBDomainId`). 3GPP TS 33.108, annex K.2.
      * @public
      * @readonly
      */
     readonly hi3voipDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lIID`.
+     * @description
+     * 
+     * Lawful interception identifier. Handling is a national requirement. 3GPP
+     * TS 33.108, annex K.2.
      * @public
      * @readonly
      */
     readonly lIID: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `voipCorrelationNumber`.
+     * @description
+     * 
+     * For VoIP, the same contents as the CC value inside IRI-to-CC-Correlation
+     * inside IMS-VoIP-Correlation on HI2. For PTC, the same contents as the CC
+     * value inside IRI-to-CC-Correlation inside CorrelationValues on HI2.
+     * Unique per VoIP session (clause 12.1.4). The LEMF correlates CC to IRI
+     * with it. 3GPP TS 33.108, annex K.2 and annex K.4.
      * @public
      * @readonly
      */
     readonly voipCorrelationNumber: VoipCorrelationNumber;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Handling is a national requirement. 3GPP TS 33.108, annex K.2.
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `sequence_number`.
+     * @description
+     * 
+     * Integer incremented each time a T-PDU is delivered. Handling is a
+     * national requirement. 3GPP TS 33.108, annex K.2.
      * @public
      * @readonly
      */
     readonly sequence_number: INTEGER;
     /**
      * @summary `t_PDU_direction`.
+     * @description
+     * 
+     * Direction of the T-PDU: from the target, to the target, combined, or
+     * unknown. 3GPP TS 33.108, annex K.2.
      * @public
      * @readonly
      */
     readonly t_PDU_direction: TPDU_direction;
     /**
      * @summary `national_HI3_ASN1parameters`.
+     * @description
+     * 
+     * Encoded per national requirements. 3GPP TS 33.108, annex K.2.
      * @public
      * @readonly
      */
     readonly national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     /**
      * @summary `ice_type`.
+     * @description
+     * 
+     * Node that intercepted the T-PDU, when the delivery or mediation function
+     * has it. 3GPP TS 33.108, annex K.2. For VPLMN S8HR, use `lmISF` or `sGW`
+     * (clause 12.7.3).
      * @public
      * @readonly
      */
     readonly ice_type: OPTIONAL<ICE_type>;
     /**
      * @summary `payload_description`.
+     * @description
+     * 
+     * Optional description of the payload so the LEMF can process HI3 without
+     * waiting for media information from HI2. When implemented, send the RTP
+     * payload description as soon as DF3 has it, and again on each later
+     * change. 3GPP TS 33.108, annex K.2.
      * @public
      * @readonly
      */
     readonly payload_description: OPTIONAL<Payload_description>;
     /**
      * @summary `networkIdentifier`.
+     * @description
+     * 
+     * Network element reporting the CC. The module states this is mandatory
+     * when used for PTC. 3GPP TS 33.108, clause 17.1.4 and annex B.12.
      * @public
      * @readonly
      */
     readonly networkIdentifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `pTCSessionInfo`.
+     * @description
+     * 
+     * PTC session. With the VoIP correlation number, identifies one PTC talk
+     * burst. The module states this is mandatory when used for PTC. PTC is Push
+     * to Talk over Cellular (PoC or MCPTT). 3GPP TS 33.108, clause 17 and
+     * clause 17.1.4.
      * @public
      * @readonly
      */
     readonly pTCSessionInfo: OPTIONAL<UTF8String>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

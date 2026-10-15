@@ -11,6 +11,11 @@ import { MBMSSerSubscriberList_Item, _decode_MBMSSerSubscriberList_Item, _encode
  * @summary MBMSSerSubscriberList
  * @description
  * 
+ * List of users subscribed to the MBMS service the target asked to join. The
+ * list may be very long. Optional on the clause 9.5.1 records (table 9.2).
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

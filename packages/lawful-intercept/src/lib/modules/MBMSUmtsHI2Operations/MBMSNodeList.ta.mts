@@ -11,6 +11,12 @@ import { MBMSNodeList_Item, _decode_MBMSNodeList_Item, _encode_MBMSNodeList_Item
  * @summary MBMSNodeList
  * @description
  * 
+ * Downstream nodes that requested the MBMS bearer and that receive
+ * notifications and MBMS data. Table 9.2 also maps the BM-SC identifier to
+ * mBMSNODELIST.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

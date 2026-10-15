@@ -17,6 +17,10 @@ import { LogicalFunctionType, _decode_LogicalFunctionType, _encode_LogicalFuncti
  * @summary DataNodeIdentifier
  * @description
  * 
+ * Which logical function produced an IRI when several functions share one
+ * physical element (table 10.5.2). Optional on the EPS event records. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +40,46 @@ export
 class DataNodeIdentifier {
     /**
      * @summary `dataNodeAddress`.
+     * @description
+     * 
+     * Address of that element. Clause 10.1.2 allows a network-element
+     * identifier to be an IP address; national regulations may require it. The
+     * specification tables do not further define this component.
+     * 
      * @public
      * @readonly
      */
     readonly dataNodeAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `logicalFunctionType`.
+     * @description
+     * 
+     * Which function in the element produced the event: PDN-GW, MME, S-GW,
+     * ePDG, or HSS (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly logicalFunctionType: OPTIONAL<LogicalFunctionType>;
     /**
      * @summary `dataNodeName`.
+     * @description
+     * 
+     * Identifier of the data node inside the CSP domain, a name, a number, or
+     * both (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly dataNodeName: OPTIONAL<PrintableString>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -89,6 +115,11 @@ class DataNodeIdentifier {
 
         /**
          * @summary The enum used as the type of the component `logicalFunctionType`
+         * @description
+         * 
+         * Which function in the element produced the event: PDN-GW, MME, S-GW,
+         * ePDG, or HSS (table 10.5.2).
+         * 
          * @public
          * @static
          */

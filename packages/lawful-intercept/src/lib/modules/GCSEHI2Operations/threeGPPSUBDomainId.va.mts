@@ -11,6 +11,12 @@ import { lawfulInterceptDomainId } from "../GCSEHI2Operations/lawfulInterceptDom
  * @summary threeGPPSUBDomainId
  * @description
  * 
+ * 3GPP lawful-intercept subdomain, arc `threeGPP(4)` under the ETSI
+ * lawful-intercept identifier.
+ *
+ * Parent of `hi2gcse(13)`. Not carried as a value in a GCSE IRI. 3GPP TS
+ * 33.108, annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

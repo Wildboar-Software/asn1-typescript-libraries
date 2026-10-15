@@ -20,6 +20,14 @@ import { SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_
  * @summary SMS_report_sMS_Contents
  * @description
  * 
+ * SMS TPDU and the attributes that say who sent it, whether transfer succeeded,
+ * whether the server will send more SMS, and whether content was removed for an
+ * IRI-only intercept.
+ * 
+ * The TPDU is conditional, for backward compatibility, and is the SMS content
+ * the LEMF receives. IRI-only intercepts apply annex P before delivery. 3GPP TS
+ * 33.108, clause 6.5.1.1, table 6.7, and table 15.2.3.1; annex B.3 and annex P.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,30 +70,73 @@ export
 class SMS_report_sMS_Contents {
     /**
      * @summary `sms_initiator`.
+     * @description
+     * 
+     * Who sent the SMS: the target (mobile originated), the server (mobile
+     * terminated), or an undefined party. Mandatory on an SMS REPORT.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.7, and table 15.2.3.1; annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly sms_initiator: SMS_report_sMS_Contents_sms_initiator;
     /**
      * @summary `transfer_status`.
+     * @description
+     * 
+     * Whether transfer of the SMS succeeded, failed, or is undefined. Annex B.3
+     * says the first value means the transfer succeeded. Stage 2 does not say
+     * when each value is sent.
+     * 
+     * 3GPP TS 33.108, annex B.3. The SMS REPORT trigger options are in clause
+     * 6.5.1.1.
+     * 
      * @public
      * @readonly
      */
     readonly transfer_status: OPTIONAL<SMS_report_sMS_Contents_transfer_status>;
     /**
      * @summary `other_message`.
+     * @description
+     * 
+     * On a terminating SMS, whether the server will send further SMS: yes, no,
+     * or undefined. Annex B.3. Stage 2 table 6.7 does not list this parameter.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly other_message: OPTIONAL<SMS_report_sMS_Contents_other_message>;
     /**
      * @summary `content`.
+     * @description
+     * 
+     * SMS TPDU, in the format defined for the mobile (3GPP TS 23.040 clause
+     * 9.2). Annex B.3 limits the string to 1..270 octets. Conditional, for
+     * backward compatibility. The other party's identity is inside the TPDU.
+     * For IRI-only SMS, apply annex P before delivery. If the TPDU is omitted,
+     * the service-centre address shall be provided; if the TPDU is present,
+     * that address is optional (table 6.7).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.7, table 15.2.3.1, annex B.3, and
+     * annex P.
+     * 
      * @public
      * @readonly
      */
     readonly content: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sMSContentRemovedIndicator`.
+     * @description
+     * 
+     * TRUE when SMS content was removed by the annex P procedure, FALSE when it
+     * was not. Conditional, for backward compatibility. The LEMF uses it to
+     * tell an IRI-only TPDU from a TPDU that still contains the user content.
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.7, table 15.2.3.1, and annex P.
+     * 
      * @public
      * @readonly
      */

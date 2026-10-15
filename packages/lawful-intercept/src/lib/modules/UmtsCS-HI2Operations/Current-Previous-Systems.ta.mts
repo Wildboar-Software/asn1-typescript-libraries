@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Current_Previous_Systems
  * @description
  * 
+ * Serving system and MSC before and after a location registration change.
+ * Previous values are conditional on cancel location and on register location.
+ * Current values are conditional on register location. 3GPP TS 33.108, tables
+ * 5.5C and 5.5D, annex B.3a.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +45,75 @@ export
 class Current_Previous_Systems {
     /**
      * @summary `current_Serving_System_Identifier`.
+     * @description
+     * 
+     * Current VPLMN identity, mobile country code and mobile network code,
+     * ITU-T E.212. Conditional on register location. Table 5.5D's condition
+     * cell for this parameter says "Provide the previous VPLMN id", which
+     * conflicts with the parameter name and with the annex B.3a comment. 3GPP
+     * TS 33.108, table 5.5D and annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly current_Serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `current_Serving_MSC_Number`.
+     * @description
+     * 
+     * E.164 number of the current serving MSC. Conditional on register
+     * location. 3GPP TS 33.108, table 5.5D and annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly current_Serving_MSC_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `current_Serving_MSC_Address`.
+     * @description
+     * 
+     * IP address of the current serving MSC, or its Diameter Origin-Host and
+     * Origin-Realm. Conditional on register location. Table 5.5D's condition
+     * mentions only the IP address. 3GPP TS 33.108, table 5.5D and annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly current_Serving_MSC_Address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `previous_Serving_System_Identifier`.
+     * @description
+     * 
+     * Previous VPLMN identity, mobile country code and mobile network code,
+     * ITU-T E.212. Conditional on cancel location and on register location.
+     * 3GPP TS 33.108, tables 5.5C and 5.5D, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly previous_Serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `previous_Serving_MSC_Number`.
+     * @description
+     * 
+     * E.164 number of the previous serving MSC, as included in the intercepted
+     * MAP message. Conditional on cancel location and on register location.
+     * 3GPP TS 33.108, table 5.5 and annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly previous_Serving_MSC_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `previous_Serving_MSC_Address`.
+     * @description
+     * 
+     * IP address of the previous serving MSC, or its Diameter Origin-Host and
+     * Origin-Realm. Table 5.5 describes the IP address included in the
+     * intercepted MAP message and does not mention Diameter. Conditional on
+     * cancel location and on register location. 3GPP TS 33.108, table 5.5 and
+     * annex B.3a.
+     * 
      * @public
      * @readonly
      */

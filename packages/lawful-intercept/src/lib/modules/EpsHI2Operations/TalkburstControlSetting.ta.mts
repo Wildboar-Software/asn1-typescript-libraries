@@ -16,6 +16,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TalkburstControlSetting
  * @description
  * 
+ * Talk-burst control protocol selection for a PTC session. Clause 17.2.14
+ * defines floor control as talk-burst control and points at OMA-PoC-AD and
+ * OMA-PoC user plane, and it does not name this parameter. The module says the
+ * parameter set is what the PTC server selected from the SDP offer in the
+ * incoming SIP INVITE from the PTC client, and that the port is the PTC
+ * server's port for the talk-burst control protocol.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +46,41 @@ export
 class TalkburstControlSetting {
     /**
      * @summary `talk_BurstControlProtocol`.
+     * @description
+     * 
+     * Talk-burst control protocol for the session. Clause 17.2.14 identifies
+     * that protocol with floor control and cites OMA-PoC-AD and the OMA-PoC
+     * user plane. The handover text does not define the contents of this
+     * string.
      * @public
      * @readonly
      */
     readonly talk_BurstControlProtocol: UTF8String;
     /**
      * @summary `talk_Burst_parameters`.
+     * @description
+     * 
+     * Talk-burst parameters the PTC server selected from those in the SDP offer
+     * of the incoming SIP INVITE from the PTC client (module comment).
      * @public
      * @readonly
      */
     readonly talk_Burst_parameters: VisibleString[];
     /**
      * @summary `tBCP_PortNumber`.
+     * @description
+     * 
+     * PTC server port for the talk-burst control protocol, from 0 to 65535
+     * (module comment).
      * @public
      * @readonly
      */
     readonly tBCP_PortNumber: INTEGER;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

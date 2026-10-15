@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ParameterName
  * @description
  * 
+ * Name of one element-descriptor parameter.
+ * 
+ * `integername` is a numeric name. `textName` is a text name. Clause 15.3 does
+ * not further define either alternative.
+ * 
+ * 3GPP TS 33.108, annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

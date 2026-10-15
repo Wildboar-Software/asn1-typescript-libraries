@@ -15,6 +15,12 @@ enum _enum_for_MediaSecFailureIndication {
  * @summary MediaSecFailureIndication
  * @description
  * 
+ * The procedure that retrieves encryption keys from the KMS failed. Clause 7
+ * table 7.2 and table 7.4: optional, and may be provided on that failure. The
+ * only named cause is generic.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +38,11 @@ type MediaSecFailureIndication = _enum_for_MediaSecFailureIndication | ENUMERATE
 
 /**
  * @summary MediaSecFailureIndication_genericFailure
+ * @description
+ * 
+ * Generic failure to obtain encryption keys from the KMS (clause 7, table 7.4).
+ * The specification defines no more specific cause. Optional; may be provided
+ * on failure.
  * @constant
  * @type {number}
  */
@@ -40,6 +51,9 @@ const MediaSecFailureIndication_genericFailure: MediaSecFailureIndication = 0; /
 
 /**
  * @summary genericFailure
+ * @description
+ * 
+ * Generic failure to obtain keys from the KMS (clause 7).
  * @constant
  * @type {number}
  */

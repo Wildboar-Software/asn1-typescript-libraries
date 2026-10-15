@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CCKeyInfo
  * @description
  * 
+ * One decryption key for an SRTP stream of an IMS session. Several streams
+ * (audio, video, and others) may each have their own key and salt. Sent in the
+ * media-decryption IRI after the MF has collected tickets and obtained keys
+ * from the KMS (clause 7.5.1, table 7.4). How those keys are protected on HI2
+ * is for further study (clause 7.5.0). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +41,49 @@ export
 class CCKeyInfo {
     /**
      * @summary `cCCSID`.
+     * @description
+     * 
+     * Maps this key to the SRTP streams the LEMF must decrypt. Several streams
+     * of one session may use different keys. When available, the value is the
+     * CS_ID from the ticket-exchange headers in IETF RFC 6043 (table 7.4).
+     * Conditional if available.
+     * 
      * @public
      * @readonly
      */
     readonly cCCSID: OCTET_STRING;
     /**
      * @summary `cCDecKey`.
+     * @description
+     * 
+     * Decryption key for both media directions. Conditional if available (table
+     * 7.4).
+     * 
      * @public
      * @readonly
      */
     readonly cCDecKey: OCTET_STRING;
     /**
      * @summary `cCSalt`.
+     * @description
+     * 
+     * Salt that belongs with the decryption key. Conditional if available
+     * (table 7.4). The module comment also says this field reports the CS_ID
+     * from the RFC 6043 ticket-exchange headers; table 7.4 assigns that CS_ID
+     * role to the stream identifier.
+     * 
      * @public
      * @readonly
      */
     readonly cCSalt: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

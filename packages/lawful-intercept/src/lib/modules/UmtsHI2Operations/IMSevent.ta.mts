@@ -21,6 +21,21 @@ enum _enum_for_IMSevent {
  * @summary IMSevent
  * @description
  * 
+ * IMS action that caused this IRI. The defined values are an unfiltered SIP
+ * message, a header-only SIP message, decryption keys, start of interception on
+ * an established session, an XCAP request, an XCAP response, or CC unavailable.
+ * 
+ * Clause 7.5 also describes HSS reports (serving system, subscriber-record
+ * change, registration termination, location-information request) as IMS
+ * events. Those four kinds are not values of this enumeration. In this module
+ * the packet-domain event values that cover the HLR forms of those reports are
+ * on the GPRS event, and registration termination is marked for further study
+ * there.
+ * 
+ * 3GPP TS 33.108, clause 7.5 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -59,6 +74,12 @@ type IMSevent = _enum_for_IMSevent | ENUMERATED;
 
 /**
  * @summary IMSevent_unfilteredSIPmessage
+ * @description
+ * 
+ * The whole SIP message is sent. The DF2 or MF removes location when the
+ * warrant does not require it.
+ * 
+ * 3GPP TS 33.108, clause 7.5 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -67,6 +88,9 @@ const IMSevent_unfilteredSIPmessage: IMSevent = 1; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary unfilteredSIPmessage
+ * @description
+ * 
+ * The whole SIP message is sent (annex B.3).
  * @constant
  * @type {number}
  */
@@ -75,6 +99,13 @@ const unfilteredSIPmessage: IMSevent = IMSevent_unfilteredSIPmessage; /* SHORT_N
 
 /**
  * @summary IMSevent_sIPheaderOnly
+ * @description
+ * 
+ * The warrant requires only IRI, so specific content in the SIP message, such
+ * as a MESSAGE body, was deleted before delivery to the LEMF. Unknown headers
+ * are kept. SDP is still reported.
+ * 
+ * 3GPP TS 33.108, table 7.2 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -83,6 +114,9 @@ const IMSevent_sIPheaderOnly: IMSevent = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sIPheaderOnly
+ * @description
+ * 
+ * IRI-only warrant: SIP content other than SDP was removed (table 7.2).
  * @constant
  * @type {number}
  */
@@ -91,6 +125,11 @@ const sIPheaderOnly: IMSevent = IMSevent_sIPheaderOnly; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary IMSevent_decryptionKeysAvailable
+ * @description
+ * 
+ * This IRI carries the CC decryption keys for the intercepted session.
+ * 
+ * 3GPP TS 33.108, table 7.4 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -99,6 +138,9 @@ const IMSevent_decryptionKeysAvailable: IMSevent = 3; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary decryptionKeysAvailable
+ * @description
+ * 
+ * The IRI carries CC decryption keys (table 7.4).
  * @constant
  * @type {number}
  */
@@ -107,6 +149,12 @@ const decryptionKeysAvailable: IMSevent = IMSevent_decryptionKeysAvailable; /* S
 
 /**
  * @summary IMSevent_startOfInterceptionForIMSEstablishedSession
+ * @description
+ * 
+ * Interception started on an IMS session that was already established. The
+ * offer and answer headers and SDP are included when available.
+ * 
+ * 3GPP TS 33.108, table 7.5 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -115,6 +163,9 @@ const IMSevent_startOfInterceptionForIMSEstablishedSession: IMSevent = 4; /* LON
 
 /**
  * @summary startOfInterceptionForIMSEstablishedSession
+ * @description
+ * 
+ * Interception started on an IMS session that was already up (table 7.5).
  * @constant
  * @type {number}
  */
@@ -123,6 +174,12 @@ const startOfInterceptionForIMSEstablishedSession: IMSevent = IMSevent_startOfIn
 
 /**
  * @summary IMSevent_xCAPRequest
+ * @description
+ * 
+ * The XCAP request for the target's IMS supplementary-service settings is
+ * included.
+ * 
+ * 3GPP TS 33.108, table 7.6 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -131,6 +188,9 @@ const IMSevent_xCAPRequest: IMSevent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xCAPRequest
+ * @description
+ * 
+ * The XCAP request is included (table 7.6).
  * @constant
  * @type {number}
  */
@@ -139,6 +199,12 @@ const xCAPRequest: IMSevent = IMSevent_xCAPRequest; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary IMSevent_xCAPResponse
+ * @description
+ * 
+ * The XCAP response for the target's IMS supplementary-service settings is
+ * included.
+ * 
+ * 3GPP TS 33.108, table 7.6 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -147,6 +213,9 @@ const IMSevent_xCAPResponse: IMSevent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xCAPResponse
+ * @description
+ * 
+ * The XCAP response is included (table 7.6).
  * @constant
  * @type {number}
  */
@@ -155,6 +224,12 @@ const xCAPResponse: IMSevent = IMSevent_xCAPResponse; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary IMSevent_ccUnavailable
+ * @description
+ * 
+ * Media interception was required, but the media is not available to the CSP.
+ * Clause 12.5 limits this report to that case.
+ * 
+ * 3GPP TS 33.108, clause 12.5 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -163,6 +238,9 @@ const IMSevent_ccUnavailable: IMSevent = 7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ccUnavailable
+ * @description
+ * 
+ * Required media is not available for interception (clause 12.5).
  * @constant
  * @type {number}
  */

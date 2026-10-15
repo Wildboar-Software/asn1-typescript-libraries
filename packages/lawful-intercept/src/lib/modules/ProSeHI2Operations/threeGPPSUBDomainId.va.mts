@@ -11,6 +11,12 @@ import { lawfulInterceptDomainId } from "../ProSeHI2Operations/lawfulInterceptDo
  * @summary threeGPPSUBDomainId
  * @description
  * 
+ * 3GPP lawful-intercept subdomain, arc `threeGPP(4)` under the ETSI
+ * lawful-intercept identifier.
+ *
+ * Parent of `hi2prose(15)`. Not carried as a value in a ProSe IRI. 3GPP TS
+ * 33.108, annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

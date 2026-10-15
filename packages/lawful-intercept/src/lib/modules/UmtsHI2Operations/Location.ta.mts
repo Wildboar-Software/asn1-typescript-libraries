@@ -27,6 +27,18 @@ import { Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _en
  * @summary Location
  * @description
  * 
+ * Location of the target, or of the cell site when the MF enriches an IRI or
+ * builds a separate cell site report. Provide it when location reporting is
+ * authorized. The LEMF uses it to place the target or the reported cell.
+ * 
+ * Packet-domain event tables make it conditional. PTC records include it when
+ * the target's location is authorized (clause 17). A cell site report uses an
+ * IRI-Report and puts the cell identity here together with any known civic
+ * address, coordinates, and carrier-specific data (clause 16).
+ * 
+ * 3GPP TS 33.108, clauses 4.5.0, 6.5.1, 16, and 17; annex B.3.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -87,72 +99,168 @@ export
 class Location {
     /**
      * @summary `e164_Number`.
+     * @description
+     * 
+     * ISUP location number, parameter field only, as in ETSI EN 300 356.
+     * Included when that number is the location available for the target.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly e164_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `globalCellID`.
+     * @description
+     * 
+     * Cell identity in the MAP format of 3GPP TS 29.002. A cell site report
+     * includes the identity of the cell, for example this value, together with
+     * any supplemental cell-site data.
+     * 
+     * 3GPP TS 33.108, clause 16.4 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly globalCellID: OPTIONAL<GlobalCellID>;
     /**
      * @summary `rAI`.
+     * @description
+     * 
+     * Routing area identifier of the current SGSN. Six octets, coded as in 3GPP
+     * TS 24.008 clause 10.5.5.15 without the Routing Area Identification IEI.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly rAI: OPTIONAL<Rai>;
     /**
      * @summary `gsmLocation`.
+     * @description
+     * 
+     * Geographical coordinates of the target, or of the cell site when the MF
+     * adds cell-site information. Clause 16 places latitude, longitude, and
+     * azimuth here when they are known.
+     * 
+     * 3GPP TS 33.108, clause 16.3, table 16.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly gsmLocation: OPTIONAL<GSMLocation>;
     /**
      * @summary `umtsLocation`.
+     * @description
+     * 
+     * UMTS geographical area: a point, a point with an uncertainty, or a
+     * polygon of at most 15 points.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly umtsLocation: OPTIONAL<UMTSLocation>;
     /**
      * @summary `sAI`.
+     * @description
+     * 
+     * Service Area Identity. Octets 1-3 are the PLMN identity, octets 4-5 the
+     * location area code, and octets 6-7 the service area code, as in 3GPP TS
+     * 25.413.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly sAI: OPTIONAL<Sai>;
     /**
      * @summary `oldRAI`.
+     * @description
+     * 
+     * Routing area identifier of the old SGSN, same six-octet coding as the
+     * current RAI (3GPP TS 24.008 clause 10.5.5.15, without the IEI). On a
+     * location-update REPORT the old location is optional and is sent only by
+     * the old SGSN, when authorized and available (table 6.6).
+     * 
+     * 3GPP TS 33.108, clause 6.5.1.1, table 6.6, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly oldRAI: OPTIONAL<Rai>;
     /**
      * @summary `tAI`.
+     * @description
+     * 
+     * Tracking area identity received from the MME, six octets, coded as in
+     * 3GPP TS 29.118 without the TAI IEI. Applicable only to CS traffic for
+     * which the available location is the location received from the MME.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly tAI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `eCGI`.
+     * @description
+     * 
+     * E-UTRAN Cell Global Identity received from the MME, eight octets, coded
+     * as in 3GPP TS 29.118 without the ECGI IEI. Same CS-from-MME limit as the
+     * tracking area identity.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly eCGI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `civicAddress`.
+     * @description
+     * 
+     * Civic description of an H(e)NodeB or a WLAN hotspot, used to enrich the
+     * IRI when the LEMF is given civic elements rather than the target's
+     * geographical coordinates. Elements follow IETF RFC 4776 or RFC 5139, ISO
+     * 3166-1 and ISO 3166-2, ISO 639-1, and UPU SB42-4. See 3GPP TS 33.106
+     * clause 5.11 and TS 33.107 clause 4. Clause 16: the civic address of the
+     * cell site, if known.
+     * 
+     * 3GPP TS 33.108, clause 16, table 16.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly civicAddress: OPTIONAL<CivicAddress>;
     /**
      * @summary `operatorSpecificInfo`.
+     * @description
+     * 
+     * Other CSP-specific information. The format is not standardized. Clause 16
+     * allows it on cell-site information when the carrier provides it.
+     * 
+     * 3GPP TS 33.108, clause 16, table 16.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly operatorSpecificInfo: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uELocationTimestamp`.
+     * @description
+     * 
+     * Date and time the location source established this UE location. If that
+     * time cannot be provided to the MF/DF, the unknown alternative is used.
+     * Conditional when a target location is provided.
+     * 
+     * 3GPP TS 33.108, clause 4.5.0, clause 6.5.1, and annex B.3.
+     * 
      * @public
      * @readonly
      */

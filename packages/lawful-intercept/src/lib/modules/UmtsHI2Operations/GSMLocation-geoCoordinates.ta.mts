@@ -17,6 +17,20 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * @summary GSMLocation_geoCoordinates
  * @description
  * 
+ * GSM geographic coordinates of the target or of a cell site. Latitude is
+ * `XDDMMSS.SS` and longitude is `XDDDMMSS.SS`: hemisphere or east/west,
+ * degrees, minutes, and optional fractional seconds.
+ * 
+ * Annex B.3 examples are `N502312` and `E1122312.18`. The datum defaults to WGS
+ * 84. Azimuth, when present, is the bearing from true north. Table 16.1 uses
+ * that azimuth as the median of the cell antenna sector, and these coordinates
+ * as the cell site position, when the MF enriches an IRI or builds a cell-site
+ * report.
+ * 
+ * 3GPP TS 33.108, annex B.3 and table 16.1.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +52,67 @@ export
 class GSMLocation_geoCoordinates {
     /**
      * @summary `latitude`.
+     * @description
+     * 
+     * Latitude in the annex B.3 form `XDDMMSS.SS`: N or S, degrees, minutes,
+     * and optional fractional seconds. Short-form example: `N502312`.
+     * 
+     * Table 16.1 uses this as the cell site's latitude when the MF enriches an
+     * IRI or sends a cell-site report, if the latitude is known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and table 16.1.
      * @public
      * @readonly
      */
     readonly latitude: PrintableString;
     /**
      * @summary `longitude`.
+     * @description
+     * 
+     * Longitude in the annex B.3 form `XDDDMMSS.SS`: E or W, degrees, minutes,
+     * and optional fractional seconds. Long-form example: `E1122312.18`.
+     * 
+     * Table 16.1 uses this as the cell site's longitude when that longitude is
+     * known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and table 16.1.
      * @public
      * @readonly
      */
     readonly longitude: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     * 
+     * Coordinate reference. Annex B.3 defaults it to WGS 84 when the IRI omits
+     * it. The module also allows WGS 72 and European Datum 50.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary `azimuth`.
+     * @description
+     * 
+     * Bearing from true north, in degrees from 0 to 359. Table 16.1 uses it,
+     * when known, as the median of the cell antenna sector on a 2G or 3G
+     * cell-site enrichment.
+     * 
+     * 3GPP TS 33.108, annex B.3 and table 16.1.
      * @public
      * @readonly
      */
     readonly azimuth: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
@@ -99,12 +150,23 @@ class GSMLocation_geoCoordinates {
 
     /**
      * @summary Getter that returns the default value for `mapDatum`.
+     * @description
+     * 
+     * Annex B.3 default when the IRI omits the datum: WGS 84.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @static
      * @method
      */
     public static get _default_value_for_mapDatum () { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
+         * @description
+         * 
+         * Coordinate reference of this GSM location. Annex B.3 defaults it to
+         * WGS 84 and also allows WGS 72 and European Datum 50.
+         * 
+         * 3GPP TS 33.108, annex B.3.
          * @public
          * @static
          */

@@ -12,6 +12,20 @@ import { IRI_Parameters, _decode_IRI_Parameters, _encode_IRI_Parameters } from "
  * @summary IWLANUmtsIRIContent
  * @description
  * 
+ * One HI2 record for an I-WLAN event.
+ * 
+ * `iRI_Begin_record` is the first event of an intercepted tunnel: successful
+ * tunnel establishment, or start of intercept when at least one tunnel is
+ * already up (one Begin for each such tunnel). `iRI_End_record` is tunnel
+ * disconnect. `iRI_Report_record` covers access initiation and termination,
+ * unsuccessful tunnel setup, start of intercept with no tunnel yet, and
+ * packet-data header information.
+ * 
+ * Table 8.1 maps each event to Begin, End, or Report. There is no Continue
+ * record in this module.
+ * 
+ * 3GPP TS 33.108, clause 8.5.1 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

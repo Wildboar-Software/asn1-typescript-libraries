@@ -16,6 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPS_DSMIP_SpecificParameters
  * @description
  * 
+ * DSMIP parameters of the intercepted procedure. Coded according to 3GPP TS
+ * 24.303 and the RFCs it cites (module comment). Carried when the IRI is a
+ * DSMIP registration, deregistration, session modification, home-agent switch,
+ * or start of interception with an active DSMIP tunnel (clause 10.5.1). 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,60 +49,110 @@ export
 class EPS_DSMIP_SpecificParameters {
     /**
      * @summary `lifetime`.
+     * @description
+     * 
+     * Lifetime of the tunnel. Nonzero for registration or a lifetime extension;
+     * zero for deregistration (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly lifetime: OPTIONAL<INTEGER>;
     /**
      * @summary `requestedIPv6HomePrefix`.
+     * @description
+     * 
+     * IPv6 home prefix the UE requested (table 10.5.2). Coded according to RFC
+     * 5026 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly requestedIPv6HomePrefix: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `homeAddress`.
+     * @description
+     * 
+     * Home IP address of the UE (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly homeAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPv4careOfAddress`.
+     * @description
+     * 
+     * Local IPv4 address the access network assigned to the UE (table 10.5.2,
+     * care-of address).
+     * 
      * @public
      * @readonly
      */
     readonly iPv4careOfAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iPv6careOfAddress`.
+     * @description
+     * 
+     * Local IPv6 address the access network assigned to the UE (table 10.5.2,
+     * care-of address).
+     * 
      * @public
      * @readonly
      */
     readonly iPv6careOfAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `aPN`.
+     * @description
+     * 
+     * APN of the PDN connection. From the MME this is the APN the UE provided;
+     * from the S-GW or PDN-GW it is the APN in use (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `status`.
+     * @description
+     * 
+     * Failure cause when the protocol reports it this way. Table 10.5.2 uses
+     * status for a failed session modification and, depending on the protocol,
+     * for a failed attach.
+     * 
      * @public
      * @readonly
      */
     readonly status: OPTIONAL<INTEGER>;
     /**
      * @summary `hSS_AAA_address`.
+     * @description
+     * 
+     * Address of the HSS or AAA that triggered a PDN-GW reallocation (table
+     * 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly hSS_AAA_address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `targetPDN_GW_Address`.
+     * @description
+     * 
+     * Address of the PDN-GW the UE is reallocated to (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly targetPDN_GW_Address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

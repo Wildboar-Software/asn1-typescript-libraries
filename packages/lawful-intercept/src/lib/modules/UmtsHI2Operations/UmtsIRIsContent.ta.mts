@@ -13,6 +13,12 @@ import { UmtsIRISequence, _decode_UmtsIRISequence, _encode_UmtsIRISequence } fro
  * @summary UmtsIRIsContent
  * @description
  * 
+ * HI2 payload for this module: one IRI record, or an aggregated sequence of
+ * records. Aggregation is optional and must not delay delivery (clause 4.4.1,
+ * annex B.3).
+ * 
+ * 3GPP TS 33.108, clause 4.4.1 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

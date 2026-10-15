@@ -15,6 +15,11 @@ import { PartyInformation_partyIdentity, _decode_PartyInformation_partyIdentity,
  * @summary PartyInformation
  * @description
  * 
+ * One party of the MMS event: role and identities. The event tables require at
+ * least one observed identity.
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,18 +67,33 @@ export
 class PartyInformation {
     /**
      * @summary `party_Qualifier`.
+     * @description
+     * 
+     * Role of this party. Annex B.15 names only the MMS target.
+     * 
+     * 3GPP TS 33.108, annex B.15.
      * @public
      * @readonly
      */
     readonly party_Qualifier: PartyInformation_party_Qualifier;
     /**
      * @summary `partyIdentity`.
+     * @description
+     * 
+     * Identities of this party. Provide at least one of those the record lists,
+     * and the others when available. The event tables also list IMEI and
+     * IMPU/IMPI, which have no component here.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly partyIdentity: PartyInformation_partyIdentity;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

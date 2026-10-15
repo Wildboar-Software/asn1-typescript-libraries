@@ -13,6 +13,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CCKeyInfo
  * @description
  * 
+ * One decryption key for an intercepted IMS media stream. A session can carry
+ * several, one per stream.
+ * 
+ * Sent on the media-decryption-key REPORT after the MF has taken MIKEY tickets
+ * from SIP and obtained the keys from the KMS. Conditional, and only when the
+ * key is available.
+ * 
+ * 3GPP TS 33.108, clause 7.5.1 and table 7.4.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +45,56 @@ export
 class CCKeyInfo {
     /**
      * @summary `cCCSID`.
+     * @description
+     * 
+     * Maps this key to the encrypted stream. Table 7.4 says it maps the session
+     * key to the SRTP streams and, when available, carries the CS_ID from the
+     * MIKEY ticket-exchange headers (IETF RFC 6043). Provide it when available.
+     * 
+     * The annex B.3 comment that cites the RFC 6043 CS_ID is written on the
+     * salt, not on this component.
+     * 
+     * 3GPP TS 33.108, table 7.4 and annex B.3.
      * @public
      * @readonly
      */
     readonly cCCSID: OCTET_STRING;
     /**
      * @summary `cCDecKey`.
+     * @description
+     * 
+     * Decryption key for both media directions. Provide it when available.
+     * Annex B.3 does not define the key layout.
+     * 
+     * 3GPP TS 33.108, table 7.4.
      * @public
      * @readonly
      */
     readonly cCDecKey: OCTET_STRING;
     /**
      * @summary `cCSalt`.
+     * @description
+     * 
+     * Salt for this stream. Table 7.4 says to provide it when available and
+     * does not define the contents.
+     * 
+     * The annex B.3 comment on this component says it reports the CS_ID from
+     * the MIKEY ticket-exchange headers (IETF RFC 6043). Table 7.4 places that
+     * sentence on the stream identifier instead.
+     * 
+     * 3GPP TS 33.108, table 7.4 and annex B.3.
      * @public
      * @readonly
      */
     readonly cCSalt: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

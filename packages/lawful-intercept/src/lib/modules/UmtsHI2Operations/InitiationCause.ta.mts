@@ -17,6 +17,17 @@ enum _enum_for_InitiationCause {
  * @summary InitiationCause
  * @description
  * 
+ * Who started the PTC session. Mandatory on session initiation (table 17.2.4).
+ * 
+ * Annex B.3: the target requests a session, or receives a session initiation
+ * from the network or another party. If an associate was the originator, that
+ * associate's identity is included when it is known. The third value names the
+ * originating party; this enumeration does not itself carry the identity.
+ * 
+ * 3GPP TS 33.108, clause 17.2.4 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +49,11 @@ type InitiationCause = _enum_for_InitiationCause | ENUMERATED;
 
 /**
  * @summary InitiationCause_requests
+ * @description
+ * 
+ * The target requested the PTC session.
+ * 
+ * 3GPP TS 33.108, table 17.2.4 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -46,6 +62,9 @@ const InitiationCause_requests: InitiationCause = 1; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary requests
+ * @description
+ * 
+ * The target requested the PTC session (table 17.2.4).
  * @constant
  * @type {number}
  */
@@ -54,6 +73,12 @@ const requests: InitiationCause = InitiationCause_requests; /* SHORT_NAMED_ENUME
 
 /**
  * @summary InitiationCause_received
+ * @description
+ * 
+ * The target received a session initiation from the network or from another
+ * party.
+ * 
+ * 3GPP TS 33.108, table 17.2.4 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -62,6 +87,9 @@ const InitiationCause_received: InitiationCause = 2; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary received
+ * @description
+ * 
+ * The target received the PTC session initiation (table 17.2.4).
  * @constant
  * @type {number}
  */
@@ -70,6 +98,13 @@ const received: InitiationCause = InitiationCause_received; /* SHORT_NAMED_ENUME
 
 /**
  * @summary InitiationCause_pTCOriginatingId
+ * @description
+ * 
+ * The originating PTC party is identified. Table 17.2.4 requires the
+ * associate's identity when an associate started the session, if that identity
+ * is known. This value does not itself carry the identity.
+ * 
+ * 3GPP TS 33.108, table 17.2.4 and annex B.3.
  * @constant
  * @type {number}
  */
@@ -78,6 +113,10 @@ const InitiationCause_pTCOriginatingId: InitiationCause = 3; /* LONG_NAMED_ENUME
 
 /**
  * @summary pTCOriginatingId
+ * @description
+ * 
+ * The originating PTC party is identified; the identity is carried separately
+ * (table 17.2.4).
  * @constant
  * @type {number}
  */

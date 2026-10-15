@@ -11,6 +11,12 @@ import { lawfulInterceptDomainId } from "../ThreeGPP-HI1NotificationOperations/l
  * @summary threeGPPSUBDomainId
  * @description
  * 
+ * 3GPP lawful-intercept subdomain, arc `threeGPP(4)` under the ETSI
+ * lawful-intercept identifier.
+ *
+ * Parent of `hi1(0) notificationOperations(1)`. 3GPP TS 33.108, annex M
+ * (informative) and the accompanying schema.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -100,6 +100,22 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  * @summary IRI_Parameters
  * @description
  * 
+ * Parameters of one HI2 record for EPS, and for the other services this module
+ * also carries (annex B.9).
+ * 
+ * Clause 10.5.1 states, per EPS event, which parameters are mandatory,
+ * conditional, or optional. Stage 2 inclusion overrides a syntactic omission
+ * (clause 10.5.1.0). The LIID is in every record sent to the LEMF (table 10.5.2
+ * note 2). A timestamp from the intercepting node's clock is mandatory on the
+ * EPS event records (clause 10.2.1).
+ * 
+ * The same record carries IMS IRI (clause 7.5), PTC IRI (clause 17), ProSe
+ * remote-UE IRI (clause 13.3, which requires annex B.9), a cell-site report
+ * (clause 16.4), and packet-domain IRI when clause 6.5.1 uses this HI2 or
+ * clause 10.0 applies Gn/Gp behaviour to the PDN-GW.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -261,432 +277,856 @@ export
 class IRI_Parameters {
     /**
      * @summary `hi2epsDomainId`.
+     * @description
+     * 
+     * Identifies the record as 3GPP HI2 for the EPS domain (module comment,
+     * annex B.9). Present on every record.
+     * 
      * @public
      * @readonly
      */
     readonly hi2epsDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * LIID agreed between the LEA and the operator. Alphanumeric; it may
+     * contain an authorization reference and the date of issue. One LIID may
+     * cover several identities of one target, and each LEA has its own LIID
+     * (clause 10.1.1). Required in every record. The LEMF uses it to associate
+     * IRI and content with the warrant.
+     * 
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time the intercepting node detected the event, from that node's
+     * clock (module comment, clause 10.2.1). Precision should be at least one
+     * second; national requirements may set it. Table 10.5.2 maps both event
+     * date and event time here. Mandatory on the EPS event records.
+     * 
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `initiator`.
+     * @description
+     * 
+     * Whether the procedure was started by the target or by the network (table
+     * 10.5.2). Conditional on EPS bearer activation, modification, and
+     * deactivation. For GPRS on this HI2, whether the PDP-context procedure was
+     * MS-requested or network-initiated (table 6.2).
+     * 
      * @public
      * @readonly
      */
     readonly initiator: OPTIONAL<IRI_Parameters_initiator>;
     /**
      * @summary `locationOfTheTarget`.
+     * @description
+     * 
+     * Location of the target, or the cell site (module comment). Table 10.5.2
+     * uses the EPS location parameter for EPS events and uses this parameter
+     * for LALS. Clause 16.4 uses it for 2G/3G cell-site information. Clause
+     * 6.5.1 uses it for PS location when that IRI is sent on this HI2.
+     * 
      * @public
      * @readonly
      */
     readonly locationOfTheTarget: OPTIONAL<Location>;
     /**
      * @summary `partyInformation`.
+     * @description
+     * 
+     * The parties concerned, their identities, and the information they
+     * provided (module comment). Observed MSISDN, A-MSISDN, IMSI, IMEI, ME
+     * identity, NAI, and external identifier are placed here (table 10.5.2,
+     * table 6.2, table 7.2). EPS event records require at least one observed
+     * identity and the others when available. At most ten parties.
+     * 
      * @public
      * @readonly
      */
     readonly partyInformation: OPTIONAL<PartyInformation[]>;
     /**
      * @summary `serviceCenterAddress`.
+     * @description
+     * 
+     * Address of the relevant server. For SMS, the SMS centre (module comment,
+     * table 6.2). Clause 15.2.2 points SMS over GPRS or UMTS at clause 6.
+     * Clause 10 defines no separate EPS SMS event.
+     * 
      * @public
      * @readonly
      */
     readonly serviceCenterAddress: OPTIONAL<PartyInformation>;
     /**
      * @summary `sMS`.
+     * @description
+     * 
+     * SMS content and the information that goes with it (module comment, table
+     * 6.2). Used for the packet-domain SMS report (clause 15.2.2).
+     * 
      * @public
      * @readonly
      */
     readonly sMS: OPTIONAL<SMS_report>;
     /**
      * @summary `national_Parameters`.
+     * @description
+     * 
+     * National parameters. The specification text does not define their
+     * contents.
+     * 
      * @public
      * @readonly
      */
     readonly national_Parameters: OPTIONAL<National_Parameters>;
     /**
      * @summary `ePSCorrelationNumber`.
+     * @description
+     * 
+     * Correlation number. For an EPS bearer or tunnel, unique per bearer or
+     * tunnel, to tie CC to IRI, IRI to IRI, and a LALS report to the triggering
+     * IRI (clause 10.1.3). The same number is kept across a Gn/Gp handover in
+     * one IRI transaction (clause 10.0). When the event is UMTS or GPRS, the
+     * module comment says this carries the GPRS correlation number (clause
+     * 6.1.3). A CSCF may place a correlation number here; it does not apply to
+     * HSS interception (clause 7.1.3). Mandatory on the bearer-deactivation END
+     * record (table 10.5.1.4.1).
+     * 
      * @public
      * @readonly
      */
     readonly ePSCorrelationNumber: OPTIONAL<EPSCorrelationNumber>;
     /**
      * @summary `ePSevent`.
+     * @description
+     * 
+     * Which EPS, ProSe, or packet-domain event this record reports (table
+     * 10.5.2, table 13.3.1-2, clause 6.5.1). Omitted on a LALS report that is
+     * not tied to an event (clause 10.5.0).
+     * 
      * @public
      * @readonly
      */
     readonly ePSevent: OPTIONAL<EPSEvent>;
     /**
      * @summary `sgsnAddress`.
+     * @description
+     * 
+     * Clause 6 and clause 10 do not define this component. The serving SGSN
+     * address in table 6.2 is the serving-SGSN address parameter.
+     * 
      * @public
      * @readonly
      */
     readonly sgsnAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `gPRSOperationErrorCode`.
+     * @description
+     * 
+     * Cause of a failed GPRS attach, a failed PDP-context activation, or a
+     * PDP-context deactivation (table 6.2, clause 6.5.0). Used when that PS
+     * event is reported on this HI2 (clause 6.5.1, clause 10.0). EPS failures
+     * use the GTPv2 cause fields (table 10.5.2). The octet layout is not
+     * defined.
+     * 
      * @public
      * @readonly
      */
     readonly gPRSOperationErrorCode: OPTIONAL<GPRSOperationErrorCode>;
     /**
      * @summary `ggsnAddress`.
+     * @description
+     * 
+     * Clause 6 and clause 10 do not define this component. Clause 6.1.3
+     * mentions a GGSN address only as one example of how a correlation number
+     * may be built.
+     * 
      * @public
      * @readonly
      */
     readonly ggsnAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `qOS`.
+     * @description
+     * 
+     * QoS of the PDP-context procedure (table 6.2). Conditional on an
+     * unsuccessful PDP-context activation (table 6.5). EPS bearer QoS is the
+     * bearer-QoS field of the GTPv2 parameters, not this (table 10.5.2).
+     * 
      * @public
      * @readonly
      */
     readonly qOS: OPTIONAL<UmtsQos>;
     /**
      * @summary `networkIdentifier`.
+     * @description
+     * 
+     * Operator identifier, plus an optional network-element identifier (clause
+     * 10.1.2). The operator identifier should be internationally unique.
+     * Mandatory on EPS IRI ("shall be provided"). For PS IRI, operator identity
+     * plus the SGSN, GGSN, or HLR address (table 6.2). National regulations may
+     * require the element identifier.
+     * 
      * @public
      * @readonly
      */
     readonly networkIdentifier: OPTIONAL<Network_Identifier>;
     /**
      * @summary `sMSOriginatingAddress`.
+     * @description
+     * 
+     * Originator of the SMS (table 6.2).
+     * 
      * @public
      * @readonly
      */
     readonly sMSOriginatingAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `sMSTerminatingAddress`.
+     * @description
+     * 
+     * Intended recipient of the SMS (table 6.2).
+     * 
      * @public
      * @readonly
      */
     readonly sMSTerminatingAddress: OPTIONAL<DataNodeAddress>;
     /**
      * @summary `iMSevent`.
+     * @description
+     * 
+     * Which IMS event this record reports (table 7.2, clause 7.5). Mandatory on
+     * the IMS records in clause 7.5.1.
+     * 
      * @public
      * @readonly
      */
     readonly iMSevent: OPTIONAL<IMSevent>;
     /**
      * @summary `sIPMessage`.
+     * @description
+     * 
+     * The SIP message, or the header plus any SDP, when the warrant is
+     * IRI-only. Unknown headers are kept. Location in the message is removed
+     * when location is not authorized. SMS content may be removed as in annex P
+     * while SMS headers stay (table 7.2). Mandatory on the SIP-message report
+     * (table 7.3).
+     * 
      * @public
      * @readonly
      */
     readonly sIPMessage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servingSGSN_number`.
+     * @description
+     * 
+     * E.164 number of the serving SGSN (table 6.2). Octets are coded according
+     * to 3GPP TS 23.003 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly servingSGSN_number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `servingSGSN_address`.
+     * @description
+     * 
+     * IP address of the serving SGSN. For an S4-SGSN this may be the Diameter
+     * identity and realm on S6d toward the HSS (table 6.2). Octets are coded
+     * according to 3GPP TS 23.003 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly servingSGSN_address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ldiEvent`.
+     * @description
+     * 
+     * Target entered or left an interception area. Optional, and only for
+     * location-dependent interception, on a GPRS location update (table 6.6).
+     * The EPS triggers are marked for further study (clause 10.5.1).
+     * 
      * @public
      * @readonly
      */
     readonly ldiEvent: OPTIONAL<LDIevent>;
     /**
      * @summary `correlation`.
+     * @description
+     * 
+     * Correlation other than the single EPS or GPRS correlation number (clause
+     * 7.1.3, table 7.2). PTC uses it to tie a session's IRI together and to its
+     * content (table 17.1.5).
+     * 
      * @public
      * @readonly
      */
     readonly correlation: OPTIONAL<CorrelationValues>;
     /**
      * @summary `ePS_GTPV2_specificParameters`.
+     * @description
+     * 
+     * GTPv2 parameters of the intercepted procedure (module comment, clause
+     * 10.5).
+     * 
      * @public
      * @readonly
      */
     readonly ePS_GTPV2_specificParameters: OPTIONAL<EPS_GTPV2_SpecificParameters>;
     /**
      * @summary `ePS_PMIP_specificParameters`.
+     * @description
+     * 
+     * PMIP parameters of the intercepted procedure (module comment, clause
+     * 10.5).
+     * 
      * @public
      * @readonly
      */
     readonly ePS_PMIP_specificParameters: OPTIONAL<EPS_PMIP_SpecificParameters>;
     /**
      * @summary `ePS_DSMIP_SpecificParameters`.
+     * @description
+     * 
+     * DSMIP parameters of the intercepted procedure (module comment, clause
+     * 10.5).
+     * 
      * @public
      * @readonly
      */
     readonly ePS_DSMIP_SpecificParameters: OPTIONAL<EPS_DSMIP_SpecificParameters>;
     /**
      * @summary `ePS_MIP_SpecificParameters`.
+     * @description
+     * 
+     * MIP parameters of the intercepted procedure (module comment, clause
+     * 10.5).
+     * 
      * @public
      * @readonly
      */
     readonly ePS_MIP_SpecificParameters: OPTIONAL<EPS_MIP_SpecificParameters>;
     /**
      * @summary `servingNodeAddress`.
+     * @description
+     * 
+     * Kept only for backward compatibility. The module comment says not to use
+     * it; visited-network identity replaces it.
+     * 
      * @public
      * @readonly
      */
     readonly servingNodeAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `visitedNetworkId`.
+     * @description
+     * 
+     * Visited network in the serving-system update for non-3GPP access, coded
+     * according to 3GPP TS 29.273 (table 10.5.2). The module comment also
+     * covers IMS and 3GPP TS 29.229. Table 7.2 uses the same parameter for the
+     * previous and the current visited network on HSS deregistration.
+     * 
      * @public
      * @readonly
      */
     readonly visitedNetworkId: OPTIONAL<UTF8String>;
     /**
      * @summary `mediaDecryption_info`.
+     * @description
+     * 
+     * Session keys and the extra information the LEMF needs to decrypt IMS
+     * content when media security applies (table 7.2, 3GPP TS 33.328). Included
+     * when the delivery function has it. Protection of the keys on HI2 is for
+     * further study (clause 7.5.0).
+     * 
      * @public
      * @readonly
      */
     readonly mediaDecryption_info: OPTIONAL<MediaDecryption_info>;
     /**
      * @summary `servingS4_SGSN_address`.
+     * @description
+     * 
+     * Diameter Origin-Host and Origin-Realm of the S4-SGSN (3GPP TS 29.272).
+     * Only the AVP data fields, joined by a semicolon (module comment, table
+     * 6.2).
+     * 
      * @public
      * @readonly
      */
     readonly servingS4_SGSN_address: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sipMessageHeaderOffer`.
+     * @description
+     * 
+     * Header of the SIP message that carried the SDP offer. Only for start of
+     * interception on an already established IMS session, and only if available
+     * (table 7.2 note 10, table 7.5).
+     * 
      * @public
      * @readonly
      */
     readonly sipMessageHeaderOffer: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sipMessageHeaderAnswer`.
+     * @description
+     * 
+     * Header of the SIP message that carried the SDP answer. Same condition as
+     * the offer header (table 7.5).
+     * 
      * @public
      * @readonly
      */
     readonly sipMessageHeaderAnswer: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sdpOffer`.
+     * @description
+     * 
+     * SDP offer of the IMS session. Only for start of interception on an
+     * already established session, if available (table 7.5).
+     * 
      * @public
      * @readonly
      */
     readonly sdpOffer: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sdpAnswer`.
+     * @description
+     * 
+     * SDP answer of the IMS session. Same condition as the offer (table 7.5).
+     * 
      * @public
      * @readonly
      */
     readonly sdpAnswer: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uLITimestamp`.
+     * @description
+     * 
+     * Time the user location information was acquired (table 10.5.2, table
+     * 6.2). Coded according to 3GPP TS 29.060. The upper four octets carry the
+     * timestamp; the lower four are undefined and the receiver ignores them
+     * (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly uLITimestamp: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `packetDataHeaderInformation`.
+     * @description
+     * 
+     * Copy or summary of intercepted packet headers, without content, for an
+     * active EPS bearer or session (clause 10.5.1.1) or, on this HI2, a PDP
+     * context (clause 6.5.1.1). A report. For IP fragments the flow identity
+     * may exist only on the first packet (note in clause 10.5.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly packetDataHeaderInformation: OPTIONAL<PacketDataHeaderInformation>;
     /**
      * @summary `mediaSecFailureIndication`.
+     * @description
+     * 
+     * The procedure that retrieves encryption keys from the KMS failed (table
+     * 7.2). Optional on the media-decryption report (table 7.4).
+     * 
      * @public
      * @readonly
      */
     readonly mediaSecFailureIndication: OPTIONAL<MediaSecFailureIndication>;
     /**
      * @summary `csgIdentity`.
+     * @description
+     * 
+     * Identity of a closed subscriber group inside one PLMN (table 10.5.2).
+     * Conditional when a closed or hybrid HeNB is used for the attach (table
+     * 10.5.1.1.1). The 27 bits of 3GPP TS 23.003 are placed with the most
+     * significant bit in the most significant bit of the first octet and the
+     * least significant bit in bit 6 of octet 4 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly csgIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `heNBIdentity`.
+     * @description
+     * 
+     * Home eNB serving the target (table 10.5.2). Conditional on attach via a
+     * HeNB (table 10.5.1.1.1). Four or six octets of the HNB unique identity,
+     * 3GPP TS 23.003 clause 4.10 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly heNBIdentity: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `heNBiPAddress`.
+     * @description
+     * 
+     * IP address of the HeNB serving the target, used during location
+     * verification (table 10.5.1.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly heNBiPAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `heNBLocation`.
+     * @description
+     * 
+     * Location of the HeNB serving the target, when authorized (table 10.5.2,
+     * table 10.5.1.1.1).
+     * 
      * @public
      * @readonly
      */
     readonly heNBLocation: OPTIONAL<HeNBLocation>;
     /**
      * @summary `tunnelProtocol`.
+     * @description
+     * 
+     * Tunnel protocol between the HeNB and the EPC (table 10.5.2). Conditional
+     * on attach via a HeNB.
+     * 
      * @public
      * @readonly
      */
     readonly tunnelProtocol: OPTIONAL<TunnelProtocol>;
     /**
      * @summary `pANI_Header_Info`.
+     * @description
+     * 
+     * Access type or class, and location if the warrant allows it, copied from
+     * P-Access-Network-Info headers of SIP the CSCF handled (clause 7.5, 3GPP
+     * TS 24.229 clause 7.2A.4). Optional on a SIP report when available (table
+     * 7.3).
+     * 
      * @public
      * @readonly
      */
     readonly pANI_Header_Info: OPTIONAL<PANI_Header_Info[]>;
     /**
      * @summary `imsVoIP`.
+     * @description
+     * 
+     * IRI and content correlation numbers of one IMS VoIP session. The LEMF
+     * treats IRI and content that carry them as one session (clause 12.1.4).
+     * May replace the correlation number or the correlation parameter for
+     * separated IMS VoIP (table 7.2 note 11).
+     * 
      * @public
      * @readonly
      */
     readonly imsVoIP: OPTIONAL<IMS_VoIP_Correlation>;
     /**
      * @summary `xCAPmessage`.
+     * @description
+     * 
+     * HTTP message, header and any XCAP body, of the target's IMS
+     * supplementary-service setting management on the Ut interface (module
+     * comment, 3GPP TS 24.623, table 7.2). Request and response are separate
+     * reports.
+     * 
      * @public
      * @readonly
      */
     readonly xCAPmessage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `logicalFunctionInformation`.
+     * @description
+     * 
+     * Which logical function in a physical element produced the event (table
+     * 10.5.2). Optional on the EPS records.
+     * 
      * @public
      * @readonly
      */
     readonly logicalFunctionInformation: OPTIONAL<DataNodeIdentifier>;
     /**
      * @summary `ccUnavailableReason`.
+     * @description
+     * 
+     * Why content cannot be intercepted when the warrant requires media but the
+     * media does not enter the CSP network (clause 12.5). Sent with the IMS
+     * event for that case.
+     * 
      * @public
      * @readonly
      */
     readonly ccUnavailableReason: OPTIONAL<PrintableString>;
     /**
      * @summary `carrierSpecificData`.
+     * @description
+     * 
+     * CSP-specific raw data about the HSS update. The CSP tells the LEMF how to
+     * read it (table 10.5.2). Conditional on the HSS subscriber-record change
+     * (table 10.5.1.1.17). Table 6.2 uses the same parameter for HLR-specific
+     * data when PS IRI is on this HI2.
+     * 
      * @public
      * @readonly
      */
     readonly carrierSpecificData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `current_previous_systems`.
+     * @description
+     * 
+     * Current and previous serving system and MME (table 10.5.2). Used on HSS
+     * cancel-location and register-location reports.
+     * 
      * @public
      * @readonly
      */
     readonly current_previous_systems: OPTIONAL<Current_Previous_Systems>;
     /**
      * @summary `change_Of_Target_Identity`.
+     * @description
+     * 
+     * Old and new target identities after a subscriber-record change (table
+     * 10.5.2). Mandatory on the HSS subscriber-record-change report (table
+     * 10.5.1.1.17). IMS may also include IMPI, SIP URI, and TEL URI (table
+     * 7.2).
+     * 
      * @public
      * @readonly
      */
     readonly change_Of_Target_Identity: OPTIONAL<Change_Of_Target_Identity>;
     /**
      * @summary `requesting_Network_Identifier`.
+     * @description
+     * 
+     * PLMN identity of the requesting network, MCC and MNC, ITU-T E.212 (table
+     * 10.5.2, table 6.2, table 7.2).
+     * 
      * @public
      * @readonly
      */
     readonly requesting_Network_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `requesting_Node_Type`.
+     * @description
+     * 
+     * Kind of node that made the request, such as MSC, SMS centre, GMLC, MME,
+     * or SGSN (table 10.5.2, table 7.2).
+     * 
      * @public
      * @readonly
      */
     readonly requesting_Node_Type: OPTIONAL<Requesting_Node_Type>;
     /**
      * @summary `serving_System_Identifier`.
+     * @description
+     * 
+     * VPLMN identity of the serving system, or of a third-party network
+     * interworking with the HSS, from the Diameter exchange (table 10.5.2). The
+     * module comment cites ITU-T E.212 and 3GPP TR 21.905.
+     * 
      * @public
      * @readonly
      */
     readonly serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proSeTargetType`.
+     * @description
+     * 
+     * Whether the target is a ProSe remote UE or a ProSe UE-to-network relay
+     * (table 13.3.1-2). Clause 10.0 adds clause 13 for those targets.
+     * 
      * @public
      * @readonly
      */
     readonly proSeTargetType: OPTIONAL<ProSeTargetType>;
     /**
      * @summary `proSeRelayMSISDN`.
+     * @description
+     * 
+     * MSISDN of the ProSe UE-to-network relay, and only when the target is the
+     * remote UE (table 13.3.1-2). Coded according to 3GPP TS 29.274 (module
+     * comment).
+     * 
      * @public
      * @readonly
      */
     readonly proSeRelayMSISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proSeRelayIMSI`.
+     * @description
+     * 
+     * IMSI of the ProSe UE-to-network relay, only when the target is the remote
+     * UE (table 13.3.1-2). Coded according to 3GPP TS 29.274.
+     * 
      * @public
      * @readonly
      */
     readonly proSeRelayIMSI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `proSeRelayIMEI`.
+     * @description
+     * 
+     * IMEI of the ProSe UE-to-network relay, only when the target is the remote
+     * UE (table 13.3.1-2). Coded according to 3GPP TS 29.274.
+     * 
      * @public
      * @readonly
      */
     readonly proSeRelayIMEI: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `extendedLocParameters`.
+     * @description
+     * 
+     * Extra location and QoS from LALS (table 10.5.2, table 6.2).
+     * 
      * @public
      * @readonly
      */
     readonly extendedLocParameters: OPTIONAL<ExtendedLocParameters>;
     /**
      * @summary `locationErrorCode`.
+     * @description
+     * 
+     * LALS positioning error (table 10.5.2, table 6.2).
+     * 
      * @public
      * @readonly
      */
     readonly locationErrorCode: OPTIONAL<LocationErrorCode>;
     /**
      * @summary `otherIdentities`.
+     * @description
+     * 
+     * Other IMPU or IMPI allocated to the target being deregistered in the HSS
+     * (table 7.2).
+     * 
      * @public
      * @readonly
      */
     readonly otherIdentities: OPTIONAL<PartyInformation[]>;
     /**
      * @summary `deregistrationReason`.
+     * @description
+     * 
+     * Why the HSS deregistered the target. Reason-Code AVP when the HSS
+     * initiates it; Server-Assignment-Type AVP when the S-CSCF indicates it;
+     * both from 3GPP TS 29.229 (table 7.2).
+     * 
      * @public
      * @readonly
      */
     readonly deregistrationReason: OPTIONAL<DeregistrationReason>;
     /**
      * @summary `requesting_Node_Identifier`.
+     * @description
+     * 
+     * Identifier of the node that made the request (table 7.2). Clause 10.5.2
+     * names the requesting node type and the requesting network, and does not
+     * define this identifier.
+     * 
      * @public
      * @readonly
      */
     readonly requesting_Node_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `roamingIndication`.
+     * @description
+     * 
+     * For an IMS event in the VPLMN, whether VoLTE roaming is local breakout or
+     * S8 home routing (table 7.2, module comment). Conditional when the VPLMN
+     * sends the SIP (table 7.3).
+     * 
      * @public
      * @readonly
      */
     readonly roamingIndication: OPTIONAL<VoIPRoamingIndication>;
     /**
      * @summary `cSREvent`.
+     * @description
+     * 
+     * This report is a cell-site report. Sent when the MF could not enrich the
+     * original IRI in time (clause 16.4).
+     * 
      * @public
      * @readonly
      */
     readonly cSREvent: OPTIONAL<CSREvent>;
     /**
      * @summary `ptc`.
+     * @description
+     * 
+     * PTC event information (module comment). Clause 17 defines the PTC
+     * records. PoC and MCPTT are both in scope and are delivered separately
+     * from other services (clause 17.1.0).
+     * 
      * @public
      * @readonly
      */
     readonly ptc: OPTIONAL<PTC>;
     /**
      * @summary `ptcEncryption`.
+     * @description
+     * 
+     * Information the LEMF needs to decrypt PTC media when the CSP provides or
+     * manages the encryption (clause 18, module comment).
+     * 
      * @public
      * @readonly
      */
     readonly ptcEncryption: OPTIONAL<PTCEncryptionInfo>;
     /**
      * @summary `additionalCellIDs`.
+     * @description
+     * 
+     * Primary cell of a secondary cell group, when available (table 10.5.2).
+     * The location parameter carries the primary cell of the primary cell
+     * group. Include both when the event's location condition is met and the
+     * secondary cell is known.
+     * 
      * @public
      * @readonly
      */
     readonly additionalCellIDs: OPTIONAL<AdditionalCellID[]>;
     /**
      * @summary `scefID`.
+     * @description
+     * 
+     * SCEF to which the UE has connected, as an FQDN (table 10.5.2, 3GPP TS
+     * 29.336 clause 8.4.5, RFC 3588 section 4.3). Several EPS events also apply
+     * to IoT NIDD via the SCEF (table 10.5.1 note 2).
+     * 
      * @public
      * @readonly
      */
     readonly scefID: OPTIONAL<UTF8String>;
     /**
      * @summary `national_HI2_ASN1parameters`.
+     * @description
+     * 
+     * National HI2 parameters. The specification text does not define their
+     * contents.
+     * 
      * @public
      * @readonly
      */
     readonly national_HI2_ASN1parameters: OPTIONAL<National_HI2_ASN1parameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -858,54 +1298,104 @@ class IRI_Parameters {
 
         /**
          * @summary The enum used as the type of the component `initiator`
+         * @description
+         * 
+         * Whether the procedure was started by the target or by the network
+         * (table 10.5.2). Conditional on EPS bearer activation, modification,
+         * and deactivation. For GPRS on this HI2, whether the PDP-context
+         * procedure was MS-requested or network-initiated (table 6.2).
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_initiator = _enum_for_IRI_Parameters_initiator;        /**
          * @summary The enum used as the type of the component `ePSevent`
+         * @description
+         * 
+         * Which EPS, ProSe, or packet-domain event this record reports (table
+         * 10.5.2, table 13.3.1-2, clause 6.5.1). Omitted on a LALS report that
+         * is not tied to an event (clause 10.5.0).
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_ePSevent = _enum_for_EPSEvent;        /**
          * @summary The enum used as the type of the component `iMSevent`
+         * @description
+         * 
+         * Which IMS event this record reports (table 7.2, clause 7.5).
+         * Mandatory on the IMS records in clause 7.5.1.
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_iMSevent = _enum_for_IMSevent;        /**
          * @summary The enum used as the type of the component `ldiEvent`
+         * @description
+         * 
+         * Target entered or left an interception area. Optional, and only for
+         * location-dependent interception, on a GPRS location update (table
+         * 6.6). The EPS triggers are marked for further study (clause 10.5.1).
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_ldiEvent = _enum_for_LDIevent;        /**
          * @summary The enum used as the type of the component `mediaSecFailureIndication`
+         * @description
+         * 
+         * The procedure that retrieves encryption keys from the KMS failed
+         * (table 7.2). Optional on the media-decryption report (table 7.4).
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_mediaSecFailureIndication = _enum_for_MediaSecFailureIndication;        /**
          * @summary The enum used as the type of the component `requesting_Node_Type`
+         * @description
+         * 
+         * Kind of node that made the request, such as MSC, SMS centre, GMLC,
+         * MME, or SGSN (table 10.5.2, table 7.2).
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_requesting_Node_Type = _enum_for_Requesting_Node_Type;        /**
          * @summary The enum used as the type of the component `proSeTargetType`
+         * @description
+         * 
+         * Whether the target is a ProSe remote UE or a ProSe UE-to-network
+         * relay (table 13.3.1-2). Clause 10.0 adds clause 13 for those targets.
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_proSeTargetType = _enum_for_ProSeTargetType;        /**
          * @summary The enum used as the type of the component `roamingIndication`
+         * @description
+         * 
+         * For an IMS event in the VPLMN, whether VoLTE roaming is local
+         * breakout or S8 home routing (table 7.2, module comment). Conditional
+         * when the VPLMN sends the SIP (table 7.3).
+         * 
          * @public
          * @static
          */
 
     public static _enum_for_roamingIndication = _enum_for_VoIPRoamingIndication;        /**
          * @summary The enum used as the type of the component `cSREvent`
+         * @description
+         * 
+         * This report is a cell-site report. Sent when the MF could not enrich
+         * the original IRI in time (clause 16.4).
+         * 
          * @public
          * @static
          */

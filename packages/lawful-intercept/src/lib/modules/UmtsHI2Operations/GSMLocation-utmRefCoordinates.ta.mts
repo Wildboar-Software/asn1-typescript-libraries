@@ -15,6 +15,13 @@ import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84
  * @summary GSMLocation_utmRefCoordinates
  * @description
  * 
+ * GSM location as a UTM grid reference. Annex B.3 example is `32UPU91294045`
+ * (13 characters). The datum defaults to WGS 84.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +38,35 @@ export
 class GSMLocation_utmRefCoordinates {
     /**
      * @summary `utmref_string`.
+     * @description
+     * 
+     * UTM grid reference. Annex B.3 example: `32UPU91294045` (13 characters).
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly utmref_string: PrintableString;
     /**
      * @summary `mapDatum`.
+     * @description
+     * 
+     * Coordinate reference. Annex B.3 defaults it to WGS 84 when the IRI omits
+     * it. The module also allows WGS 72 and European Datum 50.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly mapDatum: OPTIONAL<MapDatum>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
@@ -76,12 +100,23 @@ class GSMLocation_utmRefCoordinates {
 
     /**
      * @summary Getter that returns the default value for `mapDatum`.
+     * @description
+     * 
+     * Annex B.3 default when the IRI omits the datum: WGS 84.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @static
      * @method
      */
     public static get _default_value_for_mapDatum () { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
+         * @description
+         * 
+         * Coordinate reference of this GSM location. Annex B.3 defaults it to
+         * WGS 84 and also allows WGS 72 and European Datum 50.
+         * 
+         * 3GPP TS 33.108, annex B.3.
          * @public
          * @static
          */

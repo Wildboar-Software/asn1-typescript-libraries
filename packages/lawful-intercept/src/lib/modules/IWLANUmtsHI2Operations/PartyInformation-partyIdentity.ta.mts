@@ -14,6 +14,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PartyInformation_partyIdentity
  * @description
  * 
+ * Target identifiers carried for the party. Provide at least one of those
+ * available for the record, and the others when available.
+ * 
+ * 3GPP TS 33.108, table 8.2 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,24 +45,45 @@ export
 class PartyInformation_partyIdentity {
     /**
      * @summary `imsi`.
+     * @description
+     * 
+     * IMSI of the target. International Mobile Station Identity, an E.212
+     * number beginning with the Mobile Country Code, in the MAP format of TS
+     * 29.002.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly imsi: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `msISDN`.
+     * @description
+     * 
+     * MSISDN of the target, encoded as the MAP AddressString of TS 29.002.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7.
      * @public
      * @readonly
      */
     readonly msISDN: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nai`.
+     * @description
+     * 
+     * NAI of the target, encoded as defined in TS 29.234.
+     * 
+     * 3GPP TS 33.108, table 8.2 and annex B.7. Clause 8 does not define the
+     * octet layout.
      * @public
      * @readonly
      */
     readonly nai: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

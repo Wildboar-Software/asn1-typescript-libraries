@@ -27,6 +27,15 @@ import { Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _en
  * @summary Location
  * @description
  * 
+ * Cell identity, routing and service areas, and coordinates of the target.
+ * Table 6.2 uses it for location at the SGSN or the LI LCS client when
+ * packet-domain IRI is produced, including when that IRI is sent on this HI2
+ * (clause 6.5.1). Table 10.5.2 uses the EPS location parameter for EPS events
+ * and uses this parameter for LALS location. Clause 16.4 uses it for 2G/3G
+ * cell-site supplemental information and says the cell identity is included
+ * here. Clause 17 uses it when PTC location reporting is authorized. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,66 +81,124 @@ export
 class Location {
     /**
      * @summary `e164_Number`.
+     * @description
+     * 
+     * Location number in the same format as the ISUP location-number parameter
+     * field (EN 300 356), as the module comment states. The clause 6 and clause
+     * 10 tables do not name this component.
+     * 
      * @public
      * @readonly
      */
     readonly e164_Number: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `globalCellID`.
+     * @description
+     * 
+     * Cell identity in MAP format (3GPP TS 29.002). Clause 16.4 requires the
+     * cell identity in a 2G/3G cell-site report.
+     * 
      * @public
      * @readonly
      */
     readonly globalCellID: OPTIONAL<GlobalCellID>;
     /**
      * @summary `rAI`.
+     * @description
+     * 
+     * Routing-area identity of the current SGSN, coded as 3GPP TS 24.008 clause
+     * 10.5.5.15 without the information-element identifier, using only the last
+     * six octets (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly rAI: OPTIONAL<Rai>;
     /**
      * @summary `gsmLocation`.
+     * @description
+     * 
+     * GSM coordinates. Table 16.1 puts 2G/3G cell-site latitude, longitude, and
+     * azimuth here.
+     * 
      * @public
      * @readonly
      */
     readonly gsmLocation: OPTIONAL<GSMLocation>;
     /**
      * @summary `umtsLocation`.
+     * @description
+     * 
+     * UMTS geographical-area shape. The clause 6 and clause 10 tables do not
+     * say when this shape is required.
+     * 
      * @public
      * @readonly
      */
     readonly umtsLocation: OPTIONAL<UMTSLocation>;
     /**
      * @summary `sAI`.
+     * @description
+     * 
+     * Service-area identity: three octets of PLMN identity, two of LAC, and two
+     * of SAC, according to 3GPP TS 25.413 (module comment).
+     * 
      * @public
      * @readonly
      */
     readonly sAI: OPTIONAL<Sai>;
     /**
      * @summary `oldRAI`.
+     * @description
+     * 
+     * Routing-area identity of the old SGSN, coded the same way as the current
+     * one (module comment). Table 6.6 sends old location only from the old
+     * SGSN, when authorized and available.
+     * 
      * @public
      * @readonly
      */
     readonly oldRAI: OPTIONAL<Rai>;
     /**
      * @summary `civicAddress`.
+     * @description
+     * 
+     * Civic address of the cell site, when known (table 16.1, the 2G/3G path).
+     * 
      * @public
      * @readonly
      */
     readonly civicAddress: OPTIONAL<CivicAddress>;
     /**
      * @summary `operatorSpecificInfo`.
+     * @description
+     * 
+     * Other CSP-specific information whose format is not standardized (module
+     * comment, table 16.1).
+     * 
      * @public
      * @readonly
      */
     readonly operatorSpecificInfo: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uELocationTimestamp`.
+     * @description
+     * 
+     * Date and time the location was obtained (module comment, table 6.2).
+     * Conditional when location is provided.
+     * 
      * @public
      * @readonly
      */
     readonly uELocationTimestamp: OPTIONAL<Location_uELocationTimestamp>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */

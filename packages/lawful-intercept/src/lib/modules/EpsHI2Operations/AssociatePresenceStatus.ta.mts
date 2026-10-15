@@ -15,6 +15,12 @@ import { _decode_PresenceType, _encode_PresenceType, _enum_for_PresenceType, Pre
  * @summary AssociatePresenceStatus
  * @description
  * 
+ * Presence of one PTC client or one PTC group that the target's server is
+ * watching. Sent when the PTC server has subscribed to other clients' presence
+ * and receives a notification (clause 17.2.16), and on other PTC records that
+ * include associate presence (table 17.1.5). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +41,44 @@ export
 class AssociatePresenceStatus {
     /**
      * @summary `presenceID`.
+     * @description
+     * 
+     * Identity of the PTC client or PTC group, when known (table 17.1.5). The
+     * module comment says the same.
+     * 
      * @public
      * @readonly
      */
     readonly presenceID: UTF8String;
     /**
      * @summary `presenceType`.
+     * @description
+     * 
+     * Whether that identity is a PTC client or a PTC group (table 17.1.5).
+     * 
      * @public
      * @readonly
      */
     readonly presenceType: PresenceType;
     /**
      * @summary `presenceStatus`.
+     * @description
+     * 
+     * Whether that client or group is connected. The module comment says false
+     * unless it is connected (table 17.1.5).
+     * 
      * @public
      * @readonly
      */
     readonly presenceStatus: BOOLEAN;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of the specification does not
+     * define. Annex D requires the LEMF to ignore an unrecognized parameter and
+     * continue with the record.
+     * 
      * @public
      * @readonly
      */
@@ -88,6 +114,10 @@ class AssociatePresenceStatus {
 
         /**
          * @summary The enum used as the type of the component `presenceType`
+         * @description
+         * 
+         * Whether that identity is a PTC client or a PTC group (table 17.1.5).
+         * 
          * @public
          * @static
          */

@@ -11,6 +11,14 @@ import { CCKeyInfo, _decode_CCKeyInfo, _encode_CCKeyInfo } from "../UmtsHI2Opera
  * @summary MediaDecryption_info
  * @description
  * 
+ * One or more session keys for the media streams of an intercepted IMS session,
+ * one key for each stream. Present on a media-decryption REPORT when the DF/MF
+ * has the keys. After SIP analysis finds MIKEY ticket exchange (TS 33.328), the
+ * DF/MF collects the tickets, retrieves the keys from the KMS, and sends this
+ * REPORT so the LEMF can decrypt encrypted CC.
+ * 
+ * 3GPP TS 33.108, clause 7.5, table 7.2 and table 7.4; annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

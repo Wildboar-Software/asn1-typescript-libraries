@@ -15,6 +15,14 @@ import { RemoteUEIPInformation, _decode_RemoteUEIPInformation, _encode_RemoteUEI
  * @summary RemoteUEContext
  * @description
  * 
+ * One ProSe remote UE that is connected to a ProSe UE-to-network relay: its
+ * identity and its IP address. Clause 13.3.2.2-1 provides the connected
+ * identities and IP addresses when the relay is the target. Clause 10.5.2 also
+ * sends them when that relay performs a tracking area or EPS location update.
+ * Neither clause states the octet layout.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +42,31 @@ export
 class RemoteUEContext {
     /**
      * @summary `remoteUserID`.
+     * @description
+     * 
+     * Identity of this connected ProSe remote UE. Clause 13.3 and clause 10.5.2
+     * require the connected identities when the relay is the target. Neither
+     * clause states the octet layout.
      * @public
      * @readonly
      */
     readonly remoteUserID: RemoteUserID;
     /**
      * @summary `remoteUEIPInformation`.
+     * @description
+     * 
+     * IP address of this connected ProSe remote UE, provided by the relay
+     * (clause 13.3.1 and clause 10.5.2). The handover text does not state the
+     * octet layout.
      * @public
      * @readonly
      */
     readonly remoteUEIPInformation: RemoteUEIPInformation;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

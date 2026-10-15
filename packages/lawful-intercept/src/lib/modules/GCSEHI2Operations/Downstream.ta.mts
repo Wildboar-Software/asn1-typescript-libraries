@@ -15,6 +15,9 @@ import { AccessID, _decode_AccessID, _encode_AccessID } from "../GCSEHI2Operatio
  * @summary Downstream
  * @description
  * 
+ * Downstream access used toward the target. A UE may receive both by ordinary
+ * EPS and by multicast. 3GPP TS 33.108, annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +35,22 @@ export
 class Downstream {
     /**
      * @summary `accessType`.
+     * @description
+     * 
+     * Whether this downstream access is EPS unicast or EPS multicast. 3GPP TS
+     * 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly accessType: AccessType;
     /**
      * @summary `accessId`.
+     * @description
+     * 
+     * Identifier of this downstream access: a TMGI or the UE IP address. 3GPP
+     * TS 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */

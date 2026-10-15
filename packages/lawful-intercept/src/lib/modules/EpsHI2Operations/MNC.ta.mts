@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MNC
  * @description
  * 
+ * Mobile network code of an E.212 PLMN identity: two or three digits, paired
+ * with the mobile country code. The specification text calls this half "Mobile
+ * Network Country" while citing ITU-T E.212. Same PLMN identities as the
+ * country code: clause 10.5.2, and clause 6 table 6.2 when annex B.9 carries
+ * packet-domain IRI (clause 6.5.1.0).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,18 @@ import { GSMLocation_utmRefCoordinates, _decode_GSMLocation_utmRefCoordinates, _
  * @summary GSMLocation
  * @description
  * 
+ * GSM location of the target or of a cell site, carried in the HI2 location.
+ * 
+ * The alternatives are geographic coordinates, UTM easting and northing, a UTM
+ * grid reference, or a WGS 84 coordinate string whose layout is defined in 3GPP
+ * TS 23.032. Table 16.1 places the cell site's latitude, longitude, and
+ * antenna-sector azimuth on the geographic-coordinate alternative when that
+ * information is known.
+ * 
+ * 3GPP TS 33.108, annex B.3 and clause 16.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

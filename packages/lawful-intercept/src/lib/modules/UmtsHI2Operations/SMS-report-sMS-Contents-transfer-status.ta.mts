@@ -17,6 +17,13 @@ enum _enum_for_SMS_report_sMS_Contents_transfer_status {
  * @summary SMS_report_sMS_Contents_transfer_status
  * @description
  * 
+ * Whether transfer of the SMS succeeded. Annex B.3 defines the successful
+ * value. Stage 2 does not say when each value is chosen. National options in
+ * clause 6.5.1.1 choose whether the SMS REPORT is triggered when the SGSN
+ * receives the SMS or when the SMS-Centre reports success.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1.1 and annex B.3.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +42,11 @@ type SMS_report_sMS_Contents_transfer_status = _enum_for_SMS_report_sMS_Contents
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_succeed_transfer
+ * @description
+ * 
+ * Transfer of the SMS succeeded. Annex B.3. Stage 2 does not say when this
+ * value is selected. 3GPP TS 33.108, annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -43,6 +55,10 @@ const SMS_report_sMS_Contents_transfer_status_succeed_transfer: SMS_report_sMS_C
 
 /**
  * @summary succeed_transfer
+ * @description
+ * 
+ * SMS transfer succeeded (3GPP TS 33.108, annex B.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -51,6 +67,11 @@ const succeed_transfer: SMS_report_sMS_Contents_transfer_status = SMS_report_sMS
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_not_succeed_transfer
+ * @description
+ * 
+ * Transfer of the SMS did not succeed. Annex B.3 names the value and does not
+ * add a cause. 3GPP TS 33.108, annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -59,6 +80,10 @@ const SMS_report_sMS_Contents_transfer_status_not_succeed_transfer: SMS_report_s
 
 /**
  * @summary not_succeed_transfer
+ * @description
+ * 
+ * SMS transfer did not succeed (3GPP TS 33.108, annex B.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -67,6 +92,11 @@ const not_succeed_transfer: SMS_report_sMS_Contents_transfer_status = SMS_report
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_undefined
+ * @description
+ * 
+ * Whether the SMS transfer succeeded is undefined. Annex B.3 names the value
+ * and does not say when it is used. 3GPP TS 33.108, annex B.3.
+ * 
  * @constant
  * @type {number}
  */
@@ -75,6 +105,10 @@ const SMS_report_sMS_Contents_transfer_status_undefined: SMS_report_sMS_Contents
 
 /**
  * @summary undefined
+ * @description
+ * 
+ * SMS transfer outcome is undefined (3GPP TS 33.108, annex B.3).
+ * 
  * @constant
  * @type {number}
  */

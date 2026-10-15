@@ -1,3 +1,20 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `UmtsCS-HI2Operations`, IMPLICIT TAGS. Circuit-switched HI2
+ * intercept related information. For North America, clause 5.0 recommends
+ * J-STD-025-A.
+ *
+ * 3GPP TS 33.108, clause 5 and annex B.3a.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ *
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2) lawfulIntercept(2) threeGPP(4) hi2CS(3) r17(17) version-0(0)}`
+ *
+ * Annex J defines UUS1 content and called/calling subaddress correlation for
+ * the HI3 content link. Those structures are not types in this module. Clause
+ * 5.5.14 still places subaddress information elements in the IRI when they are
+ * present, and clause 5.5.15 reports UUS1, UUS2, and UUS3 on HI2.
+ */
 export {
     Change_Of_Target_Identity,
     _decode_Change_Of_Target_Identity,

@@ -1,3 +1,18 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `CSvoice-HI3-IP`, `IMPLICIT TAGS`. IP-based handover of
+ * circuit-switched voice content on HI3. The call itself remains on
+ * circuit-switched connections.
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulIntercept(2) threeGPP(4) hi3CSvoice(18) r17(17) version-0(0)}`.
+ * 
+ * 3GPP TS 33.108, clause 5.7 and annex B.17.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
 export {
     CSvoice_CC_PDU,
     _decode_CSvoice_CC_PDU,

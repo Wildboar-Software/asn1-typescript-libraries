@@ -11,6 +11,11 @@ import { MBMSUmtsIRIContent, _decode_MBMSUmtsIRIContent, _encode_MBMSUmtsIRICont
  * @summary MBMSUmtsIRISequence
  * @description
  * 
+ * IRI records aggregated for one LEA because they were available at the same
+ * time. Aggregation is optional and is not a reason to delay a record.
+ * 
+ * 3GPP TS 33.108, annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

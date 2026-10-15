@@ -24,6 +24,15 @@ enum _enum_for_ICE_type {
  * @summary ICE_type
  * @description
  * 
+ * Intercepting control element that produced the VoIP CC, when known at the
+ * delivery or mediation function. Clause 12.1.4 names the CC intercept
+ * functions. `mRF`, `lmISF`, and `sGW` are extensions; annex K.2's explicit
+ * list stops at `unknown`.
+ * 
+ * 3GPP TS 33.108, annex K.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,6 +58,9 @@ type ICE_type = _enum_for_ICE_type | ENUMERATED;
 
 /**
  * @summary ICE_type_ggsn
+ * @description
+ * 
+ * VoIP CC intercepted at the GGSN. 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -57,6 +69,9 @@ const ICE_type_ggsn: ICE_type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ggsn
+ * @description
+ * 
+ * Intercepted at the GGSN. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -65,6 +80,9 @@ const ggsn: ICE_type = ICE_type_ggsn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_pDN_GW
+ * @description
+ * 
+ * VoIP CC intercepted at the PDN-GW. 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -73,6 +91,9 @@ const ICE_type_pDN_GW: ICE_type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDN_GW
+ * @description
+ * 
+ * Intercepted at the PDN-GW. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -81,6 +102,9 @@ const pDN_GW: ICE_type = ICE_type_pDN_GW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_aGW
+ * @description
+ * 
+ * VoIP CC intercepted at the IMS-AGW. 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -89,6 +113,9 @@ const ICE_type_aGW: ICE_type = 3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aGW
+ * @description
+ * 
+ * Intercepted at the IMS-AGW. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -97,6 +124,9 @@ const aGW: ICE_type = ICE_type_aGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_trGW
+ * @description
+ * 
+ * VoIP CC intercepted at the TrGW. 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -105,6 +135,9 @@ const ICE_type_trGW: ICE_type = 4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trGW
+ * @description
+ * 
+ * Intercepted at the TrGW. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -113,6 +146,9 @@ const trGW: ICE_type = ICE_type_trGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_mGW
+ * @description
+ * 
+ * VoIP CC intercepted at the IM-MGW. 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -121,6 +157,9 @@ const ICE_type_mGW: ICE_type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mGW
+ * @description
+ * 
+ * Intercepted at the IM-MGW. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -129,6 +168,10 @@ const mGW: ICE_type = ICE_type_mGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_other
+ * @description
+ * 
+ * VoIP CC intercepted at a media node other than the nodes named in annex K.2.
+ * 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -137,6 +180,9 @@ const ICE_type_other: ICE_type = 6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
+ * @description
+ * 
+ * Intercepted at another media node. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -145,6 +191,10 @@ const other: ICE_type = ICE_type_other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_unknown
+ * @description
+ * 
+ * The media node that intercepted the VoIP CC is not known. 3GPP TS 33.108,
+ * annex K.2.
  * @constant
  * @type {number}
  */
@@ -153,6 +203,9 @@ const ICE_type_unknown: ICE_type = 7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * Intercepting media node is not known. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -161,6 +214,11 @@ const unknown: ICE_type = ICE_type_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_mRF
+ * @description
+ * 
+ * VoIP CC intercepted at the MRF. Clause 12.1.4 lists the MRF as a CC intercept
+ * function. Extension value; annex K.2's explicit list does not name it. 3GPP
+ * TS 33.108, annex B.12.
  * @constant
  * @type {number}
  */
@@ -169,6 +227,9 @@ const ICE_type_mRF: ICE_type = 8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mRF
+ * @description
+ * 
+ * Intercepted at the MRF. Clause 12.1.4.
  * @constant
  * @type {number}
  */
@@ -177,6 +238,10 @@ const mRF: ICE_type = ICE_type_mRF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_lmISF
+ * @description
+ * 
+ * VPLMN S8HR: CC intercepted at the LMISF. Clause 12.7.3 requires `lmISF` or
+ * `sGW` on that CC. 3GPP TS 33.108.
  * @constant
  * @type {number}
  */
@@ -185,6 +250,9 @@ const ICE_type_lmISF: ICE_type = 9; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lmISF
+ * @description
+ * 
+ * S8HR VPLMN intercept at the LMISF. Clause 12.7.3.
  * @constant
  * @type {number}
  */
@@ -193,6 +261,10 @@ const lmISF: ICE_type = ICE_type_lmISF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_sGW
+ * @description
+ * 
+ * VPLMN S8HR: CC intercepted at the serving gateway. Clause 12.7.3 requires
+ * `lmISF` or `sGW` on that CC. 3GPP TS 33.108.
  * @constant
  * @type {number}
  */
@@ -201,6 +273,9 @@ const ICE_type_sGW: ICE_type = 10; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGW
+ * @description
+ * 
+ * S8HR VPLMN intercept at the S-GW. Clause 12.7.3.
  * @constant
  * @type {number}
  */

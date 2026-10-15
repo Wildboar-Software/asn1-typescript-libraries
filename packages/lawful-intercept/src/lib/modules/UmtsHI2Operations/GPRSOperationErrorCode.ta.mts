@@ -10,6 +10,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GPRSOperationErrorCode
  * @description
  * 
+ * GMM cause or SM cause from 3GPP TS 24.008, without the information-element
+ * identifier.
+ * 
+ * Mandatory reason for a failed PDP-context activation (table 6.5) and for a
+ * PDP-context deactivation (table 6.14). Conditional reason for a failed attach
+ * (table 6.3). Annex B.3 does not restate the cause-value assignments.
+ * 
+ * 3GPP TS 33.108, clause 6.5.1 and annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

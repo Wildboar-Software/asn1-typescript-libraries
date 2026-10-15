@@ -13,6 +13,17 @@ import { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } 
  * @summary Change_Of_Target_Identity
  * @description
  * 
+ * Old and new target identities for a subscriber-record change.
+ * 
+ * On an HLR change the record shall state what changed among MSISDN, IMSI, and
+ * IMEI (table 6.9D). On an HSS change the same parameter also carries SIP URI,
+ * TEL URI, and IMPI (table 7.2 and table 7.8). Provide an identity when it is
+ * available.
+ * 
+ * 3GPP TS 33.108, table 6.9D and table 7.8.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,78 +63,162 @@ export
 class Change_Of_Target_Identity {
     /**
      * @summary `new_MSISDN`.
+     * @description
+     * 
+     * New MSISDN of the target, encoded as a MAP AddressString (3GPP TS
+     * 29.002). Table 6.9D requires the HLR record to state the new MSISDN when
+     * that is what changed.
+     * 
+     * 3GPP TS 33.108, table 6.9D and annex B.3.
      * @public
      * @readonly
      */
     readonly new_MSISDN: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_MSISDN`.
+     * @description
+     * 
+     * Previous MSISDN of the target, in the same MAP AddressString encoding.
+     * Table 7.8 includes the previous MSISDN when it is available.
+     * 
+     * The annex B.3 comment on this component repeats the new-MSISDN sentence.
+     * The component name and tables 6.9D and 7.8 are the previous value.
+     * 
+     * 3GPP TS 33.108, table 7.8 and annex B.3.
      * @public
      * @readonly
      */
     readonly old_MSISDN: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_IMSI`.
+     * @description
+     * 
+     * New IMSI, an E.212 number beginning with the MCC, in MAP format (3GPP TS
+     * 29.002).
+     * 
+     * 3GPP TS 33.108, table 6.9D and annex B.3.
      * @public
      * @readonly
      */
     readonly new_IMSI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_IMSI`.
+     * @description
+     * 
+     * Previous IMSI, in the same MAP format. Table 7.8's cell says "IMSI of the
+     * target, provided if available" and does not repeat the word previous used
+     * for the old SIP URI, TEL URI, and MSISDN.
+     * 
+     * 3GPP TS 33.108, table 7.8 and annex B.3.
      * @public
      * @readonly
      */
     readonly old_IMSI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_IMEI`.
+     * @description
+     * 
+     * New IMEI, in the MAP equipment-identity format of 3GPP TS 29.002. Table
+     * 6.9D includes it when the IMEI is what changed.
+     * 
+     * 3GPP TS 33.108, table 6.9D and annex B.3.
      * @public
      * @readonly
      */
     readonly new_IMEI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_IMEI`.
+     * @description
+     * 
+     * Previous IMEI, in the same MAP format. Table 7.8's cell says "IMEI of the
+     * target, provided if available" and does not say previous.
+     * 
+     * 3GPP TS 33.108, table 7.8 and annex B.3.
      * @public
      * @readonly
      */
     readonly old_IMEI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_IMPI`.
+     * @description
+     * 
+     * New IMS private identity from an HSS subscriber-record change. Include it
+     * when available (table 7.8). Annex B.3 does not define a further encoding.
+     * 
+     * 3GPP TS 33.108, table 7.2 and table 7.8.
      * @public
      * @readonly
      */
     readonly new_IMPI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_IMPI`.
+     * @description
+     * 
+     * Previous IMS private identity. Table 7.8's cell says "IMPI of the target,
+     * provided if available" and does not say previous. Annex B.3 does not
+     * define a further encoding.
+     * 
+     * 3GPP TS 33.108, table 7.8.
      * @public
      * @readonly
      */
     readonly old_IMPI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_SIP_URI`.
+     * @description
+     * 
+     * New SIP URI of the target. Table 7.8 includes it when available. Annex
+     * B.3 does not define a further encoding.
+     * 
+     * 3GPP TS 33.108, table 7.8.
      * @public
      * @readonly
      */
     readonly new_SIP_URI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_SIP_URI`.
+     * @description
+     * 
+     * Previous SIP URI of the target, included when available (table 7.8).
+     * Annex B.3 does not define a further encoding.
+     * 
+     * 3GPP TS 33.108, table 7.8.
      * @public
      * @readonly
      */
     readonly old_SIP_URI: OPTIONAL<PartyInformation>;
     /**
      * @summary `new_TEL_URI`.
+     * @description
+     * 
+     * New TEL URI of the target. Table 7.8 includes it when available. Annex
+     * B.3 does not define a further encoding.
+     * 
+     * 3GPP TS 33.108, table 7.8.
      * @public
      * @readonly
      */
     readonly new_TEL_URI: OPTIONAL<PartyInformation>;
     /**
      * @summary `old_TEL_URI`.
+     * @description
+     * 
+     * Previous TEL URI of the target, included when available (table 7.8).
+     * Annex B.3 does not define a further encoding.
+     * 
+     * 3GPP TS 33.108, table 7.8.
      * @public
      * @readonly
      */
     readonly old_TEL_URI: OPTIONAL<PartyInformation>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

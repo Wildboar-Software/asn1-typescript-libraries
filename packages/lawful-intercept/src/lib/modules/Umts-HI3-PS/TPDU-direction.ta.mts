@@ -7,6 +7,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a version-1 T-PDU. Annex C.1.3 states from the target and to the
+ * target. `unknown` is defined in the module and is not given further text
+ * there. Version 0 encodes direction as a DIR bit, not as these values (annex
+ * C.1.2).
+ * 
+ * 3GPP TS 33.108, annex C.1.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +40,15 @@ enum _enum_for_TPDU_direction {
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a version-1 T-PDU. Annex C.1.3 states from the target and to the
+ * target. `unknown` is defined in the module and is not given further text
+ * there. Version 0 encodes direction as a DIR bit, not as these values (annex
+ * C.1.2).
+ * 
+ * 3GPP TS 33.108, annex C.1.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +69,15 @@ type TPDU_direction = _enum_for_TPDU_direction;
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a version-1 T-PDU. Annex C.1.3 states from the target and to the
+ * target. `unknown` is defined in the module and is not given further text
+ * there. Version 0 encodes direction as a DIR bit, not as these values (annex
+ * C.1.2).
+ * 
+ * 3GPP TS 33.108, annex C.1.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +96,10 @@ const TPDU_direction = _enum_for_TPDU_direction;
 
 /**
  * @summary TPDU_direction_from_target
+ * @description
+ * 
+ * T-PDU from the target. Version 0 DIR value 1 is uplink, from the observed
+ * mobile user. 3GPP TS 33.108, annex C.1.3 and annex C.1.2.
  * @constant
  * @type {number}
  */
@@ -77,6 +108,9 @@ const TPDU_direction_from_target: TPDU_direction = TPDU_direction.from_target; /
 
 /**
  * @summary from_target
+ * @description
+ * 
+ * T-PDU from the target (uplink). Annex C.1.3.
  * @constant
  * @type {number}
  */
@@ -85,6 +119,10 @@ const from_target: TPDU_direction = TPDU_direction.from_target; /* SHORT_NAMED_E
 
 /**
  * @summary TPDU_direction_to_target
+ * @description
+ * 
+ * T-PDU to the target. Version 0 DIR value 0 is downlink, to the observed
+ * mobile user. 3GPP TS 33.108, annex C.1.3 and annex C.1.2.
  * @constant
  * @type {number}
  */
@@ -93,6 +131,9 @@ const TPDU_direction_to_target: TPDU_direction = TPDU_direction.to_target; /* LO
 
 /**
  * @summary to_target
+ * @description
+ * 
+ * T-PDU to the target (downlink). Annex C.1.3.
  * @constant
  * @type {number}
  */
@@ -101,6 +142,10 @@ const to_target: TPDU_direction = TPDU_direction.to_target; /* SHORT_NAMED_ENUME
 
 /**
  * @summary TPDU_direction_unknown
+ * @description
+ * 
+ * Direction unknown. Defined for version 1; annex C.1.3 does not further define
+ * it. Version 0 has no unknown DIR code. 3GPP TS 33.108, annex B.4.
  * @constant
  * @type {number}
  */
@@ -109,6 +154,9 @@ const TPDU_direction_unknown: TPDU_direction = TPDU_direction.unknown; /* LONG_N
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * Direction unknown on version 1. Annex C does not define it further.
  * @constant
  * @type {number}
  */

@@ -63,6 +63,15 @@ import { TalkburstControlSetting, _decode_TalkburstControlSetting, _encode_Talkb
  * @summary PTC
  * @description
  * 
+ * IRI parameters for Push-to-talk over Cellular, covering both PoC and MCPTT.
+ * PTC is intercepted and delivered separately from other services. The event is
+ * pTCType; clause 17 states which events are begin, continue, end, or report
+ * records. The timestamp is required. Other parameters are included under the
+ * conditions in clause 17 and clause 18.
+ * 
+ * Carried on the IRI as the PTC event parameter (annex B.3). 3GPP TS 33.108,
+ * clauses 17 and 18; annex B.3. https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -151,366 +160,889 @@ export
 class PTC {
     /**
      * @summary `abandonCause`.
+     * @description
+     * 
+     * Reason the PTC session was abandoned. Mandatory on the session-abandon
+     * end record (table 17.2.5). Table 17.2.7 also marks it mandatory on the
+     * session-end record, with the same wording.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, tables 17.2.5 and 17.2.7.
+     * 
      * @public
      * @readonly
      */
     readonly abandonCause: OPTIONAL<UTF8String>;
     /**
      * @summary `accessPolicyFailure`.
+     * @description
+     * 
+     * Error code or reason when an access-policy request fails. Conditional on
+     * the access-policy record (table 17.2.18). Annex B.3 does not list the
+     * code values.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, table 17.2.18, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly accessPolicyFailure: OPTIONAL<UTF8String>;
     /**
      * @summary `accessPolicyType`.
+     * @description
+     * 
+     * Which access-policy list the target is managing or querying: the user
+     * access policy or the group authorization rules, and whether this report
+     * is an attempt, a query, a network result, or an unsuccessful request.
+     * Report an attempt or query when the target changes or queries the lists.
+     * Report a result when the network notifies the target, or when the request
+     * failed.
+     * 
+     * 3GPP TS 33.108, clause 17.2.18, table 17.2.18, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly accessPolicyType: OPTIONAL<AccessPolicyType>;
     /**
      * @summary `alertIndicator`.
+     * @description
+     * 
+     * An emergency alert was sent, received, or cancelled. Conditional on
+     * group-call request, cancel, and response. On cancel it means the alert
+     * signalling was cancelled.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, tables 17.3.2, 17.3.3, and 17.3.4.
+     * 
      * @public
      * @readonly
      */
     readonly alertIndicator: OPTIONAL<AlertIndicator>;
     /**
      * @summary `associatePresenceStatus`.
+     * @description
+     * 
+     * Presence of PTC clients or groups that the PTC server watches for the
+     * target: each identity, whether it is a client or a group, and its
+     * presence state. Include it when presence is supported and the server is
+     * the watcher. Used on session initiation, session start, party join, party
+     * drop, and the associate-presence report.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and the tables in clause 17.2 that list it.
+     * 
      * @public
      * @readonly
      */
     readonly associatePresenceStatus: OPTIONAL<AssociatePresenceStatus>;
     /**
      * @summary `bearer_capability`.
+     * @description
+     * 
+     * Bearer-capability information element, value part: media characteristics
+     * of the PTC session, such as SDP, media format, and vocoder, when known.
+     * Conditional on start of interception, session initiation, session start,
+     * and party join. On media modification, table 17.2.12 marks it mandatory
+     * and still says to provide it when known.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, clause 17.2, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly bearer_capability: OPTIONAL<UTF8String>;
     /**
      * @summary `broadcastIndicator`.
+     * @description
+     * 
+     * False by default. True means this is a broadcast to the group.
+     * Conditional on group-call request, cancel, and response.
+     * 
+     * 3GPP TS 33.108, tables 17.3.2, 17.3.3, and 17.3.4; annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly broadcastIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `contactID`.
+     * @description
+     * 
+     * Identity of one contact in a contact list or group list. One contact per
+     * list. Conditional, and only when known, on list-management and
+     * access-policy records.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, tables 17.2.17 and 17.2.18.
+     * 
      * @public
      * @readonly
      */
     readonly contactID: OPTIONAL<UTF8String>;
     /**
      * @summary `emergency`.
+     * @description
+     * 
+     * Emergency type when the group call is a peril or imminent-peril alert, or
+     * the cancellation of that alert. Conditional on the group-call request,
+     * cancel, response, and interrogate records.
+     * 
+     * 3GPP TS 33.108, tables 17.3.2, 17.3.3, 17.3.4, and 17.3.5.
+     * 
      * @public
      * @readonly
      */
     readonly emergency: OPTIONAL<Emergency>;
     /**
      * @summary `emergencyGroupState`.
+     * @description
+     * 
+     * Emergency state of an MCPTT emergency call, when an emergency is
+     * indicated. On a group-call cancel it means the group's emergency state
+     * was cancelled. Conditional on the group-call records in clause 17.3.
+     * 
+     * 3GPP TS 33.108, tables 17.3.2, 17.3.3, 17.3.4, and 17.3.5.
+     * 
      * @public
      * @readonly
      */
     readonly emergencyGroupState: OPTIONAL<EmergencyGroupState>;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time the PTC event was generated at the PTC server or client.
+     * Required on the PTC records in clause 17. Annex B.3 does not mark the
+     * component optional.
+     * 
+     * 3GPP TS 33.108, clause 17 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `pTCType`.
+     * @description
+     * 
+     * Which PTC event this record reports. Stage 2 requires the event type. The
+     * named values in clause 17 say whether the record is a begin, continue,
+     * end, or report, except where that clause does not (the pre-established
+     * session record, encryption, and CC).
+     * 
+     * 3GPP TS 33.108, clauses 17 and 18; annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly pTCType: OPTIONAL<PTCType>;
     /**
      * @summary `failureCode`.
+     * @description
+     * 
+     * Reason or code for failure or closing of the session. Conditional on the
+     * pre-established session record when that session cannot be established or
+     * modified (table 17.2.20). Annex B.3 does not list the code values.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, table 17.2.20, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly failureCode: OPTIONAL<UTF8String>;
     /**
      * @summary `floorActivity`.
+     * @description
+     * 
+     * Talk-burst control action. Mandatory on a floor-control continue record.
+     * The actions in table 17.2.14 are: request (client asks to send a talk
+     * burst); granted (permission given); deny (permission refused); idle
+     * (nobody holds the floor and a request may be accepted); taken (another
+     * client holds the floor); revoke (the server takes the floor back,
+     * including pre-emption and over-long use); queued (the request is queued,
+     * when queuing is supported); release (the talk request has completed).
+     * 
+     * 3GPP TS 33.108, clause 17.2.14, table 17.2.14.
+     * 
      * @public
      * @readonly
      */
     readonly floorActivity: OPTIONAL<FloorActivity>;
     /**
      * @summary `floorSpeakerID`.
+     * @description
+     * 
+     * PTC client that currently has the talk burst, when known. Omit it when
+     * the floor is idle. Conditional on a floor-control continue record.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and table 17.2.14.
+     * 
      * @public
      * @readonly
      */
     readonly floorSpeakerID: OPTIONAL<PTCAddress>;
     /**
      * @summary `groupAdSender`.
+     * @description
+     * 
+     * Group administrator who originated the group advertisement. Mandatory on
+     * the group-advertisement report.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, table 17.2.13, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly groupAdSender: OPTIONAL<UTF8String>;
     /**
      * @summary `groupAuthRule`.
+     * @description
+     * 
+     * Action the target requested on the PTC group authorization rules: allow
+     * or block initiating a session, joining a session, adding participants,
+     * subscribing to session state, or anonymity. Report it when the target
+     * requests the action or attempts a change or query of the access control
+     * list. Also conditional on the group-advertisement report.
+     * 
+     * 3GPP TS 33.108, tables 17.2.13 and 17.2.18.
+     * 
      * @public
      * @readonly
      */
     readonly groupAuthRule: OPTIONAL<GroupAuthRule>;
     /**
      * @summary `groupCharacteristics`.
+     * @description
+     * 
+     * Identifying feature of the PTC group, including an MCPTT-specific
+     * characteristic. Conditional when reported on group advertisement and on
+     * the group-call records.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and clause 17.3.
+     * 
      * @public
      * @readonly
      */
     readonly groupCharacteristics: OPTIONAL<UTF8String>;
     /**
      * @summary `holdRetrieveInd`.
+     * @description
+     * 
+     * True means the PTC session was placed on hold: media bursts are
+     * deactivated and the session is locked for talking and listening. False
+     * means the session was retrieved from hold. Mandatory on the party
+     * hold/retrieve record.
+     * 
+     * 3GPP TS 33.108, table 17.2.11 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly holdRetrieveInd: OPTIONAL<BOOLEAN>;
     /**
      * @summary `imminentPerilInd`.
+     * @description
+     * 
+     * The call is an imminent-peril notification, and this report is the
+     * request toward the target, the response from the target, or the cancel.
+     * Mandatory on the MCPTT imminent-peril group-call report.
+     * 
+     * 3GPP TS 33.108, table 17.3.6 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly imminentPerilInd: OPTIONAL<ImminentPerilInd>;
     /**
      * @summary `implicitFloorReq`.
+     * @description
+     * 
+     * Annex B.3: a group-call request to join, to rejoin, or to release the
+     * group call. The named values are join, rejoin, and release, which match
+     * the group-call request in clause 17.3.2. Clause 17.1.5 instead says this
+     * parameter indicates the client who requested the floor.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, clause 17.3.2, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly implicitFloorReq: OPTIONAL<ImplicitFloorReq>;
     /**
      * @summary `initiationCause`.
+     * @description
+     * 
+     * Who originated PTC session initiation. If an associate originated it,
+     * include that associate's identity when known. Mandatory on the
+     * session-initiation begin record. Conditional on the session-start
+     * continue record. Annex B.3: the target requests a session, or receives
+     * initiation from the network or from another party.
+     * 
+     * 3GPP TS 33.108, tables 17.2.4 and 17.2.6; annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly initiationCause: OPTIONAL<InitiationCause>;
     /**
      * @summary `invitationCause`.
+     * @description
+     * 
+     * Annex B.3 includes this parameter and does not define its contents.
+     * Clause 17 does not name it. TS 33.108 does not further define it.
+     * 
      * @public
      * @readonly
      */
     readonly invitationCause: OPTIONAL<UTF8String>;
     /**
      * @summary `iPAPartyID`.
+     * @description
+     * 
+     * PTC associate that received an instant personal alert from the target, or
+     * that sent the alert to the target. Mandatory on the instant personal
+     * alert report (table 17.2.8). Table 17.2.9 also lists it as mandatory on
+     * party join, with the same alert wording.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, table 17.2.8, and table 17.2.9.
+     * 
      * @public
      * @readonly
      */
     readonly iPAPartyID: OPTIONAL<UTF8String>;
     /**
      * @summary `iPADirection`.
+     * @description
+     * 
+     * Direction of an instant personal alert: toward the PTC target, or from
+     * the PTC target. Mandatory on the instant personal alert report.
+     * 
+     * 3GPP TS 33.108, table 17.2.8 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly iPADirection: OPTIONAL<IPADirection>;
     /**
      * @summary `listManagementAction`.
+     * @description
+     * 
+     * What the target, or the network notification, did to a contact list or a
+     * PTC group list: create, modify, retrieve, delete, or notify. Conditional.
+     * Report it when the target attempts the change and when the network
+     * notifies the target of a change.
+     * 
+     * 3GPP TS 33.108, table 17.2.17 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly listManagementAction: OPTIONAL<ListManagementAction>;
     /**
      * @summary `listManagementFailure`.
+     * @description
+     * 
+     * Error code or reason when a list-management request fails. Conditional on
+     * the list-management report. Annex B.3 does not list the codes.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and table 17.2.17.
+     * 
      * @public
      * @readonly
      */
     readonly listManagementFailure: OPTIONAL<UTF8String>;
     /**
      * @summary `listManagementType`.
+     * @description
+     * 
+     * Whether the target attempted to manage a contact list or a group list, or
+     * the network is reporting the result of that management. Conditional.
+     * Attempts are reported when the target's client changes the lists. Results
+     * are reported when the network notifies the target. Table 17.2.17 item (e)
+     * says "Request unsuccessful"; annex B.3 names the fifth value
+     * requestSuccessful.
+     * 
+     * 3GPP TS 33.108, table 17.2.17 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly listManagementType: OPTIONAL<ListManagementType>;
     /**
      * @summary `maxTBTime`.
+     * @description
+     * 
+     * Maximum talk-burst duration, in seconds, before the server revokes
+     * permission. Conditional on a floor-control record, when known.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly maxTBTime: OPTIONAL<UTF8String>;
     /**
      * @summary `mCPTTGroupID`.
+     * @description
+     * 
+     * Mission Critical Push To Talk group identity. Mandatory on the
+     * imminent-peril group-call report.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and table 17.3.6.
+     * 
      * @public
      * @readonly
      */
     readonly mCPTTGroupID: OPTIONAL<UTF8String>;
     /**
      * @summary `mCPTTID`.
+     * @description
+     * 
+     * MCPTT identity of the target, when available. The registration and
+     * group-call tables include observed MCPTT identity among the identities of
+     * which at least one shall be provided.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and clause 17.2.1.
+     * 
      * @public
      * @readonly
      */
     readonly mCPTTID: OPTIONAL<UTF8String>;
     /**
      * @summary `mCPTTInd`.
+     * @description
+     * 
+     * Direction of an MCPTT emergency or imminent-peril condition: from the
+     * MCPTT target, or from an MCPTT group toward the target. Annex B.3: false
+     * means from the target toward an associate, and true means toward the
+     * target. Default false. Conditional on the group-call records; mandatory
+     * on the imminent-peril report (table 17.3.6).
+     * 
+     * 3GPP TS 33.108, clause 17.3 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly mCPTTInd: OPTIONAL<BOOLEAN>;
     /**
      * @summary `location`.
+     * @description
+     * 
+     * Location of the PTC target. Include it when reporting that location is
+     * authorized. The clause 17 tables that list it include session initiation,
+     * abandon, start, and end; pre-established session establishment or
+     * release; and the group-call request, cancel, and imminent-peril reports.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `mCPTTOrganizationName`.
+     * @description
+     * 
+     * Name of the organization the MCPTT device belongs to, if known.
+     * Conditional on the group-call records in clause 17.3.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and clause 17.3.
+     * 
      * @public
      * @readonly
      */
     readonly mCPTTOrganizationName: OPTIONAL<UTF8String>;
     /**
      * @summary `mediaStreamAvail`.
+     * @description
+     * 
+     * True means the target's PTC client can accept media. False means it
+     * cannot. Annex B.3. Clause 17 uses it to say the client is not able or not
+     * willing to receive media immediately. Provide it when a pre-established
+     * session is established, and on the other session records in clause 17.2
+     * that list it (start of interception, party join, media modification,
+     * media-type notification).
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, clause 17.2, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly mediaStreamAvail: OPTIONAL<BOOLEAN>;
     /**
      * @summary `priority_Level`.
+     * @description
+     * 
+     * Talk-burst priority of the PTC client when more than one priority level
+     * is supported (OMA-PoC-AD [97]). Clause 17.1.5 maps "Priority Level" to
+     * this parameter. Table 17.2.14 maps the same description to the talk-burst
+     * priority parameter.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, table 17.2.14, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly priority_Level: OPTIONAL<Priority_Level>;
     /**
      * @summary `preEstSessionID`.
+     * @description
+     * 
+     * Identity of a pre-established PTC session: session URI, session type, and
+     * nickname. Mandatory on the pre-established session record. Conditional on
+     * start of interception when the session is pre-established.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, tables 17.2.2 and 17.2.20.
+     * 
      * @public
      * @readonly
      */
     readonly preEstSessionID: OPTIONAL<UTF8String>;
     /**
      * @summary `preEstStatus`.
+     * @description
+     * 
+     * Whether the pre-established session is established, modified, or
+     * released. Mandatory on the pre-established session record. On session
+     * end, conditional: whether a pre-established session used for the released
+     * PTC session remains established or was released.
+     * 
+     * 3GPP TS 33.108, tables 17.2.7 and 17.2.20.
+     * 
      * @public
      * @readonly
      */
     readonly preEstStatus: OPTIONAL<PreEstStatus>;
     /**
      * @summary `pTCGroupID`.
+     * @description
+     * 
+     * PTC group identity, nickname, and characteristics. Mandatory on
+     * group-call request, cancel, response, and interrogate. Conditional on
+     * group advertisement and on list management.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, clause 17.2.13, clause 17.2.17, and clause
+     * 17.3.
+     * 
      * @public
      * @readonly
      */
     readonly pTCGroupID: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCIDList`.
+     * @description
+     * 
+     * Participants taken from the target's contact list and from the target's
+     * PTC group list, for a group call. Mandatory on a group-call request.
+     * Conditional on group advertisement, list management, group-call cancel,
+     * and group interrogate.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and the tables that list PTCIDList.
+     * 
      * @public
      * @readonly
      */
     readonly pTCIDList: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCMediaCapability`.
+     * @description
+     * 
+     * Codecs and media parameters the PTC server selected from the original SDP
+     * offer of the target's PTC client. Mandatory on the pre-established
+     * session record.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and table 17.2.20.
+     * 
      * @public
      * @readonly
      */
     readonly pTCMediaCapability: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCOriginatingId`.
+     * @description
+     * 
+     * Originating party, when known. Conditional on start of interception,
+     * session initiation, and session start.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, tables 17.2.2, 17.2.4, and 17.2.6.
+     * 
      * @public
      * @readonly
      */
     readonly pTCOriginatingId: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCOther`.
+     * @description
+     * 
+     * Other information required to decrypt the data (clause 17.1.5). Clause 18
+     * gives that role to the same-named component of the encryption parameters.
+     * Annex B.3 also places the string on the PTC event itself and does not add
+     * a condition.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, clause 18, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly pTCOther: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCParticipants`.
+     * @description
+     * 
+     * Known individual PTC participants. Mandatory on start of interception,
+     * group-call response, group interrogate, and the imminent-peril report.
+     * Conditional, when known, on session initiation, session start, party
+     * hold, and group-call request.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and the tables in clauses 17.2 and 17.3.
+     * 
      * @public
      * @readonly
      */
     readonly pTCParticipants: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCParty`.
+     * @description
+     * 
+     * PTC associate who joined, dropped, was placed on hold, or was retrieved,
+     * including an MCPTT emergency or imminent-peril associate of the target.
+     * Mandatory as the associate who placed the session on hold (table
+     * 17.2.11), who cancelled the group call (table 17.3.3), and who initiated
+     * an imminent-peril session toward the target (table 17.3.6). Conditional
+     * when an associate requested the group-call response or the interrogate.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and clause 17.3.
+     * 
      * @public
      * @readonly
      */
     readonly pTCParty: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCPartyDrop`.
+     * @description
+     * 
+     * Identity of the associate that leaves the PTC session. Mandatory on the
+     * party-drop continue record.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and table 17.2.10.
+     * 
      * @public
      * @readonly
      */
     readonly pTCPartyDrop: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCSessionInfo`.
+     * @description
+     * 
+     * PTC session URI, session type, and nickname. Mandatory on the session
+     * records in clause 17.2 that establish, abandon, start, end, join, or
+     * otherwise describe a session. On start of interception, required when the
+     * session is not pre-established; a pre-established session uses the
+     * pre-established session identity instead.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and table 17.2.2.
+     * 
      * @public
      * @readonly
      */
     readonly pTCSessionInfo: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCServerURI`.
+     * @description
+     * 
+     * PTC server serving the target, or the server of a session the target
+     * participates in, when known. Conditional on registration, session
+     * initiation, session start, and session end. Mandatory on the
+     * pre-established session record: the participating server of the client
+     * that originated the pre-established session request.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, table 17.2.1, and table 17.2.20.
+     * 
      * @public
      * @readonly
      */
     readonly pTCServerURI: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCUserAccessPolicy`.
+     * @description
+     * 
+     * Action the target requested on the PTC user access policy. Table 17.2.18
+     * lists: allow or block an incoming PTC session request, allow auto-answer
+     * mode, and allow override of manual answer mode. Report it when the target
+     * requests the action or attempts a change or query of the access control
+     * list. Annex B.3 carries the value as a string and does not list the
+     * allowed strings.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and table 17.2.18.
+     * 
      * @public
      * @readonly
      */
     readonly pTCUserAccessPolicy: OPTIONAL<UTF8String>;
     /**
      * @summary `pTCAddress`.
+     * @description
+     * 
+     * A PTC client address: SIP URI, privacy indication, and optional nickname
+     * (annex B.3). Floor-speaker identity uses this structure (table 17.2.14).
+     * Annex B.3 also allows the address on the PTC record itself; clause 17
+     * does not give that parameter its own condition.
+     * 
+     * 3GPP TS 33.108, annex B.3 and table 17.2.14.
+     * 
      * @public
      * @readonly
      */
     readonly pTCAddress: OPTIONAL<PTCAddress>;
     /**
      * @summary `queuedFloorControl`.
+     * @description
+     * 
+     * False by default. Send true when queued floor control is used.
+     * Conditional on a floor-control continue record: whether queuing is
+     * supported by the PTC server and by the target's client.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly queuedFloorControl: OPTIONAL<BOOLEAN>;
     /**
      * @summary `queuedPosition`.
+     * @description
+     * 
+     * Queue position when queued floor control is supported (table 17.2.14).
+     * Annex B.3 says it is the queued position of the speaker, target or
+     * associate, who has the right to speak. Conditional.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly queuedPosition: OPTIONAL<UTF8String>;
     /**
      * @summary `registrationRequest`.
+     * @description
+     * 
+     * Register, re-register, or de-register. Mandatory on the PTC registration
+     * report, whether the attempt succeeds or fails.
+     * 
+     * 3GPP TS 33.108, clause 17.2.1 and table 17.2.1.
+     * 
      * @public
      * @readonly
      */
     readonly registrationRequest: OPTIONAL<RegistrationRequest>;
     /**
      * @summary `registrationOutcome`.
+     * @description
+     * 
+     * Success or failure of the PTC registration. Mandatory on the registration
+     * report. The clause 17.1.5 mapping also says the outcome identifies the
+     * failure reason; the enumeration only distinguishes success from failure.
+     * 
+     * 3GPP TS 33.108, clause 17.2.1 and table 17.1.5.
+     * 
      * @public
      * @readonly
      */
     readonly registrationOutcome: OPTIONAL<RegistrationOutcome>;
     /**
      * @summary `retrieveID`.
+     * @description
+     * 
+     * PTC subscriber that retrieved an ongoing session from hold. Table 17.2.11
+     * marks it mandatory on the hold/retrieve record, in the same record as the
+     * identity of the associate who placed the session on hold.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5 and table 17.2.11.
+     * 
      * @public
      * @readonly
      */
     readonly retrieveID: OPTIONAL<UTF8String>;
     /**
      * @summary `rTPSetting`.
+     * @description
+     * 
+     * IP address and port at the PTC server for the RTP session. Mandatory on
+     * the pre-established session record. Table 17.2.20 describes them as the
+     * IP address and port number of the target at the PTC server.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, table 17.2.20, and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly rTPSetting: OPTIONAL<RTPSetting>;
     /**
      * @summary `talkBurstPriority`.
+     * @description
+     * 
+     * Talk-burst priority of the PTC client on a floor-control continue record,
+     * when more than one priority level is supported (OMA-PoC-AD [97]).
+     * Conditional (table 17.2.14). Clause 17.1.5 uses the same description for
+     * the priority-level parameter.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly talkBurstPriority: OPTIONAL<Priority_Level>;
     /**
      * @summary `talkBurstReason`.
+     * @description
+     * 
+     * Reason code for denial or revoke of a talk burst, when known. Conditional
+     * on a floor-control record. Coded by OMA-PoC-AD [97]. TS 33.108 does not
+     * list the code strings.
+     * 
+     * 3GPP TS 33.108, table 17.2.14 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly talkBurstReason: OPTIONAL<Talk_burst_reason_code>;
     /**
      * @summary `talkburstControlSetting`.
+     * @description
+     * 
+     * Talk-burst control protocol, the parameters the PTC server selected from
+     * the client's SDP offer, and the server port for that protocol. Clause
+     * 17.2.14 defines floor control as talk-burst control (TBCP) and does not
+     * say on which record this parameter is required.
+     * 
+     * 3GPP TS 33.108, clause 17.2.14 and annex B.3.
+     * 
      * @public
      * @readonly
      */
     readonly talkburstControlSetting: OPTIONAL<TalkburstControlSetting>;
     /**
      * @summary `targetPresenceStatus`.
+     * @description
+     * 
+     * PTC-related presence of the target, if it changed. Conditional on the
+     * target-presence report and on list management. Table 17.2.18 marks it
+     * mandatory on the access-policy record, with the same "if changed"
+     * description.
+     * 
+     * 3GPP TS 33.108, clause 17.1.5, tables 17.2.15, 17.2.17, and 17.2.18.
+     * 
      * @public
      * @readonly
      */
     readonly targetPresenceStatus: OPTIONAL<UTF8String>;
     /**
      * @summary `port_Number`.
+     * @description
+     * 
+     * Optional port number on the PTC record, range 0..65535. Annex B.3 does
+     * not say when it is sent or which port it is. The RTP port and the
+     * talk-burst control port are separate parameters.
+     * 
+     * 3GPP TS 33.108, annex B.3.
+     * 
      * @public
      * @readonly
      */

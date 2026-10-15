@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a VoIP T-PDU. Clause 5.7.3 reuses these four values for IP-based
+ * CS voice (from the target, to the target, combined, unknown).
+ * 
+ * 3GPP TS 33.108, annex K.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +40,13 @@ enum _enum_for_TPDU_direction {
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a VoIP T-PDU. Clause 5.7.3 reuses these four values for IP-based
+ * CS voice (from the target, to the target, combined, unknown).
+ * 
+ * 3GPP TS 33.108, annex K.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +68,13 @@ type TPDU_direction = _enum_for_TPDU_direction;
  * @summary TPDU_direction
  * @description
  * 
+ * Direction of a VoIP T-PDU. Clause 5.7.3 reuses these four values for IP-based
+ * CS voice (from the target, to the target, combined, unknown).
+ * 
+ * 3GPP TS 33.108, annex K.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,6 +94,9 @@ const TPDU_direction = _enum_for_TPDU_direction;
 
 /**
  * @summary TPDU_direction_from_target
+ * @description
+ * 
+ * VoIP CC PDU coming from the target. 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -81,6 +105,9 @@ const TPDU_direction_from_target: TPDU_direction = TPDU_direction.from_target; /
 
 /**
  * @summary from_target
+ * @description
+ * 
+ * CC coming from the target. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -89,6 +116,9 @@ const from_target: TPDU_direction = TPDU_direction.from_target; /* SHORT_NAMED_E
 
 /**
  * @summary TPDU_direction_to_target
+ * @description
+ * 
+ * VoIP CC PDU sent to the target. 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -97,6 +127,9 @@ const TPDU_direction_to_target: TPDU_direction = TPDU_direction.to_target; /* LO
 
 /**
  * @summary to_target
+ * @description
+ * 
+ * CC sent to the target. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -105,6 +138,10 @@ const to_target: TPDU_direction = TPDU_direction.to_target; /* SHORT_NAMED_ENUME
 
 /**
  * @summary TPDU_direction_combined
+ * @description
+ * 
+ * VoIP CC PDU includes both from the target and to the target. 3GPP TS 33.108,
+ * annex K.2.
  * @constant
  * @type {number}
  */
@@ -113,6 +150,9 @@ const TPDU_direction_combined: TPDU_direction = TPDU_direction.combined; /* LONG
 
 /**
  * @summary combined
+ * @description
+ * 
+ * Combined from-target and to-target CC. Annex K.2.
  * @constant
  * @type {number}
  */
@@ -121,6 +161,9 @@ const combined: TPDU_direction = TPDU_direction.combined; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary TPDU_direction_unknown
+ * @description
+ * 
+ * Direction of the VoIP CC PDU cannot be determined. 3GPP TS 33.108, annex K.2.
  * @constant
  * @type {number}
  */
@@ -129,6 +172,9 @@ const TPDU_direction_unknown: TPDU_direction = TPDU_direction.unknown; /* LONG_N
 
 /**
  * @summary unknown
+ * @description
+ * 
+ * Direction cannot be determined. Annex K.2.
  * @constant
  * @type {number}
  */

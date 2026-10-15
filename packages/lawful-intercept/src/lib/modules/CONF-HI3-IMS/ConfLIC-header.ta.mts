@@ -26,6 +26,14 @@ import { MediaID, _decode_MediaID, _encode_MediaID } from "../CONF-HI3-IMS/Media
  * @summary ConfLIC_header
  * @description
  * 
+ * Correlation header for an IMS conference CC PDU, BER-encoded. For a given
+ * target the correlation is unique per conference session. The same value may
+ * be used for more than one target identity in that session (clause 11.1.1).
+ * 
+ * 3GPP TS 33.108, annex L.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,54 +60,89 @@ export
 class ConfLIC_header {
     /**
      * @summary `hi3DomainId`.
+     * @description
+     * 
+     * 3GPP HI3 domain identifier in this header (`hi3conf` under
+     * `threeGPPSUBDomainId`). 3GPP TS 33.108, annex L.2.
      * @public
      * @readonly
      */
     readonly hi3DomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lIID`.
+     * @description
+     * 
+     * Lawful interception identifier of the target on HI2 and HI3. Handling is
+     * a national requirement. 3GPP TS 33.108, annex L.2 and clause 11.1.2.
      * @public
      * @readonly
      */
     readonly lIID: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `correlation`.
+     * @description
+     * 
+     * Correlates this CC with conference IRI. Unique per conference session for
+     * a given target. The LEMF uses it to tie CC to IRI. 3GPP TS 33.108, annex
+     * L.2, annex L.4, and clause 11.1.1.
      * @public
      * @readonly
      */
     readonly correlation: ConfCorrelation;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Handling is a national requirement. The LEMF stores packets with this
+     * timestamp. 3GPP TS 33.108, annex L.2 and annex L.4.
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `sequence_number`.
+     * @description
+     * 
+     * Incremented each time a T-PDU is delivered. Handling is a national
+     * requirement. 3GPP TS 33.108, annex L.2.
      * @public
      * @readonly
      */
     readonly sequence_number: INTEGER;
     /**
      * @summary `t_PDU_direction`.
+     * @description
+     * 
+     * Direction of the T-PDU: from or to the target, unknown, the conference as
+     * target, from or to the mixer, or combined. 3GPP TS 33.108, annex L.2.
      * @public
      * @readonly
      */
     readonly t_PDU_direction: TPDU_direction;
     /**
      * @summary `national_HI3_ASN1parameters`.
+     * @description
+     * 
+     * Encoded per national requirements. 3GPP TS 33.108, annex L.2.
      * @public
      * @readonly
      */
     readonly national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     /**
      * @summary `mediaID`.
+     * @description
+     * 
+     * Media exchanged on the conference: conference-side SDP information and a
+     * stream identifier from the SDP. 3GPP TS 33.108, annex L.2.
      * @public
      * @readonly
      */
     readonly mediaID: OPTIONAL<MediaID>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IMSIdentity
  * @description
  * 
+ * A SIP URI or a tel URI naming a party or a conference. Conditional conference
+ * and temporary conference URIs use this form: provide at least one when
+ * available. 3GPP TS 33.108, clause 11.5 and annex B.11.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +38,22 @@ export
 class IMSIdentity {
     /**
      * @summary `sip_uri`.
+     * @description
+     * 
+     * SIP URI. Reference 26 of 3GPP TS 33.108 is IETF RFC 3261. The
+     * specification does not restate the URI layout here.
+     * 
      * @public
      * @readonly
      */
     readonly sip_uri: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tel_uri`.
+     * @description
+     * 
+     * Tel URI. Reference 67 of 3GPP TS 33.108 is IETF RFC 3966. The
+     * specification does not restate the URI layout here.
+     * 
      * @public
      * @readonly
      */

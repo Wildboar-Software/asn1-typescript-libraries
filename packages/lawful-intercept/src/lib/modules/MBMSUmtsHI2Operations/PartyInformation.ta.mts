@@ -15,6 +15,11 @@ import { PartyInformation_partyIdentity, _decode_PartyInformation_partyIdentity,
  * @summary PartyInformation
  * @description
  * 
+ * One party of the MBMS event: role and identities. Clause 9 requires the
+ * observed IMSI.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,18 +51,32 @@ export
 class PartyInformation {
     /**
      * @summary `party_Qualifier`.
+     * @description
+     * 
+     * Role of this party. Annex B.8 names only the MBMS target.
+     * 
+     * 3GPP TS 33.108, annex B.8.
      * @public
      * @readonly
      */
     readonly party_Qualifier: PartyInformation_party_Qualifier;
     /**
      * @summary `partyIdentity`.
+     * @description
+     * 
+     * Identities of this party. Annex B.8 provides the IMSI. Clause 9 records
+     * require the observed IMSI.
+     * 
+     * 3GPP TS 33.108, table 9.2 and annex B.8.
      * @public
      * @readonly
      */
     readonly partyIdentity: PartyInformation_partyIdentity;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

@@ -1,4 +1,26 @@
 /**
+ * @description
+ *
+ * ASN.1 module `EpsHI2Operations` from 3GPP TS 33.108.
+ * The module is declared with IMPLICIT TAGS.
+ *
+ * HI2 intercept-related information for the Evolved Packet System.
+ * A delivery is either one `EpsIRIContent` record or an optional
+ * `EpsIRISequence` of records. Aggregation is optional and shall not
+ * be a reason to withhold a record that is ready to send.
+ *
+ * Begin opens a communication attempt, End closes it, Continue is
+ * sent while the attempt is open, and Report covers non-communication
+ * events and unsuccessful attempts. Where clause 10 reuses a packet-
+ * domain rule, that rule is the one in clause 6.
+ *
+ * 3GPP TS 33.108, clauses 4.5.3 and 10, and annex B.9.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ *
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulIntercept(2) threeGPP(4) hi2eps(8) r17(17) version-0(0)}`
+ */
+/**
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `cancel`, `cancelInform`, `cancelResponse`, `mME`, `modify`,

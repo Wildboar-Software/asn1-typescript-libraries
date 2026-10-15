@@ -13,6 +13,12 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * @summary GA_Polygon_Item
  * @description
  * 
+ * One vertex of a UMTS location polygon.
+ * 
+ * 3GPP TS 33.108, annex B.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +34,23 @@ export
 class GA_Polygon_Item {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     * 
+     * This vertex of the UMTS location polygon.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

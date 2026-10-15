@@ -16,6 +16,10 @@ enum _enum_for_MBMSinformation_mbms_Mode {
  * @summary MBMSinformation_mbms_Mode
  * @description
  * 
+ * Broadcast or multicast mode of the MBMS bearer service.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +37,9 @@ type MBMSinformation_mbms_Mode = _enum_for_MBMSinformation_mbms_Mode | ENUMERATE
 
 /**
  * @summary MBMSinformation_mbms_Mode_multicast
+ * @description
+ * 
+ * The MBMS bearer is in multicast mode (table 9.2).
  * @constant
  * @type {number}
  */
@@ -41,6 +48,9 @@ const MBMSinformation_mbms_Mode_multicast: MBMSinformation_mbms_Mode = 0; /* LON
 
 /**
  * @summary multicast
+ * @description
+ * 
+ * Multicast mode of the MBMS bearer (table 9.2).
  * @constant
  * @type {number}
  */
@@ -49,6 +59,11 @@ const multicast: MBMSinformation_mbms_Mode = MBMSinformation_mbms_Mode_multicast
 
 /**
  * @summary MBMSinformation_mbms_Mode_broadcast
+ * @description
+ * 
+ * The MBMS bearer is in broadcast mode (table 9.2). Clause 9.6 gives no
+ * content-of-communication capability for broadcast services, because the UE
+ * receives them in idle mode without an active network connection.
  * @constant
  * @type {number}
  */
@@ -57,6 +72,9 @@ const MBMSinformation_mbms_Mode_broadcast: MBMSinformation_mbms_Mode = 1; /* LON
 
 /**
  * @summary broadcast
+ * @description
+ * 
+ * Broadcast mode of the MBMS bearer (table 9.2).
  * @constant
  * @type {number}
  */

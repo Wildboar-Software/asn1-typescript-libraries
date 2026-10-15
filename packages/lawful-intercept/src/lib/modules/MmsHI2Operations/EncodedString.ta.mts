@@ -13,6 +13,14 @@ import { EncodedTextString, _decode_EncodedTextString, _encode_EncodedTextString
  * @summary EncodedString
  * @description
  * 
+ * Text, or a character string whose character set is identified separately.
+ * 
+ * `text` is the text form. `encodedTextString` carries a character-set
+ * identifier and the characters. Clause 15.3 does not further define when one
+ * alternative is chosen.
+ * 
+ * 3GPP TS 33.108, annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,13 @@ enum _enum_for_SMS_report_sMS_Contents_sms_initiator {
  * @summary SMS_report_sMS_Contents_sms_initiator
  * @description
  * 
+ * Which party sent the SMS (module comment). Mandatory on the SMS REPORT
+ * (clause 6): whether the SMS is mobile-originated, mobile-terminated, or
+ * undefined (table 6.2). The module names the sender as the target, the server,
+ * or an undefined party.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +42,11 @@ type SMS_report_sMS_Contents_sms_initiator = _enum_for_SMS_report_sMS_Contents_s
 
 /**
  * @summary SMS_report_sMS_Contents_sms_initiator_target
+ * @description
+ * 
+ * The target sent the SMS (module comment: the party which sent the SMS).
+ * Clause 6 requires the initiator to show mobile-originated, mobile-terminated,
+ * or undefined. This value is the target as sender.
  * @constant
  * @type {number}
  */
@@ -43,6 +55,9 @@ const SMS_report_sMS_Contents_sms_initiator_target: SMS_report_sMS_Contents_sms_
 
 /**
  * @summary target
+ * @description
+ * 
+ * The target sent the SMS (clause 6 SMS initiator).
  * @constant
  * @type {number}
  */
@@ -51,6 +66,11 @@ const target: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sm
 
 /**
  * @summary SMS_report_sMS_Contents_sms_initiator_server
+ * @description
+ * 
+ * The server sent the SMS (module comment). Clause 6 requires the initiator to
+ * show mobile-originated, mobile-terminated, or undefined. This value is the
+ * server as sender.
  * @constant
  * @type {number}
  */
@@ -59,6 +79,9 @@ const SMS_report_sMS_Contents_sms_initiator_server: SMS_report_sMS_Contents_sms_
 
 /**
  * @summary server
+ * @description
+ * 
+ * The server sent the SMS (clause 6 SMS initiator).
  * @constant
  * @type {number}
  */
@@ -67,6 +90,10 @@ const server: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sm
 
 /**
  * @summary SMS_report_sMS_Contents_sms_initiator_undefined_party
+ * @description
+ * 
+ * The sending party is undefined (module comment). Clause 6 table 6.2 calls the
+ * third initiator case Undefined.
  * @constant
  * @type {number}
  */
@@ -75,6 +102,9 @@ const SMS_report_sMS_Contents_sms_initiator_undefined_party: SMS_report_sMS_Cont
 
 /**
  * @summary undefined_party
+ * @description
+ * 
+ * The SMS sender is undefined (clause 6 table 6.2).
  * @constant
  * @type {number}
  */

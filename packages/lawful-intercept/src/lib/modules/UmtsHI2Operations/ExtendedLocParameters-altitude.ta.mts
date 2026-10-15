@@ -13,6 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExtendedLocParameters_altitude
  * @description
  * 
+ * Altitude of a LALS fix, mapped from the OMA MLP pos element. TS 33.108 cites
+ * MLP clause 5.3.5 for the altitude and clause 5.3.7 for its uncertainty, and
+ * does not restate that syntax.
+ * 
+ * 3GPP TS 33.108, annex B.3. MLP is reference [88] of that specification.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +36,24 @@ export
 class ExtendedLocParameters_altitude {
     /**
      * @summary `alt`.
+     * @description
+     * 
+     * Altitude of the LALS fix, from OMA MLP clause 5.3.5. TS 33.108 does not
+     * restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */
     readonly alt: PrintableString;
     /**
      * @summary `alt_uncertainty`.
+     * @description
+     * 
+     * Uncertainty of that altitude, from OMA MLP clause 5.3.7. Include it when
+     * the MLP response has it. TS 33.108 does not restate that syntax.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

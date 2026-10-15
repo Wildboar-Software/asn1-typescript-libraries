@@ -11,6 +11,13 @@ import { RemoteUEContext, _decode_RemoteUEContext, _encode_RemoteUEContext } fro
  * @summary RemoteUeContextConnected
  * @description
  * 
+ * The ProSe remote UEs currently connected to a target ProSe UE-to-network
+ * relay, each with its identity and IP address. Provide the list when the relay
+ * is the target (table 13.3.2.2-1). Clause 10.5.2 also sends it when that relay
+ * performs a tracking area or EPS location update.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

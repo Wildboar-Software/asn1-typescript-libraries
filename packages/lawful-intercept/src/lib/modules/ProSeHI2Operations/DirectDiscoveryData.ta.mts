@@ -17,6 +17,12 @@ import { ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../Pro
  * @summary DirectDiscoveryData
  * @description
  * 
+ * Discovery PLMN, application name, announced or filtered application code,
+ * optional mask, and the timer the network assigned. Stage 2 allows more than
+ * one PLMN, name, timer, and code when the target is monitoring; this structure
+ * carries one of each. Several masks can be carried together. 3GPP TS 33.108,
+ * clause 13.2.2.2 and annex B.13.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +45,68 @@ export
 class DirectDiscoveryData {
     /**
      * @summary `discoveryPLMNID`.
+     * @description
+     * 
+     * PLMN where discovery takes place. Required. On a discovery request, more
+     * than one may be reported when the target is monitoring. The character
+     * format is not further defined. 3GPP TS 33.108, clause 13.2, tables
+     * 13.2.1-2 and 13.2.2.2-1.
+     * 
      * @public
      * @readonly
      */
     readonly discoveryPLMNID: UTF8String;
     /**
      * @summary `proseAppIdName`.
+     * @description
+     * 
+     * Identity of a user within one application. Required. On a discovery
+     * request, more than one may be reported when the target is monitoring.
+     * 3GPP TS 33.108, clause 13.2, table 13.2.1-2.
+     * 
      * @public
      * @readonly
      */
     readonly proseAppIdName: UTF8String;
     /**
      * @summary `proseAppCode`.
+     * @description
+     * 
+     * Bit string announced over the air, or included in a discovery filter
+     * applied by the UE. Required. 23 octets, format in 3GPP TS 23.003
+     * (reference 25). On a discovery request, more than one may be reported
+     * when the target is monitoring. 3GPP TS 33.108, clause 13.2 and annex
+     * B.13.
+     * 
      * @public
      * @readonly
      */
     readonly proseAppCode: OCTET_STRING;
     /**
      * @summary `proseAppMask`.
+     * @description
+     * 
+     * Mask the monitoring UE uses for full or partial matching against the
+     * application code. Same length as that code. Conditional on a discovery
+     * request, and only when the target is monitoring and a mask is available.
+     * A discovery filter may include several masks. Not listed on the
+     * match-report record. 3GPP TS 33.108, clause 13.2.2.2, table 13.2.2.2-1,
+     * and annex B.13.
+     * 
      * @public
      * @readonly
      */
     readonly proseAppMask: OPTIONAL<ProSeAppMask>;
     /**
      * @summary `timer`.
+     * @description
+     * 
+     * Validity Timer or Time to Live that the network assigned to an
+     * application code or discovery filter. It limits how long the UE may
+     * announce or monitor. Required. The unit is not stated. On a discovery
+     * request, more than one may be reported when the target is monitoring.
+     * 3GPP TS 33.108, clause 13.2, table 13.2.1-2.
+     * 
      * @public
      * @readonly
      */

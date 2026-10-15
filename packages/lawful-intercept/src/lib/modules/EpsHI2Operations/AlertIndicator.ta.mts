@@ -17,6 +17,11 @@ enum _enum_for_AlertIndicator {
  * @summary AlertIndicator
  * @description
  * 
+ * Group-call alert condition for a PTC or MCPTT emergency call: whether the
+ * alert was sent, received, or cancelled (table 17.1.5). Carried on the
+ * group-call request, cancel, and response records (clauses 17.3.2 to 17.3.4).
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +42,11 @@ type AlertIndicator = _enum_for_AlertIndicator | ENUMERATED;
 
 /**
  * @summary AlertIndicator_sent
+ * @description
+ * 
+ * The group-call alert was sent (table 17.1.5). The module comment calls this
+ * the group-call alert condition.
+ * 
  * @constant
  * @type {number}
  */
@@ -45,6 +55,10 @@ const AlertIndicator_sent: AlertIndicator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sent
+ * @description
+ * 
+ * The group-call alert was sent (clause 17.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -53,6 +67,10 @@ const sent: AlertIndicator = AlertIndicator_sent; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary AlertIndicator_received
+ * @description
+ * 
+ * The group-call alert was received (table 17.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -61,6 +79,10 @@ const AlertIndicator_received: AlertIndicator = 2; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary received
+ * @description
+ * 
+ * The group-call alert was received (clause 17.1.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -69,6 +91,11 @@ const received: AlertIndicator = AlertIndicator_received; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary AlertIndicator_cancelled
+ * @description
+ * 
+ * The group-call alert was cancelled (table 17.1.5). On a group-call cancel
+ * record, alert signalling was cancelled (table 17.3.3).
+ * 
  * @constant
  * @type {number}
  */
@@ -77,6 +104,10 @@ const AlertIndicator_cancelled: AlertIndicator = 3; /* LONG_NAMED_ENUMERATED_VAL
 
 /**
  * @summary cancelled
+ * @description
+ * 
+ * The group-call alert was cancelled (clause 17.3.3).
+ * 
  * @constant
  * @type {number}
  */

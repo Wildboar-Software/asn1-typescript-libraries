@@ -15,6 +15,14 @@ import { EncodedString, _decode_EncodedString, _encode_EncodedString } from "../
  * @summary MMFlags
  * @description
  * 
+ * A keyword action and the keyword it applies to, for a stored MM.
+ * 
+ * On an MMBox description, include this when at least one keyword is associated
+ * with the MM. It may carry every keyword. Omit it when the MM has none (table
+ * 15.3.6.2.2.16).
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +39,25 @@ export
 class MMFlags {
     /**
      * @summary `tokenAction`.
+     * @description
+     * 
+     * Whether the keyword is added, removed, or filtered. Table 15.3.6.1.2
+     * describes add and remove.
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */
     readonly tokenAction: TokenAction;
     /**
      * @summary `mmFlagkeywords`.
+     * @description
+     * 
+     * The keyword to add or remove, or the keywords associated with the MM. An
+     * MMBox description may convey every keyword of the MM (table
+     * 15.3.6.2.2.16).
+     * 
+     * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
      * @public
      * @readonly
      */

@@ -13,6 +13,12 @@ import { MBMSparameters, _decode_MBMSparameters, _encode_MBMSparameters } from "
  * @summary Services_Data_Information
  * @description
  * 
+ * Annex B.8 groups MBMS parameters here. Clause 9 tables do not name this type.
+ * Party information in this module does not contain it. The APN in table 9.2 is
+ * `mBMSapn` on the MBMS information.
+ * 
+ * 3GPP TS 33.108, annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,21 @@ export
 class Services_Data_Information {
     /**
      * @summary `mBMSparameters`.
+     * @description
+     * 
+     * MBMS parameters grouped by annex B.8. The only component is an access
+     * point name. Clause 9 maps the APN to `mBMSapn`, not to this component.
+     * 
+     * 3GPP TS 33.108, annex B.8.
      * @public
      * @readonly
      */
     readonly mBMSparameters: OPTIONAL<MBMSparameters>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

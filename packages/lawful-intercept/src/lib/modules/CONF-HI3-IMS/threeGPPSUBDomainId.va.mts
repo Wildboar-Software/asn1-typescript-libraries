@@ -11,6 +11,13 @@ import { lawfulInterceptDomainId } from "../CONF-HI3-IMS/lawfulInterceptDomainId
  * @summary threeGPPSUBDomainId
  * @description
  * 
+ * Arc `threeGPP(4)` under `lawfulInterceptDomainId`. 3GPP HI3 domain
+ * identifiers are defined under this arc. 3GPP TS 33.108, annex B.2.
+ * 
+ * 3GPP TS 33.108, annex B.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

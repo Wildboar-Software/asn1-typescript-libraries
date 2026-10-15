@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GlobalCellID
  * @description
  * 
+ * Cell identity in MAP format (3GPP TS 29.002), as the module comment states.
+ * Clause 16.4 requires it in the 2G/3G location of a cell-site report. The
+ * specification text does not define the octet layout beyond that MAP
+ * reference. 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

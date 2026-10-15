@@ -13,6 +13,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DetailedCivicAddress
  * @description
  * 
+ * One detailed civic address used to enrich an HI2 location, typically the cell
+ * site or hotspot rather than the target's coordinates.
+ * 
+ * Country and language are required. Country is the minimum that qualifies the
+ * address when national regulation requires a civic address. The other elements
+ * are included when known. Tokens such as RD, PRD, POD, and PSD are the
+ * civic-address labels from the annex B.3 comments.
+ * 
+ * 3GPP TS 33.108, annex B.3 and clause 16.3.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -91,174 +103,332 @@ export
 class DetailedCivicAddress {
     /**
      * @summary `building`.
+     * @description
+     * 
+     * Building or structure, for example Hope Theatre. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly building: OPTIONAL<UTF8String>;
     /**
      * @summary `room`.
+     * @description
+     * 
+     * Unit, apartment, or suite, for example 12a. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly room: OPTIONAL<UTF8String>;
     /**
      * @summary `placeType`.
+     * @description
+     * 
+     * Kind of place, for example office. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly placeType: OPTIONAL<UTF8String>;
     /**
      * @summary `postalCommunityName`.
+     * @description
+     * 
+     * Postal community name, for example Leonia. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly postalCommunityName: OPTIONAL<UTF8String>;
     /**
      * @summary `additionalCode`.
+     * @description
+     * 
+     * Additional location code, for example 13203000003. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly additionalCode: OPTIONAL<UTF8String>;
     /**
      * @summary `seat`.
+     * @description
+     * 
+     * Seat, desk, cubicle, or workstation, for example WS 181. Include it when
+     * known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly seat: OPTIONAL<UTF8String>;
     /**
      * @summary `primaryRoad`.
+     * @description
+     * 
+     * Primary road name (RD), for example Broadway. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly primaryRoad: OPTIONAL<UTF8String>;
     /**
      * @summary `primaryRoadDirection`.
+     * @description
+     * 
+     * Leading road direction (PRD), for example N or North. Include it when
+     * known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly primaryRoadDirection: OPTIONAL<UTF8String>;
     /**
      * @summary `trailingStreetSuffix`.
+     * @description
+     * 
+     * Trailing street suffix (POD), for example SW or South West. Include it
+     * when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly trailingStreetSuffix: OPTIONAL<UTF8String>;
     /**
      * @summary `streetSuffix`.
+     * @description
+     * 
+     * Street suffix or type, for example Avenue, Platz, or Road. Include it
+     * when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly streetSuffix: OPTIONAL<UTF8String>;
     /**
      * @summary `houseNumber`.
+     * @description
+     * 
+     * House number, for example 123. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly houseNumber: OPTIONAL<UTF8String>;
     /**
      * @summary `houseNumberSuffix`.
+     * @description
+     * 
+     * House-number suffix, for example A or Ter. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly houseNumberSuffix: OPTIONAL<UTF8String>;
     /**
      * @summary `landmarkAddress`.
+     * @description
+     * 
+     * Landmark or vanity address, for example Columbia University. Include it
+     * when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly landmarkAddress: OPTIONAL<UTF8String>;
     /**
      * @summary `additionalLocation`.
+     * @description
+     * 
+     * Additional location, for example South Wing. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly additionalLocation: OPTIONAL<UTF8String>;
     /**
      * @summary `name`.
+     * @description
+     * 
+     * Residence or office occupant, for example Joe's Barbershop. Include it
+     * when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly name: OPTIONAL<UTF8String>;
     /**
      * @summary `floor`.
+     * @description
+     * 
+     * Floor, for example 4th floor. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly floor: OPTIONAL<UTF8String>;
     /**
      * @summary `primaryStreet`.
+     * @description
+     * 
+     * Primary street name, for example Broadway. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly primaryStreet: OPTIONAL<UTF8String>;
     /**
      * @summary `primaryStreetDirection`.
+     * @description
+     * 
+     * Leading street direction (PSD), for example N or North. Include it when
+     * known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly primaryStreetDirection: OPTIONAL<UTF8String>;
     /**
      * @summary `roadSection`.
+     * @description
+     * 
+     * Road section, for example 14. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly roadSection: OPTIONAL<UTF8String>;
     /**
      * @summary `roadBranch`.
+     * @description
+     * 
+     * Road branch, for example Lane 7. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly roadBranch: OPTIONAL<UTF8String>;
     /**
      * @summary `roadSubBranch`.
+     * @description
+     * 
+     * Road sub-branch, for example Alley 8. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly roadSubBranch: OPTIONAL<UTF8String>;
     /**
      * @summary `roadPreModifier`.
+     * @description
+     * 
+     * Road pre-modifier, for example Old. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly roadPreModifier: OPTIONAL<UTF8String>;
     /**
      * @summary `roadPostModifier`.
+     * @description
+     * 
+     * Road post-modifier, for example Extended. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly roadPostModifier: OPTIONAL<UTF8String>;
     /**
      * @summary `postalCode`.
+     * @description
+     * 
+     * Postal or ZIP code, for example 10027-1234. Include it when known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly postalCode: OPTIONAL<UTF8String>;
     /**
      * @summary `town`.
+     * @description
+     * 
+     * Town of the civic address. Annex B.3 gives no example and no further
+     * definition.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly town: OPTIONAL<UTF8String>;
     /**
      * @summary `county`.
+     * @description
+     * 
+     * Administrative subdivision, often an ISO 3166-2 code. Include it when
+     * known.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly county: OPTIONAL<UTF8String>;
     /**
      * @summary `country`.
+     * @description
+     * 
+     * Country, as an ISO 3166-1 code. Annex B.3 requires it: it is the minimum
+     * that qualifies a civic address when national regulation demands one.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly country: UTF8String;
     /**
      * @summary `language`.
+     * @description
+     * 
+     * Language of this civic address. An ISO 639-1 alpha-2 code from the IANA
+     * registry, including later assignments by the ISO 639-1 maintenance
+     * agency. Required with the country.
+     * 
+     * 3GPP TS 33.108, annex B.3 and clause 16.3.
      * @public
      * @readonly
      */
     readonly language: UTF8String;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of annex B.3 does not define. They
+     * are retained so a later addition on HI2 is not dropped.
+     * 
+     * 3GPP TS 33.108, annex B.3.
      * @public
      * @readonly
      */

@@ -11,6 +11,10 @@ import { GcsePartyIdentity, _decode_GcsePartyIdentity, _encode_GcsePartyIdentity
  * @summary GcseGroup
  * @description
  * 
+ * List of GCSE party identities. Used both for members who could participate
+ * and for parties actually in the active communication. 3GPP TS 33.108, clause
+ * 14.2.6, table 14.2.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

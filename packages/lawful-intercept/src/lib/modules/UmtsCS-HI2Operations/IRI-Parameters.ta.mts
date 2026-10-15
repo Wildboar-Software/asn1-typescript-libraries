@@ -54,6 +54,15 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  * @summary IRI_Parameters
  * @description
  * 
+ * Parameters of one circuit-switched IRI. Control information (clause 5.2.2.1)
+ * identifies the target and maps the record to content links. Basic-call items
+ * are sent when they first become available and need not be repeated (clause
+ * 5.2.2.2). Supplementary-service information is sent when the signalling event
+ * is available (clause 5.4.3). Services absent from table 5.7 have no LI
+ * impact: no extra content links and no service-specific IRI. National
+ * extensions use the national parameters. Each network adopts either
+ * content-link option A or option B (clause 5.4.4). 3GPP TS 33.108, clause 5.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -177,168 +186,461 @@ export
 class IRI_Parameters {
     /**
      * @summary `hi2CSDomainId`.
+     * @description
+     * 
+     * 3GPP HI2 CS domain identifier. Present on the IRI. It is the version
+     * indication annex B.3a treats as sufficient; the separate version
+     * component is redundant beside it and is still recommended as lastVersion.
+     * 3GPP TS 33.108, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly hi2CSDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `iRIversion`.
+     * @description
+     * 
+     * HI2 interface version. Clause 5.2.2.1 lists version indication as control
+     * information. The module marks it optional: absence means version 1. Annex
+     * B.3a says the component was always redundant because this domain
+     * identifier has been present since the first CS HI2 module (v6.1.0), and
+     * recommends always sending lastVersion even after that identifier's
+     * version arc changes. Values 4 to 7 are omitted to align with the
+     * packet-switched HI2 module. 3GPP TS 33.108, clause 5.2.2.1 and annex
+     * B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly iRIversion: OPTIONAL<IRI_Parameters_iRIversion>;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     * 
+     * LIID agreed between the LEA and the operator, one per target identity,
+     * and a distinct LIID per LEA if several intercept the same identity.
+     * Required on every record. Alphanumeric, or a digit string when the HI3
+     * subaddress option of annex J is used. Used on HI2 and HI3 to identify the
+     * target and to correlate IRI with content. In the intercepting function it
+     * corresponds to the warrant reference number. 3GPP TS 33.108, clauses
+     * 5.1.1 and 5.1.4.
+     * 
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     * 
+     * Communication identifier: network identifier plus, for
+     * connection-oriented events, the communication identity number. Uniquely
+     * identifies the intercepted call and correlates IRI with content, and LALS
+     * reports with the triggering IRI. In UMTS the network identifier is the
+     * intercepting node identity and the communication identity number is the
+     * correlation number.
+     *
+     * Required for connection-oriented IRI. May be omitted for non-call-related
+     * records such as SMS and subscriber controlled input, which have no
+     * content to correlate. The network identifier should be internationally
+     * unique: a mandatory operator identifier and an optional network-element
+     * identifier (E.164 node number, X.25 address, or IP address). National
+     * regulation may require the network-element identifier. One session of a
+     * target uses one communication identity number; another session at the
+     * same element uses a different one. Several target identities in the same
+     * communication may share it. 3GPP TS 33.108, clauses 5.1.2 and 5.2.2.1.
+     * 
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time of the event that triggered the record, at the 3G MSC
+     * server, 3G GMSC server, or HLR. The value shall be able to say whether it
+     * is local time without a time zone or UTC. The operator chooses which of
+     * those forms is used. Required as control information. 3GPP TS 33.108,
+     * clause 5.2.2.1 and table 5.5.
+     * 
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `intercepted_Call_Direct`.
+     * @description
+     * 
+     * Whether the target is the originating or the terminating party, when that
+     * is known. Sent when it first becomes available. Not a
+     * supplementary-service indicator. 3GPP TS 33.108, clause 5.2.2.2 and table
+     * 5.5.
+     * 
      * @public
      * @readonly
      */
     readonly intercepted_Call_Direct: OPTIONAL<IRI_Parameters_intercepted_Call_Direct>;
     /**
      * @summary `intercepted_Call_State`.
+     * @description
+     * 
+     * Not required for UMTS. May be included for GSM backward compatibility.
+     * 3GPP TS 33.108, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly intercepted_Call_State: OPTIONAL<Intercepted_Call_State>;
     /**
      * @summary `ringingDuration`.
+     * @description
+     * 
+     * Ringing duration in seconds, three octets, BCD-coded HHMMSS. Not required
+     * for UMTS. May be included for GSM backward compatibility. 3GPP TS 33.108,
+     * annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly ringingDuration: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `conversationDuration`.
+     * @description
+     * 
+     * Conversation duration in seconds, three octets, BCD-coded HHMMSS. Not
+     * required for UMTS. May be included for GSM backward compatibility. 3GPP
+     * TS 33.108, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly conversationDuration: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `locationOfTheTarget`.
+     * @description
+     * 
+     * Location of the target. Table 5.5 maps CGI or SAI to this parameter. The
+     * location-area-code row names its ASN.1 cell "Location Information" rather
+     * than this parameter. LALS target-positioning and enhanced-location
+     * reports include location when positioning succeeds (tables 5.5F and
+     * 5.5G). Those tables also list time of location as its own conditional
+     * item; this module has no separate component for that time. 3GPP TS
+     * 33.108, clauses 5.2.2.2 and 5.2.3.
+     * 
      * @public
      * @readonly
      */
     readonly locationOfTheTarget: OPTIONAL<Location>;
     /**
      * @summary `partyInformation`.
+     * @description
+     * 
+     * The concerned party (originating, terminating, or forwarded-to), that
+     * party's identities, and the information the party supplied. Observed
+     * MSISDN, IMSI, and IMEI, and a non-local E.164 identity, are carried here
+     * (table 5.5). Basic service parameters are included as received. A release
+     * cause is included with the party that released, or with either party if
+     * the network released.
+     *
+     * Call forwarding (clause 5.2.2.3). Previous redirecting parties are placed
+     * with the originating party. If the target's access forwards the call, the
+     * target's redirecting information is placed with the terminating party.
+     * The forwarded-to address, the forwarding reason, and the redirection
+     * count are placed with the forwarded-to party. Immediate forwarding
+     * (unconditional, or network-determined busy) is one IRI transaction.
+     * Forwarding after the target access is seized (no reply, user-determined
+     * busy, call deflection) is either an end record plus a new transaction, or
+     * a continue record for the diversion (clause 5.5.12). A forwarded call
+     * that terminates at the target, or a call from the target that another
+     * party forwards, carries the available diversion information; the other
+     * party's forwarding does not add content links.
+     *
+     * Supplementary-service IRI (clauses 5.4 and 5.5, table 5.7), sent when the
+     * signalling information becomes available. Only a successful invocation
+     * that returns a result needs a record, and one record may carry both the
+     * invocation and the result. Call waiting: if the target is the served
+     * user, the waiting call's begin record or a later continue record carries
+     * the call-waiting indication; if the other party is the served user, a
+     * received notification is included in a continue record. Hold or retrieve
+     * by the target is a continue record with the hold or retrieve indication;
+     * hold or retrieve by another party is a continue record when the target's
+     * call receives the notification. Explicit call transfer adds continue
+     * records with the transfer information, then an end record when the target
+     * leaves. CLIP includes the calling-line identity; on a call to the target
+     * the other party's identity is included even if restricted, and a second
+     * delivered number is included as well. CLIR is ignored for interception
+     * and copied with that identity. COLP includes a connected number; extra
+     * numbers are included when the other party is the served user. COLR is
+     * ignored and copied. A closed user group call includes the interlock code.
+     * Multiparty conference start and end generate IRI records. Subaddress
+     * information elements are included whenever they are present (clause
+     * 5.5.14). UUS1, UUS2, and UUS3 user-to-user information is reported on
+     * HI2; if it is not delivered to the other party, the LEA is not notified
+     * (clause 5.5.15). Subscriber controlled input is an IRI report and shall
+     * indicate whether the request succeeded (clause 5.4.5). Advice of charge
+     * and the CCBS recall procedures add no service IRI. Incoming barring of a
+     * call to the target is usually a report, or an end record with the cause
+     * if the access was already determined; a call from the target to a barred
+     * party ends with an end record. Outgoing barring produces an ordinary
+     * record whose type depends on where the call was released. 3GPP TS 33.108,
+     * clause 5.
+     * 
      * @public
      * @readonly
      */
     readonly partyInformation: OPTIONAL<PartyInformation[]>;
     /**
      * @summary `callContentLinkInformation`.
+     * @description
+     * 
+     * Characteristics of the content links toward the LEMF. A target call has a
+     * direction toward the target and a direction from the target, so two
+     * one-way 64 kbit/s links are set up (stereo). SMS is an exception and is
+     * delivered on HI2. Extra links are created only when the target is the
+     * served user; another party's service invocation does not add links
+     * (clause 5.4.2).
+     *
+     * Option A (clause 5.4.4.1): a separate link for every leg, active or not,
+     * so a held party's signal can still be intercepted. Whether that signal is
+     * switched through is a network option. Option B (clause 5.4.4.2): links
+     * only while a leg is active. Reuse is signalled by a continue record
+     * carrying the communication identifier and the CC-link identifier. Each
+     * network chooses one option.
+     *
+     * Call waiting uses the hold configurations: option A sets up a link for
+     * the waiting call; option B does not (clause 5.5.2.1). Hold under option A
+     * keeps the links; under option B the links stay up but are reused by the
+     * next active leg (clause 5.5.3). During transfer preparation the hold
+     * rules apply; if the target is the transferring user, the original call's
+     * links are released. After transfer, the new call may be intercepted like
+     * a forwarded call or not intercepted (clause 5.5.4). Multiparty, target as
+     * controller: the active call's links carry the target on transmit and the
+     * conference sum on receive, and the held leg's links stay. A passive party
+     * has no link impact (clause 5.5.11). Immediate call forwarding sets up
+     * links at once; forwarding after answer starts as a basic call and may
+     * then release those links (clause 5.5.12). Forwarding invoked by another
+     * party does not add links. Subaddressing, user-to-user signalling, CLIP,
+     * CLIR, COLP, COLR, and closed user group do not change links (table 5.7).
+     * Tones and announcements are content on the receive link when normal
+     * procedures would play them there (clause 5.5.18). 3GPP TS 33.108, clauses
+     * 5.3 and 5.4.
+     * 
      * @public
      * @readonly
      */
     readonly callContentLinkInformation: OPTIONAL<IRI_Parameters_callContentLinkInformation>;
     /**
      * @summary `release_Reason_Of_Intercepted_Call`.
+     * @description
+     * 
+     * Why the intercepted call was not established, or why it was released
+     * after the active phase. Two octets, cause coded in the format of ETSI EN
+     * 300 403-1 (reference 31). The cause is also associated with the party
+     * that initiated the release. 3GPP TS 33.108, clause 5.2.2.2, table 5.5,
+     * and annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly release_Reason_Of_Intercepted_Call: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nature_Of_The_intercepted_call`.
+     * @description
+     * 
+     * Nature of the intercepted communication. Not required for UMTS. May be
+     * included for GSM backward compatibility. The values say whether content
+     * uses the HI3 circuit link or the HI2 or HI3 data interface. 3GPP TS
+     * 33.108, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly nature_Of_The_intercepted_call: OPTIONAL<IRI_Parameters_nature_Of_The_intercepted_call>;
     /**
      * @summary `serviceCenterAddress`.
+     * @description
+     * 
+     * Address of the server involved in the call. For SMS, the service centre:
+     * with the calling party if the server originates, or with the called party
+     * if the server terminates. 3GPP TS 33.108, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly serviceCenterAddress: OPTIONAL<PartyInformation>;
     /**
      * @summary `sMS`.
+     * @description
+     * 
+     * SMS content and the associated information, delivered on an IRI report.
+     * SMS is also the exception that may be delivered as content on HI2 rather
+     * than on a circuit link. For SMS IRI only, annex P applies. The other
+     * party may already be inside the SMS TPDU (3GPP TS 23.040); using a
+     * separate other-party parameter is then implementation dependent, and an
+     * alphanumeric other party shall not be carried that way (table 5.5 notes 2
+     * and 3). 3GPP TS 33.108, clauses 5.2.3 and 5.3.1.
+     * 
      * @public
      * @readonly
      */
     readonly sMS: OPTIONAL<SMS_report>;
     /**
      * @summary `cC_Link_Identifier`.
+     * @description
+     * 
+     * CC-link identifier, used only for option B so a multiparty call shows
+     * which content link carries the content (clause 5.1.3). It may use the
+     * same format as the communication identity number; in that case it need
+     * not be sent when the HI3 link is set up, and the communication identity
+     * number stands for it. Table 5.1 places it on HI2 for option B, and on HI3
+     * unless omitted that way. It is absent when only IRI is transmitted (table
+     * 5.2). Each time another active leg reuses a link, a continue record
+     * carries this identifier with the communication identifier (clause
+     * 5.4.4.2). 3GPP TS 33.108, clauses 5.1.3 and 5.4.4.
+     * 
      * @public
      * @readonly
      */
     readonly cC_Link_Identifier: OPTIONAL<CC_Link_Identifier>;
     /**
      * @summary `national_Parameters`.
+     * @description
+     * 
+     * National extension for services or parameters not covered by the 3GPP
+     * coding. The layout is not defined. 3GPP TS 33.108, clauses 5.2.2.2 and
+     * 5.2.2.3.
+     * 
      * @public
      * @readonly
      */
     readonly national_Parameters: OPTIONAL<National_Parameters>;
     /**
      * @summary `umts_Cs_Event`.
+     * @description
+     * 
+     * Which CS event the record reports. Table 5.4 maps the thirteen events
+     * onto begin, continue, end, and report. If this is omitted, other
+     * parameters indicate the event, for example the SMS contents. LALS reports
+     * may omit it. Tables 5.5A to 5.5E mark the event type conditional. 3GPP TS
+     * 33.108, clause 5.2.3 and table 5.5.
+     * 
      * @public
      * @readonly
      */
     readonly umts_Cs_Event: OPTIONAL<Umts_Cs_Event>;
     /**
      * @summary `serving_System_Identifier`.
+     * @description
+     * 
+     * Serving-system PLMN identity: mobile country code and mobile network
+     * code, ITU-T E.212 (reference 87). Table 5.5: VPLMN of the serving system,
+     * or of the third-party network interworking with the HLR. Conditional on a
+     * serving-system report. The annex B.3a comment on this component misstates
+     * the expansion of the PLMN identity; the stage 2 wording is mobile country
+     * code and mobile network code. 3GPP TS 33.108, clause 5.2.3, table 5.5A.
+     * 
      * @public
      * @readonly
      */
     readonly serving_System_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `carrierSpecificData`.
+     * @description
+     * 
+     * Raw data the CSP or the HLR vendor associates with a subscriber-record
+     * update. Conditional on an HLR subscriber-record-change report. The layout
+     * is not defined. 3GPP TS 33.108, table 5.5 and table 5.5B, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly carrierSpecificData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `current_Previous_Systems`.
+     * @description
+     * 
+     * Current and previous serving system, MSC number, and MSC address. Used on
+     * cancel-location and register-location reports. Register location may
+     * include both current and previous; cancel location lists the previous
+     * values. 3GPP TS 33.108, tables 5.5, 5.5C, and 5.5D.
+     * 
      * @public
      * @readonly
      */
     readonly current_Previous_Systems: OPTIONAL<Current_Previous_Systems>;
     /**
      * @summary `change_Of_Target_Identity`.
+     * @description
+     * 
+     * Old and new MSISDN, IMSI, or IMEI from an HLR subscriber-record change.
+     * Required on that report: state what changed. 3GPP TS 33.108, tables 5.5
+     * and 5.5B.
+     * 
      * @public
      * @readonly
      */
     readonly change_Of_Target_Identity: OPTIONAL<Change_Of_Target_Identity>;
     /**
      * @summary `requesting_Network_Identifier`.
+     * @description
+     * 
+     * PLMN identity of the network that requested location information: mobile
+     * country code and mobile network code, ITU-T E.212. Conditional on a
+     * location-information-request report. 3GPP TS 33.108, table 5.5E and annex
+     * B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly requesting_Network_Identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `requesting_Node_Type`.
+     * @description
+     * 
+     * Node that requested location information. Conditional on a
+     * location-information-request report. Table 5.5E lists GMSC, SMS centre,
+     * GMLC, MME, and SGSN. The enumeration has an MSC value and no separate
+     * GMSC value. 3GPP TS 33.108, table 5.5E.
+     * 
      * @public
      * @readonly
      */
     readonly requesting_Node_Type: OPTIONAL<Requesting_Node_Type>;
     /**
      * @summary `extendedLocParameters`.
+     * @description
+     * 
+     * Additional LALS location information and the associated quality of
+     * service, if available. Stage 2 marks this optional on target-positioning
+     * and enhanced-location reports (tables 5.5F and 5.5G). Annex B.3a calls
+     * these the LALS extended parameters. 3GPP TS 33.108, clause 5.2.3.
+     * 
      * @public
      * @readonly
      */
     readonly extendedLocParameters: OPTIONAL<ExtendedLocParameters>;
     /**
      * @summary `locationErrorCode`.
+     * @description
+     * 
+     * LALS error identification when positioning is not successful. Conditional
+     * on target-positioning and enhanced-location reports. 3GPP TS 33.108,
+     * tables 5.5F and 5.5G, annex B.3a.
+     * 
      * @public
      * @readonly
      */
     readonly locationErrorCode: OPTIONAL<LocationErrorCode>;
     /**
      * @summary `national_HI2_ASN1parameters`.
+     * @description
+     * 
+     * National HI2 parameters. The layout is not defined. Annex B.3a warns that
+     * added parameter numbers must not collide with ETSI TS 101 671 or with the
+     * packet-switched HI2 module in annex B.3. 3GPP TS 33.108, annex B.3a.
+     * 
      * @public
      * @readonly
      */

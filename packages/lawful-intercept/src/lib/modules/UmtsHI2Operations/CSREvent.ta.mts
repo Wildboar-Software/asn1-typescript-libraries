@@ -15,6 +15,17 @@ enum _enum_for_CSREvent {
  * @summary CSREvent
  * @description
  * 
+ * Event type of a cell-site report. The only defined value marks a CSR event
+ * message.
+ * 
+ * The MF sends an IRI-Report when it could not enrich the original IRI with
+ * cell-site supplemental information. If that information was already sent for
+ * the intercept and has not changed, the CSP need not send it again.
+ * 
+ * 3GPP TS 33.108, clause 16.4 and table 16.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +43,12 @@ type CSREvent = _enum_for_CSREvent | ENUMERATED;
 
 /**
  * @summary CSREvent_cSREventMessage
+ * @description
+ * 
+ * This IRI-Report is a cell-site report. The MF sends it when the original IRI
+ * could not be enriched, and does not repeat unchanged cell-site information.
+ * 
+ * 3GPP TS 33.108, clause 16.4 and table 16.2.
  * @constant
  * @type {number}
  */
@@ -40,6 +57,9 @@ const CSREvent_cSREventMessage: CSREvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSREventMessage
+ * @description
+ * 
+ * Cell-site report (clause 16.4).
  * @constant
  * @type {number}
  */

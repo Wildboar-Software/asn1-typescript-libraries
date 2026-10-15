@@ -17,6 +17,16 @@ import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_f
  * @summary PacketDataHeaderMapped
  * @description
  * 
+ * Per-packet header with individual fields, when a raw copy is not sent. Table
+ * 10.5.1.1.15. Direction is mandatory. Addresses and the transport protocol are
+ * conditional: provide them when mapping the header. Ports are conditional when
+ * the transport protocol has port numbers. The flow label is conditional and is
+ * for IPv6 only. Packet size is conditional in clause 10 and optional in clause
+ * 6.9B. Table 6.9B applies when annex B.9 carries a PDP-context report (clause
+ * 6.5.1.0).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,60 +54,103 @@ export
 class PacketDataHeaderMapped {
     /**
      * @summary `sourceIPAddress`.
+     * @description
+     * 
+     * Source IP address of the packet flow. Conditional: provide it when
+     * mapping the header (table 10.5.1.1.15 and table 6.9B).
      * @public
      * @readonly
      */
     readonly sourceIPAddress: IPAddress;
     /**
      * @summary `sourcePortNumber`.
+     * @description
+     * 
+     * Source port of the flow. Conditional: provide it when mapping the header
+     * and the transport protocol has port numbers (table 10.5.1.1.15).
      * @public
      * @readonly
      */
     readonly sourcePortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `destinationIPAddress`.
+     * @description
+     * 
+     * Destination IP address of the flow. Conditional when mapping the header
+     * (table 10.5.1.1.15).
      * @public
      * @readonly
      */
     readonly destinationIPAddress: IPAddress;
     /**
      * @summary `destinationPortNumber`.
+     * @description
+     * 
+     * Destination port of the flow. Conditional when mapping the header and the
+     * transport protocol has port numbers (table 10.5.1.1.15).
      * @public
      * @readonly
      */
     readonly destinationPortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `transportProtocol`.
+     * @description
+     * 
+     * IPv4 Protocol field, or IPv6 Next Header field (module comment and clause
+     * 10.5.2). Assigned numbers are at
+     * http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xml
+     * Conditional when mapping the header (table 10.5.1.1.15).
      * @public
      * @readonly
      */
     readonly transportProtocol: INTEGER;
     /**
      * @summary `packetsize`.
+     * @description
+     * 
+     * Total Length of an IPv4 packet, or Payload Length of an IPv6 packet
+     * (table 10.5.1.1.15). Conditional in clause 10 when mapping the header.
+     * Table 6.9B marks the same value optional for a PDP context.
      * @public
      * @readonly
      */
     readonly packetsize: OPTIONAL<INTEGER>;
     /**
      * @summary `flowLabel`.
+     * @description
+     * 
+     * IPv6 flow label (RFC 3697, clause 10.5.2). Conditional, and only for
+     * IPv6, when mapping the header (table 10.5.1.1.15).
      * @public
      * @readonly
      */
     readonly flowLabel: OPTIONAL<INTEGER>;
     /**
      * @summary `packetCount`.
+     * @description
+     * 
+     * Clause 10.5.2 defines the packet count for a summary report. Table
+     * 10.5.1.1.15 does not list a count on a per-packet header. The handover
+     * text does not say when to include a count here.
      * @public
      * @readonly
      */
     readonly packetCount: OPTIONAL<INTEGER>;
     /**
      * @summary `direction`.
+     * @description
+     * 
+     * Whether the packet was sent by the target or to the target. Mandatory
+     * (table 10.5.1.1.15 and table 6.9B).
      * @public
      * @readonly
      */
     readonly direction: TPDU_direction;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */
@@ -145,6 +198,10 @@ class PacketDataHeaderMapped {
 
         /**
          * @summary The enum used as the type of the component `direction`
+         * @description
+         * 
+         * Whether the packet was sent by the target or to the target (table
+         * 10.5.1.1.15).
          * @public
          * @static
          */

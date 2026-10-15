@@ -13,6 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IRI_to_CC_Correlation
  * @description
  * 
+ * Correlates IRI with content (module comment). Table 7.2 uses it for a PDP
+ * context or EPS bearer, and a second value when one bearer carries signalling
+ * and another carries content. 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +34,22 @@ export
 class IRI_to_CC_Correlation {
     /**
      * @summary `cc`.
+     * @description
+     * 
+     * Correlation numbers for one or more content streams (module comment:
+     * correlates IRI to multiple contents).
+     * 
      * @public
      * @readonly
      */
     readonly cc: OCTET_STRING[];
     /**
      * @summary `iri`.
+     * @description
+     * 
+     * Correlates the IRI with content together with the signalling (module
+     * comment). Optional.
+     * 
      * @public
      * @readonly
      */

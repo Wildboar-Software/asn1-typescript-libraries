@@ -20,6 +20,13 @@ import { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../Umt
  * @summary I_WLANinformation
  * @description
  * 
+ * Operator, location, NAS address, MAC address, and session timer for the WLAN
+ * serving the target. Annex B.7 says these parameters are defined in TS 29.234,
+ * and adds geographical coordinates and a civic address that the clause 8
+ * tables do not name.
+ * 
+ * 3GPP TS 33.108, table 8.2 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,54 +51,118 @@ export
 class I_WLANinformation {
     /**
      * @summary `wLANOperatorName`.
+     * @description
+     * 
+     * WLAN operator serving the target.
+     * 
+     * Conditional when available on access initiation, access termination, the
+     * AAA start-of-intercept REPORT, and the AAA start-of-intercept Begin.
+     * 
+     * 3GPP TS 33.108, table 8.2.
      * @public
      * @readonly
      */
     readonly wLANOperatorName: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `wLANLocationData`.
+     * @description
+     * 
+     * Location of the WLAN serving the target.
+     * 
+     * Conditional when available on access initiation, access termination, the
+     * AAA start-of-intercept REPORT, and the AAA start-of-intercept Begin.
+     * 
+     * 3GPP TS 33.108, table 8.2. Clause 8 does not define the encoding.
      * @public
      * @readonly
      */
     readonly wLANLocationData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `wLANLocationInformation`.
+     * @description
+     * 
+     * Detailed location of the WLAN serving the target.
+     * 
+     * Conditional when available on access initiation, the AAA
+     * start-of-intercept REPORT, and the AAA start-of-intercept Begin. On
+     * access termination, include it when authorized (table 8.4), rather than
+     * merely when available.
+     * 
+     * 3GPP TS 33.108, table 8.2. Clause 8 does not define the encoding.
      * @public
      * @readonly
      */
     readonly wLANLocationInformation: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nASIPIPv6Address`.
+     * @description
+     * 
+     * IP address of the serving Network Access Server. Table 8.2 names this
+     * nasIPIPv6Address.
+     * 
+     * Conditional when available on access initiation, access termination, the
+     * AAA start-of-intercept REPORT, and the AAA start-of-intercept Begin.
+     * 
+     * 3GPP TS 33.108, table 8.2.
      * @public
      * @readonly
      */
     readonly nASIPIPv6Address: OPTIONAL<IPAddress>;
     /**
      * @summary `wLANMACAddress`.
+     * @description
+     * 
+     * MAC address of the WLAN UE on the WLAN serving the target.
+     * 
+     * Conditional when available on access initiation, access termination, the
+     * AAA start-of-intercept REPORT, and the AAA start-of-intercept Begin.
+     * 
+     * 3GPP TS 33.108, table 8.2. Clause 8 does not define the encoding.
      * @public
      * @readonly
      */
     readonly wLANMACAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sessionAliveTimer`.
+     * @description
+     * 
+     * Expected maximum duration of the I-WLAN access being initiated.
+     * 
+     * Conditional when available on access initiation (table 8.3), the AAA
+     * start-of-intercept REPORT (table 8.7), and the AAA start-of-intercept
+     * Begin (table 8.11).
+     * 
+     * 3GPP TS 33.108, table 8.2. Annex B.7 says to carry SessionAliveTime as
+     * defined in TS 29.234 and does not define the encoding.
      * @public
      * @readonly
      */
     readonly sessionAliveTimer: OPTIONAL<SessionAliveTime>;
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     * 
+     * Annex B.7 says this parameter is defined in TS 29.234. Clause 8 tables do
+     * not name it. TS 33.108 does not further define it in this module.
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: OPTIONAL<GeographicalCoordinates>;
     /**
      * @summary `civicAddress`.
+     * @description
+     * 
+     * Annex B.7 says this parameter is defined in TS 29.234. Clause 8 tables do
+     * not name it. TS 33.108 does not further define it in this module.
      * @public
      * @readonly
      */
     readonly civicAddress: OPTIONAL<CivicAddress>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

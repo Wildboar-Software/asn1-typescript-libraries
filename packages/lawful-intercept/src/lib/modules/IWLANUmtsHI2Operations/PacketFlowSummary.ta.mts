@@ -19,6 +19,10 @@ import { ReportReason, _decode_ReportReason, _encode_ReportReason, _enum_for_Rep
  * @summary PacketFlowSummary
  * @description
  * 
+ * Reporting information for one packet flow in a summary report.
+ * 
+ * 3GPP TS 33.108, table 8.10 and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,66 +52,131 @@ export
 class PacketFlowSummary {
     /**
      * @summary `sourceIPAddress`.
+     * @description
+     * 
+     * Source IP address of this packet flow. Mandatory (table 8.10).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly sourceIPAddress: IPAddress;
     /**
      * @summary `sourcePortNumber`.
+     * @description
+     * 
+     * Source port of this packet flow. Conditional when the transport protocol
+     * supports port numbers (table 8.10).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly sourcePortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `destinationIPAddress`.
+     * @description
+     * 
+     * Destination IP address of this packet flow. Mandatory (table 8.10).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly destinationIPAddress: IPAddress;
     /**
      * @summary `destinationPortNumber`.
+     * @description
+     * 
+     * Destination port of this packet flow. Conditional when the transport
+     * protocol supports port numbers (table 8.10).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly destinationPortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `transportProtocol`.
+     * @description
+     * 
+     * Transport protocol of this packet flow, for example TCP. For IPv4 report
+     * the Protocol field; for IPv6 report the Next Header field. Mandatory
+     * (table 8.10).
+     * 
+     * Assigned Internet Protocol Numbers are listed at
+     * http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xml
+     * 
+     * 3GPP TS 33.108, table 8.2, table 8.10, and annex B.7.
      * @public
      * @readonly
      */
     readonly transportProtocol: INTEGER;
     /**
      * @summary `flowLabel`.
+     * @description
+     * 
+     * IPv6 flow label for this packet flow (RFC 3697). Conditional, and only
+     * for IPv6 (table 8.10).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly flowLabel: OPTIONAL<INTEGER>;
     /**
      * @summary `summaryPeriod`.
+     * @description
+     * 
+     * Time span of the packets in this flow summary. Mandatory (table 8.10).
+     * The span runs from detection of the first packet to detection of the last
+     * packet in the reporting period.
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly summaryPeriod: ReportInterval;
     /**
      * @summary `packetCount`.
+     * @description
+     * 
+     * Number of packets detected for this flow. Mandatory (table 8.10).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly packetCount: INTEGER;
     /**
      * @summary `sumOfPacketSizes`.
+     * @description
+     * 
+     * Sum of the Total Length fields of the IPv4 packets, or of the Payload
+     * Length fields of the IPv6 packets, for this flow. Optional (table 8.10).
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly sumOfPacketSizes: INTEGER;
     /**
      * @summary `packetDataSummaryReason`.
+     * @description
+     * 
+     * Why this summary was sent to the LEMF. Mandatory (table 8.10): timeout,
+     * count limit, or end of session.
+     * 
+     * 3GPP TS 33.108, table 8.2 and table 8.10.
      * @public
      * @readonly
      */
     readonly packetDataSummaryReason: ReportReason;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions that this version of TS 33.108 does not define.
      * @public
      * @readonly
      */

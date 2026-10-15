@@ -19,6 +19,10 @@ enum _enum_for_LogicalFunctionType {
  * @summary LogicalFunctionType
  * @description
  * 
+ * Which logical function inside a physical element produced the IRI, so the
+ * LEMF can tell those functions apart (table 10.5.2). 3GPP TS 33.108
+ * (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +44,10 @@ type LogicalFunctionType = _enum_for_LogicalFunctionType | ENUMERATED;
 
 /**
  * @summary LogicalFunctionType_pDNGW
+ * @description
+ * 
+ * The event came from the PDN-GW (table 10.5.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -48,6 +56,10 @@ const LogicalFunctionType_pDNGW: LogicalFunctionType = 0; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary pDNGW
+ * @description
+ * 
+ * PDN-GW (clause 10.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -56,6 +68,10 @@ const pDNGW: LogicalFunctionType = LogicalFunctionType_pDNGW; /* SHORT_NAMED_ENU
 
 /**
  * @summary LogicalFunctionType_mME
+ * @description
+ * 
+ * The event came from the MME (table 10.5.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -64,6 +80,10 @@ const LogicalFunctionType_mME: LogicalFunctionType = 1; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary mME
+ * @description
+ * 
+ * MME (clause 10.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -72,6 +92,10 @@ const mME: LogicalFunctionType = LogicalFunctionType_mME; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary LogicalFunctionType_sGW
+ * @description
+ * 
+ * The event came from the S-GW (table 10.5.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -80,6 +104,10 @@ const LogicalFunctionType_sGW: LogicalFunctionType = 2; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary sGW
+ * @description
+ * 
+ * S-GW (clause 10.5).
+ * 
  * @constant
  * @type {number}
  */
@@ -88,6 +116,12 @@ const sGW: LogicalFunctionType = LogicalFunctionType_sGW; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary LogicalFunctionType_ePDG
+ * @description
+ * 
+ * The event came from the ePDG (table 10.5.2). Clause 10.0 subjects an ePDG
+ * that is not using GTP on S2b, together with the AAA server, to the PDG and
+ * AAA requirements.
+ * 
  * @constant
  * @type {number}
  */
@@ -96,6 +130,10 @@ const LogicalFunctionType_ePDG: LogicalFunctionType = 3; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary ePDG
+ * @description
+ * 
+ * ePDG (clause 10.0).
+ * 
  * @constant
  * @type {number}
  */
@@ -104,6 +142,10 @@ const ePDG: LogicalFunctionType = LogicalFunctionType_ePDG; /* SHORT_NAMED_ENUME
 
 /**
  * @summary LogicalFunctionType_hSS
+ * @description
+ * 
+ * The event came from the HSS (table 10.5.2).
+ * 
  * @constant
  * @type {number}
  */
@@ -112,6 +154,10 @@ const LogicalFunctionType_hSS: LogicalFunctionType = 4; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary hSS
+ * @description
+ * 
+ * HSS (clause 10.5).
+ * 
  * @constant
  * @type {number}
  */

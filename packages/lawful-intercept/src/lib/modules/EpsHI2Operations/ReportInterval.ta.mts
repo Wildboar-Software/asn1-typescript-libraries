@@ -13,6 +13,13 @@ import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operation
  * @summary ReportInterval
  * @description
  * 
+ * The window of one packet-flow summary: the time the first packet of the
+ * period was detected and the time the last packet was detected. Mandatory in
+ * table 10.5.1.1.16. Table 6.9C requires the same window for a PDP-context
+ * summary when annex B.9 carries GPRS IRI (clause 6.5.1.0).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +37,29 @@ export
 class ReportInterval {
     /**
      * @summary `firstPacketTimeStamp`.
+     * @description
+     * 
+     * Time the first packet of this summary period was detected. Mandatory with
+     * the last-packet time (table 10.5.1.1.16 and table 6.9C).
      * @public
      * @readonly
      */
     readonly firstPacketTimeStamp: TimeStamp;
     /**
      * @summary `lastPacketTimeStamp`.
+     * @description
+     * 
+     * Time the last packet of this summary period was detected. Mandatory
+     * (table 10.5.1.1.16).
      * @public
      * @readonly
      */
     readonly lastPacketTimeStamp: TimeStamp;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

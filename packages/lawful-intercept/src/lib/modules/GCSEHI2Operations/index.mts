@@ -1,3 +1,19 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `GCSEHI2Operations`, IMPLICIT TAGS. Group Communication System
+ * Enabler (GCSE) HI2 intercept related information from the GCS AS. Content of
+ * communication is defined separately (annex B.14.2).
+ *
+ * 3GPP TS 33.108, clause 14 and annex B.14.1.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ *
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2) lawfulIntercept(2) threeGPP(4) hi2gcse(13) r16(16) version-0(0)}`
+ *
+ * If the GCS AS is outside the intercepting operator's network, clause 14.3
+ * uses packet-data interception instead. Multicast reception via the BM-SC is
+ * for further study. Those cases are not defined in this module.
+ */
 export {
     type AccessID,
     _decode_AccessID,

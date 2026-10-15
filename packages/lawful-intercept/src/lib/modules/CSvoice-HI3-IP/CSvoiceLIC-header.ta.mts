@@ -28,6 +28,14 @@ import { Payload_description, _decode_Payload_description, _encode_Payload_descr
  * @summary CSvoiceLIC_header
  * @description
  * 
+ * Header for IP-based delivery of CS voice CC. Direction lets the LEMF separate
+ * stereo (from the target versus to the target) from mono (combined). Sequence
+ * handling is a national requirement (clause 5.7.5).
+ * 
+ * 3GPP TS 33.108, clause 5.7 and annex B.17.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,60 +65,103 @@ export
 class CSvoiceLIC_header {
     /**
      * @summary `hi3CSvoiceDomainId`.
+     * @description
+     * 
+     * 3GPP HI3 domain identifier for IP-based CS voice (`hi3CSvoice` under
+     * `threeGPPSUBDomainId`). 3GPP TS 33.108, clause 5.7 and annex B.17.
      * @public
      * @readonly
      */
     readonly hi3CSvoiceDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lIID`.
+     * @description
+     * 
+     * Lawful interception identifier used to correlate this CC with IRI. 3GPP
+     * TS 33.108, clause 5.7.2 and clause 5.1.1.
      * @public
      * @readonly
      */
     readonly lIID: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     * 
+     * Same contents as in the linked IRI. Identifies the call (network
+     * identifier and communication identity number). Each leg of a multi-party
+     * call has its own communication identity number. 3GPP TS 33.108, clause
+     * 5.7.2.
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `ccLID`.
+     * @description
+     * 
+     * Same contents as in the linked IRI, and only when that IRI includes it.
+     * For this IP handover the CC-link identifier may not apply; include it
+     * when HI2 sends it. Used when one CC link carries every leg. 3GPP TS
+     * 33.108, clause 5.7.2 and clause 5.1.3.
      * @public
      * @readonly
      */
     readonly ccLID: OPTIONAL<CC_Link_Identifier>;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Clause 5.7 does not state when a timestamp is sent. 3GPP TS 33.108, annex
+     * B.17.
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<TimeStamp>;
     /**
      * @summary `sequence_number`.
+     * @description
+     * 
+     * Incremented each time a T-PDU is delivered. Handling is a national
+     * requirement. 3GPP TS 33.108, clause 5.7.5.
      * @public
      * @readonly
      */
     readonly sequence_number: INTEGER;
     /**
      * @summary `t_PDU_direction`.
+     * @description
+     * 
+     * Voice-content direction: from the target, to the target, combined (mono),
+     * or unknown. Distinguishes stereo from mono. 3GPP TS 33.108, clause 5.7.3.
      * @public
      * @readonly
      */
     readonly t_PDU_direction: TPDU_direction;
     /**
      * @summary `national_HI3_ASN1parameters`.
+     * @description
+     * 
+     * Encoded per national requirements. 3GPP TS 33.108, annex B.17.
      * @public
      * @readonly
      */
     readonly national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     /**
      * @summary `payload_description`.
+     * @description
+     * 
+     * Codec information for the voice content on HI3 (media format and media
+     * attributes). Sent on HI3 so IRI need not change. 3GPP TS 33.108, clause
+     * 5.7.4.
      * @public
      * @readonly
      */
     readonly payload_description: Payload_description;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

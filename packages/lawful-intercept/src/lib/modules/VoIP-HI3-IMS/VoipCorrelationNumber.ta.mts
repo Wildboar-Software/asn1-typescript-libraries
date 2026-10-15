@@ -10,6 +10,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VoipCorrelationNumber
  * @description
  * 
+ * Correlation number for one VoIP session. Correlates CC with IRI, and
+ * correlates IRI records and CC data within that session. Supplied by the CC
+ * Intercept Triggering Function (clause 12.6). For PTC, paired with the PTC
+ * session info to identify one talk burst.
+ * 
+ * 3GPP TS 33.108, clause 12.1.4 and annex K.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,9 @@ import { AccessID, _decode_AccessID, _encode_AccessID } from "../GCSEHI2Operatio
  * @summary Upstream
  * @description
  * 
+ * Upstream access used by the target toward the GCS AS: the access kind and its
+ * identifier. 3GPP TS 33.108, annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,12 +35,22 @@ export
 class Upstream {
     /**
      * @summary `accessType`.
+     * @description
+     * 
+     * Whether this upstream access is EPS unicast or EPS multicast. 3GPP TS
+     * 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */
     readonly accessType: AccessType;
     /**
      * @summary `accessId`.
+     * @description
+     * 
+     * Identifier of this upstream access: a TMGI or the UE IP address. 3GPP TS
+     * 33.108, annex B.14.1.
+     * 
      * @public
      * @readonly
      */

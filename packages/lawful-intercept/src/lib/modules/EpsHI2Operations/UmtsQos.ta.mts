@@ -12,6 +12,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UmtsQos
  * @description
  * 
+ * Quality of service of a PDP-context procedure. Clause 6 table 6.2 maps that
+ * field to the IRI QoS parameter. Clause 10.5.2 carries EPS bearer QoS as the
+ * EPS bearer QoS parameter. When a PDN-GW offers Gn/Gp and acts as a GGSN,
+ * clause 10.0 applies the GGSN packet-domain requirements, including this QoS.
+ * 
+ * Radio QoS is coded from 3GPP TS 24.008 clause 10.5.6.5 without the QoS IEI
+ * and the length octet. Gn QoS is coded from 3GPP TS 29.060 clause 7.7.34
+ * (module comments).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

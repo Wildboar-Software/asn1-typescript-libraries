@@ -1,3 +1,22 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `ThreeGPP-HI1NotificationOperations`, IMPLICIT TAGS. Informative
+ * HI1 management notification carried on the HI2 port. Annex M is informative.
+ * This module does not make that annex normative. Annex M does not describe an
+ * electronic HI1 interface; it describes HI1 information sent to the LEMF
+ * across HI2.
+ *
+ * 3GPP TS 33.108, annex M.
+ * https://www.3gpp.org/DynaReport/33108.htm
+ *
+ * `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2) lawfulIntercept(2) threeGPP(4) hi1(0) notificationOperations(1) r16(16) version-1(1)}`
+ *
+ * The informative annex says DF2 may deliver the notification to the LEMF as
+ * soon as possible, at least once if the information is available. It
+ * recommends that the LEA have no direct control of the operator's equipment.
+ * Broadcast-status, alarm, and keep-alive details are for further study.
+ */
 export {
     Alarm_Indicator,
     _decode_Alarm_Indicator,

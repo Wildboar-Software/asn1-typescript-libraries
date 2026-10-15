@@ -1,3 +1,19 @@
+/**
+ * @description
+ * 
+ * ASN.1 module `HI3CCLinkData`, `IMPLICIT TAGS`. User-to-user signalling 1
+ * contents associated with the circuit-switched CC link. The module OID is
+ * `hi3(2)` directly under `lawfulInterceptDomainId`.
+ * 
+ * Module OID `{itu-t(0) identified-organization(4) etsi(0) securityDomain(2)
+ * lawfulIntercept(2) hi3(2) cclinkLI(4) version4(4)}`.
+ * 
+ * 3GPP TS 33.108, clause 5.3.2, clause 5.1.3, and annex J. Annex J.2 is the
+ * subaddress alternative when UUS1 cannot carry 128 octets.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ */
+
 export {
     type Direction_Indication,
     Direction_Indication_cc_from_other_party,

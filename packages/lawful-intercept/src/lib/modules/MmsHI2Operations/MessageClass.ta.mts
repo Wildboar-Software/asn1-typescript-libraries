@@ -13,6 +13,14 @@ import { ClassIdentifier, _decode_ClassIdentifier, _encode_ClassIdentifier } fro
  * @summary MessageClass
  * @description
  * 
+ * Class of the MM. `classIdentifier` is one of the named classes. `tokenText`
+ * is an unlisted class token. Clause 15.3 does not further define `tokenText`.
+ * 
+ * If the class is absent, interpret it as personal. The value auto means the UE
+ * generated the MM (table 15.3.6.1.2).
+ * 
+ * 3GPP TS 33.108, table 15.3.6.1.2 and annex B.15.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

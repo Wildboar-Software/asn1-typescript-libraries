@@ -15,6 +15,14 @@ import { MNC, _decode_MNC, _encode_MNC } from "../EpsHI2Operations/MNC.ta.mjs";
  * @summary PLMNID
  * @description
  * 
+ * PLMN identity: mobile country code and mobile network code (ITU-T E.212).
+ * Clause 10.5.2 uses this identity for the visited network, the previous VPLMN,
+ * and the requesting network. It is also the PLMN half of an NR cell global
+ * identity in additional cell identities. Clause 6 table 6.2 uses the same
+ * identity when annex B.9 carries packet-domain IRI (clause 6.5.1.0).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,30 @@ export
 class PLMNID {
     /**
      * @summary `mCC`.
+     * @description
+     * 
+     * Mobile country code (ITU-T E.212), three digits. Clause 10.5.2 and, for
+     * packet-domain IRI on this HI2, clause 6 table 6.2.
      * @public
      * @readonly
      */
     readonly mCC: MCC;
     /**
      * @summary `mNC`.
+     * @description
+     * 
+     * Mobile network code (ITU-T E.212), two or three digits. The specification
+     * text calls this half Mobile Network Country. Same clauses as the country
+     * code.
      * @public
      * @readonly
      */
     readonly mNC: MNC;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * The specification does not define these components.
      * @public
      * @readonly
      */

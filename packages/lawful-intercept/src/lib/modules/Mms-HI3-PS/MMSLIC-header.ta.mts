@@ -26,6 +26,15 @@ import { ICE_type, _decode_ICE_type, _encode_ICE_type, _enum_for_ICE_type } from
  * @summary MMSLIC_header
  * @description
  * 
+ * Header for one MMS CC PDU. Table 15.3.7.1 requires the event time, network
+ * identifier, LIID, correlation number, MMS version and transaction identifier
+ * when available, and the MMS content. The MMS Proxy-Relay supplies correlation
+ * numbers and target identities to DF3 (clause 15.3.2.1).
+ * 
+ * 3GPP TS 33.108, clause 15.3.7 and annex B.16.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,60 +62,101 @@ export
 class MMSLIC_header {
     /**
      * @summary `hi3MmsDomainId`.
+     * @description
+     * 
+     * 3GPP HI3 domain identifier in this header (`hi3mms` under
+     * `threeGPPSUBDomainId`). 3GPP TS 33.108, annex B.16.
      * @public
      * @readonly
      */
     readonly hi3MmsDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lIID`.
+     * @description
+     * 
+     * Lawful interception identifier for the target, specific to MMS
+     * interception per national regulation. Table 15.3.7.1 requires it. 3GPP TS
+     * 33.108, clause 15.3.2.2.
      * @public
      * @readonly
      */
     readonly lIID: OPTIONAL<LawfulInterceptionIdentifier>;
     /**
      * @summary `mMSCorrelationNNumber`.
+     * @description
+     * 
+     * Correlates this CC with the IRI of the same MMS. For a given target,
+     * unique across MMS involving that target. 3GPP TS 33.108, clause 15.3.2.3
+     * and table 15.3.7.1.
      * @public
      * @readonly
      */
     readonly mMSCorrelationNNumber: MMSCorrelationNumber;
     /**
      * @summary `timeStamp`.
+     * @description
+     * 
+     * Date and time the MMS event was detected. Table 15.3.7.1 requires the
+     * event date and event time. 3GPP TS 33.108, clause 15.3.7.
      * @public
      * @readonly
      */
     readonly timeStamp: TimeStamp;
     /**
      * @summary `t_PDU_direction`.
+     * @description
+     * 
+     * Direction of the MMS T-PDU. The module defines from the target, to the
+     * target, and unknown. Table 15.3.7.1 does not further specify them. 3GPP
+     * TS 33.108, annex B.16.
      * @public
      * @readonly
      */
     readonly t_PDU_direction: TPDU_direction;
     /**
      * @summary `mMSVersion`.
+     * @description
+     * 
+     * MMS version. Table 15.3.7.1 requires it when available. 3GPP TS 33.108,
+     * clause 15.3.7.
      * @public
      * @readonly
      */
     readonly mMSVersion: INTEGER;
     /**
      * @summary `transactionID`.
+     * @description
+     * 
+     * MMS transaction identifier. Table 15.3.7.1 requires it when available.
+     * 3GPP TS 33.108, clause 15.3.7.
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `national_HI3_ASN1parameters`.
+     * @description
+     * 
+     * Encoded per national requirements. 3GPP TS 33.108, annex B.16.
      * @public
      * @readonly
      */
     readonly national_HI3_ASN1parameters: OPTIONAL<National_HI3_ASN1parameters>;
     /**
      * @summary `ice_type`.
+     * @description
+     * 
+     * Intercepting control element in which the MMS content was intercepted.
+     * 3GPP TS 33.108, annex B.16.
      * @public
      * @readonly
      */
     readonly ice_type: OPTIONAL<ICE_type>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     * 
+     * Extension additions not named in this module.
      * @public
      * @readonly
      */

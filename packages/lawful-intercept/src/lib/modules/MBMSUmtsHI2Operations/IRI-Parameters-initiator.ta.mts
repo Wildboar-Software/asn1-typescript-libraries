@@ -18,6 +18,10 @@ enum _enum_for_IRI_Parameters_initiator {
  * @summary IRI_Parameters_initiator
  * @description
  * 
+ * Who started the MBMS session or the subscription-management event.
+ * 
+ * 3GPP TS 33.108, table 9.2 and annex B.8.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,6 +47,11 @@ type IRI_Parameters_initiator = _enum_for_IRI_Parameters_initiator | ENUMERATED;
 
 /**
  * @summary IRI_Parameters_initiator_not_Available
+ * @description
+ * 
+ * Annex B.8 names this value and does not describe it. Clause 9 requires an
+ * initiator on every record and describes UE, network, and off-line actions. TS
+ * 33.108 does not further define this value.
  * @constant
  * @type {number}
  */
@@ -51,6 +60,9 @@ const IRI_Parameters_initiator_not_Available: IRI_Parameters_initiator = 0; /* L
 
 /**
  * @summary not_Available
+ * @description
+ * 
+ * Named in annex B.8. Clause 9 does not further define it.
  * @constant
  * @type {number}
  */
@@ -59,6 +71,11 @@ const not_Available: IRI_Parameters_initiator = IRI_Parameters_initiator_not_Ava
 
 /**
  * @summary IRI_Parameters_initiator_originating_Target
+ * @description
+ * 
+ * The MBMS UE initiated the MBMS session, or initiated the
+ * subscription-management event (annex B.8). Table 9.2 calls this a UE-directed
+ * action.
  * @constant
  * @type {number}
  */
@@ -67,6 +84,9 @@ const IRI_Parameters_initiator_originating_Target: IRI_Parameters_initiator = 1;
 
 /**
  * @summary originating_Target
+ * @description
+ * 
+ * UE started the session or the subscription event (annex B.8).
  * @constant
  * @type {number}
  */
@@ -75,6 +95,10 @@ const originating_Target: IRI_Parameters_initiator = IRI_Parameters_initiator_or
 
 /**
  * @summary IRI_Parameters_initiator_network_initiated
+ * @description
+ * 
+ * The MBMS initiated the MBMS session (annex B.8). Table 9.2 calls this a
+ * network-initiated action.
  * @constant
  * @type {number}
  */
@@ -83,6 +107,9 @@ const IRI_Parameters_initiator_network_initiated: IRI_Parameters_initiator = 2; 
 
 /**
  * @summary network_initiated
+ * @description
+ * 
+ * The MBMS started the session (annex B.8).
  * @constant
  * @type {number}
  */
@@ -91,6 +118,11 @@ const network_initiated: IRI_Parameters_initiator = IRI_Parameters_initiator_net
 
 /**
  * @summary IRI_Parameters_initiator_off_online_action
+ * @description
+ * 
+ * A subscription-management event from the operator's customer-services
+ * function, or another subscription update not initiated by the MBMS UE (annex
+ * B.8).
  * @constant
  * @type {number}
  */
@@ -99,6 +131,9 @@ const IRI_Parameters_initiator_off_online_action: IRI_Parameters_initiator = 3; 
 
 /**
  * @summary off_online_action
+ * @description
+ * 
+ * Off-line subscription update, not started by the UE (annex B.8).
  * @constant
  * @type {number}
  */

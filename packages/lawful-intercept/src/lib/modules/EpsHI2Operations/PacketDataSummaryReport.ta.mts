@@ -11,6 +11,15 @@ import { PacketFlowSummary, _decode_PacketFlowSummary, _encode_PacketFlowSummary
  * @summary PacketDataSummaryReport
  * @description
  * 
+ * One or more packet-flow summaries, the summary form of the packet data header
+ * REPORT (table 10.5.1.1.14). A flow is the source and destination addresses
+ * and ports, the transport protocol, and for IPv6 the flow label (clause
+ * 10.5.1.1). Table 6.9A uses the same summary for a PDP context when annex B.9
+ * carries GPRS IRI (clause 6.5.1.0). An interim summary is sent when the
+ * summary timer expires or the packet-count threshold is reached.
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

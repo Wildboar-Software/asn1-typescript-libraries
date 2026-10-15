@@ -11,6 +11,11 @@ import { EPSLocation, _decode_EPSLocation, _encode_EPSLocation } from "../EpsHI2
  * @summary HeNBLocation
  * @description
  * 
+ * Location of the home eNB that is serving the target, when the warrant
+ * authorizes it (table 10.5.2). Conditional on an E-UTRAN attach that uses a
+ * HeNB (table 10.5.1.1.1). Same information as the target EPS location. 3GPP TS
+ * 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

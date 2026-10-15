@@ -19,6 +19,14 @@ enum _enum_for_ReportReason {
  * @summary ReportReason
  * @description
  * 
+ * Reason a packet-flow summary was delivered. Table 8.10 requires the reason
+ * and describes it as timeout, count limit, or end of session. An interim
+ * summary is also sent when a per-intercept Summary Timer expires or a
+ * per-intercept count threshold is reached. The timer is configured in seconds
+ * (clause 8.5.1.2).
+ * 
+ * 3GPP TS 33.108, clause 8.5.1.2, table 8.10, and annex B.7.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,6 +48,10 @@ type ReportReason = _enum_for_ReportReason | ENUMERATED;
 
 /**
  * @summary ReportReason_timerExpired
+ * @description
+ * 
+ * The per-intercept Summary Timer expired. Table 8.10 calls this outcome
+ * timeout. The timer is configured in seconds (clause 8.5.1.2).
  * @constant
  * @type {number}
  */
@@ -48,6 +60,9 @@ const ReportReason_timerExpired: ReportReason = 0; /* LONG_NAMED_ENUMERATED_VALU
 
 /**
  * @summary timerExpired
+ * @description
+ * 
+ * Summary Timer expired (clause 8.5.1.2); table 8.10 timeout.
  * @constant
  * @type {number}
  */
@@ -56,6 +71,10 @@ const timerExpired: ReportReason = ReportReason_timerExpired; /* SHORT_NAMED_ENU
 
 /**
  * @summary ReportReason_countThresholdHit
+ * @description
+ * 
+ * The per-intercept packet-count threshold was reached. Table 8.10 calls this
+ * outcome count limit (clause 8.5.1.2).
  * @constant
  * @type {number}
  */
@@ -64,6 +83,9 @@ const ReportReason_countThresholdHit: ReportReason = 1; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary countThresholdHit
+ * @description
+ * 
+ * Count threshold reached (clause 8.5.1.2); table 8.10 count limit.
  * @constant
  * @type {number}
  */
@@ -72,6 +94,12 @@ const countThresholdHit: ReportReason = ReportReason_countThresholdHit; /* SHORT
 
 /**
  * @summary ReportReason_pDPComtextDeactivated
+ * @description
+ * 
+ * Annex B.7 names this reason, including the spelling pDPComtextDeactivated.
+ * Table 8.10 lists end of session, and clause 8.5.1.2 includes packet-flow end
+ * and I-WLAN tunnel deactivation, without naming this value. TS 33.108 does not
+ * bind this name to those triggers.
  * @constant
  * @type {number}
  */
@@ -80,6 +108,9 @@ const ReportReason_pDPComtextDeactivated: ReportReason = 2; /* LONG_NAMED_ENUMER
 
 /**
  * @summary pDPComtextDeactivated
+ * @description
+ * 
+ * Named in annex B.7. Clause 8 does not bind it to end of session.
  * @constant
  * @type {number}
  */
@@ -88,6 +119,11 @@ const pDPComtextDeactivated: ReportReason = ReportReason_pDPComtextDeactivated; 
 
 /**
  * @summary ReportReason_pDPContextModification
+ * @description
+ * 
+ * Annex B.7 names this reason. Clause 8 does not describe a PDP-context
+ * modification event for I-WLAN, and table 8.10 does not name this value. TS
+ * 33.108 does not further define it.
  * @constant
  * @type {number}
  */
@@ -96,6 +132,9 @@ const ReportReason_pDPContextModification: ReportReason = 3; /* LONG_NAMED_ENUME
 
 /**
  * @summary pDPContextModification
+ * @description
+ * 
+ * Named in annex B.7. Clause 8 does not further define it.
  * @constant
  * @type {number}
  */
@@ -104,6 +143,10 @@ const pDPContextModification: ReportReason = ReportReason_pDPContextModification
 
 /**
  * @summary ReportReason_otherOrUnknown
+ * @description
+ * 
+ * Annex B.7 names this reason. Table 8.10 does not. TS 33.108 does not further
+ * define it.
  * @constant
  * @type {number}
  */
@@ -112,6 +155,9 @@ const ReportReason_otherOrUnknown: ReportReason = 4; /* LONG_NAMED_ENUMERATED_VA
 
 /**
  * @summary otherOrUnknown
+ * @description
+ * 
+ * Named in annex B.7. Clause 8 does not further define it.
  * @constant
  * @type {number}
  */

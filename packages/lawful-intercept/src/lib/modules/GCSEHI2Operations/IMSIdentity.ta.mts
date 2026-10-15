@@ -13,6 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IMSIdentity
  * @description
  * 
+ * SIP URI or tel URI used as an IMS identity of a GCSE party. 3GPP TS 33.108,
+ * annex B.14.1.
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +37,22 @@ export
 class IMSIdentity {
     /**
      * @summary `sip_uri`.
+     * @description
+     * 
+     * SIP URI. Reference 26 of 3GPP TS 33.108 is IETF RFC 3261. The URI layout
+     * is not restated.
+     * 
      * @public
      * @readonly
      */
     readonly sip_uri: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tel_uri`.
+     * @description
+     * 
+     * Tel URI. Reference 67 of 3GPP TS 33.108 is IETF RFC 3966. The URI layout
+     * is not restated.
+     * 
      * @public
      * @readonly
      */

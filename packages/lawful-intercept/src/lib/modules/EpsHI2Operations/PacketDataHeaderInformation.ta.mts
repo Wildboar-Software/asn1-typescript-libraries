@@ -14,6 +14,19 @@ import { PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_Packe
  * @summary PacketDataHeaderInformation
  * @description
  * 
+ * Mandatory on the packet data header REPORT (table 10.5.1.1.14). Either one
+ * per-packet header or a summary of one or more flows, during an active EPS
+ * bearer or session (clause 10.5.1.1). Table 6.9A is the same choice for a PDP
+ * context when annex B.9 carries GPRS IRI (clause 6.5.1.0). For IP fragments,
+ * the 6-tuple may exist only on the first fragment (note in clauses
+ * 6.5.1.1 and 10.5.1.1).
+ * 
+ * Per-packet header: table 10.5.1.1.15 (table 6.9B for a PDP context).
+ * Summary: one or more flow summaries, table 10.5.1.1.16 (table 6.9C for a PDP
+ * context).
+ * 
+ * 3GPP TS 33.108 (https://www.3gpp.org/DynaReport/33108.htm).
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1

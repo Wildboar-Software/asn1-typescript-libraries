@@ -14,6 +14,14 @@ import { GcseLIC_header, _decode_GcseLIC_header, _encode_GcseLIC_header } from "
  * @summary Gcse_CC_PDU
  * @description
  * 
+ * GCSE CC PDU: correlation header and payload. The structure can report a
+ * separate media stream for each user in the group communication. The GCS AS
+ * sends correlation numbers and target identities on HI3 (clause 14.2.2.1).
+ * 
+ * 3GPP TS 33.108, clause 14.2.7 and annex B.14.2.
+ * 
+ * https://www.3gpp.org/DynaReport/33108.htm
+ * 
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +38,19 @@ export
 class Gcse_CC_PDU {
     /**
      * @summary `gcseLIC_header`.
+     * @description
+     * 
+     * GCSE LI correlation header. 3GPP TS 33.108, annex B.14.2.
      * @public
      * @readonly
      */
     readonly gcseLIC_header: GcseLIC_header;
     /**
      * @summary `payload`.
+     * @description
+     * 
+     * Content of the GCSE group communication. Clause 14.2.7 does not state a
+     * payload encoding. 3GPP TS 33.108, clause 14.2.7.
      * @public
      * @readonly
      */
