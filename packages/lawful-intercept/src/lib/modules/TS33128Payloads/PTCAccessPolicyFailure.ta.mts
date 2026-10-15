@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCAccessPolicyFailure
  * @description
  * 
+ * Reports the reason for failure when access policy request is unsuccessful.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,11 @@ enum _enum_for_PTCAccessPolicyFailure {
  * @summary PTCAccessPolicyFailure
  * @description
  * 
+ * Reports the reason for failure when access policy request is unsuccessful.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +58,11 @@ type PTCAccessPolicyFailure = _enum_for_PTCAccessPolicyFailure;
  * @summary PTCAccessPolicyFailure
  * @description
  * 
+ * Reports the reason for failure when access policy request is unsuccessful.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

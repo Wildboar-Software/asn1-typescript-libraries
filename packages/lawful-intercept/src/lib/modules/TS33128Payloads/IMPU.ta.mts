@@ -14,6 +14,11 @@ import { TELURI, _decode_TELURI, _encode_TELURI } from "../TS33128Payloads/TELUR
  * @summary IMPU
  * @description
  * 
+ * IMPU of the target, if used for the service (see NOTE).
+ *
+ * 3GPP TS 33.128, clause 7.3.1.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

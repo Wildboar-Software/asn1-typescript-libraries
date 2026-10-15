@@ -34,18 +34,36 @@ export
 class ACRDetermineReq {
     /**
      * @summary `eASID`.
+     * @description
+     *
+     * Identifier of the EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */
     readonly eASID: OPTIONAL<EASID>;
     /**
      * @summary `aCID`.
+     * @description
+     *
+     * Identifier of the AC, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */
     readonly aCID: OPTIONAL<ACID>;
     /**
      * @summary `sEASEndpoint`.
+     * @description
+     *
+     * Endpoint information of the selected S-EAS.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */

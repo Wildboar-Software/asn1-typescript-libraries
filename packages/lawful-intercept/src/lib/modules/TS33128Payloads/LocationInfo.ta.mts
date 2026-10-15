@@ -22,6 +22,14 @@ import { CellInformation, _decode_CellInformation, _encode_CellInformation } fro
  * @summary LocationInfo
  * @description
  * 
+ * The LocationInfo type is derived from the data present in the ProvideLocInfo
+ * type (see TS 29.518 [22] clause 6.4.6.2.6). If the NF has locations from
+ * multiple RAT types, all appropriate location fields within the userLocation
+ * parameter shall be used.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,36 +50,99 @@ export
 class LocationInfo {
     /**
      * @summary `userLocation`.
+     * @description
+     *
+     * Location information type derived from the data defined in the
+     * UserLocation type defined in TS 29.571 [17] clause 5.4.4.7. See clause
+     * 7.3.3.2.4 for details on this data type. This field shall be used to
+     * convey one or more of the following:
+     *
+     * - E-UTRA user location.
+     *
+     * - NR user location.
+     *
+     * - Non-3GPP access user location.
+     *
+     * - UTRA Location.
+     *
+     * - GERA Location.
+     *
+     * - PLMN Location.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly userLocation: OPTIONAL<UserLocation>;
     /**
      * @summary `currentLoc`.
+     * @description
+     *
+     * This parameter shall be present if it can be determined for the reported
+     * location. When present, this parameter shall be set as following:
+     *
+     * - TRUE: the current location of the UE is reported.
+     *
+     * - FALSE: the last known location of the UE is reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly currentLoc: OPTIONAL<BOOLEAN>;
     /**
      * @summary `geoInfo`.
+     * @description
+     *
+     * This parameter shall be present if the geoInfo parameter of the
+     * ProvideLocInfo structure (see TS 29.518 [22] clause 6.4.6.2.6) is used.
+     * See clause 7.3.3.2.10 for details on this structure.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly geoInfo: OPTIONAL<GeographicArea>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * This parameter shall be present if the RATType of the UE is known at the
+     * NF. See clause 7.3.3.2.20 for details on this structure.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<RATType>;
     /**
      * @summary `timeZone`.
+     * @description
+     *
+     * This parameter shall be present if the local timeZone of the UE is known
+     * at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly timeZone: OPTIONAL<TimeZone>;
     /**
      * @summary `additionalCellIDs`.
+     * @description
+     *
+     * This parameter shall be present if the NF has additional cell information
+     * for the UE. Shall be used whenever Dual Connectivity is activated or
+     * whenever secondary cell information is available at the NF where the POI
+     * is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.3.
+     *
      * @public
      * @readonly
      */

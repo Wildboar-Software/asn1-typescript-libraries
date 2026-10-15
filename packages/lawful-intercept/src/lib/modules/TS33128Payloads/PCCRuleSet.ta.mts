@@ -11,6 +11,16 @@ import { PCCRule, _decode_PCCRule, _encode_PCCRule } from "../TS33128Payloads/PC
  * @summary PCCRuleSet
  * @description
  * 
+ * Set of PCC rules related to traffic influence. Each PCC rule influences the
+ * routing of a given traffic flow. If several flows are concerned, then several
+ * PCC rules shall be handled by the SMF. Traffic influence policies are
+ * originated by an AF. PCF translates these rules into PCC rules for traffic
+ * influence, if available. The payload of a PCC rule for traffic influence is
+ * defined in table 6.2.3.2.2-6.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

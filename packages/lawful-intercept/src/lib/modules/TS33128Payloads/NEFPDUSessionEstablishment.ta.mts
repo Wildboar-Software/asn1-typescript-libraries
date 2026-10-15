@@ -29,6 +29,22 @@ import { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs
  * @summary NEFPDUSessionEstablishment
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing an
+ * NEFPDUSessionEstablishment record when the IRI-POI present in the NEF detects
+ * that an unstructured PDU session using NEF has been established for the
+ * target UE. The IRI-POI present in the NEF shall generate the xIRI for the
+ * following event:
+ *
+ * - NEF returns Nnef_SMContext_Create Response towards the SMF confirming the
+ *   establishment of the unstructured PDU session to the NEF for the target UE
+ *   (as defined in TS 29.541 [57] clause 5.2.2.2) and connection to the AF is
+ *   established.
+ *
+ * Table 7.7.2.3-1 gives the LI_HI2 IRI message type for this record as BEGIN.
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,54 +68,113 @@ export
 class NEFPDUSessionEstablishment {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the PDU session (e.g. as provided by the SMF in the
+     * associated Nnef_SMContext_Create Request).
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI associated with the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: PDUSessionID;
     /**
      * @summary `sNSSAI`.
+     * @description
+     *
+     * Slice identifier associated with the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sNSSAI: SNSSAI;
     /**
      * @summary `nEFID`.
+     * @description
+     *
+     * NEF identity handling the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly nEFID: NEFID;
     /**
      * @summary `dNN`.
+     * @description
+     *
+     * Data Network Name associated with the target traffic. Shall be given in
+     * dotted-label presentation format as described in TS 23.003 [19] clause
+     * 9.1.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly dNN: DNN;
     /**
      * @summary `rDSSupport`.
+     * @description
+     *
+     * True if Reliable Data Service is supported in the PDU session, otherwise
+     * False.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly rDSSupport: RDSSupport;
     /**
      * @summary `sMFID`.
+     * @description
+     *
+     * Identifier of the SMF associated with the target UE for that that PDU
+     * Session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sMFID: SMFID;
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * Identifier of the AF.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.2.
+     *
      * @public
      * @readonly
      */

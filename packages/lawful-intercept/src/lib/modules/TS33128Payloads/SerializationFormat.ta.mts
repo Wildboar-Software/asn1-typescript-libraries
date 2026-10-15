@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SerializationFormat
  * @description
  * 
+ * Data format exchanged between UE and SCS/AS if RDS is used.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +36,11 @@ enum _enum_for_SerializationFormat {
  * @summary SerializationFormat
  * @description
  * 
+ * Data format exchanged between UE and SCS/AS if RDS is used.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +61,11 @@ type SerializationFormat = _enum_for_SerializationFormat;
  * @summary SerializationFormat
  * @description
  * 
+ * Data format exchanged between UE and SCS/AS if RDS is used.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

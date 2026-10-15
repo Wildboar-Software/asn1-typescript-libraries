@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Uncertainty
  * @description
  * 
+ * This type has been deprecated and shall always be set to 0.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

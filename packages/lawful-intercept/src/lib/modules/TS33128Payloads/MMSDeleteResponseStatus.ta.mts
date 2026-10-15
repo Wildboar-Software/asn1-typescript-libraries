@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSDeleteResponseStatus
  * @description
  * 
+ * The delete response, as defined in OMA-TS-MMS_ENC [39] clause 7.3.48.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -77,6 +82,11 @@ enum _enum_for_MMSDeleteResponseStatus {
  * @summary MMSDeleteResponseStatus
  * @description
  * 
+ * The delete response, as defined in OMA-TS-MMS_ENC [39] clause 7.3.48.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -120,6 +130,11 @@ type MMSDeleteResponseStatus = _enum_for_MMSDeleteResponseStatus;
  * @summary MMSDeleteResponseStatus
  * @description
  * 
+ * The delete response, as defined in OMA-TS-MMS_ENC [39] clause 7.3.48.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,14 @@ import { EPSBearers, _decode_EPSBearers, _encode_EPSBearers } from "../TS33128Pa
  * @summary EPSBearerInfo
  * @description
  * 
+ * Shall be present if there are any EPS Bearers associated to the PDU Session
+ * in the SM Context or PDU Session Context at the SMF+PGW-C. Contains
+ * information about the EPS Bearer context(s) associated with the PDU Session.
+ * See TS 29.502 [16] clause 6.1.6.2.4.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

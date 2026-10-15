@@ -13,6 +13,13 @@ import { V2XUEAuthorizationIndicator, _decode_V2XUEAuthorizationIndicator, _enco
  * @summary NRV2XServicesAuthorization
  * @description
  * 
+ * The NRV2XServicesAuthorization provides information on the authorization
+ * status of the UE to use the NR sidelink for V2X services. Defined in TS
+ * 38.413 [23] clause 9.3.1.146.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,24 @@ export
 class NRV2XServicesAuthorization {
     /**
      * @summary `v2XVehicleUEAuthorizationIndicator`.
+     * @description
+     *
+     * Indicates whether the UE is authorized as Vehicle UE.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.5.
+     *
      * @public
      * @readonly
      */
     readonly v2XVehicleUEAuthorizationIndicator: OPTIONAL<V2XUEAuthorizationIndicator>;
     /**
      * @summary `v2XPedestrianUEAuthorizationIndicator`.
+     * @description
+     *
+     * Indicates whether the UE is authorized as Pedestrian UE.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.5.
+     *
      * @public
      * @readonly
      */

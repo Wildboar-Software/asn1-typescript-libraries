@@ -15,6 +15,13 @@ import { NCI, _decode_NCI, _encode_NCI } from "../TS33128IdentityAssociation/NCI
  * @summary NCGI
  * @description
  * 
+ * Current nCGI known when the identifier association event is detected. Given
+ * as a sequence of PLMNID (encoded as per TS 38.413 [23] clause 9.3.3.5) and
+ * NCI (encoded as per TS 38.413 [23] clause 9.3.1.7).
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,24 @@ export
 class NCGI {
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * Encoded as per TS 38.413 [23] clause 9.3.3.5.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `nCI`.
+     * @description
+     *
+     * Encoded as per TS 38.413 [23] clause 9.3.1.7.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */

@@ -32,9 +32,37 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128Payloads/IMEI.ta.mjs
  */
 export
 type IMSSubscriberIdentity =
+    /**
+     * @description
+     *
+     * Chosen when the identifier being reported is an IMPI.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.6.
+     */
     { iMPI: IMPI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the identifier being reported is an IMPU.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.6.
+     */
     | { iMPU: IMPU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the identifier being reported is a PEI.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.6.
+     */
     | { pEI: PEI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the identifier being reported is an IMEI.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.6.
+     */
     | { iMEI: IMEI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

@@ -15,6 +15,11 @@ import { RATRestrictionInformation, _decode_RATRestrictionInformation, _encode_R
  * @summary RATRestrictionItem
  * @description
  * 
+ * Contains a list of RAT Restrictions.
+ *
+ * 3GPP TS 33.128, clause 8.4.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +36,24 @@ export
 class RATRestrictionItem {
     /**
      * @summary `pLMNIdentity`.
+     * @description
+     *
+     * Contains the PLMN for which the RAT restriction applies.
+     *
+     * 3GPP TS 33.128, clause 8.4.5.
+     *
      * @public
      * @readonly
      */
     readonly pLMNIdentity: PLMNID;
     /**
      * @summary `rATRestrictionInformation`.
+     * @description
+     *
+     * Contains RAT Restriction.
+     *
+     * 3GPP TS 33.128, clause 8.4.5.
+     *
      * @public
      * @readonly
      */

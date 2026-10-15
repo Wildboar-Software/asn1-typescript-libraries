@@ -29,6 +29,13 @@ import { SatelliteID, _decode_SatelliteID, _encode_SatelliteID } from "../TS3312
  * @summary AccessInfo
  * @description
  * 
+ * Identifies the access(es) associated with the PDU session including the
+ * information for each specific access (see table 6.2.3.2.7.2-2) being
+ * modified.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.7.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

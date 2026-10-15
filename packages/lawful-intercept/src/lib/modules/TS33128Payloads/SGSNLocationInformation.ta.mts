@@ -27,6 +27,13 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  * @summary SGSNLocationInformation
  * @description
  * 
+ * The SGSNLocationInformation type contains the information related to the user
+ * location relevant for the MME. Derived from the data found in
+ * MME-Location-Information parameter from TS 29.272 [106] clause 7.3.115.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.79.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,54 +57,126 @@ export
 class SGSNLocationInformation {
     /**
      * @summary `cGI`.
+     * @description
+     *
+     * The Cell Global Identification for the UTRA Cell the UE is currently
+     * located in. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */
     readonly cGI: OPTIONAL<CGI>;
     /**
      * @summary `lAI`.
+     * @description
+     *
+     * This field is derived from the Location Area Identification information
+     * element. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */
     readonly lAI: OPTIONAL<LAI>;
     /**
      * @summary `sAI`.
+     * @description
+     *
+     * Service Area Identity of the target. Shall be present if known at the NF
+     * where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */
     readonly sAI: OPTIONAL<SAI>;
     /**
      * @summary `rAI`.
+     * @description
+     *
+     * Routing Area Identity of the target. Shall be present if known at the NF
+     * where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */
     readonly rAI: OPTIONAL<RAI>;
     /**
      * @summary `geographicalInformation`.
+     * @description
+     *
+     * Shall contain the geographical Information of the target when known at
+     * the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */
     readonly geographicalInformation: OPTIONAL<GeographicalInformationOctet>;
     /**
      * @summary `geodeticInformation`.
+     * @description
+     *
+     * Shall contain the Geodetic Location of the target when known at the NF
+     * where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */
     readonly geodeticInformation: OPTIONAL<GeodeticInformationOctet>;
     /**
      * @summary `currentLocationRetrieved`.
+     * @description
+     *
+     * This value is used when location information was obtained after a
+     * successful paging procedure for Active Location Retrieval. Or after
+     * retrieving the most up-to-date location information from the eNB when the
+     * UE is in connected mode.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */
     readonly currentLocationRetrieved: OPTIONAL<BOOLEAN>;
     /**
      * @summary `ageOfLocationInformation`.
+     * @description
+     *
+     * The value represents the elapsed time in minutes since the last network
+     * contact of the mobile station. Value "0" indicates that the location
+     * information was obtained after a successful paging procedure for Active
+     * Location Retrieval when the UE is in idle mode or after a successful
+     * location reporting procedure with the eNB when the UE is in connected
+     * mode. Any other value than "0" indicates that the location information is
+     * the last known one. Shall be present if known at the NF where the POI is
+     * located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */
     readonly ageOfLocationInformation: OPTIONAL<INTEGER>;
     /**
      * @summary `userCSGInformation`.
+     * @description
+     *
+     * The UserCSGInformation type holds the user "Closed Subscriber Group"
+     * information associated to CSG cell access. Shall be present if known at
+     * the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.79.
+     *
      * @public
      * @readonly
      */

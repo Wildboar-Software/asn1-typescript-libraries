@@ -12,6 +12,12 @@ import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNI
  * @summary PLMNList
  * @description
  * 
+ * Provides a list of equivalent PLMNs in the Attach Accept message. See clause
+ * TS 24.301 [51] clauses 8.2.1.1 and 8.2.1.8.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

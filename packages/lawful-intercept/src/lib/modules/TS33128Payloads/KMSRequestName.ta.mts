@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary KMSRequestName
  * @description
  * 
+ * Indicates whether the HTTP POST operation is for KMS Initialize, KMS
+ * KeyProvision, KMS CertCache, KMS Cert, KMS Discovery Lookup or KMS Redirect
+ * Upload.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +44,13 @@ enum _enum_for_KMSRequestName {
  * @summary KMSRequestName
  * @description
  * 
+ * Indicates whether the HTTP POST operation is for KMS Initialize, KMS
+ * KeyProvision, KMS CertCache, KMS Cert, KMS Discovery Lookup or KMS Redirect
+ * Upload.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,6 +74,13 @@ type KMSRequestName = _enum_for_KMSRequestName;
  * @summary KMSRequestName
  * @description
  * 
+ * Indicates whether the HTTP POST operation is for KMS Initialize, KMS
+ * KeyProvision, KMS CertCache, KMS Cert, KMS Discovery Lookup or KMS Redirect
+ * Upload.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

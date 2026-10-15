@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMStatus
  * @description
  * 
+ * Provides a MM status. A status of "retrieved" is only signalled by the
+ * retrieving UE after retrieval of the MM. Include if received by the MMS
+ * Proxy-Relay and if generated from a m-notifyresp-ind.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +48,13 @@ enum _enum_for_MMStatus {
  * @summary MMStatus
  * @description
  * 
+ * Provides a MM status. A status of "retrieved" is only signalled by the
+ * retrieving UE after retrieval of the MM. Include if received by the MMS
+ * Proxy-Relay and if generated from a m-notifyresp-ind.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +80,13 @@ type MMStatus = _enum_for_MMStatus;
  * @summary MMStatus
  * @description
  * 
+ * Provides a MM status. A status of "retrieved" is only signalled by the
+ * retrieving UE after retrieval of the MM. Include if received by the MMS
+ * Proxy-Relay and if generated from a m-notifyresp-ind.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

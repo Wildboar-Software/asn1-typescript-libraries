@@ -34,30 +34,66 @@ export
 class TranslatedChargingData {
     /**
      * @summary `releaseID`.
+     * @description
+     *
+     * Derived from the release identifier field of the record format (see TS
+     * 32.297 [149] clause 6.1.2.2).
+     *
+     * 3GPP TS 33.128, clause 7.19.3.14.
+     *
      * @public
      * @readonly
      */
     readonly releaseID: INTEGER;
     /**
      * @summary `versonID`.
+     * @description
+     *
+     * Derived from the version identifier field of the record format (see TS
+     * 32.297 [149] clause 6.1.2.3).
+     *
+     * 3GPP TS 33.128, clause 7.19.3.14.
+     *
      * @public
      * @readonly
      */
     readonly versonID: INTEGER;
     /**
      * @summary `specificationNumber`.
+     * @description
+     *
+     * Derived from the TS number field of the record format (see TS 32.297
+     * [149] clause 6.1.2.5).
+     *
+     * 3GPP TS 33.128, clause 7.19.3.14.
+     *
      * @public
      * @readonly
      */
     readonly specificationNumber: INTEGER;
     /**
      * @summary `releaseIDExtension`.
+     * @description
+     *
+     * Derived from the release identifier extension field of the record format.
+     * Shall be included when the releaseID field integer is 7. (see TS 32.297
+     * [149] clause 6.1.2.6).
+     *
+     * 3GPP TS 33.128, clause 7.19.3.14.
+     *
      * @public
      * @readonly
      */
     readonly releaseIDExtension: OPTIONAL<INTEGER>;
     /**
      * @summary `recordData`.
+     * @description
+     *
+     * Translated charging data using the syntax encoding rules as specified in
+     * TS 32.298 [150] clause 5.2.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.14.
+     *
      * @public
      * @readonly
      */

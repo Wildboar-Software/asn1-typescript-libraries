@@ -20,6 +20,14 @@ import { MMSResponseStatus, _decode_MMSResponseStatus, _encode_MMSResponseStatus
  * @summary MMSDeliveryReport
  * @description
  * 
+ * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI containing
+ * an MMSDeliveryReport record when the MMS Proxy-Relay sends an m-delivery-ind
+ * (as defined in OMA-TS-MMS_ENC [39] clause 6.11) to the MMS client in the
+ * target UE.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,18 +51,43 @@ export
 class MMSDeliveryReport {
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.13.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * An ID assigned by the MMS Proxy-Relay to uniquely identify an MM. As
+     * defined in OMA-TS-MMS_ENC [39] clause 7.3.29. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.13.
+     *
      * @public
      * @readonly
      */
     readonly messageID: UTF8String;
     /**
      * @summary `terminatingMMSParty`.
+     * @description
+     *
+     * ID(s) of the terminating party of the original message this Delivery
+     * Report refers to, in one or more of the formats described in clause
+     * 7.4.2.1. When address translation occurs (such as the case of a token
+     * sent by the client and replaced with a proper address by the MMS
+     * Proxy-Relay), both the pre and post translated addresses (with
+     * appropriate correlation) are included.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.13.
+     *
      * @public
      * @readonly
      */
@@ -67,30 +100,69 @@ class MMSDeliveryReport {
     readonly mMSDateTime: Timestamp;
     /**
      * @summary `responseStatus`.
+     * @description
+     *
+     * MMS specific status.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.13.
+     *
      * @public
      * @readonly
      */
     readonly responseStatus: MMSResponseStatus;
     /**
      * @summary `responseStatusText`.
+     * @description
+     *
+     * Text that qualifies the Response Status. As defined in OMA-TS-MMS_ENC
+     * [39] clause 7.3.49. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.13.
+     *
      * @public
      * @readonly
      */
     readonly responseStatusText: OPTIONAL<UTF8String>;
     /**
      * @summary `applicID`.
+     * @description
+     *
+     * Identification of the originating application of the original MM. Sent by
+     * the target to identify the destination application as defined in
+     * OMA-TS-MMS_ENC [39] clause 7.3.2. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.13.
+     *
      * @public
      * @readonly
      */
     readonly applicID: OPTIONAL<UTF8String>;
     /**
      * @summary `replyApplicID`.
+     * @description
+     *
+     * Identification of an application to which replies, delivery reports, and
+     * read reports are addressed. Sent by the target to identify the
+     * application to which replies, delivery reports, and read reports are
+     * addressed as defined in OMA-TS-MMS_ENC [39] clause 7.3.42. Include if
+     * sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.13.
+     *
      * @public
      * @readonly
      */
     readonly replyApplicID: OPTIONAL<UTF8String>;
     /**
      * @summary `auxApplicInfo`.
+     * @description
+     *
+     * Auxiliary application addressing information as indicated in the original
+     * MM. As defined in OMA-TS-MMS_ENC [39] clause 7.3.4. Include if sent by
+     * the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.13.
+     *
      * @public
      * @readonly
      */

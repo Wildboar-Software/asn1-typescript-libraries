@@ -20,6 +20,41 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary RCSCapabilityDiscovery
  * @description
  * 
+ * The IRI-POI present in the RCS server shall generate an xIRI containing an
+ * RCSCapabilityDiscovery when the IRI-POI present in the RCS server detects
+ * that an RCS target has received RCS service capabilities for his contact(s)
+ * or has sent capabilities to a contact.
+ *
+ * Accordingly, the IRI-POI in the RCS server generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - The RCS server receives a SIP OPTIONS request sent by a target which
+ *   contains the capabilities of the target in the Contact header.
+ *
+ * - The RCS server returns a SIP response with the response code is 200, 480,
+ *   408, 404 or 604 for a SIP OPTIONS request sent by the target.
+ *
+ * - The RCS server receives a SIP OPTIONS request for the target which contains
+ *   the capabilities of the target’s contact in the Contact header.
+ *
+ * - The RCS server returns a SIP response for a SIP OPTIONS request received
+ *   from a target’s contact.
+ *
+ * - The RCS server sends a SIP NOTIFY request to the target with the Event
+ *   header set to "presence.winfo". The SIP NOTIFY request contains the RCS
+ *   state and RCS capabilities of a target’s contact.
+ *
+ * - The RCS server receives a SIP SUBSCRIBE request from a target’s contact
+ *   with the Event header set to "presence.winfo".
+ *
+ * - The RCS server receives a SIP PUBLISH request from the target to initially
+ *   announce, update and remove RCS capabilities.
+ *
+ * Table 7.13.4-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.5.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +74,66 @@ export
 class RCSCapabilityDiscovery {
     /**
      * @summary `rCSTargetIdentities`.
+     * @description
+     *
+     * RCS target identities. All identities associated to the target known at
+     * the POI shall be included.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSTargetIdentities: RCSIdentity[];
     /**
      * @summary `rCSTargetContactIdentities`.
+     * @description
+     *
+     * RCS target’s contact identities. All identities associated to the
+     * target’s contact known at the POI shall be included.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSTargetContactIdentities: OPTIONAL<RCSIdentity[]>;
     /**
      * @summary `sIPMessage`.
+     * @description
+     *
+     * The SIP Message may be either an OPTIONS request, or SIP OPTIONS
+     * response, or SIP SUBSCRIBE request, or SIP NOTIFY request or SIP PUBLISH
+     * request.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly sIPMessage: IMSPayload;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Shall be provided to identify the direction of the message relative to
+     * the target: "toTarget" or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.13.3.5.1.
+     *
      * @public
      * @readonly
      */
     readonly direction: Direction;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the target’s location when available according to the
+     * location reporting type provisioned for the task.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.5.1.
+     *
      * @public
      * @readonly
      */

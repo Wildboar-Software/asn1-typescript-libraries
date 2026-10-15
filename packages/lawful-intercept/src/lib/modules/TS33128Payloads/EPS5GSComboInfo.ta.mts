@@ -37,24 +37,59 @@ export
 class EPS5GSComboInfo {
     /**
      * @summary `ePSInterworkingIndication`.
+     * @description
+     *
+     * Indicates whether and how the PDU Session may be moved to EPS. Shall be
+     * derived from the EpsInterworkingIndication associated with the PDU
+     * Session at the SMF+PGW-C (see TS 29.502 [16] clause 6.1.6.3.11).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly ePSInterworkingIndication: EPSInterworkingIndication;
     /**
      * @summary `ePSSubscriberIDs`.
+     * @description
+     *
+     * Includes the Subscriber Identities associated with the EPS PDN Connection
+     * in the UE Context sent from the MME to the AMF or known in the context at
+     * the SMF+PGW-C. See TS 29.274 [87] clause 7.2.1 and TS 23.502 [4] clause
+     * 4.11.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly ePSSubscriberIDs: EPSSubscriberIDs;
     /**
      * @summary `ePSPDNCnxInfo`.
+     * @description
+     *
+     * Shall be present if there are any EPS PDN connections associated to the
+     * PDU Session in the SM Context or PDU Session Context at the SMF+PGW-C.
+     * Contains information about the EPS PDN connection associated with the PDU
+     * Session. See TS 29.502 [16] clause 6.1.6.2.31.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly ePSPDNCnxInfo: OPTIONAL<EPSPDNCnxInfo>;
     /**
      * @summary `ePSBearerInfo`.
+     * @description
+     *
+     * Shall be present if there are any EPS Bearers associated to the PDU
+     * Session in the SM Context or PDU Session Context at the SMF+PGW-C.
+     * Contains information about the EPS Bearer context(s) associated with the
+     * PDU Session. See TS 29.502 [16] clause 6.1.6.2.4.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */

@@ -11,6 +11,12 @@ import { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta
  * @summary FTEIDList
  * @description
  * 
+ * Shall include the F-TEID for the UPF endpoint of any additional NG-U
+ * transport bearers (see TS 38.413 [23] clause 9.3.4.1).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,13 @@ import { CellPortionID, _decode_CellPortionID, _encode_CellPortionID } from "../
  * @summary ESMLCCellInfo
  * @description
  * 
+ * The ESMLCCelInfo type is used to identify the current cell information of the
+ * target UE as known by E-SMLC. Derived from the information found in TS 29.172
+ * [53] table 6.2.2-2.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.74.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,24 @@ export
 class ESMLCCellInfo {
     /**
      * @summary `eCGI`.
+     * @description
+     *
+     * ECGI type is used to report the E-UTRA Cell Identity.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.74.
+     *
      * @public
      * @readonly
      */
     readonly eCGI: ECGI;
     /**
      * @summary `cellPortionID`.
+     * @description
+     *
+     * The current Cell Portion location of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.74.
+     *
      * @public
      * @readonly
      */

@@ -16,6 +16,13 @@ import { MMSDirection, _decode_MMSDirection, _encode_MMSDirection, _enum_for_MMS
  * @summary MMSCancel
  * @description
  * 
+ * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI containing
+ * an MMSCancel record when the MMS Proxy-Relay sends a m-cancel-req (as defined
+ * in OMA-TS-MMS_ENC [39] clause 6.13) to the MMS client in the target UE.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +41,51 @@ export
 class MMSCancel {
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the target
+     * and the MMS Proxy-Relay. As defined in OMA-TS-MMS_ENC [39] clause 7.3.63.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.17.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.17.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `cancelID`.
+     * @description
+     *
+     * This field includes the Message ID identifying the message to be
+     * cancelled. As defined in OMA-TS-MMS_ENC [39] clause 7.3.6.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.17.
+     *
      * @public
      * @readonly
      */
     readonly cancelID: UTF8String;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Indicates the direction of the original MM. This shall be encoded as "to
+     * target".
+     *
+     * 3GPP TS 33.128, clause 7.4.3.17.
+     *
      * @public
      * @readonly
      */

@@ -12,6 +12,11 @@ import { PLMNSupportItem, _decode_PLMNSupportItem, _encode_PLMNSupportItem } fro
  * @summary PLMNSupportList
  * @description
  * 
+ * A list of PLMNs served by the MME for the GUMMEI.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

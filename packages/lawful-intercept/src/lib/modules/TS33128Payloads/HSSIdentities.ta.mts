@@ -15,6 +15,13 @@ import { IMSSubscriberIDs, _decode_IMSSubscriberIDs, _encode_IMSSubscriberIDs } 
  * @summary HSSIdentities
  * @description
  * 
+ * Indicates the identifiers for which the subscription data sets apply. Shall
+ * include one or more subscriber identifier. See TS 29.562 [101] clause
+ * 6.2.3.1.
+ *
+ * 3GPP TS 33.128, clause 7.2.3.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

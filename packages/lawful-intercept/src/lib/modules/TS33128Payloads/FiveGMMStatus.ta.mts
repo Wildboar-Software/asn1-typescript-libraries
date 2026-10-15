@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FiveGMMStatus
  * @description
  * 
+ * Indicates the 5GS registration status of the UE as known at the NF where the
+ * POI is located. Shall be present if the 5GS registration status is known.
+ *
+ * 3GPP TS 33.128, clause 8.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +35,12 @@ enum _enum_for_FiveGMMStatus {
  * @summary FiveGMMStatus
  * @description
  * 
+ * Indicates the 5GS registration status of the UE as known at the NF where the
+ * POI is located. Shall be present if the 5GS registration status is known.
+ *
+ * 3GPP TS 33.128, clause 8.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +60,12 @@ type FiveGMMStatus = _enum_for_FiveGMMStatus;
  * @summary FiveGMMStatus
  * @description
  * 
+ * Indicates the 5GS registration status of the UE as known at the NF where the
+ * POI is located. Shall be present if the 5GS registration status is known.
+ *
+ * 3GPP TS 33.128, clause 8.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

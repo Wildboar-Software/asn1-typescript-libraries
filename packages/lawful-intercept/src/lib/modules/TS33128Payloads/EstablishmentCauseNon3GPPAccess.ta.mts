@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EstablishmentCauseNon3GPPAccess
  * @description
  * 
+ * Encoded per TS 24.502 [128] clause 9.2.2 omitting the first octet.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

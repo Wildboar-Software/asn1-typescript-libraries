@@ -41,30 +41,73 @@ export
 class EPSBearerContextModified {
     /**
      * @summary `ePSBearerID`.
+     * @description
+     *
+     * Shall include the EPS bearer ID for the EPS Bearer (see TS 29.274 [87]
+     * clauses 7.2.7, 7.2.8, 7.2.15 and 7.2.16).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly ePSBearerID: EPSBearerID;
     /**
      * @summary `cause`.
+     * @description
+     *
+     * Shall indicate whether the bearer handling was successful and if not, it
+     * gives information on the reason (see TS 29.274 [87] clauses 7.2.7, 7.2.8,
+     * 7.2.15 and 7.2.16). Sent as an integer cause value (see TS 29.274 [87]
+     * table 8.4-1)
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly cause: EPSBearerModificationCauseValue;
     /**
      * @summary `gTPTunnelInfo`.
+     * @description
+     *
+     * Contains the information for the User Plane GTP Tunnels for the bearer
+     * context if present in the Request or Response (see TS 29.274 [87] clauses
+     * 7.2.7, 7.2.8, 7.2.15, 7.2.16 and 8.15) or known at the context at the SGW
+     * or PGW (see TS 23.401 [50] clause 5.7.4). See table 6.2.3.2.2-3.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>;
     /**
      * @summary `bearerQOS`.
+     * @description
+     *
+     * Shall include the QOS information for the bearer if present in the
+     * Request or Response (see TS 29.274 [87] clauses 7.2.7, 7.2.8, 7.2.15,
+     * 7.2.16 and 8.15) or known at the context at the SGW or PGW (see TS 23.401
+     * [50] clause 5.7.4). See table 6.3.3.2.2-7.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly bearerQOS: OPTIONAL<EPSBearerQOS>;
     /**
      * @summary `protocolConfigurationOptions`.
+     * @description
+     *
+     * Shall be present if the Bearer Context reported (see TS 29.274 [87]
+     * clauses 7.2.7, 7.2.8, 7.2.15, 7.2.16 and 8.15) contains the Protocol
+     * Configuration, Additional Protocol Configuration Options or extended
+     * Protocol Configuration Options IE. See table 6.3.3.2.2-4.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */

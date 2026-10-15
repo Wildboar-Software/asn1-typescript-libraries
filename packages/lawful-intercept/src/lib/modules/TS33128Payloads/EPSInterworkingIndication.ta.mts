@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSInterworkingIndication
  * @description
  * 
+ * Indicates whether and how the PDU Session may be moved to EPS. Shall be
+ * derived from the EpsInterworkingIndication associated with the PDU Session at
+ * the SMF+PGW-C (see TS 29.502 [16] clause 6.1.6.3.11).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +40,13 @@ enum _enum_for_EPSInterworkingIndication {
  * @summary EPSInterworkingIndication
  * @description
  * 
+ * Indicates whether and how the PDU Session may be moved to EPS. Shall be
+ * derived from the EpsInterworkingIndication associated with the PDU Session at
+ * the SMF+PGW-C (see TS 29.502 [16] clause 6.1.6.3.11).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +68,13 @@ type EPSInterworkingIndication = _enum_for_EPSInterworkingIndication;
  * @summary EPSInterworkingIndication
  * @description
  * 
+ * Indicates whether and how the PDU Session may be moved to EPS. Shall be
+ * derived from the EpsInterworkingIndication associated with the PDU Session at
+ * the SMF+PGW-C (see TS 29.502 [16] clause 6.1.6.3.11).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

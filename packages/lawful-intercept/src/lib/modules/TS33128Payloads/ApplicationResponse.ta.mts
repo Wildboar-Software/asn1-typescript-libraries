@@ -24,7 +24,33 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  */
 export
 type ApplicationResponse =
+    /**
+     * @description
+     *
+     * Contains the entire payload of the Get root application response sent
+     * from the the DCSF or the MMTel Enabler Server to the MMTel Enabler Client
+     * target UE. The SBIReference for this parameter shall be populated with
+     * 'TS24392_[Get Root application response schema]' where [Get Root
+     * application response schema] is
+     * "http://json-schema.org/draft-07/schema#", as specified in TS 24.392
+     * [166] clause 7.2.1.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     */
     { getRootApplicationResponse: SBIType } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Contains the entire payload of the Get DC Application Profile List
+     * response sent from the the DCSF or the MMTel Enabler Server to the MMTel
+     * Enabler Client target UE. The SBIReference for this parameter shall be
+     * populated with 'TS24392_[Get DC application profile List response
+     * schema]' where [Get DC application profile List response schema] is
+     * "http://json-schema.org/draft-07/schema#", as specified in TS 24.392
+     * [166] clause 7.2.2.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     */
     | { getDCApplicationProfileListResponse: SBIType } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

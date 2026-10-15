@@ -15,6 +15,12 @@ import { Altitude, _decode_Altitude, _encode_Altitude } from "../TS33128Payloads
  * @summary PointAltitude
  * @description
  * 
+ * The PointAltitude type is derived from the data present in the PointAltitude
+ * type defined in TS 29.572 [24] clause 6.1.6.2.10.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +43,12 @@ class PointAltitude {
     readonly point: GeographicalCoordinates;
     /**
      * @summary `altitude`.
+     * @description
+     *
+     * Indicates the altitude of the UE in meters.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.17.
+     *
      * @public
      * @readonly
      */

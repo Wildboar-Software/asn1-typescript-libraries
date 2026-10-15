@@ -28,6 +28,10 @@ export
 class PayloadModifications {
     /**
      * @summary `modificationList`.
+     * @description
+     *
+     * Contains a list of modifications performed on the payload being reported.
+     *
      * @public
      * @readonly
      */

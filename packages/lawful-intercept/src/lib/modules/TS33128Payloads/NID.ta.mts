@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NID
  * @description
  * 
+ * This represents the Network Identifier, which together with a PLMN ID is used
+ * to identify an SNPN. See TS 23.003 [19] clause 12.7.1. Encoded as per TS
+ * 29.571 [17] clause 5.4.3.
+ *
+ * 3GPP TS 33.128, clause 8.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -31,6 +31,55 @@ import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } fro
  * @summary AMFLocationUpdate
  * @description
  * 
+ * The IRI-POI in the AMF shall generate an xIRI containing an AMFLocationUpdate
+ * record each time the IRI-POI present in an AMF detects that the target’s UE
+ * location is updated due to target UE mobility or as a part of an AMF service
+ * procedure and the reporting of location information is not restricted by
+ * service scoping. The generation of such separate xIRI is not required if the
+ * updated UE location information is obtained as a part of a procedure
+ * producing some other xIRIs (e.g. mobility registration). In that case the
+ * location information is included into the respective xIRI.
+ *
+ * The UE mobility events resulting in generation of an AMFLocationUpdate xIRI
+ * include the N2 Path Switch Request (Xn based inter NG-RAN handover procedure
+ * described in TS 23.502 [4] clause 4.9.1.2) and the N2 Handover Notify (Inter
+ * NG-RAN node N2 based handover procedure described in TS 23.502 [4] clause
+ * 4.9.1.3).
+ *
+ * The AMFLocationUpdate xIRI is also generated when the AMF receives an NG-RAN
+ * NGAP PDU Session Resource Modify Indication message as a result of Dual
+ * Connectivity activation/release for the target UE, as described in TS 37.340
+ * [37] clause 10.
+ *
+ * Optionally, based on operator policy, other NG-RAN NGAP messages that do not
+ * generate separate xIRI but carry location information (e.g. RRC INACTIVE
+ * TRANSITION REPORT) may trigger the generation of an xIRI AMFLocationUpdate
+ * record.
+ *
+ * Additionally, based on regulatory requirements and operator policy, the
+ * location information obtained by AMF from NG-RAN or LMF in the course of some
+ * service operation (e.g. emergency services, LCS) may generate xIRI
+ * AMFLocationUpdate record. The AMF services providing the location information
+ * in these cases include the AMF Location Service (ProvideLocInfo,
+ * ProvidePosInfo, NotifiedPosInfo and EventNotify service operations) and the
+ * AMF Exposure Service (AmfEventReport with LOCATION_REPORT) (see TS 29.518
+ * [22]). Additionally, the AMF Communication Service
+ * (Namf_Communication_N1MessageNotify service operation) may be monitored to
+ * capture the location information in the scenarios described in TS 23.273 [42]
+ * clause 6.3.1. Also, in the case of Mobile Originated LCS service invoked by
+ * the target, the location information may be derived from a
+ * Nlmf_Location_DetermineLocation Response to AMF (see TS 23.273 [42] clause
+ * 6.2).
+ *
+ * The AMFLocationUpdate record is also used by LARF to deliver location
+ * information responses to MDF2, as described in clause 7.3.5.6. The IRI-POI in
+ * the AMF shall not generate the AMFLocationUpdate xIRI when the location
+ * information is acquired as the result of a LARF request, as described in TS
+ * 33.127 [5] clause 7.3.5.2.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,60 +104,141 @@ export
 class AMFLocationUpdate {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the location update (see clause 6.2.2.4).
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI associated with the location update, if available, see TS 24.501
+     * [13].
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI associated with the location update, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI associated with the location update, if available as part of the
+     * subscription profile.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI associated with the location update, if available, see TS 24.501
+     * [13].
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<FiveGGUTI>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Updated location information determined by the network. Depending on the
+     * service or message type from which the location information is extracted,
+     * it may be encoded in several forms: 1) as a
+     * Location.locationInfo.userLocation parameter in the case the information
+     * is obtained from an NGAP message, except the LOCATION REPORT message (see
+     * TS 38.413 [23]); 2) as a Location.locationInfo in the case the
+     * information is obtained from a ProvideLocInfo (TS 29.518 [22] clause
+     * 6.4.6.2.6); 3) as a Location.locationPresenceReport parameter in the case
+     * the information is obtained from an AmfEventReport (TS 29.518 [22] clause
+     * 6.2.6.2.5) with event type Location-Report or Presence-In-AOI-Report; 4)
+     * as a Location.positioningInfo.positionInfo parameter in the case the
+     * information is obtained from a ProvidePosInfo (TS 29.518 [22] clause
+     * 6.4.6.2.3) or a NotifiedPosInfo (TS 29.518 [22] clause 6.4.6.2.4). If
+     * available, other parameters reportable via Location shall be included.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly location: Location;
     /**
      * @summary `deprecatedSMSOverNASIndicator`.
+     * @description
+     *
+     * No longer used in present version of this specification.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedSMSOverNASIndicator: OPTIONAL<SMSOverNASIndicator>;
     /**
      * @summary `deprecatedOldGUTI`.
+     * @description
+     *
+     * No longer used in present version of this specification.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedOldGUTI: OPTIONAL<EPS5GGUTI>;
     /**
      * @summary `uEAreaIndication`.
+     * @description
+     *
+     * Contains a country, area in a country or international area indication
+     * where UE is located, if available. If UE is outside of the area of any
+     * known country, i.e. international area, it contains the international
+     * area indication without a country. See table 6.2.2.2.2-2 for details on
+     * this data type.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly uEAreaIndication: OPTIONAL<UEAreaIndication>;
     /**
      * @summary `additionalUserIdentifiers`.
+     * @description
+     *
+     * Provides additional user identifiers known at the AMF or stored in AMF
+     * context, e.g. additional GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.4.
+     *
      * @public
      * @readonly
      */

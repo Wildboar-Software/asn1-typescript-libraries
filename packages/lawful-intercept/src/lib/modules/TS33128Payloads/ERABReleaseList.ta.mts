@@ -12,6 +12,13 @@ import { ERABError, _decode_ERABError, _encode_ERABError } from "../TS33128Paylo
  * @summary ERABReleaseList
  * @description
  * 
+ * Contains a list of any E-RABs that are to be released. Shall be present if
+ * there are any E-RABs to be released listed in the handover command. See TS
+ * 36.413 [38] clause 9.1.5.2.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

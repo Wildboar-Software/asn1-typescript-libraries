@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary V2XUEAuthorizationIndicator
  * @description
  * 
+ * The V2XUEAuthorizationIndicator indicates whether the UE is authorized to use
+ * Sidelink for V2X operation. Derived from the IEs defined in TS 38.413 [23]
+ * clauses 9.3.1.146 and 9.3.1.147.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +28,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_V2XUEAuthorizationIndicator {
+    /**
+     * @description
+     *
+     * Sidelink for V2X operation is authorized.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.10.
+     */
     authorized = 1,
+    /**
+     * @description
+     *
+     * Sidelink for V2X operation is not authorized.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.10.
+     */
     notAuthorized = 2,
 }
 
@@ -29,6 +50,13 @@ enum _enum_for_V2XUEAuthorizationIndicator {
  * @summary V2XUEAuthorizationIndicator
  * @description
  * 
+ * The V2XUEAuthorizationIndicator indicates whether the UE is authorized to use
+ * Sidelink for V2X operation. Derived from the IEs defined in TS 38.413 [23]
+ * clauses 9.3.1.146 and 9.3.1.147.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +76,13 @@ type V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
  * @summary V2XUEAuthorizationIndicator
  * @description
  * 
+ * The V2XUEAuthorizationIndicator indicates whether the UE is authorized to use
+ * Sidelink for V2X operation. Derived from the IEs defined in TS 38.413 [23]
+ * clauses 9.3.1.146 and 9.3.1.147.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +100,12 @@ const V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
 
 /**
  * @summary V2XUEAuthorizationIndicator_authorized
+ * @description
+ *
+ * Sidelink for V2X operation is authorized.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.10.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +114,12 @@ const V2XUEAuthorizationIndicator_authorized: V2XUEAuthorizationIndicator = V2XU
 
 /**
  * @summary authorized
+ * @description
+ *
+ * Sidelink for V2X operation is authorized.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.10.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +128,12 @@ const authorized: V2XUEAuthorizationIndicator = V2XUEAuthorizationIndicator.auth
 
 /**
  * @summary V2XUEAuthorizationIndicator_notAuthorized
+ * @description
+ *
+ * Sidelink for V2X operation is not authorized.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.10.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +142,12 @@ const V2XUEAuthorizationIndicator_notAuthorized: V2XUEAuthorizationIndicator = V
 
 /**
  * @summary notAuthorized
+ * @description
+ *
+ * Sidelink for V2X operation is not authorized.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.10.
+ *
  * @constant
  * @type {number}
  */

@@ -12,6 +12,13 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary UASNFUASInformation
  * @description
  * 
+ * Encapsulated message that triggered the xIRI in its original format. Contains
+ * the entire payload of the uAVFlightAssitance or NafAuthentication. See table
+ * 7.7.2.1.7-5 for choices to populate this parameter.
+ *
+ * 3GPP TS 33.128, clause 7.7.8.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

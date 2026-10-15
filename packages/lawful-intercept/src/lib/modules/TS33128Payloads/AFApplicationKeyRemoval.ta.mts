@@ -17,6 +17,15 @@ import { AFKeyRemovalCause, _decode_AFKeyRemovalCause, _encode_AFKeyRemovalCause
  * @summary AFApplicationKeyRemoval
  * @description
  * 
+ * The IRI-POI in the AF shall generate an xIRI containing an
+ * AFApplicationKeyRemoval record when the IRI-POI present in the AF detects
+ * that an AKMA-derived AF-specific key is deleted or otherwise decommissioned.
+ *
+ * Table 7.9.1.5-2 gives the LI_HI2 IRI message type for this record as END.
+ *
+ * 3GPP TS 33.128, clause 7.9.1.4.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +43,36 @@ export
 class AFApplicationKeyRemoval {
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * AF identifier.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.5.
+     *
      * @public
      * @readonly
      */
     readonly aFID: AFID;
     /**
      * @summary `aKID`.
+     * @description
+     *
+     * AKMA Anchor Key Identifier associated with removed key.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.5.
+     *
      * @public
      * @readonly
      */
     readonly aKID: NAI;
     /**
      * @summary `removalCause`.
+     * @description
+     *
+     * Reason for the removal of the application key.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.5.
+     *
      * @public
      * @readonly
      */

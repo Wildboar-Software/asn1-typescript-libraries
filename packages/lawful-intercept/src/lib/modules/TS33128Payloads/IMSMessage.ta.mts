@@ -25,6 +25,21 @@ import { NumberTranslation, _decode_NumberTranslation, _encode_NumberTranslation
  * @summary IMSMessage
  * @description
  * 
+ * For an intercepted IMS based communication (see clause 7.12.2.8), the IRI-POI
+ * present in the IMS Signalling Function shall generate the xIRI IMSMessage
+ * from the SIP message used to handle that IMS based communication. All SIP
+ * messages use the same xIRI record as shown in table 7.12.4.2.1-1.
+ *
+ * NOTE: When an incoming call to a target is redirected to another user, the
+ * sessionDirection field shall be set to toTarget. When an incoming call from a
+ * target non-local ID to an IMS user is redirected to, the sessionDirection
+ * field shall be set to fromTarget.
+ *
+ * Table 7.12.7.1-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,42 +63,100 @@ export
 class IMSMessage {
     /**
      * @summary `payload`.
+     * @description
+     *
+     * Contains the payload of the SIP Message. See clause 7.12.4.3.1.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.1.
+     *
      * @public
      * @readonly
      */
     readonly payload: IMSPayload;
     /**
      * @summary `sessionDirection`.
+     * @description
+     *
+     * Indicates the direction of the SIP session. See clause 7.12.4.3.2.(see
+     * NOTE). NOTE: When an incoming call to a target is redirected to another
+     * user, the sessionDirection field shall be set to toTarget. When an
+     * incoming call from a target non-local ID to an IMS user is redirected to,
+     * the sessionDirection field shall be set to fromTarget.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.1.
+     *
      * @public
      * @readonly
      */
     readonly sessionDirection: SessionDirection;
     /**
      * @summary `voIPRoamingIndication`.
+     * @description
+     *
+     * Indicates the roaming mode in use by the target for the reported message.
+     * Shall be present if the target is in a roaming state. See clause
+     * 7.12.4.3.3.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.1.
+     *
      * @public
      * @readonly
      */
     readonly voIPRoamingIndication: OPTIONAL<VoIPRoamingIndication>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location with timestamp, if available. Shall include all location
+     * information for the target UE available at the NF where the POI is
+     * located encoded as a Location.iMSLocation parameter.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.1.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `accessNetworkInformation`.
+     * @description
+     *
+     * Provides non-location related access network information. Shall be
+     * present if available at the NF where the POI is located. One instance of
+     * SIPAccessNetworkInformation shall be used for each
+     * P-Access-Network-Information header.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.1.
+     *
      * @public
      * @readonly
      */
     readonly accessNetworkInformation: OPTIONAL<SIPAccessNetworkInformation[]>;
     /**
      * @summary `cellularNetworkInformation`.
+     * @description
+     *
+     * Provides non-location related cellular network information. Shall be
+     * present if available at the NF where the POI is located. One instance of
+     * SIPCellularNetworkInformation shall be used for each
+     * Cellular-Network-Info header.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.1.
+     *
      * @public
      * @readonly
      */
     readonly cellularNetworkInformation: OPTIONAL<SIPCellularNetworkInformation[]>;
     /**
      * @summary `numberTranslationInformation`.
+     * @description
+     *
+     * Provides the party address translation information. One instance of
+     * NumberTranslation shall be used for each address translation. See clause
+     * 7.12.2.4.7.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.1.
+     *
      * @public
      * @readonly
      */

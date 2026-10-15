@@ -21,6 +21,14 @@ import { PagingRestrictionIndicator, _decode_PagingRestrictionIndicator, _encode
  * @summary MMEUEServiceAccept
  * @description
  * 
+ * The IRI-POI in the MME shall generate an xIRI containing an
+ * MMEUEServiceAccept record when the IRI-POI in present in the MME detects that
+ * the MME considers a service request procedure initiated by the target to be
+ * completed successfully (see TS 24.301 [51] clause 5.6.1.4).
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.11.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,48 +51,116 @@ export
 class MMEUEServiceAccept {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the MME context. See TS 23.401 [50]
+     * clause 5.7.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.11.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `serviceType`.
+     * @description
+     *
+     * Indicates the purpose of the service request procedure. Encoded per TS
+     * 24.301 [51] clause 9.9.3.27.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.11.
+     *
      * @public
      * @readonly
      */
     readonly serviceType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mTMSI`.
+     * @description
+     *
+     * TMSI value associated with the target within the MME context. Shall be
+     * included if known. Encoded per TS 24.501 [13] figure 9.11.3.4.5.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.11.
+     *
      * @public
      * @readonly
      */
     readonly mTMSI: OPTIONAL<TMSI>;
     /**
      * @summary `cSFBResponse`.
+     * @description
+     *
+     * Indicates whether the target UE accepted circuit switched fallback. Shall
+     * be present if the CSFB response IE was present in the request that
+     * triggered the procedure reported by the xIRI (see TS 24.301 [51] clause
+     * 9.9.3.5).
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.11.
+     *
      * @public
      * @readonly
      */
     readonly cSFBResponse: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uEEPSBearerContextStatus`.
+     * @description
+     *
+     * Indicates the state of each EPS bearer context at the target UE. Shall be
+     * present if the EPS bearer context status IE was present in the request
+     * that triggered the procedure reported by the xIRI (see TS 24.301 [51]
+     * clauses 8.2.15 and 8.2.33). Encoded per TS 24.301 [51] clause 9.9.2.1
+     * omitting the first two octets.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.11.
+     *
      * @public
      * @readonly
      */
     readonly uEEPSBearerContextStatus: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uERequestType`.
+     * @description
+     *
+     * Indicates the type of request sent by the UE. Shall be present if the UE
+     * request type indication IE was present in the request that initiated the
+     * procedure being reported by the xIRI. Encoded per TS 24.301 [51] clause
+     * 9.9.3.65.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.11.
+     *
      * @public
      * @readonly
      */
     readonly uERequestType: OPTIONAL<MUSIMUERequestType>;
     /**
      * @summary `pagingRestriction`.
+     * @description
+     *
+     * Indicates the current paging restriction status for the target as known
+     * at the MME. Shall be present if the Paging restriction IE was present in
+     * the request that initiated the procedure being reported by the xIRI.
+     * Encoded per TS 24.301 [51] clause 9.9.3.66 omitting the first two octets.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.11.
+     *
      * @public
      * @readonly
      */
     readonly pagingRestriction: OPTIONAL<PagingRestrictionIndicator>;
     /**
      * @summary `controlPlaneServiceType`.
+     * @description
+     *
+     * Indicates the purpose of the control plane service request procedure.
+     * Shall be present if the request that initiated the procedure being
+     * reported by the xIRI was a Control Plane Service Request. Encoded per TS
+     * 24.301 [51] clause 9.9.3.47.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.11.
+     *
      * @public
      * @readonly
      */

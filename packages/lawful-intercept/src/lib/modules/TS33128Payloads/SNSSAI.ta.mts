@@ -16,6 +16,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SNSSAI
  * @description
  * 
+ * Slice identifiers associated with the PDU session, if available. See TS
+ * 23.003 [19] clause 28.4.2 and TS 23.501 [2] clause 5.15.2.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

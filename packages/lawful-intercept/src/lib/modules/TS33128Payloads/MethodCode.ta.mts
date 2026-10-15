@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MethodCode
  * @description
  * 
+ * This parameter shall carry the decimal code value of the network specific
+ * positioning method as described in TS 29.572 [24] clause 6.1.6.2.15.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

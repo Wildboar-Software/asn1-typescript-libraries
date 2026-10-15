@@ -33,6 +33,12 @@ import { BarometricPressure, _decode_BarometricPressure, _encode_BarometricPress
  * @summary LocationData
  * @description
  * 
+ * The LocationData type is derived from the data present in the LocationData
+ * type defined in TS 29.572 [24] clause 6.1.6.2.3.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.37.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,66 +64,145 @@ export
 class LocationData {
     /**
      * @summary `locationEstimate`.
+     * @description
+     *
+     * This field shall contain an estimate of the location of the UE in
+     * universal coordinates and the accuracy of the estimate. TS 29.572 [24]
+     * clause 6.1.6.2.5.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly locationEstimate: GeographicArea;
     /**
      * @summary `accuracyFulfilmentIndicator`.
+     * @description
+     *
+     * This enumerated field shall be present to represent whether the requested
+     * accuracy was fulfilled or not. Shall be encoded as described in TS 29.572
+     * [24] clause 6.1.6.3.12.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly accuracyFulfilmentIndicator: OPTIONAL<AccuracyFulfilmentIndicator>;
     /**
      * @summary `ageOfLocationEstimate`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly ageOfLocationEstimate: OPTIONAL<AgeOfLocation>;
     /**
      * @summary `velocityEstimate`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.572 [24] clause 6.1.6.2.17.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly velocityEstimate: OPTIONAL<VelocityEstimate>;
     /**
      * @summary `civicAddress`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.572 [24] clause 6.1.6.2.14.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly civicAddress: OPTIONAL<CivicAddress>;
     /**
      * @summary `positioningDataList`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.572 [24] clause 6.1.6.2.15.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly positioningDataList: OPTIONAL<PositioningMethodAndUsage[]>;
     /**
      * @summary `gNSSPositioningDataList`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.572 [24] clause 6.1.6.2.16.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly gNSSPositioningDataList: OPTIONAL<GNSSPositioningMethodAndUsage[]>;
     /**
      * @summary `eCGI`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.571 [17] clause 5.4.4.5.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly eCGI: OPTIONAL<ECGI>;
     /**
      * @summary `nCGI`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.571 [17] clause 5.4.4.6.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly nCGI: OPTIONAL<NCGI>;
     /**
      * @summary `altitude`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */
     readonly altitude: OPTIONAL<Altitude>;
     /**
      * @summary `barometricPressure`.
+     * @description
+     *
+     * This field shall be present if information is available at the NF. Shall
+     * be encoded as described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.37.
+     *
      * @public
      * @readonly
      */

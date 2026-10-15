@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary GNbID
  * @description
  * 
+ * The gNodeB identifier being reported. The GNbID is derived from the gNB ID
+ * parameter of the Global gNB ID defined in TS 38.413 [23] clause 9.3.1.6.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

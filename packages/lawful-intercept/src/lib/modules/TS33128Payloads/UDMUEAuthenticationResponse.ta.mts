@@ -20,6 +20,28 @@ import { ServerAddressingInfoList, _decode_ServerAddressingInfoList, _encode_Ser
  * @summary UDMUEAuthenticationResponse
  * @description
  * 
+ * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+ * UDMUEAuthenticationResponse record when it detects the following events:
+ *
+ * - When the UDM receives the AuthenticationInfoRequest from the AUSF as part
+ *   of Nudm_UEAuthentication service operation (see TS 29.503 [25] clause
+ *   6.3.6.2.2) and the UDM sends the AuthenticationInfoResult to the AUSF as
+ *   part of the Nudm_UEAuthentication service operation (see TS 29.503 [25]
+ *   clause 6.3.6.2.3).
+ *
+ * - When the UDM receives the HSSAuthenticationInfoRequest from the HSS as part
+ *   of the Nudm_UEAuthentication service operation (see TS 29.503 [25] clause
+ *   6.3.6.2.10) and the UDM sends the HSSAuthenticationInfoResult to the AUSF
+ *   as part of the Nudm_UEAuthentication service operation (see TS 29.503 [25]
+ *   clause 6.3.6.2.11).
+ *
+ * When a target UE registers from both 3GPP and non-3GPP access, two separate
+ * xIRIs each containing the UDMUEAuthentication report record may be generated
+ * by the IRI-POI in the UDM/UDR.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +62,80 @@ export
 class UDMUEAuthenticationResponse {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI currently associated with the target UE, see TS 29.571 [17].
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `authenticationInfoRequest`.
+     * @description
+     *
+     * Indicates information provided in the UEAuthenticationInfoRequest. See
+     * Table 7.2.2.3.8-2 for details of payload.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly authenticationInfoRequest: UDMAuthenticationInfoRequest;
     /**
      * @summary `aKMAIndicator`.
+     * @description
+     *
+     * Indicates whether AKMA keys are needed for the UE, shall be included if
+     * AKMA keys are requested in the AuthenticationInfoRequest.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly aKMAIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `problemDetails`.
+     * @description
+     *
+     * Shall Indicate reason for AuthenticationInfoResultfailure. Shall be
+     * included if failure occurs. See TS 29.571 [17] clause 5.2.4.1.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly problemDetails: OPTIONAL<UDMProblemDetails>;
     /**
      * @summary `authAAA`.
+     * @description
+     *
+     * Boolean value that indicates whether authentication is required to be
+     * performed using AAA as sent in the UEAuthenticationInfoResult. Included
+     * when present in the AuthenticationInfoResult. See TS 29.503 [25] clause
+     * 6.3.6.2.3.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly authAAA: OPTIONAL<BOOLEAN>;
     /**
      * @summary `pvsInfo`.
+     * @description
+     *
+     * Provides remote provisioning server information when the PLMN is used for
+     * target UE SNPN onboarding. Include when known at the NF. See TS 29.503
+     * [25] clause 6.3.6.2.3.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */

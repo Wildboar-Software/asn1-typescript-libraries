@@ -15,6 +15,15 @@ import { RejectedNSSAI, _decode_RejectedNSSAI, _encode_RejectedNSSAI } from "../
  * @summary Slice
  * @description
  * 
+ * Provide, if available, one or more of the following: - allowed NSSAI (see TS
+ * 24.501 [13] clause 9.11.3.37). - configured NSSAI (see TS 24.501 [13] clause
+ * 9.11.3.37). - rejected NSSAI (see TS 24.501 [13] clause 9.11.3.46). This is
+ * derived from the information sent to the UE in the CONFIGURATION UPDATE
+ * COMMAND message.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

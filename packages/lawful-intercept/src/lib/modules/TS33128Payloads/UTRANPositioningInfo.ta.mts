@@ -17,6 +17,24 @@ import { UTRANAdditionalPositioningData, _decode_UTRANAdditionalPositioningData,
  * @summary UTRANPositioningInfo
  * @description
  * 
+ * The UTRANPositioningInfo type is used to indicate the usage of each
+ * positioning method that was attempted to determine the location estimate,
+ * either successfully or unsuccessfully. This Information Element is applicable
+ * only when the UE is attached to UTRAN access and when the message is sent by
+ * the SGSN or the SGSN part of the combined MME/SGSN. Derived from the data
+ * found in TS 29.172 [53] clause 7.4.32.
+ *
+ * NOTE: The uTRANAdditionalPositioningData parameter was incorrectly introduced
+ * in version 18.4.0 of the present document (ASN.1 OID r18(18) version3(3)) as
+ * a mandatory parameter and was not corrected before the creation of version
+ * 19.0.0 of the present document. It should have been OPTIONAL and was
+ * corrected in version 18.16.0 of the present document (ASN.1 OID r18(18)
+ * version(15)) and version 19.7.0 of the present document (ASN.1 OID r19(19)
+ * version7(7)).
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.76.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +52,42 @@ export
 class UTRANPositioningInfo {
     /**
      * @summary `uTRANPositioningData`.
+     * @description
+     *
+     * Shall contain the encoded content of the "UTRAN-Positioning-Data" in the
+     * "UTRAN-Positioning-Info" parameter. Defined in TS 29.172 [52] clause
+     * 7.4.33.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.76.
+     *
      * @public
      * @readonly
      */
     readonly uTRANPositioningData: OPTIONAL<UTRANPositioningData>;
     /**
      * @summary `uTRANGANSSPositioningData`.
+     * @description
+     *
+     * Shall contain the encoded content of the "UTRAN-GANSS-Positioning-Data"
+     * only, included in the "UTRAN-Positioning-Info" parameter. Defined in TS
+     * 29.172 [53] clause 7.4.34.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.76.
+     *
      * @public
      * @readonly
      */
     readonly uTRANGANSSPositioningData: OPTIONAL<UTRANGANSSPositioningData>;
     /**
      * @summary `uTRANAdditionalPositioningData`.
+     * @description
+     *
+     * Contains the "UTRAN-Additional-Positioning-Data" included in the
+     * "UTRAN-Positioning-Info" parameter. Defined in TS 29.172 [53] clause
+     * 7.4.63.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.76.
+     *
      * @public
      * @readonly
      */

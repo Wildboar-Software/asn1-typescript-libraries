@@ -19,6 +19,15 @@ import { MMStatus, _decode_MMStatus, _encode_MMStatus, _enum_for_MMStatus } from
  * @summary MMSNotificationResponse
  * @description
  * 
+ * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+ * MMSNotificationResponse record when the MMS Proxy-Relay receives a
+ * m-notifyresp-ind (as defined in OMA-TS-MMS_ENC [39] clause 6.2 table 4) from
+ * the MMS client in the target UE for the deferred retrieval case only. The
+ * immediate retrieval trigger on m-notifyresp-ind is in clause 7.4.3.7.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +47,65 @@ export
 class MMSNotificationResponse {
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the target
+     * and the MMS Proxy-Relay. As defined in OMA-TS-MMS_ENC [39] clause 7.3.63.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.5.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.5.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Indicates the direction of the MM. This shall be encoded as "to target".
+     *
+     * 3GPP TS 33.128, clause 7.4.3.5.
+     *
      * @public
      * @readonly
      */
     readonly direction: MMSDirection;
     /**
      * @summary `status`.
+     * @description
+     *
+     * Provides a MM status. A status of "retrieved" is only signalled by the
+     * retrieving UE after retrieval of the MM.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.5.
+     *
      * @public
      * @readonly
      */
     readonly status: MMStatus;
     /**
      * @summary `reportAllowed`.
+     * @description
+     *
+     * Indication whether or not the sending of delivery report is allowed by
+     * the recipient MMS Client. The values given in OMA-TS-MMS_ENC [39] clause
+     * 7.3.47 shall be encoded as follows: "Yes" = True, "No" = False. Include
+     * if sent to the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.5.
+     *
      * @public
      * @readonly
      */

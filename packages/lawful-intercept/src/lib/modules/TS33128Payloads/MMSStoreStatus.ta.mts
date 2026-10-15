@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSStoreStatus
  * @description
  * 
+ * Indicates if the MM was successfully stored in the MMBox. Include if sent by
+ * the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +47,12 @@ enum _enum_for_MMSStoreStatus {
  * @summary MMSStoreStatus
  * @description
  * 
+ * Indicates if the MM was successfully stored in the MMBox. Include if sent by
+ * the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +78,12 @@ type MMSStoreStatus = _enum_for_MMSStoreStatus;
  * @summary MMSStoreStatus
  * @description
  * 
+ * Indicates if the MM was successfully stored in the MMBox. Include if sent by
+ * the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

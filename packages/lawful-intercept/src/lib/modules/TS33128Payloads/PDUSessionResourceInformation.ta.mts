@@ -13,6 +13,14 @@ import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS3
  * @summary PDUSessionResourceInformation
  * @description
  * 
+ * Indicates the PDU Session to be transferred and Handover Command Transfer
+ * information as seen in the HANDOVER REQUEST and confirmed in the HANDOVER
+ * REQUEST ACKNOWLEDGE message. See TS 38.413 [23] clauses 9.3.1.50 and
+ * 9.3.4.10.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

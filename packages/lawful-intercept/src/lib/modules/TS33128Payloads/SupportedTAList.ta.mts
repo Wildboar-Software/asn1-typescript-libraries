@@ -12,6 +12,11 @@ import { TAItem, _decode_TAItem, _encode_TAItem } from "../TS33128Payloads/TAIte
  * @summary SupportedTAList
  * @description
  * 
+ * A list of TACs supported by the connected en-gNB.
+ *
+ * 3GPP TS 33.128, clause 8.4.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

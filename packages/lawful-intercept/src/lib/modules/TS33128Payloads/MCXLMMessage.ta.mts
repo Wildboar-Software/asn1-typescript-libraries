@@ -37,6 +37,27 @@ class MCXLMMessage {
     readonly mCServiceID: MCServiceID;
     /**
      * @summary `lMMessage`.
+     * @description
+     *
+     * Contains the request and associated response relating to location
+     * management procedures occurring between the target MC service user and
+     * Location Management Server (see table 7.20.2.4.2-10). The location
+     * management procedures are the following (see TS 24.283 [155] clauses A.2,
+     * A.3 and A.4): - Target registers (POST), updates its registration (PUT)
+     * and deregisters (DELETE) in the Location Management Server. - Location
+     * Management Server sends a location reporting configuration request (POST)
+     * to the target. - Location Management Server sends a location information
+     * request (POST) to the target. - Target sends a location report (POST)
+     * providing its location information. - Target requests location
+     * information (POST) of one or more MC service users from the Location
+     * Management Server. - Target subscribes (POST), updates subscription (PUT)
+     * and terminates subscription (DELETE) to location information of one or
+     * more MC service users from the location management Server. - Location
+     * Management Server sends notifications (POST) to target about location
+     * information of one or more MC service users.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

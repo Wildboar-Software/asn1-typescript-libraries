@@ -30,6 +30,12 @@ import { MCPTTCCPDU, _decode_MCPTTCCPDU, _encode_MCPTTCCPDU } from "../TS33128Pa
  * @summary CCPDU
  * @description
  * 
+ * Shall be populated as described in the relevant clause of the present
+ * document.
+ *
+ * 3GPP TS 33.128, clause 5.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

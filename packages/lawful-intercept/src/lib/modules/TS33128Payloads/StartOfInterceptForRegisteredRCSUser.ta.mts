@@ -21,6 +21,11 @@ import { AdditionalInstanceLocation, _decode_AdditionalInstanceLocation, _encode
  * @summary StartOfInterceptForRegisteredRCSUser
  * @description
  * 
+ * Table 7.13.4-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.6.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +45,70 @@ export
 class StartOfInterceptForRegisteredRCSUser {
     /**
      * @summary `rCSTargetIdentities`.
+     * @description
+     *
+     * RCS target identities. All identities associated to the target known at
+     * the POI shall be included.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly rCSTargetIdentities: RCSIdentity[];
     /**
      * @summary `rCSRegistrationInformation`.
+     * @description
+     *
+     * Shall contain the registration information known at the RCS Server. If
+     * more than one set of registration information is present, the POI shall
+     * populate one instance of the RCSRegistrationInformation type per set of
+     * information.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly rCSRegistrationInformation: RCSRegistrationInformation[];
     /**
      * @summary `userOnline`.
+     * @description
+     *
+     * Shall be set to TRUE if at least one endpoint is currently online for the
+     * user. Shall be set to FALSE if no endpoints are currently online for the
+     * user.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly userOnline: BOOLEAN;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the location of the primary endpoint registered to the
+     * target RCS user when reporting of the target’s location information is
+     * authorized and available.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `additionalInstanceLocation`.
+     * @description
+     *
+     * Shall include locations of any additional endpoints registered to the
+     * target RCS user when reporting of the target’s location information is
+     * authorized and available.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.1.2.
+     *
      * @public
      * @readonly
      */

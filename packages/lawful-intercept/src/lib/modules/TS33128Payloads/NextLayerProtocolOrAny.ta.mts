@@ -26,6 +26,14 @@ import { AnyNextLayerProtocol, _decode_AnyNextLayerProtocol, _encode_AnyNextLaye
  */
 export
 type NextLayerProtocolOrAny =
+    /**
+     * @description
+     *
+     * Shall contain the contents of the IP "Protocol" field as defined in IETF
+     * RFC 791 [34] (bits 72...79 in the IP header), and is one of the assigned
+     * Internet protocol numbers defined in IANA [32]. (3GPP TS 33.128, clause
+     * 6.2.3.9.3.)
+     */
     { nextLayerProtocol: NextLayerProtocol } /* CHOICE_ALT_ROOT */
     | { anyNextLayerProtocol: AnyNextLayerProtocol } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;

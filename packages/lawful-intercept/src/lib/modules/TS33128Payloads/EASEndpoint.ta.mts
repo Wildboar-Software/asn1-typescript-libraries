@@ -18,6 +18,12 @@ import { IPv6Addresses, _decode_IPv6Addresses, _encode_IPv6Addresses } from "../
  * @summary EASEndpoint
  * @description
  * 
+ * Endpoint information (e.g. URI, FQDN, IP address) used to communicate with
+ * the EAS.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

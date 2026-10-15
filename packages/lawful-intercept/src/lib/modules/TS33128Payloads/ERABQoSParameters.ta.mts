@@ -13,6 +13,14 @@ import { QCI, _decode_QCI, _encode_QCI } from "../TS33128Payloads/QCI.ta.mjs";
  * @summary ERABQoSParameters
  * @description
  * 
+ * The QOS parameters to be assigned to an E-RAB. Derived from the E-RAB Level
+ * QoS Parameters defined in TS 36.418 [38] clause 9.2.1.15. Shall be present if
+ * present in the messages for the procedure that triggered the xIRI or known at
+ * the NF context.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

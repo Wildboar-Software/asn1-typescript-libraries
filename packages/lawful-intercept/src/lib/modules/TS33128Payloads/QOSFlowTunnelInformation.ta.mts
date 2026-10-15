@@ -15,6 +15,13 @@ import { QOSFlowLists, _decode_QOSFlowLists, _encode_QOSFlowLists } from "../TS3
  * @summary QOSFlowTunnelInformation
  * @description
  * 
+ * Shall include the F-TEID NG-RAN endpoint of the NG-U transport bearer
+ * together with associated QoS flows (see TS 38.413 [23] clause 9.3.4.2 and TS
+ * 29.502 [16] clause 6.1.6.2.39).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

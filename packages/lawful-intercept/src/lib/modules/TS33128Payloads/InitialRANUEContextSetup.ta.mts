@@ -45,6 +45,13 @@ import { MobileIABAuthorizedIndicator, _decode_MobileIABAuthorizedIndicator, _en
  * @summary InitialRANUEContextSetup
  * @description
  * 
+ * The purpose of the InitialRANUEContextSetup type is to provide information
+ * the AMF sends to the NG-RAN to request the setup of the UE context. Encoded
+ * per TS 38.413 [23] clause 9.2.2.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -77,108 +84,249 @@ export
 class InitialRANUEContextSetup {
     /**
      * @summary `aMFUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF uses to uniquely identify the target UE over the NG
+     * Interface, See TS 38.413 [23] clause 9.3.3.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly aMFUENGAPID: AMFUENGAPID;
     /**
      * @summary `rANUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF receives from the NG-RAN node uniquely identifying
+     * the target UE within the NG-RAN Node. See TS 38.413 [23] clause 9.3.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly rANUENGAPID: RANUENGAPID;
     /**
      * @summary `oldAMF`.
+     * @description
+     *
+     * Previous serving AMF’s GUAMI, include when sent in the INITIAL CONTEXT
+     * SETUP REQUEST or when known at the NF. Format is defined in TS 29.571
+     * [17] clause 5.3.4.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly oldAMF: OPTIONAL<GUAMI>;
     /**
      * @summary `pDUSessionSetupRequest`.
+     * @description
+     *
+     * Identifies the PDU Sessions for a UE. Derived from the information in the
+     * PDU Session Resource Setup Request Item IE defined in TS 38.413 [23]
+     * clause 9.2.2.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionSetupRequest: PDUSessionSetupRequestItem[];
     /**
      * @summary `allowedNSSAI`.
+     * @description
+     *
+     * Indicates the S-NSSAIs permitted by the network.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly allowedNSSAI: AllowedNSSAI;
     /**
      * @summary `mobilityRestrictionList`.
+     * @description
+     *
+     * Provides roaming or access restrictions related to mobility from AMF to
+     * the RAN Node. Include when sent in the INITIAL CONTEXT SETUP REQUEST or
+     * when known at the NF. See TS 38.413 [23] clause 9.3.1.85.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly mobilityRestrictionList: OPTIONAL<MobilityRestrictionList>;
     /**
      * @summary `uERadioCapability`.
+     * @description
+     *
+     * Contains the UE Radio Capability information. Include when sent in the
+     * INITIAL CONTEXT SETUP REQUEST or when known at the NF. Defined in TS
+     * 38.413 [23] clauses 9.3.1.74, and 9.3.1.74a.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapability: OPTIONAL<UERadioCapability>;
     /**
      * @summary `rATFrequencySelectionPriority`.
+     * @description
+     *
+     * Used to define local configuration for RRM strategies. Include when sent
+     * in the INITIAL CONTEXT SETUP REQUEST or when known at the NF. See TS
+     * 38.413 [23] 9.3.1.61.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly rATFrequencySelectionPriority: OPTIONAL<RATFrequencySelectionPriority>;
     /**
      * @summary `uERadioCapabilityForPaging`.
+     * @description
+     *
+     * Contains paging specific UE Radio Capability information. Include when
+     * sent in the INITIAL CONTEXT SETUP REQUEST or when known at the NF.
+     * Defined in TS 38.413 [23] clause 9.3.1.68.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapabilityForPaging: OPTIONAL<UERadioCapabilityForPaging>;
     /**
      * @summary `iABAuthorizedIndicator`.
+     * @description
+     *
+     * Provides information about the authorization status of the UE to operate
+     * as an IAB node. Include when sent in the INITIAL CONTEXT SETUP REQUEST or
+     * when known at the NF. See TS 38.413 [23] clause 9.3.1.129.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly iABAuthorizedIndicator: OPTIONAL<IABAuthorizedIndicator>;
     /**
      * @summary `nRV2XServicesAuthorization`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use the NR
+     * sidelink for V2X services. Include when sent in the INITIAL CONTEXT SETUP
+     * REQUEST or when known at the NF. See TS 38.413 [23] clause 9.3.1.146.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly nRV2XServicesAuthorization: OPTIONAL<NRV2XServicesAuthorization>;
     /**
      * @summary `lTEV2XServiceAuthorization`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use the LTE
+     * sidelink for V2X services. Include when sent in the INITIAL CONTEXT SETUP
+     * REQUEST or when known at the NF. See TS 38.413 [23] clause 9.3.1.147.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly lTEV2XServiceAuthorization: OPTIONAL<LTEV2XServiceAuthorization>;
     /**
      * @summary `rGLevelWirelineAccessCharacteristics`.
+     * @description
+     *
+     * Indicates the wireline access technology specific QoS information
+     * corresponding to a specific wireline access subscription. Include when
+     * sent in the INITIAL CONTEXT SETUP REQUEST or when known at the NF.
+     * Specified in TS 23.316 [122] clause 4.5.1.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly rGLevelWirelineAccessCharacteristics: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uERadioCapabilityID`.
+     * @description
+     *
+     * Identifier used to represent a set of UE radio capabilities. Include when
+     * sent in the INITIAL CONTEXT SETUP REQUEST or when known at the NF.
+     * Defined in TS 23.003 [19] clause 29.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapabilityID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `targetNSSAIInfo`.
+     * @description
+     *
+     * Contains the Target NSSAI and Index to RAT/Frequency Selection Priority.
+     * Include when sent in the INITIAL CONTEXT SETUP REQUEST or when known at
+     * the NF. Defined in TS 38.413 [23] clause 9.3.1.229.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly targetNSSAIInfo: OPTIONAL<TargetNSSAIInfo>;
     /**
      * @summary `fiveGProSeAuthorizationIndication`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use ProSe
+     * services. Include when sent in the INITIAL CONTEXT SETUP REQUEST or when
+     * known at the NF. Defined in TS 38.413 [23] clause 9.3.1.233.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly fiveGProSeAuthorizationIndication: OPTIONAL<FiveGProSeAuthorizationIndication>;
     /**
      * @summary `uEDifferentiationInfo`.
+     * @description
+     *
+     * Provides information about the behavior of a UE with predictable activity
+     * and/or mobility behavior. Include when sent in the INITIAL CONTEXT SETUP
+     * REQUEST or when known at the NF. See TS 38.413 [23] clause 9.3.1.144.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */
     readonly uEDifferentiationInfo: OPTIONAL<UEDifferentiationInfo>;
     /**
      * @summary `mobileIABAuthorizedIndicator`.
+     * @description
+     *
+     * Provides information about the authorization status of the UE to operate
+     * as a mobile IAB node. Include when sent in the INITIAL CONTEXT SETUP
+     * REQUEST or when known at the NF. See TS 38.413 [23] clause 9.3.1.259.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.1.
+     *
      * @public
      * @readonly
      */

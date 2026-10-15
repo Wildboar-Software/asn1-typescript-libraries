@@ -17,6 +17,18 @@ import { AFKeyInfo, _decode_AFKeyInfo, _encode_AFKeyInfo } from "../TS33128Paylo
  * @summary AAnFStartOfInterceptWithEstablishedAKMAKeyMaterial
  * @description
  * 
+ * The IRI-POI in the AAnF shall generate an xIRI containing an
+ * AAnFStartOfInterceptWithEstablishedAKMAKeyMaterial record when the IRI-POI
+ * present in the AAnF detects that interception is activated on a target UE
+ * that has already established AKMA key material. The IRI-TF in the AAnF shall
+ * also trigger the IRI-POI of AFs within the scope of the warrant as described
+ * in clause 7.9.1.2.3.
+ *
+ * Table 7.9.1.5-1 gives the LI_HI2 IRI message type for this record as BEGIN.
+ *
+ * 3GPP TS 33.128, clause 7.9.1.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +46,37 @@ export
 class AAnFStartOfInterceptWithEstablishedAKMAKeyMaterial {
     /**
      * @summary `aKID`.
+     * @description
+     *
+     * AKMA Anchor Key Identifier (currently valid).
+     *
+     * 3GPP TS 33.128, clause 7.9.1.3.4.
+     *
      * @public
      * @readonly
      */
     readonly aKID: NAI;
     /**
      * @summary `kAKMA`.
+     * @description
+     *
+     * AKMA Anchor Key associated with aKID.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.3.4.
+     *
      * @public
      * @readonly
      */
     readonly kAKMA: OPTIONAL<KAKMA>;
     /**
      * @summary `aFKeyList`.
+     * @description
+     *
+     * List of all available (aFID, kAF, kAFExpTime)-tuples which are available,
+     * have not expired and complies with provisioning.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.3.4.
+     *
      * @public
      * @readonly
      */

@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSUserLocationInformation
  * @description
  * 
+ * An extendable IE derived from the User Location Information IE (ULI) defined
+ * in TS 29.274 [87] clause 8.21.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

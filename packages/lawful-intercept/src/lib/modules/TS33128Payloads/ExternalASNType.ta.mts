@@ -33,18 +33,34 @@ export
 class ExternalASNType {
     /**
      * @summary `moduleIdentifier`.
+     * @description
+     *
+     * Shall be populated with the Object Identifier of the ASN.1 module used to
+     * encode the parameter or message reported in the EncodedASNValue.
+     *
      * @public
      * @readonly
      */
     readonly moduleIdentifier: OBJECT_IDENTIFIER;
     /**
      * @summary `aSNReference`.
+     * @description
+     *
+     * The formal reference notation (as described in clause D.5) for the ASN.1
+     * component used to encode the parameter or message reported in the
+     * EncodedASNValue. Shall be present if the OBJECT IDENTIFIER is
+     * insufficient to unambiguously decode the EncodedASNValue.
+     *
      * @public
      * @readonly
      */
     readonly aSNReference: OPTIONAL<ExternalASNReference>;
     /**
      * @summary `encodedASNValue`.
+     * @description
+     *
+     * The contents of the encoded message or parameter being reported.
+     *
      * @public
      * @readonly
      */

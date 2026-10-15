@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SubscriptionType
  * @description
  * 
+ * Subscription type, i.e. "Subscription", "Subscription Update" or
+ * "Unsubscription".
+ *
+ * 3GPP TS 33.128, clause 7.14.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ enum _enum_for_SubscriptionType {
  * @summary SubscriptionType
  * @description
  * 
+ * Subscription type, i.e. "Subscription", "Subscription Update" or
+ * "Unsubscription".
+ *
+ * 3GPP TS 33.128, clause 7.14.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +63,12 @@ type SubscriptionType = _enum_for_SubscriptionType;
  * @summary SubscriptionType
  * @description
  * 
+ * Subscription type, i.e. "Subscription", "Subscription Update" or
+ * "Unsubscription".
+ *
+ * 3GPP TS 33.128, clause 7.14.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -77,6 +77,22 @@ import { ServiceLevelAAContainer, _decode_ServiceLevelAAContainer, _encode_Servi
  * @summary AMFRegistration
  * @description
  * 
+ * The IRI-POI in the AMF shall generate an xIRI containing an AMFRegistration
+ * record when the IRI-POI present in the AMF detects that a UE matching one of
+ * the target identifiers provided via LI_X1 has successfully registered to the
+ * 5GS via 3GPP NG-RAN or non-3GPP access. Accordingly, the IRI-POI in the AMF
+ * generates the xIRI when the following event is detected:
+ *
+ * - AMF sends a N1: REGISTRATION ACCEPT message to the target UE and the UE 5G
+ *   Mobility Management (5GMM) state for the access type (3GPP NG-RAN or
+ *   non-3GPP access) within the AMF is changed to 5GMM-REGISTERED.
+ *
+ * NOTE: List shall be included each time there is a change to the registration
+ * area.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -124,198 +140,461 @@ export
 class AMFRegistration {
     /**
      * @summary `registrationType`.
+     * @description
+     *
+     * Specifies the type of registration, see TS 24.501 [13] clause 9.11.3.7.
+     * This is derived from the information received from the UE in the
+     * REGISTRATION REQUEST message.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly registrationType: AMFRegistrationType;
     /**
      * @summary `registrationResult`.
+     * @description
+     *
+     * Specifies the result of registration, see TS 24.501 [13] clause 9.11.3.6.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly registrationResult: AMFRegistrationResult;
     /**
      * @summary `slice`.
+     * @description
+     *
+     * Provide, if available, one or more of the following:
+     *
+     * - allowed NSSAI (see TS 24.501 [13] clause 9.11.3.37).
+     *
+     * - configured NSSAI (see TS 24.501 [13] clause 9.11.3.37).
+     *
+     * - rejected NSSAI (see TS 24.501 [13] clause 9.11.3.46). This is derived
+     *   from the information sent to the UE in the REGISTRATION ACCEPT message.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly slice: OPTIONAL<Slice>;
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the registration (see clause 6.2.2.4).
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI used in the registration, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI provided by the UE during the registration, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI obtained in the registration, if available as part of the
+     * subscription profile.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI provided as outcome of initial registration or used in other
+     * cases, see TS 24.501 [13] clause 5.5.1.2.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: FiveGGUTI;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information determined by the network during the registration,
+     * if available. Shall be encoded using the
+     * Location.locationInfo.userLocation parameter and, when Dual Connectivity
+     * is activated, using the Location.locationInfo.additionalCellIDs
+     * parameter. If available, other parameters reportable via Location shall
+     * be included.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `non3GPPAccessEndpoint`.
+     * @description
+     *
+     * UE's local IP address used to reach the N3IWF, TNGF or TWIF, if
+     * available. IP addresses are given as 4 octets (for IPv4) or 16 octets
+     * (for IPv6) with the most significant octet first (network byte order).
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly non3GPPAccessEndpoint: OPTIONAL<UEEndpointAddress>;
     /**
      * @summary `fiveGSTAIList`.
+     * @description
+     *
+     * List of tracking areas associated with the registration area within which
+     * the UE is current registered, see TS 24.501 [13] clause 9.11.3.9 (see
+     * NOTE) NOTE: List shall be included each time there is a change to the
+     * registration area.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSTAIList: OPTIONAL<TAIList>;
     /**
      * @summary `sMSOverNasIndicator`.
+     * @description
+     *
+     * Indicates whether SMS over NAS is supported. Provide, if included in
+     * registrationResult, see TS 24.501 [13] clause 9.11.3.6.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sMSOverNasIndicator: OPTIONAL<SMSOverNASIndicator>;
     /**
      * @summary `oldGUTI`.
+     * @description
+     *
+     * GUTI or 5G-GUTI, if provided in the REGISTRATION REQUEST message, see TS
+     * 24.501 [13] clause 5.5.1.2.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly oldGUTI: OPTIONAL<EPS5GGUTI>;
     /**
      * @summary `eMM5GRegStatus`.
+     * @description
+     *
+     * UE Status, if provided in the REGISTRATION REQUEST message, see TS 24.501
+     * [13] clause 9.11.3.56.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly eMM5GRegStatus: OPTIONAL<EMM5GMMStatus>;
     /**
      * @summary `nonIMEISVPEI`.
+     * @description
+     *
+     * MACAddress or EUI-64 used as UE equipment identity if IMEI or IMEISV
+     * based PEI is not available. Provide if known, see TS 24.501 [13] clause
+     * 8.2.26.4.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nonIMEISVPEI: OPTIONAL<NonIMEISVPEI>;
     /**
      * @summary `mACRestIndicator`.
+     * @description
+     *
+     * Indicates whether the non-IMEISV PEI MACAddress can be used as an
+     * equipment identifier. Required if non-IMEISVPEI is used, see TS 24.501
+     * [13] clause 9.11.3.4.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly mACRestIndicator: OPTIONAL<MACRestrictionIndicator>;
     /**
      * @summary `pagingRestrictionIndicator`.
+     * @description
+     *
+     * Indicates if paging is restricted or the type of paging allowed. Shall be
+     * included if sent in the REGISTRATION REQUEST message. Encoded per TS
+     * 24.501 [13] clause 9.11.3.77, omitting the first two octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pagingRestrictionIndicator: OPTIONAL<PagingRestrictionIndicator>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * RAT Type shall be present if known by the AMF. RAT Type is determined by
+     * the AMF during registration. See TS 23.501 [2] clause 5.3.2.3
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<RATType>;
     /**
      * @summary `rRCEstablishmentCause`.
+     * @description
+     *
+     * Indicates the reason for UE RRC Connection Establishment. This parameter
+     * shall be populated with information provided by the serving RAN during
+     * NAS establishment in the Initial UE Message. See TS 38.413 [23] clause
+     * 9.3.1.111.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly rRCEstablishmentCause: OPTIONAL<RRCEstablishmentCause>;
     /**
      * @summary `deprecatedNGInformation`.
+     * @description
+     *
+     * No longer used in the present version of the present document. The
+     * NGInformation field within the location structure shall be used instead.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedNGInformation: OPTIONAL<NGInformation>;
     /**
      * @summary `nASTransportInitialInformation`.
+     * @description
+     *
+     * Provides information related to the NAS Transport setup for the target UE
+     * over the NG interface. Shall be included when received by the AMF per TS
+     * 38.413 [23]. This parameter is only conditional for backward
+     * compatibility. See TS 38.413 [23] clause 9.2.5.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nASTransportInitialInformation: OPTIONAL<NASTransportInitialInformation>;
     /**
      * @summary `sORTransparentContainer`.
+     * @description
+     *
+     * Provides the list of preferred PLMN/access technology combinations.
+     * Included if sent in the NAS N1 message REGISTRATION ACCEPT. Given as a
+     * SoR Transparent container encoded per TS 24.501 [13] clause 9.11.3.51
+     * omitting the first three octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sORTransparentContainer: OPTIONAL<SORTransparentContainer>;
     /**
      * @summary `equivalentPLMNList`.
+     * @description
+     *
+     * Provides a list of equivalent PLMNs in the REGISTRATION ACCEPT message.
+     * See clause TS 24.501 [13] clause 8.2.7.3.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly equivalentPLMNList: OPTIONAL<PLMNList>;
     /**
      * @summary `fiveGMMCapability`.
+     * @description
+     *
+     * Shall contain the target 5GMM capability information octets sent in the
+     * REGISTRATION REQUEST message, omitting the first two octets. Defined in
+     * TS 24.501 [13] clause 9.11.3.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGMMCapability: OPTIONAL<FiveGMMCapability>;
     /**
      * @summary `initialRANUEContextSetup`.
+     * @description
+     *
+     * Provides information sent in the INITIAL CONTEXT SETUP message from the
+     * AMF to the RAN for a target. See TS 38.413 [23] clause 9.2.2.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly initialRANUEContextSetup: OPTIONAL<InitialRANUEContextSetup>;
     /**
      * @summary `mUSIMUERequestType`.
+     * @description
+     *
+     * Indicates a MUSIM UE has requested release of NAS signalling or has
+     * rejected paging. Shall be included if sent in the REGISTRATION REQUEST
+     * message. Encoded per UE Request Type omitting the first two octets. See
+     * TS 24.301 [51] clause 9.9.3.65.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly mUSIMUERequestType: OPTIONAL<MUSIMUERequestType>;
     /**
      * @summary `unavailabilityPeriodDuration`.
+     * @description
+     *
+     * Period duration the UE is unavailable. Include if sent in the
+     * REGISTRATION REQUEST message. See TS 24.501 [13] clause 8.2.6.1. Encoded
+     * as GPRS Timer 3, see TS 24.008 [95] clause 10.5.7.4a, omitting the first
+     * two octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly unavailabilityPeriodDuration: OPTIONAL<UnavailabilityPeriodDuration>;
     /**
      * @summary `fiveGSUpdateType`.
+     * @description
+     *
+     * Shall contain the target 5GS Update Type information octets if sent in
+     * the REGISTRATION REQUEST message. Defined in TS 24.501 [13] clause
+     * 9.11.3.9A, omitting the first two octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSUpdateType: OPTIONAL<FiveGSUpdateType>;
     /**
      * @summary `uEAreaIndication`.
+     * @description
+     *
+     * Contains a country, area in a country or international area indication
+     * where UE is located, if available. If UE is outside of the area of any
+     * known country, i.e. international area, it contains the international
+     * area indication without a country. UEAreaIndication is derived from the
+     * data present in the UEAreaIndication information element defined in TS
+     * 29.572 [24] clause 6.1.6.2.42.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly uEAreaIndication: OPTIONAL<UEAreaIndication>;
     /**
      * @summary `establishmentCauseNon3GPPAccess`.
+     * @description
+     *
+     * Provides the establishment cause for Non-3GPP access (N3AEC) sent to the
+     * AMF by the N3AF on behalf of the target. Encoded per TS 24.502 [128]
+     * clause 9.2.2 omitting the first octet. Shall be included for N3AEC.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly establishmentCauseNon3GPPAccess: OPTIONAL<EstablishmentCauseNon3GPPAccess>;
     /**
      * @summary `additionalUserIdentifiers`.
+     * @description
+     *
+     * Provides additional user identifiers known at the AMF or stored in AMF
+     * context, e.g. additional GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
     /**
      * @summary `alternativeNSSAI`.
+     * @description
+     *
+     * Provides a list of mapping information between the S-NSSAI to be replaced
+     * and the alternative S-NSSAI. Shall be included if present in the
+     * REGISTRATION ACCEPT message. See TS 24.501 [13] clause 9.11.3.97.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>;
     /**
      * @summary `serviceLevelAAContainer`.
+     * @description
+     *
+     * Provides information related to registration for UAS services. Include if
+     * present in the REGISTRATION ACCEPT message. See TS 24.501 [13] clause
+     * 8.2.7 and 9.11.2.10.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */

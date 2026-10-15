@@ -15,6 +15,23 @@ import { Direction, _decode_Direction, _encode_Direction, _enum_for_Direction } 
  * @summary PTCInstantPersonalAlert
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCInstantPersonalAlert record when the IRI-POI present in the PTC server
+ * detects that an Instant Personal Alert (IPA) (i.e. a request for one
+ * participant to initiate a one-to-one PTC session) is initiated by or sent to
+ * the PTC target. Accordingly, the IRI-POI in the PTC server generates the xIRI
+ * when the following events are detected:
+ *
+ * - when the PTC server receives a SIP MESSAGE from a PTC target for an IPA.
+ *
+ * - when the PTC Server sends a SIP MESSAGE to the PTC target for an IPA.
+ *
+ * NOTE: The pTCTargetInformation choice PTCChatGroupID is not applicable for
+ * this xIRI.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +49,39 @@ export
 class PTCInstantPersonalAlert {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN shall be provided for PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.8.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCIPAPartyID`.
+     * @description
+     *
+     * Identifies the PTC participant that receives or has sent the Instant
+     * Personal Alert to the target.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.8.
+     *
      * @public
      * @readonly
      */
     readonly pTCIPAPartyID: PTCTargetInformation;
     /**
      * @summary `pTCIPADirection`.
+     * @description
+     *
+     * Identifies the direction (To PTC target or From PTC target) of the
+     * Instant Personal Alert.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.8.
+     *
      * @public
      * @readonly
      */

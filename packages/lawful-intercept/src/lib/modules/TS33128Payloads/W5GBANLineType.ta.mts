@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary W5GBANLineType
  * @description
  * 
+ * The W5GBANLineType indicates the type of wireline access used connect to the
+ * 5GS. The W5GBANLineType type is derived from the data present in the LineType
+ * type defined in TS 29.571 [17] clause 5.4.3.33.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.32.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +28,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_W5GBANLineType {
+    /**
+     * @description
+     *
+     * DSL Line.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.32.
+     */
     dSL = 1,
+    /**
+     * @description
+     *
+     * PON Line.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.32.
+     */
     pON = 2,
 }
 
@@ -29,6 +50,13 @@ enum _enum_for_W5GBANLineType {
  * @summary W5GBANLineType
  * @description
  * 
+ * The W5GBANLineType indicates the type of wireline access used connect to the
+ * 5GS. The W5GBANLineType type is derived from the data present in the LineType
+ * type defined in TS 29.571 [17] clause 5.4.3.33.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.32.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +76,13 @@ type W5GBANLineType = _enum_for_W5GBANLineType;
  * @summary W5GBANLineType
  * @description
  * 
+ * The W5GBANLineType indicates the type of wireline access used connect to the
+ * 5GS. The W5GBANLineType type is derived from the data present in the LineType
+ * type defined in TS 29.571 [17] clause 5.4.3.33.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.32.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +100,12 @@ const W5GBANLineType = _enum_for_W5GBANLineType;
 
 /**
  * @summary W5GBANLineType_dSL
+ * @description
+ *
+ * DSL Line.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.32.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +114,12 @@ const W5GBANLineType_dSL: W5GBANLineType = W5GBANLineType.dSL; /* LONG_NAMED_ENU
 
 /**
  * @summary dSL
+ * @description
+ *
+ * DSL Line.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.32.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +128,12 @@ const dSL: W5GBANLineType = W5GBANLineType.dSL; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary W5GBANLineType_pON
+ * @description
+ *
+ * PON Line.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.32.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +142,12 @@ const W5GBANLineType_pON: W5GBANLineType = W5GBANLineType.pON; /* LONG_NAMED_ENU
 
 /**
  * @summary pON
+ * @description
+ *
+ * PON Line.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.32.
+ *
  * @constant
  * @type {number}
  */

@@ -42,36 +42,74 @@ export
 class ACProfile {
     /**
      * @summary `aCID`.
+     * @description
+     *
+     * Application client identity.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */
     readonly aCID: ACID;
     /**
      * @summary `aCType`.
+     * @description
+     *
+     * Category or type of application client, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */
     readonly aCType: OPTIONAL<UTF8String>;
     /**
      * @summary `aCSchedule`.
+     * @description
+     *
+     * Expected operation schedule of the AC (e.g. time windows) if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */
     readonly aCSchedule: OPTIONAL<Daytime>;
     /**
      * @summary `expACGeoServArea`.
+     * @description
+     *
+     * Expected location(s) of the hosting UE during the AC’s operation
+     * schedule, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */
     readonly expACGeoServArea: OPTIONAL<Location>;
     /**
      * @summary `eASsInfo`.
+     * @description
+     *
+     * List of EAS that serve the AC along with the service KPIs required by the
+     * AC if available. See table 7.14.2.2-3.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */
     readonly eASsInfo: OPTIONAL<EASsInfo>;
     /**
      * @summary `aCServiceContSupport`.
+     * @description
+     *
+     * ACR scenarios supported by the AC for service continuity, if any.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */

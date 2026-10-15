@@ -30,12 +30,28 @@ export
 class SIPAccessNetworkInformation {
     /**
      * @summary `accessNetworkInfo`.
+     * @description
+     *
+     * Contains the contents of the P-Access-Network-Info Header not including
+     * the text from any access-info parameter fields. This field shall include
+     * any extension-access-info parameter fields (see TS 24.229 [74] clause
+     * 7.2A.4).
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.5.
+     *
      * @public
      * @readonly
      */
     readonly accessNetworkInfo: UTF8String;
     /**
      * @summary `servingPLMN`.
+     * @description
+     *
+     * Indicates the PLMN of the serving network. Shall be included if this
+     * information is present in the access-info field of the PANI header.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.5.
+     *
      * @public
      * @readonly
      */

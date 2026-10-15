@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EMMRegStatus
  * @description
  * 
+ * The EMMRegStatus type is derived from the EMM registration status portion of
+ * the UE status IE defined in TS 24.501 [13] clause 9.11.3.56.
+ *
+ * 3GPP TS 33.128, clause 8.5.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +27,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EMMRegStatus {
+    /**
+     * @description
+     *
+     * UE is in EMM-REGISTERED state.
+     *
+     * 3GPP TS 33.128, clause 8.5.1.
+     */
     uEEMMRegistered = 1,
+    /**
+     * @description
+     *
+     * UE is not in EMM-REGISTERED state.
+     *
+     * 3GPP TS 33.128, clause 8.5.1.
+     */
     uENotEMMRegistered = 2,
 }
 
@@ -29,6 +49,12 @@ enum _enum_for_EMMRegStatus {
  * @summary EMMRegStatus
  * @description
  * 
+ * The EMMRegStatus type is derived from the EMM registration status portion of
+ * the UE status IE defined in TS 24.501 [13] clause 9.11.3.56.
+ *
+ * 3GPP TS 33.128, clause 8.5.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +74,12 @@ type EMMRegStatus = _enum_for_EMMRegStatus;
  * @summary EMMRegStatus
  * @description
  * 
+ * The EMMRegStatus type is derived from the EMM registration status portion of
+ * the UE status IE defined in TS 24.501 [13] clause 9.11.3.56.
+ *
+ * 3GPP TS 33.128, clause 8.5.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +97,12 @@ const EMMRegStatus = _enum_for_EMMRegStatus;
 
 /**
  * @summary EMMRegStatus_uEEMMRegistered
+ * @description
+ *
+ * UE is in EMM-REGISTERED state.
+ *
+ * 3GPP TS 33.128, clause 8.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +111,12 @@ const EMMRegStatus_uEEMMRegistered: EMMRegStatus = EMMRegStatus.uEEMMRegistered;
 
 /**
  * @summary uEEMMRegistered
+ * @description
+ *
+ * UE is in EMM-REGISTERED state.
+ *
+ * 3GPP TS 33.128, clause 8.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +125,12 @@ const uEEMMRegistered: EMMRegStatus = EMMRegStatus.uEEMMRegistered; /* SHORT_NAM
 
 /**
  * @summary EMMRegStatus_uENotEMMRegistered
+ * @description
+ *
+ * UE is not in EMM-REGISTERED state.
+ *
+ * 3GPP TS 33.128, clause 8.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +139,12 @@ const EMMRegStatus_uENotEMMRegistered: EMMRegStatus = EMMRegStatus.uENotEMMRegis
 
 /**
  * @summary uENotEMMRegistered
+ * @description
+ *
+ * UE is not in EMM-REGISTERED state.
+ *
+ * 3GPP TS 33.128, clause 8.5.1.
+ *
  * @constant
  * @type {number}
  */

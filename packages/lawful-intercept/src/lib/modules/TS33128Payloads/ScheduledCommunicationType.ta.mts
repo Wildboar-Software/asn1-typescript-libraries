@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ScheduledCommunicationType
  * @description
  * 
+ * Indicates that the Scheduled Communication Type is Downlink only or Uplink
+ * only or Bi-directional.
+ *
+ * 3GPP TS 33.128, clause 7.7.5.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ enum _enum_for_ScheduledCommunicationType {
  * @summary ScheduledCommunicationType
  * @description
  * 
+ * Indicates that the Scheduled Communication Type is Downlink only or Uplink
+ * only or Bi-directional.
+ *
+ * 3GPP TS 33.128, clause 7.7.5.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +63,12 @@ type ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;
  * @summary ScheduledCommunicationType
  * @description
  * 
+ * Indicates that the Scheduled Communication Type is Downlink only or Uplink
+ * only or Bi-directional.
+ *
+ * 3GPP TS 33.128, clause 7.7.5.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

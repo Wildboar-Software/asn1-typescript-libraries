@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCRegistrationRequest
  * @description
  * 
+ * Identifies the type of registration request (register, re-register, or
+ * de-register).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ enum _enum_for_PTCRegistrationRequest {
  * @summary PTCRegistrationRequest
  * @description
  * 
+ * Identifies the type of registration request (register, re-register, or
+ * de-register).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +63,12 @@ type PTCRegistrationRequest = _enum_for_PTCRegistrationRequest;
  * @summary PTCRegistrationRequest
  * @description
  * 
+ * Identifies the type of registration request (register, re-register, or
+ * de-register).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

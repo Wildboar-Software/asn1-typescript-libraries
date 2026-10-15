@@ -16,6 +16,37 @@ import { Direction, _decode_Direction, _encode_Direction, _enum_for_Direction } 
  * @summary MCVideoTransmissionControlMessage
  * @description
  * 
+ * The IRI-POI present in the MCVideo Server shall generate an xIRI containing
+ * an MCVideoTransmissionControlMessage record when the IRI-POI present in the
+ * MCVideo Server detects when the target MC service user sends or receives a
+ * transmission control message. In addition, when the MC service group is the
+ * target, the IRI-POI present in the MCVideo Server hosting the MC service
+ * group shall generate an xIRI containing an MCVideoTransmissionControlMessage
+ * record when the IRI-POI present in the MCVideo Server detects when a
+ * transmission control message is sent or received by any MC service
+ * participant participating in the MC service group session. Accordingly, the
+ * IRI-POI in the MCVideo Server generates the xIRI when any of the following
+ * events is detected:
+ *
+ * - The MCVideo Server receives a transmission control message from a target MC
+ *   service user.
+ *
+ * - The MCVideo Server hosting the MC service group, where the MC service group
+ *   is the target, receives a transmission control message from an MC service
+ *   participant.
+ *
+ * - The MCVideo Server sends a transmission control message to a target MC
+ *   service user.
+ *
+ * - The MCVideo Server hosting the MC service group, where the MC service group
+ *   is the target, sends a transmission control message to an MC service
+ *   participant.
+ *
+ * Table 7.20.2.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.5.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +64,39 @@ export
 class MCVideoTransmissionControlMessage {
     /**
      * @summary `mCServiceIDOrGroupID`.
+     * @description
+     *
+     * MC service ID of the target user or group ID of the target MC service
+     * group.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.5.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceIDOrGroupID: MCServiceIDOrGroupID;
     /**
      * @summary `transmissionControlMessage`.
+     * @description
+     *
+     * Contains the transmission control message being exchanged as an RTCP APP
+     * packet. See TS 24.581 [151] clauses 9.1 and 9.2.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.5.1.
+     *
      * @public
      * @readonly
      */
     readonly transmissionControlMessage: OCTET_STRING;
     /**
      * @summary `transmissionControlMessageDirection`.
+     * @description
+     *
+     * Indicates the direction of the transmission control message: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.20.2.5.1.
+     *
      * @public
      * @readonly
      */

@@ -26,6 +26,21 @@ import { FailureResponse, _decode_FailureResponse, _encode_FailureResponse, _enu
  * @summary EESEASDiscovery
  * @description
  * 
+ * The IRI-POI in the EES shall generate an xIRI containing an EESEASDiscovery
+ * record when the IRI-POI present in the EES detects that an EEC has requested
+ * a one-time EAS discovery information. The IRI-POI present in the EES shall
+ * generate the xIRI for the following events:
+ *
+ * - EES returns Eees_EASDiscovery_Request response to the EEC containing a
+ *   one-time EAS discovery information (as defined in TS 24.558 [93] clause
+ *   5.3.2.2).
+ *
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,24 +63,48 @@ export
 class EESEASDiscovery {
     /**
      * @summary `eECID`.
+     * @description
+     *
+     * Unique identifier of the EEC.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eECID: UTF8String;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `eASDiscoveryFilter`.
+     * @description
+     *
+     * Set of characteristics to determine required EASs, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASDiscoveryFilter: OPTIONAL<EASDiscoveryFilter>;
     /**
      * @summary `eECServiceContSupport`.
+     * @description
+     *
+     * ACR scenarios supported by the EEC for service continuity if any.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
@@ -78,18 +117,37 @@ class EESEASDiscovery {
     readonly uELocation: OPTIONAL<Location>;
     /**
      * @summary `eASTargetDNAIs`.
+     * @description
+     *
+     * Target DNAI information which can be associated with potential target
+     * EAS(s), if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASTargetDNAIs: OPTIONAL<DNAIs>;
     /**
      * @summary `discoveredEAS`.
+     * @description
+     *
+     * List of discovered EAS(s), if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly discoveredEAS: OPTIONAL<DiscoveredEAS>;
     /**
      * @summary `failureResponse`.
+     * @description
+     *
+     * Cause information when the discovery request has failed, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */

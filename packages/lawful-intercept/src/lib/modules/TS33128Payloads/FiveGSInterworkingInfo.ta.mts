@@ -34,18 +34,47 @@ export
 class FiveGSInterworkingInfo {
     /**
      * @summary `fiveGSInterworkingIndicator`.
+     * @description
+     *
+     * Shall be set to TRUE if the 5GSIWKI flag in the Indication IE of the
+     * request or response is set to 1. Indicates that the UE supports N1 mode
+     * and the PDN connection is not restricted from interworking by the 5GS
+     * user subscription. See TS 29.274 [87] clauses 7.2.1 and 8.12.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSInterworkingIndicator: FiveGSInterworkingIndicator;
     /**
      * @summary `fiveGSInterworkingWithoutN26`.
+     * @description
+     *
+     * Shall be set to TRUE if the 5GS Interworking without N26 Indication flag
+     * in the Indication IE of the request or response is set to 1. If the 5GS
+     * Interworking without N26 Indication flag in the Indication IE of the
+     * request or response is set to 0 or not present, this parameter shall be
+     * set to FALSE. See TS 29.274 [87] clauses 7.2.1 and 8.12.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSInterworkingWithoutN26: FiveGSInterworkingWithoutN26;
     /**
      * @summary `fiveGCNotRestrictedSupport`.
+     * @description
+     *
+     * Shall be set to TRUE if the 5GCNRS (5GC Not Restricted Support) flag in
+     * the Indication IE of the request or response is set to 1. If the 5GCNRS
+     * flag in the Indication IE of the request or response is set to 0 or not
+     * present, this parameter shall be set to FALSE. See TS 29.274 [87] clauses
+     * 7.2.1 and 8.12.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,14 @@ import { IPv6Address, _decode_IPv6Address, _encode_IPv6Address } from "../TS3312
  * @summary FTEID
  * @description
  * 
+ * Contains the F-TEID identifying the UPF endpoint of the GTP tunnel used to
+ * encapsulate the traffic derived from the UL NG-U UP TNL Information (see TS
+ * 38.413 clause 9.3.4.1), as defined in TS 29.244 [15] clause 8.2.3. Non-GTP
+ * encapsulation is for further study.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

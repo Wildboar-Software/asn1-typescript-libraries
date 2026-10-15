@@ -36,24 +36,60 @@ export
 class IRIPayload {
     /**
      * @summary `iRIPayloadOID`.
+     * @description
+     *
+     * Shall be populated with the value of the iRIPayloadOID specified in the
+     * version of the ASN.1 used by the MDF2 to generate the IRI record.
+     *
+     * 3GPP TS 33.128, clause 5.5.2.
+     *
      * @public
      * @readonly
      */
     readonly iRIPayloadOID: RELATIVE_OID;
     /**
      * @summary `event`.
+     * @description
+     *
+     * Unless otherwise specified, if the IRI event is generated from a
+     * XIRIPayload received over LI_X2, then MDF2 shall choose the same choice
+     * for the IRIPayload.event that was received in the xIRIPayload.event. If
+     * the IRI event is generated due to another cause, the MDF2 shall choose
+     * the IRIPayload.event appropriate for repoting the IRI event.
+     *
+     * 3GPP TS 33.128, clause 5.5.2.
+     *
      * @public
      * @readonly
      */
     readonly event: IRIEvent;
     /**
      * @summary `targetIdentifiers`.
+     * @description
+     *
+     * Shall be populated with all the Target Identifiers available at the MDF2.
+     * See clause 5.5.5 for additional details. This parameter is conditional
+     * only for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 5.5.2.
+     *
      * @public
      * @readonly
      */
     readonly targetIdentifiers: OPTIONAL<IRITargetIdentifier[]>;
     /**
      * @summary `mediatedFromIndicator`.
+     * @description
+     *
+     * Shall be present if the IRI is generated from an xIRIPayload received
+     * over LI_X2 and the release and version of the xIRIPayload.relativeOID is
+     * different from the release and version of the IRIPayload.relativeOID. The
+     * IRIPayload.mediatedFromIndicator.xIRIRelativeOID choice shall be used and
+     * set to the value of the xIRIPayload.relativeOID of the xIRI message used
+     * to generate the IRI message.
+     *
+     * 3GPP TS 33.128, clause 5.5.2.
+     *
      * @public
      * @readonly
      */

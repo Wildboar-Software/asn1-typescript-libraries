@@ -7,6 +7,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FiveGSMRequestType
  * @description
  * 
+ * Type of request as described in TS 24.501 [13] clause 9.11.3.47, if
+ * available. Otherwise depending on the REJECT event the following request type
+ * shall be reported: PDU SESSION ESTABLISHMENT REJECT: The request type shall
+ * be set to the one reported within the PDU SESSION ESTABLISHMENT or if there
+ * hasn't been one reported or is no longer available it should be set to
+ * "initial request". PDU SESSION MODIFICATION REJECT: "modification request".
+ * PDU SESSION RELEASE REJECT: no request type shall be set. PDU SESSION
+ * MODIFICATION COMMAND REJECT: "modification request".
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +51,18 @@ enum _enum_for_FiveGSMRequestType {
  * @summary FiveGSMRequestType
  * @description
  * 
+ * Type of request as described in TS 24.501 [13] clause 9.11.3.47, if
+ * available. Otherwise depending on the REJECT event the following request type
+ * shall be reported: PDU SESSION ESTABLISHMENT REJECT: The request type shall
+ * be set to the one reported within the PDU SESSION ESTABLISHMENT or if there
+ * hasn't been one reported or is no longer available it should be set to
+ * "initial request". PDU SESSION MODIFICATION REJECT: "modification request".
+ * PDU SESSION RELEASE REJECT: no request type shall be set. PDU SESSION
+ * MODIFICATION COMMAND REJECT: "modification request".
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +87,18 @@ type FiveGSMRequestType = _enum_for_FiveGSMRequestType;
  * @summary FiveGSMRequestType
  * @description
  * 
+ * Type of request as described in TS 24.501 [13] clause 9.11.3.47, if
+ * available. Otherwise depending on the REJECT event the following request type
+ * shall be reported: PDU SESSION ESTABLISHMENT REJECT: The request type shall
+ * be set to the one reported within the PDU SESSION ESTABLISHMENT or if there
+ * hasn't been one reported or is no longer available it should be set to
+ * "initial request". PDU SESSION MODIFICATION REJECT: "modification request".
+ * PDU SESSION RELEASE REJECT: no request type shall be set. PDU SESSION
+ * MODIFICATION COMMAND REJECT: "modification request".
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

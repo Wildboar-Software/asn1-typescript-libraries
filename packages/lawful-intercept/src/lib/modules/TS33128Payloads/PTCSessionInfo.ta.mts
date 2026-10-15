@@ -14,6 +14,13 @@ import { PTCSessionType, _decode_PTCSessionType, _encode_PTCSessionType, _enum_f
  * @summary PTCSessionInfo
  * @description
  * 
+ * Shall provide PTC session information such as PTC Session URI and PTC Session
+ * type (e.g. on-demand, pre-established, ad-hoc, pre-arranged, group session)
+ * when available.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

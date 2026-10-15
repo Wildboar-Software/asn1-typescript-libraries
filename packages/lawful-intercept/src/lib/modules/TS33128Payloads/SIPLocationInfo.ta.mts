@@ -15,6 +15,13 @@ import { CellInformation, _decode_CellInformation, _encode_CellInformation } fro
  * @summary SIPLocationInfo
  * @description
  * 
+ * The SIPLocationInfo type is used to report location information derived from
+ * the P-Access-Network-Information or Cellular-Network-Info header of a SIP
+ * message.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.60.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,27 @@ export
 class SIPLocationInfo {
     /**
      * @summary `locationInfo`.
+     * @description
+     *
+     * Shall be used to report location information received from a 5G Access
+     * Network.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.60.
+     *
      * @public
      * @readonly
      */
     readonly locationInfo: OPTIONAL<LocationInfo>;
     /**
      * @summary `cellInformation`.
+     * @description
+     *
+     * Shall be used to report the cell site information and cell radio related
+     * information for the cell reported in the locationInfo field. Shall be
+     * present if known at the NF where the POI is located or at the MDF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.60.
+     *
      * @public
      * @readonly
      */

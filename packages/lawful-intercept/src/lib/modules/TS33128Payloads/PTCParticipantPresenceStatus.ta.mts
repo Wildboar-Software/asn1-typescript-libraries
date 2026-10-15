@@ -16,6 +16,19 @@ import { PTCPresenceType, _decode_PTCPresenceType, _encode_PTCPresenceType, _enu
  * @summary PTCParticipantPresenceStatus
  * @description
  * 
+ * Shall provide the Participant Presence Status, which is a list of: -
+ * PresenceID: Identity of PTC client(s) or PTC group, when known. -
+ * PresenceType: Identifies type of ID [PTC client(s) or PTC group]. -
+ * PresenceStatus: Presence state of each ID. True indicates PTC client is
+ * available, while false indicates PTC client is unavailable. Report when the
+ * Presence functionality is supported by the PTC server and the PTC server
+ * assumes the role of the watcher on behalf of the PTC target or in the case of
+ * a target PTC chat group, when the PTC server assumes the role of the watcher
+ * on behalf of any member of the chat group.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

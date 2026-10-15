@@ -17,6 +17,13 @@ import { SpeedUncertainty, _decode_SpeedUncertainty, _encode_SpeedUncertainty } 
  * @summary HorizontalVelocityWithUncertainty
  * @description
  * 
+ * The HorizontalVelocityWithUncertainty type is derived from the data present
+ * in the HorizontalVelocityWithUncertainty type defined in TS 29.572 [24]
+ * clause 6.1.6.2.20.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.45.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,39 @@ export
 class HorizontalVelocityWithUncertainty {
     /**
      * @summary `hSpeed`.
+     * @description
+     *
+     * Horizontal speed in kilometres per hour. Shall be encoded as described in
+     * TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.45.
+     *
      * @public
      * @readonly
      */
     readonly hSpeed: HorizontalSpeed;
     /**
      * @summary `bearing`.
+     * @description
+     *
+     * Bearing angle in degrees, measured clockwise from North. Shall be encoded
+     * as described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.45.
+     *
      * @public
      * @readonly
      */
     readonly bearing: Angle;
     /**
      * @summary `uncertainty`.
+     * @description
+     *
+     * Uncertainty of horizontal speed in kilometres per hour. Shall be encoded
+     * as described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.45.
+     *
      * @public
      * @readonly
      */

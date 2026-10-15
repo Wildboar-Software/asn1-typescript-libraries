@@ -7,6 +7,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TrafficProfile
  * @description
  * 
+ * Identifies the type of data transmission, if available: single packet
+ * transmission (UL or DL), dual packet transmission (UL with subsequent DL or
+ * DL with subsequent UL), multiple packets transmission. See TS 38.413 [23]
+ * clause 9.3.1.144. Encoded according to TS 29.571 [17] clause 5.4.3.25. The
+ * SBIReference for this parameter shall be populated with
+ * 'TS29571_CommonData.yaml#/components/schemas/TrafficProfile'.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +45,16 @@ enum _enum_for_TrafficProfile {
  * @summary TrafficProfile
  * @description
  * 
+ * Identifies the type of data transmission, if available: single packet
+ * transmission (UL or DL), dual packet transmission (UL with subsequent DL or
+ * DL with subsequent UL), multiple packets transmission. See TS 38.413 [23]
+ * clause 9.3.1.144. Encoded according to TS 29.571 [17] clause 5.4.3.25. The
+ * SBIReference for this parameter shall be populated with
+ * 'TS29571_CommonData.yaml#/components/schemas/TrafficProfile'.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +77,16 @@ type TrafficProfile = _enum_for_TrafficProfile;
  * @summary TrafficProfile
  * @description
  * 
+ * Identifies the type of data transmission, if available: single packet
+ * transmission (UL or DL), dual packet transmission (UL with subsequent DL or
+ * DL with subsequent UL), multiple packets transmission. See TS 38.413 [23]
+ * clause 9.3.1.144. Encoded according to TS 29.571 [17] clause 5.4.3.25. The
+ * SBIReference for this parameter shall be populated with
+ * 'TS29571_CommonData.yaml#/components/schemas/TrafficProfile'.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

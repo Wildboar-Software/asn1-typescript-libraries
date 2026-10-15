@@ -19,6 +19,28 @@ import { DeviceTriggerDeliveryResult, _decode_DeviceTriggerDeliveryResult, _enco
  * @summary NEFDeviceTriggerReportNotify
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing a
+ * NEFDeviceTriggerReportNotify record when the IRI-POI present in the NEF
+ * detects that the NEF has returned a Device trigger report to the AF with a
+ * cause value indicating the trigger delivery outcome (e.g. succeeded, unknown
+ * or failed).
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - NEF sends a Nnef_Trigger_DeliveryNotify service operation with the GPSI of
+ *   the target UE to inform the AF on the delivery outcome of the device
+ *   trigger as described in TS 29.522 [58] clause 4.4.3.
+ *
+ * - SM-SC sends a T4 Delivery-Report-Request (DRR) to the NEF with
+ *   User-Identifier matching the SUPI of the target UE as specified in 29.337
+ *   [60] clause 5.2.2.
+ *
+ * Table 7.7.3.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.3.1.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +59,73 @@ export
 class NEFDeviceTriggerReportNotify {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.5.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.5.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `triggerId`.
+     * @description
+     *
+     * Identity of the corresponding Device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.5.
+     *
      * @public
      * @readonly
      */
     readonly triggerId: TriggerID;
     /**
      * @summary `deviceTriggerDeliveryResult`.
+     * @description
+     *
+     * Delivery result represents the result of the delivery of a device
+     * triggering request:
+     *
+     * - SUCCESS: The value indicates that the device action request was
+     *   successfully completed.
+     *
+     * - UNKNOWN: The value indicates any unspecified errors.
+     *
+     * - FAILURE: The value indicates that this trigger encountered a delivery
+     *   error and is deemed permanently undeliverable.
+     *
+     * - TRIGGERED: The value indicates that Device triggering request is
+     *   accepted by the NEF.
+     *
+     * - EXPIRED: The value indicates that the validity period expired before
+     *   the trigger could be delivered.
+     *
+     * - UNCONFIRMED: The value indicates that the delivery of the device action
+     *   request is not confirmed.
+     *
+     * - REPLACED: The value indicates that the device triggering replacement
+     *   request is accepted by the NEF.
+     *
+     * - TERMINATE: The NEF includes this value in the response for a successful
+     *   device triggering cancellation request. The value indicates that the
+     *   delivery of the device action request is terminated by the AF.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.5.
+     *
      * @public
      * @readonly
      */

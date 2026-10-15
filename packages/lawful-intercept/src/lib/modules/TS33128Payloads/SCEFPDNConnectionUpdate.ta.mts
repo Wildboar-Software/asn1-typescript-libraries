@@ -31,6 +31,74 @@ import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS3312
  * @summary SCEFPDNConnectionUpdate
  * @description
  * 
+ * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+ * SCEFPDNConnectionUpdate record when the IRI-POI present in the SCEF/IWK-SCF
+ * detects that a Non-IP PDN Connection has been updated for the target UE. The
+ * IRI-POI present in the SCEF/IWK-SCEF shall generate the xIRI for the
+ * following events:
+ *
+ * - SCEF/IWK-SCEF sends a T6a/T6ai Connection Management Answer to confirm the
+ *   T6a/T6ai Connection Management Request received with User-Identifier AVP
+ *   including the set of identities of the UE, i.e. IMSI/MSISDN/External
+ *   Identifier matching the target Identifier and with Connection-Action AVP
+ *   set to CONNECTION_UPDATE as described in TS 29.128 [62] clause 5.7.
+ *
+ * - SCEF/IWK-SCEF receives a T6a/T6ai Connection Management Answer from MME
+ *   which confirms the T6a/T6ai Connection Management Request sent by
+ *   SCEF/IWK-SCEF with User-Identifier AVP including the set of identities of
+ *   the UE, i.e. IMSI/MSISDN/External Identifier matching the target Identifier
+ *   and with Connection-Action AVP set to CONNECTION_UPDATE as described in TS
+ *   29.128 [62] clause 5.8.
+ *
+ * - in roaming situation SCEF sends a T7 Connection Management Answer to
+ *   IWK-SCEF to confirm the T7 Connection Management Request received with
+ *   User-Identifier AVP including the set of identities of the UE, i.e.
+ *   IMSI/MSISDN/External Identifier matching the target Identifier and with
+ *   Connection-Action AVP set to CONNECTION_UPDATE as described in TS 29.128
+ *   [62] clause 5.7.
+ *
+ * - in roaming situation SCEF receives a T7 Connection Management Answer from
+ *   IWK-SCEF which confirms the T7 Connection Management Request with
+ *   User-Identifier AVP including the set of identities of the UE, i.e.
+ *   IMSI/MSISDN/External Identifier matching the target Identifier and with
+ *   Connection-Action AVP set to CONNECTION_UPDATE as described in TS 29.128
+ *   [62] clause 5.8.
+ *
+ * - SCEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set
+ *   to "Success" in response to a RDS MANAGE PORT command sent by UE with an
+ *   "Action" field set to "Reserve port" to confirm the reservation of a
+ *   combination of source and destination port numbers for use for a traffic to
+ *   be sent by the UE to a specific application on an SCS/AS (see TS 24.250
+ *   [61] clause 5.4.2.6.2).
+ *
+ * - SCEF receives a RDS MANAGE PORT Response from a UE with a "Status" field
+ *   set to "Success" in response to a RDS MANAGE PORT command sent by the SCEF
+ *   with an "Action" field set to "Reserve port" to confirm the reservation of
+ *   a combination of source and destination port numbers for use for a traffic
+ *   to be sent by an SCS/AS to a specific application on the UE (see TS 24.250
+ *   [61] clause 5.4.2.6.2).
+ *
+ * - SCEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set
+ *   to "Success" in response to a RDS MANAGE PORT command sent by UE with an
+ *   "Action" field set to "Release port" to confirm the release of a
+ *   combination of source and destination port numbers for an application on an
+ *   SCS/AS (see TS 24.250 [61] clause 5.4.2.6.3).
+ *
+ * - SCEF receives a RDS MANAGE PORT Response from a UE with a "Status" field
+ *   set to "Success" in response to a RDS MANAGE PORT command sent by the SCEF
+ *   with an "Action" field set to "Release port" to confirm the release of a
+ *   combination of source and destination port numbers for an application on
+ *   the UE (see TS 24.250 [61] clause 5.4.2.6.3).
+ *
+ * NOTE: For the backward compatibility purposes the parameter is coded as
+ * OPTIONAL in the ASN.1 schema (Annex A).
+ *
+ * Table 7.8.2.3-1 gives the LI_HI2 IRI message type for this record as
+ * CONTINUE.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,66 +124,137 @@ export
 class SCEFPDNConnectionUpdate {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the Non-IP PDN Connection of the target UE (e.g. as
+     * provided by the MME in the associated Connection Management Request).
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN associated with the PDN Connection if available.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier associated with the PDN Connection if available,
+     * defined as NAI in ASN.1.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `initiator`.
+     * @description
+     *
+     * Initiator of the modification of the PDN Connection, UE, MME or SCEF.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly initiator: Initiator;
     /**
      * @summary `rDSSourcePortNumber`.
+     * @description
+     *
+     * RDS source port number.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly rDSSourcePortNumber: OPTIONAL<RDSPortNumber>;
     /**
      * @summary `rDSDestinationPortNumber`.
+     * @description
+     *
+     * RDS destination port number.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly rDSDestinationPortNumber: OPTIONAL<RDSPortNumber>;
     /**
      * @summary `applicationID`.
+     * @description
+     *
+     * Application identifier on the UE or on the SCS/AS if RDS is used.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly applicationID: OPTIONAL<ApplicationID>;
     /**
      * @summary `sCSASID`.
+     * @description
+     *
+     * Identifier of the SCS/AS if RDS is used.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sCSASID: OPTIONAL<SCSASID>;
     /**
      * @summary `rDSAction`.
+     * @description
+     *
+     * Action if RDS is used. Possible values: "ReservePort", "ReleasePort".
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly rDSAction: OPTIONAL<RDSAction>;
     /**
      * @summary `serializationFormat`.
+     * @description
+     *
+     * Data format exchanged between UE and SCS/AS if RDS is used.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly serializationFormat: OPTIONAL<SerializationFormat>;
     /**
      * @summary `ePSBearerID`.
+     * @description
+     *
+     * Identity of the EPS bearer that MME allocated to the Non-IP PDN
+     * connection (see NOTE below). NOTE: For the backward compatibility
+     * purposes the parameter is coded as OPTIONAL in the ASN.1 schema (Annex
+     * A).
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.3.
+     *
      * @public
      * @readonly
      */

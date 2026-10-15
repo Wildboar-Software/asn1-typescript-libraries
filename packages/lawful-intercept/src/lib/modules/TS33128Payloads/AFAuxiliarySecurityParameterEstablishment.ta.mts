@@ -13,6 +13,19 @@ import { AFSecurityParams, _decode_AFSecurityParams, _encode_AFSecurityParams } 
  * @summary AFAuxiliarySecurityParameterEstablishment
  * @description
  * 
+ * The IRI-POI in the AF shall generate an xIRI containing an
+ * AFAuxiliarySecurityParameterEstablishment record when the IRI-POI present in
+ * the AF detects that security parameters for the Ua* security protocol in use
+ * have been established with the target UE, or, when they have been updated
+ * without the associated AKMA application key having been refreshed according
+ * to clause 7.9.1.4.3.
+ *
+ * Table 7.9.1.5-2 gives the LI_HI2 IRI message type for this record as
+ * CONTINUE.
+ *
+ * 3GPP TS 33.128, clause 7.9.1.4.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +41,12 @@ export
 class AFAuxiliarySecurityParameterEstablishment {
     /**
      * @summary `aFSecurityParams`.
+     * @description
+     *
+     * Auxiliary security parameters established (see table 7.9.1.4.3-2).
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.4.
+     *
      * @public
      * @readonly
      */

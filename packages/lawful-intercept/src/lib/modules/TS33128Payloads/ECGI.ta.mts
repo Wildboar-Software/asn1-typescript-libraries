@@ -17,6 +17,13 @@ import { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
  * @summary ECGI
  * @description
  * 
+ * The ECGI type is used to report the E-UTRA Cell Identity. The ECGI type is
+ * derived from the data present in the ECGI type defined in TS 29.571 [17]
+ * clause 5.4.4.5.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.24.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,37 @@ export
 class ECGI {
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * The PLMN Identity of the cell being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.24.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `eUTRACellID`.
+     * @description
+     *
+     * The E-UTRA Cell Identity for the cell being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.24.
+     *
      * @public
      * @readonly
      */
     readonly eUTRACellID: EUTRACellID;
     /**
      * @summary `nID`.
+     * @description
+     *
+     * Network Identifier of the cell being reported. Shall be present if the
+     * cell being reported belongs to an SNPN.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.24.
+     *
      * @public
      * @readonly
      */

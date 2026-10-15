@@ -29,12 +29,26 @@ export
 class RCSSIPRegistrationExchange {
     /**
      * @summary `rCSRegistrationUpdateRequest`.
+     * @description
+     *
+     * SIP REGISTER request related to target IMS Registration, Reregistration
+     * or Deregistration.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.3.
+     *
      * @public
      * @readonly
      */
     readonly rCSRegistrationUpdateRequest: IMSPayload;
     /**
      * @summary `rCSRegistrationUpdateResponse`.
+     * @description
+     *
+     * SIP REGISTER response related to target IMS Registration, Reregistration
+     * or Deregistration.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.3.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,27 @@ import { AForASSessionWithQoSResponseCode, _decode_AForASSessionWithQoSResponseC
  * @summary SCEFASSessionWithQoSNotification
  * @description
  * 
+ * The IRI-POI in the SCEF shall generate an xIRI containing a
+ * SCEFASSessionWithQoSNotification record when the IRI-POI present in the SCEF
+ * detects that the SCEF has notified the SCS/AS about changes in the
+ * transmission resource status of the AS session.
+ *
+ * Accordingly, the IRI-POI in the SCEF generates the xIRI when any of the
+ * following events is detected (see TS 29.122 [63] clause 5.14):
+ *
+ * - SCEF receives a Status information Response in response to Status
+ *   information Request (POST) sent to SCS/AS to notify changes in the
+ *   transmission resource status of an AS session associated with the target
+ *   UE.
+ *
+ * NOTE: At least one of the MSISDN or External Identifier fields shall be
+ * present.
+ *
+ * Table 7.8.6.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.8.6.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +61,28 @@ export
 class SCEFASSessionWithQoSNotification {
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN of the target UE the AS session with required QoS applies to, if
+     * available (see NOTE). NOTE: At least one of the MSISDN or External
+     * Identifier fields shall be present.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.3.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier of the target UE the AS session with required QoS
+     * applies to, if available (see NOTE). NOTE: At least one of the MSISDN or
+     * External Identifier fields shall be present.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.3.
+     *
      * @public
      * @readonly
      */
@@ -58,12 +95,28 @@ class SCEFASSessionWithQoSNotification {
     readonly sCSASID: SCSASID;
     /**
      * @summary `userPlaneNotificationData`.
+     * @description
+     *
+     * Includes a userPlaneNotificationData resource according to TS 29.122 [63]
+     * clause A.14. The SBIReference for this parameter shall be populated with
+     * 'TS29122_AsSessionWithQoS.yaml#/components/schemas/
+     * UserPlaneNotificationData'.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.3.
+     *
      * @public
      * @readonly
      */
     readonly userPlaneNotificationData: SBIType;
     /**
      * @summary `aSSessionWithQoSResponseCode`.
+     * @description
+     *
+     * Identifies the response code returned by SCS/AS associated to the
+     * ASSessionWithQoS notification sent by SCEF to SCS/AS.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.3.
+     *
      * @public
      * @readonly
      */

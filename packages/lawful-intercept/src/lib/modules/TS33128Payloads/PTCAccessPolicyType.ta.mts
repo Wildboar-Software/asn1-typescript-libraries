@@ -7,6 +7,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCAccessPolicyType
  * @description
  * 
+ * Identifies the type of access policy list being managed or queried by the
+ * target when known: a) PTCUserAccessPolicyAttempt b)
+ * GroupAuthorizationRulesAttempt c) PTCUserAccessPolicyQuery d)
+ * GroupAuthorizationRulesQuery e) PTCUserAccessPolicyResult f)
+ * GroupAuthorizationRulesResult g) Request unsuccessful - Report a), b), c), or
+ * d) when the PTC target attempts a change or queries the Access Control
+ * list(s). - Report e), f), or g) when the network notifies the target of
+ * changes to the access control list(s) or the request was unsuccessful.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +51,18 @@ enum _enum_for_PTCAccessPolicyType {
  * @summary PTCAccessPolicyType
  * @description
  * 
+ * Identifies the type of access policy list being managed or queried by the
+ * target when known: a) PTCUserAccessPolicyAttempt b)
+ * GroupAuthorizationRulesAttempt c) PTCUserAccessPolicyQuery d)
+ * GroupAuthorizationRulesQuery e) PTCUserAccessPolicyResult f)
+ * GroupAuthorizationRulesResult g) Request unsuccessful - Report a), b), c), or
+ * d) when the PTC target attempts a change or queries the Access Control
+ * list(s). - Report e), f), or g) when the network notifies the target of
+ * changes to the access control list(s) or the request was unsuccessful.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +87,18 @@ type PTCAccessPolicyType = _enum_for_PTCAccessPolicyType;
  * @summary PTCAccessPolicyType
  * @description
  * 
+ * Identifies the type of access policy list being managed or queried by the
+ * target when known: a) PTCUserAccessPolicyAttempt b)
+ * GroupAuthorizationRulesAttempt c) PTCUserAccessPolicyQuery d)
+ * GroupAuthorizationRulesQuery e) PTCUserAccessPolicyResult f)
+ * GroupAuthorizationRulesResult g) Request unsuccessful - Report a), b), c), or
+ * d) when the PTC target attempts a change or queries the Access Control
+ * list(s). - Report e), f), or g) when the network notifies the target of
+ * changes to the access control list(s) or the request was unsuccessful.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

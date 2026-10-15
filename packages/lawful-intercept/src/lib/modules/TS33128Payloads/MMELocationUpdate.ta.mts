@@ -23,6 +23,49 @@ import { EPSSMSServiceStatus, _decode_EPSSMSServiceStatus, _encode_EPSSMSService
  * @summary MMELocationUpdate
  * @description
  * 
+ * When the reporting of location information is authorised, the IRI-POI in the
+ * MME shall generate an xIRI containing an MMELocationUpdate record each time
+ * the IRI-POI present in an MME detects that the target UE location is updated
+ * due to target UE mobility or as a part of an MME service procedure. The
+ * generation of such separate xIRI is not required if the updated UE location
+ * information is obtained as a part of a procedure producing some other xIRIs
+ * (e.g. mobility registration). In that case the location information is
+ * included into the respective xIRI.
+ *
+ * In addition to the Tracking Area Update described in TS 23.401 [50] clause
+ * 5.3.3, the UE mobility events resulting in generation of an MMELocationUpdate
+ * xIRI include the S1 Path Switch Request (intra E-UTRAN handover X2 based
+ * handover procedure described in TS 23.401 [50] clause 5.5.1.1) and the S1
+ * Handover Notify (Intra E-UTRAN S1 based handover procedure described in TS
+ * 23.401 [50] clause 5.5.1.2).
+ *
+ * The MMELocationUpdate xIRI is also generated when the MME receives an E-UTRAN
+ * S1AP ERAB Modification Indication message as a result of Dual Connectivity
+ * activation/release for the target UE, as described in TS 37.340 [37] clause
+ * 10.
+ *
+ * Based on regulatory requirements and operator policy, the location
+ * information obtained by the MME from E-UTRAN or the E-SMLC in the course of
+ * some service operations may result in the generation of the MMELocationUpdate
+ * xIRI record. Additionally, the IRI-POI in the MME shall capture the location
+ * information in the scenarios described in TS 23.271 [52] clause 4.4.2. Also,
+ * in the case of Mobile Originated LCS service invoked by the target, the
+ * location information may be derived from the Location Service Response sent
+ * to the target UE via the MME (see TS 23.271 [52] clause 9.2.6).
+ *
+ * Optionally, based on regulatory and operator policy, other MME messages that
+ * do not generate separate xIRI but carry location information such as
+ * emergency services or LCS may trigger the generation of an MMELocationUpdate
+ * xIRI record.
+ *
+ * The MMELocationUpdate record is also used by LARF to deliver location
+ * information responses to MDF2, as described in clause 7.3.5.6. For the
+ * responses to location information requests initiated by LARF, as described in
+ * TS 33.127 [5] the MMELocationUpdate xIRIs shall not be generated.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,42 +87,90 @@ export
 class MMELocationUpdate {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * iMSI associated with the location update.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.5.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * iMEI associated with the location update, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.5.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * mSISDN associated with the location update, if available as part of the
+     * subscription profile.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.5.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * GUTI assigned during the location update, if available, see TS 24.301
+     * [50].
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.5.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<GUTI>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Updated location information determined by the network. Depending on the
+     * service or message type from which the location information is extracted,
+     * it may be encoded in several forms (Annex A).
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.5.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `oldGUTI`.
+     * @description
+     *
+     * GUTI used to initiate the location update, if available, see TS 24.301
+     * [50].
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.5.
+     *
      * @public
      * @readonly
      */
     readonly oldGUTI: OPTIONAL<GUTI>;
     /**
      * @summary `sMSServiceStatus`.
+     * @description
+     *
+     * Indicates the availability of SMS Services. Shall be provided if present
+     * in the TRACKING AREA UPDATE ACCEPT.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.5.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,42 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary MMEIdentifierDeassociation
  * @description
  * 
+ * The IRI-POI present in the MME generating an xIRI containing an
+ * MMEIdentifierAssociation record shall set the Payload Direction field in the
+ * PDU header to not applicable (Direction Value 5, see ETSI TS 103 221-2 [8]
+ * clause 5.2.6).
+ *
+ * When transmitting the xIRI, the IRI-POI present in the MME shall set the
+ * payload format to 2, and provide the payload as a BER-encoded
+ * TS33128Payloads.XIRIPayloads structure.
+ *
+ * In the case where the IRI-POI present in the MME detects that an ATTACH
+ * ACCEPT, TRACKING AREA UPDATE ACCEPT (including a GUTI) or GUTI REALLOCATION
+ * COMMAND message as defined in TS 24.301 [51] has been sent by the MME towards
+ * a target UE, the IRI-POI present at the MME shall immediately generate a
+ * MMEIdentifierAssociation xIRI. This xIRI shall be generated regardless of
+ * whether the ATTACH ACCEPT, TRACKING AREA UPDATE ACCEPT or GUTI REALLOCATION
+ * COMMAND procedure is subsequently successfully completed or not.
+ *
+ * The IRI-POI present in the MME shall generate an xIRI containing an
+ * MMEIdentifierDeassociation record when the IRI-POI present in the MME detects
+ * an identifier deassociation without a new association within the same UE
+ * context inside the same MME for a UE matching one of the target identifiers
+ * provided via LI_X1. Generation of this record is subject to this record type
+ * being enabled for a specific target (see clause 6.3.2.2.1).
+ *
+ * NOTE 1: IMSI shall always be provided, in addition to the warrant target
+ * identifier if different to IMSI. Other identifiers shall be provided if
+ * available.
+ *
+ * NOTE 2: The location information was sent in the MMEIdentifierAssociation as
+ * a userLocation (Location.locationInfo.userLocation) between versions 18.0.0
+ * and 18.2.0 of the present document. The location information may also be
+ * present in this field for backwards compatibility.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +76,81 @@ export
 class MMEIdentifierDeassociation {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the procedure. (see NOTE 1). NOTE 1: IMSI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to IMSI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI used in the procedure, if available (see NOTE 1). NOTE 1: IMSI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to IMSI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN used in the procedure, if available (see NOTE 1). NOTE 1: IMSI
+     * shall always be provided, in addition to the warrant target identifier if
+     * different to IMSI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * LTE GUTI used in the procedure.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: GUTI;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information available when identifier deassociation occurs, sent
+     * only if it is the current location. Shall include all location
+     * information for the target UE available at the MME encoded as one of the
+     * following (see NOTE 2):
+     *
+     * - as a Location.fourGLocationInfo.ePSLocationInformation parameter.
+     *
+     * - as a Location.fourGLocationInfo.ePSUserLocationInformation parameter.
+     *   When Dual Connectivity is activated, the additionalCellIDs parameter
+     *   (Location.fourGLocationInfo.ePSLocationInformation.mMELocationInformation.additionalCellIDs)
+     *   shall also be populated, see clause 7.3.3. If available, other
+     *   parameters reportable via Location shall be included. NOTE 2: The
+     *   location information was sent in the MMEIdentifierAssociation as a
+     *   userLocation (Location.locationInfo.userLocation) between versions
+     *   18.0.0 and 18.2.0 of the present document. The location information may
+     *   also be present in this field for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */

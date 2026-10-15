@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RMState
  * @description
  * 
+ * The RMState indicates the registration management state of the UE. RMState is
+ * derived from the RmState type defined in TS 29.518 [22] clause 6.2.6.3.9.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.67.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +27,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_RMState {
+    /**
+     * @description
+     *
+     * Indicates the UE in RM-REGISTERED state.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.67.
+     */
     registered = 1,
+    /**
+     * @description
+     *
+     * Indicates the UE in RM-DEREGISTERED state.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.67.
+     */
     deregistered = 2,
 }
 
@@ -29,6 +49,12 @@ enum _enum_for_RMState {
  * @summary RMState
  * @description
  * 
+ * The RMState indicates the registration management state of the UE. RMState is
+ * derived from the RmState type defined in TS 29.518 [22] clause 6.2.6.3.9.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.67.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +74,12 @@ type RMState = _enum_for_RMState;
  * @summary RMState
  * @description
  * 
+ * The RMState indicates the registration management state of the UE. RMState is
+ * derived from the RmState type defined in TS 29.518 [22] clause 6.2.6.3.9.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.67.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +97,12 @@ const RMState = _enum_for_RMState;
 
 /**
  * @summary RMState_registered
+ * @description
+ *
+ * Indicates the UE in RM-REGISTERED state.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.67.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +111,12 @@ const RMState_registered: RMState = RMState.registered; /* LONG_NAMED_ENUMERATED
 
 /**
  * @summary registered
+ * @description
+ *
+ * Indicates the UE in RM-REGISTERED state.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.67.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +125,12 @@ const registered: RMState = RMState.registered; /* SHORT_NAMED_ENUMERATED_VALUE 
 
 /**
  * @summary RMState_deregistered
+ * @description
+ *
+ * Indicates the UE in RM-DEREGISTERED state.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.67.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +139,12 @@ const RMState_deregistered: RMState = RMState.deregistered; /* LONG_NAMED_ENUMER
 
 /**
  * @summary deregistered
+ * @description
+ *
+ * Indicates the UE in RM-DEREGISTERED state.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.67.
+ *
  * @constant
  * @type {number}
  */

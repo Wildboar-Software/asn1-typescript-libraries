@@ -23,6 +23,12 @@ import { UncertaintySBI, _decode_UncertaintySBI, _encode_UncertaintySBI } from "
  * @summary PointAltitudeUncertainty
  * @description
  * 
+ * The PointAltitudeUncertainty type is derived from the data present in the
+ * PointAltitudeUncertainty type defined in TS 29.572 [24] clause 6.1.6.2.11.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,30 +57,62 @@ class PointAltitudeUncertainty {
     readonly point: GeographicalCoordinates;
     /**
      * @summary `altitude`.
+     * @description
+     *
+     * Indicates the altitude of the UE in meters.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.18.
+     *
      * @public
      * @readonly
      */
     readonly altitude: Altitude;
     /**
      * @summary `uncertaintyEllipse`.
+     * @description
+     *
+     * Describes an uncertainty ellipse.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.18.
+     *
      * @public
      * @readonly
      */
     readonly uncertaintyEllipse: UncertaintyEllipse;
     /**
      * @summary `deprecatedUncertaintyAltitude`.
+     * @description
+     *
+     * No longer used in present version of this specification and shall be set
+     * to 0. The uncertaintyAltitudeSBI parameter shall be used instead.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.18.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedUncertaintyAltitude: Uncertainty;
     /**
      * @summary `confidence`.
+     * @description
+     *
+     * Indicates the confidence of the location as a percentage.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.18.
+     *
      * @public
      * @readonly
      */
     readonly confidence: Confidence;
     /**
      * @summary `uncertaintyAltitudeSBI`.
+     * @description
+     *
+     * Indicates the uncertainty of the altitude in meters. Shall be provided.
+     * This parameter is conditional only for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.18.
+     *
      * @public
      * @readonly
      */

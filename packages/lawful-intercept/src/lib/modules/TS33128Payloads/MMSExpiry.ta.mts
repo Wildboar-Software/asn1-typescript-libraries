@@ -14,6 +14,12 @@ import { _decode_MMSPeriodFormat, _encode_MMSPeriodFormat, _enum_for_MMSPeriodFo
  * @summary MMSExpiry
  * @description
  * 
+ * Length of time in seconds the MM will be stored in MMS Proxy-Relay or time to
+ * delete the MM Include when sent to the MMS Proxy-Relay (see NOTE).
+ *
+ * 3GPP TS 33.128, clause 7.4.3.2A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

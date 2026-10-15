@@ -17,6 +17,12 @@ import { UncertaintySBI, _decode_UncertaintySBI, _encode_UncertaintySBI } from "
  * @summary UncertaintyEllipse
  * @description
  * 
+ * The UncertaintyEllipse type is derived from the data present in the
+ * UncertaintyEllipse type defined in TS 29.572 [24] clause 6.1.6.2.22.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.15.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +46,66 @@ export
 class UncertaintyEllipse {
     /**
      * @summary `deprecatedSemiMajor`.
+     * @description
+     *
+     * No longer used in present version of this specification and shall always
+     * be set to 0. The semiMajorSBI parameter shall be used instead.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.15.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedSemiMajor: Uncertainty;
     /**
      * @summary `deprecatedSemiMinor`.
+     * @description
+     *
+     * No longer used in present version of this specification and shall always
+     * be set to 0. The semiMinorSBI parameter shall be used instead.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.15.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedSemiMinor: Uncertainty;
     /**
      * @summary `orientationMajor`.
+     * @description
+     *
+     * Indicates the orientation of the major axis in degrees.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.15.
+     *
      * @public
      * @readonly
      */
     readonly orientationMajor: Orientation;
     /**
      * @summary `semiMajorSBI`.
+     * @description
+     *
+     * Indicates the semi-major axis of the uncertainty ellipse in meters. Shall
+     * be provided. This parameter is conditional only for backwards
+     * compatibility.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.15.
+     *
      * @public
      * @readonly
      */
     readonly semiMajorSBI: OPTIONAL<UncertaintySBI>;
     /**
      * @summary `semiMinorSBI`.
+     * @description
+     *
+     * Indicates the semi-minor axis of the uncertainty ellipse in meters. Shall
+     * be provided. This parameter is conditional only for backwards
+     * compatibility.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.15.
+     *
      * @public
      * @readonly
      */

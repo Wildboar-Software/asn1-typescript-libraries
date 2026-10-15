@@ -19,6 +19,20 @@ import { MMSDirection, _decode_MMSDirection, _encode_MMSDirection, _enum_for_MMS
  * @summary MMSDeliveryAck
  * @description
  * 
+ * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+ * MMSDeliveryAck record when:
+ *
+ * - the MMS Proxy-Relay receives an m-acknowledge-ind (as defined in
+ *   OMA-TS-MMS_ENC [39] clause 6.4) from the MMS client in the target UE (for
+ *   deferred retrieval), or
+ *
+ * - the MMS Proxy-Relay receives an m-notifyresp-ind (as defined in
+ *   OMA-TS-MMS_ENC [39] clause 6.4) from the MMS client in the target UE (for
+ *   immediate retrieval).
+ *
+ * 3GPP TS 33.128, clause 7.4.3.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +52,65 @@ export
 class MMSDeliveryAck {
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the target
+     * and the MMS Proxy-Relay. As defined in OMA-TS-MMS_ENC [39] clause 7.3.63.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.7.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.7.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `reportAllowed`.
+     * @description
+     *
+     * Indicates whether the target allows sending of a delivery report. Encoded
+     * as "Yes" = True, "No" = False. Include if received by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.7.
+     *
      * @public
      * @readonly
      */
     readonly reportAllowed: OPTIONAL<BOOLEAN>;
     /**
      * @summary `status`.
+     * @description
+     *
+     * Provides a MM status. A status of "retrieved" is only signalled by the
+     * retrieving UE after retrieval of the MM. Include if received by the MMS
+     * Proxy-Relay and if generated from a m-notifyresp-ind.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.7.
+     *
      * @public
      * @readonly
      */
     readonly status: MMStatus;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Indicates the direction of the MM. This shall be encoded as "to target".
+     *
+     * 3GPP TS 33.128, clause 7.4.3.7.
+     *
      * @public
      * @readonly
      */

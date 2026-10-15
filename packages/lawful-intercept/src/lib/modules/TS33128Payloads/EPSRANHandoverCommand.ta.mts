@@ -26,6 +26,37 @@ import { RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode
  * @summary EPSRANHandoverCommand
  * @description
  * 
+ * 6.3.2.2.9.1 General
+ *
+ * The present clause provides the LI requirements for S1 interface-based
+ * handovers which occur for a target UE. Such handovers may be intra EPS
+ * (inter-eNB), 5GS to EPS (inter-system), EPS to 5GS (inter-system), EPS to
+ * UTRA (inter-system) or EPS to GERA (inter-system).
+ *
+ * The following xIRI records are used to report handover related events between
+ * the MME and RAN nodes for the target UE when the delivery of location
+ * information is not restricted by service scoping:
+ *
+ * - EPSRANHandoverCommand.
+ *
+ * - EPSRANHandoverRequest.
+ *
+ * The above xIRIs are used to report handover events and information that are
+ * not carried in the MMELocationUpdate (clause 6.3.2.2.5) record and shall
+ * include the information transferred between the MME and RAN nodes, as a part
+ * of handover preparation, resource allocation, and handover notification.
+ *
+ * 6.3.2.2.9.2 Handover command
+ *
+ * The IRI-POI in the MME shall generate an xIRI containing an
+ * EPSRANHandoverCommand record when the IRI-POI present in the MME detects that
+ * the MME has sent a HANDOVER COMMAND message to the source RAN node (old RAN
+ * node) in response to a HANDOVER REQUIRED message for the target UE and
+ * location information is not restricted by service scoping.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,42 +78,95 @@ export
 class EPSRANHandoverCommand {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the MME context. See TS 23.401 [50]
+     * clause 5.7.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `mMEUES1APID`.
+     * @description
+     *
+     * Identity that the MME uses to uniquely identify the target UE over the S1
+     * Interface. See TS 36.413 [38] clause 9.2.3.3. This is correlated to the
+     * IMSI known in the UE context at the MME.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly mMEUES1APID: MMEUES1APID;
     /**
      * @summary `eNBUES1APID`.
+     * @description
+     *
+     * Identity that the MME receives from the eNB uniquely identifying the
+     * target UE with the eNB. See TS 36.413 [38] clause 9.2.3.4.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly eNBUES1APID: RANUES1APID;
     /**
      * @summary `handoverType`.
+     * @description
+     *
+     * Identifies the type of handover indicated by the source RAN node to the
+     * MME. See TS 36.413 [38] clause 9.2.1.3.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly handoverType: EPSHandoverType;
     /**
      * @summary `eRABsToBeForwarded`.
+     * @description
+     *
+     * Contains a list of any E-RABs that are subject to forwarding. Shall be
+     * present if there are any E-RABs to be forwarded listed in the handover
+     * command. See TS 36.413 [38] clause 9.1.5.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly eRABsToBeForwarded: OPTIONAL<ERABContextList>;
     /**
      * @summary `eRABsToRelease`.
+     * @description
+     *
+     * Contains a list of any E-RABs that are to be released. Shall be present
+     * if there are any E-RABs to be released listed in the handover command.
+     * See TS 36.413 [38] clause 9.1.5.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly eRABsToRelease: OPTIONAL<ERABReleaseList>;
     /**
      * @summary `targetToSourceContainers`.
+     * @description
+     *
+     * Provides radio related information about the gaining RAN node. See TS
+     * 36.413 [38] clause 9.2.1.57.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.2.
+     *
      * @public
      * @readonly
      */

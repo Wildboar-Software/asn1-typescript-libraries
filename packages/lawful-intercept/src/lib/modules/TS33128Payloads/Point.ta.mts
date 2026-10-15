@@ -13,6 +13,12 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * @summary Point
  * @description
  * 
+ * The Point type is derived from the data present in the Point type defined in
+ * TS 29.572 [24] clause 6.1.6.2.6.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.11.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +34,12 @@ export
 class Point {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * Indicates a geographic point represented by its longitude and latitude.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.11.
+     *
      * @public
      * @readonly
      */

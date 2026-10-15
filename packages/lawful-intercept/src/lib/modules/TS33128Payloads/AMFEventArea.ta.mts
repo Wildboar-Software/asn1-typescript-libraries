@@ -15,6 +15,13 @@ import { LADNInfo, _decode_LADNInfo, _encode_LADNInfo } from "../TS33128Payloads
  * @summary AMFEventArea
  * @description
  * 
+ * The AMFEventArea type is derived from the data present in the AMFEventArea
+ * type defined in TS 29.518 [22] clause 6.2.6.2.16. Table 7.3.3.2.48-1 contains
+ * the details for the AMFEventArea type.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.48.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,26 @@ export
 class AMFEventArea {
     /**
      * @summary `presenceInfo`.
+     * @description
+     *
+     * This field shall be present if the Area of Interest subscribed is not a
+     * LADN service area.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.48.
+     *
      * @public
      * @readonly
      */
     readonly presenceInfo: OPTIONAL<PresenceInfo>;
     /**
      * @summary `lADNInfo`.
+     * @description
+     *
+     * This field shall be present if the Area of Interest subscribed is a LADN
+     * service area.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.48.
+     *
      * @public
      * @readonly
      */

@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSVersion
  * @description
  * 
+ * The version of MM, to include major and minor version. Retreaved from the
+ * submitted MM being transformed into external format.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.4A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

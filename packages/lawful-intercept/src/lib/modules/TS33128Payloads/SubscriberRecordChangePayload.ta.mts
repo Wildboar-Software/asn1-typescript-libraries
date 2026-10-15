@@ -16,6 +16,13 @@ import { RoamingStatusUpdateInfo, _decode_RoamingStatusUpdateInfo, _encode_Roami
  * @summary SubscriberRecordChangePayload
  * @description
  * 
+ * Includes the payload related to the subscriberRecordChangeType indicated in
+ * the UECM Data type, see TS 29.563 [100] clause 6.3.6.1. Shall indicate either
+ * IMEIUpdateInfo, IMEIUpdateResponse.
+ *
+ * 3GPP TS 33.128, clause 7.2.3.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

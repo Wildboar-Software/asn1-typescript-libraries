@@ -60,84 +60,173 @@ export
 class EASProfile {
     /**
      * @summary `eASID`.
+     * @description
+     *
+     * EAS Identity.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASID: EASID;
     /**
      * @summary `eASEndpoint`.
+     * @description
+     *
+     * Endpoint information (e.g. URI, FQDN, IP address) used to communicate
+     * with the EAS.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASEndpoint: EASEndpoint;
     /**
      * @summary `aCIDs`.
+     * @description
+     *
+     * Identities of the AC(s) that can be served by the EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly aCIDs: OPTIONAL<ACIDs>;
     /**
      * @summary `aSPID`.
+     * @description
+     *
+     * Identity of the ASP which provides the EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly aSPID: OPTIONAL<UTF8String>;
     /**
      * @summary `eASType`.
+     * @description
+     *
+     * EAS type or category, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASType: OPTIONAL<UTF8String>;
     /**
      * @summary `eASDescription`.
+     * @description
+     *
+     * Human-readable description of the EAS.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASDescription: OPTIONAL<UTF8String>;
     /**
      * @summary `eASSchedule`.
+     * @description
+     *
+     * Availability schedule of the EAS (e.g. time windows), if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASSchedule: OPTIONAL<Daytime>;
     /**
      * @summary `eASServiceArea`.
+     * @description
+     *
+     * List of geographical and topological service areas that the EAS serves,
+     * if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASServiceArea: OPTIONAL<Location>;
     /**
      * @summary `eASServiceKPIs`.
+     * @description
+     *
+     * Service characteristics provided by the EAS.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASServiceKPIs: OPTIONAL<ServiceKPIs>;
     /**
      * @summary `eASServicePermLevel`.
+     * @description
+     *
+     * Level of service permissions (e.g. trial, gold-class) supported by the
+     * EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASServicePermLevel: OPTIONAL<UTF8String>;
     /**
      * @summary `eASServiceFeatures`.
+     * @description
+     *
+     * Service features e.g. single vs. multi-player gaming service supported by
+     * the EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASServiceFeatures: OPTIONAL<EASServiceFeatures>;
     /**
      * @summary `eASServiceContSupport`.
+     * @description
+     *
+     * ACR scenarios supported by the EAS for service continuity if any.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASServiceContSupport: OPTIONAL<ACRScenarios>;
     /**
      * @summary `appLocs`.
+     * @description
+     *
+     * List of DNAI(s) and the corresponding N6 traffic routing
+     * information/routing profile ID, associated with the EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly appLocs: OPTIONAL<RouteToLocations>;
     /**
      * @summary `eASStatus`.
+     * @description
+     *
+     * EAS status (e.g. Enabled, Disabled etc.), if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */

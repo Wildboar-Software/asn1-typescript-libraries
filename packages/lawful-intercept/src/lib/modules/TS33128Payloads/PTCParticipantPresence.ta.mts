@@ -15,6 +15,24 @@ import { PTCParticipantPresenceStatus, _decode_PTCParticipantPresenceStatus, _en
  * @summary PTCParticipantPresence
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCParticipantPresence record when the IRI-POI present in the PTC server
+ * (when it supports the Presence functionality and assumes the role of the
+ * Watcher on behalf of the PTC target) detects that the PTC server receives
+ * presence status notifications from the Presence servers after having
+ * subscribed to the PTC presence status of other PTC participants (i.e.
+ * participants in communication with the PTC target). Accordingly, the IRI-POI
+ * in the PTC server generates the xIRI when the following event is detected:
+ *
+ * - when the PTC server receives a SIP NOTIFY in response to a SIP SUBSCRIBE
+ *   updating presence information for a participant.
+ *
+ * NOTE: The pTCTargetInformation choice PTCChatGroupID is not applicable for
+ * this xIRI.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.16.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +49,34 @@ export
 class PTCParticipantPresence {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN shall be provided for PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.16.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCParticipantPresenceStatus`.
+     * @description
+     *
+     * Shall provide the Participant Presence Status, which is a list of:
+     *
+     * - PresenceID: Identity of PTC client(s) or PTC group, when known.
+     *
+     * - PresenceType: Identifies type of ID [PTC client(s) or PTC group].
+     *
+     * - PresenceStatus: Presence state of each ID. True indicates PTC client is
+     *   available, while false indicates PTC client is unavailable. Report when
+     *   the Presence functionality is supported by the PTC server and the PTC
+     *   server assumes the role of the watcher on behalf of the PTC target.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.16.
+     *
      * @public
      * @readonly
      */

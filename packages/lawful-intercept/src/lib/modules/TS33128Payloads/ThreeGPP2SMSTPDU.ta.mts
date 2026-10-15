@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ThreeGPP2SMSTPDU
  * @description
  * 
+ * 3GPP2 SMS Transport Layer Message PDU encoded per the PDUs defined in 3GPP2
+ * C.S0015-A [134] clause 4.5.2.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

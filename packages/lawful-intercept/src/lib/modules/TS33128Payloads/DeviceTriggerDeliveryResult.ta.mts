@@ -7,6 +7,23 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DeviceTriggerDeliveryResult
  * @description
  * 
+ * Delivery result represents the result of the delivery of a device triggering
+ * request: - SUCCESS: The value indicates that the device action request was
+ * successfully completed. - UNKNOWN: The value indicates any unspecified
+ * errors. - FAILURE: The value indicates that this trigger encountered a
+ * delivery error and is deemed permanently undeliverable. - TRIGGERED: The
+ * value indicates that Device triggering request is accepted by the SCEF. -
+ * EXPIRED: The value indicates that the validity period expired before the
+ * trigger could be delivered. - UNCONFIRMED: The value indicates that the
+ * delivery of the device action request is not confirmed. - REPLACED: The value
+ * indicates that the device triggering replacement request is accepted by the
+ * SCEF. - TERMINATE: The SCEF includes this value in the response for a
+ * successful device triggering cancellation request. The value indicates that
+ * the delivery of the device action request is terminated by the SCS/AS.
+ *
+ * 3GPP TS 33.128, clause 7.8.3.1.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +58,23 @@ enum _enum_for_DeviceTriggerDeliveryResult {
  * @summary DeviceTriggerDeliveryResult
  * @description
  * 
+ * Delivery result represents the result of the delivery of a device triggering
+ * request: - SUCCESS: The value indicates that the device action request was
+ * successfully completed. - UNKNOWN: The value indicates any unspecified
+ * errors. - FAILURE: The value indicates that this trigger encountered a
+ * delivery error and is deemed permanently undeliverable. - TRIGGERED: The
+ * value indicates that Device triggering request is accepted by the SCEF. -
+ * EXPIRED: The value indicates that the validity period expired before the
+ * trigger could be delivered. - UNCONFIRMED: The value indicates that the
+ * delivery of the device action request is not confirmed. - REPLACED: The value
+ * indicates that the device triggering replacement request is accepted by the
+ * SCEF. - TERMINATE: The SCEF includes this value in the response for a
+ * successful device triggering cancellation request. The value indicates that
+ * the delivery of the device action request is terminated by the SCS/AS.
+ *
+ * 3GPP TS 33.128, clause 7.8.3.1.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +100,23 @@ type DeviceTriggerDeliveryResult = _enum_for_DeviceTriggerDeliveryResult;
  * @summary DeviceTriggerDeliveryResult
  * @description
  * 
+ * Delivery result represents the result of the delivery of a device triggering
+ * request: - SUCCESS: The value indicates that the device action request was
+ * successfully completed. - UNKNOWN: The value indicates any unspecified
+ * errors. - FAILURE: The value indicates that this trigger encountered a
+ * delivery error and is deemed permanently undeliverable. - TRIGGERED: The
+ * value indicates that Device triggering request is accepted by the SCEF. -
+ * EXPIRED: The value indicates that the validity period expired before the
+ * trigger could be delivered. - UNCONFIRMED: The value indicates that the
+ * delivery of the device action request is not confirmed. - REPLACED: The value
+ * indicates that the device triggering replacement request is accepted by the
+ * SCEF. - TERMINATE: The SCEF includes this value in the response for a
+ * successful device triggering cancellation request. The value indicates that
+ * the delivery of the device action request is terminated by the SCS/AS.
+ *
+ * 3GPP TS 33.128, clause 7.8.3.1.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

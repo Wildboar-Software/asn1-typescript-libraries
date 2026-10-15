@@ -15,6 +15,13 @@ import { MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
  * @summary PLMNID
  * @description
  * 
+ * The PLMNID type is used to report the PLMN Identity. The PLMNID type is
+ * derived from the data present in the PlmnId type defined in TS 29.571 [17]
+ * clause 5.4.4.3.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.34.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,24 @@ export
 class PLMNID {
     /**
      * @summary `mCC`.
+     * @description
+     *
+     * The Mobile Country Code.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.34.
+     *
      * @public
      * @readonly
      */
     readonly mCC: MCC;
     /**
      * @summary `mNC`.
+     * @description
+     *
+     * The Mobile Network Code.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.34.
+     *
      * @public
      * @readonly
      */

@@ -15,6 +15,16 @@ import { GERANGANSSPositioningData, _decode_GERANGANSSPositioningData, _encode_G
  * @summary GERANPositioningInfo
  * @description
  * 
+ * The GERANPositioningInfo type is used to indicate the usage of each
+ * positioning method that was attempted to determine the location estimate,
+ * either successfully or unsuccessfully. This Information Element is applicable
+ * only when the UE is attached to GERAN access and when the message is sent by
+ * the SGSN or combined MME/SGSN. Derived from the data found in TS 29.172 [53]
+ * clause 7.4.29.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.75.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +41,28 @@ export
 class GERANPositioningInfo {
     /**
      * @summary `gERANPositioningData`.
+     * @description
+     *
+     * Shall contain the encoded content of the "GERAN-Positioning-Data" in the
+     * "GERAN-Positioning-Info" parameter. Defined in TS 29.172 [52] clause
+     * 7.4.30.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.75.
+     *
      * @public
      * @readonly
      */
     readonly gERANPositioningData: OPTIONAL<GERANPositioningData>;
     /**
      * @summary `gERANGANSSPositioningData`.
+     * @description
+     *
+     * Shall contain the encoded content of the "GERAN-GANSS-Positioning-Data"
+     * in the "GERAN-Positioning-Info" parameter. Defined in TS 29.172 [53]
+     * clause 7.4.31.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.75.
+     *
      * @public
      * @readonly
      */

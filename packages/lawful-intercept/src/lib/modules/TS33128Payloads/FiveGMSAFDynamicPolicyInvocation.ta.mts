@@ -17,6 +17,39 @@ import { DPIOperationType, _decode_DPIOperationType, _encode_DPIOperationType, _
  * @summary FiveGMSAFDynamicPolicyInvocation
  * @description
  * 
+ * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+ * 5GMSAFDynamicPolicyInvocation record when the IRI-POI present in the 5GMS AF
+ * detects that an 5GMS AF has received a dynamic policy from the target UE. The
+ * IRI-POI present in the 5GMS AF shall generate the xIRI for the following
+ * events (as specified in TS 26.512 [98] clause 11.5):
+ *
+ * - 5GMS AF returns a createDynamicPolicy Response (i.e. 201 Created) in
+ *   response to a createDynamicPolicy Request (i.e. POST) from the Media
+ *   Session Handler in the target UE which creates a dynamic policy resource.
+ *
+ * - 5GMS AF returns a retrieveDynamicPolicy Response (i.e. 20O OK) in response
+ *   to a retrieveDynamicPolicy Request (i.e. GET) from the Media Session
+ *   Handler in the target UE which retrieves the dynamic policy resource.
+ *
+ * - 5GMS AF returns an updateDynamicPolicy Response (i.e. 20O OK or 204 No
+ *   Content) in response to an updateDynamicPolicy Request (i.e. PUT) from the
+ *   Media Session Handler in the target UE which replaces the dynamic policy
+ *   resource.
+ *
+ * - 5GMS AF returns a patchDynamicPolicy Response (i.e. 20O OK or 204 No
+ *   Content) in response to a patchDynamicPolicy Request (i.e. PATCH) from the
+ *   Media Session Handler in the target UE which modifies the dynamic policy
+ *   resource.
+ *
+ * - 5GMS AF returns a destroyDynamicPolicy Response (i.e. 204 No Content) in
+ *   response to a destroyDynamicPolicy Request (i.e. DELETE) from the Media
+ *   Session Handler of the target UE which deletes the dynamic policy resource.
+ *
+ * Table 7.15.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +67,40 @@ export
 class FiveGMSAFDynamicPolicyInvocation {
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.4.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `dynamicPolicyResource`.
+     * @description
+     *
+     * Includes a dynamic policy resource according to 26.512 [98] clause
+     * 11.5.3. The SBIReference for this parameter shall be populated with
+     * 'TS26512_M5_ DynamicPolicies.yaml#/components/schemas/DynamicPolicy'.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.4.
+     *
      * @public
      * @readonly
      */
     readonly dynamicPolicyResource: SBIType;
     /**
      * @summary `dPIoperationType`.
+     * @description
+     *
+     * Type of operation applied to the dynamic policy resource, i.e.
+     * createDynamicPolicy, retrieveDynamicPolicy, updateDynamicPolicy,
+     * patchDynamicPolicy, destroyDynamicPolicy.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.4.
+     *
      * @public
      * @readonly
      */

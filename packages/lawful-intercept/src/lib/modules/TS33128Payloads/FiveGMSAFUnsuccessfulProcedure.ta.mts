@@ -17,6 +17,10 @@ import { FiveGMSAFErrorCode, _decode_FiveGMSAFErrorCode, _encode_FiveGMSAFErrorC
  * @summary FiveGMSAFUnsuccessfulProcedure
  * @description
  * 
+ * Table 7.15.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

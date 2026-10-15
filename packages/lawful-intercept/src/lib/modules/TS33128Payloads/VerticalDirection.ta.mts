@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VerticalDirection
  * @description
  * 
+ * The VerticalDirection represents the direction (upward/downward) of the
+ * vertical speed, the VerticalDirection is derived from the data present in the
+ * VerticalDirection type defined in TS 29.572 [24] clause 6.1.6.3.13.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.56.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +28,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_VerticalDirection {
+    /**
+     * @description
+     *
+     * Vertical speed is upward.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.56.
+     */
     upward = 1,
+    /**
+     * @description
+     *
+     * Vertical speed is downward.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.56.
+     */
     downward = 2,
 }
 
@@ -29,6 +50,13 @@ enum _enum_for_VerticalDirection {
  * @summary VerticalDirection
  * @description
  * 
+ * The VerticalDirection represents the direction (upward/downward) of the
+ * vertical speed, the VerticalDirection is derived from the data present in the
+ * VerticalDirection type defined in TS 29.572 [24] clause 6.1.6.3.13.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.56.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +76,13 @@ type VerticalDirection = _enum_for_VerticalDirection;
  * @summary VerticalDirection
  * @description
  * 
+ * The VerticalDirection represents the direction (upward/downward) of the
+ * vertical speed, the VerticalDirection is derived from the data present in the
+ * VerticalDirection type defined in TS 29.572 [24] clause 6.1.6.3.13.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.56.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +100,12 @@ const VerticalDirection = _enum_for_VerticalDirection;
 
 /**
  * @summary VerticalDirection_upward
+ * @description
+ *
+ * Vertical speed is upward.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.56.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +114,12 @@ const VerticalDirection_upward: VerticalDirection = VerticalDirection.upward; /*
 
 /**
  * @summary upward
+ * @description
+ *
+ * Vertical speed is upward.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.56.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +128,12 @@ const upward: VerticalDirection = VerticalDirection.upward; /* SHORT_NAMED_ENUME
 
 /**
  * @summary VerticalDirection_downward
+ * @description
+ *
+ * Vertical speed is downward.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.56.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +142,12 @@ const VerticalDirection_downward: VerticalDirection = VerticalDirection.downward
 
 /**
  * @summary downward
+ * @description
+ *
+ * Vertical speed is downward.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.56.
+ *
  * @constant
  * @type {number}
  */

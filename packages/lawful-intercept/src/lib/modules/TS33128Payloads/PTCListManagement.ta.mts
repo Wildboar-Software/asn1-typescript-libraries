@@ -23,6 +23,25 @@ import { PTCIDList, _decode_PTCIDList, _encode_PTCIDList } from "../TS33128Paylo
  * @summary PTCListManagement
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCListManagement record when the IRI-POI present in the PTC server detects
+ * that the PTC target attempts to change their contact list/group list(s) or
+ * those lists are updated by the network. Accordingly, the IRI-POI in the PTC
+ * server generates the xIRI when the following events are detected:
+ *
+ * - when the PTC server receives a SIP PUBLISH from a PTC target to change the
+ *   PTC target’s contact list or group list(s).
+ *
+ * - when the PTC server receives a SIP NOTIFY from other PTC participants
+ *   updating the PTC target’s contact list or group list(s) (e.g. participant
+ *   reachability).
+ *
+ * NOTE: The pTCTargetInformation choice PTCChatGroupID is not applicable for
+ * this xIRI.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,48 +64,115 @@ export
 class PTCListManagement {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN shall be provided for PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.17.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.5.2.17.
+     *
      * @public
      * @readonly
      */
     readonly pTCDirection: Direction;
     /**
      * @summary `pTCListManagementType`.
+     * @description
+     *
+     * The "List Management Attempts" identify the type of list being managed by
+     * the target when available: a) ContactListManagementAttempt b)
+     * GroupListManagementAttempt c) ContactListManagementResult d)
+     * GroupListManagementResult e) Request unsuccessful For example, a) and b)
+     * are reported when PTC target attempts changes to their contact list and
+     * their PTC group list(s). The "List Management Results" identify the
+     * network response to a modification by the PTC target. For example, c),
+     * d), or e) is reported when the network notifies the PTC target of changes
+     * to their contact list or their PTC group list(s).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.17.
+     *
      * @public
      * @readonly
      */
     readonly pTCListManagementType: OPTIONAL<PTCListManagementType>;
     /**
      * @summary `pTCListManagementAction`.
+     * @description
+     *
+     * Identifies the action requested by the PTC target to the contact lists or
+     * PTC group list(s). Report when PTC target attempts changes to his contact
+     * list or PTC group list(s): a) Create b) Modify c) Retrieve d) Delete e)
+     * Notify Also report when a notification is sent to the PTC target due to
+     * changes occurring to his contact list or PTC group list(s).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.17.
+     *
      * @public
      * @readonly
      */
     readonly pTCListManagementAction: OPTIONAL<PTCListManagementAction>;
     /**
      * @summary `pTCListManagementFailure`.
+     * @description
+     *
+     * Report when list management request is unsuccessful.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.17.
+     *
      * @public
      * @readonly
      */
     readonly pTCListManagementFailure: OPTIONAL<PTCListManagementFailure>;
     /**
      * @summary `pTCContactID`.
+     * @description
+     *
+     * Identity of the contact in the list. One contact per contact list or PTC
+     * group list. Report if known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.17.
+     *
      * @public
      * @readonly
      */
     readonly pTCContactID: OPTIONAL<PTCTargetInformation>;
     /**
      * @summary `pTCIDList`.
+     * @description
+     *
+     * Shall provide identities of each participant from the PTC target's
+     * contact list (i.e. individuals) and PTC group list (i.e. list of
+     * pre-identified individuals using a group identification) for a group
+     * call. Report if known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.17.
+     *
      * @public
      * @readonly
      */
     readonly pTCIDList: OPTIONAL<PTCIDList[]>;
     /**
      * @summary `pTCHost`.
+     * @description
+     *
+     * Identifies the PTC participant who has authority to initiate and
+     * administrate an active PTC group session. Provide when known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.17.
+     *
      * @public
      * @readonly
      */

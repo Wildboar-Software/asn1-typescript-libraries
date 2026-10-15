@@ -20,6 +20,12 @@ import { CauseMisc, _decode_CauseMisc, _encode_CauseMisc } from "../TS33128Paylo
  * @summary HandoverCause
  * @description
  * 
+ * The HandoverCause type is derived from the Cause type defined in TS 38.413
+ * [23] clause 9.3.1.2.
+ *
+ * 3GPP TS 33.128, clause 8.4.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,10 +41,45 @@ import { CauseMisc, _decode_CauseMisc, _encode_CauseMisc } from "../TS33128Paylo
  */
 export
 type HandoverCause =
+    /**
+     * @description
+     *
+     * Chosen when the cause indicated is one of the Radio Network Layer Causes.
+     *
+     * 3GPP TS 33.128, clause 8.4.1.
+     */
     { radioNetwork: CauseRadioNetwork } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the cause indicated is one of the Transport Layer Causes.
+     *
+     * 3GPP TS 33.128, clause 8.4.1.
+     */
     | { transport: CauseTransport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the cause indicated is one of the NAS Causes.
+     *
+     * 3GPP TS 33.128, clause 8.4.1.
+     */
     | { nas: CauseNas } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the cause indicated is one of the Protocol Causes.
+     *
+     * 3GPP TS 33.128, clause 8.4.1.
+     */
     | { protocol: CauseProtocol } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the cause indicated is one of the Miscellaneous Causes.
+     *
+     * 3GPP TS 33.128, clause 8.4.1.
+     */
     | { misc: CauseMisc } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

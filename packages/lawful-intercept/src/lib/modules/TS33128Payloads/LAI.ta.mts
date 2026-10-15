@@ -15,6 +15,12 @@ import { LAC, _decode_LAC, _encode_LAC } from "../TS33128Payloads/LAC.ta.mjs";
  * @summary LAI
  * @description
  * 
+ * The LAI type is composed of the PLMNID and the Location Area Code. LAI is
+ * derived from the data found in LAI parameter from TS 23.003 [19] clause 4.1.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.81.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +37,24 @@ export
 class LAI {
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * The PLMN Identity of the location area being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.81.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `lAC`.
+     * @description
+     *
+     * Location Area Code of the location area being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.81.
+     *
      * @public
      * @readonly
      */

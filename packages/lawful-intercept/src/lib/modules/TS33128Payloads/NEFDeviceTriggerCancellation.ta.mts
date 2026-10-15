@@ -17,6 +17,29 @@ import { TriggerID, _decode_TriggerID, _encode_TriggerID } from "../TS33128Paylo
  * @summary NEFDeviceTriggerCancellation
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing a
+ * NEFDeviceTriggerCancellation record when the IRI-POI present in the NEF
+ * detects that an AF has sent a Device trigger cancellation for a previously
+ * sent Device trigger to a UE matching one of the target identifiers provided
+ * via LI_X1 to the IRI-POI in the NEF. It cancels previously submitted Device
+ * trigger message which has not yet been delivered to the target UE.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - NEF receives a Nnef_Trigger_Delivery Request (for a device trigger
+ *   cancellation) with GPSI matching the target identifier as described in TS
+ *   29.522 [58] clause 4.4.3.
+ *
+ * - NEF sends a T4 Device-Trigger-Request (DTR) to SM-SC with Trigger-Action
+ *   AVP set to RECALL and User-Identifier AVP matching the SUPI of the target
+ *   UE as specified in TS 29.337 [60] clause 5.2.1.
+ *
+ * Table 7.7.3.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.3.1.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +57,36 @@ export
 class NEFDeviceTriggerCancellation {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `triggerId`.
+     * @description
+     *
+     * Identity of the corresponding device trigger to be cancelled.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.4.
+     *
      * @public
      * @readonly
      */

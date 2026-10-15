@@ -27,6 +27,13 @@ import { CellInformation, _decode_CellInformation, _encode_CellInformation } fro
  * @summary MMELocationInformation
  * @description
  * 
+ * The MMELocationInformation type contains the information related to the user
+ * location relevant for the MME. Derived from the data found in
+ * MME-Location-Information parameter from TS 29.272 [106] clause 7.3.115.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.78.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,54 +57,125 @@ export
 class MMELocationInformation {
     /**
      * @summary `eCGI`.
+     * @description
+     *
+     * Shall contain the E-UTRA Cell Identity when known at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */
     readonly eCGI: OPTIONAL<ECGI>;
     /**
      * @summary `tAI`.
+     * @description
+     *
+     * Shall contain the Tracking Area Identity when known at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */
     readonly tAI: OPTIONAL<TAI>;
     /**
      * @summary `geographicalInformation`.
+     * @description
+     *
+     * Shall contain the geographical Information of the target when known at
+     * the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */
     readonly geographicalInformation: OPTIONAL<GeographicalInformationOctet>;
     /**
      * @summary `geodeticInformation`.
+     * @description
+     *
+     * Shall contain the Geodetic Location of the target when known at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */
     readonly geodeticInformation: OPTIONAL<GeodeticInformationOctet>;
     /**
      * @summary `currentLocationRetrieved`.
+     * @description
+     *
+     * This value is used when location information was obtained after a
+     * successful paging procedure for Active Location Retrieval. Or after
+     * retrieving the most up-to-date location information from the eNB when the
+     * UE is in connected mode.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */
     readonly currentLocationRetrieved: OPTIONAL<BOOLEAN>;
     /**
      * @summary `ageOfLocationInformation`.
+     * @description
+     *
+     * The value represents the elapsed time in minutes since the last network
+     * contact of the mobile station. Value "0" indicates that the location
+     * information was obtained after a successful paging procedure for Active
+     * Location Retrieval when the UE is in idle mode or after a successful
+     * location reporting procedure with the eNB when the UE is in connected
+     * mode. Any other value than "0" indicates that the location information is
+     * the last known one. Shall be present if known at the NF where the POI is
+     * located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */
     readonly ageOfLocationInformation: OPTIONAL<INTEGER>;
     /**
      * @summary `userCSGInformation`.
+     * @description
+     *
+     * The UserCSGInformation type holds the user Closed Subscriber Group
+     * information associated to CSG cell access. Shall be present if known at
+     * the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */
     readonly userCSGInformation: OPTIONAL<UserCSGInformation>;
     /**
      * @summary `eNbID`.
+     * @description
+     *
+     * This field shall contain the identifier of the eNB in which the UE is
+     * currently located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */
     readonly eNbID: OPTIONAL<ENbID>;
     /**
      * @summary `additionalCellIDs`.
+     * @description
+     *
+     * This parameter shall be present if the NF has additional cell information
+     * for the UE. Shall be used whenever Dual Connectivity is activated or
+     * whenever secondary cell information is available at the NF where the POI
+     * is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.78.
+     *
      * @public
      * @readonly
      */

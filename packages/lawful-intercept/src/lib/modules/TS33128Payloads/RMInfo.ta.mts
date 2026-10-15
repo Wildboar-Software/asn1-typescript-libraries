@@ -15,6 +15,13 @@ import { AccessType, _decode_AccessType, _encode_AccessType, _enum_for_AccessTyp
  * @summary RMInfo
  * @description
  * 
+ * The RMInfo type is derived from the data present in the RMInfo type defined
+ * in TS 29.518 [22] clause 6.2.6.2.8. Table 7.3.3.2.49-1 contains the details
+ * for the RMInfo type.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.49.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,25 @@ export
 class RMInfo {
     /**
      * @summary `rMState`.
+     * @description
+     *
+     * Describes the registration management state of the UE.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.49.
+     *
      * @public
      * @readonly
      */
     readonly rMState: RMState;
     /**
      * @summary `accessType`.
+     * @description
+     *
+     * Describes the access type of the UE that applies to the registration
+     * management state reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.49.
+     *
      * @public
      * @readonly
      */

@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TAC
  * @description
  * 
+ * The tracking area code being reported. Given in the format specified in TS
+ * 38.413 [23] clause 9.3.3.10.
+ *
+ * 3GPP TS 33.128, clause 8.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IEFKeepaliveMessage
  * @description
  * 
+ * The IEF may transmit a keepalive request using the keepalive record defined
+ * in Annex F. Upon receiving a keepalive request, the ICF shall respond with a
+ * keepaliveResponse record containing the same sequence number used in the
+ * request. The circumstances under which the IEF transmits keepalive requests
+ * is out of scope of the present document.
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +37,14 @@ export
 class IEFKeepaliveMessage {
     /**
      * @summary `sequenceNumber`.
+     * @description
+     *
+     * Upon receiving a keepalive request, the ICF shall respond with a
+     * keepaliveResponse record containing the same sequence number used in the
+     * request.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.3.
+     *
      * @public
      * @readonly
      */

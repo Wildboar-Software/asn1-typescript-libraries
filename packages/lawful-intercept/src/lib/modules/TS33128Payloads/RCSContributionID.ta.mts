@@ -11,6 +11,13 @@ import { UUID, _decode_UUID, _encode_UUID } from "../TS33128Payloads/UUID.ta.mjs
  * @summary RCSContributionID
  * @description
  * 
+ * CPM Contribution Identity of an individual CPM Standalone Message, CPM File
+ * Transfer, or CPM Session (see OMA-TS-CPM_Conversation_Function [109] clause
+ * 5.3).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.1.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

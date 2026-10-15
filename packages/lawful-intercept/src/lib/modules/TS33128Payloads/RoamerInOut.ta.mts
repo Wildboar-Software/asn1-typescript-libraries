@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RoamerInOut
  * @description
  * 
+ * Derived from the roamerInOut field of the service specific charging
+ * information UserInformation field. Shall be included when contained in the
+ * UserInformation, (see TS 32.291 [148] clause 6.1.6.3.16).
+ *
+ * 3GPP TS 33.128, clause 7.19.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +36,13 @@ enum _enum_for_RoamerInOut {
  * @summary RoamerInOut
  * @description
  * 
+ * Derived from the roamerInOut field of the service specific charging
+ * information UserInformation field. Shall be included when contained in the
+ * UserInformation, (see TS 32.291 [148] clause 6.1.6.3.16).
+ *
+ * 3GPP TS 33.128, clause 7.19.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +62,13 @@ type RoamerInOut = _enum_for_RoamerInOut;
  * @summary RoamerInOut
  * @description
  * 
+ * Derived from the roamerInOut field of the service specific charging
+ * information UserInformation field. Shall be included when contained in the
+ * UserInformation, (see TS 32.291 [148] clause 6.1.6.3.16).
+ *
+ * 3GPP TS 33.128, clause 7.19.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

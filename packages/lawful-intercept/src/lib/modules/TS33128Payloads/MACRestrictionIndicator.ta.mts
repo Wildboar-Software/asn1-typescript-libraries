@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MACRestrictionIndicator
  * @description
  * 
+ * Indicates whether the non-IMEISV PEI MACAddress can be used as an equipment
+ * identifier. Required if non-IMEISVPEI is used, see TS 24.501 [13] clause
+ * 9.11.3.4.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +38,13 @@ enum _enum_for_MACRestrictionIndicator {
  * @summary MACRestrictionIndicator
  * @description
  * 
+ * Indicates whether the non-IMEISV PEI MACAddress can be used as an equipment
+ * identifier. Required if non-IMEISVPEI is used, see TS 24.501 [13] clause
+ * 9.11.3.4.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +65,13 @@ type MACRestrictionIndicator = _enum_for_MACRestrictionIndicator;
  * @summary MACRestrictionIndicator
  * @description
  * 
+ * Indicates whether the non-IMEISV PEI MACAddress can be used as an equipment
+ * identifier. Required if non-IMEISVPEI is used, see TS 24.501 [13] clause
+ * 9.11.3.4.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

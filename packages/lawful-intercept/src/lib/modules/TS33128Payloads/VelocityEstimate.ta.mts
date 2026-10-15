@@ -18,6 +18,12 @@ import { HorizontalWithVerticalVelocityAndUncertainty, _decode_HorizontalWithVer
  * @summary VelocityEstimate
  * @description
  * 
+ * The VelocityEstimate type is derived from the data present in
+ * VelocityEstimate type in TS 29.572 [24] clause 6.1.6.2.17.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.39.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,9 +38,45 @@ import { HorizontalWithVerticalVelocityAndUncertainty, _decode_HorizontalWithVer
  */
 export
 type VelocityEstimate =
+    /**
+     * @description
+     *
+     * Velocity estimate including horizontal speed and bearing. Shall be
+     * encoded as described in TS 29.572 [24] clause 6.1.6.2.18.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.39.
+     */
     { horVelocity: HorizontalVelocity } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Velocity estimate including horizontal speed and bearing, and also
+     * vertical speed and vertical direction. Shall be encoded as described in
+     * TS 29.572 [24] clause 6.1.6.2.19.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.39.
+     */
     | { horWithVertVelocity: HorizontalWithVerticalVelocity } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Velocity estimate including horizontal speed and bearing; it also
+     * includes an uncertainty value. Shall be encoded as described in TS 29.572
+     * [24] clause 6.1.6.2.20.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.39.
+     */
     | { horVelocityWithUncertainty: HorizontalVelocityWithUncertainty } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Velocity estimate including horizontal speed and bearing, and also
+     * vertical speed and vertical direction; it also includes uncertainty value
+     * for horizontal and vertical speeds. Shall be encoded as described in TS
+     * 29.572 [24] clause 6.1.6.2.21.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.39.
+     */
     | { horWithVertVelocityAndUncertainty: HorizontalWithVerticalVelocityAndUncertainty } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

@@ -28,6 +28,12 @@ export
 class MMEServedGUMMEI {
     /**
      * @summary `servedPLMNs`.
+     * @description
+     *
+     * A list of PLMNs served by the MME for the GUMMEI.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.14.
+     *
      * @public
      * @readonly
      */

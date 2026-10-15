@@ -15,6 +15,27 @@ import { SubscriberRecordChangePayload, _decode_SubscriberRecordChangePayload, _
  * @summary HSSSubscriberRecordChange
  * @description
  * 
+ * The IRI-POI in the HSS supporting the Nhss SBI shall generate an xIRI
+ * containing the HSSSubscriberRecordChange record when the IRI-POI present in
+ * the HSS detects that the EPC UE Context Management information has been
+ * updated for the target at the HSS (see TS 29.563 [100] clause 5.4.2.3).
+ * Accordingly, example triggers for this record include:
+ *
+ * - The HSS receives an Nhss_UECM_IMEIUpdateInfo (see TS 29.563 [100] clause
+ *   6.3.4.3) for which the HSS observes a change to the target's:
+ *
+ * - IMEI.
+ *
+ * - IMSI.
+ *
+ * - The HSS sends a Nhss_UECM_IMEIUpdateResponse (see TS 29.563 [100] clause
+ *   6.3.6.2.4) containing the target's:
+ *
+ * - Previous IMEI.
+ *
+ * 3GPP TS 33.128, clause 7.2.3.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +52,27 @@ export
 class HSSSubscriberRecordChange {
     /**
      * @summary `hSSIdentities`.
+     * @description
+     *
+     * Indicates the UE Identies provided in the UE context management service
+     * operation.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.4.
+     *
      * @public
      * @readonly
      */
     readonly hSSIdentities: HSSIdentities[];
     /**
      * @summary `subscriberRecordChangePayload`.
+     * @description
+     *
+     * Includes the payload related to the subscriberRecordChangeType indicated
+     * in the UECM Data type, see TS 29.563 [100] clause 6.3.6.1. Shall indicate
+     * either IMEIUpdateInfo, IMEIUpdateResponse.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.4.
+     *
      * @public
      * @readonly
      */

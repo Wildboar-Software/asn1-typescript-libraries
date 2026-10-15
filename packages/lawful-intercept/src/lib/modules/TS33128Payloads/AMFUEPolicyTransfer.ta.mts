@@ -23,6 +23,23 @@ import { UEPolicy, _decode_UEPolicy, _encode_UEPolicy } from "../TS33128Payloads
  * @summary AMFUEPolicyTransfer
  * @description
  * 
+ * The IRI-POI present in the AMF shall generate an xIRI containing an
+ * AMFUEPolicyTransfer record when the IRI-POI present in the AMF detects the
+ * following events:
+ *
+ * - AMF sends a Namf_Communication_N1MessageNotify Request (See TS 29.518 [22]
+ *   clause 5.2.2.3) related to the target UE containing the N1 NAS message
+ *   MANAGE UE POLICY COMPLETE. It confirms that UE policies forwarded by AMF to
+ *   the target UE in the N1 NAS message MANAGE UE POLICY COMMAND have been
+ *   accepted by the UE.
+ *
+ * NOTE: SUPI shall always be provided, in addition to the warrant target
+ * identifier if different to SUPI. Other identifiers shall be provided if
+ * available.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,36 +60,87 @@ export
 class AMFUEPolicyTransfer {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the procedure (see NOTE). NOTE: SUPI shall always be
+     * provided, in addition to the warrant target identifier if different to
+     * SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.12.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI used in the procedure, if applicable and if available (see NOTE).
+     * NOTE: SUPI shall always be provided, in addition to the warrant target
+     * identifier if different to SUPI. Other identifiers shall be provided if
+     * available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.12.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI used in the procedure, if available (see NOTE). NOTE: SUPI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.12.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used in the procedure, if available (see NOTE). NOTE: SUPI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.12.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI used in the procedure, see TS 24.501 [13] clause 9.11.3.4 (see
+     * NOTE). NOTE: SUPI shall always be provided, in addition to the warrant
+     * target identifier if different to SUPI. Other identifiers shall be
+     * provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.12.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<FiveGGUTI>;
     /**
      * @summary `uEPolicy`.
+     * @description
+     *
+     * Content of the N1 NAS message MANAGE UE POLICY COMMAND, as defined in TS
+     * 24.501 [13] table D.5.1.1.1 (see NOTE). NOTE: SUPI shall always be
+     * provided, in addition to the warrant target identifier if different to
+     * SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.12.
+     *
      * @public
      * @readonly
      */

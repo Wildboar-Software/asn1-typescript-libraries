@@ -26,7 +26,26 @@ import { ModifiedSIPMessage, _decode_ModifiedSIPMessage, _encode_ModifiedSIPMess
  */
 export
 type IMSPayload =
+    /**
+     * @description
+     *
+     * Contains the entire payload of the SIP message in the original encoding.
+     * Shall be chosen if the payload of the original SIP message contains only
+     * authorised information.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.1.
+     */
     { encapsulatedSIPMessage: SIPMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Contains the modified encapsulated SIP message and a list of the
+     * modifications performed. Shall be chosen if the original payload of the
+     * SIP message being reported contains any information that is not
+     * authorised.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.1.
+     */
     | { modifiedSIPMessage: ModifiedSIPMessage } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

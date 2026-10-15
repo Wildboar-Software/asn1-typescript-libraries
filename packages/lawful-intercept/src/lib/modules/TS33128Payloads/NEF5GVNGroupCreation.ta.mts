@@ -17,6 +17,23 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary NEF5GVNGroupCreation
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing a
+ * NEF5GVNGroupCreation record when the IRI-POI present in the NEF detects that
+ * an AF has created a 5G Virtual Network (VN) group the target UE belongs to.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when any of the
+ * following event is detected:
+ *
+ * - NEF sends a Nnef_ParameterProvision_Create Response to the AF to
+ *   acknowledge the reception of Nnef_ParameterProvision_Create Request which
+ *   contains the GPSIs of the group members including the GPSI of the target UE
+ *   (see TS 23.502 [4] clause 5.2.6.4.3 and TS 29.522 [58] clause 5.7.1.2).
+ *
+ * Table 7.7.7.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.7.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +51,39 @@ export
 class NEF5GVNGroupCreation {
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * Identity of the AF requesting to create the 5G VN group.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aFID: AFID;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE, member of the created 5G VN group.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.2.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `fiveGLanParametersProvision`.
+     * @description
+     *
+     * Shall include an 5GLanParametersProvision resource according to TS 29.522
+     * [58] clause A.5. The SBIReference for this parameter shall be populated
+     * with
+     * ‘TS29522_5GLANParameterProvision.yaml#/components/schemas/5GLanParametersProvision'.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.2.
+     *
      * @public
      * @readonly
      */

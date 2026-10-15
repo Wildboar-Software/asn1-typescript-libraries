@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceLevelAAContainer
  * @description
  * 
+ * Provides information related to registration for UAS services. Include if
+ * present in the REGISTRATION ACCEPT message. See TS 24.501 [13] clause 8.2.7
+ * and 9.11.2.10.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

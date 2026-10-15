@@ -7,6 +7,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCSessionEndCause
  * @description
  * 
+ * Shall identify the reason for the PTC session end based on the following
+ * events per OMA-TS-PoC_System_Description-V2_1-20110802-A [56] clause 4.5.7: -
+ * PTC session initiator leaves session. - Defined participant leaves session. -
+ * Number of participants less than certain value. - PTC Session timer expired.
+ * - PTC Speech inactive for specified time. - All Media types inactive for
+ * specified time.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +47,16 @@ enum _enum_for_PTCSessionEndCause {
  * @summary PTCSessionEndCause
  * @description
  * 
+ * Shall identify the reason for the PTC session end based on the following
+ * events per OMA-TS-PoC_System_Description-V2_1-20110802-A [56] clause 4.5.7: -
+ * PTC session initiator leaves session. - Defined participant leaves session. -
+ * Number of participants less than certain value. - PTC Session timer expired.
+ * - PTC Speech inactive for specified time. - All Media types inactive for
+ * specified time.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,6 +80,16 @@ type PTCSessionEndCause = _enum_for_PTCSessionEndCause;
  * @summary PTCSessionEndCause
  * @description
  * 
+ * Shall identify the reason for the PTC session end based on the following
+ * events per OMA-TS-PoC_System_Description-V2_1-20110802-A [56] clause 4.5.7: -
+ * PTC session initiator leaves session. - Defined participant leaves session. -
+ * Number of participants less than certain value. - PTC Session timer expired.
+ * - PTC Speech inactive for specified time. - All Media types inactive for
+ * specified time.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

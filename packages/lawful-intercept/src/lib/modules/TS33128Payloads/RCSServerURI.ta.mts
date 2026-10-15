@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RCSServerURI
  * @description
  * 
+ * The identity of the RCS Server serving the user. Shall contain a SIP URI or
+ * tel URI for the RCS Server.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.1.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

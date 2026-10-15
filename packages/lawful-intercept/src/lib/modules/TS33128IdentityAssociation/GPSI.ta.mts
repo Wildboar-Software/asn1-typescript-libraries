@@ -14,6 +14,11 @@ import { NAI, _decode_NAI, _encode_NAI } from "../TS33128IdentityAssociation/NAI
  * @summary GPSI
  * @description
  * 
+ * GPSI, (see NOTE 1).
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +31,19 @@ import { NAI, _decode_NAI, _encode_NAI } from "../TS33128IdentityAssociation/NAI
  */
 export
 type GPSI =
+    /**
+     * @description
+     *
+     * Derived from the MSISDN defined in TS 23.003 [19] clause 3.3. (3GPP TS
+     * 33.128, clause 8.3.3.)
+     */
     { gPSIMSISDN: MSISDN } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * A network access identifier as defined in TS 23.003 [19] clause 2.8.7.
+     * (3GPP TS 33.128, clause 8.3.3.)
+     */
     | { gPSINAI: NAI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

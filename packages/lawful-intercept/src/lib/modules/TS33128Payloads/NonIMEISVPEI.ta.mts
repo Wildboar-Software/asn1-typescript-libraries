@@ -14,6 +14,11 @@ import { EUI64, _decode_EUI64, _encode_EUI64 } from "../TS33128Payloads/EUI64.ta
  * @summary NonIMEISVPEI
  * @description
  * 
+ * The NonIMEISVPEI type is used when IMEI or IMEISV based PEI is not available.
+ *
+ * 3GPP TS 33.128, clause 8.3.11.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +31,21 @@ import { EUI64, _decode_EUI64, _encode_EUI64 } from "../TS33128Payloads/EUI64.ta
  */
 export
 type NonIMEISVPEI =
+    /**
+     * @description
+     *
+     * Chosen when the field contains a GUTI.
+     *
+     * 3GPP TS 33.128, clause 8.3.11.
+     */
     { mACAddress: MACAddress } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the field contains a 5G-GUTI.
+     *
+     * 3GPP TS 33.128, clause 8.3.11.
+     */
     | { eUI64: EUI64 } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

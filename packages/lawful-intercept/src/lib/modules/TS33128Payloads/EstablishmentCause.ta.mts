@@ -7,6 +7,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EstablishmentCause
  * @description
  * 
+ * The EstablishmentCause provides information on reason RRC was established.
+ * Derived from the RRC Establishment Cause type defined in TS 38.413 [23]
+ * clause 9.3.1.111. and the RRC Establishment Cause type defined in TS 36.413
+ * [38] clause 9.2.1.3a.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,17 +39,101 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EstablishmentCause {
+    /**
+     * @description
+     *
+     * Connection established Emergency connection.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     emergency = 1,
+    /**
+     * @description
+     *
+     * Connection established for a High priority access connection.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     highPriorityAccess = 2,
+    /**
+     * @description
+     *
+     * Connection established as a result of a page.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     mtAccess = 3,
+    /**
+     * @description
+     *
+     * Connection established for mobile originated signalling.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     moSignalling = 4,
+    /**
+     * @description
+     *
+     * Connection established for mobile originated data.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     moData = 5,
+    /**
+     * @description
+     *
+     * Connection established for mobile originated voice call.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     moVoiceCall = 6,
+    /**
+     * @description
+     *
+     * Connection established for mobile originated video call.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     moVideoCall = 7,
+    /**
+     * @description
+     *
+     * Connection established for mobile originated SMS.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     moSMS = 8,
+    /**
+     * @description
+     *
+     * Connection established for MPS Priority Access.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     mpsPriorityAccess = 9,
+    /**
+     * @description
+     *
+     * Connection established for MCS Priority Access.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     mcsPriorityAccess = 10,
+    /**
+     * @description
+     *
+     * Not available.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     notAvailable = 11,
+    /**
+     * @description
+     *
+     * Exception Data.
+     *
+     * 3GPP TS 33.128, clause 8.5.8.
+     */
     exceptionData = 12,
 }
 
@@ -49,6 +141,14 @@ enum _enum_for_EstablishmentCause {
  * @summary EstablishmentCause
  * @description
  * 
+ * The EstablishmentCause provides information on reason RRC was established.
+ * Derived from the RRC Establishment Cause type defined in TS 38.413 [23]
+ * clause 9.3.1.111. and the RRC Establishment Cause type defined in TS 36.413
+ * [38] clause 9.2.1.3a.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -78,6 +178,14 @@ type EstablishmentCause = _enum_for_EstablishmentCause;
  * @summary EstablishmentCause
  * @description
  * 
+ * The EstablishmentCause provides information on reason RRC was established.
+ * Derived from the RRC Establishment Cause type defined in TS 38.413 [23]
+ * clause 9.3.1.111. and the RRC Establishment Cause type defined in TS 36.413
+ * [38] clause 9.2.1.3a.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -105,6 +213,12 @@ const EstablishmentCause = _enum_for_EstablishmentCause;
 
 /**
  * @summary EstablishmentCause_emergency
+ * @description
+ *
+ * Connection established Emergency connection.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +227,12 @@ const EstablishmentCause_emergency: EstablishmentCause = EstablishmentCause.emer
 
 /**
  * @summary emergency
+ * @description
+ *
+ * Connection established Emergency connection.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +241,12 @@ const emergency: EstablishmentCause = EstablishmentCause.emergency; /* SHORT_NAM
 
 /**
  * @summary EstablishmentCause_highPriorityAccess
+ * @description
+ *
+ * Connection established for a High priority access connection.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +255,12 @@ const EstablishmentCause_highPriorityAccess: EstablishmentCause = EstablishmentC
 
 /**
  * @summary highPriorityAccess
+ * @description
+ *
+ * Connection established for a High priority access connection.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +269,12 @@ const highPriorityAccess: EstablishmentCause = EstablishmentCause.highPriorityAc
 
 /**
  * @summary EstablishmentCause_mtAccess
+ * @description
+ *
+ * Connection established as a result of a page.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +283,12 @@ const EstablishmentCause_mtAccess: EstablishmentCause = EstablishmentCause.mtAcc
 
 /**
  * @summary mtAccess
+ * @description
+ *
+ * Connection established as a result of a page.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +297,12 @@ const mtAccess: EstablishmentCause = EstablishmentCause.mtAccess; /* SHORT_NAMED
 
 /**
  * @summary EstablishmentCause_moSignalling
+ * @description
+ *
+ * Connection established for mobile originated signalling.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +311,12 @@ const EstablishmentCause_moSignalling: EstablishmentCause = EstablishmentCause.m
 
 /**
  * @summary moSignalling
+ * @description
+ *
+ * Connection established for mobile originated signalling.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +325,12 @@ const moSignalling: EstablishmentCause = EstablishmentCause.moSignalling; /* SHO
 
 /**
  * @summary EstablishmentCause_moData
+ * @description
+ *
+ * Connection established for mobile originated data.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +339,12 @@ const EstablishmentCause_moData: EstablishmentCause = EstablishmentCause.moData;
 
 /**
  * @summary moData
+ * @description
+ *
+ * Connection established for mobile originated data.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -185,6 +353,12 @@ const moData: EstablishmentCause = EstablishmentCause.moData; /* SHORT_NAMED_ENU
 
 /**
  * @summary EstablishmentCause_moVoiceCall
+ * @description
+ *
+ * Connection established for mobile originated voice call.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +367,12 @@ const EstablishmentCause_moVoiceCall: EstablishmentCause = EstablishmentCause.mo
 
 /**
  * @summary moVoiceCall
+ * @description
+ *
+ * Connection established for mobile originated voice call.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -201,6 +381,12 @@ const moVoiceCall: EstablishmentCause = EstablishmentCause.moVoiceCall; /* SHORT
 
 /**
  * @summary EstablishmentCause_moVideoCall
+ * @description
+ *
+ * Connection established for mobile originated video call.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -209,6 +395,12 @@ const EstablishmentCause_moVideoCall: EstablishmentCause = EstablishmentCause.mo
 
 /**
  * @summary moVideoCall
+ * @description
+ *
+ * Connection established for mobile originated video call.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -217,6 +409,12 @@ const moVideoCall: EstablishmentCause = EstablishmentCause.moVideoCall; /* SHORT
 
 /**
  * @summary EstablishmentCause_moSMS
+ * @description
+ *
+ * Connection established for mobile originated SMS.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -225,6 +423,12 @@ const EstablishmentCause_moSMS: EstablishmentCause = EstablishmentCause.moSMS; /
 
 /**
  * @summary moSMS
+ * @description
+ *
+ * Connection established for mobile originated SMS.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -233,6 +437,12 @@ const moSMS: EstablishmentCause = EstablishmentCause.moSMS; /* SHORT_NAMED_ENUME
 
 /**
  * @summary EstablishmentCause_mpsPriorityAccess
+ * @description
+ *
+ * Connection established for MPS Priority Access.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -241,6 +451,12 @@ const EstablishmentCause_mpsPriorityAccess: EstablishmentCause = EstablishmentCa
 
 /**
  * @summary mpsPriorityAccess
+ * @description
+ *
+ * Connection established for MPS Priority Access.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -249,6 +465,12 @@ const mpsPriorityAccess: EstablishmentCause = EstablishmentCause.mpsPriorityAcce
 
 /**
  * @summary EstablishmentCause_mcsPriorityAccess
+ * @description
+ *
+ * Connection established for MCS Priority Access.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -257,6 +479,12 @@ const EstablishmentCause_mcsPriorityAccess: EstablishmentCause = EstablishmentCa
 
 /**
  * @summary mcsPriorityAccess
+ * @description
+ *
+ * Connection established for MCS Priority Access.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -265,6 +493,12 @@ const mcsPriorityAccess: EstablishmentCause = EstablishmentCause.mcsPriorityAcce
 
 /**
  * @summary EstablishmentCause_notAvailable
+ * @description
+ *
+ * Not available.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -273,6 +507,12 @@ const EstablishmentCause_notAvailable: EstablishmentCause = EstablishmentCause.n
 
 /**
  * @summary notAvailable
+ * @description
+ *
+ * Not available.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -281,6 +521,12 @@ const notAvailable: EstablishmentCause = EstablishmentCause.notAvailable; /* SHO
 
 /**
  * @summary EstablishmentCause_exceptionData
+ * @description
+ *
+ * Exception Data.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */
@@ -289,6 +535,12 @@ const EstablishmentCause_exceptionData: EstablishmentCause = EstablishmentCause.
 
 /**
  * @summary exceptionData
+ * @description
+ *
+ * Exception Data.
+ *
+ * 3GPP TS 33.128, clause 8.5.8.
+ *
  * @constant
  * @type {number}
  */

@@ -28,6 +28,25 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary RCSSessionModification
  * @description
  * 
+ * The IRI-POI in the RCS Server shall generate an RCSSessionModification record
+ * when the IRI-POI in the RCS Server detects any of the following:
+ *
+ * - A request is sent to request the next leg of a SIP Session or a response is
+ *   received establishing a SIP Session for the transfer of a Large Message
+ *   Mode CPM Standalone message or a CPM 1-to-1 Chat Session.
+ *
+ * - A previously established SIP session for the transfer of a Large Message
+ *   Mode CPM Standalone message to or from a target has been modified (see
+ *   clause 7.13.3.4.3.2).
+ *
+ * - A CPM 1-to-1 Chat Session established for the target's communications has
+ *   been modified (see clause 7.13.3.4.3.3).
+ *
+ * Table 7.13.4-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,60 +71,136 @@ export
 class RCSSessionModification {
     /**
      * @summary `rCSTargetIdentities`.
+     * @description
+     *
+     * RCS target identities. All identities associated to the target known at
+     * the POI shall be included.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSTargetIdentities: RCSIdentity[];
     /**
      * @summary `conversationID`.
+     * @description
+     *
+     * Set to the value of the Conversion-ID header in the original SIP INVITE
+     * request.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly conversationID: RCSConversationID;
     /**
      * @summary `contributionID`.
+     * @description
+     *
+     * Set to the value of the Contribution-ID header in the original SIP INVITE
+     * request.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly contributionID: RCSContributionID;
     /**
      * @summary `inReplyToContributionID`.
+     * @description
+     *
+     * InReplyTo-Contribution-ID identifying the Contribution-ID of the CPM
+     * Standalone Message, CPM File Transfer or CPM Session that is being
+     * replied to (see OMA-TS-CPM_Conversation_Function [109] clause 5.3). Shall
+     * be included if the InReplyTo-Contribution-ID header field is present for
+     * the message being reported.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly inReplyToContributionID: OPTIONAL<RCSContributionID>;
     /**
      * @summary `sessionReplaces`.
+     * @description
+     *
+     * The Contribution-ID present in the Session-Replaces header of the SIP
+     * INVITE identifying the Contribution-ID of the CPM 1-to-1 Chat Session
+     * that is being replaced to (see OMA-TS-CPM_Conversation_Function [109]
+     * clause 5.3). Shall be included if the Session-Replaces header field is
+     * present for the message being reported.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly sessionReplaces: OPTIONAL<RCSContributionID>;
     /**
      * @summary `rCSSessionType`.
+     * @description
+     *
+     * Indicates the type of RCSSession.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSSessionType: RCSSessionType;
     /**
      * @summary `sessionDirection`.
+     * @description
+     *
+     * Shall be provided to identify the direction of the session relative to
+     * the target: "toTarget" or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly sessionDirection: Direction;
     /**
      * @summary `sessionEndpoints`.
+     * @description
+     *
+     * Indicates whether the session continues through the server or is
+     * terminated at the server.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly sessionEndpoints: RCSSessionEndpoints;
     /**
      * @summary `rCSSIPSessionMessage`.
+     * @description
+     *
+     * Shall contain the SIP message that triggered the xIRI, an indication of
+     * whether the establishment or removal of a leg has been attempted or
+     * completed.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSSIPSessionMessage: RCSSIPSessionMessage;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the target’s location when reporting of the target’s
+     * location information is authorized and available.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.3.1.
+     *
      * @public
      * @readonly
      */

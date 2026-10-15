@@ -32,9 +32,37 @@ import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs
  */
 export
 type FiveGSSubscriberID =
+    /**
+     * @description
+     *
+     * Chosen when the identifier being reported is a SUPI.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.4.
+     */
     { sUPI: SUPI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the identifier being reported is a SUCI.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.4.
+     */
     | { sUCI: SUCI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the identifier being reported is a PEI.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.4.
+     */
     | { pEI: PEI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the identifier being reported is a GPSI.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.4.
+     */
     | { gPSI: GPSI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

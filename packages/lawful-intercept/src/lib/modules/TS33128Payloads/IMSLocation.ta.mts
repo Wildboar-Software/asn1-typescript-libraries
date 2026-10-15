@@ -17,6 +17,11 @@ import { SIPCNIHeaderInfo, _decode_SIPCNIHeaderInfo, _encode_SIPCNIHeaderInfo } 
  * @summary IMSLocation
  * @description
  * 
+ * The IMSLocation type is used to report information derived from the IMS.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.57.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,45 @@ export
 class IMSLocation {
     /**
      * @summary `pANIHeaderInfo`.
+     * @description
+     *
+     * Contains information from the P-Access-Network-Information header of the
+     * SIP Message. Shall be present if there are one or more PANI Header fields
+     * in the SIP message. One instance of PANIHeaderInfo shall be used for each
+     * P-Access-Network-Information header.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.57.
+     *
      * @public
      * @readonly
      */
     readonly pANIHeaderInfo: OPTIONAL<PANIHeaderInfo[]>;
     /**
      * @summary `geolocationHeaderInfo`.
+     * @description
+     *
+     * Contains the information from the Geolocation-header of the SIP Message.
+     * Shall be present if there are one or more Geolocation-header fields. One
+     * instance of SIPGeolocationHeaderInfo shall be used for each
+     * Geolocation-header.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.57.
+     *
      * @public
      * @readonly
      */
     readonly geolocationHeaderInfo: OPTIONAL<SIPGeolocationHeaderInfo[]>;
     /**
      * @summary `cNIHeaderInfo`.
+     * @description
+     *
+     * Contains the information from the Cellular-Network-Info header of the SIP
+     * Message. Shall be present if there are one or more Cellular-Network-Info
+     * header fields. One instance of SIPCNIHeaderInfo shall be used for each
+     * Cellular-Network-Info header.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.57.
+     *
      * @public
      * @readonly
      */

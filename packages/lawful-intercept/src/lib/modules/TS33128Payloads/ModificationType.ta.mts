@@ -30,7 +30,18 @@ import { PayloadInformationReplacedWithCharacters, _decode_PayloadInformationRep
  */
 export
 type ModificationType =
+    /**
+     * @description
+     *
+     * Indicates that modification being described was the removal of
+     * information from the modifiedPayload.
+     */
     { removed: PayloadInformationRemoved } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates that the information was replaced with characters.
+     */
     | { replacedWithCharacters: PayloadInformationReplacedWithCharacters } /* CHOICE_ALT_ROOT */
     | { replacedWithOctets: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | { replacedWithBits: BIT_STRING } /* CHOICE_ALT_ROOT */

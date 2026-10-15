@@ -7,6 +7,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NAOperationType
  * @description
  * 
+ * Type of operation applied to the network assistance resource, i.e.
+ * createNetworkAssistanceSession, retrieveNetworkAssistanceSession,
+ * updateNetworkAssistanceSession, patchNetworkAssistanceSession,
+ * destroyNetworkAssistanceSession, requestBitRateRecommendation and
+ * requestDeliveryBoost.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +48,15 @@ enum _enum_for_NAOperationType {
  * @summary NAOperationType
  * @description
  * 
+ * Type of operation applied to the network assistance resource, i.e.
+ * createNetworkAssistanceSession, retrieveNetworkAssistanceSession,
+ * updateNetworkAssistanceSession, patchNetworkAssistanceSession,
+ * destroyNetworkAssistanceSession, requestBitRateRecommendation and
+ * requestDeliveryBoost.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,6 +81,15 @@ type NAOperationType = _enum_for_NAOperationType;
  * @summary NAOperationType
  * @description
  * 
+ * Type of operation applied to the network assistance resource, i.e.
+ * createNetworkAssistanceSession, retrieveNetworkAssistanceSession,
+ * updateNetworkAssistanceSession, patchNetworkAssistanceSession,
+ * destroyNetworkAssistanceSession, requestBitRateRecommendation and
+ * requestDeliveryBoost.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

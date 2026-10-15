@@ -12,6 +12,12 @@ import { EncapsulatedRfChargingData, _decode_EncapsulatedRfChargingData, _encode
  * @summary DiameterChargingData
  * @description
  * 
+ * Shall contain the Charging Data Request (See TS 32.299 [111] clause 5.1.2).
+ * message which triggered the xIRI in its original format.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +29,13 @@ import { EncapsulatedRfChargingData, _decode_EncapsulatedRfChargingData, _encode
  */
 export
 type DiameterChargingData =
+    /**
+     * @description
+     *
+     * Shall contain the octets of the Diameter message ACR (Accounting Request)
+     * as defined in clause TS 32.299 [111] clause 6.2.2. (3GPP TS 33.128,
+     * clause 7.19.3.11.)
+     */
     { fullDiameterChargingData: EncapsulatedRfChargingData } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

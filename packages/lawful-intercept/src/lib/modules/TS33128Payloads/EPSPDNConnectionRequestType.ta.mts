@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSPDNConnectionRequestType
  * @description
  * 
+ * Type of request as derived from the Request Type described in TS 24.301 [50]
+ * clause 9.9.4.14 and TS 24.008 [95] clause 10.5.6.17, if available.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +43,12 @@ enum _enum_for_EPSPDNConnectionRequestType {
  * @summary EPSPDNConnectionRequestType
  * @description
  * 
+ * Type of request as derived from the Request Type described in TS 24.301 [50]
+ * clause 9.9.4.14 and TS 24.008 [95] clause 10.5.6.17, if available.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,6 +72,12 @@ type EPSPDNConnectionRequestType = _enum_for_EPSPDNConnectionRequestType;
  * @summary EPSPDNConnectionRequestType
  * @description
  * 
+ * Type of request as derived from the Request Type described in TS 24.301 [50]
+ * clause 9.9.4.14 and TS 24.008 [95] clause 10.5.6.17, if available.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

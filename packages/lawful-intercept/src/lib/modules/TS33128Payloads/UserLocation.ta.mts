@@ -23,6 +23,14 @@ import { PLMNLocation, _decode_PLMNLocation, _encode_PLMNLocation } from "../TS3
  * @summary UserLocation
  * @description
  * 
+ * The UserLocation type is derived from the data present in the UserLocation
+ * type defined in TS 29.571 [17] clause 5.4.4.7. If the NF has locations from
+ * multiple RAT types, all appropriate location fields within the userLocation
+ * parameter shall be used.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,36 +51,90 @@ export
 class UserLocation {
     /**
      * @summary `eUTRALocation`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * EutraLocation type defined in TS 29.571 [17] clause 5.4.4.8. See clause
+     * 7.3.3.2.5 for details on this data type. This parameter shall be present
+     * if an EUTRA Location is available at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.4.
+     *
      * @public
      * @readonly
      */
     readonly eUTRALocation: OPTIONAL<EUTRALocation>;
     /**
      * @summary `nRLocation`.
+     * @description
+     *
+     * Location information type derived from the data present in the NrLocation
+     * type defined in TS 29.571 [17] clause 5.4.4.9. See clause 7.3.3.2.6 for
+     * details on this data type. This parameter shall be present if an NR
+     * Location is available at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.4.
+     *
      * @public
      * @readonly
      */
     readonly nRLocation: OPTIONAL<NRLocation>;
     /**
      * @summary `n3GALocation`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * N3gaLocation type defined in TS 29.571 [17] clause 5.4.4.10. See clause
+     * 7.3.3.2.7 for details on this data type. This parameter shall be present
+     * if a non-3GPP access Location is available at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.4.
+     *
      * @public
      * @readonly
      */
     readonly n3GALocation: OPTIONAL<N3GALocation>;
     /**
      * @summary `uTRALocation`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * UtraLocation type defined in TS 29.571 [17] clause 5.4.4.52. See clause
+     * 7.3.3.2.8 for details on this data type. This parameter shall be present
+     * if a UTRAN Access Location is available at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.4.
+     *
      * @public
      * @readonly
      */
     readonly uTRALocation: OPTIONAL<UTRALocation>;
     /**
      * @summary `gERALocation`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * GeraLocation type defined in TS 29.571 [17] clause 5.4.4.53. See clause
+     * 7.3.3.2.9 for details on this data type. This parameter shall be present
+     * if a GERAN Access Location is available at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.4.
+     *
      * @public
      * @readonly
      */
     readonly gERALocation: OPTIONAL<GERALocation>;
     /**
      * @summary `pLMNLocation`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * PlmnLocation type defined in TS 29.571 [17] clause 5.4.4.99. See clause
+     * 7.3.3.2.86 for details on this data type. This parameter shall be present
+     * if a PLMN Location is available at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.4.
+     *
      * @public
      * @readonly
      */

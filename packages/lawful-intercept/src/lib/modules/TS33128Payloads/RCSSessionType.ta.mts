@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RCSSessionType
  * @description
  * 
+ * The RCSSessionType shall be set to indicate the type of RCS Session being
+ * reported.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +27,23 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_RCSSessionType {
+    /**
+     * @description
+     *
+     * Shall be selected if the session being reported is related to a Large
+     * Message Mode CPM Standalone Message.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+     */
     largeMessageStandalone = 1,
+    /**
+     * @description
+     *
+     * Shall be selected if the session being reported is a one-to-one chat
+     * session (see GSMA RCC.07 [78] clause 3.2.3).
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+     */
     oneTo1Chat = 2,
 }
 
@@ -29,6 +51,12 @@ enum _enum_for_RCSSessionType {
  * @summary RCSSessionType
  * @description
  * 
+ * The RCSSessionType shall be set to indicate the type of RCS Session being
+ * reported.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +76,12 @@ type RCSSessionType = _enum_for_RCSSessionType;
  * @summary RCSSessionType
  * @description
  * 
+ * The RCSSessionType shall be set to indicate the type of RCS Session being
+ * reported.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +99,13 @@ const RCSSessionType = _enum_for_RCSSessionType;
 
 /**
  * @summary RCSSessionType_largeMessageStandalone
+ * @description
+ *
+ * Shall be selected if the session being reported is related to a Large Message
+ * Mode CPM Standalone Message.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +114,13 @@ const RCSSessionType_largeMessageStandalone: RCSSessionType = RCSSessionType.lar
 
 /**
  * @summary largeMessageStandalone
+ * @description
+ *
+ * Shall be selected if the session being reported is related to a Large Message
+ * Mode CPM Standalone Message.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +129,13 @@ const largeMessageStandalone: RCSSessionType = RCSSessionType.largeMessageStanda
 
 /**
  * @summary RCSSessionType_oneTo1Chat
+ * @description
+ *
+ * Shall be selected if the session being reported is a one-to-one chat session
+ * (see GSMA RCC.07 [78] clause 3.2.3).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +144,13 @@ const RCSSessionType_oneTo1Chat: RCSSessionType = RCSSessionType.oneTo1Chat; /* 
 
 /**
  * @summary oneTo1Chat
+ * @description
+ *
+ * Shall be selected if the session being reported is a one-to-one chat session
+ * (see GSMA RCC.07 [78] clause 3.2.3).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.1.
+ *
  * @constant
  * @type {number}
  */

@@ -21,6 +21,12 @@ import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Pa
  * @summary UPPathChange
  * @description
  * 
+ * Notification of the UPPathChange event. This IE is defined in TS 29.508 [90],
+ * if available, see table 5.6.2.5-1.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

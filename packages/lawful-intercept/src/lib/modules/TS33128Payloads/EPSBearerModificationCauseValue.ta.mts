@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSBearerModificationCauseValue
  * @description
  * 
+ * Shall indicate whether the bearer handling was successful and if not, it
+ * gives information on the reason (see TS 29.274 [87] clauses 7.2.7, 7.2.8,
+ * 7.2.15 and 7.2.16). Sent as an integer cause value (see TS 29.274 [87] table
+ * 8.4-1)
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

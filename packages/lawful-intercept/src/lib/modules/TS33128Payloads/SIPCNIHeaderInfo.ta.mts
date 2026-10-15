@@ -17,6 +17,13 @@ import { SIPLocationInfo, _decode_SIPLocationInfo, _encode_SIPLocationInfo } fro
  * @summary SIPCNIHeaderInfo
  * @description
  * 
+ * The SIPCellularLocationInfo type is used to report cellular access network
+ * information derived from the Cellular-Network-Info (CNI) header of a SIP
+ * message (see TS 24.229 [74] clause 7.2.15.7).
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.61.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,42 @@ export
 class SIPCNIHeaderInfo {
     /**
      * @summary `cellularNetworkInformation`.
+     * @description
+     *
+     * Provides non-location related cellular network information.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.61.
+     *
      * @public
      * @readonly
      */
     readonly cellularNetworkInformation: SIPCellularNetworkInformation;
     /**
      * @summary `cellularAccessInfo`.
+     * @description
+     *
+     * Contains the location related information from the cellular-access-info
+     * field parameter of the CNI Header (see TS 24.229 [74] clause 7.2.15.7).
+     * Shall be present if the cellular-access-info field parameter of the CNI
+     * Header is present.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.61.
+     *
      * @public
      * @readonly
      */
     readonly cellularAccessInfo: OPTIONAL<SIPCellularAccessInfo[]>;
     /**
      * @summary `cNILocation`.
+     * @description
+     *
+     * Contains the location information from the CNI header in the LocationInfo
+     * structure. One instance of SIPLocationInfo shall be present for each
+     * cellular-access-info field parameter of a type that can be mapped to the
+     * LocationInfo structure.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.61.
+     *
      * @public
      * @readonly
      */

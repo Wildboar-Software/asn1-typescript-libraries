@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PDNConnectionType
  * @description
  * 
+ * Identifies selected PDN session type, see TS 29.274 [87] clause 8.34.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +40,11 @@ enum _enum_for_PDNConnectionType {
  * @summary PDNConnectionType
  * @description
  * 
+ * Identifies selected PDN session type, see TS 29.274 [87] clause 8.34.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +67,11 @@ type PDNConnectionType = _enum_for_PDNConnectionType;
  * @summary PDNConnectionType
  * @description
  * 
+ * Identifies selected PDN session type, see TS 29.274 [87] clause 8.34.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,12 @@ import { UDMProblemDetailsCause, _decode_UDMProblemDetailsCause, _encode_UDMProb
  * @summary UDMProblemDetails
  * @description
  * 
+ * Shall Indicate reason for AuthenticationInfoResultfailure. Shall be included
+ * if failure occurs. See TS 29.571 [17] clause 5.2.4.1.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

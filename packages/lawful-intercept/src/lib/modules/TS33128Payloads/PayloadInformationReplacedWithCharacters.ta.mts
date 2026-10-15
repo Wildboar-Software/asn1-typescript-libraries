@@ -28,6 +28,14 @@ export
 class PayloadInformationReplacedWithCharacters {
     /**
      * @summary `characters`.
+     * @description
+     *
+     * Shall contain the characters used to replace the information. If the
+     * length of the information being replaced is longer than the string
+     * included in this parameter, the value included in this parameter is
+     * repeated until the full length of the information being replaced is
+     * filled. The replacement shall be done using the encoding.
+     *
      * @public
      * @readonly
      */

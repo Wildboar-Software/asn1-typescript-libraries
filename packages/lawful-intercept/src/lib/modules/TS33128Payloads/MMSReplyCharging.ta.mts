@@ -7,6 +7,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSReplyCharging
  * @description
  * 
+ * If this field is present its value is set to "accepted" or "accepted text
+ * only" and the MMS-version-value of the M-Notification.ind PDU is higher than
+ * 1.0, this header field will indicate that a reply to this particular MM is
+ * free of charge for the recipient. If the Reply-Charging service is offered
+ * and the request for reply-charging has been accepted by the MMS service
+ * provider the value of this header field SHALL be set to "accepted" or
+ * "accepted text only". See OMA-TS-MMS_ENC [39] clause 7.3.43. Include if sent
+ * to the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +45,18 @@ enum _enum_for_MMSReplyCharging {
  * @summary MMSReplyCharging
  * @description
  * 
+ * If this field is present its value is set to "accepted" or "accepted text
+ * only" and the MMS-version-value of the M-Notification.ind PDU is higher than
+ * 1.0, this header field will indicate that a reply to this particular MM is
+ * free of charge for the recipient. If the Reply-Charging service is offered
+ * and the request for reply-charging has been accepted by the MMS service
+ * provider the value of this header field SHALL be set to "accepted" or
+ * "accepted text only". See OMA-TS-MMS_ENC [39] clause 7.3.43. Include if sent
+ * to the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +78,18 @@ type MMSReplyCharging = _enum_for_MMSReplyCharging;
  * @summary MMSReplyCharging
  * @description
  * 
+ * If this field is present its value is set to "accepted" or "accepted text
+ * only" and the MMS-version-value of the M-Notification.ind PDU is higher than
+ * 1.0, this header field will indicate that a reply to this particular MM is
+ * free of charge for the recipient. If the Reply-Charging service is offered
+ * and the request for reply-charging has been accepted by the MMS service
+ * provider the value of this header field SHALL be set to "accepted" or
+ * "accepted text only". See OMA-TS-MMS_ENC [39] clause 7.3.43. Include if sent
+ * to the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

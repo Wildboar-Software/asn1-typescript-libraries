@@ -22,6 +22,14 @@ import { MMSStoreStatus, _decode_MMSStoreStatus, _encode_MMSStoreStatus, _enum_f
  * @summary MMSMBoxStore
  * @description
  * 
+ * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+ * MMSMBoxStore record when the MMS Proxy-Relay sends a m-mbox-store-conf
+ * (defined in OMA-TS-MMS_ENC [39] clause 6.8) to the MMS client in the target
+ * UE.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,54 +53,122 @@ export
 class MMSMBoxStore {
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the target
+     * and the MMS Proxy-Relay. As defined in OMA-TS-MMS_ENC [39] clause 7.3.63.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Indicates the direction of the MM. This shall be encoded as "to target".
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly direction: MMSDirection;
     /**
      * @summary `contentLocationReq`.
+     * @description
+     *
+     * The content-location-value field defines the URL for the MMS server
+     * location of the MM as it appears in the m-mbox-store-req. As defined in
+     * OMA-TS-MMS_ENC [39] clause 7.3.10. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly contentLocationReq: UTF8String;
     /**
      * @summary `state`.
+     * @description
+     *
+     * Identifies the value of the MM State associated with a MM to be stored or
+     * stored MM. Sets the state for the forwarded MM when it is stored. As
+     * defined in OMA-TS-MMS_ENC [39] clause 7.3.33. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly state: OPTIONAL<MMState>;
     /**
      * @summary `flags`.
+     * @description
+     *
+     * Identifies a keyword to add or remove from the list of keywords
+     * associated with a stored MM. See OMA-TS-MMS_ENC [39] clause 7.3.32.
+     * Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly flags: OPTIONAL<MMFlags>;
     /**
      * @summary `contentLocationConf`.
+     * @description
+     *
+     * The content-location-value field defines the URL for the MMS server
+     * location of the MM as it appears in the m-mbox-store-conf. As defined in
+     * OMA-TS-MMS_ENC [39] clause 7.3.10. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly contentLocationConf: OPTIONAL<UTF8String>;
     /**
      * @summary `storeStatus`.
+     * @description
+     *
+     * Indicates if the MM was successfully stored in the MMBox.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */
     readonly storeStatus: MMSStoreStatus;
     /**
      * @summary `storeStatusText`.
+     * @description
+     *
+     * Text that qualifies the Store Status. Include if sent to the target. As
+     * defined in OMA-TS-MMS_ENC [39] clause 7.3.59. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.10.
+     *
      * @public
      * @readonly
      */

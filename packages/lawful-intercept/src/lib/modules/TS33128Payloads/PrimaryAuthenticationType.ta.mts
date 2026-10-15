@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PrimaryAuthenticationType
  * @description
  * 
+ * Indicates the authentication method used by the remote ProSE UE to gain
+ * access to the serving network. See TS 29.503 [25] clause 6.3.6.3.3.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.10.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,6 +49,12 @@ enum _enum_for_PrimaryAuthenticationType {
  * @summary PrimaryAuthenticationType
  * @description
  * 
+ * Indicates the authentication method used by the remote ProSE UE to gain
+ * access to the serving network. See TS 29.503 [25] clause 6.3.6.3.3.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.10.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +81,12 @@ type PrimaryAuthenticationType = _enum_for_PrimaryAuthenticationType;
  * @summary PrimaryAuthenticationType
  * @description
  * 
+ * Indicates the authentication method used by the remote ProSE UE to gain
+ * access to the serving network. See TS 29.503 [25] clause 6.3.6.3.3.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.10.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

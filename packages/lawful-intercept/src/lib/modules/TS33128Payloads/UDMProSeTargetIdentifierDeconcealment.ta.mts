@@ -15,6 +15,16 @@ import { SUCI, _decode_SUCI, _encode_SUCI } from "../TS33128Payloads/SUCI.ta.mjs
  * @summary UDMProSeTargetIdentifierDeconcealment
  * @description
  * 
+ * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+ * UDMProSeTargetIdentifierDeconcealment record when the IRI-POI present in the
+ * UDM/UDR detects that the UDM has responded to a request from the NF consumer
+ * (i.e., the 5G PKMF) to perform SUCI to SUPI deconcealment for a target ProSe
+ * remote UE (see TS 29.503 [25] clause 5.11.2.1) and the SUPI matches the
+ * target identifier provisioned over LI_X1.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.10.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +41,27 @@ export
 class UDMProSeTargetIdentifierDeconcealment {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the target UE returned by the UDM in response to the
+     * Nudm_UEIdentifier Deconceal POST, see TS 29.503 [25] clause 5.11.2.2.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.10.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * Subscriber concealed identity provided to the UDM as part of the
+     * Nudm_UEIdentifier Deconceal Service operation (e.g. from the 5G PKMF) due
+     * to ProSe SUCI to SUPI deconcealment.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.10.2.
+     *
      * @public
      * @readonly
      */

@@ -14,6 +14,12 @@ import { PresenceState, _decode_PresenceState, _encode_PresenceState, _enum_for_
  * @summary LADNInfo
  * @description
  * 
+ * The LADNInfo type is used to report information derived from the LadnInfo
+ * type defined in TS 29.518 [22] clause 6.2.6.2.17.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.63.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +36,26 @@ export
 class LADNInfo {
     /**
      * @summary `lADN`.
+     * @description
+     *
+     * Represents the Local Access Data Network DNN.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.63.
+     *
      * @public
      * @readonly
      */
     readonly lADN: UTF8String;
     /**
      * @summary `presence`.
+     * @description
+     *
+     * This IE shall be included when the UE presence in area of interest is
+     * reported. When present, this IE contains the status of UE presence within
+     * the Area of Interest.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.63.
+     *
      * @public
      * @readonly
      */

@@ -31,12 +31,27 @@ export
 class XMLType {
     /**
      * @summary `xMLNamespace`.
+     * @description
+     *
+     * XML namespace that indicates the schema definition for the reported
+     * XMLValue. When using the XMLType as a parameter within a record, the
+     * value of the XML namespace shall be clearly indicated if known in the
+     * associated description field of the table describing the record. When
+     * there is no XML namespace defined for the document, this parameter shall
+     * be populated with a string that unambiguously identifies the schema or a
+     * document describing the XML structure.
+     *
      * @public
      * @readonly
      */
     readonly xMLNamespace: XMLNamespace;
     /**
      * @summary `xMLValue`.
+     * @description
+     *
+     * The contents of the XML document being reported. Shall be sent as an XML
+     * document that matches the schema indicated by the xMLNamespace.
+     *
      * @public
      * @readonly
      */

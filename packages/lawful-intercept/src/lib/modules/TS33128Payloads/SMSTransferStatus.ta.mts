@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SMSTransferStatus
  * @description
  * 
+ * Indicates whether the SMSF sent the TPDU to the next network element. See
+ * NOTE 5.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ enum _enum_for_SMSTransferStatus {
  * @summary SMSTransferStatus
  * @description
  * 
+ * Indicates whether the SMSF sent the TPDU to the next network element. See
+ * NOTE 5.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +63,12 @@ type SMSTransferStatus = _enum_for_SMSTransferStatus;
  * @summary SMSTransferStatus
  * @description
  * 
+ * Indicates whether the SMSF sent the TPDU to the next network element. See
+ * NOTE 5.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

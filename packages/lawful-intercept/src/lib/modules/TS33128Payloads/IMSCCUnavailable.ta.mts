@@ -14,6 +14,36 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IMSCCUnavailable
  * @description
  * 
+ * The IRI-POI present in the IMS signalling Function that also has the CC-TF
+ * (which would have triggered the media interception at the CC-POI) shall
+ * generate the xIRI IMSCCUnavailable when the media is not available for
+ * interception in the CSP's network.
+ *
+ * Accordingly, the IRI-POI present in the IMS signalling Function that has the
+ * CC-TF shall generate the xIRI IMSCCUnavailable when the following conditions
+ * are met:
+ *
+ * - The target of interception is on an IMS session with established SDP offer
+ *   and answer.
+ *
+ * - The media does not enter the IMS network of the CSP that has received the
+ *   warrant. In other words, the CC-TF does not send the LI_T3 ActivateTask to
+ *   the CC-POI.
+ *
+ * - The CSP is required to send a notification to the LEMF when the media
+ *   interception is required but not available for the interception.
+ *
+ * - NOTE: The details of any interactions required between the IRI-POI and
+ *   CC-TF present in the same IMS Signalling Function (e.g. IBCF) is outside
+ *   the scope of the present document.
+ *
+ * The payload of the IMSCCUnavailable xIRI is as shown in table 7.12.4.2.3-1.
+ *
+ * Table 7.12.7.1-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +60,24 @@ export
 class IMSCCUnavailable {
     /**
      * @summary `cCUnavailableReason`.
+     * @description
+     *
+     * Provides the reason for the unavailability of CC.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.3.
+     *
      * @public
      * @readonly
      */
     readonly cCUnavailableReason: UTF8String;
     /**
      * @summary `sDPState`.
+     * @description
+     *
+     * The latest SDP information, if known.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.3.
+     *
      * @public
      * @readonly
      */

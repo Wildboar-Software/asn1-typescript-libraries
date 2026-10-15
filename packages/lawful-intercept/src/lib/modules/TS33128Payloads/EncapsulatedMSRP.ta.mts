@@ -10,6 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncapsulatedMSRP
  * @description
  * 
+ * Shall contain the entire MSRP Message in the original encoding.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -26,6 +26,30 @@ import { FailureResponse, _decode_FailureResponse, _encode_FailureResponse, _enu
  * @summary EESACRSubscription
  * @description
  * 
+ * The IRI-POI in the EES shall generate an xIRI containing an
+ * EESACRSubscription record when the IRI-POI present in the EES detects that an
+ * EEC has requested to subscribe, update subscription and unsubscribe to ACR
+ * events. The IRI-POI present in the EES shall generate the xIRI for the
+ * following events:
+ *
+ * - EES returns Eees_ACREvents_Subscribe response to the EEC confirming its
+ *   subscription for reporting of ACR information notification (as defined in
+ *   TS 24.558 [93] clause 5.4.2.2).
+ *
+ * - EES returns Eees_ACREvents_UpdateSubscription response to the EEC
+ *   confirming the update of its subscription for reporting of ACR information
+ *   notification (as defined in TS 24.558 [93] clause 5.4.2.4).
+ *
+ * - EES returns Eees_ACREvents_Unsubscribe response to the EEC confirming the
+ *   deletion of an existing subscription at the EES to ACR events (as defined
+ *   in TS 24.558 [93] clause 5.4.2.5)
+ *
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,54 +73,111 @@ export
 class EESACRSubscription {
     /**
      * @summary `eECID`.
+     * @description
+     *
+     * Unique identifier of the EEC.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */
     readonly eECID: UTF8String;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `subscriptionType`.
+     * @description
+     *
+     * Subscription type, i.e. "Subscription", "Subscription Update" or
+     * "Unsubscription".
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionType: SubscriptionType;
     /**
      * @summary `expirationTime`.
+     * @description
+     *
+     * Expiration time for the subscription. If absent for subscription types
+     * "Subscription" and Subscription Update", application context relocation
+     * subscription from EEC never expires.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */
     readonly expirationTime: OPTIONAL<Timestamp>;
     /**
      * @summary `eASIDs`.
+     * @description
+     *
+     * List of identifier of the EASs, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */
     readonly eASIDs: EASIDs;
     /**
      * @summary `aCIDs`.
+     * @description
+     *
+     * List of identifier of the ACs, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */
     readonly aCIDs: OPTIONAL<ACIDs>;
     /**
      * @summary `eventIDs`.
+     * @description
+     *
+     * Specifies the events for which EEC is subscribing.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */
     readonly eventIDs: OPTIONAL<ACREventIDs>;
     /**
      * @summary `subscriptionId`.
+     * @description
+     *
+     * Subscription identity, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionId: OPTIONAL<UTF8String>;
     /**
      * @summary `failureResponse`.
+     * @description
+     *
+     * Cause information when the discovery request has failed, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
      * @public
      * @readonly
      */

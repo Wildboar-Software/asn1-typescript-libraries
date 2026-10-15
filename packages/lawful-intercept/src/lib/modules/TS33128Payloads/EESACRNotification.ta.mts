@@ -19,6 +19,22 @@ import { TargetInfo, _decode_TargetInfo, _encode_TargetInfo } from "../TS33128Pa
  * @summary EESACRNotification
  * @description
  * 
+ * The IRI-POI in the EES shall generate an xIRI containing an
+ * EESACRNotification record when the IRI-POI present in the EES detects that
+ * the EES has notify a previously subscribed EEC on EAS discovery information.
+ * The IRI-POI present in the EES shall generate the xIRI for the following
+ * events:
+ *
+ * - EES receives an Eees_ACREvents_Notify response from an EEC confirming that
+ *   the subscribed EEC has received a notification of the ACR information
+ *   events from EES (as defined in TS 24.558 [93] clause 5.4.2.2).
+ *
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,12 +55,25 @@ export
 class EESACRNotification {
     /**
      * @summary `subscriptionID`.
+     * @description
+     *
+     * Identity of the individual subscription for which the notification is
+     * delivered.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.8.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionID: UTF8String;
     /**
      * @summary `eASID`.
+     * @description
+     *
+     * Identifier of the EAS.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.8.
+     *
      * @public
      * @readonly
      */
@@ -57,18 +86,39 @@ class EESACRNotification {
     readonly eventID: ACREventIDs;
     /**
      * @summary `targetInfo`.
+     * @description
+     *
+     * Details of the selected T-EAS and the T-EES. It is present when EventID
+     * indicates "TARGET_INFORMATION" event.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.8.
+     *
      * @public
      * @readonly
      */
     readonly targetInfo: OPTIONAL<TargetInfo>;
     /**
      * @summary `aCRRes`.
+     * @description
+     *
+     * Indicates whether the ACR is successful or has failed. It is present when
+     * EventID indicates "ACR_COMPLETE" event.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.8.
+     *
      * @public
      * @readonly
      */
     readonly aCRRes: OPTIONAL<BOOLEAN>;
     /**
      * @summary `failReason`.
+     * @description
+     *
+     * Indicates the cause information for the failure when the ACRRes attribute
+     * is present and indicates failure, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.8.
+     *
      * @public
      * @readonly
      */

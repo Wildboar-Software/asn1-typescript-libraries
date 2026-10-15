@@ -18,6 +18,24 @@ import { PTCSessionInfo, _decode_PTCSessionInfo, _encode_PTCSessionInfo } from "
  * @summary PTCPartyHold
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCPartyHold record when the IRI-POI present in the PTC server detects that
+ * an on-going PTC session is placed on hold or retrieved from hold by the PTC
+ * target or by a PTC participant in a PTC chat group, where the PTC chat group
+ * is the PTC target. Accordingly, the IRI-POI in the PTC server generates the
+ * xIRI when the following event is detected:
+ *
+ * - when the PTC server receives a SIP UPDATE or SIP re-INVITE from the PTC
+ *   target and returns a SIP 200 OK to the PTC target for hold/resume
+ *   operations.
+ *
+ * - when the PTC server hosting a PTC chat group, where PTC chat group is the
+ *   PTC target, receives a SIP UPDATE or SIP re-INVITE from a PTC participant
+ *   for hold/resume operations.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.11.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,36 +56,82 @@ export
 class PTCPartyHold {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN and PTCChatGroupID shall be provided for
+     * PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.11.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.5.2.11.
+     *
      * @public
      * @readonly
      */
     readonly pTCDirection: Direction;
     /**
      * @summary `pTCSessionInfo`.
+     * @description
+     *
+     * Shall provide PTC session information such as PTC Session URI and PTC
+     * Session type (e.g. on-demand, pre-established, ad-hoc, pre-arranged,
+     * group session).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.11.
+     *
      * @public
      * @readonly
      */
     readonly pTCSessionInfo: PTCSessionInfo;
     /**
      * @summary `pTCParticipants`.
+     * @description
+     *
+     * Shall identify the individual PTC participants of the communication
+     * session, when known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.11.
+     *
      * @public
      * @readonly
      */
     readonly pTCParticipants: OPTIONAL<PTCTargetInformation[]>;
     /**
      * @summary `pTCHoldID`.
+     * @description
+     *
+     * The identity of the PTC participant that placed the PTC session on hold
+     * or retrieved the held PTC session.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.11.
+     *
      * @public
      * @readonly
      */
     readonly pTCHoldID: PTCTargetInformation[];
     /**
      * @summary `pTCHoldRetrieveInd`.
+     * @description
+     *
+     * Shall indicate the PTC session is put on hold (i.e. deactivate Media
+     * Bursts or a PTC session is locked for talking/listening) or retrieved
+     * from hold. True indication equals placed on hold, false indication was
+     * retrieved from hold.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.11.
+     *
      * @public
      * @readonly
      */

@@ -31,6 +31,13 @@ import { CellInformation, _decode_CellInformation, _encode_CellInformation } fro
  * @summary LocationPresenceReport
  * @description
  * 
+ * The LocationPresenceReport type is used in the case the information is
+ * obtained from an AmfEventReport (TS 29.518 [22] clause 6.2.6.2.5) with event
+ * type Location_Report or Presence_In_AOI_Report.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.47.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,18 +68,39 @@ class LocationPresenceReport {
     readonly type_: AMFEventType;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * This shall contain the time at which the event is generated.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.47.
+     *
      * @public
      * @readonly
      */
     readonly timestamp: Timestamp;
     /**
      * @summary `areaList`.
+     * @description
+     *
+     * This field shall be present when the AMFEventtype is set as
+     * "presenceInAOIReport". When present, this field represents the specified
+     * Area(s) of Interest the UE is currently in or out or unknown.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.47.
+     *
      * @public
      * @readonly
      */
     readonly areaList: OPTIONAL<AMFEventArea[]>;
     /**
      * @summary `timeZone`.
+     * @description
+     *
+     * This parameter shall be present if the local timeZone of the UE is known
+     * at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.47.
+     *
      * @public
      * @readonly
      */
@@ -85,30 +113,81 @@ class LocationPresenceReport {
     readonly accessTypes: OPTIONAL<AccessType[]>;
     /**
      * @summary `rMInfoList`.
+     * @description
+     *
+     * Describes the registration management state of the UE. This field shall
+     * be present if it is known at the NF. Shall be encoded as defined in TS
+     * 29.518 [22] clause 6.2.6.2.8.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.47.
+     *
      * @public
      * @readonly
      */
     readonly rMInfoList: OPTIONAL<RMInfo[]>;
     /**
      * @summary `cMInfoList`.
+     * @description
+     *
+     * Describes the connection management state of the UE. This field shall be
+     * present if it is known at the NF. Shall be encoded as defined in TS
+     * 29.518 [22] clause 6.2.6.2.9.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.47.
+     *
      * @public
      * @readonly
      */
     readonly cMInfoList: OPTIONAL<CMInfo[]>;
     /**
      * @summary `reachability`.
+     * @description
+     *
+     * Describes the reachability of the UE. This field shall be present if it
+     * is known at the NF Shall be encoded as defined in TS 29.518 [22] clause
+     * 6.2.6.3.7.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.47.
+     *
      * @public
      * @readonly
      */
     readonly reachability: OPTIONAL<UEReachability>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information type derived from the data defined in the
+     * UserLocation type defined in TS 29.571 [17] clause 5.4.4.7. This field
+     * shall be used to convey one or more of the following:
+     *
+     * - E-UTRA user location.
+     *
+     * - NR user location.
+     *
+     * - Non-3GPP access user location.
+     *
+     * - UTRA Location.
+     *
+     * - GERA Location.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.47.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<UserLocation>;
     /**
      * @summary `additionalCellIDs`.
+     * @description
+     *
+     * This parameter shall be present if the NF has additional cell information
+     * for the UE. Shall be used whenever Dual Connectivity is activated or
+     * whenever secondary cell information is available at the NF where the POI
+     * is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.47.
+     *
      * @public
      * @readonly
      */

@@ -37,6 +37,15 @@ class MCXKMMessage {
     readonly mCServiceID: MCServiceID;
     /**
      * @summary `kMMessage`.
+     * @description
+     *
+     * Represents the content of the key management request (i.e. HTTP POST)
+     * sent by the target to the Key Management Server and content of key
+     * management response returned by the Key Management Server relating to key
+     * material for MC service (see table 7.20.2.4.2-8).
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

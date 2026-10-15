@@ -17,6 +17,35 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary NEF5GVNGroupUpdate
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing a NEF5GVNGroupUpdate
+ * record when the IRI-POI present in the NEF detects that an AF has updated a
+ * 5G VN group the target UE belongs to.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - NEF sends a Nnef_ParameterProvision_Update Response to the AF to
+ *   acknowledge the reception of Nnef_ParameterProvision_Update Request (see TS
+ *   23.502 [4] clause 5.2.6.4.2 and TS 29.522 [58] clause 5.7.1.3).with the
+ *   following cases:
+ *
+ * - The list of GPSIs of the group members is updated and now includes the GPSI
+ *   of the target UE.
+ *
+ * - The list of GPSIs of the group members that was including the GPSI of the
+ *   target UE is updated, and after the update excludes it.
+ *
+ * - The list of GPSIs of the group members is not updated and already includes
+ *   the GPSI of the target UE.
+ *
+ * NOTE: Either fiveGLanParametersProvision or fiveGLanParametersProvisionPatch
+ * shall be supplied.
+ *
+ * Table 7.7.7.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.7.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +64,58 @@ export
 class NEF5GVNGroupUpdate {
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * The AF requesting to update the 5G VN group.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.3.
+     *
      * @public
      * @readonly
      */
     readonly aFID: AFID;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.3.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `fiveGLanParametersProvision`.
+     * @description
+     *
+     * Includes an 5GLanParametersProvision resource according to TS 29.522 [58]
+     * clause A.5 for a full update/replace. The SBIReference for this parameter
+     * shall be populated with
+     * ‘TS29522_5GLANParameterProvision.yaml#/components/schemas/5GLanParametersProvision'
+     * (see NOTE). NOTE: Either fiveGLanParametersProvision or
+     * fiveGLanParametersProvisionPatch shall be supplied.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.3.
+     *
      * @public
      * @readonly
      */
     readonly fiveGLanParametersProvision: OPTIONAL<SBIType>;
     /**
      * @summary `fiveGLanParametersProvisionPatch`.
+     * @description
+     *
+     * Includes an 5GLanParametersProvisionPatch resource according to TS 29.522
+     * [58] clause A.5 for a partial update. The SBIReference for this parameter
+     * shall be populated with
+     * ‘TS29522_5GLANParameterProvision.yaml#/components/schemas/5GLanParametersProvisionPatch'
+     * (see NOTE). NOTE: Either fiveGLanParametersProvision or
+     * fiveGLanParametersProvisionPatch shall be supplied.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.3.
+     *
      * @public
      * @readonly
      */

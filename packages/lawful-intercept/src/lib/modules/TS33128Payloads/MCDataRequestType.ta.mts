@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MCDataRequestType
  * @description
  * 
+ * Request-type element of application/vnd.3gpp.mcdata-info+xml MIME body:
+ * "one-to-one-fd" or "group-fd".
+ *
+ * 3GPP TS 33.128, clause 7.20.2.6.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +35,12 @@ enum _enum_for_MCDataRequestType {
  * @summary MCDataRequestType
  * @description
  * 
+ * Request-type element of application/vnd.3gpp.mcdata-info+xml MIME body:
+ * "one-to-one-fd" or "group-fd".
+ *
+ * 3GPP TS 33.128, clause 7.20.2.6.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +60,12 @@ type MCDataRequestType = _enum_for_MCDataRequestType;
  * @summary MCDataRequestType
  * @description
  * 
+ * Request-type element of application/vnd.3gpp.mcdata-info+xml MIME body:
+ * "one-to-one-fd" or "group-fd".
+ *
+ * 3GPP TS 33.128, clause 7.20.2.6.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

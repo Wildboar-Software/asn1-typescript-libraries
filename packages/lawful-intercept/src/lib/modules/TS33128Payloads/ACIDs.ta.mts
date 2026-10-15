@@ -11,6 +11,11 @@ import { ACID, _decode_ACID, _encode_ACID } from "../TS33128Payloads/ACID.ta.mjs
  * @summary ACIDs
  * @description
  * 
+ * Identities of the AC(s) that can be served by the EAS, if available.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

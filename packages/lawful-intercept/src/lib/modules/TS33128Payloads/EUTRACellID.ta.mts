@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EUTRACellID
  * @description
  * 
+ * The E-UTRA Cell Identity being reported. The EUTRACellID is derived from the
+ * E-UTRA Cell Identity parameter of the E-UTRA CGI defined in TS 38.413 [23]
+ * clause 9.3.1.9.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

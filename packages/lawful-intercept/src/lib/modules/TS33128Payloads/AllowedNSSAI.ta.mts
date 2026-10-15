@@ -11,6 +11,11 @@ import { NSSAI, _decode_NSSAI, _encode_NSSAI } from "../TS33128Payloads/NSSAI.ta
  * @summary AllowedNSSAI
  * @description
  * 
+ * Indicates the S-NSSAIs permitted by the network.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

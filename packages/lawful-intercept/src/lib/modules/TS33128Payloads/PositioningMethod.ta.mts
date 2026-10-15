@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PositioningMethod
  * @description
  * 
+ * The PositioningMethod represents the method used to determine the location of
+ * the UE, the PositioningMethod is derived from the data present in the
+ * PositioningMethod type defined in TS 29.572 [24] clause 6.1.6.3.6.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +45,159 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_PositioningMethod {
+    /**
+     * @description
+     *
+     * Cell ID positioning method.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     cellID = 1,
+    /**
+     * @description
+     *
+     * Enhanced cell ID methods based on LTE signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     eCID = 2,
+    /**
+     * @description
+     *
+     * Observed time difference of arrival positioning based on LTE signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     oTDOA = 3,
+    /**
+     * @description
+     *
+     * Positioning method based on barometric Pressure Sensor.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     barometricPressure = 4,
+    /**
+     * @description
+     *
+     * WLAN positioning.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     wLAN = 5,
+    /**
+     * @description
+     *
+     * Bluetooth positioning.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     bluetooth = 6,
+    /**
+     * @description
+     *
+     * Terrestrial Beacon System (TBS) positioning based on MBS signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     mBS = 7,
+    /**
+     * @description
+     *
+     * Positioning method based on motion Sensor.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     motionSensor = 8,
+    /**
+     * @description
+     *
+     * Downlink Time Difference of Arrival (DL-TDOA) based on NR signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     dLTDOA = 9,
+    /**
+     * @description
+     *
+     * Downlink Angle-of-Departure (DL-AoD) based on NR signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     dLAOD = 10,
+    /**
+     * @description
+     *
+     * Multi-Round Trip Time Positioning (Multi-RTT based on NR signals).
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     multiRTT = 11,
+    /**
+     * @description
+     *
+     * NR enhanced cell ID methods (NR E-CID) based on NR signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     nRECID = 12,
+    /**
+     * @description
+     *
+     * Uplink Time Difference of Arrival (UL-TDOA) based on NR signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     uLTDOA = 13,
+    /**
+     * @description
+     *
+     * Uplink Angle of Arrival (UL-AoA), including the Azimuth of Arrival
+     * (A-AoA) and the Zenith of Arrival (Z-AoA) based on NR signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     uLAOA = 14,
+    /**
+     * @description
+     *
+     * Network specific position methods.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     networkSpecific = 15,
+    /**
+     * @description
+     *
+     * Sidelink Time Difference of Arrival (TDOA) based on Sidelink NR PC5 radio
+     * signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     sLTDOA = 16,
+    /**
+     * @description
+     *
+     * Sidelink Time Of Arrival based on NR PC5 radio signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     sLTOA = 17,
+    /**
+     * @description
+     *
+     * Sidelink Angle-of-Arrival based on NR PC5 radio signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     sLAOA = 18,
+    /**
+     * @description
+     *
+     * Sidelink Round Trip based on NR PC5 radio signals.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.52.
+     */
     sLRT = 19,
 }
 
@@ -63,6 +205,13 @@ enum _enum_for_PositioningMethod {
  * @summary PositioningMethod
  * @description
  * 
+ * The PositioningMethod represents the method used to determine the location of
+ * the UE, the PositioningMethod is derived from the data present in the
+ * PositioningMethod type defined in TS 29.572 [24] clause 6.1.6.3.6.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -99,6 +248,13 @@ type PositioningMethod = _enum_for_PositioningMethod;
  * @summary PositioningMethod
  * @description
  * 
+ * The PositioningMethod represents the method used to determine the location of
+ * the UE, the PositioningMethod is derived from the data present in the
+ * PositioningMethod type defined in TS 29.572 [24] clause 6.1.6.3.6.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -133,6 +289,12 @@ const PositioningMethod = _enum_for_PositioningMethod;
 
 /**
  * @summary PositioningMethod_cellID
+ * @description
+ *
+ * Cell ID positioning method.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +303,12 @@ const PositioningMethod_cellID: PositioningMethod = PositioningMethod.cellID; /*
 
 /**
  * @summary cellID
+ * @description
+ *
+ * Cell ID positioning method.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +317,12 @@ const cellID: PositioningMethod = PositioningMethod.cellID; /* SHORT_NAMED_ENUME
 
 /**
  * @summary PositioningMethod_eCID
+ * @description
+ *
+ * Enhanced cell ID methods based on LTE signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +331,12 @@ const PositioningMethod_eCID: PositioningMethod = PositioningMethod.eCID; /* LON
 
 /**
  * @summary eCID
+ * @description
+ *
+ * Enhanced cell ID methods based on LTE signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +345,12 @@ const eCID: PositioningMethod = PositioningMethod.eCID; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary PositioningMethod_oTDOA
+ * @description
+ *
+ * Observed time difference of arrival positioning based on LTE signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +359,12 @@ const PositioningMethod_oTDOA: PositioningMethod = PositioningMethod.oTDOA; /* L
 
 /**
  * @summary oTDOA
+ * @description
+ *
+ * Observed time difference of arrival positioning based on LTE signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +373,12 @@ const oTDOA: PositioningMethod = PositioningMethod.oTDOA; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary PositioningMethod_barometricPressure
+ * @description
+ *
+ * Positioning method based on barometric Pressure Sensor.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +387,12 @@ const PositioningMethod_barometricPressure: PositioningMethod = PositioningMetho
 
 /**
  * @summary barometricPressure
+ * @description
+ *
+ * Positioning method based on barometric Pressure Sensor.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -197,6 +401,12 @@ const barometricPressure: PositioningMethod = PositioningMethod.barometricPressu
 
 /**
  * @summary PositioningMethod_wLAN
+ * @description
+ *
+ * WLAN positioning.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +415,12 @@ const PositioningMethod_wLAN: PositioningMethod = PositioningMethod.wLAN; /* LON
 
 /**
  * @summary wLAN
+ * @description
+ *
+ * WLAN positioning.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -213,6 +429,12 @@ const wLAN: PositioningMethod = PositioningMethod.wLAN; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary PositioningMethod_bluetooth
+ * @description
+ *
+ * Bluetooth positioning.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +443,12 @@ const PositioningMethod_bluetooth: PositioningMethod = PositioningMethod.bluetoo
 
 /**
  * @summary bluetooth
+ * @description
+ *
+ * Bluetooth positioning.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -229,6 +457,12 @@ const bluetooth: PositioningMethod = PositioningMethod.bluetooth; /* SHORT_NAMED
 
 /**
  * @summary PositioningMethod_mBS
+ * @description
+ *
+ * Terrestrial Beacon System (TBS) positioning based on MBS signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +471,12 @@ const PositioningMethod_mBS: PositioningMethod = PositioningMethod.mBS; /* LONG_
 
 /**
  * @summary mBS
+ * @description
+ *
+ * Terrestrial Beacon System (TBS) positioning based on MBS signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -245,6 +485,12 @@ const mBS: PositioningMethod = PositioningMethod.mBS; /* SHORT_NAMED_ENUMERATED_
 
 /**
  * @summary PositioningMethod_motionSensor
+ * @description
+ *
+ * Positioning method based on motion Sensor.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -253,6 +499,12 @@ const PositioningMethod_motionSensor: PositioningMethod = PositioningMethod.moti
 
 /**
  * @summary motionSensor
+ * @description
+ *
+ * Positioning method based on motion Sensor.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -261,6 +513,12 @@ const motionSensor: PositioningMethod = PositioningMethod.motionSensor; /* SHORT
 
 /**
  * @summary PositioningMethod_dLTDOA
+ * @description
+ *
+ * Downlink Time Difference of Arrival (DL-TDOA) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -269,6 +527,12 @@ const PositioningMethod_dLTDOA: PositioningMethod = PositioningMethod.dLTDOA; /*
 
 /**
  * @summary dLTDOA
+ * @description
+ *
+ * Downlink Time Difference of Arrival (DL-TDOA) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -277,6 +541,12 @@ const dLTDOA: PositioningMethod = PositioningMethod.dLTDOA; /* SHORT_NAMED_ENUME
 
 /**
  * @summary PositioningMethod_dLAOD
+ * @description
+ *
+ * Downlink Angle-of-Departure (DL-AoD) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -285,6 +555,12 @@ const PositioningMethod_dLAOD: PositioningMethod = PositioningMethod.dLAOD; /* L
 
 /**
  * @summary dLAOD
+ * @description
+ *
+ * Downlink Angle-of-Departure (DL-AoD) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -293,6 +569,12 @@ const dLAOD: PositioningMethod = PositioningMethod.dLAOD; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary PositioningMethod_multiRTT
+ * @description
+ *
+ * Multi-Round Trip Time Positioning (Multi-RTT based on NR signals).
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -301,6 +583,12 @@ const PositioningMethod_multiRTT: PositioningMethod = PositioningMethod.multiRTT
 
 /**
  * @summary multiRTT
+ * @description
+ *
+ * Multi-Round Trip Time Positioning (Multi-RTT based on NR signals).
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -309,6 +597,12 @@ const multiRTT: PositioningMethod = PositioningMethod.multiRTT; /* SHORT_NAMED_E
 
 /**
  * @summary PositioningMethod_nRECID
+ * @description
+ *
+ * NR enhanced cell ID methods (NR E-CID) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -317,6 +611,12 @@ const PositioningMethod_nRECID: PositioningMethod = PositioningMethod.nRECID; /*
 
 /**
  * @summary nRECID
+ * @description
+ *
+ * NR enhanced cell ID methods (NR E-CID) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -325,6 +625,12 @@ const nRECID: PositioningMethod = PositioningMethod.nRECID; /* SHORT_NAMED_ENUME
 
 /**
  * @summary PositioningMethod_uLTDOA
+ * @description
+ *
+ * Uplink Time Difference of Arrival (UL-TDOA) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -333,6 +639,12 @@ const PositioningMethod_uLTDOA: PositioningMethod = PositioningMethod.uLTDOA; /*
 
 /**
  * @summary uLTDOA
+ * @description
+ *
+ * Uplink Time Difference of Arrival (UL-TDOA) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -341,6 +653,13 @@ const uLTDOA: PositioningMethod = PositioningMethod.uLTDOA; /* SHORT_NAMED_ENUME
 
 /**
  * @summary PositioningMethod_uLAOA
+ * @description
+ *
+ * Uplink Angle of Arrival (UL-AoA), including the Azimuth of Arrival (A-AoA)
+ * and the Zenith of Arrival (Z-AoA) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -349,6 +668,13 @@ const PositioningMethod_uLAOA: PositioningMethod = PositioningMethod.uLAOA; /* L
 
 /**
  * @summary uLAOA
+ * @description
+ *
+ * Uplink Angle of Arrival (UL-AoA), including the Azimuth of Arrival (A-AoA)
+ * and the Zenith of Arrival (Z-AoA) based on NR signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -357,6 +683,12 @@ const uLAOA: PositioningMethod = PositioningMethod.uLAOA; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary PositioningMethod_networkSpecific
+ * @description
+ *
+ * Network specific position methods.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -365,6 +697,12 @@ const PositioningMethod_networkSpecific: PositioningMethod = PositioningMethod.n
 
 /**
  * @summary networkSpecific
+ * @description
+ *
+ * Network specific position methods.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -373,6 +711,13 @@ const networkSpecific: PositioningMethod = PositioningMethod.networkSpecific; /*
 
 /**
  * @summary PositioningMethod_sLTDOA
+ * @description
+ *
+ * Sidelink Time Difference of Arrival (TDOA) based on Sidelink NR PC5 radio
+ * signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -381,6 +726,13 @@ const PositioningMethod_sLTDOA: PositioningMethod = PositioningMethod.sLTDOA; /*
 
 /**
  * @summary sLTDOA
+ * @description
+ *
+ * Sidelink Time Difference of Arrival (TDOA) based on Sidelink NR PC5 radio
+ * signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -389,6 +741,12 @@ const sLTDOA: PositioningMethod = PositioningMethod.sLTDOA; /* SHORT_NAMED_ENUME
 
 /**
  * @summary PositioningMethod_sLTOA
+ * @description
+ *
+ * Sidelink Time Of Arrival based on NR PC5 radio signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -397,6 +755,12 @@ const PositioningMethod_sLTOA: PositioningMethod = PositioningMethod.sLTOA; /* L
 
 /**
  * @summary sLTOA
+ * @description
+ *
+ * Sidelink Time Of Arrival based on NR PC5 radio signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -405,6 +769,12 @@ const sLTOA: PositioningMethod = PositioningMethod.sLTOA; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary PositioningMethod_sLAOA
+ * @description
+ *
+ * Sidelink Angle-of-Arrival based on NR PC5 radio signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -413,6 +783,12 @@ const PositioningMethod_sLAOA: PositioningMethod = PositioningMethod.sLAOA; /* L
 
 /**
  * @summary sLAOA
+ * @description
+ *
+ * Sidelink Angle-of-Arrival based on NR PC5 radio signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -421,6 +797,12 @@ const sLAOA: PositioningMethod = PositioningMethod.sLAOA; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary PositioningMethod_sLRT
+ * @description
+ *
+ * Sidelink Round Trip based on NR PC5 radio signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */
@@ -429,6 +811,12 @@ const PositioningMethod_sLRT: PositioningMethod = PositioningMethod.sLRT; /* LON
 
 /**
  * @summary sLRT
+ * @description
+ *
+ * Sidelink Round Trip based on NR PC5 radio signals.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.52.
+ *
  * @constant
  * @type {number}
  */

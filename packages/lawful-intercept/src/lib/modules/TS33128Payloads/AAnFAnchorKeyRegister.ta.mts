@@ -17,6 +17,16 @@ import { KAKMA, _decode_KAKMA, _encode_KAKMA } from "../TS33128Payloads/KAKMA.ta
  * @summary AAnFAnchorKeyRegister
  * @description
  * 
+ * The IRI-POI in the AAnF shall generate an xIRI containing an
+ * AAnFAnchorKeyRegister record when the IRI-POI present in the AAnF detects
+ * reception of an AKMA-context, i.e. an (A-KID, KAKMA)-pair associated with a
+ * target, from the AUSF, see TS 33.535 [65] clause 7.1.2.
+ *
+ * Table 7.9.1.5-1 gives the LI_HI2 IRI message type for this record as BEGIN.
+ *
+ * 3GPP TS 33.128, clause 7.9.1.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +44,38 @@ export
 class AAnFAnchorKeyRegister {
     /**
      * @summary `aKID`.
+     * @description
+     *
+     * AKMA Anchor Key Identifier (see TS 33.535 [65] clause 4.4.2).
+     *
+     * 3GPP TS 33.128, clause 7.9.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly aKID: NAI;
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the A-KID.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.3.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `kAKMA`.
+     * @description
+     *
+     * AKMA Anchor Key (see TS 33.535 [65] clause 5.1). Shall be included if
+     * available. NOTE: Whether kAKMA is included could also depend on whether
+     * provisioning is general or service specific.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.3.2.
+     *
      * @public
      * @readonly
      */

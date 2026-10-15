@@ -22,6 +22,29 @@ import { NEFReleaseCause, _decode_NEFReleaseCause, _encode_NEFReleaseCause, _enu
  * @summary NEFPDUSessionRelease
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing an
+ * NEFPDUSessionRelease record when the IRI-POI present in the NEF detects that
+ * an unstructured PDU session using NEF related to the target UE needs to be
+ * released. The IRI-POI present in the NEF shall generate the xIRI for the
+ * following events:
+ *
+ * - NEF notifies the SMF that the SMF-NEF Connection for NIDD via NEF is no
+ *   longer valid using Nnef_SMContext_DeleteNotify service operation when NEF
+ *   receives a notification from the UDM that the NIDD authorization has ended.
+ *   NEF releases the SM Context for NIDD on NEF as described in TS 29.541 [57]
+ *   clause 5.2.2.4. This corresponds to NEF Initiated SMF-NEF Connection
+ *   Release procedure.
+ *
+ * - NEF returns Nnef_SMContext_Delete Response towards SMF confirming release
+ *   of the SMF-NEF session for the target UE. In this scenario, SMF releases
+ *   the SM Context for NIDD on NEF as specified in TS 29.541 [57] clause
+ *   5.2.2.3).
+ *
+ * Table 7.7.2.3-1 gives the LI_HI2 IRI message type for this record as END.
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,48 +67,96 @@ export
 class NEFPDUSessionRelease {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI associated with the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID as assigned by the AMF.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: PDUSessionID;
     /**
      * @summary `timeOfFirstPacket`.
+     * @description
+     *
+     * Time of first packet for the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly timeOfFirstPacket: OPTIONAL<Timestamp>;
     /**
      * @summary `timeOfLastPacket`.
+     * @description
+     *
+     * Time of last packet for the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly timeOfLastPacket: OPTIONAL<Timestamp>;
     /**
      * @summary `uplinkVolume`.
+     * @description
+     *
+     * Number of uplink octets for the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly uplinkVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `downlinkVolume`.
+     * @description
+     *
+     * Number of downlink octets for the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly downlinkVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `releaseCause`.
+     * @description
+     *
+     * Cause of PDU Session Release.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.4.
+     *
      * @public
      * @readonly
      */

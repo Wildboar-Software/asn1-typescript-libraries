@@ -22,6 +22,14 @@ import { MMBoxDescription, _decode_MMBoxDescription, _encode_MMBoxDescription } 
  * @summary MMSMBoxViewResponse
  * @description
  * 
+ * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI containing
+ * an MMSMBoxViewResponse record when the MMS Proxy-Relay sends a
+ * m-mbox-view.conf (as defined in OMA-TS-MMS_ENC [39] clause 6.9) to the MMS
+ * client in the target UE.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.19.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,42 +55,97 @@ export
 class MMSMBoxViewResponse {
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the target
+     * and the MMS Proxy-Relay. As defined in OMA-TS-MMS_ENC [39] clause 7.3.63.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `contentLocation`.
+     * @description
+     *
+     * The content-location-value field defines the URL for the MMS server
+     * location of the content to be retrieved. As defined in OMA-TS-MMS_ENC
+     * [39] clause 7.3.10. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
     readonly contentLocation: OPTIONAL<UTF8String>;
     /**
      * @summary `state`.
+     * @description
+     *
+     * Specifies a MM State value to use in selecting the messages to return. As
+     * defined in OMA-TS-MMS_ENC [39] clause 7.3.33. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
     readonly state: OPTIONAL<MMState[]>;
     /**
      * @summary `flags`.
+     * @description
+     *
+     * Specifies a MM Flags keyword to use in selecting the messages to return
+     * in the response. See OMA-TS-MMS_ENC [39] clause 7.3.32. Include if sent
+     * by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
     readonly flags: OPTIONAL<MMFlags[]>;
     /**
      * @summary `start`.
+     * @description
+     *
+     * A number, indicating the index of the first MM of those selected to have
+     * information returned in the response. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
     readonly start: OPTIONAL<INTEGER>;
     /**
      * @summary `limit`.
+     * @description
+     *
+     * A number indicating the maximum number of selected MMs whose information
+     * are to be returned in the response. If this is absent, information
+     * elements from all remaining MMs are to be returned. If this is zero then
+     * no MM-related information are to be returned. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
@@ -95,18 +158,43 @@ class MMSMBoxViewResponse {
     readonly attributes: OPTIONAL<UTF8String[]>;
     /**
      * @summary `mMSTotals`.
+     * @description
+     *
+     * Indicates a request for or the actual count of messages currently stored
+     * in the MMBox. The values given in OMA-TS-MMS_ENC [39] clause 7.3.62.
+     * shall be encoded as follows: "Yes" = True, "No" = False. Include if sent
+     * by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
     readonly mMSTotals: OPTIONAL<BOOLEAN>;
     /**
      * @summary `mMSQuotas`.
+     * @description
+     *
+     * Indicates a request for or the actual quotas for the user's MMBox in
+     * messages or bytes. The values given in OMA-TS-MMS_ENC [39] clause 7.3.36.
+     * shall be encoded as follows: "Yes" = True, "No" = False. Include if sent
+     * by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */
     readonly mMSQuotas: OPTIONAL<BOOLEAN>;
     /**
      * @summary `mMessages`.
+     * @description
+     *
+     * The MMBox description PDU as defined in 7.4.3.20 corresponds to the
+     * particular MM.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.19.
+     *
      * @public
      * @readonly
      */

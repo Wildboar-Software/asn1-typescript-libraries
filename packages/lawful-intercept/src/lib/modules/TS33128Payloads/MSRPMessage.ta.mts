@@ -28,6 +28,10 @@ export
 class MSRPMessage {
     /**
      * @summary `encapsulatedMSRP`.
+     * @description
+     *
+     * The contents of the MSRP Message.
+     *
      * @public
      * @readonly
      */

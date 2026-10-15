@@ -37,24 +37,55 @@ export
 class EPSDeleteBearerContext {
     /**
      * @summary `cause`.
+     * @description
+     *
+     * Indicates whether the bearers requested for deletion were successfully
+     * deleted (see TS 29.274 [87] clause 7.2.10).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly cause: EPSBearerDeletionCauseValue;
     /**
      * @summary `ePSBearerID`.
+     * @description
+     *
+     * Shall include the EBI for the bearer (see TS 29.274 [87] clause 7.2.10).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly ePSBearerID: EPSBearerID;
     /**
      * @summary `protocolConfigurationOptions`.
+     * @description
+     *
+     * Shall be present if the Delete Bearer Request or Response reported (see
+     * TS 29.274 [87] clauses 7.2.9) contains the Protocol Configuration,
+     * Additional Protocol Configuration Options or extended Protocol
+     * Configuration Options IE. See table 6.3.3.2.2-4.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>;
     /**
      * @summary `rANNASCause`.
+     * @description
+     *
+     * Shall be present if the RAN/NAS Release Cause is present in the delete
+     * session response bearer context (see TS 29.274 [87] clause 7.2.10). Shall
+     * be sent as an Octet String encoded as specified in TS 29.274 [87] clause
+     * 8.103.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */

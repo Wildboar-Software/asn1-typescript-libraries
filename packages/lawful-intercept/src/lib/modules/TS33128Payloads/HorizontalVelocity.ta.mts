@@ -15,6 +15,12 @@ import { Angle, _decode_Angle, _encode_Angle } from "../TS33128Payloads/Angle.ta
  * @summary HorizontalVelocity
  * @description
  * 
+ * The HorizontalVelocity type is derived from the data present in the
+ * HorizontalVelocity type defined in TS 29.572 [24] clause 6.1.6.2.18.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.43.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +37,26 @@ export
 class HorizontalVelocity {
     /**
      * @summary `hSpeed`.
+     * @description
+     *
+     * Horizontal speed in kilometres per hour. Shall be encoded as described in
+     * TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.43.
+     *
      * @public
      * @readonly
      */
     readonly hSpeed: HorizontalSpeed;
     /**
      * @summary `bearing`.
+     * @description
+     *
+     * Bearing angle in degrees, measured clockwise from North. Shall be encoded
+     * as described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.43.
+     *
      * @public
      * @readonly
      */

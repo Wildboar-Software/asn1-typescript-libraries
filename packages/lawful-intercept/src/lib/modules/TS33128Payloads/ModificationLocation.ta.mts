@@ -37,14 +37,67 @@ import { ABNFRuleLocation, _decode_ABNFRuleLocation, _encode_ABNFRuleLocation } 
  */
 export
 type ModificationLocation =
+    /**
+     * @description
+     *
+     * JSON pointer that indicates location of the modified information within a
+     * JSON Document. Shall be sent in the form of a JSON string value (see RFC
+     * 6901 [117] clause 5).
+     */
     { jSONPointer: UTF8String } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * XPath indicating the node or nodes within an XML document that were
+     * modified. Shall be sent in the form of a XPath string value (see W3C
+     * Recommendation: "XML Path Language (XPath)" [119]).
+     */
     | { xPath: UTF8String } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates the header field-name (see RFC 3261 [118] clause 7.3.1) of the
+     * SIP Header field that was modified.
+     */
     | { sIPHeader: UTF8String } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates the body of the SIP message was modified.
+     */
     | { sIPBody: NULL } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates the header field-name (see RFC 2045 [110] clause 3 and RFC 5322
+     * [115] clause 3.6) of the MIMEHeader that was modified.
+     */
     | { mIMEHeader: UTF8String } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicated that the body of the MIME Message was modified.
+     */
     | { mIMEBody: MIMEBody } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates that the portion of a UTF8String identified by the IndexRange
+     * was modified.
+     */
     | { uTF8Location: IndexRange } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates that the portion of the OCTET STRING identified by the
+     * IndexRange was modified.
+     */
     | { octetLocation: IndexRange } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates the ABNF rule name of the rule that was modified.
+     */
     | { aBNFRule: ABNFRuleLocation } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

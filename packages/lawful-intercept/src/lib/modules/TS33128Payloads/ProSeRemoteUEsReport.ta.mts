@@ -29,12 +29,28 @@ export
 class ProSeRemoteUEsReport {
     /**
      * @summary `remoteUEsContextConnected`.
+     * @description
+     *
+     * Provides newly connected 5G ProSe Remote UE(s) information. Shall contain
+     * the remote UE context list octets if sent in the NAS N1 Remote UE Report
+     * message. Defined in TS 24.501 [13] clause 9.11.4.29.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly remoteUEsContextConnected: OPTIONAL<RemoteUEContextList>;
     /**
      * @summary `remoteUEsContextDisconnected`.
+     * @description
+     *
+     * Provides disconnected target 5G ProSe Remote UE(s) information. Shall
+     * contain the target remote UE context list octets if sent in the NAS N1
+     * Remote UE Report message. Defined in TS 24.501 [13] clause 9.11.4.29.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */

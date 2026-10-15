@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UERadioCapabilityForPaging
  * @description
  * 
+ * The UERadioCapabilityForPaging contains paging specific UE Radio Capability
+ * information. The UERadioCapabilityForPaging type is derived from the UE Radio
+ * Capability for Paging IE defined in TS 38.413 [23] clause 9.3.1.68.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +37,39 @@ export
 class UERadioCapabilityForPaging {
     /**
      * @summary `uERadioCapabilityForPagingOfNR`.
+     * @description
+     *
+     * Includes the UE Radio Capability Paging of NR information as defined in
+     * TS 38.413 [23] clause 9.3.1.68.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.4.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapabilityForPagingOfNR: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uERadioCapabilityForPagingOfEUTRA`.
+     * @description
+     *
+     * Includes the UE Radio Capability Paging of E-UTRA information as defined
+     * in TS 38.413 [23] clause 9.3.1.68.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.4.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapabilityForPagingOfEUTRA: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uERadioCapabilityForPagingOfNBIoT`.
+     * @description
+     *
+     * Includes the UE Radio Capability Paging of NB-IoT information as defined
+     * in TS 38.413 [23] clause 9.3.1.68.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.4.
+     *
      * @public
      * @readonly
      */

@@ -11,6 +11,11 @@ import { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
  * @summary TAIList
  * @description
  * 
+ * Contains a list of TAIs.
+ *
+ * 3GPP TS 33.128, clause 8.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

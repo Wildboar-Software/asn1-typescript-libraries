@@ -28,9 +28,50 @@ import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XM
  */
 export
 type RCSRegistrationInformation =
+    /**
+     * @description
+     *
+     * Contains the last SIP REGISTER request received at and SIP REGISTER
+     * response sent by the RCS Server. Shall be chosen if the RCS Server
+     * maintains a history of the SIP registration messages.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.1.
+     */
     { sIPRegistration: RCSSIPRegistrationExchange } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Contains the IMS user profile for the RCS user as described in TS 29.228
+     * [130] clause 7.7. Shall be present if the RCS Server maintains context
+     * for the user in the format described in TS 29.228 [130]. As there is no
+     * namespace defined for the userProfile schema defined in 29.228, the
+     * .XMLType.namespace parameter shall be populated with the string
+     * "TS29.228_CxData_Type_Rel17.xsd".
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.1.
+     */
     | { userProfile: XMLType } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Contains the multi-device profile for the individual instance of the RCS
+     * User being reported. Shall be present if the RCS Server contains a
+     * multi-device context for the user in the format described in TS 24.174
+     * [131]. The .XMLType.namespace parameter shall be populated with
+     * "http://uri.etsi.org/ngn/params/xml/simservs/xcap".
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.1.
+     */
     | { multiDevice: XMLType } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Contains the presence information for the RCS user in the format of a
+     * PIDF as described in GSMA RCC.07 [78]. The .XMLType.namespace parameter
+     * shall be populated with "urn:ietf:params:xml:ns:pidf".
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.1.
+     */
     | { presenceDocument: XMLType } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

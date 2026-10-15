@@ -15,6 +15,13 @@ import { PTCChatGroupID, _decode_PTCChatGroupID, _encode_PTCChatGroupID } from "
  * @summary PTCIDList
  * @description
  * 
+ * Shall provide identities of each participant from the PTC target's contact
+ * list (i.e. individuals) and PTC group list (i.e. list of pre-identified
+ * individuals using a group identification) for a group call. Report if known.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

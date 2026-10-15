@@ -14,6 +14,12 @@ import { FiveGGUTI, _decode_FiveGGUTI, _encode_FiveGGUTI } from "../TS33128Paylo
  * @summary EPS5GGUTI
  * @description
  * 
+ * The EPS5GGUTI type is used when a parameter may be either a GUTI or a
+ * 5G-GUTI.
+ *
+ * 3GPP TS 33.128, clause 8.3.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +32,21 @@ import { FiveGGUTI, _decode_FiveGGUTI, _encode_FiveGGUTI } from "../TS33128Paylo
  */
 export
 type EPS5GGUTI =
+    /**
+     * @description
+     *
+     * Chosen when the field contains a GUTI.
+     *
+     * 3GPP TS 33.128, clause 8.3.10.
+     */
     { gUTI: GUTI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the field contains a 5G-GUTI.
+     *
+     * 3GPP TS 33.128, clause 8.3.10.
+     */
     | { fiveGGUTI: FiveGGUTI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

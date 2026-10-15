@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PINServerID
  * @description
  * 
+ * Identifies the 5G PIN Server.
+ *
+ * 3GPP TS 33.128, clause 7.18.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSSMSServiceStatus
  * @description
  * 
+ * The EPSSMSServiceStatus provides information on status of SMS Services.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.4B.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,9 +29,37 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EPSSMSServiceStatus {
+    /**
+     * @description
+     *
+     * SMS Services ar not available.
+     *
+     * 3GPP TS 33.128, clause 8.5.7.
+     */
     sMSServicesNotAvailable = 1,
+    /**
+     * @description
+     *
+     * SMS Services not available for this UE in this PLMN.
+     *
+     * 3GPP TS 33.128, clause 8.5.7.
+     */
     sMSServicesNotAvailableInThisPLMN = 2,
+    /**
+     * @description
+     *
+     * SMS Services unavailable due to Network failure.
+     *
+     * 3GPP TS 33.128, clause 8.5.7.
+     */
     networkFailure = 3,
+    /**
+     * @description
+     *
+     * SMS Services unavailable due to congestion.
+     *
+     * 3GPP TS 33.128, clause 8.5.7.
+     */
     congestion = 4,
 }
 
@@ -33,6 +67,12 @@ enum _enum_for_EPSSMSServiceStatus {
  * @summary EPSSMSServiceStatus
  * @description
  * 
+ * The EPSSMSServiceStatus provides information on status of SMS Services.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.4B.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +94,12 @@ type EPSSMSServiceStatus = _enum_for_EPSSMSServiceStatus;
  * @summary EPSSMSServiceStatus
  * @description
  * 
+ * The EPSSMSServiceStatus provides information on status of SMS Services.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.4B.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,6 +119,12 @@ const EPSSMSServiceStatus = _enum_for_EPSSMSServiceStatus;
 
 /**
  * @summary EPSSMSServiceStatus_sMSServicesNotAvailable
+ * @description
+ *
+ * SMS Services ar not available.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +133,12 @@ const EPSSMSServiceStatus_sMSServicesNotAvailable: EPSSMSServiceStatus = EPSSMSS
 
 /**
  * @summary sMSServicesNotAvailable
+ * @description
+ *
+ * SMS Services ar not available.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +147,12 @@ const sMSServicesNotAvailable: EPSSMSServiceStatus = EPSSMSServiceStatus.sMSServ
 
 /**
  * @summary EPSSMSServiceStatus_sMSServicesNotAvailableInThisPLMN
+ * @description
+ *
+ * SMS Services not available for this UE in this PLMN.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +161,12 @@ const EPSSMSServiceStatus_sMSServicesNotAvailableInThisPLMN: EPSSMSServiceStatus
 
 /**
  * @summary sMSServicesNotAvailableInThisPLMN
+ * @description
+ *
+ * SMS Services not available for this UE in this PLMN.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +175,12 @@ const sMSServicesNotAvailableInThisPLMN: EPSSMSServiceStatus = EPSSMSServiceStat
 
 /**
  * @summary EPSSMSServiceStatus_networkFailure
+ * @description
+ *
+ * SMS Services unavailable due to Network failure.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +189,12 @@ const EPSSMSServiceStatus_networkFailure: EPSSMSServiceStatus = EPSSMSServiceSta
 
 /**
  * @summary networkFailure
+ * @description
+ *
+ * SMS Services unavailable due to Network failure.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +203,12 @@ const networkFailure: EPSSMSServiceStatus = EPSSMSServiceStatus.networkFailure; 
 
 /**
  * @summary EPSSMSServiceStatus_congestion
+ * @description
+ *
+ * SMS Services unavailable due to congestion.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +217,12 @@ const EPSSMSServiceStatus_congestion: EPSSMSServiceStatus = EPSSMSServiceStatus.
 
 /**
  * @summary congestion
+ * @description
+ *
+ * SMS Services unavailable due to congestion.
+ *
+ * 3GPP TS 33.128, clause 8.5.7.
+ *
  * @constant
  * @type {number}
  */

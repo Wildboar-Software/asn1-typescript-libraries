@@ -15,6 +15,15 @@ import { ChargingDataInformation, _decode_ChargingDataInformation, _encode_Charg
  * @summary ChargingDataEvent
  * @description
  * 
+ * The IRI-POI in the charging function shall generate an xIRI containing a
+ * ChargingDataEvent record when the IRI-POI present in the charging function
+ * observes a charging data event for a target identity as provided over LI_X1.
+ *
+ * Table 7.19.4-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +40,26 @@ export
 class ChargingDataEvent {
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall contain the user location information when it is included within a
+     * charging data request.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.2.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `chargingDataInformation`.
+     * @description
+     *
+     * Contains the selected choice between default charging data information
+     * types or translated charging data information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.2.
+     *
      * @public
      * @readonly
      */

@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SMSNFType
  * @description
  * 
+ * Type of the other network function (SMS-GMSC/IWMSC/SMS-Router) involved in
+ * the communication of the SMS, if available.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ enum _enum_for_SMSNFType {
  * @summary SMSNFType
  * @description
  * 
+ * Type of the other network function (SMS-GMSC/IWMSC/SMS-Router) involved in
+ * the communication of the SMS, if available.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +63,12 @@ type SMSNFType = _enum_for_SMSNFType;
  * @summary SMSNFType
  * @description
  * 
+ * Type of the other network function (SMS-GMSC/IWMSC/SMS-Router) involved in
+ * the communication of the SMS, if available.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

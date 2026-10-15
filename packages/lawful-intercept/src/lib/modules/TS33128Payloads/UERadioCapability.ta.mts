@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UERadioCapability
  * @description
  * 
+ * The UERadioCapability contains the UE radio access capability information.
+ * The UERadioCapability type is derived from UE Radio Capability IE defined in
+ * TS 38.413 [23] clauses 9.3.1.74, and 9.3.1.74a.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +36,26 @@ export
 class UERadioCapability {
     /**
      * @summary `uERadioCapibilityNR`.
+     * @description
+     *
+     * Includes the UE Radio Capability information as defined in TS 38.413 [23]
+     * clause 9.3.1.74.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.3.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapibilityNR: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uERadioCapabilityEUTRA`.
+     * @description
+     *
+     * Includes the UE Radio Capability – E-UTRA Format information message
+     * defined in TS 38.413 [23] clause 9.3.1.74a.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.3.
+     *
      * @public
      * @readonly
      */

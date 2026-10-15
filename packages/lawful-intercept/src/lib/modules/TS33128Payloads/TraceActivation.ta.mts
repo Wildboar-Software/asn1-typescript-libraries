@@ -11,6 +11,15 @@ import { ExternalASNType, _decode_ExternalASNType, _encode_ExternalASNType } fro
  * @summary TraceActivation
  * @description
  * 
+ * Information related to a trace session activation provided from the core to
+ * the RAN node. The ExternalASNType.encodedASNValue.alignedPER choice shall be
+ * used when populating this type and it shall be populated with the contents of
+ * the Trace Activation IE as described in the tables for the records that use
+ * this Type.
+ *
+ * 3GPP TS 33.128, clause 8.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

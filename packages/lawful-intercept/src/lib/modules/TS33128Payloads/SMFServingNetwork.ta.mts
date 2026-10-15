@@ -15,6 +15,15 @@ import { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
  * @summary SMFServingNetwork
  * @description
  * 
+ * PLMN ID of the serving core network operator, and, for a Non-Public Network
+ * (NPN), the NID that together with the PLMN ID identifies the NPN. Shall be
+ * present if this IE is in the SMContextCreateData or PDUSessionCreateData
+ * message sent to the SMF or the PDU Session Context or SM Context at the SMF
+ * (see TS 29.502 [16] clauses 6.1.6.2.2, 6.1.6.2.9 and 6.1.6.2.39).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

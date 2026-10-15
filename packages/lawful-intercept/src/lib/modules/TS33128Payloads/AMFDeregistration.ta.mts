@@ -37,6 +37,34 @@ import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } fro
  * @summary AMFDeregistration
  * @description
  * 
+ * The IRI-POI in the AMF shall generate an xIRI containing an AMFDeregistration
+ * record when the IRI-POI present in the AMF detects that a UE matching one of
+ * the target identifiers provided via LI_X1 has deregistered from the 5GS over
+ * at least one access type. Accordingly, the IRI-POI in AMF generates the xIRI
+ * when any of the following events is detected:
+ *
+ * - For network initiated de-registration, when the AMF receives the N1:
+ *   DEREGISTRATION ACCEPT message from the target UE or when implicit
+ *   deregistration timer expires; and in both cases the UE 5GMN state for the
+ *   access type (3GPP NG-RAN or non-3GPP access) within the AMF is changed to
+ *   5GMM-DEREGISTERED.
+ *
+ * - For UE initiated de-registration, when the AMF sends the N1: DEREGISTRATION
+ *   ACCEPT message to the target UE or when the AMF receives the N1:
+ *   DEREGISTRATION REQUEST message from the target UE with deregistration type
+ *   value of "switch off"; and in both cases the UE 5GMN state for the access
+ *   type (3GPP NG-RAN or non-3GPP access) within the AMF is changed to
+ *   5GMM-DEREGISTERED.
+ *
+ * - For network initiated AMF UE relocation, the AMFDeregistration xIRI shall
+ *   not be sent unless the 5GMM COMMON PROCEDURE INITIATED (see TS 24.501 [13]
+ *   clause 5.1.3.2.3.3) results in deregistration.
+ *
+ * NOTE: At least one among SUPI, SUCI, PEI and GPSI shall be provided.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -64,78 +92,176 @@ export
 class AMFDeregistration {
     /**
      * @summary `deregistrationDirection`.
+     * @description
+     *
+     * Indicates whether the deregistration was initiated by the network or by
+     * the UE.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly deregistrationDirection: AMFDirection;
     /**
      * @summary `accessType`.
+     * @description
+     *
+     * Indicates the access for which the deregistration is handled, see TS
+     * 24.501 [13] clause 9.11.3.20.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly accessType: AccessType;
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the deregistration (see clause 6.2.2.4), if
+     * available (see NOTE). NOTE: At least one among SUPI, SUCI, PEI and GPSI
+     * shall be provided.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: OPTIONAL<SUPI>;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI used in the deregistration, if available (see NOTE). NOTE: At least
+     * one among SUPI, SUCI, PEI and GPSI shall be provided.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI used in the deregistration, if available (see NOTE). NOTE: At least
+     * one among SUPI, SUCI, PEI and GPSI shall be provided.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI associated to the deregistration, if available as part of the
+     * subscription profile (see NOTE). NOTE: At least one among SUPI, SUCI, PEI
+     * and GPSI shall be provided.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI used in the deregistration, if available, see TS 24.501 [13]
+     * clause 5.5.2.2.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<FiveGGUTI>;
     /**
      * @summary `cause`.
+     * @description
+     *
+     * Indicates the 5GMM cause value associated with the deregistration
+     * procedure, see TS 24.501 [13] clause 9.11.3.2. The integer value is
+     * mapped from the second octet shown in TS 24.501 [13] clause 9.11.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly cause: OPTIONAL<FiveGMMCause>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information determined by the network during the deregistration,
+     * if available. Shall be encoded using the
+     * Location.locationInfo.userLocation parameter. If available, other
+     * parameters reportable via Location shall be included.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `switchOffIndicator`.
+     * @description
+     *
+     * Indicates whether the deregistration type is normal or switch off, if
+     * available, see TS 24.501 [13] clause 9.1.3.20.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly switchOffIndicator: OPTIONAL<SwitchOffIndicator>;
     /**
      * @summary `reRegRequiredIndicator`.
+     * @description
+     *
+     * Indicates whether UE re-registration is required in the DEREGISTRATION
+     * REQUEST message, if available, see TS 24.501 [13] clause 9.1.3.20.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly reRegRequiredIndicator: OPTIONAL<ReRegRequiredIndicator>;
     /**
      * @summary `unavailabilityPeriodDuration`.
+     * @description
+     *
+     * Period duration the UE is unavailable. Include if sent in the
+     * DEREGISTRATION REQUEST message. See TS 24.501 [13] clause 8.2.12.1.
+     * Encoded as GPRS Timer 3, see TS 24.008 [95] clause 10.5.7.4a, omitting
+     * the first two octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly unavailabilityPeriodDuration: OPTIONAL<UnavailabilityPeriodDuration>;
     /**
      * @summary `additionalUserIdentifiers`.
+     * @description
+     *
+     * Provides additional user identifiers known at the AMF or stored in AMF
+     * context, e.g. additional GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.3.
+     *
      * @public
      * @readonly
      */

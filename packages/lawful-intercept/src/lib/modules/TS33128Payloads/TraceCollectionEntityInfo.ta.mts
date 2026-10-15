@@ -36,6 +36,15 @@ class TraceCollectionEntityInfo {
     readonly traceCollectionEntityIPAddress: BIT_STRING;
     /**
      * @summary `traceCollectionEntityURI`.
+     * @description
+     *
+     * Indicates the URI of the trace collection entity. Include if sent in the
+     * TRACE START message. If the TRACE START message does not include a
+     * traceCollectionEntityURI, this parameter shall be sent as an empty
+     * string. See TS 38.413 [23] clause 9.3.1.14.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */

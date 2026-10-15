@@ -21,6 +21,12 @@ import { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } fro
  * @summary PresenceInfo
  * @description
  * 
+ * The PresenceInfo type is derived from the data present in the PresenceInfo
+ * type defined in TS 29.571 [17] clause 5.4.4.27.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.62.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,36 +47,83 @@ export
 class PresenceInfo {
     /**
      * @summary `presenceState`.
+     * @description
+     *
+     * Indicates whether the UE is inside or outside of the area of interest or
+     * if the presence reporting area is inactive in the serving node. Shall be
+     * present when known at the NF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.62.
+     *
      * @public
      * @readonly
      */
     readonly presenceState: OPTIONAL<PresenceState>;
     /**
      * @summary `trackingAreaList`.
+     * @description
+     *
+     * Represents the list of tracking areas that constitutes the area. This
+     * field contains the list of tracking areas when tracking areas are part of
+     * the area of interest.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.62.
+     *
      * @public
      * @readonly
      */
     readonly trackingAreaList: OPTIONAL<TAI[]>;
     /**
      * @summary `eCGIList`.
+     * @description
+     *
+     * Represents the list of EUTRAN cell IDs that constitutes the area. This
+     * field contains the list of ECGIs when ECGIs are part of the area of
+     * interest.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.62.
+     *
      * @public
      * @readonly
      */
     readonly eCGIList: OPTIONAL<ECGI[]>;
     /**
      * @summary `nCGIList`.
+     * @description
+     *
+     * Represents the list of NR cell Ids that constitutes the area. This field
+     * contains the list of NCGIs when NCGIs are part of the area of interest.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.62.
+     *
      * @public
      * @readonly
      */
     readonly nCGIList: OPTIONAL<NCGI[]>;
     /**
      * @summary `globalRANNodeIDList`.
+     * @description
+     *
+     * Represents the list of NG RAN node identifiers that constitutes the area.
+     * This field contains the list of GlobalRANNodeIDs when NG RAN Nodes are
+     * part of the area of interest.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.62.
+     *
      * @public
      * @readonly
      */
     readonly globalRANNodeIDList: OPTIONAL<GlobalRANNodeID[]>;
     /**
      * @summary `globalENbIDList`.
+     * @description
+     *
+     * Represents the list of eNodeB identifiers that constitutes the area. This
+     * field contains the list of GlobalRANNodeIDs when eNbIDs are part of the
+     * area of interest.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.62.
+     *
      * @public
      * @readonly
      */

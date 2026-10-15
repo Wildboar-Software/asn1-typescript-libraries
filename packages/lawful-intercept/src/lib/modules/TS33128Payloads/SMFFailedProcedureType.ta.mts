@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SMFFailedProcedureType
  * @description
  * 
+ * Specifies the procedure which failed or is aborted at the SMF.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +36,11 @@ enum _enum_for_SMFFailedProcedureType {
  * @summary SMFFailedProcedureType
  * @description
  * 
+ * Specifies the procedure which failed or is aborted at the SMF.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +61,11 @@ type SMFFailedProcedureType = _enum_for_SMFFailedProcedureType;
  * @summary SMFFailedProcedureType
  * @description
  * 
+ * Specifies the procedure which failed or is aborted at the SMF.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

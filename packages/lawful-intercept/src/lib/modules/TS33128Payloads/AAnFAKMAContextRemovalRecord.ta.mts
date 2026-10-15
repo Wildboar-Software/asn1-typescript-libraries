@@ -15,6 +15,10 @@ import { NFID, _decode_NFID, _encode_NFID } from "../TS33128Payloads/NFID.ta.mjs
  * @summary AAnFAKMAContextRemovalRecord
  * @description
  * 
+ * Table 7.9.1.5-1 gives the LI_HI2 IRI message type for this record as END.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

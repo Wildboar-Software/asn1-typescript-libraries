@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NFID
  * @description
  * 
+ * Identifies the AUSF instance which generated the
+ * AuthenticationInformatoinRequest. Shall be included if known.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -11,6 +11,15 @@ import { ExternalASNType, _decode_ExternalASNType, _encode_ExternalASNType } fro
  * @summary ExternalChargingASN
  * @description
  * 
+ * Information related to the charging data event provided by the charging data
+ * function. The external ASN type shall be encoded in BER format (see TS 32.297
+ * [149] clause 6.1.2.4) and shall be populated per the guidelines for selecting
+ * the corresponding service specific ASN file found in TS 32.298 [150] clause
+ * 5.2.
+ *
+ * 3GPP TS 33.128, clause 8.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

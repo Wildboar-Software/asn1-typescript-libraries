@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EncapsulatedMIMEEntity
  * @description
  * 
+ * Shall contain the entire MIME entity (see RFC 2045 [114] clause 2.4) in the
+ * original encoding.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

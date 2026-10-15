@@ -31,6 +31,51 @@ import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS3
  * @summary NEFPDUSessionModification
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing an
+ * NEFPDUSessionModification record when the IRI-POI present in the NEF detects
+ * that an unstructured PDU session using NEF has been modified for the target
+ * UE. The IRI-POI present in the NEF shall generate the xIRI for the following
+ * events:
+ *
+ * - NEF returns Nnef_SMContext_Update Response to SMF to confirm the
+ *   modification of the connection between SMF and NEF (see TS 29.541 [57]
+ *   clause 5.2.2.5).
+ *
+ * - NEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set to
+ *   "Success" in response to a RDS MANAGE PORT command sent by UE with an
+ *   "Action" field set to "Reserve port" to confirm the reservation of a
+ *   combination of source and destination port numbers for use for a traffic to
+ *   be sent by the UE to a specific application on an AF (see TS 24.250 [61]
+ *   clause 5.4.2.6.2).
+ *
+ * - NEF receives a RDS MANAGE PORT Response from a UE with a "Status" field set
+ *   to "Success" in response to a RDS MANAGE PORT command sent by the NEF with
+ *   an "Action" field set to "Reserve port" to confirm the reservation of a
+ *   combination of source and destination port numbers for use for a traffic to
+ *   be sent by an AF to a specific application on the UE (see TS 24.250 [61]
+ *   clause 5.4.2.6.2).
+ *
+ * - NEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set to
+ *   "Success" in response to a RDS MANAGE PORT command sent by UE with an
+ *   "Action" field set to "Release port" to confirm the release of a
+ *   combination of source and destination port numbers for an application on an
+ *   AF (see TS 24.250 [61] clause 5.4.2.6.3).
+ *
+ * - NEF receives a RDS MANAGE PORT Response from a UE with a "Status" field set
+ *   to "Success" in response to a RDS MANAGE PORT command sent by the NEF with
+ *   an "Action" field set to "Release port" to confirm the release of a
+ *   combination of source and destination port numbers for an application on
+ *   the UE (see TS 24.250 [61] clause 5.4.2.6.3).
+ *
+ * NOTE: For the backward compatibility purposes the parameter is coded as
+ * OPTIONAL in the ASN.1 schema (Annex A).
+ *
+ * Table 7.7.2.3-1 gives the LI_HI2 IRI message type for this record as
+ * CONTINUE.
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,66 +101,134 @@ export
 class NEFPDUSessionModification {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI associated with the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `sNSSAI`.
+     * @description
+     *
+     * Slice identifier associated with the PDU session.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sNSSAI: SNSSAI;
     /**
      * @summary `initiator`.
+     * @description
+     *
+     * Initiator of the modification of the PDU session, UE, SMF or NEF.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly initiator: Initiator;
     /**
      * @summary `rDSSourcePortNumber`.
+     * @description
+     *
+     * RDS source port number.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly rDSSourcePortNumber: OPTIONAL<RDSPortNumber>;
     /**
      * @summary `rDSDestinationPortNumber`.
+     * @description
+     *
+     * RDS destination port number.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly rDSDestinationPortNumber: OPTIONAL<RDSPortNumber>;
     /**
      * @summary `applicationID`.
+     * @description
+     *
+     * Application identifier on the UE or on the AF if RDS is used.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly applicationID: OPTIONAL<ApplicationID>;
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * Identifier of the AF if RDS is used.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly aFID: OPTIONAL<AFID>;
     /**
      * @summary `rDSAction`.
+     * @description
+     *
+     * Action if RDS is used. Possible values: "ReservePort", "ReleasePort".
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly rDSAction: OPTIONAL<RDSAction>;
     /**
      * @summary `serializationFormat`.
+     * @description
+     *
+     * Data format exchanged between UE and AF if RDS is used.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */
     readonly serializationFormat: OPTIONAL<SerializationFormat>;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID (see NOTE below). NOTE: For the backward compatibility
+     * purposes the parameter is coded as OPTIONAL in the ASN.1 schema (Annex
+     * A).
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.3.
+     *
      * @public
      * @readonly
      */

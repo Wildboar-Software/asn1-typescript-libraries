@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CivicAddress
  * @description
  * 
+ * The CivicAddress type is derived from the data present in the CivicAddress
+ * type defined in TS 29.572 [24] clause 6.1.6.2.14.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.40.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,186 +64,402 @@ export
 class CivicAddress {
     /**
      * @summary `country`.
+     * @description
+     *
+     * The two-letter ISO 3166 country code in capital ASCII letters, e.g. DE or
+     * US. Shall be encoded as described in TS 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly country: UTF8String;
     /**
      * @summary `a1`.
+     * @description
+     *
+     * National subdivisions (state, canton, region, province, prefecture).
+     * Shall be encoded as described in TS 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly a1: OPTIONAL<UTF8String>;
     /**
      * @summary `a2`.
+     * @description
+     *
+     * County, parish, gun (JP), district (IN). Shall be encoded as described in
+     * TS 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly a2: OPTIONAL<UTF8String>;
     /**
      * @summary `a3`.
+     * @description
+     *
+     * City, township, shi (JP). Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly a3: OPTIONAL<UTF8String>;
     /**
      * @summary `a4`.
+     * @description
+     *
+     * City division, borough, city district, ward, chou (JP). Shall be encoded
+     * as described in TS 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly a4: OPTIONAL<UTF8String>;
     /**
      * @summary `a5`.
+     * @description
+     *
+     * Neighbourhood, block. Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly a5: OPTIONAL<UTF8String>;
     /**
      * @summary `a6`.
+     * @description
+     *
+     * Group of streets below the neighbourhood level. Shall be encoded as
+     * described in TS 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly a6: OPTIONAL<UTF8String>;
     /**
      * @summary `prd`.
+     * @description
+     *
+     * Leading street direction. Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly prd: OPTIONAL<UTF8String>;
     /**
      * @summary `pod`.
+     * @description
+     *
+     * Trailing street suffix. Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly pod: OPTIONAL<UTF8String>;
     /**
      * @summary `sts`.
+     * @description
+     *
+     * Street suffix or type. Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly sts: OPTIONAL<UTF8String>;
     /**
      * @summary `hno`.
+     * @description
+     *
+     * House number. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly hno: OPTIONAL<UTF8String>;
     /**
      * @summary `hns`.
+     * @description
+     *
+     * House number suffix. Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly hns: OPTIONAL<UTF8String>;
     /**
      * @summary `lmk`.
+     * @description
+     *
+     * Landmark or vanity address. Shall be encoded as described in TS 29.572
+     * [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly lmk: OPTIONAL<UTF8String>;
     /**
      * @summary `loc`.
+     * @description
+     *
+     * Additional location information. Shall be encoded as described in TS
+     * 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly loc: OPTIONAL<UTF8String>;
     /**
      * @summary `nam`.
+     * @description
+     *
+     * Name (residence and office occupant). Shall be encoded as described in TS
+     * 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly nam: OPTIONAL<UTF8String>;
     /**
      * @summary `pc`.
+     * @description
+     *
+     * Postal/zip code. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly pc: OPTIONAL<UTF8String>;
     /**
      * @summary `bld`.
+     * @description
+     *
+     * Building (structure). Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly bld: OPTIONAL<UTF8String>;
     /**
      * @summary `unit`.
+     * @description
+     *
+     * Unit (apartment, suite). Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly unit: OPTIONAL<UTF8String>;
     /**
      * @summary `flr`.
+     * @description
+     *
+     * Floor. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly flr: OPTIONAL<UTF8String>;
     /**
      * @summary `room`.
+     * @description
+     *
+     * Room. Shall be encoded as described in TS 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly room: OPTIONAL<UTF8String>;
     /**
      * @summary `plc`.
+     * @description
+     *
+     * Place-type. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly plc: OPTIONAL<UTF8String>;
     /**
      * @summary `pcn`.
+     * @description
+     *
+     * Postal community name. Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly pcn: OPTIONAL<UTF8String>;
     /**
      * @summary `pobox`.
+     * @description
+     *
+     * Post office box (P.O. box). Shall be encoded as described in TS 29.572
+     * [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly pobox: OPTIONAL<UTF8String>;
     /**
      * @summary `addcode`.
+     * @description
+     *
+     * Additional code. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly addcode: OPTIONAL<UTF8String>;
     /**
      * @summary `seat`.
+     * @description
+     *
+     * Seat (desk, cubicle, workstation). Shall be encoded as described in TS
+     * 29.572 [24] table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly seat: OPTIONAL<UTF8String>;
     /**
      * @summary `rd`.
+     * @description
+     *
+     * Primary road or street. Shall be encoded as described in TS 29.572 [24]
+     * table 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly rd: OPTIONAL<UTF8String>;
     /**
      * @summary `rdsec`.
+     * @description
+     *
+     * Road clause. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly rdsec: OPTIONAL<UTF8String>;
     /**
      * @summary `rdbr`.
+     * @description
+     *
+     * Road branch. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly rdbr: OPTIONAL<UTF8String>;
     /**
      * @summary `rdsubbr`.
+     * @description
+     *
+     * Road sub-branch. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly rdsubbr: OPTIONAL<UTF8String>;
     /**
      * @summary `prm`.
+     * @description
+     *
+     * Road pre-modifier. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */
     readonly prm: OPTIONAL<UTF8String>;
     /**
      * @summary `pom`.
+     * @description
+     *
+     * Road post-modifier. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.14-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.40.
+     *
      * @public
      * @readonly
      */

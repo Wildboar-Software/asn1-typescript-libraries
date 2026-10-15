@@ -34,11 +34,36 @@ import { IMEISV, _decode_IMEISV, _encode_IMEISV } from "../TS33128Payloads/IMEIS
  */
 export
 type RemoteUEID =
+    /**
+     * @description
+     *
+     * A network access identifier as defined in TS 23.003 [19] clause 2.8.7.
+     * (3GPP TS 33.128, clause 8.3.3.)
+     */
     { uPPRUKIDNAI: NAI } /* CHOICE_ALT_ROOT */
     | { uPPRUKID64BitString: BIT_STRING } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * A network access identifier as defined in TS 23.003 [19] clause 2.8.7.
+     * (3GPP TS 33.128, clause 8.3.3.)
+     */
     | { cPPRUKIDNAI: NAI } /* CHOICE_ALT_ROOT */
     | { cPPRUKID64BitString: BIT_STRING } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from the International Mobile Equipment Identity defined in TS
+     * 23.003 [19] clause 6.2.1. (3GPP TS 33.128, clause 8.3.3.)
+     */
     | { iMEI: IMEI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from the International Mobile Equipment Identity and Software
+     * Version defined in TS 23.003 [19] clause 6.2.2. (3GPP TS 33.128, clause
+     * 8.3.3.)
+     */
     | { iMEISV: IMEISV } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

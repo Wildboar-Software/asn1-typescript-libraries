@@ -23,6 +23,14 @@ import { TS36413CoarseUELocation, _decode_TS36413CoarseUELocation, _encode_TS364
  */
 export
 type CoarseLocation =
+    /**
+     * @description
+     *
+     * Coarse location sent by a UE as described in TS 36.413 [38] clause
+     * 9.2.1.167.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.85.
+     */
     { tS36413CoarseUELocation: TS36413CoarseUELocation } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

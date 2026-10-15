@@ -13,6 +13,13 @@ import { NCGI, _decode_NCGI, _encode_NCGI } from "../TS33128IdentityAssociation/
  * @summary AdditionalNCGI
  * @description
  * 
+ * The additional NCGI that is being reported in the the IEFAssociationRecord
+ * and IEFDeassociationRecord are reported in the AdditionalNCGI type, as
+ * defined below.
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +35,14 @@ export
 class AdditionalNCGI {
     /**
      * @summary `nCGI`.
+     * @description
+     *
+     * NCGI available in the AMF. Given as a sequence of PLMNID (encoded as per
+     * TS 38.413 [23] clause 9.3.3.5) and NCI (encoded as per TS 38.413 [23]
+     * clause 9.3.1.7).
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.4.2.
+     *
      * @public
      * @readonly
      */

@@ -23,6 +23,12 @@ import { UncertaintySBI, _decode_UncertaintySBI, _encode_UncertaintySBI } from "
  * @summary EllipsoidArc
  * @description
  * 
+ * The EllipsoidArc type is derived from the data present in the EllipsoidArc
+ * type defined in TS 29.572 [24] clause 6.1.6.2.12.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.19.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,36 +58,76 @@ class EllipsoidArc {
     readonly point: GeographicalCoordinates;
     /**
      * @summary `innerRadius`.
+     * @description
+     *
+     * Indicates the inner radius of the ellipsoid arc in meters.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.19.
+     *
      * @public
      * @readonly
      */
     readonly innerRadius: InnerRadius;
     /**
      * @summary `deprecatedUncertaintyRadius`.
+     * @description
+     *
+     * No longer used in present version of this specification and shall be set
+     * to 0. The uncertaintyRadiusSBI parameter shall be used instead.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.19.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedUncertaintyRadius: Uncertainty;
     /**
      * @summary `offsetAngle`.
+     * @description
+     *
+     * Indicates the angle from North to the first defining radius of the arc in
+     * degrees.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.19.
+     *
      * @public
      * @readonly
      */
     readonly offsetAngle: Angle;
     /**
      * @summary `includedAngle`.
+     * @description
+     *
+     * Indicates the angle from the first defining radius of the arc to the
+     * second in degrees.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.19.
+     *
      * @public
      * @readonly
      */
     readonly includedAngle: Angle;
     /**
      * @summary `confidence`.
+     * @description
+     *
+     * Indicates the confidence of the location as a percentage.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.19.
+     *
      * @public
      * @readonly
      */
     readonly confidence: Confidence;
     /**
      * @summary `uncertaintyRadiusSBI`.
+     * @description
+     *
+     * Indicates the width of the uncertainty arc in meters. Shall be provided.
+     * This parameter is conditional only for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.19.
+     *
      * @public
      * @readonly
      */

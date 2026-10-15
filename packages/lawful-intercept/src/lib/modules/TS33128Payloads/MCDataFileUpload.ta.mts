@@ -37,30 +37,68 @@ export
 class MCDataFileUpload {
     /**
      * @summary `mCServiceID`.
+     * @description
+     *
+     * MC service ID of the target MC service user uploading a file or MC
+     * service user uploading a file intended for a target MC service group.
+     * Represented by the mcdata-calling-user-id element of the
+     * application/vnd.3gpp.mcdata-info+xml MIME body.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceID: MCServiceID;
     /**
      * @summary `mCServiceGroupID`.
+     * @description
+     *
+     * MC service group ID of the target MC service group the file is intended
+     * for. Represented by the mcdata-request-uri element of the
+     * application/vnd.3gpp.mcdata-info+xml MIME body.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceGroupID: OPTIONAL<MCServiceGroupID>;
     /**
      * @summary `mcDataRequestType`.
+     * @description
+     *
+     * Request-type element of application/vnd.3gpp.mcdata-info+xml MIME body:
+     * "one-to-one-fd" or "group-fd".
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */
     readonly mcDataRequestType: MCDataRequestType;
     /**
      * @summary `mCDataFileURL`.
+     * @description
+     *
+     * URI of the file being uploaded as found in the location header of the 201
+     * Created response.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */
     readonly mCDataFileURL: OPTIONAL<UTF8String>;
     /**
      * @summary `hTTPResponseCode`.
+     * @description
+     *
+     * HTTP response code in the HTTP response to the HTTP POST request for file
+     * upload.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */

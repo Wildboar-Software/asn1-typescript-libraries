@@ -14,6 +14,13 @@ import { GUAMI, _decode_GUAMI, _encode_GUAMI } from "../TS33128Payloads/GUAMI.ta
  * @summary UDMAMFDeregistrationInfo
  * @description
  * 
+ * Shall include the information sent in the AMF Registration Modification patch
+ * record to the UDM (with purgeFlag set to true), including cause information.
+ * See TS 29.503 [25] clause 6.2.6.2.7.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

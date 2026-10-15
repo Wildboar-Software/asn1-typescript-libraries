@@ -15,6 +15,17 @@ import { NonLocalID, _decode_NonLocalID, _encode_NonLocalID, _enum_for_NonLocalI
  * @summary MMSParty
  * @description
  * 
+ * ID(s) of the originating party in one or more of the formats described in
+ * clause 7.4.2.1. When address translation occurs (such as the case of a token
+ * sent by the client and replaced with a proper address by the MMS
+ * Proxy-Relay), both the pre and post translated addresses (with appropriate
+ * correlation) are included. If the originating MMS client requested address
+ * hiding, but the MMS Proxy-Relay has access to the "From" field, this shall be
+ * reported, regardless of the fact that it may be hidden from the recipient.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

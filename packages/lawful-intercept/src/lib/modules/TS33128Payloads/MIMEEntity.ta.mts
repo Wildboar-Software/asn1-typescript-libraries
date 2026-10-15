@@ -31,12 +31,20 @@ export
 class MIMEEntity {
     /**
      * @summary `contentType`.
+     * @description
+     *
+     * Indicates the MIME content type of the Entity.
+     *
      * @public
      * @readonly
      */
     readonly contentType: MIMEContentType;
     /**
      * @summary `encapsulatedMIMEEntity`.
+     * @description
+     *
+     * The contents of the MIME Entity.
+     *
      * @public
      * @readonly
      */

@@ -26,7 +26,21 @@ import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs
  */
 export
 type SubscriberIdentifier =
+    /**
+     * @description
+     *
+     * The SUCI type is derived from the data present in the Subscription
+     * Concealed Identifier type defined in TS 23.003 [19] clause 2.2B. (3GPP TS
+     * 33.128, clause 8.3.5.)
+     */
     { sUCI: SUCI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The SUPI type is derived from the data present in the Subscription
+     * Permanent Identifier type defined in TS 23.003 [19] clause 2.2A. (3GPP TS
+     * 33.128, clause 8.3.4.)
+     */
     | { sUPI: SUPI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

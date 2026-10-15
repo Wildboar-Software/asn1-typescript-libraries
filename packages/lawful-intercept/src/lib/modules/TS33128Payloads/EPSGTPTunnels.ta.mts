@@ -34,42 +34,105 @@ export
 class EPSGTPTunnels {
     /**
      * @summary `controlPlaneSenderFTEID`.
+     * @description
+     *
+     * Shall include the Sender F-TEID for the control plane if present in the
+     * Request or response (see TS 29.274 [87] clauses 7.2.1, 7.2.2, 7.2.3,
+     * 7.2.4, 7.2.7, 7.2.8, 7.2.15, 7.2.16) or known in the context at the SGW
+     * or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly controlPlaneSenderFTEID: OPTIONAL<FTEID>;
     /**
      * @summary `controlPlanePGWS5S8FTEID`.
+     * @description
+     *
+     * Shall include the PGW F-TEID for the control plane if present in the
+     * Request or response (see TS 29.274 [87] clauses 7.2.1, 7.2.2, 7.2.3,
+     * 7.2.4, 7.2.7, 7.2.8, 7.2.15, 7.2.16) or known in the context at the SGW
+     * or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly controlPlanePGWS5S8FTEID: OPTIONAL<FTEID>;
     /**
      * @summary `s1UeNodeBFTEID`.
+     * @description
+     *
+     * Shall include the F-TEID for the eNodeB S1-U interface for the bearer if
+     * present in the Request or response (see TS 29.274 [87] clauses 7.2.1,
+     * 7.2.2, 7.2.3, 7.2.4, 7.2.7, 7.2.8, 7.2.15, 7.2.16) or known in the
+     * context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly s1UeNodeBFTEID: OPTIONAL<FTEID>;
     /**
      * @summary `s5S8SGWFTEID`.
+     * @description
+     *
+     * Shall include the F-TEID for the SGW S5 or S8 interface for the bearer if
+     * present in the Request or response (see TS 29.274 [87] clauses 7.2.1,
+     * 7.2.2, 7.2.3, 7.2.4, 7.2.7, 7.2.8, 7.2.15, 7.2.16) or known in the
+     * context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly s5S8SGWFTEID: OPTIONAL<FTEID>;
     /**
      * @summary `s5S8PGWFTEID`.
+     * @description
+     *
+     * Shall include the F-TEID for the PGW S5 or S8 interface for the bearer if
+     * present in the Request or response (see TS 29.274 [87] clauses 7.2.1,
+     * 7.2.2, 7.2.3, 7.2.4, 7.2.7, 7.2.8, 7.2.15, 7.2.16) or known in the
+     * context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly s5S8PGWFTEID: OPTIONAL<FTEID>;
     /**
      * @summary `s2bUePDGFTEID`.
+     * @description
+     *
+     * Shall include the F-TEID for the ePDG on the S2b-U interface for the
+     * bearer if present in the Request or response (see TS 29.274 [87] clauses
+     * 7.2.1, 7.2.2, 7.2.3, 7.2.4, 7.2.7, 7.2.8, 7.2.15, 7.2.16) or known in the
+     * context at the PGW or ePDG.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly s2bUePDGFTEID: OPTIONAL<FTEID>;
     /**
      * @summary `s2aUePDGFTEID`.
+     * @description
+     *
+     * Shall include the F-TEID for the ePDG on the S2a-U interface for the
+     * bearer if present in the Request or response (see TS 29.274 [87] clauses
+     * 7.2.1, 7.2.2, 7.2.3, 7.2.4, 7.2.7, 7.2.8, 7.2.15, 7.2.16) or known in the
+     * context at the PGW or ePDG.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */

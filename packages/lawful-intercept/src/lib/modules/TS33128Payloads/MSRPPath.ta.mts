@@ -28,6 +28,13 @@ export
 class MSRPPath {
     /**
      * @summary `path`.
+     * @description
+     *
+     * Contains the value of the path attribute for the MSRP media-line present
+     * in the SIP Message being reported. See IETF RFC 4975 [79] clause 8.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.7.
+     *
      * @public
      * @readonly
      */

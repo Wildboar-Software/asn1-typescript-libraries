@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PDSRSummaryTrigger
  * @description
  * 
+ * Shall contain the trigger that caused the summary report to be generated,
+ * which is one of the following: a) timer expiry. b) packet count. c) byte
+ * count. d) start of a flow. e) end of a flow.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.9.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +42,13 @@ enum _enum_for_PDSRSummaryTrigger {
  * @summary PDSRSummaryTrigger
  * @description
  * 
+ * Shall contain the trigger that caused the summary report to be generated,
+ * which is one of the following: a) timer expiry. b) packet count. c) byte
+ * count. d) start of a flow. e) end of a flow.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.9.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +71,13 @@ type PDSRSummaryTrigger = _enum_for_PDSRSummaryTrigger;
  * @summary PDSRSummaryTrigger
  * @description
  * 
+ * Shall contain the trigger that caused the summary report to be generated,
+ * which is one of the following: a) timer expiry. b) packet count. c) byte
+ * count. d) start of a flow. e) end of a flow.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.9.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

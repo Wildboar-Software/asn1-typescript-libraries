@@ -30,12 +30,28 @@ export
 class SIPCellularNetworkInformation {
     /**
      * @summary `cellularNetworkInfo`.
+     * @description
+     *
+     * Contains the contents of the Cellular-Network-Info Header not including
+     * the text from any cellular-access-info field parameters. This field shall
+     * include any extension-access-info parameter fields (see TS 24.229 [74]
+     * clause 7.2.15).
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly cellularNetworkInfo: UTF8String;
     /**
      * @summary `servingPLMN`.
+     * @description
+     *
+     * Indicates the PLMN of the serving network. Shall be included if this
+     * information is present in the access-info field of the CNI header.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.6.
+     *
      * @public
      * @readonly
      */

@@ -14,6 +14,13 @@ import { RemoteUEContext, _decode_RemoteUEContext, _encode_RemoteUEContext } fro
  * @summary RemoteUEContextList
  * @description
  * 
+ * Provides disconnected target 5G ProSe Remote UE(s) information. Shall contain
+ * the target remote UE context list octets if sent in the NAS N1 Remote UE
+ * Report message. Defined in TS 24.501 [13] clause 9.11.4.29.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

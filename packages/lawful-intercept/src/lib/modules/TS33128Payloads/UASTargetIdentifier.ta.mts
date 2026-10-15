@@ -28,8 +28,22 @@ import { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
  */
 export
 type UASTargetIdentifier =
+    /**
+     * @description
+     *
+     * The GPSI type is derived from the data present in the Generic Public
+     * Subscription Identifier type defined in TS 23.003 [19] clause 28.8. (3GPP
+     * TS 33.128, clause 8.3.7.)
+     */
     { gPSI: GPSI } /* CHOICE_ALT_ROOT */
     | { cAALevelUAVID: UTF8String } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The PEI type is derived from the data present in the Permanent Equipment
+     * Identifier type defined in TS 23.003 [19] clause 6.4. (3GPP TS 33.128,
+     * clause 8.3.6.)
+     */
     | { pEI: PEI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

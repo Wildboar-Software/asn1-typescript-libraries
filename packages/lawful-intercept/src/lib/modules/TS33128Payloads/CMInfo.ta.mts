@@ -15,6 +15,13 @@ import { _decode_AccessType, _encode_AccessType, _enum_for_AccessType, AccessTyp
  * @summary CMInfo
  * @description
  * 
+ * The CMInfo type is derived from the data present in the CMInfo type defined
+ * in TS 29.518 [22] clause 6.2.6.2.9. Table 7.3.3.2.50-1 contains the details
+ * for the CMInfo type.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.50.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,25 @@ export
 class CMInfo {
     /**
      * @summary `cMState`.
+     * @description
+     *
+     * Describes the connection management state of the UE.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.50.
+     *
      * @public
      * @readonly
      */
     readonly cMState: CMState;
     /**
      * @summary `accessType`.
+     * @description
+     *
+     * Describes the access type of the UE that applies to the connection
+     * management state reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.50.
+     *
      * @public
      * @readonly
      */

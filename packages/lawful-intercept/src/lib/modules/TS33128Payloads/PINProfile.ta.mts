@@ -11,6 +11,14 @@ import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XM
  * @summary PINProfile
  * @description
  * 
+ * Contains the PIN profile of the target PIN. The PIN profile is encoded as a
+ * "PIN-Profile" XML structure according to TS 24.583 [142] clause 6.2.4. The
+ * XMLType.namespace for this parameter shall be set to the namespace of the
+ * root element of the XML document, e.g. "urn:3GPP:ns:pinapp:2023".
+ *
+ * 3GPP TS 33.128, clause 7.18.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

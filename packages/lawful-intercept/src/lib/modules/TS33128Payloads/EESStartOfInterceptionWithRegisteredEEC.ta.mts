@@ -22,6 +22,17 @@ import { UnfulfilledACProfiles, _decode_UnfulfilledACProfiles, _encode_Unfulfill
  * @summary EESStartOfInterceptionWithRegisteredEEC
  * @description
  * 
+ * The IRI-POI in the AES shall generate an xIRI containing an
+ * EESStartOfInterceptionWithRegisteredEEC record when the IRI-POI present in
+ * the EES detects that interception is activated on a UE which EEC has already
+ * registered with an EES.
+ *
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,54 +56,114 @@ export
 class EESStartOfInterceptionWithRegisteredEEC {
     /**
      * @summary `eECID`.
+     * @description
+     *
+     * Unique identifier of the EEC.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */
     readonly eECID: UTF8String;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `aCProfiles`.
+     * @description
+     *
+     * Profiles of application clients (ACs) for which the EEC provides edge
+     * enabling services, if available. See table 7.14.2.2-2.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */
     readonly aCProfiles: OPTIONAL<ACProfiles>;
     /**
      * @summary `eECServiceContSupport`.
+     * @description
+     *
+     * ACR scenarios supported by the EEC for service continuity if any.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */
     readonly eECServiceContSupport: OPTIONAL<ACRScenarios>;
     /**
      * @summary `expirationTime`.
+     * @description
+     *
+     * Expiration time for the registration. If absent for registration types
+     * "Registration" and "Registration Update", registration of EEC never
+     * expires.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */
     readonly expirationTime: OPTIONAL<Timestamp>;
     /**
      * @summary `eECContextID`.
+     * @description
+     *
+     * Unique identifier of the EEC context, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */
     readonly eECContextID: OPTIONAL<UTF8String>;
     /**
      * @summary `srcEESID`.
+     * @description
+     *
+     * Identifier of the EES providing the EEC context identifier, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */
     readonly srcEESID: OPTIONAL<UTF8String>;
     /**
      * @summary `unfulfilledACProfiles`.
+     * @description
+     *
+     * If requirements indicated in the AC profile(s) cannot be fulfilled for
+     * some of the AC profile(s), the EES shall include "unfulfilledAcProfiles"
+     * attribute containing the list of ACIDs of such AC Profile(s) and
+     * appropriate reasons, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */
     readonly unfulfilledACProfiles: OPTIONAL<UnfulfilledACProfiles>;
     /**
      * @summary `timeOfRegistration`.
+     * @description
+     *
+     * Time at which the last registration occurred, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.10.
+     *
      * @public
      * @readonly
      */

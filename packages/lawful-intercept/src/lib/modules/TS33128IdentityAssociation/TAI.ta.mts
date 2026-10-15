@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TAI
  * @description
  * 
+ * Encoded as per TS 24.501 [13] clause 9.11.3.8, omitting the first octet.
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

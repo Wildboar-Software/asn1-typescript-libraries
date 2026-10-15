@@ -12,6 +12,11 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary EncapsulatedSBIChargingData
  * @description
  * 
+ * Encapsulated unmodified payload of Nchf SBI payload.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

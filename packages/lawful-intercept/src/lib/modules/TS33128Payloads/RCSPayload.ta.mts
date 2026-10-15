@@ -26,7 +26,26 @@ import { ModifiedRCSPayload, _decode_ModifiedRCSPayload, _encode_ModifiedRCSPayl
  */
 export
 type RCSPayload =
+    /**
+     * @description
+     *
+     * Contains the entire payload of the RCS message in the original encoding.
+     * Shall be chosen if the original payload of the RCS message being reported
+     * contains only authorised information.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.2.
+     */
     { fullPayload: EncapsulatedRCSPayload } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Contains the modified encapsulated RCS message and a list of the
+     * modifications performed. Shall be chosen if the original payload of the
+     * RCS message being reported contains any information that is not
+     * authorised.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.2.
+     */
     | { modifiedPayload: ModifiedRCSPayload } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

@@ -17,6 +17,13 @@ import { SIPLocationInfo, _decode_SIPLocationInfo, _encode_SIPLocationInfo } fro
  * @summary PANIHeaderInfo
  * @description
  * 
+ * The PANIHeaderInfo type is used to report information derived from the
+ * P-Access-Network-Information header field of the SIP Message (see TS 24.229
+ * [74] clauses 7.2A.4.2 and 7.2A.4.3).
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.58.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,41 @@ export
 class PANIHeaderInfo {
     /**
      * @summary `accessNetworkInformation`.
+     * @description
+     *
+     * Provides non-location related access network information.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.58.
+     *
      * @public
      * @readonly
      */
     readonly accessNetworkInformation: SIPAccessNetworkInformation;
     /**
      * @summary `accessInfo`.
+     * @description
+     *
+     * Contains the location related information from the access-info field
+     * parameter of the PANI Header. One instance of SIPAccessInfo shall be used
+     * for each access-info field parameter of the PANI header.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.58.
+     *
      * @public
      * @readonly
      */
     readonly accessInfo: OPTIONAL<SIPAccessInfo[]>;
     /**
      * @summary `pANILocation`.
+     * @description
+     *
+     * Contains the location information from the PANI header in the
+     * LocationInfo structure. One instance of SIPLocationInfo shall be present
+     * for each access-info field parameter of a type that can be mapped to the
+     * LocationInfo structure.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.58.
+     *
      * @public
      * @readonly
      */

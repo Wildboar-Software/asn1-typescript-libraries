@@ -405,6 +405,12 @@ import * as IPAccessPDU from "../IPAccessPDU/index.mjs";
  * @summary XIRIEvent
  * @description
  * 
+ * Shall be populated with the event specified in the relevant clause of the
+ * present document.
+ *
+ * 3GPP TS 33.128, clause 5.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -726,203 +732,1804 @@ import * as IPAccessPDU from "../IPAccessPDU/index.mjs";
  */
 export
 type XIRIEvent =
+    /**
+     * @description
+     *
+     * The IRI-POI in the AMF shall generate an xIRI containing an
+     * AMFRegistration record when the IRI-POI present in the AMF detects that a
+     * UE matching one of the target identifiers provided via LI_X1 has
+     * successfully registered to the 5GS via 3GPP NG-RAN or non-3GPP access.
+     * (3GPP TS 33.128, clause 6.2.2.2.2.)
+     */
     { registration: AMFRegistration } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AMF shall generate an xIRI containing an
+     * AMFDeregistration record when the IRI-POI present in the AMF detects that
+     * a UE matching one of the target identifiers provided via LI_X1 has
+     * deregistered from the 5GS over at least one access type. (3GPP TS 33.128,
+     * clause 6.2.2.2.3.)
+     */
     | { deregistration: AMFDeregistration } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AMF shall generate an xIRI containing an
+     * AMFLocationUpdate record each time the IRI-POI present in an AMF detects
+     * that the target’s UE location is updated due to target UE mobility or as
+     * a part of an AMF service procedure and the reporting of location
+     * information is not restricted by service scoping. (3GPP TS 33.128, clause
+     * 6.2.2.2.4.)
+     */
     | { locationUpdate: AMFLocationUpdate } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AMF shall generate an xIRI containing an
+     * AMFStartOfInterceptionWithRegisteredUE record when the IRI-POI present in
+     * the AMF detects that interception is activated on a UE that has already
+     * been registered in the 5GS (see clause 6.2.2.4 on identity privacy).
+     * (3GPP TS 33.128, clause 6.2.2.2.5.)
+     */
     | { startOfInterceptionWithRegisteredUE: AMFStartOfInterceptionWithRegisteredUE } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AMF shall generate an xIRI containing an
+     * AMFUnsuccessfulProcedure record when the IRI-POI present in the AMF
+     * detects an unsuccessful procedure for a UE matching one of the target
+     * identifiers provided via LI_X1. (3GPP TS 33.128, clause 6.2.2.2.6.)
+     */
     | { unsuccessfulAMProcedure: AMFUnsuccessfulProcedure } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFPDUSessionEstablishment record when the IRI-POI present in the SMF
+     * detects that a single-access PDU session has been established for the
+     * target UE. (3GPP TS 33.128, clause 6.2.3.2.2.)
+     */
     | { pDUSessionEstablishment: SMFPDUSessionEstablishment } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFPDUSessionModification record when the IRI-POI present in the SMF
+     * detects that a single-access PDU session has been modified for the target
+     * UE. (3GPP TS 33.128, clause 6.2.3.2.3.)
+     */
     | { pDUSessionModification: SMFPDUSessionModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFPDUSessionRelease record when the IRI-POI present in the SMF detects
+     * that a single-access PDU session has been released. (3GPP TS 33.128,
+     * clause 6.2.3.2.4.)
+     */
     | { pDUSessionRelease: SMFPDUSessionRelease } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFStartOfInterceptionWithEstablishedPDUSession record when the IRI-POI
+     * present in the SMF detects that a single-access PDU session has already
+     * been established for the target UE when interception starts. (3GPP TS
+     * 33.128, clause 6.2.3.2.5.)
+     */
     | { startOfInterceptionWithEstablishedPDUSession: SMFStartOfInterceptionWithEstablishedPDUSession } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFUnsuccessfulProcedure record when the IRI-POI present in the SMF
+     * detects an unsuccessful procedure or error condition for a UE matching
+     * one of the target identifiers provided via LI_X1. (3GPP TS 33.128, clause
+     * 6.2.3.2.6.)
+     */
     | { unsuccessfulSMProcedure: SMFUnsuccessfulProcedure } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+     * UDMServingSystemMessage record when it detects the following events: -
+     * When the UDM receives the amf3GPPAccessRegistration from the AMF as part
+     * of the Nudm_UEContextManagement_Registration service operation (see TS
+     * 29.503 [25] clause 5.3.2.2.2). (3GPP TS 33.128, clause 7.2.2.3.2.)
+     */
     | { servingSystemMessage: UDMServingSystemMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMSF shall generate an xIRI containing an SMSMessage
+     * record for the following cases: SMS-MO case: (3GPP TS 33.128, clause
+     * 6.2.5.3.)
+     */
     | { sMSMessage: SMSMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI provided by the LI-LCS client shall deliver the target
+     * location reports to respective MDF(s) as xIRI over the LI_X2 interface.
+     * (3GPP TS 33.128, clause 7.3.1.4.)
+     */
     | { lALSReport: LALSReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * As of version 19.0.0 of the present document the PDHeaderReport record
+     * has been deprecated in favour of the IPPR record as defined in clause
+     * 6.2.3.9.5. (3GPP TS 33.128, clause 6.2.3.9.3.)
+     */
     | { pDHeaderReport: PDHeaderReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * As of version 19.0.0 of the present document the PDSummaryReport record
+     * has been deprecated in favour of the IPPR record as defined in clause
+     * 6.2.3.9.5. (3GPP TS 33.128, clause 6.2.3.9.4.)
+     */
     | { pDSummaryReport: PDSummaryReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSSend record when the MMS Proxy-Relay sends m-send-conf (as defined in
+     * OMA-TS-MMS_ENC [39] clause 6.1.1) to local target UE. (3GPP TS 33.128,
+     * clause 7.4.3.1.)
+     */
     | { mMSSend: MMSSend } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSSendByNonLocalTarget record when the MMS Proxy-Relay receives
+     * MM4_forward.REQ (as defined in TS 23.140 [40] clause 8.4.1) from the
+     * non-local MMS Proxy-Relay, that contains a non-local target ID. (3GPP TS
+     * 33.128, clause 7.4.3.2.)
+     */
     | { mMSSendByNonLocalTarget: MMSSendByNonLocalTarget } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSNotification record when the MMS Proxy-Relay sends a
+     * m-notification-ind (as defined in OMA-TS-MMS_ENC [39] clause 6.2) to the
+     * MMS client in the local target UE. (3GPP TS 33.128, clause 7.4.3.3.)
+     */
     | { mMSNotification: MMSNotification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSSendToNonLocalTarget record when the local MMS Proxy-Relay sends a
+     * MM4_forward.REQ (as defined in TS 23.140 [40] clause 8.4.1) to the
+     * non-local MMS Proxy-Relay, that contains a non-local target ID. (3GPP TS
+     * 33.128, clause 7.4.3.4.)
+     */
     | { mMSSendToNonLocalTarget: MMSSendToNonLocalTarget } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSNotificationResponse record when the MMS Proxy-Relay receives a
+     * m-notifyresp-ind (as defined in OMA-TS-MMS_ENC [39] clause 6.2 table 4)
+     * from the MMS client in the target UE for the deferred retrieval case
+     * only. (3GPP TS 33.128, clause 7.4.3.5.)
+     */
     | { mMSNotificationResponse: MMSNotificationResponse } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSRetrieval record when the MMS Proxy-Relay sends a m-retrieve-conf (as
+     * defined in OMA-TS-MMS_ENC [39] clause 6.3) to the MMS client in the
+     * target UE. (3GPP TS 33.128, clause 7.4.3.6.)
+     */
     | { mMSRetrieval: MMSRetrieval } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSDeliveryAck record when: - the MMS Proxy-Relay receives an
+     * m-acknowledge-ind (as defined in OMA-TS-MMS_ENC [39] clause 6.4) from the
+     * MMS client in the target UE (for deferred retrieval), or (3GPP TS 33.128,
+     * clause 7.4.3.7.)
+     */
     | { mMSDeliveryAck: MMSDeliveryAck } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSForward record when the MMS Proxy-Relay sends an m-forward-conf (as
+     * defined in OMA-TS-MMS_ENC [39] clause 6.5.2) to the MMS client in the
+     * target UE. (3GPP TS 33.128, clause 7.4.3.8.)
+     */
     | { mMSForward: MMSForward } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSDeleteFromRelay record when the MMS Proxy-Relay sends a
+     * m-delete-conf (defined in OMA-TS-MMS_ENC [39]) to the MMS client in the
+     * target UE. (3GPP TS 33.128, clause 7.4.3.9.)
+     */
     | { mMSDeleteFromRelay: MMSDeleteFromRelay } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSDeliveryReport record when the MMS Proxy-Relay sends an
+     * m-delivery-ind (as defined in OMA-TS-MMS_ENC [39] clause 6.11) to the MMS
+     * client in the target UE. (3GPP TS 33.128, clause 7.4.3.13.)
+     */
     | { mMSDeliveryReport: MMSDeliveryReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSDeliveryReportNonLocalTarget record when the MMS Proxy-Relay: - sends
+     * MM4_delivery_report.REQ (as defined in TS 23.140 [40] clause 8.4.2), that
+     * contains a non-local target ID, to the non-local MMS Proxy-Relay, or
+     * (3GPP TS 33.128, clause 7.4.3.14.)
+     */
     | { mMSDeliveryReportNonLocalTarget: MMSDeliveryReportNonLocalTarget } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSReadReport record when the MMS Proxy-Relay: - sends a
+     * m-read-orig-ind (as defined in OMA-TS-MMS_ENC [39] clause 6.7.2) to the
+     * MMS client in the target UE, or (3GPP TS 33.128, clause 7.4.3.15.)
+     */
     | { mMSReadReport: MMSReadReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSReadReportNonLocalTarget record when the MMS
+     * Proxy-Relay: - sends a MM4_read_reply_report.REQ (as defined in TS 23.140
+     * [40] clause 8.4.3), that contains a non-local target ID, to the non-local
+     * MMS Proxy-Relay, or (3GPP TS 33.128, clause 7.4.3.16.)
+     */
     | { mMSReadReportNonLocalTarget: MMSReadReportNonLocalTarget } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSCancel record when the MMS Proxy-Relay sends a
+     * m-cancel-req (as defined in OMA-TS-MMS_ENC [39] clause 6.13) to the MMS
+     * client in the target UE. (3GPP TS 33.128, clause 7.4.3.17.)
+     */
     | { mMSCancel: MMSCancel } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSMBoxStore record when the MMS Proxy-Relay sends a m-mbox-store-conf
+     * (defined in OMA-TS-MMS_ENC [39] clause 6.8) to the MMS client in the
+     * target UE. (3GPP TS 33.128, clause 7.4.3.10.)
+     */
     | { mMSMBoxStore: MMSMBoxStore } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSMBoxUpload record when the MMS Proxy-Relay sends a
+     * m-mbox-upload-conf (defined in OMA-TS-MMS_ENC [39] clause 6.10) to the
+     * MMS client in the target UE. (3GPP TS 33.128, clause 7.4.3.11.)
+     */
     | { mMSMBoxUpload: MMSMBoxUpload } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSMBoxDelete record when the MMS Proxy-Relay sends a
+     * m-mbox-delete.conf (defined in OMA-TS-MMS_ENC [39]) to the MMS client in
+     * the target UE. (3GPP TS 33.128, clause 7.4.3.12.)
+     */
     | { mMSMBoxDelete: MMSMBoxDelete } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSMBoxViewRequest record when the MMS Proxy-Relay receives
+     * a m-mbox-view-req (as defined in OMA-TS-MMS_ENC [39] clause 6.9) from the
+     * MMS client in the target UE. (3GPP TS 33.128, clause 7.4.3.18.)
+     */
     | { mMSMBoxViewRequest: MMSMBoxViewRequest } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI
+     * containing an MMSMBoxViewResponse record when the MMS Proxy-Relay sends a
+     * m-mbox-view.conf (as defined in OMA-TS-MMS_ENC [39] clause 6.9) to the
+     * MMS client in the target UE. (3GPP TS 33.128, clause 7.4.3.19.)
+     */
     | { mMSMBoxViewResponse: MMSMBoxViewResponse } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCRegistration record when the IRI-POI present in the PTC server detects
+     * that a PTC target matching one of the PTC target identifiers, referenced
+     * in clause 7.5.1.1, provided via LI_X1 has registered, re-registered, or
+     * de-registered for PTC services , regardless of whether it is successful
+     * or unsuccessful. (3GPP TS 33.128, clause 7.5.2.1.)
+     */
     | { pTCRegistration: PTCRegistration } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCSessionInitiation record when the IRI-POI present in the PTC server
+     * detects that the PTC target initiates an on-demand session or the target
+     * receives an invitation to join an on-demand session regardless of the
+     * success or the final disposition of the invitation. (3GPP TS 33.128,
+     * clause 7.5.2.2.)
+     */
     | { pTCSessionInitiation: PTCSessionInitiation } /* CHOICE_ALT_ROOT */
     | { pTCSessionAbandon: PTCSessionAbandon } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCSessionStart record when the IRI-POI present in the PTC server detects
+     * that the PTC Session is initiated and communication begins for both an
+     * on-demand and pre-established PTC session. (3GPP TS 33.128, clause
+     * 7.5.2.4.)
+     */
     | { pTCSessionStart: PTCSessionStart } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCSessionEnd record when the IRI-POI present in the PTC server detects
+     * that the PTC session is released for any reason (i.e. normal or abnormal
+     * release) and voice communications ends. (3GPP TS 33.128, clause 7.5.2.5.)
+     */
     | { pTCSessionEnd: PTCSessionEnd } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCStartOfInterception record when a PTC target or a PTC chat group as a
+     * target has an active PTC session in progress. (3GPP TS 33.128, clause
+     * 7.5.2.6.)
+     */
     | { pTCStartOfInterception: PTCStartOfInterception } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCPre-EstablishedSession record when the IRI-POI present in the PTC
+     * server detects that a pre-established session is setup/modified/released
+     * between the PTC target and the PTC server associated with the PTC target.
+     * (3GPP TS 33.128, clause 7.5.2.7.)
+     */
     | { pTCPreEstablishedSession: PTCPreEstablishedSession } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCInstantPersonalAlert record when the IRI-POI present in the PTC server
+     * detects that an Instant Personal Alert (IPA) (i.e. a request for one
+     * participant to initiate a one-to-one PTC session) is initiated by or sent
+     * to the PTC target. (3GPP TS 33.128, clause 7.5.2.8.)
+     */
     | { pTCInstantPersonalAlert: PTCInstantPersonalAlert } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server hosting the PTC chat group session
+     * when the PTC chat group is the PTC target, shall generate an xIRI
+     * containing a PTCPartyJoin record when the IRI-POI present in that PTC
+     * server detects when a PTC participant joins (or re-joins) an on-going PTC
+     * chat group session. (3GPP TS 33.128, clause 7.5.2.9.)
+     */
     | { pTCPartyJoin: PTCPartyJoin } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server hosting the PTC chat group session,
+     * when the PTC chat group is the PTC target, shall generate an xIRI
+     * containing a PTCPartyDrop record when the IRI-POI present in that PTC
+     * server detects that a PTC participant leaves the PTC chat group session
+     * that still remains active with other PTC participants. (3GPP TS 33.128,
+     * clause 7.5.2.10.)
+     */
     | { pTCPartyDrop: PTCPartyDrop } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCPartyHold record when the IRI-POI present in the PTC server detects
+     * that an on-going PTC session is placed on hold or retrieved from hold by
+     * the PTC target or by a PTC participant in a PTC chat group, where the PTC
+     * chat group is the PTC target. (3GPP TS 33.128, clause 7.5.2.11.)
+     */
     | { pTCPartyHold: PTCPartyHold } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCMediaModification record when the IRI-POI present in the PTC server
+     * detects that a re-negotiation of the media parameters occurs during a PTC
+     * session involving the PTC target. (3GPP TS 33.128, clause 7.5.2.12.)
+     */
     | { pTCMediaModification: PTCMediaModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCGroupAdvertisement record when the IRI-POI present in the PTC server
+     * detects when a PTC target sends group advertisement information to a
+     * single PTC participant, a list of PTC participants, or to all members of
+     * a PTC chat group, as well as when a PTC target receives group
+     * advertisement information from a single PTC participant, a list of PTC
+     * participants, or from members of a PTC chat group using the group
+     * identity. (3GPP TS 33.128, clause 7.5.2.13.)
+     */
     | { pTCGroupAdvertisement: PTCGroupAdvertisement } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCFloorControl record when the IRI-POI present in the PTC server detects
+     * when the PTC target requests floor control (i.e. send media), when floor
+     * control is granted to PTC target, when floor control request from the PTC
+     * target is rejected/released, when the floor becomes open (e.g. idle),
+     * when the floor control request from the PTC target is queued, when the
+     * floor control request from the PTC target is dequeued, or when the floor
+     * control request is revoked. (3GPP TS 33.128, clause 7.5.2.14.)
+     */
     | { pTCFloorControl: PTCFloorControl } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCTargetPresence record when the IRI-POI present in the PTC server
+     * detects that the PTC server publishes network presence information to the
+     * Presence server on behalf of the PTC target. (3GPP TS 33.128, clause
+     * 7.5.2.15.)
+     */
     | { pTCTargetPresence: PTCTargetPresence } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCParticipantPresence record when the IRI-POI present in the PTC server
+     * (when it supports the Presence functionality and assumes the role of the
+     * Watcher on behalf of the PTC target) detects that the PTC server receives
+     * presence status notifications from the Presence servers after having
+     * subscribed to the PTC presence status of other PTC participants (i.e.
+     * participants in communication with the PTC target). (3GPP TS 33.128,
+     * clause 7.5.2.16.)
+     */
     | { pTCParticipantPresence: PTCParticipantPresence } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCListManagement record when the IRI-POI present in the PTC server
+     * detects that the PTC target attempts to change their contact list/group
+     * list(s) or those lists are updated by the network. (3GPP TS 33.128,
+     * clause 7.5.2.17.)
+     */
     | { pTCListManagement: PTCListManagement } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the PTC server shall generate an xIRI containing a
+     * PTCAccessPolicy record when the IRI-POI present in the PTC server detects
+     * when the PTC target attempts to change the access control lists (e.g.
+     * (3GPP TS 33.128, clause 7.5.2.18.)
+     */
     | { pTCAccessPolicy: PTCAccessPolicy } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+     * UDMSubscriberRecordChangeMessage record when it detects the following
+     * events: - A change in the SUPI/GPSI/PEI association for a target as a
+     * part of: (3GPP TS 33.128, clause 7.2.2.3.3.)
+     */
     | { subscriberRecordChangeMessage: UDMSubscriberRecordChangeMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+     * UDMCancelLocation record when it detects the following events: - When the
+     * UDM sends DeregistrationData to AMF as part of the
+     * Nudm_UEContextManagement DeregistrationNotification service operation
+     * (see TS 29.503 [25] clause 5.3.2.3.2) (e.g. to cancel location retrieval
+     * operations). (3GPP TS 33.128, clause 7.2.2.3.4.)
+     */
     | { cancelLocationMessage: UDMCancelLocationMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The sMSTPDUData.sMSTPDU field shall always be used for SMSReport records.
+     * (3GPP TS 33.128, clause 6.2.5.3.)
+     */
     | { sMSReport: SMSReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.2.3.2.7.1 General In the present document, an MA PDU session will
+     * include two general types of PDU sessions as defined below: (3GPP TS
+     * 33.128, clause 6.2.3.2.7.2.)
+     */
     | { sMFMAPDUSessionEstablishment: SMFMAPDUSessionEstablishment } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.2.3.2.7.3 MA PDU session modification The IRI-POI in the SMF shall
+     * generate an xIRI containing an SMFMAPDUSessionModification record when
+     * the IRI-POI present in the SMF detects that an MA PDU session has been
+     * modified for the target UE. (3GPP TS 33.128, clause 6.2.3.2.7.3.)
+     */
     | { sMFMAPDUSessionModification: SMFMAPDUSessionModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.2.3.2.7.4 MA PDU session release The IRI-POI in the SMF shall generate
+     * an xIRI containing an SMFMAPDUSessionRelease record when the IRI-POI
+     * present in the SMF detects that an MA PDU session has been released.
+     * (3GPP TS 33.128, clause 6.2.3.2.7.4.)
+     */
     | { sMFMAPDUSessionRelease: SMFMAPDUSessionRelease } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.2.3.2.7.5 Start of interception with an established MA PDU session The
+     * IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFStartOfInterceptionWithEstablishedMAPDUSession record when the IRI-POI
+     * present in the SMF detects that a MA PDU session has already been
+     * established for the target UE when interception starts. (3GPP TS 33.128,
+     * clause 6.2.3.2.7.5.)
+     */
     | { startOfInterceptionWithEstablishedMAPDUSession: SMFStartOfInterceptionWithEstablishedMAPDUSession } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.2.3.2.7.6 SMF MA unsuccessful procedure The IRI-POI in the SMF shall
+     * generate an xIRI containing an SMFMAUnsuccessfulProcedure record when the
+     * IRI-POI present in the SMF detects an unsuccessful procedure or error
+     * condition for a UE matching one of the target identifiers provided via
+     * LI_X1. (3GPP TS 33.128, clause 6.2.3.2.7.6.)
+     */
     | { unsuccessfulMASMProcedure: SMFMAUnsuccessfulProcedure } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the AMF shall generate an xIRI containing an
+     * AMFIdentifierAssociation record when the IRI-POI present in the AMF
+     * detects a new identifier association for a UE matching one of the target
+     * identifiers provided via LI_X1. (3GPP TS 33.128, clause 6.2.2.2.7.)
+     */
     | { aMFIdentifierAssociation: AMFIdentifierAssociation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MME shall generate an xIRI containing an
+     * MMEIdentifierAssociation record when the IRI-POI present in the MME
+     * detects a new identifier association for a UE matching one of the target
+     * identifiers provided via LI_X1. (3GPP TS 33.128, clause 6.3.2.2.2.)
+     */
     | { mMEIdentifierAssociation: MMEIdentifierAssociation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFPDUtoMAPDUSessionModification record when the IRI-POI present in the
+     * SMF detects that an existing PDU session for the target UE has been
+     * successfully modified to an MA PDU session using the PDU session
+     * modification procedures as described in TS 24.501 [13]. (3GPP TS 33.128,
+     * clause 6.2.3.2.8.)
+     */
     | { sMFPDUtoMAPDUSessionModification: SMFPDUtoMAPDUSessionModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing an
+     * NEFPDUSessionEstablishment record when the IRI-POI present in the NEF
+     * detects that an unstructured PDU session using NEF has been established
+     * for the target UE. (3GPP TS 33.128, clause 7.7.2.1.2.)
+     */
     | { nEFPDUSessionEstablishment: NEFPDUSessionEstablishment } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing an
+     * NEFPDUSessionModification record when the IRI-POI present in the NEF
+     * detects that an unstructured PDU session using NEF has been modified for
+     * the target UE. (3GPP TS 33.128, clause 7.7.2.1.3.)
+     */
     | { nEFPDUSessionModification: NEFPDUSessionModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing an
+     * NEFPDUSessionRelease record when the IRI-POI present in the NEF detects
+     * that an unstructured PDU session using NEF related to the target UE needs
+     * to be released. (3GPP TS 33.128, clause 7.7.2.1.4.)
+     */
     | { nEFPDUSessionRelease: NEFPDUSessionRelease } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing an
+     * NEFUnsuccessfulProcedure record when the IRI-POI present in the NEF
+     * detects an unsuccessful procedure or error condition for a UE matching
+     * one of the target identifiers provided via LI_X1. (3GPP TS 33.128, clause
+     * 7.7.2.1.5.)
+     */
     | { nEFUnsuccessfulProcedure: NEFUnsuccessfulProcedure } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing an
+     * NEFStartOfInterceptionWithEstablishedPDUSession record when the IRI-POI
+     * present in the NEF detects that an unstructured PDU session using NEF has
+     * already been established, at the time the POI on NEF is provisioned with
+     * a new target ID. (3GPP TS 33.128, clause 7.7.2.1.6.)
+     */
     | { nEFStartOfInterceptionWithEstablishedPDUSession: NEFStartOfInterceptionWithEstablishedPDUSession } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEFDeviceTrigger record when the IRI-POI present in the NEF detects that
+     * an AF has sent a Device trigger to a target UE matching one of the target
+     * identifiers. (3GPP TS 33.128, clause 7.7.3.1.2.)
+     */
     | { nEFdeviceTrigger: NEFDeviceTrigger } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEFDeviceTriggerReplace record when the IRI-POI present in the NEF
+     * detects that an AF has sent a Device trigger replacement for a previously
+     * sent Device trigger to a UE matching one of the target identifiers
+     * provided via LI_X1 to the IRI POI in the NEF. (3GPP TS 33.128, clause
+     * 7.7.3.1.3.)
+     */
     | { nEFdeviceTriggerReplace: NEFDeviceTriggerReplace } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEFDeviceTriggerCancellation record when the IRI-POI present in the NEF
+     * detects that an AF has sent a Device trigger cancellation for a
+     * previously sent Device trigger to a UE matching one of the target
+     * identifiers provided via LI_X1 to the IRI-POI in the NEF. (3GPP TS
+     * 33.128, clause 7.7.3.1.4.)
+     */
     | { nEFdeviceTriggerCancellation: NEFDeviceTriggerCancellation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEFDeviceTriggerReportNotify record when the IRI-POI present in the NEF
+     * detects that the NEF has returned a Device trigger report to the AF with
+     * a cause value indicating the trigger delivery outcome (e.g. succeeded,
+     * unknown or failed). (3GPP TS 33.128, clause 7.7.3.1.5.)
+     */
     | { nEFdeviceTriggerReportNotify: NEFDeviceTriggerReportNotify } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEFMSISDNLessMOSMS record when the IRI-POI present in the NEF detects
+     * that a target UE has sent a MSISDN-less MO SMS to an AF. (3GPP TS 33.128,
+     * clause 7.7.4.1.2.)
+     */
     | { nEFMSISDNLessMOSMS: NEFMSISDNLessMOSMS } /* CHOICE_ALT_ROOT */
     | { nEFExpectedUEBehaviourUpdate: NEFExpectedUEBehaviourUpdate } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+     * SCEFPDNConnectionEstablishment record when the IRI-POI present in the
+     * SCEF/IWK-SCEF detects that a Non-IP PDN Connection using SCEF has been
+     * established by the target UE. (3GPP TS 33.128, clause 7.8.2.1.2.)
+     */
     | { sCEFPDNConnectionEstablishment: SCEFPDNConnectionEstablishment } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+     * SCEFPDNConnectionUpdate record when the IRI-POI present in the
+     * SCEF/IWK-SCF detects that a Non-IP PDN Connection has been updated for
+     * the target UE. (3GPP TS 33.128, clause 7.8.2.1.3.)
+     */
     | { sCEFPDNConnectionUpdate: SCEFPDNConnectionUpdate } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+     * SCEFPDNConnectionRelease record when the IRI-POI present in the
+     * SCEF/IWK-SCEF detects that a Non-IP PDN Connection needs to be released
+     * for the target UE. (3GPP TS 33.128, clause 7.8.2.1.4.)
+     */
     | { sCEFPDNConnectionRelease: SCEFPDNConnectionRelease } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+     * SCEFUnsuccessfulProcedure record when the IRI-POI present in the
+     * SCEF/IWK-SCEF detects an unsuccessful procedure or error condition for a
+     * target UE matching one of the target identifiers provided via LI_X1.
+     * (3GPP TS 33.128, clause 7.8.2.1.5.)
+     */
     | { sCEFUnsuccessfulProcedure: SCEFUnsuccessfulProcedure } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+     * SCEFStartOfInterceptionWithEstablishedPDNConnection record when the
+     * IRI-POI present in the SCEF detects that a Non-IP PDN Connection using
+     * SCEF has already been established for the target UE when interception
+     * starts. (3GPP TS 33.128, clause 7.8.2.1.6.)
+     */
     | { sCEFStartOfInterceptionWithEstablishedPDNConnection: SCEFStartOfInterceptionWithEstablishedPDNConnection } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF shall generate an xIRI containing a
+     * SCEFDeviceTrigger record when the IRI-POI present in the SCEF detects
+     * that an SCS/AS has sent a Device triggering request to a target UE
+     * matching one of the target identifiers. (3GPP TS 33.128, clause
+     * 7.8.3.1.2.)
+     */
     | { sCEFdeviceTrigger: SCEFDeviceTrigger } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF shall generate an xIRI containing a
+     * SCEFDeviceTriggerReplace record when the IRI-POI present in the SCEF
+     * detects that an SCS/AS has sent a Device triggering replacement for a
+     * previously sent Device triggering request to a UE matching one of the
+     * target identifiers provided via LI_X1 to the IRI POI in the SCEF. (3GPP
+     * TS 33.128, clause 7.8.3.1.3.)
+     */
     | { sCEFdeviceTriggerReplace: SCEFDeviceTriggerReplace } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF shall generate an xIRI containing a
+     * SCEFDeviceTriggerCancellation record when the IRI-POI present in the SCEF
+     * detects that an SCS/AS has sent a Device triggering cancellation for a
+     * previously sent Device triggering request to a UE matching one of the
+     * target identifiers provided via LI_X1 to the IRI-POI in the SCEF. (3GPP
+     * TS 33.128, clause 7.8.3.1.4.)
+     */
     | { sCEFdeviceTriggerCancellation: SCEFDeviceTriggerCancellation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF shall generate an xIRI containing a
+     * SCEFDeviceTriggerReportNotify record when the IRI-POI present in the SCEF
+     * detects that the SCEF has returned a Device triggering delivery report
+     * notification to the SCS/AS with a cause value indicating the trigger
+     * delivery outcome (e.g. succeeded, unknown or failed). (3GPP TS 33.128,
+     * clause 7.8.3.1.5.)
+     */
     | { sCEFdeviceTriggerReportNotify: SCEFDeviceTriggerReportNotify } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF shall generate an xIRI containing a
+     * SCEFMSISDNLessMOSMS record when the IRI-POI present in the SCEF detects
+     * that a target UE has sent a MSISDN-less MO SMS to an SCS/AS. (3GPP TS
+     * 33.128, clause 7.8.4.1.2.)
+     */
     | { sCEFMSISDNLessMOSMS: SCEFMSISDNLessMOSMS } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF shall generate an xIRI containing an
+     * SCEFCommunicationPatternUpdate record when the IRI-POI present in the
+     * SCEF detects that an SCS/AS has updated the Communication pattern data.
+     * (3GPP TS 33.128, clause 7.8.5.1.2.)
+     */
     | { sCEFCommunicationPatternUpdate: SCEFCommunicationPatternUpdate } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MME shall generate an xIRI containing an MMEAttach
+     * record when the IRI-POI present in the MME detects that a UE matching one
+     * of the target identifiers provided via LI_X1 has successfully attached to
+     * EPS. (3GPP TS 33.128, clause 6.3.2.2.3.)
+     */
     | { mMEAttach: MMEAttach } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MME shall generate an xIRI containing an MMEDetach
+     * record when the IRI-POI present in the MME detects that a UE matching one
+     * of the target identifiers provided via LI_X1 has deregistered from the
+     * EPS. (3GPP TS 33.128, clause 6.3.2.2.4.)
+     */
     | { mMEDetach: MMEDetach } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * When the reporting of location information is authorised, the IRI-POI in
+     * the MME shall generate an xIRI containing an MMELocationUpdate record
+     * each time the IRI-POI present in an MME detects that the target UE
+     * location is updated due to target UE mobility or as a part of an MME
+     * service procedure. (3GPP TS 33.128, clause 6.3.2.2.5.)
+     */
     | { mMELocationUpdate: MMELocationUpdate } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MME shall generate an xIRI containing an
+     * MMEStartOfInterceptionWithEPSAttachedUE record when the IRI-POI present
+     * in the MME detects that interception is activated on a UE that has
+     * already attached to the EPS. (3GPP TS 33.128, clause 6.3.2.2.6.)
+     */
     | { mMEStartOfInterceptionWithEPSAttachedUE: MMEStartOfInterceptionWithEPSAttachedUE } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MME shall generate an xIRI containing an
+     * MMEUnsuccessfulProcedure record when the IRI-POI present in the MME
+     * detects an unsuccessful procedure for a UE matching one of the target
+     * identifiers provided via LI_X1. (3GPP TS 33.128, clause 6.3.2.2.7.)
+     */
     | { mMEUnsuccessfulProcedure: MMEUnsuccessfulProcedure } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AAnF shall generate an xIRI containing an
+     * AAnFAnchorKeyRegister record when the IRI-POI present in the AAnF detects
+     * reception of an AKMA-context, i.e. an (A-KID, KAKMA)-pair associated with
+     * a target, from the AUSF, see TS 33.535 [65] clause 7.1.2. (3GPP TS
+     * 33.128, clause 7.9.1.3.2.)
+     */
     | { aAnFAnchorKeyRegister: AAnFAnchorKeyRegister } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AAnF shall generate an xIRI containing an
+     * AAnFAKMAApplicationKeyGet record when the IRI-POI present in the AAnF
+     * detects an AKMA application key get from an AF (directly or via NEF), see
+     * TS 33.535 [65] clauses 7.1.3 and 7.3.1. (3GPP TS 33.128, clause
+     * 7.9.1.3.3.)
+     */
     | { aAnFKAKMAApplicationKeyGet: AAnFKAKMAApplicationKeyGet } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AAnF shall generate an xIRI containing an
+     * AAnFStartOfInterceptWithEstablishedAKMAKeyMaterial record when the
+     * IRI-POI present in the AAnF detects that interception is activated on a
+     * target UE that has already established AKMA key material. (3GPP TS
+     * 33.128, clause 7.9.1.3.4.)
+     */
     | { aAnFStartOfInterceptWithEstablishedAKMAKeyMaterial: AAnFStartOfInterceptWithEstablishedAKMAKeyMaterial } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Table 7.9.1.5-1 gives the LI_HI2 IRI message type for this record as END.
+     */
     | { aAnFAKMAContextRemovalRecord: AAnFAKMAContextRemovalRecord } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AF shall generate an xIRI containing an
+     * AFAKMApplicationKeyRefresh record when the IRI-POI present in the AF
+     * detects that a KAF-key previously obtained from an AAnF is being locally
+     * refreshed by the Ua* security protocol in use, see TS 33.535 [65] clause
+     * 6.4.3. (3GPP TS 33.128, clause 7.9.1.4.2.)
+     */
     | { aFAKMAApplicationKeyRefresh: AFAKMAApplicationKeyRefresh } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AF shall generate an xIRI containing an
+     * AFStartOfInterceptWithEstablishedAKMAApplicationKey record when the
+     * IRI-POI present in the AF detects interception is being triggered on a
+     * target UE that has already established AKMA application key. (3GPP TS
+     * 33.128, clause 7.9.1.4.3.)
+     */
     | { aFStartOfInterceptWithEstablishedAKMAApplicationKey: AFStartOfInterceptWithEstablishedAKMAApplicationKey } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AF shall generate an xIRI containing an
+     * AFAuxiliarySecurityParameterEstablishment record when the IRI-POI present
+     * in the AF detects that security parameters for the Ua* security protocol
+     * in use have been established with the target UE, or, when they have been
+     * updated without the associated AKMA application key having been refreshed
+     * according to clause 7.9.1.4.3. (3GPP TS 33.128, clause 7.9.1.4.4.)
+     */
     | { aFAuxiliarySecurityParameterEstablishment: AFAuxiliarySecurityParameterEstablishment } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AF shall generate an xIRI containing an
+     * AFApplicationKeyRemoval record when the IRI-POI present in the AF detects
+     * that an AKMA-derived AF-specific key is deleted or otherwise
+     * decommissioned. (3GPP TS 33.128, clause 7.9.1.4.5.)
+     */
     | { aFApplicationKeyRemoval: AFApplicationKeyRemoval } /* CHOICE_ALT_ROOT */
     | { n9HRPDUSessionInfo: N9HRPDUSessionInfo } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The BBIFF-C present in the SGW-C and BBIFF present in the SGW shall
+     * generate the following xIRI for the purpose of S8HR LI when the prior
+     * conditions defined in clause 7.10.3.3.1 are met: - S8HRBearerInfo. (3GPP
+     * TS 33.128, clause 7.10.3.3.3.)
+     */
     | { s8HRBearerInfo: S8HRBearerInfo } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * When location information cannot be reported via an existing message
+     * generation at the IRI-POI, a separate xIRI may be generated from any
+     * provisioned IRI-POI that has access to location information and included
+     * in the SeparatedLocationReporting record. (3GPP TS 33.128, clause
+     * 7.3.4.1.)
+     */
     | { separatedLocationReporting: SeparatedLocationReporting } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the Telephony AS or IBCF, shall generate an xIRI
+     * containing a STIRSHAKENSignatureGeneration record under the following
+     * conditions: - Telephony AS or IBCF is interacting with the SIGNING AS.
+     * (3GPP TS 33.128, clause 7.11.2.2.)
+     */
     | { sTIRSHAKENSignatureGeneration: STIRSHAKENSignatureGeneration } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the Telephony AS or IBCF, shall generate an xIRI
+     * containing a STIRSHAKENSignatureValidation record when the following
+     * conditions are met: - Either IBCF or Telephony AS, is interacting with
+     * the VERIFICATION AS. (3GPP TS 33.128, clause 7.11.2.3.)
+     */
     | { sTIRSHAKENSignatureValidation: STIRSHAKENSignatureValidation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * For an intercepted IMS based communication (see clause 7.12.2.8), the
+     * IRI-POI present in the IMS Signalling Function shall generate the xIRI
+     * IMSMessage from the SIP message used to handle that IMS based
+     * communication. (3GPP TS 33.128, clause 7.12.4.2.1.)
+     */
     | { iMSMessage: IMSMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the IMS signalling Function shall generate the
+     * xIRI StartOfInterceptionForActiveIMSSession when all of the following
+     * conditions are met: - The IRI-POI receives an LI_X1: ActivateTask from
+     * the LIPF. (3GPP TS 33.128, clause 7.12.4.2.2.)
+     */
     | { startOfInterceptionForActiveIMSSession: StartOfInterceptionForActiveIMSSession } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the IMS signalling Function that also has the
+     * CC-TF (which would have triggered the media interception at the CC-POI)
+     * shall generate the xIRI IMSCCUnavailable when the media is not available
+     * for interception in the CSP's network. (3GPP TS 33.128, clause
+     * 7.12.4.2.3.)
+     */
     | { iMSCCUnavailable: IMSCCUnavailable } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+     * UDMLocationInformationResult record when it detects the following events:
+     * - When UDM receives the LocationInfoRequest from an NF service consumer
+     * (i.e. (3GPP TS 33.128, clause 7.2.2.3.6.)
+     */
     | { uDMLocationInformationResult: UDMLocationInformationResult } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+     * UDMUEInfromationResponse record when it detects the following events: -
+     * When the UDM receives the ProvideUeInfo GET request from the NF service
+     * consumer as part of Nudm_MT_ProvideUeInfo service operation (see TS
+     * 29.503 [25] clause 6.7.6.2.2) and the UDM returns a UeInfo response.
+     * (3GPP TS 33.128, clause 7.2.2.3.7.)
+     */
     | { uDMUEInformationResponse: UDMUEInformationResponse } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+     * UDMUEAuthenticationResponse record when it detects the following events:
+     * - When the UDM receives the AuthenticationInfoRequest from the AUSF as
+     * part of Nudm_UEAuthentication service operation (see TS 29.503 [25]
+     * clause 6.3.6.2.2) and the UDM sends the AuthenticationInfoResult to the
+     * AUSF as part of the Nudm_UEAuthentication service operation (see TS
+     * 29.503 [25] clause 6.3.6.2.3). (3GPP TS 33.128, clause 7.2.2.3.8.)
+     */
     | { uDMUEAuthenticationResponse: UDMUEAuthenticationResponse } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the AMF shall generate an xIRI containing an
+     * AMFPositioningInfoTransfer when the IRI-POI present in the AMF detects
+     * one of the following events: - an NRPPa (see TS 38.455 [86]) message
+     * related to a target UE has been exchanged between the LMF and NG-RAN via
+     * the AMF. (3GPP TS 33.128, clause 6.2.2.2.8.)
+     */
     | { positioningInfoTransfer: AMFPositioningInfoTransfer } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MME shall generate an xIRI containing an
+     * MMEPositioningInfoTransfer when the IRI-POI present in the MME detects
+     * one of the following events: - a LPPa (see TS 36.455 [84]) message
+     * related to a target UE has been exchanged between the E-SMLC and the eNB
+     * via the MME. (3GPP TS 33.128, clause 6.3.2.2.8.)
+     */
     | { mMEPositioningInfoTransfer: MMEPositioningInfoTransfer } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.2.2.2.9.1 General The present clause provides the LI requirements for
+     * NG interface-based handovers which occur for a target UE. (3GPP TS
+     * 33.128, clause 6.2.2.2.9.2.)
+     */
     | { aMFRANHandoverCommand: AMFRANHandoverCommand } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.2.2.2.9.3 Handover request The IRI-POI in the AMF shall generate an
+     * xIRI containing an AMFRANHandoverRequest record when the IRI-POI in the
+     * AMF detects that the AMF received a HANDOVER REQUEST ACKNOWLEDGE message
+     * from the target RAN node (new RAN node) for the target UE and location
+     * information is not restricted by service scoping. (3GPP TS 33.128, clause
+     * 6.2.2.2.9.3.)
+     */
     | { aMFRANHandoverRequest: AMFRANHandoverRequest } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the EES shall generate an xIRI containing an
+     * EESEECRegistration record when the IRI-POI present in the EES detects
+     * that an EEC has registered, updated its registration or deregistered.
+     * (3GPP TS 33.128, clause 7.14.2.2.)
+     */
     | { eESEECRegistration: EESEECRegistration } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the EES shall generate an xIRI containing an
+     * EESEASDiscovery record when the IRI-POI present in the EES detects that
+     * an EEC has requested a one-time EAS discovery information. (3GPP TS
+     * 33.128, clause 7.14.2.3.)
+     */
     | { eESEASDiscovery: EESEASDiscovery } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the EES shall generate an xIRI containing an
+     * EESEASDiscoverySubscription record when the IRI-POI present in the EES
+     * detects that an EEC has requested to subscribe, update subscription and
+     * unsubscribe to EAS discovery information reporting. (3GPP TS 33.128,
+     * clause 7.14.2.4.)
+     */
     | { eESEASDiscoverySubscription: EESEASDiscoverySubscription } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the EES shall generate an xIRI containing an
+     * EESEASDiscoveryNotification record when the IRI-POI present in the EES
+     * detects that the EES has notified a previously subscribed EEC on EAS
+     * discovery information. (3GPP TS 33.128, clause 7.14.2.5.)
+     */
     | { eESEASDiscoveryNotification: EESEASDiscoveryNotification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+     * REPORT.
+     */
     | { eESAppContextRelocation: EESAppContextRelocation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the EES shall generate an xIRI containing an
+     * EESACRSubscription record when the IRI-POI present in the EES detects
+     * that an EEC has requested to subscribe, update subscription and
+     * unsubscribe to ACR events. (3GPP TS 33.128, clause 7.14.2.7.)
+     */
     | { eESACRSubscription: EESACRSubscription } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the EES shall generate an xIRI containing an
+     * EESACRNotification record when the IRI-POI present in the EES detects
+     * that the EES has notify a previously subscribed EEC on EAS discovery
+     * information. (3GPP TS 33.128, clause 7.14.2.8.)
+     */
     | { eESACRNotification: EESACRNotification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the EES shall generate an xIRI containing an
+     * EESEECContextRelocation record when the IRI-POI present in the EES
+     * detects that the EES has sent or received the EEC context relocation
+     * information. (3GPP TS 33.128, clause 7.14.2.9.)
+     */
     | { eESEECContextRelocation: EESEECContextRelocation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AES shall generate an xIRI containing an
+     * EESStartOfInterceptionWithRegisteredEEC record when the IRI-POI present
+     * in the EES detects that interception is activated on a UE which EEC has
+     * already registered with an EES. (3GPP TS 33.128, clause 7.14.2.10.)
+     */
     | { eESStartOfInterceptionWithRegisteredEEC: EESStartOfInterceptionWithRegisteredEEC } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+     * UDMStartOfInterceptionWithRegisteredTarget record when the IRI-POI
+     * present in the UDM/UDR detects that interception is activated for a UE
+     * that has already been registered in the UDM/UDR. (3GPP TS 33.128, clause
+     * 7.2.2.3.9.)
+     */
     | { uDMStartOfInterceptionWithRegisteredTarget: UDMStartOfInterceptionWithRegisteredTarget } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+     * 5GMSAFServiceAccessInformation record when the IRI-POI present in the
+     * 5GMS AF detects that an 5GMS AF has sent the service access information
+     * to the Media Session Handler in the target UE. (3GPP TS 33.128, clause
+     * 7.15.2.2.)
+     */
     | { fiveGMSAFServiceAccessInformation: FiveGMSAFServiceAccessInformation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+     * 5GMSAFConsumptionReporting record when the IRI-POI present in the 5GMS AF
+     * detects that an 5GMS AF has received a consumption report from the target
+     * UE. (3GPP TS 33.128, clause 7.15.2.3.)
+     */
     | { fiveGMSAFConsumptionReporting: FiveGMSAFConsumptionReporting } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+     * 5GMSAFDynamicPolicyInvocation record when the IRI-POI present in the 5GMS
+     * AF detects that an 5GMS AF has received a dynamic policy from the target
+     * UE. (3GPP TS 33.128, clause 7.15.2.4.)
+     */
     | { fiveGMSAFDynamicPolicyInvocation: FiveGMSAFDynamicPolicyInvocation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+     * 5GMSAFMetricsReporting record when the IRI-POI present in the 5GMS AF
+     * detects that an 5GMS AF has received a metrics report from the target UE.
+     * (3GPP TS 33.128, clause 7.15.2.5.)
+     */
     | { fiveGMSAFMetricsReporting: FiveGMSAFMetricsReporting } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+     * FiveGMSAFNetworkAssistance record when the IRI-POI present in the 5GMS AF
+     * detects that an 5GMS AF has received a network assistance from the target
+     * UE. (3GPP TS 33.128, clause 7.15.2.6.)
+     */
     | { fiveGMSAFNetworkAssistance: FiveGMSAFNetworkAssistance } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Table 7.15.3-1 gives the LI_HI2 IRI message type for this record as
+     * REPORT.
+     */
     | { fiveGMSAFUnsuccessfulProcedure: FiveGMSAFUnsuccessfulProcedure } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+     * FiveGMSAFStartOfInterceptionWithAlreadyConfiguredUE record when the
+     * IRI-POI present in the 5GMS AF detects that interception is activated for
+     * a target UE which Media Session Handler has already been configured with
+     * the service access information. (3GPP TS 33.128, clause 7.15.2.8.)
+     */
     | { fiveGMSAFStartOfInterceptionWithAlreadyConfiguredUE: FiveGMSAFStartOfInterceptionWithAlreadyConfiguredUE } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AMF shall generate an xIRI containing a
+     * AMFUEConfigurationUpdate record when the IRI-POI present in the AMF
+     * detects that a UE matching one of the target identifiers provided via
+     * LI_X1 has been commanded to update its configuration. (3GPP TS 33.128,
+     * clause 6.2.2.2.10.)
+     */
     | { aMFUEConfigurationUpdate: AMFUEConfigurationUpdate } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the HSS shall generate an xIRI containing the
+     * HSSServingSystemMessage record when it detects the following events: -
+     * When the HSS receives the Roaming Status Update from the UDM as part of
+     * the Nhss_UEContextManagement_RoamingStatusUpdate service operation (see
+     * TS 29.563 [100] clause 5.4.2.4). (3GPP TS 33.128, clause 7.2.3.3.2.)
+     */
     | { hSSServingSystemMessage: HSSServingSystemMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the HSS shall generate an xIRI containing the
+     * HSSStartOfInterceptionWithRegisteredTarget record when the IRI-POI
+     * present in the HSS detects that interception is activated for a UE that
+     * has already been registered at the HSS. (3GPP TS 33.128, clause
+     * 7.2.3.3.3.)
+     */
     | { hSSStartOfInterceptionWithRegisteredTarget: HSSStartOfInterceptionWithRegisteredTarget } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing an
+     * NEFAFSessionWithQoSProvision record when the IRI-POI present in the NEF
+     * detects that an AF has requested the NEF to provide, update or revoke a
+     * specific QoS for an AF session. (3GPP TS 33.128, clause 7.7.6.1.2.)
+     */
     | { nEFAFSessionWithQoSProvision: NEFAFSessionWithQoSProvision } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Table 7.7.6.2-1 gives the LI_HI2 IRI message type for this record as
+     * REPORT.
+     */
     | { nEFAFSessionWithQoSNotification: NEFAFSessionWithQoSNotification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF shall generate an xIRI containing a
+     * SCEFASSessionWithQoSProvision record when the IRI-POI present in the SCEF
+     * detects that an SCS/AS has requested the SCEF to provide, update or
+     * revoke a specific QoS for an AS session. (3GPP TS 33.128, clause
+     * 7.8.6.1.2.)
+     */
     | { sCEFASSessionWithQoSProvision: SCEFASSessionWithQoSProvision } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SCEF shall generate an xIRI containing a
+     * SCEFASSessionWithQoSNotification record when the IRI-POI present in the
+     * SCEF detects that the SCEF has notified the SCS/AS about changes in the
+     * transmission resource status of the AS session. (3GPP TS 33.128, clause
+     * 7.8.6.1.3.)
+     */
     | { sCEFASSessionWithQoSNotification: SCEFASSessionWithQoSNotification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AMF shall generate an xIRI containing an
+     * AMFRANTraceReport record when the IRI-POI present in the AMF has detected
+     * any of the following events: - AMF sent a TRACE START message to the
+     * target RAN node (old RAN node) in response to a Trace Session Activation
+     * message for the target. (3GPP TS 33.128, clause 6.2.2.2.11.2.)
+     */
     | { aMFRANTraceReport: AMFRANTraceReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The xIRI containing an RCSRegistration record shall be generated when the
+     * IRI-POI in the S-CSCF or in an RCS Server detects that an RCS target
+     * matching one of the RCS identifiers, provided via LI_X1 has registered,
+     * reregistered or deregistered for RCS services. (3GPP TS 33.128, clause
+     * 7.13.3.2.1.)
+     */
     | { rCSRegistration: RCSRegistration } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the RCS Server shall generate an xIRI containing
+     * an RCSMessage record when the IRI-POI present in the RCS Server detects
+     * that an RCS target has sent or received an RCS message. (3GPP TS 33.128,
+     * clause 7.13.3.3.1.)
+     */
     | { rCSMessage: RCSMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the RCS server shall generate an xIRI containing
+     * an RCSCapabilityDiscovery when the IRI-POI present in the RCS server
+     * detects that an RCS target has received RCS service capabilities for his
+     * contact(s) or has sent capabilities to a contact. (3GPP TS 33.128, clause
+     * 7.13.3.5.1.)
+     */
     | { rCSCapabilityDiscovery: RCSCapabilityDiscovery } /* CHOICE_ALT_ROOT */
     | { rCSSessionEstablishment: RCSSessionEstablishment } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the RCS Server shall generate an RCSSessionModification
+     * record when the IRI-POI in the RCS Server detects any of the following: -
+     * A request is sent to request the next leg of a SIP Session or a response
+     * is received establishing a SIP Session for the transfer of a Large
+     * Message Mode CPM Standalone message or a CPM 1-to-1 Chat Session. (3GPP
+     * TS 33.128, clause 7.13.3.4.3.1.)
+     */
     | { rCSSessionModification: RCSSessionModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the RCS Server shall generate an RCSSessionRelease record
+     * when the IRI-POI in the RCS Server detects any of the following: - A SIP
+     * Session for the transfer of a Large Message Mode CPM Standalone message
+     * to or from a target has been released (see clause 7.13.3.4.4.2). (3GPP TS
+     * 33.128, clause 7.13.3.4.4.1.)
+     */
     | { rCSSessionRelease: RCSSessionRelease } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the AMF shall generate an xIRI containing an
+     * AMFUEPolicyTransfer record when the IRI-POI present in the AMF detects
+     * the following events: - AMF sends a Namf_Communication_N1MessageNotify
+     * Request (See TS 29.518 [22] clause 5.2.2.3) related to the target UE
+     * containing the N1 NAS message MANAGE UE POLICY COMPLETE. (3GPP TS 33.128,
+     * clause 6.2.2.2.12.)
+     */
     | { aMFUEPolicyTransfer: AMFUEPolicyTransfer } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the AMF shall generate an xIRI containing an or
+     * AMFUEServiceAccept record when the IRI-POI in present in the AMF detects
+     * that the AMF has sent a service accept in response to a service request
+     * or control plane service request from the target. (3GPP TS 33.128, clause
+     * 6.2.2.2.13.)
+     */
     | { aMFUEServiceAccept: AMFUEServiceAccept } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.3.2.2.9.1 General The present clause provides the LI requirements for
+     * S1 interface-based handovers which occur for a target UE. (3GPP TS
+     * 33.128, clause 6.3.2.2.9.2.)
+     */
     | { ePSRANHandoverCommand: EPSRANHandoverCommand } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 6.3.2.2.9.3 Handover request The IRI-POI in the MME shall generate an
+     * xIRI containing an EPSRANHandoverRequest record when the IRI-POI in the
+     * MME detects that the MME received a HANDOVER REQUEST ACKNOWLEDGE message
+     * from the gaining RAN node (new RAN node) for the target UE and location
+     * information is not restricted by service scoping. (3GPP TS 33.128, clause
+     * 6.3.2.2.9.3.)
+     */
     | { ePSRANHandoverRequest: EPSRANHandoverRequest } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MME shall generate an xIRI containing an
+     * MMERANTraceReport record when the IRI-POI present in the MME has detected
+     * any of the following events: - MME sent a TRACE START message to a RAN
+     * node in response to a Trace Session Activation message for the target.
+     * (3GPP TS 33.128, clause 6.3.2.2.10.2.)
+     */
     | { mMERANTraceReport: MMERANTraceReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MME shall generate an xIRI containing an
+     * MMEUEServiceAccept record when the IRI-POI in present in the MME detects
+     * that the MME considers a service request procedure initiated by the
+     * target to be completed successfully (see TS 24.301 [51] clause 5.6.1.4).
+     * (3GPP TS 33.128, clause 6.3.2.2.11.)
+     */
     | { mMEUEServiceAccept: MMEUEServiceAccept } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NWDAF shall generate an xIRI containing an
+     * NWDAFEventsSubscription record when the IRI-POI present in the NWDAF
+     * detects that an NF consumer has subscribed, updated a subscription or
+     * deleted a subscription for UE related analytics events for a target UE.
+     * (3GPP TS 33.128, clause 7.16.2.2.)
+     */
     | { nWDAFEventsSubscription: NWDAFEventsSubscription } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NWDAF shall generate an xIRI containing an
+     * NWDAFEventsNotification record when the IRI-POI present in the NWDAF
+     * detects that the NWDAF has notified an NF consumer about UE related
+     * analytics events for a target UE. (3GPP TS 33.128, clause 7.16.2.3.)
+     */
     | { nWDAFEventsNotification: NWDAFEventsNotification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NWDAF shall generate an xIRI containing an
+     * NWDAFAnalyticsInfoQuery record when the IRI-POI present in the NWDAF
+     * detects that an authorized NF consumer queries an UE-related analytics
+     * for a target UE. (3GPP TS 33.128, clause 7.16.2.4.)
+     */
     | { nWDAFAnalyticsInfoQuery: NWDAFAnalyticsInfoQuery } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the RE-NWDAF shall generate an xIRI containing an
+     * NWDAFRoamingAnalyticsSubscription record when the IRI-POI present in the
+     * RE-NWDAF detects that an NWDAF consumer has subscribed, updated a
+     * subscription or deleted a subscription for UE related analytics events
+     * for a target inbound or outbound roaming UE. (3GPP TS 33.128, clause
+     * 7.16.2.5.2.)
+     */
     | { nWDAFRoamingAnalyticsSubscription: NWDAFRoamingAnalyticsSubscription } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the RE-NWDAF shall generate an xIRI containing an
+     * NWDAFRoamingAnalyticsNotification record when the IRI-POI present in the
+     * RE-NWDAF detects that the RE-NWDAF has notified a NWDAF consumer about UE
+     * related analytics events for a target inbound or outbound roaming UE.
+     * (3GPP TS 33.128, clause 7.16.2.5.3.)
+     */
     | { nWDAFRoamingAnalyticsNotification: NWDAFRoamingAnalyticsNotification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Table 7.13.4-1 gives the LI_HI2 IRI message type for this record as
+     * REPORT. (3GPP TS 33.128, clause 7.13.3.6.1.2.)
+     */
     | { startOfInterceptForRegisteredRCSUser: StartOfInterceptForRegisteredRCSUser } /* CHOICE_ALT_ROOT */
     | { startOfInterceptWithEstablisedRCSSession: StartOfInterceptWithEstablisedRCSSession } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+     * UDMProSeTargetIdentifierDeconcealment record when the IRI-POI present in
+     * the UDM/UDR detects that the UDM has responded to a request from the NF
+     * consumer (i.e., the 5G PKMF) to perform SUCI to SUPI deconcealment for a
+     * target ProSe remote UE (see TS 29.503 [25] clause 5.11.2.1) and the SUPI
+     * matches the target identifier provisioned over LI_X1. (3GPP TS 33.128,
+     * clause 7.2.2.3.10.2.)
+     */
     | { uDMProSeTargetIdentifierDeconcealment: UDMProSeTargetIdentifierDeconcealment } /* CHOICE_ALT_ROOT */
     | { uDMProSeTargetAuthentication: UDMProSeTargetAuthentication } /* CHOICE_ALT_ROOT */
     | { iPIRIPacketReport: IPAccessPDU.IPIRIPacketReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the DCSF that also has the CC-TF (which would have
+     * triggered the media interception at the CC-POI) shall generate the
+     * IMSDataChannelSetup xIRI when the IRI-POI in the DCSF detects that the
+     * IMS DC has been successfully setup. (3GPP TS 33.128, clause 7.12.4.2.4.)
+     */
     | { iMSDataChannelSetup: IMSDataChannelSetup } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the DCSF shall generate the
+     * IMSDataChannelModifcation xIRI when the POI in the DCSF observes a media
+     * change event resulting in a modification to an existing target IMS Data
+     * Channel session. (3GPP TS 33.128, clause 7.12.4.2.5.)
+     */
     | { iMSDataChannelModification: IMSDataChannelModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the DCSF shall generate the
+     * IMSDataChannelTermination xIRI when the IMS Data Channel previously setup
+     * for the target is terminated. (3GPP TS 33.128, clause 7.12.4.2.6.)
+     */
     | { iMSDataChannelTermination: IMSDataChannelTermination } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSConvertedFromEmail record when the MMS Proxy-Relay transforms an email
+     * from an external server (as defined in TS 23.140 [40] Annex D and Annex
+     * D1) that contains a non-local target ID. (3GPP TS 33.128, clause
+     * 7.4.3.2A.)
+     */
     | { mMSConvertedFromEmail: MMSConvertedFromEmail } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+     * MMSConvertedToEmail record when the MMS Proxy-Relay transforms a
+     * submitted MM into an email format (as defined in TS 23.140 [40] Table
+     * D1.1) to a non-local target ID. (3GPP TS 33.128, clause 7.4.3.4A.)
+     */
     | { mMSConvertedToEmail: MMSConvertedToEmail } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEF5GVNGroupCreation record when the IRI-POI present in the NEF detects
+     * that an AF has created a 5G Virtual Network (VN) group the target UE
+     * belongs to. (3GPP TS 33.128, clause 7.7.7.1.2.)
+     */
     | { nEF5GVNGroupCreation: NEF5GVNGroupCreation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEF5GVNGroupUpdate record when the IRI-POI present in the NEF detects
+     * that an AF has updated a 5G VN group the target UE belongs to. (3GPP TS
+     * 33.128, clause 7.7.7.1.3.)
+     */
     | { nEF5GVNGroupUpdate: NEF5GVNGroupUpdate } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEF5GVNGroupDeletion record when the IRI-POI present in the NEF detects
+     * that an AF has deleted a 5G VN group the target UE belongs to. (3GPP TS
+     * 33.128, clause 7.7.7.1.4.)
+     */
     | { nEF5GVNGroupDeletion: NEF5GVNGroupDeletion } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF shall generate an xIRI containing a
+     * NEF5GVNGroupQuery record when the IRI-POI present in the NEF detects that
+     * an AF has queried a 5G VN group the target UE belongs it. (3GPP TS
+     * 33.128, clause 7.7.7.1.5.)
+     */
     | { nEF5GVNGroupQuery: NEF5GVNGroupQuery } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the HSS supporting the Nhss SBI shall generate an xIRI
+     * containing the HSSSubscriberRecordChange record when the IRI-POI present
+     * in the HSS detects that the EPC UE Context Management information has
+     * been updated for the target at the HSS (see TS 29.563 [100] clause
+     * 5.4.2.3). (3GPP TS 33.128, clause 7.2.3.3.4.)
+     */
     | { hSSSubscriberRecordChange: HSSSubscriberRecordChange } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the IMS-HSS shall generate an xIRI containing the
+     * IMSHSSServingSystemMessage record when it detects the following events: -
+     * When the IMS-HSS receives the Roaming Status Update from the UDM as part
+     * of the Nhss_UEContextManagement_RoamingStatusUpdate service operation
+     * (see TS 29.563 [100] clause 5.4.2.4). (3GPP TS 33.128, clause 7.2.4.3.2.)
+     */
     | { iMSHSSServingSystemMessage: IMSHSSServingSystemMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the IMS-HSS shall generate an xIRI containing the
+     * IMSHSSStartOfInterceptionWithRegisteredTarget record when the IRI-POI
+     * present in the IMS-HSS detects that interception is activated for a UE
+     * that has already been registered at the IMS-HSS. (3GPP TS 33.128, clause
+     * 7.2.4.3.3.)
+     */
     | { iMSHSSStartOfInterceptionWithRegisteredTarget: IMSHSSStartOfInterceptionWithRegisteredTarget } /* CHOICE_ALT_ROOT */
     | { iMSHSSSubscriberRecordChange: IMSHSSSubscriberRecordChange } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the AMF shall generate an xIRI containing an
+     * AMFUEContextUpdate record when the IRI-POI present in the AMF detects
+     * that the AMF provides the NG-RAN with updated UE context. (3GPP TS
+     * 33.128, clause 6.2.2.2.14.)
+     */
     | { aMFUEContextUpdate: AMFUEContextUpdate } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * In the case of standalone EPS, the IRI-POI in the SGW/PGW shall generate
+     * an xIRI containing an ePSPDNConnectionEstablishment record when the
+     * IRI-POI present in the SGW/PGW detects that a PDN Connection has been
+     * established for the target UE. (3GPP TS 33.128, clause 6.3.3.2.2.)
+     */
     | { ePSPDNConnectionEstablishment: EPSPDNConnectionEstablishment } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * In the case of standalone EPS, the IRI-POI in the SGW/PGW shall generate
+     * an xIRI containing an ePSPDNConnectionEstablishment record when the
+     * IRI-POI present in the SGW/PGW detects that a PDN Connection has been
+     * modified for the target UE. (3GPP TS 33.128, clause 6.3.3.2.3.)
+     */
     | { ePSPDNConnectionModification: EPSPDNConnectionModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * In the case of standalone EPS, the IRI-POI in the SGW/PGW shall generate
+     * an xIRI containing an ePSPDNConnectionRelease record when the IRI-POI
+     * present in the SGW/PGW detects that a PDN Connection has been released
+     * for the target UE. (3GPP TS 33.128, clause 6.3.3.2.4.)
+     */
     | { ePSPDNConnectionRelease: EPSPDNConnectionRelease } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * In the case of standalone EPS, the IRI-POI in the SGW/PGW shall generate
+     * an xIRI containing an ePSStartOfInterceptionWithEstablishedPDNConnection
+     * record when the IRI-POI present in the SGW/PGW detects that a PDN
+     * Connection has already been established for the target UE when
+     * interception starts. (3GPP TS 33.128, clause 6.3.3.2.5.)
+     */
     | { ePSStartOfInterceptionWithEstablishedPDNConnection: EPSStartOfInterceptionWithEstablishedPDNConnection } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF+PGW-C shall generate an xIRI containing an
+     * SMFStartOfInterceptionWithEstablishedMAPDUSession record (see clause
+     * 6.2.3.2.7) when the IRI-POI present in the SMF+PGW-C detects that an MA
+     * PDU Session or PDN Connection associated to an MA PDU Session has already
+     * been established for the target UE when interception starts. (3GPP TS
+     * 33.128, clause 6.3.3.2.10.)
+     */
     | { ePSPDNUnsuccessfulProcedure: EPSPDNUnsuccessfulProcedure } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the DCSF shall generate the
+     * StartOfInterceptionWithEstablishedIMSDataChannel xIRI when interception
+     * is activated for a target with a previously established IMS Data Channel.
+     * (3GPP TS 33.128, clause 7.12.4.2.7.)
+     */
     | { startOfInterceptionWithEstablishedIMSDataChannel: StartOfInterceptionWithEstablishedIMSDataChannel } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFProSeRemoteUEReport record when the IRI-POI present in the SMF detects
+     * that a target 5G ProSe Remote UE has connected to a 5G ProSe layer-3
+     * UE-to-network Relay UE or disconnected from a 5G ProSe layer-3
+     * UE-to-network Relay UE. (3GPP TS 33.128, clause 6.2.3.2.9.)
+     */
     | { sMFProSeRemoteUEReport: SMFProSeRemoteUEReport } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the SMF shall generate an xIRI containing an
+     * SMFStartOfInterceptionWithConnectedProSeRemoteUE record when the IRI-POI
+     * present in the SMF detects that a target 5G ProSe remote UE has already
+     * been connected to a 5G ProSe layer-3 UE-to-network relay UE when
+     * interception starts. (3GPP TS 33.128, clause 6.2.3.2.10.)
+     */
     | { sMFStartOfInterceptionWithConnectedProSeRemoteUE: SMFStartOfInterceptionWithConnectedProSeRemoteUE } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5G DDNMF in the HPLMN shall generate an xIRI
+     * containing a FiveGUDDNMFProSeUNIDirectDiscovery record when the IRI-POI
+     * present in the 5G DDNMF in the HPLMN detects that the 5G DDNMF in the
+     * HPLMN returns a response to a direct discovery request received from a
+     * target UE. (3GPP TS 33.128, clause 7.17.2.2.)
+     */
     | { fiveGDDNMFProSeUNIDirectDiscovery: FiveGDDNMFProSeUNIDirectDiscovery } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5G DDNMF in the HPLMN/VPLMN/local PLMN shall generate
+     * an xIRI containing an FiveGDDNMFProSeNNIDirectDiscovery record when the
+     * IRI-POI present in the 5G DDNMF in the HPLMN/VPLMN/local PLMN detect that
+     * the 5G DDNMF in the HPLMN interacts with the 5G DDNMF in the VPLMN or
+     * local PLMN for direct discovery authorizations for a target UE in the
+     * VPLMN or local PLMN. (3GPP TS 33.128, clause 7.17.2.3.)
+     */
     | { fiveGDDNMFProSeNNIDirectDiscovery: FiveGDDNMFProSeNNIDirectDiscovery } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the AMF generating an xIRI containing an
+     * AMFIdentifierAssociation record shall set the Payload Direction field in
+     * the PDU header to not applicable (Direction Value 5, see ETSI TS 103
+     * 221-2 [8] clause 5.2.6). (3GPP TS 33.128, clause 6.2.2.2.7.)
+     */
     | { aMFIdentifierDeassociation: AMFIdentifierDeassociation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MME generating an xIRI containing an
+     * MMEIdentifierAssociation record shall set the Payload Direction field in
+     * the PDU header to not applicable (Direction Value 5, see ETSI TS 103
+     * 221-2 [8] clause 5.2.6). (3GPP TS 33.128, clause 6.3.2.2.2.)
+     */
     | { mMEIdentifierDeassociation: MMEIdentifierDeassociation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the 5G PIN Server shall generate an xIRI containing a
+     * FiveGPINAPPMessage record when the IRI-POI present in the 5G PIN Server
+     * detects that the 5G PIN Server interacts using the PINAPP protocol with a
+     * PIN client for PIN application layer procedures (see clause 5.1 of TS
+     * 24.583 [142]). (3GPP TS 33.128, clause 7.18.2.2.)
+     */
     | { fiveGPINAPPMessage: FiveGPINAPPMessage } /* CHOICE_ALT_ROOT */
     | { fiveGStartOfInterceptionWithPINClientInPIN: FiveGStartOfInterceptionWithPINClientInPIN } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the charging function shall generate an xIRI containing a
+     * ChargingDataEvent record when the IRI-POI present in the charging
+     * function observes a charging data event for a target identity as provided
+     * over LI_X1. (3GPP TS 33.128, clause 7.19.3.2.)
+     */
     | { chargingDataEvent: ChargingDataEvent } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MCX Server shall generate an xIRI containing
+     * an MCXSIPMessage record for any SIP message used to handle a SIP-based MC
+     * service communication when the IRI-POI present in the MCX Server detects
+     * that a target user has initiated or received this communication. (3GPP TS
+     * 33.128, clause 7.20.2.1.1.)
+     */
     | { mCXSIPMessage: MCXSIPMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the MCX Server shall generate the xIRI containing an
+     * MCXStartOfInterceptionWithRegisteredUE record when the IRI-POI in the MCX
+     * Server detects that interception has been activated for a target who is
+     * already registered. (3GPP TS 33.128, clause 7.20.2.2.)
+     */
     | { mCXStartOfInterceptionWithRegisteredUE: MCXStartOfInterceptionWithRegisteredUE } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MCX Server shall generate an xIRI containing
+     * an MCXStartOfInterceptionWithEstablishedSession record when a target MC
+     * service user or a target MC service group has an active MC service
+     * session in progress. (3GPP TS 33.128, clause 7.20.2.3.1.)
+     */
     | { mCXStartOfInterceptionWithEstablishedSession: MCXStartOfInterceptionWithEstablishedSession } /* CHOICE_ALT_ROOT */
     | { mCXManagementMessage: MCXManagementMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MCVideo Server shall generate an xIRI
+     * containing an MCVideoTransmissionControlMessage record when the IRI-POI
+     * present in the MCVideo Server detects when the target MC service user
+     * sends or receives a transmission control message. (3GPP TS 33.128, clause
+     * 7.20.2.5.1.)
+     */
     | { mCVideoTransmissionControlMessage: MCVideoTransmissionControlMessage } /* CHOICE_ALT_ROOT */
     | { mCDataFileDistribution: MCDataFileDistribution } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the MCPTT Server shall generate an xIRI containing
+     * an MCPTTFloorControlMessage record when the IRI-POI present in the MCPTT
+     * Server detects when the target MC service user sends or receives a floor
+     * control message. (3GPP TS 33.128, clause 7.20.2.7.1.)
+     */
     | { mCPTTFloorControlMessage: MCPTTFloorControlMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI present in the DCSF or in the MMTel Enabler Server shall
+     * generate the IMSDataChannelApplicationResponse xIRI when it detects that:
+     * - A Get Root application response has been generated from a Get Root
+     * application request sent from the MMTel Enabler Client, see TS 23.392
+     * [165] clause 8.3.2.3. (3GPP TS 33.128, clause 7.12.4.2.8.)
+     */
     | { iMSDataChannelApplicationResponse: IMSDataChannelApplicationResponse } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the NEF acting as the UAS NF shall generate an xIRI
+     * containing a UASNFInformation record when the IRI-POI present in the
+     * NEF/UAS NF detects the NEF/UAS NF has handled a: - UAV Flight Assistance
+     * Service operation. (3GPP TS 33.128, clause 7.7.8.1.2.)
+     */
     | { uASNFInformation: UASNFInformation } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

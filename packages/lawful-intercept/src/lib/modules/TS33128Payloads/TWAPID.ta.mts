@@ -17,6 +17,13 @@ import { CivicAddressBytes, _decode_CivicAddressBytes, _encode_CivicAddressBytes
  * @summary TWAPID
  * @description
  * 
+ * The TWAPID type is used to report the TWAP Identity. The TWAPID type is
+ * derived from the data present in the TwapId type defined in TS 29.571 [17]
+ * clause 5.4.4.63.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.31.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,40 @@ export
 class TWAPID {
     /**
      * @summary `sSID`.
+     * @description
+     *
+     * The SSID of the access point to which the UE is attached.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.31.
+     *
      * @public
      * @readonly
      */
     readonly sSID: OPTIONAL<SSID>;
     /**
      * @summary `bSSID`.
+     * @description
+     *
+     * The SSID of the access point to which the UE is attached. This parameter
+     * shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.31.
+     *
      * @public
      * @readonly
      */
     readonly bSSID: OPTIONAL<BSSID>;
     /**
      * @summary `civicAddress`.
+     * @description
+     *
+     * The civic address of the TNAP to which the UE is attached including the
+     * associated Location-Information and Location-Data (see TS 29.571 [17]
+     * table 5.4.4.62-1. This parameter shall be present if known at the NF
+     * where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.31.
+     *
      * @public
      * @readonly
      */

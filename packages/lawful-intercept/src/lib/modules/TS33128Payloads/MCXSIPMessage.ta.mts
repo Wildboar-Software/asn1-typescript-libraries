@@ -17,6 +17,28 @@ import { Direction, _decode_Direction, _encode_Direction, _enum_for_Direction } 
  * @summary MCXSIPMessage
  * @description
  * 
+ * The IRI-POI present in the MCX Server shall generate an xIRI containing an
+ * MCXSIPMessage record for any SIP message used to handle a SIP-based MC
+ * service communication when the IRI-POI present in the MCX Server detects that
+ * a target user has initiated or received this communication. This xIRI is also
+ * generated for any SIP message relating to an MC service communication when
+ * the target is an MC service group. Accordingly, the IRI-POI in the MCX Server
+ * generates the xIRI when any of the following events is detected:
+ *
+ * - a SIP message is exchanged in an MC service communication where the
+ *   originator of the communication is a target user.
+ *
+ * - a SIP message is exchanged in an MC service communication where the
+ *   termination of the communication is a target user.
+ *
+ * - a SIP message is exchanged in an MC service communication relating to a
+ *   target MC service group.
+ *
+ * Table 7.20.2.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.1.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +56,37 @@ export
 class MCXSIPMessage {
     /**
      * @summary `mCServiceIdentitiesOrGroupID`.
+     * @description
+     *
+     * MC service identities of the target user or group ID of the target MC
+     * service group.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.1.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceIdentitiesOrGroupID: MCServiceIdentitiesOrGroupID;
     /**
      * @summary `sIPMessage`.
+     * @description
+     *
+     * Contains the SIP Message.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.1.1.
+     *
      * @public
      * @readonly
      */
     readonly sIPMessage: SIPMessage;
     /**
      * @summary `sessionDirection`.
+     * @description
+     *
+     * Indicates the direction of the SIP session.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.1.1.
+     *
      * @public
      * @readonly
      */

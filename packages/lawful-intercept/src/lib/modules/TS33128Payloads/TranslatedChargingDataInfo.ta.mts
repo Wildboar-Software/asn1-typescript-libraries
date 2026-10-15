@@ -13,6 +13,14 @@ import { TranslatedChargingData, _decode_TranslatedChargingData, _encode_Transla
  * @summary TranslatedChargingDataInfo
  * @description
  * 
+ * The IRI-POI in the charging function shall generate an xIRI containing a
+ * TranslatedChargingDataInfo record when the IRI-POI present in the charging
+ * function receives a charging data request with the target identity as the
+ * User Name or SubscriberIdentifier.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +37,13 @@ export
 class TranslatedChargingDataInfo {
     /**
      * @summary `translatedChargingData`.
+     * @description
+     *
+     * Charging data that has been translated into the 3GPP defined record
+     * format.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.13.
+     *
      * @public
      * @readonly
      */

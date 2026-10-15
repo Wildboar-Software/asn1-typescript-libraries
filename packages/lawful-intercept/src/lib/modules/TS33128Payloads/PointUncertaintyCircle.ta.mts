@@ -17,6 +17,12 @@ import { UncertaintySBI, _decode_UncertaintySBI, _encode_UncertaintySBI } from "
  * @summary PointUncertaintyCircle
  * @description
  * 
+ * The PointUncertaintyCircle type is derived from the data present in the
+ * PointUncertaintyCircle type defined in TS 29.572 [24] clause 6.1.6.2.7.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,18 +42,40 @@ export
 class PointUncertaintyCircle {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * Indicates the geographic point for the centre of the circle represented
+     * by its longitude and latitude.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.13.
+     *
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary `deprecatedUncertainty`.
+     * @description
+     *
+     * No longer used in present version of this specification and shall always
+     * be set to 0. The uncertaintySBI parameter shall be used instead.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.13.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedUncertainty: Uncertainty;
     /**
      * @summary `uncertaintySBI`.
+     * @description
+     *
+     * Indicates the radius of the uncertainty circle. Expressed in meters.
+     * Shall be provided. This parameter is conditional only for backwards
+     * compatibility.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.13.
+     *
      * @public
      * @readonly
      */

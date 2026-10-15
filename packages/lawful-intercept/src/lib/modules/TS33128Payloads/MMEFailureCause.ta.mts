@@ -14,6 +14,12 @@ import { ESMCause, _decode_ESMCause, _encode_ESMCause } from "../TS33128Payloads
  * @summary MMEFailureCause
  * @description
  * 
+ * Provides the value of the ESM or EMM cause, see TS 24.301 [51] clauses
+ * 9.9.3.9 and 9.9.4.4.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +32,19 @@ import { ESMCause, _decode_ESMCause, _encode_ESMCause } from "../TS33128Payloads
  */
 export
 type MMEFailureCause =
+    /**
+     * @description
+     *
+     * Indicates the EMM cause value for network-initiated detach, see TS 24.301
+     * [51] clause 9.9.3.9. (3GPP TS 33.128, clause 6.3.2.2.4.)
+     */
     { eMMCause: EMMCause } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Provides the value of the ESM cause, see TS 24.301 [50] clause 9.9.4.4.
+     * (3GPP TS 33.128, clause 6.3.3.2.10.)
+     */
     | { eSMCause: ESMCause } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

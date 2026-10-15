@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IMSRegistrationStatus
  * @description
  * 
+ * Provides the current state of the target or IMPU as know at the HSS. See TS
+ * 29.562 [101] clause 6.2.6.3.5.
+ *
+ * 3GPP TS 33.128, clause 7.2.4.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +47,12 @@ enum _enum_for_IMSRegistrationStatus {
  * @summary IMSRegistrationStatus
  * @description
  * 
+ * Provides the current state of the target or IMPU as know at the HSS. See TS
+ * 29.562 [101] clause 6.2.6.3.5.
+ *
+ * 3GPP TS 33.128, clause 7.2.4.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +78,12 @@ type IMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
  * @summary IMSRegistrationStatus
  * @description
  * 
+ * Provides the current state of the target or IMPU as know at the HSS. See TS
+ * 29.562 [101] clause 6.2.6.3.5.
+ *
+ * 3GPP TS 33.128, clause 7.2.4.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

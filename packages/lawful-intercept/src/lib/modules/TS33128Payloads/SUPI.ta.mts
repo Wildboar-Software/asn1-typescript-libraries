@@ -14,6 +14,12 @@ import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
  * @summary SUPI
  * @description
  * 
+ * The SUPI type is derived from the data present in the Subscription Permanent
+ * Identifier type defined in TS 23.003 [19] clause 2.2A.
+ *
+ * 3GPP TS 33.128, clause 8.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +32,21 @@ import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
  */
 export
 type SUPI =
+    /**
+     * @description
+     *
+     * Chosen when the SUPI contains an IMSI.
+     *
+     * 3GPP TS 33.128, clause 8.3.4.
+     */
     { iMSI: IMSI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the SUPI contains an NAI.
+     *
+     * 3GPP TS 33.128, clause 8.3.4.
+     */
     | { nAI: NAI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

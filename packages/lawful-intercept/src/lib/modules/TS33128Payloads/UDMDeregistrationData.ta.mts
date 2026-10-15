@@ -17,6 +17,13 @@ import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS3
  * @summary UDMDeregistrationData
  * @description
  * 
+ * Shall identify the reason for the deregistration included in the
+ * deregistration notification sent by the UDM. See TS 29.503 [25] clauses
+ * 6.2.6.2.5 and 6.2.6.3.3.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

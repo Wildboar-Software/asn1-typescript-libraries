@@ -36,6 +36,103 @@ import { AlternativeNSSAIList, _decode_AlternativeNSSAIList, _encode_Alternative
  * @summary SMFMAPDUSessionRelease
  * @description
  * 
+ * 6.2.3.2.7.4 MA PDU session release
+ *
+ * The IRI-POI in the SMF shall generate an xIRI containing an
+ * SMFMAPDUSessionRelease record when the IRI-POI present in the SMF detects
+ * that an MA PDU session has been released. The IRI-POI present in the SMF
+ * shall generate the xIRI for the following events:
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO), receives the N1 NAS message
+ *   (via AMF) PDU SESSION RELEASE COMPLETE from the UE and the 5GSM state
+ *   within the SMF is changed to PDU SESSION INACTIVE (see TS 24.501 [13]
+ *   clauses 6.1.3.3 and 6.4.3) for a PDU session that is either MA-Confirmed or
+ *   MA-Upgrade-Allowed. This applies to the following two cases:
+ *
+ * - UE initiated MA PDU session release (see TS 23.502 [4] clause 4.22.10.2).
+ *
+ * - Network initiated MA PDU session release (see TS 23.502 [4] clause
+ *   4.22.10.2).
+ *
+ * - For a roaming scenario, V-SMF in the VPLMN for HR or SMF in the VPLMN for
+ *   LBO receives the N1 NAS message (via AMF) PDU SESSION RELEASE COMPLETE from
+ *   the UE and the 5GSM state within the V-SMF is changed to PDU SESSION
+ *   INACTIVE (see TS 24.501 [13] clauses 6.1.3.3 and 6.4.3) for a PDU session
+ *   that is either MA-Confirmed or MA-Upgrade-Allowed. This applies to the
+ *   following two cases:
+ *
+ * - UE initiated PDU session release of a single access for an MA PDU session;
+ *   (VPLMN considers MA PDU session fully released while HPLMN considers MA PDU
+ *   session active).
+ *
+ * - Network initiated PDU session release of a single access for an MA PDU
+ *   session; (VPLMN considers MA PDU session fully released while HPLMN
+ *   considers MA PDU session active).
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO), receives the N1 NAS message
+ *   (via AMF) STATUS from the UE with the cause values listed in TS 24.501 [13]
+ *   clause 6.5.3 and the 5GSM state within the SMF is changed to PDU SESSION
+ *   INACTIVE for a PDU session that is either MA-Confirmed or
+ *   MA-Upgrade-Allowed. One of the cases where this applies is of UE finding
+ *   that the PDU session ID received in a PDU SESSION MODIFICATION COMMAND is
+ *   invalid.
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, the V-SMF
+ *   in the VPLMN for HR or SMF in the VPLMN for LBO) sends the
+ *   Nsmf_PDUSession_ReleaseSMContext Response to the AMF (see TS 29.502 [16]
+ *   clause 5.2.2.4) for a PDU session that is either MA-Confirmed or
+ *   MA-Upgrade-Allowed. This applies to the case where the MA PDU session is
+ *   released without any N1 or N2 messages (e.g. AMF initiates the PDU session
+ *   release when it finds that the PDU session is no longer associated with the
+ *   UE, see TS 23.502 [4] clause 4.2.2.4).
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenarios, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO) sends
+ *   Nsmf_PDUSession_SMContextStatusNotify (see TS 29.502, clause 6.1.6.2.8)
+ *   with RELEASED in the ResourceStatus IE (see TS 29.502 [16] clause
+ *   6.1.6.3.1) to the AMF for a PDU session that is either MA-Confirmed or
+ *   MA-Upgrade-Allowed. This applies to the case where MA PDU session release
+ *   is neither initiated by a NAS message nor by Nsmf_PDUSessionReleaseContext
+ *   Request message (see TS 29.502 [16] clause 5.2.2.5).
+ *
+ * - For a home-routed roaming scenario, the SMF in the HPLMN (i.e. H-SMF)
+ *   receives the N16: Nsmf_PDU_Session_Update Response message with
+ *   n1SmInfoFromUe IE containing the PDU SESSION RELEASE COMPLETE (see TS
+ *   29.502 [16] clauses 5.2.1, 5.2.2.8, 5.2.3, and 6.1.6) from the V-SMF. This
+ *   applies to the following three cases for an MA PDU session that is either
+ *   MA-Confirmed or MA-Upgrade-Allowed:
+ *
+ * - UE initiated PDU session release (see TS 23.502 [4] clause 4.22.10.3).
+ *
+ * - Network (VPLMN) initiated PDU session release (see TS 23.502 [4] clause
+ *   4.22.10.3).
+ *
+ * - Network (HPLMN) initiated PDU session release (see TS 23.502 [4] clause
+ *   4.22.10.3).
+ *
+ * - For a home-routed roaming scenario, H-SMF in the HPLMN sends the
+ *   Nsmf_PDUSession_Release Response to the V-SMF (see TS 29.502 [16] clause
+ *   5.2.2.9) for a PDU session that is either MA-Confirmed or
+ *   MA-Upgrade-Allowed. This applies to the case where the MA PDU session is
+ *   released without any N1 or N2 messages (e.g. AMF in the VPLMN initiates the
+ *   PDU session release when it finds that the PDU session is no longer
+ *   associated with the UE, see TS 23.502 [4] clause 4.3.4.3).
+ *
+ * - For a home-routed roaming scenario, H-SMF in the HPLMN
+ *   Nsmf_PDUSession_StatusNotify (see TS 29.502 [16] clause 6.1.6.2.17) with
+ *   RELEASED in the ResourceStatus IE (see TS 29.502 [16] clause 6.1.6.3.1) to
+ *   the V-SMF for a PDU session that is either MA-Confirmed or
+ *   MA-Upgrade-Allowed. This applies to the case where MA PDU session release
+ *   is neither initiated by a NAS message nor by Nsmf_PDUSessionRelease Request
+ *   message (see TS 29.502 [16] clause 5.2.2.9).
+ *
+ * Table 6.2.3.7-1 gives the LI_HI2 IRI message type for this record as END.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,72 +162,150 @@ export
 class SMFMAPDUSessionRelease {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the PDU session.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI associated with the PDU session if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI associated with the PDU session if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID as assigned by the AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: PDUSessionID;
     /**
      * @summary `timeOfFirstPacket`.
+     * @description
+     *
+     * Time of first packet for the PDU session.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly timeOfFirstPacket: OPTIONAL<Timestamp>;
     /**
      * @summary `timeOfLastPacket`.
+     * @description
+     *
+     * Time of last packet for the PDU session.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly timeOfLastPacket: OPTIONAL<Timestamp>;
     /**
      * @summary `uplinkVolume`.
+     * @description
+     *
+     * Number of uplink octets for the PDU session.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly uplinkVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `downlinkVolume`.
+     * @description
+     *
+     * Number of downlink octets for the PDU session.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly downlinkVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `cause`.
+     * @description
+     *
+     * Indicates the NF Service Consumer cause for the requested PDU session
+     * release (see TS 29.502 [16] clause 6.1.6.3.8 for enumerated cause
+     * information). Include if known.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly cause: OPTIONAL<SMFErrorCodes>;
     /**
      * @summary `nGAPCause`.
+     * @description
+     *
+     * Indicates the NGAP cause for the requested SM context release (see TS
+     * 29.502 [16] clause 6.1.6.2.6). Shall be derived as described in TS 29.571
+     * [17] clause 5.4.4.12.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly nGAPCause: OPTIONAL<NGAPCauseInt>;
     /**
      * @summary `fiveGMMCause`.
+     * @description
+     *
+     * Indicates the 5GMM cause for a PDU Session released due to any 5GMM
+     * failure (see 29.502 [16] clause 6.1.6.2.6). Shall be sent as an integer
+     * derived as described in TS 29.571 [17] clause 5.4.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
@@ -143,12 +318,28 @@ class SMFMAPDUSessionRelease {
     readonly pCCRuleIDs: OPTIONAL<PCCRuleIDSet>;
     /**
      * @summary `ePSPDNConnectionRelease`.
+     * @description
+     *
+     * Provides details about PDN Connections when the SMFMAPDUSessionRelease
+     * xIRI message is used to report PDN Connection Release. See table
+     * 6.3.3.2.4-1 and clause 6.3.3.2.4.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */
     readonly ePSPDNConnectionRelease: OPTIONAL<EPSPDNConnectionRelease>;
     /**
      * @summary `alternativeNSSAI`.
+     * @description
+     *
+     * Provides a list of mapping information between the S-NSSAI to be replaced
+     * and the alternative S-NSSAI. Shall be included if present in the PDU
+     * SESSION RELEASE COMMAND. See TS 24.501 [13] clause 9.11.3.97.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.4.
+     *
      * @public
      * @readonly
      */

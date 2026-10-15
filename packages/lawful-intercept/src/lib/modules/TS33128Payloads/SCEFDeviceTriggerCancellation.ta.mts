@@ -19,6 +19,31 @@ import { TriggerID, _decode_TriggerID, _encode_TriggerID } from "../TS33128Paylo
  * @summary SCEFDeviceTriggerCancellation
  * @description
  * 
+ * The IRI-POI in the SCEF shall generate an xIRI containing a
+ * SCEFDeviceTriggerCancellation record when the IRI-POI present in the SCEF
+ * detects that an SCS/AS has sent a Device triggering cancellation for a
+ * previously sent Device triggering request to a UE matching one of the target
+ * identifiers provided via LI_X1 to the IRI-POI in the SCEF. It cancels
+ * previously submitted Device triggering request which has not yet been
+ * delivered to the target UE.
+ *
+ * Accordingly, the IRI-POI in the SCEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - SCEF receives a Device triggering request (for a device trigger
+ *   cancellation) from SCS/AS related to a previously received Device
+ *   triggering request with MSISDN or External Identifier matching the target
+ *   identifier (See TS 29.122 [63] clause 5.7).
+ *
+ * - SCEF sends a T4 Device-Trigger-Request (DTR) to SM-SC with Trigger-Action
+ *   AVP set to RECALL and User-Identifier AVP matching the IMSI of the target
+ *   UE as specified in TS 29.337 [60] clause 5.2.1.
+ *
+ * Table 7.8.3.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.8.3.1.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +62,48 @@ export
 class SCEFDeviceTriggerCancellation {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `triggerId`.
+     * @description
+     *
+     * Identity of the corresponding device trigger to be cancelled.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.4.
+     *
      * @public
      * @readonly
      */

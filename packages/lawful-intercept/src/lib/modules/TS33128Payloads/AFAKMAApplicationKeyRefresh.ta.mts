@@ -19,6 +19,17 @@ import { UAStarParams, _decode_UAStarParams, _encode_UAStarParams } from "../TS3
  * @summary AFAKMAApplicationKeyRefresh
  * @description
  * 
+ * The IRI-POI in the AF shall generate an xIRI containing an
+ * AFAKMApplicationKeyRefresh record when the IRI-POI present in the AF detects
+ * that a KAF-key previously obtained from an AAnF is being locally refreshed by
+ * the Ua* security protocol in use, see TS 33.535 [65] clause 6.4.3.
+ *
+ * Table 7.9.1.5-2 gives the LI_HI2 IRI message type for this record as
+ * CONTINUE.
+ *
+ * 3GPP TS 33.128, clause 7.9.1.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +48,49 @@ export
 class AFAKMAApplicationKeyRefresh {
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * AKMA AF identifier.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly aFID: AFID;
     /**
      * @summary `aKID`.
+     * @description
+     *
+     * AKMA Anchor Key Identifier.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly aKID: NAI;
     /**
      * @summary `kAF`.
+     * @description
+     *
+     * New value of the AF-specific key, after refresh.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.2.
+     *
      * @public
      * @readonly
      */
     readonly kAF: KAF;
     /**
      * @summary `uaStarParams`.
+     * @description
+     *
+     * Set of new Ua* security protocol parameters associated with kAF, if
+     * updated.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.2.
+     *
      * @public
      * @readonly
      */

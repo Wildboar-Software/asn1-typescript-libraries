@@ -26,7 +26,20 @@ import { PayloadModificationDescription, _decode_PayloadModificationDescription,
  */
 export
 type PayloadModification =
+    /**
+     * @description
+     *
+     * The PredefinedPayloadModification shall be set to indicate which
+     * predefined payload modification profile was used on the reported modified
+     * payload.
+     */
     { predefinedModification: PredefinedPayloadModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The PayloadModificationDescription shall be used to describe redactions
+     * performed on a payload.
+     */
     | { describedModification: PayloadModificationDescription } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

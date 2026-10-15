@@ -25,6 +25,33 @@ import { NWDAFEventsSubscriptionResponseCode, _decode_NWDAFEventsSubscriptionRes
  * @summary NWDAFRoamingAnalyticsSubscription
  * @description
  * 
+ * The IRI-POI in the RE-NWDAF shall generate an xIRI containing an
+ * NWDAFRoamingAnalyticsSubscription record when the IRI-POI present in the
+ * RE-NWDAF detects that an NWDAF consumer has subscribed, updated a
+ * subscription or deleted a subscription for UE related analytics events for a
+ * target inbound or outbound roaming UE.
+ *
+ * Accordingly, the IRI-POI in the RE-NWDAF generates the xIRI when any of the
+ * following events is detected (see TS 29.520 [133] clause 4.9.2.1):
+ *
+ * - RE-NWDAF returns a Nnwdaf_RoamingAnalytics_Subscribe Response in response
+ *   to Nnwdaf_RoamingAnalytics_Subscribe Request received from a NWDAF consumer
+ *   to subscribe to UE related analytics events for a target UE.
+ *
+ * - RE-NWDAF returns a Nnwdaf_RoamingAnalytics_Subscribe Response in response
+ *   to Nnwdaf_RoamingAnalytics_Subscribe Request received from a NWDAF consumer
+ *   to update a subscription to UE related analytics events for a target UE.
+ *
+ * - RE-NWDAF returns a Nnwdaf_ RoamingAnalytics_Unsubscribe Response in
+ *   response to Nnwdaf_RoamingAnalytics_Unsubscribe Request received from a
+ *   NWDAF consumer to unsubscribe from UE related analytics events
+ *   notifications for a target UE.
+ *
+ * Table 7.16.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.16.2.5.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,36 +73,84 @@ export
 class NWDAFRoamingAnalyticsSubscription {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * Identifies the SUPI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.5.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * Identifies the PLMN ID of the consumer NWDAF.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.5.2.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `nWDAFEventsSubscriptionOpType`.
+     * @description
+     *
+     * Identifies the type of Nnwdaf_EventsSubscription service operation, i.e.,
+     * POST to create a sbscription, PUT to update a subscription, DELETE to
+     * delete a subscription.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.5.2.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFEventsSubscriptionOpType: NWDAFEventsSubscriptionOpType;
     /**
      * @summary `nWDAFSubscribedEventList`.
+     * @description
+     *
+     * Identifies the list of events the NWDAF consumer subscribes to.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.5.2.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFSubscribedEventList: NWDAFEvent[];
     /**
      * @summary `nWDAFEventsSubscription`.
+     * @description
+     *
+     * Includes the NnwdafRoamingAnalyticsSubscription resource which contains a
+     * set of events and their configuration data the NWDAF consumer subscribes
+     * to. Encoded according to TS 29.520 [133] table 5.8.6.2.2-1. The
+     * SBIReference for this parameter shall be populated with
+     * 'TS29520_Nnwdaf_EventsSubscription.yaml#/components/schemas/RoamingAnalyticsSubscription'
+     * as specified in TS 29.520 [133] clause A9.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.5.2.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFEventsSubscription: SBIType;
     /**
      * @summary `nWDAFEventsSubscriptionID`.
+     * @description
+     *
+     * Identifies the subscription if the subscription is created successfully.
+     * It is present in the Location header of the 201 Created response when the
+     * subscription is created using the POST method as defined in TS 29.520
+     * [133] table 5.8.3.2.3.1-4. It represents the resource URI of both the PUT
+     * method for subscription update and DELETE method for subscription
+     * deletion.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.5.2.
+     *
      * @public
      * @readonly
      */

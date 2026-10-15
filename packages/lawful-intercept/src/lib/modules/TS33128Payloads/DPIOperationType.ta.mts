@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary DPIOperationType
  * @description
  * 
+ * Type of operation applied to the dynamic policy resource, i.e.
+ * createDynamicPolicy, retrieveDynamicPolicy, updateDynamicPolicy,
+ * patchDynamicPolicy, destroyDynamicPolicy.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +42,13 @@ enum _enum_for_DPIOperationType {
  * @summary DPIOperationType
  * @description
  * 
+ * Type of operation applied to the dynamic policy resource, i.e.
+ * createDynamicPolicy, retrieveDynamicPolicy, updateDynamicPolicy,
+ * patchDynamicPolicy, destroyDynamicPolicy.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +71,13 @@ type DPIOperationType = _enum_for_DPIOperationType;
  * @summary DPIOperationType
  * @description
  * 
+ * Type of operation applied to the dynamic policy resource, i.e.
+ * createDynamicPolicy, retrieveDynamicPolicy, updateDynamicPolicy,
+ * patchDynamicPolicy, destroyDynamicPolicy.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

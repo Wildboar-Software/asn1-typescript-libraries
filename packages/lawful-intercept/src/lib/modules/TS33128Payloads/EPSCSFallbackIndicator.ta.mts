@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSCSFallbackIndicator
  * @description
  * 
+ * The EPSCSFallbackIndicator indicates that a fallback to the CS domain is
+ * required and the type of fallback requested. Derived from the enumerations in
+ * TS 36.413 [38] clause 9.2.3.21.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.19.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +28,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EPSCSFallbackIndicator {
+    /**
+     * @description
+     *
+     * Fallback to the CS domain is required.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.19.
+     */
     cSFallbackRequired = 1,
+    /**
+     * @description
+     *
+     * A high priority fallback to the CS domain is required.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.19.
+     */
     cSFallbackHighPriority = 2,
 }
 
@@ -29,6 +50,13 @@ enum _enum_for_EPSCSFallbackIndicator {
  * @summary EPSCSFallbackIndicator
  * @description
  * 
+ * The EPSCSFallbackIndicator indicates that a fallback to the CS domain is
+ * required and the type of fallback requested. Derived from the enumerations in
+ * TS 36.413 [38] clause 9.2.3.21.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.19.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +76,13 @@ type EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;
  * @summary EPSCSFallbackIndicator
  * @description
  * 
+ * The EPSCSFallbackIndicator indicates that a fallback to the CS domain is
+ * required and the type of fallback requested. Derived from the enumerations in
+ * TS 36.413 [38] clause 9.2.3.21.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.19.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +100,12 @@ const EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;
 
 /**
  * @summary EPSCSFallbackIndicator_cSFallbackRequired
+ * @description
+ *
+ * Fallback to the CS domain is required.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.19.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +114,12 @@ const EPSCSFallbackIndicator_cSFallbackRequired: EPSCSFallbackIndicator = EPSCSF
 
 /**
  * @summary cSFallbackRequired
+ * @description
+ *
+ * Fallback to the CS domain is required.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.19.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +128,12 @@ const cSFallbackRequired: EPSCSFallbackIndicator = EPSCSFallbackIndicator.cSFall
 
 /**
  * @summary EPSCSFallbackIndicator_cSFallbackHighPriority
+ * @description
+ *
+ * A high priority fallback to the CS domain is required.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.19.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +142,12 @@ const EPSCSFallbackIndicator_cSFallbackHighPriority: EPSCSFallbackIndicator = EP
 
 /**
  * @summary cSFallbackHighPriority
+ * @description
+ *
+ * A high priority fallback to the CS domain is required.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.19.
+ *
  * @constant
  * @type {number}
  */

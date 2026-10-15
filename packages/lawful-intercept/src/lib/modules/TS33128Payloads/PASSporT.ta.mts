@@ -33,18 +33,42 @@ export
 class PASSporT {
     /**
      * @summary `pASSporTHeader`.
+     * @description
+     *
+     * PASSporT Header as defined in RFC 8224 [70] clause 4 for "shaken"
+     * PASSporT, in RFC 8946 [76] clause 3 for "div" PASSportT and in TS 24.229
+     * [74]. See table 7.11.2.2-3.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pASSporTHeader: PASSporTHeader;
     /**
      * @summary `pASSporTPayload`.
+     * @description
+     *
+     * PASSporT Payload as defined in RFC 8224 [70] clause 4 for "shaken"
+     * PASSporT, in RFC 8946 [76] clause 3 for "div" PASSporT and in TS 24.229
+     * [74]. See table 7.11.2.2-4.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pASSporTPayload: PASSporTPayload;
     /**
      * @summary `pASSporTSignature`.
+     * @description
+     *
+     * PASSporT Signature as defined in RFC 8224 [70] clause 4 for "shaken"
+     * PASSporT, in RFC 8946 [76] clause 3 for "div" PASSporT and in TS 24.229
+     * [74].
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */

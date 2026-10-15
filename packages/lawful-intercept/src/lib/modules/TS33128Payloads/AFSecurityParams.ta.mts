@@ -19,6 +19,11 @@ import { UAStarParams, _decode_UAStarParams, _encode_UAStarParams } from "../TS3
  * @summary AFSecurityParams
  * @description
  * 
+ * Auxiliary security parameters established (see table 7.9.1.4.3-2).
+ *
+ * 3GPP TS 33.128, clause 7.9.1.4.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

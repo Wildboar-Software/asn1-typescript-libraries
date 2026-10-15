@@ -19,6 +19,11 @@ import { SMSRPMessageReference, _decode_SMSRPMessageReference, _encode_SMSRPMess
  * @summary SMSReport
  * @description
  * 
+ * The sMSTPDUData.sMSTPDU field shall always be used for SMSReport records.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +42,49 @@ export
 class SMSReport {
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information associated with the target sending or receiving the
+     * SMS, if available and authorised. See NOTE 7.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `sMSTPDUData`.
+     * @description
+     *
+     * SMS TPDU, encoded as per TS 23.040 [18] clause 9.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly sMSTPDUData: SMSTPDUData;
     /**
      * @summary `messageType`.
+     * @description
+     *
+     * See table 6.2.5.3-4.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly messageType: SMSMessageType;
     /**
      * @summary `rPMessageReference`.
+     * @description
+     *
+     * The SM-RL Message Reference of the message per TS 24.011 [46] clause 7.3.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */

@@ -32,9 +32,33 @@ import { InstanceIdentifierURN, _decode_InstanceIdentifierURN, _encode_InstanceI
  */
 export
 type MCServiceIdentity =
+    /**
+     * @description
+     *
+     * MC service ID of the target MC service user uploading a file or MC
+     * service user uploading a file intended for a target MC service group.
+     * (3GPP TS 33.128, clause 7.20.2.6.2.)
+     */
     { mCServiceID: MCServiceID } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * IMPU of the target, if used for the service (see NOTE). (3GPP TS 33.128,
+     * clause 7.3.1.4.)
+     */
     | { iMPU: IMPU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * IMPI of the target. (3GPP TS 33.128, clause 7.20.2.1.2.)
+     */
     | { iMPI: IMPI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Identity of the target MC service terminal. (3GPP TS 33.128, clause
+     * 7.20.2.1.2.)
+     */
     | { instanceIdentifierURN: InstanceIdentifierURN } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

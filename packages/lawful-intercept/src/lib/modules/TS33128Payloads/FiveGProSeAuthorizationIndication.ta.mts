@@ -13,6 +13,13 @@ import { _decode_FiveGProSeAuthorizationIndicator, _encode_FiveGProSeAuthorizati
  * @summary FiveGProSeAuthorizationIndication
  * @description
  * 
+ * The FiveGProSeAuthorizationIndication provides information on the
+ * authorization status of the UE to use the 5G ProSe services. Derived from 5G
+ * ProSe Authorized IE defined in TS 38.413 [23] clause 9.3.1.233.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,30 +39,62 @@ export
 class FiveGProSeAuthorizationIndication {
     /**
      * @summary `fiveGProSeDirectDiscovery`.
+     * @description
+     *
+     * Indicates whether the UE is authorized for 5G ProSe Direct Discovery.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.8.
+     *
      * @public
      * @readonly
      */
     readonly fiveGProSeDirectDiscovery: OPTIONAL<FiveGProSeAuthorizationIndicator>;
     /**
      * @summary `fiveGProSeDirectCommunication`.
+     * @description
+     *
+     * Indicates whether the UE is authorized for 5G ProSe Direct Communication.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.8.
+     *
      * @public
      * @readonly
      */
     readonly fiveGProSeDirectCommunication: OPTIONAL<FiveGProSeAuthorizationIndicator>;
     /**
      * @summary `fiveGProSeL2UEToNetworkRelay`.
+     * @description
+     *
+     * Indicates whether the UE is authorized for 5G ProSe Layer-2 UE-to-Network
+     * Relay.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.8.
+     *
      * @public
      * @readonly
      */
     readonly fiveGProSeL2UEToNetworkRelay: OPTIONAL<FiveGProSeAuthorizationIndicator>;
     /**
      * @summary `fiveGProSeL3UEToNetworkRelay`.
+     * @description
+     *
+     * Indicates whether the UE is authorized for 5G ProSe Layer-3 UE-to-Network
+     * Relay.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.8.
+     *
      * @public
      * @readonly
      */
     readonly fiveGProSeL3UEToNetworkRelay: OPTIONAL<FiveGProSeAuthorizationIndicator>;
     /**
      * @summary `fiveGProSeL2RemoteUE`.
+     * @description
+     *
+     * Indicates whether the UE is authorized for 5G ProSe Layer-2 Remote UE.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.8.
+     *
      * @public
      * @readonly
      */

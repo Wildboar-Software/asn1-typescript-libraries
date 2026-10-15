@@ -14,6 +14,13 @@ import { IPv6Address, _decode_IPv6Address, _encode_IPv6Address } from "../TS3312
  * @summary IPAddress
  * @description
  * 
+ * Indicates the conditional destination IPv4 address or destination IPv6
+ * address field in the PDU header to the destination IP address of the
+ * intercepted SIP message (see ETSI TS 103 221-2 [8] clause 5.3).
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +33,19 @@ import { IPv6Address, _decode_IPv6Address, _encode_IPv6Address } from "../TS3312
  */
 export
 type IPAddress =
+    /**
+     * @description
+     *
+     * The IPv4 address being reported in binary representation. (3GPP TS
+     * 33.128, clause 8.2.)
+     */
     { iPv4Address: IPv4Address } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IPv6 address being reported in binary representation. (3GPP TS
+     * 33.128, clause 8.2.)
+     */
     | { iPv6Address: IPv6Address } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

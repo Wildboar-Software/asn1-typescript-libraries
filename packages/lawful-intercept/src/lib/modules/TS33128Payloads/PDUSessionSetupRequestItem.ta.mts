@@ -15,6 +15,13 @@ import { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSA
  * @summary PDUSessionSetupRequestItem
  * @description
  * 
+ * The PDUSessionSetupRequestItem identifies a PDU Session for a UE. The
+ * PDUSessionSetupRequestItem is derived from the information in the PDU Session
+ * Resource Setup Request Item IE defined in TS 38.413 [23] clause 9.2.2.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,26 @@ export
 class PDUSessionSetupRequestItem {
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * Identifies a PDU Session for a UE. The definition and use of the PDU
+     * Session ID is specified in TS 23.501 [2] clause 5.6.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.2.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: PDUSessionID;
     /**
      * @summary `sNSSAI`.
+     * @description
+     *
+     * Slice identifier associated with the PDU session, if available. See TS
+     * 23.003 [19] clause 28.4.2 and TS 23.501 [2] clause 5.15.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.2.
+     *
      * @public
      * @readonly
      */

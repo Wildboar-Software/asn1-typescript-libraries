@@ -27,6 +27,18 @@ import { MMStatusText, _decode_MMStatusText, _encode_MMStatusText } from "../TS3
  * @summary MMSDeliveryReportNonLocalTarget
  * @description
  * 
+ * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+ * MMSDeliveryReportNonLocalTarget record when the MMS Proxy-Relay:
+ *
+ * - sends MM4_delivery_report.REQ (as defined in TS 23.140 [40] clause 8.4.2),
+ *   that contains a non-local target ID, to the non-local MMS Proxy-Relay, or
+ *
+ * - receives MM4_delivery_report.REQ, that contains a non-local target ID, from
+ *   the non-local MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,36 +67,79 @@ export
 class MMSDeliveryReportNonLocalTarget {
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the proxies.
+     * As defined in TS 23.140 [40] clause 8.4.1.4.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * An ID assigned by the MMS Proxy-Relay to uniquely identify an MM. As
+     * defined in TS 23.140 [40] clause 8.4.1.4.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
     readonly messageID: UTF8String;
     /**
      * @summary `terminatingMMSParty`.
+     * @description
+     *
+     * ID(s) of the terminating party of the original message this Delivery
+     * Report refers to, in one or more of the formats described in clause
+     * 7.4.2.1.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
     readonly terminatingMMSParty: MMSParty[];
     /**
      * @summary `originatingMMSParty`.
+     * @description
+     *
+     * ID(s) of the originating party of the original message this Delivery
+     * Report refers to, in one or more of the formats described in clause
+     * 7.4.2.1.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
     readonly originatingMMSParty: MMSParty;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Indicates the direction of the MM. This shall be encoded as "toTarget",
+     * or "from target", as appropriate.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
@@ -97,6 +152,14 @@ class MMSDeliveryReportNonLocalTarget {
     readonly mMSDateTime: Timestamp;
     /**
      * @summary `forwardToOriginator`.
+     * @description
+     *
+     * Indicates whether the MMS Proxy-Relay is allowed to forward the delivery
+     * report to the originating UE. "Yes" is coded as True, and "No" is coded
+     * as False. Include if sent to/by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
@@ -121,18 +184,43 @@ class MMSDeliveryReportNonLocalTarget {
     readonly statusText: MMStatusText;
     /**
      * @summary `applicID`.
+     * @description
+     *
+     * Identification of the originating application of the original MM.
+     * Identifies the destination application as defined in TS 23.140 [40]
+     * clause 8.4.1.4. Include if sent to/by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
     readonly applicID: OPTIONAL<UTF8String>;
     /**
      * @summary `replyApplicID`.
+     * @description
+     *
+     * Identification of an application to which replies, delivery reports, and
+     * read reports are addressed. Identifies the application to which replies,
+     * delivery reports, and read reports are addressed as defined in TS 23.140
+     * [40] clause 8.4.1.4. Include if sent to/by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */
     readonly replyApplicID: OPTIONAL<UTF8String>;
     /**
      * @summary `auxApplicInfo`.
+     * @description
+     *
+     * Auxiliary application addressing information as indicated in the original
+     * MM. As defined in OMA-TS-MMS_ENC [39] clause 7.3.4. Include if sent to/by
+     * the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.14.
+     *
      * @public
      * @readonly
      */

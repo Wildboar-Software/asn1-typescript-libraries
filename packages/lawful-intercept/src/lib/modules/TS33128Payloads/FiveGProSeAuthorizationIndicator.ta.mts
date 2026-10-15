@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FiveGProSeAuthorizationIndicator
  * @description
  * 
+ * The FiveGProSeAuthorizationIndicator indicates authorization status of the UE
+ * to use the 5G ProSe services. Derived from the 5G ProSe Authorized IE defined
+ * in TS 38.413 [23] clause 9.3.1.233.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.11.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +28,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_FiveGProSeAuthorizationIndicator {
+    /**
+     * @description
+     *
+     * 5G ProSe service is authorized.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.11.
+     */
     authorized = 1,
+    /**
+     * @description
+     *
+     * 5G ProSe service is not authorized.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.11.
+     */
     notAuthorized = 2,
 }
 
@@ -29,6 +50,13 @@ enum _enum_for_FiveGProSeAuthorizationIndicator {
  * @summary FiveGProSeAuthorizationIndicator
  * @description
  * 
+ * The FiveGProSeAuthorizationIndicator indicates authorization status of the UE
+ * to use the 5G ProSe services. Derived from the 5G ProSe Authorized IE defined
+ * in TS 38.413 [23] clause 9.3.1.233.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.11.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +76,13 @@ type FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicat
  * @summary FiveGProSeAuthorizationIndicator
  * @description
  * 
+ * The FiveGProSeAuthorizationIndicator indicates authorization status of the UE
+ * to use the 5G ProSe services. Derived from the 5G ProSe Authorized IE defined
+ * in TS 38.413 [23] clause 9.3.1.233.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.11.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +100,12 @@ const FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndica
 
 /**
  * @summary FiveGProSeAuthorizationIndicator_authorized
+ * @description
+ *
+ * 5G ProSe service is authorized.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.11.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +114,12 @@ const FiveGProSeAuthorizationIndicator_authorized: FiveGProSeAuthorizationIndica
 
 /**
  * @summary authorized
+ * @description
+ *
+ * 5G ProSe service is authorized.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.11.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +128,12 @@ const authorized: FiveGProSeAuthorizationIndicator = FiveGProSeAuthorizationIndi
 
 /**
  * @summary FiveGProSeAuthorizationIndicator_notAuthorized
+ * @description
+ *
+ * 5G ProSe service is not authorized.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.11.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +142,12 @@ const FiveGProSeAuthorizationIndicator_notAuthorized: FiveGProSeAuthorizationInd
 
 /**
  * @summary notAuthorized
+ * @description
+ *
+ * 5G ProSe service is not authorized.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.11.
+ *
  * @constant
  * @type {number}
  */

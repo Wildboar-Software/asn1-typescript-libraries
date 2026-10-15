@@ -21,6 +21,37 @@ import { RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode
  * @summary AMFRANHandoverCommand
  * @description
  * 
+ * 6.2.2.2.9.1 General
+ *
+ * The present clause provides the LI requirements for NG interface-based
+ * handovers which occur for a target UE. Such handovers may be intra 5GS
+ * (inter-gNB), 5GS to EPS (inter-system), EPS to 5GS (inter-system), or 5GS to
+ * UTRA (inter-system).
+ *
+ * The following xIRI records are used to report handover related events between
+ * the AMF and RAN nodes for the target UE when the delivery of location
+ * information is not restricted by service scoping:
+ *
+ * - AMFRANHandoverCommand.
+ *
+ * - AMFRANHandoverRequest.
+ *
+ * The above xIRIs are used to report handover events and information that are
+ * not carried in the AMFLocationUpdate (clause 6.2.2.2.4) record and shall
+ * include the information transferred between the AMF and RAN nodes, as a part
+ * of handover preparation, resource allocation, and handover notification.
+ *
+ * 6.2.2.2.9.2 Handover command
+ *
+ * The IRI-POI in the AMF shall generate an xIRI containing an
+ * AMFRANHandoverCommand record when the IRI-POI present in the AMF detects that
+ * the AMF has sent a HANDOVER COMMAND message to the source RAN node (old RAN
+ * node) in response to a HANDOVER REQUIRED message for the target UE and
+ * location information is not restricted by service scoping.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +71,67 @@ export
 class AMFRANHandoverCommand {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the AMF context. See TS 29.518 [22]
+     * clause 6.1.6.2.25 and TS 23.502 [4] clause 4.11.2.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `aMFUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF uses to uniquely identify the target UE over the NG
+     * Interface. See TS 38.413 [23] clause 9.3.3.1. This is correlated to the
+     * SUPI known in the UE AMF context.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly aMFUENGAPID: AMFUENGAPID;
     /**
      * @summary `rANUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF receives from the NG-RAN node uniquely identifying
+     * the target UE with the NG-RAN Node. See TS 38.413 [23] clause 9.3.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly rANUENGAPID: RANUENGAPID;
     /**
      * @summary `handoverType`.
+     * @description
+     *
+     * Identifies the type of handover indicated by the source RAN node to the
+     * AMF. See TS 38.413 [23] clause 9.3.1.22.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.2.
+     *
      * @public
      * @readonly
      */
     readonly handoverType: HandoverType;
     /**
      * @summary `targetToSourceContainer`.
+     * @description
+     *
+     * Provides radio related information about the gaining RAN node. See TS
+     * 38.413 [23] clause 9.3.1.21.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.2.
+     *
      * @public
      * @readonly
      */

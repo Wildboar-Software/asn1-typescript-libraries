@@ -45,42 +45,91 @@ export
 class S1Information {
     /**
      * @summary `globalRANNodeID`.
+     * @description
+     *
+     * The ID of the RAN Node from which the message was received. Shall be
+     * present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly globalRANNodeID: GlobalRANNodeID;
     /**
      * @summary `rANNodeName`.
+     * @description
+     *
+     * The RAN Node Name for the RAN Node from which the message was received.
+     * Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly rANNodeName: OPTIONAL<RANNodeName>;
     /**
      * @summary `supportedTAList`.
+     * @description
+     *
+     * The list of TAIs supported by the RAN Node. Shall be present if known at
+     * the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly supportedTAList: OPTIONAL<SupportedTAList>;
     /**
      * @summary `cSGIDList`.
+     * @description
+     *
+     * A list of the closed subscriber groups supported by the RAN Node. Shall
+     * be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly cSGIDList: OPTIONAL<CSGIDList>;
     /**
      * @summary `connectedENGNBList`.
+     * @description
+     *
+     * A list of the en-gNBs connected to the RAN Node. Shall be present if
+     * known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly connectedENGNBList: OPTIONAL<ConnectedENGNBList>;
     /**
      * @summary `mMEServedGUMMEIList`.
+     * @description
+     *
+     * A list of the GUMMEIs served by the MME. Shall be present if known at the
+     * NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly mMEServedGUMMEIList: MMEServedGUMMEIList;
     /**
      * @summary `iABSupported`.
+     * @description
+     *
+     * Indicates whether the MME supports IAB Nodes. Shall be present if known
+     * at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.12.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,12 @@ import { RANCGI, _decode_RANCGI, _encode_RANCGI } from "../TS33128Payloads/RANCG
  * @summary F1Information
  * @description
  * 
+ * Information pertaining to the setup of the F1 Interface. See TS 38.473 [103]
+ * clauses 9.2.1.4 and 9.2.1.5.
+ *
+ * 3GPP TS 33.128, clause 7.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

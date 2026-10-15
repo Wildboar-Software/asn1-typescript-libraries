@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSBearerDeletionCauseValue
  * @description
  * 
+ * Indicates whether the bearers requested for deletion were successfully
+ * deleted (see TS 29.274 [87] clause 7.2.10).
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

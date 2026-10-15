@@ -29,12 +29,24 @@ export
 class LTEV2XServiceAuthorization {
     /**
      * @summary `v2XVehicleUEAuthorizationIndicator`.
+     * @description
+     *
+     * Indicates the UE is authorised to act as a V2X vehicle UE.
+     *
+     * 3GPP TS 33.128, clause 8.4.6.
+     *
      * @public
      * @readonly
      */
     readonly v2XVehicleUEAuthorizationIndicator: OPTIONAL<V2XUEAuthorizationIndicator>;
     /**
      * @summary `v2XPedestrianUEAuthorizationIndicator`.
+     * @description
+     *
+     * Indicates the UE is authorised to act as a V2X pedestrian UE.
+     *
+     * 3GPP TS 33.128, clause 8.4.6.
+     *
      * @public
      * @readonly
      */

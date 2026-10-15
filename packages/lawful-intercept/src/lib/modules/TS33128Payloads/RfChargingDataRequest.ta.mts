@@ -15,6 +15,15 @@ import { RfChargingEvent, _decode_RfChargingEvent, _encode_RfChargingEvent, _enu
  * @summary RfChargingDataRequest
  * @description
  * 
+ * The IRI-POI in the charging function shall generate an xIRI containing an
+ * RfChargingDataRequest record when the IRI-POI present in the charging
+ * function receives a Charging Data Request (TS 32.299 [111] clause 5.1.2) with
+ * the target identity as the User Name, or Subscriber Identifier in the Service
+ * Information from the Rf interface.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +40,27 @@ export
 class RfChargingDataRequest {
     /**
      * @summary `rfChargingData`.
+     * @description
+     *
+     * Shall contain the Charging Data Request (See TS 32.299 [111] clause
+     * 5.1.2). message which triggered the xIRI in its original format.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.9.
+     *
      * @public
      * @readonly
      */
     readonly rfChargingData: DiameterChargingData;
     /**
      * @summary `rfChargingEvent`.
+     * @description
+     *
+     * Derived from the Service Information field contained in the Charging Data
+     * Request (e.g. IMS-Information, SMS-Information, PS-Information, etc.) TS
+     * 32.299 [111] clause 7.2.192.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.9.
+     *
      * @public
      * @readonly
      */

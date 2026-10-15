@@ -34,18 +34,40 @@ export
 class FiveGSGTPTunnels {
     /**
      * @summary `uLNGUUPTunnelInformation`.
+     * @description
+     *
+     * Shall include the F-TEID for the UPF endpoint of the NG-U transport
+     * bearer (see TS 38.413 [23] clause 9.3.4.1).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly uLNGUUPTunnelInformation: OPTIONAL<FTEID>;
     /**
      * @summary `additionalULNGUUPTunnelInformation`.
+     * @description
+     *
+     * Shall include the F-TEID for the UPF endpoint of any additional NG-U
+     * transport bearers (see TS 38.413 [23] clause 9.3.4.1).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly additionalULNGUUPTunnelInformation: OPTIONAL<FTEIDList>;
     /**
      * @summary `dLRANTunnelInformation`.
+     * @description
+     *
+     * Shall include the RAN tunnel and QOS Flow information for the PDU Session
+     * (see TS 29.502 [16] clause 6.1.6.2.39 and TS 38.413 [23] clause 9.3.4.1).
+     * See table 6.2.3.2.2-5.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */

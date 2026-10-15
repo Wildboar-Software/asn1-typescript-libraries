@@ -29,12 +29,26 @@ export
 class IdMMessage {
     /**
      * @summary `idMRequest`.
+     * @description
+     *
+     * Contains the HTTP GET or POST request sent by the target to the Identity
+     * Management Server.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly idMRequest: OCTET_STRING;
     /**
      * @summary `idMResponse`.
+     * @description
+     *
+     * Contains the HTTP response returned by the Identity Management Server to
+     * the target.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

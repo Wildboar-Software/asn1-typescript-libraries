@@ -28,6 +28,30 @@ import { FailureResponse, _decode_FailureResponse, _encode_FailureResponse, _enu
  * @summary EESEASDiscoverySubscription
  * @description
  * 
+ * The IRI-POI in the EES shall generate an xIRI containing an
+ * EESEASDiscoverySubscription record when the IRI-POI present in the EES
+ * detects that an EEC has requested to subscribe, update subscription and
+ * unsubscribe to EAS discovery information reporting. The IRI-POI present in
+ * the EES shall generate the xIRI for the following events:
+ *
+ * - EES returns Eees_EASDiscovery_Subscribe response to the EEC confirming its
+ *   subscription to EAS discovery information reporting (as defined in TS
+ *   24.558 [93] clause 5.3.2.3).
+ *
+ * - EES returns Eees_EASDiscovery_UpdateSubscription response to the EEC
+ *   confirming the update of its subscription at the EES for EAS discovery
+ *   information reporting (as defined in TS 24.558 [93] clause 5.3.2.5).
+ *
+ * - EES returns Eees_EASDiscovery_Unsubscribe response to the EEC confirming
+ *   the deletion of an existing subscription at the EES to EAS discovery
+ *   information reporting (as defined in TS 24.558 [93] clause 5.3.2.6)
+ *
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,60 +76,124 @@ export
 class EESEASDiscoverySubscription {
     /**
      * @summary `eECID`.
+     * @description
+     *
+     * Unique identifier of the EEC.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly eECID: UTF8String;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `subscriptionType`.
+     * @description
+     *
+     * Subscription type, i.e. "Subscription", "Subscription Update" or
+     * "Unsubscription".
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionType: SubscriptionType;
     /**
      * @summary `eASEventType`.
+     * @description
+     *
+     * Event type for which the EEC shall be notified.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly eASEventType: EASEventType;
     /**
      * @summary `eASDiscoveryFilter`.
+     * @description
+     *
+     * Set of characteristics to determine required EASs, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly eASDiscoveryFilter: OPTIONAL<EASDiscoveryFilter>;
     /**
      * @summary `eASDynamicInfoFilter`.
+     * @description
+     *
+     * List of EAS dynamic information required by the EEC per EAS, if
+     * available. See table 7.14.2.4-2.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly eASDynamicInfoFilter: OPTIONAL<EASDynamicInfoFilter>;
     /**
      * @summary `eECServiceContSupport`.
+     * @description
+     *
+     * ACR scenarios supported by the EC for service continuity if any.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly eECServiceContSupport: OPTIONAL<ACRScenarios>;
     /**
      * @summary `expirationTime`.
+     * @description
+     *
+     * Expiration time for the subscription. If absent for subscription types
+     * "Subscription" and Subscription Update", EAS discovery subscription from
+     * EEC never expires.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly expirationTime: OPTIONAL<Timestamp>;
     /**
      * @summary `subscriptionId`.
+     * @description
+     *
+     * Subscription identity, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionId: OPTIONAL<UTF8String>;
     /**
      * @summary `failureResponse`.
+     * @description
+     *
+     * Cause information when the discovery request has failed, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.4.
+     *
      * @public
      * @readonly
      */

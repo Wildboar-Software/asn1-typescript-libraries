@@ -12,6 +12,11 @@ import { EncapsulatedSBIChargingData, _decode_EncapsulatedSBIChargingData, _enco
  * @summary SBIChargingData
  * @description
  * 
+ * Encapsulated message that triggered the xIRI in its original format.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +28,12 @@ import { EncapsulatedSBIChargingData, _decode_EncapsulatedSBIChargingData, _enco
  */
 export
 type SBIChargingData =
+    /**
+     * @description
+     *
+     * Encapsulated unmodified payload of Nchf SBI payload. (3GPP TS 33.128,
+     * clause 7.19.3.5.)
+     */
     { fullSBIChargingData: EncapsulatedSBIChargingData } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

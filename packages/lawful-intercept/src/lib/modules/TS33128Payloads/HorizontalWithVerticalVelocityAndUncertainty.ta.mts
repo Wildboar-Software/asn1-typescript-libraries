@@ -21,6 +21,13 @@ import { SpeedUncertainty, _decode_SpeedUncertainty, _encode_SpeedUncertainty } 
  * @summary HorizontalWithVerticalVelocityAndUncertainty
  * @description
  * 
+ * The HorizontalWithVerticalVelocityAndUncertainty type is derived from the
+ * data present in the HorizontalWithVerticalVelocityAndUncertainty type defined
+ * in TS 29.572 [24] clause 6.1.6.2.21.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.46.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,36 +48,78 @@ export
 class HorizontalWithVerticalVelocityAndUncertainty {
     /**
      * @summary `hSpeed`.
+     * @description
+     *
+     * Horizontal speed in kilometres per hour. Shall be encoded as described in
+     * TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.46.
+     *
      * @public
      * @readonly
      */
     readonly hSpeed: HorizontalSpeed;
     /**
      * @summary `bearing`.
+     * @description
+     *
+     * Bearing angle in degrees, measured clockwise from North. Shall be encoded
+     * as described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.46.
+     *
      * @public
      * @readonly
      */
     readonly bearing: Angle;
     /**
      * @summary `vSpeed`.
+     * @description
+     *
+     * Vertical Seed in kilometres per hour. Shall be encoded as described in TS
+     * 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.46.
+     *
      * @public
      * @readonly
      */
     readonly vSpeed: VerticalSpeed;
     /**
      * @summary `vDirection`.
+     * @description
+     *
+     * Vertical Direction: upward or downward. Shall be encoded as described in
+     * TS 29.572 [24] clause 6.1.6.3.13.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.46.
+     *
      * @public
      * @readonly
      */
     readonly vDirection: VerticalDirection;
     /**
      * @summary `hUncertainty`.
+     * @description
+     *
+     * Uncertainty of horizontal speed in kilometres per hour Shall be encoded
+     * as described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.46.
+     *
      * @public
      * @readonly
      */
     readonly hUncertainty: SpeedUncertainty;
     /**
      * @summary `vUncertainty`.
+     * @description
+     *
+     * Uncertainty of vertical speed in kilometres per hour. Shall be encoded as
+     * described in TS 29.572 [24] table 6.1.6.3.2-1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.46.
+     *
      * @public
      * @readonly
      */

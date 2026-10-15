@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AMFEventType
  * @description
  * 
+ * The AMFEventType represents the AmfEventReport IE (TS 29.518 [22] clause
+ * 6.2.6.2.5) which triggered the LocationPresenceReport (clause 7.3.3.2.47).
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.64.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +27,23 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_AMFEventType {
+    /**
+     * @description
+     *
+     * Indicates that the AmfEventReport which triggered the
+     * LocationPresenceReport was the LOCATION_REPORT.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.64.
+     */
     locationReport = 1,
+    /**
+     * @description
+     *
+     * Indicates that the AmfEventReport which triggered the
+     * LocationPresenceReport was the PRESENCE_IN_AOI_REPORT.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.64.
+     */
     presenceInAOIReport = 2,
 }
 
@@ -29,6 +51,12 @@ enum _enum_for_AMFEventType {
  * @summary AMFEventType
  * @description
  * 
+ * The AMFEventType represents the AmfEventReport IE (TS 29.518 [22] clause
+ * 6.2.6.2.5) which triggered the LocationPresenceReport (clause 7.3.3.2.47).
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.64.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +76,12 @@ type AMFEventType = _enum_for_AMFEventType;
  * @summary AMFEventType
  * @description
  * 
+ * The AMFEventType represents the AmfEventReport IE (TS 29.518 [22] clause
+ * 6.2.6.2.5) which triggered the LocationPresenceReport (clause 7.3.3.2.47).
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.64.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +99,13 @@ const AMFEventType = _enum_for_AMFEventType;
 
 /**
  * @summary AMFEventType_locationReport
+ * @description
+ *
+ * Indicates that the AmfEventReport which triggered the LocationPresenceReport
+ * was the LOCATION_REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.64.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +114,13 @@ const AMFEventType_locationReport: AMFEventType = AMFEventType.locationReport; /
 
 /**
  * @summary locationReport
+ * @description
+ *
+ * Indicates that the AmfEventReport which triggered the LocationPresenceReport
+ * was the LOCATION_REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.64.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +129,13 @@ const locationReport: AMFEventType = AMFEventType.locationReport; /* SHORT_NAMED
 
 /**
  * @summary AMFEventType_presenceInAOIReport
+ * @description
+ *
+ * Indicates that the AmfEventReport which triggered the LocationPresenceReport
+ * was the PRESENCE_IN_AOI_REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.64.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +144,13 @@ const AMFEventType_presenceInAOIReport: AMFEventType = AMFEventType.presenceInAO
 
 /**
  * @summary presenceInAOIReport
+ * @description
+ *
+ * Indicates that the AmfEventReport which triggered the LocationPresenceReport
+ * was the PRESENCE_IN_AOI_REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.64.
+ *
  * @constant
  * @type {number}
  */

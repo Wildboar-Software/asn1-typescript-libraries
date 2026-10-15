@@ -15,6 +15,13 @@ import { _decode_FiveGMMStatus, _encode_FiveGMMStatus, _enum_for_FiveGMMStatus, 
  * @summary EMM5GMMStatus
  * @description
  * 
+ * Indicates the registration status of the UE in both EPS and 5GS as known at
+ * the NF where the POI is located. This type is derived from the UE status IE
+ * defined in TS 24.501 [13] clause 9.11.3.56.
+ *
+ * 3GPP TS 33.128, clause 8.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,28 @@ export
 class EMM5GMMStatus {
     /**
      * @summary `eMMRegStatus`.
+     * @description
+     *
+     * Indicates the EPS registration status of the UE as known at the NF where
+     * the POI is located. Shall be present if the EPS registration status is
+     * known.
+     *
+     * 3GPP TS 33.128, clause 8.4.2.
+     *
      * @public
      * @readonly
      */
     readonly eMMRegStatus: OPTIONAL<EMMRegStatus>;
     /**
      * @summary `fiveGMMStatus`.
+     * @description
+     *
+     * Indicates the 5GS registration status of the UE as known at the NF where
+     * the POI is located. Shall be present if the 5GS registration status is
+     * known.
+     *
+     * 3GPP TS 33.128, clause 8.4.2.
+     *
      * @public
      * @readonly
      */

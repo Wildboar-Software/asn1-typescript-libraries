@@ -18,6 +18,24 @@ import { PTCGroupAuthRule, _decode_PTCGroupAuthRule, _encode_PTCGroupAuthRule, _
  * @summary PTCGroupAdvertisement
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCGroupAdvertisement record when the IRI-POI present in the PTC server
+ * detects when a PTC target sends group advertisement information to a single
+ * PTC participant, a list of PTC participants, or to all members of a PTC chat
+ * group, as well as when a PTC target receives group advertisement information
+ * from a single PTC participant, a list of PTC participants, or from members of
+ * a PTC chat group using the group identity. Accordingly, the IRI-POI in the
+ * PTC server generates the xIRI when the following events are detected:
+ *
+ * - when the PTC server receives a SIP MESSAGE (containing group advertisement
+ *   information) from a PTC target.
+ *
+ * - when the PTC server sends a SIP MESSAGE (containing group advertisement
+ *   information) to the PTC target.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,36 +56,87 @@ export
 class PTCGroupAdvertisement {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN and PTCChatGroupID shall be provided for
+     * PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.13.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.5.2.13.
+     *
      * @public
      * @readonly
      */
     readonly pTCDirection: Direction;
     /**
      * @summary `pTCIDList`.
+     * @description
+     *
+     * Shall provide Identities of each participant from the target's contact
+     * list (i.e. individuals) and PTC group list (i.e. list of pre-identified
+     * individuals using a group identification) for a group call when
+     * available.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.13.
+     *
      * @public
      * @readonly
      */
     readonly pTCIDList: OPTIONAL<PTCTargetInformation[]>;
     /**
      * @summary `pTCGroupAuthRule`.
+     * @description
+     *
+     * Identifies the action requested by the PTC target to the PTC Group
+     * Authorization Rules:
+     *
+     * - Report when action requested to the PTC Group Authorization Rules by
+     *   the PTC target.
+     *
+     * - Report when the PTC target attempts a change or queries the access
+     *   control list(s).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.13.
+     *
      * @public
      * @readonly
      */
     readonly pTCGroupAuthRule: OPTIONAL<PTCGroupAuthRule>;
     /**
      * @summary `pTCGroupAdSender`.
+     * @description
+     *
+     * Identifies the sender of the group advertisement.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.13.
+     *
      * @public
      * @readonly
      */
     readonly pTCGroupAdSender: PTCTargetInformation;
     /**
      * @summary `pTCGroupNickname`.
+     * @description
+     *
+     * The nickname is a human-readable tag (e.g. "display-name" in a SIP header
+     * associated with a PTC client or PTC group per
+     * OMA-TS-PoC_System_Description-V2_1-20110802-A [56]).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.13.
+     *
      * @public
      * @readonly
      */

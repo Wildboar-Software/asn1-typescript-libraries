@@ -29,6 +29,12 @@ import { HomeNetworkIdentifier, _decode_HomeNetworkIdentifier, _encode_HomeNetwo
  * @summary SUCI
  * @description
  * 
+ * The SUCI type is derived from the data present in the Subscription Concealed
+ * Identifier type defined in TS 23.003 [19] clause 2.2B.
+ *
+ * 3GPP TS 33.128, clause 8.3.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,54 +60,118 @@ export
 class SUCI {
     /**
      * @summary `mCC`.
+     * @description
+     *
+     * The mobile country code identifying the country of the home network for
+     * the subscriber. If the SUPI Type is not 0, the MCC shall be populated
+     * with '000' and ignored.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */
     readonly mCC: MCC;
     /**
      * @summary `mNC`.
+     * @description
+     *
+     * The mobile network code identifying the PLMN of the home network of the
+     * subscriber. If the SUPI Type is not 0, the MNC shall be populated with
+     * '000' and ignored.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */
     readonly mNC: MNC;
     /**
      * @summary `routingIndicator`.
+     * @description
+     *
+     * The routing indicator for the SUCI.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */
     readonly routingIndicator: RoutingIndicator;
     /**
      * @summary `protectionSchemeID`.
+     * @description
+     *
+     * The protection scheme ID used to generate the SUCI.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */
     readonly protectionSchemeID: ProtectionSchemeID;
     /**
      * @summary `homeNetworkPublicKeyID`.
+     * @description
+     *
+     * Identifies the key used for SUPI protection.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */
     readonly homeNetworkPublicKeyID: HomeNetworkPublicKeyID;
     /**
      * @summary `schemeOutput`.
+     * @description
+     *
+     * Contains the characters resulting as the output of the permanent
+     * identifier with the protection scheme applied.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */
     readonly schemeOutput: SchemeOutput;
     /**
      * @summary `routingIndicatorLength`.
+     * @description
+     *
+     * Shall be included if the length of the routing indicator is different
+     * from the number of meaningful digits given in the routingIndicator field.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */
     readonly routingIndicatorLength: OPTIONAL<INTEGER>;
     /**
      * @summary `sUPIType`.
+     * @description
+     *
+     * Indicates the type of SUPI concealed in the SUCI. See TS 23.003 [19]
+     * clause 2.2B. Shall be present if present in the SUCI being reported. If
+     * this parameter is not present, the SUPI Type may be assumed to be IMSI.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */
     readonly sUPIType: OPTIONAL<SUPIType>;
     /**
      * @summary `homeNetworkIdentifier`.
+     * @description
+     *
+     * Identifies the home network of the subscriber. See TS 23.003 [19] clause
+     * 2.2B. Shall be present unless the SUPI Type is 0 and the MCC and MNC
+     * fields are populated.
+     *
+     * 3GPP TS 33.128, clause 8.3.5.
+     *
      * @public
      * @readonly
      */

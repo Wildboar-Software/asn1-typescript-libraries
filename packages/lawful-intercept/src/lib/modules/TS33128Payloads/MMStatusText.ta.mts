@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMStatusText
  * @description
  * 
+ * As defined in OMA-TS-MMS_ENC [39] clause 7.3.55.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

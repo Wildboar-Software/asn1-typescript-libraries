@@ -22,6 +22,12 @@ import { TNGFID, _decode_TNGFID, _encode_TNGFID } from "../TS33128Payloads/TNGFI
  * @summary ANNodeID
  * @description
  * 
+ * The ANNodeID type is derived from the data present in the GlobalRANNodeID
+ * type defined in TS 29.571 [17] clause 5.4.4.28.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.26.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,11 +44,59 @@ import { TNGFID, _decode_TNGFID, _encode_TNGFID } from "../TS33128Payloads/TNGFI
  */
 export
 type ANNodeID =
+    /**
+     * @description
+     *
+     * Shall be chosen if the AN node represents a N3IWF. When present, this
+     * field shall contain the identifier of the N3IWF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.26.
+     */
     { n3IWFID: N3IWFIDSBI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be chosen if the RAN Node ID represents a gNB. When present, this
+     * field shall contain the identifier of the gNB.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.26.
+     */
     | { gNbID: GNbID } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be chosen if the RAN Node ID represents a NG-eNB. When present,
+     * this field shall contain the identifier of the NG-eNB.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.26.
+     */
     | { nGENbID: NGENbID } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be chosen if the RAN Node ID represents a eNB. When present, this
+     * field shall contain the identifier of the eNB.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.26.
+     */
     | { eNbID: ENbID } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * if the RAN Node ID represents a WAGF. When present, this field shall
+     * contain the identifier of the WAGF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.26.
+     */
     | { wAGFID: WAGFID } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be present if the RAN Node ID represents a TNGF. When present, this
+     * field shall contain the identifier of the TNGF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.26.
+     */
     | { tNGFID: TNGFID } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

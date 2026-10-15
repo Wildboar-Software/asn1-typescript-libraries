@@ -13,6 +13,15 @@ import { Daytime, _decode_Daytime, _encode_Daytime } from "../TS33128Payloads/Da
  * @summary ScheduledCommunicationTime
  * @description
  * 
+ * Provides time zone and day of the week when the UE is available for
+ * communication, if available, See TS 38.413 [23] clause 9.3.1.144. Encoded
+ * according to TS 29.571 [17] clause 5.4.4.41. The SBIReference for this
+ * parameter shall be populated with
+ * 'TS29571_CommonData.yaml#/components/schemas/ScheduledCommunicationTime'.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

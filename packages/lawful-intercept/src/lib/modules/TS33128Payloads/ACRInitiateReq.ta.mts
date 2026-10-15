@@ -39,36 +39,73 @@ export
 class ACRInitiateReq {
     /**
      * @summary `eASID`.
+     * @description
+     *
+     * Identifier of the EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */
     readonly eASID: OPTIONAL<EASID>;
     /**
      * @summary `aCID`.
+     * @description
+     *
+     * Identifier of the AC, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */
     readonly aCID: OPTIONAL<ACID>;
     /**
      * @summary `tEASEndpoint`.
+     * @description
+     *
+     * Endpoint information of the T-EAS (target EAS).
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */
     readonly tEASEndpoint: EASEndpoint;
     /**
      * @summary `sEASEndpoint`.
+     * @description
+     *
+     * Endpoint information of the S-EAS (serving EAS).
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */
     readonly sEASEndpoint: OPTIONAL<EASEndpoint>;
     /**
      * @summary `previousTEASEndpoint`.
+     * @description
+     *
+     * Endpoint information of the previous T-EAS.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */
     readonly previousTEASEndpoint: OPTIONAL<EASEndpoint>;
     /**
      * @summary `routeReq`.
+     * @description
+     *
+     * T-EAS's DNAI information and corresponding N6 traffic routing information
+     * and/or routing profile ID, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.6.
+     *
      * @public
      * @readonly
      */

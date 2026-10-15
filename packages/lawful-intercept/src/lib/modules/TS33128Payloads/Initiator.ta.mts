@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Initiator
  * @description
  * 
+ * Specifies whether the network (SMF) or the UE is initiating the rejection or
+ * indicating the failure.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ enum _enum_for_Initiator {
  * @summary Initiator
  * @description
  * 
+ * Specifies whether the network (SMF) or the UE is initiating the rejection or
+ * indicating the failure.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +63,12 @@ type Initiator = _enum_for_Initiator;
  * @summary Initiator
  * @description
  * 
+ * Specifies whether the network (SMF) or the UE is initiating the rejection or
+ * indicating the failure.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary NWDAFEventsSubscriptionOpType
  * @description
  * 
+ * Identifies the type of Nnwdaf_EventsSubscription service operation, i.e.,
+ * POST to create a subscription, PUT to update a subscription, DELETE to delete
+ * a subscription.
+ *
+ * 3GPP TS 33.128, clause 7.16.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +38,13 @@ enum _enum_for_NWDAFEventsSubscriptionOpType {
  * @summary NWDAFEventsSubscriptionOpType
  * @description
  * 
+ * Identifies the type of Nnwdaf_EventsSubscription service operation, i.e.,
+ * POST to create a subscription, PUT to update a subscription, DELETE to delete
+ * a subscription.
+ *
+ * 3GPP TS 33.128, clause 7.16.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +65,13 @@ type NWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;
  * @summary NWDAFEventsSubscriptionOpType
  * @description
  * 
+ * Identifies the type of Nnwdaf_EventsSubscription service operation, i.e.,
+ * POST to create a subscription, PUT to update a subscription, DELETE to delete
+ * a subscription.
+ *
+ * 3GPP TS 33.128, clause 7.16.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

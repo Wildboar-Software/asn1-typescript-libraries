@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SAC
  * @description
  * 
+ * The Service Area Code (SAC) together with the PLMN-Id and the LAC constitute
+ * the Service Area Identifier. The SAC is defined by the operator and set in
+ * the RNC via O&M. Defined in TS 23.003 [19] clause 12.5.
+ *
+ * 3GPP TS 33.128, clause 8.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

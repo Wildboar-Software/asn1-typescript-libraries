@@ -21,6 +21,12 @@ import { TMSI, _decode_TMSI, _encode_TMSI } from "../TS33128Payloads/TMSI.ta.mjs
  * @summary GUTI
  * @description
  * 
+ * The GUTI type is derived from the data present in the Globally Unique
+ * Temporary User Identity type defined in TS 23.003 [19] clause 2.8.
+ *
+ * 3GPP TS 33.128, clause 8.3.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +46,63 @@ export
 class GUTI {
     /**
      * @summary `mCC`.
+     * @description
+     *
+     * The mobile country code identifying the country of the home network for
+     * the subscriber.
+     *
+     * 3GPP TS 33.128, clause 8.3.8.
+     *
      * @public
      * @readonly
      */
     readonly mCC: MCC;
     /**
      * @summary `mNC`.
+     * @description
+     *
+     * The mobile network code identifying the PLMN of the home network of the
+     * subscriber.
+     *
+     * 3GPP TS 33.128, clause 8.3.8.
+     *
      * @public
      * @readonly
      */
     readonly mNC: MNC;
     /**
      * @summary `mMEGroupID`.
+     * @description
+     *
+     * The identifier for the MME Group.
+     *
+     * 3GPP TS 33.128, clause 8.3.8.
+     *
      * @public
      * @readonly
      */
     readonly mMEGroupID: MMEGroupID;
     /**
      * @summary `mMECode`.
+     * @description
+     *
+     * Identifies the MME that issued the GUTI.
+     *
+     * 3GPP TS 33.128, clause 8.3.8.
+     *
      * @public
      * @readonly
      */
     readonly mMECode: MMECode;
     /**
      * @summary `mTMSI`.
+     * @description
+     *
+     * The temporary Identifier for the UE to uniquely identify it within the
+     * MME.
+     *
+     * 3GPP TS 33.128, clause 8.3.8.
+     *
      * @public
      * @readonly
      */

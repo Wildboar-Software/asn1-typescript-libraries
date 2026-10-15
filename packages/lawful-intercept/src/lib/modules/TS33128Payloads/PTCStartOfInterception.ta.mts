@@ -21,6 +21,19 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary PTCStartOfInterception
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCStartOfInterception record when a PTC target or a PTC chat group as a
+ * target has an active PTC session in progress. If multiple PTC Sessions are
+ * active at the start of interception, a PTCStartOfInterception record is
+ * generated for each active session. Accordingly, the IRI-POI in the PTC server
+ * generates the xIRI when the following event is detected:
+ *
+ * - when the PTC server detects that LI is enabled on a PTC participant or a
+ *   PTC chat group with an active PTC session.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,60 +58,131 @@ export
 class PTCStartOfInterception {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN and PTCChatGroupID shall be provided for
+     * PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pTCDirection: Direction;
     /**
      * @summary `preEstSessionID`.
+     * @description
+     *
+     * Identifies the PTC Pre-Established Session Identity when available.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly preEstSessionID: OPTIONAL<PTCSessionInfo>;
     /**
      * @summary `pTCOriginatingID`.
+     * @description
+     *
+     * Shall identify the originating party.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pTCOriginatingID: PTCTargetInformation;
     /**
      * @summary `pTCSessionInfo`.
+     * @description
+     *
+     * Shall provide PTC session information such as PTC Session URI and PTC
+     * Session type (e.g. on-demand, pre-established, ad-hoc, pre-arranged,
+     * group session) when available.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pTCSessionInfo: OPTIONAL<PTCSessionInfo>;
     /**
      * @summary `pTCHost`.
+     * @description
+     *
+     * Shall identify the PTC participant who has the authority to initiate and
+     * administrate a PTC session, if known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pTCHost: OPTIONAL<PTCTargetInformation>;
     /**
      * @summary `pTCParticipants`.
+     * @description
+     *
+     * Shall identify the individual PTC participants of the communication
+     * session, when known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pTCParticipants: OPTIONAL<PTCTargetInformation[]>;
     /**
      * @summary `pTCMediaStreamAvail`.
+     * @description
+     *
+     * Shall include this parameter to indicate if the PTC target is able/not
+     * able to receive media streams immediately. True indicates available for
+     * media, while false indicates not able to accept media.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pTCMediaStreamAvail: OPTIONAL<BOOLEAN>;
     /**
      * @summary `pTCBearerCapability`.
+     * @description
+     *
+     * Shall provide when known the media characteristics information elements
+     * of the PTC session, encoded in SDP format as per RFC 4566 [43] clause 5.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pTCBearerCapability: OPTIONAL<UTF8String>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the PTC target’s location when reporting of the PTC
+     * target’s location information is authorized and available.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.6.
+     *
      * @public
      * @readonly
      */

@@ -25,6 +25,32 @@ import { NWDAFEventsSubscriptionResponseCode, _decode_NWDAFEventsSubscriptionRes
  * @summary NWDAFEventsSubscription
  * @description
  * 
+ * The IRI-POI in the NWDAF shall generate an xIRI containing an
+ * NWDAFEventsSubscription record when the IRI-POI present in the NWDAF detects
+ * that an NF consumer has subscribed, updated a subscription or deleted a
+ * subscription for UE related analytics events for a target UE.
+ *
+ * Accordingly, the IRI-POI in the NWDAF generates the xIRI when any of the
+ * following events is detected (see TS 29.520 [133] clause 4.2.2.1):
+ *
+ * - NWDAF returns a Nnwdaf_EventsSubscription_Subscribe Response in response to
+ *   Nnwdaf_EventsSubscription_Subscribe Request received from an authorized NF
+ *   consumer to subscribe to UE related analytics events for a target UE.
+ *
+ * - NWDAF returns a Nnwdaf_EventsSubscription_Subscribe Response in response to
+ *   Nnwdaf_EventsSubscription_Subscribe Request received from an NF consumer to
+ *   update a subscription to UE related analytics events for a target UE.
+ *
+ * - NWDAF returns a Nnwdaf_ EventsSubscription_Unsubscribe Response in response
+ *   to Nnwdaf_EventsSubscription_Unsubscribe Request received from an NF
+ *   consumer to unsubscribe from UE related analytics event notifications for a
+ *   target UE.
+ *
+ * Table 7.16.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.16.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,36 +72,84 @@ export
 class NWDAFEventsSubscription {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * Identifies the SUPI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `nWDAFConsumerNFType`.
+     * @description
+     *
+     * Identifies the type of NF consumer.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFConsumerNFType: NWDAFConsumerNFType;
     /**
      * @summary `nWDAFEventsSubscriptionOpType`.
+     * @description
+     *
+     * Identifies the type of Nnwdaf_EventsSubscription service operation, i.e.,
+     * POST to create a subscription, PUT to update a subscription, DELETE to
+     * delete a subscription.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFEventsSubscriptionOpType: NWDAFEventsSubscriptionOpType;
     /**
      * @summary `nWDAFSubscribedEventList`.
+     * @description
+     *
+     * Identifies the list of analytics events the NF consumer subscribes to.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFSubscribedEventList: NWDAFEvent[];
     /**
      * @summary `nWDAFEventsSubscription`.
+     * @description
+     *
+     * Includes the NnwdafEventsSubscription resource which contains a set of
+     * events and their configuration data the NF consumer subscribes to.
+     * Encoded according to TS 29.520 [133] table 5.1.6.2.3-1. The SBIReference
+     * for this parameter shall be populated with
+     * 'TS29520_Nnwdaf_EventsSubscription.yaml#/components/schemas/NnwdafEventsSubscription'
+     * as specified in TS 29.520 [133] clause A2.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFEventsSubscription: SBIType;
     /**
      * @summary `nWDAFEventsSubscriptionID`.
+     * @description
+     *
+     * Identifies the subscription if the subscription is created successfully.
+     * It is present in the Location header of the 201 Created response when the
+     * subscription is created using the POST method as defined in TS 29.520
+     * [133] table 5.1.3.2.3.1-4. It represents the resource URI of both the PUT
+     * method for subscription update and DELETE method for subscription
+     * deletion.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.2.
+     *
      * @public
      * @readonly
      */

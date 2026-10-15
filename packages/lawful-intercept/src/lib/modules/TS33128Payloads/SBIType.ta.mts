@@ -31,12 +31,26 @@ export
 class SBIType {
     /**
      * @summary `sBIReference`.
+     * @description
+     *
+     * JSON pointer that indicates the schema definition for the reported
+     * SBIValue. Shall be sent in the form of a JSON string value (see RFC 6901
+     * [117] clause 5). When using the SBIType as a parameter within a record,
+     * the value of the SBI Reference shall be clearly indicated in the
+     * associated description field of the table describing the record.
+     *
      * @public
      * @readonly
      */
     readonly sBIReference: SBIReference;
     /**
      * @summary `sBIValue`.
+     * @description
+     *
+     * The contents of the SBI message or parameter being reported. Shall be
+     * sent as a JSON document that matches the schema indicated by the
+     * sBIReference.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,21 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary IMSHSSServingSystemMessage
  * @description
  * 
+ * The IRI-POI in the IMS-HSS shall generate an xIRI containing the
+ * IMSHSSServingSystemMessage record when it detects the following events:
+ *
+ * - When the IMS-HSS receives the Roaming Status Update from the UDM as part of
+ *   the Nhss_UEContextManagement_RoamingStatusUpdate service operation (see TS
+ *   29.563 [100] clause 5.4.2.4).
+ *
+ * The IMSHSSServingSystem xIRI is also generated when the IMSHSS deregisters
+ * the target due to a Nhss_ims UECM_DeregistrationRequest or updates the
+ * roaming status of the target based on a Nhss_imsUECM_AuthorizationRequest
+ * which includes a visitedNetworkIdentifier.
+ *
+ * 3GPP TS 33.128, clause 7.2.4.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +55,65 @@ export
 class IMSHSSServingSystemMessage {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the target UE, See TS 29.563 [100] clause 6.3.6.2.5.
+     *
+     * 3GPP TS 33.128, clause 7.2.4.3.2.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `oldPLMNID`.
+     * @description
+     *
+     * Includes the old PLMN for which the UE was previously registered.
+     *
+     * 3GPP TS 33.128, clause 7.2.4.3.2.
+     *
      * @public
      * @readonly
      */
     readonly oldPLMNID: PLMNID;
     /**
      * @summary `authorizationRequest`.
+     * @description
+     *
+     * Provides information related to the targets authorization to the IMS-HSS
+     * when attempting to register via a visited network. See TS 29.562 [101]
+     * clause 6.1.6.2.2.
+     *
+     * 3GPP TS 33.128, clause 7.2.4.3.2.
+     *
      * @public
      * @readonly
      */
     readonly authorizationRequest: AuthorizationRequest;
     /**
      * @summary `roamingIndicator`.
+     * @description
+     *
+     * Indicates if the serving PLMNID is different than the HPLMN or EHPLMN.
+     *
+     * 3GPP TS 33.128, clause 7.2.4.3.2.
+     *
      * @public
      * @readonly
      */
     readonly roamingIndicator: RoamingIndicator;
     /**
      * @summary `deregistrationData`.
+     * @description
+     *
+     * Includes information related to the deregistering target. Include if UECM
+     * service operation is triggered by deregistration. Encoded according to TS
+     * 29.562 [101] clause 6.1.6.2.13 (schema definition reference
+     * TS29562_Nhss_ims_UECM.yaml).
+     *
+     * 3GPP TS 33.128, clause 7.2.4.3.2.
+     *
      * @public
      * @readonly
      */

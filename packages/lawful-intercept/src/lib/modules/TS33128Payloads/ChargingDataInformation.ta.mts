@@ -16,6 +16,12 @@ import { TranslatedChargingDataInfo, _decode_TranslatedChargingDataInfo, _encode
  * @summary ChargingDataInformation
  * @description
  * 
+ * Contains the selected choice between default charging data information types
+ * or translated charging data information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,8 +35,37 @@ import { TranslatedChargingDataInfo, _decode_TranslatedChargingDataInfo, _encode
  */
 export
 type ChargingDataInformation =
+    /**
+     * @description
+     *
+     * The IRI-POI in the charging function shall generate an xIRI containing an
+     * NchfChargingDataRequest record when the IRI-POI present in the charging
+     * function receives a ChargingDataRequest (see TS 32.291 [148] clause
+     * 6.1.6.2.1.1) with the target identity as the subscriber identifier or
+     * user information from the Nchf interface. (3GPP TS 33.128, clause
+     * 7.19.3.4.)
+     */
     { nchfChargingDataRequest: NchfChargingDataRequest } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the charging function shall generate an xIRI containing an
+     * RfChargingDataRequest record when the IRI-POI present in the charging
+     * function receives a Charging Data Request (TS 32.299 [111] clause 5.1.2)
+     * with the target identity as the User Name, or Subscriber Identifier in
+     * the Service Information from the Rf interface. (3GPP TS 33.128, clause
+     * 7.19.3.9.)
+     */
     | { rfChargingDataRequest: RfChargingDataRequest } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IRI-POI in the charging function shall generate an xIRI containing a
+     * TranslatedChargingDataInfo record when the IRI-POI present in the
+     * charging function receives a charging data request with the target
+     * identity as the User Name or SubscriberIdentifier. (3GPP TS 33.128,
+     * clause 7.19.3.13.)
+     */
     | { translatedChargingDataInfo: TranslatedChargingDataInfo } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

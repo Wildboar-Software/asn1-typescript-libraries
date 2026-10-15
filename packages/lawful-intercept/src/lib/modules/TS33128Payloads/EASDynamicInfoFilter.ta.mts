@@ -14,6 +14,12 @@ import { EASID, _decode_EASID, _encode_EASID } from "../TS33128Payloads/EASID.ta
  * @summary EASDynamicInfoFilter
  * @description
  * 
+ * List of EAS dynamic information required by the EEC per EAS, if available.
+ * See table 7.14.2.4-2.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

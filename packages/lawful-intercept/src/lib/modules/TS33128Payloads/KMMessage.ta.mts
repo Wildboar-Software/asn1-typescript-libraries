@@ -39,30 +39,74 @@ export
 class KMMessage {
     /**
      * @summary `kMSRequestName`.
+     * @description
+     *
+     * Indicates whether the HTTP POST operation is for KMS Initialize, KMS
+     * KeyProvision, KMS CertCache, KMS Cert, KMS Discovery Lookup or KMS
+     * Redirect Upload.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly kMSRequestName: KMSRequestName;
     /**
      * @summary `kMSRequestBody`.
+     * @description
+     *
+     * Provides the content of the KMS request type encoded as a
+     * "KmsRequestType" or "SignedKmsRequestType" structure according to TS
+     * 33.180 [154] clause D.3.5. The XMLType.namespace for this parameter shall
+     * be set to the namespace of the root element of the XML document, e.g.,
+     * urn:3gpp:ns:mcsecKMSInterface:1.0.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly kMSRequestBody: KMSRequestBody;
     /**
      * @summary `kMSResponseBody`.
+     * @description
+     *
+     * Provides the content of the KMS response type for any response type
+     * except for KMS Redirect Response type, encoded as a "KmsResponseType" or
+     * "SignedKmsResponseType" structure according to TS 33.180 [154] clause
+     * D.3.5. The XMLType.namespace for this parameter shall be set to the
+     * namespace of the root element of the XML document, e.g.,
+     * urn:3gpp:ns:mcsecKMSInterface:1.0.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly kMSResponseBody: OPTIONAL<KMSResponseBody>;
     /**
      * @summary `kMSResponseBodyKRR`.
+     * @description
+     *
+     * Provides the content of the KMS Redirect Response type, encoded as a
+     * "KRResponseType" structure according to TS 33.180 [154] clause D.4.4. The
+     * XMLType.namespace for this parameter shall be set to the namespace of the
+     * root element of the XML document, e.g., urn:3gpp:ns:mcsecKMSKRR:1.0.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly kMSResponseBodyKRR: OPTIONAL<KMSResponseBodyKRR>;
     /**
      * @summary `hTTPResponseCode`.
+     * @description
+     *
+     * Indicates the HTTP response code.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

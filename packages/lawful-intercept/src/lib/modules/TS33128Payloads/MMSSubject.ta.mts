@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSSubject
  * @description
  * 
+ * The subject of the email. Include if sent to the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.2A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

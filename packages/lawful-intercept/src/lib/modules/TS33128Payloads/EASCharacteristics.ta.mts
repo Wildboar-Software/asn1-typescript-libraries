@@ -44,42 +44,86 @@ export
 class EASCharacteristics {
     /**
      * @summary `eASID`.
+     * @description
+     *
+     * EAS Identity, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASID: OPTIONAL<EASID>;
     /**
      * @summary `aSPID`.
+     * @description
+     *
+     * Identity of the ASP which provides the EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly aSPID: OPTIONAL<UTF8String>;
     /**
      * @summary `eASType`.
+     * @description
+     *
+     * EAS type or category, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASType: OPTIONAL<UTF8String>;
     /**
      * @summary `eASSchedule`.
+     * @description
+     *
+     * Availability schedule of the EAS (e.g. time windows), if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASSchedule: OPTIONAL<Daytime>;
     /**
      * @summary `eASProfile`.
+     * @description
+     *
+     * Profiles of the discovered EASs, if available. See table 7.14.2.3-4.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASProfile: OPTIONAL<EASProfile>;
     /**
      * @summary `eASServiceArea`.
+     * @description
+     *
+     * List of geographical and topological service areas that the EAS serves,
+     * if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASServiceArea: OPTIONAL<Location>;
     /**
      * @summary `eASServicePermLevel`.
+     * @description
+     *
+     * Level of service permissions (e.g. trial, gold-class) supported by the
+     * EAS, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */

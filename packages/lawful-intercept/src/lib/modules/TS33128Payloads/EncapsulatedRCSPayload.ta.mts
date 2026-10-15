@@ -29,8 +29,30 @@ import { SIPMessage, _decode_SIPMessage, _encode_SIPMessage } from "../TS33128Pa
  */
 export
 type EncapsulatedRCSPayload =
+    /**
+     * @description
+     *
+     * Shall be chosen if the message is in the format of a MIME Entity (see RFC
+     * 2045 [110] clause 2.4).
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.3.
+     */
     { mIME: MIMEEntity } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be chosen if the message is an MSRP Message.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.3.
+     */
     | { mSRP: MSRPMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be chosen if the message is a SIP Message.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.3.
+     */
     | { sIP: SIPMessage } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

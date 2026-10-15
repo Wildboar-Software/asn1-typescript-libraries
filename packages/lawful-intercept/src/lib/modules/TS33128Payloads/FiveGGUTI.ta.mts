@@ -23,6 +23,12 @@ import { FiveGTMSI, _decode_FiveGTMSI, _encode_FiveGTMSI } from "../TS33128Paylo
  * @summary FiveGGUTI
  * @description
  * 
+ * The FiveGGUTI type is derived from the data present in the 5G Globally Unique
+ * Temporary User Identity type defined in TS 23.003 [19] clause 2.10.
+ *
+ * 3GPP TS 33.128, clause 8.3.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,36 +49,75 @@ export
 class FiveGGUTI {
     /**
      * @summary `mCC`.
+     * @description
+     *
+     * The mobile country code identifying the country of the home network for
+     * the subscriber.
+     *
+     * 3GPP TS 33.128, clause 8.3.9.
+     *
      * @public
      * @readonly
      */
     readonly mCC: MCC;
     /**
      * @summary `mNC`.
+     * @description
+     *
+     * The mobile network code identifying the PLMN of the home network of the
+     * subscriber.
+     *
+     * 3GPP TS 33.128, clause 8.3.9.
+     *
      * @public
      * @readonly
      */
     readonly mNC: MNC;
     /**
      * @summary `aMFRegionID`.
+     * @description
+     *
+     * The identifier for the AMF Region.
+     *
+     * 3GPP TS 33.128, clause 8.3.9.
+     *
      * @public
      * @readonly
      */
     readonly aMFRegionID: AMFRegionID;
     /**
      * @summary `aMFSetID`.
+     * @description
+     *
+     * Identifies the AMF Set the AMF belongs to.
+     *
+     * 3GPP TS 33.128, clause 8.3.9.
+     *
      * @public
      * @readonly
      */
     readonly aMFSetID: AMFSetID;
     /**
      * @summary `aMFPointer`.
+     * @description
+     *
+     * Identifies the AMF.
+     *
+     * 3GPP TS 33.128, clause 8.3.9.
+     *
      * @public
      * @readonly
      */
     readonly aMFPointer: AMFPointer;
     /**
      * @summary `fiveGTMSI`.
+     * @description
+     *
+     * The temporary Identifier for the UE to uniquely identify it within the
+     * AMF.
+     *
+     * 3GPP TS 33.128, clause 8.3.9.
+     *
      * @public
      * @readonly
      */

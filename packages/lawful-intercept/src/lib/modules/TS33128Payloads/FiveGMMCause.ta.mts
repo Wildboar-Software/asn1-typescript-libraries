@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FiveGMMCause
  * @description
  * 
+ * Indicates the 5GMM cause value associated with the deregistration procedure,
+ * see TS 24.501 [13] clause 9.11.3.2. The integer value is mapped from the
+ * second octet shown in TS 24.501 [13] clause 9.11.3.2.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

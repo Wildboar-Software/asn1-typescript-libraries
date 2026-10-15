@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSNetworkPolicy
  * @description
  * 
+ * Indicates network policy information to the UE. Encoded per TS 24.301 [38]
+ * clause 9.9.3.52.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

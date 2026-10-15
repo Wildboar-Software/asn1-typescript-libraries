@@ -14,6 +14,13 @@ import { PTCIdentifiers, _decode_PTCIdentifiers, _encode_PTCIdentifiers } from "
  * @summary PTCTargetInformation
  * @description
  * 
+ * Provide PTC target identity. At least one among IMPU, IMPI,
+ * InstanceIdentifierURN and PTCChatGroupID shall be provided for
+ * PTCTargetInformation.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

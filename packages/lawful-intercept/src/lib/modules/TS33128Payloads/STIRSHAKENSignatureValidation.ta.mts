@@ -23,6 +23,80 @@ import { SIPMessage, _decode_SIPMessage, _encode_SIPMessage } from "../TS33128Pa
  * @summary STIRSHAKENSignatureValidation
  * @description
  * 
+ * The IRI-POI present in the Telephony AS or IBCF, shall generate an xIRI
+ * containing a STIRSHAKENSignatureValidation record when the following
+ * conditions are met:
+ *
+ * - Either IBCF or Telephony AS, is interacting with the VERIFICATION AS.
+ *   Whether it is the Telephony AS or IBCF for sessions is based on network
+ *   configuration and local policy of the CSP as described in clause 7.11.2.5.
+ *
+ * - With one or more of the following are true:
+ *
+ * - Request URI and To Headers of SIP INVITE request received from S-CSCF (in
+ *   the case of Telephony AS) or from the previous IP network (in the case of
+ *   IBCF) is a target identity.
+ *
+ * - One or more of P-Asserted Identity, From, Diversion, History-Info Headers
+ *   of SIP INVITE request received from S-CSCF (in the case of Telephony AS) or
+ *   from the previous IP network (in the case of IBCF) is a target non-local
+ *   identity without any prior intra-network diversions.
+ *
+ * - If PASSporTs are received in the SIP INVITE request, they are submitted by
+ *   the IBCF to the VERIFICATION AS for validation and the result is included
+ *   in an outgoing SIP INVITE request together with possible RCD data or eCNAM
+ *   data as Call-Info headers.
+ *
+ * - If PASSporTs are received in the SIP INVITE request, they are submitted by
+ *   the Telephony AS to the VERIFICATION AS for validation and the validation
+ *   result is received from the Verification AS and the outgoing SIP INVITE
+ *   possibly includes RCD data or eCNAM data as Call-Info headers.
+ *
+ * - NOTE: The IRI-POI may use the Via headers, Record-route headers to
+ *   determine any prior intra-network diversions.
+ *
+ * The IRI-POI present in the Telephony AS shall also generate an xIRI
+ * containing a STIRSHAKENSignatureValidation record when it detects the
+ * following conditions:
+ *
+ * - Session is redirected.
+ *
+ * - Request URI header of outgoing SIP INVITE is a target identity.
+ *
+ * - Validation result is included in the outgoing SIP INVITE with the possible
+ *   the RCD data and the eCNAM data as Call-Info headers.
+ *
+ * The IRI-POI present in the LMISF-IRI or P-CSCF shall generate an xIRI
+ * containing a STIRSHAKENSignatureValidation record when the following
+ * conditions are met:
+ *
+ * - With one or more of the following are true:
+ *
+ * - Request URI or To header of SIP INVITE request sent to the inbound roaming
+ *   UE is a target identity.
+ *
+ * - One or more of P-Asserted Identity, From, Diversion, History-Info Headers
+ *   of SIP INVITE request sent to the UE is a target non-local identity.
+ *
+ * - SIP INVITE request sent to the UE includes SIP Call-Info headers containing
+ *   possible RCD data or eCNAM data, and the result of the PASSporT
+ *   verification.
+ *
+ * In the above paragraphs, a validation result (i.e. result of all PASSporT
+ * verification) is included means a "verstat" parameter within the P-Asserted
+ * Identity header is included in the outgoing SIP INVITE.
+ *
+ * The following table contains parameters, with IRITargetIdentifier, generated
+ * by the IRI-POI.
+ *
+ * NOTE: The same SIP message may be encapsulated in the xIRI IMSMessage as
+ * well.
+ *
+ * Table 7.11.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.11.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,36 +117,80 @@ export
 class STIRSHAKENSignatureValidation {
     /**
      * @summary `pASSporTs`.
+     * @description
+     *
+     * Identifies the content of the SIP Identity headers added by the
+     * originating network and transit networks. See TS 24.229 [74] and RFC 8224
+     * [70]. This is a set of PASSporT parameter. See table 7.11.2.2-2.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pASSporTs: OPTIONAL<PASSporT[]>;
     /**
      * @summary `rCDTerminalDisplayInfo`.
+     * @description
+     *
+     * RCD display information when applicable. See IETF RFC 9795 [73].
+     *
+     * 3GPP TS 33.128, clause 7.11.2.3.
+     *
      * @public
      * @readonly
      */
     readonly rCDTerminalDisplayInfo: OPTIONAL<RCDDisplayInfo>;
     /**
      * @summary `eCNAMTerminalDisplayInfo`.
+     * @description
+     *
+     * eCNAM display information when applicable. See TS 24.196 [72].
+     *
+     * 3GPP TS 33.128, clause 7.11.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eCNAMTerminalDisplayInfo: OPTIONAL<ECNAMDisplayInfo>;
     /**
      * @summary `sHAKENValidationResult`.
+     * @description
+     *
+     * SHAKEN validation result: TN-Validation-Passed, TN-Validation-Failed,
+     * No-TN-Validation. See TS 24.229 [74] and IETF RFC 8588 [71].
+     *
+     * 3GPP TS 33.128, clause 7.11.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sHAKENValidationResult: SHAKENValidationResult;
     /**
      * @summary `sHAKENFailureStatusCode`.
+     * @description
+     *
+     * SHAKEN status code when validation fails in the terminating network. See
+     * IETF RFC 8224 [70].
+     *
+     * 3GPP TS 33.128, clause 7.11.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sHAKENFailureStatusCode: OPTIONAL<SHAKENFailureStatusCode>;
     /**
      * @summary `encapsulatedSIPMessage`.
+     * @description
+     *
+     * Encapsulated SIP INVITE request that carries P-Asserted Identifier or
+     * From header that includes the SHAKEN validation result (Outgoing SIP
+     * request) based on the structure defined in table 7.12.4.2-2. (see NOTE
+     * below). NOTE: The same SIP message may be encapsulated in the xIRI
+     * IMSMessage as well.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.3.
+     *
      * @public
      * @readonly
      */

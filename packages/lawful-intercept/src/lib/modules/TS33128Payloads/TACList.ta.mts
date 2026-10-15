@@ -11,6 +11,11 @@ import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
  * @summary TACList
  * @description
  * 
+ * Includes all TACs broadcast in the cell for the UE's serving PLMN.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

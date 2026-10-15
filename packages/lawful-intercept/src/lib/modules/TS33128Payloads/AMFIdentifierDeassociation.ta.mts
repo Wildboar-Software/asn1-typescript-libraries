@@ -25,6 +25,33 @@ import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } fro
  * @summary AMFIdentifierDeassociation
  * @description
  * 
+ * The IRI-POI present in the AMF generating an xIRI containing an
+ * AMFIdentifierAssociation record shall set the Payload Direction field in the
+ * PDU header to not applicable (Direction Value 5, see ETSI TS 103 221-2 [8]
+ * clause 5.2.6).
+ *
+ * In the case where the IRI-POI present in the AMF detects that a REGISTRATION
+ * ACCEPT message or a CONFIGURATION UPDATE (5G-GUTI) message as defined in TS
+ * 24.501 [13] has been sent by the AMF towards a target UE, the IRI-POI present
+ * at the AMF shall immediately generate an AMFIdentifierAssociation xIRI. This
+ * xIRI shall be generated regardless of whether the REGISTRATION ACCEPT or
+ * CONFIGURATION UPDATE (5G-GUTI) procedure is subsequently successfully
+ * completed or not.
+ *
+ * The IRI-POI present in the AMF shall generate an xIRI containing an
+ * AMFIdentifierDeassociation record when the IRI-POI present in the AMF detects
+ * an identifier deassociation without a new association within the same UE
+ * context inside the same AMF for a UE matching one of the target identifiers
+ * provided via LI_X1. Generation of this record is subject to this record type
+ * being enabled for a specific target (see clause 6.2.2.2.1).
+ *
+ * NOTE: SUPI shall always be provided, in addition to the warrant target
+ * identifier if different to SUPI. Other identifiers shall be provided if
+ * available.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,42 +73,94 @@ export
 class AMFIdentifierDeassociation {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the procedure (see NOTE). NOTE: SUPI shall always be
+     * provided, in addition to the warrant target identifier if different to
+     * SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI used in the procedure, if applicable and if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI used in the procedure, if available (see NOTE). NOTE: SUPI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used in the procedure, if available (see NOTE). NOTE: SUPI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI used in the procedure, see TS 24.501 [13] clause 9.11.3.4.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: FiveGGUTI;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information available when identifier deassociation occurs, sent
+     * only if it is the current location. Shall be encoded using the
+     * Location.locationInfo.userLocation parameter (see attachment. If
+     * available, other parameters reportable via Location shall be included.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `additionalUserIdentifiers`.
+     * @description
+     *
+     * Provides additional user identifiers known at the AMF or stored in AMF
+     * context, e.g. additional GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
      * @public
      * @readonly
      */

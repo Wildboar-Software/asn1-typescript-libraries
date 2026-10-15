@@ -16,6 +16,13 @@ import { IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs
  * @summary AuthorizationRequest
  * @description
  * 
+ * Provides information related to the targets authorization to the IMS-HSS when
+ * attempting to register via a visited network. See TS 29.562 [101] clause
+ * 6.1.6.2.2.
+ *
+ * 3GPP TS 33.128, clause 7.2.4.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

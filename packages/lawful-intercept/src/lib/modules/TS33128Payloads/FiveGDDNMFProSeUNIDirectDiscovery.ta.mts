@@ -17,6 +17,28 @@ import { FiveGProSeMessage, _decode_FiveGProSeMessage, _encode_FiveGProSeMessage
  * @summary FiveGDDNMFProSeUNIDirectDiscovery
  * @description
  * 
+ * The IRI-POI in the 5G DDNMF in the HPLMN shall generate an xIRI containing a
+ * FiveGUDDNMFProSeUNIDirectDiscovery record when the IRI-POI present in the 5G
+ * DDNMF in the HPLMN detects that the 5G DDNMF in the HPLMN returns a response
+ * to a direct discovery request received from a target UE. The IRI-POI present
+ * in the 5G DDNMF in the HPLMN shall generate the xIRI for the following
+ * events:
+ *
+ * - 5G DDNMF in HPLMN exchanges direct discovery messages over PC3a with the
+ *   target UE to authorize the target UE for discovery services (see TS 24.554
+ *   [140] clauses 6.2.2. to 6.2.12).
+ *
+ * - 5G DDNMF in HPLMN receives a PROSE_USAGE_INFORMATION_REPORT_LIST message
+ *   from a target UE providing a set of usage information reports indicating
+ *   the amount of data transmitted and received during 5G ProSe direct
+ *   communication (see TS 24.554 [140] clause 7.6.2.1).
+ *
+ * NOTE: Either FiveGProSeDiscoveryMessage or
+ * FiveGProSeUsageInformationReportMessage field shall be present.
+ *
+ * 3GPP TS 33.128, clause 7.17.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,12 +56,24 @@ export
 class FiveGDDNMFProSeUNIDirectDiscovery {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * Identifies the SUPI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.17.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * Identifies the GPSI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.17.2.2.
+     *
      * @public
      * @readonly
      */

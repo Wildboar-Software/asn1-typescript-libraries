@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ServiceMessageIdentity
  * @description
  * 
+ * Indicates the type of message sent within the SERVICE ACCEPT from the AMF to
+ * the UE. Encoding per TS 24.501 [13] clause 9.7.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

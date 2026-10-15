@@ -16,6 +16,12 @@ import { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
  * @summary PLMNSupportItem
  * @description
  * 
+ * Contains a PLMN and possibly a NID along with an onboarding support
+ * indication.
+ *
+ * 3GPP TS 33.128, clause 8.4.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +39,37 @@ export
 class PLMNSupportItem {
     /**
      * @summary `pLMNIdentity`.
+     * @description
+     *
+     * Contains the identity of the PLMN being described.
+     *
+     * 3GPP TS 33.128, clause 8.4.10.
+     *
      * @public
      * @readonly
      */
     readonly pLMNIdentity: PLMNID;
     /**
      * @summary `nPNSupport`.
+     * @description
+     *
+     * Contains the NID. Shall be present if the context being reported is for
+     * an NPN.
+     *
+     * 3GPP TS 33.128, clause 8.4.10.
+     *
      * @public
      * @readonly
      */
     readonly nPNSupport: OPTIONAL<NID>;
     /**
      * @summary `onboardingSupport`.
+     * @description
+     *
+     * Indicates whether the PLMN supports onboarding.
+     *
+     * 3GPP TS 33.128, clause 8.4.10.
+     *
      * @public
      * @readonly
      */

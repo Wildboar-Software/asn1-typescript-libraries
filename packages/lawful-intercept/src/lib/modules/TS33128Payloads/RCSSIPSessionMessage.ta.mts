@@ -19,6 +19,15 @@ import { MSRPPath, _decode_MSRPPath, _encode_MSRPPath } from "../TS33128Payloads
  * @summary RCSSIPSessionMessage
  * @description
  * 
+ * NOTE: The parameter mSRPPathInfo was incorrectly introduced in version 18.7.0
+ * of the present document (ASN.1 OID r18(18) version7(7)) as a mandatory
+ * parameter and was not corrected before the creation of version 19.0.0 of the
+ * present document. It should have been OPTIONAL and was corrected in version
+ * 19.8.0 of the present document (ASN.1 OID r19(19) version8(8)).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +46,54 @@ export
 class RCSSIPSessionMessage {
     /**
      * @summary `sessionLeg`.
+     * @description
+     *
+     * Identifies the leg of the RCS session.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.3.
+     *
      * @public
      * @readonly
      */
     readonly sessionLeg: RCSSessionLeg;
     /**
      * @summary `sIPMessage`.
+     * @description
+     *
+     * Contains the SIP Message.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.3.
+     *
      * @public
      * @readonly
      */
     readonly sIPMessage: IMSPayload;
     /**
      * @summary `rCSSessionResult`.
+     * @description
+     *
+     * Contains an indication of the resulting state of the RCS Session Leg.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.3.
+     *
      * @public
      * @readonly
      */
     readonly rCSSessionResult: RCSSessionResult;
     /**
      * @summary `mSRPPathInfo`.
+     * @description
+     *
+     * Shall be present if the SIP Message contains path information for an MSRP
+     * Session. See NOTE. NOTE: The parameter mSRPPathInfo was incorrectly
+     * introduced in version 18.7.0 of the present document (ASN.1 OID r18(18)
+     * version7(7)) as a mandatory parameter and was not corrected before the
+     * creation of version 19.0.0 of the present document. It should have been
+     * OPTIONAL and was corrected in version 19.8.0 of the present document
+     * (ASN.1 OID r19(19) version8(8)).
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.3.
+     *
      * @public
      * @readonly
      */

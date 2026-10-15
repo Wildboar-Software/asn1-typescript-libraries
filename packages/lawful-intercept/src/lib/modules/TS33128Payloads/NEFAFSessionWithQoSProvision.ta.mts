@@ -21,6 +21,31 @@ import { AForASSessionWithQoSResponseCode, _decode_AForASSessionWithQoSResponseC
  * @summary NEFAFSessionWithQoSProvision
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing an
+ * NEFAFSessionWithQoSProvision record when the IRI-POI present in the NEF
+ * detects that an AF has requested the NEF to provide, update or revoke a
+ * specific QoS for an AF session.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when any of the
+ * following events is detected (see TS 29.522 [58] clause 4.4.9):
+ *
+ * - NEF returns a Nnef_AFsessionWithQoS_Create Response in response to
+ *   Nnef_AFsessionWithQoS_Create Request received from an AF to provide a
+ *   specific QoS for an AF session related to a target UE.
+ *
+ * - NEF returns a Nnef_AFsessionWithQoS_Update Response in response
+ *   toNnef_AFsessionWithQoS_Update Request received from an AF to update the
+ *   QoS for an AF session related to a target UE.
+ *
+ * - NEF returns a Nnef_AFsessionWithQoS_Revoke Response in response to
+ *   Nnef_AFsessionWithQoS_Revoke Request received from an AF to revoke the QoS
+ *   for an AF session related to a target UE.
+ *
+ * Table 7.7.6.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.6.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,36 +66,82 @@ export
 class NEFAFSessionWithQoSProvision {
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE the AF session with required QoS applies to.
+     *
+     * 3GPP TS 33.128, clause 7.7.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * AF identity requesting AF session with required QoS.
+     *
+     * 3GPP TS 33.128, clause 7.7.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aFID: AFID;
     /**
      * @summary `aFSessionWithQoSOpType`.
+     * @description
+     *
+     * Type of operation for AF session with required QoS: POST to provision,
+     * PUT and PATCH to update and DELETE to revoke.
+     *
+     * 3GPP TS 33.128, clause 7.7.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aFSessionWithQoSOpType: AForASSessionWithQoSOpType;
     /**
      * @summary `aFSessionWithQoSSubscription`.
+     * @description
+     *
+     * Includes an ASSessionWithQoSSubscription resource according to TS 29.122
+     * [63] clause A.14. The SBIReference for this parameter shall be populated
+     * with
+     * ‘TS29122_AsSessionWithQoS.yaml#/components/schemas/AsSessionWithQoSSubscription'.
+     * Present only if the aFSessionWithQoSOpType is set to "POST" or "PUT".
+     *
+     * 3GPP TS 33.128, clause 7.7.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aFSessionWithQoSSubscription: OPTIONAL<SBIType>;
     /**
      * @summary `aFSessionWithQoSSubscriptionPatch`.
+     * @description
+     *
+     * Includes a ASSessionWithQoSSubscriptionPatch resource according to TS
+     * 29.122 [63] clause A.14. The SBIReference for this parameter shall be
+     * populated with
+     * ‘TS29122_AsSessionWithQoS.yaml#/components/schemas/AsSessionWithQoSSubscriptionPatch'.
+     * Present only if the aFSessionWithQoSOpType is set to "PATCH".
+     *
+     * 3GPP TS 33.128, clause 7.7.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aFSessionWithQoSSubscriptionPatch: OPTIONAL<SBIType>;
     /**
      * @summary `aFSessionWithQoSResponseCode`.
+     * @description
+     *
+     * Identifies the response code associated to the AFSessionWithQoS operation
+     * executed by the NEF.
+     *
+     * 3GPP TS 33.128, clause 7.7.6.1.2.
+     *
      * @public
      * @readonly
      */

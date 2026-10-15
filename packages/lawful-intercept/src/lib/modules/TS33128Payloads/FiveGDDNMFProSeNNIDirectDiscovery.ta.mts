@@ -17,6 +17,23 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary FiveGDDNMFProSeNNIDirectDiscovery
  * @description
  * 
+ * The IRI-POI in the 5G DDNMF in the HPLMN/VPLMN/local PLMN shall generate an
+ * xIRI containing an FiveGDDNMFProSeNNIDirectDiscovery record when the IRI-POI
+ * present in the 5G DDNMF in the HPLMN/VPLMN/local PLMN detect that the 5G
+ * DDNMF in the HPLMN interacts with the 5G DDNMF in the VPLMN or local PLMN for
+ * direct discovery authorizations for a target UE in the VPLMN or local PLMN.
+ * The IRI-POI present in the 5G DDNMF in the HPLMN/VPLMN/local PLMN shall
+ * generate the xIRI for the following event:
+ *
+ * - 5G DDNMF in the HPLMN exchanges any request or response with 5G DDNMF in
+ *   VPLMN or local PLMN over the N5g-ddnmf_Discovery API (see TS 29.555 [141]
+ *   clauses 5.2.2.2 to 5.2.2.8).
+ *
+ * NOTE: At least one of the SUPI or GPSI fields shall be present.
+ *
+ * 3GPP TS 33.128, clause 7.17.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +51,40 @@ export
 class FiveGDDNMFProSeNNIDirectDiscovery {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * Identifies the SUPI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.17.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: OPTIONAL<SUPI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * Identifies the GPSI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.17.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `fiveGDDNMFProSeDirectDiscoveryMessage`.
+     * @description
+     *
+     * Contains the request and the response of the announce authorize
+     * procedure. Encoded according to TS 29.555 [141] table 6.1.6.2.2-1. The
+     * SBIReference for this parameter shall be populated with
+     * 'TS29555_N5g-ddnmf_Discovery.yaml' as specified in TS 29.555 [141] clause
+     * A2.
+     *
+     * 3GPP TS 33.128, clause 7.17.2.3.
+     *
      * @public
      * @readonly
      */

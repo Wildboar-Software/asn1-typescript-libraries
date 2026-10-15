@@ -11,6 +11,14 @@ import { UnfulfilledACProfile, _decode_UnfulfilledACProfile, _encode_Unfulfilled
  * @summary UnfulfilledACProfiles
  * @description
  * 
+ * If requirements indicated in the AC profile(s) cannot be fulfilled for some
+ * of the AC profile(s), the EES shall include "unfulfilledAcProfiles" attribute
+ * containing the list of ACIDs of such AC Profile(s) and appropriate reasons,
+ * if available.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

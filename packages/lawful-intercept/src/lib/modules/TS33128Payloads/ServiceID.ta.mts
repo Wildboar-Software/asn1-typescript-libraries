@@ -15,6 +15,12 @@ import { CAGID, _decode_CAGID, _encode_CAGID } from "../TS33128Payloads/CAGID.ta
  * @summary ServiceID
  * @description
  * 
+ * Identifies the target UE’s 5G service identifiers (e.g. SNSSAI, CAGID) when
+ * the AMF Registration is executed, when known, see TS 29.571 [17].
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

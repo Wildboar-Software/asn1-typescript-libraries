@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary LAC
  * @description
  * 
+ * The Location Area Code of the service area being reported.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.73.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,6 +22,28 @@ import { SIPCellularNetworkInformation, _decode_SIPCellularNetworkInformation, _
  * @summary StartOfInterceptionForActiveIMSSession
  * @description
  * 
+ * The IRI-POI present in the IMS signalling Function shall generate the xIRI
+ * StartOfInterceptionForActiveIMSSession when all of the following conditions
+ * are met:
+ *
+ * - The IRI-POI receives an LI_X1: ActivateTask from the LIPF.
+ *
+ * - The IRI-POI detects the IMS user identified by one or more of the target
+ *   identifier (s) included in the ActivateTask is on an active IMS session.
+ *
+ * - The-IRI-POI in the IMS signalling Functions meets the criteria mentioned in
+ *   TS 33.127 [5] for providing the IRI-POI functions.
+ *
+ * The generation of the xIRI shall be independent of the IMS media associated
+ * with the session. If multiple IMS sessions are active at the start of
+ * interception, a StartOfInterceptionForActiveIMSSession record shall be
+ * generated for each active session.
+ *
+ * Table 7.12.7.1-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,48 +67,109 @@ export
 class StartOfInterceptionForActiveIMSSession {
     /**
      * @summary `originatingId`.
+     * @description
+     *
+     * Identities of the originator of the session.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly originatingId: IMPU[];
     /**
      * @summary `terminatingId`.
+     * @description
+     *
+     * Identities of the termination of the service.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly terminatingId: IMPU;
     /**
      * @summary `sDPState`.
+     * @description
+     *
+     * Indicates the latest state of session from the IMS signalling Function
+     * (including LMISF). Additionally, provides the agreed SDP answer and
+     * related modification (encoded in SDP format as per RFC 4566 [43] clause 5
+     * when known) for each media stream of the target.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sDPState: OPTIONAL<OCTET_STRING[]>;
     /**
      * @summary `diversionIdentity`.
+     * @description
+     *
+     * Provided if available and applicable.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly diversionIdentity: OPTIONAL<IMPU>;
     /**
      * @summary `voIPRoamingIndication`.
+     * @description
+     *
+     * Indicates the roaming mode in use by the target for the reported message.
+     * Shall be present if the target is in a roaming state. See clause
+     * 7.12.4.3.3.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly voIPRoamingIndication: OPTIONAL<VoIPRoamingIndication>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location with timestamp, if available. Shall include all location
+     * information for the target UE available at the NF where the POI is
+     * located encoded as a Location.iMSLocation parameter.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `accessNetworkInformation`.
+     * @description
+     *
+     * Provides non-location related access network information. Shall be
+     * present if available at the NF where the POI is located. One instance of
+     * SIPAccessNetworkInformation shall be used for each
+     * P-Access-Network-Information header.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.2.
+     *
      * @public
      * @readonly
      */
     readonly accessNetworkInformation: OPTIONAL<SIPAccessNetworkInformation[]>;
     /**
      * @summary `cellularNetworkInformation`.
+     * @description
+     *
+     * Provides non-location related cellular network information. Shall be
+     * present if available at the NF where the POI is located. One instance of
+     * SIPCellularNetworkInformation shall be used for each
+     * Cellular-Network-Info header.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.2.
+     *
      * @public
      * @readonly
      */

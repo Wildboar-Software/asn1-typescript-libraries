@@ -25,6 +25,26 @@ import { CoarseLocation, _decode_CoarseLocation, _encode_CoarseLocation } from "
  * @summary Location
  * @description
  * 
+ * The Location structure (see Annex A) is used to convey access network
+ * location information and geolocation information. While the data types
+ * defined in the clauses below are generally modelled on data types from the
+ * Service Based Interfaces (SBIs) defined for specific NFs, the data types
+ * defined below shall be used by any POI in order to send all location
+ * information available at the NF where the POI is located.
+ *
+ * When location information is reported, unless otherwise specified, all
+ * location information present at the NF for the target shall be reported. If a
+ * single parameter within the Location type is unable to carry all the types of
+ * location information available at the NF, multiple parameters within the
+ * Location type shall be used.
+ *
+ * When location information is sent in the format of coarse location (see TS
+ * 36.413 [38] clause 9.2.1.167), the .Location.coarseLocation field shall be
+ * used.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,42 +66,112 @@ export
 class Location {
     /**
      * @summary `locationInfo`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * ProvideLocInfo structure defined in TS 29.518 [22] clause 6.4.6.2.6. This
+     * parameter shall be used any time information from the ProvideLocInfo
+     * structure needs to be reported. This parameter shall also be used
+     * whenever information from the UserLocation type needs to be reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly locationInfo: OPTIONAL<LocationInfo>;
     /**
      * @summary `positioningInfo`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * ProvidePosInfo structure defined in TS 29.518 [22] clause 6.4.6.2.3. This
+     * parameter shall be used any time information from LCS operations needs to
+     * be reported from the 5GC. This structure may also be used any time
+     * information from the ProvidePosInfo structure needs to be reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly positioningInfo: OPTIONAL<PositioningInfo>;
     /**
      * @summary `locationPresenceReport`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * AMFEventReport structure defined in TS 29.518 [22] clause 6.2.6.2.5. This
+     * parameter shall be used any time location information from
+     * Namf_EventExposure Service operations needs to be reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly locationPresenceReport: OPTIONAL<LocationPresenceReport>;
     /**
      * @summary `fourGPositioningInfo`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * Location-Report-Answer structure defined in TS 29.172 [53] clause 7.3.2
+     * and the Provide Subscriber Location Answer defined in TS 29.172 [53]
+     * table 6.2.2-2. This parameter shall be used any time information from LCS
+     * operations needs to be reported from the EPC. This structure may also be
+     * used any time information from the Provide-Location-Answer structure
+     * needs to be reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fourGPositioningInfo: OPTIONAL<FourGPositioningInfo>;
     /**
      * @summary `fourGLocationInfo`.
+     * @description
+     *
+     * Location information type derived from the data present in the
+     * EPS-Location-Info structure defined in TS 29.272 [106] clause 7.3.111 and
+     * the User Location Information structure defined in TS 29.274 [87] clause
+     * 8.21. This parameter shall be used any time information from the
+     * EPSLocationInformation structure needs to be reported. This parameter
+     * shall also be used whenever information from the EPSUserLocation type
+     * needs to be reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fourGLocationInfo: OPTIONAL<FourGLocationInfo>;
     /**
      * @summary `iMSLocation`.
+     * @description
+     *
+     * Location information type derived from the data present in IMS SIP
+     * P-Access-Network-Info, Cellular-Network-Info and Geolocation headers.
+     * This parameter shall be used any time location information needs to be
+     * reported from IMS. This parameter shall only be used to report the
+     * target’s location.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly iMSLocation: OPTIONAL<IMSLocation>;
     /**
      * @summary `coarseLocation`.
+     * @description
+     *
+     * Shall be used when the location information is coarse location (see TS
+     * 36.413 [38] clause 9.2.1.167).
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.2.
+     *
      * @public
      * @readonly
      */

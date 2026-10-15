@@ -17,6 +17,12 @@ import { Confidence, _decode_Confidence, _encode_Confidence } from "../TS33128Pa
  * @summary PointUncertaintyEllipse
  * @description
  * 
+ * The PointUncertaintyEllipse type is derived from the data present in the
+ * PointUncertaintyEllipse type defined in TS 29.572 [24] clause 6.1.6.2.8.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +40,37 @@ export
 class PointUncertaintyEllipse {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * Indicates a geographic point for the centre of the ellipse represented by
+     * its longitude and latitude.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.14.
+     *
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary `uncertainty`.
+     * @description
+     *
+     * Describes an uncertainty ellipse.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.14.
+     *
      * @public
      * @readonly
      */
     readonly uncertainty: UncertaintyEllipse;
     /**
      * @summary `confidence`.
+     * @description
+     *
+     * Indicates the confidence of the location as a percentage.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.14.
+     *
      * @public
      * @readonly
      */

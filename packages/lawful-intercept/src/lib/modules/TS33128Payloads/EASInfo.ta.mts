@@ -32,18 +32,38 @@ export
 class EASInfo {
     /**
      * @summary `eASID`.
+     * @description
+     *
+     * EAS identity.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */
     readonly eASID: EASID;
     /**
      * @summary `expectedSvcKPIs`.
+     * @description
+     *
+     * KPIs expected in order for Acs to receive currently required services
+     * from the EAS. See table 7.14.2.2-4.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */
     readonly expectedSvcKPIs: OPTIONAL<ServiceKPIs>;
     /**
      * @summary `minimumReqSvcKPIs`.
+     * @description
+     *
+     * Minimum KPIs required in order for Acs to receive meaningful services
+     * from the EAS. See table 7.14.2.2-4.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.2.
+     *
      * @public
      * @readonly
      */

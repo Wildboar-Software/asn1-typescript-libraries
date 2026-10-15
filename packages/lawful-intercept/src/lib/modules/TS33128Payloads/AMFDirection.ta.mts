@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AMFDirection
  * @description
  * 
+ * Indicates whether the deregistration was initiated by the network or by the
+ * UE.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +35,12 @@ enum _enum_for_AMFDirection {
  * @summary AMFDirection
  * @description
  * 
+ * Indicates whether the deregistration was initiated by the network or by the
+ * UE.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +60,12 @@ type AMFDirection = _enum_for_AMFDirection;
  * @summary AMFDirection
  * @description
  * 
+ * Indicates whether the deregistration was initiated by the network or by the
+ * UE.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

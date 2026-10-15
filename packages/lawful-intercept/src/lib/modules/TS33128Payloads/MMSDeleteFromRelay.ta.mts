@@ -18,6 +18,13 @@ import { MMSDeleteResponseStatus, _decode_MMSDeleteResponseStatus, _encode_MMSDe
  * @summary MMSDeleteFromRelay
  * @description
  * 
+ * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI containing
+ * an MMSDeleteFromRelay record when the MMS Proxy-Relay sends a m-delete-conf
+ * (defined in OMA-TS-MMS_ENC [39]) to the MMS client in the target UE.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,42 +46,93 @@ export
 class MMSDeleteFromRelay {
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the target
+     * and the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.9.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.9.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Indicates the direction of the MM. This shall be encoded as "to target",
+     * or "fromTarget", as appropriate.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.9.
+     *
      * @public
      * @readonly
      */
     readonly direction: MMSDirection;
     /**
      * @summary `contentLocationReq`.
+     * @description
+     *
+     * The content-location-value field defines the URL for the MMS server
+     * location of the MM as it appears in the m-delete-conf, as defined in
+     * OMA-TS-MMS_ENC [39] clause 7.3.10. Include if sent to the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.9.
+     *
      * @public
      * @readonly
      */
     readonly contentLocationReq: UTF8String[];
     /**
      * @summary `contentLocationConf`.
+     * @description
+     *
+     * The content-location-value field defines the URL for the MMS server
+     * location of the MM as it appears in the m-delete-conf, as defined in
+     * OMA-TS-MMS_ENC [39] clause 7.3.10. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.9.
+     *
      * @public
      * @readonly
      */
     readonly contentLocationConf: UTF8String[];
     /**
      * @summary `deleteResponseStatus`.
+     * @description
+     *
+     * The delete response, as defined in OMA-TS-MMS_ENC [39] clause 7.3.48.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.9.
+     *
      * @public
      * @readonly
      */
     readonly deleteResponseStatus: MMSDeleteResponseStatus;
     /**
      * @summary `deleteResponseText`.
+     * @description
+     *
+     * The delete response, as defined in OMA-TS-MMS_ENC [39] clause 7.3.49.
+     * Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.9.
+     *
      * @public
      * @readonly
      */

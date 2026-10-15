@@ -21,6 +21,41 @@ import { ApplicationResponse, _decode_ApplicationResponse, _encode_ApplicationRe
  * @summary IMSDataChannelApplicationResponse
  * @description
  * 
+ * The IRI-POI present in the DCSF or in the MMTel Enabler Server shall generate
+ * the IMSDataChannelApplicationResponse xIRI when it detects that:
+ *
+ * - A Get Root application response has been generated from a Get Root
+ *   application request sent from the MMTel Enabler Client, see TS 23.392 [165]
+ *   clause 8.3.2.3.
+ *
+ * - A DC Application Profile List response has been generated from a DC
+ *   Application Profile request sent from the MMTel Enabler Client, see TS
+ *   23.392 [165] clause 8.3.2.4.
+ *
+ * Accordingly, the IRI-POI present in the DCSF or MMTel Enabler Server shall
+ * generate the IMSDataChannelApplicationResponse xIRI when the following
+ * conditions are met:
+ *
+ * - The target match conditions are satisfied as described in clause
+ *   7.12.2.8.2.2.
+ *
+ * And either
+ *
+ * - The IRI-POI in the DCSF or MMTel Enabler Server detects that the DCSF or
+ *   MMTel Enabler Server has sent a Get Root application response, answering a
+ *   Get Root application request from the MMTel Enabler Client.
+ *
+ * Or
+ *
+ * - The IRI-POI in the DCSF or MMTel Enabler Server detects that the DCSF or
+ *   MMTel Enabler Server has sent a DC Application Profile list response,
+ *   answering a DC Application Profile request.
+ *
+ * Table 7.12.7.1-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.2.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +75,66 @@ export
 class IMSDataChannelApplicationResponse {
     /**
      * @summary `targetIdentity`.
+     * @description
+     *
+     * Identity of the target.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     *
      * @public
      * @readonly
      */
     readonly targetIdentity: IMSSubscriberIDs;
     /**
      * @summary `callingIdentity`.
+     * @description
+     *
+     * Identity of the originator of the session.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     *
      * @public
      * @readonly
      */
     readonly callingIdentity: OPTIONAL<IMPU>;
     /**
      * @summary `applicationUEInformation`.
+     * @description
+     *
+     * Device vendor and device type, provided by the MMTel Enabler Client to
+     * the MMTel Enabler server as part of the HTTP Get Root Application
+     * Request. Include if IMSDataChannel Application Reponse record is reportin
+     * a GetRootApplicationResponse (see TS 24.392 [166] clause 6.2.1.2.1).
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     *
      * @public
      * @readonly
      */
     readonly applicationUEInformation: OPTIONAL<ApplicationUEInformation[]>;
     /**
      * @summary `dCStreamID`.
+     * @description
+     *
+     * Integer value that identifies the Data Channel Stream (see TS 29.571 [17]
+     * clause 5.11.4.2).
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     *
      * @public
      * @readonly
      */
     readonly dCStreamID: OPTIONAL<INTEGER>;
     /**
      * @summary `getApplicationResponse`.
+     * @description
+     *
+     * Contains the entire payload either the Get Root Appliction Reponse or the
+     * Get DC Application Profile List Response sent from the the DCSF or the
+     * MMTel Enabler Server to the MMTel Enabler Client target UE.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     *
      * @public
      * @readonly
      */

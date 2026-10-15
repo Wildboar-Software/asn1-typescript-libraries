@@ -15,6 +15,12 @@ import { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
  * @summary PLMNLocation
  * @description
  * 
+ * The PLMNLocation type is derived from the data present in the PlmnLocation
+ * type defined in TS 29.571 [17] clause 5.4.4.99.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.86.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +37,25 @@ export
 class PLMNLocation {
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * The PLMN Identity is composed of the Mobile Country Code (MCC) and Mobile
+     * Network Code (MNC).
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.86.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `nID`.
+     * @description
+     *
+     * The Network Identifier. Shall be present if the PLMN is an SNPN.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.86.
+     *
      * @public
      * @readonly
      */

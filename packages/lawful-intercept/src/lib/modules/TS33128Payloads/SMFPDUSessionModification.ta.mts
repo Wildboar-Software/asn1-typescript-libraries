@@ -63,6 +63,140 @@ import { SatelliteID, _decode_SatelliteID, _encode_SatelliteID } from "../TS3312
  * @summary SMFPDUSessionModification
  * @description
  * 
+ * The IRI-POI in the SMF shall generate an xIRI containing an
+ * SMFPDUSessionModification record when the IRI-POI present in the SMF detects
+ * that a single-access PDU session has been modified for the target UE. The
+ * IRI-POI present in the SMF shall generate the xIRI for the following events:
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO), receives the N1 NAS message
+ *   (via AMF) PDU SESSION MODIFICATION COMPLETE from the UE and the 5GSM state
+ *   within the SMF is returned to PDU SESSION ACTIVE (see TS 24.501 [13]
+ *   clauses 6.1.3.3, 6.3.2 and 6.4.2). This applies to the following two cases:
+ *
+ * - UE initiated PDU session modification (see TS 23.502 [4] clause 4.3.3.2).
+ *
+ * - Network initiated PDU session modification (see TS 23.502 [4] clause
+ *   4.3.3.2).
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO), sends the N1 NAS message
+ *   (via AMF) PDU SESSION ESTABLISHMENT ACCEPT to the UE and the 5GSM state
+ *   within the SMF remains in the PDU SESSION ACTIVE (see TS 24.501 [13] clause
+ *   6.1.3.3 and 6.4.1). This applies to the following case:
+ *
+ * - Handover from one access type to another access type happens (e.g. 3GPP to
+ *   non-3GPP); see TS 23.502 [4] clauses 4.9.2.1 and 4.9.2.2).
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO), sends the
+ *   Nsmf_PDUSession_UpdateSMContext response to the AMF when the PDU session
+ *   modified or SM context is changed. In this case, the
+ *   Nsmf_PDUSession_UpdateSMContext response may not have an embedded NAS
+ *   message. This applies to the following case:
+ *
+ * - Handover scenarios (5G to 5G, see TS 23.502 [4] clauses 4.9.1.2 and
+ *   4.9.1.3).
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO) receives the N4: PFCP Session
+ *   Establishment Response when a PFCP session is established on a new UPF (or
+ *   V-UPF in a roaming case) within the existing SM Context without a following
+ *   Nsmf_PDUSession_Update_Context message being sent to the AMF. This applies
+ *   to the following case:
+ *
+ * - Handover scenarios (5G to 5G, see TS 23.502 [4] clauses 4.9.1.2 and
+ *   4.9.1.3).
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO) receives the N4: PFCP Session
+ *   Modification Response when a new tunnel Identifier (local or remote) is
+ *   added to the PDU session or removed from the PDU session without a
+ *   following Nsmf_PDUSession_Update_Context message being sent to the AMF.
+ *   This applies to the following case:
+ *
+ * - Handover scenarios (5G to 5G, see TS 23.502 [4] clauses 4.9.1.2 and
+ *   4.9.1.3).
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO) receives the N4: PFCP Session
+ *   Deletion Response when a PFCP session is deleted from an SM Context that
+ *   remains active. This applies to the following case:
+ *
+ * - Handover scenarios (5G to 5G, see TS 23.502 [4] clauses 4.9.1.2 and
+ *   4.9.1.3).
+ *
+ * - For a home-routed roaming scenario, the SMF in the HPLMN (i.e. H-SMF)
+ *   receives the N16: Nsmf_PDU_Session_Update Response message with
+ *   n1SmInfoFromUe IE containing the PDU SESSION MODIFICATION COMPLETE (see TS
+ *   29.502 [16] clauses 5.2.1, 5.2.2.8, 5.2.3, and 6.1.6.4). This applies to
+ *   the following three cases:
+ *
+ * - UE initiated PDU session modification (see TS 23.502 [4] clause 4.3.3.3).
+ *
+ * - Network (VPLMN) initiated PDU session modification (see TS 23.502 [4]
+ *   clause 4.3.3.3).
+ *
+ * - Network (HPLMN) initiated PDU session modification (see TS 23.502 [4]
+ *   clause 4.3.3.3).
+ *
+ * - For a home-routed roaming scenario, the SMF in the HPLMN (i.e. H-SMF) sends
+ *   the N16: Nsmf_PDU_Session_Create Response message with n1SmInfoToUe IE
+ *   containing the PDU SESSION ESTABLISHMENT ACCEPT (see TS 29.502 [16] clauses
+ *   5.2.1, 5.2.2.8, 5.2.3, and 6.1.6.4) while it had received a N16
+ *   Nsmf_PDU_Session_Create Request message with an existing PDU Session Id
+ *   with access type being changed. This applies to the following case:
+ *
+ * - Handover from one access type to another access type happens (e.g. 3GPP to
+ *   non-3GPP); see TS 23.502 [4] clauses 4.9.2.3 and 4.9.2.4) where the V-SMF
+ *   is used for the PDU session on the new access type only.
+ *
+ * - For a home-routed roaming scenario, the SMF in the HPLMN (i.e. H-SMF) sends
+ *   the N16: Nsmf_PDU_Session_Update Response message with n1SmInfoToUe IE
+ *   containing the PDU SESSION ESTABLISHMENT ACCEPT (see TS 29.502 [16]) while
+ *   it had received a N16 Nsmf_PDU_Session_Update Request message with an
+ *   existing PDU Session Id with access type being changed. This applies to the
+ *   following case:
+ *
+ * - Handover from one access type to another access type happens (e.g. 3GPP to
+ *   non-3GPP) where the same V-SMF is used for the PDU session on both access
+ *   types.
+ *
+ * - For a non-roaming scenario, SMF sends a Nsmf_EventExposure_Notify request
+ *   to the NEF or AF for the target UE for the event "UP Path Change" related
+ *   to a corresponding subscription from AF (see TS 29.508 [90] clause 4.2.2).
+ *
+ * - For a non-roaming scenario, SMF sends a
+ *   Nsmf_EventExposure_AppRelocationInfo response to the NEF or AF for the
+ *   target UE in response to Nsmf_EventExposure_AppRelocationInfo request sent
+ *   by NEF or AF to SMF (see TS 29.508 [90] clause 4.2.5).
+ *
+ * - For a non-roaming scenario, SMF receives a Nnef_PFDManagement_Fetch
+ *   response from the NEF for the target UE in response to
+ *   Nnef_PFDManagement_Fetch request sent by SMF to NEF (see TS 29.551 [96]
+ *   clause 4.2.2).
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO), receives the N1 NAS message
+ *   (via AMF) Remote UE Report from the target UE behaving as a 5G ProSe
+ *   layer-3 UE-to-network relay UE. N1 NAS message Remote UE Report informs
+ *   that one or several 5G Prose Remote UEs connect to or disconnect from a
+ *   target 5G ProSe layer-3 UE-to-network Relay UE.
+ *
+ * If the Npcf_SMPolicyControlUpdateNotify response sent to the PCF for the
+ * target UE in response to an Npcf_SMPolicyControlUpdateNotify request includes
+ * PCC rules in which the traffic control policy data contains either a
+ * routeToLocs IE or trafficSteeringPolIdDl IE and/or trafficSteeringPolIdUl IE,
+ * then the SMF shall include those PCC rules in the xIRI. These PCC rules
+ * correspond to policies that influence the target UE’s traffic flows (see TS
+ * 29.513 [88] clause 5.5.3).
+ *
+ * Table 6.2.3.7-1 gives the LI_HI2 IRI message type for this record as
+ * CONTINUE.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -104,162 +238,375 @@ export
 class SMFPDUSessionModification {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the PDU session (e.g. as provided by the AMF in the
+     * associated Nsmf_PDU_Session_CreateSMContext service operation). Shall be
+     * present except for PEI-only unauthenticated emergency sessions.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: OPTIONAL<SUPI>;
     /**
      * @summary `sUPIUnauthenticated`.
+     * @description
+     *
+     * Shall be present if a SUPI is present in the message and set to "true" if
+     * the SUPI was not authenticated, or "false" if it has been authenticated.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sUPIUnauthenticated: OPTIONAL<SUPIUnauthenticatedIndication>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI associated with the PDU session, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI associated with the PDU session, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `sNSSAI`.
+     * @description
+     *
+     * Slice identifier associated with the PDU session, if available. See TS
+     * 23.003 [19] clause 28.4.2 and TS 23.501 [2] clause 5.15.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sNSSAI: OPTIONAL<SNSSAI>;
     /**
      * @summary `non3GPPAccessEndpoint`.
+     * @description
+     *
+     * UE's local IP address used to reach the N3IWF, TNGF or TWIF, if
+     * available. IP addresses are given as 4 octets (for IPv4) or 16 octets
+     * (for IPv6) with the most significant octet first (network byte order).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly non3GPPAccessEndpoint: OPTIONAL<UEEndpointAddress>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information provided by the AMF or present in the context at the
+     * SMF, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `requestType`.
+     * @description
+     *
+     * Type of request as described in TS 24.501 [13] clause 9.11.3.47, if
+     * available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly requestType: FiveGSMRequestType;
     /**
      * @summary `accessType`.
+     * @description
+     *
+     * Access type associated with the session (i.e. 3GPP or non-3GPP access) if
+     * provided by the AMF (see TS 24.501 [13] clause 9.11.2.1A).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly accessType: OPTIONAL<AccessType>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * RAT type associated with the access, if available. Values given as per TS
+     * 29.571 [17] clause 5.4.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<RATType>;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID, see TS 24.501 [13] clause 9.4. Shall be provided. This
+     * parameter is conditional only for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: OPTIONAL<PDUSessionID>;
     /**
      * @summary `ePS5GSComboInfo`.
+     * @description
+     *
+     * Provides detailed information about PDN Connections associated with the
+     * reported PDU Session. Shall be included when the AMF has selected a
+     * SMF+PGW-C to serve the PDU session. This parameter may include the
+     * additional IEs in table 6.2.3.2.2-2, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly ePS5GSComboInfo: OPTIONAL<EPS5GSComboInfo>;
     /**
      * @summary `uEEndpoint`.
+     * @description
+     *
+     * UE IP address(es) assigned to the PDU Session, if available (see TS
+     * 29.244 [15] clause 5.21).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly uEEndpoint: OPTIONAL<UEEndpointAddress>;
     /**
      * @summary `servingNetwork`.
+     * @description
+     *
+     * Shall be present if this IE is in the SMContextUpdateData, HsmfUpdateData
+     * or message sent to the SMF or the PDU Session Context or SM Context at
+     * the SMF (see TS 29.502 [16] clauses 6.1.6.2.3, 6.1.6.2.11 and
+     * 6.1.6.2.39).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly servingNetwork: OPTIONAL<SMFServingNetwork>;
     /**
      * @summary `handoverState`.
+     * @description
+     *
+     * Indicates whether the PDU Session Modification being reported was due to
+     * a handover. Shall be present if this IE is in the SMContextUpdatedData or
+     * sent by the SMF (see TS 29.502 [16] clause 6.1.6.2.3).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly handoverState: OPTIONAL<HandoverState>;
     /**
      * @summary `gTPTunnelInfo`.
+     * @description
+     *
+     * Contains the information for the User Plane GTP Tunnels for the PDU
+     * Session (see TS 29.502 [16] clauses 6.1.6.2.2, 6.1.6.2.9 and 6.1.6.2.39).
+     * See table 6.2.3.2.2-3.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>;
     /**
      * @summary `pCCRules`.
+     * @description
+     *
+     * Set of PCC rules related to traffic influence. Each PCC rule influences
+     * the routing of a given traffic flow. If several flows are concerned, then
+     * several PCC rules shall be handled by the SMF. Traffic influence policies
+     * are originated by an AF. PCF translates these rules into PCC rules for
+     * traffic influence, if available. The payload of a PCC rule for traffic
+     * influence is defined in table 6.2.3.2.2-6.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pCCRules: OPTIONAL<PCCRuleSet>;
     /**
      * @summary `ePSPDNConnectionModification`.
+     * @description
+     *
+     * Provides details about PDN Connections when the SMFPDUSessionModification
+     * xIRI message is used to report PDN Connection Modification. See table
+     * 6.3.3.2.3-1 and clause 6.3.3.2.3.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly ePSPDNConnectionModification: OPTIONAL<EPSPDNConnectionModification>;
     /**
      * @summary `uPPathChange`.
+     * @description
+     *
+     * Notification of the UPPathChange event. This IE is defined in TS 29.508
+     * [90], if available, see table 5.6.2.5-1.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly uPPathChange: OPTIONAL<UPPathChange>;
     /**
      * @summary `pFDDataForApp`.
+     * @description
+     *
+     * Represents the packet flow descriptions (PFDs) for an application
+     * identifier (AppId), if available. This IE is defined in TS 29.551 [96]
+     * table 5.6.2.2-1.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pFDDataForApp: OPTIONAL<PFDDataForApp>;
     /**
      * @summary `satelliteBackhaulCategory`.
+     * @description
+     *
+     * Indicates that a satellite backhaul is used towards 5G AN and the
+     * corresponding backhaul category, if available. Encoded according to TS
+     * 29.571 [17] clause 5.4.3.39. The SBIReference for this parameter shall be
+     * populated with
+     * 'TS29571_CommonData.yaml#/components/schemas/SatelliteBackhaulCategory'.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly satelliteBackhaulCategory: OPTIONAL<SBIType>;
     /**
      * @summary `gEOSatelliteID`.
+     * @description
+     *
+     * Indicates the satellite ID if satellite backhaul category is GEO, if
+     * available. Encoded according to TS 29.571 [17] clause 5.4.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gEOSatelliteID: OPTIONAL<GEOSatelliteID>;
     /**
      * @summary `proSeRemoteUEsReport`.
+     * @description
+     *
+     * Provides information about the newly connected 5G ProSe Remote UE(s) to
+     * the target 5G ProSe layer-3 UE-to-network Relay UE and/or disconnected 5G
+     * ProSe remote UE(s) from the target 5G ProSe layer-3 UE-to-network Relay
+     * UE, if available. See table 6.2.3.2.3-5.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly proSeRemoteUEsReport: OPTIONAL<ProSeRemoteUEsReport>;
     /**
      * @summary `alternativeNSSAI`.
+     * @description
+     *
+     * Provides a list of mapping information between the S-NSSAI to be replaced
+     * and the alternative S-NSSAI. Shall be included if present in the PDU
+     * SESSION MODIFICATION COMMAND message. See TS 24.501 [13] clause
+     * 9.11.3.97.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly alternativeNSSAI: OPTIONAL<AlternativeNSSAIList>;
     /**
      * @summary `aNDSPRules`.
+     * @description
+     *
+     * Indicates the ANDSP sent by the PCF to the SMF for the target. Contains
+     * the entire payload of the UE policy part type ANDSP, encoded per TS
+     * 24.526 [163] clause 5.3. This parameter shall only be included if
+     * location is authorized.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly aNDSPRules: OPTIONAL<ANDSPRules>;
     /**
      * @summary `serviceLevelAAContainer`.
+     * @description
+     *
+     * Provides information specific to UAS services, provided by the UE during
+     * the modification of a PDU Session which has been established for UAS
+     * services. Encoded per TS 24.501 [13], clause 9.11.2.10. Include if
+     * present in the PDU Modification Request message. See TS 29.502 [16]
+     * clause 6.1.6.4.4-1.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly serviceLevelAAContainer: OPTIONAL<ServiceLevelAAContainer>;
     /**
      * @summary `servingSatelliteID`.
+     * @description
+     *
+     * Provides the identifier of the satellite currently serving the target UE
+     * in NTN deployments. Encoded according to TS 29.571 [17] clause 5.4.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.3.
+     *
      * @public
      * @readonly
      */

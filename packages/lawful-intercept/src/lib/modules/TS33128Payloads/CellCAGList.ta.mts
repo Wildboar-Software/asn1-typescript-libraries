@@ -12,6 +12,11 @@ import { CAGID, _decode_CAGID, _encode_CAGID } from "../TS33128Payloads/CAGID.ta
  * @summary CellCAGList
  * @description
  * 
+ * Contains information to perform access control for Non-Public Network (NPN).
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MCID
  * @description
  * 
+ * MC ID of the target user.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

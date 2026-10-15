@@ -18,6 +18,34 @@ import { ACProfiles, _decode_ACProfiles, _encode_ACProfiles } from "../TS33128Pa
  * @summary EESEECContextRelocation
  * @description
  * 
+ * The IRI-POI in the EES shall generate an xIRI containing an
+ * EESEECContextRelocation record when the IRI-POI present in the EES detects
+ * that the EES has sent or received the EEC context relocation information. The
+ * IRI-POI present in the EES shall generate the xIRI for the following events
+ * according to its new serving EE (referred to as target EES in TS 24.558 [93]
+ * or current serving EES (referred to as source EES in TS 24.558 [93]) role:
+ *
+ * - Target EES (T-EES) receives an Eees_EECContextRelocation_Pull response from
+ *   a Source EES (S-EES) upon request from the T-EES to S-EES (as defined in TS
+ *   29.558 [94] clause 5.10.2.2).
+ *
+ * - T-EES sends an Eees_EECContextRelocation_Push response to a S-EES upon
+ *   request from the S-EES to T-EES (as defined in TS 29.558 [94] clause
+ *   5.10.2.3).
+ *
+ * - S-EES sends an Eees_EECContextRelocation_Pull response to a T-EES.
+ *
+ * - S-EES receives an Eees_EECContextRelocation_Push response from a T-EES.
+ *
+ * - NOTE : The term target EES is used in TS 29.558[94] referring the new
+ *   serving EES and the term serving EES is referring to the old serving EES.
+ *
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +65,12 @@ export
 class EESEECContextRelocation {
     /**
      * @summary `eECID`.
+     * @description
+     *
+     * Unique identifier of the EEC.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.9.
+     *
      * @public
      * @readonly
      */
@@ -49,18 +83,38 @@ class EESEECContextRelocation {
     readonly eECContextID: UTF8String;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.9.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `uELoc`.
+     * @description
+     *
+     * Latest location information of the target UE, that is available at the
+     * EES, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.9.
+     *
      * @public
      * @readonly
      */
     readonly uELoc: OPTIONAL<Location>;
     /**
      * @summary `aCProfiles`.
+     * @description
+     *
+     * Profiles of application clients (ACs) for which the EEC provides edge
+     * enabling services, if available. See table 7.14.2.2-2.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.9.
+     *
      * @public
      * @readonly
      */

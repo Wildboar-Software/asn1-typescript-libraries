@@ -33,6 +33,37 @@ import { AlternativeNSSAIList, _decode_AlternativeNSSAIList, _encode_Alternative
  * @summary AMFUnsuccessfulProcedure
  * @description
  * 
+ * The IRI-POI in the AMF shall generate an xIRI containing an
+ * AMFUnsuccessfulProcedure record when the IRI-POI present in the AMF detects
+ * an unsuccessful procedure for a UE matching one of the target identifiers
+ * provided via LI_X1.
+ *
+ * Accordingly, the IRI-POI in the AMF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - AMF sends a N1: REGISTRATION REJECT message to the target UE and the UE 5G
+ *   Mobility Management (5GMM) state for the access type (3GPP NG-RAN or
+ *   non-3GPP access) within the AMF is changed to 5GMM-DEREGISTERED.
+ *
+ * - AMF aborts a registration procedure before the UE 5G Mobility Management
+ *   (5GMM) state for the access type (3GPP NG-RAN or non-3GPP access) within
+ *   the AMF is changed to 5GMM-REGISTERED.
+ *
+ * - AMF sends a SERVICE REJECT message to the target UE including a PDU session
+ *   establishment reject message type.
+ *
+ * - AMF aborts a UE-initiated NAS transport procedure with payload container
+ *   type IE set to "SMS".
+ *
+ * Unsuccessful registration shall be reported only if the target UE has been
+ * successfully authenticated.
+ *
+ * NOTE: At least one identity shall be provided, the others shall be provided
+ * if available.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,66 +89,148 @@ export
 class AMFUnsuccessfulProcedure {
     /**
      * @summary `failedProcedureType`.
+     * @description
+     *
+     * Specifies the procedure which failed at the AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly failedProcedureType: AMFFailedProcedureType;
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Provides the value of the 5GSM or 5GMM cause, see TS 24.501 [13] clauses
+     * 9.11.3.2 and 9.11.4.2. The integer value is mapped from the second octet
+     * shown in TS 24.501 [13] clauses 9.11.3.2 and 9.11.4.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly failureCause: AMFFailureCause;
     /**
      * @summary `requestedSlice`.
+     * @description
+     *
+     * Slice requested for the procedure, if available, given as a NSSAI (a list
+     * of S-NSSAI values as described in TS 24.501 [13] clause 9.11.3.37).
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly requestedSlice: OPTIONAL<NSSAI>;
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the procedure, if available (see NOTE). NOTE: At
+     * least one identity shall be provided, the others shall be provided if
+     * available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: OPTIONAL<SUPI>;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI used in the procedure, if applicable and if available (see NOTE).
+     * NOTE: At least one identity shall be provided, the others shall be
+     * provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI used in the procedure, if available (see NOTE). NOTE: At least one
+     * identity shall be provided, the others shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used in the procedure, if available (see NOTE). NOTE: At least one
+     * identity shall be provided, the others shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI used in the procedure, if available, see TS 24.501 [13] clause
+     * 9.11.3.4 (see NOTE). NOTE: At least one identity shall be provided, the
+     * others shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<FiveGGUTI>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information determined during the procedure, if available. Shall
+     * be encoded using the Location.locationinfo.userlocation parameter. If
+     * available, other parameters reportable via Location shall be included.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `additionalUserIdentifiers`.
+     * @description
+     *
+     * Provides additional user identifiers known at the AMF or stored in AMF
+     * context, e.g. additional GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */
     readonly additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
     /**
      * @summary `alternativeNSSAI`.
+     * @description
+     *
+     * Provides a list of mapping information between the S-NSSAI to be replaced
+     * and the alternative S-NSSAI. Shall be included if available. See TS
+     * 24.501 [13] clause 9.11.3.97.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.6.
+     *
      * @public
      * @readonly
      */

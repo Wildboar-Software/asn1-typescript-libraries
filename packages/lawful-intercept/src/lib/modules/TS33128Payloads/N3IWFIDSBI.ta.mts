@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary N3IWFIDSBI
  * @description
  * 
+ * The N3IWFIDSBI type is used to report the N3IWF Identity received over SBI.
+ * The N3IWFIDSBI type is derived from the data present in the N3IWFID parameter
+ * of the GloalRanNodeID defined in TS 29.571[17] clause 5.4.4.28.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

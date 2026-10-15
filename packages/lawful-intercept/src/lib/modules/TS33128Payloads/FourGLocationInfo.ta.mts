@@ -14,6 +14,14 @@ import { EPSUserLocationInformation, _decode_EPSUserLocationInformation, _encode
  * @summary FourGLocationInfo
  * @description
  * 
+ * The FourGLocationInfo type is derived from the data present in
+ * EPS-Location-Information type defined in TS 29.272 [106] clause 7.3.111 and
+ * the data present in User Location Information (ULI) IE, defined in TS 29.274
+ * [87] clause 8.21.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.71.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +34,23 @@ import { EPSUserLocationInformation, _decode_EPSUserLocationInformation, _encode
  */
 export
 type FourGLocationInfo =
+    /**
+     * @description
+     *
+     * This field is derived from the data present in EPS-LocationInformation
+     * type in TS 29.272 [106] clause 8.21.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.71.
+     */
     { ePSLocationInformation: EPSLocationInformation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * This field is derived from the data present in User Location Information
+     * (ULI) IE in TS 29.274 [87] clause 8.21.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.71.
+     */
     | { ePSUserLocationInformation: EPSUserLocationInformation } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

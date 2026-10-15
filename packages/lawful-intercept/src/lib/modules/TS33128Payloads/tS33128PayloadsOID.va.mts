@@ -9,6 +9,13 @@ import {
  * @summary tS33128PayloadsOID
  * @description
  * 
+ * The ASN.1 module describing the structures used for LI_X2, LI_X3, LI_HI2 and
+ * LI_HI3 ("TS33128Payloads") is given in the file TS33128Payloads.asn which
+ * accompanies the present document.
+ *
+ * 3GPP TS 33.128, Annex A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

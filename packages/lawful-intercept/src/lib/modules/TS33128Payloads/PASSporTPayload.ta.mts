@@ -21,6 +21,13 @@ import { STIRSHAKENDestination, _decode_STIRSHAKENDestination, _encode_STIRSHAKE
  * @summary PASSporTPayload
  * @description
  * 
+ * NOTE 3: Void.
+ *
+ * NOTE 4: Void.
+ *
+ * 3GPP TS 33.128, clause 7.11.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,36 +48,88 @@ export
 class PASSporTPayload {
     /**
      * @summary `issuedAtTime`.
+     * @description
+     *
+     * Shall be populated with the GenrealizedTime format timestamp converted
+     * from the NumericDate contained in the 'iat' parameter of the PASSporT
+     * Payload as defined in RFC 8225 [69] clause 5.1.1 and in RFC 8946 [76]
+     * clause 3.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly issuedAtTime: GeneralizedTime;
     /**
      * @summary `originator`.
+     * @description
+     *
+     * Shall be populated with the value of the "orig" claim of the PASSporT
+     * Payload as defined in RFC 8225 [69] clause 5.2.1 and in RFC 8946 [76]
+     * clause 3.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly originator: STIRSHAKENOriginator;
     /**
      * @summary `destination`.
+     * @description
+     *
+     * Shall contain the list of destinations contained in the "dest" claim of
+     * the PASSporT Payload as defined in RFC 8225 [69] clause 5.2.1 and in RFC
+     * 8946 [76] clause 3.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly destination: STIRSHAKENDestinations;
     /**
      * @summary `attestation`.
+     * @description
+     *
+     * Indicates the attestation level as defined in RFC 8588 [71] clause 4 for
+     * the "shaken" PASSporT. The different values of attestation level are A =
+     * Full Attestation, B= Partial Attestation, C = Gateway Attestation. For
+     * "div" PASSporT where "attestation" is not available, the placeholder
+     * value "Not available" shall be used.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly attestation: Attestation;
     /**
      * @summary `origId`.
+     * @description
+     *
+     * Shall be populated with the value of the origID contained in the 'origid'
+     * parameter of the PASSporT Payload as defined in RFC 8588 [71] clause 5
+     * for the "shaken" PASSporT. For "div" PASSporT where "origId" is not
+     * available, the placeholder value "Not available" shall be used.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly origId: UTF8String;
     /**
      * @summary `diversion`.
+     * @description
+     *
+     * Shall be populated with the "div" claim of the "div" PASSporT payload.
+     * For first diversion this contains the original identifier of the
+     * destination as defined in RFC 8946 [76] clause 3 for "div" PASSporT.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */

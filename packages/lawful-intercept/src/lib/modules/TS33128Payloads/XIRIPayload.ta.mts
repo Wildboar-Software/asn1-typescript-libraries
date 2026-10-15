@@ -14,6 +14,13 @@ import { XIRIEvent, _decode_XIRIEvent, _encode_XIRIEvent } from "../TS33128Paylo
  * @summary XIRIPayload
  * @description
  * 
+ * Unless otherwise specified by the relevant clause, the payload shall
+ * consist of a BER-encoded @TS33128Payloads.XIRIPayload (See table
+ * 5.3.2-3) structure.
+ *
+ * 3GPP TS 33.128, clause 5.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +37,26 @@ export
 class XIRIPayload {
     /**
      * @summary `xIRIPayloadOID`.
+     * @description
+     *
+     * Shall be populated with the value of the xIRIPayloadOID specified in the
+     * version of the ASN.1 used by the IRI-POI to generate the xIRI record.
+     *
+     * 3GPP TS 33.128, clause 5.3.2.
+     *
      * @public
      * @readonly
      */
     readonly xIRIPayloadOID: RELATIVE_OID;
     /**
      * @summary `event`.
+     * @description
+     *
+     * Shall be populated with the event specified in the relevant clause of the
+     * present document.
+     *
+     * 3GPP TS 33.128, clause 5.3.2.
+     *
      * @public
      * @readonly
      */

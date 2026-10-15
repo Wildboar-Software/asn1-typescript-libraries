@@ -15,6 +15,21 @@ import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XM
  * @summary FiveGMSAFMetricsReporting
  * @description
  * 
+ * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+ * 5GMSAFMetricsReporting record when the IRI-POI present in the 5GMS AF detects
+ * that an 5GMS AF has received a metrics report from the target UE. The IRI-POI
+ * present in the 5GMS AF shall generate the xIRI for the following event (as
+ * specified in TS 26.512 [98] clause 11.4):
+ *
+ * - 5GMS AF returns submitMetricsReport Response (i.e. 204 No Content) in
+ *   response to a submitMetricsReport Request (i.e. POST) from the Media
+ *   Session Handler in the target UE which submits a metrics report.
+ *
+ * Table 7.15.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +46,27 @@ export
 class FiveGMSAFMetricsReporting {
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.5.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `metricsReport`.
+     * @description
+     *
+     * Includes a metrics report according to 26.512 [98] clause 11.4.3. Encoded
+     * according to TS 26.512 [98] clause C.4.3 and TS 26.247 [99]. The
+     * XMLNamespace for this parameter shall be set to
+     * 'urn:3gpp:metadata:2011:HSD:receptionreport'.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.5.
+     *
      * @public
      * @readonly
      */

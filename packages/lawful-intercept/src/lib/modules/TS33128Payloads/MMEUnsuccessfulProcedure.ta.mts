@@ -25,6 +25,37 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary MMEUnsuccessfulProcedure
  * @description
  * 
+ * The IRI-POI in the MME shall generate an xIRI containing an
+ * MMEUnsuccessfulProcedure record when the IRI-POI present in the MME detects
+ * an unsuccessful procedure for a UE matching one of the target identifiers
+ * provided via LI_X1.
+ *
+ * Accordingly, the IRI-POI in the MME generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - MME sends a reject to any EMM request message to the target UE and the UE
+ *   EPS Mobility Management (EMM) within the MME is changed to
+ *   EMM-DEREGISTERED.
+ *
+ * - MME aborts a registration procedure before the UE EPS Mobility Management
+ *   (EMM) state within the MME is changed to EMM-REGISTERED.
+ *
+ * - MME sends a reject to any ESM request message to the target UE.
+ *
+ * Unsuccessful attach attempts shall be reported only if the target UE has been
+ * successfully authenticated.
+ *
+ * NOTE 1: At least one identity shall be provided, the others shall be provided
+ * if available.
+ *
+ * NOTE 2: The location information was sent as a userLocation
+ * (Location.locationInfo.userLocation) between versions 18.0.0 and 18.2.0 of
+ * the present document. The location information may also be present in this
+ * field for backwards compatibility.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,42 +77,102 @@ export
 class MMEUnsuccessfulProcedure {
     /**
      * @summary `failedProcedureType`.
+     * @description
+     *
+     * Specifies the procedure which failed at the MME.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly failedProcedureType: MMEFailedProcedureType;
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Provides the value of the ESM or EMM cause, see TS 24.301 [51] clauses
+     * 9.9.3.9 and 9.9.4.4.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly failureCause: MMEFailureCause;
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the procedure, if available (see NOTE 1). NOTE 1: At
+     * least one identity shall be provided, the others shall be provided if
+     * available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI associated with the procedure, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * mSISDN associated with the procedure, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * GUTI provided used in the procedure, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.7.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<GUTI>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information determined by the network during the procedure or
+     * known at the MME, if available. Shall include all location information
+     * for the target UE available at the MME encoded as one of the following
+     * (see NOTE 2):
+     *
+     * - as a Location.fourGLocationInfo.ePSLocationInformation parameter.
+     *
+     * - as a Location.fourGLocationInfo.ePSUserLocationInformation parameter.
+     *   When Dual Connectivity is activated, the additionalCellIDs parameter
+     *   (Location.fourGLocationInfo.ePSLocationInformation.mMELocationInformation.additionalCellIDs)
+     *   shall also be populated, see clause 7.3.3. If available, other
+     *   parameters reportable via Location shall be included. NOTE 2: The
+     *   location information was sent as a userLocation
+     *   (Location.locationInfo.userLocation) between versions 18.0.0 and 18.2.0
+     *   of the present document. The location information may also be present
+     *   in this field for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.7.
+     *
      * @public
      * @readonly
      */

@@ -16,6 +16,11 @@ import { ThreeGPP2SMSTPDU, _decode_ThreeGPP2SMSTPDU, _encode_ThreeGPP2SMSTPDU } 
  * @summary SMSTPDUData
  * @description
  * 
+ * SMS TPDU, encoded as per TS 23.040 [18] clause 9.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,10 +36,43 @@ import { ThreeGPP2SMSTPDU, _decode_ThreeGPP2SMSTPDU, _encode_ThreeGPP2SMSTPDU } 
  */
 export
 type SMSTPDUData =
+    /**
+     * @description
+     *
+     * SM-TL PDU redacted as described in clause 7.4.5.2 of the present document
+     * and encoded as per the PDUs defined in TS 23.040 [18] clause 9.2.2. (3GPP
+     * TS 33.128, clause 6.2.5.3.)
+     */
     { sMSTPDU: SMSTPDU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * SM-TL PDU encoded per the PDUs defined in TS 23.040 [18] clause 9.2.2 but
+     * truncated to remove TP-User-Data (TS 23.040 [18] clause 9.2.3.24). (3GPP
+     * TS 33.128, clause 6.2.5.3.)
+     */
     | { truncatedSMSTPDU: TruncatedSMSTPDU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * SM-TL PDU redacted as described in clause 7.4.5.2 of the present document
+     * and encoded as per the PDUs defined in TS 23.040 [18] clause 9.2.2. (3GPP
+     * TS 33.128, clause 6.2.5.3.)
+     */
     | { redactedSMSTPDU: SMSTPDU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 3GPP2 SMS Transport Layer Message PDU encoded per the PDUs defined in
+     * 3GPP2 C.S0015-A [134] clause 4.5.2. (3GPP TS 33.128, clause 6.2.5.3.)
+     */
     | { threeGPP2SMSTPDU: ThreeGPP2SMSTPDU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * 3GPP2 SMS Transport Layer Message PDU encoded per the PDUs defined in
+     * 3GPP2 C.S0015-A [134] clause 4.5.2. (3GPP TS 33.128, clause 6.2.5.3.)
+     */
     | { redacted3GPP2SMSTPDU: ThreeGPP2SMSTPDU } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

@@ -11,6 +11,17 @@ import { MMSPreviouslySent, _decode_MMSPreviouslySent, _encode_MMSPreviouslySent
  * @summary MMSPreviouslySentBy
  * @description
  * 
+ * Address of the MMS Client that forwarded or previously sent the message.
+ * along with a sequence number and timestamp. A higher sequence number
+ * indicates a forwarding event at a later point in time. The sequence number
+ * indicates the correspondence to the MMS Client's address in the
+ * "X-Mms-Previously- Sent-By" header field with the same sequence number. This
+ * header field MAY appear multiple times. Include if sent by the MMS
+ * Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.20.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -39,42 +39,93 @@ export
 class NASTransportInitialInformation {
     /**
      * @summary `rANUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF receives from the NG-RAN node uniquely identifying
+     * the target UE within the NG-RAN Node. See TS 38.413 [23] clause 9.3.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.14.
+     *
      * @public
      * @readonly
      */
     readonly rANUENGAPID: RANUENGAPID;
     /**
      * @summary `iABNodeIndication`.
+     * @description
+     *
+     * Indicates that the UE is capable of acting as an IAB Node. Shall be
+     * present if present in the message that triggered the event or known at
+     * the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.14.
+     *
      * @public
      * @readonly
      */
     readonly iABNodeIndication: OPTIONAL<BOOLEAN>;
     /**
      * @summary `eDTSession`.
+     * @description
+     *
+     * Indicates that the session is EDT capable. Shall be present if present in
+     * the message that triggered the event or known at the NF where the POI is
+     * located.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.14.
+     *
      * @public
      * @readonly
      */
     readonly eDTSession: OPTIONAL<BOOLEAN>;
     /**
      * @summary `authenticatedIndication`.
+     * @description
+     *
+     * Indicates the Fixed Network Residential Gateway (FN-RG) has been
+     * authenticated by the access network.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.14.
+     *
      * @public
      * @readonly
      */
     readonly authenticatedIndication: OPTIONAL<BOOLEAN>;
     /**
      * @summary `nPNAccessInformation`.
+     * @description
+     *
+     * Contains information to perform access control for Non-Public Network
+     * (NPN).
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.14.
+     *
      * @public
      * @readonly
      */
     readonly nPNAccessInformation: OPTIONAL<CellCAGList>;
     /**
      * @summary `rEDCAPIndication`.
+     * @description
+     *
+     * Indicates that the UE is a Reduced Capability (RedCap) UE.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.14.
+     *
      * @public
      * @readonly
      */
     readonly rEDCAPIndication: OPTIONAL<REDCAPIndication>;
     /**
      * @summary `mobileIABNodeIndication`.
+     * @description
+     *
+     * Indicates that the UE is capable of acting as a mobile IAB Node. Shall be
+     * present if present in the message that triggered the event or known at
+     * the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.14.
+     *
      * @public
      * @readonly
      */

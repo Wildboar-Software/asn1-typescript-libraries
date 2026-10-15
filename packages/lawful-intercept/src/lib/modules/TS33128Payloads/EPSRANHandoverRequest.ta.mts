@@ -27,6 +27,20 @@ import { EPSRANUEContext, _decode_EPSRANUEContext, _encode_EPSRANUEContext } fro
  * @summary EPSRANHandoverRequest
  * @description
  * 
+ * 6.3.2.2.9.3 Handover request
+ *
+ * The IRI-POI in the MME shall generate an xIRI containing an
+ * EPSRANHandoverRequest record when the IRI-POI in the MME detects that the MME
+ * received a HANDOVER REQUEST ACKNOWLEDGE message from the gaining RAN node
+ * (new RAN node) for the target UE and location information is not restricted
+ * by service scoping.
+ *
+ * - NOTE: The gaining RAN node sends the HANDOVER REQUEST ACKNOWLEDGE in
+ *   response to a HANDOVER REQUEST from the MME.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,48 +63,107 @@ export
 class EPSRANHandoverRequest {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the MME context. See TS 23.401 [50]
+     * clause 5.7.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `handoverType`.
+     * @description
+     *
+     * Identifies the type of handover indicated by the source RAN node to the
+     * MME. See TS 36.413 [38] clause 9.3.1.22.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly handoverType: EPSHandoverType;
     /**
      * @summary `handoverCause`.
+     * @description
+     *
+     * Indicates the cause of handover as seen in the handover request message
+     * from MME to gaining RAN node. See TS 36.413 [38] clause 9.2.1.3.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly handoverCause: EPSRANCause;
     /**
      * @summary `sourceToTargetContainer`.
+     * @description
+     *
+     * Provides radio related information via the MME in the handover request
+     * from source to gaining RAN node. See TS 36.413 [38] clause 9.2.1.56.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly sourceToTargetContainer: RANSourceToTargetContainer;
     /**
      * @summary `cSGInfo`.
+     * @description
+     *
+     * Includes information about the current CSG ID and membership information
+     * present in a handover request. Shall be present if the CSG ID or CSG
+     * Membership Info parameters were sent in the handover request. See TS
+     * 36.413 [38] clause 9.1.5.4.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly cSGInfo: OPTIONAL<EPSCSGInfo>;
     /**
      * @summary `targetToSourceContainer`.
+     * @description
+     *
+     * Provides radio related information via the MME in the handover request
+     * acknowledge from gaining RAN node to the source. See TS 36.413 [38]
+     * clause 9.2.1.57.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly targetToSourceContainer: RANTargetToSourceContainer;
     /**
      * @summary `admittedCSGID`.
+     * @description
+     *
+     * Derived from the CSG Id IE in the handover request acknowledge. See TS
+     * 36.413 [38] clause 9.1.5.5.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly admittedCSGID: OPTIONAL<CSGID>;
     /**
      * @summary `ePSRANUEContext`.
+     * @description
+     *
+     * Includes RAN related information for the UE.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.9.3.
+     *
      * @public
      * @readonly
      */

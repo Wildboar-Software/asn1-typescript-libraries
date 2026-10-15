@@ -15,6 +15,14 @@ import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNI
  * @summary GUAMI
  * @description
  * 
+ * Previous serving AMF’s GUAMI, shall include when sent in the DOWNLINK NAS
+ * TRANSPORT. Identifies the previous AMF the UE-associated logical
+ * NG-connection was redirected from. Format is defined in TS 29.571 [17] clause
+ * 5.3.4.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.16.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

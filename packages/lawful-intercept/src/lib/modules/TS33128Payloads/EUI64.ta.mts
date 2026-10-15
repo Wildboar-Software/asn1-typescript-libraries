@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EUI64
  * @description
  * 
+ * Derived from an IEEE Extended Unique Identifier (EUI-64), for UEs not
+ * supporting any 3GPP access technologies, as defined in IEEE "Guidelines for
+ * Use of Extended Unique Identifier (EUI), Organizationally Unique Identifier
+ * (OUI), and Company ID (CID)" [127].
+ *
+ * 3GPP TS 33.128, clause 8.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

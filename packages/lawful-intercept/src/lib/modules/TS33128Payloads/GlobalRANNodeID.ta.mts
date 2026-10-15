@@ -17,6 +17,12 @@ import { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
  * @summary GlobalRANNodeID
  * @description
  * 
+ * The GlobalRANNodeID type is derived from the data present in the
+ * GlobalRANNodeID type defined in TS 29.571 [17] clause 5.4.4.28.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.25.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +40,37 @@ export
 class GlobalRANNodeID {
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * The PLMN Identity of the RAN Node.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.25.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `aNNodeID`.
+     * @description
+     *
+     * The Global Identifier for the Access Node.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.25.
+     *
      * @public
      * @readonly
      */
     readonly aNNodeID: ANNodeID;
     /**
      * @summary `nID`.
+     * @description
+     *
+     * Network Identifier of the cell being reported. Shall be present if the
+     * cell being reported belongs to an SNPN.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.25.
+     *
      * @public
      * @readonly
      */

@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ESMCause
  * @description
  * 
+ * Provides the value of the ESM cause, see TS 24.301 [50] clause 9.9.4.4. Sent
+ * as an integer cause value (see TS 29.274 [87] table 8.4-1). In case the
+ * procedure is aborted due to a ESM STATUS message, the ESM cause is the one
+ * included in the ESM status message.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

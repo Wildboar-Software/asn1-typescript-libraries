@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SMFID
  * @description
  * 
+ * Identifier of the SMF associated with the target UE for that that PDU
+ * Session.
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

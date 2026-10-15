@@ -14,6 +14,14 @@ import { IEFRecord, _decode_IEFRecord, _encode_IEFRecord } from "../TS33128Ident
  * @summary IEFMessage
  * @description
  * 
+ * When a record has been generated as described in clause 6.2.2A.2.2, the IEF
+ * shall encode the IEFAssociationRecord or IEFDeassociationRecord as a
+ * BER-encoded @TS33128IdentityAssociation.IEFMessage, and transmit it to the
+ * ICF over the established TLS connection.
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

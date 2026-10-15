@@ -14,6 +14,13 @@ import { FiveGSMCause, _decode_FiveGSMCause, _encode_FiveGSMCause } from "../TS3
  * @summary AMFFailureCause
  * @description
  * 
+ * Provides the value of the 5GSM or 5GMM cause, see TS 24.501 [13] clauses
+ * 9.11.3.2 and 9.11.4.2. The integer value is mapped from the second octet
+ * shown in TS 24.501 [13] clauses 9.11.3.2 and 9.11.4.2.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,7 +33,20 @@ import { FiveGSMCause, _decode_FiveGSMCause, _encode_FiveGSMCause } from "../TS3
  */
 export
 type AMFFailureCause =
+    /**
+     * @description
+     *
+     * Indicates the 5GMM cause value associated with the deregistration
+     * procedure, see TS 24.501 [13] clause 9.11.3.2. (3GPP TS 33.128, clause
+     * 6.2.2.2.3.)
+     */
     { fiveGMMCause: FiveGMMCause } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Provides the value of the 5GSM cause, see TS 24.501 [13] clause 9.11.4.2.
+     * (3GPP TS 33.128, clause 6.2.3.2.6.)
+     */
     | { fiveGSMCause: FiveGSMCause } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

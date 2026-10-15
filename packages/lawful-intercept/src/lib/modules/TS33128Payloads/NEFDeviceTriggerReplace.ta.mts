@@ -26,6 +26,29 @@ import { PortNumber, _decode_PortNumber, _encode_PortNumber } from "../TS33128Pa
  * @summary NEFDeviceTriggerReplace
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing a
+ * NEFDeviceTriggerReplace record when the IRI-POI present in the NEF detects
+ * that an AF has sent a Device trigger replacement for a previously sent Device
+ * trigger to a UE matching one of the target identifiers provided via LI_X1 to
+ * the IRI POI in the NEF. It replaces a previously submitted Device trigger
+ * message which has not yet been delivered to the UE.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - NEF receives a Nnef_Trigger_Delivery Request (for a device trigger
+ *   replacement) from an AF as described in TS 29.522 [58] clause 4.4.3 with
+ *   GPSI matching the target identifier.
+ *
+ * - NEF sends a T4 Device-Trigger-Request (DTR) to SM-SC with Trigger-Action
+ *   AVP set to REPLACE and User-Identifier AVP matching the SUPI of the target
+ *   UE as specified in 29.337 [60] clause 5.2.1.
+ *
+ * Table 7.7.3.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.3.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,54 +72,110 @@ export
 class NEFDeviceTriggerReplace {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `triggerId`.
+     * @description
+     *
+     * Identity of the corresponding Device trigger to be replaced.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly triggerId: TriggerID;
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * The AF replacing an existing Device trigger which has not been delivered
+     * yet to the device (e.g. because the device is unreachable) by a new
+     * Device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly aFID: AFID;
     /**
      * @summary `triggerPayload`.
+     * @description
+     *
+     * The device triggering payload.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly triggerPayload: OPTIONAL<TriggerPayload>;
     /**
      * @summary `validityPeriod`.
+     * @description
+     *
+     * The validity time in seconds for the specific action requested.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly validityPeriod: OPTIONAL<INTEGER>;
     /**
      * @summary `priorityDT`.
+     * @description
+     *
+     * Priority indication for a trigger payload.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly priorityDT: OPTIONAL<PriorityDT>;
     /**
      * @summary `sourcePortId`.
+     * @description
+     *
+     * Port on the AF which delivers the device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sourcePortId: OPTIONAL<PortNumber>;
     /**
      * @summary `destinationPortId`.
+     * @description
+     *
+     * Port on the device which is the recipient of the device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.7.3.1.3.
+     *
      * @public
      * @readonly
      */

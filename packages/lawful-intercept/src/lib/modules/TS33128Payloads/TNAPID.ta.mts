@@ -17,6 +17,13 @@ import { CivicAddressBytes, _decode_CivicAddressBytes, _encode_CivicAddressBytes
  * @summary TNAPID
  * @description
  * 
+ * The TNAPID type is used to report the TNAP Identity. The TNAPID type is
+ * derived from the data present in the TnapId type defined in TS 29.571 [17]
+ * clause 5.4.4.62.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.30.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,42 @@ export
 class TNAPID {
     /**
      * @summary `sSID`.
+     * @description
+     *
+     * The SSID of the access point to which the UE is attached. This parameter
+     * shall be present when the UE is accessing the 5GC via a trusted WLAN or
+     * if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.30.
+     *
      * @public
      * @readonly
      */
     readonly sSID: OPTIONAL<SSID>;
     /**
      * @summary `bSSID`.
+     * @description
+     *
+     * The SSID of the access point to which the UE is attached. This parameter
+     * shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.30.
+     *
      * @public
      * @readonly
      */
     readonly bSSID: OPTIONAL<BSSID>;
     /**
      * @summary `civicAddress`.
+     * @description
+     *
+     * The civic address of the TNAP to which the UE is attached including the
+     * associated Location-Information and Location-Data (see TS 29.571 [17]
+     * table 5.4.4.62-1. This parameter shall be present if known at the NF
+     * where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.30.
+     *
      * @public
      * @readonly
      */

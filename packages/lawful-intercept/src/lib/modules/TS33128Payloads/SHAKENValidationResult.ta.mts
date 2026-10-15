@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SHAKENValidationResult
  * @description
  * 
+ * SHAKEN validation result: TN-Validation-Passed, TN-Validation-Failed,
+ * No-TN-Validation. See TS 24.229 [74] and IETF RFC 8588 [71].
+ *
+ * 3GPP TS 33.128, clause 7.11.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ enum _enum_for_SHAKENValidationResult {
  * @summary SHAKENValidationResult
  * @description
  * 
+ * SHAKEN validation result: TN-Validation-Passed, TN-Validation-Failed,
+ * No-TN-Validation. See TS 24.229 [74] and IETF RFC 8588 [71].
+ *
+ * 3GPP TS 33.128, clause 7.11.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +63,12 @@ type SHAKENValidationResult = _enum_for_SHAKENValidationResult;
  * @summary SHAKENValidationResult
  * @description
  * 
+ * SHAKEN validation result: TN-Validation-Passed, TN-Validation-Failed,
+ * No-TN-Validation. See TS 24.229 [74] and IETF RFC 8588 [71].
+ *
+ * 3GPP TS 33.128, clause 7.11.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary HandoverType
  * @description
  * 
+ * Identifies the type of handover indicated by the AMF to gaining RAN Node as
+ * seen in the HANDOVER REQUEST message. See TS 38.413 [23] clause 9.3.1.22.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +39,12 @@ enum _enum_for_HandoverType {
  * @summary HandoverType
  * @description
  * 
+ * Identifies the type of handover indicated by the AMF to gaining RAN Node as
+ * seen in the HANDOVER REQUEST message. See TS 38.413 [23] clause 9.3.1.22.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +66,12 @@ type HandoverType = _enum_for_HandoverType;
  * @summary HandoverType
  * @description
  * 
+ * Identifies the type of handover indicated by the AMF to gaining RAN Node as
+ * seen in the HANDOVER REQUEST message. See TS 38.413 [23] clause 9.3.1.22.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

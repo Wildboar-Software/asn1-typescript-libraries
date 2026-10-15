@@ -31,18 +31,42 @@ export
 class SIPMessage {
     /**
      * @summary `iPSourceAddress`.
+     * @description
+     *
+     * Indicates the conditional source IPv4 address or source IPv6 address
+     * field in the PDU header to the source IP address of the intercepted SIP
+     * message (see ETSI TS 103 221-2 [8] clause 5.3).
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.4.
+     *
      * @public
      * @readonly
      */
     readonly iPSourceAddress: IPAddress;
     /**
      * @summary `iPDestinationAddress`.
+     * @description
+     *
+     * Indicates the conditional destination IPv4 address or destination IPv6
+     * address field in the PDU header to the destination IP address of the
+     * intercepted SIP message (see ETSI TS 103 221-2 [8] clause 5.3).
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.4.
+     *
      * @public
      * @readonly
      */
     readonly iPDestinationAddress: IPAddress;
     /**
      * @summary `sIPContent`.
+     * @description
+     *
+     * The relevant SIP message, or SIP message header if the warrant requires
+     * IRI-only. In addition, for IRI-only intercepts, specific content (e.g.
+     * SIP MESSAGE method) may have to be deleted.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.4.
+     *
      * @public
      * @readonly
      */

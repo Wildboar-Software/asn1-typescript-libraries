@@ -15,6 +15,12 @@ import { MCServiceGroupID, _decode_MCServiceGroupID, _encode_MCServiceGroupID } 
  * @summary MCServiceIdentitiesOrGroupID
  * @description
  * 
+ * MC service identities of the target user or group ID of the target MC service
+ * group.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.1.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,6 +34,12 @@ import { MCServiceGroupID, _decode_MCServiceGroupID, _encode_MCServiceGroupID } 
 export
 type MCServiceIdentitiesOrGroupID =
     { mCServiceIdentities: MCServiceIdentity[] } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * MC service group ID of the target MC service group the file is intended
+     * for. (3GPP TS 33.128, clause 7.20.2.6.2.)
+     */
     | { mCServiceGroupID: MCServiceGroupID } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

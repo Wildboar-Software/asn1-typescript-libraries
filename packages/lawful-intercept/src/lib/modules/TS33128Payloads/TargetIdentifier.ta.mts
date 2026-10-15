@@ -71,23 +71,103 @@ import { MCServiceIDOrGroupID, _decode_MCServiceIDOrGroupID, _encode_MCServiceID
  */
 export
 type TargetIdentifier =
+    /**
+     * @description
+     *
+     * The SUPI type is derived from the data present in the Subscription
+     * Permanent Identifier type defined in TS 23.003 [19] clause 2.2A. (3GPP TS
+     * 33.128, clause 8.3.4.)
+     */
     { sUPI: SUPI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from the International Mobile Subscription Identity defined in TS
+     * 23.003 [19] clause 2.1 and clause 2.2. (3GPP TS 33.128, clause 8.3.3.)
+     */
     | { iMSI: IMSI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The PEI type is derived from the data present in the Permanent Equipment
+     * Identifier type defined in TS 23.003 [19] clause 6.4. (3GPP TS 33.128,
+     * clause 8.3.6.)
+     */
     | { pEI: PEI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from the International Mobile Equipment Identity defined in TS
+     * 23.003 [19] clause 6.2.1. (3GPP TS 33.128, clause 8.3.3.)
+     */
     | { iMEI: IMEI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The GPSI type is derived from the data present in the Generic Public
+     * Subscription Identifier type defined in TS 23.003 [19] clause 28.8. (3GPP
+     * TS 33.128, clause 8.3.7.)
+     */
     | { gPSI: GPSI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from the MSISDN defined in TS 23.003 [19] clause 3.3. (3GPP TS
+     * 33.128, clause 8.3.3.)
+     */
     | { mSISDN: MSISDN } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * A network access identifier as defined in TS 23.003 [19] clause 2.8.7.
+     * (3GPP TS 33.128, clause 8.3.3.)
+     */
     | { nAI: NAI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IPv4 address being reported in binary representation. (3GPP TS
+     * 33.128, clause 8.2.)
+     */
     | { iPv4Address: IPv4Address } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IPv6 address being reported in binary representation. (3GPP TS
+     * 33.128, clause 8.2.)
+     */
     | { iPv6Address: IPv6Address } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from a MAC address defined in IETF RFC 7042 [126]. (3GPP TS
+     * 33.128, clause 8.3.3.)
+     */
     | { ethernetAddress: MACAddress } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * IMPU of the target, if used for the service (see NOTE). (3GPP TS 33.128,
+     * clause 7.3.1.4.)
+     */
     | { iMPU: IMPU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * IMPI of the target. (3GPP TS 33.128, clause 7.20.2.1.2.)
+     */
     | { iMPI: IMPI } /* CHOICE_ALT_ROOT */
     | { e164Number: E164Number } /* CHOICE_ALT_ROOT */
     | { emailAddress: EmailAddress } /* CHOICE_ALT_ROOT */
     | { mCPTTID: UTF8String } /* CHOICE_ALT_ROOT */
     | { instanceIdentifierURN: UTF8String } /* CHOICE_ALT_ROOT */
     | { pTCChatGroupID: PTCChatGroupID } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * MC service ID of the target user or group ID of the target MC service
+     * group. (3GPP TS 33.128, clause 7.20.2.5.1.)
+     */
     | { mCServiceIDOrGroupID: MCServiceIDOrGroupID } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

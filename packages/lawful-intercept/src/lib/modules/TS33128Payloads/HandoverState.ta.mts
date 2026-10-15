@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary HandoverState
  * @description
  * 
+ * Indicates whether the PDU Session Modification being reported was due to a
+ * handover. Shall be present if this IE is in the SMContextUpdatedData or sent
+ * by the SMF (see TS 29.502 [16] clause 6.1.6.2.3).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +42,13 @@ enum _enum_for_HandoverState {
  * @summary HandoverState
  * @description
  * 
+ * Indicates whether the PDU Session Modification being reported was due to a
+ * handover. Shall be present if this IE is in the SMContextUpdatedData or sent
+ * by the SMF (see TS 29.502 [16] clause 6.1.6.2.3).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +71,13 @@ type HandoverState = _enum_for_HandoverState;
  * @summary HandoverState
  * @description
  * 
+ * Indicates whether the PDU Session Modification being reported was due to a
+ * handover. Shall be present if this IE is in the SMContextUpdatedData or sent
+ * by the SMF (see TS 29.502 [16] clause 6.1.6.2.3).
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

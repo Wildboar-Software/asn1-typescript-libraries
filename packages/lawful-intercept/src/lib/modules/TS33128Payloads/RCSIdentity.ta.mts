@@ -29,8 +29,29 @@ import { IMSSubscriberIDs, _decode_IMSSubscriberIDs, _encode_IMSSubscriberIDs } 
  */
 export
 type RCSIdentity =
+    /**
+     * @description
+     *
+     * Shall be chosen if the identities being reported are 5GS Identities.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.1.2.2.
+     */
     { fiveGSIdentities: FiveGSSubscriberIDs } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be chosen if the identities being reported are EPS Identities.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.1.2.2.
+     */
     | { ePSIdentities: EPSSubscriberIDs } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be chosen if the identities being reported are IMS Identities.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.1.2.2.
+     */
     | { iMSIdentities: IMSSubscriberIDs } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

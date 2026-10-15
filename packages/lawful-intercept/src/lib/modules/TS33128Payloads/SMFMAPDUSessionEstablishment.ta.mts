@@ -63,6 +63,91 @@ import { AlternativeNSSAIList, _decode_AlternativeNSSAIList, _encode_Alternative
  * @summary SMFMAPDUSessionEstablishment
  * @description
  * 
+ * 6.2.3.2.7.1 General
+ *
+ * In the present document, an MA PDU session will include two general types of
+ * PDU sessions as defined below:
+ *
+ * - MA-Confirmed: This is an MA PDU session where the UE signals Upgrade
+ *   Allowed to MA and the network immediately upgrades the session to an MA PDU
+ *   session or the UE explicitly requests an MA PDU session (using a Request
+ *   Type of MA PDU).
+ *
+ * - MA-Upgrade-Allowed: This is a PDU session where the UE indicated that
+ *   upgrade to an MA PDU session is allowed, but the network does not
+ *   immediately confirm the upgrade. The network may at some later point
+ *   upgrade the session to an MA PDU session.
+ *
+ * - NOTE: The above terms are not defined or used in other 3GPP Stage 2 or
+ *   Stage 3 specifications, but have been introduced here to clarify and
+ *   distinguish LI event reporting for the respective situations.
+ *
+ * An MA-Confirmed MA PDU session may be established over a single access or
+ * over multiple accesses. The establishment over multiple accesses may occur
+ * concurrently or may occur at different points in time.
+ *
+ * An MA-Upgrade-Allowed MA PDU session is established over a single access and
+ * nearly all aspects appears to be an ordinary non-MA PDU session with the key
+ * difference that the network may upgrade the session to an MA-confirmed MA PDU
+ * session.
+ *
+ * 6.2.3.2.7.2 MA PDU session establishment
+ *
+ * The IRI-POI in the SMF (or for a roaming scenario, V-SMF in the VPLMN for HR
+ * or SMF in the VPLMN for LBO) shall generate an xIRI containing an
+ * SMFMAPDUSessionEstablishment record when the IRI-POI present in the SMF
+ * detects that a PDU session has been established for the target UE that is an
+ * MA PDU session (Request Type set to MA PDU session or upgraded at
+ * establishment), or where the upgrade allowed parameter is set to upgrade
+ * allowed and session is established as an ordinary PDU session (not upgraded
+ * at establishment, but may occur later on). The IRI-POI present in the SMF
+ * shall generate the xIRI for the following events:
+ *
+ * - For a non-roaming scenario , the SMF sends the N1 NAS message (via AMF) PDU
+ *   SESSION ESTABLISHMENT ACCEPT to the UE for a new PDU session and the 5G
+ *   Session Management (5GSM) state within the SMF is changed to PDU SESSION
+ *   ACTIVE (see TS 24.501 [13] clause 6.1.3.3 and 6.4.1) in response to a PDU
+ *   SESSION ESTABLISHMENT REQUEST received along with:
+ *
+ * - PDU Session ID which does not identify an existing PDU session, and
+ *
+ * - Request Type = MA PDU request, or
+ *
+ * - Request Type = initial request and MA PDU session information set to "MA
+ *   PDU session network upgrade is allowed", with either upgrade occurring at
+ *   establishment or upgrade does not occur at establishment but may occur
+ *   later.
+ *
+ * - For a home-routed roaming scenario, the SMF in the HPLMN (i.e. H-SMF) sends
+ *   the N16: Nsmf_PDU_Session_Create Response message with n1SmInfoToUe IE
+ *   containing the PDU SESSION ESTABLISHMENT ACCEPT (see TS 29.502 [16] clauses
+ *   5.2.1, 5.2.2.7, 5.2.3, and 6.1.6) for a new PDU session in response to a
+ *   PDU SESSION ESTABLISHMENT REQUEST received along with:
+ *
+ * - PDU Session ID which does not identify an existing PDU session, and
+ *
+ * - Request Type = MA PDU request, or
+ *
+ * - Request Type = initial request and MA PDU session information set to "MA
+ *   PDU session network upgrade is allowed", with either upgrade occurring at
+ *   establishment or upgrade does not occur at establishment but may occur
+ *   later.
+ *
+ * If the Npcf_SMPolicyControl_Create response received from the PCF for the
+ * target UE in response to Npcf_SMPolicyControl_Create request includes PCC
+ * rules in which the traffic control policy data contains either a routeToLocs
+ * IE or trafficSteeringPolIdDl IE and/or trafficSteeringPolIdUl IE, then the
+ * SMF shall include those PCC rules in the xIRI. These PCC rules correspond to
+ * policies that influence the target UE’s traffic flows (see TS 29.513 [88]
+ * clause 5.5.3).
+ *
+ * NOTE: At least one of the SUPI, PEI or GPSI fields shall be present.
+ *
+ * Table 6.2.3.7-1 gives the LI_HI2 IRI message type for this record as BEGIN.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -105,168 +190,403 @@ export
 class SMFMAPDUSessionEstablishment {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the PDU session (e.g. as provided by the AMF in the
+     * associated Nsmf_PDU_Session_CreateSMContext service operation). Shall be
+     * present except for PEI-only unauthenticated emergency sessions (see
+     * NOTE). NOTE: At least one of the SUPI, PEI or GPSI fields shall be
+     * present.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: OPTIONAL<SUPI>;
     /**
      * @summary `sUPIUnauthenticated`.
+     * @description
+     *
+     * Shall be present if a SUPI is present in the message and set to "true" if
+     * the SUPI has not been authenticated, or "false" if it has been
+     * authenticated.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPIUnauthenticated: OPTIONAL<SUPIUnauthenticatedIndication>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI associated with the PDU session, if available (see NOTE). NOTE: At
+     * least one of the SUPI, PEI or GPSI fields shall be present.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI associated with the PDU session, if available (see NOTE). NOTE: At
+     * least one of the SUPI, PEI or GPSI fields shall be present.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID See clause 9.4 of TS 24.501 [13]. Identifies a new PDU
+     * session.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: PDUSessionID;
     /**
      * @summary `pDUSessionType`.
+     * @description
+     *
+     * Identifies selected PDU session type, see TS 24.501 [13] clause
+     * 9.11.4.11.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionType: PDUSessionType;
     /**
      * @summary `accessInfo`.
+     * @description
+     *
+     * Identifies the access(es) associated with the PDU session including the
+     * information for each specific access (see table 6.2.3.2.7.2-2).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly accessInfo: AccessInfo[];
     /**
      * @summary `sNSSAI`.
+     * @description
+     *
+     * Slice identifiers associated with the PDU session, if available. See TS
+     * 23.003 [19] clause 28.4.2 and TS 23.501 [2] clause 5.15.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly sNSSAI: OPTIONAL<SNSSAI>;
     /**
      * @summary `uEEndpoint`.
+     * @description
+     *
+     * UE endpoint address(es) assigned to the PDU Session if available (see TS
+     * 29.244 [15] clause 5.21).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly uEEndpoint: OPTIONAL<UEEndpointAddress[]>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information provided by the AMF or present in the context at the
+     * SMF, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `dNN`.
+     * @description
+     *
+     * Data Network Name requested by the target UE, as defined in TS 23.003
+     * [19] clause 9A and described in TS 23.502 [4] clause 4.3.2.2. Shall be
+     * given in dotted-label presentation format as described in TS 23.003 [19]
+     * clause 9.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly dNN: DNN;
     /**
      * @summary `aMFID`.
+     * @description
+     *
+     * Identifier of the AMF associated with the target UE, as defined in TS
+     * 23.003 [19] clause 2.10.1 if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly aMFID: OPTIONAL<AMFID>;
     /**
      * @summary `hSMFURI`.
+     * @description
+     *
+     * URI of the Nsmf_PDUSession service of the selected H-SMF, if available.
+     * See TS 29.502 [16] clause 6.1.6.2.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly hSMFURI: OPTIONAL<HSMFURI>;
     /**
      * @summary `requestType`.
+     * @description
+     *
+     * Type of request as described in TS 24.501 [13] clause 9.11.3.47 provided
+     * within the Nsmf_PDU_Session_CreateSMContext Request (TS 29.502 [16])
+     * message shall be reported. In the case where the network does not provide
+     * a request type value for a MA PDU session and the network does support MA
+     * PDU sessions, the request type shall be set to "MA PDU request" according
+     * to TS 24.501 [13] clause 6.4.1.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly requestType: FiveGSMRequestType;
     /**
      * @summary `sMPDUDNRequest`.
+     * @description
+     *
+     * Contents of the SM PDU DN Request container, if available, as described
+     * in TS 24.501 [13] clause 9.11.4.15.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly sMPDUDNRequest: OPTIONAL<SMPDUDNRequest>;
     /**
      * @summary `servingNetwork`.
+     * @description
+     *
+     * PLMN ID of the serving core network operator, and, for a Non-Public
+     * Network (NPN), the NID that together with the PLMN ID identifies the NPN.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly servingNetwork: SMFServingNetwork;
     /**
      * @summary `oldPDUSessionID`.
+     * @description
+     *
+     * The old PDU Session ID received from the UE. See TS 23.502 [4] clauses
+     * 4.3.2.2.1 and 4.3.5.2 and TS 24.501 [13] clause 6.4.1.2. Shall be present
+     * if this IE is in the SMContextCreateData or PDUSessionCreateData message
+     * sent to the SMF or the PDU Session Context or SM Context at the SMF (see
+     * TS 29.502 [16] clauses 6.1.6.2.2, 6.1.6.2.9 and 6.1.6.2.39).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly oldPDUSessionID: OPTIONAL<PDUSessionID>;
     /**
      * @summary `mAUpgradeIndication`.
+     * @description
+     *
+     * Indicates whether the PDU session is allowed to be upgraded to
+     * MA-Confirmed MA PDU session (see TS 23.502 [4] clause 4.22.3). Include if
+     * known.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly mAUpgradeIndication: OPTIONAL<SMFMAUpgradeIndication>;
     /**
      * @summary `ePSPDNCnxInfo`.
+     * @description
+     *
+     * Indicates if the PDU session may be moved to EPS during its lifetime (see
+     * TS 29.502 [16] clause 6.1.6.2.31). Include if known.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly ePSPDNCnxInfo: OPTIONAL<SMFEPSPDNCnxInfo>;
     /**
      * @summary `mAAcceptedIndication`.
+     * @description
+     *
+     * Indicates that a request to establish an MA PDU session was accepted or
+     * if a single access PDU session request was upgraded into a MA PDU session
+     * (see TS 23.502 [4] clauses 4.22.2 and 4.22.3). It shall be set as
+     * follows:
+     *
+     * - true: MA-Confirmed MA PDU session was established.
+     *
+     * - false: single access MA-Upgrade-Allowed MA PDU session was established
+     *   that may be upgraded to an MA-Confirmed MA PDU session.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly mAAcceptedIndication: SMFMAAcceptedIndication;
     /**
      * @summary `aTSSSContainer`.
+     * @description
+     *
+     * Identifies the steering, switching, and splitting features for the
+     * MA-Confirmed MA PDU session. Also indicates whether MPTCP or ATSSS-LL is
+     * to be used for ATSSS. See TS 24.501[13] clause 9.11.4.22.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly aTSSSContainer: OPTIONAL<ATSSSContainer>;
     /**
      * @summary `uEEPSPDNConnection`.
+     * @description
+     *
+     * This IE shall be present, if available, during an EPS to 5GS Idle mode
+     * mobility or handover using the N26 interface. If present, it shall
+     * contain the EPS bearer context(s) information present in the
+     * uEEPSPDNConnection parameter of the intercepted SmContextCreateData
+     * message. (see TS 29.502 [16] clause 6.1.6.2.2).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly uEEPSPDNConnection: OPTIONAL<UEEPSPDNConnection>;
     /**
      * @summary `ePS5GSComboInfo`.
+     * @description
+     *
+     * Provides detailed information about PDN Connections and PDU Sessions
+     * during EPS to 5GS idle mode mobility or handover using the N26 interface.
+     * Shall be included if the AMF has selected a SMF+PGW-C to serve the PDU
+     * session. This parameter shall include the additional IEs in table
+     * 6.2.3.2.2-2, if present.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly ePS5GSComboInfo: OPTIONAL<EPS5GSComboInfo>;
     /**
      * @summary `selectedDNN`.
+     * @description
+     *
+     * Shall be present if a DNN other than the UE requested DNN is selected for
+     * the PDU Session. Shall be given in dotted-label presentation format as
+     * described in TS 23.003 [19] clause 9.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly selectedDNN: OPTIONAL<DNN>;
     /**
      * @summary `handoverState`.
+     * @description
+     *
+     * Indicates whether the PDU Session Establishment being reported was due to
+     * a handover. Shall be present if this IE is in the SMContextCreatedData
+     * sent by the SMF (see TS 29.502 [16] clause 6.1.6.2.3).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly handoverState: OPTIONAL<HandoverState>;
     /**
      * @summary `pCCRules`.
+     * @description
+     *
+     * Set of PCC rules related to traffic influence. Each PCC rule influences
+     * the routing of a given traffic flow. If several flows are concerned, then
+     * several PCC rules shall be handled by the SMF. Traffic influence policies
+     * are originated by an AF. PCF translates these rules into PCC rules for
+     * traffic influence. The payload of a PCC rule for traffic influence is
+     * defined in table 6.2.3.2.2-6.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly pCCRules: OPTIONAL<PCCRuleSet>;
     /**
      * @summary `ePSPDNConnectionEstablishment`.
+     * @description
+     *
+     * Provides details about PDN Connections when the
+     * SMFMAPDUSessionEstablishment xIRI message is used to report PDN
+     * Connection establishment. See table 6.3.3.2.2-1 and clause 6.3.3.2.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */
     readonly ePSPDNConnectionEstablishment: OPTIONAL<EPSPDNConnectionEstablishment>;
     /**
      * @summary `alternativeNSSAI`.
+     * @description
+     *
+     * Provides a list of mapping information between the S-NSSAI to be replaced
+     * and the alternative S-NSSAI. Shall be present if this IE is in the
+     * SMContextCreateData or PDUSessionCreateData message sent to the SMF or
+     * the PDU Session Context or SM Context at the SMF (see TS 29.502 [16]
+     * clauses 6.1.6.2.2, 6.1.6.2.9 and 6.1.6.2.39). See TS 24.501 [13] clause
+     * 9.11.3.97.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+     *
      * @public
      * @readonly
      */

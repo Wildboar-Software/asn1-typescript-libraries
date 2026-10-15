@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AMFSetID
  * @description
  * 
+ * Derived from the AMF Set ID defined in TS 23.003 [19] clause 2.10.1.
+ *
+ * 3GPP TS 33.128, clause 8.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

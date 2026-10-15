@@ -17,6 +17,16 @@ import { AFSecurityParams, _decode_AFSecurityParams, _encode_AFSecurityParams } 
  * @summary AFStartOfInterceptWithEstablishedAKMAApplicationKey
  * @description
  * 
+ * The IRI-POI in the AF shall generate an xIRI containing an
+ * AFStartOfInterceptWithEstablishedAKMAApplicationKey record when the IRI-POI
+ * present in the AF detects interception is being triggered on a target UE that
+ * has already established AKMA application key.
+ *
+ * Table 7.9.1.5-2 gives the LI_HI2 IRI message type for this record as BEGIN.
+ *
+ * 3GPP TS 33.128, clause 7.9.1.4.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +50,28 @@ class AFStartOfInterceptWithEstablishedAKMAApplicationKey {
     readonly aFID: FQDN;
     /**
      * @summary `aKID`.
+     * @description
+     *
+     * AKMA Anchor Key Identifier.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.3.
+     *
      * @public
      * @readonly
      */
     readonly aKID: NAI;
     /**
      * @summary `kAFParamList`.
+     * @description
+     *
+     * List of all available all AFSecurityParams (see table 7.9.1.4.3-2) which
+     * have not expired and where the Ua* security protocol parameters
+     * corresponds to the set of security parameters used on the Ua* security
+     * protocol instance associated with KAF, see TS 33.127 [5] clause
+     * 7.9.3.1.5. NOTE: At least one such tuple exists when this event occurs.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.4.3.
+     *
      * @public
      * @readonly
      */

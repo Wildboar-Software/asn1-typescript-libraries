@@ -15,6 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UEAreaIndication
  * @description
  * 
+ * NOTE: Either country or internationalAreaIndication shall be present.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +36,29 @@ export
 class UEAreaIndication {
     /**
      * @summary `country`.
+     * @description
+     *
+     * Indicates the country or the area of country where the UE is located.
+     * Contains the two-letter ISO 3166 country code in capital ASCII letters,
+     * e.g., DE or US. Shall be encoded as described in TS 29.572 [24] table
+     * 6.1.6.2.42-1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly country: OPTIONAL<UTF8String>;
     /**
      * @summary `internationalAreaIndication`.
+     * @description
+     *
+     * Indicates international area. Set to true if UE is located in
+     * international area and set to false (default) if UE is not located in
+     * international area.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.2.
+     *
      * @public
      * @readonly
      */

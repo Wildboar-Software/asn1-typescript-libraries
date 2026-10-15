@@ -29,6 +29,61 @@ import { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SC
  * @summary SCEFUnsuccessfulProcedure
  * @description
  * 
+ * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+ * SCEFUnsuccessfulProcedure record when the IRI-POI present in the
+ * SCEF/IWK-SCEF detects an unsuccessful procedure or error condition for a
+ * target UE matching one of the target identifiers provided via LI_X1.
+ *
+ * Accordingly, the IRI-POI in the SCEF/IWK-SCEF generates the xIRI when any of
+ * the following events is detected (see TS 29.128 [62] clause 6.3.3 and TS
+ * 24.250 [61] clause 5.4.2.6):
+ *
+ * - SCEF sends a T6a Connection Management Answer with Experimental-Result AVP
+ *   set to DIAMETER_ERROR_USER_UNKNOWN.
+ *
+ * - SCEF sends a T6a Connection Management Answer with Experimental-Result AVP
+ *   set to DIAMETER_ERROR_OPERATION_NOT_ALLOWED when Action AVP of the T6a
+ *   Connection Management Request received by the SCEF is not set to
+ *   CONNECTION_ESTABLISHMENT, CONNECTION_UPDATE or CONNECTION_ RELEASE.
+ *
+ * - SCEF sends a T6a Connection Management Answer with Experimental-Result AVP
+ *   set to DIAMETER_ERROR_NIDD_CONFIGURATION_NOT_AVAILABLE when Action AVP of
+ *   the T6a Connection Management Request received by the SCEF is set to
+ *   CONNECTION_ESTABLISHMENT and the NIDD configuration for the target UE does
+ *   not exist or fails at SCEF.
+ *
+ * - SCEF sends a T6a Connection Management Answer with Experimental-Result AVP
+ *   set to DIAMETER_ERROR_INVALID_EPS_BEARER when Action AVP of the T6a
+ *   Connection Management Request received by the SCEF is set to
+ *   CONNECTION_UPDATE or CONNECTION_RELEASE and the EPS Bearer Identity does
+ *   not exist.
+ *
+ * - SCEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set
+ *   to "Port not free" in response to a RDS MANAGE PORT command sent by UE with
+ *   an "Action" field set to "Reserve port".
+ *
+ * - SCEF receives a RDS MANAGE PORT Response from a UE with a "Status" field
+ *   set to "Port not free" in response to a RDS MANAGE PORT command sent by
+ *   SCEF with an "Action" field set to "Reserve port".
+ *
+ * - SCEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set
+ *   to "Port not associated with specified application" in response to a RDS
+ *   MANAGE PORT command sent by UE with an "Action" field set to "Release
+ *   port".
+ *
+ * - SCEF receives a RDS MANAGE PORT Response from a UE with a "Status" field
+ *   set to "Port not associated with specified application" in response to a
+ *   RDS MANAGE PORT command sent by SCEF with an "Action" field set to "Release
+ *   port".
+ *
+ * NOTE: If the APN is not available, the placeholder value ".unknown". shall be
+ * used.
+ *
+ * Table 7.8.2.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,36 +107,78 @@ export
 class SCEFUnsuccessfulProcedure {
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Cause of unsuccessful procedure.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly failureCause: SCEFFailureCause;
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the Non-IP PDN Connection of the target UE (e.g. as
+     * provided by the MME in the associated Connection Management Request).
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN associated with the PDN Connection if available.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier associated with the PDN Connection if available,
+     * defined as NAI in ASN.1.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `ePSBearerID`.
+     * @description
+     *
+     * Identity of the EPS bearer that MME allocated to the Non-IP PDN
+     * connection.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly ePSBearerID: EPSBearerID;
     /**
      * @summary `aPN`.
+     * @description
+     *
+     * Access Point Name associated with the target traffic. Shall be given in
+     * dotted-label presentation format as described in TS 23.003 [19] clause
+     * 9.1 (see NOTE). NOTE: If the APN is not available, the placeholder value
+     * ".unknown". shall be used.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.5.
+     *
      * @public
      * @readonly
      */
@@ -94,12 +191,25 @@ class SCEFUnsuccessfulProcedure {
     readonly rDSDestinationPortNumber: OPTIONAL<RDSPortNumber>;
     /**
      * @summary `applicationID`.
+     * @description
+     *
+     * Application identifier associated with the RDS port number.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly applicationID: OPTIONAL<ApplicationID>;
     /**
      * @summary `sCSASID`.
+     * @description
+     *
+     * SCS/AS Identifier. If the SCS/AS Identifier is not available, the
+     * placeholder value "Unknown" shall be used.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.5.
+     *
      * @public
      * @readonly
      */

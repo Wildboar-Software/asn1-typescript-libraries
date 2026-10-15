@@ -12,6 +12,13 @@ import { ServerAddressingInfo, _decode_ServerAddressingInfo, _encode_ServerAddre
  * @summary ServerAddressingInfoList
  * @description
  * 
+ * Provides remote provisioning server information when the PLMN is used for
+ * target UE SNPN onboarding. Include when known at the NF. See TS 29.503 [25]
+ * clause 6.3.6.2.3.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

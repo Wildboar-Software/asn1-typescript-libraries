@@ -19,6 +19,12 @@ import { MethodCode, _decode_MethodCode, _encode_MethodCode } from "../TS33128Pa
  * @summary PositioningMethodAndUsage
  * @description
  * 
+ * The PositioningMethodAndUsage type is derived from the data present in the
+ * PositioningMethodAndUsage type defined in TS 29.572 [24] clause 6.1.6.2.15.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.41.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +43,55 @@ export
 class PositioningMethodAndUsage {
     /**
      * @summary `method`.
+     * @description
+     *
+     * Indicates the related positioning method. Shall be encoded as described
+     * in TS 29.572 [24] clause 6.1.6.3.6.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.41.
+     *
      * @public
      * @readonly
      */
     readonly method: PositioningMethod;
     /**
      * @summary `mode`.
+     * @description
+     *
+     * Indicates the mode of the location measurement from the related
+     * positioning method. Shall be encoded as described in TS 29.572 [24]
+     * clause 6.1.6.3.7.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.41.
+     *
      * @public
      * @readonly
      */
     readonly mode: PositioningMode;
     /**
      * @summary `usage`.
+     * @description
+     *
+     * Indicates the usage of the location measurement from the related
+     * positioning method. Shall be encoded as described in TS 29.572 [24]
+     * clause 6.1.6.3.9.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.41.
+     *
      * @public
      * @readonly
      */
     readonly usage: Usage;
     /**
      * @summary `methodCode`.
+     * @description
+     *
+     * This field shall be present when the method field is set as
+     * "networkSpecific". Shall be encoded as described in TS 29.572 [24] clause
+     * 6.1.6.2.15.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.41.
+     *
      * @public
      * @readonly
      */

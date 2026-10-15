@@ -29,12 +29,25 @@ export
 class GMMessage {
     /**
      * @summary `gMRequest`.
+     * @description
+     *
+     * Contains the HTTP GET, POST, PUT or DELETE request received by the Group
+     * Management Server.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly gMRequest: OCTET_STRING;
     /**
      * @summary `gMResponse`.
+     * @description
+     *
+     * Contains the HTTP response returned by the Group Management Server.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

@@ -32,6 +32,37 @@ import { RCSPayload, _decode_RCSPayload, _encode_RCSPayload } from "../TS33128Pa
  * @summary RCSMessage
  * @description
  * 
+ * The IRI-POI present in the RCS Server shall generate an xIRI containing an
+ * RCSMessage record when the IRI-POI present in the RCS Server detects that an
+ * RCS target has sent or received an RCS message. In this specification, an RCS
+ * message refers to any message sent or received in the context of pager mode
+ * standalone messaging, large message mode messaging, 1-to-1 chat or group
+ * chat. This xIRI is also generated when the target sends or receives a
+ * delivery notification or display notification.
+ *
+ * Accordingly, the IRI-POI in the RCS Server shall generate the RCSMessage xIRI
+ * when it detects the following events:
+ *
+ * - The RCS Server receives a SIP MESSAGE from the target or destined to the
+ *   target, determined by the direction attribute present in the CPM Header,
+ *   and:
+ *
+ * - The "Contact" or "Accept-Contact" header includes a service feature tag
+ *   among the feature tags listed in GSMA RCC.07 [78] clause 2.4.4.1 table 3.
+ *
+ * - The SIP "Content-Type" header is "message/cpim".
+ *
+ * - The RCS Server receives an MSRP packet from the target or destined to the
+ *   target and:
+ *
+ * - The content of the MSRP packet is a CPIM (Common Presence and Instant
+ *   Messaging) object (see definition in IETF RFC 3862 [80]).
+ *
+ * Table 7.13.4-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,72 +89,160 @@ export
 class RCSMessage {
     /**
      * @summary `rCSTargetIdentities`.
+     * @description
+     *
+     * Provide RCS target identities. All identities associated to the target
+     * known at the POI shall be included.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSTargetIdentities: RCSIdentity[];
     /**
      * @summary `groupChatSessionID`.
+     * @description
+     *
+     * Group chat session URI. Shall be present if the message is part of a CPM
+     * Group Chat. See OMA-TS-CPM_System_Description-V2 [82] clause 5.1.1.5.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly groupChatSessionID: OPTIONAL<RCSGroupChatSessionID>;
     /**
      * @summary `originatingIdentity`.
+     * @description
+     *
+     * Shall identify the originating party.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly originatingIdentity: RCSIdentity[];
     /**
      * @summary `destinationIdentities`.
+     * @description
+     *
+     * Shall identify the destination(s) of the message.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly destinationIdentities: RCSDestinations;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Shall be provided to identify the direction of the message relative to
+     * the target: "toTarget" or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly direction: Direction;
     /**
      * @summary `messageType`.
+     * @description
+     *
+     * Identifies the type of information being transmitted by the RCS Message.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly messageType: RCSMessageType;
     /**
      * @summary `conversationID`.
+     * @description
+     *
+     * CPM Conversation Identity associated with the CPM Standalone Message, CPM
+     * File Transfer, or CPM Session. See OMA-TS-CPM_Conversation_Function [109]
+     * clause 5.3.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly conversationID: RCSConversationID;
     /**
      * @summary `contributionID`.
+     * @description
+     *
+     * CPM Contribution Identity of the individual CPM Standalone Message, CPM
+     * File Transfer, or CPM Session (see OMA-TS-CPM_Conversation_Function [109]
+     * clause 5.3).
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly contributionID: RCSContributionID;
     /**
      * @summary `inReplyToContributionID`.
+     * @description
+     *
+     * InReplyTo-Contribution-ID identifying the Contribution-ID of the CPM
+     * Standalone Message, CPM File Transfer or CPM Session that is being
+     * replied to (see OMA-TS-CPM_Conversation_Function [109] clause 5.3). Shall
+     * be included if the InReplyTo-Contribution-ID header field is present for
+     * the message being reported.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly inReplyToContributionID: OPTIONAL<RCSContributionID>;
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * IMDN Message-ID of the individual message (see RFC 5438 [81]). Shall be
+     * included if present in the RCS message.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly messageID: OPTIONAL<IMDNMessageID>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the target’s location when available according to the
+     * location reporting type provisioned for the task.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `messagePayload`.
+     * @description
+     *
+     * One of the following payload types (other payload types may be added in
+     * future versions of the specification): - encapsulatedRCSPayload shall be
+     * chosen when the RCS message does not contain any unauthorized
+     * information.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.1.
+     *
      * @public
      * @readonly
      */

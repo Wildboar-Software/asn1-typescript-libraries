@@ -14,6 +14,12 @@ import { FiveGSSubscriberID, _decode_FiveGSSubscriberID, _encode_FiveGSSubscribe
  * @summary FiveGSSubscriberIDs
  * @description
  * 
+ * Contains the list of 5GS identifiers for a user. Shall be present when any
+ * 5GS identifiers are known at the NF where the POI is located or at the MDF.
+ *
+ * 3GPP TS 33.128, clause 8.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

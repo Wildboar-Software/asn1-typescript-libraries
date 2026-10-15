@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RDSAction
  * @description
  * 
+ * Action if RDS is used. Possible values: "ReservePort", "ReleasePort".
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,11 @@ enum _enum_for_RDSAction {
  * @summary RDSAction
  * @description
  * 
+ * Action if RDS is used. Possible values: "ReservePort", "ReleasePort".
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +58,11 @@ type RDSAction = _enum_for_RDSAction;
  * @summary RDSAction
  * @description
  * 
+ * Action if RDS is used. Possible values: "ReservePort", "ReleasePort".
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

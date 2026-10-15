@@ -7,6 +7,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCUserAccessPolicy
  * @description
  * 
+ * Identifies the action requested by the PTC target to the PTC user or group
+ * access policy: a) Allow Incoming PTC session request b) Block Incoming PTC
+ * session request c) Allow Auto Answer Mode d) Allow Override Manual Answer
+ * Mode - Report when action requested to the PTC user access policy. - Report
+ * when the PTC target attempts a change or queries the access control list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,6 +42,15 @@ enum _enum_for_PTCUserAccessPolicy {
  * @summary PTCUserAccessPolicy
  * @description
  * 
+ * Identifies the action requested by the PTC target to the PTC user or group
+ * access policy: a) Allow Incoming PTC session request b) Block Incoming PTC
+ * session request c) Allow Auto Answer Mode d) Allow Override Manual Answer
+ * Mode - Report when action requested to the PTC user access policy. - Report
+ * when the PTC target attempts a change or queries the access control list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +72,15 @@ type PTCUserAccessPolicy = _enum_for_PTCUserAccessPolicy;
  * @summary PTCUserAccessPolicy
  * @description
  * 
+ * Identifies the action requested by the PTC target to the PTC user or group
+ * access policy: a) Allow Incoming PTC session request b) Block Incoming PTC
+ * session request c) Allow Auto Answer Mode d) Allow Override Manual Answer
+ * Mode - Report when action requested to the PTC user access policy. - Report
+ * when the PTC target attempts a change or queries the access control list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

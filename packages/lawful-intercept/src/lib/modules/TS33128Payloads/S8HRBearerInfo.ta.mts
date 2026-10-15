@@ -25,6 +25,93 @@ import { S8HRMessageCause, _decode_S8HRMessageCause, _encode_S8HRMessageCause, _
  * @summary S8HRBearerInfo
  * @description
  * 
+ * The BBIFF-C present in the SGW-C and BBIFF present in the SGW shall generate
+ * the following xIRI for the purpose of S8HR LI when the prior conditions
+ * defined in clause 7.10.3.3.1 are met:
+ *
+ * - S8HRBearerInfo.
+ *
+ * The main purpose of the xIRI is to report the UE location and the SGW/SGW-C
+ * identity to the LMISF-IRI. This xIRI is generated for the following scenarios
+ * that apply to all inbound roaming UEs with home-routed roaming and using IMS
+ * services:
+ *
+ * - PDN connection is established with the creation of a default bearer for IMS
+ *   signalling.
+ *
+ * - Dedicated bearer is activated for the for IMS media.
+ *
+ * - Dedicated bearer is updated for IMS media.
+ *
+ * - Dedicated bearer is deactivated for IMS media.
+ *
+ * - PDN is disconnected.
+ *
+ * - SGW-C/SGW relocation.
+ *
+ * - New UE location due to UE requested or network initiated service request.
+ *
+ * - New UE location due to hand-over situations including 5GS to EPS handover.
+ *
+ * - New UE location due to tracking area updates or routing area updates.
+ *
+ * - HR LI is enabled with an established PDN connection with the creation of a
+ *   default bearer.
+ *
+ * In case the BBIFF-C was provisioned for a specific APN, the xIRI shall be
+ * generated only when the provisioned APN is involved.
+ *
+ * The exact trigger for the xIRI is subject to implementation, however, the
+ * following can be used as a general guidance observing the prior conditions
+ * listed in clause 7.10.3.3.1:
+ *
+ * - SGW-C/SGW receives a Create Session Response from the PGW-C/PGW and
+ *   forwards the same to the MME as a part of PDN connection establishment
+ *   procedures that creates the default bearer used for IMS signalling or as a
+ *   part of the handover procedures that results in the SGW-C/SGW relocation or
+ *   5GS to EPS relocation.
+ *
+ * - SGW-C/SGW receives a Create Session Response from the MME and forwards the
+ *   same to the PGW-C/PGW as a part of dedicated bearer activation procedure on
+ *   a PDN connection used for IMS media.
+ *
+ * - SGW-C/SGW receives an Update Bearer Response from MME and forwards the same
+ *   to the PGW-C/PGW as a part of bearer update procedures with or without the
+ *   bearer update QoS.
+ *
+ * - SGW-C/SGW receives a Delete Bearer Response from MME and forwards the same
+ *   to the PGW-C/PGW as a part of bearer deactivation procedure.
+ *
+ * - SGW-C/SGW receives a Delete Session Request from the MME and forwards the
+ *   same to the PGW-C/PGW as a part of PDN disconnection procedures. The
+ *   procedures potentially have the last known UE location.
+ *
+ * - SGW-C/SGW receives a Create Session Request from the MME and sends a Modify
+ *   Bearer Request to the PGW-C/PGW as a part of tracking area/routing area
+ *   update procedures with a change of SGW-C/SGW. The procedures potentially
+ *   have a new UE location.
+ *
+ * - SGW-C/SGW receives a Modify Bearer Request from the MME and sends the same
+ *   to the PGW-C/PGW as a part of Service Request handling procedures, or
+ *   hand-over procedures, or tracking area/routing area update procedures
+ *   without a change in the SGW-C/SGW. The procedures potentially have a new UE
+ *   location.
+ *
+ * - When an ActivateTask is received from the LIPF over LI_X1 (see clause
+ *   7.10.3.2.2) to enable the HR LI, the BBIFF-C/BBIFF present in the SGW-C/SGW
+ *   detects that a PDN connection with a default bearer used for IMS services
+ *   is already established for an inbound roaming UE with home-routed roaming.
+ *
+ * - NOTE: The sending of xIRI for each already established PDN connection may
+ *   result in a significant number of xIRI messages from the BBIFF-C/BBIFF to
+ *   the LMISF-IRI.
+ *
+ * The details of the xIRI S8HRBearerInfo record is defined in table
+ * 7.10.3.3.3-1 below.
+ *
+ * 3GPP TS 33.128, clause 7.10.3.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,48 +134,102 @@ export
 class S8HRBearerInfo {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the PDN connection on which a bearer is created.
+     *
+     * 3GPP TS 33.128, clause 7.10.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI associated with the PDN connection on which a bearer is created, if
+     * available.
+     *
+     * 3GPP TS 33.128, clause 7.10.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `bearerID`.
+     * @description
+     *
+     * The identity of the EPS bearer.
+     *
+     * 3GPP TS 33.128, clause 7.10.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly bearerID: EPSBearerID;
     /**
      * @summary `linkedBearerID`.
+     * @description
+     *
+     * The identity of the default bearer when the bearerID is for dedicated
+     * bearer.
+     *
+     * 3GPP TS 33.128, clause 7.10.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly linkedBearerID: OPTIONAL<EPSBearerID>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information provided by the MME.
+     *
+     * 3GPP TS 33.128, clause 7.10.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `aPN`.
+     * @description
+     *
+     * Packet Data Network to which the connection is being made, as defined in
+     * TS 23.003[19] clause 9A and described in TS 23.401 [50] clause 4.3.2.2.
+     * Applicable for PDN connection establishment. Shall be given in
+     * dotted-label presentation format as described in TS 23.003 [19] clause
+     * 9.1.
+     *
+     * 3GPP TS 33.128, clause 7.10.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly aPN: OPTIONAL<APN>;
     /**
      * @summary `sGWIPAddress`.
+     * @description
+     *
+     * IP Address of the SGW-C or SGW as applicable and when available.
+     *
+     * 3GPP TS 33.128, clause 7.10.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly sGWIPAddress: OPTIONAL<IPAddress>;
     /**
      * @summary `messageCause`.
+     * @description
+     *
+     * Included to indicate why the xIRI is generated (see table 7.10.3.3.3-2).
+     *
+     * 3GPP TS 33.128, clause 7.10.3.3.3.
+     *
      * @public
      * @readonly
      */

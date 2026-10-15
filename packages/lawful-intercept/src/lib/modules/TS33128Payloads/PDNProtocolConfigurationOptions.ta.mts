@@ -33,36 +33,90 @@ export
 class PDNProtocolConfigurationOptions {
     /**
      * @summary `requestPCO`.
+     * @description
+     *
+     * Shall be present if the Protocol Configuration Options IE is present in
+     * the request message. The value of this parameter shall contain a copy of
+     * the value field of the PCO IE of the request message (see TS 29.274 [87]
+     * clause 8.13 starting with octet 5).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly requestPCO: OPTIONAL<PDNPCO>;
     /**
      * @summary `requestAPCO`.
+     * @description
+     *
+     * Shall be present if the Additional Protocol Configuration Options IE is
+     * present in the request message. The value of this parameter shall contain
+     * a copy of the value field of the PCO IE of the request message (see TS
+     * 29.274 [87] clause 8.94 starting with octet 5).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly requestAPCO: OPTIONAL<PDNPCO>;
     /**
      * @summary `requestEPCO`.
+     * @description
+     *
+     * Shall be present if the Extended Protocol Configuration Options IE is
+     * present in the request message. The value of this parameter shall contain
+     * a copy of the value field of the PCO IE of the request message (see TS
+     * 29.274 [87] clause 8.128 starting with octet 5).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly requestEPCO: OPTIONAL<PDNPCO>;
     /**
      * @summary `responsePCO`.
+     * @description
+     *
+     * Shall be present if the Protocol Configuration Options IE is present in
+     * the response message. The value of this parameter shall contain a copy of
+     * the value field of the PCO IE of the response message (see TS 29.274 [87]
+     * clause 8.13 starting with octet 5).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly responsePCO: OPTIONAL<PDNPCO>;
     /**
      * @summary `responseAPCO`.
+     * @description
+     *
+     * Shall be present if the Additional Protocol Configuration Options IE is
+     * present in the response message. The value of this parameter shall
+     * contain a copy of the value field of the PCO IE of the response message
+     * (see TS 29.274 [87] clause 8.94 starting with octet 5).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly responseAPCO: OPTIONAL<PDNPCO>;
     /**
      * @summary `responseEPCO`.
+     * @description
+     *
+     * Shall be present if the Extended Protocol Configuration Options IE is
+     * present in the response message. The value of this parameter shall
+     * contain a copy of the value field of the PCO IE of the response message
+     * (see TS 29.274 [87] clause 8.128 starting with octet 5).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */

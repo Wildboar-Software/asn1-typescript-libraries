@@ -25,6 +25,71 @@ import { PTCTBReasonCode, _decode_PTCTBReasonCode, _encode_PTCTBReasonCode, _enu
  * @summary PTCFloorControl
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCFloorControl record when the IRI-POI present in the PTC server detects
+ * when the PTC target requests floor control (i.e. send media), when floor
+ * control is granted to PTC target, when floor control request from the PTC
+ * target is rejected/released, when the floor becomes open (e.g. idle), when
+ * the floor control request from the PTC target is queued, when the floor
+ * control request from the PTC target is dequeued, or when the floor control
+ * request is revoked. In addition, when the PTC chat group is the PTC target,
+ * the IRI-POI present in the PTC server hosting the PTC chat group shall
+ * generate an xIRI containing a PTCFloorControl record when the IRI-POI present
+ * in the PTC server detects any of the previously mentioned scenarios for all
+ * PTC participants participating in the PTC chat group session. Accordingly,
+ * the IRI-POI in the PTC server generates the xIRI when the following events
+ * are detected:
+ *
+ * - when the PTC server receives a TBCP Talk Burst Request from the PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, receives a TBCP Talk Burst Request from a PTC participant.
+ *
+ * - when the PTC server sends a TBCP Talk Burst Granted to a PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, sends a TBCP Talk Burst Granted to a PTC participant.
+ *
+ * - when the PTC server sends a TBCP Talk Burst Taken to a PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, sends a TBCP Talk Burst Taken to a PTC participant.
+ *
+ * - when the PTC server sends a TBCP Talk Burst Deny to a PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, sends a TBCP Talk Burst Deny to a PTC participant.
+ *
+ * - when the PTC server sends a TBCP Talk Burst Release to a PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, sends a TBCP Talk Burst Release to a PTC participant.
+ *
+ * - when the PTC server receives a TBCP Talk Burst Idle from a PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, receives a TBCP Talk Burst Idle from a PTC participant.
+ *
+ * - when the PTC server sends a TBCP Talk Burst Request Queue Status Response
+ *   to a PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, sends a TBCP Talk Burst Request Queue Status Response to a
+ *   PTC participant.
+ *
+ * - when the PTC server receives a TBCP Talk Burst Cancel from a PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, receives a TBCP Talk Burst Cancel from a PTC participant.
+ *
+ * - when the PTC server sends a TBCP Talk Burst Revoke to a PTC target.
+ *
+ * - when the PTC server hosting the PTC chat group, where the PTC chat group is
+ *   the PTC target, sends a TBCP Talk Burst Revoke to a PTC participant.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,60 +114,148 @@ export
 class PTCFloorControl {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN and PTCChatGroupID shall be provided for
+     * PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCDirection: Direction;
     /**
      * @summary `pTCSessioninfo`.
+     * @description
+     *
+     * Shall provide PTC session information such as PTC Session URI and PTC
+     * Session type (e.g. on-demand, pre-established, ad-hoc, pre-arranged,
+     * group session).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCSessioninfo: PTCSessionInfo;
     /**
      * @summary `pTCFloorActivity`.
+     * @description
+     *
+     * Sequence of: a) "TBCP_Request": Received by the PTC server to request
+     * permission for the PTC target or PTC participant to send a talk burst. b)
+     * "TBCP_Granted": Used by the PTC server to notify the PTC target or PTC
+     * participant that it has been granted permission to send a talk burst. c)
+     * "TBCP_Deny": Used by the PTC server to notify a PTC target or PTC
+     * participant that it has been denied permission to send a talk burst. d)
+     * "TBCP_Idle": Used by the PTC server to notify the PTC target or PTC
+     * participant that no one has the permission to send a Talk Burst at the
+     * moment and that it may accept the TBCP talk burst request message. e)
+     * "TBCP_Taken": Used by the PTC server to notify the PTC target or PTC
+     * participant that another PTC participant has been given permission to
+     * send a talk burst. f) "TBCP_Revoke": Used by the PTC server to revoke the
+     * media resource from the PTC target or PTC participant and can be used for
+     * pre-emption functionality but is also used by the system to prevent
+     * overly long use of the media resource. g) "TBCP_Queued": Indicates the
+     * request to talk is queued, if queued floor control is supported. Include
+     * identification of the PTC target or PTC participant that has the queued
+     * talk burst, if known. h) "TBCP_Release": Indicates the request to talk
+     * has completed.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCFloorActivity: PTCFloorActivity[];
     /**
      * @summary `pTCFloorSpeakerID`.
+     * @description
+     *
+     * Include identification of the PTC participant that has initiated the talk
+     * burst, if known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCFloorSpeakerID: OPTIONAL<PTCTargetInformation>;
     /**
      * @summary `pTCMaxTBTime`.
+     * @description
+     *
+     * Include the maximum duration value for the talk burst before the
+     * permission is revoked. This parameter is defined in seconds. Provide when
+     * known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCMaxTBTime: OPTIONAL<INTEGER>;
     /**
      * @summary `pTCQueuedFloorControl`.
+     * @description
+     *
+     * Indicates if queuing is supported by the PTC server and the PTC target's
+     * device.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCQueuedFloorControl: OPTIONAL<BOOLEAN>;
     /**
      * @summary `pTCQueuedPosition`.
+     * @description
+     *
+     * Include if queue position in the TBCP is detected by the IRI-POI.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCQueuedPosition: OPTIONAL<INTEGER>;
     /**
      * @summary `pTCTalkBurstPriority`.
+     * @description
+     *
+     * If more than one level of priority is supported, indicates the talk burst
+     * priority level of the PTC target.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */
     readonly pTCTalkBurstPriority: OPTIONAL<PTCTBPriorityLevel>;
     /**
      * @summary `pTCTalkBurstReason`.
+     * @description
+     *
+     * The reason for the denial or revoke of a Talk Burst. Provide when known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.14.
+     *
      * @public
      * @readonly
      */

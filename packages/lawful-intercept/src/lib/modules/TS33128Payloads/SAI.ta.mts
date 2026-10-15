@@ -17,6 +17,15 @@ import { SAC, _decode_SAC, _encode_SAC } from "../TS33128Payloads/SAC.ta.mjs";
  * @summary SAI
  * @description
  * 
+ * The Service Area Identifier (SAI) is used to identify an area consisting of
+ * one or more cells belonging to the same Location Area. Such an area is called
+ * a Service Area and can be used for indicating the location of a UE to the
+ * Core Network. The SAI is derived from the data present in the SAI information
+ * element defined in TS 23.003[19] clause 12.5.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.73.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +43,36 @@ export
 class SAI {
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * The PLMN Identity of the service area being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.73.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `lAC`.
+     * @description
+     *
+     * The Location Area Code of the service area being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.73.
+     *
      * @public
      * @readonly
      */
     readonly lAC: LAC;
     /**
      * @summary `sAC`.
+     * @description
+     *
+     * The Service Area Code of the service area being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.73.
+     *
      * @public
      * @readonly
      */

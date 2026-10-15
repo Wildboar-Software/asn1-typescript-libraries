@@ -32,18 +32,36 @@ export
 class RCSSIPSessionExchange {
     /**
      * @summary `sessionLeg`.
+     * @description
+     *
+     * Identifies the leg of the RCS session.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.4.
+     *
      * @public
      * @readonly
      */
     readonly sessionLeg: RCSSessionLeg;
     /**
      * @summary `sIPRequest`.
+     * @description
+     *
+     * Contains the request sent or received.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.4.
+     *
      * @public
      * @readonly
      */
     readonly sIPRequest: IMSPayload;
     /**
      * @summary `sIPResponse`.
+     * @description
+     *
+     * Contains the response received or sent.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.4.
+     *
      * @public
      * @readonly
      */

@@ -14,6 +14,18 @@ import { CCPDU, _decode_CCPDU, _encode_CCPDU } from "../TS33128Payloads/CCPDU.ta
  * @summary CCPayload
  * @description
  * 
+ * - NOTE: ETSI TS 102 232-1 [9] specifies in clause 6.4 a transport layer based
+ *   on TCP. However, based on agreement between network operator and LEA, in
+ *   scenarios where it may not be possible to achieve the necessary LI data
+ *   rates based on the transport layer based on single TCP connection,
+ *   alternative profiles may be considered (e.g. based on UDP, multi path TCP
+ *   or other protocols). Any alternative profile needs to ensure that LI
+ *   reliability, security and completeness requirements as specified in TS
+ *   33.126 [3] are met.
+ *
+ * 3GPP TS 33.128, clause 5.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +42,26 @@ export
 class CCPayload {
     /**
      * @summary `cCPayloadOID`.
+     * @description
+     *
+     * Shall be populated with the value of the cCPayloadOID specified in the
+     * version of the ASN.1 used by the MDF3 to generate the CC record.
+     *
+     * 3GPP TS 33.128, clause 5.5.3.
+     *
      * @public
      * @readonly
      */
     readonly cCPayloadOID: RELATIVE_OID;
     /**
      * @summary `pDU`.
+     * @description
+     *
+     * Shall be populated as described in the relevant clause of the present
+     * document.
+     *
+     * 3GPP TS 33.128, clause 5.5.3.
+     *
      * @public
      * @readonly
      */

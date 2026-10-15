@@ -1,3 +1,16 @@
+/**
+ * Identifier-association records on LI_XER.
+ *
+ * The IEF in the AMF reports SUPI to 5G-GUTI association and
+ * de-association for every UE registered with that AMF. Each record is
+ * a BER-encoded `IEFMessage` carried over TLS to the ICF. Annex F
+ * points at module `TS33128IdentityAssociation` for these structures.
+ * Keepalive requests and responses use the same message.
+ *
+ * 3GPP TS 33.128 V19.8.0, clauses 5.9 and 6.2.2A; Annex F.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ */
+
 export {
     AdditionalCGIs,
     _decode_AdditionalCGIs,

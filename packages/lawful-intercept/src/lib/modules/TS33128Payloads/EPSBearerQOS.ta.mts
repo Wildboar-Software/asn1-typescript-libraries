@@ -37,36 +37,89 @@ export
 class EPSBearerQOS {
     /**
      * @summary `qCI`.
+     * @description
+     *
+     * Shall include the QCI for the bearer if present in the Request or
+     * response (see TS 29.274 [87] clauses 7.2.1, 7.2.2, 7.2.3 and 7.2.15), or
+     * known in the context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly qCI: OPTIONAL<QCI>;
     /**
      * @summary `maximumUplinkBitRate`.
+     * @description
+     *
+     * Shall include the maximum uplink bitrate encoded as kilobits per second
+     * in binary value (see TS 29.274 [87] clause 8.15) if present in the
+     * Request or response (see TS 29.274 [87] clauses 7.2.1, 7.2.2, 7.2.3 and
+     * 7.2.15), or known in the context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly maximumUplinkBitRate: OPTIONAL<BitrateBinKBPS>;
     /**
      * @summary `maximumDownlinkBitRate`.
+     * @description
+     *
+     * Shall include the maximum downlink bitrate encoded as kilobits per second
+     * in binary value (see TS 29.274 [87] clause 8.15) if present in the
+     * Request or response (see TS 29.274 [87] clauses 7.2.1, 7.2.2, 7.2.3 and
+     * 7.2.15), or known in the context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly maximumDownlinkBitRate: OPTIONAL<BitrateBinKBPS>;
     /**
      * @summary `guaranteedUplinkBitRate`.
+     * @description
+     *
+     * Shall include the guaranteed uplink bitrate encoded as kilobits per
+     * second in binary value (see TS 29.274 [87] clause 8.15) if present in the
+     * Request or response (see TS 29.274 [87] clauses 7.2.1, 7.2.2, 7.2.3 and
+     * 7.2.15), or known in the context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly guaranteedUplinkBitRate: OPTIONAL<BitrateBinKBPS>;
     /**
      * @summary `guaranteedDownlinkBitRate`.
+     * @description
+     *
+     * Shall include the guaranteed downlink bitrate encoded as kilobits per
+     * second in binary value (see TS 29.274 [87] clause 8.15) if present in the
+     * Request or response (see TS 29.274 [87] clauses 7.2.1, 7.2.2, 7.2.3 and
+     * 7.2.15), or known in the context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly guaranteedDownlinkBitRate: OPTIONAL<BitrateBinKBPS>;
     /**
      * @summary `priorityLevel`.
+     * @description
+     *
+     * Shall include the priority level assigned to the bearer as an integer
+     * value (see TS 29.274 [87] clause 8.15) if present in the Request or
+     * response (see TS 29.274 [87] clauses 7.2.1, 7.2.2, 7.2.3 and 7.2.15), or
+     * known in the context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.2.
+     *
      * @public
      * @readonly
      */

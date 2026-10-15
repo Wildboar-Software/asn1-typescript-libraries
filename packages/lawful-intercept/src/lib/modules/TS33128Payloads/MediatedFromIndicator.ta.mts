@@ -12,6 +12,16 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MediatedFromIndicator
  * @description
  * 
+ * Shall be present if the IRI is generated from an xIRIPayload received over
+ * LI_X2 and the release and version of the xIRIPayload.relativeOID is different
+ * from the release and version of the IRIPayload.relativeOID. The
+ * IRIPayload.mediatedFromIndicator.xIRIRelativeOID choice shall be used and set
+ * to the value of the xIRIPayload.relativeOID of the xIRI message used to
+ * generate the IRI message.
+ *
+ * 3GPP TS 33.128, clause 5.5.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

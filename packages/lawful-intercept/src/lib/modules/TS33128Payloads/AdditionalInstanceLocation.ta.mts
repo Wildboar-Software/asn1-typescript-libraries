@@ -31,12 +31,25 @@ export
 class AdditionalInstanceLocation {
     /**
      * @summary `instance`.
+     * @description
+     *
+     * Identifies the endpoint for which the location applies.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.5.
+     *
      * @public
      * @readonly
      */
     readonly instance: SIPEndpoint;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include locations of the additional endpoints registered to the
+     * target RCS user.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.6.2.5.
+     *
      * @public
      * @readonly
      */

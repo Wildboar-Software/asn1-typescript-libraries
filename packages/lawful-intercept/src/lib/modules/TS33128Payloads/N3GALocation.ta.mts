@@ -36,6 +36,12 @@ import { TransportProtocol, _decode_TransportProtocol, _encode_TransportProtocol
  * @summary N3GALocation
  * @description
  * 
+ * The N3GALocation type is derived from the data present in the N3gaLocation
+ * type defined in TS 29.571 [17] clause 5.4.4.10.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,78 +69,174 @@ export
 class N3GALocation {
     /**
      * @summary `tAI`.
+     * @description
+     *
+     * Tracking Area Identity used by the target for non-3GPP access. Shall be
+     * present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly tAI: OPTIONAL<TAI>;
     /**
      * @summary `n3IWFID`.
+     * @description
+     *
+     * This field shall contain the N3IWF identifier received over NGAP if it is
+     * known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly n3IWFID: OPTIONAL<N3IWFIDNGAP>;
     /**
      * @summary `uEIPAddr`.
+     * @description
+     *
+     * The IP address used by the UE on the non-3GPP access network. Shall be
+     * present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly uEIPAddr: OPTIONAL<IPAddr>;
     /**
      * @summary `portNumber`.
+     * @description
+     *
+     * The source port number used by the UE for non-3GPP access. Shall be
+     * present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly portNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `tNAPID`.
+     * @description
+     *
+     * The TNAP Identifier for the TNAP in use by the UE. Shall be present if
+     * known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly tNAPID: OPTIONAL<TNAPID>;
     /**
      * @summary `tWAPID`.
+     * @description
+     *
+     * The TWAP Identifier for the TWAP in use by the UE. Shall be present if
+     * known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly tWAPID: OPTIONAL<TWAPID>;
     /**
      * @summary `hFCNodeID`.
+     * @description
+     *
+     * This field shall contain the HFC Node Identifier received over NGAP. It
+     * shall be present for a 5G-CRG/FN-CRG accessing the 5GC via wireline
+     * access network.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly hFCNodeID: OPTIONAL<HFCNodeID>;
     /**
      * @summary `gLI`.
+     * @description
+     *
+     * The Global Line Identifier for the access network being used by the UE.
+     * It shall be present for a 5G-BRG/FN-BRG accessing the 5GC via wireline
+     * access network.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly gLI: OPTIONAL<GLI>;
     /**
      * @summary `w5GBANLineType`.
+     * @description
+     *
+     * Indicates the type of wireline access. Shall be present if known at the
+     * NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly w5GBANLineType: OPTIONAL<W5GBANLineType>;
     /**
      * @summary `gCI`.
+     * @description
+     *
+     * The Global Cable Identifier for the wireline access device used by the UE
+     * to access the core network. Shall be present if known at the NF where the
+     * POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly gCI: OPTIONAL<GCI>;
     /**
      * @summary `ageOfLocationInfo`.
+     * @description
+     *
+     * The value represents the elapsed time in minutes since the last network
+     * contact of the mobile station. Shall be present if known at the NF where
+     * the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly ageOfLocationInfo: OPTIONAL<AgeOfLocation>;
     /**
      * @summary `uELocationTimestamp`.
+     * @description
+     *
+     * The value represents the UTC time when the NRLocation information was
+     * acquired. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */
     readonly uELocationTimestamp: OPTIONAL<Timestamp>;
     /**
      * @summary `protocol`.
+     * @description
+     *
+     * Indicates the transport protocol used by the UE to access the core
+     * network via a trusted or untrusted non-3GPP access and NAT is detected.
+     * Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.7.
+     *
      * @public
      * @readonly
      */

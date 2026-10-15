@@ -15,6 +15,13 @@ import { RATFrequencySelectionPriority, _decode_RATFrequencySelectionPriority, _
  * @summary TargetNSSAIInfo
  * @description
  * 
+ * The TargetNSSAIInfo contains the Target NSSAI and Index to RAT/Frequency
+ * Selection Priority. Derived from Target NSSAI Information IE defined in TS
+ * 38.413 [23] clause 9.3.1.229.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,25 @@ export
 class TargetNSSAIInfo {
     /**
      * @summary `targetSNSSAIList`.
+     * @description
+     *
+     * Contains the Target S-NSSAI list. Derived from the Target NSSAI IE
+     * specified in TS 38.413 [23] clause 9.3.1.230.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.7.
+     *
      * @public
      * @readonly
      */
     readonly targetSNSSAIList: NSSAI;
     /**
      * @summary `rATFrequencySelectionPriority`.
+     * @description
+     *
+     * Used to define local configuration for RRM strategies.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.7.
+     *
      * @public
      * @readonly
      */

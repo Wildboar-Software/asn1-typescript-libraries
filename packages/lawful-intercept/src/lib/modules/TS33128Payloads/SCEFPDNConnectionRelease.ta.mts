@@ -24,6 +24,43 @@ import { SCEFReleaseCause, _decode_SCEFReleaseCause, _encode_SCEFReleaseCause, _
  * @summary SCEFPDNConnectionRelease
  * @description
  * 
+ * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+ * SCEFPDNConnectionRelease record when the IRI-POI present in the SCEF/IWK-SCEF
+ * detects that a Non-IP PDN Connection needs to be released for the target UE.
+ * The IRI-POI present in the SCEF/IWK-SCEF shall generate the xIRI for the
+ * following events:
+ *
+ * - SCEF/IWK-SCEF informs MME that the Non-IP PDN Connection for NIDD is no
+ *   longer valid using T6a Connection Management Request with User-Identifier
+ *   AVP including the set of identities of the UE, i.e. IMSI/MSISDN/External
+ *   Identifier matching the target Identifier and Connection-Action AVP set to
+ *   CONNECTION_RELEASE. SCEF initiates the release of the Non-IP PDN connection
+ *   when it is notified by the HSS about the end of NIDD authorization for the
+ *   target UE (see TS 29.128 [62] clause 5.8).
+ *
+ * - SCEF sends a T6a Connection Management Answer to MME to confirm the T6a
+ *   Connection Management Request received with User-Identifier AVP including
+ *   the set of identities of the UE, i.e. IMSI/MSISDN/External Identifier
+ *   matching the target Identifier and with Action-Action AVP set to
+ *   CONNECTION_RELEASE (see TS 29.128 [62] clause 5.7).
+ *
+ * - SCEF informs IWK-SCEF that the Non-IP PDN Connection for NIDD is no longer
+ *   valid using T6a Connection Management Request with User-Identifier AVP
+ *   including the set of identities of the UE, i.e. IMSI/MSISDN/External
+ *   Identifier matching the target Identifier and Connection-Action AVP set to
+ *   CONNECTION_RELEASE (see TS 29.128 [62] clause 5.8).
+ *
+ * - SCEF sends a T7 Connection Management Answer to IWK-SCEF to confirm the T7
+ *   Connection Management Request with User-Identifier AVP including the set of
+ *   identities of the UE, i.e. IMSI/MSISDN/External Identifier matching the
+ *   target Identifier and with Action AVP set to CONNECTION_RELEASE (see TS
+ *   29.128 [62] clause 5.7).
+ *
+ * Table 7.8.2.3-1 gives the LI_HI2 IRI message type for this record as END.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,54 +84,111 @@ export
 class SCEFPDNConnectionRelease {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the Non-IP PDN Connection of the target UE (e.g. as
+     * provided by the MME in the associated Connection Management Request).
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN associated with the PDN Connection if available.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier associated with the PDN Connection if available,
+     * defined as NAI in ASN.1.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `ePSBearerID`.
+     * @description
+     *
+     * Identity of the EPS bearer that MME allocates to the Non-IP PDN
+     * Connection.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly ePSBearerID: EPSBearerID;
     /**
      * @summary `timeOfFirstPacket`.
+     * @description
+     *
+     * Time of first packet for the PDN Connection.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly timeOfFirstPacket: OPTIONAL<Timestamp>;
     /**
      * @summary `timeOfLastPacket`.
+     * @description
+     *
+     * Time of last packet for the PDN Connection.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly timeOfLastPacket: OPTIONAL<Timestamp>;
     /**
      * @summary `uplinkVolume`.
+     * @description
+     *
+     * Number of uplink octets for the PDN Connection.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly uplinkVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `downlinkVolume`.
+     * @description
+     *
+     * Number of downlink octets for the PDN Connection.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */
     readonly downlinkVolume: OPTIONAL<INTEGER>;
     /**
      * @summary `releaseCause`.
+     * @description
+     *
+     * Reason for PDN Connection release.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.4.
+     *
      * @public
      * @readonly
      */

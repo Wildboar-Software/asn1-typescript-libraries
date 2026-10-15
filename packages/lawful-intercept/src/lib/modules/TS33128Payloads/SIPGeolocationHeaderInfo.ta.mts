@@ -13,6 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SIPGeolocationHeaderInfo
  * @description
  * 
+ * The SIPGeolocationHeaderInfo type is used to report information derived from
+ * the Geolocation-header of a SIP message.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.59.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +35,30 @@ export
 class SIPGeolocationHeaderInfo {
     /**
      * @summary `locationValue`.
+     * @description
+     *
+     * Contains information from the locationValue header parameter of the
+     * Geolocation-header of the SIP Message (see IETF RFC 6442 [107] clause
+     * 4.1). One instance of SIPGeolocationValue shall be used for each
+     * locationValue header parameter.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.59.
+     *
      * @public
      * @readonly
      */
     readonly locationValue: UTF8String;
     /**
      * @summary `cidInfo`.
+     * @description
+     *
+     * Contains the contents of the MIME bodypart if the locationValue is a
+     * cid-url (see IETF RFC 6442 [107] clauses 4.1 and 5). The value of the
+     * cidInfo field shall include the headers and contents of the MIME bodypart
+     * indicated by the cid-url.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.59.
+     *
      * @public
      * @readonly
      */

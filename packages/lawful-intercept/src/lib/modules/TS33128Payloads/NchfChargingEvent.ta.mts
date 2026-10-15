@@ -40,26 +40,187 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_NchfChargingEvent {
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the 5G data connectivity specific
+     * information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     pDUSessionChargingInformation = 1,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the SMS specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     sMSChargingInformation = 2,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds holds the Exposure Function Northbound
+     * API specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     nEFChargingInformation = 3,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the 5G registration specific
+     * information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     registrationChargingInformation = 4,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the 5G N2 connection specific
+     * information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     n2ConnectionChargingInformation = 5,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the 5G Location reporting specific
+     * information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     locationReportingChargingInformation = 6,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the network slice information, which is
+     * reported to the CHF.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     nSPAChargingInformation = 7,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the Network Slice Management (NSM)
+     * specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     nSMChargingInformation = 8,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the MMTel specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     mMTelChargingInformation = 9,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the IMS specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     iMSChargingInformation = 10,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the edge enabling infrastructure
+     * resource usage charging specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     edgeInfrastructureUsageChargingInformation = 11,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the EAS deployment charging specific
+     * information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     eASDeploymentChargingInformation = 12,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the charging information the edge
+     * enabling services directly provided by EES.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     directEdgeEnablingServiceChargingInformation = 13,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the charging information of the edge
+     * enabling services exposed.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     exposedEdgeEnablingServiceChargingInformation = 14,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the 5G ProSe specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     proSeChargingInformation = 15,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the MMS specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     mMSChargingInformation = 16,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the 5G MBS specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     mBSSessionChargingInformation = 17,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the TSN specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     tSNChargingInformation = 18,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the Network slice admission control
+     * charging specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     nSACFChargingInformation = 19,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the Network slice-specific
+     * authentication and authorization (NSSAA) specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     nSSAAChargingInformation = 20,
+    /**
+     * @description
+     *
+     * Indicates the charging data holds the Ranging and Sidelink Positioning
+     * specific information.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.7.
+     */
     rangingSLChargingInformation = 21,
 }
 
@@ -141,6 +302,13 @@ const NchfChargingEvent = _enum_for_NchfChargingEvent;
 
 /**
  * @summary NchfChargingEvent_pDUSessionChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G data connectivity specific
+ * information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +317,13 @@ const NchfChargingEvent_pDUSessionChargingInformation: NchfChargingEvent = NchfC
 
 /**
  * @summary pDUSessionChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G data connectivity specific
+ * information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +332,12 @@ const pDUSessionChargingInformation: NchfChargingEvent = NchfChargingEvent.pDUSe
 
 /**
  * @summary NchfChargingEvent_sMSChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the SMS specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +346,12 @@ const NchfChargingEvent_sMSChargingInformation: NchfChargingEvent = NchfCharging
 
 /**
  * @summary sMSChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the SMS specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +360,13 @@ const sMSChargingInformation: NchfChargingEvent = NchfChargingEvent.sMSChargingI
 
 /**
  * @summary NchfChargingEvent_nEFChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds holds the Exposure Function Northbound API
+ * specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +375,13 @@ const NchfChargingEvent_nEFChargingInformation: NchfChargingEvent = NchfCharging
 
 /**
  * @summary nEFChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds holds the Exposure Function Northbound API
+ * specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +390,12 @@ const nEFChargingInformation: NchfChargingEvent = NchfChargingEvent.nEFChargingI
 
 /**
  * @summary NchfChargingEvent_registrationChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G registration specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -197,6 +404,12 @@ const NchfChargingEvent_registrationChargingInformation: NchfChargingEvent = Nch
 
 /**
  * @summary registrationChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G registration specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +418,12 @@ const registrationChargingInformation: NchfChargingEvent = NchfChargingEvent.reg
 
 /**
  * @summary NchfChargingEvent_n2ConnectionChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G N2 connection specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -213,6 +432,12 @@ const NchfChargingEvent_n2ConnectionChargingInformation: NchfChargingEvent = Nch
 
 /**
  * @summary n2ConnectionChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G N2 connection specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +446,13 @@ const n2ConnectionChargingInformation: NchfChargingEvent = NchfChargingEvent.n2C
 
 /**
  * @summary NchfChargingEvent_locationReportingChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G Location reporting specific
+ * information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -229,6 +461,13 @@ const NchfChargingEvent_locationReportingChargingInformation: NchfChargingEvent 
 
 /**
  * @summary locationReportingChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G Location reporting specific
+ * information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +476,13 @@ const locationReportingChargingInformation: NchfChargingEvent = NchfChargingEven
 
 /**
  * @summary NchfChargingEvent_nSPAChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the network slice information, which is
+ * reported to the CHF.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -245,6 +491,13 @@ const NchfChargingEvent_nSPAChargingInformation: NchfChargingEvent = NchfChargin
 
 /**
  * @summary nSPAChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the network slice information, which is
+ * reported to the CHF.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -253,6 +506,13 @@ const nSPAChargingInformation: NchfChargingEvent = NchfChargingEvent.nSPAChargin
 
 /**
  * @summary NchfChargingEvent_nSMChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the Network Slice Management (NSM) specific
+ * information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -261,6 +521,13 @@ const NchfChargingEvent_nSMChargingInformation: NchfChargingEvent = NchfCharging
 
 /**
  * @summary nSMChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the Network Slice Management (NSM) specific
+ * information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -269,6 +536,12 @@ const nSMChargingInformation: NchfChargingEvent = NchfChargingEvent.nSMChargingI
 
 /**
  * @summary NchfChargingEvent_mMTelChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the MMTel specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -277,6 +550,12 @@ const NchfChargingEvent_mMTelChargingInformation: NchfChargingEvent = NchfChargi
 
 /**
  * @summary mMTelChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the MMTel specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -285,6 +564,12 @@ const mMTelChargingInformation: NchfChargingEvent = NchfChargingEvent.mMTelCharg
 
 /**
  * @summary NchfChargingEvent_iMSChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the IMS specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -293,6 +578,12 @@ const NchfChargingEvent_iMSChargingInformation: NchfChargingEvent = NchfCharging
 
 /**
  * @summary iMSChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the IMS specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -301,6 +592,13 @@ const iMSChargingInformation: NchfChargingEvent = NchfChargingEvent.iMSChargingI
 
 /**
  * @summary NchfChargingEvent_edgeInfrastructureUsageChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the edge enabling infrastructure resource
+ * usage charging specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -309,6 +607,13 @@ const NchfChargingEvent_edgeInfrastructureUsageChargingInformation: NchfCharging
 
 /**
  * @summary edgeInfrastructureUsageChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the edge enabling infrastructure resource
+ * usage charging specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -317,6 +622,13 @@ const edgeInfrastructureUsageChargingInformation: NchfChargingEvent = NchfChargi
 
 /**
  * @summary NchfChargingEvent_eASDeploymentChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the EAS deployment charging specific
+ * information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -325,6 +637,13 @@ const NchfChargingEvent_eASDeploymentChargingInformation: NchfChargingEvent = Nc
 
 /**
  * @summary eASDeploymentChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the EAS deployment charging specific
+ * information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -333,6 +652,13 @@ const eASDeploymentChargingInformation: NchfChargingEvent = NchfChargingEvent.eA
 
 /**
  * @summary NchfChargingEvent_directEdgeEnablingServiceChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the charging information the edge enabling
+ * services directly provided by EES.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -341,6 +667,13 @@ const NchfChargingEvent_directEdgeEnablingServiceChargingInformation: NchfChargi
 
 /**
  * @summary directEdgeEnablingServiceChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the charging information the edge enabling
+ * services directly provided by EES.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -349,6 +682,13 @@ const directEdgeEnablingServiceChargingInformation: NchfChargingEvent = NchfChar
 
 /**
  * @summary NchfChargingEvent_exposedEdgeEnablingServiceChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the charging information of the edge
+ * enabling services exposed.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -357,6 +697,13 @@ const NchfChargingEvent_exposedEdgeEnablingServiceChargingInformation: NchfCharg
 
 /**
  * @summary exposedEdgeEnablingServiceChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the charging information of the edge
+ * enabling services exposed.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -365,6 +712,12 @@ const exposedEdgeEnablingServiceChargingInformation: NchfChargingEvent = NchfCha
 
 /**
  * @summary NchfChargingEvent_proSeChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G ProSe specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -373,6 +726,12 @@ const NchfChargingEvent_proSeChargingInformation: NchfChargingEvent = NchfChargi
 
 /**
  * @summary proSeChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G ProSe specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -381,6 +740,12 @@ const proSeChargingInformation: NchfChargingEvent = NchfChargingEvent.proSeCharg
 
 /**
  * @summary NchfChargingEvent_mMSChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the MMS specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -389,6 +754,12 @@ const NchfChargingEvent_mMSChargingInformation: NchfChargingEvent = NchfCharging
 
 /**
  * @summary mMSChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the MMS specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -397,6 +768,12 @@ const mMSChargingInformation: NchfChargingEvent = NchfChargingEvent.mMSChargingI
 
 /**
  * @summary NchfChargingEvent_mBSSessionChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G MBS specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -405,6 +782,12 @@ const NchfChargingEvent_mBSSessionChargingInformation: NchfChargingEvent = NchfC
 
 /**
  * @summary mBSSessionChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the 5G MBS specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -413,6 +796,12 @@ const mBSSessionChargingInformation: NchfChargingEvent = NchfChargingEvent.mBSSe
 
 /**
  * @summary NchfChargingEvent_tSNChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the TSN specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -421,6 +810,12 @@ const NchfChargingEvent_tSNChargingInformation: NchfChargingEvent = NchfCharging
 
 /**
  * @summary tSNChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the TSN specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -429,6 +824,13 @@ const tSNChargingInformation: NchfChargingEvent = NchfChargingEvent.tSNChargingI
 
 /**
  * @summary NchfChargingEvent_nSACFChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the Network slice admission control
+ * charging specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -437,6 +839,13 @@ const NchfChargingEvent_nSACFChargingInformation: NchfChargingEvent = NchfChargi
 
 /**
  * @summary nSACFChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the Network slice admission control
+ * charging specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -445,6 +854,13 @@ const nSACFChargingInformation: NchfChargingEvent = NchfChargingEvent.nSACFCharg
 
 /**
  * @summary NchfChargingEvent_nSSAAChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the Network slice-specific authentication
+ * and authorization (NSSAA) specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -453,6 +869,13 @@ const NchfChargingEvent_nSSAAChargingInformation: NchfChargingEvent = NchfChargi
 
 /**
  * @summary nSSAAChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the Network slice-specific authentication
+ * and authorization (NSSAA) specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -461,6 +884,13 @@ const nSSAAChargingInformation: NchfChargingEvent = NchfChargingEvent.nSSAACharg
 
 /**
  * @summary NchfChargingEvent_rangingSLChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the Ranging and Sidelink Positioning
+ * specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */
@@ -469,6 +899,13 @@ const NchfChargingEvent_rangingSLChargingInformation: NchfChargingEvent = NchfCh
 
 /**
  * @summary rangingSLChargingInformation
+ * @description
+ *
+ * Indicates the charging data holds the Ranging and Sidelink Positioning
+ * specific information.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.7.
+ *
  * @constant
  * @type {number}
  */

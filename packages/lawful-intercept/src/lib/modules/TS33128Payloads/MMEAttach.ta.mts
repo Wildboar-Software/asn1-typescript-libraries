@@ -51,6 +51,27 @@ import { EPSNetworkPolicy, _decode_EPSNetworkPolicy, _encode_EPSNetworkPolicy } 
  * @summary MMEAttach
  * @description
  * 
+ * The IRI-POI in the MME shall generate an xIRI containing an MMEAttach record
+ * when the IRI-POI present in the MME detects that a UE matching one of the
+ * target identifiers provided via LI_X1 has successfully attached to EPS.
+ * Accordingly, the IRI-POI in the MME generates the xIRI when the following
+ * event is detected:
+ *
+ * - MME sends an S1: ATTACH ACCEPT message to the target UE and the UE EPS
+ *   Mobility Management (EMM) state within the MME is changed to
+ *   EMM-REGISTERED.
+ *
+ * NOTE 1: List shall be included each time there is a change to the
+ * registration area.
+ *
+ * NOTE 2: The location information was sent as a userLocation
+ * (Location.locationInfo.userLocation) between versions 18.0.0 and 18.2.0 of
+ * the present document. The location information may also be present in this
+ * field for backwards compatibility.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -86,108 +107,250 @@ export
 class MMEAttach {
     /**
      * @summary `attachType`.
+     * @description
+     *
+     * Specifies the type of EPS Attach, see TS 24.301 [51] clause 9.9.3.11.
+     * This is derived from the information received from the UE in the Attach
+     * Request message.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly attachType: EPSAttachType;
     /**
      * @summary `attachResult`.
+     * @description
+     *
+     * Specifies the result of the attach procedure, see TS 24.301 [51] clause
+     * 9.9.3.10.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly attachResult: EPSAttachResult;
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the registration.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI associated with the registration, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * mSISDN associated with the registration, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * GUTI provided as outcome of initial attach or used in other cases, see TS
+     * 24.301 [51] clause 5.5.1.2.4.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<GUTI>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information determined by the network during the registration or
+     * known at the MME, if available. Shall include all location information
+     * for the target UE available at the MME encoded as one of the following
+     * (see NOTE 2):
+     *
+     * - as a Location.fourGLocationInfo.ePSLocationInformation parameter.
+     *
+     * - as a Location.fourGLocationInfo.ePSUserLocationInformation parameter.
+     *   If available, other parameters reportable via Location shall be
+     *   included. NOTE 2: The location information was sent as a userLocation
+     *   (Location.locationInfo.userLocation) between versions 18.0.0 and 18.2.0
+     *   of the present document. The location information may also be present
+     *   in this field for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `ePSTAIList`.
+     * @description
+     *
+     * List of tracking areas associated with the registration area within which
+     * the UE is currently registered, see TS 24.301 [51] clause 9.9.3.33. (see
+     * NOTE 1) NOTE 1: List shall be included each time there is a change to the
+     * registration area.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly ePSTAIList: OPTIONAL<TAIList>;
     /**
      * @summary `sMSServiceStatus`.
+     * @description
+     *
+     * Indicates the availability of SMS Services. Shall be provided if present
+     * in the ATTACH ACCEPT.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sMSServiceStatus: OPTIONAL<EPSSMSServiceStatus>;
     /**
      * @summary `oldGUTI`.
+     * @description
+     *
+     * Old GUTI used in the registration, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly oldGUTI: OPTIONAL<GUTI>;
     /**
      * @summary `eMM5GRegStatus`.
+     * @description
+     *
+     * UE Status, if provided in the REGISTRATION REQUEST message, see TS 24.501
+     * [13] clause 9.11.3.56.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eMM5GRegStatus: OPTIONAL<EMM5GMMStatus>;
     /**
      * @summary `pagingRestrictionIndicator`.
+     * @description
+     *
+     * Indicates if paging is restricted or the type of paging allowed. Include
+     * if sent in the Attach Request message. Encoded per TS 24.301 [51] clause
+     * 9.9.3.66, omitting the first two octets.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pagingRestrictionIndicator: OPTIONAL<PagingRestrictionIndicator>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * RAT Type shall be present if known by the MME. RAT Type is determined by
+     * the MME during the attach procedure. See TS 23.401 [50] clause 4.3.5.3.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<RATType>;
     /**
      * @summary `rRCEstablishmentCause`.
+     * @description
+     *
+     * Indicates the reason for UE RRC Connection Establishment. This parameter
+     * shall be populated with information provided by the serving RAN during
+     * NAS establishment in the Initial UE Message. See TS 36.413 [38] clause
+     * 9.2.1.3a.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly rRCEstablishmentCause: OPTIONAL<RRCEstablishmentCause>;
     /**
      * @summary `deprecatedS1Information`.
+     * @description
+     *
+     * No longer used in the present version of the present document. The
+     * S1Information in the location structure shall be used instead.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedS1Information: OPTIONAL<S1Information>;
     /**
      * @summary `nASTransportInitialInformation`.
+     * @description
+     *
+     * Provides information related to the NAS Transport setup for the target UE
+     * over the S1 interface. Shall be included when received by the MME per TS
+     * 36.413 [38]. This parameter is only conditional for backward
+     * compatibility. See TS 36.413 [38] clause 9.1.7.1.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly nASTransportInitialInformation: OPTIONAL<EPSNASTransportInitialInformation>;
     /**
      * @summary `equivalentPLMNList`.
+     * @description
+     *
+     * Provides a list of equivalent PLMNs in the Attach Accept message. See
+     * clause TS 24.301 [51] clauses 8.2.1.1 and 8.2.1.8.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly equivalentPLMNList: OPTIONAL<PLMNList>;
     /**
      * @summary `ePSUENetworkCapability`.
+     * @description
+     *
+     * Shall contain the target UE network capability information octets sent in
+     * the Attach Request message, omitting the first two octets. Defined in TS
+     * 24.301 [51] clause 9.9.3.34.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
@@ -200,12 +363,29 @@ class MMEAttach {
     readonly initailRANUEContextSetup: OPTIONAL<EPSRANUEContext>;
     /**
      * @summary `mUSIMUERequestType`.
+     * @description
+     *
+     * Indicates a MUSIM UE has requested release of NAS signalling or has
+     * rejected paging. Include if sent in the REGISTRATION REQUEST message.
+     * Encoded per UE Request Type omitting the first two octets. See TS 24.301
+     * [51] clause 9.9.3.65.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */
     readonly mUSIMUERequestType: OPTIONAL<MUSIMUERequestType>;
     /**
      * @summary `ePSNetworkPolicy`.
+     * @description
+     *
+     * Indicates network policy information to the UE during attach or tracking
+     * area update procedures. Include if present in the ATTACH ACCEPT message.
+     * Encoded per Network policy type. See TS 24.301 [38] clause 9.9.3.52.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.3.
+     *
      * @public
      * @readonly
      */

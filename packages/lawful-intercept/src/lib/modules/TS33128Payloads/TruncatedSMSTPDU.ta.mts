@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TruncatedSMSTPDU
  * @description
  * 
+ * SM-TL PDU encoded per the PDUs defined in TS 23.040 [18] clause 9.2.2 but
+ * truncated to remove TP-User-Data (TS 23.040 [18] clause 9.2.3.24).
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

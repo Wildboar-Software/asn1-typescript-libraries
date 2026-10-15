@@ -29,8 +29,27 @@ import { IdentityToken, _decode_IdentityToken, _encode_IdentityToken } from "../
  */
 export
 type PINEIdentity =
+    /**
+     * @description
+     *
+     * Identity assigned by the 5G PIN Server to the PIN client, if available.
+     * (3GPP TS 33.128, clause 7.18.2.2.)
+     */
     { pINClientID: PINClientID } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The GPSI type is derived from the data present in the Generic Public
+     * Subscription Identifier type defined in TS 23.003 [19] clause 28.8. (3GPP
+     * TS 33.128, clause 8.3.7.)
+     */
     | { gPSI: GPSI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Represents the identity token of the PIN client, if available. (3GPP TS
+     * 33.128, clause 7.18.2.2.)
+     */
     | { identityToken: IdentityToken } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

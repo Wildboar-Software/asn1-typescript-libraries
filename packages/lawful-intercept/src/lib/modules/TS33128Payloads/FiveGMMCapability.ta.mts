@@ -12,6 +12,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FiveGMMCapability
  * @description
  * 
+ * The purpose of the FiveGMMCapability type is to provide information
+ * concerning aspects of the UE related to the 5GCN or interworking with the
+ * EPS. Encoded per TS 24.501 [13] clause 9.11.3.1 omitting the first two
+ * octets.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.1A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

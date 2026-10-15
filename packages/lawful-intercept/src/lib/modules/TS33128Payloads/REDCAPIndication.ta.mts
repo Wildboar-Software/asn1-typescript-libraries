@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary REDCAPIndication
  * @description
  * 
+ * Indicates that the UE is a Reduced Capability (RedCap) UE.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,6 +32,11 @@ enum _enum_for_REDCAPIndication {
  * @summary REDCAPIndication
  * @description
  * 
+ * Indicates that the UE is a Reduced Capability (RedCap) UE.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,6 +55,11 @@ type REDCAPIndication = _enum_for_REDCAPIndication;
  * @summary REDCAPIndication
  * @description
  * 
+ * Indicates that the UE is a Reduced Capability (RedCap) UE.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

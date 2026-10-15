@@ -21,6 +21,43 @@ import { RFBand, _decode_RFBand, _encode_RFBand } from "../TS33128Payloads/RFBan
  * @summary CellInformation
  * @description
  * 
+ * The cell site information is encoded as the cellSiteInformation ASN.1
+ * parameter and delivered either within the location field of an IRI message
+ * carrying the respective cell identity, or in a stand-alone IRI message
+ * containing the MDFCellSiteReport record.
+ *
+ * The cell radio related information is encoded as the
+ * cellRadioRelatedInformation ASN.1 parameter and delivered with the cell
+ * information parameter.
+ *
+ * The MDF2 shall use the IRI message containing the MDFCellSiteReport record to
+ * convey cell site information and cell radio related information retrieved
+ * asynchronously with the sending of the IRI message that caused the retrieval.
+ * The MDFCellSiteReport record shall be delivered as an IRI REPORT (see ETSI TS
+ * 102 232-1 [9] clause 5.2.10) and allocated the same CIN, if any, as the IRI
+ * message that caused the retrieval.
+ *
+ * When the cell site information and cell radio related information are readily
+ * available at MDF2 or are retrieved synchronously (i.e. blocking the sending
+ * of the IRI message until the retrieval is complete), the cell site
+ * information shall be conveyed within the location field of the IRI message
+ * that caused the retrieval.
+ *
+ * The cell site information and associated cell radio related information for
+ * multiple cell identities can be delivered to the LEMF within an IRI message
+ * that carries the respective cell identities or within the IRI message
+ * containing the MDFCellSiteReport record (see Annex A).
+ *
+ * The MDF2 generating the IRI message MDFCellSiteReport shall set the Payload
+ * Direction field in the PDU header to not applicable (Direction Value 5, see
+ * ETSI TS 103 221-2 [8] clause 5.2.6).
+ *
+ * The MDFCellSiteReport consists of a sequence of cellInformation as described
+ * in the following tables.
+ *
+ * 3GPP TS 33.128, clause 7.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +77,62 @@ export
 class CellInformation {
     /**
      * @summary `rANCGI`.
+     * @description
+     *
+     * The RAN CGI for the cell being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly rANCGI: RANCGI;
     /**
      * @summary `cellSiteinformation`.
+     * @description
+     *
+     * Contains location information for the cell site being reported. Shall be
+     * present if known at the NF where the POI is located or at the MDF.
+     *
+     * 3GPP TS 33.128, clause 7.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly cellSiteinformation: OPTIONAL<CellSiteInformation>;
     /**
      * @summary `timeOfLocation`.
+     * @description
+     *
+     * The time the cell site information was determined.
+     *
+     * 3GPP TS 33.128, clause 7.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly timeOfLocation: OPTIONAL<Timestamp>;
     /**
      * @summary `cellRadioRelatedInformation`.
+     * @description
+     *
+     * Radio Information of reported cell to include either NG Information, F1
+     * Information, or S1 Information.
+     *
+     * 3GPP TS 33.128, clause 7.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly cellRadioRelatedInformation: OPTIONAL<CellRadioRelatedInformation>;
     /**
      * @summary `band`.
+     * @description
+     *
+     * RFBand of reported cell.
+     *
+     * 3GPP TS 33.128, clause 7.3.2.2.
+     *
      * @public
      * @readonly
      */

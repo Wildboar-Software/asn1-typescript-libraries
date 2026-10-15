@@ -31,12 +31,25 @@ export
 class ModifiedSIPMessage {
     /**
      * @summary `modifiedSIPContent`.
+     * @description
+     *
+     * The relevant SIP message with the unauthorised information removed as
+     * described in clause 7.12.9.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.7.
+     *
      * @public
      * @readonly
      */
     readonly modifiedSIPContent: SIPMessage;
     /**
      * @summary `modifications`.
+     * @description
+     *
+     * Contains the list of modifications done to the modifiedSIPContent.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.7.
+     *
      * @public
      * @readonly
      */

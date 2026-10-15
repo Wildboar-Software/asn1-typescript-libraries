@@ -29,12 +29,26 @@ export
 class ApplicationUEInformation {
     /**
      * @summary `deviceVendor`.
+     * @description
+     *
+     * Indicates the device vendor of the terminal device requesting the root
+     * application (see TS 24.392 [166] clause 6.2.1.2.1).
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     *
      * @public
      * @readonly
      */
     readonly deviceVendor: UTF8String;
     /**
      * @summary `deviceType`.
+     * @description
+     *
+     * Indicates the model fo the terminal device requesting the root
+     * application (see TS 24.392 [166] clause 6.2.1.2.1).
+     *
+     * 3GPP TS 33.128, clause 7.12.4.2.8.
+     *
      * @public
      * @readonly
      */

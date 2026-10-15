@@ -21,6 +21,28 @@ import { DeviceTriggerDeliveryResult, _decode_DeviceTriggerDeliveryResult, _enco
  * @summary SCEFDeviceTriggerReportNotify
  * @description
  * 
+ * The IRI-POI in the SCEF shall generate an xIRI containing a
+ * SCEFDeviceTriggerReportNotify record when the IRI-POI present in the SCEF
+ * detects that the SCEF has returned a Device triggering delivery report
+ * notification to the SCS/AS with a cause value indicating the trigger delivery
+ * outcome (e.g. succeeded, unknown or failed).
+ *
+ * Accordingly, the IRI-POI in the SCEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - SCEF sends a Device triggering delivery report notification to inform the
+ *   SCS/AS on the delivery outcome of the device trigger (see TS 29.122 [63]
+ *   clause 5.7).
+ *
+ * - SM-SC sends a T4 Delivery-Report-Request (DRR) to the SCEF with
+ *   User-Identifier matching the IMSI of the target UE as specified in TS
+ *   29.337 [60] clause 5.2.2.
+ *
+ * Table 7.8.3.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.8.3.1.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +62,86 @@ export
 class SCEFDeviceTriggerReportNotify {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.5.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.5.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.5.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `triggerId`.
+     * @description
+     *
+     * Identity of the corresponding Device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.5.
+     *
      * @public
      * @readonly
      */
     readonly triggerId: TriggerID;
     /**
      * @summary `deviceTriggerDeliveryResult`.
+     * @description
+     *
+     * Delivery result represents the result of the delivery of a device
+     * triggering request:
+     *
+     * - SUCCESS: The value indicates that the device action request was
+     *   successfully completed.
+     *
+     * - UNKNOWN: The value indicates any unspecified errors.
+     *
+     * - FAILURE: The value indicates that this trigger encountered a delivery
+     *   error and is deemed permanently undeliverable.
+     *
+     * - TRIGGERED: The value indicates that Device triggering request is
+     *   accepted by the SCEF.
+     *
+     * - EXPIRED: The value indicates that the validity period expired before
+     *   the trigger could be delivered.
+     *
+     * - UNCONFIRMED: The value indicates that the delivery of the device action
+     *   request is not confirmed.
+     *
+     * - REPLACED: The value indicates that the device triggering replacement
+     *   request is accepted by the SCEF.
+     *
+     * - TERMINATE: The SCEF includes this value in the response for a
+     *   successful device triggering cancellation request. The value indicates
+     *   that the delivery of the device action request is terminated by the
+     *   SCS/AS.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.5.
+     *
      * @public
      * @readonly
      */

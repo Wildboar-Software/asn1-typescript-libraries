@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FailureResponse
  * @description
  * 
+ * Cause information when the registration, registration update or
+ * deregistration has failed, if available.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,6 +53,12 @@ enum _enum_for_FailureResponse {
  * @summary FailureResponse
  * @description
  * 
+ * Cause information when the registration, registration update or
+ * deregistration has failed, if available.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -75,6 +87,12 @@ type FailureResponse = _enum_for_FailureResponse;
  * @summary FailureResponse
  * @description
  * 
+ * Cause information when the registration, registration update or
+ * deregistration has failed, if available.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

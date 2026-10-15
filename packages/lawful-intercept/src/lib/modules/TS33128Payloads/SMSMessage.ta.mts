@@ -31,6 +31,87 @@ import { SMSRPMessageReference, _decode_SMSRPMessageReference, _encode_SMSRPMess
  * @summary SMSMessage
  * @description
  * 
+ * The IRI-POI in the SMSF shall generate an xIRI containing an SMSMessage
+ * record for the following cases:
+ *
+ * SMS-MO case:
+ *
+ * - When a target UE originates an SMS message or when any UE originates an SMS
+ *   message destined to a target non-local ID.
+ *
+ * SMS-MT case:
+ *
+ * - When an SMS message delivery to a target UE is attempted or when an SMS
+ *   message delivery originated from a target non-local ID is attempted to any
+ *   UE.
+ *
+ * - When an SMS message is successfully delivered to a target UE or when an SMS
+ *   message originated from a target non-local ID is successfully delivered to
+ *   any UE.
+ *
+ * The SMS-MT case can also apply to the scenario when a receipt of SMS delivery
+ * from the far end is delivered successfully to the target UE or when a receipt
+ * of SMS delivery from a target non-Local ID is successfully delivered to the
+ * originating UE.
+ *
+ * The IRI-POI present in the SMSF shall generate the xIRI containing the
+ * SMSMessage record when it detects following events:
+ *
+ * - The SMSF receives an SMCP message CP-DATA_RP-DATA [SMS-SUBMIT, SMS-COMMAND]
+ *   (via AMF in Nsmsf_SMService_UplinkSMS message) from a target UE.
+ *
+ * - The SMSF receives an SMCP message CP-DATA_RP-DATA [SMS-SUBMIT] (via AMF in
+ *   Nsmsf_SMService_UplinkSMS message) from any UE with TP-DA field within the
+ *   SMS-SUBMIT containing a target non-Local ID and SMSF returns the SMCP:
+ *   CP-ACK to that originating UE.
+ *
+ * - The SMSF receives an SMCP message CP-DATA_RP-DATA [SMS-COMMAND] (via AMF in
+ *   Nsmsf_SMService_UplinkSMS message) from any UE with TP-DA field within the
+ *   SMS-COMMAND containing a target non-Local ID and SMSF returns the SMCP:
+ *   CP-ACK to that originating UE.
+ *
+ * - The SMSF receives a TCAP message MAP MT-FORWARD-SHORT-MESSAGE Request
+ *   [SMS-DELIVER, SMS-STATUS-REPORT] destined to a target UE.
+ *
+ * - The SMSF receives a TCAP message MAP MT-FORWARD-SHORT-MESSAGE Request
+ *   [SMS-DELIVER] destined to any UE with the TP-OA field within the
+ *   SMS-DELIVER containing a target non-Local ID.
+ *
+ * - The SMSF receives a TCAP message MAP MT-FORWARD-SHORT-MESSAGE Request
+ *   [SMS-STATUS-REPORT] destined to any UE with the TP-RA field within the
+ *   SMS-STATUS-REPORT containing a target non-Local ID.
+ *
+ * The IRI-POI present in the SMSF shall generate the xIRI containing the
+ * SMSReport record when it detects following events:
+ *
+ * - The SMSF sends a SMCP message CP-DATA_RP-ACK [SMS-SUBMIT-REPORT] (via AMF
+ *   in Namf_ Communication_N1N2MessageTransfer message) in response to a
+ *   previously intercepted CP-DATA_RP-DATA.
+ *
+ * - The SMSF sends a SMCP message CP-DATA_RP-ERROR [SMS-SUBMIT-REPORT] (via AMF
+ *   in Namf_ Communication_N1N2MessageTransfer message) in response to a
+ *   previously intercepted CP-DATA_RP-DATA.
+ *
+ * - The SMSF sends a TCAP message MAP MT-FORWARD-SHORT-MESSAGE Response
+ *   [SMS-DELIVER-REPORT] in response to a previously intercepted MAP
+ *   MT-FORWARD-SHORT-MESSAGE Request.
+ *
+ * - NOTE 1: In the above-mentioned descriptions, the requirements of target
+ *   Non-Local ID do not apply when both originating and terminating users of an
+ *   SMS message are served by the same CSP. The method used to identify a
+ *   target non-Local ID is different from the method used to identify a local
+ *   target ID.
+ *
+ * If the IRI-POI is provisioned with the TruncateTPUserData parameter included
+ * and the IRI-POI is generating xIRI for the SMS-SUBMIT type (TS 23.040 [18]
+ * clause 9.2.2.2) or SMS-DELIVER type (TS 23.040 [18] clause 9.2.2.1) TPDUs,
+ * the IRI-POI shall use the sMSTPDUData.redactedSMSTPDU choice (as described in
+ * table 6.2.5.3-3), otherwise, the IRI-POI shall use the sMSTPDUData.sMSTPDU
+ * choice.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,66 +137,144 @@ export
 class SMSMessage {
     /**
      * @summary `originatingSMSParty`.
+     * @description
+     *
+     * Identity of the originating SMS party. See NOTE 2.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly originatingSMSParty: SMSParty;
     /**
      * @summary `terminatingSMSParty`.
+     * @description
+     *
+     * Identity of the terminating SMS party. See NOTE 3.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly terminatingSMSParty: SMSParty;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Direction of the SMS with respect to the target. See NOTE 4.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly direction: Direction;
     /**
      * @summary `linkTransferStatus`.
+     * @description
+     *
+     * Indicates whether the SMSF sent the TPDU to the next network element. See
+     * NOTE 5.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly linkTransferStatus: SMSTransferStatus;
     /**
      * @summary `otherMessage`.
+     * @description
+     *
+     * In the event of a server-initiated transfer, indicates whether the server
+     * will send another SMS. May be omitted if the transfer is
+     * target-initiated. See NOTE 6.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly otherMessage: OPTIONAL<SMSOtherMessageIndication>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information associated with the target sending or receiving the
+     * SMS, if available and authorised. See NOTE 7. Shall be encoded using the
+     * Location.locationInfo.userLocation parameter. If available, other
+     * parameters reportable via Location shall be included.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `peerNFAddress`.
+     * @description
+     *
+     * Address of the other network function (SMS-GMSC/IWMSC/SMS-Router)
+     * involved in the communication of the SMS, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly peerNFAddress: OPTIONAL<SMSNFAddress>;
     /**
      * @summary `peerNFType`.
+     * @description
+     *
+     * Type of the other network function (SMS-GMSC/IWMSC/SMS-Router) involved
+     * in the communication of the SMS, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly peerNFType: OPTIONAL<SMSNFType>;
     /**
      * @summary `sMSTPDUData`.
+     * @description
+     *
+     * See table 6.2.5.3-3. Shall be provided. This parameter is conditional
+     * only for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly sMSTPDUData: OPTIONAL<SMSTPDUData>;
     /**
      * @summary `messageType`.
+     * @description
+     *
+     * See table 6.2.5.3-4. Shall be provided. This parameter is conditional
+     * only for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */
     readonly messageType: OPTIONAL<SMSMessageType>;
     /**
      * @summary `rPMessageReference`.
+     * @description
+     *
+     * The SM-RL Message Reference of the message per TS 24.011 [46] clause 7.3.
+     * Shall be provided. This parameter is conditional only for backwards
+     * compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.2.5.3.
+     *
      * @public
      * @readonly
      */

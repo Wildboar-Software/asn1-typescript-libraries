@@ -17,6 +17,13 @@ import { Usage, _decode_Usage, _encode_Usage, _enum_for_Usage } from "../TS33128
  * @summary GNSSPositioningMethodAndUsage
  * @description
  * 
+ * The GNSSPositioningMethodAndUsage type is derived from the data present in
+ * the GNSSPositioningMethodAndUsage type defined in TS 29.572 [24] clause
+ * 6.1.6.2.16.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.42.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,41 @@ export
 class GNSSPositioningMethodAndUsage {
     /**
      * @summary `mode`.
+     * @description
+     *
+     * Indicates the mode of the location measurement from the related
+     * positioning method. Shall be encoded as described in TS 29.572 [24]
+     * clause 6.1.6.3.7.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.42.
+     *
      * @public
      * @readonly
      */
     readonly mode: PositioningMode;
     /**
      * @summary `gNSS`.
+     * @description
+     *
+     * Indicates the related GNSS positioning method. Shall be encoded as
+     * described in TS 29.572 [24] clause 6.1.6.3.8.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.42.
+     *
      * @public
      * @readonly
      */
     readonly gNSS: GNSSID;
     /**
      * @summary `usage`.
+     * @description
+     *
+     * Indicates the usage of the location measurement from the related
+     * positioning method. Shall be encoded as described in TS 29.572 [24]
+     * clause 6.1.6.3.9.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.42.
+     *
      * @public
      * @readonly
      */

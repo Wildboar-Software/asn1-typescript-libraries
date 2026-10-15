@@ -11,6 +11,12 @@ import { PFDDataForApp, _decode_PFDDataForApp, _encode_PFDDataForApp } from "../
  * @summary PFDDataForApps
  * @description
  * 
+ * Represents a set of associations between application identifier and packet
+ * flow descriptions (PFDs), if available.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

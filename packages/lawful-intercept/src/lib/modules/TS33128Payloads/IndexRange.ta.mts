@@ -29,12 +29,24 @@ export
 class IndexRange {
     /**
      * @summary `start`.
+     * @description
+     *
+     * Indicates the location where the modification starts. The first octet,
+     * character, or bit of the portion of the message that is being modified is
+     * referred to as 1.
+     *
      * @public
      * @readonly
      */
     readonly start: INTEGER;
     /**
      * @summary `end`.
+     * @description
+     *
+     * Indicates the location where the modification ends. The first octet,
+     * character, or bit of the portion of the message that is being modified is
+     * referred to as 1.
+     *
      * @public
      * @readonly
      */

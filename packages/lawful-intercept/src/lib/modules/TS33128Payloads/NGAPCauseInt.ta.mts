@@ -15,6 +15,13 @@ import { NGAPCauseValueInt, _decode_NGAPCauseValueInt, _encode_NGAPCauseValueInt
  * @summary NGAPCauseInt
  * @description
  * 
+ * Indicates the NGAP cause for the requested SM context release (see TS 29.502
+ * [16] clause 6.1.6.2.6). Shall be derived as described in TS 29.571 [17]
+ * clause 5.4.4.12.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

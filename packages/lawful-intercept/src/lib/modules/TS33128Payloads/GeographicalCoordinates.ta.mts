@@ -14,6 +14,17 @@ import { OGCURN, _decode_OGCURN, _encode_OGCURN } from "../TS33128Payloads/OGCUR
  * @summary GeographicalCoordinates
  * @description
  * 
+ * The GeographicalCoordinates type is derived from the data present in the
+ * GeographicalCoordinates type defined in TS 29.572 [24] clause 6.1.6.2.4.
+ *
+ * NOTE: The order of the latitude and longitude parameters in the locally
+ * defined GeographicalCoordinates type are different than the order of the
+ * parameters defined by the GeographicalCoordinates type defined in TS 29.572
+ * [24] clause 6.1.6.2.4.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +42,37 @@ export
 class GeographicalCoordinates {
     /**
      * @summary `latitude`.
+     * @description
+     *
+     * Shall contain a string representation of the latitude.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.12.
+     *
      * @public
      * @readonly
      */
     readonly latitude: UTF8String;
     /**
      * @summary `longitude`.
+     * @description
+     *
+     * Shall contain a string representation of the longitude.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.12.
+     *
      * @public
      * @readonly
      */
     readonly longitude: UTF8String;
     /**
      * @summary `mapDatumInformation`.
+     * @description
+     *
+     * The reference datum used for the GeographicalCoordinates. Shall be
+     * present if known by the operator.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.12.
+     *
      * @public
      * @readonly
      */

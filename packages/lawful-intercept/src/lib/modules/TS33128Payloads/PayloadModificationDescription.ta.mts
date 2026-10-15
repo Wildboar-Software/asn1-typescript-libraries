@@ -15,6 +15,11 @@ import { ModificationType, _decode_ModificationType, _encode_ModificationType } 
  * @summary PayloadModificationDescription
  * @description
  * 
+ * The PayloadModificationDescription shall be used to describe redactions
+ * performed on a payload.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +36,22 @@ export
 class PayloadModificationDescription {
     /**
      * @summary `modificationLocation`.
+     * @description
+     *
+     * Contains criteria used to identify where the information redacted from
+     * the encapsulated payload was located within the payload.
+     *
      * @public
      * @readonly
      */
     readonly modificationLocation: ModificationLocation;
     /**
      * @summary `modificationType`.
+     * @description
+     *
+     * Contains details on the method used to redact the information from the
+     * encapsulated payload.
+     *
      * @public
      * @readonly
      */

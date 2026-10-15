@@ -43,10 +43,41 @@ export
 type MMSPartyID =
     { e164Number: E164Number } /* CHOICE_ALT_ROOT */
     | { emailAddress: EmailAddress } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from the International Mobile Subscription Identity defined in TS
+     * 23.003 [19] clause 2.1 and clause 2.2. (3GPP TS 33.128, clause 8.3.3.)
+     */
     | { iMSI: IMSI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * IMPU of the target, if used for the service (see NOTE). (3GPP TS 33.128,
+     * clause 7.3.1.4.)
+     */
     | { iMPU: IMPU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * IMPI of the target. (3GPP TS 33.128, clause 7.20.2.1.2.)
+     */
     | { iMPI: IMPI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The SUPI type is derived from the data present in the Subscription
+     * Permanent Identifier type defined in TS 23.003 [19] clause 2.2A. (3GPP TS
+     * 33.128, clause 8.3.4.)
+     */
     | { sUPI: SUPI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The GPSI type is derived from the data present in the Generic Public
+     * Subscription Identifier type defined in TS 23.003 [19] clause 28.8. (3GPP
+     * TS 33.128, clause 8.3.7.)
+     */
     | { gPSI: GPSI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SIPAccessInfo
  * @description
  * 
+ * Contains the contents of the access-info parameter of the specified Header
+ * Field of the SIP Message. See TS 24.229 [74] clauses 7.2A.4.2 and 7.2A.4.3.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

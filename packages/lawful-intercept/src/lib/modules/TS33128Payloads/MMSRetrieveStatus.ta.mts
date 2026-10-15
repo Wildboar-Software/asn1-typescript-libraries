@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSRetrieveStatus
  * @description
  * 
+ * MMS specific status. It is used by the recipient MMS Proxy-Relay to inform
+ * the recipient MMS Client about errors, if any that occurred during the
+ * preceding retrieval operation. Include if sent by the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +48,13 @@ enum _enum_for_MMSRetrieveStatus {
  * @summary MMSRetrieveStatus
  * @description
  * 
+ * MMS specific status. It is used by the recipient MMS Proxy-Relay to inform
+ * the recipient MMS Client about errors, if any that occurred during the
+ * preceding retrieval operation. Include if sent by the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +80,13 @@ type MMSRetrieveStatus = _enum_for_MMSRetrieveStatus;
  * @summary MMSRetrieveStatus
  * @description
  * 
+ * MMS specific status. It is used by the recipient MMS Proxy-Relay to inform
+ * the recipient MMS Client about errors, if any that occurred during the
+ * preceding retrieval operation. Include if sent by the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

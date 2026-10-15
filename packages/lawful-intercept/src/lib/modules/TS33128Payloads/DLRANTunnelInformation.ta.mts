@@ -33,24 +33,56 @@ export
 class DLRANTunnelInformation {
     /**
      * @summary `dLQOSFlowTunnelInformation`.
+     * @description
+     *
+     * Shall include the F-TEID NG-RAN endpoint of the NG-U transport bearer
+     * together with associated QoS flows (see TS 38.413 [23] clause 9.3.4.2 and
+     * TS 29.502 [16] clause 6.1.6.2.39).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly dLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformation>;
     /**
      * @summary `additionalDLQOSFlowTunnelInformation`.
+     * @description
+     *
+     * Shall include the F-TEID NG-RAN endpoint of any additional NG-U transport
+     * bearers together with associated QoS flows (see TS 38.413 [23] clause
+     * 9.3.4.2 and TS 29.502 [16] clause 6.1.6.2.39).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly additionalDLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformationList>;
     /**
      * @summary `redundantDLQOSFlowTunnelInformation`.
+     * @description
+     *
+     * Shall include the F-TEID NG-RAN endpoint of redundant NG-U transport
+     * bearers together with associated QoS flows (see TS 38.413 [23] clause
+     * 9.3.4.2 and TS 29.502 [16] clause 6.1.6.2.39).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly redundantDLQOSFlowTunnelInformation: OPTIONAL<QOSFlowTunnelInformationList>;
     /**
      * @summary `additionalredundantDLQOSFlowTunnelInformation`.
+     * @description
+     *
+     * Shall include the F-TEID NG-RAN endpoint of any additional redundant NG-U
+     * transport bearers together with associated QoS flows (see TS 38.413 [23]
+     * clause 9.3.4.2 and TS 29.502 [16] clause 6.1.6.2.39).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */

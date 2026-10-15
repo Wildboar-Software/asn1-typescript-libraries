@@ -23,6 +23,26 @@ import { AForASSessionWithQoSResponseCode, _decode_AForASSessionWithQoSResponseC
  * @summary SCEFASSessionWithQoSProvision
  * @description
  * 
+ * The IRI-POI in the SCEF shall generate an xIRI containing a
+ * SCEFASSessionWithQoSProvision record when the IRI-POI present in the SCEF
+ * detects that an SCS/AS has requested the SCEF to provide, update or revoke a
+ * specific QoS for an AS session.
+ *
+ * Accordingly, the IRI-POI in the SCEF generates the xIRI when any of the
+ * following events is detected (see TS 29.122 [63] clause 5.14):
+ *
+ * - SCEF returns an On-demand QoS Response in response to On-demand QoS Request
+ *   received from an SCS/AS to create (POST)/update (PUT or PATCH)/revoke
+ *   (DELETE) a specific QoS for an AS session related to a target UE.
+ *
+ * NOTE: At least one of the MSISDN or External Identifier fields shall be
+ * present.
+ *
+ * Table 7.8.6.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.8.6.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,42 +64,98 @@ export
 class SCEFASSessionWithQoSProvision {
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN of the target UE the AS session with required QoS applies to, if
+     * available (see NOTE). NOTE: At least one of the MSISDN or External
+     * Identifier fields shall be present.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier of the target UE the AS session with required QoS
+     * applies to, if available (see NOTE). NOTE: At least one of the MSISDN or
+     * External Identifier fields shall be present.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `sCSASID`.
+     * @description
+     *
+     * SCS/AS identity requesting AS session with required QoS.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sCSASID: SCSASID;
     /**
      * @summary `aSSessionWithQoSOpType`.
+     * @description
+     *
+     * Type of operation for AS session with required QoS: POST to provision,
+     * PUT and PATCH to update and DELETE to revoke.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aSSessionWithQoSOpType: AForASSessionWithQoSOpType;
     /**
      * @summary `aSSessionWithQoSSubscription`.
+     * @description
+     *
+     * Includes an ASSessionWithQoSSubscription resource according to TS 29.122
+     * [63] clause A.14. The SBIReference for this parameter shall be populated
+     * with
+     * ‘TS29122_AsSessionWithQoS.yaml#/components/schemas/AsSessionWithQoSSubscription'.
+     * Present only if the aSSessionWithQoSOpType is set to "POST" or "PUT".
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aSSessionWithQoSSubscription: OPTIONAL<SBIType>;
     /**
      * @summary `aSSessionWithQoSSubscriptionPatch`.
+     * @description
+     *
+     * Includes a ASSessionWithQoSSubscriptionPatch resource according to TS
+     * 29.122 [63] clause A.14. The SBIReference for this parameter shall be
+     * populated with
+     * ‘TS29122_AsSessionWithQoS.yaml#/components/schemas/AsSessionWithQoSSubscriptionPatch'.
+     * Present only if the aSSessionWithQoSOpType is set to "PATCH".
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aSSessionWithQoSSubscriptionPatch: OPTIONAL<SBIType>;
     /**
      * @summary `aSSessionWithQoSResponseCode`.
+     * @description
+     *
+     * Identifies the response code associated to the ASSessionWithQoS operation
+     * executed by the SCEF.
+     *
+     * 3GPP TS 33.128, clause 7.8.6.1.2.
+     *
      * @public
      * @readonly
      */

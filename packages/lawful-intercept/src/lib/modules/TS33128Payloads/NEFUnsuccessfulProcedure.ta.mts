@@ -29,6 +29,42 @@ import { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs
  * @summary NEFUnsuccessfulProcedure
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing an
+ * NEFUnsuccessfulProcedure record when the IRI-POI present in the NEF detects
+ * an unsuccessful procedure or error condition for a UE matching one of the
+ * target identifiers provided via LI_X1.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when one of the
+ * following events are detected as described in TS 29.541 [57] clause 6.1.7.3
+ * and TS 24.250 [61] clause 5.4.2.6:
+ *
+ * - NEF sends a Nnef_SMContext_Create Reject message to the SMF with a reject
+ *   cause set to "USER_UNKNOWN" or "NIDD_CONFIGURATION_NOT_AVAILABLE".
+ *
+ * - NEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set to
+ *   "Port not free" in response to a RDS MANAGE PORT command sent by UE with an
+ *   "Action" field set to "Reserve port".
+ *
+ * - NEF receives a RDS MANAGE PORT Response from a UE with a "Status" field set
+ *   to "Port not free" in response to a RDS MANAGE PORT command sent by NEF
+ *   with an "Action" field set to "Reserve port".
+ *
+ * - NEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set to
+ *   "Port not associated with specified application" in response to a RDS
+ *   MANAGE PORT command sent by UE with an "Action" field set to "Release
+ *   port".
+ *
+ * - NEF receives a RDS MANAGE PORT Response from a UE with a "Status" field set
+ *   to "Port not associated with specified application" in response to a RDS
+ *   MANAGE PORT command sent by NEF with an "Action" field set to "Release
+ *   port".
+ *
+ * Table 7.7.2.3-1 gives the LI_HI2 IRI message type for this record as REPORT
+ * or CONTINUE.
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,36 +88,74 @@ export
 class NEFUnsuccessfulProcedure {
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Provides the value of the failure cause.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly failureCause: NEFFailureCause;
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the procedure.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used in the procedure, if available.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: PDUSessionID;
     /**
      * @summary `dNN`.
+     * @description
+     *
+     * Data Network Name associated with the target traffic, if available. Shall
+     * be given in dotted-label presentation format as described in TS 23.003
+     * [19] clause 9.1.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly dNN: OPTIONAL<DNN>;
     /**
      * @summary `sNSSAI`.
+     * @description
+     *
+     * Slice requested for the procedure, if available.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
      * @public
      * @readonly
      */
@@ -94,12 +168,25 @@ class NEFUnsuccessfulProcedure {
     readonly rDSDestinationPortNumber: RDSPortNumber;
     /**
      * @summary `applicationID`.
+     * @description
+     *
+     * Application associated with the RDS destination port number.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
      * @public
      * @readonly
      */
     readonly applicationID: ApplicationID;
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * Application Function identifier. If the Application Function identifier
+     * is not available, the placeholder value "Unknown" shall be used.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
      * @public
      * @readonly
      */

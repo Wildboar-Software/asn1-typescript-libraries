@@ -18,6 +18,22 @@ import { PTCRegistrationOutcome, _decode_PTCRegistrationOutcome, _encode_PTCRegi
  * @summary PTCRegistration
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCRegistration record when the IRI-POI present in the PTC server detects
+ * that a PTC target matching one of the PTC target identifiers, referenced in
+ * clause 7.5.1.1, provided via LI_X1 has registered, re-registered, or
+ * de-registered for PTC services , regardless of whether it is successful or
+ * unsuccessful. Accordingly, the IRI-POI in the PTC server generates the xIRI
+ * when the following event is detected:
+ *
+ * - when the PTC server receives a SIP REGISTER from a PTC target.
+ *
+ * NOTE: The pTCTargetInformation choice PTCChatGroupID is not applicable for
+ * this xIRI.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +52,50 @@ export
 class PTCRegistration {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN shall be provided for PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.1.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCServerURI`.
+     * @description
+     *
+     * Shall include the identity of the PTC server serving the PTC target.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.1.
+     *
      * @public
      * @readonly
      */
     readonly pTCServerURI: UTF8String;
     /**
      * @summary `pTCRegistrationRequest`.
+     * @description
+     *
+     * Identifies the type of registration request (register, re-register, or
+     * de-register).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.1.
+     *
      * @public
      * @readonly
      */
     readonly pTCRegistrationRequest: PTCRegistrationRequest;
     /**
      * @summary `pTCRegistrationOutcome`.
+     * @description
+     *
+     * Identifies success or failure of the registration.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.1.
+     *
      * @public
      * @readonly
      */

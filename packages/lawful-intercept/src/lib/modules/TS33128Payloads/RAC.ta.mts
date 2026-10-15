@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RAC
  * @description
  * 
+ * Routing Area Code identifying a routing area within a location area. Defined
+ * in TS 23.003 [19] clause 4.2.
+ *
+ * 3GPP TS 33.128, clause 8.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

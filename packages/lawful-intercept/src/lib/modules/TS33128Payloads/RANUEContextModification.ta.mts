@@ -30,6 +30,13 @@ import { MobileIABAuthorizedIndicator, _decode_MobileIABAuthorizedIndicator, _en
  * @summary RANUEContextModification
  * @description
  * 
+ * The purpose of the RANUEContextModification type is to provide information
+ * the AMF sends to the NG-RAN to request the modification of the UE context.
+ * Encoded per TS 38.413 [23] clause 9.2.2.7.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.15.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,72 +63,170 @@ export
 class RANUEContextModification {
     /**
      * @summary `aMFUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF uses to uniquely identify the target UE over the NG
+     * Interface, See TS 38.413 [23] clause 9.3.3.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly aMFUENGAPID: AMFUENGAPID;
     /**
      * @summary `rANUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF receives from the NG-RAN node uniquely identifying
+     * the target UE within the NG-RAN Node. See TS 38.413 [23] clause 9.3.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly rANUENGAPID: RANUENGAPID;
     /**
      * @summary `rATFrequencySelectionPriority`.
+     * @description
+     *
+     * Used to define local configuration for RRM strategies. Shall include when
+     * sent in the UE CONTEXT MODIFICATION REQUEST or when known at the NF. See
+     * TS 38.413 [23] 9.3.1.61.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly rATFrequencySelectionPriority: OPTIONAL<RATFrequencySelectionPriority>;
     /**
      * @summary `newAMFUENGAPID`.
+     * @description
+     *
+     * New Identity that the AMF uses to uniquely identify the target UE over
+     * the NG Interface. Shall include when sent in the UE CONTEXT MODIFICATION
+     * REQUEST or when known at the NF. See TS 38.413 [23] clause 9.3.3.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly newAMFUENGAPID: OPTIONAL<AMFUENGAPID>;
     /**
      * @summary `newGUAMI`.
+     * @description
+     *
+     * New serving AMF’s GUAMI, shall include when sent in the UE CONTEXT
+     * MODIFICATION REQUEST or when known at the NF. Format is defined in TS
+     * 29.571 [17] clause 5.3.4.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly newGUAMI: OPTIONAL<GUAMI>;
     /**
      * @summary `iABAuthorizedIndicator`.
+     * @description
+     *
+     * Provides information about the authorization status of the UE to operate
+     * as an IAB node. Shall include when sent in the UE CONTEXT MODIFICATION
+     * REQUEST or when known at the NF. See TS 38.413 [23] clause 9.3.1.129.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly iABAuthorizedIndicator: OPTIONAL<IABAuthorizedIndicator>;
     /**
      * @summary `nRV2XServicesAuthorization`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use the NR
+     * sidelink for V2X services. Shall include when sent in the UE CONTEXT
+     * MODIFICATION REQUEST or when known at the NF. See TS 38.413 [23] clause
+     * 9.3.1.146.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly nRV2XServicesAuthorization: OPTIONAL<NRV2XServicesAuthorization>;
     /**
      * @summary `lTEV2XServiceAuthorization`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use the LTE
+     * sidelink for V2X services. Shall include when sent in the UE CONTEXT
+     * MODIFICATION REQUEST or when known at the NF. See TS 38.413 [23] clause
+     * 9.3.1.147.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly lTEV2XServiceAuthorization: OPTIONAL<LTEV2XServiceAuthorization>;
     /**
      * @summary `rGLevelWirelineAccessCharacteristics`.
+     * @description
+     *
+     * Indicates the wireline access technology specific QoS information
+     * corresponding to a specific wireline access subscription. Shall Include
+     * when sent in the UE CONTEXT MODIFICATION REQUEST or when known at the NF.
+     * Specified in TS 23.316 [122] clause 4.5.1.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly rGLevelWirelineAccessCharacteristics: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `uERadioCapabilityID`.
+     * @description
+     *
+     * Identifier used to represent a set of UE radio capabilities. Shall
+     * include when sent in the UE CONTEXT MODIFICATION REQUEST or when known at
+     * the NF. Defined in TS 23.003 [19] clause 29.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapabilityID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `fiveGProSeAuthorizationIndication`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use ProSe
+     * services. Shall include when sent in the UE CONTEXT MODIFICATION REQUEST
+     * or when known at the NF. Defined in TS 38.413 [23] clause 9.3.1.233.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly fiveGProSeAuthorizationIndication: OPTIONAL<FiveGProSeAuthorizationIndication>;
     /**
      * @summary `mobileIABAuthorizedIndicator`.
+     * @description
+     *
+     * Provides information about the authorization status of the UE to operate
+     * as a mobile IAB node. Shall include when sent in the UE CONTEXT
+     * MODIFICATION REQUEST or when known at the NF. See TS 38.413 [23] clause
+     * 9.3.1.259.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.15.
+     *
      * @public
      * @readonly
      */

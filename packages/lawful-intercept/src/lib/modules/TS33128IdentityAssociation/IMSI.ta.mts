@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IMSI
  * @description
  * 
+ * Derived from the International Mobile Subscription Identity defined in TS
+ * 23.003 [19] clause 2.1 and clause 2.2.
+ *
+ * 3GPP TS 33.128, clause 8.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

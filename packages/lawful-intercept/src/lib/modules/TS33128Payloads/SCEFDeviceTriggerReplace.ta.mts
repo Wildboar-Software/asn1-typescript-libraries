@@ -28,6 +28,30 @@ import { PortNumber, _decode_PortNumber, _encode_PortNumber } from "../TS33128Pa
  * @summary SCEFDeviceTriggerReplace
  * @description
  * 
+ * The IRI-POI in the SCEF shall generate an xIRI containing a
+ * SCEFDeviceTriggerReplace record when the IRI-POI present in the SCEF detects
+ * that an SCS/AS has sent a Device triggering replacement for a previously sent
+ * Device triggering request to a UE matching one of the target identifiers
+ * provided via LI_X1 to the IRI POI in the SCEF. It replaces a previously
+ * submitted Device triggering request which has not yet been delivered to the
+ * UE.
+ *
+ * Accordingly, the IRI-POI in the SCEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - SCEF receives a Device triggering request (for a Device trigger
+ *   replacement) from an SCS/AS with MSISDN or External Identifier matching the
+ *   target identifier (See TS 29.122 [63] clause 5.7).
+ *
+ * - SCEF sends a T4 Device-Trigger-Request (DTR) to SM-SC with Trigger-Action
+ *   AVP set to REPLACE and User-Identifier AVP matching the IMSI of the target
+ *   UE as specified in TS 29.337 [60] clause 5.2.1.
+ *
+ * Table 7.8.3.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.8.3.1.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,60 +76,122 @@ export
 class SCEFDeviceTriggerReplace {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier used with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `triggerId`.
+     * @description
+     *
+     * Identity of the corresponding Device trigger to be replaced.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly triggerId: TriggerID;
     /**
      * @summary `sCSASID`.
+     * @description
+     *
+     * Identity of the SCS/AS replacing an existing Device trigger which has not
+     * been delivered yet to the device (e.g. because the device is unreachable)
+     * by a new Device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sCSASID: OPTIONAL<SCSASID>;
     /**
      * @summary `triggerPayload`.
+     * @description
+     *
+     * The device triggering payload.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly triggerPayload: OPTIONAL<TriggerPayload>;
     /**
      * @summary `validityPeriod`.
+     * @description
+     *
+     * The validity time in seconds for the specific action requested.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly validityPeriod: OPTIONAL<INTEGER>;
     /**
      * @summary `priorityDT`.
+     * @description
+     *
+     * The priority of the device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly priorityDT: OPTIONAL<PriorityDT>;
     /**
      * @summary `sourcePortId`.
+     * @description
+     *
+     * Port on the SCSAS which delivers the device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */
     readonly sourcePortId: OPTIONAL<PortNumber>;
     /**
      * @summary `destinationPortId`.
+     * @description
+     *
+     * Port on the device which is the recipient of the device trigger.
+     *
+     * 3GPP TS 33.128, clause 7.8.3.1.3.
+     *
      * @public
      * @readonly
      */

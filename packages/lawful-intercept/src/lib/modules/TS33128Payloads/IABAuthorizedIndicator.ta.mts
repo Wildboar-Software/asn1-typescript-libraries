@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IABAuthorizedIndicator
  * @description
  * 
+ * The IABAuthorizedIndicator provides information about the authorization
+ * status of the IAB node. Defined in TS 38.413 [23] clause 9.3.1.129.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +27,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_IABAuthorizedIndicator {
+    /**
+     * @description
+     *
+     * Indicates the UE is authorized to operate as an IAB node.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.9.
+     */
     authorized = 1,
+    /**
+     * @description
+     *
+     * Indicates the UE is not authorized to operate as an IAB node.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.9.
+     */
     notAuthorized = 2,
 }
 
@@ -29,6 +49,12 @@ enum _enum_for_IABAuthorizedIndicator {
  * @summary IABAuthorizedIndicator
  * @description
  * 
+ * The IABAuthorizedIndicator provides information about the authorization
+ * status of the IAB node. Defined in TS 38.413 [23] clause 9.3.1.129.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +74,12 @@ type IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
  * @summary IABAuthorizedIndicator
  * @description
  * 
+ * The IABAuthorizedIndicator provides information about the authorization
+ * status of the IAB node. Defined in TS 38.413 [23] clause 9.3.1.129.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +97,12 @@ const IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
 
 /**
  * @summary IABAuthorizedIndicator_authorized
+ * @description
+ *
+ * Indicates the UE is authorized to operate as an IAB node.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.9.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +111,12 @@ const IABAuthorizedIndicator_authorized: IABAuthorizedIndicator = IABAuthorizedI
 
 /**
  * @summary authorized
+ * @description
+ *
+ * Indicates the UE is authorized to operate as an IAB node.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.9.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +125,12 @@ const authorized: IABAuthorizedIndicator = IABAuthorizedIndicator.authorized; /*
 
 /**
  * @summary IABAuthorizedIndicator_notAuthorized
+ * @description
+ *
+ * Indicates the UE is not authorized to operate as an IAB node.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.9.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +139,12 @@ const IABAuthorizedIndicator_notAuthorized: IABAuthorizedIndicator = IABAuthoriz
 
 /**
  * @summary notAuthorized
+ * @description
+ *
+ * Indicates the UE is not authorized to operate as an IAB node.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.9.
+ *
  * @constant
  * @type {number}
  */

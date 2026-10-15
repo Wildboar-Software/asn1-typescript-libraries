@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ReRegRequiredIndicator
  * @description
  * 
+ * Indicates whether UE re-registration is required in the DEREGISTRATION
+ * REQUEST message, if available, see TS 24.501 [13] clause 9.1.3.20.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +35,12 @@ enum _enum_for_ReRegRequiredIndicator {
  * @summary ReRegRequiredIndicator
  * @description
  * 
+ * Indicates whether UE re-registration is required in the DEREGISTRATION
+ * REQUEST message, if available, see TS 24.501 [13] clause 9.1.3.20.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +60,12 @@ type ReRegRequiredIndicator = _enum_for_ReRegRequiredIndicator;
  * @summary ReRegRequiredIndicator
  * @description
  * 
+ * Indicates whether UE re-registration is required in the DEREGISTRATION
+ * REQUEST message, if available, see TS 24.501 [13] clause 9.1.3.20.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,6 +22,39 @@ import { PTCSessionEndCause, _decode_PTCSessionEndCause, _encode_PTCSessionEndCa
  * @summary PTCSessionEnd
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCSessionEnd record when the IRI-POI present in the PTC server detects that
+ * the PTC session is released for any reason (i.e. normal or abnormal release)
+ * and voice communications ends. Accordingly, the IRI-POI in the PTC server
+ * generates the xIRI when the following events are detected:
+ *
+ * - when the PTC server receives a SIP BYE from the PTC target to end the
+ *   session.
+ *
+ * - when the PTC server receives a SIP 200 OK from the PTC target in response
+ *   to a SIP BYE.
+ *
+ * - when the PTC server sends a SIP BYE to the participating PTC server to end
+ *   the PTC session of a PTC target with a pre-established PTC session (PTC
+ *   server also sends a TBCP Disconnect to the PTC target with a
+ *   pre-established PTC session).
+ *
+ * - when the PTC server receives a SIP BYE from the participant PTC server to
+ *   end the PTC session of a PTC target with a pre-established PTC session (PTC
+ *   server sends a TBCP Disconnect to the PTC target with a pre-established PTC
+ *   session).
+ *
+ * - when the PTC server hosting a PTC chat group session, where PTC chat group
+ *   is the PTC target, sends a SIP 200 OK in response to a SIP BYE received
+ *   from the participating PTC server of the last participant in the PTC chat
+ *   group session.
+ *
+ * - when the PTC server sends a SIP 487 to the PTC target in response to a SIP
+ *   CANCEL to end the session.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,42 +76,105 @@ export
 class PTCSessionEnd {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN and PTCChatGroupID shall be provided for
+     * PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.5.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.5.2.5.
+     *
      * @public
      * @readonly
      */
     readonly pTCDirection: Direction;
     /**
      * @summary `pTCServerURI`.
+     * @description
+     *
+     * Shall include the identity of the PTC server serving the PTC target.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.5.
+     *
      * @public
      * @readonly
      */
     readonly pTCServerURI: UTF8String;
     /**
      * @summary `pTCSessionInfo`.
+     * @description
+     *
+     * Shall provide PTC session information such as PTC Session URI and PTC
+     * Session type (e.g. on-demand, pre-established, ad-hoc, pre-arranged,
+     * group session).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.5.
+     *
      * @public
      * @readonly
      */
     readonly pTCSessionInfo: PTCSessionInfo;
     /**
      * @summary `pTCParticipants`.
+     * @description
+     *
+     * Shall identify the individual PTC participants of the communication
+     * session, when known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.5.
+     *
      * @public
      * @readonly
      */
     readonly pTCParticipants: OPTIONAL<PTCTargetInformation[]>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the PTC target’s location when reporting of the PTC
+     * target’s location information is authorized and available.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.5.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `pTCSessionEndCause`.
+     * @description
+     *
+     * Shall identify the reason for the PTC session end based on the following
+     * events per OMA-TS-PoC_System_Description-V2_1-20110802-A [56] clause
+     * 4.5.7:
+     *
+     * - PTC session initiator leaves session.
+     *
+     * - Defined participant leaves session.
+     *
+     * - Number of participants less than certain value.
+     *
+     * - PTC Session timer expired.
+     *
+     * - PTC Speech inactive for specified time.
+     *
+     * - All Media types inactive for specified time.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.5.
+     *
      * @public
      * @readonly
      */

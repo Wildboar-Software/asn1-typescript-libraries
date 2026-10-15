@@ -29,12 +29,24 @@ export
 class LMMessage {
     /**
      * @summary `lMRequest`.
+     * @description
+     *
+     * Contains the HTTP request.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly lMRequest: OCTET_STRING;
     /**
      * @summary `lMResponse`.
+     * @description
+     *
+     * Contains the HTTP response.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

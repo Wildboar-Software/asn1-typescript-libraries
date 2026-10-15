@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Timestamp
  * @description
  * 
+ * Unless otherwise specified, the timestamp shall be given qualified with time
+ * zone information (i.e. as UTC or offset from UTC, not using the local time
+ * format).
+ *
+ * 3GPP TS 33.128, clause 8.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -51,6 +51,34 @@ import { AlternativeNSSAIList, _decode_AlternativeNSSAIList, _encode_Alternative
  * @summary SMFUnsuccessfulProcedure
  * @description
  * 
+ * The IRI-POI in the SMF shall generate an xIRI containing an
+ * SMFUnsuccessfulProcedure record when the IRI-POI present in the SMF detects
+ * an unsuccessful procedure or error condition for a UE matching one of the
+ * target identifiers provided via LI_X1.
+ *
+ * Accordingly, the IRI-POI in the SMF generates the xIRI when one of the
+ * following events are detected:
+ *
+ * - SMF sends a PDU SESSION ESTABLISHMENT REJECT message to the target UE.
+ *
+ * - SMF sends a PDU SESSION MODIFICATION REJECT message to the target UE.
+ *
+ * - SMF sends a PDU SESSION RELEASE REJECT message to the target UE.
+ *
+ * - SMF receives a PDU SESSION MODIFICATION COMMAND REJECT message from the
+ *   target UE.
+ *
+ * - An ongoing SM procedure is aborted at the SMF, due to e.g. a 5GSM STATUS
+ *   message sent from or received by the SMF.
+ *
+ * NOTE: At least one identity shall be provided, the others shall be provided
+ * if available.
+ *
+ * Table 6.2.3.7-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -86,126 +114,285 @@ export
 class SMFUnsuccessfulProcedure {
     /**
      * @summary `failedProcedureType`.
+     * @description
+     *
+     * Specifies the procedure which failed or is aborted at the SMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly failedProcedureType: SMFFailedProcedureType;
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Provides the value of the 5GSM cause, see TS 24.501 [13] clause 9.11.4.2.
+     * In case the procedure is aborted due to a 5GSM STATUS message, the 5GSM
+     * cause is the one included in the 5GSM status message.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly failureCause: FiveGSMCause;
     /**
      * @summary `initiator`.
+     * @description
+     *
+     * Specifies whether the network (SMF) or the UE is initiating the rejection
+     * or indicating the failure.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly initiator: Initiator;
     /**
      * @summary `requestedSlice`.
+     * @description
+     *
+     * Slice requested for the procedure, if available, given as a NSSAI (a list
+     * of S-NSSAI values as described in TS 24.501 [13] clause 9.11.3.37).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly requestedSlice: OPTIONAL<NSSAI>;
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the procedure, if available (see NOTE). NOTE: At
+     * least one identity shall be provided, the others shall be provided if
+     * available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: OPTIONAL<SUPI>;
     /**
      * @summary `sUPIUnauthenticated`.
+     * @description
+     *
+     * Shall be present if a SUPI is present in the message and set to "true" if
+     * the SUPI has not been authenticated, or "false" if it has been
+     * authenticated.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly sUPIUnauthenticated: OPTIONAL<SUPIUnauthenticatedIndication>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI used in the procedure, if available (see NOTE). NOTE: At least one
+     * identity shall be provided, the others shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used in the procedure, if available (see NOTE). NOTE: At least one
+     * identity shall be provided, the others shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID See clause 9.4 of TS 24.501 [13], if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: OPTIONAL<PDUSessionID>;
     /**
      * @summary `uEEndpoint`.
+     * @description
+     *
+     * UE endpoint address(es) if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly uEEndpoint: OPTIONAL<UEEndpointAddress[]>;
     /**
      * @summary `non3GPPAccessEndpoint`.
+     * @description
+     *
+     * UE's local IP address used to reach the N3IWF, TNGF or TWIF, if
+     * available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly non3GPPAccessEndpoint: OPTIONAL<UEEndpointAddress>;
     /**
      * @summary `dNN`.
+     * @description
+     *
+     * Data Network Name associated with the target traffic, as defined in TS
+     * 23.003 [19] clause 9A and described in TS 23.501 [2] clause 4.3.2.2, if
+     * available. Shall be given in dotted-label presentation format as
+     * described in TS 23.003 [19] clause 9.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly dNN: OPTIONAL<DNN>;
     /**
      * @summary `aMFID`.
+     * @description
+     *
+     * Identifier of the AMF associated with the target UE, as defined in TS
+     * 23.003 [19] clause 2.10.1 when available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly aMFID: OPTIONAL<AMFID>;
     /**
      * @summary `hSMFURI`.
+     * @description
+     *
+     * URI of the Nsmf_PDUSession service of the selected H-SMF, if available.
+     * See TS 29.502 [16] clause 6.1.6.2.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly hSMFURI: OPTIONAL<HSMFURI>;
     /**
      * @summary `requestType`.
+     * @description
+     *
+     * Type of request as described in TS 24.501 [13] clause 9.11.3.47, if
+     * available. Otherwise depending on the REJECT event the following request
+     * type shall be reported: PDU SESSION ESTABLISHMENT REJECT: The request
+     * type shall be set to the one reported within the PDU SESSION
+     * ESTABLISHMENT or if there hasn't been one reported or is no longer
+     * available it should be set to "initial request". PDU SESSION MODIFICATION
+     * REJECT: "modification request". PDU SESSION RELEASE REJECT: no request
+     * type shall be set. PDU SESSION MODIFICATION COMMAND REJECT: "modification
+     * request".
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly requestType: OPTIONAL<FiveGSMRequestType>;
     /**
      * @summary `accessType`.
+     * @description
+     *
+     * Access type associated with the session (i.e. 3GPP or non-3GPP access) if
+     * provided by the AMF (see TS 24.501 [13] clause 9.11.2.1A).
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly accessType: OPTIONAL<AccessType>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * RAT Type associated with the access if provided by the AMF as part of
+     * session establishment (see TS 23.502 [4] clause 4.3.2). Values given as
+     * per TS 29.571 [17] clause 5.4.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<RATType>;
     /**
      * @summary `sMPDUDNRequest`.
+     * @description
+     *
+     * Contents of the SM PDU DN Request container, if available, as described
+     * in TS 24.501 [13] clause 9.11.4.15.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly sMPDUDNRequest: OPTIONAL<SMPDUDNRequest>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information provided by the AMF or present in the context at the
+     * SMF, if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `ePSPDNUnsuccessfulProcedure`.
+     * @description
+     *
+     * Provides details about unsuccessful EPS procedures. Shall be present when
+     * the SMFUnsuccessfulProcedure xIRI message is used to report EPS PDN
+     * unsuccessful procedure. See table 6.3.3.2.10-1 and clause 6.3.3.2.10.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly ePSPDNUnsuccessfulProcedure: OPTIONAL<EPSPDNUnsuccessfulProcedure>;
     /**
      * @summary `alternativeNSSAI`.
+     * @description
+     *
+     * Provides a list of mapping information between the S-NSSAI to be replaced
+     * and the alternative S-NSSAI, if available. See TS 24.501 [13] clause
+     * 9.11.3.97.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.6.
+     *
      * @public
      * @readonly
      */

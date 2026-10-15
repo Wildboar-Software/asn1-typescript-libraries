@@ -34,24 +34,52 @@ export
 class MCDataFileDownload {
     /**
      * @summary `mCServiceID`.
+     * @description
+     *
+     * MC service ID of a target MC service user downloading a file or MC
+     * service identity of an MC service user downloading a file intended for a
+     * target MC service group.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceID: MCServiceID;
     /**
      * @summary `mCServiceGroupID`.
+     * @description
+     *
+     * MC service group ID of the target MC service group the file is intended
+     * for.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceGroupID: OPTIONAL<MCServiceGroupID>;
     /**
      * @summary `mCDataFileURL`.
+     * @description
+     *
+     * URL of the file to be downloaded.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */
     readonly mCDataFileURL: UTF8String;
     /**
      * @summary `hTTPResponseCode`.
+     * @description
+     *
+     * HTTP response code in the HTTP response to the HTTP GET request for file
+     * download.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.6.2.
+     *
      * @public
      * @readonly
      */

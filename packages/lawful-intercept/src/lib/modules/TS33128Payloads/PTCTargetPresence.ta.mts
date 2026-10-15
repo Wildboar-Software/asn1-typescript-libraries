@@ -15,6 +15,21 @@ import { PTCParticipantPresenceStatus, _decode_PTCParticipantPresenceStatus, _en
  * @summary PTCTargetPresence
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCTargetPresence record when the IRI-POI present in the PTC server detects
+ * that the PTC server publishes network presence information to the Presence
+ * server on behalf of the PTC target. Accordingly, the IRI-POI in the PTC
+ * server generates the xIRI when the following event is detected:
+ *
+ * - when the PTC server sends a SIP PUBLISH message to the Presence server
+ *   based on the PTC target’s PTC session involvement.
+ *
+ * NOTE: The pTCTargetInformation choice PTCChatGroupID is not applicable for
+ * this xIRI.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.15.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +46,32 @@ export
 class PTCTargetPresence {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN shall be provided for PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.15.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCTargetPresenceStatus`.
+     * @description
+     *
+     * Shall provide the PTC target presence status, which is a list of:
+     *
+     * - PresenceID: Identity of PTC client(s) or PTC group, when known.
+     *
+     * - PresenceType: Identifies type of ID [PTC client(s) or PTC group].
+     *
+     * - PresenceStatus: Presence state of each ID. True indicates PTC target is
+     *   available, while false indicates PTC target is unavailable.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.15.
+     *
      * @public
      * @readonly
      */

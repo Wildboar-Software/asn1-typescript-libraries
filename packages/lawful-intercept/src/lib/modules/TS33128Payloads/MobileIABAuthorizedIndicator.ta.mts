@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MobileIABAuthorizedIndicator
  * @description
  * 
+ * The MobileIABAuthorizedIndicator provides information about the authorization
+ * status of the mobile IAB node. Defined in TS 38.413 [23] clause 9.3.1.259.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +27,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_MobileIABAuthorizedIndicator {
+    /**
+     * @description
+     *
+     * Indicates the UE is authorized to operate as a mobile IAB node.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.13.
+     */
     authorized = 1,
+    /**
+     * @description
+     *
+     * Indicates the UE is not authorized to operate as a mobile IAB node.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.13.
+     */
     notAuthorized = 2,
 }
 
@@ -29,6 +49,12 @@ enum _enum_for_MobileIABAuthorizedIndicator {
  * @summary MobileIABAuthorizedIndicator
  * @description
  * 
+ * The MobileIABAuthorizedIndicator provides information about the authorization
+ * status of the mobile IAB node. Defined in TS 38.413 [23] clause 9.3.1.259.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +74,12 @@ type MobileIABAuthorizedIndicator = _enum_for_MobileIABAuthorizedIndicator;
  * @summary MobileIABAuthorizedIndicator
  * @description
  * 
+ * The MobileIABAuthorizedIndicator provides information about the authorization
+ * status of the mobile IAB node. Defined in TS 38.413 [23] clause 9.3.1.259.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +97,12 @@ const MobileIABAuthorizedIndicator = _enum_for_MobileIABAuthorizedIndicator;
 
 /**
  * @summary MobileIABAuthorizedIndicator_authorized
+ * @description
+ *
+ * Indicates the UE is authorized to operate as a mobile IAB node.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.13.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +111,12 @@ const MobileIABAuthorizedIndicator_authorized: MobileIABAuthorizedIndicator = Mo
 
 /**
  * @summary authorized
+ * @description
+ *
+ * Indicates the UE is authorized to operate as a mobile IAB node.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.13.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +125,12 @@ const authorized: MobileIABAuthorizedIndicator = MobileIABAuthorizedIndicator.au
 
 /**
  * @summary MobileIABAuthorizedIndicator_notAuthorized
+ * @description
+ *
+ * Indicates the UE is not authorized to operate as a mobile IAB node.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.13.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +139,12 @@ const MobileIABAuthorizedIndicator_notAuthorized: MobileIABAuthorizedIndicator =
 
 /**
  * @summary notAuthorized
+ * @description
+ *
+ * Indicates the UE is not authorized to operate as a mobile IAB node.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.13.
+ *
  * @constant
  * @type {number}
  */

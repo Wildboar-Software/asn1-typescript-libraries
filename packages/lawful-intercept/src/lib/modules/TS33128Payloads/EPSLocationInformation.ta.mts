@@ -15,6 +15,13 @@ import { SGSNLocationInformation, _decode_SGSNLocationInformation, _encode_SGSNL
  * @summary EPSLocationInformation
  * @description
  * 
+ * The EPSLocationInformation type contains the information related to the user
+ * location relevant for EPS. Derived from the data found in
+ * EPS-Location-Information parameter from TS 29.272 [106] clause 7.3.111.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.77.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,28 @@ export
 class EPSLocationInformation {
     /**
      * @summary `mMELocationInformation`.
+     * @description
+     *
+     * Shall contain the information related to the user location relevant for
+     * the MME included in the "EPS-Location-Information" parameter. Defined in
+     * TS 29.272 [106] clause 7.3.115.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.77.
+     *
      * @public
      * @readonly
      */
     readonly mMELocationInformation: OPTIONAL<MMELocationInformation>;
     /**
      * @summary `sGSNLocationInformation`.
+     * @description
+     *
+     * Shall contain the information related to the user location relevant for
+     * the SGSN included in the "EPS-Location-Information" parameter. Defined in
+     * TS 29.272 [106] clause 7.3.116.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.77.
+     *
      * @public
      * @readonly
      */

@@ -14,6 +14,34 @@ import { MCServiceIDOrGroupID, _decode_MCServiceIDOrGroupID, _encode_MCServiceID
  * @summary MCPTTFloorControlMessage
  * @description
  * 
+ * The IRI-POI present in the MCPTT Server shall generate an xIRI containing an
+ * MCPTTFloorControlMessage record when the IRI-POI present in the MCPTT Server
+ * detects when the target MC service user sends or receives a floor control
+ * message. In addition, when the MC service group is the target, the IRI-POI
+ * present in the MCPTT Server hosting the MC service group shall generate an
+ * xIRI containing an MCPTTFloorControlMessage record when the IRI-POI present
+ * in the MCPTT Server detects when a floor control message is sent or received
+ * by any MC service user participating in the MC service group session.
+ * Accordingly, the IRI-POI in the MCPTT Server generates the xIRI when any of
+ * the following events is detected:
+ *
+ * - The MCPTT Server receives a floor control message from a target MC service
+ *   user.
+ *
+ * - The MCPTT Server hosting the MC service group, where the MC service group
+ *   is the target, receives a floor control message from an MC service
+ *   participant.
+ *
+ * - The MCPTT Server sends a floor control message to a target MC service user.
+ *
+ * - The MCPTT Server hosting the MC service group, where the MC service group
+ *   is the target, sends a floor control message to an MC service participant.
+ *
+ * Table 7.20.2.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.7.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +58,26 @@ export
 class MCPTTFloorControlMessage {
     /**
      * @summary `mCServiceIDOrGroupID`.
+     * @description
+     *
+     * MC service ID of the target user or group ID of the target MC service
+     * group.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.7.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceIDOrGroupID: MCServiceIDOrGroupID;
     /**
      * @summary `floorControlMessage`.
+     * @description
+     *
+     * Contains the floor control message being exchanged as an RTCP APP packet.
+     * See TS 24.380 [164] clause 8.1.2.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.7.1.
+     *
      * @public
      * @readonly
      */

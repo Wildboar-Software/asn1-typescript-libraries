@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Direction
  * @description
  * 
+ * Indicates the direction of the original MM (not of this message). This shall
+ * be encoded either as "from target", or "to target", as appropriate.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.15.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +35,12 @@ enum _enum_for_Direction {
  * @summary Direction
  * @description
  * 
+ * Indicates the direction of the original MM (not of this message). This shall
+ * be encoded either as "from target", or "to target", as appropriate.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.15.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +60,12 @@ type Direction = _enum_for_Direction;
  * @summary Direction
  * @description
  * 
+ * Indicates the direction of the original MM (not of this message). This shall
+ * be encoded either as "from target", or "to target", as appropriate.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.15.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

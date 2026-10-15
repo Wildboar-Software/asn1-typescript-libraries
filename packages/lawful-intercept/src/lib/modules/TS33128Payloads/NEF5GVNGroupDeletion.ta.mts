@@ -16,6 +16,23 @@ import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs
  * @summary NEF5GVNGroupDeletion
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing a
+ * NEF5GVNGroupDeletion record when the IRI-POI present in the NEF detects that
+ * an AF has deleted a 5G VN group the target UE belongs to.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - NEF sends a Nnef_ParameterProvision_Delete Response to the AF to
+ *   acknowledge the reception of Nnef_ParameterProvision_Delete Request with
+ *   GPSIs of the group members including the GPSI of the target UE (see TS
+ *   23.502 [4] clause 5.2.6.4.4 and TS 29.522 [58] clause 5.7.1.3).
+ *
+ * Table 7.7.7.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.7.1.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +50,36 @@ export
 class NEF5GVNGroupDeletion {
     /**
      * @summary `aFID`.
+     * @description
+     *
+     * Identity of the AF requesting to delete the 5G VN group.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.4.
+     *
      * @public
      * @readonly
      */
     readonly aFID: AFID;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE, member of the deleted 5G VN group.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.4.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `externalGroupID`.
+     * @description
+     *
+     * Identity of the 5G VN Group deleted by the AF.
+     *
+     * 3GPP TS 33.128, clause 7.7.7.1.4.
+     *
      * @public
      * @readonly
      */

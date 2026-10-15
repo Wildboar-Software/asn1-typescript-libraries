@@ -17,6 +17,18 @@ import { IMSRegistrationStatus, _decode_IMSRegistrationStatus, _encode_IMSRegist
  * @summary IMSHSSStartOfInterceptionWithRegisteredTarget
  * @description
  * 
+ * The IRI-POI in the IMS-HSS shall generate an xIRI containing the
+ * IMSHSSStartOfInterceptionWithRegisteredTarget record when the IRI-POI present
+ * in the IMS-HSS detects that interception is activated for a UE that has
+ * already been registered at the IMS-HSS.
+ *
+ * The IMS-HSS may have stored target subscription data for both EPC and IMS. In
+ * such a case, a single HSS Start of Interception with Registered Target xIRI
+ * shall be generated containing the target context.
+ *
+ * 3GPP TS 33.128, clause 7.2.4.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +46,42 @@ export
 class IMSHSSStartOfInterceptionWithRegisteredTarget {
     /**
      * @summary `hSSIdentities`.
+     * @description
+     *
+     * Indicates the identifiers for which the subscription data sets apply.
+     * Shall include one or more subscriber identifier. See TS 29.562 [101]
+     * clause 6.2.3.1.
+     *
+     * 3GPP TS 33.128, clause 7.2.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly hSSIdentities: HSSIdentities[];
     /**
      * @summary `iMSProfileData`.
+     * @description
+     *
+     * Includes current subscription information for the target UE stored at the
+     * HSS. Encoded according to TS 29.562 [101] clause 6.2.6.2.4. The
+     * SBIReference for this parameter shall be populated with
+     * 'TS29562_Nhss_imsSDM.yaml#/components/schemas/ImsProfileData'.
+     *
+     * 3GPP TS 33.128, clause 7.2.4.3.3.
+     *
      * @public
      * @readonly
      */
     readonly iMSProfileData: OPTIONAL<SBIType>;
     /**
      * @summary `iMSRegistrationStatus`.
+     * @description
+     *
+     * Provides the current state of the target or IMPU as know at the HSS. See
+     * TS 29.562 [101] clause 6.2.6.3.5.
+     *
+     * 3GPP TS 33.128, clause 7.2.4.3.3.
+     *
      * @public
      * @readonly
      */

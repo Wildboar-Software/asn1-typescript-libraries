@@ -18,6 +18,22 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary NWDAFEventsNotification
  * @description
  * 
+ * The IRI-POI in the NWDAF shall generate an xIRI containing an
+ * NWDAFEventsNotification record when the IRI-POI present in the NWDAF detects
+ * that the NWDAF has notified an NF consumer about UE related analytics events
+ * for a target UE.
+ *
+ * Accordingly, the IRI-POI in the NWDAF generates the xIRI when any of the
+ * following events is detected (see TS 29.520 [133] clause 4.2.2.1):
+ *
+ * - NWDAF sends a Nnwdaf_EventsSubscription_Notify Request to notify a NF
+ *   consumer about subscribed UE related analytics events for a target UE.
+ *
+ * Table 7.16.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.16.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +51,45 @@ export
 class NWDAFEventsNotification {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * Identifies the SUPI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.3.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `nWDAFNotifiedEventList`.
+     * @description
+     *
+     * Identifies the analytics events notified to the NF consumer.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.3.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFNotifiedEventList: NWDAFEvent[];
     /**
      * @summary `nWDAFEventsNotification`.
+     * @description
+     *
+     * Includes a NwdafEventsSubscriptionNotification resource which provides
+     * information about the observed events. The
+     * NwdafEventsSubscriptionNotification is encoded according to TS 29.520
+     * [133] table 5.1.6.2.4-1. The SBIReference for this parameter shall be
+     * populated with
+     * 'TS29520_Nnwdaf_EventsSubscription.yaml#/components/schemas/NnwdafEventsSubscriptionNotification'
+     * as specified in TS 29.520 [133] clause A2. The
+     * NwdafEventsSubscriptionNotification resource includes the SubscriptionId
+     * which enables correlating the events subscription and events
+     * notification.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.3.
+     *
      * @public
      * @readonly
      */

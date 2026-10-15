@@ -21,6 +21,16 @@ import { UDMProblemDetails, _decode_UDMProblemDetails, _encode_UDMProblemDetails
  * @summary UDMUEInformationResponse
  * @description
  * 
+ * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+ * UDMUEInfromationResponse record when it detects the following events:
+ *
+ * - When the UDM receives the ProvideUeInfo GET request from the NF service
+ *   consumer as part of Nudm_MT_ProvideUeInfo service operation (see TS 29.503
+ *   [25] clause 6.7.6.2.2) and the UDM returns a UeInfo response.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +50,66 @@ export
 class UDMUEInformationResponse {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI currently associated with the target UE, see TS 29.571 [17].
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.7.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `tADSInfo`.
+     * @description
+     *
+     * Contains the UE Context Information as known at the UDM. See TS 29.518
+     * [22] clause 6.3.6.2.4. Shall be included if UE Context is returned in the
+     * UeInfo response.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.7.
+     *
      * @public
      * @readonly
      */
     readonly tADSInfo: OPTIONAL<UEContextInfo>;
     /**
      * @summary `fiveGSUserStateInfo`.
+     * @description
+     *
+     * Describes the 5GS user state of the UE as known at the UDM. See TS 29.518
+     * [22] clause 6.2.6.3.11. Shall be included if 5GS user state is returned
+     * in the UeInfo response.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.7.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSUserStateInfo: OPTIONAL<FiveGSUserStateInfo>;
     /**
      * @summary `fiveGSRVCCInfo`.
+     * @description
+     *
+     * Indicates whether the UE supports 5G SRVCC. See TS 29.503 [25] clause
+     * 6.7.6.2.5. Shall be included if returned in the UeInfo response.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.7.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSRVCCInfo: OPTIONAL<FiveGSRVCCInfo>;
     /**
      * @summary `problemDetails`.
+     * @description
+     *
+     * Indicates the reason for UeInfo response failure. See TS 29.571 [17]
+     * clause 5.2.4.1. Shall be included if provided in the UeInfo response.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.7.
+     *
      * @public
      * @readonly
      */

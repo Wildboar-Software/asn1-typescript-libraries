@@ -16,6 +16,13 @@ import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
  * @summary NRNTNTAIInfo
  * @description
  * 
+ * Contains NR NTN TAI Information. When present the TAI is set to the reserved
+ * value and shall be ignored by the receiver. See TS 29.571 [17] clause 5.4.4.9
+ * and TS 38.413 [23] clause 9.3.3.53.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

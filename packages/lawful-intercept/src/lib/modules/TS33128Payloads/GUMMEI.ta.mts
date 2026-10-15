@@ -17,6 +17,11 @@ import { MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
  * @summary GUMMEI
  * @description
  * 
+ * Serving MME’s GUMMEI, see NOTE 2.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

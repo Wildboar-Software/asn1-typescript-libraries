@@ -11,6 +11,12 @@ import { EASInfo, _decode_EASInfo, _encode_EASInfo } from "../TS33128Payloads/EA
  * @summary EASsInfo
  * @description
  * 
+ * List of EAS that serve the AC along with the service KPIs required by the AC
+ * if available. See table 7.14.2.2-3.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

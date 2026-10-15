@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PeriodicCommunicationIndicator
  * @description
  * 
+ * Indicates whether the UE communicates periodically or on demand, if
+ * available. See TS 38.413 [23] clause 9.3.1.144.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +35,12 @@ enum _enum_for_PeriodicCommunicationIndicator {
  * @summary PeriodicCommunicationIndicator
  * @description
  * 
+ * Indicates whether the UE communicates periodically or on demand, if
+ * available. See TS 38.413 [23] clause 9.3.1.144.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +60,12 @@ type PeriodicCommunicationIndicator = _enum_for_PeriodicCommunicationIndicator;
  * @summary PeriodicCommunicationIndicator
  * @description
  * 
+ * Indicates whether the UE communicates periodically or on demand, if
+ * available. See TS 38.413 [23] clause 9.3.1.144.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

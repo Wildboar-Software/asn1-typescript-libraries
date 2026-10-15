@@ -21,6 +21,97 @@ import { EPSPDNFailedProcedure, _decode_EPSPDNFailedProcedure, _encode_EPSPDNFai
  * @summary EPSPDNUnsuccessfulProcedure
  * @description
  * 
+ * The IRI-POI in the SMF+PGW-C shall generate an xIRI containing an
+ * SMFStartOfInterceptionWithEstablishedMAPDUSession record (see clause
+ * 6.2.3.2.7) when the IRI-POI present in the SMF+PGW-C detects that an MA PDU
+ * Session or PDN Connection associated to an MA PDU Session has already been
+ * established for the target UE when interception starts. The IRI-POI present
+ * in the SMF+PGW-C shall generate the xIRI for the following events:
+ *
+ * - The SMF+PGW-C has an existing PDN Connection associated to an MA PDU
+ *   Session in the target UE context of the SMF+PGW-C (see TS 23.401 [50]
+ *   clause 5.7.4).
+ *
+ * - The SMF+PGW-C has an existing MA PDU Session context or SM Context for the
+ *   target UE (see TS 29.502 [16] clause 5.2.2.2 and clause 5.2.2.7).
+ *
+ * When the SMFStartOfInterceptionWithEstablishedMAPDUSession record (see clause
+ * 6.2.3.2.7) is used to report an existing PDN Connection:
+ *
+ * - The ePSStartOfInterceptionWithEstablishedPDNConnection field shall be
+ *   populated with the information in table 6.3.3.2.5-1.
+ *
+ * - If there is no SUPI associated to the SM context for the target UE, the
+ *   SUPI field of the SMFStartOfInterceptionWithEstablishedMAPDUSession record
+ *   shall be populated with the value of the IMSI from the target UE context.
+ *
+ * - If there is no PDU Session ID associated to the context for the PDN
+ *   connection, the pDUSessionID field of the
+ *   SMFStartOfInterceptionWithEstablishedMAPDUSession record shall be populated
+ *   with the EBI of the default bearer for the PDN Connection.
+ *
+ * - If there is no 5G UP tunnel present in the context associated to the PDN
+ *   Connection, the gTPTunnelID field of the
+ *   SMFStartOfInterceptionWithEstablishedMAPDUSession record shall be populated
+ *   with the F-TEID for the PGW S5 or S8 interface for the default bearer of
+ *   the PDN Connection.
+ *
+ * 6.3.3.2.10 EPS PDN unsuccessful procedure or SMF unsuccessful procedure in
+ * interworked EPS/5GS
+ *
+ * In the case of standalone EPS, the IRI-POI in the SGW/PGW shall generate an
+ * xIRI containing an ePSPDNUnsuccessfulProcedure record when the IRI-POI
+ * present in the SGW/PGW detects an unsuccessful procedure or error condition
+ * for a UE matching one of the target identifiers provided via LI_X1.
+ *
+ * In the case of interworked EPS/5GS, the IRI-POI in the SMF+PGW-C shall
+ * generate an xIRI containing an SMFUnsuccessfulProcedure record (see clause
+ * 6.2.3.2.6) when the IRI-POI present in the SMF+PGW-C detects that an
+ * unsuccessful procedure or error condition for a UE matching one of the target
+ * identifiers provided via LI_X1.single-access PDU Session or PDN Connection
+ * has already been established for the target UE when interception starts. The
+ * IRI-POI present in the SMF+PGW-C shall generate the xIRI for the following
+ * events:
+ *
+ * - SMF sends a PDU SESSION ESTABLISHMENT REJECT message to the target UE.
+ *
+ * - SMF sends a PDU SESSION MODIFICATION REJECT message to the target UE.
+ *
+ * - SMF sends a PDU SESSION RELEASE REJECT message to the target UE.
+ *
+ * - SMF receives a PDU SESSION MODIFICATION COMMAND REJECT message from the
+ *   target UE.
+ *
+ * - An ongoing SM procedure is aborted at the SMF, due to e.g. a 5GSM STATUS
+ *   message sent from or received by the SMF.
+ *
+ * When the SMFUnsuccessfulProcedure record (see clause 6.2.3.2.6) is used to
+ * report an unsuccessful EPS PDN related procedure:
+ *
+ * - The ePSPDNUnsuccessfulProcedure field shall be populated with the
+ *   information in table 6.3.3.2.10-1.
+ *
+ * - If there is no SUPI associated to the SM context for the target UE, the
+ *   SUPI field of the SMFStartOfInterceptionWithEstablishedPDUSession record
+ *   shall be populated with the value of the IMSI from the target UE context.
+ *
+ * - If there is no PDU Session ID associated to the context for the PDN
+ *   connection, the pDUSessionID field of the SMFUnsuccessfulProcedure record
+ *   shall be populated with the EBI of the default bearer for the PDN
+ *   Connection.
+ *
+ * - If there is no 5G UP tunnel present in the context associated to the PDN
+ *   Connection, the gTPTunnelID field of the
+ *   SMFStartOfInterceptionWithEstablishedPDUSession record shall be populated
+ *   with the F-TEID for the PGW S5 or S8 interface for the default bearer of
+ *   the PDN Connection.
+ *
+ * Table 6.3.3.4.2-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +131,70 @@ export
 class EPSPDNUnsuccessfulProcedure {
     /**
      * @summary `failureCause`.
+     * @description
+     *
+     * Provides the value of the ESM cause, see TS 24.301 [50] clause 9.9.4.4.
+     * Sent as an integer cause value (see TS 29.274 [87] table 8.4-1). In case
+     * the procedure is aborted due to a ESM STATUS message, the ESM cause is
+     * the one included in the ESM status message.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.10.
+     *
      * @public
      * @readonly
      */
     readonly failureCause: ESMCause;
     /**
      * @summary `initiator`.
+     * @description
+     *
+     * Specifies whether the network (SGW) or the UE is initiating the rejection
+     * or indicating the failure.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.10.
+     *
      * @public
      * @readonly
      */
     readonly initiator: Initiator;
     /**
      * @summary `ePSSubscriberIDs`.
+     * @description
+     *
+     * EPS Subscriber Identities associated with the PDN connection (e.g. as
+     * provided by the MME or SGW in the associated Create Session Request or as
+     * associated with the PDN connection in the context known at the NF). The
+     * IMSI shall be present except for unauthenticated emergency sessions.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.10.
+     *
      * @public
      * @readonly
      */
     readonly ePSSubscriberIDs: EPSSubscriberIDs;
     /**
      * @summary `iMSIUnauthenticated`.
+     * @description
+     *
+     * Shall be present if an IMSI is present in the ePSSubscriberIDs and set to
+     * "true" if the IMSI has not been authenticated, or "false" if it has been
+     * authenticated.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.10.
+     *
      * @public
      * @readonly
      */
     readonly iMSIUnauthenticated: OPTIONAL<IMSIUnauthenticatedIndication>;
     /**
      * @summary `failedProcedure`.
+     * @description
+     *
+     * Contains the record corresponding to the failed procedure. See table
+     * 6.3.3.2.10-2.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.10.
+     *
      * @public
      * @readonly
      */

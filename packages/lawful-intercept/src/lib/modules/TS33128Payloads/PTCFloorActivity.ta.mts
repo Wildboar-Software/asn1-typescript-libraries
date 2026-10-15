@@ -7,6 +7,28 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCFloorActivity
  * @description
  * 
+ * Sequence of: a) "TBCP_Request": Received by the PTC server to request
+ * permission for the PTC target or PTC participant to send a talk burst. b)
+ * "TBCP_Granted": Used by the PTC server to notify the PTC target or PTC
+ * participant that it has been granted permission to send a talk burst. c)
+ * "TBCP_Deny": Used by the PTC server to notify a PTC target or PTC participant
+ * that it has been denied permission to send a talk burst. d) "TBCP_Idle": Used
+ * by the PTC server to notify the PTC target or PTC participant that no one has
+ * the permission to send a Talk Burst at the moment and that it may accept the
+ * TBCP talk burst request message. e) "TBCP_Taken": Used by the PTC server to
+ * notify the PTC target or PTC participant that another PTC participant has
+ * been given permission to send a talk burst. f) "TBCP_Revoke": Used by the PTC
+ * server to revoke the media resource from the PTC target or PTC participant
+ * and can be used for pre-emption functionality but is also used by the system
+ * to prevent overly long use of the media resource. g) "TBCP_Queued": Indicates
+ * the request to talk is queued, if queued floor control is supported. Include
+ * identification of the PTC target or PTC participant that has the queued talk
+ * burst, if known. h) "TBCP_Release": Indicates the request to talk has
+ * completed.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +63,28 @@ enum _enum_for_PTCFloorActivity {
  * @summary PTCFloorActivity
  * @description
  * 
+ * Sequence of: a) "TBCP_Request": Received by the PTC server to request
+ * permission for the PTC target or PTC participant to send a talk burst. b)
+ * "TBCP_Granted": Used by the PTC server to notify the PTC target or PTC
+ * participant that it has been granted permission to send a talk burst. c)
+ * "TBCP_Deny": Used by the PTC server to notify a PTC target or PTC participant
+ * that it has been denied permission to send a talk burst. d) "TBCP_Idle": Used
+ * by the PTC server to notify the PTC target or PTC participant that no one has
+ * the permission to send a Talk Burst at the moment and that it may accept the
+ * TBCP talk burst request message. e) "TBCP_Taken": Used by the PTC server to
+ * notify the PTC target or PTC participant that another PTC participant has
+ * been given permission to send a talk burst. f) "TBCP_Revoke": Used by the PTC
+ * server to revoke the media resource from the PTC target or PTC participant
+ * and can be used for pre-emption functionality but is also used by the system
+ * to prevent overly long use of the media resource. g) "TBCP_Queued": Indicates
+ * the request to talk is queued, if queued floor control is supported. Include
+ * identification of the PTC target or PTC participant that has the queued talk
+ * burst, if known. h) "TBCP_Release": Indicates the request to talk has
+ * completed.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +110,28 @@ type PTCFloorActivity = _enum_for_PTCFloorActivity;
  * @summary PTCFloorActivity
  * @description
  * 
+ * Sequence of: a) "TBCP_Request": Received by the PTC server to request
+ * permission for the PTC target or PTC participant to send a talk burst. b)
+ * "TBCP_Granted": Used by the PTC server to notify the PTC target or PTC
+ * participant that it has been granted permission to send a talk burst. c)
+ * "TBCP_Deny": Used by the PTC server to notify a PTC target or PTC participant
+ * that it has been denied permission to send a talk burst. d) "TBCP_Idle": Used
+ * by the PTC server to notify the PTC target or PTC participant that no one has
+ * the permission to send a Talk Burst at the moment and that it may accept the
+ * TBCP talk burst request message. e) "TBCP_Taken": Used by the PTC server to
+ * notify the PTC target or PTC participant that another PTC participant has
+ * been given permission to send a talk burst. f) "TBCP_Revoke": Used by the PTC
+ * server to revoke the media resource from the PTC target or PTC participant
+ * and can be used for pre-emption functionality but is also used by the system
+ * to prevent overly long use of the media resource. g) "TBCP_Queued": Indicates
+ * the request to talk is queued, if queued floor control is supported. Include
+ * identification of the PTC target or PTC participant that has the queued talk
+ * burst, if known. h) "TBCP_Release": Indicates the request to talk has
+ * completed.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SUPIType
  * @description
  * 
+ * Indicates the type of SUPI concealed by a SUCI. Shall be populated as
+ * described in TS 23.003 [19] clause 2.2B.
+ *
+ * 3GPP TS 33.128, clause 8.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

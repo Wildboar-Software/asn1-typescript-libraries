@@ -31,6 +31,12 @@ import { CellRadioRelatedInformation, _decode_CellRadioRelatedInformation, _enco
  * @summary NRLocation
  * @description
  * 
+ * The NRLocation type is derived from the data present in the NrLocation type
+ * defined in TS 29.571 [17] clause 5.4.4.9.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,72 +63,165 @@ export
 class NRLocation {
     /**
      * @summary `tAI`.
+     * @description
+     *
+     * Tracking Area Identity of the target. If the TAI information is not
+     * available, the TAC of the TAI shall be set to one reserved value (e.g.
+     * 0x0000, see TS 23.003 [19] clause 19.4.2.3).
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly tAI: TAI;
     /**
      * @summary `nCGI`.
+     * @description
+     *
+     * NR Cell Identity for the cell where the target is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly nCGI: NCGI;
     /**
      * @summary `ageOfLocationInfo`.
+     * @description
+     *
+     * The value represents the elapsed time in minutes since the last network
+     * contact of the mobile station. Shall be present if known at the NF where
+     * the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly ageOfLocationInfo: OPTIONAL<AgeOfLocation>;
     /**
      * @summary `uELocationTimestamp`.
+     * @description
+     *
+     * The value represents the UTC time when the NRLocation information was
+     * acquired. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly uELocationTimestamp: OPTIONAL<Timestamp>;
     /**
      * @summary `geographicalInformation`.
+     * @description
+     *
+     * Shall be present if known at the NF where the POI is located. If present,
+     * this parameter shall be populated with the Hexadecimal value of the
+     * location encoded as described in TS 23.032 [104] clauses 6 and 7.3.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly geographicalInformation: OPTIONAL<UTF8String>;
     /**
      * @summary `geodeticInformation`.
+     * @description
+     *
+     * Shall be present if known at the NF where the POI is located. If present,
+     * this parameter shall be populated with the Hexadecimal value of the
+     * location encoded as described in ITU-T Recommendation Q.763 (1999) [105]
+     * clause 3.88.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly geodeticInformation: OPTIONAL<UTF8String>;
     /**
      * @summary `globalGNbID`.
+     * @description
+     *
+     * Indicates the global identity of the gNodeB in which the UE is currently
+     * located. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly globalGNbID: OPTIONAL<GlobalRANNodeID>;
     /**
      * @summary `cellSiteInformation`.
+     * @description
+     *
+     * Contains location information for the cell site being reported. Shall be
+     * present if known at the NF where the POI is located or known at the MDF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly cellSiteInformation: OPTIONAL<CellSiteInformation>;
     /**
      * @summary `ignoreNCGI`.
+     * @description
+     *
+     * This flag, when present, shall indicate if the nCGI shall be ignored.
+     * When present, it shall be set as follows:
+     *
+     * - TRUE: nCGI shall be ignored.
+     *
+     * - FALSE: nCGI shall not be ignored.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly ignoreNCGI: OPTIONAL<BOOLEAN>;
     /**
      * @summary `nRNTNTAIInfo`.
+     * @description
+     *
+     * Contains NR NTN TAI Information. When present the TAI is set to the
+     * reserved value and shall be ignored by the receiver. See TS 29.571 [17]
+     * clause 5.4.4.9 and TS 38.413 [23] clause 9.3.3.53.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly nRNTNTAIInfo: OPTIONAL<NRNTNTAIInfo>;
     /**
      * @summary `iABMTUserLocation`.
+     * @description
+     *
+     * Indicates the user location information of a mobile IAB-MT which is
+     * co-located with the UE’s serving IAB Cell. See TS 38.413 [23] clause
+     * 9.3.1.260.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly iABMTUserLocation: OPTIONAL<IABMTUserLocation>;
     /**
      * @summary `cellRadioRelatedInformation`.
+     * @description
+     *
+     * Radio Information of reported cell.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */

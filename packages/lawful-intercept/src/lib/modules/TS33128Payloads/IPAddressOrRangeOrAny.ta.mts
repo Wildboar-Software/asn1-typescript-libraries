@@ -29,6 +29,14 @@ import { AnyIPAddress, _decode_AnyIPAddress, _encode_AnyIPAddress } from "../TS3
  */
 export
 type IPAddressOrRangeOrAny =
+    /**
+     * @description
+     *
+     * Indicates the conditional destination IPv4 address or destination IPv6
+     * address field in the PDU header to the destination IP address of the
+     * intercepted SIP message (see ETSI TS 103 221-2 [8] clause 5.3). (3GPP TS
+     * 33.128, clause 7.12.4.3.4.)
+     */
     { iPAddress: IPAddress } /* CHOICE_ALT_ROOT */
     | { ipAddressRange: IPMask } /* CHOICE_ALT_ROOT */
     | { anyIPAddress: AnyIPAddress } /* CHOICE_ALT_ROOT */

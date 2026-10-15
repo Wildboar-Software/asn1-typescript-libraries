@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SwitchOffIndicator
  * @description
  * 
+ * Indicates whether the deregistration type is normal or switch off, if
+ * available, see TS 24.501 [13] clause 9.1.3.20.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +35,12 @@ enum _enum_for_SwitchOffIndicator {
  * @summary SwitchOffIndicator
  * @description
  * 
+ * Indicates whether the deregistration type is normal or switch off, if
+ * available, see TS 24.501 [13] clause 9.1.3.20.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +60,12 @@ type SwitchOffIndicator = _enum_for_SwitchOffIndicator;
  * @summary SwitchOffIndicator
  * @description
  * 
+ * Indicates whether the deregistration type is normal or switch off, if
+ * available, see TS 24.501 [13] clause 9.1.3.20.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

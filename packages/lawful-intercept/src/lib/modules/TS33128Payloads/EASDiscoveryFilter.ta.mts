@@ -14,6 +14,11 @@ import { EASsCharacteristics, _decode_EASsCharacteristics, _encode_EASsCharacter
  * @summary EASDiscoveryFilter
  * @description
  * 
+ * Set of characteristics to determine required EASs, if available.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +31,12 @@ import { EASsCharacteristics, _decode_EASsCharacteristics, _encode_EASsCharacter
  */
 export
 type EASDiscoveryFilter =
+    /**
+     * @description
+     *
+     * Profiles of application clients (ACs) for which the EEC provides edge
+     * enabling services, if available. (3GPP TS 33.128, clause 7.14.2.2.)
+     */
     { aCsCharacteristics: ACProfiles } /* CHOICE_ALT_ROOT */
     | { eASCharacteristics: EASsCharacteristics } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;

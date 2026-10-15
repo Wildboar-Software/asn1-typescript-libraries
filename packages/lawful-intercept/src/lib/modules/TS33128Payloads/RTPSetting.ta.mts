@@ -15,6 +15,12 @@ import { PortNumber, _decode_PortNumber, _encode_PortNumber } from "../TS33128Pa
  * @summary RTPSetting
  * @description
  * 
+ * The IP address and the port number of the PTC target at the PTC server for
+ * the RTP Session.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

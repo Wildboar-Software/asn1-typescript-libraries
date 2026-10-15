@@ -10,6 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RANTargetToSourceContainer
  * @description
  * 
+ * Provides radio related information from gaining to losing NG-RAN node that
+ * the AMF receives from the gaining RAN Node in the HANDOVER REQUEST
+ * ACKNOWLEDGE message. See TS 38.413 [23] clause 9.3.1.21.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSUENetworkCapability
  * @description
  * 
+ * Contains the target UE network capability information encoded per TS 24.301
+ * [51] clause 9.9.3.34, omitting the first two octets.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

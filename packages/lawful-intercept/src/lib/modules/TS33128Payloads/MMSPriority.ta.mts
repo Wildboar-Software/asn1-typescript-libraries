@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSPriority
  * @description
  * 
+ * Priority of the email assigned by the originator. Include if sent to the MMS
+ * Proxy-Relay (see NOTE).
+ *
+ * 3GPP TS 33.128, clause 7.4.3.2A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +37,12 @@ enum _enum_for_MMSPriority {
  * @summary MMSPriority
  * @description
  * 
+ * Priority of the email assigned by the originator. Include if sent to the MMS
+ * Proxy-Relay (see NOTE).
+ *
+ * 3GPP TS 33.128, clause 7.4.3.2A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +63,12 @@ type MMSPriority = _enum_for_MMSPriority;
  * @summary MMSPriority
  * @description
  * 
+ * Priority of the email assigned by the originator. Include if sent to the MMS
+ * Proxy-Relay (see NOTE).
+ *
+ * 3GPP TS 33.128, clause 7.4.3.2A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

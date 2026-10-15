@@ -23,6 +23,12 @@ import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISD
  */
 export
 type STIRSHAKENTN =
+    /**
+     * @description
+     *
+     * Derived from the MSISDN defined in TS 23.003 [19] clause 3.3. (3GPP TS
+     * 33.128, clause 8.3.3.)
+     */
     { mSISDN: MSISDN } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

@@ -20,6 +20,12 @@ import { PLMNSupportList, _decode_PLMNSupportList, _encode_PLMNSupportList } fro
  * @summary NGInformation
  * @description
  * 
+ * Information pertaining to the setup of the NG Interface. See TS 38.413 [23]
+ * clauses 9.2.6.1 and 9.2.6.2.
+ *
+ * 3GPP TS 33.128, clause 7.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

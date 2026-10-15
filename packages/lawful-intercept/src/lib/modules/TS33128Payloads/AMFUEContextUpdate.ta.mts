@@ -17,6 +17,21 @@ import { RANDownlinkNASTransport, _decode_RANDownlinkNASTransport, _encode_RANDo
  * @summary AMFUEContextUpdate
  * @description
  * 
+ * The IRI-POI present in the AMF shall generate an xIRI containing an
+ * AMFUEContextUpdate record when the IRI-POI present in the AMF detects that
+ * the AMF provides the NG-RAN with updated UE context. Accordingly, the IRI-POI
+ * in the AMF generates the xIRI when one of the following events is detected:
+ *
+ * - AMF sends a UE CONTEXT MODIFICATION REQUEST message to the NG-RAN.
+ *
+ * - AMF sends a DOWNLINK NAS TRANSPORT message to the NG-RAN.
+ *
+ * NOTE: Either rANUEContextModification or rANDownlinkNASTransport shall be
+ * present.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.14.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +49,44 @@ export
 class AMFUEContextUpdate {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the AMF context. See TS 29.518 [22]
+     * clause 6.1.6.2.25.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.14.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `rANUEContextModification`.
+     * @description
+     *
+     * Provides information sent in the UE CONTEXT MODIFICATION REQUEST message
+     * from the AMF to the RAN for a target. See TS 38.413 [23] clause 9.2.2.7
+     * (See NOTE). NOTE: Either rANUEContextModification or
+     * rANDownlinkNASTransport shall be present.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.14.
+     *
      * @public
      * @readonly
      */
     readonly rANUEContextModification: OPTIONAL<RANUEContextModification>;
     /**
      * @summary `rANDownlinkNASTransport`.
+     * @description
+     *
+     * Provides information sent in the DOWNLINK NAS TRANSPORT message from the
+     * AMF to the RAN for a target. See TS 38.413 [23] clause 9.2.5.2 (See
+     * NOTE). NOTE: Either rANUEContextModification or rANDownlinkNASTransport
+     * shall be present.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.14.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,51 @@ import { NAOperationType, _decode_NAOperationType, _encode_NAOperationType, _enu
  * @summary FiveGMSAFNetworkAssistance
  * @description
  * 
+ * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+ * FiveGMSAFNetworkAssistance record when the IRI-POI present in the 5GMS AF
+ * detects that an 5GMS AF has received a network assistance from the target UE.
+ * The IRI-POI present in the 5GMS AF shall generate the xIRI for the following
+ * events (as specified in TS 26.512 [98] clause 11.6):
+ *
+ * - 5GMS AF returns a createNetworkAssistanceSession Response (i.e. 201
+ *   Created) in response to a createNetworkAssistanceSession Request (i.e.
+ *   POST) from the Media Session Handler in the target UE which creates a
+ *   network assistance session resource.
+ *
+ * - 5GMS AF returns a retrieveNetworkAssistanceSession Response (i.e. 200 OK)
+ *   in response to a retrieveNetworkAssistanceSession Request (i.e. GET) from
+ *   the Media Session Handler in the target UE which retrieves an existing
+ *   network assistance session resource.
+ *
+ * - 5GMS AF returns an updateNetworkAssistanceSession Response (i.e. 200 OK or
+ *   204 No Content) in response to an updateNetworkAssistanceSession Request
+ *   (i.e. PUT) from the Media Session Handler in the target UE which replaces
+ *   an existing network assistance session resource.
+ *
+ * - 5GMS AF returns a patchNetworkAssistanceSession Response (i.e. 200 OK or
+ *   204 No Content) in response to a patchNetworkAssistanceSession Request
+ *   (i.e. PATCH) from the Media Session Handler in the target UE which modifies
+ *   the network assistance session resource.
+ *
+ * - 5GMS AF returns a destroyNetworkAssistanceSession Response (i.e. 204 No
+ *   Content) in response to a destroyNetworkAssistanceSession Request (i.e.
+ *   DELETE) from the Media Session Handler in the target UE which deletes the
+ *   network assistance session resource.
+ *
+ * - 5GMS AF returns a requestBitRateRecommendation Response (i.e. 200 OK) in
+ *   response to a requestBitRateRecommendation Request (i.e. GET) from the
+ *   Media Session Handler in the target UE which requests a bit rate
+ *   recommendation for the next recommendation window.
+ *
+ * - 5GMS AF returns a requestDeliveryBoost Response (i.e. 200 OK) in response
+ *   to a requestDeliveryBoost Request (i.e. POST) from the Media Session
+ *   Handler in the target UE which requests a delivery boost.
+ *
+ * Table 7.15.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +79,43 @@ export
 class FiveGMSAFNetworkAssistance {
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.6.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `networkAssistanceSessionResource`.
+     * @description
+     *
+     * Includes a network assistance session resource according to 26.512 [98]
+     * clause 11.6.3. The SBIReference for this parameter shall be populated
+     * with 'TS26512_M5_ NetworkAssistance.yaml#/components/schemas/
+     * NetworkAssistanceSession'.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.6.
+     *
      * @public
      * @readonly
      */
     readonly networkAssistanceSessionResource: SBIType;
     /**
      * @summary `nAOperationType`.
+     * @description
+     *
+     * Type of operation applied to the network assistance resource, i.e.
+     * createNetworkAssistanceSession, retrieveNetworkAssistanceSession,
+     * updateNetworkAssistanceSession, patchNetworkAssistanceSession,
+     * destroyNetworkAssistanceSession, requestBitRateRecommendation and
+     * requestDeliveryBoost.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.6.
+     *
      * @public
      * @readonly
      */

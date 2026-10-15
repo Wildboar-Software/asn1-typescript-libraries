@@ -29,6 +29,30 @@ import { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SC
  * @summary SCEFPDNConnectionEstablishment
  * @description
  * 
+ * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+ * SCEFPDNConnectionEstablishment record when the IRI-POI present in the
+ * SCEF/IWK-SCEF detects that a Non-IP PDN Connection using SCEF has been
+ * established by the target UE. The IRI-POI present in the SCEF/IWK-SCEF shall
+ * generate the xIRI for the following events (see TS 29.128 [62] clause 5.8):
+ *
+ * - the SCEF/IWK-SCEF sends a T6a/T6ai Connection Management Answer to MME as a
+ *   response to a T6a/T6ai Connection Management Request received with
+ *   User-Identifier AVP including the set of identities of the UE, i.e.
+ *   IMSI/MSISDN/External Identifier matching the target Identifier and
+ *   Connection-Action AVP set to CONNECTION_ESTABLISHMENT to confirm the
+ *   establishment of a Non-IP PDN connection.
+ *
+ * - in roaming situation SCEF sends a T7 Connection Management Answer to
+ *   IWK-SCEF as a confirmation to the T7 Connection Management Request received
+ *   with User-Identifier AVP including the set of identities of the UE, i.e.
+ *   IMSI/MSISDN/External Identifier matching the target Identifier and with
+ *   Connection-Action AVP set to CONNECTION_ESTABLISHMENT.
+ *
+ * Table 7.8.2.3-1 gives the LI_HI2 IRI message type for this record as BEGIN.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,54 +76,114 @@ export
 class SCEFPDNConnectionEstablishment {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the Non-IP PDN Connection of the target UE (e.g. as
+     * provided by the MME in the associated Connection Management Request).
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN associated with the PDN Connection if available.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier associated with the PDN Connection if available,
+     * defined as NAI in ASN.1.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI associated to the device if available.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `ePSBearerID`.
+     * @description
+     *
+     * Identity of the EPS bearer that MME allocated to the Non-IP PDN
+     * connection.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly ePSBearerID: EPSBearerID;
     /**
      * @summary `sCEFID`.
+     * @description
+     *
+     * SCEF identity handling the EPS Bearer.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sCEFID: SCEFID;
     /**
      * @summary `aPN`.
+     * @description
+     *
+     * Access Point Name used to establish the PDN Connection. Shall be given in
+     * dotted-label presentation format as described in TS 23.003 [19] clause
+     * 9.1.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly aPN: APN;
     /**
      * @summary `rDSSupport`.
+     * @description
+     *
+     * True if Reliable Data Service is supported in the PDN Connection,.
+     * otherwise False
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */
     readonly rDSSupport: RDSSupport;
     /**
      * @summary `sCSASID`.
+     * @description
+     *
+     * String Identifying the SCS/AS the traffic will be delivered to.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.2.
+     *
      * @public
      * @readonly
      */

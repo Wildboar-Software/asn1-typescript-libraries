@@ -33,18 +33,37 @@ export
 class CellSiteInformation {
     /**
      * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * The coordinates for the cell site being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly geographicalCoordinates: GeographicalCoordinates;
     /**
      * @summary `azimuth`.
+     * @description
+     *
+     * Contains the centre azimuth for the sector being reported. Shall be
+     * present if known.
+     *
+     * 3GPP TS 33.128, clause 7.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly azimuth: OPTIONAL<INTEGER>;
     /**
      * @summary `operatorSpecificInformation`.
+     * @description
+     *
+     * Information specific to the operator reporting the cell site information.
+     *
+     * 3GPP TS 33.128, clause 7.3.2.2.
+     *
      * @public
      * @readonly
      */

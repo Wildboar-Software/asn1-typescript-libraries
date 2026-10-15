@@ -31,12 +31,25 @@ export
 class IABMTUserLocation {
     /**
      * @summary `nRCGI`.
+     * @description
+     *
+     * Provides the NCGI of the cell serving the mobile IAB-MT.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */
     readonly nRCGI: NCGI;
     /**
      * @summary `tAI`.
+     * @description
+     *
+     * Provides the TAI supported by the cell which is serving the mobile
+     * IAB-MT.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.6.
+     *
      * @public
      * @readonly
      */

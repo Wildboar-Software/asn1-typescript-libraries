@@ -36,24 +36,48 @@ export
 class MCServiceSessionInfo {
     /**
      * @summary `sessionURI`.
+     * @description
+     *
+     * Indicates the session URI.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.2.
+     *
      * @public
      * @readonly
      */
     readonly sessionURI: UTF8String;
     /**
      * @summary `sessionType`.
+     * @description
+     *
+     * Indicates if the session is a private or group session.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.2.
+     *
      * @public
      * @readonly
      */
     readonly sessionType: MCServiceSessionType;
     /**
      * @summary `groupSessionType`.
+     * @description
+     *
+     * Indicates if the group is a chat, pre-arranged or ad-hoc group.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.2.
+     *
      * @public
      * @readonly
      */
     readonly groupSessionType: OPTIONAL<MCServiceGroupSessionType>;
     /**
      * @summary `establishmentType`.
+     * @description
+     *
+     * Indicates if the resources are established on-demand or pre-established.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.2.
+     *
      * @public
      * @readonly
      */

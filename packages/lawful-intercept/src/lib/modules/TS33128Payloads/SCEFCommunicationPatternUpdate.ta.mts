@@ -34,6 +34,27 @@ import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Paylo
  * @summary SCEFCommunicationPatternUpdate
  * @description
  * 
+ * The IRI-POI in the SCEF shall generate an xIRI containing an
+ * SCEFCommunicationPatternUpdate record when the IRI-POI present in the SCEF
+ * detects that an SCS/AS has updated the Communication pattern data.
+ *
+ * Accordingly, the IRI-POI in the SCEF generates the xIRI when any of the
+ * following events is detected (See TS 29.122 [63] clause 5.10):
+ *
+ * - SCEF receives a request to provision the communication pattern parameters
+ *   from an SCS/AS related to the target UE (PUT).
+ *
+ * - SCEF receives a request to delete the existing communication patterns
+ *   parameters from an SCS/AS related to the target UE (DELETE).
+ *
+ * - SCEF returns a response (200 OK) containing the communication pattern
+ *   parameters of the target UE to the querying SCS/AS (GET).
+ *
+ * Table 7.8.5.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.8.5.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -61,30 +82,62 @@ export
 class SCEFCommunicationPatternUpdate {
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN of the target UE the communication pattern applies to.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier of the target UE the communication pattern applies
+     * to.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `periodicCommunicationIndicator`.
+     * @description
+     *
+     * Identifies whether UE communicates periodically or on demand.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly periodicCommunicationIndicator: OPTIONAL<PeriodicCommunicationIndicator>;
     /**
      * @summary `communicationDurationTime`.
+     * @description
+     *
+     * Indicates for how long the UE will normally stay in CM-Connected for data
+     * transmission expressed in seconds.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly communicationDurationTime: OPTIONAL<INTEGER>;
     /**
      * @summary `periodicTime`.
+     * @description
+     *
+     * Interval Time of periodic communication in seconds.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
@@ -97,42 +150,91 @@ class SCEFCommunicationPatternUpdate {
     readonly scheduledCommunicationTime: OPTIONAL<ScheduledCommunicationTime>;
     /**
      * @summary `scheduledCommunicationType`.
+     * @description
+     *
+     * Indicates that the Scheduled Communication Type is Downlink only or
+     * Uplink only or Bi-directional.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly scheduledCommunicationType: OPTIONAL<ScheduledCommunicationType>;
     /**
      * @summary `stationaryIndication`.
+     * @description
+     *
+     * Identifies whether the UE is stationary or mobile.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly stationaryIndication: OPTIONAL<StationaryIndication>;
     /**
      * @summary `batteryIndication`.
+     * @description
+     *
+     * Identifies power consumption criticality for the UE: if the UE is battery
+     * powered but the battery is not rechargeable/not replaceable, battery
+     * powered with rechargeable/replaceable battery, or not battery powered.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly batteryIndication: OPTIONAL<BatteryIndication>;
     /**
      * @summary `trafficProfile`.
+     * @description
+     *
+     * Identifies the type of data transmission: single packet transmission (UL
+     * or DL), dual packet transmission (UL with subsequent DL or DL with
+     * subsequent UL), multiple packets transmission.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly trafficProfile: OPTIONAL<TrafficProfile>;
     /**
      * @summary `expectedUEMovingTrajectory`.
+     * @description
+     *
+     * Identifies the UE’s expected geographical movement.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly expectedUEMovingTrajectory: OPTIONAL<UMTLocationArea5G[]>;
     /**
      * @summary `sCSASID`.
+     * @description
+     *
+     * SCS/AS identity requesting communication pattern update.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sCSASID: SCSASID;
     /**
      * @summary `validityTime`.
+     * @description
+     *
+     * Identifies when the expected UE behaviour parameter set expires and shall
+     * be deleted. If absent, it indicates that there is no expiration time for
+     * this parameter set.
+     *
+     * 3GPP TS 33.128, clause 7.8.5.1.2.
+     *
      * @public
      * @readonly
      */

@@ -15,6 +15,13 @@ import { MMStateFlag, _decode_MMStateFlag, _encode_MMStateFlag, _enum_for_MMStat
  * @summary MMFlags
  * @description
  * 
+ * Identifies a keyword to add or remove from the list of keywords associated
+ * with a stored MM. Include if sent. See OMA-TS-MMS_ENC [39] clause 7.3.32.
+ * Include if sent by the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

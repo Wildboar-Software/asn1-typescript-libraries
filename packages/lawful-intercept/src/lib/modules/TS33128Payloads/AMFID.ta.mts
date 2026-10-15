@@ -17,6 +17,12 @@ import { AMFPointer, _decode_AMFPointer, _encode_AMFPointer } from "../TS33128Pa
  * @summary AMFID
  * @description
  * 
+ * Identifier of the AMF associated with the target UE, as defined in TS 23.003
+ * [19] clause 2.10.1 when available.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

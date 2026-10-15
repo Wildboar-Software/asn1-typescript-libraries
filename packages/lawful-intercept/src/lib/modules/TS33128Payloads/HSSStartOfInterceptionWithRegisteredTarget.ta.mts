@@ -17,6 +17,18 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary HSSStartOfInterceptionWithRegisteredTarget
  * @description
  * 
+ * The IRI-POI in the HSS shall generate an xIRI containing the
+ * HSSStartOfInterceptionWithRegisteredTarget record when the IRI-POI present in
+ * the HSS detects that interception is activated for a UE that has already been
+ * registered at the HSS.
+ *
+ * The HSS may have stored target subscription data for both EPC and IMS. In
+ * such a case, a single HSS Start of Interception with Registered Target xIRI
+ * shall be generated containing the target context.
+ *
+ * 3GPP TS 33.128, clause 7.2.3.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +46,44 @@ export
 class HSSStartOfInterceptionWithRegisteredTarget {
     /**
      * @summary `hSSIdentities`.
+     * @description
+     *
+     * Indicates the identifiers for which the subscription data sets apply.
+     * Shall include one or more subscriber identifier. See TS 29.562 [101]
+     * clause 6.2.3.1.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly hSSIdentities: HSSIdentities;
     /**
      * @summary `subscriptionDataSets`.
+     * @description
+     *
+     * Includes current subscription information for the target UE stored at the
+     * HSS. Encoded according to TS 29.562 [101] clause 6.2.6.2.4. The
+     * SBIReference for this parameter shall be populated with
+     * 'TS29562_Nhss_imsSDM.yaml#/components/schemas/ImsProfileData'.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.3.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionDataSets: SubscriptionDataSets;
     /**
      * @summary `pSUserState`.
+     * @description
+     *
+     * Indicates the user state in the PS domain as known at the HSS. Encoded
+     * according to TS 29.562 [101] clause 6.2.6.3.15. The SBIReference for this
+     * parameter shall be populated with 'TS29562_Nhss_imsSDM.yaml
+     * #/components/schemas/PsUserState'.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.3.
+     *
      * @public
      * @readonly
      */

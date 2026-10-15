@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PDUSessionType
  * @description
  * 
+ * Identifies selected PDU session type, see TS 24.501 [13] clause 9.11.4.11.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +40,11 @@ enum _enum_for_PDUSessionType {
  * @summary PDUSessionType
  * @description
  * 
+ * Identifies selected PDU session type, see TS 24.501 [13] clause 9.11.4.11.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +67,11 @@ type PDUSessionType = _enum_for_PDUSessionType;
  * @summary PDUSessionType
  * @description
  * 
+ * Identifies selected PDU session type, see TS 24.501 [13] clause 9.11.4.11.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -21,6 +21,25 @@ import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XM
  * @summary FiveGPINAPPMessage
  * @description
  * 
+ * The IRI-POI in the 5G PIN Server shall generate an xIRI containing a
+ * FiveGPINAPPMessage record when the IRI-POI present in the 5G PIN Server
+ * detects that the 5G PIN Server interacts using the PINAPP protocol with a PIN
+ * client for PIN application layer procedures (see clause 5.1 of TS 24.583
+ * [142]). PIN client is deployed in PIN Element (PINE, PEGC, PEMC). The IRI-POI
+ * present in the 5G PIN Server shall generate the xIRI for the following
+ * events:
+ *
+ * - 5G PIN Server exchanges PINAPP protocol messages with a target PIN client
+ *   relating to PIN application layer procedures.
+ *
+ * - 5G PIN Server exchanges PINAPP protocol messages with any PIN client of a
+ *   target PIN relating to PIN application layer procedures.
+ *
+ * Table 7.18.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.18.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +59,63 @@ export
 class FiveGPINAPPMessage {
     /**
      * @summary `pINEIdentities`.
+     * @description
+     *
+     * Identities of the target PIN client.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pINEIdentities: PINEIdentities;
     /**
      * @summary `mACAddress`.
+     * @description
+     *
+     * Identifies the MAC address of the PIN client, if available.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.2.
+     *
      * @public
      * @readonly
      */
     readonly mACAddress: OPTIONAL<MACAddress>;
     /**
      * @summary `pINID`.
+     * @description
+     *
+     * Identifies the PIN, if available.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pINID: OPTIONAL<PINID>;
     /**
      * @summary `pINServerID`.
+     * @description
+     *
+     * Identifies the 5G PIN Server.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pINServerID: PINServerID;
     /**
      * @summary `pINAPPMessage`.
+     * @description
+     *
+     * Contains the PINAPP protocol message encoded as a "pinapp-info" XML
+     * structure according to TS 24.583 [142] clause 6.2.4. The
+     * XMLType.namespace for this parameter shall be set to the namespace of the
+     * root element of the XML document, e.g. "urn:3GPP:ns:pinapp:2023".
+     *
+     * 3GPP TS 33.128, clause 7.18.2.2.
+     *
      * @public
      * @readonly
      */

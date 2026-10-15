@@ -25,8 +25,28 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type PayloadInformationRemoved =
+    /**
+     * @description
+     *
+     * Indicates the number of characters removed from the modifiedPayload as a
+     * part of the described modification.
+     */
     { charactersRemoved: INTEGER } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates the number of octets removed from this portion of the
+     * modifiedPayload as a part of the described modification.
+     */
     | { octetsRemoved: INTEGER } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates the number of bits removed from this portion of the
+     * modifiedPayload as a part of the described modification. This choice
+     * shall only be used if the information removed cannot be measured in
+     * octets.
+     */
     | { bitsRemoved: INTEGER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

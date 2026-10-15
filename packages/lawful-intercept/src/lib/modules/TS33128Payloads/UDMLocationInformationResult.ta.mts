@@ -30,6 +30,22 @@ import { UDMProblemDetails, _decode_UDMProblemDetails, _encode_UDMProblemDetails
  * @summary UDMLocationInformationResult
  * @description
  * 
+ * The IRI-POI in the UDM/UDR shall generate an xIRI containing the
+ * UDMLocationInformationResult record when it detects the following events:
+ *
+ * - When UDM receives the LocationInfoRequest from an NF service consumer (i.e.
+ *   HSS) as part of Nudm_MT_ProvideLocationInfo service operation (see TS
+ *   29.503 [25] clause 6.7.6.2.3) and the UDM sends the LocationInfoResult as
+ *   part of Nudm_MT_ProvideLocationInfo service operation (see TS 29.503 [25]
+ *   clause 6.7.6.2.4).
+ *
+ * When a target UE is registered to both 3GPP and non-3GPP access, two separate
+ * xIRIs each containing the LocationInfoResult report record may be generated
+ * by the IRI-POI in the UDM/UDR.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,66 +71,143 @@ export
 class UDMLocationInformationResult {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI currently associated with the target, see TS 29.571 [17].
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI currently associated with the target UE, when known, see TS 29.571
+     * [17].
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI currently associated with the target UE, when known, see TS 29.571
+     * [17].
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `locationInfoRequest`.
+     * @description
+     *
+     * Indicates the information received from the HSS in the
+     * LocationInfoRequest. At least one of the parameters in Table 7.2.2.3.6-2
+     * shall be included. See NOTE below table 7.2.2.3.6-2.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly locationInfoRequest: UDMLocationInfoRequest;
     /**
      * @summary `vPLMNID`.
+     * @description
+     *
+     * PLMNID of the visited PLMN, if UE is currently registered to visited
+     * network.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly vPLMNID: OPTIONAL<PLMNID>;
     /**
      * @summary `currentLocationIndicator`.
+     * @description
+     *
+     * Shall indicate if the UE location is current or last known. Include if
+     * provided in the LocationInfoResult.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly currentLocationIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `aMFInstanceID`.
+     * @description
+     *
+     * Provides the NF instance ID of the serving AMF for 3GPP access. Shall be
+     * included if provided in the LocationInfoResult.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly aMFInstanceID: OPTIONAL<NFID>;
     /**
      * @summary `sMSFInstanceID`.
+     * @description
+     *
+     * Provides the NF instance ID of the serving SMSF. Shall be included if
+     * provided in the LocationInfoResult.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly sMSFInstanceID: OPTIONAL<NFID>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information available at the UDM at the time of the
+     * LocationInfoRequest, include if in LocationInfoResult.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * Shall provide the current RAT type of the UE, if present in the
+     * LocationInfoResult.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<RATType>;
     /**
      * @summary `problemDetails`.
+     * @description
+     *
+     * Indicates the reason for LocationInfoResult failure. See TS 29.571 [17]
+     * clause 5.2.4.1. Shall be included if provided in the LocationInfoResult.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.6.
+     *
      * @public
      * @readonly
      */

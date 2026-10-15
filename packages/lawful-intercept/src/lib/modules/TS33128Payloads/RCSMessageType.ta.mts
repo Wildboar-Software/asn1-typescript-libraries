@@ -23,9 +23,41 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_RCSMessageType {
+    /**
+     * @description
+     *
+     * Shall be selected if the message being reported contains user generated
+     * communications content.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+     */
     messageWithUserContent = 1,
+    /**
+     * @description
+     *
+     * Shall be selected if the message being reported is a File Transfer
+     * message (see GSMA RCC.07 [78] clause 3.2.5).
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+     */
     fileTransferMessage = 2,
+    /**
+     * @description
+     *
+     * Shall be selected if the message being reported contains a geolocation
+     * PUSH message (see GSMA RCC.07 [78] clause 3.2.6).
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+     */
     geoLocationPUSHMessage = 3,
+    /**
+     * @description
+     *
+     * Shall be selected if the event being reported contains an IMDN
+     * notification (see OMA-TS-CPM_Conversation_Function [109] clause 5.4).
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+     */
     iMDNNotification = 4,
 }
 
@@ -73,6 +105,13 @@ const RCSMessageType = _enum_for_RCSMessageType;
 
 /**
  * @summary RCSMessageType_messageWithUserContent
+ * @description
+ *
+ * Shall be selected if the message being reported contains user generated
+ * communications content.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +120,13 @@ const RCSMessageType_messageWithUserContent: RCSMessageType = RCSMessageType.mes
 
 /**
  * @summary messageWithUserContent
+ * @description
+ *
+ * Shall be selected if the message being reported contains user generated
+ * communications content.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +135,13 @@ const messageWithUserContent: RCSMessageType = RCSMessageType.messageWithUserCon
 
 /**
  * @summary RCSMessageType_fileTransferMessage
+ * @description
+ *
+ * Shall be selected if the message being reported is a File Transfer message
+ * (see GSMA RCC.07 [78] clause 3.2.5).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +150,13 @@ const RCSMessageType_fileTransferMessage: RCSMessageType = RCSMessageType.fileTr
 
 /**
  * @summary fileTransferMessage
+ * @description
+ *
+ * Shall be selected if the message being reported is a File Transfer message
+ * (see GSMA RCC.07 [78] clause 3.2.5).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +165,13 @@ const fileTransferMessage: RCSMessageType = RCSMessageType.fileTransferMessage; 
 
 /**
  * @summary RCSMessageType_geoLocationPUSHMessage
+ * @description
+ *
+ * Shall be selected if the message being reported contains a geolocation PUSH
+ * message (see GSMA RCC.07 [78] clause 3.2.6).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +180,13 @@ const RCSMessageType_geoLocationPUSHMessage: RCSMessageType = RCSMessageType.geo
 
 /**
  * @summary geoLocationPUSHMessage
+ * @description
+ *
+ * Shall be selected if the message being reported contains a geolocation PUSH
+ * message (see GSMA RCC.07 [78] clause 3.2.6).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +195,13 @@ const geoLocationPUSHMessage: RCSMessageType = RCSMessageType.geoLocationPUSHMes
 
 /**
  * @summary RCSMessageType_iMDNNotification
+ * @description
+ *
+ * Shall be selected if the event being reported contains an IMDN notification
+ * (see OMA-TS-CPM_Conversation_Function [109] clause 5.4).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +210,13 @@ const RCSMessageType_iMDNNotification: RCSMessageType = RCSMessageType.iMDNNotif
 
 /**
  * @summary iMDNNotification
+ * @description
+ *
+ * Shall be selected if the event being reported contains an IMDN notification
+ * (see OMA-TS-CPM_Conversation_Function [109] clause 5.4).
+ *
+ * 3GPP TS 33.128, clause 7.13.3.3.2.1.
+ *
  * @constant
  * @type {number}
  */

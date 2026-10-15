@@ -15,6 +15,152 @@ import { SIPMessage, _decode_SIPMessage, _encode_SIPMessage } from "../TS33128Pa
  * @summary STIRSHAKENSignatureGeneration
  * @description
  * 
+ * The IRI-POI present in the Telephony AS or IBCF, shall generate an xIRI
+ * containing a STIRSHAKENSignatureGeneration record under the following
+ * conditions:
+ *
+ * - Telephony AS or IBCF is interacting with the SIGNING AS. Whether it is the
+ *   Telephony AS or IBCF for sessions is based on network configuration and
+ *   local policy of the CSP as described in clause 7.11.2.4.
+ *
+ * - When P-Asserted Identity or From header of SIP INVITE request received from
+ *   S-CSCF is a target identity with the conditions mentioned below:
+ *
+ * - The identities in one or both of those headers are used to interact with
+ *   the SIGNING AS.
+ *
+ * - The "shaken" PASSporT is not received in the SIP INVITE request from the
+ *   S-CSCF.
+ *
+ * - The "shaken" PASSporT with those identities in the "orig" claim is received
+ *   from the SIGNING AS.
+ *
+ * - The "shaken" PASSporT with those identities in the "orig" claim is included
+ *   in the outgoing SIP INVITE.
+ *
+ * - When the "ReportDiversionPASSporTInfo" parameter is set to "True" in the
+ *   ActivateTask with P-Asserted Identity or From header of SIP INVITE request
+ *   received from S-CSCF is a target identity with the conditions mentioned
+ *   below:
+ *
+ * - The identities in one or both of those headers are used to interact with
+ *   the SIGNING AS.
+ *
+ * - A "div" PASSporT with those identities in the "orig" claim of "div"
+ *   PASSporT is received from the SIGNING AS.
+ *
+ * - The "div" PASSporT with those identities in the "orig" claim is included in
+ *   the outgoing SIP INVITE.
+ *
+ * - When Diversion header or the History Info of SIP INVITE request received
+ *   from the S-CSCF includes a target identity with the conditions mentioned
+ *   below:
+ *
+ * - The identities in one or both of those headers are used to interact with
+ *   the SIGNING AS.
+ *
+ * - The "div" PASSporT with those identities in the "div" claim is not received
+ *   in the SIP INVITE request from the S-CSCF.
+ *
+ * - The "div" PASSporT with those identities in the "div" claim is received
+ *   from the SIGNING AS.
+ *
+ * - The "div" PASSporT with those identities in the "div" claim is included in
+ *   the outgoing SIP INVITE.
+ *
+ * - The identities in P-Asserted Identity or From of SIP INVITE received from
+ *   the S-CSCF are used to interact with the SIGNING AS.
+ *
+ * - A "div" PASSporT with the identities in P-Asserted Identity or From of SIP
+ *   INVITE request received from S-CSCF are included in the "orig" claim of
+ *   "div" PASSporT received from the SIGNING AS.
+ *
+ * - The "div" PASSporT with the identities in P-Asserted Identity or From of
+ *   SIP INVITE request received from S-CSCF are included in the "orig" claim of
+ *   "div" PASSporT in the outgoing SIP INVITE.
+ *
+ * - When the "ReportDiversionPASSporTInfo" parameter is set to "True" in the
+ *   ActivateTask with Diversion or HistoryInfo header of SIP INVITE request
+ *   received from S-CSCF includes the target identity with the conditions
+ *   mentioned below:
+ *
+ * - The identities in P-Asserted Identity or From of SIP INVITE received from
+ *   the S-CSCF are used to interact with the SIGNING AS.
+ *
+ * - A "div" PASSporT with the identities in P-Asserted Identity or From of SIP
+ *   INVITE request received from S-CSCF are included in the "orig" claim of
+ *   "div" PASSporT received from the SIGNING AS.
+ *
+ * - The "div" PASSporT with the identities in P-Asserted Identity or From of
+ *   SIP INVITE request received from S-CSCF are included in the "orig" claim of
+ *   "div" PASSporT in the outgoing SIP INVITE.
+ *
+ * - The "div" PASSporT with that identity in the "div" claim was previously
+ *   received in the SIP INVITE request from the S-CSCF or from the Signing AS.
+ *
+ * - When Request URI of outgoing SIP INVITE is a target non-local ID and is
+ *   present in the "dest" claim of "shaken" or "div" PASSporT received from the
+ *   SIGNING AS and the same is included in the outgoing SIP INVITE.
+ *
+ * - When Telephony AS is interacting with the SIGNING AS, and when Request URI
+ *   of SIP INVITE received from the S-CSCF is a target identity with the
+ *   conditions mentioned below:
+ *
+ * - The identity is used to interact with the SIGNING AS.
+ *
+ * - The "div" PASSporT with that identity in the "div" claim is received from
+ *   the SIGNING AS.
+ *
+ * - The "div" PASSporT with that identity in the "div" claim is included in the
+ *   outgoing SIP INVITE.
+ *
+ * When the target is local to the network (i.e. not a target non-local ID), the
+ * STIRSHAKENSignatureGeneration includes only the PASSporT received in the
+ * SIGING AS response with the following rules:
+ *
+ * - If REQUEST URI or To header in the SIP INVITE received from the S-CSCF is a
+ *   target identity, then only the "div" PASSporT received from the SIGNING AS
+ *   with those identities in the "div" claim of "div" PASSporT.
+ *
+ * - When the "ReportDiversionPASSporTInfo" parameter is set to "False" in the
+ *   ActivateTask:
+ *
+ * - If P-Asserted Identity or From header in the SIP INVITE received from the
+ *   S-CSCF is a target identity, then only "shaken" PASSporT received from the
+ *   SIGNING AS with those identities in the "orig" claim of the "shaken"
+ *   PASSporT.
+ *
+ * - If Diversion or HistoryInfo header in the SIP INVITE received from the
+ *   S-CSCF is a target identity, then only the "div" PASSporT received from the
+ *   SIGNING AS with those identities in the "div" claim of "div" PASSporT.
+ *
+ * - If REQUEST URI or To header in the SIP INVITE received from the S-CSCF is a
+ *   target identity, then only the "div" PASSporT received from the SIGNING AS
+ *   with those identities in the "div" claim of "div" PASSporT.
+ *
+ * - When the "ReportDiversionPASSporTInfo" parameter is set to "True" in the
+ *   ActivateTask, in addition to the reporting as described above (for
+ *   "ReportDiversionPASSporTInfo" parameter is set to "False"), also report the
+ *   "div" PASSporTs for all the subsequent redirections that have the identity
+ *   of the P-Asserted Identity or the From header in the "orig" claim of those
+ *   PASSporTs.
+ *
+ * When the target is non-local ID, STIRSHAKENSignatureGeneration includes all
+ * of the PASSporT included in the outgoing SIP message.
+ *
+ * The following table contains parameters, with IRITargetIdentifier, generated
+ * by the IRI-POI.
+ *
+ * NOTE 1: Void.
+ *
+ * NOTE 2: The same SIP message may be encapsulated in the xIRI IMSMessage as
+ * well.
+ *
+ * Table 7.11.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.11.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +177,29 @@ export
 class STIRSHAKENSignatureGeneration {
     /**
      * @summary `pASSporTs`.
+     * @description
+     *
+     * Identifies the content of the SIP Identity headers added by networks.
+     * This is a set of PASSporT parameter. See table 7.11.2.2-2.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pASSporTs: PASSporT[];
     /**
      * @summary `encapsulatedSIPMessage`.
+     * @description
+     *
+     * Encapsulated SIP INVITE request that includes SIP Identity header
+     * carrying the PASSporT (Outgoing SIP request) based on the structure
+     * defined in table 7.12.4.2-2 (see NOTE 2 below). Shall be provided. This
+     * parameter is conditional only for backwards compatibility. NOTE 2: The
+     * same SIP message may be encapsulated in the xIRI IMSMessage as well.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */

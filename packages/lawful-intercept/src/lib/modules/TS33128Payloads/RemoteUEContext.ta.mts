@@ -24,6 +24,13 @@ import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNI
  * @summary RemoteUEContext
  * @description
  * 
+ * Provides newly connected target 5G ProSe Remote UE information. Shall contain
+ * the target remote UE context octets if sent in the Remote UE Report message.
+ * Defined in TS 24.501 [13] clause 9.11.4.29.2.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TraceDirection
  * @description
  * 
+ * The TraceDirection provides information on the direction of the trace
+ * information being reported.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,9 +29,37 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_TraceDirection {
+    /**
+     * @description
+     *
+     * Shall be chosen when the message being reported is to the AMF.
+     *
+     * 3GPP TS 33.128, clause 8.5.10.
+     */
     toAMF = 1,
+    /**
+     * @description
+     *
+     * Shall be chosen when the message being reported is from the AMF.
+     *
+     * 3GPP TS 33.128, clause 8.5.10.
+     */
     fromAMF = 2,
+    /**
+     * @description
+     *
+     * Shall be chosen when the message being reported is to the MME.
+     *
+     * 3GPP TS 33.128, clause 8.5.10.
+     */
     toMME = 3,
+    /**
+     * @description
+     *
+     * Shall be chosen when the message being reported is from the MME.
+     *
+     * 3GPP TS 33.128, clause 8.5.10.
+     */
     fromMME = 4,
 }
 
@@ -33,6 +67,12 @@ enum _enum_for_TraceDirection {
  * @summary TraceDirection
  * @description
  * 
+ * The TraceDirection provides information on the direction of the trace
+ * information being reported.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -54,6 +94,12 @@ type TraceDirection = _enum_for_TraceDirection;
  * @summary TraceDirection
  * @description
  * 
+ * The TraceDirection provides information on the direction of the trace
+ * information being reported.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -73,6 +119,12 @@ const TraceDirection = _enum_for_TraceDirection;
 
 /**
  * @summary TraceDirection_toAMF
+ * @description
+ *
+ * Shall be chosen when the message being reported is to the AMF.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +133,12 @@ const TraceDirection_toAMF: TraceDirection = TraceDirection.toAMF; /* LONG_NAMED
 
 /**
  * @summary toAMF
+ * @description
+ *
+ * Shall be chosen when the message being reported is to the AMF.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +147,12 @@ const toAMF: TraceDirection = TraceDirection.toAMF; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary TraceDirection_fromAMF
+ * @description
+ *
+ * Shall be chosen when the message being reported is from the AMF.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +161,12 @@ const TraceDirection_fromAMF: TraceDirection = TraceDirection.fromAMF; /* LONG_N
 
 /**
  * @summary fromAMF
+ * @description
+ *
+ * Shall be chosen when the message being reported is from the AMF.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +175,12 @@ const fromAMF: TraceDirection = TraceDirection.fromAMF; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary TraceDirection_toMME
+ * @description
+ *
+ * Shall be chosen when the message being reported is to the MME.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +189,12 @@ const TraceDirection_toMME: TraceDirection = TraceDirection.toMME; /* LONG_NAMED
 
 /**
  * @summary toMME
+ * @description
+ *
+ * Shall be chosen when the message being reported is to the MME.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +203,12 @@ const toMME: TraceDirection = TraceDirection.toMME; /* SHORT_NAMED_ENUMERATED_VA
 
 /**
  * @summary TraceDirection_fromMME
+ * @description
+ *
+ * Shall be chosen when the message being reported is from the MME.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +217,12 @@ const TraceDirection_fromMME: TraceDirection = TraceDirection.fromMME; /* LONG_N
 
 /**
  * @summary fromMME
+ * @description
+ *
+ * Shall be chosen when the message being reported is from the MME.
+ *
+ * 3GPP TS 33.128, clause 8.5.10.
+ *
  * @constant
  * @type {number}
  */

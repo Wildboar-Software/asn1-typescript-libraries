@@ -30,6 +30,20 @@ import { AdditionalCGIs, _decode_AdditionalCGIs, _encode_AdditionalCGIs } from "
  * @summary IEFAssociationRecord
  * @description
  * 
+ * For each association event, the IEF shall create an IEFAssociationRecord, as
+ * defined below.
+ *
+ * NOTE 1: Shall be provided in first association record to ICF after PEI or
+ * GPSI is available and following any change of PEI or GPSI.
+ *
+ * NOTE 2: As a minimum, list of tracking areas shall be included in the first
+ * association event for each SUPI registered (per UE session) with the AMF and
+ * additionally whenever the TAI list changes due to a change in registration
+ * area.
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,66 +69,154 @@ export
 class IEFAssociationRecord {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with detected association event.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `fiveGGUTI`.
+     * @description
+     *
+     * 5G-GUTI shall be provided. Encoded as per TS 24.501 [13] figure
+     * 9.11.3.4.1, omitting the first four octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGGUTI: FiveGGUTI;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Time at which the identifier association event occurred. Shall be given
+     * qualified with time zone information (i.e. as UTC or offset from UTC, not
+     * as local time).
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly timestamp: GeneralizedTime;
     /**
      * @summary `tAI`.
+     * @description
+     *
+     * Last known TAI associated with the SUPI. Encoded as per TS 24.501 [13]
+     * clause 9.11.3.8, omitting the first octet.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly tAI: TAI;
     /**
      * @summary `nCGI`.
+     * @description
+     *
+     * Current nCGI known when the identifier association event is detected.
+     * Given as a sequence of PLMNID (encoded as per TS 38.413 [23] clause
+     * 9.3.3.5) and NCI (encoded as per TS 38.413 [23] clause 9.3.1.7).
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nCGI: NCGI;
     /**
      * @summary `nCGITime`.
+     * @description
+     *
+     * ueLocationTimestamp of the current nCGI if available in AMF as per TS
+     * 29.571 [17] clause 5.4.4.9. If ueLocationTimestamp is not available,
+     * shall be populated with timestamp of when the current nCGI was obtained
+     * and stored by the AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nCGITime: GeneralizedTime;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI shall be provided when event is triggered by association of a SUCI
+     * to a SUPI. Encoded as per TS 24.501 [13] clause 9.11.3.4, omitting the
+     * first 3 octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI, (see NOTE 1). NOTE 1: Shall be provided in first association record
+     * to ICF after PEI or GPSI is available and following any change of PEI or
+     * GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `fiveGSTAIList`.
+     * @description
+     *
+     * List of tracking areas associated with the registration area within which
+     * the UE is current registered, see TS 24.501 [13] clause 9.11.3.9 (see
+     * NOTE 2). NOTE 2: As a minimum, list of tracking areas shall be included
+     * in the first association event for each SUPI registered (per UE session)
+     * with the AMF and additionally whenever the TAI list changes due to a
+     * change in registration area.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSTAIList: OPTIONAL<FiveGSTAIList>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI, (see NOTE 1). NOTE 1: Shall be provided in first association record
+     * to ICF after PEI or GPSI is available and following any change of PEI or
+     * GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `additionalCGIs`.
+     * @description
+     *
+     * This parameter shall be present if the AMF has additional cell
+     * information for the UE when the identifier association event is detected.
+     * Shall contain a list of additional NCGIs that are available at the AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */

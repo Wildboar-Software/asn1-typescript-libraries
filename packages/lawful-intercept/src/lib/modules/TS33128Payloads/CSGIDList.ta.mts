@@ -12,6 +12,12 @@ import { CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta
  * @summary CSGIDList
  * @description
  * 
+ * A list of the closed subscriber groups supported by the RAN Node. Shall be
+ * present if known at the NF where the POI is located.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -29,6 +29,17 @@ import { AlternativeNSSAIList, _decode_AlternativeNSSAIList, _encode_Alternative
  * @summary AMFUEConfigurationUpdate
  * @description
  * 
+ * The IRI-POI in the AMF shall generate an xIRI containing a
+ * AMFUEConfigurationUpdate record when the IRI-POI present in the AMF detects
+ * that a UE matching one of the target identifiers provided via LI_X1 has been
+ * commanded to update its configuration. Accordingly, the IRI-POI in the AMF
+ * generates the xIRI when the following event is detected:
+ *
+ * - AMF sends a CONFIGURATION UPDATE COMMAND message to the target UE.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,54 +63,136 @@ export
 class AMFUEConfigurationUpdate {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the AMF context. See TS 29.518 [22]
+     * clause 6.1.6.2.25.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * Current 5G-GUTI associated with the UE context. If the AMF includes a new
+     * 5G-GUTI as a part of the configuration update, this parameter shall be
+     * set to the new GUTI and the oldGUTI parameter shall be populated, see TS
+     * 24.501 [13] clause 8.2.19.3.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: GUTI;
     /**
      * @summary `oldGUTI`.
+     * @description
+     *
+     * Old 5G-GUTI associated with the UE context. If the AMF includes a new
+     * 5G-GUTI as a part of the configuration update, this parameter shall be
+     * set to the old GUTI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */
     readonly oldGUTI: OPTIONAL<EPS5GGUTI>;
     /**
      * @summary `fiveGSTAIList`.
+     * @description
+     *
+     * List of tracking areas associated with the registration area within which
+     * the UE is current registered, see TS 24.501 [13] clause 9.11.3.9. Shall
+     * be included each time there is a change to the registration area and
+     * omitted if the registration area does not change.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSTAIList: OPTIONAL<TAIList>;
     /**
      * @summary `slice`.
+     * @description
+     *
+     * Provide, if available, one or more of the following:
+     *
+     * - allowed NSSAI (see TS 24.501 [13] clause 9.11.3.37).
+     *
+     * - configured NSSAI (see TS 24.501 [13] clause 9.11.3.37).
+     *
+     * - rejected NSSAI (see TS 24.501 [13] clause 9.11.3.46). This is derived
+     *   from the information sent to the UE in the CONFIGURATION UPDATE COMMAND
+     *   message.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */
     readonly slice: OPTIONAL<Slice>;
     /**
      * @summary `serviceAreaList`.
+     * @description
+     *
+     * Includes a list of allowed service areas or non-allowed service areas,
+     * encoded per TS 24.501 [13] clause 9.11.3.49, omitting the first two
+     * octets. Shall be included if present in the CONFIGURATION UPDATE COMMAND
+     * message, see TS 24.501 [13] clause 8.2.19.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */
     readonly serviceAreaList: OPTIONAL<ServiceAreaList>;
     /**
      * @summary `registrationResult`.
+     * @description
+     *
+     * Specifies the result of registration, see TS 24.501 [13] clause 9.11.3.6.
+     * Shall be included if present in the CONFIGURATION UPDATE COMMAND message,
+     * see TS 24.501 [13] clause 8.2.19.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */
     readonly registrationResult: OPTIONAL<AMFRegistrationResult>;
     /**
      * @summary `sMSOverNASIndicator`.
+     * @description
+     *
+     * Indicates whether SMS over NAS is supported. Shall be present if the SMS
+     * indication is present in the CONFIGURATION UPDATE COMMAND message, see TS
+     * 24.501 [13] clause 8.2.19.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */
     readonly sMSOverNASIndicator: OPTIONAL<SMSOverNASIndicator>;
     /**
      * @summary `alternativeNSSAI`.
+     * @description
+     *
+     * Provides a list of mapping information between the S-NSSAI to be replaced
+     * and the alternative S-NSSAI. Shall be included if present in the
+     * CONFIGURATION UPDATE COMMAND message. See TS 24.501 [13] clause
+     * 9.11.3.97.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.10.
+     *
      * @public
      * @readonly
      */

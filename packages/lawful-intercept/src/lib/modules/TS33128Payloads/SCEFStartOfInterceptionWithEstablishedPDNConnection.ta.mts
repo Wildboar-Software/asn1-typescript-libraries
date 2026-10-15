@@ -29,6 +29,29 @@ import { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SC
  * @summary SCEFStartOfInterceptionWithEstablishedPDNConnection
  * @description
  * 
+ * The IRI-POI in the SCEF/IWK-SCEF shall generate an xIRI containing an
+ * SCEFStartOfInterceptionWithEstablishedPDNConnection record when the IRI-POI
+ * present in the SCEF detects that a Non-IP PDN Connection using SCEF has
+ * already been established for the target UE when interception starts.
+ *
+ * In a non-roaming scenario, the IRI-POI in the SCEF (or in a roaming scenario,
+ * the IRI-POI in the IWK-SCEF in the VPLMN) shall generate the xIRI containing
+ * the SCEFStartOfInterceptionWithEstablishedPDNConnection record when it
+ * detects that a new interception for a UE is activated (i.e. provisioned by
+ * the LIPF) for the following case:
+ *
+ * - A PDN connection to the SCEF for the target UE exists, uniquely identified
+ *   by an EPS Bearer Identity, APN, and UE Identity.
+ *
+ * The IRI-POI in the SCEF/IWK-SCEF shall generate the xIRI containing the
+ * SCEFStartOfInterceptionWithEstablishedPDNConnection record for each of the
+ * PDN Connections for NIDD using SCEF associated with the target UE.
+ *
+ * Table 7.8.2.3-1 gives the LI_HI2 IRI message type for this record as BEGIN.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,54 +75,114 @@ export
 class SCEFStartOfInterceptionWithEstablishedPDNConnection {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the Non-IP PDN Connection of the target UE (e.g. as
+     * provided by the MME in the associated Connection Management Request).
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN associated with the PDN Connection if available.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `externalIdentifier`.
+     * @description
+     *
+     * External Identifier associated with the PDN Connection if available,
+     * defined as NAI in ASN.1.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */
     readonly externalIdentifier: OPTIONAL<NAI>;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI associated to the device if available.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `ePSBearerID`.
+     * @description
+     *
+     * Identity of the EPS bearer that MME allocated to the Non-IP PDN
+     * connection.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */
     readonly ePSBearerID: EPSBearerID;
     /**
      * @summary `sCEFID`.
+     * @description
+     *
+     * SCEF identity handling the EPS Bearer.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */
     readonly sCEFID: SCEFID;
     /**
      * @summary `aPN`.
+     * @description
+     *
+     * Access Point Name associated with the target traffic. Shall be given in
+     * dotted-label presentation format as described in TS 23.003 [19] clause
+     * 9.1.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */
     readonly aPN: APN;
     /**
      * @summary `rDSSupport`.
+     * @description
+     *
+     * True if Reliable Data Service is supported in the PDN Connection,
+     * otherwise False.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */
     readonly rDSSupport: RDSSupport;
     /**
      * @summary `sCSASID`.
+     * @description
+     *
+     * String Identifying the SCS/AS the traffic will be delivered to.
+     *
+     * 3GPP TS 33.128, clause 7.8.2.1.6.
+     *
      * @public
      * @readonly
      */

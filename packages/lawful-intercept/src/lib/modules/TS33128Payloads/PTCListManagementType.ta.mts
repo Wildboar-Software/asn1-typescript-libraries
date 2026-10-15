@@ -7,6 +7,19 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCListManagementType
  * @description
  * 
+ * The "List Management Attempts" identify the type of list being managed by the
+ * target when available: a) ContactListManagementAttempt b)
+ * GroupListManagementAttempt c) ContactListManagementResult d)
+ * GroupListManagementResult e) Request unsuccessful For example, a) and b) are
+ * reported when PTC target attempts changes to their contact list and their PTC
+ * group list(s). The "List Management Results" identify the network response to
+ * a modification by the PTC target. For example, c), d), or e) is reported when
+ * the network notifies the PTC target of changes to their contact list or their
+ * PTC group list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +48,19 @@ enum _enum_for_PTCListManagementType {
  * @summary PTCListManagementType
  * @description
  * 
+ * The "List Management Attempts" identify the type of list being managed by the
+ * target when available: a) ContactListManagementAttempt b)
+ * GroupListManagementAttempt c) ContactListManagementResult d)
+ * GroupListManagementResult e) Request unsuccessful For example, a) and b) are
+ * reported when PTC target attempts changes to their contact list and their PTC
+ * group list(s). The "List Management Results" identify the network response to
+ * a modification by the PTC target. For example, c), d), or e) is reported when
+ * the network notifies the PTC target of changes to their contact list or their
+ * PTC group list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +83,19 @@ type PTCListManagementType = _enum_for_PTCListManagementType;
  * @summary PTCListManagementType
  * @description
  * 
+ * The "List Management Attempts" identify the type of list being managed by the
+ * target when available: a) ContactListManagementAttempt b)
+ * GroupListManagementAttempt c) ContactListManagementResult d)
+ * GroupListManagementResult e) Request unsuccessful For example, a) and b) are
+ * reported when PTC target attempts changes to their contact list and their PTC
+ * group list(s). The "List Management Results" identify the network response to
+ * a modification by the PTC target. For example, c), d), or e) is reported when
+ * the network notifies the PTC target of changes to their contact list or their
+ * PTC group list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

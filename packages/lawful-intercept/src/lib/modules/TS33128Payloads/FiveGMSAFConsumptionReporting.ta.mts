@@ -15,6 +15,21 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary FiveGMSAFConsumptionReporting
  * @description
  * 
+ * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+ * 5GMSAFConsumptionReporting record when the IRI-POI present in the 5GMS AF
+ * detects that an 5GMS AF has received a consumption report from the target UE.
+ * The IRI-POI present in the 5GMS AF shall generate the xIRI for the following
+ * event (as specified in TS 26.512 [98] clause 11.3):
+ *
+ * - 5GMS AF returns submitConsumptionReport Response (i.e. 204 No Content) in
+ *   response to a submitConsumptionReport Request (i.e. POST) from the Media
+ *   Session Handler in the target UE which submits a consumption report.
+ *
+ * Table 7.15.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +46,26 @@ export
 class FiveGMSAFConsumptionReporting {
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * gPSI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.3.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `consumptionReport`.
+     * @description
+     *
+     * Includes a consumption report according to 26.512 [98] clause 11.3.3. The
+     * SBIReference for this parameter shall be populated with 'TS26512_M5_
+     * ConsumptionReporting.yaml#/components/schemas/ConsumptionReport'.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.3.
+     *
      * @public
      * @readonly
      */

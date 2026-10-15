@@ -12,6 +12,13 @@ import { CellCAGList, _decode_CellCAGList, _encode_CellCAGList } from "../TS3312
  * @summary NPNAccessInformation
  * @description
  * 
+ * Globally identifies the secondary NG-RAN node CAG Cells. Include if sent in
+ * the HANDOVER REQUEST ACKNOWLEDGE message from gaining RAN node to AMF. See TS
+ * 38.413 [23] clause 9.3.3.46.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -23,6 +30,12 @@ import { CellCAGList, _decode_CellCAGList, _encode_CellCAGList } from "../TS3312
  */
 export
 type NPNAccessInformation =
+    /**
+     * @description
+     *
+     * Contains information to perform access control for Non-Public Network
+     * (NPN). (3GPP TS 33.128, clause 6.2.2.2A.14.)
+     */
     { pNINPNAccessInformation: CellCAGList } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

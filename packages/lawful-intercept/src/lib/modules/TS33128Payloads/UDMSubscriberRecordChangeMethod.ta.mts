@@ -26,12 +26,66 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_UDMSubscriberRecordChangeMethod {
+    /**
+     * @description
+     *
+     * Indicates that PEI is the identifier changed as part of the service
+     * operation.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.3.
+     */
     pEIChange = 1,
+    /**
+     * @description
+     *
+     * Indicates that SUPI is the identifier changed as part of the service
+     * operation.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.3.
+     */
     sUPIChange = 2,
+    /**
+     * @description
+     *
+     * Indicates that GPSI is the identifier changed as part of the service
+     * operation.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.3.
+     */
     gPSIChange = 3,
+    /**
+     * @description
+     *
+     * Used when UE de-provisioning is the cause of the service operation.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.3.
+     */
     uEDeprovisioning = 4,
+    /**
+     * @description
+     *
+     * Used when no information is available.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.3.
+     */
     unknown = 5,
+    /**
+     * @description
+     *
+     * Indicates that NSSAI or CAG ID is changed as part of the service
+     * operation.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.3.
+     */
     serviceIDChange = 6,
+    /**
+     * @description
+     *
+     * Indicates that multiple identifiers have been changed with one service
+     * operation (e.g. pEIChange and gPSIChange).
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.3.
+     */
     multipleIDChanges = 7,
 }
 
@@ -85,6 +139,13 @@ const UDMSubscriberRecordChangeMethod = _enum_for_UDMSubscriberRecordChangeMetho
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_pEIChange
+ * @description
+ *
+ * Indicates that PEI is the identifier changed as part of the service
+ * operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +154,13 @@ const UDMSubscriberRecordChangeMethod_pEIChange: UDMSubscriberRecordChangeMethod
 
 /**
  * @summary pEIChange
+ * @description
+ *
+ * Indicates that PEI is the identifier changed as part of the service
+ * operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +169,13 @@ const pEIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMeth
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_sUPIChange
+ * @description
+ *
+ * Indicates that SUPI is the identifier changed as part of the service
+ * operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +184,13 @@ const UDMSubscriberRecordChangeMethod_sUPIChange: UDMSubscriberRecordChangeMetho
 
 /**
  * @summary sUPIChange
+ * @description
+ *
+ * Indicates that SUPI is the identifier changed as part of the service
+ * operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +199,13 @@ const sUPIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMet
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_gPSIChange
+ * @description
+ *
+ * Indicates that GPSI is the identifier changed as part of the service
+ * operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +214,13 @@ const UDMSubscriberRecordChangeMethod_gPSIChange: UDMSubscriberRecordChangeMetho
 
 /**
  * @summary gPSIChange
+ * @description
+ *
+ * Indicates that GPSI is the identifier changed as part of the service
+ * operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +229,12 @@ const gPSIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMet
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_uEDeprovisioning
+ * @description
+ *
+ * Used when UE de-provisioning is the cause of the service operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +243,12 @@ const UDMSubscriberRecordChangeMethod_uEDeprovisioning: UDMSubscriberRecordChang
 
 /**
  * @summary uEDeprovisioning
+ * @description
+ *
+ * Used when UE de-provisioning is the cause of the service operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +257,12 @@ const uEDeprovisioning: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordCha
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_unknown
+ * @description
+ *
+ * Used when no information is available.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +271,12 @@ const UDMSubscriberRecordChangeMethod_unknown: UDMSubscriberRecordChangeMethod =
 
 /**
  * @summary unknown
+ * @description
+ *
+ * Used when no information is available.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +285,12 @@ const unknown: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_serviceIDChange
+ * @description
+ *
+ * Indicates that NSSAI or CAG ID is changed as part of the service operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +299,12 @@ const UDMSubscriberRecordChangeMethod_serviceIDChange: UDMSubscriberRecordChange
 
 /**
  * @summary serviceIDChange
+ * @description
+ *
+ * Indicates that NSSAI or CAG ID is changed as part of the service operation.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +313,13 @@ const serviceIDChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChan
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_multipleIDChanges
+ * @description
+ *
+ * Indicates that multiple identifiers have been changed with one service
+ * operation (e.g. pEIChange and gPSIChange).
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +328,13 @@ const UDMSubscriberRecordChangeMethod_multipleIDChanges: UDMSubscriberRecordChan
 
 /**
  * @summary multipleIDChanges
+ * @description
+ *
+ * Indicates that multiple identifiers have been changed with one service
+ * operation (e.g. pEIChange and gPSIChange).
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.3.
+ *
  * @constant
  * @type {number}
  */

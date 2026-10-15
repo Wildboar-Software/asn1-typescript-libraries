@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary FiveGGUTI
  * @description
  * 
+ * Encoded as per TS 24.501 [13] figure 9.11.3.4.1, omitting the first four
+ * octets.
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

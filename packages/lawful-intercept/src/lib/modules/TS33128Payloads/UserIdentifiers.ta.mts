@@ -15,6 +15,13 @@ import { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } 
  * @summary UserIdentifiers
  * @description
  * 
+ * As there are often multiple identifiers that may be known at an NF or by the
+ * MDF, a single type capable of reporting multiple User Identifiers was
+ * defined.
+ *
+ * 3GPP TS 33.128, clause 8.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,28 @@ export
 class UserIdentifiers {
     /**
      * @summary `fiveGSSubscriberIDs`.
+     * @description
+     *
+     * Contains the list of 5GS identifiers for a user. Shall be present when
+     * any 5GS identifiers are known at the NF where the POI is located or at
+     * the MDF.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSSubscriberIDs: OPTIONAL<FiveGSSubscriberIDs>;
     /**
      * @summary `ePSSubscriberIDs`.
+     * @description
+     *
+     * Contains the list of EPS identifiers for a user. Shall be present when
+     * any EPS identifiers are known at the NF where the POI is located or at
+     * the MDF.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.1.
+     *
      * @public
      * @readonly
      */

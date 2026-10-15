@@ -29,8 +29,29 @@ import { EPSPDNConnectionRelease, _decode_EPSPDNConnectionRelease, _encode_EPSPD
  */
 export
 type EPSPDNFailedProcedure =
+    /**
+     * @description
+     *
+     * Shall be used to report a failed EPS PDN connection establishment.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.10.
+     */
     { ePSPDNConnectionEstablishment: EPSPDNConnectionEstablishment } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be used to report a failed EPSPDNConnectionModification.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.10.
+     */
     | { ePSPDNConnectionModification: EPSPDNConnectionModification } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be used to report a failed EPS PDN connection release.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.10.
+     */
     | { ePSPDNConnectionRelease: EPSPDNConnectionRelease } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

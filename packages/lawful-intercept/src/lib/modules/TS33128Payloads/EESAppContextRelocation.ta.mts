@@ -16,6 +16,11 @@ import { EESACRDetOrInit, _decode_EESACRDetOrInit, _encode_EESACRDetOrInit } fro
  * @summary EESAppContextRelocation
  * @description
  * 
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

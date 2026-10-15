@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMEUES1APID
  * @description
  * 
+ * Identity that the MME uses to uniquely identify the target UE over the S1
+ * Interface. See TS 36.413 [38] clause 9.2.3.3.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -7,6 +7,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCGroupAuthRule
  * @description
  * 
+ * Identifies the action requested by the PTC target to the PTC Group
+ * Authorization Rules: a) Allow Initiating PTC session b) Block Initiating PTC
+ * session c) Allow Joining PTC session d) Block Joining PTC session e) Allow
+ * Add Participants f) Block Add Participants g) Allow Subscription PTC session
+ * state h) Block Subscription PTC session state i) Allow Anonymity j) Forbid
+ * Anonymity - Report when action requested to the PTC group authorization rules
+ * by the PTC target. - Report when the PTC target attempts a change or queries
+ * the access control List(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,6 +57,18 @@ enum _enum_for_PTCGroupAuthRule {
  * @summary PTCGroupAuthRule
  * @description
  * 
+ * Identifies the action requested by the PTC target to the PTC Group
+ * Authorization Rules: a) Allow Initiating PTC session b) Block Initiating PTC
+ * session c) Allow Joining PTC session d) Block Joining PTC session e) Allow
+ * Add Participants f) Block Add Participants g) Allow Subscription PTC session
+ * state h) Block Subscription PTC session state i) Allow Anonymity j) Forbid
+ * Anonymity - Report when action requested to the PTC group authorization rules
+ * by the PTC target. - Report when the PTC target attempts a change or queries
+ * the access control List(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,6 +96,18 @@ type PTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
  * @summary PTCGroupAuthRule
  * @description
  * 
+ * Identifies the action requested by the PTC target to the PTC Group
+ * Authorization Rules: a) Allow Initiating PTC session b) Block Initiating PTC
+ * session c) Allow Joining PTC session d) Block Joining PTC session e) Allow
+ * Add Participants f) Block Add Participants g) Allow Subscription PTC session
+ * state h) Block Subscription PTC session state i) Allow Anonymity j) Forbid
+ * Anonymity - Report when action requested to the PTC group authorization rules
+ * by the PTC target. - Report when the PTC target attempts a change or queries
+ * the access control List(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -19,6 +19,10 @@ import { AForASSessionWithQoSResponseCode, _decode_AForASSessionWithQoSResponseC
  * @summary NEFAFSessionWithQoSNotification
  * @description
  * 
+ * Table 7.7.6.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

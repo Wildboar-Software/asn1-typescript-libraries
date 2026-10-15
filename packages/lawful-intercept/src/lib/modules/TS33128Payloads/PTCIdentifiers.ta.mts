@@ -36,7 +36,18 @@ type PTCIdentifiers =
     { deprecatedMCPTTID: UTF8String } /* CHOICE_ALT_ROOT */
     | { instanceIdentifierURN: UTF8String } /* CHOICE_ALT_ROOT */
     | { pTCChatGroupID: PTCChatGroupID } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * IMPU of the target, if used for the service (see NOTE). (3GPP TS 33.128,
+     * clause 7.3.1.4.)
+     */
     | { iMPU: IMPU } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * IMPI of the target. (3GPP TS 33.128, clause 7.20.2.1.2.)
+     */
     | { iMPI: IMPI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

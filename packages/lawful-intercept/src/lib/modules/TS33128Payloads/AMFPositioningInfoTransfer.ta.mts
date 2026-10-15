@@ -26,6 +26,51 @@ import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } fro
  * @summary AMFPositioningInfoTransfer
  * @description
  * 
+ * The IRI-POI present in the AMF shall generate an xIRI containing an
+ * AMFPositioningInfoTransfer when the IRI-POI present in the AMF detects one of
+ * the following events:
+ *
+ * - an NRPPa (see TS 38.455 [86]) message related to a target UE has been
+ *   exchanged between the LMF and NG-RAN via the AMF.
+ *
+ * - a LPP (see TS 37.355 [85]) message related to a target UE has been
+ *   exchanged between the LMF and the target UE via the AMF.
+ *
+ * Accordingly, the IRI-POI in AMF generates the xIRI when any of the following
+ * events is detected:
+ *
+ * - AMF receives an Namf_Communication_N1N2MessageTransfer (see TS 29.518 [22])
+ *   from LMF to request the transfer of a NRPPa request to the serving NG-RAN
+ *   node for a target UE as part of a UE associated NRPPa positioning activity.
+ *   The NRPPa request may be E-CID MEASUREMENT INITIATION REQUEST or OTDOA
+ *   INFORMATION REQUEST.
+ *
+ * - AMF sends a Namf_Communication_N2InfoNotify (see TS 29.518 [22]) to the LMF
+ *   to forward the NRPPa response or report received from the NG-RAN for a
+ *   target UE. The NRPPa response or report may be E-CID MEASUREMENT INITIATION
+ *   RESPONSE, E-CID MEASUREMENT REPORT or OTDOA INFORMATION RESPONSE.
+ *
+ * - AMF receives an Namf_Communication_N1N2MessageTransfer (see TS 29.518 [22])
+ *   from LMF to request the transfer of a LPP message to a target UE as part of
+ *   a LPP positioning activity.
+ *
+ * - AMF sends an Namf_Communication_N1MessageNotify (see TS 29.518 [22]) to LMF
+ *   to forward a LPP message received from the target UE.
+ *
+ * The AMFPositioningInfoTransfer record is also used by LARF to deliver E-CID
+ * measurements responses to MDF2, as described in clause 7.3.5.6. The IRI-POI
+ * in the AMF shall not generate the AMFPositioningInfoTransfer xIRI when the
+ * E-CID measurement response is received as the result of a LARF request, as
+ * described in TS 33.127 [5], clause 7.3.5.2.
+ *
+ * NOTE: In case the AMFPositioningInfoTransfer record is created as a result of
+ * a LARF request, the LCS Correlation ID shall be created by the LARF, as part
+ * of the E-CID measurement procedure, in order to link the request to the
+ * response.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,54 +94,130 @@ export
 class AMFPositioningInfoTransfer {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the procedure (see NOTE 1 in table 6.2.2.2.7-1).
+     * NOTE: In case the AMFPositioningInfoTransfer record is created as a
+     * result of a LARF request, the LCS Correlation ID shall be created by the
+     * LARF, as part of the E-CID measurement procedure, in order to link the
+     * request to the response.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI used in the procedure, if applicable and if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI used in the procedure, if available (see NOTE 1 in table
+     * 6.2.2.2.7-1). NOTE: In case the AMFPositioningInfoTransfer record is
+     * created as a result of a LARF request, the LCS Correlation ID shall be
+     * created by the LARF, as part of the E-CID measurement procedure, in order
+     * to link the request to the response.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used in the procedure, if available (see NOTE 1 in table
+     * 6.2.2.2.7-1). NOTE: In case the AMFPositioningInfoTransfer record is
+     * created as a result of a LARF request, the LCS Correlation ID shall be
+     * created by the LARF, as part of the E-CID measurement procedure, in order
+     * to link the request to the response.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI used in the procedure, see TS 24.501 [13] clause 9.11.3.4.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<FiveGGUTI>;
     /**
      * @summary `nRPPaMessage`.
+     * @description
+     *
+     * Any UE associated NRPPa message exchanged between the LMF and NG-RAN via
+     * AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly nRPPaMessage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lPPMessage`.
+     * @description
+     *
+     * Any LPP message exchanged between the LMF and the target UE via AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly lPPMessage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lcsCorrelationId`.
+     * @description
+     *
+     * LCS correlation ID (see TS 29.572 [24] clause 6.1.6.3.2) related to a
+     * location session, found in the Namf_CommunicationN1N2MessageTransfer and
+     * corresponding Namf_Communication_N2InfoNotify or
+     * Namf_CommunicationN1MessageNotify. All the AMFPositioningInfoTransfer
+     * records related to the same location session have the same
+     * lcsCorrelationId (see NOTE). NOTE: In case the AMFPositioningInfoTransfer
+     * record is created as a result of a LARF request, the LCS Correlation ID
+     * shall be created by the LARF, as part of the E-CID measurement procedure,
+     * in order to link the request to the response.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly lcsCorrelationId: UTF8String;
     /**
      * @summary `additionalUserIdentifiers`.
+     * @description
+     *
+     * Provides additional user identifiers known at the AMF or stored in AMF
+     * context, e.g. additional GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.8.
+     *
      * @public
      * @readonly
      */

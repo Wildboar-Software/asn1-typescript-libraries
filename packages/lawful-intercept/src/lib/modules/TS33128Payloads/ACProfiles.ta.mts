@@ -11,6 +11,12 @@ import { ACProfile, _decode_ACProfile, _encode_ACProfile } from "../TS33128Paylo
  * @summary ACProfiles
  * @description
  * 
+ * Profiles of application clients (ACs) for which the EEC provides edge
+ * enabling services, if available. See table 7.14.2.2-2.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

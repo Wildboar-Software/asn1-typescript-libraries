@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RCSSessionLeg
  * @description
  * 
+ * The RCSSessionLeg shall be set to indicate whether the SIP Session Exchange
+ * is between the server and a remote endpoint or between the server and the
+ * local client.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +28,23 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_RCSSessionLeg {
+    /**
+     * @description
+     *
+     * Shall be selected if the exchange took place between the server and a
+     * remote endpoint.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+     */
     remoteLeg = 1,
+    /**
+     * @description
+     *
+     * Shall be selected if the exchange took place between the server and the
+     * local client.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+     */
     localLeg = 2,
 }
 
@@ -29,6 +52,13 @@ enum _enum_for_RCSSessionLeg {
  * @summary RCSSessionLeg
  * @description
  * 
+ * The RCSSessionLeg shall be set to indicate whether the SIP Session Exchange
+ * is between the server and a remote endpoint or between the server and the
+ * local client.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +78,13 @@ type RCSSessionLeg = _enum_for_RCSSessionLeg;
  * @summary RCSSessionLeg
  * @description
  * 
+ * The RCSSessionLeg shall be set to indicate whether the SIP Session Exchange
+ * is between the server and a remote endpoint or between the server and the
+ * local client.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +102,13 @@ const RCSSessionLeg = _enum_for_RCSSessionLeg;
 
 /**
  * @summary RCSSessionLeg_remoteLeg
+ * @description
+ *
+ * Shall be selected if the exchange took place between the server and a remote
+ * endpoint.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +117,13 @@ const RCSSessionLeg_remoteLeg: RCSSessionLeg = RCSSessionLeg.remoteLeg; /* LONG_
 
 /**
  * @summary remoteLeg
+ * @description
+ *
+ * Shall be selected if the exchange took place between the server and a remote
+ * endpoint.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +132,13 @@ const remoteLeg: RCSSessionLeg = RCSSessionLeg.remoteLeg; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary RCSSessionLeg_localLeg
+ * @description
+ *
+ * Shall be selected if the exchange took place between the server and the local
+ * client.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +147,13 @@ const RCSSessionLeg_localLeg: RCSSessionLeg = RCSSessionLeg.localLeg; /* LONG_NA
 
 /**
  * @summary localLeg
+ * @description
+ *
+ * Shall be selected if the exchange took place between the server and the local
+ * client.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.4.5.4.
+ *
  * @constant
  * @type {number}
  */

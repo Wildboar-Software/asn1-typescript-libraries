@@ -33,6 +33,22 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary MMERANTraceReport
  * @description
  * 
+ * The IRI-POI in the MME shall generate an xIRI containing an MMERANTraceReport
+ * record when the IRI-POI present in the MME has detected any of the following
+ * events:
+ *
+ * - MME sent a TRACE START message to a RAN node in response to a Trace Session
+ *   Activation message for the target.
+ *
+ * - MME received a CELL TRAFFIC TRACE message from the RAN for the target.
+ *
+ * - MME sent MDT or trace data to the trace collection entity for the target.
+ *
+ * - MME sent a deactivate trace message to the RAN for the target.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,12 +74,28 @@ export
 class MMERANTraceReport {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the MME context. See TS 23.401 [50]
+     * clause 5.7.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `mMEUES1APID`.
+     * @description
+     *
+     * Identity that the MME uses to uniquely identify the target UE over the S1
+     * Interface. See TS 36.413 [38] clause 9.2.3.3. This is correlated to the
+     * IMSI known in the UE context at the MME.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
@@ -76,48 +108,111 @@ class MMERANTraceReport {
     readonly eNBUES1APID: RANUES1APID;
     /**
      * @summary `traceRecordType`.
+     * @description
+     *
+     * Identifies the type of trace record being generated. This parameter is
+     * populated with either Trace Start, Cell Traffic Trace, Trace Data
+     * Delivery, or Trace Deactivation.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
     readonly traceRecordType: TraceRecordType;
     /**
      * @summary `traceDirection`.
+     * @description
+     *
+     * Identifies which network element is signalling the trace information.
+     * This parameter is populated with a choice of either MME or RAN. See TS
+     * 36.413 [38] clauses 9.1.11 and 9.1.18.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
     readonly traceDirection: TraceDirection;
     /**
      * @summary `traceActivationInfo`.
+     * @description
+     *
+     * Information related to a trace session activation provided from the MME
+     * to the NG-RAN node. Shall be populated if the traceRecordType is set to
+     * Trace Start. See TS 36.413 [38] clause 9.2.1.4.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
     readonly traceActivationInfo: OPTIONAL<TraceActivation>;
     /**
      * @summary `eUTRANCGI`.
+     * @description
+     *
+     * Identifies the eUTRAN Cell Global Identifier of the cell performing the
+     * UE trace.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
     readonly eUTRANCGI: ECGI;
     /**
      * @summary `globalRANNodeID`.
+     * @description
+     *
+     * Uniquely identifies the RAN node to which the TRACE START message is
+     * sent. This is derived from the initial S1 Setup exchange between the RAN
+     * node and the MME.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
     readonly globalRANNodeID: GlobalRANNodeID;
     /**
      * @summary `traceCollectionEntityInfo`.
+     * @description
+     *
+     * Provides information related to the trace collection entity to which the
+     * MME sends the MDT or Trace data of the target. Shall be populated if the
+     * Trace Record Type is set to Trace Data Delivery. See TS 36.413 [38]
+     * clauses 9.1.18 and 9.2.2.1.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
     readonly traceCollectionEntityInfo: OPTIONAL<TraceCollectionEntityInfo>;
     /**
      * @summary `mMETraceData`.
+     * @description
+     *
+     * Includes the trace data (in raw XML format) sent from the MME to the
+     * trace collection entity. Shall be present when the MME is the trace
+     * collection NE. See TS 32.423 [112] clauses 4.18 and 5.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */
     readonly mMETraceData: OPTIONAL<XMLType>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Provides the current location as known in the UE context at the MME or
+     * supplemented by the MDF2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.10.2.
+     *
      * @public
      * @readonly
      */

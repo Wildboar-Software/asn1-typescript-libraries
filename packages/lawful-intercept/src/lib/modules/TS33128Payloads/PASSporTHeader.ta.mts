@@ -38,18 +38,43 @@ class PASSporTHeader {
     readonly type_: JWSTokenType;
     /**
      * @summary `algorithm`.
+     * @description
+     *
+     * Shall be derived from the value of the 'alg' parameter of the PASSporT
+     * Header as defined in RFC 8225 [69] clause 4.2 for "shaken" PASSporT and
+     * in RFC 8946 [76] clause 3 for "div" PASSporT.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly algorithm: UTF8String;
     /**
      * @summary `ppt`.
+     * @description
+     *
+     * Shall be derived from the value of the 'ppt' parameter of the PASSporT
+     * Header as defined in RFC 8225 [69] clause 8.1 for "shaken" PASSporT if
+     * the PASSporT Header contains a ppt parameter and in RFC 8946 [76] clause
+     * 3 for "div" PASSporT.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */
     readonly ppt: OPTIONAL<UTF8String>;
     /**
      * @summary `x5u`.
+     * @description
+     *
+     * Shall be populated with the URI contained in the 'x5u' parameter of the
+     * PASSporT Header as defined in RFC 8225 [69] clause 4.3 for "shaken"
+     * PASSporT and in RFC 8946 [76] clause 3 for "div" PASSporT.
+     *
+     * 3GPP TS 33.128, clause 7.11.2.2.
+     *
      * @public
      * @readonly
      */

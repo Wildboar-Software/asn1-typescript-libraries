@@ -30,12 +30,25 @@ export
 class DiscoveredEAS {
     /**
      * @summary `eASProfile`.
+     * @description
+     *
+     * Profiles of the discovered EASs. See table 7.14.2.3-5.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */
     readonly eASProfile: EASProfile;
     /**
      * @summary `lifetime`.
+     * @description
+     *
+     * Time duration in seconds for which the EAS information is valid and
+     * supposed to be cached in the EEC.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.3.
+     *
      * @public
      * @readonly
      */

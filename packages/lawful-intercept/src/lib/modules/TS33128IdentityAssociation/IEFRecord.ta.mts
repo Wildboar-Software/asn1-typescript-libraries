@@ -30,9 +30,35 @@ import { IEFKeepaliveMessage, _decode_IEFKeepaliveMessage, _encode_IEFKeepaliveM
  */
 export
 type IEFRecord =
+    /**
+     * @description
+     *
+     * For each association event, the IEF shall create an IEFAssociationRecord,
+     * as defined below. (3GPP TS 33.128, clause 6.2.2A.2.2.)
+     */
     { associationRecord: IEFAssociationRecord } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * For each de-association event, the IEF shall create an
+     * IEFDeassociationRecord, as defined below. (3GPP TS 33.128, clause
+     * 6.2.2A.2.2.)
+     */
     | { deassociationRecord: IEFDeassociationRecord } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IEF may transmit a keepalive request using the keepalive record
+     * defined in Annex F. (3GPP TS 33.128, clause 6.2.2A.2.3.)
+     */
     | { keepalive: IEFKeepaliveMessage } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Upon receiving a keepalive request, the ICF shall respond with a
+     * keepaliveResponse record containing the same sequence number used in the
+     * request. (3GPP TS 33.128, clause 6.2.2A.2.3.)
+     */
     | { keepaliveResponse: IEFKeepaliveMessage } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

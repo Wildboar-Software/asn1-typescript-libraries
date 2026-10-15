@@ -31,12 +31,25 @@ export
 class EPSCSGInfo {
     /**
      * @summary `cSGID`.
+     * @description
+     *
+     * Indicates the CSG being described.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.9.
+     *
      * @public
      * @readonly
      */
     readonly cSGID: OPTIONAL<CSGID>;
     /**
      * @summary `cSGMembershipStatus`.
+     * @description
+     *
+     * Indicates the user's membership status for the indicated CSG. Shall be
+     * included if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.9.
+     *
      * @public
      * @readonly
      */

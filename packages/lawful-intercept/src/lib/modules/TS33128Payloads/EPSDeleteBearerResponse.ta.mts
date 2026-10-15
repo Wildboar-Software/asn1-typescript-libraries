@@ -37,24 +37,58 @@ export
 class EPSDeleteBearerResponse {
     /**
      * @summary `cause`.
+     * @description
+     *
+     * Indicates whether the bearers requested for deletion were successfully
+     * deleted (see TS 29.274 [87] clause 7.2.10).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly cause: EPSBearerDeletionCauseValue;
     /**
      * @summary `linkedEPSBearerID`.
+     * @description
+     *
+     * Shall include the EBI for the default bearer associated with the PDN
+     * being disconnected if all bearers belonging to a PDN connection are being
+     * released (see TS 29.274 [87] clause 7.2.10).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly linkedEPSBearerID: OPTIONAL<EPSBearerID>;
     /**
      * @summary `bearerContexts`.
+     * @description
+     *
+     * Shall include a list of the EPS Bearer Contexts requested for deletion
+     * along with details on whether they were successfully deleted. Shall be
+     * included if only some of the EPS Bearers belonging to a PDN Connection
+     * are being released (see TS 29.274 [87] clause 7.2.10). See table
+     * 6.3.3.2.3-5.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly bearerContexts: OPTIONAL<EPSDeleteBearerContext[]>;
     /**
      * @summary `protocolConfigurationOptions`.
+     * @description
+     *
+     * Shall be present if the Delete Bearer Request or Response reported (see
+     * TS 29.274 [87] clauses 7.2.9) contains the Protocol Configuration,
+     * Additional Protocol Configuration Options or extended Protocol
+     * Configuration Options IE. See table 6.3.3.2.2-4.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
      * @public
      * @readonly
      */

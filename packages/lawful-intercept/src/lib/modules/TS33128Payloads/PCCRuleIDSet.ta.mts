@@ -11,6 +11,13 @@ import { PCCRuleID, _decode_PCCRuleID, _encode_PCCRuleID } from "../TS33128Paylo
  * @summary PCCRuleIDSet
  * @description
  * 
+ * PCC rule IDs of the PCC rules related to traffic influence that are
+ * associated to the PDU session and active at the time the PDU session is
+ * released.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -15,6 +15,11 @@ import { IPv6Address, _decode_IPv6Address, _encode_IPv6Address } from "../TS3312
  * @summary IPAddr
  * @description
  * 
+ * Indicates the transport layer address of the HeNB.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.16.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

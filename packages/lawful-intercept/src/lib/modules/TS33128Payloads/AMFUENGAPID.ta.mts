@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AMFUENGAPID
  * @description
  * 
+ * New Identity that the AMF uses to uniquely identify the target UE over the NG
+ * Interface. Shall include when sent in the UE CONTEXT MODIFICATION REQUEST or
+ * when known at the NF. See TS 38.413 [23] clause 9.3.3.1.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.15.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

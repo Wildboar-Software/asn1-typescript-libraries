@@ -12,6 +12,11 @@ import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
  * @summary ForbiddenTACs
  * @description
  * 
+ * Contains the list of forbidden TACs.
+ *
+ * 3GPP TS 33.128, clause 8.4.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

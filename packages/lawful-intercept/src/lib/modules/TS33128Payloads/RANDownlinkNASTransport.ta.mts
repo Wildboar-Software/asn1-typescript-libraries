@@ -32,6 +32,14 @@ import { MobileIABAuthorizedIndicator, _decode_MobileIABAuthorizedIndicator, _en
  * @summary RANDownlinkNASTransport
  * @description
  * 
+ * The purpose of the RANDownlinkNASTransport type is to provide information the
+ * AMF sends to the NG-RAN when a NAS message needs to be delivered
+ * transparently via the NG-RAN node to the UE. Encoded per TS 38.413 [23]
+ * clause 9.2.5.2.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.16.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,66 +65,151 @@ export
 class RANDownlinkNASTransport {
     /**
      * @summary `aMFUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF uses to uniquely identify the target UE over the NG
+     * Interface, See TS 38.413 [23] clause 9.3.3.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly aMFUENGAPID: AMFUENGAPID;
     /**
      * @summary `rANUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF receives from the NG-RAN node uniquely identifying
+     * the target UE within the NG-RAN Node. See TS 38.413 [23] clause 9.3.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly rANUENGAPID: RANUENGAPID;
     /**
      * @summary `oldAMF`.
+     * @description
+     *
+     * Previous serving AMF’s GUAMI, shall include when sent in the DOWNLINK NAS
+     * TRANSPORT. Identifies the previous AMF the UE-associated logical
+     * NG-connection was redirected from. Format is defined in TS 29.571 [17]
+     * clause 5.3.4.1.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly oldAMF: OPTIONAL<GUAMI>;
     /**
      * @summary `allowedNSSAI`.
+     * @description
+     *
+     * Indicates the S-NSSAIs permitted by the network.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly allowedNSSAI: OPTIONAL<AllowedNSSAI>;
     /**
      * @summary `mobilityRestrictionList`.
+     * @description
+     *
+     * Provides roaming or access restrictions related to mobility from AMF to
+     * the RAN Node. Shall include when sent in the DOWNLINK NAS TRANSPORT
+     * REQUEST or when known at the NF. See TS 38.413 [23] clause 9.3.1.85.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly mobilityRestrictionList: OPTIONAL<MobilityRestrictionList>;
     /**
      * @summary `rATFrequencySelectionPriority`.
+     * @description
+     *
+     * Used to define local configuration for RRM strategies. Shall include when
+     * sent in the DOWNLINK NAS TRANSPORT or when known at the NF. See TS 38.413
+     * [23] 9.3.1.61.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly rATFrequencySelectionPriority: OPTIONAL<RATFrequencySelectionPriority>;
     /**
      * @summary `uEDifferentiationInfo`.
+     * @description
+     *
+     * Provides information about the behavior of a UE with predictable activity
+     * and/or mobility behavior. Shall include when sent in the DOWNLINK NAS
+     * TRANSPORT or when known at the NF. See TS 38.413 [23] clause 9.3.1.144.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly uEDifferentiationInfo: OPTIONAL<UEDifferentiationInfo>;
     /**
      * @summary `uERadioCapability`.
+     * @description
+     *
+     * Contains the UE Radio Capability information. Shall include when sent in
+     * the DOWNLINK NAS TRANSPORT or when known at the NF. Defined in TS 38.413
+     * [23] clauses 9.3.1.74, and 9.3.1.74a.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapability: OPTIONAL<UERadioCapability>;
     /**
      * @summary `uERadioCapabilityID`.
+     * @description
+     *
+     * Identifier used to represent a set of UE radio capabilities. Shall
+     * include when sent in the DOWNLINK NAS TRANSPORT or when known at the NF.
+     * Defined in TS 23.003 [19] clause 29.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapabilityID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `targetNSSAIInfo`.
+     * @description
+     *
+     * Contains the Target NSSAI and Index to RAT/Frequency Selection Priority.
+     * Shall include when sent in the DOWNLINK NAS TRANSPORT or when known at
+     * the NF. Defined in TS 38.413 [23] clause 9.3.1.229.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */
     readonly targetNSSAIInfo: OPTIONAL<TargetNSSAIInfo>;
     /**
      * @summary `mobileIABAuthorizedIndicator`.
+     * @description
+     *
+     * Provides information about the authorization status of the UE to operate
+     * as a mobile IAB node. Shall include when sent in the DOWNLINK NAS
+     * TRANSPORT or when known at the NF. See TS 38.413 [23] clause 9.3.1.259.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.16.
+     *
      * @public
      * @readonly
      */

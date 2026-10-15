@@ -17,6 +17,17 @@ import { AFKeyInfo, _decode_AFKeyInfo, _encode_AFKeyInfo } from "../TS33128Paylo
  * @summary AAnFKAKMAApplicationKeyGet
  * @description
  * 
+ * The IRI-POI in the AAnF shall generate an xIRI containing an
+ * AAnFAKMAApplicationKeyGet record when the IRI-POI present in the AAnF detects
+ * an AKMA application key get from an AF (directly or via NEF), see TS 33.535
+ * [65] clauses 7.1.3 and 7.3.1.
+ *
+ * Table 7.9.1.5-1 gives the LI_HI2 IRI message type for this record as
+ * CONTINUE.
+ *
+ * 3GPP TS 33.128, clause 7.9.1.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,12 +51,25 @@ class AAnFKAKMAApplicationKeyGet {
     readonly type_: KeyGetType;
     /**
      * @summary `aKID`.
+     * @description
+     *
+     * AKMA Anchor Key Identifier.
+     *
+     * 3GPP TS 33.128, clause 7.9.1.3.3.
+     *
      * @public
      * @readonly
      */
     readonly aKID: NAI;
     /**
      * @summary `keyInfo`.
+     * @description
+     *
+     * Key information for the requested derived AF-specific key (see table
+     * 7.9.1.3.3-2).
+     *
+     * 3GPP TS 33.128, clause 7.9.1.3.3.
+     *
      * @public
      * @readonly
      */

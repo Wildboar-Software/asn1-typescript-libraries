@@ -15,6 +15,13 @@ import { _decode_AccessType, _encode_AccessType, _enum_for_AccessType, AccessTyp
  * @summary FiveGSUserStateInfo
  * @description
  * 
+ * Describes the 5GS user state of the UE as known at the UDM. See TS 29.518
+ * [22] clause 6.2.6.3.11. Shall be included if 5GS user state is returned in
+ * the UeInfo response.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

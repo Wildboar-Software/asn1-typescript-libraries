@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SMSRPMessageReference
  * @description
  * 
+ * The SM-RL Message Reference of the message per TS 24.011 [46] clause 7.3.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -12,6 +12,14 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary SubscriptionDataSets
  * @description
  * 
+ * Includes current subscription information for the target UE stored at the
+ * HSS. Encoded according to TS 29.562 [101] clause 6.2.6.2.4. The SBIReference
+ * for this parameter shall be populated with
+ * 'TS29562_Nhss_imsSDM.yaml#/components/schemas/ImsProfileData'.
+ *
+ * 3GPP TS 33.128, clause 7.2.3.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

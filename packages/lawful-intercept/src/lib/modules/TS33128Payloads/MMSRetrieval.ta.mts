@@ -39,6 +39,14 @@ import { MMSContentClass, _decode_MMSContentClass, _encode_MMSContentClass, _enu
  * @summary MMSRetrieval
  * @description
  * 
+ * The IRI-POI in the MMS Proxy-Relay shall generate an xIRI containing an
+ * MMSRetrieval record when the MMS Proxy-Relay sends a m-retrieve-conf (as
+ * defined in OMA-TS-MMS_ENC [39] clause 6.3) to the MMS client in the target
+ * UE.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -80,36 +88,82 @@ export
 class MMSRetrieval {
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the target
+     * and the MMS Proxy-Relay. As defined in OMA-TS-MMS_ENC [39] clause 7.3.63.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `messageID`.
+     * @description
+     *
+     * An ID assigned by the MMS Proxy-Relay to uniquely identify an MM. As
+     * defined in OMA-TS-MMS_ENC [39] clause 7.3.29.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly messageID: UTF8String;
     /**
      * @summary `dateTime`.
+     * @description
+     *
+     * Date and Time when the MM was last handled (either originated or
+     * forwarded). For origination, included by the sending MMS client or the
+     * originating MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly dateTime: Timestamp;
     /**
      * @summary `originatingMMSParty`.
+     * @description
+     *
+     * ID(s) of the originating party in one or more of the formats described in
+     * clause 7.4.2.1. When address translation occurs (such as the case of a
+     * token sent by the client and replaced with a proper address by the MMS
+     * Proxy-Relay), both the pre and post translated addresses (with
+     * appropriate correlation) are included. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly originatingMMSParty: OPTIONAL<MMSParty>;
     /**
      * @summary `previouslySentBy`.
+     * @description
+     *
+     * History of UEs that have forwarded (including originally submitted) the
+     * MM. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
@@ -122,120 +176,292 @@ class MMSRetrieval {
     readonly prevSentByDateTime: OPTIONAL<Timestamp>;
     /**
      * @summary `terminatingMMSParty`.
+     * @description
+     *
+     * ID(s) of the terminating party in one or more of the formats described in
+     * clause 7.4.2.1. When address translation occurs (such as the case of a
+     * token sent by the client and replaced with a proper address by the MMS
+     * Proxy-Relay), both the pre and post translated addresses (with
+     * appropriate correlation) are included. Include if sent by the MMS
+     * Proxy-Relay. At least one of the terminatingMMSParty or cCRecipients must
+     * be included.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly terminatingMMSParty: OPTIONAL<MMSParty[]>;
     /**
      * @summary `cCRecipients`.
+     * @description
+     *
+     * Address of a recipient; the "CC" field may include addresses of multiple
+     * recipients. When address translation occurs, both the pre and post
+     * translated addresses (with appropriate correlation) are included. Include
+     * if sent by the MMS Proxy-Relay. At least one of the terminatingMMSParty
+     * or cCRecipients must be included.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly cCRecipients: OPTIONAL<MMSParty[]>;
     /**
      * @summary `direction`.
+     * @description
+     *
+     * Indicates the direction of the MM. This shall be encoded as "to target",
+     * or "fromTarget", as appropriate.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly direction: MMSDirection;
     /**
      * @summary `subject`.
+     * @description
+     *
+     * The subject of the MM. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly subject: OPTIONAL<MMSSubject>;
     /**
      * @summary `state`.
+     * @description
+     *
+     * Identifies the value of the MM State associated with a to be stored or
+     * stored MM. See OMA-TS-MMS_ENC [39] clause 7.3.33. Include if sent by the
+     * MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly state: OPTIONAL<MMState>;
     /**
      * @summary `flags`.
+     * @description
+     *
+     * Identifies a keyword to add or remove from the list of keywords
+     * associated with a stored MM. Include if sent. See OMA-TS-MMS_ENC [39]
+     * clause 7.3.32. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly flags: OPTIONAL<MMFlags>;
     /**
      * @summary `messageClass`.
+     * @description
+     *
+     * Class of the MM. For example, a value of "auto" is automatically
+     * generated by the UE. If the field is not present, the class should be
+     * interpreted as "personal". Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly messageClass: OPTIONAL<MMSMessageClass>;
     /**
      * @summary `priority`.
+     * @description
+     *
+     * Priority of the MM assigned by the originator MMS Client. Include if sent
+     * by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly priority: MMSPriority;
     /**
      * @summary `deliveryReport`.
+     * @description
+     *
+     * Specifies whether the originator MM UE requests a delivery report from
+     * each recipient. Indicates whether a delivery report is desired. The
+     * values given in OMA-TS-MMS_ENC [39] clause 7.3.13. shall be encoded as
+     * follows: "Yes" = True, "No" = False. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly deliveryReport: OPTIONAL<BOOLEAN>;
     /**
      * @summary `readReport`.
+     * @description
+     *
+     * Specifies whether the originator MM UE requests a read report from each
+     * recipient. Indicates whether a read report is desired. The values given
+     * in OMA-TS-MMS_ENC [39] clause 7.3.37 shall be encoded as follows: "Yes" =
+     * True, "No" = False. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly readReport: OPTIONAL<BOOLEAN>;
     /**
      * @summary `replyCharging`.
+     * @description
+     *
+     * If this field is present its value is set to "accepted" or "accepted text
+     * only" and the MMS-version-value of the PDU is higher than 1.0, this
+     * header field will indicate that a reply to this particular MM is free of
+     * charge for the recipient. If the Reply-Charging service is offered and
+     * the request for reply-charging has been accepted by the MMS service
+     * provider the value of this header field SHALL be set to "accepted" or
+     * "accepted text only". See OMA-TS-MMS_ENC [39] clause 7.3.43. Include if
+     * sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly replyCharging: OPTIONAL<MMSReplyCharging>;
     /**
      * @summary `retrieveStatus`.
+     * @description
+     *
+     * MMS specific status. It is used by the recipient MMS Proxy-Relay to
+     * inform the recipient MMS Client about errors, if any that occurred during
+     * the preceding retrieval operation. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly retrieveStatus: OPTIONAL<MMSRetrieveStatus>;
     /**
      * @summary `retrieveStatusText`.
+     * @description
+     *
+     * Text that qualifies the Retrieve Status. As defined in OMA-TS-MMS_ENC
+     * [39] clause 7.3.55. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly retrieveStatusText: OPTIONAL<UTF8String>;
     /**
      * @summary `applicID`.
+     * @description
+     *
+     * Identification of the originating application of the original MM. Sent by
+     * the target to identify the destination application as defined in
+     * OMA-TS-MMS_ENC [39] clause 7.3.2. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly applicID: OPTIONAL<UTF8String>;
     /**
      * @summary `replyApplicID`.
+     * @description
+     *
+     * Identification of an application to which replies, delivery reports, and
+     * read reports are addressed. Sent by the target to identify the
+     * application to which replies, delivery reports, and read reports are
+     * addressed as defined in OMA-TS-MMS_ENC [39] clause 7.3.42. Include if
+     * sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly replyApplicID: OPTIONAL<UTF8String>;
     /**
      * @summary `auxApplicInfo`.
+     * @description
+     *
+     * Auxiliary application addressing information as indicated in the original
+     * MM. As defined in OMA-TS-MMS_ENC [39] clause 7.3.4. Include if sent by
+     * the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly auxApplicInfo: OPTIONAL<UTF8String>;
     /**
      * @summary `contentClass`.
+     * @description
+     *
+     * Classifies the content of the MM to the smallest content class to which
+     * the message belongs. Sent by the target to identify the class of the
+     * content. See OMA-TS-MMS_ENC [39] clause 7.3.9. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly contentClass: OPTIONAL<MMSContentClass>;
     /**
      * @summary `dRMContent`.
+     * @description
+     *
+     * Indicates if the MM contains any DRM-protected element. Provide when sent
+     * by the target to indicate if the MM contains any DRM-protected element.
+     * The values given in OMA-TS-MMS_ENC [39] clause 7.3.16 shall be encoded as
+     * follows: "Yes" = True, "No" = False. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly dRMContent: OPTIONAL<BOOLEAN>;
     /**
      * @summary `replaceID`.
+     * @description
+     *
+     * Indicates the message ID of the message this one is intended to replace.
+     * Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */
     readonly replaceID: OPTIONAL<UTF8String>;
     /**
      * @summary `contentType`.
+     * @description
+     *
+     * The content type of the MM. See OMA-TS-MMS_ENC [39] clause 7.3.11.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.6.
+     *
      * @public
      * @readonly
      */

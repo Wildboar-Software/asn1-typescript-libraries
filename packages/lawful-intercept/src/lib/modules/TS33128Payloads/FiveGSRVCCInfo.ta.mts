@@ -15,6 +15,12 @@ import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISD
  * @summary FiveGSRVCCInfo
  * @description
  * 
+ * Indicates whether the UE supports 5G SRVCC. See TS 29.503 [25] clause
+ * 6.7.6.2.5. Shall be included if returned in the UeInfo response.
+ *
+ * 3GPP TS 33.128, clause 7.2.2.3.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

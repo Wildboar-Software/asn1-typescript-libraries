@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary SCEFID
  * @description
  * 
+ * SCEF identity handling the EPS Bearer.
+ *
+ * 3GPP TS 33.128, clause 7.8.2.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

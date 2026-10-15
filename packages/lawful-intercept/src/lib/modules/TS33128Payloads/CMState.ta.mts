@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CMState
  * @description
  * 
+ * The CMState indicates the connection management state of the UE. CMState is
+ * derived from the CmState type defined in TS 29.518 [22] clause 6.2.6.3.10.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.68.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +27,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_CMState {
+    /**
+     * @description
+     *
+     * Indicates the UE is in CM-IDLE state.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.68.
+     */
     idle = 1,
+    /**
+     * @description
+     *
+     * Indicates the UE is in CM-CONNECTED state.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.68.
+     */
     connected = 2,
 }
 
@@ -29,6 +49,12 @@ enum _enum_for_CMState {
  * @summary CMState
  * @description
  * 
+ * The CMState indicates the connection management state of the UE. CMState is
+ * derived from the CmState type defined in TS 29.518 [22] clause 6.2.6.3.10.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.68.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +74,12 @@ type CMState = _enum_for_CMState;
  * @summary CMState
  * @description
  * 
+ * The CMState indicates the connection management state of the UE. CMState is
+ * derived from the CmState type defined in TS 29.518 [22] clause 6.2.6.3.10.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.68.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +97,12 @@ const CMState = _enum_for_CMState;
 
 /**
  * @summary CMState_idle
+ * @description
+ *
+ * Indicates the UE is in CM-IDLE state.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.68.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +111,12 @@ const CMState_idle: CMState = CMState.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary idle
+ * @description
+ *
+ * Indicates the UE is in CM-IDLE state.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.68.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +125,12 @@ const idle: CMState = CMState.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CMState_connected
+ * @description
+ *
+ * Indicates the UE is in CM-CONNECTED state.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.68.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +139,12 @@ const CMState_connected: CMState = CMState.connected; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary connected
+ * @description
+ *
+ * Indicates the UE is in CM-CONNECTED state.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.68.
+ *
  * @constant
  * @type {number}
  */

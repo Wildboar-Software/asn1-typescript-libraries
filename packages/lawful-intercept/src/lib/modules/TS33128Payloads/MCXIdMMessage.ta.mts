@@ -34,18 +34,41 @@ export
 class MCXIdMMessage {
     /**
      * @summary `mCID`.
+     * @description
+     *
+     * MC ID of the target user.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly mCID: MCID;
     /**
      * @summary `mCServiceID`.
+     * @description
+     *
+     * MC service ID of the target user.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceID: MCServiceID;
     /**
      * @summary `idMMessage`.
+     * @description
+     *
+     * Represents the content of the HTTP GET request representing an
+     * authentication request or HTTP POST request representing an access token
+     * request (see TS 33.180 [154] clauses B.4 and B.5) sent by the target to
+     * the Identity Management Server and content of the associated HTTP
+     * response returned by the Identity Management Server to the target (see
+     * table 7.20.2.4.2-2).
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

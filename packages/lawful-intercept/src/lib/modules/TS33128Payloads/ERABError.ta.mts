@@ -31,12 +31,27 @@ export
 class ERABError {
     /**
      * @summary `eRABID`.
+     * @description
+     *
+     * This element uniquely identifies a radio access bearer for a particular
+     * UE, which makes the E-RAB ID unique over one S1 connection. Derived from
+     * the E-RAB ID IE, see TS 36.413 [38] clause 9.2.1.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.6.
+     *
      * @public
      * @readonly
      */
     readonly eRABID: EPSBearerID;
     /**
      * @summary `cause`.
+     * @description
+     *
+     * Indicates the cause of the E-RAB release. Derived from the Cause IE from
+     * TS 36.413 [38] clause 9.2.1.3.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.6.
+     *
      * @public
      * @readonly
      */

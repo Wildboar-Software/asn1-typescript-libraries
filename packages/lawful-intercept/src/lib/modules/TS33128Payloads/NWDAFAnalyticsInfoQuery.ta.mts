@@ -19,6 +19,24 @@ import { NWDAFAnalyticsInfoResponseCode, _decode_NWDAFAnalyticsInfoResponseCode,
  * @summary NWDAFAnalyticsInfoQuery
  * @description
  * 
+ * The IRI-POI in the NWDAF shall generate an xIRI containing an
+ * NWDAFAnalyticsInfoQuery record when the IRI-POI present in the NWDAF detects
+ * that an authorized NF consumer queries an UE-related analytics for a target
+ * UE.
+ *
+ * Accordingly, the IRI-POI in the NWDAF generates the xIRI when any of the
+ * following events is detected (see TS 29.520 [133] clause 4.3.2.1):
+ *
+ * - NWDAF returns a Nnwdaf_AnalyticsInfo_Request Response in response to
+ *   Nnwdaf_AnalyticsInfo_Request Request received from an authorized NF
+ *   consumer to get analytics data for an UE related analytics event for a
+ *   target UE.
+ *
+ * Table 7.16.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.16.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,36 +57,89 @@ export
 class NWDAFAnalyticsInfoQuery {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * Identifies the SUPI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.4.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `nWDAFEvent`.
+     * @description
+     *
+     * Identifies the analytics event being requested.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.4.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFEvent: NWDAFEvent;
     /**
      * @summary `nWDAFEventReportingRequirement`.
+     * @description
+     *
+     * Includes an EventReportingRequirement resource associated to the
+     * requested event to identify the type of reporting required. The
+     * EventReportingRequirement is encoded according to TS 29.520 [133] table
+     * 5.1.6.2.7-1. The SBIReference for this parameter shall be populated with
+     * 'TS29520_Nnwdaf_AnalyticsInfo.yaml#/components/schemas/EventReportingRequirement'
+     * as specified in TS 29.520 [133] clause A3.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.4.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFEventReportingRequirement: OPTIONAL<SBIType>;
     /**
      * @summary `nWDAFEventFilter`.
+     * @description
+     *
+     * Includes an EventFilter resource associated to the requested event to
+     * identify the requested analytics. The EventFilter is encoded according to
+     * TS 29.520 [133] table 5.2.6.2.3-1. The SBIReference for this parameter
+     * shall be populated with
+     * 'TS29520_Nnwdaf_AnalyticsInfo.yaml#/components/schemas/EventFilter' as
+     * specified in TS 29.520 [133] clause A3.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.4.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFEventFilter: OPTIONAL<SBIType>;
     /**
      * @summary `nWDAFAnalyticsData`.
+     * @description
+     *
+     * Includes an AnalyticsData resource present in the response when the
+     * response code is 200 OK. The AnalyticsData is encoded according to TS
+     * 29.520 [133] table 5.2.6.2.2-1. The SBIReference for this parameter shall
+     * be populated with
+     * 'TS29520_Nnwdaf_AnalyticsInfo.yaml#/components/schemas/AnalyticsData' as
+     * specified in TS 29.520 [133] clause A3.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.4.
+     *
      * @public
      * @readonly
      */
     readonly nWDAFAnalyticsData: OPTIONAL<SBIType>;
     /**
      * @summary `nWDAFAnalyticsInfoResponseCode`.
+     * @description
+     *
+     * Identifies the response code associated with the
+     * Nnwdaf_AnalyticsInfo_Request service operation (i.e., GET) executed by
+     * the NWDAF.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.4.
+     *
      * @public
      * @readonly
      */

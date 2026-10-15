@@ -27,6 +27,21 @@ import { MUSIMUERequestType, _decode_MUSIMUERequestType, _encode_MUSIMUERequestT
  * @summary AMFUEServiceAccept
  * @description
  * 
+ * The IRI-POI in the AMF shall generate an xIRI containing an or
+ * AMFUEServiceAccept record when the IRI-POI in present in the AMF detects that
+ * the AMF has sent a service accept in response to a service request or control
+ * plane service request from the target. Accordingly, the IRI-POI in the AMF
+ * generates the xIRI when any of the following events are detected:
+ *
+ * - AMF sends a SERVICE ACCEPT message to the target in response to a SERVICE
+ *   REQUEST message from the target.
+ *
+ * - AMF sends a SERVICE ACCEPT message to the target in response to a CONTROL
+ *   PLANE SERVICE REQUEST message from the target.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,60 +67,137 @@ export
 class AMFUEServiceAccept {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the AMF context. See TS 29.518 [22]
+     * clause 6.1.6.2.25.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `serviceMessageIdentity`.
+     * @description
+     *
+     * Indicates the type of message sent within the SERVICE ACCEPT from the AMF
+     * to the UE. Encoding per TS 24.501 [13] clause 9.7.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly serviceMessageIdentity: ServiceMessageIdentity;
     /**
      * @summary `serviceType`.
+     * @description
+     *
+     * Indicates the purpose of the service request procedure. Encoded per TS
+     * 24.501 [13] clause 9.11.3.50.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly serviceType: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `fiveGTMSI`.
+     * @description
+     *
+     * TMSI value associated with the target within the AMF context. Include if
+     * known. Encoded per 24.501 [13] figure 9.11.3.4.5
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly fiveGTMSI: OPTIONAL<FiveGTMSI>;
     /**
      * @summary `uplinkDataStatus`.
+     * @description
+     *
+     * Indicates if uplink data is pending for the PDU Session modified in the
+     * SERVICE REQUEST. See 24.501 [13] clause 9.11.3.57.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly uplinkDataStatus: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `pDUSessionStatus`.
+     * @description
+     *
+     * Indicates the current status of the PDU Session (active, inactive) for
+     * the PDU Session the target has attempted to activate. This parameter is
+     * encoded using the format defined in TS 24.501 [13] clause 9.11.3.44.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionStatus: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `deprecatedUERequestType`.
+     * @description
+     *
+     * No longer used in present version of this specification. Use
+     * uERequestType instead.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedUERequestType: OPTIONAL<FiveGSMRequestType>;
     /**
      * @summary `pagingRestriction`.
+     * @description
+     *
+     * Indicates the current paging restriction status for the target as known
+     * at the AMF. Encoded per TS 24.501 [13] clause 9.11.3.77.2, omitting the
+     * first two octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly pagingRestriction: OPTIONAL<PagingRestrictionIndicator>;
     /**
      * @summary `forbiddenTAIList`.
+     * @description
+     *
+     * Provides a list of tracking areas that the UE is forbidden to use either
+     * during roaming or configured via regional service provisioning. See TS
+     * 24.501 [13] clause 8.2.17.7 and 8.2.17.8.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */
     readonly forbiddenTAIList: OPTIONAL<TAIList>;
     /**
      * @summary `uERequestType`.
+     * @description
+     *
+     * Indicates a MUSIM UE has requested release of NAS signalling or has
+     * rejected paging. Include if the UE Request Type IE message (see TS 24.501
+     * [18] clause 9.11.3.76) is sent in the SERVICE REQUEST or CONTROL PLANE
+     * SERVICE REQUEST. Encoded per UE Request Type as defined in TS 24.301 [51]
+     * clause 9.9.3.65 omitting the first two octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.13.
+     *
      * @public
      * @readonly
      */

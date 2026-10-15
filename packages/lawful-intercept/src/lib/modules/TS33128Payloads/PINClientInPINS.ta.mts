@@ -40,30 +40,68 @@ export
 class PINClientInPINS {
     /**
      * @summary `pINEIdentities`.
+     * @description
+     *
+     * Identities of the target PIN client.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pINEIdentities: PINEIdentities;
     /**
      * @summary `mACAddress`.
+     * @description
+     *
+     * Identifies the MAC address of the target PIN client, if available.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */
     readonly mACAddress: OPTIONAL<MACAddress>;
     /**
      * @summary `pINServerID`.
+     * @description
+     *
+     * Identifies the 5G PIN server.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pINServerID: PINServerID;
     /**
      * @summary `pINClientProfile`.
+     * @description
+     *
+     * Contains the PIN client profile information of the target PIN client. The
+     * PIN client profile is encoded as a "PIN-Client-Profile" XML structure
+     * according to TS 24.583 [142] clause 6.2.4. The XMLType.namespace for this
+     * parameter shall be set to the namespace of the root element of the XML
+     * document, e.g. "urn:3GPP:ns:pinapp:2023".
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pINClientProfile: XMLType;
     /**
      * @summary `pINProfiles`.
+     * @description
+     *
+     * Contains the PIN profiles of the PINs the target PIN client is member of.
+     * Each PIN profile is encoded as a "PIN-Profile" XML structure according to
+     * TS 24.583 [142] clause 6.2.4. The XMLType.namespace for this parameter
+     * shall be set to the namespace of the root element of the XML document,
+     * e.g. "urn:3GPP:ns:pinapp:2023".
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */

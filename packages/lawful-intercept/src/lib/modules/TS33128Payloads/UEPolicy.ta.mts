@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary UEPolicy
  * @description
  * 
+ * Content of the N1 NAS message MANAGE UE POLICY COMMAND, as defined in TS
+ * 24.501 [13] table D.5.1.1.1 (see NOTE).
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

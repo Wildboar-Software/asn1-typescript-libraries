@@ -19,6 +19,18 @@ import { PTCSessionInfo, _decode_PTCSessionInfo, _encode_PTCSessionInfo } from "
  * @summary PTCMediaModification
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCMediaModification record when the IRI-POI present in the PTC server
+ * detects that a re-negotiation of the media parameters occurs during a PTC
+ * session involving the PTC target. Accordingly, the IRI-POI in the PTC server
+ * generates the xIRI when the following event is detected:
+ *
+ * - when the PTC server receives a SIP UPDATE or SIP reINVITE to indicate a PTC
+ *   media modification on a PTC session being intercepted.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,30 +50,68 @@ export
 class PTCMediaModification {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN and PTCChatGroupID shall be provided for
+     * PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.12.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.5.2.12.
+     *
      * @public
      * @readonly
      */
     readonly pTCDirection: Direction;
     /**
      * @summary `pTCSessionInfo`.
+     * @description
+     *
+     * Shall provide PTC session information such as PTC Session URI and PTC
+     * Session type (e.g. on-demand, pre-established, ad-hoc, pre-arranged,
+     * group session).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.12.
+     *
      * @public
      * @readonly
      */
     readonly pTCSessionInfo: PTCSessionInfo;
     /**
      * @summary `pTCMediaStreamAvail`.
+     * @description
+     *
+     * Shall include this parameter to indicate if the PTC target is able/not
+     * able to receive media streams immediately. True indicates available for
+     * media, while false indicates not able to accept media.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.12.
+     *
      * @public
      * @readonly
      */
     readonly pTCMediaStreamAvail: OPTIONAL<BOOLEAN>;
     /**
      * @summary `pTCBearerCapability`.
+     * @description
+     *
+     * Shall provide when known the media characteristics information elements
+     * of the PTC session, encoded in SDP format as per RFC 4566 [43] clause 5.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.12.
+     *
      * @public
      * @readonly
      */

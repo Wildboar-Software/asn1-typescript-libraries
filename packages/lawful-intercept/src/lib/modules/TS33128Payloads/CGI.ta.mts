@@ -15,6 +15,13 @@ import { CellID, _decode_CellID, _encode_CellID } from "../TS33128Payloads/CellI
  * @summary CGI
  * @description
  * 
+ * The Cell Global Identification (CGI) type is used to report base station
+ * identification. The CGI type is derived from the data present in the CGI
+ * information element defined in TS 23.003 [19] clause 4.3.1.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.72.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,26 @@ export
 class CGI {
     /**
      * @summary `lAI`.
+     * @description
+     *
+     * This field is derived from the Location Area Identification information
+     * element defined in TS 23.003 [19] clause 4.1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.72.
+     *
      * @public
      * @readonly
      */
     readonly lAI: LAI;
     /**
      * @summary `cellID`.
+     * @description
+     *
+     * The Cell Identity that is being reported from the NF. Defined in TS
+     * 23.003 [19] clause 4.3.1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.72.
+     *
      * @public
      * @readonly
      */

@@ -21,6 +21,13 @@ import { ServiceAreaInformation, _decode_ServiceAreaInformation, _encode_Service
  * @summary MobilityRestrictionList
  * @description
  * 
+ * Provides roaming or access restrictions related to mobility from AMF to the
+ * RAN Node. Shall include when sent in the DOWNLINK NAS TRANSPORT REQUEST or
+ * when known at the NF. See TS 38.413 [23] clause 9.3.1.85.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.16.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

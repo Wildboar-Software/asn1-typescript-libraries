@@ -14,6 +14,12 @@ import { E164Number, _decode_E164Number, _encode_E164Number } from "../TS33128Pa
  * @summary SMSNFAddress
  * @description
  * 
+ * Address of the other network function (SMS-GMSC/IWMSC/SMS-Router) involved in
+ * the communication of the SMS, if available.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -26,6 +32,14 @@ import { E164Number, _decode_E164Number, _encode_E164Number } from "../TS33128Pa
  */
 export
 type SMSNFAddress =
+    /**
+     * @description
+     *
+     * Indicates the conditional destination IPv4 address or destination IPv6
+     * address field in the PDU header to the destination IP address of the
+     * intercepted SIP message (see ETSI TS 103 221-2 [8] clause 5.3). (3GPP TS
+     * 33.128, clause 7.12.4.3.4.)
+     */
     { iPAddress: IPAddress } /* CHOICE_ALT_ROOT */
     | { e164Number: E164Number } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;

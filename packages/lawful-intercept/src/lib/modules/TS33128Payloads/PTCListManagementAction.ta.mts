@@ -7,6 +7,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PTCListManagementAction
  * @description
  * 
+ * Identifies the action requested by the PTC target to the contact lists or PTC
+ * group list(s). Report when PTC target attempts changes to his contact list or
+ * PTC group list(s): a) Create b) Modify c) Retrieve d) Delete e) Notify Also
+ * report when a notification is sent to the PTC target due to changes occurring
+ * to his contact list or PTC group list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +44,15 @@ enum _enum_for_PTCListManagementAction {
  * @summary PTCListManagementAction
  * @description
  * 
+ * Identifies the action requested by the PTC target to the contact lists or PTC
+ * group list(s). Report when PTC target attempts changes to his contact list or
+ * PTC group list(s): a) Create b) Modify c) Retrieve d) Delete e) Notify Also
+ * report when a notification is sent to the PTC target due to changes occurring
+ * to his contact list or PTC group list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +75,15 @@ type PTCListManagementAction = _enum_for_PTCListManagementAction;
  * @summary PTCListManagementAction
  * @description
  * 
+ * Identifies the action requested by the PTC target to the contact lists or PTC
+ * group list(s). Report when PTC target attempts changes to his contact list or
+ * PTC group list(s): a) Create b) Modify c) Retrieve d) Delete e) Notify Also
+ * report when a notification is sent to the PTC target due to changes occurring
+ * to his contact list or PTC group list(s).
+ *
+ * 3GPP TS 33.128, clause 7.5.2.17.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

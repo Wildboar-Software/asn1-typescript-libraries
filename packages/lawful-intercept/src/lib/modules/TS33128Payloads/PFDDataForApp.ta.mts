@@ -14,6 +14,12 @@ import { PFDs, _decode_PFDs, _encode_PFDs } from "../TS33128Payloads/PFDs.ta.mjs
  * @summary PFDDataForApp
  * @description
  * 
+ * Represents the packet flow descriptions (PFDs) for an application identifier
+ * (AppId), if available. This IE is defined in TS 29.551 [96] table 5.6.2.2-1.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

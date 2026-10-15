@@ -18,6 +18,16 @@ import { RoamingIndicator, _decode_RoamingIndicator, _encode_RoamingIndicator } 
  * @summary HSSServingSystemMessage
  * @description
  * 
+ * The IRI-POI in the HSS shall generate an xIRI containing the
+ * HSSServingSystemMessage record when it detects the following events:
+ *
+ * - When the HSS receives the Roaming Status Update from the UDM as part of the
+ *   Nhss_UEContextManagement_RoamingStatusUpdate service operation (see TS
+ *   29.563 [100] clause 5.4.2.4).
+ *
+ * 3GPP TS 33.128, clause 7.2.3.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +47,48 @@ export
 class HSSServingSystemMessage {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the target UE, See TS 29.563 [100] clause 6.3.6.2.5.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `oldPLMNID`.
+     * @description
+     *
+     * Includes the old PLMN for which the UE was previously registered.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly oldPLMNID: PLMNID;
     /**
      * @summary `newPLMNID`.
+     * @description
+     *
+     * Indicates the new PLMN to which the UE is now registered.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.2.
+     *
      * @public
      * @readonly
      */
     readonly newPLMNID: PLMNID;
     /**
      * @summary `roamingIndicator`.
+     * @description
+     *
+     * Indicates if the serving PLMNID is different than the HPLMN or EHPLMN.
+     *
+     * 3GPP TS 33.128, clause 7.2.3.3.2.
+     *
      * @public
      * @readonly
      */

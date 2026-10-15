@@ -16,6 +16,13 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary UEDifferentiationInfo
  * @description
  * 
+ * The UEDifferentiationInfo contains the UE expected behavior information. The
+ * UEDifferentiationInfo type is derived from UE Differentiation Information IE
+ * defined in TS 38.413 [23] clause 9.3.1.144.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.12.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,36 +43,92 @@ export
 class UEDifferentiationInfo {
     /**
      * @summary `periodicCommunicationIndicator`.
+     * @description
+     *
+     * Indicates whether the UE communicates periodically or on demand, if
+     * available. See TS 38.413 [23] clause 9.3.1.144.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly periodicCommunicationIndicator: OPTIONAL<PeriodicCommunicationIndicator>;
     /**
      * @summary `periodicTime`.
+     * @description
+     *
+     * Indicates interval time of periodic communication expressed in seconds,
+     * if available. See TS 38.413 [23] clause 9.3.1.144.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly periodicTime: OPTIONAL<INTEGER>;
     /**
      * @summary `scheduledCommunicationTime`.
+     * @description
+     *
+     * Provides time zone and day of the week when the UE is available for
+     * communication, if available, See TS 38.413 [23] clause 9.3.1.144. Encoded
+     * according to TS 29.571 [17] clause 5.4.4.41. The SBIReference for this
+     * parameter shall be populated with
+     * 'TS29571_CommonData.yaml#/components/schemas/ScheduledCommunicationTime'.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly scheduledCommunicationTime: OPTIONAL<SBIType>;
     /**
      * @summary `stationaryIndication`.
+     * @description
+     *
+     * Indicates whether the UE is stationary or mobile, if available. See TS
+     * 38.413 [23] clause 9.3.1.144. Encoded according to TS 29.571 [17] clause
+     * 5.4.3.21. The SBIReference for this parameter shall be populated with
+     * 'TS29571_CommonData.yaml#/components/schemas/StationaryIndication'.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly stationaryIndication: OPTIONAL<SBIType>;
     /**
      * @summary `trafficProfile`.
+     * @description
+     *
+     * Identifies the type of data transmission, if available: single packet
+     * transmission (UL or DL), dual packet transmission (UL with subsequent DL
+     * or DL with subsequent UL), multiple packets transmission. See TS 38.413
+     * [23] clause 9.3.1.144. Encoded according to TS 29.571 [17] clause
+     * 5.4.3.25. The SBIReference for this parameter shall be populated with
+     * 'TS29571_CommonData.yaml#/components/schemas/TrafficProfile'.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.12.
+     *
      * @public
      * @readonly
      */
     readonly trafficProfile: OPTIONAL<SBIType>;
     /**
      * @summary `batteryIndication`.
+     * @description
+     *
+     * Identifies power consumption criticality for the UE, if available: if the
+     * UE is battery powered but the battery is not rechargeable/not
+     * replaceable, battery powered withrechargeable/replaceable battery, or not
+     * battery powered. See TS 38.413 [23] clause 9.3.1.144. Encoded according
+     * to TS 29.571 [17] clause 5.4.4.43. The SBIReference for this parameter
+     * shall be populated with
+     * 'TS29571_CommonData.yaml#/components/schemas/BatteryIndication'.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2A.12.
+     *
      * @public
      * @readonly
      */

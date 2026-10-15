@@ -19,6 +19,18 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary MCXStartOfInterceptionWithRegisteredUE
  * @description
  * 
+ * The IRI-POI in the MCX Server shall generate the xIRI containing an
+ * MCXStartOfInterceptionWithRegisteredUE record when the IRI-POI in the MCX
+ * Server detects that interception has been activated for a target who is
+ * already registered. Accordingly, the IRI-POI in the MCX Server generates tlhe
+ * xIRI when the following event is detected:
+ *
+ * - when the MCX Server detects that LI is enabled on a target who is already
+ *   registered.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,12 +50,24 @@ export
 class MCXStartOfInterceptionWithRegisteredUE {
     /**
      * @summary `mCServiceIdentities`.
+     * @description
+     *
+     * MC service identities of the target.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceIdentities: MCServiceIdentity[];
     /**
      * @summary `userOnline`.
+     * @description
+     *
+     * Shall be set to TRUE if the target is online.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.2.
+     *
      * @public
      * @readonly
      */
@@ -62,6 +86,13 @@ class MCXStartOfInterceptionWithRegisteredUE {
     readonly sIPRegistrationResponse: SIPMessage;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the location of the target when reporting of the target’s
+     * location information is authorized and available.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.2.
+     *
      * @public
      * @readonly
      */

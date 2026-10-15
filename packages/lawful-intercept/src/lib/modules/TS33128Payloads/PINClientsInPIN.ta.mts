@@ -37,24 +37,56 @@ export
 class PINClientsInPIN {
     /**
      * @summary `pINID`.
+     * @description
+     *
+     * Identifies the target PIN.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pINID: PINID;
     /**
      * @summary `pINServerID`.
+     * @description
+     *
+     * Identifies the 5G PIN Server.
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pINServerID: PINServerID;
     /**
      * @summary `pINClientProfiles`.
+     * @description
+     *
+     * Contains the PIN client profiles of the PIN clients which are members of
+     * the target PIN. Each PIN client profile information is encoded as a
+     * "PIN-Client-Profile" XML structure according to TS 24.583 [142] clause
+     * 6.2.4. The XMLType.namespace for this parameter shall be set to the
+     * namespace of the root element of the XML document, e.g.
+     * "urn:3GPP:ns:pinapp:2023".
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */
     readonly pINClientProfiles: PINClientProfile[];
     /**
      * @summary `pINProfile`.
+     * @description
+     *
+     * Contains the PIN profile of the target PIN. The PIN profile is encoded as
+     * a "PIN-Profile" XML structure according to TS 24.583 [142] clause 6.2.4.
+     * The XMLType.namespace for this parameter shall be set to the namespace of
+     * the root element of the XML document, e.g. "urn:3GPP:ns:pinapp:2023".
+     *
+     * 3GPP TS 33.128, clause 7.18.2.3.
+     *
      * @public
      * @readonly
      */

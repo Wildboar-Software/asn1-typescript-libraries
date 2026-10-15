@@ -14,6 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RawMLPResponse
  * @description
  * 
+ * The RawMLPResponse type is derived from the data present in the slia MLP
+ * message described in OMA-TS-MLP-V3_5-20181211-C [20] clause 5.2.3.2.2 or the
+ * slirep MLP message described in OMA-TS-MLP-V3_5-20181211-C [20] clause
+ * 5.2.3.2.3 along with the OMA MLP result id defined in
+ * OMA-TS-MLP-V3_5-20181211-C [20] clause 5.4
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.38.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,7 +40,26 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type RawMLPResponse =
+    /**
+     * @description
+     *
+     * This field contains a copy of unparsed XML code of the MLP response
+     * message. The slia response message of this field are described in
+     * OMA-TS-MLP-V3_5-20181211-C [20] clause 5.2.3.2.2 and the slirep response
+     * message of this field is described in OMA-TS-MLP-V3_5-20181211-C [20]
+     * clause 5.2.3.2.3.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.38.
+     */
     { mLPPositionData: UTF8String } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * This field contains the OMA MLP result id defined in
+     * OMA-TS-MLP-V3_5-20181211-C [20] clause 5.4.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.38.
+     */
     | { mLPErrorCode: INTEGER } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

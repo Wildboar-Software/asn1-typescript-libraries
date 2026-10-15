@@ -33,6 +33,20 @@ import { RANSourceToTargetContainer, _decode_RANSourceToTargetContainer, _encode
  * @summary AMFRANHandoverRequest
  * @description
  * 
+ * 6.2.2.2.9.3 Handover request
+ *
+ * The IRI-POI in the AMF shall generate an xIRI containing an
+ * AMFRANHandoverRequest record when the IRI-POI in the AMF detects that the AMF
+ * received a HANDOVER REQUEST ACKNOWLEDGE message from the target RAN node (new
+ * RAN node) for the target UE and location information is not restricted by
+ * service scoping.
+ *
+ * - NOTE: The gaining RAN node sends the HANDOVER REQUEST ACKNOWLEDGE in
+ *   response to a HANDOVER REQUEST from the AMF.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,60 +72,139 @@ export
 class AMFRANHandoverRequest {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of user identifiers associated with the target UE registration
+     * stored in the AMF context. See TS 29.518 [22] clause 6.1.6.2.25 and TS
+     * 23.502 [4] clause 4.11.2.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `aMFUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF uses to uniquely identify the target UE over the NG
+     * Interface, See TS 38.413 [23] clause 9.3.3.1. This is correlated to the
+     * SUPI known in the UE AMF context.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly aMFUENGAPID: AMFUENGAPID;
     /**
      * @summary `rANUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF receives from the NG-RAN node uniquely identifying
+     * the target UE within the NG-RAN Node. See TS 38.413 [23] clause 9.3.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly rANUENGAPID: RANUENGAPID;
     /**
      * @summary `handoverType`.
+     * @description
+     *
+     * Identifies the type of handover indicated by the AMF to gaining RAN Node
+     * as seen in the HANDOVER REQUEST message. See TS 38.413 [23] clause
+     * 9.3.1.22.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly handoverType: HandoverType;
     /**
      * @summary `handoverCause`.
+     * @description
+     *
+     * Indicates the cause of handover as seen in the HANDOVER REQUEST message
+     * from AMF to gaining RAN node. See TS 38.413 [23] clause 9.3.1.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly handoverCause: HandoverCause;
     /**
      * @summary `pDUSessionResourceInformation`.
+     * @description
+     *
+     * Indicates the PDU Session to be transferred and Handover Command Transfer
+     * information as seen in the HANDOVER REQUEST and confirmed in the HANDOVER
+     * REQUEST ACKNOWLEDGE message. See TS 38.413 [23] clauses 9.3.1.50 and
+     * 9.3.4.10.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionResourceInformation: PDUSessionResourceInformation;
     /**
      * @summary `mobilityRestrictionList`.
+     * @description
+     *
+     * Provides roaming or access restrictions related to mobility from AMF to
+     * gaining RAN Node. Include if sent in HANDOVER REQUEST. See TS 38.413 [23]
+     * clause 9.3.1.85.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly mobilityRestrictionList: OPTIONAL<MobilityRestrictionList>;
     /**
      * @summary `locationReportingRequestType`.
+     * @description
+     *
+     * Indicates the type of location reporting requested in the HANDOVER
+     * REQUEST. Include if in HANDOVER REQUEST message. See TS 38.413 [23]
+     * clause 9.3.1.65.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly locationReportingRequestType: OPTIONAL<LocationReportingRequestType>;
     /**
      * @summary `targetToSourceContainer`.
+     * @description
+     *
+     * Provides radio related information from gaining to losing NG-RAN node
+     * that the AMF receives from the gaining RAN Node in the HANDOVER REQUEST
+     * ACKNOWLEDGE message. See TS 38.413 [23] clause 9.3.1.21.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */
     readonly targetToSourceContainer: RANTargetToSourceContainer;
     /**
      * @summary `nPNAccessInformation`.
+     * @description
+     *
+     * Globally identifies the secondary NG-RAN node CAG Cells. Include if sent
+     * in the HANDOVER REQUEST ACKNOWLEDGE message from gaining RAN node to AMF.
+     * See TS 38.413 [23] clause 9.3.3.46.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+     *
      * @public
      * @readonly
      */

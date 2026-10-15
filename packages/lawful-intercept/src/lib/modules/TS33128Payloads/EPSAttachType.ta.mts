@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSAttachType
  * @description
  * 
+ * The EPSAttachType provides information on the attach type used by the UE.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.11.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,10 +30,45 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EPSAttachType {
+    /**
+     * @description
+     *
+     * The attach type is an EPS attach.
+     *
+     * 3GPP TS 33.128, clause 8.5.5.
+     */
     ePSAttach = 1,
+    /**
+     * @description
+     *
+     * The attach type is a combined EPS/IMSI attach.
+     *
+     * 3GPP TS 33.128, clause 8.5.5.
+     */
     combinedEPSIMSIAttach = 2,
+    /**
+     * @description
+     *
+     * The attach type is an EPS RLOS attach.
+     *
+     * 3GPP TS 33.128, clause 8.5.5.
+     */
     ePSRLOSAttach = 3,
+    /**
+     * @description
+     *
+     * The attach type is an EPS Emergency attach.
+     *
+     * 3GPP TS 33.128, clause 8.5.5.
+     */
     ePSEmergencyAttach = 4,
+    /**
+     * @description
+     *
+     * The attach type is unknown or using a reserved type.
+     *
+     * 3GPP TS 33.128, clause 8.5.5.
+     */
     reserved = 5,
 }
 
@@ -35,6 +76,12 @@ enum _enum_for_EPSAttachType {
  * @summary EPSAttachType
  * @description
  * 
+ * The EPSAttachType provides information on the attach type used by the UE.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.11.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,6 +104,12 @@ type EPSAttachType = _enum_for_EPSAttachType;
  * @summary EPSAttachType
  * @description
  * 
+ * The EPSAttachType provides information on the attach type used by the UE.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.11.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -77,6 +130,12 @@ const EPSAttachType = _enum_for_EPSAttachType;
 
 /**
  * @summary EPSAttachType_ePSAttach
+ * @description
+ *
+ * The attach type is an EPS attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +144,12 @@ const EPSAttachType_ePSAttach: EPSAttachType = EPSAttachType.ePSAttach; /* LONG_
 
 /**
  * @summary ePSAttach
+ * @description
+ *
+ * The attach type is an EPS attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +158,12 @@ const ePSAttach: EPSAttachType = EPSAttachType.ePSAttach; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EPSAttachType_combinedEPSIMSIAttach
+ * @description
+ *
+ * The attach type is a combined EPS/IMSI attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +172,12 @@ const EPSAttachType_combinedEPSIMSIAttach: EPSAttachType = EPSAttachType.combine
 
 /**
  * @summary combinedEPSIMSIAttach
+ * @description
+ *
+ * The attach type is a combined EPS/IMSI attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +186,12 @@ const combinedEPSIMSIAttach: EPSAttachType = EPSAttachType.combinedEPSIMSIAttach
 
 /**
  * @summary EPSAttachType_ePSRLOSAttach
+ * @description
+ *
+ * The attach type is an EPS RLOS attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +200,12 @@ const EPSAttachType_ePSRLOSAttach: EPSAttachType = EPSAttachType.ePSRLOSAttach; 
 
 /**
  * @summary ePSRLOSAttach
+ * @description
+ *
+ * The attach type is an EPS RLOS attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +214,12 @@ const ePSRLOSAttach: EPSAttachType = EPSAttachType.ePSRLOSAttach; /* SHORT_NAMED
 
 /**
  * @summary EPSAttachType_ePSEmergencyAttach
+ * @description
+ *
+ * The attach type is an EPS Emergency attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +228,12 @@ const EPSAttachType_ePSEmergencyAttach: EPSAttachType = EPSAttachType.ePSEmergen
 
 /**
  * @summary ePSEmergencyAttach
+ * @description
+ *
+ * The attach type is an EPS Emergency attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +242,12 @@ const ePSEmergencyAttach: EPSAttachType = EPSAttachType.ePSEmergencyAttach; /* S
 
 /**
  * @summary EPSAttachType_reserved
+ * @description
+ *
+ * The attach type is unknown or using a reserved type.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +256,12 @@ const EPSAttachType_reserved: EPSAttachType = EPSAttachType.reserved; /* LONG_NA
 
 /**
  * @summary reserved
+ * @description
+ *
+ * The attach type is unknown or using a reserved type.
+ *
+ * 3GPP TS 33.128, clause 8.5.5.
+ *
  * @constant
  * @type {number}
  */

@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary RANUENGAPID
  * @description
  * 
+ * Identity that the AMF receives from the NG-RAN node uniquely identifying the
+ * target UE within the NG-RAN Node. See TS 38.413 [23] clause 9.3.3.2.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

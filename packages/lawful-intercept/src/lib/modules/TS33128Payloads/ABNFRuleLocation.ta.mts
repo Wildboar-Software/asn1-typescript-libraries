@@ -10,6 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ABNFRuleLocation
  * @description
  * 
+ * The ABNF rule name defining the syntax of the portion of the payload that was
+ * modified.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

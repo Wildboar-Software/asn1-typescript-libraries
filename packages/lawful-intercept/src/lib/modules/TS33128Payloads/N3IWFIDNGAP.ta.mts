@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary N3IWFIDNGAP
  * @description
  * 
+ * The N3IWFIDNGAP type is used to report the N3IWF Identity received over NGAP.
+ * The N3IWFIDNGAP type is derived from the data present in the N3IWF ID
+ * parameter of the Global N3IWFID defined in TS 38.413 [23] clause 9.3.1.57.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -17,6 +17,20 @@ import { RoamerInOut, _decode_RoamerInOut, _encode_RoamerInOut, _enum_for_Roamer
  * @summary NchfChargingDataRequest
  * @description
  * 
+ * The IRI-POI in the charging function shall generate an xIRI containing an
+ * NchfChargingDataRequest record when the IRI-POI present in the charging
+ * function receives a ChargingDataRequest (see TS 32.291 [148] clause
+ * 6.1.6.2.1.1) with the target identity as the subscriber identifier or user
+ * information from the Nchf interface.
+ *
+ * NOTE: The service specific information that is contained in the
+ * ChargingDataRequest is defined in a variety of specifications. However, the
+ * additional attributes of the ChargingDataRequest are described in TS 32.291
+ * [148] clause 6.1.6.2.
+ *
+ * 3GPP TS 33.128, clause 7.19.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +48,45 @@ export
 class NchfChargingDataRequest {
     /**
      * @summary `sBIchargingData`.
+     * @description
+     *
+     * Encapsulated message that triggered the xIRI in its original format.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.4.
+     *
      * @public
      * @readonly
      */
     readonly sBIchargingData: SBIChargingData;
     /**
      * @summary `nchfChargingEvent`.
+     * @description
+     *
+     * Derived from the service specific charging information contained in the
+     * ChargingDataRequest (e.g. IMSChargingInformation, SMSChargingInformation,
+     * PDUSessionChargingInformation, etc.). Shall be included when one of the
+     * service specific charging information additional attributes of the
+     * ChargingDataRequest is included. See NOTE. NOTE: The service specific
+     * information that is contained in the ChargingDataRequest is defined in a
+     * variety of specifications. However, the additional attributes of the
+     * ChargingDataRequest are described in TS 32.291 [148] clause 6.1.6.2.
+     *
+     * 3GPP TS 33.128, clause 7.19.3.4.
+     *
      * @public
      * @readonly
      */
     readonly nchfChargingEvent: OPTIONAL<NchfChargingEvent>;
     /**
      * @summary `roamerInOut`.
+     * @description
+     *
+     * Derived from the roamerInOut field of the service specific charging
+     * information UserInformation field. Shall be included when contained in
+     * the UserInformation, (see TS 32.291 [148] clause 6.1.6.3.16).
+     *
+     * 3GPP TS 33.128, clause 7.19.3.4.
+     *
      * @public
      * @readonly
      */

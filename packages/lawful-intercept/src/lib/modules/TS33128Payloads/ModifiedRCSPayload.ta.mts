@@ -31,12 +31,24 @@ export
 class ModifiedRCSPayload {
     /**
      * @summary `modifiedRCSPayload`.
+     * @description
+     *
+     * Contains the modified payload in the original encoding.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.4.
+     *
      * @public
      * @readonly
      */
     readonly modifiedRCSPayload: EncapsulatedRCSPayload;
     /**
      * @summary `modifications`.
+     * @description
+     *
+     * Contains the list of modifications done to the modifiedRCSPayload.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.3.2.4.
+     *
      * @public
      * @readonly
      */

@@ -12,6 +12,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EMMCause
  * @description
  * 
+ * Indicates the EMM cause value for network-initiated detach, see TS 24.301
+ * [51] clause 9.9.3.9.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

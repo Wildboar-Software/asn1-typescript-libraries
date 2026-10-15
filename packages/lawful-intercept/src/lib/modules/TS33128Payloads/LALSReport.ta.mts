@@ -25,6 +25,16 @@ import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISD
  * @summary LALSReport
  * @description
  * 
+ * The IRI-POI provided by the LI-LCS client shall deliver the target location
+ * reports to respective MDF(s) as xIRI over the LI_X2 interface.
+ *
+ * NOTE: One and only one of SUPI, GPSI, IMSI, MSISDN, IMPU shall be present and
+ * it shall correspond to the target identifier included in the respective
+ * ActivateTask message for the LI-LCS Client.
+ *
+ * 3GPP TS 33.128, clause 7.3.1.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,42 +57,105 @@ export
 class LALSReport {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI of the target, if used for the service (see NOTE). NOTE: One and
+     * only one of SUPI, GPSI, IMSI, MSISDN, IMPU shall be present and it shall
+     * correspond to the target identifier included in the respective
+     * ActivateTask message for the LI-LCS Client.
+     *
+     * 3GPP TS 33.128, clause 7.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: OPTIONAL<SUPI>;
     /**
      * @summary `deprecatedPEI`.
+     * @description
+     *
+     * No longer used in present version of this specification.
+     *
+     * 3GPP TS 33.128, clause 7.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedPEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target, if used for the service (see NOTE). NOTE: One and
+     * only one of SUPI, GPSI, IMSI, MSISDN, IMPU shall be present and it shall
+     * correspond to the target identifier included in the respective
+     * ActivateTask message for the LI-LCS Client.
+     *
+     * 3GPP TS 33.128, clause 7.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location of the target, if obtained successfully. Encoded as a
+     * Location.positioningInfo parameter. Both the
+     * Location.positioningInfo.positionInfo parameter and the
+     * Location.positioningInfo.rawMLPResponse.mLPPositionData parameter are
+     * present in the case of successful positioning. In the case of positioning
+     * failure only the Location.positioningInfo.rawMLPResponse.mLPErrorCode
+     * parameter is present.
+     *
+     * 3GPP TS 33.128, clause 7.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `iMPU`.
+     * @description
+     *
+     * IMPU of the target, if used for the service (see NOTE). NOTE: One and
+     * only one of SUPI, GPSI, IMSI, MSISDN, IMPU shall be present and it shall
+     * correspond to the target identifier included in the respective
+     * ActivateTask message for the LI-LCS Client.
+     *
+     * 3GPP TS 33.128, clause 7.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly iMPU: OPTIONAL<IMPU>;
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI of the target, if used for the service (see NOTE). NOTE: One and
+     * only one of SUPI, GPSI, IMSI, MSISDN, IMPU shall be present and it shall
+     * correspond to the target identifier included in the respective
+     * ActivateTask message for the LI-LCS Client.
+     *
+     * 3GPP TS 33.128, clause 7.3.1.4.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN of the target, if used for the service (see NOTE). NOTE: One and
+     * only one of SUPI, GPSI, IMSI, MSISDN, IMPU shall be present and it shall
+     * correspond to the target identifier included in the respective
+     * ActivateTask message for the LI-LCS Client.
+     *
+     * 3GPP TS 33.128, clause 7.3.1.4.
+     *
      * @public
      * @readonly
      */

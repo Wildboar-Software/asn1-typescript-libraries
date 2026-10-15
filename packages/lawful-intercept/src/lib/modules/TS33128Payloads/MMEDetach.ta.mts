@@ -29,6 +29,32 @@ import { SwitchOffIndicator, _decode_SwitchOffIndicator, _encode_SwitchOffIndica
  * @summary MMEDetach
  * @description
  * 
+ * The IRI-POI in the MME shall generate an xIRI containing an MMEDetach record
+ * when the IRI-POI present in the MME detects that a UE matching one of the
+ * target identifiers provided via LI_X1 has deregistered from the EPS.
+ * Accordingly, the IRI-POI in the MME generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - For network initiated de-registration, when the MME receives the S1: DETACH
+ *   ACCEPT message from the target UE, when the MME receives an S3: DETACH
+ *   NOTIFICATION about the target UE from the SGSN or when implicit
+ *   deregistration timer expires; and in all cases the UE EMM state within the
+ *   MME is changed to EMM-DEREGISTERED.
+ *
+ * - For UE initiated de-registration, when the MME sends the S1: DETACH ACCEPT
+ *   message to the target UE or when the MME receives the S1: DETACH REQUEST
+ *   message from the target UE with deregistration type value of "switch off";
+ *   and in both cases the UE EMM state within the MME is changed to
+ *   EMM-DEREGISTERED.
+ *
+ * NOTE: The location information was sent as a userLocation
+ * (Location.locationInfo.userLocation) between versions 18.0.0 and 18.2.0 of
+ * the present document. The location information may also be present in this
+ * field for backwards compatibility.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,48 +84,119 @@ class MMEDetach {
     readonly detachDirection: MMEDirection;
     /**
      * @summary `detachType`.
+     * @description
+     *
+     * Indicates the type of detach as determined by the direction of the detach
+     * request and the value of the DetachType information element, see table
+     * 6.3.2.2.4-2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly detachType: EPSDetachType;
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the detach.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI associated with the detach, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * mSISDN associated with the detach, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * GUTI associated with the detach, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<GUTI>;
     /**
      * @summary `cause`.
+     * @description
+     *
+     * Indicates the EMM cause value for network-initiated detach, see TS 24.301
+     * [51] clause 9.9.3.9.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly cause: OPTIONAL<EMMCause>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information determined by the network during the deregistration
+     * or known at the MME, if available. Shall include all location information
+     * for the target UE available at the MME encoded as one of the following
+     * (see NOTE):
+     *
+     * - as a Location.fourGLocationInfo.ePSLocationInformation parameter.
+     *
+     * - as a Location.fourGLocationInfo.ePSUserLocationInformation parameter.
+     *   When Dual Connectivity is activated, the additionalCellIDs parameter
+     *   (Location.fourGLocationInfo.ePSLocationInformation.mMELocationInformation.additionalCellIDs)
+     *   shall also be populated, see clause 7.3.3. If available, other
+     *   parameters reportable via Location shall be included. NOTE: The
+     *   location information was sent as a userLocation
+     *   (Location.locationInfo.userLocation) between versions 18.0.0 and 18.2.0
+     *   of the present document. The location information may also be present
+     *   in this field for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.4.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `switchOffIndicator`.
+     * @description
+     *
+     * If Bit 4 of the Detach type information element sent in the Detach
+     * Request is set to 0, this parameter shall be set to "normalDetach". If
+     * Bit 4 of the Detach type information element sent in the Detach Request
+     * is set to 1, this parameter shall be set to "switchOff". See TS 24.301
+     * [51] clause 9.9.3.7. This parameter is conditional only for backwards
+     * compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.4.
+     *
      * @public
      * @readonly
      */

@@ -14,6 +14,14 @@ import { MMSQuotaUnit, _decode_MMSQuotaUnit, _encode_MMSQuotaUnit, _enum_for_MMS
  * @summary MMSQuota
  * @description
  * 
+ * Indicates a request for or the actual quotas for the user's MMBox in messages
+ * or bytes. The values given in OMA-TS-MMS_ENC [39] clause 7.3.36. shall be
+ * encoded as follows: "Yes" = True, "No" = False. Include if sent to the MMS
+ * Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

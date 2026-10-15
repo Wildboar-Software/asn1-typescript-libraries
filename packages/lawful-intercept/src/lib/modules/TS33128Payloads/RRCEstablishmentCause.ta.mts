@@ -12,6 +12,13 @@ import { _decode_EstablishmentCause, _encode_EstablishmentCause, EstablishmentCa
  * @summary RRCEstablishmentCause
  * @description
  * 
+ * The RRCEstablishmentCause type is derived from the RRC Establishment Cause
+ * type defined in TS 38.413 [23] clause 9.3.1.111. and the RRC Establishment
+ * Cause type defined in TS 36.413 [38] clause 9.2.1.3a.
+ *
+ * 3GPP TS 33.128, clause 8.4.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -24,7 +31,21 @@ import { _decode_EstablishmentCause, _encode_EstablishmentCause, EstablishmentCa
  */
 export
 type RRCEstablishmentCause =
+    /**
+     * @description
+     *
+     * Chosen when the UE is connecting to EPC.
+     *
+     * 3GPP TS 33.128, clause 8.4.8.
+     */
     { ePCEstablishmentCause: EstablishmentCause } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the UE is connecting to 5GC.
+     *
+     * 3GPP TS 33.128, clause 8.4.8.
+     */
     | { fiveGCEstablishmentCause: EstablishmentCause } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

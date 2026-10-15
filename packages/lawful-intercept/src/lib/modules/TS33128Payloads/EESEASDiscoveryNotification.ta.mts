@@ -18,6 +18,26 @@ import { FailureResponse, _decode_FailureResponse, _encode_FailureResponse, _enu
  * @summary EESEASDiscoveryNotification
  * @description
  * 
+ * The IRI-POI in the EES shall generate an xIRI containing an
+ * EESEASDiscoveryNotification record when the IRI-POI present in the EES
+ * detects that the EES has notified a previously subscribed EEC on EAS
+ * discovery information. The IRI-POI present in the EES shall generate the xIRI
+ * for the following events:
+ *
+ * - EES receives an Eees_EASDiscovery_Notify response from an EEC confirming
+ *   that the subscribed EEC has received EAS discovery information (as defined
+ *   in TS 24.558 [93] clause 5.3.2.4).
+ *
+ * - NOTE: Because it is HTTP-based transaction the notification request is
+ *   always supposed to be received by the EEC which needs to answer with the
+ *   response.
+ *
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -36,24 +56,50 @@ export
 class EESEASDiscoveryNotification {
     /**
      * @summary `subscriptionID`.
+     * @description
+     *
+     * Identity of the individual subscription for which the notification is
+     * delivered.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.5.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionID: UTF8String;
     /**
      * @summary `eventType`.
+     * @description
+     *
+     * Event type for which the notification is delivered.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.5.
+     *
      * @public
      * @readonly
      */
     readonly eventType: EASEventType;
     /**
      * @summary `discoveredEAS`.
+     * @description
+     *
+     * List of EAS discovery information. See table 7.14.2.3-4.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.5.
+     *
      * @public
      * @readonly
      */
     readonly discoveredEAS: DiscoveredEAS;
     /**
      * @summary `failureResponse`.
+     * @description
+     *
+     * Cause information when the discovery notification request has failed, if
+     * available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.5.
+     *
      * @public
      * @readonly
      */

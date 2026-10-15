@@ -34,18 +34,42 @@ export
 class MCXGMMessage {
     /**
      * @summary `mCServiceIdentitiesOrGroupID`.
+     * @description
+     *
+     * MC service identities of the target user or group ID of the target MC
+     * service group.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceIdentitiesOrGroupID: MCServiceIdentitiesOrGroupID;
     /**
      * @summary `mCServiceClient`.
+     * @description
+     *
+     * MC service identity of the MC service administrator creating, updating,
+     * fetching or deleting the MC service group of the target MC service user
+     * or target MC service group.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceClient: OPTIONAL<MCServiceID>;
     /**
      * @summary `gMMessage`.
+     * @description
+     *
+     * Contains the HTTP request received by the Group Management Server
+     * relating to a target MC service user or target MC service group and the
+     * associated HTTP response returned by the Group Management Server (see
+     * table 7.20.2.4.2-6). See TS 24.481 [153] clause 6.3.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

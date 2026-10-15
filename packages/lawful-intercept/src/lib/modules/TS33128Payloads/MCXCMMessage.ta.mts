@@ -35,18 +35,41 @@ export
 class MCXCMMessage {
     /**
      * @summary `mCServiceIdentities`.
+     * @description
+     *
+     * MC service identities of the target MC service user.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceIdentities: MCServiceIdentity[];
     /**
      * @summary `mcServiceClient`.
+     * @description
+     *
+     * MC service identity of the MC service administrator creating, updating,
+     * fetching or deleting the MC service configuration of the target MC server
+     * user.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly mcServiceClient: OPTIONAL<MCServiceID>;
     /**
      * @summary `cMMessage`.
+     * @description
+     *
+     * Contains the HTTP request received by the Configuration Management Server
+     * relating to a target MC service and the associated HTTP response returned
+     * by the Configuration Management Server (see table 7.20.2.4.2-4). See TS
+     * 24.484 [152] clause 6.3.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

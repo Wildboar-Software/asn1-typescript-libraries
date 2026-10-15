@@ -35,6 +35,22 @@ import { TraceActivation, _decode_TraceActivation, _encode_TraceActivation } fro
  * @summary AMFRANTraceReport
  * @description
  * 
+ * The IRI-POI in the AMF shall generate an xIRI containing an AMFRANTraceReport
+ * record when the IRI-POI present in the AMF has detected any of the following
+ * events:
+ *
+ * - AMF sent a TRACE START message to the target RAN node (old RAN node) in
+ *   response to a Trace Session Activation message for the target.
+ *
+ * - AMF received a CELL TRAFFIC TRACE message from the NG-RAN for the target.
+ *
+ * - AMF sent MDT or trace data to the trace collection entity for the target.
+ *
+ * - AMF sent a deactivate trace message to the NG-RAN for the target.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,72 +78,168 @@ export
 class AMFRANTraceReport {
     /**
      * @summary `userIdentifiers`.
+     * @description
+     *
+     * List of identifiers, including the target identifier, associated with the
+     * target UE registration stored in the AMF context. See TS 29.518 [22]
+     * clause 6.1.2.25.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly userIdentifiers: UserIdentifiers;
     /**
      * @summary `aMFUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF uses to uniquely identify the target UE over the NG
+     * Interface. See TS 38.413 [23] clause 9.3.3.1. This is correlated to the
+     * SUPI known in the UE AMF context.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly aMFUENGAPID: AMFUENGAPID;
     /**
      * @summary `rANUENGAPID`.
+     * @description
+     *
+     * Identity that the AMF receives from the NG-RAN node uniquely identifying
+     * the target UE with the NG-RAN Node. See TS 38.413 [23] clause 9.3.3.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly rANUENGAPID: RANUENGAPID;
     /**
      * @summary `traceRecordType`.
+     * @description
+     *
+     * Identifies the type of trace record being generated. This parameter is
+     * populated with either Trace Start, Cell Traffic Trace, Trace Data
+     * Delivery, or Trace Deactivation.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly traceRecordType: TraceRecordType;
     /**
      * @summary `traceDirection`.
+     * @description
+     *
+     * Identifies which network element is signalling the trace information.
+     * This parameter is populated with a choice of either AMF or NG-RAN. See TS
+     * 38.413 [23] clause 9.2.10.4
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly traceDirection: TraceDirection;
     /**
      * @summary `deprecatedTraceActivationInfo`.
+     * @description
+     *
+     * No longer used in present version of this specification. Use
+     * traceActivation instead.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly deprecatedTraceActivationInfo: OPTIONAL<TraceActivationInfo>;
     /**
      * @summary `nGRANCGI`.
+     * @description
+     *
+     * Identifies the NR-RAN Cell Global Identifier of the cell performing the
+     * UE trace.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly nGRANCGI: NCGI;
     /**
      * @summary `globalRANNodeID`.
+     * @description
+     *
+     * Uniquely identifies the NG-RAN node to which the TRACE START message is
+     * sent. This is derived from the initial NG Setup exchange between the
+     * NG-RAN node and the AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly globalRANNodeID: GlobalRANNodeID;
     /**
      * @summary `traceCollectionEntityInfo`.
+     * @description
+     *
+     * Provides information related to the trace collection entity to which the
+     * AMF sends the MDT or Trace data of the target. Shall be populated if the
+     * Trace Record Type is set to Trace Data Delivery. See TS 38.413 [23]
+     * clause 9.3.2.4. and 9.3.2.14.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly traceCollectionEntityInfo: OPTIONAL<TraceCollectionEntityInfo>;
     /**
      * @summary `aMFTraceData`.
+     * @description
+     *
+     * Includes the trace data (in raw XML format) sent from the AMF to the
+     * trace collection entity when the AMF is the trace collection NE. See TS
+     * 32.423 [112] clauses 4.18 and 5.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly aMFTraceData: XMLType;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall be provided if the current location is known in the UE context at
+     * the AMF or supplemented by the MDF2.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `traceActivation`.
+     * @description
+     *
+     * Information related to a trace session activation provided from the AMF
+     * to the NG-RAN node. Shall be populated if the traceRecordType is set to
+     * Trace Start. The ExternalASNType.encodedASNValue.alignedPER choice shall
+     * be used when populating this type and it shall be populated with the
+     * contents of the Trace Activation IE defined in TS 38.413 [23] clause
+     * 9.3.1.14.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.11.2.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,15 @@ import { CSGMembershipIndication, _decode_CSGMembershipIndication, _encode_CSGMe
  * @summary UserCSGInformation
  * @description
  * 
+ * The UserCSGInformation type holds the user "Closed Subscriber Group"
+ * information associated to CSG cell access: it comprises CSG ID within the
+ * PLMN, access mode and indication on CSG membership for the user when hybrid
+ * access applies. Derived from the data found in User-CSG-Information parameter
+ * from TS 32.299 [111] clause 7.2.240a.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.80.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +43,36 @@ export
 class UserCSGInformation {
     /**
      * @summary `cSGID`.
+     * @description
+     *
+     * Represents the Closed Subscriber Group Identity.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.80.
+     *
      * @public
      * @readonly
      */
     readonly cSGID: CSGID;
     /**
      * @summary `cSGAccessMode`.
+     * @description
+     *
+     * Represents the CSG access mode that the UE is using.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.80.
+     *
      * @public
      * @readonly
      */
     readonly cSGAccessMode: CSGAccessMode;
     /**
      * @summary `cSGMembershipIndication`.
+     * @description
+     *
+     * Indicates the UE membership state for the reported CSG.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.80.
+     *
      * @public
      * @readonly
      */

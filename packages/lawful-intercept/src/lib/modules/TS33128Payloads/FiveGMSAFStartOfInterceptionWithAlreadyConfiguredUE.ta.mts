@@ -15,6 +15,17 @@ import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SB
  * @summary FiveGMSAFStartOfInterceptionWithAlreadyConfiguredUE
  * @description
  * 
+ * The IRI-POI in the 5GMS AF shall generate an xIRI containing an
+ * FiveGMSAFStartOfInterceptionWithAlreadyConfiguredUE record when the IRI-POI
+ * present in the 5GMS AF detects that interception is activated for a target UE
+ * which Media Session Handler has already been configured with the service
+ * access information.
+ *
+ * Table 7.15.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.15.2.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +42,27 @@ export
 class FiveGMSAFStartOfInterceptionWithAlreadyConfiguredUE {
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.8.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `serviceAccessInformationResource`.
+     * @description
+     *
+     * Includes service access information resource data encoded according to
+     * 26.512 [98] clause 11.2.3. The SBIReference for this parameter shall be
+     * populated with
+     * 'TS26512_M5_ServiceAccessInformation.yaml#/components/schemas/ServiceAccessInformationResource'.
+     *
+     * 3GPP TS 33.128, clause 7.15.2.8.
+     *
      * @public
      * @readonly
      */

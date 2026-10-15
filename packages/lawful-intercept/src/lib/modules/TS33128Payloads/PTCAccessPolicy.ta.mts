@@ -23,6 +23,22 @@ import { PTCAccessPolicyFailure, _decode_PTCAccessPolicyFailure, _encode_PTCAcce
  * @summary PTCAccessPolicy
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCAccessPolicy record when the IRI-POI present in the PTC server detects
+ * when the PTC target attempts to change the access control lists (e.g. PTC
+ * user access policy and PTC group authorization rules) located in the PTC XML
+ * Document Management Server (XDMS). Accordingly, the IRI-POI in the PTC server
+ * generates the xIRI when the following event is detected:
+ *
+ * - when the PTC server receives a SIP PUBLISH from a PTC target to change the
+ *   access control lists.
+ *
+ * NOTE: The pTCTargetInformation choice PTCChatGroupID is not applicable for
+ * this xIRI.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,42 +60,111 @@ export
 class PTCAccessPolicy {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN shall be provided for PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.18.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.5.2.18.
+     *
      * @public
      * @readonly
      */
     readonly pTCDirection: Direction;
     /**
      * @summary `pTCAccessPolicyType`.
+     * @description
+     *
+     * Identifies the type of access policy list being managed or queried by the
+     * target when known: a) PTCUserAccessPolicyAttempt b)
+     * GroupAuthorizationRulesAttempt c) PTCUserAccessPolicyQuery d)
+     * GroupAuthorizationRulesQuery e) PTCUserAccessPolicyResult f)
+     * GroupAuthorizationRulesResult g) Request unsuccessful - Report a), b),
+     * c), or d) when the PTC target attempts a change or queries the Access
+     * Control list(s). - Report e), f), or g) when the network notifies the
+     * target of changes to the access control list(s) or the request was
+     * unsuccessful.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.18.
+     *
      * @public
      * @readonly
      */
     readonly pTCAccessPolicyType: OPTIONAL<PTCAccessPolicyType>;
     /**
      * @summary `pTCUserAccessPolicy`.
+     * @description
+     *
+     * Identifies the action requested by the PTC target to the PTC user or
+     * group access policy: a) Allow Incoming PTC session request b) Block
+     * Incoming PTC session request c) Allow Auto Answer Mode d) Allow Override
+     * Manual Answer Mode
+     *
+     * - Report when action requested to the PTC user access policy.
+     *
+     * - Report when the PTC target attempts a change or queries the access
+     *   control list(s).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.18.
+     *
      * @public
      * @readonly
      */
     readonly pTCUserAccessPolicy: OPTIONAL<PTCUserAccessPolicy>;
     /**
      * @summary `pTCGroupAuthRule`.
+     * @description
+     *
+     * Identifies the action requested by the PTC target to the PTC Group
+     * Authorization Rules: a) Allow Initiating PTC session b) Block Initiating
+     * PTC session c) Allow Joining PTC session d) Block Joining PTC session e)
+     * Allow Add Participants f) Block Add Participants g) Allow Subscription
+     * PTC session state h) Block Subscription PTC session state i) Allow
+     * Anonymity j) Forbid Anonymity - Report when action requested to the PTC
+     * group authorization rules by the PTC target. - Report when the PTC target
+     * attempts a change or queries the access control List(s).
+     *
+     * 3GPP TS 33.128, clause 7.5.2.18.
+     *
      * @public
      * @readonly
      */
     readonly pTCGroupAuthRule: OPTIONAL<PTCGroupAuthRule>;
     /**
      * @summary `pTCContactID`.
+     * @description
+     *
+     * Identity of the contact in the list. One contact per contact list or PTC
+     * group list. Report if known.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.18.
+     *
      * @public
      * @readonly
      */
     readonly pTCContactID: OPTIONAL<PTCTargetInformation>;
     /**
      * @summary `pTCAccessPolicyFailure`.
+     * @description
+     *
+     * Reports the reason for failure when access policy request is
+     * unsuccessful.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.18.
+     *
      * @public
      * @readonly
      */

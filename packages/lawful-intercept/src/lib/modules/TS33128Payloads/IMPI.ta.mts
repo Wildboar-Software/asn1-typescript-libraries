@@ -11,6 +11,11 @@ import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
  * @summary IMPI
  * @description
  * 
+ * IMPI of the target.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

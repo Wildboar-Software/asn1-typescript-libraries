@@ -12,6 +12,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Confidence
  * @description
  * 
+ * Indicates the confidence of the location in percentage.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

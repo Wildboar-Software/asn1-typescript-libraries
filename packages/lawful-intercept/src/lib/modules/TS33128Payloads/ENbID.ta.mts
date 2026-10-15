@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ENbID
  * @description
  * 
+ * The ENbID type is used to report the ENb Identity. The ENbID type is derived
+ * from the data present in the ENbId type defined in TS 29.571 [17] clause
+ * 5.4.2.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.35.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

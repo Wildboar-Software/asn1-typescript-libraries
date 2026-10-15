@@ -35,6 +35,12 @@ export
 type AreaScopeOfMDT =
     { cellBased: CellID[] } /* CHOICE_ALT_ROOT */
     | { tABased: TAC[] } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The PLMNID type is used to report the PLMN Identity. (3GPP TS 33.128,
+     * clause 7.3.3.2.34.)
+     */
     | { pLMNWide: PLMNID } /* CHOICE_ALT_ROOT */
     | { tAIBased: TAI[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;

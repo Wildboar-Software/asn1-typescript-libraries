@@ -23,6 +23,27 @@ import { TAIList, _decode_TAIList, _encode_TAIList } from "../TS33128Payloads/TA
  * @summary MMEIdentifierAssociation
  * @description
  * 
+ * The IRI-POI present in the MME shall generate an xIRI containing an
+ * MMEIdentifierAssociation record when the IRI-POI present in the MME detects a
+ * new identifier association for a UE matching one of the target identifiers
+ * provided via LI_X1. Generation of this record is subject to this record type
+ * being enabled for a specific target (see clause 6.3.2.2.1).
+ *
+ * NOTE 1: IMSI shall always be provided, in addition to the warrant target
+ * identifier if different to IMSI. Other identifiers shall be provided if
+ * available.
+ *
+ * NOTE 2: List shall be included each time there is a change to the
+ * registration area.
+ *
+ * NOTE 3: The location information was sent as a userLocation
+ * (Location.locationInfo.userLocation) between versions 18.0.0 and 18.2.0 of
+ * the present document. The location information may also be present in this
+ * field for backwards compatibility.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,36 +64,94 @@ export
 class MMEIdentifierAssociation {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the procedure. (see NOTE 1). NOTE 1: IMSI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to IMSI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI used in the procedure, if available (see NOTE 1). NOTE 1: IMSI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to IMSI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN used in the procedure, if available (see NOTE 1). NOTE 1: IMSI
+     * shall always be provided, in addition to the warrant target identifier if
+     * different to IMSI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * LTE GUTI used in the procedure.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: GUTI;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information available when identifier association occurs. Shall
+     * include all location information for the target UE available at the MME
+     * encoded as one of the following (see NOTE 3):
+     *
+     * - as a Location.fourGLocationInfo.ePSLocationInformation parameter.
+     *
+     * - as a Location.fourGLocationInfo.ePSUserLocationInformation parameter.
+     *   When Dual Connectivity is activated, the additionalCellIDs parameter
+     *   (Location.fourGLocationInfo.ePSLocationInformation.mMELocationInformation.additionalCellIDs)
+     *   shall also be populated, see clause 7.3.3. If available, other
+     *   parameters reportable via Location shall be included. NOTE 3: The
+     *   location information was sent as a userLocation
+     *   (Location.locationInfo.userLocation) between versions 18.0.0 and 18.2.0
+     *   of the present document. The location information may also be present
+     *   in this field for backwards compatibility.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */
     readonly location: Location;
     /**
      * @summary `tAIList`.
+     * @description
+     *
+     * List of tracking areas associated with the registration area within which
+     * the UE is current registered. (see NOTE 2). NOTE 2: List shall be
+     * included each time there is a change to the registration area.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.2.
+     *
      * @public
      * @readonly
      */

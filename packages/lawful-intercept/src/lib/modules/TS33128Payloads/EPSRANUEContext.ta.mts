@@ -64,78 +64,189 @@ export
 class EPSRANUEContext {
     /**
      * @summary `mMEUES1APID`.
+     * @description
+     *
+     * Identity that the MME uses to uniquely identify the target UE over the S1
+     * Interface. See TS 36.413 [38] clause 9.2.3.3. This is correlated to the
+     * IMSI known in the UE context at the MME. Include when sent during the
+     * procedure being reported or when known at the NF.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly mMEUES1APID: MMEUES1APID;
     /**
      * @summary `rANUES1APID`.
+     * @description
+     *
+     * Identity that the MME receives from the eNB uniquely identifying the
+     * target UE with the eNB. See TS 36.413 [38] clause 9.2.3.4. Include when
+     * sent during the procedure being reported or when known at the NF.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly rANUES1APID: RANUES1APID;
     /**
      * @summary `eRABSetupRequest`.
+     * @description
+     *
+     * Contains a list of any E-RABs requested for setup. See TS 36.413 [38]
+     * clause 9.1.4.1. Include when sent during the procedure being reported or
+     * when known at the NF.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly eRABSetupRequest: OPTIONAL<ERABContextList>;
     /**
      * @summary `handoverRestrictionList`.
+     * @description
+     *
+     * Provides information on the PLMNs and RAT Type combinations the UE is
+     * able to use for reselection. See TS 36.413 [38] clause 9.2.1.22. Include
+     * when sent during the procedure being reported or when known at the NF.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly handoverRestrictionList: OPTIONAL<EPSHandoverRestrictionList>;
     /**
      * @summary `uERadioCapability`.
+     * @description
+     *
+     * Indicates the radio capabilities of the UE. See TS 36.413 [38] clause
+     * 9.2.1.27. Include when sent during the procedure being reported or when
+     * known at the NF.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly uERadioCapability: OPTIONAL<EPSUERadioCapability>;
     /**
      * @summary `rATFrequencySelectionPriority`.
+     * @description
+     *
+     * Indicates the RAT/Frequency priority to define camp priorities in Idle
+     * mode and inter-RAT/inter-frequency priorities for handover in Active
+     * mode. Encoded per TS 36.413 [38] clause 9.2.1.39.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly rATFrequencySelectionPriority: OPTIONAL<RATFrequencySelectionPriority>;
     /**
      * @summary `cSFallbackIndicator`.
+     * @description
+     *
+     * Indicates that a fallback to the CS domain is required and the type of
+     * fallback requested. See TS 36.413 [38] clause 9.2.3.21.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly cSFallbackIndicator: OPTIONAL<EPSCSFallbackIndicator>;
     /**
      * @summary `proSeAuthorized`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use
+     * proximity services. Include when sent during the procedure being reported
+     * or when known at the NF. Derived from the value of the ProSe Authorized
+     * IE defined in TS 36.413 [38] clause 9.2.1.99.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly proSeAuthorized: OPTIONAL<EPSProSeAuthorization>;
     /**
      * @summary `lTEV2XServicesAuthorized`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use V2X
+     * services over LTE. Include when sent during the procedure being reported
+     * or when known at the NF. Derived from the value of the V2X Services
+     * Authorized IE defined in TS 36.413 [38] clause 9.2.1.120.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly lTEV2XServicesAuthorized: OPTIONAL<LTEV2XServiceAuthorization>;
     /**
      * @summary `aerialUESubscription`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use aerial
+     * UE service. Include when sent during the procedure being reported or when
+     * known at the NF. Derived from the value of the aerial UE subscription
+     * information IE defined in TS 36.413 [38] clause 9.2.1.136.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly aerialUESubscription: OPTIONAL<AerialUESubscriptionIndicator>;
     /**
      * @summary `subscriptionBasedUEDifferentiationIndication`.
+     * @description
+     *
+     * Provides information on the periodic communication subscription for a UE.
+     * Include when sent during the procedure being reported or when known at
+     * the NF. Derived from the value of the Subscription Based UE
+     * Differentiation Information IE defined in TS 36.413 [38] clause
+     * 9.2.1.140.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly subscriptionBasedUEDifferentiationIndication: OPTIONAL<EPSSubscriptionBasedUEDifferentiationIndication>;
     /**
      * @summary `iABAuthorizedIndicator`.
+     * @description
+     *
+     * Provides information on the authorization of a UE to act as an IAB node.
+     * Include when during the procedure being reported or when known at the NF.
+     * Derived from the value of the IAB Authorized IE defined in TS 36.413 [38]
+     * clause 9.2.1.146.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */
     readonly iABAuthorizedIndicator: OPTIONAL<IABAuthorizedIndicator>;
     /**
      * @summary `nRV2XServicesAuthorization`.
+     * @description
+     *
+     * Provides information on the authorization status of the UE to use V2X
+     * services over NR. Include when sent during the procedure being reported
+     * or when known at the NF. Derived from the value of the V2X Services
+     * Authorized IE defined in TS 36.413 [38] clause 9.2.1.148.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.18.
+     *
      * @public
      * @readonly
      */

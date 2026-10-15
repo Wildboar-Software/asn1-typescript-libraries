@@ -21,6 +21,25 @@ import { PortNumber, _decode_PortNumber, _encode_PortNumber } from "../TS33128Pa
  * @summary NEFMSISDNLessMOSMS
  * @description
  * 
+ * The IRI-POI in the NEF shall generate an xIRI containing a NEFMSISDNLessMOSMS
+ * record when the IRI-POI present in the NEF detects that a target UE has sent
+ * a MSISDN-less MO SMS to an AF.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - NEF receives a SGd MO-Forward-Short-Message-Request (OFR) from an SM-SC
+ *   with SUPI matching the target identifier (see TS 29.338 [59] clause 6.2.1).
+ *
+ * - NEF sends a Nnef_MSISDN-less_MO_SMSNotify service operation to the AF with
+ *   the GPSI of the target UE sending the MSISDN-less SMS as described in TS
+ *   29.522 [58] clause 4.4.10.
+ *
+ * Table 7.7.4.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.4.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,36 +60,75 @@ export
 class NEFMSISDNLessMOSMS {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.7.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI in the form of an external identifier as username@realm and
+     * corresponding to the identity of the originating SMS party.
+     *
+     * 3GPP TS 33.128, clause 7.7.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: GPSI;
     /**
      * @summary `terminatingSMSParty`.
+     * @description
+     *
+     * Identity of the AF receiving the SMS.
+     *
+     * 3GPP TS 33.128, clause 7.7.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly terminatingSMSParty: AFID;
     /**
      * @summary `sMS`.
+     * @description
+     *
+     * SMS TPDU.
+     *
+     * 3GPP TS 33.128, clause 7.7.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sMS: OPTIONAL<SMSTPDUData>;
     /**
      * @summary `sourcePort`.
+     * @description
+     *
+     * port identifying the application of the target UE sending the MSISN-less
+     * MO SMS.
+     *
+     * 3GPP TS 33.128, clause 7.7.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sourcePort: OPTIONAL<PortNumber>;
     /**
      * @summary `destinationPort`.
+     * @description
+     *
+     * port identifying the application of the AF which is the recipient of the
+     * MSISN-less MO SMS.
+     *
+     * 3GPP TS 33.128, clause 7.7.4.1.2.
+     *
      * @public
      * @readonly
      */

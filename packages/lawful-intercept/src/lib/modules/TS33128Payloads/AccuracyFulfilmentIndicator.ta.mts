@@ -7,6 +7,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AccuracyFulfilmentIndicator
  * @description
  * 
+ * The AccuracyFulfilmentIndicator indicates whether the requested accuracy was
+ * fulfilled or not the AccuracyFulfilmentIndicator is derived from the data
+ * present in the AccuracyFulfilmentIndicator type defined in TS 29.572 [24]
+ * clause 6.1.6.3.12.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.51.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +29,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_AccuracyFulfilmentIndicator {
+    /**
+     * @description
+     *
+     * Requested accuracy is fulfilled.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.51.
+     */
     requestedAccuracyFulfilled = 1,
+    /**
+     * @description
+     *
+     * Requested accuracy is not fulfilled.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.51.
+     */
     requestedAccuracyNotFulfilled = 2,
 }
 
@@ -29,6 +51,14 @@ enum _enum_for_AccuracyFulfilmentIndicator {
  * @summary AccuracyFulfilmentIndicator
  * @description
  * 
+ * The AccuracyFulfilmentIndicator indicates whether the requested accuracy was
+ * fulfilled or not the AccuracyFulfilmentIndicator is derived from the data
+ * present in the AccuracyFulfilmentIndicator type defined in TS 29.572 [24]
+ * clause 6.1.6.3.12.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.51.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +78,14 @@ type AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
  * @summary AccuracyFulfilmentIndicator
  * @description
  * 
+ * The AccuracyFulfilmentIndicator indicates whether the requested accuracy was
+ * fulfilled or not the AccuracyFulfilmentIndicator is derived from the data
+ * present in the AccuracyFulfilmentIndicator type defined in TS 29.572 [24]
+ * clause 6.1.6.3.12.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.51.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +103,12 @@ const AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
 
 /**
  * @summary AccuracyFulfilmentIndicator_requestedAccuracyFulfilled
+ * @description
+ *
+ * Requested accuracy is fulfilled.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.51.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +117,12 @@ const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled: AccuracyFulfilment
 
 /**
  * @summary requestedAccuracyFulfilled
+ * @description
+ *
+ * Requested accuracy is fulfilled.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.51.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +131,12 @@ const requestedAccuracyFulfilled: AccuracyFulfilmentIndicator = AccuracyFulfilme
 
 /**
  * @summary AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled
+ * @description
+ *
+ * Requested accuracy is not fulfilled.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.51.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +145,12 @@ const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled: AccuracyFulfilm
 
 /**
  * @summary requestedAccuracyNotFulfilled
+ * @description
+ *
+ * Requested accuracy is not fulfilled.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.51.
+ *
  * @constant
  * @type {number}
  */

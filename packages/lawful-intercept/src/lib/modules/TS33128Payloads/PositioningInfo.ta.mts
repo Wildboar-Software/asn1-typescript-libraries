@@ -15,6 +15,12 @@ import { RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "
  * @summary PositioningInfo
  * @description
  * 
+ * The PositioningInfo type is derived from the data present in the
+ * ProvidePosInfo type defined in TS 29.518 [22] clause 6.4.6.2.3.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.36.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +37,31 @@ export
 class PositioningInfo {
     /**
      * @summary `positionInfo`.
+     * @description
+     *
+     * This parameter shall be used any time information from LCS operations
+     * needs to be reported from the 5GC. This structure may also be used any
+     * time information from the ProvidePosInfo structure needs to be reported.
+     * This field is derived from the data present in the ProvidePosInfo type
+     * defined in TS 29.518 [22] clause 6.4.6.2.3.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.36.
+     *
      * @public
      * @readonly
      */
     readonly positionInfo: OPTIONAL<LocationData>;
     /**
      * @summary `rawMLPResponse`.
+     * @description
+     *
+     * This field shall be used in the location field of the LALSReport record
+     * see clause 7.3.1.4. This field contains a copy of the unparsed XML code
+     * of the MLP Answer and Report messages. The contents of this field is
+     * described in OMA-TS-MLP-V3_5-20181211-C [20] clause 5.2.3.2.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.36.
+     *
      * @public
      * @readonly
      */

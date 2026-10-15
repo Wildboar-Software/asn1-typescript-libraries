@@ -19,6 +19,11 @@ import { SMSAddress, _decode_SMSAddress, _encode_SMSAddress } from "../TS33128Pa
  * @summary SMSParty
  * @description
  * 
+ * Identity of the originating SMS party. See NOTE 2.
+ *
+ * 3GPP TS 33.128, clause 6.2.5.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

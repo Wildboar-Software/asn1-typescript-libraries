@@ -27,6 +27,12 @@ import { CellRadioRelatedInformation, _decode_CellRadioRelatedInformation, _enco
  * @summary EUTRALocation
  * @description
  * 
+ * The EUTRALocation type is derived from the data present in the EutraLocation
+ * type defined in TS 29.571 [17] clause 5.4.4.8.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,72 +59,169 @@ export
 class EUTRALocation {
     /**
      * @summary `tAI`.
+     * @description
+     *
+     * Tracking Area Identity of the target. If the TAI information is not
+     * available, the TAC of the TAI shall be set to one reserved value (e.g.
+     * 0x0000, see TS 23.003 [19] clause 19.4.2.3) and the value of the
+     * ignoreTAI parameter shall be set to TRUE.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly tAI: TAI;
     /**
      * @summary `eCGI`.
+     * @description
+     *
+     * E-UTRA Cell Identity for the cell where the target is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly eCGI: ECGI;
     /**
      * @summary `ageOfLocationInfo`.
+     * @description
+     *
+     * The value represents the elapsed time in minutes since the last network
+     * contact of the mobile station. Shall be present if known at the NF where
+     * the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly ageOfLocationInfo: OPTIONAL<AgeOfLocation>;
     /**
      * @summary `uELocationTimestamp`.
+     * @description
+     *
+     * The value represents the UTC time when the EUTRALocation information was
+     * acquired. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly uELocationTimestamp: OPTIONAL<Timestamp>;
     /**
      * @summary `geographicalInformation`.
+     * @description
+     *
+     * Shall be present if known at the NF where the POI is located. If present,
+     * this parameter shall be populated with the Hexadecimal value of the
+     * location encoded as described in TS 23.032 [104] clauses 6 and 7.3.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly geographicalInformation: OPTIONAL<UTF8String>;
     /**
      * @summary `geodeticInformation`.
+     * @description
+     *
+     * Shall be present if known at the NF where the POI is located. If present,
+     * this parameter shall be populated with the Hexadecimal value of the
+     * location encoded as described in ITU-T Recommendation Q.763 (1999) [105]
+     * clause 3.88.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly geodeticInformation: OPTIONAL<UTF8String>;
     /**
      * @summary `globalNGENbID`.
+     * @description
+     *
+     * Indicates the global identity of the ng-eNodeB in which the UE is
+     * currently located. Shall be present if known at the NF where the POI is
+     * located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly globalNGENbID: OPTIONAL<GlobalRANNodeID>;
     /**
      * @summary `cellSiteInformation`.
+     * @description
+     *
+     * Contains location information for the cell site being reported. Shall be
+     * present if known at the NF where the POI is located or known at the MDF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly cellSiteInformation: OPTIONAL<CellSiteInformation>;
     /**
      * @summary `globalENbID`.
+     * @description
+     *
+     * Indicates the global identity of the eNodeB in which the UE is currently
+     * located. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly globalENbID: OPTIONAL<GlobalRANNodeID>;
     /**
      * @summary `ignoreTAI`.
+     * @description
+     *
+     * This flag, when present, shall indicate if the tAI shall be ignored. When
+     * present, it shall be set as follows:
+     *
+     * - TRUE: tAI shall be ignored.
+     *
+     * - FALSE: tAI shall not be ignored.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly ignoreTAI: OPTIONAL<BOOLEAN>;
     /**
      * @summary `ignoreECGI`.
+     * @description
+     *
+     * This flag, when present, shall indicate if the eCGI shall be ignored.
+     * When present, it shall be set as follows:
+     *
+     * - TRUE: eCGI shall be ignored.
+     *
+     * - FALSE: eCGI shall not be ignored.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly ignoreECGI: OPTIONAL<BOOLEAN>;
     /**
      * @summary `cellRadioRelatedInformation`.
+     * @description
+     *
+     * Radio Information of reported cell.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.5.
+     *
      * @public
      * @readonly
      */

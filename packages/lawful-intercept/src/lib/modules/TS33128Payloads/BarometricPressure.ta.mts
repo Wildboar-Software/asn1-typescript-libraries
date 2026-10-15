@@ -12,6 +12,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary BarometricPressure
  * @description
  * 
+ * This IE specifies the measured uncompensated atmospheric pressure in units of
+ * Pascal (Pa). Minimum: 30000. Maximum: 115000. Described in TS 29.572 [24]
+ * clause 6.1.6.3.2.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

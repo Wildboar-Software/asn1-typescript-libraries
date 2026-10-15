@@ -1,4 +1,16 @@
 /**
+ * LI payload schema of 3GPP TS 33.128.
+ *
+ * Annex A defines module `TS33128Payloads` as the structures used on
+ * LI_X2, LI_X3, LI_HI2, and LI_HI3. On LI_X2 the payload is a
+ * BER-encoded `XIRIPayload` unless a clause says otherwise. Generation
+ * rules for each record are in the clause cited on that type.
+ *
+ * 3GPP TS 33.128 V19.8.0, clauses 5.3, 6, 7, and 8; Annex A.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ */
+
+/**
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `authenticationFailure`, `authorized`, `badGateway502`, `badRequest400`,

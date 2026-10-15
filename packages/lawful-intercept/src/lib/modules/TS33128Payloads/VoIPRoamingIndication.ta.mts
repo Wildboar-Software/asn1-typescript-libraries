@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary VoIPRoamingIndication
  * @description
  * 
+ * The VoIPRoamingIndication indicates the type of roaming in use when the
+ * target is in a roaming state.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,8 +28,29 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_VoIPRoamingIndication {
+    /**
+     * @description
+     *
+     * The target is roaming and using Local Breakout.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.3.
+     */
     roamingLBO = 1,
+    /**
+     * @description
+     *
+     * The target is using S8 Home Routed Roaming.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.3.
+     */
     roamingS8HR = 2,
+    /**
+     * @description
+     *
+     * The target is using N9 Home Routed Roaming.
+     *
+     * 3GPP TS 33.128, clause 7.12.4.3.3.
+     */
     roamingN9HR = 3,
 }
 
@@ -31,6 +58,12 @@ enum _enum_for_VoIPRoamingIndication {
  * @summary VoIPRoamingIndication
  * @description
  * 
+ * The VoIPRoamingIndication indicates the type of roaming in use when the
+ * target is in a roaming state.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +84,12 @@ type VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;
  * @summary VoIPRoamingIndication
  * @description
  * 
+ * The VoIPRoamingIndication indicates the type of roaming in use when the
+ * target is in a roaming state.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +108,12 @@ const VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;
 
 /**
  * @summary VoIPRoamingIndication_roamingLBO
+ * @description
+ *
+ * The target is roaming and using Local Breakout.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +122,12 @@ const VoIPRoamingIndication_roamingLBO: VoIPRoamingIndication = VoIPRoamingIndic
 
 /**
  * @summary roamingLBO
+ * @description
+ *
+ * The target is roaming and using Local Breakout.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +136,12 @@ const roamingLBO: VoIPRoamingIndication = VoIPRoamingIndication.roamingLBO; /* S
 
 /**
  * @summary VoIPRoamingIndication_roamingS8HR
+ * @description
+ *
+ * The target is using S8 Home Routed Roaming.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +150,12 @@ const VoIPRoamingIndication_roamingS8HR: VoIPRoamingIndication = VoIPRoamingIndi
 
 /**
  * @summary roamingS8HR
+ * @description
+ *
+ * The target is using S8 Home Routed Roaming.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +164,12 @@ const roamingS8HR: VoIPRoamingIndication = VoIPRoamingIndication.roamingS8HR; /*
 
 /**
  * @summary VoIPRoamingIndication_roamingN9HR
+ * @description
+ *
+ * The target is using N9 Home Routed Roaming.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +178,12 @@ const VoIPRoamingIndication_roamingN9HR: VoIPRoamingIndication = VoIPRoamingIndi
 
 /**
  * @summary roamingN9HR
+ * @description
+ *
+ * The target is using N9 Home Routed Roaming.
+ *
+ * 3GPP TS 33.128, clause 7.12.4.3.3.
+ *
  * @constant
  * @type {number}
  */

@@ -11,6 +11,12 @@ import { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSA
  * @summary NSSAI
  * @description
  * 
+ * Contains the Target S-NSSAI list. Derived from the Target NSSAI IE specified
+ * in TS 38.413 [23] clause 9.3.1.230.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2A.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

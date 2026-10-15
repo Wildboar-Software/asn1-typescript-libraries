@@ -12,6 +12,10 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExternalASNValue
  * @description
  * 
+ * The contents of the encoded message or parameter being reported.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

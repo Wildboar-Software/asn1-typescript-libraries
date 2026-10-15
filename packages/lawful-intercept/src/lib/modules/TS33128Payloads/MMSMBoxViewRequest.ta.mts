@@ -21,6 +21,14 @@ import { MMSQuota, _decode_MMSQuota, _encode_MMSQuota } from "../TS33128Payloads
  * @summary MMSMBoxViewRequest
  * @description
  * 
+ * The IRI-POI present in the MMS Proxy-Relay shall generate an xIRI containing
+ * an MMSMBoxViewRequest record when the MMS Proxy-Relay receives a
+ * m-mbox-view-req (as defined in OMA-TS-MMS_ENC [39] clause 6.9) from the MMS
+ * client in the target UE.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,42 +53,97 @@ export
 class MMSMBoxViewRequest {
     /**
      * @summary `transactionID`.
+     * @description
+     *
+     * An ID used to correlate an MMS request and response between the target
+     * and the MMS Proxy-Relay. As defined in OMA-TS-MMS_ENC [39] clause 7.3.63.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.18.
+     *
      * @public
      * @readonly
      */
     readonly transactionID: UTF8String;
     /**
      * @summary `version`.
+     * @description
+     *
+     * The version of MM, to include major and minor version.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.18.
+     *
      * @public
      * @readonly
      */
     readonly version: MMSVersion;
     /**
      * @summary `contentLocation`.
+     * @description
+     *
+     * The content-location-value field defines the URL for the MMS Proxy-Relay
+     * location of the content to be retrieved. As defined in OMA-TS-MMS_ENC
+     * [39] clause 7.3.10. Include if sent to the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.18.
+     *
      * @public
      * @readonly
      */
     readonly contentLocation: OPTIONAL<UTF8String>;
     /**
      * @summary `state`.
+     * @description
+     *
+     * Specifies a MM State value to use in selecting the messages to return. As
+     * defined in OMA-TS-MMS_ENC [39] clause 7.3.33. Include if sent to the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.18.
+     *
      * @public
      * @readonly
      */
     readonly state: OPTIONAL<MMState[]>;
     /**
      * @summary `flags`.
+     * @description
+     *
+     * Specifies a MM Flags keyword to use in selecting the messages to return
+     * in the response. See OMA-TS-MMS_ENC [39] clause 7.3.32. Include if sent
+     * to the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.18.
+     *
      * @public
      * @readonly
      */
     readonly flags: OPTIONAL<MMFlags[]>;
     /**
      * @summary `start`.
+     * @description
+     *
+     * A number, indicating the index of the first MM of those selected to have
+     * information returned in the response. Include if sent to the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.18.
+     *
      * @public
      * @readonly
      */
     readonly start: OPTIONAL<INTEGER>;
     /**
      * @summary `limit`.
+     * @description
+     *
+     * A number indicating the maximum number of selected MMs whose information
+     * are to be returned in the response. If this is absent, information
+     * elements from all remaining MMs are to be returned. If this is zero, then
+     * no MM-related information are to be returned. Include if sent to the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.18.
+     *
      * @public
      * @readonly
      */

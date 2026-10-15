@@ -23,6 +23,25 @@ import { PortNumber, _decode_PortNumber, _encode_PortNumber } from "../TS33128Pa
  * @summary SCEFMSISDNLessMOSMS
  * @description
  * 
+ * The IRI-POI in the SCEF shall generate an xIRI containing a
+ * SCEFMSISDNLessMOSMS record when the IRI-POI present in the SCEF detects that
+ * a target UE has sent a MSISDN-less MO SMS to an SCS/AS.
+ *
+ * Accordingly, the IRI-POI in the SCEF generates the xIRI when any of the
+ * following events is detected:
+ *
+ * - SCEF receives a SGd MO-Forward-Short-Message-Request (OFR) from an SM-SC
+ *   with IMSI matching the target identifier (see TS 29.338 [59] clause 6.2.1).
+ *
+ * - SCEF sends a MsisdnLessMoSmsNotification to the SCS/AS with the External
+ *   Identifier of the UE sending the MSISDN-less SMS (see TS 29.122 [63] clause
+ *   5.15).
+ *
+ * Table 7.8.4.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.8.4.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,6 +63,12 @@ export
 class SCEFMSISDNLessMOSMS {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.8.4.1.2.
+     *
      * @public
      * @readonly
      */
@@ -62,24 +87,50 @@ class SCEFMSISDNLessMOSMS {
     readonly externalIdentifie: OPTIONAL<NAI>;
     /**
      * @summary `terminatingSMSParty`.
+     * @description
+     *
+     * Identity of the SCS/AS receiving the SMS.
+     *
+     * 3GPP TS 33.128, clause 7.8.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly terminatingSMSParty: SCSASID;
     /**
      * @summary `sMS`.
+     * @description
+     *
+     * SMS TPDU.
+     *
+     * 3GPP TS 33.128, clause 7.8.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sMS: OPTIONAL<SMSTPDUData>;
     /**
      * @summary `sourcePort`.
+     * @description
+     *
+     * port identifying the application of the target UE sending the MSISN-less
+     * MO SMS.
+     *
+     * 3GPP TS 33.128, clause 7.8.4.1.2.
+     *
      * @public
      * @readonly
      */
     readonly sourcePort: OPTIONAL<PortNumber>;
     /**
      * @summary `destinationPort`.
+     * @description
+     *
+     * port identifying the application of the SCS/AS which is the recipient of
+     * the MSISN-less MO SMS.
+     *
+     * 3GPP TS 33.128, clause 7.8.4.1.2.
+     *
      * @public
      * @readonly
      */

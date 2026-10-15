@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSAttachResult
  * @description
  * 
+ * The EPSAttachResult provides information on the attach type used by the UE.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.10.
+ *
+ * 3GPP TS 33.128, clause 8.5.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -21,7 +27,21 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_EPSAttachResult {
+    /**
+     * @description
+     *
+     * The attach type is an EPS attach.
+     *
+     * 3GPP TS 33.128, clause 8.5.6.
+     */
     ePSOnly = 1,
+    /**
+     * @description
+     *
+     * The attach type is a combined EPS/IMSI attach.
+     *
+     * 3GPP TS 33.128, clause 8.5.6.
+     */
     combinedEPSIMSI = 2,
 }
 
@@ -29,6 +49,12 @@ enum _enum_for_EPSAttachResult {
  * @summary EPSAttachResult
  * @description
  * 
+ * The EPSAttachResult provides information on the attach type used by the UE.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.10.
+ *
+ * 3GPP TS 33.128, clause 8.5.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +74,12 @@ type EPSAttachResult = _enum_for_EPSAttachResult;
  * @summary EPSAttachResult
  * @description
  * 
+ * The EPSAttachResult provides information on the attach type used by the UE.
+ * Derived from the enumerations in TS 24.301 [51] clause 9.9.3.10.
+ *
+ * 3GPP TS 33.128, clause 8.5.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -65,6 +97,12 @@ const EPSAttachResult = _enum_for_EPSAttachResult;
 
 /**
  * @summary EPSAttachResult_ePSOnly
+ * @description
+ *
+ * The attach type is an EPS attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.6.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +111,12 @@ const EPSAttachResult_ePSOnly: EPSAttachResult = EPSAttachResult.ePSOnly; /* LON
 
 /**
  * @summary ePSOnly
+ * @description
+ *
+ * The attach type is an EPS attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.6.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +125,12 @@ const ePSOnly: EPSAttachResult = EPSAttachResult.ePSOnly; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EPSAttachResult_combinedEPSIMSI
+ * @description
+ *
+ * The attach type is a combined EPS/IMSI attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.6.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +139,12 @@ const EPSAttachResult_combinedEPSIMSI: EPSAttachResult = EPSAttachResult.combine
 
 /**
  * @summary combinedEPSIMSI
+ * @description
+ *
+ * The attach type is a combined EPS/IMSI attach.
+ *
+ * 3GPP TS 33.128, clause 8.5.6.
+ *
  * @constant
  * @type {number}
  */

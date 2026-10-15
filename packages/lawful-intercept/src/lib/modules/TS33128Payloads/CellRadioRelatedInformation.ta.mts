@@ -16,6 +16,12 @@ import { S1Information, _decode_S1Information, _encode_S1Information } from "../
  * @summary CellRadioRelatedInformation
  * @description
  * 
+ * Radio Information of reported cell to include either NG Information, F1
+ * Information, or S1 Information.
+ *
+ * 3GPP TS 33.128, clause 7.3.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,7 +35,19 @@ import { S1Information, _decode_S1Information, _encode_S1Information } from "../
  */
 export
 type CellRadioRelatedInformation =
+    /**
+     * @description
+     *
+     * Information pertaining to the setup of the NG Interface. (3GPP TS 33.128,
+     * clause 7.3.2.2.)
+     */
     { nGInformation: NGInformation } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Information pertaining to the setup of the F1 Interface. (3GPP TS 33.128,
+     * clause 7.3.2.2.)
+     */
     | { f1Information: F1Information } /* CHOICE_ALT_ROOT */
     | { s1Information: S1Information } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;

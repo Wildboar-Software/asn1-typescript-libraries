@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary ExternalASNReference
  * @description
  * 
+ * The formal reference notation (as described in clause D.5) for the ASN.1
+ * component used to encode the parameter or message reported in the
+ * EncodedASNValue.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

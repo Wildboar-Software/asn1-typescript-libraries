@@ -31,12 +31,29 @@ export
 class GTPTunnelInfo {
     /**
      * @summary `fiveGSGTPTunnels`.
+     * @description
+     *
+     * Shall include the 5GS GTP Tunnels (see table 6.2.3.2.2-4) when the xIRI
+     * message is used to report PDU Session related events.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGSGTPTunnels: OPTIONAL<FiveGSGTPTunnels>;
     /**
      * @summary `ePSGTPTunnels`.
+     * @description
+     *
+     * Shall include the information for the User Plane GTP Tunnels for the
+     * bearer context if present in the Request or Response (see TS 29.274 [87]
+     * clauses 7.2.2, 7.2.4 and 8.15) or known at the context at the SGW or PGW
+     * (see TS 23.401 [50] clause 5.6.4) when the xIRI message is used to report
+     * PDN Connection related events. See table 6.3.3.2.2-6.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.2.
+     *
      * @public
      * @readonly
      */

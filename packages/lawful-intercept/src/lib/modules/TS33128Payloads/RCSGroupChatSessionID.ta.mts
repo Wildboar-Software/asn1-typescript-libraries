@@ -11,6 +11,12 @@ import { SIPURI, _decode_SIPURI, _encode_SIPURI } from "../TS33128Payloads/SIPUR
  * @summary RCSGroupChatSessionID
  * @description
  * 
+ * Shall contain the SIPURI that uniquely identifies the CPM Group Session for
+ * an RCS Group Chat. See OMA-TS-CPM_System_Description-V2 [82] clause 5.1.1.5.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.1.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

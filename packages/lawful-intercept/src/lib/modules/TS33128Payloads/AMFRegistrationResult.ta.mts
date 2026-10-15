@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AMFRegistrationResult
  * @description
  * 
+ * Specifies the result of registration, see TS 24.501 [13] clause 9.11.3.6.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,6 +36,11 @@ enum _enum_for_AMFRegistrationResult {
  * @summary AMFRegistrationResult
  * @description
  * 
+ * Specifies the result of registration, see TS 24.501 [13] clause 9.11.3.6.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +61,11 @@ type AMFRegistrationResult = _enum_for_AMFRegistrationResult;
  * @summary AMFRegistrationResult
  * @description
  * 
+ * Specifies the result of registration, see TS 24.501 [13] clause 9.11.3.6.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

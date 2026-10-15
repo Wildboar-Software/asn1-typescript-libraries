@@ -18,6 +18,30 @@ import { UASNFUASInformation, _decode_UASNFUASInformation, _encode_UASNFUASInfor
  * @summary UASNFInformation
  * @description
  * 
+ * The IRI-POI in the NEF acting as the UAS NF shall generate an xIRI containing
+ * a UASNFInformation record when the IRI-POI present in the NEF/UAS NF detects
+ * the NEF/UAS NF has handled a:
+ *
+ * - UAV Flight Assistance Service operation.
+ *
+ * - Retrieval Info UAV Flight Service operation.
+ *
+ * - Naf_Authenticate Service operation.
+ *
+ * UAV Flight Assistance configuration management related procedures are defined
+ * in TS 29.522 [58] clauses 4.4.43.2 and 5.39.
+ *
+ * UAV Flight Information procedures are defined in TS 29.522 [58] clause
+ * 4.4.43.3.
+ *
+ * UAV authentication via Naf Authenticate procedures are defined in TS 29.255
+ * [169] clause 4.2.2.
+ *
+ * Table 7.7.8.2-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.7.8.1.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,18 +59,44 @@ export
 class UASNFInformation {
     /**
      * @summary `uASTargetIdentifiers`.
+     * @description
+     *
+     * uAVID in the format of GPSI or CAA-Level UE ID. Shall contain as least
+     * one UASTargetIdentifier in the format of GPSI or CAA Level UAV ID (see TS
+     * 24.501 [13] clause 6.4.2.2). May contain the PEI of the UAS if observed
+     * during the service operation message exchange. See TS 29.255 [169] clause
+     * 5.1.6.2.
+     *
+     * 3GPP TS 33.128, clause 7.7.8.1.2.
+     *
      * @public
      * @readonly
      */
     readonly uASTargetIdentifiers: UASTargetIdentifier[];
     /**
      * @summary `uASNFProcedure`.
+     * @description
+     *
+     * Describes the type of service operation observed by the POI in the
+     * NEF/UAS NF. Shall contain a value from table 7.7.2.1.7-2.
+     *
+     * 3GPP TS 33.128, clause 7.7.8.1.2.
+     *
      * @public
      * @readonly
      */
     readonly uASNFProcedure: UASNFProcedure;
     /**
      * @summary `uASNFUASInformation`.
+     * @description
+     *
+     * Encapsulated message that triggered the xIRI in its original format.
+     * Contains the entire payload of the uAVFlightAssitance or
+     * NafAuthentication. See table 7.7.2.1.7-5 for choices to populate this
+     * parameter.
+     *
+     * 3GPP TS 33.128, clause 7.7.8.1.2.
+     *
      * @public
      * @readonly
      */

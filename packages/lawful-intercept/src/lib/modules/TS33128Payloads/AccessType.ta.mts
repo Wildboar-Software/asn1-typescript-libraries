@@ -7,6 +7,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary AccessType
  * @description
  * 
+ * The AccessType indicates the access types of which the signalling or user
+ * data is transmitted.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,8 +28,29 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_AccessType {
+    /**
+     * @description
+     *
+     * Indicates that the access type is 3GPP.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.65.
+     */
     threeGPPAccess = 1,
+    /**
+     * @description
+     *
+     * Indicates that the access type is Non-3GPP.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.65.
+     */
     nonThreeGPPAccess = 2,
+    /**
+     * @description
+     *
+     * Indicates that the access type is 3GPP and Non-3GPP.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.65.
+     */
     threeGPPandNonThreeGPPAccess = 3,
 }
 
@@ -31,6 +58,12 @@ enum _enum_for_AccessType {
  * @summary AccessType
  * @description
  * 
+ * The AccessType indicates the access types of which the signalling or user
+ * data is transmitted.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +84,12 @@ type AccessType = _enum_for_AccessType;
  * @summary AccessType
  * @description
  * 
+ * The AccessType indicates the access types of which the signalling or user
+ * data is transmitted.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,6 +108,12 @@ const AccessType = _enum_for_AccessType;
 
 /**
  * @summary AccessType_threeGPPAccess
+ * @description
+ *
+ * Indicates that the access type is 3GPP.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +122,12 @@ const AccessType_threeGPPAccess: AccessType = AccessType.threeGPPAccess; /* LONG
 
 /**
  * @summary threeGPPAccess
+ * @description
+ *
+ * Indicates that the access type is 3GPP.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +136,12 @@ const threeGPPAccess: AccessType = AccessType.threeGPPAccess; /* SHORT_NAMED_ENU
 
 /**
  * @summary AccessType_nonThreeGPPAccess
+ * @description
+ *
+ * Indicates that the access type is Non-3GPP.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +150,12 @@ const AccessType_nonThreeGPPAccess: AccessType = AccessType.nonThreeGPPAccess; /
 
 /**
  * @summary nonThreeGPPAccess
+ * @description
+ *
+ * Indicates that the access type is Non-3GPP.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +164,12 @@ const nonThreeGPPAccess: AccessType = AccessType.nonThreeGPPAccess; /* SHORT_NAM
 
 /**
  * @summary AccessType_threeGPPandNonThreeGPPAccess
+ * @description
+ *
+ * Indicates that the access type is 3GPP and Non-3GPP.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +178,12 @@ const AccessType_threeGPPandNonThreeGPPAccess: AccessType = AccessType.threeGPPa
 
 /**
  * @summary threeGPPandNonThreeGPPAccess
+ * @description
+ *
+ * Indicates that the access type is 3GPP and Non-3GPP.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.65.
+ *
  * @constant
  * @type {number}
  */

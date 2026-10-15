@@ -29,6 +29,38 @@ import { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } 
  * @summary SeparatedLocationReporting
  * @description
  * 
+ * When location information cannot be reported via an existing message
+ * generation at the IRI-POI, a separate xIRI may be generated from any
+ * provisioned IRI-POI that has access to location information and included in
+ * the SeparatedLocationReporting record.
+ *
+ * The following information needs to be transferred from the IRI-POI to the
+ * MDF2 to enable a MDF2 to perform its functionality:
+ *
+ * - Target identity.
+ *
+ * - Event date/time.
+ *
+ * - Target location(s).
+ *
+ * - Date/time of UE location(s).
+ *
+ * - Nature and identity of the POI.
+ *
+ * - Location source(s).
+ *
+ * Details of how the IRI-POI in the SMF generates this record can be found in
+ * clause 6.2.3.2.1.
+ *
+ * Details of how the IRI-POI in the NEF generates this record can be found in
+ * clause 7.7.2.1.1.
+ *
+ * Details for Location Only reporting using this record can be found in clause
+ * 7.3.6.
+ *
+ * 3GPP TS 33.128, clause 7.3.4.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,54 +84,118 @@ export
 class SeparatedLocationReporting {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the registration (see clause 6.2.2.4). If the
+     * location being reported is being reported from EPS, the IMSI shall be
+     * used as the values for this field.
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `sUCI`.
+     * @description
+     *
+     * SUCI used in the registration, if available.
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly sUCI: OPTIONAL<SUCI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * PEI provided by the UE during the registration, if available.
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * GPSI obtained in the registration, if available as part of the
+     * subscription profile.
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI provided as outcome of initial registration or used in other
+     * cases, see TS 24.501 [13] clause 5.5.1.2.2.
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<FiveGGUTI>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information determined by the network at the time of message
+     * generation.
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly location: Location;
     /**
      * @summary `non3GPPAccessEndpoint`.
+     * @description
+     *
+     * For Non-3GPP access, UE's local IP address used to reach the N3IWF, TNGF
+     * or TWIF. IP addresses are given as 4 octets (for IPv4) or 16 octets (for
+     * IPv6) with the most significant octet first (network byte order).
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly non3GPPAccessEndpoint: OPTIONAL<UEEndpointAddress>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * RAT Type associated with the data for which location information is
+     * provided, see TS 23.502 [4] clause 4.3.2. Values given as per TS 29.571
+     * [17] clause 5.4.3.2.
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<RATType>;
     /**
      * @summary `ePSIdentities`.
+     * @description
+     *
+     * Indicates the identifiers for which the location is being reported. All
+     * target identifiers known at the NF shall be included.
+     *
+     * 3GPP TS 33.128, clause 7.3.4.1.
+     *
      * @public
      * @readonly
      */

@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary CSGAccessMode
  * @description
  * 
+ * The CSGAccessMode indicates the mode in which the CSG cell User is accessing
+ * to operate. CSGAccessMode is derived from the CSG-Access-Mode type defined in
+ * TS 32.299. [111] clause 7.2.46A.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.83.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -22,6 +29,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 enum _enum_for_CSGAccessMode {
     closedMode = 1,
+    /**
+     * @description
+     *
+     * CSG Access mode is hybrid.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.83.
+     */
     hybridMode = 2,
 }
 
@@ -29,6 +43,13 @@ enum _enum_for_CSGAccessMode {
  * @summary CSGAccessMode
  * @description
  * 
+ * The CSGAccessMode indicates the mode in which the CSG cell User is accessing
+ * to operate. CSGAccessMode is derived from the CSG-Access-Mode type defined in
+ * TS 32.299. [111] clause 7.2.46A.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.83.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +69,13 @@ type CSGAccessMode = _enum_for_CSGAccessMode;
  * @summary CSGAccessMode
  * @description
  * 
+ * The CSGAccessMode indicates the mode in which the CSG cell User is accessing
+ * to operate. CSGAccessMode is derived from the CSG-Access-Mode type defined in
+ * TS 32.299. [111] clause 7.2.46A.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.83.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -81,6 +109,12 @@ const closedMode: CSGAccessMode = CSGAccessMode.closedMode; /* SHORT_NAMED_ENUME
 
 /**
  * @summary CSGAccessMode_hybridMode
+ * @description
+ *
+ * CSG Access mode is hybrid.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.83.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +123,12 @@ const CSGAccessMode_hybridMode: CSGAccessMode = CSGAccessMode.hybridMode; /* LON
 
 /**
  * @summary hybridMode
+ * @description
+ *
+ * CSG Access mode is hybrid.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.83.
+ *
  * @constant
  * @type {number}
  */

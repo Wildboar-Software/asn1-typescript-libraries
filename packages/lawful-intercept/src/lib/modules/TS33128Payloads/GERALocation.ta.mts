@@ -27,6 +27,12 @@ import { CellSiteInformation, _decode_CellSiteInformation, _encode_CellSiteInfor
  * @summary GERALocation
  * @description
  * 
+ * The GERALocation type is derived from the data present in the GeraLocation
+ * type defined in TS 29.571 [17] clause 5.4.4.53.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,72 +59,164 @@ export
 class GERALocation {
     /**
      * @summary `locationNumber`.
+     * @description
+     *
+     * The Location Number within the PLMN where the UE is currently located.
+     * Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly locationNumber: OPTIONAL<E164Number>;
     /**
      * @summary `cGI`.
+     * @description
+     *
+     * The Cell Global Identification for the GERA Cell the UE is currently
+     * located in. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly cGI: OPTIONAL<CGI>;
     /**
      * @summary `rAI`.
+     * @description
+     *
+     * Routing Area Identity of the target. Shall be present if known at the NF
+     * where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly rAI: OPTIONAL<RAI>;
     /**
      * @summary `sAI`.
+     * @description
+     *
+     * Service Area Identity of the target. Shall be present if known at the NF
+     * where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly sAI: OPTIONAL<SAI>;
     /**
      * @summary `lAI`.
+     * @description
+     *
+     * Location Area Identity of the target. Shall be present if known at the NF
+     * where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly lAI: OPTIONAL<LAI>;
     /**
      * @summary `vLRNumber`.
+     * @description
+     *
+     * The VLR Number for the VLR where the UE is currently registered. Shall be
+     * present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly vLRNumber: OPTIONAL<UTF8String>;
     /**
      * @summary `mSCNumber`.
+     * @description
+     *
+     * The MSC Number for the MSC currently serving the UE. Shall be present if
+     * known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly mSCNumber: OPTIONAL<UTF8String>;
     /**
      * @summary `ageOfLocationInfo`.
+     * @description
+     *
+     * The value represents the elapsed time in minutes since the last network
+     * contact of the mobile station. Value "0" indicates that the location
+     * information was obtained after a successful paging procedure for Active
+     * Location Retrieval when the UE is in idle mode or after a successful
+     * GERAN location reporting procedure when the UE is in connected mode. Any
+     * other value than "0" indicates that the location information is the last
+     * known one. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly ageOfLocationInfo: OPTIONAL<INTEGER>;
     /**
      * @summary `uELocationTimestamp`.
+     * @description
+     *
+     * The value represents the UTC time when the GERALocation information was
+     * acquired. Shall be present if known at the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly uELocationTimestamp: OPTIONAL<Timestamp>;
     /**
      * @summary `geographicalInformation`.
+     * @description
+     *
+     * Shall be present if known at the NF where the POI is located. If present,
+     * this parameter shall be populated with the Hexadecimal value of the
+     * location encoded as described in TS 23.032 [104] clauses 6 and 7.3.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly geographicalInformation: OPTIONAL<UTF8String>;
     /**
      * @summary `geodeticInformation`.
+     * @description
+     *
+     * Shall be present if known at the NF where the POI is located. If present,
+     * this parameter shall be populated with the Hexadecimal value of the
+     * location encoded as described in ITU-T Recommendation Q.763 (1999) [105]
+     * clause 3.88.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly geodeticInformation: OPTIONAL<UTF8String>;
     /**
      * @summary `cellSiteInformation`.
+     * @description
+     *
+     * Contains location information for the cell site being reported. Shall be
+     * present if known at the NF where the POI is located or known at the MDF.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.9.
+     *
      * @public
      * @readonly
      */

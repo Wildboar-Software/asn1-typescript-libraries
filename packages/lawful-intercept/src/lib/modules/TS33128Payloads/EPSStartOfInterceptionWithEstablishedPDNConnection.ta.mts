@@ -41,6 +41,55 @@ import { EPSBearerContext, _decode_EPSBearerContext, _encode_EPSBearerContext } 
  * @summary EPSStartOfInterceptionWithEstablishedPDNConnection
  * @description
  * 
+ * In the case of standalone EPS, the IRI-POI in the SGW/PGW shall generate an
+ * xIRI containing an ePSStartOfInterceptionWithEstablishedPDNConnection record
+ * when the IRI-POI present in the SGW/PGW detects that a PDN Connection has
+ * already been established for the target UE when interception starts. The
+ * IRI-POI present in the SGW/PGW shall generate the xIRI for following events:
+ *
+ * - The SGW/PGW has an existing PDN Connection in the target UE context of the
+ *   SGW/PGW (see TS 23.401 [50] clause 5.7.4).
+ *
+ * In the case of interworked EPS/5GS, the IRI-POI in the SMF+PGW-C shall
+ * generate an xIRI containing an
+ * SMFStartOfInterceptionWithEstablishedPDUSession record (see clause 6.2.3.2.5)
+ * when the IRI-POI present in the SMF+PGW-C detects that a single-access PDU
+ * Session or PDN Connection has already been established for the target UE when
+ * interception starts. The IRI-POI present in the SMF+PGW-C shall generate the
+ * xIRI for the following events:
+ *
+ * - The SMF+PGW-C has an existing PDN Connection in the target UE context of
+ *   the SMF+PGW-C (see TS 23.401 [50] clause 5.7.4).
+ *
+ * - The SMF+PGW-C has an existing PDU Session context or SM Context for the
+ *   target UE (see TS 29.502 [16] clause 5.2.2.2 and clause 5.2.2.7).
+ *
+ * When the SMFStartOfInterceptionWithEstablishedPDUSession record (see clause
+ * 6.2.3.2.5) is used to report an existing PDN Connection:
+ *
+ * - The ePSStartOfInterceptionWithEstablishedPDNConnection field shall be
+ *   populated with the information in table 6.3.3.2.5-1.
+ *
+ * - If there is no SUPI associated to the SM context for the target UE, the
+ *   SUPI field of the SMFStartOfInterceptionWithEstablishedPDUSession record
+ *   shall be populated with the value of the IMSI from the target UE context.
+ *
+ * - If there is no PDU Session ID associated to the context for the PDN
+ *   connection, the pDUSessionID field of the
+ *   SMFStartOfInterceptionWithEstablishedPDUSession record shall be populated
+ *   with the EBI of the default bearer for the PDN Connection.
+ *
+ * - If there is no 5G UP tunnel present in the context associated to the PDN
+ *   Connection, the gTPTunnelID field of the
+ *   SMFStartOfInterceptionWithEstablishedPDNConnection record shall be
+ *   populated with the F-TEID for the PGW S5 or S8 interface for the default
+ *   bearer of the PDN Connection.
+ *
+ * Table 6.3.3.4.2-1 gives the LI_HI2 IRI message type for this record as BEGIN.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -72,102 +121,225 @@ export
 class EPSStartOfInterceptionWithEstablishedPDNConnection {
     /**
      * @summary `ePSSubscriberIDs`.
+     * @description
+     *
+     * EPS Subscriber Identities associated with the PDN connection (as
+     * associated with the PDN connection in the context known at the NF). The
+     * IMSI shall be present except for unauthenticated emergency sessions.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly ePSSubscriberIDs: EPSSubscriberIDs;
     /**
      * @summary `iMSIUnauthenticated`.
+     * @description
+     *
+     * Shall be present if an IMSI is present in the ePSSubscriberIDs and set to
+     * "true" if the IMSI has not been authenticated, or "false" if it has been
+     * authenticated.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly iMSIUnauthenticated: OPTIONAL<IMSIUnauthenticatedIndication>;
     /**
      * @summary `defaultBearerID`.
+     * @description
+     *
+     * Shall contain the EPS Bearer Identity of the default bearer associated
+     * with the PDN connection.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly defaultBearerID: EPSBearerID;
     /**
      * @summary `gTPTunnelInfo`.
+     * @description
+     *
+     * Contains the information for the Control Plane GTP Tunnels known in the
+     * context at the SGW or PGW. See table 6.2.3.2.2-3.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>;
     /**
      * @summary `pDNConnectionType`.
+     * @description
+     *
+     * Identifies selected PDN session type, see TS 29.274 [87] clause 8.34.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly pDNConnectionType: PDNConnectionType;
     /**
      * @summary `uEEndpoints`.
+     * @description
+     *
+     * UE endpoint address(es) if available. Derived from the PDN Address
+     * portion of the PDN Address Allocation parameter (see TS 29.274 [87]
+     * clause 8.14) associated to the PDN Connection in the context known at the
+     * NF (see TS 23.401 [50] clauses 5.7.3 and 5.7.4).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly uEEndpoints: OPTIONAL<UEEndpointAddress[]>;
     /**
      * @summary `non3GPPAccessEndpoint`.
+     * @description
+     *
+     * UE's local IP address used to reach the ePDG, if known at the context at
+     * the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly non3GPPAccessEndpoint: OPTIONAL<UEEndpointAddress>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location information known in the context at the SGW or PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `additionalLocation`.
+     * @description
+     *
+     * Additional location information known in the context at the SGW or PGW,
+     * or known at the MDF.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly additionalLocation: OPTIONAL<Location>;
     /**
      * @summary `aPN`.
+     * @description
+     *
+     * Access Point Name associated with the PDN known at the context at the SGW
+     * or PGW (see TS 23.401 [50] clause 5.7.4), as defined in TS 23.003[19]
+     * clause 9.1.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly aPN: APN;
     /**
      * @summary `requestType`.
+     * @description
+     *
+     * Type of request as derived from the Request Type described in TS 24.301
+     * [50] clause 9.9.4.14 and TS 24.008 [95] clause 10.5.6.17, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly requestType: OPTIONAL<EPSPDNConnectionRequestType>;
     /**
      * @summary `accessType`.
+     * @description
+     *
+     * Access type associated with the PDN connection (i.e. 3GPP or non-3GPP
+     * access).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly accessType: OPTIONAL<AccessType>;
     /**
      * @summary `rATType`.
+     * @description
+     *
+     * RAT Type associated with the PDN connection. Shall be present if known at
+     * the context at the SGW or PGW (see TS 23.401 [50] clause 5.7.4).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly rATType: OPTIONAL<RATType>;
     /**
      * @summary `protocolConfigurationOptions`.
+     * @description
+     *
+     * Shall be present the Protocol Configuration, Additional Protocol
+     * Configuration Options or extended Protocol Configuration Options are
+     * known in the context at the SGW or PGW. See table 6.3.3.2.2-4.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>;
     /**
      * @summary `servingNetwork`.
+     * @description
+     *
+     * Shall be present if this IE is in the context for the PDN connection at
+     * the SGW/PGW.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly servingNetwork: OPTIONAL<SMFServingNetwork>;
     /**
      * @summary `sMPDUDNRequest`.
+     * @description
+     *
+     * Contents of the SM PDU DN Request container, if available, as described
+     * in TS 24.501 [13] clause 9.11.4.15.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */
     readonly sMPDUDNRequest: OPTIONAL<SMPDUDNRequest>;
     /**
      * @summary `bearerContexts`.
+     * @description
+     *
+     * Shall include a list of the Bearer Contexts present in the UE Context
+     * (see TS 23.401 [50] clauses 5.7.3 and 5.7.4). See table 6.3.3.2.2-2.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.5.
+     *
      * @public
      * @readonly
      */

@@ -12,6 +12,15 @@ import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XM
  * @summary KMSResponseBody
  * @description
  * 
+ * Provides the content of the KMS response type for any response type except
+ * for KMS Redirect Response type, encoded as a "KmsResponseType" or
+ * "SignedKmsResponseType" structure according to TS 33.180 [154] clause D.3.5.
+ * The XMLType.namespace for this parameter shall be set to the namespace of the
+ * root element of the XML document, e.g., urn:3gpp:ns:mcsecKMSInterface:1.0.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

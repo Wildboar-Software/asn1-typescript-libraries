@@ -34,18 +34,36 @@ export
 class ConnectedENGNB {
     /**
      * @summary `eNGNBID`.
+     * @description
+     *
+     * The gNBID of the connected en-gNB.
+     *
+     * 3GPP TS 33.128, clause 8.4.9.
+     *
      * @public
      * @readonly
      */
     readonly eNGNBID: GNbID;
     /**
      * @summary `supportedTAList`.
+     * @description
+     *
+     * A list of TACs supported by the connected en-gNB.
+     *
+     * 3GPP TS 33.128, clause 8.4.9.
+     *
      * @public
      * @readonly
      */
     readonly supportedTAList: TACList;
     /**
      * @summary `broadcastPLMN`.
+     * @description
+     *
+     * A list of the PLMNs broadcast by the connected en-gNB.
+     *
+     * 3GPP TS 33.128, clause 8.4.9.
+     *
      * @public
      * @readonly
      */

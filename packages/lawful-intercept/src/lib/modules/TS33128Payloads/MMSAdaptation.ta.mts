@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSAdaptation
  * @description
  * 
+ * identifies whether the target wishes the MM to be adapted or not. If
+ * overridden, an indication shall be included in the parameter. Include if sent
+ * by the MMS Proxy-Relay message.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

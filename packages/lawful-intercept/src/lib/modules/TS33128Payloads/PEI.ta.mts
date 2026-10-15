@@ -18,6 +18,12 @@ import { EUI64, _decode_EUI64, _encode_EUI64 } from "../TS33128Payloads/EUI64.ta
  * @summary PEI
  * @description
  * 
+ * The PEI type is derived from the data present in the Permanent Equipment
+ * Identifier type defined in TS 23.003 [19] clause 6.4.
+ *
+ * 3GPP TS 33.128, clause 8.3.6.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,9 +38,37 @@ import { EUI64, _decode_EUI64, _encode_EUI64 } from "../TS33128Payloads/EUI64.ta
  */
 export
 type PEI =
+    /**
+     * @description
+     *
+     * Chosen when the PEI contains an IMEI.
+     *
+     * 3GPP TS 33.128, clause 8.3.6.
+     */
     { iMEI: IMEI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the PEI contains an IMEISV.
+     *
+     * 3GPP TS 33.128, clause 8.3.6.
+     */
     | { iMEISV: IMEISV } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the PEI contains a MAC Address.
+     *
+     * 3GPP TS 33.128, clause 8.3.6.
+     */
     | { mACAddress: MACAddress } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Chosen when the PEI contains an EUI64.
+     *
+     * 3GPP TS 33.128, clause 8.3.6.
+     */
     | { eUI64: EUI64 } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

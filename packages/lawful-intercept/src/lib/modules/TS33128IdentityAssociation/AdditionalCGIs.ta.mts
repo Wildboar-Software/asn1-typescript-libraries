@@ -14,6 +14,13 @@ import { AdditionalNCGI, _decode_AdditionalNCGI, _encode_AdditionalNCGI } from "
  * @summary AdditionalCGIs
  * @description
  * 
+ * When additional cell information is available in the AMF at the time the
+ * association and de-association events are detected, and is being reported,
+ * are encoded as defined below.
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.4.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +36,14 @@ export
 class AdditionalCGIs {
     /**
      * @summary `additionalNCGIList`.
+     * @description
+     *
+     * Shall contain a list of additional NCGIs that are available at the AMF
+     * when either the identifier association or de-association events are
+     * detected.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.4.1.
+     *
      * @public
      * @readonly
      */

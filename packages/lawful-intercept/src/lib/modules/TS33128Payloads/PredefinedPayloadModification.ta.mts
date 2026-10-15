@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary PredefinedPayloadModification
  * @description
  * 
+ * The PredefinedPayloadModification shall be set to indicate which predefined
+ * payload modification profile was used on the reported modified payload.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +39,101 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 enum _enum_for_PredefinedPayloadModification {
+    /**
+     * @description
+     *
+     * Shall be selected if location information was redacted from an
+     * encapsulated P-Access-Network-Info header using the process described in
+     * clause 7.12.9.2.2.
+     */
     pANILocationRemoval = 1,
+    /**
+     * @description
+     *
+     * Shall be selected if location information was redacted from an
+     * encapsulated Cellular-Network-Info header using the process described in
+     * clause 7.12.9.2.3.
+     */
     cNILocationRemoval = 2,
+    /**
+     * @description
+     *
+     * Shall be selected if location information was redacted due to the
+     * presence of a Geolocation header using the process described in clause
+     * 7.12.9.2.4.
+     */
     sIPGeolocationInfoRemoval = 3,
+    /**
+     * @description
+     *
+     * Shall be selected if location information was redacted from the geopriv
+     * element of an encapsulated presence information document using the
+     * process described in clause 7.12.9.2.5.
+     */
     presenceInformationLocationRemoval = 4,
+    /**
+     * @description
+     *
+     * Shall be selected if content is redacted from an encapsulated SMS TPDU
+     * using the process described in clause 7.4.5.2.
+     */
     tS33128SMSTPDURedaction = 5,
+    /**
+     * @description
+     *
+     * Shall be selected if content is removed from an encapsulated SMS TPDU
+     * using the process described in clause 6.2.5.3.
+     */
     tS33128TruncatedSMSTPDU = 6,
+    /**
+     * @description
+     *
+     * Shall be selected if content is redacted from an encapsulated SIP message
+     * using the process described in clause 7.12.9.3.3.
+     */
     iMSTextContentRemoval = 7,
+    /**
+     * @description
+     *
+     * Sall be selected if content is redacted from an encapsulated SIP message
+     * using the process described in clause 7.12.9.3.4.
+     */
     iMSSubjectContentRemoval = 8,
+    /**
+     * @description
+     *
+     * Shall be selected if location is redacted from the geopriv element of an
+     * encapsulated presence information document using the process described in
+     * clause 7.13.5.2.2.
+     */
     rCSPresenceLocationRemoval = 9,
+    /**
+     * @description
+     *
+     * Shall be selected if location in the form of a P-Access-Network-Info
+     * header is redacted from application specific CPIM headers using the
+     * process described in clause 7.13.5.2.3.
+     */
     rCSCPIMLocationRemoval = 10,
+    /**
+     * @description
+     *
+     * Shall be selected if text content is removed from the an RCS message.
+     */
     rCSTextContentRemoval = 11,
+    /**
+     * @description
+     *
+     * Shall be selected if content is removed from the Subject header of a
+     * layer of an RCS Message using the process described in clause 7.13.5.3.3.
+     */
     rCSSubjectContentRemoval = 12,
+    /**
+     * @description
+     *
+     * Shall be selected if content is removed from an RCS Geolocation PUSH
+     * message using the process described in clause 7.13.5.3.4.
+     */
     rCSGeolocationPUSHContentRemoval = 13,
     rCSFileURLContentRemoval = 14,
     threeGPP2SMSUserDataRedaction = 15,
@@ -55,6 +143,11 @@ enum _enum_for_PredefinedPayloadModification {
  * @summary PredefinedPayloadModification
  * @description
  * 
+ * The PredefinedPayloadModification shall be set to indicate which predefined
+ * payload modification profile was used on the reported modified payload.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -87,6 +180,11 @@ type PredefinedPayloadModification = _enum_for_PredefinedPayloadModification;
  * @summary PredefinedPayloadModification
  * @description
  * 
+ * The PredefinedPayloadModification shall be set to indicate which predefined
+ * payload modification profile was used on the reported modified payload.
+ *
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -117,6 +215,12 @@ const PredefinedPayloadModification = _enum_for_PredefinedPayloadModification;
 
 /**
  * @summary PredefinedPayloadModification_pANILocationRemoval
+ * @description
+ *
+ * Shall be selected if location information was redacted from an encapsulated
+ * P-Access-Network-Info header using the process described in clause
+ * 7.12.9.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +229,12 @@ const PredefinedPayloadModification_pANILocationRemoval: PredefinedPayloadModifi
 
 /**
  * @summary pANILocationRemoval
+ * @description
+ *
+ * Shall be selected if location information was redacted from an encapsulated
+ * P-Access-Network-Info header using the process described in clause
+ * 7.12.9.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +243,12 @@ const pANILocationRemoval: PredefinedPayloadModification = PredefinedPayloadModi
 
 /**
  * @summary PredefinedPayloadModification_cNILocationRemoval
+ * @description
+ *
+ * Shall be selected if location information was redacted from an encapsulated
+ * Cellular-Network-Info header using the process described in clause
+ * 7.12.9.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +257,12 @@ const PredefinedPayloadModification_cNILocationRemoval: PredefinedPayloadModific
 
 /**
  * @summary cNILocationRemoval
+ * @description
+ *
+ * Shall be selected if location information was redacted from an encapsulated
+ * Cellular-Network-Info header using the process described in clause
+ * 7.12.9.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +271,11 @@ const cNILocationRemoval: PredefinedPayloadModification = PredefinedPayloadModif
 
 /**
  * @summary PredefinedPayloadModification_sIPGeolocationInfoRemoval
+ * @description
+ *
+ * Shall be selected if location information was redacted due to the presence of
+ * a Geolocation header using the process described in clause 7.12.9.2.4.
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +284,11 @@ const PredefinedPayloadModification_sIPGeolocationInfoRemoval: PredefinedPayload
 
 /**
  * @summary sIPGeolocationInfoRemoval
+ * @description
+ *
+ * Shall be selected if location information was redacted due to the presence of
+ * a Geolocation header using the process described in clause 7.12.9.2.4.
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +297,12 @@ const sIPGeolocationInfoRemoval: PredefinedPayloadModification = PredefinedPaylo
 
 /**
  * @summary PredefinedPayloadModification_presenceInformationLocationRemoval
+ * @description
+ *
+ * Shall be selected if location information was redacted from the geopriv
+ * element of an encapsulated presence information document using the process
+ * described in clause 7.12.9.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +311,12 @@ const PredefinedPayloadModification_presenceInformationLocationRemoval: Predefin
 
 /**
  * @summary presenceInformationLocationRemoval
+ * @description
+ *
+ * Shall be selected if location information was redacted from the geopriv
+ * element of an encapsulated presence information document using the process
+ * described in clause 7.12.9.2.5.
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +325,11 @@ const presenceInformationLocationRemoval: PredefinedPayloadModification = Predef
 
 /**
  * @summary PredefinedPayloadModification_tS33128SMSTPDURedaction
+ * @description
+ *
+ * Shall be selected if content is redacted from an encapsulated SMS TPDU using
+ * the process described in clause 7.4.5.2.
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +338,11 @@ const PredefinedPayloadModification_tS33128SMSTPDURedaction: PredefinedPayloadMo
 
 /**
  * @summary tS33128SMSTPDURedaction
+ * @description
+ *
+ * Shall be selected if content is redacted from an encapsulated SMS TPDU using
+ * the process described in clause 7.4.5.2.
+ *
  * @constant
  * @type {number}
  */
@@ -197,6 +351,11 @@ const tS33128SMSTPDURedaction: PredefinedPayloadModification = PredefinedPayload
 
 /**
  * @summary PredefinedPayloadModification_tS33128TruncatedSMSTPDU
+ * @description
+ *
+ * Shall be selected if content is removed from an encapsulated SMS TPDU using
+ * the process described in clause 6.2.5.3.
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +364,11 @@ const PredefinedPayloadModification_tS33128TruncatedSMSTPDU: PredefinedPayloadMo
 
 /**
  * @summary tS33128TruncatedSMSTPDU
+ * @description
+ *
+ * Shall be selected if content is removed from an encapsulated SMS TPDU using
+ * the process described in clause 6.2.5.3.
+ *
  * @constant
  * @type {number}
  */
@@ -213,6 +377,11 @@ const tS33128TruncatedSMSTPDU: PredefinedPayloadModification = PredefinedPayload
 
 /**
  * @summary PredefinedPayloadModification_iMSTextContentRemoval
+ * @description
+ *
+ * Shall be selected if content is redacted from an encapsulated SIP message
+ * using the process described in clause 7.12.9.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -221,6 +390,11 @@ const PredefinedPayloadModification_iMSTextContentRemoval: PredefinedPayloadModi
 
 /**
  * @summary iMSTextContentRemoval
+ * @description
+ *
+ * Shall be selected if content is redacted from an encapsulated SIP message
+ * using the process described in clause 7.12.9.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -229,6 +403,11 @@ const iMSTextContentRemoval: PredefinedPayloadModification = PredefinedPayloadMo
 
 /**
  * @summary PredefinedPayloadModification_iMSSubjectContentRemoval
+ * @description
+ *
+ * Sall be selected if content is redacted from an encapsulated SIP message
+ * using the process described in clause 7.12.9.3.4.
+ *
  * @constant
  * @type {number}
  */
@@ -237,6 +416,11 @@ const PredefinedPayloadModification_iMSSubjectContentRemoval: PredefinedPayloadM
 
 /**
  * @summary iMSSubjectContentRemoval
+ * @description
+ *
+ * Sall be selected if content is redacted from an encapsulated SIP message
+ * using the process described in clause 7.12.9.3.4.
+ *
  * @constant
  * @type {number}
  */
@@ -245,6 +429,12 @@ const iMSSubjectContentRemoval: PredefinedPayloadModification = PredefinedPayloa
 
 /**
  * @summary PredefinedPayloadModification_rCSPresenceLocationRemoval
+ * @description
+ *
+ * Shall be selected if location is redacted from the geopriv element of an
+ * encapsulated presence information document using the process described in
+ * clause 7.13.5.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -253,6 +443,12 @@ const PredefinedPayloadModification_rCSPresenceLocationRemoval: PredefinedPayloa
 
 /**
  * @summary rCSPresenceLocationRemoval
+ * @description
+ *
+ * Shall be selected if location is redacted from the geopriv element of an
+ * encapsulated presence information document using the process described in
+ * clause 7.13.5.2.2.
+ *
  * @constant
  * @type {number}
  */
@@ -261,6 +457,12 @@ const rCSPresenceLocationRemoval: PredefinedPayloadModification = PredefinedPayl
 
 /**
  * @summary PredefinedPayloadModification_rCSCPIMLocationRemoval
+ * @description
+ *
+ * Shall be selected if location in the form of a P-Access-Network-Info header
+ * is redacted from application specific CPIM headers using the process
+ * described in clause 7.13.5.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -269,6 +471,12 @@ const PredefinedPayloadModification_rCSCPIMLocationRemoval: PredefinedPayloadMod
 
 /**
  * @summary rCSCPIMLocationRemoval
+ * @description
+ *
+ * Shall be selected if location in the form of a P-Access-Network-Info header
+ * is redacted from application specific CPIM headers using the process
+ * described in clause 7.13.5.2.3.
+ *
  * @constant
  * @type {number}
  */
@@ -277,6 +485,10 @@ const rCSCPIMLocationRemoval: PredefinedPayloadModification = PredefinedPayloadM
 
 /**
  * @summary PredefinedPayloadModification_rCSTextContentRemoval
+ * @description
+ *
+ * Shall be selected if text content is removed from the an RCS message.
+ *
  * @constant
  * @type {number}
  */
@@ -285,6 +497,10 @@ const PredefinedPayloadModification_rCSTextContentRemoval: PredefinedPayloadModi
 
 /**
  * @summary rCSTextContentRemoval
+ * @description
+ *
+ * Shall be selected if text content is removed from the an RCS message.
+ *
  * @constant
  * @type {number}
  */
@@ -293,6 +509,11 @@ const rCSTextContentRemoval: PredefinedPayloadModification = PredefinedPayloadMo
 
 /**
  * @summary PredefinedPayloadModification_rCSSubjectContentRemoval
+ * @description
+ *
+ * Shall be selected if content is removed from the Subject header of a layer of
+ * an RCS Message using the process described in clause 7.13.5.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -301,6 +522,11 @@ const PredefinedPayloadModification_rCSSubjectContentRemoval: PredefinedPayloadM
 
 /**
  * @summary rCSSubjectContentRemoval
+ * @description
+ *
+ * Shall be selected if content is removed from the Subject header of a layer of
+ * an RCS Message using the process described in clause 7.13.5.3.3.
+ *
  * @constant
  * @type {number}
  */
@@ -309,6 +535,11 @@ const rCSSubjectContentRemoval: PredefinedPayloadModification = PredefinedPayloa
 
 /**
  * @summary PredefinedPayloadModification_rCSGeolocationPUSHContentRemoval
+ * @description
+ *
+ * Shall be selected if content is removed from an RCS Geolocation PUSH message
+ * using the process described in clause 7.13.5.3.4.
+ *
  * @constant
  * @type {number}
  */
@@ -317,6 +548,11 @@ const PredefinedPayloadModification_rCSGeolocationPUSHContentRemoval: Predefined
 
 /**
  * @summary rCSGeolocationPUSHContentRemoval
+ * @description
+ *
+ * Shall be selected if content is removed from an RCS Geolocation PUSH message
+ * using the process described in clause 7.13.5.3.4.
+ *
  * @constant
  * @type {number}
  */

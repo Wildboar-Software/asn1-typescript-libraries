@@ -25,6 +25,13 @@ import { RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "
  * @summary FourGPositioningInfo
  * @description
  * 
+ * The FourGPositioningInfo type is used to report EPS Location, The
+ * FourGPositioningInfo type is derived from the data present in the Provide
+ * Subscriber Location Answer Table defined in TS 29.172 [53] table 6.2.2-2.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.70.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,42 +53,103 @@ export
 class FourGPositioningInfo {
     /**
      * @summary `locationData`.
+     * @description
+     *
+     * This structure is used any time information from the Provide Subscriber
+     * Location structure needs to be reported. This field is derived from the
+     * data present in the Provide Subscriber Location Answer message defined in
+     * TS 29.172 [53] table 6.2.2-2.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.70.
+     *
      * @public
      * @readonly
      */
     readonly locationData: LocationData;
     /**
      * @summary `cGI`.
+     * @description
+     *
+     * This field shall contain the current cell location of the target UE when
+     * known by the NF. Defined in TS 23.003 [19] clause 4.3.1.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.70.
+     *
      * @public
      * @readonly
      */
     readonly cGI: OPTIONAL<CGI>;
     /**
      * @summary `sAI`.
+     * @description
+     *
+     * This field shall contain the Service Area Identifier of the user where
+     * the user is located when known by the NF. Defined in TS 23.003 [19]
+     * clause 12.5.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.70.
+     *
      * @public
      * @readonly
      */
     readonly sAI: OPTIONAL<SAI>;
     /**
      * @summary `eSMLCCellInfo`.
+     * @description
+     *
+     * This field shall contain the current cell information of the target UE as
+     * known by E-SMLC when known by the NF. Defined in TS 29.172 [53] clause
+     * 7.4.57.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.70.
+     *
      * @public
      * @readonly
      */
     readonly eSMLCCellInfo: OPTIONAL<ESMLCCellInfo>;
     /**
      * @summary `gERANPositioningInfo`.
+     * @description
+     *
+     * This field shall indicate the usage of each positioning method that was
+     * attempted to determine the location estimate, either successfully or
+     * unsuccessfully. This field is applicable only when the UE is attached to
+     * GERAN access and when the message is sent by the SGSN or the SGSN part of
+     * the combined MME/SGSN. Defined in TS 29.172 [53] clause 7.4.29.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.70.
+     *
      * @public
      * @readonly
      */
     readonly gERANPositioningInfo: OPTIONAL<GERANPositioningInfo>;
     /**
      * @summary `uTRANPositioningInfo`.
+     * @description
+     *
+     * This field shall indicate the usage of each positioning method that was
+     * attempted to determine the location estimate, either successfully or
+     * unsuccessfully. This field is applicable only when the UE is attached to
+     * UTRAN access and when the message is sent by the SGSN or the SGSN part of
+     * the combined MME/SGSN. Defined in TS 29.172 [53] clause 7.4.32.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.70.
+     *
      * @public
      * @readonly
      */
     readonly uTRANPositioningInfo: OPTIONAL<UTRANPositioningInfo>;
     /**
      * @summary `rawMLPResponse`.
+     * @description
+     *
+     * This field shall be used in the location field of the LALSReport record
+     * see clause 7.3.1.4. This field contains a copy of the unparsed XML code
+     * of the MLP Answer and Report messages. The contents of this field is
+     * described in OMA-TS-MLP-V3_5-20181211-C [20] clause 5.2.3.2.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.70.
+     *
      * @public
      * @readonly
      */

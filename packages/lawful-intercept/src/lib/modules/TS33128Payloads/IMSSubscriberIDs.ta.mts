@@ -31,7 +31,21 @@ import { IMSSubscriberIdentity, _decode_IMSSubscriberIdentity, _encode_IMSSubscr
  */
 export
 type IMSSubscriberIDs =
+    /**
+     * @description
+     *
+     * No longer used in this version of the specification.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.5.
+     */
     { deprecatedIMPI: IMPI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * No longer used in this version of the specification.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.5.
+     */
     | { deprecatedIMPU: IMPU } /* CHOICE_ALT_ROOT */
     | { iMSSubscriberIDs: IMSSubscriberIdentity[] } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;

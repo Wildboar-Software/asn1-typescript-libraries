@@ -38,30 +38,71 @@ export
 class ERABContext {
     /**
      * @summary `eRABID`.
+     * @description
+     *
+     * This element uniquely identifies a radio access bearer for a particular
+     * UE, which makes the E-RAB ID unique over one S1 connection. Derived from
+     * the E-RAB ID IE, see TS 36.413 [38] clause 9.2.1.2.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.4.
+     *
      * @public
      * @readonly
      */
     readonly eRABID: EPSBearerID;
     /**
      * @summary `eRABQoSParameters`.
+     * @description
+     *
+     * The QOS parameters to be assigned to an E-RAB. Derived from the E-RAB
+     * Level QoS Parameters defined in TS 36.418 [38] clause 9.2.1.15. Shall be
+     * present if present in the messages for the procedure that triggered the
+     * xIRI or known at the NF context.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.4.
+     *
      * @public
      * @readonly
      */
     readonly eRABQoSParameters: OPTIONAL<ERABQoSParameters>;
     /**
      * @summary `transportLayerAddress`.
+     * @description
+     *
+     * The local IP Address assigned to the UE for the E-RAB. See TS 36.418 [38]
+     * Clause 9.2.2.1. Shall be present if present in the messages for the
+     * procedure that triggered the xIRI or known at the NF context.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.4.
+     *
      * @public
      * @readonly
      */
     readonly transportLayerAddress: OPTIONAL<IPAddr>;
     /**
      * @summary `uLGTPTEID`.
+     * @description
+     *
+     * The uplink tunnel information for the E-RAB. See TS 36.418 [38] Clause
+     * 9.2.2.2. Shall be present if present in the messages for the procedure
+     * that triggered the xIRI or known at the NF context.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.4.
+     *
      * @public
      * @readonly
      */
     readonly uLGTPTEID: OPTIONAL<FTEID>;
     /**
      * @summary `dLGTPTEID`.
+     * @description
+     *
+     * The downlink tunnel information for the E-RAB. See TS 36.418 [38] Clause
+     * 9.2.2.2. Shall be present if present in the messages for the procedure
+     * that triggered the xIRI or known at the NF context.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.4.
+     *
      * @public
      * @readonly
      */

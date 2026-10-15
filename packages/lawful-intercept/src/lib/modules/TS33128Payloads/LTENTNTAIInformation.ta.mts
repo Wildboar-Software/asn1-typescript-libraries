@@ -34,18 +34,37 @@ export
 class LTENTNTAIInformation {
     /**
      * @summary `pLMN`.
+     * @description
+     *
+     * Indicates the serving PLMN for the UE.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.17.
+     *
      * @public
      * @readonly
      */
     readonly pLMN: PLMNID;
     /**
      * @summary `tACListInLTENTN`.
+     * @description
+     *
+     * Includes all TACs broadcast in the cell for the UE's serving PLMN.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.17.
+     *
      * @public
      * @readonly
      */
     readonly tACListInLTENTN: TACList;
     /**
      * @summary `uETAC`.
+     * @description
+     *
+     * Contains the TAC information derived from the TAC serving the UE's actual
+     * location. Shall be present if known.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.17.
+     *
      * @public
      * @readonly
      */

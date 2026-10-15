@@ -29,8 +29,29 @@ import { CGI, _decode_CGI, _encode_CGI } from "../TS33128Payloads/CGI.ta.mjs";
  */
 export
 type RANCGI =
+    /**
+     * @description
+     *
+     * Shall be used to report the E-UTRA Cell Identity.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.22.
+     */
     { eCGI: ECGI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be used to report the NR Cell Identity.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.22.
+     */
     | { nCGI: NCGI } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Shall be used to report the GERA or UTRA Cell Identity.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.22.
+     */
     | { cGI: CGI } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

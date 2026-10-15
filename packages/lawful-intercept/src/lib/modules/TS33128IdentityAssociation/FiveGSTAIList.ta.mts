@@ -11,6 +11,12 @@ import { TAI, _decode_TAI, _encode_TAI } from "../TS33128IdentityAssociation/TAI
  * @summary FiveGSTAIList
  * @description
  * 
+ * List of tracking areas associated with the registration area within which the
+ * UE is current registered, see TS 24.501 [13] clause 9.11.3.9 (see NOTE 2).
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

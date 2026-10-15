@@ -17,6 +17,13 @@ import { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
  * @summary TAI
  * @description
  * 
+ * The TAI type is used to report the Tracking Area Identity. The TAI type is
+ * derived from the data present in the EutraLocation type defined in TS 29.571
+ * [17] clause 5.4.4.3.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.23.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,37 @@ export
 class TAI {
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * The PLMN Identity of the TAI.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.23.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `tAC`.
+     * @description
+     *
+     * The Tracking Area Code for the Tracking Area being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.23.
+     *
      * @public
      * @readonly
      */
     readonly tAC: TAC;
     /**
      * @summary `nID`.
+     * @description
+     *
+     * Network Identifier of the Tracking Area being reported. Shall be present
+     * if the TAI being reported belongs to an SNPN.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.23.
+     *
      * @public
      * @readonly
      */

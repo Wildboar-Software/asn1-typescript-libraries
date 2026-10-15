@@ -20,6 +20,12 @@ import { AdditionalCGIs, _decode_AdditionalCGIs, _encode_AdditionalCGIs } from "
  * @summary IEFDeassociationRecord
  * @description
  * 
+ * For each de-association event, the IEF shall create an
+ * IEFDeassociationRecord, as defined below.
+ *
+ * 3GPP TS 33.128, clause 6.2.2A.2.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +46,83 @@ export
 class IEFDeassociationRecord {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with detected de-association event.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `fiveGGUTI`.
+     * @description
+     *
+     * 5G-GUTI shall be provided. Encoded as per TS 24.501 [13] figure
+     * 9.11.3.4.1, omitting the first four octets.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly fiveGGUTI: FiveGGUTI;
     /**
      * @summary `timestamp`.
+     * @description
+     *
+     * Time at which the identifier de-association event occurred. Shall be
+     * given qualified with time zone information (i.e. as UTC or offset from
+     * UTC, not as local time)
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly timestamp: GeneralizedTime;
     /**
      * @summary `nCGI`.
+     * @description
+     *
+     * Current nCGI known when the identifier de-association event detected.
+     * Given as a sequence of PLMNID (encoded as per TS 38.413 [23] clause
+     * 9.3.3.5) and NCI (encoded as per TS 38.413 [23] clause 9.3.1.7).
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nCGI: NCGI;
     /**
      * @summary `nCGITime`.
+     * @description
+     *
+     * ueLocationTimestamp of nCGI if available in AMF as per TS 29.571 [17]
+     * clause 5.4.4.9. If ueLocationTimestamp is not available, shall be
+     * populated with timestamp of when the current nCGI was obtained and stored
+     * by the AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */
     readonly nCGITime: GeneralizedTime;
     /**
      * @summary `additionalCGIs`.
+     * @description
+     *
+     * This parameter shall be present if the AMF has additional cell
+     * information for the UE when the identifier de-association event is
+     * detected. Shall contain a list of additional NCGIs that are available at
+     * the AMF.
+     *
+     * 3GPP TS 33.128, clause 6.2.2A.2.2.
+     *
      * @public
      * @readonly
      */

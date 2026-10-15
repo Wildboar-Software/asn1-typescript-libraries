@@ -29,12 +29,26 @@ export
 class CMMessage {
     /**
      * @summary `cMRequest`.
+     * @description
+     *
+     * Contains the HTTP GET, PUT or DELETE request received by the
+     * Configuration Management Server.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */
     readonly cMRequest: OCTET_STRING;
     /**
      * @summary `cMResponse`.
+     * @description
+     *
+     * Contains the HTTP response returned by the Configuration Management
+     * Server.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.4.2.
+     *
      * @public
      * @readonly
      */

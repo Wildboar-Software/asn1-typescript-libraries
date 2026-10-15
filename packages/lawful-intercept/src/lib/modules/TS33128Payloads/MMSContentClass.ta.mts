@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MMSContentClass
  * @description
  * 
+ * Classifies the content of the MM to the smallest content class to which the
+ * message belongs. Identifies the class of the content. Include if sent to the
+ * MMS Proxy-Relay. Include if sent to the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,6 +48,13 @@ enum _enum_for_MMSContentClass {
  * @summary MMSContentClass
  * @description
  * 
+ * Classifies the content of the MM to the smallest content class to which the
+ * message belongs. Identifies the class of the content. Include if sent to the
+ * MMS Proxy-Relay. Include if sent to the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -66,6 +80,13 @@ type MMSContentClass = _enum_for_MMSContentClass;
  * @summary MMSContentClass
  * @description
  * 
+ * Classifies the content of the MM to the smallest content class to which the
+ * message belongs. Identifies the class of the content. Include if sent to the
+ * MMS Proxy-Relay. Include if sent to the MMS Proxy-Relay.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

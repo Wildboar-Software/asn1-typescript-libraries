@@ -10,6 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary TS36413CoarseUELocation
  * @description
  * 
+ * Contains coarse location sent by the UE as described in TS 36.413 [38] clause
+ * 9.2.1.167.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

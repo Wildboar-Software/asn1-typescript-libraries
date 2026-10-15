@@ -46,42 +46,90 @@ export
 class UDMAuthenticationInfoRequest {
     /**
      * @summary `infoRequestType`.
+     * @description
+     *
+     * Indicates whether the AuthenticationInfoRequest was sent by the HSS, AUSF
+     * or other.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly infoRequestType: UDMInfoRequestType;
     /**
      * @summary `rGAuthCtx`.
+     * @description
+     *
+     * Contains the UE ID (i.e. SUPI, SUCI) provided in the authentication
+     * indication, at least one shall be present.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly rGAuthCtx: SubscriberIdentifier[];
     /**
      * @summary `authType`.
+     * @description
+     *
+     * Indicates the authentication method provided by the HSS or AUSF in the
+     * AuthenticationInfoRequest.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly authType: PrimaryAuthenticationType;
     /**
      * @summary `servingNetworkName`.
+     * @description
+     *
+     * Serving network name. See TS 33.501 [11] clause 6.1.1.4.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly servingNetworkName: PLMNID;
     /**
      * @summary `aUSFInstanceID`.
+     * @description
+     *
+     * Identifies the AUSF instance which generated the
+     * AuthenticationInformatoinRequest. Shall be included if known.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly aUSFInstanceID: OPTIONAL<NFID>;
     /**
      * @summary `cellCAGInfo`.
+     * @description
+     *
+     * Provides CAG cell information (e.g. CAGId) if UE is attempting
+     * registration from a CAG.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */
     readonly cellCAGInfo: OPTIONAL<CAGID>;
     /**
      * @summary `n5GCIndicator`.
+     * @description
+     *
+     * Boolean value that indicates whether the device is a N5GC device. Include
+     * if provided in the AuthenticationInfoRequest.
+     *
+     * 3GPP TS 33.128, clause 7.2.2.3.8.
+     *
      * @public
      * @readonly
      */

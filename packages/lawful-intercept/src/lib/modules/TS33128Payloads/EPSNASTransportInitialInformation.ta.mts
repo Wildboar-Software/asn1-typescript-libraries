@@ -38,36 +38,87 @@ export
 class EPSNASTransportInitialInformation {
     /**
      * @summary `rANUES1APID`.
+     * @description
+     *
+     * Identity that the MME receives from the eNB uniquely identifying the
+     * target UE with the eNB. See TS 36.413 [38] clause 9.2.3.4.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly rANUES1APID: RANUES1APID;
     /**
      * @summary `relayNodeIndicator`.
+     * @description
+     *
+     * Indicates whether the UE is acting as a Relay Node. See TS 36.413 [38]
+     * clause 9.2.1.79. Shall be present if the Relay Node Indicator IE is
+     * present in the INITIAL UE MESSAGE.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly relayNodeIndicator: OPTIONAL<BOOLEAN>;
     /**
      * @summary `bBFTunnelInformation`.
+     * @description
+     *
+     * Indicates HeNB’s Local IP Address and, when appropriate UPD Port Numbers,
+     * assigned by the broadband access provider. Derived from the Tunnel
+     * Information for BBF IE defined in TS 36.413 [38] clause 9.1.7.1. Shall be
+     * present if present in the message that triggered the event or known at
+     * the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly bBFTunnelInformation: OPTIONAL<BBFTunnelInformation>;
     /**
      * @summary `eDTSession`.
+     * @description
+     *
+     * Indicates that the session is EDT capable. Shall be present if present in
+     * the message that triggered the event or known at the NF where the POI is
+     * located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly eDTSession: OPTIONAL<BOOLEAN>;
     /**
      * @summary `iABNodeIndication`.
+     * @description
+     *
+     * Indicates that the UE is capable of acting as an IAB Node. Shall be
+     * present if present in the message that triggered the event or known at
+     * the NF where the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.15.
+     *
      * @public
      * @readonly
      */
     readonly iABNodeIndication: OPTIONAL<BOOLEAN>;
     /**
      * @summary `lTENTNTAIInformation`.
+     * @description
+     *
+     * Contains information on the PLMN, broadcast TAC and TAC information
+     * derived from the UE location in the case of NTN access. Shall be present
+     * if the LTE NTN TAI Information (see TS 36.413 [38] clause 9.2.3.56) is
+     * present in the message that triggered the event or known at the NF where
+     * the POI is located.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2A.15.
+     *
      * @public
      * @readonly
      */

@@ -17,6 +17,13 @@ import { RAC, _decode_RAC, _encode_RAC } from "../TS33128Payloads/RAC.ta.mjs";
  * @summary RAI
  * @description
  * 
+ * The RAI type is composed of the PLMNID and the Location Area Code and the
+ * Routing Area Code. RAI is derived from the data found in RAI parameter from
+ * TS 23.003 [19] clause 4.2.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.82.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +41,36 @@ export
 class RAI {
     /**
      * @summary `pLMNID`.
+     * @description
+     *
+     * The PLMN Identity of the location area being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.82.
+     *
      * @public
      * @readonly
      */
     readonly pLMNID: PLMNID;
     /**
      * @summary `lAC`.
+     * @description
+     *
+     * Location Area Code of the location area being reported.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.82.
+     *
      * @public
      * @readonly
      */
     readonly lAC: LAC;
     /**
      * @summary `rAC`.
+     * @description
+     *
+     * Routing Area Code identifying a routing area within a location area
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.82.
+     *
      * @public
      * @readonly
      */

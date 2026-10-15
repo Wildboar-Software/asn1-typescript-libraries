@@ -25,7 +25,19 @@ import { MIMEPartIdentifier, _decode_MIMEPartIdentifier, _encode_MIMEPartIdentif
  */
 export
 type MIMEBody =
+    /**
+     * @description
+     *
+     * Indicates that the entire body of the MIME Entity was modified or that
+     * the MIME Entity had only one body part.
+     */
     { fullBody: NULL } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Indicates which part of a multipart message was modified by the described
+     * modification.
+     */
     | { bodyPart: MIMEPartIdentifier } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

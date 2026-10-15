@@ -21,6 +21,52 @@ import { GUTI, _decode_GUTI, _encode_GUTI } from "../TS33128Payloads/GUTI.ta.mjs
  * @summary MMEPositioningInfoTransfer
  * @description
  * 
+ * The IRI-POI present in the MME shall generate an xIRI containing an
+ * MMEPositioningInfoTransfer when the IRI-POI present in the MME detects one of
+ * the following events:
+ *
+ * - a LPPa (see TS 36.455 [84]) message related to a target UE has been
+ *   exchanged between the E-SMLC and the eNB via the MME.
+ *
+ * - a LPP (see TS 37.355 [85]) message related to a target UE has been
+ *   exchanged between the E-SMLC and the target UE via the MME.
+ *
+ * Accordingly, the IRI-POI in MME generates the xIRI when any of the following
+ * events is detected:
+ *
+ * - MME receives an SLs CONNECTION ORIENTED INFORMATION message (see TS 29.171
+ *   [54]) from E-SMLC to request the transfer of a LPPa request to the serving
+ *   eNB for a target UE as part of a UE associated LPPa positioning activity.
+ *   The LPPa request may be E-CID MEASUREMENT INITIATION REQUEST or OTDOA
+ *   INFORMATION REQUEST.
+ *
+ * - MME sends an SLs CONNECTION ORIENTED INFORMATION message (see TS 29.171
+ *   [54]) to the E-SMLC to forward the LPPa response or report received from
+ *   the eNB for a target UE. The LPPa response or report may be E-CID
+ *   MEASUREMENT INITIATION RESPONSE, E-CID MEASUREMENT REPORT or OTDOA
+ *   INFORMATION RESPONSE.
+ *
+ * - MME receives an SLs CONNECTION ORIENTED INFORMATION message (see TS 29.171
+ *   [54]) from E-SMLC to request the transfer of a LPP request to the target
+ *   UE.
+ *
+ * - MME sends an SLs CONNECTION ORIENTED INFORMATION message (see TS 29.171
+ *   [54]) to E-SMLC to forward a LPP message received from the target UE.
+ *
+ * The MMEPositioningInfoTransfer record is also used by LARF to deliver E-CID
+ * measurements responses to MDF2, as described in clause 7.3.5.6. The IRI-POI
+ * in the AMF shall not generate the MMEPositioningInfoTransfer xIRI when the
+ * E-CID measurement response is received as the result of a LARF request, as
+ * described in TS 33.127 [5], clause 7.3.5.2.
+ *
+ * NOTE: In case the MMEPositioningInfoTransfer record is created as a result of
+ * a LARF request, the MMELCSCorrelationId shall be created by the LARF, as part
+ * of the E-CID measurement procedure, in order to link the request to the
+ * response.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,42 +88,95 @@ export
 class MMEPositioningInfoTransfer {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * IMSI associated with the location update.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: IMSI;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * IMEI associated with the location update, if available.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly iMEI: OPTIONAL<IMEI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * MSISDN associated with the location update, if available as part of the
+     * subscription profile.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `gUTI`.
+     * @description
+     *
+     * GUTI assigned during the location update, if available, see TS 24.301
+     * [50].
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly gUTI: OPTIONAL<GUTI>;
     /**
      * @summary `lPPaMessage`.
+     * @description
+     *
+     * Any UE associated LPPa message exchanged between the LMF and eNB via MME.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly lPPaMessage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `lPPMessage`.
+     * @description
+     *
+     * Any LPP message exchanged between the E-SMLC and the target UE via MME.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.8.
+     *
      * @public
      * @readonly
      */
     readonly lPPMessage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mMELCSCorrelationId`.
+     * @description
+     *
+     * MMELCSCorrelationId is made of Correlation Id, described in clause 7.4.28
+     * of TS 29.171 [54], related to a location session, found in the SLs
+     * CONNECTION ORIENTED INFORMATION sent by E-SMLC to MME and corresponding
+     * SLs CONNECTION ORIENTED INFORMATION sent by MME to E-SMLC. All the
+     * MMEPositioningInfoTransfer records related to the same location session
+     * have the same CorrelationId (see NOTE). NOTE: In case the
+     * MMEPositioningInfoTransfer record is created as a result of a LARF
+     * request, the MMELCSCorrelationId shall be created by the LARF, as part of
+     * the E-CID measurement procedure, in order to link the request to the
+     * response.
+     *
+     * 3GPP TS 33.128, clause 6.3.2.2.8.
+     *
      * @public
      * @readonly
      */

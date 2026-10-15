@@ -11,6 +11,12 @@ import { ExternalASNType, _decode_ExternalASNType, _encode_ExternalASNType } fro
  * @summary EPSHandoverType
  * @description
  * 
+ * The EPSHandoverType provides information about the type of handover being
+ * performed in EPS. Defined in TS 36.413 [38] clause 9.2.1.13.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

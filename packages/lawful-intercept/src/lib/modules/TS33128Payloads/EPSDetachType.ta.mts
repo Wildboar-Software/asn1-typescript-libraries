@@ -7,6 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EPSDetachType
  * @description
  * 
+ * Indicates the type of detach as determined by the direction of the detach
+ * request and the value of the DetachType information element, see table
+ * 6.3.2.2.4-2.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,6 +44,13 @@ enum _enum_for_EPSDetachType {
  * @summary EPSDetachType
  * @description
  * 
+ * Indicates the type of detach as determined by the direction of the detach
+ * request and the value of the DetachType information element, see table
+ * 6.3.2.2.4-2.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -60,6 +74,13 @@ type EPSDetachType = _enum_for_EPSDetachType;
  * @summary EPSDetachType
  * @description
  * 
+ * Indicates the type of detach as determined by the direction of the detach
+ * request and the value of the DetachType information element, see table
+ * 6.3.2.2.4-2.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -25,6 +25,28 @@ import { PTCFailureCode, _decode_PTCFailureCode, _encode_PTCFailureCode, _enum_f
  * @summary PTCPreEstablishedSession
  * @description
  * 
+ * The IRI-POI present in the PTC server shall generate an xIRI containing a
+ * PTCPre-EstablishedSession record when the IRI-POI present in the PTC server
+ * detects that a pre-established session is setup/modified/released between the
+ * PTC target and the PTC server associated with the PTC target. Accordingly,
+ * the IRI-POI in the PTC server generates the xIRI when the following events
+ * are detected:
+ *
+ * - when the PTC Server receives a SIP INVITE from the PTC target to setup a
+ *   pre-established session.
+ *
+ * - when the PTC Server receives a SIP BYE from the PTC target to release a
+ *   pre-established session.
+ *
+ * - when the PTC Server receives a SIP UPDATE or SIP re-INVITE from the PTC
+ *   target for a pre-established session to modify the current session.
+ *
+ * NOTE: The pTCTargetInformation choice PTCChatGroupID is not applicable for
+ * this xIRI.
+ *
+ * 3GPP TS 33.128, clause 7.5.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,54 +70,119 @@ export
 class PTCPreEstablishedSession {
     /**
      * @summary `pTCTargetInformation`.
+     * @description
+     *
+     * Provide PTC target identity. At least one among IMPU, IMPI,
+     * InstanceIdentifierURN shall be provided for PTCTargetInformation.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly pTCTargetInformation: PTCTargetInformation;
     /**
      * @summary `pTCServerURI`.
+     * @description
+     *
+     * Shall include the identity of the PTC server serving the PTC target.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly pTCServerURI: UTF8String;
     /**
      * @summary `rTPSetting`.
+     * @description
+     *
+     * The IP address and the port number of the PTC target at the PTC server
+     * for the RTP Session.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly rTPSetting: RTPSetting;
     /**
      * @summary `pTCMediaCapability`.
+     * @description
+     *
+     * The codec(s) and media parameters selected by the PTC server from those
+     * contained in the original SDP offer from the PTC target’s SIP REFER and
+     * encoded in SDP format as per RFC 4566 [43] clause 5.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly pTCMediaCapability: UTF8String;
     /**
      * @summary `pTCPreEstSessionID`.
+     * @description
+     *
+     * Identifies the PTC Pre-Established Session Identity.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly pTCPreEstSessionID: PTCSessionInfo;
     /**
      * @summary `pTCPreEstStatus`.
+     * @description
+     *
+     * Indicates if the pre-established session is established (setup
+     * completed), modified, or released.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly pTCPreEstStatus: PTCPreEstStatus;
     /**
      * @summary `pTCMediaStreamAvail`.
+     * @description
+     *
+     * Shall include for a pre-established session to indicate if the PTC
+     * target's PTC client is able/not able to receive media streams
+     * immediately, when the pre-established session is established. True
+     * indicates available for media, while false indicates not able to accept
+     * media.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly pTCMediaStreamAvail: OPTIONAL<BOOLEAN>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the PTC target’s location when reporting of the PTC
+     * target’s location information is authorized and available.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `pTCFailureCode`.
+     * @description
+     *
+     * Provide when the pre-established session cannot be established or
+     * modified.
+     *
+     * 3GPP TS 33.128, clause 7.5.2.7.
+     *
      * @public
      * @readonly
      */

@@ -20,6 +20,50 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary RCSRegistration
  * @description
  * 
+ * The xIRI containing an RCSRegistration record shall be generated when the
+ * IRI-POI in the S-CSCF or in an RCS Server detects that an RCS target matching
+ * one of the RCS identifiers, provided via LI_X1 has registered, reregistered
+ * or deregistered for RCS services. Accordingly, the IRI-POI in the RCS Server
+ * generates the xIRI when the following event is detected:
+ *
+ * - When the IRI-POI is located in the S-CSCF:
+ *
+ * - If the S-CSCF uses third-party registrations to notify the RCS Server when
+ *   a UE registers, when the S-CSCF receives a 200 OK from the RCS Server in
+ *   response to a third-party SIP REGISTER request registering, reregistering
+ *   or deregistering a target with the RCS Server.
+ *
+ * - If the S-CSCF is the NF responsible for handling RCS Registrations:
+ *
+ * - When the S-CSCF sends a 200 OK to a target in response to a SIP REGISTER
+ *   request that includes any of the service feature tags listed in GSMA RCC.07
+ *   [78] clause 2.4.3, clause 2.4.4 or clause 2.4.4.1 table 3.
+ *
+ * - When the S-CSCF sends a 200 OK to a target in response to a SIP REGISTER
+ *   request for deregistration when the service features supported by the
+ *   target include any of the service features listed in GSMA RCC.07 [78]
+ *   clause 2.4.3, clause 2.4.4 or clause 2.4.4.1 table 3.
+ *
+ * - When the IRI-POI is located in the RCS Server:
+ *
+ * - When the RCS Server sends a 200 OK to a target in response to a SIP
+ *   REGISTER request that includes any of the service feature tags listed in
+ *   GSMA RCC.07 [78] clause 2.4.3, clause 2.4.4 or clause 2.4.4.1 table 3.
+ *
+ * - When the RCS Server sends a 200 OK to a target in response to a SIP
+ *   REGISTER request for deregistration when the service features supported by
+ *   the target include any of the service features listed in GSMA RCC.07 [78]
+ *   clause 2.4.3, clause 2.4.4 or clause 2.4.4.1 table 3.
+ *
+ * - When the RCS server sends a 200 OK to the S-CSCF in response to a SIP
+ *   NOTIFY request for a target with an Event header field with a value set to
+ *   "reg" as specified in TS 24.229 [74] clauses 5.1.1.3 and 5.1.1.7.
+ *
+ * Table 7.13.4-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.13.3.2.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,30 +83,65 @@ export
 class RCSRegistration {
     /**
      * @summary `rCSTargetIdentities`.
+     * @description
+     *
+     * RCS target identities. All identities associated to the target known at
+     * the POI shall be included.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSTargetIdentities: RCSIdentity[];
     /**
      * @summary `rCSRegistrationType`.
+     * @description
+     *
+     * RCS Registration type, i.e. Registration, Reregistration and
+     * Deregistration.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSRegistrationType: RCSRegistrationType;
     /**
      * @summary `rCSRegistrationUpdateRequest`.
+     * @description
+     *
+     * SIP REGISTER request related to target IMS Registration, Reregistration
+     * or Deregistration.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSRegistrationUpdateRequest: IMSPayload;
     /**
      * @summary `rCSRegistrationUpdateResponse`.
+     * @description
+     *
+     * SIP REGISTER response related to target IMS Registration, Reregistration
+     * or Deregistration.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.2.1.
+     *
      * @public
      * @readonly
      */
     readonly rCSRegistrationUpdateResponse: IMSPayload;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the target’s location when available according to the
+     * location reporting type provisioned for the task.
+     *
+     * 3GPP TS 33.128, clause 7.13.3.2.1.
+     *
      * @public
      * @readonly
      */

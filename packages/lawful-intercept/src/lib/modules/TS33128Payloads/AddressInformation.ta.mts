@@ -38,11 +38,29 @@ import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Pa
  */
 export
 type AddressInformation =
+    /**
+     * @description
+     *
+     * The IPv4 address being reported in binary representation. (3GPP TS
+     * 33.128, clause 8.2.)
+     */
     { iPv4Address: IPv4Address } /* CHOICE_ALT_ROOT */
     | { iPv4AddressUDPPortRange: IPv4AddressUDPPortRange } /* CHOICE_ALT_ROOT */
     | { iPv4AddressTCPPortRange: IPv4AddressTCPPortRange } /* CHOICE_ALT_ROOT */
     | { iPv4AddressUDPTCPPortRange: IPv4AddressUDPTCPPortRange } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IPv6 address being reported in binary representation. (3GPP TS
+     * 33.128, clause 8.2.)
+     */
     | { iPv6Address: IPv6Address } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from a MAC address defined in IETF RFC 7042 [126]. (3GPP TS
+     * 33.128, clause 8.3.3.)
+     */
     | { ethernetAddress: MACAddress } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

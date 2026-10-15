@@ -15,6 +15,12 @@ import { EDNConfigurationInfo, _decode_EDNConfigurationInfo, _encode_EDNConfigur
  * @summary TargetInfo
  * @description
  * 
+ * Details of the selected T-EAS and the T-EES. It is present when EventID
+ * indicates "TARGET_INFORMATION" event.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.8.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

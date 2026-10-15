@@ -23,6 +23,25 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary SMFProSeRemoteUEReport
  * @description
  * 
+ * The IRI-POI in the SMF shall generate an xIRI containing an
+ * SMFProSeRemoteUEReport record when the IRI-POI present in the SMF detects
+ * that a target 5G ProSe Remote UE has connected to a 5G ProSe layer-3
+ * UE-to-network Relay UE or disconnected from a 5G ProSe layer-3 UE-to-network
+ * Relay UE. The IRI-POI present in the SMF shall generate the xIRI for the
+ * following events:
+ *
+ * - For a non-roaming scenario, the SMF (or for a roaming scenario, V-SMF in
+ *   the VPLMN for HR or SMF in the VPLMN for LBO) returns a
+ *   Nsmf_PDUSession_UpdateSMContext Response in response to a
+ *   Nsmf_PDUSession_UpdateSMContext Request received from the AMF including the
+ *   n1SmMsg parameter containing the N1 NAS message Remote UE Report related to
+ *   a target 5G ProSe Remote UE.
+ *
+ * Table 6.2.3.7-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.9.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,42 +63,96 @@ export
 class SMFProSeRemoteUEReport {
     /**
      * @summary `sUPI`.
+     * @description
+     *
+     * Identifies the SUPI of the target 5G ProSe Remote UE connected to or
+     * disconnected from a 5G ProSe layer-3 UE-to-network Relay.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly sUPI: SUPI;
     /**
      * @summary `gPSI`.
+     * @description
+     *
+     * Identifies the GPSI of the target 5G ProSe Remote UE connected to or
+     * disconnected from a 5G ProSe layer-3 UE-to-network Relay.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly gPSI: OPTIONAL<GPSI>;
     /**
      * @summary `pEI`.
+     * @description
+     *
+     * Identifies the PEI of the target 5G ProSe Remote UE connected to or
+     * disconnected from a 5G ProSe layer-3 UE-to-network Relay.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly pEI: OPTIONAL<PEI>;
     /**
      * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU session of the 5G ProSe layer-3 UE-to-network Relay used by the
+     * target 5G ProSe Remote UE connected to the 5G ProSe layer-3 UE-to-network
+     * Relay UE or disconnected from the 5G ProSe layer-3 UE-to-network Relay
+     * UE.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly pDUSessionID: PDUSessionID;
     /**
      * @summary `remoteUEContextConnected`.
+     * @description
+     *
+     * Provides newly connected target 5G ProSe Remote UE information. Shall
+     * contain the target remote UE context octets if sent in the Remote UE
+     * Report message. Defined in TS 24.501 [13] clause 9.11.4.29.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly remoteUEContextConnected: OPTIONAL<RemoteUEContext>;
     /**
      * @summary `remoteUEContextDisconnected`.
+     * @description
+     *
+     * Provides disconnected target 5G ProSe Remote UE information. Shall
+     * contain the target remote UE context octets if sent in the Remote UE
+     * Report message. Defined in TS 24.501 [13] clause 9.11.4.29.2.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.9.
+     *
      * @public
      * @readonly
      */
     readonly remoteUEContextDisconnected: OPTIONAL<RemoteUEContext>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location of the target 5G ProSe Remote UE if available. Shall be encoded
+     * using the Location.locationInfo.userLocation parameter. If available,
+     * other parameters reportable via Location shall be included.
+     *
+     * 3GPP TS 33.128, clause 6.2.3.2.9.
+     *
      * @public
      * @readonly
      */

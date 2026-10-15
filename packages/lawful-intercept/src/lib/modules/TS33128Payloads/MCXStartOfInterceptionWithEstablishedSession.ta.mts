@@ -24,6 +24,20 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
  * @summary MCXStartOfInterceptionWithEstablishedSession
  * @description
  * 
+ * The IRI-POI present in the MCX Server shall generate an xIRI containing an
+ * MCXStartOfInterceptionWithEstablishedSession record when a target MC service
+ * user or a target MC service group has an active MC service session in
+ * progress. If multiple MC service sessions are active at the start of
+ * interception, an MCXStartOfInterceptionWithEstablishedSession record is
+ * generated for each active session. Accordingly, the IRI-POI in the MCX Server
+ * generates the xIRI when the following event is detected:
+ *
+ * - when the MCX Server detects that LI is enabled on a target MC service
+ *   participant or a target MC service group with an active MC service session.
+ *
+ * 3GPP TS 33.128, clause 7.20.2.3.1.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,48 +60,107 @@ export
 class MCXStartOfInterceptionWithEstablishedSession {
     /**
      * @summary `mCServiceIdentitiesOrGroupID`.
+     * @description
+     *
+     * MC service identities of the target user or group ID of the target MC
+     * service group.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceIdentitiesOrGroupID: MCServiceIdentitiesOrGroupID;
     /**
      * @summary `mCServiceDirection`.
+     * @description
+     *
+     * Indicates the direction of the session relative to the target: "toTarget"
+     * or "fromTarget".
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceDirection: Direction;
     /**
      * @summary `mCServiceOriginatingID`.
+     * @description
+     *
+     * MC service ID of the originating MC service user.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceOriginatingID: MCServiceID;
     /**
      * @summary `mCServiceSessionInfo`.
+     * @description
+     *
+     * Shall provide MC service session information such as MC service session
+     * URI, MC service session type (private or group session), group session
+     * type (e.g., chat, pre-arranged, ad-hoc), establishment mode (on-demand,
+     * pre-established) when available (see table 7.20.2.3.2-1).
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceSessionInfo: MCServiceSessionInfo;
     /**
      * @summary `mCServiceParticipants`.
+     * @description
+     *
+     * Shall identify the individual MC service participants of the MC service
+     * session, when known.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceParticipants: OPTIONAL<MCServiceID[]>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Shall include the MC service target’s location when reporting of the MC
+     * service target’s location information is authorized and available.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.1.
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<Location>;
     /**
      * @summary `mCServiceMediaStreamAvailable`.
+     * @description
+     *
+     * Indicates if the MC service target is able/not able to receive media
+     * streams immediately. True indicates available for media, while false
+     * indicates not able to accept media.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.1.
+     *
      * @public
      * @readonly
      */
     readonly mCServiceMediaStreamAvailable: OPTIONAL<BOOLEAN>;
     /**
      * @summary `mCServiceBearerCapability`.
+     * @description
+     *
+     * Shall provide when known the media characteristics information elements
+     * of the MC service session, encoded in SDP format as per RFC 4566 [43]
+     * clause 5.
+     *
+     * 3GPP TS 33.128, clause 7.20.2.3.1.
+     *
      * @public
      * @readonly
      */

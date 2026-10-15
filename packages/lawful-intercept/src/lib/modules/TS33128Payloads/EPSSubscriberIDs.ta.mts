@@ -34,18 +34,36 @@ export
 class EPSSubscriberIDs {
     /**
      * @summary `iMSI`.
+     * @description
+     *
+     * Shall be present when the IMSI is known.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly iMSI: OPTIONAL<IMSI>;
     /**
      * @summary `mSISDN`.
+     * @description
+     *
+     * Shall be present when the MSISDN is known.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.3.
+     *
      * @public
      * @readonly
      */
     readonly mSISDN: OPTIONAL<MSISDN>;
     /**
      * @summary `iMEI`.
+     * @description
+     *
+     * Shall be present when the IMEI is known.
+     *
+     * 3GPP TS 33.128, clause 8.3.2.3.
+     *
      * @public
      * @readonly
      */

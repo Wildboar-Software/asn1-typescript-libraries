@@ -14,6 +14,12 @@ import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_Geogr
  * @summary Polygon
  * @description
  * 
+ * The Polygon type is derived from the data present in the Polygon type defined
+ * in TS 29.572 [24] clause 6.1.6.2.9.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.16.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +35,12 @@ export
 class Polygon {
     /**
      * @summary `pointList`.
+     * @description
+     *
+     * Contains a list of 3-15 points defining the corners of a polygon.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.16.
+     *
      * @public
      * @readonly
      */

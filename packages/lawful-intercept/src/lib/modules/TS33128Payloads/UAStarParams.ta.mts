@@ -20,6 +20,11 @@ import { DTLS13UAStarParams, _decode_DTLS13UAStarParams, _encode_DTLS13UAStarPar
  * @summary UAStarParams
  * @description
  * 
+ * Set of new Ua* security protocol parameters associated with kAF, if updated.
+ *
+ * 3GPP TS 33.128, clause 7.9.1.4.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

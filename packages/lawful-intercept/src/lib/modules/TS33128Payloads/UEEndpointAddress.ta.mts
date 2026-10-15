@@ -16,6 +16,13 @@ import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Pa
  * @summary UEEndpointAddress
  * @description
  * 
+ * UE's local IP address used to reach the ePDG, if present in the network
+ * message (see TS 29.274 [87] clauses 7.2.4, 7.2.7 and 7.2.16) or known at the
+ * context at the SGW or PGW.
+ *
+ * 3GPP TS 33.128, clause 6.3.3.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,8 +36,26 @@ import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Pa
  */
 export
 type UEEndpointAddress =
+    /**
+     * @description
+     *
+     * The IPv4 address being reported in binary representation. (3GPP TS
+     * 33.128, clause 8.2.)
+     */
     { iPv4Address: IPv4Address } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The IPv6 address being reported in binary representation. (3GPP TS
+     * 33.128, clause 8.2.)
+     */
     | { iPv6Address: IPv6Address } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Derived from a MAC address defined in IETF RFC 7042 [126]. (3GPP TS
+     * 33.128, clause 8.3.3.)
+     */
     | { ethernetAddress: MACAddress } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

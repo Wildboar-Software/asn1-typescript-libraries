@@ -17,6 +17,12 @@ import { LocationAreaOfInterestList, _decode_LocationAreaOfInterestList, _encode
  * @summary LocationReportingRequestType
  * @description
  * 
+ * Indicates the type of location reporting requested in the HANDOVER REQUEST.
+ * Include if in HANDOVER REQUEST message. See TS 38.413 [23] clause 9.3.1.65.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.9.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

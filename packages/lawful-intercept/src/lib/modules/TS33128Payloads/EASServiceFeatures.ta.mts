@@ -11,6 +11,12 @@ import { EASServiceFeature, _decode_EASServiceFeature, _encode_EASServiceFeature
  * @summary EASServiceFeatures
  * @description
  * 
+ * Service features e.g. single vs. multi-player gaming service supported by the
+ * EAS, if available.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -7,6 +7,11 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary EASEventType
  * @description
  * 
+ * Event type for which the EEC shall be notified.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,6 +34,11 @@ enum _enum_for_EASEventType {
  * @summary EASEventType
  * @description
  * 
+ * Event type for which the EEC shall be notified.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,6 +58,11 @@ type EASEventType = _enum_for_EASEventType;
  * @summary EASEventType
  * @description
  * 
+ * Event type for which the EEC shall be notified.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.4.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

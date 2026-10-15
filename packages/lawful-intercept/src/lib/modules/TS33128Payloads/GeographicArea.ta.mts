@@ -24,6 +24,12 @@ import { EllipsoidArc, _decode_EllipsoidArc, _encode_EllipsoidArc } from "../TS3
  * @summary GeographicArea
  * @description
  * 
+ * The GeographicArea type is derived from the data present in the
+ * GeographicArea type defined in TS 29.572 [24] clause 6.1.6.2.5.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.10.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -41,12 +47,53 @@ import { EllipsoidArc, _decode_EllipsoidArc, _encode_EllipsoidArc } from "../TS3
  */
 export
 type GeographicArea =
+    /**
+     * @description
+     *
+     * Geographical area consisting of a single point, represented by its
+     * longitude and latitude.
+     */
     { point: Point } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Geographical area consisting of a point and an uncertainty value.
+     */
     | { pointUncertaintyCircle: PointUncertaintyCircle } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Geographical area consisting of a point, plus an uncertainty ellipse and
+     * a confidence value.
+     */
     | { pointUncertaintyEllipse: PointUncertaintyEllipse } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Geographical area consisting of a list of points (between 3 to 15
+     * points).
+     */
     | { polygon: Polygon } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Geographical area consisting of a point and an altitude value.
+     */
     | { pointAltitude: PointAltitude } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * Geographical area consisting of a point, an altitude value and an
+     * uncertainty value.
+     */
     | { pointAltitudeUncertainty: PointAltitudeUncertainty } /* CHOICE_ALT_ROOT */
+    /**
+     * @description
+     *
+     * The EllipsoidArc type is derived from the data present in the
+     * EllipsoidArc type defined in TS 29.572 [24] clause 6.1.6.2.12. (3GPP TS
+     * 33.128, clause 7.3.3.2.19.)
+     */
     | { ellipsoidArc: EllipsoidArc } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 
