@@ -13,7 +13,21 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NationalIPMMIRIParameters
  * @description
- * 
+ *
+ * National IP multimedia IRI parameters. Carried as the
+ * `nationalIPMMIRIParameters` alternative of `IPIRIContents` and
+ * delivered as an IRI-REPORT record.
+ *
+ * `countryCode` names the country to which parameters after the
+ * extension marker apply. A country that needs further parameters
+ * defines them in ASN.1 and adds them after that marker. The module
+ * recommends a version parameter and a vendor identification (vendor
+ * identifications are taken from IANA), and recommends avoiding tags
+ * 240 to 255.
+ *
+ * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223205/03.22.01_60/ts_10223205v032201p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +53,14 @@ export
 class NationalIPMMIRIParameters {
     /**
      * @summary `countryCode`.
+     * @description
+     *
+     * ISO 3166-1 country code, two characters. It identifies the
+     * country whose national parameters, if any, follow the extension
+     * marker.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 7.
+     *
      * @public
      * @readonly
      */

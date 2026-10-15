@@ -19,7 +19,30 @@ import { AlternateProtocol, _decode_AlternateProtocol, _encode_AlternateProtocol
 /**
  * @summary SupplementaryInfo
  * @description
- * 
+ *
+ * What the LEMF needs in order to decode one direction of PSTN/ISDN CC: the
+ * codec, any extra SDP media parameters, encryption details, and which
+ * protocol headers are actually in the CC. Each instance carries one media
+ * format. A format change is a new instance.
+ *
+ * Send it as soon as possible, and before the CC when it is already known.
+ * CC shall not be buffered or delayed while waiting for it. If interpreting
+ * the CC depends on this information, the provider's system has to avoid that
+ * delay. One instance is required for each direction present. When the two
+ * directions differ (for example a different codec towards the target than
+ * away from it), `payloadDirection` on every CC PDU is `toTarget` or
+ * `fromTarget` only. When several CC links are in use, one instance is
+ * required per link.
+ *
+ * It is sent as IRI (`PstnIsdnIRI`) and/or inside CC PDUs. On the CC path it
+ * is present at least on the first PDU, and on a later PDU only when the
+ * information changes during the session. The LEMF has to be able to see
+ * where in the CC stream a change takes effect; if the CC itself does not
+ * show that, set `firstPDUNumber`.
+ *
+ * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223206/03.05.01_60/ts_10223206v030501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -57,54 +80,130 @@ export
 class SupplementaryInfo {
     /**
      * @summary `informationAppliesTo`.
+     * @description
+     *
+     * Which CC PDUs this information describes: direction, CC link, and, when
+     * a change is not visible in the CC itself, the first sequence number.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clauses 6.3.3 and 6.3.4.
+     *
      * @public
      * @readonly
      */
     readonly informationAppliesTo: InformationAppliesTo;
     /**
      * @summary `mediaFormat`.
+     * @description
+     *
+     * RTP payload type of the codec, as assigned by IETF RFC 3551. Range
+     * 0..127. Exactly one format; a change is another `SupplementaryInfo`.
+     * Under PSTN/ISDN the codec is typically G.711 (ITU-T G.711).
+     *
+     * When the payload is UDPTL, this shall be 0. That value is then
+     * insignificant to the LEMF: it is not the static PCMU assignment.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clauses 6.2 and 6.3.2.
+     *
      * @public
      * @readonly
      */
     readonly mediaFormat: INTEGER;
     /**
      * @summary `mediaAttributes`.
+     * @description
+     *
+     * Parameters the LEMF needs beyond the payload type, in the syntax of an
+     * SDP `a=` field (IETF RFC 4566). Required whenever the payload type
+     * alone is not enough to decode the CC. Typically present if and only if
+     * `mediaFormat` is 32 or above.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.2.
+     *
      * @public
      * @readonly
      */
     readonly mediaAttributes: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `encryptionKey`.
+     * @description
+     *
+     * Encryption details, in the syntax defined by IETF RFC 4566. The ASN.1
+     * comment points at that RFC; the field table points at clause 6.2.
+     *
+     * Encryption applied inside the CSP's domain, and under the CSP's
+     * control, is either removed or fully described, including the keys.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clauses 6.2 and 6.3.2.
+     *
      * @public
      * @readonly
      */
     readonly encryptionKey: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sessionName`.
+     * @description
+     *
+     * SDP session name (`s=` in IETF RFC 4566), when the target communication
+     * has one. Included only as decided by national agreement.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.2.
+     *
      * @public
      * @readonly
      */
     readonly sessionName: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sessionInfo`.
+     * @description
+     *
+     * SDP session information (`i=` in IETF RFC 4566), when the target
+     * communication has that field. Included only as decided by national
+     * agreement. The field table's second sentence repeats "it may be
+     * present" and does not add a further rule.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.2.
+     *
      * @public
      * @readonly
      */
     readonly sessionInfo: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `copyOfSDPMessage`.
+     * @description
+     *
+     * An SDP message (IETF RFC 4566), in addition to the session and media
+     * fields above. Optional.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.2.
+     *
      * @public
      * @readonly
      */
     readonly copyOfSDPMessage: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `frameType`.
+     * @description
+     *
+     * Which of the application, UDP, and IP headers are in the CC. Required
+     * when one or more of them are missing. May be omitted when all three are
+     * present.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clauses 6.2 and 6.3.2.
+     *
      * @public
      * @readonly
      */
     readonly frameType: OPTIONAL<FrameType>;
     /**
      * @summary `alternateProtocol`.
+     * @description
+     *
+     * Application protocol of `pstnIsdnCCContents` when a complete IP, UDP, or
+     * application frame is present and the payload is not RTP. The only
+     * defined value is UDPTL.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.2 and annex A.
+     *
      * @public
      * @readonly
      */

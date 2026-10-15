@@ -11,7 +11,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AdditionalSignalling
  * @description
- * 
+ *
+ * Signalling handed over separately from, and without changing, an
+ * intercepted signalling message.
+ *
+ * The IRI IIF may supply information that the network obtained by
+ * means other than the intercepted message. What is supported here is
+ * a SIP header line, formatted as required by IETF RFC 3261, IETF RFC
+ * 5322, or another specification selected by national agreement.
+ *
+ * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.5.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223205/03.22.01_60/ts_10223205v032201p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -25,6 +36,12 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AdditionalSignalling =
+    /**
+     * One SIP header line, for example `Contact: tel:+123456789`.
+     * Formatted per the specification that defines the header.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.5.
+     */
     { sipHeaderLine: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

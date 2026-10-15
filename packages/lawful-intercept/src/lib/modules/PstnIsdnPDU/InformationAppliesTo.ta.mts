@@ -15,7 +15,18 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary InformationAppliesTo
  * @description
- * 
+ *
+ * Selects the CC PDUs that one `SupplementaryInfo` describes. A session with
+ * traffic in both directions has one instance per direction. A session with
+ * several CC links (ETSI TS 101 671, for example a multi-party call) has one
+ * instance per link, and within each link the directions are still separated
+ * as in clause 6.3.3.
+ *
+ * CC PDU sequence numbers are not counted per link.
+ *
+ * ETSI TS 102 232-6 V3.5.1 (2023-03), clauses 6.3.3 and 6.3.4.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223206/03.05.01_60/ts_10223206v030501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,18 +49,44 @@ export
 class InformationAppliesTo {
     /**
      * @summary `payloadDirection`.
+     * @description
+     *
+     * Direction of the CC this information describes. When the two directions
+     * use different supplementary information, every CC PDU carries a
+     * direction, and only `toTarget` and `fromTarget` are used.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.3.
+     *
      * @public
      * @readonly
      */
     readonly payloadDirection: LI_PS_PDU.PayloadDirection;
     /**
      * @summary `cCLinkID`.
+     * @description
+     *
+     * Which CC link this information describes, when more than one link is in
+     * use. Range 0..65535. Sequence numbers are not restarted for each link.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.4.
+     *
      * @public
      * @readonly
      */
     readonly cCLinkID: OPTIONAL<INTEGER>;
     /**
      * @summary `firstPDUNumber`.
+     * @description
+     *
+     * Sequence number of the first CC PDU this information applies to. It
+     * then applies to that PDU and every PDU with a greater sequence number.
+     * Range 0..4294967295.
+     *
+     * Set this when a change (for example a new codec) cannot be seen from
+     * the CC itself. The new information should be sent before the change.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.3.
+     *
      * @public
      * @readonly
      */

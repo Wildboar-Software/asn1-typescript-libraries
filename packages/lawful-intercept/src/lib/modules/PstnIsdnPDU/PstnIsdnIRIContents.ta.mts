@@ -11,7 +11,22 @@ import { SupplementaryInfo, _decode_SupplementaryInfo, _encode_SupplementaryInfo
 /**
  * @summary PstnIsdnIRIContents
  * @description
- * 
+ *
+ * Body of a PSTN/ISDN supplementary-information IRI. The only defined
+ * alternative is `supplementaryInfo`. The choice is extensible.
+ *
+ * Send it as soon as it exists, and before CC when that is possible. CC is
+ * never buffered or delayed to wait for it. One instance is sent per
+ * direction present in the session, and per CC link when more than one link
+ * is in use. A change during the session (for example a new codec) is a new
+ * instance, sent as soon as possible and preferably before the change.
+ *
+ * The same information is also carried in `PstnIsdnCC`, at least on the first
+ * CC PDU and again only when it changes.
+ *
+ * ETSI TS 102 232-6 V3.5.1 (2023-03), clauses 5.2 and 6.3.3.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223206/03.05.01_60/ts_10223206v030501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

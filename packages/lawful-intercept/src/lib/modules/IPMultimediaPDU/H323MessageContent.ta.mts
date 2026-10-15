@@ -11,7 +11,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary H323MessageContent
  * @description
- * 
+ *
+ * The H.323 PDU inside an intercepted `H323Message`, selected by
+ * protocol.
+ *
+ * H.225.0 call signalling, H.245 call control, and available H.225.0
+ * RAS are each a named alternative (clause 5.2.2). The specification
+ * does not define the contents of `genericMessageContent`, and it
+ * does not say which alternative carries H.450.x or
+ * subscriber-controlled input.
+ *
+ * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5.2.2 and 7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223205/03.22.01_60/ts_10223205v032201p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -27,9 +39,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type H323MessageContent =
+    /**
+     * H.225.0 call-signalling PDU (ITU-T H.225.0). Clause 5.2.2 calls
+     * this basic call signalling.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.2.
+     */
     { h225CSMessageContent: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    /**
+     * H.225.0 Registration, Administration, and Status PDU. Intercepted
+     * when the events are available at the IRI IIF.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.2.
+     */
     | { h225RASMessageContent: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    /**
+     * H.245 call-control PDU (ITU-T H.245).
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.2.
+     */
     | { h245MessageContent: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    /**
+     * The specification names this alternative and does not define its
+     * contents.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 7.
+     */
     | { genericMessageContent: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

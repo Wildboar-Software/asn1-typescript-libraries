@@ -16,7 +16,39 @@ import { _decode_MMCCprotocol, _encode_MMCCprotocol, _enum_for_MMCCprotocol, MMC
 /**
  * @summary IPMMCC
  * @description
- * 
+ *
+ * HI3 content of communication for one intercepted multimedia packet.
+ *
+ * The content is a copy of the multimedia stream addressed to, sent
+ * from, or related to the target, as described by the intercepted
+ * signalling (clause 5.5):
+ *
+ * - RTP and RTCP (IETF RFC 3550), for real-time media such as VoIP;
+ * - MSRP (IETF RFC 4975), for messaging, file sharing, and similar;
+ * - UDPTL (ITU-T T.38), for facsimile.
+ *
+ * Each value carries exactly one packet. RTP content includes the RTP,
+ * UDP, and IP headers unless the CSP and LEA agree otherwise, because
+ * those headers may be absent at the point of interception. UDPTL
+ * follows the same rule. MSRP content includes the TCP header. The
+ * mediation function does not insert IP, UDP, or TCP headers that were
+ * unavailable. It may insert an RTP header, by agreement, when the RTP
+ * header is unavailable; that case is `artificialRtpFrame`.
+ *
+ * Packets of one intercepted call share the CIN of that call's IRI.
+ * Correlation of IRI and CC also uses the LIID and the communication
+ * identifier from ETSI TS 102 232-1 (clause 6.2). The target identity
+ * need not appear in both. Signalling and media should be intercepted
+ * in the same context (UNI or NNI), and in a trusted context, so that
+ * SDP `c=` and `m=` lines match the media addresses (clause 5.8).
+ * Media that does not cross the core network, such as a stream turned
+ * around in a gateway, is still content; its handover format is agreed
+ * between CSP and LEA. Annex A.3.2 notes that local turnaround at an
+ * H.248 media gateway never presents RTP to the IP network.
+ *
+ * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5.5, 5.8, and 6.2.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223205/03.22.01_60/ts_10223205v032201p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,30 +84,84 @@ export
 class IPMMCC {
     /**
      * @summary `iPMMCCObjId`.
+     * @description
+     *
+     * Set to `iPMMCCObjId`, `{iPMultimediaPDUObjId cC(2)}`.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 7.
+     *
      * @public
      * @readonly
      */
     readonly iPMMCCObjId: RELATIVE_OID;
     /**
      * @summary `mMCCContents`.
+     * @description
+     *
+     * One intercepted packet. The component was named `rTPCCContents`
+     * through version 2.3.2 of this specification.
+     *
+     * RTP content is the RTP packet with its UDP and IP headers, except
+     * where the CSP and LEA agree those headers are omitted. UDPTL
+     * follows the same principle. MSRP content includes the TCP header.
+     * Which of those headers are present is signalled by `frameType`.
+     * The protocol is signalled by `mMCCprotocol`.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.5.
+     *
      * @public
      * @readonly
      */
     readonly mMCCContents: OCTET_STRING;
     /**
      * @summary `frameType`.
+     * @description
+     *
+     * Which headers are present in `mMCCContents`.
+     *
+     * Optional only so that older implementations remain decodable.
+     * New implementations shall include it (clause 5.5).
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.5.
+     *
      * @public
      * @readonly
      */
     readonly frameType: OPTIONAL<FrameType>;
     /**
      * @summary `streamIdentifier`.
+     * @description
+     *
+     * Identifies this media stream within the CIN, when a session has
+     * more than one stream and the headers that would distinguish them
+     * are absent. It may contain the SDP `c=` and `m=` lines of the
+     * stream, and it may be used to match the stream to the SDP media
+     * description in the IRI (clause 6.2).
+     *
+     * If signalling and media cannot be intercepted in the same
+     * context, the SDP of the media context is placed here
+     * (clause 5.8). That helps decode the audio. It does not correlate
+     * the media with the signalling, and the specification says that
+     * situation should be avoided.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5.5, 5.8, and 6.2.
+     *
      * @public
      * @readonly
      */
     readonly streamIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mMCCprotocol`.
+     * @description
+     *
+     * Protocol of the packet in `mMCCContents`: RTP/RTCP, MSRP, or
+     * UDPTL.
+     *
+     * If absent, the packet is RTP/RTCP, or an audio frame, as
+     * indicated by `frameType`.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.5.
+     *
      * @public
      * @readonly
      */

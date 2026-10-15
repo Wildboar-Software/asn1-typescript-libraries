@@ -17,7 +17,52 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary IPMMIRI
  * @description
- * 
+ *
+ * HI2 intercept-related information for one IP multimedia signalling
+ * or control event.
+ *
+ * Every multimedia signalling and control message to or from the
+ * target, or executed on behalf of the target, is sent to the
+ * mediation function as an IRI record (clause 5.4). The target
+ * identity is a service identity, not a network or transport address:
+ * a TEL URI, SIP URI, or E.164 number for SIP (IMPU and IMPI are
+ * examples); an H.323 URL, H.323 ID, or E.164 number for H.323. IMEI
+ * or IMSI may be used when the CSP can map them (clause 5.1).
+ *
+ * IRI and CC of one communication session share one CIN, assigned on
+ * the first IRI or CC message (clauses 5.3.0 and 6.1). A session is
+ * one self-contained transaction, or a series of PDUs that form one
+ * SIP or H.323 session. All SIP IRI for one call share that CIN;
+ * related SIP legs are correlated, and one option given for that is
+ * the P-Charging-Vector header (clause 5.3.1). All H.323 IRI for one
+ * call share it; messages of one call carry the same H.225.0 Call ID
+ * (clause 5.3.2). An XCAP HTTP request and its response share one CIN
+ * (clause 5.3.3).
+ *
+ * The HI2 record type is chosen in the part 1 header, not in this
+ * structure. Table 1 maps a new CIN to IRI-BEGIN or IRI-REPORT, later
+ * events to IRI-CONTINUE or IRI-REPORT, and the end of the session to
+ * IRI-END or IRI-REPORT. A session that started with IRI-REPORT stays
+ * on IRI-REPORT, including its end. An event that arrives after an
+ * end record is an IRI-REPORT with the same CIN. Unmapped events,
+ * such as some encapsulated SIP messages, are IRI-REPORT (clause 5.4).
+ *
+ * Direction of one signalling message may be carried in
+ * `payloadDirection` from ETSI TS 102 232-1, subject to national
+ * agreement (clause 5.6): `fromTarget`, `toTarget`, or
+ * `indeterminate`. `combined` and `notapplicable` are not used for a
+ * signalling message unless a national agreement says so. SIP session
+ * direction may be carried in `sessionDirection` (clause 5.7.1), taken
+ * from the SIP message that caused the CIN to be allocated:
+ * `toTarget` if that message was sent to the target, `fromTarget` if
+ * it was sent from the target, `combined` if it was sent both ways,
+ * and `indeterminate` if the direction is unreliable. `notapplicable`
+ * is not used for a SIP session unless a national agreement says so.
+ * Direction for H.323 sessions is not specified (clause 5.7.2).
+ *
+ * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5 and 6.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223205/03.22.01_60/ts_10223205v032201p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +84,61 @@ export
 class IPMMIRI {
     /**
      * @summary `iPMMIRIObjId`.
+     * @description
+     *
+     * Set to `iPMMIRIObjId`, `{iPMultimediaPDUObjId iRI(1)}`.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 7.
+     *
      * @public
      * @readonly
      */
     readonly iPMMIRIObjId: RELATIVE_OID;
     /**
      * @summary `iPMMIRIContents`.
+     * @description
+     *
+     * The intercepted signalling for this event, an IRI-only copy whose
+     * message body was modified, a post-dialled-digit RTP packet, an
+     * XCAP message, or national parameters.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5.2 and 5.4.
+     *
      * @public
      * @readonly
      */
     readonly iPMMIRIContents: IPIRIContents;
     /**
      * @summary `targetLocation`.
+     * @description
+     *
+     * Location of the target, using the common `Location` parameter
+     * from ETSI TS 102 232-1. The IRI IIF may include it to meet annex
+     * B.3. Whether it is available, and whether it is geographic,
+     * physical, or logical, depends on the access technology. Use is
+     * subject to national agreement. Location may also be reported on
+     * a change of location that is unrelated to a communication
+     * (annex B.2, item d.6).
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5.2.3 and B.3.
+     *
      * @public
      * @readonly
      */
     readonly targetLocation: OPTIONAL<LI_PS_PDU.Location>;
     /**
      * @summary `additionalSignalling`.
+     * @description
+     *
+     * SIP header lines supplied in addition to the intercepted
+     * signalling, without modifying that signalling. The network may
+     * obtain them by means other than the intercepted message. Each
+     * value is one header line, formatted as required by the
+     * specification that defines the header (IETF RFC 3261, IETF RFC
+     * 5322, or another specification selected by national agreement).
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.5.
+     *
      * @public
      * @readonly
      */

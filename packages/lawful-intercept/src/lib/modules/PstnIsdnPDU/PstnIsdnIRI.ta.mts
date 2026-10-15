@@ -13,7 +13,23 @@ import { PstnIsdnIRIContents, _decode_PstnIsdnIRIContents, _encode_PstnIsdnIRICo
 /**
  * @summary PstnIsdnIRI
  * @description
- * 
+ *
+ * Supplementary-information IRI for a PSTN/ISDN communications session.
+ * IRI events defined by ETSI TS 101 671 are sent as `ETSI671IRI`, not here.
+ * Headers on every IRI are those of ETSI TS 102 232-1, and that header shall
+ * be populated. Lawful Interception Identifier, Communication Identifier, and
+ * timestamp also appear in the ETSI TS 101 671 IRI parameters; populating
+ * both copies is recommended.
+ *
+ * A new Communications Identity Number is assigned when a session begins, as
+ * defined in ETSI TS 101 671. Typically that is each IRI-BEGIN, and every
+ * later IRI and CC of the session shares it. A REPORT record is typically a
+ * session of its own. If CC or IRI is produced before the IRI-BEGIN, the
+ * provider still uses one CIN for the whole session.
+ *
+ * ETSI TS 102 232-6 V3.5.1 (2023-03), clauses 5.2, 5.3, 6.3, and A.1.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223206/03.05.01_60/ts_10223206v030501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,12 +46,25 @@ export
 class PstnIsdnIRI {
     /**
      * @summary `pstnIsdnIRIObjId`.
+     * @description
+     *
+     * Set to `pstnIsdnIRIObjId`, `{pstnIsdnPDUObjId iRI(1)}`.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 5.2 and annex A.
+     *
      * @public
      * @readonly
      */
     readonly pstnIsdnIRIObjId: RELATIVE_OID;
     /**
      * @summary `pstnIsdnIRIContents`.
+     * @description
+     *
+     * The only defined alternative is `supplementaryInfo`. Further
+     * alternatives may be added after the extension marker.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3 and annex A.
+     *
      * @public
      * @readonly
      */

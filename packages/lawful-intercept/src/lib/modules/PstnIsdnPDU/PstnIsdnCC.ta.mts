@@ -16,7 +16,21 @@ import { SupplementaryInfo, _decode_SupplementaryInfo, _encode_SupplementaryInfo
 /**
  * @summary PstnIsdnCC
  * @description
- * 
+ *
+ * Content of communication for an intercepted PSTN/ISDN session, optionally
+ * with the supplementary information that describes it. IRI events from
+ * ETSI TS 101 671 are `ETSI671IRI`. CC is produced on the same occasions as
+ * in that specification; ISDN sequences are in ETSI TR 102 053, clause 6.
+ *
+ * Headers are those of ETSI TS 102 232-1 and shall be populated. Lawful
+ * Interception Identifier, Communication Identifier, and timestamp also
+ * appear in the ETSI TS 101 671 IRI parameters; populating both copies is
+ * recommended. All IRI and CC of one session share one Communications
+ * Identity Number (clause 5.3).
+ *
+ * ETSI TS 102 232-6 V3.5.1 (2023-03), clauses 5.2, 5.3, 6.1, 6.2, and A.1.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223206/03.05.01_60/ts_10223206v030501p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,24 +53,65 @@ export
 class PstnIsdnCC {
     /**
      * @summary `pstnIsdnCCObjId`.
+     * @description
+     *
+     * Set to `pstnIsdnCCObjId`, `{pstnIsdnPDUObjId cC(2)}`.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 5.2 and annex A.
+     *
      * @public
      * @readonly
      */
     readonly pstnIsdnCCObjId: RELATIVE_OID;
     /**
      * @summary `pstnIsdnCCContents`.
+     * @description
+     *
+     * Application-layer traffic. The protocols this specification supports are
+     * RTP and UDPTL (ITU-T T.38). The application header, the UDP header, and
+     * the IP header are included as well, unless the CSP and the LEA have
+     * agreed to omit them. Headers may be omitted because they were not
+     * available at the interception point. `frameType` records which headers
+     * remain.
+     *
+     * The RTP or UDPTL payload is a complete, unmodified copy of the target
+     * communication. An RTP header, including one the mediation function
+     * inserted because the original was unavailable, shall accurately describe
+     * that communication. Addresses and ports in the IP and UDP headers do
+     * not necessarily belong to a media flow the target saw. The mediation
+     * function does not insert IP or UDP headers that were unavailable.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.2.
+     *
      * @public
      * @readonly
      */
     readonly pstnIsdnCCContents: OCTET_STRING;
     /**
      * @summary `cCLinkID`.
+     * @description
+     *
+     * Present when more than one CC link is used, for example a multi-party
+     * call as identified in ETSI TS 101 671. Range 0..65535. CC PDU sequence
+     * numbers are shared across links; they are not counted separately.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.4.
+     *
      * @public
      * @readonly
      */
     readonly cCLinkID: OPTIONAL<INTEGER>;
     /**
      * @summary `supplementaryInfo`.
+     * @description
+     *
+     * Present at least on the first CC PDU. On a later PDU, present only when
+     * the information changes during the session. The same information is also
+     * sent as IRI, and it should precede the CC when it is already known. CC
+     * is not delayed to wait for it.
+     *
+     * ETSI TS 102 232-6 V3.5.1 (2023-03), clause 6.3.3 and annex A.
+     *
      * @public
      * @readonly
      */

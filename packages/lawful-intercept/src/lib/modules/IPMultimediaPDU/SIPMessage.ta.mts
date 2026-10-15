@@ -13,7 +13,21 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary SIPMessage
  * @description
- * 
+ *
+ * One intercepted SIP message (IETF RFC 3261) for HI2, together with
+ * the network-layer addresses of that message.
+ *
+ * Every SIP message executed on behalf of the target is subject to
+ * interception (clause 5.2.1). When a telephony application server
+ * translates the called-party address, both the SIP message that
+ * entered that server and the resulting SIP message are reported,
+ * under the CIN of the session (clause 5.2.9). Post-dialled digits
+ * sent in SIP INFO are reported as SIP IRI under the same rule
+ * (clause 5.2.8).
+ *
+ * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5.2.1, 5.2.7, and 5.2.9.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223205/03.22.01_60/ts_10223205v032201p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +46,43 @@ export
 class SIPMessage {
     /**
      * @summary `iPSourceAddress`.
+     * @description
+     *
+     * Source IP address of this SIP message as it was transmitted on
+     * the network layer. It is not replaced by an address of the
+     * signalling server or of any other element. Interception at a
+     * signalling server still reports the address of the sending UE.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly iPSourceAddress: LI_PS_PDU.IPAddress;
     /**
      * @summary `iPDestinationAddress`.
+     * @description
+     *
+     * Destination IP address of this SIP message as it was transmitted
+     * on the network layer. It is not replaced by an address of the
+     * signalling server or of any other element.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly iPDestinationAddress: LI_PS_PDU.IPAddress;
     /**
      * @summary `sIPContent`.
+     * @description
+     *
+     * The SIP message. When this structure is the `iRIOnlySIPMessage`
+     * alternative, the body has been modified or removed for an
+     * IRI-only intercept; SMS redaction is specified in clause 5.2.6.2.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5.2.1 and 5.2.6.
+     *
      * @public
      * @readonly
      */

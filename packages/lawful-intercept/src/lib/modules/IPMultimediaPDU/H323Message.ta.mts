@@ -14,7 +14,22 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary H323Message
  * @description
- * 
+ *
+ * One intercepted H.323 message (ITU-T H.323) for HI2, together with
+ * the network-layer addresses of that message.
+ *
+ * Subject to interception: H.225.0 call signalling, H.245 call
+ * control, H.450.x supplementary-service signalling, and
+ * subscriber-controlled input (activation, deactivation, and
+ * interrogation). H.225.0 RAS is intercepted when those events are
+ * available (clause 5.2.2). Messages of one call share a CIN. A call
+ * is the set of messages associated with one H.225.0 Call ID
+ * (clause 5.3.2). The specification does not define session direction
+ * for H.323 (clause 5.7.2).
+ *
+ * ETSI TS 102 232-5 V3.22.1 (2025-11), clauses 5.2.2, 5.2.7, and 5.3.2.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223205/03.22.01_60/ts_10223205v032201p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,18 +48,42 @@ export
 class H323Message {
     /**
      * @summary `iPSourceAddress`.
+     * @description
+     *
+     * Source IP address of this H.323 message as it was transmitted on
+     * the network layer. It is not replaced by an address of the
+     * signalling server or of any other element.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly iPSourceAddress: LI_PS_PDU.IPAddress;
     /**
      * @summary `iPDestinationAddress`.
+     * @description
+     *
+     * Destination IP address of this H.323 message as it was
+     * transmitted on the network layer. It is not replaced by an
+     * address of the signalling server or of any other element.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.7.
+     *
      * @public
      * @readonly
      */
     readonly iPDestinationAddress: LI_PS_PDU.IPAddress;
     /**
      * @summary `h323Content`.
+     * @description
+     *
+     * The intercepted H.323 PDU. Clause 5.2.2 requires interception of
+     * H.450.x and of subscriber-controlled input, and does not say
+     * which alternative of `H323MessageContent` carries them.
+     *
+     * ETSI TS 102 232-5 V3.22.1 (2025-11), clause 5.2.2.
+     *
      * @public
      * @readonly
      */
