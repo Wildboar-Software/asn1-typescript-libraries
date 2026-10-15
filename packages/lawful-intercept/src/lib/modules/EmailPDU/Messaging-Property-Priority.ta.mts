@@ -6,18 +6,56 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @description
+ *
+ * Priority of a unified-messaging message. Systems often use other scales; low,
+ * medium, high, and private are the common values this specification encodes.
+ * The enumeration is extensible.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ */
 export
 enum _enum_for_Messaging_Property_Priority {
+    /**
+     * Low priority.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     low = 1,
+    /**
+     * Medium priority.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     medium = 2,
+    /**
+     * High priority.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     high = 3,
+    /**
+     * Private priority. The specification lists it with low, medium, and high
+     * and does not define it further.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     private_ = 4,
 }
 
 /**
  * @summary Messaging_Property_Priority
  * @description
- * 
+ *
+ * Priority of a unified-messaging message. Systems often use other scales; low,
+ * medium, high, and private are the common values this specification encodes.
+ * The enumeration is extensible.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +76,12 @@ type Messaging_Property_Priority = _enum_for_Messaging_Property_Priority | ENUME
 
 /**
  * @summary Messaging_Property_Priority_low
+ * @description
+ *
+ * Low priority.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -46,6 +90,12 @@ const Messaging_Property_Priority_low: Messaging_Property_Priority = 1; /* LONG_
 
 /**
  * @summary low
+ * @description
+ *
+ * Low priority.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +104,12 @@ const low: Messaging_Property_Priority = Messaging_Property_Priority_low; /* SHO
 
 /**
  * @summary Messaging_Property_Priority_medium
+ * @description
+ *
+ * Medium priority.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +118,12 @@ const Messaging_Property_Priority_medium: Messaging_Property_Priority = 2; /* LO
 
 /**
  * @summary medium
+ * @description
+ *
+ * Medium priority.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +132,12 @@ const medium: Messaging_Property_Priority = Messaging_Property_Priority_medium; 
 
 /**
  * @summary Messaging_Property_Priority_high
+ * @description
+ *
+ * High priority.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +146,12 @@ const Messaging_Property_Priority_high: Messaging_Property_Priority = 3; /* LONG
 
 /**
  * @summary high
+ * @description
+ *
+ * High priority.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +160,13 @@ const high: Messaging_Property_Priority = Messaging_Property_Priority_high; /* S
 
 /**
  * @summary Messaging_Property_Priority_private_
+ * @description
+ *
+ * Private priority. The specification lists it with low, medium, and high and
+ * does not define it further.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -94,6 +175,13 @@ const Messaging_Property_Priority_private_: Messaging_Property_Priority = 4; /* 
 
 /**
  * @summary private_
+ * @description
+ *
+ * Private priority. The specification lists it with low, medium, and high and
+ * does not define it further.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */

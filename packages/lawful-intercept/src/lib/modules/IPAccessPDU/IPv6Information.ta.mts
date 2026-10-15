@@ -12,6 +12,16 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IPv6Information
  * @description
+ *
+ * Fields from the IPv6 header of the target packet (IETF RFC 8200), as
+ * used by a header report or a summary report (ETSI TS 102 232-3
+ * V3.9.1, clauses 6.2.3.3 and 6.2.4). Each populated value is a copy
+ * of the corresponding octets, in the same byte order.
+ *
+ * On a summary report, populate only the fields that identify the
+ * flow and omit the others (table 4). For IPv6 those are the source,
+ * the destination, the next header, and the flow label
+ * (clause 6.2.4.2).
  * 
  * ### ASN.1 Definition:
  * 
@@ -34,42 +44,81 @@ export
 class IPv6Information {
     /**
      * @summary `trafficClass`.
+     * @description
+     *
+     * Copy of this IPv6 header field (IETF RFC 8200). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly trafficClass: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `flowLabel`.
+     * @description
+     *
+     * Copy of the flow label (IETF RFC 8200). Part of the IPv6 packet-flow
+     * identity (clause 6.2.4.2). Include it on a summary report.
+     *
      * @public
      * @readonly
      */
     readonly flowLabel: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `payloadLength`.
+     * @description
+     *
+     * Copy of the Payload Length field (IETF RFC 8200). Packet-flow byte
+     * counts sum this field across the packets in the summary
+     * (tables 3 and 4, and table 5).
+     *
      * @public
      * @readonly
      */
     readonly payloadLength: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nextHeader`.
+     * @description
+     *
+     * Copy of the Next Header field (IETF RFC 8200). Together with the
+     * addresses, the flow label, and the layer-4 ports, this identifies
+     * a packet flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly nextHeader: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `hopLimit`.
+     * @description
+     *
+     * Copy of this IPv6 header field (IETF RFC 8200). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly hopLimit: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `source`.
+     * @description
+     *
+     * IPv6 source address. Required. It is part of the packet-flow
+     * identity (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly source: OCTET_STRING;
     /**
      * @summary `destination`.
+     * @description
+     *
+     * IPv6 destination address. Required. It is part of the packet-flow
+     * identity (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */

@@ -11,6 +11,11 @@ import { PacketReport, _decode_PacketReport, _encode_PacketReport } from "../IPA
 /**
  * @summary IPIRIPacketReport
  * @description
+ *
+ * Not defined in ETSI TS 102 232-3 V3.9.1. Clause 8 of that edition
+ * (module version14) stops at packet-header and packet-summary IRI in
+ * `IPIRIOnly`. This version20 type has no specification text in the
+ * provided edition.
  * 
  * ### ASN.1 Definition:
  * 
@@ -29,12 +34,20 @@ export
 class IPIRIPacketReport {
     /**
      * @summary `iPIRIPacketReportObjId`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8. See `iPIRIPacketReportObjId`.
+     *
      * @public
      * @readonly
      */
     readonly iPIRIPacketReportObjId: RELATIVE_OID;
     /**
      * @summary `report`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8.
+     *
      * @public
      * @readonly
      */

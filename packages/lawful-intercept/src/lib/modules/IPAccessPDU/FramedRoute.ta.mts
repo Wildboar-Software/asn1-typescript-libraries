@@ -11,6 +11,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary FramedRoute
  * @description
+ *
+ * One framed route installed for the target service (ETSI TS 102 232-3
+ * V3.9.1, clause 8, table 2). `framedRoute` is the RADIUS attribute
+ * value as text, IPv4 or IPv6, and may include a gateway address and
+ * one or more metrics. It shall be filled from the RADIUS value:
+ * Framed-Route (22) or Framed-IPv6-Route (99) (tables A.4 to A.6).
+ * The choice is extensible.
  * 
  * ### ASN.1 Definition:
  * 

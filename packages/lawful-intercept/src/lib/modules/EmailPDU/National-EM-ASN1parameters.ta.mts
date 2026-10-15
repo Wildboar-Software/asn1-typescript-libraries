@@ -13,7 +13,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary National_EM_ASN1parameters
  * @description
- * 
+ *
+ * National email parameters, carried in `EmailIRI` when a country adds ASN.1 of
+ * its own.
+ *
+ * Further national parameters are defined in ASN.1 and inserted after the
+ * extension marker. They apply to the country named by `countryCode`. The
+ * module says this structure is completely defined on a national basis.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +45,13 @@ export
 class National_EM_ASN1parameters {
     /**
      * @summary `countryCode`.
+     * @description
+     *
+     * ISO 3166-1 alpha-2 code of the country whose national parameters, added
+     * after the extension marker, apply. Two characters.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D, citing ISO 3166-1.
+     *
      * @public
      * @readonly
      */

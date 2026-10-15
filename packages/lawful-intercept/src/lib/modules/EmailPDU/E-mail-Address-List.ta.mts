@@ -11,7 +11,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary E_mail_Address_List
  * @description
- * 
+ *
+ * Zero to 1023 email addresses, each a UTF-8 string of 0 to 255 characters.
+ *
+ * Every address is the text intercepted, which may be unqualified. The
+ * mediation function does not rewrite it (requirement E.1.4). From version
+ * 3.13.1 an address may conform to IETF RFC 6530. On a messaging party
+ * identity, this alternative is one or more addresses; IETF RFC 5322, IETF RFC
+ * 5321, IETF RFC 3696, and IETF RFC 6530 define the address form.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 7.2, 7.3, and 8.6.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

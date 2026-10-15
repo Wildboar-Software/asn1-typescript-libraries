@@ -17,6 +17,13 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary TimestampMapping
  * @description
+ *
+ * One received timestamp paired with the normalized timestamp the mapping
+ * function produced from it. Both are delivered to the encapsulation
+ * function.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.2, annex B.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -36,24 +43,60 @@ export
 class TimestampMapping {
     /**
      * @summary `originalTimestamp`.
+     * @description
+     *
+     * Timestamp as received, delivered with the mapped result.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.2.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly originalTimestamp: OriginalTimestamp;
     /**
      * @summary `normalizedTimestamp`.
+     * @description
+     *
+     * Mapped timestamp. When the mapping function is used for timestamps it
+     * shall produce a `QualifiedDateTime` or a `QualifiedMicrosecondDateTime`
+     * as defined in ETSI TS 103 280. Clause 6.2.4 requires
+     * `QualifiedMicrosecondDateTime` on the PS-PDU header; this field is the
+     * mapping-function result.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 6.2.4, clause 7.3.2.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly normalizedTimestamp: ILHITimestamp;
     /**
      * @summary `timeStampQualifier`.
+     * @description
+     *
+     * Optional qualifier imported from `LI-PS-PDU`. Annex B includes the
+     * component. Clause 7.3.2 does not say when it is populated or which
+     * enumerated value applies.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.2, annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStampQualifier: OPTIONAL<LI_PS_PDU.TimeStampQualifier>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V1.1.1 marks the
+     * type extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */

@@ -15,6 +15,12 @@ import { UDPInformation, _decode_UDPInformation, _encode_UDPInformation } from "
 /**
  * @summary ProtocolInformation
  * @description
+ *
+ * Layer-4 header of the reported packet or flow, or an explicit
+ * statement that none is provided (ETSI TS 102 232-3 V3.9.1,
+ * clauses 6.2.3.1 and 6.2.4.1). `none` is the alternative when no
+ * layer-4 information is handed over. Further alternatives may be
+ * added after the extension marker.
  * 
  * ### ASN.1 Definition:
  * 

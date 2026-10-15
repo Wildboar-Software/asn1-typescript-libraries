@@ -9,6 +9,10 @@ import { iPAccessPDUObjId } from "../IPAccessPDU/iPAccessPDUObjId.va.mjs";
 /**
  * @summary iPIRIPacketReportObjId
  * @description
+ *
+ * Arc `iRIPacketReport(4)` under `iPAccessPDUObjId`. ETSI
+ * TS 102 232-3 V3.9.1 clause 8 (module version14) does not define this
+ * arc; that edition stops at `iRIOnly(3)`.
  * 
  * ### ASN.1 Definition:
  * 

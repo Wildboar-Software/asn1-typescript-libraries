@@ -14,6 +14,19 @@ import * as UmtsHI2Operations from "../UmtsHI2Operations/index.mjs";
  * @summary UMTSIRI
  * @description
  * 
+ * UMTS IRI from 3GPP TS 33.108: packet-switched IRI parameters or
+ * `UmtsIRIsContent`, and circuit-switched IRI parameters or
+ * `UmtsCS-IRIsContent`. The whole choice may be commented out when it is
+ * unused. The compiling application chooses the 3GPP release and version of
+ * those modules. GPRS/UMTS/EPS packet-switched details in the TS 102 232 family
+ * are in part 7, which is based on TS 33.108; agreeing to use the HI ports in
+ * this document is also a conforming solution.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.4, clause 4.4.1, annex A,
+ * clause A.3.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

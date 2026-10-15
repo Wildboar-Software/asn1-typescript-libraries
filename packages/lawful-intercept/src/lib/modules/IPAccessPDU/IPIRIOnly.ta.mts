@@ -18,6 +18,19 @@ import { PDSRInformation, _decode_PDSRInformation, _encode_PDSRInformation } fro
 /**
  * @summary IPIRIOnly
  * @description
+ *
+ * IRI for one packet, or for a summary of a packet flow, inside the
+ * target's access session (ETSI TS 102 232-3 V3.9.1, clause 6.2.3 and
+ * clause 6.2.4). Use the same CIN as the other IRI for that session.
+ * Whether a packet is reported here or as CC is outside this
+ * specification (clause 6.2.3.1).
+ *
+ * For a Packet Data Header Report, fill the fields as in table 3 and
+ * leave `pDSRInformation` empty. For a Packet Data Summary Report,
+ * fill them as in table 4 and include `pDSRInformation`. Annex C
+ * allows an IP-header-only variant, and aggregated records taken from
+ * IPFIX. Annex D is an informative guide for TCP and UDP flows; layer 4
+ * is user data unless the CSP itself uses those ports for its service.
  * 
  * ### ASN.1 Definition:
  * 
@@ -40,36 +53,76 @@ export
 class IPIRIOnly {
     /**
      * @summary `iPIRIOnlyObjId`.
+     * @description
+     *
+     * Set to `iPIRIOnlyObjId`, arc `iRIOnly(3)` under the module OID
+     * (clause 8).
+     *
      * @public
      * @readonly
      */
     readonly iPIRIOnlyObjId: RELATIVE_OID;
     /**
      * @summary `iPInformation`.
+     * @description
+     *
+     * IPv4 or IPv6 header information. A header report copies the header
+     * fields (clauses 6.2.3.2 and 6.2.3.3). A summary report copies only
+     * the fields that identify the flow and omits the rest (table 4,
+     * clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly iPInformation: IPInformation;
     /**
      * @summary `protocolInformation`.
+     * @description
+     *
+     * Layer-4 header information, or `none` when none is provided. TCP
+     * uses `TCPInformation`; UDP uses `UDPInformation` (tables 3 and 4).
+     * A summary report includes only the layer-4 fields that identify the
+     * flow. Annex C may exclude layer 4 entirely. Annex D treats ports as
+     * IRI only when the CSP uses them for its own service.
+     *
      * @public
      * @readonly
      */
     readonly protocolInformation: ProtocolInformation;
     /**
      * @summary `iPAggregatedNbrOfPackets`.
+     * @description
+     *
+     * Total packets observed for this flow, when the count is provided.
+     * On a header report the field is optional (table 3). On a summary
+     * report it is the total for the flow (table 4). Annex C uses it for
+     * an aggregated IPFIX-style record.
+     *
      * @public
      * @readonly
      */
     readonly iPAggregatedNbrOfPackets: OPTIONAL<INTEGER>;
     /**
      * @summary `iPAggregatedNbrOfBytes`.
+     * @description
+     *
+     * Bytes observed for this flow, when the count is provided. For IPv4,
+     * sum the Total Length fields (IETF RFC 791). For IPv6, sum the
+     * Payload Length fields (IETF RFC 8200) (tables 3 and 4). This is not
+     * the same byte count as annex D, which counts every layer-3 octet
+     * including TCP retransmissions (clause D.3.9).
+     *
      * @public
      * @readonly
      */
     readonly iPAggregatedNbrOfBytes: OPTIONAL<INTEGER>;
     /**
      * @summary `pDSRInformation`.
+     * @description
+     *
+     * Present for a Packet Data Summary Report, populated as in table 5.
+     * Absent for a Packet Data Header Report (tables 3 and 4).
+     *
      * @public
      * @readonly
      */

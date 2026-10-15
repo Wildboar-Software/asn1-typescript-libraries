@@ -15,6 +15,24 @@ import { MappingInfo, _decode_MappingInfo, _encode_MappingInfo } from "../ILHIPD
 /**
  * @summary ILHIPayload
  * @description
+ *
+ * Additional information the responding LEMF places in a TS 102 232 family
+ * PS-PDU on the Inter LEMF Handover Interface. The encapsulation function
+ * creates it from the interoperability function and, when mapping is used,
+ * from the mapping function. Whether the optional parts are sent is a
+ * bilateral agreement. The mapping function itself is optional, and the
+ * responding LEMF decides whether it is used.
+ *
+ * The PS-PDU header carries the Inter LEMF LIID (clause 6.2.1). That LIID is
+ * not a component of this type. Clause 6 states the header, integrity,
+ * encryption, and transport obligations for the surrounding PS-PDU.
+ *
+ * This module is identified by `{iLHIDomainId ilhiPdu(0) version2(2)}`.
+ * Annex B of V1.1.1 assigns `version1(1)` to the same name.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), clause 5, clause 6, clause 7.1,
+ * clause 7.2, annex B.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -36,30 +54,99 @@ export
 class ILHIPayload {
     /**
      * @summary `iLHIObjId`.
+     * @description
+     *
+     * Object identifier of the ILHI PDU definition in this payload. For this
+     * module that value is `iLHIObjId`, arc `version2(2)`. Annex B of V1.1.1
+     * assigns `version1(1)` under the same name.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iLHIObjId: OBJECT_IDENTIFIER;
     /**
      * @summary `resPayload`.
+     * @description
+     *
+     * Mandatory output of the interoperability function.
+     *
+     * When the CSP delivered a PS-PDU that already follows a TS 102 232 part
+     * in the table below, this is that received PS-PDU. Otherwise the
+     * interoperability function generates a PS-PDU in the part the responding
+     * LEMF chooses from that table. Data held locally in ETSI TS 133 108 form
+     * are formatted as ETSI TS 102 232-7.
+     *
+     * The responding LEMF leads, and the implementation options profiled by
+     * ETSI TS 102 232 parts 2 to 7 are agreed bilaterally by the responding
+     * and requesting LEAs. Clause 8.1 states how the octet string and its
+     * object identifier are set.
+     *
+     * | Service | Applicable specification |
+     * | --- | --- |
+     * | messaging | ETSI TS 102 232-2 |
+     * | fixed or wireless IP access | ETSI TS 102 232-3 |
+     * | Layer 2 | ETSI TS 102 232-4 |
+     * | fixed VoIP telephony | ETSI TS 102 232-5, -6 and/or -7 |
+     * | PSTN/ISDN | ETSI TS 102 232-6 |
+     * | IMS (for example VoLTE, VoWiFi, RCSe) | ETSI TS 102 232-5, -6 and/or -7 |
+     * | CS mobile telephony | ETSI TS 102 232-6 or -7 |
+     * | mobile or wireless IP access (3GPP services) | ETSI TS 102 232-7 |
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.4, clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly resPayload: EncapsulationPayload;
     /**
      * @summary `mappingInfo`.
+     * @description
+     *
+     * Output of the mapping function, passed to the encapsulation function.
+     * Absent when mapping is not used. The responding LEMF decides whether
+     * and how mapping is applied. Mapping a local cell identity to
+     * geographical coordinates is a bilateral agreement and does not change
+     * this workflow.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 3.1, clause 5, clause 7.3.1.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly mappingInfo: OPTIONAL<MappingInfo>;
     /**
      * @summary `originalPayload`.
+     * @description
+     *
+     * Unmodified received data. Present when the interoperability function
+     * had to generate `resPayload` because the CSP delivery was not already a
+     * TS 102 232 PS-PDU, for example a national email interception that does
+     * not use ETSI TS 102 232-2. Clause 7.4 requires this field to be absent
+     * when that received PS-PDU is forwarded unchanged as `resPayload`.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 3.1, clause 7.4.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly originalPayload: OPTIONAL<EncapsulationPayload>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V1.1.1 marks the
+     * type extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */

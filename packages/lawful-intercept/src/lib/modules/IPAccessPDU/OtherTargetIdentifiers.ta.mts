@@ -11,6 +11,16 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary OtherTargetIdentifiers
  * @description
+ *
+ * One further identifier for the target service, beyond the address
+ * already placed in `targetIPAddress` or `additionalIPAddress`
+ * (ETSI TS 102 232-3 V3.9.1, clause 6.2.1). The only alternative
+ * defined in V3.9.1 is `iPAddress`: an IPv4 address with or without a
+ * subnet, or an IPv6 address with or without a prefix, using
+ * `IPAddress` from ETSI TS 102 232-1. The choice is extensible so that
+ * later identifier kinds can be added. See also clause A.5.2.6 for the
+ * RADIUS order of Framed-IPv6-Address, Framed-IPv6-Prefix, and
+ * Delegated-IPv6-Prefix.
  * 
  * ### ASN.1 Definition:
  * 

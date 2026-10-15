@@ -20,6 +20,41 @@ import { AuthenticationType, _decode_AuthenticationType, _encode_AuthenticationT
 /**
  * @summary L2IRIContents
  * @description
+ *
+ * Parameters of one layer 2 IRI event. `accessEventType` selects the event.
+ * Clause 6.1 table 1 assigns that event to an IRI-BEGIN, IRI-END,
+ * IRI-CONTINUE, or IRI-REPORT record. Clause 4.2.3 defines those four record
+ * types. They are carried by ETSI TS 102 232-1 and are not components here.
+ *
+ * Clause 6.2 says which parameters are present depends on the access
+ * technology. Annex A.1.1 is the normative xDSL presence table. Annex A.2
+ * does not add a table for cable. Annex A.3 leaves WLAN for further study.
+ *
+ * In annex A.1.1, M means the sender shall always include the parameter, O
+ * means the sender may include it, and C means the sender shall include it
+ * when the description's condition is met. That condition is usually "if
+ * accessible by the provider". No row is marked O. Some `endReason` rows are
+ * marked M and still say "if accessible". Except for `accessEventType`, the
+ * ASN.1 marks every component OPTIONAL, so a value can omit a parameter that
+ * a table marks M.
+ *
+ * The layer 2 target identity is not an application or network identity
+ * (clause 4.2.1). Identities the access network may use are: a MAC or
+ * virtual MAC (for example the cable-modem MAC identified by the CMTS); the
+ * xDSL line termination, including the NAS IP address and the NAS port (ATM
+ * virtual path, virtual channel, and port); the cable line termination
+ * (CMTS IP address and interface); DHCP option 82 circuit id and remote id
+ * (IETF RFC 3046); a calling party number (ITU-T E.164, network-provided or
+ * user-provided, verified and passed); or another identifier agreed by the
+ * access provider and the LEA. Annex A assigns particular identities to
+ * `targetNetworkID`, `targetCPEID`, `nASPortNumber`, and `callBackNumber`.
+ * It does not define a single encoding that covers the whole of clause 4.2.1.
+ *
+ * Component tags 1, 3, and 4 are unused. `authenticationType` is an
+ * extension addition.
+ *
+ * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 4.2.1, clause 6.2, annex A.1.1.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -63,90 +98,299 @@ export
 class L2IRIContents {
     /**
      * @summary `accessEventType`.
+     * @description
+     *
+     * The IRI event. Mandatory in every annex A.1 record, and the only
+     * component the ASN.1 does not mark OPTIONAL. Clause 6.1 table 1 states
+     * which part-1 IRI record type carries each value.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 6.1, annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly accessEventType: AccessEventType;
     /**
      * @summary `internetAccessType`.
+     * @description
+     *
+     * How the target reaches the Internet Access Service. Conditional on
+     * every annex A.1 record, included when the provider can access it. The
+     * tables give Ethernet, ADSL, cable modem, and LAN as examples. See
+     * `InternetAccessType`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly internetAccessType: OPTIONAL<InternetAccessType>;
     /**
      * @summary `targetNetworkID`.
+     * @description
+     *
+     * UTF-8, 1 to 128 characters. Conditional, included when the provider can
+     * access it.
+     *
+     * For `accessAttempt`, `accessAccept`, `accessReject`, `accessFailed`,
+     * `interimUpdate`, `accessEnd`, `startOfInterceptionWithSessionActive`,
+     * and `endOfInterceptionWithSessionActive`: the MAC address of the target
+     * CPE, further information from network elements that authorized the
+     * layer 2 access (for example NAS information about those elements), or
+     * the target PSTN/ISDN number for dial-up.
+     *
+     * For `startOfInterceptionWithoutNetworkSession`,
+     * `endOfInterceptionWithoutNetworkSession`, and `sessionExpired` the
+     * tables shorten this to the target CPE MAC address, or the PSTN/ISDN
+     * number for dial-up.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetNetworkID: OPTIONAL<UTF8String>;
     /**
      * @summary `targetCPEID`.
+     * @description
+     *
+     * UTF-8, 1 to 128 characters. Secondary identification of the target CPE,
+     * included when the provider can access it. Tables A.1 to A.4 and A.6 to
+     * A.9 give DHCP relay-agent information and a computer name as examples.
+     * Tables A.10 to A.12 say only "secondary identification of the target
+     * CPE".
+     *
+     * Clause 4.2.1 lists DHCP option 82 circuit id and remote id (IETF
+     * RFC 3046) as a target identity. It does not say that those sub-options
+     * are the encoding of this field.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 4.2.1, annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetCPEID: OPTIONAL<UTF8String>;
     /**
      * @summary `targetLocation`.
+     * @description
+     *
+     * UTF-8, 1 to 64 characters. Conditional, included when the provider can
+     * access it. Annex A.1.1 calls it "Location information (to be defined)".
+     * The ASN.1 comment marks the field for further study. This edition does
+     * not define the contents.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly targetLocation: OPTIONAL<UTF8String>;
     /**
      * @summary `nASPortNumber`.
+     * @description
+     *
+     * Integer from 0 to 4294967295. Conditional, included when the provider
+     * can access it. The 32-bit NAS port the target uses for dial-up. The
+     * access provider defines the content and the structure.
+     *
+     * Clause 4.2.1 describes a separate xDSL target identity as the NAS IP
+     * address plus the NAS port, identified by the ATM virtual path, virtual
+     * channel, and port (slot, sub-slot, and port). This edition does not say
+     * that identity is encoded in this integer.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 4.2.1, annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly nASPortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `callBackNumber`.
+     * @description
+     *
+     * UTF-8, 1 to 20 characters. Conditional, included when the provider can
+     * access it. The target PSTN/ISDN number the NAS uses to call back.
+     * Table A.7 states that accessibility condition twice.
+     *
+     * Clause 4.2.1 lists a calling party number (ITU-T E.164) as its own
+     * target identity. This edition does not identify that calling number
+     * with this callback field.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 4.2.1, annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly callBackNumber: OPTIONAL<UTF8String>;
     /**
      * @summary `startTime`.
+     * @description
+     *
+     * `GeneralizedTime`. Annex A.1.1 assigns it as follows.
+     *
+     * - `accessAccept`: mandatory. Start of the session or lease.
+     * - `interimUpdate`: mandatory. Time of the interim update, not of the
+     *   session start.
+     * - `startOfInterceptionWithSessionActive`: conditional. Start of the
+     *   session or lease, if accessible.
+     * - `endOfInterceptionWithSessionActive`: conditional. Start of the
+     *   session or lease. The table adds no further condition.
+     * - `startOfInterceptionWithoutNetworkSession`,
+     *   `endOfInterceptionWithoutNetworkSession`, and `sessionExpired`:
+     *   conditional. Start of the intercept session.
+     *
+     * Not listed for `accessAttempt`, `accessReject`, `accessFailed`, or
+     * `accessEnd`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly startTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `endTime`.
+     * @description
+     *
+     * `GeneralizedTime`. Annex A.1.1 assigns it as follows.
+     *
+     * - `accessEnd`: mandatory. End of the session or lease.
+     * - `endOfInterceptionWithSessionActive`: mandatory. End of the session
+     *   or lease. The table note says the mediation function generates this
+     *   time when the intercept ends.
+     * - `endOfInterceptionWithoutNetworkSession`: mandatory. End of the
+     *   intercept session.
+     * - `sessionExpired`: mandatory. Time the intercept session expired.
+     *
+     * Not listed on the other annex A.1 records.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly endTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `endReason`.
+     * @description
+     *
+     * Why the session ended. See `EndReason`. Annex A.1.1 assigns it as
+     * follows. Where a row is marked M and the text still says "if
+     * accessible", both wordings are in the table.
+     *
+     * - `accessReject`: marked mandatory. Examples are logoff, connection
+     *   loss, and lease expiration, "if accessible".
+     * - `accessFailed`: marked mandatory. The example is time-out, "if
+     *   accessible".
+     * - `accessEnd`: conditional. Examples are logoff, connection loss,
+     *   time-out, and lease expiration, if accessible.
+     * - `endOfInterceptionWithSessionActive`: marked mandatory. Examples are
+     *   logoff, connection loss, and lease expiration, "if accessible".
+     *
+     * Not listed on the other annex A.1 records. Clause 5.2.6 keeps
+     * `connectionTimeout` separate from mediation-function expiry, which is
+     * reported as `sessionExpired`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 5.2.6, annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly endReason: OPTIONAL<EndReason>;
     /**
      * @summary `octetsReceived`.
+     * @description
+     *
+     * Integer from 0 to 18446744073709551615. Conditional, included when the
+     * provider can access it. Octets the target received during the session.
+     * Listed on `accessEnd`, `endOfInterceptionWithSessionActive`,
+     * `endOfInterceptionWithoutNetworkSession`, and `sessionExpired`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly octetsReceived: OPTIONAL<INTEGER>;
     /**
      * @summary `octetsTransmitted`.
+     * @description
+     *
+     * Integer from 0 to 18446744073709551615. Conditional, included when the
+     * provider can access it. Octets the target sent during the session.
+     * Table A.7 says "sent"; the ASN.1 comment says "transmitted". Listed on
+     * the same records as `octetsReceived`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly octetsTransmitted: OPTIONAL<INTEGER>;
     /**
      * @summary `rawAAAData`.
+     * @description
+     *
+     * Unformatted octet string of the raw AAA records as they were
+     * intercepted. Conditional, included when the provider can access it.
+     * Listed on `accessAttempt`, `accessAccept`, `accessReject`,
+     * `accessFailed`, `interimUpdate`, `accessEnd`,
+     * `startOfInterceptionWithSessionActive`, and
+     * `endOfInterceptionWithSessionActive`. Not listed for interception
+     * without a network session, or for `sessionExpired`.
+     *
+ * Annex B describes RADIUS proxy placement when the access provider is
+ * not the IAP. It does not define the encoding of this string. Tables A.10,
+ * A.11, and A.12 do not include this field. Clause 5.2.5 describes a
+ * mediation function that sees copied layer 2 packets and not the session
+ * context.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 5.2.5, annex A.1.1, annex B.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly rawAAAData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `authenticationType`.
+     * @description
+     *
+     * Extension addition. Conditional. Identifies the authentication type so
+     * the LEMF can validate the data. Tables A.10 and A.11 set the value to
+     * `unknown`. See `AuthenticationType`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), annex A.1.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly authenticationType: OPTIONAL<AuthenticationType>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V3.8.1 marks the
+     * sequence extensible. The only named addition is `authenticationType`.
+     * The specification does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */

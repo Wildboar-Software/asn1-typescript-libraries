@@ -19,6 +19,22 @@ import * as UmtsHI2Operations from "../UmtsHI2Operations/index.mjs";
  * @summary CommunicationIdentifier
  * @description
  * 
+ * Network identifier, communications identity number, and delivery country
+ * code. The CIN identifies one communications session. All interception results
+ * for that session share it, and two sessions for the same target identity
+ * through the same operator and the same network element use different CINs.
+ * Each service-specific standard lists the events that open a new session.
+ *
+ * The CIN is mandatory on HI2 and HI3, with one exception: an IRI may omit it
+ * when the IRI is unrelated to any target communication session, is not
+ * associated with any CC, and is not associated with any other IRI. A
+ * target-location message generated while no call is in progress is the
+ * specification's example. Transport of HI1 does not require the CIN.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,30 +59,84 @@ export
 class CommunicationIdentifier {
     /**
      * @summary `networkIdentifier`.
+     * @description
+     *
+     * Operator that performs the intercept, and optionally the mediation
+     * function or the intercepting network element. The network identifier has
+     * to be unique within the CSP.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly networkIdentifier: NetworkIdentifier;
     /**
      * @summary `communicationIdentityNumber`.
+     * @description
+     *
+     * Integer half of the CIN, in 0..4294967295. Required for CC and IRI except
+     * the IRI case in clause 5.2.4, and not required for HI1. When the
+     * service-specific standard permits `cINExtension` and that extension alone
+     * identifies the session, this integer may be absent. Otherwise, where the
+     * extension is used, the CIN is the combination of both fields.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communicationIdentityNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `deliveryCountryCode`.
+     * @description
+     *
+     * Two-letter ISO 3166-1 code for the geographical location of the mediation
+     * function. It is what makes the communication identifier internationally
+     * unique. It should be present when the mediation function and the LEMF are
+     * in different countries.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly deliveryCountryCode: OPTIONAL<PrintableString>;
     /**
      * @summary `cINExtension`.
+     * @description
+     *
+     * Extra correlation values, from the 3GPP UMTS HI2 module, used only where
+     * the service-specific standard permits it. The integer CIN in ETSI TS 101
+     * 671 is not always flexible enough to identify a session. If this
+     * extension is itself a unique session identifier,
+     * `communicationIdentityNumber` need not be present; otherwise the CIN is
+     * the combination.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cINExtension: OPTIONAL<UmtsHI2Operations.CorrelationValues>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

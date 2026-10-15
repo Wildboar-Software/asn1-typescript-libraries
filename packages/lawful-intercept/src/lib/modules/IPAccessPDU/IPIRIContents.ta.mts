@@ -37,6 +37,29 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary IPIRIContents
  * @description
+ *
+ * Attributes of one internet-access IRI event (ETSI TS 102 232-3
+ * V3.9.1, clause 6.2, table 2). A value marked as required is sent
+ * when the IAP has it. An attribute marked `*` in table 2 is sent on
+ * the IRI-REPORT, the IRI-BEGIN, or both. An attribute whose column
+ * is "-" may still be sent on any IRI record when a correct value is
+ * available.
+ *
+ * If national agreement allocates the CIN on `accessAccept` rather
+ * than `accessAttempt`, then `accessAttempt`, `accessReject`, and
+ * `accessFailed` are standalone and are not tied to other IRI or CC
+ * (clause 6.1).
+ *
+ * The address that identifies the target for the rest of the session
+ * is carried in `targetIPAddress`, `additionalIPAddress`, and
+ * `otherTargetIdentifiers` (clause 6.2.1). CC for that address stops
+ * as soon as the address is released (clause 4.2). If a later binding
+ * reuses an address already under intercept for a different user, stop
+ * that intercept and report it. If a session timeout elapses with no
+ * termination event, stop the intercept and report it (clause 4.3.5).
+ *
+ * RADIUS mapping is in annex A, tables A.3 to A.6. DHCP mapping is in
+ * annex B, table B.3 and clauses B.6.3 and B.6.4.
  * 
  * ### ASN.1 Definition:
  * 
@@ -116,162 +139,373 @@ export
 class IPIRIContents {
     /**
      * @summary `accessEventType`.
+     * @description
+     *
+     * Which IRI event this record reports, and therefore which IRI
+     * message is sent (clause 6.1, table 1). Required on every record
+     * when a value is available (table 2).
+     *
      * @public
      * @readonly
      */
     readonly accessEventType: AccessEventType;
     /**
      * @summary `targetUsername`.
+     * @description
+     *
+     * Username or other identification token, in ASCII characters
+     * (clause 8, table 2). Required on every record when available.
+     * RADIUS: User-Name (1) (table A.4). DHCP: option 82 sub-option 2, or
+     * `chaddr` when option 82 is absent. In DHCP this is often a MAC
+     * address or a cable-modem serial number, not a login name
+     * (table B.3, note 1).
+     *
      * @public
      * @readonly
      */
     readonly targetUsername: OCTET_STRING;
     /**
      * @summary `internetAccessType`.
+     * @description
+     *
+     * Access method. The interception function sets a fixed value for the
+     * service (tables A.4 and B.3). Required on every record when
+     * available (table 2).
+     *
      * @public
      * @readonly
      */
     readonly internetAccessType: InternetAccessType;
     /**
      * @summary `iPVersion`.
+     * @description
+     *
+     * IPv4, IPv6, or both. This selects how the address fields below are
+     * filled (clause 6.2.1). Fixed by the interception function
+     * (tables A.4 and B.3). Required on every record when available.
+     *
      * @public
      * @readonly
      */
     readonly iPVersion: IPVersion;
     /**
      * @summary `targetIPAddress`.
+     * @description
+     *
+     * First, or only, target address. For `iPV4` or `iPV4andV6` this is
+     * the first IPv4 address or subnet. For `iPV6` it is the first IPv6
+     * address or prefix (clause 6.2.1). Omit it only when the address is
+     * unknown, which includes some failed logons; send it whenever it is
+     * known (clause 8). Required on every record when available
+     * (table 2).
+     *
+     * RADIUS IPv4: Framed-IP-Address (8) with Framed-IP-Netmask (9).
+     * RADIUS IPv6: Framed-IPv6-Address (168), else Framed-IPv6-Prefix
+     * (97), else Delegated-IPv6-Prefix (123) (clause A.5.2.6, tables A.4
+     * to A.6). If the NAS or a proxy assigns the address, it may appear
+     * only in Accounting-Request Start or Interim-Update (clause A.5.2.1).
+     * DHCP: `yiaddr`, and only once it appears in a DHCPACK. A
+     * DHCPOFFER is only a candidate address (table B.3, note 3).
+     *
      * @public
      * @readonly
      */
     readonly targetIPAddress: OPTIONAL<LI_PS_PDU.IPAddress>;
     /**
      * @summary `targetNetworkID`.
+     * @description
+     *
+     * MAC address of the target CPE for layer-2 access, or the target
+     * PSTN/ISDN number for dial-up (table 2). Sent on the IRI-REPORT, the
+     * IRI-BEGIN, or both. RADIUS: Calling-Station-Id (31). DHCP: `chaddr`
+     * (table B.3). In a cable network that may be the customer's router
+     * or NIC, found by matching option 82 (table B.3, note 4).
+     *
      * @public
      * @readonly
      */
     readonly targetNetworkID: OPTIONAL<UTF8String>;
     /**
      * @summary `targetCPEID`.
+     * @description
+     *
+     * Secondary CPE identity, for example DHCP Relay Agent Information or
+     * a computer name (table 2, clause 8). Sent on the IRI-REPORT, the
+     * IRI-BEGIN, or both. RADIUS does not supply it (table A.4). DHCP:
+     * relay-agent information, which table B.3 marks for further study.
+     * Option 82 is IETF RFC 3046 (clause B.4.2).
+     *
      * @public
      * @readonly
      */
     readonly targetCPEID: OPTIONAL<UTF8String>;
     /**
      * @summary `targetLocation`.
+     * @description
+     *
+     * Free-text location. When the access type is wireless LAN, this
+     * should uniquely identify the access point inside the
+     * service-provider domain (clause 8). New implementations should use
+     * `location` instead (clause 6.2.2). Sent on REPORT and/or BEGIN, and
+     * may be sent on CONTINUE (table 2). RADIUS and DHCP do not supply it
+     * (tables A.4 and B.3).
+     *
      * @public
      * @readonly
      */
     readonly targetLocation: OPTIONAL<UTF8String>;
     /**
      * @summary `pOPPortNumber`.
+     * @description
+     *
+     * POP or NAS port the target uses. The provider defines the content
+     * and structure; include it when the provider can read it (table 2).
+     * Sent on REPORT and/or BEGIN. RADIUS: NAS-Port (5). DHCP: option 82
+     * sub-option 1, the port on which the relay received the message
+     * (table B.3, clause B.4.2).
+     *
      * @public
      * @readonly
      */
     readonly pOPPortNumber: OPTIONAL<INTEGER>;
     /**
      * @summary `callBackNumber`.
+     * @description
+     *
+     * PSTN/ISDN number the NAS uses to call the target back (table 2).
+     * Sent on REPORT and/or BEGIN. RADIUS: Callback-Number (19). Not used
+     * for DHCP (table B.3).
+     *
      * @public
      * @readonly
      */
     readonly callBackNumber: OPTIONAL<UTF8String>;
     /**
      * @summary `startTime`.
+     * @description
+     *
+     * Start of the session or lease (table 2). Sent on REPORT and/or
+     * BEGIN. National agreement chooses the mediation-function clock or
+     * RADIUS Event-Timestamp (55); use Event-Timestamp when the IRI comes
+     * from accounting (clause A.5.2.5). DHCP uses the interception
+     * function clock (table B.3).
+     *
      * @public
      * @readonly
      */
     readonly startTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `endTime`.
+     * @description
+     *
+     * Actual end of the session or lease. Required on the IRI-END when
+     * available (table 2). Same clock choice as `startTime`
+     * (clause A.5.2.5). DHCP uses the interception function clock
+     * (table B.3).
+     *
      * @public
      * @readonly
      */
     readonly endTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `endReason`.
+     * @description
+     *
+     * Why the session ended. Required on the IRI-END when available
+     * (table 2). RADIUS Acct-Terminate-Cause (49) maps as in table A.3.
+     * `leaseExpired` is only for DHCP.
+     *
      * @public
      * @readonly
      */
     readonly endReason: OPTIONAL<EndReason>;
     /**
      * @summary `octetsReceived`.
+     * @description
+     *
+     * Octets the target received during the session. Required on the
+     * IRI-END when available (table 2). RADIUS: Acct-Input-Octets (42)
+     * and Acct-Input-Gigawords (52) (table A.4). DHCP does not supply a
+     * count (table B.3).
+     *
      * @public
      * @readonly
      */
     readonly octetsReceived: OPTIONAL<INTEGER>;
     /**
      * @summary `octetsTransmitted`.
+     * @description
+     *
+     * Octets the target sent during the session. Required on the IRI-END
+     * when available (table 2). RADIUS: Acct-Output-Octets (43) and
+     * Acct-Output-Gigawords (53) (table A.4).
+     *
      * @public
      * @readonly
      */
     readonly octetsTransmitted: OPTIONAL<INTEGER>;
     /**
      * @summary `rawAAAData`.
+     * @description
+     *
+     * Unformatted copy of the intercepted AAA record (table 2). It may be
+     * sent on any IRI record. Vendor-specific RADIUS attributes that are
+     * not mapped to other fields go here (tables A.4 to A.6, note 1). If
+     * national law forbids handing over the password, remove it before
+     * handover (table 2, note 2).
+     *
      * @public
      * @readonly
      */
     readonly rawAAAData: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `expectedEndTime`.
+     * @description
+     *
+     * Predicted end of the session or lease, such as lease expiry
+     * (table 2). Sent on REPORT and/or BEGIN. If interception started from
+     * a binding that carries a session timeout and no termination arrives
+     * by that time, stop the intercept and report it (clause 4.3.5).
+     * DHCP: time of the DHCPACK plus IP Address Lease Time, option 51
+     * (table B.3, clause B.6.3.2). RADIUS does not supply it (table A.4).
+     *
      * @public
      * @readonly
      */
     readonly expectedEndTime: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `pOPPhoneNumber`.
+     * @description
+     *
+     * Telephone number the target dialled to reach the POP (table 2).
+     * Sent on REPORT and/or BEGIN. RADIUS: Called-Station-Id (30). Not
+     * used for DHCP (table B.3).
+     *
      * @public
      * @readonly
      */
     readonly pOPPhoneNumber: OPTIONAL<UTF8String>;
     /**
      * @summary `pOPIdentifier`.
+     * @description
+     *
+     * Identifier or name of the POP (table 2). Sent on REPORT and/or
+     * BEGIN. RADIUS: NAS-Identifier (32), as `printableIDType` when it is
+     * text. Not used for DHCP (table B.3).
+     *
      * @public
      * @readonly
      */
     readonly pOPIdentifier: OPTIONAL<IPIRIIDType>;
     /**
      * @summary `pOPIPAddress`.
+     * @description
+     *
+     * IP address of the POP (table 2). Sent on REPORT and/or BEGIN.
+     * RADIUS: NAS-IP-Address (4) or NAS-IPv6-Address (95). DHCP: `giaddr`,
+     * or the DHCP server address when the server is on the client's
+     * broadcast domain. In a cable network `giaddr` may identify the CMTS
+     * (table B.3, note 2).
+     *
      * @public
      * @readonly
      */
     readonly pOPIPAddress: OPTIONAL<LI_PS_PDU.IPAddress>;
     /**
      * @summary `nationalIPIRIParameters`.
+     * @description
+     *
+     * National parameters for the country in `countryCode` (clause 8).
+     * Table 2 requires them on every IRI record when a value is
+     * available. RADIUS treats the value as fixed by the interception
+     * function; DHCP treats it as inferred (tables A.4 and B.3).
+     *
      * @public
      * @readonly
      */
     readonly nationalIPIRIParameters: OPTIONAL<NationalIPIRIParameters>;
     /**
      * @summary `additionalIPAddress`.
+     * @description
+     *
+     * First, or only, IPv6 address or prefix when `iPVersion` is
+     * `iPV4andV6`. Leave it empty for an IPv4-only or IPv6-only service
+     * (clause 6.2.1). Required on every record when that address exists
+     * (table 2). RADIUS dual-stack: Framed-IPv6-Address (168), else
+     * Framed-IPv6-Prefix (97) (clause A.5.2.6, table A.6). Table B.3 also
+     * lists DHCP `yiaddr` here; the rule in clause 6.2.1 is the IPv6
+     * address of a dual-stack service.
+     *
      * @public
      * @readonly
      */
     readonly additionalIPAddress: OPTIONAL<LI_PS_PDU.IPAddress>;
     /**
      * @summary `authenticationType`.
+     * @description
+     *
+     * Which AAA function served the target, so the LEMF can check the
+     * record (table 2). Sent on REPORT and BEGIN. RADIUS: derived from
+     * the authentication message type (table A.4).
+     *
      * @public
      * @readonly
      */
     readonly authenticationType: OPTIONAL<AuthenticationType>;
     /**
      * @summary `otherTargetIdentifiers`.
+     * @description
+     *
+     * Second and later IPv4 or IPv6 addresses or prefixes when the
+     * service is assigned more than one range (clause 6.2.1). Several
+     * instances may be present (table 2). The choice is extensible for
+     * later kinds of identifier (clause 6.2.1, notes). RADIUS: every
+     * assigned address and prefix not already placed in
+     * `targetIPAddress` or `additionalIPAddress`, including
+     * Delegated-IPv6-Prefix (123) (tables A.4 to A.6, clause A.5.2.6).
+     *
      * @public
      * @readonly
      */
     readonly otherTargetIdentifiers: OPTIONAL<OtherTargetIdentifiers[]>;
     /**
      * @summary `location`.
+     * @description
+     *
+     * Location of the target, using `Location` from ETSI TS 102 232-1.
+     * This meets the location requirement in clause 4.3.2. What can be
+     * reported depends on the access technology, and use of the parameter
+     * is a national agreement (clause 6.2.2). Preferred over
+     * `targetLocation`. Required on every IRI record when available
+     * (table 2).
+     *
      * @public
      * @readonly
      */
     readonly location: OPTIONAL<LI_PS_PDU.Location>;
     /**
      * @summary `pOPPortID`.
+     * @description
+     *
+     * NAS-Port-Id as defined in IETF RFC 2869, filled with the RADIUS
+     * value, attribute 87 (clause 8, tables A.4 to A.6). Table 2 calls
+     * this attribute `pOPPortIdentifier`. Sent on REPORT and/or BEGIN.
+     *
      * @public
      * @readonly
      */
     readonly pOPPortID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `framedRoutes`.
+     * @description
+     *
+     * Every Framed-Route and Framed-IPv6-Route assigned to the service
+     * (table 2, which names the attribute `framedRoute`). Required on
+     * every IRI record when available. RADIUS IPv4: Framed-Route (22).
+     * RADIUS IPv6, and dual-stack: also Framed-IPv6-Route (99)
+     * (tables A.4 to A.6). Each value is the RADIUS attribute text,
+     * including a gateway and metrics when those are present (clause 8).
+     *
      * @public
      * @readonly
      */

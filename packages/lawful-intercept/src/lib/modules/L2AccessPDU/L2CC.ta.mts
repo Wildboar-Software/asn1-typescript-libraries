@@ -13,6 +13,28 @@ import { L2CC_l2CCContents, _decode_L2CC_l2CCContents, _encode_L2CC_l2CCContents
 /**
  * @summary L2CC
  * @description
+ *
+ * HI3 content of communication for one intercepted layer 2 datagram. Clause
+ * 7.1 requires a PDU for every layer 2 datagram sent through the access
+ * provider's network that is addressed to, or sent from, the target's line
+ * termination point. Clause 4.2.2 requires that copy to be bit-exact. Clause
+ * 7.2 states that the CC payload is that copy.
+ *
+ * A layer 2 tunnel may carry several users (clause 5.2.2). Only the stream
+ * for the target's physical line termination point is included. One stream
+ * may be delivered to several LEMFs, or more than once to the same LEMF,
+ * when several interception authorizations apply. If other users remain on
+ * the tunnel after the target session ends, the tunnel stays up (clause 6.1).
+ *
+ * When the LEA asks for truncation, clause 7.3 requires every HI3 datagram
+ * of that interception to use a `truncated*` alternative. The full
+ * octet-string alternatives are not used for that interception.
+ *
+ * The sequence is not extensible. The contents choice is. Handover of this
+ * PDU uses ETSI TS 102 232-1, which carries it as the layer 2 CC alternative.
+ *
+ * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 4.2.2, clause 5.2.2, clause 7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -61,12 +83,28 @@ export
 class L2CC {
     /**
      * @summary `l2CCObjId`.
+     * @description
+     *
+     * Object identifier of the layer 2 CC definition in this PDU. For this
+     * module that value is `l2CCObjId`, arc `cC(2)` under `l2AccessPDUObjId`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly l2CCObjId: RELATIVE_OID;
     /**
      * @summary `l2CCContents`.
+     * @description
+     *
+     * The intercepted datagram, or its truncated copy, labelled by the layer
+     * 2 protocol that carried it. See `L2CC_l2CCContents`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 7.2, clause 7.3.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */

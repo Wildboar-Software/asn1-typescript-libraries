@@ -13,6 +13,15 @@ import * as EpsHI2Operations from "../EpsHI2Operations/index.mjs";
  * @summary EPSIRI
  * @description
  * 
+ * EPS IRI from 3GPP TS 33.108: `IRI-Parameters` or `EpsIRIsContent` from the
+ * EPS HI2 module. May be commented out when unused. The compiling application
+ * chooses the 3GPP release. See clause 4.4.1 for how this header relates to
+ * GPRS/UMTS/EPS handover.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.4.1, annex A, clause A.3.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -1,4 +1,19 @@
 /**
+ * Generic HI2 and HI3 handover PDU for IP delivery, ASN.1 module
+ * `LI-PS-PDU` version 35 (`li-psDomainId`).
+ *
+ * The PS-PDU is the unit handed from the CSP mediation function to the
+ * LEMF. Clause 5 is the header. Clause 6 is the handover, session,
+ * transport, and network behaviour that the TRI payloads implement.
+ * Annex G is payload encryption. Annex J is the integrity-check chain.
+ * Service-specific IRI and CC are choices inside this module; a deployment
+ * that uses one service may omit the others (clause A.3).
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5, clause 6, annex A,
+ * annex G, annex J.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `unknown`

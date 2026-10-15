@@ -6,25 +6,95 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @description
+ *
+ * Disposition of a unified-messaging message, reported as a property of the
+ * event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ */
 export
 enum _enum_for_Messaging_Property_Message_Status {
+    /**
+     * The message status cannot be determined.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     indeterminate = 0,
+    /**
+     * The message expired.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     expired = 1,
+    /**
+     * The message was retrieved.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     retrieved = 2,
+    /**
+     * The message was rejected.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     rejected = 3,
+    /**
+     * The message was deferred.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     deferred = 4,
+    /**
+     * The message was forwarded.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     forwarded = 5,
+    /**
+     * The terminating party did not recognize the message.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     unrecognized = 6,
+    /**
+     * The message did not reach the terminating party.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     unreachable = 7,
+    /**
+     * The message was read.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     read = 8,
+    /**
+     * The message was deleted without being read.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     deleted_without_being_read = 9,
+    /**
+     * The terminating party did not meet the delivery condition.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     delivery_condition_not_met = 10,
 }
 
 /**
  * @summary Messaging_Property_Message_Status
  * @description
- * 
+ *
+ * Disposition of a unified-messaging message, reported as a property of the
+ * event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -52,6 +122,12 @@ type Messaging_Property_Message_Status = _enum_for_Messaging_Property_Message_St
 
 /**
  * @summary Messaging_Property_Message_Status_indeterminate
+ * @description
+ *
+ * The message status cannot be determined.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +136,12 @@ const Messaging_Property_Message_Status_indeterminate: Messaging_Property_Messag
 
 /**
  * @summary indeterminate
+ * @description
+ *
+ * The message status cannot be determined.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +150,12 @@ const indeterminate: Messaging_Property_Message_Status = Messaging_Property_Mess
 
 /**
  * @summary Messaging_Property_Message_Status_expired
+ * @description
+ *
+ * The message expired.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +164,12 @@ const Messaging_Property_Message_Status_expired: Messaging_Property_Message_Stat
 
 /**
  * @summary expired
+ * @description
+ *
+ * The message expired.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +178,12 @@ const expired: Messaging_Property_Message_Status = Messaging_Property_Message_St
 
 /**
  * @summary Messaging_Property_Message_Status_retrieved
+ * @description
+ *
+ * The message was retrieved.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +192,12 @@ const Messaging_Property_Message_Status_retrieved: Messaging_Property_Message_St
 
 /**
  * @summary retrieved
+ * @description
+ *
+ * The message was retrieved.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +206,12 @@ const retrieved: Messaging_Property_Message_Status = Messaging_Property_Message_
 
 /**
  * @summary Messaging_Property_Message_Status_rejected
+ * @description
+ *
+ * The message was rejected.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +220,12 @@ const Messaging_Property_Message_Status_rejected: Messaging_Property_Message_Sta
 
 /**
  * @summary rejected
+ * @description
+ *
+ * The message was rejected.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +234,12 @@ const rejected: Messaging_Property_Message_Status = Messaging_Property_Message_S
 
 /**
  * @summary Messaging_Property_Message_Status_deferred
+ * @description
+ *
+ * The message was deferred.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -124,6 +248,12 @@ const Messaging_Property_Message_Status_deferred: Messaging_Property_Message_Sta
 
 /**
  * @summary deferred
+ * @description
+ *
+ * The message was deferred.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -132,6 +262,12 @@ const deferred: Messaging_Property_Message_Status = Messaging_Property_Message_S
 
 /**
  * @summary Messaging_Property_Message_Status_forwarded
+ * @description
+ *
+ * The message was forwarded.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -140,6 +276,12 @@ const Messaging_Property_Message_Status_forwarded: Messaging_Property_Message_St
 
 /**
  * @summary forwarded
+ * @description
+ *
+ * The message was forwarded.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -148,6 +290,12 @@ const forwarded: Messaging_Property_Message_Status = Messaging_Property_Message_
 
 /**
  * @summary Messaging_Property_Message_Status_unrecognized
+ * @description
+ *
+ * The terminating party did not recognize the message.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -156,6 +304,12 @@ const Messaging_Property_Message_Status_unrecognized: Messaging_Property_Message
 
 /**
  * @summary unrecognized
+ * @description
+ *
+ * The terminating party did not recognize the message.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -164,6 +318,12 @@ const unrecognized: Messaging_Property_Message_Status = Messaging_Property_Messa
 
 /**
  * @summary Messaging_Property_Message_Status_unreachable
+ * @description
+ *
+ * The message did not reach the terminating party.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -172,6 +332,12 @@ const Messaging_Property_Message_Status_unreachable: Messaging_Property_Message_
 
 /**
  * @summary unreachable
+ * @description
+ *
+ * The message did not reach the terminating party.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -180,6 +346,12 @@ const unreachable: Messaging_Property_Message_Status = Messaging_Property_Messag
 
 /**
  * @summary Messaging_Property_Message_Status_read
+ * @description
+ *
+ * The message was read.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -188,6 +360,12 @@ const Messaging_Property_Message_Status_read: Messaging_Property_Message_Status 
 
 /**
  * @summary read
+ * @description
+ *
+ * The message was read.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -196,6 +374,12 @@ const read: Messaging_Property_Message_Status = Messaging_Property_Message_Statu
 
 /**
  * @summary Messaging_Property_Message_Status_deleted_without_being_read
+ * @description
+ *
+ * The message was deleted without being read.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -204,6 +388,12 @@ const Messaging_Property_Message_Status_deleted_without_being_read: Messaging_Pr
 
 /**
  * @summary deleted_without_being_read
+ * @description
+ *
+ * The message was deleted without being read.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -212,6 +402,12 @@ const deleted_without_being_read: Messaging_Property_Message_Status = Messaging_
 
 /**
  * @summary Messaging_Property_Message_Status_delivery_condition_not_met
+ * @description
+ *
+ * The terminating party did not meet the delivery condition.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */
@@ -220,6 +416,12 @@ const Messaging_Property_Message_Status_delivery_condition_not_met: Messaging_Pr
 
 /**
  * @summary delivery_condition_not_met
+ * @description
+ *
+ * The terminating party did not meet the delivery condition.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ *
  * @constant
  * @type {number}
  */

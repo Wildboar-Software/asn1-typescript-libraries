@@ -6,9 +6,37 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_OperatorLeaMessagePriority
+ * @description
+ *
+ * How seriously an operator-to-LEA report affects the intercepted data.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
+ * @enum {number}
+ */
 export
 enum _enum_for_OperatorLeaMessagePriority {
+    /**
+     * An error condition that has an impact on the quality of the intercepted
+     * data.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     error = 1,
+    /**
+     * A condition that will have no direct impact on the quality of the
+     * intercepted data.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     informational = 2,
 }
 
@@ -16,6 +44,12 @@ enum _enum_for_OperatorLeaMessagePriority {
  * @summary OperatorLeaMessagePriority
  * @description
  * 
+ * How seriously an operator-to-LEA report affects the intercepted data.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,6 +72,14 @@ type OperatorLeaMessagePriority = _enum_for_OperatorLeaMessagePriority | ENUMERA
 
 /**
  * @summary OperatorLeaMessagePriority_error
+ * @description
+ *
+ * An error condition that has an impact on the quality of the intercepted data.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -46,6 +88,14 @@ const OperatorLeaMessagePriority_error: OperatorLeaMessagePriority = 1; /* LONG_
 
 /**
  * @summary error
+ * @description
+ *
+ * An error condition that has an impact on the quality of the intercepted data.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -54,6 +104,15 @@ const error: OperatorLeaMessagePriority = OperatorLeaMessagePriority_error; /* S
 
 /**
  * @summary OperatorLeaMessagePriority_informational
+ * @description
+ *
+ * A condition that will have no direct impact on the quality of the intercepted
+ * data.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -62,6 +121,15 @@ const OperatorLeaMessagePriority_informational: OperatorLeaMessagePriority = 2; 
 
 /**
  * @summary informational
+ * @description
+ *
+ * A condition that will have no direct impact on the quality of the intercepted
+ * data.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */

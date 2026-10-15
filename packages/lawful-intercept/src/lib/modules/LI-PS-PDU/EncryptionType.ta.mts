@@ -6,14 +6,87 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_EncryptionType
+ * @description
+ *
+ * Cipher used on `encryptedPayload`. National agreement picks the scheme and
+ * the key management. Annex G fixes the IV for the CBC algorithms: the 32-bit
+ * unsigned header `sequenceNumber`, concatenated four times for a 128-bit IV
+ * and twice for a 64-bit IV. Padding, when the cipher needs it, is all zeros.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
+ * @enum {number}
+ */
 export
 enum _enum_for_EncryptionType {
+    /**
+     * No encryption. Annex G uses this value on the PS-PDU that is DER-encoded
+     * and digested, before the payload octets are encrypted and this field is
+     * set to the real cipher.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     none = 1,
+    /**
+     * An encryption scheme agreed nationally. Annex G does not define an IV for
+     * this value.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     national_option = 2,
+    /**
+     * AES with a 192-bit key in CBC mode. The IV is 128 bits: the header
+     * sequence number concatenated four times.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     aES_192_CBC = 3,
+    /**
+     * AES with a 256-bit key in CBC mode. The IV is 128 bits: the header
+     * sequence number concatenated four times.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     aES_256_CBC = 4,
+    /**
+     * Blowfish with a 192-bit key in CBC mode. The module points at the
+     * Blowfish description published by Schneier. The IV is 64 bits: the header
+     * sequence number concatenated twice.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     blowfish_192_CBC = 5,
+    /**
+     * Blowfish with a 256-bit key in CBC mode. The IV is 64 bits: the header
+     * sequence number concatenated twice.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     blowfish_256_CBC = 6,
+    /**
+     * Triple-DES with a 192-bit key in CBC mode. The IV is 64 bits: the header
+     * sequence number concatenated twice.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     threedes_cbc = 7,
 }
 
@@ -21,6 +94,15 @@ enum _enum_for_EncryptionType {
  * @summary EncryptionType
  * @description
  * 
+ * Cipher used on `encryptedPayload`. National agreement picks the scheme and
+ * the key management. Annex G fixes the IV for the CBC algorithms: the 32-bit
+ * unsigned header `sequenceNumber`, concatenated four times for a 128-bit IV
+ * and twice for a 64-bit IV. Padding, when the cipher needs it, is all zeros.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,6 +133,16 @@ type EncryptionType = _enum_for_EncryptionType | ENUMERATED;
 
 /**
  * @summary EncryptionType_none
+ * @description
+ *
+ * No encryption. Annex G uses this value on the PS-PDU that is DER-encoded and
+ * digested, before the payload octets are encrypted and this field is set to
+ * the real cipher.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +151,16 @@ const EncryptionType_none: EncryptionType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
+ * @description
+ *
+ * No encryption. Annex G uses this value on the PS-PDU that is DER-encoded and
+ * digested, before the payload octets are encrypted and this field is set to
+ * the real cipher.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -67,6 +169,15 @@ const none: EncryptionType = EncryptionType_none; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EncryptionType_national_option
+ * @description
+ *
+ * An encryption scheme agreed nationally. Annex G does not define an IV for
+ * this value.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -75,6 +186,15 @@ const EncryptionType_national_option: EncryptionType = 2; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary national_option
+ * @description
+ *
+ * An encryption scheme agreed nationally. Annex G does not define an IV for
+ * this value.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -83,6 +203,15 @@ const national_option: EncryptionType = EncryptionType_national_option; /* SHORT
 
 /**
  * @summary EncryptionType_aES_192_CBC
+ * @description
+ *
+ * AES with a 192-bit key in CBC mode. The IV is 128 bits: the header sequence
+ * number concatenated four times.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -91,6 +220,15 @@ const EncryptionType_aES_192_CBC: EncryptionType = 3; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary aES_192_CBC
+ * @description
+ *
+ * AES with a 192-bit key in CBC mode. The IV is 128 bits: the header sequence
+ * number concatenated four times.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -99,6 +237,15 @@ const aES_192_CBC: EncryptionType = EncryptionType_aES_192_CBC; /* SHORT_NAMED_E
 
 /**
  * @summary EncryptionType_aES_256_CBC
+ * @description
+ *
+ * AES with a 256-bit key in CBC mode. The IV is 128 bits: the header sequence
+ * number concatenated four times.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -107,6 +254,15 @@ const EncryptionType_aES_256_CBC: EncryptionType = 4; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary aES_256_CBC
+ * @description
+ *
+ * AES with a 256-bit key in CBC mode. The IV is 128 bits: the header sequence
+ * number concatenated four times.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -115,6 +271,16 @@ const aES_256_CBC: EncryptionType = EncryptionType_aES_256_CBC; /* SHORT_NAMED_E
 
 /**
  * @summary EncryptionType_blowfish_192_CBC
+ * @description
+ *
+ * Blowfish with a 192-bit key in CBC mode. The module points at the Blowfish
+ * description published by Schneier. The IV is 64 bits: the header sequence
+ * number concatenated twice.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -123,6 +289,16 @@ const EncryptionType_blowfish_192_CBC: EncryptionType = 5; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary blowfish_192_CBC
+ * @description
+ *
+ * Blowfish with a 192-bit key in CBC mode. The module points at the Blowfish
+ * description published by Schneier. The IV is 64 bits: the header sequence
+ * number concatenated twice.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -131,6 +307,15 @@ const blowfish_192_CBC: EncryptionType = EncryptionType_blowfish_192_CBC; /* SHO
 
 /**
  * @summary EncryptionType_blowfish_256_CBC
+ * @description
+ *
+ * Blowfish with a 256-bit key in CBC mode. The IV is 64 bits: the header
+ * sequence number concatenated twice.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -139,6 +324,15 @@ const EncryptionType_blowfish_256_CBC: EncryptionType = 6; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary blowfish_256_CBC
+ * @description
+ *
+ * Blowfish with a 256-bit key in CBC mode. The IV is 64 bits: the header
+ * sequence number concatenated twice.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -147,6 +341,15 @@ const blowfish_256_CBC: EncryptionType = EncryptionType_blowfish_256_CBC; /* SHO
 
 /**
  * @summary EncryptionType_threedes_cbc
+ * @description
+ *
+ * Triple-DES with a 192-bit key in CBC mode. The IV is 64 bits: the header
+ * sequence number concatenated twice.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -155,6 +358,15 @@ const EncryptionType_threedes_cbc: EncryptionType = 7; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary threedes_cbc
+ * @description
+ *
+ * Triple-DES with a 192-bit key in CBC mode. The IV is 64 bits: the header
+ * sequence number concatenated twice.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */

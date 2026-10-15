@@ -6,15 +6,38 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @description
+ *
+ * A call event related to the unified-messaging system. The only named event is
+ * `callout`. The enumeration is extensible. Table 5 does not list this event as
+ * requiring captured content.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.5.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ */
 export
 enum _enum_for_Messaging_Call_Event {
+    /**
+     * The target instructed the UM system to set up a call with the sender of a
+     * messaging event.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.5.
+     */
     callout = 1,
 }
 
 /**
  * @summary Messaging_Call_Event
  * @description
- * 
+ *
+ * A call event related to the unified-messaging system. The only named event is
+ * `callout`. The enumeration is extensible. Table 5 does not list this event as
+ * requiring captured content.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.5.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,6 +55,13 @@ type Messaging_Call_Event = _enum_for_Messaging_Call_Event | ENUMERATED;
 
 /**
  * @summary Messaging_Call_Event_callout
+ * @description
+ *
+ * The target instructed the UM system to set up a call with the sender of a
+ * messaging event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.5.
+ *
  * @constant
  * @type {number}
  */
@@ -40,6 +70,13 @@ const Messaging_Call_Event_callout: Messaging_Call_Event = 1; /* LONG_NAMED_ENUM
 
 /**
  * @summary callout
+ * @description
+ *
+ * The target instructed the UM system to set up a call with the sender of a
+ * messaging event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.5.
+ *
  * @constant
  * @type {number}
  */

@@ -12,6 +12,15 @@ import * as TS33128Payloads from "../TS33128Payloads/index.mjs";
  * @summary HI4Payload
  * @description
  * 
+ * One HI4 notification. HI4 is defined by 3GPP from Release 15 and the
+ * notification is `LINotificationPayload` from 3GPP TS 33.128. The PS-PDU
+ * carries a sequence of these values. Service-specific transport for TS 33.128
+ * services is in ETSI TS 102 232-7.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.6, clause 5.2.8.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

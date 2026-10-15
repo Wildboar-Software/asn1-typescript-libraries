@@ -11,6 +11,11 @@ import { PacketReportSummary, _decode_PacketReportSummary, _encode_PacketReportS
 /**
  * @summary PacketReport
  * @description
+ *
+ * Not defined in ETSI TS 102 232-3 V3.9.1. Clause 8 of that edition
+ * (module version14) stops at packet-header and packet-summary IRI in
+ * `IPIRIOnly`. This version20 type has no specification text in the
+ * provided edition.
  * 
  * ### ASN.1 Definition:
  * 

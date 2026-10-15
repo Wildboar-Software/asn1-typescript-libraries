@@ -17,7 +17,14 @@ import { Messaging_Call_Event, _decode_Messaging_Call_Event, _encode_Messaging_C
 /**
  * @summary Messaging_Event_Category
  * @description
- * 
+ *
+ * Which family of unified-messaging operation a `MessagingIRI` reports. The UM
+ * system's own event is translated into one of these alternatives. The choice
+ * is extensible.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.0 to 8.5.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,9 +40,32 @@ import { Messaging_Call_Event, _decode_Messaging_Call_Event, _encode_Messaging_C
  */
 export
 type Messaging_Event_Category =
+    /**
+     * A message was manipulated in the UM system: deposit, retrieve, delete,
+     * save, slamdown, calendar, or contact. Clause 8.2.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.2.
+     */
     { message: Messaging_Event } /* CHOICE_ALT_ROOT */
+    /**
+     * An operation on the target's message box, including login, greeting, PIN,
+     * and notification settings. Clause 8.3.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     | { message_box: Messaging_Box_Event } /* CHOICE_ALT_ROOT */
+    /**
+     * A notification was sent to the target. Clause 8.4.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.4.
+     */
     | { message_notification: Messaging_Notification_Event } /* CHOICE_ALT_ROOT */
+    /**
+     * A call event related to the messaging system. The only named event is
+     * `callout`. Clause 8.5.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.5.
+     */
     | { call: Messaging_Call_Event } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

@@ -14,6 +14,18 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary IPIRIIDType
  * @description
+ *
+ * An identifier for a point of presence, carried in `pOPIdentifier`
+ * (ETSI TS 102 232-3 V3.9.1, clause 8, table 2).
+ *
+ * `printableIDType` is a printable identity such as a RADIUS username
+ * or a telephone number. RADIUS NAS-Identifier (32) is this kind of
+ * value (table A.4).
+ *
+ * `macAddressType` is a MAC address in the raw 6-octet form of IETF
+ * RFC 2132.
+ *
+ * `ipAddressType` is an IP address. The choice is extensible.
  * 
  * ### ASN.1 Definition:
  * 

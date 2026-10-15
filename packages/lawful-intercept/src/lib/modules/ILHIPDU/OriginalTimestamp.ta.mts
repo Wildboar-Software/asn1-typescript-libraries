@@ -13,6 +13,18 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary OriginalTimestamp
  * @description
+ *
+ * Timestamp as received, kept beside the normalized value. `timeStamp` is a
+ * `GeneralizedTime`. `microSecondTimeStamp` is the microsecond timestamp
+ * imported from `LI-PS-PDU`. V1.1.1 does not say which alternative to choose.
+ *
+ * `otherTimeStamp` is an extension addition. Annex B of V1.1.1 does not
+ * define it. The comment in this module's ASN.1 says it contains a value
+ * when the received timestamp cannot be placed in `timeStamp` or
+ * `microSecondTimeStamp`.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.2, annex B.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 

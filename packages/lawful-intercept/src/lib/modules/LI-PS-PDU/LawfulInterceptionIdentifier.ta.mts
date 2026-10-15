@@ -11,6 +11,18 @@ import * as Common_Parameters from "../Common-Parameters/index.mjs";
  * @summary LawfulInterceptionIdentifier
  * @description
  * 
+ * The LIID from ETSI TS 103 280, under the name this module used before that
+ * import replaced the ETSI TS 101 671 definition. TS 102 232-1 defines the
+ * field by reference to TS 103 280, clause 6, and does not repeat the LIID
+ * format. See `authorizationCountryCode` for the country that makes a
+ * nationally unique LIID internationally unique. A CIN-reset sent after a full
+ * loss of CIN state sets the LIID to a single "-" (ASCII 45). A CIN-reset for
+ * one LIID uses that LIID.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.2, clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

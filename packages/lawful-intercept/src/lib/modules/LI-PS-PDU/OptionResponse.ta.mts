@@ -13,6 +13,19 @@ import { Option, _decode_Option, _encode_Option } from "../LI-PS-PDU/Option.ta.m
  * @summary OptionResponse
  * @description
  * 
+ * Answer to `optionRequest`. It uses the same sequence number as the request it
+ * answers. It contains only a subset of the options that were requested.
+ * Negotiation completes only after each side has both sent and received
+ * `optionComplete`. Until then, accepted options are not used. After that,
+ * further option messages are not used, and an option that was not successfully
+ * negotiated may be ignored or may cause the connection to be terminated.
+ * Support for the mechanism, for particular options, the overall timeout, and
+ * what to do if negotiation fails are agreed by the CSP and the LEA.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.3.5, annex I.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -30,18 +43,45 @@ export
 class OptionResponse {
     /**
      * @summary `acceptedOptions`.
+     * @description
+     *
+     * Requested options this endpoint implements and will enable once
+     * negotiation has completed.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.3.5.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly acceptedOptions: Option[];
     /**
      * @summary `declinedOptions`.
+     * @description
+     *
+     * Requested options this endpoint recognizes from the specification and
+     * does not implement. A requested option that appears in neither list is
+     * one this endpoint's version of the specification does not define.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.3.5.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly declinedOptions: Option[];
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.3.5, annex I.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

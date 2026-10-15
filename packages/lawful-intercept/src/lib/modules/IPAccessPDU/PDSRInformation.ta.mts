@@ -12,6 +12,11 @@ import { PDSRSummaryTrigger, _decode_PDSRSummaryTrigger, _encode_PDSRSummaryTrig
 /**
  * @summary PDSRInformation
  * @description
+ *
+ * Why a packet-flow summary was sent, and what was seen since the
+ * previous summary for that flow (ETSI TS 102 232-3 V3.9.1,
+ * clause 6.2.4.4, table 5). Present on a summary report and absent on
+ * a header report (tables 3 and 4). Timestamps include a time zone.
  * 
  * ### ASN.1 Definition:
  * 
@@ -33,30 +38,58 @@ export
 class PDSRInformation {
     /**
      * @summary `summaryTrigger`.
+     * @description
+     *
+     * Why this summary was generated: start of flow, timer, packet count,
+     * byte count, or end of flow (clause 6.2.4.3, table 5).
+     *
      * @public
      * @readonly
      */
     readonly summaryTrigger: PDSRSummaryTrigger;
     /**
      * @summary `firstPacketTimestamp`.
+     * @description
+     *
+     * Timestamp of the first packet of this flow since the previous
+     * summary for the flow. Include a time zone (table 5).
+     *
      * @public
      * @readonly
      */
     readonly firstPacketTimestamp: GeneralizedTime;
     /**
      * @summary `lastPacketTimestamp`.
+     * @description
+     *
+     * Timestamp of the last packet of this flow before this summary was
+     * created. Include a time zone (table 5).
+     *
      * @public
      * @readonly
      */
     readonly lastPacketTimestamp: GeneralizedTime;
     /**
      * @summary `packetCount`.
+     * @description
+     *
+     * Packets seen in this flow since the previous summary (table 5).
+     * This interval count is separate from
+     * `iPAggregatedNbrOfPackets`, which table 4 describes as the total
+     * observed for the flow.
+     *
      * @public
      * @readonly
      */
     readonly packetCount: INTEGER;
     /**
      * @summary `byteCount`.
+     * @description
+     *
+     * Bytes summed across packets of this flow since the previous
+     * summary (table 5). IPv4 sums Total Length (IETF RFC 791). IPv6 sums
+     * Payload Length (IETF RFC 8200).
+     *
      * @public
      * @readonly
      */

@@ -13,6 +13,28 @@ import { Option, _decode_Option, _encode_Option } from "../LI-PS-PDU/Option.ta.m
  * @summary OptionRequest
  * @description
  * 
+ * Request for session and transport options, sent as TRI. Only the delivery
+ * function opens negotiation, after the connection is up. Either endpoint may
+ * then request options from its peer. A later request from the same endpoint
+ * replaces the options it had requested in this negotiation. At most one
+ * request from an endpoint is outstanding. There is no renegotiation in the
+ * same session-layer session.
+ *
+ * The sequence number increases for each `optionRequest` or `optionComplete`
+ * that an endpoint sends on that transport connection. Those numbers are
+ * independent of other TRI classes and independent between the delivery
+ * function and the LGW. The delivery function should send a keep-alive as the
+ * next message, so that an LGW which ignores the request and answers only the
+ * keep-alive can be detected; negotiation then stops. Keep-alive is mandatory
+ * when option negotiation is required. Endpoints process TRI in arrival order.
+ * Messages other than the negotiation exchange, received before the endpoint
+ * considers negotiation complete, cause the connection to be terminated. Annex
+ * I shows example exchanges.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.3.5, annex I.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +51,30 @@ export
 class OptionRequest {
     /**
      * @summary `requestedOptions`.
+     * @description
+     *
+     * Options this endpoint wants its peer to provide. An empty sequence is a
+     * legal request: the sender is opening negotiation without asking for
+     * anything, so the peer can request options of its own.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.3.5.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly requestedOptions: Option[];
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.3.5, annex I.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

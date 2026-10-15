@@ -15,6 +15,11 @@ import { PacketReportTrigger, _decode_PacketReportTrigger, _encode_PacketReportT
 /**
  * @summary PacketReportSummary
  * @description
+ *
+ * Not defined in ETSI TS 102 232-3 V3.9.1. Clause 8 of that edition
+ * (module version14) stops at packet-header and packet-summary IRI in
+ * `IPIRIOnly`. This version20 type has no specification text in the
+ * provided edition.
  * 
  * ### ASN.1 Definition:
  * 
@@ -38,42 +43,70 @@ export
 class PacketReportSummary {
     /**
      * @summary `header`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8.
+     *
      * @public
      * @readonly
      */
     readonly header: OCTET_STRING;
     /**
      * @summary `indications`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8.
+     *
      * @public
      * @readonly
      */
     readonly indications: PacketReportIndications;
     /**
      * @summary `trigger`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8.
+     *
      * @public
      * @readonly
      */
     readonly trigger: PacketReportTrigger;
     /**
      * @summary `packetCount`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8.
+     *
      * @public
      * @readonly
      */
     readonly packetCount: OPTIONAL<INTEGER>;
     /**
      * @summary `byteCount`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8.
+     *
      * @public
      * @readonly
      */
     readonly byteCount: OPTIONAL<INTEGER>;
     /**
      * @summary `firstTimestamp`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8.
+     *
      * @public
      * @readonly
      */
     readonly firstTimestamp: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `lastTimestamp`.
+     * @description
+     *
+     * Not described in V3.9.1 clause 8.
+     *
      * @public
      * @readonly
      */

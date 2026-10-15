@@ -1,4 +1,16 @@
 /**
+ * Layer 2 lawful interception for an access provider that has layer 2
+ * session information and is not required to have layer 3 information.
+ * Handover uses ETSI TS 102 232-1. Layer 3 interception is ETSI
+ * TS 102 232-3. This part does not apply to the packet-switched domain of
+ * GSM/UMTS networks (3GPP TS 23.060).
+ *
+ * `L2IRI` is HI2. `L2CC` is HI3. `L2IRIOnly` is the IRI-only PDU. The prose
+ * of V3.8.1 describes the first two. It does not describe `L2IRIOnly`.
+ *
+ * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 1, clause 6, clause 7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+ *
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `undefined`, `unknown`

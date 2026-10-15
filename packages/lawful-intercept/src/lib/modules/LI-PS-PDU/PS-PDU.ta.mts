@@ -15,6 +15,19 @@ import { Payload, _decode_Payload, _encode_Payload } from "../LI-PS-PDU/Payload.
  * @summary PS_PDU
  * @description
  * 
+ * One handover PDU from the CSP mediation function to the LEMF on HI2 or HI3.
+ * The handover manager attaches the header, then assigns the PDU to a delivery
+ * function. On the wire the message is binary compatible with BER.
+ *
+ * When payload encryption is used, the integrity digest is taken over a DER
+ * encoding of this PDU while `encryptionType` is still `none`. Annex G then
+ * encrypts the payload and DER-encodes the PDU again.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.1, clause 5.3, clause 6.2.1,
+ * annex G.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +44,30 @@ export
 class PS_PDU {
     /**
      * @summary `pSHeader`.
+     * @description
+     *
+     * Identifies the intercept, orders the PDU, and timestamps it. Clause 5 is
+     * mandatory for HI2 and HI3 except where that clause says otherwise.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.1, clause 5.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly pSHeader: PSHeader;
     /**
      * @summary `payload`.
+     * @description
+     *
+     * IRI, CC, transport-related information, an HI1 or HI4 notification,
+     * inter-LEMF handover, or an encrypted form of one of those.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.8.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

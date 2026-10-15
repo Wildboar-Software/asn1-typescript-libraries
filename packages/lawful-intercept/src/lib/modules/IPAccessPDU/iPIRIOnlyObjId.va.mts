@@ -9,6 +9,10 @@ import { iPAccessPDUObjId } from "../IPAccessPDU/iPAccessPDUObjId.va.mjs";
 /**
  * @summary iPIRIOnlyObjId
  * @description
+ *
+ * Identifies an `IPIRIOnly` payload (packet-header or packet-summary
+ * IRI). Arc `iRIOnly(3)` under `iPAccessPDUObjId`
+ * (ETSI TS 102 232-3 V3.9.1, clause 8).
  * 
  * ### ASN.1 Definition:
  * 

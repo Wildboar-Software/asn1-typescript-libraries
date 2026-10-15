@@ -32,7 +32,28 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary EmailIRI
  * @description
- * 
+ *
+ * HI2 intercept-related information for one email event.
+ *
+ * Each message sent, received, or downloaded in a client/server session is a
+ * separate event, with its own IRI and, when required, content. There is no
+ * separate IRI for a send, receive, or download attempt. Optional information
+ * is included when the implementation and national regulations make it
+ * available. An IRI may contain empty fields, or zero, when the messaging
+ * service does not have that attribute.
+ *
+ * Handover of intercepted email uses `EmailIRI` and `EmailCC`. Subject to
+ * national agreement, that may be overridden and the messaging structures used
+ * instead.
+ *
+ * Clauses 6.2.3, 6.3.3, and 6.4.3 list the attributes that may appear on send,
+ * receive, and download IRI: server and client addresses and ports, protocol,
+ * sender, recipient list, total recipient count, octet counts, message
+ * identifier, and status. `aAAInformation` is listed for send and download.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 4.2, 6, and 7.0.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -85,108 +106,315 @@ export
 class EmailIRI {
     /**
      * @summary `emailIRIObjId`.
+     * @description
+     *
+     * Set to `emailIRIObjId`, `{emailPDUObjId iRI(1)}`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 6 and annex D.
+     *
      * @public
      * @readonly
      */
     readonly emailIRIObjId: RELATIVE_OID;
     /**
      * @summary `eventType`.
+     * @description
+     *
+     * Which point in the email transfer this IRI reports. Send, receive, and
+     * download each have their own information rules in clause 6. Login,
+     * logoff, partial download, and upload are specified in annexes A to C.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 6 and annexes A to C.
+     *
      * @public
      * @readonly
      */
     readonly eventType: E_mail_Event;
     /**
      * @summary `client_Address`.
+     * @description
+     *
+     * Layer-3 address of the email client, when available. Included to meet
+     * requirement E.1.7.
+     *
+     * SMTP (table A.1): source IP address of the `HELO` or `MAIL FROM` message.
+     * POP3 (table B.1): source IP address of the password or `APOP` message.
+     * Annexes C and H do not define an equivalent mapping for IMAP4 or webmail.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.2.3, 6.3.3, 6.4.3, and 7,
+     * and annexes A and B.
+     *
      * @public
      * @readonly
      */
     readonly client_Address: OPTIONAL<LI_PS_PDU.IPAddress>;
     /**
      * @summary `server_Address`.
+     * @description
+     *
+     * Layer-3 address of the email server, when available. Included to meet
+     * requirement E.1.7.
+     *
+     * SMTP (table A.1): destination IP address of the `HELO` or `MAIL FROM`
+     * message. POP3 (table B.1): destination IP address of the password or
+     * `APOP` message. Annexes C and H do not define an equivalent mapping for
+     * IMAP4 or webmail.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.2.3, 6.3.3, 6.4.3, and 7,
+     * and annexes A and B.
+     *
      * @public
      * @readonly
      */
     readonly server_Address: OPTIONAL<LI_PS_PDU.IPAddress>;
     /**
      * @summary `client_Port`.
+     * @description
+     *
+     * Layer-4 port of the client, when available. Clause 7.8 leaves the
+     * client/server distinction to the application annexes.
+     *
+     * SMTP (table A.1): TCP source port of the `HELO` or `MAIL FROM` message.
+     * POP3 (table B.1): TCP source port of the password or `APOP` message.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 7.8 and E.1.7, and annexes A
+     * and B.
+     *
      * @public
      * @readonly
      */
     readonly client_Port: OPTIONAL<INTEGER>;
     /**
      * @summary `server_Port`.
+     * @description
+     *
+     * Layer-4 port of the server, when available.
+     *
+     * SMTP (table A.1): TCP destination port of the `HELO` or `MAIL FROM`
+     * message. POP3 (table B.1): TCP destination port of the password or `APOP`
+     * message.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 7.8 and E.1.7, and annexes A
+     * and B.
+     *
      * @public
      * @readonly
      */
     readonly server_Port: OPTIONAL<INTEGER>;
     /**
      * @summary `server_Octets_Sent`.
+     * @description
+     *
+     * Octets sent by the server for this email. The count has to represent
+     * information transferred for the target message. It is not the byte count
+     * of a whole session in which other messages were not the target's, and it
+     * is not required to equal the length of the RFC 5322 message: setup
+     * traffic or filing overhead may be included. A file-system intercept of a
+     * send may report 0 when the server sent little or nothing back to the
+     * client.
+     *
+     * SMTP (table A.1): octets the server sent during the send operation. POP3
+     * (table B.1): octets the server sent during the download.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.2.3, 6.3.3, 6.4.3, and
+     * 7.9.
+     *
      * @public
      * @readonly
      */
     readonly server_Octets_Sent: INTEGER;
     /**
      * @summary `client_Octets_Sent`.
+     * @description
+     *
+     * Octets sent by the client for this email. Same accuracy rule as
+     * `server_Octets_Sent`. On a receive, a file-system intercept may report 0
+     * when the client sent little or nothing. POP3 table B.1 allows 0 when that
+     * is an accurate picture of a download.
+     *
+     * SMTP (table A.1): octets the client sent during the send operation. POP3
+     * (table B.1): octets the client sent during the download.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.2.3, 6.3.3, 6.4.3, and
+     * 7.9.
+     *
      * @public
      * @readonly
      */
     readonly client_Octets_Sent: INTEGER;
     /**
      * @summary `protocol_ID`.
+     * @description
+     *
+     * Email application or protocol at the intercept point. It selects which
+     * annex supplies the encoding rules. Meets requirement E.1.10.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 7.1.
+     *
      * @public
      * @readonly
      */
     readonly protocol_ID: E_mail_Protocol;
     /**
      * @summary `e_mail_Sender`.
+     * @description
+     *
+     * Intercepted sender address, in the form in which it was seen. It may be
+     * unqualified. The mediation function does not add a missing domain
+     * (requirement E.1.4). Absent when no value is available; if a value is
+     * available it shall be provided. From version 3.13.1 this may be an IETF
+     * RFC 6530 address.
+     *
+     * SMTP (table A.1): the address in `MAIL FROM`. That address routes replies
+     * and can be spoofed without stopping delivery (annex F.2); report that
+     * with `e_mail_Sender_Validity`. POP3 (table B.1): the `From:` address.
+     * POP3 does not interpret it, it is not used by the service, and it may not
+     * equal the SMTP `MAIL FROM` address (annex G.2).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 7.2 and 7.4.
+     *
      * @public
      * @readonly
      */
     readonly e_mail_Sender: OPTIONAL<UTF8String>;
     /**
      * @summary `e_mail_Recipients`.
+     * @description
+     *
+     * Intended recipients that the intercept equipment could see. The list may
+     * be incomplete; SMTP in particular may show only a subset, depending on
+     * where the equipment is placed. Each address is kept as intercepted
+     * (clause 7.2), and from version 3.13.1 may be an IETF RFC 6530 address.
+     * Absent when no value is available; if a value is available it shall be
+     * provided.
+     *
+     * SMTP (table A.1): each address from an `RCPT TO` that the server accepted
+     * for this message. There is no protocol limit on how many `RCPT TO`
+     * commands one message may have (annex F.2). POP3 (table B.1): only the
+     * mailbox address used to log in.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 7.3.
+     *
      * @public
      * @readonly
      */
     readonly e_mail_Recipients: OPTIONAL<E_mail_Address_List>;
     /**
      * @summary `status`.
+     * @description
+     *
+     * Success or failure of the email interaction, to the degree that
+     * information is available (requirement E.1.11). See `E_mail_Status` for
+     * how the termination point of each event is judged.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 7.7.
+     *
      * @public
      * @readonly
      */
     readonly status: E_mail_Status;
     /**
      * @summary `total_Recipient_Count`.
+     * @description
+     *
+     * How many recipients the intercept equipment noticed, including recipients
+     * that could not be written into `e_mail_Recipients`. Requirement E.1.5
+     * uses this so the LEA can see that a resource limit dropped some addresses
+     * (the example is a very large SMTP `RCPT TO` set). Range is 0 to
+     * 4294967295.
+     *
+     * SMTP (table A.1): number of `RCPT TO` commands that received a positive
+     * server response. POP3 (table B.1): always one.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 7.5.
+     *
      * @public
      * @readonly
      */
     readonly total_Recipient_Count: OPTIONAL<INTEGER>;
     /**
      * @summary `message_ID`.
+     * @description
+     *
+     * Application message identifier, when the service has one. Its meaning
+     * depends on the email application and is specified in that application's
+     * annex. Network byte order. Requirement E.1.12: this supports correlation
+     * with email logs.
+     *
+     * SMTP and POP3 (tables A.1 and B.1): the IETF RFC 5322 `Message-ID` or
+     * `Resent-Message-ID` header.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 7.6.
+     *
      * @public
      * @readonly
      */
     readonly message_ID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `nationalParameter`.
+     * @description
+     *
+     * National octet string. The module says the entire value, including byte
+     * order, is defined nationally. Clause 7 does not define the contents.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`EmailIRI`).
+     *
      * @public
      * @readonly
      */
     readonly nationalParameter: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `national_EM_ASN1parameters`.
+     * @description
+     *
+     * National parameters encoded in ASN.1, for the country identified inside
+     * that value. See `National_EM_ASN1parameters`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D.
+     *
      * @public
      * @readonly
      */
     readonly national_EM_ASN1parameters: OPTIONAL<National_EM_ASN1parameters>;
     /**
      * @summary `aAAInformation`.
+     * @description
+     *
+     * Authentication attributes for POP3, IMAP4, or SMTP. Whether the values
+     * may be present depends on national legislation.
+     *
+     * On an application-layer intercept, authentication data from sending or
+     * downloading mail shall be in the IRI (requirement E.1.13). On an
+     * IP-packet intercept the same data is HI3, as the IP packets of the
+     * authentication exchange, and is not mapped into this field (requirement
+     * E.2.3).
+     *
+     * Authenticated SMTP (IETF RFC 4954) carries the username, authentication
+     * method, challenge, response, and result (clause 6.2.3). POP3, and IMAP4
+     * with a clear-text username and password, carry the username, password,
+     * and result (clause 6.4.3). Clause 6.4.3 cites IETF RFC 3493 for POP3;
+     * that RFC is the IPv6 socket API. POP3 is IETF RFC 1939, which annex B
+     * uses.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.2.3, 6.4.3, and 7.10.
+     *
      * @public
      * @readonly
      */
     readonly aAAInformation: OPTIONAL<AAAInformation>;
     /**
      * @summary `e_mail_Sender_Validity`.
+     * @description
+     *
+     * `validated` means the operator has assured the sender address.
+     * `nonvalidated` means the operator does not assure it.
+     *
+     * Annex F.2: an SMTP address can be spoofed, and this field is how that is
+     * signalled. When the user has to authenticate before using the service,
+     * the validity is available.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D and annex F.2.
+     *
      * @public
      * @readonly
      */

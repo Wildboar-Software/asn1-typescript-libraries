@@ -23,7 +23,17 @@ import { Messaging_Property_Requested_Reports, _decode_Messaging_Property_Reques
 /**
  * @summary Messaging_Property
  * @description
- * 
+ *
+ * One extra attribute of a unified-messaging event. A `MessagingIRI` carries a
+ * sequence of these.
+ *
+ * The `voice-to-text` notification type is in table 5 and shall trigger
+ * captured content. The other properties are descriptive and are not themselves
+ * table 5 events.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,18 +59,95 @@ import { Messaging_Property_Requested_Reports, _decode_Messaging_Property_Reques
  */
 export
 type Messaging_Property =
+    /**
+     * PIN used on an event where a PIN applies. 1 to 32 octets. Clause 8.3 uses
+     * a PIN for box lock, PIN change, and PIN security.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     { pincode: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    /**
+     * Priority of a message. Named values are low, medium, high, and private.
+     * Messaging systems often use other priorities; these are the common ones
+     * this specification encodes.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { priority: Messaging_Property_Priority } /* CHOICE_ALT_EXT */
+    /**
+     * Which greeting the box event concerns: general, name, personal, absence,
+     * or number.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { greeting_type: Messaging_Property_Greeting_Type } /* CHOICE_ALT_EXT */
+    /**
+     * Why a notification was sent: empty call, lost call, message-to-email,
+     * reports, message-waiting, voice-to-text, or a new-message alert.
+     * `voice-to-text` shall trigger captured content (table 5).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.7.
+     */
     | { notification_type: Messaging_Property_Notification_Type } /* CHOICE_ALT_EXT */
+    /**
+     * Language preference in the messaging system, as an IETF RFC 4646 language
+     * tag.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7 and annex D.
+     */
     | { language: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * Identifier of a message inside the messaging system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { message_identifier: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * Subject of a message.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { subject: UTF8String } /* CHOICE_ALT_EXT */
+    /**
+     * Application that triggered the event, for example a browser. This is the
+     * product string. The `Messaging_Trigger` value `user-agent` only says that
+     * some application acted for the user.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { user_agent: UTF8String } /* CHOICE_ALT_EXT */
+    /**
+     * Password used on an event where a password applies.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { password: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * Disposition of a message: expired, retrieved, rejected, read, and the
+     * other values of `Messaging_Property_Message_Status`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { message_status: Messaging_Property_Message_Status } /* CHOICE_ALT_EXT */
+    /**
+     * Which reports the originating party requested: delivery, read, both, or
+     * none.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { requested_reports: Messaging_Property_Requested_Reports } /* CHOICE_ALT_EXT */
+    /**
+     * Expiry time related to the event. The example is an undeliverable message
+     * that the system may delete once this time has passed.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { expires: GeneralizedTime } /* CHOICE_ALT_EXT */
+    /**
+     * Date of the message.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     */
     | { message_date: GeneralizedTime } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

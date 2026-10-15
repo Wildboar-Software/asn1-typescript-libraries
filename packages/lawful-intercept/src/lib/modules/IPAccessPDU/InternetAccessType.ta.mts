@@ -23,6 +23,11 @@ enum _enum_for_InternetAccessType {
 /**
  * @summary InternetAccessType
  * @description
+ *
+ * How the target reaches the Internet Access Service
+ * (ETSI TS 102 232-3 V3.9.1, clauses 5.1 and 8). The interception
+ * function supplies a fixed value for the service (tables A.4 and B.3).
+ * Required on every IRI record when a value is available (table 2).
  * 
  * ### ASN.1 Definition:
  * 
@@ -61,6 +66,10 @@ type InternetAccessType = _enum_for_InternetAccessType | ENUMERATED;
 
 /**
  * @summary InternetAccessType_undefined
+ * @description
+ *
+ * No access type is known. Clause 8 gives no further meaning.
+ *
  * @constant
  * @type {number}
  */
@@ -69,6 +78,10 @@ const InternetAccessType_undefined: InternetAccessType = 0; /* LONG_NAMED_ENUMER
 
 /**
  * @summary undefined
+ * @description
+ *
+ * No access type is known (clause 8).
+ *
  * @constant
  * @type {number}
  */
@@ -77,6 +90,13 @@ const undefined: InternetAccessType = InternetAccessType_undefined; /* SHORT_NAM
 
 /**
  * @summary InternetAccessType_dialUp
+ * @description
+ *
+ * IAS over a switched telephony network. The CPE dials a NAS and
+ * typically runs PPP. A user may reach any NAS. The NAS asks RADIUS
+ * to authenticate, or assigns an address from a local pool
+ * (clause 5.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -85,6 +105,10 @@ const InternetAccessType_dialUp: InternetAccessType = 1; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary dialUp
+ * @description
+ *
+ * IAS over the PSTN or ISDN (clause 5.1.1).
+ *
  * @constant
  * @type {number}
  */
@@ -93,6 +117,14 @@ const dialUp: InternetAccessType = InternetAccessType_dialUp; /* SHORT_NAMED_ENU
 
 /**
  * @summary InternetAccessType_xDSL
+ * @description
+ *
+ * IAS over the local loop, commonly PPPoA or PPPoE, with RADIUS and
+ * sometimes DHCP at the gateway router (clause 5.1.2). A PPPoA CPE
+ * router may hold the session while the computer is off, so address
+ * assignment is rare. A static address may be taken from IAP
+ * administration instead of from the network.
+ *
  * @constant
  * @type {number}
  */
@@ -101,6 +133,10 @@ const InternetAccessType_xDSL: InternetAccessType = 2; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary xDSL
+ * @description
+ *
+ * IAS over DSL (clause 5.1.2).
+ *
  * @constant
  * @type {number}
  */
@@ -109,6 +145,13 @@ const xDSL: InternetAccessType = InternetAccessType_xDSL; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary InternetAccessType_cableModem
+ * @description
+ *
+ * IAS over the cable network. Addresses are usually assigned by DHCP
+ * from the cable-modem or computer MAC. The IAP may also authenticate
+ * with RADIUS or a proprietary AAA protocol (clause 5.1.3). Some
+ * networks use PPPoE, as for xDSL.
+ *
  * @constant
  * @type {number}
  */
@@ -117,6 +160,10 @@ const InternetAccessType_cableModem: InternetAccessType = 3; /* LONG_NAMED_ENUME
 
 /**
  * @summary cableModem
+ * @description
+ *
+ * IAS over a cable modem (clause 5.1.3).
+ *
  * @constant
  * @type {number}
  */
@@ -125,6 +172,11 @@ const cableModem: InternetAccessType = InternetAccessType_cableModem; /* SHORT_N
 
 /**
  * @summary InternetAccessType_lAN
+ * @description
+ *
+ * IAS via LAN. Annex B describes DHCP on Ethernet or Token Ring LANs
+ * attached to the DHCP server or reached through a relay agent.
+ *
  * @constant
  * @type {number}
  */
@@ -133,6 +185,10 @@ const InternetAccessType_lAN: InternetAccessType = 4; /* LONG_NAMED_ENUMERATED_V
 
 /**
  * @summary lAN
+ * @description
+ *
+ * IAS via LAN (clause 8).
+ *
  * @constant
  * @type {number}
  */
@@ -141,6 +197,15 @@ const lAN: InternetAccessType = InternetAccessType_lAN; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary InternetAccessType_wirelessLAN
+ * @description
+ *
+ * IEEE 802.11 access using the Wi-Fi interworking profile
+ * (clause 5.1.4). Authentication is often RADIUS. An access point on
+ * a consumer broadband line may hide many stations behind one address,
+ * so intercept before that translation, or tunnel the traffic to a
+ * central point. `targetLocation` should identify the access point
+ * inside the service-provider domain.
+ *
  * @constant
  * @type {number}
  */
@@ -149,6 +214,10 @@ const InternetAccessType_wirelessLAN: InternetAccessType = 5; /* LONG_NAMED_ENUM
 
 /**
  * @summary wirelessLAN
+ * @description
+ *
+ * IAS via IEEE 802.11 wireless LAN (clause 5.1.4).
+ *
  * @constant
  * @type {number}
  */
@@ -157,6 +226,11 @@ const wirelessLAN: InternetAccessType = InternetAccessType_wirelessLAN; /* SHORT
 
 /**
  * @summary InternetAccessType_fTTx
+ * @description
+ *
+ * IAS via fibre. V3.9.1 gives no topology beyond the clause 8
+ * comment.
+ *
  * @constant
  * @type {number}
  */
@@ -165,6 +239,10 @@ const InternetAccessType_fTTx: InternetAccessType = 6; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary fTTx
+ * @description
+ *
+ * IAS via fibre (clause 8).
+ *
  * @constant
  * @type {number}
  */
@@ -173,6 +251,11 @@ const fTTx: InternetAccessType = InternetAccessType_fTTx; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary InternetAccessType_wIMAX_HIPERMAN
+ * @description
+ *
+ * Fixed WiMAX or HIPERMAN access. V3.9.1 gives no topology beyond
+ * the clause 8 comment.
+ *
  * @constant
  * @type {number}
  */
@@ -181,6 +264,10 @@ const InternetAccessType_wIMAX_HIPERMAN: InternetAccessType = 7; /* LONG_NAMED_E
 
 /**
  * @summary wIMAX_HIPERMAN
+ * @description
+ *
+ * IAS via fixed WiMAX or HIPERMAN (clause 8).
+ *
  * @constant
  * @type {number}
  */
@@ -189,6 +276,11 @@ const wIMAX_HIPERMAN: InternetAccessType = InternetAccessType_wIMAX_HIPERMAN; /*
 
 /**
  * @summary InternetAccessType_satellite
+ * @description
+ *
+ * Satellite access, and only when no 3GPP or ETSI mobile LI
+ * specification already covers that access (clause 8).
+ *
  * @constant
  * @type {number}
  */
@@ -197,6 +289,11 @@ const InternetAccessType_satellite: InternetAccessType = 8; /* LONG_NAMED_ENUMER
 
 /**
  * @summary satellite
+ * @description
+ *
+ * Satellite access outside 3GPP and ETSI mobile LI specifications
+ * (clause 8).
+ *
  * @constant
  * @type {number}
  */
@@ -205,6 +302,11 @@ const satellite: InternetAccessType = InternetAccessType_satellite; /* SHORT_NAM
 
 /**
  * @summary InternetAccessType_wireless_other
+ * @description
+ *
+ * Another wireless access, and only when no 3GPP or ETSI mobile LI
+ * specification already covers it (clause 8).
+ *
  * @constant
  * @type {number}
  */
@@ -213,6 +315,11 @@ const InternetAccessType_wireless_other: InternetAccessType = 9; /* LONG_NAMED_E
 
 /**
  * @summary wireless_other
+ * @description
+ *
+ * Other wireless access outside 3GPP and ETSI mobile LI
+ * specifications (clause 8).
+ *
  * @constant
  * @type {number}
  */

@@ -13,6 +13,15 @@ import * as CONFHI2Operations from "../CONFHI2Operations/index.mjs";
  * @summary ConfIRI
  * @description
  * 
+ * IMS conference IRI from 3GPP TS 33.108: conference IRI parameters or
+ * `ConfIRIsContent`. May be commented out when unused. IMS conference
+ * interception is also specified via ETSI TS 102 232-5; clause 4.4.2 allows the
+ * parties to agree to use the HI ports in this document instead.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.4.2, annex A, clause A.3.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

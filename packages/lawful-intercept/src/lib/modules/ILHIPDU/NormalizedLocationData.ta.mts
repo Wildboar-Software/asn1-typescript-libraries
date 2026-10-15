@@ -14,6 +14,13 @@ import { SupplementaryLocationData, _decode_SupplementaryLocationData, _encode_S
 /**
  * @summary NormalizedLocationData
  * @description
+ *
+ * Location after the mapping function has produced WGS84 coordinates.
+ * Clause 7.3.3 requires those coordinates to keep the resolution of the
+ * original.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.3, annex B.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -35,18 +42,45 @@ export
 class NormalizedLocationData {
     /**
      * @summary `geocodedLocationData`.
+     * @description
+     *
+     * WGS84 coordinates from ETSI TS 103 280, in either the decimal or the
+     * angular form. V1.1.1 does not say which form to choose. The resolution
+     * of the original coordinates is kept.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.3.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly geocodedLocationData: GeocodedLocationData;
     /**
      * @summary `supplementaryLocationData`.
+     * @description
+     *
+     * Further information that improves how the location is presented, such
+     * as network-element details (the Annex B example is transmitter
+     * details). Clause 7.3.3 does not define this parameter.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly supplementaryLocationData: OPTIONAL<SupplementaryLocationData>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V1.1.1 marks the
+     * type extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */

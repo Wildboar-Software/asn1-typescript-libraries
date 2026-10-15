@@ -18,6 +18,11 @@ enum _enum_for_EndReason {
 /**
  * @summary EndReason
  * @description
+ *
+ * Why an internet-access session or lease ended. Required on the
+ * IRI-END record when a value is available (ETSI TS 102 232-3 V3.9.1,
+ * table 2). RADIUS Acct-Terminate-Cause maps as in table A.3; any
+ * other mapping is a national matter (clause A.5.2.4).
  * 
  * ### ASN.1 Definition:
  * 
@@ -44,6 +49,13 @@ type EndReason = _enum_for_EndReason | ENUMERATED;
 
 /**
  * @summary EndReason_undefined
+ * @description
+ *
+ * No specific cause, or a RADIUS cause that table A.3 does not treat
+ * as logoff, loss, or timeout: Admin Reset, Admin Reboot, Port Error,
+ * NAS Error, NAS Request, NAS Reboot, Port Unneeded, Port Preempted,
+ * Port Suspended, Service Unavailable, Callback, and User Error.
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +64,11 @@ const EndReason_undefined: EndReason = 0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
+ * @description
+ *
+ * No specific end cause, including the RADIUS causes listed under
+ * `EndReason_undefined` (table A.3).
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +77,12 @@ const undefined: EndReason = EndReason_undefined; /* SHORT_NAMED_ENUMERATED_VALU
 
 /**
  * @summary EndReason_regularLogoff
+ * @description
+ *
+ * The target logged off (clause 8). RADIUS: User Request and Host
+ * Request (table A.3). A PPP session closes with LCP Terminate
+ * (clause 5.2.5); the NAS then reports the stop to accounting.
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +91,10 @@ const EndReason_regularLogoff: EndReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary regularLogoff
+ * @description
+ *
+ * The target logged off (clause 5.2.5, table A.3).
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +103,13 @@ const regularLogoff: EndReason = EndReason_regularLogoff; /* SHORT_NAMED_ENUMERA
 
 /**
  * @summary EndReason_connectionLoss
+ * @description
+ *
+ * The connection was lost (clause 8). RADIUS: Lost Carrier and Lost
+ * Service (table A.3). Clause 5.2.6 includes loss of carrier, link
+ * quality failure, and expiry of an idle timer. There is no user
+ * logoff; the NAS detects the loss.
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +118,10 @@ const EndReason_connectionLoss: EndReason = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionLoss
+ * @description
+ *
+ * The connection was lost (clause 5.2.6, table A.3).
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +130,11 @@ const connectionLoss: EndReason = EndReason_connectionLoss; /* SHORT_NAMED_ENUME
 
 /**
  * @summary EndReason_connectionTimeout
+ * @description
+ *
+ * The connection timed out (clause 8). RADIUS: Idle Timeout and
+ * Session Timeout (table A.3).
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +143,10 @@ const EndReason_connectionTimeout: EndReason = 3; /* LONG_NAMED_ENUMERATED_VALUE
 
 /**
  * @summary connectionTimeout
+ * @description
+ *
+ * The connection timed out (table A.3).
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +155,12 @@ const connectionTimeout: EndReason = EndReason_connectionTimeout; /* SHORT_NAMED
 
 /**
  * @summary EndReason_leaseExpired
+ * @description
+ *
+ * The DHCP lease expired (clause 8). Not used for RADIUS (table A.3,
+ * note). After expiry the server may reassign the address, so
+ * interception of that address stops at once (clauses 4.2 and B.4).
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +169,10 @@ const EndReason_leaseExpired: EndReason = 4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary leaseExpired
+ * @description
+ *
+ * The DHCP lease expired (clause 8, table A.3).
+ *
  * @constant
  * @type {number}
  */

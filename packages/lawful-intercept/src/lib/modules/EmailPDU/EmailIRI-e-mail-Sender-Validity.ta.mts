@@ -6,16 +6,49 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @description
+ *
+ * Whether the operator assures the address in `EmailIRI.e_mail_Sender`.
+ *
+ * Annex F.2: the SMTP `MAIL FROM` address can be spoofed with no loss of
+ * delivery, and this value is how that is signalled. When the user must
+ * authenticate before access, validity is available. The enumeration is
+ * extensible.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), annexes D and F.2.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ */
 export
 enum _enum_for_EmailIRI_e_mail_Sender_Validity {
+    /**
+     * The operator has assured the email sender.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`EmailIRI`).
+     */
     validated = 0,
+    /**
+     * The operator does not assure the email sender.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`EmailIRI`).
+     */
     nonvalidated = 1,
 }
 
 /**
  * @summary EmailIRI_e_mail_Sender_Validity
  * @description
- * 
+ *
+ * Whether the operator assures the address in `EmailIRI.e_mail_Sender`.
+ *
+ * Annex F.2: the SMTP `MAIL FROM` address can be spoofed with no loss of
+ * delivery, and this value is how that is signalled. When the user must
+ * authenticate before access, validity is available. The enumeration is
+ * extensible.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), annexes D and F.2.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,6 +68,12 @@ type EmailIRI_e_mail_Sender_Validity = _enum_for_EmailIRI_e_mail_Sender_Validity
 
 /**
  * @summary EmailIRI_e_mail_Sender_Validity_validated
+ * @description
+ *
+ * The operator has assured the email sender.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`EmailIRI`).
+ *
  * @constant
  * @type {number}
  */
@@ -43,6 +82,12 @@ const EmailIRI_e_mail_Sender_Validity_validated: EmailIRI_e_mail_Sender_Validity
 
 /**
  * @summary validated
+ * @description
+ *
+ * The operator has assured the email sender.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`EmailIRI`).
+ *
  * @constant
  * @type {number}
  */
@@ -51,6 +96,12 @@ const validated: EmailIRI_e_mail_Sender_Validity = EmailIRI_e_mail_Sender_Validi
 
 /**
  * @summary EmailIRI_e_mail_Sender_Validity_nonvalidated
+ * @description
+ *
+ * The operator does not assure the email sender.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`EmailIRI`).
+ *
  * @constant
  * @type {number}
  */
@@ -59,6 +110,12 @@ const EmailIRI_e_mail_Sender_Validity_nonvalidated: EmailIRI_e_mail_Sender_Valid
 
 /**
  * @summary nonvalidated
+ * @description
+ *
+ * The operator does not assure the email sender.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`EmailIRI`).
+ *
  * @constant
  * @type {number}
  */

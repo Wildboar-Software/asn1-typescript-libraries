@@ -21,6 +21,20 @@ import { IPAddress_iP_assignment, _decode_IPAddress_iP_assignment, _encode_IPAdd
  * @summary IPAddress
  * @description
  * 
+ * IP address copied from ETSI TS 101 671 into this module. The module says this
+ * type should not be used in future change requests, and that a parameter from
+ * ETSI TS 103 280 should be used instead. The coding rules below still apply
+ * when this type is used.
+ *
+ * `iPv6PrefixLength` is the length of the prefix the CSP delegated to the
+ * subscriber and is mandatory when `iP-value` is an IPv6 binary address. The
+ * module's example is 60 for `2001:db8:0:85a3::ac1f:8001/60`. `iPv4SubnetMask`
+ * is the mask applied to an IPv4 value.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -67,36 +81,93 @@ export
 class IPAddress {
     /**
      * @summary `iP_type`.
+     * @description
+     *
+     * IPv4 or IPv6. The module gives no further coding for either name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_type: IPAddress_iP_type;
     /**
      * @summary `iP_value`.
+     * @description
+     *
+     * Binary address (4 to 16 octets) or text (7 to 45 characters). A binary
+     * IPv6 value takes its prefix length from `iPv6PrefixLength`, which is then
+     * mandatory. A binary IPv4 value takes its mask from `iPv4SubnetMask`. Text
+     * may be one address or, for IPv6, a prefix of a target-side subnetwork
+     * and, for IPv4, an address or `address/netmask`.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_value: IP_value;
     /**
      * @summary `iP_assignment`.
+     * @description
+     *
+     * `static` reports a static address. `dynamic` reports a dynamically
+     * allocated address. `notKnown` reports an address that is neither.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iP_assignment: OPTIONAL<IPAddress_iP_assignment>;
     /**
      * @summary `iPv6PrefixLength`.
+     * @description
+     *
+     * Length of the prefix the CSP delegated to the subscriber, from 1 to 128.
+     * Mandatory when the address is an IPv6 binary value. The module's example
+     * is 60 for `2001:db8:0:85a3::ac1f:8001/60`.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iPv6PrefixLength: OPTIONAL<INTEGER>;
     /**
      * @summary `iPv4SubnetMask`.
+     * @description
+     *
+     * Four octets. Mask applied to an IPv4 address, as a binary value. The
+     * module's example is `ff ff ff f8`, the dotted-decimal mask
+     * 255.255.255.248, a /29 prefix.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iPv4SubnetMask: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

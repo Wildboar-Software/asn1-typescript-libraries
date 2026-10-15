@@ -13,6 +13,19 @@ import { L2ProtocolInformation, _decode_L2ProtocolInformation, _encode_L2Protoco
 /**
  * @summary L2IRIOnly
  * @description
+ *
+ * IRI-only layer 2 PDU. The ASN.1 section heading is "Intercept-related
+ * information for IRI-Only intercepts". Clauses 6 and 7 and annex A do not
+ * describe this type, `L2ProtocolInformation`, or the two aggregated
+ * counters. The only semantics in this edition are the component names and
+ * the protocol comments on `L2ProtocolInformation`.
+ *
+ * Handover uses ETSI TS 102 232-1, which carries this PDU as the layer 2
+ * IRI-only alternative. The sequence is extensible. V3.8.1 names no
+ * extension additions.
+ *
+ * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -33,30 +46,74 @@ export
 class L2IRIOnly {
     /**
      * @summary `l2IRIOnlyObjId`.
+     * @description
+     *
+     * Object identifier of the layer 2 IRI-only definition in this PDU. For
+     * this module that value is `l2IRIOnlyObjId`, arc `iRIOnly(3)` under
+     * `l2AccessPDUObjId`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly l2IRIOnlyObjId: RELATIVE_OID;
     /**
      * @summary `l2protocolInformation`.
+     * @description
+     *
+     * Layer 2 protocol this IRI-only record refers to. The present document
+     * does not say when a value is selected. The enumeration comments match
+     * the non-truncated `L2CC` alternatives, plus `undefined`. See
+     * `L2ProtocolInformation`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly l2protocolInformation: L2ProtocolInformation;
     /**
      * @summary `l2AggregatedNbrOfPackets`.
+     * @description
+     *
+     * Optional integer. V3.8.1 does not say when it is present, what it
+     * counts, or over what interval. The ASN.1 does not constrain the range.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly l2AggregatedNbrOfPackets: OPTIONAL<INTEGER>;
     /**
      * @summary `l2AggregatedNbrOfBytes`.
+     * @description
+     *
+     * Optional integer. V3.8.1 does not say when it is present, what it
+     * counts, or over what interval. The ASN.1 does not constrain the range.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly l2AggregatedNbrOfBytes: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V3.8.1 marks the
+     * sequence extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */

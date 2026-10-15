@@ -40,6 +40,28 @@ import * as TS101909202 from "../TS101909202/index.mjs";
  * @summary IRIContents
  * @description
  * 
+ * Service-specific IRI carried by one IRI payload. Which alternative is in use
+ * is the interception profile (clause 5.2.9). If a deployment uses only one
+ * service, unused alternatives may be commented out of the module together with
+ * the unused IMPORTS (clause A.3). Context tag 0 was deprecated in version 15
+ * (V3.3.1, 2013-02). Tags 12 and 13 were deprecated in version 32 (V3.24.1,
+ * 2021-07).
+ *
+ * `emailIRI` and `messagingIRI` are messaging IRI from ETSI TS 102 232-2.
+ * `iPIRI` and `iPIRIOnly` are IP-access IRI from part 3; annex D discusses
+ * IRI-only interception for IP access. `uMTSIRI`, `ePSIRI`, `confIRI`,
+ * `proseIRI`, and `gcseIRI` select the 3GPP TS 33.108 HI2 family (see clause
+ * 4.4). `eTSI671IRI` is ETSI TS 101 671 HI2. `l2IRI` and `l2IRIOnly` are layer
+ * 2 from part 4. `tARGETACTIVITYMONITOR-1` is ETSI TS 101 909-20-1 and
+ * `tARGETACTIVITYMONITOR-2` is ETSI TS 101 909-20-2. `pstnIsdnIRI` is part 6.
+ * `iPMMIRI` is IP multimedia from part 5. `threeGPP33128DefinedIRI` is an octet
+ * string containing a 3GPP TS 33.128 `IRIPayload` (clause 4.6).
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.9, clause 4.3, clause 4.4,
+ * clause 4.6, annex A, clause A.3, annex D.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -22,6 +22,10 @@ enum _enum_for_PacketReportTrigger {
 /**
  * @summary PacketReportTrigger
  * @description
+ *
+ * Not defined in ETSI TS 102 232-3 V3.9.1. Clause 8 of that edition
+ * (module version14) has no packet-report types. This version20
+ * enumeration has no comments that state when each value is used.
  * 
  * ### ASN.1 Definition:
  * 
@@ -49,6 +53,10 @@ type PacketReportTrigger = _enum_for_PacketReportTrigger | ENUMERATED;
 
 /**
  * @summary PacketReportTrigger_flowStart
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -57,6 +65,10 @@ const PacketReportTrigger_flowStart: PacketReportTrigger = 1; /* LONG_NAMED_ENUM
 
 /**
  * @summary flowStart
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -65,6 +77,10 @@ const flowStart: PacketReportTrigger = PacketReportTrigger_flowStart; /* SHORT_N
 
 /**
  * @summary PacketReportTrigger_flowEnd
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -73,6 +89,10 @@ const PacketReportTrigger_flowEnd: PacketReportTrigger = 2; /* LONG_NAMED_ENUMER
 
 /**
  * @summary flowEnd
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -81,6 +101,10 @@ const flowEnd: PacketReportTrigger = PacketReportTrigger_flowEnd; /* SHORT_NAMED
 
 /**
  * @summary PacketReportTrigger_flowTimeout
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -89,6 +113,10 @@ const PacketReportTrigger_flowTimeout: PacketReportTrigger = 3; /* LONG_NAMED_EN
 
 /**
  * @summary flowTimeout
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -97,6 +125,10 @@ const flowTimeout: PacketReportTrigger = PacketReportTrigger_flowTimeout; /* SHO
 
 /**
  * @summary PacketReportTrigger_flowTimerExpiration
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -105,6 +137,10 @@ const PacketReportTrigger_flowTimerExpiration: PacketReportTrigger = 4; /* LONG_
 
 /**
  * @summary flowTimerExpiration
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -113,6 +149,10 @@ const flowTimerExpiration: PacketReportTrigger = PacketReportTrigger_flowTimerEx
 
 /**
  * @summary PacketReportTrigger_flowPacketCount
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -121,6 +161,10 @@ const PacketReportTrigger_flowPacketCount: PacketReportTrigger = 5; /* LONG_NAME
 
 /**
  * @summary flowPacketCount
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -129,6 +173,10 @@ const flowPacketCount: PacketReportTrigger = PacketReportTrigger_flowPacketCount
 
 /**
  * @summary PacketReportTrigger_flowByteCount
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -137,6 +185,10 @@ const PacketReportTrigger_flowByteCount: PacketReportTrigger = 6; /* LONG_NAMED_
 
 /**
  * @summary flowByteCount
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -145,6 +197,10 @@ const flowByteCount: PacketReportTrigger = PacketReportTrigger_flowByteCount; /*
 
 /**
  * @summary PacketReportTrigger_sessionTimerExpiration
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -153,6 +209,10 @@ const PacketReportTrigger_sessionTimerExpiration: PacketReportTrigger = 7; /* LO
 
 /**
  * @summary sessionTimerExpiration
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -161,6 +221,10 @@ const sessionTimerExpiration: PacketReportTrigger = PacketReportTrigger_sessionT
 
 /**
  * @summary PacketReportTrigger_sessionPacketCount
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -169,6 +233,10 @@ const PacketReportTrigger_sessionPacketCount: PacketReportTrigger = 8; /* LONG_N
 
 /**
  * @summary sessionPacketCount
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -177,6 +245,10 @@ const sessionPacketCount: PacketReportTrigger = PacketReportTrigger_sessionPacke
 
 /**
  * @summary PacketReportTrigger_sessionByteCount
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -185,6 +257,10 @@ const PacketReportTrigger_sessionByteCount: PacketReportTrigger = 9; /* LONG_NAM
 
 /**
  * @summary sessionByteCount
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -193,6 +269,10 @@ const sessionByteCount: PacketReportTrigger = PacketReportTrigger_sessionByteCou
 
 /**
  * @summary PacketReportTrigger_reportEnd
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */
@@ -201,6 +281,10 @@ const PacketReportTrigger_reportEnd: PacketReportTrigger = 10; /* LONG_NAMED_ENU
 
 /**
  * @summary reportEnd
+ * @description
+ *
+ * Not described in ETSI TS 102 232-3 V3.9.1 clause 8.
+ *
  * @constant
  * @type {number}
  */

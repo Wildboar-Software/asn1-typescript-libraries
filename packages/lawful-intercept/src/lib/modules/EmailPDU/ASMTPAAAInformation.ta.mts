@@ -17,7 +17,18 @@ import { _decode_AAAResult, _encode_AAAResult, _enum_for_AAAResult, AAAResult } 
 /**
  * @summary ASMTPAAAInformation
  * @description
- * 
+ *
+ * Authenticated SMTP material for an application-layer intercept: username and,
+ * optionally, the authentication method, the server challenge, the client
+ * response, and the result.
+ *
+ * Used when SMTP authentication as in IETF RFC 4954 is in use (clause 6.2.3).
+ * Ordinary SMTP login is not well authenticated (clause A.2.1); this structure
+ * is the authenticated case, not the bare `HELO` exchange.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.2.3 and A.2.1.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -43,30 +54,61 @@ export
 class ASMTPAAAInformation {
     /**
      * @summary `username`.
+     * @description
+     *
+     * SMTP authentication username, 0 to 64 characters.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 6.2.3.
+     *
      * @public
      * @readonly
      */
     readonly username: UTF8String;
     /**
      * @summary `authMethod`.
+     * @description
+     *
+     * Hashing or SASL method used, for example CRAM-MD5 or DIGEST-MD5. See
+     * `AAAauthMethod`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`ASMTPAAAInformation`).
+     *
      * @public
      * @readonly
      */
     readonly authMethod: OPTIONAL<AAAauthMethod>;
     /**
      * @summary `challenge`.
+     * @description
+     *
+     * Challenge sent by the SMTP server, BASE64-encoded.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`ASMTPAAAInformation`).
+     *
      * @public
      * @readonly
      */
     readonly challenge: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `response`.
+     * @description
+     *
+     * Hashed response returned by the client, BASE64-encoded.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D (`ASMTPAAAInformation`).
+     *
      * @public
      * @readonly
      */
     readonly response: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `aAAResult`.
+     * @description
+     *
+     * Result of the SMTP authentication, when reported.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 6.2.3.
+     *
      * @public
      * @readonly
      */

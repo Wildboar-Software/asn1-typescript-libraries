@@ -13,6 +13,14 @@ import { IPCCContents, _decode_IPCCContents, _encode_IPCCContents } from "../IPA
 /**
  * @summary IPCC
  * @description
+ *
+ * HI3 content of communication for internet access (ETSI TS 102 232-3
+ * V3.9.1, clause 7). One record carries one intercepted IP datagram.
+ * Send it for every datagram the IAP forwards whose source or
+ * destination address is the target's address (clauses 4.3.2 and 7.1).
+ * A source address equal to the target's does not prove the target sent
+ * the packet: another user may have spoofed it, and a packet the target
+ * sent with a spoofed source will not match (clause 4.3.2, note).
  * 
  * ### ASN.1 Definition:
  * 
@@ -30,12 +38,21 @@ export
 class IPCC {
     /**
      * @summary `iPCCObjId`.
+     * @description
+     *
+     * Set to `iPCCObjId`, arc `cC(2)` under the module OID (clause 8).
+     *
      * @public
      * @readonly
      */
     readonly iPCCObjId: RELATIVE_OID;
     /**
      * @summary `iPCCContents`.
+     * @description
+     *
+     * The intercepted datagram, or a truncated copy. Clause 7.2 describes
+     * the full-datagram alternative.
+     *
      * @public
      * @readonly
      */

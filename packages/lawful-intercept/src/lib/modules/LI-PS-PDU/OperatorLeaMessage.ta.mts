@@ -15,6 +15,14 @@ import { OperatorLeaMessagePriority, _decode_OperatorLeaMessagePriority, _encode
  * @summary OperatorLeaMessage
  * @description
  * 
+ * Error or information report from the MF handover manager to the LEMF handover
+ * manager. The MF collects error reports from the layers below it and forwards
+ * them under the CSP/LEA agreement. This TRI is one way to carry those reports.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,43 @@ export
 class OperatorLeaMessage {
     /**
      * @summary `messagePriority`.
+     * @description
+     *
+     * Whether the condition affects the quality of the intercepted data.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly messagePriority: OperatorLeaMessagePriority;
     /**
      * @summary `message`.
+     * @description
+     *
+     * The report, 1 to 255 octets. The module does not define a syntax for the
+     * octets.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly message: OCTET_STRING;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

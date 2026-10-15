@@ -12,6 +12,15 @@ import * as Common_Parameters from "../Common-Parameters/index.mjs";
 /**
  * @summary GeocodedLocationData
  * @description
+ *
+ * WGS84 coordinates from ETSI TS 103 280. `wGS84CoordinateDecimal` and
+ * `wGS84CoordinateAngular` are the two permitted forms. The mapping function
+ * produces them from geographical coordinates and does not change their
+ * resolution. V1.1.1 does not say which form to choose. Postal-address
+ * mapping is for further study.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.3, annex B.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 

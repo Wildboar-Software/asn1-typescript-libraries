@@ -13,7 +13,18 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary IP_Address_And_Port
  * @description
- * 
+ *
+ * IP address and port of a unified-messaging party.
+ *
+ * Table 7 recommends reporting both when the party may be behind NAPT. The
+ * client address and port are the important parts. The server address and port
+ * are useful when the service is several interconnected UM servers exchanging
+ * voice or multimedia through NAPT. Port numbers are those of IETF RFC 6335.
+ * The address is IETF RFC 791 or IETF RFC 8200.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -33,12 +44,25 @@ export
 class IP_Address_And_Port {
     /**
      * @summary `ip_address`.
+     * @description
+     *
+     * IPv4 (IETF RFC 791) or IPv6 (IETF RFC 8200) address of the party.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     *
      * @public
      * @readonly
      */
     readonly ip_address: LI_PS_PDU.IPAddress;
     /**
      * @summary `port_number`.
+     * @description
+     *
+     * Transport port, as assigned in IETF RFC 6335. Together with `ip_address`,
+     * this identifies a party that shares an address through NAPT.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     *
      * @public
      * @readonly
      */

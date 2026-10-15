@@ -13,6 +13,10 @@ import { IPv6Information, _decode_IPv6Information, _encode_IPv6Information } fro
 /**
  * @summary IPInformation
  * @description
+ *
+ * IPv4 or IPv6 header of the reported packet or flow
+ * (ETSI TS 102 232-3 V3.9.1, tables 3 and 4). Choose the alternative
+ * that matches the packet.
  * 
  * ### ASN.1 Definition:
  * 

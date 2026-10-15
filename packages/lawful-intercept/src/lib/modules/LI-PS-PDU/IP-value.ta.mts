@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary IP_value
  * @description
  * 
+ * Binary or textual IP address inside `IPAddress`. The module recommends
+ * against new use of `IPAddress`; see that type.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

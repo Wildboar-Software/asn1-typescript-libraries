@@ -16,7 +16,45 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary MessagingCC
  * @description
- * 
+ *
+ * HI3 captured content for one unified-messaging event, or for one chunk of
+ * that content.
+ *
+ * Use this payload unless the signalling of ETSI TS 102 232-5 is required; in
+ * that case use `MessagingMMCC`. Events that shall trigger content are listed
+ * in table 5.
+ *
+ * A CIN covers one logical sequence, for example from login to logout, and
+ * intermediate events share it. `event_identifier` picks out one event inside
+ * that CIN when several IRI and content records are sent (a target may retrieve
+ * three messages in one session). `content_identifier` picks out one stream
+ * inside that event, such as text and graphics, or one RTP leg.
+ *
+ * Streamed content may be split so it does not have to be buffered.
+ * `sequence_number` starts at 0 and the last chunk sets `end_of_sequence`.
+ * Without sequence numbering, `content` holds the whole object.
+ *
+ * An SMS deposited by the UM system is `text/plain`, with an optional character
+ * encoding. An iCalendar object uses the MIME type in IETF RFC 5545 and the
+ * formatting in IETF RFC 4791. A contact uses the MIME type in IETF RFC 6350
+ * and the vCard formatting in IETF RFC 6352.
+ *
+ * RTP legs between the user and the UM system start when the user connects, and
+ * are correlated to the HI2 `connect` event. Table 6: `event_identifier` is
+ * that of the connect IRI, `content_identifier` distinguishes the legs,
+ * `content_type` is the MIME type translated from the RTP payload type, and
+ * `content` is the extracted RTP payload. Direction is signalled on the part-1
+ * `CCPayload.payloadDirection` as from-target or to-target.
+ *
+ * One UM event can produce several IRI and content deliveries, for example an
+ * SMS notification and an email notification together. If both the mobile and
+ * the mailbox are intercepted, access to the target's own box can duplicate
+ * delivery; by agreement, content from the UM system may be omitted in that
+ * case.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -45,48 +83,108 @@ export
 class MessagingCC {
     /**
      * @summary `messaging_cc_obj_id`.
+     * @description
+     *
+     * Set to `messagingCCObjId`, `{emailPDUObjId messagingCC(4)}`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1 and annex D.
+     *
      * @public
      * @readonly
      */
     readonly messaging_cc_obj_id: RELATIVE_OID;
     /**
      * @summary `event_identifier`.
+     * @description
+     *
+     * Correlates this content with the `MessagingIRI` that carries the same
+     * identifier, inside one CIN. The IRI field is mandatory when content is
+     * also sent. For RTP, use the identifier of the `connect` event (table 6).
+     * Range 0 to 4294967295.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */
     readonly event_identifier: INTEGER;
     /**
      * @summary `content_identifier`.
+     * @description
+     *
+     * Distinguishes content streams that share one `event_identifier`, for
+     * example text and graphics, or separate RTP legs. Range 0 to 4294967295.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */
     readonly content_identifier: OPTIONAL<INTEGER>;
     /**
      * @summary `sequence_number`.
+     * @description
+     *
+     * Chunk index when content is streamed and buffering is undesirable.
+     * Numbering starts at 0. Absent when the `content` field holds the entire
+     * object. Range 0 to 4294967295.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */
     readonly sequence_number: OPTIONAL<INTEGER>;
     /**
      * @summary `end_of_sequence`.
+     * @description
+     *
+     * True on the last chunk when `sequence_number` is used. Default is false.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */
     readonly end_of_sequence: OPTIONAL<BOOLEAN>;
     /**
      * @summary `content_type`.
+     * @description
+     *
+     * MIME type of `content`, as in IETF RFC 2045 and IETF RFC 2046. The
+     * module's examples are `image/png`, `text/plain;charset=utf8`, and
+     * `audio/PCMA`. SMS from the UM system uses `text/plain`. For RTP, this is
+     * the MIME type translated from the RTP payload type.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */
     readonly content_type: OCTET_STRING;
     /**
      * @summary `content`.
+     * @description
+     *
+     * The captured object, or one chunk of it when `sequence_number` is
+     * present. For RTP, the extracted RTP payload according to the MIME type.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */
     readonly content: OCTET_STRING;
     /**
      * @summary `content_transfer_encoding`.
+     * @description
+     *
+     * MIME Content-Transfer-Encoding applied to `content`, using a token from
+     * IETF RFC 2045, such as `7bit`, `8bit`, `binary`, `quoted-printable`, or
+     * `base64`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */

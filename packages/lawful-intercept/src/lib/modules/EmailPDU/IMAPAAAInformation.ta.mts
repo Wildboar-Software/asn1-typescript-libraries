@@ -14,7 +14,18 @@ import { _decode_AAAResult, _encode_AAAResult, _enum_for_AAAResult, AAAResult } 
 /**
  * @summary IMAPAAAInformation
  * @description
- * 
+ *
+ * IMAP4 authentication reported on an application-layer intercept: username
+ * and, optionally, password and result.
+ *
+ * Clause 6.4.3 requires username, password, and result when IMAP4 is used with
+ * a clear-text username and password (IETF RFC 9051). Table C.1 also maps SASL
+ * `AUTHENTICATE` (IETF RFC 4422) to `e_mail_logon`; this structure has no
+ * challenge or response field for that exchange.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.4.3 and C.2.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +45,39 @@ export
 class IMAPAAAInformation {
     /**
      * @summary `username`.
+     * @description
+     *
+     * IMAP4 login name, 0 to 64 characters.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 6.4.3.
+     *
      * @public
      * @readonly
      */
     readonly username: UTF8String;
     /**
      * @summary `password`.
+     * @description
+     *
+     * Clear-text IMAP4 password, 0 to 64 characters, when clause 6.4.3 applies.
+     * Omitted when the exchange has no clear-text password.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 6.4.3.
+     *
      * @public
      * @readonly
      */
     readonly password: OPTIONAL<UTF8String>;
     /**
      * @summary `aAAResult`.
+     * @description
+     *
+     * Result of the IMAP4 authentication, when reported. Command success for
+     * the IRI itself is `E-mail-Status` (table C.2), which this field does not
+     * replace.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.4.3 and C.2.
+     *
      * @public
      * @readonly
      */

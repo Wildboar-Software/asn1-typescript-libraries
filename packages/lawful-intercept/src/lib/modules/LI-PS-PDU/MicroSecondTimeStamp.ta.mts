@@ -14,6 +14,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary MicroSecondTimeStamp
  * @description
  * 
+ * Timestamp with a microsecond fraction. Used, by national agreement, instead
+ * of or as well as GeneralizedTime. The specification does not say the two
+ * forms are exclusive.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -32,18 +40,43 @@ export
 class MicroSecondTimeStamp {
     /**
      * @summary `seconds`.
+     * @description
+     *
+     * Seconds since 1970-01-01 00:00Z (Unix epoch). The module allows
+     * 0..18446744073709551615.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly seconds: INTEGER;
     /**
      * @summary `microSeconds`.
+     * @description
+     *
+     * Microsecond fraction, 0..999999.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly microSeconds: INTEGER;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

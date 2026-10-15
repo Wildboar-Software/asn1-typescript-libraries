@@ -36,6 +36,32 @@ import * as VoIP_HI3_IMS from "../VoIP-HI3-IMS/index.mjs";
  * @summary CCContents
  * @description
  * 
+ * Service-specific content of communication. Unused alternatives may be
+ * commented out with the unused IMPORTS (clause A.3). Context tag 0 was
+ * deprecated in version 15 (V3.3.1, 2013-02). Tag 3 is unused. Tag 5 was
+ * deprecated in version 15. Tag 13 was deprecated in version 32 (V3.24.1,
+ * 2021-07).
+ *
+ * `emailCC`, `messagingCC`, and `messagingMMCC` are from ETSI TS 102 232-2.
+ * `iPCC` is IP-access CC from part 3. `l2CC` is layer 2 from part 4.
+ * `pstnIsdnCC` is part 6. `iPMMCC` is IP multimedia from part 5. `tTRAFFIC-1`
+ * and `cTTRAFFIC-1` are ETSI TS 101 909-20-1; `tTRAFFIC-2` and `cTTRAFFIC-2`
+ * are ETSI TS 101 909-20-2.
+ *
+ * `uMTSCC` is UMTS packet-switched CC as an octet string, and `uMTSCC-CC-PDU`
+ * is the 3GPP TS 33.108 `Umts-HI3-PS` CC-PDU. `ePSCC` and `ePSCC-CC-PDU` are
+ * the same pair for EPS. The module does not say when the octet string is used
+ * rather than the structured PDU. `confCC-CC-PDU`, `voipCC-CC-PDU`, and
+ * `gcseCC-CC-PDU` are the IMS conference, IMS VoIP, and GCSE HI3 PDUs.
+ * `cSvoice-CC-PDU` is CS voice delivered in IP; the module says that delivery
+ * is based on 3GPP TS 33.108. `threeGPP33128DefinedCC` is an octet string
+ * containing a 3GPP TS 33.128 `CCPayload`.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.4, clause 4.6, clause 5.2.9,
+ * annex A, clause A.3.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

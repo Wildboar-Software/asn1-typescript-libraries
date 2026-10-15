@@ -1,4 +1,15 @@
 /**
+ * Internet-access handover structures from ETSI TS 102 232-3 V3.9.1
+ * (https://www.etsi.org/deliver/etsi_ts/102200_102299/10223203/03.09.01_60/ts_10223203v030901p.pdf).
+ * HI2 session IRI is `IPIRI`. HI3 content is `IPCC`. Packet-header and
+ * packet-summary IRI is `IPIRIOnly`. Delivery of these payloads is
+ * specified in ETSI TS 102 232-1.
+ *
+ * This module is `IPAccessPDU` version20. Clause 8 of V3.9.1 publishes
+ * version14. `IPIRIPacketReport` and the types under it,
+ * `IPTruncatedPacket`, and `AccessEventType` values 11 to 13 are not
+ * in that edition.
+ *
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `undefined`, `unknown`

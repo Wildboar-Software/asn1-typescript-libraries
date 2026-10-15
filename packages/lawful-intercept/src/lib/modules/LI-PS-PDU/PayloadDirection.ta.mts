@@ -6,12 +6,63 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_PayloadDirection
+ * @description
+ *
+ * Direction of intercepted IRI or CC. On IRI it is optional and is used only
+ * where the service-specific standard says so, and only in the way that
+ * standard describes. On CC it is optional. The same enumeration is used for
+ * `sessionDirection` on an IRI payload, under the same service-specific
+ * restriction.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
+ * @enum {number}
+ */
 export
 enum _enum_for_PayloadDirection {
+    /**
+     * Intercepted data sent from the target.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     fromTarget = 0,
+    /**
+     * Intercepted data sent to the target.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     toTarget = 1,
+    /**
+     * The direction could not be determined.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     indeterminate = 2,
+    /**
+     * For services where the traffic is a combination of both directions.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     combined = 3,
+    /**
+     * Direction is not a meaningful property of the intercepted service.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     notapplicable = 4,
 }
 
@@ -19,6 +70,16 @@ enum _enum_for_PayloadDirection {
  * @summary PayloadDirection
  * @description
  * 
+ * Direction of intercepted IRI or CC. On IRI it is optional and is used only
+ * where the service-specific standard says so, and only in the way that
+ * standard describes. On CC it is optional. The same enumeration is used for
+ * `sessionDirection` on an IRI payload, under the same service-specific
+ * restriction.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -44,6 +105,14 @@ type PayloadDirection = _enum_for_PayloadDirection | ENUMERATED;
 
 /**
  * @summary PayloadDirection_fromTarget
+ * @description
+ *
+ * Intercepted data sent from the target.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -52,6 +121,14 @@ const PayloadDirection_fromTarget: PayloadDirection = 0; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary fromTarget
+ * @description
+ *
+ * Intercepted data sent from the target.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -60,6 +137,14 @@ const fromTarget: PayloadDirection = PayloadDirection_fromTarget; /* SHORT_NAMED
 
 /**
  * @summary PayloadDirection_toTarget
+ * @description
+ *
+ * Intercepted data sent to the target.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -68,6 +153,14 @@ const PayloadDirection_toTarget: PayloadDirection = 1; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary toTarget
+ * @description
+ *
+ * Intercepted data sent to the target.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -76,6 +169,14 @@ const toTarget: PayloadDirection = PayloadDirection_toTarget; /* SHORT_NAMED_ENU
 
 /**
  * @summary PayloadDirection_indeterminate
+ * @description
+ *
+ * The direction could not be determined.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -84,6 +185,14 @@ const PayloadDirection_indeterminate: PayloadDirection = 2; /* LONG_NAMED_ENUMER
 
 /**
  * @summary indeterminate
+ * @description
+ *
+ * The direction could not be determined.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -92,6 +201,14 @@ const indeterminate: PayloadDirection = PayloadDirection_indeterminate; /* SHORT
 
 /**
  * @summary PayloadDirection_combined
+ * @description
+ *
+ * For services where the traffic is a combination of both directions.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -100,6 +217,14 @@ const PayloadDirection_combined: PayloadDirection = 3; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary combined
+ * @description
+ *
+ * For services where the traffic is a combination of both directions.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -108,6 +233,14 @@ const combined: PayloadDirection = PayloadDirection_combined; /* SHORT_NAMED_ENU
 
 /**
  * @summary PayloadDirection_notapplicable
+ * @description
+ *
+ * Direction is not a meaningful property of the intercepted service.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -116,6 +249,14 @@ const PayloadDirection_notapplicable: PayloadDirection = 4; /* LONG_NAMED_ENUMER
 
 /**
  * @summary notapplicable
+ * @description
+ *
+ * Direction is not a meaningful property of the intercepted service.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7, clause 5.2.12.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */

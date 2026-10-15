@@ -12,6 +12,15 @@ import { IPTruncatedPacket, _decode_IPTruncatedPacket, _encode_IPTruncatedPacket
 /**
  * @summary IPCCContents
  * @description
+ *
+ * Payload of an `IPCC` record (ETSI TS 102 232-3 V3.9.1, clauses 7.2
+ * and 8).
+ *
+ * `iPPackets` is an exact copy of the intercepted datagram from the IP
+ * layer upward. Link-layer data is removed (clause 7.2).
+ *
+ * `iPTruncatedPacket` is not in the version14 module published in
+ * clause 8. V3.9.1 does not say when a datagram may be truncated.
  * 
  * ### ASN.1 Definition:
  * 

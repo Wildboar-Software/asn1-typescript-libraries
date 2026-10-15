@@ -12,6 +12,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary UDPInformation
  * @description
+ *
+ * Fields from the UDP header of the target packet (IETF RFC 768), as
+ * used by a header report or a summary report (ETSI TS 102 232-3
+ * V3.9.1, clauses 6.2.3.5 and 6.2.4). Each populated value is a copy
+ * of the corresponding octets, in the same byte order.
+ *
+ * On a summary report, populate only the source and destination ports
+ * and omit the other fields (table 4). Annex D defines a UDP flow by
+ * the socket pair: it starts when that pair is first seen and ends
+ * after a silent interval. If IPsec protects the packet, UDP
+ * information is not available (clause D.1).
  * 
  * ### ASN.1 Definition:
  * 
@@ -31,24 +42,44 @@ export
 class UDPInformation {
     /**
      * @summary `sourcePort`.
+     * @description
+     *
+     * UDP source port. Part of the flow identity (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly sourcePort: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `destinationPort`.
+     * @description
+     *
+     * UDP destination port. Part of the flow identity (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly destinationPort: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `length`.
+     * @description
+     *
+     * Copy of this UDP header field (IETF RFC 768). Same byte order as on
+     * the wire. Omit it on a summary report; only the ports identify the
+     * flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly length: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `checkSum`.
+     * @description
+     *
+     * Copy of this UDP header field (IETF RFC 768). Same byte order as on
+     * the wire. Omit it on a summary report; only the ports identify the
+     * flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */

@@ -26,6 +26,15 @@ import { TimeStampQualifier, _decode_TimeStampQualifier, _encode_TimeStampQualif
  * @summary PSHeader
  * @description
  * 
+ * Header attached to every HI2 and HI3 PDU so the LEMF can identify the
+ * intercept, associate IRI with CC, and detect loss or reordering. The same
+ * header is used when the payload is transport-related information; several TRI
+ * types fill only a subset of the fields and put any legal value in the rest.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.1, clause 5.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,72 +67,233 @@ export
 class PSHeader {
     /**
      * @summary `li_psDomainId`.
+     * @description
+     *
+     * Which version of the handover header is in use. For this module that is
+     * `li-psDomainId` (genHeader version 35).
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.1, annex A, clause A.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly li_psDomainId: OBJECT_IDENTIFIER;
     /**
      * @summary `lawfulInterceptionIdentifier`.
+     * @description
+     *
+     * The LIID, included from ETSI TS 103 280 from ASN.1 version 26 and kept
+     * under this name so existing references still match. TS 102 232-1 points
+     * the field's definition at TS 103 280, clause 6, and does not restate it.
+     * Together with a nationally unique LIID, `authorizationCountryCode` makes
+     * the identifier internationally unique.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly lawfulInterceptionIdentifier: LawfulInterceptionIdentifier;
     /**
      * @summary `authorizationCountryCode`.
+     * @description
+     *
+     * Country in which the authorization was granted, as a two-letter ISO
+     * 3166-1 code. With a nationally unique LIID the pair is internationally
+     * unique. Where the national LIID is not unique, the pair is not guaranteed
+     * to be unique either; an internationally unique pair then needs a
+     * nationally unique LIID to be created.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly authorizationCountryCode: OPTIONAL<PrintableString>;
     /**
      * @summary `communicationIdentifier`.
+     * @description
+     *
+     * Network identifier, communication identity number, and delivery country
+     * code for the communications session. Part of the sequence-number context.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4, clause 5.2.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly communicationIdentifier: CommunicationIdentifier;
     /**
      * @summary `sequenceNumber`.
+     * @description
+     *
+     * Counts PS-PDUs in one sequence-number context. The context key is the
+     * LIID, the operator identifier, and the payload alternative (IRI sequence,
+     * CC sequence, TRI, HI1, encryption container, 3GPP HI1, inter-LEMF
+     * handover, or HI4). The network-element identifier (either form), the CIN
+     * (`communicationIdentityNumber` or `cINExtension`), and the delivery
+     * country code join the key when they are present. An omitted optional
+     * component is its own key value, so PDUs that share an LIID and operator
+     * identifier but omit the CIN form one context.
+     *
+     * The MF starts again at zero when a target enters a new context. Each
+     * service-specific standard lists those events. As a guide, a session
+     * starts when an IRI-BEGIN would be sent and ends when an IRI-END would be
+     * sent, and CC that belongs to one IRI-REPORT is usually its own context.
+     * An IRI-REPORT that appears after an IRI-END, or before an IRI-BEGIN,
+     * keeps the CIN of the other HI2 and HI3 traffic in that context.
+     *
+     * The value increases by 1 for each PS-PDU the MF generates in that
+     * context, stays within 0..4294967295, and wraps to zero after 2^32 PDUs.
+     * IRI and CC are counted apart. Among TRI, keep-alive, integrityCheck,
+     * option negotiation, and pDUAcknowledgementRequest are each counted on
+     * their own, and each of those is counted apart from IRI and CC. A
+     * receiver treats a step other than +1,
+     * against the previous PDU of that context, as loss or reordering.
+     *
+     * Some TRI messages reuse or fix the number: `keep-aliveResponse` and
+     * `pDUAcknowledgementResponse` repeat the request; `optionResponse` repeats
+     * the `optionRequest`; `firstSegmentFlag` repeats the first segment and
+     * `lastSegmentFlag` repeats the last; `testPDU` and `cINReset` use zero.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.5, clause 6.2.2, clause
+     * 6.2.4, clause 6.3.4, clause 6.3.5, clause 6.3.6, clause 7.3.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sequenceNumber: INTEGER;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Mandatory on IRI. CC carries a timestamp as well, unless the
+     * service-specific standard makes an exception. Either this GeneralizedTime
+     * or `microSecondTimeStamp` may be used, by national agreement.
+     * `timeStampQualifier` says which instant the value is.
+     *
+     * For an aggregated PDU the per-payload time is carried on each payload. A
+     * time on this header may still record when the aggregated PDU was
+     * completed; that use sets the qualifier to `timeOfAggregation`. Sequence
+     * PDUs with `sequenceNumber`. The specification recommends against using
+     * this timestamp to order PDUs at the LEMF or LGW.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `interceptionPointID`.
+     * @description
+     *
+     * Optional. When used, the service provider assigns each interception point
+     * an identifier of 1 to 8 characters, unique within that provider, and
+     * attaches it to every CC and IRI PDU from that point. It is independent of
+     * the sequence number and of the network-element identifier (the latter
+     * distinguishes mediation functions; one mediation function may have
+     * several interception points). For a given CC or IRI PDU, use this field
+     * or `extendedInterceptionPointID`, and only one of them.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.11.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly interceptionPointID: OPTIONAL<PrintableString>;
     /**
      * @summary `microSecondTimeStamp`.
+     * @description
+     *
+     * Alternative to `timeStamp`, used by national agreement. Seconds since
+     * 1970-01-01 00:00Z plus a microsecond fraction. The same aggregation and
+     * sequencing rules apply as for `timeStamp`.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly microSecondTimeStamp: OPTIONAL<MicroSecondTimeStamp>;
     /**
      * @summary `timeStampQualifier`.
+     * @description
+     *
+     * Which instant `timeStamp` or `microSecondTimeStamp` represents. Optional,
+     * and used by national agreement. On an aggregated PDU, `timeOfAggregation`
+     * on the header is the time the complete PDU was created.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStampQualifier: OPTIONAL<TimeStampQualifier>;
     /**
      * @summary `extendedInterceptionPointID`.
+     * @description
+     *
+     * Optional alternative to `interceptionPointID` when the provider's
+     * interception-point identifier is longer than 8 characters (an IPv6
+     * address is the specification's example). Length is 1 to 65535 octets. It
+     * is unique within the provider and, when used, is attached to every CC and
+     * IRI PDU from that point. Only one of the two interception-point fields is
+     * used on a given CC or IRI PDU.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.13.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly extendedInterceptionPointID: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `networkFunctionIdentifier`.
+     * @description
+     *
+     * Optional identifier of the network function associated with the
+     * interception point. Length 1 to 65535 octets. Use it only where the
+     * service-specific standard says so, and only in the way that standard
+     * describes.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.14.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly networkFunctionIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.1, clause 5.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

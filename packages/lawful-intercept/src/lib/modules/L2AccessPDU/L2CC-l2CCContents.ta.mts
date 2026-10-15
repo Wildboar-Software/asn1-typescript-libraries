@@ -12,6 +12,36 @@ import { L2TruncatedDatagram, _decode_L2TruncatedDatagram, _encode_L2TruncatedDa
 /**
  * @summary L2CC_l2CCContents
  * @description
+ *
+ * One intercepted layer 2 datagram. The octet-string alternatives are a
+ * bit-exact copy (clause 4.2.2, clause 7.2). The `truncated*` alternatives
+ * are used only when the LEA has asked for truncation of this interception;
+ * clause 7.3 then requires every HI3 datagram to be truncated.
+ *
+ * An unrecognized extension alternative is returned as the raw element.
+ *
+ * | Alternative | Contents |
+ * | --- | --- |
+ * | `l2TP` | L2TP datagram. IETF RFC 2661. Clause 5.2.1 gives L2TP as the example tunnel between the user and the IAP. |
+ * | `l2F` | L2F datagram. IETF RFC 2341. Annex A.1.0 lists L2F as a tunnel from the access provider to the IAP. |
+ * | `pPTP` | PPTP datagram. IETF RFC 2637. Annex A.1.0 lists PPTP the same way. |
+ * | `pPP` | PPP datagram. IETF RFC 1661. Clause 5.2.3 describes PPP session closure with LCP Terminate (IETF RFC 1570). |
+ * | `ethernet` | Ethernet datagram. The specification says only that the Ethernet protocol is used. |
+ * | `l2ATM2684` | IETF RFC 2684, method "LLC Encapsulation for Bridged Protocols". Clause 2.1 marks reference [16] void. |
+ * | `l2FR2427` | IETF RFC 2427, "Multiprotocol Interconnect over Frame Relay". Clause 2.1 marks reference [18] void. |
+ * | `truncatedL2TP` | Truncated `l2TP`. |
+ * | `truncatedL2F` | Truncated `l2F`. |
+ * | `truncatedPPTP` | Truncated `pPTP`. |
+ * | `truncatedPPP` | Truncated `pPP`. |
+ * | `truncatedEthernet` | Truncated `ethernet`. |
+ * | `truncatedL2ATM2684` | Truncated `l2ATM2684`. |
+ * | `truncatedL2FR2427` | Truncated `l2FR2427`. |
+ *
+ * The truncated alternatives are extension additions, as are `l2ATM2684`
+ * and `l2FR2427`. Each truncated value is an `L2TruncatedDatagram`.
+ *
+ * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 5.2, clause 7, annex A.1.0.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
  * 
  * ### ASN.1 Definition:
  * 

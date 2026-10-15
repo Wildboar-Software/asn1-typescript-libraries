@@ -15,7 +15,18 @@ import * as IPMultimediaPDU from "../IPMultimediaPDU/index.mjs";
 /**
  * @summary MessagingMMCC
  * @description
- * 
+ *
+ * Unified-messaging captured content carried as an `IPMMCC` from ETSI TS 102
+ * 232-5.
+ *
+ * Use this when those multimedia signalling capabilities are required.
+ * Otherwise use `MessagingCC`. Correlation with `MessagingIRI` uses
+ * `event_identifier` inside the same CIN, and `content_identifier` separates
+ * streams of one event, as for `MessagingCC`.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +48,51 @@ export
 class MessagingMMCC {
     /**
      * @summary `messaging_mm_cc_obj_id`.
+     * @description
+     *
+     * Set to `messagingMMCCObjId`, `{emailPDUObjId messagingMMCC(5)}`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1 and annex D.
+     *
      * @public
      * @readonly
      */
     readonly messaging_mm_cc_obj_id: RELATIVE_OID;
     /**
      * @summary `event_identifier`.
+     * @description
+     *
+     * Correlates this content with the `MessagingIRI` that carries the same
+     * identifier, inside one CIN. Range 0 to 4294967295.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */
     readonly event_identifier: INTEGER;
     /**
      * @summary `content_identifier`.
+     * @description
+     *
+     * Distinguishes content streams that share one `event_identifier`. Range 0
+     * to 4294967295.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */
     readonly content_identifier: OPTIONAL<INTEGER>;
     /**
      * @summary `content`.
+     * @description
+     *
+     * Captured multimedia content, in the `IPMMCC` structure of ETSI TS 102
+     * 232-5.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.1.
+     *
      * @public
      * @readonly
      */

@@ -13,6 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary NationalIPIRIParameters
  * @description
+ *
+ * National additions to an internet-access IRI (ETSI TS 102 232-3
+ * V3.9.1, clause 8). `countryCode` is the ISO 3166-1 alpha-2 code of
+ * the country whose parameters follow the extension marker. Those
+ * parameters are defined in ASN.1 and appended after the marker. The
+ * module recommends a version parameter and a vendor identification
+ * parameter; vendor numbers are the IANA Private Enterprise Numbers
+ * cited in annex E. Avoid tags 240 to 255.
  * 
  * ### ASN.1 Definition:
  * 
@@ -39,6 +47,11 @@ export
 class NationalIPIRIParameters {
     /**
      * @summary `countryCode`.
+     * @description
+     *
+     * ISO 3166-1 alpha-2 code of the country whose national parameters,
+     * added after the extension marker, apply (clause 8).
+     *
      * @public
      * @readonly
      */

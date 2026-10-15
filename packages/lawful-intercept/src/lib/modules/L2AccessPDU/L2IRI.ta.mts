@@ -13,6 +13,24 @@ import { L2IRIContents, _decode_L2IRIContents, _encode_L2IRIContents } from "../
 /**
  * @summary L2IRI
  * @description
+ *
+ * HI2 intercept-related information for one layer 2 event. The event and its
+ * parameters are `l2IRIContents`. The IRI record type (BEGIN, END, CONTINUE,
+ * or REPORT) is not a component of this type. Clause 4.2.3 defines those
+ * four record types and clause 6.1 assigns one to each `AccessEventType`.
+ * Their use is specified in ETSI TS 102 232-1, which carries this PDU as the
+ * layer 2 IRI alternative.
+ *
+ * The events in clause 6.1 apply when the target's traffic passes through
+ * the access provider's network. IRI is sent without undue delay. Clause
+ * 4.2.4 allows delay only for access-protocol handling and automated
+ * forwarding to the delivery function.
+ *
+ * The sequence is extensible. V3.8.1 names no extension additions on `L2IRI`
+ * itself.
+ *
+ * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 4.2.3, clause 4.2.4, clause 6.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -31,18 +49,44 @@ export
 class L2IRI {
     /**
      * @summary `l2IRIObjId`.
+     * @description
+     *
+     * Object identifier of the layer 2 IRI definition in this PDU. For this
+     * module that value is `l2IRIObjId`, arc `iRI(1)` under
+     * `l2AccessPDUObjId`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly l2IRIObjId: RELATIVE_OID;
     /**
      * @summary `l2IRIContents`.
+     * @description
+     *
+     * The IRI event and the layer 2 parameters that annex A attaches to that
+     * event. See `L2IRIContents`.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 6.1, clause 6.2.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly l2IRIContents: L2IRIContents;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V3.8.1 marks the
+     * sequence extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 8.1.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */

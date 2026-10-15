@@ -6,46 +6,238 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @description
+ *
+ * An operation on the target's unified-messaging box.
+ *
+ * Table 5 requires captured content for greeting record, change, delete,
+ * enable, disable, and play. The other box events are not in that table.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ */
 export
 enum _enum_for_Messaging_Box_Event {
+    /**
+     * The target logs in to the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     login = 1,
+    /**
+     * The target logs out of the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     logout = 2,
+    /**
+     * The target locks the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     lock = 3,
+    /**
+     * The target unlocks the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     unlock = 4,
+    /**
+     * A box is activated, for example the target activates voicemail.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     activate = 5,
+    /**
+     * A box is deactivated.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     deactivate = 6,
+    /**
+     * A box is deleted. This is deletion of the box, not of one message
+     * (`Messaging_Event` delete).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     delete_ = 7,
+    /**
+     * The target changes the PIN of the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     pin_change = 8,
+    /**
+     * The target records a new greeting. Table 5 requires captured-content
+     * delivery for this event.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+     */
     greeting_record = 9,
+    /**
+     * The target changes an existing greeting. Table 5 requires
+     * captured-content delivery for this event.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+     */
     greeting_change = 10,
+    /**
+     * The target deletes a greeting. Table 5 requires captured-content delivery
+     * for this event.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+     */
     greeting_delete = 11,
+    /**
+     * The target enables a greeting. Table 5 requires captured-content delivery
+     * for this event.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+     */
     greeting_enable = 12,
+    /**
+     * The target disables a greeting. Table 5 requires captured-content
+     * delivery for this event.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+     */
     greeting_disable = 13,
+    /**
+     * The target enables notification of new messages.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     notification_enable = 14,
+    /**
+     * The target disables notification of new messages.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     notification_disable = 15,
+    /**
+     * The target is disconnected from the box without a logout.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     disconnect = 16,
+    /**
+     * A party, the target or a third party, connects to the messaging system
+     * and has not yet done anything else. RTP legs of a UM call are correlated
+     * to this event (table 6).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+     */
     connect = 17,
+    /**
+     * An unknown operation occurs on the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     unknown = 0,
+    /**
+     * A greeting is played for a party. Table 5 requires captured-content
+     * delivery for this event.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+     */
     greeting_play = 18,
+    /**
+     * The target changes the language preference.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     language_change = 19,
+    /**
+     * The target enables PIN security. Without it, access may be granted by
+     * verifying only the end-user device. With it, PIN authentication is
+     * required on every access.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     pin_security_enable = 20,
+    /**
+     * The target disables PIN security.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     pin_security_disable = 21,
+    /**
+     * The target adds the personal-operator definition on the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     personal_operator_add = 22,
+    /**
+     * The target changes the personal-operator definition on the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     personal_operator_change = 23,
+    /**
+     * The target removes the personal-operator definition from the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     personal_operator_remove = 24,
+    /**
+     * The target creates additional delivery destinations on the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     additional_destination_add = 25,
+    /**
+     * The target changes additional delivery destinations on the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     additional_destination_change = 26,
+    /**
+     * The target removes additional delivery destinations from the box.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     additional_destination_remove = 27,
+    /**
+     * The target enables playback of message options, such as save and delete,
+     * after the system has played a message during retrieval.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     auto_play_enable = 28,
+    /**
+     * The target disables auto-play of message options.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     auto_play_disable = 29,
+    /**
+     * The target enables playback of meta-information, such as the deposit
+     * date, before the system plays a message during retrieval.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     header_play_enable = 30,
+    /**
+     * The target disables playback of message meta-information.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+     */
     header_play_disable = 31,
 }
 
 /**
  * @summary Messaging_Box_Event
  * @description
- * 
+ *
+ * An operation on the target's unified-messaging box.
+ *
+ * Table 5 requires captured content for greeting record, change, delete,
+ * enable, disable, and play. The other box events are not in that table.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -94,6 +286,12 @@ type Messaging_Box_Event = _enum_for_Messaging_Box_Event | ENUMERATED;
 
 /**
  * @summary Messaging_Box_Event_login
+ * @description
+ *
+ * The target logs in to the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +300,12 @@ const Messaging_Box_Event_login: Messaging_Box_Event = 1; /* LONG_NAMED_ENUMERAT
 
 /**
  * @summary login
+ * @description
+ *
+ * The target logs in to the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +314,12 @@ const login: Messaging_Box_Event = Messaging_Box_Event_login; /* SHORT_NAMED_ENU
 
 /**
  * @summary Messaging_Box_Event_logout
+ * @description
+ *
+ * The target logs out of the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +328,12 @@ const Messaging_Box_Event_logout: Messaging_Box_Event = 2; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary logout
+ * @description
+ *
+ * The target logs out of the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +342,12 @@ const logout: Messaging_Box_Event = Messaging_Box_Event_logout; /* SHORT_NAMED_E
 
 /**
  * @summary Messaging_Box_Event_lock
+ * @description
+ *
+ * The target locks the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -134,6 +356,12 @@ const Messaging_Box_Event_lock: Messaging_Box_Event = 3; /* LONG_NAMED_ENUMERATE
 
 /**
  * @summary lock
+ * @description
+ *
+ * The target locks the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -142,6 +370,12 @@ const lock: Messaging_Box_Event = Messaging_Box_Event_lock; /* SHORT_NAMED_ENUME
 
 /**
  * @summary Messaging_Box_Event_unlock
+ * @description
+ *
+ * The target unlocks the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -150,6 +384,12 @@ const Messaging_Box_Event_unlock: Messaging_Box_Event = 4; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary unlock
+ * @description
+ *
+ * The target unlocks the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -158,6 +398,12 @@ const unlock: Messaging_Box_Event = Messaging_Box_Event_unlock; /* SHORT_NAMED_E
 
 /**
  * @summary Messaging_Box_Event_activate
+ * @description
+ *
+ * A box is activated, for example the target activates voicemail.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -166,6 +412,12 @@ const Messaging_Box_Event_activate: Messaging_Box_Event = 5; /* LONG_NAMED_ENUME
 
 /**
  * @summary activate
+ * @description
+ *
+ * A box is activated, for example the target activates voicemail.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -174,6 +426,12 @@ const activate: Messaging_Box_Event = Messaging_Box_Event_activate; /* SHORT_NAM
 
 /**
  * @summary Messaging_Box_Event_deactivate
+ * @description
+ *
+ * A box is deactivated.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -182,6 +440,12 @@ const Messaging_Box_Event_deactivate: Messaging_Box_Event = 6; /* LONG_NAMED_ENU
 
 /**
  * @summary deactivate
+ * @description
+ *
+ * A box is deactivated.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -190,6 +454,13 @@ const deactivate: Messaging_Box_Event = Messaging_Box_Event_deactivate; /* SHORT
 
 /**
  * @summary Messaging_Box_Event_delete_
+ * @description
+ *
+ * A box is deleted. This is deletion of the box, not of one message
+ * (`Messaging_Event` delete).
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -198,6 +469,13 @@ const Messaging_Box_Event_delete_: Messaging_Box_Event = 7; /* LONG_NAMED_ENUMER
 
 /**
  * @summary delete_
+ * @description
+ *
+ * A box is deleted. This is deletion of the box, not of one message
+ * (`Messaging_Event` delete).
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -206,6 +484,12 @@ const delete_: Messaging_Box_Event = Messaging_Box_Event_delete_; /* SHORT_NAMED
 
 /**
  * @summary Messaging_Box_Event_pin_change
+ * @description
+ *
+ * The target changes the PIN of the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -214,6 +498,12 @@ const Messaging_Box_Event_pin_change: Messaging_Box_Event = 8; /* LONG_NAMED_ENU
 
 /**
  * @summary pin_change
+ * @description
+ *
+ * The target changes the PIN of the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -222,6 +512,13 @@ const pin_change: Messaging_Box_Event = Messaging_Box_Event_pin_change; /* SHORT
 
 /**
  * @summary Messaging_Box_Event_greeting_record
+ * @description
+ *
+ * The target records a new greeting. Table 5 requires captured-content delivery
+ * for this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -230,6 +527,13 @@ const Messaging_Box_Event_greeting_record: Messaging_Box_Event = 9; /* LONG_NAME
 
 /**
  * @summary greeting_record
+ * @description
+ *
+ * The target records a new greeting. Table 5 requires captured-content delivery
+ * for this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -238,6 +542,13 @@ const greeting_record: Messaging_Box_Event = Messaging_Box_Event_greeting_record
 
 /**
  * @summary Messaging_Box_Event_greeting_change
+ * @description
+ *
+ * The target changes an existing greeting. Table 5 requires captured-content
+ * delivery for this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -246,6 +557,13 @@ const Messaging_Box_Event_greeting_change: Messaging_Box_Event = 10; /* LONG_NAM
 
 /**
  * @summary greeting_change
+ * @description
+ *
+ * The target changes an existing greeting. Table 5 requires captured-content
+ * delivery for this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -254,6 +572,13 @@ const greeting_change: Messaging_Box_Event = Messaging_Box_Event_greeting_change
 
 /**
  * @summary Messaging_Box_Event_greeting_delete
+ * @description
+ *
+ * The target deletes a greeting. Table 5 requires captured-content delivery for
+ * this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -262,6 +587,13 @@ const Messaging_Box_Event_greeting_delete: Messaging_Box_Event = 11; /* LONG_NAM
 
 /**
  * @summary greeting_delete
+ * @description
+ *
+ * The target deletes a greeting. Table 5 requires captured-content delivery for
+ * this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -270,6 +602,13 @@ const greeting_delete: Messaging_Box_Event = Messaging_Box_Event_greeting_delete
 
 /**
  * @summary Messaging_Box_Event_greeting_enable
+ * @description
+ *
+ * The target enables a greeting. Table 5 requires captured-content delivery for
+ * this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -278,6 +617,13 @@ const Messaging_Box_Event_greeting_enable: Messaging_Box_Event = 12; /* LONG_NAM
 
 /**
  * @summary greeting_enable
+ * @description
+ *
+ * The target enables a greeting. Table 5 requires captured-content delivery for
+ * this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -286,6 +632,13 @@ const greeting_enable: Messaging_Box_Event = Messaging_Box_Event_greeting_enable
 
 /**
  * @summary Messaging_Box_Event_greeting_disable
+ * @description
+ *
+ * The target disables a greeting. Table 5 requires captured-content delivery
+ * for this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -294,6 +647,13 @@ const Messaging_Box_Event_greeting_disable: Messaging_Box_Event = 13; /* LONG_NA
 
 /**
  * @summary greeting_disable
+ * @description
+ *
+ * The target disables a greeting. Table 5 requires captured-content delivery
+ * for this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -302,6 +662,12 @@ const greeting_disable: Messaging_Box_Event = Messaging_Box_Event_greeting_disab
 
 /**
  * @summary Messaging_Box_Event_notification_enable
+ * @description
+ *
+ * The target enables notification of new messages.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -310,6 +676,12 @@ const Messaging_Box_Event_notification_enable: Messaging_Box_Event = 14; /* LONG
 
 /**
  * @summary notification_enable
+ * @description
+ *
+ * The target enables notification of new messages.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -318,6 +690,12 @@ const notification_enable: Messaging_Box_Event = Messaging_Box_Event_notificatio
 
 /**
  * @summary Messaging_Box_Event_notification_disable
+ * @description
+ *
+ * The target disables notification of new messages.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -326,6 +704,12 @@ const Messaging_Box_Event_notification_disable: Messaging_Box_Event = 15; /* LON
 
 /**
  * @summary notification_disable
+ * @description
+ *
+ * The target disables notification of new messages.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -334,6 +718,12 @@ const notification_disable: Messaging_Box_Event = Messaging_Box_Event_notificati
 
 /**
  * @summary Messaging_Box_Event_disconnect
+ * @description
+ *
+ * The target is disconnected from the box without a logout.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -342,6 +732,12 @@ const Messaging_Box_Event_disconnect: Messaging_Box_Event = 16; /* LONG_NAMED_EN
 
 /**
  * @summary disconnect
+ * @description
+ *
+ * The target is disconnected from the box without a logout.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -350,6 +746,14 @@ const disconnect: Messaging_Box_Event = Messaging_Box_Event_disconnect; /* SHORT
 
 /**
  * @summary Messaging_Box_Event_connect
+ * @description
+ *
+ * A party, the target or a third party, connects to the messaging system and
+ * has not yet done anything else. RTP legs of a UM call are correlated to this
+ * event (table 6).
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -358,6 +762,14 @@ const Messaging_Box_Event_connect: Messaging_Box_Event = 17; /* LONG_NAMED_ENUME
 
 /**
  * @summary connect
+ * @description
+ *
+ * A party, the target or a third party, connects to the messaging system and
+ * has not yet done anything else. RTP legs of a UM call are correlated to this
+ * event (table 6).
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -366,6 +778,12 @@ const connect: Messaging_Box_Event = Messaging_Box_Event_connect; /* SHORT_NAMED
 
 /**
  * @summary Messaging_Box_Event_unknown
+ * @description
+ *
+ * An unknown operation occurs on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -374,6 +792,12 @@ const Messaging_Box_Event_unknown: Messaging_Box_Event = 0; /* LONG_NAMED_ENUMER
 
 /**
  * @summary unknown
+ * @description
+ *
+ * An unknown operation occurs on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -382,6 +806,13 @@ const unknown: Messaging_Box_Event = Messaging_Box_Event_unknown; /* SHORT_NAMED
 
 /**
  * @summary Messaging_Box_Event_greeting_play
+ * @description
+ *
+ * A greeting is played for a party. Table 5 requires captured-content delivery
+ * for this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -390,6 +821,13 @@ const Messaging_Box_Event_greeting_play: Messaging_Box_Event = 18; /* LONG_NAMED
 
 /**
  * @summary greeting_play
+ * @description
+ *
+ * A greeting is played for a party. Table 5 requires captured-content delivery
+ * for this event.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.1 and 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -398,6 +836,12 @@ const greeting_play: Messaging_Box_Event = Messaging_Box_Event_greeting_play; /*
 
 /**
  * @summary Messaging_Box_Event_language_change
+ * @description
+ *
+ * The target changes the language preference.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -406,6 +850,12 @@ const Messaging_Box_Event_language_change: Messaging_Box_Event = 19; /* LONG_NAM
 
 /**
  * @summary language_change
+ * @description
+ *
+ * The target changes the language preference.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -414,6 +864,14 @@ const language_change: Messaging_Box_Event = Messaging_Box_Event_language_change
 
 /**
  * @summary Messaging_Box_Event_pin_security_enable
+ * @description
+ *
+ * The target enables PIN security. Without it, access may be granted by
+ * verifying only the end-user device. With it, PIN authentication is required
+ * on every access.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -422,6 +880,14 @@ const Messaging_Box_Event_pin_security_enable: Messaging_Box_Event = 20; /* LONG
 
 /**
  * @summary pin_security_enable
+ * @description
+ *
+ * The target enables PIN security. Without it, access may be granted by
+ * verifying only the end-user device. With it, PIN authentication is required
+ * on every access.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -430,6 +896,12 @@ const pin_security_enable: Messaging_Box_Event = Messaging_Box_Event_pin_securit
 
 /**
  * @summary Messaging_Box_Event_pin_security_disable
+ * @description
+ *
+ * The target disables PIN security.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -438,6 +910,12 @@ const Messaging_Box_Event_pin_security_disable: Messaging_Box_Event = 21; /* LON
 
 /**
  * @summary pin_security_disable
+ * @description
+ *
+ * The target disables PIN security.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -446,6 +924,12 @@ const pin_security_disable: Messaging_Box_Event = Messaging_Box_Event_pin_securi
 
 /**
  * @summary Messaging_Box_Event_personal_operator_add
+ * @description
+ *
+ * The target adds the personal-operator definition on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -454,6 +938,12 @@ const Messaging_Box_Event_personal_operator_add: Messaging_Box_Event = 22; /* LO
 
 /**
  * @summary personal_operator_add
+ * @description
+ *
+ * The target adds the personal-operator definition on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -462,6 +952,12 @@ const personal_operator_add: Messaging_Box_Event = Messaging_Box_Event_personal_
 
 /**
  * @summary Messaging_Box_Event_personal_operator_change
+ * @description
+ *
+ * The target changes the personal-operator definition on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -470,6 +966,12 @@ const Messaging_Box_Event_personal_operator_change: Messaging_Box_Event = 23; /*
 
 /**
  * @summary personal_operator_change
+ * @description
+ *
+ * The target changes the personal-operator definition on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -478,6 +980,12 @@ const personal_operator_change: Messaging_Box_Event = Messaging_Box_Event_person
 
 /**
  * @summary Messaging_Box_Event_personal_operator_remove
+ * @description
+ *
+ * The target removes the personal-operator definition from the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -486,6 +994,12 @@ const Messaging_Box_Event_personal_operator_remove: Messaging_Box_Event = 24; /*
 
 /**
  * @summary personal_operator_remove
+ * @description
+ *
+ * The target removes the personal-operator definition from the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -494,6 +1008,12 @@ const personal_operator_remove: Messaging_Box_Event = Messaging_Box_Event_person
 
 /**
  * @summary Messaging_Box_Event_additional_destination_add
+ * @description
+ *
+ * The target creates additional delivery destinations on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -502,6 +1022,12 @@ const Messaging_Box_Event_additional_destination_add: Messaging_Box_Event = 25; 
 
 /**
  * @summary additional_destination_add
+ * @description
+ *
+ * The target creates additional delivery destinations on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -510,6 +1036,12 @@ const additional_destination_add: Messaging_Box_Event = Messaging_Box_Event_addi
 
 /**
  * @summary Messaging_Box_Event_additional_destination_change
+ * @description
+ *
+ * The target changes additional delivery destinations on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -518,6 +1050,12 @@ const Messaging_Box_Event_additional_destination_change: Messaging_Box_Event = 2
 
 /**
  * @summary additional_destination_change
+ * @description
+ *
+ * The target changes additional delivery destinations on the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -526,6 +1064,12 @@ const additional_destination_change: Messaging_Box_Event = Messaging_Box_Event_a
 
 /**
  * @summary Messaging_Box_Event_additional_destination_remove
+ * @description
+ *
+ * The target removes additional delivery destinations from the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -534,6 +1078,12 @@ const Messaging_Box_Event_additional_destination_remove: Messaging_Box_Event = 2
 
 /**
  * @summary additional_destination_remove
+ * @description
+ *
+ * The target removes additional delivery destinations from the box.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -542,6 +1092,13 @@ const additional_destination_remove: Messaging_Box_Event = Messaging_Box_Event_a
 
 /**
  * @summary Messaging_Box_Event_auto_play_enable
+ * @description
+ *
+ * The target enables playback of message options, such as save and delete,
+ * after the system has played a message during retrieval.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -550,6 +1107,13 @@ const Messaging_Box_Event_auto_play_enable: Messaging_Box_Event = 28; /* LONG_NA
 
 /**
  * @summary auto_play_enable
+ * @description
+ *
+ * The target enables playback of message options, such as save and delete,
+ * after the system has played a message during retrieval.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -558,6 +1122,12 @@ const auto_play_enable: Messaging_Box_Event = Messaging_Box_Event_auto_play_enab
 
 /**
  * @summary Messaging_Box_Event_auto_play_disable
+ * @description
+ *
+ * The target disables auto-play of message options.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -566,6 +1136,12 @@ const Messaging_Box_Event_auto_play_disable: Messaging_Box_Event = 29; /* LONG_N
 
 /**
  * @summary auto_play_disable
+ * @description
+ *
+ * The target disables auto-play of message options.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -574,6 +1150,13 @@ const auto_play_disable: Messaging_Box_Event = Messaging_Box_Event_auto_play_dis
 
 /**
  * @summary Messaging_Box_Event_header_play_enable
+ * @description
+ *
+ * The target enables playback of meta-information, such as the deposit date,
+ * before the system plays a message during retrieval.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -582,6 +1165,13 @@ const Messaging_Box_Event_header_play_enable: Messaging_Box_Event = 30; /* LONG_
 
 /**
  * @summary header_play_enable
+ * @description
+ *
+ * The target enables playback of meta-information, such as the deposit date,
+ * before the system plays a message during retrieval.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -590,6 +1180,12 @@ const header_play_enable: Messaging_Box_Event = Messaging_Box_Event_header_play_
 
 /**
  * @summary Messaging_Box_Event_header_play_disable
+ * @description
+ *
+ * The target disables playback of message meta-information.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */
@@ -598,6 +1194,12 @@ const Messaging_Box_Event_header_play_disable: Messaging_Box_Event = 31; /* LONG
 
 /**
  * @summary header_play_disable
+ * @description
+ *
+ * The target disables playback of message meta-information.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.3.
+ *
  * @constant
  * @type {number}
  */

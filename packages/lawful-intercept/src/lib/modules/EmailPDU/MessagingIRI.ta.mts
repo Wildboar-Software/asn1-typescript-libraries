@@ -26,7 +26,31 @@ import { Messaging_Property, _decode_Messaging_Property, _encode_Messaging_Prope
 /**
  * @summary MessagingIRI
  * @description
- * 
+ *
+ * HI2 intercept-related information for a unified-messaging event that occurs
+ * after the intercept is invoked.
+ *
+ * The event produced by the UM system is translated into `category`. If a
+ * mediation system builds the record, `original_message` may, by CSP and LEA
+ * agreement, carry the raw UM event. If no translation exists, the LEA uses
+ * that raw event. What the system identifiers and the raw events mean is a
+ * bilateral agreement and is out of scope.
+ *
+ * A CIN is allocated for each logical sequence (login through logout is the
+ * example). Events in between, such as retrieve, delete, and greeting change,
+ * share that CIN. When content is sent as well, `event_identifier` is mandatory
+ * and ties this IRI to `MessagingCC` or `MessagingMMCC`.
+ *
+ * Intercepted email uses `EmailIRI` and `EmailCC`, unless a national agreement
+ * overrides that. A voicemail-only system is still unified messaging for this
+ * specification. Access to the box from the target's own mobile is handed over
+ * under 3GPP TS 33.108; access from a public terminal with a PIN, and CSP
+ * services such as email or SMS notification and web changes to a greeting or
+ * PIN, are in scope here.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 4.2 and 8.0.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -56,72 +80,159 @@ export
 class MessagingIRI {
     /**
      * @summary `messaging_iri_obj_id`.
+     * @description
+     *
+     * Set to `messagingIRIObjId`, `{emailPDUObjId messagingIRI(3)}`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.0 and annex D.
+     *
      * @public
      * @readonly
      */
     readonly messaging_iri_obj_id: RELATIVE_OID;
     /**
      * @summary `system_type`.
+     * @description
+     *
+     * Kind of messaging system. The only named value is unified messaging,
+     * which includes a voicemail-only system (clause 4.2).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 4.2 and 8.0.
+     *
      * @public
      * @readonly
      */
     readonly system_type: Messaging_System_Type;
     /**
      * @summary `system_identifier`.
+     * @description
+     *
+     * Identifies the system that generated the event. The identifier is agreed
+     * nationally and is unique for that system. Documentation of systems is
+     * bilateral and out of scope.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.0.
+     *
      * @public
      * @readonly
      */
     readonly system_identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `category`.
+     * @description
+     *
+     * The operation, once translated from the UM system's own event: a message
+     * operation, a box operation, a notification, or a call. See clauses 8.2 to
+     * 8.5. Omitted when no translation is possible; the LEA then uses
+     * `original_message`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.0 to 8.5.
+     *
      * @public
      * @readonly
      */
     readonly category: OPTIONAL<Messaging_Event_Category>;
     /**
      * @summary `status`.
+     * @description
+     *
+     * Status of the current operation. See `Messaging_Status`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.0.
+     *
      * @public
      * @readonly
      */
     readonly status: Messaging_Status;
     /**
      * @summary `party_information`.
+     * @description
+     *
+     * Parties related to the event. See `Messaging_Party_Information`. Not
+     * every noticed recipient has to appear here; `total_recipient_count`
+     * covers that gap.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.0 and 8.6.
+     *
      * @public
      * @readonly
      */
     readonly party_information: OPTIONAL<Messaging_Party_Information[]>;
     /**
      * @summary `trigger`.
+     * @description
+     *
+     * Where the event came from: user, user agent, system, system operator, or
+     * unknown. See `Messaging_Trigger`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6.
+     *
      * @public
      * @readonly
      */
     readonly trigger: Messaging_Trigger;
     /**
      * @summary `properties`.
+     * @description
+     *
+     * Extra attributes of this event, such as PIN, priority, greeting type, or
+     * message date. See `Messaging_Property`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.7.
+     *
      * @public
      * @readonly
      */
     readonly properties: OPTIONAL<Messaging_Property[]>;
     /**
      * @summary `event_identifier`.
+     * @description
+     *
+     * Correlates this IRI with `MessagingCC` or `MessagingMMCC` inside the same
+     * CIN. Mandatory when content is also sent. Range 0 to 4294967295.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 8.0 and 8.1.
+     *
      * @public
      * @readonly
      */
     readonly event_identifier: OPTIONAL<INTEGER>;
     /**
      * @summary `original_message`.
+     * @description
+     *
+     * Raw IRI event from the UM system, when a mediation system formatted this
+     * record and the CSP and LEA have agreed to include it. The translated
+     * event is still carried in `category` when a translation exists.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.0.
+     *
      * @public
      * @readonly
      */
     readonly original_message: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `box_identifier`.
+     * @description
+     *
+     * Identifies one message box when several boxes are under intercept for the
+     * same LIID.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.0.
+     *
      * @public
      * @readonly
      */
     readonly box_identifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `total_recipient_count`.
+     * @description
+     *
+     * How many recipients the intercept equipment noticed, including any that
+     * are not listed in `party_information`. Range 0 to 4294967295.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.0.
+     *
      * @public
      * @readonly
      */

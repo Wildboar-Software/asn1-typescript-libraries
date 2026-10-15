@@ -13,6 +13,13 @@ import * as HI2Operations from "../HI2Operations/index.mjs";
  * @summary ETSI671IRI
  * @description
  * 
+ * Circuit-style HI2 from ETSI TS 101 671: either `IRI-Parameters` or
+ * `IRIsContent`. The choice may be commented out when it is unused.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.3, annex A, clause A.3.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

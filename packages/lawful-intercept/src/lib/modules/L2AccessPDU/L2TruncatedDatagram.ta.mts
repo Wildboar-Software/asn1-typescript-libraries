@@ -13,6 +13,18 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary L2TruncatedDatagram
  * @description
+ *
+ * A truncated copy of one intercepted layer 2 datagram, plus the datagram's
+ * length before truncation. Clause 7.3 allows this only when a national
+ * agreement is in place and the LEA has explicitly asked for a stated number
+ * of the leading octets of every intercepted layer 2 datagram for that
+ * target. In that case HI3 delivers only truncated datagrams, using this
+ * structure. The specification does not carry the requested octet count as
+ * its own component: the delivered string is the truncated copy, and
+ * `originalLength` is the length before truncation.
+ *
+ * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 7.3, table 2.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -31,18 +43,46 @@ export
 class L2TruncatedDatagram {
     /**
      * @summary `truncatedDatagram`.
+     * @description
+     *
+     * Copy of the truncated layer 2 datagram. Table 2 says this attribute
+     * shall be chosen only when the LEA explicitly requires truncation for
+     * that interception. The octets kept are the leading octets the LEA
+     * specified. The specification does not define a separate field for that
+     * requested length.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 7.3, table 2.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly truncatedDatagram: OCTET_STRING;
     /**
      * @summary `originalLength`.
+     * @description
+     *
+     * Length in octets of the layer 2 datagram before truncation. The ASN.1
+     * does not constrain the integer.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 7.3, table 2.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */
     readonly originalLength: INTEGER;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V3.8.1 marks the
+     * sequence extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 7.3.
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+     *
      * @public
      * @readonly
      */

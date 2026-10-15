@@ -15,6 +15,14 @@ import { Payload, _decode_Payload, _encode_Payload } from "../LI-PS-PDU/Payload.
  * @summary EncryptedPayload
  * @description
  * 
+ * Clear payload plus a byte counter, BER-encoded and then encrypted into
+ * `EncryptionContainer.encryptedPayload`. The counter ties successive PDUs
+ * together so a missing PDU changes every later counter.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,18 +50,47 @@ export
 class EncryptedPayload {
     /**
      * @summary `byteCounter`.
+     * @description
+     *
+     * Sum of the sizes of all previous PDUs. On first use it is the Unix time
+     * (seconds since 1970-01-01) multiplied by 2^32, which the module writes as
+     * `unixTime(now) << 32`. For later PDUs, `byteCounter(N) = byteCounter(N-1)
+     * + size(PDU(N-1))`, where N is the sequence number of the N-th PDU in the
+     * transfer. Annex G step 6 stores the length of the DER-encoded PS-PDU for
+     * that update. The module allows 0..18446744073709551615.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly byteCounter: INTEGER;
     /**
      * @summary `payload`.
+     * @description
+     *
+     * The clear `Payload` that was encrypted. Annex G starts from this value.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G, clause 6.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly payload: Payload;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

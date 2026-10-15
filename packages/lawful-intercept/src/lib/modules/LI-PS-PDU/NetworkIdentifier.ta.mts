@@ -15,6 +15,15 @@ import * as HI2Operations from "../HI2Operations/index.mjs";
  * @summary NetworkIdentifier
  * @description
  * 
+ * Operator identifier, plus an optional network-element identifier. The
+ * operator identifier is mandatory and names the CSP performing the intercept.
+ * The network identifier has to be unique within the CSP. Use only one of
+ * `networkElementIdentifier` and `eTSI671NEID`.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,24 +43,66 @@ export
 class NetworkIdentifier {
     /**
      * @summary `operatorIdentifier`.
+     * @description
+     *
+     * CSP performing the intercept. 1 to 16 octets. Mandatory. A padding PDU, a
+     * keep-alive, and a CIN-reset all still require a correct operator
+     * identifier.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4, clause 6.2.2, clause
+     * 6.2.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly operatorIdentifier: OCTET_STRING;
     /**
      * @summary `networkElementIdentifier`.
+     * @description
+     *
+     * Optional, 1 to 16 octets. Identifies the mediation function inside the
+     * CSP. When it is present, the mediation-function identifier goes here. The
+     * interception-point identifier can then distinguish intercepting elements
+     * attached to that mediation function. Mutually exclusive with
+     * `eTSI671NEID`.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly networkElementIdentifier: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `eTSI671NEID`.
+     * @description
+     *
+     * Optional network-element identifier imported from ETSI TS 101 671. By
+     * national agreement this form identifies the intercepting network element
+     * rather than the mediation function. When it is present, that element
+     * identifier goes here. Mutually exclusive with `networkElementIdentifier`.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly eTSI671NEID: OPTIONAL<HI2Operations.Network_Element_Identifier>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.4.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

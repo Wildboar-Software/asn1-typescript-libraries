@@ -20,6 +20,19 @@ import { TimeStampQualifier, _decode_TimeStampQualifier, _encode_TimeStampQualif
  * @summary CCPayload
  * @description
  * 
+ * One HI3 payload inside `cCPayloadSequence`. Aggregation follows clause 6.2.3.
+ * A large self-contained block of application data may instead be split across
+ * PDUs (clause 6.2.4): each segment is its own CC payload with its own header,
+ * and the sequence number increases for each segment. A `firstSegmentFlag` TRI
+ * precedes the first segment and a `lastSegmentFlag` TRI follows the last; each
+ * copies the segment PDU's communication identifier, authorization country
+ * code, LIID, and sequence number, and should omit the timestamp.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.3, clause 6.2.4, clause
+ * 5.2.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -42,36 +55,87 @@ export
 class CCPayload {
     /**
      * @summary `payloadDirection`.
+     * @description
+     *
+     * Direction of this CC. Optional.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly payloadDirection: OPTIONAL<PayloadDirection>;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Time of this CC payload. CC shall carry a timestamp unless the
+     * service-specific standard makes an exception. On an aggregated PDU this
+     * is the per-payload time.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `cCContents`.
+     * @description
+     *
+     * Service-specific content of communication.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.9, clause 4.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly cCContents: CCContents;
     /**
      * @summary `microSecondTimeStamp`.
+     * @description
+     *
+     * Microsecond form of this payload's time, for the aggregated case.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly microSecondTimeStamp: OPTIONAL<MicroSecondTimeStamp>;
     /**
      * @summary `timeStampQualifier`.
+     * @description
+     *
+     * What this payload's timestamp represents.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStampQualifier: OPTIONAL<TimeStampQualifier>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.3, clause 6.2.4, clause
+     * 5.2.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

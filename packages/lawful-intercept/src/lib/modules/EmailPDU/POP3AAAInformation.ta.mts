@@ -14,7 +14,19 @@ import { _decode_AAAResult, _encode_AAAResult, _enum_for_AAAResult, AAAResult } 
 /**
  * @summary POP3AAAInformation
  * @description
- * 
+ *
+ * POP3 authentication reported on an application-layer intercept: username and,
+ * optionally, password and result.
+ *
+ * Clause B.2.1 generates login success or failure from `PASS` or `APOP`. This
+ * structure has a password field; the module does not say that an APOP digest
+ * is placed there. Annex G.2: the login name identifies the mailbox, but the
+ * protocol does not standardise the form. In practice it is often the mailbox
+ * name without a domain, or a fully qualified address.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.4.3, B.2.1, and G.2.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -34,18 +46,42 @@ export
 class POP3AAAInformation {
     /**
      * @summary `username`.
+     * @description
+     *
+     * POP3 login name, 0 to 64 characters. It identifies the mailbox. There is
+     * no standard presentation (annex G.2).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.4.3 and G.2.
+     *
      * @public
      * @readonly
      */
     readonly username: UTF8String;
     /**
      * @summary `password`.
+     * @description
+     *
+     * POP3 password, 0 to 64 characters, when it is available to report. Clause
+     * 6.4.3 includes the password for a clear-text POP3 authentication.
+     * Requirement E.1.9 separately requires that a logon-attempt IRI be
+     * deliverable without passwords.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.4.3 and E.1.9.
+     *
      * @public
      * @readonly
      */
     readonly password: OPTIONAL<UTF8String>;
     /**
      * @summary `aAAResult`.
+     * @description
+     *
+     * Result of the POP3 authentication, when reported. The module does not map
+     * `AAAResult` values onto `+OK` and `-ERR`; those responses select
+     * `e_mail_logon` versus `e_mail_logon_failure` (clause B.2.1).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.4.3 and B.2.1.
+     *
      * @public
      * @readonly
      */

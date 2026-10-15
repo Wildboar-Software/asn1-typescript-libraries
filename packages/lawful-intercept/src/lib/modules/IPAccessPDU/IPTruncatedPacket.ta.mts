@@ -13,6 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IPTruncatedPacket
  * @description
+ *
+ * Not defined in ETSI TS 102 232-3 V3.9.1. Clause 7.2 of that edition
+ * requires an exact copy of the datagram from the IP layer upward, and
+ * the version14 module has no truncated-packet alternative.
  * 
  * ### ASN.1 Definition:
  * 
@@ -31,12 +35,22 @@ export
 class IPTruncatedPacket {
     /**
      * @summary `truncatedPacket`.
+     * @description
+     *
+     * Not described in V3.9.1. The version20 module does not say which
+     * octets are kept.
+     *
      * @public
      * @readonly
      */
     readonly truncatedPacket: OCTET_STRING;
     /**
      * @summary `originalLength`.
+     * @description
+     *
+     * Not described in V3.9.1. The version20 module does not say what
+     * length this counts.
+     *
      * @public
      * @readonly
      */

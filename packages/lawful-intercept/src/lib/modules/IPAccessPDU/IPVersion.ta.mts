@@ -16,6 +16,11 @@ enum _enum_for_IPVersion {
 /**
  * @summary IPVersion
  * @description
+ *
+ * Which IP version the target service uses. This chooses how
+ * `targetIPAddress`, `additionalIPAddress`, and `otherTargetIdentifiers`
+ * are filled (ETSI TS 102 232-3 V3.9.1, clause 6.2.1). The interception
+ * function supplies a fixed value (tables A.4 and B.3).
  * 
  * ### ASN.1 Definition:
  * 
@@ -39,6 +44,12 @@ type IPVersion = _enum_for_IPVersion | ENUMERATED;
 
 /**
  * @summary IPVersion_iPV4
+ * @description
+ *
+ * IPv4 only. `targetIPAddress` is the first IPv4 address or subnet.
+ * `additionalIPAddress` is empty. Further IPv4 ranges go in
+ * `otherTargetIdentifiers` (clause 6.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +58,10 @@ const IPVersion_iPV4: IPVersion = 1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPV4
+ * @description
+ *
+ * The service uses IPv4 only (clause 6.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +70,14 @@ const iPV4: IPVersion = IPVersion_iPV4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPVersion_iPV6
+ * @description
+ *
+ * IPv6 only. `targetIPAddress` is the first IPv6 address or prefix.
+ * `additionalIPAddress` is empty. Further IPv6 ranges go in
+ * `otherTargetIdentifiers`. For RADIUS, clause A.5.2.6 gives the
+ * order Framed-IPv6-Address, then Framed-IPv6-Prefix, then
+ * Delegated-IPv6-Prefix.
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +86,10 @@ const IPVersion_iPV6: IPVersion = 2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPV6
+ * @description
+ *
+ * The service uses IPv6 only (clause 6.2.1).
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +98,14 @@ const iPV6: IPVersion = IPVersion_iPV6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPVersion_iPV4andV6
+ * @description
+ *
+ * Dual stack. `targetIPAddress` is the first IPv4 address or subnet.
+ * `additionalIPAddress` is the first IPv6 address or prefix. Further
+ * addresses of either family go in `otherTargetIdentifiers`
+ * (clause 6.2.1). RADIUS dual-stack mapping is in clause A.5.2.6
+ * and table A.6.
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +114,10 @@ const IPVersion_iPV4andV6: IPVersion = 3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPV4andV6
+ * @description
+ *
+ * The service uses IPv4 and IPv6 together (clause 6.2.1).
+ *
  * @constant
  * @type {number}
  */

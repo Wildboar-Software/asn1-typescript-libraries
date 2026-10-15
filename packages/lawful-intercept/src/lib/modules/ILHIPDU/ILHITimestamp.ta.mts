@@ -13,6 +13,20 @@ import * as Common_Parameters from "../Common-Parameters/index.mjs";
 /**
  * @summary ILHITimestamp
  * @description
+ *
+ * Normalized timestamp from the mapping function. The root alternatives are
+ * the two ETSI TS 103 280 forms clause 7.3.2 requires:
+ * `qualifiedDateTime` and `qualifiedMicrosecondDateTime`. V1.1.1 does not
+ * say which of those two forms to select.
+ *
+ * `unqualifiedDateTime` is an extension addition. Annex B of V1.1.1 does not
+ * define it. The comment in this module's ASN.1 says the alternative is used
+ * when the timestamp cannot be mapped, for example because the timezone is
+ * missing. The alternative is `NULL`, so it records that fact and carries no
+ * time value.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.2, annex B.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 

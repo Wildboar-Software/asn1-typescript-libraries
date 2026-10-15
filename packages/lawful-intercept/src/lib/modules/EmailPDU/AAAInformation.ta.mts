@@ -15,7 +15,20 @@ import { IMAPAAAInformation, _decode_IMAPAAAInformation, _encode_IMAPAAAInformat
 /**
  * @summary AAAInformation
  * @description
- * 
+ *
+ * Authentication material from POP3, authenticated SMTP, or IMAP4, carried in
+ * `EmailIRI` when national legislation allows it.
+ *
+ * Application-layer interception puts this in the IRI (requirement E.1.13).
+ * IP-packet interception sends the same exchange as HI3 IP packets and does not
+ * map it here (requirement E.2.3). Authenticated SMTP (clause 6.2.3, IETF RFC
+ * 4954) uses the SMTP alternative. POP3, and IMAP4 with a clear-text username
+ * and password, use the POP3 or IMAP alternative and carry username, password,
+ * and result (clause 6.4.3).
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.2.3, 6.4.3, and 7.10.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,8 +44,26 @@ import { IMAPAAAInformation, _decode_IMAPAAAInformation, _encode_IMAPAAAInformat
  */
 export
 type AAAInformation =
+    /**
+     * POP3 username and, when present, password and result. Clause 6.4.3.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.4.3 and 7.10.
+     */
     { pOP3AAAInformation: POP3AAAInformation } /* CHOICE_ALT_ROOT */
+    /**
+     * Authenticated SMTP (IETF RFC 4954): username, method, challenge,
+     * response, and result. Clause 6.2.3.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 6.2.3.
+     */
     | { aSMTPAAAInformation: ASMTPAAAInformation } /* CHOICE_ALT_ROOT */
+    /**
+     * IMAP4 clear-text username and password, plus result, when clause 6.4.3
+     * applies. SASL `AUTHENTICATE` (table C.1, IETF RFC 4422) has no separate
+     * challenge or response field in this module.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 6.4.3 and C.2.
+     */
     | { iMAPAAAInformation: IMAPAAAInformation } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

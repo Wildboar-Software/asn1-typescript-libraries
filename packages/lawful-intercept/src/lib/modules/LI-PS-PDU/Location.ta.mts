@@ -19,6 +19,16 @@ import * as UmtsHI2Operations from "../UmtsHI2Operations/index.mjs";
  * @summary Location
  * @description
  * 
+ * Common location parameter. Service-specific standards otherwise repeat the
+ * same location structures, so this module defines them once. Each
+ * service-specific standard decides whether the parameter is allowed and how it
+ * is used. The specification does not say that the alternatives are mutually
+ * exclusive.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,36 +50,85 @@ export
 class Location {
     /**
      * @summary `umtsHI2Location`.
+     * @description
+     *
+     * Location from the 3GPP TS 33.108 UMTS HI2 module.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly umtsHI2Location: OPTIONAL<UmtsHI2Operations.Location>;
     /**
      * @summary `epsLocation`.
+     * @description
+     *
+     * EPS location from the 3GPP TS 33.108 EPS HI2 module.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly epsLocation: OPTIONAL<EpsHI2Operations.EPSLocation>;
     /**
      * @summary `wlanLocationAttributes`.
+     * @description
+     *
+     * WLAN access-point attributes. In this module that is the access-point MAC
+     * address derived from the BSSID.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly wlanLocationAttributes: OPTIONAL<WlanLocationAttributes>;
     /**
      * @summary `eTSI671HI2Location`.
+     * @description
+     *
+     * Location from ETSI TS 101 671 HI2.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly eTSI671HI2Location: OPTIONAL<HI2Operations.Location>;
     /**
      * @summary `threeGPP33128UserLocation`.
+     * @description
+     *
+     * User location from 3GPP TS 33.128.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5, clause 4.6.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly threeGPP33128UserLocation: OPTIONAL<TS33128Payloads.UserLocation>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

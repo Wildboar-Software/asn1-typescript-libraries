@@ -26,6 +26,23 @@ import * as ThreeGPP_HI1NotificationOperations from "../ThreeGPP-HI1Notification
  * @summary Payload
  * @description
  * 
+ * What the PS-PDU carries. IRI and CC may be a sequence so that clause 6.2.3
+ * can aggregate several payloads under one header and one sequence number. TRI
+ * is a single transport message. The extension alternatives carry HI1
+ * notifications, an encrypted payload, inter-LEMF handover, or HI4
+ * notifications.
+ *
+ * Aggregation is allowed only when the CSP and LEA agree. Payloads in one PDU
+ * may differ in timestamp, in direction (IRI or CC), or in IRI type, and in
+ * nothing else: a different LIID or operator is not aggregated. Order inside
+ * the PDU is the order of arrival at the handover manager. Each payload may
+ * carry its own timestamp and `timeStampQualifier`; the header timestamp, if
+ * present for this purpose, is `timeOfAggregation`.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.8, clause 6.2.3, clause 4.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

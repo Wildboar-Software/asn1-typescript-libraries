@@ -13,6 +13,13 @@ import * as GCSEHI2Operations from "../GCSEHI2Operations/index.mjs";
  * @summary GcseIRI
  * @description
  * 
+ * GCSE IRI from 3GPP TS 33.108: GCSE IRI parameters or `GcseIRIsContent`. May
+ * be commented out when unused. See clause 4.4.2.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.4.2, annex A, clause A.3.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

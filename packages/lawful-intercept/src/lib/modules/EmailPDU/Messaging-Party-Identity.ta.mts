@@ -18,7 +18,19 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary Messaging_Party_Identity
  * @description
- * 
+ *
+ * One identity of a party on a unified-messaging event. Table 7 is the
+ * reference for which parameters exist and where their formats are defined.
+ *
+ * Supply both the client address and the client port when they are available:
+ * an address alone is not enough when the party uses NAPT. Server address and
+ * port matter when the UM service is a set of interconnected servers that
+ * exchange messages through NAPT. `party_qualifier` distinguishes the
+ * originating side from the destination.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -63,19 +75,110 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
  */
 export
 type Messaging_Party_Identity =
+    /**
+     * MSISDN of the target, 1 to 9 octets, encoded as the MAP `AddressString`
+     * of 3GPP TS 29.002 clause 17.7.8. Recommendation ITU-T E.164.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     { msisdn: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    /**
+     * E.164 address of the node in international format, 1 to 25 octets, coded
+     * as the ISUP calling-party number parameter (parameter part of ETSI EN 300
+     * 356).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { e164_format: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    /**
+     * One or more email addresses. IETF RFC 5322, IETF RFC 5321, IETF RFC 3696,
+     * and IETF RFC 6530 define the form. From version 3.13.1, RFC 6530
+     * addresses are allowed. Addresses are kept as intercepted and may be
+     * unqualified (clause 7.2).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 7.2 and 8.6.
+     */
     | { email_address: E_mail_Address_List } /* CHOICE_ALT_ROOT */
+    /**
+     * IP address as in IETF RFC 791 (IPv4) or IETF RFC 8200 (IPv6). Prefer
+     * `ip_address_and_port` when a port is available, because NAPT makes the
+     * address alone insufficient.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { ip_address: LI_PS_PDU.IPAddress } /* CHOICE_ALT_EXT */
+    /**
+     * Alphanumeric party identifier. Use this only when the underlying network
+     * protocol identifies the party identifier as alphanumeric.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { alphanumeric: UTF8String } /* CHOICE_ALT_EXT */
+    /**
+     * IP address plus port. The client address and port are the important
+     * parts. Server address and port help when voice or multimedia messages
+     * cross NAPT between boxes or operators. See `IP_Address_And_Port`.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { ip_address_and_port: IP_Address_And_Port } /* CHOICE_ALT_EXT */
+    /**
+     * IMSI of the target, 3 to 8 octets, encoded as the MAP `TBCD-STRING` of
+     * 3GPP TS 29.002 clause 17.7.8. Described in 3GPP TS 23.003 clause 2.2 and
+     * Recommendation ITU-T E.212. This identity may be unavailable in the UM
+     * system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { imsi: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * IMEI of the target, 8 octets, encoded as the MAP `TBCD-STRING` of 3GPP TS
+     * 29.002 clause 17.7.8. Defined in 3GPP TS 23.003 clause 6. This identity
+     * may be unavailable in the UM system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { imei: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * Fax URL in the form of IETF RFC 2806. Table 7 says these telephone-number
+     * URL identities may be unavailable in the UM system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { fax_url: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * Telephone URL. Format used in 3GPP TS 33.108 and 3GPP TS 24.229, and
+     * defined in IETF RFC 2806. May be unavailable in the UM system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { tel_url: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * Modem URL in the form of IETF RFC 2806. May be unavailable in the UM
+     * system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { modem_url: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * SIP URI defined in IETF RFC 3261, in the form used in 3GPP TS 33.108. May
+     * be unavailable in the UM system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { sip_uri: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * SIPS URI defined in IETF RFC 3261. May be unavailable in the UM system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { sips_uri: OCTET_STRING } /* CHOICE_ALT_EXT */
+    /**
+     * Network access identity, in the form used for the EPS domain in 3GPP TS
+     * 33.108 and defined in IETF RFC 7542. May be unavailable in the UM system.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6, table 7.
+     */
     | { nai: OCTET_STRING } /* CHOICE_ALT_EXT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

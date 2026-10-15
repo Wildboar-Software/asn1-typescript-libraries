@@ -6,10 +6,45 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_IPAddress_iP_assignment
+ * @description
+ *
+ * How the reported address was assigned. The three names are the normative
+ * coding.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
+ * @enum {number}
+ */
 export
 enum _enum_for_IPAddress_iP_assignment {
+    /**
+     * A static address. This coding shall be used for a static address.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     static_ = 1,
+    /**
+     * A dynamically allocated address. This coding shall be used for that case.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     dynamic = 2,
+    /**
+     * An address that is neither static nor dynamically allocated. This coding
+     * shall be used for that case.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     */
     notKnown = 3,
 }
 
@@ -17,6 +52,13 @@ enum _enum_for_IPAddress_iP_assignment {
  * @summary IPAddress_iP_assignment
  * @description
  * 
+ * How the reported address was assigned. The three names are the normative
+ * coding.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,6 +81,14 @@ type IPAddress_iP_assignment = _enum_for_IPAddress_iP_assignment | ENUMERATED;
 
 /**
  * @summary IPAddress_iP_assignment_static_
+ * @description
+ *
+ * A static address. This coding shall be used for a static address.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -47,6 +97,14 @@ const IPAddress_iP_assignment_static_: IPAddress_iP_assignment = 1; /* LONG_NAME
 
 /**
  * @summary static_
+ * @description
+ *
+ * A static address. This coding shall be used for a static address.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -55,6 +113,14 @@ const static_: IPAddress_iP_assignment = IPAddress_iP_assignment_static_; /* SHO
 
 /**
  * @summary IPAddress_iP_assignment_dynamic
+ * @description
+ *
+ * A dynamically allocated address. This coding shall be used for that case.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -63,6 +129,14 @@ const IPAddress_iP_assignment_dynamic: IPAddress_iP_assignment = 2; /* LONG_NAME
 
 /**
  * @summary dynamic
+ * @description
+ *
+ * A dynamically allocated address. This coding shall be used for that case.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -71,6 +145,15 @@ const dynamic: IPAddress_iP_assignment = IPAddress_iP_assignment_dynamic; /* SHO
 
 /**
  * @summary IPAddress_iP_assignment_notKnown
+ * @description
+ *
+ * An address that is neither static nor dynamically allocated. This coding
+ * shall be used for that case.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */
@@ -79,6 +162,15 @@ const IPAddress_iP_assignment_notKnown: IPAddress_iP_assignment = 3; /* LONG_NAM
 
 /**
  * @summary notKnown
+ * @description
+ *
+ * An address that is neither static nor dynamically allocated. This coding
+ * shall be used for that case.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), annex A, clause A.2.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * @constant
  * @type {number}
  */

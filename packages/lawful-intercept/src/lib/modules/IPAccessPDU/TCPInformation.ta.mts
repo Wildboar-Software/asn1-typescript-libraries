@@ -13,6 +13,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TCPInformation
  * @description
+ *
+ * Fields from the TCP header of the target packet (IETF RFC 793), as
+ * used by a header report or a summary report (ETSI TS 102 232-3
+ * V3.9.1, clauses 6.2.3.4 and 6.2.4). Each populated value is a copy
+ * of the corresponding octets, in the same byte order.
+ *
+ * On a summary report, populate only the source and destination ports
+ * and omit the other fields (table 4, clause 6.2.4.2). Annex D treats
+ * those ports as IRI when the CSP uses them for its own service, and
+ * otherwise as user data that belongs in CC. If IPsec protects the
+ * packet, TCP information is not available (clause D.1).
  * 
  * ### ASN.1 Definition:
  * 
@@ -40,60 +51,117 @@ export
 class TCPInformation {
     /**
      * @summary `sourcePort`.
+     * @description
+     *
+     * TCP source port. Part of the flow identity (clause 6.2.4.2). Annex D
+     * defines a TCP flow by the socket pair, and a flow start by SYN.
+     *
      * @public
      * @readonly
      */
     readonly sourcePort: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `destinationPort`.
+     * @description
+     *
+     * TCP destination port. Part of the flow identity (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly destinationPort: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `sequenceNumber`.
+     * @description
+     *
+     * Copy of this TCP header field (IETF RFC 793). Same byte order as on
+     * the wire. Omit it on a summary report; only the ports identify the
+     * flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly sequenceNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ackNumber`.
+     * @description
+     *
+     * Copy of this TCP header field (IETF RFC 793). Same byte order as on
+     * the wire. Omit it on a summary report; only the ports identify the
+     * flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly ackNumber: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `dataOffset`.
+     * @description
+     *
+     * The first 4 bits of the data-offset nibble (clause 8). Copy of the
+     * relevant bits (clause 6.2.3.4). Omit on a summary report.
+     *
      * @public
      * @readonly
      */
     readonly dataOffset: OPTIONAL<BIT_STRING>;
     /**
      * @summary `controlBits`.
+     * @description
+     *
+     * The right-most 6 TCP control bits (clause 8). The ECN bits defined
+     * in IETF RFC 3168 and IETF RFC 3540 are not included
+     * (clause 6.2.3.4). Omit on a summary report. Annex D uses FIN and RST
+     * to detect the end of a TCP flow.
+     *
      * @public
      * @readonly
      */
     readonly controlBits: OPTIONAL<BIT_STRING>;
     /**
      * @summary `windowSize`.
+     * @description
+     *
+     * Copy of this TCP header field (IETF RFC 793). Same byte order as on
+     * the wire. Omit it on a summary report; only the ports identify the
+     * flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly windowSize: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `checkSum`.
+     * @description
+     *
+     * Copy of this TCP header field (IETF RFC 793). Same byte order as on
+     * the wire. Omit it on a summary report; only the ports identify the
+     * flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly checkSum: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `urgentPointer`.
+     * @description
+     *
+     * Copy of this TCP header field (IETF RFC 793). Same byte order as on
+     * the wire. Omit it on a summary report; only the ports identify the
+     * flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly urgentPointer: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `options`.
+     * @description
+     *
+     * Copy of this TCP header field (IETF RFC 793). Same byte order as on
+     * the wire. Omit it on a summary report; only the ports identify the
+     * flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */

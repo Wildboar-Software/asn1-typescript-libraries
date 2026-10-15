@@ -20,6 +20,73 @@ import { OptionResponse, _decode_OptionResponse, _encode_OptionResponse } from "
  * @summary TRIPayload
  * @description
  * 
+ * Transport-related information. It covers delivery of intercepted data toward
+ * the LEA, and maintenance of the transport connection between a delivery
+ * function and an LEMF gateway. TRI is its own payload alternative in the
+ * sequence-number context. Among TRI, keep-alive, integrityCheck, the
+ * option-negotiation messages, and pDUAcknowledgementRequest are each
+ * counted on their own.
+ *
+ * `integrityCheck` is the annex J hash or signature. `testPDU` is end-to-end
+ * test traffic: LIID, country code, communication identifier, and timestamp are
+ * filled in, and the sequence number is zero. It should be sent at activation
+ * and may be sent at other times. `paddingPDU` changes the data rate so the
+ * flow pattern is not itself informative. The handover manager creates it and
+ * the LEMF handover manager removes it. The object identifier, operator
+ * identifier, and optional network-element identifier are correct; every other
+ * header field may be any value. The octet string is discarded and shall not
+ * carry meaningful data.
+ *
+ * `firstSegmentFlag` is sent before the first segment of a large application
+ * block, and `lastSegmentFlag` after the last (clause 6.2.4). Each copies the
+ * corresponding segment PDU's communication identifier, authorization country
+ * code, LIID, and sequence number, and should omit the timestamp. `cINReset`
+ * says CIN state was lost. After a crash that loses CIN state for the system,
+ * the LIID is a single "-" (ASCII 45), the timestamp, operator identifier, and
+ * network-element identifier are present and correct, and the CIN and sequence
+ * number are zero. After loss for one LIID, that LIID is used, the same three
+ * fields are present, and the sequence number is zero; the LEMF treats CIN
+ * state for that LIID as reset. By agreement the single-LIID reset may be sent
+ * on every activation. If persistent storage exists, equipment shall be
+ * designed to avoid losing CIN state. `operatorLeaMessage` carries an error
+ * report.
+ *
+ * `keep-alive` is the session-layer keep-alive. The delivery function timer
+ * starts when the connection opens and resets when data is sent. At TIME1
+ * (often 120 s to 360 s, and it may be sent earlier) it sends this message. The
+ * sequence number increases for each keep-alive of that delivery-function
+ * instance. Timestamp and domain identifier are set; every other header field
+ * may be any value. The LEMF answers with `keep-aliveResponse` within TIME2
+ * (often 30 s). That response repeats the request's sequence number, refreshes
+ * the timestamp, and may put any value in the other header fields. If no
+ * response arrives within TIME3 (often 60 s, and longer than TIME2), the MF
+ * drops the transport connection and opens another.
+ *
+ * `optionRequest`, `optionResponse`, and `optionComplete` are clause 6.3.5.
+ * `optionComplete` means the sender is satisfied with the options most recently
+ * accepted by the peer. Negotiation is finished only when an endpoint has both
+ * sent and received `optionComplete`. `pDUAcknowledgementRequest` asks the LGW
+ * to confirm that every PDU up to this message, on this session, has been
+ * received and processed (persistence of that processing is national). The
+ * sequence number increases per request of that delivery function. Timestamp
+ * and domain identifier are set; other header fields are any value valid for
+ * the type. `pDUAcknowledgementResponse` repeats that sequence number,
+ * refreshes the timestamp, and should copy the other header fields. The LGW
+ * answers within TIME4 (often 30 s). If none arrives within TIME5 (often 60 s,
+ * and longer than TIME4), the DF drops the connection and retransmits
+ * unacknowledged data. The gap between requests (TIME6) is chosen against
+ * buffer size and throughput. Use is either the negotiated `pDUAcknowledgement`
+ * option or a required behaviour that does not need negotiation.
+ *
+ * The delivery function's cyclic buffer does not store a keep-alive, an
+ * option-negotiation message, or a `pDUAcknowledgementRequest`. Those are not
+ * replayed when the transport connection is reopened.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.8, clause 6.2.2, clause
+ * 6.3.3, clause 6.3.4, clause 6.3.5, clause 6.3.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -14,6 +14,13 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary WlanLocationAttributes
  * @description
  * 
+ * WLAN attributes that can be placed in the common `Location` parameter. The
+ * only attribute defined here is the access-point MAC address.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +38,29 @@ export
 class WlanLocationAttributes {
     /**
      * @summary `wlanAPMACAddress`.
+     * @description
+     *
+     * 48-bit MAC address of the WLAN access point, 6 octets, derived from the
+     * BSSID.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly wlanAPMACAddress: OPTIONAL<OCTET_STRING>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 4.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

@@ -1,4 +1,15 @@
 /**
+ * Service-specific HI2 and HI3 for messaging, from ETSI TS 102 232-2
+ * V3.16.1 (2023-03).
+ *
+ * Email events use `EmailIRI` and `EmailCC`. Unified-messaging events
+ * use `MessagingIRI` with `MessagingCC` or `MessagingMMCC`. A national
+ * agreement may allow email to use the messaging structures instead.
+ * The module object identifier is `emailPDUObjId`.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clauses 1, 4.2, 6, and 8.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `delete_`, `none`, `operation_failed`, `operation_succeeded`, `read`, `unknown`

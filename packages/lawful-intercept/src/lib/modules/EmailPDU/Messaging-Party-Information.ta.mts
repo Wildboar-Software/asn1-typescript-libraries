@@ -18,7 +18,20 @@ import { Messaging_Copy_Qualifier, _decode_Messaging_Copy_Qualifier, _encode_Mes
 /**
  * @summary Messaging_Party_Information
  * @description
- * 
+ *
+ * One party related to a unified-messaging event.
+ *
+ * `party_qualifier` says whether the party originated the event, terminated it,
+ * is associated with it, or cannot be classified. `party_identity` is one of
+ * the identities in table 7. `party_validity` says whether the CSP has assured
+ * that identity; it does not mean the CSP identified a natural person.
+ * `copy_qualifier` says whether the identity was directly addressed, carbon
+ * copied, or blind carbon copied. Clause 8.6 does not define the individual
+ * validity or copy-qualifier enumeration items.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -38,24 +51,57 @@ export
 class Messaging_Party_Information {
     /**
      * @summary `party_qualifier`.
+     * @description
+     *
+     * Originating, terminating, associated, or unknown. Use the qualifier
+     * together with an IP identity to tell the client side from the server side
+     * (table 7).
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6.
+     *
      * @public
      * @readonly
      */
     readonly party_qualifier: Messaging_Party_Qualifier;
     /**
      * @summary `party_identity`.
+     * @description
+     *
+     * One identity from table 7: telephone number, email address, IP address,
+     * mobile identity, or an alphanumeric identifier. Several identities of one
+     * party are several elements of `MessagingIRI.party_information`, because
+     * each element carries a single identity.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6.
+     *
      * @public
      * @readonly
      */
     readonly party_identity: Messaging_Party_Identity;
     /**
      * @summary `party_validity`.
+     * @description
+     *
+     * Whether the CSP has assured this party identity. Assurance does not mean
+     * a natural person was identified (note 2). The individual values
+     * `unknown`, `trusted`, and `untrusted` are not defined in clause 8.6.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6.
+     *
      * @public
      * @readonly
      */
     readonly party_validity: OPTIONAL<Messaging_Party_Validity>;
     /**
      * @summary `copy_qualifier`.
+     * @description
+     *
+     * Whether this party identity was directly addressed, carbon copied, or
+     * blind carbon copied. Clause 8.6 does not say which enumeration item is
+     * direct addressing.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), clause 8.6.
+     *
      * @public
      * @readonly
      */

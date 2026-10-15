@@ -20,6 +20,41 @@ import { _decode_HashAlgorithm, _encode_HashAlgorithm, _enum_for_HashAlgorithm, 
  * @summary IntegrityCheck
  * @description
  * 
+ * A hash or a DSS/DSA signature inserted by the handover manager so the LEMF
+ * can check integrity of intercepted data. Used only by national agreement, and
+ * then only as annex J describes.
+ *
+ * A chain is one combination of LIID, communication identifier, and `dataType`
+ * (IRI, CC, or inter-LEMF handover). Each chain has its own sequence-number
+ * counter. In the ordinary case that is four counters per communication
+ * identifier: CC hashes, IRI hashes, CC signatures, and IRI signatures.
+ * Inter-LEMF handover adds two: iLHI hashes and iLHI signatures.
+ *
+ * A hash covers the DataPDUs already sent on that chain (a DataPDU is a PS-PDU
+ * whose payload is CC, IRI, or inter-LEMF handover). It is sent when the hash
+ * timeout elapses (the timer starts when the first DataPDU is included and is
+ * reset when the timeout is reached; a typical value is 1 second), or when
+ * `dataPduCount` DataPDUs have been sent (typical value 1000), or when the
+ * intercept ends with DataPDUs still unhashed. The timeout is not started until
+ * a DataPDU is waiting to be hashed, so an idle session does not produce an
+ * endless chain.
+ *
+ * A signature covers the hashes already sent on that chain. It is sent when the
+ * signature timeout elapses (typical value 300 seconds), or when `hashPduCount`
+ * hashes have been sent (typical value 15), or when the intercept ends with
+ * hashes still unsigned. Those four counts are national parameters. If the
+ * integrity mechanism is in use and the delivery function must discard data,
+ * HI2 information is dropped before any IntegrityCheck PDU.
+ *
+ * SHA is FIPS PUB 180-4. The SHA variant is a national choice and may be named
+ * in `hashAlgorithm`. A signature is DSS/DSA as in FIPS PUB 186-4; parameter
+ * sizes, the SHA used inside DSA, and key generation and distribution are
+ * national or out of scope.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 7.2.3, annex J.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -49,36 +84,92 @@ export
 class IntegrityCheck {
     /**
      * @summary `includedSequenceNumbers`.
+     * @description
+     *
+     * Sequence numbers of the PDUs covered by this check, in the order they
+     * were included. For a hash, those are DataPDU sequence numbers in hash
+     * order. For a signature, those are sequence numbers of the IntegrityCheck
+     * PDUs that carried the hashes, in the order those hashes were sent.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex J, clause J.2.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly includedSequenceNumbers: INTEGER[];
     /**
      * @summary `checkType`.
+     * @description
+     *
+     * Hash or DSS/DSA signature.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex J, clause J.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly checkType: CheckType;
     /**
      * @summary `dataType`.
+     * @description
+     *
+     * Which chain this check belongs to: IRI, CC, or inter-LEMF handover. From
+     * ASN.1 version 5 this field is mandatory for hashes and for signatures.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 7.2.3, annex J, clause J.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly dataType: OPTIONAL<DataType>;
     /**
      * @summary `checkValue`.
+     * @description
+     *
+     * The digest or the signature, in network byte order. When the value is a
+     * signature, the octet string may hold the DER or BER encoding of the
+     * DSS/DSA signature structure in IETF RFC 3279, clause 2.2.2.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex J, clause J.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly checkValue: OCTET_STRING;
     /**
      * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Which SHA produced the digest when `checkType` is hash. If this field is
+     * used, it is present on every hash. The specification does not require it
+     * on a signature.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex J, clause J.1.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly hashAlgorithm: OPTIONAL<HashAlgorithm>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 7.2.3, annex J.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

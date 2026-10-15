@@ -13,6 +13,12 @@ import { IPIRIContents, _decode_IPIRIContents, _encode_IPIRIContents } from "../
 /**
  * @summary IPIRI
  * @description
+ *
+ * HI2 intercept-related information for one Internet Access Service
+ * event (ETSI TS 102 232-3 V3.9.1, clauses 6 and 8). The IRI message
+ * type (BEGIN, END, CONTINUE, or REPORT) follows `accessEventType`
+ * (clause 6.1, table 1). Handover of the record is specified in
+ * ETSI TS 102 232-1.
  * 
  * ### ASN.1 Definition:
  * 
@@ -31,12 +37,20 @@ export
 class IPIRI {
     /**
      * @summary `iPIRIObjId`.
+     * @description
+     *
+     * Set to `iPIRIObjId`, arc `iRI(1)` under the module OID (clause 8).
+     *
      * @public
      * @readonly
      */
     readonly iPIRIObjId: RELATIVE_OID;
     /**
      * @summary `iPIRIContents`.
+     * @description
+     *
+     * The session attributes for this event (clause 6.2, table 2).
+     *
      * @public
      * @readonly
      */

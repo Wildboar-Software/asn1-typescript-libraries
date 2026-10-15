@@ -22,6 +22,16 @@ import { PayloadDirection, _decode_PayloadDirection, _encode_PayloadDirection, _
  * @summary IRIPayload
  * @description
  * 
+ * One HI2 payload inside `iRIPayloadSequence`. Several may share a PDU only
+ * under the aggregation rules in clause 6.2.3. The IRI type is mandatory. A
+ * timestamp is mandatory for IRI; when payloads are aggregated, put each
+ * payload's own time here (GeneralizedTime or the microsecond form).
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 5.2.10, clause
+ * 6.2.3.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,48 +63,123 @@ export
 class IRIPayload {
     /**
      * @summary `iRIType`.
+     * @description
+     *
+     * BEGIN, CONTINUE, END, or REPORT. Mandatory for every IRI, including when
+     * `iRIContents` already indicates the message type. Mandatory in all
+     * conditions from V3.25.1.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.10.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRIType: OPTIONAL<IRIType>;
     /**
      * @summary `timeStamp`.
+     * @description
+     *
+     * Time of this payload, used when several IRI payloads are aggregated and
+     * each needs its own time. See the header timestamp for which clock form is
+     * used.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStamp: OPTIONAL<GeneralizedTime>;
     /**
      * @summary `iRIContents`.
+     * @description
+     *
+     * Service-specific IRI. The choice is the service-specific standard used
+     * with this header (clause 5.2.9).
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.9, clause 4.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly iRIContents: IRIContents;
     /**
      * @summary `microSecondTimeStamp`.
+     * @description
+     *
+     * Microsecond form of this payload's time, for the aggregated case.
+     * National agreement chooses between this and `timeStamp`.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly microSecondTimeStamp: OPTIONAL<MicroSecondTimeStamp>;
     /**
      * @summary `timeStampQualifier`.
+     * @description
+     *
+     * What this payload's timestamp represents, when a qualifier is wanted on
+     * an aggregated payload.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timeStampQualifier: OPTIONAL<TimeStampQualifier>;
     /**
      * @summary `sessionDirection`.
+     * @description
+     *
+     * Optional direction of the session. Use it only where the service-specific
+     * standard says so, and only as that standard describes. The meaning is
+     * defined there, not in this module.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.12.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly sessionDirection: OPTIONAL<PayloadDirection>;
     /**
      * @summary `payloadDirection`.
+     * @description
+     *
+     * Optional direction of this IRI payload. Use it only where the
+     * service-specific standard says so, and only as that standard describes.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.7.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly payloadDirection: OPTIONAL<PayloadDirection>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 5.2.6, clause 5.2.10, clause
+     * 6.2.3.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

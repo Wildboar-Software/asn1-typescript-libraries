@@ -12,6 +12,18 @@ import * as $ from "@wildboar/asn1/functional";
  * @summary Option
  * @description
  * 
+ * One transport-layer or session-layer option. Options do not change PDU
+ * formatting and do not change what is intercepted. The only option defined in
+ * this module is PDU acknowledgement. Further options would be additional TRI
+ * identifiers or extensions of other messages. An unrecognized alternative
+ * means the peer's version of the specification does not contain that option;
+ * during negotiation that is signalled by omitting it from both the accepted
+ * and the declined lists.
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.3.5, clause 6.3.6.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -13,6 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SupplementaryLocationData
  * @description
+ *
+ * Extra presentation data attached to a normalized location. Annex B gives
+ * network-element details, for example transmitter details, as the kind of
+ * information that belongs here. Azimuth is the only parameter defined.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -31,12 +38,30 @@ export
 class SupplementaryLocationData {
     /**
      * @summary `azimuth`.
+     * @description
+     *
+     * Bearing relative to true north, constrained to the integers 0 through
+     * 359. V1.1.1 does not name a unit beyond that range and the Annex B
+     * comment.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly azimuth: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V1.1.1 marks the
+     * type extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */

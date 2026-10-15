@@ -16,6 +16,33 @@ import { _decode_EncryptedPayloadType, _encode_EncryptedPayloadType, _enum_for_E
  * @summary EncryptionContainer
  * @description
  * 
+ * Transport for one encrypted `Payload`, used when national agreement requires
+ * each intercepted PDU to be encrypted. The cipher and the key management are
+ * agreed between CSP and LEA. Annex G is normative for the procedure, so that
+ * both sides hash and decrypt the same octets.
+ *
+ * At the CSP the steps are: place the Payload in `EncryptedPayload` and set
+ * `byteCounter`; BER-encode that structure and pad with zero octets if the
+ * cipher needs padding; build a PS-PDU whose payload is this container, with
+ * `encryptionType` equal to `none` and `encryptedPayload` equal to that octet
+ * string; DER-encode the PS-PDU; digest that DER encoding (clause 7.2.3);
+ * remember the encoded length for the next `byteCounter`; encrypt the
+ * `encryptedPayload` octet string; set `encryptionType` to the real cipher;
+ * DER-encode the PS-PDU again. The digest from the pre-image becomes the TRI
+ * integrity check. DER is required for the digest because BER is not unique.
+ * For inter-LEMF handover the resending LEMF performs the CSP role.
+ *
+ * `encryptedPayloadType` names the service-specific standard inside the
+ * encrypted payload so a LEMF can route the PDU without decrypting it. Ciphers
+ * that need an IV derive it from the 32-bit unsigned `sequenceNumber` in the PS
+ * header, concatenated with itself: four times for a 128-bit IV (both AES-CBC
+ * values) and twice for a 64-bit IV (both Blowfish-CBC values, and Triple-DES
+ * CBC).
+ *
+ * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.6, annex G.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -35,24 +62,63 @@ export
 class EncryptionContainer {
     /**
      * @summary `encryptionType`.
+     * @description
+     *
+     * Cipher applied to `encryptedPayload`, or `none` for the clear pre-image
+     * that is digested. Annex G sets `none` before the digest and the real
+     * cipher after encryption.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly encryptionType: EncryptionType;
     /**
      * @summary `encryptedPayload`.
+     * @description
+     *
+     * The `EncryptedPayload` value. Before encryption it is the BER encoding of
+     * that value, padded with zero octets when the cipher needs padding. After
+     * step 8 of annex G it is that encoding encrypted. Once decrypted it is
+     * decoded as `EncryptedPayload`.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly encryptedPayload: OCTET_STRING;
     /**
      * @summary `encryptedPayloadType`.
+     * @description
+     *
+     * Which part of the TS 102 232 family functionally describes the IRI, CC,
+     * or TRI inside the encrypted payload. Set this so the LEMF can route the
+     * traffic without decrypting it.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), annex G.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */
     readonly encryptedPayloadType: OPTIONAL<EncryptedPayloadType>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this version of the module does not name.
+     *
+     * ETSI TS 102 232-1 V3.29.1 (2023-03), clause 6.2.6, annex G.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223201/03.29.01_60/ts_10223201v032901p.pdf
+     *
      * @public
      * @readonly
      */

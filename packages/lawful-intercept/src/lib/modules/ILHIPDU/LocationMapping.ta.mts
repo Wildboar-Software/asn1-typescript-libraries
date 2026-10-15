@@ -14,6 +14,14 @@ import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 /**
  * @summary LocationMapping
  * @description
+ *
+ * One received location paired with the normalized location the mapping
+ * function produced from it. Used for location already coded as geographical
+ * coordinates. The mapped coordinates keep the resolution of the original.
+ * Postal-address location is for further study.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.3, annex B.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -32,18 +40,43 @@ export
 class LocationMapping {
     /**
      * @summary `originalLocation`.
+     * @description
+     *
+     * Location as received (`LI-PS-PDU.Location`), delivered with the mapped
+     * result.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.3.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly originalLocation: LI_PS_PDU.Location;
     /**
      * @summary `normalizedLocation`.
+     * @description
+     *
+     * WGS84 coordinates produced from `originalLocation`, at the same
+     * resolution.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.3.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly normalizedLocation: NormalizedLocationData;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V1.1.1 marks the
+     * type extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */

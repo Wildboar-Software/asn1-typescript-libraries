@@ -12,6 +12,17 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary IPv4Information
  * @description
+ *
+ * Fields from the IPv4 header of the target packet (IETF RFC 791), as
+ * used by a header report or a summary report (ETSI TS 102 232-3
+ * V3.9.1, clauses 6.2.3.2 and 6.2.4). Each populated value is a copy
+ * of the corresponding octet or octets, in the same byte order. Where
+ * the header field is smaller than an octet, set the bits that are
+ * not part of that field to zero.
+ *
+ * On a summary report, populate only the fields that identify the
+ * flow (source, destination, and protocol) and omit the others
+ * (table 4, clause 6.2.4.2).
  * 
  * ### ASN.1 Definition:
  * 
@@ -38,66 +49,132 @@ export
 class IPv4Information {
     /**
      * @summary `headerLength`.
+     * @description
+     *
+     * Copy of this IPv4 header field (IETF RFC 791). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly headerLength: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `typeOfService`.
+     * @description
+     *
+     * Copy of this IPv4 header field (IETF RFC 791). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
+     * Bits outside the type-of-service field are zero (clause 6.2.3.2).
+     *
      * @public
      * @readonly
      */
     readonly typeOfService: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `totalLength`.
+     * @description
+     *
+     * Copy of the Total Length field (IETF RFC 791). Packet-flow byte
+     * counts sum this field across the packets in the summary
+     * (tables 3 and 4, and table 5).
+     *
      * @public
      * @readonly
      */
     readonly totalLength: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `identification`.
+     * @description
+     *
+     * Copy of this IPv4 header field (IETF RFC 791). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly identification: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `fragment`.
+     * @description
+     *
+     * Copy of this IPv4 header field (IETF RFC 791). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly fragment: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `ttl`.
+     * @description
+     *
+     * Copy of this IPv4 header field (IETF RFC 791). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly ttl: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `protocol`.
+     * @description
+     *
+     * Copy of the Protocol field (IETF RFC 791). Together with the
+     * addresses and the layer-4 ports, this identifies a packet flow
+     * (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly protocol: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `headerChecksum`.
+     * @description
+     *
+     * Copy of this IPv4 header field (IETF RFC 791). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly headerChecksum: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `source`.
+     * @description
+     *
+     * IPv4 source address. Required. It is part of the packet-flow
+     * identity (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly source: OCTET_STRING;
     /**
      * @summary `destination`.
+     * @description
+     *
+     * IPv4 destination address. Required. It is part of the packet-flow
+     * identity (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */
     readonly destination: OCTET_STRING;
     /**
      * @summary `options`.
+     * @description
+     *
+     * Copy of this IPv4 header field (IETF RFC 791). Same byte order as
+     * on the wire. On a summary report, include it only when it
+     * identifies the flow (clause 6.2.4.2).
+     *
      * @public
      * @readonly
      */

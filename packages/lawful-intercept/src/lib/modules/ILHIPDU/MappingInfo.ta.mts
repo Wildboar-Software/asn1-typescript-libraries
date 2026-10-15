@@ -14,6 +14,15 @@ import { LocationMapping, _decode_LocationMapping, _encode_LocationMapping } fro
 /**
  * @summary MappingInfo
  * @description
+ *
+ * Output of the mapping function. The function maps each element of one set
+ * to a distinct element of another and passes this result to the
+ * encapsulation function without undue delay. Timestamps and location coded
+ * as geographical coordinates are the parameters V1.1.1 defines as mappable.
+ * Postal-address location is for further study.
+ *
+ * ETSI TS 103 462 V1.1.1 (2018-07), clause 3.1, clause 7.3.
+ * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
  * 
  * ### ASN.1 Definition:
  * 
@@ -32,18 +41,45 @@ export
 class MappingInfo {
     /**
      * @summary `timestampMapping`.
+     * @description
+     *
+     * One entry for each timestamp the mapping function rewrote. More than
+     * one timestamp may be mapped. The mapping can be unique only when every
+     * original timestamp is unique within `originalPayload`.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.2.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly timestampMapping: OPTIONAL<TimestampMapping[]>;
     /**
      * @summary `locationMapping`.
+     * @description
+     *
+     * One entry for each location the mapping function rewrote. Used when
+     * the original location is coded as geographical coordinates.
+     * Postal-address location is for further study and is not mapped here.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), clause 7.3.3.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
     readonly locationMapping: OPTIONAL<LocationMapping[]>;
     /**
      * @summary Extensions that are not recognized.
+     * @description
+     *
+     * Extension additions this decoder did not recognize. V1.1.1 marks the
+     * type extensible and does not say how a receiver treats unrecognized
+     * additions.
+     *
+     * ETSI TS 103 462 V1.1.1 (2018-07), annex B.
+     * https://www.etsi.org/deliver/etsi_ts/103400_103499/103462/01.01.01_60/ts_103462v010101p.pdf
+     *
      * @public
      * @readonly
      */
