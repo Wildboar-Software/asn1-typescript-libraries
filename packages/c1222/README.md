@@ -1,8 +1,9 @@
-# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
+# ANSI C12.22 Security Mechanisms in TypeScript
 
-Data structures from the ASN.1 definitions defined in
-[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
-Telebiometrics Authentication Infrastructure (TAI).
+ASN.1 data structures for the C12.21 and C12.22 calling-authentication
+values from the 2026 edition of ANSI C12.22.
+
+This module is ESM-only.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -19,7 +20,7 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
-## ESM-Only
+## AI Usage Statement
 
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
+This package was onboarded from the raw compiler outputs using AI
+(Cursor Grok 4.7) on 17 October 2026.
