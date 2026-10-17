@@ -1,0 +1,17 @@
+-- Modified due to syntax errors in the original specification.
+-- Based on the 2026 edition of the ANSI C12.22 standard.
+-- ASN.1 syntax for <calling-authentication-value-c1221>.
+C1221-Security-Mechanism
+{iso(1) member-body(2) us(840) c1219-standard(10066) mechanism(12) c1221(0)
+version(1)}
+DEFINITIONS ::=
+BEGIN
+
+Calling-authentication-value-c1221 ::= [0] IMPLICIT CHOICE {
+    c1221-auth-identification   [0] IMPLICIT OCTET STRING (SIZE(3 | 5..259)),
+    c1221-auth-request          [1] IMPLICIT OCTET STRING (SIZE(1..255)),
+    c1221-auth-response         [2] IMPLICIT OCTET STRING (SIZE(0 | 1..255)),
+    ...
+}
+
+END

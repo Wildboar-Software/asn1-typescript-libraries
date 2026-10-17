@@ -1,0 +1,21 @@
+{
+  "name": "@wildboar/c1222",
+  "version": "1.0.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.mts",
+    "./C12-22-Security-Mechanism": "./src/lib/modules/C12-22-Security-Mechanism/index.mts",
+    "./C1221-Security-Mechanism": "./src/lib/modules/C1221-Security-Mechanism/index.mts"
+  },
+  "publish": {
+    "include": [
+      "LICENSE.txt",
+      "README.md",
+      "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
+    ]
+  }
+}

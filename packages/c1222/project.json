@@ -1,0 +1,25 @@
+{
+  "name": "c1222",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/c1222/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/c1222",
+        "tsConfig": "packages/c1222/tsconfig.lib.json",
+        "packageJson": "packages/c1222/package.json",
+        "main": "packages/c1222/src/index.mts",
+        "assets": [
+          "packages/c1222/*.md",
+          "packages/c1222/LICENSE.txt",
+          "packages/c1222/package.json"
+        ]
+      }
+    }
+  }
+}
