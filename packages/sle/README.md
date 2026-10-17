@@ -6,7 +6,15 @@ transfer services. The compiled modules cover the return all frames service
 CLTU, and forward space packet services, plus the shared SLE types.
 This module is ESM-only.
 
-Service modules repeat type names, so each ASN.1 module is its own entrypoint.
+Assignments that are copied verbatim (`TimeoutPeriod`, `VcId`, `LockStatus`,
+and the other types under `src/lib/shared`) are defined once and re-exported
+from every service module that repeats them. Other assignments share a name
+but are different types, so each ASN.1 module is still its own entrypoint.
+Those are `GvcId` (CLTU and FSP use different constraints from the return
+services), `Notification` (the production-status alternative is per service),
+`CurrentReportingCycle` (`cyclicReport` versus `periodicReporting`),
+`BufferSize`, `FrameOrNotification`, and `ClcwGvcId` (FSP spells the configured
+alternative `congigured`).
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
