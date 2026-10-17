@@ -52,6 +52,7 @@ jobs:
           - "kerberos5"
           - "ldap"
           - "lpp"
+          - "ltans-scvp-extension"
           # - "m3100"
           - "nist-csor"
           - "novell_pkis"
