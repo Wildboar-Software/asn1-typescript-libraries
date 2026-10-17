@@ -21,6 +21,38 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
+## Usage Example
+
+```typescript
+const original = new EmailIRI(
+    [1, 3, 6, 1],
+    E_mail_Event_e_mail_send,
+    new IPAddress(
+        IPAddress_iP_type_iPV4,
+        { iPBinaryAddress: new Uint8Array([192, 0, 2, 1]) },
+        undefined,
+        undefined,
+        new Uint8Array([255, 255, 255, 0]),
+    ),
+    undefined,
+    2525,
+    25,
+    1200,
+    3400,
+    E_mail_Protocol_smtp,
+    "alice@example.com",
+    undefined,
+    E_mail_Status_operation_succeeded,
+    1,
+    new Uint8Array([0x3c, 0x6d, 0x73, 0x67]),
+    undefined,
+    undefined,
+    undefined,
+    EmailIRI_e_mail_Sender_Validity_validated,
+);
+const encoded = _encode_EmailIRI(original, $.BER).toBytes();
+```
+
 ## ESM-Only
 
 This module is ESM-only. Import from a subpath such as

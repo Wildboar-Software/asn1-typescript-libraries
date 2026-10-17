@@ -1,6 +1,13 @@
 {
     "name": "@wildboar/lawful-intercept",
     "type": "module",
+    "description": "A library for encoding and decoding lawful intercept PDU according to 3GPP TS 33.128 et. al.",
+    "keywords": [
+        "3gpp",
+        "li",
+        "lawful",
+        "interception"
+    ],
     "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
