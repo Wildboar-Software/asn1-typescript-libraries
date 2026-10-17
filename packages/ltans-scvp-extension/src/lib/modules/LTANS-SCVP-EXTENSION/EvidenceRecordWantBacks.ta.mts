@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EvidenceRecordWantBack, _decode_EvidenceRecordWantBack, _encode_EvidenceRecordWantBack } from "../LTANS-SCVP-EXTENSION/EvidenceRecordWantBack.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_EvidenceRecordWantBacks: $.ASN1Decoder<EvidenceRecordWan
 export
 function _decode_EvidenceRecordWantBacks (el: _Element): EvidenceRecordWantBacks {
     if (!_cached_decoder_for_EvidenceRecordWantBacks) { _cached_decoder_for_EvidenceRecordWantBacks = $._decodeSequenceOf<EvidenceRecordWantBack>(() => _decode_EvidenceRecordWantBack); }
-    return _cached_decoder_for_EvidenceRecordWantBacks(el);
+    const value = _cached_decoder_for_EvidenceRecordWantBacks(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("EvidenceRecordWantBacks violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_EvidenceRecordWantBacks: $.ASN1Encoder<EvidenceRecordWantBacks> | null = null;
