@@ -1,0 +1,25 @@
+{
+  "name": "ltans-scvp-extension",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ltans-scvp-extension/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/ltans-scvp-extension",
+        "tsConfig": "packages/ltans-scvp-extension/tsconfig.lib.json",
+        "packageJson": "packages/ltans-scvp-extension/package.json",
+        "main": "packages/ltans-scvp-extension/src/index.mts",
+        "assets": [
+          "packages/ltans-scvp-extension/*.md",
+          "packages/ltans-scvp-extension/LICENSE.txt",
+          "packages/ltans-scvp-extension/package.json"
+        ]
+      }
+    }
+  }
+}

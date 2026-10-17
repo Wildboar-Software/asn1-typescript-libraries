@@ -53,6 +53,7 @@ jobs:
           - "ldap"
           - "lawful-intercept"
           - "lpp"
+          - "ltans-scvp-extension"
           # - "m3100"
           - "nist-csor"
           - "novell_pkis"
