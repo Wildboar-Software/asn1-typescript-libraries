@@ -4,6 +4,7 @@ ASN.1 data structures and PDUs for the CCSDS Space Link Extension (SLE)
 transfer services. The compiled modules cover the return all frames service
 (CCSDS 911.1-B-5), return channel frames, return operational control field,
 CLTU, and forward space packet services, plus the shared SLE types.
+This module is ESM-only.
 
 Service modules repeat type names, so each ASN.1 module is its own entrypoint.
 
@@ -22,9 +23,28 @@ If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
 
-## ESM-Only
 
-This module is ESM-only.
+## Usage Example
+
+```typescript
+import * as $ from "@wildboar/asn1/functional";
+import {
+    ParameterName_apidList,
+} from "@wildboar/sle/CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES";
+import {
+    _decode_FspGetParameter,
+    _encode_FspGetParameter,
+    FspGetParameter_parApidList
+} from "@wildboar/sle/CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES";
+
+const original = {
+    parApidList: new FspGetParameter_parApidList(
+        ParameterName_apidList,
+        { apidList: [0, 1, 2047] },
+    ),
+};
+const encoded = _encode_FspGetParameter(original, $.BER).toBytes();
+```
 
 ## AI Usage Statement
 

@@ -2,6 +2,12 @@
     "name": "@wildboar/sle",
     "type": "module",
     "version": "1.0.0",
+    "description": "ASN.1 data structures for the CCSDS SLE (Space Link Extension) protocol.",
+    "keywords": [
+        "sle",
+        "ccsds",
+        "space"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
