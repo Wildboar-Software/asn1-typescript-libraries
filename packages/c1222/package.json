@@ -1,15 +1,7 @@
 {
     "name": "@wildboar/c1222",
     "type": "module",
-    "version": "0.1.0",
-    "description": "Signed Public Key and Challenge (SPKAC) in TypeScript",
-    "keywords": [
-        "c1222",
-        "signed",
-        "public",
-        "key",
-        "challenge"
-    ],
+    "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
@@ -34,8 +26,12 @@
     "types": "./src/index.d.mts",
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mts",
+        "./C12-22-Security-Mechanism": "./src/lib/modules/C12-22-Security-Mechanism/index.mts",
+        "./C1221-Security-Mechanism": "./src/lib/modules/C1221-Security-Mechanism/index.mts"
+    },
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
-        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
     }
 }
