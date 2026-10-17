@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "../ERS/EvidenceRecord.ta.mjs";
-// export { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "../ERS/EvidenceRecord.ta.mjs";
 
 
 /**

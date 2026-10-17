@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EvidenceRecordWantBack, _decode_EvidenceRecordWantBack, _encode_EvidenceRecordWantBack } from "../LTANS-SCVP-EXTENSION/EvidenceRecordWantBack.ta.mjs";
-// export { EvidenceRecordWantBack, _decode_EvidenceRecordWantBack, _encode_EvidenceRecordWantBack } from "../LTANS-SCVP-EXTENSION/EvidenceRecordWantBack.ta.mjs";
 
 
 /**
