@@ -1,0 +1,14 @@
+-- Modified due to syntax errors in the original specification.
+-- Based on the 2026 edition of the ANSI C12.22 standard.
+C12-22-Security-Mechanism
+{iso(1) member-body(2) us(840) c1219-standard(10066) mechanism(12) c1222(1)
+version(1)}
+DEFINITIONS ::=
+BEGIN
+
+Calling-authentication-value-c1222 ::= [1] IMPLICIT SEQUENCE {
+    key-id-element  [0] IMPLICIT OCTET STRING (SIZE(1)) OPTIONAL,
+    iv-element      [1] IMPLICIT OCTET STRING (SIZE(4)) OPTIONAL
+}
+
+END

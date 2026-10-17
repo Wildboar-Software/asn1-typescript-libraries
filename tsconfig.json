@@ -293,6 +293,9 @@
     },
     {
       "path": "./packages/sle"
+    },
+    {
+      "path": "./packages/c1222"
     }
   ],
   "compilerOptions": {
