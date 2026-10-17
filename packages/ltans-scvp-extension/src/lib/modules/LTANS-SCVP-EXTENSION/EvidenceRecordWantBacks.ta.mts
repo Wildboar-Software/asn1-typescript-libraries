@@ -10,7 +10,18 @@ import { EvidenceRecordWantBack, _decode_EvidenceRecordWantBack, _encode_Evidenc
 /**
  * @summary EvidenceRecordWantBacks
  * @description
- * 
+ *
+ * Evidence records for every other `replyWantBack`,
+ * returned when the request includes
+ * {@link id_swb_ers_all}. There MUST be a one-to-one
+ * correspondence with those other `replyWantBack`
+ * objects. An entry whose server has no evidence record
+ * is still present, with `evidenceRecord` absent.
+ *
+ * [RFC 5276, §3](https://www.rfc-editor.org/rfc/rfc5276#section-3)
+ * and
+ * [§5.5](https://www.rfc-editor.org/rfc/rfc5276#section-5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

@@ -10,7 +10,27 @@ import { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "
 /**
  * @summary EvidenceRecords
  * @description
- * 
+ *
+ * Evidence records returned in the
+ * {@link id_swb_ers_revocation_info} `replyWantBack`.
+ * Each revocation object in the companion revocation
+ * `replyWantBack` is covered by a record in this
+ * sequence. One record may cover more than one object;
+ * match an object to its record by locating the object's
+ * hash in that record's first initial timestamp. §5.4
+ * also says one record is provided for each element of
+ * the companion WantBack.
+ *
+ * The companion is `id-swb-pkc-revocation-info` in §3
+ * and §4, and `id-swb-revocation-info` in §5.4.
+ * RFC 5055 defines `id-swb-pkc-revocation-info`.
+ * Revocation objects may be CRLs or OCSP responses.
+ * Cumulative CRLs may be generated for archiving.
+ *
+ * [RFC 5276, §4](https://www.rfc-editor.org/rfc/rfc5276#section-4)
+ * and
+ * [§5.4](https://www.rfc-editor.org/rfc/rfc5276#section-5.4).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

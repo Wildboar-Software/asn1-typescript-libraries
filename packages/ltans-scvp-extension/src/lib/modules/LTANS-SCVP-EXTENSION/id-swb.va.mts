@@ -9,7 +9,16 @@ import {
 /**
  * @summary id_swb
  * @description
- * 
+ *
+ * SCVP WantBack arc, imported from the SCVP module.
+ * [RFC 5276](https://www.rfc-editor.org/rfc/rfc5276)
+ * assigns `{id-swb 15}` through `{id-swb 20}` under it
+ * for partial certification paths and evidence records.
+ *
+ * [RFC 5055, §3.2.3](https://www.rfc-editor.org/rfc/rfc5055#section-3.2.3)
+ * and
+ * [RFC 5276, Appendix A](https://www.rfc-editor.org/rfc/rfc5276#appendix-A).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1

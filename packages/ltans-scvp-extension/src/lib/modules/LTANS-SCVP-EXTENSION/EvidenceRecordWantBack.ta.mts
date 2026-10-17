@@ -12,7 +12,14 @@ import { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "
 /**
  * @summary EvidenceRecordWantBack
  * @description
- * 
+ *
+ * One evidence record returned for {@link id_swb_ers_all},
+ * naming the `replyWantBack` it covers.
+ * {@link EvidenceRecordWantBacks} contains one of these
+ * for each other `replyWantBack` in the response.
+ *
+ * [RFC 5276, §5.5](https://www.rfc-editor.org/rfc/rfc5276#section-5.5).
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -28,12 +35,29 @@ export
 class EvidenceRecordWantBack {
     /**
      * @summary `targetWantBack`.
+     * @description
+     *
+     * WantBack covered by the associated evidence record.
+     * The collection has one entry for each other
+     * `replyWantBack`.
+     *
+     * [RFC 5276, §5.5](https://www.rfc-editor.org/rfc/rfc5276#section-5.5).
+     *
      * @public
      * @readonly
      */
     readonly targetWantBack: OBJECT_IDENTIFIER;
     /**
      * @summary `evidenceRecord`.
+     * @description
+     *
+     * Evidence record calculated over the `replyWantBack`
+     * named by {@link targetWantBack}. Absent when the
+     * server has no record for that item; the entry is
+     * still included.
+     *
+     * [RFC 5276, §5.5](https://www.rfc-editor.org/rfc/rfc5276#section-5.5).
+     *
      * @public
      * @readonly
      */

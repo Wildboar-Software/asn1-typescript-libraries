@@ -7,11 +7,46 @@
  * from [IETF RFC 5276](https://www.rfc-editor.org/rfc/rfc5276),
  * [Appendix A](https://www.rfc-editor.org/rfc/rfc5276#appendix-A).
  *
- * WantBack object identifiers and the structures an SCVP server
- * returns so a client can obtain long-term evidence records for
- * certification path and revocation information.
- * `EvidenceRecord` is imported from `@wildboar/ers` and is not
- * re-exported here.
+ * WantBacks and reply structures that associate an
+ * [RFC 4998](https://www.rfc-editor.org/rfc/rfc4998)
+ * evidence record with PKI artifacts in an SCVP response.
+ * A client retrieves a signed archived object from a
+ * long-term archive, asks SCVP for the signer's status at
+ * a time of interest plus these WantBacks, and checks the
+ * returned records before using that certificate. Path
+ * evidence can then be reused across archived objects of
+ * similar vintage.
+ *
+ * Each evidence-record WantBack requires the WantBack for
+ * the object it covers. If that companion is missing, the
+ * server MUST set `wantBackUnsatisfied` in `ReplyStatus`.
+ * Clients MAY ignore the evidence-record WantBack in that
+ * case
+ * ([§5](https://www.rfc-editor.org/rfc/rfc5276#section-5)).
+ *
+ * For {@link id_swb_ers_best_cert_path} and
+ * {@link id_swb_ers_partial_cert_path}, the record covers
+ * the contents of the companion `replyWantBack`'s
+ * `value`, not that OCTET STRING's tag and length.
+ * {@link id_swb_ers_pkc_cert} covers `CertReply.cert`.
+ * {@link id_swb_ers_revocation_info} returns an
+ * {@link EvidenceRecords} sequence.
+ * {@link id_swb_ers_all} returns an
+ * {@link EvidenceRecordWantBacks}.
+ *
+ * If the server cannot build a requested record, it MUST
+ * still return a `replyWantBack` of that type with an
+ * empty `value`
+ * ([§4](https://www.rfc-editor.org/rfc/rfc5276#section-4)).
+ *
+ * Verify the SCVP response with a public key the relying
+ * party trusts. Trust anchors inside an evidence record
+ * are protected by that signature. Relying parties SHOULD
+ * ignore trust anchors in an unsigned response
+ * ([§6](https://www.rfc-editor.org/rfc/rfc5276#section-6)).
+ *
+ * `EvidenceRecord` is imported from `@wildboar/ers` and is
+ * not re-exported here.
  */
 export * from "./EvidenceRecords.ta.mjs";
 export * from "./EvidenceRecordWantBack.ta.mjs";
