@@ -1,4 +1,5 @@
 /**
+ * @module
  * Layer 2 lawful interception for an access provider that has layer 2
  * session information and is not required to have layer 3 information.
  * Handover uses ETSI TS 102 232-1. Layer 3 interception is ETSI

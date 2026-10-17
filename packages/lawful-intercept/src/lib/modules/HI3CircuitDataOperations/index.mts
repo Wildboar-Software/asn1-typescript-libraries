@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     type Content_Report_initiator,
     Content_Report_initiator_forwarded_to_party,

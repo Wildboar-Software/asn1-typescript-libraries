@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `CSvoice-HI3-IP`, `IMPLICIT TAGS`. IP-based handover of

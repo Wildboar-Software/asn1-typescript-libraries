@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `ProSeHI2Operations`, IMPLICIT TAGS. HI2 intercept related

@@ -1,4 +1,5 @@
 /**
+ * @module
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
  * `notUsed`

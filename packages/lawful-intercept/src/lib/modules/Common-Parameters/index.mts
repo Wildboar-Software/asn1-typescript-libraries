@@ -1,4 +1,5 @@
 /**
+ * @module
  * Common LI parameters from ETSI TS 103 280 V2.7.1 (2021-11).
  *
  * The module object identifier in this package is `version261`.

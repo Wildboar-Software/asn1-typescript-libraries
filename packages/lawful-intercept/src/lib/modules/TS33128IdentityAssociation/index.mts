@@ -1,4 +1,5 @@
 /**
+ * @module
  * Identifier-association records on LI_XER.
  *
  * The IEF in the AMF reports SUPI to 5G-GUTI association and

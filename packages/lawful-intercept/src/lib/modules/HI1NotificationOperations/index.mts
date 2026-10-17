@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     Alarm_Indicator,
     _decode_Alarm_Indicator,

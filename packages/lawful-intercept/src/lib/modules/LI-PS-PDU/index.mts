@@ -1,4 +1,5 @@
 /**
+ * @module
  * Generic HI2 and HI3 handover PDU for IP delivery, ASN.1 module
  * `LI-PS-PDU` version 35 (`li-psDomainId`).
  *

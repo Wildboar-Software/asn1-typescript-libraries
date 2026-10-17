@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `Umts-HI3-PS`, `IMPLICIT TAGS`. HI3 content of communication for

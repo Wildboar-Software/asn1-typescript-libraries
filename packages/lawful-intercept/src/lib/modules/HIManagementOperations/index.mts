@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     ErrorsHim,
 } from "./ErrorsHim.osa.mjs";

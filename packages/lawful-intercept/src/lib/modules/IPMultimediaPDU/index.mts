@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     type AdditionalSignalling,
     _decode_AdditionalSignalling,

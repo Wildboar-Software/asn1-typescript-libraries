@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     ETSI_CC_PDU,
     _decode_ETSI_CC_PDU,

@@ -1,4 +1,5 @@
 /**
+ * @module
  * Internet-access handover structures from ETSI TS 102 232-3 V3.9.1
  * (https://www.etsi.org/deliver/etsi_ts/102200_102299/10223203/03.09.01_60/ts_10223203v030901p.pdf).
  * HI2 session IRI is `IPIRI`. HI3 content is `IPCC`. Packet-header and

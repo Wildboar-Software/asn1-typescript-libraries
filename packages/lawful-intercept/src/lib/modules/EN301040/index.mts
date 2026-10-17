@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     ActivityClassType,
     ActivityClassType_allServices,

@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `CONFHI2Operations`, IMPLICIT TAGS. IMS conference HI2 intercept

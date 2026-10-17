@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     CTTRAFFIC,
     _decode_CTTRAFFIC,

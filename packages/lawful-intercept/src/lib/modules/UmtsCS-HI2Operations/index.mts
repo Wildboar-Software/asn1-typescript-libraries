@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `UmtsCS-HI2Operations`, IMPLICIT TAGS. Circuit-switched HI2

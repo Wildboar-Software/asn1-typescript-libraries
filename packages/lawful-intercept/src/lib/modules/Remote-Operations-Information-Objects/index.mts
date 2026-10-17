@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     type Code,
     _decode_Code,

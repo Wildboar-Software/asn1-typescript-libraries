@@ -1,4 +1,5 @@
 /**
+ * @module
  * LI payload schema of 3GPP TS 33.128.
  *
  * Annex A defines module `TS33128Payloads` as the structures used on

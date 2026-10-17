@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `GCSEHI2Operations`, IMPLICIT TAGS. Group Communication System

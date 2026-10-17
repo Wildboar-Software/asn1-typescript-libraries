@@ -1,4 +1,5 @@
 /**
+ * @module
  * Service-specific HI2 and HI3 for messaging, from ETSI TS 102 232-2
  * V3.16.1 (2023-03).
  *

@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `GCSE-HI3`, `IMPLICIT TAGS`. HI3 content of communication for

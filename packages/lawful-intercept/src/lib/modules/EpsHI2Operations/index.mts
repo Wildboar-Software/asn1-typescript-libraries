@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * ASN.1 module `EpsHI2Operations` from 3GPP TS 33.108.

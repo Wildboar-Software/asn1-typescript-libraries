@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `VoIP-HI3-IMS`, `IMPLICIT TAGS`. HI3 content of communication

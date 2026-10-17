@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `UMTS-HI3CircuitLIOperations`, `IMPLICIT TAGS`. User-data packet

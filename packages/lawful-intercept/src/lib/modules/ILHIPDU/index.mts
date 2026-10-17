@@ -1,3 +1,6 @@
+/**
+ * @module
+ */
 export {
     EncapsulationPayload,
     _decode_EncapsulationPayload,

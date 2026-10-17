@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  * 
  * ASN.1 module `HI3CCLinkData`, `IMPLICIT TAGS`. User-to-user signalling 1
