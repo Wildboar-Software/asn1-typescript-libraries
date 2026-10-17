@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "../ERS/EvidenceRecord.ta.mjs";
-// export { EvidenceRecord, _decode_EvidenceRecord, _encode_EvidenceRecord } from "../ERS/EvidenceRecord.ta.mjs";
 
 
 /**
@@ -31,7 +31,11 @@ let _cached_decoder_for_EvidenceRecords: $.ASN1Decoder<EvidenceRecords> | null =
 export
 function _decode_EvidenceRecords (el: _Element): EvidenceRecords {
     if (!_cached_decoder_for_EvidenceRecords) { _cached_decoder_for_EvidenceRecords = $._decodeSequenceOf<EvidenceRecord>(() => _decode_EvidenceRecord); }
-    return _cached_decoder_for_EvidenceRecords(el);
+    const value = _cached_decoder_for_EvidenceRecords(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("EvidenceRecords violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_EvidenceRecords: $.ASN1Encoder<EvidenceRecords> | null = null;

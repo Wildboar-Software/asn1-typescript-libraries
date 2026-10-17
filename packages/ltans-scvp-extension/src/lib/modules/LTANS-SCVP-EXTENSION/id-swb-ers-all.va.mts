@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_swb } from "../LTANS-SCVP-EXTENSION/id-swb.va.mjs";
-// export { id_swb } from "../LTANS-SCVP-EXTENSION/id-swb.va.mjs";
 
 
 /**
