@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
     OPTIONAL
@@ -43,6 +44,12 @@ class Calling_authentication_value_c1222 {
         key_id_element: OPTIONAL<OCTET_STRING>,
         iv_element: OPTIONAL<OCTET_STRING>
     ) {
+        if (key_id_element !== undefined && key_id_element.length !== 1) {
+            throw new ASN1SizeError("Calling_authentication_value_c1222.key_id_element violates SIZE constraint");
+        }
+        if (iv_element !== undefined && iv_element.length !== 4) {
+            throw new ASN1SizeError("Calling_authentication_value_c1222.iv_element violates SIZE constraint");
+        }
         this.key_id_element = key_id_element;
         this.iv_element = iv_element;
     }
@@ -148,7 +155,7 @@ let _cached_encoder_for_Calling_authentication_value_c1222: $.ASN1Encoder<Callin
  */
 export
 function _encode_Calling_authentication_value_c1222 (value: Calling_authentication_value_c1222, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Calling_authentication_value_c1222) { _cached_encoder_for_Calling_authentication_value_c1222 = $._encode_implicit(_TagClass.context, 1, () => function (value: Calling_authentication_value_c1222, elGetter: $.ASN1Encoder<Calling_authentication_value_c1222>): _Element {
+    if (!_cached_encoder_for_Calling_authentication_value_c1222) { _cached_encoder_for_Calling_authentication_value_c1222 = $._encode_implicit(_TagClass.context, 1, () => function (value: Calling_authentication_value_c1222, _elGetter: $.ASN1Encoder<Calling_authentication_value_c1222>): _Element {
     const _components: _Element[] = [];
     if (value.key_id_element !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.key_id_element, $.BER));

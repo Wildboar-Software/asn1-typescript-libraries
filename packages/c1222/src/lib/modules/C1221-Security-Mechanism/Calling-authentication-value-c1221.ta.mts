@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
     OCTET_STRING
 } from "@wildboar/asn1";
@@ -45,7 +46,23 @@ function _decode_Calling_authentication_value_c1221 (el: _Element): Calling_auth
     "CONTEXT 1": [ "c1221_auth_request", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 2": [ "c1221_auth_response", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 })); }
-    return _cached_decoder_for_Calling_authentication_value_c1221(el);
+    const value = _cached_decoder_for_Calling_authentication_value_c1221(el);
+    if (!(value instanceof _Element) && "c1221_auth_identification" in value) {
+        const length = value.c1221_auth_identification.length;
+        if (length !== 3 && (length < 5 || length > 259)) {
+            throw new ASN1SizeError("Calling_authentication_value_c1221.c1221_auth_identification violates SIZE constraint");
+        }
+    } else if (!(value instanceof _Element) && "c1221_auth_request" in value) {
+        const length = value.c1221_auth_request.length;
+        if (length < 1 || length > 255) {
+            throw new ASN1SizeError("Calling_authentication_value_c1221.c1221_auth_request violates SIZE constraint");
+        }
+    } else if (!(value instanceof _Element) && "c1221_auth_response" in value) {
+        if (value.c1221_auth_response.length > 255) {
+            throw new ASN1SizeError("Calling_authentication_value_c1221.c1221_auth_response violates SIZE constraint");
+        }
+    }
+    return value;
 }
 
 let _cached_encoder_for_Calling_authentication_value_c1221: $.ASN1Encoder<Calling_authentication_value_c1221> | null = null;
