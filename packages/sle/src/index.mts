@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * CCSDS Space Link Extension (SLE) transfer-service ASN.1.

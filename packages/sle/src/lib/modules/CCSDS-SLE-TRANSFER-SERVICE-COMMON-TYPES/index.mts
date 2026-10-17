@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES` from the CCSDS Space Link Extension

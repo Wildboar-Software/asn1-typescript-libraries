@@ -1,4 +1,5 @@
 /**
+ * @module
  * @description
  *
  * ASN.1 module `CCSDS-SLE-TRANSFER-SERVICE-ROCF-INCOMING-PDUS` from the CCSDS Space Link Extension
