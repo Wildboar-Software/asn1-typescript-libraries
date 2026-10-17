@@ -11,7 +11,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noPropertyAccessFromIndexSignature": true,
-    "importHelpers": true,
+    "erasableSyntaxOnly": true,
+    "noImplicitAny": true,
     "types": [
       "node"
     ]
