@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -30,6 +31,18 @@ type Calling_authentication_value_c1221 =
     | { c1221_auth_response: OCTET_STRING } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 
+function _decode_c1221_octet_string (
+    el: _Element,
+    accept: (length: number) => boolean,
+    name: string,
+): OCTET_STRING {
+    const value = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(el);
+    if (!accept(value.length)) {
+        throw new ASN1SizeError(`${name} violates SIZE constraint`);
+    }
+    return value;
+}
+
 let _cached_decoder_for_Calling_authentication_value_c1221: $.ASN1Decoder<Calling_authentication_value_c1221> | null = null;
 
 /**
@@ -40,11 +53,25 @@ let _cached_decoder_for_Calling_authentication_value_c1221: $.ASN1Decoder<Callin
  */
 export
 function _decode_Calling_authentication_value_c1221 (el: _Element): Calling_authentication_value_c1221 {
-    if (!_cached_decoder_for_Calling_authentication_value_c1221) { _cached_decoder_for_Calling_authentication_value_c1221 = $._decode_explicit<Calling_authentication_value_c1221>(() => $._decode_extensible_choice<Calling_authentication_value_c1221>({
-    "CONTEXT 0": [ "c1221_auth_identification", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
-    "CONTEXT 1": [ "c1221_auth_request", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
-    "CONTEXT 2": [ "c1221_auth_response", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
-})); }
+    if (!_cached_decoder_for_Calling_authentication_value_c1221) {
+        _cached_decoder_for_Calling_authentication_value_c1221 = $._decode_explicit<Calling_authentication_value_c1221>(() => $._decode_extensible_choice<Calling_authentication_value_c1221>({
+            "CONTEXT 0": [ "c1221_auth_identification", (inner: _Element): OCTET_STRING => _decode_c1221_octet_string(
+                inner,
+                (length: number): boolean => length === 3 || (length >= 5 && length <= 259),
+                "Calling-authentication-value-c1221.c1221-auth-identification",
+            ) ],
+            "CONTEXT 1": [ "c1221_auth_request", (inner: _Element): OCTET_STRING => _decode_c1221_octet_string(
+                inner,
+                (length: number): boolean => length >= 1 && length <= 255,
+                "Calling-authentication-value-c1221.c1221-auth-request",
+            ) ],
+            "CONTEXT 2": [ "c1221_auth_response", (inner: _Element): OCTET_STRING => _decode_c1221_octet_string(
+                inner,
+                (length: number): boolean => length <= 255,
+                "Calling-authentication-value-c1221.c1221-auth-response",
+            ) ],
+        }));
+    }
     return _cached_decoder_for_Calling_authentication_value_c1221(el);
 }
 
