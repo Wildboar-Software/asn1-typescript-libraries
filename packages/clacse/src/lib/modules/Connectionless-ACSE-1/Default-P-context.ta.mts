@@ -43,30 +43,37 @@ import {
  *
  */
 export class Default_P_context {
+    /**
+     * @summary `abstract_syntax`.
+     * @description
+     *
+     * Abstract syntax of this default context, if named.
+     * ITU-T Rec. X.237 bis (1998) §7.1.4.14, §9.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly abstract_syntax: OPTIONAL<Abstract_syntax_name>;
+
+    /**
+     * @summary `transfer_syntax`.
+     * @description
+     *
+     * Transfer (concrete) syntax of this default context;
+     * required. ITU-T Rec. X.237 bis (1998) §7.1.4.14, §9.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax: Transfer_syntax_name;
+
     constructor(
-        /**
-         * @summary `abstract_syntax`.
-         * @description
-         *
-         * Abstract syntax of this default context, if named.
-         * ITU-T Rec. X.237 bis (1998) §7.1.4.14, §9.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly abstract_syntax: OPTIONAL<Abstract_syntax_name>,
-        /**
-         * @summary `transfer_syntax`.
-         * @description
-         *
-         * Transfer (concrete) syntax of this default context;
-         * required. ITU-T Rec. X.237 bis (1998) §7.1.4.14, §9.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax: Transfer_syntax_name
-    ) {}
+        abstract_syntax: OPTIONAL<Abstract_syntax_name>,
+        transfer_syntax: Transfer_syntax_name
+    ) {
+        this.abstract_syntax = abstract_syntax;
+        this.transfer_syntax = transfer_syntax;
+    }
 
     /**
      * @summary Restructures an object into a Default_P_context

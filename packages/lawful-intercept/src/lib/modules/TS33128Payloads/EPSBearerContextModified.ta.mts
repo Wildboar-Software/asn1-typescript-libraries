@@ -1,0 +1,295 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
+// export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
+import { EPSBearerModificationCauseValue, _decode_EPSBearerModificationCauseValue, _encode_EPSBearerModificationCauseValue } from "../TS33128Payloads/EPSBearerModificationCauseValue.ta.mjs";
+// export { EPSBearerModificationCauseValue, _decode_EPSBearerModificationCauseValue, _encode_EPSBearerModificationCauseValue } from "../TS33128Payloads/EPSBearerModificationCauseValue.ta.mjs";
+import { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
+// export { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
+import { EPSBearerQOS, _decode_EPSBearerQOS, _encode_EPSBearerQOS } from "../TS33128Payloads/EPSBearerQOS.ta.mjs";
+// export { EPSBearerQOS, _decode_EPSBearerQOS, _encode_EPSBearerQOS } from "../TS33128Payloads/EPSBearerQOS.ta.mjs";
+import { PDNProtocolConfigurationOptions, _decode_PDNProtocolConfigurationOptions, _encode_PDNProtocolConfigurationOptions } from "../TS33128Payloads/PDNProtocolConfigurationOptions.ta.mjs";
+// export { PDNProtocolConfigurationOptions, _decode_PDNProtocolConfigurationOptions, _encode_PDNProtocolConfigurationOptions } from "../TS33128Payloads/PDNProtocolConfigurationOptions.ta.mjs";
+
+
+/**
+ * @summary EPSBearerContextModified
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EPSBearerContextModified ::= SEQUENCE
+ * {
+ *     ePSBearerID                  [1] EPSBearerID,
+ *     cause                        [2] EPSBearerModificationCauseValue,
+ *     gTPTunnelInfo                [3] GTPTunnelInfo OPTIONAL,
+ *     bearerQOS                    [4] EPSBearerQOS OPTIONAL,
+ *     protocolConfigurationOptions [5] PDNProtocolConfigurationOptions OPTIONAL,
+ *     linkedBearerIDs              [6] SEQUENCE OF EPSBearerID OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class EPSBearerContextModified {
+    /**
+     * @summary `ePSBearerID`.
+     * @description
+     *
+     * Shall include the EPS bearer ID for the EPS Bearer (see TS 29.274 [87]
+     * clauses 7.2.7, 7.2.8, 7.2.15 and 7.2.16).
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly ePSBearerID: EPSBearerID;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Shall indicate whether the bearer handling was successful and if not, it
+     * gives information on the reason (see TS 29.274 [87] clauses 7.2.7, 7.2.8,
+     * 7.2.15 and 7.2.16). Sent as an integer cause value (see TS 29.274 [87]
+     * table 8.4-1)
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly cause: EPSBearerModificationCauseValue;
+    /**
+     * @summary `gTPTunnelInfo`.
+     * @description
+     *
+     * Contains the information for the User Plane GTP Tunnels for the bearer
+     * context if present in the Request or Response (see TS 29.274 [87] clauses
+     * 7.2.7, 7.2.8, 7.2.15, 7.2.16 and 8.15) or known at the context at the SGW
+     * or PGW (see TS 23.401 [50] clause 5.7.4). See table 6.2.3.2.2-3.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>;
+    /**
+     * @summary `bearerQOS`.
+     * @description
+     *
+     * Shall include the QOS information for the bearer if present in the
+     * Request or Response (see TS 29.274 [87] clauses 7.2.7, 7.2.8, 7.2.15,
+     * 7.2.16 and 8.15) or known at the context at the SGW or PGW (see TS 23.401
+     * [50] clause 5.7.4). See table 6.3.3.2.2-7.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly bearerQOS: OPTIONAL<EPSBearerQOS>;
+    /**
+     * @summary `protocolConfigurationOptions`.
+     * @description
+     *
+     * Shall be present if the Bearer Context reported (see TS 29.274 [87]
+     * clauses 7.2.7, 7.2.8, 7.2.15, 7.2.16 and 8.15) contains the Protocol
+     * Configuration, Additional Protocol Configuration Options or extended
+     * Protocol Configuration Options IE. See table 6.3.3.2.2-4.
+     *
+     * 3GPP TS 33.128, clause 6.3.3.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>;
+    /**
+     * @summary `linkedBearerIDs`.
+     * @public
+     * @readonly
+     */
+    readonly linkedBearerIDs: OPTIONAL<EPSBearerID[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        ePSBearerID: EPSBearerID,
+        cause: EPSBearerModificationCauseValue,
+        gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>,
+        bearerQOS: OPTIONAL<EPSBearerQOS>,
+        protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>,
+        linkedBearerIDs: OPTIONAL<EPSBearerID[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ePSBearerID = ePSBearerID;
+        this.cause = cause;
+        this.gTPTunnelInfo = gTPTunnelInfo;
+        this.bearerQOS = bearerQOS;
+        this.protocolConfigurationOptions = protocolConfigurationOptions;
+        this.linkedBearerIDs = linkedBearerIDs;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a EPSBearerContextModified
+     * @description
+     * 
+     * This takes an `object` and converts it to a `EPSBearerContextModified`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `EPSBearerContextModified`.
+     * @returns {EPSBearerContextModified}
+     */
+    public static _from_object (_o: { [_K in keyof (EPSBearerContextModified)]: (EPSBearerContextModified)[_K] }): EPSBearerContextModified {
+        return new EPSBearerContextModified(_o.ePSBearerID, _o.cause, _o.gTPTunnelInfo, _o.bearerQOS, _o.protocolConfigurationOptions, _o.linkedBearerIDs, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of EPSBearerContextModified
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_EPSBearerContextModified: $.ComponentSpec[] = [
+    new $.ComponentSpec("ePSBearerID", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("cause", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("gTPTunnelInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("bearerQOS", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("protocolConfigurationOptions", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("linkedBearerIDs", true, $.hasTag(_TagClass.context, 6))
+];
+
+/**
+ * @summary The Trailing Root Component Types of EPSBearerContextModified
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_EPSBearerContextModified: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of EPSBearerContextModified
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_EPSBearerContextModified: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_EPSBearerContextModified: $.ASN1Decoder<EPSBearerContextModified> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) EPSBearerContextModified
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_EPSBearerContextModified (el: _Element): EPSBearerContextModified {
+    if (!_cached_decoder_for_EPSBearerContextModified) { _cached_decoder_for_EPSBearerContextModified = function (el: _Element): EPSBearerContextModified {
+    let ePSBearerID!: EPSBearerID;
+    let cause!: EPSBearerModificationCauseValue;
+    let gTPTunnelInfo: OPTIONAL<GTPTunnelInfo>;
+    let bearerQOS: OPTIONAL<EPSBearerQOS>;
+    let protocolConfigurationOptions: OPTIONAL<PDNProtocolConfigurationOptions>;
+    let linkedBearerIDs: OPTIONAL<EPSBearerID[]>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "ePSBearerID": (_el: _Element): void => { ePSBearerID = $._decode_implicit<EPSBearerID>(() => _decode_EPSBearerID)(_el); },
+        "cause": (_el: _Element): void => { cause = $._decode_implicit<EPSBearerModificationCauseValue>(() => _decode_EPSBearerModificationCauseValue)(_el); },
+        "gTPTunnelInfo": (_el: _Element): void => { gTPTunnelInfo = $._decode_implicit<GTPTunnelInfo>(() => _decode_GTPTunnelInfo)(_el); },
+        "bearerQOS": (_el: _Element): void => { bearerQOS = $._decode_implicit<EPSBearerQOS>(() => _decode_EPSBearerQOS)(_el); },
+        "protocolConfigurationOptions": (_el: _Element): void => { protocolConfigurationOptions = $._decode_implicit<PDNProtocolConfigurationOptions>(() => _decode_PDNProtocolConfigurationOptions)(_el); },
+        "linkedBearerIDs": (_el: _Element): void => { linkedBearerIDs = $._decode_implicit<EPSBearerID[]>(() => $._decodeSequenceOf<EPSBearerID>(() => _decode_EPSBearerID))(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_EPSBearerContextModified,
+        _extension_additions_list_spec_for_EPSBearerContextModified,
+        _root_component_type_list_2_spec_for_EPSBearerContextModified,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new EPSBearerContextModified(
+        ePSBearerID,
+        cause,
+        gTPTunnelInfo,
+        bearerQOS,
+        protocolConfigurationOptions,
+        linkedBearerIDs,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_EPSBearerContextModified(el);
+}
+
+let _cached_encoder_for_EPSBearerContextModified: $.ASN1Encoder<EPSBearerContextModified> | null = null;
+
+/**
+ * @summary Encodes a(n) EPSBearerContextModified into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The EPSBearerContextModified, encoded as an ASN.1 Element.
+ */
+export
+function _encode_EPSBearerContextModified (value: EPSBearerContextModified, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_EPSBearerContextModified) { _cached_encoder_for_EPSBearerContextModified = function (value: EPSBearerContextModified, elGetter: $.ASN1Encoder<EPSBearerContextModified>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_EPSBearerID, $.BER)(value.ePSBearerID, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_EPSBearerModificationCauseValue, $.BER)(value.cause, $.BER);
+    if (value.gTPTunnelInfo !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_GTPTunnelInfo, $.BER)(value.gTPTunnelInfo, $.BER);
+    }
+    if (value.bearerQOS !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => _encode_EPSBearerQOS, $.BER)(value.bearerQOS, $.BER);
+    }
+    if (value.protocolConfigurationOptions !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => _encode_PDNProtocolConfigurationOptions, $.BER)(value.protocolConfigurationOptions, $.BER);
+    }
+    if (value.linkedBearerIDs !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => $._encodeSequenceOf<EPSBearerID>(() => _encode_EPSBearerID, $.BER), $.BER)(value.linkedBearerIDs, $.BER);
+    }
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_EPSBearerContextModified(value, elGetter);
+}
+
+
+/* eslint-enable */

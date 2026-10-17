@@ -1,0 +1,402 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    UTF8String,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { SubscriptionType, _decode_SubscriptionType, _encode_SubscriptionType, _enum_for_SubscriptionType } from "../TS33128Payloads/SubscriptionType.ta.mjs";
+// export { SubscriptionType, _enum_for_SubscriptionType, SubscriptionType_subscription /* IMPORTED_LONG_ENUMERATION_ITEM */, subscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionType_subscriptionUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionType_unsubscription /* IMPORTED_LONG_ENUMERATION_ITEM */, unsubscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriptionType, _encode_SubscriptionType } from "../TS33128Payloads/SubscriptionType.ta.mjs";
+import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+// export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { EASIDs, _decode_EASIDs, _encode_EASIDs } from "../TS33128Payloads/EASIDs.ta.mjs";
+// export { EASIDs, _decode_EASIDs, _encode_EASIDs } from "../TS33128Payloads/EASIDs.ta.mjs";
+import { ACIDs, _decode_ACIDs, _encode_ACIDs } from "../TS33128Payloads/ACIDs.ta.mjs";
+// export { ACIDs, _decode_ACIDs, _encode_ACIDs } from "../TS33128Payloads/ACIDs.ta.mjs";
+import { ACREventIDs, _decode_ACREventIDs, _encode_ACREventIDs, _enum_for_ACREventIDs } from "../TS33128Payloads/ACREventIDs.ta.mjs";
+// export { ACREventIDs, _enum_for_ACREventIDs, ACREventIDs_targetInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, targetInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, ACREventIDs_aCRComplete /* IMPORTED_LONG_ENUMERATION_ITEM */, aCRComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ACREventIDs, _encode_ACREventIDs } from "../TS33128Payloads/ACREventIDs.ta.mjs";
+import { FailureResponse, _decode_FailureResponse, _encode_FailureResponse, _enum_for_FailureResponse } from "../TS33128Payloads/FailureResponse.ta.mjs";
+// export { FailureResponse, _enum_for_FailureResponse, FailureResponse_error400 /* IMPORTED_LONG_ENUMERATION_ITEM */, error400 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error401 /* IMPORTED_LONG_ENUMERATION_ITEM */, error401 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error403 /* IMPORTED_LONG_ENUMERATION_ITEM */, error403 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error404 /* IMPORTED_LONG_ENUMERATION_ITEM */, error404 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error406 /* IMPORTED_LONG_ENUMERATION_ITEM */, error406 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error411 /* IMPORTED_LONG_ENUMERATION_ITEM */, error411 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error413 /* IMPORTED_LONG_ENUMERATION_ITEM */, error413 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error415 /* IMPORTED_LONG_ENUMERATION_ITEM */, error415 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error429 /* IMPORTED_LONG_ENUMERATION_ITEM */, error429 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error500 /* IMPORTED_LONG_ENUMERATION_ITEM */, error500 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FailureResponse_error503 /* IMPORTED_LONG_ENUMERATION_ITEM */, error503 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FailureResponse, _encode_FailureResponse } from "../TS33128Payloads/FailureResponse.ta.mjs";
+
+
+/**
+ * @summary EESACRSubscription
+ * @description
+ * 
+ * The IRI-POI in the EES shall generate an xIRI containing an
+ * EESACRSubscription record when the IRI-POI present in the EES detects that an
+ * EEC has requested to subscribe, update subscription and unsubscribe to ACR
+ * events. The IRI-POI present in the EES shall generate the xIRI for the
+ * following events:
+ *
+ * - EES returns Eees_ACREvents_Subscribe response to the EEC confirming its
+ *   subscription for reporting of ACR information notification (as defined in
+ *   TS 24.558 [93] clause 5.4.2.2).
+ *
+ * - EES returns Eees_ACREvents_UpdateSubscription response to the EEC
+ *   confirming the update of its subscription for reporting of ACR information
+ *   notification (as defined in TS 24.558 [93] clause 5.4.2.4).
+ *
+ * - EES returns Eees_ACREvents_Unsubscribe response to the EEC confirming the
+ *   deletion of an existing subscription at the EES to ACR events (as defined
+ *   in TS 24.558 [93] clause 5.4.2.5)
+ *
+ * Table 7.14.2.11-1 gives the LI_HI2 IRI message type for this record as
+ * REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.14.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EESACRSubscription ::= SEQUENCE
+ * {
+ *     eECID               [1] UTF8String,
+ *     gPSI                [2] GPSI OPTIONAL,
+ *     subscriptionType    [3] SubscriptionType,
+ *     expirationTime      [4] Timestamp OPTIONAL,
+ *     eASIDs              [5] EASIDs,
+ *     aCIDs               [6] ACIDs OPTIONAL,
+ *     eventIDs            [7] ACREventIDs OPTIONAL,
+ *     subscriptionId      [8] UTF8String OPTIONAL,
+ *     failureResponse     [9] FailureResponse OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class EESACRSubscription {
+    /**
+     * @summary `eECID`.
+     * @description
+     *
+     * Unique identifier of the EEC.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eECID: UTF8String;
+    /**
+     * @summary `gPSI`.
+     * @description
+     *
+     * GPSI of the target UE, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly gPSI: OPTIONAL<GPSI>;
+    /**
+     * @summary `subscriptionType`.
+     * @description
+     *
+     * Subscription type, i.e. "Subscription", "Subscription Update" or
+     * "Unsubscription".
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly subscriptionType: SubscriptionType;
+    /**
+     * @summary `expirationTime`.
+     * @description
+     *
+     * Expiration time for the subscription. If absent for subscription types
+     * "Subscription" and Subscription Update", application context relocation
+     * subscription from EEC never expires.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly expirationTime: OPTIONAL<Timestamp>;
+    /**
+     * @summary `eASIDs`.
+     * @description
+     *
+     * List of identifier of the EASs, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eASIDs: EASIDs;
+    /**
+     * @summary `aCIDs`.
+     * @description
+     *
+     * List of identifier of the ACs, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly aCIDs: OPTIONAL<ACIDs>;
+    /**
+     * @summary `eventIDs`.
+     * @description
+     *
+     * Specifies the events for which EEC is subscribing.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly eventIDs: OPTIONAL<ACREventIDs>;
+    /**
+     * @summary `subscriptionId`.
+     * @description
+     *
+     * Subscription identity, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly subscriptionId: OPTIONAL<UTF8String>;
+    /**
+     * @summary `failureResponse`.
+     * @description
+     *
+     * Cause information when the discovery request has failed, if available.
+     *
+     * 3GPP TS 33.128, clause 7.14.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly failureResponse: OPTIONAL<FailureResponse>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        eECID: UTF8String,
+        gPSI: OPTIONAL<GPSI>,
+        subscriptionType: SubscriptionType,
+        expirationTime: OPTIONAL<Timestamp>,
+        eASIDs: EASIDs,
+        aCIDs: OPTIONAL<ACIDs>,
+        eventIDs: OPTIONAL<ACREventIDs>,
+        subscriptionId: OPTIONAL<UTF8String>,
+        failureResponse: OPTIONAL<FailureResponse>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eECID = eECID;
+        this.gPSI = gPSI;
+        this.subscriptionType = subscriptionType;
+        this.expirationTime = expirationTime;
+        this.eASIDs = eASIDs;
+        this.aCIDs = aCIDs;
+        this.eventIDs = eventIDs;
+        this.subscriptionId = subscriptionId;
+        this.failureResponse = failureResponse;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a EESACRSubscription
+     * @description
+     * 
+     * This takes an `object` and converts it to a `EESACRSubscription`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `EESACRSubscription`.
+     * @returns {EESACRSubscription}
+     */
+    public static _from_object (_o: { [_K in keyof (EESACRSubscription)]: (EESACRSubscription)[_K] }): EESACRSubscription {
+        return new EESACRSubscription(_o.eECID, _o.gPSI, _o.subscriptionType, _o.expirationTime, _o.eASIDs, _o.aCIDs, _o.eventIDs, _o.subscriptionId, _o.failureResponse, _o._unrecognizedExtensionsList);
+    }
+
+        /**
+         * @summary The enum used as the type of the component `subscriptionType`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_subscriptionType = _enum_for_SubscriptionType;        /**
+         * @summary The enum used as the type of the component `eventIDs`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_eventIDs = _enum_for_ACREventIDs;        /**
+         * @summary The enum used as the type of the component `failureResponse`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_failureResponse = _enum_for_FailureResponse;
+}
+
+/**
+ * @summary The Leading Root Component Types of EESACRSubscription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_EESACRSubscription: $.ComponentSpec[] = [
+    new $.ComponentSpec("eECID", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("gPSI", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("subscriptionType", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("expirationTime", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("eASIDs", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("aCIDs", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("eventIDs", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("subscriptionId", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("failureResponse", true, $.hasTag(_TagClass.context, 9))
+];
+
+/**
+ * @summary The Trailing Root Component Types of EESACRSubscription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_EESACRSubscription: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of EESACRSubscription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_EESACRSubscription: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_EESACRSubscription: $.ASN1Decoder<EESACRSubscription> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) EESACRSubscription
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_EESACRSubscription (el: _Element): EESACRSubscription {
+    if (!_cached_decoder_for_EESACRSubscription) { _cached_decoder_for_EESACRSubscription = function (el: _Element): EESACRSubscription {
+    let eECID!: UTF8String;
+    let gPSI: OPTIONAL<GPSI>;
+    let subscriptionType!: SubscriptionType;
+    let expirationTime: OPTIONAL<Timestamp>;
+    let eASIDs!: EASIDs;
+    let aCIDs: OPTIONAL<ACIDs>;
+    let eventIDs: OPTIONAL<ACREventIDs>;
+    let subscriptionId: OPTIONAL<UTF8String>;
+    let failureResponse: OPTIONAL<FailureResponse>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "eECID": (_el: _Element): void => { eECID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },
+        "subscriptionType": (_el: _Element): void => { subscriptionType = $._decode_implicit<SubscriptionType>(() => _decode_SubscriptionType)(_el); },
+        "expirationTime": (_el: _Element): void => { expirationTime = $._decode_implicit<Timestamp>(() => _decode_Timestamp)(_el); },
+        "eASIDs": (_el: _Element): void => { eASIDs = $._decode_implicit<EASIDs>(() => _decode_EASIDs)(_el); },
+        "aCIDs": (_el: _Element): void => { aCIDs = $._decode_implicit<ACIDs>(() => _decode_ACIDs)(_el); },
+        "eventIDs": (_el: _Element): void => { eventIDs = $._decode_implicit<ACREventIDs>(() => _decode_ACREventIDs)(_el); },
+        "subscriptionId": (_el: _Element): void => { subscriptionId = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "failureResponse": (_el: _Element): void => { failureResponse = $._decode_implicit<FailureResponse>(() => _decode_FailureResponse)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_EESACRSubscription,
+        _extension_additions_list_spec_for_EESACRSubscription,
+        _root_component_type_list_2_spec_for_EESACRSubscription,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new EESACRSubscription(
+        eECID,
+        gPSI,
+        subscriptionType,
+        expirationTime,
+        eASIDs,
+        aCIDs,
+        eventIDs,
+        subscriptionId,
+        failureResponse,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_EESACRSubscription(el);
+}
+
+let _cached_encoder_for_EESACRSubscription: $.ASN1Encoder<EESACRSubscription> | null = null;
+
+/**
+ * @summary Encodes a(n) EESACRSubscription into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The EESACRSubscription, encoded as an ASN.1 Element.
+ */
+export
+function _encode_EESACRSubscription (value: EESACRSubscription, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_EESACRSubscription) { _cached_encoder_for_EESACRSubscription = function (value: EESACRSubscription, elGetter: $.ASN1Encoder<EESACRSubscription>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeUTF8String, $.BER)(value.eECID, $.BER);
+    if (value.gPSI !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 2, () => _encode_GPSI, $.BER)(value.gPSI, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => _encode_SubscriptionType, $.BER)(value.subscriptionType, $.BER);
+    if (value.expirationTime !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => _encode_Timestamp, $.BER)(value.expirationTime, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 5, () => _encode_EASIDs, $.BER)(value.eASIDs, $.BER);
+    if (value.aCIDs !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => _encode_ACIDs, $.BER)(value.aCIDs, $.BER);
+    }
+    if (value.eventIDs !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 7, () => _encode_ACREventIDs, $.BER)(value.eventIDs, $.BER);
+    }
+    if (value.subscriptionId !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 8, () => $._encodeUTF8String, $.BER)(value.subscriptionId, $.BER);
+    }
+    if (value.failureResponse !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 9, () => _encode_FailureResponse, $.BER)(value.failureResponse, $.BER);
+    }
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_EESACRSubscription(value, elGetter);
+}
+
+
+/* eslint-enable */

@@ -1,0 +1,85 @@
+{
+    "name": "@wildboar/lawful-intercept",
+    "type": "module",
+    "description": "A library for encoding and decoding lawful intercept PDU according to 3GPP TS 33.128 et. al.",
+    "keywords": [
+        "3gpp",
+        "li",
+        "lawful",
+        "interception"
+    ],
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/rose": "npm:@jsr/wildboar__rose@^2.0.2"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./CONF-HI3-IMS": "./src/lib/modules/CONF-HI3-IMS/index.mts",
+        "./CONFHI2Operations": "./src/lib/modules/CONFHI2Operations/index.mts",
+        "./CSvoice-HI3-IP": "./src/lib/modules/CSvoice-HI3-IP/index.mts",
+        "./Common-Parameters": "./src/lib/modules/Common-Parameters/index.mts",
+        "./EN301040": "./src/lib/modules/EN301040/index.mts",
+        "./EmailPDU": "./src/lib/modules/EmailPDU/index.mts",
+        "./Eps-HI3-PS": "./src/lib/modules/Eps-HI3-PS/index.mts",
+        "./EpsHI2Operations": "./src/lib/modules/EpsHI2Operations/index.mts",
+        "./GCSE-HI3": "./src/lib/modules/GCSE-HI3/index.mts",
+        "./GCSEHI2Operations": "./src/lib/modules/GCSEHI2Operations/index.mts",
+        "./Gprs-HI3-PS": "./src/lib/modules/Gprs-HI3-PS/index.mts",
+        "./HI1NotificationOperations": "./src/lib/modules/HI1NotificationOperations/index.mts",
+        "./HI2Operations": "./src/lib/modules/HI2Operations/index.mts",
+        "./HI3CCLinkData": "./src/lib/modules/HI3CCLinkData/index.mts",
+        "./HI3CircuitDataOperations": "./src/lib/modules/HI3CircuitDataOperations/index.mts",
+        "./HIManagementOperations": "./src/lib/modules/HIManagementOperations/index.mts",
+        "./ILHIPDU": "./src/lib/modules/ILHIPDU/index.mts",
+        "./IPAccessPDU": "./src/lib/modules/IPAccessPDU/index.mts",
+        "./IPMultimediaPDU": "./src/lib/modules/IPMultimediaPDU/index.mts",
+        "./IWLANUmtsHI2Operations": "./src/lib/modules/IWLANUmtsHI2Operations/index.mts",
+        "./L2AccessPDU": "./src/lib/modules/L2AccessPDU/index.mts",
+        "./LI-PS-PDU": "./src/lib/modules/LI-PS-PDU/index.mts",
+        "./MBMSUmtsHI2Operations": "./src/lib/modules/MBMSUmtsHI2Operations/index.mts",
+        "./Mms-HI3-PS": "./src/lib/modules/Mms-HI3-PS/index.mts",
+        "./MmsHI2Operations": "./src/lib/modules/MmsHI2Operations/index.mts",
+        "./PCESP": "./src/lib/modules/PCESP/index.mts",
+        "./ProSeHI2Operations": "./src/lib/modules/ProSeHI2Operations/index.mts",
+        "./PstnIsdnPDU": "./src/lib/modules/PstnIsdnPDU/index.mts",
+        "./Remote-Operations-Information-Objects": "./src/lib/modules/Remote-Operations-Information-Objects/index.mts",
+        "./TETRA-HI1NotificationOperations": "./src/lib/modules/TETRA-HI1NotificationOperations/index.mts",
+        "./TETRA-HI2Operations": "./src/lib/modules/TETRA-HI2Operations/index.mts",
+        "./TETRA-HIManagementOperations": "./src/lib/modules/TETRA-HIManagementOperations/index.mts",
+        "./TS101909201": "./src/lib/modules/TS101909201/index.mts",
+        "./TS101909202": "./src/lib/modules/TS101909202/index.mts",
+        "./TS33128IdentityAssociation": "./src/lib/modules/TS33128IdentityAssociation/index.mts",
+        "./TS33128Payloads": "./src/lib/modules/TS33128Payloads/index.mts",
+        "./ThreeGPP-HI1NotificationOperations": "./src/lib/modules/ThreeGPP-HI1NotificationOperations/index.mts",
+        "./UMTS-HI3CircuitLIOperations": "./src/lib/modules/UMTS-HI3CircuitLIOperations/index.mts",
+        "./Umts-HI3-PS": "./src/lib/modules/Umts-HI3-PS/index.mts",
+        "./UmtsCS-HI2Operations": "./src/lib/modules/UmtsCS-HI2Operations/index.mts",
+        "./UmtsHI2Operations": "./src/lib/modules/UmtsHI2Operations/index.mts",
+        "./VoIP-HI3-IMS": "./src/lib/modules/VoIP-HI3-IMS/index.mts"
+    }
+}

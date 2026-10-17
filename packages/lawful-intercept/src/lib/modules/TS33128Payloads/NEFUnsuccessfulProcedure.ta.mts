@@ -1,0 +1,393 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { NEFFailureCause, _decode_NEFFailureCause, _encode_NEFFailureCause, _enum_for_NEFFailureCause } from "../TS33128Payloads/NEFFailureCause.ta.mjs";
+// export { NEFFailureCause, _enum_for_NEFFailureCause, NEFFailureCause_userUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, userUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFFailureCause_niddConfigurationNotAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, niddConfigurationNotAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFFailureCause_contextNotFound /* IMPORTED_LONG_ENUMERATION_ITEM */, contextNotFound /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFFailureCause_portNotFree /* IMPORTED_LONG_ENUMERATION_ITEM */, portNotFree /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFFailureCause_portNotAssociatedWithSpecifiedApplication /* IMPORTED_LONG_ENUMERATION_ITEM */, portNotAssociatedWithSpecifiedApplication /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NEFFailureCause, _encode_NEFFailureCause } from "../TS33128Payloads/NEFFailureCause.ta.mjs";
+import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
+// export { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
+import { DNN, _decode_DNN, _encode_DNN } from "../TS33128Payloads/DNN.ta.mjs";
+// export { DNN, _decode_DNN, _encode_DNN } from "../TS33128Payloads/DNN.ta.mjs";
+import { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSAI.ta.mjs";
+// export { SNSSAI, _decode_SNSSAI, _encode_SNSSAI } from "../TS33128Payloads/SNSSAI.ta.mjs";
+import { RDSPortNumber, _decode_RDSPortNumber, _encode_RDSPortNumber } from "../TS33128Payloads/RDSPortNumber.ta.mjs";
+// export { RDSPortNumber, _decode_RDSPortNumber, _encode_RDSPortNumber } from "../TS33128Payloads/RDSPortNumber.ta.mjs";
+import { ApplicationID, _decode_ApplicationID, _encode_ApplicationID } from "../TS33128Payloads/ApplicationID.ta.mjs";
+// export { ApplicationID, _decode_ApplicationID, _encode_ApplicationID } from "../TS33128Payloads/ApplicationID.ta.mjs";
+import { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
+// export { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
+
+
+/**
+ * @summary NEFUnsuccessfulProcedure
+ * @description
+ * 
+ * The IRI-POI in the NEF shall generate an xIRI containing an
+ * NEFUnsuccessfulProcedure record when the IRI-POI present in the NEF detects
+ * an unsuccessful procedure or error condition for a UE matching one of the
+ * target identifiers provided via LI_X1.
+ *
+ * Accordingly, the IRI-POI in the NEF generates the xIRI when one of the
+ * following events are detected as described in TS 29.541 [57] clause 6.1.7.3
+ * and TS 24.250 [61] clause 5.4.2.6:
+ *
+ * - NEF sends a Nnef_SMContext_Create Reject message to the SMF with a reject
+ *   cause set to "USER_UNKNOWN" or "NIDD_CONFIGURATION_NOT_AVAILABLE".
+ *
+ * - NEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set to
+ *   "Port not free" in response to a RDS MANAGE PORT command sent by UE with an
+ *   "Action" field set to "Reserve port".
+ *
+ * - NEF receives a RDS MANAGE PORT Response from a UE with a "Status" field set
+ *   to "Port not free" in response to a RDS MANAGE PORT command sent by NEF
+ *   with an "Action" field set to "Reserve port".
+ *
+ * - NEF returns a RDS MANAGE PORT Response to a UE with a "Status" field set to
+ *   "Port not associated with specified application" in response to a RDS
+ *   MANAGE PORT command sent by UE with an "Action" field set to "Release
+ *   port".
+ *
+ * - NEF receives a RDS MANAGE PORT Response from a UE with a "Status" field set
+ *   to "Port not associated with specified application" in response to a RDS
+ *   MANAGE PORT command sent by NEF with an "Action" field set to "Release
+ *   port".
+ *
+ * Table 7.7.2.3-1 gives the LI_HI2 IRI message type for this record as REPORT
+ * or CONTINUE.
+ *
+ * 3GPP TS 33.128, clause 7.7.2.1.5.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * NEFUnsuccessfulProcedure ::= SEQUENCE
+ * {
+ *     failureCause                 [1] NEFFailureCause,
+ *     sUPI                         [2] SUPI,
+ *     gPSI                         [3] GPSI OPTIONAL,
+ *     pDUSessionID                 [4] PDUSessionID,
+ *     dNN                          [5] DNN OPTIONAL,
+ *     sNSSAI                       [6] SNSSAI OPTIONAL,
+ *     rDSDestinationPortNumber     [7] RDSPortNumber,
+ *     applicationID                [8] ApplicationID,
+ *     aFID                         [9] AFID
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class NEFUnsuccessfulProcedure {
+    /**
+     * @summary `failureCause`.
+     * @description
+     *
+     * Provides the value of the failure cause.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly failureCause: NEFFailureCause;
+    /**
+     * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the procedure.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly sUPI: SUPI;
+    /**
+     * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used in the procedure, if available.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly gPSI: OPTIONAL<GPSI>;
+    /**
+     * @summary `pDUSessionID`.
+     * @description
+     *
+     * PDU Session ID.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly pDUSessionID: PDUSessionID;
+    /**
+     * @summary `dNN`.
+     * @description
+     *
+     * Data Network Name associated with the target traffic, if available. Shall
+     * be given in dotted-label presentation format as described in TS 23.003
+     * [19] clause 9.1.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly dNN: OPTIONAL<DNN>;
+    /**
+     * @summary `sNSSAI`.
+     * @description
+     *
+     * Slice requested for the procedure, if available.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly sNSSAI: OPTIONAL<SNSSAI>;
+    /**
+     * @summary `rDSDestinationPortNumber`.
+     * @public
+     * @readonly
+     */
+    readonly rDSDestinationPortNumber: RDSPortNumber;
+    /**
+     * @summary `applicationID`.
+     * @description
+     *
+     * Application associated with the RDS destination port number.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly applicationID: ApplicationID;
+    /**
+     * @summary `aFID`.
+     * @description
+     *
+     * Application Function identifier. If the Application Function identifier
+     * is not available, the placeholder value "Unknown" shall be used.
+     *
+     * 3GPP TS 33.128, clause 7.7.2.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    readonly aFID: AFID;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        failureCause: NEFFailureCause,
+        sUPI: SUPI,
+        gPSI: OPTIONAL<GPSI>,
+        pDUSessionID: PDUSessionID,
+        dNN: OPTIONAL<DNN>,
+        sNSSAI: OPTIONAL<SNSSAI>,
+        rDSDestinationPortNumber: RDSPortNumber,
+        applicationID: ApplicationID,
+        aFID: AFID,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.failureCause = failureCause;
+        this.sUPI = sUPI;
+        this.gPSI = gPSI;
+        this.pDUSessionID = pDUSessionID;
+        this.dNN = dNN;
+        this.sNSSAI = sNSSAI;
+        this.rDSDestinationPortNumber = rDSDestinationPortNumber;
+        this.applicationID = applicationID;
+        this.aFID = aFID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a NEFUnsuccessfulProcedure
+     * @description
+     * 
+     * This takes an `object` and converts it to a `NEFUnsuccessfulProcedure`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `NEFUnsuccessfulProcedure`.
+     * @returns {NEFUnsuccessfulProcedure}
+     */
+    public static _from_object (_o: { [_K in keyof (NEFUnsuccessfulProcedure)]: (NEFUnsuccessfulProcedure)[_K] }): NEFUnsuccessfulProcedure {
+        return new NEFUnsuccessfulProcedure(_o.failureCause, _o.sUPI, _o.gPSI, _o.pDUSessionID, _o.dNN, _o.sNSSAI, _o.rDSDestinationPortNumber, _o.applicationID, _o.aFID, _o._unrecognizedExtensionsList);
+    }
+
+        /**
+         * @summary The enum used as the type of the component `failureCause`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_failureCause = _enum_for_NEFFailureCause;
+}
+
+/**
+ * @summary The Leading Root Component Types of NEFUnsuccessfulProcedure
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_NEFUnsuccessfulProcedure: $.ComponentSpec[] = [
+    new $.ComponentSpec("failureCause", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("sUPI", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("gPSI", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("pDUSessionID", false, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("dNN", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("sNSSAI", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("rDSDestinationPortNumber", false, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("applicationID", false, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("aFID", false, $.hasTag(_TagClass.context, 9))
+];
+
+/**
+ * @summary The Trailing Root Component Types of NEFUnsuccessfulProcedure
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_NEFUnsuccessfulProcedure: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of NEFUnsuccessfulProcedure
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_NEFUnsuccessfulProcedure: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_NEFUnsuccessfulProcedure: $.ASN1Decoder<NEFUnsuccessfulProcedure> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) NEFUnsuccessfulProcedure
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_NEFUnsuccessfulProcedure (el: _Element): NEFUnsuccessfulProcedure {
+    if (!_cached_decoder_for_NEFUnsuccessfulProcedure) { _cached_decoder_for_NEFUnsuccessfulProcedure = function (el: _Element): NEFUnsuccessfulProcedure {
+    let failureCause!: NEFFailureCause;
+    let sUPI!: SUPI;
+    let gPSI: OPTIONAL<GPSI>;
+    let pDUSessionID!: PDUSessionID;
+    let dNN: OPTIONAL<DNN>;
+    let sNSSAI: OPTIONAL<SNSSAI>;
+    let rDSDestinationPortNumber!: RDSPortNumber;
+    let applicationID!: ApplicationID;
+    let aFID!: AFID;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "failureCause": (_el: _Element): void => { failureCause = $._decode_implicit<NEFFailureCause>(() => _decode_NEFFailureCause)(_el); },
+        "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
+        "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },
+        "pDUSessionID": (_el: _Element): void => { pDUSessionID = $._decode_implicit<PDUSessionID>(() => _decode_PDUSessionID)(_el); },
+        "dNN": (_el: _Element): void => { dNN = $._decode_implicit<DNN>(() => _decode_DNN)(_el); },
+        "sNSSAI": (_el: _Element): void => { sNSSAI = $._decode_implicit<SNSSAI>(() => _decode_SNSSAI)(_el); },
+        "rDSDestinationPortNumber": (_el: _Element): void => { rDSDestinationPortNumber = $._decode_implicit<RDSPortNumber>(() => _decode_RDSPortNumber)(_el); },
+        "applicationID": (_el: _Element): void => { applicationID = $._decode_implicit<ApplicationID>(() => _decode_ApplicationID)(_el); },
+        "aFID": (_el: _Element): void => { aFID = $._decode_implicit<AFID>(() => _decode_AFID)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_NEFUnsuccessfulProcedure,
+        _extension_additions_list_spec_for_NEFUnsuccessfulProcedure,
+        _root_component_type_list_2_spec_for_NEFUnsuccessfulProcedure,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new NEFUnsuccessfulProcedure(
+        failureCause,
+        sUPI,
+        gPSI,
+        pDUSessionID,
+        dNN,
+        sNSSAI,
+        rDSDestinationPortNumber,
+        applicationID,
+        aFID,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_NEFUnsuccessfulProcedure(el);
+}
+
+let _cached_encoder_for_NEFUnsuccessfulProcedure: $.ASN1Encoder<NEFUnsuccessfulProcedure> | null = null;
+
+/**
+ * @summary Encodes a(n) NEFUnsuccessfulProcedure into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The NEFUnsuccessfulProcedure, encoded as an ASN.1 Element.
+ */
+export
+function _encode_NEFUnsuccessfulProcedure (value: NEFUnsuccessfulProcedure, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_NEFUnsuccessfulProcedure) { _cached_encoder_for_NEFUnsuccessfulProcedure = function (value: NEFUnsuccessfulProcedure, elGetter: $.ASN1Encoder<NEFUnsuccessfulProcedure>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_NEFFailureCause, $.BER)(value.failureCause, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_explicit(_TagClass.context, 2, () => _encode_SUPI, $.BER)(value.sUPI, $.BER);
+    if (value.gPSI !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 3, () => _encode_GPSI, $.BER)(value.gPSI, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 4, () => _encode_PDUSessionID, $.BER)(value.pDUSessionID, $.BER);
+    if (value.dNN !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => _encode_DNN, $.BER)(value.dNN, $.BER);
+    }
+    if (value.sNSSAI !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => _encode_SNSSAI, $.BER)(value.sNSSAI, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 7, () => _encode_RDSPortNumber, $.BER)(value.rDSDestinationPortNumber, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 8, () => _encode_ApplicationID, $.BER)(value.applicationID, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 9, () => _encode_AFID, $.BER)(value.aFID, $.BER);
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_NEFUnsuccessfulProcedure(value, elGetter);
+}
+
+
+/* eslint-enable */

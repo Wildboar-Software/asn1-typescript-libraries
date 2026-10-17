@@ -1,0 +1,64 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1SizeError
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
+// export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
+
+
+/**
+ * @summary PLMNList
+ * @description
+ * 
+ * Provides a list of equivalent PLMNs in the Attach Accept message. See clause
+ * TS 24.301 [51] clauses 8.2.1.1 and 8.2.1.8.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PLMNList  ::=  SEQUENCE (SIZE(1..MAX)) OF PLMNID
+ * ```
+ */
+export
+type PLMNList = PLMNID[]; // SequenceOfType
+
+let _cached_decoder_for_PLMNList: $.ASN1Decoder<PLMNList> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) PLMNList
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_PLMNList (el: _Element): PLMNList {
+    if (!_cached_decoder_for_PLMNList) { _cached_decoder_for_PLMNList = $._decodeSequenceOf<PLMNID>(() => _decode_PLMNID); }
+    const _value = _cached_decoder_for_PLMNList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("PLMNList violates SIZE constraint");
+    }
+    return _value;
+}
+
+let _cached_encoder_for_PLMNList: $.ASN1Encoder<PLMNList> | null = null;
+
+/**
+ * @summary Encodes a(n) PLMNList into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The PLMNList, encoded as an ASN.1 Element.
+ */
+export
+function _encode_PLMNList (value: PLMNList, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_PLMNList) { _cached_encoder_for_PLMNList = $._encodeSequenceOf<PLMNID>(() => _encode_PLMNID, $.BER); }
+    return _cached_encoder_for_PLMNList(value, elGetter);
+}
+
+
+/* eslint-enable */

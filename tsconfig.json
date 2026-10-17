@@ -280,6 +280,9 @@
       "path": "./packages/lpp"
     },
     {
+      "path": "./packages/lawful-intercept"
+    },
+    {
       "path": "./packages/q932"
     },
     {
@@ -287,6 +290,9 @@
     },
     {
       "path": "./packages/ltans-scvp-extension"
+    },
+    {
+      "path": "./packages/sle"
     }
   ],
   "compilerOptions": {

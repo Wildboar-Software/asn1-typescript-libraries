@@ -47,31 +47,38 @@ import {
  *
  */
 export class BRANCH_IDENTIFIER {
+  /**
+   * @summary `initiators_name`.
+   * @description
+   *
+   * Branch-initiator: `name` (`AE-title`) or `side`
+   * (`sender`/`receiver` of this APDU). ITU-T Rec. X.852 (12/97)
+   * Annex A, §7.9.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly initiators_name: BRANCH_IDENTIFIER_initiators_name;
+
+  /**
+   * @summary `branch_suffix`.
+   * @description
+   *
+   * Distinguishes this branch among those of the initiator
+   * (`form1` OCTET STRING or `form2` INTEGER).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly branch_suffix: BRANCH_IDENTIFIER_branch_suffix;
+
   constructor(
-    /**
-     * @summary `initiators_name`.
-     * @description
-     *
-     * Branch-initiator: `name` (`AE-title`) or `side`
-     * (`sender`/`receiver` of this APDU). ITU-T Rec. X.852 (12/97)
-     * Annex A, §7.9.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly initiators_name: BRANCH_IDENTIFIER_initiators_name,
-    /**
-     * @summary `branch_suffix`.
-     * @description
-     *
-     * Distinguishes this branch among those of the initiator
-     * (`form1` OCTET STRING or `form2` INTEGER).
-     *
-     * @public
-     * @readonly
-     */
-    readonly branch_suffix: BRANCH_IDENTIFIER_branch_suffix
-  ) {}
+    initiators_name: BRANCH_IDENTIFIER_initiators_name,
+    branch_suffix: BRANCH_IDENTIFIER_branch_suffix
+  ) {
+    this.initiators_name = initiators_name;
+    this.branch_suffix = branch_suffix;
+  }
 
   /**
    * @summary Restructures an object into a BRANCH_IDENTIFIER

@@ -87,46 +87,56 @@ import {
  *
  */
 export class CP_type {
+    /**
+     * @summary `mode_selector`.
+     * @description
+     *
+     * Mode from `P-CONNECT` request (`normal` or `X.410-1984`); appears
+     * on the indication if issued (X.226 §6.2.2.1; X.216 §10.2.1.10).
+     * Mandatory on the CP PPDU (X.226 Table 1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mode_selector: Mode_selector;
+
+    /**
+     * @summary `x410_mode_parameters`.
+     * @description
+     *
+     * X.410-1984 mode only: `COMPONENTS OF RTORQapdu`, bitwise compatible
+     * with CCITT Rec. X.410-1984; this is the CP User data in that mode.
+     * Absent for a nested presentation-connection (X.226 §8.2). X.410
+     * mode forbids Presentation context definition list, Default context
+     * name, and Presentation requirements on `P-CONNECT` request
+     * (X.216 §10.2.1.10, Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly x410_mode_parameters?: OPTIONAL<CP_type_x410_mode_parameters>;
+
+    /**
+     * @summary `normal_mode_parameters`.
+     * @description
+     *
+     * Normal-mode CP parameters (X.226 §6.2.2, §8.2). Mutually exclusive
+     * with `x410-mode-parameters` for a given connection mode.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly normal_mode_parameters?: OPTIONAL<CP_type_normal_mode_parameters>;
+
     constructor(
-        /**
-         * @summary `mode_selector`.
-         * @description
-         *
-         * Mode from `P-CONNECT` request (`normal` or `X.410-1984`); appears
-         * on the indication if issued (X.226 §6.2.2.1; X.216 §10.2.1.10).
-         * Mandatory on the CP PPDU (X.226 Table 1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mode_selector: Mode_selector,
-        /**
-         * @summary `x410_mode_parameters`.
-         * @description
-         *
-         * X.410-1984 mode only: `COMPONENTS OF RTORQapdu`, bitwise compatible
-         * with CCITT Rec. X.410-1984; this is the CP User data in that mode.
-         * Absent for a nested presentation-connection (X.226 §8.2). X.410
-         * mode forbids Presentation context definition list, Default context
-         * name, and Presentation requirements on `P-CONNECT` request
-         * (X.216 §10.2.1.10, Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly x410_mode_parameters?: OPTIONAL<CP_type_x410_mode_parameters>,
-        /**
-         * @summary `normal_mode_parameters`.
-         * @description
-         *
-         * Normal-mode CP parameters (X.226 §6.2.2, §8.2). Mutually exclusive
-         * with `x410-mode-parameters` for a given connection mode.
-         *
-         * @public
-         * @readonly
-         */
-        readonly normal_mode_parameters?: OPTIONAL<CP_type_normal_mode_parameters>
-    ) {}
+        mode_selector: Mode_selector,
+        x410_mode_parameters?: OPTIONAL<CP_type_x410_mode_parameters>,
+        normal_mode_parameters?: OPTIONAL<CP_type_normal_mode_parameters>
+    ) {
+        this.mode_selector = mode_selector;
+        this.x410_mode_parameters = x410_mode_parameters;
+        this.normal_mode_parameters = normal_mode_parameters;
+    }
 
     /**
      * @summary Restructures an object into a CP_type

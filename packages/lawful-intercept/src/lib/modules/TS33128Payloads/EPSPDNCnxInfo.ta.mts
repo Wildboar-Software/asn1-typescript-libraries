@@ -1,0 +1,190 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
+// export { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
+import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
+// export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
+
+
+/**
+ * @summary EPSPDNCnxInfo
+ * @description
+ * 
+ * Indicates if the PDU session may be moved to EPS during its lifetime (see TS
+ * 29.502 [16] clause 6.1.6.2.31). Include if known.
+ *
+ * 3GPP TS 33.128, clause 6.2.3.2.7.2.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * EPSPDNCnxInfo ::= SEQUENCE
+ * {
+ *     pGWS8ControlPlaneFTEID [1] FTEID,
+ *     linkedBearerID         [2] EPSBearerID OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class EPSPDNCnxInfo {
+    /**
+     * @summary `pGWS8ControlPlaneFTEID`.
+     * @public
+     * @readonly
+     */
+    readonly pGWS8ControlPlaneFTEID: FTEID;
+    /**
+     * @summary `linkedBearerID`.
+     * @public
+     * @readonly
+     */
+    readonly linkedBearerID: OPTIONAL<EPSBearerID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        pGWS8ControlPlaneFTEID: FTEID,
+        linkedBearerID: OPTIONAL<EPSBearerID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pGWS8ControlPlaneFTEID = pGWS8ControlPlaneFTEID;
+        this.linkedBearerID = linkedBearerID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a EPSPDNCnxInfo
+     * @description
+     * 
+     * This takes an `object` and converts it to a `EPSPDNCnxInfo`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `EPSPDNCnxInfo`.
+     * @returns {EPSPDNCnxInfo}
+     */
+    public static _from_object (_o: { [_K in keyof (EPSPDNCnxInfo)]: (EPSPDNCnxInfo)[_K] }): EPSPDNCnxInfo {
+        return new EPSPDNCnxInfo(_o.pGWS8ControlPlaneFTEID, _o.linkedBearerID, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of EPSPDNCnxInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_EPSPDNCnxInfo: $.ComponentSpec[] = [
+    new $.ComponentSpec("pGWS8ControlPlaneFTEID", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("linkedBearerID", true, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of EPSPDNCnxInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_EPSPDNCnxInfo: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of EPSPDNCnxInfo
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_EPSPDNCnxInfo: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_EPSPDNCnxInfo: $.ASN1Decoder<EPSPDNCnxInfo> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) EPSPDNCnxInfo
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_EPSPDNCnxInfo (el: _Element): EPSPDNCnxInfo {
+    if (!_cached_decoder_for_EPSPDNCnxInfo) { _cached_decoder_for_EPSPDNCnxInfo = function (el: _Element): EPSPDNCnxInfo {
+    let pGWS8ControlPlaneFTEID!: FTEID;
+    let linkedBearerID: OPTIONAL<EPSBearerID>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "pGWS8ControlPlaneFTEID": (_el: _Element): void => { pGWS8ControlPlaneFTEID = $._decode_implicit<FTEID>(() => _decode_FTEID)(_el); },
+        "linkedBearerID": (_el: _Element): void => { linkedBearerID = $._decode_implicit<EPSBearerID>(() => _decode_EPSBearerID)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_EPSPDNCnxInfo,
+        _extension_additions_list_spec_for_EPSPDNCnxInfo,
+        _root_component_type_list_2_spec_for_EPSPDNCnxInfo,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new EPSPDNCnxInfo(
+        pGWS8ControlPlaneFTEID,
+        linkedBearerID,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_EPSPDNCnxInfo(el);
+}
+
+let _cached_encoder_for_EPSPDNCnxInfo: $.ASN1Encoder<EPSPDNCnxInfo> | null = null;
+
+/**
+ * @summary Encodes a(n) EPSPDNCnxInfo into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The EPSPDNCnxInfo, encoded as an ASN.1 Element.
+ */
+export
+function _encode_EPSPDNCnxInfo (value: EPSPDNCnxInfo, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_EPSPDNCnxInfo) { _cached_encoder_for_EPSPDNCnxInfo = function (value: EPSPDNCnxInfo, elGetter: $.ASN1Encoder<EPSPDNCnxInfo>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_FTEID, $.BER)(value.pGWS8ControlPlaneFTEID, $.BER);
+    if (value.linkedBearerID !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_EPSBearerID, $.BER)(value.linkedBearerID, $.BER);
+    }
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_EPSPDNCnxInfo(value, elGetter);
+}
+
+
+/* eslint-enable */

@@ -1,0 +1,190 @@
+/* eslint-disable */
+import {
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    PrintableString,
+    ASN1SizeError
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary National_EM_ASN1parameters
+ * @description
+ *
+ * National email parameters, carried in `EmailIRI` when a country adds ASN.1 of
+ * its own.
+ *
+ * Further national parameters are defined in ASN.1 and inserted after the
+ * extension marker. They apply to the country named by `countryCode`. The
+ * module says this structure is completely defined on a national basis.
+ *
+ * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223202/03.16.01_60/ts_10223202v031601p.pdf
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * National-EM-ASN1parameters ::= SEQUENCE
+ * {
+ *     countryCode     [1] PrintableString (SIZE (2)),
+ *         -- Country Code according to ISO 3166-1 [12],
+ *         -- the country to which the parameters inserted after the extension marker apply
+ *     ...
+ *         -- In case a given country wants to use additional national parameters according to its law,
+ *         -- these national parameters should be defined using the ASN.1 syntax and added after the
+ *         -- extension marker (...)
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class National_EM_ASN1parameters {
+    /**
+     * @summary `countryCode`.
+     * @description
+     *
+     * ISO 3166-1 alpha-2 code of the country whose national parameters, added
+     * after the extension marker, apply. Two characters.
+     *
+     * ETSI TS 102 232-2 V3.16.1 (2023-03), annex D, citing ISO 3166-1.
+     *
+     * @public
+     * @readonly
+     */
+    readonly countryCode: PrintableString;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        countryCode: PrintableString,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.countryCode = countryCode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a National_EM_ASN1parameters
+     * @description
+     * 
+     * This takes an `object` and converts it to a `National_EM_ASN1parameters`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `National_EM_ASN1parameters`.
+     * @returns {National_EM_ASN1parameters}
+     */
+    public static _from_object (_o: { [_K in keyof (National_EM_ASN1parameters)]: (National_EM_ASN1parameters)[_K] }): National_EM_ASN1parameters {
+        return new National_EM_ASN1parameters(_o.countryCode, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of National_EM_ASN1parameters
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_National_EM_ASN1parameters: $.ComponentSpec[] = [
+    new $.ComponentSpec("countryCode", false, $.hasTag(_TagClass.context, 1))
+];
+
+/**
+ * @summary The Trailing Root Component Types of National_EM_ASN1parameters
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_National_EM_ASN1parameters: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of National_EM_ASN1parameters
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_National_EM_ASN1parameters: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_National_EM_ASN1parameters: $.ASN1Decoder<National_EM_ASN1parameters> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) National_EM_ASN1parameters
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_National_EM_ASN1parameters (el: _Element): National_EM_ASN1parameters {
+    if (!_cached_decoder_for_National_EM_ASN1parameters) { _cached_decoder_for_National_EM_ASN1parameters = function (el: _Element): National_EM_ASN1parameters {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 1) {
+        throw new _ConstructionError("National-EM-ASN1parameters contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "countryCode";
+    let countryCode!: PrintableString;
+    countryCode = $._decode_implicit<PrintableString>(() => $._decodePrintableString)(sequence[0]);
+    {
+        if (countryCode.length < 2 || countryCode.length > 2) {
+            throw new ASN1SizeError("National_EM_ASN1parameters.countryCode violates SIZE constraint");
+        }
+    }
+    return new National_EM_ASN1parameters(
+        countryCode,
+        sequence.slice(1),
+    );
+}; }
+    return _cached_decoder_for_National_EM_ASN1parameters(el);
+}
+
+let _cached_encoder_for_National_EM_ASN1parameters: $.ASN1Encoder<National_EM_ASN1parameters> | null = null;
+
+/**
+ * @summary Encodes a(n) National_EM_ASN1parameters into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The National_EM_ASN1parameters, encoded as an ASN.1 Element.
+ */
+export
+function _encode_National_EM_ASN1parameters (value: National_EM_ASN1parameters, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_National_EM_ASN1parameters) { _cached_encoder_for_National_EM_ASN1parameters = function (value: National_EM_ASN1parameters, elGetter: $.ASN1Encoder<National_EM_ASN1parameters>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodePrintableString, $.BER)(value.countryCode, $.BER);
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_National_EM_ASN1parameters(value, elGetter);
+}
+
+
+/* eslint-enable */

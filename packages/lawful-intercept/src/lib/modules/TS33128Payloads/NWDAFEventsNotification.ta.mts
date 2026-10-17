@@ -1,0 +1,244 @@
+/* eslint-disable */
+import {
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { NWDAFEvent, _decode_NWDAFEvent, _encode_NWDAFEvent } from "../TS33128Payloads/NWDAFEvent.ta.mjs";
+// export { NWDAFEvent, _enum_for_NWDAFEvent, NWDAFEvent_serviceExperience /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceExperience /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_uEMobility /* IMPORTED_LONG_ENUMERATION_ITEM */, uEMobility /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_uEComm /* IMPORTED_LONG_ENUMERATION_ITEM */, uEComm /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_abnormalBehaviour /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalBehaviour /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_dispersion /* IMPORTED_LONG_ENUMERATION_ITEM */, dispersion /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_relativeProximity /* IMPORTED_LONG_ENUMERATION_ITEM */, relativeProximity /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_pDUSessionTraffic /* IMPORTED_LONG_ENUMERATION_ITEM */, pDUSessionTraffic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFEvent, _encode_NWDAFEvent } from "../TS33128Payloads/NWDAFEvent.ta.mjs";
+import { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
+// export { SBIType, _decode_SBIType, _encode_SBIType } from "../TS33128Payloads/SBIType.ta.mjs";
+
+
+/**
+ * @summary NWDAFEventsNotification
+ * @description
+ * 
+ * The IRI-POI in the NWDAF shall generate an xIRI containing an
+ * NWDAFEventsNotification record when the IRI-POI present in the NWDAF detects
+ * that the NWDAF has notified an NF consumer about UE related analytics events
+ * for a target UE.
+ *
+ * Accordingly, the IRI-POI in the NWDAF generates the xIRI when any of the
+ * following events is detected (see TS 29.520 [133] clause 4.2.2.1):
+ *
+ * - NWDAF sends a Nnwdaf_EventsSubscription_Notify Request to notify a NF
+ *   consumer about subscribed UE related analytics events for a target UE.
+ *
+ * Table 7.16.3-1 gives the LI_HI2 IRI message type for this record as REPORT.
+ *
+ * 3GPP TS 33.128, clause 7.16.2.3.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * NWDAFEventsNotification ::= SEQUENCE
+ * {
+ *     sUPI                        [1] SUPI,
+ *     nWDAFNotifiedEventList      [2] SEQUENCE SIZE(1..MAX) OF NWDAFEvent,
+ *     nWDAFEventsNotification     [3] SBIType
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class NWDAFEventsNotification {
+    /**
+     * @summary `sUPI`.
+     * @description
+     *
+     * Identifies the SUPI of the target UE.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly sUPI: SUPI;
+    /**
+     * @summary `nWDAFNotifiedEventList`.
+     * @description
+     *
+     * Identifies the analytics events notified to the NF consumer.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly nWDAFNotifiedEventList: NWDAFEvent[];
+    /**
+     * @summary `nWDAFEventsNotification`.
+     * @description
+     *
+     * Includes a NwdafEventsSubscriptionNotification resource which provides
+     * information about the observed events. The
+     * NwdafEventsSubscriptionNotification is encoded according to TS 29.520
+     * [133] table 5.1.6.2.4-1. The SBIReference for this parameter shall be
+     * populated with
+     * 'TS29520_Nnwdaf_EventsSubscription.yaml#/components/schemas/NnwdafEventsSubscriptionNotification'
+     * as specified in TS 29.520 [133] clause A2. The
+     * NwdafEventsSubscriptionNotification resource includes the SubscriptionId
+     * which enables correlating the events subscription and events
+     * notification.
+     *
+     * 3GPP TS 33.128, clause 7.16.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    readonly nWDAFEventsNotification: SBIType;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        sUPI: SUPI,
+        nWDAFNotifiedEventList: NWDAFEvent[],
+        nWDAFEventsNotification: SBIType,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sUPI = sUPI;
+        this.nWDAFNotifiedEventList = nWDAFNotifiedEventList;
+        this.nWDAFEventsNotification = nWDAFEventsNotification;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a NWDAFEventsNotification
+     * @description
+     * 
+     * This takes an `object` and converts it to a `NWDAFEventsNotification`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `NWDAFEventsNotification`.
+     * @returns {NWDAFEventsNotification}
+     */
+    public static _from_object (_o: { [_K in keyof (NWDAFEventsNotification)]: (NWDAFEventsNotification)[_K] }): NWDAFEventsNotification {
+        return new NWDAFEventsNotification(_o.sUPI, _o.nWDAFNotifiedEventList, _o.nWDAFEventsNotification, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of NWDAFEventsNotification
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_NWDAFEventsNotification: $.ComponentSpec[] = [
+    new $.ComponentSpec("sUPI", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("nWDAFNotifiedEventList", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("nWDAFEventsNotification", false, $.hasTag(_TagClass.context, 3))
+];
+
+/**
+ * @summary The Trailing Root Component Types of NWDAFEventsNotification
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_NWDAFEventsNotification: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of NWDAFEventsNotification
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_NWDAFEventsNotification: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_NWDAFEventsNotification: $.ASN1Decoder<NWDAFEventsNotification> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) NWDAFEventsNotification
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_NWDAFEventsNotification (el: _Element): NWDAFEventsNotification {
+    if (!_cached_decoder_for_NWDAFEventsNotification) { _cached_decoder_for_NWDAFEventsNotification = function (el: _Element): NWDAFEventsNotification {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 3) {
+        throw new _ConstructionError("NWDAFEventsNotification contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "sUPI";
+    sequence[1].name = "nWDAFNotifiedEventList";
+    sequence[2].name = "nWDAFEventsNotification";
+    let sUPI!: SUPI;
+    let nWDAFNotifiedEventList!: NWDAFEvent[];
+    let nWDAFEventsNotification!: SBIType;
+    sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(sequence[0]);
+    nWDAFNotifiedEventList = $._decode_implicit<NWDAFEvent[]>(() => $._decodeSequenceOf<NWDAFEvent>(() => _decode_NWDAFEvent))(sequence[1]);
+    {
+        if (nWDAFNotifiedEventList.length < 1) {
+            throw new ASN1SizeError("NWDAFEventsNotification.nWDAFNotifiedEventList violates SIZE constraint");
+        }
+    }
+    nWDAFEventsNotification = $._decode_implicit<SBIType>(() => _decode_SBIType)(sequence[2]);
+    return new NWDAFEventsNotification(
+        sUPI,
+        nWDAFNotifiedEventList,
+        nWDAFEventsNotification,
+        sequence.slice(3),
+    );
+}; }
+    return _cached_decoder_for_NWDAFEventsNotification(el);
+}
+
+let _cached_encoder_for_NWDAFEventsNotification: $.ASN1Encoder<NWDAFEventsNotification> | null = null;
+
+/**
+ * @summary Encodes a(n) NWDAFEventsNotification into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The NWDAFEventsNotification, encoded as an ASN.1 Element.
+ */
+export
+function _encode_NWDAFEventsNotification (value: NWDAFEventsNotification, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_NWDAFEventsNotification) { _cached_encoder_for_NWDAFEventsNotification = function (value: NWDAFEventsNotification, elGetter: $.ASN1Encoder<NWDAFEventsNotification>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_SUPI, $.BER)(value.sUPI, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeSequenceOf<NWDAFEvent>(() => _encode_NWDAFEvent, $.BER), $.BER)(value.nWDAFNotifiedEventList, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => _encode_SBIType, $.BER)(value.nWDAFEventsNotification, $.BER);
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_NWDAFEventsNotification(value, elGetter);
+}
+
+
+/* eslint-enable */

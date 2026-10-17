@@ -13,10 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side {
-  sender = 0,
-  receiver = 1,
-}
+export const _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side = {
+  sender: 0,
+  receiver: 1,
+} as const;
+
+export type _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side =
+  (typeof _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side)[keyof typeof _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side];
 
 
 /**

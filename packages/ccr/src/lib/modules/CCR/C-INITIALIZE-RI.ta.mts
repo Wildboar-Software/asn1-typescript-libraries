@@ -59,67 +59,83 @@ import {
  *
  */
 export class C_INITIALIZE_RI {
+  /**
+   * @summary `version_number`.
+   * @description
+   *
+   * Bits this CCRPM offers; bit 0 is Version 1, bit 1 is Version 2
+   * (this specification). Multiple bits may be set. An
+   * implementation need not offer every version it can support on
+   * every C-INITIALIZE-RI. Default `{version2}`. The acceptor
+   * selects the highest mutually supported version and ignores
+   * unsupported bits. ITU-T Rec. X.852 (12/97) §7.1.4.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly version_number?: OPTIONAL<C_INITIALIZE_RI_version_number>;
+
+  /**
+   * @summary `ccr_requirements`.
+   * @description
+   *
+   * Functional units the requestor proposes. Mapped from the
+   * C-INITIALIZE request CCR Requirements parameter. The indication
+   * lists only units both proposed here and supported by the
+   * acceptor. Default `{static-commitment}`. ITU-T Rec. X.852
+   * (12/97) §7.1.4.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ccr_requirements?: OPTIONAL<Ccr_requirements>;
+
+  /**
+   * @summary `ready_collision_reservation`.
+   * @description
+   *
+   * Mapped from the C-INITIALIZE request Ready-Collision-Reservation
+   * parameter. Default `TRUE`. X.852 does not define the reservation
+   * semantics (see X.851). ITU-T Rec. X.852 (12/97) §7.1.4.3,
+   * Table 2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly ready_collision_reservation?: OPTIONAL<BOOLEAN>;
+
+  /**
+   * @summary Extensions that are not recognized.
+   * @public
+   * @readonly
+   */
+  public readonly _unrecognizedExtensionsList: _Element[];
+
+  /**
+   * @summary `user_data`.
+   * @description
+   *
+   * Mapped from C-INITIALIZE request User Data to the indication
+   * (X.852 §7.1.4.4).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly user_data?: OPTIONAL<User_data>;
+
   constructor(
-    /**
-     * @summary `version_number`.
-     * @description
-     *
-     * Bits this CCRPM offers; bit 0 is Version 1, bit 1 is Version 2
-     * (this specification). Multiple bits may be set. An
-     * implementation need not offer every version it can support on
-     * every C-INITIALIZE-RI. Default `{version2}`. The acceptor
-     * selects the highest mutually supported version and ignores
-     * unsupported bits. ITU-T Rec. X.852 (12/97) §7.1.4.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly version_number?: OPTIONAL<C_INITIALIZE_RI_version_number>,
-    /**
-     * @summary `ccr_requirements`.
-     * @description
-     *
-     * Functional units the requestor proposes. Mapped from the
-     * C-INITIALIZE request CCR Requirements parameter. The indication
-     * lists only units both proposed here and supported by the
-     * acceptor. Default `{static-commitment}`. ITU-T Rec. X.852
-     * (12/97) §7.1.4.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly ccr_requirements?: OPTIONAL<Ccr_requirements>,
-    /**
-     * @summary `ready_collision_reservation`.
-     * @description
-     *
-     * Mapped from the C-INITIALIZE request Ready-Collision-Reservation
-     * parameter. Default `TRUE`. X.852 does not define the reservation
-     * semantics (see X.851). ITU-T Rec. X.852 (12/97) §7.1.4.3,
-     * Table 2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly ready_collision_reservation?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary Extensions that are not recognized.
-     * @public
-     * @readonly
-     */
-    readonly _unrecognizedExtensionsList: _Element[] = [],
-    /**
-     * @summary `user_data`.
-     * @description
-     *
-     * Mapped from C-INITIALIZE request User Data to the indication
-     * (X.852 §7.1.4.4).
-     *
-     * @public
-     * @readonly
-     */
-    readonly user_data?: OPTIONAL<User_data>
-  ) {}
+    version_number?: OPTIONAL<C_INITIALIZE_RI_version_number>,
+    ccr_requirements?: OPTIONAL<Ccr_requirements>,
+    ready_collision_reservation?: OPTIONAL<BOOLEAN>,
+    _unrecognizedExtensionsList: _Element[] = [],
+    user_data?: OPTIONAL<User_data>
+  ) {
+    this.version_number = version_number;
+    this.ccr_requirements = ccr_requirements;
+    this.ready_collision_reservation = ready_collision_reservation;
+    this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    this.user_data = user_data;
+  }
 
   /**
    * @summary Restructures an object into a C_INITIALIZE_RI

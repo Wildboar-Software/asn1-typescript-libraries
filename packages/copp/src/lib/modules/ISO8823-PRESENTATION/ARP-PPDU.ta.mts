@@ -45,32 +45,39 @@ import {
  *
  */
 export class ARP_PPDU {
+    /**
+     * @summary `provider_reason`.
+     * @description
+     *
+     * Why the PPM aborted (X.226 §6.4.3.1). Distinct from CPR
+     * `Provider-reason` (connection refusal).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly provider_reason?: OPTIONAL<Abort_reason>;
+
+    /**
+     * @summary `event_identifier`.
+     * @description
+     *
+     * PPDU or session primitive that triggered the abort. Required when
+     * reason is unexpected PPDU, unexpected session primitive,
+     * unrecognized/unexpected PPDU parameter, or invalid parameter
+     * value (X.226 §6.4.3.1–6.4.3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly event_identifier?: OPTIONAL<Event_identifier>;
+
     constructor(
-        /**
-         * @summary `provider_reason`.
-         * @description
-         *
-         * Why the PPM aborted (X.226 §6.4.3.1). Distinct from CPR
-         * `Provider-reason` (connection refusal).
-         *
-         * @public
-         * @readonly
-         */
-        readonly provider_reason?: OPTIONAL<Abort_reason>,
-        /**
-         * @summary `event_identifier`.
-         * @description
-         *
-         * PPDU or session primitive that triggered the abort. Required when
-         * reason is unexpected PPDU, unexpected session primitive,
-         * unrecognized/unexpected PPDU parameter, or invalid parameter
-         * value (X.226 §6.4.3.1–6.4.3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly event_identifier?: OPTIONAL<Event_identifier>
-    ) {}
+        provider_reason?: OPTIONAL<Abort_reason>,
+        event_identifier?: OPTIONAL<Event_identifier>
+    ) {
+        this.provider_reason = provider_reason;
+        this.event_identifier = event_identifier;
+    }
 
     /**
      * @summary Restructures an object into a ARP_PPDU

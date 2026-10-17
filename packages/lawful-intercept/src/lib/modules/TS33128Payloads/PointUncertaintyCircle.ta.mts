@@ -1,0 +1,230 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
+// export { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../TS33128Payloads/GeographicalCoordinates.ta.mjs";
+import { Uncertainty, _decode_Uncertainty, _encode_Uncertainty } from "../TS33128Payloads/Uncertainty.ta.mjs";
+// export { Uncertainty, _decode_Uncertainty, _encode_Uncertainty } from "../TS33128Payloads/Uncertainty.ta.mjs";
+import { UncertaintySBI, _decode_UncertaintySBI, _encode_UncertaintySBI } from "../TS33128Payloads/UncertaintySBI.ta.mjs";
+// export { UncertaintySBI, _decode_UncertaintySBI, _encode_UncertaintySBI } from "../TS33128Payloads/UncertaintySBI.ta.mjs";
+
+
+/**
+ * @summary PointUncertaintyCircle
+ * @description
+ * 
+ * The PointUncertaintyCircle type is derived from the data present in the
+ * PointUncertaintyCircle type defined in TS 29.572 [24] clause 6.1.6.2.7.
+ *
+ * 3GPP TS 33.128, clause 7.3.3.2.13.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PointUncertaintyCircle ::= SEQUENCE
+ * {
+ *     geographicalCoordinates             [1] GeographicalCoordinates,
+ *     -- deprecatedUncertainty was deprecated in r18(18) version3(3)
+ *     -- and shall be set to 0. The uncertaintySBI parameter shall be used instead.
+ *     deprecatedUncertainty               [2] Uncertainty,
+ *     uncertaintySBI                      [3] UncertaintySBI OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class PointUncertaintyCircle {
+    /**
+     * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * Indicates the geographic point for the centre of the circle represented
+     * by its longitude and latitude.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.13.
+     *
+     * @public
+     * @readonly
+     */
+    readonly geographicalCoordinates: GeographicalCoordinates;
+    /**
+     * @summary `deprecatedUncertainty`.
+     * @description
+     *
+     * No longer used in present version of this specification and shall always
+     * be set to 0. The uncertaintySBI parameter shall be used instead.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.13.
+     *
+     * @public
+     * @readonly
+     */
+    readonly deprecatedUncertainty: Uncertainty;
+    /**
+     * @summary `uncertaintySBI`.
+     * @description
+     *
+     * Indicates the radius of the uncertainty circle. Expressed in meters.
+     * Shall be provided. This parameter is conditional only for backwards
+     * compatibility.
+     *
+     * 3GPP TS 33.128, clause 7.3.3.2.13.
+     *
+     * @public
+     * @readonly
+     */
+    readonly uncertaintySBI: OPTIONAL<UncertaintySBI>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        geographicalCoordinates: GeographicalCoordinates,
+        deprecatedUncertainty: Uncertainty,
+        uncertaintySBI: OPTIONAL<UncertaintySBI>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.geographicalCoordinates = geographicalCoordinates;
+        this.deprecatedUncertainty = deprecatedUncertainty;
+        this.uncertaintySBI = uncertaintySBI;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a PointUncertaintyCircle
+     * @description
+     * 
+     * This takes an `object` and converts it to a `PointUncertaintyCircle`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `PointUncertaintyCircle`.
+     * @returns {PointUncertaintyCircle}
+     */
+    public static _from_object (_o: { [_K in keyof (PointUncertaintyCircle)]: (PointUncertaintyCircle)[_K] }): PointUncertaintyCircle {
+        return new PointUncertaintyCircle(_o.geographicalCoordinates, _o.deprecatedUncertainty, _o.uncertaintySBI, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of PointUncertaintyCircle
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_PointUncertaintyCircle: $.ComponentSpec[] = [
+    new $.ComponentSpec("geographicalCoordinates", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("deprecatedUncertainty", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("uncertaintySBI", true, $.hasTag(_TagClass.context, 3))
+];
+
+/**
+ * @summary The Trailing Root Component Types of PointUncertaintyCircle
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_PointUncertaintyCircle: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of PointUncertaintyCircle
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_PointUncertaintyCircle: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_PointUncertaintyCircle: $.ASN1Decoder<PointUncertaintyCircle> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) PointUncertaintyCircle
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_PointUncertaintyCircle (el: _Element): PointUncertaintyCircle {
+    if (!_cached_decoder_for_PointUncertaintyCircle) { _cached_decoder_for_PointUncertaintyCircle = function (el: _Element): PointUncertaintyCircle {
+    let geographicalCoordinates!: GeographicalCoordinates;
+    let deprecatedUncertainty!: Uncertainty;
+    let uncertaintySBI: OPTIONAL<UncertaintySBI>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "geographicalCoordinates": (_el: _Element): void => { geographicalCoordinates = $._decode_implicit<GeographicalCoordinates>(() => _decode_GeographicalCoordinates)(_el); },
+        "deprecatedUncertainty": (_el: _Element): void => { deprecatedUncertainty = $._decode_implicit<Uncertainty>(() => _decode_Uncertainty)(_el); },
+        "uncertaintySBI": (_el: _Element): void => { uncertaintySBI = $._decode_implicit<UncertaintySBI>(() => _decode_UncertaintySBI)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_PointUncertaintyCircle,
+        _extension_additions_list_spec_for_PointUncertaintyCircle,
+        _root_component_type_list_2_spec_for_PointUncertaintyCircle,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new PointUncertaintyCircle(
+        geographicalCoordinates,
+        deprecatedUncertainty,
+        uncertaintySBI,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_PointUncertaintyCircle(el);
+}
+
+let _cached_encoder_for_PointUncertaintyCircle: $.ASN1Encoder<PointUncertaintyCircle> | null = null;
+
+/**
+ * @summary Encodes a(n) PointUncertaintyCircle into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The PointUncertaintyCircle, encoded as an ASN.1 Element.
+ */
+export
+function _encode_PointUncertaintyCircle (value: PointUncertaintyCircle, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_PointUncertaintyCircle) { _cached_encoder_for_PointUncertaintyCircle = function (value: PointUncertaintyCircle, elGetter: $.ASN1Encoder<PointUncertaintyCircle>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_GeographicalCoordinates, $.BER)(value.geographicalCoordinates, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Uncertainty, $.BER)(value.deprecatedUncertainty, $.BER);
+    if (value.uncertaintySBI !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_UncertaintySBI, $.BER)(value.uncertaintySBI, $.BER);
+    }
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_PointUncertaintyCircle(value, elGetter);
+}
+
+
+/* eslint-enable */

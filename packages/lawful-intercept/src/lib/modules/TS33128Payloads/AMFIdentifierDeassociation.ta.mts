@@ -1,0 +1,351 @@
+/* eslint-disable */
+import {
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+// export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { SUCI, _decode_SUCI, _encode_SUCI } from "../TS33128Payloads/SUCI.ta.mjs";
+// export { SUCI, _decode_SUCI, _encode_SUCI } from "../TS33128Payloads/SUCI.ta.mjs";
+import { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
+// export { PEI, _decode_PEI, _encode_PEI } from "../TS33128Payloads/PEI.ta.mjs";
+import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+// export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { FiveGGUTI, _decode_FiveGGUTI, _encode_FiveGGUTI } from "../TS33128Payloads/FiveGGUTI.ta.mjs";
+// export { FiveGGUTI, _decode_FiveGGUTI, _encode_FiveGGUTI } from "../TS33128Payloads/FiveGGUTI.ta.mjs";
+import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
+// export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
+import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
+// export { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
+
+
+/**
+ * @summary AMFIdentifierDeassociation
+ * @description
+ * 
+ * The IRI-POI present in the AMF generating an xIRI containing an
+ * AMFIdentifierAssociation record shall set the Payload Direction field in the
+ * PDU header to not applicable (Direction Value 5, see ETSI TS 103 221-2 [8]
+ * clause 5.2.6).
+ *
+ * In the case where the IRI-POI present in the AMF detects that a REGISTRATION
+ * ACCEPT message or a CONFIGURATION UPDATE (5G-GUTI) message as defined in TS
+ * 24.501 [13] has been sent by the AMF towards a target UE, the IRI-POI present
+ * at the AMF shall immediately generate an AMFIdentifierAssociation xIRI. This
+ * xIRI shall be generated regardless of whether the REGISTRATION ACCEPT or
+ * CONFIGURATION UPDATE (5G-GUTI) procedure is subsequently successfully
+ * completed or not.
+ *
+ * The IRI-POI present in the AMF shall generate an xIRI containing an
+ * AMFIdentifierDeassociation record when the IRI-POI present in the AMF detects
+ * an identifier deassociation without a new association within the same UE
+ * context inside the same AMF for a UE matching one of the target identifiers
+ * provided via LI_X1. Generation of this record is subject to this record type
+ * being enabled for a specific target (see clause 6.2.2.2.1).
+ *
+ * NOTE: SUPI shall always be provided, in addition to the warrant target
+ * identifier if different to SUPI. Other identifiers shall be provided if
+ * available.
+ *
+ * 3GPP TS 33.128, clause 6.2.2.2.7.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AMFIdentifierDeassociation ::= SEQUENCE
+ * {
+ *     sUPI                       [1] SUPI,
+ *     sUCI                       [2] SUCI OPTIONAL,
+ *     pEI                        [3] PEI OPTIONAL,
+ *     gPSI                       [4] GPSI OPTIONAL,
+ *     gUTI                       [5] FiveGGUTI,
+ *     location                   [6] Location OPTIONAL,
+ *     additionalUserIdentifiers  [7] UserIdentifiers OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class AMFIdentifierDeassociation {
+    /**
+     * @summary `sUPI`.
+     * @description
+     *
+     * SUPI associated with the procedure (see NOTE). NOTE: SUPI shall always be
+     * provided, in addition to the warrant target identifier if different to
+     * SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly sUPI: SUPI;
+    /**
+     * @summary `sUCI`.
+     * @description
+     *
+     * SUCI used in the procedure, if applicable and if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly sUCI: OPTIONAL<SUCI>;
+    /**
+     * @summary `pEI`.
+     * @description
+     *
+     * PEI used in the procedure, if available (see NOTE). NOTE: SUPI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly pEI: OPTIONAL<PEI>;
+    /**
+     * @summary `gPSI`.
+     * @description
+     *
+     * GPSI used in the procedure, if available (see NOTE). NOTE: SUPI shall
+     * always be provided, in addition to the warrant target identifier if
+     * different to SUPI. Other identifiers shall be provided if available.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly gPSI: OPTIONAL<GPSI>;
+    /**
+     * @summary `gUTI`.
+     * @description
+     *
+     * 5G-GUTI used in the procedure, see TS 24.501 [13] clause 9.11.3.4.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly gUTI: FiveGGUTI;
+    /**
+     * @summary `location`.
+     * @description
+     *
+     * Location information available when identifier deassociation occurs, sent
+     * only if it is the current location. Shall be encoded using the
+     * Location.locationInfo.userLocation parameter (see attachment. If
+     * available, other parameters reportable via Location shall be included.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly location: OPTIONAL<Location>;
+    /**
+     * @summary `additionalUserIdentifiers`.
+     * @description
+     *
+     * Provides additional user identifiers known at the AMF or stored in AMF
+     * context, e.g. additional GPSI.
+     *
+     * 3GPP TS 33.128, clause 6.2.2.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    readonly additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        sUPI: SUPI,
+        sUCI: OPTIONAL<SUCI>,
+        pEI: OPTIONAL<PEI>,
+        gPSI: OPTIONAL<GPSI>,
+        gUTI: FiveGGUTI,
+        location: OPTIONAL<Location>,
+        additionalUserIdentifiers: OPTIONAL<UserIdentifiers>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sUPI = sUPI;
+        this.sUCI = sUCI;
+        this.pEI = pEI;
+        this.gPSI = gPSI;
+        this.gUTI = gUTI;
+        this.location = location;
+        this.additionalUserIdentifiers = additionalUserIdentifiers;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a AMFIdentifierDeassociation
+     * @description
+     * 
+     * This takes an `object` and converts it to a `AMFIdentifierDeassociation`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `AMFIdentifierDeassociation`.
+     * @returns {AMFIdentifierDeassociation}
+     */
+    public static _from_object (_o: { [_K in keyof (AMFIdentifierDeassociation)]: (AMFIdentifierDeassociation)[_K] }): AMFIdentifierDeassociation {
+        return new AMFIdentifierDeassociation(_o.sUPI, _o.sUCI, _o.pEI, _o.gPSI, _o.gUTI, _o.location, _o.additionalUserIdentifiers, _o._unrecognizedExtensionsList);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of AMFIdentifierDeassociation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_AMFIdentifierDeassociation: $.ComponentSpec[] = [
+    new $.ComponentSpec("sUPI", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("sUCI", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("pEI", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("gPSI", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("gUTI", false, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("location", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("additionalUserIdentifiers", true, $.hasTag(_TagClass.context, 7))
+];
+
+/**
+ * @summary The Trailing Root Component Types of AMFIdentifierDeassociation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_AMFIdentifierDeassociation: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of AMFIdentifierDeassociation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_AMFIdentifierDeassociation: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_AMFIdentifierDeassociation: $.ASN1Decoder<AMFIdentifierDeassociation> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) AMFIdentifierDeassociation
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_AMFIdentifierDeassociation (el: _Element): AMFIdentifierDeassociation {
+    if (!_cached_decoder_for_AMFIdentifierDeassociation) { _cached_decoder_for_AMFIdentifierDeassociation = function (el: _Element): AMFIdentifierDeassociation {
+    let sUPI!: SUPI;
+    let sUCI: OPTIONAL<SUCI>;
+    let pEI: OPTIONAL<PEI>;
+    let gPSI: OPTIONAL<GPSI>;
+    let gUTI!: FiveGGUTI;
+    let location: OPTIONAL<Location>;
+    let additionalUserIdentifiers: OPTIONAL<UserIdentifiers>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "sUPI": (_el: _Element): void => { sUPI = $._decode_explicit<SUPI>(() => _decode_SUPI)(_el); },
+        "sUCI": (_el: _Element): void => { sUCI = $._decode_implicit<SUCI>(() => _decode_SUCI)(_el); },
+        "pEI": (_el: _Element): void => { pEI = $._decode_explicit<PEI>(() => _decode_PEI)(_el); },
+        "gPSI": (_el: _Element): void => { gPSI = $._decode_explicit<GPSI>(() => _decode_GPSI)(_el); },
+        "gUTI": (_el: _Element): void => { gUTI = $._decode_implicit<FiveGGUTI>(() => _decode_FiveGGUTI)(_el); },
+        "location": (_el: _Element): void => { location = $._decode_implicit<Location>(() => _decode_Location)(_el); },
+        "additionalUserIdentifiers": (_el: _Element): void => { additionalUserIdentifiers = $._decode_implicit<UserIdentifiers>(() => _decode_UserIdentifiers)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_AMFIdentifierDeassociation,
+        _extension_additions_list_spec_for_AMFIdentifierDeassociation,
+        _root_component_type_list_2_spec_for_AMFIdentifierDeassociation,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new AMFIdentifierDeassociation(
+        sUPI,
+        sUCI,
+        pEI,
+        gPSI,
+        gUTI,
+        location,
+        additionalUserIdentifiers,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_AMFIdentifierDeassociation(el);
+}
+
+let _cached_encoder_for_AMFIdentifierDeassociation: $.ASN1Encoder<AMFIdentifierDeassociation> | null = null;
+
+/**
+ * @summary Encodes a(n) AMFIdentifierDeassociation into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The AMFIdentifierDeassociation, encoded as an ASN.1 Element.
+ */
+export
+function _encode_AMFIdentifierDeassociation (value: AMFIdentifierDeassociation, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_AMFIdentifierDeassociation) { _cached_encoder_for_AMFIdentifierDeassociation = function (value: AMFIdentifierDeassociation, elGetter: $.ASN1Encoder<AMFIdentifierDeassociation>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_SUPI, $.BER)(value.sUPI, $.BER);
+    if (value.sUCI !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_SUCI, $.BER)(value.sUCI, $.BER);
+    }
+    if (value.pEI !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 3, () => _encode_PEI, $.BER)(value.pEI, $.BER);
+    }
+    if (value.gPSI !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 4, () => _encode_GPSI, $.BER)(value.gPSI, $.BER);
+    }
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 5, () => _encode_FiveGGUTI, $.BER)(value.gUTI, $.BER);
+    if (value.location !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => _encode_Location, $.BER)(value.location, $.BER);
+    }
+    if (value.additionalUserIdentifiers !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 7, () => _encode_UserIdentifiers, $.BER)(value.additionalUserIdentifiers, $.BER);
+    }
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_AMFIdentifierDeassociation(value, elGetter);
+}
+
+
+/* eslint-enable */

@@ -1,0 +1,160 @@
+/* eslint-disable */
+import {
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { L2TruncatedDatagram, _decode_L2TruncatedDatagram, _encode_L2TruncatedDatagram } from "../L2AccessPDU/L2TruncatedDatagram.ta.mjs";
+// export { L2TruncatedDatagram, _decode_L2TruncatedDatagram, _encode_L2TruncatedDatagram } from "../L2AccessPDU/L2TruncatedDatagram.ta.mjs";
+
+
+/**
+ * @summary L2CC_l2CCContents
+ * @description
+ *
+ * One intercepted layer 2 datagram. The octet-string alternatives are a
+ * bit-exact copy (clause 4.2.2, clause 7.2). The `truncated*` alternatives
+ * are used only when the LEA has asked for truncation of this interception;
+ * clause 7.3 then requires every HI3 datagram to be truncated.
+ *
+ * An unrecognized extension alternative is returned as the raw element.
+ *
+ * | Alternative | Contents |
+ * | --- | --- |
+ * | `l2TP` | L2TP datagram. IETF RFC 2661. Clause 5.2.1 gives L2TP as the example tunnel between the user and the IAP. |
+ * | `l2F` | L2F datagram. IETF RFC 2341. Annex A.1.0 lists L2F as a tunnel from the access provider to the IAP. |
+ * | `pPTP` | PPTP datagram. IETF RFC 2637. Annex A.1.0 lists PPTP the same way. |
+ * | `pPP` | PPP datagram. IETF RFC 1661. Clause 5.2.3 describes PPP session closure with LCP Terminate (IETF RFC 1570). |
+ * | `ethernet` | Ethernet datagram. The specification says only that the Ethernet protocol is used. |
+ * | `l2ATM2684` | IETF RFC 2684, method "LLC Encapsulation for Bridged Protocols". Clause 2.1 marks reference [16] void. |
+ * | `l2FR2427` | IETF RFC 2427, "Multiprotocol Interconnect over Frame Relay". Clause 2.1 marks reference [18] void. |
+ * | `truncatedL2TP` | Truncated `l2TP`. |
+ * | `truncatedL2F` | Truncated `l2F`. |
+ * | `truncatedPPTP` | Truncated `pPTP`. |
+ * | `truncatedPPP` | Truncated `pPP`. |
+ * | `truncatedEthernet` | Truncated `ethernet`. |
+ * | `truncatedL2ATM2684` | Truncated `l2ATM2684`. |
+ * | `truncatedL2FR2427` | Truncated `l2FR2427`. |
+ *
+ * The truncated alternatives are extension additions, as are `l2ATM2684`
+ * and `l2FR2427`. Each truncated value is an `L2TruncatedDatagram`.
+ *
+ * ETSI TS 102 232-4 V3.8.1 (2025-08), clause 5.2, clause 7, annex A.1.0.
+ * https://www.etsi.org/deliver/etsi_ts/102200_102299/10223204/03.08.01_60/ts_10223204v030801p.pdf
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * L2CC-l2CCContents ::= CHOICE {
+ *     l2TP                    [1] OCTET STRING,
+ *     -- The L2TP protocol is used
+ *     l2F                     [2] OCTET STRING,
+ *     -- The L2F protocol is used
+ *     pPTP                    [3] OCTET STRING,
+ *     -- The PPTP protocol is used
+ *     pPP                     [4] OCTET STRING,
+ *     -- The PPP protocol is used
+ *     ethernet                [5] OCTET STRING,
+ *     -- The ethernet protocol is used
+ *     ...,
+ *     l2ATM2684               [6] OCTET STRING,
+ *     -- The protocol RFC 2684, method "LLC Encapsulation for Bridged Protocols" [16] is used
+ *     l2FR2427                [7] OCTET STRING,
+ *     -- The protocol RFC 2427 "Multiprotocol Interconnect over Frame Relay" [18] is used
+ *     truncatedL2TP           [8] L2TruncatedDatagram,
+ *     -- truncated l2TP[1]
+ *     truncatedL2F            [9] L2TruncatedDatagram,
+ *     -- truncated l2F[2]
+ *     truncatedPPTP           [10] L2TruncatedDatagram,
+ *     -- truncated pPTP[3]
+ *     truncatedPPP            [11] L2TruncatedDatagram,
+ *     -- truncated pPP[4]
+ *     truncatedEthernet       [12] L2TruncatedDatagram,
+ *     -- truncated ethernet[5]
+ *     truncatedL2ATM2684      [13] L2TruncatedDatagram,
+ *     -- truncated l2ATM2684[6]
+ *     truncatedL2FR2427       [14] L2TruncatedDatagram
+ *     -- truncated l2FR2427[7]
+ * }
+ * ```
+ */
+export
+type L2CC_l2CCContents =
+    { l2TP: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    | { l2F: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    | { pPTP: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    | { pPP: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    | { ethernet: OCTET_STRING } /* CHOICE_ALT_ROOT */
+    | { l2ATM2684: OCTET_STRING } /* CHOICE_ALT_EXT */
+    | { l2FR2427: OCTET_STRING } /* CHOICE_ALT_EXT */
+    | { truncatedL2TP: L2TruncatedDatagram } /* CHOICE_ALT_EXT */
+    | { truncatedL2F: L2TruncatedDatagram } /* CHOICE_ALT_EXT */
+    | { truncatedPPTP: L2TruncatedDatagram } /* CHOICE_ALT_EXT */
+    | { truncatedPPP: L2TruncatedDatagram } /* CHOICE_ALT_EXT */
+    | { truncatedEthernet: L2TruncatedDatagram } /* CHOICE_ALT_EXT */
+    | { truncatedL2ATM2684: L2TruncatedDatagram } /* CHOICE_ALT_EXT */
+    | { truncatedL2FR2427: L2TruncatedDatagram } /* CHOICE_ALT_EXT */
+    | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
+
+let _cached_decoder_for_L2CC_l2CCContents: $.ASN1Decoder<L2CC_l2CCContents> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) L2CC_l2CCContents
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_L2CC_l2CCContents (el: _Element): L2CC_l2CCContents {
+    if (!_cached_decoder_for_L2CC_l2CCContents) { _cached_decoder_for_L2CC_l2CCContents = $._decode_extensible_choice<L2CC_l2CCContents>({
+    "CONTEXT 1": [ "l2TP", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 2": [ "l2F", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 3": [ "pPTP", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 4": [ "pPP", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 5": [ "ethernet", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 6": [ "l2ATM2684", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 7": [ "l2FR2427", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
+    "CONTEXT 8": [ "truncatedL2TP", $._decode_implicit<L2TruncatedDatagram>(() => _decode_L2TruncatedDatagram) ],
+    "CONTEXT 9": [ "truncatedL2F", $._decode_implicit<L2TruncatedDatagram>(() => _decode_L2TruncatedDatagram) ],
+    "CONTEXT 10": [ "truncatedPPTP", $._decode_implicit<L2TruncatedDatagram>(() => _decode_L2TruncatedDatagram) ],
+    "CONTEXT 11": [ "truncatedPPP", $._decode_implicit<L2TruncatedDatagram>(() => _decode_L2TruncatedDatagram) ],
+    "CONTEXT 12": [ "truncatedEthernet", $._decode_implicit<L2TruncatedDatagram>(() => _decode_L2TruncatedDatagram) ],
+    "CONTEXT 13": [ "truncatedL2ATM2684", $._decode_implicit<L2TruncatedDatagram>(() => _decode_L2TruncatedDatagram) ],
+    "CONTEXT 14": [ "truncatedL2FR2427", $._decode_implicit<L2TruncatedDatagram>(() => _decode_L2TruncatedDatagram) ]
+}); }
+    return _cached_decoder_for_L2CC_l2CCContents(el);
+}
+
+let _cached_encoder_for_L2CC_l2CCContents: $.ASN1Encoder<L2CC_l2CCContents> | null = null;
+
+/**
+ * @summary Encodes a(n) L2CC_l2CCContents into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The L2CC_l2CCContents, encoded as an ASN.1 Element.
+ */
+export
+function _encode_L2CC_l2CCContents (value: L2CC_l2CCContents, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_L2CC_l2CCContents) { _cached_encoder_for_L2CC_l2CCContents = $._encode_choice<L2CC_l2CCContents>({
+    "l2TP": $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER),
+    "l2F": $._encode_implicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER),
+    "pPTP": $._encode_implicit(_TagClass.context, 3, () => $._encodeOctetString, $.BER),
+    "pPP": $._encode_implicit(_TagClass.context, 4, () => $._encodeOctetString, $.BER),
+    "ethernet": $._encode_implicit(_TagClass.context, 5, () => $._encodeOctetString, $.BER),
+    "l2ATM2684": $._encode_implicit(_TagClass.context, 6, () => $._encodeOctetString, $.BER),
+    "l2FR2427": $._encode_implicit(_TagClass.context, 7, () => $._encodeOctetString, $.BER),
+    "truncatedL2TP": $._encode_implicit(_TagClass.context, 8, () => _encode_L2TruncatedDatagram, $.BER),
+    "truncatedL2F": $._encode_implicit(_TagClass.context, 9, () => _encode_L2TruncatedDatagram, $.BER),
+    "truncatedPPTP": $._encode_implicit(_TagClass.context, 10, () => _encode_L2TruncatedDatagram, $.BER),
+    "truncatedPPP": $._encode_implicit(_TagClass.context, 11, () => _encode_L2TruncatedDatagram, $.BER),
+    "truncatedEthernet": $._encode_implicit(_TagClass.context, 12, () => _encode_L2TruncatedDatagram, $.BER),
+    "truncatedL2ATM2684": $._encode_implicit(_TagClass.context, 13, () => _encode_L2TruncatedDatagram, $.BER),
+    "truncatedL2FR2427": $._encode_implicit(_TagClass.context, 14, () => _encode_L2TruncatedDatagram, $.BER),
+}, $.BER); }
+    return _cached_encoder_for_L2CC_l2CCContents(value, elGetter);
+}
+
+
+/* eslint-enable */

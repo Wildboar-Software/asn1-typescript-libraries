@@ -1,0 +1,673 @@
+/* eslint-disable */
+import {
+    BOOLEAN,
+    INTEGER,
+    OPTIONAL,
+    UTF8String,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { MMState, _decode_MMState, _encode_MMState, _enum_for_MMState } from "../TS33128Payloads/MMState.ta.mjs";
+// export { MMState, _enum_for_MMState, MMState_draft /* IMPORTED_LONG_ENUMERATION_ITEM */, draft /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_sent /* IMPORTED_LONG_ENUMERATION_ITEM */, sent /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_new /* IMPORTED_LONG_ENUMERATION_ITEM */, new_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_retrieved /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieved /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_forwarded /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMState, _encode_MMState } from "../TS33128Payloads/MMState.ta.mjs";
+import { MMFlags, _decode_MMFlags, _encode_MMFlags } from "../TS33128Payloads/MMFlags.ta.mjs";
+// export { MMFlags, _decode_MMFlags, _encode_MMFlags } from "../TS33128Payloads/MMFlags.ta.mjs";
+import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+// export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { MMSParty, _decode_MMSParty, _encode_MMSParty } from "../TS33128Payloads/MMSParty.ta.mjs";
+// export { MMSParty, _decode_MMSParty, _encode_MMSParty } from "../TS33128Payloads/MMSParty.ta.mjs";
+import { MMSMessageClass, _decode_MMSMessageClass, _encode_MMSMessageClass, _enum_for_MMSMessageClass } from "../TS33128Payloads/MMSMessageClass.ta.mjs";
+// export { MMSMessageClass, _enum_for_MMSMessageClass, MMSMessageClass_personal /* IMPORTED_LONG_ENUMERATION_ITEM */, personal /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSMessageClass_advertisement /* IMPORTED_LONG_ENUMERATION_ITEM */, advertisement /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSMessageClass_informational /* IMPORTED_LONG_ENUMERATION_ITEM */, informational /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSMessageClass_auto /* IMPORTED_LONG_ENUMERATION_ITEM */, auto /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSMessageClass, _encode_MMSMessageClass } from "../TS33128Payloads/MMSMessageClass.ta.mjs";
+import { MMSSubject, _decode_MMSSubject, _encode_MMSSubject } from "../TS33128Payloads/MMSSubject.ta.mjs";
+// export { MMSSubject, _decode_MMSSubject, _encode_MMSSubject } from "../TS33128Payloads/MMSSubject.ta.mjs";
+import { MMSPriority, _decode_MMSPriority, _encode_MMSPriority, _enum_for_MMSPriority } from "../TS33128Payloads/MMSPriority.ta.mjs";
+// export { MMSPriority, _enum_for_MMSPriority, MMSPriority_low /* IMPORTED_LONG_ENUMERATION_ITEM */, low /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSPriority_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSPriority, _encode_MMSPriority } from "../TS33128Payloads/MMSPriority.ta.mjs";
+import { MMSReplyCharging, _decode_MMSReplyCharging, _encode_MMSReplyCharging, _enum_for_MMSReplyCharging } from "../TS33128Payloads/MMSReplyCharging.ta.mjs";
+// export { MMSReplyCharging, _enum_for_MMSReplyCharging, MMSReplyCharging_requested /* IMPORTED_LONG_ENUMERATION_ITEM */, requested /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSReplyCharging_requestedTextOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, requestedTextOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSReplyCharging_accepted /* IMPORTED_LONG_ENUMERATION_ITEM */, accepted /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSReplyCharging_acceptedTextOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, acceptedTextOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSReplyCharging, _encode_MMSReplyCharging } from "../TS33128Payloads/MMSReplyCharging.ta.mjs";
+import { MMSPreviouslySentBy, _decode_MMSPreviouslySentBy, _encode_MMSPreviouslySentBy } from "../TS33128Payloads/MMSPreviouslySentBy.ta.mjs";
+// export { MMSPreviouslySentBy, _decode_MMSPreviouslySentBy, _encode_MMSPreviouslySentBy } from "../TS33128Payloads/MMSPreviouslySentBy.ta.mjs";
+
+
+/**
+ * @summary MMBoxDescription
+ * @description
+ * 
+ * The MMBoxDescription used in MMSMBoxViewResponse and MMSMBoxUpload records is
+ * defined in table 7.4.3.20-1.
+ *
+ * 3GPP TS 33.128, clause 7.4.3.20.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MMBoxDescription ::= SEQUENCE
+ * {
+ *     contentLocation          [1]  UTF8String OPTIONAL,
+ *     messageID                [2]  UTF8String OPTIONAL,
+ *     state                    [3]  MMState OPTIONAL,
+ *     flags                    [4]  SEQUENCE OF MMFlags OPTIONAL,
+ *     dateTime                 [5]  Timestamp OPTIONAL,
+ *     originatingMMSParty      [6]  MMSParty OPTIONAL,
+ *     terminatingMMSParty      [7]  SEQUENCE OF MMSParty OPTIONAL,
+ *     cCRecipients             [8]  SEQUENCE OF MMSParty OPTIONAL,
+ *     bCCRecipients            [9]  SEQUENCE OF MMSParty OPTIONAL,
+ *     messageClass             [10] MMSMessageClass OPTIONAL,
+ *     subject                  [11] MMSSubject OPTIONAL,
+ *     priority                 [12] MMSPriority OPTIONAL,
+ *     deliveryTime             [13] Timestamp OPTIONAL,
+ *     readReport               [14] BOOLEAN OPTIONAL,
+ *     messageSize              [15] INTEGER OPTIONAL,
+ *     replyCharging            [16] MMSReplyCharging OPTIONAL,
+ *     previouslySentBy         [17] MMSPreviouslySentBy OPTIONAL,
+ *     previouslySentByDateTime [18] Timestamp OPTIONAL,
+ *     contentType              [19] UTF8String OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class MMBoxDescription {
+    /**
+     * @summary `contentLocation`.
+     * @description
+     *
+     * The content-location-value field defines the URL for the MMS Proxy-relay
+     * location of the content to be retrieved. As defined in OMA-TS-MMS_ENC
+     * [39] clause 7.3.10. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly contentLocation: OPTIONAL<UTF8String>;
+    /**
+     * @summary `messageID`.
+     * @description
+     *
+     * An ID assigned by the MMS Proxy-Relay to uniquely identify an MM.
+     * Included unconditionally for the MMS View Confirm report and is included
+     * for the MMS Upload report if a Message ID was previously assigned to the
+     * MM. In this latter case, if a Message ID was not previously assigned,
+     * this parameter is excluded. As defined in OMA-TS-MMS_ENC [39] clause
+     * 7.3.29. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly messageID: OPTIONAL<UTF8String>;
+    /**
+     * @summary `state`.
+     * @description
+     *
+     * Identifies the value of the MM State associated with a MM to be stored or
+     * stored MM. Include for the MMS View Confirm. Include for the MMS View
+     * Request if provided by the target. As defined in OMA-TS-MMS_ENC [39]
+     * clause 7.3.33. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly state: OPTIONAL<MMState>;
+    /**
+     * @summary `flags`.
+     * @description
+     *
+     * Identifies a keyword to add or remove from the list of keywords
+     * associated with a stored MM. This parameter may convey all the keywords
+     * associated with the MM. Include if at least one keyword is associated
+     * with the MM. If no keywords are associated with the MM, then this
+     * parameter may be excluded. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly flags: OPTIONAL<MMFlags[]>;
+    /**
+     * @summary `dateTime`.
+     * @description
+     *
+     * Date and Time when the MM request was detected. Include if sent by the
+     * MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly dateTime: OPTIONAL<Timestamp>;
+    /**
+     * @summary `originatingMMSParty`.
+     * @description
+     *
+     * ID(s) of the originating party in one or more of the formats described in
+     * clause 7.4.2.1. When address translation occurs (such as the case of a
+     * token sent by the client and replaced with a proper address by the MMS
+     * Proxy-Relay), both the pre and post translated addresses (with
+     * appropriate correlation) are included. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly originatingMMSParty: OPTIONAL<MMSParty>;
+    /**
+     * @summary `terminatingMMSParty`.
+     * @description
+     *
+     * ID(s) of the terminating party in one or more of the formats described in
+     * clause 7.4.2.1. When address translation occurs (such as the case of a
+     * token sent by the client and replaced with a proper address by the MMS
+     * Proxy-Relay), both the pre and post translated addresses (with
+     * appropriate correlation) are included. I Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly terminatingMMSParty: OPTIONAL<MMSParty[]>;
+    /**
+     * @summary `cCRecipients`.
+     * @description
+     *
+     * Address of a recipient; the "CC" field may include addresses of multiple
+     * recipients. When address translation occurs, both the pre and post
+     * translated addresses (with appropriate correlation) are included. This
+     * parameter is included if the corresponding MM includes a "CC" field.
+     * Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly cCRecipients: OPTIONAL<MMSParty[]>;
+    /**
+     * @summary `bCCRecipients`.
+     * @description
+     *
+     * Address of a recipient; the "BCC" field may include addresses of multiple
+     * recipients. When address translation occurs, both the pre and post
+     * translated addresses (with appropriate correlation) are included. This
+     * parameter is included if the corresponding MM includes a "BCC" field.
+     * Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly bCCRecipients: OPTIONAL<MMSParty[]>;
+    /**
+     * @summary `messageClass`.
+     * @description
+     *
+     * Class of the MM. For example, a value of "auto" is automatically
+     * generated by the UE. If the field is not present, the class should be
+     * interpreted as "personal". Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly messageClass: OPTIONAL<MMSMessageClass>;
+    /**
+     * @summary `subject`.
+     * @description
+     *
+     * The subject of the MM. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly subject: OPTIONAL<MMSSubject>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Priority of the MM assigned by the originator MMS Client. Reported if
+     * sent by the target. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly priority: OPTIONAL<MMSPriority>;
+    /**
+     * @summary `deliveryTime`.
+     * @description
+     *
+     * Date and Time of delivery. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly deliveryTime: OPTIONAL<Timestamp>;
+    /**
+     * @summary `readReport`.
+     * @description
+     *
+     * Specifies whether the originator MMS UE requests a read report from each
+     * recipient. The values given in OMA-TS-MMS_ENC [39] clause 7.3.37. shall
+     * be encoded as follows: "Yes"" = True, "No"" = False. Include if sent by
+     * the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly readReport: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `messageSize`.
+     * @description
+     *
+     * Specifies the size of the MM that was viewed or uploaded. Specified in
+     * bytes. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly messageSize: OPTIONAL<INTEGER>;
+    /**
+     * @summary `replyCharging`.
+     * @description
+     *
+     * If this field is present its value is set to "accepted" or "accepted text
+     * only" and the MMS-version-value of the M-Notification.ind PDU is higher
+     * than 1.0, this header field will indicate that a reply to this particular
+     * MM is free of charge for the recipient. If the Reply-Charging service is
+     * offered and the request for reply-charging has been accepted by the MMS
+     * service provider the value of this header field SHALL be set to
+     * "accepted" or "accepted text only". See OMA-TS-MMS_ENC [39] clause
+     * 7.3.43. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly replyCharging: OPTIONAL<MMSReplyCharging>;
+    /**
+     * @summary `previouslySentBy`.
+     * @description
+     *
+     * Address of the MMS Client that forwarded or previously sent the message.
+     * along with a sequence number and timestamp. A higher sequence number
+     * indicates a forwarding event at a later point in time. The sequence
+     * number indicates the correspondence to the MMS Client's address in the
+     * "X-Mms-Previously- Sent-By" header field with the same sequence number.
+     * This header field MAY appear multiple times. Include if sent by the MMS
+     * Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly previouslySentBy: OPTIONAL<MMSPreviouslySentBy>;
+    /**
+     * @summary `previouslySentByDateTime`.
+     * @description
+     *
+     * Date/Time MM was previously sent. This header field MAY appear multiple
+     * times. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly previouslySentByDateTime: OPTIONAL<Timestamp>;
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * The content type of the MM. Include if sent by the MMS Proxy-Relay.
+     *
+     * 3GPP TS 33.128, clause 7.4.3.20.
+     *
+     * @public
+     * @readonly
+     */
+    readonly contentType: OPTIONAL<UTF8String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        contentLocation: OPTIONAL<UTF8String>,
+        messageID: OPTIONAL<UTF8String>,
+        state: OPTIONAL<MMState>,
+        flags: OPTIONAL<MMFlags[]>,
+        dateTime: OPTIONAL<Timestamp>,
+        originatingMMSParty: OPTIONAL<MMSParty>,
+        terminatingMMSParty: OPTIONAL<MMSParty[]>,
+        cCRecipients: OPTIONAL<MMSParty[]>,
+        bCCRecipients: OPTIONAL<MMSParty[]>,
+        messageClass: OPTIONAL<MMSMessageClass>,
+        subject: OPTIONAL<MMSSubject>,
+        priority: OPTIONAL<MMSPriority>,
+        deliveryTime: OPTIONAL<Timestamp>,
+        readReport: OPTIONAL<BOOLEAN>,
+        messageSize: OPTIONAL<INTEGER>,
+        replyCharging: OPTIONAL<MMSReplyCharging>,
+        previouslySentBy: OPTIONAL<MMSPreviouslySentBy>,
+        previouslySentByDateTime: OPTIONAL<Timestamp>,
+        contentType: OPTIONAL<UTF8String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contentLocation = contentLocation;
+        this.messageID = messageID;
+        this.state = state;
+        this.flags = flags;
+        this.dateTime = dateTime;
+        this.originatingMMSParty = originatingMMSParty;
+        this.terminatingMMSParty = terminatingMMSParty;
+        this.cCRecipients = cCRecipients;
+        this.bCCRecipients = bCCRecipients;
+        this.messageClass = messageClass;
+        this.subject = subject;
+        this.priority = priority;
+        this.deliveryTime = deliveryTime;
+        this.readReport = readReport;
+        this.messageSize = messageSize;
+        this.replyCharging = replyCharging;
+        this.previouslySentBy = previouslySentBy;
+        this.previouslySentByDateTime = previouslySentByDateTime;
+        this.contentType = contentType;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a MMBoxDescription
+     * @description
+     * 
+     * This takes an `object` and converts it to a `MMBoxDescription`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `MMBoxDescription`.
+     * @returns {MMBoxDescription}
+     */
+    public static _from_object (_o: { [_K in keyof (MMBoxDescription)]: (MMBoxDescription)[_K] }): MMBoxDescription {
+        return new MMBoxDescription(_o.contentLocation, _o.messageID, _o.state, _o.flags, _o.dateTime, _o.originatingMMSParty, _o.terminatingMMSParty, _o.cCRecipients, _o.bCCRecipients, _o.messageClass, _o.subject, _o.priority, _o.deliveryTime, _o.readReport, _o.messageSize, _o.replyCharging, _o.previouslySentBy, _o.previouslySentByDateTime, _o.contentType, _o._unrecognizedExtensionsList);
+    }
+
+        /**
+         * @summary The enum used as the type of the component `state`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_state = _enum_for_MMState;        /**
+         * @summary The enum used as the type of the component `messageClass`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_messageClass = _enum_for_MMSMessageClass;        /**
+         * @summary The enum used as the type of the component `priority`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_priority = _enum_for_MMSPriority;        /**
+         * @summary The enum used as the type of the component `replyCharging`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_replyCharging = _enum_for_MMSReplyCharging;
+}
+
+/**
+ * @summary The Leading Root Component Types of MMBoxDescription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_MMBoxDescription: $.ComponentSpec[] = [
+    new $.ComponentSpec("contentLocation", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("messageID", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("state", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("flags", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("dateTime", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("originatingMMSParty", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("terminatingMMSParty", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("cCRecipients", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("bCCRecipients", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("messageClass", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("subject", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("priority", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("deliveryTime", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("readReport", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("messageSize", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("replyCharging", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("previouslySentBy", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("previouslySentByDateTime", true, $.hasTag(_TagClass.context, 18)),
+    new $.ComponentSpec("contentType", true, $.hasTag(_TagClass.context, 19))
+];
+
+/**
+ * @summary The Trailing Root Component Types of MMBoxDescription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_MMBoxDescription: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of MMBoxDescription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_MMBoxDescription: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_MMBoxDescription: $.ASN1Decoder<MMBoxDescription> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) MMBoxDescription
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_MMBoxDescription (el: _Element): MMBoxDescription {
+    if (!_cached_decoder_for_MMBoxDescription) { _cached_decoder_for_MMBoxDescription = function (el: _Element): MMBoxDescription {
+    let contentLocation: OPTIONAL<UTF8String>;
+    let messageID: OPTIONAL<UTF8String>;
+    let state: OPTIONAL<MMState>;
+    let flags: OPTIONAL<MMFlags[]>;
+    let dateTime: OPTIONAL<Timestamp>;
+    let originatingMMSParty: OPTIONAL<MMSParty>;
+    let terminatingMMSParty: OPTIONAL<MMSParty[]>;
+    let cCRecipients: OPTIONAL<MMSParty[]>;
+    let bCCRecipients: OPTIONAL<MMSParty[]>;
+    let messageClass: OPTIONAL<MMSMessageClass>;
+    let subject: OPTIONAL<MMSSubject>;
+    let priority: OPTIONAL<MMSPriority>;
+    let deliveryTime: OPTIONAL<Timestamp>;
+    let readReport: OPTIONAL<BOOLEAN>;
+    let messageSize: OPTIONAL<INTEGER>;
+    let replyCharging: OPTIONAL<MMSReplyCharging>;
+    let previouslySentBy: OPTIONAL<MMSPreviouslySentBy>;
+    let previouslySentByDateTime: OPTIONAL<Timestamp>;
+    let contentType: OPTIONAL<UTF8String>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "contentLocation": (_el: _Element): void => { contentLocation = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "messageID": (_el: _Element): void => { messageID = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); },
+        "state": (_el: _Element): void => { state = $._decode_implicit<MMState>(() => _decode_MMState)(_el); },
+        "flags": (_el: _Element): void => { flags = $._decode_implicit<MMFlags[]>(() => $._decodeSequenceOf<MMFlags>(() => _decode_MMFlags))(_el); },
+        "dateTime": (_el: _Element): void => { dateTime = $._decode_implicit<Timestamp>(() => _decode_Timestamp)(_el); },
+        "originatingMMSParty": (_el: _Element): void => { originatingMMSParty = $._decode_implicit<MMSParty>(() => _decode_MMSParty)(_el); },
+        "terminatingMMSParty": (_el: _Element): void => { terminatingMMSParty = $._decode_implicit<MMSParty[]>(() => $._decodeSequenceOf<MMSParty>(() => _decode_MMSParty))(_el); },
+        "cCRecipients": (_el: _Element): void => { cCRecipients = $._decode_implicit<MMSParty[]>(() => $._decodeSequenceOf<MMSParty>(() => _decode_MMSParty))(_el); },
+        "bCCRecipients": (_el: _Element): void => { bCCRecipients = $._decode_implicit<MMSParty[]>(() => $._decodeSequenceOf<MMSParty>(() => _decode_MMSParty))(_el); },
+        "messageClass": (_el: _Element): void => { messageClass = $._decode_implicit<MMSMessageClass>(() => _decode_MMSMessageClass)(_el); },
+        "subject": (_el: _Element): void => { subject = $._decode_implicit<MMSSubject>(() => _decode_MMSSubject)(_el); },
+        "priority": (_el: _Element): void => { priority = $._decode_implicit<MMSPriority>(() => _decode_MMSPriority)(_el); },
+        "deliveryTime": (_el: _Element): void => { deliveryTime = $._decode_implicit<Timestamp>(() => _decode_Timestamp)(_el); },
+        "readReport": (_el: _Element): void => { readReport = $._decode_implicit<BOOLEAN>(() => $._decodeBoolean)(_el); },
+        "messageSize": (_el: _Element): void => { messageSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "replyCharging": (_el: _Element): void => { replyCharging = $._decode_implicit<MMSReplyCharging>(() => _decode_MMSReplyCharging)(_el); },
+        "previouslySentBy": (_el: _Element): void => { previouslySentBy = $._decode_implicit<MMSPreviouslySentBy>(() => _decode_MMSPreviouslySentBy)(_el); },
+        "previouslySentByDateTime": (_el: _Element): void => { previouslySentByDateTime = $._decode_implicit<Timestamp>(() => _decode_Timestamp)(_el); },
+        "contentType": (_el: _Element): void => { contentType = $._decode_implicit<UTF8String>(() => $._decodeUTF8String)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_MMBoxDescription,
+        _extension_additions_list_spec_for_MMBoxDescription,
+        _root_component_type_list_2_spec_for_MMBoxDescription,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new MMBoxDescription(
+        contentLocation,
+        messageID,
+        state,
+        flags,
+        dateTime,
+        originatingMMSParty,
+        terminatingMMSParty,
+        cCRecipients,
+        bCCRecipients,
+        messageClass,
+        subject,
+        priority,
+        deliveryTime,
+        readReport,
+        messageSize,
+        replyCharging,
+        previouslySentBy,
+        previouslySentByDateTime,
+        contentType,
+        _unrecognizedExtensionsList
+    );
+}; }
+    return _cached_decoder_for_MMBoxDescription(el);
+}
+
+let _cached_encoder_for_MMBoxDescription: $.ASN1Encoder<MMBoxDescription> | null = null;
+
+/**
+ * @summary Encodes a(n) MMBoxDescription into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The MMBoxDescription, encoded as an ASN.1 Element.
+ */
+export
+function _encode_MMBoxDescription (value: MMBoxDescription, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_MMBoxDescription) { _cached_encoder_for_MMBoxDescription = function (value: MMBoxDescription, elGetter: $.ASN1Encoder<MMBoxDescription>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(19 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    if (value.contentLocation !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeUTF8String, $.BER)(value.contentLocation, $.BER);
+    }
+    if (value.messageID !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => $._encodeUTF8String, $.BER)(value.messageID, $.BER);
+    }
+    if (value.state !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_MMState, $.BER)(value.state, $.BER);
+    }
+    if (value.flags !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => $._encodeSequenceOf<MMFlags>(() => _encode_MMFlags, $.BER), $.BER)(value.flags, $.BER);
+    }
+    if (value.dateTime !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => _encode_Timestamp, $.BER)(value.dateTime, $.BER);
+    }
+    if (value.originatingMMSParty !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => _encode_MMSParty, $.BER)(value.originatingMMSParty, $.BER);
+    }
+    if (value.terminatingMMSParty !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 7, () => $._encodeSequenceOf<MMSParty>(() => _encode_MMSParty, $.BER), $.BER)(value.terminatingMMSParty, $.BER);
+    }
+    if (value.cCRecipients !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<MMSParty>(() => _encode_MMSParty, $.BER), $.BER)(value.cCRecipients, $.BER);
+    }
+    if (value.bCCRecipients !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 9, () => $._encodeSequenceOf<MMSParty>(() => _encode_MMSParty, $.BER), $.BER)(value.bCCRecipients, $.BER);
+    }
+    if (value.messageClass !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 10, () => _encode_MMSMessageClass, $.BER)(value.messageClass, $.BER);
+    }
+    if (value.subject !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 11, () => _encode_MMSSubject, $.BER)(value.subject, $.BER);
+    }
+    if (value.priority !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 12, () => _encode_MMSPriority, $.BER)(value.priority, $.BER);
+    }
+    if (value.deliveryTime !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 13, () => _encode_Timestamp, $.BER)(value.deliveryTime, $.BER);
+    }
+    if (value.readReport !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 14, () => $._encodeBoolean, $.BER)(value.readReport, $.BER);
+    }
+    if (value.messageSize !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 15, () => $._encodeInteger, $.BER)(value.messageSize, $.BER);
+    }
+    if (value.replyCharging !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 16, () => _encode_MMSReplyCharging, $.BER)(value.replyCharging, $.BER);
+    }
+    if (value.previouslySentBy !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 17, () => _encode_MMSPreviouslySentBy, $.BER)(value.previouslySentBy, $.BER);
+    }
+    if (value.previouslySentByDateTime !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 18, () => _encode_Timestamp, $.BER)(value.previouslySentByDateTime, $.BER);
+    }
+    if (value.contentType !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 19, () => $._encodeUTF8String, $.BER)(value.contentType, $.BER);
+    }
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_MMBoxDescription(value, elGetter);
+}
+
+
+/* eslint-enable */

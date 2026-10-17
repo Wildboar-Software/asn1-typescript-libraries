@@ -1,0 +1,195 @@
+/* eslint-disable */
+import {
+    INTEGER,
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../HI2Operations/GeographicalCoordinates.ta.mjs";
+// export { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../HI2Operations/GeographicalCoordinates.ta.mjs";
+
+
+/**
+ * @summary GA_PointWithUnCertainty
+ * @description
+ *
+ * A UMTS point with an uncertainty code. The uncertainty code is an integer
+ * from 0 to 127. This document states that range and does not state the unit
+ * of the coordinates or any further coding of the uncertainty code.
+ *
+ * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * GA-PointWithUnCertainty ::= SEQUENCE
+ * {
+ *     geographicalCoordinates        GeographicalCoordinates,
+ *     uncertaintyCode                INTEGER (0..127)
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class GA_PointWithUnCertainty {
+    /**
+     * @summary `geographicalCoordinates`.
+     * @description
+     *
+     * Latitude 0 to 8388607 and longitude -8388608 to 8388607, signed north or
+     * south. This document states no unit and no further coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
+     * @public
+     * @readonly
+     */
+    readonly geographicalCoordinates: GeographicalCoordinates;
+    /**
+     * @summary `uncertaintyCode`.
+     * @description
+     *
+     * Integer from 0 to 127. This document states the range and no further
+     * coding.
+     *
+     * ETSI TS 101 671 V3.15.1 (2018-06), annex D, clause D.5.
+     *
+     * https://www.etsi.org/deliver/etsi_ts/101600_101699/101671/03.15.01_60/ts_101671v031501p.pdf
+     *
+     * @public
+     * @readonly
+     */
+    readonly uncertaintyCode: INTEGER;
+
+    constructor (
+        geographicalCoordinates: GeographicalCoordinates,
+        uncertaintyCode: INTEGER
+    ) {
+        this.geographicalCoordinates = geographicalCoordinates;
+        this.uncertaintyCode = uncertaintyCode;
+    }
+
+    /**
+     * @summary Restructures an object into a GA_PointWithUnCertainty
+     * @description
+     * 
+     * This takes an `object` and converts it to a `GA_PointWithUnCertainty`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `GA_PointWithUnCertainty`.
+     * @returns {GA_PointWithUnCertainty}
+     */
+    public static _from_object (_o: { [_K in keyof (GA_PointWithUnCertainty)]: (GA_PointWithUnCertainty)[_K] }): GA_PointWithUnCertainty {
+        return new GA_PointWithUnCertainty(_o.geographicalCoordinates, _o.uncertaintyCode);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of GA_PointWithUnCertainty
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_GA_PointWithUnCertainty: $.ComponentSpec[] = [
+    new $.ComponentSpec("geographicalCoordinates", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("uncertaintyCode", false, $.hasTag(_TagClass.universal, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of GA_PointWithUnCertainty
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_GA_PointWithUnCertainty: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of GA_PointWithUnCertainty
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_GA_PointWithUnCertainty: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_GA_PointWithUnCertainty: $.ASN1Decoder<GA_PointWithUnCertainty> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) GA_PointWithUnCertainty
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_GA_PointWithUnCertainty (el: _Element): GA_PointWithUnCertainty {
+    if (!_cached_decoder_for_GA_PointWithUnCertainty) { _cached_decoder_for_GA_PointWithUnCertainty = function (el: _Element): GA_PointWithUnCertainty {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError("GA-PointWithUnCertainty contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "geographicalCoordinates";
+    sequence[1].name = "uncertaintyCode";
+    let geographicalCoordinates!: GeographicalCoordinates;
+    let uncertaintyCode!: INTEGER;
+    geographicalCoordinates = _decode_GeographicalCoordinates(sequence[0]);
+    uncertaintyCode = $._decodeInteger(sequence[1]);
+    {
+        const _n = typeof uncertaintyCode === "bigint" ? uncertaintyCode : BigInt(uncertaintyCode);
+        if (_n < 0n || _n > 127n) {
+            throw new ASN1OverflowError("GA_PointWithUnCertainty.uncertaintyCode violates INTEGER range");
+        }
+    }
+    return new GA_PointWithUnCertainty(
+        geographicalCoordinates,
+        uncertaintyCode,
+
+    );
+}; }
+    return _cached_decoder_for_GA_PointWithUnCertainty(el);
+}
+
+let _cached_encoder_for_GA_PointWithUnCertainty: $.ASN1Encoder<GA_PointWithUnCertainty> | null = null;
+
+/**
+ * @summary Encodes a(n) GA_PointWithUnCertainty into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The GA_PointWithUnCertainty, encoded as an ASN.1 Element.
+ */
+export
+function _encode_GA_PointWithUnCertainty (value: GA_PointWithUnCertainty, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_GA_PointWithUnCertainty) { _cached_encoder_for_GA_PointWithUnCertainty = function (value: GA_PointWithUnCertainty, elGetter: $.ASN1Encoder<GA_PointWithUnCertainty>): _Element {
+    return $._encodeSequence([
+        /* REQUIRED   */ _encode_GeographicalCoordinates(value.geographicalCoordinates, $.BER),
+        /* REQUIRED   */ $._encodeInteger(value.uncertaintyCode, $.BER)
+    ], $.BER);
+}; }
+    return _cached_encoder_for_GA_PointWithUnCertainty(value, elGetter);
+}
+
+
+/* eslint-enable */

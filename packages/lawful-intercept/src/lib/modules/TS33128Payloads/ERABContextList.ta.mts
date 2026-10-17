@@ -1,0 +1,65 @@
+/* eslint-disable */
+import {
+    ASN1Element as _Element,
+    ASN1SizeError
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { ERABContext, _decode_ERABContext, _encode_ERABContext } from "../TS33128Payloads/ERABContext.ta.mjs";
+// export { ERABContext, _decode_ERABContext, _encode_ERABContext } from "../TS33128Payloads/ERABContext.ta.mjs";
+
+
+/**
+ * @summary ERABContextList
+ * @description
+ * 
+ * Contains a list of any E-RABs requested for setup. See TS 36.413 [38] clause
+ * 9.1.4.1. Include when sent during the procedure being reported or when known
+ * at the NF.
+ *
+ * 3GPP TS 33.128, clause 6.3.2.2A.18.
+ * https://www.3gpp.org/DynaReport/33128.htm
+ *
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ERABContextList  ::=  SEQUENCE SIZE (1..MAX) OF ERABContext
+ * ```
+ */
+export
+type ERABContextList = ERABContext[]; // SequenceOfType
+
+let _cached_decoder_for_ERABContextList: $.ASN1Decoder<ERABContextList> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) ERABContextList
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_ERABContextList (el: _Element): ERABContextList {
+    if (!_cached_decoder_for_ERABContextList) { _cached_decoder_for_ERABContextList = $._decodeSequenceOf<ERABContext>(() => _decode_ERABContext); }
+    const _value = _cached_decoder_for_ERABContextList(el);
+    if (_value.length < 1) {
+        throw new ASN1SizeError("ERABContextList violates SIZE constraint");
+    }
+    return _value;
+}
+
+let _cached_encoder_for_ERABContextList: $.ASN1Encoder<ERABContextList> | null = null;
+
+/**
+ * @summary Encodes a(n) ERABContextList into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The ERABContextList, encoded as an ASN.1 Element.
+ */
+export
+function _encode_ERABContextList (value: ERABContextList, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_ERABContextList) { _cached_encoder_for_ERABContextList = $._encodeSequenceOf<ERABContext>(() => _encode_ERABContext, $.BER); }
+    return _cached_encoder_for_ERABContextList(value, elGetter);
+}
+
+
+/* eslint-enable */
