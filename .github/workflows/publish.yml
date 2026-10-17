@@ -17,6 +17,7 @@ jobs:
           - "asn1soap"
           - "attribute-asn1module"
           - "bip"
+          - "c1222"
           - "cades"
           - "cap"
           - "casscam"
