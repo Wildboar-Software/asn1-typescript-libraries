@@ -6,7 +6,9 @@ how the Server-Based Certificate Validation Protocol (SCVP) conveys
 long-term evidence records. `EvidenceRecord` is provided by
 [`@wildboar/ers`](https://jsr.io/@wildboar/ers).
 
-This module is ESM-only.
+This module is ESM-only. This is not incorporated into `@wildboar/scvp`
+because it includes a transitive dependency on `@wildboar/ers` that I
+want to avoid introducing unless this feature is needed.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
