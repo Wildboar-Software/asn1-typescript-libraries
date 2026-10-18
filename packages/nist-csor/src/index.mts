@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * NIST Computer Security Objects Register (CSOR) algorithm identifiers
  * for AES, compiled from the `NIST-AES` ASN.1 module. This package is

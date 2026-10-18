@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of CAMEL Application Part (CAP) ASN.1 modules
  * from 3GPP TS 29.078 V19.0.0 (CAMEL Phase 4). Import from a subpath

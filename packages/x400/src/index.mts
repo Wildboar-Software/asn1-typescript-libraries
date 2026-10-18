@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of the X.400 Message Handling System ASN.1 modules
  * (ITU-T F.400/X.400, X.402, X.411, X.412, X.413, X.419, X.420, and X.435,

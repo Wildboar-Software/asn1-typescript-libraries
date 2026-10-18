@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of ETSI and 3GPP lawful-interception ASN.1 modules
  * (HI1, HI2, HI3, and related handover PDUs). Import from a subpath, for

@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of ISO/IEC 29120-1:2022 machine-readable biometric
  * testing and reporting (MRBTR) test reports. The format records technology

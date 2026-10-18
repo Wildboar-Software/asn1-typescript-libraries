@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of ISO/IEC 10166 Document Filing and Retrieval (DFR)
  * ASN.1 modules and ISO/IEC 10031-2 Distributed Office Referenced Data

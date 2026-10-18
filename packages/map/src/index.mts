@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of GSM/UMTS Mobile Application Part (MAP) ASN.1
  * modules from 3GPP TS 29.002 V19.1.0. Import from a subpath (for example

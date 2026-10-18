@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of ISO/IEC 9040:1997 Virtual Terminal Basic
  * Class Service and ISO/IEC 9041-1:1997 Virtual Terminal Basic Class

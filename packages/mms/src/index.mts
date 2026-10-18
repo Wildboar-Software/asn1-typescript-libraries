@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of ISO 9506 Manufacturing Message Specification
  * (MMS) ASN.1 modules. MMS is the application-layer ASE for messaging

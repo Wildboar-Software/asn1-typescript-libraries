@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of ISO/IEC 7816-15:2016 Cryptographic Information
  * Framework (CIF / PKCS #15). A CIA is an ICC application that describes

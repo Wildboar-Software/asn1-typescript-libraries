@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of CSTA Phase III. Service behaviour is
  * [ECMA-269](https://ecma-international.org/publications-and-standards/standards/ecma-269/)

@@ -1,5 +1,6 @@
 /**
- * @packageDocumentation
+ * @module
+ * @description
  *
  * TypeScript encodings of ICAO Doc 9303 electronic Machine Readable Travel
  * Document (eMRTD) security structures: the LDS security object, CSCA master
