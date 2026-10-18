@@ -1,6 +1,14 @@
 {
     "name": "@wildboar/ltans-scvp-extension",
     "type": "module",
+    "description": "ASN.1 data structures for obtaining evidence records from SCVP servers per IETF RFC 5276",
+    "keywords": [
+        "rfc5276",
+        "scvp",
+        "ltans",
+        "evidence",
+        "record"
+    ],
     "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
