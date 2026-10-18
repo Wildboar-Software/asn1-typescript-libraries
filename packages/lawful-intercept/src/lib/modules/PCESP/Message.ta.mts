@@ -38,7 +38,21 @@ import { ConferencePartyChange, _decode_ConferencePartyChange, _encode_Conferenc
 /**
  * @summary Message
  * @description
- * 
+ *
+ * The surveillance message inside a `CdcPdu`.
+ *
+ * Clause 1, note 3, says this edition neither defines the events nor
+ * the information to be provided to the handover interface. Annex A
+ * names each alternative and says the parameter definitions are in
+ * PacketCable PKT-SP-ESP-I04-040723. The alternatives commented
+ * "Reserved" are `NULL` and have no defined use. Context tag 0 is not
+ * used. Tag 11 is named `reserved`, unlike the numbered `reserved0`
+ * through `reserved4`.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -69,25 +83,134 @@ import { ConferencePartyChange, _decode_ConferencePartyChange, _encode_Conferenc
  */
 export
 type Message =
+    /**
+     * See `Answer`. This edition does not define the event.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     { answer: Answer } /* CHOICE_ALT_ROOT */
+    /**
+     * See `CCClose`. This edition does not define the event.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { ccclose: CCClose } /* CHOICE_ALT_ROOT */
+    /**
+     * See `CCOpen`. This edition does not define the event.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { ccopen: CCOpen } /* CHOICE_ALT_ROOT */
+    /**
+     * Reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { reserved0: NULL } /* CHOICE_ALT_ROOT */
+    /**
+     * See `Origination`. This edition does not define the event.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { origination: Origination } /* CHOICE_ALT_ROOT */
+    /**
+     * Reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { reserved1: NULL } /* CHOICE_ALT_ROOT */
+    /**
+     * See `Redirection`. This edition does not define the event.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { redirection: Redirection } /* CHOICE_ALT_ROOT */
+    /**
+     * See `Release`. This edition does not define the event.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { release: Release } /* CHOICE_ALT_ROOT */
+    /**
+     * Reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { reserved2: NULL } /* CHOICE_ALT_ROOT */
+    /**
+     * See `TerminationAttempt`. This edition does not define the event.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { terminationattempt: TerminationAttempt } /* CHOICE_ALT_ROOT */
+    /**
+     * Reserved. Context tag 11. Encoded as `NULL`. No use is defined.
+     * The module names this alternative `reserved`, not `reservedN`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { reserved: NULL } /* CHOICE_ALT_ROOT */
+    /**
+     * See `CCChange`. This edition does not define the event.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { ccchange: CCChange } /* CHOICE_ALT_ROOT */
+    /**
+     * Reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { reserved3: NULL } /* CHOICE_ALT_ROOT */
+    /**
+     * Reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { reserved4: NULL } /* CHOICE_ALT_ROOT */
+    /**
+     * DTMF digits extracted from the call. See
+     * `DialedDigitExtraction`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { dialeddigitextraction: DialedDigitExtraction } /* CHOICE_ALT_ROOT */
+    /**
+     * A network-generated signal. At least one signal parameter is
+     * included. See `NetworkSignal`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { networksignal: NetworkSignal } /* CHOICE_ALT_ROOT */
+    /**
+     * Subject-initiated dialing or signalling. At least one signal
+     * parameter is included. See `SubjectSignal`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { subjectsignal: SubjectSignal } /* CHOICE_ALT_ROOT */
+    /**
+     * See `MediaReport`. This edition does not define the event.
+     * `subject` and `associate` are SDP; annex B says SDP copied to
+     * the mediation function includes the encryption keys.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annexes A and B.
+     */
     | { mediareport: MediaReport } /* CHOICE_ALT_ROOT */
+    /**
+     * See `ServiceInstance`. Clause 8.1.1 requires the IRI to include
+     * details of services used. This edition does not define the
+     * service-name vocabulary.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.1.1 and annex A.
+     */
     | { serviceinstance: ServiceInstance } /* CHOICE_ALT_ROOT */
+    /**
+     * Parties communicating, removed, or newly joined. See
+     * `ConferencePartyChange`. Removal includes hold.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { confpartychange: ConferencePartyChange } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

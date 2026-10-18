@@ -23,7 +23,21 @@ import { RedirectedFromInfo, _decode_RedirectedFromInfo, _encode_RedirectedFromI
 /**
  * @summary TerminationAttempt
  * @description
- * 
+ *
+ * Message alternative carrying optional calling and called party identities and
+ * optional redirection history.
+ *
+ * `reserved0` is `NULL` and marked reserved. This edition does not define the
+ * event, or when `calling` and `called` are absent. See `RedirectedFromInfo`.
+ *
+ * Clause 3.1 defines termination as the number of the party ultimately
+ * receiving a call. Annex A does not say which `PartyId` component carries that
+ * number.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 3.1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,48 +60,103 @@ export
 class TerminationAttempt {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `callId`.
+     * @description
+     *
+     * Call identifier the Delivery Function builds from the
+     * Billing-Correlation-ID in the Event Messages. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callId: CallId;
     /**
      * @summary `calling`.
+     * @description
+     *
+     * Calling party. Optional. This edition does not say when it is included.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly calling: OPTIONAL<PartyId>;
     /**
      * @summary `called`.
+     * @description
+     *
+     * Called party. Optional. Clause 3.1 defines termination as the number of
+     * the party ultimately receiving a call. This edition does not say which
+     * `PartyId` components carry it.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly called: OPTIONAL<PartyId>;
     /**
      * @summary `reserved0`.
+     * @description
+     *
+     * Marked reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved0: NULL;
     /**
      * @summary `redirectedFromInfo`.
+     * @description
+     *
+     * Redirection history: last redirecting party, originally called party, and
+     * how many redirections. Optional. See `RedirectedFromInfo`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

@@ -12,7 +12,23 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary TerminalDisplayInfo
  * @description
- * 
+ *
+ * Information displayed on the surveillance subject's terminal.
+ *
+ * The module comment refers to GR-506-CORE, LSSGR: Signaling for Analog
+ * Interfaces, a module of the LATA Switching Systems Generic Requirements
+ * (LSSGR), FR-64. This edition does not reproduce that document.
+ *
+ * `generalDisplay` reports display-related network signals that the other
+ * parameters do not address. It is a `VisibleString` of size 1 to 80,
+ * extensible. Every other component is a `VisibleString` of size 1 to 40,
+ * extensible. All components are optional. This edition does not define the
+ * character format of any of them.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -39,54 +55,129 @@ export
 class TerminalDisplayInfo {
     /**
      * @summary `generalDisplay`.
+     * @description
+     *
+     * Display-related network signal that the other parameters do not address.
+     * `VisibleString` of size 1 to 80, extensible. Optional. The character
+     * format is not defined in this edition.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly generalDisplay: OPTIONAL<VisibleString>;
     /**
      * @summary `calledNumber`.
+     * @description
+     *
+     * Called number displayed on the subject's terminal. `VisibleString` of
+     * size 1 to 40, extensible. Optional. The character format is defined, if
+     * at all, in GR-506-CORE, which this edition cites and does not reproduce.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly calledNumber: OPTIONAL<VisibleString>;
     /**
      * @summary `callingNumber`.
+     * @description
+     *
+     * Calling number displayed on the subject's terminal. `VisibleString` of
+     * size 1 to 40, extensible. Optional. The character format is defined, if
+     * at all, in GR-506-CORE, which this edition cites and does not reproduce.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callingNumber: OPTIONAL<VisibleString>;
     /**
      * @summary `callingName`.
+     * @description
+     *
+     * Calling name displayed on the subject's terminal. `VisibleString` of size
+     * 1 to 40, extensible. Optional. The character format is defined, if at
+     * all, in GR-506-CORE, which this edition cites and does not reproduce.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callingName: OPTIONAL<VisibleString>;
     /**
      * @summary `originalCalledNumber`.
+     * @description
+     *
+     * Originally called number displayed on the subject's terminal.
+     * `VisibleString` of size 1 to 40, extensible. Optional. The character
+     * format is defined, if at all, in GR-506-CORE, which this edition cites
+     * and does not reproduce.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly originalCalledNumber: OPTIONAL<VisibleString>;
     /**
      * @summary `lastRedirectingNumber`.
+     * @description
+     *
+     * Last redirecting number displayed on the subject's terminal.
+     * `VisibleString` of size 1 to 40, extensible. Optional. The character
+     * format is defined, if at all, in GR-506-CORE, which this edition cites
+     * and does not reproduce.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly lastRedirectingNumber: OPTIONAL<VisibleString>;
     /**
      * @summary `redirectingName`.
+     * @description
+     *
+     * Redirecting name displayed on the subject's terminal. `VisibleString` of
+     * size 1 to 40, extensible. Optional. The character format is defined, if
+     * at all, in GR-506-CORE, which this edition cites and does not reproduce.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly redirectingName: OPTIONAL<VisibleString>;
     /**
      * @summary `redirectingReason`.
+     * @description
+     *
+     * Redirecting reason displayed on the subject's terminal. `VisibleString`
+     * of size 1 to 40, extensible. Optional. This edition does not define the
+     * reason vocabulary.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly redirectingReason: OPTIONAL<VisibleString>;
     /**
      * @summary `messageWaitingNotif`.
+     * @description
+     *
+     * Message-waiting notification displayed on the subject's terminal.
+     * `VisibleString` of size 1 to 40, extensible. Optional. The character
+     * format is defined, if at all, in GR-506-CORE, which this edition cites
+     * and does not reproduce.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

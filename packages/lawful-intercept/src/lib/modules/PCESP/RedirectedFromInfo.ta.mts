@@ -13,7 +13,21 @@ import { PartyId, _decode_PartyId, _encode_PartyId } from "../PCESP/PartyId.ta.m
 /**
  * @summary RedirectedFromInfo
  * @description
- * 
+ *
+ * Redirection history carried on `TerminationAttempt`.
+ *
+ * `lastRedirecting` and `originalCalled` are party identities.
+ * `numRedirections` is an integer from 1 to 100, extensible. All three are
+ * optional. This edition does not say when each is included.
+ *
+ * Clause 8.1.1 requires the IRI, when a call has been diverted, to include the
+ * actual destination and the intermediate directory numbers. Annex A does not
+ * map these fields onto that requirement.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.1.1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,18 +45,39 @@ export
 class RedirectedFromInfo {
     /**
      * @summary `lastRedirecting`.
+     * @description
+     *
+     * Last redirecting party. Optional. This edition does not say when it is
+     * included.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly lastRedirecting: OPTIONAL<PartyId>;
     /**
      * @summary `originalCalled`.
+     * @description
+     *
+     * Originally called party. Optional. This edition does not say when it is
+     * included.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly originalCalled: OPTIONAL<PartyId>;
     /**
      * @summary `numRedirections`.
+     * @description
+     *
+     * Number of redirections, from 1 to 100, extensible. Optional. This edition
+     * does not say how the count is made.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

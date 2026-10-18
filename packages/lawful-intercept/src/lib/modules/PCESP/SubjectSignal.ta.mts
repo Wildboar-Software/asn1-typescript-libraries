@@ -22,7 +22,20 @@ import { PartyId, _decode_PartyId, _encode_PartyId } from "../PCESP/PartyId.ta.m
 /**
  * @summary SubjectSignal
  * @description
- * 
+ *
+ * Reports subject-initiated dialing and signalling.
+ *
+ * `signal` includes at least one of switch-hook flash, dialed digits, feature
+ * key, and other signalling. `signaledFromPartyId` is mandatory. `callId` is
+ * optional; this edition does not say when it is absent.
+ *
+ * Clause 8.1.1 requires the IRI to include signals the target emits to invoke
+ * additional or modified services. See `SubjectSignal_signal`.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.1.1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -55,36 +68,78 @@ export
 class SubjectSignal {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `callId`.
+     * @description
+     *
+     * Call identifier. Optional on this message. This edition does not say when
+     * it is absent. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callId: OPTIONAL<CallId>;
     /**
      * @summary `signal`.
+     * @description
+     *
+     * At least one of switch-hook flash, dialed digits, feature key, and other
+     * subject signalling. See `SubjectSignal_signal`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly signal: SubjectSignal_signal;
     /**
      * @summary `signaledFromPartyId`.
+     * @description
+     *
+     * Party that initiated the dialing or signalling. Mandatory. This edition
+     * does not define which `PartyId` components to populate.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

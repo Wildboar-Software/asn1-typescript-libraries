@@ -20,7 +20,17 @@ import { FlowDirection, _decode_FlowDirection, _encode_FlowDirection, _enum_for_
 /**
  * @summary CCClose
  * @description
- * 
+ *
+ * Message alternative carrying the call-content identifier and a flow
+ * direction. It has no call identifier.
+ *
+ * This edition does not define the event that produces it. See `CCCId` and
+ * `FlowDirection`.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +50,66 @@ export
 class CCClose {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `cCCId`.
+     * @description
+     *
+     * Call-content identifier. The Delivery Function generates it from the
+     * 32-bit CCC-Identifier of the corresponding call-content packet stream.
+     * See `CCCId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly cCCId: CCCId;
     /**
      * @summary `flowDirection`.
+     * @description
+     *
+     * Downstream, upstream, or both. This edition does not define those
+     * directions. See `FlowDirection`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

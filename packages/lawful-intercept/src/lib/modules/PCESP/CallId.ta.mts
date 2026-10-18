@@ -12,7 +12,21 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CallId
  * @description
- * 
+ *
+ * The Delivery Function generates this from the Billing-Correlation-ID
+ * contained in the Event Messages.
+ *
+ * `sequencenumber` is that identifier's Timestamp (32 bits) and Event-Counter
+ * (32 bits), each converted to an ASCII string and joined with a comma.
+ * `systemidentity` is copied from the Element-ID field.
+ *
+ * This edition does not define the Event Message layout, or the formats of
+ * Timestamp, Event-Counter, and Element-ID, beyond that conversion.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +43,28 @@ export
 class CallId {
     /**
      * @summary `sequencenumber`.
+     * @description
+     *
+     * ASCII form of the Billing-Correlation-ID Timestamp (32 bits) and
+     * Event-Counter (32 bits), separated by a comma. Size 1 to 25, extensible.
+     * This edition does not define those two integer encodings beyond that
+     * conversion.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly sequencenumber: VisibleString;
     /**
      * @summary `systemidentity`.
+     * @description
+     *
+     * Copied from the Element-ID field of the Event Messages. Size 1 to 15,
+     * extensible. This edition does not define the Element-ID format.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

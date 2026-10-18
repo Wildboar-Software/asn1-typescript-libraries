@@ -14,7 +14,18 @@ import { CCCId, _decode_CCCId, _encode_CCCId } from "../PCESP/CCCId.ta.mjs";
 /**
  * @summary ConferencePartyChange_joined_Item
  * @description
- * 
+ *
+ * One entry in `ConferencePartyChange.joined`.
+ *
+ * The module comment says to include the list to identify parties newly added
+ * to the communication. `partyId` identifies party identities newly added to an
+ * existing communication. `cCCId` is included when the content of the resulting
+ * call is delivered, to identify the associated CCC or CCCs.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,12 +48,27 @@ export
 class ConferencePartyChange_joined_Item {
     /**
      * @summary `partyId`.
+     * @description
+     *
+     * Identities of parties newly added to an existing communication. Optional,
+     * and a sequence. This edition does not define which `PartyId` components
+     * to populate.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly partyId: OPTIONAL<PartyId[]>;
     /**
      * @summary `cCCId`.
+     * @description
+     *
+     * Included when the content of the resulting call is delivered, to identify
+     * the associated CCC or CCCs. Optional. See `CCCId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

@@ -25,7 +25,21 @@ import { TransitCarrierId, _decode_TransitCarrierId, _encode_TransitCarrierId } 
 /**
  * @summary Origination
  * @description
- * 
+ *
+ * Message alternative carrying the calling party, an optional called party, one
+ * input string, and an optional transit-carrier identifier.
+ *
+ * `input` is either `userinput` or `translationinput`, each a `VisibleString`
+ * of size 1 to 32, extensible. This edition does not define how those strings
+ * differ. `reserved0` is `NULL` and marked reserved.
+ *
+ * Clause 3.1 defines origin as the number of the party initiating a call. Annex
+ * A does not say which `PartyId` component carries that number.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 3.1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -53,54 +67,118 @@ export
 class Origination {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `callId`.
+     * @description
+     *
+     * Call identifier the Delivery Function builds from the
+     * Billing-Correlation-ID in the Event Messages. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callId: CallId;
     /**
      * @summary `calling`.
+     * @description
+     *
+     * Calling party. Mandatory. Clause 3.1 defines origin as the number of the
+     * party initiating a call. This edition does not say which `PartyId`
+     * components carry it.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly calling: PartyId;
     /**
      * @summary `called`.
+     * @description
+     *
+     * Called party. Optional. This edition does not say when it is included, or
+     * which `PartyId` components to populate.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly called: OPTIONAL<PartyId>;
     /**
      * @summary `input`.
+     * @description
+     *
+     * Either user input or translation input. Each is a `VisibleString` of size
+     * 1 to 32, extensible. This edition does not define how the two differ. See
+     * `Origination_input`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly input: Origination_input;
     /**
      * @summary `reserved0`.
+     * @description
+     *
+     * Marked reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved0: NULL;
     /**
      * @summary `transitCarrierId`.
+     * @description
+     *
+     * Transit carrier. A `VisibleString` of size 3 to 7, extensible. Optional.
+     * This edition does not define the numbering plan. See `TransitCarrierId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

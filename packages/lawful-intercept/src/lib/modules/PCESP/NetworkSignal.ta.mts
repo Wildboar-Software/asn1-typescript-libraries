@@ -27,7 +27,21 @@ import { PartyId, _decode_PartyId, _encode_PartyId } from "../PCESP/PartyId.ta.m
 /**
  * @summary NetworkSignal
  * @description
- * 
+ *
+ * Reports a network-generated signal.
+ *
+ * The module comment requires at least one of `alertingSignal`,
+ * `subjectAudibleSignal`, `terminalDisplayInfo`, and `other`. `other` reports a
+ * network signal that those three do not cover. `signaledToPartyId` identifies
+ * the party the signal is sent toward, and it is mandatory.
+ *
+ * `alertingSignal` is the alerting pattern applied toward the surveillance
+ * subject. See `AlertingSignal`, `AudibleSignal`, and `TerminalDisplayInfo`.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -58,54 +72,120 @@ export
 class NetworkSignal {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `callId`.
+     * @description
+     *
+     * Call identifier the Delivery Function builds from the
+     * Billing-Correlation-ID in the Event Messages. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callId: CallId;
     /**
      * @summary `alertingSignal`.
+     * @description
+     *
+     * Alerting pattern applied toward the surveillance subject. Optional. At
+     * least one of the four signal parameters is present. See `AlertingSignal`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly alertingSignal: OPTIONAL<AlertingSignal>;
     /**
      * @summary `subjectAudibleSignal`.
+     * @description
+     *
+     * Audible tone applied toward the surveillance subject. Optional. At least
+     * one of the four signal parameters is present. See `AudibleSignal`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly subjectAudibleSignal: OPTIONAL<AudibleSignal>;
     /**
      * @summary `terminalDisplayInfo`.
+     * @description
+     *
+     * Information displayed on the surveillance subject's terminal. Optional.
+     * At least one of the four signal parameters is present. See
+     * `TerminalDisplayInfo`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly terminalDisplayInfo: OPTIONAL<TerminalDisplayInfo>;
     /**
      * @summary `other`.
+     * @description
+     *
+     * A network-generated signal that the other three signal parameters do not
+     * cover. `VisibleString` of size 1 to 128, extensible. Optional. At least
+     * one of the four is present. The string format is not defined in this
+     * edition.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly other: OPTIONAL<VisibleString>;
     /**
      * @summary `signaledToPartyId`.
+     * @description
+     *
+     * Party toward which the network-generated signal is sent. Mandatory. This
+     * edition does not define which `PartyId` components to populate.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

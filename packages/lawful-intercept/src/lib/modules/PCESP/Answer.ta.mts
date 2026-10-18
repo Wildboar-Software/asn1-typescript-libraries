@@ -20,7 +20,15 @@ import { PartyId, _decode_PartyId, _encode_PartyId } from "../PCESP/PartyId.ta.m
 /**
  * @summary Answer
  * @description
- * 
+ *
+ * Message alternative reporting an answer. This edition does not
+ * define when it is sent or what `answering` must contain. Annex A
+ * defers parameter definitions to PacketCable PKT-SP-ESP-I04-040723.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -40,30 +48,67 @@ export
 class Answer {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. Assignment is not defined in this
+     * edition. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does
+     * not say which instant is recorded. It is separate from the
+     * `UTCTime` timestamp on `TARGETACTIVITYMONITOR`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 8.4.2.1.3
+     * and annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `callId`.
+     * @description
+     *
+     * Call identifier the Delivery Function builds from the
+     * Billing-Correlation-ID in the Event Messages. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callId: CallId;
     /**
      * @summary `answering`.
+     * @description
+     *
+     * Party identity associated with the answer. Optional. This
+     * edition does not define which party it identifies or when it
+     * is omitted.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

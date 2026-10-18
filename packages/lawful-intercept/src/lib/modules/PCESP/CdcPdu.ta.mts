@@ -14,7 +14,28 @@ import { Message, _decode_Message, _encode_Message } from "../PCESP/Message.ta.m
 /**
  * @summary CdcPdu
  * @description
- * 
+ *
+ * One PCESP call-data PDU: a protocol version and one `Message`.
+ *
+ * Module `TS101909201` imports this type and carries it as the
+ * `cdcPdu` alternative of `UserSignalType` on
+ * `TARGETACTIVITYMONITOR-1` (annex A). Annex A, note 2, assumes the
+ * Lawful Interception Mediation Function receives the PCESP module in
+ * BER and exports it in `TARGETACTIVITYMONITOR` before delivery to the
+ * LEMF. Clause 5.1 requires that, when INI2 arrives in DER, the
+ * mediation function decode it and re-encode with BER for HI2.
+ *
+ * Clause 8.4.2 prints a different `TARGETACTIVITYMONITOR`, with
+ * `iRIMessageBER` and `iRIMessageDER` from a module named
+ * `IPCableComIRI`, and says the user signal is by default a bit-exact
+ * copy. The normative module in annex A does not contain those two
+ * fields; it carries `CdcPdu` inside `UserSignalType`.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 5.1, clause 8.4.2,
+ * and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -31,12 +52,27 @@ export
 class CdcPdu {
     /**
      * @summary `protocolVersion`.
+     * @description
+     *
+     * `v3` for PacketCable Electronic Surveillance Specification I03,
+     * or `v4` for I04. Versions IO1 and IO2 are not represented; the
+     * module comment says they do not support protocol versioning.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly protocolVersion: ProtocolVersion;
     /**
      * @summary `message`.
+     * @description
+     *
+     * The surveillance message. Annex A does not define which event
+     * each alternative reports. See `Message`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

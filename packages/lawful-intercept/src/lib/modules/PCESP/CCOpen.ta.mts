@@ -24,7 +24,23 @@ import { FlowDirection, _decode_FlowDirection, _encode_FlowDirection, _enum_for_
 /**
  * @summary CCOpen
  * @description
- * 
+ *
+ * Message alternative carrying a call-content identifier, a flow direction,
+ * optional SDP for `subject` and `associate`, and `ccOpenOption`.
+ *
+ * `ccOpenOption` is either `ccOpenTime`, a sequence of `CallId`, or
+ * `reserved0`, which is `NULL` and marked reserved. This edition does not
+ * define which calls `ccOpenTime` lists, or the event that produces the
+ * message.
+ *
+ * Annex B says the SDP parameters the CMS copies to the mediation function
+ * include the encryption keys. This edition does not define how `subject` and
+ * `associate` differ. See `SDP`.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annexes A and B.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -51,48 +67,108 @@ export
 class CCOpen {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `ccOpenOption`.
+     * @description
+     *
+     * Either `ccOpenTime`, a sequence of call identifiers, or `reserved0`
+     * (`NULL`, marked reserved). This edition does not define which calls are
+     * listed.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly ccOpenOption: CCOpen_ccOpenOption;
     /**
      * @summary `cCCId`.
+     * @description
+     *
+     * Call-content identifier. The Delivery Function generates it from the
+     * 32-bit CCC-Identifier of the corresponding call-content packet stream.
+     * See `CCCId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly cCCId: CCCId;
     /**
      * @summary `subject`.
+     * @description
+     *
+     * SDP for one party to the media. Annex B says SDP copied to the mediation
+     * function includes the encryption keys. This edition does not define how
+     * this differs from `associate`. See `SDP`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly subject: OPTIONAL<SDP>;
     /**
      * @summary `associate`.
+     * @description
+     *
+     * SDP for one party to the media. Annex B says SDP copied to the mediation
+     * function includes the encryption keys. This edition does not define how
+     * this differs from `subject`. See `SDP`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly associate: OPTIONAL<SDP>;
     /**
      * @summary `flowDirection`.
+     * @description
+     *
+     * Downstream, upstream, or both. This edition does not define those
+     * directions. See `FlowDirection`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

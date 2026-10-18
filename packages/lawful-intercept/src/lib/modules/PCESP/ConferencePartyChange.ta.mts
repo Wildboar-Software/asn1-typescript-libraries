@@ -24,7 +24,22 @@ import { ConferencePartyChange_joined_Item, _decode_ConferencePartyChange_joined
 /**
  * @summary ConferencePartyChange
  * @description
- * 
+ *
+ * Reports a change in who is on a communication.
+ *
+ * `communicating` identifies parties participating. `removed` identifies
+ * parties removed, for example by a hold service. `joined` identifies parties
+ * newly added to an existing communication.
+ *
+ * Each entry may carry party identities and, when the content of the resulting
+ * call is delivered, the CCC identifier of that content. All three lists are
+ * optional. This edition does not say whether more than one list is present in
+ * the same message.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -74,42 +89,94 @@ export
 class ConferencePartyChange {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `callId`.
+     * @description
+     *
+     * Call identifier the Delivery Function builds from the
+     * Billing-Correlation-ID in the Event Messages. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callId: CallId;
     /**
      * @summary `communicating`.
+     * @description
+     *
+     * Parties participating in the communication. Optional. Each entry's
+     * `partyId` identifies those parties. Its `cCCId` is included when the
+     * content of the resulting call is delivered.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly communicating: OPTIONAL<ConferencePartyChange_communicating_Item[]>;
     /**
      * @summary `removed`.
+     * @description
+     *
+     * Parties removed from the communication, for example by a hold service.
+     * Optional. Each entry's `partyId` identifies the removed parties. Its
+     * `cCCId` is included when the content of the resulting call is delivered.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly removed: OPTIONAL<ConferencePartyChange_removed_Item[]>;
     /**
      * @summary `joined`.
+     * @description
+     *
+     * Parties newly added to an existing communication. Optional. Each entry's
+     * `partyId` identifies the added parties. Its `cCCId` is included when the
+     * content of the resulting call is delivered.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

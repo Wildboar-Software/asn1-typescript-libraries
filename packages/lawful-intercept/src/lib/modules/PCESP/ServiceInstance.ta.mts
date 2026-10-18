@@ -21,7 +21,23 @@ import { PartyId, _decode_PartyId, _encode_PartyId } from "../PCESP/PartyId.ta.m
 /**
  * @summary ServiceInstance
  * @description
- * 
+ *
+ * Message alternative naming a service and, optionally, a related call and four
+ * party identities: `firstCallCalling`, `secondCallCalling`, `called`, and
+ * `calling`.
+ *
+ * `serviceName` is a `VisibleString` of size 1 to 128, extensible. This edition
+ * does not define the vocabulary, or which party each optional identity is.
+ *
+ * Clause 8.1.1 requires the IRI to include details of services used and their
+ * parameters. Clause 4.2.2.1 gives call hold and call divert as examples of
+ * invoking a feature. Annex A does not list the `serviceName` values for those
+ * examples.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clauses 4.2.2.1 and 8.1.1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -46,60 +62,132 @@ export
 class ServiceInstance {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `callId`.
+     * @description
+     *
+     * Call identifier the Delivery Function builds from the
+     * Billing-Correlation-ID in the Event Messages. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callId: CallId;
     /**
      * @summary `relatedCallId`.
+     * @description
+     *
+     * Another call associated with this service. Optional. This edition does
+     * not define the relationship. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly relatedCallId: OPTIONAL<CallId>;
     /**
      * @summary `serviceName`.
+     * @description
+     *
+     * Name of the service. `VisibleString` of size 1 to 128, extensible. This
+     * edition does not define the vocabulary. Clause 4.2.2.1 gives call hold
+     * and call divert as examples of feature invocation, without naming the
+     * strings.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly serviceName: VisibleString;
     /**
      * @summary `firstCallCalling`.
+     * @description
+     *
+     * Calling party of a first call. Optional. This edition does not define
+     * which call is first, or which `PartyId` components to populate.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly firstCallCalling: OPTIONAL<PartyId>;
     /**
      * @summary `secondCallCalling`.
+     * @description
+     *
+     * Calling party of a second call. Optional. This edition does not define
+     * which call is second, or which `PartyId` components to populate.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly secondCallCalling: OPTIONAL<PartyId>;
     /**
      * @summary `called`.
+     * @description
+     *
+     * A called party for the service. Optional. This edition does not define
+     * which `PartyId` components to populate.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly called: OPTIONAL<PartyId>;
     /**
      * @summary `calling`.
+     * @description
+     *
+     * A calling party for the service. Optional. This edition does not define
+     * how this differs from `firstCallCalling` and `secondCallCalling`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

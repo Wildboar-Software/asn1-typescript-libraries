@@ -23,7 +23,25 @@ import { TransitCarrierId, _decode_TransitCarrierId, _encode_TransitCarrierId } 
 /**
  * @summary Redirection
  * @description
- * 
+ *
+ * Message alternative naming the call before redirection (`old`), the party
+ * redirected to, an optional new call identifier, an optional party redirected
+ * from, and an optional transit carrier.
+ *
+ * `reserved0` and `reserved1` are `NULL` and marked reserved.
+ *
+ * Clause 3.1 defines a redirected call as a call that is transferred, or
+ * redirected as a service to a terminating subscriber: unconditionally, when
+ * the line is busy, or when the subscriber does not answer. A transferred call
+ * changes the originating or terminating party because a party to the call
+ * takes action. Clause 8.1.1 requires the IRI, when a call has been diverted,
+ * to include the actual destination and the intermediate directory numbers.
+ * Annex A does not map these fields onto those statements.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clauses 3.1 and 8.1.1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -48,60 +66,127 @@ export
 class Redirection {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `old`.
+     * @description
+     *
+     * Call identifier of the call before redirection. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly old: CallId;
     /**
      * @summary `redirectedto`.
+     * @description
+     *
+     * Party the call is redirected to. Mandatory. This edition does not define
+     * which `PartyId` components to populate.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly redirectedto: PartyId;
     /**
      * @summary `transitCarrierId`.
+     * @description
+     *
+     * Transit carrier. A `VisibleString` of size 3 to 7, extensible. Optional.
+     * This edition does not define the numbering plan. See `TransitCarrierId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly transitCarrierId: OPTIONAL<TransitCarrierId>;
     /**
      * @summary `reserved0`.
+     * @description
+     *
+     * Marked reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved0: NULL;
     /**
      * @summary `reserved1`.
+     * @description
+     *
+     * Marked reserved. Encoded as `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved1: NULL;
     /**
      * @summary `new_`.
+     * @description
+     *
+     * Call identifier after redirection. Optional. This edition does not say
+     * when a new call identifier is assigned. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly new_: OPTIONAL<CallId>;
     /**
      * @summary `redirectedfrom`.
+     * @description
+     *
+     * Party the call is redirected from. Optional. This edition does not say
+     * when it is included.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

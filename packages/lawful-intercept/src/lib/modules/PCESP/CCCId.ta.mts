@@ -12,7 +12,25 @@ import { CCCId_sepCCCpair, _decode_CCCId_sepCCCpair, _encode_CCCId_sepCCCpair } 
 /**
  * @summary CCCId
  * @description
- * 
+ *
+ * Identifier of a call-content packet stream.
+ *
+ * The Delivery Function must generate this from the CCC-Identifier used for the
+ * corresponding call-content packet stream, by converting the 32-bit value to
+ * an 8-character hex-encoded ASCII string of digits 0-9 and letters A-F.
+ *
+ * `combCCC` carries one such string. `sepCCCpair` carries `sepXmitCCC` and
+ * `sepRecvCCC`. Each component is a `VisibleString` of size 1 to 20,
+ * extensible. The module comment requires the 8-character hex form. This
+ * edition does not say which alternative to select.
+ *
+ * `ConferencePartyChange` includes `cCCId` when the content of the resulting
+ * call is delivered, to identify the associated CCC or CCCs.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,7 +47,21 @@ import { CCCId_sepCCCpair, _decode_CCCId_sepCCCpair, _encode_CCCId_sepCCCpair } 
  */
 export
 type CCCId =
+    /**
+     * One CCC identifier. `VisibleString` of size 1 to 20,
+     * extensible. The module comment requires the 8-character hex
+     * form of a 32-bit CCC-Identifier.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     { combCCC: VisibleString } /* CHOICE_ALT_ROOT */
+    /**
+     * Separate transmit and receive CCC identifiers. See
+     * `CCCId_sepCCCpair`. This edition does not say which
+     * alternative to select.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     | { sepCCCpair: CCCId_sepCCCpair } /* CHOICE_ALT_ROOT */
     | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 

@@ -26,7 +26,22 @@ import { ResourceState, _decode_ResourceState, _encode_ResourceState, _enum_for_
 /**
  * @summary CCChange
  * @description
- * 
+ *
+ * Message alternative carrying a call identifier, a call-content identifier, a
+ * flow direction, optional SDP for `subject` and `associate`, and an optional
+ * resource state.
+ *
+ * This edition does not define the event that produces it, how `subject` and
+ * `associate` differ, or the meaning of `reserved` and `committed`. See
+ * `CCCId`, `SDP`, `FlowDirection`, and `ResourceState`.
+ *
+ * Annex B says SDP copied to the mediation function includes the encryption
+ * keys.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annexes A and B.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -50,54 +65,120 @@ export
 class CCChange {
     /**
      * @summary `caseId`.
+     * @description
+     *
+     * Intercept case identifier. This edition does not define how it is
+     * assigned. See `CaseId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly caseId: CaseId;
     /**
      * @summary `accessingElementId`.
+     * @description
+     *
+     * Statically configured element number of the reporting element.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly accessingElementId: AccessingElementId;
     /**
      * @summary `eventTime`.
+     * @description
+     *
+     * Time of this message, as `GeneralizedTime`. This edition does not say
+     * which instant is recorded. It is a different field from the `UTCTime`
+     * timestamp on `TARGETACTIVITYMONITOR` (clause 8.4.2.1.3).
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly eventTime: EventTime;
     /**
      * @summary `callId`.
+     * @description
+     *
+     * Call identifier the Delivery Function builds from the
+     * Billing-Correlation-ID in the Event Messages. See `CallId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly callId: CallId;
     /**
      * @summary `cCCId`.
+     * @description
+     *
+     * Call-content identifier. The Delivery Function generates it from the
+     * 32-bit CCC-Identifier of the corresponding call-content packet stream.
+     * See `CCCId`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly cCCId: CCCId;
     /**
      * @summary `subject`.
+     * @description
+     *
+     * SDP for one party to the media. Annex B says SDP copied to the mediation
+     * function includes the encryption keys. This edition does not define how
+     * this differs from `associate`. See `SDP`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly subject: OPTIONAL<SDP>;
     /**
      * @summary `associate`.
+     * @description
+     *
+     * SDP for one party to the media. Annex B says SDP copied to the mediation
+     * function includes the encryption keys. This edition does not define how
+     * this differs from `subject`. See `SDP`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly associate: OPTIONAL<SDP>;
     /**
      * @summary `flowDirection`.
+     * @description
+     *
+     * Downstream, upstream, or both. This edition does not define those
+     * directions. See `FlowDirection`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly flowDirection: FlowDirection;
     /**
      * @summary `resourceState`.
+     * @description
+     *
+     * `reserved` or `committed`. Optional. This edition does not define either
+     * state. See `ResourceState`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

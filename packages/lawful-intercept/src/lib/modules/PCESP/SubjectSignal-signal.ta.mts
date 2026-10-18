@@ -12,7 +12,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary SubjectSignal_signal
  * @description
- * 
+ *
+ * Subject-initiated dialing and signalling on `SubjectSignal`.
+ *
+ * The module comment says to include at least one of the four parameters. Each
+ * is a `VisibleString` of size 1 to 128, extensible.
+ * `otherSignalingInformation` reports a subject signal that the other three do
+ * not define. This edition does not define the string format of any of the
+ * four.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -37,24 +49,58 @@ export
 class SubjectSignal_signal {
     /**
      * @summary `switchhookFlash`.
+     * @description
+     *
+     * Switch-hook flash from the subject. `VisibleString` of size 1 to 128,
+     * extensible. Optional. At least one of the four parameters is present. The
+     * string format is not defined in this edition.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly switchhookFlash: OPTIONAL<VisibleString>;
     /**
      * @summary `dialedDigits`.
+     * @description
+     *
+     * Digits dialed by the subject. `VisibleString` of size 1 to 128,
+     * extensible. Optional. At least one of the four parameters is present. The
+     * character set is not defined in this edition. DTMF extraction uses a
+     * different, narrower alphabet; see `DialedDigitExtraction`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly dialedDigits: OPTIONAL<VisibleString>;
     /**
      * @summary `featureKey`.
+     * @description
+     *
+     * Feature key pressed by the subject. `VisibleString` of size 1 to 128,
+     * extensible. Optional. At least one of the four parameters is present. The
+     * string format is not defined in this edition.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly featureKey: OPTIONAL<VisibleString>;
     /**
      * @summary `otherSignalingInformation`.
+     * @description
+     *
+     * Subject signalling that the other three parameters do not define.
+     * `VisibleString` of size 1 to 128, extensible. Optional. At least one of
+     * the four is present. The module comment says it can report undefined
+     * subject signals.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

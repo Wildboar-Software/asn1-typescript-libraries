@@ -6,30 +6,140 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 
+/**
+ * @summary _enum_for_AlertingSignal
+ * @description
+ *
+ * Alerting signal applied toward the surveillance subject. `notUsed`
+ * is reserved. See `AlertingSignal` for the GR-506-CORE reference.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
+ * @enum {number}
+ */
 export
 enum _enum_for_AlertingSignal {
+    /**
+     * Reserved. Value 0.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     notUsed = 0,
+    /**
+     * Normal ringing.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern0 = 1,
+    /**
+     * Distinctive ringing: intergroup.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern1 = 2,
+    /**
+     * Distinctive ringing: special or priority.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern2 = 3,
+    /**
+     * Distinctive ringing for electronic key telephone service. The module
+     * comment abbreviates this as "electronic key telephone srvc".
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern3 = 4,
+    /**
+     * Ringsplash, or reminder ring.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern4 = 5,
+    /**
+     * Normal call-waiting tone.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     callWaitingPattern1 = 6,
+    /**
+     * Incoming additional call-waiting tone.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     callWaitingPattern2 = 7,
+    /**
+     * Priority additional call-waiting tone.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     callWaitingPattern3 = 8,
+    /**
+     * Distinctive call-waiting tone.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     callWaitingPattern4 = 9,
+    /**
+     * Barge-in tone, for example operator barge-in.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     bargeInTone = 10,
+    /**
+     * Distinctive ringing whose pattern is solution specific.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern5 = 11,
+    /**
+     * Distinctive ringing whose pattern is solution specific.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern6 = 12,
+    /**
+     * Distinctive ringing whose pattern is solution specific.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern7 = 13,
+    /**
+     * Distinctive ringing whose pattern is solution specific.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern8 = 14,
+    /**
+     * Distinctive ringing whose pattern is solution specific.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     */
     alertingPattern9 = 15,
 }
 
 /**
  * @summary AlertingSignal
  * @description
- * 
+ *
+ * Alerting signal applied toward the surveillance subject.
+ *
+ * The module comment refers to GR-506-CORE, LSSGR: Signaling for Analog
+ * Interfaces, a module of the LATA Switching Systems Generic Requirements
+ * (LSSGR), FR-64. This edition does not reproduce that document. `notUsed` (0)
+ * is reserved.
+ *
+ * The short name `notUsed` is not re-exported from
+ * `@wildboar/lawful-intercept/PCESP`, because `AudibleSignal` declares
+ * the same short name. The long name `AlertingSignal_notUsed` is
+ * re-exported.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -62,6 +172,12 @@ type AlertingSignal = _enum_for_AlertingSignal | ENUMERATED;
 
 /**
  * @summary AlertingSignal_notUsed
+ * @description
+ *
+ * Reserved. Value 0.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -70,6 +186,12 @@ const AlertingSignal_notUsed: AlertingSignal = 0; /* LONG_NAMED_ENUMERATED_VALUE
 
 /**
  * @summary notUsed
+ * @description
+ *
+ * Reserved. Value 0.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -78,6 +200,12 @@ const notUsed: AlertingSignal = AlertingSignal_notUsed; /* SHORT_NAMED_ENUMERATE
 
 /**
  * @summary AlertingSignal_alertingPattern0
+ * @description
+ *
+ * Normal ringing.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -86,6 +214,12 @@ const AlertingSignal_alertingPattern0: AlertingSignal = 1; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary alertingPattern0
+ * @description
+ *
+ * Normal ringing.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -94,6 +228,12 @@ const alertingPattern0: AlertingSignal = AlertingSignal_alertingPattern0; /* SHO
 
 /**
  * @summary AlertingSignal_alertingPattern1
+ * @description
+ *
+ * Distinctive ringing: intergroup.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -102,6 +242,12 @@ const AlertingSignal_alertingPattern1: AlertingSignal = 2; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary alertingPattern1
+ * @description
+ *
+ * Distinctive ringing: intergroup.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -110,6 +256,12 @@ const alertingPattern1: AlertingSignal = AlertingSignal_alertingPattern1; /* SHO
 
 /**
  * @summary AlertingSignal_alertingPattern2
+ * @description
+ *
+ * Distinctive ringing: special or priority.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -118,6 +270,12 @@ const AlertingSignal_alertingPattern2: AlertingSignal = 3; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary alertingPattern2
+ * @description
+ *
+ * Distinctive ringing: special or priority.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -126,6 +284,13 @@ const alertingPattern2: AlertingSignal = AlertingSignal_alertingPattern2; /* SHO
 
 /**
  * @summary AlertingSignal_alertingPattern3
+ * @description
+ *
+ * Distinctive ringing for electronic key telephone service. The module comment
+ * abbreviates this as "electronic key telephone srvc".
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -134,6 +299,13 @@ const AlertingSignal_alertingPattern3: AlertingSignal = 4; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary alertingPattern3
+ * @description
+ *
+ * Distinctive ringing for electronic key telephone service. The module comment
+ * abbreviates this as "electronic key telephone srvc".
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -142,6 +314,12 @@ const alertingPattern3: AlertingSignal = AlertingSignal_alertingPattern3; /* SHO
 
 /**
  * @summary AlertingSignal_alertingPattern4
+ * @description
+ *
+ * Ringsplash, or reminder ring.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -150,6 +328,12 @@ const AlertingSignal_alertingPattern4: AlertingSignal = 5; /* LONG_NAMED_ENUMERA
 
 /**
  * @summary alertingPattern4
+ * @description
+ *
+ * Ringsplash, or reminder ring.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -158,6 +342,12 @@ const alertingPattern4: AlertingSignal = AlertingSignal_alertingPattern4; /* SHO
 
 /**
  * @summary AlertingSignal_callWaitingPattern1
+ * @description
+ *
+ * Normal call-waiting tone.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -166,6 +356,12 @@ const AlertingSignal_callWaitingPattern1: AlertingSignal = 6; /* LONG_NAMED_ENUM
 
 /**
  * @summary callWaitingPattern1
+ * @description
+ *
+ * Normal call-waiting tone.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -174,6 +370,12 @@ const callWaitingPattern1: AlertingSignal = AlertingSignal_callWaitingPattern1; 
 
 /**
  * @summary AlertingSignal_callWaitingPattern2
+ * @description
+ *
+ * Incoming additional call-waiting tone.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -182,6 +384,12 @@ const AlertingSignal_callWaitingPattern2: AlertingSignal = 7; /* LONG_NAMED_ENUM
 
 /**
  * @summary callWaitingPattern2
+ * @description
+ *
+ * Incoming additional call-waiting tone.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -190,6 +398,12 @@ const callWaitingPattern2: AlertingSignal = AlertingSignal_callWaitingPattern2; 
 
 /**
  * @summary AlertingSignal_callWaitingPattern3
+ * @description
+ *
+ * Priority additional call-waiting tone.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -198,6 +412,12 @@ const AlertingSignal_callWaitingPattern3: AlertingSignal = 8; /* LONG_NAMED_ENUM
 
 /**
  * @summary callWaitingPattern3
+ * @description
+ *
+ * Priority additional call-waiting tone.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -206,6 +426,12 @@ const callWaitingPattern3: AlertingSignal = AlertingSignal_callWaitingPattern3; 
 
 /**
  * @summary AlertingSignal_callWaitingPattern4
+ * @description
+ *
+ * Distinctive call-waiting tone.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -214,6 +440,12 @@ const AlertingSignal_callWaitingPattern4: AlertingSignal = 9; /* LONG_NAMED_ENUM
 
 /**
  * @summary callWaitingPattern4
+ * @description
+ *
+ * Distinctive call-waiting tone.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -222,6 +454,12 @@ const callWaitingPattern4: AlertingSignal = AlertingSignal_callWaitingPattern4; 
 
 /**
  * @summary AlertingSignal_bargeInTone
+ * @description
+ *
+ * Barge-in tone, for example operator barge-in.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -230,6 +468,12 @@ const AlertingSignal_bargeInTone: AlertingSignal = 10; /* LONG_NAMED_ENUMERATED_
 
 /**
  * @summary bargeInTone
+ * @description
+ *
+ * Barge-in tone, for example operator barge-in.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -238,6 +482,12 @@ const bargeInTone: AlertingSignal = AlertingSignal_bargeInTone; /* SHORT_NAMED_E
 
 /**
  * @summary AlertingSignal_alertingPattern5
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -246,6 +496,12 @@ const AlertingSignal_alertingPattern5: AlertingSignal = 11; /* LONG_NAMED_ENUMER
 
 /**
  * @summary alertingPattern5
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -254,6 +510,12 @@ const alertingPattern5: AlertingSignal = AlertingSignal_alertingPattern5; /* SHO
 
 /**
  * @summary AlertingSignal_alertingPattern6
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -262,6 +524,12 @@ const AlertingSignal_alertingPattern6: AlertingSignal = 12; /* LONG_NAMED_ENUMER
 
 /**
  * @summary alertingPattern6
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -270,6 +538,12 @@ const alertingPattern6: AlertingSignal = AlertingSignal_alertingPattern6; /* SHO
 
 /**
  * @summary AlertingSignal_alertingPattern7
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -278,6 +552,12 @@ const AlertingSignal_alertingPattern7: AlertingSignal = 13; /* LONG_NAMED_ENUMER
 
 /**
  * @summary alertingPattern7
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -286,6 +566,12 @@ const alertingPattern7: AlertingSignal = AlertingSignal_alertingPattern7; /* SHO
 
 /**
  * @summary AlertingSignal_alertingPattern8
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -294,6 +580,12 @@ const AlertingSignal_alertingPattern8: AlertingSignal = 14; /* LONG_NAMED_ENUMER
 
 /**
  * @summary alertingPattern8
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -302,6 +594,12 @@ const alertingPattern8: AlertingSignal = AlertingSignal_alertingPattern8; /* SHO
 
 /**
  * @summary AlertingSignal_alertingPattern9
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */
@@ -310,6 +608,12 @@ const AlertingSignal_alertingPattern9: AlertingSignal = 15; /* LONG_NAMED_ENUMER
 
 /**
  * @summary alertingPattern9
+ * @description
+ *
+ * Distinctive ringing whose pattern is solution specific.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
  * @constant
  * @type {number}
  */

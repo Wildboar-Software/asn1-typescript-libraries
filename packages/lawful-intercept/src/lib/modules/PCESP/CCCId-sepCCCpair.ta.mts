@@ -12,7 +12,19 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary CCCId_sepCCCpair
  * @description
- * 
+ *
+ * The transmit and receive CCC identifiers used when `CCCId` is a separated
+ * pair.
+ *
+ * Each is a `VisibleString` of size 1 to 20, extensible. The `CCCId` module
+ * comment requires each to be the 8-character hex form of a 32-bit
+ * CCC-Identifier. This edition does not define which stream is transmit and
+ * which is receive.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -29,12 +41,30 @@ export
 class CCCId_sepCCCpair {
     /**
      * @summary `sepXmitCCC`.
+     * @description
+     *
+     * One CCC identifier of a separated pair. `VisibleString` of size 1 to 20,
+     * extensible. The `CCCId` comment requires an 8-character hex encoding of a
+     * 32-bit CCC-Identifier. This edition does not define the transmit
+     * direction.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly sepXmitCCC: VisibleString;
     /**
      * @summary `sepRecvCCC`.
+     * @description
+     *
+     * One CCC identifier of a separated pair. `VisibleString` of size 1 to 20,
+     * extensible. The `CCCId` comment requires an 8-character hex encoding of a
+     * 32-bit CCC-Identifier. This edition does not define the receive
+     * direction.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

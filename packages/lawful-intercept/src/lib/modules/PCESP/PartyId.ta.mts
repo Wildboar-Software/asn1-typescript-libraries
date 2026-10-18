@@ -13,7 +13,28 @@ import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary PartyId
  * @description
- * 
+ *
+ * Party identity. Every component is optional.
+ *
+ * Components commented "Reserved" are `NULL` and have no defined use. The
+ * identity strings present in the module are `dn`, `userProvided`, `ipAddress`,
+ * `trunkId`, `genericAddress`, `genericDigits`, `genericName`, `port`, and
+ * `context`. This edition does not define their formats, their abbreviations,
+ * or which combination to populate. Annex A defers parameter definitions to
+ * PacketCable PKT-SP-ESP-I04-040723.
+ *
+ * Clause 3.1 defines an identity as a technical label for the origin or
+ * destination of traffic, such as a telephone number, or a personal number the
+ * subscriber assigns to a physical access.
+ *
+ * Sizes, each an extensible `VisibleString`: `dn` and `userProvided` are 1 to
+ * 15; `ipAddress`, `trunkId`, `genericAddress`, `genericDigits`, `port`, and
+ * `context` are 1 to 32; `genericName` is 1 to 48.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 3.1 and annex A.
+ *
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
+ *
  * ### ASN.1 Definition:
  * 
  * ```asn1
@@ -47,114 +68,237 @@ export
 class PartyId {
     /**
      * @summary `reserved0`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved0: OPTIONAL<NULL>;
     /**
      * @summary `reserved1`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved1: OPTIONAL<NULL>;
     /**
      * @summary `reserved2`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved2: OPTIONAL<NULL>;
     /**
      * @summary `reserved3`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved3: OPTIONAL<NULL>;
     /**
      * @summary `reserved4`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved4: OPTIONAL<NULL>;
     /**
      * @summary `reserved5`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved5: OPTIONAL<NULL>;
     /**
      * @summary `dn`.
+     * @description
+     *
+     * Optional identity string, size 1 to 15, extensible. This edition does not
+     * define the format or expand the name `dn`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly dn: OPTIONAL<VisibleString>;
     /**
      * @summary `userProvided`.
+     * @description
+     *
+     * Optional identity string, size 1 to 15, extensible. This edition does not
+     * define the format, or what "user provided" covers.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly userProvided: OPTIONAL<VisibleString>;
     /**
      * @summary `reserved6`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved6: OPTIONAL<NULL>;
     /**
      * @summary `reserved7`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved7: OPTIONAL<NULL>;
     /**
      * @summary `ipAddress`.
+     * @description
+     *
+     * Optional identity string, size 1 to 32, extensible. This edition does not
+     * define the address textual form.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly ipAddress: OPTIONAL<VisibleString>;
     /**
      * @summary `reserved8`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved8: OPTIONAL<NULL>;
     /**
      * @summary `trunkId`.
+     * @description
+     *
+     * Optional identity string, size 1 to 32, extensible. This edition does not
+     * define the trunk numbering.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly trunkId: OPTIONAL<VisibleString>;
     /**
      * @summary `reserved9`.
+     * @description
+     *
+     * Marked reserved. Optional `NULL`. No use is defined.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly reserved9: OPTIONAL<NULL>;
     /**
      * @summary `genericAddress`.
+     * @description
+     *
+     * Optional identity string, size 1 to 32, extensible. This edition does not
+     * define the address format.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly genericAddress: OPTIONAL<VisibleString>;
     /**
      * @summary `genericDigits`.
+     * @description
+     *
+     * Optional identity string, size 1 to 32, extensible. This edition does not
+     * define the digit encoding.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly genericDigits: OPTIONAL<VisibleString>;
     /**
      * @summary `genericName`.
+     * @description
+     *
+     * Optional name string, size 1 to 48, extensible. This edition does not
+     * define the character set beyond `VisibleString`.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly genericName: OPTIONAL<VisibleString>;
     /**
      * @summary `port`.
+     * @description
+     *
+     * Optional identity string, size 1 to 32, extensible. This edition does not
+     * define the format.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */
     readonly port: OPTIONAL<VisibleString>;
     /**
      * @summary `context`.
+     * @description
+     *
+     * Optional identity string, size 1 to 32, extensible. This edition does not
+     * define the context.
+     *
+     * ETSI TS 101 909-20-1 V1.1.2 (2005-10), annex A.
+     *
      * @public
      * @readonly
      */

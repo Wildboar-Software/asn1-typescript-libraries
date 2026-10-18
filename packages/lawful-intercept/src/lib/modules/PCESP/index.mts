@@ -1,8 +1,34 @@
 /**
  * @module
+ *
+ * PacketCable Electronic Surveillance Specification (PCESP), version 4,
+ * as published in ETSI TS 101 909-20-1.
+ *
+ * Module identity:
+ * `{iso(1) identified-organization(3) dod(6) internet(1) private(4)
+ * enterprise(1) cable-Television-Laboratories-Inc(4491) clabProject(2)
+ * clabProjPacketCable(2) pktcLawfulIntercept(5) pcesp(1) version-4(4)}`.
+ *
+ * `CdcPdu` is imported by module `TS101909201` and carried as the
+ * `cdcPdu` alternative of `UserSignalType` on
+ * `TARGETACTIVITYMONITOR-1`. Annex A assumes the Lawful Interception
+ * Mediation Function receives this module encoded with BER, then
+ * exports it in `TARGETACTIVITYMONITOR` toward the LEMF. If INI2
+ * arrives in DER, clause 5.1 requires the mediation function to decode
+ * it and re-encode with BER for HI2.
+ *
+ * Clause 1, note 3, says this edition neither defines the events nor
+ * the information to be provided to the handover interface. Annex A
+ * says the parameter definitions are in PacketCable Electronic
+ * Surveillance Specification PKT-SP-ESP-I04-040723 (reference [19]).
+ * The comments copied with the module are the semantics stated here.
+ *
  * Short named bits, integers, and enumeration items omitted because the
  * same short name is declared more than once in this module:
- * `notUsed`
+ * `notUsed`.
+ *
+ * ETSI TS 101 909-20-1 V1.1.2 (2005-10), clause 5.1 and annex A.
+ * https://www.etsi.org/deliver/etsi_ts/101900_101999/1019092001/01.01.02_60/ts_1019092001v010102p.pdf
  */
 export {
     type AccessingElementId,
