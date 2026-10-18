@@ -2,6 +2,13 @@
     "name": "@wildboar/c1222",
     "type": "module",
     "version": "1.0.0",
+    "description": "ANSI C12.22 ASN.1 data structures",
+    "keywords": [
+        "c12.22",
+        "smart",
+        "grid",
+        "ami"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
