@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
@@ -46,6 +47,9 @@ class TCGPlatformSpecification {
     ) {
         this.version = version;
         this.platformClass = platformClass;
+        if (platformClass.length !== 4) {
+            throw new ASN1SizeError("TCGPlatformSpecification.platformClass violates SIZE (4)");
+        }
     }
 
     /**

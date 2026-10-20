@@ -1,11 +1,13 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { ISO3166CountryCode, _decode_ISO3166CountryCode, _encode_ISO3166CountryCode } from "../PlatformCertificateProfileV2/ISO3166CountryCode.ta.mjs";
 // export { ISO3166CountryCode, _decode_ISO3166CountryCode, _encode_ISO3166CountryCode } from "../PlatformCertificateProfileV2/ISO3166CountryCode.ta.mjs";
 import { ISO3166AdminSubdivisionCode, _decode_ISO3166AdminSubdivisionCode, _encode_ISO3166AdminSubdivisionCode } from "../PlatformCertificateProfileV2/ISO3166AdminSubdivisionCode.ta.mjs";
@@ -86,6 +88,15 @@ class EntityGeoLocation {
         this.streetAddress = streetAddress;
         this.locationCoords = locationCoords;
         this.postalCode = postalCode;
+        if (localityName !== undefined && (localityName.length < 1 || localityName.length > strmax)) {
+            throw new ASN1SizeError("EntityGeoLocation.localityName violates SIZE (1..strmax)");
+        }
+        if (streetAddress !== undefined && (streetAddress.length < 1 || streetAddress.length > strmax)) {
+            throw new ASN1SizeError("EntityGeoLocation.streetAddress violates SIZE (1..strmax)");
+        }
+        if (postalCode !== undefined && (postalCode.length < 1 || postalCode.length > strmax)) {
+            throw new ASN1SizeError("EntityGeoLocation.postalCode violates SIZE (1..strmax)");
+        }
     }
 
     /**

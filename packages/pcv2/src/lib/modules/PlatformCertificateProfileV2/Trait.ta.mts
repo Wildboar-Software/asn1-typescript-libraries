@@ -2,6 +2,7 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
     IA5String,
     OBJECT_IDENTIFIER,
     OCTET_STRING,
@@ -9,6 +10,8 @@ import {
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
+import { urimax } from "../PlatformCertificateProfileV2/urimax.va.mjs";
 // export { TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 // export { TraitSet } from "../PlatformCertificateProfileV2/TraitSet.osa.mjs";
 
@@ -85,6 +88,12 @@ class Trait {
         this.description = description;
         this.descriptionURI = descriptionURI;
         this.traitValue = traitValue;
+        if (description !== undefined && (description.length < 1 || description.length > strmax)) {
+            throw new ASN1SizeError("Trait.description violates SIZE (1..strmax)");
+        }
+        if (descriptionURI !== undefined && (descriptionURI.length < 1 || descriptionURI.length > urimax)) {
+            throw new ASN1SizeError("Trait.descriptionURI violates SIZE (1..urimax)");
+        }
     }
 
     /**

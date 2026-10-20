@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     OPTIONAL,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -47,6 +48,12 @@ class PlatformConfiguration_v3 {
     ) {
         this.platformComponents = platformComponents;
         this.platformProperties = platformProperties;
+        if (platformComponents !== undefined && platformComponents.length < 1) {
+            throw new ASN1SizeError("PlatformConfiguration-v3.platformComponents violates SIZE (1..MAX)");
+        }
+        if (platformProperties !== undefined && platformProperties.length < 1) {
+            throw new ASN1SizeError("PlatformConfiguration-v3.platformProperties violates SIZE (1..MAX)");
+        }
     }
 
     /**

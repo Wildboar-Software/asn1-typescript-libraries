@@ -1,5 +1,7 @@
 /* eslint-disable */
 import {
+    ASN1ConstructionError,
+    ASN1SizeError,
     BIT_STRING,
     IA5String,
     OPTIONAL,
@@ -7,6 +9,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { urimax } from "../EKCredentialProfileV2/urimax.va.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 // export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
@@ -63,6 +66,12 @@ class URIReference {
         this.uniformResourceIdentifier = uniformResourceIdentifier;
         this.hashAlgorithm = hashAlgorithm;
         this.hashValue = hashValue;
+        if (uniformResourceIdentifier.length < 1 || uniformResourceIdentifier.length > urimax) {
+            throw new ASN1SizeError("URIReference.uniformResourceIdentifier violates SIZE (1..urimax)");
+        }
+        if ((hashAlgorithm !== undefined) !== (hashValue !== undefined)) {
+            throw new ASN1ConstructionError("URIReference.hashAlgorithm and hashValue must both be present or both be absent");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

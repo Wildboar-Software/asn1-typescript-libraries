@@ -2,11 +2,13 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
     INTEGER,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../EKCredentialProfileV2/strmax.va.mjs";
 
 
 
@@ -60,6 +62,9 @@ class TPMSpecification {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.family = family;
+        if (family.length < 1 || family.length > strmax) {
+            throw new ASN1SizeError("TPMSpecification.family violates SIZE (1..strmax)");
+        }
         this.level = level;
         this.revision = revision;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

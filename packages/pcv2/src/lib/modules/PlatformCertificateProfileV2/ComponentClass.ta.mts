@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
@@ -46,6 +47,9 @@ class ComponentClass {
     ) {
         this.componentClassRegistry = componentClassRegistry;
         this.componentClassValue = componentClassValue;
+        if (componentClassValue.length !== 4) {
+            throw new ASN1SizeError("ComponentClass.componentClassValue violates SIZE (4)");
+        }
     }
 
     /**

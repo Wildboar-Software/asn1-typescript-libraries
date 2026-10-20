@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     BOOLEAN,
     IA5String,
     OPTIONAL,
@@ -7,6 +8,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { urimax } from "../EKCredentialProfileV2/urimax.va.mjs";
 import { Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../EKCredentialProfileV2/Version.ta.mjs";
 // export { Version, Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Version, _encode_Version } from "../EKCredentialProfileV2/Version.ta.mjs";
 import { EKGenerationType, _decode_EKGenerationType, _encode_EKGenerationType, _enum_for_EKGenerationType } from "../EKCredentialProfileV2/EKGenerationType.ta.mjs";
@@ -128,6 +130,9 @@ class TPMSecurityAssertions {
         this.fipsLevel = fipsLevel;
         this.iso9000Certified = iso9000Certified;
         this.iso9000Uri = iso9000Uri;
+        if (iso9000Uri !== undefined && (iso9000Uri.length < 1 || iso9000Uri.length > urimax)) {
+            throw new ASN1SizeError("TPMSecurityAssertions.iso9000Uri violates SIZE (1..urimax)");
+        }
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 

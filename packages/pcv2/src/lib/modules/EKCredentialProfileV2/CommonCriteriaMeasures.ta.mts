@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     BOOLEAN,
     IA5String,
     OBJECT_IDENTIFIER,
@@ -8,6 +9,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../EKCredentialProfileV2/strmax.va.mjs";
 import { EvaluationAssuranceLevel, _decode_EvaluationAssuranceLevel, _encode_EvaluationAssuranceLevel, _enum_for_EvaluationAssuranceLevel } from "../EKCredentialProfileV2/EvaluationAssuranceLevel.ta.mjs";
 // export { EvaluationAssuranceLevel, _enum_for_EvaluationAssuranceLevel, EvaluationAssuranceLevel_levell /* IMPORTED_LONG_ENUMERATION_ITEM */, levell /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level5 /* IMPORTED_LONG_ENUMERATION_ITEM */, level5 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level6 /* IMPORTED_LONG_ENUMERATION_ITEM */, level6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level7 /* IMPORTED_LONG_ENUMERATION_ITEM */, level7 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EvaluationAssuranceLevel, _encode_EvaluationAssuranceLevel } from "../EKCredentialProfileV2/EvaluationAssuranceLevel.ta.mjs";
 import { EvaluationStatus, _decode_EvaluationStatus, _encode_EvaluationStatus, _enum_for_EvaluationStatus } from "../EKCredentialProfileV2/EvaluationStatus.ta.mjs";
@@ -117,6 +119,9 @@ class CommonCriteriaMeasures {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;
+        if (version.length < 1 || version.length > strmax) {
+            throw new ASN1SizeError("CommonCriteriaMeasures.version violates SIZE (1..strmax)");
+        }
         this.assurancelevel = assurancelevel;
         this.evaluationStatus = evaluationStatus;
         this.plus = plus;

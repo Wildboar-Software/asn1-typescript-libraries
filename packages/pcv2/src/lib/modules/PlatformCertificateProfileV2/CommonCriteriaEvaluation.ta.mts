@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     GeneralizedTime,
     OPTIONAL,
     UTF8String,
@@ -7,6 +8,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../EKCredentialProfileV2/CommonCriteriaMeasures.ta.mjs";
 // export { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../EKCredentialProfileV2/CommonCriteriaMeasures.ta.mjs";
 
@@ -83,6 +85,15 @@ class CommonCriteriaEvaluation {
         this.evaluationScheme = evaluationScheme;
         this.cCCertificateIssuanceDate = cCCertificateIssuanceDate;
         this.cCCertificateExpiryDate = cCCertificateExpiryDate;
+        if (cCCertificateNumber.length < 1 || cCCertificateNumber.length > strmax) {
+            throw new ASN1SizeError("CommonCriteriaEvaluation.cCCertificateNumber violates SIZE (1..strmax)");
+        }
+        if (cCCertificateAuthority.length < 1 || cCCertificateAuthority.length > strmax) {
+            throw new ASN1SizeError("CommonCriteriaEvaluation.cCCertificateAuthority violates SIZE (1..strmax)");
+        }
+        if (evaluationScheme !== undefined && (evaluationScheme.length < 1 || evaluationScheme.length > strmax)) {
+            throw new ASN1SizeError("CommonCriteriaEvaluation.evaluationScheme violates SIZE (1..strmax)");
+        }
     }
 
     /**

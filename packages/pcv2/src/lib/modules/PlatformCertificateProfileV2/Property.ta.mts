@@ -2,10 +2,12 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    ASN1SizeError,
     OPTIONAL,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { _decode_AttributeStatus, _encode_AttributeStatus, _enum_for_AttributeStatus, AttributeStatus } from "../PlatformCertificateProfileV2/AttributeStatus.ta.mjs";
 // export { AttributeStatus, _enum_for_AttributeStatus, AttributeStatus_added /* IMPORTED_LONG_ENUMERATION_ITEM */, added /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_modified /* IMPORTED_LONG_ENUMERATION_ITEM */, modified /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_removed /* IMPORTED_LONG_ENUMERATION_ITEM */, removed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfileV2/AttributeStatus.ta.mjs";
 
@@ -55,6 +57,12 @@ class Property {
         this.propertyName = propertyName;
         this.propertyValue = propertyValue;
         this.status = status;
+        if (propertyName.length < 1 || propertyName.length > strmax) {
+            throw new ASN1SizeError("Property.propertyName violates SIZE (1..strmax)");
+        }
+        if (propertyValue.length < 1 || propertyValue.length > strmax) {
+            throw new ASN1SizeError("Property.propertyValue violates SIZE (1..strmax)");
+        }
     }
 
     /**

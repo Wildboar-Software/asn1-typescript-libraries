@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     BOOLEAN,
     OPTIONAL,
     UTF8String,
@@ -7,6 +8,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { ComponentClass, _decode_ComponentClass, _encode_ComponentClass } from "../PlatformCertificateProfileV2/ComponentClass.ta.mjs";
 // export { ComponentClass, _decode_ComponentClass, _encode_ComponentClass } from "../PlatformCertificateProfileV2/ComponentClass.ta.mjs";
 import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfileV2/PrivateEnterpriseNumber.ta.mjs";
@@ -138,6 +140,21 @@ class ComponentIdentifierV11 {
         this.componentPlatformCert = componentPlatformCert;
         this.componentPlatformCertUri = componentPlatformCertUri;
         this.status = status;
+        if (componentManufacturer.length < 1 || componentManufacturer.length > strmax) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentManufacturer violates SIZE (1..strmax)");
+        }
+        if (componentModel.length < 1 || componentModel.length > strmax) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentModel violates SIZE (1..strmax)");
+        }
+        if (componentSerial !== undefined && (componentSerial.length < 1 || componentSerial.length > strmax)) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentSerial violates SIZE (1..strmax)");
+        }
+        if (componentRevision !== undefined && (componentRevision.length < 1 || componentRevision.length > strmax)) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentRevision violates SIZE (1..strmax)");
+        }
+        if (componentAddresses !== undefined && componentAddresses.length < 1) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentAddresses violates SIZE (1..MAX)");
+        }
     }
 
     /**

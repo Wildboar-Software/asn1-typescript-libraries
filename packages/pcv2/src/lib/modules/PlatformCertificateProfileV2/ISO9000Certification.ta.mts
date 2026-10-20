@@ -1,12 +1,14 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
     BOOLEAN,
     IA5String,
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { urimax } from "../PlatformCertificateProfileV2/urimax.va.mjs";
 
 
 
@@ -46,6 +48,9 @@ class ISO9000Certification {
     ) {
         this.iso9000Certified = iso9000Certified;
         this.iso9000Uri = iso9000Uri;
+        if (iso9000Uri !== undefined && (iso9000Uri.length < 1 || iso9000Uri.length > urimax)) {
+            throw new ASN1SizeError("ISO9000Certification.iso9000Uri violates SIZE (1..urimax)");
+        }
     }
 
     /**
