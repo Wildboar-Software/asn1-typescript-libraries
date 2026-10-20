@@ -1,8 +1,13 @@
-# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
+# Platform Certificate Profile Version 2 in TypeScript
 
-Data structures from the ASN.1 definitions defined in
-[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
-Telebiometrics Authentication Infrastructure (TAI).
+ASN.1 data structures based on version 2.1 of the Trusted Computing Group
+[Platform Certificate Profile](https://trustedcomputinggroup.org/wp-content/uploads/TCG_Platform_Certificate_Profile_2.1_Pub_v2.pdf).
+The package contains the `PlatformCertificateProfileV2` and
+`EKCredentialProfileV2` modules.
+
+It is a separate package from `@wildboar/pc`, which implements Platform
+Certificate Profile version 1.1. The two profiles reuse identifiers for
+different productions.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -21,5 +26,22 @@ programming languages, or if you have any other questions, please contact us at
 
 ## ESM-Only
 
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
+This module is ESM-only.
+
+## Entry points
+
+The package root exports `PlatformCertificateProfileV2` and the symbols that
+exist only in `EKCredentialProfileV2`. When a name is defined in both modules,
+the root export is the platform-certificate production. That includes
+`FIPSLevel`: the endorsement-key module marks its module `EXTENSIBILITY IMPLIED`,
+so its `FIPSLevel` keeps unrecognized extension components and is available from
+`@wildboar/pcv2/EKCredentialProfileV2`.
+
+`@wildboar/pcv2/AuthenticationFramework` and
+`@wildboar/pcv2/InformationFramework` re-export the symbols this package uses
+from `@wildboar/x500`.
+
+## AI Usage Statement
+
+This package was onboarded from the raw compiler outputs using AI
+(Grok 4.7) on 20 October 2026.
