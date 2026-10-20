@@ -145,7 +145,7 @@ let _cached_encoder_for_ShortMessageText: $.ASN1Encoder<ShortMessageText> | null
  */
 export
 function _encode_ShortMessageText (value: ShortMessageText, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ShortMessageText) { _cached_encoder_for_ShortMessageText = function (value: ShortMessageText, elGetter: $.ASN1Encoder<ShortMessageText>): _Element {
+    if (!_cached_encoder_for_ShortMessageText) { _cached_encoder_for_ShortMessageText = function (value: ShortMessageText, _elGetter: $.ASN1Encoder<ShortMessageText>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ShortMessageTextType(value.shortMessageTextType, $.BER),
         /* REQUIRED   */ _encode_ShortMessageTextData(value.shortMessageTextData, $.BER)

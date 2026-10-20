@@ -156,7 +156,7 @@ let _cached_encoder_for_DNDOverrideArg: $.ASN1Encoder<DNDOverrideArg> | null = n
  */
 export
 function _encode_DNDOverrideArg (value: DNDOverrideArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDOverrideArg) { _cached_encoder_for_DNDOverrideArg = function (value: DNDOverrideArg, elGetter: $.ASN1Encoder<DNDOverrideArg>): _Element {
+    if (!_cached_encoder_for_DNDOverrideArg) { _cached_encoder_for_DNDOverrideArg = function (value: DNDOverrideArg, _elGetter: $.ASN1Encoder<DNDOverrideArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_DNDOCapabilityLevel(value.dndoCapabilityLevel, $.BER));
     if (value.argumentExtension !== undefined) {

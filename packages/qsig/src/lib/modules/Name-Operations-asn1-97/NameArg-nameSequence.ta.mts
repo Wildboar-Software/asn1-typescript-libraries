@@ -146,7 +146,7 @@ let _cached_encoder_for_NameArg_nameSequence: $.ASN1Encoder<NameArg_nameSequence
  */
 export
 function _encode_NameArg_nameSequence (value: NameArg_nameSequence, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NameArg_nameSequence) { _cached_encoder_for_NameArg_nameSequence = function (value: NameArg_nameSequence, elGetter: $.ASN1Encoder<NameArg_nameSequence>): _Element {
+    if (!_cached_encoder_for_NameArg_nameSequence) { _cached_encoder_for_NameArg_nameSequence = function (value: NameArg_nameSequence, _elGetter: $.ASN1Encoder<NameArg_nameSequence>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_Name(value.name, $.BER));
     if (value.extension !== undefined) {

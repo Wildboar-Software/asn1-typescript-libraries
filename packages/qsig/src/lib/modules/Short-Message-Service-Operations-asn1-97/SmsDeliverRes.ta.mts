@@ -146,7 +146,7 @@ let _cached_encoder_for_SmsDeliverRes: $.ASN1Encoder<SmsDeliverRes> | null = nul
  */
 export
 function _encode_SmsDeliverRes (value: SmsDeliverRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsDeliverRes) { _cached_encoder_for_SmsDeliverRes = function (value: SmsDeliverRes, elGetter: $.ASN1Encoder<SmsDeliverRes>): _Element {
+    if (!_cached_encoder_for_SmsDeliverRes) { _cached_encoder_for_SmsDeliverRes = function (value: SmsDeliverRes, _elGetter: $.ASN1Encoder<SmsDeliverRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_SmsDeliverResChoice(value.smsDeliverResponseChoice, $.BER));
     if (value.smsExtension !== undefined) {

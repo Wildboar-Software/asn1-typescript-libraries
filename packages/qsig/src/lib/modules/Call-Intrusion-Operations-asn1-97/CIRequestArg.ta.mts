@@ -156,7 +156,7 @@ let _cached_encoder_for_CIRequestArg: $.ASN1Encoder<CIRequestArg> | null = null;
  */
 export
 function _encode_CIRequestArg (value: CIRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CIRequestArg) { _cached_encoder_for_CIRequestArg = function (value: CIRequestArg, elGetter: $.ASN1Encoder<CIRequestArg>): _Element {
+    if (!_cached_encoder_for_CIRequestArg) { _cached_encoder_for_CIRequestArg = function (value: CIRequestArg, _elGetter: $.ASN1Encoder<CIRequestArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CICapabilityLevel(value.ciCapabilityLevel, $.BER));
     if (value.argumentExtension !== undefined) {

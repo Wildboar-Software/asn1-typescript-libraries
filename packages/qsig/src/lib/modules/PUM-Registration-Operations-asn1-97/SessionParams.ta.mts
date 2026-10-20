@@ -147,7 +147,7 @@ let _cached_encoder_for_SessionParams: $.ASN1Encoder<SessionParams> | null = nul
  */
 export
 function _encode_SessionParams (value: SessionParams, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SessionParams) { _cached_encoder_for_SessionParams = function (value: SessionParams, elGetter: $.ASN1Encoder<SessionParams>): _Element {
+    if (!_cached_encoder_for_SessionParams) { _cached_encoder_for_SessionParams = function (value: SessionParams, _elGetter: $.ASN1Encoder<SessionParams>): _Element {
     const _components: _Element[] = [];
     if (value.durationOfSession !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.durationOfSession, $.BER));

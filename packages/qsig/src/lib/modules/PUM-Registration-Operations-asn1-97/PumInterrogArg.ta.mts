@@ -264,7 +264,7 @@ let _cached_encoder_for_PumInterrogArg: $.ASN1Encoder<PumInterrogArg> | null = n
  */
 export
 function _encode_PumInterrogArg (value: PumInterrogArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PumInterrogArg) { _cached_encoder_for_PumInterrogArg = function (value: PumInterrogArg, elGetter: $.ASN1Encoder<PumInterrogArg>): _Element {
+    if (!_cached_encoder_for_PumInterrogArg) { _cached_encoder_for_PumInterrogArg = function (value: PumInterrogArg, _elGetter: $.ASN1Encoder<PumInterrogArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PumInterrogArg_pumUserId(value.pumUserId, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));

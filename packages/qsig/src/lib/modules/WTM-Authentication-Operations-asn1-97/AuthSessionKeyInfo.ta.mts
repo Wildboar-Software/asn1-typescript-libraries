@@ -145,7 +145,7 @@ let _cached_encoder_for_AuthSessionKeyInfo: $.ASN1Encoder<AuthSessionKeyInfo> | 
  */
 export
 function _encode_AuthSessionKeyInfo (value: AuthSessionKeyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthSessionKeyInfo) { _cached_encoder_for_AuthSessionKeyInfo = function (value: AuthSessionKeyInfo, elGetter: $.ASN1Encoder<AuthSessionKeyInfo>): _Element {
+    if (!_cached_encoder_for_AuthSessionKeyInfo) { _cached_encoder_for_AuthSessionKeyInfo = function (value: AuthSessionKeyInfo, _elGetter: $.ASN1Encoder<AuthSessionKeyInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_AuthSessionKey(value.authSessionKey, $.BER),
         /* REQUIRED   */ _encode_CalculationParam(value.calculationParam, $.BER)

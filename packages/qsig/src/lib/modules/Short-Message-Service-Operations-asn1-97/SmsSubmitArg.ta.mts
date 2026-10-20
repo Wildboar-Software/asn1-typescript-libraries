@@ -201,7 +201,7 @@ let _cached_encoder_for_SmsSubmitArg: $.ASN1Encoder<SmsSubmitArg> | null = null;
  */
 export
 function _encode_SmsSubmitArg (value: SmsSubmitArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsSubmitArg) { _cached_encoder_for_SmsSubmitArg = function (value: SmsSubmitArg, elGetter: $.ASN1Encoder<SmsSubmitArg>): _Element {
+    if (!_cached_encoder_for_SmsSubmitArg) { _cached_encoder_for_SmsSubmitArg = function (value: SmsSubmitArg, _elGetter: $.ASN1Encoder<SmsSubmitArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.destinationAddress, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.originatingAddress, $.BER));

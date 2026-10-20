@@ -183,7 +183,7 @@ let _cached_encoder_for_PumRegistrRes: $.ASN1Encoder<PumRegistrRes> | null = nul
  */
 export
 function _encode_PumRegistrRes (value: PumRegistrRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PumRegistrRes) { _cached_encoder_for_PumRegistrRes = function (value: PumRegistrRes, elGetter: $.ASN1Encoder<PumRegistrRes>): _Element {
+    if (!_cached_encoder_for_PumRegistrRes) { _cached_encoder_for_PumRegistrRes = function (value: PumRegistrRes, _elGetter: $.ASN1Encoder<PumRegistrRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pumNumber, $.BER));
     if (value.serviceOption !== undefined) {

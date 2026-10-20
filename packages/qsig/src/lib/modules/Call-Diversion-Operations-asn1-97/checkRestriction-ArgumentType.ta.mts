@@ -183,7 +183,7 @@ let _cached_encoder_for_checkRestriction_ArgumentType: $.ASN1Encoder<checkRestri
  */
 export
 function _encode_checkRestriction_ArgumentType (value: checkRestriction_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_checkRestriction_ArgumentType) { _cached_encoder_for_checkRestriction_ArgumentType = function (value: checkRestriction_ArgumentType, elGetter: $.ASN1Encoder<checkRestriction_ArgumentType>): _Element {
+    if (!_cached_encoder_for_checkRestriction_ArgumentType) { _cached_encoder_for_checkRestriction_ArgumentType = function (value: checkRestriction_ArgumentType, _elGetter: $.ASN1Encoder<checkRestriction_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));

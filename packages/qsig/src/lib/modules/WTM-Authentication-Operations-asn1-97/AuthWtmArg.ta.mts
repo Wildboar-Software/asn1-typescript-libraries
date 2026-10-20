@@ -160,7 +160,7 @@ let _cached_encoder_for_AuthWtmArg: $.ASN1Encoder<AuthWtmArg> | null = null;
  */
 export
 function _encode_AuthWtmArg (value: AuthWtmArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthWtmArg) { _cached_encoder_for_AuthWtmArg = function (value: AuthWtmArg, elGetter: $.ASN1Encoder<AuthWtmArg>): _Element {
+    if (!_cached_encoder_for_AuthWtmArg) { _cached_encoder_for_AuthWtmArg = function (value: AuthWtmArg, _elGetter: $.ASN1Encoder<AuthWtmArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtmUserId(value.wtmUserId, $.BER));
     if (value.calcWtatInfo !== undefined) {

@@ -156,7 +156,7 @@ let _cached_encoder_for_AocCompleteRes: $.ASN1Encoder<AocCompleteRes> | null = n
  */
 export
 function _encode_AocCompleteRes (value: AocCompleteRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocCompleteRes) { _cached_encoder_for_AocCompleteRes = function (value: AocCompleteRes, elGetter: $.ASN1Encoder<AocCompleteRes>): _Element {
+    if (!_cached_encoder_for_AocCompleteRes) { _cached_encoder_for_AocCompleteRes = function (value: AocCompleteRes, _elGetter: $.ASN1Encoder<AocCompleteRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ChargingOption(value.chargingOption, $.BER));
     if (value.completeResExtension !== undefined) {

@@ -146,7 +146,7 @@ let _cached_encoder_for_KeypadArg: $.ASN1Encoder<KeypadArg> | null = null;
  */
 export
 function _encode_KeypadArg (value: KeypadArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KeypadArg) { _cached_encoder_for_KeypadArg = function (value: KeypadArg, elGetter: $.ASN1Encoder<KeypadArg>): _Element {
+    if (!_cached_encoder_for_KeypadArg) { _cached_encoder_for_KeypadArg = function (value: KeypadArg, _elGetter: $.ASN1Encoder<KeypadArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_BMPStringNormal, $.BER)(value.keypadString, $.BER));
     if (value.extension !== undefined) {

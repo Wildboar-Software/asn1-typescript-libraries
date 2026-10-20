@@ -236,7 +236,7 @@ let _cached_encoder_for_DivertArg: $.ASN1Encoder<DivertArg> | null = null;
  */
 export
 function _encode_DivertArg (value: DivertArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DivertArg) { _cached_encoder_for_DivertArg = function (value: DivertArg, elGetter: $.ASN1Encoder<DivertArg>): _Element {
+    if (!_cached_encoder_for_DivertArg) { _cached_encoder_for_DivertArg = function (value: DivertArg, _elGetter: $.ASN1Encoder<DivertArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.hostingAddr, $.BER));
     _components.push(/* REQUIRED   */ _encode_PresentedNumberScreened(value.callingNumber, $.BER));

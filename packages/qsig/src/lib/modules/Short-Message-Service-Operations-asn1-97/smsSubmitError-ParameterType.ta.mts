@@ -174,7 +174,7 @@ let _cached_encoder_for_smsSubmitError_ParameterType: $.ASN1Encoder<smsSubmitErr
  */
 export
 function _encode_smsSubmitError_ParameterType (value: smsSubmitError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_smsSubmitError_ParameterType) { _cached_encoder_for_smsSubmitError_ParameterType = function (value: smsSubmitError_ParameterType, elGetter: $.ASN1Encoder<smsSubmitError_ParameterType>): _Element {
+    if (!_cached_encoder_for_smsSubmitError_ParameterType) { _cached_encoder_for_smsSubmitError_ParameterType = function (value: smsSubmitError_ParameterType, _elGetter: $.ASN1Encoder<smsSubmitError_ParameterType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_FailureCause(value.failureCause, $.BER));
     _components.push(/* REQUIRED   */ _encode_ServiceCentreTimeStamp(value.serviceCentreTimeStamp, $.BER));

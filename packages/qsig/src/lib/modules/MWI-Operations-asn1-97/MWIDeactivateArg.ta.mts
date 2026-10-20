@@ -184,7 +184,7 @@ let _cached_encoder_for_MWIDeactivateArg: $.ASN1Encoder<MWIDeactivateArg> | null
  */
 export
 function _encode_MWIDeactivateArg (value: MWIDeactivateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MWIDeactivateArg) { _cached_encoder_for_MWIDeactivateArg = function (value: MWIDeactivateArg, elGetter: $.ASN1Encoder<MWIDeactivateArg>): _Element {
+    if (!_cached_encoder_for_MWIDeactivateArg) { _cached_encoder_for_MWIDeactivateArg = function (value: MWIDeactivateArg, _elGetter: $.ASN1Encoder<MWIDeactivateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));

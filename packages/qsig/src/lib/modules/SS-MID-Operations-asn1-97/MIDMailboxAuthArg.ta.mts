@@ -198,7 +198,7 @@ let _cached_encoder_for_MIDMailboxAuthArg: $.ASN1Encoder<MIDMailboxAuthArg> | nu
  */
 export
 function _encode_MIDMailboxAuthArg (value: MIDMailboxAuthArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MIDMailboxAuthArg) { _cached_encoder_for_MIDMailboxAuthArg = function (value: MIDMailboxAuthArg, elGetter: $.ASN1Encoder<MIDMailboxAuthArg>): _Element {
+    if (!_cached_encoder_for_MIDMailboxAuthArg) { _cached_encoder_for_MIDMailboxAuthArg = function (value: MIDMailboxAuthArg, _elGetter: $.ASN1Encoder<MIDMailboxAuthArg>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -148,7 +148,7 @@ let _cached_encoder_for_InformArg: $.ASN1Encoder<InformArg> | null = null;
  */
 export
 function _encode_InformArg (value: InformArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InformArg) { _cached_encoder_for_InformArg = function (value: InformArg, elGetter: $.ASN1Encoder<InformArg>): _Element {
+    if (!_cached_encoder_for_InformArg) { _cached_encoder_for_InformArg = function (value: InformArg, _elGetter: $.ASN1Encoder<InformArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PumIdentity(value.pumIdentity, $.BER));
     if (value.argExtension !== undefined) {

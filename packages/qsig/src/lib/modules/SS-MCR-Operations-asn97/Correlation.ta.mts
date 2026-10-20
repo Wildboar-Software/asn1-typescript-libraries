@@ -146,7 +146,7 @@ let _cached_encoder_for_Correlation: $.ASN1Encoder<Correlation> | null = null;
  */
 export
 function _encode_Correlation (value: Correlation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Correlation) { _cached_encoder_for_Correlation = function (value: Correlation, elGetter: $.ASN1Encoder<Correlation>): _Element {
+    if (!_cached_encoder_for_Correlation) { _cached_encoder_for_Correlation = function (value: Correlation, _elGetter: $.ASN1Encoder<Correlation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CallIdentity(value.correlationData, $.BER));
     if (value.correlationReason !== undefined) {

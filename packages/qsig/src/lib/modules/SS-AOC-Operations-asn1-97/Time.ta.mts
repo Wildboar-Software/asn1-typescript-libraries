@@ -152,7 +152,7 @@ let _cached_encoder_for_Time: $.ASN1Encoder<Time> | null = null;
  */
 export
 function _encode_Time (value: Time, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Time) { _cached_encoder_for_Time = function (value: Time, elGetter: $.ASN1Encoder<Time>): _Element {
+    if (!_cached_encoder_for_Time) { _cached_encoder_for_Time = function (value: Time, _elGetter: $.ASN1Encoder<Time>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_LengthOfTimeUnit, $.BER)(value.lengthOfTimeUnit, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Scale, $.BER)(value.scale, $.BER)

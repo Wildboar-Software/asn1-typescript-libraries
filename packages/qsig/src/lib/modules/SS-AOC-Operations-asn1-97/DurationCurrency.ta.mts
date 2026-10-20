@@ -194,7 +194,7 @@ let _cached_encoder_for_DurationCurrency: $.ASN1Encoder<DurationCurrency> | null
  */
 export
 function _encode_DurationCurrency (value: DurationCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DurationCurrency) { _cached_encoder_for_DurationCurrency = function (value: DurationCurrency, elGetter: $.ASN1Encoder<DurationCurrency>): _Element {
+    if (!_cached_encoder_for_DurationCurrency) { _cached_encoder_for_DurationCurrency = function (value: DurationCurrency, _elGetter: $.ASN1Encoder<DurationCurrency>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Currency, $.BER)(value.dCurrency, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Amount, $.BER)(value.dAmount, $.BER));

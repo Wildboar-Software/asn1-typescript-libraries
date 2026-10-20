@@ -156,7 +156,7 @@ let _cached_encoder_for_AocInterimArg: $.ASN1Encoder<AocInterimArg> | null = nul
  */
 export
 function _encode_AocInterimArg (value: AocInterimArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocInterimArg) { _cached_encoder_for_AocInterimArg = function (value: AocInterimArg, elGetter: $.ASN1Encoder<AocInterimArg>): _Element {
+    if (!_cached_encoder_for_AocInterimArg) { _cached_encoder_for_AocInterimArg = function (value: AocInterimArg, _elGetter: $.ASN1Encoder<AocInterimArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AocInterimArg_interimCharge(value.interimCharge, $.BER));
     if (value.interimArgExtension !== undefined) {

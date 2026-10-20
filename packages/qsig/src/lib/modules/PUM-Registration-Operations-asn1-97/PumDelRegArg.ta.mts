@@ -210,7 +210,7 @@ let _cached_encoder_for_PumDelRegArg: $.ASN1Encoder<PumDelRegArg> | null = null;
  */
 export
 function _encode_PumDelRegArg (value: PumDelRegArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PumDelRegArg) { _cached_encoder_for_PumDelRegArg = function (value: PumDelRegArg, elGetter: $.ASN1Encoder<PumDelRegArg>): _Element {
+    if (!_cached_encoder_for_PumDelRegArg) { _cached_encoder_for_PumDelRegArg = function (value: PumDelRegArg, _elGetter: $.ASN1Encoder<PumDelRegArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PumDelRegArg_pumUserId(value.pumUserId, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));

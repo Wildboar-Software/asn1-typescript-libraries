@@ -146,7 +146,7 @@ let _cached_encoder_for_NameSet: $.ASN1Encoder<NameSet> | null = null;
  */
 export
 function _encode_NameSet (value: NameSet, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NameSet) { _cached_encoder_for_NameSet = function (value: NameSet, elGetter: $.ASN1Encoder<NameSet>): _Element {
+    if (!_cached_encoder_for_NameSet) { _cached_encoder_for_NameSet = function (value: NameSet, _elGetter: $.ASN1Encoder<NameSet>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_NameData(value.nameData, $.BER));
     if (value.characterSet !== undefined) {

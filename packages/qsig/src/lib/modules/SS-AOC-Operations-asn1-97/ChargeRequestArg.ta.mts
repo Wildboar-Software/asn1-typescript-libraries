@@ -154,7 +154,7 @@ let _cached_encoder_for_ChargeRequestArg: $.ASN1Encoder<ChargeRequestArg> | null
  */
 export
 function _encode_ChargeRequestArg (value: ChargeRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargeRequestArg) { _cached_encoder_for_ChargeRequestArg = function (value: ChargeRequestArg, elGetter: $.ASN1Encoder<ChargeRequestArg>): _Element {
+    if (!_cached_encoder_for_ChargeRequestArg) { _cached_encoder_for_ChargeRequestArg = function (value: ChargeRequestArg, _elGetter: $.ASN1Encoder<ChargeRequestArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeSequenceOf<AdviceModeCombination>(() => _encode_AdviceModeCombination, $.BER)(value.adviceModeCombinations, $.BER));
     if (value.chargeReqArgExtension !== undefined) {

@@ -179,7 +179,7 @@ let _cached_encoder_for_CTActiveArg: $.ASN1Encoder<CTActiveArg> | null = null;
  */
 export
 function _encode_CTActiveArg (value: CTActiveArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CTActiveArg) { _cached_encoder_for_CTActiveArg = function (value: CTActiveArg, elGetter: $.ASN1Encoder<CTActiveArg>): _Element {
+    if (!_cached_encoder_for_CTActiveArg) { _cached_encoder_for_CTActiveArg = function (value: CTActiveArg, _elGetter: $.ASN1Encoder<CTActiveArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PresentedAddressScreened(value.connectedAddress, $.BER));
     if (value.basicCallInfoElements !== undefined) {

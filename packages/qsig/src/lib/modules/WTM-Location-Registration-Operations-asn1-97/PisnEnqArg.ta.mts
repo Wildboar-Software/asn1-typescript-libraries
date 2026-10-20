@@ -148,7 +148,7 @@ let _cached_encoder_for_PisnEnqArg: $.ASN1Encoder<PisnEnqArg> | null = null;
  */
 export
 function _encode_PisnEnqArg (value: PisnEnqArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PisnEnqArg) { _cached_encoder_for_PisnEnqArg = function (value: PisnEnqArg, elGetter: $.ASN1Encoder<PisnEnqArg>): _Element {
+    if (!_cached_encoder_for_PisnEnqArg) { _cached_encoder_for_PisnEnqArg = function (value: PisnEnqArg, _elGetter: $.ASN1Encoder<PisnEnqArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AlternativeId(value.alternativeId, $.BER));
     if (value.argExtension !== undefined) {

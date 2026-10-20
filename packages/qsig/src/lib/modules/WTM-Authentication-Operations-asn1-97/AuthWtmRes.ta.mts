@@ -156,7 +156,7 @@ let _cached_encoder_for_AuthWtmRes: $.ASN1Encoder<AuthWtmRes> | null = null;
  */
 export
 function _encode_AuthWtmRes (value: AuthWtmRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthWtmRes) { _cached_encoder_for_AuthWtmRes = function (value: AuthWtmRes, elGetter: $.ASN1Encoder<AuthWtmRes>): _Element {
+    if (!_cached_encoder_for_AuthWtmRes) { _cached_encoder_for_AuthWtmRes = function (value: AuthWtmRes, _elGetter: $.ASN1Encoder<AuthWtmRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthWtmRes_autWtmResValue(value.autWtmResValue, $.BER));
     if (value.dummyExtension !== undefined) {

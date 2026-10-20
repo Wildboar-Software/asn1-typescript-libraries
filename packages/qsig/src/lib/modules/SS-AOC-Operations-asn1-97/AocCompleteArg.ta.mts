@@ -163,7 +163,7 @@ let _cached_encoder_for_AocCompleteArg: $.ASN1Encoder<AocCompleteArg> | null = n
  */
 export
 function _encode_AocCompleteArg (value: AocCompleteArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocCompleteArg) { _cached_encoder_for_AocCompleteArg = function (value: AocCompleteArg, elGetter: $.ASN1Encoder<AocCompleteArg>): _Element {
+    if (!_cached_encoder_for_AocCompleteArg) { _cached_encoder_for_AocCompleteArg = function (value: AocCompleteArg, _elGetter: $.ASN1Encoder<AocCompleteArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.chargedUser, $.BER));
     if (value.chargingAssociation !== undefined) {

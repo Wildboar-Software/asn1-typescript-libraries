@@ -167,7 +167,7 @@ let _cached_encoder_for_AddressScreened: $.ASN1Encoder<AddressScreened> | null =
  */
 export
 function _encode_AddressScreened (value: AddressScreened, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddressScreened) { _cached_encoder_for_AddressScreened = function (value: AddressScreened, elGetter: $.ASN1Encoder<AddressScreened>): _Element {
+    if (!_cached_encoder_for_AddressScreened) { _cached_encoder_for_AddressScreened = function (value: AddressScreened, _elGetter: $.ASN1Encoder<AddressScreened>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.partyNumber, $.BER));
     _components.push(/* REQUIRED   */ _encode_ScreeningIndicator(value.screeningIndicator, $.BER));

@@ -152,7 +152,7 @@ let _cached_encoder_for_NumberScreened: $.ASN1Encoder<NumberScreened> | null = n
  */
 export
 function _encode_NumberScreened (value: NumberScreened, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NumberScreened) { _cached_encoder_for_NumberScreened = function (value: NumberScreened, elGetter: $.ASN1Encoder<NumberScreened>): _Element {
+    if (!_cached_encoder_for_NumberScreened) { _cached_encoder_for_NumberScreened = function (value: NumberScreened, _elGetter: $.ASN1Encoder<NumberScreened>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PartyNumber(value.partyNumber, $.BER),
         /* REQUIRED   */ _encode_ScreeningIndicator(value.screeningIndicator, $.BER)

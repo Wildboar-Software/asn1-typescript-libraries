@@ -146,7 +146,7 @@ let _cached_encoder_for_ScAlertArg: $.ASN1Encoder<ScAlertArg> | null = null;
  */
 export
 function _encode_ScAlertArg (value: ScAlertArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ScAlertArg) { _cached_encoder_for_ScAlertArg = function (value: ScAlertArg, elGetter: $.ASN1Encoder<ScAlertArg>): _Element {
+    if (!_cached_encoder_for_ScAlertArg) { _cached_encoder_for_ScAlertArg = function (value: ScAlertArg, _elGetter: $.ASN1Encoder<ScAlertArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.originatingAddress, $.BER));
     if (value.smsExtension !== undefined) {

@@ -145,7 +145,7 @@ let _cached_encoder_for_ServiceAvailableArg_extendedServiceList: $.ASN1Encoder<S
  */
 export
 function _encode_ServiceAvailableArg_extendedServiceList (value: ServiceAvailableArg_extendedServiceList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceAvailableArg_extendedServiceList) { _cached_encoder_for_ServiceAvailableArg_extendedServiceList = function (value: ServiceAvailableArg_extendedServiceList, elGetter: $.ASN1Encoder<ServiceAvailableArg_extendedServiceList>): _Element {
+    if (!_cached_encoder_for_ServiceAvailableArg_extendedServiceList) { _cached_encoder_for_ServiceAvailableArg_extendedServiceList = function (value: ServiceAvailableArg_extendedServiceList, _elGetter: $.ASN1Encoder<ServiceAvailableArg_extendedServiceList>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ServiceList(value.serviceList, $.BER),
         /* REQUIRED   */ _encode_Extension(value.extension, $.BER)

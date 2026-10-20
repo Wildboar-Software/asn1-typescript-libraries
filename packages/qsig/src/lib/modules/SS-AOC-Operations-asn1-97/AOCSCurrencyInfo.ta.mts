@@ -160,7 +160,7 @@ let _cached_encoder_for_AOCSCurrencyInfo: $.ASN1Encoder<AOCSCurrencyInfo> | null
  */
 export
 function _encode_AOCSCurrencyInfo (value: AOCSCurrencyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AOCSCurrencyInfo) { _cached_encoder_for_AOCSCurrencyInfo = function (value: AOCSCurrencyInfo, elGetter: $.ASN1Encoder<AOCSCurrencyInfo>): _Element {
+    if (!_cached_encoder_for_AOCSCurrencyInfo) { _cached_encoder_for_AOCSCurrencyInfo = function (value: AOCSCurrencyInfo, _elGetter: $.ASN1Encoder<AOCSCurrencyInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ChargedItem(value.chargedItem, $.BER),
         /* REQUIRED   */ _encode_AOCSCurrencyInfo_rateType(value.rateType, $.BER)

@@ -145,7 +145,7 @@ let _cached_encoder_for_AuthAlgorithm: $.ASN1Encoder<AuthAlgorithm> | null = nul
  */
 export
 function _encode_AuthAlgorithm (value: AuthAlgorithm, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthAlgorithm) { _cached_encoder_for_AuthAlgorithm = function (value: AuthAlgorithm, elGetter: $.ASN1Encoder<AuthAlgorithm>): _Element {
+    if (!_cached_encoder_for_AuthAlgorithm) { _cached_encoder_for_AuthAlgorithm = function (value: AuthAlgorithm, _elGetter: $.ASN1Encoder<AuthAlgorithm>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_DefinedIDs(value.authAlg, $.BER));
     if (value.param !== undefined) {

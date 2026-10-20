@@ -150,7 +150,7 @@ let _cached_encoder_for_WtatParamInfo: $.ASN1Encoder<WtatParamInfo> | null = nul
  */
 export
 function _encode_WtatParamInfo (value: WtatParamInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtatParamInfo) { _cached_encoder_for_WtatParamInfo = function (value: WtatParamInfo, elGetter: $.ASN1Encoder<WtatParamInfo>): _Element {
+    if (!_cached_encoder_for_WtatParamInfo) { _cached_encoder_for_WtatParamInfo = function (value: WtatParamInfo, _elGetter: $.ASN1Encoder<WtatParamInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_AuthAlgorithm(value.authAlgorithm, $.BER),
         /* REQUIRED   */ _encode_WtatParamInfo_wtatParamInfoChoice(value.wtatParamInfoChoice, $.BER)

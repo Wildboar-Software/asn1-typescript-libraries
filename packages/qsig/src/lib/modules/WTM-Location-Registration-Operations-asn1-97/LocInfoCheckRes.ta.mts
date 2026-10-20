@@ -153,7 +153,7 @@ let _cached_encoder_for_LocInfoCheckRes: $.ASN1Encoder<LocInfoCheckRes> | null =
  */
 export
 function _encode_LocInfoCheckRes (value: LocInfoCheckRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocInfoCheckRes) { _cached_encoder_for_LocInfoCheckRes = function (value: LocInfoCheckRes, elGetter: $.ASN1Encoder<LocInfoCheckRes>): _Element {
+    if (!_cached_encoder_for_LocInfoCheckRes) { _cached_encoder_for_LocInfoCheckRes = function (value: LocInfoCheckRes, _elGetter: $.ASN1Encoder<LocInfoCheckRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CheckResult(value.checkResult, $.BER));
     if (value.argExtension !== undefined) {

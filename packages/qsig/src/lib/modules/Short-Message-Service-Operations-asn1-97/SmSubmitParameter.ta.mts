@@ -207,7 +207,7 @@ let _cached_encoder_for_SmSubmitParameter: $.ASN1Encoder<SmSubmitParameter> | nu
  */
 export
 function _encode_SmSubmitParameter (value: SmSubmitParameter, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmSubmitParameter) { _cached_encoder_for_SmSubmitParameter = function (value: SmSubmitParameter, elGetter: $.ASN1Encoder<SmSubmitParameter>): _Element {
+    if (!_cached_encoder_for_SmSubmitParameter) { _cached_encoder_for_SmSubmitParameter = function (value: SmSubmitParameter, _elGetter: $.ASN1Encoder<SmSubmitParameter>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ProtocolIdentifier(value.protocolIdentifier, $.BER));
     if (value.validityPeriod !== undefined) {

@@ -170,7 +170,7 @@ let _cached_encoder_for_AocFinalArg: $.ASN1Encoder<AocFinalArg> | null = null;
  */
 export
 function _encode_AocFinalArg (value: AocFinalArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocFinalArg) { _cached_encoder_for_AocFinalArg = function (value: AocFinalArg, elGetter: $.ASN1Encoder<AocFinalArg>): _Element {
+    if (!_cached_encoder_for_AocFinalArg) { _cached_encoder_for_AocFinalArg = function (value: AocFinalArg, _elGetter: $.ASN1Encoder<AocFinalArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AocFinalArg_finalCharge(value.finalCharge, $.BER));
     if (value.chargingAssociation !== undefined) {

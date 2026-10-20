@@ -174,7 +174,7 @@ let _cached_encoder_for_smsCommandError_ParameterType: $.ASN1Encoder<smsCommandE
  */
 export
 function _encode_smsCommandError_ParameterType (value: smsCommandError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_smsCommandError_ParameterType) { _cached_encoder_for_smsCommandError_ParameterType = function (value: smsCommandError_ParameterType, elGetter: $.ASN1Encoder<smsCommandError_ParameterType>): _Element {
+    if (!_cached_encoder_for_smsCommandError_ParameterType) { _cached_encoder_for_smsCommandError_ParameterType = function (value: smsCommandError_ParameterType, _elGetter: $.ASN1Encoder<smsCommandError_ParameterType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_FailureCause(value.failureCause, $.BER));
     _components.push(/* REQUIRED   */ _encode_ServiceCentreTimeStamp(value.serviceCentreTimeStamp, $.BER));

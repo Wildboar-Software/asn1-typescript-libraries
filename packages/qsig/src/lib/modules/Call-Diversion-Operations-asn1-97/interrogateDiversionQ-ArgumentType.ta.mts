@@ -209,7 +209,7 @@ let _cached_encoder_for_interrogateDiversionQ_ArgumentType: $.ASN1Encoder<interr
  */
 export
 function _encode_interrogateDiversionQ_ArgumentType (value: interrogateDiversionQ_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_interrogateDiversionQ_ArgumentType) { _cached_encoder_for_interrogateDiversionQ_ArgumentType = function (value: interrogateDiversionQ_ArgumentType, elGetter: $.ASN1Encoder<interrogateDiversionQ_ArgumentType>): _Element {
+    if (!_cached_encoder_for_interrogateDiversionQ_ArgumentType) { _cached_encoder_for_interrogateDiversionQ_ArgumentType = function (value: interrogateDiversionQ_ArgumentType, _elGetter: $.ASN1Encoder<interrogateDiversionQ_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_Procedure(value.procedure, $.BER));
     if (value.basicService !== undefined && !$.deepEq(value.basicService, interrogateDiversionQ_ArgumentType._default_value_for_basicService)) {

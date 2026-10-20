@@ -149,7 +149,7 @@ let _cached_encoder_for_SubaddressTransferArg: $.ASN1Encoder<SubaddressTransferA
  */
 export
 function _encode_SubaddressTransferArg (value: SubaddressTransferArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubaddressTransferArg) { _cached_encoder_for_SubaddressTransferArg = function (value: SubaddressTransferArg, elGetter: $.ASN1Encoder<SubaddressTransferArg>): _Element {
+    if (!_cached_encoder_for_SubaddressTransferArg) { _cached_encoder_for_SubaddressTransferArg = function (value: SubaddressTransferArg, _elGetter: $.ASN1Encoder<SubaddressTransferArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartySubaddress(value.redirectionSubaddress, $.BER));
     if (value.argumentExtension !== undefined) {

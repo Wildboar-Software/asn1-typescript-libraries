@@ -150,7 +150,7 @@ let _cached_encoder_for_GenericUserValue: $.ASN1Encoder<GenericUserValue> | null
  */
 export
 function _encode_GenericUserValue (value: GenericUserValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GenericUserValue) { _cached_encoder_for_GenericUserValue = function (value: GenericUserValue, elGetter: $.ASN1Encoder<GenericUserValue>): _Element {
+    if (!_cached_encoder_for_GenericUserValue) { _cached_encoder_for_GenericUserValue = function (value: GenericUserValue, _elGetter: $.ASN1Encoder<GenericUserValue>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.parameterValue, $.BER),
         /* REQUIRED   */ $._encodeOctetString(value.genericUserData, $.BER)

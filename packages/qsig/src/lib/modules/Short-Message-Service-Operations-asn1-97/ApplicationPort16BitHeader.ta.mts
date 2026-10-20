@@ -152,7 +152,7 @@ let _cached_encoder_for_ApplicationPort16BitHeader: $.ASN1Encoder<ApplicationPor
  */
 export
 function _encode_ApplicationPort16BitHeader (value: ApplicationPort16BitHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ApplicationPort16BitHeader) { _cached_encoder_for_ApplicationPort16BitHeader = function (value: ApplicationPort16BitHeader, elGetter: $.ASN1Encoder<ApplicationPort16BitHeader>): _Element {
+    if (!_cached_encoder_for_ApplicationPort16BitHeader) { _cached_encoder_for_ApplicationPort16BitHeader = function (value: ApplicationPort16BitHeader, _elGetter: $.ASN1Encoder<ApplicationPort16BitHeader>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.destination16BitPort, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.originator16BitPort, $.BER)

@@ -143,7 +143,7 @@ let _cached_encoder_for_AllMsgInfo: $.ASN1Encoder<AllMsgInfo> | null = null;
  */
 export
 function _encode_AllMsgInfo (value: AllMsgInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AllMsgInfo) { _cached_encoder_for_AllMsgInfo = function (value: AllMsgInfo, elGetter: $.ASN1Encoder<AllMsgInfo>): _Element {
+    if (!_cached_encoder_for_AllMsgInfo) { _cached_encoder_for_AllMsgInfo = function (value: AllMsgInfo, _elGetter: $.ASN1Encoder<AllMsgInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_MessageInfo(value.newMsgInfo, $.BER),
         /* REQUIRED   */ _encode_MessageInfo(value.retrievedMsgInfo, $.BER)

@@ -152,7 +152,7 @@ let _cached_encoder_for_DNDInterrogateRes: $.ASN1Encoder<DNDInterrogateRes> | nu
  */
 export
 function _encode_DNDInterrogateRes (value: DNDInterrogateRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDInterrogateRes) { _cached_encoder_for_DNDInterrogateRes = function (value: DNDInterrogateRes, elGetter: $.ASN1Encoder<DNDInterrogateRes>): _Element {
+    if (!_cached_encoder_for_DNDInterrogateRes) { _cached_encoder_for_DNDInterrogateRes = function (value: DNDInterrogateRes, _elGetter: $.ASN1Encoder<DNDInterrogateRes>): _Element {
     const _components: _Element[] = [];
     if (value.status !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encodeSetOf<DNDInterrogateRes_status_Item>(() => _encode_DNDInterrogateRes_status_Item, $.BER)(value.status, $.BER));

@@ -240,7 +240,7 @@ let _cached_encoder_for_CcRequestArg: $.ASN1Encoder<CcRequestArg> | null = null;
  */
 export
 function _encode_CcRequestArg (value: CcRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CcRequestArg) { _cached_encoder_for_CcRequestArg = function (value: CcRequestArg, elGetter: $.ASN1Encoder<CcRequestArg>): _Element {
+    if (!_cached_encoder_for_CcRequestArg) { _cached_encoder_for_CcRequestArg = function (value: CcRequestArg, _elGetter: $.ASN1Encoder<CcRequestArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PresentedNumberUnscreened(value.numberA, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.numberB, $.BER));

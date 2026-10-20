@@ -318,7 +318,7 @@ let _cached_encoder_for_SmsStatusReportArg: $.ASN1Encoder<SmsStatusReportArg> | 
  */
 export
 function _encode_SmsStatusReportArg (value: SmsStatusReportArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsStatusReportArg) { _cached_encoder_for_SmsStatusReportArg = function (value: SmsStatusReportArg, elGetter: $.ASN1Encoder<SmsStatusReportArg>): _Element {
+    if (!_cached_encoder_for_SmsStatusReportArg) { _cached_encoder_for_SmsStatusReportArg = function (value: SmsStatusReportArg, _elGetter: $.ASN1Encoder<SmsStatusReportArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_MessageReference(value.messageReference, $.BER));
     _components.push(/* REQUIRED   */ _encode_ServiceCentreTimeStamp(value.serviceCentreTimeStamp, $.BER));

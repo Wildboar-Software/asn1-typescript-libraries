@@ -249,7 +249,7 @@ let _cached_encoder_for_divertingLegInformation2_ArgumentType: $.ASN1Encoder<div
  */
 export
 function _encode_divertingLegInformation2_ArgumentType (value: divertingLegInformation2_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_divertingLegInformation2_ArgumentType) { _cached_encoder_for_divertingLegInformation2_ArgumentType = function (value: divertingLegInformation2_ArgumentType, elGetter: $.ASN1Encoder<divertingLegInformation2_ArgumentType>): _Element {
+    if (!_cached_encoder_for_divertingLegInformation2_ArgumentType) { _cached_encoder_for_divertingLegInformation2_ArgumentType = function (value: divertingLegInformation2_ArgumentType, _elGetter: $.ASN1Encoder<divertingLegInformation2_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeInteger(value.diversionCounter, $.BER));
     _components.push(/* REQUIRED   */ _encode_DiversionReason(value.diversionReason, $.BER));

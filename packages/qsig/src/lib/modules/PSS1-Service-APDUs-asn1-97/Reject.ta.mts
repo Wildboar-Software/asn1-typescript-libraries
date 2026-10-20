@@ -155,7 +155,7 @@ let _cached_encoder_for_Reject: $.ASN1Encoder<Reject> | null = null;
  */
 export
 function _encode_Reject (value: Reject, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Reject) { _cached_encoder_for_Reject = function (value: Reject, elGetter: $.ASN1Encoder<Reject>): _Element {
+    if (!_cached_encoder_for_Reject) { _cached_encoder_for_Reject = function (value: Reject, _elGetter: $.ASN1Encoder<Reject>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_InvokeIdOrNull(value.invokeId, $.BER),
         /* REQUIRED   */ _encode_Reject_problem(value.problem, $.BER)

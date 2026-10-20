@@ -152,7 +152,7 @@ let _cached_encoder_for_PublicPartyNumber: $.ASN1Encoder<PublicPartyNumber> | nu
  */
 export
 function _encode_PublicPartyNumber (value: PublicPartyNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PublicPartyNumber) { _cached_encoder_for_PublicPartyNumber = function (value: PublicPartyNumber, elGetter: $.ASN1Encoder<PublicPartyNumber>): _Element {
+    if (!_cached_encoder_for_PublicPartyNumber) { _cached_encoder_for_PublicPartyNumber = function (value: PublicPartyNumber, _elGetter: $.ASN1Encoder<PublicPartyNumber>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PublicTypeOfNumber(value.publicTypeOfNumber, $.BER),
         /* REQUIRED   */ _encode_NumberDigits(value.publicNumberDigits, $.BER)

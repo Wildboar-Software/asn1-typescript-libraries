@@ -164,7 +164,7 @@ let _cached_encoder_for_EnquiryArg: $.ASN1Encoder<EnquiryArg> | null = null;
  */
 export
 function _encode_EnquiryArg (value: EnquiryArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EnquiryArg) { _cached_encoder_for_EnquiryArg = function (value: EnquiryArg, elGetter: $.ASN1Encoder<EnquiryArg>): _Element {
+    if (!_cached_encoder_for_EnquiryArg) { _cached_encoder_for_EnquiryArg = function (value: EnquiryArg, _elGetter: $.ASN1Encoder<EnquiryArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.application, 0, () => _encode_PSS1InformationElement, $.BER)(value.qSIGInfoElement, $.BER));

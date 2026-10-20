@@ -187,7 +187,7 @@ let _cached_encoder_for_CintCondArg: $.ASN1Encoder<CintCondArg> | null = null;
  */
 export
 function _encode_CintCondArg (value: CintCondArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CintCondArg) { _cached_encoder_for_CintCondArg = function (value: CintCondArg, elGetter: $.ASN1Encoder<CintCondArg>): _Element {
+    if (!_cached_encoder_for_CintCondArg) { _cached_encoder_for_CintCondArg = function (value: CintCondArg, _elGetter: $.ASN1Encoder<CintCondArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_Condition(value.interceptionCause, $.BER));
     if (value.originalCalledNumber !== undefined) {

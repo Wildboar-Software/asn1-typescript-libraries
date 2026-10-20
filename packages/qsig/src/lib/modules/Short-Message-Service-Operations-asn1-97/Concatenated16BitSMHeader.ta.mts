@@ -169,7 +169,7 @@ let _cached_encoder_for_Concatenated16BitSMHeader: $.ASN1Encoder<Concatenated16B
  */
 export
 function _encode_Concatenated16BitSMHeader (value: Concatenated16BitSMHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Concatenated16BitSMHeader) { _cached_encoder_for_Concatenated16BitSMHeader = function (value: Concatenated16BitSMHeader, elGetter: $.ASN1Encoder<Concatenated16BitSMHeader>): _Element {
+    if (!_cached_encoder_for_Concatenated16BitSMHeader) { _cached_encoder_for_Concatenated16BitSMHeader = function (value: Concatenated16BitSMHeader, _elGetter: $.ASN1Encoder<Concatenated16BitSMHeader>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.concatenated16BitSMReferenceNumber, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.maximumNumberOf16BitSMInConcatenatedSM, $.BER),

@@ -146,7 +146,7 @@ let _cached_encoder_for_transferAuthParam_ArgumentType: $.ASN1Encoder<transferAu
  */
 export
 function _encode_transferAuthParam_ArgumentType (value: transferAuthParam_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_transferAuthParam_ArgumentType) { _cached_encoder_for_transferAuthParam_ArgumentType = function (value: transferAuthParam_ArgumentType, elGetter: $.ASN1Encoder<transferAuthParam_ArgumentType>): _Element {
+    if (!_cached_encoder_for_transferAuthParam_ArgumentType) { _cached_encoder_for_transferAuthParam_ArgumentType = function (value: transferAuthParam_ArgumentType, _elGetter: $.ASN1Encoder<transferAuthParam_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtatParamInfo(value.wtatParamInfo, $.BER));
     if (value.dummyExtension !== undefined) {

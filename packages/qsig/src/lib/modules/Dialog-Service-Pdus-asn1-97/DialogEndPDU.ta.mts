@@ -146,7 +146,7 @@ let _cached_encoder_for_DialogEndPDU: $.ASN1Encoder<DialogEndPDU> | null = null;
  */
 export
 function _encode_DialogEndPDU (value: DialogEndPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DialogEndPDU) { _cached_encoder_for_DialogEndPDU = function (value: DialogEndPDU, elGetter: $.ASN1Encoder<DialogEndPDU>): _Element {
+    if (!_cached_encoder_for_DialogEndPDU) { _cached_encoder_for_DialogEndPDU = function (value: DialogEndPDU, _elGetter: $.ASN1Encoder<DialogEndPDU>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_DestinationDialogId, $.BER)(value.destinationDialogId, $.BER));
     if (value.remoteOperationsPortion !== undefined) {

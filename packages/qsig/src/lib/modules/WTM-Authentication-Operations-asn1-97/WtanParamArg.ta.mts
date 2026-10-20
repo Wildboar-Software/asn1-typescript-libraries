@@ -188,7 +188,7 @@ let _cached_encoder_for_WtanParamArg: $.ASN1Encoder<WtanParamArg> | null = null;
  */
 export
 function _encode_WtanParamArg (value: WtanParamArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtanParamArg) { _cached_encoder_for_WtanParamArg = function (value: WtanParamArg, elGetter: $.ASN1Encoder<WtanParamArg>): _Element {
+    if (!_cached_encoder_for_WtanParamArg) { _cached_encoder_for_WtanParamArg = function (value: WtanParamArg, _elGetter: $.ASN1Encoder<WtanParamArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtmUserId(value.wtmUserId, $.BER));
     _components.push(/* REQUIRED   */ _encode_AuthChallenge(value.authChallenge, $.BER));

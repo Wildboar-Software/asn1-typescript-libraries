@@ -160,7 +160,7 @@ let _cached_encoder_for_DialogContinuePDU: $.ASN1Encoder<DialogContinuePDU> | nu
  */
 export
 function _encode_DialogContinuePDU (value: DialogContinuePDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DialogContinuePDU) { _cached_encoder_for_DialogContinuePDU = function (value: DialogContinuePDU, elGetter: $.ASN1Encoder<DialogContinuePDU>): _Element {
+    if (!_cached_encoder_for_DialogContinuePDU) { _cached_encoder_for_DialogContinuePDU = function (value: DialogContinuePDU, _elGetter: $.ASN1Encoder<DialogContinuePDU>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_OriginationDialogId, $.BER)(value.originationDialogId, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_DestinationDialogId, $.BER)(value.destinationDialogId, $.BER));

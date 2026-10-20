@@ -148,7 +148,7 @@ let _cached_encoder_for_DialogAbortPDU: $.ASN1Encoder<DialogAbortPDU> | null = n
  */
 export
 function _encode_DialogAbortPDU (value: DialogAbortPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DialogAbortPDU) { _cached_encoder_for_DialogAbortPDU = function (value: DialogAbortPDU, elGetter: $.ASN1Encoder<DialogAbortPDU>): _Element {
+    if (!_cached_encoder_for_DialogAbortPDU) { _cached_encoder_for_DialogAbortPDU = function (value: DialogAbortPDU, _elGetter: $.ASN1Encoder<DialogAbortPDU>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_DestinationDialogId, $.BER)(value.destinationDialogId, $.BER),
         /* REQUIRED   */ _encode_DialogAbortPDU_abortChoice(value.abortChoice, $.BER)

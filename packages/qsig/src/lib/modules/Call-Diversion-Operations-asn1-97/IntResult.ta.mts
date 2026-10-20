@@ -224,7 +224,7 @@ let _cached_encoder_for_IntResult: $.ASN1Encoder<IntResult> | null = null;
  */
 export
 function _encode_IntResult (value: IntResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IntResult) { _cached_encoder_for_IntResult = function (value: IntResult, elGetter: $.ASN1Encoder<IntResult>): _Element {
+    if (!_cached_encoder_for_IntResult) { _cached_encoder_for_IntResult = function (value: IntResult, _elGetter: $.ASN1Encoder<IntResult>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));

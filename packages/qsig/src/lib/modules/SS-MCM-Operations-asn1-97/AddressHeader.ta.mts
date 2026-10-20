@@ -160,7 +160,7 @@ let _cached_encoder_for_AddressHeader: $.ASN1Encoder<AddressHeader> | null = nul
  */
 export
 function _encode_AddressHeader (value: AddressHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddressHeader) { _cached_encoder_for_AddressHeader = function (value: AddressHeader, elGetter: $.ASN1Encoder<AddressHeader>): _Element {
+    if (!_cached_encoder_for_AddressHeader) { _cached_encoder_for_AddressHeader = function (value: AddressHeader, _elGetter: $.ASN1Encoder<AddressHeader>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.originatorNr, $.BER));
     if (value.timeStamp !== undefined) {

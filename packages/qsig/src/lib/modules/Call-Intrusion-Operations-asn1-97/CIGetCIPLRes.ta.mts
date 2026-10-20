@@ -156,7 +156,7 @@ let _cached_encoder_for_CIGetCIPLRes: $.ASN1Encoder<CIGetCIPLRes> | null = null;
  */
 export
 function _encode_CIGetCIPLRes (value: CIGetCIPLRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CIGetCIPLRes) { _cached_encoder_for_CIGetCIPLRes = function (value: CIGetCIPLRes, elGetter: $.ASN1Encoder<CIGetCIPLRes>): _Element {
+    if (!_cached_encoder_for_CIGetCIPLRes) { _cached_encoder_for_CIGetCIPLRes = function (value: CIGetCIPLRes, _elGetter: $.ASN1Encoder<CIGetCIPLRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CIProtectionLevel(value.ciProtectionLevel, $.BER));
     if (value.resultExtension !== undefined) {

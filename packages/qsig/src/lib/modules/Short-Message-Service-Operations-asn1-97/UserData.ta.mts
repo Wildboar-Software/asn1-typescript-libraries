@@ -186,7 +186,7 @@ let _cached_encoder_for_UserData: $.ASN1Encoder<UserData> | null = null;
  */
 export
 function _encode_UserData (value: UserData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserData) { _cached_encoder_for_UserData = function (value: UserData, elGetter: $.ASN1Encoder<UserData>): _Element {
+    if (!_cached_encoder_for_UserData) { _cached_encoder_for_UserData = function (value: UserData, _elGetter: $.ASN1Encoder<UserData>): _Element {
     const _components: _Element[] = [];
     if (value.userDataHeader !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_UserDataHeader, $.BER)(value.userDataHeader, $.BER));

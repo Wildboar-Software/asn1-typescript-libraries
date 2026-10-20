@@ -185,7 +185,7 @@ let _cached_encoder_for_MIDMailboxIDArg: $.ASN1Encoder<MIDMailboxIDArg> | null =
  */
 export
 function _encode_MIDMailboxIDArg (value: MIDMailboxIDArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MIDMailboxIDArg) { _cached_encoder_for_MIDMailboxIDArg = function (value: MIDMailboxIDArg, elGetter: $.ASN1Encoder<MIDMailboxIDArg>): _Element {
+    if (!_cached_encoder_for_MIDMailboxIDArg) { _cached_encoder_for_MIDMailboxIDArg = function (value: MIDMailboxIDArg, _elGetter: $.ASN1Encoder<MIDMailboxIDArg>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

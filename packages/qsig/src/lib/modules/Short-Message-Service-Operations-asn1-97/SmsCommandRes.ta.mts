@@ -174,7 +174,7 @@ let _cached_encoder_for_SmsCommandRes: $.ASN1Encoder<SmsCommandRes> | null = nul
  */
 export
 function _encode_SmsCommandRes (value: SmsCommandRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsCommandRes) { _cached_encoder_for_SmsCommandRes = function (value: SmsCommandRes, elGetter: $.ASN1Encoder<SmsCommandRes>): _Element {
+    if (!_cached_encoder_for_SmsCommandRes) { _cached_encoder_for_SmsCommandRes = function (value: SmsCommandRes, _elGetter: $.ASN1Encoder<SmsCommandRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ServiceCentreTimeStamp(value.serviceCentreTimeStamp, $.BER));
     if (value.protocolIdentifier !== undefined) {

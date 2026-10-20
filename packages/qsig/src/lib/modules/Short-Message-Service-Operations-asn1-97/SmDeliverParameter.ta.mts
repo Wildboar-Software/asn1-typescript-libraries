@@ -227,7 +227,7 @@ let _cached_encoder_for_SmDeliverParameter: $.ASN1Encoder<SmDeliverParameter> | 
  */
 export
 function _encode_SmDeliverParameter (value: SmDeliverParameter, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmDeliverParameter) { _cached_encoder_for_SmDeliverParameter = function (value: SmDeliverParameter, elGetter: $.ASN1Encoder<SmDeliverParameter>): _Element {
+    if (!_cached_encoder_for_SmDeliverParameter) { _cached_encoder_for_SmDeliverParameter = function (value: SmDeliverParameter, _elGetter: $.ASN1Encoder<SmDeliverParameter>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ProtocolIdentifier(value.protocolIdentifier, $.BER));
     _components.push(/* REQUIRED   */ _encode_ServiceCentreTimeStamp(value.serviceCentreTimeStamp, $.BER));

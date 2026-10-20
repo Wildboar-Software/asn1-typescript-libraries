@@ -167,7 +167,7 @@ let _cached_encoder_for_PartyInfo: $.ASN1Encoder<PartyInfo> | null = null;
  */
 export
 function _encode_PartyInfo (value: PartyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PartyInfo) { _cached_encoder_for_PartyInfo = function (value: PartyInfo, elGetter: $.ASN1Encoder<PartyInfo>): _Element {
+    if (!_cached_encoder_for_PartyInfo) { _cached_encoder_for_PartyInfo = function (value: PartyInfo, _elGetter: $.ASN1Encoder<PartyInfo>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PresentedAddressUnscreened(value.servedUserNr, $.BER));
     if (value.messageType !== undefined) {

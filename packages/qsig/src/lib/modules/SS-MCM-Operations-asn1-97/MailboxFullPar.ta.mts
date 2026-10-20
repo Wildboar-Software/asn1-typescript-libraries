@@ -159,7 +159,7 @@ let _cached_encoder_for_MailboxFullPar: $.ASN1Encoder<MailboxFullPar> | null = n
  */
 export
 function _encode_MailboxFullPar (value: MailboxFullPar, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MailboxFullPar) { _cached_encoder_for_MailboxFullPar = function (value: MailboxFullPar, elGetter: $.ASN1Encoder<MailboxFullPar>): _Element {
+    if (!_cached_encoder_for_MailboxFullPar) { _cached_encoder_for_MailboxFullPar = function (value: MailboxFullPar, _elGetter: $.ASN1Encoder<MailboxFullPar>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_MessageType(value.messageType, $.BER));
     if (value.capacityReached !== undefined) {

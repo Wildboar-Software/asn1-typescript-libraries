@@ -156,7 +156,7 @@ let _cached_encoder_for_CPIPRequestArg: $.ASN1Encoder<CPIPRequestArg> | null = n
  */
 export
 function _encode_CPIPRequestArg (value: CPIPRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CPIPRequestArg) { _cached_encoder_for_CPIPRequestArg = function (value: CPIPRequestArg, elGetter: $.ASN1Encoder<CPIPRequestArg>): _Element {
+    if (!_cached_encoder_for_CPIPRequestArg) { _cached_encoder_for_CPIPRequestArg = function (value: CPIPRequestArg, _elGetter: $.ASN1Encoder<CPIPRequestArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CPIProtectionLevel(value.cpiProtectionLevel, $.BER));
     if (value.argumentExtension !== undefined) {

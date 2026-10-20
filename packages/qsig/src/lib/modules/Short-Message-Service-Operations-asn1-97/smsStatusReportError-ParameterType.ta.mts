@@ -181,7 +181,7 @@ let _cached_encoder_for_smsStatusReportError_ParameterType: $.ASN1Encoder<smsSta
  */
 export
 function _encode_smsStatusReportError_ParameterType (value: smsStatusReportError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_smsStatusReportError_ParameterType) { _cached_encoder_for_smsStatusReportError_ParameterType = function (value: smsStatusReportError_ParameterType, elGetter: $.ASN1Encoder<smsStatusReportError_ParameterType>): _Element {
+    if (!_cached_encoder_for_smsStatusReportError_ParameterType) { _cached_encoder_for_smsStatusReportError_ParameterType = function (value: smsStatusReportError_ParameterType, _elGetter: $.ASN1Encoder<smsStatusReportError_ParameterType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_FailureCause(value.failureCause, $.BER));
     if (value.protocolIdentifier !== undefined) {

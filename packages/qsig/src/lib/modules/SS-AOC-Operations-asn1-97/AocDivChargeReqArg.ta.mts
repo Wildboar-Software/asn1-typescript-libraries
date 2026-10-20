@@ -184,7 +184,7 @@ let _cached_encoder_for_AocDivChargeReqArg: $.ASN1Encoder<AocDivChargeReqArg> | 
  */
 export
 function _encode_AocDivChargeReqArg (value: AocDivChargeReqArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocDivChargeReqArg) { _cached_encoder_for_AocDivChargeReqArg = function (value: AocDivChargeReqArg, elGetter: $.ASN1Encoder<AocDivChargeReqArg>): _Element {
+    if (!_cached_encoder_for_AocDivChargeReqArg) { _cached_encoder_for_AocDivChargeReqArg = function (value: AocDivChargeReqArg, _elGetter: $.ASN1Encoder<AocDivChargeReqArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.divertingUser, $.BER));
     if (value.chargingAssociation !== undefined) {

@@ -145,7 +145,7 @@ let _cached_encoder_for_PathRetainArg_extendedServiceList: $.ASN1Encoder<PathRet
  */
 export
 function _encode_PathRetainArg_extendedServiceList (value: PathRetainArg_extendedServiceList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PathRetainArg_extendedServiceList) { _cached_encoder_for_PathRetainArg_extendedServiceList = function (value: PathRetainArg_extendedServiceList, elGetter: $.ASN1Encoder<PathRetainArg_extendedServiceList>): _Element {
+    if (!_cached_encoder_for_PathRetainArg_extendedServiceList) { _cached_encoder_for_PathRetainArg_extendedServiceList = function (value: PathRetainArg_extendedServiceList, _elGetter: $.ASN1Encoder<PathRetainArg_extendedServiceList>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ServiceList(value.serviceList, $.BER),
         /* REQUIRED   */ _encode_Extension(value.extension, $.BER)

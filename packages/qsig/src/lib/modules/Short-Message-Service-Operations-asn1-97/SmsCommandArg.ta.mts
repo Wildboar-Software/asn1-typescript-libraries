@@ -229,7 +229,7 @@ let _cached_encoder_for_SmsCommandArg: $.ASN1Encoder<SmsCommandArg> | null = nul
  */
 export
 function _encode_SmsCommandArg (value: SmsCommandArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsCommandArg) { _cached_encoder_for_SmsCommandArg = function (value: SmsCommandArg, elGetter: $.ASN1Encoder<SmsCommandArg>): _Element {
+    if (!_cached_encoder_for_SmsCommandArg) { _cached_encoder_for_SmsCommandArg = function (value: SmsCommandArg, _elGetter: $.ASN1Encoder<SmsCommandArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.destinationAddress, $.BER));
     _components.push(/* REQUIRED   */ _encode_MessageReference(value.messageReference, $.BER));

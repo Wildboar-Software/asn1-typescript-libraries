@@ -146,7 +146,7 @@ let _cached_encoder_for_CalcWtanInfo: $.ASN1Encoder<CalcWtanInfo> | null = null;
  */
 export
 function _encode_CalcWtanInfo (value: CalcWtanInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalcWtanInfo) { _cached_encoder_for_CalcWtanInfo = function (value: CalcWtanInfo, elGetter: $.ASN1Encoder<CalcWtanInfo>): _Element {
+    if (!_cached_encoder_for_CalcWtanInfo) { _cached_encoder_for_CalcWtanInfo = function (value: CalcWtanInfo, _elGetter: $.ASN1Encoder<CalcWtanInfo>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthResponse(value.authResponse, $.BER));
     if (value.calculationParam !== undefined) {

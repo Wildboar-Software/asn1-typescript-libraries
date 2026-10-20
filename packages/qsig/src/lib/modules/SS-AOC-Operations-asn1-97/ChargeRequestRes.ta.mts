@@ -156,7 +156,7 @@ let _cached_encoder_for_ChargeRequestRes: $.ASN1Encoder<ChargeRequestRes> | null
  */
 export
 function _encode_ChargeRequestRes (value: ChargeRequestRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargeRequestRes) { _cached_encoder_for_ChargeRequestRes = function (value: ChargeRequestRes, elGetter: $.ASN1Encoder<ChargeRequestRes>): _Element {
+    if (!_cached_encoder_for_ChargeRequestRes) { _cached_encoder_for_ChargeRequestRes = function (value: ChargeRequestRes, _elGetter: $.ASN1Encoder<ChargeRequestRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AdviceModeCombination(value.adviceModeCombination, $.BER));
     if (value.chargeReqResExtension !== undefined) {

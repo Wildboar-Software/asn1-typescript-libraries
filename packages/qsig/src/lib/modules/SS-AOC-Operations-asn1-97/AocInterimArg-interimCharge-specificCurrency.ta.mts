@@ -153,7 +153,7 @@ let _cached_encoder_for_AocInterimArg_interimCharge_specificCurrency: $.ASN1Enco
  */
 export
 function _encode_AocInterimArg_interimCharge_specificCurrency (value: AocInterimArg_interimCharge_specificCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocInterimArg_interimCharge_specificCurrency) { _cached_encoder_for_AocInterimArg_interimCharge_specificCurrency = function (value: AocInterimArg_interimCharge_specificCurrency, elGetter: $.ASN1Encoder<AocInterimArg_interimCharge_specificCurrency>): _Element {
+    if (!_cached_encoder_for_AocInterimArg_interimCharge_specificCurrency) { _cached_encoder_for_AocInterimArg_interimCharge_specificCurrency = function (value: AocInterimArg_interimCharge_specificCurrency, _elGetter: $.ASN1Encoder<AocInterimArg_interimCharge_specificCurrency>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_RecordedCurrency, $.BER)(value.recordedCurrency, $.BER));
     if (value.interimBillingId !== undefined) {

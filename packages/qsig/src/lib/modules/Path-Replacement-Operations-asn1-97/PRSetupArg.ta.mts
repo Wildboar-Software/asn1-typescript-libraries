@@ -149,7 +149,7 @@ let _cached_encoder_for_PRSetupArg: $.ASN1Encoder<PRSetupArg> | null = null;
  */
 export
 function _encode_PRSetupArg (value: PRSetupArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PRSetupArg) { _cached_encoder_for_PRSetupArg = function (value: PRSetupArg, elGetter: $.ASN1Encoder<PRSetupArg>): _Element {
+    if (!_cached_encoder_for_PRSetupArg) { _cached_encoder_for_PRSetupArg = function (value: PRSetupArg, _elGetter: $.ASN1Encoder<PRSetupArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CallIdentity(value.callIdentity, $.BER));
     if (value.extension !== undefined) {

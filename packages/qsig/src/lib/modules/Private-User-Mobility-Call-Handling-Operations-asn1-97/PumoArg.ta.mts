@@ -179,7 +179,7 @@ let _cached_encoder_for_PumoArg: $.ASN1Encoder<PumoArg> | null = null;
  */
 export
 function _encode_PumoArg (value: PumoArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PumoArg) { _cached_encoder_for_PumoArg = function (value: PumoArg, elGetter: $.ASN1Encoder<PumoArg>): _Element {
+    if (!_cached_encoder_for_PumoArg) { _cached_encoder_for_PumoArg = function (value: PumoArg, _elGetter: $.ASN1Encoder<PumoArg>): _Element {
     const _components: _Element[] = [];
     if (value.destinationNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => _encode_PartyNumber, $.BER)(value.destinationNumber, $.BER));

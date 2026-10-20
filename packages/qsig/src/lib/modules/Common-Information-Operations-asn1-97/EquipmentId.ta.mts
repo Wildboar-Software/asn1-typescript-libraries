@@ -169,7 +169,7 @@ let _cached_encoder_for_EquipmentId: $.ASN1Encoder<EquipmentId> | null = null;
  */
 export
 function _encode_EquipmentId (value: EquipmentId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EquipmentId) { _cached_encoder_for_EquipmentId = function (value: EquipmentId, elGetter: $.ASN1Encoder<EquipmentId>): _Element {
+    if (!_cached_encoder_for_EquipmentId) { _cached_encoder_for_EquipmentId = function (value: EquipmentId, _elGetter: $.ASN1Encoder<EquipmentId>): _Element {
     const _components: _Element[] = [];
     if (value.nodeId !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeIA5String, $.BER)(value.nodeId, $.BER));

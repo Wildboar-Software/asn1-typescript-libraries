@@ -174,7 +174,7 @@ let _cached_encoder_for_CalcWtatInfoUnit: $.ASN1Encoder<CalcWtatInfoUnit> | null
  */
 export
 function _encode_CalcWtatInfoUnit (value: CalcWtatInfoUnit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalcWtatInfoUnit) { _cached_encoder_for_CalcWtatInfoUnit = function (value: CalcWtatInfoUnit, elGetter: $.ASN1Encoder<CalcWtatInfoUnit>): _Element {
+    if (!_cached_encoder_for_CalcWtatInfoUnit) { _cached_encoder_for_CalcWtatInfoUnit = function (value: CalcWtatInfoUnit, _elGetter: $.ASN1Encoder<CalcWtatInfoUnit>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthChallenge(value.authChallenge, $.BER));
     _components.push(/* REQUIRED   */ _encode_AuthResponse(value.authResponse, $.BER));

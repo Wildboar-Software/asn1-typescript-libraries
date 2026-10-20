@@ -144,7 +144,7 @@ let _cached_encoder_for_PartyInfo: $.ASN1Encoder<PartyInfo> | null = null;
  */
 export
 function _encode_PartyInfo (value: PartyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PartyInfo) { _cached_encoder_for_PartyInfo = function (value: PartyInfo, elGetter: $.ASN1Encoder<PartyInfo>): _Element {
+    if (!_cached_encoder_for_PartyInfo) { _cached_encoder_for_PartyInfo = function (value: PartyInfo, _elGetter: $.ASN1Encoder<PartyInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER),
         /* REQUIRED   */ _encode_MsgCentreId(value.messageCentreID, $.BER)

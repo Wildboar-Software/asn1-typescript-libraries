@@ -212,7 +212,7 @@ let _cached_encoder_for_MCMUpdateArg: $.ASN1Encoder<MCMUpdateArg> | null = null;
  */
 export
 function _encode_MCMUpdateArg (value: MCMUpdateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCMUpdateArg) { _cached_encoder_for_MCMUpdateArg = function (value: MCMUpdateArg, elGetter: $.ASN1Encoder<MCMUpdateArg>): _Element {
+    if (!_cached_encoder_for_MCMUpdateArg) { _cached_encoder_for_MCMUpdateArg = function (value: MCMUpdateArg, _elGetter: $.ASN1Encoder<MCMUpdateArg>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -163,7 +163,7 @@ let _cached_encoder_for_SSCTSetupArg: $.ASN1Encoder<SSCTSetupArg> | null = null;
  */
 export
 function _encode_SSCTSetupArg (value: SSCTSetupArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SSCTSetupArg) { _cached_encoder_for_SSCTSetupArg = function (value: SSCTSetupArg, elGetter: $.ASN1Encoder<SSCTSetupArg>): _Element {
+    if (!_cached_encoder_for_SSCTSetupArg) { _cached_encoder_for_SSCTSetupArg = function (value: SSCTSetupArg, _elGetter: $.ASN1Encoder<SSCTSetupArg>): _Element {
     const _components: _Element[] = [];
     if (value.transferringAddress !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 1, () => _encode_PresentedAddressScreened, $.BER)(value.transferringAddress, $.BER));

@@ -226,7 +226,7 @@ let _cached_encoder_for_CTCompleteArg: $.ASN1Encoder<CTCompleteArg> | null = nul
  */
 export
 function _encode_CTCompleteArg (value: CTCompleteArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CTCompleteArg) { _cached_encoder_for_CTCompleteArg = function (value: CTCompleteArg, elGetter: $.ASN1Encoder<CTCompleteArg>): _Element {
+    if (!_cached_encoder_for_CTCompleteArg) { _cached_encoder_for_CTCompleteArg = function (value: CTCompleteArg, _elGetter: $.ASN1Encoder<CTCompleteArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_EndDesignation(value.endDesignation, $.BER));
     _components.push(/* REQUIRED   */ _encode_PresentedNumberScreened(value.redirectionNumber, $.BER));

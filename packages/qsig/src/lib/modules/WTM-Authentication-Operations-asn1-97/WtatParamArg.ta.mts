@@ -174,7 +174,7 @@ let _cached_encoder_for_WtatParamArg: $.ASN1Encoder<WtatParamArg> | null = null;
  */
 export
 function _encode_WtatParamArg (value: WtatParamArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtatParamArg) { _cached_encoder_for_WtatParamArg = function (value: WtatParamArg, elGetter: $.ASN1Encoder<WtatParamArg>): _Element {
+    if (!_cached_encoder_for_WtatParamArg) { _cached_encoder_for_WtatParamArg = function (value: WtatParamArg, _elGetter: $.ASN1Encoder<WtatParamArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtmUserId(value.wtmUserId, $.BER));
     if (value.canCompute !== undefined) {

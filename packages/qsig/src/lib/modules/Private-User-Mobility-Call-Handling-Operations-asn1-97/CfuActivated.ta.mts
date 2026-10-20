@@ -181,7 +181,7 @@ let _cached_encoder_for_CfuActivated: $.ASN1Encoder<CfuActivated> | null = null;
  */
 export
 function _encode_CfuActivated (value: CfuActivated, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CfuActivated) { _cached_encoder_for_CfuActivated = function (value: CfuActivated, elGetter: $.ASN1Encoder<CfuActivated>): _Element {
+    if (!_cached_encoder_for_CfuActivated) { _cached_encoder_for_CfuActivated = function (value: CfuActivated, _elGetter: $.ASN1Encoder<CfuActivated>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_Address(value.divToAddress, $.BER));
     _components.push(/* REQUIRED   */ _encode_SubscriptionOption(value.divOptions, $.BER));

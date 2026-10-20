@@ -245,7 +245,7 @@ let _cached_encoder_for_MWIActivateArg: $.ASN1Encoder<MWIActivateArg> | null = n
  */
 export
 function _encode_MWIActivateArg (value: MWIActivateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MWIActivateArg) { _cached_encoder_for_MWIActivateArg = function (value: MWIActivateArg, elGetter: $.ASN1Encoder<MWIActivateArg>): _Element {
+    if (!_cached_encoder_for_MWIActivateArg) { _cached_encoder_for_MWIActivateArg = function (value: MWIActivateArg, _elGetter: $.ASN1Encoder<MWIActivateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));

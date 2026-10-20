@@ -167,7 +167,7 @@ let _cached_encoder_for_VolumeRateCurrency: $.ASN1Encoder<VolumeRateCurrency> | 
  */
 export
 function _encode_VolumeRateCurrency (value: VolumeRateCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VolumeRateCurrency) { _cached_encoder_for_VolumeRateCurrency = function (value: VolumeRateCurrency, elGetter: $.ASN1Encoder<VolumeRateCurrency>): _Element {
+    if (!_cached_encoder_for_VolumeRateCurrency) { _cached_encoder_for_VolumeRateCurrency = function (value: VolumeRateCurrency, _elGetter: $.ASN1Encoder<VolumeRateCurrency>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Currency, $.BER)(value.vRCurrency, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Amount, $.BER)(value.vRAmount, $.BER),

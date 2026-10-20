@@ -160,7 +160,7 @@ let _cached_encoder_for_CompressedInfo: $.ASN1Encoder<CompressedInfo> | null = n
  */
 export
 function _encode_CompressedInfo (value: CompressedInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompressedInfo) { _cached_encoder_for_CompressedInfo = function (value: CompressedInfo, elGetter: $.ASN1Encoder<CompressedInfo>): _Element {
+    if (!_cached_encoder_for_CompressedInfo) { _cached_encoder_for_CompressedInfo = function (value: CompressedInfo, _elGetter: $.ASN1Encoder<CompressedInfo>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_NrOfMessages(value.nrOfMessages, $.BER));
     if (value.lastTimeStamp !== undefined) {

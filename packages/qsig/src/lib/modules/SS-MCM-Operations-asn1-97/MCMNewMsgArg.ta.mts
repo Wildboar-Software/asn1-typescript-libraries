@@ -244,7 +244,7 @@ let _cached_encoder_for_MCMNewMsgArg: $.ASN1Encoder<MCMNewMsgArg> | null = null;
  */
 export
 function _encode_MCMNewMsgArg (value: MCMNewMsgArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCMNewMsgArg) { _cached_encoder_for_MCMNewMsgArg = function (value: MCMNewMsgArg, elGetter: $.ASN1Encoder<MCMNewMsgArg>): _Element {
+    if (!_cached_encoder_for_MCMNewMsgArg) { _cached_encoder_for_MCMNewMsgArg = function (value: MCMNewMsgArg, _elGetter: $.ASN1Encoder<MCMNewMsgArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));
     _components.push(/* REQUIRED   */ _encode_MessageType(value.specificMessageType, $.BER));

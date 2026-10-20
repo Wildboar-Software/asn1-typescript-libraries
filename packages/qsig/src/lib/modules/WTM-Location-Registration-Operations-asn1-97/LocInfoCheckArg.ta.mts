@@ -189,7 +189,7 @@ let _cached_encoder_for_LocInfoCheckArg: $.ASN1Encoder<LocInfoCheckArg> | null =
  */
 export
 function _encode_LocInfoCheckArg (value: LocInfoCheckArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocInfoCheckArg) { _cached_encoder_for_LocInfoCheckArg = function (value: LocInfoCheckArg, elGetter: $.ASN1Encoder<LocInfoCheckArg>): _Element {
+    if (!_cached_encoder_for_LocInfoCheckArg) { _cached_encoder_for_LocInfoCheckArg = function (value: LocInfoCheckArg, _elGetter: $.ASN1Encoder<LocInfoCheckArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtmUserId(value.wtmUserId, $.BER));
     if (value.basicService !== undefined && !$.deepEq(value.basicService, LocInfoCheckArg._default_value_for_basicService)) {

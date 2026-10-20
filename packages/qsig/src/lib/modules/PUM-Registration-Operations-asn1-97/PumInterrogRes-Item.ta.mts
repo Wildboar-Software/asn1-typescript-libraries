@@ -212,7 +212,7 @@ let _cached_encoder_for_PumInterrogRes_Item: $.ASN1Encoder<PumInterrogRes_Item> 
  */
 export
 function _encode_PumInterrogRes_Item (value: PumInterrogRes_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PumInterrogRes_Item) { _cached_encoder_for_PumInterrogRes_Item = function (value: PumInterrogRes_Item, elGetter: $.ASN1Encoder<PumInterrogRes_Item>): _Element {
+    if (!_cached_encoder_for_PumInterrogRes_Item) { _cached_encoder_for_PumInterrogRes_Item = function (value: PumInterrogRes_Item, _elGetter: $.ASN1Encoder<PumInterrogRes_Item>): _Element {
     const _components: _Element[] = [];
     if (value.basicService !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_BasicService, $.BER)(value.basicService, $.BER));

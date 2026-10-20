@@ -152,7 +152,7 @@ let _cached_encoder_for_AocRateArg: $.ASN1Encoder<AocRateArg> | null = null;
  */
 export
 function _encode_AocRateArg (value: AocRateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocRateArg) { _cached_encoder_for_AocRateArg = function (value: AocRateArg, elGetter: $.ASN1Encoder<AocRateArg>): _Element {
+    if (!_cached_encoder_for_AocRateArg) { _cached_encoder_for_AocRateArg = function (value: AocRateArg, _elGetter: $.ASN1Encoder<AocRateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AocRateArg_aocRate(value.aocRate, $.BER));
     if (value.rateArgExtension !== undefined) {

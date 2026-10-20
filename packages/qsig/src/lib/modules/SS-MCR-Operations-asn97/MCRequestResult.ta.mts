@@ -143,7 +143,7 @@ let _cached_encoder_for_MCRequestResult: $.ASN1Encoder<MCRequestResult> | null =
  */
 export
 function _encode_MCRequestResult (value: MCRequestResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCRequestResult) { _cached_encoder_for_MCRequestResult = function (value: MCRequestResult, elGetter: $.ASN1Encoder<MCRequestResult>): _Element {
+    if (!_cached_encoder_for_MCRequestResult) { _cached_encoder_for_MCRequestResult = function (value: MCRequestResult, _elGetter: $.ASN1Encoder<MCRequestResult>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

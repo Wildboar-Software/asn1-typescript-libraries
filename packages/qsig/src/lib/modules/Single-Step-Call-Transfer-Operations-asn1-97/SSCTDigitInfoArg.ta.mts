@@ -164,7 +164,7 @@ let _cached_encoder_for_SSCTDigitInfoArg: $.ASN1Encoder<SSCTDigitInfoArg> | null
  */
 export
 function _encode_SSCTDigitInfoArg (value: SSCTDigitInfoArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SSCTDigitInfoArg) { _cached_encoder_for_SSCTDigitInfoArg = function (value: SSCTDigitInfoArg, elGetter: $.ASN1Encoder<SSCTDigitInfoArg>): _Element {
+    if (!_cached_encoder_for_SSCTDigitInfoArg) { _cached_encoder_for_SSCTDigitInfoArg = function (value: SSCTDigitInfoArg, _elGetter: $.ASN1Encoder<SSCTDigitInfoArg>): _Element {
     const _components: _Element[] = [];
     if (value.reroutingNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 1, () => _encode_PartyNumber, $.BER)(value.reroutingNumber, $.BER));

@@ -226,7 +226,7 @@ let _cached_encoder_for_CmnArg: $.ASN1Encoder<CmnArg> | null = null;
  */
 export
 function _encode_CmnArg (value: CmnArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CmnArg) { _cached_encoder_for_CmnArg = function (value: CmnArg, elGetter: $.ASN1Encoder<CmnArg>): _Element {
+    if (!_cached_encoder_for_CmnArg) { _cached_encoder_for_CmnArg = function (value: CmnArg, _elGetter: $.ASN1Encoder<CmnArg>): _Element {
     const _components: _Element[] = [];
     if (value.featureIdentifier !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_FeatureIdList, $.BER)(value.featureIdentifier, $.BER));

@@ -153,7 +153,7 @@ let _cached_encoder_for_AocFinalArg_finalCharge_specificCurrency: $.ASN1Encoder<
  */
 export
 function _encode_AocFinalArg_finalCharge_specificCurrency (value: AocFinalArg_finalCharge_specificCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocFinalArg_finalCharge_specificCurrency) { _cached_encoder_for_AocFinalArg_finalCharge_specificCurrency = function (value: AocFinalArg_finalCharge_specificCurrency, elGetter: $.ASN1Encoder<AocFinalArg_finalCharge_specificCurrency>): _Element {
+    if (!_cached_encoder_for_AocFinalArg_finalCharge_specificCurrency) { _cached_encoder_for_AocFinalArg_finalCharge_specificCurrency = function (value: AocFinalArg_finalCharge_specificCurrency, _elGetter: $.ASN1Encoder<AocFinalArg_finalCharge_specificCurrency>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_RecordedCurrency, $.BER)(value.recordedCurrency, $.BER));
     if (value.finalBillingId !== undefined) {

@@ -171,7 +171,7 @@ let _cached_encoder_for_MCMInterrogateArg: $.ASN1Encoder<MCMInterrogateArg> | nu
  */
 export
 function _encode_MCMInterrogateArg (value: MCMInterrogateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCMInterrogateArg) { _cached_encoder_for_MCMInterrogateArg = function (value: MCMInterrogateArg, elGetter: $.ASN1Encoder<MCMInterrogateArg>): _Element {
+    if (!_cached_encoder_for_MCMInterrogateArg) { _cached_encoder_for_MCMInterrogateArg = function (value: MCMInterrogateArg, _elGetter: $.ASN1Encoder<MCMInterrogateArg>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

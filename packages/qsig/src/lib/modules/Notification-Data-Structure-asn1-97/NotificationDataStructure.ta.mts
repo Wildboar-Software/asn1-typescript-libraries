@@ -144,7 +144,7 @@ let _cached_encoder_for_NotificationDataStructure: $.ASN1Encoder<NotificationDat
  */
 export
 function _encode_NotificationDataStructure (value: NotificationDataStructure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationDataStructure) { _cached_encoder_for_NotificationDataStructure = function (value: NotificationDataStructure, elGetter: $.ASN1Encoder<NotificationDataStructure>): _Element {
+    if (!_cached_encoder_for_NotificationDataStructure) { _cached_encoder_for_NotificationDataStructure = function (value: NotificationDataStructure, _elGetter: $.ASN1Encoder<NotificationDataStructure>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_Code(value.notificationValue, $.BER));
     if (value.notificationArgument !== undefined) {

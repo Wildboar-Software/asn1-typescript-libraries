@@ -146,7 +146,7 @@ let _cached_encoder_for_SmsStatusReportRes: $.ASN1Encoder<SmsStatusReportRes> | 
  */
 export
 function _encode_SmsStatusReportRes (value: SmsStatusReportRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsStatusReportRes) { _cached_encoder_for_SmsStatusReportRes = function (value: SmsStatusReportRes, elGetter: $.ASN1Encoder<SmsStatusReportRes>): _Element {
+    if (!_cached_encoder_for_SmsStatusReportRes) { _cached_encoder_for_SmsStatusReportRes = function (value: SmsStatusReportRes, _elGetter: $.ASN1Encoder<SmsStatusReportRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_SmsStatusReportResponseChoice(value.smsStatusReportResponseChoice, $.BER));
     if (value.smsExtension !== undefined) {

@@ -146,7 +146,7 @@ let _cached_encoder_for_DisplayArg: $.ASN1Encoder<DisplayArg> | null = null;
  */
 export
 function _encode_DisplayArg (value: DisplayArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DisplayArg) { _cached_encoder_for_DisplayArg = function (value: DisplayArg, elGetter: $.ASN1Encoder<DisplayArg>): _Element {
+    if (!_cached_encoder_for_DisplayArg) { _cached_encoder_for_DisplayArg = function (value: DisplayArg, _elGetter: $.ASN1Encoder<DisplayArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_DisplayString(value.displayString, $.BER));
     if (value.extension !== undefined) {

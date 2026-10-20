@@ -145,7 +145,7 @@ let _cached_encoder_for_ResChoiceSeq: $.ASN1Encoder<ResChoiceSeq> | null = null;
  */
 export
 function _encode_ResChoiceSeq (value: ResChoiceSeq, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResChoiceSeq) { _cached_encoder_for_ResChoiceSeq = function (value: ResChoiceSeq, elGetter: $.ASN1Encoder<ResChoiceSeq>): _Element {
+    if (!_cached_encoder_for_ResChoiceSeq) { _cached_encoder_for_ResChoiceSeq = function (value: ResChoiceSeq, _elGetter: $.ASN1Encoder<ResChoiceSeq>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ProtocolIdentifier(value.protocolIdentifier, $.BER),
         /* REQUIRED   */ _encode_UserData(value.userData, $.BER)

@@ -232,7 +232,7 @@ let _cached_encoder_for_MCRequestArg: $.ASN1Encoder<MCRequestArg> | null = null;
  */
 export
 function _encode_MCRequestArg (value: MCRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCRequestArg) { _cached_encoder_for_MCRequestArg = function (value: MCRequestArg, elGetter: $.ASN1Encoder<MCRequestArg>): _Element {
+    if (!_cached_encoder_for_MCRequestArg) { _cached_encoder_for_MCRequestArg = function (value: MCRequestArg, _elGetter: $.ASN1Encoder<MCRequestArg>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

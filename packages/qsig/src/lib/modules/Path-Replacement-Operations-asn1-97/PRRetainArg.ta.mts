@@ -163,7 +163,7 @@ let _cached_encoder_for_PRRetainArg: $.ASN1Encoder<PRRetainArg> | null = null;
  */
 export
 function _encode_PRRetainArg (value: PRRetainArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PRRetainArg) { _cached_encoder_for_PRRetainArg = function (value: PRRetainArg, elGetter: $.ASN1Encoder<PRRetainArg>): _Element {
+    if (!_cached_encoder_for_PRRetainArg) { _cached_encoder_for_PRRetainArg = function (value: PRRetainArg, _elGetter: $.ASN1Encoder<PRRetainArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CallIdentity(value.callIdentity, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.rerouteingNumber, $.BER));

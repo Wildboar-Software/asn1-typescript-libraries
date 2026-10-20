@@ -160,7 +160,7 @@ let _cached_encoder_for_GetRRCInfRes: $.ASN1Encoder<GetRRCInfRes> | null = null;
  */
 export
 function _encode_GetRRCInfRes (value: GetRRCInfRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GetRRCInfRes) { _cached_encoder_for_GetRRCInfRes = function (value: GetRRCInfRes, elGetter: $.ASN1Encoder<GetRRCInfRes>): _Element {
+    if (!_cached_encoder_for_GetRRCInfRes) { _cached_encoder_for_GetRRCInfRes = function (value: GetRRCInfRes, _elGetter: $.ASN1Encoder<GetRRCInfRes>): _Element {
     const _components: _Element[] = [];
     if (value.alternativeId !== undefined) {
         _components.push(/* IF_ABSENT  */ _encode_AlternativeId(value.alternativeId, $.BER));

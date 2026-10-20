@@ -232,7 +232,7 @@ let _cached_encoder_for_MWIInterrogateResElt: $.ASN1Encoder<MWIInterrogateResElt
  */
 export
 function _encode_MWIInterrogateResElt (value: MWIInterrogateResElt, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MWIInterrogateResElt) { _cached_encoder_for_MWIInterrogateResElt = function (value: MWIInterrogateResElt, elGetter: $.ASN1Encoder<MWIInterrogateResElt>): _Element {
+    if (!_cached_encoder_for_MWIInterrogateResElt) { _cached_encoder_for_MWIInterrogateResElt = function (value: MWIInterrogateResElt, _elGetter: $.ASN1Encoder<MWIInterrogateResElt>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));
     if (value.msgCentreId !== undefined) {

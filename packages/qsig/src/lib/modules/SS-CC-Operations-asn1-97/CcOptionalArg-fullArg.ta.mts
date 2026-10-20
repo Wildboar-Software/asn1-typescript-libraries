@@ -204,7 +204,7 @@ let _cached_encoder_for_CcOptionalArg_fullArg: $.ASN1Encoder<CcOptionalArg_fullA
  */
 export
 function _encode_CcOptionalArg_fullArg (value: CcOptionalArg_fullArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CcOptionalArg_fullArg) { _cached_encoder_for_CcOptionalArg_fullArg = function (value: CcOptionalArg_fullArg, elGetter: $.ASN1Encoder<CcOptionalArg_fullArg>): _Element {
+    if (!_cached_encoder_for_CcOptionalArg_fullArg) { _cached_encoder_for_CcOptionalArg_fullArg = function (value: CcOptionalArg_fullArg, _elGetter: $.ASN1Encoder<CcOptionalArg_fullArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.numberA, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.numberB, $.BER));

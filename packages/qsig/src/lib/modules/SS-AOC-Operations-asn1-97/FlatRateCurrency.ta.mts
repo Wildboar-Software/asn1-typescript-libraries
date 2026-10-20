@@ -145,7 +145,7 @@ let _cached_encoder_for_FlatRateCurrency: $.ASN1Encoder<FlatRateCurrency> | null
  */
 export
 function _encode_FlatRateCurrency (value: FlatRateCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FlatRateCurrency) { _cached_encoder_for_FlatRateCurrency = function (value: FlatRateCurrency, elGetter: $.ASN1Encoder<FlatRateCurrency>): _Element {
+    if (!_cached_encoder_for_FlatRateCurrency) { _cached_encoder_for_FlatRateCurrency = function (value: FlatRateCurrency, _elGetter: $.ASN1Encoder<FlatRateCurrency>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Currency, $.BER)(value.fRCurrency, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Amount, $.BER)(value.fRAmount, $.BER)

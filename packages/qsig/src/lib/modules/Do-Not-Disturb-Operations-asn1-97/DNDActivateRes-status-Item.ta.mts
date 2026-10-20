@@ -159,7 +159,7 @@ let _cached_encoder_for_DNDActivateRes_status_Item: $.ASN1Encoder<DNDActivateRes
  */
 export
 function _encode_DNDActivateRes_status_Item (value: DNDActivateRes_status_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDActivateRes_status_Item) { _cached_encoder_for_DNDActivateRes_status_Item = function (value: DNDActivateRes_status_Item, elGetter: $.ASN1Encoder<DNDActivateRes_status_Item>): _Element {
+    if (!_cached_encoder_for_DNDActivateRes_status_Item) { _cached_encoder_for_DNDActivateRes_status_Item = function (value: DNDActivateRes_status_Item, _elGetter: $.ASN1Encoder<DNDActivateRes_status_Item>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));
     if (value.dndProtectionLevel !== undefined) {

@@ -189,7 +189,7 @@ let _cached_encoder_for_LocUpdArg: $.ASN1Encoder<LocUpdArg> | null = null;
  */
 export
 function _encode_LocUpdArg (value: LocUpdArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocUpdArg) { _cached_encoder_for_LocUpdArg = function (value: LocUpdArg, elGetter: $.ASN1Encoder<LocUpdArg>): _Element {
+    if (!_cached_encoder_for_LocUpdArg) { _cached_encoder_for_LocUpdArg = function (value: LocUpdArg, _elGetter: $.ASN1Encoder<LocUpdArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtmUserId(value.wtmUserId, $.BER));
     if (value.basicService !== undefined && !$.deepEq(value.basicService, LocUpdArg._default_value_for_basicService)) {

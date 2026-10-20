@@ -164,7 +164,7 @@ let _cached_encoder_for_CurrLocation: $.ASN1Encoder<CurrLocation> | null = null;
  */
 export
 function _encode_CurrLocation (value: CurrLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CurrLocation) { _cached_encoder_for_CurrLocation = function (value: CurrLocation, elGetter: $.ASN1Encoder<CurrLocation>): _Element {
+    if (!_cached_encoder_for_CurrLocation) { _cached_encoder_for_CurrLocation = function (value: CurrLocation, _elGetter: $.ASN1Encoder<CurrLocation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.hostingAddr, $.BER));
     _components.push(/* REQUIRED   */ _encode_PumIdentity(value.pumIdentity, $.BER));

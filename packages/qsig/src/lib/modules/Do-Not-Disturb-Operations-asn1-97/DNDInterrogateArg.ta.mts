@@ -149,7 +149,7 @@ let _cached_encoder_for_DNDInterrogateArg: $.ASN1Encoder<DNDInterrogateArg> | nu
  */
 export
 function _encode_DNDInterrogateArg (value: DNDInterrogateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDInterrogateArg) { _cached_encoder_for_DNDInterrogateArg = function (value: DNDInterrogateArg, elGetter: $.ASN1Encoder<DNDInterrogateArg>): _Element {
+    if (!_cached_encoder_for_DNDInterrogateArg) { _cached_encoder_for_DNDInterrogateArg = function (value: DNDInterrogateArg, _elGetter: $.ASN1Encoder<DNDInterrogateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));
     if (value.argumentExtension !== undefined) {

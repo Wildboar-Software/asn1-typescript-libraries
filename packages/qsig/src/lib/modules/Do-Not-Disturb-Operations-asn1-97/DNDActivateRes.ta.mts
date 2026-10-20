@@ -152,7 +152,7 @@ let _cached_encoder_for_DNDActivateRes: $.ASN1Encoder<DNDActivateRes> | null = n
  */
 export
 function _encode_DNDActivateRes (value: DNDActivateRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDActivateRes) { _cached_encoder_for_DNDActivateRes = function (value: DNDActivateRes, elGetter: $.ASN1Encoder<DNDActivateRes>): _Element {
+    if (!_cached_encoder_for_DNDActivateRes) { _cached_encoder_for_DNDActivateRes = function (value: DNDActivateRes, _elGetter: $.ASN1Encoder<DNDActivateRes>): _Element {
     const _components: _Element[] = [];
     if (value.status !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encodeSetOf<DNDActivateRes_status_Item>(() => _encode_DNDActivateRes_status_Item, $.BER)(value.status, $.BER));

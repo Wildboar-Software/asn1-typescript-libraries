@@ -152,7 +152,7 @@ let _cached_encoder_for_Amount: $.ASN1Encoder<Amount> | null = null;
  */
 export
 function _encode_Amount (value: Amount, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Amount) { _cached_encoder_for_Amount = function (value: Amount, elGetter: $.ASN1Encoder<Amount>): _Element {
+    if (!_cached_encoder_for_Amount) { _cached_encoder_for_Amount = function (value: Amount, _elGetter: $.ASN1Encoder<Amount>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_CurrencyAmount, $.BER)(value.currencyAmount, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Multiplier, $.BER)(value.multiplier, $.BER)

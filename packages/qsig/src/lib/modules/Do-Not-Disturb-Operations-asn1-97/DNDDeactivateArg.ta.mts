@@ -170,7 +170,7 @@ let _cached_encoder_for_DNDDeactivateArg: $.ASN1Encoder<DNDDeactivateArg> | null
  */
 export
 function _encode_DNDDeactivateArg (value: DNDDeactivateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDDeactivateArg) { _cached_encoder_for_DNDDeactivateArg = function (value: DNDDeactivateArg, elGetter: $.ASN1Encoder<DNDDeactivateArg>): _Element {
+    if (!_cached_encoder_for_DNDDeactivateArg) { _cached_encoder_for_DNDDeactivateArg = function (value: DNDDeactivateArg, _elGetter: $.ASN1Encoder<DNDDeactivateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));

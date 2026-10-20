@@ -163,7 +163,7 @@ let _cached_encoder_for_WtmoArg: $.ASN1Encoder<WtmoArg> | null = null;
  */
 export
 function _encode_WtmoArg (value: WtmoArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtmoArg) { _cached_encoder_for_WtmoArg = function (value: WtmoArg, elGetter: $.ASN1Encoder<WtmoArg>): _Element {
+    if (!_cached_encoder_for_WtmoArg) { _cached_encoder_for_WtmoArg = function (value: WtmoArg, _elGetter: $.ASN1Encoder<WtmoArg>): _Element {
     const _components: _Element[] = [];
     if (value.destinationNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => _encode_PartyNumber, $.BER)(value.destinationNumber, $.BER));

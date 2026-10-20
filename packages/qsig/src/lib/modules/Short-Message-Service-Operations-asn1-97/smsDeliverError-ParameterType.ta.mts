@@ -181,7 +181,7 @@ let _cached_encoder_for_smsDeliverError_ParameterType: $.ASN1Encoder<smsDeliverE
  */
 export
 function _encode_smsDeliverError_ParameterType (value: smsDeliverError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_smsDeliverError_ParameterType) { _cached_encoder_for_smsDeliverError_ParameterType = function (value: smsDeliverError_ParameterType, elGetter: $.ASN1Encoder<smsDeliverError_ParameterType>): _Element {
+    if (!_cached_encoder_for_smsDeliverError_ParameterType) { _cached_encoder_for_smsDeliverError_ParameterType = function (value: smsDeliverError_ParameterType, _elGetter: $.ASN1Encoder<smsDeliverError_ParameterType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_FailureCause(value.failureCause, $.BER));
     if (value.protocolIdentifier !== undefined) {

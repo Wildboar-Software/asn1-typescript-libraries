@@ -145,7 +145,7 @@ let _cached_encoder_for_WtmIdentity_both: $.ASN1Encoder<WtmIdentity_both> | null
  */
 export
 function _encode_WtmIdentity_both (value: WtmIdentity_both, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtmIdentity_both) { _cached_encoder_for_WtmIdentity_both = function (value: WtmIdentity_both, elGetter: $.ASN1Encoder<WtmIdentity_both>): _Element {
+    if (!_cached_encoder_for_WtmIdentity_both) { _cached_encoder_for_WtmIdentity_both = function (value: WtmIdentity_both, _elGetter: $.ASN1Encoder<WtmIdentity_both>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER),
         /* REQUIRED   */ _encode_AlternativeId(value.alternativeId, $.BER)

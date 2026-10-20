@@ -149,7 +149,7 @@ let _cached_encoder_for_CTSetupArg: $.ASN1Encoder<CTSetupArg> | null = null;
  */
 export
 function _encode_CTSetupArg (value: CTSetupArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CTSetupArg) { _cached_encoder_for_CTSetupArg = function (value: CTSetupArg, elGetter: $.ASN1Encoder<CTSetupArg>): _Element {
+    if (!_cached_encoder_for_CTSetupArg) { _cached_encoder_for_CTSetupArg = function (value: CTSetupArg, _elGetter: $.ASN1Encoder<CTSetupArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CallIdentity(value.callIdentity, $.BER));
     if (value.argumentExtension !== undefined) {

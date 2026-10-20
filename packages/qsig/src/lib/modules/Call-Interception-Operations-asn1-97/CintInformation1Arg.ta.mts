@@ -160,7 +160,7 @@ let _cached_encoder_for_CintInformation1Arg: $.ASN1Encoder<CintInformation1Arg> 
  */
 export
 function _encode_CintInformation1Arg (value: CintInformation1Arg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CintInformation1Arg) { _cached_encoder_for_CintInformation1Arg = function (value: CintInformation1Arg, elGetter: $.ASN1Encoder<CintInformation1Arg>): _Element {
+    if (!_cached_encoder_for_CintInformation1Arg) { _cached_encoder_for_CintInformation1Arg = function (value: CintInformation1Arg, _elGetter: $.ASN1Encoder<CintInformation1Arg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CintCause(value.interceptionCause, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.interceptedToNumber, $.BER));

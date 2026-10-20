@@ -170,7 +170,7 @@ let _cached_encoder_for_DNDActivateArg: $.ASN1Encoder<DNDActivateArg> | null = n
  */
 export
 function _encode_DNDActivateArg (value: DNDActivateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDActivateArg) { _cached_encoder_for_DNDActivateArg = function (value: DNDActivateArg, elGetter: $.ASN1Encoder<DNDActivateArg>): _Element {
+    if (!_cached_encoder_for_DNDActivateArg) { _cached_encoder_for_DNDActivateArg = function (value: DNDActivateArg, _elGetter: $.ASN1Encoder<DNDActivateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));

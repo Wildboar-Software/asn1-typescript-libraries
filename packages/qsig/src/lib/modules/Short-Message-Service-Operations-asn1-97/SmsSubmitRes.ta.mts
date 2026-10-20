@@ -174,7 +174,7 @@ let _cached_encoder_for_SmsSubmitRes: $.ASN1Encoder<SmsSubmitRes> | null = null;
  */
 export
 function _encode_SmsSubmitRes (value: SmsSubmitRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsSubmitRes) { _cached_encoder_for_SmsSubmitRes = function (value: SmsSubmitRes, elGetter: $.ASN1Encoder<SmsSubmitRes>): _Element {
+    if (!_cached_encoder_for_SmsSubmitRes) { _cached_encoder_for_SmsSubmitRes = function (value: SmsSubmitRes, _elGetter: $.ASN1Encoder<SmsSubmitRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ServiceCentreTimeStamp(value.serviceCentreTimeStamp, $.BER));
     if (value.protocolIdentifier !== undefined) {

@@ -169,7 +169,7 @@ let _cached_encoder_for_Concatenated8BitSMHeader: $.ASN1Encoder<Concatenated8Bit
  */
 export
 function _encode_Concatenated8BitSMHeader (value: Concatenated8BitSMHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Concatenated8BitSMHeader) { _cached_encoder_for_Concatenated8BitSMHeader = function (value: Concatenated8BitSMHeader, elGetter: $.ASN1Encoder<Concatenated8BitSMHeader>): _Element {
+    if (!_cached_encoder_for_Concatenated8BitSMHeader) { _cached_encoder_for_Concatenated8BitSMHeader = function (value: Concatenated8BitSMHeader, _elGetter: $.ASN1Encoder<Concatenated8BitSMHeader>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.concatenated8BitSMReferenceNumber, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.maximumNumberOf8BitSMInConcatenatedSM, $.BER),

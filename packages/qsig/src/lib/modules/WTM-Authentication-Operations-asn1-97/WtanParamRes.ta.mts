@@ -146,7 +146,7 @@ let _cached_encoder_for_WtanParamRes: $.ASN1Encoder<WtanParamRes> | null = null;
  */
 export
 function _encode_WtanParamRes (value: WtanParamRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtanParamRes) { _cached_encoder_for_WtanParamRes = function (value: WtanParamRes, elGetter: $.ASN1Encoder<WtanParamRes>): _Element {
+    if (!_cached_encoder_for_WtanParamRes) { _cached_encoder_for_WtanParamRes = function (value: WtanParamRes, _elGetter: $.ASN1Encoder<WtanParamRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtanParamInfo(value.wtanParamInfo, $.BER));
     if (value.dummyExtension !== undefined) {
