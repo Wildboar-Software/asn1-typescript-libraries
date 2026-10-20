@@ -1,0 +1,25 @@
+{
+  "name": "inap",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/inap/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/inap",
+        "tsConfig": "packages/inap/tsconfig.lib.json",
+        "packageJson": "packages/inap/package.json",
+        "main": "packages/inap/src/index.mts",
+        "assets": [
+          "packages/inap/*.md",
+          "packages/inap/LICENSE.txt",
+          "packages/inap/package.json"
+        ]
+      }
+    }
+  }
+}

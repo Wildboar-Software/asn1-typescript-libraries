@@ -1,0 +1,70 @@
+/* eslint-disable */
+import {
+    BIT_STRING
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary AllowedSubset
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AllowedSubset  ::=  BIT STRING {baseObject(0), oneLevel(1), wholeSubtree(2)}
+ * ```
+ */
+export
+type AllowedSubset = BIT_STRING;
+
+/**
+ * @summary AllowedSubset_baseObject
+ * @constant
+ */
+export
+const AllowedSubset_baseObject: number = 0; /* LONG_NAMED_BIT */
+
+/**
+ * @summary baseObject
+ * @constant
+ */
+export
+const baseObject: number = AllowedSubset_baseObject; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary AllowedSubset_oneLevel
+ * @constant
+ */
+export
+const AllowedSubset_oneLevel: number = 1; /* LONG_NAMED_BIT */
+
+/**
+ * @summary oneLevel
+ * @constant
+ */
+export
+const oneLevel: number = AllowedSubset_oneLevel; /* SHORT_NAMED_BIT */
+
+/**
+ * @summary AllowedSubset_wholeSubtree
+ * @constant
+ */
+export
+const AllowedSubset_wholeSubtree: number = 2; /* LONG_NAMED_BIT */
+
+/**
+ * @summary wholeSubtree
+ * @constant
+ */
+export
+const wholeSubtree: number = AllowedSubset_wholeSubtree; /* SHORT_NAMED_BIT */
+
+export
+const _decode_AllowedSubset: $.ASN1Decoder<AllowedSubset> = $._decodeBitString;
+
+export
+const _encode_AllowedSubset: $.ASN1Encoder<AllowedSubset> = $._encodeBitString;
+
+/* eslint-enable */

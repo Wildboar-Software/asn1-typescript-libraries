@@ -1,0 +1,220 @@
+/* eslint-disable */
+import {
+    BOOLEAN,
+    OBJECT_IDENTIFIER,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+// export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+// export { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+// export { ub_schema } from "../UpperBounds/ub-schema.va.mjs";
+// export { METHOD } from "../IN-CS3-SCF-SDF-Classes/METHOD.oca.mjs";
+
+
+/**
+ * @summary MethodUseDescription
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MethodUseDescription ::= SEQUENCE {
+ *   identifier   OBJECT-CLASS.&id,
+ *   name         SET OF DirectoryString{ub-schema} OPTIONAL,
+ *   description  DirectoryString{ub-schema} OPTIONAL,
+ *   obsolete     BOOLEAN DEFAULT FALSE,
+ *   information  [0]  SET OF METHOD.&id
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class MethodUseDescription {
+    /**
+     * @summary `identifier`.
+     * @public
+     * @readonly
+     */
+    readonly identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    readonly name: OPTIONAL<DirectoryString[]>;
+    /**
+     * @summary `description`.
+     * @public
+     * @readonly
+     */
+    readonly description: OPTIONAL<DirectoryString>;
+    /**
+     * @summary `obsolete`.
+     * @public
+     * @readonly
+     */
+    readonly obsolete: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `information`.
+     * @public
+     * @readonly
+     */
+    readonly information: OBJECT_IDENTIFIER[];
+
+    constructor (
+        identifier: OBJECT_IDENTIFIER,
+        name: OPTIONAL<DirectoryString[]>,
+        description: OPTIONAL<DirectoryString>,
+        obsolete: OPTIONAL<BOOLEAN>,
+        information: OBJECT_IDENTIFIER[]
+    ) {
+        this.identifier = identifier;
+        this.name = name;
+        this.description = description;
+        this.obsolete = obsolete;
+        this.information = information;
+    }
+
+    /**
+     * @summary Restructures an object into a MethodUseDescription
+     * @description
+     * 
+     * This takes an `object` and converts it to a `MethodUseDescription`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `MethodUseDescription`.
+     * @returns {MethodUseDescription}
+     */
+    public static _from_object (_o: { [_K in keyof (MethodUseDescription)]: (MethodUseDescription)[_K] }): MethodUseDescription {
+        return new MethodUseDescription(_o.identifier, _o.name, _o.description, _o.obsolete, _o.information);
+    }
+
+    /**
+     * @summary Getter that returns the default value for `obsolete`.
+     * @public
+     * @static
+     * @method
+     */
+    public static get _default_value_for_obsolete () { return false; }
+}
+
+/**
+ * @summary The Leading Root Component Types of MethodUseDescription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_MethodUseDescription: $.ComponentSpec[] = [
+    new $.ComponentSpec("identifier", false, $.hasTag(_TagClass.universal, 6)),
+    new $.ComponentSpec("name", true, $.hasTag(_TagClass.universal, 17)),
+    new $.ComponentSpec("description", true, $.or($.hasTag(_TagClass.universal, 20), $.hasTag(_TagClass.universal, 19), $.hasTag(_TagClass.universal, 28), $.hasTag(_TagClass.universal, 30), $.hasTag(_TagClass.universal, 12))),
+    new $.ComponentSpec("obsolete", true, $.hasTag(_TagClass.universal, 1)),
+    new $.ComponentSpec("information", false, $.hasTag(_TagClass.context, 0))
+];
+
+/**
+ * @summary The Trailing Root Component Types of MethodUseDescription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_MethodUseDescription: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of MethodUseDescription
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_MethodUseDescription: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_MethodUseDescription: $.ASN1Decoder<MethodUseDescription> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) MethodUseDescription
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_MethodUseDescription (el: _Element): MethodUseDescription {
+    if (!_cached_decoder_for_MethodUseDescription) { _cached_decoder_for_MethodUseDescription = function (el: _Element): MethodUseDescription {
+    let identifier!: OBJECT_IDENTIFIER;
+    let name: OPTIONAL<DirectoryString[]>;
+    let description: OPTIONAL<DirectoryString>;
+    let obsolete: OPTIONAL<BOOLEAN> = MethodUseDescription._default_value_for_obsolete;
+    let information!: OBJECT_IDENTIFIER[];
+    const callbacks: $.DecodingMap = {
+        "identifier": (_el: _Element): void => { identifier = $._decodeObjectIdentifier(_el); },
+        "name": (_el: _Element): void => { name = $._decodeSetOf<DirectoryString>(() => _decode_DirectoryString)(_el); },
+        "description": (_el: _Element): void => { description = _decode_DirectoryString(_el); },
+        "obsolete": (_el: _Element): void => { obsolete = $._decodeBoolean(_el); },
+        "information": (_el: _Element): void => { information = $._decode_explicit<OBJECT_IDENTIFIER[]>(() => $._decodeSetOf<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier))(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_MethodUseDescription,
+        _extension_additions_list_spec_for_MethodUseDescription,
+        _root_component_type_list_2_spec_for_MethodUseDescription,
+        undefined,
+    );
+    return new MethodUseDescription(
+        identifier,
+        name,
+        description,
+        obsolete,
+        information
+    );
+}; }
+    return _cached_decoder_for_MethodUseDescription(el);
+}
+
+let _cached_encoder_for_MethodUseDescription: $.ASN1Encoder<MethodUseDescription> | null = null;
+
+/**
+ * @summary Encodes a(n) MethodUseDescription into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The MethodUseDescription, encoded as an ASN.1 Element.
+ */
+export
+function _encode_MethodUseDescription (value: MethodUseDescription, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_MethodUseDescription) { _cached_encoder_for_MethodUseDescription = function (value: MethodUseDescription, elGetter: $.ASN1Encoder<MethodUseDescription>): _Element {
+    const _components: _Element[] = [];
+    _components.push(/* REQUIRED   */ $._encodeObjectIdentifier(value.identifier, $.BER));
+    if (value.name !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encodeSetOf<DirectoryString>(() => _encode_DirectoryString, $.BER)(value.name, $.BER));
+    }
+    if (value.description !== undefined) {
+        _components.push(/* IF_ABSENT  */ _encode_DirectoryString(value.description, $.BER));
+    }
+    if (value.obsolete !== undefined && !$.deepEq(value.obsolete, MethodUseDescription._default_value_for_obsolete)) {
+        _components.push(/* IF_DEFAULT */ $._encodeBoolean(value.obsolete, $.BER));
+    }
+    _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeSetOf<OBJECT_IDENTIFIER>(() => $._encodeObjectIdentifier, $.BER), $.BER)(value.information, $.BER));
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_MethodUseDescription(value, elGetter);
+}
+
+
+/* eslint-enable */

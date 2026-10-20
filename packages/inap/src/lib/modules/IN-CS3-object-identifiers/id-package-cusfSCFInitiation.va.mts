@@ -1,0 +1,27 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+import { id_package } from "../IN-CS3-object-identifiers/id-package.va.mjs";
+// export { id_package } from "../IN-CS3-object-identifiers/id-package.va.mjs";
+
+
+/**
+ * @summary id_package_cusfSCFInitiation
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-package-cusfSCFInitiation OBJECT IDENTIFIER ::= {id-package cusfSCFInitiation(70)}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_package_cusfSCFInitiation: OBJECT_IDENTIFIER = _OID.fromParts([
+    /* cusfSCFInitiation */ 70,
+], id_package);
+
+/* eslint-enable */

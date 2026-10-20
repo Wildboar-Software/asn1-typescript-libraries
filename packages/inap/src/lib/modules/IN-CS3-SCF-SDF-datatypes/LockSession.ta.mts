@@ -1,0 +1,161 @@
+/* eslint-disable */
+import {
+    OBJECT_IDENTIFIER,
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+// export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+
+
+/**
+ * @summary LockSession
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * LockSession ::= SEQUENCE {
+ *   entryName  [0]  DistinguishedName,
+ *   atribute   [1]  OBJECT IDENTIFIER
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class LockSession {
+    /**
+     * @summary `entryName`.
+     * @public
+     * @readonly
+     */
+    readonly entryName: DistinguishedName;
+    /**
+     * @summary `atribute`.
+     * @public
+     * @readonly
+     */
+    readonly atribute: OBJECT_IDENTIFIER;
+
+    constructor (
+        entryName: DistinguishedName,
+        atribute: OBJECT_IDENTIFIER
+    ) {
+        this.entryName = entryName;
+        this.atribute = atribute;
+    }
+
+    /**
+     * @summary Restructures an object into a LockSession
+     * @description
+     * 
+     * This takes an `object` and converts it to a `LockSession`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `LockSession`.
+     * @returns {LockSession}
+     */
+    public static _from_object (_o: { [_K in keyof (LockSession)]: (LockSession)[_K] }): LockSession {
+        return new LockSession(_o.entryName, _o.atribute);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of LockSession
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_LockSession: $.ComponentSpec[] = [
+    new $.ComponentSpec("entryName", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("atribute", false, $.hasTag(_TagClass.context, 1))
+];
+
+/**
+ * @summary The Trailing Root Component Types of LockSession
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_LockSession: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of LockSession
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_LockSession: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_LockSession: $.ASN1Decoder<LockSession> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) LockSession
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_LockSession (el: _Element): LockSession {
+    if (!_cached_decoder_for_LockSession) { _cached_decoder_for_LockSession = function (el: _Element): LockSession {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError("LockSession contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "entryName";
+    sequence[1].name = "atribute";
+    let entryName!: DistinguishedName;
+    let atribute!: OBJECT_IDENTIFIER;
+    entryName = $._decode_explicit<DistinguishedName>(() => _decode_DistinguishedName)(sequence[0]);
+    atribute = $._decode_explicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(sequence[1]);
+    return new LockSession(
+        entryName,
+        atribute,
+
+    );
+}; }
+    return _cached_decoder_for_LockSession(el);
+}
+
+let _cached_encoder_for_LockSession: $.ASN1Encoder<LockSession> | null = null;
+
+/**
+ * @summary Encodes a(n) LockSession into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The LockSession, encoded as an ASN.1 Element.
+ */
+export
+function _encode_LockSession (value: LockSession, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_LockSession) { _cached_encoder_for_LockSession = function (value: LockSession, elGetter: $.ASN1Encoder<LockSession>): _Element {
+    return $._encodeSequence([
+        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_DistinguishedName, $.BER)(value.entryName, $.BER),
+        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => $._encodeObjectIdentifier, $.BER)(value.atribute, $.BER)
+    ], $.BER);
+}; }
+    return _cached_encoder_for_LockSession(value, elGetter);
+}
+
+
+/* eslint-enable */

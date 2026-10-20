@@ -1,0 +1,262 @@
+/* eslint-disable */
+import {
+    INTEGER,
+    OCTET_STRING,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+// export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-CS2-datatypes/RequestedType.ta.mjs";
+// export { RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-CS2-datatypes/RequestedType.ta.mjs";
+import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
+// export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
+import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
+// export { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
+import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
+// export { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
+import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
+// export { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
+import { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-CS2-datatypes/RedirectingPartyID.ta.mjs";
+// export { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-CS2-datatypes/RedirectingPartyID.ta.mjs";
+import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-CS2-datatypes/RedirectionInformation.ta.mjs";
+// export { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-CS2-datatypes/RedirectionInformation.ta.mjs";
+import { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-CS2-datatypes/OriginalCalledPartyID.ta.mjs";
+// export { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-CS2-datatypes/OriginalCalledPartyID.ta.mjs";
+import { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-CS2-datatypes/HighLayerCompatibility.ta.mjs";
+// export { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-CS2-datatypes/HighLayerCompatibility.ta.mjs";
+import { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
+// export { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
+import { InvokableService, _decode_InvokableService, _encode_InvokableService } from "../IN-CS2-datatypes/InvokableService.ta.mjs";
+// export { InvokableService, _enum_for_InvokableService, InvokableService_callingLineIdentificationRestriction /* IMPORTED_LONG_ENUMERATION_ITEM */, InvokableService_connectedLineIdentificationRestriction /* IMPORTED_LONG_ENUMERATION_ITEM */, InvokableService_callWaiting /* IMPORTED_LONG_ENUMERATION_ITEM */, callWaiting /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_callHold /* IMPORTED_LONG_ENUMERATION_ITEM */, callHold /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_reverseCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, InvokableService_explicitCallTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, explicitCallTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_callCompletionOnBusySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, callCompletionOnBusySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InvokableService, _encode_InvokableService } from "../IN-CS2-datatypes/InvokableService.ta.mjs";
+import { ActivableServices, _decode_ActivableServices, _encode_ActivableServices } from "../IN-CS2-datatypes/ActivableServices.ta.mjs";
+// export { ActivableServices, ActivableServices_callingLineIdentificationPresentation /* IMPORTED_LONG_NAMED_BIT */, callingLineIdentificationPresentation /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callingLineIdentificationRestriction /* IMPORTED_LONG_NAMED_BIT */, ActivableServices_connectedLineIdentificationPresentation /* IMPORTED_LONG_NAMED_BIT */, connectedLineIdentificationPresentation /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_connectedLineIdentificationRestriction /* IMPORTED_LONG_NAMED_BIT */, ActivableServices_callForwardingOnNoReply /* IMPORTED_LONG_NAMED_BIT */, callForwardingOnNoReply /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callForwardingUnconditional /* IMPORTED_LONG_NAMED_BIT */, callForwardingUnconditional /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callForwardingOnBusy /* IMPORTED_LONG_NAMED_BIT */, callForwardingOnBusy /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callForwardingOnNotReachable /* IMPORTED_LONG_NAMED_BIT */, callForwardingOnNotReachable /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_reverseCharging /* IMPORTED_LONG_NAMED_BIT */, ActivableServices_adviceOfChargeOnStart /* IMPORTED_LONG_NAMED_BIT */, adviceOfChargeOnStart /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_adviceOfChargeAtEnd /* IMPORTED_LONG_NAMED_BIT */, adviceOfChargeAtEnd /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_adviceOfChargeDuringCall /* IMPORTED_LONG_NAMED_BIT */, adviceOfChargeDuringCall /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_timeDependentRouting /* IMPORTED_LONG_NAMED_BIT */, timeDependentRouting /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callingPartingDependentRouting /* IMPORTED_LONG_NAMED_BIT */, callingPartingDependentRouting /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_outgoingCallBarring /* IMPORTED_LONG_NAMED_BIT */, outgoingCallBarring /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_incomingCallBarring /* IMPORTED_LONG_NAMED_BIT */, incomingCallBarring /* IMPORTED_SHORT_NAMED_BIT */, _decode_ActivableServices, _encode_ActivableServices } from "../IN-CS2-datatypes/ActivableServices.ta.mjs";
+import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
+// export { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
+import { UserInteractionModes, _decode_UserInteractionModes, _encode_UserInteractionModes } from "../IN-CS2-datatypes/UserInteractionModes.ta.mjs";
+// export { UserInteractionModes, UserInteractionModes_voiceMessage /* IMPORTED_LONG_NAMED_BIT */, voiceMessage /* IMPORTED_SHORT_NAMED_BIT */, UserInteractionModes_tone /* IMPORTED_LONG_NAMED_BIT */, tone /* IMPORTED_SHORT_NAMED_BIT */, UserInteractionModes_display /* IMPORTED_LONG_NAMED_BIT */, display /* IMPORTED_SHORT_NAMED_BIT */, _decode_UserInteractionModes, _encode_UserInteractionModes } from "../IN-CS2-datatypes/UserInteractionModes.ta.mjs";
+import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
+// export { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
+import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
+// export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
+import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
+// export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
+
+
+/**
+ * @summary HandlingInformationRequestArg
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * HandlingInformationRequestArg  ::= 
+ *   OPTIONALLY-PROTECTED
+ *     {SEQUENCE {requestedType                [0]  RequestedType OPTIONAL,
+ *                callingPartyNumber
+ *                  [1]  CallingPartyNumber OPTIONAL,
+ *                locationNumber               [2]  LocationNumber OPTIONAL,
+ *                calledPartyNumber
+ *                  [3]  CalledPartyNumber OPTIONAL,
+ *                dialledDigits                [4]  Digits OPTIONAL,
+ *                redirectingPartyID
+ *                  [5]  RedirectingPartyID OPTIONAL,
+ *                redirectionInformation
+ *                  [6]  RedirectionInformation OPTIONAL,
+ *                originalCalledPartyID
+ *                  [7]  OriginalCalledPartyID OPTIONAL,
+ *                numberOfCallAttempts
+ *                  [8]  INTEGER OPTIONAL,
+ *                highLayerCompatibility
+ *                  [9]  HighLayerCompatibility OPTIONAL,
+ *                bearerCapability
+ *                  [10]  BearerCapability OPTIONAL,
+ *                invokedSupplementaryService  [11]  InvokableService OPTIONAL,
+ *                activeSupplementaryServices  [12]  ActivableServices OPTIONAL,
+ *                causeOfLastCallFailure       [13]  Cause OPTIONAL,
+ *                userInteractionModes         [14]  UserInteractionModes OPTIONAL,
+ *                callingPartysCategory
+ *                  [15]  CallingPartysCategory OPTIONAL,
+ *                callingPartyBusinessGroupID  [16]  OCTET STRING OPTIONAL,
+ *                securityParameters           [17]  SecurityParameters OPTIONAL,
+ *                extensions
+ *                  [18]  SEQUENCE OF
+ *                          ExtensionField
+ *                    OPTIONAL,
+ *                ...}}
+ * ```
+ */
+export
+type HandlingInformationRequestArg = OPTIONALLY_PROTECTED<{ requestedType: RequestedType; callingPartyNumber: CallingPartyNumber; locationNumber: LocationNumber; calledPartyNumber: CalledPartyNumber; dialledDigits: Digits; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; originalCalledPartyID: OriginalCalledPartyID; numberOfCallAttempts: INTEGER; highLayerCompatibility: HighLayerCompatibility; bearerCapability: BearerCapability; invokedSupplementaryService: InvokableService; activeSupplementaryServices: ActivableServices; causeOfLastCallFailure: Cause; userInteractionModes: UserInteractionModes; callingPartysCategory: CallingPartysCategory; callingPartyBusinessGroupID: OCTET_STRING; securityParameters: SecurityParameters; extensions: ExtensionField[] }>; // DefinedType
+
+let _cached_decoder_for_HandlingInformationRequestArg: $.ASN1Decoder<HandlingInformationRequestArg> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) HandlingInformationRequestArg
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_HandlingInformationRequestArg (el: _Element): HandlingInformationRequestArg {
+    if (!_cached_decoder_for_HandlingInformationRequestArg) { _cached_decoder_for_HandlingInformationRequestArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ requestedType: RequestedType; callingPartyNumber: CallingPartyNumber; locationNumber: LocationNumber; calledPartyNumber: CalledPartyNumber; dialledDigits: Digits; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; originalCalledPartyID: OriginalCalledPartyID; numberOfCallAttempts: INTEGER; highLayerCompatibility: HighLayerCompatibility; bearerCapability: BearerCapability; invokedSupplementaryService: InvokableService; activeSupplementaryServices: ActivableServices; causeOfLastCallFailure: Cause; userInteractionModes: UserInteractionModes; callingPartysCategory: CallingPartysCategory; callingPartyBusinessGroupID: OCTET_STRING; securityParameters: SecurityParameters; extensions: ExtensionField[] }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    let requestedType: OPTIONAL<RequestedType>;
+    let callingPartyNumber: OPTIONAL<CallingPartyNumber>;
+    let locationNumber: OPTIONAL<LocationNumber>;
+    let calledPartyNumber: OPTIONAL<CalledPartyNumber>;
+    let dialledDigits: OPTIONAL<Digits>;
+    let redirectingPartyID: OPTIONAL<RedirectingPartyID>;
+    let redirectionInformation: OPTIONAL<RedirectionInformation>;
+    let originalCalledPartyID: OPTIONAL<OriginalCalledPartyID>;
+    let numberOfCallAttempts: OPTIONAL<INTEGER>;
+    let highLayerCompatibility: OPTIONAL<HighLayerCompatibility>;
+    let bearerCapability: OPTIONAL<BearerCapability>;
+    let invokedSupplementaryService: OPTIONAL<InvokableService>;
+    let activeSupplementaryServices: OPTIONAL<ActivableServices>;
+    let causeOfLastCallFailure: OPTIONAL<Cause>;
+    let userInteractionModes: OPTIONAL<UserInteractionModes>;
+    let callingPartysCategory: OPTIONAL<CallingPartysCategory>;
+    let callingPartyBusinessGroupID: OPTIONAL<OCTET_STRING>;
+    let securityParameters: OPTIONAL<SecurityParameters>;
+    let extensions: OPTIONAL<ExtensionField[]>;
+    const _unrecognizedExtensionsList: _Element[] = [];
+    const callbacks: $.DecodingMap = {
+        "requestedType": (_el: _Element): void => { requestedType = $._decode_implicit<RequestedType>(() => _decode_RequestedType)(_el); },
+        "callingPartyNumber": (_el: _Element): void => { callingPartyNumber = $._decode_implicit<CallingPartyNumber>(() => _decode_CallingPartyNumber)(_el); },
+        "locationNumber": (_el: _Element): void => { locationNumber = $._decode_implicit<LocationNumber>(() => _decode_LocationNumber)(_el); },
+        "calledPartyNumber": (_el: _Element): void => { calledPartyNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(_el); },
+        "dialledDigits": (_el: _Element): void => { dialledDigits = $._decode_implicit<Digits>(() => _decode_Digits)(_el); },
+        "redirectingPartyID": (_el: _Element): void => { redirectingPartyID = $._decode_implicit<RedirectingPartyID>(() => _decode_RedirectingPartyID)(_el); },
+        "redirectionInformation": (_el: _Element): void => { redirectionInformation = $._decode_implicit<RedirectionInformation>(() => _decode_RedirectionInformation)(_el); },
+        "originalCalledPartyID": (_el: _Element): void => { originalCalledPartyID = $._decode_implicit<OriginalCalledPartyID>(() => _decode_OriginalCalledPartyID)(_el); },
+        "numberOfCallAttempts": (_el: _Element): void => { numberOfCallAttempts = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "highLayerCompatibility": (_el: _Element): void => { highLayerCompatibility = $._decode_implicit<HighLayerCompatibility>(() => _decode_HighLayerCompatibility)(_el); },
+        "bearerCapability": (_el: _Element): void => { bearerCapability = $._decode_explicit<BearerCapability>(() => _decode_BearerCapability)(_el); },
+        "invokedSupplementaryService": (_el: _Element): void => { invokedSupplementaryService = $._decode_implicit<InvokableService>(() => _decode_InvokableService)(_el); },
+        "activeSupplementaryServices": (_el: _Element): void => { activeSupplementaryServices = $._decode_implicit<ActivableServices>(() => _decode_ActivableServices)(_el); },
+        "causeOfLastCallFailure": (_el: _Element): void => { causeOfLastCallFailure = $._decode_implicit<Cause>(() => _decode_Cause)(_el); },
+        "userInteractionModes": (_el: _Element): void => { userInteractionModes = $._decode_implicit<UserInteractionModes>(() => _decode_UserInteractionModes)(_el); },
+        "callingPartysCategory": (_el: _Element): void => { callingPartysCategory = $._decode_implicit<CallingPartysCategory>(() => _decode_CallingPartysCategory)(_el); },
+        "callingPartyBusinessGroupID": (_el: _Element): void => { callingPartyBusinessGroupID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "securityParameters": (_el: _Element): void => { securityParameters = $._decode_implicit<SecurityParameters>(() => _decode_SecurityParameters)(_el); },
+        "extensions": (_el: _Element): void => { extensions = $._decode_implicit<ExtensionField[]>(() => $._decodeSequenceOf<ExtensionField>(() => _decode_ExtensionField))(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED,
+        _extension_additions_list_spec_for_OPTIONALLY_PROTECTED,
+        _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
+        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
+    );
+    return new OPTIONALLY_PROTECTED(
+        requestedType,
+        callingPartyNumber,
+        locationNumber,
+        calledPartyNumber,
+        dialledDigits,
+        redirectingPartyID,
+        redirectionInformation,
+        originalCalledPartyID,
+        numberOfCallAttempts,
+        highLayerCompatibility,
+        bearerCapability,
+        invokedSupplementaryService,
+        activeSupplementaryServices,
+        causeOfLastCallFailure,
+        userInteractionModes,
+        callingPartysCategory,
+        callingPartyBusinessGroupID,
+        securityParameters,
+        extensions,
+        _unrecognizedExtensionsList
+    );
+}); }
+    return _cached_decoder_for_HandlingInformationRequestArg(el);
+}
+
+let _cached_encoder_for_HandlingInformationRequestArg: $.ASN1Encoder<HandlingInformationRequestArg> | null = null;
+
+/**
+ * @summary Encodes a(n) HandlingInformationRequestArg into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The HandlingInformationRequestArg, encoded as an ASN.1 Element.
+ */
+export
+function _encode_HandlingInformationRequestArg (value: HandlingInformationRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_HandlingInformationRequestArg) { _cached_encoder_for_HandlingInformationRequestArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ requestedType: RequestedType; callingPartyNumber: CallingPartyNumber; locationNumber: LocationNumber; calledPartyNumber: CalledPartyNumber; dialledDigits: Digits; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; originalCalledPartyID: OriginalCalledPartyID; numberOfCallAttempts: INTEGER; highLayerCompatibility: HighLayerCompatibility; bearerCapability: BearerCapability; invokedSupplementaryService: InvokableService; activeSupplementaryServices: ActivableServices; causeOfLastCallFailure: Cause; userInteractionModes: UserInteractionModes; callingPartysCategory: CallingPartysCategory; callingPartyBusinessGroupID: OCTET_STRING; securityParameters: SecurityParameters; extensions: ExtensionField[] }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(19 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    if (value.requestedType !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_RequestedType, $.BER)(value.requestedType, $.BER);
+    }
+    if (value.callingPartyNumber !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => _encode_CallingPartyNumber, $.BER)(value.callingPartyNumber, $.BER);
+    }
+    if (value.locationNumber !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_LocationNumber, $.BER)(value.locationNumber, $.BER);
+    }
+    if (value.calledPartyNumber !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_CalledPartyNumber, $.BER)(value.calledPartyNumber, $.BER);
+    }
+    if (value.dialledDigits !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => _encode_Digits, $.BER)(value.dialledDigits, $.BER);
+    }
+    if (value.redirectingPartyID !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => _encode_RedirectingPartyID, $.BER)(value.redirectingPartyID, $.BER);
+    }
+    if (value.redirectionInformation !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => _encode_RedirectionInformation, $.BER)(value.redirectionInformation, $.BER);
+    }
+    if (value.originalCalledPartyID !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 7, () => _encode_OriginalCalledPartyID, $.BER)(value.originalCalledPartyID, $.BER);
+    }
+    if (value.numberOfCallAttempts !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 8, () => $._encodeInteger, $.BER)(value.numberOfCallAttempts, $.BER);
+    }
+    if (value.highLayerCompatibility !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 9, () => _encode_HighLayerCompatibility, $.BER)(value.highLayerCompatibility, $.BER);
+    }
+    if (value.bearerCapability !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 10, () => _encode_BearerCapability, $.BER)(value.bearerCapability, $.BER);
+    }
+    if (value.invokedSupplementaryService !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 11, () => _encode_InvokableService, $.BER)(value.invokedSupplementaryService, $.BER);
+    }
+    if (value.activeSupplementaryServices !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 12, () => _encode_ActivableServices, $.BER)(value.activeSupplementaryServices, $.BER);
+    }
+    if (value.causeOfLastCallFailure !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 13, () => _encode_Cause, $.BER)(value.causeOfLastCallFailure, $.BER);
+    }
+    if (value.userInteractionModes !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 14, () => _encode_UserInteractionModes, $.BER)(value.userInteractionModes, $.BER);
+    }
+    if (value.callingPartysCategory !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 15, () => _encode_CallingPartysCategory, $.BER)(value.callingPartysCategory, $.BER);
+    }
+    if (value.callingPartyBusinessGroupID !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 16, () => $._encodeOctetString, $.BER)(value.callingPartyBusinessGroupID, $.BER);
+    }
+    if (value.securityParameters !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 17, () => _encode_SecurityParameters, $.BER)(value.securityParameters, $.BER);
+    }
+    if (value.extensions !== undefined) {
+        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 18, () => $._encodeSequenceOf<ExtensionField>(() => _encode_ExtensionField, $.BER), $.BER)(value.extensions, $.BER);
+    }
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    _components.length = _components_i;
+    return $._encodeSequence(_components, $.BER);
+}); }
+    return _cached_encoder_for_HandlingInformationRequestArg(value, elGetter);
+}
+
+
+/* eslint-enable */

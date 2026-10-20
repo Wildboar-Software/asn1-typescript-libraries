@@ -296,6 +296,9 @@
     },
     {
       "path": "./packages/c1222"
+    },
+    {
+      "path": "./packages/inap"
     }
   ],
   "compilerOptions": {

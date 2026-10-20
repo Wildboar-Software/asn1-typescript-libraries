@@ -1,0 +1,184 @@
+/* eslint-disable */
+import {
+    ASN1ConstructionError as _ConstructionError,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { RequestedInformationType, _decode_RequestedInformationType, _encode_RequestedInformationType, _enum_for_RequestedInformationType } from "../IN-SSF-SCF-datatypes/RequestedInformationType.ta.mjs";
+// export { RequestedInformationType, _enum_for_RequestedInformationType, RequestedInformationType_callAttemptElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttemptElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callStopTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callStopTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callConnectedElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callConnectedElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_calledAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, calledAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_releaseCause /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-SSF-SCF-datatypes/RequestedInformationType.ta.mjs";
+import { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-SSF-SCF-datatypes/RequestedInformationValue.ta.mjs";
+// export { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-SSF-SCF-datatypes/RequestedInformationValue.ta.mjs";
+
+
+/**
+ * @summary RequestedInformation
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RequestedInformation ::= SEQUENCE {
+ *   requestedInformationType   [0]  RequestedInformationType,
+ *   requestedInformationValue  [1]  RequestedInformationValue,
+ *   ...
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class RequestedInformation {
+    /**
+     * @summary `requestedInformationType`.
+     * @public
+     * @readonly
+     */
+    readonly requestedInformationType: RequestedInformationType;
+    /**
+     * @summary `requestedInformationValue`.
+     * @public
+     * @readonly
+     */
+    readonly requestedInformationValue: RequestedInformationValue;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor (
+        requestedInformationType: RequestedInformationType,
+        requestedInformationValue: RequestedInformationValue,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestedInformationType = requestedInformationType;
+        this.requestedInformationValue = requestedInformationValue;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
+
+    /**
+     * @summary Restructures an object into a RequestedInformation
+     * @description
+     * 
+     * This takes an `object` and converts it to a `RequestedInformation`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `RequestedInformation`.
+     * @returns {RequestedInformation}
+     */
+    public static _from_object (_o: { [_K in keyof (RequestedInformation)]: (RequestedInformation)[_K] }): RequestedInformation {
+        return new RequestedInformation(_o.requestedInformationType, _o.requestedInformationValue, _o._unrecognizedExtensionsList);
+    }
+
+        /**
+         * @summary The enum used as the type of the component `requestedInformationType`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_requestedInformationType = _enum_for_RequestedInformationType;
+}
+
+/**
+ * @summary The Leading Root Component Types of RequestedInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_RequestedInformation: $.ComponentSpec[] = [
+    new $.ComponentSpec("requestedInformationType", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("requestedInformationValue", false, $.hasTag(_TagClass.context, 1))
+];
+
+/**
+ * @summary The Trailing Root Component Types of RequestedInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_RequestedInformation: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of RequestedInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_RequestedInformation: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_RequestedInformation: $.ASN1Decoder<RequestedInformation> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) RequestedInformation
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_RequestedInformation (el: _Element): RequestedInformation {
+    if (!_cached_decoder_for_RequestedInformation) { _cached_decoder_for_RequestedInformation = function (el: _Element): RequestedInformation {
+    const sequence: _Element[] = el.sequence;
+    if (sequence.length < 2) {
+        throw new _ConstructionError("RequestedInformation contained only " + sequence.length.toString() + " elements.");
+    }
+    sequence[0].name = "requestedInformationType";
+    sequence[1].name = "requestedInformationValue";
+    let requestedInformationType!: RequestedInformationType;
+    let requestedInformationValue!: RequestedInformationValue;
+    requestedInformationType = $._decode_implicit<RequestedInformationType>(() => _decode_RequestedInformationType)(sequence[0]);
+    requestedInformationValue = $._decode_explicit<RequestedInformationValue>(() => _decode_RequestedInformationValue)(sequence[1]);
+    return new RequestedInformation(
+        requestedInformationType,
+        requestedInformationValue,
+        sequence.slice(2),
+    );
+}; }
+    return _cached_decoder_for_RequestedInformation(el);
+}
+
+let _cached_encoder_for_RequestedInformation: $.ASN1Encoder<RequestedInformation> | null = null;
+
+/**
+ * @summary Encodes a(n) RequestedInformation into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The RequestedInformation, encoded as an ASN.1 Element.
+ */
+export
+function _encode_RequestedInformation (value: RequestedInformation, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_RequestedInformation) { _cached_encoder_for_RequestedInformation = function (value: RequestedInformation, elGetter: $.ASN1Encoder<RequestedInformation>): _Element {
+    const _unrecognized = value._unrecognizedExtensionsList;
+    const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
+    let _components_i = 0;
+    _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RequestedInformationType, $.BER)(value.requestedInformationType, $.BER);
+    _components[_components_i++] = /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_RequestedInformationValue, $.BER)(value.requestedInformationValue, $.BER);
+    if (_unrecognized) {
+        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
+            _components[_components_i++] = _unrecognized[_unrecognized_i];
+        }
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_RequestedInformation(value, elGetter);
+}
+
+
+/* eslint-enable */
