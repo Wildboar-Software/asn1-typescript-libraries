@@ -1,8 +1,14 @@
-# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
+# GPRS and 3GPP charging data record (CDR) ASN.1 in TypeScript
 
-Data structures from the ASN.1 definitions defined in
-[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
-Telebiometrics Authentication Infrastructure (TAI).
+ASN.1 data structures for the mobile-domain charging modules compiled in this
+package. The module object identifiers sit under
+`{itu-t(0) identified-organization(4) etsi(0) mobileDomain(0) charging(5) ...}`.
+The ASN.1 sources are in `doc/`.
+
+Import a module from its subpath, for example
+`@wildboar/gprs-cdr/GPRSChargingDataTypes`. The package root does not re-export
+every symbol. Assignments that are identical across modules are implemented in
+`@wildboar/gprs-cdr/shared` and re-exported from each module that defines them.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -21,5 +27,9 @@ programming languages, or if you have any other questions, please contact us at
 
 ## ESM-Only
 
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from the raw compiler outputs using AI (Grok 4.7)
+on 20 October 2026.
