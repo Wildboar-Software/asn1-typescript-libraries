@@ -1,0 +1,25 @@
+{
+  "name": "gprs-cdr",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/gprs-cdr/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/gprs-cdr",
+        "tsConfig": "packages/gprs-cdr/tsconfig.lib.json",
+        "packageJson": "packages/gprs-cdr/package.json",
+        "main": "packages/gprs-cdr/src/index.mts",
+        "assets": [
+          "packages/gprs-cdr/*.md",
+          "packages/gprs-cdr/LICENSE.txt",
+          "packages/gprs-cdr/package.json"
+        ]
+      }
+    }
+  }
+}

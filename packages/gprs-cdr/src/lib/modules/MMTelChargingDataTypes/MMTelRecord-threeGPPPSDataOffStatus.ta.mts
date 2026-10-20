@@ -1,0 +1,92 @@
+/* eslint-disable */
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary MMTelRecord_threeGPPPSDataOffStatus
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+enum _enum_for_MMTelRecord_threeGPPPSDataOffStatus {
+    active = 0,
+    inactive = 1,
+}
+
+/**
+ * @summary MMTelRecord_threeGPPPSDataOffStatus
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+type MMTelRecord_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSDataOffStatus;
+
+/**
+ * @summary MMTelRecord_threeGPPPSDataOffStatus
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ```
+ * 
+ * @enum {number}
+ */
+export
+const MMTelRecord_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSDataOffStatus;
+
+/**
+ * @summary MMTelRecord_threeGPPPSDataOffStatus_active
+ * @constant
+ * @type {number}
+ */
+export
+const MMTelRecord_threeGPPPSDataOffStatus_active: MMTelRecord_threeGPPPSDataOffStatus = MMTelRecord_threeGPPPSDataOffStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary active
+ * @constant
+ * @type {number}
+ */
+export
+const active: MMTelRecord_threeGPPPSDataOffStatus = MMTelRecord_threeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary MMTelRecord_threeGPPPSDataOffStatus_inactive
+ * @constant
+ * @type {number}
+ */
+export
+const MMTelRecord_threeGPPPSDataOffStatus_inactive: MMTelRecord_threeGPPPSDataOffStatus = MMTelRecord_threeGPPPSDataOffStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
+
+/**
+ * @summary inactive
+ * @constant
+ * @type {number}
+ */
+export
+const inactive: MMTelRecord_threeGPPPSDataOffStatus = MMTelRecord_threeGPPPSDataOffStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+
+export
+const _decode_MMTelRecord_threeGPPPSDataOffStatus: $.ASN1Decoder<MMTelRecord_threeGPPPSDataOffStatus> = $._decodeEnumerated;
+
+export
+const _encode_MMTelRecord_threeGPPPSDataOffStatus: $.ASN1Encoder<MMTelRecord_threeGPPPSDataOffStatus> = $._encodeEnumerated;
+
+/* eslint-enable */

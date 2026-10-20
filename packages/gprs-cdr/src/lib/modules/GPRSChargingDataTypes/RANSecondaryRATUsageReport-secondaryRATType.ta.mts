@@ -1,0 +1,44 @@
+/* eslint-disable */
+import {
+    INTEGER
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary RANSecondaryRATUsageReport_secondaryRATType
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * RANSecondaryRATUsageReport-secondaryRATType ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ```
+ */
+export
+type RANSecondaryRATUsageReport_secondaryRATType = INTEGER;
+
+/**
+ * @summary RANSecondaryRATUsageReport_secondaryRATType_nR
+ * @constant
+ * @type {number}
+ */
+export
+const RANSecondaryRATUsageReport_secondaryRATType_nR: RANSecondaryRATUsageReport_secondaryRATType = 0; /* LONG_NAMED_INTEGER_VALUE */
+
+/**
+ * @summary RANSecondaryRATUsageReport_secondaryRATType_nR
+ * @constant
+ * @type {number}
+ */
+export
+const nR: RANSecondaryRATUsageReport_secondaryRATType = RANSecondaryRATUsageReport_secondaryRATType_nR; /* SHORT_NAMED_INTEGER_VALUE */
+
+export
+const _decode_RANSecondaryRATUsageReport_secondaryRATType: $.ASN1Decoder<RANSecondaryRATUsageReport_secondaryRATType> = $._decodeInteger;
+
+export
+const _encode_RANSecondaryRATUsageReport_secondaryRATType: $.ASN1Encoder<RANSecondaryRATUsageReport_secondaryRATType> = $._encodeInteger;
+
+/* eslint-enable */

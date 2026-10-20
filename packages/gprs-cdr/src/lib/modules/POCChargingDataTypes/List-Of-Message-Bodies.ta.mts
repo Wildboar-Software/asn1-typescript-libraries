@@ -1,0 +1,194 @@
+/* eslint-disable */
+import {
+    GraphicString,
+    INTEGER,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../POCChargingDataTypes/InvolvedParty.ta.mjs";
+// export { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../POCChargingDataTypes/InvolvedParty.ta.mjs";
+
+
+/**
+ * @summary List_Of_Message_Bodies
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * List-Of-Message-Bodies ::= SEQUENCE {
+ *    content-Type          [0] IMPLICIT GraphicString,
+ *    content-Disposition   [1] IMPLICIT GraphicString OPTIONAL,
+ *    content-Length        [2] IMPLICIT INTEGER,
+ *    originator            [3] InvolvedParty OPTIONAL}
+ * ```
+ * 
+ * @class
+ */
+export
+class List_Of_Message_Bodies {
+    /**
+     * @summary `content_Type`.
+     * @public
+     * @readonly
+     */
+    readonly content_Type: GraphicString;
+    /**
+     * @summary `content_Disposition`.
+     * @public
+     * @readonly
+     */
+    readonly content_Disposition: OPTIONAL<GraphicString>;
+    /**
+     * @summary `content_Length`.
+     * @public
+     * @readonly
+     */
+    readonly content_Length: INTEGER;
+    /**
+     * @summary `originator`.
+     * @public
+     * @readonly
+     */
+    readonly originator: OPTIONAL<InvolvedParty>;
+
+    constructor (
+        content_Type: GraphicString,
+        content_Disposition: OPTIONAL<GraphicString>,
+        content_Length: INTEGER,
+        originator: OPTIONAL<InvolvedParty>
+    ) {
+        this.content_Type = content_Type;
+        this.content_Disposition = content_Disposition;
+        this.content_Length = content_Length;
+        this.originator = originator;
+    }
+
+    /**
+     * @summary Restructures an object into a List_Of_Message_Bodies
+     * @description
+     * 
+     * This takes an `object` and converts it to a `List_Of_Message_Bodies`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `List_Of_Message_Bodies`.
+     * @returns {List_Of_Message_Bodies}
+     */
+    public static _from_object (_o: { [_K in keyof (List_Of_Message_Bodies)]: (List_Of_Message_Bodies)[_K] }): List_Of_Message_Bodies {
+        return new List_Of_Message_Bodies(_o.content_Type, _o.content_Disposition, _o.content_Length, _o.originator);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of List_Of_Message_Bodies
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_List_Of_Message_Bodies: $.ComponentSpec[] = [
+    new $.ComponentSpec("content-Type", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("content-Disposition", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("content-Length", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("originator", true, $.hasTag(_TagClass.context, 3))
+];
+
+/**
+ * @summary The Trailing Root Component Types of List_Of_Message_Bodies
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_List_Of_Message_Bodies: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of List_Of_Message_Bodies
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_List_Of_Message_Bodies: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_List_Of_Message_Bodies: $.ASN1Decoder<List_Of_Message_Bodies> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) List_Of_Message_Bodies
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_List_Of_Message_Bodies (el: _Element): List_Of_Message_Bodies {
+    if (!_cached_decoder_for_List_Of_Message_Bodies) { _cached_decoder_for_List_Of_Message_Bodies = function (el: _Element): List_Of_Message_Bodies {
+    let content_Type!: GraphicString;
+    let content_Disposition: OPTIONAL<GraphicString>;
+    let content_Length!: INTEGER;
+    let originator: OPTIONAL<InvolvedParty>;
+    const callbacks: $.DecodingMap = {
+        "content-Type": (_el: _Element): void => { content_Type = $._decode_implicit<GraphicString>(() => $._decodeGraphicString)(_el); },
+        "content-Disposition": (_el: _Element): void => { content_Disposition = $._decode_implicit<GraphicString>(() => $._decodeGraphicString)(_el); },
+        "content-Length": (_el: _Element): void => { content_Length = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "originator": (_el: _Element): void => { originator = $._decode_explicit<InvolvedParty>(() => _decode_InvolvedParty)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_List_Of_Message_Bodies,
+        _extension_additions_list_spec_for_List_Of_Message_Bodies,
+        _root_component_type_list_2_spec_for_List_Of_Message_Bodies,
+        undefined,
+    );
+    return new List_Of_Message_Bodies(
+        content_Type,
+        content_Disposition,
+        content_Length,
+        originator
+    );
+}; }
+    return _cached_decoder_for_List_Of_Message_Bodies(el);
+}
+
+let _cached_encoder_for_List_Of_Message_Bodies: $.ASN1Encoder<List_Of_Message_Bodies> | null = null;
+
+/**
+ * @summary Encodes a(n) List_Of_Message_Bodies into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The List_Of_Message_Bodies, encoded as an ASN.1 Element.
+ */
+export
+function _encode_List_Of_Message_Bodies (value: List_Of_Message_Bodies, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_List_Of_Message_Bodies) { _cached_encoder_for_List_Of_Message_Bodies = function (value: List_Of_Message_Bodies, elGetter: $.ASN1Encoder<List_Of_Message_Bodies>): _Element {
+    const _components: _Element[] = [];
+    _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGraphicString, $.BER)(value.content_Type, $.BER));
+    if (value.content_Disposition !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeGraphicString, $.BER)(value.content_Disposition, $.BER));
+    }
+    _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.content_Length, $.BER));
+    if (value.originator !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 3, () => _encode_InvolvedParty, $.BER)(value.originator, $.BER));
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_List_Of_Message_Bodies(value, elGetter);
+}
+
+
+/* eslint-enable */
