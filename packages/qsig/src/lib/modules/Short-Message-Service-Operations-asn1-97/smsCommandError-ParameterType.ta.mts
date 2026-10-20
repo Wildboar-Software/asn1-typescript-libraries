@@ -22,7 +22,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * smsCommandError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * smsCommandError-ParameterType ::= SEQUENCE {
+ *     failureCause FailureCause,
+ *     serviceCentreTimeStamp ServiceCentreTimeStamp,
+ *     protocolIdentifier [0] IMPLICIT ProtocolIdentifier OPTIONAL,
+ *     userData [1] IMPLICIT UserData OPTIONAL
+ * }
  * ```
  * 
  * @class

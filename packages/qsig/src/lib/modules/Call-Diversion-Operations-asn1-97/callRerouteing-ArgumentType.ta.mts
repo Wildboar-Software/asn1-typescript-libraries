@@ -33,7 +33,28 @@ import { _decode_callRerouteing_ArgumentType_extension, _encode_callRerouteing_A
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * callRerouteing-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * callRerouteing-ArgumentType ::= SEQUENCE {
+ *     rerouteingReason DiversionReason,
+ *     originalRerouteingReason [0] IMPLICIT DiversionReason OPTIONAL,
+ *     calledAddress Address,
+ *     diversionCounter INTEGER (1..15),
+ *     pSS1InfoElement PSS1InformationElement,
+ *     -- The basic call information elements Bearer capability, High layer compatibility, Low
+ *     -- layer compatibity and Progress indicator can be embedded in the
+ *     -- pSS1InfoElement in accordance with 6.5.3.1.5.
+ *     lastRerouteingNr [1] PresentedNumberUnscreened,
+ *     subscriptionOption [2] IMPLICIT SubscriptionOption,
+ *     callingPartySubaddress [3] PartySubaddress OPTIONAL,
+ *     callingNumber [4] PresentedNumberScreened,
+ *     callingName [5] Name OPTIONAL,
+ *     originalCalledNr [6] PresentedNumberUnscreened OPTIONAL,
+ *     redirectingName [7] Name OPTIONAL,
+ *     originalCalledName [8] Name OPTIONAL,
+ *     extension CHOICE {
+ *         single [9] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [10] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class

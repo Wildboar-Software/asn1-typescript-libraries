@@ -22,7 +22,15 @@ import { _decode_divertingLegInformation1_ArgumentType_extension, _encode_divert
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * divertingLegInformation1-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * divertingLegInformation1-ArgumentType ::= SEQUENCE {
+ *     diversionReason DiversionReason,
+ *     subscriptionOption SubscriptionOption,
+ *     nominatedNr PartyNumber,
+ *     extension CHOICE {
+ *         single [9] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [10] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class

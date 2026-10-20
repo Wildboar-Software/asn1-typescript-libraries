@@ -17,7 +17,10 @@ import { GloballyUniqueID, _decode_GloballyUniqueID, _encode_GloballyUniqueID } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CallIdentificationData-linkageID ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CallIdentificationData-linkageID ::= CHOICE {
+ *     subDomainID [1] IMPLICIT SubDomainID,
+ *     globallyUniqueID [2] IMPLICIT GloballyUniqueID
+ * }
  * ```
  */
 export

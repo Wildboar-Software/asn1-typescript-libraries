@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SSCTDigitInfoArg-argumentExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SSCTDigitInfoArg-argumentExtension ::= CHOICE {
+ *     single [3] IMPLICIT Extension {{SSCTExtSet}},
+ *     multiple [4] IMPLICIT SEQUENCE OF Extension {{SSCTExtSet}}
+ * }
  * ```
  */
 export

@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CPIPRequestArg-argumentExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CPIPRequestArg-argumentExtension ::= CHOICE {
+ *     extension [1] IMPLICIT Extension {{CPIPExtSet}},
+ *     sequenceOfExtn [2] IMPLICIT SEQUENCE OF Extension {{CPIPExtSet}}
+ * }
  * ```
  */
 export

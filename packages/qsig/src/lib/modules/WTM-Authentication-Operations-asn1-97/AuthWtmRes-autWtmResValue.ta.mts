@@ -10,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AuthWtmRes-autWtmResValue ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AuthWtmRes-autWtmResValue ::= ENUMERATED {
+ *     auth-res-correct(0),
+ *     auth-res-incorrect(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +31,10 @@ enum _enum_for_AuthWtmRes_autWtmResValue {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AuthWtmRes-autWtmResValue ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AuthWtmRes-autWtmResValue ::= ENUMERATED {
+ *     auth-res-correct(0),
+ *     auth-res-incorrect(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +49,10 @@ type AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AuthWtmRes-autWtmResValue ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AuthWtmRes-autWtmResValue ::= ENUMERATED {
+ *     auth-res-correct(0),
+ *     auth-res-incorrect(1)
+ * }
  * ```
  * 
  * @enum {number}

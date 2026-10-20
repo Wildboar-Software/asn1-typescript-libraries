@@ -18,7 +18,10 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * transferAuthParam-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * transferAuthParam-ArgumentType ::= SEQUENCE {
+ *     wtatParamInfo WtatParamInfo,
+ *     dummyExtension DummyExtension OPTIONAL
+ * }
  * ```
  * 
  * @class

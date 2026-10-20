@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ChargeRequestArg-chargeReqArgExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ChargeRequestArg-chargeReqArgExtension ::= CHOICE {
+ *     extension [1] IMPLICIT Extension {{AOCExtSet}},
+ *     multipleExtension [2] IMPLICIT SEQUENCE OF Extension {{AOCExtSet}}
+ * }
  * ```
  */
 export

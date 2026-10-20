@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * callRerouteing-ArgumentType-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * callRerouteing-ArgumentType-extension ::= CHOICE {
+ *     single [9] IMPLICIT Extension {{DiversionExtensionSet}},
+ *     multiple [10] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ * }
  * ```
  */
 export

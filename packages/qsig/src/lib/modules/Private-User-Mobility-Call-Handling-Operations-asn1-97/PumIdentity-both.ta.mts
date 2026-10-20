@@ -18,7 +18,10 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PumIdentity-both ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PumIdentity-both ::= [11] IMPLICIT SEQUENCE {
+ *     pisnNumber PartyNumber,
+ *     alternativeId AlternativeId
+ * }
  * ```
  * 
  * @class

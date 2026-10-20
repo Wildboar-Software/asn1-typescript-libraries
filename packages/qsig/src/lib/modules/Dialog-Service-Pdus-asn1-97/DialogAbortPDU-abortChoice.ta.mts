@@ -17,7 +17,10 @@ import { UserAbortInformation, _decode_UserAbortInformation, _encode_UserAbortIn
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DialogAbortPDU-abortChoice ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DialogAbortPDU-abortChoice ::= CHOICE {
+ *     p-AbortCause P-AbortCause,
+ *     userAbortInformation UserAbortInformation
+ * }
  * ```
  */
 export

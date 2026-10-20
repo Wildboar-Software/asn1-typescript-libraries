@@ -21,7 +21,12 @@ import { ReturnErrorProblem, _decode_ReturnErrorProblem, _encode_ReturnErrorProb
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Reject-problem ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Reject-problem ::= CHOICE {
+ *     general [0] GeneralProblem,
+ *     invoke [1] InvokeProblem,
+ *     returnResult [2] ReturnResultProblem,
+ *     returnError [3] ReturnErrorProblem
+ * }
  * ```
  */
 export

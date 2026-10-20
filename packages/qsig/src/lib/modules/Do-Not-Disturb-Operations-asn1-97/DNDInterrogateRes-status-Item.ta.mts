@@ -18,7 +18,10 @@ import { _decode_DNDProtectionLevel, _encode_DNDProtectionLevel, _enum_for_DNDPr
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DNDInterrogateRes-status-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DNDInterrogateRes-status-Item ::= SEQUENCE {
+ *     basicService BasicService,
+ *     dndProtectionLevel DNDProtectionLevel OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -18,7 +18,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceAvailableArg-extendedServiceList ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceAvailableArg-extendedServiceList ::= SEQUENCE {
+ *     serviceList ServiceList,
+ *     extension Extension {{DNDExtSet}}
+ * }
  * ```
  * 
  * @class

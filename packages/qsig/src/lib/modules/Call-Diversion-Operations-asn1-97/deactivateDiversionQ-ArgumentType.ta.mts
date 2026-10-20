@@ -22,7 +22,16 @@ import { _decode_deactivateDiversionQ_ArgumentType_extension, _encode_deactivate
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * deactivateDiversionQ-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * deactivateDiversionQ-ArgumentType ::= SEQUENCE {
+ *     procedure Procedure,
+ *     basicService BasicService,
+ *     servedUserNr PartyNumber,
+ *     deactivatingUserNr PartyNumber,
+ *     extension CHOICE {
+ *         single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class

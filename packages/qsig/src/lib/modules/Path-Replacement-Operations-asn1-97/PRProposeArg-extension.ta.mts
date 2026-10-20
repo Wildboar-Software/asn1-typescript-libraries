@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PRProposeArg-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PRProposeArg-extension ::= CHOICE {
+ *     single [1] IMPLICIT Extension {{PRExtSet}},
+ *     multiple [2] IMPLICIT SEQUENCE OF Extension {{PRExtSet}}
+ * }
  * ```
  */
 export

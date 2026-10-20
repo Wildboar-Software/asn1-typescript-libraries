@@ -23,7 +23,20 @@ import { _decode_divertingLegInformation2_ArgumentType_extension, _encode_divert
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * divertingLegInformation2-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * divertingLegInformation2-ArgumentType ::= SEQUENCE {
+ *     diversionCounter INTEGER (1..15),
+ *     diversionReason DiversionReason,
+ *     originalDiversionReason [0] IMPLICIT DiversionReason OPTIONAL,
+ *     divertingNr [1] PresentedNumberUnscreened OPTIONAL,
+ *     originalCalledNr [2] PresentedNumberUnscreened OPTIONAL,
+ *     redirectingName [3] Name OPTIONAL,
+ *     originalCalledName [4] Name OPTIONAL,
+ *     extension CHOICE {
+ *         single [5] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [6] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
+ * -- The divertingNr element is mandatory except in the case of interworking.
  * ```
  * 
  * @class

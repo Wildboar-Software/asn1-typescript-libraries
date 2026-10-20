@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PumoArg-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PumoArg-extension ::= CHOICE {
+ *     single [3] IMPLICIT Extension {{PUMCHExtSet}},
+ *     multiple [4] IMPLICIT SEQUENCE OF Extension {{PUMCHExtSet}}
+ * }
  * ```
  */
 export

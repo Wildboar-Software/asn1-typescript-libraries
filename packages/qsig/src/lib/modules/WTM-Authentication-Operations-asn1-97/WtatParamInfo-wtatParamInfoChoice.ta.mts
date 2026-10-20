@@ -20,7 +20,12 @@ import { AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * WtatParamInfo-wtatParamInfoChoice ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * WtatParamInfo-wtatParamInfoChoice ::= CHOICE {
+ *     authSessionKeyInfo [1] IMPLICIT AuthSessionKeyInfo,
+ *     calcWtatInfo [2] IMPLICIT CalcWtatInfo,
+ *     authKey [3] IMPLICIT AuthKey,
+ *     challLen [4] IMPLICIT INTEGER (1..8)
+ * }
  * ```
  */
 export

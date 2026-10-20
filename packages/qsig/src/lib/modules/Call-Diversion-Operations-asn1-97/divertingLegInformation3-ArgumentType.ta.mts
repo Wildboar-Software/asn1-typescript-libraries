@@ -20,7 +20,14 @@ import { _decode_divertingLegInformation3_ArgumentType_extension, _encode_divert
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * divertingLegInformation3-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * divertingLegInformation3-ArgumentType ::= SEQUENCE {
+ *     presentationAllowedIndicator PresentationAllowedIndicator,
+ *     redirectionName [0] Name OPTIONAL,
+ *     extension CHOICE {
+ *         single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class

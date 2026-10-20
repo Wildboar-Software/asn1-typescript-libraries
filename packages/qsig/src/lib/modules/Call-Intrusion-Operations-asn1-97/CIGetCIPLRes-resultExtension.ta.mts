@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CIGetCIPLRes-resultExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CIGetCIPLRes-resultExtension ::= CHOICE {
+ *     extension [1] IMPLICIT Extension {{CIExtSet}},
+ *     sequenceOfExtn [2] IMPLICIT SEQUENCE OF Extension {{CIExtSet}}
+ * }
  * ```
  */
 export

@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DNDActivateRes-resultExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DNDActivateRes-resultExtension ::= CHOICE {
+ *     extension [1] IMPLICIT Extension {{DNDExtSet}},
+ *     sequenceOfExtn [2] IMPLICIT SEQUENCE OF Extension {{DNDExtSet}}
+ * }
  * ```
  */
 export

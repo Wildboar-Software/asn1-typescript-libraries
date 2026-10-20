@@ -16,7 +16,14 @@ import { AocFinalArg_finalCharge_specificCurrency, _decode_AocFinalArg_finalChar
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocFinalArg-finalCharge ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AocFinalArg-finalCharge ::= CHOICE {
+ *     chargeNotAvailable [0] IMPLICIT NULL,
+ *     freeOfCharge [1] IMPLICIT NULL,
+ *     specificCurrency SEQUENCE {
+ *         recordedCurrency [1] IMPLICIT RecordedCurrency,
+ *         finalBillingId [2] IMPLICIT FinalBillingId OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

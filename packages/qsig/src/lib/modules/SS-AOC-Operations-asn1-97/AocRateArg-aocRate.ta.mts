@@ -15,7 +15,10 @@ import { AOCSCurrencyInfoList, _decode_AOCSCurrencyInfoList, _encode_AOCSCurrenc
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocRateArg-aocRate ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AocRateArg-aocRate ::= CHOICE {
+ *     chargeNotAvailable NULL,
+ *     aocSCurrencyInfoList AOCSCurrencyInfoList
+ * }
  * ```
  */
 export

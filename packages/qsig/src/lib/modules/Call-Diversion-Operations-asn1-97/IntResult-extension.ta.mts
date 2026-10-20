@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * IntResult-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * IntResult-extension ::= CHOICE {
+ *     single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *     multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ * }
  * ```
  */
 export

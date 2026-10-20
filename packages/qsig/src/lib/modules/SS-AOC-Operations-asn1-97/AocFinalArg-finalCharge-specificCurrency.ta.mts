@@ -18,7 +18,10 @@ import { FinalBillingId, _decode_FinalBillingId, _encode_FinalBillingId, _enum_f
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocFinalArg-finalCharge-specificCurrency ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AocFinalArg-finalCharge-specificCurrency ::= SEQUENCE {
+ *     recordedCurrency [1] IMPLICIT RecordedCurrency,
+ *     finalBillingId [2] IMPLICIT FinalBillingId OPTIONAL
+ * }
  * ```
  * 
  * @class

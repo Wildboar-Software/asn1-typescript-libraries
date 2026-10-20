@@ -17,7 +17,14 @@ import { AcseAPDU, _decode_AcseAPDU, _encode_AcseAPDU } from "../Association-Con
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RemoteOperationsPortion-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RemoteOperationsPortion-Item ::= CHOICE {
+ *     roseAPDU [17] RoseAPDU {
+ *         {InvokeIdSet},
+ *         {OperationSet},
+ *         {OperationSet}
+ *     },
+ *     acseAPDU [19] AcseAPDU
+ * }
  * ```
  */
 export

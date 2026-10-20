@@ -15,7 +15,10 @@ import { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-O
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PumRegistrArg-userPin ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PumRegistrArg-userPin ::= CHOICE {
+ *     pumUserPin [6] IMPLICIT UserPin,
+ *     activatingUserPin [7] IMPLICIT UserPin
+ * }
  * ```
  */
 export

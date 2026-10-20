@@ -16,7 +16,14 @@ import { AocInterimArg_interimCharge_specificCurrency, _decode_AocInterimArg_int
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocInterimArg-interimCharge ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AocInterimArg-interimCharge ::= CHOICE {
+ *     chargeNotAvailable [0] IMPLICIT NULL,
+ *     freeOfCharge [1] IMPLICIT NULL,
+ *     specificCurrency SEQUENCE {
+ *         recordedCurrency [1] IMPLICIT RecordedCurrency,
+ *         interimBillingId [2] IMPLICIT InterimBillingId OPTIONAL
+ *     }
+ * }
  * ```
  */
 export

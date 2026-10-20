@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MCMUpdateReqArg-argumentExt ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MCMUpdateReqArg-argumentExt ::= CHOICE {
+ *     extension [3] IMPLICIT Extension {{MCMExtSet}},
+ *     multipleExtension [4] IMPLICIT SEQUENCE OF Extension {{MCMExtSet}}
+ * }
  * ```
  */
 export

@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReAlertingArg-argumentExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ReAlertingArg-argumentExtension ::= CHOICE {
+ *     extension [6] IMPLICIT Extension {{REExtSet}},
+ *     multipleExtension [7] IMPLICIT SEQUENCE OF Extension {{REExtSet}}
+ * }
  * ```
  */
 export

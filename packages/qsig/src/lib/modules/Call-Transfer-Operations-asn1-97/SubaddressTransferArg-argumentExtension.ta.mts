@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubaddressTransferArg-argumentExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SubaddressTransferArg-argumentExtension ::= CHOICE {
+ *     single [0] IMPLICIT Extension {{CTExtSet}},
+ *     multiple [1] IMPLICIT SEQUENCE OF Extension {{CTExtSet}}
+ * }
  * ```
  */
 export

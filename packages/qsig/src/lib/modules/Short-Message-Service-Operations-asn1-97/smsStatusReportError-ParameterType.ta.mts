@@ -21,7 +21,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * smsStatusReportError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * smsStatusReportError-ParameterType ::= SEQUENCE {
+ *     failureCause FailureCause,
+ *     protocolIdentifier [0] IMPLICIT ProtocolIdentifier OPTIONAL,
+ *     userData [1] IMPLICIT UserData OPTIONAL,
+ *     scAddressSaved [2] IMPLICIT BOOLEAN DEFAULT FALSE
+ * }
  * ```
  * 
  * @class

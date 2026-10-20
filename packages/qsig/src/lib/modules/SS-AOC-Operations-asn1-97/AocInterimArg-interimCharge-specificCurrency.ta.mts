@@ -18,7 +18,10 @@ import { InterimBillingId, _decode_InterimBillingId, _encode_InterimBillingId, _
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocInterimArg-interimCharge-specificCurrency ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AocInterimArg-interimCharge-specificCurrency ::= SEQUENCE {
+ *     recordedCurrency [1] IMPLICIT RecordedCurrency,
+ *     interimBillingId [2] IMPLICIT InterimBillingId OPTIONAL
+ * }
  * ```
  * 
  * @class

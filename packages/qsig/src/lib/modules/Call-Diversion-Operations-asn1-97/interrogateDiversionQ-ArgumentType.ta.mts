@@ -22,7 +22,16 @@ import { _decode_interrogateDiversionQ_ArgumentType_extension, _encode_interroga
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * interrogateDiversionQ-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * interrogateDiversionQ-ArgumentType ::= SEQUENCE {
+ *     procedure Procedure,
+ *     basicService BasicService DEFAULT allServices,
+ *     servedUserNr PartyNumber,
+ *     interrogatingUserNr PartyNumber,
+ *     extension CHOICE {
+ *         single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -16,7 +16,12 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PumInterrogArg-pumUserId ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PumInterrogArg-pumUserId ::= CHOICE {
+ *     pumNumber PartyNumber,
+ *     -- The PISN number of the PUM user,
+ *     -- always a Complete Number.
+ *     alternativeId AlternativeId
+ * }
  * ```
  */
 export

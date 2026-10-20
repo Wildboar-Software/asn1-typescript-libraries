@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CmnArg-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CmnArg-extension ::= CHOICE {
+ *     single [7] IMPLICIT Extension {{CMNExtSet}},
+ *     multiple [8] IMPLICIT SEQUENCE OF Extension {{CMNExtSet}}
+ * }
  * ```
  */
 export

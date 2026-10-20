@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * WtmoArg-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * WtmoArg-extension ::= CHOICE {
+ *     single [2] IMPLICIT Extension {{WTMCHExtSet}},
+ *     multiple [3] IMPLICIT SEQUENCE OF Extension {{WTMCHExtSet}}
+ * }
  * ```
  */
 export

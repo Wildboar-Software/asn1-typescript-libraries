@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CTInitiateArg-argumentExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CTInitiateArg-argumentExtension ::= CHOICE {
+ *     single [6] IMPLICIT Extension {{CTExtSet}},
+ *     multiple [7] IMPLICIT SEQUENCE OF Extension {{CTExtSet}}
+ * }
  * ```
  */
 export

@@ -20,7 +20,15 @@ import { _decode_checkRestriction_ArgumentType_extension, _encode_checkRestricti
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * checkRestriction-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * checkRestriction-ArgumentType ::= SEQUENCE {
+ *     servedUserNr PartyNumber,
+ *     basicService BasicService,
+ *     divertedToNr PartyNumber,
+ *     extension CHOICE {
+ *         single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class

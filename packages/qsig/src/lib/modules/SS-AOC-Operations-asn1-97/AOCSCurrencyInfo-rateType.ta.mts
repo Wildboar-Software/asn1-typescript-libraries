@@ -22,7 +22,15 @@ import { SpecialChargingCode, _decode_SpecialChargingCode, _encode_SpecialChargi
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AOCSCurrencyInfo-rateType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AOCSCurrencyInfo-rateType ::= CHOICE {
+ *     durationCurrency [1] IMPLICIT DurationCurrency,
+ *     flatRateCurrency [2] IMPLICIT FlatRateCurrency,
+ *     volumeRateCurrency [3] IMPLICIT VolumeRateCurrency,
+ *     specialChargingCode SpecialChargingCode,
+ *     freeOfCharge [4] IMPLICIT NULL,
+ *     currencyInfoNotAvailable [5] IMPLICIT NULL,
+ *     freeOfChargefromBeginning [6] IMPLICIT NULL
+ * }
  * ```
  */
 export

@@ -15,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MWIDeactivateArg-argumentExt ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MWIDeactivateArg-argumentExt ::= CHOICE {
+ *     extension [3] IMPLICIT Extension {{MWIExtSet}},
+ *     multipleExtension [4] IMPLICIT SEQUENCE OF Extension {{MWIExtSet}}
+ * }
  * ```
  */
 export

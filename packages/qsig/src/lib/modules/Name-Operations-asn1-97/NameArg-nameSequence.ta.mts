@@ -18,7 +18,10 @@ import { NameExtension, _decode_NameExtension, _encode_NameExtension } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NameArg-nameSequence ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NameArg-nameSequence ::= SEQUENCE {
+ *     name Name,
+ *     extension NameExtension OPTIONAL
+ * }
  * ```
  * 
  * @class

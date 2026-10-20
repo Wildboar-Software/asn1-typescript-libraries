@@ -24,7 +24,24 @@ import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PumInterrogRes-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PumInterrogRes-Item ::= SEQUENCE {
+ *     basicService [0] IMPLICIT BasicService OPTIONAL,
+ *     -- specific basic service or all basic services,
+ *     -- (Home PINX information)
+ *     hostingAddr [1] PartyNumber OPTIONAL,
+ *     -- The PISN number of the hosting user,
+ *     -- always a Complete Number.
+ *     -- (Home PINX information)
+ *     serviceOption [2] IMPLICIT ServiceOption OPTIONAL,
+ *     -- Type of registration session
+ *     -- (InCall, OutCall or AllCall)
+ *     -- (Home PINX information)
+ *     interrogParams SessionParams OPTIONAL,
+ *     -- Time left in registration session,
+ *     -- Number of outgoing calls left
+ *     -- (Visitor PINX information)
+ *     argExtension PumrExtension OPTIONAL
+ * }
  * ```
  * 
  * @class

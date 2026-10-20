@@ -22,7 +22,18 @@ import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CcOptionalArg-fullArg ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CcOptionalArg-fullArg ::= [0] IMPLICIT SEQUENCE {
+ *     numberA PartyNumber,
+ *     numberB PartyNumber,
+ *     service PSS1InformationElement,
+ *     -- permitted information elements are:
+ *     --Bearer capability;
+ *     -- Low layer compatibility;
+ *     -- High layer compatibility.
+ *     subaddrA [10] PartySubaddress OPTIONAL,
+ *     subaddrB [11] PartySubaddress OPTIONAL,
+ *     extension CcExtension OPTIONAL
+ * }
  * ```
  * 
  * @class
