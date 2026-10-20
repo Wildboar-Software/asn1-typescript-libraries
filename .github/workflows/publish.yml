@@ -48,6 +48,7 @@ jobs:
           - "goose"
           - "guls"
           - "h248"
+          - "inap"
           - "isis"
           - "iso-9798-3-sasl"
           - "kerberos5"
