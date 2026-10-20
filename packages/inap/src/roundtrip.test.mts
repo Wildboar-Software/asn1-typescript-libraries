@@ -1,4 +1,29 @@
+import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    AuthenticationLevel_basicLevels,
+    AuthenticationLevel_basicLevels_level_simple,
+} from "@wildboar/x500/BasicAccessControl";
+import {
+    ACIItem,
+    _decode_ACIItem,
+    _encode_ACIItem,
+} from "./lib/modules/IN-CS2-SDF-BasicAccessControl/ACIItem.ta.mjs";
+import {
+    ACIItem_itemOrUserFirst_userFirst,
+} from "./lib/modules/IN-CS2-SDF-BasicAccessControl/ACIItem-itemOrUserFirst-userFirst.ta.mjs";
+import {
+    ProtectedItems,
+} from "./lib/modules/IN-CS2-SDF-BasicAccessControl/ProtectedItems.ta.mjs";
+import {
+    UserClasses,
+} from "./lib/modules/IN-CS2-SDF-BasicAccessControl/UserClasses.ta.mjs";
+import {
+    UserPermission,
+} from "./lib/modules/IN-CS2-SDF-BasicAccessControl/UserPermission.ta.mjs";
+import {
+    GrantsAndDenials_grantExecuteMethod,
+} from "./lib/modules/IN-CS2-SDF-BasicAccessControl/GrantsAndDenials.ta.mjs";
 import {
     InitialDPArg,
     _decode_InitialDPArg,
@@ -110,6 +135,59 @@ describe("InitialDPArg", () => {
         expect(decoded.serviceInteractionIndicatorsTwo?.redirectServiceTreatmentInd?.redirectReason)
             .toEqual(new Uint8Array([0x03]));
         expect(decoded.serviceInteractionIndicatorsTwo?.nonCUGCall).toBeNull();
+        expect(decoded).toEqual(original);
+    });
+});
+
+describe("ACIItem", () => {
+    test("round-trips an IN access-control item, including entryMethods", () => {
+        const methodId = _OID.fromParts([1, 2, 3]);
+        const grants = new Uint8ClampedArray(GrantsAndDenials_grantExecuteMethod + 1);
+        grants[GrantsAndDenials_grantExecuteMethod] = 1;
+        const protectedItems = new ProtectedItems(
+            null,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            [methodId],
+        );
+        const original = new ACIItem(
+            { printableString: "aci-1" },
+            10,
+            {
+                basicLevels: new AuthenticationLevel_basicLevels(
+                    AuthenticationLevel_basicLevels_level_simple,
+                    undefined,
+                    false,
+                ),
+            },
+            {
+                userFirst: new ACIItem_itemOrUserFirst_userFirst(
+                    new UserClasses(null),
+                    [new UserPermission(undefined, protectedItems, grants)],
+                ),
+            },
+        );
+        const encoded = _encode_ACIItem(original, $.BER);
+        const decoded = _decode_ACIItem(encoded);
+        expect(decoded.identificationTag).toEqual({ printableString: "aci-1" });
+        expect(decoded.precedence).toBe(10);
+        if (!("userFirst" in decoded.itemOrUserFirst)) {
+            throw new Error("expected userFirst");
+        }
+        expect(decoded.itemOrUserFirst.userFirst.userPermissions[0]?.protectedItems.entryMethods)
+            .toEqual([methodId]);
+        expect(decoded.itemOrUserFirst.userFirst.userPermissions[0]?.grantsAndDenials)
+            .toEqual(grants);
         expect(decoded).toEqual(original);
     });
 });
