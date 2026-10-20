@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriberEquipmentType, _decode_SubscriberEquipmentType, _encode_SubscriberEquipmentType, _enum_for_SubscriberEquipmentType } from "../GenericChargingDataTypes/SubscriberEquipmentType.ta.mjs";
-// export { SubscriberEquipmentType, _enum_for_SubscriberEquipmentType, SubscriberEquipmentType_iMEISV /* IMPORTED_LONG_ENUMERATION_ITEM */, iMEISV /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberEquipmentType_mAC /* IMPORTED_LONG_ENUMERATION_ITEM */, mAC /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberEquipmentType_eUI64 /* IMPORTED_LONG_ENUMERATION_ITEM */, eUI64 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberEquipmentType_modifiedEUI64 /* IMPORTED_LONG_ENUMERATION_ITEM */, modifiedEUI64 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriberEquipmentType, _encode_SubscriberEquipmentType } from "../GenericChargingDataTypes/SubscriberEquipmentType.ta.mjs";
 
 
 /**

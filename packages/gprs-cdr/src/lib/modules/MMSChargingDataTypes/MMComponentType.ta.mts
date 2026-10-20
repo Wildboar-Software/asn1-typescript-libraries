@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubjectComponent, _decode_SubjectComponent, _encode_SubjectComponent } from "../MMSChargingDataTypes/SubjectComponent.ta.mjs";
-// export { SubjectComponent, _decode_SubjectComponent, _encode_SubjectComponent } from "../MMSChargingDataTypes/SubjectComponent.ta.mjs";
 import { MediaComponent, _decode_MediaComponent, _encode_MediaComponent } from "../MMSChargingDataTypes/MediaComponent.ta.mjs";
-// export { MediaComponent, _decode_MediaComponent, _encode_MediaComponent } from "../MMSChargingDataTypes/MediaComponent.ta.mjs";
 
 
 /**

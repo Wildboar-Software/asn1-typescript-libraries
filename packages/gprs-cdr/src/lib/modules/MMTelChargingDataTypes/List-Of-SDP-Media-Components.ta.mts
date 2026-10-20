@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../MMTelChargingDataTypes/SDP-Media-Components.ta.mjs";
-// export { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../MMTelChargingDataTypes/SDP-Media-Components.ta.mjs";
 import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
-// export { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
 import { SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from "../MMTelChargingDataTypes/SDP-Type.ta.mjs";
-// export { SDP_Type, _enum_for_SDP_Type, SDP_Type_sDP_offer /* IMPORTED_LONG_ENUMERATION_ITEM */, sDP_offer /* IMPORTED_SHORT_ENUMERATION_ITEM */, SDP_Type_sDP_answer /* IMPORTED_LONG_ENUMERATION_ITEM */, sDP_answer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SDP_Type, _encode_SDP_Type } from "../MMTelChargingDataTypes/SDP-Type.ta.mjs";
 
 
 /**

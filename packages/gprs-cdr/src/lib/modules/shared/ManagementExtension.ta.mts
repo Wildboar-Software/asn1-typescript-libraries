@@ -7,8 +7,6 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { DMI_EXTENSION } from "./DMI-EXTENSION.oca.mjs";
-// export { ManagementExtensionSet } from "./ManagementExtensionSet.osa.mjs";
 
 
 /**

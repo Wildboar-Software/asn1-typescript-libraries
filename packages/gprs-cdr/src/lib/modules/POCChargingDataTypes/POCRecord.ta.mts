@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PPFRecord, _decode_PPFRecord, _encode_PPFRecord } from "../POCChargingDataTypes/PPFRecord.ta.mjs";
-// export { PPFRecord, _decode_PPFRecord, _encode_PPFRecord } from "../POCChargingDataTypes/PPFRecord.ta.mjs";
 import { CPFRecord, _decode_CPFRecord, _encode_CPFRecord } from "../POCChargingDataTypes/CPFRecord.ta.mjs";
-// export { CPFRecord, _decode_CPFRecord, _encode_CPFRecord } from "../POCChargingDataTypes/CPFRecord.ta.mjs";
 
 
 /**

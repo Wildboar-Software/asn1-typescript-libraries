@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSAgentAddressData, _decode_MMSAgentAddressData, _encode_MMSAgentAddressData } from "../MMSChargingDataTypes/MMSAgentAddressData.ta.mjs";
-// export { MMSAgentAddressData, _decode_MMSAgentAddressData, _encode_MMSAgentAddressData } from "../MMSChargingDataTypes/MMSAgentAddressData.ta.mjs";
 import { MMSRecipientType, _decode_MMSRecipientType, _encode_MMSRecipientType } from "../MMSChargingDataTypes/MMSRecipientType.ta.mjs";
-// export { MMSRecipientType, _enum_for_MMSRecipientType, MMSRecipientType_tO /* IMPORTED_LONG_ENUMERATION_ITEM */, tO /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSRecipientType_cC /* IMPORTED_LONG_ENUMERATION_ITEM */, cC /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSRecipientType_bCC /* IMPORTED_LONG_ENUMERATION_ITEM */, bCC /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSRecipientType, _encode_MMSRecipientType } from "../MMSChargingDataTypes/MMSRecipientType.ta.mjs";
 
 
 /**

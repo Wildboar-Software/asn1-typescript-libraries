@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DayDefinition, _decode_DayDefinition, _encode_DayDefinition } from "../CSChargingDataTypes/DayDefinition.ta.mjs";
-// export { DayDefinition, _decode_DayDefinition, _encode_DayDefinition } from "../CSChargingDataTypes/DayDefinition.ta.mjs";
 
 
 /**

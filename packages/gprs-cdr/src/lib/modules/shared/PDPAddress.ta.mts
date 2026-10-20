@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "./IPAddress.ta.mjs";
-// export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "./IPAddress.ta.mjs";
 
 
 /**

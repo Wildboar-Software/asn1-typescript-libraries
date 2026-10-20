@@ -8,9 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CurrentLocationRetrieved, _decode_CurrentLocationRetrieved, _encode_CurrentLocationRetrieved, _enum_for_CurrentLocationRetrieved } from "../MONTEChargingDataTypes/CurrentLocationRetrieved.ta.mjs";
-// export { CurrentLocationRetrieved, _enum_for_CurrentLocationRetrieved, CurrentLocationRetrieved_activeLocationRetrieval /* IMPORTED_LONG_ENUMERATION_ITEM */, activeLocationRetrieval /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CurrentLocationRetrieved, _encode_CurrentLocationRetrieved } from "../MONTEChargingDataTypes/CurrentLocationRetrieved.ta.mjs";
 import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../MONTEChargingDataTypes/UserCSGInformation.ta.mjs";
-// export { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../MONTEChargingDataTypes/UserCSGInformation.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CauseType, _encode_CauseType, _enum_for_CauseType, CauseType } from "../MONTEChargingDataTypes/CauseType.ta.mjs";
-// export { CauseType, _enum_for_CauseType, CauseType_radioNetworkLayer /* IMPORTED_LONG_ENUMERATION_ITEM */, radioNetworkLayer /* IMPORTED_SHORT_ENUMERATION_ITEM */, CauseType_transportLayer /* IMPORTED_LONG_ENUMERATION_ITEM */, transportLayer /* IMPORTED_SHORT_ENUMERATION_ITEM */, CauseType_nAS /* IMPORTED_LONG_ENUMERATION_ITEM */, nAS /* IMPORTED_SHORT_ENUMERATION_ITEM */, CauseType_protocol /* IMPORTED_LONG_ENUMERATION_ITEM */, protocol /* IMPORTED_SHORT_ENUMERATION_ITEM */, CauseType_miscellaneous /* IMPORTED_LONG_ENUMERATION_ITEM */, miscellaneous /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CauseType, _encode_CauseType } from "../MONTEChargingDataTypes/CauseType.ta.mjs";
 
 
 /**

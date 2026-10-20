@@ -10,11 +10,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CoverageStatus, _encode_CoverageStatus, _enum_for_CoverageStatus, CoverageStatus } from "../ProSeChargingDataTypes/CoverageStatus.ta.mjs";
-// export { CoverageStatus, _enum_for_CoverageStatus, CoverageStatus_outOfCoverage /* IMPORTED_LONG_ENUMERATION_ITEM */, outOfCoverage /* IMPORTED_SHORT_ENUMERATION_ITEM */, CoverageStatus_inCoverage /* IMPORTED_LONG_ENUMERATION_ITEM */, inCoverage /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CoverageStatus, _encode_CoverageStatus } from "../ProSeChargingDataTypes/CoverageStatus.ta.mjs";
 import { _decode_ChangeOfProSeCondition_serviceChangeCondition, _encode_ChangeOfProSeCondition_serviceChangeCondition, ChangeOfProSeCondition_serviceChangeCondition } from "../ProSeChargingDataTypes/ChangeOfProSeCondition-serviceChangeCondition.ta.mjs";
-// export { ChangeOfProSeCondition_serviceChangeCondition, ChangeOfProSeCondition_serviceChangeCondition_pLMNchange /* IMPORTED_LONG_NAMED_BIT */, pLMNchange /* IMPORTED_SHORT_NAMED_BIT */, ChangeOfProSeCondition_serviceChangeCondition_coverageStatusChange /* IMPORTED_LONG_NAMED_BIT */, coverageStatusChange /* IMPORTED_SHORT_NAMED_BIT */, ChangeOfProSeCondition_serviceChangeCondition_locationChange /* IMPORTED_LONG_NAMED_BIT */, locationChange /* IMPORTED_SHORT_NAMED_BIT */, _decode_ChangeOfProSeCondition_serviceChangeCondition, _encode_ChangeOfProSeCondition_serviceChangeCondition } from "../ProSeChargingDataTypes/ChangeOfProSeCondition-serviceChangeCondition.ta.mjs";
 import { _decode_ChangeOfProSeCondition_radioResourcesInd, _encode_ChangeOfProSeCondition_radioResourcesInd, ChangeOfProSeCondition_radioResourcesInd } from "../ProSeChargingDataTypes/ChangeOfProSeCondition-radioResourcesInd.ta.mjs";
-// export { ChangeOfProSeCondition_radioResourcesInd, ChangeOfProSeCondition_radioResourcesInd_operatorProvided /* IMPORTED_LONG_NAMED_INTEGER */, operatorProvided /* IMPORTED_SHORT_NAMED_INTEGER */, ChangeOfProSeCondition_radioResourcesInd_configured /* IMPORTED_LONG_NAMED_INTEGER */, configured /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ChangeOfProSeCondition_radioResourcesInd, _encode_ChangeOfProSeCondition_radioResourcesInd } from "../ProSeChargingDataTypes/ChangeOfProSeCondition-radioResourcesInd.ta.mjs";
 
 
 /**

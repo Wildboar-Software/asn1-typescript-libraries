@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TrafficChannel, _decode_TrafficChannel, _encode_TrafficChannel, _enum_for_TrafficChannel } from "../CSChargingDataTypes/TrafficChannel.ta.mjs";
-// export { TrafficChannel, _enum_for_TrafficChannel, TrafficChannel_fullRate /* IMPORTED_LONG_ENUMERATION_ITEM */, fullRate /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficChannel_halfRate /* IMPORTED_LONG_ENUMERATION_ITEM */, halfRate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TrafficChannel, _encode_TrafficChannel } from "../CSChargingDataTypes/TrafficChannel.ta.mjs";
 
 
 /**

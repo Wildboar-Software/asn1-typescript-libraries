@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMTelRecord, _decode_MMTelRecord, _encode_MMTelRecord } from "../MMTelChargingDataTypes/MMTelRecord.ta.mjs";
-// export { MMTelRecord, _decode_MMTelRecord, _encode_MMTelRecord } from "../MMTelChargingDataTypes/MMTelRecord.ta.mjs";
 
 
 /**

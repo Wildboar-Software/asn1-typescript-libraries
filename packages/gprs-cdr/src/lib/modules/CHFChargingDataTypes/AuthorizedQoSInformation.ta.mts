@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AllocationRetentionPriority, _decode_AllocationRetentionPriority, _encode_AllocationRetentionPriority } from "../CHFChargingDataTypes/AllocationRetentionPriority.ta.mjs";
-// export { AllocationRetentionPriority, _decode_AllocationRetentionPriority, _encode_AllocationRetentionPriority } from "../CHFChargingDataTypes/AllocationRetentionPriority.ta.mjs";
 
 
 /**

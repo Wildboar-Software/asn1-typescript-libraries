@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AdditionalChgInfo_chargeIndicator, _encode_AdditionalChgInfo_chargeIndicator, AdditionalChgInfo_chargeIndicator } from "../CSChargingDataTypes/AdditionalChgInfo-chargeIndicator.ta.mjs";
-// export { AdditionalChgInfo_chargeIndicator, AdditionalChgInfo_chargeIndicator_noCharge /* IMPORTED_LONG_NAMED_INTEGER */, noCharge /* IMPORTED_SHORT_NAMED_INTEGER */, AdditionalChgInfo_chargeIndicator_charge /* IMPORTED_LONG_NAMED_INTEGER */, charge /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AdditionalChgInfo_chargeIndicator, _encode_AdditionalChgInfo_chargeIndicator } from "../CSChargingDataTypes/AdditionalChgInfo-chargeIndicator.ta.mjs";
 
 
 /**

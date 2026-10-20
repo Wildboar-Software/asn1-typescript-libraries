@@ -12,11 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../MBMSChargingDataTypes/SDP-Media-Components.ta.mjs";
-// export { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../MBMSChargingDataTypes/SDP-Media-Components.ta.mjs";
 import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MBMSChargingDataTypes/InvolvedParty.ta.mjs";
-// export { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MBMSChargingDataTypes/InvolvedParty.ta.mjs";
 import { BearerServiceDescription_sDP_Type, _decode_BearerServiceDescription_sDP_Type, _encode_BearerServiceDescription_sDP_Type, _enum_for_BearerServiceDescription_sDP_Type } from "../MBMSChargingDataTypes/BearerServiceDescription-sDP-Type.ta.mjs";
-// export { BearerServiceDescription_sDP_Type, _enum_for_BearerServiceDescription_sDP_Type, BearerServiceDescription_sDP_Type_sDP_offer /* IMPORTED_LONG_ENUMERATION_ITEM */, sDP_offer /* IMPORTED_SHORT_ENUMERATION_ITEM */, BearerServiceDescription_sDP_Type_sDP_answer /* IMPORTED_LONG_ENUMERATION_ITEM */, sDP_answer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BearerServiceDescription_sDP_Type, _encode_BearerServiceDescription_sDP_Type } from "../MBMSChargingDataTypes/BearerServiceDescription-sDP-Type.ta.mjs";
 
 
 /**

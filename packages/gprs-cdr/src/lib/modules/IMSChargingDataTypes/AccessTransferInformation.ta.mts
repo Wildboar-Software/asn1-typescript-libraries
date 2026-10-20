@@ -9,11 +9,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessTransferType, _decode_AccessTransferType, _encode_AccessTransferType, _enum_for_AccessTransferType } from "../IMSChargingDataTypes/AccessTransferType.ta.mjs";
-// export { AccessTransferType, _enum_for_AccessTransferType, AccessTransferType_pSToCS /* IMPORTED_LONG_ENUMERATION_ITEM */, pSToCS /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessTransferType_cSToPS /* IMPORTED_LONG_ENUMERATION_ITEM */, cSToPS /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessTransferType_pSToPS /* IMPORTED_LONG_ENUMERATION_ITEM */, pSToPS /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessTransferType_cSToCS /* IMPORTED_LONG_ENUMERATION_ITEM */, cSToCS /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessTransferType, _encode_AccessTransferType } from "../IMSChargingDataTypes/AccessTransferType.ta.mjs";
 import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../IMSChargingDataTypes/NodeAddress.ta.mjs";
-// export { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../IMSChargingDataTypes/NodeAddress.ta.mjs";
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../IMSChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
-// export { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../IMSChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
 
 
 /**

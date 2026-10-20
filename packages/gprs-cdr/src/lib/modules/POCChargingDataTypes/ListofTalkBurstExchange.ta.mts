@@ -9,7 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ChangeCondition, _encode_ChangeCondition, _enum_for_ChangeCondition, ChangeCondition } from "../POCChargingDataTypes/ChangeCondition.ta.mjs";
-// export { ChangeCondition, _enum_for_ChangeCondition, ChangeCondition_serviceChange /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_volumeLimit /* IMPORTED_LONG_ENUMERATION_ITEM */, volumeLimit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_timeLimit /* IMPORTED_LONG_ENUMERATION_ITEM */, timeLimit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_numberofTalkBurstLimit /* IMPORTED_LONG_ENUMERATION_ITEM */, numberofTalkBurstLimit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_numberofActiveParticipants /* IMPORTED_LONG_ENUMERATION_ITEM */, numberofActiveParticipants /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_tariffTime /* IMPORTED_LONG_ENUMERATION_ITEM */, tariffTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChangeCondition, _encode_ChangeCondition } from "../POCChargingDataTypes/ChangeCondition.ta.mjs";
 
 
 /**

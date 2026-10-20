@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TariffInformation, _decode_TariffInformation, _encode_TariffInformation } from "../IMSChargingDataTypes/TariffInformation.ta.mjs";
-// export { TariffInformation, _decode_TariffInformation, _encode_TariffInformation } from "../IMSChargingDataTypes/TariffInformation.ta.mjs";
 import { AoCCostInformation, _decode_AoCCostInformation, _encode_AoCCostInformation } from "../IMSChargingDataTypes/AoCCostInformation.ta.mjs";
-// export { AoCCostInformation, _decode_AoCCostInformation, _encode_AoCCostInformation } from "../IMSChargingDataTypes/AoCCostInformation.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ReachabilityType, _decode_ReachabilityType, _encode_ReachabilityType, _enum_for_ReachabilityType } from "../MONTEChargingDataTypes/ReachabilityType.ta.mjs";
-// export { ReachabilityType, _enum_for_ReachabilityType, ReachabilityType_reachabilityforSMS /* IMPORTED_LONG_ENUMERATION_ITEM */, reachabilityforSMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReachabilityType_reachabilityforData /* IMPORTED_LONG_ENUMERATION_ITEM */, reachabilityforData /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReachabilityType, _encode_ReachabilityType } from "../MONTEChargingDataTypes/ReachabilityType.ta.mjs";
 
 
 /**

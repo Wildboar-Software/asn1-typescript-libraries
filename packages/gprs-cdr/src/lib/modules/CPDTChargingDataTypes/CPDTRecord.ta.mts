@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CPDTSCERecord, _decode_CPDTSCERecord, _encode_CPDTSCERecord } from "../CPDTChargingDataTypes/CPDTSCERecord.ta.mjs";
-// export { CPDTSCERecord, _decode_CPDTSCERecord, _encode_CPDTSCERecord } from "../CPDTChargingDataTypes/CPDTSCERecord.ta.mjs";
 import { CPDTSNNRecord, _decode_CPDTSNNRecord, _encode_CPDTSNNRecord } from "../CPDTChargingDataTypes/CPDTSNNRecord.ta.mjs";
-// export { CPDTSNNRecord, _decode_CPDTSNNRecord, _encode_CPDTSNNRecord } from "../CPDTChargingDataTypes/CPDTSNNRecord.ta.mjs";
 
 
 /**

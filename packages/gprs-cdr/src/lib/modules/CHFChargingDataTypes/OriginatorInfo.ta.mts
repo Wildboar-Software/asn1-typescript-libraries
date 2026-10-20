@@ -8,9 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMAddress, _decode_SMAddress, _encode_SMAddress } from "../CHFChargingDataTypes/SMAddress.ta.mjs";
-// export { SMAddress, _decode_SMAddress, _encode_SMAddress } from "../CHFChargingDataTypes/SMAddress.ta.mjs";
 import { SMInterface, _decode_SMInterface, _encode_SMInterface } from "../CHFChargingDataTypes/SMInterface.ta.mjs";
-// export { SMInterface, _decode_SMInterface, _encode_SMInterface } from "../CHFChargingDataTypes/SMInterface.ta.mjs";
 
 
 /**

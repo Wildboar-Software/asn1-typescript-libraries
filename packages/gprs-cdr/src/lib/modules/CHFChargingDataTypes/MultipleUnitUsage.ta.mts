@@ -9,7 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UsedUnitContainer, _decode_UsedUnitContainer, _encode_UsedUnitContainer } from "../CHFChargingDataTypes/UsedUnitContainer.ta.mjs";
-// export { UsedUnitContainer, _decode_UsedUnitContainer, _encode_UsedUnitContainer } from "../CHFChargingDataTypes/UsedUnitContainer.ta.mjs";
 
 
 /**

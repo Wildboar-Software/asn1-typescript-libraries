@@ -8,15 +8,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { POCSessionType, _decode_POCSessionType, _encode_POCSessionType, _enum_for_POCSessionType } from "../POCChargingDataTypes/POCSessionType.ta.mjs";
-// export { POCSessionType, _enum_for_POCSessionType, POCSessionType_one_to_one_session /* IMPORTED_LONG_ENUMERATION_ITEM */, one_to_one_session /* IMPORTED_SHORT_ENUMERATION_ITEM */, POCSessionType_chat_group_session /* IMPORTED_LONG_ENUMERATION_ITEM */, chat_group_session /* IMPORTED_SHORT_ENUMERATION_ITEM */, POCSessionType_pre_arranged_group_session /* IMPORTED_LONG_ENUMERATION_ITEM */, pre_arranged_group_session /* IMPORTED_SHORT_ENUMERATION_ITEM */, POCSessionType_ad_hoc_group_session /* IMPORTED_LONG_ENUMERATION_ITEM */, ad_hoc_group_session /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_POCSessionType, _encode_POCSessionType } from "../POCChargingDataTypes/POCSessionType.ta.mjs";
 import { POCParticipant, _decode_POCParticipant, _encode_POCParticipant } from "../POCChargingDataTypes/POCParticipant.ta.mjs";
-// export { POCParticipant, _decode_POCParticipant, _encode_POCParticipant } from "../POCChargingDataTypes/POCParticipant.ta.mjs";
 import { ListofTalkBurstExchange, _decode_ListofTalkBurstExchange, _encode_ListofTalkBurstExchange } from "../POCChargingDataTypes/ListofTalkBurstExchange.ta.mjs";
-// export { ListofTalkBurstExchange, _decode_ListofTalkBurstExchange, _encode_ListofTalkBurstExchange } from "../POCChargingDataTypes/ListofTalkBurstExchange.ta.mjs";
 import { POCSessionInitType, _decode_POCSessionInitType, _encode_POCSessionInitType, _enum_for_POCSessionInitType } from "../POCChargingDataTypes/POCSessionInitType.ta.mjs";
-// export { POCSessionInitType, _enum_for_POCSessionInitType, POCSessionInitType_pre_established /* IMPORTED_LONG_ENUMERATION_ITEM */, pre_established /* IMPORTED_SHORT_ENUMERATION_ITEM */, POCSessionInitType_on_demand /* IMPORTED_LONG_ENUMERATION_ITEM */, on_demand /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_POCSessionInitType, _encode_POCSessionInitType } from "../POCChargingDataTypes/POCSessionInitType.ta.mjs";
 import { POCEventType, _decode_POCEventType, _encode_POCEventType, _enum_for_POCEventType } from "../POCChargingDataTypes/POCEventType.ta.mjs";
-// export { POCEventType, _enum_for_POCEventType, POCEventType_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, POCEventType_instantPersonalAlert /* IMPORTED_LONG_ENUMERATION_ITEM */, instantPersonalAlert /* IMPORTED_SHORT_ENUMERATION_ITEM */, POCEventType_pOCGroupAdvertisement /* IMPORTED_LONG_ENUMERATION_ITEM */, pOCGroupAdvertisement /* IMPORTED_SHORT_ENUMERATION_ITEM */, POCEventType_earlySessionSettingup /* IMPORTED_LONG_ENUMERATION_ITEM */, earlySessionSettingup /* IMPORTED_SHORT_ENUMERATION_ITEM */, POCEventType_pOCTalkBurst /* IMPORTED_LONG_ENUMERATION_ITEM */, pOCTalkBurst /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_POCEventType, _encode_POCEventType } from "../POCChargingDataTypes/POCEventType.ta.mjs";
 
 
 /**

@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateExtension, _decode_PrivateExtension, _encode_PrivateExtension } from "./PrivateExtension.ta.mjs";
-// export { PrivateExtension, _decode_PrivateExtension, _encode_PrivateExtension } from "./PrivateExtension.ta.mjs";
 import { Pcs_Extensions, _decode_Pcs_Extensions, _encode_Pcs_Extensions } from "./Pcs-Extensions.ta.mjs";
-// export { Pcs_Extensions, _decode_Pcs_Extensions, _encode_Pcs_Extensions } from "./Pcs-Extensions.ta.mjs";
 
 
 /**

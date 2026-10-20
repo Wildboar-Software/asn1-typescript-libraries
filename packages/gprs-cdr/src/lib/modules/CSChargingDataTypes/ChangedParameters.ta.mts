@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChangedParameters_changeFlags, _decode_ChangedParameters_changeFlags, _encode_ChangedParameters_changeFlags } from "../CSChargingDataTypes/ChangedParameters-changeFlags.ta.mjs";
-// export { ChangedParameters_changeFlags, ChangedParameters_changeFlags_callingPartyNumberModified /* IMPORTED_LONG_NAMED_BIT */, callingPartyNumberModified /* IMPORTED_SHORT_NAMED_BIT */, ChangedParameters_changeFlags_callingPartyCategoryModified /* IMPORTED_LONG_NAMED_BIT */, callingPartyCategoryModified /* IMPORTED_SHORT_NAMED_BIT */, ChangedParameters_changeFlags_originalCalledPartyNumberModified /* IMPORTED_LONG_NAMED_BIT */, originalCalledPartyNumberModified /* IMPORTED_SHORT_NAMED_BIT */, ChangedParameters_changeFlags_genericNumbersModified /* IMPORTED_LONG_NAMED_BIT */, genericNumbersModified /* IMPORTED_SHORT_NAMED_BIT */, ChangedParameters_changeFlags_redirectingPartyNumberModified /* IMPORTED_LONG_NAMED_BIT */, redirectingPartyNumberModified /* IMPORTED_SHORT_NAMED_BIT */, ChangedParameters_changeFlags_redirectionCounterModified /* IMPORTED_LONG_NAMED_BIT */, redirectionCounterModified /* IMPORTED_SHORT_NAMED_BIT */, _decode_ChangedParameters_changeFlags, _encode_ChangedParameters_changeFlags } from "../CSChargingDataTypes/ChangedParameters-changeFlags.ta.mjs";
 import { CAMELModificationParameters, _decode_CAMELModificationParameters, _encode_CAMELModificationParameters } from "../CSChargingDataTypes/CAMELModificationParameters.ta.mjs";
-// export { CAMELModificationParameters, _decode_CAMELModificationParameters, _encode_CAMELModificationParameters } from "../CSChargingDataTypes/CAMELModificationParameters.ta.mjs";
 
 
 /**

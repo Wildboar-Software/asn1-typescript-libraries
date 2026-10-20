@@ -8,13 +8,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMEIStatus, _decode_IMEIStatus, _encode_IMEIStatus, _enum_for_IMEIStatus } from "../CSChargingDataTypes/IMEIStatus.ta.mjs";
-// export { IMEIStatus, _enum_for_IMEIStatus, IMEIStatus_greyListedMobileEquipment /* IMPORTED_LONG_ENUMERATION_ITEM */, greyListedMobileEquipment /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMEIStatus_blackListedMobileEquipment /* IMPORTED_LONG_ENUMERATION_ITEM */, blackListedMobileEquipment /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMEIStatus_nonWhiteListedMobileEquipment /* IMPORTED_LONG_ENUMERATION_ITEM */, nonWhiteListedMobileEquipment /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IMEIStatus, _encode_IMEIStatus } from "../CSChargingDataTypes/IMEIStatus.ta.mjs";
 import { LocationAreaAndCell, _decode_LocationAreaAndCell, _encode_LocationAreaAndCell } from "../CSChargingDataTypes/LocationAreaAndCell.ta.mjs";
-// export { LocationAreaAndCell, _decode_LocationAreaAndCell, _encode_LocationAreaAndCell } from "../CSChargingDataTypes/LocationAreaAndCell.ta.mjs";
 import { ObservedIMEITicket_imeiCheckEvent, _decode_ObservedIMEITicket_imeiCheckEvent, _encode_ObservedIMEITicket_imeiCheckEvent } from "../CSChargingDataTypes/ObservedIMEITicket-imeiCheckEvent.ta.mjs";
-// export { ObservedIMEITicket_imeiCheckEvent, ObservedIMEITicket_imeiCheckEvent_mobileOriginatedCall /* IMPORTED_LONG_NAMED_INTEGER */, mobileOriginatedCall /* IMPORTED_SHORT_NAMED_INTEGER */, ObservedIMEITicket_imeiCheckEvent_mobileTerminatedCall /* IMPORTED_LONG_NAMED_INTEGER */, mobileTerminatedCall /* IMPORTED_SHORT_NAMED_INTEGER */, ObservedIMEITicket_imeiCheckEvent_smsMobileOriginating /* IMPORTED_LONG_NAMED_INTEGER */, smsMobileOriginating /* IMPORTED_SHORT_NAMED_INTEGER */, ObservedIMEITicket_imeiCheckEvent_smsMobileTerminating /* IMPORTED_LONG_NAMED_INTEGER */, smsMobileTerminating /* IMPORTED_SHORT_NAMED_INTEGER */, ObservedIMEITicket_imeiCheckEvent_ssAction /* IMPORTED_LONG_NAMED_INTEGER */, ssAction /* IMPORTED_SHORT_NAMED_INTEGER */, ObservedIMEITicket_imeiCheckEvent_locationUpdate /* IMPORTED_LONG_NAMED_INTEGER */, locationUpdate /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ObservedIMEITicket_imeiCheckEvent, _encode_ObservedIMEITicket_imeiCheckEvent } from "../CSChargingDataTypes/ObservedIMEITicket-imeiCheckEvent.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
-// export { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
 
 
 /**

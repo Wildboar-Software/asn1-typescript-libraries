@@ -6,8 +6,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { CMIP_AVA } from "../CSChargingDataTypes/CMIP-AVA.oca.mjs";
-// export { AvaSet } from "../CSChargingDataTypes/AvaSet.osa.mjs";
 
 
 /**

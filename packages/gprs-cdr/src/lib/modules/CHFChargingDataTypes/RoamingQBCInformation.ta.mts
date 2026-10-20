@@ -8,9 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MultipleQFIContainer, _decode_MultipleQFIContainer, _encode_MultipleQFIContainer } from "../CHFChargingDataTypes/MultipleQFIContainer.ta.mjs";
-// export { MultipleQFIContainer, _decode_MultipleQFIContainer, _encode_MultipleQFIContainer } from "../CHFChargingDataTypes/MultipleQFIContainer.ta.mjs";
 import { RoamingChargingProfile, _decode_RoamingChargingProfile, _encode_RoamingChargingProfile } from "../CHFChargingDataTypes/RoamingChargingProfile.ta.mjs";
-// export { RoamingChargingProfile, _decode_RoamingChargingProfile, _encode_RoamingChargingProfile } from "../CHFChargingDataTypes/RoamingChargingProfile.ta.mjs";
 
 
 /**

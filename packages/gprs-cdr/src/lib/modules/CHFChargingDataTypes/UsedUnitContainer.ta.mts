@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Trigger, _decode_Trigger, _encode_Trigger } from "../CHFChargingDataTypes/Trigger.ta.mjs";
-// export { Trigger, _decode_Trigger, _encode_Trigger } from "../CHFChargingDataTypes/Trigger.ta.mjs";
 import { PDUContainerInformation, _decode_PDUContainerInformation, _encode_PDUContainerInformation } from "../CHFChargingDataTypes/PDUContainerInformation.ta.mjs";
-// export { PDUContainerInformation, _decode_PDUContainerInformation, _encode_PDUContainerInformation } from "../CHFChargingDataTypes/PDUContainerInformation.ta.mjs";
 
 
 /**

@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CallTypes_Item, _encode_CallTypes_Item, CallTypes_Item } from "../CSChargingDataTypes/CallTypes-Item.ta.mjs";
-// export { CallTypes_Item, CallTypes_Item_mobileOriginated /* IMPORTED_LONG_NAMED_INTEGER */, mobileOriginated /* IMPORTED_SHORT_NAMED_INTEGER */, CallTypes_Item_mobileTerminated /* IMPORTED_LONG_NAMED_INTEGER */, mobileTerminated /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CallTypes_Item, _encode_CallTypes_Item } from "../CSChargingDataTypes/CallTypes-Item.ta.mjs";
 
 
 /**

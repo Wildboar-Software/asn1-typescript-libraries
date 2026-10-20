@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SupplService, _decode_SupplService, _encode_SupplService } from "../MMTelChargingDataTypes/SupplService.ta.mjs";
-// export { SupplService, _decode_SupplService, _encode_SupplService } from "../MMTelChargingDataTypes/SupplService.ta.mjs";
 
 
 /**

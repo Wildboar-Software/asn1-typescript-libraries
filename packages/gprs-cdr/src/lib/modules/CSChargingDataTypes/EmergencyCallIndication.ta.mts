@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSIorIMEI, _decode_IMSIorIMEI, _encode_IMSIorIMEI } from "../CSChargingDataTypes/IMSIorIMEI.ta.mjs";
-// export { IMSIorIMEI, _decode_IMSIorIMEI, _encode_IMSIorIMEI } from "../CSChargingDataTypes/IMSIorIMEI.ta.mjs";
 
 
 /**

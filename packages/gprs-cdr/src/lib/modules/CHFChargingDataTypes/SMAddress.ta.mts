@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMAddressType, _decode_SMAddressType, _encode_SMAddressType, _enum_for_SMAddressType } from "../CHFChargingDataTypes/SMAddressType.ta.mjs";
-// export { SMAddressType, _enum_for_SMAddressType, SMAddressType_emailAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, emailAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMAddressType_mSISDN /* IMPORTED_LONG_ENUMERATION_ITEM */, mSISDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMAddressType_iPv4Address /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4Address /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMAddressType_iPv6Address /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv6Address /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMAddressType_numericShortCode /* IMPORTED_LONG_ENUMERATION_ITEM */, numericShortCode /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMAddressType_alphanumericShortCode /* IMPORTED_LONG_ENUMERATION_ITEM */, alphanumericShortCode /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMAddressType_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMAddressType_iMSI /* IMPORTED_LONG_ENUMERATION_ITEM */, iMSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMAddressType, _encode_SMAddressType } from "../CHFChargingDataTypes/SMAddressType.ta.mjs";
 import { SMAddressDomain, _decode_SMAddressDomain, _encode_SMAddressDomain } from "../CHFChargingDataTypes/SMAddressDomain.ta.mjs";
-// export { SMAddressDomain, _decode_SMAddressDomain, _encode_SMAddressDomain } from "../CHFChargingDataTypes/SMAddressDomain.ta.mjs";
 
 
 /**

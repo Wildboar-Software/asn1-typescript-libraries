@@ -8,9 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CoverageStatus, _decode_CoverageStatus, _encode_CoverageStatus, _enum_for_CoverageStatus } from "../ProSeChargingDataTypes/CoverageStatus.ta.mjs";
-// export { CoverageStatus, _enum_for_CoverageStatus, CoverageStatus_outOfCoverage /* IMPORTED_LONG_ENUMERATION_ITEM */, outOfCoverage /* IMPORTED_SHORT_ENUMERATION_ITEM */, CoverageStatus_inCoverage /* IMPORTED_LONG_ENUMERATION_ITEM */, inCoverage /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CoverageStatus, _encode_CoverageStatus } from "../ProSeChargingDataTypes/CoverageStatus.ta.mjs";
 import { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../ProSeChargingDataTypes/LocationInfo.ta.mjs";
-// export { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../ProSeChargingDataTypes/LocationInfo.ta.mjs";
 
 
 /**

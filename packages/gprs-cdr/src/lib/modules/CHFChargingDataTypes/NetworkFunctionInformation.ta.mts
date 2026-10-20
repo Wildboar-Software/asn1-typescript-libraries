@@ -9,11 +9,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkFunctionality, _decode_NetworkFunctionality, _encode_NetworkFunctionality, _enum_for_NetworkFunctionality } from "../CHFChargingDataTypes/NetworkFunctionality.ta.mjs";
-// export { NetworkFunctionality, _enum_for_NetworkFunctionality, NetworkFunctionality_cHF /* IMPORTED_LONG_ENUMERATION_ITEM */, cHF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkFunctionality_sMF /* IMPORTED_LONG_ENUMERATION_ITEM */, sMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkFunctionality_aMF /* IMPORTED_LONG_ENUMERATION_ITEM */, aMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkFunctionality_sMSF /* IMPORTED_LONG_ENUMERATION_ITEM */, sMSF /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkFunctionality, _encode_NetworkFunctionality } from "../CHFChargingDataTypes/NetworkFunctionality.ta.mjs";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../CHFChargingDataTypes/IPAddress.ta.mjs";
-// export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../CHFChargingDataTypes/IPAddress.ta.mjs";
 import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFChargingDataTypes/NodeAddress.ta.mjs";
-// export { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFChargingDataTypes/NodeAddress.ta.mjs";
 
 
 /**

@@ -9,7 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceResult, _decode_ServiceResult, _encode_ServiceResult } from "../MONTEChargingDataTypes/ServiceResult.ta.mjs";
-// export { ServiceResult, _decode_ServiceResult, _encode_ServiceResult } from "../MONTEChargingDataTypes/ServiceResult.ta.mjs";
 
 
 /**

@@ -10,7 +10,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CAMELSMSInformation_defaultSMSHandling, _encode_CAMELSMSInformation_defaultSMSHandling, _enum_for_CAMELSMSInformation_defaultSMSHandling, CAMELSMSInformation_defaultSMSHandling } from "../CSChargingDataTypes/CAMELSMSInformation-defaultSMSHandling.ta.mjs";
-// export { CAMELSMSInformation_defaultSMSHandling, _enum_for_CAMELSMSInformation_defaultSMSHandling, CAMELSMSInformation_defaultSMSHandling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, CAMELSMSInformation_defaultSMSHandling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CAMELSMSInformation_defaultSMSHandling, _encode_CAMELSMSInformation_defaultSMSHandling } from "../CSChargingDataTypes/CAMELSMSInformation-defaultSMSHandling.ta.mjs";
 
 
 /**

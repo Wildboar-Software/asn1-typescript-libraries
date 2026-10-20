@@ -6,13 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SessionDirection, _decode_SessionDirection, _encode_SessionDirection, _enum_for_SessionDirection } from "../IMSChargingDataTypes/SessionDirection.ta.mjs";
-// export { SessionDirection, _enum_for_SessionDirection, SessionDirection_inbound /* IMPORTED_LONG_ENUMERATION_ITEM */, inbound /* IMPORTED_SHORT_ENUMERATION_ITEM */, SessionDirection_outbound /* IMPORTED_LONG_ENUMERATION_ITEM */, outbound /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SessionDirection, _encode_SessionDirection } from "../IMSChargingDataTypes/SessionDirection.ta.mjs";
 import { NNIType, _decode_NNIType, _encode_NNIType, _enum_for_NNIType } from "../IMSChargingDataTypes/NNIType.ta.mjs";
-// export { NNIType, _enum_for_NNIType, NNIType_non_roaming /* IMPORTED_LONG_ENUMERATION_ITEM */, non_roaming /* IMPORTED_SHORT_ENUMERATION_ITEM */, NNIType_roaming_without_loopback /* IMPORTED_LONG_ENUMERATION_ITEM */, roaming_without_loopback /* IMPORTED_SHORT_ENUMERATION_ITEM */, NNIType_roaming_with_loopback /* IMPORTED_LONG_ENUMERATION_ITEM */, roaming_with_loopback /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NNIType, _encode_NNIType } from "../IMSChargingDataTypes/NNIType.ta.mjs";
 import { RelationshipMode, _decode_RelationshipMode, _encode_RelationshipMode, _enum_for_RelationshipMode } from "../IMSChargingDataTypes/RelationshipMode.ta.mjs";
-// export { RelationshipMode, _enum_for_RelationshipMode, RelationshipMode_trusted /* IMPORTED_LONG_ENUMERATION_ITEM */, trusted /* IMPORTED_SHORT_ENUMERATION_ITEM */, RelationshipMode_non_trusted /* IMPORTED_LONG_ENUMERATION_ITEM */, non_trusted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RelationshipMode, _encode_RelationshipMode } from "../IMSChargingDataTypes/RelationshipMode.ta.mjs";
 import { ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedPartyIPAddress } from "../IMSChargingDataTypes/ServedPartyIPAddress.ta.mjs";
-// export { ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedPartyIPAddress } from "../IMSChargingDataTypes/ServedPartyIPAddress.ta.mjs";
 
 
 /**

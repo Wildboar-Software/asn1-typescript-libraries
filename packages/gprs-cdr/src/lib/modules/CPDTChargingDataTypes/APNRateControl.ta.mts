@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { APNRateControlParameters, _decode_APNRateControlParameters, _encode_APNRateControlParameters } from "../CPDTChargingDataTypes/APNRateControlParameters.ta.mjs";
-// export { APNRateControlParameters, _decode_APNRateControlParameters, _encode_APNRateControlParameters } from "../CPDTChargingDataTypes/APNRateControlParameters.ta.mjs";
 
 
 /**

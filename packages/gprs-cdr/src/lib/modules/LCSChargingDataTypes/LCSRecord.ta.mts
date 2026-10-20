@@ -5,15 +5,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSGMORecord, _decode_LCSGMORecord, _encode_LCSGMORecord } from "../LCSChargingDataTypes/LCSGMORecord.ta.mjs";
-// export { LCSGMORecord, _decode_LCSGMORecord, _encode_LCSGMORecord } from "../LCSChargingDataTypes/LCSGMORecord.ta.mjs";
 import { LCSRGMTRecord, _decode_LCSRGMTRecord, _encode_LCSRGMTRecord } from "../LCSChargingDataTypes/LCSRGMTRecord.ta.mjs";
-// export { LCSRGMTRecord, _decode_LCSRGMTRecord, _encode_LCSRGMTRecord } from "../LCSChargingDataTypes/LCSRGMTRecord.ta.mjs";
 import { LCSHGMTRecord, _decode_LCSHGMTRecord, _encode_LCSHGMTRecord } from "../LCSChargingDataTypes/LCSHGMTRecord.ta.mjs";
-// export { LCSHGMTRecord, _decode_LCSHGMTRecord, _encode_LCSHGMTRecord } from "../LCSChargingDataTypes/LCSHGMTRecord.ta.mjs";
 import { LCSVGMTRecord, _decode_LCSVGMTRecord, _encode_LCSVGMTRecord } from "../LCSChargingDataTypes/LCSVGMTRecord.ta.mjs";
-// export { LCSVGMTRecord, _decode_LCSVGMTRecord, _encode_LCSVGMTRecord } from "../LCSChargingDataTypes/LCSVGMTRecord.ta.mjs";
 import { LCSGNIRecord, _decode_LCSGNIRecord, _encode_LCSGNIRecord } from "../LCSChargingDataTypes/LCSGNIRecord.ta.mjs";
-// export { LCSGNIRecord, _decode_LCSGNIRecord, _encode_LCSGNIRecord } from "../LCSChargingDataTypes/LCSGNIRecord.ta.mjs";
 
 
 /**

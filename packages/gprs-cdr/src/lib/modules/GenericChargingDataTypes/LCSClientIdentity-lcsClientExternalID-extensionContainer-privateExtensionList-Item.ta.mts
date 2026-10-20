@@ -6,8 +6,6 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { MAP_EXTENSION } from "../GenericChargingDataTypes/MAP-EXTENSION.oca.mjs";
-// export { ExtensionSet } from "../GenericChargingDataTypes/ExtensionSet.osa.mjs";
 
 
 /**

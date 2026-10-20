@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriptionIDType, _decode_SubscriptionIDType, _encode_SubscriptionIDType, _enum_for_SubscriptionIDType } from "../GenericChargingDataTypes/SubscriptionIDType.ta.mjs";
-// export { SubscriptionIDType, _enum_for_SubscriptionIDType, SubscriptionIDType_eND_USER_E164 /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_E164 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionIDType_eND_USER_IMSI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_IMSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionIDType_eND_USER_SIP_URI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_SIP_URI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionIDType_eND_USER_NAI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_NAI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionIDType_eND_USER_PRIVATE /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_PRIVATE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriptionIDType, _encode_SubscriptionIDType } from "../GenericChargingDataTypes/SubscriptionIDType.ta.mjs";
 
 
 /**

@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSClientIdentity_lcsClientExternalID_extensionContainer, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer.ta.mjs";
-// export { LCSClientIdentity_lcsClientExternalID_extensionContainer, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer.ta.mjs";
 
 
 /**

@@ -10,7 +10,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RANSecondaryRATUsageReport_secondaryRATType, _decode_RANSecondaryRATUsageReport_secondaryRATType, _encode_RANSecondaryRATUsageReport_secondaryRATType } from "../GPRSChargingDataTypes/RANSecondaryRATUsageReport-secondaryRATType.ta.mjs";
-// export { RANSecondaryRATUsageReport_secondaryRATType, RANSecondaryRATUsageReport_secondaryRATType_nR /* IMPORTED_LONG_NAMED_INTEGER */, nR /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RANSecondaryRATUsageReport_secondaryRATType, _encode_RANSecondaryRATUsageReport_secondaryRATType } from "../GPRSChargingDataTypes/RANSecondaryRATUsageReport-secondaryRATType.ta.mjs";
 
 
 /**

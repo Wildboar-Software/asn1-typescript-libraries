@@ -11,15 +11,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MonitoringType, _decode_MonitoringType, _encode_MonitoringType, _enum_for_MonitoringType } from "../MONTEChargingDataTypes/MonitoringType.ta.mjs";
-// export { MonitoringType, _enum_for_MonitoringType, MonitoringType_lossOfConnectivity /* IMPORTED_LONG_ENUMERATION_ITEM */, lossOfConnectivity /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_ueReachability /* IMPORTED_LONG_ENUMERATION_ITEM */, ueReachability /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_locationReporting /* IMPORTED_LONG_ENUMERATION_ITEM */, locationReporting /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_changeOfIMSIIMEISVAssociation /* IMPORTED_LONG_ENUMERATION_ITEM */, changeOfIMSIIMEISVAssociation /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_roamingStatus /* IMPORTED_LONG_ENUMERATION_ITEM */, roamingStatus /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_communicationFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, communicationFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_availabilityAfterDDNFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, availabilityAfterDDNFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_numberOfUEPerLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, numberOfUEPerLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitoringType, _encode_MonitoringType } from "../MONTEChargingDataTypes/MonitoringType.ta.mjs";
 import { ReachabilityType, _decode_ReachabilityType, _encode_ReachabilityType, _enum_for_ReachabilityType } from "../MONTEChargingDataTypes/ReachabilityType.ta.mjs";
-// export { ReachabilityType, _enum_for_ReachabilityType, ReachabilityType_reachabilityforSMS /* IMPORTED_LONG_ENUMERATION_ITEM */, reachabilityforSMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReachabilityType_reachabilityforData /* IMPORTED_LONG_ENUMERATION_ITEM */, reachabilityforData /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReachabilityType, _encode_ReachabilityType } from "../MONTEChargingDataTypes/ReachabilityType.ta.mjs";
 import { EPSLocationInfo, _decode_EPSLocationInfo, _encode_EPSLocationInfo } from "../MONTEChargingDataTypes/EPSLocationInfo.ta.mjs";
-// export { EPSLocationInfo, _decode_EPSLocationInfo, _encode_EPSLocationInfo } from "../MONTEChargingDataTypes/EPSLocationInfo.ta.mjs";
 import { CommunicationFailureInfo, _decode_CommunicationFailureInfo, _encode_CommunicationFailureInfo } from "../MONTEChargingDataTypes/CommunicationFailureInfo.ta.mjs";
-// export { CommunicationFailureInfo, _decode_CommunicationFailureInfo, _encode_CommunicationFailureInfo } from "../MONTEChargingDataTypes/CommunicationFailureInfo.ta.mjs";
 import { NumberOfUEPerLocationReport, _decode_NumberOfUEPerLocationReport, _encode_NumberOfUEPerLocationReport } from "../MONTEChargingDataTypes/NumberOfUEPerLocationReport.ta.mjs";
-// export { NumberOfUEPerLocationReport, _decode_NumberOfUEPerLocationReport, _encode_NumberOfUEPerLocationReport } from "../MONTEChargingDataTypes/NumberOfUEPerLocationReport.ta.mjs";
 
 
 /**

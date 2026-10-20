@@ -5,11 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PFDDRecord, _decode_PFDDRecord, _encode_PFDDRecord } from "../ProSeChargingDataTypes/PFDDRecord.ta.mjs";
-// export { PFDDRecord, _decode_PFDDRecord, _encode_PFDDRecord } from "../ProSeChargingDataTypes/PFDDRecord.ta.mjs";
 import { PFEDRecord, _decode_PFEDRecord, _encode_PFEDRecord } from "../ProSeChargingDataTypes/PFEDRecord.ta.mjs";
-// export { PFEDRecord, _decode_PFEDRecord, _encode_PFEDRecord } from "../ProSeChargingDataTypes/PFEDRecord.ta.mjs";
 import { PFDCRecord, _decode_PFDCRecord, _encode_PFDCRecord } from "../ProSeChargingDataTypes/PFDCRecord.ta.mjs";
-// export { PFDCRecord, _decode_PFDCRecord, _encode_PFDCRecord } from "../ProSeChargingDataTypes/PFDCRecord.ta.mjs";
 
 
 /**

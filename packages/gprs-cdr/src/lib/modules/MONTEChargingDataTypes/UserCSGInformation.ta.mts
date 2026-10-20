@@ -9,7 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserCSGInformation_cSGAccessMode, _decode_UserCSGInformation_cSGAccessMode, _encode_UserCSGInformation_cSGAccessMode, _enum_for_UserCSGInformation_cSGAccessMode } from "../MONTEChargingDataTypes/UserCSGInformation-cSGAccessMode.ta.mjs";
-// export { UserCSGInformation_cSGAccessMode, _enum_for_UserCSGInformation_cSGAccessMode, UserCSGInformation_cSGAccessMode_closedMode /* IMPORTED_LONG_ENUMERATION_ITEM */, closedMode /* IMPORTED_SHORT_ENUMERATION_ITEM */, UserCSGInformation_cSGAccessMode_hybridMode /* IMPORTED_LONG_ENUMERATION_ITEM */, hybridMode /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UserCSGInformation_cSGAccessMode, _encode_UserCSGInformation_cSGAccessMode } from "../MONTEChargingDataTypes/UserCSGInformation-cSGAccessMode.ta.mjs";
 
 
 /**

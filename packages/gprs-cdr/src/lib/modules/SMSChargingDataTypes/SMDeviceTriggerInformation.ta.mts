@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../SMSChargingDataTypes/NodeAddress.ta.mjs";
-// export { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../SMSChargingDataTypes/NodeAddress.ta.mjs";
 import { SMServingNode, _decode_SMServingNode, _encode_SMServingNode } from "../SMSChargingDataTypes/SMServingNode.ta.mjs";
-// export { SMServingNode, _decode_SMServingNode, _encode_SMServingNode } from "../SMSChargingDataTypes/SMServingNode.ta.mjs";
 import { SMDTPriorityIndication, _decode_SMDTPriorityIndication, _encode_SMDTPriorityIndication, _enum_for_SMDTPriorityIndication } from "../SMSChargingDataTypes/SMDTPriorityIndication.ta.mjs";
-// export { SMDTPriorityIndication, _enum_for_SMDTPriorityIndication, SMDTPriorityIndication_nonpriority /* IMPORTED_LONG_ENUMERATION_ITEM */, nonpriority /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMDTPriorityIndication_priority /* IMPORTED_LONG_ENUMERATION_ITEM */, priority /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMDTPriorityIndication, _encode_SMDTPriorityIndication } from "../SMSChargingDataTypes/SMDTPriorityIndication.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimeQuotaType, _decode_TimeQuotaType, _encode_TimeQuotaType, _enum_for_TimeQuotaType } from "../GPRSChargingDataTypes/TimeQuotaType.ta.mjs";
-// export { TimeQuotaType, _enum_for_TimeQuotaType, TimeQuotaType_dISCRETETIMEPERIOD /* IMPORTED_LONG_ENUMERATION_ITEM */, dISCRETETIMEPERIOD /* IMPORTED_SHORT_ENUMERATION_ITEM */, TimeQuotaType_cONTINUOUSTIMEPERIOD /* IMPORTED_LONG_ENUMERATION_ITEM */, cONTINUOUSTIMEPERIOD /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimeQuotaType, _encode_TimeQuotaType } from "../GPRSChargingDataTypes/TimeQuotaType.ta.mjs";
 
 
 /**

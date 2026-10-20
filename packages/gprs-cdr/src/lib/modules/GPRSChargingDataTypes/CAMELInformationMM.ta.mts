@@ -11,9 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
-// export { DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultTransactionHandling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
 import { _decode_CAMELInformationMM_levelOfCAMELService, _encode_CAMELInformationMM_levelOfCAMELService, CAMELInformationMM_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationMM-levelOfCAMELService.ta.mjs";
-// export { CAMELInformationMM_levelOfCAMELService, CAMELInformationMM_levelOfCAMELService_basic /* IMPORTED_LONG_NAMED_BIT */, basic /* IMPORTED_SHORT_NAMED_BIT */, CAMELInformationMM_levelOfCAMELService_callDurationSupervision /* IMPORTED_LONG_NAMED_BIT */, callDurationSupervision /* IMPORTED_SHORT_NAMED_BIT */, CAMELInformationMM_levelOfCAMELService_onlineCharging /* IMPORTED_LONG_NAMED_BIT */, onlineCharging /* IMPORTED_SHORT_NAMED_BIT */, _decode_CAMELInformationMM_levelOfCAMELService, _encode_CAMELInformationMM_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationMM-levelOfCAMELService.ta.mjs";
 
 
 /**

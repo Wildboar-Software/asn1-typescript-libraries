@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresenceReportingAreaStatus, _decode_PresenceReportingAreaStatus, _encode_PresenceReportingAreaStatus, _enum_for_PresenceReportingAreaStatus } from "../GPRSChargingDataTypes/PresenceReportingAreaStatus.ta.mjs";
-// export { PresenceReportingAreaStatus, _enum_for_PresenceReportingAreaStatus, PresenceReportingAreaStatus_insideArea /* IMPORTED_LONG_ENUMERATION_ITEM */, insideArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceReportingAreaStatus_outsideArea /* IMPORTED_LONG_ENUMERATION_ITEM */, outsideArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceReportingAreaStatus_inactive /* IMPORTED_LONG_ENUMERATION_ITEM */, inactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceReportingAreaStatus_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PresenceReportingAreaStatus, _encode_PresenceReportingAreaStatus } from "../GPRSChargingDataTypes/PresenceReportingAreaStatus.ta.mjs";
 import { PresenceReportingAreaInfo_presenceReportingAreaNode, _decode_PresenceReportingAreaInfo_presenceReportingAreaNode, _encode_PresenceReportingAreaInfo_presenceReportingAreaNode } from "../GPRSChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaNode.ta.mjs";
-// export { PresenceReportingAreaInfo_presenceReportingAreaNode, PresenceReportingAreaInfo_presenceReportingAreaNode_oCS /* IMPORTED_LONG_NAMED_BIT */, oCS /* IMPORTED_SHORT_NAMED_BIT */, PresenceReportingAreaInfo_presenceReportingAreaNode_pCRF /* IMPORTED_LONG_NAMED_BIT */, pCRF /* IMPORTED_SHORT_NAMED_BIT */, _decode_PresenceReportingAreaInfo_presenceReportingAreaNode, _encode_PresenceReportingAreaInfo_presenceReportingAreaNode } from "../GPRSChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaNode.ta.mjs";
 
 
 /**

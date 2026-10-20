@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SCSMOT4Record_externalIdentifier_subscriptionIDType, _decode_SCSMOT4Record_externalIdentifier_subscriptionIDType, _encode_SCSMOT4Record_externalIdentifier_subscriptionIDType, _enum_for_SCSMOT4Record_externalIdentifier_subscriptionIDType } from "../SMSChargingDataTypes/SCSMOT4Record-externalIdentifier-subscriptionIDType.ta.mjs";
-// export { SCSMOT4Record_externalIdentifier_subscriptionIDType, _enum_for_SCSMOT4Record_externalIdentifier_subscriptionIDType, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_E164 /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_E164 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_IMSI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_IMSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_SIP_URI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_SIP_URI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_NAI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_NAI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_PRIVATE /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_PRIVATE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SCSMOT4Record_externalIdentifier_subscriptionIDType, _encode_SCSMOT4Record_externalIdentifier_subscriptionIDType } from "../SMSChargingDataTypes/SCSMOT4Record-externalIdentifier-subscriptionIDType.ta.mjs";
 
 
 /**

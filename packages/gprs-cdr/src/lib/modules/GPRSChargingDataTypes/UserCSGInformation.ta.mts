@@ -9,7 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CSGAccessMode, _encode_CSGAccessMode, _enum_for_CSGAccessMode, CSGAccessMode } from "../GPRSChargingDataTypes/CSGAccessMode.ta.mjs";
-// export { CSGAccessMode, _enum_for_CSGAccessMode, CSGAccessMode_closedMode /* IMPORTED_LONG_ENUMERATION_ITEM */, closedMode /* IMPORTED_SHORT_ENUMERATION_ITEM */, CSGAccessMode_hybridMode /* IMPORTED_LONG_ENUMERATION_ITEM */, hybridMode /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CSGAccessMode, _encode_CSGAccessMode } from "../GPRSChargingDataTypes/CSGAccessMode.ta.mjs";
 
 
 /**

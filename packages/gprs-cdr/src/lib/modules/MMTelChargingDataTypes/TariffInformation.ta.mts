@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RateElements, _decode_RateElements, _encode_RateElements } from "../MMTelChargingDataTypes/RateElements.ta.mjs";
-// export { RateElements, _decode_RateElements, _encode_RateElements } from "../MMTelChargingDataTypes/RateElements.ta.mjs";
 
 
 /**

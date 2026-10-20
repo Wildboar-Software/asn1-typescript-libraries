@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { DMI_EXTENSION } from "./DMI-EXTENSION.oca.mjs";
-// export { DMI_EXTENSION } from "./DMI-EXTENSION.oca.mjs";
 
 
 /**

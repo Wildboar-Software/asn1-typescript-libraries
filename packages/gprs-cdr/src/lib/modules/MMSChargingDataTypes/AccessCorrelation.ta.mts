@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CircuitSwitchedAccess, _decode_CircuitSwitchedAccess, _encode_CircuitSwitchedAccess } from "../MMSChargingDataTypes/CircuitSwitchedAccess.ta.mjs";
-// export { CircuitSwitchedAccess, _decode_CircuitSwitchedAccess, _encode_CircuitSwitchedAccess } from "../MMSChargingDataTypes/CircuitSwitchedAccess.ta.mjs";
 import { PacketSwitchedAccess, _decode_PacketSwitchedAccess, _encode_PacketSwitchedAccess } from "../MMSChargingDataTypes/PacketSwitchedAccess.ta.mjs";
-// export { PacketSwitchedAccess, _decode_PacketSwitchedAccess, _encode_PacketSwitchedAccess } from "../MMSChargingDataTypes/PacketSwitchedAccess.ta.mjs";
 
 
 /**

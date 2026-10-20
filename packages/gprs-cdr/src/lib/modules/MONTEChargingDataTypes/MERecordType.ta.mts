@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MECORecord, _decode_MECORecord, _encode_MECORecord } from "../MONTEChargingDataTypes/MECORecord.ta.mjs";
-// export { MECORecord, _decode_MECORecord, _encode_MECORecord } from "../MONTEChargingDataTypes/MECORecord.ta.mjs";
 import { MERERecord, _decode_MERERecord, _encode_MERERecord } from "../MONTEChargingDataTypes/MERERecord.ta.mjs";
-// export { MERERecord, _decode_MERERecord, _encode_MERERecord } from "../MONTEChargingDataTypes/MERERecord.ta.mjs";
 
 
 /**

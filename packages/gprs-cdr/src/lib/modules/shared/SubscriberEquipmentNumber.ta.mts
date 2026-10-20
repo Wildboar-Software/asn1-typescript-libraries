@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriberEquipmentNumber_subscriberEquipmentNumberType, _decode_SubscriberEquipmentNumber_subscriberEquipmentNumberType, _encode_SubscriberEquipmentNumber_subscriberEquipmentNumberType, _enum_for_SubscriberEquipmentNumber_subscriberEquipmentNumberType } from "./SubscriberEquipmentNumber-subscriberEquipmentNumberType.ta.mjs";
-// export { SubscriberEquipmentNumber_subscriberEquipmentNumberType, _enum_for_SubscriberEquipmentNumber_subscriberEquipmentNumberType, SubscriberEquipmentNumber_subscriberEquipmentNumberType_iMEISV /* IMPORTED_LONG_ENUMERATION_ITEM */, iMEISV /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberEquipmentNumber_subscriberEquipmentNumberType_mAC /* IMPORTED_LONG_ENUMERATION_ITEM */, mAC /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberEquipmentNumber_subscriberEquipmentNumberType_eUI64 /* IMPORTED_LONG_ENUMERATION_ITEM */, eUI64 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriberEquipmentNumber_subscriberEquipmentNumberType_modifiedEUI64 /* IMPORTED_LONG_ENUMERATION_ITEM */, modifiedEUI64 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriberEquipmentNumber_subscriberEquipmentNumberType, _encode_SubscriberEquipmentNumber_subscriberEquipmentNumberType } from "./SubscriberEquipmentNumber-subscriberEquipmentNumberType.ta.mjs";
 
 
 /**

@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMInterface_interfaceType, _decode_SMInterface_interfaceType, _encode_SMInterface_interfaceType, _enum_for_SMInterface_interfaceType } from "../CHFChargingDataTypes/SMInterface-interfaceType.ta.mjs";
-// export { SMInterface_interfaceType, _enum_for_SMInterface_interfaceType, SMInterface_interfaceType_unkown /* IMPORTED_LONG_ENUMERATION_ITEM */, unkown /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterface_interfaceType_mobileOriginating /* IMPORTED_LONG_ENUMERATION_ITEM */, mobileOriginating /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterface_interfaceType_mobileTerminating /* IMPORTED_LONG_ENUMERATION_ITEM */, mobileTerminating /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterface_interfaceType_applicationOriginating /* IMPORTED_LONG_ENUMERATION_ITEM */, applicationOriginating /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterface_interfaceType_applicationTerminating /* IMPORTED_LONG_ENUMERATION_ITEM */, applicationTerminating /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterface_interfaceType_deviceTrigger /* IMPORTED_LONG_ENUMERATION_ITEM */, deviceTrigger /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMInterface_interfaceType, _encode_SMInterface_interfaceType } from "../CHFChargingDataTypes/SMInterface-interfaceType.ta.mjs";
 
 
 /**

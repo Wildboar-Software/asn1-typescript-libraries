@@ -5,15 +5,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SCSMORecord, _decode_SCSMORecord, _encode_SCSMORecord } from "../SMSChargingDataTypes/SCSMORecord.ta.mjs";
-// export { SCSMORecord, _decode_SCSMORecord, _encode_SCSMORecord } from "../SMSChargingDataTypes/SCSMORecord.ta.mjs";
 import { SCSMTRecord, _decode_SCSMTRecord, _encode_SCSMTRecord } from "../SMSChargingDataTypes/SCSMTRecord.ta.mjs";
-// export { SCSMTRecord, _decode_SCSMTRecord, _encode_SCSMTRecord } from "../SMSChargingDataTypes/SCSMTRecord.ta.mjs";
 import { SCDVTT4Record, _decode_SCDVTT4Record, _encode_SCDVTT4Record } from "../SMSChargingDataTypes/SCDVTT4Record.ta.mjs";
-// export { SCDVTT4Record, _decode_SCDVTT4Record, _encode_SCDVTT4Record } from "../SMSChargingDataTypes/SCDVTT4Record.ta.mjs";
 import { ISMSMORecord, _decode_ISMSMORecord, _encode_ISMSMORecord } from "../SMSChargingDataTypes/ISMSMORecord.ta.mjs";
-// export { ISMSMORecord, _decode_ISMSMORecord, _encode_ISMSMORecord } from "../SMSChargingDataTypes/ISMSMORecord.ta.mjs";
 import { ISMSMTRecord, _decode_ISMSMTRecord, _encode_ISMSMTRecord } from "../SMSChargingDataTypes/ISMSMTRecord.ta.mjs";
-// export { ISMSMTRecord, _decode_ISMSMTRecord, _encode_ISMSMTRecord } from "../SMSChargingDataTypes/ISMSMTRecord.ta.mjs";
 
 
 /**

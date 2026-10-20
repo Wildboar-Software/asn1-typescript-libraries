@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMELocationInformation, _decode_MMELocationInformation, _encode_MMELocationInformation } from "../MONTEChargingDataTypes/MMELocationInformation.ta.mjs";
-// export { MMELocationInformation, _decode_MMELocationInformation, _encode_MMELocationInformation } from "../MONTEChargingDataTypes/MMELocationInformation.ta.mjs";
 import { SGSNLocationInformation, _decode_SGSNLocationInformation, _encode_SGSNLocationInformation } from "../MONTEChargingDataTypes/SGSNLocationInformation.ta.mjs";
-// export { SGSNLocationInformation, _decode_SGSNLocationInformation, _encode_SGSNLocationInformation } from "../MONTEChargingDataTypes/SGSNLocationInformation.ta.mjs";
 
 
 /**

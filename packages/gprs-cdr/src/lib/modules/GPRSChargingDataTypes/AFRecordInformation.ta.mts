@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Flows, _decode_Flows, _encode_Flows } from "../GPRSChargingDataTypes/Flows.ta.mjs";
-// export { Flows, _decode_Flows, _encode_Flows } from "../GPRSChargingDataTypes/Flows.ta.mjs";
 
 
 /**

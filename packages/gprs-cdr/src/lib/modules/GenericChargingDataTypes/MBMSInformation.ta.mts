@@ -9,15 +9,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MBMSServiceType, _decode_MBMSServiceType, _encode_MBMSServiceType, _enum_for_MBMSServiceType } from "../GenericChargingDataTypes/MBMSServiceType.ta.mjs";
-// export { MBMSServiceType, _enum_for_MBMSServiceType, MBMSServiceType_mULTICAST /* IMPORTED_LONG_ENUMERATION_ITEM */, mULTICAST /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSServiceType_bROADCAST /* IMPORTED_LONG_ENUMERATION_ITEM */, bROADCAST /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSServiceType, _encode_MBMSServiceType } from "../GenericChargingDataTypes/MBMSServiceType.ta.mjs";
 import { MBMSUserServiceType, _decode_MBMSUserServiceType, _encode_MBMSUserServiceType, _enum_for_MBMSUserServiceType } from "../GenericChargingDataTypes/MBMSUserServiceType.ta.mjs";
-// export { MBMSUserServiceType, _enum_for_MBMSUserServiceType, MBMSUserServiceType_dOWNLOAD /* IMPORTED_LONG_ENUMERATION_ITEM */, dOWNLOAD /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSUserServiceType_sTREAMING /* IMPORTED_LONG_ENUMERATION_ITEM */, sTREAMING /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSUserServiceType, _encode_MBMSUserServiceType } from "../GenericChargingDataTypes/MBMSUserServiceType.ta.mjs";
 import { MBMS2G3GIndicator, _decode_MBMS2G3GIndicator, _encode_MBMS2G3GIndicator, _enum_for_MBMS2G3GIndicator } from "../GenericChargingDataTypes/MBMS2G3GIndicator.ta.mjs";
-// export { MBMS2G3GIndicator, _enum_for_MBMS2G3GIndicator, MBMS2G3GIndicator_twoG /* IMPORTED_LONG_ENUMERATION_ITEM */, twoG /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMS2G3GIndicator_threeG /* IMPORTED_LONG_ENUMERATION_ITEM */, threeG /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMS2G3GIndicator_twoG_AND_threeG /* IMPORTED_LONG_ENUMERATION_ITEM */, twoG_AND_threeG /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMS2G3GIndicator, _encode_MBMS2G3GIndicator } from "../GenericChargingDataTypes/MBMS2G3GIndicator.ta.mjs";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../GenericChargingDataTypes/IPAddress.ta.mjs";
-// export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../GenericChargingDataTypes/IPAddress.ta.mjs";
 import { CNIPMulticastDistribution, _decode_CNIPMulticastDistribution, _encode_CNIPMulticastDistribution, _enum_for_CNIPMulticastDistribution } from "../GenericChargingDataTypes/CNIPMulticastDistribution.ta.mjs";
-// export { CNIPMulticastDistribution, _enum_for_CNIPMulticastDistribution, CNIPMulticastDistribution_nO_IP_MULTICAST /* IMPORTED_LONG_ENUMERATION_ITEM */, nO_IP_MULTICAST /* IMPORTED_SHORT_ENUMERATION_ITEM */, CNIPMulticastDistribution_iP_MULTICAST /* IMPORTED_LONG_ENUMERATION_ITEM */, iP_MULTICAST /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CNIPMulticastDistribution, _encode_CNIPMulticastDistribution } from "../GenericChargingDataTypes/CNIPMulticastDistribution.ta.mjs";
 
 
 /**

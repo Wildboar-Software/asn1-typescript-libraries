@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RadioChanRequested, _decode_RadioChanRequested, _encode_RadioChanRequested } from "../CSChargingDataTypes/RadioChanRequested.ta.mjs";
-// export { RadioChanRequested, _enum_for_RadioChanRequested, RadioChanRequested_halfRateChannel /* IMPORTED_LONG_ENUMERATION_ITEM */, halfRateChannel /* IMPORTED_SHORT_ENUMERATION_ITEM */, RadioChanRequested_fullRateChannel /* IMPORTED_LONG_ENUMERATION_ITEM */, fullRateChannel /* IMPORTED_SHORT_ENUMERATION_ITEM */, RadioChanRequested_dualHalfRatePreferred /* IMPORTED_LONG_ENUMERATION_ITEM */, dualHalfRatePreferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, RadioChanRequested_dualFullRatePreferred /* IMPORTED_LONG_ENUMERATION_ITEM */, dualFullRatePreferred /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RadioChanRequested, _encode_RadioChanRequested } from "../CSChargingDataTypes/RadioChanRequested.ta.mjs";
 
 
 /**

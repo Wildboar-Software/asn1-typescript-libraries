@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPBinaryAddress, _decode_IPBinaryAddress, _encode_IPBinaryAddress } from "./IPBinaryAddress.ta.mjs";
-// export { IPBinaryAddress, _decode_IPBinaryAddress, _encode_IPBinaryAddress } from "./IPBinaryAddress.ta.mjs";
 import { IPTextRepresentedAddress, _decode_IPTextRepresentedAddress, _encode_IPTextRepresentedAddress } from "./IPTextRepresentedAddress.ta.mjs";
-// export { IPTextRepresentedAddress, _decode_IPTextRepresentedAddress, _encode_IPTextRepresentedAddress } from "./IPTextRepresentedAddress.ta.mjs";
 
 
 /**
