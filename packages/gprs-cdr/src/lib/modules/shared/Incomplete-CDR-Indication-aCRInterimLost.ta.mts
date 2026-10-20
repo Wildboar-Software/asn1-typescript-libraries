@@ -10,7 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Incomplete-CDR-Indication-aCRInterimLost ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Incomplete-CDR-Indication-aCRInterimLost ::= ENUMERATED {
+ *    no          ( 0 ),
+ *    yes         ( 1 ),
+ *    unknown     ( 2 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -29,7 +33,11 @@ enum _enum_for_Incomplete_CDR_Indication_aCRInterimLost {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Incomplete-CDR-Indication-aCRInterimLost ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Incomplete-CDR-Indication-aCRInterimLost ::= ENUMERATED {
+ *    no          ( 0 ),
+ *    yes         ( 1 ),
+ *    unknown     ( 2 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -44,7 +52,11 @@ type Incomplete_CDR_Indication_aCRInterimLost = _enum_for_Incomplete_CDR_Indicat
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Incomplete-CDR-Indication-aCRInterimLost ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Incomplete-CDR-Indication-aCRInterimLost ::= ENUMERATED {
+ *    no          ( 0 ),
+ *    yes         ( 1 ),
+ *    unknown     ( 2 )
+ * }
  * ```
  * 
  * @enum {number}

@@ -13,7 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * APNRateControlParameters-rateControlTimeUnit ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * APNRateControlParameters-rateControlTimeUnit ::= INTEGER {
+ *    unrestricted    ( 0 ),
+ *    minute          ( 1 ),
+ *    hour            ( 2 ),
+ *    day             ( 3 ),
+ *    week            ( 4 )
+ * }
  * ```
  */
 export

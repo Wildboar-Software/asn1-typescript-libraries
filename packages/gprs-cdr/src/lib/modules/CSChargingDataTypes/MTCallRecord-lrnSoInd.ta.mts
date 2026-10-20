@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MTCallRecord-lrnSoInd ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * MTCallRecord-lrnSoInd ::= INTEGER {
+ *    lRN-NP-Database        ( 1 ),
+ *    switchingSystemData    ( 2 ),
+ *    incomingsignaling      ( 3 ),
+ *    unknown                ( 9 )
+ * }
  * ```
  */
 export

@@ -23,7 +23,15 @@ enum _enum_for_LocationType_locationEstimateType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LocationType-locationEstimateType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * LocationType-locationEstimateType ::= ENUMERATED {
+ *    currentLocation                 ( 0 ),
+ *    currentOrLastKnownLocation      ( 1 ),
+ *    initialLocation                 ( 2 ),
+ *    ... ,
+ *    activateDeferredLocation        ( 3 ),
+ *    cancelDeferredLocation          ( 4 ),
+ *    notificationVerificationOnly    ( 5 )
+ * }
  * ```
  * 
  * @enum {number}

@@ -10,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-role-of-Node ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-role-of-Node ::= ENUMERATED {
+ *    originating    ( 0 ),
+ *    terminating    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +31,10 @@ enum _enum_for_MMTelRecord_role_of_Node {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-role-of-Node ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-role-of-Node ::= ENUMERATED {
+ *    originating    ( 0 ),
+ *    terminating    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +49,10 @@ type MMTelRecord_role_of_Node = _enum_for_MMTelRecord_role_of_Node;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-role-of-Node ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-role-of-Node ::= ENUMERATED {
+ *    originating    ( 0 ),
+ *    terminating    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}

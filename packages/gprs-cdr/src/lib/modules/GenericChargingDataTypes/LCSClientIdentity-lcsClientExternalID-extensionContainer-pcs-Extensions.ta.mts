@@ -13,7 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LCSClientIdentity-lcsClientExternalID-extensionContainer-pcs-Extensions ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * LCSClientIdentity-lcsClientExternalID-extensionContainer-pcs-Extensions ::= SEQUENCE {
+ *    ...
+ * }
  * ```
  * 
  * @class

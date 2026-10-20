@@ -13,7 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NIDDsubmission-serviceChangeCondition ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * NIDDsubmission-serviceChangeCondition ::= BIT STRING {
+ *    nIDDsubmissionResponseReceipt  (0 ),
+ *    nIDDsubmissionResponseSending  (1 ),
+ *    nIDDdeliveryToUE  (2 ),
+ *    nIDDdeliveryFromUEerror  (3 ),
+ *    nIDDsubmissionTimeout  (4 )
+ * }
  * ```
  */
 export

@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PresenceReportingAreaInfo-presenceReportingAreaNode ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * PresenceReportingAreaInfo-presenceReportingAreaNode ::= BIT STRING {
+ *    oCS  (0 ),
+ *    pCRF  (1 )
+ * }
  * ```
  */
 export

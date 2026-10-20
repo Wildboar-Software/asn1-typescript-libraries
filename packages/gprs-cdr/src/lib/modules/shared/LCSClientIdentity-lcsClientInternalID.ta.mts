@@ -22,7 +22,14 @@ enum _enum_for_LCSClientIdentity_lcsClientInternalID {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LCSClientIdentity-lcsClientInternalID ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * LCSClientIdentity-lcsClientInternalID ::= ENUMERATED {
+ *    broadcastService             ( 0 ),
+ *    o-andM-HPLMN                 ( 1 ),
+ *    o-andM-VPLMN                 ( 2 ),
+ *    anonymousLocation            ( 3 ),
+ *    targetMSsubscribedService    ( 4 ),
+ *    ...
+ * }
  * ```
  * 
  * @enum {number}

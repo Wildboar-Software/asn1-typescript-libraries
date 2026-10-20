@@ -10,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-cNIPMulticastDistribution ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-cNIPMulticastDistribution ::= ENUMERATED {
+ *    nO-IP-MULTICAST    ( 0 ),
+ *    iP-MULTICAST       ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +31,10 @@ enum _enum_for_MBMSInformation_cNIPMulticastDistribution {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-cNIPMulticastDistribution ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-cNIPMulticastDistribution ::= ENUMERATED {
+ *    nO-IP-MULTICAST    ( 0 ),
+ *    iP-MULTICAST       ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +49,10 @@ type MBMSInformation_cNIPMulticastDistribution = _enum_for_MBMSInformation_cNIPM
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-cNIPMulticastDistribution ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-cNIPMulticastDistribution ::= ENUMERATED {
+ *    nO-IP-MULTICAST    ( 0 ),
+ *    iP-MULTICAST       ( 1 )
+ * }
  * ```
  * 
  * @enum {number}

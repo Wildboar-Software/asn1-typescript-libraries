@@ -17,7 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LCSClientIdentity-lcsClientExternalID-extensionContainer-privateExtensionList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * LCSClientIdentity-lcsClientExternalID-extensionContainer-privateExtensionList-Item ::= SEQUENCE {
+ *    extId      MAP-EXTENSION.&extensionId ({ExtensionSet}) ,
+ *    extType    MAP-EXTENSION.&ExtensionType ({ExtensionSet}{@extId})  OPTIONAL
+ * }
  * ```
  * 
  * @class

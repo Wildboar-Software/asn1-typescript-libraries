@@ -13,7 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CommonEquipRecord-equipmentType ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CommonEquipRecord-equipmentType ::= INTEGER {
+ *    conferenceBridge    ( 0 )
+ * }
  * ```
  */
 export

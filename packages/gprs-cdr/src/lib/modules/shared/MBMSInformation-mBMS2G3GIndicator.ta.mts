@@ -10,7 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-mBMS2G3GIndicator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-mBMS2G3GIndicator ::= ENUMERATED {
+ *    twoG               ( 0 ),
+ *    threeG             ( 1 ),
+ *    twoG-AND-threeG    ( 2 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -29,7 +33,11 @@ enum _enum_for_MBMSInformation_mBMS2G3GIndicator {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-mBMS2G3GIndicator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-mBMS2G3GIndicator ::= ENUMERATED {
+ *    twoG               ( 0 ),
+ *    threeG             ( 1 ),
+ *    twoG-AND-threeG    ( 2 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -44,7 +52,11 @@ type MBMSInformation_mBMS2G3GIndicator = _enum_for_MBMSInformation_mBMS2G3GIndic
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-mBMS2G3GIndicator ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-mBMS2G3GIndicator ::= ENUMERATED {
+ *    twoG               ( 0 ),
+ *    threeG             ( 1 ),
+ *    twoG-AND-threeG    ( 2 )
+ * }
  * ```
  * 
  * @enum {number}

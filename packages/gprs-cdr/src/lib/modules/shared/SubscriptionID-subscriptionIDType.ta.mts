@@ -10,7 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubscriptionID-subscriptionIDType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SubscriptionID-subscriptionIDType ::= ENUMERATED {
+ *    eND-USER-E164       ( 0 ),
+ *    eND-USER-IMSI       ( 1 ),
+ *    eND-USER-SIP-URI    ( 2 ),
+ *    eND-USER-NAI        ( 3 ),
+ *    eND-USER-PRIVATE    ( 4 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -31,7 +37,13 @@ enum _enum_for_SubscriptionID_subscriptionIDType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubscriptionID-subscriptionIDType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SubscriptionID-subscriptionIDType ::= ENUMERATED {
+ *    eND-USER-E164       ( 0 ),
+ *    eND-USER-IMSI       ( 1 ),
+ *    eND-USER-SIP-URI    ( 2 ),
+ *    eND-USER-NAI        ( 3 ),
+ *    eND-USER-PRIVATE    ( 4 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -46,7 +58,13 @@ type SubscriptionID_subscriptionIDType = _enum_for_SubscriptionID_subscriptionID
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubscriptionID-subscriptionIDType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SubscriptionID-subscriptionIDType ::= ENUMERATED {
+ *    eND-USER-E164       ( 0 ),
+ *    eND-USER-IMSI       ( 1 ),
+ *    eND-USER-SIP-URI    ( 2 ),
+ *    eND-USER-NAI        ( 3 ),
+ *    eND-USER-PRIVATE    ( 4 )
+ * }
  * ```
  * 
  * @enum {number}

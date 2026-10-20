@@ -10,7 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubscriberEquipmentNumber-subscriberEquipmentNumberType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SubscriberEquipmentNumber-subscriberEquipmentNumberType ::= ENUMERATED {
+ *    iMEISV           ( 0 ),
+ *    mAC              ( 1 ),
+ *    eUI64            ( 2 ),
+ *    modifiedEUI64    ( 3 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -30,7 +35,12 @@ enum _enum_for_SubscriberEquipmentNumber_subscriberEquipmentNumberType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubscriberEquipmentNumber-subscriberEquipmentNumberType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SubscriberEquipmentNumber-subscriberEquipmentNumberType ::= ENUMERATED {
+ *    iMEISV           ( 0 ),
+ *    mAC              ( 1 ),
+ *    eUI64            ( 2 ),
+ *    modifiedEUI64    ( 3 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -45,7 +55,12 @@ type SubscriberEquipmentNumber_subscriberEquipmentNumberType = _enum_for_Subscri
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubscriberEquipmentNumber-subscriberEquipmentNumberType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SubscriberEquipmentNumber-subscriberEquipmentNumberType ::= ENUMERATED {
+ *    iMEISV           ( 0 ),
+ *    mAC              ( 1 ),
+ *    eUI64            ( 2 ),
+ *    modifiedEUI64    ( 3 )
+ * }
  * ```
  * 
  * @enum {number}

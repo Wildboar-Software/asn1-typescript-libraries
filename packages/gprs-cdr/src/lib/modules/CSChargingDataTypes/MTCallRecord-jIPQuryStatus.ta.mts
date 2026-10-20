@@ -13,7 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MTCallRecord-jIPQuryStatus ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * MTCallRecord-jIPQuryStatus ::= INTEGER {
+ *    successfulQuery         ( 1 ),
+ *    noQueryResponseMsg      ( 2 ),
+ *    queryProtocolErr        ( 4 ),
+ *    queryResponseDataErr    ( 5 ),
+ *    queryRejected           ( 6 ),
+ *    queryNotPerformed       ( 9 ),
+ *    queryUnsuccessful       ( 99 )
+ * }
  * ```
  */
 export

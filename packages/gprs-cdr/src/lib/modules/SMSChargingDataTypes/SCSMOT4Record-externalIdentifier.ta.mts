@@ -16,7 +16,15 @@ import { SCSMOT4Record_externalIdentifier_subscriptionIDType, _decode_SCSMOT4Rec
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SCSMOT4Record-externalIdentifier ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SCSMOT4Record-externalIdentifier ::= SET {
+ *    subscriptionIDType   [0] IMPLICIT ENUMERATED {
+ *       eND-USER-E164       ( 0 ),
+ *       eND-USER-IMSI       ( 1 ),
+ *       eND-USER-SIP-URI    ( 2 ),
+ *       eND-USER-NAI        ( 3 ),
+ *       eND-USER-PRIVATE    ( 4 ) },
+ *    subscriptionIDData   [1] IMPLICIT UTF8String
+ * }
  * ```
  * 
  * @class

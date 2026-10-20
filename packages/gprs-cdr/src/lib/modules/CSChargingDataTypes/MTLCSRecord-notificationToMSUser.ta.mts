@@ -21,7 +21,13 @@ enum _enum_for_MTLCSRecord_notificationToMSUser {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MTLCSRecord-notificationToMSUser ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MTLCSRecord-notificationToMSUser ::= ENUMERATED {
+ *    notifyLocationAllowed                             ( 0 ),
+ *    notifyAndVerify-LocationAllowedIfNoResponse       ( 1 ),
+ *    notifyAndVerify-LocationNotAllowedIfNoResponse    ( 2 ),
+ *    ... ,
+ *    locationNotAllowed                                ( 3 )
+ * }
  * ```
  * 
  * @enum {number}

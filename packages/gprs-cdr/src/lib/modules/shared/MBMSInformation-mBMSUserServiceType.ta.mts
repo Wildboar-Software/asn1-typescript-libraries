@@ -10,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-mBMSUserServiceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-mBMSUserServiceType ::= ENUMERATED {
+ *    dOWNLOAD     ( 0 ),
+ *    sTREAMING    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +31,10 @@ enum _enum_for_MBMSInformation_mBMSUserServiceType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-mBMSUserServiceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-mBMSUserServiceType ::= ENUMERATED {
+ *    dOWNLOAD     ( 0 ),
+ *    sTREAMING    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +49,10 @@ type MBMSInformation_mBMSUserServiceType = _enum_for_MBMSInformation_mBMSUserSer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MBMSInformation-mBMSUserServiceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MBMSInformation-mBMSUserServiceType ::= ENUMERATED {
+ *    dOWNLOAD     ( 0 ),
+ *    sTREAMING    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}

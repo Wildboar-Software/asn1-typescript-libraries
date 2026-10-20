@@ -13,7 +13,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CONTENTBMSCRecord-causeForRecClosing ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CONTENTBMSCRecord-causeForRecClosing ::= INTEGER {
+ *    normalRelease                 ( 0 ),
+ *    abnormalRelease               ( 4 ),
+ *    volumeLimit                   ( 16 ),
+ *    timeLimit                     ( 17 ),
+ *    maxChangeCond                 ( 19 ),
+ *    managementIntervention        ( 20 ),
+ *    listofDownstreamNodeChange    ( 59 )
+ * }
  * ```
  */
 export

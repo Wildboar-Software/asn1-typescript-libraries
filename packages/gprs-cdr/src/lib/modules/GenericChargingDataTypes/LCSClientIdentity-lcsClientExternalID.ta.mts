@@ -17,7 +17,18 @@ import { LCSClientIdentity_lcsClientExternalID_extensionContainer, _decode_LCSCl
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LCSClientIdentity-lcsClientExternalID ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * LCSClientIdentity-lcsClientExternalID ::= SEQUENCE {
+ *    externalAddress      [0] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+ *    extensionContainer   [1] IMPLICIT SEQUENCE {
+ *       privateExtensionList   [0] IMPLICIT SEQUENCE  ( SIZE( 1 .. 10 ) ) OF
+ *          SEQUENCE {
+ *             extId      MAP-EXTENSION.&extensionId ({ExtensionSet}) ,
+ *             extType    MAP-EXTENSION.&ExtensionType ({ExtensionSet}{@extId})  OPTIONAL} OPTIONAL,
+ *       pcs-Extensions         [1] IMPLICIT SEQUENCE {
+ *          ... } OPTIONAL,
+ *       ... } OPTIONAL,
+ *    ...
+ * }
  * ```
  * 
  * @class

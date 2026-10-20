@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PDUSessionChargingInformation-sSCMode ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * PDUSessionChargingInformation-sSCMode ::= INTEGER {
+ *    sSCMode1    ( 1 ),
+ *    sSCMode2    ( 2 ),
+ *    sSCMode3    ( 3 )
+ * }
  * ```
  */
 export

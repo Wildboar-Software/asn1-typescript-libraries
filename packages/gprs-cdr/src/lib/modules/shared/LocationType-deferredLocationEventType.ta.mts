@@ -13,7 +13,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LocationType-deferredLocationEventType ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * LocationType-deferredLocationEventType ::= BIT STRING {
+ *    msAvailable  (0 ),
+ *    enteringIntoArea  (1 ),
+ *    leavingFromArea  (2 ),
+ *    beingInsideArea  (3 ),
+ *    periodicLDR  (4 )
+ * } ( SIZE( 1 .. 16 ) )
  * ```
  */
 export
