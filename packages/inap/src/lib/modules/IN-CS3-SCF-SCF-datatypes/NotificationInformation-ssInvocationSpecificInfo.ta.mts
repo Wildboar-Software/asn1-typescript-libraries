@@ -128,8 +128,7 @@ function _decode_NotificationInformation_ssInvocationSpecificInfo (el: _Element)
         throw new _ConstructionError("NotificationInformation-ssInvocationSpecificInfo contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "invokedService";
-    let invokedService!: InvokableService;
-    invokedService = $._decode_implicit<InvokableService>(() => _decode_InvokableService)(sequence[0]);
+    const invokedService: InvokableService = $._decode_implicit<InvokableService>(() => _decode_InvokableService)(sequence[0]);
     return new NotificationInformation_ssInvocationSpecificInfo(
         invokedService,
         sequence.slice(1),

@@ -158,14 +158,10 @@ function _decode_ACIItem (el: _Element): ACIItem {
     sequence[1].name = "precedence";
     sequence[2].name = "authenticationLevel";
     sequence[3].name = "itemOrUserFirst";
-    let identificationTag!: DirectoryString;
-    let precedence!: Precedence;
-    let authenticationLevel!: AuthenticationLevel;
-    let itemOrUserFirst!: ACIItem_itemOrUserFirst;
-    identificationTag = _decode_DirectoryString(sequence[0]);
-    precedence = _decode_Precedence(sequence[1]);
-    authenticationLevel = _decode_AuthenticationLevel(sequence[2]);
-    itemOrUserFirst = _decode_ACIItem_itemOrUserFirst(sequence[3]);
+    const identificationTag: DirectoryString = _decode_DirectoryString(sequence[0]);
+    const precedence: Precedence = _decode_Precedence(sequence[1]);
+    const authenticationLevel: AuthenticationLevel = _decode_AuthenticationLevel(sequence[2]);
+    const itemOrUserFirst: ACIItem_itemOrUserFirst = _decode_ACIItem_itemOrUserFirst(sequence[3]);
     return new ACIItem(
         identificationTag,
         precedence,

@@ -140,10 +140,8 @@ function _decode_RequestedInformation (el: _Element): RequestedInformation {
     }
     sequence[0].name = "requestedInformationType";
     sequence[1].name = "requestedInformationValue";
-    let requestedInformationType!: RequestedInformationType;
-    let requestedInformationValue!: RequestedInformationValue;
-    requestedInformationType = $._decode_implicit<RequestedInformationType>(() => _decode_RequestedInformationType)(sequence[0]);
-    requestedInformationValue = $._decode_explicit<RequestedInformationValue>(() => _decode_RequestedInformationValue)(sequence[1]);
+    const requestedInformationType: RequestedInformationType = $._decode_implicit<RequestedInformationType>(() => _decode_RequestedInformationType)(sequence[0]);
+    const requestedInformationValue: RequestedInformationValue = $._decode_explicit<RequestedInformationValue>(() => _decode_RequestedInformationValue)(sequence[1]);
     return new RequestedInformation(
         requestedInformationType,
         requestedInformationValue,

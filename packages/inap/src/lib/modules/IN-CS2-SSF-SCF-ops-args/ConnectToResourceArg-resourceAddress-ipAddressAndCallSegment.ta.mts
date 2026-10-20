@@ -126,10 +126,8 @@ function _decode_ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment (e
     }
     sequence[0].name = "ipRoutingAddress";
     sequence[1].name = "callSegmentID";
-    let ipRoutingAddress!: IPRoutingAddress;
-    let callSegmentID!: CallSegmentID;
-    ipRoutingAddress = $._decode_implicit<IPRoutingAddress>(() => _decode_IPRoutingAddress)(sequence[0]);
-    callSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(sequence[1]);
+    const ipRoutingAddress: IPRoutingAddress = $._decode_implicit<IPRoutingAddress>(() => _decode_IPRoutingAddress)(sequence[0]);
+    const callSegmentID: CallSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(sequence[1]);
     return new ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment(
         ipRoutingAddress,
         callSegmentID,

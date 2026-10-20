@@ -124,10 +124,8 @@ function _decode_LockSession (el: _Element): LockSession {
     }
     sequence[0].name = "entryName";
     sequence[1].name = "atribute";
-    let entryName!: DistinguishedName;
-    let atribute!: OBJECT_IDENTIFIER;
-    entryName = $._decode_explicit<DistinguishedName>(() => _decode_DistinguishedName)(sequence[0]);
-    atribute = $._decode_explicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(sequence[1]);
+    const entryName: DistinguishedName = $._decode_explicit<DistinguishedName>(() => _decode_DistinguishedName)(sequence[0]);
+    const atribute: OBJECT_IDENTIFIER = $._decode_explicit<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier)(sequence[1]);
     return new LockSession(
         entryName,
         atribute,

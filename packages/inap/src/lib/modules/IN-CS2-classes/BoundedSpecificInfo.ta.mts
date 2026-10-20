@@ -113,8 +113,7 @@ function _decode_BoundedSpecificInfo (el: _Element): BoundedSpecificInfo {
         throw new _ConstructionError("BoundedSpecificInfo contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "digits";
-    let digits!: OCTET_STRING;
-    digits = $._decodeOctetString(sequence[0]);
+    const digits: OCTET_STRING = $._decodeOctetString(sequence[0]);
     return new BoundedSpecificInfo(
         digits,
 

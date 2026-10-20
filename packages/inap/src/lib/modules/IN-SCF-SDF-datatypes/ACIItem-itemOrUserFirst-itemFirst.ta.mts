@@ -126,10 +126,8 @@ function _decode_ACIItem_itemOrUserFirst_itemFirst (el: _Element): ACIItem_itemO
     }
     sequence[0].name = "protectedItems";
     sequence[1].name = "itemPermissions";
-    let protectedItems!: ProtectedItems;
-    let itemPermissions!: ItemPermission[];
-    protectedItems = _decode_ProtectedItems(sequence[0]);
-    itemPermissions = $._decodeSetOf<ItemPermission>(() => _decode_ItemPermission)(sequence[1]);
+    const protectedItems: ProtectedItems = _decode_ProtectedItems(sequence[0]);
+    const itemPermissions: ItemPermission[] = $._decodeSetOf<ItemPermission>(() => _decode_ItemPermission)(sequence[1]);
     return new ACIItem_itemOrUserFirst_itemFirst(
         protectedItems,
         itemPermissions,

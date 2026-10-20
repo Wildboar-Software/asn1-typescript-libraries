@@ -133,10 +133,8 @@ function _decode_TriggerData (el: _Element): TriggerData {
     }
     sequence[0].name = "triggerId";
     sequence[1].name = "triggerPar";
-    let triggerId!: INTEGER;
-    let triggerPar!: _Element;
-    triggerId = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    triggerPar = $._decode_implicit<_Element>(() => $._decodeAny)(sequence[1]);
+    const triggerId: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const triggerPar: _Element = $._decode_implicit<_Element>(() => $._decodeAny)(sequence[1]);
     return new TriggerData(
         triggerId,
         triggerPar,

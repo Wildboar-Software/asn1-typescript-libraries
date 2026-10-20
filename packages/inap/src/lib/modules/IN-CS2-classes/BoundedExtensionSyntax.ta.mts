@@ -113,8 +113,7 @@ function _decode_BoundedExtensionSyntax (el: _Element): BoundedExtensionSyntax {
         throw new _ConstructionError("BoundedExtensionSyntax contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "digits";
-    let digits!: OCTET_STRING;
-    digits = $._decodeOctetString(sequence[0]);
+    const digits: OCTET_STRING = $._decodeOctetString(sequence[0]);
     return new BoundedExtensionSyntax(
         digits,
 

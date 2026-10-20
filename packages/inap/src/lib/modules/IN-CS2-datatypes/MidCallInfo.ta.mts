@@ -112,8 +112,7 @@ function _decode_MidCallInfo (el: _Element): MidCallInfo {
         throw new _ConstructionError("MidCallInfo contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "iNServiceControlCode";
-    let iNServiceControlCode!: Digits;
-    iNServiceControlCode = $._decode_implicit<Digits>(() => _decode_Digits)(sequence[0]);
+    const iNServiceControlCode: Digits = $._decode_implicit<Digits>(() => _decode_Digits)(sequence[0]);
     return new MidCallInfo(
         iNServiceControlCode,
 

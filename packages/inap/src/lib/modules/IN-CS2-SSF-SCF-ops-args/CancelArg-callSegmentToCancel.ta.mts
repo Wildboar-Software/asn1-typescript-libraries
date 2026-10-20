@@ -126,10 +126,8 @@ function _decode_CancelArg_callSegmentToCancel (el: _Element): CancelArg_callSeg
     }
     sequence[0].name = "invokeID";
     sequence[1].name = "callSegmentID";
-    let invokeID!: InvokeID;
-    let callSegmentID!: CallSegmentID;
-    invokeID = $._decode_implicit<InvokeID>(() => _decode_InvokeID)(sequence[0]);
-    callSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(sequence[1]);
+    const invokeID: InvokeID = $._decode_implicit<InvokeID>(() => _decode_InvokeID)(sequence[0]);
+    const callSegmentID: CallSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(sequence[1]);
     return new CancelArg_callSegmentToCancel(
         invokeID,
         callSegmentID,

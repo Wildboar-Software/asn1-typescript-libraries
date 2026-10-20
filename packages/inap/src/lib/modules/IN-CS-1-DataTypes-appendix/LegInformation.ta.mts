@@ -130,10 +130,8 @@ function _decode_LegInformation (el: _Element): LegInformation {
     }
     sequence[0].name = "legID";
     sequence[1].name = "legStatus";
-    let legID!: LegID;
-    let legStatus!: LegStatus;
-    legID = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[0]);
-    legStatus = $._decode_implicit<LegStatus>(() => _decode_LegStatus)(sequence[1]);
+    const legID: LegID = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[0]);
+    const legStatus: LegStatus = $._decode_implicit<LegStatus>(() => _decode_LegStatus)(sequence[1]);
     return new LegInformation(
         legID,
         legStatus,

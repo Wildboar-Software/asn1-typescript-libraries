@@ -149,12 +149,9 @@ function _decode_SendChargingInformationArg (el: _Element): SendChargingInformat
     sequence[0].name = "sCIBillingChargingCharacteristics";
     sequence[1].name = "partyToCharge";
     sequence[2].name = "extensions";
-    let sCIBillingChargingCharacteristics!: SCIBillingChargingCharacteristics;
-    let partyToCharge!: LegID;
-    let extensions!: ExtensionField[];
-    sCIBillingChargingCharacteristics = $._decode_implicit<SCIBillingChargingCharacteristics>(() => _decode_SCIBillingChargingCharacteristics)(sequence[0]);
-    partyToCharge = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[1]);
-    extensions = $._decode_implicit<ExtensionField[]>(() => $._decodeSequenceOf<ExtensionField>(() => _decode_ExtensionField))(sequence[2]);
+    const sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics = $._decode_implicit<SCIBillingChargingCharacteristics>(() => _decode_SCIBillingChargingCharacteristics)(sequence[0]);
+    const partyToCharge: LegID = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[1]);
+    const extensions: ExtensionField[] = $._decode_implicit<ExtensionField[]>(() => $._decodeSequenceOf<ExtensionField>(() => _decode_ExtensionField))(sequence[2]);
     return new SendChargingInformationArg(
         sCIBillingChargingCharacteristics,
         partyToCharge,

@@ -126,10 +126,8 @@ function _decode_provideTokens_SpecificInput (el: _Element): provideTokens_Speci
     }
     sequence[0].name = "numOfRequestedTokens";
     sequence[1].name = "oidOfAttribute";
-    let numOfRequestedTokens!: INTEGER;
-    let oidOfAttribute!: OBJECT_IDENTIFIER;
-    numOfRequestedTokens = $._decodeInteger(sequence[0]);
-    oidOfAttribute = $._decodeObjectIdentifier(sequence[1]);
+    const numOfRequestedTokens: INTEGER = $._decodeInteger(sequence[0]);
+    const oidOfAttribute: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[1]);
     return new provideTokens_SpecificInput(
         numOfRequestedTokens,
         oidOfAttribute,

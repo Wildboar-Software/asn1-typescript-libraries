@@ -138,12 +138,9 @@ function _decode_CallRecord (el: _Element): CallRecord {
     sequence[0].name = "callDuration";
     sequence[1].name = "callingPartyNumber";
     sequence[2].name = "calledPartyNumber";
-    let callDuration!: Duration;
-    let callingPartyNumber!: CallingPartyNumber;
-    let calledPartyNumber!: CalledPartyNumber;
-    callDuration = $._decode_implicit<Duration>(() => _decode_Duration)(sequence[0]);
-    callingPartyNumber = $._decode_implicit<CallingPartyNumber>(() => _decode_CallingPartyNumber)(sequence[1]);
-    calledPartyNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(sequence[2]);
+    const callDuration: Duration = $._decode_implicit<Duration>(() => _decode_Duration)(sequence[0]);
+    const callingPartyNumber: CallingPartyNumber = $._decode_implicit<CallingPartyNumber>(() => _decode_CallingPartyNumber)(sequence[1]);
+    const calledPartyNumber: CalledPartyNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(sequence[2]);
     return new CallRecord(
         callDuration,
         callingPartyNumber,

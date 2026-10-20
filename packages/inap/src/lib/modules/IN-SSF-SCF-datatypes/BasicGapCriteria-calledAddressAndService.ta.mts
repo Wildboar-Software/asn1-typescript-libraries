@@ -135,10 +135,8 @@ function _decode_BasicGapCriteria_calledAddressAndService (el: _Element): BasicG
     }
     sequence[0].name = "calledAddressValue";
     sequence[1].name = "serviceKey";
-    let calledAddressValue!: Digits;
-    let serviceKey!: ServiceKey;
-    calledAddressValue = $._decode_implicit<Digits>(() => _decode_Digits)(sequence[0]);
-    serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(sequence[1]);
+    const calledAddressValue: Digits = $._decode_implicit<Digits>(() => _decode_Digits)(sequence[0]);
+    const serviceKey: ServiceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(sequence[1]);
     return new BasicGapCriteria_calledAddressAndService(
         calledAddressValue,
         serviceKey,

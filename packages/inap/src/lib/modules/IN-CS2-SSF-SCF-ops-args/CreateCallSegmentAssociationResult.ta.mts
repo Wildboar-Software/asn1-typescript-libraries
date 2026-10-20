@@ -121,8 +121,7 @@ function _decode_CreateCallSegmentAssociationResult (el: _Element): CreateCallSe
         throw new _ConstructionError("CreateCallSegmentAssociationResult contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "newCallSegmentAssociation";
-    let newCallSegmentAssociation!: CSAID;
-    newCallSegmentAssociation = $._decode_implicit<CSAID>(() => _decode_CSAID)(sequence[0]);
+    const newCallSegmentAssociation: CSAID = $._decode_implicit<CSAID>(() => _decode_CSAID)(sequence[0]);
     return new CreateCallSegmentAssociationResult(
         newCallSegmentAssociation,
         sequence.slice(1),

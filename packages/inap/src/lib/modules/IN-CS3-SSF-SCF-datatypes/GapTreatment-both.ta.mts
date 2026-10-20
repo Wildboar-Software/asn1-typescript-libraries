@@ -135,10 +135,8 @@ function _decode_GapTreatment_both (el: _Element): GapTreatment_both {
     }
     sequence[0].name = "informationToSend";
     sequence[1].name = "releaseCause";
-    let informationToSend!: InformationToSend;
-    let releaseCause!: Cause;
-    informationToSend = $._decode_explicit<InformationToSend>(() => _decode_InformationToSend)(sequence[0]);
-    releaseCause = $._decode_implicit<Cause>(() => _decode_Cause)(sequence[1]);
+    const informationToSend: InformationToSend = $._decode_explicit<InformationToSend>(() => _decode_InformationToSend)(sequence[0]);
+    const releaseCause: Cause = $._decode_implicit<Cause>(() => _decode_Cause)(sequence[1]);
     return new GapTreatment_both(
         informationToSend,
         releaseCause,

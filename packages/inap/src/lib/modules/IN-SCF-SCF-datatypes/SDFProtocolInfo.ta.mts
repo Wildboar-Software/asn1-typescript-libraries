@@ -124,10 +124,8 @@ function _decode_SDFProtocolInfo (el: _Element): SDFProtocolInfo {
     }
     sequence[0].name = "entryname";
     sequence[1].name = "attribute";
-    let entryname!: DistinguishedName;
-    let attribute!: OBJECT_IDENTIFIER;
-    entryname = _decode_DistinguishedName(sequence[0]);
-    attribute = $._decodeObjectIdentifier(sequence[1]);
+    const entryname: DistinguishedName = _decode_DistinguishedName(sequence[0]);
+    const attribute: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[1]);
     return new SDFProtocolInfo(
         entryname,
         attribute,

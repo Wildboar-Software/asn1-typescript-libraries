@@ -126,10 +126,8 @@ function _decode_RequestedNotifications_Item_callConditionWithPartyID (el: _Elem
     }
     sequence[0].name = "callCondition";
     sequence[1].name = "partyID";
-    let callCondition!: CallConditions;
-    let partyID!: PartyID;
-    callCondition = _decode_CallConditions(sequence[0]);
-    partyID = $._decode_implicit<PartyID>(() => _decode_PartyID)(sequence[1]);
+    const callCondition: CallConditions = _decode_CallConditions(sequence[0]);
+    const partyID: PartyID = $._decode_implicit<PartyID>(() => _decode_PartyID)(sequence[1]);
     return new RequestedNotifications_Item_callConditionWithPartyID(
         callCondition,
         partyID,

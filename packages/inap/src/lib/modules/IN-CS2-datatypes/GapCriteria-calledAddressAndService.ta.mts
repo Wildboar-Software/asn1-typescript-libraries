@@ -126,10 +126,8 @@ function _decode_GapCriteria_calledAddressAndService (el: _Element): GapCriteria
     }
     sequence[0].name = "calledAddressValue";
     sequence[1].name = "serviceKey";
-    let calledAddressValue!: Digits;
-    let serviceKey!: ServiceKey;
-    calledAddressValue = $._decode_implicit<Digits>(() => _decode_Digits)(sequence[0]);
-    serviceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(sequence[1]);
+    const calledAddressValue: Digits = $._decode_implicit<Digits>(() => _decode_Digits)(sequence[0]);
+    const serviceKey: ServiceKey = $._decode_implicit<ServiceKey>(() => _decode_ServiceKey)(sequence[1]);
     return new GapCriteria_calledAddressAndService(
         calledAddressValue,
         serviceKey,

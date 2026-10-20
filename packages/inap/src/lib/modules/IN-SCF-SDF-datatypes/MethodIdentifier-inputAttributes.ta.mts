@@ -124,10 +124,8 @@ function _decode_MethodIdentifier_inputAttributes (el: _Element): MethodIdentifi
     }
     sequence[0].name = "type";
     sequence[1].name = "values";
-    let type_!: _Element;
-    let values!: _Element[];
-    type_ = $._decodeAny(sequence[0]);
-    values = $._decodeSetOf<_Element>(() => $._decodeAny)(sequence[1]);
+    const type_: _Element = $._decodeAny(sequence[0]);
+    const values: _Element[] = $._decodeSetOf<_Element>(() => $._decodeAny)(sequence[1]);
     return new MethodIdentifier_inputAttributes(
         type_,
         values,

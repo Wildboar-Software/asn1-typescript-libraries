@@ -137,10 +137,8 @@ function _decode_BCUSMEvent (el: _Element): BCUSMEvent {
     }
     sequence[0].name = "eventType";
     sequence[1].name = "monitorMode";
-    let eventType!: EventTypeBCUSM;
-    let monitorMode!: MonitorMode;
-    eventType = $._decode_implicit<EventTypeBCUSM>(() => _decode_EventTypeBCUSM)(sequence[0]);
-    monitorMode = $._decode_implicit<MonitorMode>(() => _decode_MonitorMode)(sequence[1]);
+    const eventType: EventTypeBCUSM = $._decode_implicit<EventTypeBCUSM>(() => _decode_EventTypeBCUSM)(sequence[0]);
+    const monitorMode: MonitorMode = $._decode_implicit<MonitorMode>(() => _decode_MonitorMode)(sequence[1]);
     return new BCUSMEvent(
         eventType,
         monitorMode,

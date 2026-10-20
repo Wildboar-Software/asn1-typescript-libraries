@@ -130,10 +130,8 @@ function _decode_ChargingSignallingInformation (el: _Element): ChargingSignallin
     }
     sequence[0].name = "partyToBeCharged";
     sequence[1].name = "percentage";
-    let partyToBeCharged!: PartyToBeCharged;
-    let percentage!: INTEGER;
-    partyToBeCharged = _decode_PartyToBeCharged(sequence[0]);
-    percentage = $._decodeInteger(sequence[1]);
+    const partyToBeCharged: PartyToBeCharged = _decode_PartyToBeCharged(sequence[0]);
+    const percentage: INTEGER = $._decodeInteger(sequence[1]);
     return new ChargingSignallingInformation(
         partyToBeCharged,
         percentage,

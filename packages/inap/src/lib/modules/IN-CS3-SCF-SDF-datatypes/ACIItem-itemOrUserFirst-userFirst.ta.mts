@@ -126,10 +126,8 @@ function _decode_ACIItem_itemOrUserFirst_userFirst (el: _Element): ACIItem_itemO
     }
     sequence[0].name = "userClasses";
     sequence[1].name = "userPermissions";
-    let userClasses!: UserClasses;
-    let userPermissions!: UserPermission[];
-    userClasses = _decode_UserClasses(sequence[0]);
-    userPermissions = $._decodeSetOf<UserPermission>(() => _decode_UserPermission)(sequence[1]);
+    const userClasses: UserClasses = _decode_UserClasses(sequence[0]);
+    const userPermissions: UserPermission[] = $._decodeSetOf<UserPermission>(() => _decode_UserPermission)(sequence[1]);
     return new ACIItem_itemOrUserFirst_userFirst(
         userClasses,
         userPermissions,

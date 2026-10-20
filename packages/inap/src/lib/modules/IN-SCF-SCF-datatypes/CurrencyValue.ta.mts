@@ -124,10 +124,8 @@ function _decode_CurrencyValue (el: _Element): CurrencyValue {
     }
     sequence[0].name = "currency";
     sequence[1].name = "amount";
-    let currency!: CurrencyID;
-    let amount!: INTEGER;
-    currency = _decode_CurrencyID(sequence[0]);
-    amount = $._decodeInteger(sequence[1]);
+    const currency: CurrencyID = _decode_CurrencyID(sequence[0]);
+    const amount: INTEGER = $._decodeInteger(sequence[1]);
     return new CurrencyValue(
         currency,
         amount,

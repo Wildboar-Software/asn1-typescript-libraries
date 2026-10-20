@@ -151,14 +151,10 @@ function _decode_identifierList_Type (el: _Element): identifierList_Type {
     sequence[1].name = "fillMethodIdentifier";
     sequence[2].name = "oneToOneAlgorithm";
     sequence[3].name = "oneToTwoAlgorithm";
-    let conformMethodIdentifier!: MethodIdentifier;
-    let fillMethodIdentifier!: MethodIdentifier;
-    let oneToOneAlgorithm!: AlgorithmIdentifier;
-    let oneToTwoAlgorithm!: AlgorithmIdentifier;
-    conformMethodIdentifier = $._decode_explicit<MethodIdentifier>(() => _decode_MethodIdentifier)(sequence[0]);
-    fillMethodIdentifier = $._decode_explicit<MethodIdentifier>(() => _decode_MethodIdentifier)(sequence[1]);
-    oneToOneAlgorithm = $._decode_explicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(sequence[2]);
-    oneToTwoAlgorithm = $._decode_explicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(sequence[3]);
+    const conformMethodIdentifier: MethodIdentifier = $._decode_explicit<MethodIdentifier>(() => _decode_MethodIdentifier)(sequence[0]);
+    const fillMethodIdentifier: MethodIdentifier = $._decode_explicit<MethodIdentifier>(() => _decode_MethodIdentifier)(sequence[1]);
+    const oneToOneAlgorithm: AlgorithmIdentifier = $._decode_explicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(sequence[2]);
+    const oneToTwoAlgorithm: AlgorithmIdentifier = $._decode_explicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(sequence[3]);
     return new identifierList_Type(
         conformMethodIdentifier,
         fillMethodIdentifier,

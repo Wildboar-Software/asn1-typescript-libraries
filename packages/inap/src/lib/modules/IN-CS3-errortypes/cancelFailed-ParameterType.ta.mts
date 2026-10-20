@@ -136,10 +136,8 @@ function _decode_cancelFailed_ParameterType (el: _Element): cancelFailed_Paramet
     }
     sequence[0].name = "problem";
     sequence[1].name = "operation";
-    let problem!: cancelFailed_ParameterType_problem;
-    let operation!: InvokeID;
-    problem = $._decode_implicit<cancelFailed_ParameterType_problem>(() => _decode_cancelFailed_ParameterType_problem)(sequence[0]);
-    operation = $._decode_implicit<InvokeID>(() => _decode_InvokeID)(sequence[1]);
+    const problem: cancelFailed_ParameterType_problem = $._decode_implicit<cancelFailed_ParameterType_problem>(() => _decode_cancelFailed_ParameterType_problem)(sequence[0]);
+    const operation: InvokeID = $._decode_implicit<InvokeID>(() => _decode_InvokeID)(sequence[1]);
     return new cancelFailed_ParameterType(
         problem,
         operation,

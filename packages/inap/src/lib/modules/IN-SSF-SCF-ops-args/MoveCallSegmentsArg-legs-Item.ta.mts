@@ -133,10 +133,8 @@ function _decode_MoveCallSegmentsArg_legs_Item (el: _Element): MoveCallSegmentsA
     }
     sequence[0].name = "sourceLeg";
     sequence[1].name = "newLeg";
-    let sourceLeg!: LegID;
-    let newLeg!: LegID;
-    sourceLeg = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[0]);
-    newLeg = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[1]);
+    const sourceLeg: LegID = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[0]);
+    const newLeg: LegID = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[1]);
     return new MoveCallSegmentsArg_legs_Item(
         sourceLeg,
         newLeg,

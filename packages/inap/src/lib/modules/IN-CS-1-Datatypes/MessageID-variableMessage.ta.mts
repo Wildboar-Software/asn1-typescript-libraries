@@ -126,10 +126,8 @@ function _decode_MessageID_variableMessage (el: _Element): MessageID_variableMes
     }
     sequence[0].name = "elementaryMessageID";
     sequence[1].name = "variableParts";
-    let elementaryMessageID!: Integer4;
-    let variableParts!: VariablePart[];
-    elementaryMessageID = $._decode_implicit<Integer4>(() => _decode_Integer4)(sequence[0]);
-    variableParts = $._decode_implicit<VariablePart[]>(() => $._decodeSequenceOf<VariablePart>(() => _decode_VariablePart))(sequence[1]);
+    const elementaryMessageID: Integer4 = $._decode_implicit<Integer4>(() => _decode_Integer4)(sequence[0]);
+    const variableParts: VariablePart[] = $._decode_implicit<VariablePart[]>(() => $._decodeSequenceOf<VariablePart>(() => _decode_VariablePart))(sequence[1]);
     return new MessageID_variableMessage(
         elementaryMessageID,
         variableParts,
