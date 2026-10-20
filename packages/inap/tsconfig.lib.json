@@ -13,9 +13,22 @@
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.mts"
   ],
-  "references": [],
+  "references": [
+    {
+      "path": "../guls/tsconfig.lib.json"
+    },
+    {
+      "path": "../rose/tsconfig.lib.json"
+    },
+    {
+      "path": "../tcap/tsconfig.lib.json"
+    },
+    {
+      "path": "../x500/tsconfig.lib.json"
+    }
+  ],
   "exclude": [
     "vite.config.ts",
     "vite.config.mts",
@@ -23,6 +36,8 @@
     "vitest.config.mts",
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
+    "src/**/*.test.mts",
+    "src/**/*.spec.mts",
     "src/**/*.test.tsx",
     "src/**/*.spec.tsx",
     "src/**/*.test.js",
