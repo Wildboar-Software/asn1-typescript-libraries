@@ -19,7 +19,13 @@ import { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-CS3-SS
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReleaseCallArg-allCallSegments ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReleaseCallArg-allCallSegments ::=
+ * SEQUENCE {
+ *   releaseCause [0] Cause OPTIONAL,
+ *   timeToRelease [1] TimerValue OPTIONAL,
+ *   forcedRelease [2] BOOLEAN DEFAULT FALSE,
+ *   ...
+ * }
  * ```
  * 
  * @class

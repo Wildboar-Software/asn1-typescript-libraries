@@ -19,7 +19,12 @@ enum _enum_for_DefaultFaultHandling_action {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DefaultFaultHandling-action ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * DefaultFaultHandling-action ::=
+ * ENUMERATED {
+ *   resumeCallProcessing(0),
+ *   releaseCall(1),
+ *   ...
+ * }
  * ```
  * 
  * @enum {number}

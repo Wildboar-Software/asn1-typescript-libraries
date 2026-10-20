@@ -10,7 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * cancelFailed-ParameterType-problem ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * cancelFailed-ParameterType-problem ::=
+ * ENUMERATED {
+ *   unknownOperation(0),
+ *   tooLate(1),
+ *   operationNotCancellable(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -29,7 +34,12 @@ enum _enum_for_cancelFailed_ParameterType_problem {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * cancelFailed-ParameterType-problem ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * cancelFailed-ParameterType-problem ::=
+ * ENUMERATED {
+ *   unknownOperation(0),
+ *   tooLate(1),
+ *   operationNotCancellable(2)
+ * }
  * ```
  * 
  * @enum {number}
@@ -44,7 +54,12 @@ type cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_p
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * cancelFailed-ParameterType-problem ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * cancelFailed-ParameterType-problem ::=
+ * ENUMERATED {
+ *   unknownOperation(0),
+ *   tooLate(1),
+ *   operationNotCancellable(2)
+ * }
  * ```
  * 
  * @enum {number}

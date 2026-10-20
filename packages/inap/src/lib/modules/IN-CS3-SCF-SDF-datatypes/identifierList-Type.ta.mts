@@ -18,7 +18,16 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * identifierList-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * identifierList-Type ::=
+ * SEQUENCE {
+ *   conformMethodIdentifier [1] MethodIdentifier,
+ *   -- e.g. time window check
+ *   fillMethodIdentifier [2] MethodIdentifier,
+ *   -- e.g. generate a random of required size
+ *   oneToOneAlgorithm [3] AlgorithmIdentifier,
+ *   -- e.g. A11 and A12, output RES from RS,RAND
+ *   oneToTwoAlgorithm [4] AlgorithmIdentifier
+ * }
  * ```
  * 
  * @class

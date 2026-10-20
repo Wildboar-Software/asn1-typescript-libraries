@@ -16,7 +16,11 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-oAbandon ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-oAbandon ::=
+ * SEQUENCE {
+ *   abandonCause [0] Cause OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

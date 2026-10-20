@@ -19,7 +19,16 @@ import { _decode_tfcBindError_ParameterType_error, _encode_tfcBindError_Paramete
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * tfcBindError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * tfcBindError-ParameterType ::=
+ * SET {
+ *   versions [0] Versions DEFAULT {
+ *     v1
+ *   },
+ *   error CHOICE {
+ *     serviceError [1] ServiceProblem,
+ *     securityError [2] SecurityProblem
+ *   }
+ * }
  * ```
  * 
  * @class

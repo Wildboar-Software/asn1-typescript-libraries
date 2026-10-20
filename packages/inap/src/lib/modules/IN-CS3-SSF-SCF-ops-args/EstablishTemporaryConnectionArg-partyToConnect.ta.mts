@@ -17,7 +17,11 @@ import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EstablishTemporaryConnectionArg-partyToConnect ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EstablishTemporaryConnectionArg-partyToConnect ::=
+ * CHOICE {
+ *   legID [2] LegID,
+ *   callSegmentID [7] CallSegmentID
+ * }
  * ```
  */
 export

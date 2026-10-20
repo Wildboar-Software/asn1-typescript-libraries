@@ -16,7 +16,11 @@ import { RedirectReason, _decode_RedirectReason, _encode_RedirectReason } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceInteractionIndicatorsTwo-redirectServiceTreatmentInd ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceInteractionIndicatorsTwo-redirectServiceTreatmentInd ::=
+ * SEQUENCE {
+ *   redirectReason [0] RedirectReason OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

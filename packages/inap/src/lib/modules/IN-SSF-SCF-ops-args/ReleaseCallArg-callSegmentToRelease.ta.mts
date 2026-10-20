@@ -18,7 +18,13 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cau
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReleaseCallArg-callSegmentToRelease ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReleaseCallArg-callSegmentToRelease ::=
+ * SEQUENCE {
+ *   callSegment [0] INTEGER,
+ *   releaseCause [1] Cause OPTIONAL,
+ *   forcedRelease [2] BOOLEAN DEFAULT FALSE,
+ *   ...
+ * }
  * ```
  * 
  * @class

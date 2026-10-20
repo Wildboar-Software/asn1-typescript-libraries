@@ -17,7 +17,11 @@ import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ContinueWithArgumentArg-legorCSID ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ContinueWithArgumentArg-legorCSID ::=
+ * CHOICE {
+ *   legID [0] LegID,
+ *   csID [9] CallSegmentID
+ * }
  * ```
  */
 export

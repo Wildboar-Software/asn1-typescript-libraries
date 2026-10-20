@@ -10,7 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-event ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Event-event ::=
+ * ENUMERATED {
+ *   now(0),
+ *   answer(1),
+ *   user-interaction(2),
+ *   failure(3)
+ * }
  * ```
  * 
  * @enum {number}
@@ -30,7 +36,13 @@ enum _enum_for_Event_event {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-event ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Event-event ::=
+ * ENUMERATED {
+ *   now(0),
+ *   answer(1),
+ *   user-interaction(2),
+ *   failure(3)
+ * }
  * ```
  * 
  * @enum {number}
@@ -45,7 +57,13 @@ type Event_event = _enum_for_Event_event;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Event-event ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Event-event ::=
+ * ENUMERATED {
+ *   now(0),
+ *   answer(1),
+ *   user-interaction(2),
+ *   failure(3)
+ * }
  * ```
  * 
  * @enum {number}

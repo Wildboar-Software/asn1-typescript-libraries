@@ -16,7 +16,11 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cau
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-oNoAnswerSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-oNoAnswerSpecificInfo ::=
+ * SEQUENCE {
+ *   ...,
+ *   cause [0] Cause OPTIONAL
+ * }
  * ```
  * 
  * @class

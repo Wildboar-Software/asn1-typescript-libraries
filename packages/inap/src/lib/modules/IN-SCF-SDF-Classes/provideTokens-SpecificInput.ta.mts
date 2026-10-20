@@ -17,7 +17,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * provideTokens-SpecificInput ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * provideTokens-SpecificInput ::=
+ * SEQUENCE {
+ *   numOfRequestedTokens INTEGER,
+ *   -- how many tokens are requested (NOfRT)
+ *   oidOfAttribute OBJECT IDENTIFIER
+ * }
  * ```
  * 
  * @class

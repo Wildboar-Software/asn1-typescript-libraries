@@ -18,7 +18,12 @@ import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectToResourceArg-resourceAddress-ipAddressAndCallSegment ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ConnectToResourceArg-resourceAddress-ipAddressAndCallSegment ::=
+ * SEQUENCE {
+ *   ipRoutingAddress [0] IPRoutingAddress,
+ *   callSegmentID [1] CallSegmentID,
+ *   ...
+ * }
  * ```
  * 
  * @class

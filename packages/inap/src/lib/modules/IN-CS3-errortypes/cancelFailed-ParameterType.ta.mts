@@ -18,7 +18,15 @@ import { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS3-common-d
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * cancelFailed-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * cancelFailed-ParameterType ::=
+ * SEQUENCE {
+ *   problem [0] ENUMERATED {
+ *     unknownOperation(0),
+ *     tooLate(1),
+ *     operationNotCancellable(2)
+ *   },
+ *   operation [1] InvokeID
+ * }
  * ```
  * 
  * @class

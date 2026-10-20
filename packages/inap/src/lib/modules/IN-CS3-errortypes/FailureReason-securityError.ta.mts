@@ -17,7 +17,11 @@ import { SPKM_ERROR, _decode_SPKM_ERROR, _encode_SPKM_ERROR } from "../SpkmGssTo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * FailureReason-securityError ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * FailureReason-securityError ::=
+ * SET {
+ *   problem [0] SecurityProblem,
+ *   spkmInfo [1] SPKM-ERROR
+ * }
  * ```
  * 
  * @class

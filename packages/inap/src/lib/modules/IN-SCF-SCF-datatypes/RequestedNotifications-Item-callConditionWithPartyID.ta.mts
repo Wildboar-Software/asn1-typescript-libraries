@@ -18,7 +18,11 @@ import { PartyID, _decode_PartyID, _encode_PartyID } from "../IN-SCF-SCF-datatyp
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RequestedNotifications-Item-callConditionWithPartyID ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RequestedNotifications-Item-callConditionWithPartyID ::=
+ * SEQUENCE {
+ *   callCondition CallConditions,
+ *   partyID [9] PartyID
+ * }
  * ```
  * 
  * @class

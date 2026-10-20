@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-tSuspend ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-tSuspend ::=
+ * SEQUENCE {
+ *   -- no specific info defined
+ *   ...
+ * }
  * ```
  * 
  * @class

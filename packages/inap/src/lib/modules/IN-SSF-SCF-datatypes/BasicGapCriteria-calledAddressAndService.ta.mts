@@ -18,7 +18,12 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-SSF-SC
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BasicGapCriteria-calledAddressAndService ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * BasicGapCriteria-calledAddressAndService ::=
+ * SEQUENCE {
+ *   calledAddressValue [0] Digits,
+ *   serviceKey [1] ServiceKey,
+ *   ...
+ * }
  * ```
  * 
  * @class

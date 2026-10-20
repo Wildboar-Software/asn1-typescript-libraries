@@ -20,7 +20,16 @@ import { ConnectToResourceArg_resourceAddress_both, _decode_ConnectToResourceArg
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectToResourceArg-resourceAddress ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ConnectToResourceArg-resourceAddress ::=
+ * CHOICE {
+ *   ipRoutingAddress [0] IPRoutingAddress,
+ *   legID [1] LegID,
+ *   both [2] SEQUENCE {
+ *     ipRoutingAddress [0] IPRoutingAddress,
+ *     legID [1] LegID
+ *   },
+ *   none [3] NULL
+ * }
  * ```
  */
 export

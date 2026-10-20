@@ -16,7 +16,11 @@ import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.t
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MoveCallSegmentsArg-legs-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MoveCallSegmentsArg-legs-Item ::=
+ * SEQUENCE {
+ *   sourceLeg [0] LegID,
+ *   newLeg [1] LegID
+ * }
  * ```
  * 
  * @class

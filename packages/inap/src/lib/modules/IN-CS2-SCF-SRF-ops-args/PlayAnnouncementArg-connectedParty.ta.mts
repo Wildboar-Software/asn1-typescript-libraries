@@ -17,7 +17,11 @@ import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PlayAnnouncementArg-connectedParty ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PlayAnnouncementArg-connectedParty ::=
+ * CHOICE {
+ *   legID [4] LegID,
+ *   callSegmentID [5] CallSegmentID
+ * }
  * ```
  */
 export

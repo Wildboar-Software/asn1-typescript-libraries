@@ -18,7 +18,11 @@ import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectToResourceArg-resourceAddress-both ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ConnectToResourceArg-resourceAddress-both ::=
+ * SEQUENCE {
+ *   ipRoutingAddress [0] IPRoutingAddress,
+ *   legID [1] LegID
+ * }
  * ```
  * 
  * @class

@@ -17,7 +17,11 @@ import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DisconnectForwardConnectionWithArgumentArg-partyToDisconnect ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DisconnectForwardConnectionWithArgumentArg-partyToDisconnect ::=
+ * CHOICE {
+ *   legID [0] LegID,
+ *   callSegmentID [1] CallSegmentID
+ * }
  * ```
  */
 export

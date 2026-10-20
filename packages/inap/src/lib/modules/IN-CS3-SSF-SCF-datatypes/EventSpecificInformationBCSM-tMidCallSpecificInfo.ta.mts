@@ -18,7 +18,12 @@ import { MidCallInfo, _decode_MidCallInfo, _encode_MidCallInfo } from "../IN-CS3
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-tMidCallSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-tMidCallSpecificInfo ::=
+ * SEQUENCE {
+ *   connectTime [0] Integer4 OPTIONAL,
+ *   tMidCallInfo [1] MidCallInfo OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

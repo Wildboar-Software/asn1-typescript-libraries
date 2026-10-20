@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCUSM-componentReceivedSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCUSM-componentReceivedSpecificInfo ::=
+ * SEQUENCE {
+ *   componentReceivedInfo [0] OCTET STRING OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

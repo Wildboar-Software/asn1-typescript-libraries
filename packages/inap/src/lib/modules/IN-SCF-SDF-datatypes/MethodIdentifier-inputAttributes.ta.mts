@@ -16,7 +16,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MethodIdentifier-inputAttributes ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MethodIdentifier-inputAttributes ::= SEQUENCE {
+ *   type METHOD.&InputAttributes.&id({SupportedMethods}{@methodid}),
+ *   values SET OF METHOD.&InputAttributes.&Type
+ *     ({SupportedMethods}{@methodid, @inputAttributes.type})
+ * }
  * ```
  * 
  * @class

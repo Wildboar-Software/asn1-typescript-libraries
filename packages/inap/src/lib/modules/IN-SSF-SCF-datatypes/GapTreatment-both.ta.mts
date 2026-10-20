@@ -18,7 +18,12 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cau
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * GapTreatment-both ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * GapTreatment-both ::=
+ * SEQUENCE {
+ *   informationToSend [0] InformationToSend,
+ *   releaseCause [1] Cause,
+ *   ...
+ * }
  * ```
  * 
  * @class

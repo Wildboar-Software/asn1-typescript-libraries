@@ -17,7 +17,17 @@ import { ACIItem_itemOrUserFirst_userFirst, _decode_ACIItem_itemOrUserFirst_user
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ACIItem-itemOrUserFirst ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ACIItem-itemOrUserFirst ::=
+ * CHOICE {
+ *   itemFirst [0] SEQUENCE {
+ *     protectedItems ProtectedItems,
+ *     itemPermissions SET OF ItemPermission
+ *   },
+ *   userFirst [1] SEQUENCE {
+ *     userClasses UserClasses,
+ *     userPermissions SET OF UserPermission
+ *   }
+ * }
  * ```
  */
 export

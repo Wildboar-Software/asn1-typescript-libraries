@@ -18,7 +18,11 @@ import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CancelArg-callSegmentToCancel ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CancelArg-callSegmentToCancel ::=
+ * SEQUENCE {
+ *   invokeID [0] InvokeID,
+ *   callSegmentID [1] CallSegmentID
+ * }
  * ```
  * 
  * @class

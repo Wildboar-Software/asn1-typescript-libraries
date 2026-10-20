@@ -16,7 +16,11 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS3-SSF-SCF-datatypes
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-callFailureSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-callFailureSpecificInfo ::=
+ * SEQUENCE {
+ *   failureCause [0] Cause OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

@@ -16,7 +16,11 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS-1-Datatypes/Cause.
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-routeSelectFailureSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-routeSelectFailureSpecificInfo ::=
+ * SEQUENCE {
+ *   failureCause [0] Cause OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

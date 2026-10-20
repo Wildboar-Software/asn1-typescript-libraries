@@ -18,7 +18,11 @@ import { UserPermission, _decode_UserPermission, _encode_UserPermission } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ACIItem-itemOrUserFirst-userFirst ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ACIItem-itemOrUserFirst-userFirst ::=
+ * SEQUENCE {
+ *   userClasses UserClasses,
+ *   userPermissions SET OF UserPermission
+ * }
  * ```
  * 
  * @class

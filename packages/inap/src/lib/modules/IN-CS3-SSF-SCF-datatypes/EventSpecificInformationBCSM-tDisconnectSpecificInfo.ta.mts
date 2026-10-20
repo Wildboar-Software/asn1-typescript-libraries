@@ -18,7 +18,12 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS3-common-d
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-tDisconnectSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-tDisconnectSpecificInfo ::=
+ * SEQUENCE {
+ *   releaseCause [0] Cause OPTIONAL,
+ *   connectTime [1] Integer4 OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class
