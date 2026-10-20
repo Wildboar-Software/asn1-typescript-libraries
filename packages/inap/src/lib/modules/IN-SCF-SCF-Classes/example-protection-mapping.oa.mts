@@ -31,7 +31,7 @@ const example_protection_mapping: PROTECTION_MAPPING = {
     },
     encoderFor: {
     },
-    "&SecurityTransformation": [ /* FIXME: COULD_NOT_COMPILE_DEFINED_SYNTAX_IN_OBJECT_SET */, ] /* OBJECT_FIELD_SETTING */,
+    "&SecurityTransformation": [ /* FIXME: COULD_NOT_COMPILE_DEFINED_SYNTAX_IN_OBJECT_SET */ ] /* OBJECT_FIELD_SETTING */,
     "&protTransferSyntax": _OID.fromParts([/* genericULS */ 20, /* generalTransferSyntax */ 2,], joint_iso_itu_t) /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&bypassPermitted": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
