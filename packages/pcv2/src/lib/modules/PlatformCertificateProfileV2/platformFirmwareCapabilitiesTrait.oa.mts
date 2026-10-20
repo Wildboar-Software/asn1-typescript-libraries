@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { PlatformFirmwareCapabilities, _decode_PlatformFirmwareCapabilities, _encode_PlatformFirmwareCapabilities } from "../PlatformCertificateProfileV2/PlatformFirmwareCapabilities.ta.mjs";
-// export { PlatformFirmwareCapabilities, PlatformFirmwareCapabilities_fwSetupAuthLocal /* IMPORTED_LONG_NAMED_BIT */, fwSetupAuthLocal /* IMPORTED_SHORT_NAMED_BIT */, PlatformFirmwareCapabilities_fwSetupAuthRemote /* IMPORTED_LONG_NAMED_BIT */, fwSetupAuthRemote /* IMPORTED_SHORT_NAMED_BIT */, PlatformFirmwareCapabilities_sMMProtection /* IMPORTED_LONG_NAMED_BIT */, sMMProtection /* IMPORTED_SHORT_NAMED_BIT */, PlatformFirmwareCapabilities_fwKernelDMAProtection /* IMPORTED_LONG_NAMED_BIT */, fwKernelDMAProtection /* IMPORTED_SHORT_NAMED_BIT */, _decode_PlatformFirmwareCapabilities, _encode_PlatformFirmwareCapabilities } from "../PlatformCertificateProfileV2/PlatformFirmwareCapabilities.ta.mjs";
 import { tcg_tr_ID_platformFirmwareCapabilities } from "../PlatformCertificateProfileV2/tcg-tr-ID-platformFirmwareCapabilities.va.mjs";
-// export { tcg_tr_ID_platformFirmwareCapabilities } from "../PlatformCertificateProfileV2/tcg-tr-ID-platformFirmwareCapabilities.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

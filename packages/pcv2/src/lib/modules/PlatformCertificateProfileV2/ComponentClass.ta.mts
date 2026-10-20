@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfileV2/ComponentClassRegistry.ta.mjs";
-// export { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfileV2/ComponentClassRegistry.ta.mjs";
 
 
 /**
@@ -152,7 +151,7 @@ let _cached_encoder_for_ComponentClass: $.ASN1Encoder<ComponentClass> | null = n
  */
 export
 function _encode_ComponentClass (value: ComponentClass, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ComponentClass) { _cached_encoder_for_ComponentClass = function (value: ComponentClass, elGetter: $.ASN1Encoder<ComponentClass>): _Element {
+    if (!_cached_encoder_for_ComponentClass) { _cached_encoder_for_ComponentClass = function (value: ComponentClass): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ComponentClassRegistry(value.componentClassRegistry, $.BER),
         /* REQUIRED   */ $._encodeOctetString(value.componentClassValue, $.BER)

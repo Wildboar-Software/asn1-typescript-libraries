@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 
 
 /**
@@ -148,7 +147,7 @@ let _cached_encoder_for_HashedCertificateIdentifier: $.ASN1Encoder<HashedCertifi
  */
 export
 function _encode_HashedCertificateIdentifier (value: HashedCertificateIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HashedCertificateIdentifier) { _cached_encoder_for_HashedCertificateIdentifier = function (value: HashedCertificateIdentifier, elGetter: $.ASN1Encoder<HashedCertificateIdentifier>): _Element {
+    if (!_cached_encoder_for_HashedCertificateIdentifier) { _cached_encoder_for_HashedCertificateIdentifier = function (value: HashedCertificateIdentifier): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_AlgorithmIdentifier(value.hashAlgorithm, $.BER),
         /* REQUIRED   */ $._encodeOctetString(value.hashOverSignatureValue, $.BER)

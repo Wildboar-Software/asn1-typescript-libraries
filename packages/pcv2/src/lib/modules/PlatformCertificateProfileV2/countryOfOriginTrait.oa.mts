@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { OriginComposition, _decode_OriginComposition, _encode_OriginComposition } from "../PlatformCertificateProfileV2/OriginComposition.ta.mjs";
-// export { OriginComposition, _decode_OriginComposition, _encode_OriginComposition } from "../PlatformCertificateProfileV2/OriginComposition.ta.mjs";
 import { tcg_tr_ID_countryOfOrigin } from "../PlatformCertificateProfileV2/tcg-tr-ID-countryOfOrigin.va.mjs";
-// export { tcg_tr_ID_countryOfOrigin } from "../PlatformCertificateProfileV2/tcg-tr-ID-countryOfOrigin.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

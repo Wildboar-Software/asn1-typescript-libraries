@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { CertificateIdentifier, _decode_CertificateIdentifier, _encode_CertificateIdentifier } from "../PlatformCertificateProfileV2/CertificateIdentifier.ta.mjs";
-// export { CertificateIdentifier, _decode_CertificateIdentifier, _encode_CertificateIdentifier } from "../PlatformCertificateProfileV2/CertificateIdentifier.ta.mjs";
 import { tcg_tr_ID_certificateIdentifier } from "../PlatformCertificateProfileV2/tcg-tr-ID-certificateIdentifier.va.mjs";
-// export { tcg_tr_ID_certificateIdentifier } from "../PlatformCertificateProfileV2/tcg-tr-ID-certificateIdentifier.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

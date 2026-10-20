@@ -10,7 +10,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../EKCredentialProfileV2/CommonCriteriaMeasures.ta.mjs";
-// export { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../EKCredentialProfileV2/CommonCriteriaMeasures.ta.mjs";
 
 
 /**
@@ -213,7 +212,7 @@ let _cached_encoder_for_CommonCriteriaEvaluation: $.ASN1Encoder<CommonCriteriaEv
  */
 export
 function _encode_CommonCriteriaEvaluation (value: CommonCriteriaEvaluation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommonCriteriaEvaluation) { _cached_encoder_for_CommonCriteriaEvaluation = function (value: CommonCriteriaEvaluation, elGetter: $.ASN1Encoder<CommonCriteriaEvaluation>): _Element {
+    if (!_cached_encoder_for_CommonCriteriaEvaluation) { _cached_encoder_for_CommonCriteriaEvaluation = function (value: CommonCriteriaEvaluation): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CommonCriteriaMeasures(value.cCMeasures, $.BER));
     _components.push(/* REQUIRED   */ $._encodeUTF8String(value.cCCertificateNumber, $.BER));

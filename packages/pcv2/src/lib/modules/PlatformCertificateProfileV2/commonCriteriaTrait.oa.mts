@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { CommonCriteriaEvaluation, _decode_CommonCriteriaEvaluation, _encode_CommonCriteriaEvaluation } from "../PlatformCertificateProfileV2/CommonCriteriaEvaluation.ta.mjs";
-// export { CommonCriteriaEvaluation, _decode_CommonCriteriaEvaluation, _encode_CommonCriteriaEvaluation } from "../PlatformCertificateProfileV2/CommonCriteriaEvaluation.ta.mjs";
 import { tcg_tr_ID_CommonCriteria } from "../PlatformCertificateProfileV2/tcg-tr-ID-CommonCriteria.va.mjs";
-// export { tcg_tr_ID_CommonCriteria } from "../PlatformCertificateProfileV2/tcg-tr-ID-CommonCriteria.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

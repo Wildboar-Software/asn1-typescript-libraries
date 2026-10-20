@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfileV2/ComponentIdentifier.ta.mjs";
-// export { ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfileV2/ComponentIdentifier.ta.mjs";
 import { Property, _decode_Property, _encode_Property } from "../PlatformCertificateProfileV2/Property.ta.mjs";
-// export { Property, _decode_Property, _encode_Property } from "../PlatformCertificateProfileV2/Property.ta.mjs";
 
 
 /**
@@ -157,7 +155,7 @@ let _cached_encoder_for_PlatformConfiguration_v3: $.ASN1Encoder<PlatformConfigur
  */
 export
 function _encode_PlatformConfiguration_v3 (value: PlatformConfiguration_v3, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PlatformConfiguration_v3) { _cached_encoder_for_PlatformConfiguration_v3 = function (value: PlatformConfiguration_v3, elGetter: $.ASN1Encoder<PlatformConfiguration_v3>): _Element {
+    if (!_cached_encoder_for_PlatformConfiguration_v3) { _cached_encoder_for_PlatformConfiguration_v3 = function (value: PlatformConfiguration_v3): _Element {
     const _components: _Element[] = [];
     if (value.platformComponents !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeSequenceOf<ComponentIdentifier>(() => _encode_ComponentIdentifier, $.BER), $.BER)(value.platformComponents, $.BER));

@@ -9,7 +9,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { _decode_AttributeStatus, _encode_AttributeStatus, _enum_for_AttributeStatus, AttributeStatus } from "../PlatformCertificateProfileV2/AttributeStatus.ta.mjs";
-// export { AttributeStatus, _enum_for_AttributeStatus, AttributeStatus_added /* IMPORTED_LONG_ENUMERATION_ITEM */, added /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_modified /* IMPORTED_LONG_ENUMERATION_ITEM */, modified /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_removed /* IMPORTED_LONG_ENUMERATION_ITEM */, removed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfileV2/AttributeStatus.ta.mjs";
 
 
 /**
@@ -176,7 +175,7 @@ let _cached_encoder_for_Property: $.ASN1Encoder<Property> | null = null;
  */
 export
 function _encode_Property (value: Property, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Property) { _cached_encoder_for_Property = function (value: Property, elGetter: $.ASN1Encoder<Property>): _Element {
+    if (!_cached_encoder_for_Property) { _cached_encoder_for_Property = function (value: Property): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeUTF8String(value.propertyName, $.BER));
     _components.push(/* REQUIRED   */ $._encodeUTF8String(value.propertyValue, $.BER));

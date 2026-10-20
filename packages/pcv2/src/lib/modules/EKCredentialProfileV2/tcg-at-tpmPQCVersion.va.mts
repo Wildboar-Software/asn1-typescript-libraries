@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { tcg_attribute } from "../EKCredentialProfileV2/tcg-attribute.va.mjs";
-// export { tcg_attribute } from "../EKCredentialProfileV2/tcg-attribute.va.mjs";
 
 
 /**

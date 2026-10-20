@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
-// export { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 import { tcg_tr_ID_PublicKey } from "../PlatformCertificateProfileV2/tcg-tr-ID-PublicKey.va.mjs";
-// export { tcg_tr_ID_PublicKey } from "../PlatformCertificateProfileV2/tcg-tr-ID-PublicKey.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

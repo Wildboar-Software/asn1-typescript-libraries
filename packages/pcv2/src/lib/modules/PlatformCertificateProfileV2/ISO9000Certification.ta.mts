@@ -160,7 +160,7 @@ let _cached_encoder_for_ISO9000Certification: $.ASN1Encoder<ISO9000Certification
  */
 export
 function _encode_ISO9000Certification (value: ISO9000Certification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISO9000Certification) { _cached_encoder_for_ISO9000Certification = function (value: ISO9000Certification, elGetter: $.ASN1Encoder<ISO9000Certification>): _Element {
+    if (!_cached_encoder_for_ISO9000Certification) { _cached_encoder_for_ISO9000Certification = function (value: ISO9000Certification): _Element {
     const _components: _Element[] = [];
     if (value.iso9000Certified !== undefined && !$.deepEq(value.iso9000Certified, ISO9000Certification._default_value_for_iso9000Certified)) {
         _components.push(/* IF_DEFAULT */ $._encodeBoolean(value.iso9000Certified, $.BER));

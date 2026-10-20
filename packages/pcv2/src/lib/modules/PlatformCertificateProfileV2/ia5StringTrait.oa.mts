@@ -7,7 +7,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { tcg_tr_ID_IA5String } from "../PlatformCertificateProfileV2/tcg-tr-ID-IA5String.va.mjs";
-// export { tcg_tr_ID_IA5String } from "../PlatformCertificateProfileV2/tcg-tr-ID-IA5String.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

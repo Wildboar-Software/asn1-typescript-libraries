@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntityGeoLocation, _decode_EntityGeoLocation, _encode_EntityGeoLocation } from "../PlatformCertificateProfileV2/EntityGeoLocation.ta.mjs";
-// export { EntityGeoLocation, _decode_EntityGeoLocation, _encode_EntityGeoLocation } from "../PlatformCertificateProfileV2/EntityGeoLocation.ta.mjs";
 
 
 /**
@@ -155,7 +154,7 @@ let _cached_encoder_for_OriginComposition: $.ASN1Encoder<OriginComposition> | nu
  */
 export
 function _encode_OriginComposition (value: OriginComposition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginComposition) { _cached_encoder_for_OriginComposition = function (value: OriginComposition, elGetter: $.ASN1Encoder<OriginComposition>): _Element {
+    if (!_cached_encoder_for_OriginComposition) { _cached_encoder_for_OriginComposition = function (value: OriginComposition): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_EntityGeoLocation(value.location, $.BER));
     if (value.hasComponents !== undefined && !$.deepEq(value.hasComponents, OriginComposition._default_value_for_hasComponents)) {

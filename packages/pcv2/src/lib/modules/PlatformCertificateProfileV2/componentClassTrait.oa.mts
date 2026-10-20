@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { tcg_tr_ID_componentClass } from "../PlatformCertificateProfileV2/tcg-tr-ID-componentClass.va.mjs";
-// export { tcg_tr_ID_componentClass } from "../PlatformCertificateProfileV2/tcg-tr-ID-componentClass.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

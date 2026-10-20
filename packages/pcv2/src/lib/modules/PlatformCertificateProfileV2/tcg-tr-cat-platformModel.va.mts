@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category.va.mjs";
-// export { tcg_tr_category } from "../PlatformCertificateProfileV2/tcg-tr-category.va.mjs";
 
 
 /**

@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { RTMTypes, _decode_RTMTypes, _encode_RTMTypes } from "../PlatformCertificateProfileV2/RTMTypes.ta.mjs";
-// export { RTMTypes, RTMTypes_static /* IMPORTED_LONG_NAMED_BIT */, static_ /* IMPORTED_SHORT_NAMED_BIT */, RTMTypes_dynamic /* IMPORTED_LONG_NAMED_BIT */, dynamic /* IMPORTED_SHORT_NAMED_BIT */, RTMTypes_nonHost /* IMPORTED_LONG_NAMED_BIT */, nonHost /* IMPORTED_SHORT_NAMED_BIT */, RTMTypes_virtual /* IMPORTED_LONG_NAMED_BIT */, virtual /* IMPORTED_SHORT_NAMED_BIT */, RTMTypes_hardwareStatic /* IMPORTED_LONG_NAMED_BIT */, hardwareStatic /* IMPORTED_SHORT_NAMED_BIT */, RTMTypes_bMC /* IMPORTED_LONG_NAMED_BIT */, bMC /* IMPORTED_SHORT_NAMED_BIT */, _decode_RTMTypes, _encode_RTMTypes } from "../PlatformCertificateProfileV2/RTMTypes.ta.mjs";
 import { tcg_tr_ID_RTM } from "../PlatformCertificateProfileV2/tcg-tr-ID-RTM.va.mjs";
-// export { tcg_tr_ID_RTM } from "../PlatformCertificateProfileV2/tcg-tr-ID-RTM.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

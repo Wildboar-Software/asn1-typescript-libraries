@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { URIReference, _decode_URIReference, _encode_URIReference } from "../EKCredentialProfileV2/URIReference.ta.mjs";
-// export { URIReference, _decode_URIReference, _encode_URIReference } from "../EKCredentialProfileV2/URIReference.ta.mjs";
 import { tcg_tr_ID_URI } from "../PlatformCertificateProfileV2/tcg-tr-ID-URI.va.mjs";
-// export { tcg_tr_ID_URI } from "../PlatformCertificateProfileV2/tcg-tr-ID-URI.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

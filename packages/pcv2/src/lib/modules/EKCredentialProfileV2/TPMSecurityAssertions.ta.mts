@@ -10,17 +10,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { urimax } from "../EKCredentialProfileV2/urimax.va.mjs";
 import { Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../EKCredentialProfileV2/Version.ta.mjs";
-// export { Version, Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Version, _encode_Version } from "../EKCredentialProfileV2/Version.ta.mjs";
 import { EKGenerationType, _decode_EKGenerationType, _encode_EKGenerationType, _enum_for_EKGenerationType } from "../EKCredentialProfileV2/EKGenerationType.ta.mjs";
-// export { EKGenerationType, _enum_for_EKGenerationType, EKGenerationType_internal /* IMPORTED_LONG_ENUMERATION_ITEM */, internal /* IMPORTED_SHORT_ENUMERATION_ITEM */, EKGenerationType_injected /* IMPORTED_LONG_ENUMERATION_ITEM */, injected /* IMPORTED_SHORT_ENUMERATION_ITEM */, EKGenerationType_internalRevocable /* IMPORTED_LONG_ENUMERATION_ITEM */, internalRevocable /* IMPORTED_SHORT_ENUMERATION_ITEM */, EKGenerationType_injectedRevocable /* IMPORTED_LONG_ENUMERATION_ITEM */, injectedRevocable /* IMPORTED_SHORT_ENUMERATION_ITEM */, EKGenerationType_firmwareLimited /* IMPORTED_LONG_ENUMERATION_ITEM */, firmwareLimited /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EKGenerationType, _encode_EKGenerationType } from "../EKCredentialProfileV2/EKGenerationType.ta.mjs";
 import { EKGenerationLocation, _decode_EKGenerationLocation, _encode_EKGenerationLocation, _enum_for_EKGenerationLocation } from "../EKCredentialProfileV2/EKGenerationLocation.ta.mjs";
-// export { EKGenerationLocation, _enum_for_EKGenerationLocation, EKGenerationLocation_tpmManufacturer /* IMPORTED_LONG_ENUMERATION_ITEM */, EKGenerationLocation_platformManufacturer /* IMPORTED_LONG_ENUMERATION_ITEM */, EKGenerationLocation_ekCertSigner /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_EKGenerationLocation, _encode_EKGenerationLocation } from "../EKCredentialProfileV2/EKGenerationLocation.ta.mjs";
 import { EKCertificateGenerationLocation, _decode_EKCertificateGenerationLocation, _encode_EKCertificateGenerationLocation, _enum_for_EKCertificateGenerationLocation } from "../EKCredentialProfileV2/EKCertificateGenerationLocation.ta.mjs";
-// export { EKCertificateGenerationLocation, _enum_for_EKCertificateGenerationLocation, EKCertificateGenerationLocation_tpmManufacturer /* IMPORTED_LONG_ENUMERATION_ITEM */, EKCertificateGenerationLocation_platformManufacturer /* IMPORTED_LONG_ENUMERATION_ITEM */, EKCertificateGenerationLocation_ekCertSigner /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_EKCertificateGenerationLocation, _encode_EKCertificateGenerationLocation } from "../EKCredentialProfileV2/EKCertificateGenerationLocation.ta.mjs";
 import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../EKCredentialProfileV2/CommonCriteriaMeasures.ta.mjs";
-// export { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../EKCredentialProfileV2/CommonCriteriaMeasures.ta.mjs";
 import { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../EKCredentialProfileV2/FIPSLevel.ta.mjs";
-// export { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../EKCredentialProfileV2/FIPSLevel.ta.mjs";
 
 
 /**
@@ -305,7 +299,7 @@ let _cached_encoder_for_TPMSecurityAssertions: $.ASN1Encoder<TPMSecurityAssertio
  */
 export
 function _encode_TPMSecurityAssertions (value: TPMSecurityAssertions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TPMSecurityAssertions) { _cached_encoder_for_TPMSecurityAssertions = function (value: TPMSecurityAssertions, elGetter: $.ASN1Encoder<TPMSecurityAssertions>): _Element {
+    if (!_cached_encoder_for_TPMSecurityAssertions) { _cached_encoder_for_TPMSecurityAssertions = function (value: TPMSecurityAssertions): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

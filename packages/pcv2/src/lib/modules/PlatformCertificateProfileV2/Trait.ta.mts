@@ -12,8 +12,6 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { urimax } from "../PlatformCertificateProfileV2/urimax.va.mjs";
-// export { TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
-// export { TraitSet } from "../PlatformCertificateProfileV2/TraitSet.osa.mjs";
 
 
 /**
@@ -213,7 +211,7 @@ let _cached_encoder_for_Trait: $.ASN1Encoder<Trait> | null = null;
  */
 export
 function _encode_Trait (value: Trait, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Trait) { _cached_encoder_for_Trait = function (value: Trait, elGetter: $.ASN1Encoder<Trait>): _Element {
+    if (!_cached_encoder_for_Trait) { _cached_encoder_for_Trait = function (value: Trait): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeObjectIdentifier(value.traitId, $.BER));
     _components.push(/* REQUIRED   */ $._encodeObjectIdentifier(value.traitCategory, $.BER));

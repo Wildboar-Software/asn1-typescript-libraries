@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { EKCredentialAlgorithmList, _decode_EKCredentialAlgorithmList, _encode_EKCredentialAlgorithmList } from "../EKCredentialProfileV2/EKCredentialAlgorithmList.ta.mjs";
-// export { EKCredentialAlgorithmList, _decode_EKCredentialAlgorithmList, _encode_EKCredentialAlgorithmList } from "../EKCredentialProfileV2/EKCredentialAlgorithmList.ta.mjs";
 import { tcg_at_tpmEKCredentialAlgorithms } from "../EKCredentialProfileV2/tcg-at-tpmEKCredentialAlgorithms.va.mjs";
-// export { tcg_at_tpmEKCredentialAlgorithms } from "../EKCredentialProfileV2/tcg-at-tpmEKCredentialAlgorithms.va.mjs";
 
 
 /**

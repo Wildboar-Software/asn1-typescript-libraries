@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { tcg_registry } from "../PlatformCertificateProfileV2/tcg-registry.va.mjs";
-// export { tcg_registry } from "../PlatformCertificateProfileV2/tcg-registry.va.mjs";
 
 
 /**

@@ -4,7 +4,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { tcg_common } from "../PlatformCertificateProfileV2/tcg-common.va.mjs";
-// export { tcg_common } from "../PlatformCertificateProfileV2/tcg-common.va.mjs";
 
 
 /**

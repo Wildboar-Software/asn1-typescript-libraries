@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { ISO9000Certification, _decode_ISO9000Certification, _encode_ISO9000Certification } from "../PlatformCertificateProfileV2/ISO9000Certification.ta.mjs";
-// export { ISO9000Certification, _decode_ISO9000Certification, _encode_ISO9000Certification } from "../PlatformCertificateProfileV2/ISO9000Certification.ta.mjs";
 import { tcg_tr_ID_ISO9000Level } from "../PlatformCertificateProfileV2/tcg-tr-ID-ISO9000Level.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
