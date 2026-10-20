@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceResult, _decode_ServiceResult, _encode_ServiceResult } from "../MONTEChargingDataTypes/ServiceResult.ta.mjs";
@@ -55,6 +56,10 @@ class MonitoringEventConfigStatus {
         this.serviceResult = serviceResult;
         this.sCEFReferenceID = sCEFReferenceID;
         this.sCEFID = sCEFID;
+    
+        if (this.sCEFReferenceID !== undefined && ((typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) < 0 || (typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) > 4294967295)) {
+            throw new ASN1OverflowError("MonitoringEventConfigStatus.sCEFReferenceID violates INTEGER range");
+        }
     }
 
     /**
@@ -162,7 +167,7 @@ let _cached_encoder_for_MonitoringEventConfigStatus: $.ASN1Encoder<MonitoringEve
  */
 export
 function _encode_MonitoringEventConfigStatus (value: MonitoringEventConfigStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MonitoringEventConfigStatus) { _cached_encoder_for_MonitoringEventConfigStatus = function (value: MonitoringEventConfigStatus, elGetter: $.ASN1Encoder<MonitoringEventConfigStatus>): _Element {
+    if (!_cached_encoder_for_MonitoringEventConfigStatus) { _cached_encoder_for_MonitoringEventConfigStatus = function (value: MonitoringEventConfigStatus, _elGetter: $.ASN1Encoder<MonitoringEventConfigStatus>): _Element {
     const _components: _Element[] = [];
     if (value.serviceResult !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_ServiceResult, $.BER)(value.serviceResult, $.BER));

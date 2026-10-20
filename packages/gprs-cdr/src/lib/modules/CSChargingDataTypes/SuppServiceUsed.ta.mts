@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,6 +45,13 @@ class SuppServiceUsed {
     ) {
         this.ssCode = ssCode;
         this.ssTime = ssTime;
+    
+        if ((this.ssCode.length !== 1)) {
+            throw new ASN1SizeError("SuppServiceUsed.ssCode violates SIZE constraint");
+        }
+        if (this.ssTime !== undefined && (this.ssTime.length !== 9)) {
+            throw new ASN1SizeError("SuppServiceUsed.ssTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -147,7 +155,7 @@ let _cached_encoder_for_SuppServiceUsed: $.ASN1Encoder<SuppServiceUsed> | null =
  */
 export
 function _encode_SuppServiceUsed (value: SuppServiceUsed, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SuppServiceUsed) { _cached_encoder_for_SuppServiceUsed = function (value: SuppServiceUsed, elGetter: $.ASN1Encoder<SuppServiceUsed>): _Element {
+    if (!_cached_encoder_for_SuppServiceUsed) { _cached_encoder_for_SuppServiceUsed = function (value: SuppServiceUsed, _elGetter: $.ASN1Encoder<SuppServiceUsed>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.ssCode, $.BER));
     if (value.ssTime !== undefined) {

@@ -4,7 +4,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UsedUnitContainer, _decode_UsedUnitContainer, _encode_UsedUnitContainer } from "../CHFChargingDataTypes/UsedUnitContainer.ta.mjs";
@@ -56,6 +57,10 @@ class MultipleUnitUsage {
         this.ratingGroup = ratingGroup;
         this.usedUnitContainers = usedUnitContainers;
         this.uPFID = uPFID;
+    
+        if (this.uPFID !== undefined && (this.uPFID.length < 1 || this.uPFID.length > 36)) {
+            throw new ASN1SizeError("MultipleUnitUsage.uPFID violates SIZE constraint");
+        }
     }
 
     /**
@@ -163,7 +168,7 @@ let _cached_encoder_for_MultipleUnitUsage: $.ASN1Encoder<MultipleUnitUsage> | nu
  */
 export
 function _encode_MultipleUnitUsage (value: MultipleUnitUsage, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MultipleUnitUsage) { _cached_encoder_for_MultipleUnitUsage = function (value: MultipleUnitUsage, elGetter: $.ASN1Encoder<MultipleUnitUsage>): _Element {
+    if (!_cached_encoder_for_MultipleUnitUsage) { _cached_encoder_for_MultipleUnitUsage = function (value: MultipleUnitUsage, _elGetter: $.ASN1Encoder<MultipleUnitUsage>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.ratingGroup, $.BER));
     if (value.usedUnitContainers !== undefined) {

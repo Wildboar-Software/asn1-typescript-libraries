@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,6 +45,13 @@ class TransmissionMedium {
     ) {
         this.tMR = tMR;
         this.tMU = tMU;
+    
+        if (this.tMR !== undefined && (this.tMR.length !== 1)) {
+            throw new ASN1SizeError("TransmissionMedium.tMR violates SIZE constraint");
+        }
+        if (this.tMU !== undefined && (this.tMU.length !== 1)) {
+            throw new ASN1SizeError("TransmissionMedium.tMU violates SIZE constraint");
+        }
     }
 
     /**
@@ -147,7 +155,7 @@ let _cached_encoder_for_TransmissionMedium: $.ASN1Encoder<TransmissionMedium> | 
  */
 export
 function _encode_TransmissionMedium (value: TransmissionMedium, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransmissionMedium) { _cached_encoder_for_TransmissionMedium = function (value: TransmissionMedium, elGetter: $.ASN1Encoder<TransmissionMedium>): _Element {
+    if (!_cached_encoder_for_TransmissionMedium) { _cached_encoder_for_TransmissionMedium = function (value: TransmissionMedium, _elGetter: $.ASN1Encoder<TransmissionMedium>): _Element {
     const _components: _Element[] = [];
     if (value.tMR !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.tMR, $.BER));

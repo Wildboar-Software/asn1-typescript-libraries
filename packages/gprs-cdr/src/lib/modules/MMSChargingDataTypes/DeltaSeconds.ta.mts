@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type DeltaSeconds = OCTET_STRING; // OctetStringType
 
-export
-const _decode_DeltaSeconds: $.ASN1Decoder<DeltaSeconds> = $._decodeOctetString;
+export const _decode_DeltaSeconds = (el: _Element): DeltaSeconds => {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 8) {
+        throw new ASN1SizeError("DeltaSeconds violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_DeltaSeconds: $.ASN1Encoder<DeltaSeconds> = $._encodeOctetString;

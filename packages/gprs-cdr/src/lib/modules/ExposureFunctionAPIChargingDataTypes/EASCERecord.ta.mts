@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../ExposureFunctionAPIChargingDataTypes/RecordType.ta.mjs";
@@ -233,6 +235,25 @@ class EASCERecord {
         this.recordExtensions = recordExtensions;
         this.startTime = startTime;
         this.stopTime = stopTime;
+    
+        if (this.nodeId !== undefined && (this.nodeId.length < 1 || this.nodeId.length > 20)) {
+            throw new ASN1SizeError("EASCERecord.nodeId violates SIZE constraint");
+        }
+        if (this.eventTimestamp !== undefined && (this.eventTimestamp.length !== 9)) {
+            throw new ASN1SizeError("EASCERecord.eventTimestamp violates SIZE constraint");
+        }
+        if (this.aPIInvocationTimestamp !== undefined && (this.aPIInvocationTimestamp.length !== 9)) {
+            throw new ASN1SizeError("EASCERecord.aPIInvocationTimestamp violates SIZE constraint");
+        }
+        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("EASCERecord.localRecordSequenceNumber violates INTEGER range");
+        }
+        if (this.startTime !== undefined && (this.startTime.length !== 9)) {
+            throw new ASN1SizeError("EASCERecord.startTime violates SIZE constraint");
+        }
+        if (this.stopTime !== undefined && (this.stopTime.length !== 9)) {
+            throw new ASN1SizeError("EASCERecord.stopTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -428,7 +449,7 @@ let _cached_encoder_for_EASCERecord: $.ASN1Encoder<EASCERecord> | null = null;
  */
 export
 function _encode_EASCERecord (value: EASCERecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EASCERecord) { _cached_encoder_for_EASCERecord = function (value: EASCERecord, elGetter: $.ASN1Encoder<EASCERecord>): _Element {
+    if (!_cached_encoder_for_EASCERecord) { _cached_encoder_for_EASCERecord = function (value: EASCERecord, _elGetter: $.ASN1Encoder<EASCERecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OriginatorInfo, _decode_OriginatorInfo, _encode_OriginatorInfo } from "../CHFChargingDataTypes/OriginatorInfo.ta.mjs";
@@ -285,6 +287,31 @@ class SMSChargingInformation {
         this.messageSize = messageSize;
         this.messageClass = messageClass;
         this.sMdeliveryReportRequested = sMdeliveryReportRequested;
+    
+        if ((this.sMSNodeAddress.length < 1 || this.sMSNodeAddress.length > 20)) {
+            throw new ASN1SizeError("SMSChargingInformation.sMSNodeAddress violates SIZE constraint");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("SMSChargingInformation.uETimeZone violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("SMSChargingInformation.rATType violates INTEGER range");
+        }
+        if (this.sMSCAddress !== undefined && (this.sMSCAddress.length < 1 || this.sMSCAddress.length > 20)) {
+            throw new ASN1SizeError("SMSChargingInformation.sMSCAddress violates SIZE constraint");
+        }
+        if ((this.eventtimestamp.length !== 9)) {
+            throw new ASN1SizeError("SMSChargingInformation.eventtimestamp violates SIZE constraint");
+        }
+        if (this.sMSStatus !== undefined && (this.sMSStatus.length !== 1)) {
+            throw new ASN1SizeError("SMSChargingInformation.sMSStatus violates SIZE constraint");
+        }
+        if (this.sMDischargeTime !== undefined && (this.sMDischargeTime.length !== 9)) {
+            throw new ASN1SizeError("SMSChargingInformation.sMDischargeTime violates SIZE constraint");
+        }
+        if (this.submissionTime !== undefined && (this.submissionTime.length !== 9)) {
+            throw new ASN1SizeError("SMSChargingInformation.submissionTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -514,7 +541,7 @@ let _cached_encoder_for_SMSChargingInformation: $.ASN1Encoder<SMSChargingInforma
  */
 export
 function _encode_SMSChargingInformation (value: SMSChargingInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMSChargingInformation) { _cached_encoder_for_SMSChargingInformation = function (value: SMSChargingInformation, elGetter: $.ASN1Encoder<SMSChargingInformation>): _Element {
+    if (!_cached_encoder_for_SMSChargingInformation) { _cached_encoder_for_SMSChargingInformation = function (value: SMSChargingInformation, _elGetter: $.ASN1Encoder<SMSChargingInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.sMSNodeAddress, $.BER));
     if (value.originatorInfo !== undefined) {

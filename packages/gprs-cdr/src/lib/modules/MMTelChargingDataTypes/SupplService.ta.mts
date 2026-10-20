@@ -5,7 +5,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceType, _decode_ServiceType, _encode_ServiceType } from "../MMTelChargingDataTypes/ServiceType.ta.mjs";
@@ -128,6 +129,10 @@ class SupplService {
         this.participantActionType = participantActionType;
         this.cUGInformation = cUGInformation;
         this.aoCInformation = aoCInformation;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("SupplService.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -273,7 +278,7 @@ let _cached_encoder_for_SupplService: $.ASN1Encoder<SupplService> | null = null;
  */
 export
 function _encode_SupplService (value: SupplService, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupplService) { _cached_encoder_for_SupplService = function (value: SupplService, elGetter: $.ASN1Encoder<SupplService>): _Element {
+    if (!_cached_encoder_for_SupplService) { _cached_encoder_for_SupplService = function (value: SupplService, _elGetter: $.ASN1Encoder<SupplService>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ServiceType, $.BER)(value.serviceType, $.BER));
     if (value.serviceMode !== undefined) {

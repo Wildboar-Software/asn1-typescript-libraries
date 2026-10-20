@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,6 +45,13 @@ class CircuitSwitchedAccess {
     ) {
         this.mSCIdentifier = mSCIdentifier;
         this.callReferenceNumber = callReferenceNumber;
+    
+        if ((this.mSCIdentifier.length < 1 || this.mSCIdentifier.length > 9)) {
+            throw new ASN1SizeError("CircuitSwitchedAccess.mSCIdentifier violates SIZE constraint");
+        }
+        if ((this.callReferenceNumber.length < 1 || this.callReferenceNumber.length > 8)) {
+            throw new ASN1SizeError("CircuitSwitchedAccess.callReferenceNumber violates SIZE constraint");
+        }
     }
 
     /**
@@ -146,7 +154,7 @@ let _cached_encoder_for_CircuitSwitchedAccess: $.ASN1Encoder<CircuitSwitchedAcce
  */
 export
 function _encode_CircuitSwitchedAccess (value: CircuitSwitchedAccess, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CircuitSwitchedAccess) { _cached_encoder_for_CircuitSwitchedAccess = function (value: CircuitSwitchedAccess, elGetter: $.ASN1Encoder<CircuitSwitchedAccess>): _Element {
+    if (!_cached_encoder_for_CircuitSwitchedAccess) { _cached_encoder_for_CircuitSwitchedAccess = function (value: CircuitSwitchedAccess, _elGetter: $.ASN1Encoder<CircuitSwitchedAccess>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.mSCIdentifier, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.callReferenceNumber, $.BER)

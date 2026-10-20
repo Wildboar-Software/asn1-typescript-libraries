@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type VlrNo = OCTET_STRING; // OctetStringType
 
-export
-const _decode_VlrNo: $.ASN1Decoder<VlrNo> = $._decodeOctetString;
+export const _decode_VlrNo = (el: _Element): VlrNo => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 9) {
+        throw new ASN1SizeError("VlrNo violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_VlrNo: $.ASN1Encoder<VlrNo> = $._encodeOctetString;

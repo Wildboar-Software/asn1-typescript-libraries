@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../LCSChargingDataTypes/RecordType.ta.mjs";
@@ -161,6 +163,34 @@ class LCSGMORecord {
         this.recordTimeStamp = recordTimeStamp;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("LCSGMORecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("LCSGMORecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("LCSGMORecord.servedMSISDN violates SIZE constraint");
+        }
+        if (this.servingEntity !== undefined && (this.servingEntity.length < 1 || this.servingEntity.length > 20)) {
+            throw new ASN1SizeError("LCSGMORecord.servingEntity violates SIZE constraint");
+        }
+        if (this.locationEstimate !== undefined && (this.locationEstimate.length < 1 || this.locationEstimate.length > 20)) {
+            throw new ASN1SizeError("LCSGMORecord.locationEstimate violates SIZE constraint");
+        }
+        if (this.positioningData !== undefined && (this.positioningData.length < 1 || this.positioningData.length > 33)) {
+            throw new ASN1SizeError("LCSGMORecord.positioningData violates SIZE constraint");
+        }
+        if (this.userError !== undefined && (this.userError.length !== 1)) {
+            throw new ASN1SizeError("LCSGMORecord.userError violates SIZE constraint");
+        }
+        if ((this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("LCSGMORecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("LCSGMORecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -322,7 +352,7 @@ let _cached_encoder_for_LCSGMORecord: $.ASN1Encoder<LCSGMORecord> | null = null;
  */
 export
 function _encode_LCSGMORecord (value: LCSGMORecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSGMORecord) { _cached_encoder_for_LCSGMORecord = function (value: LCSGMORecord, elGetter: $.ASN1Encoder<LCSGMORecord>): _Element {
+    if (!_cached_encoder_for_LCSGMORecord) { _cached_encoder_for_LCSGMORecord = function (value: LCSGMORecord, _elGetter: $.ASN1Encoder<LCSGMORecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.recordingEntity, $.BER));

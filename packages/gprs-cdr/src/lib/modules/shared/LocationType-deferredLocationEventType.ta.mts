@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    BIT_STRING
+    BIT_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -95,8 +97,13 @@ const LocationType_deferredLocationEventType_periodicLDR: number = 4; /* LONG_NA
 export
 const periodicLDR: number = LocationType_deferredLocationEventType_periodicLDR; /* SHORT_NAMED_BIT */
 
-export
-const _decode_LocationType_deferredLocationEventType: $.ASN1Decoder<LocationType_deferredLocationEventType> = $._decodeBitString;
+export const _decode_LocationType_deferredLocationEventType = (el: _Element): LocationType_deferredLocationEventType => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 16) {
+        throw new ASN1SizeError("LocationType_deferredLocationEventType violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_LocationType_deferredLocationEventType: $.ASN1Encoder<LocationType_deferredLocationEventType> = $._encodeBitString;

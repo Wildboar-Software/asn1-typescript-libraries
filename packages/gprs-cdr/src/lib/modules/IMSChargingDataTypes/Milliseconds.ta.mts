@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Milliseconds = INTEGER;
 
-export
-const _decode_Milliseconds: $.ASN1Decoder<Milliseconds> = $._decodeInteger;
+export const _decode_Milliseconds = (el: _Element): Milliseconds => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? Number(value) : value) < 0 || (typeof value === "bigint" ? Number(value) : value) > 999) {
+        throw new ASN1OverflowError("Milliseconds violates INTEGER range");
+    }
+    return value;
+};
 
 export
 const _encode_Milliseconds: $.ASN1Encoder<Milliseconds> = $._encodeInteger;

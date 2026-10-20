@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_LocationType_locationEstimateType, _encode_LocationType_locationEstimateType, _enum_for_LocationType_locationEstimateType, LocationType_locationEstimateType } from "./LocationType-locationEstimateType.ta.mjs";
@@ -67,6 +68,10 @@ class LocationType {
         this.locationEstimateType = locationEstimateType;
         this.deferredLocationEventType = deferredLocationEventType;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    
+        if (this.deferredLocationEventType !== undefined && (this.deferredLocationEventType.length < 1 || this.deferredLocationEventType.length > 16)) {
+            throw new ASN1SizeError("LocationType.deferredLocationEventType violates SIZE constraint");
+        }
     }
 
     /**
@@ -177,7 +182,7 @@ let _cached_encoder_for_LocationType: $.ASN1Encoder<LocationType> | null = null;
  */
 export
 function _encode_LocationType (value: LocationType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocationType) { _cached_encoder_for_LocationType = function (value: LocationType, elGetter: $.ASN1Encoder<LocationType>): _Element {
+    if (!_cached_encoder_for_LocationType) { _cached_encoder_for_LocationType = function (value: LocationType, _elGetter: $.ASN1Encoder<LocationType>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

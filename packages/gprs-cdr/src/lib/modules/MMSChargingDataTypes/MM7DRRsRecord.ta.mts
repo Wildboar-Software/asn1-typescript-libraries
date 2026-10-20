@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -127,6 +129,13 @@ class MM7DRRsRecord {
         this.recordTimeStamp = recordTimeStamp;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MM7DRRsRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MM7DRRsRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -266,7 +275,7 @@ let _cached_encoder_for_MM7DRRsRecord: $.ASN1Encoder<MM7DRRsRecord> | null = nul
  */
 export
 function _encode_MM7DRRsRecord (value: MM7DRRsRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MM7DRRsRecord) { _cached_encoder_for_MM7DRRsRecord = function (value: MM7DRRsRecord, elGetter: $.ASN1Encoder<MM7DRRsRecord>): _Element {
+    if (!_cached_encoder_for_MM7DRRsRecord) { _cached_encoder_for_MM7DRRsRecord = function (value: MM7DRRsRecord, _elGetter: $.ASN1Encoder<MM7DRRsRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.recipientMmsRSAddress !== undefined) {

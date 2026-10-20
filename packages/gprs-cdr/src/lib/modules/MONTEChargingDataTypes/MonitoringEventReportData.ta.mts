@@ -5,7 +5,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MonitoringType, _decode_MonitoringType, _encode_MonitoringType, _enum_for_MonitoringType } from "../MONTEChargingDataTypes/MonitoringType.ta.mjs";
@@ -138,6 +140,16 @@ class MonitoringEventReportData {
         this.reportedLocation = reportedLocation;
         this.communicationFailureInformation = communicationFailureInformation;
         this.listOfNumberOfUEPerLocationReport = listOfNumberOfUEPerLocationReport;
+    
+        if (this.eventTimestamp !== undefined && (this.eventTimestamp.length !== 9)) {
+            throw new ASN1SizeError("MonitoringEventReportData.eventTimestamp violates SIZE constraint");
+        }
+        if (this.sCEFReferenceID !== undefined && ((typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) < 0 || (typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) > 4294967295)) {
+            throw new ASN1OverflowError("MonitoringEventReportData.sCEFReferenceID violates INTEGER range");
+        }
+        if (this.monitoredUser !== undefined && (this.monitoredUser.length < 3 || this.monitoredUser.length > 8)) {
+            throw new ASN1SizeError("MonitoringEventReportData.monitoredUser violates SIZE constraint");
+        }
     }
 
     /**
@@ -289,7 +301,7 @@ let _cached_encoder_for_MonitoringEventReportData: $.ASN1Encoder<MonitoringEvent
  */
 export
 function _encode_MonitoringEventReportData (value: MonitoringEventReportData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MonitoringEventReportData) { _cached_encoder_for_MonitoringEventReportData = function (value: MonitoringEventReportData, elGetter: $.ASN1Encoder<MonitoringEventReportData>): _Element {
+    if (!_cached_encoder_for_MonitoringEventReportData) { _cached_encoder_for_MonitoringEventReportData = function (value: MonitoringEventReportData, _elGetter: $.ASN1Encoder<MonitoringEventReportData>): _Element {
     const _components: _Element[] = [];
     if (value.eventTimestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.eventTimestamp, $.BER));

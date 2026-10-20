@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -156,6 +158,19 @@ class MMBx1DRecord {
         this.sGSNPLMNIdentifier = sGSNPLMNIdentifier;
         this.rATType = rATType;
         this.mSTimeZone = mSTimeZone;
+    
+        if (this.timeStamp !== undefined && (this.timeStamp.length !== 9)) {
+            throw new ASN1SizeError("MMBx1DRecord.timeStamp violates SIZE constraint");
+        }
+        if (this.sGSNPLMNIdentifier !== undefined && (this.sGSNPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("MMBx1DRecord.sGSNPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("MMBx1DRecord.rATType violates INTEGER range");
+        }
+        if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("MMBx1DRecord.mSTimeZone violates SIZE constraint");
+        }
     }
 
     /**
@@ -307,7 +322,7 @@ let _cached_encoder_for_MMBx1DRecord: $.ASN1Encoder<MMBx1DRecord> | null = null;
  */
 export
 function _encode_MMBx1DRecord (value: MMBx1DRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMBx1DRecord) { _cached_encoder_for_MMBx1DRecord = function (value: MMBx1DRecord, elGetter: $.ASN1Encoder<MMBx1DRecord>): _Element {
+    if (!_cached_encoder_for_MMBx1DRecord) { _cached_encoder_for_MMBx1DRecord = function (value: MMBx1DRecord, _elGetter: $.ASN1Encoder<MMBx1DRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_IPAddress, $.BER)(value.mmsRelayAddress, $.BER));

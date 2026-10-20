@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -125,6 +127,13 @@ class MMR4DRsRecord {
         this.recordTimeStamp = recordTimeStamp;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MMR4DRsRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MMR4DRsRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -264,7 +273,7 @@ let _cached_encoder_for_MMR4DRsRecord: $.ASN1Encoder<MMR4DRsRecord> | null = nul
  */
 export
 function _encode_MMR4DRsRecord (value: MMR4DRsRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMR4DRsRecord) { _cached_encoder_for_MMR4DRsRecord = function (value: MMR4DRsRecord, elGetter: $.ASN1Encoder<MMR4DRsRecord>): _Element {
+    if (!_cached_encoder_for_MMR4DRsRecord) { _cached_encoder_for_MMR4DRsRecord = function (value: MMR4DRsRecord, _elGetter: $.ASN1Encoder<MMR4DRsRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MMSRSAddress, $.BER)(value.recipientMmsRSAddress, $.BER));

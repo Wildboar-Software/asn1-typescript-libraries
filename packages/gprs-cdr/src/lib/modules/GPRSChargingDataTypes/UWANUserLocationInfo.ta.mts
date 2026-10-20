@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
@@ -101,6 +102,13 @@ class UWANUserLocationInfo {
         this.civicAddressInformation = civicAddressInformation;
         this.wLANOperatorId = wLANOperatorId;
         this.logicalAccessID = logicalAccessID;
+    
+        if (this.uDPSourcePort !== undefined && (this.uDPSourcePort.length !== 2)) {
+            throw new ASN1SizeError("UWANUserLocationInfo.uDPSourcePort violates SIZE constraint");
+        }
+        if (this.tCPSourcePort !== undefined && (this.tCPSourcePort.length !== 2)) {
+            throw new ASN1SizeError("UWANUserLocationInfo.tCPSourcePort violates SIZE constraint");
+        }
     }
 
     /**
@@ -228,7 +236,7 @@ let _cached_encoder_for_UWANUserLocationInfo: $.ASN1Encoder<UWANUserLocationInfo
  */
 export
 function _encode_UWANUserLocationInfo (value: UWANUserLocationInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UWANUserLocationInfo) { _cached_encoder_for_UWANUserLocationInfo = function (value: UWANUserLocationInfo, elGetter: $.ASN1Encoder<UWANUserLocationInfo>): _Element {
+    if (!_cached_encoder_for_UWANUserLocationInfo) { _cached_encoder_for_UWANUserLocationInfo = function (value: UWANUserLocationInfo, _elGetter: $.ASN1Encoder<UWANUserLocationInfo>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_GSNAddress, $.BER)(value.uELocalIPAddress, $.BER));
     if (value.uDPSourcePort !== undefined) {

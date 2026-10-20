@@ -163,7 +163,7 @@ let _cached_encoder_for_TariffInformation: $.ASN1Encoder<TariffInformation> | nu
  */
 export
 function _encode_TariffInformation (value: TariffInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TariffInformation) { _cached_encoder_for_TariffInformation = function (value: TariffInformation, elGetter: $.ASN1Encoder<TariffInformation>): _Element {
+    if (!_cached_encoder_for_TariffInformation) { _cached_encoder_for_TariffInformation = function (value: TariffInformation, _elGetter: $.ASN1Encoder<TariffInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.currencyCode, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeReal, $.BER)(value.scaleFactor, $.BER));

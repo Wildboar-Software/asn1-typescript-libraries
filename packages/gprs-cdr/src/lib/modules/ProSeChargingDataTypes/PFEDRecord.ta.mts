@@ -6,7 +6,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../ProSeChargingDataTypes/RecordType.ta.mjs";
@@ -320,6 +321,34 @@ class PFEDRecord {
         this.reasonforCancellation = reasonforCancellation;
         this.causeForRecClosing = causeForRecClosing;
         this.proximityRequestRenewalInfoBlockList = proximityRequestRenewalInfoBlockList;
+    
+        if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("PFEDRecord.servedIMSI violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("PFEDRecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.proSeRequestTimestamp !== undefined && (this.proSeRequestTimestamp.length !== 9)) {
+            throw new ASN1SizeError("PFEDRecord.proSeRequestTimestamp violates SIZE constraint");
+        }
+        if (this.proseFunctionPLMNIdentifier !== undefined && (this.proseFunctionPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFEDRecord.proseFunctionPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.recordOpeningTime !== undefined && (this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("PFEDRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.recordClosureTime !== undefined && (this.recordClosureTime.length !== 9)) {
+            throw new ASN1SizeError("PFEDRecord.recordClosureTime violates SIZE constraint");
+        }
+        if (this.requestedPLMNIdentifier !== undefined && (this.requestedPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFEDRecord.requestedPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.proximityAlertTimestamp !== undefined && (this.proximityAlertTimestamp.length !== 9)) {
+            throw new ASN1SizeError("PFEDRecord.proximityAlertTimestamp violates SIZE constraint");
+        }
+        if (this.proximityCancellationTimestamp !== undefined && (this.proximityCancellationTimestamp.length !== 9)) {
+            throw new ASN1SizeError("PFEDRecord.proximityCancellationTimestamp violates SIZE constraint");
+        }
     }
 
     /**
@@ -575,7 +604,7 @@ let _cached_encoder_for_PFEDRecord: $.ASN1Encoder<PFEDRecord> | null = null;
  */
 export
 function _encode_PFEDRecord (value: PFEDRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PFEDRecord) { _cached_encoder_for_PFEDRecord = function (value: PFEDRecord, elGetter: $.ASN1Encoder<PFEDRecord>): _Element {
+    if (!_cached_encoder_for_PFEDRecord) { _cached_encoder_for_PFEDRecord = function (value: PFEDRecord, _elGetter: $.ASN1Encoder<PFEDRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

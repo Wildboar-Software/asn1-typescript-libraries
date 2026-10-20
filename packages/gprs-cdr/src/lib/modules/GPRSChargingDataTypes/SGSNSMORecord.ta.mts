@@ -6,7 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -324,6 +326,55 @@ class SGSNSMORecord {
         this.servingNodePLMNIdentifier = servingNodePLMNIdentifier;
         this.userLocationInfoTime = userLocationInfoTime;
         this.cNOperatorSelectionEnt = cNOperatorSelectionEnt;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("SGSNSMORecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("SGSNSMORecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("SGSNSMORecord.servedMSISDN violates SIZE constraint");
+        }
+        if (this.msNetworkCapability !== undefined && (this.msNetworkCapability.length < 1 || this.msNetworkCapability.length > 8)) {
+            throw new ASN1SizeError("SGSNSMORecord.msNetworkCapability violates SIZE constraint");
+        }
+        if (this.serviceCentre !== undefined && (this.serviceCentre.length < 1 || this.serviceCentre.length > 20)) {
+            throw new ASN1SizeError("SGSNSMORecord.serviceCentre violates SIZE constraint");
+        }
+        if (this.recordingEntity !== undefined && (this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("SGSNSMORecord.recordingEntity violates SIZE constraint");
+        }
+        if (this.locationArea !== undefined && (this.locationArea.length !== 2)) {
+            throw new ASN1SizeError("SGSNSMORecord.locationArea violates SIZE constraint");
+        }
+        if (this.routingArea !== undefined && (this.routingArea.length !== 1)) {
+            throw new ASN1SizeError("SGSNSMORecord.routingArea violates SIZE constraint");
+        }
+        if (this.cellIdentifier !== undefined && (this.cellIdentifier.length !== 2)) {
+            throw new ASN1SizeError("SGSNSMORecord.cellIdentifier violates SIZE constraint");
+        }
+        if ((this.eventTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("SGSNSMORecord.eventTimeStamp violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("SGSNSMORecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SGSNSMORecord.localSequenceNumber violates INTEGER range");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("SGSNSMORecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("SGSNSMORecord.rATType violates INTEGER range");
+        }
+        if (this.servingNodePLMNIdentifier !== undefined && (this.servingNodePLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("SGSNSMORecord.servingNodePLMNIdentifier violates SIZE constraint");
+        }
+        if (this.userLocationInfoTime !== undefined && (this.userLocationInfoTime.length !== 9)) {
+            throw new ASN1SizeError("SGSNSMORecord.userLocationInfoTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -565,7 +616,7 @@ let _cached_encoder_for_SGSNSMORecord: $.ASN1Encoder<SGSNSMORecord> | null = nul
  */
 export
 function _encode_SGSNSMORecord (value: SGSNSMORecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGSNSMORecord) { _cached_encoder_for_SGSNSMORecord = function (value: SGSNSMORecord, elGetter: $.ASN1Encoder<SGSNSMORecord>): _Element {
+    if (!_cached_encoder_for_SGSNSMORecord) { _cached_encoder_for_SGSNSMORecord = function (value: SGSNSMORecord, _elGetter: $.ASN1Encoder<SGSNSMORecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

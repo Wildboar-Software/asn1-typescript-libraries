@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -107,6 +108,19 @@ class SMServingNode {
         this.mSCNumber = mSCNumber;
         this.iPSMGWNumber = iPSMGWNumber;
         this.iPSMGWName = iPSMGWName;
+    
+        if (this.sGSNNumber !== undefined && (this.sGSNNumber.length < 1 || this.sGSNNumber.length > 20)) {
+            throw new ASN1SizeError("SMServingNode.sGSNNumber violates SIZE constraint");
+        }
+        if (this.mMENumberForMTSMS !== undefined && (this.mMENumberForMTSMS.length < 1 || this.mMENumberForMTSMS.length > 20)) {
+            throw new ASN1SizeError("SMServingNode.mMENumberForMTSMS violates SIZE constraint");
+        }
+        if (this.mSCNumber !== undefined && (this.mSCNumber.length < 1 || this.mSCNumber.length > 20)) {
+            throw new ASN1SizeError("SMServingNode.mSCNumber violates SIZE constraint");
+        }
+        if (this.iPSMGWNumber !== undefined && (this.iPSMGWNumber.length < 1 || this.iPSMGWNumber.length > 20)) {
+            throw new ASN1SizeError("SMServingNode.iPSMGWNumber violates SIZE constraint");
+        }
     }
 
     /**
@@ -238,7 +252,7 @@ let _cached_encoder_for_SMServingNode: $.ASN1Encoder<SMServingNode> | null = nul
  */
 export
 function _encode_SMServingNode (value: SMServingNode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMServingNode) { _cached_encoder_for_SMServingNode = function (value: SMServingNode, elGetter: $.ASN1Encoder<SMServingNode>): _Element {
+    if (!_cached_encoder_for_SMServingNode) { _cached_encoder_for_SMServingNode = function (value: SMServingNode, _elGetter: $.ASN1Encoder<SMServingNode>): _Element {
     const _components: _Element[] = [];
     if (value.sGSNName !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.sGSNName, $.BER));

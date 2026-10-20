@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -71,6 +72,22 @@ class ChangeLocation {
         this.cellId = cellId;
         this.changeTime = changeTime;
         this.mCC_MNC = mCC_MNC;
+    
+        if ((this.locationAreaCode.length !== 2)) {
+            throw new ASN1SizeError("ChangeLocation.locationAreaCode violates SIZE constraint");
+        }
+        if ((this.routingAreaCode.length !== 1)) {
+            throw new ASN1SizeError("ChangeLocation.routingAreaCode violates SIZE constraint");
+        }
+        if (this.cellId !== undefined && (this.cellId.length !== 2)) {
+            throw new ASN1SizeError("ChangeLocation.cellId violates SIZE constraint");
+        }
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ChangeLocation.changeTime violates SIZE constraint");
+        }
+        if (this.mCC_MNC !== undefined && (this.mCC_MNC.length !== 3)) {
+            throw new ASN1SizeError("ChangeLocation.mCC_MNC violates SIZE constraint");
+        }
     }
 
     /**
@@ -186,7 +203,7 @@ let _cached_encoder_for_ChangeLocation: $.ASN1Encoder<ChangeLocation> | null = n
  */
 export
 function _encode_ChangeLocation (value: ChangeLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeLocation) { _cached_encoder_for_ChangeLocation = function (value: ChangeLocation, elGetter: $.ASN1Encoder<ChangeLocation>): _Element {
+    if (!_cached_encoder_for_ChangeLocation) { _cached_encoder_for_ChangeLocation = function (value: ChangeLocation, _elGetter: $.ASN1Encoder<ChangeLocation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.locationAreaCode, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.routingAreaCode, $.BER));

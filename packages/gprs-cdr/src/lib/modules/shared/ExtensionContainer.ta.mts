@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateExtension, _decode_PrivateExtension, _encode_PrivateExtension } from "./PrivateExtension.ta.mjs";
@@ -56,6 +57,10 @@ class ExtensionContainer {
         this.privateExtensionList = privateExtensionList;
         this.pcs_Extensions = pcs_Extensions;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    
+        if (this.privateExtensionList !== undefined && (this.privateExtensionList.length < 1 || this.privateExtensionList.length > 10)) {
+            throw new ASN1SizeError("ExtensionContainer.privateExtensionList violates SIZE constraint");
+        }
     }
 
     /**
@@ -161,7 +166,7 @@ let _cached_encoder_for_ExtensionContainer: $.ASN1Encoder<ExtensionContainer> | 
  */
 export
 function _encode_ExtensionContainer (value: ExtensionContainer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExtensionContainer) { _cached_encoder_for_ExtensionContainer = function (value: ExtensionContainer, elGetter: $.ASN1Encoder<ExtensionContainer>): _Element {
+    if (!_cached_encoder_for_ExtensionContainer) { _cached_encoder_for_ExtensionContainer = function (value: ExtensionContainer, _elGetter: $.ASN1Encoder<ExtensionContainer>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

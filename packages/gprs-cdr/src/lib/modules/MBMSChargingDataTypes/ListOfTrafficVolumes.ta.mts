@@ -5,7 +5,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChangeCondition, _decode_ChangeCondition, _encode_ChangeCondition, _enum_for_ChangeCondition } from "../MBMSChargingDataTypes/ChangeCondition.ta.mjs";
@@ -92,6 +93,16 @@ class ListOfTrafficVolumes {
         this.changeCondition = changeCondition;
         this.changeTime = changeTime;
         this.failureHandlingContinue = failureHandlingContinue;
+    
+        if (this.qosRequested !== undefined && (this.qosRequested.length < 4 || this.qosRequested.length > 255)) {
+            throw new ASN1SizeError("ListOfTrafficVolumes.qosRequested violates SIZE constraint");
+        }
+        if (this.qosNegotiated !== undefined && (this.qosNegotiated.length < 4 || this.qosNegotiated.length > 255)) {
+            throw new ASN1SizeError("ListOfTrafficVolumes.qosNegotiated violates SIZE constraint");
+        }
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ListOfTrafficVolumes.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -221,7 +232,7 @@ let _cached_encoder_for_ListOfTrafficVolumes: $.ASN1Encoder<ListOfTrafficVolumes
  */
 export
 function _encode_ListOfTrafficVolumes (value: ListOfTrafficVolumes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ListOfTrafficVolumes) { _cached_encoder_for_ListOfTrafficVolumes = function (value: ListOfTrafficVolumes, elGetter: $.ASN1Encoder<ListOfTrafficVolumes>): _Element {
+    if (!_cached_encoder_for_ListOfTrafficVolumes) { _cached_encoder_for_ListOfTrafficVolumes = function (value: ListOfTrafficVolumes, _elGetter: $.ASN1Encoder<ListOfTrafficVolumes>): _Element {
     const _components: _Element[] = [];
     if (value.qosRequested !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.qosRequested, $.BER));

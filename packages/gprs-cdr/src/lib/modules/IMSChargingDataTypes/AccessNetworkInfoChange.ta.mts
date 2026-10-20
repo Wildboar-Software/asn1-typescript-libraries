@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -62,6 +63,10 @@ class AccessNetworkInfoChange {
         this.additionalAccessNetworkInformation = additionalAccessNetworkInformation;
         this.accessChangeTime = accessChangeTime;
         this.cellularNetworkInformation = cellularNetworkInformation;
+    
+        if (this.accessChangeTime !== undefined && (this.accessChangeTime.length !== 9)) {
+            throw new ASN1SizeError("AccessNetworkInfoChange.accessChangeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -173,7 +178,7 @@ let _cached_encoder_for_AccessNetworkInfoChange: $.ASN1Encoder<AccessNetworkInfo
  */
 export
 function _encode_AccessNetworkInfoChange (value: AccessNetworkInfoChange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessNetworkInfoChange) { _cached_encoder_for_AccessNetworkInfoChange = function (value: AccessNetworkInfoChange, elGetter: $.ASN1Encoder<AccessNetworkInfoChange>): _Element {
+    if (!_cached_encoder_for_AccessNetworkInfoChange) { _cached_encoder_for_AccessNetworkInfoChange = function (value: AccessNetworkInfoChange, _elGetter: $.ASN1Encoder<AccessNetworkInfoChange>): _Element {
     const _components: _Element[] = [];
     if (value.accessNetworkInformation !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.accessNetworkInformation, $.BER));

@@ -147,7 +147,7 @@ let _cached_encoder_for_SubjectComponent: $.ASN1Encoder<SubjectComponent> | null
  */
 export
 function _encode_SubjectComponent (value: SubjectComponent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubjectComponent) { _cached_encoder_for_SubjectComponent = function (value: SubjectComponent, elGetter: $.ASN1Encoder<SubjectComponent>): _Element {
+    if (!_cached_encoder_for_SubjectComponent) { _cached_encoder_for_SubjectComponent = function (value: SubjectComponent, _elGetter: $.ASN1Encoder<SubjectComponent>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.subjectType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.subjectSize, $.BER)

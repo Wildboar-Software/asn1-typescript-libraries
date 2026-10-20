@@ -159,7 +159,7 @@ let _cached_encoder_for_ChangedParameters: $.ASN1Encoder<ChangedParameters> | nu
  */
 export
 function _encode_ChangedParameters (value: ChangedParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangedParameters) { _cached_encoder_for_ChangedParameters = function (value: ChangedParameters, elGetter: $.ASN1Encoder<ChangedParameters>): _Element {
+    if (!_cached_encoder_for_ChangedParameters) { _cached_encoder_for_ChangedParameters = function (value: ChangedParameters, _elGetter: $.ASN1Encoder<ChangedParameters>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ChangedParameters_changeFlags, $.BER)(value.changeFlags, $.BER));
     if (value.changeList !== undefined) {

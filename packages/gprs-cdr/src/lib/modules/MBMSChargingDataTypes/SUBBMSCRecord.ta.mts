@@ -6,7 +6,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MBMSChargingDataTypes/RecordType.ta.mjs";
@@ -217,6 +219,25 @@ class SUBBMSCRecord {
         this.bearerServiceDescription = bearerServiceDescription;
         this.mbmsInformation = mbmsInformation;
         this.serviceContextID = serviceContextID;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("SUBBMSCRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("SUBBMSCRecord.accessPointNameNI violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("SUBBMSCRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("SUBBMSCRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SUBBMSCRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("SUBBMSCRecord.servedMSISDN violates SIZE constraint");
+        }
     }
 
     /**
@@ -388,7 +409,7 @@ let _cached_encoder_for_SUBBMSCRecord: $.ASN1Encoder<SUBBMSCRecord> | null = nul
  */
 export
 function _encode_SUBBMSCRecord (value: SUBBMSCRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SUBBMSCRecord) { _cached_encoder_for_SUBBMSCRecord = function (value: SUBBMSCRecord, elGetter: $.ASN1Encoder<SUBBMSCRecord>): _Element {
+    if (!_cached_encoder_for_SUBBMSCRecord) { _cached_encoder_for_SUBBMSCRecord = function (value: SUBBMSCRecord, _elGetter: $.ASN1Encoder<SUBBMSCRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

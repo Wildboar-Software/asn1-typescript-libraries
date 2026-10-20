@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSClientIdentity_lcsClientExternalID, _decode_LCSClientIdentity_lcsClientExternalID, _encode_LCSClientIdentity_lcsClientExternalID } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID.ta.mjs";
@@ -72,6 +73,10 @@ class LCSClientIdentity {
         this.lcsClientExternalID = lcsClientExternalID;
         this.lcsClientDialedByMS = lcsClientDialedByMS;
         this.lcsClientInternalID = lcsClientInternalID;
+    
+        if (this.lcsClientDialedByMS !== undefined && (this.lcsClientDialedByMS.length < 1 || this.lcsClientDialedByMS.length > 20)) {
+            throw new ASN1SizeError("LCSClientIdentity.lcsClientDialedByMS violates SIZE constraint");
+        }
     }
 
     /**
@@ -185,7 +190,7 @@ let _cached_encoder_for_LCSClientIdentity: $.ASN1Encoder<LCSClientIdentity> | nu
  */
 export
 function _encode_LCSClientIdentity (value: LCSClientIdentity, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientIdentity) { _cached_encoder_for_LCSClientIdentity = function (value: LCSClientIdentity, elGetter: $.ASN1Encoder<LCSClientIdentity>): _Element {
+    if (!_cached_encoder_for_LCSClientIdentity) { _cached_encoder_for_LCSClientIdentity = function (value: LCSClientIdentity, _elGetter: $.ASN1Encoder<LCSClientIdentity>): _Element {
     const _components: _Element[] = [];
     if (value.lcsClientExternalID !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_LCSClientIdentity_lcsClientExternalID, $.BER)(value.lcsClientExternalID, $.BER));

@@ -147,7 +147,7 @@ let _cached_encoder_for_OriginDestCombination: $.ASN1Encoder<OriginDestCombinati
  */
 export
 function _encode_OriginDestCombination (value: OriginDestCombination, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginDestCombination) { _cached_encoder_for_OriginDestCombination = function (value: OriginDestCombination, elGetter: $.ASN1Encoder<OriginDestCombination>): _Element {
+    if (!_cached_encoder_for_OriginDestCombination) { _cached_encoder_for_OriginDestCombination = function (value: OriginDestCombination, _elGetter: $.ASN1Encoder<OriginDestCombination>): _Element {
     const _components: _Element[] = [];
     if (value.origin !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.origin, $.BER));

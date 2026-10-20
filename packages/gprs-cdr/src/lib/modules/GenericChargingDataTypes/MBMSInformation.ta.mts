@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MBMSServiceType, _decode_MBMSServiceType, _encode_MBMSServiceType, _enum_for_MBMSServiceType } from "../GenericChargingDataTypes/MBMSServiceType.ta.mjs";
@@ -153,6 +154,22 @@ class MBMSInformation {
         this.cNIPMulticastDistribution = cNIPMulticastDistribution;
         this.mBMSDataTransferStart = mBMSDataTransferStart;
         this.mBMSDataTransferStop = mBMSDataTransferStop;
+    
+        if (this.mBMSSessionIdentity !== undefined && (this.mBMSSessionIdentity.length !== 1)) {
+            throw new ASN1SizeError("MBMSInformation.mBMSSessionIdentity violates SIZE constraint");
+        }
+        if (this.rAI !== undefined && (this.rAI.length !== 1)) {
+            throw new ASN1SizeError("MBMSInformation.rAI violates SIZE constraint");
+        }
+        if (this.requiredMBMSBearerCaps !== undefined && (this.requiredMBMSBearerCaps.length < 3 || this.requiredMBMSBearerCaps.length > 14)) {
+            throw new ASN1SizeError("MBMSInformation.requiredMBMSBearerCaps violates SIZE constraint");
+        }
+        if (this.mBMSDataTransferStart !== undefined && (this.mBMSDataTransferStart.length !== 8)) {
+            throw new ASN1SizeError("MBMSInformation.mBMSDataTransferStart violates SIZE constraint");
+        }
+        if (this.mBMSDataTransferStop !== undefined && (this.mBMSDataTransferStop.length !== 8)) {
+            throw new ASN1SizeError("MBMSInformation.mBMSDataTransferStop violates SIZE constraint");
+        }
     }
 
     /**
@@ -328,7 +345,7 @@ let _cached_encoder_for_MBMSInformation: $.ASN1Encoder<MBMSInformation> | null =
  */
 export
 function _encode_MBMSInformation (value: MBMSInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MBMSInformation) { _cached_encoder_for_MBMSInformation = function (value: MBMSInformation, elGetter: $.ASN1Encoder<MBMSInformation>): _Element {
+    if (!_cached_encoder_for_MBMSInformation) { _cached_encoder_for_MBMSInformation = function (value: MBMSInformation, _elGetter: $.ASN1Encoder<MBMSInformation>): _Element {
     const _components: _Element[] = [];
     if (value.tMGI !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.tMGI, $.BER));

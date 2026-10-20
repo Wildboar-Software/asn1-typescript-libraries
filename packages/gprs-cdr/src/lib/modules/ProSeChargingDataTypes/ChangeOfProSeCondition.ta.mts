@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CoverageStatus, _encode_CoverageStatus, _enum_for_CoverageStatus, CoverageStatus } from "../ProSeChargingDataTypes/CoverageStatus.ta.mjs";
@@ -127,6 +129,16 @@ class ChangeOfProSeCondition {
         this.radioResourcesInd = radioResourcesInd;
         this.radiofrequency = radiofrequency;
         this.vPLMNIdentifier = vPLMNIdentifier;
+    
+        if (this.changeConditionTimestamp !== undefined && (this.changeConditionTimestamp.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfProSeCondition.changeConditionTimestamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("ChangeOfProSeCondition.localSequenceNumber violates INTEGER range");
+        }
+        if (this.vPLMNIdentifier !== undefined && (this.vPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("ChangeOfProSeCondition.vPLMNIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -268,7 +280,7 @@ let _cached_encoder_for_ChangeOfProSeCondition: $.ASN1Encoder<ChangeOfProSeCondi
  */
 export
 function _encode_ChangeOfProSeCondition (value: ChangeOfProSeCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeOfProSeCondition) { _cached_encoder_for_ChangeOfProSeCondition = function (value: ChangeOfProSeCondition, elGetter: $.ASN1Encoder<ChangeOfProSeCondition>): _Element {
+    if (!_cached_encoder_for_ChangeOfProSeCondition) { _cached_encoder_for_ChangeOfProSeCondition = function (value: ChangeOfProSeCondition, _elGetter: $.ASN1Encoder<ChangeOfProSeCondition>): _Element {
     const _components: _Element[] = [];
     if (value.changeConditionTimestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.changeConditionTimestamp, $.BER));

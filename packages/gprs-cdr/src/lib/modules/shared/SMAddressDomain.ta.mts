@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     GraphicString,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,6 +46,10 @@ class SMAddressDomain {
     ) {
         this.sMDomainName = sMDomainName;
         this.threeGPPIMSI_MCC_MNC = threeGPPIMSI_MCC_MNC;
+    
+        if (this.threeGPPIMSI_MCC_MNC !== undefined && (this.threeGPPIMSI_MCC_MNC.length !== 3)) {
+            throw new ASN1SizeError("SMAddressDomain.threeGPPIMSI_MCC_MNC violates SIZE constraint");
+        }
     }
 
     /**
@@ -148,7 +153,7 @@ let _cached_encoder_for_SMAddressDomain: $.ASN1Encoder<SMAddressDomain> | null =
  */
 export
 function _encode_SMAddressDomain (value: SMAddressDomain, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMAddressDomain) { _cached_encoder_for_SMAddressDomain = function (value: SMAddressDomain, elGetter: $.ASN1Encoder<SMAddressDomain>): _Element {
+    if (!_cached_encoder_for_SMAddressDomain) { _cached_encoder_for_SMAddressDomain = function (value: SMAddressDomain, _elGetter: $.ASN1Encoder<SMAddressDomain>): _Element {
     const _components: _Element[] = [];
     if (value.sMDomainName !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGraphicString, $.BER)(value.sMDomainName, $.BER));

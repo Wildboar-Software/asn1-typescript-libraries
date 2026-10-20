@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -198,6 +200,13 @@ class MMFRecord {
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
         this.mMBoxstorageInformation = mMBoxstorageInformation;
+    
+        if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MMFRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MMFRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -371,7 +380,7 @@ let _cached_encoder_for_MMFRecord: $.ASN1Encoder<MMFRecord> | null = null;
  */
 export
 function _encode_MMFRecord (value: MMFRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMFRecord) { _cached_encoder_for_MMFRecord = function (value: MMFRecord, elGetter: $.ASN1Encoder<MMFRecord>): _Element {
+    if (!_cached_encoder_for_MMFRecord) { _cached_encoder_for_MMFRecord = function (value: MMFRecord, _elGetter: $.ASN1Encoder<MMFRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MMSRSAddress, $.BER)(value.forwardingMmsRSAddress, $.BER));

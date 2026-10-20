@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InitiatingParty, _decode_InitiatingParty, _encode_InitiatingParty, _enum_for_InitiatingParty } from "../CSChargingDataTypes/InitiatingParty.ta.mjs";
@@ -86,6 +87,10 @@ class HSCSDParmsChange {
         this.aiurRequested = aiurRequested;
         this.chanCodingUsed = chanCodingUsed;
         this.hSCSDChanRequested = hSCSDChanRequested;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("HSCSDParmsChange.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -223,7 +228,7 @@ let _cached_encoder_for_HSCSDParmsChange: $.ASN1Encoder<HSCSDParmsChange> | null
  */
 export
 function _encode_HSCSDParmsChange (value: HSCSDParmsChange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HSCSDParmsChange) { _cached_encoder_for_HSCSDParmsChange = function (value: HSCSDParmsChange, elGetter: $.ASN1Encoder<HSCSDParmsChange>): _Element {
+    if (!_cached_encoder_for_HSCSDParmsChange) { _cached_encoder_for_HSCSDParmsChange = function (value: HSCSDParmsChange, _elGetter: $.ASN1Encoder<HSCSDParmsChange>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.changeTime, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.hSCSDChanAllocated, $.BER));

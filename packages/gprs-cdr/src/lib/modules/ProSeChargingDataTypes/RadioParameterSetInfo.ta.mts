@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,6 +45,10 @@ class RadioParameterSetInfo {
     ) {
         this.timeStamp = timeStamp;
         this.params = params;
+    
+        if (this.timeStamp !== undefined && (this.timeStamp.length !== 9)) {
+            throw new ASN1SizeError("RadioParameterSetInfo.timeStamp violates SIZE constraint");
+        }
     }
 
     /**
@@ -147,7 +152,7 @@ let _cached_encoder_for_RadioParameterSetInfo: $.ASN1Encoder<RadioParameterSetIn
  */
 export
 function _encode_RadioParameterSetInfo (value: RadioParameterSetInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RadioParameterSetInfo) { _cached_encoder_for_RadioParameterSetInfo = function (value: RadioParameterSetInfo, elGetter: $.ASN1Encoder<RadioParameterSetInfo>): _Element {
+    if (!_cached_encoder_for_RadioParameterSetInfo) { _cached_encoder_for_RadioParameterSetInfo = function (value: RadioParameterSetInfo, _elGetter: $.ASN1Encoder<RadioParameterSetInfo>): _Element {
     const _components: _Element[] = [];
     if (value.timeStamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.timeStamp, $.BER));

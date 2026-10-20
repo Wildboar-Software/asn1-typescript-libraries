@@ -198,7 +198,7 @@ let _cached_encoder_for_MMBoxStorageInformation: $.ASN1Encoder<MMBoxStorageInfor
  */
 export
 function _encode_MMBoxStorageInformation (value: MMBoxStorageInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMBoxStorageInformation) { _cached_encoder_for_MMBoxStorageInformation = function (value: MMBoxStorageInformation, elGetter: $.ASN1Encoder<MMBoxStorageInformation>): _Element {
+    if (!_cached_encoder_for_MMBoxStorageInformation) { _cached_encoder_for_MMBoxStorageInformation = function (value: MMBoxStorageInformation, _elGetter: $.ASN1Encoder<MMBoxStorageInformation>): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_MMState, $.BER)(value.mmState, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.mmFlag, $.BER),

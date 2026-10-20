@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MONTEChargingDataTypes/RecordType.ta.mjs";
@@ -247,6 +249,28 @@ class MECORecord {
         this.listofLocations = listofLocations;
         this.monitoringEventConfigStatus = monitoringEventConfigStatus;
         this.recordExtensions = recordExtensions;
+    
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("MECORecord.nodeID violates SIZE constraint");
+        }
+        if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MECORecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.eventTimestamp !== undefined && (this.eventTimestamp.length !== 9)) {
+            throw new ASN1SizeError("MECORecord.eventTimestamp violates SIZE constraint");
+        }
+        if (this.sCEFReferenceID !== undefined && ((typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) < 0 || (typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) > 4294967295)) {
+            throw new ASN1OverflowError("MECORecord.sCEFReferenceID violates INTEGER range");
+        }
+        if (this.monitoringDuration !== undefined && (this.monitoringDuration.length !== 9)) {
+            throw new ASN1SizeError("MECORecord.monitoringDuration violates SIZE constraint");
+        }
+        if (this.monitoredUser !== undefined && (this.monitoredUser.length < 3 || this.monitoredUser.length > 8)) {
+            throw new ASN1SizeError("MECORecord.monitoredUser violates SIZE constraint");
+        }
+        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MECORecord.localRecordSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -458,7 +482,7 @@ let _cached_encoder_for_MECORecord: $.ASN1Encoder<MECORecord> | null = null;
  */
 export
 function _encode_MECORecord (value: MECORecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MECORecord) { _cached_encoder_for_MECORecord = function (value: MECORecord, elGetter: $.ASN1Encoder<MECORecord>): _Element {
+    if (!_cached_encoder_for_MECORecord) { _cached_encoder_for_MECORecord = function (value: MECORecord, _elGetter: $.ASN1Encoder<MECORecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

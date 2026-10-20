@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -95,6 +96,19 @@ class MOSMSIWRecord {
         this.eventTime = eventTime;
         this.smsResult = smsResult;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.serviceCentre.length < 1 || this.serviceCentre.length > 20)) {
+            throw new ASN1SizeError("MOSMSIWRecord.serviceCentre violates SIZE constraint");
+        }
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("MOSMSIWRecord.servedIMSI violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("MOSMSIWRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.eventTime.length !== 9)) {
+            throw new ASN1SizeError("MOSMSIWRecord.eventTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -222,7 +236,7 @@ let _cached_encoder_for_MOSMSIWRecord: $.ASN1Encoder<MOSMSIWRecord> | null = nul
  */
 export
 function _encode_MOSMSIWRecord (value: MOSMSIWRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MOSMSIWRecord) { _cached_encoder_for_MOSMSIWRecord = function (value: MOSMSIWRecord, elGetter: $.ASN1Encoder<MOSMSIWRecord>): _Element {
+    if (!_cached_encoder_for_MOSMSIWRecord) { _cached_encoder_for_MOSMSIWRecord = function (value: MOSMSIWRecord, _elGetter: $.ASN1Encoder<MOSMSIWRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.serviceCentre, $.BER));

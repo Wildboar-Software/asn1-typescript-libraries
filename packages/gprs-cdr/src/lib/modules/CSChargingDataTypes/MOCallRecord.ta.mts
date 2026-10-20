@@ -7,7 +7,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -834,6 +836,73 @@ class MOCallRecord {
         this.iCSI2ActiveFlag = iCSI2ActiveFlag;
         this.iMS_Charging_Identifier = iMS_Charging_Identifier;
         this.privateUserID = privateUserID;
+    
+        if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("MOCallRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("MOCallRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("MOCallRecord.servedMSISDN violates SIZE constraint");
+        }
+        if (this.roamingNumber !== undefined && (this.roamingNumber.length < 1 || this.roamingNumber.length > 9)) {
+            throw new ASN1SizeError("MOCallRecord.roamingNumber violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("MOCallRecord.recordingEntity violates SIZE constraint");
+        }
+        if (this.seizureTime !== undefined && (this.seizureTime.length !== 9)) {
+            throw new ASN1SizeError("MOCallRecord.seizureTime violates SIZE constraint");
+        }
+        if (this.answerTime !== undefined && (this.answerTime.length !== 9)) {
+            throw new ASN1SizeError("MOCallRecord.answerTime violates SIZE constraint");
+        }
+        if (this.releaseTime !== undefined && (this.releaseTime.length !== 9)) {
+            throw new ASN1SizeError("MOCallRecord.releaseTime violates SIZE constraint");
+        }
+        if ((this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("MOCallRecord.callReference violates SIZE constraint");
+        }
+        if (this.gsm_SCFAddress !== undefined && (this.gsm_SCFAddress.length < 1 || this.gsm_SCFAddress.length > 9)) {
+            throw new ASN1SizeError("MOCallRecord.gsm_SCFAddress violates SIZE constraint");
+        }
+        if (this.serviceKey !== undefined && ((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+            throw new ASN1OverflowError("MOCallRecord.serviceKey violates INTEGER range");
+        }
+        if (this.networkCallReference !== undefined && (this.networkCallReference.length < 1 || this.networkCallReference.length > 8)) {
+            throw new ASN1SizeError("MOCallRecord.networkCallReference violates SIZE constraint");
+        }
+        if (this.mSCAddress !== undefined && (this.mSCAddress.length < 1 || this.mSCAddress.length > 20)) {
+            throw new ASN1SizeError("MOCallRecord.mSCAddress violates SIZE constraint");
+        }
+        if (this.speechVersionSupported !== undefined && (this.speechVersionSupported.length !== 1)) {
+            throw new ASN1SizeError("MOCallRecord.speechVersionSupported violates SIZE constraint");
+        }
+        if (this.speechVersionUsed !== undefined && (this.speechVersionUsed.length !== 1)) {
+            throw new ASN1SizeError("MOCallRecord.speechVersionUsed violates SIZE constraint");
+        }
+        if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {
+            throw new ASN1SizeError("MOCallRecord.freeFormatData violates SIZE constraint");
+        }
+        if (this.gsm_SCFAddress_2 !== undefined && (this.gsm_SCFAddress_2.length < 1 || this.gsm_SCFAddress_2.length > 9)) {
+            throw new ASN1SizeError("MOCallRecord.gsm_SCFAddress_2 violates SIZE constraint");
+        }
+        if (this.serviceKey_2 !== undefined && ((typeof this.serviceKey_2 === "bigint" ? Number(this.serviceKey_2) : this.serviceKey_2) < 0 || (typeof this.serviceKey_2 === "bigint" ? Number(this.serviceKey_2) : this.serviceKey_2) > 2147483647)) {
+            throw new ASN1OverflowError("MOCallRecord.serviceKey_2 violates INTEGER range");
+        }
+        if (this.freeFormatData_2 !== undefined && (this.freeFormatData_2.length < 1 || this.freeFormatData_2.length > 160)) {
+            throw new ASN1SizeError("MOCallRecord.freeFormatData_2 violates SIZE constraint");
+        }
+        if (this.rateIndication !== undefined && (this.rateIndication.length !== 1)) {
+            throw new ASN1SizeError("MOCallRecord.rateIndication violates SIZE constraint");
+        }
+        if (this.locationRoutNum !== undefined && (this.locationRoutNum.length !== 5)) {
+            throw new ASN1SizeError("MOCallRecord.locationRoutNum violates SIZE constraint");
+        }
+        if (this.jIPPara !== undefined && (this.jIPPara.length !== 5)) {
+            throw new ASN1SizeError("MOCallRecord.jIPPara violates SIZE constraint");
+        }
     }
 
     /**
@@ -1329,7 +1398,7 @@ let _cached_encoder_for_MOCallRecord: $.ASN1Encoder<MOCallRecord> | null = null;
  */
 export
 function _encode_MOCallRecord (value: MOCallRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MOCallRecord) { _cached_encoder_for_MOCallRecord = function (value: MOCallRecord, elGetter: $.ASN1Encoder<MOCallRecord>): _Element {
+    if (!_cached_encoder_for_MOCallRecord) { _cached_encoder_for_MOCallRecord = function (value: MOCallRecord, _elGetter: $.ASN1Encoder<MOCallRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.servedIMSI !== undefined) {

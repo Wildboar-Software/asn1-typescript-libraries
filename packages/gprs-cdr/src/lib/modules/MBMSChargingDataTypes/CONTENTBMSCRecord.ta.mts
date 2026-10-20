@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MBMSChargingDataTypes/RecordType.ta.mjs";
@@ -229,6 +231,29 @@ class CONTENTBMSCRecord {
         this.mbmsInformation = mbmsInformation;
         this.serviceContextID = serviceContextID;
         this.servedpdpPDNType = servedpdpPDNType;
+    
+        if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("CONTENTBMSCRecord.accessPointNameNI violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("CONTENTBMSCRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("CONTENTBMSCRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("CONTENTBMSCRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.recipientAddressList) {
+            for (const _item of this.recipientAddressList) {
+                if (_item.length < 1 || _item.length > 9) {
+                    throw new ASN1SizeError("CONTENTBMSCRecord.recipientAddressList element violates SIZE constraint");
+                }
+            }
+        }
+        if (this.servedpdpPDNType !== undefined && (this.servedpdpPDNType.length !== 2)) {
+            throw new ASN1SizeError("CONTENTBMSCRecord.servedpdpPDNType violates SIZE constraint");
+        }
     }
 
     /**
@@ -404,7 +429,7 @@ let _cached_encoder_for_CONTENTBMSCRecord: $.ASN1Encoder<CONTENTBMSCRecord> | nu
  */
 export
 function _encode_CONTENTBMSCRecord (value: CONTENTBMSCRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CONTENTBMSCRecord) { _cached_encoder_for_CONTENTBMSCRecord = function (value: CONTENTBMSCRecord, elGetter: $.ASN1Encoder<CONTENTBMSCRecord>): _Element {
+    if (!_cached_encoder_for_CONTENTBMSCRecord) { _cached_encoder_for_CONTENTBMSCRecord = function (value: CONTENTBMSCRecord, _elGetter: $.ASN1Encoder<CONTENTBMSCRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeGraphicString, $.BER)(value.contentProviderId, $.BER));

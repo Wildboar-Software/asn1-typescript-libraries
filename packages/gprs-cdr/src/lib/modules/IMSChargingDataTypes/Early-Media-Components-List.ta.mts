@@ -5,7 +5,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Component, _decode_SDP_Media_Component, _encode_SDP_Media_Component } from "../IMSChargingDataTypes/SDP-Media-Component.ta.mjs";
@@ -87,6 +88,13 @@ class Early_Media_Components_List {
         this.mediaInitiatorFlag = mediaInitiatorFlag;
         this.sDP_Session_Description = sDP_Session_Description;
         this.sDP_Type = sDP_Type;
+    
+        if (this.sDP_Offer_Timestamp !== undefined && (this.sDP_Offer_Timestamp.length !== 9)) {
+            throw new ASN1SizeError("Early_Media_Components_List.sDP_Offer_Timestamp violates SIZE constraint");
+        }
+        if (this.sDP_Answer_Timestamp !== undefined && (this.sDP_Answer_Timestamp.length !== 9)) {
+            throw new ASN1SizeError("Early_Media_Components_List.sDP_Answer_Timestamp violates SIZE constraint");
+        }
     }
 
     /**
@@ -212,7 +220,7 @@ let _cached_encoder_for_Early_Media_Components_List: $.ASN1Encoder<Early_Media_C
  */
 export
 function _encode_Early_Media_Components_List (value: Early_Media_Components_List, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Early_Media_Components_List) { _cached_encoder_for_Early_Media_Components_List = function (value: Early_Media_Components_List, elGetter: $.ASN1Encoder<Early_Media_Components_List>): _Element {
+    if (!_cached_encoder_for_Early_Media_Components_List) { _cached_encoder_for_Early_Media_Components_List = function (value: Early_Media_Components_List, _elGetter: $.ASN1Encoder<Early_Media_Components_List>): _Element {
     const _components: _Element[] = [];
     if (value.sDP_Offer_Timestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.sDP_Offer_Timestamp, $.BER));

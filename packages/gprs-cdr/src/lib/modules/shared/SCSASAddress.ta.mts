@@ -151,7 +151,7 @@ let _cached_encoder_for_SCSASAddress: $.ASN1Encoder<SCSASAddress> | null = null;
  */
 export
 function _encode_SCSASAddress (value: SCSASAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCSASAddress) { _cached_encoder_for_SCSASAddress = function (value: SCSASAddress, elGetter: $.ASN1Encoder<SCSASAddress>): _Element {
+    if (!_cached_encoder_for_SCSASAddress) { _cached_encoder_for_SCSASAddress = function (value: SCSASAddress, _elGetter: $.ASN1Encoder<SCSASAddress>): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_IPAddress, $.BER)(value.sCSAddress, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.sCSRealm, $.BER)

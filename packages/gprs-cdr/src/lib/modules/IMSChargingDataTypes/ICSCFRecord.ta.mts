@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../IMSChargingDataTypes/RecordType.ta.mjs";
@@ -378,6 +380,19 @@ class ICSCFRecord {
         this.s_CSCF_Information = s_CSCF_Information;
         this.cellularNetworkInformation = cellularNetworkInformation;
         this.fEIdentifierList = fEIdentifierList;
+    
+        if (this.serviceRequestTimeStamp !== undefined && (this.serviceRequestTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("ICSCFRecord.serviceRequestTimeStamp violates SIZE constraint");
+        }
+        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("ICSCFRecord.localRecordSequenceNumber violates INTEGER range");
+        }
+        if (this.serviceRequestTimeStampFraction !== undefined && ((typeof this.serviceRequestTimeStampFraction === "bigint" ? Number(this.serviceRequestTimeStampFraction) : this.serviceRequestTimeStampFraction) < 0 || (typeof this.serviceRequestTimeStampFraction === "bigint" ? Number(this.serviceRequestTimeStampFraction) : this.serviceRequestTimeStampFraction) > 999)) {
+            throw new ASN1OverflowError("ICSCFRecord.serviceRequestTimeStampFraction violates INTEGER range");
+        }
+        if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("ICSCFRecord.mSTimeZone violates SIZE constraint");
+        }
     }
 
     /**
@@ -639,7 +654,7 @@ let _cached_encoder_for_ICSCFRecord: $.ASN1Encoder<ICSCFRecord> | null = null;
  */
 export
 function _encode_ICSCFRecord (value: ICSCFRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ICSCFRecord) { _cached_encoder_for_ICSCFRecord = function (value: ICSCFRecord, elGetter: $.ASN1Encoder<ICSCFRecord>): _Element {
+    if (!_cached_encoder_for_ICSCFRecord) { _cached_encoder_for_ICSCFRecord = function (value: ICSCFRecord, _elGetter: $.ASN1Encoder<ICSCFRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocationAreaAndCell, _decode_LocationAreaAndCell, _encode_LocationAreaAndCell } from "../CSChargingDataTypes/LocationAreaAndCell.ta.mjs";
@@ -45,6 +46,10 @@ class LocationChange {
     ) {
         this.location = location;
         this.changeTime = changeTime;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("LocationChange.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -147,7 +152,7 @@ let _cached_encoder_for_LocationChange: $.ASN1Encoder<LocationChange> | null = n
  */
 export
 function _encode_LocationChange (value: LocationChange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocationChange) { _cached_encoder_for_LocationChange = function (value: LocationChange, elGetter: $.ASN1Encoder<LocationChange>): _Element {
+    if (!_cached_encoder_for_LocationChange) { _cached_encoder_for_LocationChange = function (value: LocationChange, _elGetter: $.ASN1Encoder<LocationChange>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_LocationAreaAndCell, $.BER)(value.location, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.changeTime, $.BER)

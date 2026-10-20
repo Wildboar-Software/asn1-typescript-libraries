@@ -3,7 +3,8 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../MMSChargingDataTypes/IPAddress.ta.mjs";
@@ -45,6 +46,10 @@ class PacketSwitchedAccess {
     ) {
         this.gSNAddress = gSNAddress;
         this.chargingID = chargingID;
+    
+        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+            throw new ASN1OverflowError("PacketSwitchedAccess.chargingID violates INTEGER range");
+        }
     }
 
     /**
@@ -147,7 +152,7 @@ let _cached_encoder_for_PacketSwitchedAccess: $.ASN1Encoder<PacketSwitchedAccess
  */
 export
 function _encode_PacketSwitchedAccess (value: PacketSwitchedAccess, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PacketSwitchedAccess) { _cached_encoder_for_PacketSwitchedAccess = function (value: PacketSwitchedAccess, elGetter: $.ASN1Encoder<PacketSwitchedAccess>): _Element {
+    if (!_cached_encoder_for_PacketSwitchedAccess) { _cached_encoder_for_PacketSwitchedAccess = function (value: PacketSwitchedAccess, _elGetter: $.ASN1Encoder<PacketSwitchedAccess>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_IPAddress, $.BER)(value.gSNAddress, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.chargingID, $.BER)

@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresenceReportingAreaStatus, _decode_PresenceReportingAreaStatus, _encode_PresenceReportingAreaStatus, _enum_for_PresenceReportingAreaStatus } from "../GPRSChargingDataTypes/PresenceReportingAreaStatus.ta.mjs";
@@ -97,6 +98,10 @@ class RelatedChangeOfServiceCondition {
         this.rATType = rATType;
         this.uWANUserLocationInformation = uWANUserLocationInformation;
         this.relatedServiceConditionChange = relatedServiceConditionChange;
+    
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("RelatedChangeOfServiceCondition.rATType violates INTEGER range");
+        }
     }
 
     /**
@@ -226,7 +231,7 @@ let _cached_encoder_for_RelatedChangeOfServiceCondition: $.ASN1Encoder<RelatedCh
  */
 export
 function _encode_RelatedChangeOfServiceCondition (value: RelatedChangeOfServiceCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RelatedChangeOfServiceCondition) { _cached_encoder_for_RelatedChangeOfServiceCondition = function (value: RelatedChangeOfServiceCondition, elGetter: $.ASN1Encoder<RelatedChangeOfServiceCondition>): _Element {
+    if (!_cached_encoder_for_RelatedChangeOfServiceCondition) { _cached_encoder_for_RelatedChangeOfServiceCondition = function (value: RelatedChangeOfServiceCondition, _elGetter: $.ASN1Encoder<RelatedChangeOfServiceCondition>): _Element {
     const _components: _Element[] = [];
     if (value.userLocationInformation !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 20, () => $._encodeOctetString, $.BER)(value.userLocationInformation, $.BER));

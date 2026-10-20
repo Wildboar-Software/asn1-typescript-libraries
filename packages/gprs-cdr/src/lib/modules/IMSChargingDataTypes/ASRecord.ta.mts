@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../IMSChargingDataTypes/RecordType.ta.mjs";
@@ -685,6 +687,43 @@ class ASRecord {
         this.msc_Address = msc_Address;
         this.threeGPPPSDataOffStatus = threeGPPPSDataOffStatus;
         this.fEIdentifierList = fEIdentifierList;
+    
+        if (this.serviceRequestTimeStamp !== undefined && (this.serviceRequestTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("ASRecord.serviceRequestTimeStamp violates SIZE constraint");
+        }
+        if (this.serviceDeliveryStartTimeStamp !== undefined && (this.serviceDeliveryStartTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("ASRecord.serviceDeliveryStartTimeStamp violates SIZE constraint");
+        }
+        if (this.serviceDeliveryEndTimeStamp !== undefined && (this.serviceDeliveryEndTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("ASRecord.serviceDeliveryEndTimeStamp violates SIZE constraint");
+        }
+        if (this.recordOpeningTime !== undefined && (this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("ASRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.recordClosureTime !== undefined && (this.recordClosureTime.length !== 9)) {
+            throw new ASN1SizeError("ASRecord.recordClosureTime violates SIZE constraint");
+        }
+        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("ASRecord.localRecordSequenceNumber violates INTEGER range");
+        }
+        if (this.serviceRequestTimeStampFraction !== undefined && ((typeof this.serviceRequestTimeStampFraction === "bigint" ? Number(this.serviceRequestTimeStampFraction) : this.serviceRequestTimeStampFraction) < 0 || (typeof this.serviceRequestTimeStampFraction === "bigint" ? Number(this.serviceRequestTimeStampFraction) : this.serviceRequestTimeStampFraction) > 999)) {
+            throw new ASN1OverflowError("ASRecord.serviceRequestTimeStampFraction violates INTEGER range");
+        }
+        if (this.serviceDeliveryStartTimeStampFraction !== undefined && ((typeof this.serviceDeliveryStartTimeStampFraction === "bigint" ? Number(this.serviceDeliveryStartTimeStampFraction) : this.serviceDeliveryStartTimeStampFraction) < 0 || (typeof this.serviceDeliveryStartTimeStampFraction === "bigint" ? Number(this.serviceDeliveryStartTimeStampFraction) : this.serviceDeliveryStartTimeStampFraction) > 999)) {
+            throw new ASN1OverflowError("ASRecord.serviceDeliveryStartTimeStampFraction violates INTEGER range");
+        }
+        if (this.serviceDeliveryEndTimeStampFraction !== undefined && ((typeof this.serviceDeliveryEndTimeStampFraction === "bigint" ? Number(this.serviceDeliveryEndTimeStampFraction) : this.serviceDeliveryEndTimeStampFraction) < 0 || (typeof this.serviceDeliveryEndTimeStampFraction === "bigint" ? Number(this.serviceDeliveryEndTimeStampFraction) : this.serviceDeliveryEndTimeStampFraction) > 999)) {
+            throw new ASN1OverflowError("ASRecord.serviceDeliveryEndTimeStampFraction violates INTEGER range");
+        }
+        if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("ASRecord.mSTimeZone violates SIZE constraint");
+        }
+        if (this.vlr_Number !== undefined && (this.vlr_Number.length < 1 || this.vlr_Number.length > 20)) {
+            throw new ASN1SizeError("ASRecord.vlr_Number violates SIZE constraint");
+        }
+        if (this.msc_Address !== undefined && (this.msc_Address.length < 1 || this.msc_Address.length > 20)) {
+            throw new ASN1SizeError("ASRecord.msc_Address violates SIZE constraint");
+        }
     }
 
     /**
@@ -1078,7 +1117,7 @@ let _cached_encoder_for_ASRecord: $.ASN1Encoder<ASRecord> | null = null;
  */
 export
 function _encode_ASRecord (value: ASRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ASRecord) { _cached_encoder_for_ASRecord = function (value: ASRecord, elGetter: $.ASN1Encoder<ASRecord>): _Element {
+    if (!_cached_encoder_for_ASRecord) { _cached_encoder_for_ASRecord = function (value: ASRecord, _elGetter: $.ASN1Encoder<ASRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

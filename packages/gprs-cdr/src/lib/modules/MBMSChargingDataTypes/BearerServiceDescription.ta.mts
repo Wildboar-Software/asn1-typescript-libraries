@@ -6,7 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../MBMSChargingDataTypes/SDP-Media-Components.ta.mjs";
@@ -119,6 +121,19 @@ class BearerServiceDescription {
         this.sIP_Request_Timestamp_Fraction = sIP_Request_Timestamp_Fraction;
         this.sIP_Response_Timestamp_Fraction = sIP_Response_Timestamp_Fraction;
         this.sDP_Type = sDP_Type;
+    
+        if (this.sIP_Request_Timestamp !== undefined && (this.sIP_Request_Timestamp.length !== 9)) {
+            throw new ASN1SizeError("BearerServiceDescription.sIP_Request_Timestamp violates SIZE constraint");
+        }
+        if (this.sIP_Response_Timestamp !== undefined && (this.sIP_Response_Timestamp.length !== 9)) {
+            throw new ASN1SizeError("BearerServiceDescription.sIP_Response_Timestamp violates SIZE constraint");
+        }
+        if (this.sIP_Request_Timestamp_Fraction !== undefined && ((typeof this.sIP_Request_Timestamp_Fraction === "bigint" ? Number(this.sIP_Request_Timestamp_Fraction) : this.sIP_Request_Timestamp_Fraction) < 0 || (typeof this.sIP_Request_Timestamp_Fraction === "bigint" ? Number(this.sIP_Request_Timestamp_Fraction) : this.sIP_Request_Timestamp_Fraction) > 999)) {
+            throw new ASN1OverflowError("BearerServiceDescription.sIP_Request_Timestamp_Fraction violates INTEGER range");
+        }
+        if (this.sIP_Response_Timestamp_Fraction !== undefined && ((typeof this.sIP_Response_Timestamp_Fraction === "bigint" ? Number(this.sIP_Response_Timestamp_Fraction) : this.sIP_Response_Timestamp_Fraction) < 0 || (typeof this.sIP_Response_Timestamp_Fraction === "bigint" ? Number(this.sIP_Response_Timestamp_Fraction) : this.sIP_Response_Timestamp_Fraction) > 999)) {
+            throw new ASN1OverflowError("BearerServiceDescription.sIP_Response_Timestamp_Fraction violates INTEGER range");
+        }
     }
 
     /**
@@ -256,7 +271,7 @@ let _cached_encoder_for_BearerServiceDescription: $.ASN1Encoder<BearerServiceDes
  */
 export
 function _encode_BearerServiceDescription (value: BearerServiceDescription, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BearerServiceDescription) { _cached_encoder_for_BearerServiceDescription = function (value: BearerServiceDescription, elGetter: $.ASN1Encoder<BearerServiceDescription>): _Element {
+    if (!_cached_encoder_for_BearerServiceDescription) { _cached_encoder_for_BearerServiceDescription = function (value: BearerServiceDescription, _elGetter: $.ASN1Encoder<BearerServiceDescription>): _Element {
     const _components: _Element[] = [];
     if (value.sIP_Request_Timestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.sIP_Request_Timestamp, $.BER));

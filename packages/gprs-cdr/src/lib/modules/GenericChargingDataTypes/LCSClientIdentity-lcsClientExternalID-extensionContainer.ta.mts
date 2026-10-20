@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer-privateExtensionList-Item.ta.mjs";
@@ -60,6 +61,10 @@ class LCSClientIdentity_lcsClientExternalID_extensionContainer {
         this.privateExtensionList = privateExtensionList;
         this.pcs_Extensions = pcs_Extensions;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    
+        if (this.privateExtensionList !== undefined && (this.privateExtensionList.length < 1 || this.privateExtensionList.length > 10)) {
+            throw new ASN1SizeError("LCSClientIdentity_lcsClientExternalID_extensionContainer.privateExtensionList violates SIZE constraint");
+        }
     }
 
     /**
@@ -165,7 +170,7 @@ let _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer
  */
 export
 function _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer (value: LCSClientIdentity_lcsClientExternalID_extensionContainer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer = function (value: LCSClientIdentity_lcsClientExternalID_extensionContainer, elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID_extensionContainer>): _Element {
+    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer = function (value: LCSClientIdentity_lcsClientExternalID_extensionContainer, _elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID_extensionContainer>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

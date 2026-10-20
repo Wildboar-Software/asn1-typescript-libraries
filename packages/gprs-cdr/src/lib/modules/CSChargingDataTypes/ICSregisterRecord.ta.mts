@@ -5,7 +5,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -157,6 +158,22 @@ class ICSregisterRecord {
         this.transit_IOI_Lists = transit_IOI_Lists;
         this.updateResult = updateResult;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("ICSregisterRecord.servedIMSI violates SIZE constraint");
+        }
+        if ((this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("ICSregisterRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("ICSregisterRecord.recordingEntity violates SIZE constraint");
+        }
+        if (this.locationExtension !== undefined && (this.locationExtension.length !== 12)) {
+            throw new ASN1SizeError("ICSregisterRecord.locationExtension violates SIZE constraint");
+        }
+        if (this.updateTime !== undefined && (this.updateTime.length !== 9)) {
+            throw new ASN1SizeError("ICSregisterRecord.updateTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -308,7 +325,7 @@ let _cached_encoder_for_ICSregisterRecord: $.ASN1Encoder<ICSregisterRecord> | nu
  */
 export
 function _encode_ICSregisterRecord (value: ICSregisterRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ICSregisterRecord) { _cached_encoder_for_ICSregisterRecord = function (value: ICSregisterRecord, elGetter: $.ASN1Encoder<ICSregisterRecord>): _Element {
+    if (!_cached_encoder_for_ICSregisterRecord) { _cached_encoder_for_ICSregisterRecord = function (value: ICSregisterRecord, _elGetter: $.ASN1Encoder<ICSregisterRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

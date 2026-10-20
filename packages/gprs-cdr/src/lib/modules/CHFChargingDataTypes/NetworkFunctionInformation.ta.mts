@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkFunctionality, _decode_NetworkFunctionality, _encode_NetworkFunctionality, _enum_for_NetworkFunctionality } from "../CHFChargingDataTypes/NetworkFunctionality.ta.mjs";
@@ -86,6 +87,13 @@ class NetworkFunctionInformation {
         this.networkFunctionPLMNIdentifier = networkFunctionPLMNIdentifier;
         this.networkFunctionIPv6Address = networkFunctionIPv6Address;
         this.networkFunctionFQDN = networkFunctionFQDN;
+    
+        if (this.networkFunctionName !== undefined && (this.networkFunctionName.length < 1 || this.networkFunctionName.length > 36)) {
+            throw new ASN1SizeError("NetworkFunctionInformation.networkFunctionName violates SIZE constraint");
+        }
+        if (this.networkFunctionPLMNIdentifier !== undefined && (this.networkFunctionPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("NetworkFunctionInformation.networkFunctionPLMNIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -211,7 +219,7 @@ let _cached_encoder_for_NetworkFunctionInformation: $.ASN1Encoder<NetworkFunctio
  */
 export
 function _encode_NetworkFunctionInformation (value: NetworkFunctionInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NetworkFunctionInformation) { _cached_encoder_for_NetworkFunctionInformation = function (value: NetworkFunctionInformation, elGetter: $.ASN1Encoder<NetworkFunctionInformation>): _Element {
+    if (!_cached_encoder_for_NetworkFunctionInformation) { _cached_encoder_for_NetworkFunctionInformation = function (value: NetworkFunctionInformation, _elGetter: $.ASN1Encoder<NetworkFunctionInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_NetworkFunctionality, $.BER)(value.networkFunctionality, $.BER));
     if (value.networkFunctionName !== undefined) {

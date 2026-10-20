@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Trigger, _decode_Trigger, _encode_Trigger } from "../CHFChargingDataTypes/Trigger.ta.mjs";
@@ -191,6 +193,28 @@ class MultipleQFIContainer {
         this.reportTime = reportTime;
         this.servingNetworkFunctionID = servingNetworkFunctionID;
         this.threeGPPPSDataOffStatus = threeGPPPSDataOffStatus;
+    
+        if (this.triggerTimeStamp !== undefined && (this.triggerTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MultipleQFIContainer.triggerTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MultipleQFIContainer.localSequenceNumber violates INTEGER range");
+        }
+        if (this.timeOfFirstUsage !== undefined && (this.timeOfFirstUsage.length !== 9)) {
+            throw new ASN1SizeError("MultipleQFIContainer.timeOfFirstUsage violates SIZE constraint");
+        }
+        if (this.timeOfLastUsage !== undefined && (this.timeOfLastUsage.length !== 9)) {
+            throw new ASN1SizeError("MultipleQFIContainer.timeOfLastUsage violates SIZE constraint");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("MultipleQFIContainer.uETimeZone violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("MultipleQFIContainer.rATType violates INTEGER range");
+        }
+        if ((this.reportTime.length !== 9)) {
+            throw new ASN1SizeError("MultipleQFIContainer.reportTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -360,7 +384,7 @@ let _cached_encoder_for_MultipleQFIContainer: $.ASN1Encoder<MultipleQFIContainer
  */
 export
 function _encode_MultipleQFIContainer (value: MultipleQFIContainer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MultipleQFIContainer) { _cached_encoder_for_MultipleQFIContainer = function (value: MultipleQFIContainer, elGetter: $.ASN1Encoder<MultipleQFIContainer>): _Element {
+    if (!_cached_encoder_for_MultipleQFIContainer) { _cached_encoder_for_MultipleQFIContainer = function (value: MultipleQFIContainer, _elGetter: $.ASN1Encoder<MultipleQFIContainer>): _Element {
     const _components: _Element[] = [];
     if (value.qosFlowId !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.qosFlowId, $.BER));

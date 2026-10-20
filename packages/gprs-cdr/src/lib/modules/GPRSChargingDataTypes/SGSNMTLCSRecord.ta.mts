@@ -6,7 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -328,6 +330,55 @@ class SGSNMTLCSRecord {
         this.causeForRecClosing = causeForRecClosing;
         this.servingNodePLMNIdentifier = servingNodePLMNIdentifier;
         this.cNOperatorSelectionEnt = cNOperatorSelectionEnt;
+    
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.servedMSISDN violates SIZE constraint");
+        }
+        if (this.lcsQos !== undefined && (this.lcsQos.length !== 4)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.lcsQos violates SIZE constraint");
+        }
+        if (this.lcsPriority !== undefined && (this.lcsPriority.length !== 1)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.lcsPriority violates SIZE constraint");
+        }
+        if ((this.mlcNumber.length < 1 || this.mlcNumber.length > 9)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.mlcNumber violates SIZE constraint");
+        }
+        if ((this.eventTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.eventTimeStamp violates SIZE constraint");
+        }
+        if (this.routingArea !== undefined && (this.routingArea.length !== 1)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.routingArea violates SIZE constraint");
+        }
+        if (this.locationEstimate !== undefined && (this.locationEstimate.length < 1 || this.locationEstimate.length > 20)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.locationEstimate violates SIZE constraint");
+        }
+        if (this.positioningData !== undefined && (this.positioningData.length < 1 || this.positioningData.length > 33)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.positioningData violates SIZE constraint");
+        }
+        if (this.lcsCause !== undefined && (this.lcsCause.length !== 1)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.lcsCause violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SGSNMTLCSRecord.localSequenceNumber violates INTEGER range");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("SGSNMTLCSRecord.rATType violates INTEGER range");
+        }
+        if (this.servingNodePLMNIdentifier !== undefined && (this.servingNodePLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("SGSNMTLCSRecord.servingNodePLMNIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -571,7 +622,7 @@ let _cached_encoder_for_SGSNMTLCSRecord: $.ASN1Encoder<SGSNMTLCSRecord> | null =
  */
 export
 function _encode_SGSNMTLCSRecord (value: SGSNMTLCSRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGSNMTLCSRecord) { _cached_encoder_for_SGSNMTLCSRecord = function (value: SGSNMTLCSRecord, elGetter: $.ASN1Encoder<SGSNMTLCSRecord>): _Element {
+    if (!_cached_encoder_for_SGSNMTLCSRecord) { _cached_encoder_for_SGSNMTLCSRecord = function (value: SGSNMTLCSRecord, _elGetter: $.ASN1Encoder<SGSNMTLCSRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.recordingEntity, $.BER));

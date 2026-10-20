@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CoverageStatus, _decode_CoverageStatus, _encode_CoverageStatus, _enum_for_CoverageStatus } from "../ProSeChargingDataTypes/CoverageStatus.ta.mjs";
@@ -57,6 +58,10 @@ class CoverageInfo {
         this.coverageStatus = coverageStatus;
         this.timeStamp = timeStamp;
         this.listOfLocation = listOfLocation;
+    
+        if (this.timeStamp !== undefined && (this.timeStamp.length !== 9)) {
+            throw new ASN1SizeError("CoverageInfo.timeStamp violates SIZE constraint");
+        }
     }
 
     /**
@@ -170,7 +175,7 @@ let _cached_encoder_for_CoverageInfo: $.ASN1Encoder<CoverageInfo> | null = null;
  */
 export
 function _encode_CoverageInfo (value: CoverageInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CoverageInfo) { _cached_encoder_for_CoverageInfo = function (value: CoverageInfo, elGetter: $.ASN1Encoder<CoverageInfo>): _Element {
+    if (!_cached_encoder_for_CoverageInfo) { _cached_encoder_for_CoverageInfo = function (value: CoverageInfo, _elGetter: $.ASN1Encoder<CoverageInfo>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_CoverageStatus, $.BER)(value.coverageStatus, $.BER));
     if (value.timeStamp !== undefined) {

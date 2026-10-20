@@ -5,7 +5,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -286,6 +287,31 @@ class MSCsRVCCRecord {
         this.iCSI2ActiveFlag = iCSI2ActiveFlag;
         this.relatedICID = relatedICID;
         this.relatedICIDGenerationNode = relatedICIDGenerationNode;
+    
+        if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("MSCsRVCCRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("MSCsRVCCRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("MSCsRVCCRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("MSCsRVCCRecord.recordingEntity violates SIZE constraint");
+        }
+        if (this.seizureTime !== undefined && (this.seizureTime.length !== 9)) {
+            throw new ASN1SizeError("MSCsRVCCRecord.seizureTime violates SIZE constraint");
+        }
+        if (this.answerTime !== undefined && (this.answerTime.length !== 9)) {
+            throw new ASN1SizeError("MSCsRVCCRecord.answerTime violates SIZE constraint");
+        }
+        if (this.releaseTime !== undefined && (this.releaseTime.length !== 9)) {
+            throw new ASN1SizeError("MSCsRVCCRecord.releaseTime violates SIZE constraint");
+        }
+        if ((this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("MSCsRVCCRecord.callReference violates SIZE constraint");
+        }
     }
 
     /**
@@ -495,7 +521,7 @@ let _cached_encoder_for_MSCsRVCCRecord: $.ASN1Encoder<MSCsRVCCRecord> | null = n
  */
 export
 function _encode_MSCsRVCCRecord (value: MSCsRVCCRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MSCsRVCCRecord) { _cached_encoder_for_MSCsRVCCRecord = function (value: MSCsRVCCRecord, elGetter: $.ASN1Encoder<MSCsRVCCRecord>): _Element {
+    if (!_cached_encoder_for_MSCsRVCCRecord) { _cached_encoder_for_MSCsRVCCRecord = function (value: MSCsRVCCRecord, _elGetter: $.ASN1Encoder<MSCsRVCCRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.servedIMSI !== undefined) {

@@ -148,7 +148,7 @@ let _cached_encoder_for_AFRecordInformation: $.ASN1Encoder<AFRecordInformation> 
  */
 export
 function _encode_AFRecordInformation (value: AFRecordInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AFRecordInformation) { _cached_encoder_for_AFRecordInformation = function (value: AFRecordInformation, elGetter: $.ASN1Encoder<AFRecordInformation>): _Element {
+    if (!_cached_encoder_for_AFRecordInformation) { _cached_encoder_for_AFRecordInformation = function (value: AFRecordInformation, _elGetter: $.ASN1Encoder<AFRecordInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.aFChargingIdentifier, $.BER));
     if (value.flows !== undefined) {

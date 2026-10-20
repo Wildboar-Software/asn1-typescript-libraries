@@ -1,7 +1,8 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -32,7 +33,16 @@ let _cached_decoder_for_CAMELDestinationNumber: $.ASN1Decoder<CAMELDestinationNu
 export
 function _decode_CAMELDestinationNumber (el: _Element): CAMELDestinationNumber {
     if (!_cached_decoder_for_CAMELDestinationNumber) { _cached_decoder_for_CAMELDestinationNumber = $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString); }
-    return _cached_decoder_for_CAMELDestinationNumber(el);
+    const _decoded_CAMELDestinationNumber = _cached_decoder_for_CAMELDestinationNumber(el);
+    if (_decoded_CAMELDestinationNumber.length !== 1) {
+        throw new ASN1SizeError("CAMELDestinationNumber violates SIZE constraint");
+    }
+    for (const _item of _decoded_CAMELDestinationNumber) {
+        if (_item.length < 1 || _item.length > 41) {
+            throw new ASN1SizeError("CAMELDestinationNumber element violates SIZE constraint");
+        }
+    }
+    return _decoded_CAMELDestinationNumber;
 }
 
 let _cached_encoder_for_CAMELDestinationNumber: $.ASN1Encoder<CAMELDestinationNumber> | null = null;

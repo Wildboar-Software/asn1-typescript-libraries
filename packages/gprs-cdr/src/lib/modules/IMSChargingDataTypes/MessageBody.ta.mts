@@ -175,7 +175,7 @@ let _cached_encoder_for_MessageBody: $.ASN1Encoder<MessageBody> | null = null;
  */
 export
 function _encode_MessageBody (value: MessageBody, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MessageBody) { _cached_encoder_for_MessageBody = function (value: MessageBody, elGetter: $.ASN1Encoder<MessageBody>): _Element {
+    if (!_cached_encoder_for_MessageBody) { _cached_encoder_for_MessageBody = function (value: MessageBody, _elGetter: $.ASN1Encoder<MessageBody>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGraphicString, $.BER)(value.content_Type, $.BER));
     if (value.content_Disposition !== undefined) {

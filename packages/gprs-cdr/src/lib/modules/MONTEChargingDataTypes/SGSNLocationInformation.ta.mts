@@ -248,7 +248,7 @@ let _cached_encoder_for_SGSNLocationInformation: $.ASN1Encoder<SGSNLocationInfor
  */
 export
 function _encode_SGSNLocationInformation (value: SGSNLocationInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGSNLocationInformation) { _cached_encoder_for_SGSNLocationInformation = function (value: SGSNLocationInformation, elGetter: $.ASN1Encoder<SGSNLocationInformation>): _Element {
+    if (!_cached_encoder_for_SGSNLocationInformation) { _cached_encoder_for_SGSNLocationInformation = function (value: SGSNLocationInformation, _elGetter: $.ASN1Encoder<SGSNLocationInformation>): _Element {
     const _components: _Element[] = [];
     if (value.cellGlobalIdentity !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.cellGlobalIdentity, $.BER));

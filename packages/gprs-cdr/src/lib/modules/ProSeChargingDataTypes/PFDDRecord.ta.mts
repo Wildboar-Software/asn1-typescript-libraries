@@ -7,7 +7,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../ProSeChargingDataTypes/RecordType.ta.mjs";
@@ -325,6 +326,52 @@ class PFDDRecord {
         this.discovereeUEVPLMNIdentifier = discovereeUEVPLMNIdentifier;
         this.announcingPLMNID = announcingPLMNID;
         this.pc5RadioTechnology = pc5RadioTechnology;
+    
+        if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("PFDDRecord.servedIMSI violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("PFDDRecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.proSeRequestTimestamp !== undefined && (this.proSeRequestTimestamp.length !== 9)) {
+            throw new ASN1SizeError("PFDDRecord.proSeRequestTimestamp violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("PFDDRecord.nodeID violates SIZE constraint");
+        }
+        if (this.announcingUEHPLMNIdentifier !== undefined && (this.announcingUEHPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.announcingUEHPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.announcingUEVPLMNIdentifier !== undefined && (this.announcingUEVPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.announcingUEVPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.monitoringUEHPLMNIdentifier !== undefined && (this.monitoringUEHPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.monitoringUEHPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.monitoringUEVPLMNIdentifier !== undefined && (this.monitoringUEVPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.monitoringUEVPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.monitoredPLMNIdentifier !== undefined && (this.monitoredPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.monitoredPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.monitoringUEIdentifier !== undefined && (this.monitoringUEIdentifier.length < 3 || this.monitoringUEIdentifier.length > 8)) {
+            throw new ASN1SizeError("PFDDRecord.monitoringUEIdentifier violates SIZE constraint");
+        }
+        if (this.discovererUEHPLMNIdentifier !== undefined && (this.discovererUEHPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.discovererUEHPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.discovererUEVPLMNIdentifier !== undefined && (this.discovererUEVPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.discovererUEVPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.discovereeUEHPLMNIdentifier !== undefined && (this.discovereeUEHPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.discovereeUEHPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.discovereeUEVPLMNIdentifier !== undefined && (this.discovereeUEVPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.discovereeUEVPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.announcingPLMNID !== undefined && (this.announcingPLMNID.length !== 3)) {
+            throw new ASN1SizeError("PFDDRecord.announcingPLMNID violates SIZE constraint");
+        }
     }
 
     /**
@@ -578,7 +625,7 @@ let _cached_encoder_for_PFDDRecord: $.ASN1Encoder<PFDDRecord> | null = null;
  */
 export
 function _encode_PFDDRecord (value: PFDDRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PFDDRecord) { _cached_encoder_for_PFDDRecord = function (value: PFDDRecord, elGetter: $.ASN1Encoder<PFDDRecord>): _Element {
+    if (!_cached_encoder_for_PFDDRecord) { _cached_encoder_for_PFDDRecord = function (value: PFDDRecord, _elGetter: $.ASN1Encoder<PFDDRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

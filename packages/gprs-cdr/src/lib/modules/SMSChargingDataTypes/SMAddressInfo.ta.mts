@@ -169,7 +169,7 @@ let _cached_encoder_for_SMAddressInfo: $.ASN1Encoder<SMAddressInfo> | null = nul
  */
 export
 function _encode_SMAddressInfo (value: SMAddressInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMAddressInfo) { _cached_encoder_for_SMAddressInfo = function (value: SMAddressInfo, elGetter: $.ASN1Encoder<SMAddressInfo>): _Element {
+    if (!_cached_encoder_for_SMAddressInfo) { _cached_encoder_for_SMAddressInfo = function (value: SMAddressInfo, _elGetter: $.ASN1Encoder<SMAddressInfo>): _Element {
     const _components: _Element[] = [];
     if (value.sMAddressType !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_SMAddressType, $.BER)(value.sMAddressType, $.BER));

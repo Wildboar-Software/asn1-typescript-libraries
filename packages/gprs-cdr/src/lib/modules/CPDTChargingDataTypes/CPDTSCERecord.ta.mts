@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CPDTChargingDataTypes/RecordType.ta.mjs";
@@ -283,6 +285,40 @@ class CPDTSCERecord {
         this.rATType = rATType;
         this.servingNodePLMNIdentifier = servingNodePLMNIdentifier;
         this.servedIMEI = servedIMEI;
+    
+        if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("CPDTSCERecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("CPDTSCERecord.servedMSISDN violates SIZE constraint");
+        }
+        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+            throw new ASN1OverflowError("CPDTSCERecord.chargingID violates INTEGER range");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("CPDTSCERecord.nodeID violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("CPDTSCERecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("CPDTSCERecord.accessPointNameNI violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("CPDTSCERecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("CPDTSCERecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("CPDTSCERecord.rATType violates INTEGER range");
+        }
+        if (this.servingNodePLMNIdentifier !== undefined && (this.servingNodePLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("CPDTSCERecord.servingNodePLMNIdentifier violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("CPDTSCERecord.servedIMEI violates SIZE constraint");
+        }
     }
 
     /**
@@ -492,7 +528,7 @@ let _cached_encoder_for_CPDTSCERecord: $.ASN1Encoder<CPDTSCERecord> | null = nul
  */
 export
 function _encode_CPDTSCERecord (value: CPDTSCERecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CPDTSCERecord) { _cached_encoder_for_CPDTSCERecord = function (value: CPDTSCERecord, elGetter: $.ASN1Encoder<CPDTSCERecord>): _Element {
+    if (!_cached_encoder_for_CPDTSCERecord) { _cached_encoder_for_CPDTSCERecord = function (value: CPDTSCERecord, _elGetter: $.ASN1Encoder<CPDTSCERecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

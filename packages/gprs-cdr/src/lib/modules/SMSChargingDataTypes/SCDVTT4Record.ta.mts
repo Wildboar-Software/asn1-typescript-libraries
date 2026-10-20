@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../SMSChargingDataTypes/RecordType.ta.mjs";
@@ -131,6 +133,16 @@ class SCDVTT4Record {
         this.sMSResult = sMSResult;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.sMSNodeAddress.length < 1 || this.sMSNodeAddress.length > 20)) {
+            throw new ASN1SizeError("SCDVTT4Record.sMSNodeAddress violates SIZE constraint");
+        }
+        if ((this.eventtimestamp.length !== 9)) {
+            throw new ASN1SizeError("SCDVTT4Record.eventtimestamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SCDVTT4Record.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -276,7 +288,7 @@ let _cached_encoder_for_SCDVTT4Record: $.ASN1Encoder<SCDVTT4Record> | null = nul
  */
 export
 function _encode_SCDVTT4Record (value: SCDVTT4Record, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCDVTT4Record) { _cached_encoder_for_SCDVTT4Record = function (value: SCDVTT4Record, elGetter: $.ASN1Encoder<SCDVTT4Record>): _Element {
+    if (!_cached_encoder_for_SCDVTT4Record) { _cached_encoder_for_SCDVTT4Record = function (value: SCDVTT4Record, _elGetter: $.ASN1Encoder<SCDVTT4Record>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.sMSNodeAddress, $.BER));

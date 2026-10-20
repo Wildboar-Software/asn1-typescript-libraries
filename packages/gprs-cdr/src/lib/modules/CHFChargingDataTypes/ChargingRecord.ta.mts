@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CHFChargingDataTypes/RecordType.ta.mjs";
@@ -214,6 +216,16 @@ class ChargingRecord {
         this.sMSChargingInformation = sMSChargingInformation;
         this.chargingSessionIdentifier = chargingSessionIdentifier;
         this.serviceSpecificationInformation = serviceSpecificationInformation;
+    
+        if ((this.recordingNetworkFunctionID.length < 1 || this.recordingNetworkFunctionID.length > 36)) {
+            throw new ASN1SizeError("ChargingRecord.recordingNetworkFunctionID violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("ChargingRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("ChargingRecord.localRecordSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -385,7 +397,7 @@ let _cached_encoder_for_ChargingRecord: $.ASN1Encoder<ChargingRecord> | null = n
  */
 export
 function _encode_ChargingRecord (value: ChargingRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargingRecord) { _cached_encoder_for_ChargingRecord = function (value: ChargingRecord, elGetter: $.ASN1Encoder<ChargingRecord>): _Element {
+    if (!_cached_encoder_for_ChargingRecord) { _cached_encoder_for_ChargingRecord = function (value: ChargingRecord, _elGetter: $.ASN1Encoder<ChargingRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeIA5String, $.BER)(value.recordingNetworkFunctionID, $.BER));

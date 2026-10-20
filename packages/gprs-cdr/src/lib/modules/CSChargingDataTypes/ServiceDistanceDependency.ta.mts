@@ -147,7 +147,7 @@ let _cached_encoder_for_ServiceDistanceDependency: $.ASN1Encoder<ServiceDistance
  */
 export
 function _encode_ServiceDistanceDependency (value: ServiceDistanceDependency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceDistanceDependency) { _cached_encoder_for_ServiceDistanceDependency = function (value: ServiceDistanceDependency, elGetter: $.ASN1Encoder<ServiceDistanceDependency>): _Element {
+    if (!_cached_encoder_for_ServiceDistanceDependency) { _cached_encoder_for_ServiceDistanceDependency = function (value: ServiceDistanceDependency, _elGetter: $.ASN1Encoder<ServiceDistanceDependency>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.aocService, $.BER));
     if (value.chargingZone !== undefined) {

@@ -175,7 +175,7 @@ let _cached_encoder_for_RateElements: $.ASN1Encoder<RateElements> | null = null;
  */
 export
 function _encode_RateElements (value: RateElements, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RateElements) { _cached_encoder_for_RateElements = function (value: RateElements, elGetter: $.ASN1Encoder<RateElements>): _Element {
+    if (!_cached_encoder_for_RateElements) { _cached_encoder_for_RateElements = function (value: RateElements, _elGetter: $.ASN1Encoder<RateElements>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.unitType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeReal, $.BER)(value.unitValue, $.BER),

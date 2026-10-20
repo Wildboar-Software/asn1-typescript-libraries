@@ -153,7 +153,7 @@ let _cached_encoder_for_MSCFInformation: $.ASN1Encoder<MSCFInformation> | null =
  */
 export
 function _encode_MSCFInformation (value: MSCFInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MSCFInformation) { _cached_encoder_for_MSCFInformation = function (value: MSCFInformation, elGetter: $.ASN1Encoder<MSCFInformation>): _Element {
+    if (!_cached_encoder_for_MSCFInformation) { _cached_encoder_for_MSCFInformation = function (value: MSCFInformation, _elGetter: $.ASN1Encoder<MSCFInformation>): _Element {
     const _components: _Element[] = [];
     if (value.billingInformation !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.billingInformation, $.BER));

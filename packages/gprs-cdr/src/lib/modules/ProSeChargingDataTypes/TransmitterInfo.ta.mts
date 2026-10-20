@@ -147,7 +147,7 @@ let _cached_encoder_for_TransmitterInfo: $.ASN1Encoder<TransmitterInfo> | null =
  */
 export
 function _encode_TransmitterInfo (value: TransmitterInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransmitterInfo) { _cached_encoder_for_TransmitterInfo = function (value: TransmitterInfo, elGetter: $.ASN1Encoder<TransmitterInfo>): _Element {
+    if (!_cached_encoder_for_TransmitterInfo) { _cached_encoder_for_TransmitterInfo = function (value: TransmitterInfo, _elGetter: $.ASN1Encoder<TransmitterInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_IPAddress, $.BER)(value.sourceIPaddress, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.proSeUEID, $.BER)

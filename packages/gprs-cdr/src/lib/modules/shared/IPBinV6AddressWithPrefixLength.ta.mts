@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,6 +47,13 @@ class IPBinV6AddressWithPrefixLength {
     ) {
         this.iPBinV6Address = iPBinV6Address;
         this.pDPAddressPrefixLength = pDPAddressPrefixLength;
+    
+        if ((this.iPBinV6Address.length !== 16)) {
+            throw new ASN1SizeError("IPBinV6AddressWithPrefixLength.iPBinV6Address violates SIZE constraint");
+        }
+        if (this.pDPAddressPrefixLength !== undefined && ((typeof this.pDPAddressPrefixLength === "bigint" ? Number(this.pDPAddressPrefixLength) : this.pDPAddressPrefixLength) < 1 || (typeof this.pDPAddressPrefixLength === "bigint" ? Number(this.pDPAddressPrefixLength) : this.pDPAddressPrefixLength) > 64)) {
+            throw new ASN1OverflowError("IPBinV6AddressWithPrefixLength.pDPAddressPrefixLength violates INTEGER range");
+        }
     }
 
     /**
@@ -154,7 +163,7 @@ let _cached_encoder_for_IPBinV6AddressWithPrefixLength: $.ASN1Encoder<IPBinV6Add
  */
 export
 function _encode_IPBinV6AddressWithPrefixLength (value: IPBinV6AddressWithPrefixLength, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IPBinV6AddressWithPrefixLength) { _cached_encoder_for_IPBinV6AddressWithPrefixLength = function (value: IPBinV6AddressWithPrefixLength, elGetter: $.ASN1Encoder<IPBinV6AddressWithPrefixLength>): _Element {
+    if (!_cached_encoder_for_IPBinV6AddressWithPrefixLength) { _cached_encoder_for_IPBinV6AddressWithPrefixLength = function (value: IPBinV6AddressWithPrefixLength, _elGetter: $.ASN1Encoder<IPBinV6AddressWithPrefixLength>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeOctetString(value.iPBinV6Address, $.BER));
     if (value.pDPAddressPrefixLength !== undefined && !$.deepEq(value.pDPAddressPrefixLength, IPBinV6AddressWithPrefixLength._default_value_for_pDPAddressPrefixLength)) {

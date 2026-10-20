@@ -7,7 +7,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -498,6 +500,58 @@ class TDFRecord {
         this.servedFixedSubsID = servedFixedSubsID;
         this.accessLineIdentifier = accessLineIdentifier;
         this.fixedUserLocationInformation = fixedUserLocationInformation;
+    
+        if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("TDFRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("TDFRecord.accessPointNameNI violates SIZE constraint");
+        }
+        if (this.pdpPDNType !== undefined && (this.pdpPDNType.length !== 2)) {
+            throw new ASN1SizeError("TDFRecord.pdpPDNType violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("TDFRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("TDFRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("TDFRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("TDFRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("TDFRecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.servingNodePLMNIdentifier !== undefined && (this.servingNodePLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("TDFRecord.servingNodePLMNIdentifier violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("TDFRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("TDFRecord.rATType violates INTEGER range");
+        }
+        if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("TDFRecord.mSTimeZone violates SIZE constraint");
+        }
+        if (this.p_GWPLMNIdentifier !== undefined && (this.p_GWPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("TDFRecord.p_GWPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.startTime !== undefined && (this.startTime.length !== 9)) {
+            throw new ASN1SizeError("TDFRecord.startTime violates SIZE constraint");
+        }
+        if (this.stopTime !== undefined && (this.stopTime.length !== 9)) {
+            throw new ASN1SizeError("TDFRecord.stopTime violates SIZE constraint");
+        }
+        if (((typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) < 0 || (typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) > 4294967295)) {
+            throw new ASN1OverflowError("TDFRecord.pDNConnectionChargingID violates INTEGER range");
+        }
+        if (this.tDFPLMNIdentifier !== undefined && (this.tDFPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("TDFRecord.tDFPLMNIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -801,7 +855,7 @@ let _cached_encoder_for_TDFRecord: $.ASN1Encoder<TDFRecord> | null = null;
  */
 export
 function _encode_TDFRecord (value: TDFRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TDFRecord) { _cached_encoder_for_TDFRecord = function (value: TDFRecord, elGetter: $.ASN1Encoder<TDFRecord>): _Element {
+    if (!_cached_encoder_for_TDFRecord) { _cached_encoder_for_TDFRecord = function (value: TDFRecord, _elGetter: $.ASN1Encoder<TDFRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.servedIMSI !== undefined) {

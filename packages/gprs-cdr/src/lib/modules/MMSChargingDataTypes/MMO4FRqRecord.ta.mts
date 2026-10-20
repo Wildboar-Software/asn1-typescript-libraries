@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -253,6 +255,16 @@ class MMO4FRqRecord {
         this.recordTimeStamp = recordTimeStamp;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.submissionTime.length !== 9)) {
+            throw new ASN1SizeError("MMO4FRqRecord.submissionTime violates SIZE constraint");
+        }
+        if ((this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MMO4FRqRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MMO4FRqRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -456,7 +468,7 @@ let _cached_encoder_for_MMO4FRqRecord: $.ASN1Encoder<MMO4FRqRecord> | null = nul
  */
 export
 function _encode_MMO4FRqRecord (value: MMO4FRqRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMO4FRqRecord) { _cached_encoder_for_MMO4FRqRecord = function (value: MMO4FRqRecord, elGetter: $.ASN1Encoder<MMO4FRqRecord>): _Element {
+    if (!_cached_encoder_for_MMO4FRqRecord) { _cached_encoder_for_MMO4FRqRecord = function (value: MMO4FRqRecord, _elGetter: $.ASN1Encoder<MMO4FRqRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MMSRSAddress, $.BER)(value.originatorMmsRSAddress, $.BER));

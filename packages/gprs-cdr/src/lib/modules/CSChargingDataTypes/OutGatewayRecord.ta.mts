@@ -5,7 +5,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -286,6 +287,28 @@ class OutGatewayRecord {
         this.jIPQuryStatus = jIPQuryStatus;
         this.reasonForServiceChange = reasonForServiceChange;
         this.serviceChangeInitiator = serviceChangeInitiator;
+    
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("OutGatewayRecord.recordingEntity violates SIZE constraint");
+        }
+        if (this.seizureTime !== undefined && (this.seizureTime.length !== 9)) {
+            throw new ASN1SizeError("OutGatewayRecord.seizureTime violates SIZE constraint");
+        }
+        if (this.answerTime !== undefined && (this.answerTime.length !== 9)) {
+            throw new ASN1SizeError("OutGatewayRecord.answerTime violates SIZE constraint");
+        }
+        if (this.releaseTime !== undefined && (this.releaseTime.length !== 9)) {
+            throw new ASN1SizeError("OutGatewayRecord.releaseTime violates SIZE constraint");
+        }
+        if ((this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("OutGatewayRecord.callReference violates SIZE constraint");
+        }
+        if (this.locationRoutNum !== undefined && (this.locationRoutNum.length !== 5)) {
+            throw new ASN1SizeError("OutGatewayRecord.locationRoutNum violates SIZE constraint");
+        }
+        if (this.jIPPara !== undefined && (this.jIPPara.length !== 5)) {
+            throw new ASN1SizeError("OutGatewayRecord.jIPPara violates SIZE constraint");
+        }
     }
 
     /**
@@ -487,7 +510,7 @@ let _cached_encoder_for_OutGatewayRecord: $.ASN1Encoder<OutGatewayRecord> | null
  */
 export
 function _encode_OutGatewayRecord (value: OutGatewayRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OutGatewayRecord) { _cached_encoder_for_OutGatewayRecord = function (value: OutGatewayRecord, elGetter: $.ASN1Encoder<OutGatewayRecord>): _Element {
+    if (!_cached_encoder_for_OutGatewayRecord) { _cached_encoder_for_OutGatewayRecord = function (value: OutGatewayRecord, _elGetter: $.ASN1Encoder<OutGatewayRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.callingNumber !== undefined) {

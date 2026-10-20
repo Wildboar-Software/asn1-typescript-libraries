@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -165,6 +167,22 @@ class MMR1RRRecord {
         this.sGSNPLMNIdentifier = sGSNPLMNIdentifier;
         this.rATType = rATType;
         this.mSTimeZone = mSTimeZone;
+    
+        if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MMR1RRRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MMR1RRRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.sGSNPLMNIdentifier !== undefined && (this.sGSNPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("MMR1RRRecord.sGSNPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("MMR1RRRecord.rATType violates INTEGER range");
+        }
+        if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("MMR1RRRecord.mSTimeZone violates SIZE constraint");
+        }
     }
 
     /**
@@ -326,7 +344,7 @@ let _cached_encoder_for_MMR1RRRecord: $.ASN1Encoder<MMR1RRRecord> | null = null;
  */
 export
 function _encode_MMR1RRRecord (value: MMR1RRRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMR1RRRecord) { _cached_encoder_for_MMR1RRRecord = function (value: MMR1RRRecord, elGetter: $.ASN1Encoder<MMR1RRRecord>): _Element {
+    if (!_cached_encoder_for_MMR1RRRecord) { _cached_encoder_for_MMR1RRRecord = function (value: MMR1RRRecord, _elGetter: $.ASN1Encoder<MMR1RRRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MMSRSAddress, $.BER)(value.recipientMmsRSAddress, $.BER));

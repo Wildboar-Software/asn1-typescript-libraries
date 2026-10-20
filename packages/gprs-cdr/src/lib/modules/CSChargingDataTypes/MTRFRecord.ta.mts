@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -221,6 +222,31 @@ class MTRFRecord {
         this.sequenceNumber = sequenceNumber;
         this.recordExtensions = recordExtensions;
         this.partialRecordType = partialRecordType;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("MTRFRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("MTRFRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.roamingNumber !== undefined && (this.roamingNumber.length < 1 || this.roamingNumber.length > 9)) {
+            throw new ASN1SizeError("MTRFRecord.roamingNumber violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("MTRFRecord.recordingEntity violates SIZE constraint");
+        }
+        if (this.seizureTime !== undefined && (this.seizureTime.length !== 9)) {
+            throw new ASN1SizeError("MTRFRecord.seizureTime violates SIZE constraint");
+        }
+        if (this.answerTime !== undefined && (this.answerTime.length !== 9)) {
+            throw new ASN1SizeError("MTRFRecord.answerTime violates SIZE constraint");
+        }
+        if (this.releaseTime !== undefined && (this.releaseTime.length !== 9)) {
+            throw new ASN1SizeError("MTRFRecord.releaseTime violates SIZE constraint");
+        }
+        if ((this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("MTRFRecord.callReference violates SIZE constraint");
+        }
     }
 
     /**
@@ -406,7 +432,7 @@ let _cached_encoder_for_MTRFRecord: $.ASN1Encoder<MTRFRecord> | null = null;
  */
 export
 function _encode_MTRFRecord (value: MTRFRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MTRFRecord) { _cached_encoder_for_MTRFRecord = function (value: MTRFRecord, elGetter: $.ASN1Encoder<MTRFRecord>): _Element {
+    if (!_cached_encoder_for_MTRFRecord) { _cached_encoder_for_MTRFRecord = function (value: MTRFRecord, _elGetter: $.ASN1Encoder<MTRFRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

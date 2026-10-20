@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkFunctionInformation, _decode_NetworkFunctionInformation, _encode_NetworkFunctionInformation } from "../CHFChargingDataTypes/NetworkFunctionInformation.ta.mjs";
@@ -45,6 +46,10 @@ class ServingNetworkFunctionID {
     ) {
         this.servingNetworkFunctionInformation = servingNetworkFunctionInformation;
         this.aMFIdentifier = aMFIdentifier;
+    
+        if (this.aMFIdentifier !== undefined && (this.aMFIdentifier.length !== 6)) {
+            throw new ASN1SizeError("ServingNetworkFunctionID.aMFIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -148,7 +153,7 @@ let _cached_encoder_for_ServingNetworkFunctionID: $.ASN1Encoder<ServingNetworkFu
  */
 export
 function _encode_ServingNetworkFunctionID (value: ServingNetworkFunctionID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServingNetworkFunctionID) { _cached_encoder_for_ServingNetworkFunctionID = function (value: ServingNetworkFunctionID, elGetter: $.ASN1Encoder<ServingNetworkFunctionID>): _Element {
+    if (!_cached_encoder_for_ServingNetworkFunctionID) { _cached_encoder_for_ServingNetworkFunctionID = function (value: ServingNetworkFunctionID, _elGetter: $.ASN1Encoder<ServingNetworkFunctionID>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_NetworkFunctionInformation, $.BER)(value.servingNetworkFunctionInformation, $.BER));
     if (value.aMFIdentifier !== undefined) {

@@ -149,7 +149,7 @@ let _cached_encoder_for_MMComponentType: $.ASN1Encoder<MMComponentType> | null =
  */
 export
 function _encode_MMComponentType (value: MMComponentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMComponentType) { _cached_encoder_for_MMComponentType = function (value: MMComponentType, elGetter: $.ASN1Encoder<MMComponentType>): _Element {
+    if (!_cached_encoder_for_MMComponentType) { _cached_encoder_for_MMComponentType = function (value: MMComponentType, _elGetter: $.ASN1Encoder<MMComponentType>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SubjectComponent, $.BER)(value.subject, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeSetOf<MediaComponent>(() => _encode_MediaComponent, $.BER), $.BER)(value.media, $.BER)

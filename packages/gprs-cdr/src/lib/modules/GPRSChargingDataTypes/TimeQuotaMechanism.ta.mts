@@ -153,7 +153,7 @@ let _cached_encoder_for_TimeQuotaMechanism: $.ASN1Encoder<TimeQuotaMechanism> | 
  */
 export
 function _encode_TimeQuotaMechanism (value: TimeQuotaMechanism, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TimeQuotaMechanism) { _cached_encoder_for_TimeQuotaMechanism = function (value: TimeQuotaMechanism, elGetter: $.ASN1Encoder<TimeQuotaMechanism>): _Element {
+    if (!_cached_encoder_for_TimeQuotaMechanism) { _cached_encoder_for_TimeQuotaMechanism = function (value: TimeQuotaMechanism, _elGetter: $.ASN1Encoder<TimeQuotaMechanism>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_TimeQuotaType, $.BER)(value.timeQuotaType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.baseTimeInterval, $.BER)

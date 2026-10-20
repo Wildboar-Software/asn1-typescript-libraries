@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -468,6 +470,71 @@ class TermCAMELRecord {
         this.jIPSoInd = jIPSoInd;
         this.jIPQuryStatus = jIPQuryStatus;
         this.partialRecordType = partialRecordType;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("TermCAMELRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("TermCAMELRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("TermCAMELRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.interrogationTime.length !== 9)) {
+            throw new ASN1SizeError("TermCAMELRecord.interrogationTime violates SIZE constraint");
+        }
+        if ((this.destinationRoutingAddress.length !== 1)) {
+            throw new ASN1SizeError("TermCAMELRecord.destinationRoutingAddress violates SIZE constraint");
+        }
+        if (this.destinationRoutingAddress) {
+            for (const _item of this.destinationRoutingAddress) {
+                if (_item.length < 1 || _item.length > 41) {
+                    throw new ASN1SizeError("TermCAMELRecord.destinationRoutingAddress element violates SIZE constraint");
+                }
+            }
+        }
+        if ((this.gsm_SCFAddress.length < 1 || this.gsm_SCFAddress.length > 9)) {
+            throw new ASN1SizeError("TermCAMELRecord.gsm_SCFAddress violates SIZE constraint");
+        }
+        if (((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+            throw new ASN1OverflowError("TermCAMELRecord.serviceKey violates INTEGER range");
+        }
+        if (this.networkCallReference !== undefined && (this.networkCallReference.length < 1 || this.networkCallReference.length > 8)) {
+            throw new ASN1SizeError("TermCAMELRecord.networkCallReference violates SIZE constraint");
+        }
+        if (this.mSCAddress !== undefined && (this.mSCAddress.length < 1 || this.mSCAddress.length > 20)) {
+            throw new ASN1SizeError("TermCAMELRecord.mSCAddress violates SIZE constraint");
+        }
+        if (this.seizureTime !== undefined && (this.seizureTime.length !== 9)) {
+            throw new ASN1SizeError("TermCAMELRecord.seizureTime violates SIZE constraint");
+        }
+        if (this.answerTime !== undefined && (this.answerTime.length !== 9)) {
+            throw new ASN1SizeError("TermCAMELRecord.answerTime violates SIZE constraint");
+        }
+        if (this.releaseTime !== undefined && (this.releaseTime.length !== 9)) {
+            throw new ASN1SizeError("TermCAMELRecord.releaseTime violates SIZE constraint");
+        }
+        if ((this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("TermCAMELRecord.callReference violates SIZE constraint");
+        }
+        if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {
+            throw new ASN1SizeError("TermCAMELRecord.freeFormatData violates SIZE constraint");
+        }
+        if (this.gsm_SCFAddress_2 !== undefined && (this.gsm_SCFAddress_2.length < 1 || this.gsm_SCFAddress_2.length > 9)) {
+            throw new ASN1SizeError("TermCAMELRecord.gsm_SCFAddress_2 violates SIZE constraint");
+        }
+        if (this.serviceKey_2 !== undefined && ((typeof this.serviceKey_2 === "bigint" ? Number(this.serviceKey_2) : this.serviceKey_2) < 0 || (typeof this.serviceKey_2 === "bigint" ? Number(this.serviceKey_2) : this.serviceKey_2) > 2147483647)) {
+            throw new ASN1OverflowError("TermCAMELRecord.serviceKey_2 violates INTEGER range");
+        }
+        if (this.freeFormatData_2 !== undefined && (this.freeFormatData_2.length < 1 || this.freeFormatData_2.length > 160)) {
+            throw new ASN1SizeError("TermCAMELRecord.freeFormatData_2 violates SIZE constraint");
+        }
+        if (this.locationRoutNum !== undefined && (this.locationRoutNum.length !== 5)) {
+            throw new ASN1SizeError("TermCAMELRecord.locationRoutNum violates SIZE constraint");
+        }
+        if (this.jIPPara !== undefined && (this.jIPPara.length !== 5)) {
+            throw new ASN1SizeError("TermCAMELRecord.jIPPara violates SIZE constraint");
+        }
     }
 
     /**
@@ -757,7 +824,7 @@ let _cached_encoder_for_TermCAMELRecord: $.ASN1Encoder<TermCAMELRecord> | null =
  */
 export
 function _encode_TermCAMELRecord (value: TermCAMELRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TermCAMELRecord) { _cached_encoder_for_TermCAMELRecord = function (value: TermCAMELRecord, elGetter: $.ASN1Encoder<TermCAMELRecord>): _Element {
+    if (!_cached_encoder_for_TermCAMELRecord) { _cached_encoder_for_TermCAMELRecord = function (value: TermCAMELRecord, _elGetter: $.ASN1Encoder<TermCAMELRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordtype, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

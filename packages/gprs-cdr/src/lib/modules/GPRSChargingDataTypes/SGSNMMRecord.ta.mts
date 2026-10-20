@@ -6,7 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -282,6 +284,49 @@ class SGSNMMRecord {
         this.cellPLMNId = cellPLMNId;
         this.servingNodePLMNIdentifier = servingNodePLMNIdentifier;
         this.cNOperatorSelectionEnt = cNOperatorSelectionEnt;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("SGSNMMRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("SGSNMMRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.msNetworkCapability !== undefined && (this.msNetworkCapability.length < 1 || this.msNetworkCapability.length > 8)) {
+            throw new ASN1SizeError("SGSNMMRecord.msNetworkCapability violates SIZE constraint");
+        }
+        if (this.routingArea !== undefined && (this.routingArea.length !== 1)) {
+            throw new ASN1SizeError("SGSNMMRecord.routingArea violates SIZE constraint");
+        }
+        if (this.locationAreaCode !== undefined && (this.locationAreaCode.length !== 2)) {
+            throw new ASN1SizeError("SGSNMMRecord.locationAreaCode violates SIZE constraint");
+        }
+        if (this.cellIdentifier !== undefined && (this.cellIdentifier.length !== 2)) {
+            throw new ASN1SizeError("SGSNMMRecord.cellIdentifier violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("SGSNMMRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("SGSNMMRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SGSNMMRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("SGSNMMRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("SGSNMMRecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("SGSNMMRecord.rATType violates INTEGER range");
+        }
+        if (this.cellPLMNId !== undefined && (this.cellPLMNId.length !== 3)) {
+            throw new ASN1SizeError("SGSNMMRecord.cellPLMNId violates SIZE constraint");
+        }
+        if (this.servingNodePLMNIdentifier !== undefined && (this.servingNodePLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("SGSNMMRecord.servingNodePLMNIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -497,7 +542,7 @@ let _cached_encoder_for_SGSNMMRecord: $.ASN1Encoder<SGSNMMRecord> | null = null;
  */
 export
 function _encode_SGSNMMRecord (value: SGSNMMRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGSNMMRecord) { _cached_encoder_for_SGSNMMRecord = function (value: SGSNMMRecord, elGetter: $.ASN1Encoder<SGSNMMRecord>): _Element {
+    if (!_cached_encoder_for_SGSNMMRecord) { _cached_encoder_for_SGSNMMRecord = function (value: SGSNMMRecord, _elGetter: $.ASN1Encoder<SGSNMMRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

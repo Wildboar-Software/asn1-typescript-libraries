@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -106,6 +107,16 @@ class LocUpdateHLRRecord {
         this.updateTime = updateTime;
         this.updateResult = updateResult;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("LocUpdateHLRRecord.servedIMSI violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("LocUpdateHLRRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.updateTime.length !== 9)) {
+            throw new ASN1SizeError("LocUpdateHLRRecord.updateTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -237,7 +248,7 @@ let _cached_encoder_for_LocUpdateHLRRecord: $.ASN1Encoder<LocUpdateHLRRecord> | 
  */
 export
 function _encode_LocUpdateHLRRecord (value: LocUpdateHLRRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocUpdateHLRRecord) { _cached_encoder_for_LocUpdateHLRRecord = function (value: LocUpdateHLRRecord, elGetter: $.ASN1Encoder<LocUpdateHLRRecord>): _Element {
+    if (!_cached_encoder_for_LocUpdateHLRRecord) { _cached_encoder_for_LocUpdateHLRRecord = function (value: LocUpdateHLRRecord, _elGetter: $.ASN1Encoder<LocUpdateHLRRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

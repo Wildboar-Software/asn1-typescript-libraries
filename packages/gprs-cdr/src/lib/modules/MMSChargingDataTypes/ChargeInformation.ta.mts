@@ -161,7 +161,7 @@ let _cached_encoder_for_ChargeInformation: $.ASN1Encoder<ChargeInformation> | nu
  */
 export
 function _encode_ChargeInformation (value: ChargeInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargeInformation) { _cached_encoder_for_ChargeInformation = function (value: ChargeInformation, elGetter: $.ASN1Encoder<ChargeInformation>): _Element {
+    if (!_cached_encoder_for_ChargeInformation) { _cached_encoder_for_ChargeInformation = function (value: ChargeInformation, _elGetter: $.ASN1Encoder<ChargeInformation>): _Element {
     const _components: _Element[] = [];
     if (value.chargedparty !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_ChargedParty, $.BER)(value.chargedparty, $.BER));

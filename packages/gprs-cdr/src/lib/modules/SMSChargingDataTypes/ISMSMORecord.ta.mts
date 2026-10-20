@@ -7,7 +7,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../SMSChargingDataTypes/RecordType.ta.mjs";
@@ -285,6 +287,19 @@ class ISMSMORecord {
         this.carrierSelectRouting = carrierSelectRouting;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.eventtimestamp.length !== 9)) {
+            throw new ASN1SizeError("ISMSMORecord.eventtimestamp violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("ISMSMORecord.rATType violates INTEGER range");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("ISMSMORecord.uETimeZone violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("ISMSMORecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -500,7 +515,7 @@ let _cached_encoder_for_ISMSMORecord: $.ASN1Encoder<ISMSMORecord> | null = null;
  */
 export
 function _encode_ISMSMORecord (value: ISMSMORecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISMSMORecord) { _cached_encoder_for_ISMSMORecord = function (value: ISMSMORecord, elGetter: $.ASN1Encoder<ISMSMORecord>): _Element {
+    if (!_cached_encoder_for_ISMSMORecord) { _cached_encoder_for_ISMSMORecord = function (value: ISMSMORecord, _elGetter: $.ASN1Encoder<ISMSMORecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_NodeAddress, $.BER)(value.sMSNodeAddress, $.BER));

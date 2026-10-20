@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -187,6 +188,28 @@ class SSActionRecord {
         this.callReference = callReference;
         this.recordExtensions = recordExtensions;
         this.systemType = systemType;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("SSActionRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("SSActionRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("SSActionRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("SSActionRecord.recordingEntity violates SIZE constraint");
+        }
+        if (this.supplService !== undefined && (this.supplService.length !== 1)) {
+            throw new ASN1SizeError("SSActionRecord.supplService violates SIZE constraint");
+        }
+        if ((this.ssActionTime.length !== 9)) {
+            throw new ASN1SizeError("SSActionRecord.ssActionTime violates SIZE constraint");
+        }
+        if ((this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("SSActionRecord.callReference violates SIZE constraint");
+        }
     }
 
     /**
@@ -362,7 +385,7 @@ let _cached_encoder_for_SSActionRecord: $.ASN1Encoder<SSActionRecord> | null = n
  */
 export
 function _encode_SSActionRecord (value: SSActionRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SSActionRecord) { _cached_encoder_for_SSActionRecord = function (value: SSActionRecord, elGetter: $.ASN1Encoder<SSActionRecord>): _Element {
+    if (!_cached_encoder_for_SSActionRecord) { _cached_encoder_for_SSActionRecord = function (value: SSActionRecord, _elGetter: $.ASN1Encoder<SSActionRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

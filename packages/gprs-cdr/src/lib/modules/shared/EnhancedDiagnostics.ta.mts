@@ -133,7 +133,7 @@ let _cached_encoder_for_EnhancedDiagnostics: $.ASN1Encoder<EnhancedDiagnostics> 
  */
 export
 function _encode_EnhancedDiagnostics (value: EnhancedDiagnostics, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EnhancedDiagnostics) { _cached_encoder_for_EnhancedDiagnostics = function (value: EnhancedDiagnostics, elGetter: $.ASN1Encoder<EnhancedDiagnostics>): _Element {
+    if (!_cached_encoder_for_EnhancedDiagnostics) { _cached_encoder_for_EnhancedDiagnostics = function (value: EnhancedDiagnostics, _elGetter: $.ASN1Encoder<EnhancedDiagnostics>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER)(value.rANNASCause, $.BER)
     ], $.BER);

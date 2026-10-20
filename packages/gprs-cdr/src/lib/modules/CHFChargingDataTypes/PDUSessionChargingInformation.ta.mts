@@ -6,7 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../CHFChargingDataTypes/InvolvedParty.ta.mjs";
@@ -337,6 +339,37 @@ class PDUSessionChargingInformation {
         this.servingCNPLMNID = servingCNPLMNID;
         this.sUPIunauthenticatedFlag = sUPIunauthenticatedFlag;
         this.dNNSelectionMode = dNNSelectionMode;
+    
+        if (((typeof this.pDUSessionChargingID === "bigint" ? Number(this.pDUSessionChargingID) : this.pDUSessionChargingID) < 0 || (typeof this.pDUSessionChargingID === "bigint" ? Number(this.pDUSessionChargingID) : this.pDUSessionChargingID) > 4294967295)) {
+            throw new ASN1OverflowError("PDUSessionChargingInformation.pDUSessionChargingID violates INTEGER range");
+        }
+        if (((typeof this.pDUSessionId === "bigint" ? Number(this.pDUSessionId) : this.pDUSessionId) < 0 || (typeof this.pDUSessionId === "bigint" ? Number(this.pDUSessionId) : this.pDUSessionId) > 255)) {
+            throw new ASN1OverflowError("PDUSessionChargingInformation.pDUSessionId violates INTEGER range");
+        }
+        if (this.sUPIPLMNIdentifier !== undefined && (this.sUPIPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.sUPIPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("PDUSessionChargingInformation.rATType violates INTEGER range");
+        }
+        if (this.dataNetworkNameIdentifier !== undefined && (this.dataNetworkNameIdentifier.length < 1 || this.dataNetworkNameIdentifier.length > 63)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.dataNetworkNameIdentifier violates SIZE constraint");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.uETimeZone violates SIZE constraint");
+        }
+        if (this.pDUSessionstartTime !== undefined && (this.pDUSessionstartTime.length !== 9)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.pDUSessionstartTime violates SIZE constraint");
+        }
+        if (this.pDUSessionstopTime !== undefined && (this.pDUSessionstopTime.length !== 9)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.pDUSessionstopTime violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.servingCNPLMNID !== undefined && (this.servingCNPLMNID.length !== 3)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.servingCNPLMNID violates SIZE constraint");
+        }
     }
 
     /**
@@ -586,7 +619,7 @@ let _cached_encoder_for_PDUSessionChargingInformation: $.ASN1Encoder<PDUSessionC
  */
 export
 function _encode_PDUSessionChargingInformation (value: PDUSessionChargingInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDUSessionChargingInformation) { _cached_encoder_for_PDUSessionChargingInformation = function (value: PDUSessionChargingInformation, elGetter: $.ASN1Encoder<PDUSessionChargingInformation>): _Element {
+    if (!_cached_encoder_for_PDUSessionChargingInformation) { _cached_encoder_for_PDUSessionChargingInformation = function (value: PDUSessionChargingInformation, _elGetter: $.ASN1Encoder<PDUSessionChargingInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.pDUSessionChargingID, $.BER));
     if (value.userIdentifier !== undefined) {

@@ -147,7 +147,7 @@ let _cached_encoder_for_TariffPeriod: $.ASN1Encoder<TariffPeriod> | null = null;
  */
 export
 function _encode_TariffPeriod (value: TariffPeriod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TariffPeriod) { _cached_encoder_for_TariffPeriod = function (value: TariffPeriod, elGetter: $.ASN1Encoder<TariffPeriod>): _Element {
+    if (!_cached_encoder_for_TariffPeriod) { _cached_encoder_for_TariffPeriod = function (value: TariffPeriod, _elGetter: $.ASN1Encoder<TariffPeriod>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SwitchoverTime, $.BER)(value.switchoverTime, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.tariffId, $.BER)

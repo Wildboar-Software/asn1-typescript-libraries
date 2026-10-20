@@ -303,7 +303,7 @@ let _cached_encoder_for_EPCQoSInformation: $.ASN1Encoder<EPCQoSInformation> | nu
  */
 export
 function _encode_EPCQoSInformation (value: EPCQoSInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EPCQoSInformation) { _cached_encoder_for_EPCQoSInformation = function (value: EPCQoSInformation, elGetter: $.ASN1Encoder<EPCQoSInformation>): _Element {
+    if (!_cached_encoder_for_EPCQoSInformation) { _cached_encoder_for_EPCQoSInformation = function (value: EPCQoSInformation, _elGetter: $.ASN1Encoder<EPCQoSInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.qCI, $.BER));
     if (value.maxRequestedBandwithUL !== undefined) {

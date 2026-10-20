@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -217,6 +219,28 @@ class GWMBMSRecord {
         this.mbmsInformation = mbmsInformation;
         this.commonTeid = commonTeid;
         this.iPMulticastSourceAddress = iPMulticastSourceAddress;
+    
+        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+            throw new ASN1OverflowError("GWMBMSRecord.chargingID violates INTEGER range");
+        }
+        if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("GWMBMSRecord.accessPointNameNI violates SIZE constraint");
+        }
+        if (this.pdpPDNType !== undefined && (this.pdpPDNType.length !== 2)) {
+            throw new ASN1SizeError("GWMBMSRecord.pdpPDNType violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("GWMBMSRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("GWMBMSRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("GWMBMSRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.commonTeid !== undefined && (this.commonTeid.length !== 4)) {
+            throw new ASN1SizeError("GWMBMSRecord.commonTeid violates SIZE constraint");
+        }
     }
 
     /**
@@ -392,7 +416,7 @@ let _cached_encoder_for_GWMBMSRecord: $.ASN1Encoder<GWMBMSRecord> | null = null;
  */
 export
 function _encode_GWMBMSRecord (value: GWMBMSRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GWMBMSRecord) { _cached_encoder_for_GWMBMSRecord = function (value: GWMBMSRecord, elGetter: $.ASN1Encoder<GWMBMSRecord>): _Element {
+    if (!_cached_encoder_for_GWMBMSRecord) { _cached_encoder_for_GWMBMSRecord = function (value: GWMBMSRecord, _elGetter: $.ASN1Encoder<GWMBMSRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_GSNAddress, $.BER)(value.mbmsGWAddress, $.BER));

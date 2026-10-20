@@ -163,7 +163,7 @@ let _cached_encoder_for_SCSMOT4Record_externalIdentifier: $.ASN1Encoder<SCSMOT4R
  */
 export
 function _encode_SCSMOT4Record_externalIdentifier (value: SCSMOT4Record_externalIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCSMOT4Record_externalIdentifier) { _cached_encoder_for_SCSMOT4Record_externalIdentifier = function (value: SCSMOT4Record_externalIdentifier, elGetter: $.ASN1Encoder<SCSMOT4Record_externalIdentifier>): _Element {
+    if (!_cached_encoder_for_SCSMOT4Record_externalIdentifier) { _cached_encoder_for_SCSMOT4Record_externalIdentifier = function (value: SCSMOT4Record_externalIdentifier, _elGetter: $.ASN1Encoder<SCSMOT4Record_externalIdentifier>): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SCSMOT4Record_externalIdentifier_subscriptionIDType, $.BER)(value.subscriptionIDType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeUTF8String, $.BER)(value.subscriptionIDData, $.BER)

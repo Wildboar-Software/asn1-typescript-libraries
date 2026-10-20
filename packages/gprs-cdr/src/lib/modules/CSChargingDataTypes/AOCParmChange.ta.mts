@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AOCParameters, _decode_AOCParameters, _encode_AOCParameters } from "../CSChargingDataTypes/AOCParameters.ta.mjs";
@@ -45,6 +46,10 @@ class AOCParmChange {
     ) {
         this.changeTime = changeTime;
         this.newParameters = newParameters;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("AOCParmChange.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -147,7 +152,7 @@ let _cached_encoder_for_AOCParmChange: $.ASN1Encoder<AOCParmChange> | null = nul
  */
 export
 function _encode_AOCParmChange (value: AOCParmChange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AOCParmChange) { _cached_encoder_for_AOCParmChange = function (value: AOCParmChange, elGetter: $.ASN1Encoder<AOCParmChange>): _Element {
+    if (!_cached_encoder_for_AOCParmChange) { _cached_encoder_for_AOCParmChange = function (value: AOCParmChange, _elGetter: $.ASN1Encoder<AOCParmChange>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.changeTime, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_AOCParameters, $.BER)(value.newParameters, $.BER)

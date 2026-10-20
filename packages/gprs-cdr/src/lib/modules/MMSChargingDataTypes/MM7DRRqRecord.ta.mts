@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -136,6 +138,16 @@ class MM7DRRqRecord {
         this.recordTimeStamp = recordTimeStamp;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if (this.mmDateAndTime !== undefined && (this.mmDateAndTime.length !== 9)) {
+            throw new ASN1SizeError("MM7DRRqRecord.mmDateAndTime violates SIZE constraint");
+        }
+        if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MM7DRRqRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MM7DRRqRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -285,7 +297,7 @@ let _cached_encoder_for_MM7DRRqRecord: $.ASN1Encoder<MM7DRRqRecord> | null = nul
  */
 export
 function _encode_MM7DRRqRecord (value: MM7DRRqRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MM7DRRqRecord) { _cached_encoder_for_MM7DRRqRecord = function (value: MM7DRRqRecord, elGetter: $.ASN1Encoder<MM7DRRqRecord>): _Element {
+    if (!_cached_encoder_for_MM7DRRqRecord) { _cached_encoder_for_MM7DRRqRecord = function (value: MM7DRRqRecord, _elGetter: $.ASN1Encoder<MM7DRRqRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.recipientMmsRSAddress !== undefined) {

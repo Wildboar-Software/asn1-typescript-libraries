@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -352,6 +354,25 @@ class MMO1SRecord {
         this.sGSNPLMNIdentifier = sGSNPLMNIdentifier;
         this.rATType = rATType;
         this.mSTimeZone = mSTimeZone;
+    
+        if (this.submissionTime !== undefined && (this.submissionTime.length !== 9)) {
+            throw new ASN1SizeError("MMO1SRecord.submissionTime violates SIZE constraint");
+        }
+        if ((this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MMO1SRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MMO1SRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.sGSNPLMNIdentifier !== undefined && (this.sGSNPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("MMO1SRecord.sGSNPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("MMO1SRecord.rATType violates INTEGER range");
+        }
+        if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("MMO1SRecord.mSTimeZone violates SIZE constraint");
+        }
     }
 
     /**
@@ -595,7 +616,7 @@ let _cached_encoder_for_MMO1SRecord: $.ASN1Encoder<MMO1SRecord> | null = null;
  */
 export
 function _encode_MMO1SRecord (value: MMO1SRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMO1SRecord) { _cached_encoder_for_MMO1SRecord = function (value: MMO1SRecord, elGetter: $.ASN1Encoder<MMO1SRecord>): _Element {
+    if (!_cached_encoder_for_MMO1SRecord) { _cached_encoder_for_MMO1SRecord = function (value: MMO1SRecord, _elGetter: $.ASN1Encoder<MMO1SRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MMSRSAddress, $.BER)(value.originatorMmsRSAddress, $.BER));

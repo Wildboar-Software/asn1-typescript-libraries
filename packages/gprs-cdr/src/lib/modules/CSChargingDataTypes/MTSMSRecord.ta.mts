@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -165,6 +166,28 @@ class MTSMSRecord {
         this.systemType = systemType;
         this.cAMELSMSInformation = cAMELSMSInformation;
         this.locationExtension = locationExtension;
+    
+        if ((this.serviceCentre.length < 1 || this.serviceCentre.length > 20)) {
+            throw new ASN1SizeError("MTSMSRecord.serviceCentre violates SIZE constraint");
+        }
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("MTSMSRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("MTSMSRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("MTSMSRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("MTSMSRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.deliveryTime.length !== 9)) {
+            throw new ASN1SizeError("MTSMSRecord.deliveryTime violates SIZE constraint");
+        }
+        if (this.locationExtension !== undefined && (this.locationExtension.length !== 12)) {
+            throw new ASN1SizeError("MTSMSRecord.locationExtension violates SIZE constraint");
+        }
     }
 
     /**
@@ -326,7 +349,7 @@ let _cached_encoder_for_MTSMSRecord: $.ASN1Encoder<MTSMSRecord> | null = null;
  */
 export
 function _encode_MTSMSRecord (value: MTSMSRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MTSMSRecord) { _cached_encoder_for_MTSMSRecord = function (value: MTSMSRecord, elGetter: $.ASN1Encoder<MTSMSRecord>): _Element {
+    if (!_cached_encoder_for_MTSMSRecord) { _cached_encoder_for_MTSMSRecord = function (value: MTSMSRecord, _elGetter: $.ASN1Encoder<MTSMSRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.serviceCentre, $.BER));

@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +40,14 @@ function _decode_RoutingNumber (el: _Element): RoutingNumber {
     "CONTEXT 1": [ "roaming", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 2": [ "forwarded", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_RoutingNumber(el);
+    const _decoded_RoutingNumber = _cached_decoder_for_RoutingNumber(el);
+    if ("roaming" in _decoded_RoutingNumber && (_decoded_RoutingNumber.roaming.length < 1 || _decoded_RoutingNumber.roaming.length > 9)) {
+        throw new ASN1SizeError("RoutingNumber.roaming violates SIZE constraint");
+    }
+    if ("forwarded" in _decoded_RoutingNumber && (_decoded_RoutingNumber.forwarded.length < 1 || _decoded_RoutingNumber.forwarded.length > 20)) {
+        throw new ASN1SizeError("RoutingNumber.forwarded violates SIZE constraint");
+    }
+    return _decoded_RoutingNumber;
 }
 
 let _cached_encoder_for_RoutingNumber: $.ASN1Encoder<RoutingNumber> | null = null;

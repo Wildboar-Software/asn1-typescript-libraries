@@ -197,7 +197,7 @@ let _cached_encoder_for_NNI_Information: $.ASN1Encoder<NNI_Information> | null =
  */
 export
 function _encode_NNI_Information (value: NNI_Information, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NNI_Information) { _cached_encoder_for_NNI_Information = function (value: NNI_Information, elGetter: $.ASN1Encoder<NNI_Information>): _Element {
+    if (!_cached_encoder_for_NNI_Information) { _cached_encoder_for_NNI_Information = function (value: NNI_Information, _elGetter: $.ASN1Encoder<NNI_Information>): _Element {
     const _components: _Element[] = [];
     if (value.sessionDirection !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_SessionDirection, $.BER)(value.sessionDirection, $.BER));

@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -309,6 +311,55 @@ class SGSNMOLCSRecord {
         this.causeForRecClosing = causeForRecClosing;
         this.servingNodePLMNIdentifier = servingNodePLMNIdentifier;
         this.cNOperatorSelectionEnt = cNOperatorSelectionEnt;
+    
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.servedMSISDN violates SIZE constraint");
+        }
+        if (this.lcsQos !== undefined && (this.lcsQos.length !== 4)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.lcsQos violates SIZE constraint");
+        }
+        if (this.lcsPriority !== undefined && (this.lcsPriority.length !== 1)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.lcsPriority violates SIZE constraint");
+        }
+        if (this.mlcNumber !== undefined && (this.mlcNumber.length < 1 || this.mlcNumber.length > 9)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.mlcNumber violates SIZE constraint");
+        }
+        if ((this.eventTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.eventTimeStamp violates SIZE constraint");
+        }
+        if (this.routingArea !== undefined && (this.routingArea.length !== 1)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.routingArea violates SIZE constraint");
+        }
+        if (this.locationEstimate !== undefined && (this.locationEstimate.length < 1 || this.locationEstimate.length > 20)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.locationEstimate violates SIZE constraint");
+        }
+        if (this.positioningData !== undefined && (this.positioningData.length < 1 || this.positioningData.length > 33)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.positioningData violates SIZE constraint");
+        }
+        if (this.lcsCause !== undefined && (this.lcsCause.length !== 1)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.lcsCause violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SGSNMOLCSRecord.localSequenceNumber violates INTEGER range");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("SGSNMOLCSRecord.rATType violates INTEGER range");
+        }
+        if (this.servingNodePLMNIdentifier !== undefined && (this.servingNodePLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("SGSNMOLCSRecord.servingNodePLMNIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -544,7 +595,7 @@ let _cached_encoder_for_SGSNMOLCSRecord: $.ASN1Encoder<SGSNMOLCSRecord> | null =
  */
 export
 function _encode_SGSNMOLCSRecord (value: SGSNMOLCSRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGSNMOLCSRecord) { _cached_encoder_for_SGSNMOLCSRecord = function (value: SGSNMOLCSRecord, elGetter: $.ASN1Encoder<SGSNMOLCSRecord>): _Element {
+    if (!_cached_encoder_for_SGSNMOLCSRecord) { _cached_encoder_for_SGSNMOLCSRecord = function (value: SGSNMOLCSRecord, _elGetter: $.ASN1Encoder<SGSNMOLCSRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.recordingEntity, $.BER));

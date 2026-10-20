@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +40,14 @@ function _decode_WaitTime (el: _Element): WaitTime {
     "CONTEXT 0": [ "http_date", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 1": [ "delta_seconds", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_WaitTime(el);
+    const _decoded_WaitTime = _cached_decoder_for_WaitTime(el);
+    if ("http_date" in _decoded_WaitTime && (_decoded_WaitTime.http_date.length !== 9)) {
+        throw new ASN1SizeError("WaitTime.http_date violates SIZE constraint");
+    }
+    if ("delta_seconds" in _decoded_WaitTime && (_decoded_WaitTime.delta_seconds.length !== 8)) {
+        throw new ASN1SizeError("WaitTime.delta_seconds violates SIZE constraint");
+    }
+    return _decoded_WaitTime;
 }
 
 let _cached_encoder_for_WaitTime: $.ASN1Encoder<WaitTime> | null = null;

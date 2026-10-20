@@ -2,7 +2,8 @@
 import {
     OCTET_STRING,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPBinV6AddressWithPrefixLength, _decode_IPBinV6AddressWithPrefixLength, _encode_IPBinV6AddressWithPrefixLength } from "./IPBinV6AddressWithPrefixLength.ta.mjs";
@@ -40,7 +41,11 @@ function _decode_IPBinV6AddressWithOrWithoutPrefixLength (el: _Element): IPBinV6
     "CONTEXT 1": [ "iPBinV6Address", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 4": [ "iPBinV6AddressWithPrefix", $._decode_implicit<IPBinV6AddressWithPrefixLength>(() => _decode_IPBinV6AddressWithPrefixLength) ]
 }); }
-    return _cached_decoder_for_IPBinV6AddressWithOrWithoutPrefixLength(el);
+    const _decoded_IPBinV6AddressWithOrWithoutPrefixLength = _cached_decoder_for_IPBinV6AddressWithOrWithoutPrefixLength(el);
+    if ("iPBinV6Address" in _decoded_IPBinV6AddressWithOrWithoutPrefixLength && (_decoded_IPBinV6AddressWithOrWithoutPrefixLength.iPBinV6Address.length !== 16)) {
+        throw new ASN1SizeError("IPBinV6AddressWithOrWithoutPrefixLength.iPBinV6Address violates SIZE constraint");
+    }
+    return _decoded_IPBinV6AddressWithOrWithoutPrefixLength;
 }
 
 let _cached_encoder_for_IPBinV6AddressWithOrWithoutPrefixLength: $.ASN1Encoder<IPBinV6AddressWithOrWithoutPrefixLength> | null = null;

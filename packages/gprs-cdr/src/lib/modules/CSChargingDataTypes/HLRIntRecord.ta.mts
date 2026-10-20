@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -127,6 +129,22 @@ class HLRIntRecord {
         this.numberOfForwarding = numberOfForwarding;
         this.interrogationResult = interrogationResult;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("HLRIntRecord.servedIMSI violates SIZE constraint");
+        }
+        if ((this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("HLRIntRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("HLRIntRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.interrogationTime.length !== 9)) {
+            throw new ASN1SizeError("HLRIntRecord.interrogationTime violates SIZE constraint");
+        }
+        if (this.numberOfForwarding !== undefined && ((typeof this.numberOfForwarding === "bigint" ? Number(this.numberOfForwarding) : this.numberOfForwarding) < 1 || (typeof this.numberOfForwarding === "bigint" ? Number(this.numberOfForwarding) : this.numberOfForwarding) > 5)) {
+            throw new ASN1OverflowError("HLRIntRecord.numberOfForwarding violates INTEGER range");
+        }
     }
 
     /**
@@ -266,7 +284,7 @@ let _cached_encoder_for_HLRIntRecord: $.ASN1Encoder<HLRIntRecord> | null = null;
  */
 export
 function _encode_HLRIntRecord (value: HLRIntRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HLRIntRecord) { _cached_encoder_for_HLRIntRecord = function (value: HLRIntRecord, elGetter: $.ASN1Encoder<HLRIntRecord>): _Element {
+    if (!_cached_encoder_for_HLRIntRecord) { _cached_encoder_for_HLRIntRecord = function (value: HLRIntRecord, _elGetter: $.ASN1Encoder<HLRIntRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

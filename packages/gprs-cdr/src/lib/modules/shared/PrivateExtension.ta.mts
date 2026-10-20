@@ -148,7 +148,7 @@ let _cached_encoder_for_PrivateExtension: $.ASN1Encoder<PrivateExtension> | null
  */
 export
 function _encode_PrivateExtension (value: PrivateExtension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PrivateExtension) { _cached_encoder_for_PrivateExtension = function (value: PrivateExtension, elGetter: $.ASN1Encoder<PrivateExtension>): _Element {
+    if (!_cached_encoder_for_PrivateExtension) { _cached_encoder_for_PrivateExtension = function (value: PrivateExtension, _elGetter: $.ASN1Encoder<PrivateExtension>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeObjectIdentifier(value.extId, $.BER));
     if (value.extType !== undefined) {

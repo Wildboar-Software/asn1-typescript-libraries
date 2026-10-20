@@ -6,7 +6,9 @@ import {
     IA5String,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
@@ -116,6 +118,22 @@ class CAMELInformationPDP {
         this.levelOfCAMELService = levelOfCAMELService;
         this.freeFormatData = freeFormatData;
         this.fFDAppendIndicator = fFDAppendIndicator;
+    
+        if (this.sCFAddress !== undefined && (this.sCFAddress.length < 1 || this.sCFAddress.length > 20)) {
+            throw new ASN1SizeError("CAMELInformationPDP.sCFAddress violates SIZE constraint");
+        }
+        if (this.serviceKey !== undefined && ((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+            throw new ASN1OverflowError("CAMELInformationPDP.serviceKey violates INTEGER range");
+        }
+        if (this.cAMELAccessPointNameNI !== undefined && (this.cAMELAccessPointNameNI.length < 1 || this.cAMELAccessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("CAMELInformationPDP.cAMELAccessPointNameNI violates SIZE constraint");
+        }
+        if (this.cAMELAccessPointNameOI !== undefined && (this.cAMELAccessPointNameOI.length < 1 || this.cAMELAccessPointNameOI.length > 37)) {
+            throw new ASN1SizeError("CAMELInformationPDP.cAMELAccessPointNameOI violates SIZE constraint");
+        }
+        if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {
+            throw new ASN1SizeError("CAMELInformationPDP.freeFormatData violates SIZE constraint");
+        }
     }
 
     /**
@@ -257,7 +275,7 @@ let _cached_encoder_for_CAMELInformationPDP: $.ASN1Encoder<CAMELInformationPDP> 
  */
 export
 function _encode_CAMELInformationPDP (value: CAMELInformationPDP, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAMELInformationPDP) { _cached_encoder_for_CAMELInformationPDP = function (value: CAMELInformationPDP, elGetter: $.ASN1Encoder<CAMELInformationPDP>): _Element {
+    if (!_cached_encoder_for_CAMELInformationPDP) { _cached_encoder_for_CAMELInformationPDP = function (value: CAMELInformationPDP, _elGetter: $.ASN1Encoder<CAMELInformationPDP>): _Element {
     const _components: _Element[] = [];
     if (value.sCFAddress !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.sCFAddress, $.BER));

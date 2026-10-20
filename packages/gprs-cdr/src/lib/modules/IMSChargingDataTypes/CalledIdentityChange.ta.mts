@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../IMSChargingDataTypes/InvolvedParty.ta.mjs";
@@ -45,6 +46,10 @@ class CalledIdentityChange {
     ) {
         this.calledIdentity = calledIdentity;
         this.changeTime = changeTime;
+    
+        if (this.changeTime !== undefined && (this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("CalledIdentityChange.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -148,7 +153,7 @@ let _cached_encoder_for_CalledIdentityChange: $.ASN1Encoder<CalledIdentityChange
  */
 export
 function _encode_CalledIdentityChange (value: CalledIdentityChange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalledIdentityChange) { _cached_encoder_for_CalledIdentityChange = function (value: CalledIdentityChange, elGetter: $.ASN1Encoder<CalledIdentityChange>): _Element {
+    if (!_cached_encoder_for_CalledIdentityChange) { _cached_encoder_for_CalledIdentityChange = function (value: CalledIdentityChange, _elGetter: $.ASN1Encoder<CalledIdentityChange>): _Element {
     const _components: _Element[] = [];
     if (value.calledIdentity !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => _encode_InvolvedParty, $.BER)(value.calledIdentity, $.BER));

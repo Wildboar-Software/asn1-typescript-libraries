@@ -6,7 +6,8 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../ProSeChargingDataTypes/RecordType.ta.mjs";
@@ -323,6 +324,31 @@ class PFDCRecord {
         this.relayIPaddress = relayIPaddress;
         this.proSeUEtoNetworkRelayUEID = proSeUEtoNetworkRelayUEID;
         this.proSeTargetLayerTwoID = proSeTargetLayerTwoID;
+    
+        if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("PFDCRecord.servedIMSI violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("PFDCRecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("PFDCRecord.nodeID violates SIZE constraint");
+        }
+        if (this.proseFunctionPLMNIdentifier !== undefined && (this.proseFunctionPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PFDCRecord.proseFunctionPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.recordOpeningTime !== undefined && (this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("PFDCRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.recordClosureTime !== undefined && (this.recordClosureTime.length !== 9)) {
+            throw new ASN1SizeError("PFDCRecord.recordClosureTime violates SIZE constraint");
+        }
+        if (this.timeOfFirstTransmission !== undefined && (this.timeOfFirstTransmission.length !== 9)) {
+            throw new ASN1SizeError("PFDCRecord.timeOfFirstTransmission violates SIZE constraint");
+        }
+        if (this.timeOfFirstReception !== undefined && (this.timeOfFirstReception.length !== 9)) {
+            throw new ASN1SizeError("PFDCRecord.timeOfFirstReception violates SIZE constraint");
+        }
     }
 
     /**
@@ -554,7 +580,7 @@ let _cached_encoder_for_PFDCRecord: $.ASN1Encoder<PFDCRecord> | null = null;
  */
 export
 function _encode_PFDCRecord (value: PFDCRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PFDCRecord) { _cached_encoder_for_PFDCRecord = function (value: PFDCRecord, elGetter: $.ASN1Encoder<PFDCRecord>): _Element {
+    if (!_cached_encoder_for_PFDCRecord) { _cached_encoder_for_PFDCRecord = function (value: PFDCRecord, _elGetter: $.ASN1Encoder<PFDCRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

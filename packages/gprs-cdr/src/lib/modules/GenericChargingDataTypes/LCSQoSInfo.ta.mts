@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type LCSQoSInfo = OCTET_STRING; // OctetStringType
 
-export
-const _decode_LCSQoSInfo: $.ASN1Decoder<LCSQoSInfo> = $._decodeOctetString;
+export const _decode_LCSQoSInfo = (el: _Element): LCSQoSInfo => {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 4) {
+        throw new ASN1SizeError("LCSQoSInfo violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_LCSQoSInfo: $.ASN1Encoder<LCSQoSInfo> = $._encodeOctetString;

@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -276,6 +277,28 @@ class TransitCallRecord {
         this.jIPPara = jIPPara;
         this.jIPSoInd = jIPSoInd;
         this.jIPQuryStatus = jIPQuryStatus;
+    
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("TransitCallRecord.recordingEntity violates SIZE constraint");
+        }
+        if (this.seizureTimestamp !== undefined && (this.seizureTimestamp.length !== 9)) {
+            throw new ASN1SizeError("TransitCallRecord.seizureTimestamp violates SIZE constraint");
+        }
+        if (this.answerTimestamp !== undefined && (this.answerTimestamp.length !== 9)) {
+            throw new ASN1SizeError("TransitCallRecord.answerTimestamp violates SIZE constraint");
+        }
+        if (this.releaseTimestamp !== undefined && (this.releaseTimestamp.length !== 9)) {
+            throw new ASN1SizeError("TransitCallRecord.releaseTimestamp violates SIZE constraint");
+        }
+        if ((this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("TransitCallRecord.callReference violates SIZE constraint");
+        }
+        if (this.locationRoutNum !== undefined && (this.locationRoutNum.length !== 5)) {
+            throw new ASN1SizeError("TransitCallRecord.locationRoutNum violates SIZE constraint");
+        }
+        if (this.jIPPara !== undefined && (this.jIPPara.length !== 5)) {
+            throw new ASN1SizeError("TransitCallRecord.jIPPara violates SIZE constraint");
+        }
     }
 
     /**
@@ -473,7 +496,7 @@ let _cached_encoder_for_TransitCallRecord: $.ASN1Encoder<TransitCallRecord> | nu
  */
 export
 function _encode_TransitCallRecord (value: TransitCallRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransitCallRecord) { _cached_encoder_for_TransitCallRecord = function (value: TransitCallRecord, elGetter: $.ASN1Encoder<TransitCallRecord>): _Element {
+    if (!_cached_encoder_for_TransitCallRecord) { _cached_encoder_for_TransitCallRecord = function (value: TransitCallRecord, _elGetter: $.ASN1Encoder<TransitCallRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.recordingEntity, $.BER));

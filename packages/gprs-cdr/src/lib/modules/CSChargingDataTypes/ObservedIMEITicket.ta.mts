@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMEIStatus, _decode_IMEIStatus, _encode_IMEIStatus, _enum_for_IMEIStatus } from "../CSChargingDataTypes/IMEIStatus.ta.mjs";
@@ -130,6 +131,25 @@ class ObservedIMEITicket {
         this.imeiCheckEvent = imeiCheckEvent;
         this.callReference = callReference;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("ObservedIMEITicket.servedIMEI violates SIZE constraint");
+        }
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("ObservedIMEITicket.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("ObservedIMEITicket.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("ObservedIMEITicket.recordingEntity violates SIZE constraint");
+        }
+        if ((this.eventTime.length !== 9)) {
+            throw new ASN1SizeError("ObservedIMEITicket.eventTime violates SIZE constraint");
+        }
+        if (this.callReference !== undefined && (this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("ObservedIMEITicket.callReference violates SIZE constraint");
+        }
     }
 
     /**
@@ -275,7 +295,7 @@ let _cached_encoder_for_ObservedIMEITicket: $.ASN1Encoder<ObservedIMEITicket> | 
  */
 export
 function _encode_ObservedIMEITicket (value: ObservedIMEITicket, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ObservedIMEITicket) { _cached_encoder_for_ObservedIMEITicket = function (value: ObservedIMEITicket, elGetter: $.ASN1Encoder<ObservedIMEITicket>): _Element {
+    if (!_cached_encoder_for_ObservedIMEITicket) { _cached_encoder_for_ObservedIMEITicket = function (value: ObservedIMEITicket, _elGetter: $.ASN1Encoder<ObservedIMEITicket>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.servedIMEI, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_IMEIStatus, $.BER)(value.imeiStatus, $.BER));

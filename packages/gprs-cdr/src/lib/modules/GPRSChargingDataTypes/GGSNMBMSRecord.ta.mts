@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -190,6 +192,22 @@ class GGSNMBMSRecord {
         this.recordExtensions = recordExtensions;
         this.localSequenceNumber = localSequenceNumber;
         this.mbmsInformation = mbmsInformation;
+    
+        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+            throw new ASN1OverflowError("GGSNMBMSRecord.chargingID violates INTEGER range");
+        }
+        if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("GGSNMBMSRecord.accessPointNameNI violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("GGSNMBMSRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("GGSNMBMSRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("GGSNMBMSRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -353,7 +371,7 @@ let _cached_encoder_for_GGSNMBMSRecord: $.ASN1Encoder<GGSNMBMSRecord> | null = n
  */
 export
 function _encode_GGSNMBMSRecord (value: GGSNMBMSRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GGSNMBMSRecord) { _cached_encoder_for_GGSNMBMSRecord = function (value: GGSNMBMSRecord, elGetter: $.ASN1Encoder<GGSNMBMSRecord>): _Element {
+    if (!_cached_encoder_for_GGSNMBMSRecord) { _cached_encoder_for_GGSNMBMSRecord = function (value: GGSNMBMSRecord, _elGetter: $.ASN1Encoder<GGSNMBMSRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_GSNAddress, $.BER)(value.ggsnAddress, $.BER));

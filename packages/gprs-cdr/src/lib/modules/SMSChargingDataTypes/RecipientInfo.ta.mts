@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMAddressInfo, _decode_SMAddressInfo, _encode_SMAddressInfo } from "../SMSChargingDataTypes/SMAddressInfo.ta.mjs";
@@ -92,6 +93,16 @@ class RecipientInfo {
         this.recipientReceivedAddress = recipientReceivedAddress;
         this.sMDestinationInterface = sMDestinationInterface;
         this.sMRecipientProtocolID = sMRecipientProtocolID;
+    
+        if (this.recipientIMSI !== undefined && (this.recipientIMSI.length < 3 || this.recipientIMSI.length > 8)) {
+            throw new ASN1SizeError("RecipientInfo.recipientIMSI violates SIZE constraint");
+        }
+        if (this.recipientMSISDN !== undefined && (this.recipientMSISDN.length < 1 || this.recipientMSISDN.length > 9)) {
+            throw new ASN1SizeError("RecipientInfo.recipientMSISDN violates SIZE constraint");
+        }
+        if (this.recipientSCCPAddress !== undefined && (this.recipientSCCPAddress.length < 1 || this.recipientSCCPAddress.length > 20)) {
+            throw new ASN1SizeError("RecipientInfo.recipientSCCPAddress violates SIZE constraint");
+        }
     }
 
     /**
@@ -215,7 +226,7 @@ let _cached_encoder_for_RecipientInfo: $.ASN1Encoder<RecipientInfo> | null = nul
  */
 export
 function _encode_RecipientInfo (value: RecipientInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RecipientInfo) { _cached_encoder_for_RecipientInfo = function (value: RecipientInfo, elGetter: $.ASN1Encoder<RecipientInfo>): _Element {
+    if (!_cached_encoder_for_RecipientInfo) { _cached_encoder_for_RecipientInfo = function (value: RecipientInfo, _elGetter: $.ASN1Encoder<RecipientInfo>): _Element {
     const _components: _Element[] = [];
     if (value.recipientIMSI !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.recipientIMSI, $.BER));

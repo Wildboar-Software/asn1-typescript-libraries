@@ -146,7 +146,7 @@ let _cached_encoder_for_TSCopyTariffSystem: $.ASN1Encoder<TSCopyTariffSystem> | 
  */
 export
 function _encode_TSCopyTariffSystem (value: TSCopyTariffSystem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSCopyTariffSystem) { _cached_encoder_for_TSCopyTariffSystem = function (value: TSCopyTariffSystem, elGetter: $.ASN1Encoder<TSCopyTariffSystem>): _Element {
+    if (!_cached_encoder_for_TSCopyTariffSystem) { _cached_encoder_for_TSCopyTariffSystem = function (value: TSCopyTariffSystem, _elGetter: $.ASN1Encoder<TSCopyTariffSystem>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.oldTS, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.newTS, $.BER)

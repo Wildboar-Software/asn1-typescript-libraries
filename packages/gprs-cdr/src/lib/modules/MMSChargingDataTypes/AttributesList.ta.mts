@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSRSAddress, _decode_MMSRSAddress, _encode_MMSRSAddress } from "../MMSChargingDataTypes/MMSRSAddress.ta.mjs";
@@ -93,6 +94,10 @@ class AttributesList {
         this.messageSize = messageSize;
         this.mmFlags = mmFlags;
         this.mmState = mmState;
+    
+        if ((this.dateAndTime.length !== 9)) {
+            throw new ASN1SizeError("AttributesList.dateAndTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -226,7 +231,7 @@ let _cached_encoder_for_AttributesList: $.ASN1Encoder<AttributesList> | null = n
  */
 export
 function _encode_AttributesList (value: AttributesList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AttributesList) { _cached_encoder_for_AttributesList = function (value: AttributesList, elGetter: $.ASN1Encoder<AttributesList>): _Element {
+    if (!_cached_encoder_for_AttributesList) { _cached_encoder_for_AttributesList = function (value: AttributesList, _elGetter: $.ASN1Encoder<AttributesList>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.messageID, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.dateAndTime, $.BER),

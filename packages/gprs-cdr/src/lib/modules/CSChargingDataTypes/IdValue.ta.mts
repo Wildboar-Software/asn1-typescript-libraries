@@ -147,7 +147,7 @@ let _cached_encoder_for_IdValue: $.ASN1Encoder<IdValue> | null = null;
  */
 export
 function _encode_IdValue (value: IdValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IdValue) { _cached_encoder_for_IdValue = function (value: IdValue, elGetter: $.ASN1Encoder<IdValue>): _Element {
+    if (!_cached_encoder_for_IdValue) { _cached_encoder_for_IdValue = function (value: IdValue, _elGetter: $.ASN1Encoder<IdValue>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeObjectIdentifier(value.id, $.BER),
         /* REQUIRED   */ $._encodeAny(value.value, $.BER)

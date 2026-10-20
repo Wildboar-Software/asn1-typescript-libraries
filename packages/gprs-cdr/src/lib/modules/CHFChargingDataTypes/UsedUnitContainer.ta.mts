@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Trigger, _decode_Trigger, _encode_Trigger } from "../CHFChargingDataTypes/Trigger.ta.mjs";
@@ -149,6 +151,19 @@ class UsedUnitContainer {
         this.ratingIndicator = ratingIndicator;
         this.pDUContainerInformation = pDUContainerInformation;
         this.quotaManagementIndicator = quotaManagementIndicator;
+    
+        if (this.serviceIdentifier !== undefined && ((typeof this.serviceIdentifier === "bigint" ? Number(this.serviceIdentifier) : this.serviceIdentifier) < 0 || (typeof this.serviceIdentifier === "bigint" ? Number(this.serviceIdentifier) : this.serviceIdentifier) > 4294967295)) {
+            throw new ASN1OverflowError("UsedUnitContainer.serviceIdentifier violates INTEGER range");
+        }
+        if (this.triggerTimeStamp !== undefined && (this.triggerTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("UsedUnitContainer.triggerTimeStamp violates SIZE constraint");
+        }
+        if (this.eventTimeStamp !== undefined && (this.eventTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("UsedUnitContainer.eventTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("UsedUnitContainer.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -296,7 +311,7 @@ let _cached_encoder_for_UsedUnitContainer: $.ASN1Encoder<UsedUnitContainer> | nu
  */
 export
 function _encode_UsedUnitContainer (value: UsedUnitContainer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UsedUnitContainer) { _cached_encoder_for_UsedUnitContainer = function (value: UsedUnitContainer, elGetter: $.ASN1Encoder<UsedUnitContainer>): _Element {
+    if (!_cached_encoder_for_UsedUnitContainer) { _cached_encoder_for_UsedUnitContainer = function (value: UsedUnitContainer, _elGetter: $.ASN1Encoder<UsedUnitContainer>): _Element {
     const _components: _Element[] = [];
     if (value.serviceIdentifier !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.serviceIdentifier, $.BER));

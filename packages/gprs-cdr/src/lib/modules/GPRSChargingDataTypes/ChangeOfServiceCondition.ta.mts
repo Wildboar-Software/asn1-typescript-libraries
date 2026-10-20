@@ -6,7 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceConditionChange, _decode_ServiceConditionChange, _encode_ServiceConditionChange } from "../GPRSChargingDataTypes/ServiceConditionChange.ta.mjs";
@@ -398,6 +400,25 @@ class ChangeOfServiceCondition {
         this.trafficSteeringPolicyIDUplink = trafficSteeringPolicyIDUplink;
         this.tWANUserLocationInformation = tWANUserLocationInformation;
         this.listOfPresenceReportingAreaInformation = listOfPresenceReportingAreaInformation;
+    
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("ChangeOfServiceCondition.localSequenceNumber violates INTEGER range");
+        }
+        if (this.timeOfFirstUsage !== undefined && (this.timeOfFirstUsage.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfServiceCondition.timeOfFirstUsage violates SIZE constraint");
+        }
+        if (this.timeOfLastUsage !== undefined && (this.timeOfLastUsage.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfServiceCondition.timeOfLastUsage violates SIZE constraint");
+        }
+        if ((this.timeOfReport.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfServiceCondition.timeOfReport violates SIZE constraint");
+        }
+        if (this.serviceIdentifier !== undefined && ((typeof this.serviceIdentifier === "bigint" ? Number(this.serviceIdentifier) : this.serviceIdentifier) < 0 || (typeof this.serviceIdentifier === "bigint" ? Number(this.serviceIdentifier) : this.serviceIdentifier) > 4294967295)) {
+            throw new ASN1OverflowError("ChangeOfServiceCondition.serviceIdentifier violates INTEGER range");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("ChangeOfServiceCondition.rATType violates INTEGER range");
+        }
     }
 
     /**
@@ -653,7 +674,7 @@ let _cached_encoder_for_ChangeOfServiceCondition: $.ASN1Encoder<ChangeOfServiceC
  */
 export
 function _encode_ChangeOfServiceCondition (value: ChangeOfServiceCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeOfServiceCondition) { _cached_encoder_for_ChangeOfServiceCondition = function (value: ChangeOfServiceCondition, elGetter: $.ASN1Encoder<ChangeOfServiceCondition>): _Element {
+    if (!_cached_encoder_for_ChangeOfServiceCondition) { _cached_encoder_for_ChangeOfServiceCondition = function (value: ChangeOfServiceCondition, _elGetter: $.ASN1Encoder<ChangeOfServiceCondition>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.ratingGroup, $.BER));
     if (value.chargingRuleBaseName !== undefined) {

@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,6 +47,13 @@ class NetworkSliceInstanceID {
     ) {
         this.sST = sST;
         this.sD = sD;
+    
+        if (((typeof this.sST === "bigint" ? Number(this.sST) : this.sST) < 0 || (typeof this.sST === "bigint" ? Number(this.sST) : this.sST) > 255)) {
+            throw new ASN1OverflowError("NetworkSliceInstanceID.sST violates INTEGER range");
+        }
+        if (this.sD !== undefined && (this.sD.length !== 3)) {
+            throw new ASN1SizeError("NetworkSliceInstanceID.sD violates SIZE constraint");
+        }
     }
 
     /**
@@ -148,7 +157,7 @@ let _cached_encoder_for_NetworkSliceInstanceID: $.ASN1Encoder<NetworkSliceInstan
  */
 export
 function _encode_NetworkSliceInstanceID (value: NetworkSliceInstanceID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NetworkSliceInstanceID) { _cached_encoder_for_NetworkSliceInstanceID = function (value: NetworkSliceInstanceID, elGetter: $.ASN1Encoder<NetworkSliceInstanceID>): _Element {
+    if (!_cached_encoder_for_NetworkSliceInstanceID) { _cached_encoder_for_NetworkSliceInstanceID = function (value: NetworkSliceInstanceID, _elGetter: $.ASN1Encoder<NetworkSliceInstanceID>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.sST, $.BER));
     if (value.sD !== undefined) {

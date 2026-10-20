@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../IMSChargingDataTypes/RecordType.ta.mjs";
@@ -632,6 +634,37 @@ class SCSCFRecord {
         this.listOfCalledIdentityChanges = listOfCalledIdentityChanges;
         this.cellularNetworkInformation = cellularNetworkInformation;
         this.fEIdentifierList = fEIdentifierList;
+    
+        if (this.serviceRequestTimeStamp !== undefined && (this.serviceRequestTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("SCSCFRecord.serviceRequestTimeStamp violates SIZE constraint");
+        }
+        if (this.serviceDeliveryStartTimeStamp !== undefined && (this.serviceDeliveryStartTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("SCSCFRecord.serviceDeliveryStartTimeStamp violates SIZE constraint");
+        }
+        if (this.serviceDeliveryEndTimeStamp !== undefined && (this.serviceDeliveryEndTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("SCSCFRecord.serviceDeliveryEndTimeStamp violates SIZE constraint");
+        }
+        if (this.recordOpeningTime !== undefined && (this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("SCSCFRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.recordClosureTime !== undefined && (this.recordClosureTime.length !== 9)) {
+            throw new ASN1SizeError("SCSCFRecord.recordClosureTime violates SIZE constraint");
+        }
+        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SCSCFRecord.localRecordSequenceNumber violates INTEGER range");
+        }
+        if (this.serviceRequestTimeStampFraction !== undefined && ((typeof this.serviceRequestTimeStampFraction === "bigint" ? Number(this.serviceRequestTimeStampFraction) : this.serviceRequestTimeStampFraction) < 0 || (typeof this.serviceRequestTimeStampFraction === "bigint" ? Number(this.serviceRequestTimeStampFraction) : this.serviceRequestTimeStampFraction) > 999)) {
+            throw new ASN1OverflowError("SCSCFRecord.serviceRequestTimeStampFraction violates INTEGER range");
+        }
+        if (this.serviceDeliveryStartTimeStampFraction !== undefined && ((typeof this.serviceDeliveryStartTimeStampFraction === "bigint" ? Number(this.serviceDeliveryStartTimeStampFraction) : this.serviceDeliveryStartTimeStampFraction) < 0 || (typeof this.serviceDeliveryStartTimeStampFraction === "bigint" ? Number(this.serviceDeliveryStartTimeStampFraction) : this.serviceDeliveryStartTimeStampFraction) > 999)) {
+            throw new ASN1OverflowError("SCSCFRecord.serviceDeliveryStartTimeStampFraction violates INTEGER range");
+        }
+        if (this.serviceDeliveryEndTimeStampFraction !== undefined && ((typeof this.serviceDeliveryEndTimeStampFraction === "bigint" ? Number(this.serviceDeliveryEndTimeStampFraction) : this.serviceDeliveryEndTimeStampFraction) < 0 || (typeof this.serviceDeliveryEndTimeStampFraction === "bigint" ? Number(this.serviceDeliveryEndTimeStampFraction) : this.serviceDeliveryEndTimeStampFraction) > 999)) {
+            throw new ASN1OverflowError("SCSCFRecord.serviceDeliveryEndTimeStampFraction violates INTEGER range");
+        }
+        if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("SCSCFRecord.mSTimeZone violates SIZE constraint");
+        }
     }
 
     /**
@@ -993,7 +1026,7 @@ let _cached_encoder_for_SCSCFRecord: $.ASN1Encoder<SCSCFRecord> | null = null;
  */
 export
 function _encode_SCSCFRecord (value: SCSCFRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCSCFRecord) { _cached_encoder_for_SCSCFRecord = function (value: SCSCFRecord, elGetter: $.ASN1Encoder<SCSCFRecord>): _Element {
+    if (!_cached_encoder_for_SCSCFRecord) { _cached_encoder_for_SCSCFRecord = function (value: SCSCFRecord, _elGetter: $.ASN1Encoder<SCSCFRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

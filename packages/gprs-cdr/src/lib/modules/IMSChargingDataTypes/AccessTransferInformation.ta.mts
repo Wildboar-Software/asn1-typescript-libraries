@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessTransferType, _decode_AccessTransferType, _encode_AccessTransferType, _enum_for_AccessTransferType } from "../IMSChargingDataTypes/AccessTransferType.ta.mjs";
@@ -122,6 +123,10 @@ class AccessTransferInformation {
         this.subscriberEquipmentNumber = subscriberEquipmentNumber;
         this.instanceId = instanceId;
         this.cellularNetworkInformation = cellularNetworkInformation;
+    
+        if (this.accessTransferTime !== undefined && (this.accessTransferTime.length !== 9)) {
+            throw new ASN1SizeError("AccessTransferInformation.accessTransferTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -263,7 +268,7 @@ let _cached_encoder_for_AccessTransferInformation: $.ASN1Encoder<AccessTransferI
  */
 export
 function _encode_AccessTransferInformation (value: AccessTransferInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AccessTransferInformation) { _cached_encoder_for_AccessTransferInformation = function (value: AccessTransferInformation, elGetter: $.ASN1Encoder<AccessTransferInformation>): _Element {
+    if (!_cached_encoder_for_AccessTransferInformation) { _cached_encoder_for_AccessTransferInformation = function (value: AccessTransferInformation, _elGetter: $.ASN1Encoder<AccessTransferInformation>): _Element {
     const _components: _Element[] = [];
     if (value.accessTransferType !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_AccessTransferType, $.BER)(value.accessTransferType, $.BER));

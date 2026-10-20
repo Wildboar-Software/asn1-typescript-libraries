@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type FreeFormatData = OCTET_STRING; // OctetStringType
 
-export
-const _decode_FreeFormatData: $.ASN1Decoder<FreeFormatData> = $._decodeOctetString;
+export const _decode_FreeFormatData = (el: _Element): FreeFormatData => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 160) {
+        throw new ASN1SizeError("FreeFormatData violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_FreeFormatData: $.ASN1Encoder<FreeFormatData> = $._encodeOctetString;

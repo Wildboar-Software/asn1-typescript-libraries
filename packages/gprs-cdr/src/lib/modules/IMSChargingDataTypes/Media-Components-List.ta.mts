@@ -6,7 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Component, _decode_SDP_Media_Component, _encode_SDP_Media_Component } from "../IMSChargingDataTypes/SDP-Media-Component.ta.mjs";
@@ -117,6 +119,19 @@ class Media_Components_List {
         this.sIP_Request_Timestamp_Fraction = sIP_Request_Timestamp_Fraction;
         this.sIP_Response_Timestamp_Fraction = sIP_Response_Timestamp_Fraction;
         this.sDP_Type = sDP_Type;
+    
+        if (this.sIP_Request_Timestamp !== undefined && (this.sIP_Request_Timestamp.length !== 9)) {
+            throw new ASN1SizeError("Media_Components_List.sIP_Request_Timestamp violates SIZE constraint");
+        }
+        if (this.sIP_Response_Timestamp !== undefined && (this.sIP_Response_Timestamp.length !== 9)) {
+            throw new ASN1SizeError("Media_Components_List.sIP_Response_Timestamp violates SIZE constraint");
+        }
+        if (this.sIP_Request_Timestamp_Fraction !== undefined && ((typeof this.sIP_Request_Timestamp_Fraction === "bigint" ? Number(this.sIP_Request_Timestamp_Fraction) : this.sIP_Request_Timestamp_Fraction) < 0 || (typeof this.sIP_Request_Timestamp_Fraction === "bigint" ? Number(this.sIP_Request_Timestamp_Fraction) : this.sIP_Request_Timestamp_Fraction) > 999)) {
+            throw new ASN1OverflowError("Media_Components_List.sIP_Request_Timestamp_Fraction violates INTEGER range");
+        }
+        if (this.sIP_Response_Timestamp_Fraction !== undefined && ((typeof this.sIP_Response_Timestamp_Fraction === "bigint" ? Number(this.sIP_Response_Timestamp_Fraction) : this.sIP_Response_Timestamp_Fraction) < 0 || (typeof this.sIP_Response_Timestamp_Fraction === "bigint" ? Number(this.sIP_Response_Timestamp_Fraction) : this.sIP_Response_Timestamp_Fraction) > 999)) {
+            throw new ASN1OverflowError("Media_Components_List.sIP_Response_Timestamp_Fraction violates INTEGER range");
+        }
     }
 
     /**
@@ -254,7 +269,7 @@ let _cached_encoder_for_Media_Components_List: $.ASN1Encoder<Media_Components_Li
  */
 export
 function _encode_Media_Components_List (value: Media_Components_List, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Media_Components_List) { _cached_encoder_for_Media_Components_List = function (value: Media_Components_List, elGetter: $.ASN1Encoder<Media_Components_List>): _Element {
+    if (!_cached_encoder_for_Media_Components_List) { _cached_encoder_for_Media_Components_List = function (value: Media_Components_List, _elGetter: $.ASN1Encoder<Media_Components_List>): _Element {
     const _components: _Element[] = [];
     if (value.sIP_Request_Timestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.sIP_Request_Timestamp, $.BER));

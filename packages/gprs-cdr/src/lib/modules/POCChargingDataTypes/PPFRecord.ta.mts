@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../POCChargingDataTypes/RecordType.ta.mjs";
@@ -295,6 +297,25 @@ class PPFRecord {
         this.poCInformation = poCInformation;
         this.recordExtensions = recordExtensions;
         this.serviceContextID = serviceContextID;
+    
+        if (this.serviceRequestTimeStamp !== undefined && (this.serviceRequestTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("PPFRecord.serviceRequestTimeStamp violates SIZE constraint");
+        }
+        if (this.serviceDeliveryStartTimeStamp !== undefined && (this.serviceDeliveryStartTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("PPFRecord.serviceDeliveryStartTimeStamp violates SIZE constraint");
+        }
+        if (this.serviceDeliveryEndTimeStamp !== undefined && (this.serviceDeliveryEndTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("PPFRecord.serviceDeliveryEndTimeStamp violates SIZE constraint");
+        }
+        if (this.recordOpeningTime !== undefined && (this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("PPFRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.recordClosureTime !== undefined && (this.recordClosureTime.length !== 9)) {
+            throw new ASN1SizeError("PPFRecord.recordClosureTime violates SIZE constraint");
+        }
+        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("PPFRecord.localRecordSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -508,7 +529,7 @@ let _cached_encoder_for_PPFRecord: $.ASN1Encoder<PPFRecord> | null = null;
  */
 export
 function _encode_PPFRecord (value: PPFRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PPFRecord) { _cached_encoder_for_PPFRecord = function (value: PPFRecord, elGetter: $.ASN1Encoder<PPFRecord>): _Element {
+    if (!_cached_encoder_for_PPFRecord) { _cached_encoder_for_PPFRecord = function (value: PPFRecord, _elGetter: $.ASN1Encoder<PPFRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

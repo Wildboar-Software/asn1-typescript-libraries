@@ -148,7 +148,7 @@ let _cached_encoder_for_ServiceSpecificInfo: $.ASN1Encoder<ServiceSpecificInfo> 
  */
 export
 function _encode_ServiceSpecificInfo (value: ServiceSpecificInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceSpecificInfo) { _cached_encoder_for_ServiceSpecificInfo = function (value: ServiceSpecificInfo, elGetter: $.ASN1Encoder<ServiceSpecificInfo>): _Element {
+    if (!_cached_encoder_for_ServiceSpecificInfo) { _cached_encoder_for_ServiceSpecificInfo = function (value: ServiceSpecificInfo, _elGetter: $.ASN1Encoder<ServiceSpecificInfo>): _Element {
     const _components: _Element[] = [];
     if (value.serviceSpecificData !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGraphicString, $.BER)(value.serviceSpecificData, $.BER));

@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
@@ -76,6 +77,13 @@ class ChangeOfService {
         this.changeTime = changeTime;
         this.rateIndication = rateIndication;
         this.fnur = fnur;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfService.changeTime violates SIZE constraint");
+        }
+        if (this.rateIndication !== undefined && (this.rateIndication.length !== 1)) {
+            throw new ASN1SizeError("ChangeOfService.rateIndication violates SIZE constraint");
+        }
     }
 
     /**
@@ -203,7 +211,7 @@ let _cached_encoder_for_ChangeOfService: $.ASN1Encoder<ChangeOfService> | null =
  */
 export
 function _encode_ChangeOfService (value: ChangeOfService, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeOfService) { _cached_encoder_for_ChangeOfService = function (value: ChangeOfService, elGetter: $.ASN1Encoder<ChangeOfService>): _Element {
+    if (!_cached_encoder_for_ChangeOfService) { _cached_encoder_for_ChangeOfService = function (value: ChangeOfService, _elGetter: $.ASN1Encoder<ChangeOfService>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_BasicService, $.BER)(value.basicService, $.BER));
     if (value.transparencyInd !== undefined) {

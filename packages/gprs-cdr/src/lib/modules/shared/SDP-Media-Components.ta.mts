@@ -202,7 +202,7 @@ let _cached_encoder_for_SDP_Media_Components: $.ASN1Encoder<SDP_Media_Components
  */
 export
 function _encode_SDP_Media_Components (value: SDP_Media_Components, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SDP_Media_Components) { _cached_encoder_for_SDP_Media_Components = function (value: SDP_Media_Components, elGetter: $.ASN1Encoder<SDP_Media_Components>): _Element {
+    if (!_cached_encoder_for_SDP_Media_Components) { _cached_encoder_for_SDP_Media_Components = function (value: SDP_Media_Components, _elGetter: $.ASN1Encoder<SDP_Media_Components>): _Element {
     const _components: _Element[] = [];
     if (value.sDP_Media_Name !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGraphicString, $.BER)(value.sDP_Media_Name, $.BER));

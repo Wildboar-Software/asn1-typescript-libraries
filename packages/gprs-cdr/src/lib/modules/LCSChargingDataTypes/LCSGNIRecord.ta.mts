@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../LCSChargingDataTypes/RecordType.ta.mjs";
@@ -134,6 +136,28 @@ class LCSGNIRecord {
         this.recordTimeStamp = recordTimeStamp;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("LCSGNIRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("LCSGNIRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("LCSGNIRecord.servedMSISDN violates SIZE constraint");
+        }
+        if (this.servingEntity !== undefined && (this.servingEntity.length < 1 || this.servingEntity.length > 20)) {
+            throw new ASN1SizeError("LCSGNIRecord.servingEntity violates SIZE constraint");
+        }
+        if (this.resultCode !== undefined && ((typeof this.resultCode === "bigint" ? Number(this.resultCode) : this.resultCode) < 0)) {
+            throw new ASN1OverflowError("LCSGNIRecord.resultCode violates INTEGER range");
+        }
+        if ((this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("LCSGNIRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("LCSGNIRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -283,7 +307,7 @@ let _cached_encoder_for_LCSGNIRecord: $.ASN1Encoder<LCSGNIRecord> | null = null;
  */
 export
 function _encode_LCSGNIRecord (value: LCSGNIRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSGNIRecord) { _cached_encoder_for_LCSGNIRecord = function (value: LCSGNIRecord, elGetter: $.ASN1Encoder<LCSGNIRecord>): _Element {
+    if (!_cached_encoder_for_LCSGNIRecord) { _cached_encoder_for_LCSGNIRecord = function (value: LCSGNIRecord, _elGetter: $.ASN1Encoder<LCSGNIRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.recordingEntity, $.BER));

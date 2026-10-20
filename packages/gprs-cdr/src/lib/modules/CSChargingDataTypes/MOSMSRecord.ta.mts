@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -183,6 +184,28 @@ class MOSMSRecord {
         this.cAMELSMSInformation = cAMELSMSInformation;
         this.systemType = systemType;
         this.locationExtension = locationExtension;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("MOSMSRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("MOSMSRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("MOSMSRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.serviceCentre.length < 1 || this.serviceCentre.length > 20)) {
+            throw new ASN1SizeError("MOSMSRecord.serviceCentre violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("MOSMSRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.originationTime.length !== 9)) {
+            throw new ASN1SizeError("MOSMSRecord.originationTime violates SIZE constraint");
+        }
+        if (this.locationExtension !== undefined && (this.locationExtension.length !== 12)) {
+            throw new ASN1SizeError("MOSMSRecord.locationExtension violates SIZE constraint");
+        }
     }
 
     /**
@@ -352,7 +375,7 @@ let _cached_encoder_for_MOSMSRecord: $.ASN1Encoder<MOSMSRecord> | null = null;
  */
 export
 function _encode_MOSMSRecord (value: MOSMSRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MOSMSRecord) { _cached_encoder_for_MOSMSRecord = function (value: MOSMSRecord, elGetter: $.ASN1Encoder<MOSMSRecord>): _Element {
+    if (!_cached_encoder_for_MOSMSRecord) { _cached_encoder_for_MOSMSRecord = function (value: MOSMSRecord, _elGetter: $.ASN1Encoder<MOSMSRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.servedIMSI, $.BER));

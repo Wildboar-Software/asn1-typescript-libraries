@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -208,6 +209,28 @@ class CommonEquipRecord {
         this.systemType = systemType;
         this.rateIndication = rateIndication;
         this.fnur = fnur;
+    
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("CommonEquipRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("CommonEquipRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("CommonEquipRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.seizureTime.length !== 9)) {
+            throw new ASN1SizeError("CommonEquipRecord.seizureTime violates SIZE constraint");
+        }
+        if (this.releaseTime !== undefined && (this.releaseTime.length !== 9)) {
+            throw new ASN1SizeError("CommonEquipRecord.releaseTime violates SIZE constraint");
+        }
+        if ((this.callReference.length < 1 || this.callReference.length > 8)) {
+            throw new ASN1SizeError("CommonEquipRecord.callReference violates SIZE constraint");
+        }
+        if (this.rateIndication !== undefined && (this.rateIndication.length !== 1)) {
+            throw new ASN1SizeError("CommonEquipRecord.rateIndication violates SIZE constraint");
+        }
     }
 
     /**
@@ -391,7 +414,7 @@ let _cached_encoder_for_CommonEquipRecord: $.ASN1Encoder<CommonEquipRecord> | nu
  */
 export
 function _encode_CommonEquipRecord (value: CommonEquipRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommonEquipRecord) { _cached_encoder_for_CommonEquipRecord = function (value: CommonEquipRecord, elGetter: $.ASN1Encoder<CommonEquipRecord>): _Element {
+    if (!_cached_encoder_for_CommonEquipRecord) { _cached_encoder_for_CommonEquipRecord = function (value: CommonEquipRecord, _elGetter: $.ASN1Encoder<CommonEquipRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_CommonEquipRecord_equipmentType, $.BER)(value.equipmentType, $.BER));

@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChangeCondition, _decode_ChangeCondition, _encode_ChangeCondition, _enum_for_ChangeCondition } from "../GPRSChargingDataTypes/ChangeCondition.ta.mjs";
@@ -250,6 +252,25 @@ class ChangeOfCharCondition {
         this.threeGPPPSDataOffStatus = threeGPPPSDataOffStatus;
         this.listOfPresenceReportingAreaInformation = listOfPresenceReportingAreaInformation;
         this.aPNRateControl = aPNRateControl;
+    
+        if (this.qosRequested !== undefined && (this.qosRequested.length < 4 || this.qosRequested.length > 255)) {
+            throw new ASN1SizeError("ChangeOfCharCondition.qosRequested violates SIZE constraint");
+        }
+        if (this.qosNegotiated !== undefined && (this.qosNegotiated.length < 4 || this.qosNegotiated.length > 255)) {
+            throw new ASN1SizeError("ChangeOfCharCondition.qosNegotiated violates SIZE constraint");
+        }
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfCharCondition.changeTime violates SIZE constraint");
+        }
+        if (this.chargingID !== undefined && ((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+            throw new ASN1OverflowError("ChangeOfCharCondition.chargingID violates INTEGER range");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("ChangeOfCharCondition.rATType violates INTEGER range");
+        }
+        if (this.accessAvailabilityChangeReason !== undefined && ((typeof this.accessAvailabilityChangeReason === "bigint" ? Number(this.accessAvailabilityChangeReason) : this.accessAvailabilityChangeReason) < 0 || (typeof this.accessAvailabilityChangeReason === "bigint" ? Number(this.accessAvailabilityChangeReason) : this.accessAvailabilityChangeReason) > 4294967295)) {
+            throw new ASN1OverflowError("ChangeOfCharCondition.accessAvailabilityChangeReason violates INTEGER range");
+        }
     }
 
     /**
@@ -451,7 +472,7 @@ let _cached_encoder_for_ChangeOfCharCondition: $.ASN1Encoder<ChangeOfCharConditi
  */
 export
 function _encode_ChangeOfCharCondition (value: ChangeOfCharCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeOfCharCondition) { _cached_encoder_for_ChangeOfCharCondition = function (value: ChangeOfCharCondition, elGetter: $.ASN1Encoder<ChangeOfCharCondition>): _Element {
+    if (!_cached_encoder_for_ChangeOfCharCondition) { _cached_encoder_for_ChangeOfCharCondition = function (value: ChangeOfCharCondition, _elGetter: $.ASN1Encoder<ChangeOfCharCondition>): _Element {
     const _components: _Element[] = [];
     if (value.qosRequested !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.qosRequested, $.BER));

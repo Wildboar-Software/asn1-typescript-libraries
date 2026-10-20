@@ -3,7 +3,8 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
@@ -54,6 +55,13 @@ class DateDefinition {
         this.month = month;
         this.day = day;
         this.dayClass = dayClass;
+    
+        if (((typeof this.month === "bigint" ? Number(this.month) : this.month) < 1 || (typeof this.month === "bigint" ? Number(this.month) : this.month) > 12)) {
+            throw new ASN1OverflowError("DateDefinition.month violates INTEGER range");
+        }
+        if (((typeof this.day === "bigint" ? Number(this.day) : this.day) < 1 || (typeof this.day === "bigint" ? Number(this.day) : this.day) > 31)) {
+            throw new ASN1OverflowError("DateDefinition.day violates INTEGER range");
+        }
     }
 
     /**
@@ -161,7 +169,7 @@ let _cached_encoder_for_DateDefinition: $.ASN1Encoder<DateDefinition> | null = n
  */
 export
 function _encode_DateDefinition (value: DateDefinition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DateDefinition) { _cached_encoder_for_DateDefinition = function (value: DateDefinition, elGetter: $.ASN1Encoder<DateDefinition>): _Element {
+    if (!_cached_encoder_for_DateDefinition) { _cached_encoder_for_DateDefinition = function (value: DateDefinition, _elGetter: $.ASN1Encoder<DateDefinition>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.month, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.day, $.BER),

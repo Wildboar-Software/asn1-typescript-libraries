@@ -206,7 +206,7 @@ let _cached_encoder_for_CommunicationFailureInfo: $.ASN1Encoder<CommunicationFai
  */
 export
 function _encode_CommunicationFailureInfo (value: CommunicationFailureInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommunicationFailureInfo) { _cached_encoder_for_CommunicationFailureInfo = function (value: CommunicationFailureInfo, elGetter: $.ASN1Encoder<CommunicationFailureInfo>): _Element {
+    if (!_cached_encoder_for_CommunicationFailureInfo) { _cached_encoder_for_CommunicationFailureInfo = function (value: CommunicationFailureInfo, _elGetter: $.ASN1Encoder<CommunicationFailureInfo>): _Element {
     const _components: _Element[] = [];
     if (value.causeType !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_CauseType, $.BER)(value.causeType, $.BER));

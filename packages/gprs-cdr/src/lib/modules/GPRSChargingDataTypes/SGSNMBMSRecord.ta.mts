@@ -5,7 +5,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -208,6 +210,32 @@ class SGSNMBMSRecord {
         this.sgsnPLMNIdentifier = sgsnPLMNIdentifier;
         this.numberofReceivingUE = numberofReceivingUE;
         this.mbmsInformation = mbmsInformation;
+    
+        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+            throw new ASN1OverflowError("SGSNMBMSRecord.chargingID violates INTEGER range");
+        }
+        if (this.listofRAs !== undefined && this.listofRAs) {
+            for (const _item of this.listofRAs) {
+                if (_item.length !== 6) {
+                    throw new ASN1SizeError("SGSNMBMSRecord.listofRAs element violates SIZE constraint");
+                }
+            }
+        }
+        if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("SGSNMBMSRecord.accessPointNameNI violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("SGSNMBMSRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("SGSNMBMSRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SGSNMBMSRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.sgsnPLMNIdentifier !== undefined && (this.sgsnPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("SGSNMBMSRecord.sgsnPLMNIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -379,7 +407,7 @@ let _cached_encoder_for_SGSNMBMSRecord: $.ASN1Encoder<SGSNMBMSRecord> | null = n
  */
 export
 function _encode_SGSNMBMSRecord (value: SGSNMBMSRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGSNMBMSRecord) { _cached_encoder_for_SGSNMBMSRecord = function (value: SGSNMBMSRecord, elGetter: $.ASN1Encoder<SGSNMBMSRecord>): _Element {
+    if (!_cached_encoder_for_SGSNMBMSRecord) { _cached_encoder_for_SGSNMBMSRecord = function (value: SGSNMBMSRecord, _elGetter: $.ASN1Encoder<SGSNMBMSRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_GSNAddress, $.BER)(value.ggsnAddress, $.BER));

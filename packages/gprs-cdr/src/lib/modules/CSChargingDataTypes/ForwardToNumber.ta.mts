@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ForwardToNumber = OCTET_STRING; // OctetStringType
 
-export
-const _decode_ForwardToNumber: $.ASN1Decoder<ForwardToNumber> = $._decodeOctetString;
+export const _decode_ForwardToNumber = (el: _Element): ForwardToNumber => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 20) {
+        throw new ASN1SizeError("ForwardToNumber violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_ForwardToNumber: $.ASN1Encoder<ForwardToNumber> = $._encodeOctetString;

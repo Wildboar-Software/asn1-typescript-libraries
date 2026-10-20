@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,6 +45,10 @@ class ChangeOfClassmark {
     ) {
         this.classmark = classmark;
         this.changeTime = changeTime;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfClassmark.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -146,7 +151,7 @@ let _cached_encoder_for_ChangeOfClassmark: $.ASN1Encoder<ChangeOfClassmark> | nu
  */
 export
 function _encode_ChangeOfClassmark (value: ChangeOfClassmark, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeOfClassmark) { _cached_encoder_for_ChangeOfClassmark = function (value: ChangeOfClassmark, elGetter: $.ASN1Encoder<ChangeOfClassmark>): _Element {
+    if (!_cached_encoder_for_ChangeOfClassmark) { _cached_encoder_for_ChangeOfClassmark = function (value: ChangeOfClassmark, _elGetter: $.ASN1Encoder<ChangeOfClassmark>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.classmark, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.changeTime, $.BER)

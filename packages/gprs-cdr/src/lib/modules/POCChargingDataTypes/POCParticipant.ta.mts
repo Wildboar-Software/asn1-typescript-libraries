@@ -180,7 +180,7 @@ let _cached_encoder_for_POCParticipant: $.ASN1Encoder<POCParticipant> | null = n
  */
 export
 function _encode_POCParticipant (value: POCParticipant, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_POCParticipant) { _cached_encoder_for_POCParticipant = function (value: POCParticipant, elGetter: $.ASN1Encoder<POCParticipant>): _Element {
+    if (!_cached_encoder_for_POCParticipant) { _cached_encoder_for_POCParticipant = function (value: POCParticipant, _elGetter: $.ASN1Encoder<POCParticipant>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_InvolvedParty, $.BER)(value.called_party_address, $.BER));
     if (value.participant_access_priority !== undefined) {

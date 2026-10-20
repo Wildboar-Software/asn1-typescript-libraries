@@ -146,7 +146,7 @@ let _cached_encoder_for_SessionAMBR: $.ASN1Encoder<SessionAMBR> | null = null;
  */
 export
 function _encode_SessionAMBR (value: SessionAMBR, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SessionAMBR) { _cached_encoder_for_SessionAMBR = function (value: SessionAMBR, elGetter: $.ASN1Encoder<SessionAMBR>): _Element {
+    if (!_cached_encoder_for_SessionAMBR) { _cached_encoder_for_SessionAMBR = function (value: SessionAMBR, _elGetter: $.ASN1Encoder<SessionAMBR>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.ambrUL, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.ambrDL, $.BER)

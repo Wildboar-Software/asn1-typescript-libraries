@@ -149,7 +149,7 @@ let _cached_encoder_for_NGRANSecondaryRATUsageReport: $.ASN1Encoder<NGRANSeconda
  */
 export
 function _encode_NGRANSecondaryRATUsageReport (value: NGRANSecondaryRATUsageReport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NGRANSecondaryRATUsageReport) { _cached_encoder_for_NGRANSecondaryRATUsageReport = function (value: NGRANSecondaryRATUsageReport, elGetter: $.ASN1Encoder<NGRANSecondaryRATUsageReport>): _Element {
+    if (!_cached_encoder_for_NGRANSecondaryRATUsageReport) { _cached_encoder_for_NGRANSecondaryRATUsageReport = function (value: NGRANSecondaryRATUsageReport, _elGetter: $.ASN1Encoder<NGRANSecondaryRATUsageReport>): _Element {
     const _components: _Element[] = [];
     if (value.nGRANSecondaryRATType !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.nGRANSecondaryRATType, $.BER));

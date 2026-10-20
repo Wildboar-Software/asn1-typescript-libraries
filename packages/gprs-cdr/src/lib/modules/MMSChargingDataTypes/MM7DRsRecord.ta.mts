@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMSChargingDataTypes/RecordType.ta.mjs";
@@ -127,6 +129,13 @@ class MM7DRsRecord {
         this.recordTimeStamp = recordTimeStamp;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MM7DRsRecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MM7DRsRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -266,7 +275,7 @@ let _cached_encoder_for_MM7DRsRecord: $.ASN1Encoder<MM7DRsRecord> | null = null;
  */
 export
 function _encode_MM7DRsRecord (value: MM7DRsRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MM7DRsRecord) { _cached_encoder_for_MM7DRsRecord = function (value: MM7DRsRecord, elGetter: $.ASN1Encoder<MM7DRsRecord>): _Element {
+    if (!_cached_encoder_for_MM7DRsRecord) { _cached_encoder_for_MM7DRsRecord = function (value: MM7DRsRecord, _elGetter: $.ASN1Encoder<MM7DRsRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_MMSRSAddress, $.BER)(value.recipientMmsRSAddress, $.BER));

@@ -201,7 +201,7 @@ let _cached_encoder_for_TSChangeover: $.ASN1Encoder<TSChangeover> | null = null;
  */
 export
 function _encode_TSChangeover (value: TSChangeover, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSChangeover) { _cached_encoder_for_TSChangeover = function (value: TSChangeover, elGetter: $.ASN1Encoder<TSChangeover>): _Element {
+    if (!_cached_encoder_for_TSChangeover) { _cached_encoder_for_TSChangeover = function (value: TSChangeover, _elGetter: $.ASN1Encoder<TSChangeover>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.newActiveTS, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.newStandbyTS, $.BER));

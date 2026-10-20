@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type MSNetworkCapability = OCTET_STRING; // OctetStringType
 
-export
-const _decode_MSNetworkCapability: $.ASN1Decoder<MSNetworkCapability> = $._decodeOctetString;
+export const _decode_MSNetworkCapability = (el: _Element): MSNetworkCapability => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("MSNetworkCapability violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_MSNetworkCapability: $.ASN1Encoder<MSNetworkCapability> = $._encodeOctetString;

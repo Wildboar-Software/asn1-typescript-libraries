@@ -147,7 +147,7 @@ let _cached_encoder_for_ServiceResult: $.ASN1Encoder<ServiceResult> | null = nul
  */
 export
 function _encode_ServiceResult (value: ServiceResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceResult) { _cached_encoder_for_ServiceResult = function (value: ServiceResult, elGetter: $.ASN1Encoder<ServiceResult>): _Element {
+    if (!_cached_encoder_for_ServiceResult) { _cached_encoder_for_ServiceResult = function (value: ServiceResult, _elGetter: $.ASN1Encoder<ServiceResult>): _Element {
     const _components: _Element[] = [];
     if (value.vendorId !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.vendorId, $.BER));

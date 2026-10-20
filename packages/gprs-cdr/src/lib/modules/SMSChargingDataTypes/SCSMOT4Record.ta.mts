@@ -6,7 +6,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../SMSChargingDataTypes/RecordType.ta.mjs";
@@ -261,6 +263,25 @@ class SCSMOT4Record {
         this.externalIdentifier = externalIdentifier;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if ((this.sMSNodeAddress.length < 1 || this.sMSNodeAddress.length > 20)) {
+            throw new ASN1SizeError("SCSMOT4Record.sMSNodeAddress violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("SCSMOT4Record.servedIMEI violates SIZE constraint");
+        }
+        if ((this.eventtimestamp.length !== 9)) {
+            throw new ASN1SizeError("SCSMOT4Record.eventtimestamp violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("SCSMOT4Record.rATType violates INTEGER range");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("SCSMOT4Record.uETimeZone violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("SCSMOT4Record.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -464,7 +485,7 @@ let _cached_encoder_for_SCSMOT4Record: $.ASN1Encoder<SCSMOT4Record> | null = nul
  */
 export
 function _encode_SCSMOT4Record (value: SCSMOT4Record, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCSMOT4Record) { _cached_encoder_for_SCSMOT4Record = function (value: SCSMOT4Record, elGetter: $.ASN1Encoder<SCSMOT4Record>): _Element {
+    if (!_cached_encoder_for_SCSMOT4Record) { _cached_encoder_for_SCSMOT4Record = function (value: SCSMOT4Record, _elGetter: $.ASN1Encoder<SCSMOT4Record>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.sMSNodeAddress, $.BER));

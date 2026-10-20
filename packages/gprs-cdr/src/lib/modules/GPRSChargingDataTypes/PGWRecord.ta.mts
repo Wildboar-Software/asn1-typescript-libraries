@@ -7,7 +7,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
@@ -708,6 +710,64 @@ class PGWRecord {
         this.threeGPPPSDataOffStatus = threeGPPPSDataOffStatus;
         this.sCSASAddress = sCSASAddress;
         this.listOfRANSecondaryRATUsageReports = listOfRANSecondaryRATUsageReports;
+    
+        if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("PGWRecord.servedIMSI violates SIZE constraint");
+        }
+        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+            throw new ASN1OverflowError("PGWRecord.chargingID violates INTEGER range");
+        }
+        if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("PGWRecord.accessPointNameNI violates SIZE constraint");
+        }
+        if (this.pdpPDNType !== undefined && (this.pdpPDNType.length !== 2)) {
+            throw new ASN1SizeError("PGWRecord.pdpPDNType violates SIZE constraint");
+        }
+        if ((this.recordOpeningTime.length !== 9)) {
+            throw new ASN1SizeError("PGWRecord.recordOpeningTime violates SIZE constraint");
+        }
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("PGWRecord.nodeID violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("PGWRecord.localSequenceNumber violates INTEGER range");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("PGWRecord.servedMSISDN violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("PGWRecord.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.servingNodePLMNIdentifier !== undefined && (this.servingNodePLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PGWRecord.servingNodePLMNIdentifier violates SIZE constraint");
+        }
+        if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
+            throw new ASN1SizeError("PGWRecord.servedIMEI violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("PGWRecord.rATType violates INTEGER range");
+        }
+        if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("PGWRecord.mSTimeZone violates SIZE constraint");
+        }
+        if (this.p_GWPLMNIdentifier !== undefined && (this.p_GWPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PGWRecord.p_GWPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.startTime !== undefined && (this.startTime.length !== 9)) {
+            throw new ASN1SizeError("PGWRecord.startTime violates SIZE constraint");
+        }
+        if (this.stopTime !== undefined && (this.stopTime.length !== 9)) {
+            throw new ASN1SizeError("PGWRecord.stopTime violates SIZE constraint");
+        }
+        if (this.pDNConnectionChargingID !== undefined && ((typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) < 0 || (typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) > 4294967295)) {
+            throw new ASN1OverflowError("PGWRecord.pDNConnectionChargingID violates INTEGER range");
+        }
+        if (this.userLocationInfoTime !== undefined && (this.userLocationInfoTime.length !== 9)) {
+            throw new ASN1SizeError("PGWRecord.userLocationInfoTime violates SIZE constraint");
+        }
+        if (this.lastMSTimeZone !== undefined && (this.lastMSTimeZone.length !== 2)) {
+            throw new ASN1SizeError("PGWRecord.lastMSTimeZone violates SIZE constraint");
+        }
     }
 
     /**
@@ -1127,7 +1187,7 @@ let _cached_encoder_for_PGWRecord: $.ASN1Encoder<PGWRecord> | null = null;
  */
 export
 function _encode_PGWRecord (value: PGWRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PGWRecord) { _cached_encoder_for_PGWRecord = function (value: PGWRecord, elGetter: $.ASN1Encoder<PGWRecord>): _Element {
+    if (!_cached_encoder_for_PGWRecord) { _cached_encoder_for_PGWRecord = function (value: PGWRecord, _elGetter: $.ASN1Encoder<PGWRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.servedIMSI !== undefined) {

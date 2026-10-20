@@ -161,7 +161,7 @@ let _cached_encoder_for_AoCCostInformation: $.ASN1Encoder<AoCCostInformation> | 
  */
 export
 function _encode_AoCCostInformation (value: AoCCostInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AoCCostInformation) { _cached_encoder_for_AoCCostInformation = function (value: AoCCostInformation, elGetter: $.ASN1Encoder<AoCCostInformation>): _Element {
+    if (!_cached_encoder_for_AoCCostInformation) { _cached_encoder_for_AoCCostInformation = function (value: AoCCostInformation, _elGetter: $.ASN1Encoder<AoCCostInformation>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeReal, $.BER)(value.accumulatedCost, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeReal, $.BER)(value.incrementalCost, $.BER),

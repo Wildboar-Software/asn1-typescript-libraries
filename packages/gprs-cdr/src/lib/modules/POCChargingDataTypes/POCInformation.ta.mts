@@ -272,7 +272,7 @@ let _cached_encoder_for_POCInformation: $.ASN1Encoder<POCInformation> | null = n
  */
 export
 function _encode_POCInformation (value: POCInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_POCInformation) { _cached_encoder_for_POCInformation = function (value: POCInformation, elGetter: $.ASN1Encoder<POCInformation>): _Element {
+    if (!_cached_encoder_for_POCInformation) { _cached_encoder_for_POCInformation = function (value: POCInformation, _elGetter: $.ASN1Encoder<POCInformation>): _Element {
     const _components: _Element[] = [];
     if (value.pOCSessionType !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => _encode_POCSessionType, $.BER)(value.pOCSessionType, $.BER));

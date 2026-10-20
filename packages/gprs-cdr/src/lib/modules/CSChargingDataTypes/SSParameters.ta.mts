@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +40,11 @@ function _decode_SSParameters (el: _Element): SSParameters {
     "CONTEXT 0": [ "forwardedToNumber", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 1": [ "unstructuredData", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_SSParameters(el);
+    const _decoded_SSParameters = _cached_decoder_for_SSParameters(el);
+    if ("forwardedToNumber" in _decoded_SSParameters && (_decoded_SSParameters.forwardedToNumber.length < 1 || _decoded_SSParameters.forwardedToNumber.length > 20)) {
+        throw new ASN1SizeError("SSParameters.forwardedToNumber violates SIZE constraint");
+    }
+    return _decoded_SSParameters;
 }
 
 let _cached_encoder_for_SSParameters: $.ASN1Encoder<SSParameters> | null = null;

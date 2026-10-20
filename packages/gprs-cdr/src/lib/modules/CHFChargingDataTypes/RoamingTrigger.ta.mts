@@ -195,7 +195,7 @@ let _cached_encoder_for_RoamingTrigger: $.ASN1Encoder<RoamingTrigger> | null = n
  */
 export
 function _encode_RoamingTrigger (value: RoamingTrigger, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RoamingTrigger) { _cached_encoder_for_RoamingTrigger = function (value: RoamingTrigger, elGetter: $.ASN1Encoder<RoamingTrigger>): _Element {
+    if (!_cached_encoder_for_RoamingTrigger) { _cached_encoder_for_RoamingTrigger = function (value: RoamingTrigger, _elGetter: $.ASN1Encoder<RoamingTrigger>): _Element {
     const _components: _Element[] = [];
     if (value.trigger !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_SMFTrigger, $.BER)(value.trigger, $.BER));

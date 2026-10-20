@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -42,7 +43,11 @@ function _decode_MMSAgentAddressData (el: _Element): MMSAgentAddressData {
     "CONTEXT 1": [ "mSISDN", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 2": [ "shortCode", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_MMSAgentAddressData(el);
+    const _decoded_MMSAgentAddressData = _cached_decoder_for_MMSAgentAddressData(el);
+    if ("mSISDN" in _decoded_MMSAgentAddressData && (_decoded_MMSAgentAddressData.mSISDN.length < 1 || _decoded_MMSAgentAddressData.mSISDN.length > 9)) {
+        throw new ASN1SizeError("MMSAgentAddressData.mSISDN violates SIZE constraint");
+    }
+    return _decoded_MMSAgentAddressData;
 }
 
 let _cached_encoder_for_MMSAgentAddressData: $.ASN1Encoder<MMSAgentAddressData> | null = null;

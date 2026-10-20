@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
@@ -100,6 +102,22 @@ class CAMELInformationSMS {
         this.cAMELSMSCAddress = cAMELSMSCAddress;
         this.freeFormatData = freeFormatData;
         this.smsReferenceNumber = smsReferenceNumber;
+    
+        if (this.sCFAddress !== undefined && (this.sCFAddress.length < 1 || this.sCFAddress.length > 20)) {
+            throw new ASN1SizeError("CAMELInformationSMS.sCFAddress violates SIZE constraint");
+        }
+        if (this.serviceKey !== undefined && ((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+            throw new ASN1OverflowError("CAMELInformationSMS.serviceKey violates INTEGER range");
+        }
+        if (this.cAMELSMSCAddress !== undefined && (this.cAMELSMSCAddress.length < 1 || this.cAMELSMSCAddress.length > 20)) {
+            throw new ASN1SizeError("CAMELInformationSMS.cAMELSMSCAddress violates SIZE constraint");
+        }
+        if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {
+            throw new ASN1SizeError("CAMELInformationSMS.freeFormatData violates SIZE constraint");
+        }
+        if (this.smsReferenceNumber !== undefined && (this.smsReferenceNumber.length < 1 || this.smsReferenceNumber.length > 8)) {
+            throw new ASN1SizeError("CAMELInformationSMS.smsReferenceNumber violates SIZE constraint");
+        }
     }
 
     /**
@@ -237,7 +255,7 @@ let _cached_encoder_for_CAMELInformationSMS: $.ASN1Encoder<CAMELInformationSMS> 
  */
 export
 function _encode_CAMELInformationSMS (value: CAMELInformationSMS, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAMELInformationSMS) { _cached_encoder_for_CAMELInformationSMS = function (value: CAMELInformationSMS, elGetter: $.ASN1Encoder<CAMELInformationSMS>): _Element {
+    if (!_cached_encoder_for_CAMELInformationSMS) { _cached_encoder_for_CAMELInformationSMS = function (value: CAMELInformationSMS, _elGetter: $.ASN1Encoder<CAMELInformationSMS>): _Element {
     const _components: _Element[] = [];
     if (value.sCFAddress !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.sCFAddress, $.BER));

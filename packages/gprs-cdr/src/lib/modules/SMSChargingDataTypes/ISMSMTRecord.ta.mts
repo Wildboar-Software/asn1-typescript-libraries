@@ -7,7 +7,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../SMSChargingDataTypes/RecordType.ta.mjs";
@@ -322,6 +324,28 @@ class ISMSMTRecord {
         this.carrierSelectRouting = carrierSelectRouting;
         this.localSequenceNumber = localSequenceNumber;
         this.recordExtensions = recordExtensions;
+    
+        if (this.submissionTime !== undefined && (this.submissionTime.length !== 9)) {
+            throw new ASN1SizeError("ISMSMTRecord.submissionTime violates SIZE constraint");
+        }
+        if ((this.eventtimestamp.length !== 9)) {
+            throw new ASN1SizeError("ISMSMTRecord.eventtimestamp violates SIZE constraint");
+        }
+        if (this.sMSStatus !== undefined && (this.sMSStatus.length !== 1)) {
+            throw new ASN1SizeError("ISMSMTRecord.sMSStatus violates SIZE constraint");
+        }
+        if (this.sMDischargeTime !== undefined && (this.sMDischargeTime.length !== 9)) {
+            throw new ASN1SizeError("ISMSMTRecord.sMDischargeTime violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("ISMSMTRecord.rATType violates INTEGER range");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("ISMSMTRecord.uETimeZone violates SIZE constraint");
+        }
+        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("ISMSMTRecord.localSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -559,7 +583,7 @@ let _cached_encoder_for_ISMSMTRecord: $.ASN1Encoder<ISMSMTRecord> | null = null;
  */
 export
 function _encode_ISMSMTRecord (value: ISMSMTRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISMSMTRecord) { _cached_encoder_for_ISMSMTRecord = function (value: ISMSMTRecord, elGetter: $.ASN1Encoder<ISMSMTRecord>): _Element {
+    if (!_cached_encoder_for_ISMSMTRecord) { _cached_encoder_for_ISMSMTRecord = function (value: ISMSMTRecord, _elGetter: $.ASN1Encoder<ISMSMTRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_NodeAddress, $.BER)(value.sMSNodeAddress, $.BER));

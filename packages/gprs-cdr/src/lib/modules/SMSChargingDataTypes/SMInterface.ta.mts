@@ -180,7 +180,7 @@ let _cached_encoder_for_SMInterface: $.ASN1Encoder<SMInterface> | null = null;
  */
 export
 function _encode_SMInterface (value: SMInterface, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMInterface) { _cached_encoder_for_SMInterface = function (value: SMInterface, elGetter: $.ASN1Encoder<SMInterface>): _Element {
+    if (!_cached_encoder_for_SMInterface) { _cached_encoder_for_SMInterface = function (value: SMInterface, _elGetter: $.ASN1Encoder<SMInterface>): _Element {
     const _components: _Element[] = [];
     if (value.interfaceId !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGraphicString, $.BER)(value.interfaceId, $.BER));

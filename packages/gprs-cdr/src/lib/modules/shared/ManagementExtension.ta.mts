@@ -168,7 +168,7 @@ let _cached_encoder_for_ManagementExtension: $.ASN1Encoder<ManagementExtension> 
  */
 export
 function _encode_ManagementExtension (value: ManagementExtension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ManagementExtension) { _cached_encoder_for_ManagementExtension = function (value: ManagementExtension, elGetter: $.ASN1Encoder<ManagementExtension>): _Element {
+    if (!_cached_encoder_for_ManagementExtension) { _cached_encoder_for_ManagementExtension = function (value: ManagementExtension, _elGetter: $.ASN1Encoder<ManagementExtension>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeObjectIdentifier(value.identifier, $.BER));
     if (value.significance !== undefined && !$.deepEq(value.significance, ManagementExtension._default_value_for_significance)) {

@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RANSecondaryRATUsageReport_secondaryRATType, _decode_RANSecondaryRATUsageReport_secondaryRATType, _encode_RANSecondaryRATUsageReport_secondaryRATType } from "../GPRSChargingDataTypes/RANSecondaryRATUsageReport-secondaryRATType.ta.mjs";
@@ -83,6 +85,16 @@ class RANSecondaryRATUsageReport {
         this.rANEndTime = rANEndTime;
         this.secondaryRATType = secondaryRATType;
         this.chargingID = chargingID;
+    
+        if ((this.rANStartTime.length !== 9)) {
+            throw new ASN1SizeError("RANSecondaryRATUsageReport.rANStartTime violates SIZE constraint");
+        }
+        if ((this.rANEndTime.length !== 9)) {
+            throw new ASN1SizeError("RANSecondaryRATUsageReport.rANEndTime violates SIZE constraint");
+        }
+        if (this.chargingID !== undefined && ((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+            throw new ASN1OverflowError("RANSecondaryRATUsageReport.chargingID violates INTEGER range");
+        }
     }
 
     /**
@@ -202,7 +214,7 @@ let _cached_encoder_for_RANSecondaryRATUsageReport: $.ASN1Encoder<RANSecondaryRA
  */
 export
 function _encode_RANSecondaryRATUsageReport (value: RANSecondaryRATUsageReport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RANSecondaryRATUsageReport) { _cached_encoder_for_RANSecondaryRATUsageReport = function (value: RANSecondaryRATUsageReport, elGetter: $.ASN1Encoder<RANSecondaryRATUsageReport>): _Element {
+    if (!_cached_encoder_for_RANSecondaryRATUsageReport) { _cached_encoder_for_RANSecondaryRATUsageReport = function (value: RANSecondaryRATUsageReport, _elGetter: $.ASN1Encoder<RANSecondaryRATUsageReport>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.dataVolumeUplink, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.dataVolumeDownlink, $.BER));

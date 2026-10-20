@@ -3,7 +3,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "./ExtensionContainer.ta.mjs";
@@ -54,6 +55,10 @@ class LCSClientExternalID {
         this.externalAddress = externalAddress;
         this.extensionContainer = extensionContainer;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    
+        if (this.externalAddress !== undefined && (this.externalAddress.length < 1 || this.externalAddress.length > 9)) {
+            throw new ASN1SizeError("LCSClientExternalID.externalAddress violates SIZE constraint");
+        }
     }
 
     /**
@@ -159,7 +164,7 @@ let _cached_encoder_for_LCSClientExternalID: $.ASN1Encoder<LCSClientExternalID> 
  */
 export
 function _encode_LCSClientExternalID (value: LCSClientExternalID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientExternalID) { _cached_encoder_for_LCSClientExternalID = function (value: LCSClientExternalID, elGetter: $.ASN1Encoder<LCSClientExternalID>): _Element {
+    if (!_cached_encoder_for_LCSClientExternalID) { _cached_encoder_for_LCSClientExternalID = function (value: LCSClientExternalID, _elGetter: $.ASN1Encoder<LCSClientExternalID>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

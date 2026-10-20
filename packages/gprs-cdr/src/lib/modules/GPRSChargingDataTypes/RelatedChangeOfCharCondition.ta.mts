@@ -4,7 +4,9 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChangeCondition, _decode_ChangeCondition, _encode_ChangeCondition, _enum_for_ChangeCondition } from "../GPRSChargingDataTypes/ChangeCondition.ta.mjs";
@@ -97,6 +99,13 @@ class RelatedChangeOfCharCondition {
         this.userCSGInformation = userCSGInformation;
         this.rATType = rATType;
         this.uWANUserLocationInformation = uWANUserLocationInformation;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("RelatedChangeOfCharCondition.changeTime violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+            throw new ASN1OverflowError("RelatedChangeOfCharCondition.rATType violates INTEGER range");
+        }
     }
 
     /**
@@ -232,7 +241,7 @@ let _cached_encoder_for_RelatedChangeOfCharCondition: $.ASN1Encoder<RelatedChang
  */
 export
 function _encode_RelatedChangeOfCharCondition (value: RelatedChangeOfCharCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RelatedChangeOfCharCondition) { _cached_encoder_for_RelatedChangeOfCharCondition = function (value: RelatedChangeOfCharCondition, elGetter: $.ASN1Encoder<RelatedChangeOfCharCondition>): _Element {
+    if (!_cached_encoder_for_RelatedChangeOfCharCondition) { _cached_encoder_for_RelatedChangeOfCharCondition = function (value: RelatedChangeOfCharCondition, _elGetter: $.ASN1Encoder<RelatedChangeOfCharCondition>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 5, () => _encode_ChangeCondition, $.BER)(value.changeCondition, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 6, () => $._encodeOctetString, $.BER)(value.changeTime, $.BER));

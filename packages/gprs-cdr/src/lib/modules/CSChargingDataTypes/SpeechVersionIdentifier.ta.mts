@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SpeechVersionIdentifier = OCTET_STRING; // OctetStringType
 
-export
-const _decode_SpeechVersionIdentifier: $.ASN1Decoder<SpeechVersionIdentifier> = $._decodeOctetString;
+export const _decode_SpeechVersionIdentifier = (el: _Element): SpeechVersionIdentifier => {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 1) {
+        throw new ASN1SizeError("SpeechVersionIdentifier violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_SpeechVersionIdentifier: $.ASN1Encoder<SpeechVersionIdentifier> = $._encodeOctetString;

@@ -154,7 +154,7 @@ let _cached_encoder_for_DayDefinition: $.ASN1Encoder<DayDefinition> | null = nul
  */
 export
 function _encode_DayDefinition (value: DayDefinition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DayDefinition) { _cached_encoder_for_DayDefinition = function (value: DayDefinition, elGetter: $.ASN1Encoder<DayDefinition>): _Element {
+    if (!_cached_encoder_for_DayDefinition) { _cached_encoder_for_DayDefinition = function (value: DayDefinition, _elGetter: $.ASN1Encoder<DayDefinition>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_DayOfTheWeek, $.BER)(value.day, $.BER),
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_DayClass, $.BER)(value.dayClass, $.BER)

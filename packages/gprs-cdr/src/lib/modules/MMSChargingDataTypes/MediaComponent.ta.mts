@@ -147,7 +147,7 @@ let _cached_encoder_for_MediaComponent: $.ASN1Encoder<MediaComponent> | null = n
  */
 export
 function _encode_MediaComponent (value: MediaComponent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MediaComponent) { _cached_encoder_for_MediaComponent = function (value: MediaComponent, elGetter: $.ASN1Encoder<MediaComponent>): _Element {
+    if (!_cached_encoder_for_MediaComponent) { _cached_encoder_for_MediaComponent = function (value: MediaComponent, _elGetter: $.ASN1Encoder<MediaComponent>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.mediaType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.mediaSize, $.BER)

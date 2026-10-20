@@ -4,7 +4,8 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
@@ -225,6 +226,37 @@ class MOLCSRecord {
         this.systemType = systemType;
         this.recordExtensions = recordExtensions;
         this.causeForTerm = causeForTerm;
+    
+        if ((this.recordingEntity.length < 1 || this.recordingEntity.length > 20)) {
+            throw new ASN1SizeError("MOLCSRecord.recordingEntity violates SIZE constraint");
+        }
+        if ((this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
+            throw new ASN1SizeError("MOLCSRecord.servedIMSI violates SIZE constraint");
+        }
+        if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
+            throw new ASN1SizeError("MOLCSRecord.servedMSISDN violates SIZE constraint");
+        }
+        if (this.lcsQos !== undefined && (this.lcsQos.length !== 4)) {
+            throw new ASN1SizeError("MOLCSRecord.lcsQos violates SIZE constraint");
+        }
+        if (this.lcsPriority !== undefined && (this.lcsPriority.length !== 1)) {
+            throw new ASN1SizeError("MOLCSRecord.lcsPriority violates SIZE constraint");
+        }
+        if (this.mlc_Number !== undefined && (this.mlc_Number.length < 1 || this.mlc_Number.length > 9)) {
+            throw new ASN1SizeError("MOLCSRecord.mlc_Number violates SIZE constraint");
+        }
+        if ((this.eventTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MOLCSRecord.eventTimeStamp violates SIZE constraint");
+        }
+        if (this.locationEstimate !== undefined && (this.locationEstimate.length < 1 || this.locationEstimate.length > 20)) {
+            throw new ASN1SizeError("MOLCSRecord.locationEstimate violates SIZE constraint");
+        }
+        if (this.positioningData !== undefined && (this.positioningData.length < 1 || this.positioningData.length > 33)) {
+            throw new ASN1SizeError("MOLCSRecord.positioningData violates SIZE constraint");
+        }
+        if (this.lcsCause !== undefined && (this.lcsCause.length !== 1)) {
+            throw new ASN1SizeError("MOLCSRecord.lcsCause violates SIZE constraint");
+        }
     }
 
     /**
@@ -422,7 +454,7 @@ let _cached_encoder_for_MOLCSRecord: $.ASN1Encoder<MOLCSRecord> | null = null;
  */
 export
 function _encode_MOLCSRecord (value: MOLCSRecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MOLCSRecord) { _cached_encoder_for_MOLCSRecord = function (value: MOLCSRecord, elGetter: $.ASN1Encoder<MOLCSRecord>): _Element {
+    if (!_cached_encoder_for_MOLCSRecord) { _cached_encoder_for_MOLCSRecord = function (value: MOLCSRecord, _elGetter: $.ASN1Encoder<MOLCSRecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.recordingEntity, $.BER));

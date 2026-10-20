@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String
+    IA5String,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +40,14 @@ function _decode_IPTextRepresentedAddress (el: _Element): IPTextRepresentedAddre
     "CONTEXT 2": [ "iPTextV4Address", $._decode_implicit<IA5String>(() => $._decodeIA5String) ],
     "CONTEXT 3": [ "iPTextV6Address", $._decode_implicit<IA5String>(() => $._decodeIA5String) ]
 }); }
-    return _cached_decoder_for_IPTextRepresentedAddress(el);
+    const _decoded_IPTextRepresentedAddress = _cached_decoder_for_IPTextRepresentedAddress(el);
+    if ("iPTextV4Address" in _decoded_IPTextRepresentedAddress && (_decoded_IPTextRepresentedAddress.iPTextV4Address.length < 7 || _decoded_IPTextRepresentedAddress.iPTextV4Address.length > 15)) {
+        throw new ASN1SizeError("IPTextRepresentedAddress.iPTextV4Address violates SIZE constraint");
+    }
+    if ("iPTextV6Address" in _decoded_IPTextRepresentedAddress && (_decoded_IPTextRepresentedAddress.iPTextV6Address.length < 15 || _decoded_IPTextRepresentedAddress.iPTextV6Address.length > 45)) {
+        throw new ASN1SizeError("IPTextRepresentedAddress.iPTextV6Address violates SIZE constraint");
+    }
+    return _decoded_IPTextRepresentedAddress;
 }
 
 let _cached_encoder_for_IPTextRepresentedAddress: $.ASN1Encoder<IPTextRepresentedAddress> | null = null;

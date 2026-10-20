@@ -7,7 +7,9 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordType, _decode_RecordType, _encode_RecordType } from "../MONTEChargingDataTypes/RecordType.ta.mjs";
@@ -109,6 +111,16 @@ class MERERecord {
         this.localRecordSequenceNumber = localRecordSequenceNumber;
         this.listofMonitoringEventReportData = listofMonitoringEventReportData;
         this.recordExtensions = recordExtensions;
+    
+        if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
+            throw new ASN1SizeError("MERERecord.nodeID violates SIZE constraint");
+        }
+        if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
+            throw new ASN1SizeError("MERERecord.recordTimeStamp violates SIZE constraint");
+        }
+        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+            throw new ASN1OverflowError("MERERecord.localRecordSequenceNumber violates INTEGER range");
+        }
     }
 
     /**
@@ -240,7 +252,7 @@ let _cached_encoder_for_MERERecord: $.ASN1Encoder<MERERecord> | null = null;
  */
 export
 function _encode_MERERecord (value: MERERecord, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MERERecord) { _cached_encoder_for_MERERecord = function (value: MERERecord, elGetter: $.ASN1Encoder<MERERecord>): _Element {
+    if (!_cached_encoder_for_MERERecord) { _cached_encoder_for_MERERecord = function (value: MERERecord, _elGetter: $.ASN1Encoder<MERERecord>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RecordType, $.BER)(value.recordType, $.BER));
     if (value.retransmission !== undefined) {

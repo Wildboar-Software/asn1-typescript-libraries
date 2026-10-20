@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RecordingEntity = OCTET_STRING; // OctetStringType
 
-export
-const _decode_RecordingEntity: $.ASN1Decoder<RecordingEntity> = $._decodeOctetString;
+export const _decode_RecordingEntity = (el: _Element): RecordingEntity => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 20) {
+        throw new ASN1SizeError("RecordingEntity violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_RecordingEntity: $.ASN1Encoder<RecordingEntity> = $._encodeOctetString;

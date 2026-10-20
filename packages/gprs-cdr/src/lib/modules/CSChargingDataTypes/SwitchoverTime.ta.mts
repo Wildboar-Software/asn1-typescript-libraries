@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,6 +54,16 @@ class SwitchoverTime {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
+    
+        if (((typeof this.hour === "bigint" ? Number(this.hour) : this.hour) < 0 || (typeof this.hour === "bigint" ? Number(this.hour) : this.hour) > 23)) {
+            throw new ASN1OverflowError("SwitchoverTime.hour violates INTEGER range");
+        }
+        if (((typeof this.minute === "bigint" ? Number(this.minute) : this.minute) < 0 || (typeof this.minute === "bigint" ? Number(this.minute) : this.minute) > 59)) {
+            throw new ASN1OverflowError("SwitchoverTime.minute violates INTEGER range");
+        }
+        if (((typeof this.second === "bigint" ? Number(this.second) : this.second) < 0 || (typeof this.second === "bigint" ? Number(this.second) : this.second) > 59)) {
+            throw new ASN1OverflowError("SwitchoverTime.second violates INTEGER range");
+        }
     }
 
     /**
@@ -160,7 +171,7 @@ let _cached_encoder_for_SwitchoverTime: $.ASN1Encoder<SwitchoverTime> | null = n
  */
 export
 function _encode_SwitchoverTime (value: SwitchoverTime, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SwitchoverTime) { _cached_encoder_for_SwitchoverTime = function (value: SwitchoverTime, elGetter: $.ASN1Encoder<SwitchoverTime>): _Element {
+    if (!_cached_encoder_for_SwitchoverTime) { _cached_encoder_for_SwitchoverTime = function (value: SwitchoverTime, _elGetter: $.ASN1Encoder<SwitchoverTime>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.hour, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.minute, $.BER),

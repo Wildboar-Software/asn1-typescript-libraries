@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     GraphicString,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -40,7 +41,11 @@ function _decode_AccessCorrelationID (el: _Element): AccessCorrelationID {
     "CONTEXT 2": [ "gPRS_Charging_Id", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
     "CONTEXT 4": [ "accessNetworkChargingIdentifier", $._decode_implicit<GraphicString>(() => $._decodeGraphicString) ]
 }); }
-    return _cached_decoder_for_AccessCorrelationID(el);
+    const _decoded_AccessCorrelationID = _cached_decoder_for_AccessCorrelationID(el);
+    if ("gPRS_Charging_Id" in _decoded_AccessCorrelationID && ((typeof _decoded_AccessCorrelationID.gPRS_Charging_Id === "bigint" ? Number(_decoded_AccessCorrelationID.gPRS_Charging_Id) : _decoded_AccessCorrelationID.gPRS_Charging_Id) < 0 || (typeof _decoded_AccessCorrelationID.gPRS_Charging_Id === "bigint" ? Number(_decoded_AccessCorrelationID.gPRS_Charging_Id) : _decoded_AccessCorrelationID.gPRS_Charging_Id) > 4294967295)) {
+        throw new ASN1OverflowError("AccessCorrelationID.gPRS_Charging_Id violates INTEGER range");
+    }
+    return _decoded_AccessCorrelationID;
 }
 
 let _cached_encoder_for_AccessCorrelationID: $.ASN1Encoder<AccessCorrelationID> | null = null;
