@@ -1,0 +1,26 @@
+/**
+ * @module
+ * @description ASN.1 module `Wireless-Terminal-Call-Handling-Operations-asn1-97`.
+ */
+export * from "./AlternativeId.ta.mjs";
+export * from "./CfuActivated.ta.mjs";
+export * from "./CurrLocation.ta.mjs";
+export * from "./DivertArg.ta.mjs";
+export * from "./DummyRes.ta.mjs";
+export * from "./EnquiryArg.ta.mjs";
+export * from "./EnquiryRes.ta.mjs";
+export * from "./InformArg.ta.mjs";
+export * from "./SubscriptionOption.ta.mjs";
+export * from "./WTMCH-Operations.osa.mjs";
+export * from "./WTMCHExtSet.osa.mjs";
+export * from "./WtmIdentity-both.ta.mjs";
+export * from "./WtmIdentity.ta.mjs";
+export * from "./WtmiExtension.ta.mjs";
+export * from "./WtmoArg-extension.ta.mjs";
+export * from "./WtmoArg.ta.mjs";
+export * from "./locationNotKnown.oa.mjs";
+export * from "./unspecified.oa.mjs";
+export * from "./wtmiDivert.oa.mjs";
+export * from "./wtmiEnquiry.oa.mjs";
+export * from "./wtmiInform.oa.mjs";
+export * from "./wtmoCall.oa.mjs";
