@@ -1,0 +1,252 @@
+/* eslint-disable */
+import {
+    INTEGER,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { FeatureIdList, _decode_FeatureIdList, _encode_FeatureIdList } from "../Common-Information-Operations-asn1-97/FeatureIdList.ta.mjs";
+// export { FeatureIdList, FeatureIdList_reserved /* IMPORTED_LONG_NAMED_BIT */, reserved /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCFreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, ssCFreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCTreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, ssCTreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCCBSpossible /* IMPORTED_LONG_NAMED_BIT */, ssCCBSpossible /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCCNRpossible /* IMPORTED_LONG_NAMED_BIT */, ssCCNRpossible /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCOsupported /* IMPORTED_LONG_NAMED_BIT */, ssCOsupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCIforcedRelease /* IMPORTED_LONG_NAMED_BIT */, ssCIforcedRelease /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCIisolation /* IMPORTED_LONG_NAMED_BIT */, ssCIisolation /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCIwaitOnBusy /* IMPORTED_LONG_NAMED_BIT */, ssCIwaitOnBusy /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssAOCsupportChargeRateProvAtGatewPinx /* IMPORTED_LONG_NAMED_BIT */, ssAOCsupportChargeRateProvAtGatewPinx /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssAOCsupportInterimChargeProvAtGatewPinx /* IMPORTED_LONG_NAMED_BIT */, ssAOCsupportInterimChargeProvAtGatewPinx /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssAOCsupportFinalChargeProvAtGatewPinx /* IMPORTED_LONG_NAMED_BIT */, ssAOCsupportFinalChargeProvAtGatewPinx /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfPRsupportedAtCooperatingPinx /* IMPORTED_LONG_NAMED_BIT */, anfPRsupportedAtCooperatingPinx /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfCINTcanInterceptImmediate /* IMPORTED_LONG_NAMED_BIT */, anfCINTcanInterceptImmediate /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfCINTcanInterceptDelayed /* IMPORTED_LONG_NAMED_BIT */, anfCINTcanInterceptDelayed /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfWTMIreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, anfWTMIreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfPUMIreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, anfPUMIreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssSSCTreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, ssSSCTreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, _decode_FeatureIdList, _encode_FeatureIdList } from "../Common-Information-Operations-asn1-97/FeatureIdList.ta.mjs";
+import { EquipmentId, _decode_EquipmentId, _encode_EquipmentId } from "../Common-Information-Operations-asn1-97/EquipmentId.ta.mjs";
+// export { EquipmentId, _decode_EquipmentId, _encode_EquipmentId } from "../Common-Information-Operations-asn1-97/EquipmentId.ta.mjs";
+import { PartyCategory, _decode_PartyCategory, _encode_PartyCategory, _enum_for_PartyCategory } from "../Common-Information-Operations-asn1-97/PartyCategory.ta.mjs";
+// export { PartyCategory, _enum_for_PartyCategory, PartyCategory_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyCategory_extension /* IMPORTED_LONG_ENUMERATION_ITEM */, extension /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyCategory_pisnAttendant /* IMPORTED_LONG_ENUMERATION_ITEM */, pisnAttendant /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyCategory_emergExt /* IMPORTED_LONG_ENUMERATION_ITEM */, emergExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PartyCategory, _encode_PartyCategory } from "../Common-Information-Operations-asn1-97/PartyCategory.ta.mjs";
+import { CmnArg_extension, _decode_CmnArg_extension, _encode_CmnArg_extension } from "../Common-Information-Operations-asn1-97/CmnArg-extension.ta.mjs";
+// export { CmnArg_extension, _decode_CmnArg_extension, _encode_CmnArg_extension } from "../Common-Information-Operations-asn1-97/CmnArg-extension.ta.mjs";
+
+
+/**
+ * @summary CmnArg
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * CmnArg ::= SEQUENCE {
+ *     featureIdentifier [2] IMPLICIT FeatureIdList OPTIONAL,
+ *     ssDNDOprotectionLevel [3] IMPLICIT INTEGER (0..3) OPTIONAL,
+ *     -- Supplementary Service Do Not Disturb Override Protection level,
+ *     -- meaningful only in backward direction; inclusion indicates
+ *     -- support of SS-DNDO as well as the applicable protection level.
+ *     ssCIprotectionLevel [4] IMPLICIT INTEGER (0..3) OPTIONAL,
+ *     -- Supplementary Service Call Intrusion Protection level,
+ *     -- meaningful both in forward & backward direction; inclusion indicates support
+ *     -- of SS-CI as an Unwanted user PINX (forward direction) or as a Terminating
+ *     -- PINX (backward direction), as well as the applicable protection level.
+ *     equipmentIdentity [5] IMPLICIT EquipmentId OPTIONAL,
+ *     partyCategory [6] IMPLICIT PartyCategory OPTIONAL,
+ *     extension CHOICE {
+ *         single [7] IMPLICIT Extension {{CMNExtSet}},
+ *         multiple [8] IMPLICIT SEQUENCE OF Extension {{CMNExtSet}}
+ *     } OPTIONAL
+ * }
+ * ```
+ * 
+ * @class
+ */
+export
+class CmnArg {
+    /**
+     * @summary `featureIdentifier`.
+     * @public
+     * @readonly
+     */
+    readonly featureIdentifier: OPTIONAL<FeatureIdList>;
+    /**
+     * @summary `ssDNDOprotectionLevel`.
+     * @public
+     * @readonly
+     */
+    readonly ssDNDOprotectionLevel: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ssCIprotectionLevel`.
+     * @public
+     * @readonly
+     */
+    readonly ssCIprotectionLevel: OPTIONAL<INTEGER>;
+    /**
+     * @summary `equipmentIdentity`.
+     * @public
+     * @readonly
+     */
+    readonly equipmentIdentity: OPTIONAL<EquipmentId>;
+    /**
+     * @summary `partyCategory`.
+     * @public
+     * @readonly
+     */
+    readonly partyCategory: OPTIONAL<PartyCategory>;
+    /**
+     * @summary `extension`.
+     * @public
+     * @readonly
+     */
+    readonly extension: OPTIONAL<CmnArg_extension>;
+
+    constructor (
+        featureIdentifier: OPTIONAL<FeatureIdList>,
+        ssDNDOprotectionLevel: OPTIONAL<INTEGER>,
+        ssCIprotectionLevel: OPTIONAL<INTEGER>,
+        equipmentIdentity: OPTIONAL<EquipmentId>,
+        partyCategory: OPTIONAL<PartyCategory>,
+        extension: OPTIONAL<CmnArg_extension>
+    ) {
+        this.featureIdentifier = featureIdentifier;
+        this.ssDNDOprotectionLevel = ssDNDOprotectionLevel;
+        this.ssCIprotectionLevel = ssCIprotectionLevel;
+        this.equipmentIdentity = equipmentIdentity;
+        this.partyCategory = partyCategory;
+        this.extension = extension;
+    }
+
+    /**
+     * @summary Restructures an object into a CmnArg
+     * @description
+     * 
+     * This takes an `object` and converts it to a `CmnArg`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `CmnArg`.
+     * @returns {CmnArg}
+     */
+    public static _from_object (_o: { [_K in keyof (CmnArg)]: (CmnArg)[_K] }): CmnArg {
+        return new CmnArg(_o.featureIdentifier, _o.ssDNDOprotectionLevel, _o.ssCIprotectionLevel, _o.equipmentIdentity, _o.partyCategory, _o.extension);
+    }
+
+        /**
+         * @summary The enum used as the type of the component `partyCategory`
+         * @public
+         * @static
+         */
+
+    public static _enum_for_partyCategory = _enum_for_PartyCategory;
+}
+
+/**
+ * @summary The Leading Root Component Types of CmnArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_CmnArg: $.ComponentSpec[] = [
+    new $.ComponentSpec("featureIdentifier", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("ssDNDOprotectionLevel", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("ssCIprotectionLevel", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("equipmentIdentity", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("partyCategory", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("extension", true, $.or($.hasTag(_TagClass.context, 7), $.hasTag(_TagClass.context, 8)))
+];
+
+/**
+ * @summary The Trailing Root Component Types of CmnArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_CmnArg: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of CmnArg
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_CmnArg: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_CmnArg: $.ASN1Decoder<CmnArg> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) CmnArg
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_CmnArg (el: _Element): CmnArg {
+    if (!_cached_decoder_for_CmnArg) { _cached_decoder_for_CmnArg = function (el: _Element): CmnArg {
+    let featureIdentifier: OPTIONAL<FeatureIdList>;
+    let ssDNDOprotectionLevel: OPTIONAL<INTEGER>;
+    let ssCIprotectionLevel: OPTIONAL<INTEGER>;
+    let equipmentIdentity: OPTIONAL<EquipmentId>;
+    let partyCategory: OPTIONAL<PartyCategory>;
+    let extension: OPTIONAL<CmnArg_extension>;
+    const callbacks: $.DecodingMap = {
+        "featureIdentifier": (_el: _Element): void => { featureIdentifier = $._decode_implicit<FeatureIdList>(() => _decode_FeatureIdList)(_el); },
+        "ssDNDOprotectionLevel": (_el: _Element): void => { ssDNDOprotectionLevel = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "ssCIprotectionLevel": (_el: _Element): void => { ssCIprotectionLevel = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "equipmentIdentity": (_el: _Element): void => { equipmentIdentity = $._decode_implicit<EquipmentId>(() => _decode_EquipmentId)(_el); },
+        "partyCategory": (_el: _Element): void => { partyCategory = $._decode_implicit<PartyCategory>(() => _decode_PartyCategory)(_el); },
+        "extension": (_el: _Element): void => { extension = _decode_CmnArg_extension(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_CmnArg,
+        _extension_additions_list_spec_for_CmnArg,
+        _root_component_type_list_2_spec_for_CmnArg,
+        undefined,
+    );
+    return new CmnArg(
+        featureIdentifier,
+        ssDNDOprotectionLevel,
+        ssCIprotectionLevel,
+        equipmentIdentity,
+        partyCategory,
+        extension
+    );
+}; }
+    return _cached_decoder_for_CmnArg(el);
+}
+
+let _cached_encoder_for_CmnArg: $.ASN1Encoder<CmnArg> | null = null;
+
+/**
+ * @summary Encodes a(n) CmnArg into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The CmnArg, encoded as an ASN.1 Element.
+ */
+export
+function _encode_CmnArg (value: CmnArg, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_CmnArg) { _cached_encoder_for_CmnArg = function (value: CmnArg, elGetter: $.ASN1Encoder<CmnArg>): _Element {
+    const _components: _Element[] = [];
+    if (value.featureIdentifier !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_FeatureIdList, $.BER)(value.featureIdentifier, $.BER));
+    }
+    if (value.ssDNDOprotectionLevel !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => $._encodeInteger, $.BER)(value.ssDNDOprotectionLevel, $.BER));
+    }
+    if (value.ssCIprotectionLevel !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.BER)(value.ssCIprotectionLevel, $.BER));
+    }
+    if (value.equipmentIdentity !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => _encode_EquipmentId, $.BER)(value.equipmentIdentity, $.BER));
+    }
+    if (value.partyCategory !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => _encode_PartyCategory, $.BER)(value.partyCategory, $.BER));
+    }
+    if (value.extension !== undefined) {
+        _components.push(/* IF_ABSENT  */ _encode_CmnArg_extension(value.extension, $.BER));
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_CmnArg(value, elGetter);
+}
+
+
+/* eslint-enable */

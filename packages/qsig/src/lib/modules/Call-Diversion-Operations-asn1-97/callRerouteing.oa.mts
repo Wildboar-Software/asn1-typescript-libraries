@@ -1,0 +1,107 @@
+/* eslint-disable */
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
+// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import { _decode_callRerouteing_ArgumentType, _encode_callRerouteing_ArgumentType, callRerouteing_ArgumentType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ArgumentType.ta.mjs";
+// export { callRerouteing_ArgumentType, _decode_callRerouteing_ArgumentType, _encode_callRerouteing_ArgumentType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ArgumentType.ta.mjs";
+import { _decode_callRerouteing_ResultType, _encode_callRerouteing_ResultType, callRerouteing_ResultType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ResultType.ta.mjs";
+// export { callRerouteing_ResultType, _decode_callRerouteing_ResultType, _encode_callRerouteing_ResultType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ResultType.ta.mjs";
+import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
+// export { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
+import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
+// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
+import { resourceUnavailable } from "../General-Error-List/resourceUnavailable.oa.mjs";
+// export { resourceUnavailable } from "../General-Error-List/resourceUnavailable.oa.mjs";
+import { invalidDivertedToNr } from "../Call-Diversion-Operations-asn1-97/invalidDivertedToNr.oa.mjs";
+// export { invalidDivertedToNr } from "../Call-Diversion-Operations-asn1-97/invalidDivertedToNr.oa.mjs";
+import { specialServiceNr } from "../Call-Diversion-Operations-asn1-97/specialServiceNr.oa.mjs";
+// export { specialServiceNr } from "../Call-Diversion-Operations-asn1-97/specialServiceNr.oa.mjs";
+import { diversionToServedUserNr } from "../Call-Diversion-Operations-asn1-97/diversionToServedUserNr.oa.mjs";
+// export { diversionToServedUserNr } from "../Call-Diversion-Operations-asn1-97/diversionToServedUserNr.oa.mjs";
+import { numberOfDiversionsExceeded } from "../Call-Diversion-Operations-asn1-97/numberOfDiversionsExceeded.oa.mjs";
+// export { numberOfDiversionsExceeded } from "../Call-Diversion-Operations-asn1-97/numberOfDiversionsExceeded.oa.mjs";
+import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
+// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
+import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa.mjs";
+// export { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa.mjs";
+
+
+/**
+ * @summary callRerouteing
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * callRerouteing OPERATION ::= {
+ *     -- Sent from the Served User PINX to the Rerouteing PINX
+ *     ARGUMENT SEQUENCE {
+ *         rerouteingReason DiversionReason,
+ *         originalRerouteingReason [0] IMPLICIT DiversionReason OPTIONAL,
+ *         calledAddress Address,
+ *         diversionCounter INTEGER (1..15),
+ *         pSS1InfoElement PSS1InformationElement,
+ *         -- The basic call information elements Bearer capability, High layer compatibility, Low
+ *         -- layer compatibity and Progress indicator can be embedded in the
+ *         -- pSS1InfoElement in accordance with 6.5.3.1.5.
+ *         lastRerouteingNr [1] PresentedNumberUnscreened,
+ *         subscriptionOption [2] IMPLICIT SubscriptionOption,
+ *         callingPartySubaddress [3] PartySubaddress OPTIONAL,
+ *         callingNumber [4] PresentedNumberScreened,
+ *         callingName [5] Name OPTIONAL,
+ *         originalCalledNr [6] PresentedNumberUnscreened OPTIONAL,
+ *         redirectingName [7] Name OPTIONAL,
+ *         originalCalledName [8] Name OPTIONAL,
+ *         extension CHOICE {
+ *             single [9] IMPLICIT Extension {{DiversionExtensionSet}},
+ *             multiple [10] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *         } OPTIONAL
+ *     }
+ *     RESULT CHOICE {
+ *         null NULL,
+ *         single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     }
+ *     ERRORS {
+ *         userNotSubscribed
+ *         | notAvailable
+ *         | resourceUnavailable
+ *         | invalidDivertedToNr
+ *         | specialServiceNr
+ *         | diversionToServedUserNr
+ *         | numberOfDiversionsExceeded
+ *         | supplementaryServiceInteractionNotAllowed
+ *         | unspecified
+ *     }
+ *     -- The error value numberOfDiversionsExceeded applies only in case of partial rerouteing.
+ *     CODE local: 19
+ * }
+ * ```
+ * 
+ * @constant
+ * @type {OPERATION<callRerouteing_ArgumentType, callRerouteing_ResultType>}
+ * @implements {OPERATION<callRerouteing_ArgumentType, callRerouteing_ResultType>}
+ */
+export
+const callRerouteing: OPERATION<callRerouteing_ArgumentType, callRerouteing_ResultType> = {
+    class: "OPERATION",
+    decoderFor: {
+        "&ArgumentType": _decode_callRerouteing_ArgumentType,
+        "&ResultType": _decode_callRerouteing_ResultType,
+    },
+    encoderFor: {
+        "&ArgumentType": _encode_callRerouteing_ArgumentType,
+        "&ResultType": _encode_callRerouteing_ResultType,
+    },
+    "&Errors": [ userNotSubscribed, notAvailable, resourceUnavailable, invalidDivertedToNr, specialServiceNr, diversionToServedUserNr, numberOfDiversionsExceeded, supplementaryServiceInteractionNotAllowed, unspecified, ] /* OBJECT_FIELD_SETTING */,
+    "&operationCode": { local: 19 } /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&InvokePriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
+    "&ResultPriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,
+    "&returnResult": true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&synchronous": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&alwaysReturns": true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

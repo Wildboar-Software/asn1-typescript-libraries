@@ -1,0 +1,39 @@
+/* eslint-disable */
+import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+// export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { pumRegistr } from "../PUM-Registration-Operations-asn1-97/pumRegistr.oa.mjs";
+// export { pumRegistr } from "../PUM-Registration-Operations-asn1-97/pumRegistr.oa.mjs";
+import { pumDelReg } from "../PUM-Registration-Operations-asn1-97/pumDelReg.oa.mjs";
+// export { pumDelReg } from "../PUM-Registration-Operations-asn1-97/pumDelReg.oa.mjs";
+import { pumDe_reg } from "../PUM-Registration-Operations-asn1-97/pumDe-reg.oa.mjs";
+// export { pumDe_reg } from "../PUM-Registration-Operations-asn1-97/pumDe-reg.oa.mjs";
+import { pumInterrog } from "../PUM-Registration-Operations-asn1-97/pumInterrog.oa.mjs";
+// export { pumInterrog } from "../PUM-Registration-Operations-asn1-97/pumInterrog.oa.mjs";
+import { pisnEnquiry } from "../WTM-Location-Registration-Operations-asn1-97/pisnEnquiry.oa.mjs";
+// export { pisnEnquiry } from "../WTM-Location-Registration-Operations-asn1-97/pisnEnquiry.oa.mjs";
+
+
+/**
+ * @summary PUM_Registration_Operations
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * PUM-Registration-Operations OPERATION ::= {
+ *     pumRegistr
+ *     | pumDelReg
+ *     | pumDe-reg
+ *     | pumInterrog
+ *     | pisnEnquiry
+ * }
+ * ```
+ * 
+ * @constant
+ * @type {OPERATION[]}
+ * 
+ */
+export
+const PUM_Registration_Operations: (OPERATION)[] = [ pumRegistr, pumDelReg, pumDe_reg, pumInterrog, pisnEnquiry, ];
+
+/* eslint-enable */
