@@ -28,7 +28,12 @@ describe("callRerouteing_ArgumentType", () => {
             { nSAPSubaddress: Uint8Array.from([0xaa, 0xbb]) },
             {
                 presentationAllowedAddress: new NumberScreened(
-                    new PublicPartyNumber(PublicTypeOfNumber.internationalNumber, "12125551212"),
+                    {
+                        publicPartyNumber: new PublicPartyNumber(
+                            PublicTypeOfNumber.internationalNumber,
+                            "12125551212",
+                        ),
+                    },
                     ScreeningIndicator.networkProvided,
                 ),
             },
