@@ -1,8 +1,10 @@
-# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
+# QSIG Supplementary Service PDUs in TypeScript
 
-Data structures from the ASN.1 definitions defined in
-[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
-Telebiometrics Authentication Infrastructure (TAI).
+ASN.1 data structures and PDUs for QSIG / PSS1 supplementary services at the Q reference point.
+
+Import a module subpath such as `@wildboar/qsig/PSS1-Service-APDUs-asn1-97`.
+`ACSE-1` and `Remote-Operations-Information-Objects` are not entry points.
+Symbols taken from those modules (`ACSE-apdu`, `OPERATION`, `ERROR`, and `Code`) are re-exported from `@wildboar/acse` and `@wildboar/rose`.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -21,5 +23,9 @@ programming languages, or if you have any other questions, please contact us at
 
 ## ESM-Only
 
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from raw ASN.1 compiler outputs using AI
+(Grok 4.7) on 20 October 2026.
