@@ -4,7 +4,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserDataHeader, _decode_UserDataHeader, _encode_UserDataHeader } from "../Short-Message-Service-Operations-asn1-97/UserDataHeader.ta.mjs";
@@ -67,6 +68,10 @@ class UserData {
         this.class_ = class_;
         this.compressed = compressed;
         this.shortMessageText = shortMessageText;
+    
+        if (class_ !== undefined && (typeof class_ === "bigint" ? (class_ < 0n || class_ > 3n) : (class_ < 0 || class_ > 3))) {
+            throw new ASN1OverflowError("UserData.class_ violates INTEGER constraint");
+        }
     }
 
     /**

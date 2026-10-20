@@ -4,7 +4,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -46,6 +47,10 @@ class GenericUserValue {
     ) {
         this.parameterValue = parameterValue;
         this.genericUserData = genericUserData;
+    
+        if ((typeof parameterValue === "bigint" ? (parameterValue < 0n || parameterValue > 255n) : (parameterValue < 0 || parameterValue > 255))) {
+            throw new ASN1OverflowError("GenericUserValue.parameterValue violates INTEGER constraint");
+        }
     }
 
     /**

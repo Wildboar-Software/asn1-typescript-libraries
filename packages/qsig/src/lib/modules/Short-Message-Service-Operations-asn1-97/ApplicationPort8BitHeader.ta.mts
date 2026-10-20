@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,6 +46,13 @@ class ApplicationPort8BitHeader {
     ) {
         this.destination8BitPort = destination8BitPort;
         this.originator8BitPort = originator8BitPort;
+    
+        if ((typeof destination8BitPort === "bigint" ? (destination8BitPort < 0n || destination8BitPort > 255n) : (destination8BitPort < 0 || destination8BitPort > 255))) {
+            throw new ASN1OverflowError("ApplicationPort8BitHeader.destination8BitPort violates INTEGER constraint");
+        }
+        if ((typeof originator8BitPort === "bigint" ? (originator8BitPort < 0n || originator8BitPort > 255n) : (originator8BitPort < 0 || originator8BitPort > 255))) {
+            throw new ASN1OverflowError("ApplicationPort8BitHeader.originator8BitPort violates INTEGER constraint");
+        }
     }
 
     /**

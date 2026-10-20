@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type AuthSessionKey = OCTET_STRING; // OctetStringType
 
 export
-const _decode_AuthSessionKey: $.ASN1Decoder<AuthSessionKey> = $._decodeOctetString;
+const _decode_AuthSessionKey = (el: _Element): AuthSessionKey => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 16) {
+        throw new ASN1SizeError("AuthSessionKey violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_AuthSessionKey: $.ASN1Encoder<AuthSessionKey> = $._encodeOctetString;

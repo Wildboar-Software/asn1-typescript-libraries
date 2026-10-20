@@ -3,7 +3,9 @@ import {
     INTEGER,
     NumericString,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
@@ -41,9 +43,21 @@ let _cached_decoder_for_MsgCentreId: $.ASN1Decoder<MsgCentreId> | null = null;
 export
 function _decode_MsgCentreId (el: _Element): MsgCentreId {
     if (!_cached_decoder_for_MsgCentreId) { _cached_decoder_for_MsgCentreId = $._decode_inextensible_choice<MsgCentreId>({
-    "CONTEXT 0": [ "integer", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 0": [ "integer", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+            const _value = $._decodeInteger(el);
+            if ((typeof _value === "bigint" ? (_value < 0n || _value > 65535n) : (_value < 0 || _value > 65535))) {
+                throw new ASN1OverflowError("MsgCentreId.integer violates INTEGER constraint");
+            }
+            return _value;
+        }) ],
     "CONTEXT 1": [ "partyNumber", $._decode_explicit<PartyNumber>(() => _decode_PartyNumber) ],
-    "CONTEXT 2": [ "numericString", $._decode_implicit<NumericString>(() => $._decodeNumericString) ]
+    "CONTEXT 2": [ "numericString", $._decode_implicit<NumericString>(() => (el: _Element) => {
+            const _value = $._decodeNumericString(el);
+            if (_value.length < 1 || _value.length > 10) {
+                throw new ASN1SizeError("MsgCentreId.numericString violates SIZE constraint");
+            }
+            return _value;
+        }) ]
 }); }
     return _cached_decoder_for_MsgCentreId(el);
 }

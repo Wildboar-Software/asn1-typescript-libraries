@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    NumericString
+    NumericString,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type NumberDigits = NumericString; // NumericString
 
 export
-const _decode_NumberDigits: $.ASN1Decoder<NumberDigits> = $._decodeNumericString;
+const _decode_NumberDigits = (el: _Element): NumberDigits => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 1 || value.length > 20) {
+        throw new ASN1SizeError("NumberDigits violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_NumberDigits: $.ASN1Encoder<NumberDigits> = $._encodeNumericString;

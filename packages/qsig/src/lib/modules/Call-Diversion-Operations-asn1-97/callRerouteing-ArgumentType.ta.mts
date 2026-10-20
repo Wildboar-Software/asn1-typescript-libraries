@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiversionReason, _decode_DiversionReason, _encode_DiversionReason, _enum_for_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
@@ -176,6 +177,10 @@ class callRerouteing_ArgumentType {
         this.redirectingName = redirectingName;
         this.originalCalledName = originalCalledName;
         this.extension = extension;
+    
+        if ((typeof diversionCounter === "bigint" ? (diversionCounter < 1n || diversionCounter > 15n) : (diversionCounter < 1 || diversionCounter > 15))) {
+            throw new ASN1OverflowError("callRerouteing_ArgumentType.diversionCounter violates INTEGER constraint");
+        }
     }
 
     /**

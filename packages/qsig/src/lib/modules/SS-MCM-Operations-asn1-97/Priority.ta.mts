@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type Priority = INTEGER;
 
 export
-const _decode_Priority: $.ASN1Decoder<Priority> = $._decodeInteger;
+const _decode_Priority = (el: _Element): Priority => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 9n) : (value < 0 || value > 9))) {
+        throw new ASN1OverflowError("Priority violates INTEGER constraint");
+    }
+    return value;
+};
 
 export
 const _encode_Priority: $.ASN1Encoder<Priority> = $._encodeInteger;

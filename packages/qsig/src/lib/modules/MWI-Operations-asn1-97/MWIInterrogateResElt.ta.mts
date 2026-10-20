@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../MWI-Operations-asn1-97/BasicService.ta.mjs";
@@ -105,6 +106,10 @@ class MWIInterrogateResElt {
         this.timestamp = timestamp;
         this.priority = priority;
         this.argumentExt = argumentExt;
+    
+        if (priority !== undefined && (typeof priority === "bigint" ? (priority < 0n || priority > 9n) : (priority < 0 || priority > 9))) {
+            throw new ASN1OverflowError("MWIInterrogateResElt.priority violates INTEGER constraint");
+        }
     }
 
     /**

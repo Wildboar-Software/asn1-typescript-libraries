@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_MessageType } from "../SS-MCM-Operations-asn1-97/MessageType.ta.mjs";
@@ -47,6 +48,10 @@ class MailboxFullPar {
     ) {
         this.messageType = messageType;
         this.capacityReached = capacityReached;
+    
+        if (capacityReached !== undefined && (typeof capacityReached === "bigint" ? (capacityReached < 0n || capacityReached > 100n) : (capacityReached < 0 || capacityReached > 100))) {
+            throw new ASN1OverflowError("MailboxFullPar.capacityReached violates INTEGER constraint");
+        }
     }
 
     /**

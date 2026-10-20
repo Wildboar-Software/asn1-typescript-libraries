@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -118,7 +119,11 @@ let _cached_decoder_for_P_AbortCause: $.ASN1Decoder<P_AbortCause> | null = null;
 export
 function _decode_P_AbortCause (el: _Element): P_AbortCause {
     if (!_cached_decoder_for_P_AbortCause) { _cached_decoder_for_P_AbortCause = $._decode_implicit<P_AbortCause>(() => $._decodeInteger); }
-    return _cached_decoder_for_P_AbortCause(el);
+    const _value = _cached_decoder_for_P_AbortCause(el);
+    if ((typeof _value === "bigint" ? (_value < 0n || _value > 255n) : (_value < 0 || _value > 255))) {
+        throw new ASN1OverflowError("P_AbortCause violates INTEGER constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_P_AbortCause: $.ASN1Encoder<P_AbortCause> | null = null;

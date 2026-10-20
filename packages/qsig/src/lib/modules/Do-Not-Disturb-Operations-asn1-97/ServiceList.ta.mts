@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    BIT_STRING
+    BIT_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -66,7 +68,13 @@ export
 const dndo_high: number = ServiceList_dndo_high; /* SHORT_NAMED_BIT */
 
 export
-const _decode_ServiceList: $.ASN1Decoder<ServiceList> = $._decodeBitString;
+const _decode_ServiceList = (el: _Element): ServiceList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 32) {
+        throw new ASN1SizeError("ServiceList violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_ServiceList: $.ASN1Encoder<ServiceList> = $._encodeBitString;

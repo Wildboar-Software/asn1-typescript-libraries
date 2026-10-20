@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type AuthChallenge = OCTET_STRING; // OctetStringType
 
 export
-const _decode_AuthChallenge: $.ASN1Decoder<AuthChallenge> = $._decodeOctetString;
+const _decode_AuthChallenge = (el: _Element): AuthChallenge => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("AuthChallenge violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_AuthChallenge: $.ASN1Encoder<AuthChallenge> = $._encodeOctetString;

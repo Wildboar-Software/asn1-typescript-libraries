@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MWIInterrogateResElt, _decode_MWIInterrogateResElt, _encode_MWIInterrogateResElt } from "../MWI-Operations-asn1-97/MWIInterrogateResElt.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_MWIInterrogateRes: $.ASN1Decoder<MWIInterrogateRes> | nu
 export
 function _decode_MWIInterrogateRes (el: _Element): MWIInterrogateRes {
     if (!_cached_decoder_for_MWIInterrogateRes) { _cached_decoder_for_MWIInterrogateRes = $._decodeSequenceOf<MWIInterrogateResElt>(() => _decode_MWIInterrogateResElt); }
-    return _cached_decoder_for_MWIInterrogateRes(el);
+    const _value = _cached_decoder_for_MWIInterrogateRes(el);
+    if (_value.length < 1 || _value.length > 10) {
+        throw new ASN1SizeError("MWIInterrogateRes violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_MWIInterrogateRes: $.ASN1Encoder<MWIInterrogateRes> | null = null;

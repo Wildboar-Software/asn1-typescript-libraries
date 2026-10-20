@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CalcWtatInfoUnit, _decode_CalcWtatInfoUnit, _encode_CalcWtatInfoUnit } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfoUnit.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_CalcWtatInfo: $.ASN1Decoder<CalcWtatInfo> | null = null;
 export
 function _decode_CalcWtatInfo (el: _Element): CalcWtatInfo {
     if (!_cached_decoder_for_CalcWtatInfo) { _cached_decoder_for_CalcWtatInfo = $._decodeSequenceOf<CalcWtatInfoUnit>(() => _decode_CalcWtatInfoUnit); }
-    return _cached_decoder_for_CalcWtatInfo(el);
+    const _value = _cached_decoder_for_CalcWtatInfo(el);
+    if (_value.length < 1 || _value.length > 5) {
+        throw new ASN1SizeError("CalcWtatInfo violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_CalcWtatInfo: $.ASN1Encoder<CalcWtatInfo> | null = null;

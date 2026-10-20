@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -196,7 +198,13 @@ export
 const iso10646_utf_8String: CharacterSet = CharacterSet_iso10646_utf_8String; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
-const _decode_CharacterSet: $.ASN1Decoder<CharacterSet> = $._decodeInteger;
+const _decode_CharacterSet = (el: _Element): CharacterSet => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 255n) : (value < 0 || value > 255))) {
+        throw new ASN1OverflowError("CharacterSet violates INTEGER constraint");
+    }
+    return value;
+};
 
 export
 const _encode_CharacterSet: $.ASN1Encoder<CharacterSet> = $._encodeInteger;

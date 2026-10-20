@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -157,7 +159,13 @@ export
 const tetra: DefinedIDs = DefinedIDs_tetra; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
-const _decode_DefinedIDs: $.ASN1Decoder<DefinedIDs> = $._decodeInteger;
+const _decode_DefinedIDs = (el: _Element): DefinedIDs => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 255n) : (value < 0 || value > 255))) {
+        throw new ASN1OverflowError("DefinedIDs violates INTEGER constraint");
+    }
+    return value;
+};
 
 export
 const _encode_DefinedIDs: $.ASN1Encoder<DefinedIDs> = $._encodeInteger;

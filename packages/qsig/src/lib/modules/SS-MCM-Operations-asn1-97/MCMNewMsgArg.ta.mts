@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
@@ -113,6 +114,10 @@ class MCMNewMsgArg {
         this.timestamp = timestamp;
         this.priority = priority;
         this.argumentExt = argumentExt;
+    
+        if (priority !== undefined && (typeof priority === "bigint" ? (priority < 0n || priority > 9n) : (priority < 0 || priority > 9))) {
+            throw new ASN1OverflowError("MCMNewMsgArg.priority violates INTEGER constraint");
+        }
     }
 
     /**

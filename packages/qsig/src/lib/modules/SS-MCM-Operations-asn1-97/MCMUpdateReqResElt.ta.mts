@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_MessageType } from "../SS-MCM-Operations-asn1-97/MessageType.ta.mjs";
@@ -104,6 +105,10 @@ class MCMUpdateReqResElt {
         this.timestamp = timestamp;
         this.priority = priority;
         this.argumentExt = argumentExt;
+    
+        if (priority !== undefined && (typeof priority === "bigint" ? (priority < 0n || priority > 9n) : (priority < 0 || priority > 9))) {
+            throw new ASN1OverflowError("MCMUpdateReqResElt.priority violates INTEGER constraint");
+        }
     }
 
     /**

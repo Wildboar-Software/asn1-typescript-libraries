@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -89,7 +91,13 @@ export
 const compressedCoded: ShortMessageTextType = ShortMessageTextType_compressedCoded; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
-const _decode_ShortMessageTextType: $.ASN1Decoder<ShortMessageTextType> = $._decodeInteger;
+const _decode_ShortMessageTextType = (el: _Element): ShortMessageTextType => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 8n) : (value < 0 || value > 8))) {
+        throw new ASN1OverflowError("ShortMessageTextType violates INTEGER constraint");
+    }
+    return value;
+};
 
 export
 const _encode_ShortMessageTextType: $.ASN1Encoder<ShortMessageTextType> = $._encodeInteger;

@@ -2,7 +2,8 @@
 import {
     INTEGER,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKeyInfo.ta.mjs";
@@ -49,7 +50,13 @@ function _decode_WtatParamInfo_wtatParamInfoChoice (el: _Element): WtatParamInfo
     "CONTEXT 1": [ "authSessionKeyInfo", $._decode_implicit<AuthSessionKeyInfo>(() => _decode_AuthSessionKeyInfo) ],
     "CONTEXT 2": [ "calcWtatInfo", $._decode_implicit<CalcWtatInfo>(() => _decode_CalcWtatInfo) ],
     "CONTEXT 3": [ "authKey", $._decode_implicit<AuthKey>(() => _decode_AuthKey) ],
-    "CONTEXT 4": [ "challLen", $._decode_implicit<INTEGER>(() => $._decodeInteger) ]
+    "CONTEXT 4": [ "challLen", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+            const _value = $._decodeInteger(el);
+            if ((typeof _value === "bigint" ? (_value < 1n || _value > 8n) : (_value < 1 || _value > 8))) {
+                throw new ASN1OverflowError("WtatParamInfo_wtatParamInfoChoice.challLen violates INTEGER constraint");
+            }
+            return _value;
+        }) ]
 }); }
     return _cached_decoder_for_WtatParamInfo_wtatParamInfoChoice(el);
 }

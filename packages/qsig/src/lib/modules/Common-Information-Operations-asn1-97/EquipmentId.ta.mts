@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     IA5String,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -54,6 +55,16 @@ class EquipmentId {
         this.nodeId = nodeId;
         this.groupId = groupId;
         this.unitId = unitId;
+    
+        if (nodeId !== undefined && (nodeId.length < 1 || nodeId.length > 10)) {
+            throw new ASN1SizeError("EquipmentId.nodeId violates SIZE constraint");
+        }
+        if (groupId !== undefined && (groupId.length < 1 || groupId.length > 10)) {
+            throw new ASN1SizeError("EquipmentId.groupId violates SIZE constraint");
+        }
+        if (unitId !== undefined && (unitId.length < 1 || unitId.length > 10)) {
+            throw new ASN1SizeError("EquipmentId.unitId violates SIZE constraint");
+        }
     }
 
     /**

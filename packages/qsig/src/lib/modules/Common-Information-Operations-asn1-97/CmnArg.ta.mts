@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FeatureIdList, _decode_FeatureIdList, _encode_FeatureIdList } from "../Common-Information-Operations-asn1-97/FeatureIdList.ta.mjs";
@@ -98,6 +99,13 @@ class CmnArg {
         this.equipmentIdentity = equipmentIdentity;
         this.partyCategory = partyCategory;
         this.extension = extension;
+    
+        if (ssDNDOprotectionLevel !== undefined && (typeof ssDNDOprotectionLevel === "bigint" ? (ssDNDOprotectionLevel < 0n || ssDNDOprotectionLevel > 3n) : (ssDNDOprotectionLevel < 0 || ssDNDOprotectionLevel > 3))) {
+            throw new ASN1OverflowError("CmnArg.ssDNDOprotectionLevel violates INTEGER constraint");
+        }
+        if (ssCIprotectionLevel !== undefined && (typeof ssCIprotectionLevel === "bigint" ? (ssCIprotectionLevel < 0n || ssCIprotectionLevel > 3n) : (ssCIprotectionLevel < 0 || ssCIprotectionLevel > 3))) {
+            throw new ASN1OverflowError("CmnArg.ssCIprotectionLevel violates INTEGER constraint");
+        }
     }
 
     /**

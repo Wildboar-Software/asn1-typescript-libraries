@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type RRClass = INTEGER;
 
 export
-const _decode_RRClass: $.ASN1Decoder<RRClass> = $._decodeInteger;
+const _decode_RRClass = (el: _Element): RRClass => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 99n) : (value < 0 || value > 99))) {
+        throw new ASN1OverflowError("RRClass violates INTEGER constraint");
+    }
+    return value;
+};
 
 export
 const _encode_RRClass: $.ASN1Encoder<RRClass> = $._encodeInteger;

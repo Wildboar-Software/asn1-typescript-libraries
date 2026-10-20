@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -54,6 +55,16 @@ class Concatenated8BitSMHeader {
         this.concatenated8BitSMReferenceNumber = concatenated8BitSMReferenceNumber;
         this.maximumNumberOf8BitSMInConcatenatedSM = maximumNumberOf8BitSMInConcatenatedSM;
         this.sequenceNumberOf8BitSM = sequenceNumberOf8BitSM;
+    
+        if ((typeof concatenated8BitSMReferenceNumber === "bigint" ? (concatenated8BitSMReferenceNumber < 0n || concatenated8BitSMReferenceNumber > 255n) : (concatenated8BitSMReferenceNumber < 0 || concatenated8BitSMReferenceNumber > 255))) {
+            throw new ASN1OverflowError("Concatenated8BitSMHeader.concatenated8BitSMReferenceNumber violates INTEGER constraint");
+        }
+        if ((typeof maximumNumberOf8BitSMInConcatenatedSM === "bigint" ? (maximumNumberOf8BitSMInConcatenatedSM < 0n || maximumNumberOf8BitSMInConcatenatedSM > 255n) : (maximumNumberOf8BitSMInConcatenatedSM < 0 || maximumNumberOf8BitSMInConcatenatedSM > 255))) {
+            throw new ASN1OverflowError("Concatenated8BitSMHeader.maximumNumberOf8BitSMInConcatenatedSM violates INTEGER constraint");
+        }
+        if ((typeof sequenceNumberOf8BitSM === "bigint" ? (sequenceNumberOf8BitSM < 0n || sequenceNumberOf8BitSM > 255n) : (sequenceNumberOf8BitSM < 0 || sequenceNumberOf8BitSM > 255))) {
+            throw new ASN1OverflowError("Concatenated8BitSMHeader.sequenceNumberOf8BitSM violates INTEGER constraint");
+        }
     }
 
     /**

@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdviceModeCombination, _decode_AdviceModeCombination, _encode_AdviceModeCombination } from "../SS-AOC-Operations-asn1-97/AdviceModeCombination.ta.mjs";
@@ -50,6 +51,10 @@ class ChargeRequestArg {
     ) {
         this.adviceModeCombinations = adviceModeCombinations;
         this.chargeReqArgExtension = chargeReqArgExtension;
+    
+        if (adviceModeCombinations.length < 0 || adviceModeCombinations.length > 7) {
+            throw new ASN1SizeError("ChargeRequestArg.adviceModeCombinations violates SIZE constraint");
+        }
     }
 
     /**
