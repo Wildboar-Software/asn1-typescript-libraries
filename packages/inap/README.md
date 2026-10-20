@@ -1,8 +1,19 @@
-# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
+# Intelligent Network Application Protocol (INAP) in TypeScript
 
-Data structures from the ASN.1 definitions defined in
-[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
-Telebiometrics Authentication Infrastructure (TAI).
+ASN.1 data structures, operations, and errors for the Intelligent Network
+Application Protocol (INAP), the telephony protocol used between intelligent
+network entities such as the service switching function, service control
+function, specialized resource function, service data function, and call
+unrelated service function.
+
+The modules follow ITU-T Recommendations
+[Q.1218](https://www.itu.int/rec/T-REC-Q.1218) (CS-1),
+[Q.1228](https://www.itu.int/rec/T-REC-Q.1228) (CS-2),
+[Q.1238](https://www.itu.int/rec/T-REC-Q.1238) (CS-3), and
+[Q.1248](https://www.itu.int/rec/T-REC-Q.1248) (CS-4).
+
+Import a module subpath, for example `@wildboar/inap/IN-SSF-SCF-ops-args`.
+The package root does not re-export every module.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -21,5 +32,9 @@ programming languages, or if you have any other questions, please contact us at
 
 ## ESM-Only
 
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from the raw compiler outputs using AI (Grok 4.7)
+on 20 October 2026.
