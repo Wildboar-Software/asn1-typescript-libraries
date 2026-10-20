@@ -52,7 +52,7 @@ const mIDMailboxID: OPERATION<MIDMailboxIDArg, MIDDummyRes> = {
         "&ResultType": _encode_MIDDummyRes,
     },
     "&Errors": [ userNotSubscribed, invalidServedUserNr, invalidMailbox, unspecified, ] /* OBJECT_FIELD_SETTING */,
-    "&operationCode": local /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&operationCode": { local: 120 } /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&InvokePriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,

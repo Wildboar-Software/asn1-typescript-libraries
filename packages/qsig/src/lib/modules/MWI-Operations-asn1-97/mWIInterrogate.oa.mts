@@ -13,6 +13,7 @@ import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.o
 import { invalidMsgCentreId } from "../MWI-Operations-asn1-97/invalidMsgCentreId.oa.mjs";
 // export { invalidMsgCentreId } from "../MWI-Operations-asn1-97/invalidMsgCentreId.oa.mjs";
 import { unspecified } from "../MWI-Operations-asn1-97/unspecified.oa.mjs";
+import { notActivated } from "../General-Error-List/notActivated.oa.mjs";
 // export { unspecified } from "../MWI-Operations-asn1-97/unspecified.oa.mjs";
 
 

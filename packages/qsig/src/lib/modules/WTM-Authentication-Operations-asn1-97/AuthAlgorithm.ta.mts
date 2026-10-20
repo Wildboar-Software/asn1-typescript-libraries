@@ -5,6 +5,7 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { DefinedIDs, _decode_DefinedIDs, _encode_DefinedIDs } from "../WTM-Authentication-Operations-asn1-97/DefinedIDs.ta.mjs";
 // export { AUTH_ALG } from "../WTM-Authentication-Operations-asn1-97/AUTH-ALG.oca.mjs";
 // export { AuthAlgSet } from "../WTM-Authentication-Operations-asn1-97/AuthAlgSet.osa.mjs";
 
