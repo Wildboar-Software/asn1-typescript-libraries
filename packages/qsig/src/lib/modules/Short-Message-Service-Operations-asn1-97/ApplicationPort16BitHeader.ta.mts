@@ -128,10 +128,8 @@ function _decode_ApplicationPort16BitHeader (el: _Element): ApplicationPort16Bit
     }
     sequence[0].name = "destination16BitPort";
     sequence[1].name = "originator16BitPort";
-    let destination16BitPort!: INTEGER;
-    let originator16BitPort!: INTEGER;
-    destination16BitPort = $._decodeInteger(sequence[0]);
-    originator16BitPort = $._decodeInteger(sequence[1]);
+    const destination16BitPort: INTEGER = $._decodeInteger(sequence[0]);
+    const originator16BitPort: INTEGER = $._decodeInteger(sequence[1]);
     return new ApplicationPort16BitHeader(
         destination16BitPort,
         originator16BitPort,

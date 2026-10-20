@@ -128,10 +128,8 @@ function _decode_PublicPartyNumber (el: _Element): PublicPartyNumber {
     }
     sequence[0].name = "publicTypeOfNumber";
     sequence[1].name = "publicNumberDigits";
-    let publicTypeOfNumber!: PublicTypeOfNumber;
-    let publicNumberDigits!: NumberDigits;
-    publicTypeOfNumber = _decode_PublicTypeOfNumber(sequence[0]);
-    publicNumberDigits = _decode_NumberDigits(sequence[1]);
+    const publicTypeOfNumber: PublicTypeOfNumber = _decode_PublicTypeOfNumber(sequence[0]);
+    const publicNumberDigits: NumberDigits = _decode_NumberDigits(sequence[1]);
     return new PublicPartyNumber(
         publicTypeOfNumber,
         publicNumberDigits,

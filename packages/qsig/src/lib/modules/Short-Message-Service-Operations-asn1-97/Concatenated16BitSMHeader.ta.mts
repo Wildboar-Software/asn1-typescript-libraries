@@ -142,12 +142,9 @@ function _decode_Concatenated16BitSMHeader (el: _Element): Concatenated16BitSMHe
     sequence[0].name = "concatenated16BitSMReferenceNumber";
     sequence[1].name = "maximumNumberOf16BitSMInConcatenatedSM";
     sequence[2].name = "sequenceNumberOf16BitSM";
-    let concatenated16BitSMReferenceNumber!: INTEGER;
-    let maximumNumberOf16BitSMInConcatenatedSM!: INTEGER;
-    let sequenceNumberOf16BitSM!: INTEGER;
-    concatenated16BitSMReferenceNumber = $._decodeInteger(sequence[0]);
-    maximumNumberOf16BitSMInConcatenatedSM = $._decodeInteger(sequence[1]);
-    sequenceNumberOf16BitSM = $._decodeInteger(sequence[2]);
+    const concatenated16BitSMReferenceNumber: INTEGER = $._decodeInteger(sequence[0]);
+    const maximumNumberOf16BitSMInConcatenatedSM: INTEGER = $._decodeInteger(sequence[1]);
+    const sequenceNumberOf16BitSM: INTEGER = $._decodeInteger(sequence[2]);
     return new Concatenated16BitSMHeader(
         concatenated16BitSMReferenceNumber,
         maximumNumberOf16BitSMInConcatenatedSM,

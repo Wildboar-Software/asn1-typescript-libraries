@@ -124,10 +124,8 @@ function _decode_DialogAbortPDU (el: _Element): DialogAbortPDU {
     }
     sequence[0].name = "destinationDialogId";
     sequence[1].name = "abortChoice";
-    let destinationDialogId!: DestinationDialogId;
-    let abortChoice!: DialogAbortPDU_abortChoice;
-    destinationDialogId = _decode_DestinationDialogId(sequence[0]);
-    abortChoice = _decode_DialogAbortPDU_abortChoice(sequence[1]);
+    const destinationDialogId: DestinationDialogId = _decode_DestinationDialogId(sequence[0]);
+    const abortChoice: DialogAbortPDU_abortChoice = _decode_DialogAbortPDU_abortChoice(sequence[1]);
     return new DialogAbortPDU(
         destinationDialogId,
         abortChoice,

@@ -121,10 +121,8 @@ function _decode_ResChoiceSeq (el: _Element): ResChoiceSeq {
     }
     sequence[0].name = "protocolIdentifier";
     sequence[1].name = "userData";
-    let protocolIdentifier!: ProtocolIdentifier;
-    let userData!: UserData;
-    protocolIdentifier = _decode_ProtocolIdentifier(sequence[0]);
-    userData = _decode_UserData(sequence[1]);
+    const protocolIdentifier: ProtocolIdentifier = _decode_ProtocolIdentifier(sequence[0]);
+    const userData: UserData = _decode_UserData(sequence[1]);
     return new ResChoiceSeq(
         protocolIdentifier,
         userData,

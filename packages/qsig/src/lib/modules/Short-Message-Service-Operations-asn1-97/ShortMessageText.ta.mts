@@ -121,10 +121,8 @@ function _decode_ShortMessageText (el: _Element): ShortMessageText {
     }
     sequence[0].name = "shortMessageTextType";
     sequence[1].name = "shortMessageTextData";
-    let shortMessageTextType!: ShortMessageTextType;
-    let shortMessageTextData!: ShortMessageTextData;
-    shortMessageTextType = _decode_ShortMessageTextType(sequence[0]);
-    shortMessageTextData = _decode_ShortMessageTextData(sequence[1]);
+    const shortMessageTextType: ShortMessageTextType = _decode_ShortMessageTextType(sequence[0]);
+    const shortMessageTextData: ShortMessageTextData = _decode_ShortMessageTextData(sequence[1]);
     return new ShortMessageText(
         shortMessageTextType,
         shortMessageTextData,

@@ -142,12 +142,9 @@ function _decode_Concatenated8BitSMHeader (el: _Element): Concatenated8BitSMHead
     sequence[0].name = "concatenated8BitSMReferenceNumber";
     sequence[1].name = "maximumNumberOf8BitSMInConcatenatedSM";
     sequence[2].name = "sequenceNumberOf8BitSM";
-    let concatenated8BitSMReferenceNumber!: INTEGER;
-    let maximumNumberOf8BitSMInConcatenatedSM!: INTEGER;
-    let sequenceNumberOf8BitSM!: INTEGER;
-    concatenated8BitSMReferenceNumber = $._decodeInteger(sequence[0]);
-    maximumNumberOf8BitSMInConcatenatedSM = $._decodeInteger(sequence[1]);
-    sequenceNumberOf8BitSM = $._decodeInteger(sequence[2]);
+    const concatenated8BitSMReferenceNumber: INTEGER = $._decodeInteger(sequence[0]);
+    const maximumNumberOf8BitSMInConcatenatedSM: INTEGER = $._decodeInteger(sequence[1]);
+    const sequenceNumberOf8BitSM: INTEGER = $._decodeInteger(sequence[2]);
     return new Concatenated8BitSMHeader(
         concatenated8BitSMReferenceNumber,
         maximumNumberOf8BitSMInConcatenatedSM,

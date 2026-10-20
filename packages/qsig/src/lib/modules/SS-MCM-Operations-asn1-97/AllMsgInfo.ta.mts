@@ -119,10 +119,8 @@ function _decode_AllMsgInfo (el: _Element): AllMsgInfo {
     }
     sequence[0].name = "newMsgInfo";
     sequence[1].name = "retrievedMsgInfo";
-    let newMsgInfo!: MessageInfo;
-    let retrievedMsgInfo!: MessageInfo;
-    newMsgInfo = _decode_MessageInfo(sequence[0]);
-    retrievedMsgInfo = _decode_MessageInfo(sequence[1]);
+    const newMsgInfo: MessageInfo = _decode_MessageInfo(sequence[0]);
+    const retrievedMsgInfo: MessageInfo = _decode_MessageInfo(sequence[1]);
     return new AllMsgInfo(
         newMsgInfo,
         retrievedMsgInfo,

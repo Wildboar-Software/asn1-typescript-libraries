@@ -121,10 +121,8 @@ function _decode_FlatRateCurrency (el: _Element): FlatRateCurrency {
     }
     sequence[0].name = "fRCurrency";
     sequence[1].name = "fRAmount";
-    let fRCurrency!: Currency;
-    let fRAmount!: Amount;
-    fRCurrency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
-    fRAmount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
+    const fRCurrency: Currency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
+    const fRAmount: Amount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
     return new FlatRateCurrency(
         fRCurrency,
         fRAmount,

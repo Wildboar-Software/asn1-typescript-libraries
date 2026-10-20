@@ -128,10 +128,8 @@ function _decode_Time (el: _Element): Time {
     }
     sequence[0].name = "lengthOfTimeUnit";
     sequence[1].name = "scale";
-    let lengthOfTimeUnit!: LengthOfTimeUnit;
-    let scale!: Scale;
-    lengthOfTimeUnit = $._decode_implicit<LengthOfTimeUnit>(() => _decode_LengthOfTimeUnit)(sequence[0]);
-    scale = $._decode_implicit<Scale>(() => _decode_Scale)(sequence[1]);
+    const lengthOfTimeUnit: LengthOfTimeUnit = $._decode_implicit<LengthOfTimeUnit>(() => _decode_LengthOfTimeUnit)(sequence[0]);
+    const scale: Scale = $._decode_implicit<Scale>(() => _decode_Scale)(sequence[1]);
     return new Time(
         lengthOfTimeUnit,
         scale,

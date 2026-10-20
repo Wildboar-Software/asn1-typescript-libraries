@@ -131,10 +131,8 @@ function _decode_Reject (el: _Element): Reject {
     }
     sequence[0].name = "invokeId";
     sequence[1].name = "problem";
-    let invokeId!: InvokeIdOrNull;
-    let problem!: Reject_problem;
-    invokeId = _decode_InvokeIdOrNull(sequence[0]);
-    problem = _decode_Reject_problem(sequence[1]);
+    const invokeId: InvokeIdOrNull = _decode_InvokeIdOrNull(sequence[0]);
+    const problem: Reject_problem = _decode_Reject_problem(sequence[1]);
     return new Reject(
         invokeId,
         problem,

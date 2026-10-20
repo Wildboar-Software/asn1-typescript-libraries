@@ -120,10 +120,8 @@ function _decode_PartyInfo (el: _Element): PartyInfo {
     }
     sequence[0].name = "servedUserNr";
     sequence[1].name = "messageCentreID";
-    let servedUserNr!: PartyNumber;
-    let messageCentreID!: MsgCentreId;
-    servedUserNr = _decode_PartyNumber(sequence[0]);
-    messageCentreID = _decode_MsgCentreId(sequence[1]);
+    const servedUserNr: PartyNumber = _decode_PartyNumber(sequence[0]);
+    const messageCentreID: MsgCentreId = _decode_MsgCentreId(sequence[1]);
     return new PartyInfo(
         servedUserNr,
         messageCentreID,

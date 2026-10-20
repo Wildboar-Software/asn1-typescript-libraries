@@ -121,10 +121,8 @@ function _decode_WtmIdentity_both (el: _Element): WtmIdentity_both {
     }
     sequence[0].name = "pisnNumber";
     sequence[1].name = "alternativeId";
-    let pisnNumber!: PartyNumber;
-    let alternativeId!: AlternativeId;
-    pisnNumber = _decode_PartyNumber(sequence[0]);
-    alternativeId = _decode_AlternativeId(sequence[1]);
+    const pisnNumber: PartyNumber = _decode_PartyNumber(sequence[0]);
+    const alternativeId: AlternativeId = _decode_AlternativeId(sequence[1]);
     return new WtmIdentity_both(
         pisnNumber,
         alternativeId,

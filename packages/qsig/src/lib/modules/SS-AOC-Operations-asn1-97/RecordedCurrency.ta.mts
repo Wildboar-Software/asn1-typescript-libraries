@@ -121,10 +121,8 @@ function _decode_RecordedCurrency (el: _Element): RecordedCurrency {
     }
     sequence[0].name = "rCurrency";
     sequence[1].name = "rAmount";
-    let rCurrency!: Currency;
-    let rAmount!: Amount;
-    rCurrency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
-    rAmount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
+    const rCurrency: Currency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
+    const rAmount: Amount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
     return new RecordedCurrency(
         rCurrency,
         rAmount,

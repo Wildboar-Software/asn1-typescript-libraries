@@ -126,10 +126,8 @@ function _decode_WtatParamInfo (el: _Element): WtatParamInfo {
     }
     sequence[0].name = "authAlgorithm";
     sequence[1].name = "wtatParamInfoChoice";
-    let authAlgorithm!: AuthAlgorithm;
-    let wtatParamInfoChoice!: WtatParamInfo_wtatParamInfoChoice;
-    authAlgorithm = _decode_AuthAlgorithm(sequence[0]);
-    wtatParamInfoChoice = _decode_WtatParamInfo_wtatParamInfoChoice(sequence[1]);
+    const authAlgorithm: AuthAlgorithm = _decode_AuthAlgorithm(sequence[0]);
+    const wtatParamInfoChoice: WtatParamInfo_wtatParamInfoChoice = _decode_WtatParamInfo_wtatParamInfoChoice(sequence[1]);
     return new WtatParamInfo(
         authAlgorithm,
         wtatParamInfoChoice,

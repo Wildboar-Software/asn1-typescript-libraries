@@ -140,12 +140,9 @@ function _decode_VolumeRateCurrency (el: _Element): VolumeRateCurrency {
     sequence[0].name = "vRCurrency";
     sequence[1].name = "vRAmount";
     sequence[2].name = "vRVolumeUnit";
-    let vRCurrency!: Currency;
-    let vRAmount!: Amount;
-    let vRVolumeUnit!: VolumeUnit;
-    vRCurrency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
-    vRAmount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
-    vRVolumeUnit = $._decode_implicit<VolumeUnit>(() => _decode_VolumeUnit)(sequence[2]);
+    const vRCurrency: Currency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
+    const vRAmount: Amount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
+    const vRVolumeUnit: VolumeUnit = $._decode_implicit<VolumeUnit>(() => _decode_VolumeUnit)(sequence[2]);
     return new VolumeRateCurrency(
         vRCurrency,
         vRAmount,

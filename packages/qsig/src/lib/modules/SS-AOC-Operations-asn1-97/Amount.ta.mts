@@ -128,10 +128,8 @@ function _decode_Amount (el: _Element): Amount {
     }
     sequence[0].name = "currencyAmount";
     sequence[1].name = "multiplier";
-    let currencyAmount!: CurrencyAmount;
-    let multiplier!: Multiplier;
-    currencyAmount = $._decode_implicit<CurrencyAmount>(() => _decode_CurrencyAmount)(sequence[0]);
-    multiplier = $._decode_implicit<Multiplier>(() => _decode_Multiplier)(sequence[1]);
+    const currencyAmount: CurrencyAmount = $._decode_implicit<CurrencyAmount>(() => _decode_CurrencyAmount)(sequence[0]);
+    const multiplier: Multiplier = $._decode_implicit<Multiplier>(() => _decode_Multiplier)(sequence[1]);
     return new Amount(
         currencyAmount,
         multiplier,

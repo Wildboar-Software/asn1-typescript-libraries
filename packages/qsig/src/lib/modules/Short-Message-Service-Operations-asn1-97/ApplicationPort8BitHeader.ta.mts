@@ -128,10 +128,8 @@ function _decode_ApplicationPort8BitHeader (el: _Element): ApplicationPort8BitHe
     }
     sequence[0].name = "destination8BitPort";
     sequence[1].name = "originator8BitPort";
-    let destination8BitPort!: INTEGER;
-    let originator8BitPort!: INTEGER;
-    destination8BitPort = $._decodeInteger(sequence[0]);
-    originator8BitPort = $._decodeInteger(sequence[1]);
+    const destination8BitPort: INTEGER = $._decodeInteger(sequence[0]);
+    const originator8BitPort: INTEGER = $._decodeInteger(sequence[1]);
     return new ApplicationPort8BitHeader(
         destination8BitPort,
         originator8BitPort,

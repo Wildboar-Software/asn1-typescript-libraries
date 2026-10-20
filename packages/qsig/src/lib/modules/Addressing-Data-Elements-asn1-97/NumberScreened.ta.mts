@@ -128,10 +128,8 @@ function _decode_NumberScreened (el: _Element): NumberScreened {
     }
     sequence[0].name = "partyNumber";
     sequence[1].name = "screeningIndicator";
-    let partyNumber!: PartyNumber;
-    let screeningIndicator!: ScreeningIndicator;
-    partyNumber = _decode_PartyNumber(sequence[0]);
-    screeningIndicator = _decode_ScreeningIndicator(sequence[1]);
+    const partyNumber: PartyNumber = _decode_PartyNumber(sequence[0]);
+    const screeningIndicator: ScreeningIndicator = _decode_ScreeningIndicator(sequence[1]);
     return new NumberScreened(
         partyNumber,
         screeningIndicator,

@@ -128,10 +128,8 @@ function _decode_PrivatePartyNumber (el: _Element): PrivatePartyNumber {
     }
     sequence[0].name = "privateTypeOfNumber";
     sequence[1].name = "privateNumberDigits";
-    let privateTypeOfNumber!: PrivateTypeOfNumber;
-    let privateNumberDigits!: NumberDigits;
-    privateTypeOfNumber = _decode_PrivateTypeOfNumber(sequence[0]);
-    privateNumberDigits = _decode_NumberDigits(sequence[1]);
+    const privateTypeOfNumber: PrivateTypeOfNumber = _decode_PrivateTypeOfNumber(sequence[0]);
+    const privateNumberDigits: NumberDigits = _decode_NumberDigits(sequence[1]);
     return new PrivatePartyNumber(
         privateTypeOfNumber,
         privateNumberDigits,

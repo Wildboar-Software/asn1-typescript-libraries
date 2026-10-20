@@ -126,10 +126,8 @@ function _decode_GenericUserValue (el: _Element): GenericUserValue {
     }
     sequence[0].name = "parameterValue";
     sequence[1].name = "genericUserData";
-    let parameterValue!: INTEGER;
-    let genericUserData!: OCTET_STRING;
-    parameterValue = $._decodeInteger(sequence[0]);
-    genericUserData = $._decodeOctetString(sequence[1]);
+    const parameterValue: INTEGER = $._decodeInteger(sequence[0]);
+    const genericUserData: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new GenericUserValue(
         parameterValue,
         genericUserData,

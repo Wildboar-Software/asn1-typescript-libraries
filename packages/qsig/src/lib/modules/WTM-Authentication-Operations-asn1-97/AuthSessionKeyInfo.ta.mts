@@ -121,10 +121,8 @@ function _decode_AuthSessionKeyInfo (el: _Element): AuthSessionKeyInfo {
     }
     sequence[0].name = "authSessionKey";
     sequence[1].name = "calculationParam";
-    let authSessionKey!: AuthSessionKey;
-    let calculationParam!: CalculationParam;
-    authSessionKey = _decode_AuthSessionKey(sequence[0]);
-    calculationParam = _decode_CalculationParam(sequence[1]);
+    const authSessionKey: AuthSessionKey = _decode_AuthSessionKey(sequence[0]);
+    const calculationParam: CalculationParam = _decode_CalculationParam(sequence[1]);
     return new AuthSessionKeyInfo(
         authSessionKey,
         calculationParam,

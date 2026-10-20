@@ -136,10 +136,8 @@ function _decode_AOCSCurrencyInfo (el: _Element): AOCSCurrencyInfo {
     }
     sequence[0].name = "chargedItem";
     sequence[1].name = "rateType";
-    let chargedItem!: ChargedItem;
-    let rateType!: AOCSCurrencyInfo_rateType;
-    chargedItem = _decode_ChargedItem(sequence[0]);
-    rateType = _decode_AOCSCurrencyInfo_rateType(sequence[1]);
+    const chargedItem: ChargedItem = _decode_ChargedItem(sequence[0]);
+    const rateType: AOCSCurrencyInfo_rateType = _decode_AOCSCurrencyInfo_rateType(sequence[1]);
     return new AOCSCurrencyInfo(
         chargedItem,
         rateType,

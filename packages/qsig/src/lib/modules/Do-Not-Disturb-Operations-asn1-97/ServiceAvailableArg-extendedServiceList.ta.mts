@@ -121,10 +121,8 @@ function _decode_ServiceAvailableArg_extendedServiceList (el: _Element): Service
     }
     sequence[0].name = "serviceList";
     sequence[1].name = "extension";
-    let serviceList!: ServiceList;
-    let extension!: Extension;
-    serviceList = _decode_ServiceList(sequence[0]);
-    extension = _decode_Extension(sequence[1]);
+    const serviceList: ServiceList = _decode_ServiceList(sequence[0]);
+    const extension: Extension = _decode_Extension(sequence[1]);
     return new ServiceAvailableArg_extendedServiceList(
         serviceList,
         extension,

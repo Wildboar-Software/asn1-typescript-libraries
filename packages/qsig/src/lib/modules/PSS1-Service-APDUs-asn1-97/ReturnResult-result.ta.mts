@@ -129,10 +129,8 @@ function _decode_ReturnResult_result (el: _Element): ReturnResult_result {
     }
     sequence[0].name = "opcode";
     sequence[1].name = "result";
-    let opcode!: Code;
-    let result!: _Element;
-    opcode = _decode_Code(sequence[0]);
-    result = $._decodeAny(sequence[1]);
+    const opcode: Code = _decode_Code(sequence[0]);
+    const result: _Element = $._decodeAny(sequence[1]);
     return new ReturnResult_result(
         opcode,
         result,

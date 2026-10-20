@@ -120,10 +120,8 @@ function _decode_Extension (el: _Element): Extension {
     }
     sequence[0].name = "extensionId";
     sequence[1].name = "extensionArgument";
-    let extensionId!: OBJECT_IDENTIFIER;
-    let extensionArgument!: _Element;
-    extensionId = $._decodeObjectIdentifier(sequence[0]);
-    extensionArgument = $._decodeAny(sequence[1]);
+    const extensionId: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const extensionArgument: _Element = $._decodeAny(sequence[1]);
     return new Extension(
         extensionId,
         extensionArgument,
