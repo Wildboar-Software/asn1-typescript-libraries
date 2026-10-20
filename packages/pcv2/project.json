@@ -1,0 +1,25 @@
+{
+  "name": "pcv2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/pcv2/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/pcv2",
+        "tsConfig": "packages/pcv2/tsconfig.lib.json",
+        "packageJson": "packages/pcv2/package.json",
+        "main": "packages/pcv2/src/index.mts",
+        "assets": [
+          "packages/pcv2/*.md",
+          "packages/pcv2/LICENSE.txt",
+          "packages/pcv2/package.json"
+        ]
+      }
+    }
+  }
+}
