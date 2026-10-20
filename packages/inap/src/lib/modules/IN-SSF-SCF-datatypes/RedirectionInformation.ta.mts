@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type RedirectionInformation = OCTET_STRING; // OctetStringType
 
 export
-const _decode_RedirectionInformation: $.ASN1Decoder<RedirectionInformation> = $._decodeOctetString;
+function _decode_RedirectionInformation (el: _Element): RedirectionInformation {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 2) {
+        throw new ASN1SizeError("RedirectionInformation violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_RedirectionInformation: $.ASN1Encoder<RedirectionInformation> = $._encodeOctetString;

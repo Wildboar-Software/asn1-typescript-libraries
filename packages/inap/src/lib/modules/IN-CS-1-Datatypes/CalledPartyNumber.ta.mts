@@ -1,7 +1,11 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { minCalledPartyNumberLength } from "./minCalledPartyNumberLength.va.mjs";
+import { maxCalledPartyNumberLength } from "./maxCalledPartyNumberLength.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +25,13 @@ export
 type CalledPartyNumber = OCTET_STRING; // OctetStringType
 
 export
-const _decode_CalledPartyNumber: $.ASN1Decoder<CalledPartyNumber> = $._decodeOctetString;
+function _decode_CalledPartyNumber (el: _Element): CalledPartyNumber {
+    const value = $._decodeOctetString(el);
+    if (value.length < minCalledPartyNumberLength || value.length > maxCalledPartyNumberLength) {
+        throw new ASN1SizeError("CalledPartyNumber violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_CalledPartyNumber: $.ASN1Encoder<CalledPartyNumber> = $._encodeOctetString;

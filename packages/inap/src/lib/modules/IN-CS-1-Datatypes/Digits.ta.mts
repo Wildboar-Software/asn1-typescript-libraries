@@ -1,7 +1,11 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { minDigitsLength } from "./minDigitsLength.va.mjs";
+import { maxDigitsLength } from "./maxDigitsLength.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -20,7 +24,13 @@ export
 type Digits = OCTET_STRING; // OctetStringType
 
 export
-const _decode_Digits: $.ASN1Decoder<Digits> = $._decodeOctetString;
+function _decode_Digits (el: _Element): Digits {
+    const value = $._decodeOctetString(el);
+    if (value.length < minDigitsLength || value.length > maxDigitsLength) {
+        throw new ASN1SizeError("Digits violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_Digits: $.ASN1Encoder<Digits> = $._encodeOctetString;

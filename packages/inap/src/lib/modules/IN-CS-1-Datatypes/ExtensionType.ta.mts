@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type ExtensionType = INTEGER;
 
 export
-const _decode_ExtensionType: $.ASN1Decoder<ExtensionType> = $._decodeInteger;
+function _decode_ExtensionType (el: _Element): ExtensionType {
+    const value = $._decodeInteger(el);
+    if (typeof value === "bigint" ? (value < 0n) : (value < 0)) {
+        throw new ASN1OverflowError("ExtensionType violates INTEGER constraint");
+    }
+    return value;
+}
 
 export
 const _encode_ExtensionType: $.ASN1Encoder<ExtensionType> = $._encodeInteger;

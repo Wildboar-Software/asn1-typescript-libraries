@@ -1,7 +1,10 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
+import { maxCreditUnit } from "./maxCreditUnit.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -20,7 +23,13 @@ export
 type CreditUnit = INTEGER;
 
 export
-const _decode_CreditUnit: $.ASN1Decoder<CreditUnit> = $._decodeInteger;
+function _decode_CreditUnit (el: _Element): CreditUnit {
+    const value = $._decodeInteger(el);
+    if (typeof value === "bigint" ? (value < 0n || value > BigInt(maxCreditUnit)) : (value < 0 || value > maxCreditUnit)) {
+        throw new ASN1OverflowError("CreditUnit violates INTEGER constraint");
+    }
+    return value;
+}
 
 export
 const _encode_CreditUnit: $.ASN1Encoder<CreditUnit> = $._encodeInteger;

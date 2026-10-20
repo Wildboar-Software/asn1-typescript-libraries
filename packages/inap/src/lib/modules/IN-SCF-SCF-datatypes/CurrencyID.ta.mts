@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    PrintableString
+    PrintableString,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type CurrencyID = PrintableString; // PrintableString
 
 export
-const _decode_CurrencyID: $.ASN1Decoder<CurrencyID> = $._decodePrintableString;
+function _decode_CurrencyID (el: _Element): CurrencyID {
+    const value = $._decodePrintableString(el);
+    if (value.length !== 3) {
+        throw new ASN1SizeError("CurrencyID violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_CurrencyID: $.ASN1Encoder<CurrencyID> = $._encodePrintableString;

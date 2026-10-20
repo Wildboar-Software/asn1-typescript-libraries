@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type NumberOfDigits = INTEGER;
 
 export
-const _decode_NumberOfDigits: $.ASN1Decoder<NumberOfDigits> = $._decodeInteger;
+function _decode_NumberOfDigits (el: _Element): NumberOfDigits {
+    const value = $._decodeInteger(el);
+    if (typeof value === "bigint" ? (value < 1n || value > 255n) : (value < 1 || value > 255)) {
+        throw new ASN1OverflowError("NumberOfDigits violates INTEGER constraint");
+    }
+    return value;
+}
 
 export
 const _encode_NumberOfDigits: $.ASN1Encoder<NumberOfDigits> = $._encodeInteger;

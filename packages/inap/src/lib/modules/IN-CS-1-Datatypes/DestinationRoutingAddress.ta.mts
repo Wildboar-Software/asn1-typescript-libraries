@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS-1-Datatypes/CalledPartyNumber.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_DestinationRoutingAddress: $.ASN1Decoder<DestinationRout
 export
 function _decode_DestinationRoutingAddress (el: _Element): DestinationRoutingAddress {
     if (!_cached_decoder_for_DestinationRoutingAddress) { _cached_decoder_for_DestinationRoutingAddress = $._decodeSequenceOf<CalledPartyNumber>(() => _decode_CalledPartyNumber); }
-    return _cached_decoder_for_DestinationRoutingAddress(el);
+    const value = _cached_decoder_for_DestinationRoutingAddress(el);
+    if (value.length < 1 || value.length > 3) {
+        throw new ASN1SizeError("DestinationRoutingAddress violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_DestinationRoutingAddress: $.ASN1Encoder<DestinationRoutingAddress> | null = null;

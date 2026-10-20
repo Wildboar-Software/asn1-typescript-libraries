@@ -1,7 +1,11 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { minRedirectingPartyIDLength } from "./minRedirectingPartyIDLength.va.mjs";
+import { maxRedirectingPartyIDLength } from "./maxRedirectingPartyIDLength.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +25,13 @@ export
 type RedirectingPartyID = OCTET_STRING; // OctetStringType
 
 export
-const _decode_RedirectingPartyID: $.ASN1Decoder<RedirectingPartyID> = $._decodeOctetString;
+function _decode_RedirectingPartyID (el: _Element): RedirectingPartyID {
+    const value = $._decodeOctetString(el);
+    if (value.length < minRedirectingPartyIDLength || value.length > maxRedirectingPartyIDLength) {
+        throw new ASN1SizeError("RedirectingPartyID violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_RedirectingPartyID: $.ASN1Encoder<RedirectingPartyID> = $._encodeOctetString;

@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { numOfCounters } from "./numOfCounters.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 import { CounterAndValue, _decode_CounterAndValue, _encode_CounterAndValue } from "../IN-CS3-SSF-SCF-datatypes/CounterAndValue.ta.mjs";
 // export { CounterAndValue, _decode_CounterAndValue, _encode_CounterAndValue } from "../IN-CS3-SSF-SCF-datatypes/CounterAndValue.ta.mjs";
@@ -31,7 +33,11 @@ let _cached_decoder_for_CountersValue: $.ASN1Decoder<CountersValue> | null = nul
 export
 function _decode_CountersValue (el: _Element): CountersValue {
     if (!_cached_decoder_for_CountersValue) { _cached_decoder_for_CountersValue = $._decodeSequenceOf<CounterAndValue>(() => _decode_CounterAndValue); }
-    return _cached_decoder_for_CountersValue(el);
+    const value = _cached_decoder_for_CountersValue(el);
+    if (value.length < 0 || value.length > numOfCounters) {
+        throw new ASN1SizeError("CountersValue violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_CountersValue: $.ASN1Encoder<CountersValue> | null = null;

@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { numOfInfoItems } from "./numOfInfoItems.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformation, _decode_RequestedInformation, _encode_RequestedInformation } from "../IN-CS-1-Datatypes/RequestedInformation.ta.mjs";
 // export { RequestedInformation, _decode_RequestedInformation, _encode_RequestedInformation } from "../IN-CS-1-Datatypes/RequestedInformation.ta.mjs";
@@ -32,7 +34,11 @@ let _cached_decoder_for_RequestedInformationList: $.ASN1Decoder<RequestedInforma
 export
 function _decode_RequestedInformationList (el: _Element): RequestedInformationList {
     if (!_cached_decoder_for_RequestedInformationList) { _cached_decoder_for_RequestedInformationList = $._decodeSequenceOf<RequestedInformation>(() => _decode_RequestedInformation); }
-    return _cached_decoder_for_RequestedInformationList(el);
+    const value = _cached_decoder_for_RequestedInformationList(el);
+    if (value.length < 1 || value.length > numOfInfoItems) {
+        throw new ASN1SizeError("RequestedInformationList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RequestedInformationList: $.ASN1Encoder<RequestedInformationList> | null = null;

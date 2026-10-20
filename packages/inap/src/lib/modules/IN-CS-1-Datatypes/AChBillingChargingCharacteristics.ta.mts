@@ -1,7 +1,11 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { maxAChBillingChargingLength } from "./maxAChBillingChargingLength.va.mjs";
+import { minAChBillingChargingLength } from "./minAChBillingChargingLength.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +25,13 @@ export
 type AChBillingChargingCharacteristics = OCTET_STRING; // OctetStringType
 
 export
-const _decode_AChBillingChargingCharacteristics: $.ASN1Decoder<AChBillingChargingCharacteristics> = $._decodeOctetString;
+function _decode_AChBillingChargingCharacteristics (el: _Element): AChBillingChargingCharacteristics {
+    const value = $._decodeOctetString(el);
+    if (value.length < minAChBillingChargingLength || value.length > maxAChBillingChargingLength) {
+        throw new ASN1SizeError("AChBillingChargingCharacteristics violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_AChBillingChargingCharacteristics: $.ASN1Encoder<AChBillingChargingCharacteristics> = $._encodeOctetString;

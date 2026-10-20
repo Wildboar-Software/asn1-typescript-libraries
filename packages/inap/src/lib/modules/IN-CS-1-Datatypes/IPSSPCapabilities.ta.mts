@@ -1,7 +1,11 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { maxIPSSPCapabilitiesLength } from "./maxIPSSPCapabilitiesLength.va.mjs";
+import { minIPSSPCapabilitiesLength } from "./minIPSSPCapabilitiesLength.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +25,13 @@ export
 type IPSSPCapabilities = OCTET_STRING; // OctetStringType
 
 export
-const _decode_IPSSPCapabilities: $.ASN1Decoder<IPSSPCapabilities> = $._decodeOctetString;
+function _decode_IPSSPCapabilities (el: _Element): IPSSPCapabilities {
+    const value = $._decodeOctetString(el);
+    if (value.length < minIPSSPCapabilitiesLength || value.length > maxIPSSPCapabilitiesLength) {
+        throw new ASN1SizeError("IPSSPCapabilities violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_IPSSPCapabilities: $.ASN1Encoder<IPSSPCapabilities> = $._encodeOctetString;
