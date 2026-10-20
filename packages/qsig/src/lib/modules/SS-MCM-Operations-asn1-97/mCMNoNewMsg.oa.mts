@@ -1,20 +1,11 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { MCMNoNewMsgArg, _decode_MCMNoNewMsgArg, _encode_MCMNoNewMsgArg } from "../SS-MCM-Operations-asn1-97/MCMNoNewMsgArg.ta.mjs";
-// export { MCMNoNewMsgArg, _decode_MCMNoNewMsgArg, _encode_MCMNoNewMsgArg } from "../SS-MCM-Operations-asn1-97/MCMNoNewMsgArg.ta.mjs";
 import { MCMDummyRes, _decode_MCMDummyRes, _encode_MCMDummyRes } from "../SS-MCM-Operations-asn1-97/MCMDummyRes.ta.mjs";
-// export { MCMDummyRes, _decode_MCMDummyRes, _encode_MCMDummyRes } from "../SS-MCM-Operations-asn1-97/MCMDummyRes.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
-// export { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { basicServiceNotProvided } from "../General-Error-List/basicServiceNotProvided.oa.mjs";
-// export { basicServiceNotProvided } from "../General-Error-List/basicServiceNotProvided.oa.mjs";
 import { unspecified } from "../SS-MCM-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../SS-MCM-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary mCMNoNewMsg

@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
-// export { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
 import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-// export { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
 import { ChargingType, _decode_ChargingType, _encode_ChargingType, _enum_for_ChargingType } from "../SS-AOC-Operations-asn1-97/ChargingType.ta.mjs";
-// export { ChargingType, _enum_for_ChargingType, ChargingType_continuousCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, continuousCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChargingType_stepFunction /* IMPORTED_LONG_ENUMERATION_ITEM */, stepFunction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChargingType, _encode_ChargingType } from "../SS-AOC-Operations-asn1-97/ChargingType.ta.mjs";
 import { Time, _decode_Time, _encode_Time } from "../SS-AOC-Operations-asn1-97/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../SS-AOC-Operations-asn1-97/Time.ta.mjs";
-
 
 /**
  * @summary DurationCurrency
@@ -212,6 +207,5 @@ function _encode_DurationCurrency (value: DurationCurrency, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_DurationCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

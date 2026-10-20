@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ShortMessageTextType, _decode_ShortMessageTextType, _encode_ShortMessageTextType } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextType.ta.mjs";
-// export { ShortMessageTextType, ShortMessageTextType_iA5Coded /* IMPORTED_LONG_NAMED_INTEGER */, iA5Coded /* IMPORTED_SHORT_NAMED_INTEGER */, ShortMessageTextType_octetCoded /* IMPORTED_LONG_NAMED_INTEGER */, octetCoded /* IMPORTED_SHORT_NAMED_INTEGER */, ShortMessageTextType_uniCoded /* IMPORTED_LONG_NAMED_INTEGER */, uniCoded /* IMPORTED_SHORT_NAMED_INTEGER */, ShortMessageTextType_compressedCoded /* IMPORTED_LONG_NAMED_INTEGER */, compressedCoded /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ShortMessageTextType, _encode_ShortMessageTextType } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextType.ta.mjs";
 import { ShortMessageTextData, _decode_ShortMessageTextData, _encode_ShortMessageTextData } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextData.ta.mjs";
-// export { ShortMessageTextData, _decode_ShortMessageTextData, _encode_ShortMessageTextData } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextData.ta.mjs";
-
 
 /**
  * @summary ShortMessageText
@@ -64,7 +61,6 @@ class ShortMessageText {
     public static _from_object (_o: { [_K in keyof (ShortMessageText)]: (ShortMessageText)[_K] }): ShortMessageText {
         return new ShortMessageText(_o.shortMessageTextType, _o.shortMessageTextData);
     }
-
 
 }
 
@@ -157,6 +153,5 @@ function _encode_ShortMessageText (value: ShortMessageText, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_ShortMessageText(value, elGetter);
 }
-
 
 /* eslint-enable */

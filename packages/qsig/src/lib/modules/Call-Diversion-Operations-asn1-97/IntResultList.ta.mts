@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IntResult, _decode_IntResult, _encode_IntResult } from "../Call-Diversion-Operations-asn1-97/IntResult.ta.mjs";
-// export { IntResult, _decode_IntResult, _encode_IntResult } from "../Call-Diversion-Operations-asn1-97/IntResult.ta.mjs";
-
 
 /**
  * @summary IntResultList
@@ -53,6 +51,5 @@ function _encode_IntResultList (value: IntResultList, elGetter: $.ASN1Encoder<an
     if (!_cached_encoder_for_IntResultList) { _cached_encoder_for_IntResultList = $._encodeSetOf<IntResult>(() => _encode_IntResult, $.BER); }
     return _cached_encoder_for_IntResultList(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CintCause, _decode_CintCause, _encode_CintCause } from "../Call-Interception-Operations-asn1-97/CintCause.ta.mjs";
-// export { CintCause, CintCause_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintBnan /* IMPORTED_LONG_NAMED_INTEGER */, cintBnan /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintBus /* IMPORTED_LONG_NAMED_INTEGER */, cintBus /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintCug /* IMPORTED_LONG_NAMED_INTEGER */, cintCug /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintDnd /* IMPORTED_LONG_NAMED_INTEGER */, cintDnd /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintIbd /* IMPORTED_LONG_NAMED_INTEGER */, cintIbd /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintInn /* IMPORTED_LONG_NAMED_INTEGER */, cintInn /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintMob1 /* IMPORTED_LONG_NAMED_INTEGER */, cintMob1 /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintMob2 /* IMPORTED_LONG_NAMED_INTEGER */, cintMob2 /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintMob3 /* IMPORTED_LONG_NAMED_INTEGER */, cintMob3 /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintNcmp /* IMPORTED_LONG_NAMED_INTEGER */, cintNcmp /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintNcong /* IMPORTED_LONG_NAMED_INTEGER */, cintNcong /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintNre /* IMPORTED_LONG_NAMED_INTEGER */, cintNre /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintOos /* IMPORTED_LONG_NAMED_INTEGER */, cintOos /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintRrs /* IMPORTED_LONG_NAMED_INTEGER */, cintRrs /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintTbnan /* IMPORTED_LONG_NAMED_INTEGER */, cintTbnan /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintTnre /* IMPORTED_LONG_NAMED_INTEGER */, cintTnre /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintTrans /* IMPORTED_LONG_NAMED_INTEGER */, cintTrans /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintUpl /* IMPORTED_LONG_NAMED_INTEGER */, cintUpl /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintInvDiv /* IMPORTED_LONG_NAMED_INTEGER */, cintInvDiv /* IMPORTED_SHORT_NAMED_INTEGER */, CintCause_cintHold /* IMPORTED_LONG_NAMED_INTEGER */, cintHold /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CintCause, _encode_CintCause } from "../Call-Interception-Operations-asn1-97/CintCause.ta.mjs";
 import { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
-// export { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { CintExtension, _decode_CintExtension, _encode_CintExtension } from "../Call-Interception-Operations-asn1-97/CintExtension.ta.mjs";
-// export { CintExtension, _decode_CintExtension, _encode_CintExtension } from "../Call-Interception-Operations-asn1-97/CintExtension.ta.mjs";
-
 
 /**
  * @summary CintInformation2Arg
@@ -104,7 +99,6 @@ class CintInformation2Arg {
     public static _from_object (_o: { [_K in keyof (CintInformation2Arg)]: (CintInformation2Arg)[_K] }): CintInformation2Arg {
         return new CintInformation2Arg(_o.interceptionCause, _o.calledNumber, _o.originalCalledNumber, _o.calledName, _o.originalCalledName, _o.extension);
     }
-
 
 }
 
@@ -228,6 +222,5 @@ function _encode_CintInformation2Arg (value: CintInformation2Arg, elGetter: $.AS
 }; }
     return _cached_encoder_for_CintInformation2Arg(value, elGetter);
 }
-
 
 /* eslint-enable */

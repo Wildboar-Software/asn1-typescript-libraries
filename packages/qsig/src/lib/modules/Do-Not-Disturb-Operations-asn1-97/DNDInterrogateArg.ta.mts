@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { DNDInterrogateArg_argumentExtension, _decode_DNDInterrogateArg_argumentExtension, _encode_DNDInterrogateArg_argumentExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateArg-argumentExtension.ta.mjs";
-// export { DNDInterrogateArg_argumentExtension, _decode_DNDInterrogateArg_argumentExtension, _encode_DNDInterrogateArg_argumentExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary DNDInterrogateArg
@@ -67,7 +64,6 @@ class DNDInterrogateArg {
     public static _from_object (_o: { [_K in keyof (DNDInterrogateArg)]: (DNDInterrogateArg)[_K] }): DNDInterrogateArg {
         return new DNDInterrogateArg(_o.servedUserNr, _o.argumentExtension);
     }
-
 
 }
 
@@ -163,6 +159,5 @@ function _encode_DNDInterrogateArg (value: DNDInterrogateArg, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_DNDInterrogateArg(value, elGetter);
 }
-
 
 /* eslint-enable */

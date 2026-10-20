@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
-// export { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
-
 
 /**
  * @summary NotificationSet

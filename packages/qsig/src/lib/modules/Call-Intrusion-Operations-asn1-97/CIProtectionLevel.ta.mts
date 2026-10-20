@@ -1,8 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary CIProtectionLevel
  * @description

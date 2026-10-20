@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MailboxFullPar, _decode_MailboxFullPar, _encode_MailboxFullPar } from "../SS-MCM-Operations-asn1-97/MailboxFullPar.ta.mjs";
-// export { MailboxFullPar, _decode_MailboxFullPar, _encode_MailboxFullPar } from "../SS-MCM-Operations-asn1-97/MailboxFullPar.ta.mjs";
-
 
 /**
  * @summary MailboxFullFor
@@ -48,6 +46,5 @@ function _encode_MailboxFullFor (value: MailboxFullFor, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_MailboxFullFor) { _cached_encoder_for_MailboxFullFor = $._encodeSequenceOf<MailboxFullPar>(() => _encode_MailboxFullPar, $.BER); }
     return _cached_encoder_for_MailboxFullFor(value, elGetter);
 }
-
 
 /* eslint-enable */

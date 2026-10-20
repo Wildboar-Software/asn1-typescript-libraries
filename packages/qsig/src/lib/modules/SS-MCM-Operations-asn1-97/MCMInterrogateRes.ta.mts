@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCMServiceInfo, _decode_MCMServiceInfo, _encode_MCMServiceInfo } from "../SS-MCM-Operations-asn1-97/MCMServiceInfo.ta.mjs";
-// export { MCMServiceInfo, _decode_MCMServiceInfo, _encode_MCMServiceInfo } from "../SS-MCM-Operations-asn1-97/MCMServiceInfo.ta.mjs";
 import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
-// export { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
-
 
 /**
  * @summary MCMInterrogateRes
@@ -73,7 +70,6 @@ class MCMInterrogateRes {
     public static _from_object (_o: { [_K in keyof (MCMInterrogateRes)]: (MCMInterrogateRes)[_K] }): MCMInterrogateRes {
         return new MCMInterrogateRes(_o.interrogateResult, _o.extensions, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -179,6 +175,5 @@ function _encode_MCMInterrogateRes (value: MCMInterrogateRes, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_MCMInterrogateRes(value, elGetter);
 }
-
 
 /* eslint-enable */

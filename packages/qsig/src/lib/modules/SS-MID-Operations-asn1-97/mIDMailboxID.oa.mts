@@ -1,20 +1,11 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { MIDMailboxIDArg, _decode_MIDMailboxIDArg, _encode_MIDMailboxIDArg } from "../SS-MID-Operations-asn1-97/MIDMailboxIDArg.ta.mjs";
-// export { MIDMailboxIDArg, _decode_MIDMailboxIDArg, _encode_MIDMailboxIDArg } from "../SS-MID-Operations-asn1-97/MIDMailboxIDArg.ta.mjs";
 import { MIDDummyRes, _decode_MIDDummyRes, _encode_MIDDummyRes } from "../SS-MID-Operations-asn1-97/MIDDummyRes.ta.mjs";
-// export { MIDDummyRes, _decode_MIDDummyRes, _encode_MIDDummyRes } from "../SS-MID-Operations-asn1-97/MIDDummyRes.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
-// export { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { invalidMailbox } from "../SS-MID-Operations-asn1-97/invalidMailbox.oa.mjs";
-// export { invalidMailbox } from "../SS-MID-Operations-asn1-97/invalidMailbox.oa.mjs";
 import { unspecified } from "../SS-MID-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../SS-MID-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary mIDMailboxID

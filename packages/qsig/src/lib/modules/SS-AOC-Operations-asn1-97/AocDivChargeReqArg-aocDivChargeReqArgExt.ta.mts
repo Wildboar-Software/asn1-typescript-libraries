@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary AocDivChargeReqArg_aocDivChargeReqArgExt
@@ -60,6 +58,5 @@ function _encode_AocDivChargeReqArg_aocDivChargeReqArgExt (value: AocDivChargeRe
 }, $.BER); }
     return _cached_encoder_for_AocDivChargeReqArg_aocDivChargeReqArgExt(value, elGetter);
 }
-
 
 /* eslint-enable */

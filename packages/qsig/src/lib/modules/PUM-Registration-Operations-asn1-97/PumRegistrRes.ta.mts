@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ServiceOption, _decode_ServiceOption, _encode_ServiceOption, _enum_for_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
-// export { ServiceOption, _enum_for_ServiceOption, ServiceOption_inCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, inCallRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceOption_outCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, outCallRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceOption_allCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, allCallRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ServiceOption, _encode_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
 import { SessionParams, _decode_SessionParams, _encode_SessionParams } from "../PUM-Registration-Operations-asn1-97/SessionParams.ta.mjs";
-// export { SessionParams, _decode_SessionParams, _encode_SessionParams } from "../PUM-Registration-Operations-asn1-97/SessionParams.ta.mjs";
 import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
-// export { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
-
 
 /**
  * @summary PumRegistrRes
@@ -204,6 +199,5 @@ function _encode_PumRegistrRes (value: PumRegistrRes, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_PumRegistrRes(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AocRateArg_aocRate, _decode_AocRateArg_aocRate, _encode_AocRateArg_aocRate } from "../SS-AOC-Operations-asn1-97/AocRateArg-aocRate.ta.mjs";
-// export { AocRateArg_aocRate, _decode_AocRateArg_aocRate, _encode_AocRateArg_aocRate } from "../SS-AOC-Operations-asn1-97/AocRateArg-aocRate.ta.mjs";
 import { AocRateArg_rateArgExtension, _decode_AocRateArg_rateArgExtension, _encode_AocRateArg_rateArgExtension } from "../SS-AOC-Operations-asn1-97/AocRateArg-rateArgExtension.ta.mjs";
-// export { AocRateArg_rateArgExtension, _decode_AocRateArg_rateArgExtension, _encode_AocRateArg_rateArgExtension } from "../SS-AOC-Operations-asn1-97/AocRateArg-rateArgExtension.ta.mjs";
-
 
 /**
  * @summary AocRateArg
@@ -70,7 +67,6 @@ class AocRateArg {
     public static _from_object (_o: { [_K in keyof (AocRateArg)]: (AocRateArg)[_K] }): AocRateArg {
         return new AocRateArg(_o.aocRate, _o.rateArgExtension);
     }
-
 
 }
 
@@ -166,6 +162,5 @@ function _encode_AocRateArg (value: AocRateArg, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_AocRateArg(value, elGetter);
 }
-
 
 /* eslint-enable */

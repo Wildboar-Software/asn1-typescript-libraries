@@ -1,15 +1,9 @@
 /* eslint-disable */
 import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { callingName } from "../Name-Operations-asn1-97/callingName.oa.mjs";
-// export { callingName } from "../Name-Operations-asn1-97/callingName.oa.mjs";
 import { calledName } from "../Name-Operations-asn1-97/calledName.oa.mjs";
-// export { calledName } from "../Name-Operations-asn1-97/calledName.oa.mjs";
 import { connectedName } from "../Name-Operations-asn1-97/connectedName.oa.mjs";
-// export { connectedName } from "../Name-Operations-asn1-97/connectedName.oa.mjs";
 import { busyName } from "../Name-Operations-asn1-97/busyName.oa.mjs";
-// export { busyName } from "../Name-Operations-asn1-97/busyName.oa.mjs";
-
 
 /**
  * @summary Name_Operations

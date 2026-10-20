@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumiExtension.ta.mjs";
-// export { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumiExtension.ta.mjs";
-
 
 /**
  * @summary EnquiryArg
@@ -79,7 +75,6 @@ class EnquiryArg {
     public static _from_object (_o: { [_K in keyof (EnquiryArg)]: (EnquiryArg)[_K] }): EnquiryArg {
         return new EnquiryArg(_o.pisnNumber, _o.qSIGInfoElement, _o.argExtension);
     }
-
 
 }
 
@@ -180,6 +175,5 @@ function _encode_EnquiryArg (value: EnquiryArg, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_EnquiryArg(value, elGetter);
 }
-
 
 /* eslint-enable */

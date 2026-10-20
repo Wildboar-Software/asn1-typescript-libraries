@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ScreeningIndicator, _decode_ScreeningIndicator, _encode_ScreeningIndicator, _enum_for_ScreeningIndicator } from "../Addressing-Data-Elements-asn1-97/ScreeningIndicator.ta.mjs";
-// export { ScreeningIndicator, _enum_for_ScreeningIndicator, ScreeningIndicator_userProvidedNotScreened /* IMPORTED_LONG_ENUMERATION_ITEM */, userProvidedNotScreened /* IMPORTED_SHORT_ENUMERATION_ITEM */, ScreeningIndicator_userProvidedVerifiedAndPassed /* IMPORTED_LONG_ENUMERATION_ITEM */, userProvidedVerifiedAndPassed /* IMPORTED_SHORT_ENUMERATION_ITEM */, ScreeningIndicator_userProvidedVerifiedAndFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, userProvidedVerifiedAndFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, ScreeningIndicator_networkProvided /* IMPORTED_LONG_ENUMERATION_ITEM */, networkProvided /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ScreeningIndicator, _encode_ScreeningIndicator } from "../Addressing-Data-Elements-asn1-97/ScreeningIndicator.ta.mjs";
 import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-// export { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-
 
 /**
  * @summary AddressScreened
@@ -182,6 +178,5 @@ function _encode_AddressScreened (value: AddressScreened, elGetter: $.ASN1Encode
 }; }
     return _cached_encoder_for_AddressScreened(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../SS-MCM-Operations-asn1-97/MessageInfo.ta.mjs";
-// export { MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../SS-MCM-Operations-asn1-97/MessageInfo.ta.mjs";
-
 
 /**
  * @summary AllMsgInfo
@@ -61,7 +59,6 @@ class AllMsgInfo {
     public static _from_object (_o: { [_K in keyof (AllMsgInfo)]: (AllMsgInfo)[_K] }): AllMsgInfo {
         return new AllMsgInfo(_o.newMsgInfo, _o.retrievedMsgInfo);
     }
-
 
 }
 
@@ -154,6 +151,5 @@ function _encode_AllMsgInfo (value: AllMsgInfo, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_AllMsgInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

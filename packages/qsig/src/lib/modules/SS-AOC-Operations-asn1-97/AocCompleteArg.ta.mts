@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ChargingAssociation, _decode_ChargingAssociation, _encode_ChargingAssociation } from "../SS-AOC-Operations-asn1-97/ChargingAssociation.ta.mjs";
-// export { ChargingAssociation, _decode_ChargingAssociation, _encode_ChargingAssociation } from "../SS-AOC-Operations-asn1-97/ChargingAssociation.ta.mjs";
 import { AocCompleteArg_completeArgExtension, _decode_AocCompleteArg_completeArgExtension, _encode_AocCompleteArg_completeArgExtension } from "../SS-AOC-Operations-asn1-97/AocCompleteArg-completeArgExtension.ta.mjs";
-// export { AocCompleteArg_completeArgExtension, _decode_AocCompleteArg_completeArgExtension, _encode_AocCompleteArg_completeArgExtension } from "../SS-AOC-Operations-asn1-97/AocCompleteArg-completeArgExtension.ta.mjs";
-
 
 /**
  * @summary AocCompleteArg
@@ -78,7 +74,6 @@ class AocCompleteArg {
     public static _from_object (_o: { [_K in keyof (AocCompleteArg)]: (AocCompleteArg)[_K] }): AocCompleteArg {
         return new AocCompleteArg(_o.chargedUser, _o.chargingAssociation, _o.completeArgExtension);
     }
-
 
 }
 
@@ -181,6 +176,5 @@ function _encode_AocCompleteArg (value: AocCompleteArg, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_AocCompleteArg(value, elGetter);
 }
-
 
 /* eslint-enable */

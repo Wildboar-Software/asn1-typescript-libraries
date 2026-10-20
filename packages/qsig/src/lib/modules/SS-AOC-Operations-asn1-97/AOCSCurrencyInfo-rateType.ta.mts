@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DurationCurrency, _decode_DurationCurrency, _encode_DurationCurrency } from "../SS-AOC-Operations-asn1-97/DurationCurrency.ta.mjs";
-// export { DurationCurrency, _decode_DurationCurrency, _encode_DurationCurrency } from "../SS-AOC-Operations-asn1-97/DurationCurrency.ta.mjs";
 import { FlatRateCurrency, _decode_FlatRateCurrency, _encode_FlatRateCurrency } from "../SS-AOC-Operations-asn1-97/FlatRateCurrency.ta.mjs";
-// export { FlatRateCurrency, _decode_FlatRateCurrency, _encode_FlatRateCurrency } from "../SS-AOC-Operations-asn1-97/FlatRateCurrency.ta.mjs";
 import { VolumeRateCurrency, _decode_VolumeRateCurrency, _encode_VolumeRateCurrency } from "../SS-AOC-Operations-asn1-97/VolumeRateCurrency.ta.mjs";
-// export { VolumeRateCurrency, _decode_VolumeRateCurrency, _encode_VolumeRateCurrency } from "../SS-AOC-Operations-asn1-97/VolumeRateCurrency.ta.mjs";
 import { SpecialChargingCode, _decode_SpecialChargingCode, _encode_SpecialChargingCode } from "../SS-AOC-Operations-asn1-97/SpecialChargingCode.ta.mjs";
-// export { SpecialChargingCode, _decode_SpecialChargingCode, _encode_SpecialChargingCode } from "../SS-AOC-Operations-asn1-97/SpecialChargingCode.ta.mjs";
-
 
 /**
  * @summary AOCSCurrencyInfo_rateType
@@ -87,6 +82,5 @@ function _encode_AOCSCurrencyInfo_rateType (value: AOCSCurrencyInfo_rateType, el
 }, $.BER); }
     return _cached_encoder_for_AOCSCurrencyInfo_rateType(value, elGetter);
 }
-
 
 /* eslint-enable */

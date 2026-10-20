@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Code } from "../Notification-class-asn1-97/Code.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Notification-class-asn1-97/Code.ta.mjs";
-
 
 /**
  * @summary NOTIFICATION

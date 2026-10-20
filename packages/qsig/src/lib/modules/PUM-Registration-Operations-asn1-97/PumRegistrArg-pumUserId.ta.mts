@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../PUM-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../PUM-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
-
 
 /**
  * @summary PumRegistrArg_pumUserId
@@ -68,6 +65,5 @@ function _encode_PumRegistrArg_pumUserId (value: PumRegistrArg_pumUserId, elGett
 }, $.BER); }
     return _cached_encoder_for_PumRegistrArg_pumUserId(value, elGetter);
 }
-
 
 /* eslint-enable */

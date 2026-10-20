@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WtmIdentity, _decode_WtmIdentity, _encode_WtmIdentity } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmIdentity.ta.mjs";
-// export { WtmIdentity, _decode_WtmIdentity, _encode_WtmIdentity } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmIdentity.ta.mjs";
 import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-// export { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-
 
 /**
  * @summary InformArg
@@ -66,7 +63,6 @@ class InformArg {
     public static _from_object (_o: { [_K in keyof (InformArg)]: (InformArg)[_K] }): InformArg {
         return new InformArg(_o.wtmIdentity, _o.argExtension);
     }
-
 
 }
 
@@ -162,6 +158,5 @@ function _encode_InformArg (value: InformArg, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_InformArg(value, elGetter);
 }
-
 
 /* eslint-enable */

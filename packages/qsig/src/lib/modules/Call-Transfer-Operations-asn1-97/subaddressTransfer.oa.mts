@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { SubaddressTransferArg, _decode_SubaddressTransferArg, _encode_SubaddressTransferArg } from "../Call-Transfer-Operations-asn1-97/SubaddressTransferArg.ta.mjs";
-// export { SubaddressTransferArg, _decode_SubaddressTransferArg, _encode_SubaddressTransferArg } from "../Call-Transfer-Operations-asn1-97/SubaddressTransferArg.ta.mjs";
-
 
 /**
  * @summary subaddressTransfer

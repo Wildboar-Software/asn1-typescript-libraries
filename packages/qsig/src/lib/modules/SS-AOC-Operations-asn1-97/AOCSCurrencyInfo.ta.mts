@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargedItem, _decode_ChargedItem, _encode_ChargedItem, _enum_for_ChargedItem } from "../SS-AOC-Operations-asn1-97/ChargedItem.ta.mjs";
-// export { ChargedItem, _enum_for_ChargedItem, ChargedItem_basicCommunication /* IMPORTED_LONG_ENUMERATION_ITEM */, basicCommunication /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChargedItem_callAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChargedItem_callSetup /* IMPORTED_LONG_ENUMERATION_ITEM */, callSetup /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChargedItem_userToUserInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, userToUserInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChargedItem_operationOfSupplementaryServ /* IMPORTED_LONG_ENUMERATION_ITEM */, operationOfSupplementaryServ /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChargedItem, _encode_ChargedItem } from "../SS-AOC-Operations-asn1-97/ChargedItem.ta.mjs";
 import { AOCSCurrencyInfo_rateType, _decode_AOCSCurrencyInfo_rateType, _encode_AOCSCurrencyInfo_rateType } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfo-rateType.ta.mjs";
-// export { AOCSCurrencyInfo_rateType, _decode_AOCSCurrencyInfo_rateType, _encode_AOCSCurrencyInfo_rateType } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfo-rateType.ta.mjs";
-
 
 /**
  * @summary AOCSCurrencyInfo
@@ -171,6 +168,5 @@ function _encode_AOCSCurrencyInfo (value: AOCSCurrencyInfo, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_AOCSCurrencyInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

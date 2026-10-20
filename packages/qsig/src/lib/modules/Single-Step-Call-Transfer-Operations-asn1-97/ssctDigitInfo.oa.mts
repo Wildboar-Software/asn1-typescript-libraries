@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { SSCTDigitInfoArg, _decode_SSCTDigitInfoArg, _encode_SSCTDigitInfoArg } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTDigitInfoArg.ta.mjs";
-// export { SSCTDigitInfoArg, _decode_SSCTDigitInfoArg, _encode_SSCTDigitInfoArg } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTDigitInfoArg.ta.mjs";
-
 
 /**
  * @summary ssctDigitInfo

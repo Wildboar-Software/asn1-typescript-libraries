@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceList, _decode_ServiceList, _encode_ServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceList.ta.mjs";
-// export { ServiceList, ServiceList_dndo_low /* IMPORTED_LONG_NAMED_BIT */, dndo_low /* IMPORTED_SHORT_NAMED_BIT */, ServiceList_dndo_medium /* IMPORTED_LONG_NAMED_BIT */, dndo_medium /* IMPORTED_SHORT_NAMED_BIT */, ServiceList_dndo_high /* IMPORTED_LONG_NAMED_BIT */, dndo_high /* IMPORTED_SHORT_NAMED_BIT */, _decode_ServiceList, _encode_ServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceList.ta.mjs";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary ServiceAvailableArg_extendedServiceList
@@ -64,7 +61,6 @@ class ServiceAvailableArg_extendedServiceList {
     public static _from_object (_o: { [_K in keyof (ServiceAvailableArg_extendedServiceList)]: (ServiceAvailableArg_extendedServiceList)[_K] }): ServiceAvailableArg_extendedServiceList {
         return new ServiceAvailableArg_extendedServiceList(_o.serviceList, _o.extension);
     }
-
 
 }
 
@@ -157,6 +153,5 @@ function _encode_ServiceAvailableArg_extendedServiceList (value: ServiceAvailabl
 }; }
     return _cached_encoder_for_ServiceAvailableArg_extendedServiceList(value, elGetter);
 }
-
 
 /* eslint-enable */

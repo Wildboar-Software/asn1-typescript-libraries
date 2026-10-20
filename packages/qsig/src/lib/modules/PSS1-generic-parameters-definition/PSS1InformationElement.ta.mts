@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary PSS1InformationElement
  * @description
@@ -49,6 +47,5 @@ function _encode_PSS1InformationElement (value: PSS1InformationElement, elGetter
     if (!_cached_encoder_for_PSS1InformationElement) { _cached_encoder_for_PSS1InformationElement = $._encode_implicit(_TagClass.application, 0, () => $._encodeOctetString, $.BER); }
     return _cached_encoder_for_PSS1InformationElement(value, elGetter);
 }
-
 
 /* eslint-enable */

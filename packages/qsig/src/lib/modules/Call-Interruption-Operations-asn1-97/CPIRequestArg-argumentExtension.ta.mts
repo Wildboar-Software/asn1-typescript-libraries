@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary CPIRequestArg_argumentExtension
@@ -60,6 +58,5 @@ function _encode_CPIRequestArg_argumentExtension (value: CPIRequestArg_argumentE
 }, $.BER); }
     return _cached_encoder_for_CPIRequestArg_argumentExtension(value, elGetter);
 }
-
 
 /* eslint-enable */

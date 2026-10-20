@@ -6,16 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WtmUserId, _decode_WtmUserId, _encode_WtmUserId } from "../WTM-Authentication-Operations-asn1-97/WtmUserId.ta.mjs";
-// export { WtmUserId, _decode_WtmUserId, _encode_WtmUserId } from "../WTM-Authentication-Operations-asn1-97/WtmUserId.ta.mjs";
 import { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../WTM-Authentication-Operations-asn1-97/AuthChallenge.ta.mjs";
-// export { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../WTM-Authentication-Operations-asn1-97/AuthChallenge.ta.mjs";
 import { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../WTM-Authentication-Operations-asn1-97/AuthAlgorithm.ta.mjs";
-// export { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../WTM-Authentication-Operations-asn1-97/AuthAlgorithm.ta.mjs";
 import { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../WTM-Authentication-Operations-asn1-97/CanCompute.ta.mjs";
-// export { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../WTM-Authentication-Operations-asn1-97/CanCompute.ta.mjs";
 import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-// export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-
 
 /**
  * @summary WtanParamArg
@@ -97,7 +91,6 @@ class WtanParamArg {
     public static _from_object (_o: { [_K in keyof (WtanParamArg)]: (WtanParamArg)[_K] }): WtanParamArg {
         return new WtanParamArg(_o.wtmUserId, _o.authChallenge, _o.authAlgorithm, _o.canCompute, _o.dummyExtension);
     }
-
 
 }
 
@@ -210,6 +203,5 @@ function _encode_WtanParamArg (value: WtanParamArg, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_WtanParamArg(value, elGetter);
 }
-
 
 /* eslint-enable */

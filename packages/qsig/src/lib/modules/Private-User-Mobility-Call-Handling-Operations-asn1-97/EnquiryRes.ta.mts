@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CurrLocation, _decode_CurrLocation, _encode_CurrLocation } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/CurrLocation.ta.mjs";
-// export { CurrLocation, _decode_CurrLocation, _encode_CurrLocation } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/CurrLocation.ta.mjs";
 import { CfuActivated, _decode_CfuActivated, _encode_CfuActivated } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/CfuActivated.ta.mjs";
-// export { CfuActivated, _decode_CfuActivated, _encode_CfuActivated } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/CfuActivated.ta.mjs";
-
 
 /**
  * @summary EnquiryRes
@@ -62,6 +59,5 @@ function _encode_EnquiryRes (value: EnquiryRes, elGetter: $.ASN1Encoder<any>): _
 }, $.BER); }
     return _cached_encoder_for_EnquiryRes(value, elGetter);
 }
-
 
 /* eslint-enable */

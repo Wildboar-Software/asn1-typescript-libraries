@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargingOption, _decode_ChargingOption, _encode_ChargingOption, _enum_for_ChargingOption } from "../SS-AOC-Operations-asn1-97/ChargingOption.ta.mjs";
-// export { ChargingOption, _enum_for_ChargingOption, ChargingOption_aocFreeOfCharge /* IMPORTED_LONG_ENUMERATION_ITEM */, aocFreeOfCharge /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChargingOption_aocContinueCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, aocContinueCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChargingOption_aocStopCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, aocStopCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChargingOption, _encode_ChargingOption } from "../SS-AOC-Operations-asn1-97/ChargingOption.ta.mjs";
 import { AocCompleteRes_completeResExtension, _decode_AocCompleteRes_completeResExtension, _encode_AocCompleteRes_completeResExtension } from "../SS-AOC-Operations-asn1-97/AocCompleteRes-completeResExtension.ta.mjs";
-// export { AocCompleteRes_completeResExtension, _decode_AocCompleteRes_completeResExtension, _encode_AocCompleteRes_completeResExtension } from "../SS-AOC-Operations-asn1-97/AocCompleteRes-completeResExtension.ta.mjs";
-
 
 /**
  * @summary AocCompleteRes
@@ -169,6 +166,5 @@ function _encode_AocCompleteRes (value: AocCompleteRes, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_AocCompleteRes(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AocInterimArg_interimCharge_specificCurrency, _decode_AocInterimArg_interimCharge_specificCurrency, _encode_AocInterimArg_interimCharge_specificCurrency } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimCharge-specificCurrency.ta.mjs";
-// export { AocInterimArg_interimCharge_specificCurrency, _decode_AocInterimArg_interimCharge_specificCurrency, _encode_AocInterimArg_interimCharge_specificCurrency } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimCharge-specificCurrency.ta.mjs";
-
 
 /**
  * @summary AocInterimArg_interimCharge
@@ -68,6 +66,5 @@ function _encode_AocInterimArg_interimCharge (value: AocInterimArg_interimCharge
 }, $.BER); }
     return _cached_encoder_for_AocInterimArg_interimCharge(value, elGetter);
 }
-
 
 /* eslint-enable */

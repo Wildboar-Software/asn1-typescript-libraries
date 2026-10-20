@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary String
  * @description
@@ -60,6 +58,5 @@ function _encode_String (value: String, elGetter: $.ASN1Encoder<any>): _Element 
 }, $.BER); }
     return _cached_encoder_for_String(value, elGetter);
 }
-
 
 /* eslint-enable */

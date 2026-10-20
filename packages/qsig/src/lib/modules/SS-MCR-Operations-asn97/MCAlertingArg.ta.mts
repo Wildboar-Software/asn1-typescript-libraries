@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Correlation, _decode_Correlation, _encode_Correlation } from "../SS-MCR-Operations-asn97/Correlation.ta.mjs";
-// export { Correlation, _decode_Correlation, _encode_Correlation } from "../SS-MCR-Operations-asn97/Correlation.ta.mjs";
 import { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../SS-MCR-Operations-asn97/MCRExtensions.ta.mjs";
-// export { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../SS-MCR-Operations-asn97/MCRExtensions.ta.mjs";
-
 
 /**
  * @summary MCAlertingArg
@@ -73,7 +70,6 @@ class MCAlertingArg {
     public static _from_object (_o: { [_K in keyof (MCAlertingArg)]: (MCAlertingArg)[_K] }): MCAlertingArg {
         return new MCAlertingArg(_o.correlation, _o.extensions, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -179,6 +175,5 @@ function _encode_MCAlertingArg (value: MCAlertingArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_MCAlertingArg(value, elGetter);
 }
-
 
 /* eslint-enable */

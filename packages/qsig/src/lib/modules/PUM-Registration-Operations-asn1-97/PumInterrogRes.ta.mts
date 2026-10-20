@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PumInterrogRes_Item, _decode_PumInterrogRes_Item, _encode_PumInterrogRes_Item } from "../PUM-Registration-Operations-asn1-97/PumInterrogRes-Item.ta.mjs";
-// export { PumInterrogRes_Item, _decode_PumInterrogRes_Item, _encode_PumInterrogRes_Item } from "../PUM-Registration-Operations-asn1-97/PumInterrogRes-Item.ta.mjs";
-
 
 /**
  * @summary PumInterrogRes
@@ -70,6 +68,5 @@ function _encode_PumInterrogRes (value: PumInterrogRes, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_PumInterrogRes) { _cached_encoder_for_PumInterrogRes = $._encodeSetOf<PumInterrogRes_Item>(() => _encode_PumInterrogRes_Item, $.BER); }
     return _cached_encoder_for_PumInterrogRes(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,26 +1,14 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { DNDActivateArg, _decode_DNDActivateArg, _encode_DNDActivateArg } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateArg.ta.mjs";
-// export { DNDActivateArg, _decode_DNDActivateArg, _encode_DNDActivateArg } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateArg.ta.mjs";
 import { DNDActivateRes, _decode_DNDActivateRes, _encode_DNDActivateRes } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes.ta.mjs";
-// export { DNDActivateRes, _decode_DNDActivateRes, _encode_DNDActivateRes } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
-// export { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { basicServiceNotProvided } from "../General-Error-List/basicServiceNotProvided.oa.mjs";
-// export { basicServiceNotProvided } from "../General-Error-List/basicServiceNotProvided.oa.mjs";
 import { temporarilyUnavailable } from "../Do-Not-Disturb-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
-// export { temporarilyUnavailable } from "../Do-Not-Disturb-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
 import { unspecified } from "../Do-Not-Disturb-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Do-Not-Disturb-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary doNotDisturbActivateQ

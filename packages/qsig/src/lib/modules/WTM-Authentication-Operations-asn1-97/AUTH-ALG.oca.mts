@@ -1,8 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { DefinedIDs } from "../WTM-Authentication-Operations-asn1-97/DefinedIDs.ta.mjs";
-// export { DefinedIDs, DefinedIDs_ct2 /* IMPORTED_LONG_NAMED_INTEGER */, ct2 /* IMPORTED_SHORT_NAMED_INTEGER */, DefinedIDs_dect /* IMPORTED_LONG_NAMED_INTEGER */, dect /* IMPORTED_SHORT_NAMED_INTEGER */, DefinedIDs_gsm /* IMPORTED_LONG_NAMED_INTEGER */, gsm /* IMPORTED_SHORT_NAMED_INTEGER */, DefinedIDs_pci /* IMPORTED_LONG_NAMED_INTEGER */, pci /* IMPORTED_SHORT_NAMED_INTEGER */, DefinedIDs_pwt /* IMPORTED_LONG_NAMED_INTEGER */, pwt /* IMPORTED_SHORT_NAMED_INTEGER */, DefinedIDs_us_gsm /* IMPORTED_LONG_NAMED_INTEGER */, us_gsm /* IMPORTED_SHORT_NAMED_INTEGER */, DefinedIDs_phs /* IMPORTED_LONG_NAMED_INTEGER */, phs /* IMPORTED_SHORT_NAMED_INTEGER */, DefinedIDs_tetra /* IMPORTED_LONG_NAMED_INTEGER */, tetra /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DefinedIDs, _encode_DefinedIDs } from "../WTM-Authentication-Operations-asn1-97/DefinedIDs.ta.mjs";
-
 
 /**
  * @summary AUTH_ALG

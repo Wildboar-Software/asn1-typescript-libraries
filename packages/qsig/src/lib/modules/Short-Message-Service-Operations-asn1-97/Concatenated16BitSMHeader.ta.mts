@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary Concatenated16BitSMHeader
  * @description
@@ -82,7 +80,6 @@ class Concatenated16BitSMHeader {
     public static _from_object (_o: { [_K in keyof (Concatenated16BitSMHeader)]: (Concatenated16BitSMHeader)[_K] }): Concatenated16BitSMHeader {
         return new Concatenated16BitSMHeader(_o.concatenated16BitSMReferenceNumber, _o.maximumNumberOf16BitSMInConcatenatedSM, _o.sequenceNumberOf16BitSM);
     }
-
 
 }
 
@@ -181,6 +178,5 @@ function _encode_Concatenated16BitSMHeader (value: Concatenated16BitSMHeader, el
 }; }
     return _cached_encoder_for_Concatenated16BitSMHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

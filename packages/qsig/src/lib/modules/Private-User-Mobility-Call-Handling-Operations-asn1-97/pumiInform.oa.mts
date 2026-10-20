@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { InformArg, _decode_InformArg, _encode_InformArg } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/InformArg.ta.mjs";
-// export { InformArg, _decode_InformArg, _encode_InformArg } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/InformArg.ta.mjs";
-
 
 /**
  * @summary pumiInform

@@ -1,24 +1,13 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_deactivateDiversionQ_ArgumentType, _encode_deactivateDiversionQ_ArgumentType, deactivateDiversionQ_ArgumentType } from "../Call-Diversion-Operations-asn1-97/deactivateDiversionQ-ArgumentType.ta.mjs";
-// export { deactivateDiversionQ_ArgumentType, _decode_deactivateDiversionQ_ArgumentType, _encode_deactivateDiversionQ_ArgumentType } from "../Call-Diversion-Operations-asn1-97/deactivateDiversionQ-ArgumentType.ta.mjs";
 import { _decode_deactivateDiversionQ_ResultType, _encode_deactivateDiversionQ_ResultType, deactivateDiversionQ_ResultType } from "../Call-Diversion-Operations-asn1-97/deactivateDiversionQ-ResultType.ta.mjs";
-// export { deactivateDiversionQ_ResultType, _decode_deactivateDiversionQ_ResultType, _encode_deactivateDiversionQ_ResultType } from "../Call-Diversion-Operations-asn1-97/deactivateDiversionQ-ResultType.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
-// export { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { temporarilyUnavailable } from "../Call-Diversion-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
-// export { temporarilyUnavailable } from "../Call-Diversion-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
 import { notAuthorized } from "../Call-Diversion-Operations-asn1-97/notAuthorized.oa.mjs";
-// export { notAuthorized } from "../Call-Diversion-Operations-asn1-97/notAuthorized.oa.mjs";
 import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary deactivateDiversionQ

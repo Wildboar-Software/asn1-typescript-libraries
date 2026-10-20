@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Code, _decode_Code, _encode_Code } from "../Notification-class-asn1-97/Code.ta.mjs";
-// export { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
-
 
 /**
  * @summary NotificationDataStructure
@@ -61,7 +59,6 @@ class NotificationDataStructure {
     public static _from_object (_o: { [_K in keyof (NotificationDataStructure)]: (NotificationDataStructure)[_K] }): NotificationDataStructure {
         return new NotificationDataStructure(_o.notificationValue, _o.notificationArgument);
     }
-
 
 }
 
@@ -157,6 +154,5 @@ function _encode_NotificationDataStructure (value: NotificationDataStructure, el
 }; }
     return _cached_encoder_for_NotificationDataStructure(value, elGetter);
 }
-
 
 /* eslint-enable */

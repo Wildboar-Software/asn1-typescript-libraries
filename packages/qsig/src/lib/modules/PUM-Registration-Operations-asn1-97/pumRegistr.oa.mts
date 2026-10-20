@@ -1,30 +1,16 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { PumRegistrArg, _decode_PumRegistrArg, _encode_PumRegistrArg } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg.ta.mjs";
-// export { PumRegistrArg, _decode_PumRegistrArg, _encode_PumRegistrArg } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg.ta.mjs";
 import { PumRegistrRes, _decode_PumRegistrRes, _encode_PumRegistrRes } from "../PUM-Registration-Operations-asn1-97/PumRegistrRes.ta.mjs";
-// export { PumRegistrRes, _decode_PumRegistrRes, _encode_PumRegistrRes } from "../PUM-Registration-Operations-asn1-97/PumRegistrRes.ta.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { notAuthorized } from "../PUM-Registration-Operations-asn1-97/notAuthorized.oa.mjs";
-// export { notAuthorized } from "../PUM-Registration-Operations-asn1-97/notAuthorized.oa.mjs";
 import { unspecified } from "../PUM-Registration-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../PUM-Registration-Operations-asn1-97/unspecified.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { temporarilyUnavailable } from "../PUM-Registration-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
-// export { temporarilyUnavailable } from "../PUM-Registration-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
 import { pumUserNotSubscribedToThisServiceOpt } from "../PUM-Registration-Operations-asn1-97/pumUserNotSubscribedToThisServiceOpt.oa.mjs";
-// export { pumUserNotSubscribedToThisServiceOpt } from "../PUM-Registration-Operations-asn1-97/pumUserNotSubscribedToThisServiceOpt.oa.mjs";
 import { pumUserFailedAuthentication } from "../PUM-Registration-Operations-asn1-97/pumUserFailedAuthentication.oa.mjs";
-// export { pumUserFailedAuthentication } from "../PUM-Registration-Operations-asn1-97/pumUserFailedAuthentication.oa.mjs";
 import { hostingAddrInvalid } from "../PUM-Registration-Operations-asn1-97/hostingAddrInvalid.oa.mjs";
-// export { hostingAddrInvalid } from "../PUM-Registration-Operations-asn1-97/hostingAddrInvalid.oa.mjs";
-
 
 /**
  * @summary pumRegistr

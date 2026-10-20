@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WtatParamInfo, _decode_WtatParamInfo, _encode_WtatParamInfo } from "../WTM-Authentication-Operations-asn1-97/WtatParamInfo.ta.mjs";
-// export { WtatParamInfo, _decode_WtatParamInfo, _encode_WtatParamInfo } from "../WTM-Authentication-Operations-asn1-97/WtatParamInfo.ta.mjs";
 import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-// export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-
 
 /**
  * @summary transferAuthParam_ArgumentType
@@ -64,7 +61,6 @@ class transferAuthParam_ArgumentType {
     public static _from_object (_o: { [_K in keyof (transferAuthParam_ArgumentType)]: (transferAuthParam_ArgumentType)[_K] }): transferAuthParam_ArgumentType {
         return new transferAuthParam_ArgumentType(_o.wtatParamInfo, _o.dummyExtension);
     }
-
 
 }
 
@@ -160,6 +156,5 @@ function _encode_transferAuthParam_ArgumentType (value: transferAuthParam_Argume
 }; }
     return _cached_encoder_for_transferAuthParam_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

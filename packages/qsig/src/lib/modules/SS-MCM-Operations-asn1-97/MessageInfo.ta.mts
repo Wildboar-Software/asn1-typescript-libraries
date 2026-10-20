@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CompleteInfo, _decode_CompleteInfo, _encode_CompleteInfo } from "../SS-MCM-Operations-asn1-97/CompleteInfo.ta.mjs";
-// export { CompleteInfo, _decode_CompleteInfo, _encode_CompleteInfo } from "../SS-MCM-Operations-asn1-97/CompleteInfo.ta.mjs";
 import { CompressedInfo, _decode_CompressedInfo, _encode_CompressedInfo } from "../SS-MCM-Operations-asn1-97/CompressedInfo.ta.mjs";
-// export { CompressedInfo, _decode_CompressedInfo, _encode_CompressedInfo } from "../SS-MCM-Operations-asn1-97/CompressedInfo.ta.mjs";
-
 
 /**
  * @summary MessageInfo
@@ -67,6 +64,5 @@ function _encode_MessageInfo (value: MessageInfo, elGetter: $.ASN1Encoder<any>):
 }, $.BER); }
     return _cached_encoder_for_MessageInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

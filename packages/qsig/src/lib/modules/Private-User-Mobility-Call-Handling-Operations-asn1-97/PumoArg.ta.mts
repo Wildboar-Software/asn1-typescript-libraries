@@ -7,12 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PumIdentity, _decode_PumIdentity, _encode_PumIdentity } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumIdentity.ta.mjs";
-// export { PumIdentity, _decode_PumIdentity, _encode_PumIdentity } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumIdentity.ta.mjs";
 import { PumoArg_extension, _decode_PumoArg_extension, _encode_PumoArg_extension } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumoArg-extension.ta.mjs";
-// export { PumoArg_extension, _decode_PumoArg_extension, _encode_PumoArg_extension } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumoArg-extension.ta.mjs";
-
 
 /**
  * @summary PumoArg
@@ -90,7 +86,6 @@ class PumoArg {
     public static _from_object (_o: { [_K in keyof (PumoArg)]: (PumoArg)[_K] }): PumoArg {
         return new PumoArg(_o.destinationNumber, _o.pumIdentity, _o.sendingComplete, _o.extension);
     }
-
 
 }
 
@@ -202,6 +197,5 @@ function _encode_PumoArg (value: PumoArg, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_PumoArg(value, elGetter);
 }
-
 
 /* eslint-enable */

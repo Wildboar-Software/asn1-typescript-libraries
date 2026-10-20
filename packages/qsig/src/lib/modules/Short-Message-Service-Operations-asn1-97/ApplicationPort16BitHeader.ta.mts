@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary ApplicationPort16BitHeader
  * @description
@@ -70,7 +68,6 @@ class ApplicationPort16BitHeader {
     public static _from_object (_o: { [_K in keyof (ApplicationPort16BitHeader)]: (ApplicationPort16BitHeader)[_K] }): ApplicationPort16BitHeader {
         return new ApplicationPort16BitHeader(_o.destination16BitPort, _o.originator16BitPort);
     }
-
 
 }
 
@@ -163,6 +160,5 @@ function _encode_ApplicationPort16BitHeader (value: ApplicationPort16BitHeader, 
 }; }
     return _cached_encoder_for_ApplicationPort16BitHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

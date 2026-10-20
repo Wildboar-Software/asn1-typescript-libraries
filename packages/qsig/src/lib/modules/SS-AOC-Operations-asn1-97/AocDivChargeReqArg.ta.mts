@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ChargingAssociation, _decode_ChargingAssociation, _encode_ChargingAssociation } from "../SS-AOC-Operations-asn1-97/ChargingAssociation.ta.mjs";
-// export { ChargingAssociation, _decode_ChargingAssociation, _encode_ChargingAssociation } from "../SS-AOC-Operations-asn1-97/ChargingAssociation.ta.mjs";
 import { DiversionType, _decode_DiversionType, _encode_DiversionType, _enum_for_DiversionType } from "../SS-AOC-Operations-asn1-97/DiversionType.ta.mjs";
-// export { DiversionType, _enum_for_DiversionType, DiversionType_callForwardingUnconditional /* IMPORTED_LONG_ENUMERATION_ITEM */, callForwardingUnconditional /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionType_callForwardingBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, callForwardingBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionType_callForwardingNoReply /* IMPORTED_LONG_ENUMERATION_ITEM */, callForwardingNoReply /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionType_callDeflection /* IMPORTED_LONG_ENUMERATION_ITEM */, callDeflection /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DiversionType, _encode_DiversionType } from "../SS-AOC-Operations-asn1-97/DiversionType.ta.mjs";
 import { AocDivChargeReqArg_aocDivChargeReqArgExt, _decode_AocDivChargeReqArg_aocDivChargeReqArgExt, _encode_AocDivChargeReqArg_aocDivChargeReqArgExt } from "../SS-AOC-Operations-asn1-97/AocDivChargeReqArg-aocDivChargeReqArgExt.ta.mjs";
-// export { AocDivChargeReqArg_aocDivChargeReqArgExt, _decode_AocDivChargeReqArg_aocDivChargeReqArgExt, _encode_AocDivChargeReqArg_aocDivChargeReqArgExt } from "../SS-AOC-Operations-asn1-97/AocDivChargeReqArg-aocDivChargeReqArgExt.ta.mjs";
-
 
 /**
  * @summary AocDivChargeReqArg
@@ -203,6 +198,5 @@ function _encode_AocDivChargeReqArg (value: AocDivChargeReqArg, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_AocDivChargeReqArg(value, elGetter);
 }
-
 
 /* eslint-enable */

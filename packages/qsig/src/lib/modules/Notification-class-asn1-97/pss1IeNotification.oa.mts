@@ -1,9 +1,6 @@
 /* eslint-disable */
-// export { Code, _decode_Code, _encode_Code } from "../Notification-class-asn1-97/Code.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
-
 
 /**
  * @summary pss1IeNotification

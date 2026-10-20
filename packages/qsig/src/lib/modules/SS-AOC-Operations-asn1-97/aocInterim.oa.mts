@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { AocInterimArg, _decode_AocInterimArg, _encode_AocInterimArg } from "../SS-AOC-Operations-asn1-97/AocInterimArg.ta.mjs";
-// export { AocInterimArg, _decode_AocInterimArg, _encode_AocInterimArg } from "../SS-AOC-Operations-asn1-97/AocInterimArg.ta.mjs";
-
 
 /**
  * @summary aocInterim

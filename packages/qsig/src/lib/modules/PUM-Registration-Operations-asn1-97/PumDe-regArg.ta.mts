@@ -6,18 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PumDe_regArg_pumUserId, _decode_PumDe_regArg_pumUserId, _encode_PumDe_regArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumDe-regArg-pumUserId.ta.mjs";
-// export { PumDe_regArg_pumUserId, _decode_PumDe_regArg_pumUserId, _encode_PumDe_regArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumDe-regArg-pumUserId.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-// export { BasicService, _enum_for_BasicService, BasicService_allServices /* IMPORTED_LONG_ENUMERATION_ITEM */, allServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_speech /* IMPORTED_LONG_ENUMERATION_ITEM */, speech /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_unrestrictedDigitalInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, unrestrictedDigitalInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_audio3100Hz /* IMPORTED_LONG_ENUMERATION_ITEM */, audio3100Hz /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telephony /* IMPORTED_LONG_ENUMERATION_ITEM */, telephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_teletex /* IMPORTED_LONG_ENUMERATION_ITEM */, teletex /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telefaxGroup4Class1 /* IMPORTED_LONG_ENUMERATION_ITEM */, telefaxGroup4Class1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotexSyntaxBased /* IMPORTED_LONG_ENUMERATION_ITEM */, videotexSyntaxBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotelephony /* IMPORTED_LONG_ENUMERATION_ITEM */, videotelephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BasicService, _encode_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ServiceOption, ServiceOption_inCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ServiceOption, _encode_ServiceOption, _enum_for_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
-// export { ServiceOption, _enum_for_ServiceOption, ServiceOption_inCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, inCallRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceOption_outCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, outCallRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, ServiceOption_allCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, allCallRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ServiceOption, _encode_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
 import { PumDe_regArg_userPin, _decode_PumDe_regArg_userPin, _encode_PumDe_regArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumDe-regArg-userPin.ta.mjs";
-// export { PumDe_regArg_userPin, _decode_PumDe_regArg_userPin, _encode_PumDe_regArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumDe-regArg-userPin.ta.mjs";
 import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
-// export { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
-
 
 /**
  * @summary PumDe_regArg
@@ -288,6 +281,5 @@ function _encode_PumDe_regArg (value: PumDe_regArg, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_PumDe_regArg(value, elGetter);
 }
-
 
 /* eslint-enable */

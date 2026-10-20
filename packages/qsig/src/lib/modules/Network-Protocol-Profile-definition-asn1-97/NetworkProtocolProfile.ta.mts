@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary NetworkProtocolProfile
  * @description
@@ -89,6 +87,5 @@ function _encode_NetworkProtocolProfile (value: NetworkProtocolProfile, elGetter
     if (!_cached_encoder_for_NetworkProtocolProfile) { _cached_encoder_for_NetworkProtocolProfile = $._encode_implicit(_TagClass.context, 18, () => $._encodeInteger, $.BER); }
     return _cached_encoder_for_NetworkProtocolProfile(value, elGetter);
 }
-
 
 /* eslint-enable */

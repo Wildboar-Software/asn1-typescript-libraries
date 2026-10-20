@@ -1,12 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Common-Information-Operations-asn1-97/DummyArg.ta.mjs";
-// export { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Common-Information-Operations-asn1-97/DummyArg.ta.mjs";
 import { CmnArg, _decode_CmnArg, _encode_CmnArg } from "../Common-Information-Operations-asn1-97/CmnArg.ta.mjs";
-// export { CmnArg, _decode_CmnArg, _encode_CmnArg } from "../Common-Information-Operations-asn1-97/CmnArg.ta.mjs";
-
 
 /**
  * @summary cmnRequest

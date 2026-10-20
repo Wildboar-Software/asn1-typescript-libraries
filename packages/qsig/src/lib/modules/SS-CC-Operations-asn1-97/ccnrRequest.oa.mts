@@ -1,20 +1,11 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { CcRequestArg, _decode_CcRequestArg, _encode_CcRequestArg } from "../SS-CC-Operations-asn1-97/CcRequestArg.ta.mjs";
-// export { CcRequestArg, _decode_CcRequestArg, _encode_CcRequestArg } from "../SS-CC-Operations-asn1-97/CcRequestArg.ta.mjs";
 import { CcRequestRes, _decode_CcRequestRes, _encode_CcRequestRes } from "../SS-CC-Operations-asn1-97/CcRequestRes.ta.mjs";
-// export { CcRequestRes, _decode_CcRequestRes, _encode_CcRequestRes } from "../SS-CC-Operations-asn1-97/CcRequestRes.ta.mjs";
 import { shortTermRejection } from "../SS-CC-Operations-asn1-97/shortTermRejection.oa.mjs";
-// export { shortTermRejection } from "../SS-CC-Operations-asn1-97/shortTermRejection.oa.mjs";
 import { longTermRejection } from "../SS-CC-Operations-asn1-97/longTermRejection.oa.mjs";
-// export { longTermRejection } from "../SS-CC-Operations-asn1-97/longTermRejection.oa.mjs";
 import { unspecified } from "../SS-CC-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../SS-CC-Operations-asn1-97/unspecified.oa.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-
 
 /**
  * @summary ccnrRequest

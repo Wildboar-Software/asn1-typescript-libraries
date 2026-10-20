@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
-// export { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
-
 
 /**
  * @summary PartyInfo
@@ -63,7 +60,6 @@ class PartyInfo {
     public static _from_object (_o: { [_K in keyof (PartyInfo)]: (PartyInfo)[_K] }): PartyInfo {
         return new PartyInfo(_o.servedUserNr, _o.messageCentreID);
     }
-
 
 }
 
@@ -156,6 +152,5 @@ function _encode_PartyInfo (value: PartyInfo, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_PartyInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

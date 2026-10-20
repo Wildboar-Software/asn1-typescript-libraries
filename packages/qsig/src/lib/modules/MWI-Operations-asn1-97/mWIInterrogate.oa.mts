@@ -1,21 +1,12 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { MWIInterrogateArg, _decode_MWIInterrogateArg, _encode_MWIInterrogateArg } from "../MWI-Operations-asn1-97/MWIInterrogateArg.ta.mjs";
-// export { MWIInterrogateArg, _decode_MWIInterrogateArg, _encode_MWIInterrogateArg } from "../MWI-Operations-asn1-97/MWIInterrogateArg.ta.mjs";
 import { MWIInterrogateRes, _decode_MWIInterrogateRes, _encode_MWIInterrogateRes } from "../MWI-Operations-asn1-97/MWIInterrogateRes.ta.mjs";
-// export { MWIInterrogateRes, _decode_MWIInterrogateRes, _encode_MWIInterrogateRes } from "../MWI-Operations-asn1-97/MWIInterrogateRes.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
-// export { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { invalidMsgCentreId } from "../MWI-Operations-asn1-97/invalidMsgCentreId.oa.mjs";
-// export { invalidMsgCentreId } from "../MWI-Operations-asn1-97/invalidMsgCentreId.oa.mjs";
 import { unspecified } from "../MWI-Operations-asn1-97/unspecified.oa.mjs";
 import { notActivated } from "../General-Error-List/notActivated.oa.mjs";
-// export { unspecified } from "../MWI-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary mWIInterrogate

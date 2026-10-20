@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary EquipmentId
  * @description
@@ -82,7 +80,6 @@ class EquipmentId {
     public static _from_object (_o: { [_K in keyof (EquipmentId)]: (EquipmentId)[_K] }): EquipmentId {
         return new EquipmentId(_o.nodeId, _o.groupId, _o.unitId);
     }
-
 
 }
 
@@ -187,6 +184,5 @@ function _encode_EquipmentId (value: EquipmentId, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_EquipmentId(value, elGetter);
 }
-
 
 /* eslint-enable */

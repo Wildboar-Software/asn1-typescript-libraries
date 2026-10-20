@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
-// export { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
 import { CorrelationReason, _decode_CorrelationReason, _encode_CorrelationReason } from "../SS-MCR-Operations-asn97/CorrelationReason.ta.mjs";
-// export { CorrelationReason, CorrelationReason_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, CorrelationReason_mCACommunication /* IMPORTED_LONG_NAMED_INTEGER */, mCACommunication /* IMPORTED_SHORT_NAMED_INTEGER */, CorrelationReason_cTIApplication /* IMPORTED_LONG_NAMED_INTEGER */, cTIApplication /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CorrelationReason, _encode_CorrelationReason } from "../SS-MCR-Operations-asn97/CorrelationReason.ta.mjs";
-
 
 /**
  * @summary Correlation
@@ -64,7 +61,6 @@ class Correlation {
     public static _from_object (_o: { [_K in keyof (Correlation)]: (Correlation)[_K] }): Correlation {
         return new Correlation(_o.correlationData, _o.correlationReason);
     }
-
 
 }
 
@@ -160,6 +156,5 @@ function _encode_Correlation (value: Correlation, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_Correlation(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
-// export { PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { CTActiveArg_argumentExtension, _decode_CTActiveArg_argumentExtension, _encode_CTActiveArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTActiveArg-argumentExtension.ta.mjs";
-// export { CTActiveArg_argumentExtension, _decode_CTActiveArg_argumentExtension, _encode_CTActiveArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTActiveArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary CTActiveArg
@@ -91,7 +86,6 @@ class CTActiveArg {
     public static _from_object (_o: { [_K in keyof (CTActiveArg)]: (CTActiveArg)[_K] }): CTActiveArg {
         return new CTActiveArg(_o.connectedAddress, _o.basicCallInfoElements, _o.connectedName, _o.argumentExtension);
     }
-
 
 }
 
@@ -201,6 +195,5 @@ function _encode_CTActiveArg (value: CTActiveArg, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_CTActiveArg(value, elGetter);
 }
-
 
 /* eslint-enable */

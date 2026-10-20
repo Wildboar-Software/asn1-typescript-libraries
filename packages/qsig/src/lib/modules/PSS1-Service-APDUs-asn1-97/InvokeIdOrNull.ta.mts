@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../PSS1-Service-APDUs-asn1-97/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../PSS1-Service-APDUs-asn1-97/InvokeId.ta.mjs";
-
 
 /**
  * @summary InvokeIdOrNull
@@ -60,6 +58,5 @@ function _encode_InvokeIdOrNull (value: InvokeIdOrNull, elGetter: $.ASN1Encoder<
 }, $.BER); }
     return _cached_encoder_for_InvokeIdOrNull(value, elGetter);
 }
-
 
 /* eslint-enable */

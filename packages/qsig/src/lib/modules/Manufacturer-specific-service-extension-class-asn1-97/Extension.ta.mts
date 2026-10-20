@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { EXTENSION } from "../Manufacturer-specific-service-extension-class-asn1-97/EXTENSION.oca.mjs";
-// export { Extensionset } from "../Manufacturer-specific-service-extension-class-asn1-97/Extensionset.osa.mjs";
-
 
 /**
  * @summary Extension
@@ -63,7 +60,6 @@ class Extension {
     public static _from_object (_o: { [_K in keyof (Extension)]: (Extension)[_K] }): Extension {
         return new Extension(_o.extensionId, _o.extensionArgument);
     }
-
 
 }
 
@@ -156,6 +152,5 @@ function _encode_Extension (value: Extension, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_Extension(value, elGetter);
 }
-
 
 /* eslint-enable */

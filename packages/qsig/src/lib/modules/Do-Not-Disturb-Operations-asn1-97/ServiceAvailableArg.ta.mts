@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceList, _decode_ServiceList, _encode_ServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceList.ta.mjs";
-// export { ServiceList, ServiceList_dndo_low /* IMPORTED_LONG_NAMED_BIT */, dndo_low /* IMPORTED_SHORT_NAMED_BIT */, ServiceList_dndo_medium /* IMPORTED_LONG_NAMED_BIT */, dndo_medium /* IMPORTED_SHORT_NAMED_BIT */, ServiceList_dndo_high /* IMPORTED_LONG_NAMED_BIT */, dndo_high /* IMPORTED_SHORT_NAMED_BIT */, _decode_ServiceList, _encode_ServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceList.ta.mjs";
 import { ServiceAvailableArg_extendedServiceList, _decode_ServiceAvailableArg_extendedServiceList, _encode_ServiceAvailableArg_extendedServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceAvailableArg-extendedServiceList.ta.mjs";
-// export { ServiceAvailableArg_extendedServiceList, _decode_ServiceAvailableArg_extendedServiceList, _encode_ServiceAvailableArg_extendedServiceList } from "../Do-Not-Disturb-Operations-asn1-97/ServiceAvailableArg-extendedServiceList.ta.mjs";
-
 
 /**
  * @summary ServiceAvailableArg
@@ -64,6 +61,5 @@ function _encode_ServiceAvailableArg (value: ServiceAvailableArg, elGetter: $.AS
 }, $.BER); }
     return _cached_encoder_for_ServiceAvailableArg(value, elGetter);
 }
-
 
 /* eslint-enable */

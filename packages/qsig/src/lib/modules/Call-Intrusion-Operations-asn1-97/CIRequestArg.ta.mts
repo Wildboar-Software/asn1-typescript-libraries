@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CICapabilityLevel, _decode_CICapabilityLevel, _encode_CICapabilityLevel, _enum_for_CICapabilityLevel } from "../Call-Intrusion-Operations-asn1-97/CICapabilityLevel.ta.mjs";
-// export { CICapabilityLevel, _enum_for_CICapabilityLevel, CICapabilityLevel_intrusionLowProt /* IMPORTED_LONG_ENUMERATION_ITEM */, intrusionLowProt /* IMPORTED_SHORT_ENUMERATION_ITEM */, CICapabilityLevel_intrusionMediumProt /* IMPORTED_LONG_ENUMERATION_ITEM */, intrusionMediumProt /* IMPORTED_SHORT_ENUMERATION_ITEM */, CICapabilityLevel_intrusionHighProt /* IMPORTED_LONG_ENUMERATION_ITEM */, intrusionHighProt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CICapabilityLevel, _encode_CICapabilityLevel } from "../Call-Intrusion-Operations-asn1-97/CICapabilityLevel.ta.mjs";
 import { CIRequestArg_argumentExtension, _decode_CIRequestArg_argumentExtension, _encode_CIRequestArg_argumentExtension } from "../Call-Intrusion-Operations-asn1-97/CIRequestArg-argumentExtension.ta.mjs";
-// export { CIRequestArg_argumentExtension, _decode_CIRequestArg_argumentExtension, _encode_CIRequestArg_argumentExtension } from "../Call-Intrusion-Operations-asn1-97/CIRequestArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary CIRequestArg
@@ -169,6 +166,5 @@ function _encode_CIRequestArg (value: CIRequestArg, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CIRequestArg(value, elGetter);
 }
-
 
 /* eslint-enable */

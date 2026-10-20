@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
-// export { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
 import { DialogAbortPDU_abortChoice, _decode_DialogAbortPDU_abortChoice, _encode_DialogAbortPDU_abortChoice } from "../Dialog-Service-Pdus-asn1-97/DialogAbortPDU-abortChoice.ta.mjs";
-// export { DialogAbortPDU_abortChoice, _decode_DialogAbortPDU_abortChoice, _encode_DialogAbortPDU_abortChoice } from "../Dialog-Service-Pdus-asn1-97/DialogAbortPDU-abortChoice.ta.mjs";
-
 
 /**
  * @summary DialogAbortPDU
@@ -67,7 +64,6 @@ class DialogAbortPDU {
     public static _from_object (_o: { [_K in keyof (DialogAbortPDU)]: (DialogAbortPDU)[_K] }): DialogAbortPDU {
         return new DialogAbortPDU(_o.destinationDialogId, _o.abortChoice);
     }
-
 
 }
 
@@ -160,6 +156,5 @@ function _encode_DialogAbortPDU (value: DialogAbortPDU, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_DialogAbortPDU(value, elGetter);
 }
-
 
 /* eslint-enable */

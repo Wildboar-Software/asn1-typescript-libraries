@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PumIdentity, _decode_PumIdentity, _encode_PumIdentity } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumIdentity.ta.mjs";
-// export { PumIdentity, _decode_PumIdentity, _encode_PumIdentity } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumIdentity.ta.mjs";
 import { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumiExtension.ta.mjs";
-// export { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumiExtension.ta.mjs";
-
 
 /**
  * @summary CurrLocation
@@ -79,7 +75,6 @@ class CurrLocation {
     public static _from_object (_o: { [_K in keyof (CurrLocation)]: (CurrLocation)[_K] }): CurrLocation {
         return new CurrLocation(_o.hostingAddr, _o.pumIdentity, _o.argExtension);
     }
-
 
 }
 
@@ -180,6 +175,5 @@ function _encode_CurrLocation (value: CurrLocation, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CurrLocation(value, elGetter);
 }
-
 
 /* eslint-enable */

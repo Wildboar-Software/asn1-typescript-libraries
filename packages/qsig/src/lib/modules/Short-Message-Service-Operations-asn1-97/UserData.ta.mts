@@ -9,10 +9,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserDataHeader, _decode_UserDataHeader, _encode_UserDataHeader } from "../Short-Message-Service-Operations-asn1-97/UserDataHeader.ta.mjs";
-// export { UserDataHeader, _decode_UserDataHeader, _encode_UserDataHeader } from "../Short-Message-Service-Operations-asn1-97/UserDataHeader.ta.mjs";
 import { ShortMessageText, _decode_ShortMessageText, _encode_ShortMessageText } from "../Short-Message-Service-Operations-asn1-97/ShortMessageText.ta.mjs";
-// export { ShortMessageText, _decode_ShortMessageText, _encode_ShortMessageText } from "../Short-Message-Service-Operations-asn1-97/ShortMessageText.ta.mjs";
-
 
 /**
  * @summary UserData
@@ -205,6 +202,5 @@ function _encode_UserData (value: UserData, elGetter: $.ASN1Encoder<any>): _Elem
 }; }
     return _cached_encoder_for_UserData(value, elGetter);
 }
-
 
 /* eslint-enable */

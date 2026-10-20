@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
-// export { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PRProposeArg_extension, _decode_PRProposeArg_extension, _encode_PRProposeArg_extension } from "../Path-Replacement-Operations-asn1-97/PRProposeArg-extension.ta.mjs";
-// export { PRProposeArg_extension, _decode_PRProposeArg_extension, _encode_PRProposeArg_extension } from "../Path-Replacement-Operations-asn1-97/PRProposeArg-extension.ta.mjs";
-
 
 /**
  * @summary PRProposeArg
@@ -78,7 +74,6 @@ class PRProposeArg {
     public static _from_object (_o: { [_K in keyof (PRProposeArg)]: (PRProposeArg)[_K] }): PRProposeArg {
         return new PRProposeArg(_o.callIdentity, _o.rerouteingNumber, _o.extension);
     }
-
 
 }
 
@@ -179,6 +174,5 @@ function _encode_PRProposeArg (value: PRProposeArg, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_PRProposeArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { P_AbortCause, _decode_P_AbortCause, _encode_P_AbortCause } from "../Dialog-Service-Pdus-asn1-97/P-AbortCause.ta.mjs";
-// export { P_AbortCause, _decode_P_AbortCause, _encode_P_AbortCause } from "../Dialog-Service-Pdus-asn1-97/P-AbortCause.ta.mjs";
 import { UserAbortInformation, _decode_UserAbortInformation, _encode_UserAbortInformation } from "../Dialog-Service-Pdus-asn1-97/UserAbortInformation.ta.mjs";
-// export { UserAbortInformation, _decode_UserAbortInformation, _encode_UserAbortInformation } from "../Dialog-Service-Pdus-asn1-97/UserAbortInformation.ta.mjs";
-
 
 /**
  * @summary DialogAbortPDU_abortChoice
@@ -62,6 +59,5 @@ function _encode_DialogAbortPDU_abortChoice (value: DialogAbortPDU_abortChoice, 
 }, $.BER); }
     return _cached_encoder_for_DialogAbortPDU_abortChoice(value, elGetter);
 }
-
 
 /* eslint-enable */

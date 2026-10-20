@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OriginationDialogId, _decode_OriginationDialogId, _encode_OriginationDialogId } from "../Dialog-Service-Pdus-asn1-97/OriginationDialogId.ta.mjs";
-// export { OriginationDialogId, _decode_OriginationDialogId, _encode_OriginationDialogId } from "../Dialog-Service-Pdus-asn1-97/OriginationDialogId.ta.mjs";
 import { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
-// export { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
 import { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_RemoteOperationsPortion } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion.ta.mjs";
-// export { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_RemoteOperationsPortion } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion.ta.mjs";
-
 
 /**
  * @summary DialogContinuePDU
@@ -75,7 +71,6 @@ class DialogContinuePDU {
     public static _from_object (_o: { [_K in keyof (DialogContinuePDU)]: (DialogContinuePDU)[_K] }): DialogContinuePDU {
         return new DialogContinuePDU(_o.originationDialogId, _o.destinationDialogId, _o.remoteOperationsPortion);
     }
-
 
 }
 
@@ -176,6 +171,5 @@ function _encode_DialogContinuePDU (value: DialogContinuePDU, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_DialogContinuePDU(value, elGetter);
 }
-
 
 /* eslint-enable */

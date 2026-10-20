@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../SS-MID-Operations-asn1-97/MIDExtensions.ta.mjs";
-// export { MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../SS-MID-Operations-asn1-97/MIDExtensions.ta.mjs";
-
 
 /**
  * @summary MIDDummyRes
@@ -48,6 +46,5 @@ function _encode_MIDDummyRes (value: MIDDummyRes, elGetter: $.ASN1Encoder<any>):
     if (!_cached_encoder_for_MIDDummyRes) { _cached_encoder_for_MIDDummyRes = _encode_MIDExtensions; }
     return _cached_encoder_for_MIDDummyRes(value, elGetter);
 }
-
 
 /* eslint-enable */

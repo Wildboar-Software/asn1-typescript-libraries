@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-// export { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-
 
 /**
  * @summary ScAlertArg
@@ -64,7 +61,6 @@ class ScAlertArg {
     public static _from_object (_o: { [_K in keyof (ScAlertArg)]: (ScAlertArg)[_K] }): ScAlertArg {
         return new ScAlertArg(_o.originatingAddress, _o.smsExtension);
     }
-
 
 }
 
@@ -160,6 +156,5 @@ function _encode_ScAlertArg (value: ScAlertArg, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_ScAlertArg(value, elGetter);
 }
-
 
 /* eslint-enable */

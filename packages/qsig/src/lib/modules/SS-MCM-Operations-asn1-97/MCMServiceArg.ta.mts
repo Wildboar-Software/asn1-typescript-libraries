@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyInfo, _decode_PartyInfo, _encode_PartyInfo } from "../SS-MCM-Operations-asn1-97/PartyInfo.ta.mjs";
-// export { PartyInfo, _decode_PartyInfo, _encode_PartyInfo } from "../SS-MCM-Operations-asn1-97/PartyInfo.ta.mjs";
 import { MCMChange, _decode_MCMChange, _encode_MCMChange } from "../SS-MCM-Operations-asn1-97/MCMChange.ta.mjs";
-// export { MCMChange, _decode_MCMChange, _encode_MCMChange } from "../SS-MCM-Operations-asn1-97/MCMChange.ta.mjs";
 import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
-// export { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
-
 
 /**
  * @summary MCMServiceArg
@@ -84,7 +80,6 @@ class MCMServiceArg {
     public static _from_object (_o: { [_K in keyof (MCMServiceArg)]: (MCMServiceArg)[_K] }): MCMServiceArg {
         return new MCMServiceArg(_o.partyInfo, _o.mCMChange, _o.extensions, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -195,6 +190,5 @@ function _encode_MCMServiceArg (value: MCMServiceArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_MCMServiceArg(value, elGetter);
 }
-
 
 /* eslint-enable */

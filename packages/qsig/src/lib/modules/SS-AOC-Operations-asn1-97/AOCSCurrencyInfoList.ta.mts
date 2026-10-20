@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AOCSCurrencyInfo, _decode_AOCSCurrencyInfo, _encode_AOCSCurrencyInfo } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfo.ta.mjs";
-// export { AOCSCurrencyInfo, _decode_AOCSCurrencyInfo, _encode_AOCSCurrencyInfo } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfo.ta.mjs";
-
 
 /**
  * @summary AOCSCurrencyInfoList
@@ -53,6 +51,5 @@ function _encode_AOCSCurrencyInfoList (value: AOCSCurrencyInfoList, elGetter: $.
     if (!_cached_encoder_for_AOCSCurrencyInfoList) { _cached_encoder_for_AOCSCurrencyInfoList = $._encodeSequenceOf<AOCSCurrencyInfo>(() => _encode_AOCSCurrencyInfo, $.BER); }
     return _cached_encoder_for_AOCSCurrencyInfoList(value, elGetter);
 }
-
 
 /* eslint-enable */

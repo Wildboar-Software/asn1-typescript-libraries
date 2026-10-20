@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
 import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-// export { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-
 
 /**
  * @summary ResChoiceSeq
@@ -64,7 +61,6 @@ class ResChoiceSeq {
     public static _from_object (_o: { [_K in keyof (ResChoiceSeq)]: (ResChoiceSeq)[_K] }): ResChoiceSeq {
         return new ResChoiceSeq(_o.protocolIdentifier, _o.userData);
     }
-
 
 }
 
@@ -157,6 +153,5 @@ function _encode_ResChoiceSeq (value: ResChoiceSeq, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_ResChoiceSeq(value, elGetter);
 }
-
 
 /* eslint-enable */

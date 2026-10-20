@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { CintInformation2Arg, _decode_CintInformation2Arg, _encode_CintInformation2Arg } from "../Call-Interception-Operations-asn1-97/CintInformation2Arg.ta.mjs";
-// export { CintInformation2Arg, _decode_CintInformation2Arg, _encode_CintInformation2Arg } from "../Call-Interception-Operations-asn1-97/CintInformation2Arg.ta.mjs";
-
 
 /**
  * @summary cintLegInformation2

@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
-// export { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
 import { remoteUserAlerting } from "../Call-Offer-Notifications-asn1-97/remoteUserAlerting.oa.mjs";
-// export { remoteUserAlerting } from "../Call-Offer-Notifications-asn1-97/remoteUserAlerting.oa.mjs";
-
 
 /**
  * @summary Call_Offer_Notifications

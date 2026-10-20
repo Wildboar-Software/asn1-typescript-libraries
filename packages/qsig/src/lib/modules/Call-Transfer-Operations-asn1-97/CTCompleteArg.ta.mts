@@ -6,18 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EndDesignation, _decode_EndDesignation, _encode_EndDesignation, _enum_for_EndDesignation } from "../Call-Transfer-Operations-asn1-97/EndDesignation.ta.mjs";
-// export { EndDesignation, _enum_for_EndDesignation, EndDesignation_primaryEnd /* IMPORTED_LONG_ENUMERATION_ITEM */, primaryEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */, EndDesignation_secondaryEnd /* IMPORTED_LONG_ENUMERATION_ITEM */, secondaryEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EndDesignation, _encode_EndDesignation } from "../Call-Transfer-Operations-asn1-97/EndDesignation.ta.mjs";
 import { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
-// export { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { CallStatus, CallStatus_answered /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_CallStatus, _encode_CallStatus, _enum_for_CallStatus } from "../Call-Transfer-Operations-asn1-97/CallStatus.ta.mjs";
-// export { CallStatus, _enum_for_CallStatus, CallStatus_answered /* IMPORTED_LONG_ENUMERATION_ITEM */, answered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallStatus_alerting /* IMPORTED_LONG_ENUMERATION_ITEM */, alerting /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallStatus, _encode_CallStatus } from "../Call-Transfer-Operations-asn1-97/CallStatus.ta.mjs";
 import { CTCompleteArg_argumentExtension, _decode_CTCompleteArg_argumentExtension, _encode_CTCompleteArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTCompleteArg-argumentExtension.ta.mjs";
-// export { CTCompleteArg_argumentExtension, _decode_CTCompleteArg_argumentExtension, _encode_CTCompleteArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTCompleteArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary CTCompleteArg
@@ -253,6 +246,5 @@ function _encode_CTCompleteArg (value: CTCompleteArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_CTCompleteArg(value, elGetter);
 }
-
 
 /* eslint-enable */

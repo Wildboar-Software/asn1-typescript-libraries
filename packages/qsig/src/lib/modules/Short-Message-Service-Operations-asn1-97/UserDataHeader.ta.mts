@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserDataHeaderChoice, _decode_UserDataHeaderChoice, _encode_UserDataHeaderChoice } from "../Short-Message-Service-Operations-asn1-97/UserDataHeaderChoice.ta.mjs";
-// export { UserDataHeaderChoice, _decode_UserDataHeaderChoice, _encode_UserDataHeaderChoice } from "../Short-Message-Service-Operations-asn1-97/UserDataHeaderChoice.ta.mjs";
-
 
 /**
  * @summary UserDataHeader
@@ -48,6 +46,5 @@ function _encode_UserDataHeader (value: UserDataHeader, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_UserDataHeader) { _cached_encoder_for_UserDataHeader = $._encodeSequenceOf<UserDataHeaderChoice>(() => _encode_UserDataHeaderChoice, $.BER); }
     return _cached_encoder_for_UserDataHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

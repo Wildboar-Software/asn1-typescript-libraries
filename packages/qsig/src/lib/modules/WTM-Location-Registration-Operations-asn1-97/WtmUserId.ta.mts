@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../WTM-Location-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../WTM-Location-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
-
 
 /**
  * @summary WtmUserId
@@ -68,6 +65,5 @@ function _encode_WtmUserId (value: WtmUserId, elGetter: $.ASN1Encoder<any>): _El
 }, $.BER); }
     return _cached_encoder_for_WtmUserId(value, elGetter);
 }
-
 
 /* eslint-enable */

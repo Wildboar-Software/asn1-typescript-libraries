@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BMPStringNormal, _decode_BMPStringNormal, _encode_BMPStringNormal } from "../SS-SD-Operations-asn1-97/BMPStringNormal.ta.mjs";
-// export { BMPStringNormal, _decode_BMPStringNormal, _encode_BMPStringNormal } from "../SS-SD-Operations-asn1-97/BMPStringNormal.ta.mjs";
 import { BMPStringExtended, _decode_BMPStringExtended, _encode_BMPStringExtended } from "../SS-SD-Operations-asn1-97/BMPStringExtended.ta.mjs";
-// export { BMPStringExtended, _decode_BMPStringExtended, _encode_BMPStringExtended } from "../SS-SD-Operations-asn1-97/BMPStringExtended.ta.mjs";
-
 
 /**
  * @summary DisplayString
@@ -62,6 +59,5 @@ function _encode_DisplayString (value: DisplayString, elGetter: $.ASN1Encoder<an
 }, $.BER); }
     return _cached_encoder_for_DisplayString(value, elGetter);
 }
-
 
 /* eslint-enable */

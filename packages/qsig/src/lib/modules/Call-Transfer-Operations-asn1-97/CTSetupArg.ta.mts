@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Call-Transfer-Operations-asn1-97/CallIdentity.ta.mjs";
-// export { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Call-Transfer-Operations-asn1-97/CallIdentity.ta.mjs";
 import { CTSetupArg_argumentExtension, _decode_CTSetupArg_argumentExtension, _encode_CTSetupArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTSetupArg-argumentExtension.ta.mjs";
-// export { CTSetupArg_argumentExtension, _decode_CTSetupArg_argumentExtension, _encode_CTSetupArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTSetupArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary CTSetupArg
@@ -67,7 +64,6 @@ class CTSetupArg {
     public static _from_object (_o: { [_K in keyof (CTSetupArg)]: (CTSetupArg)[_K] }): CTSetupArg {
         return new CTSetupArg(_o.callIdentity, _o.argumentExtension);
     }
-
 
 }
 
@@ -163,6 +159,5 @@ function _encode_CTSetupArg (value: CTSetupArg, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_CTSetupArg(value, elGetter);
 }
-
 
 /* eslint-enable */

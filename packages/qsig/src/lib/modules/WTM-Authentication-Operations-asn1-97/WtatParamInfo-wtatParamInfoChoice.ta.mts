@@ -7,12 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKeyInfo.ta.mjs";
-// export { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKeyInfo.ta.mjs";
 import { CalcWtatInfo, _decode_CalcWtatInfo, _encode_CalcWtatInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfo.ta.mjs";
-// export { CalcWtatInfo, _decode_CalcWtatInfo, _encode_CalcWtatInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfo.ta.mjs";
 import { AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication-Operations-asn1-97/AuthKey.ta.mjs";
-// export { AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication-Operations-asn1-97/AuthKey.ta.mjs";
-
 
 /**
  * @summary WtatParamInfo_wtatParamInfoChoice
@@ -80,6 +76,5 @@ function _encode_WtatParamInfo_wtatParamInfoChoice (value: WtatParamInfo_wtatPar
 }, $.BER); }
     return _cached_encoder_for_WtatParamInfo_wtatParamInfoChoice(value, elGetter);
 }
-
 
 /* eslint-enable */

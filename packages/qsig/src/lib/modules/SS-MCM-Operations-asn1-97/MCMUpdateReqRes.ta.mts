@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCMUpdateReqResElt, _decode_MCMUpdateReqResElt, _encode_MCMUpdateReqResElt } from "../SS-MCM-Operations-asn1-97/MCMUpdateReqResElt.ta.mjs";
-// export { MCMUpdateReqResElt, _decode_MCMUpdateReqResElt, _encode_MCMUpdateReqResElt } from "../SS-MCM-Operations-asn1-97/MCMUpdateReqResElt.ta.mjs";
-
 
 /**
  * @summary MCMUpdateReqRes
@@ -53,6 +51,5 @@ function _encode_MCMUpdateReqRes (value: MCMUpdateReqRes, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_MCMUpdateReqRes) { _cached_encoder_for_MCMUpdateReqRes = $._encodeSequenceOf<MCMUpdateReqResElt>(() => _encode_MCMUpdateReqResElt, $.BER); }
     return _cached_encoder_for_MCMUpdateReqRes(value, elGetter);
 }
-
 
 /* eslint-enable */

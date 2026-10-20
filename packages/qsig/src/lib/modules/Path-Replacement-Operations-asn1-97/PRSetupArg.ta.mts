@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
-// export { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
 import { PRSetupArg_extension, _decode_PRSetupArg_extension, _encode_PRSetupArg_extension } from "../Path-Replacement-Operations-asn1-97/PRSetupArg-extension.ta.mjs";
-// export { PRSetupArg_extension, _decode_PRSetupArg_extension, _encode_PRSetupArg_extension } from "../Path-Replacement-Operations-asn1-97/PRSetupArg-extension.ta.mjs";
-
 
 /**
  * @summary PRSetupArg
@@ -67,7 +64,6 @@ class PRSetupArg {
     public static _from_object (_o: { [_K in keyof (PRSetupArg)]: (PRSetupArg)[_K] }): PRSetupArg {
         return new PRSetupArg(_o.callIdentity, _o.extension);
     }
-
 
 }
 
@@ -163,6 +159,5 @@ function _encode_PRSetupArg (value: PRSetupArg, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_PRSetupArg(value, elGetter);
 }
-
 
 /* eslint-enable */

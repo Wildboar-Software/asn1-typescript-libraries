@@ -1,22 +1,12 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_checkRestriction_ArgumentType, _encode_checkRestriction_ArgumentType, checkRestriction_ArgumentType } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ArgumentType.ta.mjs";
-// export { checkRestriction_ArgumentType, _decode_checkRestriction_ArgumentType, _encode_checkRestriction_ArgumentType } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ArgumentType.ta.mjs";
 import { _decode_checkRestriction_ResultType, _encode_checkRestriction_ResultType, checkRestriction_ResultType } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ResultType.ta.mjs";
-// export { checkRestriction_ResultType, _decode_checkRestriction_ResultType, _encode_checkRestriction_ResultType } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ResultType.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { invalidDivertedToNr } from "../Call-Diversion-Operations-asn1-97/invalidDivertedToNr.oa.mjs";
-// export { invalidDivertedToNr } from "../Call-Diversion-Operations-asn1-97/invalidDivertedToNr.oa.mjs";
 import { specialServiceNr } from "../Call-Diversion-Operations-asn1-97/specialServiceNr.oa.mjs";
-// export { specialServiceNr } from "../Call-Diversion-Operations-asn1-97/specialServiceNr.oa.mjs";
 import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary checkRestriction

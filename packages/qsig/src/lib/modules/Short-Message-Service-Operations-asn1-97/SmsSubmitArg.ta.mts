@@ -6,16 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { MessageReference, _decode_MessageReference, _encode_MessageReference } from "../Short-Message-Service-Operations-asn1-97/MessageReference.ta.mjs";
-// export { MessageReference, _decode_MessageReference, _encode_MessageReference } from "../Short-Message-Service-Operations-asn1-97/MessageReference.ta.mjs";
 import { SmSubmitParameter, _decode_SmSubmitParameter, _encode_SmSubmitParameter } from "../Short-Message-Service-Operations-asn1-97/SmSubmitParameter.ta.mjs";
-// export { SmSubmitParameter, _decode_SmSubmitParameter, _encode_SmSubmitParameter } from "../Short-Message-Service-Operations-asn1-97/SmSubmitParameter.ta.mjs";
 import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-// export { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
 import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-// export { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-
 
 /**
  * @summary SmsSubmitArg
@@ -106,7 +100,6 @@ class SmsSubmitArg {
     public static _from_object (_o: { [_K in keyof (SmsSubmitArg)]: (SmsSubmitArg)[_K] }): SmsSubmitArg {
         return new SmsSubmitArg(_o.destinationAddress, _o.originatingAddress, _o.messageReference, _o.smSubmitParameter, _o.userData, _o.smsExtension);
     }
-
 
 }
 
@@ -222,6 +215,5 @@ function _encode_SmsSubmitArg (value: SmsSubmitArg, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_SmsSubmitArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { AocRateArg, _decode_AocRateArg, _encode_AocRateArg } from "../SS-AOC-Operations-asn1-97/AocRateArg.ta.mjs";
-// export { AocRateArg, _decode_AocRateArg, _encode_AocRateArg } from "../SS-AOC-Operations-asn1-97/AocRateArg.ta.mjs";
-
 
 /**
  * @summary aocRate

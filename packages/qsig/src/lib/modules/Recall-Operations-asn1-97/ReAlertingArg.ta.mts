@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
-// export { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { ReAlertingArg_argumentExtension, _decode_ReAlertingArg_argumentExtension, _encode_ReAlertingArg_argumentExtension } from "../Recall-Operations-asn1-97/ReAlertingArg-argumentExtension.ta.mjs";
-// export { ReAlertingArg_argumentExtension, _decode_ReAlertingArg_argumentExtension, _encode_ReAlertingArg_argumentExtension } from "../Recall-Operations-asn1-97/ReAlertingArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary ReAlertingArg
@@ -78,7 +74,6 @@ class ReAlertingArg {
     public static _from_object (_o: { [_K in keyof (ReAlertingArg)]: (ReAlertingArg)[_K] }): ReAlertingArg {
         return new ReAlertingArg(_o.alertedNumber, _o.alertedName, _o.argumentExtension);
     }
-
 
 }
 
@@ -183,6 +178,5 @@ function _encode_ReAlertingArg (value: ReAlertingArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_ReAlertingArg(value, elGetter);
 }
-
 
 /* eslint-enable */

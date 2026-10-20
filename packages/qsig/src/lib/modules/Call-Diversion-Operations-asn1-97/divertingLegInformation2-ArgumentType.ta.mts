@@ -8,14 +8,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiversionReason, _decode_DiversionReason, _encode_DiversionReason, _enum_for_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
-// export { DiversionReason, _enum_for_DiversionReason, DiversionReason_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfu /* IMPORTED_LONG_ENUMERATION_ITEM */, cfu /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfb /* IMPORTED_LONG_ENUMERATION_ITEM */, cfb /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfnr /* IMPORTED_LONG_ENUMERATION_ITEM */, cfnr /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DiversionReason, _encode_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
 import { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
-// export { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { _decode_divertingLegInformation2_ArgumentType_extension, _encode_divertingLegInformation2_ArgumentType_extension, divertingLegInformation2_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation2-ArgumentType-extension.ta.mjs";
-// export { divertingLegInformation2_ArgumentType_extension, _decode_divertingLegInformation2_ArgumentType_extension, _encode_divertingLegInformation2_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation2-ArgumentType-extension.ta.mjs";
-
 
 /**
  * @summary divertingLegInformation2_ArgumentType
@@ -280,6 +275,5 @@ function _encode_divertingLegInformation2_ArgumentType (value: divertingLegInfor
 }; }
     return _cached_encoder_for_divertingLegInformation2_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

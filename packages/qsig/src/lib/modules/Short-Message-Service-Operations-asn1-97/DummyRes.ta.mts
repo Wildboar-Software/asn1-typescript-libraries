@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-// export { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-
 
 /**
  * @summary DummyRes
@@ -61,6 +59,5 @@ function _encode_DummyRes (value: DummyRes, elGetter: $.ASN1Encoder<any>): _Elem
 }, $.BER); }
     return _cached_encoder_for_DummyRes(value, elGetter);
 }
-
 
 /* eslint-enable */

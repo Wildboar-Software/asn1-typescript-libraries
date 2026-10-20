@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthSessionKey, _decode_AuthSessionKey, _encode_AuthSessionKey } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKey.ta.mjs";
-// export { AuthSessionKey, _decode_AuthSessionKey, _encode_AuthSessionKey } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKey.ta.mjs";
 import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
-// export { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
-
 
 /**
  * @summary AuthSessionKeyInfo
@@ -64,7 +61,6 @@ class AuthSessionKeyInfo {
     public static _from_object (_o: { [_K in keyof (AuthSessionKeyInfo)]: (AuthSessionKeyInfo)[_K] }): AuthSessionKeyInfo {
         return new AuthSessionKeyInfo(_o.authSessionKey, _o.calculationParam);
     }
-
 
 }
 
@@ -157,6 +153,5 @@ function _encode_AuthSessionKeyInfo (value: AuthSessionKeyInfo, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_AuthSessionKeyInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

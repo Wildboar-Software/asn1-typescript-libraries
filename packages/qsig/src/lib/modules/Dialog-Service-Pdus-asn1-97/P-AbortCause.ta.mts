@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary P_AbortCause
  * @description
@@ -140,6 +138,5 @@ function _encode_P_AbortCause (value: P_AbortCause, elGetter: $.ASN1Encoder<any>
     if (!_cached_encoder_for_P_AbortCause) { _cached_encoder_for_P_AbortCause = $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER); }
     return _cached_encoder_for_P_AbortCause(value, elGetter);
 }
-
 
 /* eslint-enable */

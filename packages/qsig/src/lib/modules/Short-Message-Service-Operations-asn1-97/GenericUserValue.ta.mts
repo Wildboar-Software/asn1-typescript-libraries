@@ -9,8 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary GenericUserValue
  * @description
@@ -68,7 +66,6 @@ class GenericUserValue {
     public static _from_object (_o: { [_K in keyof (GenericUserValue)]: (GenericUserValue)[_K] }): GenericUserValue {
         return new GenericUserValue(_o.parameterValue, _o.genericUserData);
     }
-
 
 }
 
@@ -161,6 +158,5 @@ function _encode_GenericUserValue (value: GenericUserValue, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_GenericUserValue(value, elGetter);
 }
-
 
 /* eslint-enable */

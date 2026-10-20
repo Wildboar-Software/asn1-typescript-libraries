@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubaddressInformation, _decode_SubaddressInformation, _encode_SubaddressInformation } from "../Addressing-Data-Elements-asn1-97/SubaddressInformation.ta.mjs";
-// export { SubaddressInformation, _decode_SubaddressInformation, _encode_SubaddressInformation } from "../Addressing-Data-Elements-asn1-97/SubaddressInformation.ta.mjs";
-
 
 /**
  * @summary UserSpecifiedSubaddress
@@ -63,7 +61,6 @@ class UserSpecifiedSubaddress {
     public static _from_object (_o: { [_K in keyof (UserSpecifiedSubaddress)]: (UserSpecifiedSubaddress)[_K] }): UserSpecifiedSubaddress {
         return new UserSpecifiedSubaddress(_o.subaddressInformation, _o.oddCountIndicator);
     }
-
 
 }
 
@@ -159,6 +156,5 @@ function _encode_UserSpecifiedSubaddress (value: UserSpecifiedSubaddress, elGett
 }; }
     return _cached_encoder_for_UserSpecifiedSubaddress(value, elGetter);
 }
-
 
 /* eslint-enable */

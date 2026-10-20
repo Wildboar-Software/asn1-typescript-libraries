@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CurrencyAmount, _decode_CurrencyAmount, _encode_CurrencyAmount } from "../SS-AOC-Operations-asn1-97/CurrencyAmount.ta.mjs";
-// export { CurrencyAmount, _decode_CurrencyAmount, _encode_CurrencyAmount } from "../SS-AOC-Operations-asn1-97/CurrencyAmount.ta.mjs";
 import { Multiplier, _decode_Multiplier, _encode_Multiplier, _enum_for_Multiplier } from "../SS-AOC-Operations-asn1-97/Multiplier.ta.mjs";
-// export { Multiplier, _enum_for_Multiplier, Multiplier_oneThousandth /* IMPORTED_LONG_ENUMERATION_ITEM */, oneThousandth /* IMPORTED_SHORT_ENUMERATION_ITEM */, Multiplier_oneHundredth /* IMPORTED_LONG_ENUMERATION_ITEM */, oneHundredth /* IMPORTED_SHORT_ENUMERATION_ITEM */, Multiplier_oneTenth /* IMPORTED_LONG_ENUMERATION_ITEM */, oneTenth /* IMPORTED_SHORT_ENUMERATION_ITEM */, Multiplier_one /* IMPORTED_LONG_ENUMERATION_ITEM */, one /* IMPORTED_SHORT_ENUMERATION_ITEM */, Multiplier_ten /* IMPORTED_LONG_ENUMERATION_ITEM */, ten /* IMPORTED_SHORT_ENUMERATION_ITEM */, Multiplier_hundred /* IMPORTED_LONG_ENUMERATION_ITEM */, hundred /* IMPORTED_SHORT_ENUMERATION_ITEM */, Multiplier_thousand /* IMPORTED_LONG_ENUMERATION_ITEM */, thousand /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Multiplier, _encode_Multiplier } from "../SS-AOC-Operations-asn1-97/Multiplier.ta.mjs";
-
 
 /**
  * @summary Amount
@@ -163,6 +160,5 @@ function _encode_Amount (value: Amount, elGetter: $.ASN1Encoder<any>): _Element 
 }; }
     return _cached_encoder_for_Amount(value, elGetter);
 }
-
 
 /* eslint-enable */

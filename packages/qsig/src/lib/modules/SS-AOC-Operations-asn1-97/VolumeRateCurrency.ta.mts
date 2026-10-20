@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
-// export { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
 import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-// export { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
 import { VolumeUnit, _decode_VolumeUnit, _encode_VolumeUnit, _enum_for_VolumeUnit } from "../SS-AOC-Operations-asn1-97/VolumeUnit.ta.mjs";
-// export { VolumeUnit, _enum_for_VolumeUnit, VolumeUnit_octet /* IMPORTED_LONG_ENUMERATION_ITEM */, octet /* IMPORTED_SHORT_ENUMERATION_ITEM */, VolumeUnit_segment /* IMPORTED_LONG_ENUMERATION_ITEM */, segment /* IMPORTED_SHORT_ENUMERATION_ITEM */, VolumeUnit_message /* IMPORTED_LONG_ENUMERATION_ITEM */, message /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_VolumeUnit, _encode_VolumeUnit } from "../SS-AOC-Operations-asn1-97/VolumeUnit.ta.mjs";
-
 
 /**
  * @summary VolumeRateCurrency
@@ -180,6 +176,5 @@ function _encode_VolumeRateCurrency (value: VolumeRateCurrency, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_VolumeRateCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

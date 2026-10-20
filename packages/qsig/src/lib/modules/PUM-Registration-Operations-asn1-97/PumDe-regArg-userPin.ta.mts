@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-Operations-asn1-97/UserPin.ta.mjs";
-// export { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-Operations-asn1-97/UserPin.ta.mjs";
-
 
 /**
  * @summary PumDe_regArg_userPin
@@ -60,6 +58,5 @@ function _encode_PumDe_regArg_userPin (value: PumDe_regArg_userPin, elGetter: $.
 }, $.BER); }
     return _cached_encoder_for_PumDe_regArg_userPin(value, elGetter);
 }
-
 
 /* eslint-enable */

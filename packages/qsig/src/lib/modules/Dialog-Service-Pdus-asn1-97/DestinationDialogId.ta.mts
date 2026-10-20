@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary DestinationDialogId
  * @description
@@ -54,6 +52,5 @@ function _encode_DestinationDialogId (value: DestinationDialogId, elGetter: $.AS
     if (!_cached_encoder_for_DestinationDialogId) { _cached_encoder_for_DestinationDialogId = $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER); }
     return _cached_encoder_for_DestinationDialogId(value, elGetter);
 }
-
 
 /* eslint-enable */

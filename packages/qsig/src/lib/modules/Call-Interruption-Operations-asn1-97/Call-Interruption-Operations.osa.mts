@@ -1,11 +1,7 @@
 /* eslint-disable */
 import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { callInterruptionRequest } from "../Call-Interruption-Operations-asn1-97/callInterruptionRequest.oa.mjs";
-// export { callInterruptionRequest } from "../Call-Interruption-Operations-asn1-97/callInterruptionRequest.oa.mjs";
 import { callProtectionRequest } from "../Call-Interruption-Operations-asn1-97/callProtectionRequest.oa.mjs";
-// export { callProtectionRequest } from "../Call-Interruption-Operations-asn1-97/callProtectionRequest.oa.mjs";
-
 
 /**
  * @summary Call_Interruption_Operations

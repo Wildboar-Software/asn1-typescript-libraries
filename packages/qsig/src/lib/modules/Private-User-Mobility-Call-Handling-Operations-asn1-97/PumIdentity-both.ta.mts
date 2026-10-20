@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-
 
 /**
  * @summary PumIdentity_both
@@ -64,7 +61,6 @@ class PumIdentity_both {
     public static _from_object (_o: { [_K in keyof (PumIdentity_both)]: (PumIdentity_both)[_K] }): PumIdentity_both {
         return new PumIdentity_both(_o.pisnNumber, _o.alternativeId);
     }
-
 
 }
 
@@ -157,6 +153,5 @@ function _encode_PumIdentity_both (value: PumIdentity_both, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_PumIdentity_both(value, elGetter);
 }
-
 
 /* eslint-enable */

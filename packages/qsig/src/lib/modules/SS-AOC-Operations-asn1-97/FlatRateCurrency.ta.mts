@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
-// export { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
 import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-// export { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-
 
 /**
  * @summary FlatRateCurrency
@@ -64,7 +61,6 @@ class FlatRateCurrency {
     public static _from_object (_o: { [_K in keyof (FlatRateCurrency)]: (FlatRateCurrency)[_K] }): FlatRateCurrency {
         return new FlatRateCurrency(_o.fRCurrency, _o.fRAmount);
     }
-
 
 }
 
@@ -157,6 +153,5 @@ function _encode_FlatRateCurrency (value: FlatRateCurrency, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_FlatRateCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

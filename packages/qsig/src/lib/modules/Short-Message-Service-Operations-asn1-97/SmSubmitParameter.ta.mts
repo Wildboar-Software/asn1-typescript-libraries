@@ -7,10 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
 import { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriod.ta.mjs";
-// export { ValidityPeriod, _decode_ValidityPeriod, _encode_ValidityPeriod } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriod.ta.mjs";
-
 
 /**
  * @summary SmSubmitParameter
@@ -229,6 +226,5 @@ function _encode_SmSubmitParameter (value: SmSubmitParameter, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_SmSubmitParameter(value, elGetter);
 }
-
 
 /* eslint-enable */

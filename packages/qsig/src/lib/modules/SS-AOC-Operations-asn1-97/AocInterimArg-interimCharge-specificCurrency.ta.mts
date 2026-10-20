@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordedCurrency, _decode_RecordedCurrency, _encode_RecordedCurrency } from "../SS-AOC-Operations-asn1-97/RecordedCurrency.ta.mjs";
-// export { RecordedCurrency, _decode_RecordedCurrency, _encode_RecordedCurrency } from "../SS-AOC-Operations-asn1-97/RecordedCurrency.ta.mjs";
 import { InterimBillingId, _decode_InterimBillingId, _encode_InterimBillingId, _enum_for_InterimBillingId } from "../SS-AOC-Operations-asn1-97/InterimBillingId.ta.mjs";
-// export { InterimBillingId, _enum_for_InterimBillingId, InterimBillingId_normalCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, normalCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterimBillingId_creditCardCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, creditCardCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InterimBillingId, _encode_InterimBillingId } from "../SS-AOC-Operations-asn1-97/InterimBillingId.ta.mjs";
-
 
 /**
  * @summary AocInterimArg_interimCharge_specificCurrency
@@ -166,6 +163,5 @@ function _encode_AocInterimArg_interimCharge_specificCurrency (value: AocInterim
 }; }
     return _cached_encoder_for_AocInterimArg_interimCharge_specificCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WtmUserId, _decode_WtmUserId, _encode_WtmUserId } from "../WTM-Location-Registration-Operations-asn1-97/WtmUserId.ta.mjs";
-// export { WtmUserId, _decode_WtmUserId, _encode_WtmUserId } from "../WTM-Location-Registration-Operations-asn1-97/WtmUserId.ta.mjs";
 import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
-// export { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
-
 
 /**
  * @summary PisnEnqRes
@@ -64,7 +61,6 @@ class PisnEnqRes {
     public static _from_object (_o: { [_K in keyof (PisnEnqRes)]: (PisnEnqRes)[_K] }): PisnEnqRes {
         return new PisnEnqRes(_o.wtmUserId, _o.resExtension);
     }
-
 
 }
 
@@ -160,6 +156,5 @@ function _encode_PisnEnqRes (value: PisnEnqRes, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_PisnEnqRes(value, elGetter);
 }
-
 
 /* eslint-enable */

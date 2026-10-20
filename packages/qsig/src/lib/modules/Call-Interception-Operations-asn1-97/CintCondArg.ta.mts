@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Condition, _decode_Condition, _encode_Condition } from "../Call-Interception-Operations-asn1-97/Condition.ta.mjs";
-// export { Condition, Condition_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintBus /* IMPORTED_LONG_NAMED_INTEGER */, cintBus /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintCug /* IMPORTED_LONG_NAMED_INTEGER */, cintCug /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintDnd /* IMPORTED_LONG_NAMED_INTEGER */, cintDnd /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintIbd /* IMPORTED_LONG_NAMED_INTEGER */, cintIbd /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintInn /* IMPORTED_LONG_NAMED_INTEGER */, cintInn /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintMob1 /* IMPORTED_LONG_NAMED_INTEGER */, cintMob1 /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintMob2 /* IMPORTED_LONG_NAMED_INTEGER */, cintMob2 /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintMob3 /* IMPORTED_LONG_NAMED_INTEGER */, cintMob3 /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintNcmp /* IMPORTED_LONG_NAMED_INTEGER */, cintNcmp /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintNcong /* IMPORTED_LONG_NAMED_INTEGER */, cintNcong /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintOos /* IMPORTED_LONG_NAMED_INTEGER */, cintOos /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintRrs /* IMPORTED_LONG_NAMED_INTEGER */, cintRrs /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintTrans /* IMPORTED_LONG_NAMED_INTEGER */, cintTrans /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintUpl /* IMPORTED_LONG_NAMED_INTEGER */, cintUpl /* IMPORTED_SHORT_NAMED_INTEGER */, Condition_cintInvDiv /* IMPORTED_LONG_NAMED_INTEGER */, cintInvDiv /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Condition, _encode_Condition } from "../Call-Interception-Operations-asn1-97/Condition.ta.mjs";
 import { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
-// export { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { CintExtension, _decode_CintExtension, _encode_CintExtension } from "../Call-Interception-Operations-asn1-97/CintExtension.ta.mjs";
-// export { CintExtension, _decode_CintExtension, _encode_CintExtension } from "../Call-Interception-Operations-asn1-97/CintExtension.ta.mjs";
-
 
 /**
  * @summary CintCondArg
@@ -95,7 +90,6 @@ class CintCondArg {
     public static _from_object (_o: { [_K in keyof (CintCondArg)]: (CintCondArg)[_K] }): CintCondArg {
         return new CintCondArg(_o.interceptionCause, _o.originalCalledNumber, _o.calledName, _o.originalCalledName, _o.extension);
     }
-
 
 }
 
@@ -212,6 +206,5 @@ function _encode_CintCondArg (value: CintCondArg, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_CintCondArg(value, elGetter);
 }
-
 
 /* eslint-enable */

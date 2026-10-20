@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresentationAllowedIndicator, _decode_PresentationAllowedIndicator, _encode_PresentationAllowedIndicator } from "../Addressing-Data-Elements-asn1-97/PresentationAllowedIndicator.ta.mjs";
-// export { PresentationAllowedIndicator, _decode_PresentationAllowedIndicator, _encode_PresentationAllowedIndicator } from "../Addressing-Data-Elements-asn1-97/PresentationAllowedIndicator.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { _decode_divertingLegInformation3_ArgumentType_extension, _encode_divertingLegInformation3_ArgumentType_extension, divertingLegInformation3_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation3-ArgumentType-extension.ta.mjs";
-// export { divertingLegInformation3_ArgumentType_extension, _decode_divertingLegInformation3_ArgumentType_extension, _encode_divertingLegInformation3_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation3-ArgumentType-extension.ta.mjs";
-
 
 /**
  * @summary divertingLegInformation3_ArgumentType
@@ -78,7 +74,6 @@ class divertingLegInformation3_ArgumentType {
     public static _from_object (_o: { [_K in keyof (divertingLegInformation3_ArgumentType)]: (divertingLegInformation3_ArgumentType)[_K] }): divertingLegInformation3_ArgumentType {
         return new divertingLegInformation3_ArgumentType(_o.presentationAllowedIndicator, _o.redirectionName, _o.extension);
     }
-
 
 }
 
@@ -181,6 +176,5 @@ function _encode_divertingLegInformation3_ArgumentType (value: divertingLegInfor
 }; }
     return _cached_encoder_for_divertingLegInformation3_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

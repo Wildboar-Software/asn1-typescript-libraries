@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateTypeOfNumber, _decode_PrivateTypeOfNumber, _encode_PrivateTypeOfNumber, _enum_for_PrivateTypeOfNumber } from "../Addressing-Data-Elements-asn1-97/PrivateTypeOfNumber.ta.mjs";
-// export { PrivateTypeOfNumber, _enum_for_PrivateTypeOfNumber, PrivateTypeOfNumber_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_level2RegionalNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, level2RegionalNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_level1RegionalNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, level1RegionalNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_pISNSpecificNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, pISNSpecificNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_localNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, localNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PrivateTypeOfNumber_abbreviatedNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, abbreviatedNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PrivateTypeOfNumber, _encode_PrivateTypeOfNumber } from "../Addressing-Data-Elements-asn1-97/PrivateTypeOfNumber.ta.mjs";
 import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
-// export { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
-
 
 /**
  * @summary PrivatePartyNumber
@@ -163,6 +160,5 @@ function _encode_PrivatePartyNumber (value: PrivatePartyNumber, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_PrivatePartyNumber(value, elGetter);
 }
-
 
 /* eslint-enable */

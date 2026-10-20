@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-// export { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-
 
 /**
  * @summary Address
@@ -64,7 +61,6 @@ class Address {
     public static _from_object (_o: { [_K in keyof (Address)]: (Address)[_K] }): Address {
         return new Address(_o.partyNumber, _o.partySubaddress);
     }
-
 
 }
 
@@ -160,6 +156,5 @@ function _encode_Address (value: Address, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_Address(value, elGetter);
 }
-
 
 /* eslint-enable */

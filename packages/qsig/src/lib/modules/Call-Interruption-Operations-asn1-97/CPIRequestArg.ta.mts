@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CPICapabilityLevel, _decode_CPICapabilityLevel, _encode_CPICapabilityLevel, _enum_for_CPICapabilityLevel } from "../Call-Interruption-Operations-asn1-97/CPICapabilityLevel.ta.mjs";
-// export { CPICapabilityLevel, _enum_for_CPICapabilityLevel, CPICapabilityLevel_interruptionLowPriority /* IMPORTED_LONG_ENUMERATION_ITEM */, interruptionLowPriority /* IMPORTED_SHORT_ENUMERATION_ITEM */, CPICapabilityLevel_interruptionMediumPriority /* IMPORTED_LONG_ENUMERATION_ITEM */, interruptionMediumPriority /* IMPORTED_SHORT_ENUMERATION_ITEM */, CPICapabilityLevel_interruptionHighPriority /* IMPORTED_LONG_ENUMERATION_ITEM */, interruptionHighPriority /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CPICapabilityLevel, _encode_CPICapabilityLevel } from "../Call-Interruption-Operations-asn1-97/CPICapabilityLevel.ta.mjs";
 import { CPIRequestArg_argumentExtension, _decode_CPIRequestArg_argumentExtension, _encode_CPIRequestArg_argumentExtension } from "../Call-Interruption-Operations-asn1-97/CPIRequestArg-argumentExtension.ta.mjs";
-// export { CPIRequestArg_argumentExtension, _decode_CPIRequestArg_argumentExtension, _encode_CPIRequestArg_argumentExtension } from "../Call-Interruption-Operations-asn1-97/CPIRequestArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary CPIRequestArg
@@ -169,6 +166,5 @@ function _encode_CPIRequestArg (value: CPIRequestArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_CPIRequestArg(value, elGetter);
 }
-
 
 /* eslint-enable */

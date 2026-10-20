@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary UserAbortInformation
@@ -49,6 +47,5 @@ function _encode_UserAbortInformation (value: UserAbortInformation, elGetter: $.
     if (!_cached_encoder_for_UserAbortInformation) { _cached_encoder_for_UserAbortInformation = $._encode_implicit(_TagClass.context, 3, () => _encode_Extension, $.BER); }
     return _cached_encoder_for_UserAbortInformation(value, elGetter);
 }
-
 
 /* eslint-enable */

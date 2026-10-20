@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PumIdentity, _decode_PumIdentity, _encode_PumIdentity } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumIdentity.ta.mjs";
-// export { PumIdentity, _decode_PumIdentity, _encode_PumIdentity } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumIdentity.ta.mjs";
 import { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumiExtension.ta.mjs";
-// export { PumiExtension, _decode_PumiExtension, _encode_PumiExtension } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumiExtension.ta.mjs";
-
 
 /**
  * @summary InformArg
@@ -66,7 +63,6 @@ class InformArg {
     public static _from_object (_o: { [_K in keyof (InformArg)]: (InformArg)[_K] }): InformArg {
         return new InformArg(_o.pumIdentity, _o.argExtension);
     }
-
 
 }
 
@@ -162,6 +158,5 @@ function _encode_InformArg (value: InformArg, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_InformArg(value, elGetter);
 }
-
 
 /* eslint-enable */

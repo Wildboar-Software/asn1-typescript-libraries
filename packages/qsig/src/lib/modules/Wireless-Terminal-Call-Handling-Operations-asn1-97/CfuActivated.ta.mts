@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
-// export { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
 import { SubscriptionOption, _decode_SubscriptionOption, _encode_SubscriptionOption, _enum_for_SubscriptionOption } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/SubscriptionOption.ta.mjs";
-// export { SubscriptionOption, _enum_for_SubscriptionOption, SubscriptionOption_noNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, noNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionOption_notificationWithoutDivertedToNr /* IMPORTED_LONG_ENUMERATION_ITEM */, notificationWithoutDivertedToNr /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionOption_notificationWithDivertedToNr /* IMPORTED_LONG_ENUMERATION_ITEM */, notificationWithDivertedToNr /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriptionOption, _encode_SubscriptionOption } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/SubscriptionOption.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-// export { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-
 
 /**
  * @summary CfuActivated
@@ -200,6 +195,5 @@ function _encode_CfuActivated (value: CfuActivated, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CfuActivated(value, elGetter);
 }
-
 
 /* eslint-enable */

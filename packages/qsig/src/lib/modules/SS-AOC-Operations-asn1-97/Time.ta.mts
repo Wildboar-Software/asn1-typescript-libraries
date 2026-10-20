@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LengthOfTimeUnit, _decode_LengthOfTimeUnit, _encode_LengthOfTimeUnit } from "../SS-AOC-Operations-asn1-97/LengthOfTimeUnit.ta.mjs";
-// export { LengthOfTimeUnit, _decode_LengthOfTimeUnit, _encode_LengthOfTimeUnit } from "../SS-AOC-Operations-asn1-97/LengthOfTimeUnit.ta.mjs";
 import { Scale, _decode_Scale, _encode_Scale, _enum_for_Scale } from "../SS-AOC-Operations-asn1-97/Scale.ta.mjs";
-// export { Scale, _enum_for_Scale, Scale_oneHundredthSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, oneHundredthSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Scale_oneTenthSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, oneTenthSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Scale_oneSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, oneSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Scale_tenSeconds /* IMPORTED_LONG_ENUMERATION_ITEM */, tenSeconds /* IMPORTED_SHORT_ENUMERATION_ITEM */, Scale_oneMinute /* IMPORTED_LONG_ENUMERATION_ITEM */, oneMinute /* IMPORTED_SHORT_ENUMERATION_ITEM */, Scale_oneHour /* IMPORTED_LONG_ENUMERATION_ITEM */, oneHour /* IMPORTED_SHORT_ENUMERATION_ITEM */, Scale_twentyFourHours /* IMPORTED_LONG_ENUMERATION_ITEM */, twentyFourHours /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Scale, _encode_Scale } from "../SS-AOC-Operations-asn1-97/Scale.ta.mjs";
-
 
 /**
  * @summary Time
@@ -163,6 +160,5 @@ function _encode_Time (value: Time, elGetter: $.ASN1Encoder<any>): _Element {
 }; }
     return _cached_encoder_for_Time(value, elGetter);
 }
-
 
 /* eslint-enable */

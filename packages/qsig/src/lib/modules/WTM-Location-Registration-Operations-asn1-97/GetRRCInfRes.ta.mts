@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../WTM-Location-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../WTM-Location-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
 import { RRClass, _decode_RRClass, _encode_RRClass } from "../WTM-Location-Registration-Operations-asn1-97/RRClass.ta.mjs";
-// export { RRClass, _decode_RRClass, _encode_RRClass } from "../WTM-Location-Registration-Operations-asn1-97/RRClass.ta.mjs";
 import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
-// export { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
-
 
 /**
  * @summary GetRRCInfRes
@@ -75,7 +71,6 @@ class GetRRCInfRes {
     public static _from_object (_o: { [_K in keyof (GetRRCInfRes)]: (GetRRCInfRes)[_K] }): GetRRCInfRes {
         return new GetRRCInfRes(_o.alternativeId, _o.rrClass, _o.argExtension);
     }
-
 
 }
 
@@ -180,6 +175,5 @@ function _encode_GetRRCInfRes (value: GetRRCInfRes, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_GetRRCInfRes(value, elGetter);
 }
-
 
 /* eslint-enable */

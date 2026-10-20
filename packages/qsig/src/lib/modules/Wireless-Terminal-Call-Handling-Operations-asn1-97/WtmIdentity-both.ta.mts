@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-
 
 /**
  * @summary WtmIdentity_both
@@ -64,7 +61,6 @@ class WtmIdentity_both {
     public static _from_object (_o: { [_K in keyof (WtmIdentity_both)]: (WtmIdentity_both)[_K] }): WtmIdentity_both {
         return new WtmIdentity_both(_o.pisnNumber, _o.alternativeId);
     }
-
 
 }
 
@@ -157,6 +153,5 @@ function _encode_WtmIdentity_both (value: WtmIdentity_both, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_WtmIdentity_both(value, elGetter);
 }
-
 
 /* eslint-enable */

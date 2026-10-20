@@ -9,8 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-
 
 /**
  * @summary MsgCentreId
@@ -80,6 +78,5 @@ function _encode_MsgCentreId (value: MsgCentreId, elGetter: $.ASN1Encoder<any>):
 }, $.BER); }
     return _cached_encoder_for_MsgCentreId(value, elGetter);
 }
-
 
 /* eslint-enable */

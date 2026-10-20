@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MWIInterrogateResElt, _decode_MWIInterrogateResElt, _encode_MWIInterrogateResElt } from "../MWI-Operations-asn1-97/MWIInterrogateResElt.ta.mjs";
-// export { MWIInterrogateResElt, _decode_MWIInterrogateResElt, _encode_MWIInterrogateResElt } from "../MWI-Operations-asn1-97/MWIInterrogateResElt.ta.mjs";
-
 
 /**
  * @summary MWIInterrogateRes
@@ -53,6 +51,5 @@ function _encode_MWIInterrogateRes (value: MWIInterrogateRes, elGetter: $.ASN1En
     if (!_cached_encoder_for_MWIInterrogateRes) { _cached_encoder_for_MWIInterrogateRes = $._encodeSequenceOf<MWIInterrogateResElt>(() => _encode_MWIInterrogateResElt, $.BER); }
     return _cached_encoder_for_MWIInterrogateRes(value, elGetter);
 }
-
 
 /* eslint-enable */

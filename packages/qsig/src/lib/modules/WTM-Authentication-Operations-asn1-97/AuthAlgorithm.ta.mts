@@ -6,9 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DefinedIDs, _decode_DefinedIDs, _encode_DefinedIDs } from "../WTM-Authentication-Operations-asn1-97/DefinedIDs.ta.mjs";
-// export { AUTH_ALG } from "../WTM-Authentication-Operations-asn1-97/AUTH-ALG.oca.mjs";
-// export { AuthAlgSet } from "../WTM-Authentication-Operations-asn1-97/AuthAlgSet.osa.mjs";
-
 
 /**
  * @summary AuthAlgorithm
@@ -63,7 +60,6 @@ class AuthAlgorithm {
     public static _from_object (_o: { [_K in keyof (AuthAlgorithm)]: (AuthAlgorithm)[_K] }): AuthAlgorithm {
         return new AuthAlgorithm(_o.authAlg, _o.param);
     }
-
 
 }
 
@@ -159,6 +155,5 @@ function _encode_AuthAlgorithm (value: AuthAlgorithm, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_AuthAlgorithm(value, elGetter);
 }
-
 
 /* eslint-enable */

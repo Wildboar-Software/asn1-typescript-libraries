@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-// export { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
 import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
-// export { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
-
 
 /**
  * @summary CcOptionalArg_fullArg
@@ -108,7 +103,6 @@ class CcOptionalArg_fullArg {
     public static _from_object (_o: { [_K in keyof (CcOptionalArg_fullArg)]: (CcOptionalArg_fullArg)[_K] }): CcOptionalArg_fullArg {
         return new CcOptionalArg_fullArg(_o.numberA, _o.numberB, _o.service, _o.subaddrA, _o.subaddrB, _o.extension);
     }
-
 
 }
 
@@ -228,6 +222,5 @@ function _encode_CcOptionalArg_fullArg (value: CcOptionalArg_fullArg, elGetter: 
 }; }
     return _cached_encoder_for_CcOptionalArg_fullArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SwitchingSubDomainName, _decode_SwitchingSubDomainName, _encode_SwitchingSubDomainName } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/SwitchingSubDomainName.ta.mjs";
-// export { SwitchingSubDomainName, _decode_SwitchingSubDomainName, _encode_SwitchingSubDomainName } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/SwitchingSubDomainName.ta.mjs";
 import { CallIdentificationData_linkageID, _decode_CallIdentificationData_linkageID, _encode_CallIdentificationData_linkageID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationData-linkageID.ta.mjs";
-// export { CallIdentificationData_linkageID, _decode_CallIdentificationData_linkageID, _encode_CallIdentificationData_linkageID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationData-linkageID.ta.mjs";
 import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/TimeStamp.ta.mjs";
-// export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/TimeStamp.ta.mjs";
-
 
 /**
  * @summary CallIdentificationData
@@ -79,7 +75,6 @@ class CallIdentificationData {
     public static _from_object (_o: { [_K in keyof (CallIdentificationData)]: (CallIdentificationData)[_K] }): CallIdentificationData {
         return new CallIdentificationData(_o.switchingSubDomainName, _o.linkageID, _o.timeStamp);
     }
-
 
 }
 
@@ -182,6 +177,5 @@ function _encode_CallIdentificationData (value: CallIdentificationData, elGetter
 }; }
     return _cached_encoder_for_CallIdentificationData(value, elGetter);
 }
-
 
 /* eslint-enable */

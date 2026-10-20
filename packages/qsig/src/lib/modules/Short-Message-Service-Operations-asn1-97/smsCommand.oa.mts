@@ -1,16 +1,9 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { SmsCommandArg, _decode_SmsCommandArg, _encode_SmsCommandArg } from "../Short-Message-Service-Operations-asn1-97/SmsCommandArg.ta.mjs";
-// export { SmsCommandArg, _decode_SmsCommandArg, _encode_SmsCommandArg } from "../Short-Message-Service-Operations-asn1-97/SmsCommandArg.ta.mjs";
 import { SmsCommandRes, _decode_SmsCommandRes, _encode_SmsCommandRes } from "../Short-Message-Service-Operations-asn1-97/SmsCommandRes.ta.mjs";
-// export { SmsCommandRes, _decode_SmsCommandRes, _encode_SmsCommandRes } from "../Short-Message-Service-Operations-asn1-97/SmsCommandRes.ta.mjs";
 import { smsCommandError } from "../Short-Message-Service-Operations-asn1-97/smsCommandError.oa.mjs";
-// export { smsCommandError } from "../Short-Message-Service-Operations-asn1-97/smsCommandError.oa.mjs";
 import { unspecified } from "../Short-Message-Service-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Short-Message-Service-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary smsCommand

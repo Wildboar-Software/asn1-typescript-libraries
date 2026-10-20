@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
-// export { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
-
 
 /**
  * @summary CcRequestRes
@@ -190,6 +188,5 @@ function _encode_CcRequestRes (value: CcRequestRes, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CcRequestRes(value, elGetter);
 }
-
 
 /* eslint-enable */

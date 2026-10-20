@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CheckResult, _decode_CheckResult, _encode_CheckResult, _enum_for_CheckResult } from "../WTM-Location-Registration-Operations-asn1-97/CheckResult.ta.mjs";
-// export { CheckResult, _enum_for_CheckResult, CheckResult_locInfChk_correct /* IMPORTED_LONG_ENUMERATION_ITEM */, locInfChk_correct /* IMPORTED_SHORT_ENUMERATION_ITEM */, CheckResult_locInfChk_incorrect /* IMPORTED_LONG_ENUMERATION_ITEM */, locInfChk_incorrect /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CheckResult, _encode_CheckResult } from "../WTM-Location-Registration-Operations-asn1-97/CheckResult.ta.mjs";
 import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
-// export { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
-
 
 /**
  * @summary LocInfoCheckRes
@@ -166,6 +163,5 @@ function _encode_LocInfoCheckRes (value: LocInfoCheckRes, elGetter: $.ASN1Encode
 }; }
     return _cached_encoder_for_LocInfoCheckRes(value, elGetter);
 }
-
 
 /* eslint-enable */

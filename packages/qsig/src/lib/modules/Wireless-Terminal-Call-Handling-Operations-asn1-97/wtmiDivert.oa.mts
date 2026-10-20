@@ -1,16 +1,9 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { DivertArg, _decode_DivertArg, _encode_DivertArg } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/DivertArg.ta.mjs";
-// export { DivertArg, _decode_DivertArg, _encode_DivertArg } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/DivertArg.ta.mjs";
 import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/DummyRes.ta.mjs";
-// export { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/DummyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { unspecified } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary wtmiDivert

@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../WTM-Authentication-Operations-asn1-97/AuthAlgorithm.ta.mjs";
-// export { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../WTM-Authentication-Operations-asn1-97/AuthAlgorithm.ta.mjs";
 import { WtatParamInfo_wtatParamInfoChoice, _decode_WtatParamInfo_wtatParamInfoChoice, _encode_WtatParamInfo_wtatParamInfoChoice } from "../WTM-Authentication-Operations-asn1-97/WtatParamInfo-wtatParamInfoChoice.ta.mjs";
-// export { WtatParamInfo_wtatParamInfoChoice, _decode_WtatParamInfo_wtatParamInfoChoice, _encode_WtatParamInfo_wtatParamInfoChoice } from "../WTM-Authentication-Operations-asn1-97/WtatParamInfo-wtatParamInfoChoice.ta.mjs";
-
 
 /**
  * @summary WtatParamInfo
@@ -69,7 +66,6 @@ class WtatParamInfo {
     public static _from_object (_o: { [_K in keyof (WtatParamInfo)]: (WtatParamInfo)[_K] }): WtatParamInfo {
         return new WtatParamInfo(_o.authAlgorithm, _o.wtatParamInfoChoice);
     }
-
 
 }
 
@@ -162,6 +158,5 @@ function _encode_WtatParamInfo (value: WtatParamInfo, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_WtatParamInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

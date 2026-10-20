@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary Concatenated8BitSMHeader
  * @description
@@ -82,7 +80,6 @@ class Concatenated8BitSMHeader {
     public static _from_object (_o: { [_K in keyof (Concatenated8BitSMHeader)]: (Concatenated8BitSMHeader)[_K] }): Concatenated8BitSMHeader {
         return new Concatenated8BitSMHeader(_o.concatenated8BitSMReferenceNumber, _o.maximumNumberOf8BitSMInConcatenatedSM, _o.sequenceNumberOf8BitSM);
     }
-
 
 }
 
@@ -181,6 +178,5 @@ function _encode_Concatenated8BitSMHeader (value: Concatenated8BitSMHeader, elGe
 }; }
     return _cached_encoder_for_Concatenated8BitSMHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

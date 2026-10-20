@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CalcWtatInfoUnit, _decode_CalcWtatInfoUnit, _encode_CalcWtatInfoUnit } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfoUnit.ta.mjs";
-// export { CalcWtatInfoUnit, _decode_CalcWtatInfoUnit, _encode_CalcWtatInfoUnit } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfoUnit.ta.mjs";
-
 
 /**
  * @summary CalcWtatInfo
@@ -53,6 +51,5 @@ function _encode_CalcWtatInfo (value: CalcWtatInfo, elGetter: $.ASN1Encoder<any>
     if (!_cached_encoder_for_CalcWtatInfo) { _cached_encoder_for_CalcWtatInfo = $._encodeSequenceOf<CalcWtatInfoUnit>(() => _encode_CalcWtatInfoUnit, $.BER); }
     return _cached_encoder_for_CalcWtatInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

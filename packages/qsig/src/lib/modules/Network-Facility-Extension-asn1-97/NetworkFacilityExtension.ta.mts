@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntityType, _decode_EntityType, _encode_EntityType, _enum_for_EntityType } from "../Network-Facility-Extension-asn1-97/EntityType.ta.mjs";
-// export { EntityType, _enum_for_EntityType, EntityType_endPINX /* IMPORTED_LONG_ENUMERATION_ITEM */, endPINX /* IMPORTED_SHORT_ENUMERATION_ITEM */, EntityType_anyTypeOfPINX /* IMPORTED_LONG_ENUMERATION_ITEM */, anyTypeOfPINX /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EntityType, _encode_EntityType } from "../Network-Facility-Extension-asn1-97/EntityType.ta.mjs";
 import { AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../Network-Facility-Extension-asn1-97/AddressInformation.ta.mjs";
-// export { AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../Network-Facility-Extension-asn1-97/AddressInformation.ta.mjs";
-
 
 /**
  * @summary NetworkFacilityExtension
@@ -202,6 +199,5 @@ function _encode_NetworkFacilityExtension (value: NetworkFacilityExtension, elGe
 }, $.BER); }
     return _cached_encoder_for_NetworkFacilityExtension(value, elGetter);
 }
-
 
 /* eslint-enable */

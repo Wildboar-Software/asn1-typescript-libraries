@@ -7,10 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { WtmoArg_extension, _decode_WtmoArg_extension, _encode_WtmoArg_extension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmoArg-extension.ta.mjs";
-// export { WtmoArg_extension, _decode_WtmoArg_extension, _encode_WtmoArg_extension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmoArg-extension.ta.mjs";
-
 
 /**
  * @summary WtmoArg
@@ -77,7 +74,6 @@ class WtmoArg {
     public static _from_object (_o: { [_K in keyof (WtmoArg)]: (WtmoArg)[_K] }): WtmoArg {
         return new WtmoArg(_o.destinationNumber, _o.sendingComplete, _o.extension);
     }
-
 
 }
 
@@ -182,6 +178,5 @@ function _encode_WtmoArg (value: WtmoArg, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_WtmoArg(value, elGetter);
 }
-
 
 /* eslint-enable */
