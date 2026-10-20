@@ -1,7 +1,7 @@
 {
     "name": "@wildboar/gprs-cdr",
     "type": "module",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
@@ -26,8 +26,26 @@
     "types": "./src/index.d.mts",
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
+    "exports": {
+        ".": "./src/index.mts",
+        "./CHFChargingDataTypes": "./src/lib/modules/CHFChargingDataTypes/index.mts",
+        "./CPDTChargingDataTypes": "./src/lib/modules/CPDTChargingDataTypes/index.mts",
+        "./CSChargingDataTypes": "./src/lib/modules/CSChargingDataTypes/index.mts",
+        "./ExposureFunctionAPIChargingDataTypes": "./src/lib/modules/ExposureFunctionAPIChargingDataTypes/index.mts",
+        "./GPRSChargingDataTypes": "./src/lib/modules/GPRSChargingDataTypes/index.mts",
+        "./GenericChargingDataTypes": "./src/lib/modules/GenericChargingDataTypes/index.mts",
+        "./IMSChargingDataTypes": "./src/lib/modules/IMSChargingDataTypes/index.mts",
+        "./LCSChargingDataTypes": "./src/lib/modules/LCSChargingDataTypes/index.mts",
+        "./MBMSChargingDataTypes": "./src/lib/modules/MBMSChargingDataTypes/index.mts",
+        "./MMSChargingDataTypes": "./src/lib/modules/MMSChargingDataTypes/index.mts",
+        "./MMTelChargingDataTypes": "./src/lib/modules/MMTelChargingDataTypes/index.mts",
+        "./MONTEChargingDataTypes": "./src/lib/modules/MONTEChargingDataTypes/index.mts",
+        "./POCChargingDataTypes": "./src/lib/modules/POCChargingDataTypes/index.mts",
+        "./ProSeChargingDataTypes": "./src/lib/modules/ProSeChargingDataTypes/index.mts",
+        "./SMSChargingDataTypes": "./src/lib/modules/SMSChargingDataTypes/index.mts",
+        "./shared": "./src/lib/modules/shared/index.mts"
+    },
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
-        "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
     }
 }
