@@ -127,10 +127,8 @@ function _decode_WLANOperatorId (el: _Element): WLANOperatorId {
     }
     sequence[0].name = "wLANOperatorName";
     sequence[1].name = "wLANPLMNId";
-    let wLANOperatorName!: OCTET_STRING;
-    let wLANPLMNId!: OCTET_STRING;
-    wLANOperatorName = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    wLANPLMNId = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const wLANOperatorName: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const wLANPLMNId: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new WLANOperatorId(
         wLANOperatorName,
         wLANPLMNId,

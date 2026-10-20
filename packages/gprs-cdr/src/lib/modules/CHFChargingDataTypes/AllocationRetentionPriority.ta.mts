@@ -146,12 +146,9 @@ function _decode_AllocationRetentionPriority (el: _Element): AllocationRetention
     sequence[0].name = "priorityLevel";
     sequence[1].name = "preemptionCapability";
     sequence[2].name = "preemptionVulnerability";
-    let priorityLevel!: INTEGER;
-    let preemptionCapability!: PreemptionCapability;
-    let preemptionVulnerability!: PreemptionVulnerability;
-    priorityLevel = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    preemptionCapability = $._decode_implicit<PreemptionCapability>(() => _decode_PreemptionCapability)(sequence[1]);
-    preemptionVulnerability = $._decode_implicit<PreemptionVulnerability>(() => _decode_PreemptionVulnerability)(sequence[2]);
+    const priorityLevel: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const preemptionCapability: PreemptionCapability = $._decode_implicit<PreemptionCapability>(() => _decode_PreemptionCapability)(sequence[1]);
+    const preemptionVulnerability: PreemptionVulnerability = $._decode_implicit<PreemptionVulnerability>(() => _decode_PreemptionVulnerability)(sequence[2]);
     return new AllocationRetentionPriority(
         priorityLevel,
         preemptionCapability,

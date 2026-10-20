@@ -123,10 +123,8 @@ function _decode_SubjectComponent (el: _Element): SubjectComponent {
     }
     sequence[0].name = "subjectType";
     sequence[1].name = "subjectSize";
-    let subjectType!: OCTET_STRING;
-    let subjectSize!: INTEGER;
-    subjectType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    subjectSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const subjectType: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const subjectSize: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new SubjectComponent(
         subjectType,
         subjectSize,

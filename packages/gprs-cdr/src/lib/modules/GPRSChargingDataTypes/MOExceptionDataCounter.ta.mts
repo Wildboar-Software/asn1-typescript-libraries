@@ -128,10 +128,8 @@ function _decode_MOExceptionDataCounter (el: _Element): MOExceptionDataCounter {
     }
     sequence[0].name = "counterValue";
     sequence[1].name = "counterTimestamp";
-    let counterValue!: INTEGER;
-    let counterTimestamp!: OCTET_STRING;
-    counterValue = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    counterTimestamp = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const counterValue: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const counterTimestamp: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new MOExceptionDataCounter(
         counterValue,
         counterTimestamp,

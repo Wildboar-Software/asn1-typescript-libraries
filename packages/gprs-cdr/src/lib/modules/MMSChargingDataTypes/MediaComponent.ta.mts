@@ -123,10 +123,8 @@ function _decode_MediaComponent (el: _Element): MediaComponent {
     }
     sequence[0].name = "mediaType";
     sequence[1].name = "mediaSize";
-    let mediaType!: OCTET_STRING;
-    let mediaSize!: INTEGER;
-    mediaType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    mediaSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const mediaType: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const mediaSize: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new MediaComponent(
         mediaType,
         mediaSize,

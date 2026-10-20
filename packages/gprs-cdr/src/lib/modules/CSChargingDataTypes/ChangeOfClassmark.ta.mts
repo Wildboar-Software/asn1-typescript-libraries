@@ -127,10 +127,8 @@ function _decode_ChangeOfClassmark (el: _Element): ChangeOfClassmark {
     }
     sequence[0].name = "classmark";
     sequence[1].name = "changeTime";
-    let classmark!: OCTET_STRING;
-    let changeTime!: OCTET_STRING;
-    classmark = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    changeTime = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const classmark: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const changeTime: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new ChangeOfClassmark(
         classmark,
         changeTime,

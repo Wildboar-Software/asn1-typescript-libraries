@@ -122,10 +122,8 @@ function _decode_TransmitterInfo (el: _Element): TransmitterInfo {
     }
     sequence[0].name = "sourceIPaddress";
     sequence[1].name = "proSeUEID";
-    let sourceIPaddress!: IPAddress;
-    let proSeUEID!: OCTET_STRING;
-    sourceIPaddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(sequence[0]);
-    proSeUEID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const sourceIPaddress: IPAddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(sequence[0]);
+    const proSeUEID: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new TransmitterInfo(
         sourceIPaddress,
         proSeUEID,

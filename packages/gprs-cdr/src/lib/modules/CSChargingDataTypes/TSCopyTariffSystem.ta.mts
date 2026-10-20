@@ -122,10 +122,8 @@ function _decode_TSCopyTariffSystem (el: _Element): TSCopyTariffSystem {
     }
     sequence[0].name = "oldTS";
     sequence[1].name = "newTS";
-    let oldTS!: INTEGER;
-    let newTS!: INTEGER;
-    oldTS = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    newTS = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const oldTS: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const newTS: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new TSCopyTariffSystem(
         oldTS,
         newTS,

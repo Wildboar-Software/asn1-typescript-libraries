@@ -122,10 +122,8 @@ function _decode_ServingPLMNRateControl (el: _Element): ServingPLMNRateControl {
     }
     sequence[0].name = "sPLMNDLRateControlValue";
     sequence[1].name = "sPLMNULRateControlValue";
-    let sPLMNDLRateControlValue!: INTEGER;
-    let sPLMNULRateControlValue!: INTEGER;
-    sPLMNDLRateControlValue = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    sPLMNULRateControlValue = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const sPLMNDLRateControlValue: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const sPLMNULRateControlValue: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new ServingPLMNRateControl(
         sPLMNDLRateControlValue,
         sPLMNULRateControlValue,

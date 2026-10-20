@@ -121,10 +121,8 @@ function _decode_IdValue (el: _Element): IdValue {
     }
     sequence[0].name = "id";
     sequence[1].name = "value";
-    let id!: OBJECT_IDENTIFIER;
-    let value!: _Element;
-    id = $._decodeObjectIdentifier(sequence[0]);
-    value = $._decodeAny(sequence[1]);
+    const id: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const value: _Element = $._decodeAny(sequence[1]);
     return new IdValue(
         id,
         value,

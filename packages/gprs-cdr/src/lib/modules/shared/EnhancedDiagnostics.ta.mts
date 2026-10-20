@@ -112,8 +112,7 @@ function _decode_EnhancedDiagnostics (el: _Element): EnhancedDiagnostics {
         throw new _ConstructionError("EnhancedDiagnostics contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "rANNASCause";
-    let rANNASCause!: OCTET_STRING[];
-    rANNASCause = $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString))(sequence[0]);
+    const rANNASCause: OCTET_STRING[] = $._decode_implicit<OCTET_STRING[]>(() => $._decodeSequenceOf<OCTET_STRING>(() => $._decodeOctetString))(sequence[0]);
     return new EnhancedDiagnostics(
         rANNASCause,
 

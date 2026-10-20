@@ -127,10 +127,8 @@ function _decode_PacketSwitchedAccess (el: _Element): PacketSwitchedAccess {
     }
     sequence[0].name = "gSNAddress";
     sequence[1].name = "chargingID";
-    let gSNAddress!: IPAddress;
-    let chargingID!: INTEGER;
-    gSNAddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(sequence[0]);
-    chargingID = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const gSNAddress: IPAddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(sequence[0]);
+    const chargingID: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new PacketSwitchedAccess(
         gSNAddress,
         chargingID,

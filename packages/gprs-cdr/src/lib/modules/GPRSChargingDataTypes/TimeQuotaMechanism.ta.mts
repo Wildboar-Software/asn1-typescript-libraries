@@ -128,10 +128,8 @@ function _decode_TimeQuotaMechanism (el: _Element): TimeQuotaMechanism {
     }
     sequence[0].name = "timeQuotaType";
     sequence[1].name = "baseTimeInterval";
-    let timeQuotaType!: TimeQuotaType;
-    let baseTimeInterval!: INTEGER;
-    timeQuotaType = $._decode_implicit<TimeQuotaType>(() => _decode_TimeQuotaType)(sequence[0]);
-    baseTimeInterval = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const timeQuotaType: TimeQuotaType = $._decode_implicit<TimeQuotaType>(() => _decode_TimeQuotaType)(sequence[0]);
+    const baseTimeInterval: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new TimeQuotaMechanism(
         timeQuotaType,
         baseTimeInterval,

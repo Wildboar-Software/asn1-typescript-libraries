@@ -141,12 +141,9 @@ function _decode_DateDefinition (el: _Element): DateDefinition {
     sequence[0].name = "month";
     sequence[1].name = "day";
     sequence[2].name = "dayClass";
-    let month!: INTEGER;
-    let day!: INTEGER;
-    let dayClass!: DayClass;
-    month = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    day = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
-    dayClass = $._decode_explicit<DayClass>(() => _decode_DayClass)(sequence[2]);
+    const month: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const day: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const dayClass: DayClass = $._decode_explicit<DayClass>(() => _decode_DayClass)(sequence[2]);
     return new DateDefinition(
         month,
         day,

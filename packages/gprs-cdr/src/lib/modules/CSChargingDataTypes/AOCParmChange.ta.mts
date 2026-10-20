@@ -127,10 +127,8 @@ function _decode_AOCParmChange (el: _Element): AOCParmChange {
     }
     sequence[0].name = "changeTime";
     sequence[1].name = "newParameters";
-    let changeTime!: OCTET_STRING;
-    let newParameters!: AOCParameters;
-    changeTime = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    newParameters = $._decode_implicit<AOCParameters>(() => _decode_AOCParameters)(sequence[1]);
+    const changeTime: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const newParameters: AOCParameters = $._decode_implicit<AOCParameters>(() => _decode_AOCParameters)(sequence[1]);
     return new AOCParmChange(
         changeTime,
         newParameters,

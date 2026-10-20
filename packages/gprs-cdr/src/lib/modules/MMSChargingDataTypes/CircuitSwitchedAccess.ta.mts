@@ -130,10 +130,8 @@ function _decode_CircuitSwitchedAccess (el: _Element): CircuitSwitchedAccess {
     }
     sequence[0].name = "mSCIdentifier";
     sequence[1].name = "callReferenceNumber";
-    let mSCIdentifier!: OCTET_STRING;
-    let callReferenceNumber!: OCTET_STRING;
-    mSCIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    callReferenceNumber = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const mSCIdentifier: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const callReferenceNumber: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new CircuitSwitchedAccess(
         mSCIdentifier,
         callReferenceNumber,

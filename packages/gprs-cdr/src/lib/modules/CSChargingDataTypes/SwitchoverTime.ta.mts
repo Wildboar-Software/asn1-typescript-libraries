@@ -144,12 +144,9 @@ function _decode_SwitchoverTime (el: _Element): SwitchoverTime {
     sequence[0].name = "hour";
     sequence[1].name = "minute";
     sequence[2].name = "second";
-    let hour!: INTEGER;
-    let minute!: INTEGER;
-    let second!: INTEGER;
-    hour = $._decodeInteger(sequence[0]);
-    minute = $._decodeInteger(sequence[1]);
-    second = $._decodeInteger(sequence[2]);
+    const hour: INTEGER = $._decodeInteger(sequence[0]);
+    const minute: INTEGER = $._decodeInteger(sequence[1]);
+    const second: INTEGER = $._decodeInteger(sequence[2]);
     return new SwitchoverTime(
         hour,
         minute,

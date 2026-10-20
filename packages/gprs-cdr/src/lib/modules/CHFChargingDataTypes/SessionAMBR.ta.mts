@@ -122,10 +122,8 @@ function _decode_SessionAMBR (el: _Element): SessionAMBR {
     }
     sequence[0].name = "ambrUL";
     sequence[1].name = "ambrDL";
-    let ambrUL!: OCTET_STRING;
-    let ambrDL!: OCTET_STRING;
-    ambrUL = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    ambrDL = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const ambrUL: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const ambrDL: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new SessionAMBR(
         ambrUL,
         ambrDL,

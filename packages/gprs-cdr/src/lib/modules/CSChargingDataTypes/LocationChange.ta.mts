@@ -127,10 +127,8 @@ function _decode_LocationChange (el: _Element): LocationChange {
     }
     sequence[0].name = "location";
     sequence[1].name = "changeTime";
-    let location!: LocationAreaAndCell;
-    let changeTime!: OCTET_STRING;
-    location = $._decode_implicit<LocationAreaAndCell>(() => _decode_LocationAreaAndCell)(sequence[0]);
-    changeTime = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const location: LocationAreaAndCell = $._decode_implicit<LocationAreaAndCell>(() => _decode_LocationAreaAndCell)(sequence[0]);
+    const changeTime: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new LocationChange(
         location,
         changeTime,

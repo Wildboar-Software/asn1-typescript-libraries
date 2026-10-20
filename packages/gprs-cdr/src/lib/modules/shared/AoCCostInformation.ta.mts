@@ -134,12 +134,9 @@ function _decode_AoCCostInformation (el: _Element): AoCCostInformation {
     sequence[0].name = "accumulatedCost";
     sequence[1].name = "incrementalCost";
     sequence[2].name = "currencyCode";
-    let accumulatedCost!: REAL;
-    let incrementalCost!: REAL;
-    let currencyCode!: INTEGER;
-    accumulatedCost = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[0]);
-    incrementalCost = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[1]);
-    currencyCode = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[2]);
+    const accumulatedCost: REAL = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[0]);
+    const incrementalCost: REAL = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[1]);
+    const currencyCode: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[2]);
     return new AoCCostInformation(
         accumulatedCost,
         incrementalCost,

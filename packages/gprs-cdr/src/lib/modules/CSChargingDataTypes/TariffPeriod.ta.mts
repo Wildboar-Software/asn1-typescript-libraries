@@ -122,10 +122,8 @@ function _decode_TariffPeriod (el: _Element): TariffPeriod {
     }
     sequence[0].name = "switchoverTime";
     sequence[1].name = "tariffId";
-    let switchoverTime!: SwitchoverTime;
-    let tariffId!: INTEGER;
-    switchoverTime = $._decode_implicit<SwitchoverTime>(() => _decode_SwitchoverTime)(sequence[0]);
-    tariffId = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const switchoverTime: SwitchoverTime = $._decode_implicit<SwitchoverTime>(() => _decode_SwitchoverTime)(sequence[0]);
+    const tariffId: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new TariffPeriod(
         switchoverTime,
         tariffId,

@@ -130,10 +130,8 @@ function _decode_Visited_Location_info (el: _Element): Visited_Location_info {
     }
     sequence[0].name = "mscNumber";
     sequence[1].name = "vlrNumber";
-    let mscNumber!: OCTET_STRING;
-    let vlrNumber!: OCTET_STRING;
-    mscNumber = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    vlrNumber = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const mscNumber: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const vlrNumber: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new Visited_Location_info(
         mscNumber,
         vlrNumber,

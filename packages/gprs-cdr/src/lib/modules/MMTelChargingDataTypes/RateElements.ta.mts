@@ -145,14 +145,10 @@ function _decode_RateElements (el: _Element): RateElements {
     sequence[1].name = "unitValue";
     sequence[2].name = "unitCost";
     sequence[3].name = "unitQuotaThreshold";
-    let unitType!: INTEGER;
-    let unitValue!: REAL;
-    let unitCost!: REAL;
-    let unitQuotaThreshold!: REAL;
-    unitType = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    unitValue = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[1]);
-    unitCost = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[2]);
-    unitQuotaThreshold = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[3]);
+    const unitType: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const unitValue: REAL = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[1]);
+    const unitCost: REAL = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[2]);
+    const unitQuotaThreshold: REAL = $._decode_implicit<REAL>(() => $._decodeReal)(sequence[3]);
     return new RateElements(
         unitType,
         unitValue,

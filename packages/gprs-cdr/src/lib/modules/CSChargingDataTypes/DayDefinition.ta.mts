@@ -128,10 +128,8 @@ function _decode_DayDefinition (el: _Element): DayDefinition {
     }
     sequence[0].name = "day";
     sequence[1].name = "dayClass";
-    let day!: DayOfTheWeek;
-    let dayClass!: DayClass;
-    day = $._decode_implicit<DayOfTheWeek>(() => _decode_DayOfTheWeek)(sequence[0]);
-    dayClass = $._decode_explicit<DayClass>(() => _decode_DayClass)(sequence[1]);
+    const day: DayOfTheWeek = $._decode_implicit<DayOfTheWeek>(() => _decode_DayOfTheWeek)(sequence[0]);
+    const dayClass: DayClass = $._decode_explicit<DayClass>(() => _decode_DayClass)(sequence[1]);
     return new DayDefinition(
         day,
         dayClass,

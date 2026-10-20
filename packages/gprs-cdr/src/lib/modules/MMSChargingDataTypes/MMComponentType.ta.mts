@@ -123,10 +123,8 @@ function _decode_MMComponentType (el: _Element): MMComponentType {
     }
     sequence[0].name = "subject";
     sequence[1].name = "media";
-    let subject!: SubjectComponent;
-    let media!: MediaComponent[];
-    subject = $._decode_implicit<SubjectComponent>(() => _decode_SubjectComponent)(sequence[0]);
-    media = $._decode_implicit<MediaComponent[]>(() => $._decodeSetOf<MediaComponent>(() => _decode_MediaComponent))(sequence[1]);
+    const subject: SubjectComponent = $._decode_implicit<SubjectComponent>(() => _decode_SubjectComponent)(sequence[0]);
+    const media: MediaComponent[] = $._decode_implicit<MediaComponent[]>(() => $._decodeSetOf<MediaComponent>(() => _decode_MediaComponent))(sequence[1]);
     return new MMComponentType(
         subject,
         media,
