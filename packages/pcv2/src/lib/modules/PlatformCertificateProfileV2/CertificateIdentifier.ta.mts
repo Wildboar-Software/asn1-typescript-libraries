@@ -7,6 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { HashedCertificateIdentifier, _decode_HashedCertificateIdentifier, _encode_HashedCertificateIdentifier } from "../PlatformCertificateProfileV2/HashedCertificateIdentifier.ta.mjs";
 // export { HashedCertificateIdentifier, _decode_HashedCertificateIdentifier, _encode_HashedCertificateIdentifier } from "../PlatformCertificateProfileV2/HashedCertificateIdentifier.ta.mjs";
+import { IssuerSerial, _decode_IssuerSerial, _encode_IssuerSerial } from "@wildboar/x500/AttributeCertificateDefinitions";
 
 
 /**

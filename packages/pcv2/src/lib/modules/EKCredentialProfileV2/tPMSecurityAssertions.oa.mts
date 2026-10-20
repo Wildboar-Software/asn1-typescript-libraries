@@ -4,8 +4,7 @@ import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Infor
 // export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { TPMSecurityAssertions, _decode_TPMSecurityAssertions, _encode_TPMSecurityAssertions } from "../EKCredentialProfileV2/TPMSecurityAssertions.ta.mjs";
 // export { TPMSecurityAssertions, _decode_TPMSecurityAssertions, _encode_TPMSecurityAssertions } from "../EKCredentialProfileV2/TPMSecurityAssertions.ta.mjs";
-import { tcg } from "../EKCredentialProfileV2/tcg.va.mjs";
-// export { tcg } from "../EKCredentialProfileV2/tcg.va.mjs";
+import { tcg_at_tpmSecurityAssertions } from "../EKCredentialProfileV2/tcg-at-tpmSecurityAssertions.va.mjs";
 
 
 /**
@@ -17,7 +16,7 @@ import { tcg } from "../EKCredentialProfileV2/tcg.va.mjs";
  * ```asn1
  * tPMSecurityAssertions ATTRIBUTE ::= {
  *     WITH SYNTAX     TPMSecurityAssertions
- *     ID              tcg—at-tpmSecurityAssertions
+ *     ID              tcg-at-tpmSecurityAssertions
  * }
  * ```
  * 
@@ -34,7 +33,7 @@ const tPMSecurityAssertions: ATTRIBUTE<TPMSecurityAssertions> = {
     encoderFor: {
         "&Type": _encode_TPMSecurityAssertions,
     },
-    "&id": tcg /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&id": tcg_at_tpmSecurityAssertions /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
