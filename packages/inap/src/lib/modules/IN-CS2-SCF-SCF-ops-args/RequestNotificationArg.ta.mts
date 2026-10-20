@@ -28,7 +28,22 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ```
  */
 export
-type RequestNotificationArg = OPTIONALLY_PROTECTED<{ requestedNotifications: OPTIONAL<RequestedNotifications>; securityParameters: SecurityParameters }>; // DefinedType
+interface RequestNotificationArg_sequence {
+    requestedNotifications: RequestedNotifications;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+}
+
+export
+type RequestNotificationArg = OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("requestedNotifications", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 1)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_RequestNotificationArg: $.ASN1Decoder<RequestNotificationArg> | null = null;
 
@@ -40,7 +55,7 @@ let _cached_decoder_for_RequestNotificationArg: $.ASN1Decoder<RequestNotificatio
  */
 export
 function _decode_RequestNotificationArg (el: _Element): RequestNotificationArg {
-    if (!_cached_decoder_for_RequestNotificationArg) { _cached_decoder_for_RequestNotificationArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ requestedNotifications: OPTIONAL<RequestedNotifications>; securityParameters: SecurityParameters }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_RequestNotificationArg) { _cached_decoder_for_RequestNotificationArg = _get_decoder_for_OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>(function (el: _Element): RequestNotificationArg_sequence {
     let requestedNotifications!: RequestedNotifications;
     let securityParameters: OPTIONAL<SecurityParameters>;
     const callbacks: $.DecodingMap = {
@@ -53,10 +68,7 @@ function _decode_RequestNotificationArg (el: _Element): RequestNotificationArg {
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         undefined,
     );
-    return new OPTIONALLY_PROTECTED(
-        requestedNotifications,
-        securityParameters
-    );
+    return { requestedNotifications, securityParameters };
 }); }
     return _cached_decoder_for_RequestNotificationArg(el);
 }
@@ -72,7 +84,7 @@ let _cached_encoder_for_RequestNotificationArg: $.ASN1Encoder<RequestNotificatio
  */
 export
 function _encode_RequestNotificationArg (value: RequestNotificationArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestNotificationArg) { _cached_encoder_for_RequestNotificationArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ requestedNotifications: OPTIONAL<RequestedNotifications>; securityParameters: SecurityParameters }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_RequestNotificationArg) { _cached_encoder_for_RequestNotificationArg = _get_encoder_for_OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>(function (value: RequestNotificationArg_sequence, elGetter: $.ASN1Encoder<RequestNotificationArg_sequence>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RequestedNotifications, $.BER)(value.requestedNotifications, $.BER));
     if (value.securityParameters !== undefined) {

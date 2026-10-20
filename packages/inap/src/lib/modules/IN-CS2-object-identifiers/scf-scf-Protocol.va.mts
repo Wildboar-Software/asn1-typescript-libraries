@@ -22,8 +22,8 @@ import {
  */
 export
 const scf_scf_Protocol: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     1228,
     /* modules */ 0,
     /* in-cs2-scf-scf-pkgs-contracts-acs */ 14,

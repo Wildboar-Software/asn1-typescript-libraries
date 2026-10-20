@@ -7,6 +7,8 @@ import { in_Chained } from "../IN-SDF-SDF-Operations/in-Chained.oa.mjs";
 // export { in_Execute } from "../IN-SCF-SDF-Additional-Definitions/in-Execute.oa.mjs";
 
 
+import { in_Execute } from "../IN-SCF-SDF-Additional-Definitions/in-Execute.oa.mjs";
+
 /**
  * @summary chainedExecute
  * @description
@@ -22,6 +24,6 @@ import { in_Chained } from "../IN-SDF-SDF-Operations/in-Chained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedExecute: OPERATION = in_Chained;
+const chainedExecute: OPERATION = in_Chained(in_Execute);
 
 /* eslint-enable */

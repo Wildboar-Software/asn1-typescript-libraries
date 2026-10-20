@@ -126,7 +126,7 @@ class EventReportBCSMArg {
      * @static
      * @method
      */
-    public static get _default_value_for_miscCallInfo () { return MiscCallInfo._from_object({ messageType: MiscCallInfo._enum_for_messageType.request }); }        /**
+    public static get _default_value_for_miscCallInfo () { return new MiscCallInfo(MiscCallInfo._enum_for_messageType.request, undefined); }        /**
          * @summary The enum used as the type of the component `eventTypeBCSM`
          * @public
          * @static

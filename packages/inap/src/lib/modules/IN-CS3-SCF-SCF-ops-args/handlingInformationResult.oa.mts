@@ -1,3 +1,4 @@
+import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 /* eslint-disable */
 import {
     NULL
@@ -63,7 +64,7 @@ const handlingInformationResult: OPERATION<HandlingInformationResultArg, NULL> =
         "&ResultType": $._encodeNull,
     },
     "&returnResult": false /* OBJECT_FIELD_SETTING */,
-    "&Errors": [ missingParameter, systemFailure, parameterOutOfRange, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, securityError, ] /* OBJECT_FIELD_SETTING */,
+    "&Errors": [ missingParameter, systemFailure, parameterOutOfRange, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, securityError, ] as unknown as ERROR[] /* OBJECT_FIELD_SETTING */,
     "&alwaysReturns": false /* OBJECT_FIELD_SETTING */,
     "&operationCode": opcode_handlingInformationResult /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

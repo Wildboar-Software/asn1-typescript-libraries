@@ -37,7 +37,31 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ```
  */
 export
-type TFCArgument = OPTIONALLY_PROTECTED<{ tfcCriteria: OPTIONAL<TFCcriteria>; duration: OPTIONAL<Duration>; controlType: OPTIONAL<ControlType>; security: OPTIONAL<SecurityParameters>; wasChained: BOOLEAN }>; // DefinedType
+interface TFCArgument_sequence {
+    tfcCriteria: TFCcriteria;
+    duration: Duration;
+    controlType: ControlType;
+    security: SecurityParameters;
+    wasChained?: OPTIONAL<BOOLEAN>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type TFCArgument = OPTIONALLY_PROTECTED<TFCArgument_sequence>; // DefinedType
+
+const _default_value_for_wasChained: BOOLEAN = false;
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("tfcCriteria", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("duration", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("controlType", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("security", false, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("wasChained", true, $.hasTag(_TagClass.context, 4)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_TFCArgument: $.ASN1Decoder<TFCArgument> | null = null;
 
@@ -49,12 +73,12 @@ let _cached_decoder_for_TFCArgument: $.ASN1Decoder<TFCArgument> | null = null;
  */
 export
 function _decode_TFCArgument (el: _Element): TFCArgument {
-    if (!_cached_decoder_for_TFCArgument) { _cached_decoder_for_TFCArgument = _get_decoder_for_OPTIONALLY_PROTECTED<{ tfcCriteria: OPTIONAL<TFCcriteria>; duration: OPTIONAL<Duration>; controlType: OPTIONAL<ControlType>; security: OPTIONAL<SecurityParameters>; wasChained: BOOLEAN }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_TFCArgument) { _cached_decoder_for_TFCArgument = _get_decoder_for_OPTIONALLY_PROTECTED<TFCArgument_sequence>(function (el: _Element): TFCArgument_sequence {
     let tfcCriteria!: TFCcriteria;
     let duration!: Duration;
     let controlType!: ControlType;
     let security!: SecurityParameters;
-    let wasChained: OPTIONAL<BOOLEAN> = OPTIONALLY_PROTECTED._default_value_for_wasChained;
+    let wasChained: OPTIONAL<BOOLEAN> = _default_value_for_wasChained;
     const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "tfcCriteria": (_el: _Element): void => { tfcCriteria = $._decode_explicit<TFCcriteria>(() => _decode_TFCcriteria)(_el); },
@@ -69,14 +93,7 @@ function _decode_TFCArgument (el: _Element): TFCArgument {
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        tfcCriteria,
-        duration,
-        controlType,
-        security,
-        wasChained,
-        _unrecognizedExtensionsList
-    );
+    return { tfcCriteria, duration, controlType, security, wasChained, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_TFCArgument(el);
 }
@@ -92,7 +109,7 @@ let _cached_encoder_for_TFCArgument: $.ASN1Encoder<TFCArgument> | null = null;
  */
 export
 function _encode_TFCArgument (value: TFCArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TFCArgument) { _cached_encoder_for_TFCArgument = _get_encoder_for_OPTIONALLY_PROTECTED<{ tfcCriteria: OPTIONAL<TFCcriteria>; duration: OPTIONAL<Duration>; controlType: OPTIONAL<ControlType>; security: OPTIONAL<SecurityParameters>; wasChained: BOOLEAN }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_TFCArgument) { _cached_encoder_for_TFCArgument = _get_encoder_for_OPTIONALLY_PROTECTED<TFCArgument_sequence>(function (value: TFCArgument_sequence, elGetter: $.ASN1Encoder<TFCArgument_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
@@ -100,7 +117,7 @@ function _encode_TFCArgument (value: TFCArgument, elGetter: $.ASN1Encoder<any>):
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Duration, $.BER)(value.duration, $.BER);
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_ControlType, $.BER)(value.controlType, $.BER);
     _components[_components_i++] = /* REQUIRED   */ $._encode_implicit(_TagClass.context, 3, () => _encode_SecurityParameters, $.BER)(value.security, $.BER);
-    if (value.wasChained !== undefined && !$.deepEq(value.wasChained, OPTIONALLY_PROTECTED._default_value_for_wasChained)) {
+    if (value.wasChained !== undefined && !$.deepEq(value.wasChained, _default_value_for_wasChained)) {
         _components[_components_i++] = /* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 4, () => $._encodeBoolean, $.BER)(value.wasChained, $.BER);
     }
     if (_unrecognized) {

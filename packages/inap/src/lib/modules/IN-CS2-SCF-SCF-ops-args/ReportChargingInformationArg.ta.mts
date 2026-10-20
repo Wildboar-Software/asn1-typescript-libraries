@@ -37,7 +37,28 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ```
  */
 export
-type ReportChargingInformationArg = OPTIONALLY_PROTECTED<{ callRecord: CallRecord; remainingUserCredit: UserCredit; uniqueCallID: CallIdentifier; accountNumber: AccountNumber; securityParameters: SecurityParameters }>; // DefinedType
+interface ReportChargingInformationArg_sequence {
+    callRecord?: OPTIONAL<CallRecord>;
+    remainingUserCredit?: OPTIONAL<UserCredit>;
+    uniqueCallID?: OPTIONAL<CallIdentifier>;
+    accountNumber?: OPTIONAL<AccountNumber>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+}
+
+export
+type ReportChargingInformationArg = OPTIONALLY_PROTECTED<ReportChargingInformationArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("callRecord", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("remainingUserCredit", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("uniqueCallID", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("accountNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 4)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_ReportChargingInformationArg: $.ASN1Decoder<ReportChargingInformationArg> | null = null;
 
@@ -49,7 +70,7 @@ let _cached_decoder_for_ReportChargingInformationArg: $.ASN1Decoder<ReportChargi
  */
 export
 function _decode_ReportChargingInformationArg (el: _Element): ReportChargingInformationArg {
-    if (!_cached_decoder_for_ReportChargingInformationArg) { _cached_decoder_for_ReportChargingInformationArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ callRecord: CallRecord; remainingUserCredit: UserCredit; uniqueCallID: CallIdentifier; accountNumber: AccountNumber; securityParameters: SecurityParameters }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_ReportChargingInformationArg) { _cached_decoder_for_ReportChargingInformationArg = _get_decoder_for_OPTIONALLY_PROTECTED<ReportChargingInformationArg_sequence>(function (el: _Element): ReportChargingInformationArg_sequence {
     let callRecord: OPTIONAL<CallRecord>;
     let remainingUserCredit: OPTIONAL<UserCredit>;
     let uniqueCallID: OPTIONAL<CallIdentifier>;
@@ -68,13 +89,7 @@ function _decode_ReportChargingInformationArg (el: _Element): ReportChargingInfo
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         undefined,
     );
-    return new OPTIONALLY_PROTECTED(
-        callRecord,
-        remainingUserCredit,
-        uniqueCallID,
-        accountNumber,
-        securityParameters
-    );
+    return { callRecord, remainingUserCredit, uniqueCallID, accountNumber, securityParameters };
 }); }
     return _cached_decoder_for_ReportChargingInformationArg(el);
 }
@@ -90,7 +105,7 @@ let _cached_encoder_for_ReportChargingInformationArg: $.ASN1Encoder<ReportChargi
  */
 export
 function _encode_ReportChargingInformationArg (value: ReportChargingInformationArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportChargingInformationArg) { _cached_encoder_for_ReportChargingInformationArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ callRecord: CallRecord; remainingUserCredit: UserCredit; uniqueCallID: CallIdentifier; accountNumber: AccountNumber; securityParameters: SecurityParameters }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_ReportChargingInformationArg) { _cached_encoder_for_ReportChargingInformationArg = _get_encoder_for_OPTIONALLY_PROTECTED<ReportChargingInformationArg_sequence>(function (value: ReportChargingInformationArg_sequence, elGetter: $.ASN1Encoder<ReportChargingInformationArg_sequence>): _Element {
     const _components: _Element[] = [];
     if (value.callRecord !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_CallRecord, $.BER)(value.callRecord, $.BER));

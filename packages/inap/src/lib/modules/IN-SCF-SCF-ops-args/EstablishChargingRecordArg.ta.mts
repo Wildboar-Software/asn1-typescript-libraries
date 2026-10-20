@@ -59,7 +59,47 @@ import { ReportConditionEvent, _decode_ReportConditionEvent, _encode_ReportCondi
  * ```
  */
 export
-type EstablishChargingRecordArg = OPTIONALLY_PROTECTED<{ userCredit: UserCredit; chargingParameters: ChargingParameters; reportExpected: BOOLEAN; securityParameters: SecurityParameters; extensions: Extensions; consumedCreditAction: ConsumedCreditAction; newChargingParameters: ChargingParameters; reportAddress: ReportDestinationInformation; container: FreeContainer; correlationId: CorrelationID; acksequence: INTEGER; splitcharge: ChargingSignallingInformation; reportCondition: ReportConditionEvent }>; // DefinedType
+interface EstablishChargingRecordArg_sequence {
+    userCredit?: OPTIONAL<UserCredit>;
+    chargingParameters?: OPTIONAL<ChargingParameters>;
+    reportExpected?: OPTIONAL<BOOLEAN>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    extensions?: OPTIONAL<Extensions>;
+    consumedCreditAction?: OPTIONAL<ConsumedCreditAction>;
+    newChargingParameters?: OPTIONAL<ChargingParameters>;
+    reportAddress?: OPTIONAL<ReportDestinationInformation>;
+    container?: OPTIONAL<FreeContainer>;
+    correlationId?: OPTIONAL<CorrelationID>;
+    acksequence?: OPTIONAL<INTEGER>;
+    splitcharge?: OPTIONAL<ChargingSignallingInformation>;
+    reportCondition?: OPTIONAL<ReportConditionEvent>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type EstablishChargingRecordArg = OPTIONALLY_PROTECTED<EstablishChargingRecordArg_sequence>; // DefinedType
+
+const _default_value_for_reportExpected: BOOLEAN = true;
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("userCredit", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("chargingParameters", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("reportExpected", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("consumedCreditAction", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("newChargingParameters", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("reportAddress", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("container", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("correlationId", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("acksequence", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("splitcharge", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("reportCondition", true, $.hasTag(_TagClass.context, 22)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_EstablishChargingRecordArg: $.ASN1Decoder<EstablishChargingRecordArg> | null = null;
 
@@ -71,10 +111,10 @@ let _cached_decoder_for_EstablishChargingRecordArg: $.ASN1Decoder<EstablishCharg
  */
 export
 function _decode_EstablishChargingRecordArg (el: _Element): EstablishChargingRecordArg {
-    if (!_cached_decoder_for_EstablishChargingRecordArg) { _cached_decoder_for_EstablishChargingRecordArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ userCredit: UserCredit; chargingParameters: ChargingParameters; reportExpected: BOOLEAN; securityParameters: SecurityParameters; extensions: Extensions; consumedCreditAction: ConsumedCreditAction; newChargingParameters: ChargingParameters; reportAddress: ReportDestinationInformation; container: FreeContainer; correlationId: CorrelationID; acksequence: INTEGER; splitcharge: ChargingSignallingInformation; reportCondition: ReportConditionEvent }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_EstablishChargingRecordArg) { _cached_decoder_for_EstablishChargingRecordArg = _get_decoder_for_OPTIONALLY_PROTECTED<EstablishChargingRecordArg_sequence>(function (el: _Element): EstablishChargingRecordArg_sequence {
     let userCredit: OPTIONAL<UserCredit>;
     let chargingParameters: OPTIONAL<ChargingParameters>;
-    let reportExpected: OPTIONAL<BOOLEAN> = OPTIONALLY_PROTECTED._default_value_for_reportExpected;
+    let reportExpected: OPTIONAL<BOOLEAN> = _default_value_for_reportExpected;
     let securityParameters: OPTIONAL<SecurityParameters>;
     let extensions: OPTIONAL<Extensions>;
     let consumedCreditAction: OPTIONAL<ConsumedCreditAction>;
@@ -107,22 +147,7 @@ function _decode_EstablishChargingRecordArg (el: _Element): EstablishChargingRec
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        userCredit,
-        chargingParameters,
-        reportExpected,
-        securityParameters,
-        extensions,
-        consumedCreditAction,
-        newChargingParameters,
-        reportAddress,
-        container,
-        correlationId,
-        acksequence,
-        splitcharge,
-        reportCondition,
-        _unrecognizedExtensionsList
-    );
+    return { userCredit, chargingParameters, reportExpected, securityParameters, extensions, consumedCreditAction, newChargingParameters, reportAddress, container, correlationId, acksequence, splitcharge, reportCondition, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_EstablishChargingRecordArg(el);
 }
@@ -138,7 +163,7 @@ let _cached_encoder_for_EstablishChargingRecordArg: $.ASN1Encoder<EstablishCharg
  */
 export
 function _encode_EstablishChargingRecordArg (value: EstablishChargingRecordArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EstablishChargingRecordArg) { _cached_encoder_for_EstablishChargingRecordArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ userCredit: UserCredit; chargingParameters: ChargingParameters; reportExpected: BOOLEAN; securityParameters: SecurityParameters; extensions: Extensions; consumedCreditAction: ConsumedCreditAction; newChargingParameters: ChargingParameters; reportAddress: ReportDestinationInformation; container: FreeContainer; correlationId: CorrelationID; acksequence: INTEGER; splitcharge: ChargingSignallingInformation; reportCondition: ReportConditionEvent }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_EstablishChargingRecordArg) { _cached_encoder_for_EstablishChargingRecordArg = _get_encoder_for_OPTIONALLY_PROTECTED<EstablishChargingRecordArg_sequence>(function (value: EstablishChargingRecordArg_sequence, elGetter: $.ASN1Encoder<EstablishChargingRecordArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(13 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
@@ -148,7 +173,7 @@ function _encode_EstablishChargingRecordArg (value: EstablishChargingRecordArg, 
     if (value.chargingParameters !== undefined) {
         _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 1, () => _encode_ChargingParameters, $.BER)(value.chargingParameters, $.BER);
     }
-    if (value.reportExpected !== undefined && !$.deepEq(value.reportExpected, OPTIONALLY_PROTECTED._default_value_for_reportExpected)) {
+    if (value.reportExpected !== undefined && !$.deepEq(value.reportExpected, _default_value_for_reportExpected)) {
         _components[_components_i++] = /* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 2, () => $._encodeBoolean, $.BER)(value.reportExpected, $.BER);
     }
     if (value.securityParameters !== undefined) {

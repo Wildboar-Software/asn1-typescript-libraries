@@ -42,7 +42,32 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-co
  * ```
  */
 export
-type RunUserScriptArg = OPTIONALLY_PROTECTED<{ srfAddress: OPTIONAL<CalledPartyNumber>; correlationID: OPTIONAL<CorrelationID>; scfID: OPTIONAL<ScfID>; userToConnect: UserToConnect; securityParameters: SecurityParameters; extensions: Extensions }>; // DefinedType
+interface RunUserScriptArg_sequence {
+    srfAddress: CalledPartyNumber;
+    correlationID: CorrelationID;
+    scfID: ScfID;
+    userToConnect?: OPTIONAL<UserToConnect>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    _unrecognizedExtensionsList: _Element[];
+    extensions?: OPTIONAL<Extensions>;
+}
+
+export
+type RunUserScriptArg = OPTIONALLY_PROTECTED<RunUserScriptArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("srfAddress", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("correlationID", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("scfID", false, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("userToConnect", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 7)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 30)),
+];
 
 let _cached_decoder_for_RunUserScriptArg: $.ASN1Decoder<RunUserScriptArg> | null = null;
 
@@ -54,7 +79,7 @@ let _cached_decoder_for_RunUserScriptArg: $.ASN1Decoder<RunUserScriptArg> | null
  */
 export
 function _decode_RunUserScriptArg (el: _Element): RunUserScriptArg {
-    if (!_cached_decoder_for_RunUserScriptArg) { _cached_decoder_for_RunUserScriptArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ srfAddress: OPTIONAL<CalledPartyNumber>; correlationID: OPTIONAL<CorrelationID>; scfID: OPTIONAL<ScfID>; userToConnect: UserToConnect; securityParameters: SecurityParameters; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_RunUserScriptArg) { _cached_decoder_for_RunUserScriptArg = _get_decoder_for_OPTIONALLY_PROTECTED<RunUserScriptArg_sequence>(function (el: _Element): RunUserScriptArg_sequence {
     let srfAddress!: CalledPartyNumber;
     let correlationID!: CorrelationID;
     let scfID!: ScfID;
@@ -76,15 +101,7 @@ function _decode_RunUserScriptArg (el: _Element): RunUserScriptArg {
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        srfAddress,
-        correlationID,
-        scfID,
-        userToConnect,
-        securityParameters,
-        _unrecognizedExtensionsList,
-        extensions
-    );
+    return { srfAddress, correlationID, scfID, userToConnect, securityParameters, _unrecognizedExtensionsList, extensions };
 }); }
     return _cached_decoder_for_RunUserScriptArg(el);
 }
@@ -100,7 +117,7 @@ let _cached_encoder_for_RunUserScriptArg: $.ASN1Encoder<RunUserScriptArg> | null
  */
 export
 function _encode_RunUserScriptArg (value: RunUserScriptArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RunUserScriptArg) { _cached_encoder_for_RunUserScriptArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ srfAddress: OPTIONAL<CalledPartyNumber>; correlationID: OPTIONAL<CorrelationID>; scfID: OPTIONAL<ScfID>; userToConnect: UserToConnect; securityParameters: SecurityParameters; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_RunUserScriptArg) { _cached_encoder_for_RunUserScriptArg = _get_encoder_for_OPTIONALLY_PROTECTED<RunUserScriptArg_sequence>(function (value: RunUserScriptArg_sequence, elGetter: $.ASN1Encoder<RunUserScriptArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(6 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

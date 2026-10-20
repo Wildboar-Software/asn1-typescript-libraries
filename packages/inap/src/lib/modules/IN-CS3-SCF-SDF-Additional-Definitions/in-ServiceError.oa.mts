@@ -21,6 +21,6 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @implements {ERROR}
  */
 export
-const in_ServiceError: ERROR = serviceError;
+const in_ServiceError: ERROR = serviceError as unknown as ERROR;
 
 /* eslint-enable */

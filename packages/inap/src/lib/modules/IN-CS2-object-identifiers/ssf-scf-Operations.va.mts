@@ -22,8 +22,8 @@ import {
  */
 export
 const ssf_scf_Operations: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     1228,
     /* modules */ 0,
     /* in-cs2-ssf-scf-ops-args */ 5,

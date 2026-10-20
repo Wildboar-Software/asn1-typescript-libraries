@@ -31,7 +31,24 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ```
  */
 export
-type ProvideUserInformationResultArg = OPTIONALLY_PROTECTED<{ userInformation: OPTIONAL<ReceivedInformation>; securityParameters: SecurityParameters; extensions: Extensions }>; // DefinedType
+interface ProvideUserInformationResultArg_sequence {
+    userInformation: ReceivedInformation;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    extensions?: OPTIONAL<Extensions>;
+}
+
+export
+type ProvideUserInformationResultArg = OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("userInformation", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 2)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_ProvideUserInformationResultArg: $.ASN1Decoder<ProvideUserInformationResultArg> | null = null;
 
@@ -43,7 +60,7 @@ let _cached_decoder_for_ProvideUserInformationResultArg: $.ASN1Decoder<ProvideUs
  */
 export
 function _decode_ProvideUserInformationResultArg (el: _Element): ProvideUserInformationResultArg {
-    if (!_cached_decoder_for_ProvideUserInformationResultArg) { _cached_decoder_for_ProvideUserInformationResultArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ userInformation: OPTIONAL<ReceivedInformation>; securityParameters: SecurityParameters; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_ProvideUserInformationResultArg) { _cached_decoder_for_ProvideUserInformationResultArg = _get_decoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_sequence>(function (el: _Element): ProvideUserInformationResultArg_sequence {
     let userInformation!: ReceivedInformation;
     let securityParameters: OPTIONAL<SecurityParameters>;
     let extensions: OPTIONAL<Extensions>;
@@ -58,11 +75,7 @@ function _decode_ProvideUserInformationResultArg (el: _Element): ProvideUserInfo
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         undefined,
     );
-    return new OPTIONALLY_PROTECTED(
-        userInformation,
-        securityParameters,
-        extensions
-    );
+    return { userInformation, securityParameters, extensions };
 }); }
     return _cached_decoder_for_ProvideUserInformationResultArg(el);
 }
@@ -78,7 +91,7 @@ let _cached_encoder_for_ProvideUserInformationResultArg: $.ASN1Encoder<ProvideUs
  */
 export
 function _encode_ProvideUserInformationResultArg (value: ProvideUserInformationResultArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProvideUserInformationResultArg) { _cached_encoder_for_ProvideUserInformationResultArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ userInformation: OPTIONAL<ReceivedInformation>; securityParameters: SecurityParameters; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_ProvideUserInformationResultArg) { _cached_encoder_for_ProvideUserInformationResultArg = _get_encoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_sequence>(function (value: ProvideUserInformationResultArg_sequence, elGetter: $.ASN1Encoder<ProvideUserInformationResultArg_sequence>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ReceivedInformation, $.BER)(value.userInformation, $.BER));
     if (value.securityParameters !== undefined) {

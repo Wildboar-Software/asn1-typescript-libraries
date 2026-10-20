@@ -21,8 +21,8 @@ import {
  */
 export
 const in_ds: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     1228,
     /* sdf-objects */ 10,
 ], itu_t);

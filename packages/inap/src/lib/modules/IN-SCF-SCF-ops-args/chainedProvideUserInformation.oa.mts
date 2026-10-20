@@ -7,6 +7,8 @@ import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
 // export { provideUserInformation } from "../IN-SCF-SCF-ops-args/provideUserInformation.oa.mjs";
 
 
+import { provideUserInformation } from "../IN-SCF-SCF-ops-args/provideUserInformation.oa.mjs";
+
 /**
  * @summary chainedProvideUserInformation
  * @description
@@ -22,6 +24,6 @@ import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedProvideUserInformation: OPERATION = scfChained;
+const chainedProvideUserInformation: OPERATION = scfChained(provideUserInformation);
 
 /* eslint-enable */

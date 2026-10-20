@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
 // export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
@@ -33,8 +34,8 @@ const shadowConsumerPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ requestShadowUpdate, ] /* OBJECT_FIELD_SETTING */,
-    "&Consumer": [ updateShadow, ] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ requestShadowUpdate, ] as unknown as OPERATION[] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
+    "&Consumer": [ updateShadow, ] as unknown as OPERATION[] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_shadowConsumer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

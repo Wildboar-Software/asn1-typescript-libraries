@@ -1,3 +1,4 @@
+import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
@@ -61,7 +62,7 @@ const requestNotification: OPERATION<RequestNotificationArg> = {
         "&ResultType": undefined,
     },
     "&returnResult": false /* OBJECT_FIELD_SETTING */,
-    "&Errors": [ missingParameter, systemFailure, scfTaskRefused, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, parameterOutOfRange, missingCustomerRecord, securityError, ] /* OBJECT_FIELD_SETTING */,
+    "&Errors": [ missingParameter, systemFailure, scfTaskRefused, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, parameterOutOfRange, missingCustomerRecord, securityError, ] as unknown as ERROR[] /* OBJECT_FIELD_SETTING */,
     "&alwaysReturns": false /* OBJECT_FIELD_SETTING */,
     "&operationCode": opcode_requestNotification /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

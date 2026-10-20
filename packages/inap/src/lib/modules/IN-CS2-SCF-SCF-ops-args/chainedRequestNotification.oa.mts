@@ -7,6 +7,8 @@ import { scfChained } from "../IN-CS2-SCF-SCF-ops-args/scfChained.oa.mjs";
 // export { requestNotification } from "../IN-CS2-SCF-SCF-ops-args/requestNotification.oa.mjs";
 
 
+import { requestNotification } from "../IN-CS2-SCF-SCF-ops-args/requestNotification.oa.mjs";
+
 /**
  * @summary chainedRequestNotification
  * @description
@@ -22,6 +24,6 @@ import { scfChained } from "../IN-CS2-SCF-SCF-ops-args/scfChained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedRequestNotification: OPERATION = scfChained;
+const chainedRequestNotification: OPERATION = scfChained(requestNotification);
 
 /* eslint-enable */

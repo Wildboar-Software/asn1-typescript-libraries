@@ -37,7 +37,29 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-co
  * ```
  */
 export
-type NetworkCapabilityArg = OPTIONALLY_PROTECTED<{ bearerCapabilities: BearerCapabilities; highLayerCompatibilities: HighLayerCompatibilities; supplementaryServices: SupplementaryServices; securityParameters: SecurityParameters; extensions: Extensions }>; // DefinedType
+interface NetworkCapabilityArg_sequence {
+    bearerCapabilities?: OPTIONAL<BearerCapabilities>;
+    highLayerCompatibilities?: OPTIONAL<HighLayerCompatibilities>;
+    supplementaryServices?: OPTIONAL<SupplementaryServices>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    extensions?: OPTIONAL<Extensions>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type NetworkCapabilityArg = OPTIONALLY_PROTECTED<NetworkCapabilityArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("bearerCapabilities", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("highLayerCompatibilities", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("supplementaryServices", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 4)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_NetworkCapabilityArg: $.ASN1Decoder<NetworkCapabilityArg> | null = null;
 
@@ -49,7 +71,7 @@ let _cached_decoder_for_NetworkCapabilityArg: $.ASN1Decoder<NetworkCapabilityArg
  */
 export
 function _decode_NetworkCapabilityArg (el: _Element): NetworkCapabilityArg {
-    if (!_cached_decoder_for_NetworkCapabilityArg) { _cached_decoder_for_NetworkCapabilityArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ bearerCapabilities: BearerCapabilities; highLayerCompatibilities: HighLayerCompatibilities; supplementaryServices: SupplementaryServices; securityParameters: SecurityParameters; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_NetworkCapabilityArg) { _cached_decoder_for_NetworkCapabilityArg = _get_decoder_for_OPTIONALLY_PROTECTED<NetworkCapabilityArg_sequence>(function (el: _Element): NetworkCapabilityArg_sequence {
     let bearerCapabilities: OPTIONAL<BearerCapabilities>;
     let highLayerCompatibilities: OPTIONAL<HighLayerCompatibilities>;
     let supplementaryServices: OPTIONAL<SupplementaryServices>;
@@ -69,14 +91,7 @@ function _decode_NetworkCapabilityArg (el: _Element): NetworkCapabilityArg {
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        bearerCapabilities,
-        highLayerCompatibilities,
-        supplementaryServices,
-        securityParameters,
-        extensions,
-        _unrecognizedExtensionsList
-    );
+    return { bearerCapabilities, highLayerCompatibilities, supplementaryServices, securityParameters, extensions, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_NetworkCapabilityArg(el);
 }
@@ -92,7 +107,7 @@ let _cached_encoder_for_NetworkCapabilityArg: $.ASN1Encoder<NetworkCapabilityArg
  */
 export
 function _encode_NetworkCapabilityArg (value: NetworkCapabilityArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NetworkCapabilityArg) { _cached_encoder_for_NetworkCapabilityArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ bearerCapabilities: BearerCapabilities; highLayerCompatibilities: HighLayerCompatibilities; supplementaryServices: SupplementaryServices; securityParameters: SecurityParameters; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_NetworkCapabilityArg) { _cached_encoder_for_NetworkCapabilityArg = _get_encoder_for_OPTIONALLY_PROTECTED<NetworkCapabilityArg_sequence>(function (value: NetworkCapabilityArg_sequence, elGetter: $.ASN1Encoder<NetworkCapabilityArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

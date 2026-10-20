@@ -7,6 +7,8 @@ import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
 // export { runUserScript } from "../IN-SCF-SCF-ops-args/runUserScript.oa.mjs";
 
 
+import { runUserScript } from "../IN-SCF-SCF-ops-args/runUserScript.oa.mjs";
+
 /**
  * @summary chainedRunUserScript
  * @description
@@ -22,6 +24,6 @@ import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedRunUserScript: OPERATION = scfChained;
+const chainedRunUserScript: OPERATION = scfChained(runUserScript);
 
 /* eslint-enable */

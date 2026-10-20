@@ -7,6 +7,8 @@ import { scfChained } from "../IN-CS3-SCF-SCF-ops-args/scfChained.oa.mjs";
 // export { reportChargingInformation } from "../IN-CS3-SCF-SCF-ops-args/reportChargingInformation.oa.mjs";
 
 
+import { reportChargingInformation } from "../IN-CS3-SCF-SCF-ops-args/reportChargingInformation.oa.mjs";
+
 /**
  * @summary chainedReportChargingInformation
  * @description
@@ -22,6 +24,6 @@ import { scfChained } from "../IN-CS3-SCF-SCF-ops-args/scfChained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedReportChargingInformation: OPERATION = scfChained;
+const chainedReportChargingInformation: OPERATION = scfChained(reportChargingInformation);
 
 /* eslint-enable */

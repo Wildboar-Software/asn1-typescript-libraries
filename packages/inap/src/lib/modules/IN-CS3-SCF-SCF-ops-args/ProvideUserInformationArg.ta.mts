@@ -52,7 +52,44 @@ import { UserToConnect, _decode_UserToConnect, _encode_UserToConnect } from "../
  * ```
  */
 export
-type ProvideUserInformationArg = OPTIONALLY_PROTECTED<{ constraints: OPTIONAL<CollectedInfo>; infoToSend: OPTIONAL<InformationToSend>; errorInfo: InformationToSend; typeOfRequestedInfo: InfoType; numberOfAllowedRetries: INTEGER; actions: Actions; preferredLanguage: Language; securityParameters: SecurityParameters; extensions: Extensions; srfAddress: CalledPartyNumber; userToConnect: UserToConnect }>; // DefinedType
+interface ProvideUserInformationArg_sequence {
+    constraints: CollectedInfo;
+    infoToSend: InformationToSend;
+    errorInfo?: OPTIONAL<InformationToSend>;
+    typeOfRequestedInfo?: OPTIONAL<InfoType>;
+    numberOfAllowedRetries?: OPTIONAL<INTEGER>;
+    actions?: OPTIONAL<Actions>;
+    preferredLanguage?: OPTIONAL<Language>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    extensions?: OPTIONAL<Extensions>;
+    srfAddress?: OPTIONAL<CalledPartyNumber>;
+    userToConnect?: OPTIONAL<UserToConnect>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type ProvideUserInformationArg = OPTIONALLY_PROTECTED<ProvideUserInformationArg_sequence>; // DefinedType
+
+const _default_value_for_typeOfRequestedInfo: InfoType = InfoType.numericString;
+const _default_value_for_numberOfAllowedRetries: INTEGER = 0;
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("constraints", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("infoToSend", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("errorInfo", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("typeOfRequestedInfo", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("numberOfAllowedRetries", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("actions", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("preferredLanguage", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("srfAddress", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("userToConnect", true, $.hasTag(_TagClass.context, 11)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_ProvideUserInformationArg: $.ASN1Decoder<ProvideUserInformationArg> | null = null;
 
@@ -64,12 +101,12 @@ let _cached_decoder_for_ProvideUserInformationArg: $.ASN1Decoder<ProvideUserInfo
  */
 export
 function _decode_ProvideUserInformationArg (el: _Element): ProvideUserInformationArg {
-    if (!_cached_decoder_for_ProvideUserInformationArg) { _cached_decoder_for_ProvideUserInformationArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ constraints: OPTIONAL<CollectedInfo>; infoToSend: OPTIONAL<InformationToSend>; errorInfo: InformationToSend; typeOfRequestedInfo: InfoType; numberOfAllowedRetries: INTEGER; actions: Actions; preferredLanguage: Language; securityParameters: SecurityParameters; extensions: Extensions; srfAddress: CalledPartyNumber; userToConnect: UserToConnect }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_ProvideUserInformationArg) { _cached_decoder_for_ProvideUserInformationArg = _get_decoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationArg_sequence>(function (el: _Element): ProvideUserInformationArg_sequence {
     let constraints!: CollectedInfo;
     let infoToSend!: InformationToSend;
     let errorInfo: OPTIONAL<InformationToSend>;
-    let typeOfRequestedInfo: OPTIONAL<InfoType> = OPTIONALLY_PROTECTED._default_value_for_typeOfRequestedInfo;
-    let numberOfAllowedRetries: OPTIONAL<INTEGER> = OPTIONALLY_PROTECTED._default_value_for_numberOfAllowedRetries;
+    let typeOfRequestedInfo: OPTIONAL<InfoType> = _default_value_for_typeOfRequestedInfo;
+    let numberOfAllowedRetries: OPTIONAL<INTEGER> = _default_value_for_numberOfAllowedRetries;
     let actions: OPTIONAL<Actions>;
     let preferredLanguage: OPTIONAL<Language>;
     let securityParameters: OPTIONAL<SecurityParameters>;
@@ -96,20 +133,7 @@ function _decode_ProvideUserInformationArg (el: _Element): ProvideUserInformatio
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        constraints,
-        infoToSend,
-        errorInfo,
-        typeOfRequestedInfo,
-        numberOfAllowedRetries,
-        actions,
-        preferredLanguage,
-        securityParameters,
-        extensions,
-        srfAddress,
-        userToConnect,
-        _unrecognizedExtensionsList
-    );
+    return { constraints, infoToSend, errorInfo, typeOfRequestedInfo, numberOfAllowedRetries, actions, preferredLanguage, securityParameters, extensions, srfAddress, userToConnect, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_ProvideUserInformationArg(el);
 }
@@ -125,7 +149,7 @@ let _cached_encoder_for_ProvideUserInformationArg: $.ASN1Encoder<ProvideUserInfo
  */
 export
 function _encode_ProvideUserInformationArg (value: ProvideUserInformationArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProvideUserInformationArg) { _cached_encoder_for_ProvideUserInformationArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ constraints: OPTIONAL<CollectedInfo>; infoToSend: OPTIONAL<InformationToSend>; errorInfo: InformationToSend; typeOfRequestedInfo: InfoType; numberOfAllowedRetries: INTEGER; actions: Actions; preferredLanguage: Language; securityParameters: SecurityParameters; extensions: Extensions; srfAddress: CalledPartyNumber; userToConnect: UserToConnect }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_ProvideUserInformationArg) { _cached_encoder_for_ProvideUserInformationArg = _get_encoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationArg_sequence>(function (value: ProvideUserInformationArg_sequence, elGetter: $.ASN1Encoder<ProvideUserInformationArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(11 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
@@ -134,10 +158,10 @@ function _encode_ProvideUserInformationArg (value: ProvideUserInformationArg, el
     if (value.errorInfo !== undefined) {
         _components[_components_i++] = /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 2, () => _encode_InformationToSend, $.BER)(value.errorInfo, $.BER);
     }
-    if (value.typeOfRequestedInfo !== undefined && !$.deepEq(value.typeOfRequestedInfo, OPTIONALLY_PROTECTED._default_value_for_typeOfRequestedInfo)) {
+    if (value.typeOfRequestedInfo !== undefined && !$.deepEq(value.typeOfRequestedInfo, _default_value_for_typeOfRequestedInfo)) {
         _components[_components_i++] = /* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 3, () => _encode_InfoType, $.BER)(value.typeOfRequestedInfo, $.BER);
     }
-    if (value.numberOfAllowedRetries !== undefined && !$.deepEq(value.numberOfAllowedRetries, OPTIONALLY_PROTECTED._default_value_for_numberOfAllowedRetries)) {
+    if (value.numberOfAllowedRetries !== undefined && !$.deepEq(value.numberOfAllowedRetries, _default_value_for_numberOfAllowedRetries)) {
         _components[_components_i++] = /* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.BER)(value.numberOfAllowedRetries, $.BER);
     }
     if (value.actions !== undefined) {

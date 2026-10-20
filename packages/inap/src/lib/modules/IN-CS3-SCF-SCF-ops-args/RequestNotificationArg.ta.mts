@@ -33,7 +33,26 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-co
  * ```
  */
 export
-type RequestNotificationArg = OPTIONALLY_PROTECTED<{ requestedNotifications: OPTIONAL<RequestedNotifications>; securityParameters: SecurityParameters; extensions: Extensions }>; // DefinedType
+interface RequestNotificationArg_sequence {
+    requestedNotifications: RequestedNotifications;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    _unrecognizedExtensionsList: _Element[];
+    extensions?: OPTIONAL<Extensions>;
+}
+
+export
+type RequestNotificationArg = OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("requestedNotifications", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 1)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 30)),
+];
 
 let _cached_decoder_for_RequestNotificationArg: $.ASN1Decoder<RequestNotificationArg> | null = null;
 
@@ -45,7 +64,7 @@ let _cached_decoder_for_RequestNotificationArg: $.ASN1Decoder<RequestNotificatio
  */
 export
 function _decode_RequestNotificationArg (el: _Element): RequestNotificationArg {
-    if (!_cached_decoder_for_RequestNotificationArg) { _cached_decoder_for_RequestNotificationArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ requestedNotifications: OPTIONAL<RequestedNotifications>; securityParameters: SecurityParameters; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_RequestNotificationArg) { _cached_decoder_for_RequestNotificationArg = _get_decoder_for_OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>(function (el: _Element): RequestNotificationArg_sequence {
     let requestedNotifications!: RequestedNotifications;
     let securityParameters: OPTIONAL<SecurityParameters>;
     const _unrecognizedExtensionsList: _Element[] = [];
@@ -61,12 +80,7 @@ function _decode_RequestNotificationArg (el: _Element): RequestNotificationArg {
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        requestedNotifications,
-        securityParameters,
-        _unrecognizedExtensionsList,
-        extensions
-    );
+    return { requestedNotifications, securityParameters, _unrecognizedExtensionsList, extensions };
 }); }
     return _cached_decoder_for_RequestNotificationArg(el);
 }
@@ -82,7 +96,7 @@ let _cached_encoder_for_RequestNotificationArg: $.ASN1Encoder<RequestNotificatio
  */
 export
 function _encode_RequestNotificationArg (value: RequestNotificationArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestNotificationArg) { _cached_encoder_for_RequestNotificationArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ requestedNotifications: OPTIONAL<RequestedNotifications>; securityParameters: SecurityParameters; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_RequestNotificationArg) { _cached_encoder_for_RequestNotificationArg = _get_encoder_for_OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>(function (value: RequestNotificationArg_sequence, elGetter: $.ASN1Encoder<RequestNotificationArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

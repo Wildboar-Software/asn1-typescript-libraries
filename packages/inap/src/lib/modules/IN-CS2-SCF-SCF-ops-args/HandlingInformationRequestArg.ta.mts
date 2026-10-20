@@ -89,7 +89,57 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ```
  */
 export
-type HandlingInformationRequestArg = OPTIONALLY_PROTECTED<{ requestedType: RequestedType; callingPartyNumber: CallingPartyNumber; locationNumber: LocationNumber; calledPartyNumber: CalledPartyNumber; dialledDigits: Digits; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; originalCalledPartyID: OriginalCalledPartyID; numberOfCallAttempts: INTEGER; highLayerCompatibility: HighLayerCompatibility; bearerCapability: BearerCapability; invokedSupplementaryService: InvokableService; activeSupplementaryServices: ActivableServices; causeOfLastCallFailure: Cause; userInteractionModes: UserInteractionModes; callingPartysCategory: CallingPartysCategory; callingPartyBusinessGroupID: OCTET_STRING; securityParameters: SecurityParameters; extensions: ExtensionField[] }>; // DefinedType
+interface HandlingInformationRequestArg_sequence {
+    requestedType?: OPTIONAL<RequestedType>;
+    callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    locationNumber?: OPTIONAL<LocationNumber>;
+    calledPartyNumber?: OPTIONAL<CalledPartyNumber>;
+    dialledDigits?: OPTIONAL<Digits>;
+    redirectingPartyID?: OPTIONAL<RedirectingPartyID>;
+    redirectionInformation?: OPTIONAL<RedirectionInformation>;
+    originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>;
+    numberOfCallAttempts?: OPTIONAL<INTEGER>;
+    highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>;
+    bearerCapability?: OPTIONAL<BearerCapability>;
+    invokedSupplementaryService?: OPTIONAL<InvokableService>;
+    activeSupplementaryServices?: OPTIONAL<ActivableServices>;
+    causeOfLastCallFailure?: OPTIONAL<Cause>;
+    userInteractionModes?: OPTIONAL<UserInteractionModes>;
+    callingPartysCategory?: OPTIONAL<CallingPartysCategory>;
+    callingPartyBusinessGroupID?: OPTIONAL<OCTET_STRING>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    extensions?: OPTIONAL<ExtensionField[]>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type HandlingInformationRequestArg = OPTIONALLY_PROTECTED<HandlingInformationRequestArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("requestedType", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("locationNumber", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("calledPartyNumber", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("dialledDigits", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("numberOfCallAttempts", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("highLayerCompatibility", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("bearerCapability", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("invokedSupplementaryService", true, $.hasTag(_TagClass.context, 11)),
+    new $.ComponentSpec("activeSupplementaryServices", true, $.hasTag(_TagClass.context, 12)),
+    new $.ComponentSpec("causeOfLastCallFailure", true, $.hasTag(_TagClass.context, 13)),
+    new $.ComponentSpec("userInteractionModes", true, $.hasTag(_TagClass.context, 14)),
+    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 15)),
+    new $.ComponentSpec("callingPartyBusinessGroupID", true, $.hasTag(_TagClass.context, 16)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 17)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 18)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_HandlingInformationRequestArg: $.ASN1Decoder<HandlingInformationRequestArg> | null = null;
 
@@ -101,7 +151,7 @@ let _cached_decoder_for_HandlingInformationRequestArg: $.ASN1Decoder<HandlingInf
  */
 export
 function _decode_HandlingInformationRequestArg (el: _Element): HandlingInformationRequestArg {
-    if (!_cached_decoder_for_HandlingInformationRequestArg) { _cached_decoder_for_HandlingInformationRequestArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ requestedType: RequestedType; callingPartyNumber: CallingPartyNumber; locationNumber: LocationNumber; calledPartyNumber: CalledPartyNumber; dialledDigits: Digits; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; originalCalledPartyID: OriginalCalledPartyID; numberOfCallAttempts: INTEGER; highLayerCompatibility: HighLayerCompatibility; bearerCapability: BearerCapability; invokedSupplementaryService: InvokableService; activeSupplementaryServices: ActivableServices; causeOfLastCallFailure: Cause; userInteractionModes: UserInteractionModes; callingPartysCategory: CallingPartysCategory; callingPartyBusinessGroupID: OCTET_STRING; securityParameters: SecurityParameters; extensions: ExtensionField[] }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_HandlingInformationRequestArg) { _cached_decoder_for_HandlingInformationRequestArg = _get_decoder_for_OPTIONALLY_PROTECTED<HandlingInformationRequestArg_sequence>(function (el: _Element): HandlingInformationRequestArg_sequence {
     let requestedType: OPTIONAL<RequestedType>;
     let callingPartyNumber: OPTIONAL<CallingPartyNumber>;
     let locationNumber: OPTIONAL<LocationNumber>;
@@ -149,28 +199,7 @@ function _decode_HandlingInformationRequestArg (el: _Element): HandlingInformati
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        requestedType,
-        callingPartyNumber,
-        locationNumber,
-        calledPartyNumber,
-        dialledDigits,
-        redirectingPartyID,
-        redirectionInformation,
-        originalCalledPartyID,
-        numberOfCallAttempts,
-        highLayerCompatibility,
-        bearerCapability,
-        invokedSupplementaryService,
-        activeSupplementaryServices,
-        causeOfLastCallFailure,
-        userInteractionModes,
-        callingPartysCategory,
-        callingPartyBusinessGroupID,
-        securityParameters,
-        extensions,
-        _unrecognizedExtensionsList
-    );
+    return { requestedType, callingPartyNumber, locationNumber, calledPartyNumber, dialledDigits, redirectingPartyID, redirectionInformation, originalCalledPartyID, numberOfCallAttempts, highLayerCompatibility, bearerCapability, invokedSupplementaryService, activeSupplementaryServices, causeOfLastCallFailure, userInteractionModes, callingPartysCategory, callingPartyBusinessGroupID, securityParameters, extensions, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_HandlingInformationRequestArg(el);
 }
@@ -186,7 +215,7 @@ let _cached_encoder_for_HandlingInformationRequestArg: $.ASN1Encoder<HandlingInf
  */
 export
 function _encode_HandlingInformationRequestArg (value: HandlingInformationRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HandlingInformationRequestArg) { _cached_encoder_for_HandlingInformationRequestArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ requestedType: RequestedType; callingPartyNumber: CallingPartyNumber; locationNumber: LocationNumber; calledPartyNumber: CalledPartyNumber; dialledDigits: Digits; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; originalCalledPartyID: OriginalCalledPartyID; numberOfCallAttempts: INTEGER; highLayerCompatibility: HighLayerCompatibility; bearerCapability: BearerCapability; invokedSupplementaryService: InvokableService; activeSupplementaryServices: ActivableServices; causeOfLastCallFailure: Cause; userInteractionModes: UserInteractionModes; callingPartysCategory: CallingPartysCategory; callingPartyBusinessGroupID: OCTET_STRING; securityParameters: SecurityParameters; extensions: ExtensionField[] }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_HandlingInformationRequestArg) { _cached_encoder_for_HandlingInformationRequestArg = _get_encoder_for_OPTIONALLY_PROTECTED<HandlingInformationRequestArg_sequence>(function (value: HandlingInformationRequestArg_sequence, elGetter: $.ASN1Encoder<HandlingInformationRequestArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(19 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

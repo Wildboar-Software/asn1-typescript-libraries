@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa.mjs";
 // export { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordinateShadowUpdate.oa.mjs";
@@ -32,7 +33,7 @@ const shadowSupplierPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Consumer": [ coordinateShadowUpdate, updateShadow, ] /* OBJECT_FIELD_SETTING */,
+    "&Consumer": [ coordinateShadowUpdate, updateShadow, ] as unknown as OPERATION[] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_shadowSupplier /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

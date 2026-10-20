@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 // export { emptyBind } from "../Remote-Operations-Useful-Definitions/emptyBind.oa.mjs";
 // export { emptyUnbind } from "../Remote-Operations-Useful-Definitions/emptyUnbind.oa.mjs";
@@ -35,8 +36,8 @@ const dapConnectionPackage: CONNECTION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&bind": directoryBind /* OBJECT_FIELD_SETTING */,
-    "&unbind": directoryUnbind /* OBJECT_FIELD_SETTING */,
+    "&bind": directoryBind as unknown as OPERATION /* OBJECT_FIELD_SETTING */,
+    "&unbind": directoryUnbind as unknown as OPERATION /* OBJECT_FIELD_SETTING */,
     "&id": id_package_dapConnection /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&responderCanUnbind": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&unbindCanFail": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

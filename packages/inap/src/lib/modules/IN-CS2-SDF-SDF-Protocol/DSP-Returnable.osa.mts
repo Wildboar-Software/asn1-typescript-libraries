@@ -29,6 +29,6 @@ import { chainedExecute } from "../IN-CS2-SDF-SDF-Protocol/chainedExecute.oa.mjs
  * 
  */
 export
-const DSP_Returnable: (OPERATION)[] = [ chainedAddEntry, chainedRemoveEntry, chainedModifyEntry, chainedSearch, chainedExecute, ];
+const DSP_Returnable: (OPERATION)[] = [ chainedAddEntry, chainedRemoveEntry, chainedModifyEntry, chainedSearch, chainedExecute, ] as unknown as OPERATION[];
 
 /* eslint-enable */

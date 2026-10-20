@@ -7,6 +7,8 @@ import { scfChained } from "../IN-CS2-SCF-SCF-ops-args/scfChained.oa.mjs";
 // export { handlingInformationResult } from "../IN-CS2-SCF-SCF-ops-args/handlingInformationResult.oa.mjs";
 
 
+import { handlingInformationResult } from "../IN-CS2-SCF-SCF-ops-args/handlingInformationResult.oa.mjs";
+
 /**
  * @summary chainedHandlingInformationResult
  * @description
@@ -22,6 +24,6 @@ import { scfChained } from "../IN-CS2-SCF-SCF-ops-args/scfChained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedHandlingInformationResult: OPERATION = scfChained;
+const chainedHandlingInformationResult: OPERATION = scfChained(handlingInformationResult);
 
 /* eslint-enable */

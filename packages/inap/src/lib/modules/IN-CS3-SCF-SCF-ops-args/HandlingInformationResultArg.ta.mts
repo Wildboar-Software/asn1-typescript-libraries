@@ -58,7 +58,43 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-co
  * ```
  */
 export
-type HandlingInformationResultArg = OPTIONALLY_PROTECTED<{ routingAddress: RoutingAddress; highLayerCompatibility: HighLayerCompatibility; supplementaryServices: SupplementaryServices; preferredLanguage: Language; carrier: Carrier; callingPartyNumber: CallingPartyNumber; originalCalledPartyID: OriginalCalledPartyID; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; callingPartysCategory: CallingPartysCategory; securityParameters: SecurityParameters; extensions: Extensions }>; // DefinedType
+interface HandlingInformationResultArg_sequence {
+    routingAddress?: OPTIONAL<RoutingAddress>;
+    highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>;
+    supplementaryServices?: OPTIONAL<SupplementaryServices>;
+    preferredLanguage?: OPTIONAL<Language>;
+    carrier?: OPTIONAL<Carrier>;
+    callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>;
+    redirectingPartyID?: OPTIONAL<RedirectingPartyID>;
+    redirectionInformation?: OPTIONAL<RedirectionInformation>;
+    callingPartysCategory?: OPTIONAL<CallingPartysCategory>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    extensions?: OPTIONAL<Extensions>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type HandlingInformationResultArg = OPTIONALLY_PROTECTED<HandlingInformationResultArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("routingAddress", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("highLayerCompatibility", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("supplementaryServices", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("preferredLanguage", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("carrier", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("callingPartyNumber", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("originalCalledPartyID", true, $.hasTag(_TagClass.context, 6)),
+    new $.ComponentSpec("redirectingPartyID", true, $.hasTag(_TagClass.context, 7)),
+    new $.ComponentSpec("redirectionInformation", true, $.hasTag(_TagClass.context, 8)),
+    new $.ComponentSpec("callingPartysCategory", true, $.hasTag(_TagClass.context, 9)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 10)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 11)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_HandlingInformationResultArg: $.ASN1Decoder<HandlingInformationResultArg> | null = null;
 
@@ -70,7 +106,7 @@ let _cached_decoder_for_HandlingInformationResultArg: $.ASN1Decoder<HandlingInfo
  */
 export
 function _decode_HandlingInformationResultArg (el: _Element): HandlingInformationResultArg {
-    if (!_cached_decoder_for_HandlingInformationResultArg) { _cached_decoder_for_HandlingInformationResultArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ routingAddress: RoutingAddress; highLayerCompatibility: HighLayerCompatibility; supplementaryServices: SupplementaryServices; preferredLanguage: Language; carrier: Carrier; callingPartyNumber: CallingPartyNumber; originalCalledPartyID: OriginalCalledPartyID; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; callingPartysCategory: CallingPartysCategory; securityParameters: SecurityParameters; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_HandlingInformationResultArg) { _cached_decoder_for_HandlingInformationResultArg = _get_decoder_for_OPTIONALLY_PROTECTED<HandlingInformationResultArg_sequence>(function (el: _Element): HandlingInformationResultArg_sequence {
     let routingAddress: OPTIONAL<RoutingAddress>;
     let highLayerCompatibility: OPTIONAL<HighLayerCompatibility>;
     let supplementaryServices: OPTIONAL<SupplementaryServices>;
@@ -104,21 +140,7 @@ function _decode_HandlingInformationResultArg (el: _Element): HandlingInformatio
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        routingAddress,
-        highLayerCompatibility,
-        supplementaryServices,
-        preferredLanguage,
-        carrier,
-        callingPartyNumber,
-        originalCalledPartyID,
-        redirectingPartyID,
-        redirectionInformation,
-        callingPartysCategory,
-        securityParameters,
-        extensions,
-        _unrecognizedExtensionsList
-    );
+    return { routingAddress, highLayerCompatibility, supplementaryServices, preferredLanguage, carrier, callingPartyNumber, originalCalledPartyID, redirectingPartyID, redirectionInformation, callingPartysCategory, securityParameters, extensions, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_HandlingInformationResultArg(el);
 }
@@ -134,7 +156,7 @@ let _cached_encoder_for_HandlingInformationResultArg: $.ASN1Encoder<HandlingInfo
  */
 export
 function _encode_HandlingInformationResultArg (value: HandlingInformationResultArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HandlingInformationResultArg) { _cached_encoder_for_HandlingInformationResultArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ routingAddress: RoutingAddress; highLayerCompatibility: HighLayerCompatibility; supplementaryServices: SupplementaryServices; preferredLanguage: Language; carrier: Carrier; callingPartyNumber: CallingPartyNumber; originalCalledPartyID: OriginalCalledPartyID; redirectingPartyID: RedirectingPartyID; redirectionInformation: RedirectionInformation; callingPartysCategory: CallingPartysCategory; securityParameters: SecurityParameters; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_HandlingInformationResultArg) { _cached_encoder_for_HandlingInformationResultArg = _get_encoder_for_OPTIONALLY_PROTECTED<HandlingInformationResultArg_sequence>(function (value: HandlingInformationResultArg_sequence, elGetter: $.ASN1Encoder<HandlingInformationResultArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(12 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

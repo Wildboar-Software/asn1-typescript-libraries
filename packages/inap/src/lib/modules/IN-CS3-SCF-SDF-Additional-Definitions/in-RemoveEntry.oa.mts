@@ -1,3 +1,5 @@
+import { type Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
@@ -51,8 +53,8 @@ const in_RemoveEntry: OPERATION<IN_RemoveEntryArgument, RemoveEntryResult> = {
         "&ArgumentType": _encode_IN_RemoveEntryArgument,
         "&ResultType": _encode_RemoveEntryResult,
     },
-    "&Errors": [ nameError, in_ServiceError, securityError, updateError, referral, ] /* OBJECT_FIELD_SETTING */,
-    "&operationCode": id_opcode_removeEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Errors": [ nameError, in_ServiceError, securityError, updateError, referral, ] as unknown as ERROR[] /* OBJECT_FIELD_SETTING */,
+    "&operationCode": id_opcode_removeEntry as unknown as Code /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&InvokePriority": 0 as never /* OBJECT_FIELD_SETTING OBJECT_VALUE_SET_FIELD_SETTING */,

@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";
 // export { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";
@@ -30,7 +31,7 @@ const inchainedSearchPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ chainedSearch, ] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ chainedSearch, ] as unknown as OPERATION[] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_inchainedSearch /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

@@ -7,6 +7,8 @@ import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
 // export { networkCapability } from "../IN-SCF-SCF-ops-args/networkCapability.oa.mjs";
 
 
+import { networkCapability } from "../IN-SCF-SCF-ops-args/networkCapability.oa.mjs";
+
 /**
  * @summary chainedNetworkCapability
  * @description
@@ -22,6 +24,6 @@ import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedNetworkCapability: OPERATION = scfChained;
+const chainedNetworkCapability: OPERATION = scfChained(networkCapability);
 
 /* eslint-enable */

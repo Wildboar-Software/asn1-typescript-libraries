@@ -38,7 +38,29 @@ import { PartyID, _decode_PartyID, _encode_PartyID } from "../IN-SCF-SCF-datatyp
  * ```
  */
 export
-type NotificationProvidedArg = OPTIONALLY_PROTECTED<{ notification: OPTIONAL<Notification>; notificationInformation: NotificationInformation; securityParameters: SecurityParameters; extensions: Extensions; partyID: PartyID }>; // DefinedType
+interface NotificationProvidedArg_sequence {
+    notification: Notification;
+    notificationInformation?: OPTIONAL<NotificationInformation>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    extensions?: OPTIONAL<Extensions>;
+    partyID?: OPTIONAL<PartyID>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type NotificationProvidedArg = OPTIONALLY_PROTECTED<NotificationProvidedArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("notification", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("notificationInformation", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("partyID", true, $.hasTag(_TagClass.context, 4)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_NotificationProvidedArg: $.ASN1Decoder<NotificationProvidedArg> | null = null;
 
@@ -50,7 +72,7 @@ let _cached_decoder_for_NotificationProvidedArg: $.ASN1Decoder<NotificationProvi
  */
 export
 function _decode_NotificationProvidedArg (el: _Element): NotificationProvidedArg {
-    if (!_cached_decoder_for_NotificationProvidedArg) { _cached_decoder_for_NotificationProvidedArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ notification: OPTIONAL<Notification>; notificationInformation: NotificationInformation; securityParameters: SecurityParameters; extensions: Extensions; partyID: PartyID }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_NotificationProvidedArg) { _cached_decoder_for_NotificationProvidedArg = _get_decoder_for_OPTIONALLY_PROTECTED<NotificationProvidedArg_sequence>(function (el: _Element): NotificationProvidedArg_sequence {
     let notification!: Notification;
     let notificationInformation: OPTIONAL<NotificationInformation>;
     let securityParameters: OPTIONAL<SecurityParameters>;
@@ -70,14 +92,7 @@ function _decode_NotificationProvidedArg (el: _Element): NotificationProvidedArg
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        notification,
-        notificationInformation,
-        securityParameters,
-        extensions,
-        partyID,
-        _unrecognizedExtensionsList
-    );
+    return { notification, notificationInformation, securityParameters, extensions, partyID, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_NotificationProvidedArg(el);
 }
@@ -93,7 +108,7 @@ let _cached_encoder_for_NotificationProvidedArg: $.ASN1Encoder<NotificationProvi
  */
 export
 function _encode_NotificationProvidedArg (value: NotificationProvidedArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationProvidedArg) { _cached_encoder_for_NotificationProvidedArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ notification: OPTIONAL<Notification>; notificationInformation: NotificationInformation; securityParameters: SecurityParameters; extensions: Extensions; partyID: PartyID }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_NotificationProvidedArg) { _cached_encoder_for_NotificationProvidedArg = _get_encoder_for_OPTIONALLY_PROTECTED<NotificationProvidedArg_sequence>(function (value: NotificationProvidedArg_sequence, elGetter: $.ASN1Encoder<NotificationProvidedArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

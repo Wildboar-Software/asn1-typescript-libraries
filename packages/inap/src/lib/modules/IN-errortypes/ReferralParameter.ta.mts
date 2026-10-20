@@ -28,7 +28,22 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ```
  */
 export
-type ReferralParameter = OPTIONALLY_PROTECTED<{ tryhere: OPTIONAL<AccessPointInformation>; securityParameters: SecurityParameters }>; // DefinedType
+interface ReferralParameter_sequence {
+    tryhere: AccessPointInformation;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+}
+
+export
+type ReferralParameter = OPTIONALLY_PROTECTED<ReferralParameter_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("tryhere", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 1)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_ReferralParameter: $.ASN1Decoder<ReferralParameter> | null = null;
 
@@ -40,7 +55,7 @@ let _cached_decoder_for_ReferralParameter: $.ASN1Decoder<ReferralParameter> | nu
  */
 export
 function _decode_ReferralParameter (el: _Element): ReferralParameter {
-    if (!_cached_decoder_for_ReferralParameter) { _cached_decoder_for_ReferralParameter = _get_decoder_for_OPTIONALLY_PROTECTED<{ tryhere: OPTIONAL<AccessPointInformation>; securityParameters: SecurityParameters }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_ReferralParameter) { _cached_decoder_for_ReferralParameter = _get_decoder_for_OPTIONALLY_PROTECTED<ReferralParameter_sequence>(function (el: _Element): ReferralParameter_sequence {
     let tryhere!: AccessPointInformation;
     let securityParameters: OPTIONAL<SecurityParameters>;
     const callbacks: $.DecodingMap = {
@@ -53,10 +68,7 @@ function _decode_ReferralParameter (el: _Element): ReferralParameter {
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         undefined,
     );
-    return new OPTIONALLY_PROTECTED(
-        tryhere,
-        securityParameters
-    );
+    return { tryhere, securityParameters };
 }); }
     return _cached_decoder_for_ReferralParameter(el);
 }
@@ -72,7 +84,7 @@ let _cached_encoder_for_ReferralParameter: $.ASN1Encoder<ReferralParameter> | nu
  */
 export
 function _encode_ReferralParameter (value: ReferralParameter, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReferralParameter) { _cached_encoder_for_ReferralParameter = _get_encoder_for_OPTIONALLY_PROTECTED<{ tryhere: OPTIONAL<AccessPointInformation>; securityParameters: SecurityParameters }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_ReferralParameter) { _cached_encoder_for_ReferralParameter = _get_encoder_for_OPTIONALLY_PROTECTED<ReferralParameter_sequence>(function (value: ReferralParameter_sequence, elGetter: $.ASN1Encoder<ReferralParameter_sequence>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_AccessPointInformation, $.BER)(value.tryhere, $.BER));
     if (value.securityParameters !== undefined) {

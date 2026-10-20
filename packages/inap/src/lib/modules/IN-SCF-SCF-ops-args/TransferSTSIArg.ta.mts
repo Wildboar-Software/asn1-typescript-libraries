@@ -33,7 +33,26 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ```
  */
 export
-type TransferSTSIArg = OPTIONALLY_PROTECTED<{ sSIInfo: OPTIONAL<SSIInfo>; securityParameters: SecurityParameters; extensions: Extensions }>; // DefinedType
+interface TransferSTSIArg_sequence {
+    sSIInfo: SSIInfo;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    _unrecognizedExtensionsList: _Element[];
+    extensions?: OPTIONAL<Extensions>;
+}
+
+export
+type TransferSTSIArg = OPTIONALLY_PROTECTED<TransferSTSIArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("sSIInfo", false, $.hasTag(_TagClass.universal, 16)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 2)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 3)),
+];
 
 let _cached_decoder_for_TransferSTSIArg: $.ASN1Decoder<TransferSTSIArg> | null = null;
 
@@ -45,7 +64,7 @@ let _cached_decoder_for_TransferSTSIArg: $.ASN1Decoder<TransferSTSIArg> | null =
  */
 export
 function _decode_TransferSTSIArg (el: _Element): TransferSTSIArg {
-    if (!_cached_decoder_for_TransferSTSIArg) { _cached_decoder_for_TransferSTSIArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ sSIInfo: OPTIONAL<SSIInfo>; securityParameters: SecurityParameters; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_TransferSTSIArg) { _cached_decoder_for_TransferSTSIArg = _get_decoder_for_OPTIONALLY_PROTECTED<TransferSTSIArg_sequence>(function (el: _Element): TransferSTSIArg_sequence {
     let sSIInfo!: SSIInfo;
     let securityParameters: OPTIONAL<SecurityParameters>;
     const _unrecognizedExtensionsList: _Element[] = [];
@@ -61,12 +80,7 @@ function _decode_TransferSTSIArg (el: _Element): TransferSTSIArg {
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        sSIInfo,
-        securityParameters,
-        _unrecognizedExtensionsList,
-        extensions
-    );
+    return { sSIInfo, securityParameters, _unrecognizedExtensionsList, extensions };
 }); }
     return _cached_decoder_for_TransferSTSIArg(el);
 }
@@ -82,7 +96,7 @@ let _cached_encoder_for_TransferSTSIArg: $.ASN1Encoder<TransferSTSIArg> | null =
  */
 export
 function _encode_TransferSTSIArg (value: TransferSTSIArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransferSTSIArg) { _cached_encoder_for_TransferSTSIArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ sSIInfo: OPTIONAL<SSIInfo>; securityParameters: SecurityParameters; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_TransferSTSIArg) { _cached_encoder_for_TransferSTSIArg = _get_encoder_for_OPTIONALLY_PROTECTED<TransferSTSIArg_sequence>(function (value: TransferSTSIArg_sequence, elGetter: $.ASN1Encoder<TransferSTSIArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -5,6 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../IN-CS-1-Datatypes/ExtensionType.ta.mjs";
 // export { EXTENSION } from "../IN-CS-1-Datatypes/EXTENSION.oca.mjs";
 // export { SupportedExtensions } from "../IN-CS-1-Datatypes/SupportedExtensions.osa.mjs";
 import { Criticality, Criticality_ignored /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Criticality, _encode_Criticality, _enum_for_Criticality } from "../IN-CS-1-Datatypes/Criticality.ta.mjs";

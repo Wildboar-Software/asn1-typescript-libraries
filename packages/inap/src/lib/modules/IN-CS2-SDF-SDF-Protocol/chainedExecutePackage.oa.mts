@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { chainedExecute } from "../IN-CS2-SDF-SDF-Protocol/chainedExecute.oa.mjs";
 // export { chainedExecute } from "../IN-CS2-SDF-SDF-Protocol/chainedExecute.oa.mjs";
@@ -30,7 +31,7 @@ const chainedExecutePackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ chainedExecute, ] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ chainedExecute, ] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_chainedExecute /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

@@ -36,7 +36,27 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ```
  */
 export
-type InitiateCallRequestArg = OPTIONALLY_PROTECTED<{ requestedType: RequestedType; destinationRelatedInfo: DestinationRelatedInfo[]; securityParameters: SecurityParameters; extensions: Extensions }>; // DefinedType
+interface InitiateCallRequestArg_sequence {
+    requestedType?: OPTIONAL<RequestedType>;
+    destinationRelatedInfo?: OPTIONAL<DestinationRelatedInfo[]>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    extensions?: OPTIONAL<Extensions>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type InitiateCallRequestArg = OPTIONALLY_PROTECTED<InitiateCallRequestArg_sequence>; // DefinedType
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("requestedType", true, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("destinationRelatedInfo", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 3)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_InitiateCallRequestArg: $.ASN1Decoder<InitiateCallRequestArg> | null = null;
 
@@ -48,7 +68,7 @@ let _cached_decoder_for_InitiateCallRequestArg: $.ASN1Decoder<InitiateCallReques
  */
 export
 function _decode_InitiateCallRequestArg (el: _Element): InitiateCallRequestArg {
-    if (!_cached_decoder_for_InitiateCallRequestArg) { _cached_decoder_for_InitiateCallRequestArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ requestedType: RequestedType; destinationRelatedInfo: DestinationRelatedInfo[]; securityParameters: SecurityParameters; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_InitiateCallRequestArg) { _cached_decoder_for_InitiateCallRequestArg = _get_decoder_for_OPTIONALLY_PROTECTED<InitiateCallRequestArg_sequence>(function (el: _Element): InitiateCallRequestArg_sequence {
     let requestedType: OPTIONAL<RequestedType>;
     let destinationRelatedInfo: OPTIONAL<DestinationRelatedInfo[]>;
     let securityParameters: OPTIONAL<SecurityParameters>;
@@ -66,13 +86,7 @@ function _decode_InitiateCallRequestArg (el: _Element): InitiateCallRequestArg {
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        requestedType,
-        destinationRelatedInfo,
-        securityParameters,
-        extensions,
-        _unrecognizedExtensionsList
-    );
+    return { requestedType, destinationRelatedInfo, securityParameters, extensions, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_InitiateCallRequestArg(el);
 }
@@ -88,7 +102,7 @@ let _cached_encoder_for_InitiateCallRequestArg: $.ASN1Encoder<InitiateCallReques
  */
 export
 function _encode_InitiateCallRequestArg (value: InitiateCallRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InitiateCallRequestArg) { _cached_encoder_for_InitiateCallRequestArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ requestedType: RequestedType; destinationRelatedInfo: DestinationRelatedInfo[]; securityParameters: SecurityParameters; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_InitiateCallRequestArg) { _cached_encoder_for_InitiateCallRequestArg = _get_encoder_for_OPTIONALLY_PROTECTED<InitiateCallRequestArg_sequence>(function (value: InitiateCallRequestArg_sequence, elGetter: $.ASN1Encoder<InitiateCallRequestArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(4 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

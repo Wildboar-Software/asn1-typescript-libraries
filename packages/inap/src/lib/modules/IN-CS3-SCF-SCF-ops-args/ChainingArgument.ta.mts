@@ -3,7 +3,8 @@ import {
     OPTIONAL,
     UTCTime,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    BERElement
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS3-SSF-SCF-datatypes/ScfID.ta.mjs";
@@ -135,7 +136,12 @@ class ChainingArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_scfAuthenticationLevel () { return /* COULD_NOT_COMPILE_DEFAULT_VALUE scfAuthenticationLevel */; }
+    public static get _default_value_for_scfAuthenticationLevel (): AuthenticationLevel {
+        // DEFAULT basicLevels:{level none}
+        const el = new BERElement();
+        el.fromBytes(new Uint8Array([ 0x30, 0x03, 0x0a, 0x01, 0x00 ]));
+        return _decode_AuthenticationLevel(el);
+    }
 }
 
 /**

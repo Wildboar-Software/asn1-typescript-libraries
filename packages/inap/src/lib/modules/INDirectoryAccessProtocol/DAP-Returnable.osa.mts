@@ -26,6 +26,6 @@ import { modifyEntry } from "../DirectoryAbstractService/modifyEntry.oa.mjs";
  * 
  */
 export
-const DAP_Returnable: (OPERATION)[] = [ search, addEntry, removeEntry, modifyEntry, ];
+const DAP_Returnable: (OPERATION)[] = [ search, addEntry, removeEntry, modifyEntry, ] as unknown as OPERATION[];
 
 /* eslint-enable */

@@ -21,8 +21,8 @@ import {
  */
 export
 const id_cs3: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     1238,
 ], itu_t);
 

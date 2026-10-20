@@ -42,7 +42,35 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ```
  */
 export
-type ProvideAnnouncementRequestArg = OPTIONALLY_PROTECTED<{ infoToSend: OPTIONAL<InformationToSend>; preferredLanguage: Language; securityParameters: SecurityParameters; srfAddress: CalledPartyNumber; userToConnect: UserToConnect; requestAnnouncementComplete: BOOLEAN; extensions: Extensions }>; // DefinedType
+interface ProvideAnnouncementRequestArg_sequence {
+    infoToSend: InformationToSend;
+    preferredLanguage?: OPTIONAL<Language>;
+    securityParameters?: OPTIONAL<SecurityParameters>;
+    srfAddress?: OPTIONAL<CalledPartyNumber>;
+    userToConnect?: OPTIONAL<UserToConnect>;
+    requestAnnouncementComplete?: OPTIONAL<BOOLEAN>;
+    extensions?: OPTIONAL<Extensions>;
+    _unrecognizedExtensionsList: _Element[];
+}
+
+export
+type ProvideAnnouncementRequestArg = OPTIONALLY_PROTECTED<ProvideAnnouncementRequestArg_sequence>; // DefinedType
+
+const _default_value_for_requestAnnouncementComplete: BOOLEAN = true;
+
+const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
+    new $.ComponentSpec("infoToSend", false, $.hasTag(_TagClass.context, 0)),
+    new $.ComponentSpec("preferredLanguage", true, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 2)),
+    new $.ComponentSpec("srfAddress", true, $.hasTag(_TagClass.context, 3)),
+    new $.ComponentSpec("userToConnect", true, $.hasTag(_TagClass.context, 4)),
+    new $.ComponentSpec("requestAnnouncementComplete", true, $.hasTag(_TagClass.context, 5)),
+    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 6)),
+];
+
+const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+
+const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
 
 let _cached_decoder_for_ProvideAnnouncementRequestArg: $.ASN1Decoder<ProvideAnnouncementRequestArg> | null = null;
 
@@ -54,13 +82,13 @@ let _cached_decoder_for_ProvideAnnouncementRequestArg: $.ASN1Decoder<ProvideAnno
  */
 export
 function _decode_ProvideAnnouncementRequestArg (el: _Element): ProvideAnnouncementRequestArg {
-    if (!_cached_decoder_for_ProvideAnnouncementRequestArg) { _cached_decoder_for_ProvideAnnouncementRequestArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ infoToSend: OPTIONAL<InformationToSend>; preferredLanguage: Language; securityParameters: SecurityParameters; srfAddress: CalledPartyNumber; userToConnect: UserToConnect; requestAnnouncementComplete: BOOLEAN; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
+    if (!_cached_decoder_for_ProvideAnnouncementRequestArg) { _cached_decoder_for_ProvideAnnouncementRequestArg = _get_decoder_for_OPTIONALLY_PROTECTED<ProvideAnnouncementRequestArg_sequence>(function (el: _Element): ProvideAnnouncementRequestArg_sequence {
     let infoToSend!: InformationToSend;
     let preferredLanguage: OPTIONAL<Language>;
     let securityParameters: OPTIONAL<SecurityParameters>;
     let srfAddress: OPTIONAL<CalledPartyNumber>;
     let userToConnect: OPTIONAL<UserToConnect>;
-    let requestAnnouncementComplete: OPTIONAL<BOOLEAN> = OPTIONALLY_PROTECTED._default_value_for_requestAnnouncementComplete;
+    let requestAnnouncementComplete: OPTIONAL<BOOLEAN> = _default_value_for_requestAnnouncementComplete;
     let extensions: OPTIONAL<Extensions>;
     const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
@@ -78,16 +106,7 @@ function _decode_ProvideAnnouncementRequestArg (el: _Element): ProvideAnnounceme
         _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
         (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
     );
-    return new OPTIONALLY_PROTECTED(
-        infoToSend,
-        preferredLanguage,
-        securityParameters,
-        srfAddress,
-        userToConnect,
-        requestAnnouncementComplete,
-        extensions,
-        _unrecognizedExtensionsList
-    );
+    return { infoToSend, preferredLanguage, securityParameters, srfAddress, userToConnect, requestAnnouncementComplete, extensions, _unrecognizedExtensionsList };
 }); }
     return _cached_decoder_for_ProvideAnnouncementRequestArg(el);
 }
@@ -103,7 +122,7 @@ let _cached_encoder_for_ProvideAnnouncementRequestArg: $.ASN1Encoder<ProvideAnno
  */
 export
 function _encode_ProvideAnnouncementRequestArg (value: ProvideAnnouncementRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProvideAnnouncementRequestArg) { _cached_encoder_for_ProvideAnnouncementRequestArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ infoToSend: OPTIONAL<InformationToSend>; preferredLanguage: Language; securityParameters: SecurityParameters; srfAddress: CalledPartyNumber; userToConnect: UserToConnect; requestAnnouncementComplete: BOOLEAN; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
+    if (!_cached_encoder_for_ProvideAnnouncementRequestArg) { _cached_encoder_for_ProvideAnnouncementRequestArg = _get_encoder_for_OPTIONALLY_PROTECTED<ProvideAnnouncementRequestArg_sequence>(function (value: ProvideAnnouncementRequestArg_sequence, elGetter: $.ASN1Encoder<ProvideAnnouncementRequestArg_sequence>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
@@ -120,7 +139,7 @@ function _encode_ProvideAnnouncementRequestArg (value: ProvideAnnouncementReques
     if (value.userToConnect !== undefined) {
         _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 4, () => _encode_UserToConnect, $.BER)(value.userToConnect, $.BER);
     }
-    if (value.requestAnnouncementComplete !== undefined && !$.deepEq(value.requestAnnouncementComplete, OPTIONALLY_PROTECTED._default_value_for_requestAnnouncementComplete)) {
+    if (value.requestAnnouncementComplete !== undefined && !$.deepEq(value.requestAnnouncementComplete, _default_value_for_requestAnnouncementComplete)) {
         _components[_components_i++] = /* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 5, () => $._encodeBoolean, $.BER)(value.requestAnnouncementComplete, $.BER);
     }
     if (value.extensions !== undefined) {

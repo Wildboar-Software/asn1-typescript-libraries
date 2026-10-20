@@ -41,35 +41,15 @@ export
 const executionError: ERROR<OPTIONALLY_PROTECTED<{ problem: OPTIONAL<ExecutionProblem>; _componentsOf: CommonResults }>> = {
     class: "ERROR",
     decoderFor: {
-        "&ParameterType": _get_decoder_for_OPTIONALLY_PROTECTED<{ problem: OPTIONAL<ExecutionProblem>; _componentsOf: CommonResults }>(function (el: _Element): OPTIONALLY_PROTECTED {
-    /* START_OF_SET_COMPONENT_DECLARATIONS */
-    let problem!: ExecutionProblem;
-    let _componentsOf!: CommonResults;
-    /* END_OF_SET_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
-    const callbacks: $.DecodingMap = {
-        "problem": (_el: _Element): void => { problem = $._decode_explicit<ExecutionProblem>(() => _decode_ExecutionProblem)(_el); },
-        /* COULD_NOT_GENERATE_CALLBACK_FOR_COMPONENTS_OF */
-    };
-    /* END_OF_CALLBACKS_MAP */
-    $._parse_set(el, callbacks,
-        _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED,
-        _extension_additions_list_spec_for_OPTIONALLY_PROTECTED,
-        _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
-        undefined,
-    );
-    return new OPTIONALLY_PROTECTED( /* SET_CONSTRUCTOR_CALL */
-        problem,
-        _componentsOf
-    );
+        "&ParameterType": _get_decoder_for_OPTIONALLY_PROTECTED<{ problem: OPTIONAL<ExecutionProblem>; _componentsOf: CommonResults }>(function (el: _Element): any {
+    // FIXME: COULD_NOT_COMPILE_TYPE_DECODER
+    throw new Error("FIXME: COULD_NOT_COMPILE_TYPE_DECODER");
 }),
     },
     encoderFor: {
-        "&ParameterType": _get_encoder_for_OPTIONALLY_PROTECTED<{ problem: OPTIONAL<ExecutionProblem>; _componentsOf: CommonResults }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
-    return $._encodeSet([
-        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ExecutionProblem, $.BER)(value.problem, $.BER),
-        /* FIXME: COULD_NOT_COMPILE_COMPONENTS_OF DefinedType */
-    ], $.BER);
+        "&ParameterType": _get_encoder_for_OPTIONALLY_PROTECTED<{ problem: OPTIONAL<ExecutionProblem>; _componentsOf: CommonResults }>(function (value: any, elGetter: $.ASN1Encoder<any>): _Element {
+    // FIXME: COULD_NOT_COMPILE_TYPE_ENCODER
+    throw new Error("FIXME: COULD_NOT_COMPILE_TYPE_ENCODER");
 }),
     },
     "&errorCode": errcode_executionError /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

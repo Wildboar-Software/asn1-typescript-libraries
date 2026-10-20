@@ -1,4 +1,4 @@
-import { type CONTRACT, type CONNECTION_PACKAGE, type OPERATION_PACKAGE, emptyUnbind } from "@wildboar/rose";
+import { type CONTRACT, type CONNECTION_PACKAGE, type OPERATION, type OPERATION_PACKAGE, emptyUnbind } from "@wildboar/rose";
 import {
     chainedAbandon,
     chainedAddEntry,
@@ -42,7 +42,8 @@ const dspConnectionPackage: CONNECTION_PACKAGE = {
     class: "CONNECTION-PACKAGE",
     decoderFor: {},
     encoderFor: {},
-    "&bind": dSABind,
+    // X.500's OPERATION class is not the 1997 ROSE OPERATION class.
+    "&bind": dSABind as unknown as OPERATION,
     "&unbind": emptyUnbind,
     "&id": id_package_dspConnection,
     "&responderCanUnbind": false,
@@ -53,7 +54,7 @@ const chainedReadPackage: OPERATION_PACKAGE = {
     class: "OPERATION-PACKAGE",
     decoderFor: {},
     encoderFor: {},
-    "&Both": [chainedRead, chainedCompare, chainedAbandon],
+    "&Both": [chainedRead, chainedCompare, chainedAbandon] as unknown as OPERATION[],
     "&id": id_package_chainedRead,
 };
 
@@ -61,7 +62,7 @@ const chainedSearchPackage: OPERATION_PACKAGE = {
     class: "OPERATION-PACKAGE",
     decoderFor: {},
     encoderFor: {},
-    "&Both": [chainedList, chainedSearch],
+    "&Both": [chainedList, chainedSearch] as unknown as OPERATION[],
     "&id": id_package_chainedSearch,
 };
 
@@ -69,7 +70,7 @@ const chainedModifyPackage: OPERATION_PACKAGE = {
     class: "OPERATION-PACKAGE",
     decoderFor: {},
     encoderFor: {},
-    "&Both": [chainedAddEntry, chainedRemoveEntry, chainedModifyEntry, chainedModifyDN],
+    "&Both": [chainedAddEntry, chainedRemoveEntry, chainedModifyEntry, chainedModifyDN] as unknown as OPERATION[],
     "&id": id_package_chainedModify,
 };
 

@@ -1,3 +1,4 @@
+import { execute } from "../IN-CS2-SCF-SDF-Operations/execute.oa.mjs";
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
@@ -22,6 +23,6 @@ import { chained } from "../DistributedOperations/chained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedExecute: OPERATION = chained;
+const chainedExecute: OPERATION = chained(execute) as unknown as OPERATION;
 
 /* eslint-enable */

@@ -21,6 +21,6 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @implements {ERROR}
  */
 export
-const in_DirectoryBindError: ERROR = directoryBindError;
+const in_DirectoryBindError: ERROR = directoryBindError as unknown as ERROR;
 
 /* eslint-enable */

@@ -7,6 +7,8 @@ import { scfChained } from "../IN-CS2-SCF-SCF-ops-args/scfChained.oa.mjs";
 // export { establishChargingRecord } from "../IN-CS2-SCF-SCF-ops-args/establishChargingRecord.oa.mjs";
 
 
+import { establishChargingRecord } from "../IN-CS2-SCF-SCF-ops-args/establishChargingRecord.oa.mjs";
+
 /**
  * @summary chainedEstablishChargingRecord
  * @description
@@ -22,6 +24,6 @@ import { scfChained } from "../IN-CS2-SCF-SCF-ops-args/scfChained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedEstablishChargingRecord: OPERATION = scfChained;
+const chainedEstablishChargingRecord: OPERATION = scfChained(establishChargingRecord);
 
 /* eslint-enable */

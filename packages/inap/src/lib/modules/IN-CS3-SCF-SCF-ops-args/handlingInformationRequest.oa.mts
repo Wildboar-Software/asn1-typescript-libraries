@@ -1,3 +1,4 @@
+import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 /* eslint-disable */
 import {
     NULL
@@ -72,7 +73,7 @@ const handlingInformationRequest: OPERATION<HandlingInformationRequestArg, NULL>
         "&ResultType": $._encodeNull,
     },
     "&returnResult": false /* OBJECT_FIELD_SETTING */,
-    "&Errors": [ missingCustomerRecord, missingParameter, parameterOutOfRange, systemFailure, scfTaskRefused, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, securityError, scfReferral, ] /* OBJECT_FIELD_SETTING */,
+    "&Errors": [ missingCustomerRecord, missingParameter, parameterOutOfRange, systemFailure, scfTaskRefused, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, securityError, scfReferral, ] as unknown as ERROR[] /* OBJECT_FIELD_SETTING */,
     "&Linked": [ handlingInformationResult, ] /* OBJECT_FIELD_SETTING */,
     "&alwaysReturns": false /* OBJECT_FIELD_SETTING */,
     "&operationCode": opcode_handlingInformationRequest /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { addEntry } from "../DirectoryAbstractService/addEntry.oa.mjs";
 // export { addEntry } from "../DirectoryAbstractService/addEntry.oa.mjs";
@@ -34,7 +35,7 @@ const modifyPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ addEntry, removeEntry, modifyEntry, ] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ addEntry, removeEntry, modifyEntry, ] as unknown as OPERATION[] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_modify /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

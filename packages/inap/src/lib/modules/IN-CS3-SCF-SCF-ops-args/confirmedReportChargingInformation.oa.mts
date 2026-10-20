@@ -8,6 +8,9 @@ import { makeConfirm } from "../IN-CS3-SCF-SCF-ops-args/makeConfirm.oa.mjs";
 // export { opcode_confirmedReportChargingInformation } from "../IN-CS3-operationcodes/opcode-confirmedReportChargingInformation.va.mjs";
 
 
+import { reportChargingInformation } from "../IN-CS3-SCF-SCF-ops-args/reportChargingInformation.oa.mjs";
+import { opcode_confirmedReportChargingInformation } from "../IN-CS3-operationcodes/opcode-confirmedReportChargingInformation.va.mjs";
+
 /**
  * @summary confirmedReportChargingInformation
  * @description
@@ -24,6 +27,6 @@ import { makeConfirm } from "../IN-CS3-SCF-SCF-ops-args/makeConfirm.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const confirmedReportChargingInformation: OPERATION = makeConfirm;
+const confirmedReportChargingInformation: OPERATION = makeConfirm(reportChargingInformation, opcode_confirmedReportChargingInformation);
 
 /* eslint-enable */

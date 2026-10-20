@@ -28,6 +28,6 @@ import { execute } from "../IN-SCF-SDF-operations/execute.oa.mjs";
  * 
  */
 export
-const Extended_DAP_Returnable: (OPERATION)[] = [ search, addEntry, removeEntry, modifyEntry, execute, ];
+const Extended_DAP_Returnable: (OPERATION)[] = [ search, addEntry, removeEntry, modifyEntry, execute, ] as unknown as OPERATION[];
 
 /* eslint-enable */

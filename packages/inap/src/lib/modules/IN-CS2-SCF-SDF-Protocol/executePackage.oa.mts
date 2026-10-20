@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { execute } from "../IN-CS2-SCF-SDF-Operations/execute.oa.mjs";
 // export { execute } from "../IN-CS2-SCF-SDF-Operations/execute.oa.mjs";
@@ -30,7 +31,7 @@ const executePackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ execute, ] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ execute, ] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_execute /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 
