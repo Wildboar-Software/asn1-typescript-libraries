@@ -120,7 +120,7 @@ class CAMELInformationPDP {
         if (this.sCFAddress !== undefined && (this.sCFAddress.length < 1 || this.sCFAddress.length > 20)) {
             throw new ASN1SizeError("CAMELInformationPDP.sCFAddress violates SIZE constraint");
         }
-        if (this.serviceKey !== undefined && ((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+        if (this.serviceKey !== undefined && (this.serviceKey < 0 || this.serviceKey > 2147483647)) {
             throw new ASN1OverflowError("CAMELInformationPDP.serviceKey violates INTEGER range");
         }
         if (this.cAMELAccessPointNameNI !== undefined && (this.cAMELAccessPointNameNI.length < 1 || this.cAMELAccessPointNameNI.length > 63)) {

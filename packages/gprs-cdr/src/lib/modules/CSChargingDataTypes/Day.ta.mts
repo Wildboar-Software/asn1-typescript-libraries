@@ -23,7 +23,7 @@ type Day = INTEGER;
 
 export const _decode_Day = (el: _Element): Day => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 1 || (typeof value === "bigint" ? Number(value) : value) > 31) {
+    if (value < 1 || value > 31) {
         throw new ASN1OverflowError("Day violates INTEGER range");
     }
     return value;

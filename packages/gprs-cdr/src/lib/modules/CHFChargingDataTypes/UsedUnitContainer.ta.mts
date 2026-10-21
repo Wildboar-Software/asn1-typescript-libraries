@@ -150,7 +150,7 @@ class UsedUnitContainer {
         this.pDUContainerInformation = pDUContainerInformation;
         this.quotaManagementIndicator = quotaManagementIndicator;
     
-        if (this.serviceIdentifier !== undefined && ((typeof this.serviceIdentifier === "bigint" ? Number(this.serviceIdentifier) : this.serviceIdentifier) < 0 || (typeof this.serviceIdentifier === "bigint" ? Number(this.serviceIdentifier) : this.serviceIdentifier) > 4294967295)) {
+        if (this.serviceIdentifier !== undefined && (this.serviceIdentifier < 0 || this.serviceIdentifier > 4294967295)) {
             throw new ASN1OverflowError("UsedUnitContainer.serviceIdentifier violates INTEGER range");
         }
         if (this.triggerTimeStamp !== undefined && (this.triggerTimeStamp.length !== 9)) {
@@ -159,7 +159,7 @@ class UsedUnitContainer {
         if (this.eventTimeStamp !== undefined && (this.eventTimeStamp.length !== 9)) {
             throw new ASN1SizeError("UsedUnitContainer.eventTimeStamp violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("UsedUnitContainer.localSequenceNumber violates INTEGER range");
         }
     }

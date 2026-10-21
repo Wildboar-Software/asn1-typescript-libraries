@@ -56,7 +56,7 @@ class MonitoringEventConfigStatus {
         this.sCEFReferenceID = sCEFReferenceID;
         this.sCEFID = sCEFID;
     
-        if (this.sCEFReferenceID !== undefined && ((typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) < 0 || (typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) > 4294967295)) {
+        if (this.sCEFReferenceID !== undefined && (this.sCEFReferenceID < 0 || this.sCEFReferenceID > 4294967295)) {
             throw new ASN1OverflowError("MonitoringEventConfigStatus.sCEFReferenceID violates INTEGER range");
         }
     }

@@ -123,10 +123,10 @@ class Media_Components_List {
         if (this.sIP_Response_Timestamp !== undefined && (this.sIP_Response_Timestamp.length !== 9)) {
             throw new ASN1SizeError("Media_Components_List.sIP_Response_Timestamp violates SIZE constraint");
         }
-        if (this.sIP_Request_Timestamp_Fraction !== undefined && ((typeof this.sIP_Request_Timestamp_Fraction === "bigint" ? Number(this.sIP_Request_Timestamp_Fraction) : this.sIP_Request_Timestamp_Fraction) < 0 || (typeof this.sIP_Request_Timestamp_Fraction === "bigint" ? Number(this.sIP_Request_Timestamp_Fraction) : this.sIP_Request_Timestamp_Fraction) > 999)) {
+        if (this.sIP_Request_Timestamp_Fraction !== undefined && (this.sIP_Request_Timestamp_Fraction < 0 || this.sIP_Request_Timestamp_Fraction > 999)) {
             throw new ASN1OverflowError("Media_Components_List.sIP_Request_Timestamp_Fraction violates INTEGER range");
         }
-        if (this.sIP_Response_Timestamp_Fraction !== undefined && ((typeof this.sIP_Response_Timestamp_Fraction === "bigint" ? Number(this.sIP_Response_Timestamp_Fraction) : this.sIP_Response_Timestamp_Fraction) < 0 || (typeof this.sIP_Response_Timestamp_Fraction === "bigint" ? Number(this.sIP_Response_Timestamp_Fraction) : this.sIP_Response_Timestamp_Fraction) > 999)) {
+        if (this.sIP_Response_Timestamp_Fraction !== undefined && (this.sIP_Response_Timestamp_Fraction < 0 || this.sIP_Response_Timestamp_Fraction > 999)) {
             throw new ASN1OverflowError("Media_Components_List.sIP_Response_Timestamp_Fraction violates INTEGER range");
         }
     }

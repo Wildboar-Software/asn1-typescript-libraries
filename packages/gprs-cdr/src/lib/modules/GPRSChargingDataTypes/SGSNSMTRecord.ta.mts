@@ -343,13 +343,13 @@ class SGSNSMTRecord {
         if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
             throw new ASN1SizeError("SGSNSMTRecord.nodeID violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("SGSNSMTRecord.localSequenceNumber violates INTEGER range");
         }
         if ((this.chargingCharacteristics.length !== 2)) {
             throw new ASN1SizeError("SGSNSMTRecord.chargingCharacteristics violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("SGSNSMTRecord.rATType violates INTEGER range");
         }
         if (this.originatingAddress !== undefined && (this.originatingAddress.length < 1 || this.originatingAddress.length > 20)) {

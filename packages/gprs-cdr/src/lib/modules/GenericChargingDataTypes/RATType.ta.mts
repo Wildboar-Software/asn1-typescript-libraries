@@ -23,7 +23,7 @@ type RATType = INTEGER;
 
 export const _decode_RATType = (el: _Element): RATType => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 0 || (typeof value === "bigint" ? Number(value) : value) > 255) {
+    if (value < 0 || value > 255) {
         throw new ASN1OverflowError("RATType violates INTEGER range");
     }
     return value;

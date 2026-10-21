@@ -223,7 +223,7 @@ class SUBBMSCRecord {
         if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
             throw new ASN1SizeError("SUBBMSCRecord.nodeID violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("SUBBMSCRecord.localSequenceNumber violates INTEGER range");
         }
         if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {

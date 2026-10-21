@@ -284,7 +284,7 @@ class SMSChargingInformation {
         if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
             throw new ASN1SizeError("SMSChargingInformation.uETimeZone violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("SMSChargingInformation.rATType violates INTEGER range");
         }
         if (this.sMSCAddress !== undefined && (this.sMSCAddress.length < 1 || this.sMSCAddress.length > 20)) {

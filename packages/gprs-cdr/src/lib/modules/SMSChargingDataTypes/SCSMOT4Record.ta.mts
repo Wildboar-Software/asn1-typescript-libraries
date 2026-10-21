@@ -264,13 +264,13 @@ class SCSMOT4Record {
         if ((this.eventtimestamp.length !== 9)) {
             throw new ASN1SizeError("SCSMOT4Record.eventtimestamp violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("SCSMOT4Record.rATType violates INTEGER range");
         }
         if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
             throw new ASN1SizeError("SCSMOT4Record.uETimeZone violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("SCSMOT4Record.localSequenceNumber violates INTEGER range");
         }
     }

@@ -99,7 +99,7 @@ class RelatedChangeOfCharCondition {
         if ((this.changeTime.length !== 9)) {
             throw new ASN1SizeError("RelatedChangeOfCharCondition.changeTime violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("RelatedChangeOfCharCondition.rATType violates INTEGER range");
         }
     }

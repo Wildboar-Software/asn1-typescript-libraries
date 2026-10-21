@@ -46,7 +46,7 @@ class PacketSwitchedAccess {
         this.gSNAddress = gSNAddress;
         this.chargingID = chargingID;
     
-        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+        if ((this.chargingID < 0 || this.chargingID > 4294967295)) {
             throw new ASN1OverflowError("PacketSwitchedAccess.chargingID violates INTEGER range");
         }
     }

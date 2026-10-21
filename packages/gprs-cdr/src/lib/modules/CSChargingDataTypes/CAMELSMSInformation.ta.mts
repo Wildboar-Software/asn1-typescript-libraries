@@ -108,7 +108,7 @@ class CAMELSMSInformation {
         if (this.gsm_SCFAddress !== undefined && (this.gsm_SCFAddress.length < 1 || this.gsm_SCFAddress.length > 9)) {
             throw new ASN1SizeError("CAMELSMSInformation.gsm_SCFAddress violates SIZE constraint");
         }
-        if (this.serviceKey !== undefined && ((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+        if (this.serviceKey !== undefined && (this.serviceKey < 0 || this.serviceKey > 2147483647)) {
             throw new ASN1OverflowError("CAMELSMSInformation.serviceKey violates INTEGER range");
         }
         if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {

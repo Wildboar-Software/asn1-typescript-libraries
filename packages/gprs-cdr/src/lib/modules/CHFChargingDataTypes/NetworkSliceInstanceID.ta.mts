@@ -48,7 +48,7 @@ class NetworkSliceInstanceID {
         this.sST = sST;
         this.sD = sD;
     
-        if (((typeof this.sST === "bigint" ? Number(this.sST) : this.sST) < 0 || (typeof this.sST === "bigint" ? Number(this.sST) : this.sST) > 255)) {
+        if ((this.sST < 0 || this.sST > 255)) {
             throw new ASN1OverflowError("NetworkSliceInstanceID.sST violates INTEGER range");
         }
         if (this.sD !== undefined && (this.sD.length !== 3)) {

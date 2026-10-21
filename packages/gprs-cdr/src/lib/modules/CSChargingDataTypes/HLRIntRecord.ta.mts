@@ -137,7 +137,7 @@ class HLRIntRecord {
         if ((this.interrogationTime.length !== 9)) {
             throw new ASN1SizeError("HLRIntRecord.interrogationTime violates SIZE constraint");
         }
-        if (this.numberOfForwarding !== undefined && ((typeof this.numberOfForwarding === "bigint" ? Number(this.numberOfForwarding) : this.numberOfForwarding) < 1 || (typeof this.numberOfForwarding === "bigint" ? Number(this.numberOfForwarding) : this.numberOfForwarding) > 5)) {
+        if (this.numberOfForwarding !== undefined && (this.numberOfForwarding < 1 || this.numberOfForwarding > 5)) {
             throw new ASN1OverflowError("HLRIntRecord.numberOfForwarding violates INTEGER range");
         }
     }

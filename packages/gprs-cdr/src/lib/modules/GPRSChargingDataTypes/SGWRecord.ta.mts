@@ -562,7 +562,7 @@ class SGWRecord {
         if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
             throw new ASN1SizeError("SGWRecord.servedIMSI violates SIZE constraint");
         }
-        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+        if ((this.chargingID < 0 || this.chargingID > 4294967295)) {
             throw new ASN1OverflowError("SGWRecord.chargingID violates INTEGER range");
         }
         if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
@@ -577,7 +577,7 @@ class SGWRecord {
         if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
             throw new ASN1SizeError("SGWRecord.nodeID violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("SGWRecord.localSequenceNumber violates INTEGER range");
         }
         if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
@@ -592,7 +592,7 @@ class SGWRecord {
         if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
             throw new ASN1SizeError("SGWRecord.servedIMEI violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("SGWRecord.rATType violates INTEGER range");
         }
         if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
@@ -607,7 +607,7 @@ class SGWRecord {
         if (this.stopTime !== undefined && (this.stopTime.length !== 9)) {
             throw new ASN1SizeError("SGWRecord.stopTime violates SIZE constraint");
         }
-        if (this.pDNConnectionChargingID !== undefined && ((typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) < 0 || (typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) > 4294967295)) {
+        if (this.pDNConnectionChargingID !== undefined && (this.pDNConnectionChargingID < 0 || this.pDNConnectionChargingID > 4294967295)) {
             throw new ASN1OverflowError("SGWRecord.pDNConnectionChargingID violates INTEGER range");
         }
         if (this.userLocationInfoTime !== undefined && (this.userLocationInfoTime.length !== 9)) {

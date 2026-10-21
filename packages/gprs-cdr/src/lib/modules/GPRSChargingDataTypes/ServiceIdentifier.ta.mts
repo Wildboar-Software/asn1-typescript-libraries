@@ -23,7 +23,7 @@ type ServiceIdentifier = INTEGER;
 
 export const _decode_ServiceIdentifier = (el: _Element): ServiceIdentifier => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 0 || (typeof value === "bigint" ? Number(value) : value) > 4294967295) {
+    if (value < 0 || value > 4294967295) {
         throw new ASN1OverflowError("ServiceIdentifier violates INTEGER range");
     }
     return value;

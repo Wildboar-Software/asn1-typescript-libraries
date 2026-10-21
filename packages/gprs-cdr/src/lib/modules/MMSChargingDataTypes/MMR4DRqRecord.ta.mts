@@ -168,7 +168,7 @@ class MMR4DRqRecord {
         if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
             throw new ASN1SizeError("MMR4DRqRecord.recordTimeStamp violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("MMR4DRqRecord.localSequenceNumber violates INTEGER range");
         }
     }

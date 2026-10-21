@@ -139,7 +139,7 @@ class MonitoringEventReportData {
         if (this.eventTimestamp !== undefined && (this.eventTimestamp.length !== 9)) {
             throw new ASN1SizeError("MonitoringEventReportData.eventTimestamp violates SIZE constraint");
         }
-        if (this.sCEFReferenceID !== undefined && ((typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) < 0 || (typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) > 4294967295)) {
+        if (this.sCEFReferenceID !== undefined && (this.sCEFReferenceID < 0 || this.sCEFReferenceID > 4294967295)) {
             throw new ASN1OverflowError("MonitoringEventReportData.sCEFReferenceID violates INTEGER range");
         }
         if (this.monitoredUser !== undefined && (this.monitoredUser.length < 3 || this.monitoredUser.length > 8)) {

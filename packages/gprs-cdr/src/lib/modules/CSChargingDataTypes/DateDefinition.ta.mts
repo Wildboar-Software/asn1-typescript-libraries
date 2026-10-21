@@ -55,10 +55,10 @@ class DateDefinition {
         this.day = day;
         this.dayClass = dayClass;
     
-        if (((typeof this.month === "bigint" ? Number(this.month) : this.month) < 1 || (typeof this.month === "bigint" ? Number(this.month) : this.month) > 12)) {
+        if ((this.month < 1 || this.month > 12)) {
             throw new ASN1OverflowError("DateDefinition.month violates INTEGER range");
         }
-        if (((typeof this.day === "bigint" ? Number(this.day) : this.day) < 1 || (typeof this.day === "bigint" ? Number(this.day) : this.day) > 31)) {
+        if ((this.day < 1 || this.day > 31)) {
             throw new ASN1OverflowError("DateDefinition.day violates INTEGER range");
         }
     }

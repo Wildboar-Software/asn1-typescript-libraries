@@ -130,7 +130,7 @@ class ChangeOfProSeCondition {
         if (this.changeConditionTimestamp !== undefined && (this.changeConditionTimestamp.length !== 9)) {
             throw new ASN1SizeError("ChangeOfProSeCondition.changeConditionTimestamp violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("ChangeOfProSeCondition.localSequenceNumber violates INTEGER range");
         }
         if (this.vPLMNIdentifier !== undefined && (this.vPLMNIdentifier.length !== 3)) {

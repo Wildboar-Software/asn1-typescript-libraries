@@ -235,7 +235,7 @@ class MMBx1VRecord {
         if (this.sGSNPLMNIdentifier !== undefined && (this.sGSNPLMNIdentifier.length !== 3)) {
             throw new ASN1SizeError("MMBx1VRecord.sGSNPLMNIdentifier violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("MMBx1VRecord.rATType violates INTEGER range");
         }
         if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {

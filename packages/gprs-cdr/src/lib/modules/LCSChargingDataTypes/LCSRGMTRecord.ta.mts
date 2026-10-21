@@ -165,13 +165,13 @@ class LCSRGMTRecord {
         if (this.lCSPriority !== undefined && (this.lCSPriority.length !== 1)) {
             throw new ASN1SizeError("LCSRGMTRecord.lCSPriority violates SIZE constraint");
         }
-        if (this.resultCode !== undefined && ((typeof this.resultCode === "bigint" ? Number(this.resultCode) : this.resultCode) < 0)) {
+        if (this.resultCode !== undefined && (this.resultCode < 0)) {
             throw new ASN1OverflowError("LCSRGMTRecord.resultCode violates INTEGER range");
         }
         if ((this.recordTimeStamp.length !== 9)) {
             throw new ASN1SizeError("LCSRGMTRecord.recordTimeStamp violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("LCSRGMTRecord.localSequenceNumber violates INTEGER range");
         }
     }

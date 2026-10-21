@@ -23,7 +23,7 @@ type Milliseconds = INTEGER;
 
 export const _decode_Milliseconds = (el: _Element): Milliseconds => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 0 || (typeof value === "bigint" ? Number(value) : value) > 999) {
+    if (value < 0 || value > 999) {
         throw new ASN1OverflowError("Milliseconds violates INTEGER range");
     }
     return value;

@@ -415,7 +415,7 @@ class SGSNPDPRecord {
         if (this.cellIdentifier !== undefined && (this.cellIdentifier.length !== 2)) {
             throw new ASN1SizeError("SGSNPDPRecord.cellIdentifier violates SIZE constraint");
         }
-        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+        if ((this.chargingID < 0 || this.chargingID > 4294967295)) {
             throw new ASN1OverflowError("SGSNPDPRecord.chargingID violates INTEGER range");
         }
         if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
@@ -430,7 +430,7 @@ class SGSNPDPRecord {
         if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
             throw new ASN1SizeError("SGSNPDPRecord.nodeID violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("SGSNPDPRecord.localSequenceNumber violates INTEGER range");
         }
         if (this.accessPointNameOI !== undefined && (this.accessPointNameOI.length < 1 || this.accessPointNameOI.length > 37)) {
@@ -442,7 +442,7 @@ class SGSNPDPRecord {
         if ((this.chargingCharacteristics.length !== 2)) {
             throw new ASN1SizeError("SGSNPDPRecord.chargingCharacteristics violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("SGSNPDPRecord.rATType violates INTEGER range");
         }
         if (this.servingNodePLMNIdentifier !== undefined && (this.servingNodePLMNIdentifier.length !== 3)) {

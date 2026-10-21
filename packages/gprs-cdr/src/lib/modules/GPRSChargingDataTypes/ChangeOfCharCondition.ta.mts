@@ -250,13 +250,13 @@ class ChangeOfCharCondition {
         if ((this.changeTime.length !== 9)) {
             throw new ASN1SizeError("ChangeOfCharCondition.changeTime violates SIZE constraint");
         }
-        if (this.chargingID !== undefined && ((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+        if (this.chargingID !== undefined && (this.chargingID < 0 || this.chargingID > 4294967295)) {
             throw new ASN1OverflowError("ChangeOfCharCondition.chargingID violates INTEGER range");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("ChangeOfCharCondition.rATType violates INTEGER range");
         }
-        if (this.accessAvailabilityChangeReason !== undefined && ((typeof this.accessAvailabilityChangeReason === "bigint" ? Number(this.accessAvailabilityChangeReason) : this.accessAvailabilityChangeReason) < 0 || (typeof this.accessAvailabilityChangeReason === "bigint" ? Number(this.accessAvailabilityChangeReason) : this.accessAvailabilityChangeReason) > 4294967295)) {
+        if (this.accessAvailabilityChangeReason !== undefined && (this.accessAvailabilityChangeReason < 0 || this.accessAvailabilityChangeReason > 4294967295)) {
             throw new ASN1OverflowError("ChangeOfCharCondition.accessAvailabilityChangeReason violates INTEGER range");
         }
     }

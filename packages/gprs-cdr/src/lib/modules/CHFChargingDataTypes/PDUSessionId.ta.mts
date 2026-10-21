@@ -23,7 +23,7 @@ type PDUSessionId = INTEGER;
 
 export const _decode_PDUSessionId = (el: _Element): PDUSessionId => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 0 || (typeof value === "bigint" ? Number(value) : value) > 255) {
+    if (value < 0 || value > 255) {
         throw new ASN1OverflowError("PDUSessionId violates INTEGER range");
     }
     return value;

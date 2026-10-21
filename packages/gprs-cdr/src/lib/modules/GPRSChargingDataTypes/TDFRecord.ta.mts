@@ -500,7 +500,7 @@ class TDFRecord {
         if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
             throw new ASN1SizeError("TDFRecord.nodeID violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("TDFRecord.localSequenceNumber violates INTEGER range");
         }
         if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
@@ -515,7 +515,7 @@ class TDFRecord {
         if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
             throw new ASN1SizeError("TDFRecord.servedIMEI violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("TDFRecord.rATType violates INTEGER range");
         }
         if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {
@@ -530,7 +530,7 @@ class TDFRecord {
         if (this.stopTime !== undefined && (this.stopTime.length !== 9)) {
             throw new ASN1SizeError("TDFRecord.stopTime violates SIZE constraint");
         }
-        if (((typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) < 0 || (typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) > 4294967295)) {
+        if ((this.pDNConnectionChargingID < 0 || this.pDNConnectionChargingID > 4294967295)) {
             throw new ASN1OverflowError("TDFRecord.pDNConnectionChargingID violates INTEGER range");
         }
         if (this.tDFPLMNIdentifier !== undefined && (this.tDFPLMNIdentifier.length !== 3)) {

@@ -832,7 +832,7 @@ class MOCallRecord {
         if (this.gsm_SCFAddress !== undefined && (this.gsm_SCFAddress.length < 1 || this.gsm_SCFAddress.length > 9)) {
             throw new ASN1SizeError("MOCallRecord.gsm_SCFAddress violates SIZE constraint");
         }
-        if (this.serviceKey !== undefined && ((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+        if (this.serviceKey !== undefined && (this.serviceKey < 0 || this.serviceKey > 2147483647)) {
             throw new ASN1OverflowError("MOCallRecord.serviceKey violates INTEGER range");
         }
         if (this.networkCallReference !== undefined && (this.networkCallReference.length < 1 || this.networkCallReference.length > 8)) {
@@ -853,7 +853,7 @@ class MOCallRecord {
         if (this.gsm_SCFAddress_2 !== undefined && (this.gsm_SCFAddress_2.length < 1 || this.gsm_SCFAddress_2.length > 9)) {
             throw new ASN1SizeError("MOCallRecord.gsm_SCFAddress_2 violates SIZE constraint");
         }
-        if (this.serviceKey_2 !== undefined && ((typeof this.serviceKey_2 === "bigint" ? Number(this.serviceKey_2) : this.serviceKey_2) < 0 || (typeof this.serviceKey_2 === "bigint" ? Number(this.serviceKey_2) : this.serviceKey_2) > 2147483647)) {
+        if (this.serviceKey_2 !== undefined && (this.serviceKey_2 < 0 || this.serviceKey_2 > 2147483647)) {
             throw new ASN1OverflowError("MOCallRecord.serviceKey_2 violates INTEGER range");
         }
         if (this.freeFormatData_2 !== undefined && (this.freeFormatData_2.length < 1 || this.freeFormatData_2.length > 160)) {

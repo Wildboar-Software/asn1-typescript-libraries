@@ -23,7 +23,7 @@ type PDPAddressPrefixLength = INTEGER;
 
 export const _decode_PDPAddressPrefixLength = (el: _Element): PDPAddressPrefixLength => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 1 || (typeof value === "bigint" ? Number(value) : value) > 64) {
+    if (value < 1 || value > 64) {
         throw new ASN1OverflowError("PDPAddressPrefixLength violates INTEGER range");
     }
     return value;

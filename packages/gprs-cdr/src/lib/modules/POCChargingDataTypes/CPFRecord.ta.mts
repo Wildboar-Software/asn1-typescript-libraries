@@ -303,7 +303,7 @@ class CPFRecord {
         if (this.recordClosureTime !== undefined && (this.recordClosureTime.length !== 9)) {
             throw new ASN1SizeError("CPFRecord.recordClosureTime violates SIZE constraint");
         }
-        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+        if (this.localRecordSequenceNumber !== undefined && (this.localRecordSequenceNumber < 0 || this.localRecordSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("CPFRecord.localRecordSequenceNumber violates INTEGER range");
         }
     }

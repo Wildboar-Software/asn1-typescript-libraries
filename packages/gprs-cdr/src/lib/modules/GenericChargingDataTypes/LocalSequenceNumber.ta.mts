@@ -23,7 +23,7 @@ type LocalSequenceNumber = INTEGER;
 
 export const _decode_LocalSequenceNumber = (el: _Element): LocalSequenceNumber => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 0 || (typeof value === "bigint" ? Number(value) : value) > 4294967295) {
+    if (value < 0 || value > 4294967295) {
         throw new ASN1OverflowError("LocalSequenceNumber violates INTEGER range");
     }
     return value;

@@ -686,7 +686,7 @@ class MTCallRecord {
         if (this.gsm_SCFAddress !== undefined && (this.gsm_SCFAddress.length < 1 || this.gsm_SCFAddress.length > 9)) {
             throw new ASN1SizeError("MTCallRecord.gsm_SCFAddress violates SIZE constraint");
         }
-        if (this.serviceKey !== undefined && ((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+        if (this.serviceKey !== undefined && (this.serviceKey < 0 || this.serviceKey > 2147483647)) {
             throw new ASN1OverflowError("MTCallRecord.serviceKey violates INTEGER range");
         }
         if (this.rateIndication !== undefined && (this.rateIndication.length !== 1)) {

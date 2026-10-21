@@ -51,7 +51,7 @@ class IPBinV6AddressWithPrefixLength {
         if ((this.iPBinV6Address.length !== 16)) {
             throw new ASN1SizeError("IPBinV6AddressWithPrefixLength.iPBinV6Address violates SIZE constraint");
         }
-        if (this.pDPAddressPrefixLength !== undefined && ((typeof this.pDPAddressPrefixLength === "bigint" ? Number(this.pDPAddressPrefixLength) : this.pDPAddressPrefixLength) < 1 || (typeof this.pDPAddressPrefixLength === "bigint" ? Number(this.pDPAddressPrefixLength) : this.pDPAddressPrefixLength) > 64)) {
+        if (this.pDPAddressPrefixLength !== undefined && (this.pDPAddressPrefixLength < 1 || this.pDPAddressPrefixLength > 64)) {
             throw new ASN1OverflowError("IPBinV6AddressWithPrefixLength.pDPAddressPrefixLength violates INTEGER range");
         }
     }

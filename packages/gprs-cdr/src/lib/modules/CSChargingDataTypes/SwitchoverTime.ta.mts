@@ -55,13 +55,13 @@ class SwitchoverTime {
         this.minute = minute;
         this.second = second;
     
-        if (((typeof this.hour === "bigint" ? Number(this.hour) : this.hour) < 0 || (typeof this.hour === "bigint" ? Number(this.hour) : this.hour) > 23)) {
+        if ((this.hour < 0 || this.hour > 23)) {
             throw new ASN1OverflowError("SwitchoverTime.hour violates INTEGER range");
         }
-        if (((typeof this.minute === "bigint" ? Number(this.minute) : this.minute) < 0 || (typeof this.minute === "bigint" ? Number(this.minute) : this.minute) > 59)) {
+        if ((this.minute < 0 || this.minute > 59)) {
             throw new ASN1OverflowError("SwitchoverTime.minute violates INTEGER range");
         }
-        if (((typeof this.second === "bigint" ? Number(this.second) : this.second) < 0 || (typeof this.second === "bigint" ? Number(this.second) : this.second) > 59)) {
+        if ((this.second < 0 || this.second > 59)) {
             throw new ASN1OverflowError("SwitchoverTime.second violates INTEGER range");
         }
     }

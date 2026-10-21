@@ -101,7 +101,7 @@ class CAMELInformationMM {
         if (this.sCFAddress !== undefined && (this.sCFAddress.length < 1 || this.sCFAddress.length > 20)) {
             throw new ASN1SizeError("CAMELInformationMM.sCFAddress violates SIZE constraint");
         }
-        if (this.serviceKey !== undefined && ((typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) < 0 || (typeof this.serviceKey === "bigint" ? Number(this.serviceKey) : this.serviceKey) > 2147483647)) {
+        if (this.serviceKey !== undefined && (this.serviceKey < 0 || this.serviceKey > 2147483647)) {
             throw new ASN1OverflowError("CAMELInformationMM.serviceKey violates INTEGER range");
         }
         if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {

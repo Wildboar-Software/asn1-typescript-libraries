@@ -88,7 +88,7 @@ class CAMELModificationParameters {
         if (this.callingPartyCategory !== undefined && (this.callingPartyCategory.length !== 1)) {
             throw new ASN1SizeError("CAMELModificationParameters.callingPartyCategory violates SIZE constraint");
         }
-        if (this.redirectionCounter !== undefined && ((typeof this.redirectionCounter === "bigint" ? Number(this.redirectionCounter) : this.redirectionCounter) < 1 || (typeof this.redirectionCounter === "bigint" ? Number(this.redirectionCounter) : this.redirectionCounter) > 5)) {
+        if (this.redirectionCounter !== undefined && (this.redirectionCounter < 1 || this.redirectionCounter > 5)) {
             throw new ASN1OverflowError("CAMELModificationParameters.redirectionCounter violates INTEGER range");
         }
     }

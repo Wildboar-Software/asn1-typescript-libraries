@@ -23,7 +23,7 @@ type Month = INTEGER;
 
 export const _decode_Month = (el: _Element): Month => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 1 || (typeof value === "bigint" ? Number(value) : value) > 12) {
+    if (value < 1 || value > 12) {
         throw new ASN1OverflowError("Month violates INTEGER range");
     }
     return value;

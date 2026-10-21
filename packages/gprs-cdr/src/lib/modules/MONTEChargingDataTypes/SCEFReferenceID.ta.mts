@@ -23,7 +23,7 @@ type SCEFReferenceID = INTEGER;
 
 export const _decode_SCEFReferenceID = (el: _Element): SCEFReferenceID => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 0 || (typeof value === "bigint" ? Number(value) : value) > 4294967295) {
+    if (value < 0 || value > 4294967295) {
         throw new ASN1OverflowError("SCEFReferenceID violates INTEGER range");
     }
     return value;

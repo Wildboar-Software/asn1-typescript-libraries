@@ -374,10 +374,10 @@ class ICSCFRecord {
         if (this.serviceRequestTimeStamp !== undefined && (this.serviceRequestTimeStamp.length !== 9)) {
             throw new ASN1SizeError("ICSCFRecord.serviceRequestTimeStamp violates SIZE constraint");
         }
-        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+        if (this.localRecordSequenceNumber !== undefined && (this.localRecordSequenceNumber < 0 || this.localRecordSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("ICSCFRecord.localRecordSequenceNumber violates INTEGER range");
         }
-        if (this.serviceRequestTimeStampFraction !== undefined && ((typeof this.serviceRequestTimeStampFraction === "bigint" ? Number(this.serviceRequestTimeStampFraction) : this.serviceRequestTimeStampFraction) < 0 || (typeof this.serviceRequestTimeStampFraction === "bigint" ? Number(this.serviceRequestTimeStampFraction) : this.serviceRequestTimeStampFraction) > 999)) {
+        if (this.serviceRequestTimeStampFraction !== undefined && (this.serviceRequestTimeStampFraction < 0 || this.serviceRequestTimeStampFraction > 999)) {
             throw new ASN1OverflowError("ICSCFRecord.serviceRequestTimeStampFraction violates INTEGER range");
         }
         if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {

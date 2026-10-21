@@ -158,7 +158,7 @@ class PDUContainerInformation {
         if (this.timeOfLastUsage !== undefined && (this.timeOfLastUsage.length !== 9)) {
             throw new ASN1SizeError("PDUContainerInformation.timeOfLastUsage violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("PDUContainerInformation.rATType violates INTEGER range");
         }
         if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {

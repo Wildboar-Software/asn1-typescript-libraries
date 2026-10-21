@@ -95,7 +95,7 @@ class RelatedChangeOfServiceCondition {
         this.uWANUserLocationInformation = uWANUserLocationInformation;
         this.relatedServiceConditionChange = relatedServiceConditionChange;
     
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("RelatedChangeOfServiceCondition.rATType violates INTEGER range");
         }
     }

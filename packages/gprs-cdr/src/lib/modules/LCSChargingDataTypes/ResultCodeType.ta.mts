@@ -23,7 +23,7 @@ type ResultCodeType = INTEGER;
 
 export const _decode_ResultCodeType = (el: _Element): ResultCodeType => {
     const value = $._decodeInteger(el);
-    if ((typeof value === "bigint" ? Number(value) : value) < 0) {
+    if (value < 0) {
         throw new ASN1OverflowError("ResultCodeType violates INTEGER range");
     }
     return value;

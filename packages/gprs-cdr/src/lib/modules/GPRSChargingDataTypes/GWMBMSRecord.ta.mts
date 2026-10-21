@@ -212,7 +212,7 @@ class GWMBMSRecord {
         this.commonTeid = commonTeid;
         this.iPMulticastSourceAddress = iPMulticastSourceAddress;
     
-        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+        if ((this.chargingID < 0 || this.chargingID > 4294967295)) {
             throw new ASN1OverflowError("GWMBMSRecord.chargingID violates INTEGER range");
         }
         if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
@@ -227,7 +227,7 @@ class GWMBMSRecord {
         if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
             throw new ASN1SizeError("GWMBMSRecord.nodeID violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("GWMBMSRecord.localSequenceNumber violates INTEGER range");
         }
         if (this.commonTeid !== undefined && (this.commonTeid.length !== 4)) {

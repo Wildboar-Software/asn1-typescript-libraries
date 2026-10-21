@@ -91,7 +91,7 @@ class RANSecondaryRATUsageReport {
         if ((this.rANEndTime.length !== 9)) {
             throw new ASN1SizeError("RANSecondaryRATUsageReport.rANEndTime violates SIZE constraint");
         }
-        if (this.chargingID !== undefined && ((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+        if (this.chargingID !== undefined && (this.chargingID < 0 || this.chargingID > 4294967295)) {
             throw new ASN1OverflowError("RANSecondaryRATUsageReport.chargingID violates INTEGER range");
         }
     }

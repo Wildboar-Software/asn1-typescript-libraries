@@ -250,7 +250,7 @@ class MECORecord {
         if (this.eventTimestamp !== undefined && (this.eventTimestamp.length !== 9)) {
             throw new ASN1SizeError("MECORecord.eventTimestamp violates SIZE constraint");
         }
-        if (this.sCEFReferenceID !== undefined && ((typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) < 0 || (typeof this.sCEFReferenceID === "bigint" ? Number(this.sCEFReferenceID) : this.sCEFReferenceID) > 4294967295)) {
+        if (this.sCEFReferenceID !== undefined && (this.sCEFReferenceID < 0 || this.sCEFReferenceID > 4294967295)) {
             throw new ASN1OverflowError("MECORecord.sCEFReferenceID violates INTEGER range");
         }
         if (this.monitoringDuration !== undefined && (this.monitoringDuration.length !== 9)) {
@@ -259,7 +259,7 @@ class MECORecord {
         if (this.monitoredUser !== undefined && (this.monitoredUser.length < 3 || this.monitoredUser.length > 8)) {
             throw new ASN1SizeError("MECORecord.monitoredUser violates SIZE constraint");
         }
-        if (this.localRecordSequenceNumber !== undefined && ((typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) < 0 || (typeof this.localRecordSequenceNumber === "bigint" ? Number(this.localRecordSequenceNumber) : this.localRecordSequenceNumber) > 4294967295)) {
+        if (this.localRecordSequenceNumber !== undefined && (this.localRecordSequenceNumber < 0 || this.localRecordSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("MECORecord.localRecordSequenceNumber violates INTEGER range");
         }
     }

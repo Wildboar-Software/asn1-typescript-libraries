@@ -145,13 +145,13 @@ class LCSGNIRecord {
         if (this.servingEntity !== undefined && (this.servingEntity.length < 1 || this.servingEntity.length > 20)) {
             throw new ASN1SizeError("LCSGNIRecord.servingEntity violates SIZE constraint");
         }
-        if (this.resultCode !== undefined && ((typeof this.resultCode === "bigint" ? Number(this.resultCode) : this.resultCode) < 0)) {
+        if (this.resultCode !== undefined && (this.resultCode < 0)) {
             throw new ASN1OverflowError("LCSGNIRecord.resultCode violates INTEGER range");
         }
         if ((this.recordTimeStamp.length !== 9)) {
             throw new ASN1SizeError("LCSGNIRecord.recordTimeStamp violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("LCSGNIRecord.localSequenceNumber violates INTEGER range");
         }
     }

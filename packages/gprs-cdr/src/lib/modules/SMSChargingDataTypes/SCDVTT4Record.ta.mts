@@ -133,7 +133,7 @@ class SCDVTT4Record {
         if ((this.eventtimestamp.length !== 9)) {
             throw new ASN1SizeError("SCDVTT4Record.eventtimestamp violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("SCDVTT4Record.localSequenceNumber violates INTEGER range");
         }
     }

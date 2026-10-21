@@ -166,13 +166,13 @@ class MMR1ARecord {
         if (this.recordTimeStamp !== undefined && (this.recordTimeStamp.length !== 9)) {
             throw new ASN1SizeError("MMR1ARecord.recordTimeStamp violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("MMR1ARecord.localSequenceNumber violates INTEGER range");
         }
         if (this.sGSNPLMNIdentifier !== undefined && (this.sGSNPLMNIdentifier.length !== 3)) {
             throw new ASN1SizeError("MMR1ARecord.sGSNPLMNIdentifier violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("MMR1ARecord.rATType violates INTEGER range");
         }
         if (this.mSTimeZone !== undefined && (this.mSTimeZone.length !== 2)) {

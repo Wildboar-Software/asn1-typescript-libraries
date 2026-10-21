@@ -326,13 +326,13 @@ class ISMSMTRecord {
         if (this.sMDischargeTime !== undefined && (this.sMDischargeTime.length !== 9)) {
             throw new ASN1SizeError("ISMSMTRecord.sMDischargeTime violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("ISMSMTRecord.rATType violates INTEGER range");
         }
         if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
             throw new ASN1SizeError("ISMSMTRecord.uETimeZone violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("ISMSMTRecord.localSequenceNumber violates INTEGER range");
         }
     }

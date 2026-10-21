@@ -381,7 +381,7 @@ class TWAGRecord {
         if (this.servedIMSI !== undefined && (this.servedIMSI.length < 3 || this.servedIMSI.length > 8)) {
             throw new ASN1SizeError("TWAGRecord.servedIMSI violates SIZE constraint");
         }
-        if (((typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) < 0 || (typeof this.chargingID === "bigint" ? Number(this.chargingID) : this.chargingID) > 4294967295)) {
+        if ((this.chargingID < 0 || this.chargingID > 4294967295)) {
             throw new ASN1OverflowError("TWAGRecord.chargingID violates INTEGER range");
         }
         if (this.accessPointNameNI !== undefined && (this.accessPointNameNI.length < 1 || this.accessPointNameNI.length > 63)) {
@@ -396,7 +396,7 @@ class TWAGRecord {
         if (this.nodeID !== undefined && (this.nodeID.length < 1 || this.nodeID.length > 20)) {
             throw new ASN1SizeError("TWAGRecord.nodeID violates SIZE constraint");
         }
-        if (this.localSequenceNumber !== undefined && ((typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) < 0 || (typeof this.localSequenceNumber === "bigint" ? Number(this.localSequenceNumber) : this.localSequenceNumber) > 4294967295)) {
+        if (this.localSequenceNumber !== undefined && (this.localSequenceNumber < 0 || this.localSequenceNumber > 4294967295)) {
             throw new ASN1OverflowError("TWAGRecord.localSequenceNumber violates INTEGER range");
         }
         if (this.servedMSISDN !== undefined && (this.servedMSISDN.length < 1 || this.servedMSISDN.length > 9)) {
@@ -408,7 +408,7 @@ class TWAGRecord {
         if (this.servedIMEI !== undefined && (this.servedIMEI.length !== 8)) {
             throw new ASN1SizeError("TWAGRecord.servedIMEI violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("TWAGRecord.rATType violates INTEGER range");
         }
         if (this.p_GWPLMNIdentifier !== undefined && (this.p_GWPLMNIdentifier.length !== 3)) {
@@ -420,7 +420,7 @@ class TWAGRecord {
         if (this.stopTime !== undefined && (this.stopTime.length !== 9)) {
             throw new ASN1SizeError("TWAGRecord.stopTime violates SIZE constraint");
         }
-        if (this.pDNConnectionChargingID !== undefined && ((typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) < 0 || (typeof this.pDNConnectionChargingID === "bigint" ? Number(this.pDNConnectionChargingID) : this.pDNConnectionChargingID) > 4294967295)) {
+        if (this.pDNConnectionChargingID !== undefined && (this.pDNConnectionChargingID < 0 || this.pDNConnectionChargingID > 4294967295)) {
             throw new ASN1OverflowError("TWAGRecord.pDNConnectionChargingID violates INTEGER range");
         }
     }

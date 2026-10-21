@@ -323,16 +323,16 @@ class PDUSessionChargingInformation {
         this.sUPIunauthenticatedFlag = sUPIunauthenticatedFlag;
         this.dNNSelectionMode = dNNSelectionMode;
     
-        if (((typeof this.pDUSessionChargingID === "bigint" ? Number(this.pDUSessionChargingID) : this.pDUSessionChargingID) < 0 || (typeof this.pDUSessionChargingID === "bigint" ? Number(this.pDUSessionChargingID) : this.pDUSessionChargingID) > 4294967295)) {
+        if ((this.pDUSessionChargingID < 0 || this.pDUSessionChargingID > 4294967295)) {
             throw new ASN1OverflowError("PDUSessionChargingInformation.pDUSessionChargingID violates INTEGER range");
         }
-        if (((typeof this.pDUSessionId === "bigint" ? Number(this.pDUSessionId) : this.pDUSessionId) < 0 || (typeof this.pDUSessionId === "bigint" ? Number(this.pDUSessionId) : this.pDUSessionId) > 255)) {
+        if ((this.pDUSessionId < 0 || this.pDUSessionId > 255)) {
             throw new ASN1OverflowError("PDUSessionChargingInformation.pDUSessionId violates INTEGER range");
         }
         if (this.sUPIPLMNIdentifier !== undefined && (this.sUPIPLMNIdentifier.length !== 3)) {
             throw new ASN1SizeError("PDUSessionChargingInformation.sUPIPLMNIdentifier violates SIZE constraint");
         }
-        if (this.rATType !== undefined && ((typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) < 0 || (typeof this.rATType === "bigint" ? Number(this.rATType) : this.rATType) > 255)) {
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
             throw new ASN1OverflowError("PDUSessionChargingInformation.rATType violates INTEGER range");
         }
         if (this.dataNetworkNameIdentifier !== undefined && (this.dataNetworkNameIdentifier.length < 1 || this.dataNetworkNameIdentifier.length > 63)) {
