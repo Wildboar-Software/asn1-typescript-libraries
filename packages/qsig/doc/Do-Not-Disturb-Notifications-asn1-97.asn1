@@ -1,0 +1,21 @@
+Do-Not-Disturb-Notifications-asn1-97
+{iso(1) standard(0) pss1-do-not-disturb(14844)
+do-not-disturb-notifications-asn1-97(3)}
+DEFINITIONS EXPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+    NOTIFICATION
+        FROM Notification-class-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        notification-class-asn1-97(21) }
+    ;
+
+doNotDisturb NOTIFICATION ::= {
+    ARGUMENT NULL
+    CODE local: 2002
+}
+
+Do-Not-Disturb-Notifications NOTIFICATION ::= {doNotDisturb}
+
+END                        -- of Do-Not-Disturb-Notifications-asn1-97

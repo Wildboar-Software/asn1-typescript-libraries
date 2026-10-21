@@ -1,0 +1,25 @@
+{
+  "name": "qsig",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/qsig/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/qsig",
+        "tsConfig": "packages/qsig/tsconfig.lib.json",
+        "packageJson": "packages/qsig/package.json",
+        "main": "packages/qsig/src/index.mts",
+        "assets": [
+          "packages/qsig/*.md",
+          "packages/qsig/LICENSE.txt",
+          "packages/qsig/package.json"
+        ]
+      }
+    }
+  }
+}

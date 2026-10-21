@@ -1,0 +1,39 @@
+
+Notification-class-asn1-97
+{iso(1) standard(0) pss1-generic-procedures(11582)
+notification-class-asn1-97(21)}
+DEFINITIONS ::=
+BEGIN
+IMPORTS
+
+    PSS1InformationElement
+        FROM PSS1-generic-parameters-definition-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        pss1-generic-parameters-asn1-97(17)}
+    ;
+
+NOTIFICATION ::= CLASS {
+    &ArgumentType OPTIONAL,
+    &argumentTypeOptional BOOLEAN OPTIONAL,
+    &notificationCode Code UNIQUE
+}
+WITH SYNTAX {
+    [
+        ARGUMENT &ArgumentType [OPTIONAL &argumentTypeOptional]
+    ]
+    CODE &notificationCode
+}
+
+Code ::= CHOICE {
+    local INTEGER,
+    global OBJECT IDENTIFIER
+}
+
+-- the notification below is used to convey information elements used as notifications across a PISN
+
+pss1IeNotification NOTIFICATION ::= {
+    ARGUMENT PSS1InformationElement
+    CODE local: 2001
+}
+
+END -- of Notification-class-asn1-97

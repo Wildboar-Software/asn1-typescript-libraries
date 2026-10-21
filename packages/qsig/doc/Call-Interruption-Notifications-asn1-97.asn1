@@ -1,0 +1,37 @@
+Call-Interruption-Notifications-asn1-97
+{iso(1) standard(0) pss1-call-interruption(15992)
+call-interruption-notifications-asn1(3)}
+DEFINITIONS                         ::=
+BEGIN
+IMPORTS
+
+    NOTIFICATION
+        FROM Notification-Data-Structure-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        notification-data-structure-asn1-97(18)}
+    ;
+
+    -- The following notifications are defined:
+
+Call-Interruption-Notifications NOTIFICATION ::= {
+    interruptionIsImpending
+    | interruptionTerminated
+    | interruptionForcedRelease
+}
+
+interruptionIsImpending NOTIFICATION ::= {
+    ARGUMENT NULL
+    CODE local: 2008
+}
+
+interruptionTerminated NOTIFICATION ::= {
+    ARGUMENT NULL
+    CODE local: 2009
+}
+
+interruptionForcedRelease NOTIFICATION ::= {
+    ARGUMENT NULL
+    CODE local: 2010
+}
+
+END                                         --of Call-Interruption-Notifications-asn1-97
