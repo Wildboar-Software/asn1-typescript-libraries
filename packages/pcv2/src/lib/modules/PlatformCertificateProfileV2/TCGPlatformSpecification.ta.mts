@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
@@ -7,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfileV2/TCGSpecificationVersion.ta.mjs";
-// export { TCGSpecificationVersion, _decode_TCGSpecificationVersion, _encode_TCGSpecificationVersion } from "../PlatformCertificateProfileV2/TCGSpecificationVersion.ta.mjs";
 
 
 /**
@@ -46,6 +46,9 @@ class TCGPlatformSpecification {
     ) {
         this.version = version;
         this.platformClass = platformClass;
+        if (platformClass.length !== 4) {
+            throw new ASN1SizeError("TCGPlatformSpecification.platformClass violates SIZE (4)");
+        }
     }
 
     /**
@@ -148,7 +151,7 @@ let _cached_encoder_for_TCGPlatformSpecification: $.ASN1Encoder<TCGPlatformSpeci
  */
 export
 function _encode_TCGPlatformSpecification (value: TCGPlatformSpecification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TCGPlatformSpecification) { _cached_encoder_for_TCGPlatformSpecification = function (value: TCGPlatformSpecification, elGetter: $.ASN1Encoder<TCGPlatformSpecification>): _Element {
+    if (!_cached_encoder_for_TCGPlatformSpecification) { _cached_encoder_for_TCGPlatformSpecification = function (value: TCGPlatformSpecification): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_TCGSpecificationVersion(value.version, $.BER),
         /* REQUIRED   */ $._encodeOctetString(value.platformClass, $.BER)

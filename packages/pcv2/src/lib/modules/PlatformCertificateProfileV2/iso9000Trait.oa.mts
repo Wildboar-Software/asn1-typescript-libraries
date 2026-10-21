@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ISO9000Certification, _decode_ISO9000Certification, _encode_ISO9000Certification } from "../PlatformCertificateProfileV2/ISO9000Certification.ta.mjs";
-// export { ISO9000Certification, _decode_ISO9000Certification, _encode_ISO9000Certification } from "../PlatformCertificateProfileV2/ISO9000Certification.ta.mjs";
+import { tcg_tr_ID_ISO9000Level } from "../PlatformCertificateProfileV2/tcg-tr-ID-ISO9000Level.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 
@@ -13,7 +13,7 @@ import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
  * ```asn1
  * iso9000Trait TRAIT ::= {
  *     SYNTAX          ISO9000Certification
- *     IDENTIFIED BY   tcg-tr-ID-ISO9000
+ *     IDENTIFIED BY   tcg-tr-ID-ISO9000Level
  * }
  * ```
  * 
@@ -30,7 +30,7 @@ const iso9000Trait: TRAIT<ISO9000Certification> = {
     encoderFor: {
         "&TraitValueType": _encode_ISO9000Certification,
     },
-    "&id": tcg_tr_ID_ISO9000 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&id": tcg_tr_ID_ISO9000Level /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&TraitValueType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
 };
 

@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     BOOLEAN,
     OPTIONAL,
     UTF8String,
@@ -7,18 +8,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { ComponentClass, _decode_ComponentClass, _encode_ComponentClass } from "../PlatformCertificateProfileV2/ComponentClass.ta.mjs";
-// export { ComponentClass, _decode_ComponentClass, _encode_ComponentClass } from "../PlatformCertificateProfileV2/ComponentClass.ta.mjs";
 import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfileV2/PrivateEnterpriseNumber.ta.mjs";
-// export { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfileV2/PrivateEnterpriseNumber.ta.mjs";
 import { ComponentAddress, _decode_ComponentAddress, _encode_ComponentAddress } from "../PlatformCertificateProfileV2/ComponentAddress.ta.mjs";
-// export { ComponentAddress, _decode_ComponentAddress, _encode_ComponentAddress } from "../PlatformCertificateProfileV2/ComponentAddress.ta.mjs";
 import { CertificateIdentifier, _decode_CertificateIdentifier, _encode_CertificateIdentifier } from "../PlatformCertificateProfileV2/CertificateIdentifier.ta.mjs";
-// export { CertificateIdentifier, _decode_CertificateIdentifier, _encode_CertificateIdentifier } from "../PlatformCertificateProfileV2/CertificateIdentifier.ta.mjs";
 import { URIReference, _decode_URIReference, _encode_URIReference } from "../EKCredentialProfileV2/URIReference.ta.mjs";
-// export { URIReference, _decode_URIReference, _encode_URIReference } from "../EKCredentialProfileV2/URIReference.ta.mjs";
 import { AttributeStatus, _decode_AttributeStatus, _encode_AttributeStatus, _enum_for_AttributeStatus } from "../PlatformCertificateProfileV2/AttributeStatus.ta.mjs";
-// export { AttributeStatus, _enum_for_AttributeStatus, AttributeStatus_added /* IMPORTED_LONG_ENUMERATION_ITEM */, added /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_modified /* IMPORTED_LONG_ENUMERATION_ITEM */, modified /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeStatus_removed /* IMPORTED_LONG_ENUMERATION_ITEM */, removed /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeStatus, _encode_AttributeStatus } from "../PlatformCertificateProfileV2/AttributeStatus.ta.mjs";
 
 
 /**
@@ -138,6 +134,21 @@ class ComponentIdentifierV11 {
         this.componentPlatformCert = componentPlatformCert;
         this.componentPlatformCertUri = componentPlatformCertUri;
         this.status = status;
+        if (componentManufacturer.length < 1 || componentManufacturer.length > strmax) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentManufacturer violates SIZE (1..strmax)");
+        }
+        if (componentModel.length < 1 || componentModel.length > strmax) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentModel violates SIZE (1..strmax)");
+        }
+        if (componentSerial !== undefined && (componentSerial.length < 1 || componentSerial.length > strmax)) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentSerial violates SIZE (1..strmax)");
+        }
+        if (componentRevision !== undefined && (componentRevision.length < 1 || componentRevision.length > strmax)) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentRevision violates SIZE (1..strmax)");
+        }
+        if (componentAddresses !== undefined && componentAddresses.length < 1) {
+            throw new ASN1SizeError("ComponentIdentifierV11.componentAddresses violates SIZE (1..MAX)");
+        }
     }
 
     /**
@@ -283,7 +294,7 @@ let _cached_encoder_for_ComponentIdentifierV11: $.ASN1Encoder<ComponentIdentifie
  */
 export
 function _encode_ComponentIdentifierV11 (value: ComponentIdentifierV11, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ComponentIdentifierV11) { _cached_encoder_for_ComponentIdentifierV11 = function (value: ComponentIdentifierV11, elGetter: $.ASN1Encoder<ComponentIdentifierV11>): _Element {
+    if (!_cached_encoder_for_ComponentIdentifierV11) { _cached_encoder_for_ComponentIdentifierV11 = function (value: ComponentIdentifierV11): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ComponentClass(value.componentClass, $.BER));
     _components.push(/* REQUIRED   */ $._encodeUTF8String(value.componentManufacturer, $.BER));

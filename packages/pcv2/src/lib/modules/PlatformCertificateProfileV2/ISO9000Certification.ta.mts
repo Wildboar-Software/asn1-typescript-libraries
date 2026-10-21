@@ -1,12 +1,14 @@
 /* eslint-disable */
 import {
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
     BOOLEAN,
     IA5String,
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { urimax } from "../PlatformCertificateProfileV2/urimax.va.mjs";
 
 
 
@@ -46,6 +48,9 @@ class ISO9000Certification {
     ) {
         this.iso9000Certified = iso9000Certified;
         this.iso9000Uri = iso9000Uri;
+        if (iso9000Uri !== undefined && (iso9000Uri.length < 1 || iso9000Uri.length > urimax)) {
+            throw new ASN1SizeError("ISO9000Certification.iso9000Uri violates SIZE (1..urimax)");
+        }
     }
 
     /**
@@ -155,7 +160,7 @@ let _cached_encoder_for_ISO9000Certification: $.ASN1Encoder<ISO9000Certification
  */
 export
 function _encode_ISO9000Certification (value: ISO9000Certification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ISO9000Certification) { _cached_encoder_for_ISO9000Certification = function (value: ISO9000Certification, elGetter: $.ASN1Encoder<ISO9000Certification>): _Element {
+    if (!_cached_encoder_for_ISO9000Certification) { _cached_encoder_for_ISO9000Certification = function (value: ISO9000Certification): _Element {
     const _components: _Element[] = [];
     if (value.iso9000Certified !== undefined && !$.deepEq(value.iso9000Certified, ISO9000Certification._default_value_for_iso9000Certified)) {
         _components.push(/* IF_DEFAULT */ $._encodeBoolean(value.iso9000Certified, $.BER));

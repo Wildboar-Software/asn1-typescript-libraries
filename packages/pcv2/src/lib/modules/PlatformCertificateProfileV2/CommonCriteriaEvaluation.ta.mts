@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     GeneralizedTime,
     OPTIONAL,
     UTF8String,
@@ -7,8 +8,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../EKCredentialProfileV2/CommonCriteriaMeasures.ta.mjs";
-// export { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonCriteriaMeasures } from "../EKCredentialProfileV2/CommonCriteriaMeasures.ta.mjs";
 
 
 /**
@@ -83,6 +84,15 @@ class CommonCriteriaEvaluation {
         this.evaluationScheme = evaluationScheme;
         this.cCCertificateIssuanceDate = cCCertificateIssuanceDate;
         this.cCCertificateExpiryDate = cCCertificateExpiryDate;
+        if (cCCertificateNumber.length < 1 || cCCertificateNumber.length > strmax) {
+            throw new ASN1SizeError("CommonCriteriaEvaluation.cCCertificateNumber violates SIZE (1..strmax)");
+        }
+        if (cCCertificateAuthority.length < 1 || cCCertificateAuthority.length > strmax) {
+            throw new ASN1SizeError("CommonCriteriaEvaluation.cCCertificateAuthority violates SIZE (1..strmax)");
+        }
+        if (evaluationScheme !== undefined && (evaluationScheme.length < 1 || evaluationScheme.length > strmax)) {
+            throw new ASN1SizeError("CommonCriteriaEvaluation.evaluationScheme violates SIZE (1..strmax)");
+        }
     }
 
     /**
@@ -202,7 +212,7 @@ let _cached_encoder_for_CommonCriteriaEvaluation: $.ASN1Encoder<CommonCriteriaEv
  */
 export
 function _encode_CommonCriteriaEvaluation (value: CommonCriteriaEvaluation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommonCriteriaEvaluation) { _cached_encoder_for_CommonCriteriaEvaluation = function (value: CommonCriteriaEvaluation, elGetter: $.ASN1Encoder<CommonCriteriaEvaluation>): _Element {
+    if (!_cached_encoder_for_CommonCriteriaEvaluation) { _cached_encoder_for_CommonCriteriaEvaluation = function (value: CommonCriteriaEvaluation): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CommonCriteriaMeasures(value.cCMeasures, $.BER));
     _components.push(/* REQUIRED   */ $._encodeUTF8String(value.cCCertificateNumber, $.BER));

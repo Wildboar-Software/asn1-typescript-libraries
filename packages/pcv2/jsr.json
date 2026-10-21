@@ -1,15 +1,23 @@
 {
   "name": "@wildboar/pcv2",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "exports": {
-    ".": "./src/index.mts"
+    ".": "./src/index.mts",
+    "./PlatformCertificateProfileV2": "./src/lib/modules/PlatformCertificateProfileV2/index.mts",
+    "./EKCredentialProfileV2": "./src/lib/modules/EKCredentialProfileV2/index.mts",
+    "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
+    "./InformationFramework": "./src/lib/modules/InformationFramework/index.mts"
   },
   "publish": {
     "include": [
       "LICENSE.txt",
       "README.md",
       "src/**/*.mts"
+    ],
+    "exclude": [
+      "src/**/*.test.mts",
+      "src/**/*.spec.mts"
     ]
   }
 }

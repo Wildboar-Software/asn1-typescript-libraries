@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { EntityGeoLocation, _decode_EntityGeoLocation, _encode_EntityGeoLocation } from "../PlatformCertificateProfileV2/EntityGeoLocation.ta.mjs";
-// export { EntityGeoLocation, _decode_EntityGeoLocation, _encode_EntityGeoLocation } from "../PlatformCertificateProfileV2/EntityGeoLocation.ta.mjs";
 import { tcg_tr_ID_entGeoLocation } from "../PlatformCertificateProfileV2/tcg-tr-ID-entGeoLocation.va.mjs";
-// export { tcg_tr_ID_entGeoLocation } from "../PlatformCertificateProfileV2/tcg-tr-ID-entGeoLocation.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

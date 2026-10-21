@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     BOOLEAN,
     IA5String,
     OPTIONAL,
@@ -7,8 +8,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { SecurityLevel, _decode_SecurityLevel, _encode_SecurityLevel, _enum_for_SecurityLevel } from "../PlatformCertificateProfileV2/SecurityLevel.ta.mjs";
-// export { SecurityLevel, _enum_for_SecurityLevel, SecurityLevel_level1 /* IMPORTED_LONG_ENUMERATION_ITEM */, level1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SecurityLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SecurityLevel, _encode_SecurityLevel } from "../PlatformCertificateProfileV2/SecurityLevel.ta.mjs";
 
 
 /**
@@ -56,6 +57,9 @@ class FIPSLevel {
         this.version = version;
         this.level = level;
         this.plus = plus;
+        if (version.length < 1 || version.length > strmax) {
+            throw new ASN1SizeError("FIPSLevel.version violates SIZE (1..strmax)");
+        }
     }
 
     /**
@@ -175,7 +179,7 @@ let _cached_encoder_for_FIPSLevel: $.ASN1Encoder<FIPSLevel> | null = null;
  */
 export
 function _encode_FIPSLevel (value: FIPSLevel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FIPSLevel) { _cached_encoder_for_FIPSLevel = function (value: FIPSLevel, elGetter: $.ASN1Encoder<FIPSLevel>): _Element {
+    if (!_cached_encoder_for_FIPSLevel) { _cached_encoder_for_FIPSLevel = function (value: FIPSLevel): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeIA5String(value.version, $.BER));
     _components.push(/* REQUIRED   */ _encode_SecurityLevel(value.level, $.BER));

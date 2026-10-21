@@ -161,7 +161,7 @@ let _cached_encoder_for_TCGSpecificationVersion: $.ASN1Encoder<TCGSpecificationV
  */
 export
 function _encode_TCGSpecificationVersion (value: TCGSpecificationVersion, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TCGSpecificationVersion) { _cached_encoder_for_TCGSpecificationVersion = function (value: TCGSpecificationVersion, elGetter: $.ASN1Encoder<TCGSpecificationVersion>): _Element {
+    if (!_cached_encoder_for_TCGSpecificationVersion) { _cached_encoder_for_TCGSpecificationVersion = function (value: TCGSpecificationVersion): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.majorVersion, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.minorVersion, $.BER),

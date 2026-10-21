@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ComponentAddress, _decode_ComponentAddress, _encode_ComponentAddress } from "../PlatformCertificateProfileV2/ComponentAddress.ta.mjs";
-// export { ComponentAddress, _decode_ComponentAddress, _encode_ComponentAddress } from "../PlatformCertificateProfileV2/ComponentAddress.ta.mjs";
 import { tcg_tr_ID_networkMAC } from "../PlatformCertificateProfileV2/tcg-tr-ID-networkMAC.va.mjs";
-// export { tcg_tr_ID_networkMAC } from "../PlatformCertificateProfileV2/tcg-tr-ID-networkMAC.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

@@ -1,10 +1,12 @@
 /* eslint-disable */
 import {
+    ASN1Element as _Element,
+    ASN1SizeError,
     IA5String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { tcg_tr_ID_IA5String } from "../PlatformCertificateProfileV2/tcg-tr-ID-IA5String.va.mjs";
-// export { tcg_tr_ID_IA5String } from "../PlatformCertificateProfileV2/tcg-tr-ID-IA5String.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 
@@ -29,7 +31,13 @@ export
 const ia5StringTrait: TRAIT<IA5String> = {
     class: "TRAIT",
     decoderFor: {
-        "&TraitValueType": $._decodeIA5String,
+        "&TraitValueType": (el: _Element): IA5String => {
+            const value = $._decodeIA5String(el);
+            if (value.length < 1 || value.length > strmax) {
+                throw new ASN1SizeError("ia5StringTrait.&TraitValueType violates SIZE (1..strmax)");
+            }
+            return value;
+        },
     },
     encoderFor: {
         "&TraitValueType": $._encodeIA5String,

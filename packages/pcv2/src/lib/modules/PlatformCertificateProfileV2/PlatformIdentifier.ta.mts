@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfileV2/Trait.ta.mjs";
-// export { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfileV2/Trait.ta.mjs";
 
 
 /**
@@ -20,8 +20,6 @@ import { Trait, _decode_Trait, _encode_Trait } from "../PlatformCertificateProfi
 export
 type PlatformIdentifier = Trait[]; // SequenceOfType
 
-let _cached_decoder_for_PlatformIdentifier: $.ASN1Decoder<PlatformIdentifier> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PlatformIdentifier
  * @function
@@ -30,8 +28,11 @@ let _cached_decoder_for_PlatformIdentifier: $.ASN1Decoder<PlatformIdentifier> | 
  */
 export
 function _decode_PlatformIdentifier (el: _Element): PlatformIdentifier {
-    if (!_cached_decoder_for_PlatformIdentifier) { _cached_decoder_for_PlatformIdentifier = $._decodeSequenceOf<Trait>(() => _decode_Trait); }
-    return _cached_decoder_for_PlatformIdentifier(el);
+    const value = $._decodeSequenceOf<Trait>(() => _decode_Trait)(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("PlatformIdentifier violates SIZE (1..MAX)");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PlatformIdentifier: $.ASN1Encoder<PlatformIdentifier> | null = null;

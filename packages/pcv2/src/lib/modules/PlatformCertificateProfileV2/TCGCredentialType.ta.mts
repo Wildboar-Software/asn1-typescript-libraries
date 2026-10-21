@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "../PlatformCertificateProfileV2/CredentialType.ta.mjs";
-// export { CredentialType, _decode_CredentialType, _encode_CredentialType } from "../PlatformCertificateProfileV2/CredentialType.ta.mjs";
 
 
 /**
@@ -133,7 +132,7 @@ let _cached_encoder_for_TCGCredentialType: $.ASN1Encoder<TCGCredentialType> | nu
  */
 export
 function _encode_TCGCredentialType (value: TCGCredentialType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TCGCredentialType) { _cached_encoder_for_TCGCredentialType = function (value: TCGCredentialType, elGetter: $.ASN1Encoder<TCGCredentialType>): _Element {
+    if (!_cached_encoder_for_TCGCredentialType) { _cached_encoder_for_TCGCredentialType = function (value: TCGCredentialType): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_CredentialType(value.certificateType, $.BER)
     ], $.BER);

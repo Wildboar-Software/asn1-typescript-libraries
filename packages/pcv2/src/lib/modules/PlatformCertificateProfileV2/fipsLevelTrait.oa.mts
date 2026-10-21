@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfileV2/FIPSLevel.ta.mjs";
-// export { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfileV2/FIPSLevel.ta.mjs";
 import { tcg_tr_ID_FIPSLevel } from "../PlatformCertificateProfileV2/tcg-tr-ID-FIPSLevel.va.mjs";
-// export { tcg_tr_ID_FIPSLevel } from "../PlatformCertificateProfileV2/tcg-tr-ID-FIPSLevel.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 

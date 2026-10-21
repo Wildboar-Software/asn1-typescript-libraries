@@ -1,13 +1,14 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     UTF8String,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfileV2/AddressType.ta.mjs";
-// export { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfileV2/AddressType.ta.mjs";
 
 
 /**
@@ -46,6 +47,9 @@ class ComponentAddress {
     ) {
         this.addressType = addressType;
         this.addressValue = addressValue;
+        if (addressValue.length < 1 || addressValue.length > strmax) {
+            throw new ASN1SizeError("ComponentAddress.addressValue violates SIZE (1..strmax)");
+        }
     }
 
     /**
@@ -148,7 +152,7 @@ let _cached_encoder_for_ComponentAddress: $.ASN1Encoder<ComponentAddress> | null
  */
 export
 function _encode_ComponentAddress (value: ComponentAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ComponentAddress) { _cached_encoder_for_ComponentAddress = function (value: ComponentAddress, elGetter: $.ASN1Encoder<ComponentAddress>): _Element {
+    if (!_cached_encoder_for_ComponentAddress) { _cached_encoder_for_ComponentAddress = function (value: ComponentAddress): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_AddressType(value.addressType, $.BER),
         /* REQUIRED   */ $._encodeUTF8String(value.addressValue, $.BER)

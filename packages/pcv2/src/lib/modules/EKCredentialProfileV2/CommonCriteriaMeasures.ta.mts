@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     BOOLEAN,
     IA5String,
     OBJECT_IDENTIFIER,
@@ -8,14 +9,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../EKCredentialProfileV2/strmax.va.mjs";
 import { EvaluationAssuranceLevel, _decode_EvaluationAssuranceLevel, _encode_EvaluationAssuranceLevel, _enum_for_EvaluationAssuranceLevel } from "../EKCredentialProfileV2/EvaluationAssuranceLevel.ta.mjs";
-// export { EvaluationAssuranceLevel, _enum_for_EvaluationAssuranceLevel, EvaluationAssuranceLevel_levell /* IMPORTED_LONG_ENUMERATION_ITEM */, levell /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level2 /* IMPORTED_LONG_ENUMERATION_ITEM */, level2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level3 /* IMPORTED_LONG_ENUMERATION_ITEM */, level3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level4 /* IMPORTED_LONG_ENUMERATION_ITEM */, level4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level5 /* IMPORTED_LONG_ENUMERATION_ITEM */, level5 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level6 /* IMPORTED_LONG_ENUMERATION_ITEM */, level6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationAssuranceLevel_level7 /* IMPORTED_LONG_ENUMERATION_ITEM */, level7 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EvaluationAssuranceLevel, _encode_EvaluationAssuranceLevel } from "../EKCredentialProfileV2/EvaluationAssuranceLevel.ta.mjs";
 import { EvaluationStatus, _decode_EvaluationStatus, _encode_EvaluationStatus, _enum_for_EvaluationStatus } from "../EKCredentialProfileV2/EvaluationStatus.ta.mjs";
-// export { EvaluationStatus, _enum_for_EvaluationStatus, EvaluationStatus_designedToMeet /* IMPORTED_LONG_ENUMERATION_ITEM */, designedToMeet /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationStatus_evaluationInProgress /* IMPORTED_LONG_ENUMERATION_ITEM */, evaluationInProgress /* IMPORTED_SHORT_ENUMERATION_ITEM */, EvaluationStatus_evaluationCompleted /* IMPORTED_LONG_ENUMERATION_ITEM */, evaluationCompleted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EvaluationStatus, _encode_EvaluationStatus } from "../EKCredentialProfileV2/EvaluationStatus.ta.mjs";
 import { StrengthOfFunction, _decode_StrengthOfFunction, _encode_StrengthOfFunction, _enum_for_StrengthOfFunction } from "../EKCredentialProfileV2/StrengthOfFunction.ta.mjs";
-// export { StrengthOfFunction, _enum_for_StrengthOfFunction, StrengthOfFunction_basic /* IMPORTED_LONG_ENUMERATION_ITEM */, basic /* IMPORTED_SHORT_ENUMERATION_ITEM */, StrengthOfFunction_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, StrengthOfFunction_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_StrengthOfFunction, _encode_StrengthOfFunction } from "../EKCredentialProfileV2/StrengthOfFunction.ta.mjs";
 import { URIReference, _decode_URIReference, _encode_URIReference } from "../EKCredentialProfileV2/URIReference.ta.mjs";
-// export { URIReference, _decode_URIReference, _encode_URIReference } from "../EKCredentialProfileV2/URIReference.ta.mjs";
 
 
 /**
@@ -117,6 +115,9 @@ class CommonCriteriaMeasures {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.version = version;
+        if (version.length < 1 || version.length > strmax) {
+            throw new ASN1SizeError("CommonCriteriaMeasures.version violates SIZE (1..strmax)");
+        }
         this.assurancelevel = assurancelevel;
         this.evaluationStatus = evaluationStatus;
         this.plus = plus;
@@ -283,7 +284,7 @@ let _cached_encoder_for_CommonCriteriaMeasures: $.ASN1Encoder<CommonCriteriaMeas
  */
 export
 function _encode_CommonCriteriaMeasures (value: CommonCriteriaMeasures, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommonCriteriaMeasures) { _cached_encoder_for_CommonCriteriaMeasures = function (value: CommonCriteriaMeasures, elGetter: $.ASN1Encoder<CommonCriteriaMeasures>): _Element {
+    if (!_cached_encoder_for_CommonCriteriaMeasures) { _cached_encoder_for_CommonCriteriaMeasures = function (value: CommonCriteriaMeasures): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(9 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -1,17 +1,16 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
 import { ISO3166CountryCode, _decode_ISO3166CountryCode, _encode_ISO3166CountryCode } from "../PlatformCertificateProfileV2/ISO3166CountryCode.ta.mjs";
-// export { ISO3166CountryCode, _decode_ISO3166CountryCode, _encode_ISO3166CountryCode } from "../PlatformCertificateProfileV2/ISO3166CountryCode.ta.mjs";
 import { ISO3166AdminSubdivisionCode, _decode_ISO3166AdminSubdivisionCode, _encode_ISO3166AdminSubdivisionCode } from "../PlatformCertificateProfileV2/ISO3166AdminSubdivisionCode.ta.mjs";
-// export { ISO3166AdminSubdivisionCode, _decode_ISO3166AdminSubdivisionCode, _encode_ISO3166AdminSubdivisionCode } from "../PlatformCertificateProfileV2/ISO3166AdminSubdivisionCode.ta.mjs";
 import { OpenLocationCode, _decode_OpenLocationCode, _encode_OpenLocationCode } from "../PlatformCertificateProfileV2/OpenLocationCode.ta.mjs";
-// export { OpenLocationCode, _decode_OpenLocationCode, _encode_OpenLocationCode } from "../PlatformCertificateProfileV2/OpenLocationCode.ta.mjs";
 
 
 /**
@@ -86,6 +85,15 @@ class EntityGeoLocation {
         this.streetAddress = streetAddress;
         this.locationCoords = locationCoords;
         this.postalCode = postalCode;
+        if (localityName !== undefined && (localityName.length < 1 || localityName.length > strmax)) {
+            throw new ASN1SizeError("EntityGeoLocation.localityName violates SIZE (1..strmax)");
+        }
+        if (streetAddress !== undefined && (streetAddress.length < 1 || streetAddress.length > strmax)) {
+            throw new ASN1SizeError("EntityGeoLocation.streetAddress violates SIZE (1..strmax)");
+        }
+        if (postalCode !== undefined && (postalCode.length < 1 || postalCode.length > strmax)) {
+            throw new ASN1SizeError("EntityGeoLocation.postalCode violates SIZE (1..strmax)");
+        }
     }
 
     /**
@@ -205,7 +213,7 @@ let _cached_encoder_for_EntityGeoLocation: $.ASN1Encoder<EntityGeoLocation> | nu
  */
 export
 function _encode_EntityGeoLocation (value: EntityGeoLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EntityGeoLocation) { _cached_encoder_for_EntityGeoLocation = function (value: EntityGeoLocation, elGetter: $.ASN1Encoder<EntityGeoLocation>): _Element {
+    if (!_cached_encoder_for_EntityGeoLocation) { _cached_encoder_for_EntityGeoLocation = function (value: EntityGeoLocation): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ISO3166CountryCode(value.countryCode, $.BER));
     if (value.stateOrProvince !== undefined) {

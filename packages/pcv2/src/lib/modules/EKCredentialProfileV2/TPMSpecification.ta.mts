@@ -2,11 +2,13 @@
 import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
+    ASN1SizeError,
     ASN1TagClass as _TagClass,
     INTEGER,
     UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { strmax } from "../EKCredentialProfileV2/strmax.va.mjs";
 
 
 
@@ -60,6 +62,9 @@ class TPMSpecification {
         _unrecognizedExtensionsList: _Element[] = []
     ) {
         this.family = family;
+        if (family.length < 1 || family.length > strmax) {
+            throw new ASN1SizeError("TPMSpecification.family violates SIZE (1..strmax)");
+        }
         this.level = level;
         this.revision = revision;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
@@ -170,7 +175,7 @@ let _cached_encoder_for_TPMSpecification: $.ASN1Encoder<TPMSpecification> | null
  */
 export
 function _encode_TPMSpecification (value: TPMSpecification, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TPMSpecification) { _cached_encoder_for_TPMSpecification = function (value: TPMSpecification, elGetter: $.ASN1Encoder<TPMSpecification>): _Element {
+    if (!_cached_encoder_for_TPMSpecification) { _cached_encoder_for_TPMSpecification = function (value: TPMSpecification): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

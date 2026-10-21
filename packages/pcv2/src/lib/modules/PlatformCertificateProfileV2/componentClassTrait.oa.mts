@@ -1,10 +1,11 @@
 /* eslint-disable */
 import {
+    ASN1Element as _Element,
+    ASN1SizeError,
     OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { tcg_tr_ID_componentClass } from "../PlatformCertificateProfileV2/tcg-tr-ID-componentClass.va.mjs";
-// export { tcg_tr_ID_componentClass } from "../PlatformCertificateProfileV2/tcg-tr-ID-componentClass.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 
@@ -29,7 +30,13 @@ export
 const componentClassTrait: TRAIT<OCTET_STRING> = {
     class: "TRAIT",
     decoderFor: {
-        "&TraitValueType": $._decodeOctetString,
+        "&TraitValueType": (el: _Element): OCTET_STRING => {
+            const value = $._decodeOctetString(el);
+            if (value.length !== 4) {
+                throw new ASN1SizeError("componentClassTrait.&TraitValueType violates SIZE (4)");
+            }
+            return value;
+        },
     },
     encoderFor: {
         "&TraitValueType": $._encodeOctetString,

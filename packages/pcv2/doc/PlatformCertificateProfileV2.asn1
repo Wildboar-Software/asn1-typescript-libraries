@@ -36,6 +36,7 @@ tcg-attribute                                   OBJECT IDENTIFIER ::= {tcg 2}
 tcg-platformClass                               OBJECT IDENTIFIER ::= {tcg 5}
 tcg-kp                                          OBJECT IDENTIFIER ::= {tcg 8}
 tcg-ca                                          OBJECT IDENTIFIER ::= {tcg 11}
+tcg-ca-policy                                   OBJECT IDENTIFIER ::= {tcg-ca 1}
 tcg-address                                     OBJECT IDENTIFIER ::= {tcg 17}
 tcg-registry                                    OBJECT IDENTIFIER ::= {tcg 18}
 
@@ -483,7 +484,7 @@ fipsLevelTrait TRAIT ::= {
 
 iso9000Trait TRAIT ::= {
     SYNTAX          ISO9000Certification
-    IDENTIFIED BY   tcg-tr-ID-ISO9000
+    IDENTIFIED BY   tcg-tr-ID-ISO9000Level
 }
 
 networkMACTrait TRAIT ::= {

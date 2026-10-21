@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HashedCertificateIdentifier, _decode_HashedCertificateIdentifier, _encode_HashedCertificateIdentifier } from "../PlatformCertificateProfileV2/HashedCertificateIdentifier.ta.mjs";
-// export { HashedCertificateIdentifier, _decode_HashedCertificateIdentifier, _encode_HashedCertificateIdentifier } from "../PlatformCertificateProfileV2/HashedCertificateIdentifier.ta.mjs";
+import { IssuerSerial, _decode_IssuerSerial, _encode_IssuerSerial } from "@wildboar/x500/AttributeCertificateDefinitions";
 
 
 /**
@@ -148,7 +148,7 @@ let _cached_encoder_for_CertificateIdentifier: $.ASN1Encoder<CertificateIdentifi
  */
 export
 function _encode_CertificateIdentifier (value: CertificateIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CertificateIdentifier) { _cached_encoder_for_CertificateIdentifier = function (value: CertificateIdentifier, elGetter: $.ASN1Encoder<CertificateIdentifier>): _Element {
+    if (!_cached_encoder_for_CertificateIdentifier) { _cached_encoder_for_CertificateIdentifier = function (value: CertificateIdentifier): _Element {
     const _components: _Element[] = [];
     if (value.hashedCertIdentifier !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_HashedCertificateIdentifier, $.BER)(value.hashedCertIdentifier, $.BER));

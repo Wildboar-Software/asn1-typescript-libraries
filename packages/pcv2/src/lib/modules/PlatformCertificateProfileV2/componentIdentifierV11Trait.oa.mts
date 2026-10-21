@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ComponentIdentifierV11, _decode_ComponentIdentifierV11, _encode_ComponentIdentifierV11 } from "../PlatformCertificateProfileV2/ComponentIdentifierV11.ta.mjs";
-// export { ComponentIdentifierV11, _decode_ComponentIdentifierV11, _encode_ComponentIdentifierV11 } from "../PlatformCertificateProfileV2/ComponentIdentifierV11.ta.mjs";
 import { tcg_tr_ID_componentIdentifierV11 } from "../PlatformCertificateProfileV2/tcg-tr-ID-componentIdentifierV11.va.mjs";
-// export { tcg_tr_ID_componentIdentifierV11 } from "../PlatformCertificateProfileV2/tcg-tr-ID-componentIdentifierV11.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 
