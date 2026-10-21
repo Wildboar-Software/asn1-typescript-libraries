@@ -299,6 +299,9 @@
     },
     {
       "path": "./packages/qsig"
+    },
+    {
+      "path": "./packages/pcv2"
     }
   ],
   "compilerOptions": {

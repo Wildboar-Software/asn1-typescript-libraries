@@ -61,6 +61,7 @@ jobs:
           - "logotypecertextn"
           - "or-address"
           - "pc"
+          - "pcv2"
           - "pkcs"
           - "pkinit"
           - "pki-stub"
