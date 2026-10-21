@@ -1,0 +1,15 @@
+Association-Control-Apdus-asn1-97
+{iso(1) standard(0) pss1-generic-procedures(11582)
+association-control-apdus-asn1-97(12)}
+DEFINITIONS                   ::=
+BEGIN
+IMPORTS
+
+    ACSE-apdu
+        FROM ACSE-1
+        {joint-iso-itu-t association-control(2) modules(0) apdus(0) version1(1) }
+    ;
+
+AcseAPDU ::= ACSE-apdu
+
+END -- of Association-Control-Apdus-asn1-97

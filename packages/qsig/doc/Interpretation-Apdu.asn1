@@ -1,0 +1,17 @@
+Interpretation-Apdu
+{iso(1) standard(0) pss1-generic-procedures(11582) interpretation-apdu(3)}
+DEFINITIONS                  ::=
+BEGIN
+EXPORTS InterpretationApdu;
+
+InterpretationApdu ::= [11] IMPLICIT ENUMERATED {
+    discardAnyUnrecognisedInvokePdu(0),
+    clearCallIfAnyInvokePduNotRecognised(1),
+    -- this value also applies to Call independent signalling connections
+    -- see clause 8.1.2
+    rejectAnyUnrecognisedInvokePdu(2)
+    -- this coding is implied by the absence of an
+    -- interpretation APDU.
+}
+
+END     -- of Interpretation-Apdu

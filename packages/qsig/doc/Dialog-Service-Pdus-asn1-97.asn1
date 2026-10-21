@@ -1,0 +1,85 @@
+Dialog-Service-Pdus-asn1-97
+{iso(1) standard(0) pss1-generic-procedures(11582)
+dialog-service-pdus-asn1-97(15)}
+DEFINITIONS             ::=
+BEGIN
+IMPORTS
+
+    RoseAPDU, InvokeId, InvokeIdSet
+        FROM PSS1-Service-APDUs-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        pss1-service-apdus-asn1-97(16)}
+
+    AcseAPDU
+        FROM Association-Control-Apdus-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        association-control-apdus-asn1-97(12)}
+
+    EXTENSION, Extension{}
+        FROM Manufacturer-specific-service-extension-class-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        msi-class-asn1-97(11)}
+
+    OPERATION
+        FROM Remote-Operations-Information-Objects
+        {joint-iso-itu-t remote-operations(4) informationObjects(5) version1(0)}
+    ;
+
+DseAPDU ::= CHOICE {
+    begin [12] IMPLICIT DialogBeginPDU,
+    end [14] IMPLICIT DialogEndPDU,
+    continue [15] IMPLICIT DialogContinuePDU,
+    abort [17] IMPLICIT DialogAbortPDU
+}
+
+DialogBeginPDU ::= SEQUENCE {
+    originationDialogId OriginationDialogId,
+    remoteOperationsPortion RemoteOperationsPortion OPTIONAL
+}
+
+DialogEndPDU ::= SEQUENCE {
+    destinationDialogId DestinationDialogId,
+    remoteOperationsPortion RemoteOperationsPortion OPTIONAL
+}
+
+DialogContinuePDU ::= SEQUENCE {
+    originationDialogId OriginationDialogId,
+    destinationDialogId DestinationDialogId,
+    remoteOperationsPortion RemoteOperationsPortion OPTIONAL
+}
+
+DialogAbortPDU ::= SEQUENCE {
+    destinationDialogId DestinationDialogId,
+    abortChoice CHOICE {
+        p-AbortCause P-AbortCause,
+        userAbortInformation UserAbortInformation
+    }
+}
+
+OriginationDialogId ::= [0] IMPLICIT OCTET STRING (SIZE(0..8))
+DestinationDialogId ::= [1] IMPLICIT OCTET STRING (SIZE(0..8))
+
+P-AbortCause ::= [2] IMPLICIT INTEGER {
+    unrecognisedDseApdu(0),
+    unrecognisedDialogId(1),
+    badlyFormattedDseApdu(2),
+    incorrectDseApdu(3),
+    resourceLimitation(4)
+} (0..255)
+
+UserAbortInformation ::= [3] IMPLICIT Extension {{DSE-Extension-Set}}
+
+DSE-Extension-Set EXTENSION ::= {...}
+
+RemoteOperationsPortion ::= [4] IMPLICIT SEQUENCE OF CHOICE {
+    roseAPDU [17] RoseAPDU {
+        {InvokeIdSet},
+        {OperationSet},
+        {OperationSet}
+    },
+    acseAPDU [19] AcseAPDU
+}
+
+OperationSet OPERATION ::= {...}
+
+END -- of Dialog-Service-Pdus-asn1-97

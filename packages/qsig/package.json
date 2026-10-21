@@ -1,0 +1,82 @@
+{
+    "name": "@wildboar/qsig",
+    "type": "module",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
+    "bugs": {
+        "email": "jonathan@wilbur.space"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Jonathan M. Wilbur",
+        "email": "jonathan@wilbur.space",
+        "url": "https://github.com/JonathanWilbur"
+    },
+    "contributors": [
+        {
+            "email": "jonathan@wilbur.space",
+            "name": "Jonathan M. Wilbur",
+            "url": "https://github.com/JonathanWilbur"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wildboar-Software/asn1-typescript-libraries.git"
+    },
+    "types": "./src/index.d.mts",
+    "module": "./src/index.mjs",
+    "main": "./src/index.mjs",
+    "dependencies": {
+        "@wildboar/acse": "npm:@jsr/wildboar__acse@2.x.x",
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/rose": "npm:@jsr/wildboar__rose@2.x.x"
+    },
+    "exports": {
+        ".": "./src/index.mts",
+        "./Addressing-Data-Elements-asn1-97": "./src/lib/modules/Addressing-Data-Elements-asn1-97/index.mts",
+        "./Association-Control-Apdus-asn1-97": "./src/lib/modules/Association-Control-Apdus-asn1-97/index.mts",
+        "./Bqsig-generic-parameter-definition": "./src/lib/modules/Bqsig-generic-parameter-definition/index.mts",
+        "./CT-Authentication-Operations": "./src/lib/modules/CT-Authentication-Operations/index.mts",
+        "./Call-Diversion-Operations-asn1-97": "./src/lib/modules/Call-Diversion-Operations-asn1-97/index.mts",
+        "./Call-Identification-and-Call-Linkage-Operations-asn1-97": "./src/lib/modules/Call-Identification-and-Call-Linkage-Operations-asn1-97/index.mts",
+        "./Call-Interception-Operations-asn1-97": "./src/lib/modules/Call-Interception-Operations-asn1-97/index.mts",
+        "./Call-Interruption-Notifications-asn1-97": "./src/lib/modules/Call-Interruption-Notifications-asn1-97/index.mts",
+        "./Call-Interruption-Operations-asn1-97": "./src/lib/modules/Call-Interruption-Operations-asn1-97/index.mts",
+        "./Call-Intrusion-Notifications-asn1-97": "./src/lib/modules/Call-Intrusion-Notifications-asn1-97/index.mts",
+        "./Call-Intrusion-Operations-asn1-97": "./src/lib/modules/Call-Intrusion-Operations-asn1-97/index.mts",
+        "./Call-Offer-Notifications-asn1-97": "./src/lib/modules/Call-Offer-Notifications-asn1-97/index.mts",
+        "./Call-Offer-Operations-asn1-97": "./src/lib/modules/Call-Offer-Operations-asn1-97/index.mts",
+        "./Call-Transfer-Operations-asn1-97": "./src/lib/modules/Call-Transfer-Operations-asn1-97/index.mts",
+        "./Common-Information-Operations-asn1-97": "./src/lib/modules/Common-Information-Operations-asn1-97/index.mts",
+        "./Dialog-Service-Pdus-asn1-97": "./src/lib/modules/Dialog-Service-Pdus-asn1-97/index.mts",
+        "./Do-Not-Disturb-Notifications-asn1-97": "./src/lib/modules/Do-Not-Disturb-Notifications-asn1-97/index.mts",
+        "./Do-Not-Disturb-Operations-asn1-97": "./src/lib/modules/Do-Not-Disturb-Operations-asn1-97/index.mts",
+        "./General-Error-List": "./src/lib/modules/General-Error-List/index.mts",
+        "./MWI-Operations-asn1-97": "./src/lib/modules/MWI-Operations-asn1-97/index.mts",
+        "./Manufacturer-specific-service-extension-class-asn1-97": "./src/lib/modules/Manufacturer-specific-service-extension-class-asn1-97/index.mts",
+        "./Name-Operations-asn1-97": "./src/lib/modules/Name-Operations-asn1-97/index.mts",
+        "./Network-Facility-Extension-asn1-97": "./src/lib/modules/Network-Facility-Extension-asn1-97/index.mts",
+        "./Network-Protocol-Profile-definition": "./src/lib/modules/Network-Protocol-Profile-definition/index.mts",
+        "./Network-Protocol-Profile-definition-asn1-97": "./src/lib/modules/Network-Protocol-Profile-definition-asn1-97/index.mts",
+        "./Notification-Data-Structure-asn1-97": "./src/lib/modules/Notification-Data-Structure-asn1-97/index.mts",
+        "./Notification-class-asn1-97": "./src/lib/modules/Notification-class-asn1-97/index.mts",
+        "./PSS1-Service-APDUs-asn1-97": "./src/lib/modules/PSS1-Service-APDUs-asn1-97/index.mts",
+        "./PSS1-generic-parameters-definition": "./src/lib/modules/PSS1-generic-parameters-definition/index.mts",
+        "./PSS1-generic-parameters-definition-asn1-97": "./src/lib/modules/PSS1-generic-parameters-definition-asn1-97/index.mts",
+        "./PUM-Registration-Operations-asn1-97": "./src/lib/modules/PUM-Registration-Operations-asn1-97/index.mts",
+        "./Path-Replacement-Operations-asn1-97": "./src/lib/modules/Path-Replacement-Operations-asn1-97/index.mts",
+        "./Private-User-Mobility-Call-Handling-Operations-asn1-97": "./src/lib/modules/Private-User-Mobility-Call-Handling-Operations-asn1-97/index.mts",
+        "./Recall-Operations-asn1-97": "./src/lib/modules/Recall-Operations-asn1-97/index.mts",
+        "./SS-AOC-Operations-asn1-97": "./src/lib/modules/SS-AOC-Operations-asn1-97/index.mts",
+        "./SS-CC-Operations-asn1-97": "./src/lib/modules/SS-CC-Operations-asn1-97/index.mts",
+        "./SS-MCM-Operations-asn1-97": "./src/lib/modules/SS-MCM-Operations-asn1-97/index.mts",
+        "./SS-MCR-Operations-asn97": "./src/lib/modules/SS-MCR-Operations-asn97/index.mts",
+        "./SS-MID-Operations-asn1-97": "./src/lib/modules/SS-MID-Operations-asn1-97/index.mts",
+        "./SS-SD-Operations-asn1-97": "./src/lib/modules/SS-SD-Operations-asn1-97/index.mts",
+        "./Short-Message-Service-Operations-asn1-97": "./src/lib/modules/Short-Message-Service-Operations-asn1-97/index.mts",
+        "./Single-Step-Call-Transfer-Operations-asn1-97": "./src/lib/modules/Single-Step-Call-Transfer-Operations-asn1-97/index.mts",
+        "./WTM-Authentication-Operations-asn1-97": "./src/lib/modules/WTM-Authentication-Operations-asn1-97/index.mts",
+        "./WTM-Location-Registration-Operations-asn1-97": "./src/lib/modules/WTM-Location-Registration-Operations-asn1-97/index.mts",
+        "./Wireless-Terminal-Call-Handling-Operations-asn1-97": "./src/lib/modules/Wireless-Terminal-Call-Handling-Operations-asn1-97/index.mts"
+    }
+}

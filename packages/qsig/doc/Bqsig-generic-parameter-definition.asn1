@@ -1,0 +1,10 @@
+Bqsig-generic-parameter-definition
+{iso(1) identified-organisation(3) icd-ecma(12) standard(0)
+bqsig-generic-procedures(254) bqsig-generic-parameters(2)}
+DEFINITIONS EXPLICIT TAGS ::=
+BEGIN
+EXPORTS BqsigInformationElement;
+
+BqsigInformationElement ::= [APPLICATION 0] IMPLICIT OCTET STRING
+
+END -- of Bqsig-generic-parameter-definition
