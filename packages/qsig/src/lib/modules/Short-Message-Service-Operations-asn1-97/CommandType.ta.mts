@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary CommandType
@@ -89,7 +89,13 @@ export
 const enableSRRrelatingToPreviouslySubmittedSM: CommandType = CommandType_enableSRRrelatingToPreviouslySubmittedSM; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
-const _decode_CommandType: $.ASN1Decoder<CommandType> = $._decodeInteger;
+const _decode_CommandType = (el: _Element): CommandType => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? (value < 0n || value > 255n) : (value < 0 || value > 255))) {
+        throw new ASN1OverflowError("CommandType violates INTEGER constraint");
+    }
+    return value;
+};
 
 export
 const _encode_CommandType: $.ASN1Encoder<CommandType> = $._encodeInteger;

@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EnhancedVP, _decode_EnhancedVP, _encode_EnhancedVP } from "../Short-Message-Service-Operations-asn1-97/EnhancedVP.ta.mjs";
-// export { EnhancedVP, _decode_EnhancedVP, _encode_EnhancedVP } from "../Short-Message-Service-Operations-asn1-97/EnhancedVP.ta.mjs";
-
 
 /**
  * @summary ValidityPeriodEnh
@@ -155,7 +153,7 @@ let _cached_encoder_for_ValidityPeriodEnh: $.ASN1Encoder<ValidityPeriodEnh> | nu
  */
 export
 function _encode_ValidityPeriodEnh (value: ValidityPeriodEnh, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ValidityPeriodEnh) { _cached_encoder_for_ValidityPeriodEnh = function (value: ValidityPeriodEnh, elGetter: $.ASN1Encoder<ValidityPeriodEnh>): _Element {
+    if (!_cached_encoder_for_ValidityPeriodEnh) { _cached_encoder_for_ValidityPeriodEnh = function (value: ValidityPeriodEnh, _elGetter: $.ASN1Encoder<ValidityPeriodEnh>): _Element {
     const _components: _Element[] = [];
     if (value.singleShotSM !== undefined && !$.deepEq(value.singleShotSM, ValidityPeriodEnh._default_value_for_singleShotSM)) {
         _components.push(/* IF_DEFAULT */ $._encodeBoolean(value.singleShotSM, $.BER));
@@ -167,6 +165,5 @@ function _encode_ValidityPeriodEnh (value: ValidityPeriodEnh, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_ValidityPeriodEnh(value, elGetter);
 }
-
 
 /* eslint-enable */

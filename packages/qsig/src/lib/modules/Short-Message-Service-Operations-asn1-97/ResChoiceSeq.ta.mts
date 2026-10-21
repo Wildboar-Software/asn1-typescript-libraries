@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
 import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-// export { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-
 
 /**
  * @summary ResChoiceSeq
@@ -64,7 +61,6 @@ class ResChoiceSeq {
     public static _from_object (_o: { [_K in keyof (ResChoiceSeq)]: (ResChoiceSeq)[_K] }): ResChoiceSeq {
         return new ResChoiceSeq(_o.protocolIdentifier, _o.userData);
     }
-
 
 }
 
@@ -125,10 +121,8 @@ function _decode_ResChoiceSeq (el: _Element): ResChoiceSeq {
     }
     sequence[0].name = "protocolIdentifier";
     sequence[1].name = "userData";
-    let protocolIdentifier!: ProtocolIdentifier;
-    let userData!: UserData;
-    protocolIdentifier = _decode_ProtocolIdentifier(sequence[0]);
-    userData = _decode_UserData(sequence[1]);
+    const protocolIdentifier: ProtocolIdentifier = _decode_ProtocolIdentifier(sequence[0]);
+    const userData: UserData = _decode_UserData(sequence[1]);
     return new ResChoiceSeq(
         protocolIdentifier,
         userData,
@@ -149,7 +143,7 @@ let _cached_encoder_for_ResChoiceSeq: $.ASN1Encoder<ResChoiceSeq> | null = null;
  */
 export
 function _encode_ResChoiceSeq (value: ResChoiceSeq, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ResChoiceSeq) { _cached_encoder_for_ResChoiceSeq = function (value: ResChoiceSeq, elGetter: $.ASN1Encoder<ResChoiceSeq>): _Element {
+    if (!_cached_encoder_for_ResChoiceSeq) { _cached_encoder_for_ResChoiceSeq = function (value: ResChoiceSeq, _elGetter: $.ASN1Encoder<ResChoiceSeq>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ProtocolIdentifier(value.protocolIdentifier, $.BER),
         /* REQUIRED   */ _encode_UserData(value.userData, $.BER)
@@ -157,6 +151,5 @@ function _encode_ResChoiceSeq (value: ResChoiceSeq, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_ResChoiceSeq(value, elGetter);
 }
-
 
 /* eslint-enable */

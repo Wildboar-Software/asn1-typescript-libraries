@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_transferAuthParam_ArgumentType, _encode_transferAuthParam_ArgumentType, transferAuthParam_ArgumentType } from "../WTM-Authentication-Operations-asn1-97/transferAuthParam-ArgumentType.ta.mjs";
-// export { transferAuthParam_ArgumentType, _decode_transferAuthParam_ArgumentType, _encode_transferAuthParam_ArgumentType } from "../WTM-Authentication-Operations-asn1-97/transferAuthParam-ArgumentType.ta.mjs";
-
 
 /**
  * @summary transferAuthParam

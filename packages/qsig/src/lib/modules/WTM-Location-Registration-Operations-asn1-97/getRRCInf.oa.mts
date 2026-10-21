@@ -1,16 +1,9 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { GetRRCInfArg, _decode_GetRRCInfArg, _encode_GetRRCInfArg } from "../WTM-Location-Registration-Operations-asn1-97/GetRRCInfArg.ta.mjs";
-// export { GetRRCInfArg, _decode_GetRRCInfArg, _encode_GetRRCInfArg } from "../WTM-Location-Registration-Operations-asn1-97/GetRRCInfArg.ta.mjs";
 import { GetRRCInfRes, _decode_GetRRCInfRes, _encode_GetRRCInfRes } from "../WTM-Location-Registration-Operations-asn1-97/GetRRCInfRes.ta.mjs";
-// export { GetRRCInfRes, _decode_GetRRCInfRes, _encode_GetRRCInfRes } from "../WTM-Location-Registration-Operations-asn1-97/GetRRCInfRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary getRRCInf

@@ -1,11 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IntResult, _decode_IntResult, _encode_IntResult } from "../Call-Diversion-Operations-asn1-97/IntResult.ta.mjs";
-// export { IntResult, _decode_IntResult, _encode_IntResult } from "../Call-Diversion-Operations-asn1-97/IntResult.ta.mjs";
-
 
 /**
  * @summary IntResultList
@@ -31,7 +30,11 @@ let _cached_decoder_for_IntResultList: $.ASN1Decoder<IntResultList> | null = nul
 export
 function _decode_IntResultList (el: _Element): IntResultList {
     if (!_cached_decoder_for_IntResultList) { _cached_decoder_for_IntResultList = $._decodeSetOf<IntResult>(() => _decode_IntResult); }
-    return _cached_decoder_for_IntResultList(el);
+    const _value = _cached_decoder_for_IntResultList(el);
+    if (_value.length < 0 || _value.length > 29) {
+        throw new ASN1SizeError("IntResultList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_IntResultList: $.ASN1Encoder<IntResultList> | null = null;
@@ -48,6 +51,5 @@ function _encode_IntResultList (value: IntResultList, elGetter: $.ASN1Encoder<an
     if (!_cached_encoder_for_IntResultList) { _cached_encoder_for_IntResultList = $._encodeSetOf<IntResult>(() => _encode_IntResult, $.BER); }
     return _cached_encoder_for_IntResultList(value, elGetter);
 }
-
 
 /* eslint-enable */

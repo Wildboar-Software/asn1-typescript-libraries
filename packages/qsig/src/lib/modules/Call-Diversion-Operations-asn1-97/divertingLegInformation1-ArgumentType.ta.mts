@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiversionReason, _decode_DiversionReason, _encode_DiversionReason, _enum_for_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
-// export { DiversionReason, _enum_for_DiversionReason, DiversionReason_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfu /* IMPORTED_LONG_ENUMERATION_ITEM */, cfu /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfb /* IMPORTED_LONG_ENUMERATION_ITEM */, cfb /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfnr /* IMPORTED_LONG_ENUMERATION_ITEM */, cfnr /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DiversionReason, _encode_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
 import { SubscriptionOption, _decode_SubscriptionOption, _encode_SubscriptionOption, _enum_for_SubscriptionOption } from "../Call-Diversion-Operations-asn1-97/SubscriptionOption.ta.mjs";
-// export { SubscriptionOption, _enum_for_SubscriptionOption, SubscriptionOption_noNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, noNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionOption_notificationWithoutDivertedToNr /* IMPORTED_LONG_ENUMERATION_ITEM */, notificationWithoutDivertedToNr /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionOption_notificationWithDivertedToNr /* IMPORTED_LONG_ENUMERATION_ITEM */, notificationWithDivertedToNr /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriptionOption, _encode_SubscriptionOption } from "../Call-Diversion-Operations-asn1-97/SubscriptionOption.ta.mjs";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { _decode_divertingLegInformation1_ArgumentType_extension, _encode_divertingLegInformation1_ArgumentType_extension, divertingLegInformation1_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation1-ArgumentType-extension.ta.mjs";
-// export { divertingLegInformation1_ArgumentType_extension, _decode_divertingLegInformation1_ArgumentType_extension, _encode_divertingLegInformation1_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation1-ArgumentType-extension.ta.mjs";
-
 
 /**
  * @summary divertingLegInformation1_ArgumentType
@@ -22,7 +17,15 @@ import { _decode_divertingLegInformation1_ArgumentType_extension, _encode_divert
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * divertingLegInformation1-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * divertingLegInformation1-ArgumentType ::= SEQUENCE {
+ *     diversionReason DiversionReason,
+ *     subscriptionOption SubscriptionOption,
+ *     nominatedNr PartyNumber,
+ *     extension CHOICE {
+ *         single [9] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [10] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -187,7 +190,7 @@ let _cached_encoder_for_divertingLegInformation1_ArgumentType: $.ASN1Encoder<div
  */
 export
 function _encode_divertingLegInformation1_ArgumentType (value: divertingLegInformation1_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_divertingLegInformation1_ArgumentType) { _cached_encoder_for_divertingLegInformation1_ArgumentType = function (value: divertingLegInformation1_ArgumentType, elGetter: $.ASN1Encoder<divertingLegInformation1_ArgumentType>): _Element {
+    if (!_cached_encoder_for_divertingLegInformation1_ArgumentType) { _cached_encoder_for_divertingLegInformation1_ArgumentType = function (value: divertingLegInformation1_ArgumentType, _elGetter: $.ASN1Encoder<divertingLegInformation1_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_DiversionReason(value.diversionReason, $.BER));
     _components.push(/* REQUIRED   */ _encode_SubscriptionOption(value.subscriptionOption, $.BER));
@@ -199,6 +202,5 @@ function _encode_divertingLegInformation1_ArgumentType (value: divertingLegInfor
 }; }
     return _cached_encoder_for_divertingLegInformation1_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

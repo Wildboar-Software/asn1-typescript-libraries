@@ -1,18 +1,10 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { LocUpdArg, _decode_LocUpdArg, _encode_LocUpdArg } from "../WTM-Location-Registration-Operations-asn1-97/LocUpdArg.ta.mjs";
-// export { LocUpdArg, _decode_LocUpdArg, _encode_LocUpdArg } from "../WTM-Location-Registration-Operations-asn1-97/LocUpdArg.ta.mjs";
 import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../WTM-Location-Registration-Operations-asn1-97/DummyRes.ta.mjs";
-// export { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../WTM-Location-Registration-Operations-asn1-97/DummyRes.ta.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { notAuthorized } from "../WTM-Location-Registration-Operations-asn1-97/notAuthorized.oa.mjs";
-// export { notAuthorized } from "../WTM-Location-Registration-Operations-asn1-97/notAuthorized.oa.mjs";
 import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary locUpdate

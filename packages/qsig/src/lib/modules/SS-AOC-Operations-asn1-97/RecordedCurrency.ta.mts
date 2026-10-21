@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
-// export { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
 import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-// export { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-
 
 /**
  * @summary RecordedCurrency
@@ -64,7 +61,6 @@ class RecordedCurrency {
     public static _from_object (_o: { [_K in keyof (RecordedCurrency)]: (RecordedCurrency)[_K] }): RecordedCurrency {
         return new RecordedCurrency(_o.rCurrency, _o.rAmount);
     }
-
 
 }
 
@@ -125,10 +121,8 @@ function _decode_RecordedCurrency (el: _Element): RecordedCurrency {
     }
     sequence[0].name = "rCurrency";
     sequence[1].name = "rAmount";
-    let rCurrency!: Currency;
-    let rAmount!: Amount;
-    rCurrency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
-    rAmount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
+    const rCurrency: Currency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
+    const rAmount: Amount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
     return new RecordedCurrency(
         rCurrency,
         rAmount,
@@ -149,7 +143,7 @@ let _cached_encoder_for_RecordedCurrency: $.ASN1Encoder<RecordedCurrency> | null
  */
 export
 function _encode_RecordedCurrency (value: RecordedCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RecordedCurrency) { _cached_encoder_for_RecordedCurrency = function (value: RecordedCurrency, elGetter: $.ASN1Encoder<RecordedCurrency>): _Element {
+    if (!_cached_encoder_for_RecordedCurrency) { _cached_encoder_for_RecordedCurrency = function (value: RecordedCurrency, _elGetter: $.ASN1Encoder<RecordedCurrency>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Currency, $.BER)(value.rCurrency, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Amount, $.BER)(value.rAmount, $.BER)
@@ -157,6 +151,5 @@ function _encode_RecordedCurrency (value: RecordedCurrency, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_RecordedCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

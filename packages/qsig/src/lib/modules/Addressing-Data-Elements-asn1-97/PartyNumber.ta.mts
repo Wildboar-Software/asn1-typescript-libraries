@@ -5,12 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
-// export { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
 import { PublicPartyNumber, _decode_PublicPartyNumber, _encode_PublicPartyNumber } from "../Addressing-Data-Elements-asn1-97/PublicPartyNumber.ta.mjs";
-// export { PublicPartyNumber, _decode_PublicPartyNumber, _encode_PublicPartyNumber } from "../Addressing-Data-Elements-asn1-97/PublicPartyNumber.ta.mjs";
 import { PrivatePartyNumber, _decode_PrivatePartyNumber, _encode_PrivatePartyNumber } from "../Addressing-Data-Elements-asn1-97/PrivatePartyNumber.ta.mjs";
-// export { PrivatePartyNumber, _decode_PrivatePartyNumber, _encode_PrivatePartyNumber } from "../Addressing-Data-Elements-asn1-97/PrivatePartyNumber.ta.mjs";
-
 
 /**
  * @summary PartyNumber
@@ -87,6 +83,5 @@ function _encode_PartyNumber (value: PartyNumber, elGetter: $.ASN1Encoder<any>):
 }, $.BER); }
     return _cached_encoder_for_PartyNumber(value, elGetter);
 }
-
 
 /* eslint-enable */

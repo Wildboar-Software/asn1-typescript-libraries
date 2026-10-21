@@ -1,13 +1,8 @@
 /* eslint-disable */
 import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { mWIActivate } from "../MWI-Operations-asn1-97/mWIActivate.oa.mjs";
-// export { mWIActivate } from "../MWI-Operations-asn1-97/mWIActivate.oa.mjs";
 import { mWIDeactivate } from "../MWI-Operations-asn1-97/mWIDeactivate.oa.mjs";
-// export { mWIDeactivate } from "../MWI-Operations-asn1-97/mWIDeactivate.oa.mjs";
 import { mWIInterrogate } from "../MWI-Operations-asn1-97/mWIInterrogate.oa.mjs";
-// export { mWIInterrogate } from "../MWI-Operations-asn1-97/mWIInterrogate.oa.mjs";
-
 
 /**
  * @summary MWI_Operations

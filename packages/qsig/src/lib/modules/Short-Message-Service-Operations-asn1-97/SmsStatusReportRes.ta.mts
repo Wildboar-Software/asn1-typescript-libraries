@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SmsStatusReportResponseChoice, _decode_SmsStatusReportResponseChoice, _encode_SmsStatusReportResponseChoice } from "../Short-Message-Service-Operations-asn1-97/SmsStatusReportResponseChoice.ta.mjs";
-// export { SmsStatusReportResponseChoice, _decode_SmsStatusReportResponseChoice, _encode_SmsStatusReportResponseChoice } from "../Short-Message-Service-Operations-asn1-97/SmsStatusReportResponseChoice.ta.mjs";
 import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-// export { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-
 
 /**
  * @summary SmsStatusReportRes
@@ -64,7 +61,6 @@ class SmsStatusReportRes {
     public static _from_object (_o: { [_K in keyof (SmsStatusReportRes)]: (SmsStatusReportRes)[_K] }): SmsStatusReportRes {
         return new SmsStatusReportRes(_o.smsStatusReportResponseChoice, _o.smsExtension);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_SmsStatusReportRes: $.ASN1Encoder<SmsStatusReportRes> | 
  */
 export
 function _encode_SmsStatusReportRes (value: SmsStatusReportRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsStatusReportRes) { _cached_encoder_for_SmsStatusReportRes = function (value: SmsStatusReportRes, elGetter: $.ASN1Encoder<SmsStatusReportRes>): _Element {
+    if (!_cached_encoder_for_SmsStatusReportRes) { _cached_encoder_for_SmsStatusReportRes = function (value: SmsStatusReportRes, _elGetter: $.ASN1Encoder<SmsStatusReportRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_SmsStatusReportResponseChoice(value.smsStatusReportResponseChoice, $.BER));
     if (value.smsExtension !== undefined) {
@@ -160,6 +156,5 @@ function _encode_SmsStatusReportRes (value: SmsStatusReportRes, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_SmsStatusReportRes(value, elGetter);
 }
-
 
 /* eslint-enable */

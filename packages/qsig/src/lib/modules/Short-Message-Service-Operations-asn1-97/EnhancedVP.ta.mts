@@ -2,14 +2,12 @@
 import {
     INTEGER,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ValidityPeriodRel, _decode_ValidityPeriodRel, _encode_ValidityPeriodRel } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodRel.ta.mjs";
-// export { ValidityPeriodRel, _decode_ValidityPeriodRel, _encode_ValidityPeriodRel } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodRel.ta.mjs";
 import { ValidityPeriodSemi, _decode_ValidityPeriodSemi, _encode_ValidityPeriodSemi } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodSemi.ta.mjs";
-// export { ValidityPeriodSemi, _decode_ValidityPeriodSemi, _encode_ValidityPeriodSemi } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodSemi.ta.mjs";
-
 
 /**
  * @summary EnhancedVP
@@ -43,7 +41,13 @@ export
 function _decode_EnhancedVP (el: _Element): EnhancedVP {
     if (!_cached_decoder_for_EnhancedVP) { _cached_decoder_for_EnhancedVP = $._decode_inextensible_choice<EnhancedVP>({
     "CONTEXT 0": [ "validityPeriodRel", $._decode_implicit<ValidityPeriodRel>(() => _decode_ValidityPeriodRel) ],
-    "CONTEXT 1": [ "validityPeriodSec", $._decode_implicit<INTEGER>(() => $._decodeInteger) ],
+    "CONTEXT 1": [ "validityPeriodSec", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+            const _value = $._decodeInteger(el);
+            if ((typeof _value === "bigint" ? (_value < 0n || _value > 255n) : (_value < 0 || _value > 255))) {
+                throw new ASN1OverflowError("EnhancedVP.validityPeriodSec violates INTEGER constraint");
+            }
+            return _value;
+        }) ],
     "CONTEXT 2": [ "validityPeriodSemi", $._decode_implicit<ValidityPeriodSemi>(() => _decode_ValidityPeriodSemi) ]
 }); }
     return _cached_decoder_for_EnhancedVP(el);
@@ -67,6 +71,5 @@ function _encode_EnhancedVP (value: EnhancedVP, elGetter: $.ASN1Encoder<any>): _
 }, $.BER); }
     return _cached_encoder_for_EnhancedVP(value, elGetter);
 }
-
 
 /* eslint-enable */

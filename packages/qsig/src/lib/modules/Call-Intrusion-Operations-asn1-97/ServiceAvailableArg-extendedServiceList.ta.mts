@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceList, _decode_ServiceList, _encode_ServiceList } from "../Call-Intrusion-Operations-asn1-97/ServiceList.ta.mjs";
-// export { ServiceList, ServiceList_ci_low /* IMPORTED_LONG_NAMED_BIT */, ci_low /* IMPORTED_SHORT_NAMED_BIT */, ServiceList_ci_medium /* IMPORTED_LONG_NAMED_BIT */, ci_medium /* IMPORTED_SHORT_NAMED_BIT */, ServiceList_ci_high /* IMPORTED_LONG_NAMED_BIT */, ci_high /* IMPORTED_SHORT_NAMED_BIT */, _decode_ServiceList, _encode_ServiceList } from "../Call-Intrusion-Operations-asn1-97/ServiceList.ta.mjs";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary ServiceAvailableArg_extendedServiceList
@@ -18,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ServiceAvailableArg-extendedServiceList ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ServiceAvailableArg-extendedServiceList ::= SEQUENCE {
+ *     serviceList ServiceList,
+ *     extension Extension {{CIExtSet}}
+ * }
  * ```
  * 
  * @class
@@ -61,7 +61,6 @@ class ServiceAvailableArg_extendedServiceList {
     public static _from_object (_o: { [_K in keyof (ServiceAvailableArg_extendedServiceList)]: (ServiceAvailableArg_extendedServiceList)[_K] }): ServiceAvailableArg_extendedServiceList {
         return new ServiceAvailableArg_extendedServiceList(_o.serviceList, _o.extension);
     }
-
 
 }
 
@@ -122,10 +121,8 @@ function _decode_ServiceAvailableArg_extendedServiceList (el: _Element): Service
     }
     sequence[0].name = "serviceList";
     sequence[1].name = "extension";
-    let serviceList!: ServiceList;
-    let extension!: Extension;
-    serviceList = _decode_ServiceList(sequence[0]);
-    extension = _decode_Extension(sequence[1]);
+    const serviceList: ServiceList = _decode_ServiceList(sequence[0]);
+    const extension: Extension = _decode_Extension(sequence[1]);
     return new ServiceAvailableArg_extendedServiceList(
         serviceList,
         extension,
@@ -146,7 +143,7 @@ let _cached_encoder_for_ServiceAvailableArg_extendedServiceList: $.ASN1Encoder<S
  */
 export
 function _encode_ServiceAvailableArg_extendedServiceList (value: ServiceAvailableArg_extendedServiceList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServiceAvailableArg_extendedServiceList) { _cached_encoder_for_ServiceAvailableArg_extendedServiceList = function (value: ServiceAvailableArg_extendedServiceList, elGetter: $.ASN1Encoder<ServiceAvailableArg_extendedServiceList>): _Element {
+    if (!_cached_encoder_for_ServiceAvailableArg_extendedServiceList) { _cached_encoder_for_ServiceAvailableArg_extendedServiceList = function (value: ServiceAvailableArg_extendedServiceList, _elGetter: $.ASN1Encoder<ServiceAvailableArg_extendedServiceList>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ServiceList(value.serviceList, $.BER),
         /* REQUIRED   */ _encode_Extension(value.extension, $.BER)
@@ -154,6 +151,5 @@ function _encode_ServiceAvailableArg_extendedServiceList (value: ServiceAvailabl
 }; }
     return _cached_encoder_for_ServiceAvailableArg_extendedServiceList(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -5,12 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
 import { WtmIdentity_both, _decode_WtmIdentity_both, _encode_WtmIdentity_both } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmIdentity-both.ta.mjs";
-// export { WtmIdentity_both, _decode_WtmIdentity_both, _encode_WtmIdentity_both } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmIdentity-both.ta.mjs";
-
 
 /**
  * @summary WtmIdentity
@@ -76,6 +72,5 @@ function _encode_WtmIdentity (value: WtmIdentity, elGetter: $.ASN1Encoder<any>):
 }, $.BER); }
     return _cached_encoder_for_WtmIdentity(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
-// export { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
 import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-// export { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
 import { VolumeUnit, _decode_VolumeUnit, _encode_VolumeUnit, _enum_for_VolumeUnit } from "../SS-AOC-Operations-asn1-97/VolumeUnit.ta.mjs";
-// export { VolumeUnit, _enum_for_VolumeUnit, VolumeUnit_octet /* IMPORTED_LONG_ENUMERATION_ITEM */, octet /* IMPORTED_SHORT_ENUMERATION_ITEM */, VolumeUnit_segment /* IMPORTED_LONG_ENUMERATION_ITEM */, segment /* IMPORTED_SHORT_ENUMERATION_ITEM */, VolumeUnit_message /* IMPORTED_LONG_ENUMERATION_ITEM */, message /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_VolumeUnit, _encode_VolumeUnit } from "../SS-AOC-Operations-asn1-97/VolumeUnit.ta.mjs";
-
 
 /**
  * @summary VolumeRateCurrency
@@ -144,12 +140,9 @@ function _decode_VolumeRateCurrency (el: _Element): VolumeRateCurrency {
     sequence[0].name = "vRCurrency";
     sequence[1].name = "vRAmount";
     sequence[2].name = "vRVolumeUnit";
-    let vRCurrency!: Currency;
-    let vRAmount!: Amount;
-    let vRVolumeUnit!: VolumeUnit;
-    vRCurrency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
-    vRAmount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
-    vRVolumeUnit = $._decode_implicit<VolumeUnit>(() => _decode_VolumeUnit)(sequence[2]);
+    const vRCurrency: Currency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
+    const vRAmount: Amount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
+    const vRVolumeUnit: VolumeUnit = $._decode_implicit<VolumeUnit>(() => _decode_VolumeUnit)(sequence[2]);
     return new VolumeRateCurrency(
         vRCurrency,
         vRAmount,
@@ -171,7 +164,7 @@ let _cached_encoder_for_VolumeRateCurrency: $.ASN1Encoder<VolumeRateCurrency> | 
  */
 export
 function _encode_VolumeRateCurrency (value: VolumeRateCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_VolumeRateCurrency) { _cached_encoder_for_VolumeRateCurrency = function (value: VolumeRateCurrency, elGetter: $.ASN1Encoder<VolumeRateCurrency>): _Element {
+    if (!_cached_encoder_for_VolumeRateCurrency) { _cached_encoder_for_VolumeRateCurrency = function (value: VolumeRateCurrency, _elGetter: $.ASN1Encoder<VolumeRateCurrency>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Currency, $.BER)(value.vRCurrency, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Amount, $.BER)(value.vRAmount, $.BER),
@@ -180,6 +173,5 @@ function _encode_VolumeRateCurrency (value: VolumeRateCurrency, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_VolumeRateCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

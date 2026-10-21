@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PublicTypeOfNumber, _decode_PublicTypeOfNumber, _encode_PublicTypeOfNumber, _enum_for_PublicTypeOfNumber } from "../Addressing-Data-Elements-asn1-97/PublicTypeOfNumber.ta.mjs";
-// export { PublicTypeOfNumber, _enum_for_PublicTypeOfNumber, PublicTypeOfNumber_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, PublicTypeOfNumber_internationalNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, internationalNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PublicTypeOfNumber_nationalNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, nationalNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PublicTypeOfNumber_networkSpecificNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, networkSpecificNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PublicTypeOfNumber_subscriberNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, PublicTypeOfNumber_abbreviatedNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, abbreviatedNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PublicTypeOfNumber, _encode_PublicTypeOfNumber } from "../Addressing-Data-Elements-asn1-97/PublicTypeOfNumber.ta.mjs";
 import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
-// export { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
-
 
 /**
  * @summary PublicPartyNumber
@@ -131,10 +128,8 @@ function _decode_PublicPartyNumber (el: _Element): PublicPartyNumber {
     }
     sequence[0].name = "publicTypeOfNumber";
     sequence[1].name = "publicNumberDigits";
-    let publicTypeOfNumber!: PublicTypeOfNumber;
-    let publicNumberDigits!: NumberDigits;
-    publicTypeOfNumber = _decode_PublicTypeOfNumber(sequence[0]);
-    publicNumberDigits = _decode_NumberDigits(sequence[1]);
+    const publicTypeOfNumber: PublicTypeOfNumber = _decode_PublicTypeOfNumber(sequence[0]);
+    const publicNumberDigits: NumberDigits = _decode_NumberDigits(sequence[1]);
     return new PublicPartyNumber(
         publicTypeOfNumber,
         publicNumberDigits,
@@ -155,7 +150,7 @@ let _cached_encoder_for_PublicPartyNumber: $.ASN1Encoder<PublicPartyNumber> | nu
  */
 export
 function _encode_PublicPartyNumber (value: PublicPartyNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PublicPartyNumber) { _cached_encoder_for_PublicPartyNumber = function (value: PublicPartyNumber, elGetter: $.ASN1Encoder<PublicPartyNumber>): _Element {
+    if (!_cached_encoder_for_PublicPartyNumber) { _cached_encoder_for_PublicPartyNumber = function (value: PublicPartyNumber, _elGetter: $.ASN1Encoder<PublicPartyNumber>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PublicTypeOfNumber(value.publicTypeOfNumber, $.BER),
         /* REQUIRED   */ _encode_NumberDigits(value.publicNumberDigits, $.BER)
@@ -163,6 +158,5 @@ function _encode_PublicPartyNumber (value: PublicPartyNumber, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_PublicPartyNumber(value, elGetter);
 }
-
 
 /* eslint-enable */

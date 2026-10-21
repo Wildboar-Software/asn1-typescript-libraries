@@ -1,10 +1,6 @@
 /* eslint-disable */
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_smsCommandError_ParameterType, _encode_smsCommandError_ParameterType, smsCommandError_ParameterType } from "../Short-Message-Service-Operations-asn1-97/smsCommandError-ParameterType.ta.mjs";
-// export { smsCommandError_ParameterType, _decode_smsCommandError_ParameterType, _encode_smsCommandError_ParameterType } from "../Short-Message-Service-Operations-asn1-97/smsCommandError-ParameterType.ta.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
-
 
 /**
  * @summary smsCommandError

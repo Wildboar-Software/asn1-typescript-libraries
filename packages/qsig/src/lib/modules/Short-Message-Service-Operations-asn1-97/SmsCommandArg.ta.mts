@@ -7,18 +7,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { MessageReference, _decode_MessageReference, _encode_MessageReference } from "../Short-Message-Service-Operations-asn1-97/MessageReference.ta.mjs";
-// export { MessageReference, _decode_MessageReference, _encode_MessageReference } from "../Short-Message-Service-Operations-asn1-97/MessageReference.ta.mjs";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
 import { CommandType, _decode_CommandType, _encode_CommandType } from "../Short-Message-Service-Operations-asn1-97/CommandType.ta.mjs";
-// export { CommandType, CommandType_enquiry /* IMPORTED_LONG_NAMED_INTEGER */, enquiry /* IMPORTED_SHORT_NAMED_INTEGER */, CommandType_cancelSRR /* IMPORTED_LONG_NAMED_INTEGER */, cancelSRR /* IMPORTED_SHORT_NAMED_INTEGER */, CommandType_deletePreviouslySubmittedSM /* IMPORTED_LONG_NAMED_INTEGER */, deletePreviouslySubmittedSM /* IMPORTED_SHORT_NAMED_INTEGER */, CommandType_enableSRRrelatingToPreviouslySubmittedSM /* IMPORTED_LONG_NAMED_INTEGER */, enableSRRrelatingToPreviouslySubmittedSM /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CommandType, _encode_CommandType } from "../Short-Message-Service-Operations-asn1-97/CommandType.ta.mjs";
 import { CommandData, _decode_CommandData, _encode_CommandData } from "../Short-Message-Service-Operations-asn1-97/CommandData.ta.mjs";
-// export { CommandData, _decode_CommandData, _encode_CommandData } from "../Short-Message-Service-Operations-asn1-97/CommandData.ta.mjs";
 import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-// export { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-
 
 /**
  * @summary SmsCommandArg
@@ -128,7 +121,6 @@ class SmsCommandArg {
         return new SmsCommandArg(_o.destinationAddress, _o.messageReference, _o.messageNumber, _o.protocolIdentifier, _o.commandType, _o.commandData, _o.statusReportRequest, _o.smsExtension);
     }
 
-
 }
 
 /**
@@ -237,7 +229,7 @@ let _cached_encoder_for_SmsCommandArg: $.ASN1Encoder<SmsCommandArg> | null = nul
  */
 export
 function _encode_SmsCommandArg (value: SmsCommandArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsCommandArg) { _cached_encoder_for_SmsCommandArg = function (value: SmsCommandArg, elGetter: $.ASN1Encoder<SmsCommandArg>): _Element {
+    if (!_cached_encoder_for_SmsCommandArg) { _cached_encoder_for_SmsCommandArg = function (value: SmsCommandArg, _elGetter: $.ASN1Encoder<SmsCommandArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.destinationAddress, $.BER));
     _components.push(/* REQUIRED   */ _encode_MessageReference(value.messageReference, $.BER));
@@ -257,6 +249,5 @@ function _encode_SmsCommandArg (value: SmsCommandArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_SmsCommandArg(value, elGetter);
 }
-
 
 /* eslint-enable */

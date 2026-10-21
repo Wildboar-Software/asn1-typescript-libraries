@@ -7,24 +7,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageReference, _decode_MessageReference, _encode_MessageReference } from "../Short-Message-Service-Operations-asn1-97/MessageReference.ta.mjs";
-// export { MessageReference, _decode_MessageReference, _encode_MessageReference } from "../Short-Message-Service-Operations-asn1-97/MessageReference.ta.mjs";
 import { ServiceCentreTimeStamp, _decode_ServiceCentreTimeStamp, _encode_ServiceCentreTimeStamp } from "../Short-Message-Service-Operations-asn1-97/ServiceCentreTimeStamp.ta.mjs";
-// export { ServiceCentreTimeStamp, _decode_ServiceCentreTimeStamp, _encode_ServiceCentreTimeStamp } from "../Short-Message-Service-Operations-asn1-97/ServiceCentreTimeStamp.ta.mjs";
 import { DischargeTime, _decode_DischargeTime, _encode_DischargeTime } from "../Short-Message-Service-Operations-asn1-97/DischargeTime.ta.mjs";
-// export { DischargeTime, _decode_DischargeTime, _encode_DischargeTime } from "../Short-Message-Service-Operations-asn1-97/DischargeTime.ta.mjs";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { Status, _decode_Status, _encode_Status } from "../Short-Message-Service-Operations-asn1-97/Status.ta.mjs";
-// export { Status, _decode_Status, _encode_Status } from "../Short-Message-Service-Operations-asn1-97/Status.ta.mjs";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
 import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-// export { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
 import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-// export { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-
 
 /**
  * @summary SmsStatusReportArg
@@ -328,7 +318,7 @@ let _cached_encoder_for_SmsStatusReportArg: $.ASN1Encoder<SmsStatusReportArg> | 
  */
 export
 function _encode_SmsStatusReportArg (value: SmsStatusReportArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsStatusReportArg) { _cached_encoder_for_SmsStatusReportArg = function (value: SmsStatusReportArg, elGetter: $.ASN1Encoder<SmsStatusReportArg>): _Element {
+    if (!_cached_encoder_for_SmsStatusReportArg) { _cached_encoder_for_SmsStatusReportArg = function (value: SmsStatusReportArg, _elGetter: $.ASN1Encoder<SmsStatusReportArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_MessageReference(value.messageReference, $.BER));
     _components.push(/* REQUIRED   */ _encode_ServiceCentreTimeStamp(value.serviceCentreTimeStamp, $.BER));
@@ -361,6 +351,5 @@ function _encode_SmsStatusReportArg (value: SmsStatusReportArg, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_SmsStatusReportArg(value, elGetter);
 }
-
 
 /* eslint-enable */

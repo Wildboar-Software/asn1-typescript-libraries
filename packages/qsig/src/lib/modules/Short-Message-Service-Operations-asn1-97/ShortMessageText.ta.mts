@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ShortMessageTextType, _decode_ShortMessageTextType, _encode_ShortMessageTextType } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextType.ta.mjs";
-// export { ShortMessageTextType, ShortMessageTextType_iA5Coded /* IMPORTED_LONG_NAMED_INTEGER */, iA5Coded /* IMPORTED_SHORT_NAMED_INTEGER */, ShortMessageTextType_octetCoded /* IMPORTED_LONG_NAMED_INTEGER */, octetCoded /* IMPORTED_SHORT_NAMED_INTEGER */, ShortMessageTextType_uniCoded /* IMPORTED_LONG_NAMED_INTEGER */, uniCoded /* IMPORTED_SHORT_NAMED_INTEGER */, ShortMessageTextType_compressedCoded /* IMPORTED_LONG_NAMED_INTEGER */, compressedCoded /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ShortMessageTextType, _encode_ShortMessageTextType } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextType.ta.mjs";
 import { ShortMessageTextData, _decode_ShortMessageTextData, _encode_ShortMessageTextData } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextData.ta.mjs";
-// export { ShortMessageTextData, _decode_ShortMessageTextData, _encode_ShortMessageTextData } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextData.ta.mjs";
-
 
 /**
  * @summary ShortMessageText
@@ -64,7 +61,6 @@ class ShortMessageText {
     public static _from_object (_o: { [_K in keyof (ShortMessageText)]: (ShortMessageText)[_K] }): ShortMessageText {
         return new ShortMessageText(_o.shortMessageTextType, _o.shortMessageTextData);
     }
-
 
 }
 
@@ -125,10 +121,8 @@ function _decode_ShortMessageText (el: _Element): ShortMessageText {
     }
     sequence[0].name = "shortMessageTextType";
     sequence[1].name = "shortMessageTextData";
-    let shortMessageTextType!: ShortMessageTextType;
-    let shortMessageTextData!: ShortMessageTextData;
-    shortMessageTextType = _decode_ShortMessageTextType(sequence[0]);
-    shortMessageTextData = _decode_ShortMessageTextData(sequence[1]);
+    const shortMessageTextType: ShortMessageTextType = _decode_ShortMessageTextType(sequence[0]);
+    const shortMessageTextData: ShortMessageTextData = _decode_ShortMessageTextData(sequence[1]);
     return new ShortMessageText(
         shortMessageTextType,
         shortMessageTextData,
@@ -149,7 +143,7 @@ let _cached_encoder_for_ShortMessageText: $.ASN1Encoder<ShortMessageText> | null
  */
 export
 function _encode_ShortMessageText (value: ShortMessageText, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ShortMessageText) { _cached_encoder_for_ShortMessageText = function (value: ShortMessageText, elGetter: $.ASN1Encoder<ShortMessageText>): _Element {
+    if (!_cached_encoder_for_ShortMessageText) { _cached_encoder_for_ShortMessageText = function (value: ShortMessageText, _elGetter: $.ASN1Encoder<ShortMessageText>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ShortMessageTextType(value.shortMessageTextType, $.BER),
         /* REQUIRED   */ _encode_ShortMessageTextData(value.shortMessageTextData, $.BER)
@@ -157,6 +151,5 @@ function _encode_ShortMessageText (value: ShortMessageText, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_ShortMessageText(value, elGetter);
 }
-
 
 /* eslint-enable */

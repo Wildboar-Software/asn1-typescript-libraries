@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserSpecifiedSubaddress, _decode_UserSpecifiedSubaddress, _encode_UserSpecifiedSubaddress } from "../Addressing-Data-Elements-asn1-97/UserSpecifiedSubaddress.ta.mjs";
-// export { UserSpecifiedSubaddress, _decode_UserSpecifiedSubaddress, _encode_UserSpecifiedSubaddress } from "../Addressing-Data-Elements-asn1-97/UserSpecifiedSubaddress.ta.mjs";
 import { NSAPSubaddress, _decode_NSAPSubaddress, _encode_NSAPSubaddress } from "../Addressing-Data-Elements-asn1-97/NSAPSubaddress.ta.mjs";
-// export { NSAPSubaddress, _decode_NSAPSubaddress, _encode_NSAPSubaddress } from "../Addressing-Data-Elements-asn1-97/NSAPSubaddress.ta.mjs";
-
 
 /**
  * @summary PartySubaddress
@@ -62,6 +59,5 @@ function _encode_PartySubaddress (value: PartySubaddress, elGetter: $.ASN1Encode
 }, $.BER); }
     return _cached_encoder_for_PartySubaddress(value, elGetter);
 }
-
 
 /* eslint-enable */

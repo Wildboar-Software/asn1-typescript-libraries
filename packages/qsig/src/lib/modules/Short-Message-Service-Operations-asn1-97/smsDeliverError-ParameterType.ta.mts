@@ -7,12 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FailureCause, _decode_FailureCause, _encode_FailureCause } from "../Short-Message-Service-Operations-asn1-97/FailureCause.ta.mjs";
-// export { FailureCause, _decode_FailureCause, _encode_FailureCause } from "../Short-Message-Service-Operations-asn1-97/FailureCause.ta.mjs";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
 import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-// export { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-
 
 /**
  * @summary smsDeliverError_ParameterType
@@ -21,7 +17,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * smsDeliverError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * smsDeliverError-ParameterType ::= SEQUENCE {
+ *     failureCause FailureCause,
+ *     protocolIdentifier [0] IMPLICIT ProtocolIdentifier OPTIONAL,
+ *     userData [1] IMPLICIT UserData OPTIONAL,
+ *     scAddressSaved [2] IMPLICIT BOOLEAN DEFAULT FALSE
+ * }
  * ```
  * 
  * @class
@@ -180,7 +181,7 @@ let _cached_encoder_for_smsDeliverError_ParameterType: $.ASN1Encoder<smsDeliverE
  */
 export
 function _encode_smsDeliverError_ParameterType (value: smsDeliverError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_smsDeliverError_ParameterType) { _cached_encoder_for_smsDeliverError_ParameterType = function (value: smsDeliverError_ParameterType, elGetter: $.ASN1Encoder<smsDeliverError_ParameterType>): _Element {
+    if (!_cached_encoder_for_smsDeliverError_ParameterType) { _cached_encoder_for_smsDeliverError_ParameterType = function (value: smsDeliverError_ParameterType, _elGetter: $.ASN1Encoder<smsDeliverError_ParameterType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_FailureCause(value.failureCause, $.BER));
     if (value.protocolIdentifier !== undefined) {
@@ -196,6 +197,5 @@ function _encode_smsDeliverError_ParameterType (value: smsDeliverError_Parameter
 }; }
     return _cached_encoder_for_smsDeliverError_ParameterType(value, elGetter);
 }
-
 
 /* eslint-enable */

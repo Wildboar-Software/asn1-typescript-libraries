@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
-// export { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
-
 
 /**
  * @summary PartyInfo
@@ -63,7 +60,6 @@ class PartyInfo {
     public static _from_object (_o: { [_K in keyof (PartyInfo)]: (PartyInfo)[_K] }): PartyInfo {
         return new PartyInfo(_o.servedUserNr, _o.messageCentreID);
     }
-
 
 }
 
@@ -124,10 +120,8 @@ function _decode_PartyInfo (el: _Element): PartyInfo {
     }
     sequence[0].name = "servedUserNr";
     sequence[1].name = "messageCentreID";
-    let servedUserNr!: PartyNumber;
-    let messageCentreID!: MsgCentreId;
-    servedUserNr = _decode_PartyNumber(sequence[0]);
-    messageCentreID = _decode_MsgCentreId(sequence[1]);
+    const servedUserNr: PartyNumber = _decode_PartyNumber(sequence[0]);
+    const messageCentreID: MsgCentreId = _decode_MsgCentreId(sequence[1]);
     return new PartyInfo(
         servedUserNr,
         messageCentreID,
@@ -148,7 +142,7 @@ let _cached_encoder_for_PartyInfo: $.ASN1Encoder<PartyInfo> | null = null;
  */
 export
 function _encode_PartyInfo (value: PartyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PartyInfo) { _cached_encoder_for_PartyInfo = function (value: PartyInfo, elGetter: $.ASN1Encoder<PartyInfo>): _Element {
+    if (!_cached_encoder_for_PartyInfo) { _cached_encoder_for_PartyInfo = function (value: PartyInfo, _elGetter: $.ASN1Encoder<PartyInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER),
         /* REQUIRED   */ _encode_MsgCentreId(value.messageCentreID, $.BER)
@@ -156,6 +150,5 @@ function _encode_PartyInfo (value: PartyInfo, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_PartyInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

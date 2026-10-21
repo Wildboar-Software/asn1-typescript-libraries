@@ -2,11 +2,10 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary DestinationDialogId
@@ -32,7 +31,11 @@ let _cached_decoder_for_DestinationDialogId: $.ASN1Decoder<DestinationDialogId> 
 export
 function _decode_DestinationDialogId (el: _Element): DestinationDialogId {
     if (!_cached_decoder_for_DestinationDialogId) { _cached_decoder_for_DestinationDialogId = $._decode_implicit<DestinationDialogId>(() => $._decodeOctetString); }
-    return _cached_decoder_for_DestinationDialogId(el);
+    const _value = _cached_decoder_for_DestinationDialogId(el);
+    if (_value.length < 0 || _value.length > 8) {
+        throw new ASN1SizeError("DestinationDialogId violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_DestinationDialogId: $.ASN1Encoder<DestinationDialogId> | null = null;
@@ -49,6 +52,5 @@ function _encode_DestinationDialogId (value: DestinationDialogId, elGetter: $.AS
     if (!_cached_encoder_for_DestinationDialogId) { _cached_encoder_for_DestinationDialogId = $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER); }
     return _cached_encoder_for_DestinationDialogId(value, elGetter);
 }
-
 
 /* eslint-enable */

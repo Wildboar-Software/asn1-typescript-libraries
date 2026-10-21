@@ -5,12 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NamePresentationAllowed, _decode_NamePresentationAllowed, _encode_NamePresentationAllowed } from "../Name-Operations-asn1-97/NamePresentationAllowed.ta.mjs";
-// export { NamePresentationAllowed, _decode_NamePresentationAllowed, _encode_NamePresentationAllowed } from "../Name-Operations-asn1-97/NamePresentationAllowed.ta.mjs";
 import { NamePresentationRestricted, _decode_NamePresentationRestricted, _encode_NamePresentationRestricted } from "../Name-Operations-asn1-97/NamePresentationRestricted.ta.mjs";
-// export { NamePresentationRestricted, _decode_NamePresentationRestricted, _encode_NamePresentationRestricted } from "../Name-Operations-asn1-97/NamePresentationRestricted.ta.mjs";
 import { NameNotAvailable, _decode_NameNotAvailable, _encode_NameNotAvailable } from "../Name-Operations-asn1-97/NameNotAvailable.ta.mjs";
-// export { NameNotAvailable, _decode_NameNotAvailable, _encode_NameNotAvailable } from "../Name-Operations-asn1-97/NameNotAvailable.ta.mjs";
-
 
 /**
  * @summary Name
@@ -71,6 +67,5 @@ function _encode_Name (value: Name, elGetter: $.ASN1Encoder<any>): _Element {
 }, $.BER); }
     return _cached_encoder_for_Name(value, elGetter);
 }
-
 
 /* eslint-enable */

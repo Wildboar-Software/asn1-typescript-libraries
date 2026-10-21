@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WtatParamInfo, _decode_WtatParamInfo, _encode_WtatParamInfo } from "../WTM-Authentication-Operations-asn1-97/WtatParamInfo.ta.mjs";
-// export { WtatParamInfo, _decode_WtatParamInfo, _encode_WtatParamInfo } from "../WTM-Authentication-Operations-asn1-97/WtatParamInfo.ta.mjs";
 import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-// export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-
 
 /**
  * @summary transferAuthParam_ArgumentType
@@ -18,7 +15,10 @@ import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * transferAuthParam-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * transferAuthParam-ArgumentType ::= SEQUENCE {
+ *     wtatParamInfo WtatParamInfo,
+ *     dummyExtension DummyExtension OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -61,7 +61,6 @@ class transferAuthParam_ArgumentType {
     public static _from_object (_o: { [_K in keyof (transferAuthParam_ArgumentType)]: (transferAuthParam_ArgumentType)[_K] }): transferAuthParam_ArgumentType {
         return new transferAuthParam_ArgumentType(_o.wtatParamInfo, _o.dummyExtension);
     }
-
 
 }
 
@@ -147,7 +146,7 @@ let _cached_encoder_for_transferAuthParam_ArgumentType: $.ASN1Encoder<transferAu
  */
 export
 function _encode_transferAuthParam_ArgumentType (value: transferAuthParam_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_transferAuthParam_ArgumentType) { _cached_encoder_for_transferAuthParam_ArgumentType = function (value: transferAuthParam_ArgumentType, elGetter: $.ASN1Encoder<transferAuthParam_ArgumentType>): _Element {
+    if (!_cached_encoder_for_transferAuthParam_ArgumentType) { _cached_encoder_for_transferAuthParam_ArgumentType = function (value: transferAuthParam_ArgumentType, _elGetter: $.ASN1Encoder<transferAuthParam_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtatParamInfo(value.wtatParamInfo, $.BER));
     if (value.dummyExtension !== undefined) {
@@ -157,6 +156,5 @@ function _encode_transferAuthParam_ArgumentType (value: transferAuthParam_Argume
 }; }
     return _cached_encoder_for_transferAuthParam_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

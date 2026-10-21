@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WtanParamInfo, _decode_WtanParamInfo, _encode_WtanParamInfo } from "../WTM-Authentication-Operations-asn1-97/WtanParamInfo.ta.mjs";
-// export { WtanParamInfo, _decode_WtanParamInfo, _encode_WtanParamInfo } from "../WTM-Authentication-Operations-asn1-97/WtanParamInfo.ta.mjs";
 import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-// export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-
 
 /**
  * @summary WtanParamRes
@@ -64,7 +61,6 @@ class WtanParamRes {
     public static _from_object (_o: { [_K in keyof (WtanParamRes)]: (WtanParamRes)[_K] }): WtanParamRes {
         return new WtanParamRes(_o.wtanParamInfo, _o.dummyExtension);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_WtanParamRes: $.ASN1Encoder<WtanParamRes> | null = null;
  */
 export
 function _encode_WtanParamRes (value: WtanParamRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtanParamRes) { _cached_encoder_for_WtanParamRes = function (value: WtanParamRes, elGetter: $.ASN1Encoder<WtanParamRes>): _Element {
+    if (!_cached_encoder_for_WtanParamRes) { _cached_encoder_for_WtanParamRes = function (value: WtanParamRes, _elGetter: $.ASN1Encoder<WtanParamRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtanParamInfo(value.wtanParamInfo, $.BER));
     if (value.dummyExtension !== undefined) {
@@ -160,6 +156,5 @@ function _encode_WtanParamRes (value: WtanParamRes, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_WtanParamRes(value, elGetter);
 }
-
 
 /* eslint-enable */

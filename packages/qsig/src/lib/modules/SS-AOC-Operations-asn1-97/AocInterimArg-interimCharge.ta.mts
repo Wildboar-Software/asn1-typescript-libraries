@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AocInterimArg_interimCharge_specificCurrency, _decode_AocInterimArg_interimCharge_specificCurrency, _encode_AocInterimArg_interimCharge_specificCurrency } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimCharge-specificCurrency.ta.mjs";
-// export { AocInterimArg_interimCharge_specificCurrency, _decode_AocInterimArg_interimCharge_specificCurrency, _encode_AocInterimArg_interimCharge_specificCurrency } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimCharge-specificCurrency.ta.mjs";
-
 
 /**
  * @summary AocInterimArg_interimCharge
@@ -16,7 +14,14 @@ import { AocInterimArg_interimCharge_specificCurrency, _decode_AocInterimArg_int
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocInterimArg-interimCharge ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AocInterimArg-interimCharge ::= CHOICE {
+ *     chargeNotAvailable [0] IMPLICIT NULL,
+ *     freeOfCharge [1] IMPLICIT NULL,
+ *     specificCurrency SEQUENCE {
+ *         recordedCurrency [1] IMPLICIT RecordedCurrency,
+ *         interimBillingId [2] IMPLICIT InterimBillingId OPTIONAL
+ *     }
+ * }
  * ```
  */
 export
@@ -61,6 +66,5 @@ function _encode_AocInterimArg_interimCharge (value: AocInterimArg_interimCharge
 }, $.BER); }
     return _cached_encoder_for_AocInterimArg_interimCharge(value, elGetter);
 }
-
 
 /* eslint-enable */

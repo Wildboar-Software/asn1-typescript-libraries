@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../SS-MCR-Operations-asn97/MCRExtensions.ta.mjs";
-// export { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../SS-MCR-Operations-asn97/MCRExtensions.ta.mjs";
-
 
 /**
  * @summary MCRequestResult
@@ -62,7 +60,6 @@ class MCRequestResult {
     public static _from_object (_o: { [_K in keyof (MCRequestResult)]: (MCRequestResult)[_K] }): MCRequestResult {
         return new MCRequestResult(_o.extensions, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -146,7 +143,7 @@ let _cached_encoder_for_MCRequestResult: $.ASN1Encoder<MCRequestResult> | null =
  */
 export
 function _encode_MCRequestResult (value: MCRequestResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCRequestResult) { _cached_encoder_for_MCRequestResult = function (value: MCRequestResult, elGetter: $.ASN1Encoder<MCRequestResult>): _Element {
+    if (!_cached_encoder_for_MCRequestResult) { _cached_encoder_for_MCRequestResult = function (value: MCRequestResult, _elGetter: $.ASN1Encoder<MCRequestResult>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(1 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
@@ -163,6 +160,5 @@ function _encode_MCRequestResult (value: MCRequestResult, elGetter: $.ASN1Encode
 }; }
     return _cached_encoder_for_MCRequestResult(value, elGetter);
 }
-
 
 /* eslint-enable */

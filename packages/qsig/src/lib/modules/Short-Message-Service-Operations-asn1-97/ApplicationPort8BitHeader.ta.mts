@@ -3,11 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ApplicationPort8BitHeader
@@ -45,6 +44,13 @@ class ApplicationPort8BitHeader {
     ) {
         this.destination8BitPort = destination8BitPort;
         this.originator8BitPort = originator8BitPort;
+    
+        if ((typeof destination8BitPort === "bigint" ? (destination8BitPort < 0n || destination8BitPort > 255n) : (destination8BitPort < 0 || destination8BitPort > 255))) {
+            throw new ASN1OverflowError("ApplicationPort8BitHeader.destination8BitPort violates INTEGER constraint");
+        }
+        if ((typeof originator8BitPort === "bigint" ? (originator8BitPort < 0n || originator8BitPort > 255n) : (originator8BitPort < 0 || originator8BitPort > 255))) {
+            throw new ASN1OverflowError("ApplicationPort8BitHeader.originator8BitPort violates INTEGER constraint");
+        }
     }
 
     /**
@@ -62,7 +68,6 @@ class ApplicationPort8BitHeader {
     public static _from_object (_o: { [_K in keyof (ApplicationPort8BitHeader)]: (ApplicationPort8BitHeader)[_K] }): ApplicationPort8BitHeader {
         return new ApplicationPort8BitHeader(_o.destination8BitPort, _o.originator8BitPort);
     }
-
 
 }
 
@@ -123,10 +128,8 @@ function _decode_ApplicationPort8BitHeader (el: _Element): ApplicationPort8BitHe
     }
     sequence[0].name = "destination8BitPort";
     sequence[1].name = "originator8BitPort";
-    let destination8BitPort!: INTEGER;
-    let originator8BitPort!: INTEGER;
-    destination8BitPort = $._decodeInteger(sequence[0]);
-    originator8BitPort = $._decodeInteger(sequence[1]);
+    const destination8BitPort: INTEGER = $._decodeInteger(sequence[0]);
+    const originator8BitPort: INTEGER = $._decodeInteger(sequence[1]);
     return new ApplicationPort8BitHeader(
         destination8BitPort,
         originator8BitPort,
@@ -147,7 +150,7 @@ let _cached_encoder_for_ApplicationPort8BitHeader: $.ASN1Encoder<ApplicationPort
  */
 export
 function _encode_ApplicationPort8BitHeader (value: ApplicationPort8BitHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ApplicationPort8BitHeader) { _cached_encoder_for_ApplicationPort8BitHeader = function (value: ApplicationPort8BitHeader, elGetter: $.ASN1Encoder<ApplicationPort8BitHeader>): _Element {
+    if (!_cached_encoder_for_ApplicationPort8BitHeader) { _cached_encoder_for_ApplicationPort8BitHeader = function (value: ApplicationPort8BitHeader, _elGetter: $.ASN1Encoder<ApplicationPort8BitHeader>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.destination8BitPort, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.originator8BitPort, $.BER)
@@ -155,6 +158,5 @@ function _encode_ApplicationPort8BitHeader (value: ApplicationPort8BitHeader, el
 }; }
     return _cached_encoder_for_ApplicationPort8BitHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

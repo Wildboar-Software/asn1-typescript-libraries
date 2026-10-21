@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CPIProtectionLevel, _decode_CPIProtectionLevel, _encode_CPIProtectionLevel, _enum_for_CPIProtectionLevel } from "../Call-Interruption-Operations-asn1-97/CPIProtectionLevel.ta.mjs";
-// export { CPIProtectionLevel, _enum_for_CPIProtectionLevel, CPIProtectionLevel_noProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, noProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, CPIProtectionLevel_lowProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, lowProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, CPIProtectionLevel_mediumProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, CPIProtectionLevel_totalProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, totalProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CPIProtectionLevel, _encode_CPIProtectionLevel } from "../Call-Interruption-Operations-asn1-97/CPIProtectionLevel.ta.mjs";
 import { CPIPRequestArg_argumentExtension, _decode_CPIPRequestArg_argumentExtension, _encode_CPIPRequestArg_argumentExtension } from "../Call-Interruption-Operations-asn1-97/CPIPRequestArg-argumentExtension.ta.mjs";
-// export { CPIPRequestArg_argumentExtension, _decode_CPIPRequestArg_argumentExtension, _encode_CPIPRequestArg_argumentExtension } from "../Call-Interruption-Operations-asn1-97/CPIPRequestArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary CPIPRequestArg
@@ -159,7 +156,7 @@ let _cached_encoder_for_CPIPRequestArg: $.ASN1Encoder<CPIPRequestArg> | null = n
  */
 export
 function _encode_CPIPRequestArg (value: CPIPRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CPIPRequestArg) { _cached_encoder_for_CPIPRequestArg = function (value: CPIPRequestArg, elGetter: $.ASN1Encoder<CPIPRequestArg>): _Element {
+    if (!_cached_encoder_for_CPIPRequestArg) { _cached_encoder_for_CPIPRequestArg = function (value: CPIPRequestArg, _elGetter: $.ASN1Encoder<CPIPRequestArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CPIProtectionLevel(value.cpiProtectionLevel, $.BER));
     if (value.argumentExtension !== undefined) {
@@ -169,6 +166,5 @@ function _encode_CPIPRequestArg (value: CPIPRequestArg, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_CPIPRequestArg(value, elGetter);
 }
-
 
 /* eslint-enable */

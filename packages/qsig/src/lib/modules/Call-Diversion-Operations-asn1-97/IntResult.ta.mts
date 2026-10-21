@@ -7,16 +7,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-// export { BasicService, _enum_for_BasicService, BasicService_allServices /* IMPORTED_LONG_ENUMERATION_ITEM */, allServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_speech /* IMPORTED_LONG_ENUMERATION_ITEM */, speech /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_unrestrictedDigitalInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, unrestrictedDigitalInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_audio3100Hz /* IMPORTED_LONG_ENUMERATION_ITEM */, audio3100Hz /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telephony /* IMPORTED_LONG_ENUMERATION_ITEM */, telephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_teletex /* IMPORTED_LONG_ENUMERATION_ITEM */, teletex /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telefaxGroup4Class1 /* IMPORTED_LONG_ENUMERATION_ITEM */, telefaxGroup4Class1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotexSyntaxBased /* IMPORTED_LONG_ENUMERATION_ITEM */, videotexSyntaxBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotelephony /* IMPORTED_LONG_ENUMERATION_ITEM */, videotelephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BasicService, _encode_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
 import { Procedure, _decode_Procedure, _encode_Procedure, _enum_for_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
-// export { Procedure, _enum_for_Procedure, Procedure_cfu /* IMPORTED_LONG_ENUMERATION_ITEM */, cfu /* IMPORTED_SHORT_ENUMERATION_ITEM */, Procedure_cfb /* IMPORTED_LONG_ENUMERATION_ITEM */, cfb /* IMPORTED_SHORT_ENUMERATION_ITEM */, Procedure_cfnr /* IMPORTED_LONG_ENUMERATION_ITEM */, cfnr /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Procedure, _encode_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
 import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
-// export { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
 import { IntResult_extension, _decode_IntResult_extension, _encode_IntResult_extension } from "../Call-Diversion-Operations-asn1-97/IntResult-extension.ta.mjs";
-// export { IntResult_extension, _decode_IntResult_extension, _encode_IntResult_extension } from "../Call-Diversion-Operations-asn1-97/IntResult-extension.ta.mjs";
-
 
 /**
  * @summary IntResult
@@ -230,7 +224,7 @@ let _cached_encoder_for_IntResult: $.ASN1Encoder<IntResult> | null = null;
  */
 export
 function _encode_IntResult (value: IntResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IntResult) { _cached_encoder_for_IntResult = function (value: IntResult, elGetter: $.ASN1Encoder<IntResult>): _Element {
+    if (!_cached_encoder_for_IntResult) { _cached_encoder_for_IntResult = function (value: IntResult, _elGetter: $.ASN1Encoder<IntResult>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));
@@ -246,6 +240,5 @@ function _encode_IntResult (value: IntResult, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_IntResult(value, elGetter);
 }
-
 
 /* eslint-enable */

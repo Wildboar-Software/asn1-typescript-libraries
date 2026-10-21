@@ -7,10 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { SSCTDigitInfoArg_argumentExtension, _decode_SSCTDigitInfoArg_argumentExtension, _encode_SSCTDigitInfoArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTDigitInfoArg-argumentExtension.ta.mjs";
-// export { SSCTDigitInfoArg_argumentExtension, _decode_SSCTDigitInfoArg_argumentExtension, _encode_SSCTDigitInfoArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTDigitInfoArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary SSCTDigitInfoArg
@@ -78,7 +75,6 @@ class SSCTDigitInfoArg {
     public static _from_object (_o: { [_K in keyof (SSCTDigitInfoArg)]: (SSCTDigitInfoArg)[_K] }): SSCTDigitInfoArg {
         return new SSCTDigitInfoArg(_o.reroutingNumber, _o.sendingComplete, _o.argumentExtension);
     }
-
 
 }
 
@@ -168,7 +164,7 @@ let _cached_encoder_for_SSCTDigitInfoArg: $.ASN1Encoder<SSCTDigitInfoArg> | null
  */
 export
 function _encode_SSCTDigitInfoArg (value: SSCTDigitInfoArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SSCTDigitInfoArg) { _cached_encoder_for_SSCTDigitInfoArg = function (value: SSCTDigitInfoArg, elGetter: $.ASN1Encoder<SSCTDigitInfoArg>): _Element {
+    if (!_cached_encoder_for_SSCTDigitInfoArg) { _cached_encoder_for_SSCTDigitInfoArg = function (value: SSCTDigitInfoArg, _elGetter: $.ASN1Encoder<SSCTDigitInfoArg>): _Element {
     const _components: _Element[] = [];
     if (value.reroutingNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 1, () => _encode_PartyNumber, $.BER)(value.reroutingNumber, $.BER));
@@ -183,6 +179,5 @@ function _encode_SSCTDigitInfoArg (value: SSCTDigitInfoArg, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_SSCTDigitInfoArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,16 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
-// export { PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
 import { AwaitConnect, _decode_AwaitConnect, _encode_AwaitConnect } from "../Single-Step-Call-Transfer-Operations-asn1-97/AwaitConnect.ta.mjs";
-// export { AwaitConnect, _decode_AwaitConnect, _encode_AwaitConnect } from "../Single-Step-Call-Transfer-Operations-asn1-97/AwaitConnect.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { SSCTInitiateArg_argumentExtension, _decode_SSCTInitiateArg_argumentExtension, _encode_SSCTInitiateArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTInitiateArg-argumentExtension.ta.mjs";
-// export { SSCTInitiateArg_argumentExtension, _decode_SSCTInitiateArg_argumentExtension, _encode_SSCTInitiateArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTInitiateArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary SSCTInitiateArg
@@ -118,7 +112,6 @@ class SSCTInitiateArg {
     public static _from_object (_o: { [_K in keyof (SSCTInitiateArg)]: (SSCTInitiateArg)[_K] }): SSCTInitiateArg {
         return new SSCTInitiateArg(_o.rerouteingNumber, _o.transferredAddress, _o.awaitConnect, _o.transferredName, _o.transferringAddress, _o.transferringName, _o.argumentExtension);
     }
-
 
 }
 
@@ -224,7 +217,7 @@ let _cached_encoder_for_SSCTInitiateArg: $.ASN1Encoder<SSCTInitiateArg> | null =
  */
 export
 function _encode_SSCTInitiateArg (value: SSCTInitiateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SSCTInitiateArg) { _cached_encoder_for_SSCTInitiateArg = function (value: SSCTInitiateArg, elGetter: $.ASN1Encoder<SSCTInitiateArg>): _Element {
+    if (!_cached_encoder_for_SSCTInitiateArg) { _cached_encoder_for_SSCTInitiateArg = function (value: SSCTInitiateArg, _elGetter: $.ASN1Encoder<SSCTInitiateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.rerouteingNumber, $.BER));
     _components.push(/* REQUIRED   */ _encode_PresentedAddressScreened(value.transferredAddress, $.BER));
@@ -245,6 +238,5 @@ function _encode_SSCTInitiateArg (value: SSCTInitiateArg, elGetter: $.ASN1Encode
 }; }
     return _cached_encoder_for_SSCTInitiateArg(value, elGetter);
 }
-
 
 /* eslint-enable */

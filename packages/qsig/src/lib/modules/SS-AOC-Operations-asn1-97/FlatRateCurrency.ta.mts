@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
-// export { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
 import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-// export { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
-
 
 /**
  * @summary FlatRateCurrency
@@ -64,7 +61,6 @@ class FlatRateCurrency {
     public static _from_object (_o: { [_K in keyof (FlatRateCurrency)]: (FlatRateCurrency)[_K] }): FlatRateCurrency {
         return new FlatRateCurrency(_o.fRCurrency, _o.fRAmount);
     }
-
 
 }
 
@@ -125,10 +121,8 @@ function _decode_FlatRateCurrency (el: _Element): FlatRateCurrency {
     }
     sequence[0].name = "fRCurrency";
     sequence[1].name = "fRAmount";
-    let fRCurrency!: Currency;
-    let fRAmount!: Amount;
-    fRCurrency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
-    fRAmount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
+    const fRCurrency: Currency = $._decode_implicit<Currency>(() => _decode_Currency)(sequence[0]);
+    const fRAmount: Amount = $._decode_implicit<Amount>(() => _decode_Amount)(sequence[1]);
     return new FlatRateCurrency(
         fRCurrency,
         fRAmount,
@@ -149,7 +143,7 @@ let _cached_encoder_for_FlatRateCurrency: $.ASN1Encoder<FlatRateCurrency> | null
  */
 export
 function _encode_FlatRateCurrency (value: FlatRateCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FlatRateCurrency) { _cached_encoder_for_FlatRateCurrency = function (value: FlatRateCurrency, elGetter: $.ASN1Encoder<FlatRateCurrency>): _Element {
+    if (!_cached_encoder_for_FlatRateCurrency) { _cached_encoder_for_FlatRateCurrency = function (value: FlatRateCurrency, _elGetter: $.ASN1Encoder<FlatRateCurrency>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_Currency, $.BER)(value.fRCurrency, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_Amount, $.BER)(value.fRAmount, $.BER)
@@ -157,6 +151,5 @@ function _encode_FlatRateCurrency (value: FlatRateCurrency, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_FlatRateCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

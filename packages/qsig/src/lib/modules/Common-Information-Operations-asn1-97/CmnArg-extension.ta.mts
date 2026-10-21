@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary CmnArg_extension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CmnArg-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CmnArg-extension ::= CHOICE {
+ *     single [7] IMPLICIT Extension {{CMNExtSet}},
+ *     multiple [8] IMPLICIT SEQUENCE OF Extension {{CMNExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_CmnArg_extension (value: CmnArg_extension, elGetter: $.ASN1Enco
 }, $.BER); }
     return _cached_encoder_for_CmnArg_extension(value, elGetter);
 }
-
 
 /* eslint-enable */

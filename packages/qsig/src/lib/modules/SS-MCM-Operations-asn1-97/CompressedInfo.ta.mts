@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NrOfMessages, _decode_NrOfMessages, _encode_NrOfMessages } from "../SS-MCM-Operations-asn1-97/NrOfMessages.ta.mjs";
-// export { NrOfMessages, _decode_NrOfMessages, _encode_NrOfMessages } from "../SS-MCM-Operations-asn1-97/NrOfMessages.ta.mjs";
 import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../SS-MCM-Operations-asn1-97/TimeStamp.ta.mjs";
-// export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../SS-MCM-Operations-asn1-97/TimeStamp.ta.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../SS-MCM-Operations-asn1-97/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../SS-MCM-Operations-asn1-97/Priority.ta.mjs";
-
 
 /**
  * @summary CompressedInfo
@@ -75,7 +71,6 @@ class CompressedInfo {
     public static _from_object (_o: { [_K in keyof (CompressedInfo)]: (CompressedInfo)[_K] }): CompressedInfo {
         return new CompressedInfo(_o.nrOfMessages, _o.lastTimeStamp, _o.highestPriority);
     }
-
 
 }
 
@@ -165,7 +160,7 @@ let _cached_encoder_for_CompressedInfo: $.ASN1Encoder<CompressedInfo> | null = n
  */
 export
 function _encode_CompressedInfo (value: CompressedInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CompressedInfo) { _cached_encoder_for_CompressedInfo = function (value: CompressedInfo, elGetter: $.ASN1Encoder<CompressedInfo>): _Element {
+    if (!_cached_encoder_for_CompressedInfo) { _cached_encoder_for_CompressedInfo = function (value: CompressedInfo, _elGetter: $.ASN1Encoder<CompressedInfo>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_NrOfMessages(value.nrOfMessages, $.BER));
     if (value.lastTimeStamp !== undefined) {
@@ -178,6 +173,5 @@ function _encode_CompressedInfo (value: CompressedInfo, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_CompressedInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DisplayString, _decode_DisplayString, _encode_DisplayString } from "../SS-SD-Operations-asn1-97/DisplayString.ta.mjs";
-// export { DisplayString, _decode_DisplayString, _encode_DisplayString } from "../SS-SD-Operations-asn1-97/DisplayString.ta.mjs";
 import { SDExtension, _decode_SDExtension, _encode_SDExtension } from "../SS-SD-Operations-asn1-97/SDExtension.ta.mjs";
-// export { SDExtension, _decode_SDExtension, _encode_SDExtension } from "../SS-SD-Operations-asn1-97/SDExtension.ta.mjs";
-
 
 /**
  * @summary DisplayArg
@@ -64,7 +61,6 @@ class DisplayArg {
     public static _from_object (_o: { [_K in keyof (DisplayArg)]: (DisplayArg)[_K] }): DisplayArg {
         return new DisplayArg(_o.displayString, _o.extension);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_DisplayArg: $.ASN1Encoder<DisplayArg> | null = null;
  */
 export
 function _encode_DisplayArg (value: DisplayArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DisplayArg) { _cached_encoder_for_DisplayArg = function (value: DisplayArg, elGetter: $.ASN1Encoder<DisplayArg>): _Element {
+    if (!_cached_encoder_for_DisplayArg) { _cached_encoder_for_DisplayArg = function (value: DisplayArg, _elGetter: $.ASN1Encoder<DisplayArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_DisplayString(value.displayString, $.BER));
     if (value.extension !== undefined) {
@@ -160,6 +156,5 @@ function _encode_DisplayArg (value: DisplayArg, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_DisplayArg(value, elGetter);
 }
-
 
 /* eslint-enable */

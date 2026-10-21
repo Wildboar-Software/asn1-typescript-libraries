@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary DNDActivateRes_resultExtension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DNDActivateRes-resultExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * DNDActivateRes-resultExtension ::= CHOICE {
+ *     extension [1] IMPLICIT Extension {{DNDExtSet}},
+ *     sequenceOfExtn [2] IMPLICIT SEQUENCE OF Extension {{DNDExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_DNDActivateRes_resultExtension (value: DNDActivateRes_resultExt
 }, $.BER); }
     return _cached_encoder_for_DNDActivateRes_resultExtension(value, elGetter);
 }
-
 
 /* eslint-enable */

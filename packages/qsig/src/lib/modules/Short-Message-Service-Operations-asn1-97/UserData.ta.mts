@@ -4,14 +4,12 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserDataHeader, _decode_UserDataHeader, _encode_UserDataHeader } from "../Short-Message-Service-Operations-asn1-97/UserDataHeader.ta.mjs";
-// export { UserDataHeader, _decode_UserDataHeader, _encode_UserDataHeader } from "../Short-Message-Service-Operations-asn1-97/UserDataHeader.ta.mjs";
 import { ShortMessageText, _decode_ShortMessageText, _encode_ShortMessageText } from "../Short-Message-Service-Operations-asn1-97/ShortMessageText.ta.mjs";
-// export { ShortMessageText, _decode_ShortMessageText, _encode_ShortMessageText } from "../Short-Message-Service-Operations-asn1-97/ShortMessageText.ta.mjs";
-
 
 /**
  * @summary UserData
@@ -67,6 +65,10 @@ class UserData {
         this.class_ = class_;
         this.compressed = compressed;
         this.shortMessageText = shortMessageText;
+    
+        if (class_ !== undefined && (typeof class_ === "bigint" ? (class_ < 0n || class_ > 3n) : (class_ < 0 || class_ > 3))) {
+            throw new ASN1OverflowError("UserData.class_ violates INTEGER constraint");
+        }
     }
 
     /**
@@ -184,7 +186,7 @@ let _cached_encoder_for_UserData: $.ASN1Encoder<UserData> | null = null;
  */
 export
 function _encode_UserData (value: UserData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserData) { _cached_encoder_for_UserData = function (value: UserData, elGetter: $.ASN1Encoder<UserData>): _Element {
+    if (!_cached_encoder_for_UserData) { _cached_encoder_for_UserData = function (value: UserData, _elGetter: $.ASN1Encoder<UserData>): _Element {
     const _components: _Element[] = [];
     if (value.userDataHeader !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_UserDataHeader, $.BER)(value.userDataHeader, $.BER));
@@ -200,6 +202,5 @@ function _encode_UserData (value: UserData, elGetter: $.ASN1Encoder<any>): _Elem
 }; }
     return _cached_encoder_for_UserData(value, elGetter);
 }
-
 
 /* eslint-enable */

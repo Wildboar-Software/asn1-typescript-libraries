@@ -7,14 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallType, _decode_CallType, _encode_CallType } from "../SS-MCR-Operations-asn97/CallType.ta.mjs";
-// export { CallType, _decode_CallType, _encode_CallType } from "../SS-MCR-Operations-asn97/CallType.ta.mjs";
 import { PresentedAddressUnscreened, _decode_PresentedAddressUnscreened, _encode_PresentedAddressUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressUnscreened.ta.mjs";
-// export { PresentedAddressUnscreened, _decode_PresentedAddressUnscreened, _encode_PresentedAddressUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressUnscreened.ta.mjs";
 import { Correlation, _decode_Correlation, _encode_Correlation } from "../SS-MCR-Operations-asn97/Correlation.ta.mjs";
-// export { Correlation, _decode_Correlation, _encode_Correlation } from "../SS-MCR-Operations-asn97/Correlation.ta.mjs";
 import { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../SS-MCR-Operations-asn97/MCRExtensions.ta.mjs";
-// export { MCRExtensions, _decode_MCRExtensions, _encode_MCRExtensions } from "../SS-MCR-Operations-asn97/MCRExtensions.ta.mjs";
-
 
 /**
  * @summary MCRequestArg
@@ -237,7 +232,7 @@ let _cached_encoder_for_MCRequestArg: $.ASN1Encoder<MCRequestArg> | null = null;
  */
 export
 function _encode_MCRequestArg (value: MCRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MCRequestArg) { _cached_encoder_for_MCRequestArg = function (value: MCRequestArg, elGetter: $.ASN1Encoder<MCRequestArg>): _Element {
+    if (!_cached_encoder_for_MCRequestArg) { _cached_encoder_for_MCRequestArg = function (value: MCRequestArg, _elGetter: $.ASN1Encoder<MCRequestArg>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
@@ -266,6 +261,5 @@ function _encode_MCRequestArg (value: MCRequestArg, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_MCRequestArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
-// export { MCMExtensions, _decode_MCMExtensions, _encode_MCMExtensions } from "../SS-MCM-Operations-asn1-97/MCMExtensions.ta.mjs";
-
 
 /**
  * @summary MCMDummyRes
@@ -48,6 +46,5 @@ function _encode_MCMDummyRes (value: MCMDummyRes, elGetter: $.ASN1Encoder<any>):
     if (!_cached_encoder_for_MCMDummyRes) { _cached_encoder_for_MCMDummyRes = _encode_MCMExtensions; }
     return _cached_encoder_for_MCMDummyRes(value, elGetter);
 }
-
 
 /* eslint-enable */

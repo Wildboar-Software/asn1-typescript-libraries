@@ -1,14 +1,8 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { AocCompleteArg, _decode_AocCompleteArg, _encode_AocCompleteArg } from "../SS-AOC-Operations-asn1-97/AocCompleteArg.ta.mjs";
-// export { AocCompleteArg, _decode_AocCompleteArg, _encode_AocCompleteArg } from "../SS-AOC-Operations-asn1-97/AocCompleteArg.ta.mjs";
 import { AocCompleteRes, _decode_AocCompleteRes, _encode_AocCompleteRes } from "../SS-AOC-Operations-asn1-97/AocCompleteRes.ta.mjs";
-// export { AocCompleteRes, _decode_AocCompleteRes, _encode_AocCompleteRes } from "../SS-AOC-Operations-asn1-97/AocCompleteRes.ta.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-
 
 /**
  * @summary aocComplete

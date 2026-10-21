@@ -6,16 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { SmDeliverParameter, _decode_SmDeliverParameter, _encode_SmDeliverParameter } from "../Short-Message-Service-Operations-asn1-97/SmDeliverParameter.ta.mjs";
-// export { SmDeliverParameter, _decode_SmDeliverParameter, _encode_SmDeliverParameter } from "../Short-Message-Service-Operations-asn1-97/SmDeliverParameter.ta.mjs";
 import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-// export { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
 import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-// export { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-
 
 /**
  * @summary SmsDeliverArg
@@ -106,7 +100,6 @@ class SmsDeliverArg {
     public static _from_object (_o: { [_K in keyof (SmsDeliverArg)]: (SmsDeliverArg)[_K] }): SmsDeliverArg {
         return new SmsDeliverArg(_o.originatingAddress, _o.destinationAddress, _o.originatingName, _o.smDeliverParameter, _o.userData, _o.smsExtension);
     }
-
 
 }
 
@@ -208,7 +201,7 @@ let _cached_encoder_for_SmsDeliverArg: $.ASN1Encoder<SmsDeliverArg> | null = nul
  */
 export
 function _encode_SmsDeliverArg (value: SmsDeliverArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsDeliverArg) { _cached_encoder_for_SmsDeliverArg = function (value: SmsDeliverArg, elGetter: $.ASN1Encoder<SmsDeliverArg>): _Element {
+    if (!_cached_encoder_for_SmsDeliverArg) { _cached_encoder_for_SmsDeliverArg = function (value: SmsDeliverArg, _elGetter: $.ASN1Encoder<SmsDeliverArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.originatingAddress, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.destinationAddress, $.BER));
@@ -224,6 +217,5 @@ function _encode_SmsDeliverArg (value: SmsDeliverArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_SmsDeliverArg(value, elGetter);
 }
-
 
 /* eslint-enable */

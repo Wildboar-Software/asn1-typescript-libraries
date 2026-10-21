@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NameData, _decode_NameData, _encode_NameData } from "../Name-Operations-asn1-97/NameData.ta.mjs";
-// export { NameData, _decode_NameData, _encode_NameData } from "../Name-Operations-asn1-97/NameData.ta.mjs";
 import { CharacterSet, _decode_CharacterSet, _encode_CharacterSet } from "../Name-Operations-asn1-97/CharacterSet.ta.mjs";
-// export { CharacterSet, CharacterSet_unknown /* IMPORTED_LONG_NAMED_INTEGER */, unknown /* IMPORTED_SHORT_NAMED_INTEGER */, CharacterSet_iso8859_1 /* IMPORTED_LONG_NAMED_INTEGER */, iso8859_1 /* IMPORTED_SHORT_NAMED_INTEGER */, CharacterSet_iso8859_2 /* IMPORTED_LONG_NAMED_INTEGER */, iso8859_2 /* IMPORTED_SHORT_NAMED_INTEGER */, CharacterSet_iso8859_3 /* IMPORTED_LONG_NAMED_INTEGER */, iso8859_3 /* IMPORTED_SHORT_NAMED_INTEGER */, CharacterSet_iso8859_4 /* IMPORTED_LONG_NAMED_INTEGER */, iso8859_4 /* IMPORTED_SHORT_NAMED_INTEGER */, CharacterSet_iso8859_5 /* IMPORTED_LONG_NAMED_INTEGER */, iso8859_5 /* IMPORTED_SHORT_NAMED_INTEGER */, CharacterSet_iso8859_7 /* IMPORTED_LONG_NAMED_INTEGER */, iso8859_7 /* IMPORTED_SHORT_NAMED_INTEGER */, CharacterSet_iso10646_BmpString /* IMPORTED_LONG_NAMED_INTEGER */, iso10646_BmpString /* IMPORTED_SHORT_NAMED_INTEGER */, CharacterSet_iso10646_utf_8String /* IMPORTED_LONG_NAMED_INTEGER */, iso10646_utf_8String /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CharacterSet, _encode_CharacterSet } from "../Name-Operations-asn1-97/CharacterSet.ta.mjs";
-
 
 /**
  * @summary NameSet
@@ -64,7 +61,6 @@ class NameSet {
     public static _from_object (_o: { [_K in keyof (NameSet)]: (NameSet)[_K] }): NameSet {
         return new NameSet(_o.nameData, _o.characterSet);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_NameSet: $.ASN1Encoder<NameSet> | null = null;
  */
 export
 function _encode_NameSet (value: NameSet, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NameSet) { _cached_encoder_for_NameSet = function (value: NameSet, elGetter: $.ASN1Encoder<NameSet>): _Element {
+    if (!_cached_encoder_for_NameSet) { _cached_encoder_for_NameSet = function (value: NameSet, _elGetter: $.ASN1Encoder<NameSet>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_NameData(value.nameData, $.BER));
     if (value.characterSet !== undefined) {
@@ -160,6 +156,5 @@ function _encode_NameSet (value: NameSet, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_NameSet(value, elGetter);
 }
-
 
 /* eslint-enable */

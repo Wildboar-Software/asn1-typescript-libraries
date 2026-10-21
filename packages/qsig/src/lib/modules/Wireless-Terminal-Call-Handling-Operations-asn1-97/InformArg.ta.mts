@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WtmIdentity, _decode_WtmIdentity, _encode_WtmIdentity } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmIdentity.ta.mjs";
-// export { WtmIdentity, _decode_WtmIdentity, _encode_WtmIdentity } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmIdentity.ta.mjs";
 import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-// export { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-
 
 /**
  * @summary InformArg
@@ -66,7 +63,6 @@ class InformArg {
     public static _from_object (_o: { [_K in keyof (InformArg)]: (InformArg)[_K] }): InformArg {
         return new InformArg(_o.wtmIdentity, _o.argExtension);
     }
-
 
 }
 
@@ -152,7 +148,7 @@ let _cached_encoder_for_InformArg: $.ASN1Encoder<InformArg> | null = null;
  */
 export
 function _encode_InformArg (value: InformArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InformArg) { _cached_encoder_for_InformArg = function (value: InformArg, elGetter: $.ASN1Encoder<InformArg>): _Element {
+    if (!_cached_encoder_for_InformArg) { _cached_encoder_for_InformArg = function (value: InformArg, _elGetter: $.ASN1Encoder<InformArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtmIdentity(value.wtmIdentity, $.BER));
     if (value.argExtension !== undefined) {
@@ -162,6 +158,5 @@ function _encode_InformArg (value: InformArg, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_InformArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -2,11 +2,10 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary P_AbortCause
@@ -118,7 +117,11 @@ let _cached_decoder_for_P_AbortCause: $.ASN1Decoder<P_AbortCause> | null = null;
 export
 function _decode_P_AbortCause (el: _Element): P_AbortCause {
     if (!_cached_decoder_for_P_AbortCause) { _cached_decoder_for_P_AbortCause = $._decode_implicit<P_AbortCause>(() => $._decodeInteger); }
-    return _cached_decoder_for_P_AbortCause(el);
+    const _value = _cached_decoder_for_P_AbortCause(el);
+    if ((typeof _value === "bigint" ? (_value < 0n || _value > 255n) : (_value < 0 || _value > 255))) {
+        throw new ASN1OverflowError("P_AbortCause violates INTEGER constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_P_AbortCause: $.ASN1Encoder<P_AbortCause> | null = null;
@@ -135,6 +138,5 @@ function _encode_P_AbortCause (value: P_AbortCause, elGetter: $.ASN1Encoder<any>
     if (!_cached_encoder_for_P_AbortCause) { _cached_encoder_for_P_AbortCause = $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER); }
     return _cached_encoder_for_P_AbortCause(value, elGetter);
 }
-
 
 /* eslint-enable */

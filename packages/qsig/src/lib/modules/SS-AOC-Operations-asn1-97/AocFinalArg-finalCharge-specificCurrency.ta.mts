@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordedCurrency, _decode_RecordedCurrency, _encode_RecordedCurrency } from "../SS-AOC-Operations-asn1-97/RecordedCurrency.ta.mjs";
-// export { RecordedCurrency, _decode_RecordedCurrency, _encode_RecordedCurrency } from "../SS-AOC-Operations-asn1-97/RecordedCurrency.ta.mjs";
 import { FinalBillingId, _decode_FinalBillingId, _encode_FinalBillingId, _enum_for_FinalBillingId } from "../SS-AOC-Operations-asn1-97/FinalBillingId.ta.mjs";
-// export { FinalBillingId, _enum_for_FinalBillingId, FinalBillingId_normalCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, normalCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, FinalBillingId_creditCardCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, creditCardCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, FinalBillingId_callForwardingUnconditional /* IMPORTED_LONG_ENUMERATION_ITEM */, callForwardingUnconditional /* IMPORTED_SHORT_ENUMERATION_ITEM */, FinalBillingId_callForwardingBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, callForwardingBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, FinalBillingId_callForwardingNoReply /* IMPORTED_LONG_ENUMERATION_ITEM */, callForwardingNoReply /* IMPORTED_SHORT_ENUMERATION_ITEM */, FinalBillingId_callDeflection /* IMPORTED_LONG_ENUMERATION_ITEM */, callDeflection /* IMPORTED_SHORT_ENUMERATION_ITEM */, FinalBillingId_callTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, callTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FinalBillingId, _encode_FinalBillingId } from "../SS-AOC-Operations-asn1-97/FinalBillingId.ta.mjs";
-
 
 /**
  * @summary AocFinalArg_finalCharge_specificCurrency
@@ -18,7 +15,10 @@ import { FinalBillingId, _decode_FinalBillingId, _encode_FinalBillingId, _enum_f
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocFinalArg-finalCharge-specificCurrency ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AocFinalArg-finalCharge-specificCurrency ::= SEQUENCE {
+ *     recordedCurrency [1] IMPLICIT RecordedCurrency,
+ *     finalBillingId [2] IMPLICIT FinalBillingId OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -153,7 +153,7 @@ let _cached_encoder_for_AocFinalArg_finalCharge_specificCurrency: $.ASN1Encoder<
  */
 export
 function _encode_AocFinalArg_finalCharge_specificCurrency (value: AocFinalArg_finalCharge_specificCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocFinalArg_finalCharge_specificCurrency) { _cached_encoder_for_AocFinalArg_finalCharge_specificCurrency = function (value: AocFinalArg_finalCharge_specificCurrency, elGetter: $.ASN1Encoder<AocFinalArg_finalCharge_specificCurrency>): _Element {
+    if (!_cached_encoder_for_AocFinalArg_finalCharge_specificCurrency) { _cached_encoder_for_AocFinalArg_finalCharge_specificCurrency = function (value: AocFinalArg_finalCharge_specificCurrency, _elGetter: $.ASN1Encoder<AocFinalArg_finalCharge_specificCurrency>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_RecordedCurrency, $.BER)(value.recordedCurrency, $.BER));
     if (value.finalBillingId !== undefined) {
@@ -163,6 +163,5 @@ function _encode_AocFinalArg_finalCharge_specificCurrency (value: AocFinalArg_fi
 }; }
     return _cached_encoder_for_AocFinalArg_finalCharge_specificCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

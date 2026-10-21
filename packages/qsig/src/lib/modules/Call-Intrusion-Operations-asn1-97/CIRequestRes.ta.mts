@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CIUnwantedUserStatus, _decode_CIUnwantedUserStatus, _encode_CIUnwantedUserStatus, _enum_for_CIUnwantedUserStatus } from "../Call-Intrusion-Operations-asn1-97/CIUnwantedUserStatus.ta.mjs";
-// export { CIUnwantedUserStatus, _enum_for_CIUnwantedUserStatus, CIUnwantedUserStatus_unwantedUserIntruded /* IMPORTED_LONG_ENUMERATION_ITEM */, unwantedUserIntruded /* IMPORTED_SHORT_ENUMERATION_ITEM */, CIUnwantedUserStatus_unwantedUserIsolated /* IMPORTED_LONG_ENUMERATION_ITEM */, unwantedUserIsolated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CIUnwantedUserStatus, _encode_CIUnwantedUserStatus } from "../Call-Intrusion-Operations-asn1-97/CIUnwantedUserStatus.ta.mjs";
 import { CIRequestRes_resultExtension, _decode_CIRequestRes_resultExtension, _encode_CIRequestRes_resultExtension } from "../Call-Intrusion-Operations-asn1-97/CIRequestRes-resultExtension.ta.mjs";
-// export { CIRequestRes_resultExtension, _decode_CIRequestRes_resultExtension, _encode_CIRequestRes_resultExtension } from "../Call-Intrusion-Operations-asn1-97/CIRequestRes-resultExtension.ta.mjs";
-
 
 /**
  * @summary CIRequestRes
@@ -159,7 +156,7 @@ let _cached_encoder_for_CIRequestRes: $.ASN1Encoder<CIRequestRes> | null = null;
  */
 export
 function _encode_CIRequestRes (value: CIRequestRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CIRequestRes) { _cached_encoder_for_CIRequestRes = function (value: CIRequestRes, elGetter: $.ASN1Encoder<CIRequestRes>): _Element {
+    if (!_cached_encoder_for_CIRequestRes) { _cached_encoder_for_CIRequestRes = function (value: CIRequestRes, _elGetter: $.ASN1Encoder<CIRequestRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CIUnwantedUserStatus(value.ciUnwantedUserStatus, $.BER));
     if (value.resultExtension !== undefined) {
@@ -169,6 +166,5 @@ function _encode_CIRequestRes (value: CIRequestRes, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CIRequestRes(value, elGetter);
 }
-
 
 /* eslint-enable */

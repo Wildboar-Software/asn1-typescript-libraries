@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-
 
 /**
  * @summary WtmIdentity_both
@@ -18,7 +15,10 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * WtmIdentity-both ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * WtmIdentity-both ::= [11] IMPLICIT SEQUENCE {
+ *     pisnNumber PartyNumber,
+ *     alternativeId AlternativeId
+ * }
  * ```
  * 
  * @class
@@ -61,7 +61,6 @@ class WtmIdentity_both {
     public static _from_object (_o: { [_K in keyof (WtmIdentity_both)]: (WtmIdentity_both)[_K] }): WtmIdentity_both {
         return new WtmIdentity_both(_o.pisnNumber, _o.alternativeId);
     }
-
 
 }
 
@@ -122,10 +121,8 @@ function _decode_WtmIdentity_both (el: _Element): WtmIdentity_both {
     }
     sequence[0].name = "pisnNumber";
     sequence[1].name = "alternativeId";
-    let pisnNumber!: PartyNumber;
-    let alternativeId!: AlternativeId;
-    pisnNumber = _decode_PartyNumber(sequence[0]);
-    alternativeId = _decode_AlternativeId(sequence[1]);
+    const pisnNumber: PartyNumber = _decode_PartyNumber(sequence[0]);
+    const alternativeId: AlternativeId = _decode_AlternativeId(sequence[1]);
     return new WtmIdentity_both(
         pisnNumber,
         alternativeId,
@@ -146,7 +143,7 @@ let _cached_encoder_for_WtmIdentity_both: $.ASN1Encoder<WtmIdentity_both> | null
  */
 export
 function _encode_WtmIdentity_both (value: WtmIdentity_both, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtmIdentity_both) { _cached_encoder_for_WtmIdentity_both = function (value: WtmIdentity_both, elGetter: $.ASN1Encoder<WtmIdentity_both>): _Element {
+    if (!_cached_encoder_for_WtmIdentity_both) { _cached_encoder_for_WtmIdentity_both = function (value: WtmIdentity_both, _elGetter: $.ASN1Encoder<WtmIdentity_both>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER),
         /* REQUIRED   */ _encode_AlternativeId(value.alternativeId, $.BER)
@@ -154,6 +151,5 @@ function _encode_WtmIdentity_both (value: WtmIdentity_both, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_WtmIdentity_both(value, elGetter);
 }
-
 
 /* eslint-enable */

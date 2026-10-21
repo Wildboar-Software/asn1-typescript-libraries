@@ -1,16 +1,9 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { PisnEnqArg, _decode_PisnEnqArg, _encode_PisnEnqArg } from "../WTM-Location-Registration-Operations-asn1-97/PisnEnqArg.ta.mjs";
-// export { PisnEnqArg, _decode_PisnEnqArg, _encode_PisnEnqArg } from "../WTM-Location-Registration-Operations-asn1-97/PisnEnqArg.ta.mjs";
 import { PisnEnqRes, _decode_PisnEnqRes, _encode_PisnEnqRes } from "../WTM-Location-Registration-Operations-asn1-97/PisnEnqRes.ta.mjs";
-// export { PisnEnqRes, _decode_PisnEnqRes, _encode_PisnEnqRes } from "../WTM-Location-Registration-Operations-asn1-97/PisnEnqRes.ta.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary pisnEnquiry

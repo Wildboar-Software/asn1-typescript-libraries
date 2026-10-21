@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-// export { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
 import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
-// export { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
-
 
 /**
  * @summary CcOptionalArg_fullArg
@@ -22,7 +17,18 @@ import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CcOptionalArg-fullArg ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CcOptionalArg-fullArg ::= [0] IMPLICIT SEQUENCE {
+ *     numberA PartyNumber,
+ *     numberB PartyNumber,
+ *     service PSS1InformationElement,
+ *     -- permitted information elements are:
+ *     --Bearer capability;
+ *     -- Low layer compatibility;
+ *     -- High layer compatibility.
+ *     subaddrA [10] PartySubaddress OPTIONAL,
+ *     subaddrB [11] PartySubaddress OPTIONAL,
+ *     extension CcExtension OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -97,7 +103,6 @@ class CcOptionalArg_fullArg {
     public static _from_object (_o: { [_K in keyof (CcOptionalArg_fullArg)]: (CcOptionalArg_fullArg)[_K] }): CcOptionalArg_fullArg {
         return new CcOptionalArg_fullArg(_o.numberA, _o.numberB, _o.service, _o.subaddrA, _o.subaddrB, _o.extension);
     }
-
 
 }
 
@@ -199,7 +204,7 @@ let _cached_encoder_for_CcOptionalArg_fullArg: $.ASN1Encoder<CcOptionalArg_fullA
  */
 export
 function _encode_CcOptionalArg_fullArg (value: CcOptionalArg_fullArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CcOptionalArg_fullArg) { _cached_encoder_for_CcOptionalArg_fullArg = function (value: CcOptionalArg_fullArg, elGetter: $.ASN1Encoder<CcOptionalArg_fullArg>): _Element {
+    if (!_cached_encoder_for_CcOptionalArg_fullArg) { _cached_encoder_for_CcOptionalArg_fullArg = function (value: CcOptionalArg_fullArg, _elGetter: $.ASN1Encoder<CcOptionalArg_fullArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.numberA, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.numberB, $.BER));
@@ -217,6 +222,5 @@ function _encode_CcOptionalArg_fullArg (value: CcOptionalArg_fullArg, elGetter: 
 }; }
     return _cached_encoder_for_CcOptionalArg_fullArg(value, elGetter);
 }
-
 
 /* eslint-enable */

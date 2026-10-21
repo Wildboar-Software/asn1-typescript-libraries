@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary divertingLegInformation2_ArgumentType_extension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * divertingLegInformation2-ArgumentType-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * divertingLegInformation2-ArgumentType-extension ::= CHOICE {
+ *     single [5] IMPLICIT Extension {{DiversionExtensionSet}},
+ *     multiple [6] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_divertingLegInformation2_ArgumentType_extension (value: diverti
 }, $.BER); }
     return _cached_encoder_for_divertingLegInformation2_ArgumentType_extension(value, elGetter);
 }
-
 
 /* eslint-enable */

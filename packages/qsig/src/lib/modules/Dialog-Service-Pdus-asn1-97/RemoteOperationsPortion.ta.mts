@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RemoteOperationsPortion_Item, _decode_RemoteOperationsPortion_Item, _encode_RemoteOperationsPortion_Item } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion-Item.ta.mjs";
-// export { RemoteOperationsPortion_Item, _decode_RemoteOperationsPortion_Item, _encode_RemoteOperationsPortion_Item } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion-Item.ta.mjs";
-
 
 /**
  * @summary RemoteOperationsPortion
@@ -56,6 +54,5 @@ function _encode_RemoteOperationsPortion (value: RemoteOperationsPortion, elGett
     if (!_cached_encoder_for_RemoteOperationsPortion) { _cached_encoder_for_RemoteOperationsPortion = $._encode_implicit(_TagClass.context, 4, () => $._encodeSequenceOf<RemoteOperationsPortion_Item>(() => _encode_RemoteOperationsPortion_Item, $.BER), $.BER); }
     return _cached_encoder_for_RemoteOperationsPortion(value, elGetter);
 }
-
 
 /* eslint-enable */

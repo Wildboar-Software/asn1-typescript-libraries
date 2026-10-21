@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DNDInterrogateRes_status_Item, _decode_DNDInterrogateRes_status_Item, _encode_DNDInterrogateRes_status_Item } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateRes-status-Item.ta.mjs";
-// export { DNDInterrogateRes_status_Item, _decode_DNDInterrogateRes_status_Item, _encode_DNDInterrogateRes_status_Item } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateRes-status-Item.ta.mjs";
 import { DNDInterrogateRes_resultExtension, _decode_DNDInterrogateRes_resultExtension, _encode_DNDInterrogateRes_resultExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateRes-resultExtension.ta.mjs";
-// export { DNDInterrogateRes_resultExtension, _decode_DNDInterrogateRes_resultExtension, _encode_DNDInterrogateRes_resultExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateRes-resultExtension.ta.mjs";
-
 
 /**
  * @summary DNDInterrogateRes
@@ -70,7 +67,6 @@ class DNDInterrogateRes {
     public static _from_object (_o: { [_K in keyof (DNDInterrogateRes)]: (DNDInterrogateRes)[_K] }): DNDInterrogateRes {
         return new DNDInterrogateRes(_o.status, _o.resultExtension);
     }
-
 
 }
 
@@ -156,7 +152,7 @@ let _cached_encoder_for_DNDInterrogateRes: $.ASN1Encoder<DNDInterrogateRes> | nu
  */
 export
 function _encode_DNDInterrogateRes (value: DNDInterrogateRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDInterrogateRes) { _cached_encoder_for_DNDInterrogateRes = function (value: DNDInterrogateRes, elGetter: $.ASN1Encoder<DNDInterrogateRes>): _Element {
+    if (!_cached_encoder_for_DNDInterrogateRes) { _cached_encoder_for_DNDInterrogateRes = function (value: DNDInterrogateRes, _elGetter: $.ASN1Encoder<DNDInterrogateRes>): _Element {
     const _components: _Element[] = [];
     if (value.status !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encodeSetOf<DNDInterrogateRes_status_Item>(() => _encode_DNDInterrogateRes_status_Item, $.BER)(value.status, $.BER));
@@ -168,6 +164,5 @@ function _encode_DNDInterrogateRes (value: DNDInterrogateRes, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_DNDInterrogateRes(value, elGetter);
 }
-
 
 /* eslint-enable */

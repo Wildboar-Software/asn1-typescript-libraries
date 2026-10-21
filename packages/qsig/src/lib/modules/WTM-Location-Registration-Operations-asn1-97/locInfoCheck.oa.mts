@@ -1,16 +1,9 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { LocInfoCheckArg, _decode_LocInfoCheckArg, _encode_LocInfoCheckArg } from "../WTM-Location-Registration-Operations-asn1-97/LocInfoCheckArg.ta.mjs";
-// export { LocInfoCheckArg, _decode_LocInfoCheckArg, _encode_LocInfoCheckArg } from "../WTM-Location-Registration-Operations-asn1-97/LocInfoCheckArg.ta.mjs";
 import { LocInfoCheckRes, _decode_LocInfoCheckRes, _encode_LocInfoCheckRes } from "../WTM-Location-Registration-Operations-asn1-97/LocInfoCheckRes.ta.mjs";
-// export { LocInfoCheckRes, _decode_LocInfoCheckRes, _encode_LocInfoCheckRes } from "../WTM-Location-Registration-Operations-asn1-97/LocInfoCheckRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary locInfoCheck

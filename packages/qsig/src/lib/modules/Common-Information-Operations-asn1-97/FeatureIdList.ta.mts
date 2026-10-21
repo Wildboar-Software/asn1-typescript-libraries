@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    BIT_STRING
+    BIT_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary FeatureIdList
@@ -323,7 +323,13 @@ export
 const ssSSCTreRoutingSupported: number = FeatureIdList_ssSSCTreRoutingSupported; /* SHORT_NAMED_BIT */
 
 export
-const _decode_FeatureIdList: $.ASN1Decoder<FeatureIdList> = $._decodeBitString;
+const _decode_FeatureIdList = (el: _Element): FeatureIdList => {
+    const value = $._decodeBitString(el);
+    if (value.length < 1 || value.length > 64) {
+        throw new ASN1SizeError("FeatureIdList violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_FeatureIdList: $.ASN1Encoder<FeatureIdList> = $._encodeBitString;

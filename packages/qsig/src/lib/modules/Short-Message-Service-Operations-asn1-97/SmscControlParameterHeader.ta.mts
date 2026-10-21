@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    BIT_STRING
+    BIT_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary SmscControlParameterHeader
@@ -111,7 +111,13 @@ export
 const includeOrigUDHintoSR: number = SmscControlParameterHeader_includeOrigUDHintoSR; /* SHORT_NAMED_BIT */
 
 export
-const _decode_SmscControlParameterHeader: $.ASN1Decoder<SmscControlParameterHeader> = $._decodeBitString;
+const _decode_SmscControlParameterHeader = (el: _Element): SmscControlParameterHeader => {
+    const value = $._decodeBitString(el);
+    if (value.length !== 8) {
+        throw new ASN1SizeError("SmscControlParameterHeader violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_SmscControlParameterHeader: $.ASN1Encoder<SmscControlParameterHeader> = $._encodeBitString;

@@ -3,11 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ApplicationPort16BitHeader
@@ -45,6 +44,13 @@ class ApplicationPort16BitHeader {
     ) {
         this.destination16BitPort = destination16BitPort;
         this.originator16BitPort = originator16BitPort;
+    
+        if ((typeof destination16BitPort === "bigint" ? (destination16BitPort < 0n || destination16BitPort > 65536n) : (destination16BitPort < 0 || destination16BitPort > 65536))) {
+            throw new ASN1OverflowError("ApplicationPort16BitHeader.destination16BitPort violates INTEGER constraint");
+        }
+        if ((typeof originator16BitPort === "bigint" ? (originator16BitPort < 0n || originator16BitPort > 65536n) : (originator16BitPort < 0 || originator16BitPort > 65536))) {
+            throw new ASN1OverflowError("ApplicationPort16BitHeader.originator16BitPort violates INTEGER constraint");
+        }
     }
 
     /**
@@ -62,7 +68,6 @@ class ApplicationPort16BitHeader {
     public static _from_object (_o: { [_K in keyof (ApplicationPort16BitHeader)]: (ApplicationPort16BitHeader)[_K] }): ApplicationPort16BitHeader {
         return new ApplicationPort16BitHeader(_o.destination16BitPort, _o.originator16BitPort);
     }
-
 
 }
 
@@ -123,10 +128,8 @@ function _decode_ApplicationPort16BitHeader (el: _Element): ApplicationPort16Bit
     }
     sequence[0].name = "destination16BitPort";
     sequence[1].name = "originator16BitPort";
-    let destination16BitPort!: INTEGER;
-    let originator16BitPort!: INTEGER;
-    destination16BitPort = $._decodeInteger(sequence[0]);
-    originator16BitPort = $._decodeInteger(sequence[1]);
+    const destination16BitPort: INTEGER = $._decodeInteger(sequence[0]);
+    const originator16BitPort: INTEGER = $._decodeInteger(sequence[1]);
     return new ApplicationPort16BitHeader(
         destination16BitPort,
         originator16BitPort,
@@ -147,7 +150,7 @@ let _cached_encoder_for_ApplicationPort16BitHeader: $.ASN1Encoder<ApplicationPor
  */
 export
 function _encode_ApplicationPort16BitHeader (value: ApplicationPort16BitHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ApplicationPort16BitHeader) { _cached_encoder_for_ApplicationPort16BitHeader = function (value: ApplicationPort16BitHeader, elGetter: $.ASN1Encoder<ApplicationPort16BitHeader>): _Element {
+    if (!_cached_encoder_for_ApplicationPort16BitHeader) { _cached_encoder_for_ApplicationPort16BitHeader = function (value: ApplicationPort16BitHeader, _elGetter: $.ASN1Encoder<ApplicationPort16BitHeader>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.destination16BitPort, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.originator16BitPort, $.BER)
@@ -155,6 +158,5 @@ function _encode_ApplicationPort16BitHeader (value: ApplicationPort16BitHeader, 
 }; }
     return _cached_encoder_for_ApplicationPort16BitHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

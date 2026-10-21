@@ -1,11 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MCMUpdateReqResElt, _decode_MCMUpdateReqResElt, _encode_MCMUpdateReqResElt } from "../SS-MCM-Operations-asn1-97/MCMUpdateReqResElt.ta.mjs";
-// export { MCMUpdateReqResElt, _decode_MCMUpdateReqResElt, _encode_MCMUpdateReqResElt } from "../SS-MCM-Operations-asn1-97/MCMUpdateReqResElt.ta.mjs";
-
 
 /**
  * @summary MCMUpdateReqRes
@@ -31,7 +30,11 @@ let _cached_decoder_for_MCMUpdateReqRes: $.ASN1Decoder<MCMUpdateReqRes> | null =
 export
 function _decode_MCMUpdateReqRes (el: _Element): MCMUpdateReqRes {
     if (!_cached_decoder_for_MCMUpdateReqRes) { _cached_decoder_for_MCMUpdateReqRes = $._decodeSequenceOf<MCMUpdateReqResElt>(() => _decode_MCMUpdateReqResElt); }
-    return _cached_decoder_for_MCMUpdateReqRes(el);
+    const _value = _cached_decoder_for_MCMUpdateReqRes(el);
+    if (_value.length < 1 || _value.length > 10) {
+        throw new ASN1SizeError("MCMUpdateReqRes violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_MCMUpdateReqRes: $.ASN1Encoder<MCMUpdateReqRes> | null = null;
@@ -48,6 +51,5 @@ function _encode_MCMUpdateReqRes (value: MCMUpdateReqRes, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_MCMUpdateReqRes) { _cached_encoder_for_MCMUpdateReqRes = $._encodeSequenceOf<MCMUpdateReqResElt>(() => _encode_MCMUpdateReqResElt, $.BER); }
     return _cached_encoder_for_MCMUpdateReqRes(value, elGetter);
 }
-
 
 /* eslint-enable */

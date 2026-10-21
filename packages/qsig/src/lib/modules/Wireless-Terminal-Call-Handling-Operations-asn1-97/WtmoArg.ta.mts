@@ -7,10 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { WtmoArg_extension, _decode_WtmoArg_extension, _encode_WtmoArg_extension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmoArg-extension.ta.mjs";
-// export { WtmoArg_extension, _decode_WtmoArg_extension, _encode_WtmoArg_extension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmoArg-extension.ta.mjs";
-
 
 /**
  * @summary WtmoArg
@@ -77,7 +74,6 @@ class WtmoArg {
     public static _from_object (_o: { [_K in keyof (WtmoArg)]: (WtmoArg)[_K] }): WtmoArg {
         return new WtmoArg(_o.destinationNumber, _o.sendingComplete, _o.extension);
     }
-
 
 }
 
@@ -167,7 +163,7 @@ let _cached_encoder_for_WtmoArg: $.ASN1Encoder<WtmoArg> | null = null;
  */
 export
 function _encode_WtmoArg (value: WtmoArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WtmoArg) { _cached_encoder_for_WtmoArg = function (value: WtmoArg, elGetter: $.ASN1Encoder<WtmoArg>): _Element {
+    if (!_cached_encoder_for_WtmoArg) { _cached_encoder_for_WtmoArg = function (value: WtmoArg, _elGetter: $.ASN1Encoder<WtmoArg>): _Element {
     const _components: _Element[] = [];
     if (value.destinationNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => _encode_PartyNumber, $.BER)(value.destinationNumber, $.BER));
@@ -182,6 +178,5 @@ function _encode_WtmoArg (value: WtmoArg, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_WtmoArg(value, elGetter);
 }
-
 
 /* eslint-enable */

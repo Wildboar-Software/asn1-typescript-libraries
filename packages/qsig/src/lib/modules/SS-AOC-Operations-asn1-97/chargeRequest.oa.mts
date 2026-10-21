@@ -1,20 +1,11 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ChargeRequestArg, _decode_ChargeRequestArg, _encode_ChargeRequestArg } from "../SS-AOC-Operations-asn1-97/ChargeRequestArg.ta.mjs";
-// export { ChargeRequestArg, _decode_ChargeRequestArg, _encode_ChargeRequestArg } from "../SS-AOC-Operations-asn1-97/ChargeRequestArg.ta.mjs";
 import { ChargeRequestRes, _decode_ChargeRequestRes, _encode_ChargeRequestRes } from "../SS-AOC-Operations-asn1-97/ChargeRequestRes.ta.mjs";
-// export { ChargeRequestRes, _decode_ChargeRequestRes, _encode_ChargeRequestRes } from "../SS-AOC-Operations-asn1-97/ChargeRequestRes.ta.mjs";
 import { freeOfCharge } from "../SS-AOC-Operations-asn1-97/freeOfCharge.oa.mjs";
-// export { freeOfCharge } from "../SS-AOC-Operations-asn1-97/freeOfCharge.oa.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { unspecified } from "../SS-AOC-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../SS-AOC-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary chargeRequest

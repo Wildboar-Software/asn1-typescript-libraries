@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FailureCause, _decode_FailureCause, _encode_FailureCause } from "../Short-Message-Service-Operations-asn1-97/FailureCause.ta.mjs";
-// export { FailureCause, _decode_FailureCause, _encode_FailureCause } from "../Short-Message-Service-Operations-asn1-97/FailureCause.ta.mjs";
 import { ServiceCentreTimeStamp, _decode_ServiceCentreTimeStamp, _encode_ServiceCentreTimeStamp } from "../Short-Message-Service-Operations-asn1-97/ServiceCentreTimeStamp.ta.mjs";
-// export { ServiceCentreTimeStamp, _decode_ServiceCentreTimeStamp, _encode_ServiceCentreTimeStamp } from "../Short-Message-Service-Operations-asn1-97/ServiceCentreTimeStamp.ta.mjs";
 import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
-// export { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
 import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-// export { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
-
 
 /**
  * @summary smsCommandError_ParameterType
@@ -22,7 +17,12 @@ import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-S
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * smsCommandError-ParameterType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * smsCommandError-ParameterType ::= SEQUENCE {
+ *     failureCause FailureCause,
+ *     serviceCentreTimeStamp ServiceCentreTimeStamp,
+ *     protocolIdentifier [0] IMPLICIT ProtocolIdentifier OPTIONAL,
+ *     userData [1] IMPLICIT UserData OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -81,7 +81,6 @@ class smsCommandError_ParameterType {
     public static _from_object (_o: { [_K in keyof (smsCommandError_ParameterType)]: (smsCommandError_ParameterType)[_K] }): smsCommandError_ParameterType {
         return new smsCommandError_ParameterType(_o.failureCause, _o.serviceCentreTimeStamp, _o.protocolIdentifier, _o.userData);
     }
-
 
 }
 
@@ -175,7 +174,7 @@ let _cached_encoder_for_smsCommandError_ParameterType: $.ASN1Encoder<smsCommandE
  */
 export
 function _encode_smsCommandError_ParameterType (value: smsCommandError_ParameterType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_smsCommandError_ParameterType) { _cached_encoder_for_smsCommandError_ParameterType = function (value: smsCommandError_ParameterType, elGetter: $.ASN1Encoder<smsCommandError_ParameterType>): _Element {
+    if (!_cached_encoder_for_smsCommandError_ParameterType) { _cached_encoder_for_smsCommandError_ParameterType = function (value: smsCommandError_ParameterType, _elGetter: $.ASN1Encoder<smsCommandError_ParameterType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_FailureCause(value.failureCause, $.BER));
     _components.push(/* REQUIRED   */ _encode_ServiceCentreTimeStamp(value.serviceCentreTimeStamp, $.BER));
@@ -189,6 +188,5 @@ function _encode_smsCommandError_ParameterType (value: smsCommandError_Parameter
 }; }
     return _cached_encoder_for_smsCommandError_ParameterType(value, elGetter);
 }
-
 
 /* eslint-enable */

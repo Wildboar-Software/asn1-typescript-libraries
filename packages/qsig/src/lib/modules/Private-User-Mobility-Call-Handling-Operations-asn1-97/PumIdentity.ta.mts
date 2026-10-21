@@ -5,12 +5,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
 import { PumIdentity_both, _decode_PumIdentity_both, _encode_PumIdentity_both } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumIdentity-both.ta.mjs";
-// export { PumIdentity_both, _decode_PumIdentity_both, _encode_PumIdentity_both } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/PumIdentity-both.ta.mjs";
-
 
 /**
  * @summary PumIdentity
@@ -76,6 +72,5 @@ function _encode_PumIdentity (value: PumIdentity, elGetter: $.ASN1Encoder<any>):
 }, $.BER); }
     return _cached_encoder_for_PumIdentity(value, elGetter);
 }
-
 
 /* eslint-enable */

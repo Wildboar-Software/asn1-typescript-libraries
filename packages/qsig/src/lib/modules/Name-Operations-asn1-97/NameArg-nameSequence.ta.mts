@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { NameExtension, _decode_NameExtension, _encode_NameExtension } from "../Name-Operations-asn1-97/NameExtension.ta.mjs";
-// export { NameExtension, _decode_NameExtension, _encode_NameExtension } from "../Name-Operations-asn1-97/NameExtension.ta.mjs";
-
 
 /**
  * @summary NameArg_nameSequence
@@ -18,7 +15,10 @@ import { NameExtension, _decode_NameExtension, _encode_NameExtension } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NameArg-nameSequence ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NameArg-nameSequence ::= SEQUENCE {
+ *     name Name,
+ *     extension NameExtension OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -61,7 +61,6 @@ class NameArg_nameSequence {
     public static _from_object (_o: { [_K in keyof (NameArg_nameSequence)]: (NameArg_nameSequence)[_K] }): NameArg_nameSequence {
         return new NameArg_nameSequence(_o.name, _o.extension);
     }
-
 
 }
 
@@ -147,7 +146,7 @@ let _cached_encoder_for_NameArg_nameSequence: $.ASN1Encoder<NameArg_nameSequence
  */
 export
 function _encode_NameArg_nameSequence (value: NameArg_nameSequence, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NameArg_nameSequence) { _cached_encoder_for_NameArg_nameSequence = function (value: NameArg_nameSequence, elGetter: $.ASN1Encoder<NameArg_nameSequence>): _Element {
+    if (!_cached_encoder_for_NameArg_nameSequence) { _cached_encoder_for_NameArg_nameSequence = function (value: NameArg_nameSequence, _elGetter: $.ASN1Encoder<NameArg_nameSequence>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_Name(value.name, $.BER));
     if (value.extension !== undefined) {
@@ -157,6 +156,5 @@ function _encode_NameArg_nameSequence (value: NameArg_nameSequence, elGetter: $.
 }; }
     return _cached_encoder_for_NameArg_nameSequence(value, elGetter);
 }
-
 
 /* eslint-enable */

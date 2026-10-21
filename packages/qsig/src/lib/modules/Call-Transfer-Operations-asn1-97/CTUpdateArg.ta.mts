@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
-// export { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { CTUpdateArg_argumentExtension, _decode_CTUpdateArg_argumentExtension, _encode_CTUpdateArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTUpdateArg-argumentExtension.ta.mjs";
-// export { CTUpdateArg_argumentExtension, _decode_CTUpdateArg_argumentExtension, _encode_CTUpdateArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTUpdateArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary CTUpdateArg
@@ -91,7 +86,6 @@ class CTUpdateArg {
     public static _from_object (_o: { [_K in keyof (CTUpdateArg)]: (CTUpdateArg)[_K] }): CTUpdateArg {
         return new CTUpdateArg(_o.redirectionNumber, _o.redirectionName, _o.basicCallInfoElements, _o.argumentExtension);
     }
-
 
 }
 
@@ -185,7 +179,7 @@ let _cached_encoder_for_CTUpdateArg: $.ASN1Encoder<CTUpdateArg> | null = null;
  */
 export
 function _encode_CTUpdateArg (value: CTUpdateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CTUpdateArg) { _cached_encoder_for_CTUpdateArg = function (value: CTUpdateArg, elGetter: $.ASN1Encoder<CTUpdateArg>): _Element {
+    if (!_cached_encoder_for_CTUpdateArg) { _cached_encoder_for_CTUpdateArg = function (value: CTUpdateArg, _elGetter: $.ASN1Encoder<CTUpdateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PresentedNumberScreened(value.redirectionNumber, $.BER));
     if (value.redirectionName !== undefined) {
@@ -201,6 +195,5 @@ function _encode_CTUpdateArg (value: CTUpdateArg, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_CTUpdateArg(value, elGetter);
 }
-
 
 /* eslint-enable */

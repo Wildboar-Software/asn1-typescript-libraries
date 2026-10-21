@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NameData, _decode_NameData, _encode_NameData } from "../Name-Operations-asn1-97/NameData.ta.mjs";
-// export { NameData, _decode_NameData, _encode_NameData } from "../Name-Operations-asn1-97/NameData.ta.mjs";
 import { NameSet, _decode_NameSet, _encode_NameSet } from "../Name-Operations-asn1-97/NameSet.ta.mjs";
-// export { NameSet, _decode_NameSet, _encode_NameSet } from "../Name-Operations-asn1-97/NameSet.ta.mjs";
-
 
 /**
  * @summary NamePresentationRestricted
@@ -67,6 +64,5 @@ function _encode_NamePresentationRestricted (value: NamePresentationRestricted, 
 }, $.BER); }
     return _cached_encoder_for_NamePresentationRestricted(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../SS-MCM-Operations-asn1-97/TimeStamp.ta.mjs";
-// export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../SS-MCM-Operations-asn1-97/TimeStamp.ta.mjs";
 import { Priority, _decode_Priority, _encode_Priority } from "../SS-MCM-Operations-asn1-97/Priority.ta.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../SS-MCM-Operations-asn1-97/Priority.ta.mjs";
-
 
 /**
  * @summary AddressHeader
@@ -75,7 +71,6 @@ class AddressHeader {
     public static _from_object (_o: { [_K in keyof (AddressHeader)]: (AddressHeader)[_K] }): AddressHeader {
         return new AddressHeader(_o.originatorNr, _o.timeStamp, _o.priority);
     }
-
 
 }
 
@@ -165,7 +160,7 @@ let _cached_encoder_for_AddressHeader: $.ASN1Encoder<AddressHeader> | null = nul
  */
 export
 function _encode_AddressHeader (value: AddressHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AddressHeader) { _cached_encoder_for_AddressHeader = function (value: AddressHeader, elGetter: $.ASN1Encoder<AddressHeader>): _Element {
+    if (!_cached_encoder_for_AddressHeader) { _cached_encoder_for_AddressHeader = function (value: AddressHeader, _elGetter: $.ASN1Encoder<AddressHeader>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.originatorNr, $.BER));
     if (value.timeStamp !== undefined) {
@@ -178,6 +173,5 @@ function _encode_AddressHeader (value: AddressHeader, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_AddressHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

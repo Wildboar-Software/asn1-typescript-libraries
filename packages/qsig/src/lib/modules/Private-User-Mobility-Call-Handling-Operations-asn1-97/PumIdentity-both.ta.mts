@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/AlternativeId.ta.mjs";
-
 
 /**
  * @summary PumIdentity_both
@@ -18,7 +15,10 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PumIdentity-both ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PumIdentity-both ::= [11] IMPLICIT SEQUENCE {
+ *     pisnNumber PartyNumber,
+ *     alternativeId AlternativeId
+ * }
  * ```
  * 
  * @class
@@ -61,7 +61,6 @@ class PumIdentity_both {
     public static _from_object (_o: { [_K in keyof (PumIdentity_both)]: (PumIdentity_both)[_K] }): PumIdentity_both {
         return new PumIdentity_both(_o.pisnNumber, _o.alternativeId);
     }
-
 
 }
 
@@ -122,10 +121,8 @@ function _decode_PumIdentity_both (el: _Element): PumIdentity_both {
     }
     sequence[0].name = "pisnNumber";
     sequence[1].name = "alternativeId";
-    let pisnNumber!: PartyNumber;
-    let alternativeId!: AlternativeId;
-    pisnNumber = _decode_PartyNumber(sequence[0]);
-    alternativeId = _decode_AlternativeId(sequence[1]);
+    const pisnNumber: PartyNumber = _decode_PartyNumber(sequence[0]);
+    const alternativeId: AlternativeId = _decode_AlternativeId(sequence[1]);
     return new PumIdentity_both(
         pisnNumber,
         alternativeId,
@@ -146,7 +143,7 @@ let _cached_encoder_for_PumIdentity_both: $.ASN1Encoder<PumIdentity_both> | null
  */
 export
 function _encode_PumIdentity_both (value: PumIdentity_both, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PumIdentity_both) { _cached_encoder_for_PumIdentity_both = function (value: PumIdentity_both, elGetter: $.ASN1Encoder<PumIdentity_both>): _Element {
+    if (!_cached_encoder_for_PumIdentity_both) { _cached_encoder_for_PumIdentity_both = function (value: PumIdentity_both, _elGetter: $.ASN1Encoder<PumIdentity_both>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER),
         /* REQUIRED   */ _encode_AlternativeId(value.alternativeId, $.BER)
@@ -154,6 +151,5 @@ function _encode_PumIdentity_both (value: PumIdentity_both, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_PumIdentity_both(value, elGetter);
 }
-
 
 /* eslint-enable */

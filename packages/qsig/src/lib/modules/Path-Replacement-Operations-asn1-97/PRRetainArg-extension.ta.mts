@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary PRRetainArg_extension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PRRetainArg-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PRRetainArg-extension ::= CHOICE {
+ *     single [1] IMPLICIT Extension {{PRExtSet}},
+ *     multiple [2] IMPLICIT SEQUENCE OF Extension {{PRExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_PRRetainArg_extension (value: PRRetainArg_extension, elGetter: 
 }, $.BER); }
     return _cached_encoder_for_PRRetainArg_extension(value, elGetter);
 }
-
 
 /* eslint-enable */

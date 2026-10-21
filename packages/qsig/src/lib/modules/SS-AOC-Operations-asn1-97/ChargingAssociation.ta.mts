@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ChargeIdentifier, _decode_ChargeIdentifier, _encode_ChargeIdentifier } from "../SS-AOC-Operations-asn1-97/ChargeIdentifier.ta.mjs";
-// export { ChargeIdentifier, _decode_ChargeIdentifier, _encode_ChargeIdentifier } from "../SS-AOC-Operations-asn1-97/ChargeIdentifier.ta.mjs";
-
 
 /**
  * @summary ChargingAssociation
@@ -62,6 +59,5 @@ function _encode_ChargingAssociation (value: ChargingAssociation, elGetter: $.AS
 }, $.BER); }
     return _cached_encoder_for_ChargingAssociation(value, elGetter);
 }
-
 
 /* eslint-enable */

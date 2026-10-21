@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
-// export { PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { SSCTSetupArg_argumentExtension, _decode_SSCTSetupArg_argumentExtension, _encode_SSCTSetupArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTSetupArg-argumentExtension.ta.mjs";
-// export { SSCTSetupArg_argumentExtension, _decode_SSCTSetupArg_argumentExtension, _encode_SSCTSetupArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTSetupArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary SSCTSetupArg
@@ -78,7 +74,6 @@ class SSCTSetupArg {
     public static _from_object (_o: { [_K in keyof (SSCTSetupArg)]: (SSCTSetupArg)[_K] }): SSCTSetupArg {
         return new SSCTSetupArg(_o.transferringAddress, _o.transferringName, _o.argumentExtension);
     }
-
 
 }
 
@@ -168,7 +163,7 @@ let _cached_encoder_for_SSCTSetupArg: $.ASN1Encoder<SSCTSetupArg> | null = null;
  */
 export
 function _encode_SSCTSetupArg (value: SSCTSetupArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SSCTSetupArg) { _cached_encoder_for_SSCTSetupArg = function (value: SSCTSetupArg, elGetter: $.ASN1Encoder<SSCTSetupArg>): _Element {
+    if (!_cached_encoder_for_SSCTSetupArg) { _cached_encoder_for_SSCTSetupArg = function (value: SSCTSetupArg, _elGetter: $.ASN1Encoder<SSCTSetupArg>): _Element {
     const _components: _Element[] = [];
     if (value.transferringAddress !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 1, () => _encode_PresentedAddressScreened, $.BER)(value.transferringAddress, $.BER));
@@ -183,6 +178,5 @@ function _encode_SSCTSetupArg (value: SSCTSetupArg, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_SSCTSetupArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
-// export { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { ReAlertingArg_argumentExtension, _decode_ReAlertingArg_argumentExtension, _encode_ReAlertingArg_argumentExtension } from "../Recall-Operations-asn1-97/ReAlertingArg-argumentExtension.ta.mjs";
-// export { ReAlertingArg_argumentExtension, _decode_ReAlertingArg_argumentExtension, _encode_ReAlertingArg_argumentExtension } from "../Recall-Operations-asn1-97/ReAlertingArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary ReAlertingArg
@@ -78,7 +74,6 @@ class ReAlertingArg {
     public static _from_object (_o: { [_K in keyof (ReAlertingArg)]: (ReAlertingArg)[_K] }): ReAlertingArg {
         return new ReAlertingArg(_o.alertedNumber, _o.alertedName, _o.argumentExtension);
     }
-
 
 }
 
@@ -168,7 +163,7 @@ let _cached_encoder_for_ReAlertingArg: $.ASN1Encoder<ReAlertingArg> | null = nul
  */
 export
 function _encode_ReAlertingArg (value: ReAlertingArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReAlertingArg) { _cached_encoder_for_ReAlertingArg = function (value: ReAlertingArg, elGetter: $.ASN1Encoder<ReAlertingArg>): _Element {
+    if (!_cached_encoder_for_ReAlertingArg) { _cached_encoder_for_ReAlertingArg = function (value: ReAlertingArg, _elGetter: $.ASN1Encoder<ReAlertingArg>): _Element {
     const _components: _Element[] = [];
     if (value.alertedNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 1, () => _encode_PresentedNumberScreened, $.BER)(value.alertedNumber, $.BER));
@@ -183,6 +178,5 @@ function _encode_ReAlertingArg (value: ReAlertingArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_ReAlertingArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../WTM-Authentication-Operations-asn1-97/AuthResponse.ta.mjs";
-// export { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../WTM-Authentication-Operations-asn1-97/AuthResponse.ta.mjs";
 import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
-// export { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
-
 
 /**
  * @summary CalcWtanInfo
@@ -64,7 +61,6 @@ class CalcWtanInfo {
     public static _from_object (_o: { [_K in keyof (CalcWtanInfo)]: (CalcWtanInfo)[_K] }): CalcWtanInfo {
         return new CalcWtanInfo(_o.authResponse, _o.calculationParam);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_CalcWtanInfo: $.ASN1Encoder<CalcWtanInfo> | null = null;
  */
 export
 function _encode_CalcWtanInfo (value: CalcWtanInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalcWtanInfo) { _cached_encoder_for_CalcWtanInfo = function (value: CalcWtanInfo, elGetter: $.ASN1Encoder<CalcWtanInfo>): _Element {
+    if (!_cached_encoder_for_CalcWtanInfo) { _cached_encoder_for_CalcWtanInfo = function (value: CalcWtanInfo, _elGetter: $.ASN1Encoder<CalcWtanInfo>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthResponse(value.authResponse, $.BER));
     if (value.calculationParam !== undefined) {
@@ -160,6 +156,5 @@ function _encode_CalcWtanInfo (value: CalcWtanInfo, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CalcWtanInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

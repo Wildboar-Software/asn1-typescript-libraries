@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AOCSCurrencyInfoList, _decode_AOCSCurrencyInfoList, _encode_AOCSCurrencyInfoList } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfoList.ta.mjs";
-// export { AOCSCurrencyInfoList, _decode_AOCSCurrencyInfoList, _encode_AOCSCurrencyInfoList } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfoList.ta.mjs";
-
 
 /**
  * @summary AocRateArg_aocRate
@@ -15,7 +13,10 @@ import { AOCSCurrencyInfoList, _decode_AOCSCurrencyInfoList, _encode_AOCSCurrenc
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocRateArg-aocRate ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AocRateArg-aocRate ::= CHOICE {
+ *     chargeNotAvailable NULL,
+ *     aocSCurrencyInfoList AOCSCurrencyInfoList
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_AocRateArg_aocRate (value: AocRateArg_aocRate, elGetter: $.ASN1
 }, $.BER); }
     return _cached_encoder_for_AocRateArg_aocRate(value, elGetter);
 }
-
 
 /* eslint-enable */

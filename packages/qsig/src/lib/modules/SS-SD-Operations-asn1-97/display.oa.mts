@@ -1,18 +1,10 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { DisplayArg, _decode_DisplayArg, _encode_DisplayArg } from "../SS-SD-Operations-asn1-97/DisplayArg.ta.mjs";
-// export { DisplayArg, _decode_DisplayArg, _encode_DisplayArg } from "../SS-SD-Operations-asn1-97/DisplayArg.ta.mjs";
 import { unspecified } from "../SS-SD-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../SS-SD-Operations-asn1-97/unspecified.oa.mjs";
 import { noDisplayAvailable } from "../SS-SD-Operations-asn1-97/noDisplayAvailable.oa.mjs";
-// export { noDisplayAvailable } from "../SS-SD-Operations-asn1-97/noDisplayAvailable.oa.mjs";
 import { displayTemporarilyNotAvailable } from "../SS-SD-Operations-asn1-97/displayTemporarilyNotAvailable.oa.mjs";
-// export { displayTemporarilyNotAvailable } from "../SS-SD-Operations-asn1-97/displayTemporarilyNotAvailable.oa.mjs";
 import { notPresentable } from "../SS-SD-Operations-asn1-97/notPresentable.oa.mjs";
-// export { notPresentable } from "../SS-SD-Operations-asn1-97/notPresentable.oa.mjs";
-
 
 /**
  * @summary display

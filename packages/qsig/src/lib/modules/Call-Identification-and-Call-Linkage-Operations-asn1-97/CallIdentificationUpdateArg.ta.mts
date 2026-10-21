@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentificationData, _decode_CallIdentificationData, _encode_CallIdentificationData } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationData.ta.mjs";
-// export { CallIdentificationData, _decode_CallIdentificationData, _encode_CallIdentificationData } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationData.ta.mjs";
 import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/ExtensionType.ta.mjs";
-// export { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/ExtensionType.ta.mjs";
-
 
 /**
  * @summary CallIdentificationUpdateArg
@@ -82,7 +79,6 @@ class CallIdentificationUpdateArg {
     public static _from_object (_o: { [_K in keyof (CallIdentificationUpdateArg)]: (CallIdentificationUpdateArg)[_K] }): CallIdentificationUpdateArg {
         return new CallIdentificationUpdateArg(_o.globalCallID, _o.threadID, _o.legID, _o.extension);
     }
-
 
 }
 
@@ -176,7 +172,7 @@ let _cached_encoder_for_CallIdentificationUpdateArg: $.ASN1Encoder<CallIdentific
  */
 export
 function _encode_CallIdentificationUpdateArg (value: CallIdentificationUpdateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CallIdentificationUpdateArg) { _cached_encoder_for_CallIdentificationUpdateArg = function (value: CallIdentificationUpdateArg, elGetter: $.ASN1Encoder<CallIdentificationUpdateArg>): _Element {
+    if (!_cached_encoder_for_CallIdentificationUpdateArg) { _cached_encoder_for_CallIdentificationUpdateArg = function (value: CallIdentificationUpdateArg, _elGetter: $.ASN1Encoder<CallIdentificationUpdateArg>): _Element {
     const _components: _Element[] = [];
     if (value.globalCallID !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => _encode_CallIdentificationData, $.BER)(value.globalCallID, $.BER));
@@ -194,6 +190,5 @@ function _encode_CallIdentificationUpdateArg (value: CallIdentificationUpdateArg
 }; }
     return _cached_encoder_for_CallIdentificationUpdateArg(value, elGetter);
 }
-
 
 /* eslint-enable */

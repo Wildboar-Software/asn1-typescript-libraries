@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { WtmIdentity, _decode_WtmIdentity, _encode_WtmIdentity } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmIdentity.ta.mjs";
-// export { WtmIdentity, _decode_WtmIdentity, _encode_WtmIdentity } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmIdentity.ta.mjs";
 import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-// export { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-
 
 /**
  * @summary CurrLocation
@@ -79,7 +75,6 @@ class CurrLocation {
     public static _from_object (_o: { [_K in keyof (CurrLocation)]: (CurrLocation)[_K] }): CurrLocation {
         return new CurrLocation(_o.visitPINX, _o.wtmIdentity, _o.argExtension);
     }
-
 
 }
 
@@ -169,7 +164,7 @@ let _cached_encoder_for_CurrLocation: $.ASN1Encoder<CurrLocation> | null = null;
  */
 export
 function _encode_CurrLocation (value: CurrLocation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CurrLocation) { _cached_encoder_for_CurrLocation = function (value: CurrLocation, elGetter: $.ASN1Encoder<CurrLocation>): _Element {
+    if (!_cached_encoder_for_CurrLocation) { _cached_encoder_for_CurrLocation = function (value: CurrLocation, _elGetter: $.ASN1Encoder<CurrLocation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.visitPINX, $.BER));
     _components.push(/* REQUIRED   */ _encode_WtmIdentity(value.wtmIdentity, $.BER));
@@ -180,6 +175,5 @@ function _encode_CurrLocation (value: CurrLocation, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CurrLocation(value, elGetter);
 }
-
 
 /* eslint-enable */

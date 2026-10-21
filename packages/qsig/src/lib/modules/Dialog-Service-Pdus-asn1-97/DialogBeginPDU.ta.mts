@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OriginationDialogId, _decode_OriginationDialogId, _encode_OriginationDialogId } from "../Dialog-Service-Pdus-asn1-97/OriginationDialogId.ta.mjs";
-// export { OriginationDialogId, _decode_OriginationDialogId, _encode_OriginationDialogId } from "../Dialog-Service-Pdus-asn1-97/OriginationDialogId.ta.mjs";
 import { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_RemoteOperationsPortion } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion.ta.mjs";
-// export { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_RemoteOperationsPortion } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion.ta.mjs";
-
 
 /**
  * @summary DialogBeginPDU
@@ -64,7 +61,6 @@ class DialogBeginPDU {
     public static _from_object (_o: { [_K in keyof (DialogBeginPDU)]: (DialogBeginPDU)[_K] }): DialogBeginPDU {
         return new DialogBeginPDU(_o.originationDialogId, _o.remoteOperationsPortion);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_DialogBeginPDU: $.ASN1Encoder<DialogBeginPDU> | null = n
  */
 export
 function _encode_DialogBeginPDU (value: DialogBeginPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DialogBeginPDU) { _cached_encoder_for_DialogBeginPDU = function (value: DialogBeginPDU, elGetter: $.ASN1Encoder<DialogBeginPDU>): _Element {
+    if (!_cached_encoder_for_DialogBeginPDU) { _cached_encoder_for_DialogBeginPDU = function (value: DialogBeginPDU, _elGetter: $.ASN1Encoder<DialogBeginPDU>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_OriginationDialogId, $.BER)(value.originationDialogId, $.BER));
     if (value.remoteOperationsPortion !== undefined) {
@@ -160,6 +156,5 @@ function _encode_DialogBeginPDU (value: DialogBeginPDU, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_DialogBeginPDU(value, elGetter);
 }
-
 
 /* eslint-enable */

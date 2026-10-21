@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DNDActivateRes_status_Item, _decode_DNDActivateRes_status_Item, _encode_DNDActivateRes_status_Item } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes-status-Item.ta.mjs";
-// export { DNDActivateRes_status_Item, _decode_DNDActivateRes_status_Item, _encode_DNDActivateRes_status_Item } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes-status-Item.ta.mjs";
 import { DNDActivateRes_resultExtension, _decode_DNDActivateRes_resultExtension, _encode_DNDActivateRes_resultExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes-resultExtension.ta.mjs";
-// export { DNDActivateRes_resultExtension, _decode_DNDActivateRes_resultExtension, _encode_DNDActivateRes_resultExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes-resultExtension.ta.mjs";
-
 
 /**
  * @summary DNDActivateRes
@@ -70,7 +67,6 @@ class DNDActivateRes {
     public static _from_object (_o: { [_K in keyof (DNDActivateRes)]: (DNDActivateRes)[_K] }): DNDActivateRes {
         return new DNDActivateRes(_o.status, _o.resultExtension);
     }
-
 
 }
 
@@ -156,7 +152,7 @@ let _cached_encoder_for_DNDActivateRes: $.ASN1Encoder<DNDActivateRes> | null = n
  */
 export
 function _encode_DNDActivateRes (value: DNDActivateRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDActivateRes) { _cached_encoder_for_DNDActivateRes = function (value: DNDActivateRes, elGetter: $.ASN1Encoder<DNDActivateRes>): _Element {
+    if (!_cached_encoder_for_DNDActivateRes) { _cached_encoder_for_DNDActivateRes = function (value: DNDActivateRes, _elGetter: $.ASN1Encoder<DNDActivateRes>): _Element {
     const _components: _Element[] = [];
     if (value.status !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encodeSetOf<DNDActivateRes_status_Item>(() => _encode_DNDActivateRes_status_Item, $.BER)(value.status, $.BER));
@@ -168,6 +164,5 @@ function _encode_DNDActivateRes (value: DNDActivateRes, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_DNDActivateRes(value, elGetter);
 }
-
 
 /* eslint-enable */

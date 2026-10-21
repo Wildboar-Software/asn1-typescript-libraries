@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-Operations-asn1-97/UserPin.ta.mjs";
-// export { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-Operations-asn1-97/UserPin.ta.mjs";
-
 
 /**
  * @summary PumInterrogArg_userPin
@@ -15,7 +13,10 @@ import { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-O
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PumInterrogArg-userPin ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PumInterrogArg-userPin ::= CHOICE {
+ *     pumUserPin [6] IMPLICIT UserPin,
+ *     activatingUserPin [7] IMPLICIT UserPin
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_PumInterrogArg_userPin (value: PumInterrogArg_userPin, elGetter
 }, $.BER); }
     return _cached_encoder_for_PumInterrogArg_userPin(value, elGetter);
 }
-
 
 /* eslint-enable */

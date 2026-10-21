@@ -3,28 +3,19 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiversionReason, _decode_DiversionReason, _encode_DiversionReason, _enum_for_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
-// export { DiversionReason, _enum_for_DiversionReason, DiversionReason_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfu /* IMPORTED_LONG_ENUMERATION_ITEM */, cfu /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfb /* IMPORTED_LONG_ENUMERATION_ITEM */, cfb /* IMPORTED_SHORT_ENUMERATION_ITEM */, DiversionReason_cfnr /* IMPORTED_LONG_ENUMERATION_ITEM */, cfnr /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DiversionReason, _encode_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
 import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
-// export { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
-// export { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
 import { SubscriptionOption, _decode_SubscriptionOption, _encode_SubscriptionOption, _enum_for_SubscriptionOption } from "../Call-Diversion-Operations-asn1-97/SubscriptionOption.ta.mjs";
-// export { SubscriptionOption, _enum_for_SubscriptionOption, SubscriptionOption_noNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, noNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionOption_notificationWithoutDivertedToNr /* IMPORTED_LONG_ENUMERATION_ITEM */, notificationWithoutDivertedToNr /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionOption_notificationWithDivertedToNr /* IMPORTED_LONG_ENUMERATION_ITEM */, notificationWithDivertedToNr /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriptionOption, _encode_SubscriptionOption } from "../Call-Diversion-Operations-asn1-97/SubscriptionOption.ta.mjs";
 import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-// export { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
 import { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
-// export { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { _decode_callRerouteing_ArgumentType_extension, _encode_callRerouteing_ArgumentType_extension, callRerouteing_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ArgumentType-extension.ta.mjs";
-// export { callRerouteing_ArgumentType_extension, _decode_callRerouteing_ArgumentType_extension, _encode_callRerouteing_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ArgumentType-extension.ta.mjs";
-
 
 /**
  * @summary callRerouteing_ArgumentType
@@ -33,7 +24,28 @@ import { _decode_callRerouteing_ArgumentType_extension, _encode_callRerouteing_A
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * callRerouteing-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * callRerouteing-ArgumentType ::= SEQUENCE {
+ *     rerouteingReason DiversionReason,
+ *     originalRerouteingReason [0] IMPLICIT DiversionReason OPTIONAL,
+ *     calledAddress Address,
+ *     diversionCounter INTEGER (1..15),
+ *     pSS1InfoElement PSS1InformationElement,
+ *     -- The basic call information elements Bearer capability, High layer compatibility, Low
+ *     -- layer compatibity and Progress indicator can be embedded in the
+ *     -- pSS1InfoElement in accordance with 6.5.3.1.5.
+ *     lastRerouteingNr [1] PresentedNumberUnscreened,
+ *     subscriptionOption [2] IMPLICIT SubscriptionOption,
+ *     callingPartySubaddress [3] PartySubaddress OPTIONAL,
+ *     callingNumber [4] PresentedNumberScreened,
+ *     callingName [5] Name OPTIONAL,
+ *     originalCalledNr [6] PresentedNumberUnscreened OPTIONAL,
+ *     redirectingName [7] Name OPTIONAL,
+ *     originalCalledName [8] Name OPTIONAL,
+ *     extension CHOICE {
+ *         single [9] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [10] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -155,6 +167,10 @@ class callRerouteing_ArgumentType {
         this.redirectingName = redirectingName;
         this.originalCalledName = originalCalledName;
         this.extension = extension;
+    
+        if ((typeof diversionCounter === "bigint" ? (diversionCounter < 1n || diversionCounter > 15n) : (diversionCounter < 1 || diversionCounter > 15))) {
+            throw new ASN1OverflowError("callRerouteing_ArgumentType.diversionCounter violates INTEGER constraint");
+        }
     }
 
     /**
@@ -324,7 +340,7 @@ let _cached_encoder_for_callRerouteing_ArgumentType: $.ASN1Encoder<callReroutein
  */
 export
 function _encode_callRerouteing_ArgumentType (value: callRerouteing_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_callRerouteing_ArgumentType) { _cached_encoder_for_callRerouteing_ArgumentType = function (value: callRerouteing_ArgumentType, elGetter: $.ASN1Encoder<callRerouteing_ArgumentType>): _Element {
+    if (!_cached_encoder_for_callRerouteing_ArgumentType) { _cached_encoder_for_callRerouteing_ArgumentType = function (value: callRerouteing_ArgumentType, _elGetter: $.ASN1Encoder<callRerouteing_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_DiversionReason(value.rerouteingReason, $.BER));
     if (value.originalRerouteingReason !== undefined) {
@@ -358,6 +374,5 @@ function _encode_callRerouteing_ArgumentType (value: callRerouteing_ArgumentType
 }; }
     return _cached_encoder_for_callRerouteing_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

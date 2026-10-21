@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyInfo, _decode_PartyInfo, _encode_PartyInfo } from "../SS-MID-Operations-asn1-97/PartyInfo.ta.mjs";
-// export { PartyInfo, _decode_PartyInfo, _encode_PartyInfo } from "../SS-MID-Operations-asn1-97/PartyInfo.ta.mjs";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { String, _decode_String, _encode_String } from "../SS-MID-Operations-asn1-97/String.ta.mjs";
-// export { String, _decode_String, _encode_String } from "../SS-MID-Operations-asn1-97/String.ta.mjs";
 import { MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../SS-MID-Operations-asn1-97/MIDExtensions.ta.mjs";
-// export { MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../SS-MID-Operations-asn1-97/MIDExtensions.ta.mjs";
-
 
 /**
  * @summary MIDMailboxAuthArg
@@ -104,7 +99,6 @@ class MIDMailboxAuthArg {
     public static _from_object (_o: { [_K in keyof (MIDMailboxAuthArg)]: (MIDMailboxAuthArg)[_K] }): MIDMailboxAuthArg {
         return new MIDMailboxAuthArg(_o.partyInfo, _o.servedUserName, _o.mailBox, _o.password, _o.extensions, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -204,7 +198,7 @@ let _cached_encoder_for_MIDMailboxAuthArg: $.ASN1Encoder<MIDMailboxAuthArg> | nu
  */
 export
 function _encode_MIDMailboxAuthArg (value: MIDMailboxAuthArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MIDMailboxAuthArg) { _cached_encoder_for_MIDMailboxAuthArg = function (value: MIDMailboxAuthArg, elGetter: $.ASN1Encoder<MIDMailboxAuthArg>): _Element {
+    if (!_cached_encoder_for_MIDMailboxAuthArg) { _cached_encoder_for_MIDMailboxAuthArg = function (value: MIDMailboxAuthArg, _elGetter: $.ASN1Encoder<MIDMailboxAuthArg>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(5 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;
@@ -229,6 +223,5 @@ function _encode_MIDMailboxAuthArg (value: MIDMailboxAuthArg, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_MIDMailboxAuthArg(value, elGetter);
 }
-
 
 /* eslint-enable */

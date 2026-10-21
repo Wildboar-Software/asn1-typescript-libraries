@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary SSCTSetupArg_argumentExtension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SSCTSetupArg-argumentExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SSCTSetupArg-argumentExtension ::= CHOICE {
+ *     single [3] IMPLICIT Extension {{SSCTExtSet}},
+ *     multiple [4] IMPLICIT SEQUENCE OF Extension {{SSCTExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_SSCTSetupArg_argumentExtension (value: SSCTSetupArg_argumentExt
 }, $.BER); }
     return _cached_encoder_for_SSCTSetupArg_argumentExtension(value, elGetter);
 }
-
 
 /* eslint-enable */

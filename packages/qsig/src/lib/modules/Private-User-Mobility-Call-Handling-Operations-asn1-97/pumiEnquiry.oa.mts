@@ -1,22 +1,12 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { EnquiryArg, _decode_EnquiryArg, _encode_EnquiryArg } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/EnquiryArg.ta.mjs";
-// export { EnquiryArg, _decode_EnquiryArg, _encode_EnquiryArg } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/EnquiryArg.ta.mjs";
 import { EnquiryRes, _decode_EnquiryRes, _encode_EnquiryRes } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/EnquiryRes.ta.mjs";
-// export { EnquiryRes, _decode_EnquiryRes, _encode_EnquiryRes } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/EnquiryRes.ta.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { locationNotKnown } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/locationNotKnown.oa.mjs";
-// export { locationNotKnown } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/locationNotKnown.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { basicServiceNotProvided } from "../General-Error-List/basicServiceNotProvided.oa.mjs";
-// export { basicServiceNotProvided } from "../General-Error-List/basicServiceNotProvided.oa.mjs";
 import { unspecified } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary pumiEnquiry

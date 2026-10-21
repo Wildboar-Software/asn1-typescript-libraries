@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKeyInfo.ta.mjs";
-// export { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKeyInfo.ta.mjs";
 import { CalcWtanInfo, _decode_CalcWtanInfo, _encode_CalcWtanInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtanInfo.ta.mjs";
-// export { CalcWtanInfo, _decode_CalcWtanInfo, _encode_CalcWtanInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtanInfo.ta.mjs";
-
 
 /**
  * @summary WtanParamInfo
@@ -62,6 +59,5 @@ function _encode_WtanParamInfo (value: WtanParamInfo, elGetter: $.ASN1Encoder<an
 }, $.BER); }
     return _cached_encoder_for_WtanParamInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

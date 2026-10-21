@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubaddressInformation, _decode_SubaddressInformation, _encode_SubaddressInformation } from "../Addressing-Data-Elements-asn1-97/SubaddressInformation.ta.mjs";
-// export { SubaddressInformation, _decode_SubaddressInformation, _encode_SubaddressInformation } from "../Addressing-Data-Elements-asn1-97/SubaddressInformation.ta.mjs";
-
 
 /**
  * @summary UserSpecifiedSubaddress
@@ -63,7 +61,6 @@ class UserSpecifiedSubaddress {
     public static _from_object (_o: { [_K in keyof (UserSpecifiedSubaddress)]: (UserSpecifiedSubaddress)[_K] }): UserSpecifiedSubaddress {
         return new UserSpecifiedSubaddress(_o.subaddressInformation, _o.oddCountIndicator);
     }
-
 
 }
 
@@ -149,7 +146,7 @@ let _cached_encoder_for_UserSpecifiedSubaddress: $.ASN1Encoder<UserSpecifiedSuba
  */
 export
 function _encode_UserSpecifiedSubaddress (value: UserSpecifiedSubaddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserSpecifiedSubaddress) { _cached_encoder_for_UserSpecifiedSubaddress = function (value: UserSpecifiedSubaddress, elGetter: $.ASN1Encoder<UserSpecifiedSubaddress>): _Element {
+    if (!_cached_encoder_for_UserSpecifiedSubaddress) { _cached_encoder_for_UserSpecifiedSubaddress = function (value: UserSpecifiedSubaddress, _elGetter: $.ASN1Encoder<UserSpecifiedSubaddress>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_SubaddressInformation(value.subaddressInformation, $.BER));
     if (value.oddCountIndicator !== undefined) {
@@ -159,6 +156,5 @@ function _encode_UserSpecifiedSubaddress (value: UserSpecifiedSubaddress, elGett
 }; }
     return _cached_encoder_for_UserSpecifiedSubaddress(value, elGetter);
 }
-
 
 /* eslint-enable */

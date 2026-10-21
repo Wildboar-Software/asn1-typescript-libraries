@@ -1,11 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AOCSCurrencyInfo, _decode_AOCSCurrencyInfo, _encode_AOCSCurrencyInfo } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfo.ta.mjs";
-// export { AOCSCurrencyInfo, _decode_AOCSCurrencyInfo, _encode_AOCSCurrencyInfo } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfo.ta.mjs";
-
 
 /**
  * @summary AOCSCurrencyInfoList
@@ -31,7 +30,11 @@ let _cached_decoder_for_AOCSCurrencyInfoList: $.ASN1Decoder<AOCSCurrencyInfoList
 export
 function _decode_AOCSCurrencyInfoList (el: _Element): AOCSCurrencyInfoList {
     if (!_cached_decoder_for_AOCSCurrencyInfoList) { _cached_decoder_for_AOCSCurrencyInfoList = $._decodeSequenceOf<AOCSCurrencyInfo>(() => _decode_AOCSCurrencyInfo); }
-    return _cached_decoder_for_AOCSCurrencyInfoList(el);
+    const _value = _cached_decoder_for_AOCSCurrencyInfoList(el);
+    if (_value.length < 1 || _value.length > 10) {
+        throw new ASN1SizeError("AOCSCurrencyInfoList violates SIZE constraint");
+    }
+    return _value;
 }
 
 let _cached_encoder_for_AOCSCurrencyInfoList: $.ASN1Encoder<AOCSCurrencyInfoList> | null = null;
@@ -48,6 +51,5 @@ function _encode_AOCSCurrencyInfoList (value: AOCSCurrencyInfoList, elGetter: $.
     if (!_cached_encoder_for_AOCSCurrencyInfoList) { _cached_encoder_for_AOCSCurrencyInfoList = $._encodeSequenceOf<AOCSCurrencyInfo>(() => _encode_AOCSCurrencyInfo, $.BER); }
     return _cached_encoder_for_AOCSCurrencyInfoList(value, elGetter);
 }
-
 
 /* eslint-enable */

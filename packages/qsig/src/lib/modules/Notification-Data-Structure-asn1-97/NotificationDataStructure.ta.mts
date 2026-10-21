@@ -4,8 +4,7 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
-
+import { Code, _decode_Code, _encode_Code } from "../Notification-class-asn1-97/Code.ta.mjs";
 
 /**
  * @summary NotificationDataStructure
@@ -60,7 +59,6 @@ class NotificationDataStructure {
     public static _from_object (_o: { [_K in keyof (NotificationDataStructure)]: (NotificationDataStructure)[_K] }): NotificationDataStructure {
         return new NotificationDataStructure(_o.notificationValue, _o.notificationArgument);
     }
-
 
 }
 
@@ -146,7 +144,7 @@ let _cached_encoder_for_NotificationDataStructure: $.ASN1Encoder<NotificationDat
  */
 export
 function _encode_NotificationDataStructure (value: NotificationDataStructure, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NotificationDataStructure) { _cached_encoder_for_NotificationDataStructure = function (value: NotificationDataStructure, elGetter: $.ASN1Encoder<NotificationDataStructure>): _Element {
+    if (!_cached_encoder_for_NotificationDataStructure) { _cached_encoder_for_NotificationDataStructure = function (value: NotificationDataStructure, _elGetter: $.ASN1Encoder<NotificationDataStructure>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_Code(value.notificationValue, $.BER));
     if (value.notificationArgument !== undefined) {
@@ -156,6 +154,5 @@ function _encode_NotificationDataStructure (value: NotificationDataStructure, el
 }; }
     return _cached_encoder_for_NotificationDataStructure(value, elGetter);
 }
-
 
 /* eslint-enable */

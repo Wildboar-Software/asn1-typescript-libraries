@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthWtmRes_autWtmResValue, _decode_AuthWtmRes_autWtmResValue, _encode_AuthWtmRes_autWtmResValue, _enum_for_AuthWtmRes_autWtmResValue } from "../WTM-Authentication-Operations-asn1-97/AuthWtmRes-autWtmResValue.ta.mjs";
-// export { AuthWtmRes_autWtmResValue, _enum_for_AuthWtmRes_autWtmResValue, AuthWtmRes_autWtmResValue_auth_res_correct /* IMPORTED_LONG_ENUMERATION_ITEM */, auth_res_correct /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthWtmRes_autWtmResValue_auth_res_incorrect /* IMPORTED_LONG_ENUMERATION_ITEM */, auth_res_incorrect /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AuthWtmRes_autWtmResValue, _encode_AuthWtmRes_autWtmResValue } from "../WTM-Authentication-Operations-asn1-97/AuthWtmRes-autWtmResValue.ta.mjs";
 import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-// export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-
 
 /**
  * @summary AuthWtmRes
@@ -159,7 +156,7 @@ let _cached_encoder_for_AuthWtmRes: $.ASN1Encoder<AuthWtmRes> | null = null;
  */
 export
 function _encode_AuthWtmRes (value: AuthWtmRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthWtmRes) { _cached_encoder_for_AuthWtmRes = function (value: AuthWtmRes, elGetter: $.ASN1Encoder<AuthWtmRes>): _Element {
+    if (!_cached_encoder_for_AuthWtmRes) { _cached_encoder_for_AuthWtmRes = function (value: AuthWtmRes, _elGetter: $.ASN1Encoder<AuthWtmRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthWtmRes_autWtmResValue(value.autWtmResValue, $.BER));
     if (value.dummyExtension !== undefined) {
@@ -169,6 +166,5 @@ function _encode_AuthWtmRes (value: AuthWtmRes, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_AuthWtmRes(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CIProtectionLevel, _decode_CIProtectionLevel, _encode_CIProtectionLevel, _enum_for_CIProtectionLevel } from "../Call-Intrusion-Operations-asn1-97/CIProtectionLevel.ta.mjs";
-// export { CIProtectionLevel, _enum_for_CIProtectionLevel, CIProtectionLevel_lowProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, lowProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, CIProtectionLevel_mediumProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, CIProtectionLevel_highProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, highProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, CIProtectionLevel_fullProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, fullProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CIProtectionLevel, _encode_CIProtectionLevel } from "../Call-Intrusion-Operations-asn1-97/CIProtectionLevel.ta.mjs";
 import { CIGetCIPLRes_resultExtension, _decode_CIGetCIPLRes_resultExtension, _encode_CIGetCIPLRes_resultExtension } from "../Call-Intrusion-Operations-asn1-97/CIGetCIPLRes-resultExtension.ta.mjs";
-// export { CIGetCIPLRes_resultExtension, _decode_CIGetCIPLRes_resultExtension, _encode_CIGetCIPLRes_resultExtension } from "../Call-Intrusion-Operations-asn1-97/CIGetCIPLRes-resultExtension.ta.mjs";
-
 
 /**
  * @summary CIGetCIPLRes
@@ -159,7 +156,7 @@ let _cached_encoder_for_CIGetCIPLRes: $.ASN1Encoder<CIGetCIPLRes> | null = null;
  */
 export
 function _encode_CIGetCIPLRes (value: CIGetCIPLRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CIGetCIPLRes) { _cached_encoder_for_CIGetCIPLRes = function (value: CIGetCIPLRes, elGetter: $.ASN1Encoder<CIGetCIPLRes>): _Element {
+    if (!_cached_encoder_for_CIGetCIPLRes) { _cached_encoder_for_CIGetCIPLRes = function (value: CIGetCIPLRes, _elGetter: $.ASN1Encoder<CIGetCIPLRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CIProtectionLevel(value.ciProtectionLevel, $.BER));
     if (value.resultExtension !== undefined) {
@@ -169,6 +166,5 @@ function _encode_CIGetCIPLRes (value: CIGetCIPLRes, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CIGetCIPLRes(value, elGetter);
 }
-
 
 /* eslint-enable */

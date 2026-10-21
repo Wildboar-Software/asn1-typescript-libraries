@@ -2,16 +2,13 @@
 import {
     INTEGER,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKeyInfo.ta.mjs";
-// export { AuthSessionKeyInfo, _decode_AuthSessionKeyInfo, _encode_AuthSessionKeyInfo } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKeyInfo.ta.mjs";
 import { CalcWtatInfo, _decode_CalcWtatInfo, _encode_CalcWtatInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfo.ta.mjs";
-// export { CalcWtatInfo, _decode_CalcWtatInfo, _encode_CalcWtatInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfo.ta.mjs";
 import { AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication-Operations-asn1-97/AuthKey.ta.mjs";
-// export { AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication-Operations-asn1-97/AuthKey.ta.mjs";
-
 
 /**
  * @summary WtatParamInfo_wtatParamInfoChoice
@@ -20,7 +17,12 @@ import { AuthKey, _decode_AuthKey, _encode_AuthKey } from "../WTM-Authentication
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * WtatParamInfo-wtatParamInfoChoice ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * WtatParamInfo-wtatParamInfoChoice ::= CHOICE {
+ *     authSessionKeyInfo [1] IMPLICIT AuthSessionKeyInfo,
+ *     calcWtatInfo [2] IMPLICIT CalcWtatInfo,
+ *     authKey [3] IMPLICIT AuthKey,
+ *     challLen [4] IMPLICIT INTEGER (1..8)
+ * }
  * ```
  */
 export
@@ -44,7 +46,13 @@ function _decode_WtatParamInfo_wtatParamInfoChoice (el: _Element): WtatParamInfo
     "CONTEXT 1": [ "authSessionKeyInfo", $._decode_implicit<AuthSessionKeyInfo>(() => _decode_AuthSessionKeyInfo) ],
     "CONTEXT 2": [ "calcWtatInfo", $._decode_implicit<CalcWtatInfo>(() => _decode_CalcWtatInfo) ],
     "CONTEXT 3": [ "authKey", $._decode_implicit<AuthKey>(() => _decode_AuthKey) ],
-    "CONTEXT 4": [ "challLen", $._decode_implicit<INTEGER>(() => $._decodeInteger) ]
+    "CONTEXT 4": [ "challLen", $._decode_implicit<INTEGER>(() => (el: _Element): INTEGER => {
+            const _value = $._decodeInteger(el);
+            if ((typeof _value === "bigint" ? (_value < 1n || _value > 8n) : (_value < 1 || _value > 8))) {
+                throw new ASN1OverflowError("WtatParamInfo_wtatParamInfoChoice.challLen violates INTEGER constraint");
+            }
+            return _value;
+        }) ]
 }); }
     return _cached_decoder_for_WtatParamInfo_wtatParamInfoChoice(el);
 }
@@ -68,6 +76,5 @@ function _encode_WtatParamInfo_wtatParamInfoChoice (value: WtatParamInfo_wtatPar
 }, $.BER); }
     return _cached_encoder_for_WtatParamInfo_wtatParamInfoChoice(value, elGetter);
 }
-
 
 /* eslint-enable */

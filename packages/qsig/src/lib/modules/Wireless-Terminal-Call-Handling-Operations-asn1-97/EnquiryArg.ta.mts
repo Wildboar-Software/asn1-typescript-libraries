@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-// export { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
 import { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-// export { WtmiExtension, _decode_WtmiExtension, _encode_WtmiExtension } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/WtmiExtension.ta.mjs";
-
 
 /**
  * @summary EnquiryArg
@@ -79,7 +75,6 @@ class EnquiryArg {
     public static _from_object (_o: { [_K in keyof (EnquiryArg)]: (EnquiryArg)[_K] }): EnquiryArg {
         return new EnquiryArg(_o.pisnNumber, _o.qSIGInfoElement, _o.argExtension);
     }
-
 
 }
 
@@ -169,7 +164,7 @@ let _cached_encoder_for_EnquiryArg: $.ASN1Encoder<EnquiryArg> | null = null;
  */
 export
 function _encode_EnquiryArg (value: EnquiryArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EnquiryArg) { _cached_encoder_for_EnquiryArg = function (value: EnquiryArg, elGetter: $.ASN1Encoder<EnquiryArg>): _Element {
+    if (!_cached_encoder_for_EnquiryArg) { _cached_encoder_for_EnquiryArg = function (value: EnquiryArg, _elGetter: $.ASN1Encoder<EnquiryArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.application, 0, () => _encode_PSS1InformationElement, $.BER)(value.qSIGInfoElement, $.BER));
@@ -180,6 +175,5 @@ function _encode_EnquiryArg (value: EnquiryArg, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_EnquiryArg(value, elGetter);
 }
-
 
 /* eslint-enable */

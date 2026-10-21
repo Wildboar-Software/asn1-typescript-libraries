@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    GeneralizedTime
+    GeneralizedTime,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary ValidityPeriodAbs
@@ -20,7 +20,12 @@ export
 type ValidityPeriodAbs = GeneralizedTime; // GeneralizedTime
 
 export
-const _decode_ValidityPeriodAbs: $.ASN1Decoder<ValidityPeriodAbs> = $._decodeGeneralizedTime;
+const _decode_ValidityPeriodAbs = (el: _Element): ValidityPeriodAbs => {
+    if (el.value.length < 12 || el.value.length > 19) {
+        throw new ASN1SizeError("ValidityPeriodAbs violates SIZE constraint");
+    }
+    return $._decodeGeneralizedTime(el);
+};
 
 export
 const _encode_ValidityPeriodAbs: $.ASN1Encoder<ValidityPeriodAbs> = $._encodeGeneralizedTime;

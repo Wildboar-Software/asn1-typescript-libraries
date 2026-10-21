@@ -4,11 +4,10 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary GenericUserValue
@@ -46,6 +45,10 @@ class GenericUserValue {
     ) {
         this.parameterValue = parameterValue;
         this.genericUserData = genericUserData;
+    
+        if ((typeof parameterValue === "bigint" ? (parameterValue < 0n || parameterValue > 255n) : (parameterValue < 0 || parameterValue > 255))) {
+            throw new ASN1OverflowError("GenericUserValue.parameterValue violates INTEGER constraint");
+        }
     }
 
     /**
@@ -63,7 +66,6 @@ class GenericUserValue {
     public static _from_object (_o: { [_K in keyof (GenericUserValue)]: (GenericUserValue)[_K] }): GenericUserValue {
         return new GenericUserValue(_o.parameterValue, _o.genericUserData);
     }
-
 
 }
 
@@ -124,10 +126,8 @@ function _decode_GenericUserValue (el: _Element): GenericUserValue {
     }
     sequence[0].name = "parameterValue";
     sequence[1].name = "genericUserData";
-    let parameterValue!: INTEGER;
-    let genericUserData!: OCTET_STRING;
-    parameterValue = $._decodeInteger(sequence[0]);
-    genericUserData = $._decodeOctetString(sequence[1]);
+    const parameterValue: INTEGER = $._decodeInteger(sequence[0]);
+    const genericUserData: OCTET_STRING = $._decodeOctetString(sequence[1]);
     return new GenericUserValue(
         parameterValue,
         genericUserData,
@@ -148,7 +148,7 @@ let _cached_encoder_for_GenericUserValue: $.ASN1Encoder<GenericUserValue> | null
  */
 export
 function _encode_GenericUserValue (value: GenericUserValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GenericUserValue) { _cached_encoder_for_GenericUserValue = function (value: GenericUserValue, elGetter: $.ASN1Encoder<GenericUserValue>): _Element {
+    if (!_cached_encoder_for_GenericUserValue) { _cached_encoder_for_GenericUserValue = function (value: GenericUserValue, _elGetter: $.ASN1Encoder<GenericUserValue>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.parameterValue, $.BER),
         /* REQUIRED   */ $._encodeOctetString(value.genericUserData, $.BER)
@@ -156,6 +156,5 @@ function _encode_GenericUserValue (value: GenericUserValue, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_GenericUserValue(value, elGetter);
 }
-
 
 /* eslint-enable */

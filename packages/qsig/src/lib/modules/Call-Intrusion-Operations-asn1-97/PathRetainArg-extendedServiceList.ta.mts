@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceList, _decode_ServiceList, _encode_ServiceList } from "../Call-Intrusion-Operations-asn1-97/ServiceList.ta.mjs";
-// export { ServiceList, ServiceList_ci_low /* IMPORTED_LONG_NAMED_BIT */, ci_low /* IMPORTED_SHORT_NAMED_BIT */, ServiceList_ci_medium /* IMPORTED_LONG_NAMED_BIT */, ci_medium /* IMPORTED_SHORT_NAMED_BIT */, ServiceList_ci_high /* IMPORTED_LONG_NAMED_BIT */, ci_high /* IMPORTED_SHORT_NAMED_BIT */, _decode_ServiceList, _encode_ServiceList } from "../Call-Intrusion-Operations-asn1-97/ServiceList.ta.mjs";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary PathRetainArg_extendedServiceList
@@ -18,7 +15,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PathRetainArg-extendedServiceList ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * PathRetainArg-extendedServiceList ::= SEQUENCE {
+ *     serviceList ServiceList,
+ *     extension Extension {{CIExtSet}}
+ * }
  * ```
  * 
  * @class
@@ -61,7 +61,6 @@ class PathRetainArg_extendedServiceList {
     public static _from_object (_o: { [_K in keyof (PathRetainArg_extendedServiceList)]: (PathRetainArg_extendedServiceList)[_K] }): PathRetainArg_extendedServiceList {
         return new PathRetainArg_extendedServiceList(_o.serviceList, _o.extension);
     }
-
 
 }
 
@@ -122,10 +121,8 @@ function _decode_PathRetainArg_extendedServiceList (el: _Element): PathRetainArg
     }
     sequence[0].name = "serviceList";
     sequence[1].name = "extension";
-    let serviceList!: ServiceList;
-    let extension!: Extension;
-    serviceList = _decode_ServiceList(sequence[0]);
-    extension = _decode_Extension(sequence[1]);
+    const serviceList: ServiceList = _decode_ServiceList(sequence[0]);
+    const extension: Extension = _decode_Extension(sequence[1]);
     return new PathRetainArg_extendedServiceList(
         serviceList,
         extension,
@@ -146,7 +143,7 @@ let _cached_encoder_for_PathRetainArg_extendedServiceList: $.ASN1Encoder<PathRet
  */
 export
 function _encode_PathRetainArg_extendedServiceList (value: PathRetainArg_extendedServiceList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PathRetainArg_extendedServiceList) { _cached_encoder_for_PathRetainArg_extendedServiceList = function (value: PathRetainArg_extendedServiceList, elGetter: $.ASN1Encoder<PathRetainArg_extendedServiceList>): _Element {
+    if (!_cached_encoder_for_PathRetainArg_extendedServiceList) { _cached_encoder_for_PathRetainArg_extendedServiceList = function (value: PathRetainArg_extendedServiceList, _elGetter: $.ASN1Encoder<PathRetainArg_extendedServiceList>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_ServiceList(value.serviceList, $.BER),
         /* REQUIRED   */ _encode_Extension(value.extension, $.BER)
@@ -154,6 +151,5 @@ function _encode_PathRetainArg_extendedServiceList (value: PathRetainArg_extende
 }; }
     return _cached_encoder_for_PathRetainArg_extendedServiceList(value, elGetter);
 }
-
 
 /* eslint-enable */

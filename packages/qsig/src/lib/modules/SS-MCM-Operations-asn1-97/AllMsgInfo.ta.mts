@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../SS-MCM-Operations-asn1-97/MessageInfo.ta.mjs";
-// export { MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../SS-MCM-Operations-asn1-97/MessageInfo.ta.mjs";
-
 
 /**
  * @summary AllMsgInfo
@@ -61,7 +59,6 @@ class AllMsgInfo {
     public static _from_object (_o: { [_K in keyof (AllMsgInfo)]: (AllMsgInfo)[_K] }): AllMsgInfo {
         return new AllMsgInfo(_o.newMsgInfo, _o.retrievedMsgInfo);
     }
-
 
 }
 
@@ -122,10 +119,8 @@ function _decode_AllMsgInfo (el: _Element): AllMsgInfo {
     }
     sequence[0].name = "newMsgInfo";
     sequence[1].name = "retrievedMsgInfo";
-    let newMsgInfo!: MessageInfo;
-    let retrievedMsgInfo!: MessageInfo;
-    newMsgInfo = _decode_MessageInfo(sequence[0]);
-    retrievedMsgInfo = _decode_MessageInfo(sequence[1]);
+    const newMsgInfo: MessageInfo = _decode_MessageInfo(sequence[0]);
+    const retrievedMsgInfo: MessageInfo = _decode_MessageInfo(sequence[1]);
     return new AllMsgInfo(
         newMsgInfo,
         retrievedMsgInfo,
@@ -146,7 +141,7 @@ let _cached_encoder_for_AllMsgInfo: $.ASN1Encoder<AllMsgInfo> | null = null;
  */
 export
 function _encode_AllMsgInfo (value: AllMsgInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AllMsgInfo) { _cached_encoder_for_AllMsgInfo = function (value: AllMsgInfo, elGetter: $.ASN1Encoder<AllMsgInfo>): _Element {
+    if (!_cached_encoder_for_AllMsgInfo) { _cached_encoder_for_AllMsgInfo = function (value: AllMsgInfo, _elGetter: $.ASN1Encoder<AllMsgInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_MessageInfo(value.newMsgInfo, $.BER),
         /* REQUIRED   */ _encode_MessageInfo(value.retrievedMsgInfo, $.BER)
@@ -154,6 +149,5 @@ function _encode_AllMsgInfo (value: AllMsgInfo, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_AllMsgInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

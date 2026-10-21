@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AocFinalArg_finalCharge_specificCurrency, _decode_AocFinalArg_finalCharge_specificCurrency, _encode_AocFinalArg_finalCharge_specificCurrency } from "../SS-AOC-Operations-asn1-97/AocFinalArg-finalCharge-specificCurrency.ta.mjs";
-// export { AocFinalArg_finalCharge_specificCurrency, _decode_AocFinalArg_finalCharge_specificCurrency, _encode_AocFinalArg_finalCharge_specificCurrency } from "../SS-AOC-Operations-asn1-97/AocFinalArg-finalCharge-specificCurrency.ta.mjs";
-
 
 /**
  * @summary AocFinalArg_finalCharge
@@ -16,7 +14,14 @@ import { AocFinalArg_finalCharge_specificCurrency, _decode_AocFinalArg_finalChar
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocFinalArg-finalCharge ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AocFinalArg-finalCharge ::= CHOICE {
+ *     chargeNotAvailable [0] IMPLICIT NULL,
+ *     freeOfCharge [1] IMPLICIT NULL,
+ *     specificCurrency SEQUENCE {
+ *         recordedCurrency [1] IMPLICIT RecordedCurrency,
+ *         finalBillingId [2] IMPLICIT FinalBillingId OPTIONAL
+ *     }
+ * }
  * ```
  */
 export
@@ -61,6 +66,5 @@ function _encode_AocFinalArg_finalCharge (value: AocFinalArg_finalCharge, elGett
 }, $.BER); }
     return _cached_encoder_for_AocFinalArg_finalCharge(value, elGetter);
 }
-
 
 /* eslint-enable */

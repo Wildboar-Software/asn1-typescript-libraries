@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AddressHeader, _decode_AddressHeader, _encode_AddressHeader } from "../SS-MCM-Operations-asn1-97/AddressHeader.ta.mjs";
-// export { AddressHeader, _decode_AddressHeader, _encode_AddressHeader } from "../SS-MCM-Operations-asn1-97/AddressHeader.ta.mjs";
-
 
 /**
  * @summary CompleteInfo
@@ -48,6 +46,5 @@ function _encode_CompleteInfo (value: CompleteInfo, elGetter: $.ASN1Encoder<any>
     if (!_cached_encoder_for_CompleteInfo) { _cached_encoder_for_CompleteInfo = $._encodeSequenceOf<AddressHeader>(() => _encode_AddressHeader, $.BER); }
     return _cached_encoder_for_CompleteInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

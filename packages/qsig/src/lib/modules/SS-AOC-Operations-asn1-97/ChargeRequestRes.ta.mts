@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdviceModeCombination, _decode_AdviceModeCombination, _encode_AdviceModeCombination, _enum_for_AdviceModeCombination } from "../SS-AOC-Operations-asn1-97/AdviceModeCombination.ta.mjs";
-// export { AdviceModeCombination, _enum_for_AdviceModeCombination, AdviceModeCombination_rate /* IMPORTED_LONG_ENUMERATION_ITEM */, rate /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_rateInterim /* IMPORTED_LONG_ENUMERATION_ITEM */, rateInterim /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_rateFinal /* IMPORTED_LONG_ENUMERATION_ITEM */, rateFinal /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_interim /* IMPORTED_LONG_ENUMERATION_ITEM */, interim /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_final /* IMPORTED_LONG_ENUMERATION_ITEM */, final /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_interimFinal /* IMPORTED_LONG_ENUMERATION_ITEM */, interimFinal /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_rateInterimFinal /* IMPORTED_LONG_ENUMERATION_ITEM */, rateInterimFinal /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdviceModeCombination, _encode_AdviceModeCombination } from "../SS-AOC-Operations-asn1-97/AdviceModeCombination.ta.mjs";
 import { ChargeRequestRes_chargeReqResExtension, _decode_ChargeRequestRes_chargeReqResExtension, _encode_ChargeRequestRes_chargeReqResExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestRes-chargeReqResExtension.ta.mjs";
-// export { ChargeRequestRes_chargeReqResExtension, _decode_ChargeRequestRes_chargeReqResExtension, _encode_ChargeRequestRes_chargeReqResExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestRes-chargeReqResExtension.ta.mjs";
-
 
 /**
  * @summary ChargeRequestRes
@@ -159,7 +156,7 @@ let _cached_encoder_for_ChargeRequestRes: $.ASN1Encoder<ChargeRequestRes> | null
  */
 export
 function _encode_ChargeRequestRes (value: ChargeRequestRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargeRequestRes) { _cached_encoder_for_ChargeRequestRes = function (value: ChargeRequestRes, elGetter: $.ASN1Encoder<ChargeRequestRes>): _Element {
+    if (!_cached_encoder_for_ChargeRequestRes) { _cached_encoder_for_ChargeRequestRes = function (value: ChargeRequestRes, _elGetter: $.ASN1Encoder<ChargeRequestRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AdviceModeCombination(value.adviceModeCombination, $.BER));
     if (value.chargeReqResExtension !== undefined) {
@@ -169,6 +166,5 @@ function _encode_ChargeRequestRes (value: ChargeRequestRes, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_ChargeRequestRes(value, elGetter);
 }
-
 
 /* eslint-enable */

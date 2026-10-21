@@ -69,6 +69,7 @@ jobs:
           # - "pki-stub"
           - "presentation-address"
           - "q932"
+          - "qsig"
           - "sgp22"
           - "sgp32"
           - "smrse"

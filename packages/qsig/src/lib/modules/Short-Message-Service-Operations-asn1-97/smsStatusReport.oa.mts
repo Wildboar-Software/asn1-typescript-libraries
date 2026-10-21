@@ -1,16 +1,9 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { SmsStatusReportArg, _decode_SmsStatusReportArg, _encode_SmsStatusReportArg } from "../Short-Message-Service-Operations-asn1-97/SmsStatusReportArg.ta.mjs";
-// export { SmsStatusReportArg, _decode_SmsStatusReportArg, _encode_SmsStatusReportArg } from "../Short-Message-Service-Operations-asn1-97/SmsStatusReportArg.ta.mjs";
 import { SmsStatusReportRes, _decode_SmsStatusReportRes, _encode_SmsStatusReportRes } from "../Short-Message-Service-Operations-asn1-97/SmsStatusReportRes.ta.mjs";
-// export { SmsStatusReportRes, _decode_SmsStatusReportRes, _encode_SmsStatusReportRes } from "../Short-Message-Service-Operations-asn1-97/SmsStatusReportRes.ta.mjs";
 import { smsStatusReportError } from "../Short-Message-Service-Operations-asn1-97/smsStatusReportError.oa.mjs";
-// export { smsStatusReportError } from "../Short-Message-Service-Operations-asn1-97/smsStatusReportError.oa.mjs";
 import { unspecified } from "../Short-Message-Service-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Short-Message-Service-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary smsStatusReport

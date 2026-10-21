@@ -3,11 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary Concatenated16BitSMHeader
@@ -54,6 +53,16 @@ class Concatenated16BitSMHeader {
         this.concatenated16BitSMReferenceNumber = concatenated16BitSMReferenceNumber;
         this.maximumNumberOf16BitSMInConcatenatedSM = maximumNumberOf16BitSMInConcatenatedSM;
         this.sequenceNumberOf16BitSM = sequenceNumberOf16BitSM;
+    
+        if ((typeof concatenated16BitSMReferenceNumber === "bigint" ? (concatenated16BitSMReferenceNumber < 0n || concatenated16BitSMReferenceNumber > 65536n) : (concatenated16BitSMReferenceNumber < 0 || concatenated16BitSMReferenceNumber > 65536))) {
+            throw new ASN1OverflowError("Concatenated16BitSMHeader.concatenated16BitSMReferenceNumber violates INTEGER constraint");
+        }
+        if ((typeof maximumNumberOf16BitSMInConcatenatedSM === "bigint" ? (maximumNumberOf16BitSMInConcatenatedSM < 0n || maximumNumberOf16BitSMInConcatenatedSM > 255n) : (maximumNumberOf16BitSMInConcatenatedSM < 0 || maximumNumberOf16BitSMInConcatenatedSM > 255))) {
+            throw new ASN1OverflowError("Concatenated16BitSMHeader.maximumNumberOf16BitSMInConcatenatedSM violates INTEGER constraint");
+        }
+        if ((typeof sequenceNumberOf16BitSM === "bigint" ? (sequenceNumberOf16BitSM < 0n || sequenceNumberOf16BitSM > 255n) : (sequenceNumberOf16BitSM < 0 || sequenceNumberOf16BitSM > 255))) {
+            throw new ASN1OverflowError("Concatenated16BitSMHeader.sequenceNumberOf16BitSM violates INTEGER constraint");
+        }
     }
 
     /**
@@ -71,7 +80,6 @@ class Concatenated16BitSMHeader {
     public static _from_object (_o: { [_K in keyof (Concatenated16BitSMHeader)]: (Concatenated16BitSMHeader)[_K] }): Concatenated16BitSMHeader {
         return new Concatenated16BitSMHeader(_o.concatenated16BitSMReferenceNumber, _o.maximumNumberOf16BitSMInConcatenatedSM, _o.sequenceNumberOf16BitSM);
     }
-
 
 }
 
@@ -134,12 +142,9 @@ function _decode_Concatenated16BitSMHeader (el: _Element): Concatenated16BitSMHe
     sequence[0].name = "concatenated16BitSMReferenceNumber";
     sequence[1].name = "maximumNumberOf16BitSMInConcatenatedSM";
     sequence[2].name = "sequenceNumberOf16BitSM";
-    let concatenated16BitSMReferenceNumber!: INTEGER;
-    let maximumNumberOf16BitSMInConcatenatedSM!: INTEGER;
-    let sequenceNumberOf16BitSM!: INTEGER;
-    concatenated16BitSMReferenceNumber = $._decodeInteger(sequence[0]);
-    maximumNumberOf16BitSMInConcatenatedSM = $._decodeInteger(sequence[1]);
-    sequenceNumberOf16BitSM = $._decodeInteger(sequence[2]);
+    const concatenated16BitSMReferenceNumber: INTEGER = $._decodeInteger(sequence[0]);
+    const maximumNumberOf16BitSMInConcatenatedSM: INTEGER = $._decodeInteger(sequence[1]);
+    const sequenceNumberOf16BitSM: INTEGER = $._decodeInteger(sequence[2]);
     return new Concatenated16BitSMHeader(
         concatenated16BitSMReferenceNumber,
         maximumNumberOf16BitSMInConcatenatedSM,
@@ -161,7 +166,7 @@ let _cached_encoder_for_Concatenated16BitSMHeader: $.ASN1Encoder<Concatenated16B
  */
 export
 function _encode_Concatenated16BitSMHeader (value: Concatenated16BitSMHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Concatenated16BitSMHeader) { _cached_encoder_for_Concatenated16BitSMHeader = function (value: Concatenated16BitSMHeader, elGetter: $.ASN1Encoder<Concatenated16BitSMHeader>): _Element {
+    if (!_cached_encoder_for_Concatenated16BitSMHeader) { _cached_encoder_for_Concatenated16BitSMHeader = function (value: Concatenated16BitSMHeader, _elGetter: $.ASN1Encoder<Concatenated16BitSMHeader>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.concatenated16BitSMReferenceNumber, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.maximumNumberOf16BitSMInConcatenatedSM, $.BER),
@@ -170,6 +175,5 @@ function _encode_Concatenated16BitSMHeader (value: Concatenated16BitSMHeader, el
 }; }
     return _cached_encoder_for_Concatenated16BitSMHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

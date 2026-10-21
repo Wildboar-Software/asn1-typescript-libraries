@@ -1,22 +1,12 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { AuthWtmArg, _decode_AuthWtmArg, _encode_AuthWtmArg } from "../WTM-Authentication-Operations-asn1-97/AuthWtmArg.ta.mjs";
-// export { AuthWtmArg, _decode_AuthWtmArg, _encode_AuthWtmArg } from "../WTM-Authentication-Operations-asn1-97/AuthWtmArg.ta.mjs";
 import { AuthWtmRes, _decode_AuthWtmRes, _encode_AuthWtmRes } from "../WTM-Authentication-Operations-asn1-97/AuthWtmRes.ta.mjs";
-// export { AuthWtmRes, _decode_AuthWtmRes, _encode_AuthWtmRes } from "../WTM-Authentication-Operations-asn1-97/AuthWtmRes.ta.mjs";
 import { temporarilyUnavailable } from "../WTM-Authentication-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
-// export { temporarilyUnavailable } from "../WTM-Authentication-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { notAuthorized } from "../WTM-Authentication-Operations-asn1-97/notAuthorized.oa.mjs";
-// export { notAuthorized } from "../WTM-Authentication-Operations-asn1-97/notAuthorized.oa.mjs";
 import { paramNotAvailable } from "../WTM-Authentication-Operations-asn1-97/paramNotAvailable.oa.mjs";
-// export { paramNotAvailable } from "../WTM-Authentication-Operations-asn1-97/paramNotAvailable.oa.mjs";
 import { unspecified } from "../WTM-Authentication-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../WTM-Authentication-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary authWtmUser

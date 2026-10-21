@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-// export { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
 import { SubaddressTransferArg_argumentExtension, _decode_SubaddressTransferArg_argumentExtension, _encode_SubaddressTransferArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/SubaddressTransferArg-argumentExtension.ta.mjs";
-// export { SubaddressTransferArg_argumentExtension, _decode_SubaddressTransferArg_argumentExtension, _encode_SubaddressTransferArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/SubaddressTransferArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary SubaddressTransferArg
@@ -67,7 +64,6 @@ class SubaddressTransferArg {
     public static _from_object (_o: { [_K in keyof (SubaddressTransferArg)]: (SubaddressTransferArg)[_K] }): SubaddressTransferArg {
         return new SubaddressTransferArg(_o.redirectionSubaddress, _o.argumentExtension);
     }
-
 
 }
 
@@ -153,7 +149,7 @@ let _cached_encoder_for_SubaddressTransferArg: $.ASN1Encoder<SubaddressTransferA
  */
 export
 function _encode_SubaddressTransferArg (value: SubaddressTransferArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubaddressTransferArg) { _cached_encoder_for_SubaddressTransferArg = function (value: SubaddressTransferArg, elGetter: $.ASN1Encoder<SubaddressTransferArg>): _Element {
+    if (!_cached_encoder_for_SubaddressTransferArg) { _cached_encoder_for_SubaddressTransferArg = function (value: SubaddressTransferArg, _elGetter: $.ASN1Encoder<SubaddressTransferArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartySubaddress(value.redirectionSubaddress, $.BER));
     if (value.argumentExtension !== undefined) {
@@ -163,6 +159,5 @@ function _encode_SubaddressTransferArg (value: SubaddressTransferArg, elGetter: 
 }; }
     return _cached_encoder_for_SubaddressTransferArg(value, elGetter);
 }
-
 
 /* eslint-enable */

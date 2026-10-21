@@ -1,26 +1,14 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { CTInitiateArg, _decode_CTInitiateArg, _encode_CTInitiateArg } from "../Call-Transfer-Operations-asn1-97/CTInitiateArg.ta.mjs";
-// export { CTInitiateArg, _decode_CTInitiateArg, _encode_CTInitiateArg } from "../Call-Transfer-Operations-asn1-97/CTInitiateArg.ta.mjs";
 import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Call-Transfer-Operations-asn1-97/DummyRes.ta.mjs";
-// export { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Call-Transfer-Operations-asn1-97/DummyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidCallState } from "../General-Error-List/invalidCallState.oa.mjs";
-// export { invalidCallState } from "../General-Error-List/invalidCallState.oa.mjs";
 import { invalidRerouteingNumber } from "../Call-Transfer-Operations-asn1-97/invalidRerouteingNumber.oa.mjs";
-// export { invalidRerouteingNumber } from "../Call-Transfer-Operations-asn1-97/invalidRerouteingNumber.oa.mjs";
 import { unrecognizedCallIdentity } from "../Call-Transfer-Operations-asn1-97/unrecognizedCallIdentity.oa.mjs";
-// export { unrecognizedCallIdentity } from "../Call-Transfer-Operations-asn1-97/unrecognizedCallIdentity.oa.mjs";
 import { establishmentFailure } from "../Call-Transfer-Operations-asn1-97/establishmentFailure.oa.mjs";
-// export { establishmentFailure } from "../Call-Transfer-Operations-asn1-97/establishmentFailure.oa.mjs";
 import { unspecified } from "../Call-Transfer-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Call-Transfer-Operations-asn1-97/unspecified.oa.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-
 
 /**
  * @summary callTransferInitiate

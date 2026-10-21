@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubDomainID, _decode_SubDomainID, _encode_SubDomainID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/SubDomainID.ta.mjs";
-// export { SubDomainID, _decode_SubDomainID, _encode_SubDomainID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/SubDomainID.ta.mjs";
 import { GloballyUniqueID, _decode_GloballyUniqueID, _encode_GloballyUniqueID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/GloballyUniqueID.ta.mjs";
-// export { GloballyUniqueID, _decode_GloballyUniqueID, _encode_GloballyUniqueID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/GloballyUniqueID.ta.mjs";
-
 
 /**
  * @summary CallIdentificationData_linkageID
@@ -17,7 +14,10 @@ import { GloballyUniqueID, _decode_GloballyUniqueID, _encode_GloballyUniqueID } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CallIdentificationData-linkageID ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CallIdentificationData-linkageID ::= CHOICE {
+ *     subDomainID [1] IMPLICIT SubDomainID,
+ *     globallyUniqueID [2] IMPLICIT GloballyUniqueID
+ * }
  * ```
  */
 export
@@ -59,6 +59,5 @@ function _encode_CallIdentificationData_linkageID (value: CallIdentificationData
 }, $.BER); }
     return _cached_encoder_for_CallIdentificationData_linkageID(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary deactivateDiversionQ_ArgumentType_extension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * deactivateDiversionQ-ArgumentType-extension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * deactivateDiversionQ-ArgumentType-extension ::= CHOICE {
+ *     single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *     multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_deactivateDiversionQ_ArgumentType_extension (value: deactivateD
 }, $.BER); }
     return _cached_encoder_for_deactivateDiversionQ_ArgumentType_extension(value, elGetter);
 }
-
 
 /* eslint-enable */

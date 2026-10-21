@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RecordedCurrency, _decode_RecordedCurrency, _encode_RecordedCurrency } from "../SS-AOC-Operations-asn1-97/RecordedCurrency.ta.mjs";
-// export { RecordedCurrency, _decode_RecordedCurrency, _encode_RecordedCurrency } from "../SS-AOC-Operations-asn1-97/RecordedCurrency.ta.mjs";
 import { InterimBillingId, _decode_InterimBillingId, _encode_InterimBillingId, _enum_for_InterimBillingId } from "../SS-AOC-Operations-asn1-97/InterimBillingId.ta.mjs";
-// export { InterimBillingId, _enum_for_InterimBillingId, InterimBillingId_normalCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, normalCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterimBillingId_creditCardCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, creditCardCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InterimBillingId, _encode_InterimBillingId } from "../SS-AOC-Operations-asn1-97/InterimBillingId.ta.mjs";
-
 
 /**
  * @summary AocInterimArg_interimCharge_specificCurrency
@@ -18,7 +15,10 @@ import { InterimBillingId, _decode_InterimBillingId, _encode_InterimBillingId, _
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocInterimArg-interimCharge-specificCurrency ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * AocInterimArg-interimCharge-specificCurrency ::= SEQUENCE {
+ *     recordedCurrency [1] IMPLICIT RecordedCurrency,
+ *     interimBillingId [2] IMPLICIT InterimBillingId OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -153,7 +153,7 @@ let _cached_encoder_for_AocInterimArg_interimCharge_specificCurrency: $.ASN1Enco
  */
 export
 function _encode_AocInterimArg_interimCharge_specificCurrency (value: AocInterimArg_interimCharge_specificCurrency, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocInterimArg_interimCharge_specificCurrency) { _cached_encoder_for_AocInterimArg_interimCharge_specificCurrency = function (value: AocInterimArg_interimCharge_specificCurrency, elGetter: $.ASN1Encoder<AocInterimArg_interimCharge_specificCurrency>): _Element {
+    if (!_cached_encoder_for_AocInterimArg_interimCharge_specificCurrency) { _cached_encoder_for_AocInterimArg_interimCharge_specificCurrency = function (value: AocInterimArg_interimCharge_specificCurrency, _elGetter: $.ASN1Encoder<AocInterimArg_interimCharge_specificCurrency>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_RecordedCurrency, $.BER)(value.recordedCurrency, $.BER));
     if (value.interimBillingId !== undefined) {
@@ -163,6 +163,5 @@ function _encode_AocInterimArg_interimCharge_specificCurrency (value: AocInterim
 }; }
     return _cached_encoder_for_AocInterimArg_interimCharge_specificCurrency(value, elGetter);
 }
-
 
 /* eslint-enable */

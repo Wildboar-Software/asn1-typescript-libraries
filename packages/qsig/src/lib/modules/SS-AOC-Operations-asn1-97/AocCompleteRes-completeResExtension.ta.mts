@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary AocCompleteRes_completeResExtension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AocCompleteRes-completeResExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AocCompleteRes-completeResExtension ::= CHOICE {
+ *     extension [1] IMPLICIT Extension {{AOCExtSet}},
+ *     multipleExtension [2] IMPLICIT SEQUENCE OF Extension {{AOCExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_AocCompleteRes_completeResExtension (value: AocCompleteRes_comp
 }, $.BER); }
     return _cached_encoder_for_AocCompleteRes_completeResExtension(value, elGetter);
 }
-
 
 /* eslint-enable */

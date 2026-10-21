@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary MCMNoNewMsgArg_argumentExt
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MCMNoNewMsgArg-argumentExt ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MCMNoNewMsgArg-argumentExt ::= CHOICE {
+ *     extension [3] IMPLICIT Extension {{MCMExtSet}},
+ *     multipleExtension [4] IMPLICIT SEQUENCE OF Extension {{MCMExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_MCMNoNewMsgArg_argumentExt (value: MCMNoNewMsgArg_argumentExt, 
 }, $.BER); }
     return _cached_encoder_for_MCMNoNewMsgArg_argumentExt(value, elGetter);
 }
-
 
 /* eslint-enable */

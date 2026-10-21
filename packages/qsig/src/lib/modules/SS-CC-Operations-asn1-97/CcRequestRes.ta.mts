@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
-// export { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
-
 
 /**
  * @summary CcRequestRes
@@ -175,7 +173,7 @@ let _cached_encoder_for_CcRequestRes: $.ASN1Encoder<CcRequestRes> | null = null;
  */
 export
 function _encode_CcRequestRes (value: CcRequestRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CcRequestRes) { _cached_encoder_for_CcRequestRes = function (value: CcRequestRes, elGetter: $.ASN1Encoder<CcRequestRes>): _Element {
+    if (!_cached_encoder_for_CcRequestRes) { _cached_encoder_for_CcRequestRes = function (value: CcRequestRes, _elGetter: $.ASN1Encoder<CcRequestRes>): _Element {
     const _components: _Element[] = [];
     if (value.no_path_reservation !== undefined && !$.deepEq(value.no_path_reservation, CcRequestRes._default_value_for_no_path_reservation)) {
         _components.push(/* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 0, () => $._encodeBoolean, $.BER)(value.no_path_reservation, $.BER));
@@ -190,6 +188,5 @@ function _encode_CcRequestRes (value: CcRequestRes, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_CcRequestRes(value, elGetter);
 }
-
 
 /* eslint-enable */

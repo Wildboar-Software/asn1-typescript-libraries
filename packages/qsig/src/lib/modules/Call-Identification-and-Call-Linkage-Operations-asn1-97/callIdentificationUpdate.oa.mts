@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { CallIdentificationUpdateArg, _decode_CallIdentificationUpdateArg, _encode_CallIdentificationUpdateArg } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationUpdateArg.ta.mjs";
-// export { CallIdentificationUpdateArg, _decode_CallIdentificationUpdateArg, _encode_CallIdentificationUpdateArg } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationUpdateArg.ta.mjs";
-
 
 /**
  * @summary callIdentificationUpdate

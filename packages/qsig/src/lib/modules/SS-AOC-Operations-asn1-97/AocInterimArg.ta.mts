@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AocInterimArg_interimCharge, _decode_AocInterimArg_interimCharge, _encode_AocInterimArg_interimCharge } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimCharge.ta.mjs";
-// export { AocInterimArg_interimCharge, _decode_AocInterimArg_interimCharge, _encode_AocInterimArg_interimCharge } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimCharge.ta.mjs";
 import { AocInterimArg_interimArgExtension, _decode_AocInterimArg_interimArgExtension, _encode_AocInterimArg_interimArgExtension } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimArgExtension.ta.mjs";
-// export { AocInterimArg_interimArgExtension, _decode_AocInterimArg_interimArgExtension, _encode_AocInterimArg_interimArgExtension } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimArgExtension.ta.mjs";
-
 
 /**
  * @summary AocInterimArg
@@ -74,7 +71,6 @@ class AocInterimArg {
     public static _from_object (_o: { [_K in keyof (AocInterimArg)]: (AocInterimArg)[_K] }): AocInterimArg {
         return new AocInterimArg(_o.interimCharge, _o.interimArgExtension);
     }
-
 
 }
 
@@ -160,7 +156,7 @@ let _cached_encoder_for_AocInterimArg: $.ASN1Encoder<AocInterimArg> | null = nul
  */
 export
 function _encode_AocInterimArg (value: AocInterimArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AocInterimArg) { _cached_encoder_for_AocInterimArg = function (value: AocInterimArg, elGetter: $.ASN1Encoder<AocInterimArg>): _Element {
+    if (!_cached_encoder_for_AocInterimArg) { _cached_encoder_for_AocInterimArg = function (value: AocInterimArg, _elGetter: $.ASN1Encoder<AocInterimArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AocInterimArg_interimCharge(value.interimCharge, $.BER));
     if (value.interimArgExtension !== undefined) {
@@ -170,6 +166,5 @@ function _encode_AocInterimArg (value: AocInterimArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_AocInterimArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,16 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Procedure, _decode_Procedure, _encode_Procedure, _enum_for_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
-// export { Procedure, _enum_for_Procedure, Procedure_cfu /* IMPORTED_LONG_ENUMERATION_ITEM */, cfu /* IMPORTED_SHORT_ENUMERATION_ITEM */, Procedure_cfb /* IMPORTED_LONG_ENUMERATION_ITEM */, cfb /* IMPORTED_SHORT_ENUMERATION_ITEM */, Procedure_cfnr /* IMPORTED_LONG_ENUMERATION_ITEM */, cfnr /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Procedure, _encode_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-// export { BasicService, _enum_for_BasicService, BasicService_allServices /* IMPORTED_LONG_ENUMERATION_ITEM */, allServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_speech /* IMPORTED_LONG_ENUMERATION_ITEM */, speech /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_unrestrictedDigitalInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, unrestrictedDigitalInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_audio3100Hz /* IMPORTED_LONG_ENUMERATION_ITEM */, audio3100Hz /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telephony /* IMPORTED_LONG_ENUMERATION_ITEM */, telephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_teletex /* IMPORTED_LONG_ENUMERATION_ITEM */, teletex /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telefaxGroup4Class1 /* IMPORTED_LONG_ENUMERATION_ITEM */, telefaxGroup4Class1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotexSyntaxBased /* IMPORTED_LONG_ENUMERATION_ITEM */, videotexSyntaxBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotelephony /* IMPORTED_LONG_ENUMERATION_ITEM */, videotelephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BasicService, _encode_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
 import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
-// export { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { _decode_activateDiversionQ_ArgumentType_extension, _encode_activateDiversionQ_ArgumentType_extension, activateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/activateDiversionQ-ArgumentType-extension.ta.mjs";
-// export { activateDiversionQ_ArgumentType_extension, _decode_activateDiversionQ_ArgumentType_extension, _encode_activateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/activateDiversionQ-ArgumentType-extension.ta.mjs";
-
 
 /**
  * @summary activateDiversionQ_ArgumentType
@@ -24,7 +18,17 @@ import { _decode_activateDiversionQ_ArgumentType_extension, _encode_activateDive
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * activateDiversionQ-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * activateDiversionQ-ArgumentType ::= SEQUENCE {
+ *     procedure Procedure,
+ *     basicService BasicService,
+ *     divertedToAddress Address,
+ *     servedUserNr PartyNumber,
+ *     activatingUserNr PartyNumber,
+ *     extension CHOICE {
+ *         single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -213,7 +217,7 @@ let _cached_encoder_for_activateDiversionQ_ArgumentType: $.ASN1Encoder<activateD
  */
 export
 function _encode_activateDiversionQ_ArgumentType (value: activateDiversionQ_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_activateDiversionQ_ArgumentType) { _cached_encoder_for_activateDiversionQ_ArgumentType = function (value: activateDiversionQ_ArgumentType, elGetter: $.ASN1Encoder<activateDiversionQ_ArgumentType>): _Element {
+    if (!_cached_encoder_for_activateDiversionQ_ArgumentType) { _cached_encoder_for_activateDiversionQ_ArgumentType = function (value: activateDiversionQ_ArgumentType, _elGetter: $.ASN1Encoder<activateDiversionQ_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_Procedure(value.procedure, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));
@@ -227,6 +231,5 @@ function _encode_activateDiversionQ_ArgumentType (value: activateDiversionQ_Argu
 }; }
     return _cached_encoder_for_activateDiversionQ_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

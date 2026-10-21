@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WtmUserId, _decode_WtmUserId, _encode_WtmUserId } from "../WTM-Authentication-Operations-asn1-97/WtmUserId.ta.mjs";
-// export { WtmUserId, _decode_WtmUserId, _encode_WtmUserId } from "../WTM-Authentication-Operations-asn1-97/WtmUserId.ta.mjs";
 import { CalcWtatInfo, _decode_CalcWtatInfo, _encode_CalcWtatInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfo.ta.mjs";
-// export { CalcWtatInfo, _decode_CalcWtatInfo, _encode_CalcWtatInfo } from "../WTM-Authentication-Operations-asn1-97/CalcWtatInfo.ta.mjs";
 import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-// export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
-
 
 /**
  * @summary AuthWtmArg
@@ -75,7 +71,6 @@ class AuthWtmArg {
     public static _from_object (_o: { [_K in keyof (AuthWtmArg)]: (AuthWtmArg)[_K] }): AuthWtmArg {
         return new AuthWtmArg(_o.wtmUserId, _o.calcWtatInfo, _o.dummyExtension);
     }
-
 
 }
 
@@ -165,7 +160,7 @@ let _cached_encoder_for_AuthWtmArg: $.ASN1Encoder<AuthWtmArg> | null = null;
  */
 export
 function _encode_AuthWtmArg (value: AuthWtmArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthWtmArg) { _cached_encoder_for_AuthWtmArg = function (value: AuthWtmArg, elGetter: $.ASN1Encoder<AuthWtmArg>): _Element {
+    if (!_cached_encoder_for_AuthWtmArg) { _cached_encoder_for_AuthWtmArg = function (value: AuthWtmArg, _elGetter: $.ASN1Encoder<AuthWtmArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_WtmUserId(value.wtmUserId, $.BER));
     if (value.calcWtatInfo !== undefined) {
@@ -178,6 +173,5 @@ function _encode_AuthWtmArg (value: AuthWtmArg, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_AuthWtmArg(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary PumiExtension
@@ -60,6 +58,5 @@ function _encode_PumiExtension (value: PumiExtension, elGetter: $.ASN1Encoder<an
 }, $.BER); }
     return _cached_encoder_for_PumiExtension(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -4,9 +4,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { RejectProblem, RejectProblem_general_unrecognisedPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_unrecognisedPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_general_mistypedPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_mistypedPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_general_badlyStructuredPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_badlyStructuredPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_duplicateInvocation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_duplicateInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unrecognisedOperation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unrecognisedOperation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_mistypedArgument /* IMPORTED_LONG_NAMED_INTEGER */, invoke_mistypedArgument /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_resourceLimitation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_resourceLimitation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_releaseInProgress /* IMPORTED_LONG_NAMED_INTEGER */, invoke_releaseInProgress /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unrecognisedLinkedId /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unrecognisedLinkedId /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_linkedResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, invoke_linkedResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unexpectedLinkedOperation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unexpectedLinkedOperation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_unrecognisedInvocation /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_unrecognisedInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_resultResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_resultResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_mistypedResult /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_mistypedResult /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unrecognisedInvocation /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unrecognisedInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_errorResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, returnError_errorResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unrecognisedError /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unrecognisedError /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unexpectedError /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unexpectedError /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_mistypedParameter /* IMPORTED_LONG_NAMED_INTEGER */, returnError_mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RejectProblem, _encode_RejectProblem } from "../PSS1-Service-APDUs-asn1-97/RejectProblem.ta.mjs";
-
+import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 
 /**
  * @summary ReturnResult_result
@@ -15,7 +13,20 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReturnResult-result ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReturnResult-result ::= SEQUENCE {
+ *     opcode OPERATION.&operationCode ({Operations})
+ *     (
+ *         CONSTRAINED BY {
+ *             -- identified by invokeId --
+ *         }
+ *         ! RejectProblem: returnResult-unrecognisedInvocation
+ *     ),
+ *     result OPERATION.&ResultType
+ *     (
+ *         {Operations} {@.opcode}
+ *         ! RejectProblem: returnResult-mistypedResult
+ *     )
+ * }
  * ```
  * 
  * @class
@@ -58,7 +69,6 @@ class ReturnResult_result {
     public static _from_object (_o: { [_K in keyof (ReturnResult_result)]: (ReturnResult_result)[_K] }): ReturnResult_result {
         return new ReturnResult_result(_o.opcode, _o.result);
     }
-
 
 }
 
@@ -119,10 +129,8 @@ function _decode_ReturnResult_result (el: _Element): ReturnResult_result {
     }
     sequence[0].name = "opcode";
     sequence[1].name = "result";
-    let opcode!: Code;
-    let result!: _Element;
-    opcode = _decode_Code(sequence[0]);
-    result = $._decodeAny(sequence[1]);
+    const opcode: Code = _decode_Code(sequence[0]);
+    const result: _Element = $._decodeAny(sequence[1]);
     return new ReturnResult_result(
         opcode,
         result,
@@ -143,7 +151,7 @@ let _cached_encoder_for_ReturnResult_result: $.ASN1Encoder<ReturnResult_result> 
  */
 export
 function _encode_ReturnResult_result (value: ReturnResult_result, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReturnResult_result) { _cached_encoder_for_ReturnResult_result = function (value: ReturnResult_result, elGetter: $.ASN1Encoder<ReturnResult_result>): _Element {
+    if (!_cached_encoder_for_ReturnResult_result) { _cached_encoder_for_ReturnResult_result = function (value: ReturnResult_result, _elGetter: $.ASN1Encoder<ReturnResult_result>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_Code(value.opcode, $.BER),
         /* REQUIRED   */ $._encodeAny(value.result, $.BER)
@@ -151,6 +159,5 @@ function _encode_ReturnResult_result (value: ReturnResult_result, elGetter: $.AS
 }; }
     return _cached_encoder_for_ReturnResult_result(value, elGetter);
 }
-
 
 /* eslint-enable */

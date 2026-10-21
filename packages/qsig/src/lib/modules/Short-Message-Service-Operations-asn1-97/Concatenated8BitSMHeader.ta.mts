@@ -3,11 +3,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary Concatenated8BitSMHeader
@@ -54,6 +53,16 @@ class Concatenated8BitSMHeader {
         this.concatenated8BitSMReferenceNumber = concatenated8BitSMReferenceNumber;
         this.maximumNumberOf8BitSMInConcatenatedSM = maximumNumberOf8BitSMInConcatenatedSM;
         this.sequenceNumberOf8BitSM = sequenceNumberOf8BitSM;
+    
+        if ((typeof concatenated8BitSMReferenceNumber === "bigint" ? (concatenated8BitSMReferenceNumber < 0n || concatenated8BitSMReferenceNumber > 255n) : (concatenated8BitSMReferenceNumber < 0 || concatenated8BitSMReferenceNumber > 255))) {
+            throw new ASN1OverflowError("Concatenated8BitSMHeader.concatenated8BitSMReferenceNumber violates INTEGER constraint");
+        }
+        if ((typeof maximumNumberOf8BitSMInConcatenatedSM === "bigint" ? (maximumNumberOf8BitSMInConcatenatedSM < 0n || maximumNumberOf8BitSMInConcatenatedSM > 255n) : (maximumNumberOf8BitSMInConcatenatedSM < 0 || maximumNumberOf8BitSMInConcatenatedSM > 255))) {
+            throw new ASN1OverflowError("Concatenated8BitSMHeader.maximumNumberOf8BitSMInConcatenatedSM violates INTEGER constraint");
+        }
+        if ((typeof sequenceNumberOf8BitSM === "bigint" ? (sequenceNumberOf8BitSM < 0n || sequenceNumberOf8BitSM > 255n) : (sequenceNumberOf8BitSM < 0 || sequenceNumberOf8BitSM > 255))) {
+            throw new ASN1OverflowError("Concatenated8BitSMHeader.sequenceNumberOf8BitSM violates INTEGER constraint");
+        }
     }
 
     /**
@@ -71,7 +80,6 @@ class Concatenated8BitSMHeader {
     public static _from_object (_o: { [_K in keyof (Concatenated8BitSMHeader)]: (Concatenated8BitSMHeader)[_K] }): Concatenated8BitSMHeader {
         return new Concatenated8BitSMHeader(_o.concatenated8BitSMReferenceNumber, _o.maximumNumberOf8BitSMInConcatenatedSM, _o.sequenceNumberOf8BitSM);
     }
-
 
 }
 
@@ -134,12 +142,9 @@ function _decode_Concatenated8BitSMHeader (el: _Element): Concatenated8BitSMHead
     sequence[0].name = "concatenated8BitSMReferenceNumber";
     sequence[1].name = "maximumNumberOf8BitSMInConcatenatedSM";
     sequence[2].name = "sequenceNumberOf8BitSM";
-    let concatenated8BitSMReferenceNumber!: INTEGER;
-    let maximumNumberOf8BitSMInConcatenatedSM!: INTEGER;
-    let sequenceNumberOf8BitSM!: INTEGER;
-    concatenated8BitSMReferenceNumber = $._decodeInteger(sequence[0]);
-    maximumNumberOf8BitSMInConcatenatedSM = $._decodeInteger(sequence[1]);
-    sequenceNumberOf8BitSM = $._decodeInteger(sequence[2]);
+    const concatenated8BitSMReferenceNumber: INTEGER = $._decodeInteger(sequence[0]);
+    const maximumNumberOf8BitSMInConcatenatedSM: INTEGER = $._decodeInteger(sequence[1]);
+    const sequenceNumberOf8BitSM: INTEGER = $._decodeInteger(sequence[2]);
     return new Concatenated8BitSMHeader(
         concatenated8BitSMReferenceNumber,
         maximumNumberOf8BitSMInConcatenatedSM,
@@ -161,7 +166,7 @@ let _cached_encoder_for_Concatenated8BitSMHeader: $.ASN1Encoder<Concatenated8Bit
  */
 export
 function _encode_Concatenated8BitSMHeader (value: Concatenated8BitSMHeader, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Concatenated8BitSMHeader) { _cached_encoder_for_Concatenated8BitSMHeader = function (value: Concatenated8BitSMHeader, elGetter: $.ASN1Encoder<Concatenated8BitSMHeader>): _Element {
+    if (!_cached_encoder_for_Concatenated8BitSMHeader) { _cached_encoder_for_Concatenated8BitSMHeader = function (value: Concatenated8BitSMHeader, _elGetter: $.ASN1Encoder<Concatenated8BitSMHeader>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.concatenated8BitSMReferenceNumber, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.maximumNumberOf8BitSMInConcatenatedSM, $.BER),
@@ -170,6 +175,5 @@ function _encode_Concatenated8BitSMHeader (value: Concatenated8BitSMHeader, elGe
 }; }
     return _cached_encoder_for_Concatenated8BitSMHeader(value, elGetter);
 }
-
 
 /* eslint-enable */

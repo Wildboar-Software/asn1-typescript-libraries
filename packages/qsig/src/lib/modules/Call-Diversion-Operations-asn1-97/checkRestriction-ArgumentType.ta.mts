@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-// export { BasicService, _enum_for_BasicService, BasicService_allServices /* IMPORTED_LONG_ENUMERATION_ITEM */, allServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_speech /* IMPORTED_LONG_ENUMERATION_ITEM */, speech /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_unrestrictedDigitalInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, unrestrictedDigitalInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_audio3100Hz /* IMPORTED_LONG_ENUMERATION_ITEM */, audio3100Hz /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telephony /* IMPORTED_LONG_ENUMERATION_ITEM */, telephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_teletex /* IMPORTED_LONG_ENUMERATION_ITEM */, teletex /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telefaxGroup4Class1 /* IMPORTED_LONG_ENUMERATION_ITEM */, telefaxGroup4Class1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotexSyntaxBased /* IMPORTED_LONG_ENUMERATION_ITEM */, videotexSyntaxBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotelephony /* IMPORTED_LONG_ENUMERATION_ITEM */, videotelephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BasicService, _encode_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
 import { _decode_checkRestriction_ArgumentType_extension, _encode_checkRestriction_ArgumentType_extension, checkRestriction_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ArgumentType-extension.ta.mjs";
-// export { checkRestriction_ArgumentType_extension, _decode_checkRestriction_ArgumentType_extension, _encode_checkRestriction_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/checkRestriction-ArgumentType-extension.ta.mjs";
-
 
 /**
  * @summary checkRestriction_ArgumentType
@@ -20,7 +16,15 @@ import { _decode_checkRestriction_ArgumentType_extension, _encode_checkRestricti
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * checkRestriction-ArgumentType ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * checkRestriction-ArgumentType ::= SEQUENCE {
+ *     servedUserNr PartyNumber,
+ *     basicService BasicService,
+ *     divertedToNr PartyNumber,
+ *     extension CHOICE {
+ *         single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *         multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -179,7 +183,7 @@ let _cached_encoder_for_checkRestriction_ArgumentType: $.ASN1Encoder<checkRestri
  */
 export
 function _encode_checkRestriction_ArgumentType (value: checkRestriction_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_checkRestriction_ArgumentType) { _cached_encoder_for_checkRestriction_ArgumentType = function (value: checkRestriction_ArgumentType, elGetter: $.ASN1Encoder<checkRestriction_ArgumentType>): _Element {
+    if (!_cached_encoder_for_checkRestriction_ArgumentType) { _cached_encoder_for_checkRestriction_ArgumentType = function (value: checkRestriction_ArgumentType, _elGetter: $.ASN1Encoder<checkRestriction_ArgumentType>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.servedUserNr, $.BER));
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));
@@ -191,6 +195,5 @@ function _encode_checkRestriction_ArgumentType (value: checkRestriction_Argument
 }; }
     return _cached_encoder_for_checkRestriction_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

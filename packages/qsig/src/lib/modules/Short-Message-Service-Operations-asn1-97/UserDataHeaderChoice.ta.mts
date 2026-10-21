@@ -5,22 +5,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SmscControlParameterHeader, _decode_SmscControlParameterHeader, _encode_SmscControlParameterHeader } from "../Short-Message-Service-Operations-asn1-97/SmscControlParameterHeader.ta.mjs";
-// export { SmscControlParameterHeader, SmscControlParameterHeader_sRforTransactionCompleted /* IMPORTED_LONG_NAMED_BIT */, sRforTransactionCompleted /* IMPORTED_SHORT_NAMED_BIT */, SmscControlParameterHeader_sRforPermanentError /* IMPORTED_LONG_NAMED_BIT */, sRforPermanentError /* IMPORTED_SHORT_NAMED_BIT */, SmscControlParameterHeader_sRforTempErrorSCnotTrying /* IMPORTED_LONG_NAMED_BIT */, sRforTempErrorSCnotTrying /* IMPORTED_SHORT_NAMED_BIT */, SmscControlParameterHeader_sRforTempErrorSCstillTrying /* IMPORTED_LONG_NAMED_BIT */, sRforTempErrorSCstillTrying /* IMPORTED_SHORT_NAMED_BIT */, SmscControlParameterHeader_cancelSRRforConcatenatedSM /* IMPORTED_LONG_NAMED_BIT */, cancelSRRforConcatenatedSM /* IMPORTED_SHORT_NAMED_BIT */, SmscControlParameterHeader_includeOrigUDHintoSR /* IMPORTED_LONG_NAMED_BIT */, includeOrigUDHintoSR /* IMPORTED_SHORT_NAMED_BIT */, _decode_SmscControlParameterHeader, _encode_SmscControlParameterHeader } from "../Short-Message-Service-Operations-asn1-97/SmscControlParameterHeader.ta.mjs";
 import { Concatenated8BitSMHeader, _decode_Concatenated8BitSMHeader, _encode_Concatenated8BitSMHeader } from "../Short-Message-Service-Operations-asn1-97/Concatenated8BitSMHeader.ta.mjs";
-// export { Concatenated8BitSMHeader, _decode_Concatenated8BitSMHeader, _encode_Concatenated8BitSMHeader } from "../Short-Message-Service-Operations-asn1-97/Concatenated8BitSMHeader.ta.mjs";
 import { Concatenated16BitSMHeader, _decode_Concatenated16BitSMHeader, _encode_Concatenated16BitSMHeader } from "../Short-Message-Service-Operations-asn1-97/Concatenated16BitSMHeader.ta.mjs";
-// export { Concatenated16BitSMHeader, _decode_Concatenated16BitSMHeader, _encode_Concatenated16BitSMHeader } from "../Short-Message-Service-Operations-asn1-97/Concatenated16BitSMHeader.ta.mjs";
 import { ApplicationPort8BitHeader, _decode_ApplicationPort8BitHeader, _encode_ApplicationPort8BitHeader } from "../Short-Message-Service-Operations-asn1-97/ApplicationPort8BitHeader.ta.mjs";
-// export { ApplicationPort8BitHeader, _decode_ApplicationPort8BitHeader, _encode_ApplicationPort8BitHeader } from "../Short-Message-Service-Operations-asn1-97/ApplicationPort8BitHeader.ta.mjs";
 import { ApplicationPort16BitHeader, _decode_ApplicationPort16BitHeader, _encode_ApplicationPort16BitHeader } from "../Short-Message-Service-Operations-asn1-97/ApplicationPort16BitHeader.ta.mjs";
-// export { ApplicationPort16BitHeader, _decode_ApplicationPort16BitHeader, _encode_ApplicationPort16BitHeader } from "../Short-Message-Service-Operations-asn1-97/ApplicationPort16BitHeader.ta.mjs";
 import { DataHeaderSourceIndicator, _decode_DataHeaderSourceIndicator, _encode_DataHeaderSourceIndicator } from "../Short-Message-Service-Operations-asn1-97/DataHeaderSourceIndicator.ta.mjs";
-// export { DataHeaderSourceIndicator, DataHeaderSourceIndicator_originalSender /* IMPORTED_LONG_NAMED_INTEGER */, originalSender /* IMPORTED_SHORT_NAMED_INTEGER */, DataHeaderSourceIndicator_originalReceiver /* IMPORTED_LONG_NAMED_INTEGER */, originalReceiver /* IMPORTED_SHORT_NAMED_INTEGER */, DataHeaderSourceIndicator_sMSC /* IMPORTED_LONG_NAMED_INTEGER */, sMSC /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DataHeaderSourceIndicator, _encode_DataHeaderSourceIndicator } from "../Short-Message-Service-Operations-asn1-97/DataHeaderSourceIndicator.ta.mjs";
 import { WirelessControlHeader, _decode_WirelessControlHeader, _encode_WirelessControlHeader } from "../Short-Message-Service-Operations-asn1-97/WirelessControlHeader.ta.mjs";
-// export { WirelessControlHeader, _decode_WirelessControlHeader, _encode_WirelessControlHeader } from "../Short-Message-Service-Operations-asn1-97/WirelessControlHeader.ta.mjs";
 import { GenericUserValue, _decode_GenericUserValue, _encode_GenericUserValue } from "../Short-Message-Service-Operations-asn1-97/GenericUserValue.ta.mjs";
-// export { GenericUserValue, _decode_GenericUserValue, _encode_GenericUserValue } from "../Short-Message-Service-Operations-asn1-97/GenericUserValue.ta.mjs";
-
 
 /**
  * @summary UserDataHeaderChoice
@@ -98,6 +89,5 @@ function _encode_UserDataHeaderChoice (value: UserDataHeaderChoice, elGetter: $.
 }, $.BER); }
     return _cached_encoder_for_UserDataHeaderChoice(value, elGetter);
 }
-
 
 /* eslint-enable */

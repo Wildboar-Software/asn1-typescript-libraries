@@ -1,12 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Intrusion-Operations-asn1-97/DummyArg.ta.mjs";
-// export { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Intrusion-Operations-asn1-97/DummyArg.ta.mjs";
 import { CIGetCIPLRes, _decode_CIGetCIPLRes, _encode_CIGetCIPLRes } from "../Call-Intrusion-Operations-asn1-97/CIGetCIPLRes.ta.mjs";
-// export { CIGetCIPLRes, _decode_CIGetCIPLRes, _encode_CIGetCIPLRes } from "../Call-Intrusion-Operations-asn1-97/CIGetCIPLRes.ta.mjs";
-
 
 /**
  * @summary callIntrusionGetCIPL

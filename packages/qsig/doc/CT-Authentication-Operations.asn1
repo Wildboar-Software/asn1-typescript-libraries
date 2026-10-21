@@ -1,48 +1,80 @@
 CT-Authentication-Operations
-            { iso (1) identified-organization (3) icd-ecma (12) standard (0)
-            qsig-authentication(243) authentication-operations (0) }
+    { iso(1) identified-organization(3) icd-ecma(12) standard(0)
+      qsig-authentication(243) authentication-operations(0) }
 DEFINITIONS EXPLICIT TAGS ::=
 BEGIN
-IMPORTS       OPERATION, ERROR FROM Remote-Operation-Notation
-                    { joint-iso-ccitt (2) remote-operations (4) notation (0) }
-                Extension FROM Manufacturer-specific-service-extension-definition
-                    { iso (1) standard (0) pss1-generic-procedures (11582) msi-definition (0) }
-                invalidServedUserNr FROM General-Error-List
-                    { ccitt (0) recommendation (0) q (17) 950 general-error-list (1) }
-                PartyNumber FROM Addressing-Data-Elements
-                    { iso (1) standard (0) pss1-generic-procedure (11582)
-                    addressing-data-elements (9)};
+IMPORTS
+
+    OPERATION, ERROR
+        FROM Remote-Operations-Information-Objects
+        { joint-iso-itu-t(2) remote-operations(4) informationObjects(5)
+          version1(0) }
+
+    EXTENSION, Extension{}
+        FROM Manufacturer-specific-service-extension-class-asn1-97
+        { iso(1) standard(0) pss1-generic-procedures(11582)
+          msi-class-asn1-97(11) }
+
+    invalidServedUserNr
+        FROM General-Error-List
+        { ccitt(0) recommendation(0) q(17) 950 general-error-list(1) }
+
+    PartyNumber
+        FROM Addressing-Data-Elements-asn1-97
+        { iso(1) standard(0) pss1-generic-procedures(11582)
+          addressing-data-elements-asn1-97(20) }
+    ;
+
+CTAuth-Operations OPERATION ::= {
+    authCtmUser
+    | getCtatParam
+    | ctatParamEnq
+    | getCtanParam
+    | ctanParamEnq
+    | transferAuthParam
+}
+
 -- The following three operations shall apply to SS-CTAT --
-AuthCtmUser ::= OPERATION -- from Home PINX to Visitor PINX--
+
+authCtmUser OPERATION ::= {
+    -- from Home PINX to Visitor PINX --
     ARGUMENT AuthCtmArg
     RESULT AuthCtmRes
     ERRORS {
-        temporarilyUnavailable,
-        invalidServedUserNr,
-        notAuthorized,
-        paramNotAvailable,
-        unspecified
+        temporarilyUnavailable
+        | invalidServedUserNr
+        | notAuthorized
+        | paramNotAvailable
+        | unspecified
     }
+    CODE local: 72
+}
 
-GetCtatParam ::= OPERATION -- from Visitor PINX to Home PINX --
+getCtatParam OPERATION ::= {
+    -- from Visitor PINX to Home PINX --
     ARGUMENT CtatParamArg
     RESULT CtatParamRes
     ERRORS {
-        invalidServedUserNr,
-        notAuthorized,
-        paramNotAvailable,
-        temporarilyUnavailable,
-        unspecified
+        invalidServedUserNr
+        | notAuthorized
+        | paramNotAvailable
+        | temporarilyUnavailable
+        | unspecified
     }
+    CODE local: 73
+}
 
-CtatParamEnq ::= OPERATION -- from Home PINX to Authentication Server PINX--
+ctatParamEnq OPERATION ::= {
+    -- from Home PINX to Authentication Server PINX --
     ARGUMENT CtatParamArg
     RESULT CtatParamRes
     ERRORS {
-        invalidServedUserNr,
-        paramNotAvailable,
-        unspecified
+        invalidServedUserNr
+        | paramNotAvailable
+        | unspecified
     }
+    CODE local: 74
+}
 
 AuthCtmArg ::= SEQUENCE {
     pisnNumber PartyNumber,
@@ -51,7 +83,7 @@ AuthCtmArg ::= SEQUENCE {
 }
 
 AuthCtmRes ::= SEQUENCE {
-    ENUMERATED {
+    result ENUMERATED {
         auth-res-correct(0),
         auth-res-incorrect(1)
     },
@@ -72,25 +104,32 @@ CtatParamRes ::= SEQUENCE {
 }
 
 -- The following two operations shall apply to SS-CTAN --
-GetCtanParam ::= OPERATION -- from Visitor PINX to Home PINX --
-    ARGUMENT CtanParamArg
-    RESULT CtanParamRes
-    ERRORS {
-        invalidServedUserNr,
-        notAuthorized,
-        paramNotAvailable,
-        temporarilyUnavailable,
-        unspecified
-    }
 
-CtanParamEnq ::= OPERATION -- from Home PINX to Authentication Server PINX--
+getCtanParam OPERATION ::= {
+    -- from Visitor PINX to Home PINX --
     ARGUMENT CtanParamArg
     RESULT CtanParamRes
     ERRORS {
-        invalidServedUserNr,
-        paramNotAvailable,
-        unspecified
+        invalidServedUserNr
+        | notAuthorized
+        | paramNotAvailable
+        | temporarilyUnavailable
+        | unspecified
     }
+    CODE local: 75
+}
+
+ctanParamEnq OPERATION ::= {
+    -- from Home PINX to Authentication Server PINX --
+    ARGUMENT CtanParamArg
+    RESULT CtanParamRes
+    ERRORS {
+        invalidServedUserNr
+        | paramNotAvailable
+        | unspecified
+    }
+    CODE local: 76
+}
 
 CtanParamArg ::= SEQUENCE {
     pisnNumber PartyNumber,
@@ -107,16 +146,22 @@ CtanParamRes ::= SEQUENCE {
     dummyExtension DummyExtension OPTIONAL
 }
 
--- The following unconfirmed operation shall apply when interaction between SS-CTAT and SS-CTLR
-TransferAuthParam ::= OPERATION -- from previous Visitor PINX to Visitor PINX --
+-- The following unconfirmed operation shall apply when interaction between SS-CTAT and SS-CTLR --
+
+transferAuthParam OPERATION ::= {
+    -- from previous Visitor PINX to Visitor PINX --
     ARGUMENT SEQUENCE {
-        CtatParamInfo,
-        DummyExtension OPTIONAL
+        info CtatParamInfo,
+        dummyExtension DummyExtension OPTIONAL
     }
+    RETURN RESULT FALSE
+    ALWAYS RESPONDS FALSE
+    CODE local: 77
+}
 
 CtatParamInfo ::= SEQUENCE {
     authAlgorithm AuthAlgorithm,
-    CHOICE {
+    info CHOICE {
         authSessionKeyInfo [1] IMPLICIT AuthSessionKeyInfo,
         calcCtatInfo [2] IMPLICIT CalcCtatInfo
     }
@@ -149,28 +194,29 @@ CalcCtanInfo ::= SEQUENCE {
     -- included if required by the authentication algorithm in use --
 
 DummyExtension ::= CHOICE {
-    extension [3] IMPLICIT Extension,
-    sequOfExtn [4] IMPLICIT SEQUENCE OF Extension
+    extension [3] IMPLICIT Extension {{CTAuthExtSet}},
+    sequOfExtn [4] IMPLICIT SEQUENCE OF Extension {{CTAuthExtSet}}
 }
 
 AuthAlgorithm ::= INTEGER {
     -- type of authentication algorithm --
-    ct2(0)
-    dect(1)
-    gsm(2)
-    us-ct2(3)
-    us-dect(4)
+    ct2(0),
+    dect(1),
+    gsm(2),
+    us-ct2(3),
+    us-dect(4),
     us-gsm(5)
-} (0..255) -- Other name values may be defined in the future --
+} (0..255)
+    -- Other name values may be defined in the future --
 
-AuthChallenge ::= OCTET STRING (SIZE(1-8)) -- Randomly generated parameter --
+AuthChallenge ::= OCTET STRING (SIZE(1..8)) -- Randomly generated parameter --
 
-AuthResponse ::= OCTET STRING (SIZE(1-4)) -- CTAT: Expected response value --
+AuthResponse ::= OCTET STRING (SIZE(1..4)) -- CTAT: Expected response value --
     -- CTAN: Response value from network --
 
-AuthSessionKey ::= OCTET STRING (SIZE(1-16)) -- Authentication session key--
+AuthSessionKey ::= OCTET STRING (SIZE(1..16)) -- Authentication session key --
 
-CalculationParam ::= OCTET STRING (SIZE(1-8)) -- Parameter used when calculating --
+CalculationParam ::= OCTET STRING (SIZE(1..8)) -- Parameter used when calculating --
     -- the authentication session key from --
     -- the real authentication key. It may be --
     -- transferred to the CTM user during --
@@ -179,24 +225,19 @@ CalculationParam ::= OCTET STRING (SIZE(1-8)) -- Parameter used when calculating
 CanCompute ::= NULL -- indicates capability of computing --
     -- challenge and/or response value --
 
-DerivedCipherKey ::= OCTET STRING (SIZE(1-8)) -- derived cipher key may be computed --
+DerivedCipherKey ::= OCTET STRING (SIZE(1..8)) -- derived cipher key may be computed --
     -- when computing challenge and --
-    -- expected response values--
+    -- expected response values --
 
-authCtmUser AuthCtmUser ::= 72
-getCtatParam GetCtatParam ::= 73
-ctatParamEnq CtatParamEnq ::= 74
-getCtanParam GetCtanParam ::= 75
-ctanParamEnq CtanParamEnq ::= 76
-transferAuthParam TransferAuthParam ::= 77
+CTAuthExtSet EXTENSION ::= {...}
 
-notAuthorized ERROR ::= 1007
-paramNotAvailable ERROR ::= 1017
-temporarilyUnavailable ERROR ::= 1000
+notAuthorized ERROR ::= { CODE local: 1007 }
+paramNotAvailable ERROR ::= { CODE local: 1017 }
+temporarilyUnavailable ERROR ::= { CODE local: 1000 }
 
-unspecified Unspecified ::= 1008
+unspecified ERROR ::= {
+    PARAMETER Extension {{CTAuthExtSet}}
+    CODE local: 1008
+}
 
-Unspecified ::= ERROR
-    PARAMETER Extension
-
-END         -- of CT-Authentication-Operations
+END -- of CT-Authentication-Operations

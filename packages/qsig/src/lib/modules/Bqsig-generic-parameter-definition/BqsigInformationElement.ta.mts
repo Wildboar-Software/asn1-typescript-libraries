@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary BqsigInformationElement
  * @description
@@ -49,6 +47,5 @@ function _encode_BqsigInformationElement (value: BqsigInformationElement, elGett
     if (!_cached_encoder_for_BqsigInformationElement) { _cached_encoder_for_BqsigInformationElement = $._encode_implicit(_TagClass.application, 0, () => $._encodeOctetString, $.BER); }
     return _cached_encoder_for_BqsigInformationElement(value, elGetter);
 }
-
 
 /* eslint-enable */

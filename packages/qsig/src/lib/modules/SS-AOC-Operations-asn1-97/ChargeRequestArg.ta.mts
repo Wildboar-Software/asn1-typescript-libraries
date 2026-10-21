@@ -2,14 +2,12 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdviceModeCombination, _decode_AdviceModeCombination, _encode_AdviceModeCombination } from "../SS-AOC-Operations-asn1-97/AdviceModeCombination.ta.mjs";
-// export { AdviceModeCombination, _enum_for_AdviceModeCombination, AdviceModeCombination_rate /* IMPORTED_LONG_ENUMERATION_ITEM */, rate /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_rateInterim /* IMPORTED_LONG_ENUMERATION_ITEM */, rateInterim /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_rateFinal /* IMPORTED_LONG_ENUMERATION_ITEM */, rateFinal /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_interim /* IMPORTED_LONG_ENUMERATION_ITEM */, interim /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_final /* IMPORTED_LONG_ENUMERATION_ITEM */, final /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_interimFinal /* IMPORTED_LONG_ENUMERATION_ITEM */, interimFinal /* IMPORTED_SHORT_ENUMERATION_ITEM */, AdviceModeCombination_rateInterimFinal /* IMPORTED_LONG_ENUMERATION_ITEM */, rateInterimFinal /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AdviceModeCombination, _encode_AdviceModeCombination } from "../SS-AOC-Operations-asn1-97/AdviceModeCombination.ta.mjs";
 import { ChargeRequestArg_chargeReqArgExtension, _decode_ChargeRequestArg_chargeReqArgExtension, _encode_ChargeRequestArg_chargeReqArgExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestArg-chargeReqArgExtension.ta.mjs";
-// export { ChargeRequestArg_chargeReqArgExtension, _decode_ChargeRequestArg_chargeReqArgExtension, _encode_ChargeRequestArg_chargeReqArgExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestArg-chargeReqArgExtension.ta.mjs";
-
 
 /**
  * @summary ChargeRequestArg
@@ -50,6 +48,10 @@ class ChargeRequestArg {
     ) {
         this.adviceModeCombinations = adviceModeCombinations;
         this.chargeReqArgExtension = chargeReqArgExtension;
+    
+        if (adviceModeCombinations.length < 0 || adviceModeCombinations.length > 7) {
+            throw new ASN1SizeError("ChargeRequestArg.adviceModeCombinations violates SIZE constraint");
+        }
     }
 
     /**
@@ -67,7 +69,6 @@ class ChargeRequestArg {
     public static _from_object (_o: { [_K in keyof (ChargeRequestArg)]: (ChargeRequestArg)[_K] }): ChargeRequestArg {
         return new ChargeRequestArg(_o.adviceModeCombinations, _o.chargeReqArgExtension);
     }
-
 
 }
 
@@ -153,7 +154,7 @@ let _cached_encoder_for_ChargeRequestArg: $.ASN1Encoder<ChargeRequestArg> | null
  */
 export
 function _encode_ChargeRequestArg (value: ChargeRequestArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChargeRequestArg) { _cached_encoder_for_ChargeRequestArg = function (value: ChargeRequestArg, elGetter: $.ASN1Encoder<ChargeRequestArg>): _Element {
+    if (!_cached_encoder_for_ChargeRequestArg) { _cached_encoder_for_ChargeRequestArg = function (value: ChargeRequestArg, _elGetter: $.ASN1Encoder<ChargeRequestArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeSequenceOf<AdviceModeCombination>(() => _encode_AdviceModeCombination, $.BER)(value.adviceModeCombinations, $.BER));
     if (value.chargeReqArgExtension !== undefined) {
@@ -163,6 +164,5 @@ function _encode_ChargeRequestArg (value: ChargeRequestArg, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_ChargeRequestArg(value, elGetter);
 }
-
 
 /* eslint-enable */

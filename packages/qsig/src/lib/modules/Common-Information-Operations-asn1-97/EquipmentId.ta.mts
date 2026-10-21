@@ -3,11 +3,10 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     IA5String,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-
-
 
 /**
  * @summary EquipmentId
@@ -54,6 +53,16 @@ class EquipmentId {
         this.nodeId = nodeId;
         this.groupId = groupId;
         this.unitId = unitId;
+    
+        if (nodeId !== undefined && (nodeId.length < 1 || nodeId.length > 10)) {
+            throw new ASN1SizeError("EquipmentId.nodeId violates SIZE constraint");
+        }
+        if (groupId !== undefined && (groupId.length < 1 || groupId.length > 10)) {
+            throw new ASN1SizeError("EquipmentId.groupId violates SIZE constraint");
+        }
+        if (unitId !== undefined && (unitId.length < 1 || unitId.length > 10)) {
+            throw new ASN1SizeError("EquipmentId.unitId violates SIZE constraint");
+        }
     }
 
     /**
@@ -71,7 +80,6 @@ class EquipmentId {
     public static _from_object (_o: { [_K in keyof (EquipmentId)]: (EquipmentId)[_K] }): EquipmentId {
         return new EquipmentId(_o.nodeId, _o.groupId, _o.unitId);
     }
-
 
 }
 
@@ -161,7 +169,7 @@ let _cached_encoder_for_EquipmentId: $.ASN1Encoder<EquipmentId> | null = null;
  */
 export
 function _encode_EquipmentId (value: EquipmentId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EquipmentId) { _cached_encoder_for_EquipmentId = function (value: EquipmentId, elGetter: $.ASN1Encoder<EquipmentId>): _Element {
+    if (!_cached_encoder_for_EquipmentId) { _cached_encoder_for_EquipmentId = function (value: EquipmentId, _elGetter: $.ASN1Encoder<EquipmentId>): _Element {
     const _components: _Element[] = [];
     if (value.nodeId !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeIA5String, $.BER)(value.nodeId, $.BER));
@@ -176,6 +184,5 @@ function _encode_EquipmentId (value: EquipmentId, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_EquipmentId(value, elGetter);
 }
-
 
 /* eslint-enable */

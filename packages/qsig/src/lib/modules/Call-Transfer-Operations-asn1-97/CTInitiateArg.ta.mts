@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Call-Transfer-Operations-asn1-97/CallIdentity.ta.mjs";
-// export { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Call-Transfer-Operations-asn1-97/CallIdentity.ta.mjs";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { CTInitiateArg_argumentExtension, _decode_CTInitiateArg_argumentExtension, _encode_CTInitiateArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTInitiateArg-argumentExtension.ta.mjs";
-// export { CTInitiateArg_argumentExtension, _decode_CTInitiateArg_argumentExtension, _encode_CTInitiateArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTInitiateArg-argumentExtension.ta.mjs";
-
 
 /**
  * @summary CTInitiateArg
@@ -78,7 +74,6 @@ class CTInitiateArg {
     public static _from_object (_o: { [_K in keyof (CTInitiateArg)]: (CTInitiateArg)[_K] }): CTInitiateArg {
         return new CTInitiateArg(_o.callIdentity, _o.rerouteingNumber, _o.argumentExtension);
     }
-
 
 }
 
@@ -168,7 +163,7 @@ let _cached_encoder_for_CTInitiateArg: $.ASN1Encoder<CTInitiateArg> | null = nul
  */
 export
 function _encode_CTInitiateArg (value: CTInitiateArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CTInitiateArg) { _cached_encoder_for_CTInitiateArg = function (value: CTInitiateArg, elGetter: $.ASN1Encoder<CTInitiateArg>): _Element {
+    if (!_cached_encoder_for_CTInitiateArg) { _cached_encoder_for_CTInitiateArg = function (value: CTInitiateArg, _elGetter: $.ASN1Encoder<CTInitiateArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CallIdentity(value.callIdentity, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.rerouteingNumber, $.BER));
@@ -179,6 +174,5 @@ function _encode_CTInitiateArg (value: CTInitiateArg, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_CTInitiateArg(value, elGetter);
 }
-
 
 /* eslint-enable */

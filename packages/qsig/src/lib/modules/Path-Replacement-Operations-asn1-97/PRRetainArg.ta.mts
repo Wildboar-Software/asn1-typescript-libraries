@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
-// export { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { PRRetainArg_extension, _decode_PRRetainArg_extension, _encode_PRRetainArg_extension } from "../Path-Replacement-Operations-asn1-97/PRRetainArg-extension.ta.mjs";
-// export { PRRetainArg_extension, _decode_PRRetainArg_extension, _encode_PRRetainArg_extension } from "../Path-Replacement-Operations-asn1-97/PRRetainArg-extension.ta.mjs";
-
 
 /**
  * @summary PRRetainArg
@@ -78,7 +74,6 @@ class PRRetainArg {
     public static _from_object (_o: { [_K in keyof (PRRetainArg)]: (PRRetainArg)[_K] }): PRRetainArg {
         return new PRRetainArg(_o.callIdentity, _o.rerouteingNumber, _o.extension);
     }
-
 
 }
 
@@ -168,7 +163,7 @@ let _cached_encoder_for_PRRetainArg: $.ASN1Encoder<PRRetainArg> | null = null;
  */
 export
 function _encode_PRRetainArg (value: PRRetainArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PRRetainArg) { _cached_encoder_for_PRRetainArg = function (value: PRRetainArg, elGetter: $.ASN1Encoder<PRRetainArg>): _Element {
+    if (!_cached_encoder_for_PRRetainArg) { _cached_encoder_for_PRRetainArg = function (value: PRRetainArg, _elGetter: $.ASN1Encoder<PRRetainArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CallIdentity(value.callIdentity, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.rerouteingNumber, $.BER));
@@ -179,6 +174,5 @@ function _encode_PRRetainArg (value: PRRetainArg, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_PRRetainArg(value, elGetter);
 }
-
 
 /* eslint-enable */

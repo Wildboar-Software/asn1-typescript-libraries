@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../PUM-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
-// export { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../PUM-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
-
 
 /**
  * @summary PumDelRegArg_pumUserId
@@ -16,7 +13,12 @@ import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PumDelRegArg-pumUserId ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PumDelRegArg-pumUserId ::= CHOICE {
+ *     pumNumber PartyNumber,
+ *     -- The PISN number of the PUM user,
+ *     -- always a Complete Number.
+ *     alternativeId AlternativeId
+ * }
  * ```
  */
 export
@@ -63,6 +65,5 @@ function _encode_PumDelRegArg_pumUserId (value: PumDelRegArg_pumUserId, elGetter
 }, $.BER); }
     return _cached_encoder_for_PumDelRegArg_pumUserId(value, elGetter);
 }
-
 
 /* eslint-enable */

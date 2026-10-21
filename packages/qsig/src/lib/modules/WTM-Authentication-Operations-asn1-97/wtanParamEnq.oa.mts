@@ -1,18 +1,10 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { WtanParamArg, _decode_WtanParamArg, _encode_WtanParamArg } from "../WTM-Authentication-Operations-asn1-97/WtanParamArg.ta.mjs";
-// export { WtanParamArg, _decode_WtanParamArg, _encode_WtanParamArg } from "../WTM-Authentication-Operations-asn1-97/WtanParamArg.ta.mjs";
 import { WtanParamRes, _decode_WtanParamRes, _encode_WtanParamRes } from "../WTM-Authentication-Operations-asn1-97/WtanParamRes.ta.mjs";
-// export { WtanParamRes, _decode_WtanParamRes, _encode_WtanParamRes } from "../WTM-Authentication-Operations-asn1-97/WtanParamRes.ta.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
-// export { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { paramNotAvailable } from "../WTM-Authentication-Operations-asn1-97/paramNotAvailable.oa.mjs";
-// export { paramNotAvailable } from "../WTM-Authentication-Operations-asn1-97/paramNotAvailable.oa.mjs";
 import { unspecified } from "../WTM-Authentication-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../WTM-Authentication-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary wtanParamEnq

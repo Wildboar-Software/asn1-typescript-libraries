@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_BasicService, _encode_BasicService, _enum_for_BasicService, BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-// export { BasicService, _enum_for_BasicService, BasicService_allServices /* IMPORTED_LONG_ENUMERATION_ITEM */, allServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_speech /* IMPORTED_LONG_ENUMERATION_ITEM */, speech /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_unrestrictedDigitalInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, unrestrictedDigitalInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_audio3100Hz /* IMPORTED_LONG_ENUMERATION_ITEM */, audio3100Hz /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telephony /* IMPORTED_LONG_ENUMERATION_ITEM */, telephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_teletex /* IMPORTED_LONG_ENUMERATION_ITEM */, teletex /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_telefaxGroup4Class1 /* IMPORTED_LONG_ENUMERATION_ITEM */, telefaxGroup4Class1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotexSyntaxBased /* IMPORTED_LONG_ENUMERATION_ITEM */, videotexSyntaxBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, BasicService_videotelephony /* IMPORTED_LONG_ENUMERATION_ITEM */, videotelephony /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BasicService, _encode_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
 import { _decode_DNDProtectionLevel, _encode_DNDProtectionLevel, _enum_for_DNDProtectionLevel, DNDProtectionLevel } from "../Do-Not-Disturb-Operations-asn1-97/DNDProtectionLevel.ta.mjs";
-// export { DNDProtectionLevel, _enum_for_DNDProtectionLevel, DNDProtectionLevel_lowProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, lowProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNDProtectionLevel_mediumProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNDProtectionLevel_highProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, highProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNDProtectionLevel_fullProtection /* IMPORTED_LONG_ENUMERATION_ITEM */, fullProtection /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DNDProtectionLevel, _encode_DNDProtectionLevel } from "../Do-Not-Disturb-Operations-asn1-97/DNDProtectionLevel.ta.mjs";
-
 
 /**
  * @summary DNDInterrogateRes_status_Item
@@ -18,7 +15,10 @@ import { _decode_DNDProtectionLevel, _encode_DNDProtectionLevel, _enum_for_DNDPr
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DNDInterrogateRes-status-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DNDInterrogateRes-status-Item ::= SEQUENCE {
+ *     basicService BasicService,
+ *     dndProtectionLevel DNDProtectionLevel OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -159,7 +159,7 @@ let _cached_encoder_for_DNDInterrogateRes_status_Item: $.ASN1Encoder<DNDInterrog
  */
 export
 function _encode_DNDInterrogateRes_status_Item (value: DNDInterrogateRes_status_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DNDInterrogateRes_status_Item) { _cached_encoder_for_DNDInterrogateRes_status_Item = function (value: DNDInterrogateRes_status_Item, elGetter: $.ASN1Encoder<DNDInterrogateRes_status_Item>): _Element {
+    if (!_cached_encoder_for_DNDInterrogateRes_status_Item) { _cached_encoder_for_DNDInterrogateRes_status_Item = function (value: DNDInterrogateRes_status_Item, _elGetter: $.ASN1Encoder<DNDInterrogateRes_status_Item>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_BasicService(value.basicService, $.BER));
     if (value.dndProtectionLevel !== undefined) {
@@ -169,6 +169,5 @@ function _encode_DNDInterrogateRes_status_Item (value: DNDInterrogateRes_status_
 }; }
     return _cached_encoder_for_DNDInterrogateRes_status_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

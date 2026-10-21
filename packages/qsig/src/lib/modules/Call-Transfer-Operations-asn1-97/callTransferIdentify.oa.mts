@@ -1,20 +1,11 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Transfer-Operations-asn1-97/DummyArg.ta.mjs";
-// export { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Transfer-Operations-asn1-97/DummyArg.ta.mjs";
 import { CTIdentifyRes, _decode_CTIdentifyRes, _encode_CTIdentifyRes } from "../Call-Transfer-Operations-asn1-97/CTIdentifyRes.ta.mjs";
-// export { CTIdentifyRes, _decode_CTIdentifyRes, _encode_CTIdentifyRes } from "../Call-Transfer-Operations-asn1-97/CTIdentifyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidCallState } from "../General-Error-List/invalidCallState.oa.mjs";
-// export { invalidCallState } from "../General-Error-List/invalidCallState.oa.mjs";
 import { unspecified } from "../Call-Transfer-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Call-Transfer-Operations-asn1-97/unspecified.oa.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-
 
 /**
  * @summary callTransferIdentify

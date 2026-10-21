@@ -5,9 +5,7 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { AUTH_ALG } from "../WTM-Authentication-Operations-asn1-97/AUTH-ALG.oca.mjs";
-// export { AuthAlgSet } from "../WTM-Authentication-Operations-asn1-97/AuthAlgSet.osa.mjs";
-
+import { DefinedIDs, _decode_DefinedIDs, _encode_DefinedIDs } from "../WTM-Authentication-Operations-asn1-97/DefinedIDs.ta.mjs";
 
 /**
  * @summary AuthAlgorithm
@@ -62,7 +60,6 @@ class AuthAlgorithm {
     public static _from_object (_o: { [_K in keyof (AuthAlgorithm)]: (AuthAlgorithm)[_K] }): AuthAlgorithm {
         return new AuthAlgorithm(_o.authAlg, _o.param);
     }
-
 
 }
 
@@ -148,7 +145,7 @@ let _cached_encoder_for_AuthAlgorithm: $.ASN1Encoder<AuthAlgorithm> | null = nul
  */
 export
 function _encode_AuthAlgorithm (value: AuthAlgorithm, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthAlgorithm) { _cached_encoder_for_AuthAlgorithm = function (value: AuthAlgorithm, elGetter: $.ASN1Encoder<AuthAlgorithm>): _Element {
+    if (!_cached_encoder_for_AuthAlgorithm) { _cached_encoder_for_AuthAlgorithm = function (value: AuthAlgorithm, _elGetter: $.ASN1Encoder<AuthAlgorithm>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_DefinedIDs(value.authAlg, $.BER));
     if (value.param !== undefined) {
@@ -158,6 +155,5 @@ function _encode_AuthAlgorithm (value: AuthAlgorithm, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_AuthAlgorithm(value, elGetter);
 }
-
 
 /* eslint-enable */

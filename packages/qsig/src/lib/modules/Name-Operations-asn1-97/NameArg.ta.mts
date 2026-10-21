@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { NameArg_nameSequence, _decode_NameArg_nameSequence, _encode_NameArg_nameSequence } from "../Name-Operations-asn1-97/NameArg-nameSequence.ta.mjs";
-// export { NameArg_nameSequence, _decode_NameArg_nameSequence, _encode_NameArg_nameSequence } from "../Name-Operations-asn1-97/NameArg-nameSequence.ta.mjs";
-
 
 /**
  * @summary NameArg
@@ -69,6 +66,5 @@ function _encode_NameArg (value: NameArg, elGetter: $.ASN1Encoder<any>): _Elemen
 }, $.BER); }
     return _cached_encoder_for_NameArg(value, elGetter);
 }
-
 
 /* eslint-enable */

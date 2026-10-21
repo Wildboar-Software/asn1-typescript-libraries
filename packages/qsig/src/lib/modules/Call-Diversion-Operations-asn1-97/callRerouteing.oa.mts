@@ -1,30 +1,16 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_callRerouteing_ArgumentType, _encode_callRerouteing_ArgumentType, callRerouteing_ArgumentType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ArgumentType.ta.mjs";
-// export { callRerouteing_ArgumentType, _decode_callRerouteing_ArgumentType, _encode_callRerouteing_ArgumentType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ArgumentType.ta.mjs";
 import { _decode_callRerouteing_ResultType, _encode_callRerouteing_ResultType, callRerouteing_ResultType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ResultType.ta.mjs";
-// export { callRerouteing_ResultType, _decode_callRerouteing_ResultType, _encode_callRerouteing_ResultType } from "../Call-Diversion-Operations-asn1-97/callRerouteing-ResultType.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
-// export { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
-// export { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { resourceUnavailable } from "../General-Error-List/resourceUnavailable.oa.mjs";
-// export { resourceUnavailable } from "../General-Error-List/resourceUnavailable.oa.mjs";
 import { invalidDivertedToNr } from "../Call-Diversion-Operations-asn1-97/invalidDivertedToNr.oa.mjs";
-// export { invalidDivertedToNr } from "../Call-Diversion-Operations-asn1-97/invalidDivertedToNr.oa.mjs";
 import { specialServiceNr } from "../Call-Diversion-Operations-asn1-97/specialServiceNr.oa.mjs";
-// export { specialServiceNr } from "../Call-Diversion-Operations-asn1-97/specialServiceNr.oa.mjs";
 import { diversionToServedUserNr } from "../Call-Diversion-Operations-asn1-97/diversionToServedUserNr.oa.mjs";
-// export { diversionToServedUserNr } from "../Call-Diversion-Operations-asn1-97/diversionToServedUserNr.oa.mjs";
 import { numberOfDiversionsExceeded } from "../Call-Diversion-Operations-asn1-97/numberOfDiversionsExceeded.oa.mjs";
-// export { numberOfDiversionsExceeded } from "../Call-Diversion-Operations-asn1-97/numberOfDiversionsExceeded.oa.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
-// export { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";
 import { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa.mjs";
-// export { unspecified } from "../Call-Diversion-Operations-asn1-97/unspecified.oa.mjs";
-
 
 /**
  * @summary callRerouteing

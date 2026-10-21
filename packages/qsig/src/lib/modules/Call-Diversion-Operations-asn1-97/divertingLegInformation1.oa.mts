@@ -1,10 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-// export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
-// export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { _decode_divertingLegInformation1_ArgumentType, _encode_divertingLegInformation1_ArgumentType, divertingLegInformation1_ArgumentType } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation1-ArgumentType.ta.mjs";
-// export { divertingLegInformation1_ArgumentType, _decode_divertingLegInformation1_ArgumentType, _encode_divertingLegInformation1_ArgumentType } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation1-ArgumentType.ta.mjs";
-
 
 /**
  * @summary divertingLegInformation1

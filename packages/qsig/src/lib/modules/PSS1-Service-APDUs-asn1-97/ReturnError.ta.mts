@@ -5,11 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../PSS1-Service-APDUs-asn1-97/InvokeId.ta.mjs";
-// export { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../PSS1-Service-APDUs-asn1-97/InvokeId.ta.mjs";
-// export { RejectProblem, RejectProblem_general_unrecognisedPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_unrecognisedPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_general_mistypedPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_mistypedPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_general_badlyStructuredPDU /* IMPORTED_LONG_NAMED_INTEGER */, general_badlyStructuredPDU /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_duplicateInvocation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_duplicateInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unrecognisedOperation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unrecognisedOperation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_mistypedArgument /* IMPORTED_LONG_NAMED_INTEGER */, invoke_mistypedArgument /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_resourceLimitation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_resourceLimitation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_releaseInProgress /* IMPORTED_LONG_NAMED_INTEGER */, invoke_releaseInProgress /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unrecognisedLinkedId /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unrecognisedLinkedId /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_linkedResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, invoke_linkedResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_invoke_unexpectedLinkedOperation /* IMPORTED_LONG_NAMED_INTEGER */, invoke_unexpectedLinkedOperation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_unrecognisedInvocation /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_unrecognisedInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_resultResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_resultResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnResult_mistypedResult /* IMPORTED_LONG_NAMED_INTEGER */, returnResult_mistypedResult /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unrecognisedInvocation /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unrecognisedInvocation /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_errorResponseUnexpected /* IMPORTED_LONG_NAMED_INTEGER */, returnError_errorResponseUnexpected /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unrecognisedError /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unrecognisedError /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_unexpectedError /* IMPORTED_LONG_NAMED_INTEGER */, returnError_unexpectedError /* IMPORTED_SHORT_NAMED_INTEGER */, RejectProblem_returnError_mistypedParameter /* IMPORTED_LONG_NAMED_INTEGER */, returnError_mistypedParameter /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_RejectProblem, _encode_RejectProblem } from "../PSS1-Service-APDUs-asn1-97/RejectProblem.ta.mjs";
-// export { ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
-
 
 /**
  * @summary ReturnError
@@ -102,7 +99,6 @@ class ReturnError {
         return new ReturnError(_o.invokeId, _o.errcode, _o.parameter);
     }
 
-
 }
 
 /**
@@ -191,7 +187,7 @@ let _cached_encoder_for_ReturnError: $.ASN1Encoder<ReturnError> | null = null;
  */
 export
 function _encode_ReturnError (value: ReturnError, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReturnError) { _cached_encoder_for_ReturnError = function (value: ReturnError, elGetter: $.ASN1Encoder<ReturnError>): _Element {
+    if (!_cached_encoder_for_ReturnError) { _cached_encoder_for_ReturnError = function (value: ReturnError, _elGetter: $.ASN1Encoder<ReturnError>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_InvokeId(value.invokeId, $.BER));
     _components.push(/* REQUIRED   */ _encode_Code(value.errcode, $.BER));
@@ -202,6 +198,5 @@ function _encode_ReturnError (value: ReturnError, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_ReturnError(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -3,18 +3,14 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FeatureIdList, _decode_FeatureIdList, _encode_FeatureIdList } from "../Common-Information-Operations-asn1-97/FeatureIdList.ta.mjs";
-// export { FeatureIdList, FeatureIdList_reserved /* IMPORTED_LONG_NAMED_BIT */, reserved /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCFreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, ssCFreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCTreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, ssCTreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCCBSpossible /* IMPORTED_LONG_NAMED_BIT */, ssCCBSpossible /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCCNRpossible /* IMPORTED_LONG_NAMED_BIT */, ssCCNRpossible /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCOsupported /* IMPORTED_LONG_NAMED_BIT */, ssCOsupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCIforcedRelease /* IMPORTED_LONG_NAMED_BIT */, ssCIforcedRelease /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCIisolation /* IMPORTED_LONG_NAMED_BIT */, ssCIisolation /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssCIwaitOnBusy /* IMPORTED_LONG_NAMED_BIT */, ssCIwaitOnBusy /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssAOCsupportChargeRateProvAtGatewPinx /* IMPORTED_LONG_NAMED_BIT */, ssAOCsupportChargeRateProvAtGatewPinx /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssAOCsupportInterimChargeProvAtGatewPinx /* IMPORTED_LONG_NAMED_BIT */, ssAOCsupportInterimChargeProvAtGatewPinx /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssAOCsupportFinalChargeProvAtGatewPinx /* IMPORTED_LONG_NAMED_BIT */, ssAOCsupportFinalChargeProvAtGatewPinx /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfPRsupportedAtCooperatingPinx /* IMPORTED_LONG_NAMED_BIT */, anfPRsupportedAtCooperatingPinx /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfCINTcanInterceptImmediate /* IMPORTED_LONG_NAMED_BIT */, anfCINTcanInterceptImmediate /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfCINTcanInterceptDelayed /* IMPORTED_LONG_NAMED_BIT */, anfCINTcanInterceptDelayed /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfWTMIreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, anfWTMIreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_anfPUMIreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, anfPUMIreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, FeatureIdList_ssSSCTreRoutingSupported /* IMPORTED_LONG_NAMED_BIT */, ssSSCTreRoutingSupported /* IMPORTED_SHORT_NAMED_BIT */, _decode_FeatureIdList, _encode_FeatureIdList } from "../Common-Information-Operations-asn1-97/FeatureIdList.ta.mjs";
 import { EquipmentId, _decode_EquipmentId, _encode_EquipmentId } from "../Common-Information-Operations-asn1-97/EquipmentId.ta.mjs";
-// export { EquipmentId, _decode_EquipmentId, _encode_EquipmentId } from "../Common-Information-Operations-asn1-97/EquipmentId.ta.mjs";
 import { PartyCategory, _decode_PartyCategory, _encode_PartyCategory, _enum_for_PartyCategory } from "../Common-Information-Operations-asn1-97/PartyCategory.ta.mjs";
-// export { PartyCategory, _enum_for_PartyCategory, PartyCategory_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyCategory_extension /* IMPORTED_LONG_ENUMERATION_ITEM */, extension /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyCategory_pisnAttendant /* IMPORTED_LONG_ENUMERATION_ITEM */, pisnAttendant /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyCategory_emergExt /* IMPORTED_LONG_ENUMERATION_ITEM */, emergExt /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PartyCategory, _encode_PartyCategory } from "../Common-Information-Operations-asn1-97/PartyCategory.ta.mjs";
 import { CmnArg_extension, _decode_CmnArg_extension, _encode_CmnArg_extension } from "../Common-Information-Operations-asn1-97/CmnArg-extension.ta.mjs";
-// export { CmnArg_extension, _decode_CmnArg_extension, _encode_CmnArg_extension } from "../Common-Information-Operations-asn1-97/CmnArg-extension.ta.mjs";
-
 
 /**
  * @summary CmnArg
@@ -98,6 +94,13 @@ class CmnArg {
         this.equipmentIdentity = equipmentIdentity;
         this.partyCategory = partyCategory;
         this.extension = extension;
+    
+        if (ssDNDOprotectionLevel !== undefined && (typeof ssDNDOprotectionLevel === "bigint" ? (ssDNDOprotectionLevel < 0n || ssDNDOprotectionLevel > 3n) : (ssDNDOprotectionLevel < 0 || ssDNDOprotectionLevel > 3))) {
+            throw new ASN1OverflowError("CmnArg.ssDNDOprotectionLevel violates INTEGER constraint");
+        }
+        if (ssCIprotectionLevel !== undefined && (typeof ssCIprotectionLevel === "bigint" ? (ssCIprotectionLevel < 0n || ssCIprotectionLevel > 3n) : (ssCIprotectionLevel < 0 || ssCIprotectionLevel > 3))) {
+            throw new ASN1OverflowError("CmnArg.ssCIprotectionLevel violates INTEGER constraint");
+        }
     }
 
     /**
@@ -223,7 +226,7 @@ let _cached_encoder_for_CmnArg: $.ASN1Encoder<CmnArg> | null = null;
  */
 export
 function _encode_CmnArg (value: CmnArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CmnArg) { _cached_encoder_for_CmnArg = function (value: CmnArg, elGetter: $.ASN1Encoder<CmnArg>): _Element {
+    if (!_cached_encoder_for_CmnArg) { _cached_encoder_for_CmnArg = function (value: CmnArg, _elGetter: $.ASN1Encoder<CmnArg>): _Element {
     const _components: _Element[] = [];
     if (value.featureIdentifier !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_FeatureIdList, $.BER)(value.featureIdentifier, $.BER));
@@ -247,6 +250,5 @@ function _encode_CmnArg (value: CmnArg, elGetter: $.ASN1Encoder<any>): _Element 
 }; }
     return _cached_encoder_for_CmnArg(value, elGetter);
 }
-
 
 /* eslint-enable */

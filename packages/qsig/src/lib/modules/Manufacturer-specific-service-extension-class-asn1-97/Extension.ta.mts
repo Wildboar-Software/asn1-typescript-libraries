@@ -6,9 +6,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { EXTENSION } from "../Manufacturer-specific-service-extension-class-asn1-97/EXTENSION.oca.mjs";
-// export { Extensionset } from "../Manufacturer-specific-service-extension-class-asn1-97/Extensionset.osa.mjs";
-
 
 /**
  * @summary Extension
@@ -63,7 +60,6 @@ class Extension {
     public static _from_object (_o: { [_K in keyof (Extension)]: (Extension)[_K] }): Extension {
         return new Extension(_o.extensionId, _o.extensionArgument);
     }
-
 
 }
 
@@ -124,10 +120,8 @@ function _decode_Extension (el: _Element): Extension {
     }
     sequence[0].name = "extensionId";
     sequence[1].name = "extensionArgument";
-    let extensionId!: OBJECT_IDENTIFIER;
-    let extensionArgument!: _Element;
-    extensionId = $._decodeObjectIdentifier(sequence[0]);
-    extensionArgument = $._decodeAny(sequence[1]);
+    const extensionId: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const extensionArgument: _Element = $._decodeAny(sequence[1]);
     return new Extension(
         extensionId,
         extensionArgument,
@@ -148,7 +142,7 @@ let _cached_encoder_for_Extension: $.ASN1Encoder<Extension> | null = null;
  */
 export
 function _encode_Extension (value: Extension, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Extension) { _cached_encoder_for_Extension = function (value: Extension, elGetter: $.ASN1Encoder<Extension>): _Element {
+    if (!_cached_encoder_for_Extension) { _cached_encoder_for_Extension = function (value: Extension, _elGetter: $.ASN1Encoder<Extension>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeObjectIdentifier(value.extensionId, $.BER),
         /* REQUIRED   */ $._encodeAny(value.extensionArgument, $.BER)
@@ -156,6 +150,5 @@ function _encode_Extension (value: Extension, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_Extension(value, elGetter);
 }
-
 
 /* eslint-enable */

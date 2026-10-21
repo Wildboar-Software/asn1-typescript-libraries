@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
-// export { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
 import { DialogAbortPDU_abortChoice, _decode_DialogAbortPDU_abortChoice, _encode_DialogAbortPDU_abortChoice } from "../Dialog-Service-Pdus-asn1-97/DialogAbortPDU-abortChoice.ta.mjs";
-// export { DialogAbortPDU_abortChoice, _decode_DialogAbortPDU_abortChoice, _encode_DialogAbortPDU_abortChoice } from "../Dialog-Service-Pdus-asn1-97/DialogAbortPDU-abortChoice.ta.mjs";
-
 
 /**
  * @summary DialogAbortPDU
@@ -67,7 +64,6 @@ class DialogAbortPDU {
     public static _from_object (_o: { [_K in keyof (DialogAbortPDU)]: (DialogAbortPDU)[_K] }): DialogAbortPDU {
         return new DialogAbortPDU(_o.destinationDialogId, _o.abortChoice);
     }
-
 
 }
 
@@ -128,10 +124,8 @@ function _decode_DialogAbortPDU (el: _Element): DialogAbortPDU {
     }
     sequence[0].name = "destinationDialogId";
     sequence[1].name = "abortChoice";
-    let destinationDialogId!: DestinationDialogId;
-    let abortChoice!: DialogAbortPDU_abortChoice;
-    destinationDialogId = _decode_DestinationDialogId(sequence[0]);
-    abortChoice = _decode_DialogAbortPDU_abortChoice(sequence[1]);
+    const destinationDialogId: DestinationDialogId = _decode_DestinationDialogId(sequence[0]);
+    const abortChoice: DialogAbortPDU_abortChoice = _decode_DialogAbortPDU_abortChoice(sequence[1]);
     return new DialogAbortPDU(
         destinationDialogId,
         abortChoice,
@@ -152,7 +146,7 @@ let _cached_encoder_for_DialogAbortPDU: $.ASN1Encoder<DialogAbortPDU> | null = n
  */
 export
 function _encode_DialogAbortPDU (value: DialogAbortPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DialogAbortPDU) { _cached_encoder_for_DialogAbortPDU = function (value: DialogAbortPDU, elGetter: $.ASN1Encoder<DialogAbortPDU>): _Element {
+    if (!_cached_encoder_for_DialogAbortPDU) { _cached_encoder_for_DialogAbortPDU = function (value: DialogAbortPDU, _elGetter: $.ASN1Encoder<DialogAbortPDU>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_DestinationDialogId, $.BER)(value.destinationDialogId, $.BER),
         /* REQUIRED   */ _encode_DialogAbortPDU_abortChoice(value.abortChoice, $.BER)
@@ -160,6 +154,5 @@ function _encode_DialogAbortPDU (value: DialogAbortPDU, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_DialogAbortPDU(value, elGetter);
 }
-
 
 /* eslint-enable */

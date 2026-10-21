@@ -6,14 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../WTM-Authentication-Operations-asn1-97/AuthChallenge.ta.mjs";
-// export { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../WTM-Authentication-Operations-asn1-97/AuthChallenge.ta.mjs";
 import { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../WTM-Authentication-Operations-asn1-97/AuthResponse.ta.mjs";
-// export { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../WTM-Authentication-Operations-asn1-97/AuthResponse.ta.mjs";
 import { DerivedCipherKey, _decode_DerivedCipherKey, _encode_DerivedCipherKey } from "../WTM-Authentication-Operations-asn1-97/DerivedCipherKey.ta.mjs";
-// export { DerivedCipherKey, _decode_DerivedCipherKey, _encode_DerivedCipherKey } from "../WTM-Authentication-Operations-asn1-97/DerivedCipherKey.ta.mjs";
 import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
-// export { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
-
 
 /**
  * @summary CalcWtatInfoUnit
@@ -86,7 +81,6 @@ class CalcWtatInfoUnit {
     public static _from_object (_o: { [_K in keyof (CalcWtatInfoUnit)]: (CalcWtatInfoUnit)[_K] }): CalcWtatInfoUnit {
         return new CalcWtatInfoUnit(_o.authChallenge, _o.authResponse, _o.derivedCipherKey, _o.calculationParam);
     }
-
 
 }
 
@@ -180,7 +174,7 @@ let _cached_encoder_for_CalcWtatInfoUnit: $.ASN1Encoder<CalcWtatInfoUnit> | null
  */
 export
 function _encode_CalcWtatInfoUnit (value: CalcWtatInfoUnit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalcWtatInfoUnit) { _cached_encoder_for_CalcWtatInfoUnit = function (value: CalcWtatInfoUnit, elGetter: $.ASN1Encoder<CalcWtatInfoUnit>): _Element {
+    if (!_cached_encoder_for_CalcWtatInfoUnit) { _cached_encoder_for_CalcWtatInfoUnit = function (value: CalcWtatInfoUnit, _elGetter: $.ASN1Encoder<CalcWtatInfoUnit>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthChallenge(value.authChallenge, $.BER));
     _components.push(/* REQUIRED   */ _encode_AuthResponse(value.authResponse, $.BER));
@@ -194,6 +188,5 @@ function _encode_CalcWtatInfoUnit (value: CalcWtatInfoUnit, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_CalcWtatInfoUnit(value, elGetter);
 }
-
 
 /* eslint-enable */

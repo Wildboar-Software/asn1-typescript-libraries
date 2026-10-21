@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary CIRequestRes_resultExtension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CIRequestRes-resultExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CIRequestRes-resultExtension ::= CHOICE {
+ *     extension [1] IMPLICIT Extension {{CIExtSet}},
+ *     sequenceOfExtn [2] IMPLICIT SEQUENCE OF Extension {{CIExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_CIRequestRes_resultExtension (value: CIRequestRes_resultExtensi
 }, $.BER); }
     return _cached_encoder_for_CIRequestRes_resultExtension(value, elGetter);
 }
-
 
 /* eslint-enable */

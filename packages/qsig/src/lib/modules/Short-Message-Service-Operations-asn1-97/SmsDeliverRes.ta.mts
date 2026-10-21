@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SmsDeliverResChoice, _decode_SmsDeliverResChoice, _encode_SmsDeliverResChoice } from "../Short-Message-Service-Operations-asn1-97/SmsDeliverResChoice.ta.mjs";
-// export { SmsDeliverResChoice, _decode_SmsDeliverResChoice, _encode_SmsDeliverResChoice } from "../Short-Message-Service-Operations-asn1-97/SmsDeliverResChoice.ta.mjs";
 import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-// export { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
-
 
 /**
  * @summary SmsDeliverRes
@@ -64,7 +61,6 @@ class SmsDeliverRes {
     public static _from_object (_o: { [_K in keyof (SmsDeliverRes)]: (SmsDeliverRes)[_K] }): SmsDeliverRes {
         return new SmsDeliverRes(_o.smsDeliverResponseChoice, _o.smsExtension);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_SmsDeliverRes: $.ASN1Encoder<SmsDeliverRes> | null = nul
  */
 export
 function _encode_SmsDeliverRes (value: SmsDeliverRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SmsDeliverRes) { _cached_encoder_for_SmsDeliverRes = function (value: SmsDeliverRes, elGetter: $.ASN1Encoder<SmsDeliverRes>): _Element {
+    if (!_cached_encoder_for_SmsDeliverRes) { _cached_encoder_for_SmsDeliverRes = function (value: SmsDeliverRes, _elGetter: $.ASN1Encoder<SmsDeliverRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_SmsDeliverResChoice(value.smsDeliverResponseChoice, $.BER));
     if (value.smsExtension !== undefined) {
@@ -160,6 +156,5 @@ function _encode_SmsDeliverRes (value: SmsDeliverRes, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_SmsDeliverRes(value, elGetter);
 }
-
 
 /* eslint-enable */

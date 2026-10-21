@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ACSE_apdu, _decode_ACSE_apdu, _encode_ACSE_apdu } from "../ACSE-1/ACSE-apdu.ta.mjs";
-// export { ACSE_apdu, _decode_ACSE_apdu, _encode_ACSE_apdu } from "../ACSE-1/ACSE-apdu.ta.mjs";
-
 
 /**
  * @summary AcseAPDU
@@ -48,6 +46,5 @@ function _encode_AcseAPDU (value: AcseAPDU, elGetter: $.ASN1Encoder<any>): _Elem
     if (!_cached_encoder_for_AcseAPDU) { _cached_encoder_for_AcseAPDU = _encode_ACSE_apdu; }
     return _cached_encoder_for_AcseAPDU(value, elGetter);
 }
-
 
 /* eslint-enable */

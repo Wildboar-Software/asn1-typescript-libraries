@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Call-Transfer-Operations-asn1-97/CallIdentity.ta.mjs";
-// export { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Call-Transfer-Operations-asn1-97/CallIdentity.ta.mjs";
 import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-// export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { CTIdentifyRes_resultExtension, _decode_CTIdentifyRes_resultExtension, _encode_CTIdentifyRes_resultExtension } from "../Call-Transfer-Operations-asn1-97/CTIdentifyRes-resultExtension.ta.mjs";
-// export { CTIdentifyRes_resultExtension, _decode_CTIdentifyRes_resultExtension, _encode_CTIdentifyRes_resultExtension } from "../Call-Transfer-Operations-asn1-97/CTIdentifyRes-resultExtension.ta.mjs";
-
 
 /**
  * @summary CTIdentifyRes
@@ -78,7 +74,6 @@ class CTIdentifyRes {
     public static _from_object (_o: { [_K in keyof (CTIdentifyRes)]: (CTIdentifyRes)[_K] }): CTIdentifyRes {
         return new CTIdentifyRes(_o.callIdentity, _o.rerouteingNumber, _o.resultExtension);
     }
-
 
 }
 
@@ -168,7 +163,7 @@ let _cached_encoder_for_CTIdentifyRes: $.ASN1Encoder<CTIdentifyRes> | null = nul
  */
 export
 function _encode_CTIdentifyRes (value: CTIdentifyRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CTIdentifyRes) { _cached_encoder_for_CTIdentifyRes = function (value: CTIdentifyRes, elGetter: $.ASN1Encoder<CTIdentifyRes>): _Element {
+    if (!_cached_encoder_for_CTIdentifyRes) { _cached_encoder_for_CTIdentifyRes = function (value: CTIdentifyRes, _elGetter: $.ASN1Encoder<CTIdentifyRes>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CallIdentity(value.callIdentity, $.BER));
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.rerouteingNumber, $.BER));
@@ -179,6 +174,5 @@ function _encode_CTIdentifyRes (value: CTIdentifyRes, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_CTIdentifyRes(value, elGetter);
 }
-
 
 /* eslint-enable */

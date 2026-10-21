@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary cfnrDivertedLegFailed_ArgumentType
@@ -16,7 +14,11 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * cfnrDivertedLegFailed-ArgumentType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * cfnrDivertedLegFailed-ArgumentType ::= CHOICE {
+ *     null NULL,
+ *     single [1] IMPLICIT Extension {{DiversionExtensionSet}},
+ *     multiple [2] IMPLICIT SEQUENCE OF Extension {{DiversionExtensionSet}}
+ * }
  * ```
  */
 export
@@ -61,6 +63,5 @@ function _encode_cfnrDivertedLegFailed_ArgumentType (value: cfnrDivertedLegFaile
 }, $.BER); }
     return _cached_encoder_for_cfnrDivertedLegFailed_ArgumentType(value, elGetter);
 }
-
 
 /* eslint-enable */

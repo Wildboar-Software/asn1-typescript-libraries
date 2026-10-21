@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
-// export { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
 import { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_RemoteOperationsPortion } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion.ta.mjs";
-// export { RemoteOperationsPortion, _decode_RemoteOperationsPortion, _encode_RemoteOperationsPortion } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion.ta.mjs";
-
 
 /**
  * @summary DialogEndPDU
@@ -64,7 +61,6 @@ class DialogEndPDU {
     public static _from_object (_o: { [_K in keyof (DialogEndPDU)]: (DialogEndPDU)[_K] }): DialogEndPDU {
         return new DialogEndPDU(_o.destinationDialogId, _o.remoteOperationsPortion);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_DialogEndPDU: $.ASN1Encoder<DialogEndPDU> | null = null;
  */
 export
 function _encode_DialogEndPDU (value: DialogEndPDU, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DialogEndPDU) { _cached_encoder_for_DialogEndPDU = function (value: DialogEndPDU, elGetter: $.ASN1Encoder<DialogEndPDU>): _Element {
+    if (!_cached_encoder_for_DialogEndPDU) { _cached_encoder_for_DialogEndPDU = function (value: DialogEndPDU, _elGetter: $.ASN1Encoder<DialogEndPDU>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_DestinationDialogId, $.BER)(value.destinationDialogId, $.BER));
     if (value.remoteOperationsPortion !== undefined) {
@@ -160,6 +156,5 @@ function _encode_DialogEndPDU (value: DialogEndPDU, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_DialogEndPDU(value, elGetter);
 }
-
 
 /* eslint-enable */

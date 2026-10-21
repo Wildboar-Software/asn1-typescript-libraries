@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary SessionParams
  * @description
@@ -64,7 +62,6 @@ class SessionParams {
     public static _from_object (_o: { [_K in keyof (SessionParams)]: (SessionParams)[_K] }): SessionParams {
         return new SessionParams(_o.durationOfSession, _o.numberOfOutgCalls);
     }
-
 
 }
 
@@ -150,7 +147,7 @@ let _cached_encoder_for_SessionParams: $.ASN1Encoder<SessionParams> | null = nul
  */
 export
 function _encode_SessionParams (value: SessionParams, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SessionParams) { _cached_encoder_for_SessionParams = function (value: SessionParams, elGetter: $.ASN1Encoder<SessionParams>): _Element {
+    if (!_cached_encoder_for_SessionParams) { _cached_encoder_for_SessionParams = function (value: SessionParams, _elGetter: $.ASN1Encoder<SessionParams>): _Element {
     const _components: _Element[] = [];
     if (value.durationOfSession !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.durationOfSession, $.BER));
@@ -162,6 +159,5 @@ function _encode_SessionParams (value: SessionParams, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_SessionParams(value, elGetter);
 }
-
 
 /* eslint-enable */

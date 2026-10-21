@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BMPStringNormal, _decode_BMPStringNormal, _encode_BMPStringNormal } from "../SS-SD-Operations-asn1-97/BMPStringNormal.ta.mjs";
-// export { BMPStringNormal, _decode_BMPStringNormal, _encode_BMPStringNormal } from "../SS-SD-Operations-asn1-97/BMPStringNormal.ta.mjs";
 import { SDExtension, _decode_SDExtension, _encode_SDExtension } from "../SS-SD-Operations-asn1-97/SDExtension.ta.mjs";
-// export { SDExtension, _decode_SDExtension, _encode_SDExtension } from "../SS-SD-Operations-asn1-97/SDExtension.ta.mjs";
-
 
 /**
  * @summary KeypadArg
@@ -64,7 +61,6 @@ class KeypadArg {
     public static _from_object (_o: { [_K in keyof (KeypadArg)]: (KeypadArg)[_K] }): KeypadArg {
         return new KeypadArg(_o.keypadString, _o.extension);
     }
-
 
 }
 
@@ -150,7 +146,7 @@ let _cached_encoder_for_KeypadArg: $.ASN1Encoder<KeypadArg> | null = null;
  */
 export
 function _encode_KeypadArg (value: KeypadArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_KeypadArg) { _cached_encoder_for_KeypadArg = function (value: KeypadArg, elGetter: $.ASN1Encoder<KeypadArg>): _Element {
+    if (!_cached_encoder_for_KeypadArg) { _cached_encoder_for_KeypadArg = function (value: KeypadArg, _elGetter: $.ASN1Encoder<KeypadArg>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_BMPStringNormal, $.BER)(value.keypadString, $.BER));
     if (value.extension !== undefined) {
@@ -160,6 +156,5 @@ function _encode_KeypadArg (value: KeypadArg, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_KeypadArg(value, elGetter);
 }
-
 
 /* eslint-enable */

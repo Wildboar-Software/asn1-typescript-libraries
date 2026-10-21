@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary MWIInterrogateResElt_argumentExt
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MWIInterrogateResElt-argumentExt ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * MWIInterrogateResElt-argumentExt ::= CHOICE {
+ *     extension [6] IMPLICIT Extension {{MWIExtSet}},
+ *     multipleExtension [7] IMPLICIT SEQUENCE OF Extension {{MWIExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_MWIInterrogateResElt_argumentExt (value: MWIInterrogateResElt_a
 }, $.BER); }
     return _cached_encoder_for_MWIInterrogateResElt_argumentExt(value, elGetter);
 }
-
 
 /* eslint-enable */

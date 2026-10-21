@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary NameNotAvailable
  * @description
@@ -49,6 +47,5 @@ function _encode_NameNotAvailable (value: NameNotAvailable, elGetter: $.ASN1Enco
     if (!_cached_encoder_for_NameNotAvailable) { _cached_encoder_for_NameNotAvailable = $._encode_implicit(_TagClass.context, 4, () => $._encodeNull, $.BER); }
     return _cached_encoder_for_NameNotAvailable(value, elGetter);
 }
-
 
 /* eslint-enable */

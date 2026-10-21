@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
-
 
 /**
  * @summary CTSetupArg_argumentExtension
@@ -15,7 +13,10 @@ import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CTSetupArg-argumentExtension ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * CTSetupArg-argumentExtension ::= CHOICE {
+ *     single [0] IMPLICIT Extension {{CTExtSet}},
+ *     multiple [1] IMPLICIT SEQUENCE OF Extension {{CTExtSet}}
+ * }
  * ```
  */
 export
@@ -57,6 +58,5 @@ function _encode_CTSetupArg_argumentExtension (value: CTSetupArg_argumentExtensi
 }, $.BER); }
     return _cached_encoder_for_CTSetupArg_argumentExtension(value, elGetter);
 }
-
 
 /* eslint-enable */
