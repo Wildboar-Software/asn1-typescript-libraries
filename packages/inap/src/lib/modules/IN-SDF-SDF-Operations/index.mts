@@ -20,6 +20,8 @@ export * from "./IN-ShadowingAgreementInfo.ta.mjs";
 export * from "./IN-UpdateShadowArgument.ta.mjs";
 export * from "./IN-UpdateShadowResult.ta.mjs";
 export * from "./chainedExecute.oa.mjs";
+export * from "./in-Chained-ArgumentType-Type.ta.mjs";
+export * from "./in-Chained-ResultType-Type.ta.mjs";
 export * from "./in-Chained.oa.mjs";
 export * from "./in-ChainedAddEntry.oa.mjs";
 export * from "./in-ChainedModifyEntry.oa.mjs";

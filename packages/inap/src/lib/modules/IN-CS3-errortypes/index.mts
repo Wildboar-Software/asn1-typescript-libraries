@@ -8,26 +8,26 @@
 export * from "./ExecutionProblem.ta.mjs";
 export * from "./FailureReason-securityError.ta.mjs";
 export * from "./FailureReason.ta.mjs";
+export * from "./ReferralParameter-Type.ta.mjs";
 export * from "./ReferralParameter.ta.mjs";
 export {
-    _enum_for_ScfTaskRefusedParameter_reason,
-    ScfTaskRefusedParameter_reason,
-    ScfTaskRefusedParameter_reason_generic,
-    ScfTaskRefusedParameter_reason_unobtainable,
-    ScfTaskRefusedParameter_reason_congestion,
-    _decode_ScfTaskRefusedParameter_reason,
-    _encode_ScfTaskRefusedParameter_reason,
-    type ScfTaskRefusedParameter_sequence,
-    type ScfTaskRefusedParameter,
-    _decode_ScfTaskRefusedParameter,
-    _encode_ScfTaskRefusedParameter,
-} from "./ScfTaskRefusedParameter.ta.mjs";
+    _enum_for_ScfTaskRefusedParameter_Type_reason,
+    ScfTaskRefusedParameter_Type_reason,
+    ScfTaskRefusedParameter_Type_reason_generic,
+    ScfTaskRefusedParameter_Type_reason_unobtainable,
+    ScfTaskRefusedParameter_Type_reason_congestion,
+    _decode_ScfTaskRefusedParameter_Type_reason,
+    _encode_ScfTaskRefusedParameter_Type_reason,
+} from "./ScfTaskRefusedParameter-Type-reason.ta.mjs";
+export * from "./ScfTaskRefusedParameter-Type.ta.mjs";
+export * from "./ScfTaskRefusedParameter.ta.mjs";
 export * from "./cancelFailed-ParameterType-problem.ta.mjs";
 export * from "./cancelFailed-ParameterType.ta.mjs";
 export * from "./cancelFailed.oa.mjs";
 export * from "./canceled.oa.mjs";
 export * from "./chainingRefused.oa.mjs";
 export * from "./eTCFailed.oa.mjs";
+export * from "./executionError-ParameterType-Type.ta.mjs";
 export * from "./executionError.oa.mjs";
 export * from "./improperCallerResponse.oa.mjs";
 export * from "./missingCustomerRecord.oa.mjs";
