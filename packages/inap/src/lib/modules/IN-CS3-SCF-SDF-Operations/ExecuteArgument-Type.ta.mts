@@ -210,14 +210,14 @@ class ExecuteArgument_Type {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls () { return ServiceControls._from_object({  }); }
+    public static get _default_value_for_serviceControls () { return ServiceControls._from_object({ _unrecognizedExtensionsList: [] }); }
     /**
      * @summary Getter that returns the default value for `operationProgress`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress () { return OperationProgress._from_object({ nameResolutionPhase: OperationProgress._enum_for_nameResolutionPhase.notStarted }); }
+    public static get _default_value_for_operationProgress () { return OperationProgress._from_object({ nameResolutionPhase: OperationProgress._enum_for_nameResolutionPhase.notStarted, _unrecognizedExtensionsList: [] }); }
     /**
      * @summary Getter that returns the default value for `entryOnly`.
      * @public
