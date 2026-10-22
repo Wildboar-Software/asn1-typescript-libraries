@@ -33,11 +33,11 @@ class in_Chained_ArgumentType_Type {
      * @public
      * @readonly
      */
-    readonly argument: operation["&ArgumentType"];
+    readonly argument: _Element;
 
     constructor (
         in_chainedArgument: IN_ChainingArguments,
-        argument: operation["&ArgumentType"]
+        argument: _Element
     ) {
         this.in_chainedArgument = in_chainedArgument;
         this.argument = argument;
@@ -115,12 +115,12 @@ function _decode_in_Chained_ArgumentType_Type (el: _Element): in_Chained_Argumen
     if (!_cached_decoder_for_in_Chained_ArgumentType_Type) { _cached_decoder_for_in_Chained_ArgumentType_Type = function (el: _Element): in_Chained_ArgumentType_Type {
     /* START_OF_SET_COMPONENT_DECLARATIONS */
     let in_chainedArgument!: IN_ChainingArguments;
-    let argument!: operation["&ArgumentType"];
+    let argument!: _Element;
     /* END_OF_SET_COMPONENT_DECLARATIONS */
     /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "in-chainedArgument": (_el: _Element): void => { in_chainedArgument = _decode_IN_ChainingArguments(_el); },
-        "argument": (_el: _Element): void => { argument = $._decode_explicit<operation["&ArgumentType"]>(() => operation.decoderFor["&ArgumentType"])(_el); }
+        "argument": (_el: _Element): void => { argument = $._decode_explicit<_Element>(() => $._decodeAny)(_el); }
     };
     /* END_OF_CALLBACKS_MAP */
     $._parse_set(el, callbacks,
@@ -151,7 +151,7 @@ function _encode_in_Chained_ArgumentType_Type (value: in_Chained_ArgumentType_Ty
     if (!_cached_encoder_for_in_Chained_ArgumentType_Type) { _cached_encoder_for_in_Chained_ArgumentType_Type = function (value: in_Chained_ArgumentType_Type, elGetter: $.ASN1Encoder<in_Chained_ArgumentType_Type>): _Element {
     return $._encodeSet([
         /* REQUIRED   */ _encode_IN_ChainingArguments(value.in_chainedArgument, $.BER),
-        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => operation.encoderFor["&ArgumentType"], $.BER)(value.argument, $.BER)
+        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeAny, $.BER)(value.argument, $.BER)
     ], $.BER);
 }; }
     return _cached_encoder_for_in_Chained_ArgumentType_Type(value, elGetter);

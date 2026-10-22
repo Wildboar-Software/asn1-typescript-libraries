@@ -34,11 +34,11 @@ class scfChained_ArgumentType_Type {
      * @public
      * @readonly
      */
-    readonly argument: OPTIONAL<operation["&ArgumentType"]>;
+    readonly argument: OPTIONAL<_Element>;
 
     constructor (
         chainedArgument: ChainingArgument,
-        argument: OPTIONAL<operation["&ArgumentType"]>
+        argument: OPTIONAL<_Element>
     ) {
         this.chainedArgument = chainedArgument;
         this.argument = argument;
@@ -115,10 +115,10 @@ export
 function _decode_scfChained_ArgumentType_Type (el: _Element): scfChained_ArgumentType_Type {
     if (!_cached_decoder_for_scfChained_ArgumentType_Type) { _cached_decoder_for_scfChained_ArgumentType_Type = function (el: _Element): scfChained_ArgumentType_Type {
     let chainedArgument!: ChainingArgument;
-    let argument: OPTIONAL<operation["&ArgumentType"]>;
+    let argument: OPTIONAL<_Element>;
     const callbacks: $.DecodingMap = {
         "chainedArgument": (_el: _Element): void => { chainedArgument = _decode_ChainingArgument(_el); },
-        "argument": (_el: _Element): void => { argument = $._decode_implicit<operation["&ArgumentType"]>(() => operation.decoderFor["&ArgumentType"])(_el); }
+        "argument": (_el: _Element): void => { argument = $._decode_explicit<_Element>(() => $._decodeAny)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_scfChained_ArgumentType_Type,
@@ -149,7 +149,7 @@ function _encode_scfChained_ArgumentType_Type (value: scfChained_ArgumentType_Ty
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ChainingArgument(value.chainedArgument, $.BER));
     if (value.argument !== undefined) {
-        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => operation.encoderFor["&ArgumentType"], $.BER)(value.argument, $.BER));
+        _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => $._encodeAny, $.BER)(value.argument, $.BER));
     }
     return $._encodeSequence(_components, $.BER);
 }; }

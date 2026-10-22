@@ -33,11 +33,11 @@ class in_Chained_ResultType_Type {
      * @public
      * @readonly
      */
-    readonly result: operation["&ResultType"];
+    readonly result: _Element;
 
     constructor (
         in_chainedResult: IN_ChainingResults,
-        result: operation["&ResultType"]
+        result: _Element
     ) {
         this.in_chainedResult = in_chainedResult;
         this.result = result;
@@ -115,12 +115,12 @@ function _decode_in_Chained_ResultType_Type (el: _Element): in_Chained_ResultTyp
     if (!_cached_decoder_for_in_Chained_ResultType_Type) { _cached_decoder_for_in_Chained_ResultType_Type = function (el: _Element): in_Chained_ResultType_Type {
     /* START_OF_SET_COMPONENT_DECLARATIONS */
     let in_chainedResult!: IN_ChainingResults;
-    let result!: operation["&ResultType"];
+    let result!: _Element;
     /* END_OF_SET_COMPONENT_DECLARATIONS */
     /* START_OF_CALLBACKS_MAP */
     const callbacks: $.DecodingMap = {
         "in-chainedResult": (_el: _Element): void => { in_chainedResult = _decode_IN_ChainingResults(_el); },
-        "result": (_el: _Element): void => { result = $._decode_explicit<operation["&ResultType"]>(() => operation.decoderFor["&ResultType"])(_el); }
+        "result": (_el: _Element): void => { result = $._decode_explicit<_Element>(() => $._decodeAny)(_el); }
     };
     /* END_OF_CALLBACKS_MAP */
     $._parse_set(el, callbacks,
@@ -151,7 +151,7 @@ function _encode_in_Chained_ResultType_Type (value: in_Chained_ResultType_Type, 
     if (!_cached_encoder_for_in_Chained_ResultType_Type) { _cached_encoder_for_in_Chained_ResultType_Type = function (value: in_Chained_ResultType_Type, elGetter: $.ASN1Encoder<in_Chained_ResultType_Type>): _Element {
     return $._encodeSet([
         /* REQUIRED   */ _encode_IN_ChainingResults(value.in_chainedResult, $.BER),
-        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => operation.encoderFor["&ResultType"], $.BER)(value.result, $.BER)
+        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeAny, $.BER)(value.result, $.BER)
     ], $.BER);
 }; }
     return _cached_encoder_for_in_Chained_ResultType_Type(value, elGetter);

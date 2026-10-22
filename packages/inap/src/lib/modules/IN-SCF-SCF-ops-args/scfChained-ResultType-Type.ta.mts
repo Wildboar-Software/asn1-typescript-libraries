@@ -34,11 +34,11 @@ class scfChained_ResultType_Type {
      * @public
      * @readonly
      */
-    readonly result: OPTIONAL<operation["&ResultType"]>;
+    readonly result: OPTIONAL<_Element>;
 
     constructor (
         chainedResult: ChainingResult,
-        result: OPTIONAL<operation["&ResultType"]>
+        result: OPTIONAL<_Element>
     ) {
         this.chainedResult = chainedResult;
         this.result = result;
@@ -115,10 +115,10 @@ export
 function _decode_scfChained_ResultType_Type (el: _Element): scfChained_ResultType_Type {
     if (!_cached_decoder_for_scfChained_ResultType_Type) { _cached_decoder_for_scfChained_ResultType_Type = function (el: _Element): scfChained_ResultType_Type {
     let chainedResult!: ChainingResult;
-    let result: OPTIONAL<operation["&ResultType"]>;
+    let result: OPTIONAL<_Element>;
     const callbacks: $.DecodingMap = {
         "chainedResult": (_el: _Element): void => { chainedResult = _decode_ChainingResult(_el); },
-        "result": (_el: _Element): void => { result = $._decode_implicit<operation["&ResultType"]>(() => operation.decoderFor["&ResultType"])(_el); }
+        "result": (_el: _Element): void => { result = $._decode_explicit<_Element>(() => $._decodeAny)(_el); }
     };
     $._parse_sequence(el, callbacks,
         _root_component_type_list_1_spec_for_scfChained_ResultType_Type,
@@ -149,7 +149,7 @@ function _encode_scfChained_ResultType_Type (value: scfChained_ResultType_Type, 
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_ChainingResult(value.chainedResult, $.BER));
     if (value.result !== undefined) {
-        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => operation.encoderFor["&ResultType"], $.BER)(value.result, $.BER));
+        _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => $._encodeAny, $.BER)(value.result, $.BER));
     }
     return $._encodeSequence(_components, $.BER);
 }; }
