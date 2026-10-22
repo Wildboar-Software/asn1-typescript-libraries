@@ -1,21 +1,12 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-// export { METHOD } from "../IN-SCF-SDF-Classes/METHOD.oca.mjs";
-// export { SupportedMethods } from "../IN-SCF-SDF-Classes/SupportedMethods.osa.mjs";
-import { Context, _decode_Context } from "../InformationFramework/Context.ta.mjs";
-// export { Context, _decode_Context, _encode_Context } from "../InformationFramework/Context.ta.mjs";
-import { CommonArguments } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
-// export { CommonArguments, _decode_CommonArguments, _encode_CommonArguments } from "../DirectoryAbstractService/CommonArguments.ta.mjs";
+import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgument_Type } from "../IN-SCF-SDF-operations/ExecuteArgument-Type.ta.mjs";
+// export { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgument_Type } from "../IN-SCF-SDF-operations/ExecuteArgument-Type.ta.mjs";
 
 
 /**
@@ -59,7 +50,7 @@ import { CommonArguments } from "../DirectoryAbstractService/CommonArguments.ta.
  * ```
  */
 export
-type ExecuteArgument = OPTIONALLY_PROTECTED<{ object: OPTIONAL<Name>; method_id: OPTIONAL<OBJECT_IDENTIFIER>; input_assertions: { type_: OPTIONAL<_Element>; values: _Element[]; valuesWithContext: { value: _Element; contextList: OPTIONAL<Context[]> }[] }[]; specific_input: _Element; _componentsOf: CommonArguments }>; // DefinedType
+type ExecuteArgument = OPTIONALLY_PROTECTED<ExecuteArgument_Type>; // DefinedType
 
 let _cached_decoder_for_ExecuteArgument: $.ASN1Decoder<ExecuteArgument> | null = null;
 
@@ -71,10 +62,7 @@ let _cached_decoder_for_ExecuteArgument: $.ASN1Decoder<ExecuteArgument> | null =
  */
 export
 function _decode_ExecuteArgument (el: _Element): ExecuteArgument {
-    if (!_cached_decoder_for_ExecuteArgument) { _cached_decoder_for_ExecuteArgument = _get_decoder_for_OPTIONALLY_PROTECTED<{ object: OPTIONAL<Name>; method_id: OPTIONAL<OBJECT_IDENTIFIER>; input_assertions: { type_: OPTIONAL<_Element>; values: _Element[]; valuesWithContext: { value: _Element; contextList: OPTIONAL<Context[]> }[] }[]; specific_input: _Element; _componentsOf: CommonArguments }>(function (el: _Element): any {
-    // FIXME: COULD_NOT_COMPILE_TYPE_DECODER
-    throw new Error("FIXME: COULD_NOT_COMPILE_TYPE_DECODER");
-}); }
+    if (!_cached_decoder_for_ExecuteArgument) { _cached_decoder_for_ExecuteArgument = _get_decoder_for_OPTIONALLY_PROTECTED<ExecuteArgument_Type>(_decode_ExecuteArgument_Type); }
     return _cached_decoder_for_ExecuteArgument(el);
 }
 
@@ -89,10 +77,7 @@ let _cached_encoder_for_ExecuteArgument: $.ASN1Encoder<ExecuteArgument> | null =
  */
 export
 function _encode_ExecuteArgument (value: ExecuteArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExecuteArgument) { _cached_encoder_for_ExecuteArgument = _get_encoder_for_OPTIONALLY_PROTECTED<{ object: OPTIONAL<Name>; method_id: OPTIONAL<OBJECT_IDENTIFIER>; input_assertions: { type_: OPTIONAL<_Element>; values: _Element[]; valuesWithContext: { value: _Element; contextList: OPTIONAL<Context[]> }[] }[]; specific_input: _Element; _componentsOf: CommonArguments }>(function (value: any, elGetter: $.ASN1Encoder<any>): _Element {
-    // FIXME: COULD_NOT_COMPILE_TYPE_ENCODER
-    throw new Error("FIXME: COULD_NOT_COMPILE_TYPE_ENCODER");
-}); }
+    if (!_cached_encoder_for_ExecuteArgument) { _cached_encoder_for_ExecuteArgument = _get_encoder_for_OPTIONALLY_PROTECTED<ExecuteArgument_Type>(_encode_ExecuteArgument_Type); }
     return _cached_encoder_for_ExecuteArgument(value, elGetter);
 }
 

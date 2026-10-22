@@ -1,19 +1,12 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-// export { METHOD } from "../IN-SCF-SDF-Classes/METHOD.oca.mjs";
-// export { SupportedMethods } from "../IN-SCF-SDF-Classes/SupportedMethods.osa.mjs";
-import { Context, _decode_Context } from "../InformationFramework/Context.ta.mjs";
-// export { Context, _decode_Context, _encode_Context } from "../InformationFramework/Context.ta.mjs";
-import { CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs";
-// export { CommonResults, _decode_CommonResults, _encode_CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs";
+import { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_Type } from "../IN-SCF-SDF-operations/ExecuteResult-Type.ta.mjs";
+// export { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_Type } from "../IN-SCF-SDF-operations/ExecuteResult-Type.ta.mjs";
 
 
 /**
@@ -56,7 +49,7 @@ import { CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs"
  * ```
  */
 export
-type ExecuteResult = OPTIONALLY_PROTECTED<{ method_id: OPTIONAL<OBJECT_IDENTIFIER>; output_assertions: { type_: OPTIONAL<_Element>; values: _Element[]; valuesWithContext: { value: _Element; contextList: OPTIONAL<Context[]> }[] }[]; specific_output: _Element; _componentsOf: CommonResults }>; // DefinedType
+type ExecuteResult = OPTIONALLY_PROTECTED<ExecuteResult_Type>; // DefinedType
 
 let _cached_decoder_for_ExecuteResult: $.ASN1Decoder<ExecuteResult> | null = null;
 
@@ -68,10 +61,7 @@ let _cached_decoder_for_ExecuteResult: $.ASN1Decoder<ExecuteResult> | null = nul
  */
 export
 function _decode_ExecuteResult (el: _Element): ExecuteResult {
-    if (!_cached_decoder_for_ExecuteResult) { _cached_decoder_for_ExecuteResult = _get_decoder_for_OPTIONALLY_PROTECTED<{ method_id: OPTIONAL<OBJECT_IDENTIFIER>; output_assertions: { type_: OPTIONAL<_Element>; values: _Element[]; valuesWithContext: { value: _Element; contextList: OPTIONAL<Context[]> }[] }[]; specific_output: _Element; _componentsOf: CommonResults }>(function (el: _Element): any {
-    // FIXME: COULD_NOT_COMPILE_TYPE_DECODER
-    throw new Error("FIXME: COULD_NOT_COMPILE_TYPE_DECODER");
-}); }
+    if (!_cached_decoder_for_ExecuteResult) { _cached_decoder_for_ExecuteResult = _get_decoder_for_OPTIONALLY_PROTECTED<ExecuteResult_Type>(_decode_ExecuteResult_Type); }
     return _cached_decoder_for_ExecuteResult(el);
 }
 
@@ -86,10 +76,7 @@ let _cached_encoder_for_ExecuteResult: $.ASN1Encoder<ExecuteResult> | null = nul
  */
 export
 function _encode_ExecuteResult (value: ExecuteResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExecuteResult) { _cached_encoder_for_ExecuteResult = _get_encoder_for_OPTIONALLY_PROTECTED<{ method_id: OPTIONAL<OBJECT_IDENTIFIER>; output_assertions: { type_: OPTIONAL<_Element>; values: _Element[]; valuesWithContext: { value: _Element; contextList: OPTIONAL<Context[]> }[] }[]; specific_output: _Element; _componentsOf: CommonResults }>(function (value: any, elGetter: $.ASN1Encoder<any>): _Element {
-    // FIXME: COULD_NOT_COMPILE_TYPE_ENCODER
-    throw new Error("FIXME: COULD_NOT_COMPILE_TYPE_ENCODER");
-}); }
+    if (!_cached_encoder_for_ExecuteResult) { _cached_encoder_for_ExecuteResult = _get_encoder_for_OPTIONALLY_PROTECTED<ExecuteResult_Type>(_encode_ExecuteResult_Type); }
     return _cached_encoder_for_ExecuteResult(value, elGetter);
 }
 

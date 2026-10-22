@@ -1,25 +1,12 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-import { CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-CS2-SCF-SCF-ops-args/CollectedInfo.ta.mjs";
-// export { CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-CS2-SCF-SCF-ops-args/CollectedInfo.ta.mjs";
-import { InfoType, _decode_InfoType, _encode_InfoType } from "../IN-CS2-datatypes/InfoType.ta.mjs";
-// export { InfoType, _enum_for_InfoType, InfoType_numericString /* IMPORTED_LONG_ENUMERATION_ITEM */, numericString /* IMPORTED_SHORT_ENUMERATION_ITEM */, InfoType_characterString /* IMPORTED_LONG_ENUMERATION_ITEM */, characterString /* IMPORTED_SHORT_ENUMERATION_ITEM */, InfoType_iA5String /* IMPORTED_LONG_ENUMERATION_ITEM */, iA5String /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InfoType, _encode_InfoType } from "../IN-CS2-datatypes/InfoType.ta.mjs";
-import { Actions, _decode_Actions, _encode_Actions } from "../IN-CS2-SCF-SCF-ops-args/Actions.ta.mjs";
-// export { Actions, _enum_for_Actions, Actions_play /* IMPORTED_LONG_ENUMERATION_ITEM */, play /* IMPORTED_SHORT_ENUMERATION_ITEM */, Actions_playandcollect /* IMPORTED_LONG_ENUMERATION_ITEM */, playandcollect /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Actions, _encode_Actions } from "../IN-CS2-SCF-SCF-ops-args/Actions.ta.mjs";
-import { Language, _decode_Language, _encode_Language } from "../IN-CS2-datatypes/Language.ta.mjs";
-// export { Language, _decode_Language, _encode_Language } from "../IN-CS2-datatypes/Language.ta.mjs";
-import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-// export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-// export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
+import { ProvideUserInformationArg_Type, _decode_ProvideUserInformationArg_Type, _encode_ProvideUserInformationArg_Type } from "../IN-CS2-SCF-SCF-ops-args/ProvideUserInformationArg-Type.ta.mjs";
+// export { ProvideUserInformationArg_Type, _decode_ProvideUserInformationArg_Type, _encode_ProvideUserInformationArg_Type } from "../IN-CS2-SCF-SCF-ops-args/ProvideUserInformationArg-Type.ta.mjs";
 
 
 /**
@@ -46,36 +33,7 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ```
  */
 export
-interface ProvideUserInformationArg_sequence {
-    constraints: CollectedInfo;
-    typeOfRequestedInfo?: OPTIONAL<InfoType>;
-    numberOfAllowedRetries?: OPTIONAL<INTEGER>;
-    actions?: OPTIONAL<Actions>;
-    preferredLanguage?: OPTIONAL<Language>;
-    securityParameters?: OPTIONAL<SecurityParameters>;
-    extensions?: OPTIONAL<ExtensionField[]>;
-    _unrecognizedExtensionsList: _Element[];
-}
-
-export
-type ProvideUserInformationArg = OPTIONALLY_PROTECTED<ProvideUserInformationArg_sequence>; // DefinedType
-
-const _default_value_for_typeOfRequestedInfo: InfoType = InfoType.numericString;
-const _default_value_for_numberOfAllowedRetries: INTEGER = 0;
-
-const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
-    new $.ComponentSpec("constraints", false, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("typeOfRequestedInfo", true, $.hasTag(_TagClass.context, 3)),
-    new $.ComponentSpec("numberOfAllowedRetries", true, $.hasTag(_TagClass.context, 4)),
-    new $.ComponentSpec("actions", true, $.hasTag(_TagClass.context, 5)),
-    new $.ComponentSpec("preferredLanguage", true, $.hasTag(_TagClass.context, 6)),
-    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 7)),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 8)),
-];
-
-const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
-
-const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+type ProvideUserInformationArg = OPTIONALLY_PROTECTED<ProvideUserInformationArg_Type>; // DefinedType
 
 let _cached_decoder_for_ProvideUserInformationArg: $.ASN1Decoder<ProvideUserInformationArg> | null = null;
 
@@ -87,32 +45,7 @@ let _cached_decoder_for_ProvideUserInformationArg: $.ASN1Decoder<ProvideUserInfo
  */
 export
 function _decode_ProvideUserInformationArg (el: _Element): ProvideUserInformationArg {
-    if (!_cached_decoder_for_ProvideUserInformationArg) { _cached_decoder_for_ProvideUserInformationArg = _get_decoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationArg_sequence>(function (el: _Element): ProvideUserInformationArg_sequence {
-    let constraints!: CollectedInfo;
-    let typeOfRequestedInfo: OPTIONAL<InfoType> = _default_value_for_typeOfRequestedInfo;
-    let numberOfAllowedRetries: OPTIONAL<INTEGER> = _default_value_for_numberOfAllowedRetries;
-    let actions: OPTIONAL<Actions>;
-    let preferredLanguage: OPTIONAL<Language>;
-    let securityParameters: OPTIONAL<SecurityParameters>;
-    let extensions: OPTIONAL<ExtensionField[]>;
-    const _unrecognizedExtensionsList: _Element[] = [];
-    const callbacks: $.DecodingMap = {
-        "constraints": (_el: _Element): void => { constraints = $._decode_explicit<CollectedInfo>(() => _decode_CollectedInfo)(_el); },
-        "typeOfRequestedInfo": (_el: _Element): void => { typeOfRequestedInfo = $._decode_implicit<InfoType>(() => _decode_InfoType)(_el); },
-        "numberOfAllowedRetries": (_el: _Element): void => { numberOfAllowedRetries = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
-        "actions": (_el: _Element): void => { actions = $._decode_implicit<Actions>(() => _decode_Actions)(_el); },
-        "preferredLanguage": (_el: _Element): void => { preferredLanguage = $._decode_implicit<Language>(() => _decode_Language)(_el); },
-        "securityParameters": (_el: _Element): void => { securityParameters = $._decode_implicit<SecurityParameters>(() => _decode_SecurityParameters)(_el); },
-        "extensions": (_el: _Element): void => { extensions = $._decode_implicit<ExtensionField[]>(() => $._decodeSequenceOf<ExtensionField>(() => _decode_ExtensionField))(_el); }
-    };
-    $._parse_sequence(el, callbacks,
-        _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED,
-        _extension_additions_list_spec_for_OPTIONALLY_PROTECTED,
-        _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
-        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
-    );
-    return { constraints, typeOfRequestedInfo, numberOfAllowedRetries, actions, preferredLanguage, securityParameters, extensions, _unrecognizedExtensionsList };
-}); }
+    if (!_cached_decoder_for_ProvideUserInformationArg) { _cached_decoder_for_ProvideUserInformationArg = _get_decoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationArg_Type>(_decode_ProvideUserInformationArg_Type); }
     return _cached_decoder_for_ProvideUserInformationArg(el);
 }
 
@@ -127,37 +60,7 @@ let _cached_encoder_for_ProvideUserInformationArg: $.ASN1Encoder<ProvideUserInfo
  */
 export
 function _encode_ProvideUserInformationArg (value: ProvideUserInformationArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProvideUserInformationArg) { _cached_encoder_for_ProvideUserInformationArg = _get_encoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationArg_sequence>(function (value: ProvideUserInformationArg_sequence, elGetter: $.ASN1Encoder<ProvideUserInformationArg_sequence>): _Element {
-    const _unrecognized = value._unrecognizedExtensionsList;
-    const _components: _Element[] = new Array(7 + (_unrecognized ? _unrecognized.length : 0));
-    let _components_i = 0;
-    _components[_components_i++] = /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_CollectedInfo, $.BER)(value.constraints, $.BER);
-    if (value.typeOfRequestedInfo !== undefined && !$.deepEq(value.typeOfRequestedInfo, _default_value_for_typeOfRequestedInfo)) {
-        _components[_components_i++] = /* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 3, () => _encode_InfoType, $.BER)(value.typeOfRequestedInfo, $.BER);
-    }
-    if (value.numberOfAllowedRetries !== undefined && !$.deepEq(value.numberOfAllowedRetries, _default_value_for_numberOfAllowedRetries)) {
-        _components[_components_i++] = /* IF_DEFAULT */ $._encode_implicit(_TagClass.context, 4, () => $._encodeInteger, $.BER)(value.numberOfAllowedRetries, $.BER);
-    }
-    if (value.actions !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 5, () => _encode_Actions, $.BER)(value.actions, $.BER);
-    }
-    if (value.preferredLanguage !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 6, () => _encode_Language, $.BER)(value.preferredLanguage, $.BER);
-    }
-    if (value.securityParameters !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 7, () => _encode_SecurityParameters, $.BER)(value.securityParameters, $.BER);
-    }
-    if (value.extensions !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 8, () => $._encodeSequenceOf<ExtensionField>(() => _encode_ExtensionField, $.BER), $.BER)(value.extensions, $.BER);
-    }
-    if (_unrecognized) {
-        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
-            _components[_components_i++] = _unrecognized[_unrecognized_i];
-        }
-    }
-    _components.length = _components_i;
-    return $._encodeSequence(_components, $.BER);
-}); }
+    if (!_cached_encoder_for_ProvideUserInformationArg) { _cached_encoder_for_ProvideUserInformationArg = _get_encoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationArg_Type>(_encode_ProvideUserInformationArg_Type); }
     return _cached_encoder_for_ProvideUserInformationArg(value, elGetter);
 }
 

@@ -1,18 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-import { ReceivedInformation, _decode_ReceivedInformation, _encode_ReceivedInformation } from "../IN-CS2-datatypes/ReceivedInformation.ta.mjs";
-// export { ReceivedInformation, _decode_ReceivedInformation, _encode_ReceivedInformation } from "../IN-CS2-datatypes/ReceivedInformation.ta.mjs";
-import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-// export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-// export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
+import { ProvideUserInformationResultArg_Type, _decode_ProvideUserInformationResultArg_Type, _encode_ProvideUserInformationResultArg_Type } from "../IN-CS2-SCF-SCF-ops-args/ProvideUserInformationResultArg-Type.ta.mjs";
+// export { ProvideUserInformationResultArg_Type, _decode_ProvideUserInformationResultArg_Type, _encode_ProvideUserInformationResultArg_Type } from "../IN-CS2-SCF-SCF-ops-args/ProvideUserInformationResultArg-Type.ta.mjs";
 
 
 /**
@@ -33,24 +27,7 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ```
  */
 export
-interface ProvideUserInformationResultArg_sequence {
-    userInformation: ReceivedInformation;
-    securityParameters?: OPTIONAL<SecurityParameters>;
-    extensions?: OPTIONAL<ExtensionField[]>;
-}
-
-export
-type ProvideUserInformationResultArg = OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_sequence>; // DefinedType
-
-const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
-    new $.ComponentSpec("userInformation", false, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 1)),
-    new $.ComponentSpec("extensions", true, $.hasTag(_TagClass.context, 1)),
-];
-
-const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
-
-const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+type ProvideUserInformationResultArg = OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_Type>; // DefinedType
 
 let _cached_decoder_for_ProvideUserInformationResultArg: $.ASN1Decoder<ProvideUserInformationResultArg> | null = null;
 
@@ -62,23 +39,7 @@ let _cached_decoder_for_ProvideUserInformationResultArg: $.ASN1Decoder<ProvideUs
  */
 export
 function _decode_ProvideUserInformationResultArg (el: _Element): ProvideUserInformationResultArg {
-    if (!_cached_decoder_for_ProvideUserInformationResultArg) { _cached_decoder_for_ProvideUserInformationResultArg = _get_decoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_sequence>(function (el: _Element): ProvideUserInformationResultArg_sequence {
-    let userInformation!: ReceivedInformation;
-    let securityParameters: OPTIONAL<SecurityParameters>;
-    let extensions: OPTIONAL<ExtensionField[]>;
-    const callbacks: $.DecodingMap = {
-        "userInformation": (_el: _Element): void => { userInformation = $._decode_implicit<ReceivedInformation>(() => _decode_ReceivedInformation)(_el); },
-        "securityParameters": (_el: _Element): void => { securityParameters = $._decode_implicit<SecurityParameters>(() => _decode_SecurityParameters)(_el); },
-        "extensions": (_el: _Element): void => { extensions = $._decode_implicit<ExtensionField[]>(() => $._decodeSequenceOf<ExtensionField>(() => _decode_ExtensionField))(_el); }
-    };
-    $._parse_sequence(el, callbacks,
-        _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED,
-        _extension_additions_list_spec_for_OPTIONALLY_PROTECTED,
-        _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
-        undefined,
-    );
-    return { userInformation, securityParameters, extensions };
-}); }
+    if (!_cached_decoder_for_ProvideUserInformationResultArg) { _cached_decoder_for_ProvideUserInformationResultArg = _get_decoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_Type>(_decode_ProvideUserInformationResultArg_Type); }
     return _cached_decoder_for_ProvideUserInformationResultArg(el);
 }
 
@@ -93,17 +54,7 @@ let _cached_encoder_for_ProvideUserInformationResultArg: $.ASN1Encoder<ProvideUs
  */
 export
 function _encode_ProvideUserInformationResultArg (value: ProvideUserInformationResultArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProvideUserInformationResultArg) { _cached_encoder_for_ProvideUserInformationResultArg = _get_encoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_sequence>(function (value: ProvideUserInformationResultArg_sequence, elGetter: $.ASN1Encoder<ProvideUserInformationResultArg_sequence>): _Element {
-    const _components: _Element[] = [];
-    _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ReceivedInformation, $.BER)(value.userInformation, $.BER));
-    if (value.securityParameters !== undefined) {
-        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => _encode_SecurityParameters, $.BER)(value.securityParameters, $.BER));
-    }
-    if (value.extensions !== undefined) {
-        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<ExtensionField>(() => _encode_ExtensionField, $.BER), $.BER)(value.extensions, $.BER));
-    }
-    return $._encodeSequence(_components, $.BER);
-}); }
+    if (!_cached_encoder_for_ProvideUserInformationResultArg) { _cached_encoder_for_ProvideUserInformationResultArg = _get_encoder_for_OPTIONALLY_PROTECTED<ProvideUserInformationResultArg_Type>(_encode_ProvideUserInformationResultArg_Type); }
     return _cached_encoder_for_ProvideUserInformationResultArg(value, elGetter);
 }
 

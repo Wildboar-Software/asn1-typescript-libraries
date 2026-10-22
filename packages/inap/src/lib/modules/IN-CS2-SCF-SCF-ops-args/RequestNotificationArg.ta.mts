@@ -1,16 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-import { RequestedNotifications, _decode_RequestedNotifications, _encode_RequestedNotifications } from "../IN-CS2-datatypes/RequestedNotifications.ta.mjs";
-// export { RequestedNotifications, _decode_RequestedNotifications, _encode_RequestedNotifications } from "../IN-CS2-datatypes/RequestedNotifications.ta.mjs";
-import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-// export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
+import { RequestNotificationArg_Type, _decode_RequestNotificationArg_Type, _encode_RequestNotificationArg_Type } from "../IN-CS2-SCF-SCF-ops-args/RequestNotificationArg-Type.ta.mjs";
+// export { RequestNotificationArg_Type, _decode_RequestNotificationArg_Type, _encode_RequestNotificationArg_Type } from "../IN-CS2-SCF-SCF-ops-args/RequestNotificationArg-Type.ta.mjs";
 
 
 /**
@@ -28,22 +24,7 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ```
  */
 export
-interface RequestNotificationArg_sequence {
-    requestedNotifications: RequestedNotifications;
-    securityParameters?: OPTIONAL<SecurityParameters>;
-}
-
-export
-type RequestNotificationArg = OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>; // DefinedType
-
-const _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [
-    new $.ComponentSpec("requestedNotifications", false, $.hasTag(_TagClass.context, 0)),
-    new $.ComponentSpec("securityParameters", true, $.hasTag(_TagClass.context, 1)),
-];
-
-const _extension_additions_list_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
-
-const _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED: $.ComponentSpec[] = [];
+type RequestNotificationArg = OPTIONALLY_PROTECTED<RequestNotificationArg_Type>; // DefinedType
 
 let _cached_decoder_for_RequestNotificationArg: $.ASN1Decoder<RequestNotificationArg> | null = null;
 
@@ -55,21 +36,7 @@ let _cached_decoder_for_RequestNotificationArg: $.ASN1Decoder<RequestNotificatio
  */
 export
 function _decode_RequestNotificationArg (el: _Element): RequestNotificationArg {
-    if (!_cached_decoder_for_RequestNotificationArg) { _cached_decoder_for_RequestNotificationArg = _get_decoder_for_OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>(function (el: _Element): RequestNotificationArg_sequence {
-    let requestedNotifications!: RequestedNotifications;
-    let securityParameters: OPTIONAL<SecurityParameters>;
-    const callbacks: $.DecodingMap = {
-        "requestedNotifications": (_el: _Element): void => { requestedNotifications = $._decode_implicit<RequestedNotifications>(() => _decode_RequestedNotifications)(_el); },
-        "securityParameters": (_el: _Element): void => { securityParameters = $._decode_implicit<SecurityParameters>(() => _decode_SecurityParameters)(_el); }
-    };
-    $._parse_sequence(el, callbacks,
-        _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED,
-        _extension_additions_list_spec_for_OPTIONALLY_PROTECTED,
-        _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
-        undefined,
-    );
-    return { requestedNotifications, securityParameters };
-}); }
+    if (!_cached_decoder_for_RequestNotificationArg) { _cached_decoder_for_RequestNotificationArg = _get_decoder_for_OPTIONALLY_PROTECTED<RequestNotificationArg_Type>(_decode_RequestNotificationArg_Type); }
     return _cached_decoder_for_RequestNotificationArg(el);
 }
 
@@ -84,14 +51,7 @@ let _cached_encoder_for_RequestNotificationArg: $.ASN1Encoder<RequestNotificatio
  */
 export
 function _encode_RequestNotificationArg (value: RequestNotificationArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestNotificationArg) { _cached_encoder_for_RequestNotificationArg = _get_encoder_for_OPTIONALLY_PROTECTED<RequestNotificationArg_sequence>(function (value: RequestNotificationArg_sequence, elGetter: $.ASN1Encoder<RequestNotificationArg_sequence>): _Element {
-    const _components: _Element[] = [];
-    _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_RequestedNotifications, $.BER)(value.requestedNotifications, $.BER));
-    if (value.securityParameters !== undefined) {
-        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => _encode_SecurityParameters, $.BER)(value.securityParameters, $.BER));
-    }
-    return $._encodeSequence(_components, $.BER);
-}); }
+    if (!_cached_encoder_for_RequestNotificationArg) { _cached_encoder_for_RequestNotificationArg = _get_encoder_for_OPTIONALLY_PROTECTED<RequestNotificationArg_Type>(_encode_RequestNotificationArg_Type); }
     return _cached_encoder_for_RequestNotificationArg(value, elGetter);
 }
 
