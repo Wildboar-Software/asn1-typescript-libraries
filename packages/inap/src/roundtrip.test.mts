@@ -231,7 +231,7 @@ describe("ExecuteArgument_Type", () => {
             name,
             methodId,
             [assertion],
-            $._encodeNull($.BER),
+            $._encodeNull(null, $.BER),
             ExecuteArgument_Type._default_value_for_serviceControls,
             undefined,
             undefined,
