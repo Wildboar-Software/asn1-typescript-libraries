@@ -1,0 +1,84 @@
+/**
+ * @description
+ *
+ * ASN.1 module `IMSChargingDataTypes`.
+ *
+ * Identical assignments that also appear in other charging modules
+ * are re-exported from `shared`.
+ */
+export * from "./ACRInterimLost.ta.mjs";
+export * from "./ASRecord-threeGPPPSDataOffStatus.ta.mjs";
+export * from "./ASRecord.ta.mjs";
+export * from "./ATCFRecord.ta.mjs";
+export * from "./AccessCorrelationID.ta.mjs";
+export * from "./AccessNetworkInfoChange.ta.mjs";
+export * from "./AccessTransferInformation.ta.mjs";
+export * from "./AccessTransferType.ta.mjs";
+export * from "./AoCCostInformation.ta.mjs";
+export * from "./AoCInformation.ta.mjs";
+export * from "./ApplicationServersInformation.ta.mjs";
+export * from "./BGCFRecord.ta.mjs";
+export * from "./CalledIdentityChange.ta.mjs";
+export * from "./CarrierSelectRouting.ta.mjs";
+export * from "./CauseForRecordClosing.ta.mjs";
+export * from "./DMI-EXTENSION.oca.mjs";
+export * from "./ECSCFRecord.ta.mjs";
+export * from "./Early-Media-Components-List.ta.mjs";
+export * from "./FEIdentifierList.ta.mjs";
+export * from "./IBCFRecord.ta.mjs";
+export * from "./ICSCFRecord.ta.mjs";
+export * from "./IMS-Charging-Identifier.ta.mjs";
+export * from "./IMSCommunicationServiceIdentifier.ta.mjs";
+export * from "./IMSRecord.ta.mjs";
+export * from "./IPBinV6AddressWithOrWithoutPrefixLength.ta.mjs";
+export * from "./IPBinV6AddressWithPrefixLength.ta.mjs";
+export * from "./IPBinaryAddress.ta.mjs";
+export * from "./IPTextRepresentedAddress.ta.mjs";
+export * from "./ISUPCause.ta.mjs";
+export * from "./Incomplete-CDR-Indication.ta.mjs";
+export * from "./InterOperatorIdentifierList.ta.mjs";
+export * from "./InterOperatorIdentifiers.ta.mjs";
+export * from "./InvolvedParty.ta.mjs";
+export * from "./ListOfInvolvedParties.ta.mjs";
+export * from "./ListOfReasonHeader.ta.mjs";
+export * from "./MGCFRecord.ta.mjs";
+export * from "./MRFCRecord.ta.mjs";
+export * from "./ManagementExtension.ta.mjs";
+export * from "./ManagementExtensionSet.osa.mjs";
+export * from "./Media-Components-List.ta.mjs";
+export * from "./MessageBody.ta.mjs";
+export * from "./Milliseconds.ta.mjs";
+export * from "./NNI-Information.ta.mjs";
+export * from "./NNIType.ta.mjs";
+export * from "./NodeAddress.ta.mjs";
+export * from "./NumberPortabilityRouting.ta.mjs";
+export * from "./PCSCFRecord.ta.mjs";
+export * from "./RateElement.ta.mjs";
+export * from "./RealTimeTariffInformation.ta.mjs";
+export * from "./ReasonHeaderInformation.ta.mjs";
+export * from "./RecordType.ta.mjs";
+export * from "./RelationshipMode.ta.mjs";
+export * from "./Role-of-Node.ta.mjs";
+export * from "./S-CSCF-Information.ta.mjs";
+export * from "./SCSCFRecord.ta.mjs";
+export * from "./SDP-Media-Component.ta.mjs";
+export * from "./SDP-Media-Description.ta.mjs";
+export * from "./SDP-Type.ta.mjs";
+export * from "./SIP-Method.ta.mjs";
+export * from "./ServedPartyIPAddress.ta.mjs";
+export * from "./Service-Id.ta.mjs";
+export * from "./ServiceSpecificInfo.ta.mjs";
+export * from "./SessionDirection.ta.mjs";
+export * from "./SessionPriority.ta.mjs";
+export * from "./Status.ta.mjs";
+export * from "./SubscriberEquipmentNumber-subscriberEquipmentNumberType.ta.mjs";
+export * from "./SubscriberEquipmentNumber.ta.mjs";
+export * from "./SubscriptionID-subscriptionIDType.ta.mjs";
+export * from "./SubscriptionID.ta.mjs";
+export * from "./TADIdentifier.ta.mjs";
+export * from "./TFRecord.ta.mjs";
+export * from "./TRFRecord.ta.mjs";
+export * from "./TariffInformation.ta.mjs";
+export * from "./TransitIOILists.ta.mjs";
+export * from "./TransmissionMedium.ta.mjs";
+export * from "./TrunkGroupID.ta.mjs";

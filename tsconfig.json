@@ -298,6 +298,9 @@
       "path": "./packages/c1222"
     },
     {
+      "path": "./packages/gprs-cdr"
+    },
+    {
       "path": "./packages/qsig"
     },
     {

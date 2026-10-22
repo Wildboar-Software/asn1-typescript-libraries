@@ -46,6 +46,7 @@ jobs:
           - "gdt"
           - "gmi-attributemodule"
           - "goose"
+          - "gprs-cdr"
           - "guls"
           - "h248"
           - "isis"

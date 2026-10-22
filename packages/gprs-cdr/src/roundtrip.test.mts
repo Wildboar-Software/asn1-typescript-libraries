@@ -1,0 +1,205 @@
+import { ASN1SizeError } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import {
+    CauseForTerm_normalRelease,
+} from "./lib/modules/CSChargingDataTypes/CauseForTerm.ta.mjs";
+import {
+    LocationAreaAndCell,
+} from "./lib/modules/CSChargingDataTypes/LocationAreaAndCell.ta.mjs";
+import {
+    MOCallRecord,
+    _decode_MOCallRecord,
+    _encode_MOCallRecord,
+} from "./lib/modules/CSChargingDataTypes/MOCallRecord.ta.mjs";
+import {
+    RecordType_moCallRecord,
+} from "./lib/modules/CSChargingDataTypes/RecordType.ta.mjs";
+
+/**
+ * `MOCallRecord` is the largest SET produced for these charging modules:
+ * dozens of optional call, CAMEL, and location components around a few
+ * required fields.
+ */
+describe("MOCallRecord", () => {
+    test("round-trips a populated mobile-originated call record", () => {
+        const location = new LocationAreaAndCell(
+            Uint8Array.from([0x00, 0x01]),
+            Uint8Array.from([0x00, 0x2a]),
+            Uint8Array.from([0x32, 0xf4, 0x10]),
+        );
+        const original = new MOCallRecord(
+            RecordType_moCallRecord,
+            Uint8Array.from([0x21, 0x43, 0x65]),
+            Uint8Array.from([0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88]),
+            Uint8Array.from([0x91, 0x21, 0x43, 0x65, 0x87]),
+            Uint8Array.from([0x91, 0x11]),
+            Uint8Array.from([0x91, 0x22]),
+            undefined,
+            undefined,
+            undefined,
+            Uint8Array.from([0x91, 0x44, 0x55]),
+            undefined,
+            undefined,
+            location,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Uint8Array.from([0x20, 0x26, 0x10, 0x20, 0x12, 0x00, 0x00, 0x00, 0x00]),
+            undefined,
+            undefined,
+            95,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            CauseForTerm_normalRelease,
+            undefined,
+            Uint8Array.from([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08]),
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+        );
+        const el = _encode_MOCallRecord(original, $.BER);
+        const decoded = _decode_MOCallRecord(el);
+        expect(decoded).toEqual(original);
+        expect(decoded.recordType).toBe(RecordType_moCallRecord);
+        expect(decoded.callDuration).toBe(95);
+        expect(decoded.causeForTerm).toBe(CauseForTerm_normalRelease);
+        expect(decoded.recordingEntity).toEqual(original.recordingEntity);
+        expect(decoded.callReference).toEqual(original.callReference);
+        expect(decoded.servedIMSI).toEqual(original.servedIMSI);
+        expect(decoded.location).toEqual(location);
+        expect(decoded.callingNumber).toEqual(original.callingNumber);
+    });
+
+    test("rejects a recordingEntity that violates its SIZE constraint", () => {
+        expect(() => new MOCallRecord(
+            RecordType_moCallRecord,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            new Uint8Array(),
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            0,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            CauseForTerm_normalRelease,
+            undefined,
+            Uint8Array.from([0x01]),
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+        )).toThrow(ASN1SizeError);
+    });
+});

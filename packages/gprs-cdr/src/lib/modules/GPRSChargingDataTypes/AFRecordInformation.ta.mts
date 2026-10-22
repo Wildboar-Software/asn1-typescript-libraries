@@ -1,0 +1,162 @@
+/* eslint-disable */
+import {
+    OCTET_STRING,
+    OPTIONAL,
+    ASN1Element as _Element,
+    ASN1TagClass as _TagClass
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { Flows, _decode_Flows, _encode_Flows } from "../GPRSChargingDataTypes/Flows.ta.mjs";
+
+
+/**
+ * @summary AFRecordInformation
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AFRecordInformation ::= SEQUENCE {
+ *    aFChargingIdentifier   [1] IMPLICIT OCTET STRING,
+ *    flows                  [2] IMPLICIT Flows OPTIONAL}
+ * ```
+ * 
+ * @class
+ */
+export
+class AFRecordInformation {
+    /**
+     * @summary `aFChargingIdentifier`.
+     * @public
+     * @readonly
+     */
+    readonly aFChargingIdentifier: OCTET_STRING;
+    /**
+     * @summary `flows`.
+     * @public
+     * @readonly
+     */
+    readonly flows: OPTIONAL<Flows>;
+
+    constructor (
+        aFChargingIdentifier: OCTET_STRING,
+        flows: OPTIONAL<Flows>
+    ) {
+        this.aFChargingIdentifier = aFChargingIdentifier;
+        this.flows = flows;
+    }
+
+    /**
+     * @summary Restructures an object into a AFRecordInformation
+     * @description
+     * 
+     * This takes an `object` and converts it to a `AFRecordInformation`.
+     * 
+     * @public
+     * @static
+     * @method
+     * @param {Object} _o An object having all of the keys and values of a `AFRecordInformation`.
+     * @returns {AFRecordInformation}
+     */
+    public static _from_object (_o: { [_K in keyof (AFRecordInformation)]: (AFRecordInformation)[_K] }): AFRecordInformation {
+        return new AFRecordInformation(_o.aFChargingIdentifier, _o.flows);
+    }
+
+
+}
+
+/**
+ * @summary The Leading Root Component Types of AFRecordInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_1_spec_for_AFRecordInformation: $.ComponentSpec[] = [
+    new $.ComponentSpec("aFChargingIdentifier", false, $.hasTag(_TagClass.context, 1)),
+    new $.ComponentSpec("flows", true, $.hasTag(_TagClass.context, 2))
+];
+
+/**
+ * @summary The Trailing Root Component Types of AFRecordInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _root_component_type_list_2_spec_for_AFRecordInformation: $.ComponentSpec[] = [
+    
+];
+
+/**
+ * @summary The Extension Addition Component Types of AFRecordInformation
+ * @description
+ * 
+ * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
+ * 
+ * @constant
+ */
+export
+const _extension_additions_list_spec_for_AFRecordInformation: $.ComponentSpec[] = [
+    
+];
+
+let _cached_decoder_for_AFRecordInformation: $.ASN1Decoder<AFRecordInformation> | null = null;
+
+/**
+ * @summary Decodes an ASN.1 element into a(n) AFRecordInformation
+ * @function
+ * @param el The element being decoded.
+ * @returns The decoded data structure.
+ */
+export
+function _decode_AFRecordInformation (el: _Element): AFRecordInformation {
+    if (!_cached_decoder_for_AFRecordInformation) { _cached_decoder_for_AFRecordInformation = function (el: _Element): AFRecordInformation {
+    let aFChargingIdentifier!: OCTET_STRING;
+    let flows: OPTIONAL<Flows>;
+    const callbacks: $.DecodingMap = {
+        "aFChargingIdentifier": (_el: _Element): void => { aFChargingIdentifier = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(_el); },
+        "flows": (_el: _Element): void => { flows = $._decode_implicit<Flows>(() => _decode_Flows)(_el); }
+    };
+    $._parse_sequence(el, callbacks,
+        _root_component_type_list_1_spec_for_AFRecordInformation,
+        _extension_additions_list_spec_for_AFRecordInformation,
+        _root_component_type_list_2_spec_for_AFRecordInformation,
+        undefined,
+    );
+    return new AFRecordInformation(
+        aFChargingIdentifier,
+        flows
+    );
+}; }
+    return _cached_decoder_for_AFRecordInformation(el);
+}
+
+let _cached_encoder_for_AFRecordInformation: $.ASN1Encoder<AFRecordInformation> | null = null;
+
+/**
+ * @summary Encodes a(n) AFRecordInformation into an ASN.1 Element.
+ * @function
+ * @param value The value being encoded.
+ * @param elGetter A function that can be used to get new ASN.1 elements.
+ * @returns {_Element} The AFRecordInformation, encoded as an ASN.1 Element.
+ */
+export
+function _encode_AFRecordInformation (value: AFRecordInformation, elGetter: $.ASN1Encoder<any>): _Element {
+    if (!_cached_encoder_for_AFRecordInformation) { _cached_encoder_for_AFRecordInformation = function (value: AFRecordInformation, _elGetter: $.ASN1Encoder<AFRecordInformation>): _Element {
+    const _components: _Element[] = [];
+    _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.aFChargingIdentifier, $.BER));
+    if (value.flows !== undefined) {
+        _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_Flows, $.BER)(value.flows, $.BER));
+    }
+    return $._encodeSequence(_components, $.BER);
+}; }
+    return _cached_encoder_for_AFRecordInformation(value, elGetter);
+}
+
+
+/* eslint-enable */
