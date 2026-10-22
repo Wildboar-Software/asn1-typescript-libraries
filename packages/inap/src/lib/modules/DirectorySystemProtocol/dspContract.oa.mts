@@ -1,5 +1,4 @@
 import { type CONTRACT, type CONNECTION_PACKAGE, type OPERATION_PACKAGE, emptyUnbind } from "@wildboar/rose";
-import { roseOperation } from "../shared/roseOperation.mjs";
 import {
     chainedAbandon,
     chainedAddEntry,
@@ -43,7 +42,7 @@ const dspConnectionPackage: CONNECTION_PACKAGE = {
     class: "CONNECTION-PACKAGE",
     decoderFor: {},
     encoderFor: {},
-    "&bind": roseOperation(dSABind),
+    "&bind": dSABind,
     "&unbind": emptyUnbind,
     "&id": id_package_dspConnection,
     "&responderCanUnbind": false,
@@ -54,7 +53,7 @@ const chainedReadPackage: OPERATION_PACKAGE = {
     class: "OPERATION-PACKAGE",
     decoderFor: {},
     encoderFor: {},
-    "&Both": [roseOperation(chainedRead), roseOperation(chainedCompare), roseOperation(chainedAbandon)],
+    "&Both": [chainedRead, chainedCompare, chainedAbandon],
     "&id": id_package_chainedRead,
 };
 
@@ -62,7 +61,7 @@ const chainedSearchPackage: OPERATION_PACKAGE = {
     class: "OPERATION-PACKAGE",
     decoderFor: {},
     encoderFor: {},
-    "&Both": [roseOperation(chainedList), roseOperation(chainedSearch)],
+    "&Both": [chainedList, chainedSearch],
     "&id": id_package_chainedSearch,
 };
 
@@ -70,7 +69,7 @@ const chainedModifyPackage: OPERATION_PACKAGE = {
     class: "OPERATION-PACKAGE",
     decoderFor: {},
     encoderFor: {},
-    "&Both": [roseOperation(chainedAddEntry), roseOperation(chainedRemoveEntry), roseOperation(chainedModifyEntry), roseOperation(chainedModifyDN)],
+    "&Both": [chainedAddEntry, chainedRemoveEntry, chainedModifyEntry, chainedModifyDN],
     "&id": id_package_chainedModify,
 };
 
