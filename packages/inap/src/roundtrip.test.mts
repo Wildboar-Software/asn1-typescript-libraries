@@ -55,6 +55,18 @@ import {
 import {
     ExecuteArgument_Type_input_assertions_Item_valuesWithContext_Item,
 } from "./lib/modules/IN-CS2-SCF-SDF-Operations/ExecuteArgument-Type-input-assertions-Item-valuesWithContext-Item.ta.mjs";
+import { ChainingArguments } from "@wildboar/x500/DistributedOperations";
+import { ChainingArgument } from "./lib/modules/IN-CS2-SCF-SCF-ops-args/ChainingArgument.ta.mjs";
+import {
+    scfChained_ArgumentType_Type,
+    _get_decoder_for_scfChained_ArgumentType_Type,
+    _get_encoder_for_scfChained_ArgumentType_Type,
+} from "./lib/modules/IN-CS2-SCF-SCF-ops-args/scfChained-ArgumentType-Type.ta.mjs";
+import {
+    in_Chained_ArgumentType_Type,
+    _get_decoder_for_in_Chained_ArgumentType_Type,
+    _get_encoder_for_in_Chained_ArgumentType_Type,
+} from "./lib/modules/IN-CS3-SDF-SDF-Operations/in-Chained-ArgumentType-Type.ta.mjs";
 
 describe("InitialDPArg", () => {
     test("round-trips a CS-4 initial DP with nested call and service-interaction data", () => {
@@ -252,5 +264,39 @@ describe("ExecuteArgument_Type", () => {
         expect(decoded.input_assertions?.[0]?.valuesWithContext).toHaveLength(1);
         expect(decoded.specific_input?.tagClass).toBe(original.specific_input?.tagClass);
         expect(decoded).toEqual(original);
+    });
+});
+
+describe("chained open types", () => {
+    test("scfChained argument decodes operation.&ArgumentType with the supplied codec", () => {
+        const chainedArgument = new ChainingArgument(
+            new Uint8Array([0x01, 0x02]),
+            undefined,
+            [],
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+        );
+        const original = new scfChained_ArgumentType_Type<number>(chainedArgument, 7);
+        const encode = _get_encoder_for_scfChained_ArgumentType_Type<number>($._encodeInteger);
+        const decode = _get_decoder_for_scfChained_ArgumentType_Type<number>($._decodeInteger);
+        const decoded = decode(encode(original, $.BER));
+        expect(decoded.argument).toBe(7);
+        expect(decoded.chainedArgument.originatingSCF).toEqual(new Uint8Array([0x01, 0x02]));
+
+        const absent = new scfChained_ArgumentType_Type<number>(chainedArgument, undefined);
+        const decodedAbsent = decode(encode(absent, $.BER));
+        expect(decodedAbsent.argument).toBeUndefined();
+    });
+
+    test("in-Chained argument decodes operation.&ArgumentType with the supplied codec", () => {
+        const chained = new ChainingArguments(undefined, undefined, undefined, []);
+        const original = new in_Chained_ArgumentType_Type<number>(chained, 9);
+        const encode = _get_encoder_for_in_Chained_ArgumentType_Type<number>($._encodeInteger);
+        const decode = _get_decoder_for_in_Chained_ArgumentType_Type<number>($._decodeInteger);
+        const decoded = decode(encode(original, $.BER));
+        expect(decoded.argument).toBe(9);
+        expect(decoded.in_chainedArgument.traceInformation).toEqual([]);
     });
 });

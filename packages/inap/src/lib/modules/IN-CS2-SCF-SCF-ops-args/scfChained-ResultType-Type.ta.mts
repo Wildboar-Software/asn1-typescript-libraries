@@ -12,9 +12,9 @@ import { ChainingResult, _decode_ChainingResult, _encode_ChainingResult } from "
 /**
  * @summary scfChained_ResultType_Type
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * scfChained-ResultType-Type ::=
  * SEQUENCE {
@@ -22,11 +22,11 @@ import { ChainingResult, _decode_ChainingResult, _encode_ChainingResult } from "
  *   result [0] operation.&ResultType OPTIONAL
  * }
  * ```
- * 
+ *
  * @class
  */
 export
-class scfChained_ResultType_Type {
+class scfChained_ResultType_Type<ResultType> {
     /**
      * @summary `chainedResult`.
      * @public
@@ -38,11 +38,11 @@ class scfChained_ResultType_Type {
      * @public
      * @readonly
      */
-    readonly result: OPTIONAL<_Element>;
+    readonly result: OPTIONAL<ResultType>;
 
     constructor (
         chainedResult: ChainingResult,
-        result: OPTIONAL<_Element>
+        result: OPTIONAL<ResultType>
     ) {
         this.chainedResult = chainedResult;
         this.result = result;
@@ -51,16 +51,16 @@ class scfChained_ResultType_Type {
     /**
      * @summary Restructures an object into a scfChained_ResultType_Type
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `scfChained_ResultType_Type`.
-     * 
+     *
      * @public
      * @static
      * @method
      * @param {Object} _o An object having all of the keys and values of a `scfChained_ResultType_Type`.
      * @returns {scfChained_ResultType_Type}
      */
-    public static _from_object (_o: { [_K in keyof (scfChained_ResultType_Type)]: (scfChained_ResultType_Type)[_K] }): scfChained_ResultType_Type {
+    public static _from_object <ResultType> (_o: { [_K in keyof (scfChained_ResultType_Type<ResultType>)]: (scfChained_ResultType_Type<ResultType>)[_K] }): scfChained_ResultType_Type<ResultType> {
         return new scfChained_ResultType_Type(_o.chainedResult, _o.result);
     }
 
@@ -70,9 +70,9 @@ class scfChained_ResultType_Type {
 /**
  * @summary The Leading Root Component Types of scfChained_ResultType_Type
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -84,80 +84,78 @@ const _root_component_type_list_1_spec_for_scfChained_ResultType_Type: $.Compone
 /**
  * @summary The Trailing Root Component Types of scfChained_ResultType_Type
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_scfChained_ResultType_Type: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of scfChained_ResultType_Type
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_scfChained_ResultType_Type: $.ComponentSpec[] = [
-    
+
 ];
 
-let _cached_decoder_for_scfChained_ResultType_Type: $.ASN1Decoder<scfChained_ResultType_Type> | null = null;
-
 /**
- * @summary Decodes an ASN.1 element into a(n) scfChained_ResultType_Type
+ * @summary Returns a function that will decode an ASN.1 element into a(n) scfChained_ResultType_Type
  * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
+ * @param _decode_ResultType Decodes `operation.&ResultType`.
+ * @returns A function that will decode an ASN.1 element.
  */
-export
-function _decode_scfChained_ResultType_Type (el: _Element): scfChained_ResultType_Type {
-    if (!_cached_decoder_for_scfChained_ResultType_Type) { _cached_decoder_for_scfChained_ResultType_Type = function (el: _Element): scfChained_ResultType_Type {
-    let chainedResult!: ChainingResult;
-    let result: OPTIONAL<_Element>;
-    const callbacks: $.DecodingMap = {
-        "chainedResult": (_el: _Element): void => { chainedResult = _decode_ChainingResult(_el); },
-        "result": (_el: _Element): void => { result = $._decode_explicit<_Element>(() => $._decodeAny)(_el); }
+export function _get_decoder_for_scfChained_ResultType_Type<ResultType>(
+    _decode_ResultType: $.ASN1Decoder<ResultType>
+): $.ASN1Decoder<scfChained_ResultType_Type<ResultType>> {
+    return function (el: _Element): scfChained_ResultType_Type<ResultType> {
+        let chainedResult!: ChainingResult;
+        let result: OPTIONAL<ResultType>;
+        const callbacks: $.DecodingMap = {
+            "chainedResult": (_el: _Element): void => { chainedResult = _decode_ChainingResult(_el); },
+            "result": (_el: _Element): void => { result = $._decode_explicit<ResultType>(() => _decode_ResultType)(_el); }
+        };
+        $._parse_sequence(el, callbacks,
+            _root_component_type_list_1_spec_for_scfChained_ResultType_Type,
+            _extension_additions_list_spec_for_scfChained_ResultType_Type,
+            _root_component_type_list_2_spec_for_scfChained_ResultType_Type,
+            undefined,
+        );
+        return new scfChained_ResultType_Type(
+            chainedResult,
+            result
+        );
     };
-    $._parse_sequence(el, callbacks,
-        _root_component_type_list_1_spec_for_scfChained_ResultType_Type,
-        _extension_additions_list_spec_for_scfChained_ResultType_Type,
-        _root_component_type_list_2_spec_for_scfChained_ResultType_Type,
-        undefined,
-    );
-    return new scfChained_ResultType_Type(
-        chainedResult,
-        result
-    );
-}; }
-    return _cached_decoder_for_scfChained_ResultType_Type(el);
 }
 
-let _cached_encoder_for_scfChained_ResultType_Type: $.ASN1Encoder<scfChained_ResultType_Type> | null = null;
-
 /**
- * @summary Encodes a(n) scfChained_ResultType_Type into an ASN.1 Element.
+ * @summary Returns a function that will encode a(n) scfChained_ResultType_Type into an ASN.1 Element.
  * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The scfChained_ResultType_Type, encoded as an ASN.1 Element.
+ * @param _encode_ResultType Encodes `operation.&ResultType`.
+ * @returns A function that will encode a(n) scfChained_ResultType_Type as an ASN.1 element.
  */
-export
-function _encode_scfChained_ResultType_Type (value: scfChained_ResultType_Type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_scfChained_ResultType_Type) { _cached_encoder_for_scfChained_ResultType_Type = function (value: scfChained_ResultType_Type, elGetter: $.ASN1Encoder<scfChained_ResultType_Type>): _Element {
-    const _components: _Element[] = [];
-    _components.push(/* REQUIRED   */ _encode_ChainingResult(value.chainedResult, $.BER));
-    if (value.result !== undefined) {
-        _components.push(/* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => $._encodeAny, $.BER)(value.result, $.BER));
-    }
-    return $._encodeSequence(_components, $.BER);
-}; }
-    return _cached_encoder_for_scfChained_ResultType_Type(value, elGetter);
+export function _get_encoder_for_scfChained_ResultType_Type<ResultType>(
+    _encode_ResultType: $.ASN1Encoder<ResultType>
+): $.ASN1Encoder<scfChained_ResultType_Type<ResultType>> {
+    return function (value: scfChained_ResultType_Type<ResultType>): _Element {
+        const _components: _Element[] = [
+            /* REQUIRED   */ _encode_ChainingResult(value.chainedResult, $.BER),
+        ];
+        if (value.result !== undefined) {
+            _components.push(
+                /* IF_ABSENT  */ $._encode_explicit(_TagClass.context, 0, () => _encode_ResultType, $.BER)(value.result, $.BER)
+            );
+        }
+        return $._encodeSequence(_components, $.BER);
+    };
 }
 
 

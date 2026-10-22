@@ -11,9 +11,9 @@ import { IN_ChainingArguments, _decode_IN_ChainingArguments, _encode_IN_Chaining
 /**
  * @summary in_Chained_ArgumentType_Type
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * in-Chained-ArgumentType-Type ::=
  * SET {
@@ -21,11 +21,11 @@ import { IN_ChainingArguments, _decode_IN_ChainingArguments, _encode_IN_Chaining
  *   argument [0] operation.&ArgumentType
  * }
  * ```
- * 
+ *
  * @class
  */
 export
-class in_Chained_ArgumentType_Type {
+class in_Chained_ArgumentType_Type<ArgumentType> {
     /**
      * @summary `in_chainedArgument`.
      * @public
@@ -37,11 +37,11 @@ class in_Chained_ArgumentType_Type {
      * @public
      * @readonly
      */
-    readonly argument: _Element;
+    readonly argument: ArgumentType;
 
     constructor (
         in_chainedArgument: IN_ChainingArguments,
-        argument: _Element
+        argument: ArgumentType
     ) {
         this.in_chainedArgument = in_chainedArgument;
         this.argument = argument;
@@ -50,16 +50,16 @@ class in_Chained_ArgumentType_Type {
     /**
      * @summary Restructures an object into a in_Chained_ArgumentType_Type
      * @description
-     * 
+     *
      * This takes an `object` and converts it to a `in_Chained_ArgumentType_Type`.
-     * 
+     *
      * @public
      * @static
      * @method
      * @param {Object} _o An object having all of the keys and values of a `in_Chained_ArgumentType_Type`.
      * @returns {in_Chained_ArgumentType_Type}
      */
-    public static _from_object (_o: { [_K in keyof (in_Chained_ArgumentType_Type)]: (in_Chained_ArgumentType_Type)[_K] }): in_Chained_ArgumentType_Type {
+    public static _from_object <ArgumentType> (_o: { [_K in keyof (in_Chained_ArgumentType_Type<ArgumentType>)]: (in_Chained_ArgumentType_Type<ArgumentType>)[_K] }): in_Chained_ArgumentType_Type<ArgumentType> {
         return new in_Chained_ArgumentType_Type(_o.in_chainedArgument, _o.argument);
     }
 
@@ -69,9 +69,9 @@ class in_Chained_ArgumentType_Type {
 /**
  * @summary The Leading Root Component Types of in_Chained_ArgumentType_Type
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the leading root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
@@ -83,82 +83,73 @@ const _root_component_type_list_1_spec_for_in_Chained_ArgumentType_Type: $.Compo
 /**
  * @summary The Trailing Root Component Types of in_Chained_ArgumentType_Type
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the trailing root component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _root_component_type_list_2_spec_for_in_Chained_ArgumentType_Type: $.ComponentSpec[] = [
-    
+
 ];
 
 /**
  * @summary The Extension Addition Component Types of in_Chained_ArgumentType_Type
  * @description
- * 
+ *
  * This is an array of `ComponentSpec`s that define how to decode the extension addition component type list of a SET or SEQUENCE.
- * 
+ *
  * @constant
  */
 export
 const _extension_additions_list_spec_for_in_Chained_ArgumentType_Type: $.ComponentSpec[] = [
-    
+
 ];
 
-let _cached_decoder_for_in_Chained_ArgumentType_Type: $.ASN1Decoder<in_Chained_ArgumentType_Type> | null = null;
-
 /**
- * @summary Decodes an ASN.1 element into a(n) in_Chained_ArgumentType_Type
+ * @summary Returns a function that will decode an ASN.1 element into a(n) in_Chained_ArgumentType_Type
  * @function
- * @param el The element being decoded.
- * @returns The decoded data structure.
+ * @param _decode_ArgumentType Decodes `operation.&ArgumentType`.
+ * @returns A function that will decode an ASN.1 element.
  */
-export
-function _decode_in_Chained_ArgumentType_Type (el: _Element): in_Chained_ArgumentType_Type {
-    if (!_cached_decoder_for_in_Chained_ArgumentType_Type) { _cached_decoder_for_in_Chained_ArgumentType_Type = function (el: _Element): in_Chained_ArgumentType_Type {
-    /* START_OF_SET_COMPONENT_DECLARATIONS */
-    let in_chainedArgument!: IN_ChainingArguments;
-    let argument!: _Element;
-    /* END_OF_SET_COMPONENT_DECLARATIONS */
-    /* START_OF_CALLBACKS_MAP */
-    const callbacks: $.DecodingMap = {
-        "in-chainedArgument": (_el: _Element): void => { in_chainedArgument = _decode_IN_ChainingArguments(_el); },
-        "argument": (_el: _Element): void => { argument = $._decode_explicit<_Element>(() => $._decodeAny)(_el); }
+export function _get_decoder_for_in_Chained_ArgumentType_Type<ArgumentType>(
+    _decode_ArgumentType: $.ASN1Decoder<ArgumentType>
+): $.ASN1Decoder<in_Chained_ArgumentType_Type<ArgumentType>> {
+    return function (el: _Element): in_Chained_ArgumentType_Type<ArgumentType> {
+        let in_chainedArgument!: IN_ChainingArguments;
+        let argument!: ArgumentType;
+        const callbacks: $.DecodingMap = {
+            "in-chainedArgument": (_el: _Element): void => { in_chainedArgument = _decode_IN_ChainingArguments(_el); },
+            "argument": (_el: _Element): void => { argument = $._decode_explicit<ArgumentType>(() => _decode_ArgumentType)(_el); }
+        };
+        $._parse_set(el, callbacks,
+            _root_component_type_list_1_spec_for_in_Chained_ArgumentType_Type,
+            _extension_additions_list_spec_for_in_Chained_ArgumentType_Type,
+            _root_component_type_list_2_spec_for_in_Chained_ArgumentType_Type,
+            undefined,
+        );
+        return new in_Chained_ArgumentType_Type(
+            in_chainedArgument,
+            argument
+        );
     };
-    /* END_OF_CALLBACKS_MAP */
-    $._parse_set(el, callbacks,
-        _root_component_type_list_1_spec_for_in_Chained_ArgumentType_Type,
-        _extension_additions_list_spec_for_in_Chained_ArgumentType_Type,
-        _root_component_type_list_2_spec_for_in_Chained_ArgumentType_Type,
-        undefined,
-    );
-    return new in_Chained_ArgumentType_Type( /* SET_CONSTRUCTOR_CALL */
-        in_chainedArgument,
-        argument
-    );
-}; }
-    return _cached_decoder_for_in_Chained_ArgumentType_Type(el);
 }
 
-let _cached_encoder_for_in_Chained_ArgumentType_Type: $.ASN1Encoder<in_Chained_ArgumentType_Type> | null = null;
-
 /**
- * @summary Encodes a(n) in_Chained_ArgumentType_Type into an ASN.1 Element.
+ * @summary Returns a function that will encode a(n) in_Chained_ArgumentType_Type into an ASN.1 Element.
  * @function
- * @param value The value being encoded.
- * @param elGetter A function that can be used to get new ASN.1 elements.
- * @returns {_Element} The in_Chained_ArgumentType_Type, encoded as an ASN.1 Element.
+ * @param _encode_ArgumentType Encodes `operation.&ArgumentType`.
+ * @returns A function that will encode a(n) in_Chained_ArgumentType_Type as an ASN.1 element.
  */
-export
-function _encode_in_Chained_ArgumentType_Type (value: in_Chained_ArgumentType_Type, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_in_Chained_ArgumentType_Type) { _cached_encoder_for_in_Chained_ArgumentType_Type = function (value: in_Chained_ArgumentType_Type, elGetter: $.ASN1Encoder<in_Chained_ArgumentType_Type>): _Element {
-    return $._encodeSet([
-        /* REQUIRED   */ _encode_IN_ChainingArguments(value.in_chainedArgument, $.BER),
-        /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => $._encodeAny, $.BER)(value.argument, $.BER)
-    ], $.BER);
-}; }
-    return _cached_encoder_for_in_Chained_ArgumentType_Type(value, elGetter);
+export function _get_encoder_for_in_Chained_ArgumentType_Type<ArgumentType>(
+    _encode_ArgumentType: $.ASN1Encoder<ArgumentType>
+): $.ASN1Encoder<in_Chained_ArgumentType_Type<ArgumentType>> {
+    return function (value: in_Chained_ArgumentType_Type<ArgumentType>): _Element {
+        return $._encodeSet([
+            /* REQUIRED   */ _encode_IN_ChainingArguments(value.in_chainedArgument, $.BER),
+            /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_ArgumentType, $.BER)(value.argument, $.BER)
+        ], $.BER);
+    };
 }
 
 
