@@ -18,19 +18,21 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary InvokeId
  * @description
  *
- * Identifies a particular invocation so later reports can be correlated. `present` is an `INTEGER`; `absent` is `NULL` (ITU-T Rec. X.880 (07/94) §9.8). Use `noInvokeId` (`absent:NULL`) when an integer is not needed or not available (X.880 §9.9).
+ * Identifies a particular invocation so later reports can be correlated. `present` is an `INTEGER`; `absent` is `NULL` (ITU-T Rec. X.880 (07/94) §9.8). Use `noInvokeId` (`absent:NULL`) when an integer is not needed or not available (X.880 §9.9). The CHOICE is extensible, unlike X.880, so it matches the directory `InvokeId` in X.519. An unrecognized alternative is preserved.
  *
  * ### ASN.1 Definition:
  *
  * ```asn1
  * InvokeId  ::=  CHOICE {present  INTEGER,
- *                      absent   NULL
+ *                      absent   NULL,
+ *                      ...
  * }
  * ```
  */
 export type InvokeId =
   | { present: INTEGER } /* CHOICE_ALT_ROOT */
-  | { absent: NULL } /* CHOICE_ALT_ROOT */;
+  | { absent: NULL } /* CHOICE_ALT_ROOT */
+  | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 
 
 let _cached_decoder_for_InvokeId: $.ASN1Decoder<InvokeId> | null = null;
@@ -44,7 +46,7 @@ let _cached_decoder_for_InvokeId: $.ASN1Decoder<InvokeId> | null = null;
  */
 export function _decode_InvokeId(el: _Element): InvokeId {
   if (!_cached_decoder_for_InvokeId) {
-    _cached_decoder_for_InvokeId = $._decode_inextensible_choice<InvokeId>({
+    _cached_decoder_for_InvokeId = $._decode_extensible_choice<InvokeId>({
       'UNIVERSAL 2': ['present', $._decodeInteger],
       'UNIVERSAL 5': ['absent', $._decodeNull],
     });

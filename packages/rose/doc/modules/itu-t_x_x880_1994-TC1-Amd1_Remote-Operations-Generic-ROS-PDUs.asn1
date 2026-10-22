@@ -136,8 +136,10 @@ RejectProblem ::= INTEGER {
   returnError-errorResponseUnexpected(31), returnError-unrecognizedError(32),
   returnError-unexpectedError(33), returnError-mistypedParameter(34)}
 
+-- Extensible, unlike ITU-T X.880, so this matches the directory InvokeId in X.519.
 InvokeId ::= CHOICE {present  INTEGER,
-                     absent   NULL
+                     absent   NULL,
+                     ...
 }
 
 noInvokeId InvokeId ::= absent:NULL
