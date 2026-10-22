@@ -3,7 +3,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-SCF-SCF-datatypes/CollectedInfo.ta.mjs";
@@ -282,7 +283,12 @@ function _decode_ProvideUserInformationArg_Type (el: _Element): ProvideUserInfor
         "infoToSend": (_el: _Element): void => { infoToSend = $._decode_explicit<InformationToSend>(() => _decode_InformationToSend)(_el); },
         "errorInfo": (_el: _Element): void => { errorInfo = $._decode_explicit<InformationToSend>(() => _decode_InformationToSend)(_el); },
         "typeOfRequestedInfo": (_el: _Element): void => { typeOfRequestedInfo = $._decode_implicit<InfoType>(() => _decode_InfoType)(_el); },
-        "numberOfAllowedRetries": (_el: _Element): void => { numberOfAllowedRetries = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "numberOfAllowedRetries": (_el: _Element): void => {
+            numberOfAllowedRetries = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            if (numberOfAllowedRetries < 0 || numberOfAllowedRetries > 127) {
+                throw new ASN1OverflowError("numberOfAllowedRetries violates INTEGER constraint");
+            }
+        },
         "actions": (_el: _Element): void => { actions = $._decode_implicit<Actions>(() => _decode_Actions)(_el); },
         "preferredLanguage": (_el: _Element): void => { preferredLanguage = $._decode_implicit<Language>(() => _decode_Language)(_el); },
         "securityParameters": (_el: _Element): void => { securityParameters = $._decode_implicit<SecurityParameters>(() => _decode_SecurityParameters)(_el); },

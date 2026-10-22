@@ -2,7 +2,8 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-SCF-SCF-datatypes/RequestedType.ta.mjs";
@@ -160,7 +161,12 @@ function _decode_InitiateCallRequestArg_Type (el: _Element): InitiateCallRequest
     const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
         "requestedType": (_el: _Element): void => { requestedType = $._decode_implicit<RequestedType>(() => _decode_RequestedType)(_el); },
-        "destinationRelatedInfo": (_el: _Element): void => { destinationRelatedInfo = $._decode_implicit<DestinationRelatedInfo[]>(() => $._decodeSequenceOf<DestinationRelatedInfo>(() => _decode_DestinationRelatedInfo))(_el); },
+        "destinationRelatedInfo": (_el: _Element): void => {
+            destinationRelatedInfo = $._decode_implicit<DestinationRelatedInfo[]>(() => $._decodeSequenceOf<DestinationRelatedInfo>(() => _decode_DestinationRelatedInfo))(_el);
+            if (destinationRelatedInfo.length < 1 || destinationRelatedInfo.length > 2) {
+                throw new ASN1SizeError("destinationRelatedInfo violates SIZE constraint");
+            }
+        },
         "securityParameters": (_el: _Element): void => { securityParameters = $._decode_implicit<SecurityParameters>(() => _decode_SecurityParameters)(_el); },
         "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); }
     };

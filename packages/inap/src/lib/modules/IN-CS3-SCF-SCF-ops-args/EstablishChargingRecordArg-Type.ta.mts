@@ -4,7 +4,8 @@ import {
     INTEGER,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS3-SCF-SCF-datatypes/UserCredit.ta.mjs";
@@ -294,7 +295,12 @@ function _decode_EstablishChargingRecordArg_Type (el: _Element): EstablishChargi
         "reportAddress": (_el: _Element): void => { reportAddress = $._decode_implicit<ReportDestinationInformation>(() => _decode_ReportDestinationInformation)(_el); },
         "container": (_el: _Element): void => { container = $._decode_implicit<FreeContainer>(() => _decode_FreeContainer)(_el); },
         "correlationId": (_el: _Element): void => { correlationId = $._decode_implicit<CorrelationID>(() => _decode_CorrelationID)(_el); },
-        "acksequence": (_el: _Element): void => { acksequence = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el); },
+        "acksequence": (_el: _Element): void => {
+            acksequence = $._decode_implicit<INTEGER>(() => $._decodeInteger)(_el);
+            if (acksequence < 1 || acksequence > 127) {
+                throw new ASN1OverflowError("acksequence violates INTEGER constraint");
+            }
+        },
         "splitcharge": (_el: _Element): void => { splitcharge = $._decode_implicit<ChargingSignallingInformation>(() => _decode_ChargingSignallingInformation)(_el); },
         "reportCondition": (_el: _Element): void => { reportCondition = $._decode_implicit<ReportConditionEvent>(() => _decode_ReportConditionEvent)(_el); }
     };
