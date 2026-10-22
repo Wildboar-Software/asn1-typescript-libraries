@@ -5,6 +5,10 @@ import {
     AuthenticationLevel_basicLevels_level_simple,
 } from "@wildboar/x500/BasicAccessControl";
 import {
+    AttributeTypeAndValue,
+    type Name,
+} from "@wildboar/x500/InformationFramework";
+import {
     ACIItem,
     _decode_ACIItem,
     _encode_ACIItem,
@@ -40,6 +44,17 @@ import {
 } from "./lib/modules/IN-SSF-SCF-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 import { BothwayThroughConnectionInd } from "./lib/modules/IN-SSF-SCF-datatypes/BothwayThroughConnectionInd.ta.mjs";
 import { ServiceInteractionIndicatorsTwo_redirectServiceTreatmentInd } from "./lib/modules/IN-SSF-SCF-datatypes/ServiceInteractionIndicatorsTwo-redirectServiceTreatmentInd.ta.mjs";
+import {
+    ExecuteArgument_Type,
+    _decode_ExecuteArgument_Type,
+    _encode_ExecuteArgument_Type,
+} from "./lib/modules/IN-CS2-SCF-SDF-Operations/ExecuteArgument-Type.ta.mjs";
+import {
+    ExecuteArgument_Type_input_assertions_Item,
+} from "./lib/modules/IN-CS2-SCF-SDF-Operations/ExecuteArgument-Type-input-assertions-Item.ta.mjs";
+import {
+    ExecuteArgument_Type_input_assertions_Item_valuesWithContext_Item,
+} from "./lib/modules/IN-CS2-SCF-SDF-Operations/ExecuteArgument-Type-input-assertions-Item-valuesWithContext-Item.ta.mjs";
 
 describe("InitialDPArg", () => {
     test("round-trips a CS-4 initial DP with nested call and service-interaction data", () => {
@@ -188,6 +203,54 @@ describe("ACIItem", () => {
             .toEqual([methodId]);
         expect(decoded.itemOrUserFirst.userFirst.userPermissions[0]?.grantsAndDenials)
             .toEqual(grants);
+        expect(decoded).toEqual(original);
+    });
+});
+
+describe("ExecuteArgument_Type", () => {
+    test("round-trips a CS-2 execute argument with nested assertions", () => {
+        const methodId = _OID.fromParts([1, 2, 3]);
+        const name: Name = {
+            rdnSequence: [[
+                new AttributeTypeAndValue(
+                    _OID.fromParts([2, 5, 4, 3]),
+                    $._encodeUTF8String("scf", $.BER),
+                ),
+            ]],
+        };
+        const withContext = new ExecuteArgument_Type_input_assertions_Item_valuesWithContext_Item(
+            $._encodeInteger(7, $.BER),
+            [],
+        );
+        const assertion = new ExecuteArgument_Type_input_assertions_Item(
+            $._encodeObjectIdentifier(methodId, $.BER),
+            [$._encodeInteger(1, $.BER)],
+            [withContext],
+        );
+        const original = new ExecuteArgument_Type(
+            name,
+            methodId,
+            [assertion],
+            $._encodeNull($.BER),
+            ExecuteArgument_Type._default_value_for_serviceControls,
+            undefined,
+            undefined,
+            ExecuteArgument_Type._default_value_for_operationProgress,
+            undefined,
+            undefined,
+            undefined,
+            ExecuteArgument_Type._default_value_for_entryOnly,
+            ExecuteArgument_Type._default_value_for_nameResolveOnMaste,
+            undefined,
+            ExecuteArgument_Type._default_value_for_familyGrouping,
+        );
+        const encoded = _encode_ExecuteArgument_Type(original, $.BER);
+        const decoded = _decode_ExecuteArgument_Type(encoded);
+        expect(decoded.method_id.isEqualTo(methodId)).toBe(true);
+        expect(decoded.object).toEqual(name);
+        expect(decoded.input_assertions).toHaveLength(1);
+        expect(decoded.input_assertions?.[0]?.valuesWithContext).toHaveLength(1);
+        expect(decoded.specific_input?.tagClass).toBe(original.specific_input?.tagClass);
         expect(decoded).toEqual(original);
     });
 });
