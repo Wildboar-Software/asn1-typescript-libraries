@@ -26,6 +26,6 @@ import { modifyEntry } from "../DirectoryAbstractService/modifyEntry.oa.mjs";
  * 
  */
 export
-const DAP_Invokable: (OPERATION)[] = [ search, addEntry, removeEntry, modifyEntry, ] as unknown as OPERATION[];
+const DAP_Invokable: (OPERATION)[] = [ search, addEntry, removeEntry, modifyEntry, ];
 
 /* eslint-enable */

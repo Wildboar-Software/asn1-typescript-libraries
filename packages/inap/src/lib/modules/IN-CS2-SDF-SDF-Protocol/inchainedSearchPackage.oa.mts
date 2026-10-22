@@ -31,7 +31,7 @@ const inchainedSearchPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ chainedSearch, ] as unknown as OPERATION[] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ chainedSearch, ] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_inchainedSearch /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

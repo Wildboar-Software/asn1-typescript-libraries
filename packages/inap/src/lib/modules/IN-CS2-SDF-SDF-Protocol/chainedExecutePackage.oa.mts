@@ -31,7 +31,7 @@ const chainedExecutePackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ chainedExecute, ] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ chainedExecute, ] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_chainedExecute /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

@@ -35,7 +35,7 @@ const modifyPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ addEntry, removeEntry, modifyEntry, ] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ addEntry, removeEntry, modifyEntry, ] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_modify /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

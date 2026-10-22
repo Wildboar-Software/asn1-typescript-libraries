@@ -36,7 +36,7 @@ const dispConnectionPackage: CONNECTION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&bind": dSAShadowBind as unknown as OPERATION /* OBJECT_FIELD_SETTING */,
+    "&bind": dSAShadowBind /* OBJECT_FIELD_SETTING */,
     "&unbind": in_DSAShadowUnbind /* OBJECT_FIELD_SETTING */,
     "&id": id_package_dispConnection /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&responderCanUnbind": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

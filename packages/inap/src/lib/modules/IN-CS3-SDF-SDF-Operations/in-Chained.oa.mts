@@ -170,7 +170,7 @@ export function in_Chained(operation: OPERATION): OPERATION {
     const decodeResult = operation.decoderFor["&ResultType"];
     const encodeResult = operation.encoderFor["&ResultType"];
     const errors = (operation["&Errors"] ?? []).filter(
-        (err: ERROR): boolean => err !== (referral as unknown as ERROR) && err !== in_DSAReferral,
+        (err: ERROR): boolean => err !== (referral) && err !== in_DSAReferral,
     );
     return {
         class: "OPERATION",

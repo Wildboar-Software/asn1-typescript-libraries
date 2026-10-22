@@ -31,7 +31,7 @@ const searchPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ search, ] as unknown as OPERATION[] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ search, ] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_search /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

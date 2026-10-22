@@ -36,7 +36,7 @@ const dspConnectionPackage: CONNECTION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&bind": dSABind as unknown as OPERATION /* OBJECT_FIELD_SETTING */,
+    "&bind": dSABind /* OBJECT_FIELD_SETTING */,
     "&unbind": inUnbind /* OBJECT_FIELD_SETTING */,
     "&id": id_package_dspConnection /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&responderCanUnbind": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

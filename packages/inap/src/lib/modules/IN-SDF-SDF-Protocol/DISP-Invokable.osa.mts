@@ -24,6 +24,6 @@ import { coordinateShadowUpdate } from "../DirectoryShadowAbstractService/coordi
  * 
  */
 export
-const DISP_Invokable: (OPERATION)[] = [ requestShadowUpdate, updateShadow, coordinateShadowUpdate, ] as unknown as OPERATION[];
+const DISP_Invokable: (OPERATION)[] = [ requestShadowUpdate, updateShadow, coordinateShadowUpdate, ];
 
 /* eslint-enable */

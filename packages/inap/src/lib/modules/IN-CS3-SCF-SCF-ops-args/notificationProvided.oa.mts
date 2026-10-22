@@ -68,7 +68,7 @@ const notificationProvided: OPERATION<NotificationProvidedArg, NULL> = {
         "&ResultType": $._encodeNull,
     },
     "&returnResult": false /* OBJECT_FIELD_SETTING */,
-    "&Errors": [ missingParameter, systemFailure, scfTaskRefused, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, missingCustomerRecord, parameterOutOfRange, securityError, ] as unknown as ERROR[] /* OBJECT_FIELD_SETTING */,
+    "&Errors": [ missingParameter, systemFailure, scfTaskRefused, unexpectedComponentSequence, unexpectedDataValue, unexpectedParameter, missingCustomerRecord, parameterOutOfRange, securityError, ] /* OBJECT_FIELD_SETTING */,
     "&alwaysReturns": false /* OBJECT_FIELD_SETTING */,
     "&operationCode": opcode_notificationProvided /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

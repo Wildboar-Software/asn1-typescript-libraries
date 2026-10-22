@@ -33,7 +33,7 @@ const shadowSupplierPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Consumer": [ coordinateShadowUpdate, updateShadow, ] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
+    "&Consumer": [ coordinateShadowUpdate, updateShadow, ] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_shadowSupplier /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

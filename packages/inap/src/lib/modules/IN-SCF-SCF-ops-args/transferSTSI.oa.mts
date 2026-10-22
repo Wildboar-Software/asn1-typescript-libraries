@@ -57,7 +57,7 @@ const transferSTSI: OPERATION<TransferSTSIArg> = {
         "&ResultType": undefined,
     },
     "&returnResult": false /* OBJECT_FIELD_SETTING */,
-    "&Errors": [ missingParameter, systemFailure, scfTaskRefused, unexpectedDataValue, unexpectedParameter, parameterOutOfRange, securityError, ] as unknown as ERROR[] /* OBJECT_FIELD_SETTING */,
+    "&Errors": [ missingParameter, systemFailure, scfTaskRefused, unexpectedDataValue, unexpectedParameter, parameterOutOfRange, securityError, ] /* OBJECT_FIELD_SETTING */,
     "&alwaysReturns": false /* OBJECT_FIELD_SETTING */,
     "&operationCode": opcode_transferSTSI /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

@@ -57,7 +57,7 @@ const in_Execute: OPERATION<IN_ExecuteArgument, ExecuteResult> = {
         "&ArgumentType": _encode_IN_ExecuteArgument,
         "&ResultType": _encode_ExecuteResult,
     },
-    "&Errors": [ attributeError, nameError, in_ServiceError, referral, securityError, updateError, executionError, ] as unknown as ERROR[] /* OBJECT_FIELD_SETTING */,
+    "&Errors": [ attributeError, nameError, in_ServiceError, referral, securityError, updateError, executionError, ] /* OBJECT_FIELD_SETTING */,
     "&operationCode": opcode_execute /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&ArgumentType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&ResultType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,

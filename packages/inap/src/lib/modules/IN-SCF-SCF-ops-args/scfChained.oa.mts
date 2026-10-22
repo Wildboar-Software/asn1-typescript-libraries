@@ -81,7 +81,7 @@ function _decode_ScfChainedArgument<Argument>(
             },
             "argument": (_el: _Element): void => {
                 if (decodeArgument) {
-                    argument = $._decode_implicit<Argument>(() => decodeArgument)(_el);
+                    argument = $._decode_explicit<Argument>(() => decodeArgument)(_el);
                 }
             },
         };
@@ -99,7 +99,7 @@ function _encode_ScfChainedArgument<Argument>(
         ];
         if (value.argument !== undefined && encodeArgument) {
             components.push(
-                $._encode_implicit(_TagClass.context, 0, () => encodeArgument, $.BER)(value.argument, $.BER),
+                $._encode_explicit(_TagClass.context, 0, () => encodeArgument, $.BER)(value.argument, $.BER),
             );
         }
         return $._encodeSequence(components, $.BER);
@@ -118,7 +118,7 @@ function _decode_ScfChainedResult<Result>(
             },
             "result": (_el: _Element): void => {
                 if (decodeResult) {
-                    result = $._decode_implicit<Result>(() => decodeResult)(_el);
+                    result = $._decode_explicit<Result>(() => decodeResult)(_el);
                 }
             },
         };
@@ -136,7 +136,7 @@ function _encode_ScfChainedResult<Result>(
         ];
         if (value.result !== undefined && encodeResult) {
             components.push(
-                $._encode_implicit(_TagClass.context, 0, () => encodeResult, $.BER)(value.result, $.BER),
+                $._encode_explicit(_TagClass.context, 0, () => encodeResult, $.BER)(value.result, $.BER),
             );
         }
         return $._encodeSequence(components, $.BER);
@@ -195,7 +195,7 @@ export function scfChained(operation: OPERATION): OPERATION {
         "&Errors": [
             ...(operation["&Errors"] ?? []),
             chainingRefused,
-            securityError as unknown as ERROR,
+            securityError,
             scfReferral,
         ],
         "&operationCode": operation["&operationCode"],

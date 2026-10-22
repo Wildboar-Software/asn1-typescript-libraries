@@ -35,7 +35,7 @@ const inchainedModifyPackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ chainedAddEntry, chainedRemoveEntry, chainedModifyEntry, ] as unknown as OPERATION[] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ chainedAddEntry, chainedRemoveEntry, chainedModifyEntry, ] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_inchainedModify /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

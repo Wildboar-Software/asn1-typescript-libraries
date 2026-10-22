@@ -31,7 +31,7 @@ const executePackage: OPERATION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&Supplier": [ execute, ] as unknown as OPERATION[] /* OBJECT_FIELD_SETTING */,
+    "&Supplier": [ execute, ] /* OBJECT_FIELD_SETTING */,
     "&id": id_package_execute /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

@@ -21,6 +21,6 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
  * @implements {ERROR}
  */
 export
-const in_DSAReferral: ERROR = dsaReferral as unknown as ERROR;
+const in_DSAReferral: ERROR = dsaReferral;
 
 /* eslint-enable */

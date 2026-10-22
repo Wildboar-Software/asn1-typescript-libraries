@@ -4,6 +4,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { chained } from "../DistributedOperations/chained.oa.mjs";
+import { roseOperation } from "../shared/roseOperation.mjs";
 // export { chained } from "../DistributedOperations/chained.oa.mjs";
 // export { execute } from "../IN-SCF-SDF-operations/execute.oa.mjs";
 
@@ -23,6 +24,6 @@ import { chained } from "../DistributedOperations/chained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedExecute: OPERATION = chained(execute) as unknown as OPERATION;
+const chainedExecute: OPERATION = roseOperation(chained(execute));
 
 /* eslint-enable */

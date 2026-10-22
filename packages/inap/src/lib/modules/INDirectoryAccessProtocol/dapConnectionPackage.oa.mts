@@ -36,8 +36,8 @@ const dapConnectionPackage: CONNECTION_PACKAGE = {
     },
     encoderFor: {
     },
-    "&bind": directoryBind as unknown as OPERATION /* OBJECT_FIELD_SETTING */,
-    "&unbind": directoryUnbind as unknown as OPERATION /* OBJECT_FIELD_SETTING */,
+    "&bind": directoryBind /* OBJECT_FIELD_SETTING */,
+    "&unbind": directoryUnbind /* OBJECT_FIELD_SETTING */,
     "&id": id_package_dapConnection /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&responderCanUnbind": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
     "&unbindCanFail": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
