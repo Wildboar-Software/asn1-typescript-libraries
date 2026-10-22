@@ -1,0 +1,20 @@
+Call-Offer-Notifications-asn1-97
+{iso(1) standard(0) pss1-call-offer(14843) call-offer-notifications-asn1-97(3)}
+DEFINITIONS EXPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+    NOTIFICATION
+        FROM Notification-class-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        notification-class-asn1-97(21)}
+    ;
+
+remoteUserAlerting NOTIFICATION ::= {
+    ARGUMENT NULL
+    CODE local: 2000
+}
+
+Call-Offer-Notifications NOTIFICATION ::= {remoteUserAlerting}
+
+END                      -- of Call-Offer-Notifications-asn1-97

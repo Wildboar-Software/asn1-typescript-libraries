@@ -1,0 +1,214 @@
+MWI-Operations-asn1-97
+{iso(1) standard(0) pss1-message-waiting-indication(15506)
+message-waiting-operations-asn1-97(1)}
+DEFINITIONS EXPLICIT TAGS ::=
+BEGIN
+IMPORTS
+
+    OPERATION, ERROR
+        FROM Remote-Operations-Information-Objects
+        {joint-iso-itu-t(2) remote-operations(4) informationObjects(5)
+        version1(0)}
+
+    EXTENSION, Extension{}
+        FROM Manufacturer-specific-service-extension-class-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        msi-class-asn1-97(11)}
+
+    basicServiceNotProvided, notActivated, userNotSubscribed,
+    invalidServedUserNr
+        FROM General-Error-List
+        {ccitt recommendation q 950 general-error-list(1) }
+
+    PartyNumber
+        FROM Addressing-Data-Elements-asn1-97
+        {iso(1) standard(0) pss1-generic-procedures(11582)
+        addressing-data-elements-asn1-97(20) }
+    ;
+
+MWI-Operations OPERATION ::= {
+    mWIActivate
+    | mWIDeactivate
+    | mWIInterrogate
+}
+
+mWIActivate OPERATION ::= {
+    ARGUMENT MWIActivateArg
+    RESULT DummyRes
+    ERRORS {
+        userNotSubscribed
+        | invalidServedUserNr
+        | basicServiceNotProvided
+        | unspecified
+    }
+    CODE local: 80
+}
+
+mWIDeactivate OPERATION ::= {
+    ARGUMENT MWIDeactivateArg
+    RESULT DummyRes
+    ERRORS {
+        userNotSubscribed
+        | invalidServedUserNr
+        | basicServiceNotProvided
+        | unspecified
+    }
+    CODE local: 81
+}
+
+mWIInterrogate OPERATION ::= {
+    ARGUMENT MWIInterrogateArg
+    RESULT MWIInterrogateRes
+    ERRORS {
+        userNotSubscribed
+        | invalidServedUserNr
+        | notActivated
+        | invalidMsgCentreId
+        | unspecified
+    }
+    CODE local: 82
+}
+
+MWIActivateArg ::= SEQUENCE {
+    servedUserNr PartyNumber,
+    basicService BasicService,
+    msgCentreId MsgCentreId OPTIONAL,
+    nbOfMessages [3] IMPLICIT NbOfMessages OPTIONAL,
+    originatingNr [4] PartyNumber OPTIONAL,
+    timestamp TimeStamp OPTIONAL,
+    priority [5] IMPLICIT INTEGER (0..9) OPTIONAL,
+    -- The value 0 means the highest priority and 9 the lowest
+    argumentExt CHOICE {
+        extension [6] IMPLICIT Extension {{MWIExtSet}},
+        multipleExtension [7] IMPLICIT SEQUENCE OF Extension {{MWIExtSet}}
+    } OPTIONAL
+}
+
+DummyRes ::= CHOICE {
+    null NULL,
+    extension [1] IMPLICIT Extension {{MWIExtSet}},
+    multipleExtension [2] IMPLICIT SEQUENCE OF Extension {{MWIExtSet}}
+}
+
+MWIDeactivateArg ::= SEQUENCE {
+    servedUserNr PartyNumber,
+    basicService BasicService,
+    msgCentreId MsgCentreId OPTIONAL,
+    argumentExt CHOICE {
+        extension [3] IMPLICIT Extension {{MWIExtSet}},
+        multipleExtension [4] IMPLICIT SEQUENCE OF Extension {{MWIExtSet}}
+    } OPTIONAL
+}
+
+MWIInterrogateArg ::= SEQUENCE {
+    servedUserNr PartyNumber,
+    basicService BasicService,
+    msgCentreId MsgCentreId OPTIONAL,
+    argumentExt CHOICE {
+        extension [3] IMPLICIT Extension {{MWIExtSet}},
+        multipleExtension [4] IMPLICIT SEQUENCE OF Extension {{MWIExtSet}}
+    } OPTIONAL
+}
+
+MWIInterrogateRes ::= SEQUENCE SIZE(1..10) OF MWIInterrogateResElt
+
+MWIInterrogateResElt ::= SEQUENCE {
+    basicService BasicService,
+    msgCentreId MsgCentreId OPTIONAL,
+    nbOfMessages [3] IMPLICIT NbOfMessages OPTIONAL,
+    originatingNr [4] PartyNumber OPTIONAL,
+    timestamp TimeStamp OPTIONAL,
+    priority [5] IMPLICIT INTEGER (0..9) OPTIONAL,
+    -- The value 0 means the highest priority and 9 the lowest
+    argumentExt CHOICE {
+        extension [6] IMPLICIT Extension {{MWIExtSet}},
+        multipleExtension [7] IMPLICIT SEQUENCE OF Extension {{MWIExtSet}}
+    } OPTIONAL
+}
+
+BasicService ::= ENUMERATED {
+    -- All basic service values which were previously imported from Call Diversion
+    -- Operations have been retained to allow for backward compatibility with edition 2.
+    -- A new service value was added for group 2,3 fax and numerous MWI service
+    -- classes were added for multimedia.
+
+    -- MWI Services:
+    --                        For compatibility among vendors, speech is recommended for voice mail
+    --                        indications.
+    allServices(0),
+    speech(1),
+    unrestrictedDigitalInformation(2),
+    audio3100Hz(3),
+    telephony(32),
+    teletex(33),
+    telefaxGroup4Class1(34),
+    videotextSyntaxBased(35),
+    videotelephony(36),
+    telefaxGroup2-3(37),
+    reservedNotUsed1(38),
+    reservedNotUsed2(39),
+    reservedNotUsed3(40),
+    reservedNotUsed4(41),
+    reservedNotUsed5(42),
+    -- MWI Service Classes:
+    email(51),
+    video(52),
+    fileTransfer(53),
+    shortMessageService(54),
+    speechAndVideo(55),
+    speechAndFax(56),
+    speechAndEmail(57),
+    videoAndFax(58),
+    videoAndEmail(59),
+    faxAndEmail(60),
+    speechVideoAndFax(61),
+    speechVideoAndEmail(62),
+    speechFaxAndEmail(63),
+    videoFaxAndEmail(64),
+    speechVideoFaxAndEmail(65),
+    multimediaUnknown(66),
+    serviceUnknown(67),
+    --
+    -- Reserved for future additions:
+    futureReserve1(68),
+    futureReserve2(69),
+    futureReserve3(70),
+    futureReserve4(71),
+    futureReserve5(72),
+    futureReserve6(73),
+    futureReserve7(74),
+    futureReserve8(75)
+}
+
+MsgCentreId ::= CHOICE {
+    integer [0] IMPLICIT INTEGER (0..65535),
+    partyNumber [1] PartyNumber,
+    -- The party number must be a complete number as required
+    -- for routing purposes.
+    numericString [2] IMPLICIT NumericString (SIZE(1..10))
+}
+
+NbOfMessages ::= INTEGER (0..65535)
+
+TimeStamp ::= GeneralizedTime (SIZE(12..19))
+    -- a VisibleString containing:
+    --    - the (local) date in 8 digits (YYYYMMDD),
+    --    - followed by (local) time of day in 4 or 6 digits (HHMM[SS]),
+    --    - optionally followed by the letter "Z" or
+    --      by a local time differential in 5 digits ("+"HHMM or "-"HHMM);
+    --    this date and time representation follows ISO 8601
+    -- Examples: 1) 19970621194530, meaning 21 June 1997, 19:45:30;
+    --             2) 19970621194530Z, meaning the same as 1);
+    --             3) 19970621194530-0500, meaning the same as 1),
+    --                 5 hours retarded in relation to UTC time
+
+MWIExtSet EXTENSION ::= {...}
+
+invalidMsgCentreId ERROR ::= { CODE local: 1018 }
+
+unspecified ERROR ::= {
+    PARAMETER Extension {{MWIExtSet}}
+    CODE local: 1008
+}
+
+END                        -- of MWI-Operations-asn1-97

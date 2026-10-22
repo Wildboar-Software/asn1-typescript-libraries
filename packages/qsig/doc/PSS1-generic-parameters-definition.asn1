@@ -1,0 +1,9 @@
+PSS1-generic-parameters-definition
+{iso(1) standard(0) pss1-generic-procedures(11582) pss1-generic-parameters(6)}
+DEFINITIONS               ::=
+BEGIN
+EXPORTS PSS1InformationElement;
+
+PSS1InformationElement ::= [APPLICATION 0] IMPLICIT OCTET STRING
+
+END -- of PSS1 Generic parameters definition
