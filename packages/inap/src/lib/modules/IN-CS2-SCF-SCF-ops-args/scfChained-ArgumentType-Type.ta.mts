@@ -16,7 +16,11 @@ import { ChainingArgument, _decode_ChainingArgument, _encode_ChainingArgument } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * scfChained-ArgumentType-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * scfChained-ArgumentType-Type ::=
+ * SEQUENCE {
+ *   chainedArgument ChainingArgument,
+ *   argument [0] operation.&ArgumentType OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -27,7 +27,21 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationF
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExecuteResult-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExecuteResult-Type ::=
+ * SET {
+ *   method-id [1] METHOD.&id({SupportedMethods}),
+ *   output-assertions [2] SEQUENCE OF
+ *     SEQUENCE {
+ *       type METHOD.&OutputAttributes.&id({SupportedMethods}{@method-id}),
+ *       values SET OF METHOD.&OutputAttributes.&Type({SupportedMethods}{@method-id}) OPTIONAL,
+ *       valuesWithContext [0] SET OF
+ *         SEQUENCE {
+ *           value [0] METHOD.&OutputAttributes.&Type({SupportedMethods}{@method-id}) OPTIONAL,
+ *           contextList [1] SET OF Context
+ *         } OPTIONAL
+ *     } OPTIONAL,
+ *   COMPONENTS OF CommonResults
+ * }
  * ```
  * 
  * @class

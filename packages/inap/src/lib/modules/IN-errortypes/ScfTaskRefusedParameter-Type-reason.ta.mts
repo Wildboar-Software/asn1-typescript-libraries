@@ -10,7 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ScfTaskRefusedParameter-Type-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ScfTaskRefusedParameter-Type-reason ::=
+ * ENUMERATED {
+ *   generic(0),
+ *   unobtainable(1),
+ *   congestion(2)
+ *   -- other values FFS
+ * }
  * ```
  * 
  * @enum {number}
@@ -29,7 +35,13 @@ enum _enum_for_ScfTaskRefusedParameter_Type_reason {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ScfTaskRefusedParameter-Type-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ScfTaskRefusedParameter-Type-reason ::=
+ * ENUMERATED {
+ *   generic(0),
+ *   unobtainable(1),
+ *   congestion(2)
+ *   -- other values FFS
+ * }
  * ```
  * 
  * @enum {number}
@@ -44,7 +56,13 @@ type ScfTaskRefusedParameter_Type_reason = _enum_for_ScfTaskRefusedParameter_Typ
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ScfTaskRefusedParameter-Type-reason ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * ScfTaskRefusedParameter-Type-reason ::=
+ * ENUMERATED {
+ *   generic(0),
+ *   unobtainable(1),
+ *   congestion(2)
+ *   -- other values FFS
+ * }
  * ```
  * 
  * @enum {number}

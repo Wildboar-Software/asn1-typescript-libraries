@@ -23,7 +23,16 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TFCArgument-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TFCArgument-Type ::=
+ * SEQUENCE {
+ *   tfcCriteria [0] TFCcriteria,
+ *   duration [1] IMPLICIT Duration,
+ *   controlType [2] IMPLICIT ControlType,
+ *   security [3] IMPLICIT SecurityParameters,
+ *   wasChained [4] IMPLICIT BOOLEAN DEFAULT FALSE,
+ *   ...,
+ *   ...
+ * }
  * ```
  * 
  * @class

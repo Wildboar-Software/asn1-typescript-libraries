@@ -22,7 +22,14 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * InitiateCallRequestArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * InitiateCallRequestArg-Type ::=
+ * SEQUENCE {
+ *   requestedType [0] RequestedType OPTIONAL,
+ *   destinationRelatedInfo [1] SEQUENCE SIZE (1..2) OF DestinationRelatedInfo OPTIONAL,
+ *   securityParameters [2] SecurityParameters OPTIONAL,
+ *   extensions [3] Extensions OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

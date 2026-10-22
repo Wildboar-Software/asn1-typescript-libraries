@@ -20,7 +20,14 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TransferSTSIArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TransferSTSIArg-Type ::=
+ * SEQUENCE {
+ *   sSIInfo SSIInfo,
+ *   securityParameters [2] SecurityParameters OPTIONAL,
+ *   ...,
+ *   ...,
+ *   extensions [3] Extensions OPTIONAL
+ * }
  * ```
  * 
  * @class

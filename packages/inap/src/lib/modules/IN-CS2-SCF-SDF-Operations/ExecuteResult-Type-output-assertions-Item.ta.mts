@@ -18,7 +18,16 @@ import { ExecuteResult_Type_output_assertions_Item_valuesWithContext_Item, _deco
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExecuteResult-Type-output-assertions-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExecuteResult-Type-output-assertions-Item ::=
+ * SEQUENCE {
+ *   type METHOD.&OutputAttributes.&id({SupportedMethods}{@method-id}),
+ *   values SET OF METHOD.&OutputAttributes.&Type({SupportedMethods}{@method-id}) OPTIONAL,
+ *   valuesWithContext [0] SET OF
+ *     SEQUENCE {
+ *       value [0] METHOD.&OutputAttributes.&Type({SupportedMethods}{@method-id}) OPTIONAL,
+ *       contextList [1] SET OF Context
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class

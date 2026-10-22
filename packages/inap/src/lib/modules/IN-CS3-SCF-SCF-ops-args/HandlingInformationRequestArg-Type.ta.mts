@@ -51,7 +51,29 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-co
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * HandlingInformationRequestArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * HandlingInformationRequestArg-Type ::=
+ * SEQUENCE {
+ *   requestedType [0] RequestedType OPTIONAL,
+ *   callingPartyNumber [1] CallingPartyNumber OPTIONAL,
+ *   locationNumber [2] LocationNumber OPTIONAL,
+ *   calledPartyNumber [3] CalledPartyNumber OPTIONAL,
+ *   dialledDigits [4] Digits OPTIONAL,
+ *   redirectingPartyID [5] RedirectingPartyID OPTIONAL,
+ *   redirectionInformation [6] RedirectionInformation OPTIONAL,
+ *   originalCalledPartyID [7] OriginalCalledPartyID OPTIONAL,
+ *   numberOfCallAttempts [8] INTEGER OPTIONAL,
+ *   highLayerCompatibility [9] HighLayerCompatibility OPTIONAL,
+ *   bearerCapability [10] BearerCapability OPTIONAL,
+ *   invokedSupplementaryService [11] InvokableService OPTIONAL,
+ *   activeSupplementaryServices [12] ActivableServices OPTIONAL,
+ *   causeOfLastCallFailure [13] Cause OPTIONAL,
+ *   userInteractionModes [14] UserInteractionModes OPTIONAL,
+ *   callingPartysCategory [15] CallingPartysCategory OPTIONAL,
+ *   callingPartyBusinessGroupID [16] CallingPartyBusinessGroupID OPTIONAL,
+ *   securityParameters [17] SecurityParameters OPTIONAL,
+ *   extensions [18] Extensions OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

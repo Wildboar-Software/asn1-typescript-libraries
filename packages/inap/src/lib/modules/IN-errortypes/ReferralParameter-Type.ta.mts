@@ -18,7 +18,11 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReferralParameter-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReferralParameter-Type ::=
+ * SEQUENCE {
+ *   tryhere [0] AccessPointInformation,
+ *   securityParameters [1] SecurityParameters OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -24,7 +24,11 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationF
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * executionError-ParameterType-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * executionError-ParameterType-Type ::=
+ * SET {
+ *   problem [0] ExecutionProblem,
+ *   COMPONENTS OF CommonResults
+ * }
  * ```
  * 
  * @class

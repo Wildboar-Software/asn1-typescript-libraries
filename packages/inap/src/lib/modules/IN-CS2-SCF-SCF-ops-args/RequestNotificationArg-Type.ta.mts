@@ -18,7 +18,11 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RequestNotificationArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RequestNotificationArg-Type ::=
+ * SEQUENCE {
+ *   requestedNotifications [0] RequestedNotifications,
+ *   securityParameters [1] SecurityParameters OPTIONAL
+ * }
  * ```
  * 
  * @class

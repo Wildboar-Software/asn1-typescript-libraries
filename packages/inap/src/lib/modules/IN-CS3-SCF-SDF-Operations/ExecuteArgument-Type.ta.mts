@@ -39,7 +39,24 @@ import { FamilyGrouping, FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_I
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExecuteArgument-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExecuteArgument-Type ::=
+ * SET {
+ *   object [0] Name,
+ *   method-id [1] METHOD.&id({SupportedMethods}),
+ *   input-assertions [2] SEQUENCE OF
+ *     SEQUENCE {
+ *       type METHOD.&InputAttributes.&id({SupportedMethods}{@method-id}),
+ *       values SET OF METHOD.&InputAttributes.&Type({SupportedMethods}{@method-id, @.type}) OPTIONAL,
+ *       valuesWithContext [0] SET OF METHOD.&InputAttributes.&Type({SupportedMethods}{@method-id, @.type}) OPTIONAL,
+ *       contextList [1] SET OF Context
+ *     } OPTIONAL,
+ *   -- EDITOR: there is no way (at the moment) in ASN.1
+ *   -- to reference a component through a SET OF or SEQUENCE OF type.
+ *   -- The inner SEQUENCE has been removed for compilation purpose.
+ *   -- Align the descriptive text/comments accordingly.
+ *   specific-input [3] METHOD.&SpecificInput({SupportedMethods}{@method-id}) OPTIONAL,
+ *   COMPONENTS OF CommonArguments
+ * }
  * ```
  * 
  * @class

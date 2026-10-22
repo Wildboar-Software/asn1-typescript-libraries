@@ -15,7 +15,11 @@ import { IN_ChainingArguments, _decode_IN_ChainingArguments, _encode_IN_Chaining
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * in-Chained-ArgumentType-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * in-Chained-ArgumentType-Type ::=
+ * SET {
+ *   in-chainedArgument IN-ChainingArguments,
+ *   argument [0] operation.&ArgumentType
+ * }
  * ```
  * 
  * @class

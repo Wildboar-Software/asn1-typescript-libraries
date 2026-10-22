@@ -20,7 +20,12 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-co
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProvideUserInformationResultArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProvideUserInformationResultArg-Type ::=
+ * SEQUENCE {
+ *   userInformation [0] ReceivedInformation,
+ *   securityParameters [1] SecurityParameters OPTIONAL,
+ *   extensions [2] Extensions OPTIONAL
+ * }
  * ```
  * 
  * @class

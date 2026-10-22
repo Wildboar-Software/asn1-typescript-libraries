@@ -26,7 +26,17 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RunUserScriptArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RunUserScriptArg-Type ::=
+ * SEQUENCE {
+ *   srfAddress [0] CalledPartyNumber,
+ *   correlationID [1] CorrelationID,
+ *   scfID [2] ScfID,
+ *   userToConnect [3] UserToConnect OPTIONAL,
+ *   securityParameters [7] SecurityParameters OPTIONAL,
+ *   ...,
+ *   ...,
+ *   extensions [30] Extensions OPTIONAL
+ * }
  * ```
  * 
  * @class

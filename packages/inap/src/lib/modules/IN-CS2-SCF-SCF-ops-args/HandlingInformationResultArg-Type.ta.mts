@@ -38,7 +38,22 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * HandlingInformationResultArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * HandlingInformationResultArg-Type ::=
+ * SEQUENCE {
+ *   routingAddress [0] RoutingAddress OPTIONAL,
+ *   highLayerCompatibility [1] HighLayerCompatibility OPTIONAL,
+ *   supplementaryServices [2] SupplementaryServices OPTIONAL,
+ *   preferredLanguage [3] Language OPTIONAL,
+ *   carrier [4] Carrier OPTIONAL,
+ *   callingPartyNumber [5] CallingPartyNumber OPTIONAL,
+ *   originalCalledPartyID [6] OriginalCalledPartyID OPTIONAL,
+ *   redirectingPartyID [7] RedirectingPartyID OPTIONAL,
+ *   redirectionInformation [8] RedirectionInformation OPTIONAL,
+ *   callingPartysCategory [9] CallingPartysCategory OPTIONAL,
+ *   securityParameters [10] SecurityParameters OPTIONAL,
+ *   extensions [11] SEQUENCE OF ExtensionField OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

@@ -24,7 +24,15 @@ import { PartyID, _decode_PartyID, _encode_PartyID } from "../IN-SCF-SCF-datatyp
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationProvidedArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationProvidedArg-Type ::=
+ * SEQUENCE {
+ *   notification [0] Notification,
+ *   notificationInformation [1] NotificationInformation OPTIONAL,
+ *   securityParameters [2] SecurityParameters OPTIONAL,
+ *   extensions [3] Extensions OPTIONAL,
+ *   partyID [4] PartyID OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

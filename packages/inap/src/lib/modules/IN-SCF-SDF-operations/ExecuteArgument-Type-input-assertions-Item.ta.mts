@@ -18,7 +18,16 @@ import { ExecuteArgument_Type_input_assertions_Item_valuesWithContext_Item, _dec
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExecuteArgument-Type-input-assertions-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExecuteArgument-Type-input-assertions-Item ::=
+ * SEQUENCE {
+ *   type METHOD.&InputAttributes.&id({SupportedMethods}{@method-id}),
+ *   values SET OF METHOD.&InputAttributes.&Type({SupportedMethods}{@method-id, @.type}) OPTIONAL,
+ *   valuesWithContext [0] SET OF
+ *     SEQUENCE {
+ *       value [0] METHOD.&InputAttributes.&Type({SupportedMethods}{@method-id, @.type}) OPTIONAL,
+ *       contextList [1] SET OF Context
+ *     } OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -27,7 +27,17 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProvideAnnouncementRequestArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProvideAnnouncementRequestArg-Type ::=
+ * SEQUENCE {
+ *   infoToSend [0] InformationToSend,
+ *   preferredLanguage [1] Language OPTIONAL,
+ *   securityParameters [2] SecurityParameters OPTIONAL,
+ *   srfAddress [3] CalledPartyNumber OPTIONAL,
+ *   userToConnect [4] UserToConnect OPTIONAL,
+ *   requestAnnouncementComplete [5] BOOLEAN DEFAULT TRUE,
+ *   extensions [6] Extensions OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

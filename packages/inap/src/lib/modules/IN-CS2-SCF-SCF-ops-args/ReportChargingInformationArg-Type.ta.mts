@@ -24,7 +24,14 @@ import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParamet
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReportChargingInformationArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReportChargingInformationArg-Type ::=
+ * SEQUENCE {
+ *   callRecord [0] CallRecord OPTIONAL,
+ *   remainingUserCredit [1] UserCredit OPTIONAL,
+ *   uniqueCallID [2] CallIdentifier OPTIONAL,
+ *   accountNumber [3] AccountNumber OPTIONAL,
+ *   securityParameters [4] SecurityParameters OPTIONAL
+ * }
  * ```
  * 
  * @class

@@ -36,7 +36,23 @@ import { ReportConditionEvent, _decode_ReportConditionEvent, _encode_ReportCondi
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EstablishChargingRecordArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EstablishChargingRecordArg-Type ::=
+ * SEQUENCE {
+ *   userCredit [0] UserCredit OPTIONAL,
+ *   chargingParameters ChargingParameters OPTIONAL,
+ *   reportExpected [2] BOOLEAN DEFAULT TRUE,
+ *   securityParameters [3] SecurityParameters OPTIONAL,
+ *   extensions [4] Extensions OPTIONAL,
+ *   consumedCreditAction [10] ConsumedCreditAction OPTIONAL,
+ *   newChargingParameters [11] ChargingParameters OPTIONAL,
+ *   reportAddress [12] ReportDestinationInformation OPTIONAL,
+ *   container [13] FreeContainer OPTIONAL,
+ *   correlationId [14] CorrelationID OPTIONAL,
+ *   acksequence [15] INTEGER(1..127) OPTIONAL,
+ *   splitcharge [16] ChargingSignallingInformation OPTIONAL,
+ *   reportCondition [22] ReportConditionEvent OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

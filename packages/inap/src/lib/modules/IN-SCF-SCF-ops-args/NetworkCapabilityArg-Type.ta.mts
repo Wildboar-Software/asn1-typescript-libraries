@@ -24,7 +24,15 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NetworkCapabilityArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NetworkCapabilityArg-Type ::=
+ * SEQUENCE {
+ *   bearerCapabilities [0] BearerCapabilities OPTIONAL,
+ *   highLayerCompatibilities [1] HighLayerCompatibilities OPTIONAL,
+ *   supplementaryServices [2] SupplementaryServices OPTIONAL,
+ *   securityParameters [3] SecurityParameters OPTIONAL,
+ *   extensions [4] Extensions OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

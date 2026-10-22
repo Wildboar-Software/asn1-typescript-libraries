@@ -20,7 +20,14 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RequestNotificationArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * RequestNotificationArg-Type ::=
+ * SEQUENCE {
+ *   requestedNotifications [0] RequestedNotifications,
+ *   securityParameters [1] SecurityParameters OPTIONAL,
+ *   ...,
+ *   ...,
+ *   extensions [30] Extensions OPTIONAL
+ * }
  * ```
  * 
  * @class

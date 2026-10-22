@@ -33,7 +33,21 @@ import { UserToConnect, _decode_UserToConnect, _encode_UserToConnect, _enum_for_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProvideUserInformationArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProvideUserInformationArg-Type ::=
+ * SEQUENCE {
+ *   constraints [0] CollectedInfo,
+ *   infoToSend [1] InformationToSend,
+ *   errorInfo [2] InformationToSend OPTIONAL,
+ *   typeOfRequestedInfo [3] InfoType DEFAULT numericString,
+ *   numberOfAllowedRetries [4] INTEGER(0..127) DEFAULT 0,
+ *   actions [5] Actions OPTIONAL,
+ *   preferredLanguage [6] Language OPTIONAL,
+ *   securityParameters [7] SecurityParameters OPTIONAL,
+ *   extensions [8] Extensions OPTIONAL,
+ *   srfAddress [10] CalledPartyNumber OPTIONAL,
+ *   userToConnect [11] UserToConnect OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

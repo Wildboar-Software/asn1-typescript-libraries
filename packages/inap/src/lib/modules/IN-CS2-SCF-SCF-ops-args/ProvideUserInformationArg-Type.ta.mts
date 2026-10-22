@@ -27,7 +27,19 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ProvideUserInformationArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ProvideUserInformationArg-Type ::=
+ * SEQUENCE {
+ *   constraints [0] CollectedInfo,
+ *   -- infoToSend			[1] InformationToSend {bound},
+ *   -- errorInfo			[2] InformationToSend {bound}	OPTIONAL,
+ *   typeOfRequestedInfo [3] InfoType DEFAULT numericString,
+ *   numberOfAllowedRetries [4] INTEGER(0..127) DEFAULT 0,
+ *   actions [5] Actions OPTIONAL,
+ *   preferredLanguage [6] Language OPTIONAL,
+ *   securityParameters [7] SecurityParameters OPTIONAL,
+ *   extensions [8] SEQUENCE OF ExtensionField OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

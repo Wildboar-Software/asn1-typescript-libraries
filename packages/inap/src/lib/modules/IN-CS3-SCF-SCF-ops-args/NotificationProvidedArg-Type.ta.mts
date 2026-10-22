@@ -22,7 +22,14 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-co
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationProvidedArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationProvidedArg-Type ::=
+ * SEQUENCE {
+ *   notification [0] Notification,
+ *   notificationInformation [1] NotificationInformation OPTIONAL,
+ *   securityParameters [2] SecurityParameters OPTIONAL,
+ *   extensions [3] Extensions OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

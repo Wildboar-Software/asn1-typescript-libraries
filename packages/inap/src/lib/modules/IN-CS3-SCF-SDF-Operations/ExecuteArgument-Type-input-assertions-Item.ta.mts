@@ -18,7 +18,13 @@ import { Context, _decode_Context, _encode_Context } from "../InformationFramewo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ExecuteArgument-Type-input-assertions-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ExecuteArgument-Type-input-assertions-Item ::=
+ * SEQUENCE {
+ *   type METHOD.&InputAttributes.&id({SupportedMethods}{@method-id}),
+ *   values SET OF METHOD.&InputAttributes.&Type({SupportedMethods}{@method-id, @.type}) OPTIONAL,
+ *   valuesWithContext [0] SET OF METHOD.&InputAttributes.&Type({SupportedMethods}{@method-id, @.type}) OPTIONAL,
+ *   contextList [1] SET OF Context
+ * }
  * ```
  * 
  * @class

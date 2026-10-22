@@ -16,7 +16,11 @@ import { ChainingResult, _decode_ChainingResult, _encode_ChainingResult } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * scfChained-ResultType-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * scfChained-ResultType-Type ::=
+ * SEQUENCE {
+ *   chainedResult ChainingResult,
+ *   result [0] operation.&ResultType OPTIONAL
+ * }
  * ```
  * 
  * @class

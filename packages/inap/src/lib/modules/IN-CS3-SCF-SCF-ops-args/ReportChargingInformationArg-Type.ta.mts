@@ -34,7 +34,22 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-co
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReportChargingInformationArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReportChargingInformationArg-Type ::=
+ * SEQUENCE {
+ *   callRecord [0] CallRecord OPTIONAL,
+ *   remainingUserCredit [1] UserCredit OPTIONAL,
+ *   uniqueCallID [2] CallIdentifier OPTIONAL,
+ *   accountNumber [3] AccountNumber OPTIONAL,
+ *   securityParameters [4] SecurityParameters OPTIONAL,
+ *   countersValues [5] Meters OPTIONAL,
+ *   resetOfTransmittedCounters [6] BOOLEAN DEFAULT FALSE,
+ *   container [13] FreeContainer OPTIONAL,
+ *   correlationId [14] CorrelationID OPTIONAL,
+ *   acksequence [15] INTEGER OPTIONAL,
+ *   ...,
+ *   ...,
+ *   extensions [31] Extensions OPTIONAL
+ * }
  * ```
  * 
  * @class

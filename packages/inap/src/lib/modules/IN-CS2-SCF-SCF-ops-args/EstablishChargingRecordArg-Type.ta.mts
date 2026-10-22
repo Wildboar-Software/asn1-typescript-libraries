@@ -23,7 +23,15 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EstablishChargingRecordArg-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EstablishChargingRecordArg-Type ::=
+ * SEQUENCE {
+ *   userCredit [0] UserCredit OPTIONAL,
+ *   chargingParameters [1] ChargingParameters OPTIONAL,
+ *   reportExpected [2] BOOLEAN DEFAULT TRUE,
+ *   securityParameters [3] SecurityParameters OPTIONAL,
+ *   extensions [4] SEQUENCE OF ExtensionField OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

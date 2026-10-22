@@ -15,7 +15,11 @@ import { IN_ChainingResults, _decode_IN_ChainingResults, _encode_IN_ChainingResu
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * in-Chained-ResultType-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * in-Chained-ResultType-Type ::=
+ * SET {
+ *   in-chainedResult IN-ChainingResults,
+ *   result [0] operation.&ResultType
+ * }
  * ```
  * 
  * @class
