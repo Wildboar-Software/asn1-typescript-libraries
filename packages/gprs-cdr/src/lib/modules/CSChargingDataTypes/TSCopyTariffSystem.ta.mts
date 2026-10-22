@@ -122,10 +122,8 @@ function _decode_TSCopyTariffSystem (el: _Element): TSCopyTariffSystem {
     }
     sequence[0].name = "oldTS";
     sequence[1].name = "newTS";
-    let oldTS!: INTEGER;
-    let newTS!: INTEGER;
-    oldTS = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    newTS = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const oldTS: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const newTS: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new TSCopyTariffSystem(
         oldTS,
         newTS,
@@ -146,7 +144,7 @@ let _cached_encoder_for_TSCopyTariffSystem: $.ASN1Encoder<TSCopyTariffSystem> | 
  */
 export
 function _encode_TSCopyTariffSystem (value: TSCopyTariffSystem, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TSCopyTariffSystem) { _cached_encoder_for_TSCopyTariffSystem = function (value: TSCopyTariffSystem, elGetter: $.ASN1Encoder<TSCopyTariffSystem>): _Element {
+    if (!_cached_encoder_for_TSCopyTariffSystem) { _cached_encoder_for_TSCopyTariffSystem = function (value: TSCopyTariffSystem, _elGetter: $.ASN1Encoder<TSCopyTariffSystem>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.oldTS, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.newTS, $.BER)

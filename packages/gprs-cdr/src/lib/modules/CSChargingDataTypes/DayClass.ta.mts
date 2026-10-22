@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IdValue, _decode_IdValue, _encode_IdValue } from "../CSChargingDataTypes/IdValue.ta.mjs";
-// export { IdValue, _decode_IdValue, _encode_IdValue } from "../CSChargingDataTypes/IdValue.ta.mjs";
 
 
 /**

@@ -3,13 +3,12 @@ import {
     IA5String,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MultipleQFIContainer, _decode_MultipleQFIContainer, _encode_MultipleQFIContainer } from "../CHFChargingDataTypes/MultipleQFIContainer.ta.mjs";
-// export { MultipleQFIContainer, _decode_MultipleQFIContainer, _encode_MultipleQFIContainer } from "../CHFChargingDataTypes/MultipleQFIContainer.ta.mjs";
 import { RoamingChargingProfile, _decode_RoamingChargingProfile, _encode_RoamingChargingProfile } from "../CHFChargingDataTypes/RoamingChargingProfile.ta.mjs";
-// export { RoamingChargingProfile, _decode_RoamingChargingProfile, _encode_RoamingChargingProfile } from "../CHFChargingDataTypes/RoamingChargingProfile.ta.mjs";
 
 
 /**
@@ -57,6 +56,10 @@ class RoamingQBCInformation {
         this.multipleQFIcontainer = multipleQFIcontainer;
         this.uPFID = uPFID;
         this.roamingChargingProfile = roamingChargingProfile;
+    
+        if (this.uPFID !== undefined && (this.uPFID.length < 1 || this.uPFID.length > 36)) {
+            throw new ASN1SizeError("RoamingQBCInformation.uPFID violates SIZE constraint");
+        }
     }
 
     /**
@@ -168,7 +171,7 @@ let _cached_encoder_for_RoamingQBCInformation: $.ASN1Encoder<RoamingQBCInformati
  */
 export
 function _encode_RoamingQBCInformation (value: RoamingQBCInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RoamingQBCInformation) { _cached_encoder_for_RoamingQBCInformation = function (value: RoamingQBCInformation, elGetter: $.ASN1Encoder<RoamingQBCInformation>): _Element {
+    if (!_cached_encoder_for_RoamingQBCInformation) { _cached_encoder_for_RoamingQBCInformation = function (value: RoamingQBCInformation, _elGetter: $.ASN1Encoder<RoamingQBCInformation>): _Element {
     const _components: _Element[] = [];
     if (value.multipleQFIcontainer !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeSequenceOf<MultipleQFIContainer>(() => _encode_MultipleQFIContainer, $.BER), $.BER)(value.multipleQFIcontainer, $.BER));

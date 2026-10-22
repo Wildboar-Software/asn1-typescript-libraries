@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubjectComponent, _decode_SubjectComponent, _encode_SubjectComponent } from "../MMSChargingDataTypes/SubjectComponent.ta.mjs";
-// export { SubjectComponent, _decode_SubjectComponent, _encode_SubjectComponent } from "../MMSChargingDataTypes/SubjectComponent.ta.mjs";
 import { MediaComponent, _decode_MediaComponent, _encode_MediaComponent } from "../MMSChargingDataTypes/MediaComponent.ta.mjs";
-// export { MediaComponent, _decode_MediaComponent, _encode_MediaComponent } from "../MMSChargingDataTypes/MediaComponent.ta.mjs";
 
 
 /**
@@ -125,10 +123,8 @@ function _decode_MMComponentType (el: _Element): MMComponentType {
     }
     sequence[0].name = "subject";
     sequence[1].name = "media";
-    let subject!: SubjectComponent;
-    let media!: MediaComponent[];
-    subject = $._decode_implicit<SubjectComponent>(() => _decode_SubjectComponent)(sequence[0]);
-    media = $._decode_implicit<MediaComponent[]>(() => $._decodeSetOf<MediaComponent>(() => _decode_MediaComponent))(sequence[1]);
+    const subject: SubjectComponent = $._decode_implicit<SubjectComponent>(() => _decode_SubjectComponent)(sequence[0]);
+    const media: MediaComponent[] = $._decode_implicit<MediaComponent[]>(() => $._decodeSetOf<MediaComponent>(() => _decode_MediaComponent))(sequence[1]);
     return new MMComponentType(
         subject,
         media,
@@ -149,7 +145,7 @@ let _cached_encoder_for_MMComponentType: $.ASN1Encoder<MMComponentType> | null =
  */
 export
 function _encode_MMComponentType (value: MMComponentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MMComponentType) { _cached_encoder_for_MMComponentType = function (value: MMComponentType, elGetter: $.ASN1Encoder<MMComponentType>): _Element {
+    if (!_cached_encoder_for_MMComponentType) { _cached_encoder_for_MMComponentType = function (value: MMComponentType, _elGetter: $.ASN1Encoder<MMComponentType>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SubjectComponent, $.BER)(value.subject, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeSetOf<MediaComponent>(() => _encode_MediaComponent, $.BER), $.BER)(value.media, $.BER)

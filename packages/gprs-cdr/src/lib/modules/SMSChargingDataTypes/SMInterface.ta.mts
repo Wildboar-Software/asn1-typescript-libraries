@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMInterfaceType, _decode_SMInterfaceType, _encode_SMInterfaceType, _enum_for_SMInterfaceType } from "../SMSChargingDataTypes/SMInterfaceType.ta.mjs";
-// export { SMInterfaceType, _enum_for_SMInterfaceType, SMInterfaceType_unkown /* IMPORTED_LONG_ENUMERATION_ITEM */, unkown /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterfaceType_mobileOriginating /* IMPORTED_LONG_ENUMERATION_ITEM */, mobileOriginating /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterfaceType_mobileTerminating /* IMPORTED_LONG_ENUMERATION_ITEM */, mobileTerminating /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterfaceType_applicationOriginating /* IMPORTED_LONG_ENUMERATION_ITEM */, applicationOriginating /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterfaceType_applicationTerminating /* IMPORTED_LONG_ENUMERATION_ITEM */, applicationTerminating /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMInterfaceType_deviceTrigger /* IMPORTED_LONG_ENUMERATION_ITEM */, deviceTrigger /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMInterfaceType, _encode_SMInterfaceType } from "../SMSChargingDataTypes/SMInterfaceType.ta.mjs";
 
 
 /**
@@ -180,7 +179,7 @@ let _cached_encoder_for_SMInterface: $.ASN1Encoder<SMInterface> | null = null;
  */
 export
 function _encode_SMInterface (value: SMInterface, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMInterface) { _cached_encoder_for_SMInterface = function (value: SMInterface, elGetter: $.ASN1Encoder<SMInterface>): _Element {
+    if (!_cached_encoder_for_SMInterface) { _cached_encoder_for_SMInterface = function (value: SMInterface, _elGetter: $.ASN1Encoder<SMInterface>): _Element {
     const _components: _Element[] = [];
     if (value.interfaceId !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGraphicString, $.BER)(value.interfaceId, $.BER));

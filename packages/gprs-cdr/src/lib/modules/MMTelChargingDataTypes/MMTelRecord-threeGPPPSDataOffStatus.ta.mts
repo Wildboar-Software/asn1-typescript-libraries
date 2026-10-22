@@ -10,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED {
+ *    active      ( 0 ),
+ *    inactive    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +31,10 @@ enum _enum_for_MMTelRecord_threeGPPPSDataOffStatus {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED {
+ *    active      ( 0 ),
+ *    inactive    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +49,10 @@ type MMTelRecord_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSDataO
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-threeGPPPSDataOffStatus ::= ENUMERATED {
+ *    active      ( 0 ),
+ *    inactive    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}

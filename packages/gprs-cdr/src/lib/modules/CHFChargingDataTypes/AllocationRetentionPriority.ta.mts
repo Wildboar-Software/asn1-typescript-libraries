@@ -7,9 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PreemptionCapability, _decode_PreemptionCapability, _encode_PreemptionCapability, _enum_for_PreemptionCapability } from "../CHFChargingDataTypes/PreemptionCapability.ta.mjs";
-// export { PreemptionCapability, _enum_for_PreemptionCapability, PreemptionCapability_nOT_PREEMPT /* IMPORTED_LONG_ENUMERATION_ITEM */, nOT_PREEMPT /* IMPORTED_SHORT_ENUMERATION_ITEM */, PreemptionCapability_mAY_PREEMPT /* IMPORTED_LONG_ENUMERATION_ITEM */, mAY_PREEMPT /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PreemptionCapability, _encode_PreemptionCapability } from "../CHFChargingDataTypes/PreemptionCapability.ta.mjs";
 import { PreemptionVulnerability, _decode_PreemptionVulnerability, _encode_PreemptionVulnerability, _enum_for_PreemptionVulnerability } from "../CHFChargingDataTypes/PreemptionVulnerability.ta.mjs";
-// export { PreemptionVulnerability, _enum_for_PreemptionVulnerability, PreemptionVulnerability_nOT_PREEMPTABLE /* IMPORTED_LONG_ENUMERATION_ITEM */, nOT_PREEMPTABLE /* IMPORTED_SHORT_ENUMERATION_ITEM */, PreemptionVulnerability_pREEMPTABLE /* IMPORTED_LONG_ENUMERATION_ITEM */, pREEMPTABLE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PreemptionVulnerability, _encode_PreemptionVulnerability } from "../CHFChargingDataTypes/PreemptionVulnerability.ta.mjs";
 
 
 /**
@@ -148,12 +146,9 @@ function _decode_AllocationRetentionPriority (el: _Element): AllocationRetention
     sequence[0].name = "priorityLevel";
     sequence[1].name = "preemptionCapability";
     sequence[2].name = "preemptionVulnerability";
-    let priorityLevel!: INTEGER;
-    let preemptionCapability!: PreemptionCapability;
-    let preemptionVulnerability!: PreemptionVulnerability;
-    priorityLevel = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    preemptionCapability = $._decode_implicit<PreemptionCapability>(() => _decode_PreemptionCapability)(sequence[1]);
-    preemptionVulnerability = $._decode_implicit<PreemptionVulnerability>(() => _decode_PreemptionVulnerability)(sequence[2]);
+    const priorityLevel: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const preemptionCapability: PreemptionCapability = $._decode_implicit<PreemptionCapability>(() => _decode_PreemptionCapability)(sequence[1]);
+    const preemptionVulnerability: PreemptionVulnerability = $._decode_implicit<PreemptionVulnerability>(() => _decode_PreemptionVulnerability)(sequence[2]);
     return new AllocationRetentionPriority(
         priorityLevel,
         preemptionCapability,
@@ -175,7 +170,7 @@ let _cached_encoder_for_AllocationRetentionPriority: $.ASN1Encoder<AllocationRet
  */
 export
 function _encode_AllocationRetentionPriority (value: AllocationRetentionPriority, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AllocationRetentionPriority) { _cached_encoder_for_AllocationRetentionPriority = function (value: AllocationRetentionPriority, elGetter: $.ASN1Encoder<AllocationRetentionPriority>): _Element {
+    if (!_cached_encoder_for_AllocationRetentionPriority) { _cached_encoder_for_AllocationRetentionPriority = function (value: AllocationRetentionPriority, _elGetter: $.ASN1Encoder<AllocationRetentionPriority>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.priorityLevel, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => _encode_PreemptionCapability, $.BER)(value.preemptionCapability, $.BER),

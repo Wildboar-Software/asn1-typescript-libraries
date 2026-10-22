@@ -4,11 +4,11 @@ import {
     ASN1TagClass as _TagClass,
     NULL,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CSGAccessMode, _encode_CSGAccessMode, _enum_for_CSGAccessMode, CSGAccessMode } from "../GPRSChargingDataTypes/CSGAccessMode.ta.mjs";
-// export { CSGAccessMode, _enum_for_CSGAccessMode, CSGAccessMode_closedMode /* IMPORTED_LONG_ENUMERATION_ITEM */, closedMode /* IMPORTED_SHORT_ENUMERATION_ITEM */, CSGAccessMode_hybridMode /* IMPORTED_LONG_ENUMERATION_ITEM */, hybridMode /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CSGAccessMode, _encode_CSGAccessMode } from "../GPRSChargingDataTypes/CSGAccessMode.ta.mjs";
 
 
 /**
@@ -55,6 +55,10 @@ class UserCSGInformation {
         this.cSGId = cSGId;
         this.cSGAccessMode = cSGAccessMode;
         this.cSGMembershipIndication = cSGMembershipIndication;
+    
+        if ((this.cSGId.length !== 4)) {
+            throw new ASN1SizeError("UserCSGInformation.cSGId violates SIZE constraint");
+        }
     }
 
     /**
@@ -168,7 +172,7 @@ let _cached_encoder_for_UserCSGInformation: $.ASN1Encoder<UserCSGInformation> | 
  */
 export
 function _encode_UserCSGInformation (value: UserCSGInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserCSGInformation) { _cached_encoder_for_UserCSGInformation = function (value: UserCSGInformation, elGetter: $.ASN1Encoder<UserCSGInformation>): _Element {
+    if (!_cached_encoder_for_UserCSGInformation) { _cached_encoder_for_UserCSGInformation = function (value: UserCSGInformation, _elGetter: $.ASN1Encoder<UserCSGInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.cSGId, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_CSGAccessMode, $.BER)(value.cSGAccessMode, $.BER));

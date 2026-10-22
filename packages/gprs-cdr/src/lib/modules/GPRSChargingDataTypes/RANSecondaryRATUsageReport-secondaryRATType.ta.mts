@@ -13,7 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RANSecondaryRATUsageReport-secondaryRATType ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * RANSecondaryRATUsageReport-secondaryRATType ::= INTEGER {
+ *    nR          ( 0 )
+ * }
  * ```
  */
 export

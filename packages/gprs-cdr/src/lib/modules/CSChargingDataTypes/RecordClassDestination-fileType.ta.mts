@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RecordClassDestination-fileType ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * RecordClassDestination-fileType ::= INTEGER {
+ *    callRecords           ( 1 ),
+ *    traceRecords          ( 9 ),
+ *    observedIMEITicket    ( 14 )
+ * }
  * ```
  */
 export

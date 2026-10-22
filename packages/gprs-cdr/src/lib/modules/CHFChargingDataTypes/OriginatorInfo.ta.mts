@@ -3,13 +3,12 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMAddress, _decode_SMAddress, _encode_SMAddress } from "../CHFChargingDataTypes/SMAddress.ta.mjs";
-// export { SMAddress, _decode_SMAddress, _encode_SMAddress } from "../CHFChargingDataTypes/SMAddress.ta.mjs";
 import { SMInterface, _decode_SMInterface, _encode_SMInterface } from "../CHFChargingDataTypes/SMInterface.ta.mjs";
-// export { SMInterface, _decode_SMInterface, _encode_SMInterface } from "../CHFChargingDataTypes/SMInterface.ta.mjs";
 
 
 /**
@@ -92,6 +91,16 @@ class OriginatorInfo {
         this.originatorReceivedAddress = originatorReceivedAddress;
         this.sMOriginatorInterface = sMOriginatorInterface;
         this.sMOriginatorProtocolID = sMOriginatorProtocolID;
+    
+        if (this.originatorIMSI !== undefined && (this.originatorIMSI.length < 3 || this.originatorIMSI.length > 8)) {
+            throw new ASN1SizeError("OriginatorInfo.originatorIMSI violates SIZE constraint");
+        }
+        if (this.originatorMSISDN !== undefined && (this.originatorMSISDN.length < 1 || this.originatorMSISDN.length > 9)) {
+            throw new ASN1SizeError("OriginatorInfo.originatorMSISDN violates SIZE constraint");
+        }
+        if (this.originatorSCCPAddress !== undefined && (this.originatorSCCPAddress.length < 1 || this.originatorSCCPAddress.length > 20)) {
+            throw new ASN1SizeError("OriginatorInfo.originatorSCCPAddress violates SIZE constraint");
+        }
     }
 
     /**
@@ -215,7 +224,7 @@ let _cached_encoder_for_OriginatorInfo: $.ASN1Encoder<OriginatorInfo> | null = n
  */
 export
 function _encode_OriginatorInfo (value: OriginatorInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_OriginatorInfo) { _cached_encoder_for_OriginatorInfo = function (value: OriginatorInfo, elGetter: $.ASN1Encoder<OriginatorInfo>): _Element {
+    if (!_cached_encoder_for_OriginatorInfo) { _cached_encoder_for_OriginatorInfo = function (value: OriginatorInfo, _elGetter: $.ASN1Encoder<OriginatorInfo>): _Element {
     const _components: _Element[] = [];
     if (value.originatorIMSI !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.originatorIMSI, $.BER));

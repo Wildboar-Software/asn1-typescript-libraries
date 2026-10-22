@@ -13,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ObservedIMEITicket-imeiCheckEvent ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ObservedIMEITicket-imeiCheckEvent ::= INTEGER {
+ *    mobileOriginatedCall    ( 0 ),
+ *    mobileTerminatedCall    ( 1 ),
+ *    smsMobileOriginating    ( 2 ),
+ *    smsMobileTerminating    ( 3 ),
+ *    ssAction                ( 4 ),
+ *    locationUpdate          ( 5 )
+ * }
  * ```
  */
 export

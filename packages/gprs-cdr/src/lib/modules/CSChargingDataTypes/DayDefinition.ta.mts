@@ -6,9 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DayOfTheWeek, _decode_DayOfTheWeek, _encode_DayOfTheWeek, _enum_for_DayOfTheWeek } from "../CSChargingDataTypes/DayOfTheWeek.ta.mjs";
-// export { DayOfTheWeek, _enum_for_DayOfTheWeek, DayOfTheWeek_allDays /* IMPORTED_LONG_ENUMERATION_ITEM */, allDays /* IMPORTED_SHORT_ENUMERATION_ITEM */, DayOfTheWeek_sunday /* IMPORTED_LONG_ENUMERATION_ITEM */, sunday /* IMPORTED_SHORT_ENUMERATION_ITEM */, DayOfTheWeek_monday /* IMPORTED_LONG_ENUMERATION_ITEM */, monday /* IMPORTED_SHORT_ENUMERATION_ITEM */, DayOfTheWeek_tuesday /* IMPORTED_LONG_ENUMERATION_ITEM */, tuesday /* IMPORTED_SHORT_ENUMERATION_ITEM */, DayOfTheWeek_wednesday /* IMPORTED_LONG_ENUMERATION_ITEM */, wednesday /* IMPORTED_SHORT_ENUMERATION_ITEM */, DayOfTheWeek_thursday /* IMPORTED_LONG_ENUMERATION_ITEM */, thursday /* IMPORTED_SHORT_ENUMERATION_ITEM */, DayOfTheWeek_friday /* IMPORTED_LONG_ENUMERATION_ITEM */, friday /* IMPORTED_SHORT_ENUMERATION_ITEM */, DayOfTheWeek_saturday /* IMPORTED_LONG_ENUMERATION_ITEM */, saturday /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DayOfTheWeek, _encode_DayOfTheWeek } from "../CSChargingDataTypes/DayOfTheWeek.ta.mjs";
 import { DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
-// export { DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
 
 
 /**
@@ -130,10 +128,8 @@ function _decode_DayDefinition (el: _Element): DayDefinition {
     }
     sequence[0].name = "day";
     sequence[1].name = "dayClass";
-    let day!: DayOfTheWeek;
-    let dayClass!: DayClass;
-    day = $._decode_implicit<DayOfTheWeek>(() => _decode_DayOfTheWeek)(sequence[0]);
-    dayClass = $._decode_explicit<DayClass>(() => _decode_DayClass)(sequence[1]);
+    const day: DayOfTheWeek = $._decode_implicit<DayOfTheWeek>(() => _decode_DayOfTheWeek)(sequence[0]);
+    const dayClass: DayClass = $._decode_explicit<DayClass>(() => _decode_DayClass)(sequence[1]);
     return new DayDefinition(
         day,
         dayClass,
@@ -154,7 +150,7 @@ let _cached_encoder_for_DayDefinition: $.ASN1Encoder<DayDefinition> | null = nul
  */
 export
 function _encode_DayDefinition (value: DayDefinition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DayDefinition) { _cached_encoder_for_DayDefinition = function (value: DayDefinition, elGetter: $.ASN1Encoder<DayDefinition>): _Element {
+    if (!_cached_encoder_for_DayDefinition) { _cached_encoder_for_DayDefinition = function (value: DayDefinition, _elGetter: $.ASN1Encoder<DayDefinition>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_DayOfTheWeek, $.BER)(value.day, $.BER),
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_DayClass, $.BER)(value.dayClass, $.BER)

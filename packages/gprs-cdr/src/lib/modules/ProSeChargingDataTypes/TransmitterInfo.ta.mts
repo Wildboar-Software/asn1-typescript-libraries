@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ProSeChargingDataTypes/IPAddress.ta.mjs";
-// export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ProSeChargingDataTypes/IPAddress.ta.mjs";
 
 
 /**
@@ -123,10 +122,8 @@ function _decode_TransmitterInfo (el: _Element): TransmitterInfo {
     }
     sequence[0].name = "sourceIPaddress";
     sequence[1].name = "proSeUEID";
-    let sourceIPaddress!: IPAddress;
-    let proSeUEID!: OCTET_STRING;
-    sourceIPaddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(sequence[0]);
-    proSeUEID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const sourceIPaddress: IPAddress = $._decode_explicit<IPAddress>(() => _decode_IPAddress)(sequence[0]);
+    const proSeUEID: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new TransmitterInfo(
         sourceIPaddress,
         proSeUEID,
@@ -147,7 +144,7 @@ let _cached_encoder_for_TransmitterInfo: $.ASN1Encoder<TransmitterInfo> | null =
  */
 export
 function _encode_TransmitterInfo (value: TransmitterInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransmitterInfo) { _cached_encoder_for_TransmitterInfo = function (value: TransmitterInfo, elGetter: $.ASN1Encoder<TransmitterInfo>): _Element {
+    if (!_cached_encoder_for_TransmitterInfo) { _cached_encoder_for_TransmitterInfo = function (value: TransmitterInfo, _elGetter: $.ASN1Encoder<TransmitterInfo>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_IPAddress, $.BER)(value.sourceIPaddress, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.proSeUEID, $.BER)

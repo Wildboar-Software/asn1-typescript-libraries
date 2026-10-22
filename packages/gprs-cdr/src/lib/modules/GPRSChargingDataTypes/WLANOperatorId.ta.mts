@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,6 +45,10 @@ class WLANOperatorId {
     ) {
         this.wLANOperatorName = wLANOperatorName;
         this.wLANPLMNId = wLANPLMNId;
+    
+        if ((this.wLANPLMNId.length !== 3)) {
+            throw new ASN1SizeError("WLANOperatorId.wLANPLMNId violates SIZE constraint");
+        }
     }
 
     /**
@@ -122,10 +127,8 @@ function _decode_WLANOperatorId (el: _Element): WLANOperatorId {
     }
     sequence[0].name = "wLANOperatorName";
     sequence[1].name = "wLANPLMNId";
-    let wLANOperatorName!: OCTET_STRING;
-    let wLANPLMNId!: OCTET_STRING;
-    wLANOperatorName = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    wLANPLMNId = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const wLANOperatorName: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const wLANPLMNId: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new WLANOperatorId(
         wLANOperatorName,
         wLANPLMNId,
@@ -146,7 +149,7 @@ let _cached_encoder_for_WLANOperatorId: $.ASN1Encoder<WLANOperatorId> | null = n
  */
 export
 function _encode_WLANOperatorId (value: WLANOperatorId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_WLANOperatorId) { _cached_encoder_for_WLANOperatorId = function (value: WLANOperatorId, elGetter: $.ASN1Encoder<WLANOperatorId>): _Element {
+    if (!_cached_encoder_for_WLANOperatorId) { _cached_encoder_for_WLANOperatorId = function (value: WLANOperatorId, _elGetter: $.ASN1Encoder<WLANOperatorId>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.wLANOperatorName, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.wLANPLMNId, $.BER)

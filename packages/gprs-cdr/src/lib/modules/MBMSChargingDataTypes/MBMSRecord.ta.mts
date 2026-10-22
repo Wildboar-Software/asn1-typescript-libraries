@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SUBBMSCRecord, _decode_SUBBMSCRecord, _encode_SUBBMSCRecord } from "../MBMSChargingDataTypes/SUBBMSCRecord.ta.mjs";
-// export { SUBBMSCRecord, _decode_SUBBMSCRecord, _encode_SUBBMSCRecord } from "../MBMSChargingDataTypes/SUBBMSCRecord.ta.mjs";
 import { CONTENTBMSCRecord, _decode_CONTENTBMSCRecord, _encode_CONTENTBMSCRecord } from "../MBMSChargingDataTypes/CONTENTBMSCRecord.ta.mjs";
-// export { CONTENTBMSCRecord, _decode_CONTENTBMSCRecord, _encode_CONTENTBMSCRecord } from "../MBMSChargingDataTypes/CONTENTBMSCRecord.ta.mjs";
 
 
 /**

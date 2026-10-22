@@ -3,7 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    INTEGER,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,6 +54,16 @@ class SwitchoverTime {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
+    
+        if ((this.hour < 0 || this.hour > 23)) {
+            throw new ASN1OverflowError("SwitchoverTime.hour violates INTEGER range");
+        }
+        if ((this.minute < 0 || this.minute > 59)) {
+            throw new ASN1OverflowError("SwitchoverTime.minute violates INTEGER range");
+        }
+        if ((this.second < 0 || this.second > 59)) {
+            throw new ASN1OverflowError("SwitchoverTime.second violates INTEGER range");
+        }
     }
 
     /**
@@ -133,12 +144,9 @@ function _decode_SwitchoverTime (el: _Element): SwitchoverTime {
     sequence[0].name = "hour";
     sequence[1].name = "minute";
     sequence[2].name = "second";
-    let hour!: INTEGER;
-    let minute!: INTEGER;
-    let second!: INTEGER;
-    hour = $._decodeInteger(sequence[0]);
-    minute = $._decodeInteger(sequence[1]);
-    second = $._decodeInteger(sequence[2]);
+    const hour: INTEGER = $._decodeInteger(sequence[0]);
+    const minute: INTEGER = $._decodeInteger(sequence[1]);
+    const second: INTEGER = $._decodeInteger(sequence[2]);
     return new SwitchoverTime(
         hour,
         minute,
@@ -160,7 +168,7 @@ let _cached_encoder_for_SwitchoverTime: $.ASN1Encoder<SwitchoverTime> | null = n
  */
 export
 function _encode_SwitchoverTime (value: SwitchoverTime, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SwitchoverTime) { _cached_encoder_for_SwitchoverTime = function (value: SwitchoverTime, elGetter: $.ASN1Encoder<SwitchoverTime>): _Element {
+    if (!_cached_encoder_for_SwitchoverTime) { _cached_encoder_for_SwitchoverTime = function (value: SwitchoverTime, _elGetter: $.ASN1Encoder<SwitchoverTime>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeInteger(value.hour, $.BER),
         /* REQUIRED   */ $._encodeInteger(value.minute, $.BER),

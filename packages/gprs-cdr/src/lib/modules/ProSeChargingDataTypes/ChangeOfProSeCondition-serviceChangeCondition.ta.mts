@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ChangeOfProSeCondition-serviceChangeCondition ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * ChangeOfProSeCondition-serviceChangeCondition ::= BIT STRING {
+ *    pLMNchange  (0 ),
+ *    coverageStatusChange  (1 ),
+ *    locationChange  (2 )
+ * }
  * ```
  */
 export

@@ -3,15 +3,13 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
-// export { BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
 import { TransparencyInd, _decode_TransparencyInd, _encode_TransparencyInd, _enum_for_TransparencyInd } from "../CSChargingDataTypes/TransparencyInd.ta.mjs";
-// export { TransparencyInd, _enum_for_TransparencyInd, TransparencyInd_transparent /* IMPORTED_LONG_ENUMERATION_ITEM */, transparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, TransparencyInd_nonTransparent /* IMPORTED_LONG_ENUMERATION_ITEM */, nonTransparent /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TransparencyInd, _encode_TransparencyInd } from "../CSChargingDataTypes/TransparencyInd.ta.mjs";
 import { Fnur, _decode_Fnur, _encode_Fnur, _enum_for_Fnur } from "../CSChargingDataTypes/Fnur.ta.mjs";
-// export { Fnur, _enum_for_Fnur, Fnur_fnurNotApplicable /* IMPORTED_LONG_ENUMERATION_ITEM */, fnurNotApplicable /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur9600_BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur9600_BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur14400BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur14400BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur19200BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur19200BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur28800BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur28800BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur38400BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur38400BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur48000BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur48000BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur56000BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur56000BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur64000BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur64000BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur33600BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur33600BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur32000BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur32000BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, Fnur_fnur31200BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, fnur31200BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Fnur, _encode_Fnur } from "../CSChargingDataTypes/Fnur.ta.mjs";
 
 
 /**
@@ -76,6 +74,13 @@ class ChangeOfService {
         this.changeTime = changeTime;
         this.rateIndication = rateIndication;
         this.fnur = fnur;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfService.changeTime violates SIZE constraint");
+        }
+        if (this.rateIndication !== undefined && (this.rateIndication.length !== 1)) {
+            throw new ASN1SizeError("ChangeOfService.rateIndication violates SIZE constraint");
+        }
     }
 
     /**
@@ -203,7 +208,7 @@ let _cached_encoder_for_ChangeOfService: $.ASN1Encoder<ChangeOfService> | null =
  */
 export
 function _encode_ChangeOfService (value: ChangeOfService, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeOfService) { _cached_encoder_for_ChangeOfService = function (value: ChangeOfService, elGetter: $.ASN1Encoder<ChangeOfService>): _Element {
+    if (!_cached_encoder_for_ChangeOfService) { _cached_encoder_for_ChangeOfService = function (value: ChangeOfService, _elGetter: $.ASN1Encoder<ChangeOfService>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_explicit(_TagClass.context, 0, () => _encode_BasicService, $.BER)(value.basicService, $.BER));
     if (value.transparencyInd !== undefined) {

@@ -10,7 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMSChargingInformation-sMPriority ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMSChargingInformation-sMPriority ::= ENUMERATED {
+ *    low         ( 0 ),
+ *    normal      ( 1 ),
+ *    high        ( 2 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -29,7 +33,11 @@ enum _enum_for_SMSChargingInformation_sMPriority {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMSChargingInformation-sMPriority ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMSChargingInformation-sMPriority ::= ENUMERATED {
+ *    low         ( 0 ),
+ *    normal      ( 1 ),
+ *    high        ( 2 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -44,7 +52,11 @@ type SMSChargingInformation_sMPriority = _enum_for_SMSChargingInformation_sMPrio
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMSChargingInformation-sMPriority ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMSChargingInformation-sMPriority ::= ENUMERATED {
+ *    low         ( 0 ),
+ *    normal      ( 1 ),
+ *    high        ( 2 )
+ * }
  * ```
  * 
  * @enum {number}

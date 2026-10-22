@@ -122,10 +122,8 @@ function _decode_SessionAMBR (el: _Element): SessionAMBR {
     }
     sequence[0].name = "ambrUL";
     sequence[1].name = "ambrDL";
-    let ambrUL!: OCTET_STRING;
-    let ambrDL!: OCTET_STRING;
-    ambrUL = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    ambrDL = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const ambrUL: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const ambrDL: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new SessionAMBR(
         ambrUL,
         ambrDL,
@@ -146,7 +144,7 @@ let _cached_encoder_for_SessionAMBR: $.ASN1Encoder<SessionAMBR> | null = null;
  */
 export
 function _encode_SessionAMBR (value: SessionAMBR, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SessionAMBR) { _cached_encoder_for_SessionAMBR = function (value: SessionAMBR, elGetter: $.ASN1Encoder<SessionAMBR>): _Element {
+    if (!_cached_encoder_for_SessionAMBR) { _cached_encoder_for_SessionAMBR = function (value: SessionAMBR, _elGetter: $.ASN1Encoder<SessionAMBR>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.ambrUL, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeOctetString, $.BER)(value.ambrDL, $.BER)

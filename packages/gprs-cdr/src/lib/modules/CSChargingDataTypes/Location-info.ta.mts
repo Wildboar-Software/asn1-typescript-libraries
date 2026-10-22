@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -62,6 +63,19 @@ class Location_info {
         this.location_area = location_area;
         this.cell_identification = cell_identification;
         this.mCC_MNC = mCC_MNC;
+    
+        if (this.mscNumber !== undefined && (this.mscNumber.length < 1 || this.mscNumber.length > 9)) {
+            throw new ASN1SizeError("Location_info.mscNumber violates SIZE constraint");
+        }
+        if ((this.location_area.length !== 2)) {
+            throw new ASN1SizeError("Location_info.location_area violates SIZE constraint");
+        }
+        if (this.cell_identification !== undefined && (this.cell_identification.length !== 2)) {
+            throw new ASN1SizeError("Location_info.cell_identification violates SIZE constraint");
+        }
+        if (this.mCC_MNC !== undefined && (this.mCC_MNC.length !== 3)) {
+            throw new ASN1SizeError("Location_info.mCC_MNC violates SIZE constraint");
+        }
     }
 
     /**
@@ -173,7 +187,7 @@ let _cached_encoder_for_Location_info: $.ASN1Encoder<Location_info> | null = nul
  */
 export
 function _encode_Location_info (value: Location_info, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Location_info) { _cached_encoder_for_Location_info = function (value: Location_info, elGetter: $.ASN1Encoder<Location_info>): _Element {
+    if (!_cached_encoder_for_Location_info) { _cached_encoder_for_Location_info = function (value: Location_info, _elGetter: $.ASN1Encoder<Location_info>): _Element {
     const _components: _Element[] = [];
     if (value.mscNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.mscNumber, $.BER));

@@ -4,7 +4,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     INTEGER,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,6 +46,10 @@ class MOExceptionDataCounter {
     ) {
         this.counterValue = counterValue;
         this.counterTimestamp = counterTimestamp;
+    
+        if ((this.counterTimestamp.length !== 9)) {
+            throw new ASN1SizeError("MOExceptionDataCounter.counterTimestamp violates SIZE constraint");
+        }
     }
 
     /**
@@ -123,10 +128,8 @@ function _decode_MOExceptionDataCounter (el: _Element): MOExceptionDataCounter {
     }
     sequence[0].name = "counterValue";
     sequence[1].name = "counterTimestamp";
-    let counterValue!: INTEGER;
-    let counterTimestamp!: OCTET_STRING;
-    counterValue = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    counterTimestamp = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const counterValue: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const counterTimestamp: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
     return new MOExceptionDataCounter(
         counterValue,
         counterTimestamp,
@@ -147,7 +150,7 @@ let _cached_encoder_for_MOExceptionDataCounter: $.ASN1Encoder<MOExceptionDataCou
  */
 export
 function _encode_MOExceptionDataCounter (value: MOExceptionDataCounter, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MOExceptionDataCounter) { _cached_encoder_for_MOExceptionDataCounter = function (value: MOExceptionDataCounter, elGetter: $.ASN1Encoder<MOExceptionDataCounter>): _Element {
+    if (!_cached_encoder_for_MOExceptionDataCounter) { _cached_encoder_for_MOExceptionDataCounter = function (value: MOExceptionDataCounter, _elGetter: $.ASN1Encoder<MOExceptionDataCounter>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.counterValue, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.counterTimestamp, $.BER)

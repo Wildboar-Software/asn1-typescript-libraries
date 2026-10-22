@@ -10,7 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-sessionPriority ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-sessionPriority ::= ENUMERATED {
+ *    pRIORITY-0    ( 0 ),
+ *    pRIORITY-1    ( 1 ),
+ *    pRIORITY-2    ( 2 ),
+ *    pRIORITY-3    ( 3 ),
+ *    pRIORITY-4    ( 4 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -31,7 +37,13 @@ enum _enum_for_MMTelRecord_sessionPriority {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-sessionPriority ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-sessionPriority ::= ENUMERATED {
+ *    pRIORITY-0    ( 0 ),
+ *    pRIORITY-1    ( 1 ),
+ *    pRIORITY-2    ( 2 ),
+ *    pRIORITY-3    ( 3 ),
+ *    pRIORITY-4    ( 4 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -46,7 +58,13 @@ type MMTelRecord_sessionPriority = _enum_for_MMTelRecord_sessionPriority;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-sessionPriority ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-sessionPriority ::= ENUMERATED {
+ *    pRIORITY-0    ( 0 ),
+ *    pRIORITY-1    ( 1 ),
+ *    pRIORITY-2    ( 2 ),
+ *    pRIORITY-3    ( 3 ),
+ *    pRIORITY-4    ( 4 )
+ * }
  * ```
  * 
  * @enum {number}

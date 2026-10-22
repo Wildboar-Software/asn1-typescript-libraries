@@ -13,7 +13,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LCSClientIdentity-lcsClientExternalID-extensionContainer-pcs-Extensions ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * LCSClientIdentity-lcsClientExternalID-extensionContainer-pcs-Extensions ::= SEQUENCE {
+ *    ...
+ * }
  * ```
  * 
  * @class
@@ -130,7 +132,7 @@ let _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer
  */
 export
 function _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions (value: LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions = function (value: LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions, elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions>): _Element {
+    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions = function (value: LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions, _elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(_unrecognized ? _unrecognized.length : 0);
     let _components_i = 0;

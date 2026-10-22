@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PLMN_Id = OCTET_STRING; // OctetStringType
 
-export
-const _decode_PLMN_Id: $.ASN1Decoder<PLMN_Id> = $._decodeOctetString;
+export const _decode_PLMN_Id = (el: _Element): PLMN_Id => {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 3) {
+        throw new ASN1SizeError("PLMN_Id violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_PLMN_Id: $.ASN1Encoder<PLMN_Id> = $._encodeOctetString;

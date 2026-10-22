@@ -6,8 +6,6 @@ import {
     OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { CMIP_AVA } from "../CSChargingDataTypes/CMIP-AVA.oca.mjs";
-// export { AvaSet } from "../CSChargingDataTypes/AvaSet.osa.mjs";
 
 
 /**
@@ -123,10 +121,8 @@ function _decode_IdValue (el: _Element): IdValue {
     }
     sequence[0].name = "id";
     sequence[1].name = "value";
-    let id!: OBJECT_IDENTIFIER;
-    let value!: _Element;
-    id = $._decodeObjectIdentifier(sequence[0]);
-    value = $._decodeAny(sequence[1]);
+    const id: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const value: _Element = $._decodeAny(sequence[1]);
     return new IdValue(
         id,
         value,
@@ -147,7 +143,7 @@ let _cached_encoder_for_IdValue: $.ASN1Encoder<IdValue> | null = null;
  */
 export
 function _encode_IdValue (value: IdValue, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IdValue) { _cached_encoder_for_IdValue = function (value: IdValue, elGetter: $.ASN1Encoder<IdValue>): _Element {
+    if (!_cached_encoder_for_IdValue) { _cached_encoder_for_IdValue = function (value: IdValue, _elGetter: $.ASN1Encoder<IdValue>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encodeObjectIdentifier(value.id, $.BER),
         /* REQUIRED   */ $._encodeAny(value.value, $.BER)

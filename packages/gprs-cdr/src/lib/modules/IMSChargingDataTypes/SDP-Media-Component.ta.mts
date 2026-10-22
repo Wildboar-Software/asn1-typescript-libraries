@@ -8,7 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessCorrelationID, _decode_AccessCorrelationID, _encode_AccessCorrelationID } from "../IMSChargingDataTypes/AccessCorrelationID.ta.mjs";
-// export { AccessCorrelationID, _decode_AccessCorrelationID, _encode_AccessCorrelationID } from "../IMSChargingDataTypes/AccessCorrelationID.ta.mjs";
 
 
 /**
@@ -202,7 +201,7 @@ let _cached_encoder_for_SDP_Media_Component: $.ASN1Encoder<SDP_Media_Component> 
  */
 export
 function _encode_SDP_Media_Component (value: SDP_Media_Component, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SDP_Media_Component) { _cached_encoder_for_SDP_Media_Component = function (value: SDP_Media_Component, elGetter: $.ASN1Encoder<SDP_Media_Component>): _Element {
+    if (!_cached_encoder_for_SDP_Media_Component) { _cached_encoder_for_SDP_Media_Component = function (value: SDP_Media_Component, _elGetter: $.ASN1Encoder<SDP_Media_Component>): _Element {
     const _components: _Element[] = [];
     if (value.sDP_Media_Name !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeGraphicString, $.BER)(value.sDP_Media_Name, $.BER));

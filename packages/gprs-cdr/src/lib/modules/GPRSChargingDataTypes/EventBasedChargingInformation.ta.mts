@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -46,6 +47,14 @@ class EventBasedChargingInformation {
     ) {
         this.numberOfEvents = numberOfEvents;
         this.eventTimeStamps = eventTimeStamps;
+    
+        if (this.eventTimeStamps !== undefined && this.eventTimeStamps) {
+            for (const _item of this.eventTimeStamps) {
+                if (_item.length !== 9) {
+                    throw new ASN1SizeError("EventBasedChargingInformation.eventTimeStamps element violates SIZE constraint");
+                }
+            }
+        }
     }
 
     /**
@@ -149,7 +158,7 @@ let _cached_encoder_for_EventBasedChargingInformation: $.ASN1Encoder<EventBasedC
  */
 export
 function _encode_EventBasedChargingInformation (value: EventBasedChargingInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EventBasedChargingInformation) { _cached_encoder_for_EventBasedChargingInformation = function (value: EventBasedChargingInformation, elGetter: $.ASN1Encoder<EventBasedChargingInformation>): _Element {
+    if (!_cached_encoder_for_EventBasedChargingInformation) { _cached_encoder_for_EventBasedChargingInformation = function (value: EventBasedChargingInformation, _elGetter: $.ASN1Encoder<EventBasedChargingInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.numberOfEvents, $.BER));
     if (value.eventTimeStamps !== undefined) {

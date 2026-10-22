@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Pcs_Extensions, _decode_Pcs_Extensions, _encode_Pcs_Extensions } from "../CSChargingDataTypes/Pcs-Extensions.ta.mjs";
-// export { Pcs_Extensions, _decode_Pcs_Extensions, _encode_Pcs_Extensions } from "../CSChargingDataTypes/Pcs-Extensions.ta.mjs";
 
 
 /**

@@ -13,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ChangedParameters-changeFlags ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * ChangedParameters-changeFlags ::= BIT STRING {
+ *    callingPartyNumberModified  (0 ),
+ *    callingPartyCategoryModified  (1 ),
+ *    originalCalledPartyNumberModified  (2 ),
+ *    genericNumbersModified  (3 ),
+ *    redirectingPartyNumberModified  (4 ),
+ *    redirectionCounterModified  (5 )
+ * }
  * ```
  */
 export

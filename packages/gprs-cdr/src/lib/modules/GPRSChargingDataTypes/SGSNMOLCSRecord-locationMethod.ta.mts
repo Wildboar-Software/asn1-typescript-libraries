@@ -23,7 +23,15 @@ enum _enum_for_SGSNMOLCSRecord_locationMethod {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SGSNMOLCSRecord-locationMethod ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SGSNMOLCSRecord-locationMethod ::= ENUMERATED {
+ *    msBasedEOTD            ( 0 ),
+ *    msAssistedEOTD         ( 1 ),
+ *    assistedGPS            ( 2 ),
+ *    ... ,
+ *    msBasedOTDOA           ( 3 ),
+ *    assistedGANSS          ( 4 ),
+ *    assistedGPSandGANSS    ( 5 )
+ * }
  * ```
  * 
  * @enum {number}

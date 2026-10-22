@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    IA5String
+    IA5String,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AccessPointNameOI = IA5String; // IA5String
 
-export
-const _decode_AccessPointNameOI: $.ASN1Decoder<AccessPointNameOI> = $._decodeIA5String;
+export const _decode_AccessPointNameOI = (el: _Element): AccessPointNameOI => {
+    const value = $._decodeIA5String(el);
+    if (value.length < 1 || value.length > 37) {
+        throw new ASN1SizeError("AccessPointNameOI violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_AccessPointNameOI: $.ASN1Encoder<AccessPointNameOI> = $._encodeIA5String;

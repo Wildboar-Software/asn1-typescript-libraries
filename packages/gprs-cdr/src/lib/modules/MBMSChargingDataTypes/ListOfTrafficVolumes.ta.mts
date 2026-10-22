@@ -5,11 +5,11 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChangeCondition, _decode_ChangeCondition, _encode_ChangeCondition, _enum_for_ChangeCondition } from "../MBMSChargingDataTypes/ChangeCondition.ta.mjs";
-// export { ChangeCondition, _enum_for_ChangeCondition, ChangeCondition_qoSChange /* IMPORTED_LONG_ENUMERATION_ITEM */, qoSChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_tariffTime /* IMPORTED_LONG_ENUMERATION_ITEM */, tariffTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_recordClosure /* IMPORTED_LONG_ENUMERATION_ITEM */, recordClosure /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_cGI_SAICHange /* IMPORTED_LONG_ENUMERATION_ITEM */, cGI_SAICHange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_rAIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, rAIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_dT_Establishment /* IMPORTED_LONG_ENUMERATION_ITEM */, dT_Establishment /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_dT_Removal /* IMPORTED_LONG_ENUMERATION_ITEM */, dT_Removal /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_eCGIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, eCGIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_tAIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, tAIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_userLocationChange /* IMPORTED_LONG_ENUMERATION_ITEM */, userLocationChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_userCSGInformationChange /* IMPORTED_LONG_ENUMERATION_ITEM */, userCSGInformationChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_presenceInPRAChange /* IMPORTED_LONG_ENUMERATION_ITEM */, presenceInPRAChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_removalOfAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, removalOfAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_unusabilityOfAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, unusabilityOfAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_indirectChangeCondition /* IMPORTED_LONG_ENUMERATION_ITEM */, indirectChangeCondition /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_userPlaneToUEChange /* IMPORTED_LONG_ENUMERATION_ITEM */, userPlaneToUEChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_servingPLMNRateControlChange /* IMPORTED_LONG_ENUMERATION_ITEM */, servingPLMNRateControlChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_threeGPPPSDataOffStatusChange /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPPSDataOffStatusChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_aPNRateControlChange /* IMPORTED_LONG_ENUMERATION_ITEM */, aPNRateControlChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChangeCondition, _encode_ChangeCondition } from "../MBMSChargingDataTypes/ChangeCondition.ta.mjs";
 
 
 /**
@@ -92,6 +92,16 @@ class ListOfTrafficVolumes {
         this.changeCondition = changeCondition;
         this.changeTime = changeTime;
         this.failureHandlingContinue = failureHandlingContinue;
+    
+        if (this.qosRequested !== undefined && (this.qosRequested.length < 4 || this.qosRequested.length > 255)) {
+            throw new ASN1SizeError("ListOfTrafficVolumes.qosRequested violates SIZE constraint");
+        }
+        if (this.qosNegotiated !== undefined && (this.qosNegotiated.length < 4 || this.qosNegotiated.length > 255)) {
+            throw new ASN1SizeError("ListOfTrafficVolumes.qosNegotiated violates SIZE constraint");
+        }
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ListOfTrafficVolumes.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -221,7 +231,7 @@ let _cached_encoder_for_ListOfTrafficVolumes: $.ASN1Encoder<ListOfTrafficVolumes
  */
 export
 function _encode_ListOfTrafficVolumes (value: ListOfTrafficVolumes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ListOfTrafficVolumes) { _cached_encoder_for_ListOfTrafficVolumes = function (value: ListOfTrafficVolumes, elGetter: $.ASN1Encoder<ListOfTrafficVolumes>): _Element {
+    if (!_cached_encoder_for_ListOfTrafficVolumes) { _cached_encoder_for_ListOfTrafficVolumes = function (value: ListOfTrafficVolumes, _elGetter: $.ASN1Encoder<ListOfTrafficVolumes>): _Element {
     const _components: _Element[] = [];
     if (value.qosRequested !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.qosRequested, $.BER));

@@ -1,0 +1,91 @@
+/**
+ * @description
+ *
+ * ASN.1 module `ProSeChargingDataTypes`.
+ *
+ * Identical assignments that also appear in other charging modules
+ * are re-exported from `shared`.
+ */
+export * from "./AppSpecificData.ta.mjs";
+export * from "./ChChSelectionMode.ta.mjs";
+export {
+    type ChangeOfProSeCondition_radioResourcesInd,
+    ChangeOfProSeCondition_radioResourcesInd_operatorProvided,
+    ChangeOfProSeCondition_radioResourcesInd_configured,
+    _decode_ChangeOfProSeCondition_radioResourcesInd,
+    _encode_ChangeOfProSeCondition_radioResourcesInd,
+} from "./ChangeOfProSeCondition-radioResourcesInd.ta.mjs";
+export {
+    type ChangeOfProSeCondition_serviceChangeCondition,
+    ChangeOfProSeCondition_serviceChangeCondition_pLMNchange,
+    ChangeOfProSeCondition_serviceChangeCondition_coverageStatusChange,
+    ChangeOfProSeCondition_serviceChangeCondition_locationChange,
+    _decode_ChangeOfProSeCondition_serviceChangeCondition,
+    _encode_ChangeOfProSeCondition_serviceChangeCondition,
+} from "./ChangeOfProSeCondition-serviceChangeCondition.ta.mjs";
+export * from "./ChangeOfProSeCondition.ta.mjs";
+export * from "./CoverageInfo.ta.mjs";
+export * from "./CoverageStatus.ta.mjs";
+export * from "./DMI-EXTENSION.oca.mjs";
+export * from "./IPAddress.ta.mjs";
+export * from "./IPBinV6AddressWithOrWithoutPrefixLength.ta.mjs";
+export * from "./IPBinV6AddressWithPrefixLength.ta.mjs";
+export * from "./IPBinaryAddress.ta.mjs";
+export * from "./IPTextRepresentedAddress.ta.mjs";
+export * from "./LocationInfo.ta.mjs";
+export * from "./ManagementExtension.ta.mjs";
+export * from "./ManagementExtensionSet.osa.mjs";
+export * from "./PC5RadioTechnology.ta.mjs";
+export * from "./PFDCRecord.ta.mjs";
+export * from "./PFDDRecord.ta.mjs";
+export * from "./PFEDRecord.ta.mjs";
+export {
+    _enum_for_ProSeCauseForRecClosing,
+    type ProSeCauseForRecClosing,
+    ProSeCauseForRecClosing_proximityAlerted,
+    ProSeCauseForRecClosing_timeExpiredWithNoRrenewal,
+    ProSeCauseForRecClosing_requestorCancellation,
+    ProSeCauseForRecClosing_timeLimited,
+    timeLimited,
+    ProSeCauseForRecClosing_maxNumberOfReports,
+    maxNumberOfReports,
+    ProSeCauseForRecClosing_abnormalRelease,
+    abnormalRelease,
+    _decode_ProSeCauseForRecClosing,
+    _encode_ProSeCauseForRecClosing,
+} from "./ProSeCauseForRecClosing.ta.mjs";
+export * from "./ProSeEventType.ta.mjs";
+export * from "./ProSeFunctionRole.ta.mjs";
+export * from "./ProSeRecordType.ta.mjs";
+export * from "./ProSeUERole.ta.mjs";
+export * from "./ProximityAlertIndication.ta.mjs";
+export * from "./ProximityRequestRenewalInfoBlock.ta.mjs";
+export * from "./RadioFrequency.ta.mjs";
+export * from "./RadioParameterSetInfo.ta.mjs";
+export {
+    type RadioResourcesIndicator,
+    RadioResourcesIndicator_operatorProvided,
+    RadioResourcesIndicator_configured,
+    _decode_RadioResourcesIndicator,
+    _encode_RadioResourcesIndicator,
+} from "./RadioResourcesIndicator.ta.mjs";
+export * from "./RangeClass.ta.mjs";
+export {
+    _enum_for_ReasonforCancellation,
+    type ReasonforCancellation,
+    ReasonforCancellation_proximityAlerted,
+    ReasonforCancellation_timeExpiredWithNoRrenewal,
+    ReasonforCancellation_requestorCancellation,
+    _decode_ReasonforCancellation,
+    _encode_ReasonforCancellation,
+} from "./ReasonforCancellation.ta.mjs";
+export * from "./RecordType.ta.mjs";
+export {
+    type ServiceChangeCondition,
+    ServiceChangeCondition_pLMNchange,
+    ServiceChangeCondition_coverageStatusChange,
+    ServiceChangeCondition_locationChange,
+    _decode_ServiceChangeCondition,
+    _encode_ServiceChangeCondition,
+} from "./ServiceChangeCondition.ta.mjs";
+export * from "./TransmitterInfo.ta.mjs";

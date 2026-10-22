@@ -212,7 +212,7 @@ let _cached_encoder_for_AOCParameters: $.ASN1Encoder<AOCParameters> | null = nul
  */
 export
 function _encode_AOCParameters (value: AOCParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AOCParameters) { _cached_encoder_for_AOCParameters = function (value: AOCParameters, elGetter: $.ASN1Encoder<AOCParameters>): _Element {
+    if (!_cached_encoder_for_AOCParameters) { _cached_encoder_for_AOCParameters = function (value: AOCParameters, _elGetter: $.ASN1Encoder<AOCParameters>): _Element {
     const _components: _Element[] = [];
     if (value.e1 !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.e1, $.BER));

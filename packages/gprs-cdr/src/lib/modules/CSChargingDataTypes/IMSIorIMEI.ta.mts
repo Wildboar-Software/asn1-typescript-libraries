@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +40,14 @@ function _decode_IMSIorIMEI (el: _Element): IMSIorIMEI {
     "CONTEXT 0": [ "imsi", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 1": [ "imei", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_IMSIorIMEI(el);
+    const _decoded_IMSIorIMEI = _cached_decoder_for_IMSIorIMEI(el);
+    if ("imsi" in _decoded_IMSIorIMEI && (_decoded_IMSIorIMEI.imsi.length < 3 || _decoded_IMSIorIMEI.imsi.length > 8)) {
+        throw new ASN1SizeError("IMSIorIMEI.imsi violates SIZE constraint");
+    }
+    if ("imei" in _decoded_IMSIorIMEI && (_decoded_IMSIorIMEI.imei.length !== 8)) {
+        throw new ASN1SizeError("IMSIorIMEI.imei violates SIZE constraint");
+    }
+    return _decoded_IMSIorIMEI;
 }
 
 let _cached_encoder_for_IMSIorIMEI: $.ASN1Encoder<IMSIorIMEI> | null = null;

@@ -5,37 +5,21 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SGSNPDPRecord, _decode_SGSNPDPRecord, _encode_SGSNPDPRecord } from "../GPRSChargingDataTypes/SGSNPDPRecord.ta.mjs";
-// export { SGSNPDPRecord, _decode_SGSNPDPRecord, _encode_SGSNPDPRecord } from "../GPRSChargingDataTypes/SGSNPDPRecord.ta.mjs";
 import { SGSNMMRecord, _decode_SGSNMMRecord, _encode_SGSNMMRecord } from "../GPRSChargingDataTypes/SGSNMMRecord.ta.mjs";
-// export { SGSNMMRecord, _decode_SGSNMMRecord, _encode_SGSNMMRecord } from "../GPRSChargingDataTypes/SGSNMMRecord.ta.mjs";
 import { SGSNSMORecord, _decode_SGSNSMORecord, _encode_SGSNSMORecord } from "../GPRSChargingDataTypes/SGSNSMORecord.ta.mjs";
-// export { SGSNSMORecord, _decode_SGSNSMORecord, _encode_SGSNSMORecord } from "../GPRSChargingDataTypes/SGSNSMORecord.ta.mjs";
 import { SGSNSMTRecord, _decode_SGSNSMTRecord, _encode_SGSNSMTRecord } from "../GPRSChargingDataTypes/SGSNSMTRecord.ta.mjs";
-// export { SGSNSMTRecord, _decode_SGSNSMTRecord, _encode_SGSNSMTRecord } from "../GPRSChargingDataTypes/SGSNSMTRecord.ta.mjs";
 import { SGSNMTLCSRecord, _decode_SGSNMTLCSRecord, _encode_SGSNMTLCSRecord } from "../GPRSChargingDataTypes/SGSNMTLCSRecord.ta.mjs";
-// export { SGSNMTLCSRecord, _decode_SGSNMTLCSRecord, _encode_SGSNMTLCSRecord } from "../GPRSChargingDataTypes/SGSNMTLCSRecord.ta.mjs";
 import { SGSNMOLCSRecord, _decode_SGSNMOLCSRecord, _encode_SGSNMOLCSRecord } from "../GPRSChargingDataTypes/SGSNMOLCSRecord.ta.mjs";
-// export { SGSNMOLCSRecord, _decode_SGSNMOLCSRecord, _encode_SGSNMOLCSRecord } from "../GPRSChargingDataTypes/SGSNMOLCSRecord.ta.mjs";
 import { SGSNNILCSRecord, _decode_SGSNNILCSRecord, _encode_SGSNNILCSRecord } from "../GPRSChargingDataTypes/SGSNNILCSRecord.ta.mjs";
-// export { SGSNNILCSRecord, _decode_SGSNNILCSRecord, _encode_SGSNNILCSRecord } from "../GPRSChargingDataTypes/SGSNNILCSRecord.ta.mjs";
 import { SGSNMBMSRecord, _decode_SGSNMBMSRecord, _encode_SGSNMBMSRecord } from "../GPRSChargingDataTypes/SGSNMBMSRecord.ta.mjs";
-// export { SGSNMBMSRecord, _decode_SGSNMBMSRecord, _encode_SGSNMBMSRecord } from "../GPRSChargingDataTypes/SGSNMBMSRecord.ta.mjs";
 import { GGSNMBMSRecord, _decode_GGSNMBMSRecord, _encode_GGSNMBMSRecord } from "../GPRSChargingDataTypes/GGSNMBMSRecord.ta.mjs";
-// export { GGSNMBMSRecord, _decode_GGSNMBMSRecord, _encode_GGSNMBMSRecord } from "../GPRSChargingDataTypes/GGSNMBMSRecord.ta.mjs";
 import { SGWRecord, _decode_SGWRecord, _encode_SGWRecord } from "../GPRSChargingDataTypes/SGWRecord.ta.mjs";
-// export { SGWRecord, _decode_SGWRecord, _encode_SGWRecord } from "../GPRSChargingDataTypes/SGWRecord.ta.mjs";
 import { PGWRecord, _decode_PGWRecord, _encode_PGWRecord } from "../GPRSChargingDataTypes/PGWRecord.ta.mjs";
-// export { PGWRecord, _decode_PGWRecord, _encode_PGWRecord } from "../GPRSChargingDataTypes/PGWRecord.ta.mjs";
 import { GWMBMSRecord, _decode_GWMBMSRecord, _encode_GWMBMSRecord } from "../GPRSChargingDataTypes/GWMBMSRecord.ta.mjs";
-// export { GWMBMSRecord, _decode_GWMBMSRecord, _encode_GWMBMSRecord } from "../GPRSChargingDataTypes/GWMBMSRecord.ta.mjs";
 import { TDFRecord, _decode_TDFRecord, _encode_TDFRecord } from "../GPRSChargingDataTypes/TDFRecord.ta.mjs";
-// export { TDFRecord, _decode_TDFRecord, _encode_TDFRecord } from "../GPRSChargingDataTypes/TDFRecord.ta.mjs";
 import { IPERecord, _decode_IPERecord, _encode_IPERecord } from "../GPRSChargingDataTypes/IPERecord.ta.mjs";
-// export { IPERecord, _decode_IPERecord, _encode_IPERecord } from "../GPRSChargingDataTypes/IPERecord.ta.mjs";
 import { EPDGRecord, _decode_EPDGRecord, _encode_EPDGRecord } from "../GPRSChargingDataTypes/EPDGRecord.ta.mjs";
-// export { EPDGRecord, _decode_EPDGRecord, _encode_EPDGRecord } from "../GPRSChargingDataTypes/EPDGRecord.ta.mjs";
 import { TWAGRecord, _decode_TWAGRecord, _encode_TWAGRecord } from "../GPRSChargingDataTypes/TWAGRecord.ta.mjs";
-// export { TWAGRecord, _decode_TWAGRecord, _encode_TWAGRecord } from "../GPRSChargingDataTypes/TWAGRecord.ta.mjs";
 
 
 /**

@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type NetworkCallReference = OCTET_STRING; // OctetStringType
 
-export
-const _decode_NetworkCallReference: $.ASN1Decoder<NetworkCallReference> = $._decodeOctetString;
+export const _decode_NetworkCallReference = (el: _Element): NetworkCallReference => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 8) {
+        throw new ASN1SizeError("NetworkCallReference violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_NetworkCallReference: $.ASN1Encoder<NetworkCallReference> = $._encodeOctetString;

@@ -19,7 +19,11 @@ enum _enum_for_CAMELSMSInformation_defaultSMSHandling {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CAMELSMSInformation-defaultSMSHandling ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * CAMELSMSInformation-defaultSMSHandling ::= ENUMERATED {
+ *    continueTransaction    ( 0 ),
+ *    releaseTransaction     ( 1 ),
+ *    ...
+ * }
  * ```
  * 
  * @enum {number}

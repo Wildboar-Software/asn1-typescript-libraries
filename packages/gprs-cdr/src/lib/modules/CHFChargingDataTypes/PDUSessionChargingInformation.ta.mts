@@ -6,43 +6,28 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../CHFChargingDataTypes/InvolvedParty.ta.mjs";
-// export { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../CHFChargingDataTypes/InvolvedParty.ta.mjs";
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../CHFChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
-// export { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../CHFChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
 import { RoamerInOut, _decode_RoamerInOut, _encode_RoamerInOut, _enum_for_RoamerInOut } from "../CHFChargingDataTypes/RoamerInOut.ta.mjs";
-// export { RoamerInOut, _enum_for_RoamerInOut, RoamerInOut_roamerInBound /* IMPORTED_LONG_ENUMERATION_ITEM */, roamerInBound /* IMPORTED_SHORT_ENUMERATION_ITEM */, RoamerInOut_roamerOutBound /* IMPORTED_LONG_ENUMERATION_ITEM */, roamerOutBound /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RoamerInOut, _encode_RoamerInOut } from "../CHFChargingDataTypes/RoamerInOut.ta.mjs";
 import { PresenceReportingAreaInfo, _decode_PresenceReportingAreaInfo, _encode_PresenceReportingAreaInfo } from "../CHFChargingDataTypes/PresenceReportingAreaInfo.ta.mjs";
-// export { PresenceReportingAreaInfo, _decode_PresenceReportingAreaInfo, _encode_PresenceReportingAreaInfo } from "../CHFChargingDataTypes/PresenceReportingAreaInfo.ta.mjs";
 import { NetworkSliceInstanceID, _decode_NetworkSliceInstanceID, _encode_NetworkSliceInstanceID } from "../CHFChargingDataTypes/NetworkSliceInstanceID.ta.mjs";
-// export { NetworkSliceInstanceID, _decode_NetworkSliceInstanceID, _encode_NetworkSliceInstanceID } from "../CHFChargingDataTypes/NetworkSliceInstanceID.ta.mjs";
 import { PDUSessionType, _decode_PDUSessionType, _encode_PDUSessionType, _enum_for_PDUSessionType } from "../CHFChargingDataTypes/PDUSessionType.ta.mjs";
-// export { PDUSessionType, _enum_for_PDUSessionType, PDUSessionType_iPv4v6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4v6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDUSessionType_iPv4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDUSessionType_iPv6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDUSessionType_unstructured /* IMPORTED_LONG_ENUMERATION_ITEM */, unstructured /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDUSessionType_ethernet /* IMPORTED_LONG_ENUMERATION_ITEM */, ethernet /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDUSessionType, _encode_PDUSessionType } from "../CHFChargingDataTypes/PDUSessionType.ta.mjs";
 import { PDUSessionChargingInformation_sSCMode, _decode_PDUSessionChargingInformation_sSCMode, _encode_PDUSessionChargingInformation_sSCMode } from "../CHFChargingDataTypes/PDUSessionChargingInformation-sSCMode.ta.mjs";
-// export { PDUSessionChargingInformation_sSCMode, PDUSessionChargingInformation_sSCMode_sSCMode1 /* IMPORTED_LONG_NAMED_INTEGER */, sSCMode1 /* IMPORTED_SHORT_NAMED_INTEGER */, PDUSessionChargingInformation_sSCMode_sSCMode2 /* IMPORTED_LONG_NAMED_INTEGER */, sSCMode2 /* IMPORTED_SHORT_NAMED_INTEGER */, PDUSessionChargingInformation_sSCMode_sSCMode3 /* IMPORTED_LONG_NAMED_INTEGER */, sSCMode3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PDUSessionChargingInformation_sSCMode, _encode_PDUSessionChargingInformation_sSCMode } from "../CHFChargingDataTypes/PDUSessionChargingInformation-sSCMode.ta.mjs";
 import { ServingNetworkFunctionID, _decode_ServingNetworkFunctionID, _encode_ServingNetworkFunctionID } from "../CHFChargingDataTypes/ServingNetworkFunctionID.ta.mjs";
-// export { ServingNetworkFunctionID, _decode_ServingNetworkFunctionID, _encode_ServingNetworkFunctionID } from "../CHFChargingDataTypes/ServingNetworkFunctionID.ta.mjs";
 import { PDUAddress, _decode_PDUAddress, _encode_PDUAddress } from "../CHFChargingDataTypes/PDUAddress.ta.mjs";
-// export { PDUAddress, _decode_PDUAddress, _encode_PDUAddress } from "../CHFChargingDataTypes/PDUAddress.ta.mjs";
 import { AuthorizedQoSInformation, _decode_AuthorizedQoSInformation, _encode_AuthorizedQoSInformation } from "../CHFChargingDataTypes/AuthorizedQoSInformation.ta.mjs";
-// export { AuthorizedQoSInformation, _decode_AuthorizedQoSInformation, _encode_AuthorizedQoSInformation } from "../CHFChargingDataTypes/AuthorizedQoSInformation.ta.mjs";
 import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
-// export { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
 import { ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../CHFChargingDataTypes/ChChSelectionMode.ta.mjs";
-// export { ChChSelectionMode, _enum_for_ChChSelectionMode, ChChSelectionMode_servingNodeSupplied /* IMPORTED_LONG_ENUMERATION_ITEM */, servingNodeSupplied /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChChSelectionMode_subscriptionSpecific /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionSpecific /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChChSelectionMode_aPNSpecific /* IMPORTED_LONG_ENUMERATION_ITEM */, aPNSpecific /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChChSelectionMode_homeDefault /* IMPORTED_LONG_ENUMERATION_ITEM */, homeDefault /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChChSelectionMode_roamingDefault /* IMPORTED_LONG_ENUMERATION_ITEM */, roamingDefault /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChChSelectionMode_visitingDefault /* IMPORTED_LONG_ENUMERATION_ITEM */, visitingDefault /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChChSelectionMode_fixedDefault /* IMPORTED_LONG_ENUMERATION_ITEM */, fixedDefault /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChChSelectionMode, _encode_ChChSelectionMode } from "../CHFChargingDataTypes/ChChSelectionMode.ta.mjs";
 import { ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../CHFChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
-// export { ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus, ThreeGPPPSDataOffStatus_active /* IMPORTED_LONG_ENUMERATION_ITEM */, active /* IMPORTED_SHORT_ENUMERATION_ITEM */, ThreeGPPPSDataOffStatus_inactive /* IMPORTED_LONG_ENUMERATION_ITEM */, inactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus } from "../CHFChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
 import { NGRANSecondaryRATUsageReport, _decode_NGRANSecondaryRATUsageReport, _encode_NGRANSecondaryRATUsageReport } from "../CHFChargingDataTypes/NGRANSecondaryRATUsageReport.ta.mjs";
-// export { NGRANSecondaryRATUsageReport, _decode_NGRANSecondaryRATUsageReport, _encode_NGRANSecondaryRATUsageReport } from "../CHFChargingDataTypes/NGRANSecondaryRATUsageReport.ta.mjs";
 import { SubscribedQoSInformation, _decode_SubscribedQoSInformation, _encode_SubscribedQoSInformation } from "../CHFChargingDataTypes/SubscribedQoSInformation.ta.mjs";
-// export { SubscribedQoSInformation, _decode_SubscribedQoSInformation, _encode_SubscribedQoSInformation } from "../CHFChargingDataTypes/SubscribedQoSInformation.ta.mjs";
 import { SessionAMBR, _decode_SessionAMBR, _encode_SessionAMBR } from "../CHFChargingDataTypes/SessionAMBR.ta.mjs";
-// export { SessionAMBR, _decode_SessionAMBR, _encode_SessionAMBR } from "../CHFChargingDataTypes/SessionAMBR.ta.mjs";
 import { DNNSelectionMode, _decode_DNNSelectionMode, _encode_DNNSelectionMode, _enum_for_DNNSelectionMode } from "../CHFChargingDataTypes/DNNSelectionMode.ta.mjs";
-// export { DNNSelectionMode, _enum_for_DNNSelectionMode, DNNSelectionMode_uEorNetworkProvidedSubscriptionVerified /* IMPORTED_LONG_ENUMERATION_ITEM */, uEorNetworkProvidedSubscriptionVerified /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNNSelectionMode_uEProvidedSubscriptionNotVerified /* IMPORTED_LONG_ENUMERATION_ITEM */, uEProvidedSubscriptionNotVerified /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNNSelectionMode_networkProvidedSubscriptionNotVerified /* IMPORTED_LONG_ENUMERATION_ITEM */, networkProvidedSubscriptionNotVerified /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DNNSelectionMode, _encode_DNNSelectionMode } from "../CHFChargingDataTypes/DNNSelectionMode.ta.mjs";
 
 
 /**
@@ -337,6 +322,37 @@ class PDUSessionChargingInformation {
         this.servingCNPLMNID = servingCNPLMNID;
         this.sUPIunauthenticatedFlag = sUPIunauthenticatedFlag;
         this.dNNSelectionMode = dNNSelectionMode;
+    
+        if ((this.pDUSessionChargingID < 0 || this.pDUSessionChargingID > 4294967295)) {
+            throw new ASN1OverflowError("PDUSessionChargingInformation.pDUSessionChargingID violates INTEGER range");
+        }
+        if ((this.pDUSessionId < 0 || this.pDUSessionId > 255)) {
+            throw new ASN1OverflowError("PDUSessionChargingInformation.pDUSessionId violates INTEGER range");
+        }
+        if (this.sUPIPLMNIdentifier !== undefined && (this.sUPIPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.sUPIPLMNIdentifier violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
+            throw new ASN1OverflowError("PDUSessionChargingInformation.rATType violates INTEGER range");
+        }
+        if (this.dataNetworkNameIdentifier !== undefined && (this.dataNetworkNameIdentifier.length < 1 || this.dataNetworkNameIdentifier.length > 63)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.dataNetworkNameIdentifier violates SIZE constraint");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.uETimeZone violates SIZE constraint");
+        }
+        if (this.pDUSessionstartTime !== undefined && (this.pDUSessionstartTime.length !== 9)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.pDUSessionstartTime violates SIZE constraint");
+        }
+        if (this.pDUSessionstopTime !== undefined && (this.pDUSessionstopTime.length !== 9)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.pDUSessionstopTime violates SIZE constraint");
+        }
+        if ((this.chargingCharacteristics.length !== 2)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.chargingCharacteristics violates SIZE constraint");
+        }
+        if (this.servingCNPLMNID !== undefined && (this.servingCNPLMNID.length !== 3)) {
+            throw new ASN1SizeError("PDUSessionChargingInformation.servingCNPLMNID violates SIZE constraint");
+        }
     }
 
     /**
@@ -586,7 +602,7 @@ let _cached_encoder_for_PDUSessionChargingInformation: $.ASN1Encoder<PDUSessionC
  */
 export
 function _encode_PDUSessionChargingInformation (value: PDUSessionChargingInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDUSessionChargingInformation) { _cached_encoder_for_PDUSessionChargingInformation = function (value: PDUSessionChargingInformation, elGetter: $.ASN1Encoder<PDUSessionChargingInformation>): _Element {
+    if (!_cached_encoder_for_PDUSessionChargingInformation) { _cached_encoder_for_PDUSessionChargingInformation = function (value: PDUSessionChargingInformation, _elGetter: $.ASN1Encoder<PDUSessionChargingInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.pDUSessionChargingID, $.BER));
     if (value.userIdentifier !== undefined) {

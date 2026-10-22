@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimeQuotaType, _decode_TimeQuotaType, _encode_TimeQuotaType, _enum_for_TimeQuotaType } from "../GPRSChargingDataTypes/TimeQuotaType.ta.mjs";
-// export { TimeQuotaType, _enum_for_TimeQuotaType, TimeQuotaType_dISCRETETIMEPERIOD /* IMPORTED_LONG_ENUMERATION_ITEM */, dISCRETETIMEPERIOD /* IMPORTED_SHORT_ENUMERATION_ITEM */, TimeQuotaType_cONTINUOUSTIMEPERIOD /* IMPORTED_LONG_ENUMERATION_ITEM */, cONTINUOUSTIMEPERIOD /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimeQuotaType, _encode_TimeQuotaType } from "../GPRSChargingDataTypes/TimeQuotaType.ta.mjs";
 
 
 /**
@@ -129,10 +128,8 @@ function _decode_TimeQuotaMechanism (el: _Element): TimeQuotaMechanism {
     }
     sequence[0].name = "timeQuotaType";
     sequence[1].name = "baseTimeInterval";
-    let timeQuotaType!: TimeQuotaType;
-    let baseTimeInterval!: INTEGER;
-    timeQuotaType = $._decode_implicit<TimeQuotaType>(() => _decode_TimeQuotaType)(sequence[0]);
-    baseTimeInterval = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const timeQuotaType: TimeQuotaType = $._decode_implicit<TimeQuotaType>(() => _decode_TimeQuotaType)(sequence[0]);
+    const baseTimeInterval: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new TimeQuotaMechanism(
         timeQuotaType,
         baseTimeInterval,
@@ -153,7 +150,7 @@ let _cached_encoder_for_TimeQuotaMechanism: $.ASN1Encoder<TimeQuotaMechanism> | 
  */
 export
 function _encode_TimeQuotaMechanism (value: TimeQuotaMechanism, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TimeQuotaMechanism) { _cached_encoder_for_TimeQuotaMechanism = function (value: TimeQuotaMechanism, elGetter: $.ASN1Encoder<TimeQuotaMechanism>): _Element {
+    if (!_cached_encoder_for_TimeQuotaMechanism) { _cached_encoder_for_TimeQuotaMechanism = function (value: TimeQuotaMechanism, _elGetter: $.ASN1Encoder<TimeQuotaMechanism>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => _encode_TimeQuotaType, $.BER)(value.timeQuotaType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 2, () => $._encodeInteger, $.BER)(value.baseTimeInterval, $.BER)

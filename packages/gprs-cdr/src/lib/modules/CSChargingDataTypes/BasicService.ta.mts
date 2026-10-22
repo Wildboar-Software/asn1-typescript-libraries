@@ -2,7 +2,8 @@
 import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +40,14 @@ function _decode_BasicService (el: _Element): BasicService {
     "CONTEXT 2": [ "bearerService", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ],
     "CONTEXT 3": [ "teleservice", $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString) ]
 }); }
-    return _cached_decoder_for_BasicService(el);
+    const _decoded_BasicService = _cached_decoder_for_BasicService(el);
+    if ("bearerService" in _decoded_BasicService && (_decoded_BasicService.bearerService.length !== 1)) {
+        throw new ASN1SizeError("BasicService.bearerService violates SIZE constraint");
+    }
+    if ("teleservice" in _decoded_BasicService && (_decoded_BasicService.teleservice.length !== 1)) {
+        throw new ASN1SizeError("BasicService.teleservice violates SIZE constraint");
+    }
+    return _decoded_BasicService;
 }
 
 let _cached_encoder_for_BasicService: $.ASN1Encoder<BasicService> | null = null;

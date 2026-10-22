@@ -10,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * APNRateControlParameters-additionalExceptionReports ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * APNRateControlParameters-additionalExceptionReports ::= ENUMERATED {
+ *    notAllowed    ( 0 ),
+ *    allowed       ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +31,10 @@ enum _enum_for_APNRateControlParameters_additionalExceptionReports {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * APNRateControlParameters-additionalExceptionReports ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * APNRateControlParameters-additionalExceptionReports ::= ENUMERATED {
+ *    notAllowed    ( 0 ),
+ *    allowed       ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +49,10 @@ type APNRateControlParameters_additionalExceptionReports = _enum_for_APNRateCont
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * APNRateControlParameters-additionalExceptionReports ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * APNRateControlParameters-additionalExceptionReports ::= ENUMERATED {
+ *    notAllowed    ( 0 ),
+ *    allowed       ( 1 )
+ * }
  * ```
  * 
  * @enum {number}

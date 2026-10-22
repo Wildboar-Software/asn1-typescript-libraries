@@ -10,7 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMSChargingInformation-messageClass ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMSChargingInformation-messageClass ::= ENUMERATED {
+ *    personal               ( 0 ),
+ *    advertisement          ( 1 ),
+ *    information-service    ( 2 ),
+ *    auto                   ( 3 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -30,7 +35,12 @@ enum _enum_for_SMSChargingInformation_messageClass {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMSChargingInformation-messageClass ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMSChargingInformation-messageClass ::= ENUMERATED {
+ *    personal               ( 0 ),
+ *    advertisement          ( 1 ),
+ *    information-service    ( 2 ),
+ *    auto                   ( 3 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -45,7 +55,12 @@ type SMSChargingInformation_messageClass = _enum_for_SMSChargingInformation_mess
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMSChargingInformation-messageClass ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMSChargingInformation-messageClass ::= ENUMERATED {
+ *    personal               ( 0 ),
+ *    advertisement          ( 1 ),
+ *    information-service    ( 2 ),
+ *    auto                   ( 3 )
+ * }
  * ```
  * 
  * @enum {number}

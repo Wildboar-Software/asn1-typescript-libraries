@@ -4,11 +4,12 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CAMELSMSInformation_defaultSMSHandling, _encode_CAMELSMSInformation_defaultSMSHandling, _enum_for_CAMELSMSInformation_defaultSMSHandling, CAMELSMSInformation_defaultSMSHandling } from "../CSChargingDataTypes/CAMELSMSInformation-defaultSMSHandling.ta.mjs";
-// export { CAMELSMSInformation_defaultSMSHandling, _enum_for_CAMELSMSInformation_defaultSMSHandling, CAMELSMSInformation_defaultSMSHandling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, CAMELSMSInformation_defaultSMSHandling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CAMELSMSInformation_defaultSMSHandling, _encode_CAMELSMSInformation_defaultSMSHandling } from "../CSChargingDataTypes/CAMELSMSInformation-defaultSMSHandling.ta.mjs";
 
 
 /**
@@ -103,6 +104,22 @@ class CAMELSMSInformation {
         this.destinationSubscriberNumber = destinationSubscriberNumber;
         this.cAMELSMSCAddress = cAMELSMSCAddress;
         this.smsReferenceNumber = smsReferenceNumber;
+    
+        if (this.gsm_SCFAddress !== undefined && (this.gsm_SCFAddress.length < 1 || this.gsm_SCFAddress.length > 9)) {
+            throw new ASN1SizeError("CAMELSMSInformation.gsm_SCFAddress violates SIZE constraint");
+        }
+        if (this.serviceKey !== undefined && (this.serviceKey < 0 || this.serviceKey > 2147483647)) {
+            throw new ASN1OverflowError("CAMELSMSInformation.serviceKey violates INTEGER range");
+        }
+        if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {
+            throw new ASN1SizeError("CAMELSMSInformation.freeFormatData violates SIZE constraint");
+        }
+        if (this.cAMELSMSCAddress !== undefined && (this.cAMELSMSCAddress.length < 1 || this.cAMELSMSCAddress.length > 20)) {
+            throw new ASN1SizeError("CAMELSMSInformation.cAMELSMSCAddress violates SIZE constraint");
+        }
+        if (this.smsReferenceNumber !== undefined && (this.smsReferenceNumber.length < 1 || this.smsReferenceNumber.length > 8)) {
+            throw new ASN1SizeError("CAMELSMSInformation.smsReferenceNumber violates SIZE constraint");
+        }
     }
 
     /**
@@ -240,7 +257,7 @@ let _cached_encoder_for_CAMELSMSInformation: $.ASN1Encoder<CAMELSMSInformation> 
  */
 export
 function _encode_CAMELSMSInformation (value: CAMELSMSInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAMELSMSInformation) { _cached_encoder_for_CAMELSMSInformation = function (value: CAMELSMSInformation, elGetter: $.ASN1Encoder<CAMELSMSInformation>): _Element {
+    if (!_cached_encoder_for_CAMELSMSInformation) { _cached_encoder_for_CAMELSMSInformation = function (value: CAMELSMSInformation, _elGetter: $.ASN1Encoder<CAMELSMSInformation>): _Element {
     const _components: _Element[] = [];
     if (value.gsm_SCFAddress !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.gsm_SCFAddress, $.BER));

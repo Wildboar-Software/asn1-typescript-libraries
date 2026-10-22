@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SliceServiceType = INTEGER;
 
-export
-const _decode_SliceServiceType: $.ASN1Decoder<SliceServiceType> = $._decodeInteger;
+export const _decode_SliceServiceType = (el: _Element): SliceServiceType => {
+    const value = $._decodeInteger(el);
+    if (value < 0 || value > 255) {
+        throw new ASN1OverflowError("SliceServiceType violates INTEGER range");
+    }
+    return value;
+};
 
 export
 const _encode_SliceServiceType: $.ASN1Encoder<SliceServiceType> = $._encodeInteger;

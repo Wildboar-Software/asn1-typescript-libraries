@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AdditionalChgInfo_chargeIndicator, _encode_AdditionalChgInfo_chargeIndicator, AdditionalChgInfo_chargeIndicator } from "../CSChargingDataTypes/AdditionalChgInfo-chargeIndicator.ta.mjs";
-// export { AdditionalChgInfo_chargeIndicator, AdditionalChgInfo_chargeIndicator_noCharge /* IMPORTED_LONG_NAMED_INTEGER */, noCharge /* IMPORTED_SHORT_NAMED_INTEGER */, AdditionalChgInfo_chargeIndicator_charge /* IMPORTED_LONG_NAMED_INTEGER */, charge /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AdditionalChgInfo_chargeIndicator, _encode_AdditionalChgInfo_chargeIndicator } from "../CSChargingDataTypes/AdditionalChgInfo-chargeIndicator.ta.mjs";
 
 
 /**
@@ -150,7 +149,7 @@ let _cached_encoder_for_AdditionalChgInfo: $.ASN1Encoder<AdditionalChgInfo> | nu
  */
 export
 function _encode_AdditionalChgInfo (value: AdditionalChgInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalChgInfo) { _cached_encoder_for_AdditionalChgInfo = function (value: AdditionalChgInfo, elGetter: $.ASN1Encoder<AdditionalChgInfo>): _Element {
+    if (!_cached_encoder_for_AdditionalChgInfo) { _cached_encoder_for_AdditionalChgInfo = function (value: AdditionalChgInfo, _elGetter: $.ASN1Encoder<AdditionalChgInfo>): _Element {
     const _components: _Element[] = [];
     if (value.chargeIndicator !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_AdditionalChgInfo_chargeIndicator, $.BER)(value.chargeIndicator, $.BER));

@@ -5,17 +5,15 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FiveGQoSInformation, _decode_FiveGQoSInformation, _encode_FiveGQoSInformation } from "../CHFChargingDataTypes/FiveGQoSInformation.ta.mjs";
-// export { FiveGQoSInformation, _decode_FiveGQoSInformation, _encode_FiveGQoSInformation } from "../CHFChargingDataTypes/FiveGQoSInformation.ta.mjs";
 import { PresenceReportingAreaInfo, _decode_PresenceReportingAreaInfo, _encode_PresenceReportingAreaInfo } from "../CHFChargingDataTypes/PresenceReportingAreaInfo.ta.mjs";
-// export { PresenceReportingAreaInfo, _decode_PresenceReportingAreaInfo, _encode_PresenceReportingAreaInfo } from "../CHFChargingDataTypes/PresenceReportingAreaInfo.ta.mjs";
 import { ServingNetworkFunctionID, _decode_ServingNetworkFunctionID, _encode_ServingNetworkFunctionID } from "../CHFChargingDataTypes/ServingNetworkFunctionID.ta.mjs";
-// export { ServingNetworkFunctionID, _decode_ServingNetworkFunctionID, _encode_ServingNetworkFunctionID } from "../CHFChargingDataTypes/ServingNetworkFunctionID.ta.mjs";
 import { ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../CHFChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
-// export { ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus, ThreeGPPPSDataOffStatus_active /* IMPORTED_LONG_ENUMERATION_ITEM */, active /* IMPORTED_SHORT_ENUMERATION_ITEM */, ThreeGPPPSDataOffStatus_inactive /* IMPORTED_LONG_ENUMERATION_ITEM */, inactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus } from "../CHFChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
 
 
 /**
@@ -153,6 +151,19 @@ class PDUContainerInformation {
         this.servingNetworkFunctionID = servingNetworkFunctionID;
         this.uETimeZone = uETimeZone;
         this.threeGPPPSDataOffStatus = threeGPPPSDataOffStatus;
+    
+        if (this.timeOfFirstUsage !== undefined && (this.timeOfFirstUsage.length !== 9)) {
+            throw new ASN1SizeError("PDUContainerInformation.timeOfFirstUsage violates SIZE constraint");
+        }
+        if (this.timeOfLastUsage !== undefined && (this.timeOfLastUsage.length !== 9)) {
+            throw new ASN1SizeError("PDUContainerInformation.timeOfLastUsage violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
+            throw new ASN1OverflowError("PDUContainerInformation.rATType violates INTEGER range");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("PDUContainerInformation.uETimeZone violates SIZE constraint");
+        }
     }
 
     /**
@@ -306,7 +317,7 @@ let _cached_encoder_for_PDUContainerInformation: $.ASN1Encoder<PDUContainerInfor
  */
 export
 function _encode_PDUContainerInformation (value: PDUContainerInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PDUContainerInformation) { _cached_encoder_for_PDUContainerInformation = function (value: PDUContainerInformation, elGetter: $.ASN1Encoder<PDUContainerInformation>): _Element {
+    if (!_cached_encoder_for_PDUContainerInformation) { _cached_encoder_for_PDUContainerInformation = function (value: PDUContainerInformation, _elGetter: $.ASN1Encoder<PDUContainerInformation>): _Element {
     const _components: _Element[] = [];
     if (value.chargingRuleBaseName !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeIA5String, $.BER)(value.chargingRuleBaseName, $.BER));

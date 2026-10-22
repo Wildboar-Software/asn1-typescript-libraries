@@ -5,13 +5,13 @@ import {
     BOOLEAN,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
-// export { DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultTransactionHandling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
 import { _decode_CAMELInformationMM_levelOfCAMELService, _encode_CAMELInformationMM_levelOfCAMELService, CAMELInformationMM_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationMM-levelOfCAMELService.ta.mjs";
-// export { CAMELInformationMM_levelOfCAMELService, CAMELInformationMM_levelOfCAMELService_basic /* IMPORTED_LONG_NAMED_BIT */, basic /* IMPORTED_SHORT_NAMED_BIT */, CAMELInformationMM_levelOfCAMELService_callDurationSupervision /* IMPORTED_LONG_NAMED_BIT */, callDurationSupervision /* IMPORTED_SHORT_NAMED_BIT */, CAMELInformationMM_levelOfCAMELService_onlineCharging /* IMPORTED_LONG_NAMED_BIT */, onlineCharging /* IMPORTED_SHORT_NAMED_BIT */, _decode_CAMELInformationMM_levelOfCAMELService, _encode_CAMELInformationMM_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationMM-levelOfCAMELService.ta.mjs";
 
 
 /**
@@ -97,6 +97,16 @@ class CAMELInformationMM {
         this.levelOfCAMELService = levelOfCAMELService;
         this.freeFormatData = freeFormatData;
         this.fFDAppendIndicator = fFDAppendIndicator;
+    
+        if (this.sCFAddress !== undefined && (this.sCFAddress.length < 1 || this.sCFAddress.length > 20)) {
+            throw new ASN1SizeError("CAMELInformationMM.sCFAddress violates SIZE constraint");
+        }
+        if (this.serviceKey !== undefined && (this.serviceKey < 0 || this.serviceKey > 2147483647)) {
+            throw new ASN1OverflowError("CAMELInformationMM.serviceKey violates INTEGER range");
+        }
+        if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {
+            throw new ASN1SizeError("CAMELInformationMM.freeFormatData violates SIZE constraint");
+        }
     }
 
     /**
@@ -230,7 +240,7 @@ let _cached_encoder_for_CAMELInformationMM: $.ASN1Encoder<CAMELInformationMM> | 
  */
 export
 function _encode_CAMELInformationMM (value: CAMELInformationMM, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAMELInformationMM) { _cached_encoder_for_CAMELInformationMM = function (value: CAMELInformationMM, elGetter: $.ASN1Encoder<CAMELInformationMM>): _Element {
+    if (!_cached_encoder_for_CAMELInformationMM) { _cached_encoder_for_CAMELInformationMM = function (value: CAMELInformationMM, _elGetter: $.ASN1Encoder<CAMELInformationMM>): _Element {
     const _components: _Element[] = [];
     if (value.sCFAddress !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.sCFAddress, $.BER));

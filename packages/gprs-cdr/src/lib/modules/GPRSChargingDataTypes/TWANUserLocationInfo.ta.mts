@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { WLANOperatorId, _decode_WLANOperatorId, _encode_WLANOperatorId } from "../GPRSChargingDataTypes/WLANOperatorId.ta.mjs";
-// export { WLANOperatorId, _decode_WLANOperatorId, _encode_WLANOperatorId } from "../GPRSChargingDataTypes/WLANOperatorId.ta.mjs";
 
 
 /**
@@ -187,7 +186,7 @@ let _cached_encoder_for_TWANUserLocationInfo: $.ASN1Encoder<TWANUserLocationInfo
  */
 export
 function _encode_TWANUserLocationInfo (value: TWANUserLocationInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TWANUserLocationInfo) { _cached_encoder_for_TWANUserLocationInfo = function (value: TWANUserLocationInfo, elGetter: $.ASN1Encoder<TWANUserLocationInfo>): _Element {
+    if (!_cached_encoder_for_TWANUserLocationInfo) { _cached_encoder_for_TWANUserLocationInfo = function (value: TWANUserLocationInfo, _elGetter: $.ASN1Encoder<TWANUserLocationInfo>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.sSID, $.BER));
     if (value.bSSID !== undefined) {

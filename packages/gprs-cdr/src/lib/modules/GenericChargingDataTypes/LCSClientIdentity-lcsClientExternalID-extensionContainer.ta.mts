@@ -2,13 +2,12 @@
 import {
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer-privateExtensionList-Item.ta.mjs";
-// export { LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer-privateExtensionList-Item.ta.mjs";
 import { LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer-pcs-Extensions.ta.mjs";
-// export { LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer-pcs-Extensions.ta.mjs";
 
 
 /**
@@ -18,7 +17,15 @@ import { LCSClientIdentity_lcsClientExternalID_extensionContainer_pcs_Extensions
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LCSClientIdentity-lcsClientExternalID-extensionContainer ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * LCSClientIdentity-lcsClientExternalID-extensionContainer ::= SEQUENCE {
+ *    privateExtensionList   [0] IMPLICIT SEQUENCE  ( SIZE( 1 .. 10 ) ) OF
+ *       SEQUENCE {
+ *          extId      MAP-EXTENSION.&extensionId ({ExtensionSet}) ,
+ *          extType    MAP-EXTENSION.&ExtensionType ({ExtensionSet}{@extId})  OPTIONAL} OPTIONAL,
+ *    pcs-Extensions         [1] IMPLICIT SEQUENCE {
+ *       ... } OPTIONAL,
+ *    ...
+ * }
  * ```
  * 
  * @class
@@ -52,6 +59,10 @@ class LCSClientIdentity_lcsClientExternalID_extensionContainer {
         this.privateExtensionList = privateExtensionList;
         this.pcs_Extensions = pcs_Extensions;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    
+        if (this.privateExtensionList !== undefined && (this.privateExtensionList.length < 1 || this.privateExtensionList.length > 10)) {
+            throw new ASN1SizeError("LCSClientIdentity_lcsClientExternalID_extensionContainer.privateExtensionList violates SIZE constraint");
+        }
     }
 
     /**
@@ -157,7 +168,7 @@ let _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer
  */
 export
 function _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer (value: LCSClientIdentity_lcsClientExternalID_extensionContainer, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer = function (value: LCSClientIdentity_lcsClientExternalID_extensionContainer, elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID_extensionContainer>): _Element {
+    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer = function (value: LCSClientIdentity_lcsClientExternalID_extensionContainer, _elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID_extensionContainer>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

@@ -3,11 +3,11 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSClientIdentity_lcsClientExternalID_extensionContainer, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer.ta.mjs";
-// export { LCSClientIdentity_lcsClientExternalID_extensionContainer, _decode_LCSClientIdentity_lcsClientExternalID_extensionContainer, _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer } from "../GenericChargingDataTypes/LCSClientIdentity-lcsClientExternalID-extensionContainer.ta.mjs";
 
 
 /**
@@ -17,7 +17,18 @@ import { LCSClientIdentity_lcsClientExternalID_extensionContainer, _decode_LCSCl
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LCSClientIdentity-lcsClientExternalID ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * LCSClientIdentity-lcsClientExternalID ::= SEQUENCE {
+ *    externalAddress      [0] IMPLICIT OCTET STRING ( SIZE( 1 .. 20 ) ) ( SIZE( 1 .. 9 ) ) OPTIONAL,
+ *    extensionContainer   [1] IMPLICIT SEQUENCE {
+ *       privateExtensionList   [0] IMPLICIT SEQUENCE  ( SIZE( 1 .. 10 ) ) OF
+ *          SEQUENCE {
+ *             extId      MAP-EXTENSION.&extensionId ({ExtensionSet}) ,
+ *             extType    MAP-EXTENSION.&ExtensionType ({ExtensionSet}{@extId})  OPTIONAL} OPTIONAL,
+ *       pcs-Extensions         [1] IMPLICIT SEQUENCE {
+ *          ... } OPTIONAL,
+ *       ... } OPTIONAL,
+ *    ...
+ * }
  * ```
  * 
  * @class
@@ -51,6 +62,10 @@ class LCSClientIdentity_lcsClientExternalID {
         this.externalAddress = externalAddress;
         this.extensionContainer = extensionContainer;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    
+        if (this.externalAddress !== undefined && (this.externalAddress.length < 1 || this.externalAddress.length > 9)) {
+            throw new ASN1SizeError("LCSClientIdentity_lcsClientExternalID.externalAddress violates SIZE constraint");
+        }
     }
 
     /**
@@ -156,7 +171,7 @@ let _cached_encoder_for_LCSClientIdentity_lcsClientExternalID: $.ASN1Encoder<LCS
  */
 export
 function _encode_LCSClientIdentity_lcsClientExternalID (value: LCSClientIdentity_lcsClientExternalID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID = function (value: LCSClientIdentity_lcsClientExternalID, elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID>): _Element {
+    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID = function (value: LCSClientIdentity_lcsClientExternalID, _elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID>): _Element {
     const _unrecognized = value._unrecognizedExtensionsList;
     const _components: _Element[] = new Array(2 + (_unrecognized ? _unrecognized.length : 0));
     let _components_i = 0;

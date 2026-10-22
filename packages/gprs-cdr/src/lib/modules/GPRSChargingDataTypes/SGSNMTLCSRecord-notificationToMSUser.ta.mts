@@ -21,7 +21,13 @@ enum _enum_for_SGSNMTLCSRecord_notificationToMSUser {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SGSNMTLCSRecord-notificationToMSUser ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SGSNMTLCSRecord-notificationToMSUser ::= ENUMERATED {
+ *    notifyLocationAllowed                             ( 0 ),
+ *    notifyAndVerify-LocationAllowedIfNoResponse       ( 1 ),
+ *    notifyAndVerify-LocationNotAllowedIfNoResponse    ( 2 ),
+ *    ... ,
+ *    locationNotAllowed                                ( 3 )
+ * }
  * ```
  * 
  * @enum {number}

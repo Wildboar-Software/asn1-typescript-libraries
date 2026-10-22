@@ -10,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UserCSGInformation-cSGAccessMode ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * UserCSGInformation-cSGAccessMode ::= ENUMERATED {
+ *    closedMode    ( 0 ),
+ *    hybridMode    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +31,10 @@ enum _enum_for_UserCSGInformation_cSGAccessMode {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UserCSGInformation-cSGAccessMode ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * UserCSGInformation-cSGAccessMode ::= ENUMERATED {
+ *    closedMode    ( 0 ),
+ *    hybridMode    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +49,10 @@ type UserCSGInformation_cSGAccessMode = _enum_for_UserCSGInformation_cSGAccessMo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UserCSGInformation-cSGAccessMode ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * UserCSGInformation-cSGAccessMode ::= ENUMERATED {
+ *    closedMode    ( 0 ),
+ *    hybridMode    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}

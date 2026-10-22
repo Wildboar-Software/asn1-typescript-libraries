@@ -5,19 +5,15 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
-// export { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
 import { CAMELInitCFIndicator, _decode_CAMELInitCFIndicator, _encode_CAMELInitCFIndicator, _enum_for_CAMELInitCFIndicator } from "../CSChargingDataTypes/CAMELInitCFIndicator.ta.mjs";
-// export { CAMELInitCFIndicator, _enum_for_CAMELInitCFIndicator, CAMELInitCFIndicator_noCAMELCallForwarding /* IMPORTED_LONG_ENUMERATION_ITEM */, noCAMELCallForwarding /* IMPORTED_SHORT_ENUMERATION_ITEM */, CAMELInitCFIndicator_cAMELCallForwarding /* IMPORTED_LONG_ENUMERATION_ITEM */, cAMELCallForwarding /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CAMELInitCFIndicator, _encode_CAMELInitCFIndicator } from "../CSChargingDataTypes/CAMELInitCFIndicator.ta.mjs";
 import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
-// export { CauseForTerm, CauseForTerm_normalRelease /* IMPORTED_LONG_NAMED_INTEGER */, normalRelease /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_partialRecord /* IMPORTED_LONG_NAMED_INTEGER */, partialRecord /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_partialRecordCallReestablishment /* IMPORTED_LONG_NAMED_INTEGER */, partialRecordCallReestablishment /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_unsuccessfulCallAttempt /* IMPORTED_LONG_NAMED_INTEGER */, unsuccessfulCallAttempt /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_abnormalRelease /* IMPORTED_LONG_NAMED_INTEGER */, abnormalRelease /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_cAMELInitCallRelease /* IMPORTED_LONG_NAMED_INTEGER */, cAMELInitCallRelease /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_unauthorizedRequestingNetwork /* IMPORTED_LONG_NAMED_INTEGER */, unauthorizedRequestingNetwork /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_unauthorizedLCSClient /* IMPORTED_LONG_NAMED_INTEGER */, unauthorizedLCSClient /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_positionMethodFailure /* IMPORTED_LONG_NAMED_INTEGER */, positionMethodFailure /* IMPORTED_SHORT_NAMED_INTEGER */, CauseForTerm_unknownOrUnreachableLCSClient /* IMPORTED_LONG_NAMED_INTEGER */, unknownOrUnreachableLCSClient /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
 import { ChangedParameters, _decode_ChangedParameters, _encode_ChangedParameters } from "../CSChargingDataTypes/ChangedParameters.ta.mjs";
-// export { ChangedParameters, _decode_ChangedParameters, _encode_ChangedParameters } from "../CSChargingDataTypes/ChangedParameters.ta.mjs";
 import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
-// export { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
 
 
 /**
@@ -191,6 +187,35 @@ class CAMELInformation {
         this.freeFormatDataAppend = freeFormatDataAppend;
         this.freeFormatData_2 = freeFormatData_2;
         this.freeFormatDataAppend_2 = freeFormatDataAppend_2;
+    
+        if (this.cAMELDestinationNumber !== undefined && (this.cAMELDestinationNumber.length !== 1)) {
+            throw new ASN1SizeError("CAMELInformation.cAMELDestinationNumber violates SIZE constraint");
+        }
+        if (this.cAMELDestinationNumber !== undefined && this.cAMELDestinationNumber) {
+            for (const _item of this.cAMELDestinationNumber) {
+                if (_item.length < 1 || _item.length > 41) {
+                    throw new ASN1SizeError("CAMELInformation.cAMELDestinationNumber element violates SIZE constraint");
+                }
+            }
+        }
+        if (this.roamingNumber !== undefined && (this.roamingNumber.length < 1 || this.roamingNumber.length > 9)) {
+            throw new ASN1SizeError("CAMELInformation.roamingNumber violates SIZE constraint");
+        }
+        if (this.seizureTime !== undefined && (this.seizureTime.length !== 9)) {
+            throw new ASN1SizeError("CAMELInformation.seizureTime violates SIZE constraint");
+        }
+        if (this.answerTime !== undefined && (this.answerTime.length !== 9)) {
+            throw new ASN1SizeError("CAMELInformation.answerTime violates SIZE constraint");
+        }
+        if (this.releaseTime !== undefined && (this.releaseTime.length !== 9)) {
+            throw new ASN1SizeError("CAMELInformation.releaseTime violates SIZE constraint");
+        }
+        if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {
+            throw new ASN1SizeError("CAMELInformation.freeFormatData violates SIZE constraint");
+        }
+        if (this.freeFormatData_2 !== undefined && (this.freeFormatData_2.length < 1 || this.freeFormatData_2.length > 160)) {
+            throw new ASN1SizeError("CAMELInformation.freeFormatData_2 violates SIZE constraint");
+        }
     }
 
     /**
@@ -364,7 +389,7 @@ let _cached_encoder_for_CAMELInformation: $.ASN1Encoder<CAMELInformation> | null
  */
 export
 function _encode_CAMELInformation (value: CAMELInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAMELInformation) { _cached_encoder_for_CAMELInformation = function (value: CAMELInformation, elGetter: $.ASN1Encoder<CAMELInformation>): _Element {
+    if (!_cached_encoder_for_CAMELInformation) { _cached_encoder_for_CAMELInformation = function (value: CAMELInformation, _elGetter: $.ASN1Encoder<CAMELInformation>): _Element {
     const _components: _Element[] = [];
     if (value.cAMELDestinationNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeSequenceOf<OCTET_STRING>(() => $._encodeOctetString, $.BER), $.BER)(value.cAMELDestinationNumber, $.BER));

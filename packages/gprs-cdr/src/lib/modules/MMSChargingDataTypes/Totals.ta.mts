@@ -147,7 +147,7 @@ let _cached_encoder_for_Totals: $.ASN1Encoder<Totals> | null = null;
  */
 export
 function _encode_Totals (value: Totals, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Totals) { _cached_encoder_for_Totals = function (value: Totals, elGetter: $.ASN1Encoder<Totals>): _Element {
+    if (!_cached_encoder_for_Totals) { _cached_encoder_for_Totals = function (value: Totals, _elGetter: $.ASN1Encoder<Totals>): _Element {
     const _components: _Element[] = [];
     if (value.numberOfMessages !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.numberOfMessages, $.BER));

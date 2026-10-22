@@ -5,19 +5,15 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceType, _decode_ServiceType, _encode_ServiceType } from "../MMTelChargingDataTypes/ServiceType.ta.mjs";
-// export { ServiceType, ServiceType_oIPresentation /* IMPORTED_LONG_NAMED_INTEGER */, oIPresentation /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_oIRestriction /* IMPORTED_LONG_NAMED_INTEGER */, oIRestriction /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_tIPresentation /* IMPORTED_LONG_NAMED_INTEGER */, tIPresentation /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_tIRestriction /* IMPORTED_LONG_NAMED_INTEGER */, tIRestriction /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_hOLD /* IMPORTED_LONG_NAMED_INTEGER */, hOLD /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cBarring /* IMPORTED_LONG_NAMED_INTEGER */, cBarring /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cDIVersion /* IMPORTED_LONG_NAMED_INTEGER */, cDIVersion /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cWaiting /* IMPORTED_LONG_NAMED_INTEGER */, cWaiting /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_mWaitingIndic /* IMPORTED_LONG_NAMED_INTEGER */, mWaitingIndic /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cONF /* IMPORTED_LONG_NAMED_INTEGER */, cONF /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_fLexibleAlerting /* IMPORTED_LONG_NAMED_INTEGER */, fLexibleAlerting /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cCBS /* IMPORTED_LONG_NAMED_INTEGER */, cCBS /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cCNR /* IMPORTED_LONG_NAMED_INTEGER */, cCNR /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_mCID /* IMPORTED_LONG_NAMED_INTEGER */, mCID /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cAT /* IMPORTED_LONG_NAMED_INTEGER */, cAT /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cUG /* IMPORTED_LONG_NAMED_INTEGER */, cUG /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_pNM /* IMPORTED_LONG_NAMED_INTEGER */, pNM /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_cRS /* IMPORTED_LONG_NAMED_INTEGER */, cRS /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_aoC /* IMPORTED_LONG_NAMED_INTEGER */, aoC /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceType_eCT /* IMPORTED_LONG_NAMED_INTEGER */, eCT /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ServiceType, _encode_ServiceType } from "../MMTelChargingDataTypes/ServiceType.ta.mjs";
 import { ServiceMode, _decode_ServiceMode, _encode_ServiceMode } from "../MMTelChargingDataTypes/ServiceMode.ta.mjs";
-// export { ServiceMode, ServiceMode_cFunCond /* IMPORTED_LONG_NAMED_INTEGER */, cFunCond /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_cFbusy /* IMPORTED_LONG_NAMED_INTEGER */, cFbusy /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_cFnoReply /* IMPORTED_LONG_NAMED_INTEGER */, cFnoReply /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_cFnotLogged /* IMPORTED_LONG_NAMED_INTEGER */, cFnotLogged /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_deflection /* IMPORTED_LONG_NAMED_INTEGER */, deflection /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_notReach /* IMPORTED_LONG_NAMED_INTEGER */, notReach /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_iCBarring /* IMPORTED_LONG_NAMED_INTEGER */, iCBarring /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_oCBarring /* IMPORTED_LONG_NAMED_INTEGER */, oCBarring /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_aCRejection /* IMPORTED_LONG_NAMED_INTEGER */, aCRejection /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_eCTBlind /* IMPORTED_LONG_NAMED_INTEGER */, eCTBlind /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_eCTConsultative /* IMPORTED_LONG_NAMED_INTEGER */, eCTConsultative /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_threePTY /* IMPORTED_LONG_NAMED_INTEGER */, threePTY /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_aoC_S /* IMPORTED_LONG_NAMED_INTEGER */, aoC_S /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_aoC_D /* IMPORTED_LONG_NAMED_INTEGER */, aoC_D /* IMPORTED_SHORT_NAMED_INTEGER */, ServiceMode_aoC_E /* IMPORTED_LONG_NAMED_INTEGER */, aoC_E /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ServiceMode, _encode_ServiceMode } from "../MMTelChargingDataTypes/ServiceMode.ta.mjs";
 import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
-// export { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
 import { ParticipantActionType, _decode_ParticipantActionType, _encode_ParticipantActionType, _enum_for_ParticipantActionType } from "../MMTelChargingDataTypes/ParticipantActionType.ta.mjs";
-// export { ParticipantActionType, _enum_for_ParticipantActionType, ParticipantActionType_cREATE_CONF /* IMPORTED_LONG_ENUMERATION_ITEM */, cREATE_CONF /* IMPORTED_SHORT_ENUMERATION_ITEM */, ParticipantActionType_jOIN_CONF /* IMPORTED_LONG_ENUMERATION_ITEM */, jOIN_CONF /* IMPORTED_SHORT_ENUMERATION_ITEM */, ParticipantActionType_iNVITED_INTO_CONF /* IMPORTED_LONG_ENUMERATION_ITEM */, iNVITED_INTO_CONF /* IMPORTED_SHORT_ENUMERATION_ITEM */, ParticipantActionType_qUIT_CONF /* IMPORTED_LONG_ENUMERATION_ITEM */, qUIT_CONF /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ParticipantActionType, _encode_ParticipantActionType } from "../MMTelChargingDataTypes/ParticipantActionType.ta.mjs";
 import { AoCInformation, _decode_AoCInformation, _encode_AoCInformation } from "../MMTelChargingDataTypes/AoCInformation.ta.mjs";
-// export { AoCInformation, _decode_AoCInformation, _encode_AoCInformation } from "../MMTelChargingDataTypes/AoCInformation.ta.mjs";
 
 
 /**
@@ -128,6 +124,10 @@ class SupplService {
         this.participantActionType = participantActionType;
         this.cUGInformation = cUGInformation;
         this.aoCInformation = aoCInformation;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("SupplService.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -273,7 +273,7 @@ let _cached_encoder_for_SupplService: $.ASN1Encoder<SupplService> | null = null;
  */
 export
 function _encode_SupplService (value: SupplService, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SupplService) { _cached_encoder_for_SupplService = function (value: SupplService, elGetter: $.ASN1Encoder<SupplService>): _Element {
+    if (!_cached_encoder_for_SupplService) { _cached_encoder_for_SupplService = function (value: SupplService, _elGetter: $.ASN1Encoder<SupplService>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_ServiceType, $.BER)(value.serviceType, $.BER));
     if (value.serviceMode !== undefined) {

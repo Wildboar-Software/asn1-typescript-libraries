@@ -3,11 +3,11 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TrafficChannel, _decode_TrafficChannel, _encode_TrafficChannel, _enum_for_TrafficChannel } from "../CSChargingDataTypes/TrafficChannel.ta.mjs";
-// export { TrafficChannel, _enum_for_TrafficChannel, TrafficChannel_fullRate /* IMPORTED_LONG_ENUMERATION_ITEM */, fullRate /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficChannel_halfRate /* IMPORTED_LONG_ENUMERATION_ITEM */, halfRate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TrafficChannel, _encode_TrafficChannel } from "../CSChargingDataTypes/TrafficChannel.ta.mjs";
 
 
 /**
@@ -54,6 +54,13 @@ class ChangeOfRadioChannel {
         this.radioChannel = radioChannel;
         this.changeTime = changeTime;
         this.speechVersionUsed = speechVersionUsed;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ChangeOfRadioChannel.changeTime violates SIZE constraint");
+        }
+        if (this.speechVersionUsed !== undefined && (this.speechVersionUsed.length !== 1)) {
+            throw new ASN1SizeError("ChangeOfRadioChannel.speechVersionUsed violates SIZE constraint");
+        }
     }
 
     /**
@@ -167,7 +174,7 @@ let _cached_encoder_for_ChangeOfRadioChannel: $.ASN1Encoder<ChangeOfRadioChannel
  */
 export
 function _encode_ChangeOfRadioChannel (value: ChangeOfRadioChannel, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ChangeOfRadioChannel) { _cached_encoder_for_ChangeOfRadioChannel = function (value: ChangeOfRadioChannel, elGetter: $.ASN1Encoder<ChangeOfRadioChannel>): _Element {
+    if (!_cached_encoder_for_ChangeOfRadioChannel) { _cached_encoder_for_ChangeOfRadioChannel = function (value: ChangeOfRadioChannel, _elGetter: $.ASN1Encoder<ChangeOfRadioChannel>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_TrafficChannel, $.BER)(value.radioChannel, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.changeTime, $.BER));

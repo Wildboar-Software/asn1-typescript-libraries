@@ -147,7 +147,7 @@ let _cached_encoder_for_Quotas: $.ASN1Encoder<Quotas> | null = null;
  */
 export
 function _encode_Quotas (value: Quotas, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Quotas) { _cached_encoder_for_Quotas = function (value: Quotas, elGetter: $.ASN1Encoder<Quotas>): _Element {
+    if (!_cached_encoder_for_Quotas) { _cached_encoder_for_Quotas = function (value: Quotas, _elGetter: $.ASN1Encoder<Quotas>): _Element {
     const _components: _Element[] = [];
     if (value.numberOfMessages !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.numberOfMessages, $.BER));

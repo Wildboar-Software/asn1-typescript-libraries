@@ -4,17 +4,15 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChangeCondition, _decode_ChangeCondition, _encode_ChangeCondition, _enum_for_ChangeCondition } from "../GPRSChargingDataTypes/ChangeCondition.ta.mjs";
-// export { ChangeCondition, _enum_for_ChangeCondition, ChangeCondition_qoSChange /* IMPORTED_LONG_ENUMERATION_ITEM */, qoSChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_tariffTime /* IMPORTED_LONG_ENUMERATION_ITEM */, tariffTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_recordClosure /* IMPORTED_LONG_ENUMERATION_ITEM */, recordClosure /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_cGI_SAICHange /* IMPORTED_LONG_ENUMERATION_ITEM */, cGI_SAICHange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_rAIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, rAIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_dT_Establishment /* IMPORTED_LONG_ENUMERATION_ITEM */, dT_Establishment /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_dT_Removal /* IMPORTED_LONG_ENUMERATION_ITEM */, dT_Removal /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_eCGIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, eCGIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_tAIChange /* IMPORTED_LONG_ENUMERATION_ITEM */, tAIChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_userLocationChange /* IMPORTED_LONG_ENUMERATION_ITEM */, userLocationChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_userCSGInformationChange /* IMPORTED_LONG_ENUMERATION_ITEM */, userCSGInformationChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_presenceInPRAChange /* IMPORTED_LONG_ENUMERATION_ITEM */, presenceInPRAChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_removalOfAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, removalOfAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_unusabilityOfAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, unusabilityOfAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_indirectChangeCondition /* IMPORTED_LONG_ENUMERATION_ITEM */, indirectChangeCondition /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_userPlaneToUEChange /* IMPORTED_LONG_ENUMERATION_ITEM */, userPlaneToUEChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_servingPLMNRateControlChange /* IMPORTED_LONG_ENUMERATION_ITEM */, servingPLMNRateControlChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_threeGPPPSDataOffStatusChange /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPPSDataOffStatusChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_aPNRateControlChange /* IMPORTED_LONG_ENUMERATION_ITEM */, aPNRateControlChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChangeCondition, _encode_ChangeCondition } from "../GPRSChargingDataTypes/ChangeCondition.ta.mjs";
 import { PresenceReportingAreaStatus, _decode_PresenceReportingAreaStatus, _encode_PresenceReportingAreaStatus, _enum_for_PresenceReportingAreaStatus } from "../GPRSChargingDataTypes/PresenceReportingAreaStatus.ta.mjs";
-// export { PresenceReportingAreaStatus, _enum_for_PresenceReportingAreaStatus, PresenceReportingAreaStatus_insideArea /* IMPORTED_LONG_ENUMERATION_ITEM */, insideArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceReportingAreaStatus_outsideArea /* IMPORTED_LONG_ENUMERATION_ITEM */, outsideArea /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceReportingAreaStatus_inactive /* IMPORTED_LONG_ENUMERATION_ITEM */, inactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceReportingAreaStatus_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PresenceReportingAreaStatus, _encode_PresenceReportingAreaStatus } from "../GPRSChargingDataTypes/PresenceReportingAreaStatus.ta.mjs";
 import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../GPRSChargingDataTypes/UserCSGInformation.ta.mjs";
-// export { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../GPRSChargingDataTypes/UserCSGInformation.ta.mjs";
 import { UWANUserLocationInfo, _decode_UWANUserLocationInfo, _encode_UWANUserLocationInfo } from "../GPRSChargingDataTypes/UWANUserLocationInfo.ta.mjs";
-// export { UWANUserLocationInfo, _decode_UWANUserLocationInfo, _encode_UWANUserLocationInfo } from "../GPRSChargingDataTypes/UWANUserLocationInfo.ta.mjs";
 
 
 /**
@@ -97,6 +95,13 @@ class RelatedChangeOfCharCondition {
         this.userCSGInformation = userCSGInformation;
         this.rATType = rATType;
         this.uWANUserLocationInformation = uWANUserLocationInformation;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("RelatedChangeOfCharCondition.changeTime violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
+            throw new ASN1OverflowError("RelatedChangeOfCharCondition.rATType violates INTEGER range");
+        }
     }
 
     /**
@@ -232,7 +237,7 @@ let _cached_encoder_for_RelatedChangeOfCharCondition: $.ASN1Encoder<RelatedChang
  */
 export
 function _encode_RelatedChangeOfCharCondition (value: RelatedChangeOfCharCondition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RelatedChangeOfCharCondition) { _cached_encoder_for_RelatedChangeOfCharCondition = function (value: RelatedChangeOfCharCondition, elGetter: $.ASN1Encoder<RelatedChangeOfCharCondition>): _Element {
+    if (!_cached_encoder_for_RelatedChangeOfCharCondition) { _cached_encoder_for_RelatedChangeOfCharCondition = function (value: RelatedChangeOfCharCondition, _elGetter: $.ASN1Encoder<RelatedChangeOfCharCondition>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 5, () => _encode_ChangeCondition, $.BER)(value.changeCondition, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 6, () => $._encodeOctetString, $.BER)(value.changeTime, $.BER));

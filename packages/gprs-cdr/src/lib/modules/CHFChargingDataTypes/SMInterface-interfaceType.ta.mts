@@ -10,7 +10,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMInterface-interfaceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMInterface-interfaceType ::= ENUMERATED {
+ *    unkown                    ( 0 ),
+ *    mobileOriginating         ( 1 ),
+ *    mobileTerminating         ( 2 ),
+ *    applicationOriginating    ( 3 ),
+ *    applicationTerminating    ( 4 ),
+ *    deviceTrigger             ( 5 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -32,7 +39,14 @@ enum _enum_for_SMInterface_interfaceType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMInterface-interfaceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMInterface-interfaceType ::= ENUMERATED {
+ *    unkown                    ( 0 ),
+ *    mobileOriginating         ( 1 ),
+ *    mobileTerminating         ( 2 ),
+ *    applicationOriginating    ( 3 ),
+ *    applicationTerminating    ( 4 ),
+ *    deviceTrigger             ( 5 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -47,7 +61,14 @@ type SMInterface_interfaceType = _enum_for_SMInterface_interfaceType;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SMInterface-interfaceType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * SMInterface-interfaceType ::= ENUMERATED {
+ *    unkown                    ( 0 ),
+ *    mobileOriginating         ( 1 ),
+ *    mobileTerminating         ( 2 ),
+ *    applicationOriginating    ( 3 ),
+ *    applicationTerminating    ( 4 ),
+ *    deviceTrigger             ( 5 )
+ * }
  * ```
  * 
  * @enum {number}

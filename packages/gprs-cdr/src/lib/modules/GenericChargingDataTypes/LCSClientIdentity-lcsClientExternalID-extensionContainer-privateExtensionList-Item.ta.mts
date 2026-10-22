@@ -6,8 +6,6 @@ import {
     OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { MAP_EXTENSION } from "../GenericChargingDataTypes/MAP-EXTENSION.oca.mjs";
-// export { ExtensionSet } from "../GenericChargingDataTypes/ExtensionSet.osa.mjs";
 
 
 /**
@@ -17,7 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * LCSClientIdentity-lcsClientExternalID-extensionContainer-privateExtensionList-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * LCSClientIdentity-lcsClientExternalID-extensionContainer-privateExtensionList-Item ::= SEQUENCE {
+ *    extId      MAP-EXTENSION.&extensionId ({ExtensionSet}) ,
+ *    extType    MAP-EXTENSION.&ExtensionType ({ExtensionSet}{@extId})  OPTIONAL
+ * }
  * ```
  * 
  * @class
@@ -146,7 +147,7 @@ let _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer
  */
 export
 function _encode_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item (value: LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item = function (value: LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item>): _Element {
+    if (!_cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item) { _cached_encoder_for_LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item = function (value: LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item, _elGetter: $.ASN1Encoder<LCSClientIdentity_lcsClientExternalID_extensionContainer_privateExtensionList_Item>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encodeObjectIdentifier(value.extId, $.BER));
     if (value.extType !== undefined) {

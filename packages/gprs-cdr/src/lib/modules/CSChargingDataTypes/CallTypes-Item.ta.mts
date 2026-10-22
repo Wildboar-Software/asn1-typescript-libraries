@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CallTypes-Item ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * CallTypes-Item ::= INTEGER {
+ *    mobileOriginated    ( 0 ),
+ *    mobileTerminated    ( 1 )
+ * }
  * ```
  */
 export

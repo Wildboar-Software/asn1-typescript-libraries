@@ -4,7 +4,9 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -82,6 +84,13 @@ class CAMELModificationParameters {
         this.genericNumbers = genericNumbers;
         this.redirectingPartyNumber = redirectingPartyNumber;
         this.redirectionCounter = redirectionCounter;
+    
+        if (this.callingPartyCategory !== undefined && (this.callingPartyCategory.length !== 1)) {
+            throw new ASN1SizeError("CAMELModificationParameters.callingPartyCategory violates SIZE constraint");
+        }
+        if (this.redirectionCounter !== undefined && (this.redirectionCounter < 1 || this.redirectionCounter > 5)) {
+            throw new ASN1OverflowError("CAMELModificationParameters.redirectionCounter violates INTEGER range");
+        }
     }
 
     /**
@@ -205,7 +214,7 @@ let _cached_encoder_for_CAMELModificationParameters: $.ASN1Encoder<CAMELModifica
  */
 export
 function _encode_CAMELModificationParameters (value: CAMELModificationParameters, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAMELModificationParameters) { _cached_encoder_for_CAMELModificationParameters = function (value: CAMELModificationParameters, elGetter: $.ASN1Encoder<CAMELModificationParameters>): _Element {
+    if (!_cached_encoder_for_CAMELModificationParameters) { _cached_encoder_for_CAMELModificationParameters = function (value: CAMELModificationParameters, _elGetter: $.ASN1Encoder<CAMELModificationParameters>): _Element {
     const _components: _Element[] = [];
     if (value.callingPartyNumber !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.callingPartyNumber, $.BER));

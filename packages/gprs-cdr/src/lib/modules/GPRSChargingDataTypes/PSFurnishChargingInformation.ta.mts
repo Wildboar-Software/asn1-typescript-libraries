@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     BOOLEAN,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,6 +46,10 @@ class PSFurnishChargingInformation {
     ) {
         this.pSFreeFormatData = pSFreeFormatData;
         this.pSFFDAppendIndicator = pSFFDAppendIndicator;
+    
+        if ((this.pSFreeFormatData.length < 1 || this.pSFreeFormatData.length > 160)) {
+            throw new ASN1SizeError("PSFurnishChargingInformation.pSFreeFormatData violates SIZE constraint");
+        }
     }
 
     /**
@@ -148,7 +153,7 @@ let _cached_encoder_for_PSFurnishChargingInformation: $.ASN1Encoder<PSFurnishCha
  */
 export
 function _encode_PSFurnishChargingInformation (value: PSFurnishChargingInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PSFurnishChargingInformation) { _cached_encoder_for_PSFurnishChargingInformation = function (value: PSFurnishChargingInformation, elGetter: $.ASN1Encoder<PSFurnishChargingInformation>): _Element {
+    if (!_cached_encoder_for_PSFurnishChargingInformation) { _cached_encoder_for_PSFurnishChargingInformation = function (value: PSFurnishChargingInformation, _elGetter: $.ASN1Encoder<PSFurnishChargingInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.pSFreeFormatData, $.BER));
     if (value.pSFFDAppendIndicator !== undefined) {

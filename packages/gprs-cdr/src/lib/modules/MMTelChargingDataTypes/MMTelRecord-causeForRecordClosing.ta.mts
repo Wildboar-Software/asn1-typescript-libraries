@@ -10,7 +10,13 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-causeForRecordClosing ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-causeForRecordClosing ::= ENUMERATED {
+ *    serviceDeliveryEndSuccessfully    ( 0 ),
+ *    unSuccessfulServiceDelivery       ( 1 ),
+ *    timeLimit                         ( 3 ),
+ *    serviceChange                     ( 4 ),
+ *    managementIntervention            ( 5 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -31,7 +37,13 @@ enum _enum_for_MMTelRecord_causeForRecordClosing {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-causeForRecordClosing ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-causeForRecordClosing ::= ENUMERATED {
+ *    serviceDeliveryEndSuccessfully    ( 0 ),
+ *    unSuccessfulServiceDelivery       ( 1 ),
+ *    timeLimit                         ( 3 ),
+ *    serviceChange                     ( 4 ),
+ *    managementIntervention            ( 5 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -46,7 +58,13 @@ type MMTelRecord_causeForRecordClosing = _enum_for_MMTelRecord_causeForRecordClo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MMTelRecord-causeForRecordClosing ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * MMTelRecord-causeForRecordClosing ::= ENUMERATED {
+ *    serviceDeliveryEndSuccessfully    ( 0 ),
+ *    unSuccessfulServiceDelivery       ( 1 ),
+ *    timeLimit                         ( 3 ),
+ *    serviceChange                     ( 4 ),
+ *    managementIntervention            ( 5 )
+ * }
  * ```
  * 
  * @enum {number}

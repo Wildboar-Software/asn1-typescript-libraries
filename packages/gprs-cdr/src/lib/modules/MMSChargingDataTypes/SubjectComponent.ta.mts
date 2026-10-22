@@ -123,10 +123,8 @@ function _decode_SubjectComponent (el: _Element): SubjectComponent {
     }
     sequence[0].name = "subjectType";
     sequence[1].name = "subjectSize";
-    let subjectType!: OCTET_STRING;
-    let subjectSize!: INTEGER;
-    subjectType = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    subjectSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const subjectType: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const subjectSize: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new SubjectComponent(
         subjectType,
         subjectSize,
@@ -147,7 +145,7 @@ let _cached_encoder_for_SubjectComponent: $.ASN1Encoder<SubjectComponent> | null
  */
 export
 function _encode_SubjectComponent (value: SubjectComponent, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubjectComponent) { _cached_encoder_for_SubjectComponent = function (value: SubjectComponent, elGetter: $.ASN1Encoder<SubjectComponent>): _Element {
+    if (!_cached_encoder_for_SubjectComponent) { _cached_encoder_for_SubjectComponent = function (value: SubjectComponent, _elGetter: $.ASN1Encoder<SubjectComponent>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.subjectType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.subjectSize, $.BER)

@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedPartyIPAddress } from "../IMSChargingDataTypes/ServedPartyIPAddress.ta.mjs";
-// export { ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedPartyIPAddress } from "../IMSChargingDataTypes/ServedPartyIPAddress.ta.mjs";
 
 
 /**

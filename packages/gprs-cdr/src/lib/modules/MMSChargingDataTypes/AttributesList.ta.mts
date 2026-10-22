@@ -4,13 +4,12 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSRSAddress, _decode_MMSRSAddress, _encode_MMSRSAddress } from "../MMSChargingDataTypes/MMSRSAddress.ta.mjs";
-// export { MMSRSAddress, _decode_MMSRSAddress, _encode_MMSRSAddress } from "../MMSChargingDataTypes/MMSRSAddress.ta.mjs";
 import { MMState, _decode_MMState, _encode_MMState, _enum_for_MMState } from "../MMSChargingDataTypes/MMState.ta.mjs";
-// export { MMState, _enum_for_MMState, MMState_draft /* IMPORTED_LONG_ENUMERATION_ITEM */, draft /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_sent /* IMPORTED_LONG_ENUMERATION_ITEM */, sent /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_new /* IMPORTED_LONG_ENUMERATION_ITEM */, new_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_retrieved /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieved /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_forwarded /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMState, _encode_MMState } from "../MMSChargingDataTypes/MMState.ta.mjs";
 
 
 /**
@@ -93,6 +92,10 @@ class AttributesList {
         this.messageSize = messageSize;
         this.mmFlags = mmFlags;
         this.mmState = mmState;
+    
+        if ((this.dateAndTime.length !== 9)) {
+            throw new ASN1SizeError("AttributesList.dateAndTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -187,20 +190,13 @@ function _decode_AttributesList (el: _Element): AttributesList {
     sequence[4].name = "messageSize";
     sequence[5].name = "mmFlags";
     sequence[6].name = "mmState";
-    let messageID!: OCTET_STRING;
-    let dateAndTime!: OCTET_STRING;
-    let senderAddress!: MMSRSAddress;
-    let subject!: OCTET_STRING;
-    let messageSize!: INTEGER;
-    let mmFlags!: OCTET_STRING;
-    let mmState!: MMState;
-    messageID = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    dateAndTime = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
-    senderAddress = $._decode_implicit<MMSRSAddress>(() => _decode_MMSRSAddress)(sequence[2]);
-    subject = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[3]);
-    messageSize = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[4]);
-    mmFlags = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[5]);
-    mmState = $._decode_implicit<MMState>(() => _decode_MMState)(sequence[6]);
+    const messageID: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const dateAndTime: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[1]);
+    const senderAddress: MMSRSAddress = $._decode_implicit<MMSRSAddress>(() => _decode_MMSRSAddress)(sequence[2]);
+    const subject: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[3]);
+    const messageSize: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[4]);
+    const mmFlags: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[5]);
+    const mmState: MMState = $._decode_implicit<MMState>(() => _decode_MMState)(sequence[6]);
     return new AttributesList(
         messageID,
         dateAndTime,
@@ -226,7 +222,7 @@ let _cached_encoder_for_AttributesList: $.ASN1Encoder<AttributesList> | null = n
  */
 export
 function _encode_AttributesList (value: AttributesList, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AttributesList) { _cached_encoder_for_AttributesList = function (value: AttributesList, elGetter: $.ASN1Encoder<AttributesList>): _Element {
+    if (!_cached_encoder_for_AttributesList) { _cached_encoder_for_AttributesList = function (value: AttributesList, _elGetter: $.ASN1Encoder<AttributesList>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.messageID, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.dateAndTime, $.BER),

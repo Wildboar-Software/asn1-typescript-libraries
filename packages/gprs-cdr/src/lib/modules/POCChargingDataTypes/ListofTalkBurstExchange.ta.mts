@@ -4,11 +4,11 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ChangeCondition, _encode_ChangeCondition, _enum_for_ChangeCondition, ChangeCondition } from "../POCChargingDataTypes/ChangeCondition.ta.mjs";
-// export { ChangeCondition, _enum_for_ChangeCondition, ChangeCondition_serviceChange /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_volumeLimit /* IMPORTED_LONG_ENUMERATION_ITEM */, volumeLimit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_timeLimit /* IMPORTED_LONG_ENUMERATION_ITEM */, timeLimit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_numberofTalkBurstLimit /* IMPORTED_LONG_ENUMERATION_ITEM */, numberofTalkBurstLimit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_numberofActiveParticipants /* IMPORTED_LONG_ENUMERATION_ITEM */, numberofActiveParticipants /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChangeCondition_tariffTime /* IMPORTED_LONG_ENUMERATION_ITEM */, tariffTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChangeCondition, _encode_ChangeCondition } from "../POCChargingDataTypes/ChangeCondition.ta.mjs";
 
 
 /**
@@ -109,6 +109,10 @@ class ListofTalkBurstExchange {
         this.changeCondition = changeCondition;
         this.changeTime = changeTime;
         this.numberofParticipants = numberofParticipants;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("ListofTalkBurstExchange.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -250,7 +254,7 @@ let _cached_encoder_for_ListofTalkBurstExchange: $.ASN1Encoder<ListofTalkBurstEx
  */
 export
 function _encode_ListofTalkBurstExchange (value: ListofTalkBurstExchange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ListofTalkBurstExchange) { _cached_encoder_for_ListofTalkBurstExchange = function (value: ListofTalkBurstExchange, elGetter: $.ASN1Encoder<ListofTalkBurstExchange>): _Element {
+    if (!_cached_encoder_for_ListofTalkBurstExchange) { _cached_encoder_for_ListofTalkBurstExchange = function (value: ListofTalkBurstExchange, _elGetter: $.ASN1Encoder<ListofTalkBurstExchange>): _Element {
     const _components: _Element[] = [];
     if (value.number_Of_Talk_Bursts !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.number_Of_Talk_Bursts, $.BER));

@@ -4,29 +4,21 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OriginatorInfo, _decode_OriginatorInfo, _encode_OriginatorInfo } from "../CHFChargingDataTypes/OriginatorInfo.ta.mjs";
-// export { OriginatorInfo, _decode_OriginatorInfo, _encode_OriginatorInfo } from "../CHFChargingDataTypes/OriginatorInfo.ta.mjs";
 import { RecipientInfos, _decode_RecipientInfos, _encode_RecipientInfos } from "../CHFChargingDataTypes/RecipientInfos.ta.mjs";
-// export { RecipientInfos, _decode_RecipientInfos, _encode_RecipientInfos } from "../CHFChargingDataTypes/RecipientInfos.ta.mjs";
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../CHFChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
-// export { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../CHFChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
 import { SMSChargingInformation_sMMessageType, _decode_SMSChargingInformation_sMMessageType, _encode_SMSChargingInformation_sMMessageType, _enum_for_SMSChargingInformation_sMMessageType } from "../CHFChargingDataTypes/SMSChargingInformation-sMMessageType.ta.mjs";
-// export { SMSChargingInformation_sMMessageType, _enum_for_SMSChargingInformation_sMMessageType, SMSChargingInformation_sMMessageType_submission /* IMPORTED_LONG_ENUMERATION_ITEM */, submission /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_sMMessageType_deliveryReport /* IMPORTED_LONG_ENUMERATION_ITEM */, deliveryReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_sMMessageType_sMServiceRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, sMServiceRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_sMMessageType_delivery /* IMPORTED_LONG_ENUMERATION_ITEM */, delivery /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_sMMessageType_t4DeviceTrigger /* IMPORTED_LONG_ENUMERATION_ITEM */, t4DeviceTrigger /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_sMMessageType_sMDeviceTrigger /* IMPORTED_LONG_ENUMERATION_ITEM */, sMDeviceTrigger /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMSChargingInformation_sMMessageType, _encode_SMSChargingInformation_sMMessageType } from "../CHFChargingDataTypes/SMSChargingInformation-sMMessageType.ta.mjs";
 import { SMReplyPathRequested, _decode_SMReplyPathRequested, _encode_SMReplyPathRequested, _enum_for_SMReplyPathRequested } from "../CHFChargingDataTypes/SMReplyPathRequested.ta.mjs";
-// export { SMReplyPathRequested, _enum_for_SMReplyPathRequested, SMReplyPathRequested_noReplyPathSet /* IMPORTED_LONG_ENUMERATION_ITEM */, noReplyPathSet /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMReplyPathRequested_replyPathSet /* IMPORTED_LONG_ENUMERATION_ITEM */, replyPathSet /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMReplyPathRequested, _encode_SMReplyPathRequested } from "../CHFChargingDataTypes/SMReplyPathRequested.ta.mjs";
 import { SMServiceType, _decode_SMServiceType, _encode_SMServiceType } from "../CHFChargingDataTypes/SMServiceType.ta.mjs";
-// export { SMServiceType, SMServiceType_contentProcessing /* IMPORTED_LONG_NAMED_INTEGER */, contentProcessing /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_forwarding /* IMPORTED_LONG_NAMED_INTEGER */, forwarding /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_forwardingMultipleSubscriptions /* IMPORTED_LONG_NAMED_INTEGER */, forwardingMultipleSubscriptions /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_filtering /* IMPORTED_LONG_NAMED_INTEGER */, filtering /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_receipt /* IMPORTED_LONG_NAMED_INTEGER */, receipt /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_networkStorage /* IMPORTED_LONG_NAMED_INTEGER */, networkStorage /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_toMultipleDestinations /* IMPORTED_LONG_NAMED_INTEGER */, toMultipleDestinations /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_virtualPrivateNetwork /* IMPORTED_LONG_NAMED_INTEGER */, virtualPrivateNetwork /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_autoreply /* IMPORTED_LONG_NAMED_INTEGER */, autoreply /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_personalSignature /* IMPORTED_LONG_NAMED_INTEGER */, personalSignature /* IMPORTED_SHORT_NAMED_INTEGER */, SMServiceType_deferredDelivery /* IMPORTED_LONG_NAMED_INTEGER */, deferredDelivery /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_SMServiceType, _encode_SMServiceType } from "../CHFChargingDataTypes/SMServiceType.ta.mjs";
 import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
-// export { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
 import { SMSChargingInformation_sMPriority, _decode_SMSChargingInformation_sMPriority, _encode_SMSChargingInformation_sMPriority, _enum_for_SMSChargingInformation_sMPriority } from "../CHFChargingDataTypes/SMSChargingInformation-sMPriority.ta.mjs";
-// export { SMSChargingInformation_sMPriority, _enum_for_SMSChargingInformation_sMPriority, SMSChargingInformation_sMPriority_low /* IMPORTED_LONG_ENUMERATION_ITEM */, low /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_sMPriority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_sMPriority_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMSChargingInformation_sMPriority, _encode_SMSChargingInformation_sMPriority } from "../CHFChargingDataTypes/SMSChargingInformation-sMPriority.ta.mjs";
 import { SMSChargingInformation_messageClass, _decode_SMSChargingInformation_messageClass, _encode_SMSChargingInformation_messageClass, _enum_for_SMSChargingInformation_messageClass } from "../CHFChargingDataTypes/SMSChargingInformation-messageClass.ta.mjs";
-// export { SMSChargingInformation_messageClass, _enum_for_SMSChargingInformation_messageClass, SMSChargingInformation_messageClass_personal /* IMPORTED_LONG_ENUMERATION_ITEM */, personal /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_messageClass_advertisement /* IMPORTED_LONG_ENUMERATION_ITEM */, advertisement /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_messageClass_information_service /* IMPORTED_LONG_ENUMERATION_ITEM */, information_service /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMSChargingInformation_messageClass_auto /* IMPORTED_LONG_ENUMERATION_ITEM */, auto /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMSChargingInformation_messageClass, _encode_SMSChargingInformation_messageClass } from "../CHFChargingDataTypes/SMSChargingInformation-messageClass.ta.mjs";
 import { SMdeliveryReportRequested, _decode_SMdeliveryReportRequested, _encode_SMdeliveryReportRequested, _enum_for_SMdeliveryReportRequested } from "../CHFChargingDataTypes/SMdeliveryReportRequested.ta.mjs";
-// export { SMdeliveryReportRequested, _enum_for_SMdeliveryReportRequested, SMdeliveryReportRequested_yes /* IMPORTED_LONG_ENUMERATION_ITEM */, yes /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMdeliveryReportRequested_no /* IMPORTED_LONG_ENUMERATION_ITEM */, no /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMdeliveryReportRequested, _encode_SMdeliveryReportRequested } from "../CHFChargingDataTypes/SMdeliveryReportRequested.ta.mjs";
 
 
 /**
@@ -285,6 +277,31 @@ class SMSChargingInformation {
         this.messageSize = messageSize;
         this.messageClass = messageClass;
         this.sMdeliveryReportRequested = sMdeliveryReportRequested;
+    
+        if ((this.sMSNodeAddress.length < 1 || this.sMSNodeAddress.length > 20)) {
+            throw new ASN1SizeError("SMSChargingInformation.sMSNodeAddress violates SIZE constraint");
+        }
+        if (this.uETimeZone !== undefined && (this.uETimeZone.length !== 2)) {
+            throw new ASN1SizeError("SMSChargingInformation.uETimeZone violates SIZE constraint");
+        }
+        if (this.rATType !== undefined && (this.rATType < 0 || this.rATType > 255)) {
+            throw new ASN1OverflowError("SMSChargingInformation.rATType violates INTEGER range");
+        }
+        if (this.sMSCAddress !== undefined && (this.sMSCAddress.length < 1 || this.sMSCAddress.length > 20)) {
+            throw new ASN1SizeError("SMSChargingInformation.sMSCAddress violates SIZE constraint");
+        }
+        if ((this.eventtimestamp.length !== 9)) {
+            throw new ASN1SizeError("SMSChargingInformation.eventtimestamp violates SIZE constraint");
+        }
+        if (this.sMSStatus !== undefined && (this.sMSStatus.length !== 1)) {
+            throw new ASN1SizeError("SMSChargingInformation.sMSStatus violates SIZE constraint");
+        }
+        if (this.sMDischargeTime !== undefined && (this.sMDischargeTime.length !== 9)) {
+            throw new ASN1SizeError("SMSChargingInformation.sMDischargeTime violates SIZE constraint");
+        }
+        if (this.submissionTime !== undefined && (this.submissionTime.length !== 9)) {
+            throw new ASN1SizeError("SMSChargingInformation.submissionTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -514,7 +531,7 @@ let _cached_encoder_for_SMSChargingInformation: $.ASN1Encoder<SMSChargingInforma
  */
 export
 function _encode_SMSChargingInformation (value: SMSChargingInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SMSChargingInformation) { _cached_encoder_for_SMSChargingInformation = function (value: SMSChargingInformation, elGetter: $.ASN1Encoder<SMSChargingInformation>): _Element {
+    if (!_cached_encoder_for_SMSChargingInformation) { _cached_encoder_for_SMSChargingInformation = function (value: SMSChargingInformation, _elGetter: $.ASN1Encoder<SMSChargingInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.sMSNodeAddress, $.BER));
     if (value.originatorInfo !== undefined) {

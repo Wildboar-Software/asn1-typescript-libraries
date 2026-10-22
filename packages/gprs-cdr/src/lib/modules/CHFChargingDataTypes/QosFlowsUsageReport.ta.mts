@@ -4,7 +4,8 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -72,6 +73,13 @@ class QosFlowsUsageReport {
         this.endTime = endTime;
         this.dataVolumeDownlink = dataVolumeDownlink;
         this.dataVolumeUplink = dataVolumeUplink;
+    
+        if ((this.startTime.length !== 9)) {
+            throw new ASN1SizeError("QosFlowsUsageReport.startTime violates SIZE constraint");
+        }
+        if ((this.endTime.length !== 9)) {
+            throw new ASN1SizeError("QosFlowsUsageReport.endTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -187,7 +195,7 @@ let _cached_encoder_for_QosFlowsUsageReport: $.ASN1Encoder<QosFlowsUsageReport> 
  */
 export
 function _encode_QosFlowsUsageReport (value: QosFlowsUsageReport, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_QosFlowsUsageReport) { _cached_encoder_for_QosFlowsUsageReport = function (value: QosFlowsUsageReport, elGetter: $.ASN1Encoder<QosFlowsUsageReport>): _Element {
+    if (!_cached_encoder_for_QosFlowsUsageReport) { _cached_encoder_for_QosFlowsUsageReport = function (value: QosFlowsUsageReport, _elGetter: $.ASN1Encoder<QosFlowsUsageReport>): _Element {
     const _components: _Element[] = [];
     if (value.qosFlowId !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.qosFlowId, $.BER));

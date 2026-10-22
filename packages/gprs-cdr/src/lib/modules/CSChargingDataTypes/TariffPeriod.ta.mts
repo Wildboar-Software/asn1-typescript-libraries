@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SwitchoverTime, _decode_SwitchoverTime, _encode_SwitchoverTime } from "../CSChargingDataTypes/SwitchoverTime.ta.mjs";
-// export { SwitchoverTime, _decode_SwitchoverTime, _encode_SwitchoverTime } from "../CSChargingDataTypes/SwitchoverTime.ta.mjs";
 
 
 /**
@@ -123,10 +122,8 @@ function _decode_TariffPeriod (el: _Element): TariffPeriod {
     }
     sequence[0].name = "switchoverTime";
     sequence[1].name = "tariffId";
-    let switchoverTime!: SwitchoverTime;
-    let tariffId!: INTEGER;
-    switchoverTime = $._decode_implicit<SwitchoverTime>(() => _decode_SwitchoverTime)(sequence[0]);
-    tariffId = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const switchoverTime: SwitchoverTime = $._decode_implicit<SwitchoverTime>(() => _decode_SwitchoverTime)(sequence[0]);
+    const tariffId: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
     return new TariffPeriod(
         switchoverTime,
         tariffId,
@@ -147,7 +144,7 @@ let _cached_encoder_for_TariffPeriod: $.ASN1Encoder<TariffPeriod> | null = null;
  */
 export
 function _encode_TariffPeriod (value: TariffPeriod, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TariffPeriod) { _cached_encoder_for_TariffPeriod = function (value: TariffPeriod, elGetter: $.ASN1Encoder<TariffPeriod>): _Element {
+    if (!_cached_encoder_for_TariffPeriod) { _cached_encoder_for_TariffPeriod = function (value: TariffPeriod, _elGetter: $.ASN1Encoder<TariffPeriod>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SwitchoverTime, $.BER)(value.switchoverTime, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.tariffId, $.BER)

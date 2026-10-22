@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SubscriptionIDType, _decode_SubscriptionIDType, _encode_SubscriptionIDType, _enum_for_SubscriptionIDType } from "../GenericChargingDataTypes/SubscriptionIDType.ta.mjs";
-// export { SubscriptionIDType, _enum_for_SubscriptionIDType, SubscriptionIDType_eND_USER_E164 /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_E164 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionIDType_eND_USER_IMSI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_IMSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionIDType_eND_USER_SIP_URI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_SIP_URI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionIDType_eND_USER_NAI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_NAI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionIDType_eND_USER_PRIVATE /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_PRIVATE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriptionIDType, _encode_SubscriptionIDType } from "../GenericChargingDataTypes/SubscriptionIDType.ta.mjs";
 
 
 /**
@@ -157,7 +156,7 @@ let _cached_encoder_for_SubscriptionID: $.ASN1Encoder<SubscriptionID> | null = n
  */
 export
 function _encode_SubscriptionID (value: SubscriptionID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SubscriptionID) { _cached_encoder_for_SubscriptionID = function (value: SubscriptionID, elGetter: $.ASN1Encoder<SubscriptionID>): _Element {
+    if (!_cached_encoder_for_SubscriptionID) { _cached_encoder_for_SubscriptionID = function (value: SubscriptionID, _elGetter: $.ASN1Encoder<SubscriptionID>): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SubscriptionIDType, $.BER)(value.subscriptionIDType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeUTF8String, $.BER)(value.subscriptionIDData, $.BER)

@@ -6,13 +6,13 @@ import {
     IA5String,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
-// export { DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling_continueTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, continueTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultTransactionHandling_releaseTransaction /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseTransaction /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
 import { _decode_CAMELInformationPDP_levelOfCAMELService, _encode_CAMELInformationPDP_levelOfCAMELService, CAMELInformationPDP_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationPDP-levelOfCAMELService.ta.mjs";
-// export { CAMELInformationPDP_levelOfCAMELService, CAMELInformationPDP_levelOfCAMELService_basic /* IMPORTED_LONG_NAMED_BIT */, basic /* IMPORTED_SHORT_NAMED_BIT */, CAMELInformationPDP_levelOfCAMELService_callDurationSupervision /* IMPORTED_LONG_NAMED_BIT */, callDurationSupervision /* IMPORTED_SHORT_NAMED_BIT */, CAMELInformationPDP_levelOfCAMELService_onlineCharging /* IMPORTED_LONG_NAMED_BIT */, onlineCharging /* IMPORTED_SHORT_NAMED_BIT */, _decode_CAMELInformationPDP_levelOfCAMELService, _encode_CAMELInformationPDP_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationPDP-levelOfCAMELService.ta.mjs";
 
 
 /**
@@ -116,6 +116,22 @@ class CAMELInformationPDP {
         this.levelOfCAMELService = levelOfCAMELService;
         this.freeFormatData = freeFormatData;
         this.fFDAppendIndicator = fFDAppendIndicator;
+    
+        if (this.sCFAddress !== undefined && (this.sCFAddress.length < 1 || this.sCFAddress.length > 20)) {
+            throw new ASN1SizeError("CAMELInformationPDP.sCFAddress violates SIZE constraint");
+        }
+        if (this.serviceKey !== undefined && (this.serviceKey < 0 || this.serviceKey > 2147483647)) {
+            throw new ASN1OverflowError("CAMELInformationPDP.serviceKey violates INTEGER range");
+        }
+        if (this.cAMELAccessPointNameNI !== undefined && (this.cAMELAccessPointNameNI.length < 1 || this.cAMELAccessPointNameNI.length > 63)) {
+            throw new ASN1SizeError("CAMELInformationPDP.cAMELAccessPointNameNI violates SIZE constraint");
+        }
+        if (this.cAMELAccessPointNameOI !== undefined && (this.cAMELAccessPointNameOI.length < 1 || this.cAMELAccessPointNameOI.length > 37)) {
+            throw new ASN1SizeError("CAMELInformationPDP.cAMELAccessPointNameOI violates SIZE constraint");
+        }
+        if (this.freeFormatData !== undefined && (this.freeFormatData.length < 1 || this.freeFormatData.length > 160)) {
+            throw new ASN1SizeError("CAMELInformationPDP.freeFormatData violates SIZE constraint");
+        }
     }
 
     /**
@@ -257,7 +273,7 @@ let _cached_encoder_for_CAMELInformationPDP: $.ASN1Encoder<CAMELInformationPDP> 
  */
 export
 function _encode_CAMELInformationPDP (value: CAMELInformationPDP, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CAMELInformationPDP) { _cached_encoder_for_CAMELInformationPDP = function (value: CAMELInformationPDP, elGetter: $.ASN1Encoder<CAMELInformationPDP>): _Element {
+    if (!_cached_encoder_for_CAMELInformationPDP) { _cached_encoder_for_CAMELInformationPDP = function (value: CAMELInformationPDP, _elGetter: $.ASN1Encoder<CAMELInformationPDP>): _Element {
     const _components: _Element[] = [];
     if (value.sCFAddress !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.sCFAddress, $.BER));

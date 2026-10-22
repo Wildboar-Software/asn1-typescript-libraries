@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TariffPeriod, _decode_TariffPeriod, _encode_TariffPeriod } from "../CSChargingDataTypes/TariffPeriod.ta.mjs";
-// export { TariffPeriod, _decode_TariffPeriod, _encode_TariffPeriod } from "../CSChargingDataTypes/TariffPeriod.ta.mjs";
 
 
 /**

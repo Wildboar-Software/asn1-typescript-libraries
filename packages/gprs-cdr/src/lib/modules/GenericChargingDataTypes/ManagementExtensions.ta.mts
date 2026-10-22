@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../GenericChargingDataTypes/ManagementExtension.ta.mjs";
-// export { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../GenericChargingDataTypes/ManagementExtension.ta.mjs";
 
 
 /**

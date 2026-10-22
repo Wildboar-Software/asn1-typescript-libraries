@@ -4,19 +4,15 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MBMSInformation_mBMSServiceType, _decode_MBMSInformation_mBMSServiceType, _encode_MBMSInformation_mBMSServiceType, _enum_for_MBMSInformation_mBMSServiceType } from "../GPRSChargingDataTypes/MBMSInformation-mBMSServiceType.ta.mjs";
-// export { MBMSInformation_mBMSServiceType, _enum_for_MBMSInformation_mBMSServiceType, MBMSInformation_mBMSServiceType_mULTICAST /* IMPORTED_LONG_ENUMERATION_ITEM */, mULTICAST /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSInformation_mBMSServiceType_bROADCAST /* IMPORTED_LONG_ENUMERATION_ITEM */, bROADCAST /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSInformation_mBMSServiceType, _encode_MBMSInformation_mBMSServiceType } from "../GPRSChargingDataTypes/MBMSInformation-mBMSServiceType.ta.mjs";
 import { MBMSInformation_mBMSUserServiceType, _decode_MBMSInformation_mBMSUserServiceType, _encode_MBMSInformation_mBMSUserServiceType, _enum_for_MBMSInformation_mBMSUserServiceType } from "../GPRSChargingDataTypes/MBMSInformation-mBMSUserServiceType.ta.mjs";
-// export { MBMSInformation_mBMSUserServiceType, _enum_for_MBMSInformation_mBMSUserServiceType, MBMSInformation_mBMSUserServiceType_dOWNLOAD /* IMPORTED_LONG_ENUMERATION_ITEM */, dOWNLOAD /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSInformation_mBMSUserServiceType_sTREAMING /* IMPORTED_LONG_ENUMERATION_ITEM */, sTREAMING /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSInformation_mBMSUserServiceType, _encode_MBMSInformation_mBMSUserServiceType } from "../GPRSChargingDataTypes/MBMSInformation-mBMSUserServiceType.ta.mjs";
 import { MBMSInformation_mBMS2G3GIndicator, _decode_MBMSInformation_mBMS2G3GIndicator, _encode_MBMSInformation_mBMS2G3GIndicator, _enum_for_MBMSInformation_mBMS2G3GIndicator } from "../GPRSChargingDataTypes/MBMSInformation-mBMS2G3GIndicator.ta.mjs";
-// export { MBMSInformation_mBMS2G3GIndicator, _enum_for_MBMSInformation_mBMS2G3GIndicator, MBMSInformation_mBMS2G3GIndicator_twoG /* IMPORTED_LONG_ENUMERATION_ITEM */, twoG /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSInformation_mBMS2G3GIndicator_threeG /* IMPORTED_LONG_ENUMERATION_ITEM */, threeG /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSInformation_mBMS2G3GIndicator_twoG_AND_threeG /* IMPORTED_LONG_ENUMERATION_ITEM */, twoG_AND_threeG /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSInformation_mBMS2G3GIndicator, _encode_MBMSInformation_mBMS2G3GIndicator } from "../GPRSChargingDataTypes/MBMSInformation-mBMS2G3GIndicator.ta.mjs";
 import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
-// export { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
 import { MBMSInformation_cNIPMulticastDistribution, _decode_MBMSInformation_cNIPMulticastDistribution, _encode_MBMSInformation_cNIPMulticastDistribution, _enum_for_MBMSInformation_cNIPMulticastDistribution } from "../GPRSChargingDataTypes/MBMSInformation-cNIPMulticastDistribution.ta.mjs";
-// export { MBMSInformation_cNIPMulticastDistribution, _enum_for_MBMSInformation_cNIPMulticastDistribution, MBMSInformation_cNIPMulticastDistribution_nO_IP_MULTICAST /* IMPORTED_LONG_ENUMERATION_ITEM */, nO_IP_MULTICAST /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSInformation_cNIPMulticastDistribution_iP_MULTICAST /* IMPORTED_LONG_ENUMERATION_ITEM */, iP_MULTICAST /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSInformation_cNIPMulticastDistribution, _encode_MBMSInformation_cNIPMulticastDistribution } from "../GPRSChargingDataTypes/MBMSInformation-cNIPMulticastDistribution.ta.mjs";
 
 
 /**
@@ -162,6 +158,22 @@ class MBMSInformation {
         this.cNIPMulticastDistribution = cNIPMulticastDistribution;
         this.mBMSDataTransferStart = mBMSDataTransferStart;
         this.mBMSDataTransferStop = mBMSDataTransferStop;
+    
+        if (this.mBMSSessionIdentity !== undefined && (this.mBMSSessionIdentity.length !== 1)) {
+            throw new ASN1SizeError("MBMSInformation.mBMSSessionIdentity violates SIZE constraint");
+        }
+        if (this.rAI !== undefined && (this.rAI.length !== 1)) {
+            throw new ASN1SizeError("MBMSInformation.rAI violates SIZE constraint");
+        }
+        if (this.requiredMBMSBearerCaps !== undefined && (this.requiredMBMSBearerCaps.length < 3 || this.requiredMBMSBearerCaps.length > 14)) {
+            throw new ASN1SizeError("MBMSInformation.requiredMBMSBearerCaps violates SIZE constraint");
+        }
+        if (this.mBMSDataTransferStart !== undefined && (this.mBMSDataTransferStart.length !== 8)) {
+            throw new ASN1SizeError("MBMSInformation.mBMSDataTransferStart violates SIZE constraint");
+        }
+        if (this.mBMSDataTransferStop !== undefined && (this.mBMSDataTransferStop.length !== 8)) {
+            throw new ASN1SizeError("MBMSInformation.mBMSDataTransferStop violates SIZE constraint");
+        }
     }
 
     /**
@@ -337,7 +349,7 @@ let _cached_encoder_for_MBMSInformation: $.ASN1Encoder<MBMSInformation> | null =
  */
 export
 function _encode_MBMSInformation (value: MBMSInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MBMSInformation) { _cached_encoder_for_MBMSInformation = function (value: MBMSInformation, elGetter: $.ASN1Encoder<MBMSInformation>): _Element {
+    if (!_cached_encoder_for_MBMSInformation) { _cached_encoder_for_MBMSInformation = function (value: MBMSInformation, _elGetter: $.ASN1Encoder<MBMSInformation>): _Element {
     const _components: _Element[] = [];
     if (value.tMGI !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 1, () => $._encodeOctetString, $.BER)(value.tMGI, $.BER));

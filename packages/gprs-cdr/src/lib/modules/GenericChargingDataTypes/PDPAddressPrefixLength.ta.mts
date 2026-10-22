@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type PDPAddressPrefixLength = INTEGER;
 
-export
-const _decode_PDPAddressPrefixLength: $.ASN1Decoder<PDPAddressPrefixLength> = $._decodeInteger;
+export const _decode_PDPAddressPrefixLength = (el: _Element): PDPAddressPrefixLength => {
+    const value = $._decodeInteger(el);
+    if (value < 1 || value > 64) {
+        throw new ASN1OverflowError("PDPAddressPrefixLength violates INTEGER range");
+    }
+    return value;
+};
 
 export
 const _encode_PDPAddressPrefixLength: $.ASN1Encoder<PDPAddressPrefixLength> = $._encodeInteger;

@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type Day = INTEGER;
 
-export
-const _decode_Day: $.ASN1Decoder<Day> = $._decodeInteger;
+export const _decode_Day = (el: _Element): Day => {
+    const value = $._decodeInteger(el);
+    if (value < 1 || value > 31) {
+        throw new ASN1OverflowError("Day violates INTEGER range");
+    }
+    return value;
+};
 
 export
 const _encode_Day: $.ASN1Encoder<Day> = $._encodeInteger;

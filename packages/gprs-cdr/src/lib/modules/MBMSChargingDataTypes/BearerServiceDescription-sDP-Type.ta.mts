@@ -10,7 +10,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BearerServiceDescription-sDP-Type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * BearerServiceDescription-sDP-Type ::= ENUMERATED {
+ *    sDP-offer     ( 0 ),
+ *    sDP-answer    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +31,10 @@ enum _enum_for_BearerServiceDescription_sDP_Type {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BearerServiceDescription-sDP-Type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * BearerServiceDescription-sDP-Type ::= ENUMERATED {
+ *    sDP-offer     ( 0 ),
+ *    sDP-answer    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +49,10 @@ type BearerServiceDescription_sDP_Type = _enum_for_BearerServiceDescription_sDP_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * BearerServiceDescription-sDP-Type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * BearerServiceDescription-sDP-Type ::= ENUMERATED {
+ *    sDP-offer     ( 0 ),
+ *    sDP-answer    ( 1 )
+ * }
  * ```
  * 
  * @enum {number}

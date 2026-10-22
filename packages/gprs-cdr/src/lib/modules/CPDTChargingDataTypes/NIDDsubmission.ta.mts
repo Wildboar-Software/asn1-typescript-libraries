@@ -4,11 +4,11 @@ import {
     ASN1TagClass as _TagClass,
     INTEGER,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_NIDDsubmission_serviceChangeCondition, _encode_NIDDsubmission_serviceChangeCondition, NIDDsubmission_serviceChangeCondition } from "../CPDTChargingDataTypes/NIDDsubmission-serviceChangeCondition.ta.mjs";
-// export { NIDDsubmission_serviceChangeCondition, NIDDsubmission_serviceChangeCondition_nIDDsubmissionResponseReceipt /* IMPORTED_LONG_NAMED_BIT */, nIDDsubmissionResponseReceipt /* IMPORTED_SHORT_NAMED_BIT */, NIDDsubmission_serviceChangeCondition_nIDDsubmissionResponseSending /* IMPORTED_LONG_NAMED_BIT */, nIDDsubmissionResponseSending /* IMPORTED_SHORT_NAMED_BIT */, NIDDsubmission_serviceChangeCondition_nIDDdeliveryToUE /* IMPORTED_LONG_NAMED_BIT */, nIDDdeliveryToUE /* IMPORTED_SHORT_NAMED_BIT */, NIDDsubmission_serviceChangeCondition_nIDDdeliveryFromUEerror /* IMPORTED_LONG_NAMED_BIT */, nIDDdeliveryFromUEerror /* IMPORTED_SHORT_NAMED_BIT */, NIDDsubmission_serviceChangeCondition_nIDDsubmissionTimeout /* IMPORTED_LONG_NAMED_BIT */, nIDDsubmissionTimeout /* IMPORTED_SHORT_NAMED_BIT */, _decode_NIDDsubmission_serviceChangeCondition, _encode_NIDDsubmission_serviceChangeCondition } from "../CPDTChargingDataTypes/NIDDsubmission-serviceChangeCondition.ta.mjs";
 
 
 /**
@@ -87,6 +87,13 @@ class NIDDsubmission {
         this.dataVolumeGPRSDownlink = dataVolumeGPRSDownlink;
         this.submissionResultCode = submissionResultCode;
         this.serviceChangeCondition = serviceChangeCondition;
+    
+        if (this.submissionTimestamp !== undefined && (this.submissionTimestamp.length !== 9)) {
+            throw new ASN1SizeError("NIDDsubmission.submissionTimestamp violates SIZE constraint");
+        }
+        if (this.eventTimestamp !== undefined && (this.eventTimestamp.length !== 9)) {
+            throw new ASN1SizeError("NIDDsubmission.eventTimestamp violates SIZE constraint");
+        }
     }
 
     /**
@@ -206,7 +213,7 @@ let _cached_encoder_for_NIDDsubmission: $.ASN1Encoder<NIDDsubmission> | null = n
  */
 export
 function _encode_NIDDsubmission (value: NIDDsubmission, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NIDDsubmission) { _cached_encoder_for_NIDDsubmission = function (value: NIDDsubmission, elGetter: $.ASN1Encoder<NIDDsubmission>): _Element {
+    if (!_cached_encoder_for_NIDDsubmission) { _cached_encoder_for_NIDDsubmission = function (value: NIDDsubmission, _elGetter: $.ASN1Encoder<NIDDsubmission>): _Element {
     const _components: _Element[] = [];
     if (value.submissionTimestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.submissionTimestamp, $.BER));

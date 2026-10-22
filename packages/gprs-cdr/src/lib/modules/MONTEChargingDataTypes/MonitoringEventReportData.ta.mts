@@ -5,19 +5,16 @@ import {
     OPTIONAL,
     UTF8String,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MonitoringType, _decode_MonitoringType, _encode_MonitoringType, _enum_for_MonitoringType } from "../MONTEChargingDataTypes/MonitoringType.ta.mjs";
-// export { MonitoringType, _enum_for_MonitoringType, MonitoringType_lossOfConnectivity /* IMPORTED_LONG_ENUMERATION_ITEM */, lossOfConnectivity /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_ueReachability /* IMPORTED_LONG_ENUMERATION_ITEM */, ueReachability /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_locationReporting /* IMPORTED_LONG_ENUMERATION_ITEM */, locationReporting /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_changeOfIMSIIMEISVAssociation /* IMPORTED_LONG_ENUMERATION_ITEM */, changeOfIMSIIMEISVAssociation /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_roamingStatus /* IMPORTED_LONG_ENUMERATION_ITEM */, roamingStatus /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_communicationFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, communicationFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_availabilityAfterDDNFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, availabilityAfterDDNFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, MonitoringType_numberOfUEPerLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, numberOfUEPerLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MonitoringType, _encode_MonitoringType } from "../MONTEChargingDataTypes/MonitoringType.ta.mjs";
 import { ReachabilityType, _decode_ReachabilityType, _encode_ReachabilityType, _enum_for_ReachabilityType } from "../MONTEChargingDataTypes/ReachabilityType.ta.mjs";
-// export { ReachabilityType, _enum_for_ReachabilityType, ReachabilityType_reachabilityforSMS /* IMPORTED_LONG_ENUMERATION_ITEM */, reachabilityforSMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReachabilityType_reachabilityforData /* IMPORTED_LONG_ENUMERATION_ITEM */, reachabilityforData /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReachabilityType, _encode_ReachabilityType } from "../MONTEChargingDataTypes/ReachabilityType.ta.mjs";
 import { EPSLocationInfo, _decode_EPSLocationInfo, _encode_EPSLocationInfo } from "../MONTEChargingDataTypes/EPSLocationInfo.ta.mjs";
-// export { EPSLocationInfo, _decode_EPSLocationInfo, _encode_EPSLocationInfo } from "../MONTEChargingDataTypes/EPSLocationInfo.ta.mjs";
 import { CommunicationFailureInfo, _decode_CommunicationFailureInfo, _encode_CommunicationFailureInfo } from "../MONTEChargingDataTypes/CommunicationFailureInfo.ta.mjs";
-// export { CommunicationFailureInfo, _decode_CommunicationFailureInfo, _encode_CommunicationFailureInfo } from "../MONTEChargingDataTypes/CommunicationFailureInfo.ta.mjs";
 import { NumberOfUEPerLocationReport, _decode_NumberOfUEPerLocationReport, _encode_NumberOfUEPerLocationReport } from "../MONTEChargingDataTypes/NumberOfUEPerLocationReport.ta.mjs";
-// export { NumberOfUEPerLocationReport, _decode_NumberOfUEPerLocationReport, _encode_NumberOfUEPerLocationReport } from "../MONTEChargingDataTypes/NumberOfUEPerLocationReport.ta.mjs";
 
 
 /**
@@ -138,6 +135,16 @@ class MonitoringEventReportData {
         this.reportedLocation = reportedLocation;
         this.communicationFailureInformation = communicationFailureInformation;
         this.listOfNumberOfUEPerLocationReport = listOfNumberOfUEPerLocationReport;
+    
+        if (this.eventTimestamp !== undefined && (this.eventTimestamp.length !== 9)) {
+            throw new ASN1SizeError("MonitoringEventReportData.eventTimestamp violates SIZE constraint");
+        }
+        if (this.sCEFReferenceID !== undefined && (this.sCEFReferenceID < 0 || this.sCEFReferenceID > 4294967295)) {
+            throw new ASN1OverflowError("MonitoringEventReportData.sCEFReferenceID violates INTEGER range");
+        }
+        if (this.monitoredUser !== undefined && (this.monitoredUser.length < 3 || this.monitoredUser.length > 8)) {
+            throw new ASN1SizeError("MonitoringEventReportData.monitoredUser violates SIZE constraint");
+        }
     }
 
     /**
@@ -289,7 +296,7 @@ let _cached_encoder_for_MonitoringEventReportData: $.ASN1Encoder<MonitoringEvent
  */
 export
 function _encode_MonitoringEventReportData (value: MonitoringEventReportData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_MonitoringEventReportData) { _cached_encoder_for_MonitoringEventReportData = function (value: MonitoringEventReportData, elGetter: $.ASN1Encoder<MonitoringEventReportData>): _Element {
+    if (!_cached_encoder_for_MonitoringEventReportData) { _cached_encoder_for_MonitoringEventReportData = function (value: MonitoringEventReportData, _elGetter: $.ASN1Encoder<MonitoringEventReportData>): _Element {
     const _components: _Element[] = [];
     if (value.eventTimestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.eventTimestamp, $.BER));

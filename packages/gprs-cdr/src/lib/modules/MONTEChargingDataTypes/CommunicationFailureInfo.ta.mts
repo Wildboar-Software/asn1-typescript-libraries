@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CauseType, _encode_CauseType, _enum_for_CauseType, CauseType } from "../MONTEChargingDataTypes/CauseType.ta.mjs";
-// export { CauseType, _enum_for_CauseType, CauseType_radioNetworkLayer /* IMPORTED_LONG_ENUMERATION_ITEM */, radioNetworkLayer /* IMPORTED_SHORT_ENUMERATION_ITEM */, CauseType_transportLayer /* IMPORTED_LONG_ENUMERATION_ITEM */, transportLayer /* IMPORTED_SHORT_ENUMERATION_ITEM */, CauseType_nAS /* IMPORTED_LONG_ENUMERATION_ITEM */, nAS /* IMPORTED_SHORT_ENUMERATION_ITEM */, CauseType_protocol /* IMPORTED_LONG_ENUMERATION_ITEM */, protocol /* IMPORTED_SHORT_ENUMERATION_ITEM */, CauseType_miscellaneous /* IMPORTED_LONG_ENUMERATION_ITEM */, miscellaneous /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CauseType, _encode_CauseType } from "../MONTEChargingDataTypes/CauseType.ta.mjs";
 
 
 /**
@@ -206,7 +205,7 @@ let _cached_encoder_for_CommunicationFailureInfo: $.ASN1Encoder<CommunicationFai
  */
 export
 function _encode_CommunicationFailureInfo (value: CommunicationFailureInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CommunicationFailureInfo) { _cached_encoder_for_CommunicationFailureInfo = function (value: CommunicationFailureInfo, elGetter: $.ASN1Encoder<CommunicationFailureInfo>): _Element {
+    if (!_cached_encoder_for_CommunicationFailureInfo) { _cached_encoder_for_CommunicationFailureInfo = function (value: CommunicationFailureInfo, _elGetter: $.ASN1Encoder<CommunicationFailureInfo>): _Element {
     const _components: _Element[] = [];
     if (value.causeType !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => _encode_CauseType, $.BER)(value.causeType, $.BER));

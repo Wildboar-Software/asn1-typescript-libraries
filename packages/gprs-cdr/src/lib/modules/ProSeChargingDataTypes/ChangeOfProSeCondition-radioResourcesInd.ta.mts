@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ChangeOfProSeCondition-radioResourcesInd ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * ChangeOfProSeCondition-radioResourcesInd ::= INTEGER {
+ *    operatorProvided    ( 1 ),
+ *    configured          ( 2 )
+ * }
  * ```
  */
 export

@@ -3,11 +3,11 @@ import {
     INTEGER,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
-// export { DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
 
 
 /**
@@ -54,6 +54,13 @@ class DateDefinition {
         this.month = month;
         this.day = day;
         this.dayClass = dayClass;
+    
+        if ((this.month < 1 || this.month > 12)) {
+            throw new ASN1OverflowError("DateDefinition.month violates INTEGER range");
+        }
+        if ((this.day < 1 || this.day > 31)) {
+            throw new ASN1OverflowError("DateDefinition.day violates INTEGER range");
+        }
     }
 
     /**
@@ -134,12 +141,9 @@ function _decode_DateDefinition (el: _Element): DateDefinition {
     sequence[0].name = "month";
     sequence[1].name = "day";
     sequence[2].name = "dayClass";
-    let month!: INTEGER;
-    let day!: INTEGER;
-    let dayClass!: DayClass;
-    month = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
-    day = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
-    dayClass = $._decode_explicit<DayClass>(() => _decode_DayClass)(sequence[2]);
+    const month: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[0]);
+    const day: INTEGER = $._decode_implicit<INTEGER>(() => $._decodeInteger)(sequence[1]);
+    const dayClass: DayClass = $._decode_explicit<DayClass>(() => _decode_DayClass)(sequence[2]);
     return new DateDefinition(
         month,
         day,
@@ -161,7 +165,7 @@ let _cached_encoder_for_DateDefinition: $.ASN1Encoder<DateDefinition> | null = n
  */
 export
 function _encode_DateDefinition (value: DateDefinition, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DateDefinition) { _cached_encoder_for_DateDefinition = function (value: DateDefinition, elGetter: $.ASN1Encoder<DateDefinition>): _Element {
+    if (!_cached_encoder_for_DateDefinition) { _cached_encoder_for_DateDefinition = function (value: DateDefinition, _elGetter: $.ASN1Encoder<DateDefinition>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeInteger, $.BER)(value.month, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.day, $.BER),

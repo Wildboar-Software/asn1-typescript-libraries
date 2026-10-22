@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,6 +54,10 @@ class RouteingAddress {
         this.eMail_address = eMail_address;
         this.mSISDN = mSISDN;
         this.shortCode = shortCode;
+    
+        if (this.mSISDN !== undefined && (this.mSISDN.length < 1 || this.mSISDN.length > 9)) {
+            throw new ASN1SizeError("RouteingAddress.mSISDN violates SIZE constraint");
+        }
     }
 
     /**
@@ -160,7 +165,7 @@ let _cached_encoder_for_RouteingAddress: $.ASN1Encoder<RouteingAddress> | null =
  */
 export
 function _encode_RouteingAddress (value: RouteingAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RouteingAddress) { _cached_encoder_for_RouteingAddress = function (value: RouteingAddress, elGetter: $.ASN1Encoder<RouteingAddress>): _Element {
+    if (!_cached_encoder_for_RouteingAddress) { _cached_encoder_for_RouteingAddress = function (value: RouteingAddress, _elGetter: $.ASN1Encoder<RouteingAddress>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.eMail_address, $.BER));
     if (value.mSISDN !== undefined) {

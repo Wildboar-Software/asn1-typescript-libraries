@@ -3,11 +3,11 @@ import {
     OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSIorIMEI, _decode_IMSIorIMEI, _encode_IMSIorIMEI } from "../CSChargingDataTypes/IMSIorIMEI.ta.mjs";
-// export { IMSIorIMEI, _decode_IMSIorIMEI, _encode_IMSIorIMEI } from "../CSChargingDataTypes/IMSIorIMEI.ta.mjs";
 
 
 /**
@@ -45,6 +45,10 @@ class EmergencyCallIndication {
     ) {
         this.cellId = cellId;
         this.callerId = callerId;
+    
+        if ((this.cellId.length !== 2)) {
+            throw new ASN1SizeError("EmergencyCallIndication.cellId violates SIZE constraint");
+        }
     }
 
     /**
@@ -123,10 +127,8 @@ function _decode_EmergencyCallIndication (el: _Element): EmergencyCallIndication
     }
     sequence[0].name = "cellId";
     sequence[1].name = "callerId";
-    let cellId!: OCTET_STRING;
-    let callerId!: IMSIorIMEI;
-    cellId = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
-    callerId = $._decode_explicit<IMSIorIMEI>(() => _decode_IMSIorIMEI)(sequence[1]);
+    const cellId: OCTET_STRING = $._decode_implicit<OCTET_STRING>(() => $._decodeOctetString)(sequence[0]);
+    const callerId: IMSIorIMEI = $._decode_explicit<IMSIorIMEI>(() => _decode_IMSIorIMEI)(sequence[1]);
     return new EmergencyCallIndication(
         cellId,
         callerId,
@@ -147,7 +149,7 @@ let _cached_encoder_for_EmergencyCallIndication: $.ASN1Encoder<EmergencyCallIndi
  */
 export
 function _encode_EmergencyCallIndication (value: EmergencyCallIndication, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_EmergencyCallIndication) { _cached_encoder_for_EmergencyCallIndication = function (value: EmergencyCallIndication, elGetter: $.ASN1Encoder<EmergencyCallIndication>): _Element {
+    if (!_cached_encoder_for_EmergencyCallIndication) { _cached_encoder_for_EmergencyCallIndication = function (value: EmergencyCallIndication, _elGetter: $.ASN1Encoder<EmergencyCallIndication>): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.cellId, $.BER),
         /* REQUIRED   */ $._encode_explicit(_TagClass.context, 1, () => _encode_IMSIorIMEI, $.BER)(value.callerId, $.BER)

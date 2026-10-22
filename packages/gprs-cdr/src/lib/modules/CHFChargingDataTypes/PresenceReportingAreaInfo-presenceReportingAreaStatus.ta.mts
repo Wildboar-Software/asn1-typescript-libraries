@@ -10,7 +10,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PresenceReportingAreaInfo-presenceReportingAreaStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * PresenceReportingAreaInfo-presenceReportingAreaStatus ::= ENUMERATED {
+ *    insideArea     ( 0 ),
+ *    outsideArea    ( 1 ),
+ *    inactive       ( 2 ),
+ *    unknown        ( 3 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -30,7 +35,12 @@ enum _enum_for_PresenceReportingAreaInfo_presenceReportingAreaStatus {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PresenceReportingAreaInfo-presenceReportingAreaStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * PresenceReportingAreaInfo-presenceReportingAreaStatus ::= ENUMERATED {
+ *    insideArea     ( 0 ),
+ *    outsideArea    ( 1 ),
+ *    inactive       ( 2 ),
+ *    unknown        ( 3 )
+ * }
  * ```
  * 
  * @enum {number}
@@ -45,7 +55,12 @@ type PresenceReportingAreaInfo_presenceReportingAreaStatus = _enum_for_PresenceR
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PresenceReportingAreaInfo-presenceReportingAreaStatus ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * PresenceReportingAreaInfo-presenceReportingAreaStatus ::= ENUMERATED {
+ *    insideArea     ( 0 ),
+ *    outsideArea    ( 1 ),
+ *    inactive       ( 2 ),
+ *    unknown        ( 3 )
+ * }
  * ```
  * 
  * @enum {number}

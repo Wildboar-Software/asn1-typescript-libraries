@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    IA5String
+    IA5String,
+    ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type CAMELAccessPointNameOI = IA5String; // IA5String
 
-export
-const _decode_CAMELAccessPointNameOI: $.ASN1Decoder<CAMELAccessPointNameOI> = $._decodeIA5String;
+export const _decode_CAMELAccessPointNameOI = (el: _Element): CAMELAccessPointNameOI => {
+    const value = $._decodeIA5String(el);
+    if (value.length < 1 || value.length > 37) {
+        throw new ASN1SizeError("CAMELAccessPointNameOI violates SIZE constraint");
+    }
+    return value;
+};
 
 export
 const _encode_CAMELAccessPointNameOI: $.ASN1Encoder<CAMELAccessPointNameOI> = $._encodeIA5String;

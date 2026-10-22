@@ -4,11 +4,11 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RangeClass, _decode_RangeClass, _encode_RangeClass, _enum_for_RangeClass } from "../ProSeChargingDataTypes/RangeClass.ta.mjs";
-// export { RangeClass, _enum_for_RangeClass, RangeClass_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, RangeClass_fiftyMeter /* IMPORTED_LONG_ENUMERATION_ITEM */, fiftyMeter /* IMPORTED_SHORT_ENUMERATION_ITEM */, RangeClass_onehundredMeter /* IMPORTED_LONG_ENUMERATION_ITEM */, onehundredMeter /* IMPORTED_SHORT_ENUMERATION_ITEM */, RangeClass_twohundredMeter /* IMPORTED_LONG_ENUMERATION_ITEM */, twohundredMeter /* IMPORTED_SHORT_ENUMERATION_ITEM */, RangeClass_fivehundredMeter /* IMPORTED_LONG_ENUMERATION_ITEM */, fivehundredMeter /* IMPORTED_SHORT_ENUMERATION_ITEM */, RangeClass_onethousandMeter /* IMPORTED_LONG_ENUMERATION_ITEM */, onethousandMeter /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RangeClass, _encode_RangeClass } from "../ProSeChargingDataTypes/RangeClass.ta.mjs";
 
 
 /**
@@ -64,6 +64,10 @@ class ProximityRequestRenewalInfoBlock {
         this.timeWindow = timeWindow;
         this.rangeClass = rangeClass;
         this.uELocation = uELocation;
+    
+        if (this.proSeRequestTimestamp !== undefined && (this.proSeRequestTimestamp.length !== 9)) {
+            throw new ASN1SizeError("ProximityRequestRenewalInfoBlock.proSeRequestTimestamp violates SIZE constraint");
+        }
     }
 
     /**
@@ -181,7 +185,7 @@ let _cached_encoder_for_ProximityRequestRenewalInfoBlock: $.ASN1Encoder<Proximit
  */
 export
 function _encode_ProximityRequestRenewalInfoBlock (value: ProximityRequestRenewalInfoBlock, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ProximityRequestRenewalInfoBlock) { _cached_encoder_for_ProximityRequestRenewalInfoBlock = function (value: ProximityRequestRenewalInfoBlock, elGetter: $.ASN1Encoder<ProximityRequestRenewalInfoBlock>): _Element {
+    if (!_cached_encoder_for_ProximityRequestRenewalInfoBlock) { _cached_encoder_for_ProximityRequestRenewalInfoBlock = function (value: ProximityRequestRenewalInfoBlock, _elGetter: $.ASN1Encoder<ProximityRequestRenewalInfoBlock>): _Element {
     const _components: _Element[] = [];
     if (value.proSeRequestTimestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.proSeRequestTimestamp, $.BER));

@@ -148,7 +148,7 @@ let _cached_encoder_for_Flows: $.ASN1Encoder<Flows> | null = null;
  */
 export
 function _encode_Flows (value: Flows, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Flows) { _cached_encoder_for_Flows = function (value: Flows, elGetter: $.ASN1Encoder<Flows>): _Element {
+    if (!_cached_encoder_for_Flows) { _cached_encoder_for_Flows = function (value: Flows, _elGetter: $.ASN1Encoder<Flows>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.mediaComponentNumber, $.BER));
     if (value.flowNumber !== undefined) {

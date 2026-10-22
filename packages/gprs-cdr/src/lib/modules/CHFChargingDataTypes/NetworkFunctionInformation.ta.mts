@@ -4,15 +4,13 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkFunctionality, _decode_NetworkFunctionality, _encode_NetworkFunctionality, _enum_for_NetworkFunctionality } from "../CHFChargingDataTypes/NetworkFunctionality.ta.mjs";
-// export { NetworkFunctionality, _enum_for_NetworkFunctionality, NetworkFunctionality_cHF /* IMPORTED_LONG_ENUMERATION_ITEM */, cHF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkFunctionality_sMF /* IMPORTED_LONG_ENUMERATION_ITEM */, sMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkFunctionality_aMF /* IMPORTED_LONG_ENUMERATION_ITEM */, aMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NetworkFunctionality_sMSF /* IMPORTED_LONG_ENUMERATION_ITEM */, sMSF /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NetworkFunctionality, _encode_NetworkFunctionality } from "../CHFChargingDataTypes/NetworkFunctionality.ta.mjs";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../CHFChargingDataTypes/IPAddress.ta.mjs";
-// export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../CHFChargingDataTypes/IPAddress.ta.mjs";
 import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFChargingDataTypes/NodeAddress.ta.mjs";
-// export { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFChargingDataTypes/NodeAddress.ta.mjs";
 
 
 /**
@@ -86,6 +84,13 @@ class NetworkFunctionInformation {
         this.networkFunctionPLMNIdentifier = networkFunctionPLMNIdentifier;
         this.networkFunctionIPv6Address = networkFunctionIPv6Address;
         this.networkFunctionFQDN = networkFunctionFQDN;
+    
+        if (this.networkFunctionName !== undefined && (this.networkFunctionName.length < 1 || this.networkFunctionName.length > 36)) {
+            throw new ASN1SizeError("NetworkFunctionInformation.networkFunctionName violates SIZE constraint");
+        }
+        if (this.networkFunctionPLMNIdentifier !== undefined && (this.networkFunctionPLMNIdentifier.length !== 3)) {
+            throw new ASN1SizeError("NetworkFunctionInformation.networkFunctionPLMNIdentifier violates SIZE constraint");
+        }
     }
 
     /**
@@ -211,7 +216,7 @@ let _cached_encoder_for_NetworkFunctionInformation: $.ASN1Encoder<NetworkFunctio
  */
 export
 function _encode_NetworkFunctionInformation (value: NetworkFunctionInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NetworkFunctionInformation) { _cached_encoder_for_NetworkFunctionInformation = function (value: NetworkFunctionInformation, elGetter: $.ASN1Encoder<NetworkFunctionInformation>): _Element {
+    if (!_cached_encoder_for_NetworkFunctionInformation) { _cached_encoder_for_NetworkFunctionInformation = function (value: NetworkFunctionInformation, _elGetter: $.ASN1Encoder<NetworkFunctionInformation>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_NetworkFunctionality, $.BER)(value.networkFunctionality, $.BER));
     if (value.networkFunctionName !== undefined) {

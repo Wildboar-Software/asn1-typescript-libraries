@@ -5,29 +5,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SCSCFRecord, _decode_SCSCFRecord, _encode_SCSCFRecord } from "../IMSChargingDataTypes/SCSCFRecord.ta.mjs";
-// export { SCSCFRecord, _decode_SCSCFRecord, _encode_SCSCFRecord } from "../IMSChargingDataTypes/SCSCFRecord.ta.mjs";
 import { PCSCFRecord, _decode_PCSCFRecord, _encode_PCSCFRecord } from "../IMSChargingDataTypes/PCSCFRecord.ta.mjs";
-// export { PCSCFRecord, _decode_PCSCFRecord, _encode_PCSCFRecord } from "../IMSChargingDataTypes/PCSCFRecord.ta.mjs";
 import { ICSCFRecord, _decode_ICSCFRecord, _encode_ICSCFRecord } from "../IMSChargingDataTypes/ICSCFRecord.ta.mjs";
-// export { ICSCFRecord, _decode_ICSCFRecord, _encode_ICSCFRecord } from "../IMSChargingDataTypes/ICSCFRecord.ta.mjs";
 import { MRFCRecord, _decode_MRFCRecord, _encode_MRFCRecord } from "../IMSChargingDataTypes/MRFCRecord.ta.mjs";
-// export { MRFCRecord, _decode_MRFCRecord, _encode_MRFCRecord } from "../IMSChargingDataTypes/MRFCRecord.ta.mjs";
 import { MGCFRecord, _decode_MGCFRecord, _encode_MGCFRecord } from "../IMSChargingDataTypes/MGCFRecord.ta.mjs";
-// export { MGCFRecord, _decode_MGCFRecord, _encode_MGCFRecord } from "../IMSChargingDataTypes/MGCFRecord.ta.mjs";
 import { BGCFRecord, _decode_BGCFRecord, _encode_BGCFRecord } from "../IMSChargingDataTypes/BGCFRecord.ta.mjs";
-// export { BGCFRecord, _decode_BGCFRecord, _encode_BGCFRecord } from "../IMSChargingDataTypes/BGCFRecord.ta.mjs";
 import { ASRecord, _decode_ASRecord, _encode_ASRecord } from "../IMSChargingDataTypes/ASRecord.ta.mjs";
-// export { ASRecord, _decode_ASRecord, _encode_ASRecord } from "../IMSChargingDataTypes/ASRecord.ta.mjs";
 import { ECSCFRecord, _decode_ECSCFRecord, _encode_ECSCFRecord } from "../IMSChargingDataTypes/ECSCFRecord.ta.mjs";
-// export { ECSCFRecord, _decode_ECSCFRecord, _encode_ECSCFRecord } from "../IMSChargingDataTypes/ECSCFRecord.ta.mjs";
 import { IBCFRecord, _decode_IBCFRecord, _encode_IBCFRecord } from "../IMSChargingDataTypes/IBCFRecord.ta.mjs";
-// export { IBCFRecord, _decode_IBCFRecord, _encode_IBCFRecord } from "../IMSChargingDataTypes/IBCFRecord.ta.mjs";
 import { TRFRecord, _decode_TRFRecord, _encode_TRFRecord } from "../IMSChargingDataTypes/TRFRecord.ta.mjs";
-// export { TRFRecord, _decode_TRFRecord, _encode_TRFRecord } from "../IMSChargingDataTypes/TRFRecord.ta.mjs";
 import { TFRecord, _decode_TFRecord, _encode_TFRecord } from "../IMSChargingDataTypes/TFRecord.ta.mjs";
-// export { TFRecord, _decode_TFRecord, _encode_TFRecord } from "../IMSChargingDataTypes/TFRecord.ta.mjs";
 import { ATCFRecord, _decode_ATCFRecord, _encode_ATCFRecord } from "../IMSChargingDataTypes/ATCFRecord.ta.mjs";
-// export { ATCFRecord, _decode_ATCFRecord, _encode_ATCFRecord } from "../IMSChargingDataTypes/ATCFRecord.ta.mjs";
 
 
 /**

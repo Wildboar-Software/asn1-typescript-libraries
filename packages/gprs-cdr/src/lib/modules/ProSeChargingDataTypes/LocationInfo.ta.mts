@@ -3,7 +3,8 @@ import {
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     OCTET_STRING,
-    OPTIONAL
+    OPTIONAL,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,6 +45,10 @@ class LocationInfo {
     ) {
         this.uELocation = uELocation;
         this.timeStamp = timeStamp;
+    
+        if (this.timeStamp !== undefined && (this.timeStamp.length !== 9)) {
+            throw new ASN1SizeError("LocationInfo.timeStamp violates SIZE constraint");
+        }
     }
 
     /**
@@ -147,7 +152,7 @@ let _cached_encoder_for_LocationInfo: $.ASN1Encoder<LocationInfo> | null = null;
  */
 export
 function _encode_LocationInfo (value: LocationInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LocationInfo) { _cached_encoder_for_LocationInfo = function (value: LocationInfo, elGetter: $.ASN1Encoder<LocationInfo>): _Element {
+    if (!_cached_encoder_for_LocationInfo) { _cached_encoder_for_LocationInfo = function (value: LocationInfo, _elGetter: $.ASN1Encoder<LocationInfo>): _Element {
     const _components: _Element[] = [];
     if (value.uELocation !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.uELocation, $.BER));

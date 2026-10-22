@@ -6,15 +6,14 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../MMTelChargingDataTypes/SDP-Media-Components.ta.mjs";
-// export { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../MMTelChargingDataTypes/SDP-Media-Components.ta.mjs";
 import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
-// export { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
 import { SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from "../MMTelChargingDataTypes/SDP-Type.ta.mjs";
-// export { SDP_Type, _enum_for_SDP_Type, SDP_Type_sDP_offer /* IMPORTED_LONG_ENUMERATION_ITEM */, sDP_offer /* IMPORTED_SHORT_ENUMERATION_ITEM */, SDP_Type_sDP_answer /* IMPORTED_LONG_ENUMERATION_ITEM */, sDP_answer /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SDP_Type, _encode_SDP_Type } from "../MMTelChargingDataTypes/SDP-Type.ta.mjs";
 
 
 /**
@@ -117,6 +116,19 @@ class List_Of_SDP_Media_Components {
         this.sIP_Request_Timestamp_Fraction = sIP_Request_Timestamp_Fraction;
         this.sIP_Response_Timestamp_Fraction = sIP_Response_Timestamp_Fraction;
         this.sDP_Type = sDP_Type;
+    
+        if (this.sIP_Request_Timestamp !== undefined && (this.sIP_Request_Timestamp.length !== 9)) {
+            throw new ASN1SizeError("List_Of_SDP_Media_Components.sIP_Request_Timestamp violates SIZE constraint");
+        }
+        if (this.sIP_Response_Timestamp !== undefined && (this.sIP_Response_Timestamp.length !== 9)) {
+            throw new ASN1SizeError("List_Of_SDP_Media_Components.sIP_Response_Timestamp violates SIZE constraint");
+        }
+        if (this.sIP_Request_Timestamp_Fraction !== undefined && (this.sIP_Request_Timestamp_Fraction < 0 || this.sIP_Request_Timestamp_Fraction > 999)) {
+            throw new ASN1OverflowError("List_Of_SDP_Media_Components.sIP_Request_Timestamp_Fraction violates INTEGER range");
+        }
+        if (this.sIP_Response_Timestamp_Fraction !== undefined && (this.sIP_Response_Timestamp_Fraction < 0 || this.sIP_Response_Timestamp_Fraction > 999)) {
+            throw new ASN1OverflowError("List_Of_SDP_Media_Components.sIP_Response_Timestamp_Fraction violates INTEGER range");
+        }
     }
 
     /**
@@ -254,7 +266,7 @@ let _cached_encoder_for_List_Of_SDP_Media_Components: $.ASN1Encoder<List_Of_SDP_
  */
 export
 function _encode_List_Of_SDP_Media_Components (value: List_Of_SDP_Media_Components, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_List_Of_SDP_Media_Components) { _cached_encoder_for_List_Of_SDP_Media_Components = function (value: List_Of_SDP_Media_Components, elGetter: $.ASN1Encoder<List_Of_SDP_Media_Components>): _Element {
+    if (!_cached_encoder_for_List_Of_SDP_Media_Components) { _cached_encoder_for_List_Of_SDP_Media_Components = function (value: List_Of_SDP_Media_Components, _elGetter: $.ASN1Encoder<List_Of_SDP_Media_Components>): _Element {
     const _components: _Element[] = [];
     if (value.sIP_Request_Timestamp !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.sIP_Request_Timestamp, $.BER));

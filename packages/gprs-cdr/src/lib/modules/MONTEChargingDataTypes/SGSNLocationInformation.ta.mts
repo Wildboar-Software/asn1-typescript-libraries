@@ -8,9 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CurrentLocationRetrieved, _decode_CurrentLocationRetrieved, _encode_CurrentLocationRetrieved, _enum_for_CurrentLocationRetrieved } from "../MONTEChargingDataTypes/CurrentLocationRetrieved.ta.mjs";
-// export { CurrentLocationRetrieved, _enum_for_CurrentLocationRetrieved, CurrentLocationRetrieved_activeLocationRetrieval /* IMPORTED_LONG_ENUMERATION_ITEM */, activeLocationRetrieval /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CurrentLocationRetrieved, _encode_CurrentLocationRetrieved } from "../MONTEChargingDataTypes/CurrentLocationRetrieved.ta.mjs";
 import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../MONTEChargingDataTypes/UserCSGInformation.ta.mjs";
-// export { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../MONTEChargingDataTypes/UserCSGInformation.ta.mjs";
 
 
 /**
@@ -248,7 +246,7 @@ let _cached_encoder_for_SGSNLocationInformation: $.ASN1Encoder<SGSNLocationInfor
  */
 export
 function _encode_SGSNLocationInformation (value: SGSNLocationInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SGSNLocationInformation) { _cached_encoder_for_SGSNLocationInformation = function (value: SGSNLocationInformation, elGetter: $.ASN1Encoder<SGSNLocationInformation>): _Element {
+    if (!_cached_encoder_for_SGSNLocationInformation) { _cached_encoder_for_SGSNLocationInformation = function (value: SGSNLocationInformation, _elGetter: $.ASN1Encoder<SGSNLocationInformation>): _Element {
     const _components: _Element[] = [];
     if (value.cellGlobalIdentity !== undefined) {
         _components.push(/* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.cellGlobalIdentity, $.BER));

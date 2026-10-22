@@ -4,15 +4,13 @@ import {
     OCTET_STRING,
     OPTIONAL,
     ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InitiatingParty, _decode_InitiatingParty, _encode_InitiatingParty, _enum_for_InitiatingParty } from "../CSChargingDataTypes/InitiatingParty.ta.mjs";
-// export { InitiatingParty, _enum_for_InitiatingParty, InitiatingParty_network /* IMPORTED_LONG_ENUMERATION_ITEM */, network /* IMPORTED_SHORT_ENUMERATION_ITEM */, InitiatingParty_subscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InitiatingParty, _encode_InitiatingParty } from "../CSChargingDataTypes/InitiatingParty.ta.mjs";
 import { AiurRequested, _decode_AiurRequested, _encode_AiurRequested, _enum_for_AiurRequested } from "../CSChargingDataTypes/AiurRequested.ta.mjs";
-// export { AiurRequested, _enum_for_AiurRequested, AiurRequested_aiur09600BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur09600BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur14400BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur14400BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur19200BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur19200BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur28800BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur28800BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur38400BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur38400BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur43200BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur43200BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur57600BitsPerSecond /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur57600BitsPerSecond /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur38400BitsPerSecond1 /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur38400BitsPerSecond1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur38400BitsPerSecond2 /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur38400BitsPerSecond2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur38400BitsPerSecond3 /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur38400BitsPerSecond3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, AiurRequested_aiur38400BitsPerSecond4 /* IMPORTED_LONG_ENUMERATION_ITEM */, aiur38400BitsPerSecond4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AiurRequested, _encode_AiurRequested } from "../CSChargingDataTypes/AiurRequested.ta.mjs";
 import { ChannelCoding, _decode_ChannelCoding, _encode_ChannelCoding, _enum_for_ChannelCoding } from "../CSChargingDataTypes/ChannelCoding.ta.mjs";
-// export { ChannelCoding, _enum_for_ChannelCoding, ChannelCoding_tchF4800 /* IMPORTED_LONG_ENUMERATION_ITEM */, tchF4800 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChannelCoding_tchF9600 /* IMPORTED_LONG_ENUMERATION_ITEM */, tchF9600 /* IMPORTED_SHORT_ENUMERATION_ITEM */, ChannelCoding_tchF14400 /* IMPORTED_LONG_ENUMERATION_ITEM */, tchF14400 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ChannelCoding, _encode_ChannelCoding } from "../CSChargingDataTypes/ChannelCoding.ta.mjs";
 
 
 /**
@@ -86,6 +84,10 @@ class HSCSDParmsChange {
         this.aiurRequested = aiurRequested;
         this.chanCodingUsed = chanCodingUsed;
         this.hSCSDChanRequested = hSCSDChanRequested;
+    
+        if ((this.changeTime.length !== 9)) {
+            throw new ASN1SizeError("HSCSDParmsChange.changeTime violates SIZE constraint");
+        }
     }
 
     /**
@@ -223,7 +225,7 @@ let _cached_encoder_for_HSCSDParmsChange: $.ASN1Encoder<HSCSDParmsChange> | null
  */
 export
 function _encode_HSCSDParmsChange (value: HSCSDParmsChange, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_HSCSDParmsChange) { _cached_encoder_for_HSCSDParmsChange = function (value: HSCSDParmsChange, elGetter: $.ASN1Encoder<HSCSDParmsChange>): _Element {
+    if (!_cached_encoder_for_HSCSDParmsChange) { _cached_encoder_for_HSCSDParmsChange = function (value: HSCSDParmsChange, _elGetter: $.ASN1Encoder<HSCSDParmsChange>): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => $._encodeOctetString, $.BER)(value.changeTime, $.BER));
     _components.push(/* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeInteger, $.BER)(value.hSCSDChanAllocated, $.BER));

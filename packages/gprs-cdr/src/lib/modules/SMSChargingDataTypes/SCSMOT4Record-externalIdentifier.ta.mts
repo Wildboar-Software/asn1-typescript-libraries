@@ -6,7 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SCSMOT4Record_externalIdentifier_subscriptionIDType, _decode_SCSMOT4Record_externalIdentifier_subscriptionIDType, _encode_SCSMOT4Record_externalIdentifier_subscriptionIDType, _enum_for_SCSMOT4Record_externalIdentifier_subscriptionIDType } from "../SMSChargingDataTypes/SCSMOT4Record-externalIdentifier-subscriptionIDType.ta.mjs";
-// export { SCSMOT4Record_externalIdentifier_subscriptionIDType, _enum_for_SCSMOT4Record_externalIdentifier_subscriptionIDType, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_E164 /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_E164 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_IMSI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_IMSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_SIP_URI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_SIP_URI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_NAI /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_NAI /* IMPORTED_SHORT_ENUMERATION_ITEM */, SCSMOT4Record_externalIdentifier_subscriptionIDType_eND_USER_PRIVATE /* IMPORTED_LONG_ENUMERATION_ITEM */, eND_USER_PRIVATE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SCSMOT4Record_externalIdentifier_subscriptionIDType, _encode_SCSMOT4Record_externalIdentifier_subscriptionIDType } from "../SMSChargingDataTypes/SCSMOT4Record-externalIdentifier-subscriptionIDType.ta.mjs";
 
 
 /**
@@ -16,7 +15,15 @@ import { SCSMOT4Record_externalIdentifier_subscriptionIDType, _decode_SCSMOT4Rec
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SCSMOT4Record-externalIdentifier ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SCSMOT4Record-externalIdentifier ::= SET {
+ *    subscriptionIDType   [0] IMPLICIT ENUMERATED {
+ *       eND-USER-E164       ( 0 ),
+ *       eND-USER-IMSI       ( 1 ),
+ *       eND-USER-SIP-URI    ( 2 ),
+ *       eND-USER-NAI        ( 3 ),
+ *       eND-USER-PRIVATE    ( 4 ) },
+ *    subscriptionIDData   [1] IMPLICIT UTF8String
+ * }
  * ```
  * 
  * @class
@@ -155,7 +162,7 @@ let _cached_encoder_for_SCSMOT4Record_externalIdentifier: $.ASN1Encoder<SCSMOT4R
  */
 export
 function _encode_SCSMOT4Record_externalIdentifier (value: SCSMOT4Record_externalIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCSMOT4Record_externalIdentifier) { _cached_encoder_for_SCSMOT4Record_externalIdentifier = function (value: SCSMOT4Record_externalIdentifier, elGetter: $.ASN1Encoder<SCSMOT4Record_externalIdentifier>): _Element {
+    if (!_cached_encoder_for_SCSMOT4Record_externalIdentifier) { _cached_encoder_for_SCSMOT4Record_externalIdentifier = function (value: SCSMOT4Record_externalIdentifier, _elGetter: $.ASN1Encoder<SCSMOT4Record_externalIdentifier>): _Element {
     return $._encodeSet([
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 0, () => _encode_SCSMOT4Record_externalIdentifier_subscriptionIDType, $.BER)(value.subscriptionIDType, $.BER),
         /* REQUIRED   */ $._encode_implicit(_TagClass.context, 1, () => $._encodeUTF8String, $.BER)(value.subscriptionIDData, $.BER)

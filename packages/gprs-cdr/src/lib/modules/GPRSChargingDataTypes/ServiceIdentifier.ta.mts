@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ServiceIdentifier = INTEGER;
 
-export
-const _decode_ServiceIdentifier: $.ASN1Decoder<ServiceIdentifier> = $._decodeInteger;
+export const _decode_ServiceIdentifier = (el: _Element): ServiceIdentifier => {
+    const value = $._decodeInteger(el);
+    if (value < 0 || value > 4294967295) {
+        throw new ASN1OverflowError("ServiceIdentifier violates INTEGER range");
+    }
+    return value;
+};
 
 export
 const _encode_ServiceIdentifier: $.ASN1Encoder<ServiceIdentifier> = $._encodeInteger;
