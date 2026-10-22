@@ -24,7 +24,7 @@ type Interval = INTEGER;
 export
 function _decode_Interval (el: _Element): Interval {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < -1n || value > 60000n) : (value < -1 || value > 60000)) {
+    if (value < -1 || value > 60000) {
         throw new ASN1OverflowError("Interval violates INTEGER constraint");
     }
     return value;

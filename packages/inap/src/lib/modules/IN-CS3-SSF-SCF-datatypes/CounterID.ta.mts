@@ -24,7 +24,7 @@ type CounterID = INTEGER;
 export
 function _decode_CounterID (el: _Element): CounterID {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 0n || value > 9n) : (value < 0 || value > 9)) {
+    if (value < 0 || value > 9) {
         throw new ASN1OverflowError("CounterID violates INTEGER constraint");
     }
     return value;

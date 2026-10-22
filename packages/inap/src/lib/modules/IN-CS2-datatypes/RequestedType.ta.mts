@@ -24,7 +24,7 @@ type RequestedType = INTEGER;
 export
 function _decode_RequestedType (el: _Element): RequestedType {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 0n || value > 127n) : (value < 0 || value > 127)) {
+    if (value < 0 || value > 127) {
         throw new ASN1OverflowError("RequestedType violates INTEGER constraint");
     }
     return value;

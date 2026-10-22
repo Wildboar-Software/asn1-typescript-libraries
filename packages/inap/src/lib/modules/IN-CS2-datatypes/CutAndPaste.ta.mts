@@ -24,7 +24,7 @@ type CutAndPaste = INTEGER;
 export
 function _decode_CutAndPaste (el: _Element): CutAndPaste {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 0n || value > 22n) : (value < 0 || value > 22)) {
+    if (value < 0 || value > 22) {
         throw new ASN1OverflowError("CutAndPaste violates INTEGER constraint");
     }
     return value;

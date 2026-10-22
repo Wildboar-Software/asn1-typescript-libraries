@@ -25,7 +25,7 @@ type MaximumNumberOfCounters = INTEGER;
 export
 function _decode_MaximumNumberOfCounters (el: _Element): MaximumNumberOfCounters {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 1n || value > BigInt(numOfCounters)) : (value < 1 || value > numOfCounters)) {
+    if (value < 1 || value > numOfCounters) {
         throw new ASN1OverflowError("MaximumNumberOfCounters violates INTEGER constraint");
     }
     return value;

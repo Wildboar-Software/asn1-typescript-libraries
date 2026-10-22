@@ -24,7 +24,7 @@ type Integer4 = INTEGER;
 export
 function _decode_Integer4 (el: _Element): Integer4 {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 0n || value > 2147483647n) : (value < 0 || value > 2147483647)) {
+    if (value < 0 || value > 2147483647) {
         throw new ASN1OverflowError("Integer4 violates INTEGER constraint");
     }
     return value;

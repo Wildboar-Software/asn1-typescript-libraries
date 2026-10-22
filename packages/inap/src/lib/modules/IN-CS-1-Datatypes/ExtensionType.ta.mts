@@ -24,7 +24,7 @@ type ExtensionType = INTEGER;
 export
 function _decode_ExtensionType (el: _Element): ExtensionType {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 0n) : (value < 0)) {
+    if (value < 0) {
         throw new ASN1OverflowError("ExtensionType violates INTEGER constraint");
     }
     return value;

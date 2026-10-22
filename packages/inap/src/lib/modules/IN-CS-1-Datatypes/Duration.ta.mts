@@ -24,7 +24,7 @@ type Duration = INTEGER;
 export
 function _decode_Duration (el: _Element): Duration {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < -2n || value > 86400n) : (value < -2 || value > 86400)) {
+    if (value < -2 || value > 86400) {
         throw new ASN1OverflowError("Duration violates INTEGER constraint");
     }
     return value;

@@ -25,7 +25,7 @@ type CreditUnit = INTEGER;
 export
 function _decode_CreditUnit (el: _Element): CreditUnit {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 0n || value > BigInt(maxCreditUnit)) : (value < 0 || value > maxCreditUnit)) {
+    if (value < 0 || value > maxCreditUnit) {
         throw new ASN1OverflowError("CreditUnit violates INTEGER constraint");
     }
     return value;

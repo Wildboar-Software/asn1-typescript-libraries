@@ -24,7 +24,7 @@ type ApplicationTimer = INTEGER;
 export
 function _decode_ApplicationTimer (el: _Element): ApplicationTimer {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 0n || value > 2047n) : (value < 0 || value > 2047)) {
+    if (value < 0 || value > 2047) {
         throw new ASN1OverflowError("ApplicationTimer violates INTEGER constraint");
     }
     return value;

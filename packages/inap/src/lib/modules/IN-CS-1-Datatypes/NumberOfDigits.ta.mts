@@ -24,7 +24,7 @@ type NumberOfDigits = INTEGER;
 export
 function _decode_NumberOfDigits (el: _Element): NumberOfDigits {
     const value = $._decodeInteger(el);
-    if (typeof value === "bigint" ? (value < 1n || value > 255n) : (value < 1 || value > 255)) {
+    if (value < 1 || value > 255) {
         throw new ASN1OverflowError("NumberOfDigits violates INTEGER constraint");
     }
     return value;
