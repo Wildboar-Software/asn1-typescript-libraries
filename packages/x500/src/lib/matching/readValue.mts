@@ -7,6 +7,7 @@ import {
     type INTEGER,
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
+import SubstringSelection from "../types/SubstringSelection.mjs";
 import {
     _decode_UnboundedDirectoryString,
 } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -35,6 +36,7 @@ import type {
     OctetSubstringAssertion_Item,
 } from "../modules/SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
 import directoryStringToString from "../stringifiers/directoryStringToString.mjs";
+import type { SubstringComponent } from "../utils/substringPartition.mjs";
 
 /**
  * Decode `value` when it is an element; otherwise return it unchanged.
@@ -229,13 +231,9 @@ function readLeadingObjectIdentifier (value: ObjectIdentifierInput): OBJECT_IDEN
  * One `initial`, `any`, or `final` substring piece, plus `control`
  * and unrecognized choices so the typed matcher can reject them.
  * `T` is the piece payload: a string or an octet string.
+ * Matching kinds reuse {@link SubstringSelection}.
  */
-export type PreparedSubstringPiece<T> =
-    | { readonly kind: "initial"; readonly value: T }
-    | { readonly kind: "any"; readonly value: T }
-    | { readonly kind: "final"; readonly value: T }
-    | { readonly kind: "control" }
-    | { readonly kind: "unknown" };
+export type PreparedSubstringPiece<T> = SubstringComponent<T>;
 
 /** Prepared `SubstringAssertion` pieces. */
 export type PreparedSubstring = PreparedSubstringPiece<string>;
@@ -287,13 +285,13 @@ function readSubstringPiece<TIn, TOut> (
         return item;
     }
     if ("initial" in item && item.initial !== undefined) {
-        return { kind: "initial", value: convert(item.initial) };
+        return { kind: SubstringSelection.initial, value: convert(item.initial) };
     }
     if ("any_" in item && item.any_ !== undefined) {
-        return { kind: "any", value: convert(item.any_) };
+        return { kind: SubstringSelection.any_, value: convert(item.any_) };
     }
     if ("final" in item && item.final !== undefined) {
-        return { kind: "final", value: convert(item.final) };
+        return { kind: SubstringSelection.final, value: convert(item.final) };
     }
     if ("control" in item) {
         return { kind: "control" };
@@ -334,4 +332,33 @@ function readOctetSubstringAssertion (
 ): PreparedOctetSubstring[] {
     const items = ASN1Element.isElement(value) ? _decode_OctetSubstringAssertion(value) : value;
     return readSubstringPieces(items, (component) => component);
+}
+
+/**
+ * `selection` means `assertion` is one directory-string component.
+ * Otherwise a `SubstringAssertion` SEQUENCE, a decoded piece list,
+ * a directory string, or a JavaScript string (treated as `any`).
+ */
+export
+function readSubstringAssertionOrComponent (
+    assertion: SubstringAssertionInput | DirectoryStringInput,
+    selection?: SubstringSelection,
+): PreparedSubstring[] {
+    if (selection !== undefined) {
+        return [{ kind: selection, value: readDirectoryString(assertion as DirectoryStringInput) }];
+    }
+    if (typeof assertion === "string") {
+        return [{ kind: SubstringSelection.any_, value: assertion }];
+    }
+    if (Array.isArray(assertion)) {
+        return readSubstringAssertion(assertion);
+    }
+    if (
+        ASN1Element.isElement(assertion)
+        && assertion.tagClass === ASN1TagClass.universal
+        && assertion.tagNumber === ASN1UniversalType.sequence
+    ) {
+        return readSubstringAssertion(assertion);
+    }
+    return [{ kind: SubstringSelection.any_, value: readDirectoryString(assertion as DirectoryStringInput) }];
 }

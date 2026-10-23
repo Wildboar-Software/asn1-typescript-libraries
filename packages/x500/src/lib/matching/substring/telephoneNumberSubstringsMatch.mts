@@ -8,6 +8,11 @@ import { readSubstringAssertion } from "../readValue.mjs";
 import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { matchSubstringPieces, partitionString } from "../../utils/substringPartition.mjs";
+
+function normalizeTelephoneNumber (telephoneNumber: string): string {
+    return telephoneNumber.replace(/[- ]/g, "");
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.9
@@ -32,30 +37,22 @@ function telephoneNumberSubstringsMatch (
 
 /**
  * `telephoneNumberSubstringsMatch` on prepared pieces and a
- * telephone number. Digits are kept from the stored number; the
- * presented pieces are not rewritten.
+ * telephone number. Hyphens and spaces are removed; `+` is kept.
  *
  * @param assertion Presented substring pieces.
  * @param value Stored telephone number.
- * @returns `true` when every piece matches the digit string.
+ * @returns `true` when the pieces partition the normalized number.
  */
 export
 function telephoneNumberSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    const v: string = value.replace(/\D/g, "");
-    return assertion.every((str) => {
-        if (str.kind === "initial") {
-            return v.startsWith(str.value);
-        } else if (str.kind === "any") {
-            return (v.indexOf(str.value) > -1);
-        } else if (str.kind === "final") {
-            return v.endsWith(str.value);
-        } else {
-            return false;
-        }
-    });
+    return matchSubstringPieces(
+        partitionString(normalizeTelephoneNumber(value)),
+        assertion,
+        (text) => normalizeTelephoneNumber(text),
+    );
 }
 
 export default telephoneNumberSubstringsMatch;
