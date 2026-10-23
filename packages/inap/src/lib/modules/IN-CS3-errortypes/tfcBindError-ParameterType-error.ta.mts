@@ -17,7 +17,11 @@ import { SecurityProblem, _decode_SecurityProblem, _encode_SecurityProblem } fro
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * tfcBindError-ParameterType-error ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * tfcBindError-ParameterType-error ::=
+ * CHOICE {
+ *   serviceError [1] ServiceProblem,
+ *   securityError [2] SecurityProblem
+ * }
  * ```
  */
 export

@@ -10,7 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Destination-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Destination-type ::=
+ * ENUMERATED {
+ *   e164(0),
+ *   x121(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +32,11 @@ enum _enum_for_Destination_type {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Destination-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Destination-type ::=
+ * ENUMERATED {
+ *   e164(0),
+ *   x121(1)
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +51,11 @@ type Destination_type = _enum_for_Destination_type;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Destination-type ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * Destination-type ::=
+ * ENUMERATED {
+ *   e164(0),
+ *   x121(1)
+ * }
  * ```
  * 
  * @enum {number}

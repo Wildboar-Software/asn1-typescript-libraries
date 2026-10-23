@@ -16,7 +16,11 @@ import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS3
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-creditLimitReachedSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-creditLimitReachedSpecificInfo ::=
+ * SEQUENCE {
+ *   timeStamp [0] DateAndTime OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

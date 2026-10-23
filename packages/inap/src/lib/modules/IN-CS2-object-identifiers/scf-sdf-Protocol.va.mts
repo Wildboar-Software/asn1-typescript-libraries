@@ -21,8 +21,8 @@ import {
  */
 export
 const scf_sdf_Protocol: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     1218,
     /* modules */ 0,
     /* in-scf-sdf-protocol */ 12,

@@ -20,7 +20,13 @@ import { AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_Additiona
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-tModifyResultSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-tModifyResultSpecificInfo ::=
+ * SEQUENCE {
+ *   modifyResultType [0] ModifyResultType DEFAULT modifyAcknowledge,
+ *   aTMCellRate [1] ATMCellRate OPTIONAL,
+ *   additionalATMCellRate [2] AdditionalATMCellRate OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

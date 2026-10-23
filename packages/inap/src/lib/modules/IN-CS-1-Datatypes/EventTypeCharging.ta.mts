@@ -1,7 +1,11 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { minEventTypeChargingLength } from "./minEventTypeChargingLength.va.mjs";
+import { maxEventTypeChargingLength } from "./maxEventTypeChargingLength.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +25,13 @@ export
 type EventTypeCharging = OCTET_STRING; // OctetStringType
 
 export
-const _decode_EventTypeCharging: $.ASN1Decoder<EventTypeCharging> = $._decodeOctetString;
+function _decode_EventTypeCharging (el: _Element): EventTypeCharging {
+    const value = $._decodeOctetString(el);
+    if (value.length < minEventTypeChargingLength || value.length > maxEventTypeChargingLength) {
+        throw new ASN1SizeError("EventTypeCharging violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_EventTypeCharging: $.ASN1Encoder<EventTypeCharging> = $._encodeOctetString;

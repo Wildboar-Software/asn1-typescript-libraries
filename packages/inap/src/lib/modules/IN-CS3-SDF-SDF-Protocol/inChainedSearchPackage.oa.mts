@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";
 // export { chainedSearch } from "../DistributedOperations/chainedSearch.oa.mjs";

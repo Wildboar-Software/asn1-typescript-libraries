@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { chainedExecute } from "../IN-CS2-SDF-SDF-Protocol/chainedExecute.oa.mjs";
 // export { chainedExecute } from "../IN-CS2-SDF-SDF-Protocol/chainedExecute.oa.mjs";

@@ -1,3 +1,4 @@
+import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";

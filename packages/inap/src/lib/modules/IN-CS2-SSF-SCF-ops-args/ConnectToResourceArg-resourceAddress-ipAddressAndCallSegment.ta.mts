@@ -18,7 +18,11 @@ import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectToResourceArg-resourceAddress-ipAddressAndCallSegment ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ConnectToResourceArg-resourceAddress-ipAddressAndCallSegment ::=
+ * SEQUENCE {
+ *   ipRoutingAddress [0] IPRoutingAddress,
+ *   callSegmentID [1] CallSegmentID
+ * }
  * ```
  * 
  * @class
@@ -122,10 +126,8 @@ function _decode_ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment (e
     }
     sequence[0].name = "ipRoutingAddress";
     sequence[1].name = "callSegmentID";
-    let ipRoutingAddress!: IPRoutingAddress;
-    let callSegmentID!: CallSegmentID;
-    ipRoutingAddress = $._decode_implicit<IPRoutingAddress>(() => _decode_IPRoutingAddress)(sequence[0]);
-    callSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(sequence[1]);
+    const ipRoutingAddress: IPRoutingAddress = $._decode_implicit<IPRoutingAddress>(() => _decode_IPRoutingAddress)(sequence[0]);
+    const callSegmentID: CallSegmentID = $._decode_implicit<CallSegmentID>(() => _decode_CallSegmentID)(sequence[1]);
     return new ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment(
         ipRoutingAddress,
         callSegmentID,

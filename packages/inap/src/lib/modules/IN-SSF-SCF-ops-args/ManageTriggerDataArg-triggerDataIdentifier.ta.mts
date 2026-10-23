@@ -17,7 +17,12 @@ import { ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ManageTriggerDataArg-triggerDataIdentifier ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ManageTriggerDataArg-triggerDataIdentifier ::=
+ * CHOICE {
+ *   profileAndDP [1] TriggerDataIdentifier,
+ *   -- one trigger
+ *   profile [5] ProfileIdentifier
+ * }
  * ```
  */
 export

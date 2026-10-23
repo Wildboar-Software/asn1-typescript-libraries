@@ -124,10 +124,8 @@ function _decode_DITMethodUse (el: _Element): DITMethodUse {
     }
     sequence[0].name = "objectClass";
     sequence[1].name = "methods";
-    let objectClass!: OBJECT_IDENTIFIER;
-    let methods!: OBJECT_IDENTIFIER[];
-    objectClass = $._decodeObjectIdentifier(sequence[0]);
-    methods = $._decode_explicit<OBJECT_IDENTIFIER[]>(() => $._decodeSetOf<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier))(sequence[1]);
+    const objectClass: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const methods: OBJECT_IDENTIFIER[] = $._decode_explicit<OBJECT_IDENTIFIER[]>(() => $._decodeSetOf<OBJECT_IDENTIFIER>(() => $._decodeObjectIdentifier))(sequence[1]);
     return new DITMethodUse(
         objectClass,
         methods,

@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type CUG_Interlock = OCTET_STRING; // OctetStringType
 
 export
-const _decode_CUG_Interlock: $.ASN1Decoder<CUG_Interlock> = $._decodeOctetString;
+function _decode_CUG_Interlock (el: _Element): CUG_Interlock {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 4) {
+        throw new ASN1SizeError("CUG_Interlock violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_CUG_Interlock: $.ASN1Encoder<CUG_Interlock> = $._encodeOctetString;

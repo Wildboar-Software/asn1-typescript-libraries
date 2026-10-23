@@ -18,7 +18,12 @@ import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS3
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-callReleaseSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-callReleaseSpecificInfo ::=
+ * SEQUENCE {
+ *   releaseCause [0] Cause OPTIONAL,
+ *   timeStamp [1] DateAndTime OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

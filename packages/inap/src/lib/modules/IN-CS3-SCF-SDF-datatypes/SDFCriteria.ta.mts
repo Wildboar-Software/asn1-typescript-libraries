@@ -120,8 +120,7 @@ function _decode_SDFCriteria (el: _Element): SDFCriteria {
         throw new _ConstructionError("SDFCriteria contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "object";
-    let object!: DistinguishedName;
-    object = $._decode_implicit<DistinguishedName>(() => _decode_DistinguishedName)(sequence[0]);
+    const object: DistinguishedName = $._decode_implicit<DistinguishedName>(() => _decode_DistinguishedName)(sequence[0]);
     return new SDFCriteria(
         object,
         sequence.slice(1),

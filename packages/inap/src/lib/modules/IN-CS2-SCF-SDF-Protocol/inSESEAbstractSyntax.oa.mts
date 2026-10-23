@@ -3,6 +3,7 @@ import {
     ABSTRACT_SYNTAX,
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
+import { id_as_inSESEAS } from "../IN-CS2-object-identifiers/id-as-inSESEAS.va.mjs";
 import { SESEapdus, _decode_SESEapdus, _encode_SESEapdus } from "../SeseAPDUs/SESEapdus.ta.mjs";
 // export { SESEapdus, _decode_SESEapdus, _encode_SESEapdus } from "../SeseAPDUs/SESEapdus.ta.mjs";
 
@@ -34,7 +35,7 @@ const inSESEAbstractSyntax: ABSTRACT_SYNTAX<SESEapdus> = {
     encoderFor: {
         "&Type": _encode_SESEapdus,
     },
-    "&id": _OID.fromParts([id_as_inSESEAS,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&id": id_as_inSESEAS /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
     "&property": undefined,
 };

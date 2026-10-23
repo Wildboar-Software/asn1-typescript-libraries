@@ -16,7 +16,11 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-analyzedInfoSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-analyzedInfoSpecificInfo ::=
+ * SEQUENCE {
+ *   calledPartynumber [0] CalledPartyNumber,
+ *   ...
+ * }
  * ```
  * 
  * @class
@@ -118,8 +122,7 @@ function _decode_EventSpecificInformationBCSM_analyzedInfoSpecificInfo (el: _Ele
         throw new _ConstructionError("EventSpecificInformationBCSM-analyzedInfoSpecificInfo contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "calledPartynumber";
-    let calledPartynumber!: CalledPartyNumber;
-    calledPartynumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(sequence[0]);
+    const calledPartynumber: CalledPartyNumber = $._decode_implicit<CalledPartyNumber>(() => _decode_CalledPartyNumber)(sequence[0]);
     return new EventSpecificInformationBCSM_analyzedInfoSpecificInfo(
         calledPartynumber,
         sequence.slice(1),

@@ -16,7 +16,10 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ReleaseCallArg-allCallSegments ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ReleaseCallArg-allCallSegments ::=
+ * SEQUENCE {
+ *   releaseCause [0] Cause OPTIONAL
+ * }
  * ```
  * 
  * @class

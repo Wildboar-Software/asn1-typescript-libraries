@@ -1,3 +1,8 @@
+import {
+    type Code,
+    _decode_Code,
+    _encode_Code,
+} from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 /* eslint-disable */
 import {
     BOOLEAN,

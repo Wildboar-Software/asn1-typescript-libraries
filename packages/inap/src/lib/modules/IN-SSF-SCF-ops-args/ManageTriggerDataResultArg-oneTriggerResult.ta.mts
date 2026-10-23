@@ -18,7 +18,12 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ManageTriggerDataResultArg-oneTriggerResult ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ManageTriggerDataResultArg-oneTriggerResult ::=
+ * SEQUENCE {
+ *   actionPerformed [0] ActionPerformed,
+ *   extensions [1] Extensions OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

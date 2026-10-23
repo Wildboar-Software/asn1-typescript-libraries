@@ -18,7 +18,12 @@ import { initialCallSegment } from "../IN-CS3-SSF-SCF-datatypes/initialCallSegme
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MoveCallSegmentsArg-callSegments-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MoveCallSegmentsArg-callSegments-Item ::=
+ * SEQUENCE {
+ *   sourceCallSegment [0] CallSegmentID DEFAULT initialCallSegment,
+ *   newCallSegment [1] CallSegmentID,
+ *   ...
+ * }
  * ```
  * 
  * @class

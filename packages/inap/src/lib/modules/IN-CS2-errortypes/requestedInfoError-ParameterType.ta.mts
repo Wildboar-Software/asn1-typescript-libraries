@@ -10,7 +10,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * requestedInfoError-ParameterType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * requestedInfoError-ParameterType ::=
+ * ENUMERATED {
+ *   unknownRequestedInfo(1),
+ *   requestedInfoNotAvailable(2)  -- other values FFS
+ * }
  * ```
  * 
  * @enum {number}
@@ -28,7 +32,11 @@ enum _enum_for_requestedInfoError_ParameterType {
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * requestedInfoError-ParameterType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * requestedInfoError-ParameterType ::=
+ * ENUMERATED {
+ *   unknownRequestedInfo(1),
+ *   requestedInfoNotAvailable(2)  -- other values FFS
+ * }
  * ```
  * 
  * @enum {number}
@@ -43,7 +51,11 @@ type requestedInfoError_ParameterType = _enum_for_requestedInfoError_ParameterTy
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * requestedInfoError-ParameterType ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * requestedInfoError-ParameterType ::=
+ * ENUMERATED {
+ *   unknownRequestedInfo(1),
+ *   requestedInfoNotAvailable(2)  -- other values FFS
+ * }
  * ```
  * 
  * @enum {number}

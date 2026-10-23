@@ -125,10 +125,8 @@ function _decode_ReportDestinationInformation (el: _Element): ReportDestinationI
     }
     sequence[0].name = "destination";
     sequence[1].name = "protocolInfo";
-    let destination!: Destination;
-    let protocolInfo!: ProtocolInfo;
-    destination = $._decode_implicit<Destination>(() => _decode_Destination)(sequence[0]);
-    protocolInfo = $._decode_explicit<ProtocolInfo>(() => _decode_ProtocolInfo)(sequence[1]);
+    const destination: Destination = $._decode_implicit<Destination>(() => _decode_Destination)(sequence[0]);
+    const protocolInfo: ProtocolInfo = $._decode_explicit<ProtocolInfo>(() => _decode_ProtocolInfo)(sequence[1]);
     return new ReportDestinationInformation(
         destination,
         protocolInfo,

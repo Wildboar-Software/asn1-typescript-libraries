@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";
 // export { requestShadowUpdate } from "../DirectoryShadowAbstractService/requestShadowUpdate.oa.mjs";

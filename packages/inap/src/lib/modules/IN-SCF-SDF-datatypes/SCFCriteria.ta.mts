@@ -120,8 +120,7 @@ function _decode_SCFCriteria (el: _Element): SCFCriteria {
         throw new _ConstructionError("SCFCriteria contained only " + sequence.length.toString() + " elements.");
     }
     sequence[0].name = "agreement";
-    let agreement!: AgreementID;
-    agreement = $._decode_implicit<AgreementID>(() => _decode_AgreementID)(sequence[0]);
+    const agreement: AgreementID = $._decode_implicit<AgreementID>(() => _decode_AgreementID)(sequence[0]);
     return new SCFCriteria(
         agreement,
         sequence.slice(1),

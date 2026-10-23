@@ -16,7 +16,14 @@ import { RequestedNotifications_Item_callConditionWithPartyID, _decode_Requested
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * RequestedNotifications-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * RequestedNotifications-Item ::=
+ * CHOICE {
+ *   callCondition CallConditions,
+ *   callConditionWithPartyID SEQUENCE {
+ *     callCondition CallConditions,
+ *     partyID [9] PartyID
+ *   }
+ * }
  * ```
  */
 export

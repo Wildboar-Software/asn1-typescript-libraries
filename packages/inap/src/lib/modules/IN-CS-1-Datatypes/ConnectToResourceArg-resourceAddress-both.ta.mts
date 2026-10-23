@@ -18,7 +18,11 @@ import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectToResourceArg-resourceAddress-both ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * ConnectToResourceArg-resourceAddress-both ::=
+ * SEQUENCE {
+ *   ipRoutingAddress [0] IPRoutingAddress,
+ *   legID [1] LegID
+ * }
  * ```
  * 
  * @class
@@ -122,10 +126,8 @@ function _decode_ConnectToResourceArg_resourceAddress_both (el: _Element): Conne
     }
     sequence[0].name = "ipRoutingAddress";
     sequence[1].name = "legID";
-    let ipRoutingAddress!: IPRoutingAddress;
-    let legID!: LegID;
-    ipRoutingAddress = $._decode_implicit<IPRoutingAddress>(() => _decode_IPRoutingAddress)(sequence[0]);
-    legID = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[1]);
+    const ipRoutingAddress: IPRoutingAddress = $._decode_implicit<IPRoutingAddress>(() => _decode_IPRoutingAddress)(sequence[0]);
+    const legID: LegID = $._decode_explicit<LegID>(() => _decode_LegID)(sequence[1]);
     return new ConnectToResourceArg_resourceAddress_both(
         ipRoutingAddress,
         legID,

@@ -20,7 +20,13 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cau
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EntityReleasedArg-cSFailure ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EntityReleasedArg-cSFailure ::=
+ * SEQUENCE {
+ *   callSegmentID [0] CallSegmentID,
+ *   reason [1] Reason OPTIONAL,
+ *   cause [2] Cause OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

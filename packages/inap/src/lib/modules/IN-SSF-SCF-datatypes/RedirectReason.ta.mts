@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type RedirectReason = OCTET_STRING; // OctetStringType
 
 export
-const _decode_RedirectReason: $.ASN1Decoder<RedirectReason> = $._decodeOctetString;
+function _decode_RedirectReason (el: _Element): RedirectReason {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 1) {
+        throw new ASN1SizeError("RedirectReason violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_RedirectReason: $.ASN1Encoder<RedirectReason> = $._encodeOctetString;

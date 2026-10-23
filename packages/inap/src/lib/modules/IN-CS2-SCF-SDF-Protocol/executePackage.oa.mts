@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { execute } from "../IN-CS2-SCF-SDF-Operations/execute.oa.mjs";
 // export { execute } from "../IN-CS2-SCF-SDF-Operations/execute.oa.mjs";

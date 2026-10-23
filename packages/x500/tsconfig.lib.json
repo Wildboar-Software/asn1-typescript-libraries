@@ -45,6 +45,9 @@
     },
     {
       "path": "../gn/tsconfig.lib.json"
+    },
+    {
+      "path": "../rose/tsconfig.lib.json"
     }
   ]
 }

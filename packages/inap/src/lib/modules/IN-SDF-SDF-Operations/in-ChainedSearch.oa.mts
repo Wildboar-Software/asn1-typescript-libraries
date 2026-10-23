@@ -7,6 +7,8 @@ import { in_Chained } from "../IN-SDF-SDF-Operations/in-Chained.oa.mjs";
 // export { in_Search } from "../IN-SCF-SDF-Additional-Definitions/in-Search.oa.mjs";
 
 
+import { in_Search } from "../IN-SCF-SDF-Additional-Definitions/in-Search.oa.mjs";
+
 /**
  * @summary in_ChainedSearch
  * @description
@@ -22,6 +24,6 @@ import { in_Chained } from "../IN-SDF-SDF-Operations/in-Chained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const in_ChainedSearch: OPERATION = in_Chained;
+const in_ChainedSearch: OPERATION = in_Chained(in_Search);
 
 /* eslint-enable */

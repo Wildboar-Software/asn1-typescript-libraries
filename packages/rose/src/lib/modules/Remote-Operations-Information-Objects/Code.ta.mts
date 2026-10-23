@@ -18,19 +18,21 @@ import * as $ from '@wildboar/asn1/functional';
  * @summary Code
  * @description
  *
- * Identifier for an operation (`&operationCode`) or error (`&errorCode`): either a local `INTEGER` or a global `OBJECT IDENTIFIER` (ITU-T Rec. X.880 (07/94) §8.8).
+ * Identifier for an operation (`&operationCode`) or error (`&errorCode`): either a local `INTEGER` or a global `OBJECT IDENTIFIER` (ITU-T Rec. X.880 (07/94) §8.8). The CHOICE is extensible, unlike X.880, so it matches the directory `Code` in X.519. An unrecognized alternative is preserved.
  *
  * ### ASN.1 Definition:
  *
  * ```asn1
  * Code  ::=  CHOICE {local   INTEGER,
- *                  global  OBJECT IDENTIFIER
+ *                  global  OBJECT IDENTIFIER,
+ *                  ...
  * }
  * ```
  */
 export type Code =
   | { local: INTEGER } /* CHOICE_ALT_ROOT */
-  | { global: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */;
+  | { global: OBJECT_IDENTIFIER } /* CHOICE_ALT_ROOT */
+  | _Element /* CHOICE_ALT_UNRECOGNIZED_EXT */;
 
 
 let _cached_decoder_for_Code: $.ASN1Decoder<Code> | null = null;
@@ -44,7 +46,7 @@ let _cached_decoder_for_Code: $.ASN1Decoder<Code> | null = null;
  */
 export function _decode_Code(el: _Element): Code {
   if (!_cached_decoder_for_Code) {
-    _cached_decoder_for_Code = $._decode_inextensible_choice<Code>({
+    _cached_decoder_for_Code = $._decode_extensible_choice<Code>({
       'UNIVERSAL 2': ['local', $._decodeInteger],
       'UNIVERSAL 6': ['global', $._decodeObjectIdentifier],
     });

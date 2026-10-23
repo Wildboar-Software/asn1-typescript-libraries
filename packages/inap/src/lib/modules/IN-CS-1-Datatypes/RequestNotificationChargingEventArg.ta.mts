@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { numOfChargingEvents } from "./numOfChargingEvents.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargingEvent, _decode_ChargingEvent, _encode_ChargingEvent } from "../IN-CS-1-Datatypes/ChargingEvent.ta.mjs";
 // export { ChargingEvent, _decode_ChargingEvent, _encode_ChargingEvent } from "../IN-CS-1-Datatypes/ChargingEvent.ta.mjs";
@@ -32,7 +34,11 @@ let _cached_decoder_for_RequestNotificationChargingEventArg: $.ASN1Decoder<Reque
 export
 function _decode_RequestNotificationChargingEventArg (el: _Element): RequestNotificationChargingEventArg {
     if (!_cached_decoder_for_RequestNotificationChargingEventArg) { _cached_decoder_for_RequestNotificationChargingEventArg = $._decodeSequenceOf<ChargingEvent>(() => _decode_ChargingEvent); }
-    return _cached_decoder_for_RequestNotificationChargingEventArg(el);
+    const value = _cached_decoder_for_RequestNotificationChargingEventArg(el);
+    if (value.length < 1 || value.length > numOfChargingEvents) {
+        throw new ASN1SizeError("RequestNotificationChargingEventArg violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RequestNotificationChargingEventArg: $.ASN1Encoder<RequestNotificationChargingEventArg> | null = null;

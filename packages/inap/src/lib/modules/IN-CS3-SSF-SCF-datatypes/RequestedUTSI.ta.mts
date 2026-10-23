@@ -140,10 +140,8 @@ function _decode_RequestedUTSI (el: _Element): RequestedUTSI {
     }
     sequence[0].name = "uSIServiceIndicator";
     sequence[1].name = "uSImonitorMode";
-    let uSIServiceIndicator!: USIServiceIndicator;
-    let uSImonitorMode!: USIMonitorMode;
-    uSIServiceIndicator = $._decode_explicit<USIServiceIndicator>(() => _decode_USIServiceIndicator)(sequence[0]);
-    uSImonitorMode = $._decode_implicit<USIMonitorMode>(() => _decode_USIMonitorMode)(sequence[1]);
+    const uSIServiceIndicator: USIServiceIndicator = $._decode_explicit<USIServiceIndicator>(() => _decode_USIServiceIndicator)(sequence[0]);
+    const uSImonitorMode: USIMonitorMode = $._decode_implicit<USIMonitorMode>(() => _decode_USIMonitorMode)(sequence[1]);
     return new RequestedUTSI(
         uSIServiceIndicator,
         uSImonitorMode,

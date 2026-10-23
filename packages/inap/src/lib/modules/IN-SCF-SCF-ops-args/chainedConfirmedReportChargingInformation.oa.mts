@@ -7,6 +7,8 @@ import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
 // export { confirmedReportChargingInformation } from "../IN-SCF-SCF-ops-args/confirmedReportChargingInformation.oa.mjs";
 
 
+import { confirmedReportChargingInformation } from "../IN-SCF-SCF-ops-args/confirmedReportChargingInformation.oa.mjs";
+
 /**
  * @summary chainedConfirmedReportChargingInformation
  * @description
@@ -22,6 +24,6 @@ import { scfChained } from "../IN-SCF-SCF-ops-args/scfChained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const chainedConfirmedReportChargingInformation: OPERATION = scfChained;
+const chainedConfirmedReportChargingInformation: OPERATION = scfChained(confirmedReportChargingInformation);
 
 /* eslint-enable */

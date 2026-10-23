@@ -1,18 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
-import { SSIInfo, _decode_SSIInfo, _encode_SSIInfo } from "../IN-SCF-SCF-datatypes/SSIInfo.ta.mjs";
-// export { SSIInfo, _decode_SSIInfo, _encode_SSIInfo } from "../IN-SCF-SCF-datatypes/SSIInfo.ta.mjs";
-import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-// export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
-// export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { TransferSTSIArg_Type, _decode_TransferSTSIArg_Type, _encode_TransferSTSIArg_Type } from "../IN-SCF-SCF-ops-args/TransferSTSIArg-Type.ta.mjs";
+// export { TransferSTSIArg_Type, _decode_TransferSTSIArg_Type, _encode_TransferSTSIArg_Type } from "../IN-SCF-SCF-ops-args/TransferSTSIArg-Type.ta.mjs";
 
 
 /**
@@ -33,7 +27,7 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common
  * ```
  */
 export
-type TransferSTSIArg = OPTIONALLY_PROTECTED<{ sSIInfo: OPTIONAL<SSIInfo>; securityParameters: SecurityParameters; extensions: Extensions }>; // DefinedType
+type TransferSTSIArg = OPTIONALLY_PROTECTED<TransferSTSIArg_Type>; // DefinedType
 
 let _cached_decoder_for_TransferSTSIArg: $.ASN1Decoder<TransferSTSIArg> | null = null;
 
@@ -45,29 +39,7 @@ let _cached_decoder_for_TransferSTSIArg: $.ASN1Decoder<TransferSTSIArg> | null =
  */
 export
 function _decode_TransferSTSIArg (el: _Element): TransferSTSIArg {
-    if (!_cached_decoder_for_TransferSTSIArg) { _cached_decoder_for_TransferSTSIArg = _get_decoder_for_OPTIONALLY_PROTECTED<{ sSIInfo: OPTIONAL<SSIInfo>; securityParameters: SecurityParameters; extensions: Extensions }>(function (el: _Element): OPTIONALLY_PROTECTED {
-    let sSIInfo!: SSIInfo;
-    let securityParameters: OPTIONAL<SecurityParameters>;
-    const _unrecognizedExtensionsList: _Element[] = [];
-    let extensions: OPTIONAL<Extensions>;
-    const callbacks: $.DecodingMap = {
-        "sSIInfo": (_el: _Element): void => { sSIInfo = _decode_SSIInfo(_el); },
-        "securityParameters": (_el: _Element): void => { securityParameters = $._decode_implicit<SecurityParameters>(() => _decode_SecurityParameters)(_el); },
-        "extensions": (_el: _Element): void => { extensions = $._decode_implicit<Extensions>(() => _decode_Extensions)(_el); }
-    };
-    $._parse_sequence(el, callbacks,
-        _root_component_type_list_1_spec_for_OPTIONALLY_PROTECTED,
-        _extension_additions_list_spec_for_OPTIONALLY_PROTECTED,
-        _root_component_type_list_2_spec_for_OPTIONALLY_PROTECTED,
-        (ext: _Element): void => { _unrecognizedExtensionsList.push(ext); },
-    );
-    return new OPTIONALLY_PROTECTED(
-        sSIInfo,
-        securityParameters,
-        _unrecognizedExtensionsList,
-        extensions
-    );
-}); }
+    if (!_cached_decoder_for_TransferSTSIArg) { _cached_decoder_for_TransferSTSIArg = _get_decoder_for_OPTIONALLY_PROTECTED<TransferSTSIArg_Type>(_decode_TransferSTSIArg_Type); }
     return _cached_decoder_for_TransferSTSIArg(el);
 }
 
@@ -82,25 +54,7 @@ let _cached_encoder_for_TransferSTSIArg: $.ASN1Encoder<TransferSTSIArg> | null =
  */
 export
 function _encode_TransferSTSIArg (value: TransferSTSIArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TransferSTSIArg) { _cached_encoder_for_TransferSTSIArg = _get_encoder_for_OPTIONALLY_PROTECTED<{ sSIInfo: OPTIONAL<SSIInfo>; securityParameters: SecurityParameters; extensions: Extensions }>(function (value: OPTIONALLY_PROTECTED, elGetter: $.ASN1Encoder<OPTIONALLY_PROTECTED>): _Element {
-    const _unrecognized = value._unrecognizedExtensionsList;
-    const _components: _Element[] = new Array(3 + (_unrecognized ? _unrecognized.length : 0));
-    let _components_i = 0;
-    _components[_components_i++] = /* REQUIRED   */ _encode_SSIInfo(value.sSIInfo, $.BER);
-    if (value.securityParameters !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 2, () => _encode_SecurityParameters, $.BER)(value.securityParameters, $.BER);
-    }
-    if (_unrecognized) {
-        for (let _unrecognized_i = 0; _unrecognized_i < _unrecognized.length; _unrecognized_i++) {
-            _components[_components_i++] = _unrecognized[_unrecognized_i];
-        }
-    }
-    if (value.extensions !== undefined) {
-        _components[_components_i++] = /* IF_ABSENT  */ $._encode_implicit(_TagClass.context, 3, () => _encode_Extensions, $.BER)(value.extensions, $.BER);
-    }
-    _components.length = _components_i;
-    return $._encodeSequence(_components, $.BER);
-}); }
+    if (!_cached_encoder_for_TransferSTSIArg) { _cached_encoder_for_TransferSTSIArg = _get_encoder_for_OPTIONALLY_PROTECTED<TransferSTSIArg_Type>(_encode_TransferSTSIArg_Type); }
     return _cached_encoder_for_TransferSTSIArg(value, elGetter);
 }
 

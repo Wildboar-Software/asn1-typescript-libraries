@@ -18,7 +18,16 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * identifierList-Type ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * identifierList-Type ::=
+ * SEQUENCE {
+ *   conformMethodIdentifier [1] MethodIdentifier,
+ *   -- e.g. time window check
+ *   fillMethodIdentifier [2] MethodIdentifier,
+ *   -- e.g. generate a random of required size
+ *   oneToOneAlgorithm [3] AlgorithmIdentifier,
+ *   -- e.g. A11 and A12, output RES from RS,RAND
+ *   oneToTwoAlgorithm [4] AlgorithmIdentifier
+ * }
  * ```
  * 
  * @class
@@ -142,14 +151,10 @@ function _decode_identifierList_Type (el: _Element): identifierList_Type {
     sequence[1].name = "fillMethodIdentifier";
     sequence[2].name = "oneToOneAlgorithm";
     sequence[3].name = "oneToTwoAlgorithm";
-    let conformMethodIdentifier!: MethodIdentifier;
-    let fillMethodIdentifier!: MethodIdentifier;
-    let oneToOneAlgorithm!: AlgorithmIdentifier;
-    let oneToTwoAlgorithm!: AlgorithmIdentifier;
-    conformMethodIdentifier = $._decode_explicit<MethodIdentifier>(() => _decode_MethodIdentifier)(sequence[0]);
-    fillMethodIdentifier = $._decode_explicit<MethodIdentifier>(() => _decode_MethodIdentifier)(sequence[1]);
-    oneToOneAlgorithm = $._decode_explicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(sequence[2]);
-    oneToTwoAlgorithm = $._decode_explicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(sequence[3]);
+    const conformMethodIdentifier: MethodIdentifier = $._decode_explicit<MethodIdentifier>(() => _decode_MethodIdentifier)(sequence[0]);
+    const fillMethodIdentifier: MethodIdentifier = $._decode_explicit<MethodIdentifier>(() => _decode_MethodIdentifier)(sequence[1]);
+    const oneToOneAlgorithm: AlgorithmIdentifier = $._decode_explicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(sequence[2]);
+    const oneToTwoAlgorithm: AlgorithmIdentifier = $._decode_explicit<AlgorithmIdentifier>(() => _decode_AlgorithmIdentifier)(sequence[3]);
     return new identifierList_Type(
         conformMethodIdentifier,
         fillMethodIdentifier,

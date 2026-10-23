@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type AlertingPattern = OCTET_STRING; // OctetStringType
 
 export
-const _decode_AlertingPattern: $.ASN1Decoder<AlertingPattern> = $._decodeOctetString;
+function _decode_AlertingPattern (el: _Element): AlertingPattern {
+    const value = $._decodeOctetString(el);
+    if (value.length !== 3) {
+        throw new ASN1SizeError("AlertingPattern violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_AlertingPattern: $.ASN1Encoder<AlertingPattern> = $._encodeOctetString;

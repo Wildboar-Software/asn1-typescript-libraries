@@ -125,10 +125,8 @@ function _decode_CounterAndValue (el: _Element): CounterAndValue {
     }
     sequence[0].name = "counterID";
     sequence[1].name = "counterValue";
-    let counterID!: CounterID;
-    let counterValue!: Integer4;
-    counterID = $._decode_implicit<CounterID>(() => _decode_CounterID)(sequence[0]);
-    counterValue = $._decode_implicit<Integer4>(() => _decode_Integer4)(sequence[1]);
+    const counterID: CounterID = $._decode_implicit<CounterID>(() => _decode_CounterID)(sequence[0]);
+    const counterValue: Integer4 = $._decode_implicit<Integer4>(() => _decode_Integer4)(sequence[1]);
     return new CounterAndValue(
         counterID,
         counterValue,

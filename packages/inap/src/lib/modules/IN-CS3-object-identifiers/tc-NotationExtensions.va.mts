@@ -21,8 +21,8 @@ import {
  */
 export
 const tc_NotationExtensions: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     775,
     /* modules */ 2,
     /* notation-extension */ 4,

@@ -16,7 +16,11 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS-1-Datatyp
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EventSpecificInformationBCSM-tMidCallSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EventSpecificInformationBCSM-tMidCallSpecificInfo ::=
+ * SEQUENCE {
+ *   connectTime [0] Integer4 OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

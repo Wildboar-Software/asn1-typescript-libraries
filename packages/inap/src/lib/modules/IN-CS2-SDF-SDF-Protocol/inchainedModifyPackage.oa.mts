@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { chainedAddEntry } from "../DistributedOperations/chainedAddEntry.oa.mjs";
 // export { chainedAddEntry } from "../DistributedOperations/chainedAddEntry.oa.mjs";

@@ -21,8 +21,8 @@ import {
  */
 export
 const tc_Messages: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     773,
     /* modules */ 2,
     /* messages */ 1,

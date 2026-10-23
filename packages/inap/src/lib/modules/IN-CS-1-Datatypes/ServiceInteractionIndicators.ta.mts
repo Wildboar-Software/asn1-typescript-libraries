@@ -1,7 +1,11 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    OCTET_STRING,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { maxServiceInteractionIndicatorsLength } from "./maxServiceInteractionIndicatorsLength.va.mjs";
+import { minServiceInteractionIndicatorsLength } from "./minServiceInteractionIndicatorsLength.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -23,7 +27,13 @@ export
 type ServiceInteractionIndicators = OCTET_STRING; // OctetStringType
 
 export
-const _decode_ServiceInteractionIndicators: $.ASN1Decoder<ServiceInteractionIndicators> = $._decodeOctetString;
+function _decode_ServiceInteractionIndicators (el: _Element): ServiceInteractionIndicators {
+    const value = $._decodeOctetString(el);
+    if (value.length < minServiceInteractionIndicatorsLength || value.length > maxServiceInteractionIndicatorsLength) {
+        throw new ASN1SizeError("ServiceInteractionIndicators violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_ServiceInteractionIndicators: $.ASN1Encoder<ServiceInteractionIndicators> = $._encodeOctetString;

@@ -1,7 +1,10 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
+import { numOfCounters } from "./numOfCounters.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -20,7 +23,13 @@ export
 type MaximumNumberOfCounters = INTEGER;
 
 export
-const _decode_MaximumNumberOfCounters: $.ASN1Decoder<MaximumNumberOfCounters> = $._decodeInteger;
+function _decode_MaximumNumberOfCounters (el: _Element): MaximumNumberOfCounters {
+    const value = $._decodeInteger(el);
+    if (value < 1 || value > numOfCounters) {
+        throw new ASN1OverflowError("MaximumNumberOfCounters violates INTEGER constraint");
+    }
+    return value;
+}
 
 export
 const _encode_MaximumNumberOfCounters: $.ASN1Encoder<MaximumNumberOfCounters> = $._encodeInteger;

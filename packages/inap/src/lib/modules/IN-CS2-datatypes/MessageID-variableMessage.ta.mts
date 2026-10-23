@@ -18,7 +18,11 @@ import { VariablePart, _decode_VariablePart, _encode_VariablePart } from "../IN-
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * MessageID-variableMessage ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * MessageID-variableMessage ::=
+ * SEQUENCE {
+ *   elementaryMessageID [0] Integer4,
+ *   variableParts [1] SEQUENCE SIZE(1..5) OF VariablePart
+ * }
  * ```
  * 
  * @class
@@ -122,10 +126,8 @@ function _decode_MessageID_variableMessage (el: _Element): MessageID_variableMes
     }
     sequence[0].name = "elementaryMessageID";
     sequence[1].name = "variableParts";
-    let elementaryMessageID!: Integer4;
-    let variableParts!: VariablePart[];
-    elementaryMessageID = $._decode_implicit<Integer4>(() => _decode_Integer4)(sequence[0]);
-    variableParts = $._decode_implicit<VariablePart[]>(() => $._decodeSequenceOf<VariablePart>(() => _decode_VariablePart))(sequence[1]);
+    const elementaryMessageID: Integer4 = $._decode_implicit<Integer4>(() => _decode_Integer4)(sequence[0]);
+    const variableParts: VariablePart[] = $._decode_implicit<VariablePart[]>(() => $._decodeSequenceOf<VariablePart>(() => _decode_VariablePart))(sequence[1]);
     return new MessageID_variableMessage(
         elementaryMessageID,
         variableParts,

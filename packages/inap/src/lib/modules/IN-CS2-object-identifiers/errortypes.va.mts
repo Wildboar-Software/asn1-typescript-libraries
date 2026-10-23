@@ -21,8 +21,8 @@ import {
  */
 export
 const errortypes: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     1228,
     /* modules */ 0,
     /* in-cs2-errortypes */ 1,

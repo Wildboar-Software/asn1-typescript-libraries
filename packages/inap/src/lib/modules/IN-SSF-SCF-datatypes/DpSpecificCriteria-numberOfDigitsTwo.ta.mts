@@ -16,7 +16,11 @@ import { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DpSpecificCriteria-numberOfDigitsTwo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DpSpecificCriteria-numberOfDigitsTwo ::=
+ * SEQUENCE {
+ *   requestedNumberOfDigits [0] NumberOfDigits,
+ *   minNumberOfDigits [1] NumberOfDigits OPTIONAL
+ * }
  * ```
  * 
  * @class

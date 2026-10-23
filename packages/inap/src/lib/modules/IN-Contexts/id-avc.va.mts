@@ -21,8 +21,8 @@ import {
  */
 export
 const id_avc: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     1218,
     /* contexts */ 8,
 ], itu_t);

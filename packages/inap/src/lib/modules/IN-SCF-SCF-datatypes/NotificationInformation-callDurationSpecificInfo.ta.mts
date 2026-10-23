@@ -16,7 +16,11 @@ import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-callDurationSpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-callDurationSpecificInfo ::=
+ * SEQUENCE {
+ *   timeStamp [0] DateAndTime OPTIONAL,
+ *   ...
+ * }
  * ```
  * 
  * @class

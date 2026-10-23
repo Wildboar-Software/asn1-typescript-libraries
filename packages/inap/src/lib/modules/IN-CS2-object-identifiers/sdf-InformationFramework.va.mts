@@ -22,8 +22,8 @@ import {
  */
 export
 const sdf_InformationFramework: OBJECT_IDENTIFIER = _OID.fromParts([
-    recommendation,
-    q,
+    0 /* recommendation */,
+    17 /* q */,
     1228,
     /* modules */ 0,
     /* sdfInformationFramework */ 9,

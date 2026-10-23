@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NotificationInformation-noReplySpecificInfo ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * NotificationInformation-noReplySpecificInfo ::=
+ * SEQUENCE {
+ *   ...
+ * }
  * ```
  * 
  * @class

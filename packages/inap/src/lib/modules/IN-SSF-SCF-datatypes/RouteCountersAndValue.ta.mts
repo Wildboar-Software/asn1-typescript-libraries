@@ -147,12 +147,9 @@ function _decode_RouteCountersAndValue (el: _Element): RouteCountersAndValue {
     sequence[0].name = "route";
     sequence[1].name = "counterID";
     sequence[2].name = "counterValue";
-    let route!: Route;
-    let counterID!: CounterID;
-    let counterValue!: Integer4;
-    route = $._decode_implicit<Route>(() => _decode_Route)(sequence[0]);
-    counterID = $._decode_implicit<CounterID>(() => _decode_CounterID)(sequence[1]);
-    counterValue = $._decode_implicit<Integer4>(() => _decode_Integer4)(sequence[2]);
+    const route: Route = $._decode_implicit<Route>(() => _decode_Route)(sequence[0]);
+    const counterID: CounterID = $._decode_implicit<CounterID>(() => _decode_CounterID)(sequence[1]);
+    const counterValue: Integer4 = $._decode_implicit<Integer4>(() => _decode_Integer4)(sequence[2]);
     return new RouteCountersAndValue(
         route,
         counterID,

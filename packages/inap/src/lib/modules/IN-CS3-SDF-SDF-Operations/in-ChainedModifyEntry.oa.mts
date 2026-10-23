@@ -7,6 +7,8 @@ import { in_Chained } from "../IN-CS3-SDF-SDF-Operations/in-Chained.oa.mjs";
 // export { in_ModifyEntry } from "../IN-CS3-SCF-SDF-Additional-Definitions/in-ModifyEntry.oa.mjs";
 
 
+import { in_ModifyEntry } from "../IN-CS3-SCF-SDF-Additional-Definitions/in-ModifyEntry.oa.mjs";
+
 /**
  * @summary in_ChainedModifyEntry
  * @description
@@ -22,6 +24,6 @@ import { in_Chained } from "../IN-CS3-SDF-SDF-Operations/in-Chained.oa.mjs";
  * @implements {OPERATION}
  */
 export
-const in_ChainedModifyEntry: OPERATION = in_Chained;
+const in_ChainedModifyEntry: OPERATION = in_Chained(in_ModifyEntry);
 
 /* eslint-enable */

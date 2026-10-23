@@ -134,10 +134,8 @@ function _decode_GapIndicators (el: _Element): GapIndicators {
     }
     sequence[0].name = "duration";
     sequence[1].name = "gapInterval";
-    let duration!: Duration;
-    let gapInterval!: Interval;
-    duration = $._decode_implicit<Duration>(() => _decode_Duration)(sequence[0]);
-    gapInterval = $._decode_implicit<Interval>(() => _decode_Interval)(sequence[1]);
+    const duration: Duration = $._decode_implicit<Duration>(() => _decode_Duration)(sequence[0]);
+    const gapInterval: Interval = $._decode_implicit<Interval>(() => _decode_Interval)(sequence[1]);
     return new GapIndicators(
         duration,
         gapInterval,

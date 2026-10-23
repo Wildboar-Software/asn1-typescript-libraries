@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type SuspendTimer = INTEGER;
 
 export
-const _decode_SuspendTimer: $.ASN1Decoder<SuspendTimer> = $._decodeInteger;
+function _decode_SuspendTimer (el: _Element): SuspendTimer {
+    const value = $._decodeInteger(el);
+    if (value < 0 || value > 120) {
+        throw new ASN1OverflowError("SuspendTimer violates INTEGER constraint");
+    }
+    return value;
+}
 
 export
 const _encode_SuspendTimer: $.ASN1Encoder<SuspendTimer> = $._encodeInteger;

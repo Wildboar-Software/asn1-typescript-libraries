@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { addEntry } from "../DirectoryAbstractService/addEntry.oa.mjs";
 // export { addEntry } from "../DirectoryAbstractService/addEntry.oa.mjs";

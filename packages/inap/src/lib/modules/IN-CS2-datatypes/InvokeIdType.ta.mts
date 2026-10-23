@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER
+    INTEGER,
+    ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,7 +22,13 @@ export
 type InvokeIdType = INTEGER;
 
 export
-const _decode_InvokeIdType: $.ASN1Decoder<InvokeIdType> = $._decodeInteger;
+function _decode_InvokeIdType (el: _Element): InvokeIdType {
+    const value = $._decodeInteger(el);
+    if (value < -128 || value > 127) {
+        throw new ASN1OverflowError("InvokeIdType violates INTEGER constraint");
+    }
+    return value;
+}
 
 export
 const _encode_InvokeIdType: $.ASN1Encoder<InvokeIdType> = $._encodeInteger;

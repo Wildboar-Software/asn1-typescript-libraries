@@ -18,7 +18,12 @@ import { GapOnResource, _decode_GapOnResource, _encode_GapOnResource } from "../
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SRFGapCriteria-iPAddressAndresource ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * SRFGapCriteria-iPAddressAndresource ::=
+ * SEQUENCE {
+ *   iPAddressValue [1] Digits,
+ *   gapOnResource [2] GapOnResource,
+ *   ...
+ * }
  * ```
  * 
  * @class
@@ -130,10 +135,8 @@ function _decode_SRFGapCriteria_iPAddressAndresource (el: _Element): SRFGapCrite
     }
     sequence[0].name = "iPAddressValue";
     sequence[1].name = "gapOnResource";
-    let iPAddressValue!: Digits;
-    let gapOnResource!: GapOnResource;
-    iPAddressValue = $._decode_implicit<Digits>(() => _decode_Digits)(sequence[0]);
-    gapOnResource = $._decode_explicit<GapOnResource>(() => _decode_GapOnResource)(sequence[1]);
+    const iPAddressValue: Digits = $._decode_implicit<Digits>(() => _decode_Digits)(sequence[0]);
+    const gapOnResource: GapOnResource = $._decode_explicit<GapOnResource>(() => _decode_GapOnResource)(sequence[1]);
     return new SRFGapCriteria_iPAddressAndresource(
         iPAddressValue,
         gapOnResource,

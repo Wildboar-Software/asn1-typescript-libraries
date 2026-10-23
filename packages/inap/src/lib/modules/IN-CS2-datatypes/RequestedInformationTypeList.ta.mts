@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
+import { numOfInfoItems } from "./numOfInfoItems.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformationType, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-CS2-datatypes/RequestedInformationType.ta.mjs";
 // export { RequestedInformationType, _enum_for_RequestedInformationType, RequestedInformationType_callAttemptElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttemptElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callStopTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callStopTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callConnectedElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callConnectedElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_calledAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, calledAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_releaseCause /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-CS2-datatypes/RequestedInformationType.ta.mjs";
@@ -32,7 +34,11 @@ let _cached_decoder_for_RequestedInformationTypeList: $.ASN1Decoder<RequestedInf
 export
 function _decode_RequestedInformationTypeList (el: _Element): RequestedInformationTypeList {
     if (!_cached_decoder_for_RequestedInformationTypeList) { _cached_decoder_for_RequestedInformationTypeList = $._decodeSequenceOf<RequestedInformationType>(() => _decode_RequestedInformationType); }
-    return _cached_decoder_for_RequestedInformationTypeList(el);
+    const value = _cached_decoder_for_RequestedInformationTypeList(el);
+    if (value.length < 1 || value.length > numOfInfoItems) {
+        throw new ASN1SizeError("RequestedInformationTypeList violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_RequestedInformationTypeList: $.ASN1Encoder<RequestedInformationTypeList> | null = null;

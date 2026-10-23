@@ -1,23 +1,30 @@
-/* eslint-disable */
-import { dspConnectionPackage } from "../DirectorySystemProtocol/dspConnectionPackage.oa.mjs";
-// export { dspConnectionPackage } from "../DirectorySystemProtocol/dspConnectionPackage.oa.mjs";
-import { chainedReadPackage } from "../DirectorySystemProtocol/chainedReadPackage.oa.mjs";
-// export { chainedReadPackage } from "../DirectorySystemProtocol/chainedReadPackage.oa.mjs";
-import { chainedSearchPackage } from "../DirectorySystemProtocol/chainedSearchPackage.oa.mjs";
-// export { chainedSearchPackage } from "../DirectorySystemProtocol/chainedSearchPackage.oa.mjs";
-import { chainedModifyPackage } from "../DirectorySystemProtocol/chainedModifyPackage.oa.mjs";
-// export { chainedModifyPackage } from "../DirectorySystemProtocol/chainedModifyPackage.oa.mjs";
-import { id_contract_dsp } from "../ProtocolObjectIdentifiers/id-contract-dsp.va.mjs";
-// export { id_contract_dsp } from "../ProtocolObjectIdentifiers/id-contract-dsp.va.mjs";
-import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT.oca.mjs";
-
+import { type CONTRACT, type CONNECTION_PACKAGE, type OPERATION_PACKAGE, emptyUnbind } from "@wildboar/rose";
+import {
+    chainedAbandon,
+    chainedAddEntry,
+    chainedCompare,
+    chainedList,
+    chainedModifyDN,
+    chainedModifyEntry,
+    chainedRead,
+    chainedRemoveEntry,
+    chainedSearch,
+    dSABind,
+} from "@wildboar/x500/DistributedOperations";
+import {
+    id_contract_dsp,
+    id_package_chainedModify,
+    id_package_chainedRead,
+    id_package_chainedSearch,
+    id_package_dspConnection,
+} from "@wildboar/x500/ProtocolObjectIdentifiers";
 
 /**
  * @summary dspContract
  * @description
- * 
+ *
  * ### ASN.1 Definition:
- * 
+ *
  * ```asn1
  * dspContract CONTRACT ::= {
  *   CONNECTION     dspConnectionPackage
@@ -26,21 +33,51 @@ import { type CONTRACT } from "../Remote-Operations-Information-Objects/CONTRACT
  *   ID             id-contract-dsp
  * }
  * ```
- * 
+ *
  * @constant
  * @type {CONTRACT}
  * @implements {CONTRACT}
  */
-export
-const dspContract: CONTRACT = {
-    class: "CONTRACT",
-    decoderFor: {
-    },
-    encoderFor: {
-    },
-    "&connection": dspConnectionPackage /* OBJECT_FIELD_SETTING */,
-    "&OperationsOf": [ chainedReadPackage, chainedSearchPackage, chainedModifyPackage, ] /* OBJECT_FIELD_SETTING */,
-    "&id": id_contract_dsp /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+const dspConnectionPackage: CONNECTION_PACKAGE = {
+    class: "CONNECTION-PACKAGE",
+    decoderFor: {},
+    encoderFor: {},
+    "&bind": dSABind,
+    "&unbind": emptyUnbind,
+    "&id": id_package_dspConnection,
+    "&responderCanUnbind": false,
+    "&unbindCanFail": false,
 };
 
-/* eslint-enable */
+const chainedReadPackage: OPERATION_PACKAGE = {
+    class: "OPERATION-PACKAGE",
+    decoderFor: {},
+    encoderFor: {},
+    "&Both": [chainedRead, chainedCompare, chainedAbandon],
+    "&id": id_package_chainedRead,
+};
+
+const chainedSearchPackage: OPERATION_PACKAGE = {
+    class: "OPERATION-PACKAGE",
+    decoderFor: {},
+    encoderFor: {},
+    "&Both": [chainedList, chainedSearch],
+    "&id": id_package_chainedSearch,
+};
+
+const chainedModifyPackage: OPERATION_PACKAGE = {
+    class: "OPERATION-PACKAGE",
+    decoderFor: {},
+    encoderFor: {},
+    "&Both": [chainedAddEntry, chainedRemoveEntry, chainedModifyEntry, chainedModifyDN],
+    "&id": id_package_chainedModify,
+};
+
+export const dspContract: CONTRACT = {
+    class: "CONTRACT",
+    decoderFor: {},
+    encoderFor: {},
+    "&connection": dspConnectionPackage,
+    "&OperationsOf": [chainedReadPackage, chainedSearchPackage, chainedModifyPackage],
+    "&id": id_contract_dsp,
+};

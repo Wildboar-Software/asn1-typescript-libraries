@@ -24,7 +24,23 @@ import { ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment, _decode_C
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * ConnectToResourceArg-resourceAddress ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * ConnectToResourceArg-resourceAddress ::=
+ * CHOICE {
+ *   ipRoutingAddress [0] IPRoutingAddress,
+ *   legID [1] LegID,
+ *   ipAddressAndLegID [2] SEQUENCE {
+ *     ipRoutingAddress [0] IPRoutingAddress,
+ *     legID [1] LegID,
+ *     ...
+ *   },
+ *   none [3] NULL,
+ *   callSegmentID [5] CallSegmentID,
+ *   ipAddressAndCallSegment [6] SEQUENCE {
+ *     ipRoutingAddress [0] IPRoutingAddress,
+ *     callSegmentID [1] CallSegmentID,
+ *     ...
+ *   }
+ * }
  * ```
  */
 export

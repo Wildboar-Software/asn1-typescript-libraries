@@ -1,3 +1,4 @@
+import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 /* eslint-disable */
 import {
     NULL

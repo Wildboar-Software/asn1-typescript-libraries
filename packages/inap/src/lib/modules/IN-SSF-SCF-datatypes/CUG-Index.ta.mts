@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    IA5String
+    IA5String,
+    ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -22,7 +24,13 @@ export
 type CUG_Index = IA5String; // IA5String
 
 export
-const _decode_CUG_Index: $.ASN1Decoder<CUG_Index> = $._decodeIA5String;
+function _decode_CUG_Index (el: _Element): CUG_Index {
+    const value = $._decodeIA5String(el);
+    if (value.length < 1 || value.length > 4) {
+        throw new ASN1SizeError("CUG_Index violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_CUG_Index: $.ASN1Encoder<CUG_Index> = $._encodeIA5String;

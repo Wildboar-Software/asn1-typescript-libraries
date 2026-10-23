@@ -1,3 +1,4 @@
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 /* eslint-disable */
 import { search } from "../DirectoryAbstractService/search.oa.mjs";
 // export { search } from "../DirectoryAbstractService/search.oa.mjs";
