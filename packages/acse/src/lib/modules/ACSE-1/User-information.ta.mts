@@ -31,22 +31,13 @@ import {
  */
 export type User_information = Association_data; // DefinedType
 
-let _cached_decoder_for_User_information: $.ASN1Decoder<User_information> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) User_information
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {User_information} The decoded data structure.
  */
-export function _decode_User_information(el: _Element): User_information {
-  if (!_cached_decoder_for_User_information) {
-    _cached_decoder_for_User_information = _decode_Association_data;
-  }
-  return _cached_decoder_for_User_information(el);
-}
-
-let _cached_encoder_for_User_information: $.ASN1Encoder<User_information> | null = null;
+export const _decode_User_information: $.ASN1Decoder<User_information> = _decode_Association_data;
 
 /**
  * @summary Encodes a(n) User_information into an ASN.1 Element.
@@ -55,15 +46,7 @@ let _cached_encoder_for_User_information: $.ASN1Encoder<User_information> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The User_information, encoded as an ASN.1 Element.
  */
-export function _encode_User_information(
-  value: User_information,
-  elGetter: $.ASN1Encoder<User_information>
-): _Element {
-  if (!_cached_encoder_for_User_information) {
-    _cached_encoder_for_User_information = _encode_Association_data;
-  }
-  return _cached_encoder_for_User_information(value, elGetter);
-}
+export const _encode_User_information: $.ASN1Encoder<User_information> = _encode_Association_data;
 
 
 /* eslint-enable */

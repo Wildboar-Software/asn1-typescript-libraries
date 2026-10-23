@@ -30,21 +30,13 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
 export
 type ReportJournalStatus_Request = ObjectName; // DefinedType
 
-let _cached_decoder_for_ReportJournalStatus_Request: $.ASN1Decoder<ReportJournalStatus_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportJournalStatus_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReportJournalStatus_Request (el: _Element): ReportJournalStatus_Request {
-    if (!_cached_decoder_for_ReportJournalStatus_Request) { _cached_decoder_for_ReportJournalStatus_Request = _decode_ObjectName; }
-    return _cached_decoder_for_ReportJournalStatus_Request(el);
-}
-
-let _cached_encoder_for_ReportJournalStatus_Request: $.ASN1Encoder<ReportJournalStatus_Request> | null = null;
+export const _decode_ReportJournalStatus_Request: $.ASN1Decoder<ReportJournalStatus_Request> = _decode_ObjectName;
 
 /**
  * @summary Encodes a(n) ReportJournalStatus_Request into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_ReportJournalStatus_Request: $.ASN1Encoder<ReportJournal
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportJournalStatus_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReportJournalStatus_Request (value: ReportJournalStatus_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReportJournalStatus_Request) { _cached_encoder_for_ReportJournalStatus_Request = _encode_ObjectName; }
-    return _cached_encoder_for_ReportJournalStatus_Request(value, elGetter);
-}
+export const _encode_ReportJournalStatus_Request: (value: ReportJournalStatus_Request, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ObjectName;
 
 
 /* eslint-enable */

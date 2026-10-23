@@ -28,21 +28,13 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
 export
 type SignatureAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
-let _cached_decoder_for_SignatureAlgorithmIdentifier: $.ASN1Decoder<SignatureAlgorithmIdentifier> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SignatureAlgorithmIdentifier
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SignatureAlgorithmIdentifier (el: _Element): SignatureAlgorithmIdentifier {
-    if (!_cached_decoder_for_SignatureAlgorithmIdentifier) { _cached_decoder_for_SignatureAlgorithmIdentifier = _decode_AlgorithmIdentifier; }
-    return _cached_decoder_for_SignatureAlgorithmIdentifier(el);
-}
-
-let _cached_encoder_for_SignatureAlgorithmIdentifier: $.ASN1Encoder<SignatureAlgorithmIdentifier> | null = null;
+export const _decode_SignatureAlgorithmIdentifier: $.ASN1Decoder<SignatureAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
 
 /**
  * @summary Encodes a(n) SignatureAlgorithmIdentifier into an ASN.1 Element.
@@ -51,11 +43,7 @@ let _cached_encoder_for_SignatureAlgorithmIdentifier: $.ASN1Encoder<SignatureAlg
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SignatureAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export
-function _encode_SignatureAlgorithmIdentifier (value: SignatureAlgorithmIdentifier, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SignatureAlgorithmIdentifier) { _cached_encoder_for_SignatureAlgorithmIdentifier = _encode_AlgorithmIdentifier; }
-    return _cached_encoder_for_SignatureAlgorithmIdentifier(value, elGetter);
-}
+export const _encode_SignatureAlgorithmIdentifier: (value: SignatureAlgorithmIdentifier, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AlgorithmIdentifier;
 
 
 /* eslint-enable */

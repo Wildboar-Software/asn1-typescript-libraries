@@ -29,22 +29,13 @@ import {
  */
 export type AlphaCode = UniversalOrBMPString; // DefinedType
 
-let _cached_decoder_for_AlphaCode: $.ASN1Decoder<AlphaCode> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AlphaCode
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AlphaCode} The decoded data structure.
  */
-export function _decode_AlphaCode(el: _Element): AlphaCode {
-    if (!_cached_decoder_for_AlphaCode) {
-        _cached_decoder_for_AlphaCode = _decode_UniversalOrBMPString;
-    }
-    return _cached_decoder_for_AlphaCode(el);
-}
-
-let _cached_encoder_for_AlphaCode: $.ASN1Encoder<AlphaCode> | null = null;
+export const _decode_AlphaCode: $.ASN1Decoder<AlphaCode> = _decode_UniversalOrBMPString;
 
 /**
  * @summary Encodes a(n) AlphaCode into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_AlphaCode: $.ASN1Encoder<AlphaCode> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AlphaCode, encoded as an ASN.1 Element.
  */
-export function _encode_AlphaCode(
-    value: AlphaCode,
-    elGetter: $.ASN1Encoder<AlphaCode>
-): _Element {
-    if (!_cached_encoder_for_AlphaCode) {
-        _cached_encoder_for_AlphaCode = _encode_UniversalOrBMPString;
-    }
-    return _cached_encoder_for_AlphaCode(value, elGetter);
-}
+export const _encode_AlphaCode: $.ASN1Encoder<AlphaCode> = _encode_UniversalOrBMPString;
 
 
 /* eslint-enable */

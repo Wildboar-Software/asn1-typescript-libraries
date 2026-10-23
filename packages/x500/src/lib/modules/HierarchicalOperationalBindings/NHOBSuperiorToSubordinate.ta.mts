@@ -23,22 +23,13 @@ import {
  */
 export type NHOBSuperiorToSubordinate = SuperiorToSubordinate; // DefinedType
 
-let _cached_decoder_for_NHOBSuperiorToSubordinate: $.ASN1Decoder<NHOBSuperiorToSubordinate> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NHOBSuperiorToSubordinate
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NHOBSuperiorToSubordinate} The decoded data structure.
  */
-export function _decode_NHOBSuperiorToSubordinate(el: _Element): NHOBSuperiorToSubordinate {
-    if (!_cached_decoder_for_NHOBSuperiorToSubordinate) {
-        _cached_decoder_for_NHOBSuperiorToSubordinate = _decode_SuperiorToSubordinate;
-    }
-    return _cached_decoder_for_NHOBSuperiorToSubordinate(el);
-}
-
-let _cached_encoder_for_NHOBSuperiorToSubordinate: $.ASN1Encoder<NHOBSuperiorToSubordinate> | null = null;
+export const _decode_NHOBSuperiorToSubordinate: $.ASN1Decoder<NHOBSuperiorToSubordinate> = _decode_SuperiorToSubordinate;
 
 /**
  * @summary Encodes a(n) NHOBSuperiorToSubordinate into an ASN.1 Element.
@@ -47,15 +38,7 @@ let _cached_encoder_for_NHOBSuperiorToSubordinate: $.ASN1Encoder<NHOBSuperiorToS
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NHOBSuperiorToSubordinate, encoded as an ASN.1 Element.
  */
-export function _encode_NHOBSuperiorToSubordinate(
-    value: NHOBSuperiorToSubordinate,
-    elGetter: $.ASN1Encoder<NHOBSuperiorToSubordinate>
-): _Element {
-    if (!_cached_encoder_for_NHOBSuperiorToSubordinate) {
-        _cached_encoder_for_NHOBSuperiorToSubordinate = _encode_SuperiorToSubordinate;
-    }
-    return _cached_encoder_for_NHOBSuperiorToSubordinate(value, elGetter);
-}
+export const _encode_NHOBSuperiorToSubordinate: $.ASN1Encoder<NHOBSuperiorToSubordinate> = _encode_SuperiorToSubordinate;
 
 
 /* eslint-enable */

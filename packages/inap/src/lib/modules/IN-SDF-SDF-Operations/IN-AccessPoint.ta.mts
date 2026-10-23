@@ -24,21 +24,13 @@ import { AccessPoint, _decode_AccessPoint, _encode_AccessPoint } from "../Distri
 export
 type IN_AccessPoint = AccessPoint; // DefinedType
 
-let _cached_decoder_for_IN_AccessPoint: $.ASN1Decoder<IN_AccessPoint> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_AccessPoint
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IN_AccessPoint (el: _Element): IN_AccessPoint {
-    if (!_cached_decoder_for_IN_AccessPoint) { _cached_decoder_for_IN_AccessPoint = _decode_AccessPoint; }
-    return _cached_decoder_for_IN_AccessPoint(el);
-}
-
-let _cached_encoder_for_IN_AccessPoint: $.ASN1Encoder<IN_AccessPoint> | null = null;
+export const _decode_IN_AccessPoint: $.ASN1Decoder<IN_AccessPoint> = _decode_AccessPoint;
 
 /**
  * @summary Encodes a(n) IN_AccessPoint into an ASN.1 Element.
@@ -47,11 +39,7 @@ let _cached_encoder_for_IN_AccessPoint: $.ASN1Encoder<IN_AccessPoint> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_AccessPoint, encoded as an ASN.1 Element.
  */
-export
-function _encode_IN_AccessPoint (value: IN_AccessPoint, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IN_AccessPoint) { _cached_encoder_for_IN_AccessPoint = _encode_AccessPoint; }
-    return _cached_encoder_for_IN_AccessPoint(value, elGetter);
-}
+export const _encode_IN_AccessPoint: (value: IN_AccessPoint, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AccessPoint;
 
 
 /* eslint-enable */

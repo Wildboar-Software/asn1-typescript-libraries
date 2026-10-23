@@ -24,21 +24,13 @@ import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } fro
 export
 type Duration = IntUnsignedLong; // DefinedType
 
-let _cached_decoder_for_Duration: $.ASN1Decoder<Duration> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Duration
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Duration (el: _Element): Duration {
-    if (!_cached_decoder_for_Duration) { _cached_decoder_for_Duration = _decode_IntUnsignedLong; }
-    return _cached_decoder_for_Duration(el);
-}
-
-let _cached_encoder_for_Duration: $.ASN1Encoder<Duration> | null = null;
+export const _decode_Duration: $.ASN1Decoder<Duration> = _decode_IntUnsignedLong;
 
 /**
  * @summary Encodes a(n) Duration into an ASN.1 Element.
@@ -47,11 +39,7 @@ let _cached_encoder_for_Duration: $.ASN1Encoder<Duration> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Duration, encoded as an ASN.1 Element.
  */
-export
-function _encode_Duration (value: Duration, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Duration) { _cached_encoder_for_Duration = _encode_IntUnsignedLong; }
-    return _cached_encoder_for_Duration(value, elGetter);
-}
+export const _encode_Duration: (value: Duration, elGetter: $.ASN1Encoder<any>) => _Element = _encode_IntUnsignedLong;
 
 
 /* eslint-enable */

@@ -31,22 +31,13 @@ import {
  */
 export type MessageSubmissionErrors = SubmissionError; // DefinedType
 
-let _cached_decoder_for_MessageSubmissionErrors: $.ASN1Decoder<MessageSubmissionErrors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageSubmissionErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageSubmissionErrors} The decoded data structure.
  */
-export function _decode_MessageSubmissionErrors(el: _Element): MessageSubmissionErrors {
-    if (!_cached_decoder_for_MessageSubmissionErrors) {
-        _cached_decoder_for_MessageSubmissionErrors = _decode_SubmissionError;
-    }
-    return _cached_decoder_for_MessageSubmissionErrors(el);
-}
-
-let _cached_encoder_for_MessageSubmissionErrors: $.ASN1Encoder<MessageSubmissionErrors> | null = null;
+export const _decode_MessageSubmissionErrors: $.ASN1Decoder<MessageSubmissionErrors> = _decode_SubmissionError;
 
 /**
  * @summary Encodes a(n) MessageSubmissionErrors into an ASN.1 Element.
@@ -55,15 +46,7 @@ let _cached_encoder_for_MessageSubmissionErrors: $.ASN1Encoder<MessageSubmission
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageSubmissionErrors, encoded as an ASN.1 Element.
  */
-export function _encode_MessageSubmissionErrors(
-    value: MessageSubmissionErrors,
-    elGetter: $.ASN1Encoder<MessageSubmissionErrors>
-): _Element {
-    if (!_cached_encoder_for_MessageSubmissionErrors) {
-        _cached_encoder_for_MessageSubmissionErrors = _encode_SubmissionError;
-    }
-    return _cached_encoder_for_MessageSubmissionErrors(value, elGetter);
-}
+export const _encode_MessageSubmissionErrors: $.ASN1Encoder<MessageSubmissionErrors> = _encode_SubmissionError;
 
 
 /* eslint-enable */

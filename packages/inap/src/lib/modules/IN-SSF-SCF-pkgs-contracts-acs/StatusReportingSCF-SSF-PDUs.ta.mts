@@ -22,21 +22,13 @@ import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages
 export
 type StatusReportingSCF_SSF_PDUs = TCMessage; // DefinedType
 
-let _cached_decoder_for_StatusReportingSCF_SSF_PDUs: $.ASN1Decoder<StatusReportingSCF_SSF_PDUs> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) StatusReportingSCF_SSF_PDUs
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_StatusReportingSCF_SSF_PDUs (el: _Element): StatusReportingSCF_SSF_PDUs {
-    if (!_cached_decoder_for_StatusReportingSCF_SSF_PDUs) { _cached_decoder_for_StatusReportingSCF_SSF_PDUs = _decode_TCMessage; }
-    return _cached_decoder_for_StatusReportingSCF_SSF_PDUs(el);
-}
-
-let _cached_encoder_for_StatusReportingSCF_SSF_PDUs: $.ASN1Encoder<StatusReportingSCF_SSF_PDUs> | null = null;
+export const _decode_StatusReportingSCF_SSF_PDUs: $.ASN1Decoder<StatusReportingSCF_SSF_PDUs> = _decode_TCMessage;
 
 /**
  * @summary Encodes a(n) StatusReportingSCF_SSF_PDUs into an ASN.1 Element.
@@ -45,11 +37,7 @@ let _cached_encoder_for_StatusReportingSCF_SSF_PDUs: $.ASN1Encoder<StatusReporti
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The StatusReportingSCF_SSF_PDUs, encoded as an ASN.1 Element.
  */
-export
-function _encode_StatusReportingSCF_SSF_PDUs (value: StatusReportingSCF_SSF_PDUs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_StatusReportingSCF_SSF_PDUs) { _cached_encoder_for_StatusReportingSCF_SSF_PDUs = _encode_TCMessage; }
-    return _cached_encoder_for_StatusReportingSCF_SSF_PDUs(value, elGetter);
-}
+export const _encode_StatusReportingSCF_SSF_PDUs: (value: StatusReportingSCF_SSF_PDUs, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TCMessage;
 
 
 /* eslint-enable */

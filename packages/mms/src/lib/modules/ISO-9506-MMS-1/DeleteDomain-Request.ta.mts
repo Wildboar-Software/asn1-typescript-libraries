@@ -30,21 +30,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 export
 type DeleteDomain_Request = Identifier; // DefinedType
 
-let _cached_decoder_for_DeleteDomain_Request: $.ASN1Decoder<DeleteDomain_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteDomain_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DeleteDomain_Request (el: _Element): DeleteDomain_Request {
-    if (!_cached_decoder_for_DeleteDomain_Request) { _cached_decoder_for_DeleteDomain_Request = _decode_Identifier; }
-    return _cached_decoder_for_DeleteDomain_Request(el);
-}
-
-let _cached_encoder_for_DeleteDomain_Request: $.ASN1Encoder<DeleteDomain_Request> | null = null;
+export const _decode_DeleteDomain_Request: $.ASN1Decoder<DeleteDomain_Request> = _decode_Identifier;
 
 /**
  * @summary Encodes a(n) DeleteDomain_Request into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_DeleteDomain_Request: $.ASN1Encoder<DeleteDomain_Request
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeleteDomain_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_DeleteDomain_Request (value: DeleteDomain_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DeleteDomain_Request) { _cached_encoder_for_DeleteDomain_Request = _encode_Identifier; }
-    return _cached_encoder_for_DeleteDomain_Request(value, elGetter);
-}
+export const _encode_DeleteDomain_Request: (value: DeleteDomain_Request, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Identifier;
 
 
 /* eslint-enable */

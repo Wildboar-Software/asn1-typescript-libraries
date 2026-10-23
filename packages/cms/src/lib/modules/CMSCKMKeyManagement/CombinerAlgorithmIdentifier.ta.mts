@@ -22,26 +22,13 @@ import {
  */
 export type CombinerAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
-
-let _cached_decoder_for_CombinerAlgorithmIdentifier: $.ASN1Decoder<CombinerAlgorithmIdentifier> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CombinerAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CombinerAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_CombinerAlgorithmIdentifier(el: _Element): CombinerAlgorithmIdentifier {
-    if (!_cached_decoder_for_CombinerAlgorithmIdentifier) {
-        _cached_decoder_for_CombinerAlgorithmIdentifier = _decode_AlgorithmIdentifier;
-    }
-    return _cached_decoder_for_CombinerAlgorithmIdentifier(el);
-}
-
-
-let _cached_encoder_for_CombinerAlgorithmIdentifier: $.ASN1Encoder<CombinerAlgorithmIdentifier> | null = null;
-
+export const _decode_CombinerAlgorithmIdentifier: $.ASN1Decoder<CombinerAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
 
 /**
  * @summary Encodes a(n) CombinerAlgorithmIdentifier into an ASN.1 Element.
@@ -50,15 +37,7 @@ let _cached_encoder_for_CombinerAlgorithmIdentifier: $.ASN1Encoder<CombinerAlgor
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CombinerAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_CombinerAlgorithmIdentifier(
-    value: CombinerAlgorithmIdentifier,
-    elGetter: $.ASN1Encoder<CombinerAlgorithmIdentifier>
-): _Element {
-    if (!_cached_encoder_for_CombinerAlgorithmIdentifier) {
-        _cached_encoder_for_CombinerAlgorithmIdentifier = _encode_AlgorithmIdentifier;
-    }
-    return _cached_encoder_for_CombinerAlgorithmIdentifier(value, elGetter);
-}
+export const _encode_CombinerAlgorithmIdentifier: $.ASN1Encoder<CombinerAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
 
 
 /* eslint-enable */

@@ -28,21 +28,13 @@ import { GvcId, _decode_GvcId, _encode_GvcId } from "./GvcId.ta.mjs";
 export
 type RequestedGvcId = GvcId; // DefinedType
 
-let _cached_decoder_for_RequestedGvcId: $.ASN1Decoder<RequestedGvcId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestedGvcId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RequestedGvcId (el: _Element): RequestedGvcId {
-    if (!_cached_decoder_for_RequestedGvcId) { _cached_decoder_for_RequestedGvcId = _decode_GvcId; }
-    return _cached_decoder_for_RequestedGvcId(el);
-}
-
-let _cached_encoder_for_RequestedGvcId: $.ASN1Encoder<RequestedGvcId> | null = null;
+export const _decode_RequestedGvcId: $.ASN1Decoder<RequestedGvcId> = _decode_GvcId;
 
 /**
  * @summary Encodes a(n) RequestedGvcId into an ASN.1 Element.
@@ -51,11 +43,7 @@ let _cached_encoder_for_RequestedGvcId: $.ASN1Encoder<RequestedGvcId> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RequestedGvcId, encoded as an ASN.1 Element.
  */
-export
-function _encode_RequestedGvcId (value: RequestedGvcId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RequestedGvcId) { _cached_encoder_for_RequestedGvcId = _encode_GvcId; }
-    return _cached_encoder_for_RequestedGvcId(value, elGetter);
-}
+export const _encode_RequestedGvcId: (value: RequestedGvcId, elGetter: $.ASN1Encoder<any>) => _Element = _encode_GvcId;
 
 
 /* eslint-enable */

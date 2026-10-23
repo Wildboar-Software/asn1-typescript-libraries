@@ -31,22 +31,13 @@ import {
  */
 export type ConvertedEncodedInformationTypes = EncodedInformationTypes; // DefinedType
 
-let _cached_decoder_for_ConvertedEncodedInformationTypes: $.ASN1Decoder<ConvertedEncodedInformationTypes> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ConvertedEncodedInformationTypes
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ConvertedEncodedInformationTypes} The decoded data structure.
  */
-export function _decode_ConvertedEncodedInformationTypes(el: _Element): ConvertedEncodedInformationTypes {
-    if (!_cached_decoder_for_ConvertedEncodedInformationTypes) {
-        _cached_decoder_for_ConvertedEncodedInformationTypes = _decode_EncodedInformationTypes;
-    }
-    return _cached_decoder_for_ConvertedEncodedInformationTypes(el);
-}
-
-let _cached_encoder_for_ConvertedEncodedInformationTypes: $.ASN1Encoder<ConvertedEncodedInformationTypes> | null = null;
+export const _decode_ConvertedEncodedInformationTypes: $.ASN1Decoder<ConvertedEncodedInformationTypes> = _decode_EncodedInformationTypes;
 
 /**
  * @summary Encodes a(n) ConvertedEncodedInformationTypes into an ASN.1 Element.
@@ -55,18 +46,7 @@ let _cached_encoder_for_ConvertedEncodedInformationTypes: $.ASN1Encoder<Converte
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ConvertedEncodedInformationTypes, encoded as an ASN.1 Element.
  */
-export function _encode_ConvertedEncodedInformationTypes(
-    value: ConvertedEncodedInformationTypes,
-    elGetter: $.ASN1Encoder<ConvertedEncodedInformationTypes>
-): _Element {
-    if (!_cached_encoder_for_ConvertedEncodedInformationTypes) {
-        _cached_encoder_for_ConvertedEncodedInformationTypes = _encode_EncodedInformationTypes;
-    }
-    return _cached_encoder_for_ConvertedEncodedInformationTypes(
-        value,
-        elGetter
-    );
-}
+export const _encode_ConvertedEncodedInformationTypes: $.ASN1Encoder<ConvertedEncodedInformationTypes> = _encode_EncodedInformationTypes;
 
 
 /* eslint-enable */

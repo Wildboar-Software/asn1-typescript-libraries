@@ -78,8 +78,6 @@ function _decode_RafDeliveryMode (el: _Element): RafDeliveryMode {
     return _decoded;
 }
 
-let _cached_encoder_for_RafDeliveryMode: $.ASN1Encoder<RafDeliveryMode> | null = null;
-
 /**
  * @summary Encodes a(n) RafDeliveryMode into an ASN.1 Element.
  * @function
@@ -87,11 +85,7 @@ let _cached_encoder_for_RafDeliveryMode: $.ASN1Encoder<RafDeliveryMode> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RafDeliveryMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_RafDeliveryMode (value: RafDeliveryMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RafDeliveryMode) { _cached_encoder_for_RafDeliveryMode = _encode_DeliveryMode; }
-    return _cached_encoder_for_RafDeliveryMode(value, elGetter);
-}
+export const _encode_RafDeliveryMode: (value: RafDeliveryMode, elGetter: $.ASN1Encoder<any>) => _Element = _encode_DeliveryMode;
 
 
 /* eslint-enable */

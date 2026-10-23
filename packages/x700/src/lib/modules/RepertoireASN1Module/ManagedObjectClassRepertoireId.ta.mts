@@ -32,22 +32,13 @@ import {
  */
 export type ManagedObjectClassRepertoireId = GdmoObjectClass; // DefinedType
 
-let _cached_decoder_for_ManagedObjectClassRepertoireId: $.ASN1Decoder<ManagedObjectClassRepertoireId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ManagedObjectClassRepertoireId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ManagedObjectClassRepertoireId} The decoded data structure.
  */
-export function _decode_ManagedObjectClassRepertoireId(el: _Element): ManagedObjectClassRepertoireId {
-    if (!_cached_decoder_for_ManagedObjectClassRepertoireId) {
-        _cached_decoder_for_ManagedObjectClassRepertoireId = _decode_GdmoObjectClass;
-    }
-    return _cached_decoder_for_ManagedObjectClassRepertoireId(el);
-}
-
-let _cached_encoder_for_ManagedObjectClassRepertoireId: $.ASN1Encoder<ManagedObjectClassRepertoireId> | null = null;
+export const _decode_ManagedObjectClassRepertoireId: $.ASN1Decoder<ManagedObjectClassRepertoireId> = _decode_GdmoObjectClass;
 
 /**
  * @summary Encodes a(n) ManagedObjectClassRepertoireId into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_ManagedObjectClassRepertoireId: $.ASN1Encoder<ManagedObj
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ManagedObjectClassRepertoireId, encoded as an ASN.1 Element.
  */
-export function _encode_ManagedObjectClassRepertoireId(
-    value: ManagedObjectClassRepertoireId,
-    elGetter: $.ASN1Encoder<ManagedObjectClassRepertoireId>
-): _Element {
-    if (!_cached_encoder_for_ManagedObjectClassRepertoireId) {
-        _cached_encoder_for_ManagedObjectClassRepertoireId = _encode_GdmoObjectClass;
-    }
-    return _cached_encoder_for_ManagedObjectClassRepertoireId(value, elGetter);
-}
+export const _encode_ManagedObjectClassRepertoireId: $.ASN1Encoder<ManagedObjectClassRepertoireId> = _encode_GdmoObjectClass;
 
 
 /* eslint-enable */

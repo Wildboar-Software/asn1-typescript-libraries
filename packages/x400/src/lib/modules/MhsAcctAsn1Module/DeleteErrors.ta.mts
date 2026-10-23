@@ -30,22 +30,13 @@ import {
  */
 export type DeleteErrors = RetrievalError; // DefinedType
 
-let _cached_decoder_for_DeleteErrors: $.ASN1Decoder<DeleteErrors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DeleteErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DeleteErrors} The decoded data structure.
  */
-export function _decode_DeleteErrors(el: _Element): DeleteErrors {
-    if (!_cached_decoder_for_DeleteErrors) {
-        _cached_decoder_for_DeleteErrors = _decode_RetrievalError;
-    }
-    return _cached_decoder_for_DeleteErrors(el);
-}
-
-let _cached_encoder_for_DeleteErrors: $.ASN1Encoder<DeleteErrors> | null = null;
+export const _decode_DeleteErrors: $.ASN1Decoder<DeleteErrors> = _decode_RetrievalError;
 
 /**
  * @summary Encodes a(n) DeleteErrors into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_DeleteErrors: $.ASN1Encoder<DeleteErrors> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeleteErrors, encoded as an ASN.1 Element.
  */
-export function _encode_DeleteErrors(
-    value: DeleteErrors,
-    elGetter: $.ASN1Encoder<DeleteErrors>
-): _Element {
-    if (!_cached_encoder_for_DeleteErrors) {
-        _cached_encoder_for_DeleteErrors = _encode_RetrievalError;
-    }
-    return _cached_encoder_for_DeleteErrors(value, elGetter);
-}
+export const _encode_DeleteErrors: $.ASN1Encoder<DeleteErrors> = _encode_RetrievalError;
 
 
 /* eslint-enable */

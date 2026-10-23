@@ -32,22 +32,13 @@ import {
  */
 export type SynchronizationProtocolID = SimpleNameType; // DefinedType
 
-let _cached_decoder_for_SynchronizationProtocolID: $.ASN1Decoder<SynchronizationProtocolID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SynchronizationProtocolID
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SynchronizationProtocolID} The decoded data structure.
  */
-export function _decode_SynchronizationProtocolID(el: _Element): SynchronizationProtocolID {
-    if (!_cached_decoder_for_SynchronizationProtocolID) {
-        _cached_decoder_for_SynchronizationProtocolID = _decode_SimpleNameType;
-    }
-    return _cached_decoder_for_SynchronizationProtocolID(el);
-}
-
-let _cached_encoder_for_SynchronizationProtocolID: $.ASN1Encoder<SynchronizationProtocolID> | null = null;
+export const _decode_SynchronizationProtocolID: $.ASN1Decoder<SynchronizationProtocolID> = _decode_SimpleNameType;
 
 /**
  * @summary Encodes a(n) SynchronizationProtocolID into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_SynchronizationProtocolID: $.ASN1Encoder<Synchronization
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SynchronizationProtocolID, encoded as an ASN.1 Element.
  */
-export function _encode_SynchronizationProtocolID(
-    value: SynchronizationProtocolID,
-    elGetter: $.ASN1Encoder<SynchronizationProtocolID>
-): _Element {
-    if (!_cached_encoder_for_SynchronizationProtocolID) {
-        _cached_encoder_for_SynchronizationProtocolID = _encode_SimpleNameType;
-    }
-    return _cached_encoder_for_SynchronizationProtocolID(value, elGetter);
-}
+export const _encode_SynchronizationProtocolID: $.ASN1Encoder<SynchronizationProtocolID> = _encode_SimpleNameType;
 
 
 /* eslint-enable */

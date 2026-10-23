@@ -22,26 +22,13 @@ import {
  */
 export type KeyPairIdentifier = SignerIdentifier; // DefinedType
 
-
-let _cached_decoder_for_KeyPairIdentifier: $.ASN1Decoder<KeyPairIdentifier> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyPairIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {KeyPairIdentifier} The decoded data structure.
  */
-export function _decode_KeyPairIdentifier(el: _Element): KeyPairIdentifier {
-    if (!_cached_decoder_for_KeyPairIdentifier) {
-        _cached_decoder_for_KeyPairIdentifier = _decode_SignerIdentifier;
-    }
-    return _cached_decoder_for_KeyPairIdentifier(el);
-}
-
-
-let _cached_encoder_for_KeyPairIdentifier: $.ASN1Encoder<KeyPairIdentifier> | null = null;
-
+export const _decode_KeyPairIdentifier: $.ASN1Decoder<KeyPairIdentifier> = _decode_SignerIdentifier;
 
 /**
  * @summary Encodes a(n) KeyPairIdentifier into an ASN.1 Element.
@@ -50,15 +37,7 @@ let _cached_encoder_for_KeyPairIdentifier: $.ASN1Encoder<KeyPairIdentifier> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyPairIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_KeyPairIdentifier(
-    value: KeyPairIdentifier,
-    elGetter: $.ASN1Encoder<KeyPairIdentifier>
-): _Element {
-    if (!_cached_encoder_for_KeyPairIdentifier) {
-        _cached_encoder_for_KeyPairIdentifier = _encode_SignerIdentifier;
-    }
-    return _cached_encoder_for_KeyPairIdentifier(value, elGetter);
-}
+export const _encode_KeyPairIdentifier: $.ASN1Encoder<KeyPairIdentifier> = _encode_SignerIdentifier;
 
 
 /* eslint-enable */

@@ -72,8 +72,6 @@ function _decode_RcfDeliveryMode (el: _Element): RcfDeliveryMode {
     return _decoded;
 }
 
-let _cached_encoder_for_RcfDeliveryMode: $.ASN1Encoder<RcfDeliveryMode> | null = null;
-
 /**
  * @summary Encodes a(n) RcfDeliveryMode into an ASN.1 Element.
  * @function
@@ -81,11 +79,7 @@ let _cached_encoder_for_RcfDeliveryMode: $.ASN1Encoder<RcfDeliveryMode> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RcfDeliveryMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_RcfDeliveryMode (value: RcfDeliveryMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RcfDeliveryMode) { _cached_encoder_for_RcfDeliveryMode = _encode_DeliveryMode; }
-    return _cached_encoder_for_RcfDeliveryMode(value, elGetter);
-}
+export const _encode_RcfDeliveryMode: (value: RcfDeliveryMode, elGetter: $.ASN1Encoder<any>) => _Element = _encode_DeliveryMode;
 
 
 /* eslint-enable */

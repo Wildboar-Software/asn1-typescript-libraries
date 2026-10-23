@@ -32,22 +32,13 @@ import {
  */
 export type MessageDeliveryIdentifier = MTSIdentifier; // DefinedType
 
-let _cached_decoder_for_MessageDeliveryIdentifier: $.ASN1Decoder<MessageDeliveryIdentifier> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryIdentifier} The decoded data structure.
  */
-export function _decode_MessageDeliveryIdentifier(el: _Element): MessageDeliveryIdentifier {
-    if (!_cached_decoder_for_MessageDeliveryIdentifier) {
-        _cached_decoder_for_MessageDeliveryIdentifier = _decode_MTSIdentifier;
-    }
-    return _cached_decoder_for_MessageDeliveryIdentifier(el);
-}
-
-let _cached_encoder_for_MessageDeliveryIdentifier: $.ASN1Encoder<MessageDeliveryIdentifier> | null = null;
+export const _decode_MessageDeliveryIdentifier: $.ASN1Decoder<MessageDeliveryIdentifier> = _decode_MTSIdentifier;
 
 /**
  * @summary Encodes a(n) MessageDeliveryIdentifier into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_MessageDeliveryIdentifier: $.ASN1Encoder<MessageDelivery
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageDeliveryIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_MessageDeliveryIdentifier(
-    value: MessageDeliveryIdentifier,
-    elGetter: $.ASN1Encoder<MessageDeliveryIdentifier>
-): _Element {
-    if (!_cached_encoder_for_MessageDeliveryIdentifier) {
-        _cached_encoder_for_MessageDeliveryIdentifier = _encode_MTSIdentifier;
-    }
-    return _cached_encoder_for_MessageDeliveryIdentifier(value, elGetter);
-}
+export const _encode_MessageDeliveryIdentifier: $.ASN1Encoder<MessageDeliveryIdentifier> = _encode_MTSIdentifier;
 
 
 /* eslint-enable */

@@ -23,21 +23,13 @@ import { _decode_USSD_String, _encode_USSD_String, USSD_String } from "../MAP-SS
 export
 type LCSCodewordString = USSD_String; // DefinedType
 
-let _cached_decoder_for_LCSCodewordString: $.ASN1Decoder<LCSCodewordString> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LCSCodewordString
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LCSCodewordString (el: _Element): LCSCodewordString {
-    if (!_cached_decoder_for_LCSCodewordString) { _cached_decoder_for_LCSCodewordString = _decode_USSD_String; }
-    return _cached_decoder_for_LCSCodewordString(el);
-}
-
-let _cached_encoder_for_LCSCodewordString: $.ASN1Encoder<LCSCodewordString> | null = null;
+export const _decode_LCSCodewordString: $.ASN1Decoder<LCSCodewordString> = _decode_USSD_String;
 
 /**
  * @summary Encodes a(n) LCSCodewordString into an ASN.1 Element.
@@ -46,11 +38,7 @@ let _cached_encoder_for_LCSCodewordString: $.ASN1Encoder<LCSCodewordString> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCSCodewordString, encoded as an ASN.1 Element.
  */
-export
-function _encode_LCSCodewordString (value: LCSCodewordString, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LCSCodewordString) { _cached_encoder_for_LCSCodewordString = _encode_USSD_String; }
-    return _cached_encoder_for_LCSCodewordString(value, elGetter);
-}
+export const _encode_LCSCodewordString: (value: LCSCodewordString, elGetter: $.ASN1Encoder<any>) => _Element = _encode_USSD_String;
 
 
 /* eslint-enable */

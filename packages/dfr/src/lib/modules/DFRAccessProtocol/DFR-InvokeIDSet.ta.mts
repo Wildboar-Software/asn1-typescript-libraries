@@ -44,8 +44,6 @@ function _decode_DFR_InvokeIDSet (el: _Element): DFR_InvokeIDSet {
     return value;
 }
 
-let _cached_encoder_for_DFR_InvokeIDSet: $.ASN1Encoder<DFR_InvokeIDSet> | null = null;
-
 /**
  * @summary Encodes a(n) DFR_InvokeIDSet into an ASN.1 Element.
  * @function
@@ -53,11 +51,7 @@ let _cached_encoder_for_DFR_InvokeIDSet: $.ASN1Encoder<DFR_InvokeIDSet> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DFR_InvokeIDSet, encoded as an ASN.1 Element.
  */
-export
-function _encode_DFR_InvokeIDSet (value: DFR_InvokeIDSet, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DFR_InvokeIDSet) { _cached_encoder_for_DFR_InvokeIDSet = _encode_InvokeId; }
-    return _cached_encoder_for_DFR_InvokeIDSet(value, elGetter);
-}
+export const _encode_DFR_InvokeIDSet: (value: DFR_InvokeIDSet, elGetter: $.ASN1Encoder<any>) => _Element = _encode_InvokeId;
 
 
 /* eslint-enable */

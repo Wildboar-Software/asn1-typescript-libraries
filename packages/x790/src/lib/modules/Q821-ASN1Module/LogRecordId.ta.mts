@@ -24,21 +24,13 @@ import {
 export
 type LogRecordId = NumericName; // DefinedType
 
-let _cached_decoder_for_LogRecordId: $.ASN1Decoder<LogRecordId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LogRecordId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_LogRecordId (el: _Element): LogRecordId {
-    if (!_cached_decoder_for_LogRecordId) { _cached_decoder_for_LogRecordId = _decode_NumericName; }
-    return _cached_decoder_for_LogRecordId(el);
-}
-
-let _cached_encoder_for_LogRecordId: $.ASN1Encoder<LogRecordId> | null = null;
+export const _decode_LogRecordId: $.ASN1Decoder<LogRecordId> = _decode_NumericName;
 
 /**
  * @summary Encodes a(n) LogRecordId into an ASN.1 Element.
@@ -47,11 +39,7 @@ let _cached_encoder_for_LogRecordId: $.ASN1Encoder<LogRecordId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LogRecordId, encoded as an ASN.1 Element.
  */
-export
-function _encode_LogRecordId (value: LogRecordId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogRecordId) { _cached_encoder_for_LogRecordId = _encode_NumericName; }
-    return _cached_encoder_for_LogRecordId(value, elGetter);
-}
+export const _encode_LogRecordId: (value: LogRecordId, elGetter: $.ASN1Encoder<any>) => _Element = _encode_NumericName;
 
 
 /* eslint-enable */

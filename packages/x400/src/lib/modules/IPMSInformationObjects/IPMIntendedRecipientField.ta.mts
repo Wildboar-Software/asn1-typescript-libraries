@@ -29,22 +29,13 @@ import {
  */
 export type IPMIntendedRecipientField = ORDescriptor; // DefinedType
 
-let _cached_decoder_for_IPMIntendedRecipientField: $.ASN1Decoder<IPMIntendedRecipientField> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IPMIntendedRecipientField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {IPMIntendedRecipientField} The decoded data structure.
  */
-export function _decode_IPMIntendedRecipientField(el: _Element): IPMIntendedRecipientField {
-    if (!_cached_decoder_for_IPMIntendedRecipientField) {
-        _cached_decoder_for_IPMIntendedRecipientField = _decode_ORDescriptor;
-    }
-    return _cached_decoder_for_IPMIntendedRecipientField(el);
-}
-
-let _cached_encoder_for_IPMIntendedRecipientField: $.ASN1Encoder<IPMIntendedRecipientField> | null = null;
+export const _decode_IPMIntendedRecipientField: $.ASN1Decoder<IPMIntendedRecipientField> = _decode_ORDescriptor;
 
 /**
  * @summary Encodes a(n) IPMIntendedRecipientField into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_IPMIntendedRecipientField: $.ASN1Encoder<IPMIntendedReci
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IPMIntendedRecipientField, encoded as an ASN.1 Element.
  */
-export function _encode_IPMIntendedRecipientField(
-    value: IPMIntendedRecipientField,
-    elGetter: $.ASN1Encoder<IPMIntendedRecipientField>
-): _Element {
-    if (!_cached_encoder_for_IPMIntendedRecipientField) {
-        _cached_encoder_for_IPMIntendedRecipientField = _encode_ORDescriptor;
-    }
-    return _cached_encoder_for_IPMIntendedRecipientField(value, elGetter);
-}
+export const _encode_IPMIntendedRecipientField: $.ASN1Encoder<IPMIntendedRecipientField> = _encode_ORDescriptor;
 
 
 /* eslint-enable */

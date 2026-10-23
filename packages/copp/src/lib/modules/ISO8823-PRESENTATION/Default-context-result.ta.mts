@@ -33,26 +33,13 @@ import {
  */
 export type Default_context_result = Result; // DefinedType
 
-
-let _cached_decoder_for_Default_context_result: $.ASN1Decoder<Default_context_result> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Default_context_result
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Default_context_result} The decoded data structure.
  */
-export function _decode_Default_context_result(el: _Element): Default_context_result {
-    if (!_cached_decoder_for_Default_context_result) {
-        _cached_decoder_for_Default_context_result = _decode_Result;
-    }
-    return _cached_decoder_for_Default_context_result(el);
-}
-
-
-let _cached_encoder_for_Default_context_result: $.ASN1Encoder<Default_context_result> | null = null;
-
+export const _decode_Default_context_result: $.ASN1Decoder<Default_context_result> = _decode_Result;
 
 /**
  * @summary Encodes a(n) Default_context_result into an ASN.1 Element.
@@ -61,15 +48,7 @@ let _cached_encoder_for_Default_context_result: $.ASN1Encoder<Default_context_re
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Default_context_result, encoded as an ASN.1 Element.
  */
-export function _encode_Default_context_result(
-    value: Default_context_result,
-    elGetter: $.ASN1Encoder<Default_context_result>
-): _Element {
-    if (!_cached_encoder_for_Default_context_result) {
-        _cached_encoder_for_Default_context_result = _encode_Result;
-    }
-    return _cached_encoder_for_Default_context_result(value, elGetter);
-}
+export const _encode_Default_context_result: $.ASN1Encoder<Default_context_result> = _encode_Result;
 
 
 /* eslint-enable */

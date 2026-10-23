@@ -22,26 +22,13 @@ import {
  */
 export type OldCertId = CertId; // DefinedType
 
-
-let _cached_decoder_for_OldCertId: $.ASN1Decoder<OldCertId> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OldCertId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OldCertId} The decoded data structure.
  */
-export function _decode_OldCertId(el: _Element): OldCertId {
-    if (!_cached_decoder_for_OldCertId) {
-        _cached_decoder_for_OldCertId = _decode_CertId;
-    }
-    return _cached_decoder_for_OldCertId(el);
-}
-
-
-let _cached_encoder_for_OldCertId: $.ASN1Encoder<OldCertId> | null = null;
-
+export const _decode_OldCertId: $.ASN1Decoder<OldCertId> = _decode_CertId;
 
 /**
  * @summary Encodes a(n) OldCertId into an ASN.1 Element.
@@ -50,15 +37,7 @@ let _cached_encoder_for_OldCertId: $.ASN1Encoder<OldCertId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OldCertId, encoded as an ASN.1 Element.
  */
-export function _encode_OldCertId(
-    value: OldCertId,
-    elGetter: $.ASN1Encoder<OldCertId>
-): _Element {
-    if (!_cached_encoder_for_OldCertId) {
-        _cached_encoder_for_OldCertId = _encode_CertId;
-    }
-    return _cached_encoder_for_OldCertId(value, elGetter);
-}
+export const _encode_OldCertId: $.ASN1Encoder<OldCertId> = _encode_CertId;
 
 
 /* eslint-enable */

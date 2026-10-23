@@ -29,22 +29,13 @@ import {
  */
 export type Trace = TraceInformation; // DefinedType
 
-let _cached_decoder_for_Trace: $.ASN1Decoder<Trace> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Trace
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Trace} The decoded data structure.
  */
-export function _decode_Trace(el: _Element): Trace {
-    if (!_cached_decoder_for_Trace) {
-        _cached_decoder_for_Trace = _decode_TraceInformation;
-    }
-    return _cached_decoder_for_Trace(el);
-}
-
-let _cached_encoder_for_Trace: $.ASN1Encoder<Trace> | null = null;
+export const _decode_Trace: $.ASN1Decoder<Trace> = _decode_TraceInformation;
 
 /**
  * @summary Encodes a(n) Trace into an ASN.1 Element.
@@ -53,12 +44,7 @@ let _cached_encoder_for_Trace: $.ASN1Encoder<Trace> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Trace, encoded as an ASN.1 Element.
  */
-export function _encode_Trace(value: Trace, elGetter: $.ASN1Encoder<Trace>): _Element {
-    if (!_cached_encoder_for_Trace) {
-        _cached_encoder_for_Trace = _encode_TraceInformation;
-    }
-    return _cached_encoder_for_Trace(value, elGetter);
-}
+export const _encode_Trace: $.ASN1Encoder<Trace> = _encode_TraceInformation;
 
 
 /* eslint-enable */

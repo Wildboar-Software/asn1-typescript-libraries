@@ -21,22 +21,13 @@ import {
  */
 export type UniversalPhysicalDeliveryPersonalName = UniversalPDSParameter; // DefinedType
 
-let _cached_decoder_for_UniversalPhysicalDeliveryPersonalName: $.ASN1Decoder<UniversalPhysicalDeliveryPersonalName> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPhysicalDeliveryPersonalName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPhysicalDeliveryPersonalName} The decoded data structure.
  */
-export function _decode_UniversalPhysicalDeliveryPersonalName(el: _Element): UniversalPhysicalDeliveryPersonalName {
-    if (!_cached_decoder_for_UniversalPhysicalDeliveryPersonalName) {
-        _cached_decoder_for_UniversalPhysicalDeliveryPersonalName = _decode_UniversalPDSParameter;
-    }
-    return _cached_decoder_for_UniversalPhysicalDeliveryPersonalName(el);
-}
-
-let _cached_encoder_for_UniversalPhysicalDeliveryPersonalName: $.ASN1Encoder<UniversalPhysicalDeliveryPersonalName> | null = null;
+export const _decode_UniversalPhysicalDeliveryPersonalName: $.ASN1Decoder<UniversalPhysicalDeliveryPersonalName> = _decode_UniversalPDSParameter;
 
 /**
  * @summary Encodes a(n) UniversalPhysicalDeliveryPersonalName into an ASN.1 Element.
@@ -45,18 +36,7 @@ let _cached_encoder_for_UniversalPhysicalDeliveryPersonalName: $.ASN1Encoder<Uni
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniversalPhysicalDeliveryPersonalName, encoded as an ASN.1 Element.
  */
-export function _encode_UniversalPhysicalDeliveryPersonalName(
-    value: UniversalPhysicalDeliveryPersonalName,
-    elGetter: $.ASN1Encoder<UniversalPhysicalDeliveryPersonalName>
-): _Element {
-    if (!_cached_encoder_for_UniversalPhysicalDeliveryPersonalName) {
-        _cached_encoder_for_UniversalPhysicalDeliveryPersonalName = _encode_UniversalPDSParameter;
-    }
-    return _cached_encoder_for_UniversalPhysicalDeliveryPersonalName(
-        value,
-        elGetter
-    );
-}
+export const _encode_UniversalPhysicalDeliveryPersonalName: $.ASN1Encoder<UniversalPhysicalDeliveryPersonalName> = _encode_UniversalPDSParameter;
 
 
 /* eslint-enable */

@@ -29,21 +29,13 @@ import { ExternalASNType, _decode_ExternalASNType, _encode_ExternalASNType } fro
 export
 type ExternalChargingASN = ExternalASNType; // DefinedType
 
-let _cached_decoder_for_ExternalChargingASN: $.ASN1Decoder<ExternalChargingASN> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ExternalChargingASN
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ExternalChargingASN (el: _Element): ExternalChargingASN {
-    if (!_cached_decoder_for_ExternalChargingASN) { _cached_decoder_for_ExternalChargingASN = _decode_ExternalASNType; }
-    return _cached_decoder_for_ExternalChargingASN(el);
-}
-
-let _cached_encoder_for_ExternalChargingASN: $.ASN1Encoder<ExternalChargingASN> | null = null;
+export const _decode_ExternalChargingASN: $.ASN1Decoder<ExternalChargingASN> = _decode_ExternalASNType;
 
 /**
  * @summary Encodes a(n) ExternalChargingASN into an ASN.1 Element.
@@ -52,11 +44,7 @@ let _cached_encoder_for_ExternalChargingASN: $.ASN1Encoder<ExternalChargingASN> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ExternalChargingASN, encoded as an ASN.1 Element.
  */
-export
-function _encode_ExternalChargingASN (value: ExternalChargingASN, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ExternalChargingASN) { _cached_encoder_for_ExternalChargingASN = _encode_ExternalASNType; }
-    return _cached_encoder_for_ExternalChargingASN(value, elGetter);
-}
+export const _encode_ExternalChargingASN: (value: ExternalChargingASN, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ExternalASNType;
 
 
 /* eslint-enable */

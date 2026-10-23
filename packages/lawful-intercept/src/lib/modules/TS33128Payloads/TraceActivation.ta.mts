@@ -29,21 +29,13 @@ import { ExternalASNType, _decode_ExternalASNType, _encode_ExternalASNType } fro
 export
 type TraceActivation = ExternalASNType; // DefinedType
 
-let _cached_decoder_for_TraceActivation: $.ASN1Decoder<TraceActivation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceActivation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_TraceActivation (el: _Element): TraceActivation {
-    if (!_cached_decoder_for_TraceActivation) { _cached_decoder_for_TraceActivation = _decode_ExternalASNType; }
-    return _cached_decoder_for_TraceActivation(el);
-}
-
-let _cached_encoder_for_TraceActivation: $.ASN1Encoder<TraceActivation> | null = null;
+export const _decode_TraceActivation: $.ASN1Decoder<TraceActivation> = _decode_ExternalASNType;
 
 /**
  * @summary Encodes a(n) TraceActivation into an ASN.1 Element.
@@ -52,11 +44,7 @@ let _cached_encoder_for_TraceActivation: $.ASN1Encoder<TraceActivation> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceActivation, encoded as an ASN.1 Element.
  */
-export
-function _encode_TraceActivation (value: TraceActivation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_TraceActivation) { _cached_encoder_for_TraceActivation = _encode_ExternalASNType; }
-    return _cached_encoder_for_TraceActivation(value, elGetter);
-}
+export const _encode_TraceActivation: (value: TraceActivation, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ExternalASNType;
 
 
 /* eslint-enable */

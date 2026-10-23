@@ -20,21 +20,13 @@ import { AgreementID, _decode_AgreementID, _encode_AgreementID } from "../IN-SCF
 export
 type SCFProtocolInfo = AgreementID; // DefinedType
 
-let _cached_decoder_for_SCFProtocolInfo: $.ASN1Decoder<SCFProtocolInfo> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SCFProtocolInfo
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SCFProtocolInfo (el: _Element): SCFProtocolInfo {
-    if (!_cached_decoder_for_SCFProtocolInfo) { _cached_decoder_for_SCFProtocolInfo = _decode_AgreementID; }
-    return _cached_decoder_for_SCFProtocolInfo(el);
-}
-
-let _cached_encoder_for_SCFProtocolInfo: $.ASN1Encoder<SCFProtocolInfo> | null = null;
+export const _decode_SCFProtocolInfo: $.ASN1Decoder<SCFProtocolInfo> = _decode_AgreementID;
 
 /**
  * @summary Encodes a(n) SCFProtocolInfo into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_SCFProtocolInfo: $.ASN1Encoder<SCFProtocolInfo> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SCFProtocolInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_SCFProtocolInfo (value: SCFProtocolInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SCFProtocolInfo) { _cached_encoder_for_SCFProtocolInfo = _encode_AgreementID; }
-    return _cached_encoder_for_SCFProtocolInfo(value, elGetter);
-}
+export const _encode_SCFProtocolInfo: (value: SCFProtocolInfo, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AgreementID;
 
 
 /* eslint-enable */

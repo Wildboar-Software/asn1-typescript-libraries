@@ -29,26 +29,13 @@ import { Token, _decode_Token, _encode_Token } from '../XSD/Token.ta.mjs';
  */
 export type Name = Token; // DefinedType
 
-
-let _cached_decoder_for_Name: $.ASN1Decoder<Name> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Name
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Name} The decoded data structure.
  */
-export function _decode_Name(el: _Element): Name {
-  if (!_cached_decoder_for_Name) {
-    _cached_decoder_for_Name = _decode_Token;
-  }
-  return _cached_decoder_for_Name(el);
-}
-
-
-let _cached_encoder_for_Name: $.ASN1Encoder<Name> | null = null;
-
+export const _decode_Name: $.ASN1Decoder<Name> = _decode_Token;
 
 /**
  * @summary Encodes a(n) Name into an ASN.1 Element.
@@ -57,12 +44,7 @@ let _cached_encoder_for_Name: $.ASN1Encoder<Name> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Name, encoded as an ASN.1 Element.
  */
-export function _encode_Name(value: Name, elGetter: $.ASN1Encoder<Name>): _Element {
-  if (!_cached_encoder_for_Name) {
-    _cached_encoder_for_Name = _encode_Token;
-  }
-  return _cached_encoder_for_Name(value, elGetter);
-}
+export const _encode_Name: $.ASN1Encoder<Name> = _encode_Token;
 
 
 /* eslint-enable */

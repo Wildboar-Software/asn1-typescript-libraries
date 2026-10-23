@@ -34,21 +34,13 @@ import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages
 export
 type GenericSCF_gsmSSF_PDUs = TCMessage; // DefinedType
 
-let _cached_decoder_for_GenericSCF_gsmSSF_PDUs: $.ASN1Decoder<GenericSCF_gsmSSF_PDUs> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GenericSCF_gsmSSF_PDUs
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GenericSCF_gsmSSF_PDUs (el: _Element): GenericSCF_gsmSSF_PDUs {
-    if (!_cached_decoder_for_GenericSCF_gsmSSF_PDUs) { _cached_decoder_for_GenericSCF_gsmSSF_PDUs = _decode_TCMessage; }
-    return _cached_decoder_for_GenericSCF_gsmSSF_PDUs(el);
-}
-
-let _cached_encoder_for_GenericSCF_gsmSSF_PDUs: $.ASN1Encoder<GenericSCF_gsmSSF_PDUs> | null = null;
+export const _decode_GenericSCF_gsmSSF_PDUs: $.ASN1Decoder<GenericSCF_gsmSSF_PDUs> = _decode_TCMessage;
 
 /**
  * @summary Encodes a(n) GenericSCF_gsmSSF_PDUs into an ASN.1 Element.
@@ -57,11 +49,7 @@ let _cached_encoder_for_GenericSCF_gsmSSF_PDUs: $.ASN1Encoder<GenericSCF_gsmSSF_
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GenericSCF_gsmSSF_PDUs, encoded as an ASN.1 Element.
  */
-export
-function _encode_GenericSCF_gsmSSF_PDUs (value: GenericSCF_gsmSSF_PDUs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GenericSCF_gsmSSF_PDUs) { _cached_encoder_for_GenericSCF_gsmSSF_PDUs = _encode_TCMessage; }
-    return _cached_encoder_for_GenericSCF_gsmSSF_PDUs(value, elGetter);
-}
+export const _encode_GenericSCF_gsmSSF_PDUs: (value: GenericSCF_gsmSSF_PDUs, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TCMessage;
 
 
 /* eslint-enable */

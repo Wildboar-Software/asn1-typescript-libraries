@@ -34,26 +34,13 @@ import {
  */
 export type OOBCert = CMPCertificate; // DefinedType
 
-
-let _cached_decoder_for_OOBCert: $.ASN1Decoder<OOBCert> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OOBCert
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OOBCert} The decoded data structure.
  */
-export function _decode_OOBCert(el: _Element): OOBCert {
-  if (!_cached_decoder_for_OOBCert) {
-    _cached_decoder_for_OOBCert = _decode_CMPCertificate;
-  }
-  return _cached_decoder_for_OOBCert(el);
-}
-
-
-let _cached_encoder_for_OOBCert: $.ASN1Encoder<OOBCert> | null = null;
-
+export const _decode_OOBCert: $.ASN1Decoder<OOBCert> = _decode_CMPCertificate;
 
 /**
  * @summary Encodes a(n) OOBCert into an ASN.1 Element.
@@ -62,15 +49,7 @@ let _cached_encoder_for_OOBCert: $.ASN1Encoder<OOBCert> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OOBCert, encoded as an ASN.1 Element.
  */
-export function _encode_OOBCert(
-  value: OOBCert,
-  elGetter: $.ASN1Encoder<OOBCert>
-): _Element {
-  if (!_cached_encoder_for_OOBCert) {
-    _cached_encoder_for_OOBCert = _encode_CMPCertificate;
-  }
-  return _cached_encoder_for_OOBCert(value, elGetter);
-}
+export const _encode_OOBCert: $.ASN1Encoder<OOBCert> = _encode_CMPCertificate;
 
 
 /* eslint-enable */

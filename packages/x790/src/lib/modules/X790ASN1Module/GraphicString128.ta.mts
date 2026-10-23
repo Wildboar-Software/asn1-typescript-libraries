@@ -43,8 +43,6 @@ function _decode_GraphicString128 (el: _Element): GraphicString128 {
     return value;
 }
 
-let _cached_encoder_for_GraphicString128: $.ASN1Encoder<GraphicString128> | null = null;
-
 /**
  * @summary Encodes a(n) GraphicString128 into an ASN.1 Element.
  * @function
@@ -52,11 +50,7 @@ let _cached_encoder_for_GraphicString128: $.ASN1Encoder<GraphicString128> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GraphicString128, encoded as an ASN.1 Element.
  */
-export
-function _encode_GraphicString128 (value: GraphicString128, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GraphicString128) { _cached_encoder_for_GraphicString128 = _encode_GraphicStringBase; }
-    return _cached_encoder_for_GraphicString128(value, elGetter);
-}
+export const _encode_GraphicString128: (value: GraphicString128, elGetter: $.ASN1Encoder<any>) => _Element = _encode_GraphicStringBase;
 
 
 /* eslint-enable */

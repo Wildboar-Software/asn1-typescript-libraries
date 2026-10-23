@@ -28,26 +28,13 @@ import {
  */
 export type GraphicString64 = GraphicStringBase; // DefinedType
 
-
-let _cached_decoder_for_GraphicString64: $.ASN1Decoder<GraphicString64> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GraphicString64
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {GraphicString64} The decoded data structure.
  */
-export function _decode_GraphicString64(el: _Element): GraphicString64 {
-    if (!_cached_decoder_for_GraphicString64) {
-        _cached_decoder_for_GraphicString64 = _decode_GraphicStringBase;
-    }
-    return _cached_decoder_for_GraphicString64(el);
-}
-
-
-let _cached_encoder_for_GraphicString64: $.ASN1Encoder<GraphicString64> | null = null;
-
+export const _decode_GraphicString64: $.ASN1Decoder<GraphicString64> = _decode_GraphicStringBase;
 
 /**
  * @summary Encodes a(n) GraphicString64 into an ASN.1 Element.
@@ -56,15 +43,7 @@ let _cached_encoder_for_GraphicString64: $.ASN1Encoder<GraphicString64> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GraphicString64, encoded as an ASN.1 Element.
  */
-export function _encode_GraphicString64(
-    value: GraphicString64,
-    elGetter: $.ASN1Encoder<GraphicString64>
-): _Element {
-    if (!_cached_encoder_for_GraphicString64) {
-        _cached_encoder_for_GraphicString64 = _encode_GraphicStringBase;
-    }
-    return _cached_encoder_for_GraphicString64(value, elGetter);
-}
+export const _encode_GraphicString64: $.ASN1Encoder<GraphicString64> = _encode_GraphicStringBase;
 
 
 /* eslint-enable */

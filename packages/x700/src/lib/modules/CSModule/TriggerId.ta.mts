@@ -35,22 +35,13 @@ import {
  */
 export type TriggerId = ObjectInstance; // DefinedType
 
-let _cached_decoder_for_TriggerId: $.ASN1Decoder<TriggerId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TriggerId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TriggerId} The decoded data structure.
  */
-export function _decode_TriggerId(el: _Element): TriggerId {
-    if (!_cached_decoder_for_TriggerId) {
-        _cached_decoder_for_TriggerId = _decode_ObjectInstance;
-    }
-    return _cached_decoder_for_TriggerId(el);
-}
-
-let _cached_encoder_for_TriggerId: $.ASN1Encoder<TriggerId> | null = null;
+export const _decode_TriggerId: $.ASN1Decoder<TriggerId> = _decode_ObjectInstance;
 
 /**
  * @summary Encodes a(n) TriggerId into an ASN.1 Element.
@@ -59,15 +50,7 @@ let _cached_encoder_for_TriggerId: $.ASN1Encoder<TriggerId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TriggerId, encoded as an ASN.1 Element.
  */
-export function _encode_TriggerId(
-    value: TriggerId,
-    elGetter: $.ASN1Encoder<TriggerId>
-): _Element {
-    if (!_cached_encoder_for_TriggerId) {
-        _cached_encoder_for_TriggerId = _encode_ObjectInstance;
-    }
-    return _cached_encoder_for_TriggerId(value, elGetter);
-}
+export const _encode_TriggerId: $.ASN1Encoder<TriggerId> = _encode_ObjectInstance;
 
 
 /* eslint-enable */

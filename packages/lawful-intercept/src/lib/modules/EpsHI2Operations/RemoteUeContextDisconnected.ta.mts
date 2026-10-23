@@ -27,21 +27,13 @@ import { RemoteUserID, _decode_RemoteUserID, _encode_RemoteUserID } from "../Eps
 export
 type RemoteUeContextDisconnected = RemoteUserID; // DefinedType
 
-let _cached_decoder_for_RemoteUeContextDisconnected: $.ASN1Decoder<RemoteUeContextDisconnected> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RemoteUeContextDisconnected
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RemoteUeContextDisconnected (el: _Element): RemoteUeContextDisconnected {
-    if (!_cached_decoder_for_RemoteUeContextDisconnected) { _cached_decoder_for_RemoteUeContextDisconnected = _decode_RemoteUserID; }
-    return _cached_decoder_for_RemoteUeContextDisconnected(el);
-}
-
-let _cached_encoder_for_RemoteUeContextDisconnected: $.ASN1Encoder<RemoteUeContextDisconnected> | null = null;
+export const _decode_RemoteUeContextDisconnected: $.ASN1Decoder<RemoteUeContextDisconnected> = _decode_RemoteUserID;
 
 /**
  * @summary Encodes a(n) RemoteUeContextDisconnected into an ASN.1 Element.
@@ -50,11 +42,7 @@ let _cached_encoder_for_RemoteUeContextDisconnected: $.ASN1Encoder<RemoteUeConte
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RemoteUeContextDisconnected, encoded as an ASN.1 Element.
  */
-export
-function _encode_RemoteUeContextDisconnected (value: RemoteUeContextDisconnected, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RemoteUeContextDisconnected) { _cached_encoder_for_RemoteUeContextDisconnected = _encode_RemoteUserID; }
-    return _cached_encoder_for_RemoteUeContextDisconnected(value, elGetter);
-}
+export const _encode_RemoteUeContextDisconnected: (value: RemoteUeContextDisconnected, elGetter: $.ASN1Encoder<any>) => _Element = _encode_RemoteUserID;
 
 
 /* eslint-enable */

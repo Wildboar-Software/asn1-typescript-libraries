@@ -20,21 +20,13 @@ import { AddressString, _decode_AddressString, _encode_AddressString } from "../
 export
 type IsdnAddress = AddressString; // DefinedType
 
-let _cached_decoder_for_IsdnAddress: $.ASN1Decoder<IsdnAddress> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IsdnAddress
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IsdnAddress (el: _Element): IsdnAddress {
-    if (!_cached_decoder_for_IsdnAddress) { _cached_decoder_for_IsdnAddress = _decode_AddressString; }
-    return _cached_decoder_for_IsdnAddress(el);
-}
-
-let _cached_encoder_for_IsdnAddress: $.ASN1Encoder<IsdnAddress> | null = null;
+export const _decode_IsdnAddress: $.ASN1Decoder<IsdnAddress> = _decode_AddressString;
 
 /**
  * @summary Encodes a(n) IsdnAddress into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_IsdnAddress: $.ASN1Encoder<IsdnAddress> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IsdnAddress, encoded as an ASN.1 Element.
  */
-export
-function _encode_IsdnAddress (value: IsdnAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IsdnAddress) { _cached_encoder_for_IsdnAddress = _encode_AddressString; }
-    return _cached_encoder_for_IsdnAddress(value, elGetter);
-}
+export const _encode_IsdnAddress: (value: IsdnAddress, elGetter: $.ASN1Encoder<any>) => _Element = _encode_AddressString;
 
 
 /* eslint-enable */

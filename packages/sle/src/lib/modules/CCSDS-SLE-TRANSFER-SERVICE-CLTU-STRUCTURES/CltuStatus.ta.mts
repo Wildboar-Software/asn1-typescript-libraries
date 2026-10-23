@@ -76,8 +76,6 @@ function _decode_CltuStatus (el: _Element): CltuStatus {
     return _decoded;
 }
 
-let _cached_encoder_for_CltuStatus: $.ASN1Encoder<CltuStatus> | null = null;
-
 /**
  * @summary Encodes a(n) CltuStatus into an ASN.1 Element.
  * @function
@@ -85,11 +83,7 @@ let _cached_encoder_for_CltuStatus: $.ASN1Encoder<CltuStatus> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CltuStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_CltuStatus (value: CltuStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuStatus) { _cached_encoder_for_CltuStatus = _encode_ForwardDuStatus; }
-    return _cached_encoder_for_CltuStatus(value, elGetter);
-}
+export const _encode_CltuStatus: (value: CltuStatus, elGetter: $.ASN1Encoder<any>) => _Element = _encode_ForwardDuStatus;
 
 
 /* eslint-enable */

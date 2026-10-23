@@ -31,22 +31,13 @@ import {
  */
 export type EMailContentType = ContentType; // DefinedType
 
-let _cached_decoder_for_EMailContentType: $.ASN1Decoder<EMailContentType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) EMailContentType
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {EMailContentType} The decoded data structure.
  */
-export function _decode_EMailContentType(el: _Element): EMailContentType {
-    if (!_cached_decoder_for_EMailContentType) {
-        _cached_decoder_for_EMailContentType = _decode_ContentType;
-    }
-    return _cached_decoder_for_EMailContentType(el);
-}
-
-let _cached_encoder_for_EMailContentType: $.ASN1Encoder<EMailContentType> | null = null;
+export const _decode_EMailContentType: $.ASN1Decoder<EMailContentType> = _decode_ContentType;
 
 /**
  * @summary Encodes a(n) EMailContentType into an ASN.1 Element.
@@ -55,15 +46,7 @@ let _cached_encoder_for_EMailContentType: $.ASN1Encoder<EMailContentType> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EMailContentType, encoded as an ASN.1 Element.
  */
-export function _encode_EMailContentType(
-    value: EMailContentType,
-    elGetter: $.ASN1Encoder<EMailContentType>
-): _Element {
-    if (!_cached_encoder_for_EMailContentType) {
-        _cached_encoder_for_EMailContentType = _encode_ContentType;
-    }
-    return _cached_encoder_for_EMailContentType(value, elGetter);
-}
+export const _encode_EMailContentType: $.ASN1Encoder<EMailContentType> = _encode_ContentType;
 
 
 /* eslint-enable */

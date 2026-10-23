@@ -45,8 +45,6 @@ function _decode_CopyResult (el: _Element): CopyResult {
     return value;
 }
 
-let _cached_encoder_for_CopyResult: $.ASN1Encoder<CopyResult> | null = null;
-
 /**
  * @summary Encodes a(n) CopyResult into an ASN.1 Element.
  * @function
@@ -54,11 +52,7 @@ let _cached_encoder_for_CopyResult: $.ASN1Encoder<CopyResult> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CopyResult, encoded as an ASN.1 Element.
  */
-export
-function _encode_CopyResult (value: CopyResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CopyResult) { _cached_encoder_for_CopyResult = _encode_CommonUpdateResult; }
-    return _cached_encoder_for_CopyResult(value, elGetter);
-}
+export const _encode_CopyResult: (value: CopyResult, elGetter: $.ASN1Encoder<any>) => _Element = _encode_CommonUpdateResult;
 
 
 /* eslint-enable */

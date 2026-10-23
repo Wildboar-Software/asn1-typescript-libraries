@@ -32,21 +32,13 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
 export
 type CertificateIDInformation = CertificateSerialNumber; // DefinedType
 
-let _cached_decoder_for_CertificateIDInformation: $.ASN1Decoder<CertificateIDInformation> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CertificateIDInformation
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CertificateIDInformation (el: _Element): CertificateIDInformation {
-    if (!_cached_decoder_for_CertificateIDInformation) { _cached_decoder_for_CertificateIDInformation = _decode_CertificateSerialNumber; }
-    return _cached_decoder_for_CertificateIDInformation(el);
-}
-
-let _cached_encoder_for_CertificateIDInformation: $.ASN1Encoder<CertificateIDInformation> | null = null;
+export const _decode_CertificateIDInformation: $.ASN1Decoder<CertificateIDInformation> = _decode_CertificateSerialNumber;
 
 /**
  * @summary Encodes a(n) CertificateIDInformation into an ASN.1 Element.
@@ -55,11 +47,7 @@ let _cached_encoder_for_CertificateIDInformation: $.ASN1Encoder<CertificateIDInf
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CertificateIDInformation, encoded as an ASN.1 Element.
  */
-export
-function _encode_CertificateIDInformation (value: CertificateIDInformation, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CertificateIDInformation) { _cached_encoder_for_CertificateIDInformation = _encode_CertificateSerialNumber; }
-    return _cached_encoder_for_CertificateIDInformation(value, elGetter);
-}
+export const _encode_CertificateIDInformation: (value: CertificateIDInformation, elGetter: $.ASN1Encoder<any>) => _Element = _encode_CertificateSerialNumber;
 
 
 /* eslint-enable */

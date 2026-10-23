@@ -25,21 +25,13 @@ import { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.t
 export
 type ServerPart = Query; // DefinedType
 
-let _cached_decoder_for_ServerPart: $.ASN1Decoder<ServerPart> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ServerPart
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ServerPart (el: _Element): ServerPart {
-    if (!_cached_decoder_for_ServerPart) { _cached_decoder_for_ServerPart = _decode_Query; }
-    return _cached_decoder_for_ServerPart(el);
-}
-
-let _cached_encoder_for_ServerPart: $.ASN1Encoder<ServerPart> | null = null;
+export const _decode_ServerPart: $.ASN1Decoder<ServerPart> = _decode_Query;
 
 /**
  * @summary Encodes a(n) ServerPart into an ASN.1 Element.
@@ -48,11 +40,7 @@ let _cached_encoder_for_ServerPart: $.ASN1Encoder<ServerPart> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServerPart, encoded as an ASN.1 Element.
  */
-export
-function _encode_ServerPart (value: ServerPart, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ServerPart) { _cached_encoder_for_ServerPart = _encode_Query; }
-    return _cached_encoder_for_ServerPart(value, elGetter);
-}
+export const _encode_ServerPart: (value: ServerPart, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Query;
 
 
 /* eslint-enable */

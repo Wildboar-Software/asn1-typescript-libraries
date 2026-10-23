@@ -22,22 +22,13 @@ import {
  */
 export type UniversalUnformattedPostalAddress = UniversalOrBMPString; // DefinedType
 
-let _cached_decoder_for_UniversalUnformattedPostalAddress: $.ASN1Decoder<UniversalUnformattedPostalAddress> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalUnformattedPostalAddress
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniversalUnformattedPostalAddress} The decoded data structure.
  */
-export function _decode_UniversalUnformattedPostalAddress(el: _Element): UniversalUnformattedPostalAddress {
-    if (!_cached_decoder_for_UniversalUnformattedPostalAddress) {
-        _cached_decoder_for_UniversalUnformattedPostalAddress = _decode_UniversalOrBMPString;
-    }
-    return _cached_decoder_for_UniversalUnformattedPostalAddress(el);
-}
-
-let _cached_encoder_for_UniversalUnformattedPostalAddress: $.ASN1Encoder<UniversalUnformattedPostalAddress> | null = null;
+export const _decode_UniversalUnformattedPostalAddress: $.ASN1Decoder<UniversalUnformattedPostalAddress> = _decode_UniversalOrBMPString;
 
 /**
  * @summary Encodes a(n) UniversalUnformattedPostalAddress into an ASN.1 Element.
@@ -46,18 +37,7 @@ let _cached_encoder_for_UniversalUnformattedPostalAddress: $.ASN1Encoder<Univers
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniversalUnformattedPostalAddress, encoded as an ASN.1 Element.
  */
-export function _encode_UniversalUnformattedPostalAddress(
-    value: UniversalUnformattedPostalAddress,
-    elGetter: $.ASN1Encoder<UniversalUnformattedPostalAddress>
-): _Element {
-    if (!_cached_encoder_for_UniversalUnformattedPostalAddress) {
-        _cached_encoder_for_UniversalUnformattedPostalAddress = _encode_UniversalOrBMPString;
-    }
-    return _cached_encoder_for_UniversalUnformattedPostalAddress(
-        value,
-        elGetter
-    );
-}
+export const _encode_UniversalUnformattedPostalAddress: $.ASN1Encoder<UniversalUnformattedPostalAddress> = _encode_UniversalOrBMPString;
 
 
 /* eslint-enable */

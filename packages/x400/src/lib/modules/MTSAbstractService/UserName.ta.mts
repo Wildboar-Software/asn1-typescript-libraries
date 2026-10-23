@@ -30,22 +30,13 @@ import {
  */
 export type UserName = ORAddressAndOptionalDirectoryName; // DefinedType
 
-let _cached_decoder_for_UserName: $.ASN1Decoder<UserName> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UserName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UserName} The decoded data structure.
  */
-export function _decode_UserName(el: _Element): UserName {
-    if (!_cached_decoder_for_UserName) {
-        _cached_decoder_for_UserName = _decode_ORAddressAndOptionalDirectoryName;
-    }
-    return _cached_decoder_for_UserName(el);
-}
-
-let _cached_encoder_for_UserName: $.ASN1Encoder<UserName> | null = null;
+export const _decode_UserName: $.ASN1Decoder<UserName> = _decode_ORAddressAndOptionalDirectoryName;
 
 /**
  * @summary Encodes a(n) UserName into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_UserName: $.ASN1Encoder<UserName> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UserName, encoded as an ASN.1 Element.
  */
-export function _encode_UserName(
-    value: UserName,
-    elGetter: $.ASN1Encoder<UserName>
-): _Element {
-    if (!_cached_encoder_for_UserName) {
-        _cached_encoder_for_UserName = _encode_ORAddressAndOptionalDirectoryName;
-    }
-    return _cached_encoder_for_UserName(value, elGetter);
-}
+export const _encode_UserName: $.ASN1Encoder<UserName> = _encode_ORAddressAndOptionalDirectoryName;
 
 
 /* eslint-enable */

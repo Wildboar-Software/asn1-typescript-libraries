@@ -20,21 +20,13 @@ import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages
 export
 type BasicDSP_PDUs = TCMessage; // DefinedType
 
-let _cached_decoder_for_BasicDSP_PDUs: $.ASN1Decoder<BasicDSP_PDUs> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) BasicDSP_PDUs
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_BasicDSP_PDUs (el: _Element): BasicDSP_PDUs {
-    if (!_cached_decoder_for_BasicDSP_PDUs) { _cached_decoder_for_BasicDSP_PDUs = _decode_TCMessage; }
-    return _cached_decoder_for_BasicDSP_PDUs(el);
-}
-
-let _cached_encoder_for_BasicDSP_PDUs: $.ASN1Encoder<BasicDSP_PDUs> | null = null;
+export const _decode_BasicDSP_PDUs: $.ASN1Decoder<BasicDSP_PDUs> = _decode_TCMessage;
 
 /**
  * @summary Encodes a(n) BasicDSP_PDUs into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_BasicDSP_PDUs: $.ASN1Encoder<BasicDSP_PDUs> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BasicDSP_PDUs, encoded as an ASN.1 Element.
  */
-export
-function _encode_BasicDSP_PDUs (value: BasicDSP_PDUs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BasicDSP_PDUs) { _cached_encoder_for_BasicDSP_PDUs = _encode_TCMessage; }
-    return _cached_encoder_for_BasicDSP_PDUs(value, elGetter);
-}
+export const _encode_BasicDSP_PDUs: (value: BasicDSP_PDUs, elGetter: $.ASN1Encoder<any>) => _Element = _encode_TCMessage;
 
 
 /* eslint-enable */

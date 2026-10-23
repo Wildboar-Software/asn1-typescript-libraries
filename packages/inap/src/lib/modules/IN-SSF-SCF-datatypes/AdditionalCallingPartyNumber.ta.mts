@@ -21,21 +21,13 @@ import { Digits, _decode_Digits, _encode_Digits } from "../IN-SSF-SCF-datatypes/
 export
 type AdditionalCallingPartyNumber = Digits; // DefinedType
 
-let _cached_decoder_for_AdditionalCallingPartyNumber: $.ASN1Decoder<AdditionalCallingPartyNumber> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalCallingPartyNumber
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AdditionalCallingPartyNumber (el: _Element): AdditionalCallingPartyNumber {
-    if (!_cached_decoder_for_AdditionalCallingPartyNumber) { _cached_decoder_for_AdditionalCallingPartyNumber = _decode_Digits; }
-    return _cached_decoder_for_AdditionalCallingPartyNumber(el);
-}
-
-let _cached_encoder_for_AdditionalCallingPartyNumber: $.ASN1Encoder<AdditionalCallingPartyNumber> | null = null;
+export const _decode_AdditionalCallingPartyNumber: $.ASN1Decoder<AdditionalCallingPartyNumber> = _decode_Digits;
 
 /**
  * @summary Encodes a(n) AdditionalCallingPartyNumber into an ASN.1 Element.
@@ -44,11 +36,7 @@ let _cached_encoder_for_AdditionalCallingPartyNumber: $.ASN1Encoder<AdditionalCa
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdditionalCallingPartyNumber, encoded as an ASN.1 Element.
  */
-export
-function _encode_AdditionalCallingPartyNumber (value: AdditionalCallingPartyNumber, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AdditionalCallingPartyNumber) { _cached_encoder_for_AdditionalCallingPartyNumber = _encode_Digits; }
-    return _cached_encoder_for_AdditionalCallingPartyNumber(value, elGetter);
-}
+export const _encode_AdditionalCallingPartyNumber: (value: AdditionalCallingPartyNumber, elGetter: $.ASN1Encoder<any>) => _Element = _encode_Digits;
 
 
 /* eslint-enable */

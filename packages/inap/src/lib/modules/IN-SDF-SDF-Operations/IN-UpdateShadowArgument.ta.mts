@@ -28,21 +28,13 @@ import { UpdateShadowArgument, _decode_UpdateShadowArgument, _encode_UpdateShado
 export
 type IN_UpdateShadowArgument = UpdateShadowArgument; // DefinedType
 
-let _cached_decoder_for_IN_UpdateShadowArgument: $.ASN1Decoder<IN_UpdateShadowArgument> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_UpdateShadowArgument
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IN_UpdateShadowArgument (el: _Element): IN_UpdateShadowArgument {
-    if (!_cached_decoder_for_IN_UpdateShadowArgument) { _cached_decoder_for_IN_UpdateShadowArgument = _decode_UpdateShadowArgument; }
-    return _cached_decoder_for_IN_UpdateShadowArgument(el);
-}
-
-let _cached_encoder_for_IN_UpdateShadowArgument: $.ASN1Encoder<IN_UpdateShadowArgument> | null = null;
+export const _decode_IN_UpdateShadowArgument: $.ASN1Decoder<IN_UpdateShadowArgument> = _decode_UpdateShadowArgument;
 
 /**
  * @summary Encodes a(n) IN_UpdateShadowArgument into an ASN.1 Element.
@@ -51,11 +43,7 @@ let _cached_encoder_for_IN_UpdateShadowArgument: $.ASN1Encoder<IN_UpdateShadowAr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_UpdateShadowArgument, encoded as an ASN.1 Element.
  */
-export
-function _encode_IN_UpdateShadowArgument (value: IN_UpdateShadowArgument, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IN_UpdateShadowArgument) { _cached_encoder_for_IN_UpdateShadowArgument = _encode_UpdateShadowArgument; }
-    return _cached_encoder_for_IN_UpdateShadowArgument(value, elGetter);
-}
+export const _encode_IN_UpdateShadowArgument: (value: IN_UpdateShadowArgument, elGetter: $.ASN1Encoder<any>) => _Element = _encode_UpdateShadowArgument;
 
 
 /* eslint-enable */

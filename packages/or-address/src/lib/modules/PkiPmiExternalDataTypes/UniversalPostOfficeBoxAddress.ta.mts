@@ -22,22 +22,13 @@ import {
  */
 export type UniversalPostOfficeBoxAddress = UniversalPDSParameter; // DefinedType
 
-let _cached_decoder_for_UniversalPostOfficeBoxAddress: $.ASN1Decoder<UniversalPostOfficeBoxAddress> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UniversalPostOfficeBoxAddress
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UniversalPostOfficeBoxAddress} The decoded data structure.
  */
-export function _decode_UniversalPostOfficeBoxAddress(el: _Element): UniversalPostOfficeBoxAddress {
-    if (!_cached_decoder_for_UniversalPostOfficeBoxAddress) {
-        _cached_decoder_for_UniversalPostOfficeBoxAddress = _decode_UniversalPDSParameter;
-    }
-    return _cached_decoder_for_UniversalPostOfficeBoxAddress(el);
-}
-
-let _cached_encoder_for_UniversalPostOfficeBoxAddress: $.ASN1Encoder<UniversalPostOfficeBoxAddress> | null = null;
+export const _decode_UniversalPostOfficeBoxAddress: $.ASN1Decoder<UniversalPostOfficeBoxAddress> = _decode_UniversalPDSParameter;
 
 /**
  * @summary Encodes a(n) UniversalPostOfficeBoxAddress into an ASN.1 Element.
@@ -46,15 +37,7 @@ let _cached_encoder_for_UniversalPostOfficeBoxAddress: $.ASN1Encoder<UniversalPo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniversalPostOfficeBoxAddress, encoded as an ASN.1 Element.
  */
-export function _encode_UniversalPostOfficeBoxAddress(
-    value: UniversalPostOfficeBoxAddress,
-    elGetter: $.ASN1Encoder<UniversalPostOfficeBoxAddress>
-): _Element {
-    if (!_cached_encoder_for_UniversalPostOfficeBoxAddress) {
-        _cached_encoder_for_UniversalPostOfficeBoxAddress = _encode_UniversalPDSParameter;
-    }
-    return _cached_encoder_for_UniversalPostOfficeBoxAddress(value, elGetter);
-}
+export const _encode_UniversalPostOfficeBoxAddress: $.ASN1Encoder<UniversalPostOfficeBoxAddress> = _encode_UniversalPDSParameter;
 
 
 /* eslint-enable */

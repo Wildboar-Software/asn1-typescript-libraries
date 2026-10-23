@@ -29,21 +29,13 @@ import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilitySta
 export
 type SchedulingAvailability = AvailabilityStatus; // DefinedType
 
-let _cached_decoder_for_SchedulingAvailability: $.ASN1Decoder<SchedulingAvailability> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SchedulingAvailability
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SchedulingAvailability} The decoded data structure.
  */
-export
-function _decode_SchedulingAvailability (el: _Element): SchedulingAvailability {
-    if (!_cached_decoder_for_SchedulingAvailability) { _cached_decoder_for_SchedulingAvailability = _decode_AvailabilityStatus; }
-    return _cached_decoder_for_SchedulingAvailability(el);
-}
-
-let _cached_encoder_for_SchedulingAvailability: $.ASN1Encoder<SchedulingAvailability> | null = null;
+export const _decode_SchedulingAvailability: $.ASN1Decoder<SchedulingAvailability> = _decode_AvailabilityStatus;
 
 /**
  * @summary Encodes a(n) SchedulingAvailability into an ASN.1 Element.
@@ -52,11 +44,7 @@ let _cached_encoder_for_SchedulingAvailability: $.ASN1Encoder<SchedulingAvailabi
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SchedulingAvailability, encoded as an ASN.1 Element.
  */
-export
-function _encode_SchedulingAvailability (value: SchedulingAvailability, elGetter: $.ASN1Encoder<SchedulingAvailability>): _Element {
-    if (!_cached_encoder_for_SchedulingAvailability) { _cached_encoder_for_SchedulingAvailability = _encode_AvailabilityStatus; }
-    return _cached_encoder_for_SchedulingAvailability(value, elGetter);
-}
+export const _encode_SchedulingAvailability: $.ASN1Encoder<SchedulingAvailability> = _encode_AvailabilityStatus;
 
 
 /* eslint-enable */

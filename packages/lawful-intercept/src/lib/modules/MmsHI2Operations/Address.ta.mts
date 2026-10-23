@@ -24,21 +24,13 @@ import { EncodedString, _decode_EncodedString, _encode_EncodedString } from "../
 export
 type Address = EncodedString; // DefinedType
 
-let _cached_decoder_for_Address: $.ASN1Decoder<Address> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Address
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_Address (el: _Element): Address {
-    if (!_cached_decoder_for_Address) { _cached_decoder_for_Address = _decode_EncodedString; }
-    return _cached_decoder_for_Address(el);
-}
-
-let _cached_encoder_for_Address: $.ASN1Encoder<Address> | null = null;
+export const _decode_Address: $.ASN1Decoder<Address> = _decode_EncodedString;
 
 /**
  * @summary Encodes a(n) Address into an ASN.1 Element.
@@ -47,11 +39,7 @@ let _cached_encoder_for_Address: $.ASN1Encoder<Address> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Address, encoded as an ASN.1 Element.
  */
-export
-function _encode_Address (value: Address, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_Address) { _cached_encoder_for_Address = _encode_EncodedString; }
-    return _cached_encoder_for_Address(value, elGetter);
-}
+export const _encode_Address: (value: Address, elGetter: $.ASN1Encoder<any>) => _Element = _encode_EncodedString;
 
 
 /* eslint-enable */

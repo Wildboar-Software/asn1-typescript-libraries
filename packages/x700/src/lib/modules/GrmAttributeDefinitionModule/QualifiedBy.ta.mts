@@ -34,22 +34,13 @@ import {
  */
 export type QualifiedBy = TemplateList; // DefinedType
 
-let _cached_decoder_for_QualifiedBy: $.ASN1Decoder<QualifiedBy> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) QualifiedBy
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {QualifiedBy} The decoded data structure.
  */
-export function _decode_QualifiedBy(el: _Element): QualifiedBy {
-    if (!_cached_decoder_for_QualifiedBy) {
-        _cached_decoder_for_QualifiedBy = _decode_TemplateList;
-    }
-    return _cached_decoder_for_QualifiedBy(el);
-}
-
-let _cached_encoder_for_QualifiedBy: $.ASN1Encoder<QualifiedBy> | null = null;
+export const _decode_QualifiedBy: $.ASN1Decoder<QualifiedBy> = _decode_TemplateList;
 
 /**
  * @summary Encodes a(n) QualifiedBy into an ASN.1 Element.
@@ -58,15 +49,7 @@ let _cached_encoder_for_QualifiedBy: $.ASN1Encoder<QualifiedBy> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The QualifiedBy, encoded as an ASN.1 Element.
  */
-export function _encode_QualifiedBy(
-    value: QualifiedBy,
-    elGetter: $.ASN1Encoder<QualifiedBy>
-): _Element {
-    if (!_cached_encoder_for_QualifiedBy) {
-        _cached_encoder_for_QualifiedBy = _encode_TemplateList;
-    }
-    return _cached_encoder_for_QualifiedBy(value, elGetter);
-}
+export const _encode_QualifiedBy: $.ASN1Encoder<QualifiedBy> = _encode_TemplateList;
 
 
 /* eslint-enable */
