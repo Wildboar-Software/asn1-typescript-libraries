@@ -10,10 +10,6 @@
  *   export const _decode_HashAlgorithm: $.ASN1Decoder<HashAlgorithm> = _decode_AlgorithmIdentifier;
  *   export const _encode_HashAlgorithm: $.ASN1Encoder<HashAlgorithm> = _encode_AlgorithmIdentifier;
  *
- * When the original encoder took `elGetter: $.ASN1Encoder<any>` (callers pass
- * the surrounding value's element getter), the alias keeps that parameter
- * type instead of narrowing it to `$.ASN1Encoder<ThisType>`.
- *
  * and deletes the cache variable. The same rewrite applies when the function
  * body is already a direct `return _decode_Other(...)` / `return _encode_Other(...)`.
  * Tagged, constrained-in-the-codec, and parameterized codecs are left alone:
@@ -180,18 +176,9 @@ function codecAnnotation(fn, kind, typeName) {
         if (ret.includes("\n") || ret.includes("=>")) return null;
         return `$.ASN1Decoder<${ret}>`;
     }
-    const params = fn.getParameters();
-    const valueType = params[0]?.getTypeNode()?.getText() ?? typeName;
-    const elGetter = params[1]?.getTypeNode()?.getText();
-    const ret = fn.getReturnTypeNode()?.getText() ?? "_Element";
-    if ([valueType, elGetter, ret].some((part) => part && (part.includes("\n") || part.includes("=>")))) {
-        return null;
-    }
-    const standard = `$.ASN1Encoder<${valueType}>`;
-    if (!elGetter || elGetter === standard) return standard;
-    const valueName = params[0]?.getName() ?? "value";
-    const getterName = params[1]?.getName() ?? "elGetter";
-    return `(${valueName}: ${valueType}, ${getterName}: ${elGetter}) => ${ret}`;
+    const valueType = fn.getParameters()[0]?.getTypeNode()?.getText() ?? typeName;
+    if (valueType.includes("\n") || valueType.includes("=>")) return null;
+    return `$.ASN1Encoder<${valueType}>`;
 }
 
 function cacheDeclaration(sourceFile, cacheName) {
